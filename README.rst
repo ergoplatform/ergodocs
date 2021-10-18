@@ -1,5 +1,4 @@
 WIP: Ergo Platform documentation
 =======================================
 
-
-https://ergodocs.readthedocs.io/en/latest/index.html
+[https://ergodocs.readthedocs.io/](https://ergodocs.readthedocs.io/)
