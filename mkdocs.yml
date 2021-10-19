@@ -1,6 +1,8 @@
 site_name: ErgoDocs
+site_url: https://ergodocs.rtfd.io
+
 theme:
-    name: material
+    name: readthedocs
 
 nav:
     - Home: index.md
