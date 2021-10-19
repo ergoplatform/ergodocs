@@ -32,11 +32,13 @@
       
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7C&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:""}</style>
       
     
     
+    
+      <link rel="stylesheet" href="assets/extra.css">
     
     
       
@@ -61,6 +63,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#welcome-to-the-ergo-platform-documentation" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -258,10 +265,42 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Home
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="." class="md-nav__link md-nav__link--active">
         Home
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#other-resources" class="md-nav__link">
+    Other resources
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -543,15 +582,21 @@
               
                 
                 
-                  <h1>Home</h1>
-                
-                <p>Welcome to the Ergo Platform Documentation</p>
-<p>Documentation is split into four distinct categories.</p>
+                <h1 id="welcome-to-the-ergo-platform-documentation">Welcome to the Ergo Platform Documentation!</h1>
+<p>Ergo uses continous integration, meaning best practices dictate that the majority of the documentation should be kept on the assosciated repositories themselves. this site aims to serve as a directory that guides the user on their development journey.</p>
+<p>Documentation within the naviation tabs above is split into four distinct categories. </p>
 <ul>
 <li>Tutorials</li>
 <li>How-To Guides</li>
 <li>Explanations</li>
 <li>References</li>
+</ul>
+<p>Read more about the <a href="About/format/">format</a> used on this website.</p>
+<h2 id="other-resources">Other resources</h2>
+<ul>
+<li><a href="https://github.com/ergoplatform/awesome-ergo">awesome-ergo</a></li>
+<li><a href="https://ergonaut.space/">ergonaut.space</a></li>
+<li><a href="https://ergosites.github.io/">ergosites.github</a></li>
 </ul>
                 
               
