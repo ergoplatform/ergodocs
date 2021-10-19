@@ -1,12 +1,78 @@
 site_name: ErgoDocs
 site_url: https://ergodocs.rtfd.io
+repo_url: https://github.com/glasgowm148/ergodocs
 
 theme:
-    name: readthedocs
+    name: material
+    favicon: assets/favicon.png
+    palette:
+      - scheme: default
+        toggle:
+          icon: material/toggle-switch-off-outline
+          name: Switch to dark mode
+      - scheme: slate 
+        toggle:
+          icon: material/toggle-switch
+          name: Switch to light mode
+    features:
+        - navigation.tabs
+        - navigation.tabs.sticky
+        - navigation.sections
+        - navigation.expand
+        - toc.integrate
+    logo: assets/logo.png
+    palette:
+      primary: deep orange
+    font:
+      text: Roboto
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  version:
+    provider: mike
+
+
+extra:
+  generator: false
+
+
+plugins:
+  - search
+
+markdown_extensions:
+  - meta
+  - admonition
 
 nav:
-    - Home: index.md
-    - Tutorials: tutorials.md
-    - How-to Guides: howto.md
-    - Explanations: explanations.md
-    - References: references.md
+  - Home: index.md
+  - About:
+    - About Ergo: About/ergo.md
+    - About ErgoDocs: About/format.md
+    - FAQ: About/faq.md
+    - Events: About/events.md
+  - Developers:
+    - Getting Started:
+      - Where to start?: dev/start/start.md
+      - The Ergo Protocol: dev/start/protocol.md
+      - Tools: dev/start/tools.md
+      - dApp Development: dev/start/dApp-dev.md
+      - Introductionary Tutorials: dev/start/tutorials.md
+    - Stack:
+      - Frontend: dev/stack/front-end.md
+      - Backend: dev/stack/back-end.md
+      - ErgoScript: dev/stack/ergoscript.md
+    - Languages:
+      - Scala: dev/Languages/scala.md
+      - Java: dev/Languages/java.md
+      - Rust: dev/Languages/rust.md
+      - C#: dev/Languages/csharp.md
+    - P2P: 
+      - P2P Handshaking: dev/p2p/p2p-handshake.md
+      - P2P Protocol: dev/p2p/p2p-protocol.md
+  - Wallets:
+    - Node: dev/node/node-config.md
+    - Desktop: dev/node/node-config.md
+    - Mobile: dev/node/node-config.md
+
+
