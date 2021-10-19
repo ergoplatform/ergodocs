@@ -11,16 +11,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ergodocs.rtfd.io/Getting%20Started/dApp-dev/</loc>
-         <lastmod>2021-10-19</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://ergodocs.rtfd.io/Getting%20Started/tutorials/</loc>
-         <lastmod>2021-10-19</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://ergodocs.rtfd.io/Stack/back-end/</loc>
          <lastmod>2021-10-19</lastmod>
          <changefreq>daily</changefreq>
@@ -52,6 +42,16 @@
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/Stack/Languages/scala/</loc>
+         <lastmod>2021-10-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ergodocs.rtfd.io/start/dApp-dev/</loc>
+         <lastmod>2021-10-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ergodocs.rtfd.io/start/tutorials/</loc>
          <lastmod>2021-10-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
