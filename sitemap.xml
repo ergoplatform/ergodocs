@@ -6,52 +6,42 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ergodocs.rtfd.io/back-end/</loc>
+         <loc>https://ergodocs.rtfd.io/Format/explanations/</loc>
          <lastmod>2021-10-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ergodocs.rtfd.io/ergoscript/</loc>
+         <loc>https://ergodocs.rtfd.io/Format/howto/</loc>
          <lastmod>2021-10-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ergodocs.rtfd.io/explanations/</loc>
+         <loc>https://ergodocs.rtfd.io/Format/references/</loc>
          <lastmod>2021-10-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ergodocs.rtfd.io/front-end/</loc>
+         <loc>https://ergodocs.rtfd.io/Format/tutorials/</loc>
          <lastmod>2021-10-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ergodocs.rtfd.io/getting-started/</loc>
+         <loc>https://ergodocs.rtfd.io/Getting%20Started/getting-started/</loc>
          <lastmod>2021-10-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ergodocs.rtfd.io/howto/</loc>
+         <loc>https://ergodocs.rtfd.io/Stack/back-end/</loc>
          <lastmod>2021-10-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ergodocs.rtfd.io/mobile/</loc>
+         <loc>https://ergodocs.rtfd.io/Stack/ergoscript/</loc>
          <lastmod>2021-10-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ergodocs.rtfd.io/node/</loc>
-         <lastmod>2021-10-19</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://ergodocs.rtfd.io/references/</loc>
-         <lastmod>2021-10-19</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://ergodocs.rtfd.io/tutorials/</loc>
+         <loc>https://ergodocs.rtfd.io/Stack/front-end/</loc>
          <lastmod>2021-10-19</lastmod>
          <changefreq>daily</changefreq>
     </url>

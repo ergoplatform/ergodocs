@@ -62,6 +62,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#test" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -69,7 +74,9 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="." title="ErgoDocs" class="md-header__button md-logo" aria-label="ErgoDocs" data-md-component="logo">
       
@@ -135,13 +142,84 @@
     
   </nav>
   
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+
+
+  <li class="md-tabs__item">
+    <a href="." class="md-tabs__link md-tabs__link--active">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="Format/explanations/" class="md-tabs__link">
+        Format
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="Getting%20Started/getting-started/" class="md-tabs__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="Stack/back-end/" class="md-tabs__link">
+        Stack
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
 </header>
     
     <div class="md-container" data-md-component="container">
       
       
-        
-          
         
       
       <main class="md-main" data-md-component="main">
@@ -154,8 +232,10 @@
                   <div class="md-sidebar__inner">
                     
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="." title="ErgoDocs" class="md-nav__button md-logo" aria-label="ErgoDocs" data-md-component="logo">
       
@@ -181,11 +261,50 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Home
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="." class="md-nav__link md-nav__link--active">
         Home
       </a>
       
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#testtest" class="md-nav__link">
+    TestTest
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test_1" class="md-nav__link">
+    Test
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -197,25 +316,133 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Format
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Format" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Format
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="getting-started/" class="md-nav__link">
+      <a href="Format/explanations/" class="md-nav__link">
+        Explanations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Format/howto/" class="md-nav__link">
+        Tutorials
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Format/references/" class="md-nav__link">
+        References
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Format/tutorials/" class="md-nav__link">
+        Tutorials
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Getting Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Getting Started" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Getting%20Started/getting-started/" class="md-nav__link">
         Getting Started
       </a>
     </li>
   
 
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="front-end/" class="md-nav__link">
-        Front-End
-      </a>
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -227,25 +454,71 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Stack
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Stack" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Stack
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="back-end/" class="md-nav__link">
-        Back-End
+      <a href="Stack/back-end/" class="md-nav__link">
+        Back-end
       </a>
     </li>
   
 
-    
-      
-      
-      
-
+            
+          
+            
+              
   
   
   
     <li class="md-nav__item">
-      <a href="ergoscript/" class="md-nav__link">
-        ErgoScript
+      <a href="Stack/ergoscript/" class="md-nav__link">
+        Ergoscript
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Stack/front-end/" class="md-nav__link">
+        Front-end
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -257,13 +530,50 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#testtest" class="md-nav__link">
+    TestTest
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test_1" class="md-nav__link">
+    Test
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
-                
-                  <h1>Home</h1>
                 
                 <p>Welcome to the Ergo Platform Documentation</p>
 <p>Documentation is split into four distinct categories.</p>
@@ -273,6 +583,10 @@
 <li>Explanations</li>
 <li>References</li>
 </ul>
+<h1 id="test">Test</h1>
+<h2 id="testtest">TestTest</h2>
+<h2 id="test_1">Test</h2>
+<h1 id="test_2">Test</h1>
                 
               
               
@@ -293,13 +607,13 @@
       
       
         
-        <a href="getting-started/" class="md-footer__link md-footer__link--next" aria-label="Next: Getting Started" rel="next">
+        <a href="Format/explanations/" class="md-footer__link md-footer__link--next" aria-label="Next: Explanations" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Getting Started
+              Explanations
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -325,7 +639,7 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": ".", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
     
     
       <script src="assets/javascripts/bundle.1e84347e.min.js"></script>
