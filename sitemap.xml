@@ -6,27 +6,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ergodocs.rtfd.io/Format/explanations/</loc>
+         <loc>https://ergodocs.rtfd.io/About/format/</loc>
          <lastmod>2021-10-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ergodocs.rtfd.io/Format/howto/</loc>
+         <loc>https://ergodocs.rtfd.io/Getting%20Started/dApp-dev/</loc>
          <lastmod>2021-10-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ergodocs.rtfd.io/Format/references/</loc>
-         <lastmod>2021-10-19</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://ergodocs.rtfd.io/Format/tutorials/</loc>
-         <lastmod>2021-10-19</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://ergodocs.rtfd.io/Getting%20Started/getting-started/</loc>
+         <loc>https://ergodocs.rtfd.io/Getting%20Started/tutorials/</loc>
          <lastmod>2021-10-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -42,6 +32,26 @@
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/Stack/front-end/</loc>
+         <lastmod>2021-10-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ergodocs.rtfd.io/Stack/Languages/csharp/</loc>
+         <lastmod>2021-10-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ergodocs.rtfd.io/Stack/Languages/java/</loc>
+         <lastmod>2021-10-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ergodocs.rtfd.io/Stack/Languages/rust/</loc>
+         <lastmod>2021-10-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ergodocs.rtfd.io/Stack/Languages/scala/</loc>
          <lastmod>2021-10-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
