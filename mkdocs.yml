@@ -1,0 +1,10 @@
+site_name: ErgoDocs
+theme:
+    name: material
+
+nav:
+    - Home: index.md
+    - Tutorials: tutorials.md
+    - How-to Guides: howto.md
+    - Explanations: explanations.md
+    - References: references.md
