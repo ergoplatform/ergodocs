@@ -16,7 +16,7 @@
     
     
       
-        <title>Ergo REST API - ErgoDocs</title>
+        <title>Api - ErgoDocs</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ergo-rest-api" class="md-skip">
+        <a href="#accessing-the-api" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ergo REST API
+              Api
             
           </span>
         </div>
@@ -499,14 +499,14 @@
       
       
         <label class="md-nav__link" for="__nav_3_2">
-          Node
+          Wallets
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Node" data-md-level="2">
+      <nav class="md-nav" aria-label="Wallets" data-md-level="2">
         <label class="md-nav__title" for="__nav_3_2">
           <span class="md-nav__icon md-icon"></span>
-          Node
+          Wallets
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -516,8 +516,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../node/node-config.md" class="md-nav__link">
-        Node config
+      <a href="../../node/node-config/" class="md-nav__link">
+        Node
       </a>
     </li>
   
@@ -781,16 +781,17 @@
               
                 
                 
-                <h1 id="ergo-rest-api">Ergo REST API</h1>
-<p>An Ergo node provides a REST API accessible via HTTP. The full API specification (in OpenAPI format) is available <a href="https://github.com/ergoplatform/ergo/blob/master/src/main/resources/api/openapi.yaml">here</a></p>
+                  <h1>Api</h1>
+                
+                <p>An Ergo node provides a REST API accessible via HTTP. The full API specification (in OpenAPI format) is available <a href="https://github.com/ergoplatform/ergo/blob/master/src/main/resources/api/openapi.yaml">here</a>. </p>
 <h2 id="accessing-the-api">Accessing the API</h2>
-<p>Once the node is running, the API can be accessed at 127.0.0.1:9052. You can also use Swagger to make API requests by going to 127.0.0.1:9052/swagger. To access protected API routes (such as for wallet), you must provide your secret phrase in the request headers [api_key, Content-Type], or click the Authorize button in swagger and enter your secret phrase there.</p>
+<p>Once the node is running, the API can be accessed at <a href="http://127.0.0.1:9052"><code>127.0.0.1:9052</code></a>. You can also use Swagger to make API requests by going to <a href="http://127.0.0.1:9052/swagger"><code>127.0.0.1:9052/swagger</code></a>. To access protected API routes (such as for wallet), you must provide your secret phrase in the request headers <code>[api_key, Content-Type]</code>, or click the <code>Authorize</code> button in swagger and enter your secret phrase there.</p>
 <h2 id="setting-an-api-key">Setting an API key</h2>
-<p>For accessing any protected methods you must configure apiKeyHash parameter in the node configuration file:</p>
-<p>scorex.restApi.apiKeyHash = "replace_this_with_your_unique_api_key_hash"</p>
-<p>The parameter is the hex-encoded Blake2b256 hash of your secret phrase that will be used to authenticate your API requests. You can use this <a href="https://gist.github.com/oskin1/704ef3fba8d40bb1e7691919bf1e9cf9/">Python script</a> or any other script to securely generate the secret and the blake2b256 hash of it. The secret phrase acts as an API key and can be any string but please ensure that it remains secret and is not sent to any untrusted services.</p>
+<p>For accessing any protected methods you must configure <code>apiKeyHash</code> parameter in the node configuration file:</p>
+<p><code>scorex.restApi.apiKeyHash = "replace_this_with_your_unique_api_key_hash"</code></p>
+<p>The parameter is the hex-encoded Blake2b256 hash of your secret phrase that will be used to authenticate your API requests. You can use this <a href="https://gist.github.com/oskin1/704ef3fba8d40bb1e7691919bf1e9cf9/">Python script</a> or any other script to securely generate the secret and the <code>blake2b256</code> hash of it. The secret phrase acts as an API key and can be any string but please ensure that it remains secret and is not sent to any untrusted services. </p>
 <p>The following REST API endpoint also provides a (non-protected) method to compute the hash:</p>
-<p>/utils/hashBlake2b</p>
+<p><a href="http://127.0.0.1:9052/swagger#/utils/hashBlake2b"><code>/utils/hashBlake2b</code></a></p>
                 
               
               
