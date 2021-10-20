@@ -6,11 +6,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ergodocs.rtfd.io/About/ergo/</loc>
-         <lastmod>2021-10-20</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://ergodocs.rtfd.io/About/events/</loc>
          <lastmod>2021-10-20</lastmod>
          <changefreq>daily</changefreq>
@@ -47,6 +42,41 @@
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/dev/Languages/scala/</loc>
+         <lastmod>2021-10-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ergodocs.rtfd.io/dev/ergo/a/</loc>
+         <lastmod>2021-10-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ergodocs.rtfd.io/dev/ergo/apps/</loc>
+         <lastmod>2021-10-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ergodocs.rtfd.io/dev/ergo/box/</loc>
+         <lastmod>2021-10-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ergodocs.rtfd.io/dev/ergo/multi/</loc>
+         <lastmod>2021-10-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ergodocs.rtfd.io/dev/ergo/nipopow/</loc>
+         <lastmod>2021-10-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ergodocs.rtfd.io/dev/ergo/protocol/</loc>
+         <lastmod>2021-10-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ergodocs.rtfd.io/dev/ergo/sigma/</loc>
          <lastmod>2021-10-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -96,22 +126,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ergodocs.rtfd.io/dev/start/protocol/</loc>
+         <loc>https://ergodocs.rtfd.io/dev/start/resources/</loc>
          <lastmod>2021-10-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/dev/start/start/</loc>
-         <lastmod>2021-10-20</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://ergodocs.rtfd.io/dev/start/tools/</loc>
-         <lastmod>2021-10-20</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://ergodocs.rtfd.io/dev/start/tutorials/</loc>
          <lastmod>2021-10-20</lastmod>
          <changefreq>daily</changefreq>
     </url>

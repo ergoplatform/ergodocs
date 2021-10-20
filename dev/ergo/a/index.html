@@ -9,14 +9,14 @@
       
       
       
-        <link rel="canonical" href="https://ergodocs.rtfd.io/dev/start/api/">
+        <link rel="canonical" href="https://ergodocs.rtfd.io/dev/ergo/a/">
       
       <link rel="icon" href="../../../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.4">
     
     
       
-        <title>Api - ErgoDocs</title>
+        <title>A - ErgoDocs</title>
       
     
     
@@ -68,11 +68,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#accessing-the-api" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -102,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Api
+              A
             
           </span>
         </div>
@@ -209,7 +204,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../start/" class="md-tabs__link">
+      <a href="../../start/start/" class="md-tabs__link">
         Developers
       </a>
     </li>
@@ -437,7 +432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../start/" class="md-nav__link">
+      <a href="../../start/start/" class="md-nav__link">
         Where to start?
       </a>
     </li>
@@ -486,7 +481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ergo/protocol/" class="md-nav__link">
+      <a href="../protocol/" class="md-nav__link">
         The Ergo Protocol
       </a>
     </li>
@@ -500,7 +495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ergo/nipopow/" class="md-nav__link">
+      <a href="../nipopow/" class="md-nav__link">
         NiPoPoWS
       </a>
     </li>
@@ -514,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ergo/sigma/" class="md-nav__link">
+      <a href="../sigma/" class="md-nav__link">
         Sigma Protocols
       </a>
     </li>
@@ -528,7 +523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ergo/multi/" class="md-nav__link">
+      <a href="../multi/" class="md-nav__link">
         Multi-Stage Contracts
       </a>
     </li>
@@ -542,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ergo/box/" class="md-nav__link">
+      <a href="../box/" class="md-nav__link">
         Adresses
       </a>
     </li>
@@ -556,7 +551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ergo/apps/" class="md-nav__link">
+      <a href="../apps/" class="md-nav__link">
         Applications
       </a>
     </li>
@@ -919,64 +914,19 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#accessing-the-api" class="md-nav__link">
-    Accessing the API
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#setting-an-api-key" class="md-nav__link">
-    Setting an API key
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/glasgowm148/ergodocs/edit/master/docs/dev/start/api.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/glasgowm148/ergodocs/edit/master/docs/dev/ergo/a.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Api</h1>
+                  <h1>A</h1>
                 
-                <p>An Ergo node provides a REST API accessible via HTTP. The full API specification (in OpenAPI format) is available <a href="https://github.com/ergoplatform/ergo/blob/master/src/main/resources/api/openapi.yaml">here</a>. </p>
-<h2 id="accessing-the-api">Accessing the API</h2>
-<p>Once the node is running, the API can be accessed at <a href="http://127.0.0.1:9052"><code>127.0.0.1:9052</code></a>. You can also use Swagger to make API requests by going to <a href="http://127.0.0.1:9052/swagger"><code>127.0.0.1:9052/swagger</code></a>. To access protected API routes (such as for wallet), you must provide your secret phrase in the request headers <code>[api_key, Content-Type]</code>, or click the <code>Authorize</code> button in swagger and enter your secret phrase there.</p>
-<h2 id="setting-an-api-key">Setting an API key</h2>
-<p>For accessing any protected methods you must configure <code>apiKeyHash</code> parameter in the node configuration file:</p>
-<p><code>scorex.restApi.apiKeyHash = "replace_this_with_your_unique_api_key_hash"</code></p>
-<p>The parameter is the hex-encoded Blake2b256 hash of your secret phrase that will be used to authenticate your API requests. You can use this <a href="https://gist.github.com/oskin1/704ef3fba8d40bb1e7691919bf1e9cf9/">Python script</a> or any other script to securely generate the secret and the <code>blake2b256</code> hash of it. The secret phrase acts as an API key and can be any string but please ensure that it remains secret and is not sent to any untrusted services. </p>
-<p>The following REST API endpoint also provides a (non-protected) method to compute the hash:</p>
-<p><a href="http://127.0.0.1:9052/swagger#/utils/hashBlake2b"><code>/utils/hashBlake2b</code></a></p>
+                
                 
               
               
