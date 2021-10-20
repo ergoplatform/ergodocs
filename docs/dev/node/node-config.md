@@ -9,6 +9,8 @@ You should also remember that environment variables names are case sensitive in 
 
 ## Pi
 
+- [How to setup an Ergo node on a Raspberry Pi](https://youtu.be/yDqhlgz0244)
+
 
 ## Node Config File
 

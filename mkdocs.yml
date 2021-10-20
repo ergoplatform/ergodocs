@@ -19,7 +19,6 @@ theme:
         - navigation.tabs.sticky
         - navigation.sections
         - navigation.expand
-        - toc.integrate
     logo: assets/logo.png
     palette:
       primary: deep orange
@@ -67,12 +66,15 @@ nav:
       - Java: dev/Languages/java.md
       - Rust: dev/Languages/rust.md
       - C#: dev/Languages/csharp.md
-    - P2P: 
+    - Advanced:
+      - Integration: dev/Integration/guide.md 
       - P2P Handshaking: dev/p2p/p2p-handshake.md
       - P2P Protocol: dev/p2p/p2p-protocol.md
   - Wallets:
     - Node: dev/node/node-config.md
+    - Run: dev/node/run.md
     - Desktop: dev/node/node-config.md
     - Mobile: dev/node/node-config.md
-
+  
+    
 

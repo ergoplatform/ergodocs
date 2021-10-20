@@ -26,7 +26,14 @@ In addition, a box can have 6 optional registers (R4-R9) to store custom data fo
 >Note that Ergo txId depends only on the message and not on signatures (similar to Bitcoin SegWit transactions). Hence, a txId is available even before signing. Similar to Bitcoin, Ergo supports chained transactions (i.e., spending of boxes with 0 confirmations).
 
 ## Anatomy of an Ergo transaction
-An Ergo transaction consists of:
+
+**Articles**
+
+- [UTXO Model Transaction](https://ergoplatform.org/en/blog/2021-10-07-utxo-model-transaction/)
+- [Off-chain Logic and eUTXO](https://ergoplatform.org/en/blog/2021-10-04-off-chain-logic-and-eutxo/)
+
+
+**An Ergo transaction consists of:**
 
 1. One or more Input boxes (source of funds). These boxes must already exist and will be destroyed. The guard script in each of these boxes will be evaluated and must return true for the transaction to be considered valid,
 2. One or more Output boxes (destination of funds). These boxes will be created.
