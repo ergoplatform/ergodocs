@@ -1040,7 +1040,12 @@
 <p>Note that Ergo txId depends only on the message and not on signatures (similar to Bitcoin SegWit transactions). Hence, a txId is available even before signing. Similar to Bitcoin, Ergo supports chained transactions (i.e., spending of boxes with 0 confirmations).</p>
 </blockquote>
 <h2 id="anatomy-of-an-ergo-transaction">Anatomy of an Ergo transaction</h2>
-<p>An Ergo transaction consists of:</p>
+<p><strong>Articles</strong></p>
+<ul>
+<li><a href="https://ergoplatform.org/en/blog/2021-10-07-utxo-model-transaction/">UTXO Model Transaction</a></li>
+<li><a href="https://ergoplatform.org/en/blog/2021-10-04-off-chain-logic-and-eutxo/">Off-chain Logic and eUTXO</a></li>
+</ul>
+<p><strong>An Ergo transaction consists of:</strong></p>
 <ol>
 <li>One or more Input boxes (source of funds). These boxes must already exist and will be destroyed. The guard script in each of these boxes will be evaluated and must return true for the transaction to be considered valid,</li>
 <li>One or more Output boxes (destination of funds). These boxes will be created.</li>
