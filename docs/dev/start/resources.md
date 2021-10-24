@@ -1,6 +1,4 @@
-
-## Addresses
-https://ergoplatform.org/en/blog/2019_07_24_ergo_address/ 
+# Resources
 
 ## Explorer
 
@@ -36,3 +34,10 @@ https://ergoplatform.org/en/blog/2019_07_24_ergo_address/
 - [ErgoWiki](https://github.com/ergoplatform/ergo/wiki) | The official ergoplatform GitHub wiki
 - [ergosites.github.io](https://ergosites.github.io/) | Resource page which links to various websites and utilities. 
 - [ergohack.io](https://ergohack.io/resources) | Your introduction to developing on Ergo.
+
+
+## Basic Tutorials
+
+- [ergotutorials.com](https://ergotutorials.com/)
+- [Ergo API basic query](https://www.youtube.com/watch?v=B3W9uNwk_DM)
+- [Create mini web for your NFT.](https://www.youtube.com/watch?v=mP6D9Pf6p88)

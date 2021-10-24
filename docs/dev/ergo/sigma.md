@@ -1,0 +1,2 @@
+Ergo aims to provide an efficient, secure, and easy way to implement financial contracts that will be useful and survivable in the long term. There is plenty of uniqueness in Ergo but the most significant is probably Sigma protocols. These allow a true P2P system with privacy in mind. No one else at the moment is able to build a trustless LETS system, multisig with no signers disclosure, trustless payment networks or has real ring signatures that preserve zero knowledge.
+

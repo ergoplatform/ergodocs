@@ -46,17 +46,21 @@ markdown_extensions:
 nav:
   - Home: index.md
   - About:
-    - About Ergo: About/ergo.md
     - About ErgoDocs: About/format.md
     - FAQ: About/faq.md
     - Events: About/events.md
   - Developers:
     - Getting Started:
       - Where to start?: dev/start/start.md
-      - The Ergo Protocol: dev/start/protocol.md
-      - Tools: dev/start/tools.md
-      - dApp Development: dev/start/dApp-dev.md
-      - Introductionary Tutorials: dev/start/tutorials.md
+    - Ergo:
+      - The Ergo Protocol: dev/ergo/protocol.md
+      - NiPoPoWS: dev/ergo/nipopow.md
+      - Sigma Protocols: dev/ergo/sigma.md
+      - Multi-Stage Contracts: dev/ergo/multi.md
+      - Applications: dev/ergo/apps.md
+    - Model:
+       - Accounts: dev/ergo/box.md
+       - Adresses: dev/ergo/box.md
     - Stack:
       - Frontend: dev/stack/front-end.md
       - Backend: dev/stack/back-end.md
