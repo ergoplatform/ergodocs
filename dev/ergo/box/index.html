@@ -460,16 +460,14 @@
               
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" data-md-state="indeterminate" type="checkbox" id="__nav_3_2" checked>
       
       
       
@@ -546,6 +544,71 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../apps/" class="md-nav__link">
+        Applications
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3">
+          Model
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Model" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Model
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./" class="md-nav__link">
+        Accounts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -606,20 +669,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../apps/" class="md-nav__link">
-        Applications
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -638,18 +687,18 @@
     <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" data-md-state="indeterminate" type="checkbox" id="__nav_3_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" data-md-state="indeterminate" type="checkbox" id="__nav_3_4" checked>
       
       
       
       
-        <label class="md-nav__link" for="__nav_3_3">
+        <label class="md-nav__link" for="__nav_3_4">
           Stack
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Stack" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_3">
+        <label class="md-nav__title" for="__nav_3_4">
           <span class="md-nav__icon md-icon"></span>
           Stack
         </label>
@@ -715,18 +764,18 @@
     <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" data-md-state="indeterminate" type="checkbox" id="__nav_3_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" data-md-state="indeterminate" type="checkbox" id="__nav_3_5" checked>
       
       
       
       
-        <label class="md-nav__link" for="__nav_3_4">
+        <label class="md-nav__link" for="__nav_3_5">
           Languages
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Languages" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_4">
+        <label class="md-nav__title" for="__nav_3_5">
           <span class="md-nav__icon md-icon"></span>
           Languages
         </label>
@@ -806,18 +855,18 @@
     <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" data-md-state="indeterminate" type="checkbox" id="__nav_3_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" data-md-state="indeterminate" type="checkbox" id="__nav_3_6" checked>
       
       
       
       
-        <label class="md-nav__link" for="__nav_3_5">
+        <label class="md-nav__link" for="__nav_3_6">
           Advanced
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Advanced" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_5">
+        <label class="md-nav__title" for="__nav_3_6">
           <span class="md-nav__icon md-icon"></span>
           Advanced
         </label>
@@ -1033,20 +1082,20 @@
                 
                 <h2 id="box">Box</h2>
 <p>A UTXO is short for unspent transaction output. We can also consider spent transaction outputs (UTXOs that have been spent). In Ergo, a transaction output (whether spent or unspent) is called a box.</p>
-<p>A box at the minimum has 4 pieces of information.</p>
+<p>A box, at the minimum, has four pieces of information.</p>
 <ol>
 <li>The value in NanoErgs (1 Erg = 1000000000 NanoErgs).</li>
-<li>The guard script (like scriptPubKey of Bitcoin). This is also called the "smart contract".</li>
-<li>Additional assets (tokens) stored in this box.</li>
-<li>Creation info of the box (txId, the identifier of the transaction that created the box along with an output index). It also contains a "maxCreation" height parameter defined by the box creator (this is not the creation height; its use is to easily create "payment-channels").</li>
+<li>The guard script (like scriptPubKey of Bitcoin). This is also called the "smart contract."</li>
+<li>Additional assets (tokens) are stored in this box.</li>
+<li>Creation info of the box (txId, the identifier of the transaction that created the box along with an output index). It also contains a "maxCreation" height parameter defined by the box creator (this is not the creation height; its use is to create "payment channels easily").</li>
 </ol>
-<p><strong>These are stored in the first 4 registers (numbered R0-R3) of the box.</strong></p>
-<p>In addition, a box can have 6 optional registers (R4-R9) to store custom data for use in smart contracts. Registers must be densely packed, that is, we cannot sandwich empty registers between non-empty ones. The optional registers can contain data of any of the following types:</p>
+<p><strong>These are stored in the first four registers (numbered R0-R3) of the box.</strong></p>
+<p>In addition, a box can have six optional registers (R4-R9) to store custom data for use in smart contracts. Registers must be densely packed; that is, we cannot sandwich empty registers between non-empty ones. The optional registers can contain data of any of the following types:</p>
 <ul>
 <li>Int, Long with the usual semantics of Scala.</li>
-<li>BigInt which is a 256 bit integer (i.e., all computation is done modulo 2^256).</li>
+<li>BigInt, which is a 256-bit integer (i.e., all computation is done modulo 2^256).</li>
 <li>GroupElement, a point on the Secp256k1 curve represented in compressed format.</li>
-<li>Coll[Byte], which is a collection of bytes, semantically similar to Array[Byte] in Scala.</li>
+<li>Coll[Byte], a collection of bytes, semantically similar to Array[Byte] in Scala.</li>
 <li>Collection of the above, i.e., Coll[Int], Coll[GroupElement], Coll[Coll[Byte]], etc.</li>
 <li>A boxId is calculated based on the contents of all the registers. This boxId uniquely defines a box and can be considered equivalent to Bitcoin's (txId, vOut) pairs.</li>
 </ul>
@@ -1065,24 +1114,24 @@
 <li>One or more Output boxes (destination of funds). These boxes will be created.</li>
 <li>Zero or more Data-Inputs boxes. These are additional boxes whose data can be referenced and used by smart contracts of the inputs. The guard script in these boxes will not be evaluated.</li>
 </ol>
-<p>Data-inputs are unique to Ergo and not yet present in other extended-UTXO systems. A data-input box can be shared by multiple transactions and only a single reference to the box will be stored in the block. A data-input box can also be spent in the same transaction as long as it existed before the transaction was applied. As an example, the box with id d2b9b6536287b242f436436ce5a1e4a117d7b4843a13ce3abe3168bff99924a1 was used as both an input and a data-input in this transaction. While the use of data-inputs may not be immediately apparent, they play a major role in making Ergo more friendly to DeFi applications where we want to refer to a box without needing (or having the ability) to spend it, such as in decentralized order-books (DEX). For instance, the above transaction used a "timestamping service" to timestamp a box that was provided as a data-input.</p>
-<p>A script in Ergo can refer to other boxes in the transaction. For instance, the code snippet INPUTS(0).value &gt; 10000 &amp;&amp; OUTPUTS(1).value &gt; 20000 in any of the inputs boxes would enforce that the first input and the second output boxes must have value greater than 10000 and 20000 respectively.</p>
+<p>Data inputs are unique to Ergo and not yet present in other extended-UTXO systems. Multiple transactions can share a data-input box, and it will store only a single reference to the box in the block. We can also spend a data-input box in the same transaction as long as it existed before the transaction was applied. As an example, the box with id d2b9b6536287b242f436436ce5a1e4a117d7b4843a13ce3abe3168bff99924a1 was used as both an input and a data-input in this transaction. While the use of data-inputs may not be immediately apparent, they play a major role in making Ergo more friendly to DeFi applications where we want to refer to a box without needing (or having the ability) to spend it such as in decentralized order-books (DEX). For instance, the above transaction used a "timestamping service" to timestamp a box provided as data input.</p>
+<p>A script in Ergo can refer to other boxes in the transaction. For instance, the code snippet INPUTS(0).value &gt; 10000 &amp;&amp; OUTPUTS(1).value &gt; 20000 in any of the inputs boxes would enforce that the first input and the second output boxes must have a value greater than 10000 and 20000, respectively.</p>
 <h2 id="addresses">Addresses</h2>
-<p>In today's article, we will have a closer look into the Ergo address formatting. In addition to that we are going to explain how they work specifically as well as what makes them preferable to other types of blockchain addresses.</p>
+<p>In today's article, we will have a closer look into the Ergo address formatting. In addition to that, we will explain how they work specifically, as well as what makes them preferable to other types of blockchain addresses.</p>
 <p>Let's start at the very beginning.</p>
-<p>The moment you install any cryptocurrency wallet you automatically create an address with it. Very loosely speaking you can compare a wallet to a traditional bank account and an address to the matching account number.
-It is precisely one of these alphanumeric addresses that's needed to either send money from person A to person B, receive money or <a href="https://ergoplatform.org/en/blog/2019_07_03_mining_withdrawal/">withdraw your mining rewards</a>.
-If you want to get started using the Ergo wallet and dive deeper into its functions go check out the <a href="https://ergoplatform.org/en/blog/2019_06_04_wallet-documentation/">following link</a>.</p>
+<p>The moment you install any cryptocurrency wallet, you automatically create an address with it. Very loosely speaking, you can compare a wallet to a traditional bank account and an address to the matching account number.
+It is precisely one of these alphanumeric addresses needed to either send money from person A to person B, receive money, or <a href="https://ergoplatform.org/en/blog/2019_07_03_mining_withdrawal/">withdraw your mining rewards</a>.
+If you want to start using the Ergo wallet and dive deeper into its functions, check out the <a href="https://ergoplatform.org/en/blog/2019_06_04_wallet-documentation/">the following link</a>.</p>
 <p>Now, what exactly are addresses?</p>
-<p>Addresses are short strings that correspond to certain scripts and are used to protect a box (<a href="https://www.ergoforum.org/t/ergo-terminology-a-box-and-a-register/32">this</a> post that core developer <em>kushti</em> published on our forum explains very well what a "box" is).
-Unlike a (hex-encoded) binary representation of a script, an Ergo address is using a Base58-encoding and therefore has some very useful characteristics to it which the binary representation do not offer:</p>
+<p>Addresses are short strings that correspond to specific scripts and are used to protect a box (<a href="https://www.ergoforum.org/t/ergo-terminology-a-box-and-a-register/32">this</a> post that core developer <em>kushti</em> published on our forum explains very well what a "box" is).
+Unlike a (hex-encoded) binary representation of a script, an Ergo address use a Base58-encoding and therefore have some advantageous characteristics to it which the binary representation does not offer:</p>
 <ul>
-<li>The integrity of an address can easily be checked via an integrated checksum (which is a "small-sized datum derived from a block of digital data for the purpose of detecting errors that may have been introduced during its transmission or storage", according to Wikipedia).</li>
-<li>A prefix of the address is showing you the network and address type. In particular, the network prefix prevents you from mistakenly sending mainnet tokens to the testnet address.</li>
-<li>The address is using an encoding (namely, Base58 as mentioned) which is avoiding similarly looking characters and is friendly to double-clicking and also line-breaking in emails.</li>
-<li>An address is encoding network type, address type, checksum, and enough information to correspond with particular scripts.</li>
+<li>We can quickly check the integrity of an address via an integrated checksum (which is a "small-sized datum derived from a block of digital data to detect errors that may have been introduced during its transmission or storage" according to Wikipedia).</li>
+<li>A prefix of the address shows you the network and address type. In particular, the network prefix prevents you from mistakenly sending mainnet tokens to the testnet address.</li>
+<li>The address uses an encoding (namely, Base58 as mentioned) that avoids similarly-looking characters and is friendly to double-clicking and line-breaking in emails.</li>
+<li>An address encodes network type, address type, checksum, and enough information to correspond with particular scripts.</li>
 </ul>
-<p>Let's look at the prefix byte which contains information about the network and address types:</p>
+<p>Let's look at the prefix byte, which contains information about the network and address types:</p>
 <p>Possible network types are:</p>
 <ul>
 <li>Mainnet - <code>0x00</code></li>
@@ -1101,7 +1150,7 @@ Unlike a (hex-encoded) binary representation of a script, an Ergo address is usi
 <li><strong>P2S</strong>  - serialized script (this is where mining rewards go!)</li>
 </ul>
 <p>For example, sending 10 Ergs to a P2PK address usually means that a corresponding transaction will contain a box in which 10 Ergs are locked by a public key encoded in the P2PK address. Similarly,
-in case of a P2S address the box will be locked by a script encoded in the address. In the most complicated case of a P2SH script, the box will be protected by a special predefined script which is taking first 192 bits of Blake2b256 hash  value for a script which should be shown by an input spending the box. </p>
+in the case of a P2S address, the box will be locked by a script encoded in the address. In the most complicated case of a P2SH script, the box will be protected by a special predefined script that takes the first 192 bits of Blake2b256 hash value for a script shown by an input spending the box. </p>
 <p>Here is an example of how particular addresses are going to look on the testnet: </p>
 <ul>
 <li><code>3</code> - <strong>P2PK</strong> (<code>3WvsT2Gm4EpsM9Pg18PdY6XyhNNMqXDsvJTbbf6ihLvAmSb7u5RN</code>)</li>
@@ -1114,7 +1163,7 @@ in case of a P2S address the box will be locked by a script encoded in the addre
 <li><code>?</code> - <strong>P2SH</strong> (<code>8UApt8czfFVuTgQmMwtsRBZ4nfWquNiSwCWUjMg</code>)</li>
 <li><code>?</code> - <strong>P2S</strong> (<code>4MQyML64GnzMxZgm, BxKBaHkvrTvLZrDcZjcsxsF7aSsrN73ijeFZXtbj4CXZHHcvBtqSxQ</code>)</li>
 </ul>
-<p>In short summary:</p>
+<p>In summary:</p>
 <ul>
 <li><strong>Prefix byte</strong> = <code>network type + address type</code> (for example, P2S script on the testnet starts with 0x13 before Base58)</li>
 <li><strong>checksum</strong> = <code>leftmost_4_bytes (blake2b256 (prefix byte || content bytes))</code></li>
@@ -1139,7 +1188,7 @@ in case of a P2S address the box will be locked by a script encoded in the addre
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../multi/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Multi-Stage Contracts" rel="prev">
+        <a href="./" class="md-footer__link md-footer__link--prev" aria-label="Previous: Accounts" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1148,20 +1197,20 @@ in case of a P2S address the box will be locked by a script encoded in the addre
               <span class="md-footer__direction">
                 Previous
               </span>
-              Multi-Stage Contracts
+              Accounts
             </div>
           </div>
         </a>
       
       
         
-        <a href="../apps/" class="md-footer__link md-footer__link--next" aria-label="Next: Applications" rel="next">
+        <a href="../../stack/front-end/" class="md-footer__link md-footer__link--next" aria-label="Next: Frontend" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Applications
+              Frontend
             </div>
           </div>
           <div class="md-footer__button md-icon">

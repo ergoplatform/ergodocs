@@ -9,14 +9,14 @@
       
       
       
-        <link rel="canonical" href="https://ergodocs.rtfd.io/dev/ergo/multi/">
+        <link rel="canonical" href="https://ergodocs.rtfd.io/dev/ergo/eutxo/">
       
       <link rel="icon" href="../../../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.4">
     
     
       
-        <title>Multi-Stage Contracts - ErgoDocs</title>
+        <title>Eutxo - ErgoDocs</title>
       
     
     
@@ -68,11 +68,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#multi-stage-contracts" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -102,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Multi-Stage Contracts
+              Eutxo
             
           </span>
         </div>
@@ -198,8 +193,6 @@
         
   
   
-    
-  
 
 
   
@@ -211,7 +204,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../start/start/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../start/start/" class="md-tabs__link">
         Developers
       </a>
     </li>
@@ -383,14 +376,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -460,16 +451,14 @@
               
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" data-md-state="indeterminate" type="checkbox" id="__nav_3_2" checked>
       
       
       
@@ -532,21 +521,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../multi/" class="md-nav__link">
         Multi-Stage Contracts
       </a>
-      
     </li>
   
 
@@ -984,39 +963,32 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/glasgowm148/ergodocs/edit/master/docs/dev/ergo/multi.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/glasgowm148/ergodocs/edit/master/docs/dev/ergo/eutxo.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="multi-stage-contracts">Multi-Stage Contracts</h1>
-<p>So you’ve heard about smart contracts, but what are multi-stage contracts? Multi-stage contracts refer to smart contracts that are operating on a stateful level. Because Ergo uses the UTXO model, it is possible to process parallelized actions on top of smart contracts. </p>
-<p>For a blockchain to contain smart contracts, it should have loops. These loops can later refer to themselves and check whether an operation is working or not. Bitcoin’s UTXO design is very primitive, and it doesn’t contain Turing-complete smart contracts. Ethereum has this capability, but it’s a primitive version of a Turing-complete language. Ergo Blockchain provides a different approach to multi-stage contracts, empowered by the extended UTXO model. Permitting a lighter network and broader use cases.</p>
+                  <h1>Eutxo</h1>
+                
+                <p>UTXO has many advantages over the account-based model used by Ethereum. It provides superior:</p>
 <ul>
-<li><a href="https://ergoplatform.org/en/blog/2021-04-16-multi-stage-contracts/">Multi-Stage Contracts</a></li>
+<li>Privacy, as UTXOs are one-time objects making it possible to formalise privacy leaks.</li>
+<li>Scalability, as parallel transaction processing is more straightforward. UTXOs are also more friendly to known stateless client solutions.</li>
+<li>Interoperability, as off-chain and sidechain protocols. One-time objects are simpler to work with from an off-chain point of view.</li>
+<li>Transaction Cost Predictability, where the only on-chain action is validating the smart contracts. As a result, the transaction cost is significantly lower and most importantly, the transaction cost is predictable, eliminating the need for ‘gas.’</li>
 </ul>
+<p>ErgoScript is built considering Bitcoin’s security and privacy and the purpose of making all kinds of complex financial contracts accessible to everyone. However Bitcoin’s design doesn’t allow loops, and building complex smart contracts on top of it isn’t possible. ErgoScript allows for self-replication, therefore it can be used to create Turing-Complete processes in a blockchain.</p>
+<p>Another approach to creating smart contracts in blockchain is the Account-Based model, like on Ethereum. Ethereum’s design facilitates smart contract opeld coins, so the unspent transaction output (UTXO) show us which private key holds which coiration by processing smart contracts as accounts. In Bitcoin, there aren’t accounts that hons. Coins are in a set of addresses represented with a single UTXO. It’s also easier to include privacy schemes in this model than the Account Based model.</p>
+<p>Therefore, Ergo developed Bitcoin’s UTXO model to the extended UTXO model by introducing readable UTXO design. This enables smart contracts to use UTXOs as data inputs without changing them. Therefore nodes are checking transactions, rather than balances. In comparison, in Ethereum’s Account model, nodes do this by checking all accounts to validate the system.</p>
+<p>Side by side, the UTXO model is more scalable but it’s also more complicated to build User Interface tools. The account model provides easier access to developers but codes are heavier on the blockchain which can lead to network congestion. </p>
+<p>Furthermore, UTXO allows for parallel computation and it’s easier to compute atomic swaps in a non-custodial manner. </p>
+<p>https://ergoplatform.org/en/blog/2021-10-04-off-chain-logic-and-eutxo/
+https://ergoplatform.org/en/blog/2021-09-26-the-utxo-alliance/</p>
                 
               
               
@@ -1032,41 +1004,6 @@
       
         
 <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../sigma/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Sigma Protocols" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Sigma Protocols
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../apps/" class="md-footer__link md-footer__link--next" aria-label="Next: Applications" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Applications
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
