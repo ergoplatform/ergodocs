@@ -1,0 +1,1521 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://ergodocs.rtfd.io/dev/protocol/audit/">
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.4">
+    
+    
+      
+        <title>Audit - ErgoDocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.db9e7362.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ff6e42">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7C&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:""}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="deep-orange" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#summary" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="ErgoDocs" class="md-header__button md-logo" aria-label="ErgoDocs" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ErgoDocs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Audit
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/glasgowm148/ergodocs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../About/format/" class="md-tabs__link">
+        About
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../start/start/" class="md-tabs__link md-tabs__link--active">
+        Developers
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../node/docs/" class="md-tabs__link">
+        Node
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="ErgoDocs" class="md-nav__button md-logo" aria-label="ErgoDocs" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    ErgoDocs
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/glasgowm148/ergodocs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          About
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="About" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          About
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../About/format/" class="md-nav__link">
+        About ErgoDocs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../About/faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../About/events/" class="md-nav__link">
+        Events
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Developers
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Developers" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Developers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" data-md-state="indeterminate" type="checkbox" id="__nav_3_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          Getting Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Getting Started" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../start/start/" class="md-nav__link">
+        Where to start?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ergo/protocol/" class="md-nav__link">
+        The Ergo Protocol
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../start/use/" class="md-nav__link">
+        Use Cases
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ergo/apps/" class="md-nav__link">
+        Applications
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          Protocol
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Protocol" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Protocol
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../utxo-state/" class="md-nav__link">
+        UTXO State
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../autolykos/" class="md-nav__link">
+        Autolykos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Audit
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Audit
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sigma-protocol-proofs" class="md-nav__link">
+    Sigma protocol proofs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wallet" class="md-nav__link">
+    Wallet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pow-validation" class="md-nav__link">
+    PoW validation
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" data-md-state="indeterminate" type="checkbox" id="__nav_3_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3">
+          Features
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Features" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Features
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../atomic/" class="md-nav__link">
+        Atomic Swaps
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rent/" class="md-nav__link">
+        Storage Rent
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nipopow/" class="md-nav__link">
+        NiPoPoWS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scs/sigma/" class="md-nav__link">
+        Sigma Protocols
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scs/multi/" class="md-nav__link">
+        Multi-Stage Contracts
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" data-md-state="indeterminate" type="checkbox" id="__nav_3_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_4">
+          Data Model
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Data Model" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Data Model
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-model/box/" class="md-nav__link">
+        Box
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../address/" class="md-nav__link">
+        Adresses
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-model/p2p-handshake/" class="md-nav__link">
+        P2P Handshaking
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-model/p2p-protocol/" class="md-nav__link">
+        P2P Protocol
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" data-md-state="indeterminate" type="checkbox" id="__nav_3_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_5">
+          Stack
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Stack" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Stack
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stack/front-end/" class="md-nav__link">
+        Frontend
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stack/back-end/" class="md-nav__link">
+        Backend
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stack/appkit/" class="md-nav__link">
+        AppKit
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stack/ergotool/" class="md-nav__link">
+        ErgoTool
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" data-md-state="indeterminate" type="checkbox" id="__nav_3_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_6">
+          Smart Contracts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Smart Contracts" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          Smart Contracts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scs/ergoscript/" class="md-nav__link">
+        ErgoScript
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scs/flowcards/" class="md-nav__link">
+        FlowCards
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_7" data-md-state="indeterminate" type="checkbox" id="__nav_3_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_7">
+          Examples
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Examples" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_7">
+          <span class="md-nav__icon md-icon"></span>
+          Examples
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apps/zk/" class="md-nav__link">
+        ZK-Treasury
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scs/crowdfunding/" class="md-nav__link">
+        CrowdFunding
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scs/microcredit/" class="md-nav__link">
+        Micro Credit
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_8" data-md-state="indeterminate" type="checkbox" id="__nav_3_8" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_8">
+          Advanced
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Advanced" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_8">
+          <span class="md-nav__icon md-icon"></span>
+          Advanced
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Integration/guide/" class="md-nav__link">
+        Integration
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Node
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Node" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Node
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../node/docs/" class="md-nav__link">
+        Docs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../node/node-config/" class="md-nav__link">
+        Config
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../node/run/" class="md-nav__link">
+        First Run
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../node/withdraw/" class="md-nav__link">
+        Withdraw
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../node/api/" class="md-nav__link">
+        API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../node/architecture/" class="md-nav__link">
+        Architecture
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../node/digest-state/" class="md-nav__link">
+        Digest State
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../node/history-pruning/" class="md-nav__link">
+        History Pruning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../node/snapshots/" class="md-nav__link">
+        Snapshots
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sigma-protocol-proofs" class="md-nav__link">
+    Sigma protocol proofs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wallet" class="md-nav__link">
+    Wallet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pow-validation" class="md-nav__link">
+    PoW validation
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/glasgowm148/ergodocs/edit/master/docs/dev/protocol/audit.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <p>We would like to announce that Ergo has successfully passed security audit of certain (most critical) parts of the code. This time the audit was done by Jean-Philipee Aumasson (aka veorq, <a href="https://aumasson.jp/">https://aumasson.jp/</a> ).</p>
+<p>The detailed report is below. Nothing critical is found. Comments on issues found:</p>
+<ol>
+<li>
+<p>On wallet password, we'll provide a recommendation in next versions of the protocol client. Not sure hard enforcement on password will take place, but we'll do more consultations on this.</p>
+</li>
+<li>
+<p>Changing "n" and "k" parameters makes sense when launching new network only. Changing this parameters in mining node will make blocks produced invalid for other nodes. Changing this parameters in protocol client means going on another fork (blocks coming from the honest protocol participants will be rejected). So no need for extra checks maybe, as people launching new networks will set "n" and "k" properly.</p>
+</li>
+<li>
+<p>Currently the Ergo node (as well as other blockchain protocol clients and wallets we're aware of, as well as cryptographic libraries we're using) do not provide protection from side-channel attacks running locally (e.g. timing attacks or memory inspection by malware or viruses). So please protect machines you're running wallets on!  </p>
+</li>
+</ol>
+<p>==========================================================================================================</p>
+<p>% Ergo security assessment % Jean-Philippe Aumasson % 07/Dec/19</p>
+<h2 id="summary">Summary</h2>
+<p>We were solicited by Ergo to perform a security assessment of several components of their Ergo Platform:</p>
+<ul>
+<li>Sigma protocol proofs creation and verification</li>
+<li>Wallet's secure storage of secrets</li>
+<li>Proof-of-Work validation</li>
+</ul>
+<p>​This brief report summarizes our assessment and describes our findings and mitigation recommendations.</p>
+<h2 id="sigma-protocol-proofs">Sigma protocol proofs</h2>
+<p>​The Ergo protocol relies on ErgoScript, a scripting language supporting sigma-statements, which can be proven and verified through non-interactive proofs of knowledge.</p>
+<p>These proofs are statements described as a tree of AND, OR, and threshold conditions, whose leaves are proofs of knowledge of a discrete-logarithm problem.</p>
+<p>The proof of the sigma-statement is then made non-interactive thanks to the Fiat-Shamir transform.</p>
+<p>This logic is specified in the <a href="https://ergoplatform.org/docs/ErgoScript.pdf">ErgoScript paper</a>, and the specific
+proving and verification routines described in its Appendix A.</p>
+<p>​Implementation challenges are then to:</p>
+<ul>
+<li>
+<p>Define encoding of the proofs that are safe and efficient, and implement serialization and deserialization that always succeeds in processing valid input, and that always gracefully fails to process invalid input.</p>
+</li>
+<li>
+<p>Implement the proving and verification functionalities correctly, in compliance with the specification, and most importantly such that no invalid statement can successfully pass verification.</p>
+</li>
+</ul>
+<p>We reviewed these two aspects, based on the code in the repository <a href="https://github.com/ScorexFoundation/sigmastate-interpreter">sigmastate-interpreter</a>, and on the <a href="https://ergoplatform.org/docs/ErgoScript.pdf">ErgoScript paper</a>, carefully comparing the intended behavior (in Appendix A) with the actual behavior as implemented.</p>
+<p>​We notably reviewed code from the <a href="https://github.com/ScorexFoundation/sigmastate-interpreter/blob/master/sigmastate/src/main/scala/sigmastate/SigSerializer.scala">SigSerializer</a>, <a href="https://github.com/ScorexFoundation/sigmastate-interpreter/blob/master/sigmastate/src/main/scala/sigmastate/interpreter/Interpreter.scala">Interpreter</a>, and <a href="https://github.com/ScorexFoundation/sigmastate-interpreter/blob/master/sigmastate/src/main/scala/sigmastate/interpreter/ProverInterpreter.scala">ProverInterpreter</a> traits and objects.</p>
+<p>​We mainly sought bugs from the following classes:</p>
+<ul>
+<li>​Unsafe processing of malformed input</li>
+<li>Unsafe processing of unusually long or short input</li>
+<li>Behavior when large tree depth or recursion level</li>
+<li>Unsafe use Scala types and structures</li>
+<li>Inappropriate variable types</li>
+<li>Integer overflows</li>
+<li>Race conditions</li>
+<li>Logic bugs </li>
+</ul>
+<p>​Despite extensive review, we did not identify any security issue.</p>
+<p>The protocol's logic and internals are nonetheless relatively complex, and we believe the highest risk is in the parsing and verification of proofs. To exploit such issues, however, an attacker would have to create a semantically correct script that somehow benefits them, yet that passes verification when it does not ought to.</p>
+<p>Regarding software security, Scala eliminates certain classes of bugs, but Scala code may still suffer from bugs due to Scala's specific behavior or to unhandled errors.</p>
+<h2 id="wallet">Wallet</h2>
+<p>Ergo's wallet functionality enables its users to store a secret on disk and recover it, initializing the wallet with a new seed when it's first used.</p>
+<p>​This logic is mainly defined in <a href="https://github.com/ergoplatform/ergo/blob/master/src/main/scala/org/ergoplatform/nodeView/wallet/ErgoWalletActor.scala">ErgoWalletActor</a>, and a key component regarding secrets' storage is <a href="https://github.com/ergoplatform/ergo/blob/master/ergo-wallet/src/main/scala/org/ergoplatform/wallet/secrets/JsonSecretStorage.scala">JsonSecretStorage</a>.</p>
+<p>​The first time a wallet is create, the <code>InitWallet</code> command does the following:</p>
+<ul>
+<li>
+<p>Generate <code>settings.walletSettings.seedStrengthBits</code> random bits, as initial entropy. <a href="https://github.com/ergoplatform/ergo/blob/master/src/main/resources/reference.conf">By default</a>, 160 bits are generated.</p>
+</li>
+<li>
+<p>Generate a BIP39 from the random bits generated, which can be seen as an encoding of the entropy bits. The standard BIP39 logic is used, with optional password.</p>
+</li>
+<li>
+<p>Derive a seed from the mnemonic using BIP39's PBKDF2-based derivation logic.</p>
+</li>
+<li>
+<p>Encrypt this seed to disk with AES-GCM, using a random nonce, and a key derive from the password using PBKDF2-HMAC-SHA256 with <a href="https://github.com/ergoplatform/ergo/blob/master/src/test/resources/application.conf#L107">128000</a> iterations, using a random salt.</p>
+</li>
+</ul>
+<p>To unlock a wallet already created, a user provides the password and the wallet attempts to decrypt the stored data.</p>
+<p>​To restore an existing account from a BIP39 passphrase, a similar process as initialization is performed, except that the wallet will derive the seed from the mnemonic instead of picking random mnemonic.</p>
+<p>​The two risks we identified here are:</p>
+<ul>
+<li>
+<p>The absence of checks on the password's length: since the password is sufficient to access the seed given the wallet's on-disk stored secret, the password should in theory have at least as much entropy as the mnemonic, and in practice should be practically hard to crack. We thus recommend to enforce a minimal password length, for example of 16 characters.</p>
+</li>
+<li>
+<p>Copies of secret values (password, seed, and derive private keys) are likely to remain in memory after wallet software execution, which is an intrinsic limitation garbage-collected languages such as Scala.</p>
+</li>
+</ul>
+<p>Another process or user sharing the same memory address space could potentially recover the secrets, and they could also appear in crash dumps. To the best of our knowledge, there is no effective mitigation in pure Scala.</p>
+<p>​</p>
+<h1 id="pow-validation">PoW validation</h1>
+<p>​After previously reviewing the security of the Autolykos PoW, we performed another round of review focusing on its latest verification logic, and notably the changes in the commit <a href="https://github.com/ergoplatform/ergo/commit/eb0f85ac48b0ee8194c12369faf4cc5f16954af9">eb0f85a</a>.</p>
+<p>​The main relevant file is <a href="https://github.com/ergoplatform/ergo/blob/master/src/main/scala/org/ergoplatform/mining/AutolykosPowScheme.scala">AutolykosPowScheme</a>,and other important operations are for example implemented in
+<a href="https://github.com/ergoplatform/ergo/blob/master/src/main/scala/org/ergoplatform/nodeView/history/storage/modifierprocessors/HeadersProcessor.scala">HeadersProcessor</a> and <a href="https://github.com/ScorexFoundation/Scorex/blob/master/src/main/scala/scorex/core/validation/ModifierValidator.scala">ModifierValidator</a>.</p>
+<p>​We checked that the implemented verification logic is consistent with that specified in the Autolykos specifications, and that it is properly integrated in the block header validation logic.</p>
+<p>​We believe the following points should be addressed:</p>
+<ul>
+<li>
+<p>Stricter validation of <code>k</code> and <code>n</code>: although the class enforces <code>k&lt;=32</code> (number of elements in the solution) and <code>n&lt;31</code> (log2 of the total number of elements), weak could still be created from the authorized parameters. The <code>validate()</code> function may therefore have additional validation that <code>n</code> and <code>k</code> are equal to the intended
+values.</p>
+</li>
+<li>
+<p>Assert that <code>k</code> and <code>n</code> are positive values, since currently negative ones (as <code>Int</code>s) would pass the <code>assert</code> statements.</p>
+</li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../autolykos/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Autolykos" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Autolykos
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../atomic/" class="md-footer__link md-footer__link--next" aria-label="Next: Atomic Swaps" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Atomic Swaps
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.1e84347e.min.js"></script>
+      
+    
+  </body>
+</html>

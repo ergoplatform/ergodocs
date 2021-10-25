@@ -1,0 +1,2024 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://ergodocs.rtfd.io/dev/stack/appkit/">
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.4">
+    
+    
+      
+        <title>AppKit - ErgoDocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.db9e7362.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ff6e42">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7C&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:""}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="deep-orange" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#example-scenario" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="ErgoDocs" class="md-header__button md-logo" aria-label="ErgoDocs" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ErgoDocs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              AppKit
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/glasgowm148/ergodocs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../About/format/" class="md-tabs__link">
+        About
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../start/start/" class="md-tabs__link md-tabs__link--active">
+        Developers
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../node/docs/" class="md-tabs__link">
+        Node
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="ErgoDocs" class="md-nav__button md-logo" aria-label="ErgoDocs" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    ErgoDocs
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/glasgowm148/ergodocs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          About
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="About" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          About
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../About/format/" class="md-nav__link">
+        About ErgoDocs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../About/faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../About/events/" class="md-nav__link">
+        Events
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Developers
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Developers" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Developers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" data-md-state="indeterminate" type="checkbox" id="__nav_3_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          Getting Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Getting Started" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../start/start/" class="md-nav__link">
+        Where to start?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ergo/protocol/" class="md-nav__link">
+        The Ergo Protocol
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../start/use/" class="md-nav__link">
+        Use Cases
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ergo/apps/" class="md-nav__link">
+        Applications
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" data-md-state="indeterminate" type="checkbox" id="__nav_3_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          Protocol
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Protocol" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Protocol
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../protocol/utxo-state/" class="md-nav__link">
+        UTXO State
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../protocol/autolykos/" class="md-nav__link">
+        Autolykos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../protocol/audit/" class="md-nav__link">
+        Audit
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" data-md-state="indeterminate" type="checkbox" id="__nav_3_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3">
+          Features
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Features" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Features
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../protocol/atomic/" class="md-nav__link">
+        Atomic Swaps
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../protocol/rent/" class="md-nav__link">
+        Storage Rent
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../protocol/nipopow/" class="md-nav__link">
+        NiPoPoWS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scs/sigma/" class="md-nav__link">
+        Sigma Protocols
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scs/multi/" class="md-nav__link">
+        Multi-Stage Contracts
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" data-md-state="indeterminate" type="checkbox" id="__nav_3_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_4">
+          Data Model
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Data Model" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Data Model
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-model/box/" class="md-nav__link">
+        Box
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../protocol/address/" class="md-nav__link">
+        Adresses
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-model/p2p-handshake/" class="md-nav__link">
+        P2P Handshaking
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-model/p2p-protocol/" class="md-nav__link">
+        P2P Protocol
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_5">
+          Stack
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Stack" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Stack
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../front-end/" class="md-nav__link">
+        Frontend
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../back-end/" class="md-nav__link">
+        Backend
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          AppKit
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        AppKit
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#example-scenario" class="md-nav__link">
+    Example Scenario
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-java-ergo-app-development" class="md-nav__link">
+    1. Java Ergo App Development
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-low-footprint-fast-startup-ergo-applications" class="md-nav__link">
+    2. Low-footprint, Fast-startup Ergo Applications
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-develop-ergo-applications-in-javascript-python-ruby" class="md-nav__link">
+    3. Develop Ergo Applications in JavaScript, Python, Ruby
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Develop Ergo Applications in JavaScript, Python, Ruby">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#javascript" class="md-nav__link">
+    JavaScript
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ruby" class="md-nav__link">
+    Ruby
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-ergo-native-shared-libraries" class="md-nav__link">
+    4. Ergo Native Shared Libraries
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-debugging-your-polyglot-ergo-application" class="md-nav__link">
+    5. Debugging Your Polyglot Ergo Application
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusions" class="md-nav__link">
+    Conclusions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ergotool/" class="md-nav__link">
+        ErgoTool
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" data-md-state="indeterminate" type="checkbox" id="__nav_3_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_6">
+          Smart Contracts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Smart Contracts" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          Smart Contracts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scs/ergoscript/" class="md-nav__link">
+        ErgoScript
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scs/flowcards/" class="md-nav__link">
+        FlowCards
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_7" data-md-state="indeterminate" type="checkbox" id="__nav_3_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_7">
+          Examples
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Examples" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_7">
+          <span class="md-nav__icon md-icon"></span>
+          Examples
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apps/zk/" class="md-nav__link">
+        ZK-Treasury
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scs/crowdfunding/" class="md-nav__link">
+        CrowdFunding
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scs/microcredit/" class="md-nav__link">
+        Micro Credit
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_8" data-md-state="indeterminate" type="checkbox" id="__nav_3_8" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_8">
+          Advanced
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Advanced" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_8">
+          <span class="md-nav__icon md-icon"></span>
+          Advanced
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Integration/guide/" class="md-nav__link">
+        Integration
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Node
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Node" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Node
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../node/docs/" class="md-nav__link">
+        Docs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../node/node-config/" class="md-nav__link">
+        Config
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../node/run/" class="md-nav__link">
+        First Run
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../node/withdraw/" class="md-nav__link">
+        Withdraw
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../node/api/" class="md-nav__link">
+        API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../node/architecture/" class="md-nav__link">
+        Architecture
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../node/digest-state/" class="md-nav__link">
+        Digest State
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../node/history-pruning/" class="md-nav__link">
+        History Pruning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../node/snapshots/" class="md-nav__link">
+        Snapshots
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#example-scenario" class="md-nav__link">
+    Example Scenario
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-java-ergo-app-development" class="md-nav__link">
+    1. Java Ergo App Development
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-low-footprint-fast-startup-ergo-applications" class="md-nav__link">
+    2. Low-footprint, Fast-startup Ergo Applications
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-develop-ergo-applications-in-javascript-python-ruby" class="md-nav__link">
+    3. Develop Ergo Applications in JavaScript, Python, Ruby
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Develop Ergo Applications in JavaScript, Python, Ruby">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#javascript" class="md-nav__link">
+    JavaScript
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ruby" class="md-nav__link">
+    Ruby
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-ergo-native-shared-libraries" class="md-nav__link">
+    4. Ergo Native Shared Libraries
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-debugging-your-polyglot-ergo-application" class="md-nav__link">
+    5. Debugging Your Polyglot Ergo Application
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusions" class="md-nav__link">
+    Conclusions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/glasgowm148/ergodocs/edit/master/docs/dev/stack/appkit.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  <h1>AppKit</h1>
+                
+                <blockquote>
+<p>With thanks to <a href="https://github.com/robkorn">Robert Kornacki</a> and <a href="https://github.com/greenhat">Denys Zadorozhnyi</a>.</p>
+</blockquote>
+<p><a href="https://github.com/aslesarenko/ergo-appkit">Ergo Appkit</a> is a library for
+polyglot development of Ergo Applications based on
+<a href="https://www.graalvm.org/">GraalVM</a>. GraalVM has many <a href="https://medium.com/graalvm/graalvm-ten-things-12d9111f307d">great
+use cases</a>. Expanding on that, in this article we will go through some of the Appkit
+features inherited from GraalVM and take you step-by-step in learning how to take advantage of them.</p>
+<ul>
+<li><a href="#example-scenario">Example Scenario</a></li>
+<li><a href="#1-java-ergo-app-development">1. Java Ergo App Development</a></li>
+<li><a href="#2-low-footprint-fast-startup-ergo-applications">2. Low-footprint, Fast-startup Ergo Applications</a></li>
+<li><a href="#3-develop-ergo-applications-in-javascript-python-ruby">3. Develop Ergo Applications in JavaScript, Python, Ruby</a></li>
+<li><a href="#javascript">JavaScript</a></li>
+<li><a href="#python">Python</a></li>
+<li><a href="#ruby">Ruby</a></li>
+<li><a href="#4-ergo-native-shared-libraries">4. Ergo Native Shared Libraries</a></li>
+<li><a href="#5-debugging-your-polyglot-ergo-application">5. Debugging Your Polyglot Ergo Application</a></li>
+<li><a href="#conclusions">Conclusions</a></li>
+<li><a href="#references">References</a></li>
+</ul>
+<h2 id="example-scenario">Example Scenario</h2>
+<p>We will create a simple console application (called
+<a href="https://github.com/aslesarenko/ergo-appkit-examples/blob/master/java-examples/src/main/java/org/ergoplatform/appkit/examples/FreezeCoin.java">FreezeCoin</a>)
+in Java which uses the Appkit library. By using Appkit, we will be able to easily send a new transaction to an Ergo node programatically. The
+transaction will transfer a given amount of Erg into a new box protected by the
+following Ergo contract written in ErgoScript (see this
+<a href="https://ergoplatform.org/docs/ErgoScript.pdf">introduction</a> and more <a href="https://ergoplatform.org/docs/AdvancedErgoScriptTutorial.pdf">advanced
+examples</a> to learn more about ErgoScript).</p>
+<pre><code class="language-java">// Freezer Contract
+{ 
+  // Parameters
+  // freezeDeadline: Int - some future block number after which the box can be spent
+  // ownerPk: SigmaProp - public key of the new box owner
+  sigmaProp(HEIGHT &gt; freezeDeadline) &amp;&amp; ownerPk
+}
+</code></pre>
+<p>In short, a box (and therefore the funds within the box) are locked under a contract (or script) on the Ergo blockchain. In order for the box to be spent, the contract must evaluate to true. Thus the individual who wishes to spend the box must ensure that the contract evaluates to true based off of the encoded logic within it.</p>
+<p>Our Freezer contract above checks the following conditions before allowing the box to be spent:</p>
+<ol>
+<li>
+<p>The current block number of the Ergo blockchain (aka blockchain HEIGHT) is 
+greater than the specified deadline</p>
+</li>
+<li>
+<p>The spending transaction must be signed by the owner of the secret key
+corresponding to the ownerPk public key.</p>
+</li>
+</ol>
+<p>The first condition forbids anyone from spending the box before the Ergo
+blockchain grows to the given height. Because new blocks on the blockchain are mined approximately every 2 minutes on average, using the current
+blockchain height it is easy to define any duration of delay we wish such as 1 day, 1 week, or 1 month. <em>(i.e. (60 / 2) * 24 * 7 = 5040, which is the # of blocks per week)</em>.</p>
+<p>We will now be going in depth on how we can take this Freezer Contract and integrate it with the Apkit library in order to create the FreezeCoin console application so that anyone and everyone can choose to freeze their coins if they so wish. (Granted, this contract/dApp is not actually useful, however it is an effective simple example for displaying how this technology stack works so that you yourself can build useful dApps down the line.)</p>
+<h2 id="1-java-ergo-app-development">1. Java Ergo App Development</h2>
+<p>Appkit aims to provide a set of interfaces which can be used idiomatically
+in Java. You will feel right at home using Appkit if you are a Java veteran.</p>
+<p>Please follow the <a href="https://github.com/aslesarenko/ergo-appkit#setup">setup
+instructions</a> for GraalVM and
+Appkit if you wish to reproduce the examples below.</p>
+<p>To use Appkit in our Java implementation of FreezeCoin we must add the
+following dependency in the <a href="https://github.com/aslesarenko/ergo-appkit-examples/blob/master/java-examples/build.gradle.kts">gradle
+file</a></p>
+<pre><code class="language-kotlin">dependencies {
+    implementation(&quot;org.ergoplatform&quot;, &quot;ergo-appkit_2.12&quot;, &quot;3.1.0&quot;, &quot;compile&quot;)
+    ...
+}
+</code></pre>
+<p>Furthermore at runtime Appkit/our application needs to connect with an Ergo Node via REST API. Often,
+the node will be running locally and made available at <code>http://localhost:9052/</code>. This is the standard scenario for anyone who has set up a full-node by following <a href="https://github.com/ergoplatform/ergo/wiki/Set-up-a-full-node">these
+instructions</a> and is using the default configuration.</p>
+<p>Henceforth we will assume that you have setup and started your Ergo Node so that it is available for testing of the application.</p>
+<p>Next, our application will need to know how to be able to a connect to our local running node, in addition to other various settings in order to function properly. We will use a json file with the following
+configuration parameters which our FreezeCoin app will load at startup. </p>
+<p><a href="https://github.com/aslesarenko/ergo-appkit-examples/blob/master/freeze_coin_config.json">freeze_coin_config.json:</a></p>
+<pre><code class="language-json">{
+  &quot;node&quot;: {
+    &quot;nodeApi&quot;: {
+      &quot;apiUrl&quot;: &quot;http://localhost:9052/&quot;,
+      &quot;apiKey&quot;: &quot;put your secret apiKey generated during node setup here&quot;
+    },
+    &quot;wallet&quot;: {
+      &quot;mnemonic&quot;: &quot;the mnemonic key used to initialize or restore the wallet of the node&quot;,
+      &quot;password&quot;: &quot;the password you chose to protect the wallet&quot;,
+      &quot;mnemonicPassword&quot;: &quot;the password you chose to protect the mnemonic&quot;
+    },
+    &quot;networkType&quot;: &quot;TESTNET&quot;
+  },
+  &quot;parameters&quot;: {
+    &quot;newBoxSpendingDelay&quot;: &quot;30&quot;,
+    &quot;ownerAddress&quot;: &quot;3WzR39tWQ5cxxWWX6ys7wNdJKLijPeyaKgx72uqg9FJRBCdZPovL&quot;
+  }
+}
+</code></pre>
+<p>Here <code>apiKey</code> is the secret key required for API authentication which can be
+acquired as described
+<a href="https://github.com/ergoplatform/ergo/wiki/Ergo-REST-API#setting-an-api-key">here</a>.
+Your mnemonic is the secret phrase obtained during <a href="https://github.com/ergoplatform/ergo/wiki/Wallet-documentation">setup of a new
+wallet</a>.</p>
+<p>How our app will work is that the user will launch it from the command line and provide one argument. This argument is the amount of value (in NanoErgs) which they wish to freeze/lock under the Freezer contract which we wrote above.</p>
+<p>Our first step for our FreezeCoin app will be to read the configuration json file we just created and to accept the command line argument from the user:</p>
+<pre><code class="language-java">public static void main(String[] args) {
+    long amountToSend = Long.parseLong(args[0]);  // positive value in NanoErg
+    ErgoToolConfig conf = ErgoToolConfig.load(&quot;freeze_coin_config.json&quot;);
+    // the rest of the code discussed below 
+    ...
+}
+</code></pre>
+<p>With these acquired, we can now obtain the spending delay and the owner address which were defined in the json config file.</p>
+<pre><code class="language-java">  int newBoxSpendingDelay = Integer.parseInt(conf.getParameters().get(&quot;newBoxSpendingDelay&quot;));
+  Address ownerAddress = Address.create(conf.getParameters().get(&quot;ownerAddress&quot;));
+</code></pre>
+<p>Next we need to connect to the running Ergo node from our Java application so that we can use the data we just parsed and post something on-chain. This is done by creating
+an <code>ErgoClient</code> instance which uses our pre-defined values for our node from the json config file as well.</p>
+<pre><code class="language-java">ErgoNodeConfig nodeConf = conf.getNode();
+ErgoClient ergoClient = RestApiErgoClient.create(nodeConf);
+</code></pre>
+<p>Now that we have an instance of <a href="https://github.com/aslesarenko/ergo-appkit/blob/master/lib-api/src/main/java/org/ergoplatform/appkit/ErgoClient.java">ErgoClient</a>,
+we can execute any block of code and have access to the current blockchain context.</p>
+<pre><code class="language-java">String txJson = ergoClient.execute((BlockchainContext ctx) -&gt; {
+    // use ctx here to create and sign a new transaction
+    // then send it to the node 
+});
+</code></pre>
+<p>The lambda passed to <code>execute</code> is called when the current blockchain context
+is loaded from the Ergo node. In this lambda we
+shall put our application logic. </p>
+<p>First we start with some auxiliary steps.</p>
+<pre><code class="language-java">// access the wallet embedded in the Ergo node 
+// (using the wallet specified via mnemonic we put in freeze_coin_config.json)
+ErgoWallet wallet = ctx.getWallet();
+
+// calculate total amount of NanoErgs we need to send to the new box 
+// including paying for transaction fees
+long totalToSpend = amountToSend + Parameters.MinFee;
+
+// request for unspent boxes that cover the required amount of NanoErgs from the wallet
+Optional&lt;List&lt;InputBox&gt;&gt; boxes = wallet.getUnspentBoxes(totalToSpend);
+if (!boxes.isPresent())
+    throw new ErgoClientException(
+        &quot;Not enough coins in your specified wallet to pay &quot; + totalToSpend, null);
+
+// create a &quot;prover&quot;, which is a special object that will be used for signing the transaction
+// the prover should be configured with your wallet's secrets, which are necessary to generate signatures (aka proofs)
+ErgoProver prover = ctx.newProverBuilder()
+    .withMnemonic(
+            nodeConf.getWallet().getMnemonic(),
+            nodeConf.getWallet().getPassword())
+    .build();
+</code></pre>
+<p>At this point we have the input boxes chosen for our spending transaction, but we now need to create an output box with the specified <code>amountToSend</code> and locked under the Freezer contract.</p>
+<pre><code class="language-java">// the only way to create a transaction is using the tx builder obtained from the context
+// the builder uses the context to access necessary blockchain data.
+UnsignedTransactionBuilder txB = ctx.newTxBuilder();
+
+// create new box using new builder obtained from the transaction builder
+// in this case we compile a new ErgoContract from the Freezer ErgoScript code
+OutBox newBox = txB.outBoxBuilder()
+        .value(amountToPay)
+        .contract(ctx.compileContract(
+                ConstantsBuilder.create()
+                        .item(&quot;freezeDeadline&quot;, ctx.getHeight() + newBoxSpendingDelay)
+                        .item(&quot;ownerPk&quot;, ownerAddress.getPublicKey())
+                        .build(),
+                &quot;{ sigmaProp(HEIGHT &gt; freezeDeadline) &amp;&amp; ownerPk }&quot;))
+        .build();
+</code></pre>
+<p>Note, in order to compile <code>ErgoContract</code> from the Freezer script source code the <code>compileContract</code>
+method requires that we provide values for named constants which are used within the script.
+If no such constants are used, then <code>ConstantsBuilder.empty()</code> can be passed to it.</p>
+<p>In this case we pass the public key of the new box owner into the <code>ownerPk</code> 
+placeholder in the script. To repeat from earlier, this means that the box can only be spent by the owner of the
+corresponding secret key. </p>
+<p>Next, we create an unsigned transaction using all the data we've put together thus far.</p>
+<pre><code class="language-java">// provide the transaction builder with which boxes we are going to spend, which outputs
+// should be created, the total transaction fees, and the address for change to be sent to
+UnsignedTransaction tx = txB.boxesToSpend(boxes.get())
+        .outputs(newBox)
+        .fee(Parameters.MinFee)
+        .sendChangeTo(prover.getP2PKAddress())
+        .build();
+</code></pre>
+<p>And finally we:</p>
+<ol>
+<li>Use the prover to sign the built transaction</li>
+<li>Thus obtain a <code>SignedTransaction</code> instance</li>
+<li>Use the blockchain context to send the signed transaction to
+the Ergo node. </li>
+</ol>
+<p>The resulting <code>txId</code> can be used to refer to this transaction
+later however we do not use it here.</p>
+<pre><code class="language-java">SignedTransaction signed = prover.sign(tx);
+String txId = ctx.sendTransaction(signed);
+return signed.toJson(true);
+</code></pre>
+<p>As you may have noticed, for our final step we show off that it is possible to serialize the signed
+transaction into a Json string with pretty printing turned on. Look at the <a href="https://github.com/aslesarenko/ergo-appkit-examples/blob/master/java-examples/src/main/java/org/ergoplatform/appkit/examples/FreezeCoin.java">full
+source code</a>
+of the example for more details and for using it as a template in your own
+application.</p>
+<hr />
+<p>Now with all of the code set in stone, we can run our FreezeCoin application using the following steps
+(assuming you are in the directory where you cloned
+<a href="https://github.com/aslesarenko/ergo-appkit-examples">ergo-appkit-examples</a>).</p>
+<pre><code class="language-shell">$ pwd
+the/directory/you/cloned/ergo-appkit-examples
+$ ./gradlew clean shadowJar 
+</code></pre>
+<p>This will assemble the <code>build/libs/appkit-examples-3.1.0-all.jar</code> file containing
+our FreezeCoin Java application and all of its dependencies in a single fat jar. 
+Note, this step has to be repeated after any changes are made to the Java source code of our application.</p>
+<p>Having created our application, we can now use our FreezeCoin app:</p>
+<pre><code class="language-shell">$ java -cp build/libs/appkit-examples-3.1.0-all.jar \
+      org.ergoplatform.appkit.examples.FreezeCoin  1000000000 
+</code></pre>
+<p>You will get something along the lines of this <a href="https://gist.github.com/aslesarenko/cacee372350458ac31bd5c73e957e322">output in the console</a>.</p>
+<p>And with that your transaction was accepted by the Ergo node and broadcast into the network where it shall lay await in the transaction pool to be added to a block. Once a miner selects and adds it to a block, your coins will be officially "frozen" within the newly created box based off of the values you provided to the FreezeCoin application.</p>
+<p>The example assumes the Ergo node (and the embedded wallet) is owned by the
+FreezeCoin user. However this is not strictly required and the Appkit interfaces
+can be used to create and send new transactions using arbitrary public Ergo
+nodes.</p>
+<h2 id="2-low-footprint-fast-startup-ergo-applications">2. Low-footprint, Fast-startup Ergo Applications</h2>
+<p>As you may know, using Java for short-running processes has a lot of drawbacks.
+Applications tend to suffer from long startup times and relatively high memory usage.</p>
+<p>Let's run FreezeCoin using the time command to
+get the real (wall-clock elapsed time) it takes the entire program to run from
+start to finish. We use the <code>-l</code> flag to print the memory usage as well.</p>
+<pre><code class="language-shell">$ /usr/bin/time -l java -cp build/libs/appkit-examples-3.1.0-all.jar \
+   org.ergoplatform.appkit.examples.FreezeCoin 1000000000
+...
+       4.97 real         8.41 user         0.69 sys
+ 513703936  maximum resident set size
+         0  average shared memory size
+         0  average unshared data size
+         0  average unshared stack size
+    125010  page reclaims
+      1216  page faults
+         0  swaps
+         0  block input operations
+         0  block output operations
+        13  messages sent
+        86  messages received
+         1  signals received
+      2384  voluntary context switches
+     17409  involuntary context switches
+</code></pre>
+<p>As seen above, this tiny application took 2 parallel threads almost 4
+seconds to run. Most of that time can be attributed to the JVM startup and
+the background JIT compiler running. This is quite sub-par performance, and we know we can do a lot better.</p>
+<p>Luckily, GraalVM provides us with the perfect solution.</p>
+<p>We can solve this inherent issue with the JVM by compiling the Java code
+ahead-of-time into a native executable image via GraalVM. This skips over the need to use the Java just-in-time compiler
+at runtime. </p>
+<p>The experience for us (the developer using GraalVM) is quite similar to a conventional compiler like gcc. Note,
+we may need to run <code>./gradlew clean shadowJar</code> first.</p>
+<pre><code class="language-shell">$ ./gradlew clean shadowJar
+$ native-image --no-server \
+ -cp build/libs/appkit-examples-3.1.0-all.jar\
+ --report-unsupported-elements-at-runtime\
+  --no-fallback -H:+TraceClassInitialization -H:+ReportExceptionStackTraces\
+   -H:+AddAllCharsets -H:+AllowVMInspection -H:-RuntimeAssertions\
+   --allow-incomplete-classpath \
+    --enable-url-protocols=http,https org.ergoplatform.appkit.examples.FreezeCoin freezecoin
+[freezecoin:3133]    classlist:  35,217.78 ms
+[freezecoin:3133]        (cap):   6,063.07 ms
+[freezecoin:3133]        setup:   8,268.99 ms
+[freezecoin:3133]   (typeflow):  60,238.25 ms
+[freezecoin:3133]    (objects):  33,009.06 ms
+[freezecoin:3133]   (features):   4,796.86 ms
+[freezecoin:3133]     analysis: 102,876.01 ms
+[freezecoin:3133]     (clinit):  11,642.43 ms
+[freezecoin:3133]     universe:  13,718.96 ms
+[freezecoin:3133]      (parse):   5,053.18 ms
+[freezecoin:3133]     (inline):  18,317.24 ms
+[freezecoin:3133]    (compile):  44,806.82 ms
+[freezecoin:3133]      compile:  72,288.24 ms
+[freezecoin:3133]        image:   7,955.29 ms
+[freezecoin:3133]        write:   2,872.25 ms
+[freezecoin:3133]      [total]: 243,813.30 ms
+</code></pre>
+<p>The simple command above produces a complete native executable called <code>freezecoin</code>. </p>
+<p>To emphasize, this executable isn’t a mere launcher for the JVM. In fact it doesn’t link to the JVM or bundle
+the JVM in any way. <code>native-image</code> compiles the FreezeCoin code, as well as any
+Java libraries it depends on, all the way down to simple machine code. </p>
+<p>If we look at the libraries which <code>freezecoin</code> uses you can see that it only uses standard system libraries. Thus, we can move just this one executable to another system
+which doesn't have a JVM installed and it will run there without issue.</p>
+<pre><code class="language-shell">$ otool -L freezecoin    # ldd freezecoin on Linux
+freezecoin:
+    /usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1252.50.4)
+    /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 1455.12.0)
+    /usr/lib/libz.1.dylib (compatibility version 1.0.0, current version 1.2.11)
+</code></pre>
+<p>If we time this new <code>freezecoin</code> executable, we can see that it starts approximately 8x faster, and uses
+around 6x less memory. What this means is that you don’t feel that palpable pause you always get when running a
+short-running program with the JVM.</p>
+<pre><code class="language-shell">$ DYLD_LIBRARY_PATH=$GRAAL_HOME/jre/lib /usr/bin/time -l ./freezecoin 1800000000
+        0.43 real         0.15 user         0.03 sys
+  81289216  maximum resident set size
+         0  average shared memory size
+         0  average unshared data size
+         0  average unshared stack size
+     20079  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+         0  block output operations
+        13  messages sent
+        86  messages received
+         0  signals received
+        11  voluntary context switches
+       138  involuntary context switches
+</code></pre>
+<p>This is just one of the great benefits of GraalVM which we get to take advantage of with Appkit.</p>
+<h2 id="3-develop-ergo-applications-in-javascript-python-ruby">3. Develop Ergo Applications in JavaScript, Python, Ruby</h2>
+<p>GraalVM supports so called <em>polyglot programming</em> in which different components of
+an application can be developed using the most suitable language and then
+seamlessly combine together at runtime. In this way a unique library written in say
+Java can be used in a node.js application written in JavaScript for example.</p>
+<p>To support polyglot programming GraalVM platform has it's own high performance
+implementations of popular languages. We are going to take advantage of this for 
+our FreezeCoin example project to show you how easy this is to use your preferred language.</p>
+<p>Before running the examples below (in JavaScript, Python and Ruby) please make sure that you have the
+Java version of FreezeCoin working locally in order to ensure everything is set up correctly.</p>
+<h3 id="javascript">JavaScript</h3>
+<p>GraalVM can <a href="https://www.graalvm.org/docs/reference-manual/languages/js/">run JavaScript and
+Node.js</a>
+applications out of the box. It is compatible with the <a href="http://www.ecma-international.org/ecma-262/10.0/index.html">ECMAScript 2019
+specification</a>.
+Additionally, <code>js</code> and <code>node</code> launchers accept special <code>--jvm</code> and <code>--polyglot</code>
+command line options which allow JS scripts to access Java objects and classes.</p>
+<p>Given that being the case, a JS implementation of FreezeCoin can be easily written using the Appkit
+API interface.
+Please see the full source code of <a href="https://github.com/aslesarenko/ergo-appkit-examples/blob/master/js-examples/FreezeCoin.js">FreezeCoin JS
+implementation</a>
+for details.
+The following command use <code>node</code> launcher to execute FreezeCoin.js script.</p>
+<pre><code class="language-shell">$ node --jvm --vm.cp=build/libs/appkit-examples-3.1.0-all.jar \
+  js-examples/FreezeCoin.js  1000000000
+</code></pre>
+<p>Note, the paths in the command are relative to the root of
+<code>ergo-appkit-examples</code> project directory.</p>
+<h3 id="python">Python</h3>
+<p>GraalVM can <a href="https://www.graalvm.org/docs/reference-manual/languages/python/">run Python
+scripts</a>, though
+the Python implementation is still experimental (see also
+<a href="https://www.graalvm.org/docs/reference-manual/languages/python/#python-compatibility">compatibility section</a>
+for details).</p>
+<p><a href="https://github.com/aslesarenko/ergo-appkit-examples/blob/master/python-examples/FreezeCoin.py">Python example of
+FreezeCoin</a>
+can be executed using the following command</p>
+<pre><code class="language-shell">$ graalpython --jvm --polyglot --vm.cp=build/libs/appkit-examples-3.1.0-all.jar \
+   python-examples/FreezeCoin.py 1900000000
+</code></pre>
+<h3 id="ruby">Ruby</h3>
+<p>GraalVM can <a href="https://www.graalvm.org/docs/reference-manual/languages/ruby/">run Ruby
+scripts</a> using
+TruffleRuby implementation, which is however still experimental (see also
+<a href="https://www.graalvm.org/docs/reference-manual/languages/ruby/#compatibility">compatibility section</a>
+for details).
+TruffleRuby aims to be fully compatible with the standard implementation of Ruby, MRI, version 2.6.2</p>
+<p><a href="https://github.com/aslesarenko/ergo-appkit-examples/blob/master/ruby-examples/FreezeCoin.rb">Ruby example of
+FreezeCoin</a>
+can be executed using the following command</p>
+<pre><code class="language-shell">$ truffleruby --polyglot --jvm --vm.cp=build/libs/appkit-examples-3.1.0-all.jar \
+    ruby-examples/FreezeCoin.rb 1900000000
+</code></pre>
+<h2 id="4-ergo-native-shared-libraries">4. Ergo Native Shared Libraries</h2>
+<p>Another great benefit of GraalVM is that we can compile Java classes down into a native shared library instead of an executable.</p>
+<p>To do this we declare one or more static methods as the <code>@CEntryPoint</code>.</p>
+<pre><code class="language-java">public class FreezeCoin {
+    ...
+     /**
+     * Entry point callable from C which wraps {@link FreezeCoin#sendTx}
+     */
+    @CEntryPoint(name = &quot;sendTx&quot;)
+    public static void sendTxEntryPoint(
+            IsolateThread thread,
+            SignedWord amountToSendW,
+            CCharPointer configFileNameC,
+            CCharPointer resBuffer, UnsignedWord bufferSize) throws FileNotFoundException {
+        long amountToSend = amountToSendW.rawValue();
+        // Convert the C strings to the target Java strings.
+        String configFileName = CTypeConversion.toJavaString(configFileNameC);
+        String txJson = sendTx(amountToSend, configFileName);
+
+        // put resulting string into provided buffer
+        CTypeConversion.toCString(txJson, resBuffer, bufferSize);
+    }  
+    ...
+}
+</code></pre>
+<p>We can then compile down to a shared library and an automatically generated header
+file. Notice the use of the <code>--shared</code> option.</p>
+<pre><code class="language-shell">$ native-image --no-server \
+ -cp build/libs/appkit-examples-3.1.0-all.jar\
+ --report-unsupported-elements-at-runtime\
+  --no-fallback -H:+TraceClassInitialization -H:+ReportExceptionStackTraces\
+   -H:+AddAllCharsets -H:+AllowVMInspection -H:-RuntimeAssertions\
+   --allow-incomplete-classpath \
+    --enable-url-protocols=http,https 
+    --shared -H:Name=libfreezecoin -H:Path=c-examples
+
+$ otool -L c-examples/libfreezecoin.dylib 
+c-examples/libfreezecoin.dylib:
+    .../c-examples/libfreezecoin.dylib (compatibility version 0.0.0, current version 0.0.0)
+    /usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1252.50.4)
+    /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 1455.12.0)
+    /usr/lib/libz.1.dylib (compatibility version 1.0.0, current version 1.2.11)
+</code></pre>
+<p>Now we have the ability to write a <a href="https://github.com/aslesarenko/ergo-appkit-examples/blob/master/c-examples/freezecoin.c">C
+program</a>
+which uses the library.
+ The interface to our native library does have a bit of 
+boilerplate (because the VM needs to manage a heap, threads, a garbage collector
+and more), and thus we need to create an instance and provide it
+our main thread.</p>
+<pre><code class="language-java">#include &lt;stdlib.h&gt;
+#include &lt;stdio.h&gt;
+
+#include &lt;libfreezecoin.h&gt;
+
+int main(int argc, char **argv) {
+  graal_isolate_t *isolate = NULL;
+  graal_isolatethread_t *thread = NULL;
+
+  if (graal_create_isolate(NULL, &amp;isolate, &amp;thread) != 0) {
+    fprintf(stderr, &quot;graal_create_isolate error\n&quot;);
+    return 1;
+  }
+
+  char * configFileName = &quot;freeze_coin_config.json&quot;;
+
+  // get amountToSend from cmd args and call transaction creation
+  long amountToSend = atol(argv[1]);
+  char result[1024 * 16];
+  sendTx(thread, amountToSend, configFileName, result, sizeof(result));
+
+  // print out serialized result
+  printf(&quot;%s\n&quot;, result);
+
+  if (graal_detach_thread(thread) != 0) {
+    fprintf(stderr, &quot;graal_detach_thread error\n&quot;);
+    return 1;
+  }
+  return 0;
+}
+</code></pre>
+<p>We can compile this with our standard system tools and easily run our executable (set <code>LD_LIBRARY_PATH=.</code> on Linux).</p>
+<pre><code class="language-shell">$ clang -Ic-examples -Lc-examples -lfreezecoin c-examples/freezecoin.c -o call_freezecoin
+$ otool -L call_freezecoin
+$ DYLD_LIBRARY_PATH=$GRAAL_HOME/jre/lib ./call_freezecoin 1000000000
+</code></pre>
+<h2 id="5-debugging-your-polyglot-ergo-application">5. Debugging Your Polyglot Ergo Application</h2>
+<p>You can debug JS, Python and Ruby in IntelliJ, but if for some reason this
+doesn't work for you or fit with your preferred editor, GraalVM offers another option.</p>
+<p>All of the GraalVM languages (except for Java) are implemented using the common
+<a href="https://github.com/oracle/graal/tree/master/truffle">Truffle framework</a>.
+Truffle allows for tooling like debuggers to be implemented once and be available
+for all supported languages.</p>
+<p>As such we can run our program with the flag <code>--inspect</code> which will give us a link to
+open in Chrome and will pause the program in the debugger.</p>
+<pre><code class="language-shell">$ ruby --polyglot --jvm --inspect --vm.cp=build/libs/appkit-examples-3.1.0-all.jar \
+    ruby-examples/FreezeCoin.rb 1900000000
+Debugger listening on port 9229.
+To start debugging, open the following URL in Chrome:
+    chrome-devtools://devtools/bundled/js_app.html?ws=127.0.0.1:9229/30c7da1e-7558a47d09b
+...
+</code></pre>
+<p>From here we can set breakpoints and continue execution. When it breaks we’ll see
+values of the variables, can continue again until the next breakpoint, and do everything we've come to expect from debuggers.</p>
+<p><img alt="Debugger" src="/img/blog/debugger.png" /></p>
+<h2 id="conclusions">Conclusions</h2>
+<p>And with all of that said and done, we see just how easy it is to use Appkit to
+develop Ergo Applications. Appkit relies on the same exact core libraries which
+were used in implementing the Ergo consensus protocol. These libraries include
+the ErgoScript compiler, cryptography, byte code interpreter, data serialisers
+and the other core components. Using GraalVM we are able to reuse these tried
+and tested components in different application contexts without any modification
+or rewriting them ourselves.</p>
+<p>No matter if you are using Java, JavaScript, Python or Ruby, you can take
+advantage of Appkit with GraalVM to drastically simplify the process of
+interacting with the Ergo blockchain while creating native-running (d)Apps.</p>
+<p>Stay tuned. In future posts we will introduce you to other interesting potential
+applications powered by Appkit.</p>
+<h2 id="references">References</h2>
+<ol>
+<li><a href="https://ergoplatform.org/en/">Ergo Site</a></li>
+<li><a href="https://github.com/ergoplatform/ergo">Ergo Sources</a></li>
+<li><a href="https://github.com/aslesarenko/ergo-appkit">Ergo Appkit</a></li>
+<li><a href="https://github.com/aslesarenko/ergo-appkit-examples">Ergo Appkit Examples</a></li>
+<li><a href="https://www.graalvm.org">GraalVM</a></li>
+</ol>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../back-end/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Backend" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Backend
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../ergotool/" class="md-footer__link md-footer__link--next" aria-label="Next: ErgoTool" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              ErgoTool
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.1e84347e.min.js"></script>
+      
+    
+  </body>
+</html>

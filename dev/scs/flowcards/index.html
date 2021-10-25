@@ -1,0 +1,2198 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://ergodocs.rtfd.io/dev/scs/flowcards/">
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.4">
+    
+    
+      
+        <title>FlowCards - ErgoDocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.db9e7362.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ff6e42">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7C&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:""}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="deep-orange" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="ErgoDocs" class="md-header__button md-logo" aria-label="ErgoDocs" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ErgoDocs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              FlowCards
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/glasgowm148/ergodocs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../About/format/" class="md-tabs__link">
+        About
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../start/start/" class="md-tabs__link md-tabs__link--active">
+        Developers
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../node/docs/" class="md-tabs__link">
+        Node
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="ErgoDocs" class="md-nav__button md-logo" aria-label="ErgoDocs" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    ErgoDocs
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/glasgowm148/ergodocs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          About
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="About" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          About
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../About/format/" class="md-nav__link">
+        About ErgoDocs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../About/faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../About/events/" class="md-nav__link">
+        Events
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Developers
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Developers" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Developers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" data-md-state="indeterminate" type="checkbox" id="__nav_3_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          Getting Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Getting Started" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../start/start/" class="md-nav__link">
+        Where to start?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ergo/protocol/" class="md-nav__link">
+        The Ergo Protocol
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../start/use/" class="md-nav__link">
+        Use Cases
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ergo/apps/" class="md-nav__link">
+        Applications
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" data-md-state="indeterminate" type="checkbox" id="__nav_3_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          Protocol
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Protocol" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Protocol
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../protocol/utxo-state/" class="md-nav__link">
+        UTXO State
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../protocol/autolykos/" class="md-nav__link">
+        Autolykos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../protocol/audit/" class="md-nav__link">
+        Audit
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" data-md-state="indeterminate" type="checkbox" id="__nav_3_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3">
+          Features
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Features" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Features
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../protocol/atomic/" class="md-nav__link">
+        Atomic Swaps
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../protocol/rent/" class="md-nav__link">
+        Storage Rent
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../protocol/nipopow/" class="md-nav__link">
+        NiPoPoWS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sigma/" class="md-nav__link">
+        Sigma Protocols
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multi/" class="md-nav__link">
+        Multi-Stage Contracts
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" data-md-state="indeterminate" type="checkbox" id="__nav_3_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_4">
+          Data Model
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Data Model" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Data Model
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-model/box/" class="md-nav__link">
+        Box
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../protocol/address/" class="md-nav__link">
+        Adresses
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-model/p2p-handshake/" class="md-nav__link">
+        P2P Handshaking
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-model/p2p-protocol/" class="md-nav__link">
+        P2P Protocol
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" data-md-state="indeterminate" type="checkbox" id="__nav_3_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_5">
+          Stack
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Stack" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Stack
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stack/front-end/" class="md-nav__link">
+        Frontend
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stack/back-end/" class="md-nav__link">
+        Backend
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stack/appkit/" class="md-nav__link">
+        AppKit
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stack/ergotool/" class="md-nav__link">
+        ErgoTool
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" type="checkbox" id="__nav_3_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_6">
+          Smart Contracts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Smart Contracts" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          Smart Contracts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ergoscript/" class="md-nav__link">
+        ErgoScript
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          FlowCards
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        FlowCards
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paradigm" class="md-nav__link">
+    Paradigm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scalability" class="md-nav__link">
+    Scalability
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shared-state" class="md-nav__link">
+    Shared state
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expressive-power" class="md-nav__link">
+    Expressive Power
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-imperative-to-declarative" class="md-nav__link">
+    From Imperative to Declarative
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-changing-state-to-checking-context" class="md-nav__link">
+    From Changing State to Checking Context
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flowcard-diagrams" class="md-nav__link">
+    FlowCard Diagrams
+  </a>
+  
+    <nav class="md-nav" aria-label="FlowCard Diagrams">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-name-and-parameters" class="md-nav__link">
+    1. Name and Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-contract-wallet" class="md-nav__link">
+    2. Contract Wallet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-contract" class="md-nav__link">
+    3. Contract
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-box-name" class="md-nav__link">
+    4. Box name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-boxes-in-the-wallet" class="md-nav__link">
+    5. Boxes in the wallet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-amount-of-ergs-in-the-box" class="md-nav__link">
+    6. Amount of ERGs in the box
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-amount-of-t-token" class="md-nav__link">
+    7. Amount of T token
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-tx-inputs" class="md-nav__link">
+    8. Tx Inputs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-transaction" class="md-nav__link">
+    9. Transaction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-tx-outputs" class="md-nav__link">
+    10. Tx Outputs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-decentralized-exchange-dex" class="md-nav__link">
+    Example: Decentralized Exchange (DEX)
+  </a>
+  
+    <nav class="md-nav" aria-label="Example: Decentralized Exchange (DEX)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#buy-order-transaction" class="md-nav__link">
+    Buy Order Transaction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cancel-buy-cancel-sell-transactions" class="md-nav__link">
+    Cancel Buy, Cancel Sell Transactions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sell-order-transaction" class="md-nav__link">
+    Sell Order Transaction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swap-transaction" class="md-nav__link">
+    Swap Transaction
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-diagrams-to-ergoscript-contracts" class="md-nav__link">
+    From Diagrams To ErgoScript Contracts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusions" class="md-nav__link">
+    Conclusions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_7" data-md-state="indeterminate" type="checkbox" id="__nav_3_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_7">
+          Examples
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Examples" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_7">
+          <span class="md-nav__icon md-icon"></span>
+          Examples
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apps/zk/" class="md-nav__link">
+        ZK-Treasury
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../crowdfunding/" class="md-nav__link">
+        CrowdFunding
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../microcredit/" class="md-nav__link">
+        Micro Credit
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_8" data-md-state="indeterminate" type="checkbox" id="__nav_3_8" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_8">
+          Advanced
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Advanced" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_8">
+          <span class="md-nav__icon md-icon"></span>
+          Advanced
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Integration/guide/" class="md-nav__link">
+        Integration
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Node
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Node" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Node
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../node/docs/" class="md-nav__link">
+        Docs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../node/node-config/" class="md-nav__link">
+        Config
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../node/run/" class="md-nav__link">
+        First Run
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../node/withdraw/" class="md-nav__link">
+        Withdraw
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../node/api/" class="md-nav__link">
+        API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../node/architecture/" class="md-nav__link">
+        Architecture
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../node/digest-state/" class="md-nav__link">
+        Digest State
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../node/history-pruning/" class="md-nav__link">
+        History Pruning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../node/snapshots/" class="md-nav__link">
+        Snapshots
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paradigm" class="md-nav__link">
+    Paradigm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scalability" class="md-nav__link">
+    Scalability
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shared-state" class="md-nav__link">
+    Shared state
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expressive-power" class="md-nav__link">
+    Expressive Power
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-imperative-to-declarative" class="md-nav__link">
+    From Imperative to Declarative
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-changing-state-to-checking-context" class="md-nav__link">
+    From Changing State to Checking Context
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flowcard-diagrams" class="md-nav__link">
+    FlowCard Diagrams
+  </a>
+  
+    <nav class="md-nav" aria-label="FlowCard Diagrams">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-name-and-parameters" class="md-nav__link">
+    1. Name and Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-contract-wallet" class="md-nav__link">
+    2. Contract Wallet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-contract" class="md-nav__link">
+    3. Contract
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-box-name" class="md-nav__link">
+    4. Box name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-boxes-in-the-wallet" class="md-nav__link">
+    5. Boxes in the wallet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-amount-of-ergs-in-the-box" class="md-nav__link">
+    6. Amount of ERGs in the box
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-amount-of-t-token" class="md-nav__link">
+    7. Amount of T token
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-tx-inputs" class="md-nav__link">
+    8. Tx Inputs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-transaction" class="md-nav__link">
+    9. Transaction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-tx-outputs" class="md-nav__link">
+    10. Tx Outputs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-decentralized-exchange-dex" class="md-nav__link">
+    Example: Decentralized Exchange (DEX)
+  </a>
+  
+    <nav class="md-nav" aria-label="Example: Decentralized Exchange (DEX)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#buy-order-transaction" class="md-nav__link">
+    Buy Order Transaction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cancel-buy-cancel-sell-transactions" class="md-nav__link">
+    Cancel Buy, Cancel Sell Transactions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sell-order-transaction" class="md-nav__link">
+    Sell Order Transaction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swap-transaction" class="md-nav__link">
+    Swap Transaction
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-diagrams-to-ergoscript-contracts" class="md-nav__link">
+    From Diagrams To ErgoScript Contracts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusions" class="md-nav__link">
+    Conclusions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/glasgowm148/ergodocs/edit/master/docs/dev/scs/flowcards.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  <h1>FlowCards</h1>
+                
+                <blockquote>
+<p>With thanks to <a href="https://github.com/robkorn">Robert Kornacki</a> for polishing of the draft.</p>
+</blockquote>
+<h2 id="introduction">Introduction</h2>
+<p><a href="https://ergoplatform.org/docs/ErgoScript.pdf">ErgoScript</a> is the smart contract language used
+by the Ergo blockchain. While it has concise syntax adopted from Scala/Kotlin, it still
+may seem confusing at first because conceptually ErgoScript is quite different compared to
+conventional languages which we all know and love. This is because Ergo is a UTXO based
+blockchain, whereas smart contracts are traditionally associated with account based
+systems like Ethereum. However, Ergo's transaction model has many advantages over the account
+based model and with the right approach it can even be significantly easier to develop Ergo contracts
+than to write and debug Solidity code.</p>
+<p>Below we will cover the key aspects of the Ergo contract model which makes it different:</p>
+<h5 id="paradigm">Paradigm</h5>
+<p>The account model of Ethereum is imperative. This means that the typical task of sending coins from
+Alice to Bob requires changing the balances in storage as a series of operations. Ergo's UTXO
+based programming model on the other hand is declarative. ErgoScript contracts specify conditions for
+a transaction to be accepted by the blockchain (not changes to be made in the storage
+state as result of the contract execution).</p>
+<h5 id="scalability">Scalability</h5>
+<p>In the account model of Ethereum both storage changes and validity checks are performed
+<em>on-chain</em> during code execution. In contrast, Ergo transactions are created
+<em>off-chain</em> and only validation checks are performed on-chain thus reducing the amount of
+operations performed by every node on the network. In addition, due to immutability of the
+transaction graph, various optimization strategies are possible to improve throughput
+of transactions per second in the network. Light verifying nodes are also possible thus
+further facilitating scalability and accessibility of the network.</p>
+<h5 id="shared-state">Shared state</h5>
+<p>The account-based model is reliant on shared mutable state which is known to lead
+to complex semantics (and subtle million dollar bugs) in the context of concurrent/
+distributed computation. Ergo's model is based on an immutable graph of transactions. This
+approach, inherited from Bitcoin, plays well with the concurrent and distributed nature of
+blockchains and facilitates light trustless clients.</p>
+<h5 id="expressive-power">Expressive Power</h5>
+<p>Ethereum advocated execution of a turing-complete language on the blockchain. It
+theoretically promised unlimited potential, however in practice severe 
+limitations came to light from excessive blockchain bloat, subtle multi-million dollar bugs, gas costs which
+limit contract complexity, and other such problems. Ergo on the flip side extends UTXO to enable
+turing-completeness while limiting the complexity of the ErgoScript language itself. The same
+expressive power is achieved in a different and more semantically sound way.</p>
+<p>With the all of the above points, it should be clear that there are a lot of benefits to the model Ergo is using.
+In the rest of this article I will introduce you to the concept of FlowCards - a dApp developer component 
+which allows for designing complex Ergo contracts in a declarative and visual way.</p>
+<h2 id="from-imperative-to-declarative">From Imperative to Declarative</h2>
+<p>In the imperative programming model of Ethereum a transaction is a sequence of operations
+executed by the Ethereum VM. The following <a href="https://solidity.readthedocs.io/en/develop/introduction-to-smart-contracts.html#subcurrency-example">Solidity function</a>
+implements a transfer of tokens from <code>sender</code> to <code>receiver</code>. The transaction starts when
+<code>sender</code> calls this function on an instance of a contract and ends when the function
+returns.</p>
+<pre><code class="language-java">// Sends an amount of existing coins from any caller to an address
+function send(address receiver, uint amount) public {
+    require(amount &lt;= balances[msg.sender], &quot;Insufficient balance.&quot;);
+    balances[msg.sender] -= amount;
+    balances[receiver] += amount;
+    emit Sent(msg.sender, receiver, amount);
+}
+</code></pre>
+<p>The function first checks the pre-conditions, then updates the storage (i.e. balances) and
+finally publishes the post-condition as the <code>Sent</code> event. The gas which is consumed by the
+transaction is sent to the miner as a reward for executing this transaction.</p>
+<p>Unlike Ethereum, a transaction in Ergo is a data structure holding a list of input coins
+which it spends and a list of output coins which it creates preserving the total balances of
+ERGs and tokens (in which Ergo is similar to Bitcoin).</p>
+<p>Turning back to the example above, since Ergo natively supports tokens, therefore for this
+specific example of sending tokens we don't need to write any code in ErgoScript. Instead
+we need to create the 'send' transaction shown in the following figure, which describes
+the same token transfer but declaratively.</p>
+<p><img alt="Send" src="/img/blog/send-tx.png" /></p>
+<p>The picture visually describes the following steps, which the network user needs to
+perform:
+1) Select unspent sender's boxes, containing in total <code>tB &gt;= amount</code> of tokens and <code>B &gt;=
+txFee + minErg</code> ERGs.
+2) Create an output <code>target</code> box which is protected by the <code>receiver</code> public key with <code>minErg</code>
+ERGs and <code>amount</code> of <code>T</code> tokens.
+3) Create one <em>fee</em> output protected by the <code>minerFee</code> contract with <code>txFee</code> ERGs.
+4) Create one <em>change</em> output protected by the <code>sender</code> public key, containing
+<code>B - minErg - txFee</code> ERGs and <code>tB - amount</code> of <code>T</code> tokens.
+5) Create a new transaction, sign it using the sender's secret key and send to the Ergo
+network.</p>
+<p>What is important to understand here is that all of these steps are preformed <em>off-chain</em> (for
+example using <a href="https://github.com/aslesarenko/ergo-appkit">Appkit</a> Transaction API) by the
+user's application. Ergo network nodes don't need to repeat this transaction creation process,
+they only need to validate the already formed transaction. ErgoScript contracts are stored in
+the inputs of the transaction and check spending conditions. The node executes the
+contracts <em>on-chain</em> when the transaction is validated. The transaction is valid if all
+of the conditions are satisfied.</p>
+<p>Thus, in Ethereum when we "send amount from sender to recipient" we are literally
+editing balances and updating the storage with a concrete set of commands. This happens
+<em>on-chain</em> and thus a new transaction is also created <em>on-chain</em> as the result of this process. </p>
+<p>In Ergo (as in Bitcoin) transactions are created <em>off-chain</em> and the network nodes only
+verify them. The effects of the transaction on the blockchain state is that input coins
+(or Boxes in Ergo's parlance) are removed and output boxes are added to the
+<a href="https://en.wikipedia.org/wiki/Unspent_transaction_output">UTXO</a> set.</p>
+<p>In the example above we don't use an ErgoScript contract but instead assume a signature check is
+used as the spending pre-condition. However in more complex application scenarios we of course need
+to use ErgoScript which is what we are going to discuss next.</p>
+<h2 id="from-changing-state-to-checking-context">From Changing State to Checking Context</h2>
+<p>In the <code>send</code> function example we first checked the pre-condition (<code>require(amount &lt;=
+balances[msg.sender],...)</code>) and then changed the state (i.e. update balances
+<code>balances[msg.sender] -= amount</code>). This is typical in Ethereum transactions. Before
+we change anything we need to check if it is valid to do so.</p>
+<p>In Ergo, as we discussed previously, the state (i.e. UTXO set of boxes) is changed implicitly when a
+valid transaction is included in a block. Thus we only need to check the pre-conditions before
+the transaction can be added to the block. This is what ErgoScript contracts do.</p>
+<p>It is not possible to "change the state" in ErgoScript because it is a language to check
+pre-conditions for spending coins. ErgoScript is a purely functional language without side
+effects that operates on immutable data values. This means all the inputs, outputs and
+other transaction parameters available in a script are immutable. This, among other
+things, makes ErgoScript a very simple language that is easy to learn and safe to use. Similar to
+Bitcoin, each input box contains a script, which should return the <code>true</code> value in
+order to 1) allow spending of the box (i.e. removing from the UTXO set) and 2) adding the
+transaction to the block.</p>
+<p>If we are being pedantic, it is therefore incorrect (strictly speaking) to think of ErgoScript as the language of
+Ergo contracts, because it is the language of propositions (logical predicates, formulas,
+etc.) which protect boxes from "illegal" spending. Unlike Bitcoin, in Ergo the whole
+transaction and a part of the current blockchain context is available to every script. Therefore
+each script may check which outputs are created by the transaction, their ERG and token
+amounts (we will use this capability in our example DEX contracts), current block number
+etc.</p>
+<p><em>In ErgoScript you define the conditions of whether changes (i.e. coin spending) are allowed 
+to happen in a given context. This is in contrast to programming the changes
+imperatively in the code of a contract.</em></p>
+<p>While Ergo's transaction model unlocks a whole range of applications like (DEX, DeFi
+Apps, LETS, etc), designing contracts as pre-conditions for coin spending (or guarding
+scripts) directly is not intuitive. In the next sections we will consider a useful graphical
+notation to design contracts declaratively using <em>FlowCard Diagrams</em>, which is a visual
+representation of executable components (FlowCards). </p>
+<p><em>FlowCards aim to radically simplify dApp development on the Ergo platform by
+providing a high-level declarative language, execution runtime, storage format and
+a graphical notation</em>.</p>
+<p>We will start with a high level of diagrams and go down to FlowCard specification.</p>
+<h2 id="flowcard-diagrams">FlowCard Diagrams</h2>
+<p>The idea behind FlowCard diagrams is based on the following observations: 1) An Ergo box
+is immutable and can only be spent in the transaction which uses it as an input. 2) We
+therefore can draw a flow of boxes through transactions, so that boxes <em>flowing in</em> to the
+transaction are spent and those <em>flowing out</em> are created and added to the UTXO. 3) A
+transaction from this perspective is simply a transformer of old boxes to the new ones
+preserving the balances of ERGs and tokens involved.</p>
+<p>The following figure shows the main elements of the Ergo transaction we've already seen
+previously (now under the name of FlowCard Diagram).</p>
+<p><img alt="Anatomy" src="/img/blog/tx-anatomy.png" /></p>
+<p>There is a strictly defined meaning (semantics) behind every element of <em>the diagram</em>,
+so that the diagram is a visual representation (or a view) of the underlying executable
+component (called FlowCard).</p>
+<p>The FlowCard can be used as a reusable component of an Ergo dApp to create and initiate the
+transaction on the Ergo blockchain. We will discuss this in the coming sections.</p>
+<p>Now let's look at the individual pieces of the FlowCard diagram one by one.</p>
+<h5 id="1-name-and-parameters">1. Name and Parameters</h5>
+<p>Each flow card is given a name and a list of typed parameters. This is similar to a
+template with parameters. In the above figure we can see the <code>Send</code> flow card which has five parameters.
+The parameters are used in the specification.</p>
+<h5 id="2-contract-wallet">2. Contract Wallet</h5>
+<p>This is a key element of the flow card. Every box has a guarding script. Often it is the
+script that checks a signature against a public key. This script is trivial in ErgoScript
+and is defined like the <code>def pk(pubkey: Address) = { pubkey }</code> template where <code>pubkey</code> is
+a parameter of the type <code>Address</code>. In the figure, the script template is applied to the
+parameter <code>pk(sender)</code> and thus a concrete wallet contract is obtained. Therefore
+<code>pk(sender)</code> and <code>pk(receiver)</code> yield different scripts and represent <em>different</em> wallets
+on the diagram, even though they use the same template.</p>
+<p><em>Contract Wallet</em> contains a set of all UTXO boxes which have a given script derived from
+the given script template using flow card parameters. For example, in the figure, the
+template is <code>pk</code> and parameter <code>pubkey</code> is substituted with the `sender' flow card
+parameter.</p>
+<h5 id="3-contract">3. Contract</h5>
+<p>Even though a contract is a property of a box, on the diagram we group the boxes by their
+contracts, therefore it looks like the boxes belong to the contracts, rather than the
+contracts belong to the boxes. In the example, we have three instantiated contracts
+<code>pk(sender)</code>, <code>pk(receiver)</code> and <code>minerFee</code>. Note, that <code>pk(sender)</code> is the instantiation of the
+<code>pk</code> template with the concrete parameter <code>sender</code> and <code>minerFee</code> is the instantiation of
+the pre-defined contract which protects the miner reward boxes.</p>
+<h5 id="4-box-name">4. Box name</h5>
+<p>In the diagram we can give each box a name. Besides readability of the diagram, we also use the
+name as a synonym of a more complex indexed access to the box in the contract. For
+example, <code>change</code> is the name of the box, which can also be used in the ErgoScript
+conditions instead of <code>OUTPUTS(2)</code>. We also use box names to associate spending conditions
+with the boxes.</p>
+<h5 id="5-boxes-in-the-wallet">5. Boxes in the wallet</h5>
+<p>In the diagram, we show boxes (darker rectangles) as belonging to the contract wallets
+(lighter rectangles). Each such <em>box rectangle</em> is connected with a grey <em>transaction
+rectangle</em> by either <strong>orange</strong> or <strong>green</strong> arrows
+or both. An output box (with an incoming green arrow) may include many lines of text where each
+line specifies a condition which should be checked as part of the transaction. The first
+line specifies the condition on the amount of ERG which should be placed in the box. Other
+lines may take one of the following forms:
+1) <code>amount: TOKEN</code> - the box should contain the given <code>amount</code> of the given <code>TOKEN</code>
+2) <code>R == value</code> - the box should contain the given <code>value</code> of the given register <code>R</code>
+3) <code>boxName ? condition</code> - the box named <code>boxName</code> should check <code>condition</code> in its script.</p>
+<p>We discuss these conditions in the sections below.</p>
+<h5 id="6-amount-of-ergs-in-the-box">6. Amount of ERGs in the box</h5>
+<p>Each box should store a minimum amount of ERGs. This is checked when the creating transaction is
+validated. In the diagram the amount of ERGs is <em>always</em> shown as the first line (e.g. <code>B:
+ERG</code> or <code>B - minErg - txFee</code>). The value type ascription <code>B: ERG</code> is optional and may
+be used for readability. When the value is given as a formula, then this formula should be
+respected by the transaction which creates the box.</p>
+<p>It is important to understand that variables like <code>amount</code> and <code>txFee</code> are not named
+properties of the boxes. They are parameters of the whole diagram and representing some
+amounts. Or put it another way, they are shared parameters between transactions (e.g. Sell
+Order and Swap transactions from DEX example below share the <code>tAmt</code> parameter). So 
+the same name is tied to the same value throughout the diagram (this is where the
+tooling would help a lot). However, when it comes to <em>on-chain</em> validation of those values,
+only explicit conditions which are marked with <code>?</code> are transformed to ErgoScript. At the
+same time, all other conditions are ensured <em>off-chain</em> during transaction building (for example in an
+application using Appkit API) and transaction validation when it is added to the
+blockchain.</p>
+<h5 id="7-amount-of-t-token">7. Amount of T token</h5>
+<p>A box can store values of many tokens. The tokens on the diagram are named and a <code>value</code>
+variable may be associated with the token <code>T</code> using <code>value: T</code> expression. The <code>value</code> may
+be given by formula. If the formula is prefixed with a box name like <code>boxName ? formula</code>,
+then it is should also be checked in the guarding script of the <code>boxName</code> box. This
+additional specification is very convenient because 1) it allows to validate the visual
+design automatically, and 2) the conditions specified in the boxes of a diagram are enough
+to synthesize the necessary guarding scripts. (more about this
+below at <strong>"From Diagrams To ErgoScript Contracts"</strong>)</p>
+<h5 id="8-tx-inputs">8. Tx Inputs</h5>
+<p>Inputs are connected to the corresponding transaction by <strong>orange</strong>
+arrows. An input arrow may have a label of the following forms:
+1) <code>name@index</code> - optional name with an index i.e. <code>fee@0</code> or <code>@2</code>. This is a property of
+the target endpoint of the arrow. The name is used in conditions of related boxes
+and the <code>index</code> is the position of the corresponding box in the INPUTS collection of the
+transaction.
+2) <code>!action</code> - is a property of the source of the arrow and gives a name for an alternative
+spending path of the box (we will see this in DEX example)</p>
+<p>Because of alternative spending paths, a box may have many outgoing <strong>orange</strong> arrows, in which case they should be labeled with different
+actions.</p>
+<h5 id="9-transaction">9. Transaction</h5>
+<p>A transaction spends input boxes and creates output boxes. The input boxes are given by
+the <strong>orange</strong> arrows and the labels are expected to put inputs at the
+right indexes in INPUTS collection. The output boxes are given by the <strong>green</strong> arrows. Each transaction should preserve a strict balance of ERG
+values (sum of inputs == sum of outputs) and for each token the sum of inputs &gt;= the sum
+of outputs. The design diagram requires an explicit specification of the ERG and token
+values for all of the output boxes to avoid implicit errors and ensure better readability.</p>
+<h5 id="10-tx-outputs">10. Tx Outputs</h5>
+<p>Outputs are connected to the corresponding transaction by <strong>green</strong>
+arrows. An output arrow may have a label of the following form<code>name@index</code>, where an
+optional name is accompanied with an index i.e. <code>fee@0</code> or <code>@2</code>. This is a property of the
+source endpoint of the arrow. The name is used in conditions of the related boxes and the
+<code>index</code> is the position of the corresponding box in the OUTPUTS collection of the transaction.</p>
+<h2 id="example-decentralized-exchange-dex">Example: Decentralized Exchange (DEX)</h2>
+<p>Now let's use the above described notation to design a FlowCard for a DEX dApp. It is simple
+enough yet also illustrates all of the key features of FlowCard
+diagrams which we've introduced in the previous section.</p>
+<p>The dApp scenario is shown in the figure below:<br />
+There are three participants (buyer,
+seller and DEX) of the DEX dApp and five different transaction types, which are created by
+participants. The buyer wants to swap <code>ergAmt</code> of ERGs for <code>tAmt</code> of <code>TID</code> tokens (or vice
+versa, the seller wants to sell <code>TID</code> tokens for ERGs, who sends the order first doesn't
+matter). Both the buyer and the seller can cancel their orders any time. The DEX off-chain
+matching service can find matching orders and create the <code>Swap</code> transaction to
+complete the exchange.</p>
+<p>The following diagram fully (and formally) specifies all of the five transactions that must
+be created <em>off-chain</em> by the DEX dApp. It also specifies all of the spending conditions that
+should be verified <em>on-chain</em>.</p>
+<p><img alt="DEX" src="/img/blog/dex-flowcard.png" /></p>
+<p>Let's discuss the FlowCard diagram and the logic of each transaction in details:</p>
+<h5 id="buy-order-transaction">Buy Order Transaction</h5>
+<p>A buyer creates a <code>Buy Order</code> transaction. The transaction spends <code>E</code> amount of ERGs
+(which we will write <code>E: ERG</code>) from one or more boxes in the <code>pk(buyer)</code> wallet. The
+transaction creates a <code>bid</code> box with <code>ergAmt: ERG</code> protected by the <code>buyOrder</code> script. The
+<code>buyOrder</code> script is synthesized from the specification (see
+below at <strong>"From Diagrams To ErgoScript Contracts"</strong>) either manually or automatically by a
+tool. Even though we don't need to define the <code>buyOrder</code> script explicitly during
+designing, at run time the <code>bid</code> box should contain the <code>buyOrder</code> script as the
+guarding proposition (which checks the box spending conditions), otherwise the conditions
+specified in the diagram will not be checked.</p>
+<p>The <code>change</code> box is created to make the input and output sums of the transaction balanced.
+The transaction fee box is omitted because it can be added automatically by the tools. In
+practice, however, the designer can add the fee box explicitly to the a diagram. It covers
+the cases of more complex transactions (like Swap) where there are many ways to pay
+the transaction fee.</p>
+<h5 id="cancel-buy-cancel-sell-transactions">Cancel Buy, Cancel Sell Transactions</h5>
+<p>At any time, the <code>buyer</code> can cancel the order by sending <code>CancelBuy</code> transaction. The
+transaction should satisfy the guarding <code>buyOrder</code> contract which protects the <code>bid</code> box.
+As you can see on the diagram, both the <code>Cancel</code> and the <code>Swap</code> transactions can spend the
+<code>bid</code> box. When a box has spending alternatives (or <em>spending paths</em>) then each
+alternative is identified by a unique name prefixed with <code>!</code> (<code>!cancel</code> and <code>!swap</code>
+for the <code>bid</code> box). Each alternative path has specific spending conditions. In our example,
+when the <code>Cancel Buy</code> transaction spends the <code>bid</code> box the <code>?buyer</code> condition should be
+satisfied, which we read as "the signature for the <code>buyer</code> address should be presented in the
+transaction". Therefore, only buyer can cancel the buy order. This "signature" condition
+is only required for the <code>!cancel</code> alternative spending path and not required for <code>!swap</code>.</p>
+<h5 id="sell-order-transaction">Sell Order Transaction</h5>
+<p>The <code>Sell Order</code> transaction is similar to the <code>BuyOrder</code> in that it deals with tokens in
+addition to ERGs. The transaction spends <code>E: ERG</code> and <code>T: TID</code> tokens from seller's wallet
+(specified as <code>pk(seller)</code> contract). The two outputs are <code>ask</code> and <code>change</code>. The change
+is a standard box to balance transaction. The <code>ask</code> box keeps <code>tAmt: TID</code> tokens for the exchange
+and <code>minErg: ERG</code> - the minimum amount of ERGs required in every box.</p>
+<h5 id="swap-transaction">Swap Transaction</h5>
+<p>This is a key transaction in the DEX dApp scenario. The transaction has several spending
+conditions on the input boxes and those conditions are included in the <code>buyOrder</code> and
+<code>sellOrder</code> scripts (which are verified when the transaction is added to the
+blockchain). However, on the diagram those conditions are not specified in the <code>bid</code> and
+<code>ask</code> boxes, they are instead defined in the output boxes of the transaction. </p>
+<p>This is a convention for improved usability because most of the conditions relate to the properties of
+the output boxes. We could specify those properties in the <code>bid</code> box, but then we would
+have to use more complex expressions.</p>
+<p>Let's consider the output created by the arrow labeled with <code>buyerOut@0</code>. This label tells
+us that the output is at the index <code>0</code> in the <code>OUTPUTS</code> collection of the transaction and
+that in the diagram we can refer to this box by the <code>buyerOut</code> name. Thus we can label
+both the box itself and the arrow to give the box a name.</p>
+<p>The conditions shown in the <code>buyerOut</code> box have the form <code>bid ? condition</code>, which means
+they should be verified <em>on-chain</em> in order to spend the <code>bid</code> box. 
+The conditions have the following meaning:
+- <code>tAmt: TID</code> requires the box to have <code>tAmt</code> amount of <code>TID</code> token
+- <code>R4 == bid.id</code>  requires R4 register in the box to be equal to id of the <code>bid</code> box.
+- <code>script == buyer</code> requires the <code>buyerOut</code> box to have the script of the wallet where it
+is located on the diagram, i.e. <code>pk(buyer)</code></p>
+<p>Similar properties are added to the <code>sellerOut</code> box, which is specified to be at index <code>1</code>
+and the name is given to it using the label on the box itself, rather than on the arrow.</p>
+<p>The <code>Swap</code> transaction spends two boxes <code>bid</code> and <code>ask</code> using the <code>!swap</code> spending path on both,
+however unlike <code>!cancel</code> the conditions on the path are not specified. This is where the
+<code>bid ?</code> and <code>ask ?</code> prefixes come into play. They are used so that the conditions listed in the <code>buyerOut</code> and
+<code>sellerOut</code> boxes are moved to the <code>!swap</code> spending path of the <code>bid</code> and <code>ask</code> boxes
+correspondingly.</p>
+<p>If you look at the conditions of the output boxes, you will see that they exactly specify
+the swap of values between seller's and buyer's wallets. The buyer gets the necessary amount
+of <code>TID</code> token and seller gets the corresponding amount of ERGs. The <code>Swap</code> transaction
+is created when there are two matching boxes with <code>buyOrder</code> and <code>sellOrder</code> contracts.</p>
+<h2 id="from-diagrams-to-ergoscript-contracts">From Diagrams To ErgoScript Contracts</h2>
+<p>What is interesting about FlowCard specifications is that we can use them to automatically
+generate the necessary <a href="https://ergoplatform.org/docs/ErgoTree.pdf">ErgoTree</a> scripts.
+With the appropriate tooling support this can be done automatically, but with the lack of
+thereof, it can be done manually. Thus, the FlowCard allows us to capture and visually
+represent all of the design choices and semantic details of an Ergo dApp. </p>
+<p>What we are going to do next is to mechanically create the <code>buyOrder</code> contract from the
+information given in the <code>DEX</code> flow card. </p>
+<p>Recall that each script is a proposition (boolean valued expression) which should evaluate
+to <code>true</code> to allow spending of the box. When we have many conditions to be met at the same
+time we can combine them in a logical formula using the AND binary operation, and if we have
+alternatives (not necessarily exclusive) we can put them into the OR operation.</p>
+<p>The <code>buyOrder</code> box has the alternative spending paths <code>!cancel</code> and <code>!swap</code>. Thus the
+ErgoScript code should have OR operation with two arguments - one for each spending path.</p>
+<pre><code class="language-java">/** buyOrder contract */
+{
+  val cancelCondition = {}
+  val swapCondition = {}
+  cancelCondition || swapCondition
+}
+</code></pre>
+<p>The formula for the <code>cancelCondition</code> expression is given in the <code>!cancel</code> spending path
+of the <code>buyOrder</code> box. We can directly include it in the script.</p>
+<pre><code class="language-java">/** buyOrder contract */
+{
+  val cancelCondition = { buyer }
+  val swapCondition = {}
+  cancelCondition || swapCondition
+}
+</code></pre>
+<p>For the <code>!swap</code> spending path of the <code>buyOrder</code> box the conditions are specified in the
+<code>buyerOut</code> output box of the <code>Swap</code> transaction. If we simply include them in the
+<code>swapCondition</code> then we get a syntactically incorrect script.</p>
+<pre><code class="language-java">/** buyOrder contract */
+{
+  val cancelCondition = { buyer }
+  val swapCondition = {
+    tAmt: TID &amp;&amp;
+    R4 == bid.id &amp;&amp;
+    @contract
+  }
+  cancelCondition || swapCondition
+}
+</code></pre>
+<p>We can however translate the conditions from the diagram syntax to ErgoScript expressions
+using the following simple rules
+1) <code>buyerOut@0</code> ==&gt; <code>val buyerOut = OUTPUTS(0)</code>
+2) <code>tAmt: TID</code>  ==&gt; <code>tid._2 == tAmt</code> where <code>tid = buyerOut.tokens(TID)</code>
+3) <code>R4 == bid.id</code>  ==&gt; <code>R4 == SELF.id</code> where <code>R4 = buyerOut.R4[Coll[Byte]].get</code> 
+4) <code>script == buyer</code>  ==&gt; <code>buyerOut.propositionBytes == buyer.propBytes</code> </p>
+<p>Note, in the diagram <code>TID</code> represents a token id, but ErgoScript doesn't have access to the
+tokens by the ids so we cannot write <code>tokens.getByKey(TID)</code>. For this reason, when the
+diagram is translated into ErgoScript, TID becomes a named constant of the index in
+<code>tokens</code> collection of the box. The concrete value of the constant is assigned when the
+<code>BuyOrder</code> transaction with the <code>buyOrder</code> box is created. The correspondence and
+consistency between the actual tokenId, the <code>TID</code> constant and the actual tokens of the
+<code>buyerOut</code> box is ensured by the <em>off-chain</em> application code, which is completely
+possible since all of the transactions are created by the application using FlowCard as a
+guiding specification. This may sound too complicated, but this is part of the translation
+from diagram specification to actual executable application code, most of which can be
+automated.</p>
+<p>After the transformation we can obtain a correct script which checks all the required
+preconditions for spending the <code>buyOrder</code> box. </p>
+<pre><code class="language-java">/** buyOrder contract */
+def DEX(buyer: Addrss, seller: Address, TID: Int, ergAmt: Long, tAmt: Long)
+{
+  val cancelCondition: SigmaProp = { buyer }      // verify buyer's sig (ProveDlog)
+  val swapCondition = OUTPUTS.size &gt; 0 &amp;&amp; {       // securing OUTPUTS access
+    val buyerOut = OUTPUTS(0)                     // from buyerOut@0
+    buyerOut.tokens.size &gt; TID &amp;&amp; {               // securing tokens access
+      val tid = buyerOut.tokens(TID)
+      val regR4 = buyerOut.R4[Coll[Byte]]
+      regR4.isDefined &amp;&amp; {                        // securing R4 access
+        val R4 = regR4.get
+        tid._2 == tAmt &amp;&amp;                             // from tAmt: TID 
+        R4 == SELF.id &amp;&amp;                              // from R4 == bid.id
+        buyerOut.propositionBytes == buyer.propBytes  // from script == buyer
+      }
+    } 
+  }
+  cancelCondition || swapCondition
+}
+</code></pre>
+<p>A similar script for the <code>sellOrder</code> box can be obtained using the same translation rules.
+With the help of the tooling the code of contracts can be mechanically generated from the
+diagram specification.</p>
+<h2 id="conclusions">Conclusions</h2>
+<p>Declarative programming models have already won the battle against imperative programming
+in many application domains like Big Data, Stream Processing, Deep Learning, Databases,
+etc. Ergo is pioneering the declarative model of dApp development as a better and safer
+alternative to the now popular imperative model of smart contracts.</p>
+<p>The concept of FlowCard shifts the focus from writing ErgoScript contracts to the
+overall flow of values (hence the name), in such a way, that ErgoScript can always
+be generated from them. You will never need to look at the ErgoScript code once the tooling
+is in place.</p>
+<p>Here are the possible next steps for future work:</p>
+<p>1) Storage format for FlowCard Spec and the corresponding EIP standardized file format
+(Json/XML/Protobuf). This will allow various tools (Diagram Editor, Runtime, dApps etc) to
+create and use <code>*.flowcard</code> files.</p>
+<p>2) FlowCard Viewer, which can generate the diagrams from <code>*.flowcard</code> files.</p>
+<p>3) FlowCard Runtime, which can run <code>*.flowcard</code> files, create and send transactions to Ergo network.</p>
+<p>4) FlowCard Designer Tool, which can simplify development of complex diagrams . This will
+make designing and validation of Ergo contracts a pleasant experience, more like drawing
+rather than coding. In addition, the correctness of the whole dApp scenario can be
+verified and controlled by the tooling.</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://ergoplatform.org/">Ergo</a></li>
+<li><a href="https://github.com/ergoplatform/ergo-appkit">Ergo Appkit</a></li>
+<li><a href="https://ergoplatform.org/en/blog/2019_12_03_top5/">Introduction to Appkit</a></li>
+<li><a href="https://github.com/aslesarenko/ergo-appkit-examples">Appkit Examples</a></li>
+<li><a href="https://ergoplatform.github.io/ergo-dex/api/org/ergoplatform/dex/ErgoDexTool$.html">ErgoDex ScalaDocs</a></li>
+<li><a href="https://ergoplatform.org/docs/ErgoTree.pdf">ErgoTree Specification</a></li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../ergoscript/" class="md-footer__link md-footer__link--prev" aria-label="Previous: ErgoScript" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              ErgoScript
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../apps/zk/" class="md-footer__link md-footer__link--next" aria-label="Next: ZK-Treasury" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              ZK-Treasury
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.1e84347e.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1707 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://ergodocs.rtfd.io/node/node-config/">
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.4">
+    
+    
+      
+        <title>Config - ErgoDocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.db9e7362.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ff6e42">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7C&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:""}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="deep-orange" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#wallets" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ErgoDocs" class="md-header__button md-logo" aria-label="ErgoDocs" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ErgoDocs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Config
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/glasgowm148/ergodocs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../About/format/" class="md-tabs__link">
+        About
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../dev/start/start/" class="md-tabs__link">
+        Developers
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../docs/" class="md-tabs__link md-tabs__link--active">
+        Node
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ErgoDocs" class="md-nav__button md-logo" aria-label="ErgoDocs" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    ErgoDocs
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/glasgowm148/ergodocs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          About
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="About" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          About
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../About/format/" class="md-nav__link">
+        About ErgoDocs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../About/faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../About/events/" class="md-nav__link">
+        Events
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Developers
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Developers" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Developers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" data-md-state="indeterminate" type="checkbox" id="__nav_3_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          Getting Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Getting Started" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/start/start/" class="md-nav__link">
+        Where to start?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/ergo/protocol/" class="md-nav__link">
+        The Ergo Protocol
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/start/use/" class="md-nav__link">
+        Use Cases
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/ergo/apps/" class="md-nav__link">
+        Applications
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" data-md-state="indeterminate" type="checkbox" id="__nav_3_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          Protocol
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Protocol" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Protocol
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/protocol/utxo-state/" class="md-nav__link">
+        UTXO State
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/protocol/autolykos/" class="md-nav__link">
+        Autolykos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/protocol/audit/" class="md-nav__link">
+        Audit
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" data-md-state="indeterminate" type="checkbox" id="__nav_3_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3">
+          Features
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Features" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Features
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/protocol/atomic/" class="md-nav__link">
+        Atomic Swaps
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/protocol/rent/" class="md-nav__link">
+        Storage Rent
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/protocol/nipopow/" class="md-nav__link">
+        NiPoPoWS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/scs/sigma/" class="md-nav__link">
+        Sigma Protocols
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/scs/multi/" class="md-nav__link">
+        Multi-Stage Contracts
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" data-md-state="indeterminate" type="checkbox" id="__nav_3_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_4">
+          Data Model
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Data Model" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Data Model
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/data-model/box/" class="md-nav__link">
+        Box
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/protocol/address/" class="md-nav__link">
+        Adresses
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/data-model/p2p-handshake/" class="md-nav__link">
+        P2P Handshaking
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/data-model/p2p-protocol/" class="md-nav__link">
+        P2P Protocol
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" data-md-state="indeterminate" type="checkbox" id="__nav_3_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_5">
+          Stack
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Stack" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Stack
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/stack/front-end/" class="md-nav__link">
+        Frontend
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/stack/back-end/" class="md-nav__link">
+        Backend
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/stack/appkit/" class="md-nav__link">
+        AppKit
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/stack/ergotool/" class="md-nav__link">
+        ErgoTool
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" data-md-state="indeterminate" type="checkbox" id="__nav_3_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_6">
+          Smart Contracts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Smart Contracts" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          Smart Contracts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/scs/ergoscript/" class="md-nav__link">
+        ErgoScript
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/scs/flowcards/" class="md-nav__link">
+        FlowCards
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_7" data-md-state="indeterminate" type="checkbox" id="__nav_3_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_7">
+          Examples
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Examples" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_7">
+          <span class="md-nav__icon md-icon"></span>
+          Examples
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/apps/zk/" class="md-nav__link">
+        ZK-Treasury
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/scs/crowdfunding/" class="md-nav__link">
+        CrowdFunding
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/scs/microcredit/" class="md-nav__link">
+        Micro Credit
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_8" data-md-state="indeterminate" type="checkbox" id="__nav_3_8" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_8">
+          Advanced
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Advanced" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_8">
+          <span class="md-nav__icon md-icon"></span>
+          Advanced
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/Integration/guide/" class="md-nav__link">
+        Integration
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Node
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Node" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Node
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/" class="md-nav__link">
+        Docs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Config
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Config
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    Linux
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mac" class="md-nav__link">
+    Mac
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    Windows
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pi" class="md-nav__link">
+    Pi
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node-config-file" class="md-nav__link">
+    Node Config File
+  </a>
+  
+    <nav class="md-nav" aria-label="Node Config File">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#actual-for-version-161" class="md-nav__link">
+    Actual for version 1.6.1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ergo-configuration-section" class="md-nav__link">
+    Ergo configuration section
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-settings" class="md-nav__link">
+    Network settings
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../run/" class="md-nav__link">
+        First Run
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../withdraw/" class="md-nav__link">
+        Withdraw
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/" class="md-nav__link">
+        Architecture
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../digest-state/" class="md-nav__link">
+        Digest State
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../history-pruning/" class="md-nav__link">
+        History Pruning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snapshots/" class="md-nav__link">
+        Snapshots
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    Linux
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mac" class="md-nav__link">
+    Mac
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    Windows
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pi" class="md-nav__link">
+    Pi
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node-config-file" class="md-nav__link">
+    Node Config File
+  </a>
+  
+    <nav class="md-nav" aria-label="Node Config File">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#actual-for-version-161" class="md-nav__link">
+    Actual for version 1.6.1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ergo-configuration-section" class="md-nav__link">
+    Ergo configuration section
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-settings" class="md-nav__link">
+    Network settings
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/glasgowm148/ergodocs/edit/master/docs/node/node-config.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="wallets">Wallets</h1>
+<h2 id="linux">Linux</h2>
+<h2 id="mac">Mac</h2>
+<h2 id="windows">Windows</h2>
+<p><code>HOME</code> environment variable is not often set in Windows. Please replace <code>${HOME}</code> with <code>${HOMEPATH}</code> or <code>${APPDATA}</code> in your configuration file.
+You should also remember that environment variables names are case sensitive in Windows.</p>
+<h2 id="pi">Pi</h2>
+<ul>
+<li><a href="https://youtu.be/yDqhlgz0244">How to setup an Ergo node on a Raspberry Pi</a></li>
+</ul>
+<h2 id="node-config-file">Node Config File</h2>
+<blockquote>
+<p>!!!Note!!! This guide is outdated and should be actualized to current config format</p>
+</blockquote>
+<h3 id="actual-for-version-161">Actual for version 1.6.1</h3>
+<p>Below you can find a complete Ergo Node configuration file. This is the default configuration shipped with the application.
+It is possible to overwrite any parameters by providing an additional configuration file. You can pass an additional configuration file
+by providing the path to it as the first command line parameter when starting Ergo Node application.</p>
+<pre><code>ergo {
+  # Directory to keep data
+  directory = ${user.dir}&quot;/ergo/data&quot;
+
+  # Settings for node view holder regime. See papers.yellow.ModifiersProcessing.md
+  node {
+    # State type.  Possible options are:
+    # &quot;utxo&quot; - keep full utxo set, that allows to validate arbitrary block and generate ADProofs
+    # &quot;digest&quot; - keep state root hash only and validate transactions via ADProofs
+    stateType = &quot;utxo&quot;
+
+    # Download block transactions and verify them (requires BlocksToKeep == 0 if disabled)
+    verifyTransactions = true
+
+    # Number of last blocks to keep with transactions and ADproofs, for all other blocks only header will be stored.
+    # Keep all blocks from genesis if negative
+    blocksToKeep = -1
+
+    # Download PoPoW proof on node bootstrap
+    PoPoWBootstrap = false
+
+    # Minimal suffix size for PoPoW proof (may be pre-defined constant or settings parameter)
+    minimalSuffix = 10
+
+    # Is the node is doing mining
+    mining = false
+
+    # If true, a node generates blocks being offline. The only really useful case for it probably is to start a new
+    # blockchain
+    offlineGeneration = false
+
+    # Delay for miner after succesful block creation
+    miningDelay = 5s
+
+    # Number of state snapshot diffs to keep. Defines maximum rollback depth
+    keepVersions = 200
+  }
+
+  testing {
+    # Whether to turn on transaction generator
+    transactionGeneration = false
+
+    # Max number of transactions generated per a new block received
+    maxTransactionsPerBlock = 100
+  }
+
+  cache {
+    # Number of recently used modifiers that will be kept in memory
+    modifiersCacheSize = 1000
+
+    # Number of recently used indexes that will be kept in memory
+    indexesCacheSize = 10000
+  }
+
+  # Chain-specific settings. Change only if you are going to launch a new chain!
+  chain {
+    # Network address prefix, currently reserved values are 0x00 (money chain mainnet) and 0x20 (32 in decimal,
+    # money chain testnet)
+    addressPrefix = 16
+
+    # Monetary config for chain
+    monetary {
+      # number of blocks reward won't change (525600 (2 years) for mainnet, 10080 (14 days) for testnet)
+      fixedRatePeriod = 10080
+      # number of coins issued every block during fixedRatePeriod (75 Ergo)
+      fixedRate = 7500000000
+      # number of blocks between reward reduction (64800 (90 days) for mainnet, 2160 (3 days) for testnet)
+      epochLength = 2160
+      # number of coins reward decrease every epochs (3 Ergo)
+      oneEpochReduction = 300000000
+      # Base16 representation of state roothash after genesis
+      afterGenesisStateDigestHex = &quot;a8f724cef6f8a247a63fba1b713def858d97258f7cd5d7ed71489a474790db5501&quot;
+    }
+
+    # Desired time interval between blocks
+    blockInterval = 2m
+
+    # length of an epoch in difficulty recalculation. 1 means difficulty recalculation every block
+    epochLength = 256
+
+    # Number of last epochs that will  be used for difficulty recalculation
+    useLastEpochs = 8
+
+    # Proof-of-Work algorithm and its parameters. Possible options are &quot;fake&quot; and &quot;equihash&quot;.
+    powScheme {
+      powType = &quot;equihash&quot;
+      n = 96 # used by Equihash
+      k = 5  # used by Equihash
+    }
+
+    # Defines an id of the genesis block. Other genesis blocks will be considered invalid.
+    # genesisId = &quot;ab19bb59871e86507defb9a7769841b1130aad4d8c1ea8b0e01e0dee9e97a27e&quot;
+  }
+
+  wallet {
+    # Seed the wallet private keys are derived from
+    seed = &quot;C3FAFMC27697FAF29E9887F977BB5994&quot;
+
+    # How many Schorr secret keys (w for the g^w public key) to generate
+    dlogSecretsNumber = 4
+
+    # Interval to re-scan uncertain boxes. When a block arrives, its transaction outputs are to be scanned, and if
+    # certain bytes are found in the output script (e.g. public key bytes), the box is to be put to a queue of a boxes
+    # which are potentially wallet's. But to be sure, script execution is needed, which could be costly to do in a bulk.
+    # So we check from a queue only one box per &quot;scanningInterval&quot;.
+    scanningInterval = 1s
+  }
+}
+scorex {
+  network {
+    bindAddress = &quot;0.0.0.0:9006&quot;
+    maxInvObjects = 400
+    nodeName = &quot;ergo-testnet1&quot;
+    knownPeers = [&quot;178.128.162.150:9006&quot;, &quot;78.46.93.239:9006&quot;, &quot;209.97.136.204:9006&quot;, &quot;209.97.138.187:9006&quot;, &quot;209.97.134.210:9006&quot;, &quot;88.198.13.202:9006&quot;]
+    syncInterval = 15s
+    syncStatusRefresh = 30s
+    syncIntervalStable = 20s
+    syncTimeout = 5s
+    syncStatusRefreshStable = 1m
+    deliveryTimeout = 8s
+    maxDeliveryChecks = 2
+    appVersion = 0.2.1
+    agentName = &quot;ergoref&quot;
+    maxModifiersCacheSize = 512
+    maxPacketSize = 2048576
+  }
+  restApi {
+    bindAddress = &quot;0.0.0.0:9052&quot;
+  }
+}
+</code></pre>
+<h3 id="ergo-configuration-section">Ergo configuration section</h3>
+<p>Root configuration section <code>ergo</code> holds essential application parameters and other configuration subsections.
+There is also another one root section <code>scorex</code> that holds the parameters inherited from the <a href="https://github.com/ScorexFoundation/Scorex">Scorex project</a>.</p>
+<p>Using parameter <code>directory</code> it is possible to set a path to the base application directory.
+It is also possible to use environment variables to override configuration parameters.
+For example, by default the base directory is being constructed relatively to the user's <code>HOME</code> environment variable.
+Please do not enclose references to environment variables into quotation marks, otherwise they will be handled as strings and won't be resolved.</p>
+<h3 id="network-settings">Network settings</h3>
+<p>In <code>scorex.network</code> section P2P network related settings could be set.</p>
+<p>Using <code>declaredAddress</code> parameter you can set the external IP address and port number of the node. It's necessary to work behind NAT in most cloud hosting, where the machine does not interface directly with the external address. If you do not specify it, then your node connects to the P2P network, but it won't listen to incoming connections so other nodes will not be able to connect. Other nodes are connected to your node using these data. The format of this parameter is "[ip-address]:[port]".</p>
+<p>Using parameter <code>bindAddress</code> you can set the IP address of local network interface on which Ergo Node will accept incoming connections.
+By default, node binds to "0.0.0.0" that means that it will listen on all available network adapters.</p>
+<p><strong>Note about Internet Address settings</strong></p>
+<p>Internet Address settings have <code>&lt;ip-adderss&gt;:&lt;port&gt;</code> format.
+Note the <code>&lt;port&gt;</code> part at the very end of the address after the colon.</p>
+<p>For the <code>bindAddress</code> setting port part is used to set the network port number to which other Ergo nodes will connect.
+Please ensure that the port is reachable from outside, otherwise your node will have only outgoing connections to P2P network.
+If the given port is taken by other application, your node won't start.</p>
+<p>Parameter <code>nodeName</code> could be used to set the name of your node visible to other participants of the P2P network. The name transmitted during initial handshake. In the default configuration, this parameter is commented out, which leads to random name generation.</p>
+<p>The <code>knownPeers</code> parameter stores the list of bootstrap nodes to which your node will establish outgoing connections while initializing.</p>
+<p><strong>Note about time settings</strong></p>
+<p>All time span parameters are set in milliseconds. You can also use duration units to shorten their values. Supported units are:
+* s, second, seconds
+* m, minute, minutes
+* h, hour, hours
+* d, day, days</p>
+<p>For usage examples see the default configuration file above.</p>
+<p>Use <code>maxConnections</code> parameter to set the maximum number of simultaneous connections handled by the node.</p>
+<p>Parameter <code>connectionTimeout</code> could be used to change the network communication timeout.</p>
+<p>Using <code>handshakeTimeout</code> parameter it is possible to set time period to wait for reply during handshake. In case of no reply the peer will be blacklisted.</p>
+<p>Using parameters that starts with <code>upnp</code> you can configure the UPnP settings. Actually, those settings are useful only if you ran your Ergo node on the home network where the node could ask your router to establish a tunnel. By default, this functionality is disabled. Use <code>upnpEnabled</code> parameter to enable this functionality.</p>
+<p><strong>Wallet settings</strong></p>
+<p>In <code>wallet</code> section you can configure the wallet built in Ergo node.</p>
+<p>Use <code>dlogSecretsNumber</code> parameter to specify how many Schorr secret keys (w for the g^w public key) to generate.</p>
+<p>Use <code>scanningInterval</code> parameter to set an interval of re-scaning uncertain boxes.</p>
+<p>Using <code>seed</code> parameter you could recreate an existing walled on a new node. If you don't have any existing wallet comment out this parameter and start the node. During the first run, the application will create a new wallet with a random seed for you. In this case, the seed will be displayed in the application log.</p>
+<p><strong>Attention!</strong></p>
+<p>The wallet is a critical part of your node. You should better store wallet's file in a safe and protected location. Don't forget to backup your wallet's file.</p>
+<p>It's recommended to remove the seed from the configuration file immediately after the start of the node. If an attacker gains access to this seed string, he has access to all your funds on all your addresses!</p>
+<p><strong>Blockchain settings</strong></p>
+<p>At <code>ergo.chain</code> you can select or custom the blockchain parameters.</p>
+<p>Use <code>blockInterval</code> parameter to set desired time interval between blocks.</p>
+<p>Parameter <code>epochLength</code> used to set the length of an epoch in difficulty recalculation. 1 means difficulty recalculation every block</p>
+<p><code>useLastEpochs</code> parameter stores a number of last epochs that will be used for difficulty recalculation.</p>
+<p>You can change the PoW algo or related parameters using <code>powScheme</code> section.</p>
+<p><strong>Node settings</strong></p>
+<p>In section <code>ergo.node</code> it is possible to configure parameters of the node regime.</p>
+<p>Use <code>enable</code> parameter to enable or disable block generation on the node. By default, it's disabled.</p>
+<p>Node with disabled <code>offlineGeneration</code> parameter will start mining as soon as it connects to the first peer in the P2P network. Setting this parameter to <code>true</code> will enable off-line generation.</p>
+<p>Using <code>miningDelay</code> parameter you can tune your node's mining delay after finding a new block.</p>
+<p><strong>REST API settings</strong></p>
+<p>In section <code>scorex.rest-api</code> you can set the node's REST API parameters.</p>
+<p>Parameter <code>bindAddress</code> could be used to select network interface on which REST API will accept incoming connections.
+The <code>:&lt;port&gt;</code> part could be used to change the port number, which REST API will listen for connections.</p>
+<blockquote>
+<p><strong>Attention!</strong> For the better security, do not change <code>bindAddress</code> from "127.0.0.1" if you do not know what you're doing!
+For the external access you should use <a href="http://nginx.org/ru/docs/http/ngx_http_proxy_module.html">Nginx's proxy_pass module</a> or <a href="http://blog.trackets.com/2014/05/17/ssh-tunnel-local-and-remote-port-forwarding-explained-with-examples.html">SSH port-forwarding</a> instead.</p>
+</blockquote>
+<p>Use <code>api-key-hash</code> parameter to set the hash of your API key. The API key is used to protect calls of critical API methods. Remember, that in this parameter you should provide the hash of API key, but during REST calls you should provide API key itself. You can use blake2b to produce the hash of your API key.</p>
+<blockquote>
+<p><strong>Attention!</strong> API key is transmitted in the HTTP header as unprotected plain text! An attacker could intercept it in network transit and use it to transfer your money to any address! So you have to protect the transmission using HTTPS or use SSH port forwarding.</p>
+</blockquote>
+<p>Parameter <code>corsAllowedOrigin</code> could be used to enable or disable CORS support in REST API.
+CORS allows to safely resolve queries to other domains outside the one running the node.
+It's necessary for Swagger and Lite client. You can read about it <a href="https://en.wikipedia.org/wiki/Cross-origin_resource_sharing">here</a>.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../docs/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Docs" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Docs
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../run/" class="md-footer__link md-footer__link--next" aria-label="Next: First Run" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              First Run
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1e84347e.min.js"></script>
+      
+    
+  </body>
+</html>
