@@ -42,7 +42,7 @@
     
     
     
-      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../assets/extra.css">
     
     
       
@@ -1344,45 +1344,46 @@
                   </a>
                 
                 
-                <p>We would like to announce that Ergo has successfully passed security audit of certain (most critical) parts of the code. This time the audit was done by Jean-Philipee Aumasson (aka veorq, <a href="https://aumasson.jp/">https://aumasson.jp/</a> ).</p>
+                <p>We want to announce that Ergo has successfully passed a security audit of certain (most critical) parts of the code. This time the audit was done by Jean-Philipee Aumasson (aka veorq, <a href="https://aumasson.jp/">aumasson.jp/</a>).</p>
 <p>The detailed report is below. Nothing critical is found. Comments on issues found:</p>
 <ol>
 <li>
-<p>On wallet password, we'll provide a recommendation in next versions of the protocol client. Not sure hard enforcement on password will take place, but we'll do more consultations on this.</p>
+<p>On wallet password, we'll provide a recommendation in subsequent versions of the protocol client. Not sure hard enforcement on passwords will take place, but we'll do more consultations on this.</p>
 </li>
 <li>
-<p>Changing "n" and "k" parameters makes sense when launching new network only. Changing this parameters in mining node will make blocks produced invalid for other nodes. Changing this parameters in protocol client means going on another fork (blocks coming from the honest protocol participants will be rejected). So no need for extra checks maybe, as people launching new networks will set "n" and "k" properly.</p>
+<p>Changing "n" and "k" parameters makes sense only when launching a new network. Changing these parameters in the mining node will make blocks produced invalid for other nodes. Changing these parameters in the protocol client means going on another fork (blocks coming from the honest protocol participants will be rejected). So no need for extra checks may be, as people launching new networks will set "n" and "k" properly.</p>
 </li>
 <li>
-<p>Currently the Ergo node (as well as other blockchain protocol clients and wallets we're aware of, as well as cryptographic libraries we're using) do not provide protection from side-channel attacks running locally (e.g. timing attacks or memory inspection by malware or viruses). So please protect machines you're running wallets on!  </p>
+<p>Currently, the Ergo node (as well as other blockchain protocol clients and wallets we're aware of and the cryptographic libraries we're using) does not protect from side-channel attacks running locally (e.g. timing attacks or memory inspection by malware or viruses). So please protect the machines you're running wallets on!  </p>
 </li>
 </ol>
-<p>==========================================================================================================</p>
-<p>% Ergo security assessment % Jean-Philippe Aumasson % 07/Dec/19</p>
+<blockquote>
+<p>Ergo security assessment by Jean-Philippe Aumasson on 07/Dec/19</p>
+</blockquote>
 <h2 id="summary">Summary</h2>
-<p>We were solicited by Ergo to perform a security assessment of several components of their Ergo Platform:</p>
+<p>Ergo solicited us to perform a security assessment of several components of their Ergo Platform:</p>
 <ul>
 <li>Sigma protocol proofs creation and verification</li>
 <li>Wallet's secure storage of secrets</li>
 <li>Proof-of-Work validation</li>
 </ul>
-<p>​This brief report summarizes our assessment and describes our findings and mitigation recommendations.</p>
+<p>​This brief report summarises our assessment and describes our findings and mitigation recommendations.</p>
 <h2 id="sigma-protocol-proofs">Sigma protocol proofs</h2>
 <p>​The Ergo protocol relies on ErgoScript, a scripting language supporting sigma-statements, which can be proven and verified through non-interactive proofs of knowledge.</p>
-<p>These proofs are statements described as a tree of AND, OR, and threshold conditions, whose leaves are proofs of knowledge of a discrete-logarithm problem.</p>
+<p>These proofs are statements described as a tree of AND, OR, and threshold conditions, whose leaves are proofs of knowledge of a discrete logarithm problem.</p>
 <p>The proof of the sigma-statement is then made non-interactive thanks to the Fiat-Shamir transform.</p>
 <p>This logic is specified in the <a href="https://ergoplatform.org/docs/ErgoScript.pdf">ErgoScript paper</a>, and the specific
-proving and verification routines described in its Appendix A.</p>
+proving and verification routines described in Appendix A.</p>
 <p>​Implementation challenges are then to:</p>
 <ul>
 <li>
-<p>Define encoding of the proofs that are safe and efficient, and implement serialization and deserialization that always succeeds in processing valid input, and that always gracefully fails to process invalid input.</p>
+<p>Define encoding of the proofs that are safe and efficient, and implement serialisation and deserialisation that always successfully processes valid input and gracefully fails to process invalid input.</p>
 </li>
 <li>
-<p>Implement the proving and verification functionalities correctly, in compliance with the specification, and most importantly such that no invalid statement can successfully pass verification.</p>
+<p>Implement the proving and verification functionalities correctly, in compliance with the specification, and most importantly, no invalid statement can successfully pass verification.</p>
 </li>
 </ul>
-<p>We reviewed these two aspects, based on the code in the repository <a href="https://github.com/ScorexFoundation/sigmastate-interpreter">sigmastate-interpreter</a>, and on the <a href="https://ergoplatform.org/docs/ErgoScript.pdf">ErgoScript paper</a>, carefully comparing the intended behavior (in Appendix A) with the actual behavior as implemented.</p>
+<p>We reviewed these two aspects, based on the code in the repository <a href="https://github.com/ScorexFoundation/sigmastate-interpreter">sigmastate-interpreter</a>, and the <a href="https://ergoplatform.org/docs/ErgoScript.pdf">ErgoScript paper</a>, carefully comparing the intended behaviour (in Appendix A) with the actual behaviour as implemented.</p>
 <p>​We notably reviewed code from the <a href="https://github.com/ScorexFoundation/sigmastate-interpreter/blob/master/sigmastate/src/main/scala/sigmastate/SigSerializer.scala">SigSerializer</a>, <a href="https://github.com/ScorexFoundation/sigmastate-interpreter/blob/master/sigmastate/src/main/scala/sigmastate/interpreter/Interpreter.scala">Interpreter</a>, and <a href="https://github.com/ScorexFoundation/sigmastate-interpreter/blob/master/sigmastate/src/main/scala/sigmastate/interpreter/ProverInterpreter.scala">ProverInterpreter</a> traits and objects.</p>
 <p>​We mainly sought bugs from the following classes:</p>
 <ul>
@@ -1395,53 +1396,53 @@ proving and verification routines described in its Appendix A.</p>
 <li>Race conditions</li>
 <li>Logic bugs </li>
 </ul>
-<p>​Despite extensive review, we did not identify any security issue.</p>
-<p>The protocol's logic and internals are nonetheless relatively complex, and we believe the highest risk is in the parsing and verification of proofs. To exploit such issues, however, an attacker would have to create a semantically correct script that somehow benefits them, yet that passes verification when it does not ought to.</p>
-<p>Regarding software security, Scala eliminates certain classes of bugs, but Scala code may still suffer from bugs due to Scala's specific behavior or to unhandled errors.</p>
+<p>​Despite the extensive review, we did not identify any security issue.</p>
+<p>The protocol's logic and internals are relatively complex, and we believe the highest risk is in parsing and verifying proofs. To exploit such issues, however, an attacker would have to create a semantically correct script that somehow benefits them yet that passes verification when it does not ought to.</p>
+<p>Regarding software security, Scala eliminates certain classes of bugs, but Scala code may still suffer from bugs due to Scala's specific behaviour or to unhandled errors.</p>
 <h2 id="wallet">Wallet</h2>
-<p>Ergo's wallet functionality enables its users to store a secret on disk and recover it, initializing the wallet with a new seed when it's first used.</p>
+<p>Ergo's wallet functionality enables its users to store a secret on disk and recover it, initialising the wallet with a new seed when it's first used.</p>
 <p>​This logic is mainly defined in <a href="https://github.com/ergoplatform/ergo/blob/master/src/main/scala/org/ergoplatform/nodeView/wallet/ErgoWalletActor.scala">ErgoWalletActor</a>, and a key component regarding secrets' storage is <a href="https://github.com/ergoplatform/ergo/blob/master/ergo-wallet/src/main/scala/org/ergoplatform/wallet/secrets/JsonSecretStorage.scala">JsonSecretStorage</a>.</p>
-<p>​The first time a wallet is create, the <code>InitWallet</code> command does the following:</p>
+<p>​The first time a wallet is created, the <code>InitWallet</code> command does the following:</p>
 <ul>
 <li>
 <p>Generate <code>settings.walletSettings.seedStrengthBits</code> random bits, as initial entropy. <a href="https://github.com/ergoplatform/ergo/blob/master/src/main/resources/reference.conf">By default</a>, 160 bits are generated.</p>
 </li>
 <li>
-<p>Generate a BIP39 from the random bits generated, which can be seen as an encoding of the entropy bits. The standard BIP39 logic is used, with optional password.</p>
+<p>Generate a BIP39 from the random bits generated, which can be seen as encoding the entropy bits. The standard BIP39 logic is used with an optional password.</p>
 </li>
 <li>
 <p>Derive a seed from the mnemonic using BIP39's PBKDF2-based derivation logic.</p>
 </li>
 <li>
-<p>Encrypt this seed to disk with AES-GCM, using a random nonce, and a key derive from the password using PBKDF2-HMAC-SHA256 with <a href="https://github.com/ergoplatform/ergo/blob/master/src/test/resources/application.conf#L107">128000</a> iterations, using a random salt.</p>
+<p>Encrypt this seed to disk with AES-GCM, using a random nonce, and a key derives from the password using PBKDF2-HMAC-SHA256 with <a href="https://github.com/ergoplatform/ergo/blob/master/src/test/resources/application.conf#L107">128000</a> iterations, using a random salt.</p>
 </li>
 </ul>
 <p>To unlock a wallet already created, a user provides the password and the wallet attempts to decrypt the stored data.</p>
-<p>​To restore an existing account from a BIP39 passphrase, a similar process as initialization is performed, except that the wallet will derive the seed from the mnemonic instead of picking random mnemonic.</p>
+<p>​A similar process as initialisation is performed to restore an existing account from a BIP39 passphrase, except that the wallet will derive the seed from the mnemonic instead of picking a random mnemonic.</p>
 <p>​The two risks we identified here are:</p>
 <ul>
 <li>
-<p>The absence of checks on the password's length: since the password is sufficient to access the seed given the wallet's on-disk stored secret, the password should in theory have at least as much entropy as the mnemonic, and in practice should be practically hard to crack. We thus recommend to enforce a minimal password length, for example of 16 characters.</p>
+<p>The absence of checks on the password's length: since the password is sufficient to access the seed given the wallet's on-disk stored secret, the password should, in theory, have at least as much entropy as the mnemonic, and in practice, should be practically hard to crack. We thus recommend enforcing a minimal password length, for example of 16 characters.</p>
 </li>
 <li>
-<p>Copies of secret values (password, seed, and derive private keys) are likely to remain in memory after wallet software execution, which is an intrinsic limitation garbage-collected languages such as Scala.</p>
+<p>Copies of secret values (password, seed, and derive private keys) are likely to remain in memory after wallet software execution, an intrinsic limitation of garbage-collected languages such as Scala.</p>
 </li>
 </ul>
 <p>Another process or user sharing the same memory address space could potentially recover the secrets, and they could also appear in crash dumps. To the best of our knowledge, there is no effective mitigation in pure Scala.</p>
 <p>​</p>
 <h1 id="pow-validation">PoW validation</h1>
-<p>​After previously reviewing the security of the Autolykos PoW, we performed another round of review focusing on its latest verification logic, and notably the changes in the commit <a href="https://github.com/ergoplatform/ergo/commit/eb0f85ac48b0ee8194c12369faf4cc5f16954af9">eb0f85a</a>.</p>
+<p>​After previously reviewing the security of the Autolykos PoW, we performed another round of review focusing on its latest verification logic, and notably, the changes in the commit <a href="https://github.com/ergoplatform/ergo/commit/eb0f85ac48b0ee8194c12369faf4cc5f16954af9">eb0f85a</a>.</p>
 <p>​The main relevant file is <a href="https://github.com/ergoplatform/ergo/blob/master/src/main/scala/org/ergoplatform/mining/AutolykosPowScheme.scala">AutolykosPowScheme</a>,and other important operations are for example implemented in
 <a href="https://github.com/ergoplatform/ergo/blob/master/src/main/scala/org/ergoplatform/nodeView/history/storage/modifierprocessors/HeadersProcessor.scala">HeadersProcessor</a> and <a href="https://github.com/ScorexFoundation/Scorex/blob/master/src/main/scala/scorex/core/validation/ModifierValidator.scala">ModifierValidator</a>.</p>
-<p>​We checked that the implemented verification logic is consistent with that specified in the Autolykos specifications, and that it is properly integrated in the block header validation logic.</p>
+<p>​We checked that the implemented verification logic is consistent with that specified in the Autolykos specifications and that it is appropriately integrated into the block header validation logic.</p>
 <p>​We believe the following points should be addressed:</p>
 <ul>
 <li>
-<p>Stricter validation of <code>k</code> and <code>n</code>: although the class enforces <code>k&lt;=32</code> (number of elements in the solution) and <code>n&lt;31</code> (log2 of the total number of elements), weak could still be created from the authorized parameters. The <code>validate()</code> function may therefore have additional validation that <code>n</code> and <code>k</code> are equal to the intended
+<p>Stricter validation of <code>k</code> and <code>n</code>: although the class enforces <code>k&lt;=32</code> (number of elements in the solution) and <code>n&lt;31</code> (log2 of the total number of elements), weak could still be created from the authorised parameters. The <code>validate()</code> function may therefore have additional validation that <code>n</code> and <code>k</code> are equal to the intended
 values.</p>
 </li>
 <li>
-<p>Assert that <code>k</code> and <code>n</code> are positive values, since currently negative ones (as <code>Int</code>s) would pass the <code>assert</code> statements.</p>
+<p>Assert that <code>k</code> and <code>n</code> are positive values, since currently negative ones (as <code>Int's) would pass the</code>assert` statements.</p>
 </li>
 </ul>
                 

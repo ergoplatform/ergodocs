@@ -42,7 +42,7 @@
     
     
     
-      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../assets/extra.css">
     
     
       
@@ -1322,23 +1322,23 @@
 <p>A UTXO is short for unspent transaction output. We can also consider spent transaction outputs (UTXOs that have been spent). In Ergo, a transaction output (whether spent or unspent) is called a box.</p>
 <p>A box, at the minimum, has four pieces of information.</p>
 <ol>
-<li>The value in NanoErgs (1 Erg = 1000000000 NanoErgs).</li>
-<li>The guard script (like scriptPubKey of Bitcoin). This is also called the "smart contract."</li>
+<li>The value in NanoErgs (<code>1 Erg = 1000000000 NanoErgs</code>).</li>
+<li>The guard script (like <code>scriptPubKey</code> of Bitcoin). This is also called the "smart contract."</li>
 <li>Additional assets (tokens) are stored in this box.</li>
-<li>Creation info of the box (txId, the identifier of the transaction that created the box along with an output index). It also contains a "maxCreation" height parameter defined by the box creator (this is not the creation height; its use is to create "payment channels easily").</li>
+<li>Creation info of the box (<code>txId</code>, the identifier of the transaction that created the box along with an output index). It also contains a <code>maxCreation</code> height parameter defined by the box creator (this is not the creation height; its use is to create "payment channels easily").</li>
 </ol>
 <p><strong>These are stored in the first four registers (numbered R0-R3) of the box.</strong></p>
 <p>In addition, a box can have six optional registers (R4-R9) to store custom data for use in smart contracts. Registers must be densely packed; that is, we cannot sandwich empty registers between non-empty ones. The optional registers can contain data of any of the following types:</p>
 <ul>
-<li>Int, Long with the usual semantics of Scala.</li>
-<li>BigInt, which is a 256-bit integer (i.e., all computation is done modulo 2^256).</li>
-<li>GroupElement, a point on the Secp256k1 curve represented in compressed format.</li>
-<li>Coll[Byte], a collection of bytes, semantically similar to Array[Byte] in Scala.</li>
-<li>Collection of the above, i.e., Coll[Int], Coll[GroupElement], Coll[Coll[Byte]], etc.</li>
+<li><code>Int</code>, <code>Long</code> with the usual semantics of Scala.</li>
+<li><code>BigInt</code>, which is a 256-bit integer (i.e., all computation is done modulo 2^256).</li>
+<li><code>GroupElement</code>, a point on the Secp256k1 curve represented in compressed format.</li>
+<li><code>Coll[Byte]</code>, a collection of bytes, semantically similar to <code>Array[Byte]</code> in Scala.</li>
+<li>Collection of the above, i.e., <code>Coll[Int]</code>, <code>Coll[GroupElement]</code>, <code>Coll[Coll[Byte]]</code>, etc.</li>
 <li>A boxId is calculated based on the contents of all the registers. This boxId uniquely defines a box and can be considered equivalent to Bitcoin's (txId, vOut) pairs.</li>
 </ul>
 <blockquote>
-<p>Note that Ergo txId depends only on the message and not on signatures (similar to Bitcoin SegWit transactions). Hence, a txId is available even before signing. Similar to Bitcoin, Ergo supports chained transactions (i.e., spending of boxes with 0 confirmations).</p>
+<p>Note that Ergo <code>txId</code> depends only on the message and not on signatures (similar to Bitcoin SegWit transactions). Hence, a txId is available even before signing. Similar to Bitcoin, Ergo supports chained transactions (i.e., spending of boxes with 0 confirmations).</p>
 </blockquote>
 <h2 id="anatomy-of-an-ergo-transaction">Anatomy of an Ergo transaction</h2>
 <p><strong>Articles</strong></p>
