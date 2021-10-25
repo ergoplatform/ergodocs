@@ -546,6 +546,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../protocol/transaction/" class="md-nav__link">
+        Transaction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../protocol/autolykos/" class="md-nav__link">
         Autolykos
       </a>
@@ -742,20 +756,6 @@
               
   
   
-  
-    <li class="md-nav__item">
-      <a href="../p2p-handshake/" class="md-nav__link">
-        P2P Handshaking
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
     
   
   
@@ -800,17 +800,24 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#syncing" class="md-nav__link">
-    Syncing
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p2p-handshake/" class="md-nav__link">
+        P2P Handshaking
+      </a>
     </li>
   
 
@@ -1306,13 +1313,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#syncing" class="md-nav__link">
-    Syncing
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1333,7 +1333,7 @@
                   <h1>P2P Protocol</h1>
                 
                 <h2 id="handshake">Handshake</h2>
-<p>First of all, nodes are doing handshaking by sending each other handshake messages. Handshaking details are provided in <a href="https://github.com/ergoplatform/ergo/wiki/P2P-Handshaking">dedicated P2P Handshaking doc</a></p>
+<p>First of all, nodes are doing handshaking by sending each other handshake messages. Handshaking details are provided in <a href="../p2p-handshake/">dedicated P2P Handshaking doc</a></p>
 <h2 id="message-format">Message format</h2>
 <p>Every message in P2P protocol has the following format:</p>
 <table>
@@ -1372,11 +1372,11 @@
 </tr>
 </tbody>
 </table>
-<p>Notes:
-1. For the testnet, magic bytes are [2, 0, 0, 1] (in decimal). For mainnet, [1, 0, 2, 4] (in decimal).
-2. No VLQ and ZigZag encoding is used for message length (for historical reasons), bytes are coming in big-endian order.
-[TODO: provide descriptions for possible values of message body]</p>
-<h2 id="syncing">Syncing</h2>
+<p>Notes:</p>
+<ol>
+<li>For the testnet, magic bytes are <code>[2, 0, 0, 1]</code> (in decimal). For mainnet, <code>[1, 0, 2, 4]</code> (in decimal).</li>
+<li>No <code>VLQ</code> and <code>ZigZag</code> encoding is used for message length (for historical reasons), bytes are coming in big-endian order.</li>
+</ol>
                 
               
               
@@ -1396,7 +1396,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../p2p-handshake/" class="md-footer__link md-footer__link--prev" aria-label="Previous: P2P Handshaking" rel="prev">
+        <a href="../../protocol/address/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Adresses" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1405,20 +1405,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              P2P Handshaking
+              Adresses
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../stack/front-end/" class="md-footer__link md-footer__link--next" aria-label="Next: Frontend" rel="next">
+        <a href="../p2p-handshake/" class="md-footer__link md-footer__link--next" aria-label="Next: P2P Handshaking" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Frontend
+              P2P Handshaking
             </div>
           </div>
           <div class="md-footer__button md-icon">

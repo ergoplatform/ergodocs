@@ -546,6 +546,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../protocol/transaction/" class="md-nav__link">
+        Transaction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../protocol/autolykos/" class="md-nav__link">
         Autolykos
       </a>
@@ -742,6 +756,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../p2p-protocol/" class="md-nav__link">
+        P2P Protocol
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -801,20 +829,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../p2p-protocol/" class="md-nav__link">
-        P2P Protocol
-      </a>
     </li>
   
 
@@ -1418,16 +1432,53 @@ Since 3.3.7, a new feature describing network magic and (pseudorandom) session i
 </tr>
 </tbody>
 </table>
-<p>For client capabilities (Mode feature):
-| Length         | Field Name                                  | Details                       |                              <br />
-| :------------  | :-------------------------------------      | :-----------                  |<br />
-|1               | Feature id                                  | for mode feature = 16         |  <br />
-|1-2               | Feature body length                         | Length of feature description (VLQ-encoded, up to 2 bytes)|
-|1               | State type                                  | State representation, 0 = utxo, 1 = digest |
-|1               | Whether the peer verifying transactions     | 1 = transactions being verified, 0 = not verified |                             <br />
-|1               | Whether the node bootstrapped via NiPoPoW   | 1 if yes, 0 if no (then following field is missed) |
-|(4)             | Nipopow suffix length                       | Suffix length for NiPoPoW bootstrapping |    <br />
-|1-4               | How many block kept                         | signed integer (ZigZag then VLQ encoded), if -1 then all the blocks are stored |</p>
+<p>For client capabilities (Mode feature):</p>
+<table>
+<thead>
+<tr>
+<th align="left">Length</th>
+<th align="left">Field Name</th>
+<th align="left">Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">1</td>
+<td align="left">Feature id</td>
+<td align="left">for mode feature = 16</td>
+</tr>
+<tr>
+<td align="left">1-2</td>
+<td align="left">Feature body length</td>
+<td align="left">Length of feature description (VLQ-encoded, up to 2 bytes)</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left">State type</td>
+<td align="left">State representation, 0 = utxo, 1 = digest</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left">Whether the peer verifying transactions</td>
+<td align="left">1 = transactions being verified, 0 = not verified</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left">Whether the node bootstrapped via NiPoPoW</td>
+<td align="left">1 if yes, 0 if no (then following field is missed)</td>
+</tr>
+<tr>
+<td align="left">(4)</td>
+<td align="left">Nipopow suffix length</td>
+<td align="left">Suffix length for NiPoPoW bootstrapping</td>
+</tr>
+<tr>
+<td align="left">1-4</td>
+<td align="left">How many block kept</td>
+<td align="left">signed integer (ZigZag then VLQ encoded), if -1 then all the blocks are stored</td>
+</tr>
+</tbody>
+</table>
 <p>For session peer feature introduced in 3.3.7:</p>
 <table>
 <thead>
@@ -1460,14 +1511,16 @@ Since 3.3.7, a new feature describing network magic and (pseudorandom) session i
 </tr>
 </tbody>
 </table>
-<p>Notes:
-1. For the testnet, magic bytes are [2, 0, 0, 1] (in decimal). For mainnet, [1, 0, 2, 4] (in decimal). <br />
-2. For IPv4 or IP6 address bytes, "The result is in network byte order: the highest order byte of the address is in 
-"getAddress()[0]". Please check Inet4Address.getAddress() or Inet4Address.getAddress() in Java's JDK for details.
-3. For reference client, session id is currently used only to avoid connections to self</p>
+<p>Notes:</p>
+<ol>
+<li>For the testnet, magic bytes are <code>[2, 0, 0, 1]</code> (in decimal). For mainnet, <code>[1, 0, 2, 4]</code> (in decimal).   </li>
+<li>For IPv4 or IP6 address bytes, "The result is in network byte order: the highest order byte of the address is in 
+<code>getAddress()[0]</code>. Please check <code>Inet4Address.getAddress()</code> or <code>Inet4Address.getAddress()</code> in Java's JDK for details.</li>
+<li>For reference client, session id is currently used only to avoid connections to self</li>
+</ol>
 <h2 id="handshake-procedure">Handshake Procedure</h2>
-<p>A peer is sending a handshake message, another replies. If there's no handshake got within "handshakeTimeout", then 
-connection is dropped. Default value for handshakeTimeout = 30s</p>
+<p>A peer is sending a handshake message, another replies. If there's no handshake got within <code>handshakeTimeout</code>, then 
+connection is dropped. Default value for <code>handshakeTimeout = 30s</code></p>
                 
               
               
@@ -1487,7 +1540,7 @@ connection is dropped. Default value for handshakeTimeout = 30s</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../../protocol/address/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Adresses" rel="prev">
+        <a href="../p2p-protocol/" class="md-footer__link md-footer__link--prev" aria-label="Previous: P2P Protocol" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1496,20 +1549,20 @@ connection is dropped. Default value for handshakeTimeout = 30s</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Adresses
+              P2P Protocol
             </div>
           </div>
         </a>
       
       
         
-        <a href="../p2p-protocol/" class="md-footer__link md-footer__link--next" aria-label="Next: P2P Protocol" rel="next">
+        <a href="../../stack/front-end/" class="md-footer__link md-footer__link--next" aria-label="Next: Frontend" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              P2P Protocol
+              Frontend
             </div>
           </div>
           <div class="md-footer__button md-icon">

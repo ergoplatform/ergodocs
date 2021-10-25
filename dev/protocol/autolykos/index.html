@@ -546,6 +546,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../transaction/" class="md-nav__link">
+        Transaction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -557,9 +571,93 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Autolykos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Autolykos
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#non-outsourceability" class="md-nav__link">
+    non-outsourceability
+  </a>
+  
+    <nav class="md-nav" aria-label="non-outsourceability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#v2" class="md-nav__link">
+    v.2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#51-attack" class="md-nav__link">
+    51% Attack
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#difficulty" class="md-nav__link">
+    Difficulty
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decentralisation" class="md-nav__link">
+    Decentralisation
+  </a>
+  
+    <nav class="md-nav" aria-label="Decentralisation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decentralisation-of-mining" class="md-nav__link">
+    Decentralisation of Mining
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decentralisation-of-verification" class="md-nav__link">
+    Decentralisation of Verification
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -754,8 +852,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../data-model/p2p-handshake/" class="md-nav__link">
-        P2P Handshaking
+      <a href="../../data-model/p2p-protocol/" class="md-nav__link">
+        P2P Protocol
       </a>
     </li>
   
@@ -768,8 +866,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../data-model/p2p-protocol/" class="md-nav__link">
-        P2P Protocol
+      <a href="../../data-model/p2p-handshake/" class="md-nav__link">
+        P2P Handshaking
       </a>
     </li>
   
@@ -1248,6 +1346,75 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#non-outsourceability" class="md-nav__link">
+    non-outsourceability
+  </a>
+  
+    <nav class="md-nav" aria-label="non-outsourceability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#v2" class="md-nav__link">
+    v.2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#51-attack" class="md-nav__link">
+    51% Attack
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#difficulty" class="md-nav__link">
+    Difficulty
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decentralisation" class="md-nav__link">
+    Decentralisation
+  </a>
+  
+    <nav class="md-nav" aria-label="Decentralisation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decentralisation-of-mining" class="md-nav__link">
+    Decentralisation of Mining
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decentralisation-of-verification" class="md-nav__link">
+    Decentralisation of Verification
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1264,85 +1431,71 @@
                 
                 
                 <h1 id="autolykos">Autolykos</h1>
-<p>Security  of  Proof-of-Work  blockchains  relies  on  multiple  miners  trying to produce new blocks by participating in a <em>PoW puzzle lottery</em>,  and the network is secure if the majority of them are honest.  However, the reality becomes much more complicated than the original one-CPU-one-vote idea from the Bitcoin whitepaper.</p>
-<p>The first threat to decentralization came from mining pools – miners tend to unite in mining pools. Regardless of the PoW algorithm number of pools controlling more then 50% of computational power is usually quite small:  4 pools in Bitcoin, 2 in Ethereum, 3 in ZCash, etc.  This problem led to the notion of non-outsourceable puzzles. </p>
-<p>These are the puzzles constructed in such a way that if a mining pool outsources the puzzle toa miner, miner can recover pool’s private key and steal the reward witha non-negligible probability.  However the existing solutions either have too large solution size (kilobyte is already on the edge of acceptability fordistributed ledgers) or very specific and can not be modified or extendedin any way without breaking non-outsourceability. The second threat to cryptocurrencies decentralization is that ASIC-equipped miners are able to find PoW solutions orders of magnitude fasterand more efficiently than miners equipped with the commodity hardware. In order to reduce the disparity between the ASICs and regular hardware,memory-bound computations where proposed in. </p>
-<p>The most interesting practical examples are two asymmetric memory-hard PoW schemes which require significantly less memory to verify a solution than to find it. Despite  the  fact  that  ASICs  already  exist  for  both  of  them,  they remain the only asymmetric memory-hard PoW algorithms in use. </p>
-<p>Autolykos v.2 is briefly described at </p>
+<p>Security of  Proof-of-Work blockchains relies on multiple miners trying to produce new blocks by participating in a <em>PoW puzzle lottery</em>,  and the network is secure if the majority of them are honest.  However, the reality becomes much more complicated than the original one-CPU-one-vote idea from the Bitcoin whitepaper.</p>
+<p>The first threat to Decentralisation came from mining pools – miners tend to unite in mining pools. Regardless of the PoW algorithm, the number of pools controlling more than 50% of computational power is usually relatively small:  4 pools in Bitcoin, 2 in Ethereum, 3 in ZCash, etc.  This problem led to the notion of non-outsourceable puzzles. </p>
+<p>These are the puzzles constructed in such a way that if a mining pool outsources the puzzle to a miner, the miner can recover the pool's private key and steal the reward with a non-negligible probability.  However, the existing solutions either have too large a solution size (kilobyte is already on the edge of acceptability for distributed ledgers) or very specific and can not be modified or extended in any way without breaking non-outsource-ability. The second threat to cryptocurrencies Decentralisation is that ASIC-equipped miners can find PoW solutions orders of magnitude faster and more efficiently than miners equipped with the commodity hardware, to reduce the disparity between the ASICs and regular hardware memory-bound computations were proposed. </p>
+<p>The most interesting practical examples are two asymmetric memory-hard PoW schemes that require significantly less memory to verify a solution than to find it. Although ASICs already exist for both of them,  they remain the only asymmetric memory-hard PoW algorithms in use. </p>
 <ul>
 <li><a href="https://www.ergoforum.org/t/overview-of-ergo-pow-called-autolykos/">Overview of Ergo PoW called Autolykos</a></li>
 <li><a href="https://ergoplatform.org/docs/ErgoPow.pdf">(2019) Autolykos:  The Ergo Platform PoW Puzzle</a></li>
 </ul>
-<h1 id="v2">v.2</h1>
-<p>Autolykos v.2 is following Autolykos v.1, but with certain modifications made:</p>
+<h2 id="non-outsourceability">non-outsourceability</h2>
+<p>Autolykos v1 originally had non-outsourcability built-in. However, it became apparent that it's impossible to prevent pools with smart contracts, so they turned it off so that not only larger players could take advantage of the loophole. Ergo is now focusing on memory hardness in an attempt to keep mining as fair as possible, which should help prevent ASICs mining at least. There are also some improvements for pooling, e.g. Stratum 2 protocol.</p>
+<blockquote>
+<p>"Bypassing Non-Outsourceable Proof-of-Work Schemes Using Collateralized Smart Contracts" https://ia.cr/2020/044 was presented by Alex Chepurnoy at the WTSC workshop associated with Financial Cryptography and Data Security 2020 in Malaysia.</p>
+</blockquote>
+<p>It's also discussed here on 'Unblocked with Robert Kornacki' <a href="https://www.youtube.com/watch?v=2sbTMrQwWOw&amp;feature=youtu.be">(14:45)</a></p>
+<h3 id="v2">v.2</h3>
+<p>Autolykos version two follows Autolykos v.1, but with certain modifications made:</p>
 <ul>
-<li>non-outsourceability switched off. It turns out (based on more than 1 year of non-outsourceable PoW experience) that non-outsourceable PoW is not attractive to small miners.</li>
-<li>now algorithm is trying to bind an efficient solving procedure with a single table of ~2 GB (initially), which is significantly reducing memory optimizations possibilities</li>
+<li>non-outsourceable puzzles were switched off. It turns out (based on more than one year of non-outsourceable PoW experience) that non-outsourceable PoW is not attractive to small miners.</li>
+<li>Now, the algorithm is trying to bind an efficient solving procedure with a single table of ~2 GB (initially), which is significantly reducing memory optimizations possibilities</li>
 <li>table size (memory requirements of a solving algorithm) grows with time</li>
-<li>The table depends solely on the block height, so there is no penalization for recalculating block candidate for the same height</li>
+<li>The table depends solely on the block height, so there is no penalization for recalculating block candidates for the same height</li>
 </ul>
 <p><strong>Basic Ideas:</strong></p>
 <ul>
-<li>Like Autlykos-1, based on k-sum problem, so a miner needs to finds k (k=32) out of N (2^n = 2^26) elements, and hash of their sum must be less than target value (inverse of difficulty)</li>
+<li>Like Autlykos-1, based on the k-sum problem, so a miner needs to find <code>k (k=32)</code> out of <code>N (2^n = 2^26)</code> elements, and the hash of their sum must be less than the target value (inverse of the difficulty)</li>
 <li>k indexes are pseudorandom values derived from block candidate and nonce</li>
-<li>N elements are derived from block height and constants just, unlike Autolykos v.1, so miners can recalculate block candidates easily now (so only indexes are depending on them)</li>
-<li>Indexes calculation also involving the same table (which elements are last 31 bytes of H(i | | h | | M ), where i is in [0, N), h is block height, M is padding to slow down hash calculation (8kb of constant data).</li>
+<li>N elements are derived from block height and constants, unlike Autolykos v.1, so miners can recalculate block candidates quickly now (so only indexes are depending on them)</li>
+<li>Indexes calculation also involving the same table (which elements are last 31 bytes of <code>H(i | | h | | M )</code>, where i is in [0, N), <code>h</code> is block height, M is padding to slow down hash calculation (8kb of constant data).</li>
 </ul>
-<p>So algorithm trying to make mining efficient for ones who store the table which size is 2^26 * 31 = 2,080,374,784 bytes initially (about 2GB). Thus algo now is friendly to all the GPUs basically.</p>
-<p>Also, table size (N value) is growing with time as follows. Until block 614,400, N = 2^{26} = 67,108,864 elements (31 bytes each). From this block, and until block 4,198,400, every 51,200 blocks N is increased by 5 percent. Since block 4,198,400, value of N is fixed and equals to 2,143,944,600. Test vectors for N values are provided in the paper.</p>
-<p>(https://www.docdroid.net/mcoitvK/ergopow-pdf)</p>
-<p>https://eprint.iacr.org/2020/044.pdf</p>
+<p>So algorithm tries to make mining efficient for ones that store the table, which is <code>2^26 * 31 = 2,080,374,784</code> bytes initially (about 2GB). Thus Autolykos is now is friendly to all the GPUs.</p>
+<p>Also, table size (N value) is growing with time as follows. Until block <code>614,400</code>, <code>N = 2^{26} = 67,108,864 elements (31 bytes each)</code>. From this block, and until block <code>4,198,400</code>, every <code>51,200 blocks</code> <code>N</code> is increased by 5 percent. Since block <code>4,198,400</code>, value of <code>N</code> is fixed and equals to <code>2,143,944,600</code>. Test vectors for <code>N</code> values are provided in the paper.</p>
+<ul>
+<li><a href="https://www.docdroid.net/mcoitvK/ergopow-pdf">Ergo PoW</a></li>
+<li><a href="https://eprint.iacr.org/2020/044.pdf">Bypassing Non-Outsourceable Proof-of-Work Schemes Using Collateralized Smart Contracts</a></li>
+</ul>
 <h2 id="51-attack">51% Attack</h2>
 <p>Mining pools offer a buffer against such network attacks as the hash rate is distributed across thousands of individual miners.</p>
-<p>The memory hardened aspect of ergo also makes this vector of attack more expensive as there is no ASIC support to rent. With the collective rentable rigs at the moment this isnt a viable path to a 51% attack. In theory, someone could build a massive GPU farm to try to launch such an attack. If a bad actor can rent a warehouse of ASIC and mine on a small chain with 51% attacks are a viable option... if there is an offramp. </p>
-<p>Usually, this attack is done for profit and there is massive dumping that occurs on an exchange as it is occuring. Meaning the attacker is going to dump tokens on an exchange then "double-spend" them back into their wallet. The current exchange situation doesn't provide the liquidity for a viable offramp. The rentable ASIC support isn't an option. So is it possible, in theory, yes, practical or likely I dont think so at all.</p>
-<p>Ethereum classic is perhaps a bad example, as it shares the same mining algorithm as Eth. One could buy more than 100% existing hashrate of eth classic on NiceHash. It's not the same case for Ergo. Ergo also believes in the 'Good Miner' principle, In the case of Bitcoin - it was a good thing 51% existed. </p>
-<p>Autolykos v1 originally had non-outsourcability built-in, however, it became apparent that with smart contracts it's basically impossible to prevent pools, so they turned it off so that not only larger players were able to take advantage of the loophole. Ergo is now focusing on memory hardness in an attempt to keep mining as fair as possible, which should help prevent ASICs mining at least. There are also some improvements for pooling, e.g. Stratum 2 protocol</p>
-<p>“Bypassing Non-Outsourceable Proof-of-Work Schemes Using Collateralized Smart Contracts” https://ia.cr/2020/044 was presented by Alex Chepurnoy at WTSC workshop associated with Financial Cryptography and Data Security 2020 in Malaysia</p>
-<p>It's also discussed here on 'Unblocked with Robert Kornacki' <a href="https://www.youtube.com/watch?v=2sbTMrQwWOw&amp;feature=youtu.be">(14:45)</a></p>
-<p>While most active conversations today in the space are about wider adoption of the blockchain technology (which often means
-selling out to the Wall St.) and competition with systems like Visa and Mastercard (which often means giving up with 
-decentralization or introducing unclear security assumptions in the name of efficiency), there is the obvious need to 
-revisit the roots of the cryptocurrency movement, which are mostly about decentralization. Many questions to be answered in clear here. Is it 
-okay when 90% of mining power in Bitcoin <a href="https://twitter.com/lopp/status/673398201307664384">can gather in one room</a>? 
-Is it okay when 2 or 3 mining pools control majority of hashing power, so can do censorship? Is it okay when almost all
-the new nodes avoid processing a blockchain from its genesis block? Is it okay when a Proof-of-Work coin developers are
-doing a hard-fork changing the consensus algorithm to make it GPU-friendly again? Can we summarize all the issues with
-decentralization? Can we cover most of issues with technical means?</p>
-<p>Decentralization is about many issues lying in many fields, of technical, social, and hybrid kinds. Researchers and 
-developers are trying to find technical solutions, preferably, elegant and efficient. However, for many issues 
-such solutions are not known, thus social solutions are also needed. </p>
-<p>In this article I will cover only technical aspects of decentralization, namely, decentralization of mining and 
-decentralization of verification.</p>
-<h2 id="decentralization-of-mining">Decentralization of Mining</h2>
-<p>The two biggest concerns about decentralization of mining are specialized hardware (such as ASICs) and centralized pools. </p>
-<p>With ASICs, a big player capable to invest enough money into R&amp;D can get unfair advantage from privately 
-owned efficient hardware. In principle, for any kind of computational activity it is always possible to develop 
-specialized hardware performing better than commodity computing units, such and CPUs and GPUs. However, for different 
-computational tasks R&amp;D efforts and possible outcome could vary a lot. Reasoning behind a search for a perfect (or 
-close enough to perfect) could be quite complex (see e.g. 30 pages long <a href="http://ledgerjournal.org/ojs/index.php/ledger/article/view/48">Equihash paper</a>).</p>
-<p>For most of Proof-of-Work cryptocurrencies (including Bitcoin, Ethereum, ZCash), 2 to 4 centralized mining pools<br />
-control majority of mining power. This could mean easy censorship or frontrunning on applications (for example, 
-reordering exchange orders), as in centralized pools only pool decides block candidate for the whole pool to work on.
+<p>Ergo's memory-hardened aspect also makes this vector of attack more expensive as there is no ASIC support to rent. With the collective rentable rigs at the moment, this isn't a viable path to a 51% attack. In theory, someone could build a massive GPU farm to try to launch such an attack. If a bad actor can rent a warehouse of ASIC and mine on a small chain with 51% attacks are a viable option... if there is an offramp. </p>
+<p>This attack is usually performed for-profit and results in massive dumping on an exchange as it is occurring. Meaning the attacker will dump tokens on an exchange than "double-spend" them back into their wallet. The current exchange situation doesn't provide the liquidity for a viable offramp. The rentable ASIC support isn't an option. So is it possible, in theory, yes, practical or likely? I don't think so at all.</p>
+<p>Ethereum classic is perhaps a bad example, as it shares the same mining algorithm as Eth. One could buy more than 100% current hash rate of eth classic on NiceHash. It's not the same case for Ergo. Ergo also believes in the 'Good Miner' principle; in the case of Bitcoin - it was a good thing 51% existed. </p>
+<h2 id="difficulty">Difficulty</h2>
+<h2 id="decentralisation">Decentralisation</h2>
+<p>While most active conversations today in the space are about wider adoption of the blockchain technology (which often means selling out to Wall St.) and competition with systems like Visa and Mastercard (which often means giving up with Decentralisation or introducing unclear security assumptions in the name of efficiency), there is the obvious need to revisit the roots of the cryptocurrency movement, which are mostly about Decentralisation. Many questions to be answered clear here. Is it okay when 90% of mining power in Bitcoin <a href="https://twitter.com/lopp/status/673398201307664384">can gather in one room</a>? 
+- Is it okay when 2 or 3 mining pools control the majority of hashing power, so can censorship? 
+- Is it okay when almost all the new nodes avoid processing a blockchain from its genesis block? 
+- Is it okay when Proof-of-Work coin developers are doing a hard-fork changing the consensus algorithm to make it GPU-friendly again? 
+- Can we summarize all the issues with Decentralisation? 
+- Can we cover most of the issues with technical means?</p>
+<p>Decentralisation is about many issues lying in many fields, of technical, social, and hybrid kinds. Researchers and developers are trying to find technical solutions, preferably elegant and efficient. However, for many issues 
+such solutions are not known; thus, social solutions are also needed. </p>
+<h3 id="decentralisation-of-mining">Decentralisation of Mining</h3>
+<p>The two biggest concerns about decentralising mining are specialized hardware (such as ASICs) and centralized pools. </p>
+<p>With ASICs, a big player capable of investing enough money into R&amp;D can get an unfair advantage from privately owned efficient hardware. In principle, for any computational activity, it is always possible to develop specialized hardware performing better than commodity computing units, such and CPUs and GPUs. However, for different computational tasks, R&amp;D efforts and the possible outcome could vary a lot. The reasoning behind a search for a perfect (or close enough to perfect) could be quite complex (see, e.g. 30 pages long <a href="http://ledgerjournal.org/ojs/index.php/ledger/article/view/48">Equihash paper</a>).</p>
+<p>For most Proof-of-Work cryptocurrencies (including Bitcoin, Ethereum, ZCash), 2 to 4 centralized mining pools control most mining power. This could mean easy censorship or frontrunning on applications (for example, 
+reordering exchange orders), as in centralized pools, only the pool decides block candidate for the whole pool to work on.
 As a possible outcome, non-outsourceable mining schemes can prevent centralized pools formation. Only <a href="https://ergoplatform.org/en/">Ergo Platform</a> is known for deploying a practical non-outsourceable Proof-of-Work scheme (based on a supposedly memory-harder problem from the <a href="http://ledgerjournal.org/ojs/index.php/ledger/article/view/48">Equihash paper</a>) called <a href="https://ergoplatform.org/docs/ErgoPow.pdf">Autolykos</a>.   </p>
-<p>As an example where social decentralization issues meet the decentralization of mining, sometimes developers of 
-Proof-of-Work are introducing hard-forks to make a Proof-of-Work algorithm GPU-friendly again once ASICs are going to 
-dominate in the mining market for the coin, however, it is always not quite clear why totally legit activity is banned
+<p>As an example where social Decentralisation issues meet the Decentralisation of mining, sometimes developers of 
+Proof-of-Work is introducing hard-forks to make a Proof-of-Work algorithm GPU-friendly again once ASICs are going to 
+dominate in the mining market for the coin; however, it is always not quite clear why legit activity is banned
  and why developers (along with some users) can do hard-fork for this particular reason. </p>
-<h2 id="decentralization-of-verification">Decentralization of Verification</h2>
-<p>Decentralization of verification is about possibility to check validity of blockchain history. Such check provides
-confidence that nothing bad (i.e not conforming to a protocol) was injected to the blockchain and thus give a user 
-a right to reject malicious chain even if it has absorbed more work than alternatives. There were many talks about
-such the right in the Bitcoin community when it was partly hot about User-Activated Soft Fork (UASF) idea, and 
-recent article <a href="https://medium.com/@BitcoinErrorLog/who-secures-bitcoin-95b19bbcda3c">"Who secures Bitcoin?"</a> is
-summarizing this way of thinking well. </p>
-<p>If verification can be done in reasonable time only by an entity able to spend millions on renting a datacenter, 
-obviously a network is not decentralized. Ideally, it should be possible to check integrity of the whole blockchain 
-on commodity hardware, like a decent laptop.</p>
-<p>However, new blockchains also tend to absorb more and more features, and they are not coming for free. Then the 
-huge topic in the research community is about how to make possible to check integrity of the whole blockchain
-with pruned blocks or system state (or both) under plausible assumptions. Possible solutions here are about bootstrapping 
-state snapshot and blockchain suffix on top of it (popular in Ethereum protocol clients, and formalized in <a href="https://eprint.iacr.org/2018/129.pdf">an academic paper even</a>), stateless clients (<a href="https://eprint.iacr.org/2016/994">partially stateless</a>, as implemented in <a href="https://ergoplatform.org/en/">Ergo Platform</a> or <a href="https://eprint.iacr.org/2018/968">fully stateless</a> which do exist only in research papers currently).</p>
+<h3 id="decentralisation-of-verification">Decentralisation of Verification</h3>
+<p>Decentralisation of verification is about the possibility to check the validity of blockchain history. Such check provides confidence that nothing bad (i.e. not conforming to a protocol) was injected into the blockchain and thus gave a user  a right to reject malicious chain even if it has absorbed more work than alternatives. There were many talks about
+such the right in the Bitcoin community when it was partly hot about User-Activated Soft Fork (UASF) idea, and  a recent article <a href="https://medium.com/@BitcoinErrorLog/who-secures-bitcoin-95b19bbcda3c">"Who secures Bitcoin?"</a> is summarizing this way of thinking well. </p>
+<p>If verification can be done in reasonable time only by an entity able to spend millions on renting a data centre, a network is not decentralized. Ideally, it should be possible to check the integrity of the whole blockchain on commodity hardware, like a decent laptop.</p>
+<p>However, new blockchains also tend to absorb more and more features, and they are not coming for free. Then the huge topic in the research community is about how to make it possible to check the integrity of the whole blockchain with pruned blocks or system state (or both) under plausible assumptions. Possible solutions here are about bootstrapping state snapshot and blockchain suffix on top of it (popular in Ethereum protocol clients, and formalized in <a href="https://eprint.iacr.org/2018/129.pdf">an academic paper even</a>), stateless clients (<a href="https://eprint.iacr.org/2016/994">partially stateless</a>, as implemented in <a href="https://ergoplatform.org/en/">Ergo Platform</a> or <a href="https://eprint.iacr.org/2018/968">fully stateless</a> which do exist only in research papers currently).</p>
                 
               
               
@@ -1362,7 +1515,7 @@ state snapshot and blockchain suffix on top of it (popular in Ethereum protocol 
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../utxo-state/" class="md-footer__link md-footer__link--prev" aria-label="Previous: UTXO State" rel="prev">
+        <a href="../transaction/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Transaction" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1371,7 +1524,7 @@ state snapshot and blockchain suffix on top of it (popular in Ethereum protocol 
               <span class="md-footer__direction">
                 Previous
               </span>
-              UTXO State
+              Transaction
             </div>
           </div>
         </a>

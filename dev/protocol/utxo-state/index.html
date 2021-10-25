@@ -68,11 +68,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#model-transaction" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -541,51 +536,24 @@
       
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          UTXO State
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         UTXO State
       </a>
       
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+    </li>
+  
+
+            
+          
+            
+              
   
   
   
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#model-transaction" class="md-nav__link">
-    Model Transaction
-  </a>
-  
-    <nav class="md-nav" aria-label="Model Transaction">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#to-sum-up" class="md-nav__link">
-    To sum up:
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
+    <li class="md-nav__item">
+      <a href="../transaction/" class="md-nav__link">
+        Transaction
+      </a>
     </li>
   
 
@@ -793,8 +761,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../data-model/p2p-handshake/" class="md-nav__link">
-        P2P Handshaking
+      <a href="../../data-model/p2p-protocol/" class="md-nav__link">
+        P2P Protocol
       </a>
     </li>
   
@@ -807,8 +775,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../data-model/p2p-protocol/" class="md-nav__link">
-        P2P Protocol
+      <a href="../../data-model/p2p-handshake/" class="md-nav__link">
+        P2P Handshaking
       </a>
     </li>
   
@@ -1275,49 +1243,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#model-transaction" class="md-nav__link">
-    Model Transaction
-  </a>
-  
-    <nav class="md-nav" aria-label="Model Transaction">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#to-sum-up" class="md-nav__link">
-    To sum up:
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
@@ -1330,34 +1255,7 @@
                 
                   <h1>UTXO State</h1>
                 
-                <h2 id="model-transaction">Model Transaction</h2>
-<p>As the Ergo ecosystem grows, our community can now enjoy the functions for several of our key dApps. Ergo has a stablecoin protocol where users can mint SigUSD and SigRSV tokens. Ergo Auction House offers the ability to mint NFTs and ErgoDEX (Beta) allows you to swap tokens and provide liquidity. These are the very first, unique and complex DeFi dApps on the UTXO model - a model that Bitcoin pioneered. It has often been debated whether the UTXO model can express rich smart contracts, much like the Accounts model. That is why Ergo Platform built the ErgoScript language from scratch in an effort to progress on Bitcoin’s legacy.</p>
-<p><em>For an in-depth comparison about UTXO and Accounts models, please read our previous blog post:</em> <a href="https://ergoplatform.org/en/blog/2021-08-17-ergo-advancing-on-bitcoin/">Ergo: Advancing on Bitcoin</a></p>
-<p>As an Ergonaut, you may have experienced some confusion if you have checked the explorer to view your transaction details. The UTXO model is essentially different from the Accounts model via the use of “boxes'' for data-keeping. In the Accounts model, there is a single account where you receive your coins. In the UTXO model however, every tx (transaction) creates a new box and your balance is the sum of all the boxes linked to your addresses.</p>
-<p>To be clear, your Yoroi private key can consist of more than one box in a single address to hold your coins.</p>
-<p><img alt="" src="https://lh6.googleusercontent.com/qxEWrauKaD8yEXAjwXFzlikSNAXFeAxSPwuxUolS410Xf5HgOzJh_1vCL6YOfFfOyWnBhxLVIWZ0scz4BbIF9w4Tm_9aywTKo3EIrvG0zSPhCIPvLoyrlwgvZCHWHqEfXZb43klV=s0" /></p>
-<p>As you generate a new address, you will create a secondary box to hold your coins. After it is created, you can send funds to this new address and your funds will be seen as one with your private key. You can create an infinite number of new boxes to hold your coins. As such, every receiving and spending action will also create an additional unique box.</p>
-<p>This feature can create misconceptions by the user at first glance. When you make a transaction, the network scans your “boxes” to verify if you have your tokens and then initiates the transaction. </p>
-<p>Things get complex after this point because you can not guess which boxes are going to be spent. Imagine you have three different receiving addresses. You received a couple of coins in each of them and you want to spend some of your coins. In a Yoroi wallet, you can hold any Ergo native coins such as SigRSV or SigUSD. When you initiate a transaction that accesses the boxes of these coins, you will see that they are taken away and then redeposited. Recently, an Ergonaut raised the following <a href="https://www.reddit.com/r/ergonauts/comments/prn7x3/comment/hdty87z/?utm_source=share&amp;utm_medium=web2x&amp;context=3">question</a>: </p>
-<p>“I just created a Yoroi Nightly wallet. I transferred 31 Erg from my main Yoroi wallet to the Yoroi Nightly wallet. The transaction shows 31 Erg plus a small fee, 0.0011. But it also says +92,000 SigRSV. My balance shows no change in SigRSV. What is the meaning of the +92,000 SigRSV in the transaction?”</p>
-<p>Let’s take a look of the details of this particular <a href="https://explorer.ergoplatform.com/en/transactions/143f5ba0ee1482d332d1020c94f261399f220c7f4523063ade8290c478acbd29">transaction</a>:</p>
-<p><img alt="" src="https://lh5.googleusercontent.com/HOFhlYx5l3wvUzET-wa9E4dhU8az4srODa_4n09qZm3y-gWQz1L9Obw5qobgQM5Bthokn8SYMuO13cLDNEW5fqbboSj3qAwf2rzYH1rHkyvaoDsIMSDa3zwJU31s5XLEc_n5VbZ0=s0" /></p>
-<p>To make a transaction of 31 ERG,  the wallet selected three of the boxes with ERG:</p>
-<ul>
-<li>A box containing 0.029595 ERG that was received on 07/19/21</li>
-<li>A second box containing 19.76 ERG that was received on 07/19/21</li>
-<li>A third box containing 208.26 ERG that was received on 06/09/21 </li>
-</ul>
-<p>On the left section of the image above, you will see approximately 228 ERG taken while on the right section you will see 31 ERG sent and 197 ERG redeposited to your wallet.</p>
-<p>So your wallet used three of your boxes to spend the desired amount. This action includes all the assets in that box to the transaction. </p>
-<p>After the desired amount is spent, your funds are simply refunded to your address in a newly created UTXO box or boxes. Spending any coin in a box therefore means spending the whole box and creating a new UTXO box, which is why you see your tokens are taken away and then redeposited.</p>
-<p>The selection of which boxes to spend is a secret of the wallet’s random selection strategy. Whatever coins are in the selected boxes, be it SigRSV, SigUSD or NFT, will be displayed as in the example. </p>
-<h3 id="to-sum-up">To sum up:</h3>
-<p>The Accounts model contains a single box and this box is not spent. It remains the same so non-related coins will remain unaffected.</p>
-<p>The UTXO model on the other hand contains a set of boxes that represents the total amount of the users balance and the unspent transaction output has to change with each spending transaction.  </p>
-<p>You may see a long list of tokens when swapping just 5 SigRSV as below:<img alt="" src="https://lh6.googleusercontent.com/wK-uprlqrj6wKt74AODkxBt6xR5Dey_qGB4kclXm5OuhWz2nfIuBTZm412oFA1h0OHXRi_oGcx6y7jR6A6kRcgpAUU7vSaQrfAMY6lKzdzy8THl2Hh2uEMzHjs5M5Sdlly6DO8f4=s0" /></p>
-<p>This is just how UTXO model Transaction works - its storage is different from the Accounts model. In the UTXO model, coins will be stored in one-use UTXO boxes and not in long-living accounts.</p>
-<!--EndFragment-->
+                
                 
               
               
@@ -1393,13 +1291,13 @@
       
       
         
-        <a href="../autolykos/" class="md-footer__link md-footer__link--next" aria-label="Next: Autolykos" rel="next">
+        <a href="../transaction/" class="md-footer__link md-footer__link--next" aria-label="Next: Transaction" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Autolykos
+              Transaction
             </div>
           </div>
           <div class="md-footer__button md-icon">

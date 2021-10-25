@@ -546,6 +546,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../transaction/" class="md-nav__link">
+        Transaction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../autolykos/" class="md-nav__link">
         Autolykos
       </a>
@@ -765,6 +779,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#now-what-exactly-are-addresses" class="md-nav__link">
+    Now, what exactly are addresses?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#possible-types" class="md-nav__link">
+    Possible Types
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    Summary
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -780,8 +815,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../data-model/p2p-handshake/" class="md-nav__link">
-        P2P Handshaking
+      <a href="../../data-model/p2p-protocol/" class="md-nav__link">
+        P2P Protocol
       </a>
     </li>
   
@@ -794,8 +829,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../data-model/p2p-protocol/" class="md-nav__link">
-        P2P Protocol
+      <a href="../../data-model/p2p-handshake/" class="md-nav__link">
+        P2P Handshaking
       </a>
     </li>
   
@@ -1285,6 +1320,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#now-what-exactly-are-addresses" class="md-nav__link">
+    Now, what exactly are addresses?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#possible-types" class="md-nav__link">
+    Possible Types
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    Summary
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1310,7 +1366,7 @@
 <p>The moment you install any cryptocurrency wallet, you automatically create an address with it. Very loosely speaking, you can compare a wallet to a traditional bank account and an address to the matching account number.
 It is precisely one of these alphanumeric addresses needed to either send money from person A to person B, receive money, or <a href="https://ergoplatform.org/en/blog/2019_07_03_mining_withdrawal/">withdraw your mining rewards</a>.
 If you want to start using the Ergo wallet and dive deeper into its functions, check out the <a href="https://ergoplatform.org/en/blog/2019_06_04_wallet-documentation/">the following link</a>.</p>
-<p>Now, what exactly are addresses?</p>
+<h2 id="now-what-exactly-are-addresses">Now, what exactly are addresses?</h2>
 <p>Addresses are short strings that correspond to specific scripts and are used to protect a box (<a href="https://www.ergoforum.org/t/ergo-terminology-a-box-and-a-register/32">this</a> post that core developer <em>kushti</em> published on our forum explains very well what a "box" is).
 Unlike a (hex-encoded) binary representation of a script, an Ergo address use a Base58-encoding and therefore have some advantageous characteristics to it which the binary representation does not offer:</p>
 <ul>
@@ -1320,6 +1376,7 @@ Unlike a (hex-encoded) binary representation of a script, an Ergo address use a 
 <li>An address encodes network type, address type, checksum, and enough information to correspond with particular scripts.</li>
 </ul>
 <p>Let's look at the prefix byte, which contains information about the network and address types:</p>
+<h2 id="possible-types">Possible Types</h2>
 <p>Possible network types are:</p>
 <ul>
 <li>Mainnet - <code>0x00</code></li>
@@ -1351,7 +1408,7 @@ in the case of a P2S address, the box will be locked by a script encoded in the 
 <li><code>?</code> - <strong>P2SH</strong> (<code>8UApt8czfFVuTgQmMwtsRBZ4nfWquNiSwCWUjMg</code>)</li>
 <li><code>?</code> - <strong>P2S</strong> (<code>4MQyML64GnzMxZgm, BxKBaHkvrTvLZrDcZjcsxsF7aSsrN73ijeFZXtbj4CXZHHcvBtqSxQ</code>)</li>
 </ul>
-<p>In summary:</p>
+<h2 id="summary">Summary</h2>
 <ul>
 <li><strong>Prefix byte</strong> = <code>network type + address type</code> (for example, P2S script on the testnet starts with 0x13 before Base58)</li>
 <li><strong>checksum</strong> = <code>leftmost_4_bytes (blake2b256 (prefix byte || content bytes))</code></li>
@@ -1392,13 +1449,13 @@ in the case of a P2S address, the box will be locked by a script encoded in the 
       
       
         
-        <a href="../../data-model/p2p-handshake/" class="md-footer__link md-footer__link--next" aria-label="Next: P2P Handshaking" rel="next">
+        <a href="../../data-model/p2p-protocol/" class="md-footer__link md-footer__link--next" aria-label="Next: P2P Protocol" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              P2P Handshaking
+              P2P Protocol
             </div>
           </div>
           <div class="md-footer__button md-icon">
