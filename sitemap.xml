@@ -176,6 +176,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://ergodocs.rtfd.io/dev/stack/jde/</loc>
+         <lastmod>2021-10-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://ergodocs.rtfd.io/dev/stack/kiosk/</loc>
          <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
@@ -271,6 +276,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://ergodocs.rtfd.io/uses/PoW_tokens/</loc>
+         <lastmod>2021-10-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://ergodocs.rtfd.io/uses/apps/</loc>
          <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
@@ -281,7 +291,32 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://ergodocs.rtfd.io/uses/collateral-mining/</loc>
+         <lastmod>2021-10-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ergodocs.rtfd.io/uses/context-claims/</loc>
+         <lastmod>2021-10-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ergodocs.rtfd.io/uses/dex-buyback/</loc>
+         <lastmod>2021-10-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ergodocs.rtfd.io/uses/lottery/</loc>
+         <lastmod>2021-10-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://ergodocs.rtfd.io/uses/math_fun/</loc>
+         <lastmod>2021-10-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ergodocs.rtfd.io/uses/perpetual/</loc>
          <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>

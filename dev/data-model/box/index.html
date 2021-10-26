@@ -1021,6 +1021,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../stack/jde/" class="md-nav__link">
+        JDE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../stack/transactions/" class="md-nav__link">
         Transactions
       </a>
@@ -1587,6 +1601,76 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../uses/collateral-mining/" class="md-nav__link">
+        Collateral Mining
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../uses/lottery/" class="md-nav__link">
+        Lottery
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../uses/dex-buyback/" class="md-nav__link">
+        Buy Back
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../uses/perpetual/" class="md-nav__link">
+        Perpetual Tokens
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../uses/PoW_tokens/" class="md-nav__link">
+        PoW Tokens
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1664,13 +1748,37 @@
                   <h1>Box</h1>
                 
                 <h2 id="box">Box</h2>
-<p>A UTXO is short for unspent transaction output. We can also consider spent transaction outputs (UTXOs that have been spent). In Ergo, a transaction output (whether spent or unspent) is called a box.</p>
+<p>Ergo has Bitcoin-like UTXO transactional model: a transaction is spending one-time objects and creating new one-time objects. We call this object a box. A box is immutable object which could be only created or removed. A box is not simply a coin, rather, it is contains registers with data (and code). Even more, there's nothing in box but registers. There are four predefined registers, with monetary value, protecting script, and identifier of a transaction which created the box and output index in the transaction (and also creation height). Because data of transaction which created the box is included into it, the box has unique contents and thus unique id. A box is first-class citizen in the Ergo protocol. Active boxes set is authenticated via a hash-based data structure, which allows to build lightweight full-nodes (as described in <a href="https://eprint.iacr.org/2016/994">https://eprint.iacr.org/2016/994</a>). A box may have up to six additional registers with typed data. A script may access its registers (as well as registers of input and output boxes of the spending transaction).</p>
+<p>Example of a box (proof-of-no-premine from Ergo genesis state, which contains last block ids from Bitcoin and Ethereum at the moment of launch, and also latest news headlines):</p>
+<pre><code>     {
+    &quot;boxId&quot;: &quot;b8ce8cfe331e5eadfb0783bdc375c94413433f65e1e45857d71550d42e4d83bd&quot;,
+    &quot;value&quot;: 1000000000,
+    &quot;ergoTree&quot;: &quot;10010100d17300&quot;,
+    &quot;assets&quot;: [],
+    &quot;creationHeight&quot;: 0,
+    &quot;additionalRegisters&quot;: {
+      &quot;R5&quot;: &quot;0e42307864303761393732393334363864393133326335613261646162326535326132333030396536373938363038653437623064323632336337653365393233343633&quot;,
+      &quot;R6&quot;: &quot;0e464272657869743a20626f746820546f727920736964657320706c617920646f776e207269736b206f66206e6f2d6465616c20616674657220627573696e65737320616c61726d&quot;,
+      &quot;R8&quot;: &quot;0e45d094d0b8d0b2d0b8d0b4d0b5d0bdd0b4d18b20d0a7d0a2d09fd09720d0b2d18bd180d0b0d181d182d183d18220d0bdd0b02033332520d0bdd0b020d0b0d0bad186d0b8d18e&quot;,
+      &quot;R7&quot;: &quot;0e54e8bfb0e8af84efbc9ae5b9b3e8a1a1e38081e68c81e7bbade38081e58c85e5aeb9e28094e28094e696b0e697b6e4bba3e5ba94e5afb9e585a8e79083e58c96e68c91e68898e79a84e4b8ade59bbde4b98be98193&quot;,
+      &quot;R4&quot;: &quot;0e4030303030303030303030303030303030303031346332653265376533336435316165376536366636636362363934326333343337313237623336633333373437&quot;
+    }
+  }
+</code></pre>
 <p>A box, at the minimum, has four pieces of information.</p>
 <ol>
 <li>The value in NanoErgs (<code>1 Erg = 1000000000 NanoErgs</code>).</li>
 <li>The guard script (like <code>scriptPubKey</code> of Bitcoin). This is also called the "smart contract."</li>
 <li>Additional assets (tokens) are stored in this box.</li>
-<li>Creation info of the box (<code>txId</code>, the identifier of the transaction that created the box along with an output index). It also contains a <code>maxCreation</code> height parameter defined by the box creator (this is not the creation height; its use is to create "payment channels easily").</li>
+<li>
+<p>Creation info of the box (<code>txId</code>, the identifier of the transaction that created the box along with an output index). It also contains a <code>maxCreation</code> height parameter defined by the box creator (this is not the creation height; its use is to create "payment channels easily").</p>
+</li>
+<li>
+<p><code>R0</code> = monetary value</p>
+</li>
+<li><code>R1</code> = protecting script</li>
+<li><code>R2</code> = tokens &lt;— this was missed</li>
+<li><code>R3</code> = identifier of a transaction which created the box and output index in the transaction (and also creation height).</li>
 </ol>
 <p><strong>These are stored in the first four registers (numbered R0-R3) of the box.</strong></p>
 <p>In addition, a box can have six optional registers (R4-R9) to store custom data for use in smart contracts. Registers must be densely packed; that is, we cannot sandwich empty registers between non-empty ones. The optional registers can contain data of any of the following types:</p>
