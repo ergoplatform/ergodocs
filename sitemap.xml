@@ -176,6 +176,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://ergodocs.rtfd.io/dev/stack/kiosk/</loc>
+         <lastmod>2021-10-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ergodocs.rtfd.io/dev/stack/transactions/</loc>
+         <lastmod>2021-10-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://ergodocs.rtfd.io/dev/start/api/</loc>
          <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
@@ -262,6 +272,16 @@
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/uses/apps/</loc>
+         <lastmod>2021-10-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ergodocs.rtfd.io/uses/blocked_web/</loc>
+         <lastmod>2021-10-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ergodocs.rtfd.io/uses/math_fun/</loc>
          <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>

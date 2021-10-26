@@ -9,21 +9,21 @@
       
       
       
-        <link rel="canonical" href="https://ergodocs.rtfd.io/dev/data-model/p2p-protocol/">
+        <link rel="canonical" href="https://ergodocs.rtfd.io/uses/blocked_web/">
       
-      <link rel="icon" href="../../../assets/favicon.png">
+      <link rel="icon" href="../../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.4">
     
     
       
-        <title>Protocol Overview - ErgoDocs</title>
+        <title>Email Client for Blocked Internet - ErgoDocs</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.db9e7362.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.db9e7362.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
         
           
           
@@ -42,7 +42,7 @@
     
     
     
-      <link rel="stylesheet" href="../../../assets/extra.css">
+      <link rel="stylesheet" href="../../assets/extra.css">
     
     
       
@@ -61,7 +61,7 @@
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="deep-orange" data-md-color-accent="">
   
     
-    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#handshake" class="md-skip">
+        <a href="#email-client-for-limited-or-blocked-internet" class="md-skip">
           Skip to content
         </a>
       
@@ -84,9 +84,9 @@
 
 <header class="md-header md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="ErgoDocs" class="md-header__button md-logo" aria-label="ErgoDocs" data-md-component="logo">
+    <a href="../.." title="ErgoDocs" class="md-header__button md-logo" aria-label="ErgoDocs" data-md-component="logo">
       
-  <img src="../../../assets/logo.png" alt="logo">
+  <img src="../../assets/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Protocol Overview
+              Email Client for Blocked Internet
             
           </span>
         </div>
@@ -176,7 +176,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         Home
       </a>
     </li>
@@ -185,8 +185,6 @@
       
         
   
-  
-    
   
 
 
@@ -199,7 +197,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../start/start/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../dev/start/start/" class="md-tabs__link">
         Developers
       </a>
     </li>
@@ -222,7 +220,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../node/docs/" class="md-tabs__link">
+      <a href="../../node/docs/" class="md-tabs__link">
         Node
       </a>
     </li>
@@ -234,13 +232,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../../uses/apps/" class="md-tabs__link">
+      <a href="../apps/" class="md-tabs__link md-tabs__link--active">
         Uses
       </a>
     </li>
@@ -274,9 +274,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="ErgoDocs" class="md-nav__button md-logo" aria-label="ErgoDocs" data-md-component="logo">
+    <a href="../.." title="ErgoDocs" class="md-nav__button md-logo" aria-label="ErgoDocs" data-md-component="logo">
       
-  <img src="../../../assets/logo.png" alt="logo">
+  <img src="../../assets/logo.png" alt="logo">
 
     </a>
     ErgoDocs
@@ -331,7 +331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         Welcome
       </a>
     </li>
@@ -345,7 +345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../About/format/" class="md-nav__link">
+      <a href="../../About/format/" class="md-nav__link">
         About ErgoDocs
       </a>
     </li>
@@ -359,7 +359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../About/faq/" class="md-nav__link">
+      <a href="../../About/faq/" class="md-nav__link">
         FAQ
       </a>
     </li>
@@ -373,7 +373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../About/events/" class="md-nav__link">
+      <a href="../../About/events/" class="md-nav__link">
         Events
       </a>
     </li>
@@ -393,14 +393,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
       
       
       
@@ -451,7 +449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../start/start/" class="md-nav__link">
+      <a href="../../dev/start/start/" class="md-nav__link">
         Where to start?
       </a>
     </li>
@@ -465,7 +463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ergo/protocol/" class="md-nav__link">
+      <a href="../../dev/ergo/protocol/" class="md-nav__link">
         The Ergo Protocol
       </a>
     </li>
@@ -514,7 +512,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../protocol/atomic/" class="md-nav__link">
+      <a href="../../dev/protocol/atomic/" class="md-nav__link">
         Atomic Swaps
       </a>
     </li>
@@ -528,7 +526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../protocol/rent/" class="md-nav__link">
+      <a href="../../dev/protocol/rent/" class="md-nav__link">
         Storage Rent
       </a>
     </li>
@@ -542,7 +540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../protocol/nipopow/" class="md-nav__link">
+      <a href="../../dev/protocol/nipopow/" class="md-nav__link">
         NIPoPoWS
       </a>
     </li>
@@ -556,7 +554,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../scs/sigma/" class="md-nav__link">
+      <a href="../../dev/scs/sigma/" class="md-nav__link">
         Sigma Protocols
       </a>
     </li>
@@ -570,7 +568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../scs/multi/" class="md-nav__link">
+      <a href="../../dev/scs/multi/" class="md-nav__link">
         Multi-Stage Contracts
       </a>
     </li>
@@ -619,7 +617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../protocol/utxo-state/" class="md-nav__link">
+      <a href="../../dev/protocol/utxo-state/" class="md-nav__link">
         UTXO State
       </a>
     </li>
@@ -633,7 +631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../protocol/autolykos/" class="md-nav__link">
+      <a href="../../dev/protocol/autolykos/" class="md-nav__link">
         Autolykos
       </a>
     </li>
@@ -647,7 +645,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../protocol/audit/" class="md-nav__link">
+      <a href="../../dev/protocol/audit/" class="md-nav__link">
         Audit
       </a>
     </li>
@@ -696,7 +694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../box/" class="md-nav__link">
+      <a href="../../dev/data-model/box/" class="md-nav__link">
         Box
       </a>
     </li>
@@ -710,7 +708,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../protocol/address/" class="md-nav__link">
+      <a href="../../dev/protocol/address/" class="md-nav__link">
         Addresses
       </a>
     </li>
@@ -724,7 +722,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../protocol/transaction/" class="md-nav__link">
+      <a href="../../dev/protocol/transaction/" class="md-nav__link">
         Transaction
       </a>
     </li>
@@ -743,16 +741,14 @@
               
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" data-md-state="indeterminate" type="checkbox" id="__nav_2_5" checked>
       
       
       
@@ -773,54 +769,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Protocol Overview
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../dev/data-model/p2p-protocol/" class="md-nav__link">
         Protocol Overview
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#handshake" class="md-nav__link">
-    Handshake
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#message-format" class="md-nav__link">
-    Message format
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -832,7 +785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../p2p-handshake/" class="md-nav__link">
+      <a href="../../dev/data-model/p2p-handshake/" class="md-nav__link">
         Handshaking
       </a>
     </li>
@@ -846,7 +799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../p2p-handshake/" class="md-nav__link">
+      <a href="../../dev/data-model/p2p-handshake/" class="md-nav__link">
         Network Messages
       </a>
     </li>
@@ -860,7 +813,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../p2p-handshake/" class="md-nav__link">
+      <a href="../../dev/data-model/p2p-handshake/" class="md-nav__link">
         Modifiers Exchange
       </a>
     </li>
@@ -909,7 +862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../stack/front-end/" class="md-nav__link">
+      <a href="../../dev/stack/front-end/" class="md-nav__link">
         Frontend
       </a>
     </li>
@@ -923,7 +876,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../stack/back-end/" class="md-nav__link">
+      <a href="../../dev/stack/back-end/" class="md-nav__link">
         Backend
       </a>
     </li>
@@ -972,7 +925,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../stack/appkit/" class="md-nav__link">
+      <a href="../../dev/stack/appkit/" class="md-nav__link">
         AppKit
       </a>
     </li>
@@ -986,7 +939,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../stack/ergotool/" class="md-nav__link">
+      <a href="../../dev/stack/ergotool/" class="md-nav__link">
         ErgoTool
       </a>
     </li>
@@ -1000,7 +953,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../stack/kiosk/" class="md-nav__link">
+      <a href="../../dev/stack/kiosk/" class="md-nav__link">
         Kiosk
       </a>
     </li>
@@ -1014,7 +967,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../stack/transactions/" class="md-nav__link">
+      <a href="../../dev/stack/transactions/" class="md-nav__link">
         Transactions
       </a>
     </li>
@@ -1063,7 +1016,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../scs/ergoscript/" class="md-nav__link">
+      <a href="../../dev/scs/ergoscript/" class="md-nav__link">
         ErgoScript
       </a>
     </li>
@@ -1077,7 +1030,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../scs/flowcards/" class="md-nav__link">
+      <a href="../../dev/scs/flowcards/" class="md-nav__link">
         FlowCards
       </a>
     </li>
@@ -1126,7 +1079,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Integration/guide/" class="md-nav__link">
+      <a href="../../dev/Integration/guide/" class="md-nav__link">
         Integration
       </a>
     </li>
@@ -1209,7 +1162,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../node/docs/" class="md-nav__link">
+      <a href="../../node/docs/" class="md-nav__link">
         Docs
       </a>
     </li>
@@ -1223,7 +1176,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../node/node-config/" class="md-nav__link">
+      <a href="../../node/node-config/" class="md-nav__link">
         Config
       </a>
     </li>
@@ -1237,7 +1190,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../node/run/" class="md-nav__link">
+      <a href="../../node/run/" class="md-nav__link">
         First Run
       </a>
     </li>
@@ -1251,7 +1204,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../node/withdraw/" class="md-nav__link">
+      <a href="../../node/withdraw/" class="md-nav__link">
         Withdraw
       </a>
     </li>
@@ -1300,7 +1253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../node/architecture/" class="md-nav__link">
+      <a href="../../node/architecture/" class="md-nav__link">
         Architecture
       </a>
     </li>
@@ -1314,7 +1267,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../node/api/" class="md-nav__link">
+      <a href="../../node/api/" class="md-nav__link">
         API
       </a>
     </li>
@@ -1363,7 +1316,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../node/digest-state/" class="md-nav__link">
+      <a href="../../node/digest-state/" class="md-nav__link">
         Digest State
       </a>
     </li>
@@ -1377,7 +1330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../node/history-pruning/" class="md-nav__link">
+      <a href="../../node/history-pruning/" class="md-nav__link">
         History Pruning
       </a>
     </li>
@@ -1391,7 +1344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../node/snapshots/" class="md-nav__link">
+      <a href="../../node/snapshots/" class="md-nav__link">
         Snapshots
       </a>
     </li>
@@ -1405,7 +1358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../node/nipopow/" class="md-nav__link">
+      <a href="../../node/nipopow/" class="md-nav__link">
         NiPoPoWS
       </a>
     </li>
@@ -1432,12 +1385,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       
       
@@ -1460,7 +1415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../uses/apps/" class="md-nav__link">
+      <a href="../apps/" class="md-nav__link">
         dApps
       </a>
     </li>
@@ -1474,7 +1429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../uses/zk/" class="md-nav__link">
+      <a href="../zk/" class="md-nav__link">
         Zero-Knowledge
       </a>
     </li>
@@ -1486,14 +1441,16 @@
               
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" data-md-state="indeterminate" type="checkbox" id="__nav_4_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" checked>
       
       
       
@@ -1516,7 +1473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../uses/use/" class="md-nav__link">
+      <a href="../use/" class="md-nav__link">
         Use Cases
       </a>
     </li>
@@ -1530,7 +1487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../scs/crowdfunding/" class="md-nav__link">
+      <a href="../../dev/scs/crowdfunding/" class="md-nav__link">
         CrowdFunding
       </a>
     </li>
@@ -1544,7 +1501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../scs/microcredit/" class="md-nav__link">
+      <a href="../../dev/scs/microcredit/" class="md-nav__link">
         Micro Credit
       </a>
     </li>
@@ -1558,7 +1515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../uses/math_fun/" class="md-nav__link">
+      <a href="../math_fun/" class="md-nav__link">
         Math Fun
       </a>
     </li>
@@ -1570,11 +1527,47 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../uses/blocked_web/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Email Client for Blocked Internet
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Email Client for Blocked Internet
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#email-client-for-limited-or-blocked-internet" class="md-nav__link">
+    (E)mail Client for Limited or Blocked Internet
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1617,15 +1610,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#handshake" class="md-nav__link">
-    Handshake
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#message-format" class="md-nav__link">
-    Message format
+  <a href="#email-client-for-limited-or-blocked-internet" class="md-nav__link">
+    (E)mail Client for Limited or Blocked Internet
   </a>
   
 </li>
@@ -1642,58 +1628,41 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/glasgowm148/ergodocs/edit/master/docs/dev/data-model/p2p-protocol.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/glasgowm148/ergodocs/edit/master/docs/uses/blocked_web.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Protocol Overview</h1>
+                  <h1>Email Client for Blocked Internet</h1>
                 
-                <h2 id="handshake">Handshake</h2>
-<p>First of all, nodes are doing handshaking by sending each other handshake messages. Handshaking details are provided in <a href="../p2p-handshake/">dedicated P2P Handshaking doc</a></p>
-<h2 id="message-format">Message format</h2>
-<p>Every message in P2P protocol has the following format:</p>
-<table>
-<thead>
-<tr>
-<th align="left">Length</th>
-<th align="left">Field Name</th>
-<th align="left">Details</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">4</td>
-<td align="left">Magic bytes</td>
-<td align="left">Network-specific magic bytes, see Note 1.</td>
-</tr>
-<tr>
-<td align="left">1</td>
-<td align="left">Message code</td>
-<td align="left">One byte describing message type</td>
-</tr>
-<tr>
-<td align="left">4</td>
-<td align="left">Message body length</td>
-<td align="left">Length of handshake body (specified below), as signed 32-bit integer</td>
-</tr>
-<tr>
-<td align="left">4</td>
-<td align="left">Handshake body checksum</td>
-<td align="left">First four bytes of blake2b(message body)</td>
-</tr>
-<tr>
-<td align="left">*</td>
-<td align="left">Message body</td>
-<td align="left">Message body (specified below)</td>
-</tr>
-</tbody>
-</table>
-<p>Notes:</p>
+                <h2 id="email-client-for-limited-or-blocked-internet"><a href="https://www.ergoforum.org/t/e-mail-client-for-limited-or-blocked-internet/134">(E)mail Client for Limited or Blocked Internet</a></h2>
+<p>There are two motivations for this post</p>
 <ol>
-<li>For the testnet, magic bytes are <code>[2, 0, 0, 1]</code> (in decimal). For mainnet, <code>[1, 0, 2, 4]</code> (in decimal).</li>
-<li>No <code>VLQ</code> and <code>ZigZag</code> encoding is used for message length (for historical reasons), bytes are coming in big-endian order.</li>
+<li>
+<p>Some countries, such as China and Belarus are already blocking Tor. We can expect that in future some countries will try to block cryptocurrency protocols in a similar way. </p>
+</li>
+<li>
+<p><a href="https://netblocks.org/reports/internet-restored-in-iran-after-protest-shutdown-dAmqddA9">Internet just being restored in Iran after week-long shutdown</a> caused by unrest. Previously there were partial or complete shutdowns in Egypt, Ethiopia, Sudan, Turkey. </p>
+</li>
 </ol>
+<p>However, people have right to store value available, whether the value is under threat from  monetary policies, political instability, or war. Happily, with digital communications and digital gold this problem could be solved. </p>
+<p>As possible solution for Bitcoin, <a href="https://blockstream.com/satellite/">Blockstream satellite network</a> could be used, however, satellite signal could be jammed. Another workaround which I am going to propose is to use e-mail (which is last to be blocked usually) or other low-bandwidth and not very interactive means of communication (fax, modem call over a landline to a bulletin board system, mail).</p>
+<p>So assume Alice is willing to buy <em>X</em> ergs from Bob (paying with cash), but internet is very limited or does not working in their area. Bob owns a box protected by a public key (stored locally). Then the protocol could be as follows.</p>
+<ol>
+<li>
+<p>Bob is creating transaction from his box which is creating a new box where <em>X</em> ergs are locked by the condition "Before deadline: Bob's signature and spending transaction has an output of <em>X</em> ergs which belongs to Alice's public key; After deadline: Bob's signature". I will refer to the new box as to the "deal box" further. Please note that for a signed transaction outputs with respective identifiers are known.</p>
+</li>
+<li>
+<p>Bob sends the transaction over (e)mail to a gateway. Gateway sends efficient <a href="https://nipopows.com/">NiPoPoW</a> proof for a header having enough confirmations + proof of box membership against state digest from the header. This proof is small, tens of kilobytes. for better security, Bob may ask another gateway for header proof as well. </p>
+</li>
+<li>
+<p>Bob shows proofs to Alice. Alice checks proofs and also that deadline will not likely met when a new transaction with their deal will reach the Ergo blockchain. Bob signs the new  transaction which is spending the deal box created on step 1 and creating the output box for Alice.</p>
+</li>
+<li>
+<p>Now Alice sends the transaction signed by Bob  to the gateway and gets the proof of inclusion from it. </p>
+</li>
+</ol>
+<p>With proofs of such size (tens of kilobytes), email / fax / ADSL modem or even paper work fine as means of communication between the users and the gateways.</p>
                 
               
               
@@ -1713,7 +1682,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../../protocol/transaction/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Transaction" rel="prev">
+        <a href="../math_fun/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Math Fun" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1722,26 +1691,11 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Transaction
+              Math Fun
             </div>
           </div>
         </a>
       
-      
-        
-        <a href="../p2p-handshake/" class="md-footer__link md-footer__link--next" aria-label="Next: Handshaking" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Handshaking
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
       
     </nav>
   
@@ -1761,10 +1715,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.1e84347e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.1e84347e.min.js"></script>
       
     
   </body>
