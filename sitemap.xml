@@ -2,277 +2,277 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://ergodocs.rtfd.io/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/About/events/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/About/faq/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/About/format/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/dev/Integration/guide/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/dev/Languages/csharp/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/dev/Languages/java/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/dev/Languages/rust/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/dev/Languages/scala/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/dev/data-model/BlockP2P/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/dev/data-model/box/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/dev/data-model/p2p-handshake/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/dev/data-model/p2p-protocol/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/dev/data-model/transactions/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/dev/ergo/a/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/dev/ergo/eutxo/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/dev/ergo/protocol/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/dev/protocol/address/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/dev/protocol/atomic/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/dev/protocol/audit/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/dev/protocol/autolykos/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/dev/protocol/nipopow/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/dev/protocol/rent/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/dev/protocol/transaction/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/dev/protocol/utxo-state/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/dev/scs/crowdfunding/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/dev/scs/ergoscript/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/dev/scs/flowcards/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/dev/scs/microcredit/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/dev/scs/multi/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/dev/scs/sigma/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/dev/stack/appkit/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/dev/stack/back-end/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/dev/stack/ergotool/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/dev/stack/front-end/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/dev/start/api/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/dev/start/dApp-dev/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/dev/start/resources/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/dev/start/start/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/miners/mining/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/node/api/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/node/architecture/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/node/digest-state/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/node/docs/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/node/history-pruning/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/node/light/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/node/nipopow/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/node/nipopows/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/node/node-config/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/node/run/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/node/snapshots/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/node/withdraw/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/uses/apps/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/uses/use/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ergodocs.rtfd.io/uses/zk/</loc>
-         <lastmod>2021-10-25</lastmod>
+         <lastmod>2021-10-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
