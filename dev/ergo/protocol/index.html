@@ -1847,11 +1847,11 @@
 </blockquote>
 <h2 id="proof-of-work"><a href="../../protocol/autolykos/">Proof-of-Work</a></h2>
 <p>Ergo uses Autolykos as the underlying PoW algorithm. Autolykos v2 (the current version of PoW) is a memory-hard ASIC-resistant PoW algorithm oriented towards GPUs.</p>
-<h2 id="eutxo"><a href="box.md">eUTXO</a></h2>
+<h2 id="eutxo"><a href="../../data-model/box/">eUTXO</a></h2>
 <p>The platform's smart contracts are built on the extended <strong>UTXO (eUTXO)</strong> model with a unique data input concept, offering a radically different approach to provide robust, flexible cryptography and easy, safe scripting on privacy-centric <strong>Sigma Protocols</strong> (non-interactive zero-knowledge proofs). </p>
 <p>Ergo is a <strong>UTXO</strong> based blockchain with Proof-of-Work consensus. In this aspect, it is similar to Bitcoin. Ergo uses standard <strong>Elliptic Curve</strong> Cryptography with the same curve as Bitcoin (<code>Secp256k1</code>). Unlike Bitcoin and similar to Cardano, Ergo uses a so-called "extended-UTXO model," which implies UTXOs with the ability to contain arbitrary data and sophisticated scripts. </p>
 <p>Due to this, Ergo supports advanced financial contracts similar to those in Ethereum's account-based model.</p>
-<h2 id="ergoscript"><a href="../stack/ergoscript.md">ErgoScript</a></h2>
+<h2 id="ergoscript"><a href="../../scs/ergoscript/">ErgoScript</a></h2>
 <p>Ergo provides advanced programming abilities for financial contracts using a high-level language called ErgoScript. </p>
 <p>The scripting language in itself is non-Turing complete, but applications run on the platform can be made to be Turing complete as demonstrated in <a href="https://arxiv.org/pdf/1806.10116v1.pdf">this peer-reviewed paper</a>.</p>
 <p>Ergo provides superior support for real-world financial agreements. It does this through:</p>
@@ -1863,9 +1863,9 @@
 <li>Native support for complex signature schemes</li>
 </ol>
 <p>In short, creating financial contracts on the blockchain isn’t just about the functionality you provide. It’s about making that functionality safe and accessible, as well as powerful. Ergo achieves this and more.</p>
-<h2 id="sigma-protocols"><a href="sigma.md">Sigma Protocols</a></h2>
+<h2 id="sigma-protocols"><a href="../../scs/sigma/">Sigma Protocols</a></h2>
 <p>The cryptographic part of ErgoScript is based on <strong>Sigma Protocols</strong> and naturally supports threshold <code>m-of-n</code> signatures, ring signatures, and more. Keeping all this in mind, we expect ErgoScript and Ergo's design to be uniquely useful as <strong>Contractual Money</strong> with countless possible applications. </p>
-<h2 id="nipopows"><a href="nipopow.md">NIPoPoWs</a></h2>
+<h2 id="nipopows"><a href="../../../node/nipopows/">NIPoPoWs</a></h2>
 <p><strong>Non-Interactive Proofs of Proof of Work</strong> (<a href="https://nipopows.com/">NIPoPoWs</a>) are essential for two reasons: Light Clients and Side Chains. These two components are essential for clients and nodes to facilitate easier onboarding to the blockchain. A decentralized network is inherently inefficient because of the randomness mechanism in a synchronous network; that is to say, every time a transaction (TX) occurs on the network, a couple of random nodes must process the TX to prove and secure its reliability. When put into perspective, that is an enormous task on a global scale. There can be billions of transactions, and it is plausible that many of those are from contributors operating with low bandwidth.</p>
 <h2 id="storage-rent"><a href="https://ergoplatform.org/en/blog/2020_04_21_ergo_positioning/">Storage Rent</a></h2>
 <p>Another unique feature of Ergo is the concept of storage-rent, which is the ability of miners to take out a small amount of Ergs from boxes that have remained unspent for four or more years (the box is spent, and a new box is created with the lower value). This allows Ergo to avoid long-term bloat of the UTXO set.</p>
