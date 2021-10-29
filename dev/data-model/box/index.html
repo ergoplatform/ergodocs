@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#box" class="md-skip">
+        <a href="#anatomy-of-an-ergo-transaction" class="md-skip">
           Skip to content
         </a>
       
@@ -725,13 +725,6 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#box" class="md-nav__link">
-    Box
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#anatomy-of-an-ergo-transaction" class="md-nav__link">
@@ -1671,6 +1664,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../uses/PoW_tokens/" class="md-nav__link">
+        Bonding Curve
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1708,13 +1715,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#box" class="md-nav__link">
-    Box
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#anatomy-of-an-ergo-transaction" class="md-nav__link">
     Anatomy of an Ergo transaction
   </a>
@@ -1747,8 +1747,7 @@
                 
                   <h1>Box</h1>
                 
-                <h2 id="box">Box</h2>
-<p>Ergo has Bitcoin-like UTXO transactional model: a transaction is spending one-time objects and creating new one-time objects. We call this object a box. A box is immutable object which could be only created or removed. A box is not simply a coin, rather, it is contains registers with data (and code). Even more, there's nothing in box but registers. There are four predefined registers, with monetary value, protecting script, and identifier of a transaction which created the box and output index in the transaction (and also creation height). Because data of transaction which created the box is included into it, the box has unique contents and thus unique id. A box is first-class citizen in the Ergo protocol. Active boxes set is authenticated via a hash-based data structure, which allows to build lightweight full-nodes (as described in <a href="https://eprint.iacr.org/2016/994">https://eprint.iacr.org/2016/994</a>). A box may have up to six additional registers with typed data. A script may access its registers (as well as registers of input and output boxes of the spending transaction).</p>
+                <p>Ergo has Bitcoin-like UTXO transactional model: a transaction is spending one-time objects and creating new one-time objects. We call this object a box. A box is immutable object which could be only created or removed. A box is not simply a coin, rather, it is contains registers with data (and code). Even more, there's nothing in box but registers. There are four predefined registers, with monetary value, protecting script, and identifier of a transaction which created the box and output index in the transaction (and also creation height). Because data of transaction which created the box is included into it, the box has unique contents and thus unique id. A box is first-class citizen in the Ergo protocol. Active boxes set is authenticated via a hash-based data structure, which allows to build lightweight full-nodes (as described in <a href="https://eprint.iacr.org/2016/994">https://eprint.iacr.org/2016/994</a>). A box may have up to six additional registers with typed data. A script may access its registers (as well as registers of input and output boxes of the spending transaction).</p>
 <p>Example of a box (proof-of-no-premine from Ergo genesis state, which contains last block ids from Bitcoin and Ethereum at the moment of launch, and also latest news headlines):</p>
 <pre><code>     {
     &quot;boxId&quot;: &quot;b8ce8cfe331e5eadfb0783bdc375c94413433f65e1e45857d71550d42e4d83bd&quot;,

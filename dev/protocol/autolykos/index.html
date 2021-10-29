@@ -723,6 +723,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#test-vectors-for-solution-verification" class="md-nav__link">
+    Test Vectors for Solution Verification
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1715,6 +1722,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../uses/PoW_tokens/" class="md-nav__link">
+        Bonding Curve
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1805,6 +1826,13 @@
           <li class="md-nav__item">
   <a href="#decentralisation-of-verification" class="md-nav__link">
     Decentralisation of Verification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-vectors-for-solution-verification" class="md-nav__link">
+    Test Vectors for Solution Verification
   </a>
   
 </li>
@@ -1904,6 +1932,31 @@ dominate in the mining market for the coin; however, it is always not quite clea
 such the right in the Bitcoin community when it was partly hot about User-Activated Soft Fork (UASF) idea, and  a recent article <a href="https://medium.com/@BitcoinErrorLog/who-secures-bitcoin-95b19bbcda3c">"Who secures Bitcoin?"</a> is summarizing this way of thinking well. </p>
 <p>If verification can be done in reasonable time only by an entity able to spend millions on renting a data centre, a network is not decentralized. Ideally, it should be possible to check the integrity of the whole blockchain on commodity hardware, like a decent laptop.</p>
 <p>However, new blockchains also tend to absorb more and more features, and they are not coming for free. Then the huge topic in the research community is about how to make it possible to check the integrity of the whole blockchain with pruned blocks or system state (or both) under plausible assumptions. Possible solutions here are about bootstrapping state snapshot and blockchain suffix on top of it (popular in Ethereum protocol clients, and formalized in <a href="https://eprint.iacr.org/2018/129.pdf">an academic paper even</a>), stateless clients (<a href="https://eprint.iacr.org/2016/994">partially stateless</a>, as implemented in <a href="https://ergoplatform.org/en/">Ergo Platform</a> or <a href="https://eprint.iacr.org/2018/968">fully stateless</a> which do exist only in research papers currently).</p>
+<h3 id="test-vectors-for-solution-verification">Test Vectors for Solution Verification</h3>
+<pre><code>Test Vectors - Ergo:
+
+Height = 569806 (0x8B1CE)
+Item count = 67108864 (0x4000000)
+Prehash Item KAT:
+
+Item index 0          : 0x00596fe417902d8fe61763deb06286d3bf787f3c8ea2cc3063724dd307993caa
+Item index 4          : 0x00832cba40f67d525e9c449f17f46e3bfcdb663427d4289e35bc8e04b0c97765
+Item index 255        : 0x003f44309d54120e5d41b36a245fea4098948f7e8c5c052247922b74a6c8e7b9
+Item index 67108863    : 0x000701c3dd5db987aab0bb57f6e89ea9dbdc1dd88ffcac698bfde407d95063ce
+
+
+Message = 0x9b8cb36a9b738fa3678521d00c938631e1a192bc1919f004d2cbabdaa33835b4
+Nonce = 0x5d340003e9c460dc
+
+Blake #1: 0xbd54dc777dc062c63b2f8cdd4d56f4f57b64d648420f62ef0e6f3935b0046fc99e7ea07b167ccadeaf2cd396504477697f5123e72887f61333358b5edbd5aa66
+
+Blake #2: 0x6dbc710c2fb6e975d93af456686617b97595a0cec9dd22d57b8a7176d3f470b175eccfc1f97cecc13207fb68358c608930e5d7cfcdd0b3a4da8b9acb508e3248
+
+Result = 0x0c3b54f29c8ac1a407f83cd09f3d61bc32996a3d58a7d9fe9fe0e0a08572e367f96b164cc3254ce5379622e007de97c76b1232030d899e0da83bc82e00000000
+</code></pre>
+<blockquote>
+<p>credit: Wolf9466#9466 on Discord</p>
+</blockquote>
                 
               
               
