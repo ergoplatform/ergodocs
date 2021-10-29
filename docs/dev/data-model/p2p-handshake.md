@@ -37,6 +37,7 @@ Handshake Format
 
 
 For client capabilities (Mode feature):
+
 | Length         | Field Name                                  | Details                       |                                
 | :------------  | :-------------------------------------      | :-----------                  |  
 |1               | Feature id                                  | for mode feature = 16         |    
@@ -58,13 +59,14 @@ For session peer feature introduced in 3.3.7:
 
 
 Notes:
-1. For the testnet, magic bytes are [2, 0, 0, 1] (in decimal). For mainnet, [1, 0, 2, 4] (in decimal).   
+
+1. For the testnet, magic bytes are `[2, 0, 0, 1]` (in decimal). For mainnet, `[1, 0, 2, 4]` (in decimal).   
 2. For IPv4 or IP6 address bytes, "The result is in network byte order: the highest order byte of the address is in 
-"getAddress()[0]". Please check Inet4Address.getAddress() or Inet4Address.getAddress() in Java's JDK for details.
+`getAddress()[0]`. Please check `Inet4Address.getAddress()` or `Inet4Address.getAddress()` in Java's JDK for details.
 3. For reference client, session id is currently used only to avoid connections to self
 
 Handshake Procedure
 -------------------
 
-A peer is sending a handshake message, another replies. If there's no handshake got within "handshakeTimeout", then 
-connection is dropped. Default value for handshakeTimeout = 30s
+A peer is sending a handshake message, another replies. If there's no handshake got within `handshakeTimeout`, then 
+connection is dropped. Default value for `handshakeTimeout = 30s`

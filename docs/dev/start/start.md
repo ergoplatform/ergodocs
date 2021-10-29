@@ -1,34 +1,27 @@
 # Where to start?
 
-The [dApp Development](dApp-dev.md) page provides a broad overview on creating your first decentralised app. 
-
-See the [Backend](../stack/back-end.md) page for an overview of the tools available to interact with the blockchain. This is also broken down on a per-language basis. 
-
-## dApp Development
+>Welcome To Smart Money
 
 For most developers, [Appkit](#appkit) is the best entry point unless you're wanting to dive straight into [ErgoScript](#ergoscript) smart-contract development.
 
-**System Architecture**
+See the [Backend](../stack/back-end.md) section for an overview of the tools available to interact with the blockchain. This is also broken down on a per-language basis. 
 
-Below is a example system architecture diagram highlighting the main components of a decentralised application (dApp)
+## Bounties & Grants
 
+See [grow-ergo/issues](https://github.com/ergoplatform/grow-ergo/issues) for an updated list of live bounties and grants available on Ergo.
 
-![](../assets/sys.png)
+**Good Whale's Grant Fund**
 
-- **Front-end** | The user-interface built in your framework of choice.
-    - For payments, we have the Yoroi dApp connector, proxy contracts, or Ergo-Pay. 
-- **REST** | A *REST*ful API to interact with the backend
-- **Backend** | Perform the off-chain logic
-- **Database** (Optional) 
-- **Contract** | Where the magic happens, the on-chain validation of the off-chain logic.
+Up to $20,000 SigUSD per grant - submit your own idea!
 
+**DarkFund0**
+
+4,000 ERG still available, for anything that improves privacy on Ergo.
 
 
 ## Resources
 
 ### Explorer
-
-**Explorer**
 
 - [Mainnet explorer](https://explorer.ergoplatform.com/)
 
@@ -40,11 +33,11 @@ Below is a example system architecture diagram highlighting the main components 
 
 ### API
 
+- [Ergo API basic query](https://www.youtube.com/watch?v=B3W9uNwk_DM)
 - [API Docs](https://api.ergoplatform.com/api/v1/docs/)
   - [Node API](https://git.io/fjqwb)
   - [Explorer API](https://git.io/fjqwN)
 
-### Misc. Resources
 **Test vectors:**
 
 - [Ergo transaction serialization](https://git.io/fjqwX)
@@ -62,8 +55,21 @@ Below is a example system architecture diagram highlighting the main components 
 - [ergohack.io](https://ergohack.io/resources) | Your introduction to developing on Ergo.
 
 
-## Basic Tutorials
+### Basic Tutorials
 
 - [ergotutorials.com](https://ergotutorials.com/)
-- [Ergo API basic query](https://www.youtube.com/watch?v=B3W9uNwk_DM)
 - [Create mini web for your NFT.](https://www.youtube.com/watch?v=mP6D9Pf6p88)
+
+
+## Basic System Architecture
+
+Below is a example system architecture diagram highlighting the main components of a decentralised application (dApp)
+
+![](../../assets/sys.png)
+
+- **Front-end** | The user-interface built in your framework of choice.
+    - For payments, we have the Yoroi dApp connector, proxy contracts, or Ergo-Pay. 
+- **REST** | A *REST*ful API to interact with the backend
+- **Backend** | Perform the off-chain logic
+- **Database** (Optional) 
+- **Contract** | Where the magic happens, the on-chain validation of the off-chain logic.

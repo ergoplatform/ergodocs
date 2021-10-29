@@ -2,6 +2,7 @@ site_name: ErgoDocs
 site_url: https://ergodocs.rtfd.io
 repo_url: https://github.com/glasgowm148/ergodocs
 
+
 theme:
     name: material
     favicon: assets/favicon.png
@@ -24,8 +25,7 @@ theme:
       primary: deep orange
     font:
       text: Roboto
-extra_css:
-  - stylesheets/extra.css
+extra_css: [assets/extra.css]
 
 extra:
   version:
@@ -44,41 +44,86 @@ markdown_extensions:
   - admonition
 
 nav:
-  - Home: index.md
-  - About:
+  
+  - Home:
+    - Welcome: index.md
     - About ErgoDocs: About/format.md
     - FAQ: About/faq.md
     - Events: About/events.md
   - Developers:
     - Getting Started:
       - Where to start?: dev/start/start.md
-    - Ergo:
       - The Ergo Protocol: dev/ergo/protocol.md
-      - NiPoPoWS: dev/ergo/nipopow.md
-      - Sigma Protocols: dev/ergo/sigma.md
-      - Multi-Stage Contracts: dev/ergo/multi.md
-      - Applications: dev/ergo/apps.md
-    - Model:
-       - Accounts: dev/ergo/box.md
-       - Adresses: dev/ergo/box.md
+    - Features:
+      - Atomic Swaps: dev/protocol/atomic.md
+      - Storage Rent: dev/protocol/rent.md
+      - NIPoPoWS: dev/protocol/nipopow.md
+      - Sigma Protocols: dev/scs/sigma.md
+      - Multi-Stage Contracts: dev/scs/multi.md
+    - Protocol:
+      - UTXO State: dev/protocol/utxo-state.md
+      - Autolykos: dev/protocol/autolykos.md  
+      - Audit: dev/protocol/audit.md
+    - Data Model:
+      - Box: dev/data-model/box.md
+      - Addresses: dev/protocol/address.md
+      - Transaction: dev/protocol/transaction.md
+    - P2P:
+      - Protocol Overview: dev/data-model/p2p-protocol.md
+      - Handshaking: dev/data-model/p2p-handshake.md
+      - Network Messages: dev/data-model/p2p-handshake.md
+      - Modifiers Exchange: dev/data-model/p2p-handshake.md
     - Stack:
       - Frontend: dev/stack/front-end.md
       - Backend: dev/stack/back-end.md
-      - ErgoScript: dev/stack/ergoscript.md
-    - Languages:
-      - Scala: dev/Languages/scala.md
-      - Java: dev/Languages/java.md
-      - Rust: dev/Languages/rust.md
-      - C#: dev/Languages/csharp.md
+    - Libraries:
+      - AppKit: dev/stack/appkit.md
+      - ErgoTool: dev/stack/ergotool.md
+      - Kiosk: dev/stack/kiosk.md
+      - JDE: dev/stack/jde.md
+      - Transactions: dev/stack/transactions.md
+    - Smart Contracts:
+      - ErgoScript: dev/scs/ergoscript.md
+      - FlowCards: dev/scs/flowcards.md      
+    #- Languages:
+     # - Scala: dev/Languages/scala.md
+      ##- Java: dev/Languages/java.md
+    #  - Rust: dev/Languages/rust.md
+    #  - C#: dev/Languages/csharp.md
     - Advanced:
       - Integration: dev/Integration/guide.md 
-      - P2P Handshaking: dev/p2p/p2p-handshake.md
-      - P2P Protocol: dev/p2p/p2p-protocol.md
-  - Wallets:
-    - Node: dev/node/node-config.md
-    - Run: dev/node/run.md
-    - Desktop: dev/node/node-config.md
-    - Mobile: dev/node/node-config.md
-  
-    
+  - Node:
+    - Getting Started: 
+      - Docs: node/docs.md
+      - Config: node/node-config.md
+      - First Run: node/run.md
+      - Withdraw: node/withdraw.md
+    - Overview: 
+      - Architecture: node/architecture.md
+      - API: node/api.md
+    - Light Modes: 
+      - Digest State: node/digest-state.md
+      - History Pruning: node/history-pruning.md
+      - Snapshots: node/snapshots.md
+      - NiPoPoWS: node/nipopow.md
+  - Uses:
+    - dApps: uses/apps.md
+    - Zero-Knowledge: uses/zk.md
+    - Examples:
+      - Use Cases: uses/use.md
+      - CrowdFunding: dev/scs/crowdfunding.md
+      - Micro Credit: dev/scs/microcredit.md
+      - Math Fun: uses/math_fun.md
+      - Email Client for Blocked Internet: uses/blocked_web.md
+      - Collateral Mining: uses/collateral-mining.md
+      - Lottery: uses/lottery.md
+      - Buy Back: uses/dex-buyback.md
+      - Perpetual Tokens: uses/perpetual.md
+      - PoW Tokens: uses/PoW_tokens.md
+      - Bonding Curve: uses/PoW_tokens.md
+
+      
+
+
+
 
