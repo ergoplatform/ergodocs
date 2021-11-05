@@ -899,13 +899,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#proxy-contracts" class="md-nav__link">
-    Proxy Contracts
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#learn" class="md-nav__link">
     Learn
   </a>
@@ -949,6 +942,13 @@
         <li class="md-nav__item">
   <a href="#flowcards" class="md-nav__link">
     FlowCards
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proxy-contracts" class="md-nav__link">
+    Proxy Contracts
   </a>
   
 </li>
@@ -1699,13 +1699,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#proxy-contracts" class="md-nav__link">
-    Proxy Contracts
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#learn" class="md-nav__link">
     Learn
   </a>
@@ -1753,6 +1746,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#proxy-contracts" class="md-nav__link">
+    Proxy Contracts
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1777,11 +1777,6 @@
 <p>As a simple example, the below script allows only Alice to spend a box before a certain height and only Bob to spend the box after that.</p>
 <p><code>if (HEIGHT &lt; 100000) alicePubKey else bobPubKey</code></p>
 <p>The scripting language in itself is non-Turing complete, but applications run on the platform can be made to be Turing complete as demonstrated in <a href="https://arxiv.org/pdf/1806.10116v1.pdf">this peer-reviewed paper</a>.</p>
-<h2 id="proxy-contracts">Proxy Contracts</h2>
-<p>Outsourcing transaction generation to an external service/dApp can be useful or even needed in various circumstances. For example, avoiding wallet limitations to generate any transaction on behalf of the user - Ergo Assembler is designed for this purpose. Another example is to scale dApps to be able to fulfill many requests without double-spending or data invalidation - SigmaUSD dApp can use proxy contracts to avoid bank double-spending and ERG/USD oracle data invalidation.</p>
-<ul>
-<li><a href="https://github.com/ergoplatform/eips/blob/master/eip-0017.md">EIP-0017</a></li>
-</ul>
 <h2 id="learn">Learn</h2>
 <h3 id="tutorials">Tutorials</h3>
 <ul>
@@ -1790,6 +1785,9 @@
 <li><a href="https://ergoplatform.org/docs/ErgoScript.pdf">ErgoScript tutorial</a></li>
 </ul>
 <h3 id="how-to-guides">How-to Guides</h3>
+<ul>
+<li><a href="https://github.com/ergoplatform/ergoscript-by-example">Ergo by Example</a></li>
+</ul>
 <h3 id="explanations">Explanations</h3>
 <ul>
 <li><a href="https://www.ergoforum.org/t/ergoscript-design-patterns/222">ErgoScript Design patterns</a></li>
@@ -1804,6 +1802,11 @@
 <blockquote>
 <p>A Declarative Framework for Development of Ergo dApps</p>
 </blockquote>
+<h2 id="proxy-contracts">Proxy Contracts</h2>
+<p>Outsourcing transaction generation to an external service/dApp can be useful or even needed in various circumstances. For example, avoiding wallet limitations to generate any transaction on behalf of the user - Ergo Assembler is designed for this purpose. Another example is to scale dApps to be able to fulfill many requests without double-spending or data invalidation - SigmaUSD dApp can use proxy contracts to avoid bank double-spending and ERG/USD oracle data invalidation.</p>
+<ul>
+<li><a href="https://github.com/ergoplatform/eips/blob/master/eip-0017.md">EIP-0017</a></li>
+</ul>
 <p><em>The new resources provide a powerful but simple way to learn UTXO-based smart contracts.</em></p>
 <p>Since its mainnet launch in July 2019, Ergo has steadily been building out both its core tech and its dapps ecosystem, with several unique developments in both. Ergo’s <a href="https://ergoplatform.org/en/blog/2020_03_16_ergo_sigma/">Sigma Protocols</a> enable safe, customisable zero-knowledge proofs, which underpin such applications as <a href="https://ergoplatform.org/en/blog/2020_03_20_ergo_mixer/">ErgoMixer</a> and the <a href="https://ergoplatform.org/en/blog/2020-09-04-announcing-the-zk-treasury-on-ergo/">ZKTreasury</a>. And there’s lots more to come!</p>
 <p>To date, though, Ergo hasn’t been the most user-friendly ecosystem. It’s been far better suited to developers and the tech-savvy. With key functionality now complete, that’s starting to change as the priority shifts towards bringing in users and developers. The <a href="https://twitter.com/YoroiWallet/status/1314244618435739648?s=09">integration of Ergo in Yoroi</a>, a major lite wallet for Cardano developed by Emurgo, is a critical step for users; Yoroi will ultimately serve as a portal for Ergo dApps, acting a lot like MetaMask.</p>
