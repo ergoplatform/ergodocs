@@ -1,2 +1,2 @@
 ### Tutorials
-- See [AppKit](../stack/back-end.md/#Appkit)
+- See [AppKit](../lib/back-end.md/#Appkit)

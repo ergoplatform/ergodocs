@@ -1,23 +1,7 @@
 # Multi-Stage Contracts
 
-So you’ve heard about smart contracts, but what are multi-stage contracts? Multi-stage contracts refer to smart contracts that are operating on a stateful level. Because Ergo uses the UTXO model, it is possible to process parallelized actions on top of smart contracts. 
 
-For a blockchain to contain smart contracts, it should have loops. These loops can later refer to themselves and check whether an operation is working or not. Bitcoin’s UTXO design is very primitive, and it doesn’t contain Turing-complete smart contracts. Ethereum has this capability, but it’s a primitive version of a Turing-complete language. Ergo Blockchain provides a different approach to multi-stage contracts, empowered by the extended UTXO model. Permitting a lighter network and broader use cases.
-
-- [Multi-Stage Contracts](https://ergoplatform.org/en/blog/2021-04-16-multi-stage-contracts/)
-- [Multi-Stage Contracts in the UTXO Model: Delivery by Alexander Chepurnoy & Amitabh Saxena](https://www.youtube.com/watch?v=g3FlM_WOwBU)
-
-Talk http://deic.uab.cat/conferences/cbt/cbt2019/resources/chepurnoy.ogv
-
-Slides http://deic.uab.cat/conferences/cbt/cbt2019/resources/chepurnoy.pdf
-
-Paper https://link.springer.com/chapter/10.1007/978-3-030-31500-9_16
-
-https://twitter.com/ergoplatformorg/status/1178577553789014016
-
-
-
-#### *Smart contracts* are the backbone of *decentralized finance*. Through smart contracts, users can interact with *dApps* without middlemen. *Blockchain* design has a significant impact on the capabilities of smart contracts. Ergo Blockchain’s UTXO model allows *multi-stage contracts* to operate on a highly scalable network.
+> *Smart contracts* are the backbone of *decentralized finance*. Through smart contracts, users can interact with *dApps* without middlemen. *Blockchain* design has a significant impact on the capabilities of smart contracts. Ergo Blockchain’s UTXO model allows *multi-stage contracts* to operate on a highly scalable network.
 
 ### **Decentralized Finance**
 
@@ -33,24 +17,14 @@ So you’ve heard about smart contracts, but what are multi-stage contracts? Mul
 
 For a blockchain to contain smart contracts, it should have loops. These loops can later refer to themselves and check whether an operation is working or not. Bitcoin’s UTXO design is very primitive, and it doesn’t contain Turing-complete smart contracts. Ethereum has this capability, but it’s a primitive version of a Turing-complete language. Ergo Blockchain provides a different approach to multi-stage contracts, empowered by the *extended UTXO* model. Permitting a lighter network and broader use cases.
 
-### **Use** Cases **of Ergo**
 
-    *Oracles:* Oracles are the messengers in and out of blockchains. They contain valuable data (e.g. price feed) so that applications work seamlessly. Ergo Blockchain’s design allows *Oracle Pools*, and this would help to create data hierarchies. A system of oracles that can be scored regarding their trust level is a significant phenomenon. Chainlink’s oracles aren’t capable of forming oracle pools because it’s built on the Ethereum network. Yet Chainlink recently published a whitepaper about decentralized computational networks interacting with blockchains, an idea that Ergo already working on with oracle pools.
-
-    *NIPoPoWs*: Non-interactive proofs of proof of works can be used to build an interoperable blockchain ecosystem. With NIPoPoW implementation, Ergo Blockchain can interact with the smart contracts on proof of stake networks. This would open up an integrated use case between different dApps on different blockchains. Cardano is already planning to implement side chains with NIPoPoWs in collaboration with EMURGO. Limits are yet to be discovered. 
-
-   *Multi-Sig:* Multi-Sig or Multi Provers are helpful for the reliability of smart contracts. This kind of implementation is vital for security. So that smart contracts aren’t in control of one person, but rather governed by multiple accounts. Multi-stage contracts can also be designed for punishing malicious actors trying to take control of smart contracts.
-
-   *Time Epoch:* Ergo Blockchain can be designed to have timed operations. For example, during an *ICO* (or *IDO*), a code in a smart contract can provide *timed release* so that investors have a protective layer if the project owner isn’t delivering his/her promises. In Ethereum, programming such a kind of timed operation isn’t possible. 
-
-   *Parachain/Sidechains:* This is a yet-to-develop area for Ergo Blockchain. It’s certainly possible, and we know that the implementation of parachains has a significant impact on scalability. Our core developer *Alex Chepurnoy* is about to release a paper on it, so stay tuned!
 
 Sources:
 
-<https://ergoplatform.org/docs/teaser.pdf>
 
-[https://ergoplatform.org/docs/ErgoScript.pdf](https://ergoplatform.org/docs/teaser.pdf)
-
-[Multi-Stage Contracts in the UTXO Model: Delivery by Alexander Chepurnoy & Amitabh Saxena](https://www.youtube.com/watch?v=g3FlM_WOwBU)
-
-<!--EndFragment-->
+- [Multi-Stage Contracts](https://ergoplatform.org/en/blog/2021-04-16-multi-stage-contracts/)
+- [Multi-Stage Contracts in the UTXO Model: Delivery by Alexander Chepurnoy & Amitabh Saxena](https://www.youtube.com/watch?v=g3FlM_WOwBU)
+- [Talk](http://deic.uab.cat/conferences/cbt/cbt2019/resources/chepurnoy.ogv) ~ [Slides](http://deic.uab.cat/conferences/cbt/cbt2019/resources/chepurnoy.pdf) ~ [Paper](https://link.springer.com/chapter/10.1007/978-3-030-31500-9_16)
+- [https://ergoplatform.org/docs/teaser.pdf](https://ergoplatform.org/docs/teaser.pdf)
+- [https://ergoplatform.org/docs/ErgoScript.pdf](https://ergoplatform.org/docs/ErgoScript.pdf)
+- [Multi-Stage Contracts in the UTXO Model: Delivery by Alexander Chepurnoy & Amitabh Saxena](https://www.youtube.com/watch?v=g3FlM_WOwBU)
