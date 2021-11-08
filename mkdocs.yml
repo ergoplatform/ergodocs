@@ -56,7 +56,8 @@ nav:
       - The Ergo Protocol: dev/ergo/protocol.md
     - Protocol:
       - UTXO State: dev/protocol/utxo-state.md
-      - Autolykos: dev/protocol/autolykos.md  
+      - Autolykos: dev/protocol/autolykos.md
+      - Storage Rent: dev/protocol/rent.md  
     - Data Model:
       - Model Transaction: dev/protocol/transaction.md
       - Box: dev/data-model/box.md
@@ -76,7 +77,6 @@ nav:
       - ErgoScript: dev/scs/ergoscript.md
       - FlowCards: dev/scs/flowcards.md
       - Atomic Swaps: dev/protocol/atomic.md
-      - Storage Rent: dev/protocol/rent.md
       - NIPoPoWS: dev/protocol/nipopow.md
       - Sigma Protocols: dev/scs/sigma.md
       - Multi-Stage Contracts: dev/scs/multi.md      
