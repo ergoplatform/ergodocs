@@ -30,4 +30,3 @@ There are lots of use cases for this application beyond securely spending funds 
 
 A big thanks to anon_real, and we look forward to seeing the ZK Treasury used in the Ergo community!
 
-<!--EndFragment-->

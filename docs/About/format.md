@@ -1,5 +1,7 @@
 # Format
 
+This website aims to break down each section (roughly) into the following categories.
+
 ## Tutorials
 > learning-oriented. 
 

@@ -46,7 +46,6 @@ Interoperability does more than enable cross-chain liquidity. It decentralises t
 
 <!--EndFragment-->
 
-<!--StartFragment-->
 
 *As blockchain technology gains traction, central bank digital currencies are among the most significant applications being developed. But these will inevitably fall far short of the ideal, for one simple reason: control. In particular, that has implications for composability and privacy, and much else besides.*
 

@@ -21,7 +21,7 @@ Autolykos v1 originally had non-outsourcability built-in. However, it became app
 
 It's also discussed here on 'Unblocked with Robert Kornacki' [(14:45)](https://www.youtube.com/watch?v=2sbTMrQwWOw&feature=youtu.be)
 
-### v.2
+**V2**
 
 Autolykos version two follows Autolykos v.1, but with certain modifications made:
 
@@ -45,16 +45,6 @@ Also, table size (N value) is growing with time as follows. Until block `614,400
 - [Bypassing Non-Outsourceable Proof-of-Work Schemes Using Collateralized Smart Contracts](https://eprint.iacr.org/2020/044.pdf)
 
 
-## 51% Attack
-
-Mining pools offer a buffer against such network attacks as the hash rate is distributed across thousands of individual miners.
-
-Ergo's memory-hardened aspect also makes this vector of attack more expensive as there is no ASIC support to rent. With the collective rentable rigs at the moment, this isn't a viable path to a 51% attack. In theory, someone could build a massive GPU farm to try to launch such an attack. If a bad actor can rent a warehouse of ASIC and mine on a small chain with 51% attacks are a viable option... if there is an offramp. 
-
-This attack is usually performed for-profit and results in massive dumping on an exchange as it is occurring. Meaning the attacker will dump tokens on an exchange than "double-spend" them back into their wallet. The current exchange situation doesn't provide the liquidity for a viable offramp. The rentable ASIC support isn't an option. So is it possible, in theory, yes, practical or likely? I don't think so at all.
-
-Ethereum classic is perhaps a bad example, as it shares the same mining algorithm as Eth. One could buy more than 100% current hash rate of eth classic on NiceHash. It's not the same case for Ergo. Ergo also believes in the 'Good Miner' principle; in the case of Bitcoin - it was a good thing 51% existed. 
-
 
 
 ## Difficulty
@@ -72,7 +62,11 @@ Ergo is already using epoch length of ~1.5 days (with normal block rate), not Bi
 
 
 ## Decentralisation 
-While most active conversations today in the space are about wider adoption of the blockchain technology (which often means selling out to Wall St.) and competition with systems like Visa and Mastercard (which often means giving up with Decentralisation or introducing unclear security assumptions in the name of efficiency), there is the obvious need to revisit the roots of the cryptocurrency movement, which are mostly about Decentralisation. Many questions to be answered clear here. Is it okay when 90% of mining power in Bitcoin [can gather in one room](https://twitter.com/lopp/status/673398201307664384)? 
+
+
+While most active conversations today in the space are about wider adoption of the blockchain technology (which often includes selling out to Wall St.) and competition with systems like Visa and Mastercard (which often means giving up with Decentralisation or introducing unclear security assumptions in the name of efficiency), there is the obvious need to revisit the roots of the cryptocurrency movement, which are mostly about Decentralisation. Many questions to be answered clear here. 
+
+Is it okay when 90% of mining power in Bitcoin [can gather in one room](https://twitter.com/lopp/status/673398201307664384)? 
 - Is it okay when 2 or 3 mining pools control the majority of hashing power, so can censorship? 
 - Is it okay when almost all the new nodes avoid processing a blockchain from its genesis block? 
 - Is it okay when Proof-of-Work coin developers are doing a hard-fork changing the consensus algorithm to make it GPU-friendly again? 
@@ -80,6 +74,16 @@ While most active conversations today in the space are about wider adoption of t
 - Can we cover most of the issues with technical means?
 
 Decentralisation is about many issues lying in many fields, of technical, social, and hybrid kinds. Researchers and developers are trying to find technical solutions, preferably elegant and efficient. However, for many issues such solutions are not known; thus, social solutions are also needed. 
+
+### 51% Attacks
+
+Mining pools offer a buffer against such network attacks as the hash rate is distributed across thousands of individual miners.
+
+Ergo's memory-hardened aspect also makes this vector of attack more expensive as there is no ASIC support to rent. With the collective rentable rigs at the moment, this isn't a viable path to a 51% attack. In theory, someone could build a massive GPU farm to try to launch such an attack. If a bad actor can rent a warehouse of ASIC and mine on a small chain with 51% attacks are a viable option... if there is an offramp. 
+
+This attack is usually performed for-profit and results in massive dumping on an exchange as it is occurring. Meaning the attacker will dump tokens on an exchange than "double-spend" them back into their wallet. The current exchange situation doesn't provide the liquidity for a viable offramp. The rentable ASIC support isn't an option. So is it possible, in theory, yes, practical or likely? I don't think so at all.
+
+Ethereum classic is perhaps a bad example, as it shares the same mining algorithm as Eth. One could buy more than 100% current hash rate of eth classic on NiceHash. It's not the same case for Ergo. Ergo also believes in the 'Good Miner' principle; in the case of Bitcoin - it was a good thing 51% existed. 
 
 
 
@@ -108,7 +112,7 @@ If verification can be done in reasonable time only by an entity able to spend m
 However, new blockchains also tend to absorb more and more features, and they are not coming for free. Then the huge topic in the research community is about how to make it possible to check the integrity of the whole blockchain with pruned blocks or system state (or both) under plausible assumptions. Possible solutions here are about bootstrapping state snapshot and blockchain suffix on top of it (popular in Ethereum protocol clients, and formalized in [an academic paper even](https://eprint.iacr.org/2018/129.pdf)), stateless clients ([partially stateless](https://eprint.iacr.org/2016/994), as implemented in [Ergo Platform](https://ergoplatform.org/en/) or [fully stateless](https://eprint.iacr.org/2018/968) which do exist only in research papers currently).
 
 
-### Test Vectors for Solution Verification
+## Test Vectors for Solution Verification
 ```
 Test Vectors - Ergo:
 

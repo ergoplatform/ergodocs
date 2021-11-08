@@ -47,40 +47,31 @@ nav:
   
   - Home:
     - Welcome: index.md
-    - About ErgoDocs: About/format.md
+    - Format: About/format.md
     - FAQ: About/faq.md
     - Events: About/events.md
   - Developers:
-    - Getting Started:
+    - Getting Started: 
       - Where to start?: dev/start/start.md
       - The Ergo Protocol: dev/ergo/protocol.md
-    - Features:
-      - Atomic Swaps: dev/protocol/atomic.md
-      - Storage Rent: dev/protocol/rent.md
-      - NIPoPoWS: dev/protocol/nipopow.md
-      - Sigma Protocols: dev/scs/sigma.md
-      - Multi-Stage Contracts: dev/scs/multi.md
     - Protocol:
       - UTXO State: dev/protocol/utxo-state.md
       - Autolykos: dev/protocol/autolykos.md  
-      - Audit: dev/protocol/audit.md
     - Data Model:
+      - Model Transaction: dev/protocol/transaction.md
       - Box: dev/data-model/box.md
       - Addresses: dev/protocol/address.md
-      - Transaction: dev/protocol/transaction.md
     - P2P:
-      - Protocol Overview: dev/data-model/p2p-protocol.md
+      - P2P Protocol Overview: dev/data-model/p2p-protocol.md
       - Handshaking: dev/data-model/p2p-handshake.md
       - Network Messages: dev/data-model/p2p-handshake.md
       - Modifiers Exchange: dev/data-model/p2p-handshake.md
-    - Stack:
-      - Frontend: dev/stack/front-end.md
-      - Backend: dev/stack/back-end.md
     - Libraries:
       - AppKit: dev/stack/appkit.md
       - ErgoTool: dev/stack/ergotool.md
       - Kiosk: dev/stack/kiosk.md
       - JDE: dev/stack/jde.md
+      - Frontend: dev/stack/front-end.md
       - Transactions: dev/stack/transactions.md
     - Smart Contracts:
       - ErgoScript: dev/scs/ergoscript.md
@@ -109,6 +100,12 @@ nav:
   - Uses:
     - dApps: uses/apps.md
     - Zero-Knowledge: uses/zk.md
+    - Features:
+      - Atomic Swaps: dev/protocol/atomic.md
+      - Storage Rent: dev/protocol/rent.md
+      - NIPoPoWS: dev/protocol/nipopow.md
+      - Sigma Protocols: dev/scs/sigma.md
+      - Multi-Stage Contracts: dev/scs/multi.md
     - Examples:
       - Use Cases: uses/use.md
       - CrowdFunding: dev/scs/crowdfunding.md
