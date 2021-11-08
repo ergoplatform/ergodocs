@@ -3,7 +3,7 @@
 - [Exchanges](https://ergoplatform.org/en/exchanges/)
 - [dApps](https://sigmaverse.io/)
 - [Mining](https://ergonaut.space/Mining)
-- [Roadmap](https://ergonaut.space/en/roadmap)
+- [Development roadmap](https://ergonaut.space/en/roadmap)
 - [ergonaut.space](https://ergonaut.space/en/home)
 
 ## FAQ 
@@ -23,34 +23,10 @@
   - Supporting truly decentralized infrastructure, and;
   - Supporting privacy as a basic human right.
 
-## Deep Dives
+### Resources
 
 * [Ergo: Road to Top 10](https://thecryptodrip.com/ergo-deep-dive/)
 * [ergonaut.space](https://ergonaut.space/)
 * [Infographics](https://ergosites.github.io/#ex2-tabs-2)
-
->“It's one of the most revolutionary cryptocurrencies ever built. Got so many crazy ideas like sigma protocols and pruning the blockchain and roller chains. All this crazy stuff. Even has a proof of no premine. So really a technological marvel in many respects, and it reflects about 8 years of knowledge that Alex has amassed as both a researcher and a developer. Super concise code and it blows my mind that the market cap is where it's at. It should be a top 10 coin or top 15 coin" — Charles Hoskinson
-
-- [Get some perspective](https://thecoinperspective.com/?c=ERG)
-
-## Proof of Work
-
-Ergo was created for regular people, PoW allows for a fair start and true decentralistion. It's also widely studied, and has very high-security guarantees - which are essential for having useful contractual, programmable money that's ready today. 
-
-Here's CH talking a bit about [consensus](https://youtu.be/nkr1EKQrVeQ)
-
-- **[Why Proof-of-Work?](https://ergonaut.space/Cardano)** | It's tried and tested (the Lindy effect), and has some advantages over PoS. 
-
-
-
-## Features
-
-- [Storage Rent](https://ergonaut.space/en/Autolykos) | After four years, miners can charge fees for unmoved erg. Stabilising miner income and preventing lost coins as we see in BTC. 
-- [Sigma Protocols](https://ergonaut.space/en/sigma-protocols) | Ergo’s smart contracts and DeFi functionality are built on Sigma protocols – a powerful, flexible class of zero-knowledge proofs. Find out more about why they’re so important, and how they put Ergo head and shoulders above the competition.
-- [eUTxO](https://ergonaut.space/en/eUTXO) | Based on the UTXO model of Bitcoin, similar extended-UTXO model as Cardano, allowing interoperability. 
-- [NiPoPoWs](https://ergonaut.space/en/NiPoPoWs) | Verify proof of work without downloading the headers. Enables light-clients during in places with poor internet - and light mining (not having to download the entire chain)
-
-
-
-
+- [ergotutorials.com](https://ergotutorials.com/)
 

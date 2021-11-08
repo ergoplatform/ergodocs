@@ -24,4 +24,11 @@ The Ergo Raffle [documentation](https://github.com/ErgoRaffle/raffle-documentati
 
 - [hypo10use/quid-games](https://github.com/hypo10use/quid-games) (Angular)
 
+## Payments
+
+- Yoroi dApp connector
+- proxy contracts
+- Ergo-Pay. 
+
+
 

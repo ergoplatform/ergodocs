@@ -1,9 +1,10 @@
 # Where to start?
 
+A typical dApp ontop Ergo has the following structure.
+
 - [**Front-end**](../stack/front-end.md) | The user-interface built in your framework of choice.
-    - For payments, we have the Yoroi dApp connector, proxy contracts, or Ergo-Pay. 
 - **REST** | A *REST*ful API to interact with the backend
-- [**Backend**](../stack/back-end.md) | Perform the off-chain logic
+- [**Backend**](../stack/back-end.md) | Performs the off-chain logic
 - [**Contract**](#ergoscript) | Where the magic happens, the on-chain validation of the off-chain logic.
 
 ## Contributing
@@ -42,8 +43,6 @@ Ergo is a community-driven project. The Ergo Foundation and private donors incen
  - [Miner rewards script](https://github.com/lorien/ergotools) | Simple command-line tool to find miner rewards not spent and form withdrawing transaction requests for them
  - [Ergo P2S Playground](https://wallet.plutomonkey.com/p2s/?source=dHJ1ZQ==) | A web-based tool to quickly get the address corresponding to some script  
 
-### Misc
-- [ergotutorials.com](https://ergotutorials.com/)
 
 
 

@@ -43,21 +43,5 @@ In addition, a box can have six optional registers (R4-R9) to store custom data 
 
 >Note that Ergo `txId` depends only on the message and not on signatures (similar to Bitcoin SegWit transactions). Hence, a txId is available even before signing. Similar to Bitcoin, Ergo supports chained transactions (i.e., spending of boxes with 0 confirmations).
 
-## Anatomy of an Ergo transaction
 
-**Articles**
-
-- [UTXO Model Transaction](https://ergoplatform.org/en/blog/2021-10-07-utxo-model-transaction/)
-- [Off-chain Logic and eUTXO](https://ergoplatform.org/en/blog/2021-10-04-off-chain-logic-and-eutxo/)
-
-
-## An Ergo transaction consists of:
-
-1. One or more Input boxes (source of funds). These boxes must already exist and will be destroyed. The guard script in each of these boxes will be evaluated and must return true for the transaction to be considered valid,
-2. One or more Output boxes (destination of funds). These boxes will be created.
-3. Zero or more Data-Inputs boxes. These are additional boxes whose data can be referenced and used by smart contracts of the inputs. The guard script in these boxes will not be evaluated.
-
-Data inputs are unique to Ergo and not yet present in other extended-UTXO systems. Multiple transactions can share a data-input box, and it will store only a single reference to the box in the block. We can also spend a data-input box in the same transaction as long as it existed before the transaction was applied. As an example, the box with id `d2b9b6536287b242f436436ce5a1e4a117d7b4843a13ce3abe3168bff99924a1` was used as both an input and a data-input in this transaction. While the use of data-inputs may not be immediately apparent, they play a major role in making Ergo more friendly to DeFi applications where we want to refer to a box without needing (or having the ability) to spend it such as in decentralized order-books (DEX). For instance, the above transaction used a "timestamping service" to timestamp a box provided as data input.
-
-A script in Ergo can refer to other boxes in the transaction. For instance, the code snippet `INPUTS(0).value > 10000 && OUTPUTS(1).value > 20000` in any of the inputs boxes would enforce that the first input and the second output boxes must have a value greater than `10000` and `20000`, respectively.
 

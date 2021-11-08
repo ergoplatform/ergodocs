@@ -71,11 +71,15 @@ nav:
       - ErgoTool: dev/stack/ergotool.md
       - Kiosk: dev/stack/kiosk.md
       - JDE: dev/stack/jde.md
-      - Frontend: dev/stack/front-end.md
-      - Transactions: dev/stack/transactions.md
+      - Assembler: dev/stack/assembler.md
     - Smart Contracts:
       - ErgoScript: dev/scs/ergoscript.md
-      - FlowCards: dev/scs/flowcards.md      
+      - FlowCards: dev/scs/flowcards.md
+      - Atomic Swaps: dev/protocol/atomic.md
+      - Storage Rent: dev/protocol/rent.md
+      - NIPoPoWS: dev/protocol/nipopow.md
+      - Sigma Protocols: dev/scs/sigma.md
+      - Multi-Stage Contracts: dev/scs/multi.md      
     #- Languages:
      # - Scala: dev/Languages/scala.md
       ##- Java: dev/Languages/java.md
@@ -85,9 +89,9 @@ nav:
       - Integration: dev/Integration/guide.md 
   - Node:
     - Getting Started: 
-      - Docs: node/docs.md
-      - Config: node/node-config.md
       - First Run: node/run.md
+      - Config: node/node-config.md
+      - Docs: node/docs.md
       - Withdraw: node/withdraw.md
     - Overview: 
       - Architecture: node/architecture.md
@@ -99,13 +103,7 @@ nav:
       - NiPoPoWS: node/nipopow.md
   - Uses:
     - dApps: uses/apps.md
-    - Zero-Knowledge: uses/zk.md
-    - Features:
-      - Atomic Swaps: dev/protocol/atomic.md
-      - Storage Rent: dev/protocol/rent.md
-      - NIPoPoWS: dev/protocol/nipopow.md
-      - Sigma Protocols: dev/scs/sigma.md
-      - Multi-Stage Contracts: dev/scs/multi.md
+    - Zero-Knowledge: uses/zk.md      
     - Examples:
       - Use Cases: uses/use.md
       - CrowdFunding: dev/scs/crowdfunding.md

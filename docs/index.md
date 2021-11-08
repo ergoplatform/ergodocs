@@ -1,6 +1,6 @@
-# Welcome to the Ergo Platform Documentation!
+# Welcome to ErgoDocs!
 
-Ergo uses continous integration, meaning best practices dictate that the majority of the documentation should be kept on the assosciated repositories themselves. this site aims to serve as a directory that guides the user on their development journey.
+Best practices dictate that the majority of the documentation should be kept on the assosciated repositories themselves. this site aims to serve as a directory that guides the user on their development journey.
 
 Documentation within the naviation tabs above is split into four distinct categories. 
 
