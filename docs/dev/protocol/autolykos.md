@@ -52,16 +52,19 @@ Having a quicker difficulty readjustment can lead to Timewarp attacks (amongst o
 Ergo is already using an epoch length of ~1.5 days (with normal block rate), not Bitcoin's two weeks. However, more epochs were considered, but the retargeting function is non-linear also so that it may adjust sooner than the linear function in certain popular scenarios. 
 
 ## Hardforking policy
-> Critical changes require a hard fork, but Ergo has many possibilities to evolve via soft forks; soft forkability is going further in comparison with Bitcoin.
 
-> In the old generation of POW, hard forks usually lead to community splits. In Ergo, miners can change parameters on the fly in their configs, and 50%+ of blocks mined within 1024 blocks epoch need to be for raising/lowering the limit of some parameter, then it will be changed by 1% in next epoch. It can be block size, computational cost, storage fee factor and many more. The above comment for the old generation doesn't mention that core developers are also 3rd parties. With Ergo`s design, when all basic assumptions are correct, the network should adapt in time to changing environment without the intervention of any trusted parties.” > - mx
+Critical changes require a hard fork, but Ergo has many possibilities to evolve via soft forks; soft forkability is going further in comparison with Bitcoin.
+
+> *In the old generation of POW, hard forks usually lead to community splits. In Ergo, miners can change parameters on the fly in their configs, and 50%+ of blocks mined within 1024 blocks epoch need to be for raising/lowering the limit of some parameter, then it will be changed by 1% in next epoch. It can be block size, computational cost, storage fee factor and many more. The above comment for the old generation doesn't mention that core developers are also 3rd parties. With Ergo`s design, when all basic assumptions are correct, the network should adapt in time to changing environment without the intervention of any trusted parties.* 
+> 
+> - mx
 
 
-Ergo is trying to avoid hard-forks. Emission, proof-of-work, basics of the transactional model and other core things should not be changed at all as any change about core parts of design means another chain. However, developers may propose hard-forks within the first 12 months if (and only if):
+Ergo wants to avoid hard-forks. Emission, proof-of-work, the basics of the transactional model and other core things should not be changed at all as any change regarding core parts of design essentially means another chain. However, developers may propose hard-forks within the first 12 months if:
 
-A hard-fork is about security fixes only. The only exception is about making the cost of particular instructions adjustable via miners voting, which was planned but not delivered in the current mainnet.
-A hard-fork is supported by 90+% of miners.
-a hard-fork is not breaking old contracts, freezing or moving any funds."
+- A hard-fork is about security fixes only. The only exception is about making the cost of particular instructions adjustable via miners voting, which was planned but not delivered in the current mainnet.
+- A hard-fork is supported by 90+% of miners.
+- A hard-fork is not breaking old contracts, freezing or moving any funds.
 
 
 ## Decentralisation 
