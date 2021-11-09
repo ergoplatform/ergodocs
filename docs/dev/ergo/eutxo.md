@@ -5,7 +5,7 @@ UTXO has many advantages over the account-based model used by Ethereum. It provi
 - Interoperability, as off-chain and sidechain protocols. One-time objects are more straightforward to work with from an off-chain point of view.
 - Transaction Cost Predictability, where the only on-chain action is validating the smart contracts. As a result, the transaction cost is significantly lower, and most importantly, the transaction cost is predictable, eliminating the need for ‘gas.’
 
-ErgoScript is built considering Bitcoin’s security and privacy and the purpose of making all kinds of complex financial contracts accessible to everyone. However, Bitcoin’s design doesn’t allow loops, and building complex smart contracts on top of it aren’t possible. ErgoScript allows for self-replication; therefore, it can be used to create Turing-Complete processes in a blockchain.
+ErgoScript is built considering Bitcoin’s security and privacy and the purpose of making all kinds of complex financial contracts accessible to everyone. However, Bitcoin’s design doesn’t allow loops, and building complex smart contracts on top of it aren’t possible. ErgoScript allows for self-replication; therefore, we can use it to create Turing-Complete processes in a blockchain.
 
 Another approach to creating smart contracts in the blockchain is the Account-Based model, like on Ethereum. Ethereum’s design facilitates smart contract opeld coins, so the unspent transaction output (UTXO) show us which private key holds which coiration by processing smart contracts as accounts. In Bitcoin, there aren’t accounts that hons. Coins are in a set of addresses represented with a single UTXO. It’s also easier to include privacy schemes in this model than the Account-Based model.
 
@@ -36,7 +36,7 @@ Charlie has 250g of dough. He breaks off 150g and gives it to Bob, keeping 100g 
 Bob breaks 20g of dough off the 150g lump he received from Charlie and combines the resulting 130g with the 75g he received from Alice. He gives the total of 205g to Dave, keeping the 20g change for himself.
 Dave now has 205g of bread dough, which used to belong to Charlie. Before Charlie owned it, 75g used to belong to Alice, while 130g belonged to Bob.
 
-In the UTXO model, ‘lumps’ of coins can be combined and divided, but they aren’t mixed together unlike bread dough. You can follow the history of funds right back to the coinbase transaction in which those coins were first mined. That’s very different to the Account model, where the balance of each account is simply changed. (You can, of course, check the blockchain to make sure the Account says what it should, but that’s not intrinsically necessary like it is with the UTXO approach.)
+In the UTXO model, ‘lumps’ of coins can be combined and divided, but they aren’t mixed together, unlike bread dough. You can follow the history of funds right back to the Coinbase transaction in which those coins were first mined. That’s very different to the Account model, where the balance of each account is simply changed. (You can, of course, check the blockchain to make sure the Account says what it should, but that’s not intrinsically necessary like it is with the UTXO approach.)
 
 ## Why UTXO?
 

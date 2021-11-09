@@ -19,5 +19,5 @@ Every message in P2P protocol has the following format:
 Notes:
 
 1. For the testnet, magic bytes are `[2, 0, 0, 1]` (in decimal). For mainnet, `[1, 0, 2, 4]` (in decimal).
-2. No `VLQ` and `ZigZag` encoding is used for message length (for historical reasons), bytes are coming in big-endian order.
+2. No `VLQ` and `ZigZag` encoding is used for message length (for historical reasons); bytes are coming in big-endian order.
 

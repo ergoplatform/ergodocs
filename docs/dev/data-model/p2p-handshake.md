@@ -2,19 +2,16 @@ Handshaking
 ===========
 
 
-To establish a connection with another peer, handshake messages exchange is needed in the first place. This document
+To establish a connection with another peer, a handshake messages exchange is needed in the first place. This document
 describes handshaking procedure and messages format. 
 
 Peer Feature
 ------------
 
-Every peer can have one or more peer features. A peer feature describes some properties of a peer. Features are embedded
- into a handshake message and remain unchanged during the connection. Features are optional by default: a peer can add 
- new ones, and if another peer is not recognizing it, the feature will be skipped. Feature format is arbitrary. Any 
- number of features can be added to the handshake, only handshake message has size limit (8 KB).
+A peer feature describes some properties of a peer. Every peer can have one or more peer features. Features are embedded into a handshake message and remain unchanged during the connection. Features are optional by default: a peer can add new ones, and if another peer is not recognizing it, The node will skip the feature. The feature format is arbitrary. Any number of features can be added to the handshake; only handshake message has a size limit (8 KB).
  
-The only feature the reference client supported before 3.3.7 is "mode feature" (describing operating regime of the peer). 
-Since 3.3.7, a new feature describing network magic and (pseudorandom) session id added 
+The only feature the reference client supported before 3.3.7 is "mode feature" (describing the operating regime of the peer). 
+Since 3.3.7, a new feature describing network magic and (pseudorandom) session-id added. 
 
 Handshake Format
 ----------------
@@ -68,5 +65,4 @@ Notes:
 Handshake Procedure
 -------------------
 
-A peer is sending a handshake message, another replies. If there's no handshake got within `handshakeTimeout`, then 
-connection is dropped. Default value for `handshakeTimeout = 30s`
+A peer is sending a handshake message, another replies. If there's no handshake got within `handshakeTimeout`, then the connection is dropped. Default value for `handshakeTimeout = 30s`

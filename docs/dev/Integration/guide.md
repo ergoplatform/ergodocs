@@ -1,13 +1,13 @@
-This guide is for helping developers integrating Ergo into exchanges, wallets, pools wallets etc.
+This guide is for helping developers integrate Ergo into exchanges, wallets, pools wallets etc.
 
 Introduction
 ------------
 
 Some quick facts useful for an integration:
 
-* like Bitcoin, a transaction in Ergo has multiple inputs and outputs. Unspent outputs are single-use entities. However, Ergo is built from scratch thus scripts and transaction format are different.
-* like in Bitcoin, there are some standard scripts in Ergo associated with addresses, e.g. P2PK addresses. There's an article on address scheme available: https://ergoplatform.org/en/blog/2019_07_24_ergo_address/
-* Ergo has inbuilt wallet API which is enough for most use-cases. API has Swagger interface (on 127.0.0.1:9053 by default in the mainnet, 127.0.0.1:9052 in the testnet) with descriptions and examples for API methods.
+* like Bitcoin, a transaction in Ergo has multiple inputs and outputs. Unspent outputs are single-use entities. However, Ergo is built from scratch; thus, scripts and transaction formats are different.
+* like in Bitcoin, there are some standard scripts in Ergo associated with addresses, e.g. P2PK addresses. There's an article on address schemes available [here](https://ergoplatform.org/en/blog/2019_07_24_ergo_address/)
+* Ergo has an inbuilt wallet API which is enough for most use-cases. API has a Swagger interface (on 127.0.0.1:9053 by default in the mainnet, 127.0.0.1:9052 in the testnet) with descriptions and examples for API methods.
 * How to set up a node: https://ergoplatform.org/en/blog/2019_12_02_how_to_setup/, https://github.com/ergoplatform/ergo/wiki/Set-up-a-full-node
 
 Please run the node with -Xmx3G flag, e.g. ```java -jar -Xmx3G ergo-4.0.4.jar --mainnet -c mainnet.conf```
@@ -26,10 +26,10 @@ Node wallet has UI available @ 127.0.0.1:9053/panel by default on the mainnet (1
 * */wallet/balances* to get wallet balance (for all the addresses) 
 * */wallet/transactions* to get wallet transactions (for all the addresses) 
 
-Doing an external wallet
+Create an external wallet.
 ========================
 
-If you are going to do wallet logic externally, you can do it with a library and also the block explorer. **Please note, you need to consider mempool transactions to avoid double-spending generation**.
+If you are going to perform your wallet logic externally, you can do so with a library and the block explorer. **Please note, you need to consider mempool transactions to avoid double-spending generation**.
 
 Available libraries are:
 
@@ -51,7 +51,7 @@ https://github.com/ergoplatform/sigma-rust/blob/d70bea875792c4e383bfdd7175433869
 Transaction assembly and signing in JavaScript
 https://github.com/ergoplatform/sigma-rust/blob/d70bea875792c4e383bfdd71754338695bdb37f8/bindings/ergo-lib-wasm/tests/test_transaction.js#L9-L69
 
-Composing transaction outside the node
+Composing transactions outside the node
 --------------------------------------
 
 To get unspent UTXOs for some address, please use transactions/boxes/byAddress/unspent Explorer API method: https://api.ergoplatform.com/transactions/boxes/byAddress/unspent/9gAE5e454UT5s3NB1625u1LynQYPS2XzzBEK4xumvSZdqnXT35M . 
@@ -61,14 +61,14 @@ You need to exclude UTXOs spent in the mempool! Use /transactions/unconfirmed/by
 Broadcasting transaction
 ------------------------
 
-To broadcast a transaction made outside the node, the easiest way is to serialize it into JSON, in Java it could be like:
+To broadcast a transaction made outside the node, the easiest way is to serialize it into JSON; in Java it could be like:
 
 ```
    Json json = JsonCodecsWrapper.ergoLikeTransactionEncoder().apply(tx);
    System.out.println(json.toString());
 ```
 
-and then send this json via POST request to the public explorer *https://api.ergoplatform.com/api/v0/transactions/send*, your private explorer or a node with open API (POST to http://{node_ip}:9053/transactions )
+and then send this JSON via a POST request to the public Explorer *https://api.ergoplatform.com/api/v0/transactions/send*, your private Explorer or a node with open API (POST to http://{node_ip}:9053/transactions )
 
 Address generation
 ------------------
@@ -109,6 +109,6 @@ scorex {
 }
 ```
 
-and then the node will CPU-mine its own chain. 
+Then the node will CPU-mine its own chain. 
 
 Any suggestions for improvements are welcomed! Please send them to team@ergoplatform.org or #development channel in Discord https://discord.gg/kj7s7nb

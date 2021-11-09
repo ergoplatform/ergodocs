@@ -1,19 +1,10 @@
-> Participate in community discussions around soft-fork! [Ergo Emission: details, retargeting via a soft-fork](https://www.ergoforum.org/t/ergo-emission-details-retargeting-via-a-soft-fork/2778)
+> Participate in community discussions - [Ergo Emission: details, retargeting via a soft-fork](https://www.ergoforum.org/t/ergo-emission-details-retargeting-via-a-soft-fork/2778)
 # Autolykos
 
 Security of  Proof-of-Work blockchains relies on multiple miners trying to produce new blocks by participating in a *PoW puzzle lottery*,  and the network is secure if the majority of them are honest.  However, the reality becomes much more complicated than the original one-CPU-one-vote idea from the Bitcoin whitepaper\.
 
 
-## non-outsourceability
-The first threat to Decentralisation came from mining pools – miners tend to unite in mining pools. Regardless of the PoW algorithm, the number of pools controlling more than 50% of computational power is usually relatively small:  4 pools in Bitcoin, 2 in Ethereum, 3 in ZCash, etc.  This problem led to the notion of non-outsourceable puzzles. 
-
-These are the puzzles constructed in such a way that if a mining pool outsources the puzzle to a miner, the miner can recover the pool's private key and steal the reward with a non-negligible probability.  However, the existing solutions either have too large a solution size (kilobyte is already on the edge of acceptability for distributed ledgers) or very specific and can not be modified or extended in any way without breaking non-outsource-ability. The second threat to cryptocurrencies Decentralisation is that ASIC-equipped miners can find PoW solutions orders of magnitude faster and more efficiently than miners equipped with the commodity hardware, to reduce the disparity between the ASICs and regular hardware memory-bound computations were proposed. 
-
-The most interesting practical examples are two asymmetric memory-hard PoW schemes that require significantly less memory to verify a solution than to find it. Although ASICs already exist for both of them,  they remain the only asymmetric memory-hard PoW algorithms in use. 
-
-- [Overview of Ergo PoW called Autolykos](https://www.ergoforum.org/t/overview-of-ergo-pow-called-autolykos/)
-- [(2019) Autolykos:  The Ergo Platform PoW Puzzle](https://ergoplatform.org/docs/ErgoPow.pdf)
-
+## Non-Outsourceability
 
 Autolykos v1 originally had non-outsourcability built-in. However, it became apparent that it's impossible to prevent pools with smart contracts, so they turned it off so that not only larger players could take advantage of the loophole. Ergo is now focusing on memory hardness in an attempt to keep mining as fair as possible, which should help prevent ASICs mining at least. There are also some improvements for pooling, e.g. Stratum 2 protocol.
 
@@ -21,7 +12,7 @@ Autolykos v1 originally had non-outsourcability built-in. However, it became app
 
 It's also discussed here on 'Unblocked with Robert Kornacki' [(14:45)](https://www.youtube.com/watch?v=2sbTMrQwWOw&feature=youtu.be)
 
-**V2**
+## V2
 
 Autolykos version two follows Autolykos v.1, but with certain modifications made:
 
@@ -47,9 +38,9 @@ Also, table size (N value) is growing with time as follows. Until block `614,400
 
 
 
-## Difficulty
+## Difficulty Adjustment
 
-Ergo uses the **linear least square method** over 8 epoch's (each epoch is 1024 blocks x 2 minutes). 
+Ergo uses the **linear least square method** over 8 epoch's (each epoch is 1024 blocks x 2 minutes) described in [this paper](https://eprint.iacr.org/2017/731.pdf). 
 
 
 Autolykos will adjust slowly yes, but it is also helping to prevent from **adversarial** hopping.
@@ -59,6 +50,18 @@ Autolykos will adjust slowly yes, but it is also helping to prevent from **adver
 Having a quicker difficulty readjustment can lead to Timewarp attacks (amongst others).
 
 Ergo is already using epoch length of ~1.5 days (with normal block rate), not Bitcoin's 2 weeks. However, more epochs considered, but retargeting function is non-linear also, so may adjust sooner than linear function in certain popular scenarios. 
+
+## Hardforking policy
+> Critical changes require hardfork, but Ergo has a lot of possibilities to evolve via soft forks, soft forkability is going further in comparison with Bitcoin.
+
+In the old generation of POW, hard forks usually lead to community splits. In Ergo, miners can change parameters on the fly in their configs and 50%+ of blocks mined within 1024 blocks epoch need to be for raising/lowering the limit of some parameter, then it will be changed by 1% in next epoch. It can be block size, computational cost, storage fee factor and many more. Above comment for the old generation doesn't mention that core developers are 3rd party also. With Ergo`s design, when all basic assumptions are correct, network should adapt in time to changing environment without the intervention of any trusted parties.” - mx
+
+
+Ergo is trying to avoid hard-forks. Emission, proof-of-work, basics of transactional model and other core things should not be changed at all as any change about core parts of design means another chain. However, developers may propose hard-forks within first 12 months if (and only if):
+
+a hard-fork is about security fixes only. The only exception is about making cost of particular instructions adjustable via miners voting, which was planned but not delivered in the current mainnet.
+a hard-fork is supported by 90+% of miners.
+a hard-fork is not breaking old contracts, freezing or moving any funds."
 
 
 ## Decentralisation 
@@ -115,6 +118,7 @@ However, new blockchains also tend to absorb more and more features, and they ar
 ## Test Vectors for Solution Verification
 ```
 Test Vectors - Ergo:
+credit: Wolf9466#9466 on Discord
 
 Height = 569806 (0x8B1CE)
 Item count = 67108864 (0x4000000)
@@ -136,4 +140,3 @@ Blake #2: 0x6dbc710c2fb6e975d93af456686617b97595a0cec9dd22d57b8a7176d3f470b175ec
 Result = 0x0c3b54f29c8ac1a407f83cd09f3d61bc32996a3d58a7d9fe9fe0e0a08572e367f96b164cc3254ce5379622e007de97c76b1232030d899e0da83bc82e00000000
 ```
 
-> credit: Wolf9466#9466 on Discord
