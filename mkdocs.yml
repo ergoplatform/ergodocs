@@ -54,11 +54,11 @@ nav:
     - Getting Started: 
       - Where to start?: dev/start/start.md
       - The Ergo Protocol: dev/ergo/protocol.md
+      - Autolykos: dev/protocol/autolykos.md
+      - Storage Rent: dev/protocol/rent.md
       - Resources: dev/start/resources.md
     - Protocol:
       - UTXO State: dev/protocol/utxo-state.md
-      - Autolykos: dev/protocol/autolykos.md
-      - Storage Rent: dev/protocol/rent.md
     - Data Model:
       - Transactions: dev/protocol/transaction.md
       - Box: dev/data-model/box.md
