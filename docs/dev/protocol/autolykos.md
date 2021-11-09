@@ -1,12 +1,12 @@
 > Participate in community discussions - [Ergo Emission: details, retargeting via a soft-fork](https://www.ergoforum.org/t/ergo-emission-details-retargeting-via-a-soft-fork/2778)
 # Autolykos
 
-Security of  Proof-of-Work blockchains relies on multiple miners trying to produce new blocks by participating in a *PoW puzzle lottery*,  and the network is secure if the majority of them are honest.  However, the reality becomes much more complicated than the original one-CPU-one-vote idea from the Bitcoin whitepaper\.
+Security of  Proof-of-Work blockchains relies on multiple miners trying to produce new blocks by participating in a *PoW puzzle lottery*. The network is secure if the majority of them are honest.  However, the reality becomes much more complicated than the original one-CPU-one-vote idea from the Bitcoin whitepaper\.
 
 
 ## Non-Outsourceability
 
-Autolykos v1 originally had non-outsourcability built-in. However, it became apparent that it's impossible to prevent pools with smart contracts, so they turned it off so that not only larger players could take advantage of the loophole. Ergo is now focusing on memory hardness in an attempt to keep mining as fair as possible, which should help prevent ASICs mining at least. There are also some improvements for pooling, e.g. Stratum 2 protocol.
+Autolykos v1 originally had non-outsourcability built-in. However, it became apparent that it's impossible to prevent pools with smart contracts, so they turned it off so that larger players could not take advantage of the loophole. Ergo is now focusing on memory hardness to keep mining as fair as possible, which should help prevent ASICs mining at least. There are also some improvements for pooling, e.g. Stratum 2 protocol.
 
 > "Bypassing Non-Outsourceable Proof-of-Work Schemes Using Collateralized Smart Contracts" https://ia.cr/2020/044 was presented by Alex Chepurnoy at the WTSC workshop associated with Financial Cryptography and Data Security 2020 in Malaysia.
 
@@ -23,7 +23,7 @@ Autolykos version two follows Autolykos v.1, but with certain modifications made
 
 **Basic Ideas:**
 
-- Like Autlykos-1, based on the k-sum problem, so a miner needs to find `k (k=32)` out of `N (2^n = 2^26)` elements, and the hash of their sum must be less than the target value (inverse of the difficulty)
+- Like Autlykos-1, based on the k-sum problem, so a miner needs to find `k (k=32)` out of `N (2^n = 2^26)` elements and the hash of their sum must be less than the target value (inverse of the difficulty)
 - k indexes are pseudorandom values derived from block candidate and nonce
 - N elements are derived from block height and constants, unlike Autolykos v.1, so miners can recalculate block candidates quickly now (so only indexes are depending on them)
 - Indexes calculation also involving the same table (which elements are last 31 bytes of `H(i | | h | | M )`, where i is in [0, N), `h` is block height, M is padding to slow down hash calculation (8kb of constant data).
@@ -43,24 +43,24 @@ Also, table size (N value) is growing with time as follows. Until block `614,400
 Ergo uses the **linear least square method** over 8 epoch's (each epoch is 1024 blocks x 2 minutes) described in [this paper](https://eprint.iacr.org/2017/731.pdf). 
 
 
-Autolykos will adjust slowly yes, but it is also helping to prevent from **adversarial** hopping.
+Autolykos will adjust slowly, yes, but it is also helping to prevent **adversarial** hopping.
 
 **Can it be quicker?**
 
 Having a quicker difficulty readjustment can lead to Timewarp attacks (amongst others).
 
-Ergo is already using epoch length of ~1.5 days (with normal block rate), not Bitcoin's 2 weeks. However, more epochs considered, but retargeting function is non-linear also, so may adjust sooner than linear function in certain popular scenarios. 
+Ergo is already using an epoch length of ~1.5 days (with normal block rate), not Bitcoin's two weeks. However, more epochs were considered, but the retargeting function is non-linear also so that it may adjust sooner than the linear function in certain popular scenarios. 
 
 ## Hardforking policy
-> Critical changes require hardfork, but Ergo has a lot of possibilities to evolve via soft forks, soft forkability is going further in comparison with Bitcoin.
+> Critical changes require a hard fork, but Ergo has many possibilities to evolve via soft forks; soft forkability is going further in comparison with Bitcoin.
 
-In the old generation of POW, hard forks usually lead to community splits. In Ergo, miners can change parameters on the fly in their configs and 50%+ of blocks mined within 1024 blocks epoch need to be for raising/lowering the limit of some parameter, then it will be changed by 1% in next epoch. It can be block size, computational cost, storage fee factor and many more. Above comment for the old generation doesn't mention that core developers are 3rd party also. With Ergo`s design, when all basic assumptions are correct, network should adapt in time to changing environment without the intervention of any trusted parties.” - mx
+> In the old generation of POW, hard forks usually lead to community splits. In Ergo, miners can change parameters on the fly in their configs, and 50%+ of blocks mined within 1024 blocks epoch need to be for raising/lowering the limit of some parameter, then it will be changed by 1% in next epoch. It can be block size, computational cost, storage fee factor and many more. The above comment for the old generation doesn't mention that core developers are also 3rd parties. With Ergo`s design, when all basic assumptions are correct, the network should adapt in time to changing environment without the intervention of any trusted parties.” > - mx
 
 
-Ergo is trying to avoid hard-forks. Emission, proof-of-work, basics of transactional model and other core things should not be changed at all as any change about core parts of design means another chain. However, developers may propose hard-forks within first 12 months if (and only if):
+Ergo is trying to avoid hard-forks. Emission, proof-of-work, basics of the transactional model and other core things should not be changed at all as any change about core parts of design means another chain. However, developers may propose hard-forks within the first 12 months if (and only if):
 
-a hard-fork is about security fixes only. The only exception is about making cost of particular instructions adjustable via miners voting, which was planned but not delivered in the current mainnet.
-a hard-fork is supported by 90+% of miners.
+A hard-fork is about security fixes only. The only exception is about making the cost of particular instructions adjustable via miners voting, which was planned but not delivered in the current mainnet.
+A hard-fork is supported by 90+% of miners.
 a hard-fork is not breaking old contracts, freezing or moving any funds."
 
 
@@ -76,7 +76,7 @@ Is it okay when 90% of mining power in Bitcoin [can gather in one room](https://
 - Can we summarize all the issues with Decentralisation? 
 - Can we cover most of the issues with technical means?
 
-Decentralisation is about many issues lying in many fields, of technical, social, and hybrid kinds. Researchers and developers are trying to find technical solutions, preferably elegant and efficient. However, for many issues such solutions are not known; thus, social solutions are also needed. 
+Decentralisation is about many issues lying in many fields, of technical, social, and hybrid kinds. Researchers and developers are trying to find technical solutions, preferably elegant and efficient. However, for many issues, such solutions are not known; thus, social solutions are also needed. 
 
 ### 51% Attacks
 
@@ -84,7 +84,7 @@ Mining pools offer a buffer against such network attacks as the hash rate is dis
 
 Ergo's memory-hardened aspect also makes this vector of attack more expensive as there is no ASIC support to rent. With the collective rentable rigs at the moment, this isn't a viable path to a 51% attack. In theory, someone could build a massive GPU farm to try to launch such an attack. If a bad actor can rent a warehouse of ASIC and mine on a small chain with 51% attacks are a viable option... if there is an offramp. 
 
-This attack is usually performed for-profit and results in massive dumping on an exchange as it is occurring. Meaning the attacker will dump tokens on an exchange than "double-spend" them back into their wallet. The current exchange situation doesn't provide the liquidity for a viable offramp. The rentable ASIC support isn't an option. So is it possible, in theory, yes, practical or likely? I don't think so at all.
+This attack is usually performed for profit and results in massive dumping on an exchange as it is occurring. Meaning the attacker will dump tokens on an exchange than "double-spend" them back into their wallet. The current exchange situation doesn't provide the liquidity for a viable offramp. The rentable ASIC support isn't an option. So is it possible, in theory, yes, practical or likely? I don't think so at all.
 
 Ethereum classic is perhaps a bad example, as it shares the same mining algorithm as Eth. One could buy more than 100% current hash rate of eth classic on NiceHash. It's not the same case for Ergo. Ergo also believes in the 'Good Miner' principle; in the case of Bitcoin - it was a good thing 51% existed. 
 
@@ -102,12 +102,11 @@ As a possible outcome, non-outsourceable mining schemes can prevent centralized 
 
 As an example where social Decentralisation issues meet the Decentralisation of mining, sometimes developers of 
 Proof-of-Work is introducing hard-forks to make a Proof-of-Work algorithm GPU-friendly again once ASICs are going to 
-dominate in the mining market for the coin; however, it is always not quite clear why legit activity is banned
- and why developers (along with some users) can do hard-fork for this particular reason. 
+dominate in the mining market for the coin; however, it is always not quite clear why legitimate activity is banned and why developers (along with some users) can do hard-fork for this particular reason. 
 
 ### Decentralisation of Verification
 
-Decentralisation of verification is about the possibility to check the validity of blockchain history. Such check provides confidence that nothing bad (i.e. not conforming to a protocol) was injected into the blockchain and thus gave a user  a right to reject malicious chain even if it has absorbed more work than alternatives. There were many talks about
+Decentralisation of verification is about the possibility to check the validity of blockchain history. Such a check provides confidence that nothing bad (i.e. not conforming to a protocol) was injected into the blockchain. Thus, it gave a user a right to reject malicious chain even if it has absorbed more work than alternatives. There were many talks about
 such the right in the Bitcoin community when it was partly hot about User-Activated Soft Fork (UASF) idea, and  a recent article ["Who secures Bitcoin?"](https://medium.com/@BitcoinErrorLog/who-secures-bitcoin-95b19bbcda3c) is summarizing this way of thinking well. 
 
 If verification can be done in reasonable time only by an entity able to spend millions on renting a data centre, a network is not decentralized. Ideally, it should be possible to check the integrity of the whole blockchain on commodity hardware, like a decent laptop.
