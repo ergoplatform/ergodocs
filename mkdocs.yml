@@ -70,11 +70,11 @@ nav:
       - Network Messages: dev/data-model/p2p-handshake.md
       - Modifiers Exchange: dev/data-model/p2p-handshake.md
     - Libraries:
-      - AppKit: dev/lib/appkit.md
-      - ErgoTool: dev/lib/ergotool.md
-      - Kiosk: dev/lib/kiosk.md
-      - JDE: dev/lib/jde.md
-      - Assembler: dev/lib/assembler.md
+      - AppKit: dev/stack/appkit.md
+      - ErgoTool: dev/stack/ergotool.md
+      - Kiosk: dev/stack/kiosk.md
+      - JDE: dev/stack/jde.md
+      - Assembler: dev/stack/assembler.md
     - Smart Contracts:
       - Introduction: dev/scs/basics.md
       - ErgoScript: dev/scs/ergoscript.md
