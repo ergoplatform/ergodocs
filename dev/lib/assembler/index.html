@@ -9,14 +9,14 @@
       
       
       
-        <link rel="canonical" href="https://ergodocs.rtfd.io/dev/stack/transactions/">
+        <link rel="canonical" href="https://ergodocs.rtfd.io/dev/lib/assembler/">
       
       <link rel="icon" href="../../../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.4">
     
     
       
-        <title>Transactions - ErgoDocs</title>
+        <title>Assembler - ErgoDocs</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tx-assembler-service-bypassing-node-requirement-for-dapps" class="md-skip">
+        <a href="#the-problem" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Transactions
+              Assembler
             
           </span>
         </div>
@@ -222,7 +222,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../node/docs/" class="md-tabs__link">
+      <a href="../../../node/run/" class="md-tabs__link">
         Node
       </a>
     </li>
@@ -241,7 +241,7 @@
   
     <li class="md-tabs__item">
       <a href="../../../uses/apps/" class="md-tabs__link">
-        Uses
+        Applications
       </a>
     </li>
   
@@ -346,7 +346,7 @@
   
     <li class="md-nav__item">
       <a href="../../../About/format/" class="md-nav__link">
-        About
+        Format
       </a>
     </li>
   
@@ -473,6 +473,48 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../protocol/autolykos/" class="md-nav__link">
+        Autolykos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../protocol/rent/" class="md-nav__link">
+        Storage Rent
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../start/resources/" class="md-nav__link">
+        Resources
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -522,20 +564,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../protocol/autolykos/" class="md-nav__link">
-        Autolykos
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -577,6 +605,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../protocol/transaction/" class="md-nav__link">
+        Transactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../data-model/box/" class="md-nav__link">
         Box
       </a>
@@ -591,8 +633,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../protocol/address/" class="md-nav__link">
-        Addresses
+      <a href="../../data-model/block/" class="md-nav__link">
+        Block
       </a>
     </li>
   
@@ -605,8 +647,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../protocol/transaction/" class="md-nav__link">
-        Transaction
+      <a href="../../protocol/address/" class="md-nav__link">
+        Addresses
       </a>
     </li>
   
@@ -655,7 +697,7 @@
   
     <li class="md-nav__item">
       <a href="../../data-model/p2p-protocol/" class="md-nav__link">
-        Protocol Overview
+        P2P Protocol Overview
       </a>
     </li>
   
@@ -801,20 +843,6 @@
               
   
   
-  
-    <li class="md-nav__item">
-      <a href="../front-end/" class="md-nav__link">
-        Frontend
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
     
   
   
@@ -825,12 +853,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Transactions
+          Assembler
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Transactions
+        Assembler
       </a>
       
         
@@ -846,71 +874,58 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#tx-assembler-service-bypassing-node-requirement-for-dapps" class="md-nav__link">
-    Tx Assembler Service - Bypassing Node Requirement For dApps
-  </a>
-  
-    <nav class="md-nav" aria-label="Tx Assembler Service - Bypassing Node Requirement For dApps">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#the-problem" class="md-nav__link">
     The Problem
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#a-solution" class="md-nav__link">
     A Solution
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#trusting-issues" class="md-nav__link">
     Trusting Issues
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#service-provider-incentives" class="md-nav__link">
     Service Provider Incentives
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#motivation" class="md-nav__link">
     Motivation
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#documentation" class="md-nav__link">
     Documentation
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#example-script" class="md-nav__link">
     Example Script
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#using-with-kioskwallet" class="md-nav__link">
     Using with KioskWallet
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -964,6 +979,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../scs/basics/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../scs/ergoscript/" class="md-nav__link">
         ErgoScript
       </a>
@@ -980,6 +1009,62 @@
     <li class="md-nav__item">
       <a href="../../scs/flowcards/" class="md-nav__link">
         FlowCards
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../protocol/atomic/" class="md-nav__link">
+        Atomic Swaps
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../protocol/nipopow/" class="md-nav__link">
+        NIPoPoWS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scs/sigma/" class="md-nav__link">
+        Sigma Protocols
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scs/multi/" class="md-nav__link">
+        Multi-Stage Contracts
       </a>
     </li>
   
@@ -1110,8 +1195,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../node/docs/" class="md-nav__link">
-        Docs
+      <a href="../../../node/run/" class="md-nav__link">
+        First Run
       </a>
     </li>
   
@@ -1138,8 +1223,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../node/run/" class="md-nav__link">
-        First Run
+      <a href="../../../node/docs/" class="md-nav__link">
+        Docs
       </a>
     </li>
   
@@ -1344,14 +1429,14 @@
       
       
         <label class="md-nav__link" for="__nav_4">
-          Uses
+          Applications
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Uses" data-md-level="1">
+      <nav class="md-nav" aria-label="Applications" data-md-level="1">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
-          Uses
+          Applications
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1362,7 +1447,7 @@
   
     <li class="md-nav__item">
       <a href="../../../uses/apps/" class="md-nav__link">
-        dApps
+        Use Cases
       </a>
     </li>
   
@@ -1400,117 +1485,12 @@
       
       
         <label class="md-nav__link" for="__nav_4_3">
-          Features
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Features" data-md-level="2">
-        <label class="md-nav__title" for="__nav_4_3">
-          <span class="md-nav__icon md-icon"></span>
-          Features
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../protocol/atomic/" class="md-nav__link">
-        Atomic Swaps
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../protocol/rent/" class="md-nav__link">
-        Storage Rent
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../protocol/nipopow/" class="md-nav__link">
-        NIPoPoWS
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../scs/sigma/" class="md-nav__link">
-        Sigma Protocols
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../scs/multi/" class="md-nav__link">
-        Multi-Stage Contracts
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" data-md-state="indeterminate" type="checkbox" id="__nav_4_4" checked>
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_4_4">
           Examples
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Examples" data-md-level="2">
-        <label class="md-nav__title" for="__nav_4_4">
+        <label class="md-nav__title" for="__nav_4_3">
           <span class="md-nav__icon md-icon"></span>
           Examples
         </label>
@@ -1707,71 +1687,58 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#tx-assembler-service-bypassing-node-requirement-for-dapps" class="md-nav__link">
-    Tx Assembler Service - Bypassing Node Requirement For dApps
-  </a>
-  
-    <nav class="md-nav" aria-label="Tx Assembler Service - Bypassing Node Requirement For dApps">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#the-problem" class="md-nav__link">
     The Problem
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#a-solution" class="md-nav__link">
     A Solution
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#trusting-issues" class="md-nav__link">
     Trusting Issues
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#service-provider-incentives" class="md-nav__link">
     Service Provider Incentives
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#motivation" class="md-nav__link">
     Motivation
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#documentation" class="md-nav__link">
     Documentation
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#example-script" class="md-nav__link">
     Example Script
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#using-with-kioskwallet" class="md-nav__link">
     Using with KioskWallet
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1787,14 +1754,14 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/glasgowm148/ergodocs/edit/master/docs/dev/stack/transactions.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/glasgowm148/ergodocs/edit/master/docs/dev/lib/assembler.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Transactions</h1>
+                  <h1>Assembler</h1>
                 
-                <h2 id="tx-assembler-service-bypassing-node-requirement-for-dapps">Tx Assembler Service - Bypassing Node Requirement For dApps</h2>
+                <p>The transaction assembler service allows you to bypass the node requirements for dApps. </p>
 <h3 id="the-problem">The Problem</h3>
 <p>Currently, with libraries like ergo-appkit, ergo-lib (aka sigma-rust), and ergo-ts, development on Ergo has become a lot more convenient and is becoming easier with further developments of ergo-lib.
 However, there are some big barriers for dApps to be extensively used by ordinary users. One of the main ones is that users can't use their assets to participate in dApps because current wallets don't support some key features needed by dApps like:
@@ -2010,8 +1977,6 @@ For further details, please refer to the source code <a href="https://github.com
 </code></pre>
 <h3 id="using-with-kioskwallet">Using with KioskWallet</h3>
 <p>The above script was used to automatically generate <a href="https://explorer.ergoplatform.com/en/transactions/da441606b7933de8e87bbd439b4fbe1888c1403f58682c5bcddcbc488ee99773">this transaction</a> using <a href="https://kioskweb.org/session/#kiosk.Wallet">KioskWallet</a>.</p>
-<p>Please refer to the screenshot for details
-<img alt="Screenshot from 2020-11-21 03-50-22|413x499" src="upload://6OpuypXuTAUh25ZciuQ5hWVi3wv.png" /></p>
                 
               
               
@@ -2031,7 +1996,7 @@ For further details, please refer to the source code <a href="https://github.com
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../front-end/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Frontend" rel="prev">
+        <a href="../jde/" class="md-footer__link md-footer__link--prev" aria-label="Previous: JDE" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -2040,20 +2005,20 @@ For further details, please refer to the source code <a href="https://github.com
               <span class="md-footer__direction">
                 Previous
               </span>
-              Frontend
+              JDE
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../scs/ergoscript/" class="md-footer__link md-footer__link--next" aria-label="Next: ErgoScript" rel="next">
+        <a href="../../scs/basics/" class="md-footer__link md-footer__link--next" aria-label="Next: Introduction" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              ErgoScript
+              Introduction
             </div>
           </div>
           <div class="md-footer__button md-icon">
