@@ -106,18 +106,34 @@ nav:
       - NiPoPoWS: node/nipopow.md
   - Applications:
     - Use Cases: uses/apps.md
-    - Zero-Knowledge: uses/zk.md      
-    - Examples:
-      - Use Cases: uses/use.md
+    - Live:
+      - Decentralised Exchanges: uses/dex.md
+      - Stablecoins: uses/stablecoins.md
+      - Oracles: uses/oracles.md
+      - NFTs: uses/nft.md
+    - In Development:
+      - ICOs: uses/ico.md
+      - Index Coins: uses/index_coins.md
+      - Lending: uses/lending.md
       - CrowdFunding: dev/scs/crowdfunding.md
+      - Zero-Knowledge: uses/zk.md      
+      - Email Client for Blocked Internet: uses/blocked_web.md
+    - Planned:
+      - Asset Tokenisation: uses/tokenisation.md
+      - DAO: uses/dao.md
+      - Buy Back Guarantees: uses/dex-buyback.md
+      - LETS: uses/lets.md
+    - Further Ideas:
+      - CDBC: uses/cdbc.md
+      - Lotteries: uses/lottery.md
+      - Insurance: uses/insurance.md
+      - Derivatives: uses/deriv.md
+      - Yield Aggregation: uses/yield.md
       - Micro Credit: dev/scs/microcredit.md
       - Math Fun: uses/math_fun.md
-      - Email Client for Blocked Internet: uses/blocked_web.md
-      - Collateral Mining: uses/collateral-mining.md
-      - Lottery: uses/lottery.md
-      - Buy Back: uses/dex-buyback.md
-      - Perpetual Tokens: uses/perpetual.md
       - PoW Tokens: uses/PoW_tokens.md
+      - Collateral Mining: uses/collateral-mining.md
+      - Perpetual Tokens: uses/perpetual.md
       - Bonding Curve: uses/PoW_tokens.md
 
       

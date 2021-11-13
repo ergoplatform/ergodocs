@@ -1,3 +1,10 @@
+## Local Exchange Trading Systems
+
+- [A Local Exchange Trading System On Top Of Ergo](https://github.com/ergoplatform/ergo/wiki/A-Local-Exchange-Trading-System-On-Top-Of-Ergo)
+- [A Trustless Local Exchange Trading System](https://github.com/ergoplatform/ergo/wiki/A-Trustless-Local-Exchange-Trading-System)
+- [LETS start the discussion](https://ergoplatform.org/en/blog/2021-07-01-lets-start-the-discussion/)
+
+
 ## LETS
 
 A local exchange trading system --- or ‘LETS’ for short --- facilitates exchange between members by providing a local currency and a directory of offers and needs. LETS allows people to create value within their community, and barter collectively - exchanging their skills and services in return for skills and services they would have otherwise paid for. 
