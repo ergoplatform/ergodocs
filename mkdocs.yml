@@ -92,6 +92,7 @@ nav:
   - Node:
     - Getting Started: 
       - First Run: node/run.md
+      - Swagger API: node/swagger.md
       - Config: node/node-config.md
       - Docs: node/docs.md
       - Withdraw: node/withdraw.md
