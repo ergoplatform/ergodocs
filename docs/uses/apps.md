@@ -1,5 +1,5 @@
 
-Ergo Blockchain is Layer 1 Protocol for powerful Decentralized Finance Contracts that builds advanced cryptographic features and radically new DeFi functionality on the rock-solid foundations laid by a decade of blockchain theory and development. The Proof of Work consensus algorithm and underlying UTxO model enable robust scalability and security. 
+Ergo Blockchain is Layer 1 Protocol enabling powerful Decentralized Finance Contracts that build on advanced cryptographic features and radically new DeFi functionality ontop of the rock-solid foundations laid by a decade of blockchain theory and development. 
 
 
 ## **Use** Cases **of Ergo**
