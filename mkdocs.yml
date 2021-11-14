@@ -46,7 +46,7 @@ nav:
   - Home:
     - Welcome: index.md
     - Contributing: About/format.md
-    - FAQ: About/faq.md
+    - General FAQ: About/faq.md
   - Developers:
     - Getting Started: 
       - Where to start?: dev/start/start.md
@@ -71,10 +71,11 @@ nav:
       - Sigma Protocols: dev/scs/sigma.md
       - Multi-Stage Contracts: dev/scs/multi.md 
     - P2P:
-      - P2P Protocol Overview: dev/data-model/p2p-protocol.md
-      - Handshaking: dev/data-model/p2p-handshake.md
-      - Network Messages: dev/data-model/p2p-handshake.md
-      - Modifiers Exchange: dev/data-model/p2p-handshake.md
+      - P2P Protocol Overview: dev/p2p/p2p-protocol.md
+      - Handshaking: dev/p2p/p2p-handshake.md
+      - Network Messages: dev/p2p/network.md
+      - Modifiers Exchange: dev/p2p/modifiers.md
+      - BlockP2P: dev/p2p/BlockP2P.md
     - Libraries:
       - AppKit: dev/stack/appkit.md
       - ErgoTool: dev/stack/ergotool.md
@@ -93,9 +94,9 @@ nav:
     - Getting Started: 
       - First Run: node/run.md
       - Swagger API: node/swagger.md
-      - Config: node/node-config.md
-      - Docs: node/docs.md
-      - Withdraw: node/withdraw.md
+      #- Config: node/node-config.md
+      #- Docs: node/docs.md
+      #- Withdraw: node/withdraw.md
     - Overview: 
       - Architecture: node/architecture.md
       - API: node/api.md
@@ -106,8 +107,7 @@ nav:
       - NiPoPoWS: node/nipopow.md
   - Applications:
     - Use Cases: uses/apps.md
-    - Events: About/events.md
-    - Live:
+    - Live dApps:
       - Decentralised Exchanges: uses/dex.md
       - Stablecoins: uses/stablecoins.md
       - Oracles: uses/oracles.md
@@ -137,6 +137,8 @@ nav:
       - Collateral Mining: uses/collateral-mining.md
       - Perpetual Tokens: uses/perpetual.md
       - Bonding Curve: uses/bonding.md
+    - Previous Events: About/events.md
+
 
       
 

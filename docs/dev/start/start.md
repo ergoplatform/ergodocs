@@ -2,9 +2,9 @@
 
 A typical dApp ontop Ergo has the following structure.
 
-- [**Front-end**](../lib/front-end.md) | The user-interface built in your framework of choice.
+- [**Front-end**](/docs/dev/stack/front-end.md) | The user-interface built in your framework of choice.
 - **REST** | A *REST*ful API to interact with the backend
-- [**Backend**](../lib/back-end.md) | Performs the off-chain logic
+- [**Backend**](/docs/dev/stack/back-end.md) | Performs the off-chain logic
 - [**Contract**](#ergoscript) | Where the magic happens, the on-chain validation of the off-chain logic.
 
 ## Contributing

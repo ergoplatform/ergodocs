@@ -1,10 +1,9 @@
 # Welcome to ErgoDocs!
 
-- [Developers](dev/start/start.md)
-- [Node](node/run.md)
-- [Applications](uses/apps.md)
+Best practices dictate that the majority of the documentation should be kept on the assosciated repositories themselves. this site aims to serve as a directory that guides the user on their development journey.
 
-Read more about the [format](About/format.md) used on this website.
+
+Read more about [contributing](About/format.md).
 
 ## Other resources
 - [awesome-ergo](https://github.com/ergoplatform/awesome-ergo)
