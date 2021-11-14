@@ -1,16 +1,3 @@
-# Wallets
-
-## Linux
-## Mac
-## Windows
-
-`HOME` environment variable is not often set in Windows. Please replace `${HOME}` with `${HOMEPATH}` or `${APPDATA}` in your configuration file.
-You should also remember that environment variables names are case sensitive in Windows.
-
-## Pi
-
-- [How to setup an Ergo node on a Raspberry Pi](https://youtu.be/yDqhlgz0244)
-
 
 ## Node Config File
 
@@ -270,3 +257,17 @@ Use `api-key-hash` parameter to set the hash of your API key. The API key is use
 Parameter `corsAllowedOrigin` could be used to enable or disable CORS support in REST API.
 CORS allows to safely resolve queries to other domains outside the one running the node.
 It's necessary for Swagger and Lite client. You can read about it [here](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing).
+
+# Wallets
+
+## Linux
+## Mac
+## Windows
+
+`HOME` environment variable is not often set in Windows. Please replace `${HOME}` with `${HOMEPATH}` or `${APPDATA}` in your configuration file.
+You should also remember that environment variables names are case sensitive in Windows.
+
+## Pi
+
+- [How to setup an Ergo node on a Raspberry Pi](https://youtu.be/yDqhlgz0244)
+

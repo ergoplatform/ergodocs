@@ -33,10 +33,6 @@ The main limitation of this approach is that only one unspent collateral box sho
 
 Another small point is that the pool reward could be adjusted to be a bit under 67.5 ERG to provide additional incentives, though I would note that the miner already gets to keep all the fees if they mine a block.
 
-This collateral mechanism was proposed here by @scalahub back in July 2019!
-
-https://www.ergoforum.org/t/creating-an-ergo-mining-pool/42
-
-The paper by @kushti and @scalahub is [here](https://eprint.iacr.org/2020/044).
-
-Full discussion [here](https://www.ergoforum.org/t/collateral-script-for-pool-mining/200)
+- This collateral mechanism was proposed [here](https://www.ergoforum.org/t/creating-an-ergo-mining-pool/42) by @scalahub back in July 2019!
+- The paper by @kushti and @scalahub is [here](https://eprint.iacr.org/2020/044).
+- Full discussion [here](https://www.ergoforum.org/t/collateral-script-for-pool-mining/200)

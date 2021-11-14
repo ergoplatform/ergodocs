@@ -1,3 +1,5 @@
-## Derivatives
+# Derivatives
 
 Besides buying and selling the tokens of a protocol, traders also want to monetize via various strategies such as options or leveraged future contracts. In traditional finance, these tools are provided by brokerage firms and in the crypto world by centralized exchanges. However, this can turn out to be very harmful towards traders by making exchanges big casinos who can see the player’s hands. That’s why in decentralized finance, there is also an alternative as options or derivatives trading smart contract platform. [Synthetix](https://www.synthetix.io/) is an example of leveraged assets trading platform. The platform token creates liquidity for the traders who want to take leveraged positions. [Hegic](https://www.hegic.co/) on the other hand provides an options trading platform for traders who wants to bet on call-put options via smart contracts. These are just two examples of derivatives protocols on Ethereum. Ergo Blockchain’s Multi-Stage Contracts can also provide these protocols on top of it.
+
+*  Mining power derivatives: https://www.ergoforum.org/t/mining-power-derivatives-two-tokens-approach/277

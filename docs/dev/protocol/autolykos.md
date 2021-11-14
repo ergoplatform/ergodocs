@@ -1,7 +1,8 @@
-> Participate in community discussions - [Ergo Emission: details, retargeting via a soft-fork](https://www.ergoforum.org/t/ergo-emission-details-retargeting-via-a-soft-fork/2778)
 # Autolykos
 
-Security of  Proof-of-Work blockchains relies on multiple miners trying to produce new blocks by participating in a *PoW puzzle lottery*. The network is secure if the majority of them are honest.  However, the reality becomes much more complicated than the original one-CPU-one-vote idea from the Bitcoin whitepaper\.
+> Participate in community discussions - [Ergo Emission: details, retargeting via a soft-fork](https://www.ergoforum.org/t/ergo-emission-details-retargeting-via-a-soft-fork/2778)
+
+The security of Proof-of-Work blockchains relies on multiple miners trying to produce new blocks by participating in a *PoW puzzle lottery*. The network is secure if the majority of them are honest.  However, the reality becomes much more complicated than the original one-CPU-one-vote idea from the Bitcoin whitepaper\.
 
 
 ## Non-Outsourceability

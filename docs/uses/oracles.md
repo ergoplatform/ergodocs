@@ -1,4 +1,4 @@
-## Oracles
+# Oracles
 
 Oracles are the backbone of a decentralized financial system. It connects off-chain data with the on-chain world. Normally, ETH has no info about the current market price. During a swap order in a decentralized exchange, a swap contract needs to call the data from various data sources to obtain market price. Thus, oracles are the messengers of the crypto ecosystem. Not only in atomic swaps but also in more complex interactions such as lending/borrowing assets or dynamic market-making need the data feeds provided by oracles. DeFi ecosystem suffered from Flash Loan attacks, caused by [misinformation from centralized price oracles](https://insights.glassnode.com/defi-attacks-flash-loans-centralized-price-oracles/).
 

@@ -1,13 +1,8 @@
 # Welcome to ErgoDocs!
 
-Best practices dictate that the majority of the documentation should be kept on the assosciated repositories themselves. this site aims to serve as a directory that guides the user on their development journey.
-
-Documentation within the naviation tabs above is split into four distinct categories. 
-
-- Tutorials
-- How-To Guides
-- Explanations
-- References
+- [Developers](dev/start/start.md)
+- [Node](node/run.md)
+- [Applications](uses/apps.md)
 
 Read more about the [format](About/format.md) used on this website.
 

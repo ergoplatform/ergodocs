@@ -1,4 +1,4 @@
-## Local Exchange Trading Systems
+# Local Exchange Trading Systems
 
 - [A Local Exchange Trading System On Top Of Ergo](https://github.com/ergoplatform/ergo/wiki/A-Local-Exchange-Trading-System-On-Top-Of-Ergo)
 - [A Trustless Local Exchange Trading System](https://github.com/ergoplatform/ergo/wiki/A-Trustless-Local-Exchange-Trading-System)
@@ -46,15 +46,13 @@ to the old systems. More information on LETS could be found in
 ["The Ecology of Money" book (by Richard Douthwaite)](http://feasta.org/documents/moneyecology/chaptertwo.htm) and 
 [Wikipedia](https://en.wikipedia.org/wiki/Local_exchange_trading_system).
 
-In this article we show how LETS could be implemented on top of Ergo. To the best of our knowledge, this is 
-the first implementation of such kind of community currency on top of a blockchain.
-Our reference implementation 
-is simple and consists of two contracts, namely, a management contract and an exchange contract.
-We skip Ergo preliminaries, so please read 
-[the ICO article](https://github.com/ergoplatform/ergo/wiki/An-ICO-Example-On-Top-Of-Ergo) and 
-ErgoScript tutorials([basic](https://ergoplatform.org/docs/ErgoScript.pdf) and 
-[advanced](https://ergoplatform.org/docs/sigmastate_protocols.pdf)) for starters.
+In this article we show how LETS could be implemented on top of Ergo. To the best of our knowledge, this is the first implementation of such kind of community currency on top of a blockchain.
+
+Our reference implementation is simple and consists of two contracts, namely, a management contract and an exchange contract.
+We skip Ergo preliminaries, so please read [the ICO article](https://github.com/ergoplatform/ergo/wiki/An-ICO-Example-On-Top-Of-Ergo) and ErgoScript tutorials([basic](https://ergoplatform.org/docs/ErgoScript.pdf) and [advanced](https://ergoplatform.org/docs/sigmastate_protocols.pdf)) for starters.
+
 Nevertheless, we are going to introduce a couple of new terms in following sentences.
+
 If a token is issued with amount equal to one, we call it the singleton token. Similarly, 
 a box which contains the singleton token is called the singleton box.
 

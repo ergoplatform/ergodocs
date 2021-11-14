@@ -16,10 +16,8 @@ theme:
           icon: material/toggle-switch
           name: Switch to light mode
     features:
-        - navigation.tabs
         - navigation.tabs.sticky
         - navigation.sections
-        - navigation.expand
     logo: assets/logo.png
     palette:
       primary: deep orange
@@ -47,23 +45,31 @@ nav:
   
   - Home:
     - Welcome: index.md
-    - Format: About/format.md
+    - Contributing: About/format.md
     - FAQ: About/faq.md
-    - Events: About/events.md
   - Developers:
     - Getting Started: 
       - Where to start?: dev/start/start.md
       - The Ergo Protocol: dev/ergo/protocol.md
-      - Autolykos: dev/protocol/autolykos.md
-      - Storage Rent: dev/protocol/rent.md
       - Resources: dev/start/resources.md
     - Protocol:
       - UTXO State: dev/protocol/utxo-state.md
+      - Autolykos: dev/protocol/autolykos.md
+      - Storage Rent: dev/protocol/rent.md
+      - NIPoPoWS: dev/protocol/nipopow.md
     - Data Model:
       - Transactions: dev/protocol/transaction.md
       - Box: dev/data-model/box.md
       - Block: dev/data-model/block.md
-      - Addresses: dev/protocol/address.md
+    - Wallets:
+      - Addresses: dev/wallet/address.md
+      - Hierarchical keys: dev/wallet/keys.md
+    - Smart Contracts:
+      - Introduction: dev/scs/basics.md
+      - ErgoScript: dev/scs/ergoscript.md
+      - FlowCards: dev/scs/flowcards.md
+      - Sigma Protocols: dev/scs/sigma.md
+      - Multi-Stage Contracts: dev/scs/multi.md 
     - P2P:
       - P2P Protocol Overview: dev/data-model/p2p-protocol.md
       - Handshaking: dev/data-model/p2p-handshake.md
@@ -75,14 +81,7 @@ nav:
       - Kiosk: dev/stack/kiosk.md
       - JDE: dev/stack/jde.md
       - Assembler: dev/stack/assembler.md
-    - Smart Contracts:
-      - Introduction: dev/scs/basics.md
-      - ErgoScript: dev/scs/ergoscript.md
-      - FlowCards: dev/scs/flowcards.md
-      - Atomic Swaps: dev/protocol/atomic.md
-      - NIPoPoWS: dev/protocol/nipopow.md
-      - Sigma Protocols: dev/scs/sigma.md
-      - Multi-Stage Contracts: dev/scs/multi.md      
+         
     #- Languages:
      # - Scala: dev/Languages/scala.md
       ##- Java: dev/Languages/java.md
@@ -106,6 +105,7 @@ nav:
       - NiPoPoWS: node/nipopow.md
   - Applications:
     - Use Cases: uses/apps.md
+    - Events: About/events.md
     - Live:
       - Decentralised Exchanges: uses/dex.md
       - Stablecoins: uses/stablecoins.md
@@ -123,6 +123,7 @@ nav:
       - DAO: uses/dao.md
       - Buy Back Guarantees: uses/dex-buyback.md
       - LETS: uses/lets.md
+      - Atomic Swaps: dev/protocol/atomic.md
     - Further Ideas:
       - CDBC: uses/cdbc.md
       - Lotteries: uses/lottery.md

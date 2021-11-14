@@ -1,4 +1,6 @@
-## [(E)mail Client for Limited or Blocked Internet](https://www.ergoforum.org/t/e-mail-client-for-limited-or-blocked-internet/134)
+# (E)mail Client for Limited or Blocked Internet
+
+[(E)mail Client for Limited or Blocked Internet](https://www.ergoforum.org/t/e-mail-client-for-limited-or-blocked-internet/134)
 
 There are two motivations for this post
 

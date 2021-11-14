@@ -1,5 +1,5 @@
+# CDBCs
 
-## CDBCs
 *As blockchain technology gains traction, central bank digital currencies are among the most significant applications being developed. But these will inevitably fall far short of the ideal, for one simple reason: control. In particular, that has implications for composability and privacy, and much else besides.*
 
 Central bank digital currencies are no longer a theoretical application of blockchain technology. The list of countries developing CBDCs is growing rapidly, with several now trialing state-backed digital cash.

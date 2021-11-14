@@ -1,4 +1,5 @@
-## [Mathematical Fun with ErgoScript](https://www.ergoforum.org/t/mathematical-fun-with-ergoscript/76)
+# Mathematical Fun with ErgoScript
+
 
 Just for fun, I decided to see how hard it would be to create a "bounty" protected by some mathematical problem.  I was inspired by today's [announcement](https://aperiodical.com/2019/09/42-is-the-answer-to-the-question-what-is-80538738812075974%c2%b3-80435758145817515%c2%b3-12602123297335631%c2%b3/) that 42 can be written as the sum of three cubes:
 
@@ -29,3 +30,5 @@ Notes:
 * The explorer doesn't currently show extension data, so I was a bit disappointed you couldn't really see the solution to the puzzle in the explorer very well.
 
 Any feedback is welcome!
+
+Taken from: [Mathematical Fun with ErgoScript](https://www.ergoforum.org/t/mathematical-fun-with-ergoscript/76)

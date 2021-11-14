@@ -1,11 +1,11 @@
-There's a cheap way to do bonding curves on Ergo, with most of the load done off-chain.
+There is a cheap way to do bonding curves on Ergo, with most of the load performed off-chain.
 
-Assume a project is willing to issue 100 tokens and sell the first one for 100 ergs, second for 200, ..., 100th for 10,000 ergs (to raise 505,000) in total in case of full sale. This is the very simple example of a bonding curve. See https://blog.relevant.community/bonding-curves-in-depth-intuition-parametrization-d3905a681e0a for more details. Bonding curves is a useful primitive for continuous token offerings (CTOs), augmented bonded curves (https://medium.com/giveth/deep-dive-augmented-bonding-curves-3f1f7c1fa751), AMM DEXes maybe. 
+Assume a project is willing to issue 100 tokens and sell the first one for `100` ergs, second for `200`, ..., 100th for `10,000` ergs (to raise 505,000) in total in case of full sale. This is the very simple example of a bonding curve. See [this article](https://blog.relevant.community/bonding-curves-in-depth-intuition-parametrization-d3905a681e0a) for more details. Bonding curves are a useful primitive for continuous token offerings (CTOs), [augmented bonded curves](https://medium.com/giveth/deep-dive-augmented-bonding-curves-3f1f7c1fa751), and perhaps AMM DEXes. 
 
 Sell-only 
 -------------
 
-First, assume token sale scenario only. Token issuer is creating 100 boxes with 1 token each, ैwith setting price for the token in register R4 of a box. The box is spendable if spending transaction is paying the price to the issuer's address (issuer's script in general). 
+First, assume token sale scenario only. Token issuer is creating 100 boxes with 1 token each, with setting price for the token in register R4 of a box. The box is spendable if spending transaction is paying the price to the issuer's address (issuer's script in general). 
 
 
 Sell with buy-back
