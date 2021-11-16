@@ -1,9 +1,29 @@
 # Welcome to ErgoDocs!
 
-Best practices dictate that the majority of the documentation should be kept on the assosciated repositories themselves. this site aims to serve as a directory that guides the user on their development journey.
+## [👩‍🎓 ┃ Learn](/ergo)
+
+Get a high-level overview of how Ergo works. 
 
 
-Read more about [contributing](About/format.md).
+## 🛠 ┃ Build
+
+Get started on your development journey 
+
+
+- [**Front-end**](/docs/dev/stack/front-end.md) | The user-interface built in your framework of choice.
+- [**Backend**](/docs/dev/stack/back-end.md) | Performs the off-chain logic
+- [**Smart Contract**](#ergoscript) | Where the magic happens, the on-chain validation of the off-chain logic.
+
+
+## [❤️ ┃ Contribute](/docs/contribute.md)
+
+Ergo is a community-driven project. The Ergo Foundation and private donors incentivise growth via bounty programmes and grants. See [grow-ergo/issues](https://github.com/ergoplatform/grow-ergo/issues) for an updated list of live bounties and grants available on Ergo.
+
+
+
+
+
+
 
 ## Other resources
 - [awesome-ergo](https://github.com/ergoplatform/awesome-ergo)

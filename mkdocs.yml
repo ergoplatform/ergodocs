@@ -6,7 +6,7 @@ repo_url: https://github.com/glasgowm148/ergodocs
 theme:
     name: material
     favicon: assets/favicon.png
-    palette:
+    palette: # dark scheme toggle on material + dark orange
       - scheme: default
         primary: deep orange
         toggle:
@@ -19,7 +19,10 @@ theme:
           name: Switch to light mode
     features:
         - navigation.tabs.sticky
-        - navigation.sections
+        - navigation.instant
+        - navigation.sections # The bold sections in navigation
+        - navigation.tracking
+      #  - toc.integrate
     logo: assets/logo.png
     font:
       text: Roboto
@@ -44,14 +47,12 @@ markdown_extensions:
 nav:
   
   - Home:
-    - Welcome: index.md
-    - Contributing: About/format.md
+    - Getting Started: index.md
+    - Contributing: contribute.md
     - General FAQ: About/faq.md
+    - The Ergo Protocol: ergo.md
+    - Resources: dev/start/resources.md
   - Developers:
-    - Getting Started: 
-      - Where to start?: dev/start/start.md
-      - The Ergo Protocol: dev/ergo/protocol.md
-      - Resources: dev/start/resources.md
     - Protocol:
       - UTXO State: dev/protocol/utxo-state.md
       - Autolykos: dev/protocol/autolykos.md
