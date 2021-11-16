@@ -2,7 +2,13 @@
 
 __We’ve designed Ergo with long-term economic sustainability in mind, and storage rent is one of the ways we’re ensuring miners stay profitable well into the future. One community member, Robert, describes this function as ‘on-chain garbage collection’ that reduces the problem of blockchain bloat – and even makes it profitable.__
 
-The 2020 block reward reduction will probably be the most important halving Bitcoin ever experiences. This is the point where the narrative of programmatic scarcity and digital gold will truly be proven, in the context of the sharpest economic downturn in living memory. In previous halvings, Bitcoin has still been in its infancy, a niche experiment. Future halvings will confirm the principle. But this one is the watershed.
+**Key Points**
+
+- An important consequence of storage fees is that they provide additional rewards (besides block and transaction rewards) for miners.
+- Storage fees decrease the storage load and eliminate extra costs that could be added during unreasonable state growth.
+- Storage fees encourage coin flow and prevent deflation, which can cause illiquidity and the congestion of a currency system.
+
+The 2020 block reward reduction was the most important halving event Bitcoin has experienced. This was the point where the narrative of programmatic scarcity and digital gold was truly be proven, in the context of the sharpest economic downturn in living memory. In previous halvings, Bitcoin has still been in its infancy, a niche experiment. Future halvings will confirm the principle. But this one is the watershed.
 
 Looking ahead, though, what happens in 20 or 30 years, when block rewards have fallen so far that miners have to rely on tx fees and potentially other sources of revenue? Will Bitcoin be sustainable? What will be the impact on the ecosystem?
 
@@ -60,7 +66,7 @@ In Ergo, the total size of the state is the sum of the sizes of all UTXOs. That 
 
 ## Storage Rent
 
-Unreasonable state growth is an economic problem and it can lead to spam attacks and network congestion. Another problem could be the deflation of a cryptocurrency if coins are lost and/or forgotten. So instead of being used as the base for smart contracts, the currency becomes unreasonably scarce, making the system heavy and limiting coin flow.
+**Unreasonable state growth** is an economic problem and it can lead to spam attacks and network congestion. Another problem could be the deflation of a cryptocurrency if coins are lost and/or forgotten. So instead of being used as the base for smart contracts, the currency becomes unreasonably scarce, making the system heavy and limiting coin flow.
 
 This leads to a perpetually increasing state (e.g. the Bitcoin’s total UTXO size) and the state may grow faster during spam attacks. For example, 15 million outputs were created during spam attacks against Bitcoin in July 2015. An attack on Ethereum created 18 million new accounts added to the state - which previously held only 1 million - and performed successful “denial of service” attacks against the nodes.
 
@@ -72,13 +78,8 @@ For the purposes of research and this article, it is worth noting that the conce
 
 > *“Demurrage forces freicoins to circulate at deliberately high rates. Separation of money's roles as store-of-value and medium-of-exchange allows money to flow when it is needed, in good times and bad.“*
 
-## Conclusions
 
-An important consequence of storage fees is that they provide additional rewards (besides block and transaction rewards) for miners.
 
-Storage fees decrease the storage load and eliminate extra costs that could be added during unreasonable state growth.
-
-Storage fees encourage coin flow and prevent deflation, which can cause illiquidity and the congestion of a currency system.
 
 ## Resources
 

@@ -2,24 +2,51 @@
 
 > Participate in community discussions - [Ergo Emission: details, retargeting via a soft-fork](https://www.ergoforum.org/t/ergo-emission-details-retargeting-via-a-soft-fork/2778)
 
-The security of Proof-of-Work blockchains relies on multiple miners trying to produce new blocks by participating in a *PoW puzzle lottery*. The network is secure if the majority of them are honest.  However, the reality becomes much more complicated than the original one-CPU-one-vote idea from the Bitcoin whitepaper\.
-
-
-## Non-Outsourceability
+The security of Proof-of-Work blockchains relies on multiple miners trying to produce new blocks by participating in a *PoW puzzle lottery*. The network is secure if the majority of them are honest.  However, the reality becomes much more complicated than the original one-CPU-one-vote idea from the Bitcoin whitepaper.
 
 Autolykos v1 originally had non-outsourcability built-in. However, it became apparent that it's impossible to prevent pools with smart contracts, so they turned it off so that larger players could not take advantage of the loophole. Ergo is now focusing on memory hardness to keep mining as fair as possible, which should help prevent ASICs mining at least. There are also some improvements for pooling, e.g. Stratum 2 protocol.
 
-> "Bypassing Non-Outsourceable Proof-of-Work Schemes Using Collateralized Smart Contracts" https://ia.cr/2020/044 was presented by Alex Chepurnoy at the WTSC workshop associated with Financial Cryptography and Data Security 2020 in Malaysia.
+> ["Bypassing Non-Outsourceable Proof-of-Work Schemes Using Collateralized Smart Contracts"](https://ia.cr/2020/044)  was presented by Alex Chepurnoy at the WTSC workshop associated with Financial Cryptography and Data Security 2020 in Malaysia.
 
-It's also discussed here on 'Unblocked with Robert Kornacki' [(14:45)](https://www.youtube.com/watch?v=2sbTMrQwWOw&feature=youtu.be)
+It's also discussed here on ['Unblocked with Robert Kornacki' (14:45)](https://www.youtube.com/watch?v=2sbTMrQwWOw&feature=youtu.be)
 
-## V2
 
-Autolykos version two follows Autolykos v.1, but with certain modifications made:
 
-- non-outsourceable puzzles were switched off. It turns out (based on more than one year of non-outsourceable PoW experience) that non-outsourceable PoW is not attractive to small miners.
-- Now, the algorithm is trying to bind an efficient solving procedure with a single table of ~2 GB (initially), which is significantly reducing memory optimizations possibilities
-- table size (memory requirements of a solving algorithm) grows with time
+
+## Difficulty Adjustment
+
+Ergo uses the **linear least square method** which smoothes over 8 epoch's (each epoch is 1024 blocks x 2 minutes), as described in [this paper](https://eprint.iacr.org/2017/731.pdf). 
+
+Autolykos will adjust slowly, yes, but it also helps prevent **adversarial** hopping.
+
+**Can it be quicker?**
+
+Having a quicker difficulty readjustment can lead to Timewarp attacks (amongst others).
+
+Ergo is already using an epoch length of ~1.5 days (with normal block rate), not Bitcoin's two weeks. However, more epochs were considered, but the retargeting function is non-linear also so that it may adjust sooner than the linear function in certain popular scenarios. 
+
+## Hardforking policy
+
+Critical changes require a hard fork, but Ergo has many possibilities to evolve via soft forks; soft forkability is going further in comparison with Bitcoin.
+
+
+In the old generation of Proof of Work, hard forks frequently led to community splits. In Ergo, miners can change parameters on the fly in their configs, and 50%+ of blocks mined within 1024 blocks epoch need to be for raising/lowering the limit of some parameter, then it will be changed by 1% in next epoch. It can be block size, computational cost, storage fee factor and many more. The above comment for the old generation doesn't mention that core developers are also 3rd parties. With Ergo`s design, when all basic assumptions are correct, the network should adapt in time to changing environment without the intervention of any trusted parties.* 
+
+
+Ergo wants to avoid hard-forks. Emission, proof-of-work, the basics of the transactional model and other core things should not be changed at all as any change regarding core parts of design essentially means another chain. However, developers were able to propose hard-forks within the first 12 months if:
+
+- A hard-fork is about security fixes only. The only exception is about making the cost of particular instructions adjustable via miners voting, which was planned but not delivered in the current mainnet.
+- A hard-fork is supported by 90+% of miners.
+- A hard-fork is not breaking old contracts, freezing or moving any funds.
+
+## Autolykos V2
+
+
+**Autolykos v.2** has the following modifications
+
+- *non-outsourceable puzzles* were disabled. It turns out (based on more than one year of non-outsourceable PoW experience) that non-outsourceable PoW is not attractive to small miners.
+- Now, the algorithm is trying to bind an efficient solving procedure with a single table of ~2 GB (initially), which significantly reducing memory optimizations possibilities
+- Table size (memory requirements of a solving algorithm) grows with time
 - The table depends solely on the block height, so there is no penalization for recalculating block candidates for the same height
 
 **Basic Ideas:**
@@ -35,37 +62,6 @@ Also, table size (N value) is growing with time as follows. Until block `614,400
 
 - [Ergo PoW](https://www.docdroid.net/mcoitvK/ergopow-pdf)
 - [Bypassing Non-Outsourceable Proof-of-Work Schemes Using Collateralized Smart Contracts](https://eprint.iacr.org/2020/044.pdf)
-
-
-
-
-## Difficulty Adjustment
-
-Ergo uses the **linear least square method** over 8 epoch's (each epoch is 1024 blocks x 2 minutes) described in [this paper](https://eprint.iacr.org/2017/731.pdf). 
-
-
-Autolykos will adjust slowly, yes, but it is also helping to prevent **adversarial** hopping.
-
-**Can it be quicker?**
-
-Having a quicker difficulty readjustment can lead to Timewarp attacks (amongst others).
-
-Ergo is already using an epoch length of ~1.5 days (with normal block rate), not Bitcoin's two weeks. However, more epochs were considered, but the retargeting function is non-linear also so that it may adjust sooner than the linear function in certain popular scenarios. 
-
-## Hardforking policy
-
-Critical changes require a hard fork, but Ergo has many possibilities to evolve via soft forks; soft forkability is going further in comparison with Bitcoin.
-
-> *In the old generation of POW, hard forks usually lead to community splits. In Ergo, miners can change parameters on the fly in their configs, and 50%+ of blocks mined within 1024 blocks epoch need to be for raising/lowering the limit of some parameter, then it will be changed by 1% in next epoch. It can be block size, computational cost, storage fee factor and many more. The above comment for the old generation doesn't mention that core developers are also 3rd parties. With Ergo`s design, when all basic assumptions are correct, the network should adapt in time to changing environment without the intervention of any trusted parties.* 
-> 
-> - mx
-
-
-Ergo wants to avoid hard-forks. Emission, proof-of-work, the basics of the transactional model and other core things should not be changed at all as any change regarding core parts of design essentially means another chain. However, developers may propose hard-forks within the first 12 months if:
-
-- A hard-fork is about security fixes only. The only exception is about making the cost of particular instructions adjustable via miners voting, which was planned but not delivered in the current mainnet.
-- A hard-fork is supported by 90+% of miners.
-- A hard-fork is not breaking old contracts, freezing or moving any funds.
 
 
 ## Decentralisation 
