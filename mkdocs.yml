@@ -49,7 +49,7 @@ nav:
   - Getting Started:
     - Getting Started: home/index.md
     - Contributing: home/contribute.md
-    - General FAQ: home/faq.md
+    - FAQ: home/faq.md
     - Events: home/events.md
 
   - Developers:
@@ -74,11 +74,11 @@ nav:
       - Sigma Protocols: dev/scs/sigma.md
       - Multi-Stage Contracts: dev/scs/multi.md 
     - P2P:
-      - P2P Protocol Overview: dev/p2p/p2p-protocol.md
+      - P2P: dev/p2p/index.md
       - Handshaking: dev/p2p/p2p-handshake.md
       - Network Messages: dev/p2p/network.md
       - Modifiers Exchange: dev/p2p/modifiers.md
-      - BlockP2P: dev/p2p/BlockP2P.md
+     # - BlockP2P: dev/p2p/BlockP2P.md
     
     - Resources: 
       - Misc: dev/start/resources.md
@@ -99,11 +99,11 @@ nav:
       - Integration: dev/Integration/guide.md 
 
   - Node:
-    - Getting Started: node/index.md
-    - Swagger API: node/swagger.md
+    - Node: node/index.md
     - Overview: 
+      - Swagger API: node/swagger.md
       - Architecture: node/architecture.md
-      - API: node/api.md
+      - Distributed Signatures: node/sigs.md
     - Light Modes: 
       - Digest State: node/digest-state.md
       - History Pruning: node/history-pruning.md

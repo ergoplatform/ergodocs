@@ -12,4 +12,6 @@ Get started on your development journey
 
 There's plenty of ways to earn while you learn with bounties and grants available.
 
-## [📌 ┃ Resources](dev/start/resources/)
+## [📌 ┃ FAQ](/home/faq)
+
+For everything else, your first point of contact is the Frequently Asked Questions section. 
