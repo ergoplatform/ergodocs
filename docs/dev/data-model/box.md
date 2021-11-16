@@ -1,6 +1,6 @@
 ## What is a 'Box' ? 
 
-Ergo has a Bitcoin-like UTXO transactional model: a transaction is spending one-time objects and creating new one-time objects. We call this object a box. A box is an immutable object which can be only created or removed. A box is not simply a coin; it contains registers with data (and code). Even more, there's nothing inbox but registers. There are four predefined registers, with monetary value, protecting script, and identifier of a transaction which created the box and output index in the transaction (and creation height). Because data of transaction which created the box is included in it, the box has unique contents and, therefore, a unique id. A box is a first-class citizen in the Ergo protocol. Active boxes set is authenticated via a hash-based data structure, which allows building lightweight full-nodes (as described in [this paper](https://eprint.iacr.org/2016/994)). A box may have up to six additional registers with typed data. A script may access its registers (as well as registers of input and output boxes of the spending transaction).
+Ergo has a Bitcoin-like UTXO transactional model: a transaction is spending one-time objects and creating new one-time objects. We call this object a box. A box is an immutable object which can be only created or removed. A box is not simply a coin; it contains registers with data (and code). Even more, there's nothing inbox but registers. There are four predefined registers, with monetary value, protecting script, and identifier of a transaction which created the box and output index (and creation height). Because data of transaction which created the box is included in it, the box has unique contents and, therefore, a unique id. A box is a first-class citizen in the Ergo protocol. Active boxes set is authenticated via a hash-based data structure, which allows building lightweight full-nodes (as described in [this paper](https://eprint.iacr.org/2016/994)). A box may have up to six additional registers with typed data. A script may access its registers (as well as registers of input and output boxes of the spending transaction).
 
 ## Example
 
@@ -25,9 +25,9 @@ Example of a box (proof-of-no-premine from Ergo genesis state, which contains la
 A box, at the minimum, has four pieces of information.
 
 1. The value in NanoErgs (`1 Erg = 1000000000 NanoErgs`).
-2. The guard script (like `scriptPubKey` of Bitcoin). This is also called the "smart contract."
+2. The guard script (like `scriptPubKey` of Bitcoin). (aka the "smart contract.")
 3. Additional assets (tokens) are stored in this box.
-4. Creation info of the box (`txId`, the identifier of the transaction that created the box along with an output index). It also contains a `maxCreation` height parameter defined by the box creator (this is not the creation height; its use is to create "payment channels easily").
+4. Creation info of the box (`txId`, the transaction identifier that created the box along with an output index). It also contains a `maxCreation` height parameter defined by the box creator (this is not the creation height; its use is to create "payment channels easily").
 
 - `R0` = monetary value
 - `R1` = protecting script

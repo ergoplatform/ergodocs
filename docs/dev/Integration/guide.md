@@ -29,7 +29,7 @@ Node wallet has UI available @ 127.0.0.1:9053/panel by default on the mainnet (1
 Create an external wallet.
 ========================
 
-If you are going to perform your wallet logic externally, you can do so with a library and the block explorer. **Please note, you need to consider mempool transactions to avoid double-spending generation**.
+If you plan to perform your wallet logic externally, you can do so with a library and the block explorer. **Please note, you need to consider mempool transactions to avoid double-spending generation**.
 
 Available libraries are:
 
@@ -61,7 +61,7 @@ You need to exclude UTXOs spent in the mempool! Use /transactions/unconfirmed/by
 Broadcasting transaction
 ------------------------
 
-To broadcast a transaction made outside the node, the easiest way is to serialize it into JSON; in Java it could be like:
+To broadcast a transaction made outside the node, the easiest way is to serialize it into JSON; in Java, it could be like:
 
 ```
    Json json = JsonCodecsWrapper.ergoLikeTransactionEncoder().apply(tx);
