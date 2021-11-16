@@ -15,12 +15,12 @@ Extended support of light nodes makes Ergo friendly for end-users, allowing them
 ### [The Manifesto](https://ergoplatform.org/en/blog/2021-04-26-the-ergo-manifesto/)                                                      
 > Cryptocurrency should provide tools to enrich ordinary people. The small businesses that are getting not much above making ends meet, not depersonalized big financial capital. This is what inspired me. This is my dream.
 
-## [Proof-of-Work](../protocol/autolykos.md)
+## [Proof-of-Work](/docs/dev/protocol/autolykos.md)
 
 Ergo uses Autolykos as the underlying PoW algorithm. Autolykos v2 (the current version of PoW) is a memory-hard ASIC-resistant PoW algorithm oriented towards GPUs.
 
 
-## [eUTXO](../data-model/box.md)
+## [eUTXO](/docs/dev/data-model/box.md)
 
 The platform's smart contracts are built on the extended **UTXO (eUTXO)** model with a unique data input concept, offering a radically different approach to provide robust, flexible cryptography and easy, safe scripting on privacy-centric **Sigma Protocols** (non-interactive zero-knowledge proofs). 
 
@@ -28,7 +28,7 @@ Ergo is a **UTXO** based blockchain with Proof-of-Work consensus. In this aspect
 
 Due to this, Ergo supports advanced financial contracts similar to those in Ethereum's account-based model.
 
-## [ErgoScript](../scs/ergoscript.md)
+## [ErgoScript](/docs/dev/scs/ergoscript.md)
 
 
 Ergo provides advanced programming abilities for financial contracts using a high-level language called ErgoScript. 
@@ -37,7 +37,7 @@ The scripting language in itself is non-Turing complete, but applications run on
 
 Ergo provides superior support for real-world financial agreements. It does this through:
 
-1. Support for [multi-stage contracts](../scs/multi.md) 
+1. Support for [multi-stage contracts](/docs/dev/scs/multi.md) 
 2. A simple high-level language, ErgoScript, enabling clear descriptions of contractual logic
 3. Support for formal verification of contracts for improved security guarantees (Ergo Platform deployed its [first formally verified p2p crowdfunding contract](https://twitter.com/chepurnoy/status/1239936086106935296) just three months after the network launched)
 4. Easy Oracle creation
@@ -46,7 +46,7 @@ Ergo provides superior support for real-world financial agreements. It does this
 In short, creating financial contracts on the blockchain isn’t just about the functionality you provide. It’s about making that functionality safe and accessible, as well as powerful. Ergo achieves this and more.
 
 
-## [Sigma Protocols](../scs/sigma.md)
+## [Sigma Protocols](/site/dev/scs/sigma/index.html)
 
 The cryptographic part of ErgoScript is based on **Sigma Protocols** and naturally supports threshold `m-of-n` signatures, ring signatures, and more. Keeping all this in mind, we expect ErgoScript and Ergo's design to be uniquely useful as **Contractual Money** with countless possible applications. 
 

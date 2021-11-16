@@ -1,5 +1,5 @@
 site_name: ErgoDocs
-site_url: https://ergodocs.rtfd.io
+site_url: https://docs.ergoplatform.org
 repo_url: https://github.com/glasgowm148/ergodocs
 
 
@@ -47,14 +47,15 @@ markdown_extensions:
 
 nav:
   - Getting Started:
-    - Getting Started: Home/index.md
-    - Contributing: Home/contribute.md
-    - General FAQ: Home/faq.md
-    - Events: Home/events.md
-    - The Ergo Protocol: Home/ergo.md
+    - Getting Started: home/index.md
+    - Contributing: home/contribute.md
+    - General FAQ: home/faq.md
+    - Events: home/events.md
+
   - Developers:
     - Developers: dev/index.md
-    - Protocol:
+    - Protocol: 
+      - Protocol: dev/protocol/index.md
       - UTXO State: dev/protocol/utxo-state.md
       - Autolykos: dev/protocol/autolykos.md
       - Storage Rent: dev/protocol/rent.md
@@ -67,7 +68,7 @@ nav:
       - Addresses: dev/wallet/address.md
       - Hierarchical keys: dev/wallet/keys.md
     - Smart Contracts:
-      - Introduction: dev/scs/basics.md
+      - Smart Contracts: dev/scs/index.md
       - ErgoScript: dev/scs/ergoscript.md
       - FlowCards: dev/scs/flowcards.md
       - Sigma Protocols: dev/scs/sigma.md
@@ -78,14 +79,15 @@ nav:
       - Network Messages: dev/p2p/network.md
       - Modifiers Exchange: dev/p2p/modifiers.md
       - BlockP2P: dev/p2p/BlockP2P.md
-    - Libraries:
-      - AppKit: dev/stack/appkit.md
-      - ErgoTool: dev/stack/ergotool.md
-      - Kiosk: dev/stack/kiosk.md
-      - JDE: dev/stack/jde.md
-      - Assembler: dev/stack/assembler.md
+    
     - Resources: 
       - Misc: dev/start/resources.md
+      - Libraries:
+        - AppKit: dev/stack/appkit.md
+        - ErgoTool: dev/stack/ergotool.md
+        - Kiosk: dev/stack/kiosk.md
+        - JDE: dev/stack/jde.md
+        - Assembler: dev/stack/assembler.md
       - Languages:
         - Scala: dev/Languages/scala.md
         - Java: dev/Languages/java.md
@@ -94,14 +96,11 @@ nav:
       - Stack: 
         - Front-End: dev/stack/front-end.md
         - Back-End: dev/stack/back-end.md
-    - Advanced:
       - Integration: dev/Integration/guide.md 
+
   - Node:
     - Getting Started: node/index.md
     - Swagger API: node/swagger.md
-      #- Config: node/node-config.md
-      #- Docs: node/docs.md
-      #- Withdraw: node/withdraw.md
     - Overview: 
       - Architecture: node/architecture.md
       - API: node/api.md
@@ -110,6 +109,7 @@ nav:
       - History Pruning: node/history-pruning.md
       - Snapshots: node/snapshots.md
       - NiPoPoWS: node/nipopow.md
+
   - Applications:
     - Applications: uses/index.md
     - Live dApps:

@@ -1,5 +1,9 @@
 # Resources
 
+- [awesome-ergo](https://github.com/ergoplatform/awesome-ergo)
+- [ergonaut.space](https://ergonaut.space/)
+- [ergosites.github](https://ergosites.github.io/)
+
 ## Explorer
 
 **Explorer**

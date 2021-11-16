@@ -1,21 +1,18 @@
+# Events
+
+Ergo hosts regular events such as Hackathons and Developer Summits, make sure to check out ERGOHACK III and ERGO SUMMIT II, both expected Q1 2022. 
+
+A brief overview of events is given below with related articles and repositories. 
+
 ## ERGOHACK
+
 
 ### ERGOHACK I
 
+
 * [Hackerthon Jun 12th!](https://ergoplatform.org/en/blog/2021-06-04-ergo-community-launches-its-first-hackathon-ergohack/)
 
-
-## ERGOHACK
-
-**IDEA INCUBATOR**
-
-- ErgoFans | Decentralised content producer platform | Patreon/Onlyfans
-- ErgoGigs | Decentralised gigs! (Fiverr)
-- ErgoEarn | earn for learning (Coinbase Earn)
-- ErgoStats | on-chain analysis (glassnode)
-
-
-**ERGOHACK I**
+**Participants**
 
 - [ErgoRaffle](https://github.com/ErgoRaffle)
 - Ergo Index Fund
@@ -24,7 +21,9 @@
 - Ergo Charts
 - [Simpler Joint Spending Tool](https://www.ergoforum.org/t/a-simpler-collective-spending-approach-for-everyone/476%20)
 
-**ERGOHACK II**
+### ERGOHACK II
+
+**Participants**
 
 - [ErgoLend](https://github.com/Ergo-Lend/)
 - [Minotaur Wallet](https://github.com/minotaur-ergo/minotaur-wallet)
@@ -34,15 +33,17 @@
 - Ergo Audio
 
 
-### ERGOHACK II
+**IDEA INCUBATOR**
 
-### ERGOHACK III
+- ErgoFans | Decentralised content producer platform | Patreon/Onlyfans
+- ErgoGigs | Decentralised gigs! (Fiverr)
+- ErgoEarn | earn for learning (Coinbase Earn)
+- ErgoStats | on-chain analysis (glassnode)
+
 
 ## ErgoSummit
 
-## ErgoSummit I
-
-## ErgoSummit Timestamps
+###  Timestamps
 
 [00:00:00](https://www.youtube.com/watch?v=zG-rxMCDIa0&amp;t=0s) - The Summit
 
