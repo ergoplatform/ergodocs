@@ -30,8 +30,7 @@ Ergo is already using an epoch length of ~1.5 days (with normal block rate), not
 Critical changes require a hard fork, but Ergo has many possibilities to evolve via soft forks; soft forkability is going further in comparison with Bitcoin.
 
 
-In the old generation of Proof of Work, hard forks frequently led to community splits. In Ergo, miners can change parameters on the fly in their configs, and 50%+ of blocks mined within 1024 blocks epoch need to be for raising/lowering the limit of some parameter, then it will be changed by 1% in next epoch. It can be block size, computational cost, storage fee factor and many more. The above comment for the old generation doesn't mention that core developers are also 3rd parties. With Ergo`s design, when all basic assumptions are correct, the network should adapt in time to changing environment without the intervention of any trusted parties.* 
-
+In the old generation of Proof of Work, hard forks frequently led to community splits. In Ergo, miners can change parameters on the fly in their configs, and 50%+ of blocks mined within 1024 blocks epoch need to be for raising/lowering the limit of some parameter, then it will be changed by 1% in next epoch. It can be block size, computational cost, storage fee factor and many more. The above comment for the old generation doesn't mention that core developers are also 3rd parties. With Ergo`s design, when all basic assumptions are correct, the network should adapt in time to changing environment without the intervention of any trusted parties.
 
 Ergo wants to avoid hard-forks. Emission, proof-of-work, the basics of the transactional model and other core things should not be changed at all as any change regarding core parts of design essentially means another chain. However, developers were able to propose hard-forks within the first 12 months if:
 
