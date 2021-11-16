@@ -14,3 +14,7 @@ The sigma-rust GitHub repo is [here](https://github.com/ergoplatform/sigma-rust)
 - This [document](https://github.com/ergoplatform/sigma-rust/blob/develop/docs/architecture.md) describes the high-level architecture of ErgoScript compiler and ErgoTree interpreter.
 - [Rust port of AVL tree from scrypto package.](https://github.com/knizhnik/scorex_crypto_avltree/blob/main/crypto_avltree.md)
 - [Ergo Utilities](https://github.com/robkorn/ergo-utilities-rust/) | simplify writing off-chain code in Rust.
+
+
+Use `https://wallet.plutomonkey.com/p2s/?source=` to compile any contract to P2S address and then use it in rust like this - `https://github.com/ergoplatform/sigma-rust/blob/fd197d0c0892cd24bbcb475e0a83243784700e32/ergotree-interpreter/src/contracts.rs#L159-L167`
+This approach should work in JS/TS WASM bindings as well.
