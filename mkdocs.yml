@@ -22,6 +22,7 @@ theme:
         - navigation.instant
         - navigation.sections # The bold sections in navigation
         - navigation.tracking
+        - navigation.indexes
       #  - toc.integrate
     logo: assets/logo.png
     font:
@@ -45,14 +46,14 @@ markdown_extensions:
   - admonition
 
 nav:
-  
-  - Home:
-    - Getting Started: index.md
-    - Contributing: contribute.md
-    - General FAQ: About/faq.md
-    - The Ergo Protocol: ergo.md
-    - Resources: dev/start/resources.md
+  - Getting Started:
+    - Getting Started: Home/index.md
+    - Contributing: Home/contribute.md
+    - General FAQ: Home/faq.md
+    - Events: Home/events.md
+    - The Ergo Protocol: Home/ergo.md
   - Developers:
+    - Developers: dev/index.md
     - Protocol:
       - UTXO State: dev/protocol/utxo-state.md
       - Autolykos: dev/protocol/autolykos.md
@@ -83,18 +84,21 @@ nav:
       - Kiosk: dev/stack/kiosk.md
       - JDE: dev/stack/jde.md
       - Assembler: dev/stack/assembler.md
-         
-    #- Languages:
-     # - Scala: dev/Languages/scala.md
-      ##- Java: dev/Languages/java.md
-    #  - Rust: dev/Languages/rust.md
-    #  - C#: dev/Languages/csharp.md
+    - Resources: 
+      - Misc: dev/start/resources.md
+      - Languages:
+        - Scala: dev/Languages/scala.md
+        - Java: dev/Languages/java.md
+        - Rust: dev/Languages/rust.md
+        - C#: dev/Languages/csharp.md
+      - Stack: 
+        - Front-End: dev/stack/front-end.md
+        - Back-End: dev/stack/back-end.md
     - Advanced:
       - Integration: dev/Integration/guide.md 
   - Node:
-    - Getting Started: 
-      - First Run: node/run.md
-      - Swagger API: node/swagger.md
+    - Getting Started: node/index.md
+    - Swagger API: node/swagger.md
       #- Config: node/node-config.md
       #- Docs: node/docs.md
       #- Withdraw: node/withdraw.md
@@ -107,7 +111,7 @@ nav:
       - Snapshots: node/snapshots.md
       - NiPoPoWS: node/nipopow.md
   - Applications:
-    - Use Cases: uses/apps.md
+    - Applications: uses/index.md
     - Live dApps:
       - Decentralised Exchanges: uses/dex.md
       - Stablecoins: uses/stablecoins.md
@@ -138,7 +142,6 @@ nav:
       - Collateral Mining: uses/collateral-mining.md
       - Perpetual Tokens: uses/perpetual.md
       - Bonding Curve: uses/bonding.md
-    - Previous Events: About/events.md
 
 
       

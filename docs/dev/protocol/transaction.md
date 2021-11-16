@@ -16,7 +16,7 @@ While the use of data-inputs may not be immediately apparent, they play a major 
 
 A script in Ergo can refer to other boxes in the transaction. For instance, the code snippet `INPUTS(0).value > 10000 && OUTPUTS(1).value > 20000` in any of the inputs boxes would enforce that the first input and the second output boxes must have a value greater than `10000` and `20000`, respectively.
 
-For a comparison between the logic used in eUTXO and account-based models please see [this article](https://ergoplatform.org/en/blog/2021-10-04-off-chain-logic-and-eutxo/) provides a 
+For a comparison between the logic used in eUTXO and account-based models please see [Off Chain Logic & eUTXO](https://ergoplatform.org/en/blog/2021-10-04-off-chain-logic-and-eutxo/). 
 
 
 ## Model Transaction

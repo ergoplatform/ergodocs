@@ -5,14 +5,10 @@
 Get a high-level overview of how Ergo works. 
 
 
-## 🛠 ┃ Build
+## [🛠 ┃ Build](/dev)
 
 Get started on your development journey 
 
-
-- [**Front-end**](/docs/dev/stack/front-end.md) | The user-interface built in your framework of choice.
-- [**Backend**](/docs/dev/stack/back-end.md) | Performs the off-chain logic
-- [**Smart Contract**](#ergoscript) | Where the magic happens, the on-chain validation of the off-chain logic.
 
 
 ## [❤️ ┃ Contribute](/docs/contribute.md)
