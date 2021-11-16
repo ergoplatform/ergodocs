@@ -8,10 +8,12 @@ theme:
     favicon: assets/favicon.png
     palette:
       - scheme: default
+        primary: deep orange
         toggle:
           icon: material/toggle-switch-off-outline
           name: Switch to dark mode
-      - scheme: slate 
+      - scheme: slate
+        primary: deep orange
         toggle:
           icon: material/toggle-switch
           name: Switch to light mode
@@ -19,8 +21,6 @@ theme:
         - navigation.tabs.sticky
         - navigation.sections
     logo: assets/logo.png
-    palette:
-      primary: deep orange
     font:
       text: Roboto
 extra_css: [assets/extra.css]
