@@ -22,7 +22,7 @@ theme:
         - navigation.instant
         - navigation.sections # The bold sections in navigation
         - navigation.tracking
-      #  - navigation.indexes
+        - navigation.indexes
       #  - toc.integrate
     logo: assets/logo.png
     font:
