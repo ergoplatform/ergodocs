@@ -1,8 +1,14 @@
-WIP: Ergo Platform documentation
+Ergo Platform documentation
 =======================================
 
-[ergodocs.readthedocs.io](https://ergodocs.readthedocs.io/)
+[docs.ergoplatform.org](https://docs.ergoplatform.org)
 
+## Contributing
 
-mkdocs gh-deploy
+Please submit a pull request. 
+
+## Running locally
+
+```
 mkdocs serve
+```
