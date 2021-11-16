@@ -47,10 +47,10 @@ markdown_extensions:
 
 nav:
   - Getting Started:
-    - Getting Started: Home/index.md
-    - Contributing: Home/contribute.md
-    - FAQ: Home/faq.md
-    - Events: Home/events.md
+    - Getting Started: index.md
+    - Contributing: contribute.md
+    - FAQ: faq.md
+    - Events: events.md
 
   - Developers:
     - Developers: dev/index.md
