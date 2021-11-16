@@ -1,26 +1,27 @@
 # The Ergo Protocol
 
-Ergo is a **Resilient Platform for Contractual Money**. Designed with the main focus to provide an efficient, secure, and easy way to implement financial contracts.
+Ergo is a **Resilient Platform for Contractual Money**. Designed with the main focus to provide an efficient, secure, and easy way to implement robust financial contracts.
 
-Ergo builds advanced cryptographic features and radically new DeFi functionality on the rock-solid foundations laid by a decade of blockchain theory and development. It complements tried and tested principles with the latest peer-reviewed academic research into cryptography, consensus models, and digital currencies.
+Ergo brings advanced cryptographic features and radically new DeFi functionality, complimenting tried and tested principles with the latest peer-reviewed academic research into cryptography, consensus models, and digital currencies.
 
 With a research-driven but practical development model, Ergo has prioritized useful features without compromising on security. 
-
-Extended support of light nodes makes Ergo friendly for end-users, allowing them to run contracts on common devices such as mobile phones without centralized intermediaries. To be useful in the long-term, we use widely-researched solutions with high-security guarantees while also preventing performance degradation over time with a new economic model.
-
 
 **All cryptocurrencies rely on contributions from the scientific research community. Ergo brings it in its core!**
 
 
-### [The Manifesto](https://ergoplatform.org/en/blog/2021-04-26-the-ergo-manifesto/)                                                      
-> Cryptocurrency should provide tools to enrich ordinary people. The small businesses that are getting not much above making ends meet, not depersonalized big financial capital. This is what inspired me. This is my dream.
+## [The Manifesto](https://ergoplatform.org/en/blog/2021-04-26-the-ergo-manifesto/)                                                      
+> Cryptocurrency should provide tools to enrich ordinary people. Small businesses that are struggling to make ends meet, not big depersonalized financial capital.
 
-## [Proof-of-Work](/docs/dev/protocol/autolykos.md)
+## [Autolykos](/dev/protocol/autolykos)
 
-Ergo uses Autolykos as the underlying PoW algorithm. Autolykos v2 (the current version of PoW) is a memory-hard ASIC-resistant PoW algorithm oriented towards GPUs.
+Ergo uses Autolykos as the underlying Proof of Work (PoW) algorithm. Autolykos v2 (the current version of PoW) is a memory-hard ASIC-resistant PoW algorithm oriented towards GPUs.
+
+## [NIPoPoWs](/dev/protocol/nipopow)
+
+Extended support of light nodes makes Ergo friendly for end-users, allowing them to run contracts on common devices such as mobile phones without centralized intermediaries. 
 
 
-## [eUTXO](/docs/dev/data-model/box.md)
+## [eUTXO](/dev/data-model/box)
 
 The platform's smart contracts are built on the extended **UTXO (eUTXO)** model with a unique data input concept, offering a radically different approach to provide robust, flexible cryptography and easy, safe scripting on privacy-centric **Sigma Protocols** (non-interactive zero-knowledge proofs). 
 
@@ -28,7 +29,7 @@ Ergo is a **UTXO** based blockchain with Proof-of-Work consensus. In this aspect
 
 Due to this, Ergo supports advanced financial contracts similar to those in Ethereum's account-based model.
 
-## [ErgoScript](/docs/dev/scs/ergoscript.md)
+## [ErgoScript](/dev/scs/ergoscript)
 
 
 Ergo provides advanced programming abilities for financial contracts using a high-level language called ErgoScript. 
@@ -37,7 +38,7 @@ The scripting language in itself is non-Turing complete, but applications run on
 
 Ergo provides superior support for real-world financial agreements. It does this through:
 
-1. Support for [multi-stage contracts](/docs/dev/scs/multi.md) 
+1. Support for [multi-stage contracts](/dev/scs/multi) 
 2. A simple high-level language, ErgoScript, enabling clear descriptions of contractual logic
 3. Support for formal verification of contracts for improved security guarantees (Ergo Platform deployed its [first formally verified p2p crowdfunding contract](https://twitter.com/chepurnoy/status/1239936086106935296) just three months after the network launched)
 4. Easy Oracle creation
@@ -50,7 +51,7 @@ In short, creating financial contracts on the blockchain isn’t just about the 
 
 The cryptographic part of ErgoScript is based on **Sigma Protocols** and naturally supports threshold `m-of-n` signatures, ring signatures, and more. Keeping all this in mind, we expect ErgoScript and Ergo's design to be uniquely useful as **Contractual Money** with countless possible applications. 
 
-## [NIPoPoWs](/docs/node/nipopow.md)
+## [NIPoPoWs](/node/nipopow)
 
 **Non-Interactive Proofs of Proof of Work** ([NIPoPoWs](https://nipopows.com/)) are essential for two reasons: Light Clients and Side Chains. These two components are essential for clients and nodes to facilitate easier onboarding to the blockchain. A decentralized network is inherently inefficient because of the randomness mechanism in a synchronous network; that is to say, every time a transaction (TX) occurs on the network, a couple of random nodes must process the TX to prove and secure its reliability. When put into perspective, that is an enormous task on a global scale. There can be billions of transactions, and it is plausible that many of those are from contributors operating with low bandwidth.
 

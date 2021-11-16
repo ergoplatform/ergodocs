@@ -1,6 +1,4 @@
 
-> With thanks to [Robert Kornacki](https://github.com/robkorn) for polishing of the draft.
-
 ## Introduction 
 
 [ErgoScript](https://ergoplatform.org/docs/ErgoScript.pdf) is the smart contract language used
@@ -538,3 +536,5 @@ verified and controlled by the tooling.
 - [Appkit Examples](https://github.com/aslesarenko/ergo-appkit-examples)
 - [ErgoDex ScalaDocs](https://ergoplatform.github.io/ergo-dex/api/org/ergoplatform/dex/ErgoDexTool$.html)
 - [ErgoTree Specification](https://ergoplatform.org/docs/ErgoTree.pdf)
+
+> With thanks to [Robert Kornacki](https://github.com/robkorn) for polishing of the draft.

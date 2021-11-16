@@ -16,8 +16,8 @@
 ### References
 - [A Quick Primer on ErgoScript](https://github.com/ergoplatform/ergo/wiki/ErgoScript-Overview)
 - [ErgoScript Language Description](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/LangSpec.md)
-- [FlowCards](flowcards.md) ~ A Declarative Framework for Development of Ergo dApps
-- Compile ErgoScript in browser with [ErgoScript Playground](https://wallet.plutomonkey.com/p2s/)
+- [FlowCards](flowcards.md) | A Declarative Framework for Development of Ergo dApps
+- Compile ErgoScript directly in your browser with [ErgoScript Playground](https://wallet.plutomonkey.com/p2s/)
 
 ## Getting Started
 

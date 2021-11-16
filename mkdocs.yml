@@ -8,12 +8,12 @@ theme:
     favicon: assets/favicon.png
     palette: # dark scheme toggle on material + dark orange
       - scheme: default
-        primary: deep orange
+        primary: red
         toggle:
           icon: material/toggle-switch-off-outline
           name: Switch to dark mode
       - scheme: slate
-        primary: deep orange
+        primary: red
         toggle:
           icon: material/toggle-switch
           name: Switch to light mode
