@@ -9,7 +9,7 @@
       
       
       
-        <link rel="canonical" href="https://docs.ergoplatform.org/dev/protocol/autolykos/">
+        <link rel="canonical" href="https://ergodocs.rtfd.io/dev/protocol/autolykos/">
       
       <link rel="icon" href="../../../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.4">
@@ -2287,7 +2287,7 @@
 <p>Ergo is already using an epoch length of ~1.5 days (with normal block rate), not Bitcoin's two weeks. However, more epochs were considered, but the retargeting function is non-linear also so that it may adjust sooner than the linear function in certain popular scenarios. </p>
 <h2 id="hardforking-policy">Hardforking policy</h2>
 <p>Critical changes require a hard fork, but Ergo has many possibilities to evolve via soft forks; soft forkability is going further in comparison with Bitcoin.</p>
-<p>In the old generation of Proof of Work, hard forks frequently led to community splits. In Ergo, miners can change parameters on the fly in their configs, and 50%+ of blocks mined within 1024 blocks epoch need to be for raising/lowering the limit of some parameter, then it will be changed by 1% in next epoch. It can be block size, computational cost, storage fee factor and many more. The above comment for the old generation doesn't mention that core developers are also 3rd parties. With Ergo`s design, when all basic assumptions are correct, the network should adapt in time to changing environment without the intervention of any trusted parties.* </p>
+<p>In the old generation of Proof of Work, hard forks frequently led to community splits. In Ergo, miners can change parameters on the fly in their configs, and 50%+ of blocks mined within 1024 blocks epoch need to be for raising/lowering the limit of some parameter, then it will be changed by 1% in next epoch. It can be block size, computational cost, storage fee factor and many more. The above comment for the old generation doesn't mention that core developers are also 3rd parties. With Ergo`s design, when all basic assumptions are correct, the network should adapt in time to changing environment without the intervention of any trusted parties.</p>
 <p>Ergo wants to avoid hard-forks. Emission, proof-of-work, the basics of the transactional model and other core things should not be changed at all as any change regarding core parts of design essentially means another chain. However, developers were able to propose hard-forks within the first 12 months if:</p>
 <ul>
 <li>A hard-fork is about security fixes only. The only exception is about making the cost of particular instructions adjustable via miners voting, which was planned but not delivered in the current mainnet.</li>
