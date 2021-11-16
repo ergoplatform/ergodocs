@@ -3,6 +3,8 @@
 - [awesome-ergo](https://github.com/ergoplatform/awesome-ergo)
 - [ergonaut.space](https://ergonaut.space/)
 - [ergosites.github](https://ergosites.github.io/)
+- [ErgoWiki](https://github.com/ergoplatform/ergo/wiki) | The official ergoplatform GitHub wiki
+- [ergotutorials.com](https://ergotutorials.com/)
 
 ## Explorer
 
@@ -22,26 +24,16 @@
   - [Node API](https://git.io/fjqwb)
   - [Explorer API](https://git.io/fjqwN)
 
-## Misc. Resources
-**Test vectors:**
+## Test vectors
 
 - [Ergo transaction serialization](https://git.io/fjqwX)
 - [Signature scheme](https://git.io/fjqwH)
 
-**Utilities** 
+## Utilities
 
  - [Miner rewards script](https://github.com/lorien/ergotools) | Simple command-line tool to find miner rewards not spent and form withdrawing transaction requests for them
  - [Ergo P2S Playground](https://wallet.plutomonkey.com/p2s/?source=dHJ1ZQ==) | A web-based tool to quickly get the address corresponding to some script  
 
-**Resources** 
-
-- [ErgoWiki](https://github.com/ergoplatform/ergo/wiki) | The official ergoplatform GitHub wiki
-- [ergosites.github.io](https://ergosites.github.io/) | Resource page which links to various websites and utilities. 
-- [ergohack.io](https://ergohack.io/resources) | Your introduction to developing on Ergo.
 
 
-## Basic Tutorials
 
-- [ergotutorials.com](https://ergotutorials.com/)
-- [Ergo API basic query](https://www.youtube.com/watch?v=B3W9uNwk_DM)
-- [Create mini web for your NFT.](https://www.youtube.com/watch?v=mP6D9Pf6p88)

@@ -81,7 +81,6 @@ nav:
      # - BlockP2P: dev/p2p/BlockP2P.md
     
     - Resources: 
-      - Misc: dev/start/resources.md
       - Libraries:
         - AppKit: dev/stack/appkit.md
         - ErgoTool: dev/stack/ergotool.md
@@ -96,7 +95,9 @@ nav:
       - Stack: 
         - Front-End: dev/stack/front-end.md
         - Back-End: dev/stack/back-end.md
-      - Integration: dev/Integration/guide.md 
+      - Integration: dev/Integration/guide.md
+      - Misc: dev/start/resources.md
+
 
   - Node:
     - Node: node/index.md
