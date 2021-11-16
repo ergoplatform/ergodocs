@@ -7,12 +7,12 @@ theme:
     name: material
     favicon: assets/favicon.png
     palette: # dark scheme toggle on material + dark orange
-      - scheme: default
+      - scheme: slate
         primary: red
         toggle:
           icon: material/toggle-switch-off-outline
           name: Switch to dark mode
-      - scheme: slate
+      - scheme: default
         primary: red
         toggle:
           icon: material/toggle-switch
