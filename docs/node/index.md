@@ -4,7 +4,6 @@ This tutorial explains how to install and run a full Ergo node. It does not cove
 
 Windows users can also watch the [video tutorial](https://www.youtube.com/watch?v=fpEDJ1CM6ns). 
 
-
 ### Node security
 
 There are a few important aspects of node usage that your wallet and money's safety depends on:
@@ -28,17 +27,17 @@ Denote by **ergo_folder** the folder where the jar is kept.
 ## Running the node for the first time
 
 Create a configuration file `ergo.conf` with the following text in **ergo_folder**. 
-
+```
 	ergo {
 	  node {
 	    mining = false
 	  }
 	}
-
+```
 Open a command prompt and `cd` to **ergo_folder**. Then issue the following command to run the node for the first time:
-
+```
      java -jar ergo-<release>.jar --mainnet -c ergo.conf
-
+```
 The node will start syncing immediately after this. Wait for a few minutes for the API to start and go to the next step.
 
 **Note:** You can use any name for the file instead of `ergo.conf`. All configuration parameters are to be passed through this file and you only need to rewrite parameters that you want to change from the default values. The above config file actually has the default values. 
@@ -59,7 +58,7 @@ Copy the response containing the hash for use in the next step (see below image)
 ## Update config file with API key hash
 
 Edit the config file `ergo.conf` and paste the hash copied in the previous step. The file should look as follows:
-
+```
 	ergo {
 	  node {
 	    mining = false
@@ -75,7 +74,7 @@ Edit the config file `ergo.conf` and paste the hash copied in the previous step.
 	    apiKeyHash = "324dcf027dd4a30a932c441f365a25e86b173defa4b8e58948253471b81b72cf"
 	  }
 	}
-
+```
 ## Initialize wallet
 
 Restart the node and go to [http://127.0.0.1:9053/panel](http://127.0.0.1:9053/panel) to access the panel. Then set the API key secret from the previous step. Note that you need to set the **secret** and not the hash from the config file. In our example, this is the string `hello`. 

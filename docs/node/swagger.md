@@ -1,13 +1,12 @@
 # View the Swagger UI
 
-A Swagger UI is available at [http://127.0.0.1:9053/swagger](http://127.0.0.1:9053/swagger). You had already used it earlier to compute the hash of your secret. 
-You can also use this UI to make API calls for advanced operations that are not (yet) available in the panel. Some examples of this are:
+A Swagger UI is available at [http://127.0.0.1:9053/swagger](http://127.0.0.1:9053/swagger). 
+
+You use this UI to make API calls for advanced operations that are not available in the panel. Some examples of this are:
 
 1. Creating non-standard transactions with registers and context variables.
 2. Creating transactions that issue tokens.
 3. Creating transactions that use certain boxes as inputs. 
-
-A future article will discuss each of these operations in detail. 
 
 Note that most methods in the API are protected and you would need to use your secret (from earlier) to access these methods. The following images show the process of setting this secret in the Swagger UI.
 
@@ -34,11 +33,22 @@ Once the node is running, the API can be accessed at [`127.0.0.1:9052`](http://1
 ## Setting an API key
 
 For accessing any protected methods you must configure `apiKeyHash` parameter in the node configuration file:
-
+```
    `scorex.restApi.apiKeyHash = "replace_this_with_your_unique_api_key_hash"`
-
+```
    The parameter is the hex-encoded Blake2b256 hash of your secret phrase that will be used to authenticate your API requests. You can use this [Python script](https://gist.github.com/oskin1/704ef3fba8d40bb1e7691919bf1e9cf9/) or any other script to securely generate the secret and the `blake2b256` hash of it. The secret phrase acts as an API key and can be any string but please ensure that it remains secret and is not sent to any untrusted services. 
 
 The following REST API endpoint also provides a (non-protected) method to compute the hash:
-
+```
    [`/utils/hashBlake2b`](http://127.0.0.1:9052/swagger#/utils/hashBlake2b)
+```
+### Main methods:
+
+* */wallet/init* and */wallet/restore* to create a wallet (and a secret mnemonic) and restore wallet from mnemonic
+* */wallet/unlock* to unlock the wallet (it is unlocked after init but locked after restart)
+* */wallet/lock* to lock the wallet
+* */wallet/payment/send* to send a simple payment
+* */wallet/status* to get wallet status
+* */wallet/deriveNextKey* to derive a new key according to EIP-3 (BIP 44 implementation for Ergo)
+* */wallet/balances* to get wallet balance (for all the addresses) 
+* */wallet/transactions* to get wallet transactions (for all the addresses) 

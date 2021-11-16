@@ -10,6 +10,8 @@ As a simple example, the below script allows only Alice to spend a box before a 
 
 `if (HEIGHT < 100000) alicePubKey else bobPubKey `
 
+Please see this [Quick Primer on ErgoScript](https://github.com/ergoplatform/ergo/wiki/ErgoScript-Overview) for an overview of key concepts and some basic examples. 
+
 
 ### Tutorials & Guides
 
@@ -23,13 +25,12 @@ As a simple example, the below script allows only Alice to spend a box before a 
 - [SigmaState Protocols](https://docs.ergoplatform.com/sigmastate_protocols.pdf)
 
 ### References
-- [A Quick Primer on ErgoScript](https://github.com/ergoplatform/ergo/wiki/ErgoScript-Overview)
-- [ErgoScript Language Description](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/LangSpec.md)
-- [FlowCards](flowcards.md) | A Declarative Framework for Development of Ergo dApps
+- [ErgoScript Language Spec](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/LangSpec.md)
 - [ErgoScript](https://ergoplatform.org/docs/ErgoScript.pdf) 
 - [ErgoTree](https://ergoplatform.org/docs/ErgoTree.pdf)
-### Resources
 
+### Resources
+- [FlowCards](flowcards.md) | A Declarative Framework for Development of Ergo dApps
 - Compile ErgoScript directly in your browser with [ErgoScript Playground](https://wallet.plutomonkey.com/p2s/)
 - [Kiosk](/dev/stack/kiosk) lets anyone play with ErgoScript using a basic web-based UI
 

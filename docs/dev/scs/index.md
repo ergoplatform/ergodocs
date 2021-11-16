@@ -1,3 +1,6 @@
+The overwhelming majority of successful public blockchain use‐cases are related to financial applications. Ergo extends Bitcoin's way of writing contracts by attaching a guard script (together with additional custom data) to every coin. For example, in addition to regular protection by some m‐of‐n signature, Ergo allows specifying the possible recipients of these coins, which may also be a contract with similar complex conditions. This "chaining" approach enables the implementation of secure and efficient contracts of arbitrary complexity. This, along with Ergo's focus on sustainability, makes it uniquely valuable as contractual money.
+
+
 ## Powerful But Safe Contracts
 
 Ethereum is an exceptional platform, but there are things it does not do well. Its Turing-complete smart contracts are powerful, but dangerous – as incidents from The DAO to the Parity wallet exploits have proven, with tens of millions of dollars in collateral damage. With complexity comes uncertainty, and potentially catastrophic vulnerabilities. Contracts can be expensive to run, and depending on network conditions may execute unpredictably – or not at all. 

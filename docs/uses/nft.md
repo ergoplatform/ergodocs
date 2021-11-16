@@ -6,3 +6,11 @@ Some examples like [Rarible](https://rarible.com/) or [Opensea](https://opensea.
 
 
 
+# ErgoAuctions
+
+The [Ergo Auction House](http://ergoauctions.org/#/auction/active) lets you buy and sell collectible tokens, art and much more.
+
+- [Source code](https://github.com/anon-real/ErgoAuctionHouse)
+- [v2 contracts](https://github.com/ergoplatform/eips/pull/39/files)
+- More information available at [ergonaut.space/en/ErgoAuctions](https://ergonaut.space/en/ErgoAuctions)
+

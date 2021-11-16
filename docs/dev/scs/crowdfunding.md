@@ -5,6 +5,18 @@ Crowdfunding is a way of raising capital through the collective efforts of indiv
 One of the best known examples for successful crowdfunding startups is Oculus Rift, a virtual reality headset. The company Oculus VR initiated its campaign in 2012 and was only two years later acquired by Facebook for $2 billion total. Besides the usual startups, there are also a lot of blockchain projects which went the way of crowdfunding, for example, Ethereum, Tron and EOS. Today, numerous platforms exist that allow you to publish your campaign. Some of the bigger ones are Indiegogo, Kickstarter, and Gofundme, only to name a few. 
 Crowdfunding has a lot of benefits: a wide reach, efficiency, and marketing aspects being the most convincing... But for now, let's get onto what's really important! 
 
+
+## ErgoFund
+
+- [Ergo Crowdfunding CLI](https://github.com/robkorn/ergo-crowdfunding-cli) | Command-line tool which enables participating and interacting with crowdfunding campaigns on Ergo
+- [Scanner](https://github.com/ergoplatform/scanner) 
+- ZK Treasury |  a tool for joint spendings with on-chain privacy 
+  - [Server](https://github.com/anon-real/DistributedSigsServer) 
+  - [Client](https://github.com/anon-real/DistributedSigsClient)
+- ['A Collective Spending Appproach'](https://www.reddit.com/r/ergonauts/comments/ohftim/ergoteam_a_simpler_collective_spending_approach/)
+
+
+
 ## Introducing Crowdfunding on Ergo
 
 A few days ago, on August 28th, core developer [Kushti](https://www.ergoforum.org/u/kushti) stated on the (Ergo forum)[www.ergoforum.org] that he managed to successfully write and implement code that allows users to start a crowdfunding campaign on top of the Ergo blockchain (as mentioned in the [whitepaper page 6](https://ergoplatform.org/docs/ErgoScript.pdf). This code even works with the current wallet API. [Here](https://ergoplatform.org/en/blog/2019_06_04_wallet-documentation/) is a quick guide on how to set up the wallet.

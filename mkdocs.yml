@@ -65,6 +65,7 @@ nav:
       - Box: dev/data-model/box.md
       - Block: dev/data-model/block.md
     - Wallets:
+      - Wallets: dev/wallet/index.md
       - Addresses: dev/wallet/address.md
       - Hierarchical keys: dev/wallet/keys.md
     - Smart Contracts:
@@ -118,6 +119,8 @@ nav:
       - Stablecoins: uses/stablecoins.md
       - Oracles: uses/oracles.md
       - NFTs: uses/nft.md
+      - ErgoMixer: uses/mixer.md
+      - ProfitSharing: uses/profit.md
     - In Development:
       - ICOs: uses/ico.md
       - Index Coins: uses/index_coins.md
