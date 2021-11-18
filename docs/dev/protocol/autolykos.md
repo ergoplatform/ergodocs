@@ -10,7 +10,7 @@ Autolykos v1 originally had non-outsourcability built-in. However, it became app
 
 It's also discussed here on ['Unblocked with Robert Kornacki' (14:45)](https://www.youtube.com/watch?v=2sbTMrQwWOw&feature=youtu.be)
 
-
+- [Voting for a soft-fork in Ergo](https://www.ergoforum.org/t/voting-for-a-soft-fork-in-ergo/2958)
 
 
 ## Difficulty Adjustment
@@ -113,7 +113,11 @@ If verification can be done in reasonable time only by an entity able to spend m
 However, new blockchains also tend to absorb more and more features, and they are not coming for free. Then the huge topic in the research community is about how to make it possible to check the integrity of the whole blockchain with pruned blocks or system state (or both) under plausible assumptions. Possible solutions here involve bootstrapping state snapshot and blockchain suffix on top of it (popular in Ethereum protocol clients, and formalized in [an academic paper even](https://eprint.iacr.org/2018/129.pdf)), stateless clients ([partially stateless](https://eprint.iacr.org/2016/994), as implemented in [Ergo Platform](https://ergoplatform.org/en/) or [fully stateless](https://eprint.iacr.org/2018/968) which do exist only in research papers currently).
 
 
-## Test Vectors for Solution Verification
+## Test Vectors 
+
+- [Test vectors for increased N values ](https://www.ergoforum.org/t/test-vectors-for-increased-n-values/2887/2)
+
+## Solution Verification
 ```
 Test Vectors - Ergo:
 credit: Wolf9466#9466 on Discord

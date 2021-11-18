@@ -63,6 +63,7 @@ nav:
       - Autolykos: dev/protocol/autolykos.md
       - Storage Rent: dev/protocol/rent.md
       - NIPoPoWS: dev/protocol/nipopow.md
+      - Scaling: dev/protocol/scaling.md
     - Data Model:
       - Transactions: dev/protocol/transaction.md
       - Box: dev/data-model/box.md
@@ -124,6 +125,7 @@ nav:
       - NFTs: uses/nft.md
       - ErgoMixer: uses/mixer.md
       - ProfitSharing: uses/profit.md
+      - ErgoRaffle: uses/raffle.md
     - In Development:
       - ICOs: uses/ico.md
       - Index Coins: uses/index_coins.md

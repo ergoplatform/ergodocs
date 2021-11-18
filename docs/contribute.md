@@ -1,12 +1,5 @@
 # Contributing
 
-
-There are ways for everyone to get involved regardless of technical ability. 
-
-> *Cryptocurrency should provide tools to enrich ordinary people. Small businesses that are struggling to make ends meet, not big depersonalized financial capital. This is what inspired me. This is my dream. The tools should allow people to make contracts (digital, self-enforcing, reasonable smart contracts) regardless of the differences in jurisdictions, traditions, followed business practices, etc.*
->
-> *I hope Ergo will be helpful here. Thousands of small cooperatives and individual entrepreneurs are much more critical to healthy and sustainable wealth growth around the globe compared to a couple of corporations hiding profits in offshore heavens. Let’s consider the use and integration with communities, cooperative federations, nonprofit foundations, and philanthropic trusts.*
->
 >  **Let’s try to create grassroots finance.**
 
 ## General
