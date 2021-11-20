@@ -28,6 +28,8 @@ Please see this [Quick Primer on ErgoScript](https://github.com/ergoplatform/erg
 - [ErgoScript Language Spec](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/LangSpec.md)
 - [ErgoScript](https://ergoplatform.org/docs/ErgoScript.pdf) 
 - [ErgoTree](https://ergoplatform.org/docs/ErgoTree.pdf)
+- [High Level Design Patterns In Extended UTXO Systems](https://github.com/Emurgo/Emurgo-Research/blob/master/smart-contracts/High%20Level%20Design%20Patterns%20In%20Extended%20UTXO%20Systems.md)
+
 
 ### Resources
 - [FlowCards](flowcards.md) | A Declarative Framework for Development of Ergo dApps

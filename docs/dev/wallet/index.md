@@ -38,3 +38,4 @@ Currently we have an [Android Wallet](https://ergoplatform.org/en/android_wallet
 
 - [URL Wallet (Your key is in the URL, use this wallet for temporary use cases only!)](https://erg.urlwallet.org/)
 - [Ergo Paper Wallet](https://anon-br.github.io/ergo-paper-wallet/)
+Here is how Swift API turned out so far - https://github.com/ergoplatform/sigma-rust/blob/31aa0922d03f632d22fdc348b2604d23ed296586/bindings/ergo-wallet-ios/Sources/ErgoWallet/ErgoWallet.swift
