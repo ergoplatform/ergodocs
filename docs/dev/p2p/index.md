@@ -17,11 +17,15 @@ Significant improvements have been made to the P2P layer over the past few month
 
 Nodes perform *handshaking* by sending each other `handshake messages`
 
-## [Network Messages](/docs/dev/p2p/network)
+## [Network Messages](/dev/p2p/network)
 
-## [Modifier Exchange](/docs/dev/p2p/modifiers)
+## [Modifier Exchange](/dev/p2p/modifiers)
 
 ## P2P Smart Contracts
+
+Ergo allows truly P2P smart contracts. Just run the node and a local interface.
+
+
 - [Mixicles - simple private contracts on top of oracle data](https://research.chain.link/mixicles.pdf) - Implementation-wise, onchain part would simple, p2p offchain interaction is needed (and would be the most labor-intensive part likely)
 - P2P Pools
 

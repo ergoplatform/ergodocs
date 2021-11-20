@@ -36,7 +36,7 @@ Please see this [Quick Primer on ErgoScript](https://github.com/ergoplatform/erg
 
 ### P2S
 
-> A transaction to this a P2S or *pay-to-script* address will create an output locked with the script
+> A transaction to this P2S or *pay-to-script* address will create an output locked with the script
 
 
 - You can do some simple apps with just the node and ErgoScript to P2S address compiler available at [wallet.plutomonkey.com/p2s/](https://wallet.plutomonkey.com/p2s/), [video tutorial](https://www.youtube.com/watch?v=d6Mf-oxaLIc)
