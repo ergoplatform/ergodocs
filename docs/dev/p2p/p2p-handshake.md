@@ -5,6 +5,8 @@ Handshaking
 To establish a connection with another peer, a handshake messages exchange is needed in the first place. This document
 describes handshaking procedure and messages format. 
 
+There is also [github.com/SabaunT/ergo-handshake](https://github.com/SabaunT/ergo-handshake)
+
 Peer Feature
 ------------
 
