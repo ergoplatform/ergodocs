@@ -17,7 +17,11 @@ Notes:
 2. No `VLQ` and `ZigZag` encoding is used for message length (for historical reasons); bytes are coming in big-endian order.
 
 
-# 
+# PRs
+
+- [NiPoPoW powered bootstrapping #1365](https://github.com/ergoplatform/ergo/issues/1365)
+
+# Tests
 
 [Tests for parsing networking messages against test vectors #1264](https://github.com/ergoplatform/ergo/pull/1264)
 

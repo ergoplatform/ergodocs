@@ -10,7 +10,7 @@ Significant improvements have been made to the P2P layer over the past few month
 
 - [P2P layer optimizations - part I #1290](https://github.com/ergoplatform/ergo/pull/1290)
 - [Rust implementation of Ergo peer-to-peer networking](https://github.com/ergoplatform/ergo-p2p)
-
+- [p2p issues on Ergo Repo](https://github.com/ergoplatform/ergo/issues?q=p2p)
 
 ## [Handshake](/dev/p2p/p2p-handshake)
 
