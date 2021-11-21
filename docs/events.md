@@ -4,6 +4,12 @@ Ergo hosts regular events such as Hackathons and Developer Summits, make sure to
 
 A brief overview of events is given below with related articles and repositories. 
 
+- [Weekly Dev Updates](https://www.reddit.com/r/ergonauts/search?sort=new&restrict_sr=on&q=flair%3AWEEKLY-DEV)
+- [Kushti + Daniel AMA - Nov 19](https://www.reddit.com/r/ergonauts/comments/qyv73g/ama_transcript_with_kushti_and_daniel_friedman/)
+- [KuCoin Listing AMA - Aug 21](https://www.reddit.com/r/ergonauts/comments/pf48rj/transcript_summary_of_the_recent_kucoin_ama/)
+- [Bitcoin.com AMA - Aug 21](https://www.reddit.com/r/ergonauts/comments/p2864c/20210810_the_ergo_team_ama_hosted_by_bitcoincom/)
+- [Anniversary AMA Summary - Jul 21](https://www.reddit.com/r/ergonauts/comments/oc6idj/ama_summary_the_best_bits/)
+
 ## ERGOHACK
 
 

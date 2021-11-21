@@ -84,3 +84,4 @@ For the purposes of research and this article, it is worth noting that the conce
 ## Resources
 
 - [Storage rent details](https://www.ergoforum.org/t/storage-rent-details/256)
+- [HF-4.0 Reduce storage rent period #1144](https://github.com/ergoplatform/ergo/issues/1144) - Rejected
