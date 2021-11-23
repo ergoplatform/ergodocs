@@ -2,13 +2,13 @@
 
 ## Getting Started
 
-ErgoScript is a rich language based on scala that supports Multi-Stage Contracts
-
-The scripting language in itself is non-Turing complete, but applications run on the platform can be made to be Turing complete as demonstrated in [this peer-reviewed paper](https://arxiv.org/pdf/1806.10116v1.pdf).
+ErgoScript is a rich smart-contract language based on scala that supports Multi-Stage Contracts.
 
 As a simple example, the below script allows only Alice to spend a box before a certain height and only Bob to spend the box after that.
 
 `if (HEIGHT < 100000) alicePubKey else bobPubKey `
+
+The scripting language in itself is non-Turing complete, but applications can be made to be Turing complete as demonstrated in [this peer-reviewed paper](https://arxiv.org/pdf/1806.10116v1.pdf).
 
 Please see this [Quick Primer on ErgoScript](https://github.com/ergoplatform/ergo/wiki/ErgoScript-Overview) for an overview of key concepts and some basic examples. 
 
@@ -32,7 +32,7 @@ Please see this [Quick Primer on ErgoScript](https://github.com/ergoplatform/erg
 
 
 ### Resources
-- [FlowCards](flowcards.md) | A Declarative Framework for Development of Ergo dApps
+- [FlowCards](flowcards.md) | A Declarative Framework for Development of Ergo dApps (Also see [flowcardLib](https://github.com/lucagdangelo/flowcardLib))
 - Compile ErgoScript directly in your browser with [ErgoScript Playground](https://wallet.plutomonkey.com/p2s/)
 - [Kiosk](/dev/stack/kiosk) lets anyone play with ErgoScript using a basic web-based UI
 
