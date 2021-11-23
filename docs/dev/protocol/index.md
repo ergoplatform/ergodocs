@@ -1,10 +1,10 @@
 # The Ergo Protocol
 
-The Ergo Platform enables developers to build the most advanced non-custodial financial contracts in the world. Allowing true peer to peer, decentralised, grassroots finance.
+Ergo provides a platform for developers to build the most advanced non-custodial financial contracts in the world. Allowing true peer to peer, decentralised, grassroots finance.
 
 With a research-driven but practical development model, Ergo has prioritized useful features without compromising on security. 
 
-Ergo,  **resilient platform for contractual money**
+*Ergo*,  **resilient platform for contractual money**
 
 Below you can dive deeper into some of the most important components of Ergo. 
 
@@ -13,22 +13,19 @@ Below you can dive deeper into some of the most important components of Ergo.
 
 ## [Autolykos](/dev/protocol/autolykos)
 
-Ergo uses Autolykos as the underlying Proof of Work (PoW) algorithm. Autolykos is a memory-hard ASIC-resistant PoW algorithm oriented towards GPUs.
+*Autolykos* is the the underlying **Proof of Work** (PoW) algorithm. Memory-hard ASIC-resistant PoW algorithm oriented towards GPUs.
 
 ## [eUTXO](/dev/data-model/box)
 
-The platform's smart contracts are built on the extended **UTXO (eUTXO)** model with a unique data input concept, offering a radically different approach to provide robust, flexible cryptography and easy, safe scripting on privacy-centric **Sigma Protocols** (non-interactive zero-knowledge proofs). 
-
 Ergo is a **UTXO** based blockchain with Proof-of-Work consensus. In this aspect, it is similar to Bitcoin. Ergo uses standard **Elliptic Curve** Cryptography with the same curve as Bitcoin (`Secp256k1`). Unlike Bitcoin and similar to Cardano, Ergo uses a so-called "extended-UTXO model," which implies UTXOs with the ability to contain arbitrary data and sophisticated scripts. 
 
-Due to this, Ergo supports advanced financial contracts similar to those in Ethereum's account-based model.
+Ergo's Smart contracts have a unique **data input** concept, which enables a radically different approach to provide robust, flexible cryptography using easy, safe scripting on privacy-centric **Sigma Protocols** (non-interactive zero-knowledge proofs). 
+
 
 ## [ErgoScript](/dev/scs/ergoscript)
 
 
-Ergo provides advanced programming abilities for financial contracts using a high-level language called ErgoScript. 
-
-The scripting language in itself is non-Turing complete, but applications run on the platform can be made to be Turing complete as demonstrated in [this peer-reviewed paper](https://arxiv.org/pdf/1806.10116v1.pdf).
+Smart contracts are written in a high-level language called [ErgoScript](/dev/scs/ergoscript) with the ability for **Turing complete** smart contracts as demonstrated in [this peer-reviewed paper](https://arxiv.org/pdf/1806.10116v1.pdf).
 
 Ergo provides **superior support for real-world financial agreements**. It does this through:
 
@@ -38,12 +35,10 @@ Ergo provides **superior support for real-world financial agreements**. It does 
 4. Easy Oracle creation
 5. Native support for complex signature schemes
 
-In short, creating financial contracts on the blockchain isn’t just about the functionality you provide. It’s about making that functionality safe and accessible, as well as powerful. 
-
-Ergo achieves this and more.
+Creating financial contracts on the blockchain isn’t just about the functionality. It’s about making that functionality safe and accessible, as well as powerful. 
 
 
-## [Sigma Protocols](/site/dev/scs/sigma/index.html)
+### [Sigma Protocols](/site/dev/scs/sigma/index.html)
 
 The cryptographic part of ErgoScript is based on **Sigma Protocols** and naturally supports threshold `m-of-n` signatures, ring signatures, and more. Keeping all this in mind, we expect ErgoScript and Ergo's design to be uniquely useful as **Contractual Money** with countless possible applications. 
 
