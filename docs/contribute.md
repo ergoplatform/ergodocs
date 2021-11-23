@@ -6,7 +6,7 @@
 
 ## Development Bounties
 
-**In general, any tutorial or a good example for using the node or any library around, or anything educative for the community, that is a subject for some bounty even if details not announced in prior**
+**In general, anything educative for the community is a subject to some bounty even if not specifically listed**
 
 1. Join the [Discord](https://discord.gg/nr4JRnhAyV)
 2. See available bounties on [grow-ergo](https://github.com/ergoplatform/grow-ergo/)

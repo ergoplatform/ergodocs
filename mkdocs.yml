@@ -124,9 +124,9 @@ nav:
       - Oracles: uses/oracles.md
       - NFTs: uses/nft.md
       - ErgoMixer: uses/mixer.md
-      - ProfitSharing: uses/profit.md
       - ErgoRaffle: uses/raffle.md
     - In Development:
+      - ProfitSharing: uses/profit.md
       - ICOs: uses/ico.md
       - Index Coins: uses/index_coins.md
       - Lending: uses/lending.md
