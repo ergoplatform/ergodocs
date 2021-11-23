@@ -3,7 +3,7 @@
 
 - [**Front-end**](stack/front-end/) | The user-interface built in your framework of choice.
 - [**Backend**](stack/back-end) | Performs the off-chain logic
-- [**Smart Contract**](dev/scs/) | Where the magic happens, the on-chain validation of the off-chain logic.
+- [**Smart Contract**](/scs/) | Where the magic happens, the on-chain validation of the off-chain logic.
 
 ## [Ergo Improvement Proposals](https://github.com/ergoplatform/eips)
 
