@@ -4,7 +4,7 @@ Ergo provides a platform for developers to build the most advanced non-custodial
 
 With a research-driven but practical development model, Ergo has prioritized useful features without compromising on security. 
 
-*Ergo*, **resilient platform for contractual money**
+*Ergo*, **a resilient platform for contractual money**
 
 Below you can dive deeper into some of the most important components of Ergo. 
 
@@ -56,9 +56,7 @@ Another unique feature of Ergo is the concept of storage-rent, which is the abil
 
 ## [Scaling](/dev/protocol/scaling)
 
-The scaling aspect in Ergo Platform's design has been a high priority since the mainnet launch. In order to gain mass adoption, a blockchain should be able to scale. Scalability refers to the efficient use of computational resources and high throughput. Ergo incorporates various elements to achieve near-infinite scalability. The design is built on the extended UTXO model with its novel language, ErgoScript, relying on peer-reviewed academic research. With years of research, Ergo developed various features such as stateless clients, NIPoPoWs and UTXO based smart contracts.
-
-
+The scaling aspect in Ergo Platform's design has been a high priority since the mainnet launch. Scalability refers to the efficient use of computational resources and high throughput. Ergo's design is built on the extended UTXO model with its novel language, ErgoScript, relying on peer-reviewed academic research. With years of research, Ergo developed various features such as stateless clients, NIPoPoWs and UTXO based smart contracts.
 
 
 
