@@ -1,12 +1,12 @@
 # The Ergo Protocol
 
-Ergo was designed as a  **resilient platform for contractual money** with the main focus to provide an efficient, secure, and easy way to implement robust financial contracts.
-
-Ergo brings advanced cryptographic features and radically new DeFi functionality, complimenting tried and tested principles with the latest peer-reviewed academic research.
+The Ergo Platform enables developers to build the most advanced non-custodial financial contracts in the world. Allowing true peer to peer, decentralised, grassroots finance.
 
 With a research-driven but practical development model, Ergo has prioritized useful features without compromising on security. 
 
+Ergo,  **resilient platform for contractual money**
 
+Below you can dive deeper into some of the most important components of Ergo. 
 
 ## [The Manifesto](https://ergoplatform.org/en/blog/2021-04-26-the-ergo-manifesto/)                                                      
 > Cryptocurrency should provide tools to enrich ordinary people. Small businesses that are struggling to make ends meet, not big depersonalized financial capital.
