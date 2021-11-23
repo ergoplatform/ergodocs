@@ -4,7 +4,7 @@ Ergo provides a platform for developers to build the most advanced non-custodial
 
 With a research-driven but practical development model, Ergo has prioritized useful features without compromising on security. 
 
-*Ergo*,  **resilient platform for contractual money**
+*Ergo*, **resilient platform for contractual money**
 
 Below you can dive deeper into some of the most important components of Ergo. 
 
@@ -13,7 +13,7 @@ Below you can dive deeper into some of the most important components of Ergo.
 
 ## [Autolykos](/dev/protocol/autolykos)
 
-*Autolykos* is the the underlying **Proof of Work** (PoW) algorithm. Memory-hard ASIC-resistant PoW algorithm oriented towards GPUs.
+*Autolykos* is the the underlying Memory-hard ASIC-resistant **Proof of Work** (PoW) algorithm oriented towards GPUs. 
 
 ## [eUTXO](/dev/data-model/box)
 
