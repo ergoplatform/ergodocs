@@ -3,6 +3,18 @@
 
 > *Smart contracts* are the backbone of *decentralized finance*. Through smart contracts, users can interact with *dApps* without middlemen. *Blockchain* design has a significant impact on the capabilities of smart contracts. Ergo Blockchain’s UTXO model allows *multi-stage contracts* to operate on a highly scalable network.
 
+
+## Tutorials & Guides
+- [Secure User Entry/Bootstrap Funneling In Multi Stage Protocols](https://www.ergoforum.org/t/secure-user-entry-bootstrap-funneling-in-multi-stage-protocols/228)
+- [Multi-Stage Protocol Off-Chain & On-Chain Development Workflow](https://www.ergoforum.org/t/multi-stage-protocol-off-chain-on-chain-development-workflow/269)
+- [Multi-Stage Contracts in the UTXO Model: Delivery by Alexander Chepurnoy & Amitabh Saxena](https://www.youtube.com/watch?v=g3FlM_WOwBU)
+
+## References & Resources
+- [Multi-Stage Contracts](https://ergoplatform.org/en/blog/2021-04-16-multi-stage-contracts/)
+- [Talk](http://deic.uab.cat/conferences/cbt/cbt2019/resources/chepurnoy.ogv) ~ [Slides](http://deic.uab.cat/conferences/cbt/cbt2019/resources/chepurnoy.pdf) ~ [Paper](https://link.springer.com/chapter/10.1007/978-3-030-31500-9_16)
+- [https://ergoplatform.org/docs/teaser.pdf](https://ergoplatform.org/docs/teaser.pdf)
+- [https://ergoplatform.org/docs/ErgoScript.pdf](https://ergoplatform.org/docs/ErgoScript.pdf)
+
 ### **Decentralized Finance**
 
 The banking system is built solely on trust. However, this trust mechanism is a form of obligation that citizens don’t have any choice on. Banks and financial institutions produce and provide *financial products* such as loans or ETFs to financial markets. The value of these products is defined by what they are referring to as an actual asset, either a physical object or a contract. The credibility of value, however, is protected with our blind trust in these institutions. Governments back up these financial institutions to restore confidence, but to what degree are they *trustable*?
@@ -19,14 +31,4 @@ For a blockchain to contain smart contracts, it should have loops. These loops c
 
 
 
-Sources:
 
-
-- [Multi-Stage Contracts](https://ergoplatform.org/en/blog/2021-04-16-multi-stage-contracts/)
-- [Multi-Stage Contracts in the UTXO Model: Delivery by Alexander Chepurnoy & Amitabh Saxena](https://www.youtube.com/watch?v=g3FlM_WOwBU)
-- [Talk](http://deic.uab.cat/conferences/cbt/cbt2019/resources/chepurnoy.ogv) ~ [Slides](http://deic.uab.cat/conferences/cbt/cbt2019/resources/chepurnoy.pdf) ~ [Paper](https://link.springer.com/chapter/10.1007/978-3-030-31500-9_16)
-- [https://ergoplatform.org/docs/teaser.pdf](https://ergoplatform.org/docs/teaser.pdf)
-- [https://ergoplatform.org/docs/ErgoScript.pdf](https://ergoplatform.org/docs/ErgoScript.pdf)
-- [Multi-Stage Contracts in the UTXO Model: Delivery by Alexander Chepurnoy & Amitabh Saxena](https://www.youtube.com/watch?v=g3FlM_WOwBU)
-- [Secure User Entry/Bootstrap Funneling In Multi Stage Protocols](https://www.ergoforum.org/t/secure-user-entry-bootstrap-funneling-in-multi-stage-protocols/228)
-- [Multi-Stage Protocol Off-Chain & On-Chain Development Workflow](https://www.ergoforum.org/t/multi-stage-protocol-off-chain-on-chain-development-workflow/269)

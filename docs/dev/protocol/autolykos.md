@@ -10,7 +10,6 @@ Autolykos v1 originally had non-outsourcability built-in. However, it became app
 
 It's also discussed here on ['Unblocked with Robert Kornacki' (14:45)](https://www.youtube.com/watch?v=2sbTMrQwWOw&feature=youtu.be)
 
-- [Voting for a soft-fork in Ergo](https://www.ergoforum.org/t/voting-for-a-soft-fork-in-ergo/2958)
 
 
 ## Difficulty Adjustment
@@ -37,6 +36,9 @@ Ergo aims to avoid hard-forks. As any change regarding core parts of design esse
 - A hard-fork is about security fixes only. The only exception is making the cost of particular instructions adjustable via miners voting, which was planned but not delivered in the current mainnet.
 - 90+% of miners supports a hard fork.
 - A hard-fork is not breaking old contracts, freezing or moving any funds.
+
+## [Voting for a soft-fork in Ergo](https://www.ergoforum.org/t/voting-for-a-soft-fork-in-ergo/2958)
+
 
 ## Autolykos V2
 

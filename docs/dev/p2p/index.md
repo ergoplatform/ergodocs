@@ -4,7 +4,7 @@ The Ergo network protocol allows full nodes (peers) to collaboratively maintain 
 
 ## Introduction
 
-- The **Full Node** downloads and verifies every block (and transaction) before it relays them to other nodes. 
+The **Full Node** downloads and verifies every block (and transaction) before it relays them to other nodes. 
 
 Significant improvements have been made to the P2P layer over the past few months.
 

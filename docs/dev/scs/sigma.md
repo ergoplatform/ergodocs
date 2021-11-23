@@ -1,19 +1,11 @@
-Ergo aims to provide an efficient, secure, and easy way to implement financial contracts that will be useful and survivable in the long term. There is plenty of uniqueness in Ergo but the most significant is probably Sigma protocols. These allow a true P2P system with privacy in mind. No one else at the moment is able to build a trustless LETS system, multisig with no signers disclosure, trustless payment networks or has real ring signatures that preserve zero knowledge.
+> Ergo aims to provide an efficient, secure, and easy way to implement financial contracts that will be useful and survivable in the long term. There is plenty of uniqueness in Ergo but the most significant is probably **Sigma protocols**. These allow a true P2P system with privacy in mind. No one else at the moment is able to build a trustless LETS system, multisig with no signers disclosure, trustless payment networks or has real ring signatures that preserve zero knowledge.
 
-The overwhelming majority of successful public blockchain use‐cases are related to financial applications. Ergo extends Bitcoin's way of writing contracts by attaching a guard script (together with additional custom data) to every coin.  For example, in addition to regular protection by some `m‐of‐n` signature, Ergo allows specifying the possible recipients of these coins, which may also be a contract with similar complex conditions. This "chaining" approach enables the implementation of secure and efficient contracts of arbitrary complexity. This, along with Ergo's focus on sustainability, makes it uniquely valuable as contractual money. 
 
-> Privacy must remain an option to protect the individual. It does not have to be forced; let people make their own choices. Privacy is the ability to create barriers and erect boundaries to create a space and for the individual. It is up to each what borders and boundaries they choose to make. 
->
-> Civilization exists under a continuous tension between what is best for society and what is best for the individual. The only real entities in a community are individuals. All collectives, associations, and governments stem from individual participation and interaction. 
-
-- [Ergo utilizes the eUTXO model for enhanced privacy & scalability options while also employing expressive smart contracts for DeFi applications.](https://ergoplatform.org/en/blog/2021-08-17-ergo-advancing-on-bitcoin/)
-- [DarkFund0 - ZK Fund for privacy applications](https://www.ergoforum.org/t/darkfund0-zk-fund-for-privacy-applications/398) | sponsors new developments in regards with privacy and private DeFi - 4000 ERG up for grabs!
-
-## Zero-Knowledge Proof Intro
+## Zero-Knowledge Proofs
 
 Let’s say someone picks up a phone in a bar. You can prove it’s yours by hiding the screen, entering the unlock code and showing the unlocked screen to the person who found it. This is a simple example of a zero-knowledge proof: you have proven you own the phone without giving away any sensitive information.
 
-In cryptography, most practical problems are associated with secrets. The most popular application lies in digital signatures, used by millions of people around the world every day. Essentially, these involve saying: ‘This message proves I know the private key associated with this public key – but I’m not revealing the private key itself’.
+In cryptography, most practical problems are associated with secrets. The most popular application lies in digital signatures, used by millions of people around the world every day. Essentially, these involve saying: *‘This message proves I know the private key associated with this public key – but I’m not revealing the private key itself’.*
 
 ##  Sigma protocols
 
@@ -43,6 +35,13 @@ With Ergo, this kind of application can be created quickly, thanks to the integr
 This an example 3-out-of-5 threshold signature which can be compiled to a P2S address sending ergs to [resulting address (protected by the threshold sig)](https://wallet.plutomonkey.com/p2s/?source=ewphdExlYXN0KAogIDMsIAogIENvbGwoCiAgICBQSygiOWY4WlF0MVN1ZTZXNUFDZE1TUFJ6c0hqM2pqaVprYll5M0NFdEI0QmlzeEV5azRSc05rIiksIAogICAgUEsoIjloRldQeWhDSmN3NEtReUNHdTR5QUdmQzFpZVJBS3lGZzI0RktqTEpLMnVEZ0E4NzN1cSIpLCAKICAgIFBLKCI5ZmRWUDJqY2ExZTVuQ1RUNnE5aWpaTHNzR2o2djRqdVk4Z0VBeFVocDdZVHVTc0xzcFMiKSwgCiAgICBQSygiOWdBS2VSdTFXNERoNmFkV1hublltZnFqQ1RueG5TTXR5bTJMUFBNUEVyQ2t1c0NkNkYzIiksCiAgICBQSygiOWdtTnNxcnFkU3BwTFVCcWcyVXpSRW1taXZncWgxcjNqbU5jTEFjNTNoazNZQ3ZBR1dFIikKICApCikKfQ==)
 
 Here is a good intro to [making a signature](https://www.youtube.com/watch?v=daP67yp-Czs&list=PLUWruihtE-HtL-JZk8Vb4Yn_H18aE3rb6&index=4)
+
+
+## Manifesto
+
+> Privacy must remain an option to protect the individual. It does not have to be forced; let people make their own choices. Privacy is the ability to create barriers and erect boundaries to create a space and for the individual. It is up to each what borders and boundaries they choose to make. 
+>
+> Civilization exists under a continuous tension between what is best for society and what is best for the individual. The only real entities in a community are individuals. All collectives, associations, and governments stem from individual participation and interaction. 
 
 
 ## Use Cases
@@ -79,3 +78,9 @@ ErgoMixer is a [state of the art](https://ergonaut.space/screenshot_2021-05-15_a
 - ["So at the same time off the peg ring and threshold signatures, where from k-out-of-n signatures, it could not be concluded which k signers were real, so you have i think first zero knowledge multisig with no signers disclosure in cryptocurrency at the same time(on app level)."](https://discord.com/channels/668903786361651200/668903786902847502/751154111650594978)
 - ["You have to look more into the base at the moment to see future possibilities, at the base you have multisig with no signers disclosure, then new features like covert address, multi hop withdrawals discovered slowly thanks to contracts possibilities, mixer can be just run locally at the same time. You can build Monero on top of Ergo, will it have better privacy guarantees? it is yet to be discovered. But you can think of private order books for example at the same time, similar to a simple and interesting payment network. I think that combining these things with NYM in the future can have more sense for scalable privacy."](https://discord.com/channels/668903786361651200/762308254159863818/879821391644471306)
 
+
+## Resources
+
+
+- [Ergo utilizes the eUTXO model for enhanced privacy & scalability options while also employing expressive smart contracts for DeFi applications.](https://ergoplatform.org/en/blog/2021-08-17-ergo-advancing-on-bitcoin/)
+- [DarkFund0 - ZK Fund for privacy applications](https://www.ergoforum.org/t/darkfund0-zk-fund-for-privacy-applications/398) | sponsors new developments in regards with privacy and private DeFi - 4000 ERG up for grabs!
