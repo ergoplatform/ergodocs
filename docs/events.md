@@ -5,24 +5,21 @@ Ergo hosts regular events such as Hackathons and Developer Summits, make sure to
 A brief overview of events is given below with related articles and repositories. 
 
 - [Weekly Dev Updates](https://www.reddit.com/r/ergonauts/search?sort=new&restrict_sr=on&q=flair%3AWEEKLY-DEV)
-- [Kushti + Daniel AMA - Nov 19](https://www.reddit.com/r/ergonauts/comments/qyv73g/ama_transcript_with_kushti_and_daniel_friedman/)
-- [KuCoin Listing AMA - Aug 21](https://www.reddit.com/r/ergonauts/comments/pf48rj/transcript_summary_of_the_recent_kucoin_ama/)
-- [Bitcoin.com AMA - Aug 21](https://www.reddit.com/r/ergonauts/comments/p2864c/20210810_the_ergo_team_ama_hosted_by_bitcoincom/)
-- [Anniversary AMA Summary - Jul 21](https://www.reddit.com/r/ergonauts/comments/oc6idj/ama_summary_the_best_bits/)
+- [AMAs](https://www.reddit.com/r/ergonauts/search?q=flair%3AAMA&restrict_sr=on&sort=relevance&t=all)
 
-## ERGOHACK
+## Hackathon
 
+We hosted two hackathons in 2021 with a third lined up for Q1 2022!
 
 ### ERGOHACK I
-
 
 * [Hackerthon Jun 12th!](https://ergoplatform.org/en/blog/2021-06-04-ergo-community-launches-its-first-hackathon-ergohack/)
 
 **Participants**
 
-- [ErgoRaffle](https://github.com/ErgoRaffle)
+- [ErgoRaffle](https://github.com/ErgoRaffle) *(now live @ [ergoraffle.io](https://ergoraffle.io))*
 - Ergo Index Fund
-- [Smart Pools](https://github.com/WilfordGrimley/ErgoSmartPools)
+- [Smart Pools](https://github.com/WilfordGrimley/ErgoSmartPools) *(now live @ [GetBlok.io](https://getblok.io))*
 - [Sigma Stamp](https://www.sigmastamp.ml/)
 - Ergo Charts
 - [Simpler Joint Spending Tool](https://www.ergoforum.org/t/a-simpler-collective-spending-approach-for-everyone/476%20)
@@ -31,10 +28,10 @@ A brief overview of events is given below with related articles and repositories
 
 **Participants**
 
-- [ErgoLend](https://github.com/Ergo-Lend/)
+- [ErgoLend](https://github.com/Ergo-Lend/) *(now live @ [ergolend.org](https://ergolend.org))*
 - [Minotaur Wallet](https://github.com/minotaur-ergo/minotaur-wallet)
-- [Ergopad](https://github.com/Ergohack-Dashboard-Project)
-- [Ergo Subpooling](https://github.com/K-Singh/ergo-subpooling)
+- [Ergopad](https://github.com/Ergohack-Dashboard-Project) *(now live @ [ergopad.io](https://ergopad.io))*
+- [Ergo Subpooling](https://github.com/K-Singh/ergo-subpooling) *(now live @ [GetBlok.io](https://getblok.io))*
 - [HYPO10USE: QUIDGAMES](https://github.com/hypo10use/quid-games)
 - Ergo Audio
 
