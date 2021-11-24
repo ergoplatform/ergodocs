@@ -124,20 +124,19 @@ nav:
       - Oracles: uses/oracles.md
       - NFTs: uses/nft.md
       - ErgoMixer: uses/mixer.md
-      - ErgoRaffle: uses/raffle.md
+      - CrowdFunding: uses/crowdfunding.md
     - In Development:
       - ProfitSharing: uses/profit.md
       - ICOs: uses/ico.md
       - Index Coins: uses/index_coins.md
       - Lending: uses/lending.md
-      - CrowdFunding: dev/scs/crowdfunding.md
       - Zero-Knowledge: uses/zk.md      
-      - Email Client for Blocked Internet: uses/blocked_web.md
     - Planned:
       - Asset Tokenisation: uses/tokenisation.md
       - DAO: uses/dao.md
       - Buy Back Guarantees: uses/dex-buyback.md
       - LETS: uses/lets.md
+      - Email Client for Blocked Internet: uses/blocked_web.md
       - Atomic Swaps: dev/protocol/atomic.md
     - Further Ideas:
       - CDBC: uses/cdbc.md
