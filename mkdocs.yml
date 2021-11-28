@@ -106,6 +106,7 @@ nav:
 
   - Node:
     - Node: node/index.md
+    - Wallet: node/wallet.md
     - Overview: 
       - Swagger API: node/swagger.md
       - Architecture: node/architecture.md

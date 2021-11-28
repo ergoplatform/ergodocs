@@ -1,32 +1,30 @@
 ## How to set up and configure a full Ergo node
 
-This tutorial explains how to install and run a full Ergo node. It does not cover mining. 
+This page explains how to install and run a full Ergo node. It does not cover mining. 
 
-Windows users can also watch the [video tutorial](https://www.youtube.com/watch?v=fpEDJ1CM6ns). 
+- Windows users can also watch the [video tutorial](https://www.youtube.com/watch?v=fpEDJ1CM6ns). 
+- UNIX Systems can run [ergo-installer.sh](https://github.com/ergoplatform/ergo/blob/master/ergo-installer.sh)
 
-### Node security
+## Prerequisites
+To run an Ergo node you need a **JDK/JRE version >= 9** installed on your system. We recommend either version 9 or 11. One way to do this is to install [Oracle Java SE](https://www.oracle.com/technetwork/java/javase/overview/index.html) or [SDKMAN](https://sdkman.io/install) for UNIX based systems.
 
-There are a few important aspects of node usage that your wallet and money's safety depends on:
-
-* An Ergo node requires storing security-critical parameters in the configuration file. You should never make this file public.
-* An Ergo node provides a REST API for interacting with the built-in wallet. Sensitive API methods require a security token, which should never be sent over untrusted channels.
-* Access to the Ergo REST API must be restricted to known hosts. In particular, the API must not be accessible from the Internet.
-
-### Prerequisites
-To run an Ergo node you need a **JDK/JRE version >= 9** installed on your system. We recommend either version 9 or 11. One way to do this is to install [Oracle Java SE](https://www.oracle.com/technetwork/java/javase/overview/index.html).
-
-**Note that Oracle JDK/JRE <= 8 is no longer supported**. 
-
-The next step is to download the latest [Ergo client release](https://github.com/ergoplatform/ergo/releases/) jar file and create a node configuration file.
-
-Note that instead of downloading the precompiled Ergo jar, you can clone the repository and compile the jar from the source using [SBT](https://www.scala-sbt.org/) by issuing the `sbt assembly` command.
-
-Create a dedicated folder (such as `~/ergo`) for running the node.
-Denote by **ergo_folder** the folder where the jar is kept. 
  
 ## Running the node for the first time
 
-Create a configuration file `ergo.conf` with the following text in **ergo_folder**. 
+Create a dedicated folder (such as `~/ergo`) for running the node.
+```bash
+mkdir ergo
+cd ergo
+```
+
+Download the latest [Ergo client release](https://github.com/ergoplatform/ergo/releases/) `.jar` 
+
+Create a configuration file `ergo.conf` 
+
+```
+touch ergo.conf
+```
+with the following text
 ```
 	ergo {
 	  node {
@@ -34,26 +32,26 @@ Create a configuration file `ergo.conf` with the following text in **ergo_folder
 	  }
 	}
 ```
-Open a command prompt and `cd` to **ergo_folder**. Then issue the following command to run the node for the first time:
+Then issue the following command to run the node for the first time (from within the `ergo` folder):
 ```
-     java -jar ergo-<release>.jar --mainnet -c ergo.conf
+java -jar -Xmx3G ergo-<release>.jar --mainnet -c ergo.conf
+# The -Xmx flag sets the max heap size for the jvm
 ```
 The node will start syncing immediately after this. Wait for a few minutes for the API to start and go to the next step.
 
-**Note:** You can use any name for the file instead of `ergo.conf`. All configuration parameters are to be passed through this file and you only need to rewrite parameters that you want to change from the default values. The above config file actually has the default values. 
+> **Note:** You can use any name for the file instead of `ergo.conf`. All configuration parameters are to be passed through this file and you only need to rewrite parameters that you want to change from the default values. The above config file actually has the default values. 
 
 ## Compute the hash of your secret
 
-First, select a secret to protect your API. 
-Then go to http://127.0.0.1:9053/swagger#/utils/hashBlake2b and call the API to compute the hash of your secret. Refer to the image below.
+We need to set a secret password to protect the API. In this example we'll use `hello` - but you **must use a different and strong secret.**
 
-![Compute Hash of secret](https://user-images.githubusercontent.com/23208922/69916676-ed233400-1483-11ea-8582-f61c38478d31.png)
+Go to [127.0.0.1:9053/swagger#/utils/hashBlake2b](http://127.0.0.1:9053/swagger#/utils/hashBlake2b) and call the API to compute the `Blake2b` hash of your secret. 
 
-Copy the response containing the hash for use in the next step (see below image). In our example, the secret is `hello` whose hash corresponds to `324dcf027dd4a30a932c441f365a25e86b173defa4b8e58948253471b81b72cf`. 
+> ![Compute Hash of secret](https://user-images.githubusercontent.com/23208922/69916676-ed233400-1483-11ea-8582-f61c38478d31.png)
 
-**IMPORTANT** You must use a different and strong secret. 
+Copy the hash response which we'll place back in the `ergo.conf` file. 
 
-![response](https://user-images.githubusercontent.com/23208922/69916509-c3690d80-1481-11ea-869f-630cd59cc525.png)
+> ![response](https://user-images.githubusercontent.com/23208922/69916509-c3690d80-1481-11ea-869f-630cd59cc525.png)
 
 ## Update config file with API key hash
 
@@ -75,72 +73,35 @@ Edit the config file `ergo.conf` and paste the hash copied in the previous step.
 	  }
 	}
 ```
-## Initialize wallet
 
-Restart the node and go to [http://127.0.0.1:9053/panel](http://127.0.0.1:9053/panel) to access the panel. Then set the API key secret from the previous step. Note that you need to set the **secret** and not the hash from the config file. In our example, this is the string `hello`. 
+Your node should now be syncing. If you'd like to initialise a wallet place see [this page](/node/wallet)
 
-![set API key](https://user-images.githubusercontent.com/23208922/69916579-b7ca1680-1482-11ea-880e-251c8139a613.png)
-
-Click on **Initialize wallet**. After the pop-up opens, there are two ways to proceed depending on your scenario.
-
-1. If this is the first time you are running the node then you need to initialize it with a new mnemonic sentence.
-2. If you had created a wallet earlier and would like to obtain the same address (possibly because there are funds stored in it), then you have to restore the wallet using the mnemonic sentence you had saved earlier. 
-
-Follow one of the below steps depending on your situation. 
- 
-### Initialize wallet from scratch
-
-![Initialize wallet](https://user-images.githubusercontent.com/23208922/69916584-d4fee500-1482-11ea-838c-e8aba9f41c76.png)
-
-In the pop-up that opens, you must enter a wallet password. The mnemonic password is optional. After you click send, the wallet will return a mnemonic sentence as shown below. 
-
-![mnemonic sentence](https://user-images.githubusercontent.com/23208922/69916693-2360b380-1484-11ea-9366-1bf9eb0f8b30.png)
-
-You must copy this sentence and save it in a safe place. This sentence will be needed to restore the wallet on a different computer.
-
-### Restore wallet from earlier
-
-Copy the mnemonic sentence from earlier paste it into the "Mnemonic" field in the Restore-wallet form. Enter a secure wallet password. Leave the Mnemonic password empty (it is only for advanced users). Refer to the figure below.
-
-![restore wallet](https://user-images.githubusercontent.com/23208922/71127599-66a37c00-2211-11ea-9b9e-9a69ac80c306.png)
-
-After the wallet has been successfully restored from the mnemonic sentence, you will see a confirmation as shown in the figure below.
-
-![successfully restored confirmation](https://user-images.githubusercontent.com/23208922/71127600-673c1280-2211-11ea-95eb-7c775c59180d.png)
-
-### Get wallet addresses
-
-This is a test to ensure you have set up the node properly. It will return the current addresses in the wallet. 
-In the panel at [http://127.0.0.1:9053/panel](http://127.0.0.1:9053/panel) click on the `Wallet` tab on the left and then on `Get all wallet addresses` to view the addresses currently maintained by the wallet. It should return at least one address if the node is set correctly.
-
-![Get addresses](https://user-images.githubusercontent.com/23208922/69978955-5b82f780-1553-11ea-85b6-413c63a46334.png)
-
-### Check if the node is synced
+## Check if the node is synced
 
 While the node is syncing, the panel will show "Active synchronization" (see the image below).
 
-![active synchronization](https://user-images.githubusercontent.com/23208922/71128146-94d58b80-2212-11ea-9010-5b61a91e8549.png)
+> ![active synchronization](https://user-images.githubusercontent.com/23208922/71128146-94d58b80-2212-11ea-9010-5b61a91e8549.png)
 
 After the node is fully synced, the text will change to "Node is synced", as shown below.
 
-![synced](https://user-images.githubusercontent.com/23208922/71301767-8da4ae00-23c9-11ea-8fc0-a92a9d78b821.png)
+> ![synced](https://user-images.githubusercontent.com/23208922/71301767-8da4ae00-23c9-11ea-8fc0-a92a9d78b821.png)
 
-If you need to resync, remove the following two folders and restart the node. 
+In the case of unexpected shutdowns the database may become corrupted and you need to resync.
+
+To do so remove the following two folders and restart the node. 
 
 ```
 rm -rf .ergo/state
 rm -rf .ergo/history
 ```
 
-### Check wallet balance
+## Node security
 
-Once the node is synced, use the wallet API in the panel to see your balance, as shown below.
+There are a few important aspects your wallet and money's safety depends on:
 
-![check balance](https://user-images.githubusercontent.com/23208922/71127598-66a37c00-2211-11ea-9d53-f6d7738d1726.png)
+* You should never make the `ergo.conf` file public.
+* Sensitive API methods require a security token, which should never be sent over untrusted channels.
+* Access to the Ergo REST API must be restricted to known hosts. In particular, the API must not be accessible from the Internet.
 
-### Sending funds
-
-If there is a non-zero balance, you can send Ergs to any other address using the panel as shown below:
-
-![send ergs](https://user-images.githubusercontent.com/23208922/71129066-a28c1080-2214-11ea-9806-7d768059980a.png)
-
+## Compiling from source
+Note that instead of downloading the precompiled Ergo jar, you can clone the repository and compile the jar from the source using the [`sbt assembly`](https://www.scala-sbt.org/)  command.
