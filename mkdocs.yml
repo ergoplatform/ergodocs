@@ -106,6 +106,7 @@ nav:
 
   - Node:
     - Node: node/index.md
+    - Quick Install: node/quick.md
     - Wallet: node/wallet.md
     - Overview: 
       - Swagger API: node/swagger.md
