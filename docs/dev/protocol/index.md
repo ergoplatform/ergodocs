@@ -1,6 +1,6 @@
 # The Ergo Protocol
 
-Ergo provides a platform for developers to build the most advanced non-custodial financial contracts in the world. Allowing true peer to peer, decentralised, grassroots finance.
+Ergo is a Layer 1 proof of work blockchain that provides a platform for developers to build trustless financial contracts and enables true peer to peer, decentralised, grassroots finance.
 
 With a research-driven but practical development model, Ergo has prioritized useful features without compromising on security. 
 
