@@ -4,7 +4,7 @@
 
 The Ergo JS Template aims to serve as an entry point to Ergo dApp Development
 
-Bootstrapped with Create React App. It contains ergo-ts and ergo-lib libraries as dependencies and some examples to present how to use these libraries.
+Bootstrapped with Create React App. It contains ergo-ts and ergo-lib libraries as dependencies and some examples of how to use these libraries.
 
 ### Explanations
 

@@ -3,7 +3,7 @@
 
 ## How to setup the Chain-Grabber module on a Raspberry Pi device
 
-This is a guide for developers and data scientists who are interested in storing the Ergo blockchain to a standardized database format using a Raspberry Pi.
+This is a guide for developers and data scientists interested in storing the Ergo blockchain to a standardized database format using a Raspberry Pi.
 
 We will focus specifically on the Chain Grabber module from the [Ergo Blockchain Explorer (backend)](https://github.com/ergoplatform/explorer-backend).
 
@@ -36,7 +36,7 @@ sudo apt install sbt
 
 ### Download and unzip precompiled JAR
 
-If you are reading this from the future please visit the [code release repo](https://github.com/ergoplatform/explorer-backend/releases) and replace with the appropriate version.
+If you are reading this in the future, please visit the [code release repo](https://github.com/ergoplatform/explorer-backend/releases) and replace it with the appropriate version.
 
 ```
 wget https://github.com/ergoplatform/explorer-backend/archive/refs/tags/<version>.zip
@@ -46,7 +46,7 @@ unzip explorer-backend-<version>
 
 ### Install PostgreSQL
 
-In the code snippet below we created "ergo" as the username.
+In the code snippet below, we created "ergo" as the username.
 
 ```
 sudo apt install postgresql
@@ -79,7 +79,7 @@ sbt chain-grabber/run
 
 ### Validate
 
-If all goes well the code below returns the latest block height that was stored to the database.
+If all goes well, the code below returns the latest block height that was stored in the database.
 
 ```
 select max(height) from node_headers;

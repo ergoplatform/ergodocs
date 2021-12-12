@@ -6,6 +6,6 @@
 
 ## Derived Addresses
 
-Since very early versions, Ergo node uses root secret key (derived from seed) for the *change* address. After switching to EIP-3, supported by CoinBarn and Yoroi around that time, the node switched to the same change address as in the wallets, thus derived address corresponding to `m/44’/429’/0’/0/0`.
+Since very early versions, the Ergo node uses a secret root key (derived from seed) for the *change* address. After switching to EIP-3, supported by CoinBarn and Yoroi around that time, the node switched to the same change address as in the wallets, thus deriving an address corresponding to `m/44’/429’/0’/0/0`.
 
 [Read More](https://www.ergoforum.org/t/an-issue-with-change-address-of-node-wallet/2940)

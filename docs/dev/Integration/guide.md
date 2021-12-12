@@ -41,7 +41,7 @@ Available libraries are:
 
 Offline Signing
 ---------------
-Transaction assembly and offline signing demo using ergo-wallet and Java is provided in https://gist.github.com/kushti/c040f244865a451b94df01032c7a3456 
+Transaction assembly and offline signing demo using ergo-wallet and Java is provided in [this gist](https://gist.github.com/kushti/c040f244865a451b94df01032c7a3456 )
 
 Transaction assembly and signing in Rust
 https://github.com/ergoplatform/sigma-rust/blob/d70bea875792c4e383bfdd71754338695bdb37f8/ergo-lib/src/wallet/tx_builder.rs#L552-L592
@@ -54,8 +54,10 @@ https://github.com/ergoplatform/sigma-rust/blob/d70bea875792c4e383bfdd7175433869
 Composing transactions outside the node
 --------------------------------------
 
-To get unspent UTXOs for some address, please use transactions/boxes/byAddress/unspent Explorer API method: https://api.ergoplatform.com/transactions/boxes/byAddress/unspent/9gAE5e454UT5s3NB1625u1LynQYPS2XzzBEK4xumvSZdqnXT35M . 
-
+To get unspent UTXOs for some address, please use transactions/boxes/byAddress/unspent Explorer API method: 
+```
+https://api.ergoplatform.com/transactions/boxes/byAddress/unspent/9gAE5e454UT5s3NB1625u1LynQYPS2XzzBEK4xumvSZdqnXT35M 
+```
 You need to exclude UTXOs spent in the mempool! Use /transactions/unconfirmed/byAddress Explorer API method for that: https://api.ergoplatform.com/transactions/unconfirmed/byAddress/9gAE5e454UT5s3NB1625u1LynQYPS2XzzBEK4xumvSZdqnXT35M
 
 Broadcasting transaction
@@ -73,7 +75,7 @@ and then send this JSON via a POST request to the public Explorer *https://api.e
 Address generation
 ------------------
 
-Secret seed and derived addresses generation demo using ergo-wallet and Java is provided in https://gist.github.com/kushti/70dcfa841dfb504721f09c911b0fc53d
+Secret seed and derived addresses generation demo using ergo-wallet and Java is provided in [this gist](https://gist.github.com/kushti/70dcfa841dfb504721f09c911b0fc53d)
 
 
 Own Testnet and Explorer Infrastructure
@@ -111,4 +113,4 @@ scorex {
 
 Then the node will CPU-mine its own chain. 
 
-Any suggestions for improvements are welcomed! Please send them to team@ergoplatform.org or #development channel in Discord https://discord.gg/kj7s7nb
+Any suggestions for improvements are welcomed! Please send them to team@ergoplatform.org or #development channel in [Discord](https://discord.gg/kj7s7nb)

@@ -48,7 +48,7 @@ Please see this [Quick Primer on ErgoScript](https://github.com/ergoplatform/erg
 
 #### P2SH
 
-Typically most people use P2S, because it is a lot easier to use. P2SH means you have to keep the contract ready off-chain to be submit when you create the tx, and if you lose it then your funds are stuck forever. This also makes it harder for other people to use your dApp as they need the contract themselves, rather than just the address. P2SH is technically cheaper since you store less data on-chain, but likely we won't see anyone using P2SH until we start to get heavy load on-chain.
+Typically most people use P2S because it is a lot easier to use. P2SH means you have to keep the contract ready off-chain to be submitted when you create the tx, and if you lose it, then your funds are stuck forever. This also makes it harder for other people to use your dApp as they need the contract themselves, rather than just the address. P2SH is technically cheaper since you store less data on-chain, but likely we won't see anyone using P2SH until we start to get heavy load on-chain.
 
 #### Box
 
@@ -58,7 +58,7 @@ here is a box to experiment with
 
 ## Proxy Contracts
 
-Outsourcing transaction generation to an external service/dApp can be useful or even needed in various circumstances. For example, avoiding wallet limitations to generate any transaction on behalf of the user - Ergo Assembler is designed for this purpose. Another example is to scale dApps to be able to fulfill many requests without double-spending or data invalidation - SigmaUSD dApp can use proxy contracts to avoid bank double-spending and ERG/USD oracle data invalidation.
+Outsourcing transaction generation to an external service/dApp can be useful or even needed in various circumstances. For example, avoiding wallet limitations to generate any transaction on behalf of the user - Ergo Assembler is designed for this purpose. Another example is to scale dApps to be able to fulfil many requests without double-spending or data invalidation - SigmaUSD dApp can use proxy contracts to avoid bank double-spending and ERG/USD oracle data invalidation.
 
 - [EIP-0017](https://github.com/ergoplatform/eips/blob/master/eip-0017.md)
 

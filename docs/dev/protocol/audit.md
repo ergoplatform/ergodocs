@@ -5,7 +5,7 @@ The detailed report is below. Nothing critical is found. Comments on issues foun
 
 1. On wallet password, we'll provide a recommendation in subsequent versions of the protocol client. Not sure hard enforcement on passwords will take place, but we'll do more consultations on this.
 
-2. Changing "n" and "k" parameters makes sense only when launching a new network. Changing these parameters in the mining node will make blocks produced invalid for other nodes. Changing these parameters in the protocol client means going on another fork (blocks coming from the honest protocol participants will be rejected). So no need for extra checks may be, as people launching new networks will set "n" and "k" properly.
+2. Changing "n" and "k" parameters makes sense only when launching a new network. Changing these parameters in the mining node will make blocks produced invalid for other nodes. Changing these parameters in the protocol client means going on another fork (blocks coming from the honest protocol participants will be rejected). So no need for extra checks maybe, as people launching new networks will set "n" and "k" properly.
 
 3. Currently, the Ergo node (as well as other blockchain protocol clients and wallets we're aware of and the cryptographic libraries we're using) does not protect from side-channel attacks running locally (e.g. timing attacks or memory inspection by malware or viruses). So please protect the machines you're running wallets on!  
 

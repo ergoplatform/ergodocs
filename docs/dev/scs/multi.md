@@ -25,10 +25,6 @@ The problem lies elsewhere. We don’t ask if our stock is genuine or is it a fa
 
 ### **Multi-Stage Contracts On Ergo**
 
-So you’ve heard about smart contracts, but what are multi-stage contracts? Multi-stage contracts refer to smart contracts that are operating on a stateful level. Because Ergo uses the *UTXO model* (first seen in Bitcoin), it is possible to process parallelized actions on top of smart contracts. Ethereum’s *Account-Based model*, however, doesn’t allow such operations. The Account-Based model has its ease of use, but it also comes with a high load of operation power. Ergo’s multi-stage contracts are developed on the extended UTXO model. It’s a complex design that aims for *infinite scalability*; therefore, it creates more place to build complex solutions.
+So you’ve heard about smart contracts, but what are multi-stage contracts? Multi-stage contracts refer to smart contracts that are operating on a stateful level. Because Ergo uses the *UTXO model* (first seen in Bitcoin), it is possible to process parallelized actions on top of smart contracts. Ethereum’s *Account-Based model*, however, doesn’t allow such operations. The Account-Based model has its ease of use, but it also comes with a high load of operation power. Ergo’s multi-stage contracts are developed on the extended UTXO model. It’s a complex design that aims for *infinite scalability*; therefore, it creates more space to build complex solutions.
 
-For a blockchain to contain smart contracts, it should have loops. These loops can later refer to themselves and check whether an operation is working or not. Bitcoin’s UTXO design is very primitive, and it doesn’t contain Turing-complete smart contracts. Ethereum has this capability, but it’s a primitive version of a Turing-complete language. Ergo Blockchain provides a different approach to multi-stage contracts, empowered by the *extended UTXO* model. Permitting a lighter network and broader use cases.
-
-
-
-
+For a blockchain to contain smart contracts, it should have loops. These loops can later refer to themselves and check whether an operation is working or not. Bitcoin’s UTXO design is very primitive, and it doesn’t contain Turing-complete smart contracts. Ethereum has this capability, but it’s a primitive version of a Turing-complete language. Ergo Blockchain provides a different approach to multi-stage contracts, empowered by the *extended UTXO* model, permitting a lighter network and broader use cases.

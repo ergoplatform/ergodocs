@@ -1,15 +1,15 @@
 # Events
 
-Ergo hosts regular events such as Hackathons and Developer Summits, make sure to check out ERGOHACK III and ERGO SUMMIT II, both expected Q1 2022. 
+Ergo hosts regular events such as Hackathons and Developer Summits; check out ERGOHACK III and ERGO SUMMIT II, both expected Q1 2022. 
 
-A brief overview of events is given below with related articles and repositories. 
+A brief overview of events is below, with related articles and repositories. 
 
 - [Weekly Dev Updates](https://www.reddit.com/r/ergonauts/search?sort=new&restrict_sr=on&q=flair%3AWEEKLY-DEV)
 - [AMAs](https://www.reddit.com/r/ergonauts/search?q=flair%3AAMA&restrict_sr=on&sort=relevance&t=all)
 
 ## Hackathon
 
-We hosted two hackathons in 2021 with a third lined up for Q1 2022!
+We hosted two hackathons in 2021, with a third lined up for Q1 2022!
 
 ### ERGOHACK I
 

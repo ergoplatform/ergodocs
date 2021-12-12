@@ -1,13 +1,13 @@
 # Rust
 
-[sigma-rust](https://github.com/ergoplatform/sigma-rust) is an alternative and simple implementation of ErgoTree interpreter and transaction building tools. The goal for the Rust version is to be on par with Scala version feature-wise. Now Rust version is still significantly behind. Also the goal for the Rust version is to have bindings for web, iOS and Android. The Scala version will continue to be the primary choice for JVM ecosystem with Rust version covering the rest.
+[sigma-rust](https://github.com/ergoplatform/sigma-rust) is an alternative and simple implementation of ErgoTree interpreter and transaction building tools. The goal for the Rust version is to be on par with the Scala version feature-wise. Now Rust version is still significantly behind. Also, the goal for the Rust version is to have bindings for web, iOS and Android. The Scala version will continue to be the primary choice for the JVM ecosystem, with the Rust version covering the rest.
 
 ## Contributing
 
 
 A list of "*good first*" issues is [available on GitHub](https://github.com/ergoplatform/sigma-rust/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) - @greenhat on [Discord](https://discord.gg/Q86PNMwRsu) is ready to assist anyone who is interested.
 
-The sigma-rust GitHub repo is [here](https://github.com/ergoplatform/sigma-rust).   There is an issues tab with labeled tasks anyone can pick up.  If you are working on something, leave a comment so others know. 
+The sigma-rust GitHub repo is [here](https://github.com/ergoplatform/sigma-rust).   There is an issues tab with labelled tasks anyone can pick up.  If you are working on something, leave a comment, so others know. 
 - [contributing](https://github.com/ergoplatform/sigma-rust/blob/develop/CONTRIBUTING.md)
 
 ## References

@@ -1,13 +1,13 @@
 
-A lot of blockchain-related news these days are saying us that a bank _X_ or a corporation _Y_
-is going to use a "blockchain" to "reduce costs". Basically it means that just another buzzword is 
-considered by big banksters as just another tool to extract value from everywhere in a more efficient way,
+A lot of blockchain-related news these days are telling us that a bank _X_ or a corporation _Y_
+is going to use a "blockchain" to "reduce costs". Basically, it means that just another buzzword is 
+considered by big banksters as just another tool to extract value from everywhere in a more efficient way
 and also to save on cutting job positions.  
 
-While I am avoiding to say anything about "Satoshi's vision" (nothing but speculations could be dug there after 
+While I am avoiding to say anything about "Satoshi's vision" (nothing but speculations could be dug thereafter 
 his exodus), a broad view I witnessed in the early years around online forums users is that a cryptocurrency 
 should provide tools to enrich the ordinary people behind their small businesses providing no much above making ends meet, not depersonalized big financial capital. The tools of 
-a cryptocurrency in the eyes of the original broad community vision should allow people to do economic activity dependless on business size, geographic location, interest rates set by big players, and so on. 
+a cryptocurrency, in the eyes of the original broad community vision, should allow people to do economic activity dependless on business size, geographic location, interest rates set by big players, and so on. 
 The tools should allow people to do contracts (no paper contracts, but digital, self-enforcing, and reasonably smart contracts) dependless on differences in jurisdictions, traditions, followed business practices etc.
 
 I hope Ergo would be useful here. Thousands of small cooperatives and individual entrepreneurs are more important to healthy and sustainable wealth growth around the globe than a couple of corporations hiding profits in offshore heavens. 

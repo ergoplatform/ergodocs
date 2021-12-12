@@ -2,24 +2,24 @@
 
 Ergo is a Layer 1 proof of work blockchain that provides a platform for developers to build trustless financial contracts and enables true peer to peer, decentralised, grassroots finance.
 
-With a research-driven but practical development model, Ergo has prioritized useful features without compromising on security. 
+Ergo has prioritised useful features without compromising security with a research-driven but practical development model. 
 
 *Ergo*, **a resilient platform for contractual money**
 
 Below you can dive deeper into some of the most important components of Ergo. 
 
 ## [The Manifesto](https://ergoplatform.org/en/blog/2021-04-26-the-ergo-manifesto/)                                                      
-> Cryptocurrency should provide tools to enrich ordinary people. Small businesses that are struggling to make ends meet, not big depersonalized financial capital.
+> Cryptocurrency should provide tools to enrich ordinary people. Small businesses struggling to make ends meet, not big depersonalised financial capital.
 
 ## [Autolykos](/dev/protocol/autolykos)
 
-*Autolykos* is the the underlying Memory-hard ASIC-resistant **Proof of Work** (PoW) algorithm oriented towards GPUs. 
+*Autolykos* is the underlying Memory-hard ASIC-resistant **Proof of Work** (PoW) algorithm oriented towards GPUs. 
 
-## [eUTXO](/dev/data-model/box)
+## [eUTXO](eutxo.md)
 
 Ergo is a **UTXO** based blockchain with Proof-of-Work consensus. In this aspect, it is similar to Bitcoin. Ergo uses standard **Elliptic Curve** Cryptography with the same curve as Bitcoin (`Secp256k1`). Unlike Bitcoin and similar to Cardano, Ergo uses a so-called "extended-UTXO model," which implies UTXOs with the ability to contain arbitrary data and sophisticated scripts. 
 
-Ergo's Smart contracts have a unique **data input** concept, which enables a radically different approach to provide robust, flexible cryptography using easy, safe scripting on privacy-centric **Sigma Protocols** (non-interactive zero-knowledge proofs). 
+Ergo's Smart contracts have a unique **data input** concept, enabling a radically different approach to provide robust, flexible cryptography using easy, safe scripting on privacy-centric **Sigma Protocols** (non-interactive zero-knowledge proofs). 
 
 
 ## [ErgoScript](/dev/scs/ergoscript)
@@ -35,7 +35,7 @@ Ergo provides **superior support for real-world financial agreements**. It does 
 4. Easy Oracle creation
 5. Native support for complex signature schemes
 
-Creating financial contracts on the blockchain isn’t just about the functionality. It’s about making that functionality safe and accessible, as well as powerful. 
+Creating financial contracts on the blockchain isn't just about the functionality; it's about making that functionality safe and accessible, and powerful. 
 
 
 ### [Sigma Protocols](/site/dev/scs/sigma/index.html)
@@ -44,14 +44,14 @@ The cryptographic part of ErgoScript is based on **Sigma Protocols** and natural
 
 ## [NIPoPoWs](/dev/protocol/nipopow)
 
-Extended support of light nodes makes Ergo friendly for end-users, allowing them to run contracts on common devices such as mobile phones without centralized intermediaries. 
+Extended support of light nodes makes Ergo friendly for end-users, allowing them to run contracts on common devices such as mobile phones without centralised intermediaries. 
 
-**Non-Interactive Proofs of Proof of Work** ([NIPoPoWs](https://nipopows.com/)) are essential for two reasons: Light Clients and Side Chains. These two components are essential for clients and nodes to facilitate easier onboarding to the blockchain. A decentralized network is inherently inefficient because of the randomness mechanism in a synchronous network; that is to say, every time a transaction (TX) occurs on the network, a couple of random nodes must process the TX to prove and secure its reliability. When put into perspective, that is an enormous task on a global scale. There can be billions of transactions, and it is plausible that many of those are from contributors operating with low bandwidth.
+**Non-Interactive Proofs of Proof of Work** ([NIPoPoWs](https://nipopows.com/)) are essential for two reasons: Light Clients and Side Chains. These two components are essential for clients and nodes to facilitate easier onboarding to the blockchain. A decentralised network is inherently inefficient because of the randomness mechanism in a synchronous network; that is to say, every time a transaction (TX) occurs on the network, a couple of random nodes must process the TX to prove and secure its reliability. That is an enormous task on a global scale when put into perspective. There can be billions of transactions, and it is plausible that many of those are from contributors operating with low bandwidth.
 
 
 
 ## [Storage Rent](/dev/protocol/rent)
-Another unique feature of Ergo is the concept of storage-rent, which is the ability of miners to take out a small amount of Ergs from boxes that have remained unspent for four or more years (the box is spent, and a new box is created with the lower value). This allows Ergo to avoid long-term bloat of the UTXO set.
+Another unique feature of Ergo is the concept of storage-rent, which is the ability of miners to take out a small amount of Ergs from boxes that have remained unspent for four or more years (the box is spent, and a new box is created with the lower value). This feature also allows Ergo to avoid long-term bloat of the UTXO set. (Currently 50% of UTXOs in Bitcoin). 
 
 
 ## [Scaling](/dev/protocol/scaling)

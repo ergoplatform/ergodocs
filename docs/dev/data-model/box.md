@@ -1,4 +1,4 @@
-## What is a 'Box' ? 
+## What is a 'Box'? 
 
 Ergo has a Bitcoin-like UTXO transactional model: a transaction is spending one-time objects and creating new one-time objects. We call this object a box. A box is an immutable object which can be only created or removed. A box is not simply a coin; it contains registers with data (and code). Even more, there's nothing inbox but registers. There are four predefined registers, with monetary value, protecting script, and identifier of a transaction which created the box and output index (and creation height). Because data of transaction which created the box is included in it, the box has unique contents and, therefore, a unique id. A box is a first-class citizen in the Ergo protocol. Active boxes set is authenticated via a hash-based data structure, which allows building lightweight full-nodes (as described in [this paper](https://eprint.iacr.org/2016/994)). A box may have up to six additional registers with typed data. A script may access its registers (as well as registers of input and output boxes of the spending transaction).
 

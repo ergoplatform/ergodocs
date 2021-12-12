@@ -1,16 +1,16 @@
 
 ## Appkit
 
-AppKit provides methods for the following
+AppKit provides methods for the following.
 
 - Fetch data from Ergo Explorer API
 - Interact with Ergo Node, both public and private methods
 - Build transactions and sign them
-- Helper methods to handle cryptographics like calculating PK addresses from secrets
+- Helper methods to handle cryptographic like calculating PK addresses from secrets
 
-[Appkit: A Library for Polyglot Development of Ergo Applications](https://github.com/aslesarenko/ergo-appkit) has an idiomatic Java API and is written in Java/Scala. It is a thin wrapper around core components provided by the ErgoScript interpreter and Ergo protocol implementations which are written in Scala. It is published on [maven repository](https://mvnrepository.com/artifact/org.ergoplatform/ergo-appkit) and cross compiled to both Java 7 and Java 8+ jars.
+[Appkit: A Library for Polyglot Development of Ergo Applications](https://github.com/aslesarenko/ergo-appkit) has an idiomatic Java API and is written in Java/Scala. It is a thin wrapper around core components provided by the ErgoScript interpreter and Ergo protocol implementations which are written in Scala. It is published on [maven repository](https://mvnrepository.com/artifact/org.ergoplatform/ergo-appkit) and cross-compiled to both Java 7 and Java 8+ jars.
 
-Using Appkit Ergo applications can be written in one of the languages supported by GraalVM (i.e. Java, JavaScript, C/C++, Python, Ruby, R) and using this library applications can communicate with Ergo nodes via unified API and programming model provided by Appkit. In addition Appkit based Ergo applications can be compiled into native code using native-image ahead of time compiler and then executed without Java VM with very fast startup time and lower runtime memory overhead compared to a Java VM. This is attractive option for high-performance low-latency microservices.
+Using Appkit, Ergo applications can be written in one of the languages supported by GraalVM (i.e. Java, JavaScript, C/C++, Python, Ruby, R) and using this library, applications can communicate with Ergo nodes via unified API and programming model provided by Appkit. In addition, Appkit based Ergo applications can be compiled into native code using native-image ahead of time compiler and then executed without Java VM with very fast startup time and lower runtime memory overhead compared to a Java VM. This is an attractive option for high-performance, low-latency microservices.
 
 
 ### Tutorials
@@ -30,22 +30,13 @@ Using Appkit Ergo applications can be written in one of the languages supported 
 - [ErgoTool](https://github.com/aslesarenko/ergo-tool) | A Command Line Interface for Ergo based on Appkit and [GraalVM](https://www.graalvm.org/) native-image. Read the [introduction and overview](https://ergoplatform.org/en/blog/2019_12_31_ergo_tool/).
 
 
+## Features
+[Ergo Appkit](https://github.com/aslesarenko/ergo-appkit) is a library for polyglot development of Ergo Applications based on [GraalVM](https://www.graalvm.org/). GraalVM has many [great use cases](https://medium.com/graalvm/graalvm-ten-things-12d9111f307d). Expanding on that, in this article, we will go through some of the Appkit features inherited from GraalVM and take you step-by-step in learning how to take advantage of them.
 
-[Ergo Appkit](https://github.com/aslesarenko/ergo-appkit) is a library for
-polyglot development of Ergo Applications based on
-[GraalVM](https://www.graalvm.org/). GraalVM has many [great
-use cases](https://medium.com/graalvm/graalvm-ten-things-12d9111f307d). Expanding on that, in this article we will go through some of the Appkit
-features inherited from GraalVM and take you step-by-step in learning how to take advantage of them.
+### Example Scenario
 
-## Example Scenario
-
-We will create a simple console application (called
-[FreezeCoin](https://github.com/aslesarenko/ergo-appkit-examples/blob/master/java-examples/src/main/java/org/ergoplatform/appkit/examples/FreezeCoin.java))
-in Java which uses the Appkit library. By using Appkit, we will be able to easily send a new transaction to an Ergo node programatically. The
-transaction will transfer a given amount of Erg into a new box protected by the
-following Ergo contract written in ErgoScript (see this
-[introduction](https://ergoplatform.org/docs/ErgoScript.pdf) and more [advanced
-examples](https://ergoplatform.org/docs/AdvancedErgoScriptTutorial.pdf) to learn more about ErgoScript).
+We will create a simple console application (called [FreezeCoin](https://github.com/aslesarenko/ergo-appkit-examples/blob/master/java-examples/src/main/java/org/ergoplatform/appkit/examples/FreezeCoin.java)) in Java which uses the Appkit library. By using Appkit, we will be able to easily send a new transaction to an Ergo node programmatically. The
+transaction will transfer a given amount of Erg into a new box protected by the following Ergo contract written in ErgoScript (see this [introduction](https://ergoplatform.org/docs/ErgoScript.pdf) and more [advanced examples](https://ergoplatform.org/docs/AdvancedErgoScriptTutorial.pdf) to learn more about ErgoScript).
 
 ```java
 // Freezer Contract
@@ -57,7 +48,7 @@ examples](https://ergoplatform.org/docs/AdvancedErgoScriptTutorial.pdf) to learn
 }
 ```
 
-In short, a box (and therefore the funds within the box) are locked under a contract (or script) on the Ergo blockchain. In order for the box to be spent, the contract must evaluate to true. Thus the individual who wishes to spend the box must ensure that the contract evaluates to true based off of the encoded logic within it.
+In short, a box (and therefore the funds within the box) are locked under a contract (or script) on the Ergo blockchain. In order for the box to be spent, the contract must evaluate to be true. Thus the individual who wishes to spend the box must ensure that the contract evaluates to true based on the encoded logic within it.
 
 Our Freezer contract above checks the following conditions before allowing the box to be spent:
 
@@ -69,23 +60,18 @@ corresponding to the ownerPk public key.
 
 The first condition forbids anyone from spending the box before the Ergo
 blockchain grows to the given height. Because new blocks on the blockchain are mined approximately every 2 minutes on average, using the current
-blockchain height it is easy to define any duration of delay we wish such as 1 day, 1 week, or 1 month. _(i.e. (60 / 2) * 24 * 7 = 5040, which is the # of blocks per week)_.
+blockchain height, it is easy to define any duration of delays we wish, such as 1 day, 1 week, or 1 month. _(i.e. (60 / 2) * 24 * 7 = 5040, which is the # of blocks per week)_.
 
-We will now be going in depth on how we can take this Freezer Contract and integrate it with the Apkit library in order to create the FreezeCoin console application so that anyone and everyone can choose to freeze their coins if they so wish. (Granted, this contract/dApp is not actually useful, however it is an effective simple example for displaying how this technology stack works so that you yourself can build useful dApps down the line.)
+We will now be going in-depth on how we can take this Freezer Contract and integrate it with the Apkit library in order to create the FreezeCoin console application so that anyone and everyone can choose to freeze their coins if they so wish. (Granted, this contract/dApp is not actually useful; however, it is an effective, simple example for displaying how this technology stack works so that you yourself can build useful dApps down the line.)
 
 
-## 1. Java Ergo App Development
+### Java Ergo App Development
 
-Appkit aims to provide a set of interfaces which can be used idiomatically
-in Java. You will feel right at home using Appkit if you are a Java veteran.
+Appkit aims to provide a set of interfaces that can be used idiomatically in Java. You will feel right at home using Appkit if you are a Java veteran.
 
-Please follow the [setup
-instructions](https://github.com/aslesarenko/ergo-appkit#setup) for GraalVM and
-Appkit if you wish to reproduce the examples below.
+Please follow the [setup instructions](https://github.com/aslesarenko/ergo-appkit#setup) for GraalVM and Appkit if you wish to reproduce the examples below.
 
-To use Appkit in our Java implementation of FreezeCoin we must add the
-following dependency in the [gradle
-file](https://github.com/aslesarenko/ergo-appkit-examples/blob/master/java-examples/build.gradle.kts)
+To use Appkit in our Java implementation of FreezeCoin, we must add the following dependency in the [gradle file](https://github.com/aslesarenko/ergo-appkit-examples/blob/master/java-examples/build.gradle.kts)
 
 ```kotlin
 dependencies {
@@ -94,18 +80,18 @@ dependencies {
 }
 ```
 
-Furthermore at runtime Appkit/our application needs to connect with an Ergo Node via REST API. Often,
+Furthermore, at runtime, Appkit/our application needs to connect with an Ergo Node via REST API. Often,
 the node will be running locally and made available at `http://localhost:9052/`. This is the standard scenario for anyone who has set up a full-node by following [these
 instructions](https://github.com/ergoplatform/ergo/wiki/Set-up-a-full-node) and is using the default configuration.
 
-Henceforth we will assume that you have setup and started your Ergo Node so that it is available for testing of the application.
+Henceforth we will assume that you have set up and started your Ergo Node so that it is available for testing of the application.
 
-Next, our application will need to know how to be able to a connect to our local running node, in addition to other various settings in order to function properly. We will use a json file with the following
+Next, our application will need to know how to be able to connect to our local running node, in addition to other various settings, in order to function properly. We will use a JSON file with the following
 configuration parameters which our FreezeCoin app will load at startup. 
 
 [freeze_coin_config.json:](https://github.com/aslesarenko/ergo-appkit-examples/blob/master/freeze_coin_config.json)
 
-```json
+```JSON
 {
   "node": {
     "nodeApi": {
@@ -125,7 +111,7 @@ configuration parameters which our FreezeCoin app will load at startup.
   }
 }
 ```
-Here `apiKey` is the secret key required for API authentication which can be
+Here `apiKey` is the secret key required for API authentication, which can be
 acquired as described
 [here](https://github.com/ergoplatform/ergo/wiki/Ergo-REST-API#setting-an-api-key).
 Your mnemonic is the secret phrase obtained during [setup of a new
@@ -133,7 +119,7 @@ wallet](https://github.com/ergoplatform/ergo/wiki/Wallet-documentation).
 
 How our app will work is that the user will launch it from the command line and provide one argument. This argument is the amount of value (in NanoErgs) which they wish to freeze/lock under the Freezer contract which we wrote above.
 
-Our first step for our FreezeCoin app will be to read the configuration json file we just created and to accept the command line argument from the user:
+Our first step for our FreezeCoin app will be to read the configuration JSON file we just created and to accept the command line argument from the user:
 
 ```java
 public static void main(String[] args) {
@@ -144,15 +130,15 @@ public static void main(String[] args) {
 }
 ```
 
-With these acquired, we can now obtain the spending delay and the owner address which were defined in the json config file.
+With these acquired, we can now obtain the spending delay and the owner address, which were defined in the JSON config file.
 
 ```java
   int newBoxSpendingDelay = Integer.parseInt(conf.getParameters().get("newBoxSpendingDelay"));
   Address ownerAddress = Address.create(conf.getParameters().get("ownerAddress"));
 ```
 
-Next we need to connect to the running Ergo node from our Java application so that we can use the data we just parsed and post something on-chain. This is done by creating
-an `ErgoClient` instance which uses our pre-defined values for our node from the json config file as well.
+Next, we need to connect to the running Ergo node from our Java application so that we can use the data we just parsed and post something on-chain. This is done by creating
+an `ErgoClient` instance that uses our pre-defined values for our node from the JSON config file as well.
 
 ```java
 ErgoNodeConfig nodeConf = conf.getNode();
@@ -170,10 +156,10 @@ String txJson = ergoClient.execute((BlockchainContext ctx) -> {
 ```
 
 The lambda passed to `execute` is called when the current blockchain context
-is loaded from the Ergo node. In this lambda we
+is loaded from the Ergo node. In this lambda, we
 shall put our application logic. 
 
-First we start with some auxiliary steps.
+First, we start with some auxiliary steps.
 
 ```java
 // access the wallet embedded in the Ergo node 
@@ -199,7 +185,7 @@ ErgoProver prover = ctx.newProverBuilder()
     .build();
 ```
 
-At this point we have the input boxes chosen for our spending transaction, but we now need to create an output box with the specified `amountToSend` and locked under the Freezer contract.
+At this point, we have the input boxes chosen for our spending transaction, but we now need to create an output box with the specified `amountToSend` and locked under the Freezer contract.
 
 ```java
 // the only way to create a transaction is using the tx builder obtained from the context
@@ -219,11 +205,11 @@ OutBox newBox = txB.outBoxBuilder()
         .build();
 ```
 
-Note, in order to compile `ErgoContract` from the Freezer script source code the `compileContract`
-method requires that we provide values for named constants which are used within the script.
+Note, in order to compile `ErgoContract` from the Freezer script source code, the `compileContract`
+the method requires that we provide values for named constants that are used within the script.
 If no such constants are used, then `ConstantsBuilder.empty()` can be passed to it.
 
-In this case we pass the public key of the new box owner into the `ownerPk` 
+In this case, we pass the public key of the new box owner into the `ownerPk` 
 placeholder in the script. To repeat from earlier, this means that the box can only be spent by the owner of the
 corresponding secret key. 
 
@@ -242,7 +228,7 @@ UnsignedTransaction tx = txB.boxesToSpend(boxes.get())
 And finally we:
 
 1. Use the prover to sign the built transaction
-2. Thus obtain a `SignedTransaction` instance
+2. Thus, obtain a `SignedTransaction` instance
 3. Use the blockchain context to send the signed transaction to
 the Ergo node. 
 
@@ -254,15 +240,15 @@ String txId = ctx.sendTransaction(signed);
 return signed.toJson(true);
 ```
 
-As you may have noticed, for our final step we show off that it is possible to serialize the signed
-transaction into a Json string with pretty printing turned on. Look at the [full
+As you may have noticed, for our final step, we show off that it is possible to serialize the signed
+transaction into a JSON string with pretty-printing turned on. Look at the [full
 source code](https://github.com/aslesarenko/ergo-appkit-examples/blob/master/java-examples/src/main/java/org/ergoplatform/appkit/examples/FreezeCoin.java)
 of the example for more details and for using it as a template in your own
 application.
 
 ---
 
-Now with all of the code set in stone, we can run our FreezeCoin application using the following steps
+Now with all of the code set in stone, we can run our FreezeCoin application using the following steps.
 (assuming you are in the directory where you cloned
 [ergo-appkit-examples](https://github.com/aslesarenko/ergo-appkit-examples)).
 
@@ -284,20 +270,20 @@ $ java -cp build/libs/appkit-examples-3.1.0-all.jar \
 
 You will get something along the lines of this [output in the console](https://gist.github.com/aslesarenko/cacee372350458ac31bd5c73e957e322).
 
-And with that your transaction was accepted by the Ergo node and broadcast into the network where it shall lay await in the transaction pool to be added to a block. Once a miner selects and adds it to a block, your coins will be officially "frozen" within the newly created box based off of the values you provided to the FreezeCoin application.
+And with that, your transaction was accepted by the Ergo node and broadcast into the network where it shall lay await in the transaction pool to be added to a block. Once a miner selects and adds it to a block, your coins will be officially "frozen" within the newly created box based on the values you provided to the FreezeCoin application.
 
 The example assumes the Ergo node (and the embedded wallet) is owned by the
-FreezeCoin user. However this is not strictly required and the Appkit interfaces
+FreezeCoin user. However, this is not strictly required, and the Appkit interfaces
 can be used to create and send new transactions using arbitrary public Ergo
 nodes.
 
-## 2. Low-footprint, Fast-startup Ergo Applications
+### Low-footprint, Fast-startup Ergo Applications
 
 As you may know, using Java for short-running processes has a lot of drawbacks.
 Applications tend to suffer from long startup times and relatively high memory usage.
 
 Let's run FreezeCoin using the time command to
-get the real (wall-clock elapsed time) it takes the entire program to run from
+get the real (wall-clock elapsed time). It takes the entire program to run from
 start to finish. We use the `-l` flag to print the memory usage as well.
 
 ```shell
@@ -323,15 +309,15 @@ $ /usr/bin/time -l java -cp build/libs/appkit-examples-3.1.0-all.jar \
 
 As seen above, this tiny application took 2 parallel threads almost 4
 seconds to run. Most of that time can be attributed to the JVM startup and
-the background JIT compiler running. This is quite sub-par performance, and we know we can do a lot better.
+the background JIT compiler running. This is quite a sub-par performance, and we know we can do a lot better.
 
 Luckily, GraalVM provides us with the perfect solution.
 
 We can solve this inherent issue with the JVM by compiling the Java code
-ahead-of-time into a native executable image via GraalVM. This skips over the need to use the Java just-in-time compiler
+ahead of time into a native executable image via GraalVM. This skips over the need to use the Java just-in-time compiler
 at runtime. 
 
-The experience for us (the developer using GraalVM) is quite similar to a conventional compiler like gcc. Note,
+The experience for us (the developer using GraalVM) is quite similar to a conventional compiler like GCC. Note,
 we may need to run `./gradlew clean shadowJar` first.
 
 ```shell
@@ -363,22 +349,19 @@ $ native-image --no-server \
 
 The simple command above produces a complete native executable called `freezecoin`. 
 
-To emphasize, this executable isn’t a mere launcher for the JVM. In fact it doesn’t link to the JVM or bundle
-the JVM in any way. `native-image` compiles the FreezeCoin code, as well as any
-Java libraries it depends on, all the way down to simple machine code. 
+To emphasize, this executable isn’t a mere launcher for the JVM. In fact, it doesn’t link to the JVM or bundles the JVM in any way. `native-image` compiles the FreezeCoin code, as well as any Java libraries it depends on, all the way down to simple machine code. 
 
-If we look at the libraries which `freezecoin` uses you can see that it only uses standard system libraries. Thus, we can move just this one executable to another system
-which doesn't have a JVM installed and it will run there without issue.
+If we look at the libraries which `freezecoin` uses, you can see that it only uses standard system libraries. Thus, we can move just this one executable to another system that doesn't have a JVM installed, and it will run there without issue.
 
 ```shell
 $ otool -L freezecoin    # ldd freezecoin on Linux
 freezecoin:
-	/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1252.50.4)
-	/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 1455.12.0)
-	/usr/lib/libz.1.dylib (compatibility version 1.0.0, current version 1.2.11)
+  /usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1252.50.4)
+  /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 1455.12.0)
+  /usr/lib/libz.1.dylib (compatibility version 1.0.0, current version 1.2.11)
 ```
 
-If we time this new `freezecoin` executable, we can see that it starts approximately 8x faster, and uses
+If we time this new `freezecoin` executable, we can see that it starts approximately 8x faster and uses
 around 6x less memory. What this means is that you don’t feel that palpable pause you always get when running a
 short-running program with the JVM.
 
@@ -401,37 +384,33 @@ $ DYLD_LIBRARY_PATH=$GRAAL_HOME/jre/lib /usr/bin/time -l ./freezecoin 1800000000
        138  involuntary context switches
 ```
 
-This is just one of the great benefits of GraalVM which we get to take advantage of with Appkit.
+This is just one of the great benefits of GraalVM, which we get to take advantage of with Appkit.
 
-## 3. Develop Ergo Applications in JavaScript, Python, Ruby
+### Develop Ergo Applications in JavaScript, Python, Ruby
 
-GraalVM supports so called *polyglot programming* in which different components of
-an application can be developed using the most suitable language and then
-seamlessly combine together at runtime. In this way a unique library written in say
-Java can be used in a node.js application written in JavaScript for example.
+GraalVM supports so-called *polyglot programming* in which different components of
+an application can be developed using the most suitable language and then seamlessly combined together at runtime. In this way, a unique library written in, say, Java can be used in a node.js application written in JavaScript, for example.
 
-To support polyglot programming GraalVM platform has it's own high performance
-implementations of popular languages. We are going to take advantage of this for 
-our FreezeCoin example project to show you how easy this is to use your preferred language.
+To support polyglot programming GraalVM platform has its own high-performance implementations of popular languages. We are going to take advantage of this for our FreezeCoin example project to show you how easy this is to use your preferred language.
 
-Before running the examples below (in JavaScript, Python and Ruby) please make sure that you have the
-Java version of FreezeCoin working locally in order to ensure everything is set up correctly.
+Before running the examples below (in JavaScript, Python and Ruby), please make sure that you have the Java version of FreezeCoin working locally in order to ensure everything is set up correctly.
 
-### JavaScript
+#### JavaScript
 
 GraalVM can [run JavaScript and
 Node.js](https://www.graalvm.org/docs/reference-manual/languages/js/)
 applications out of the box. It is compatible with the [ECMAScript 2019
 specification](http://www.ecma-international.org/ecma-262/10.0/index.html).
 Additionally, `js` and `node` launchers accept special `--jvm` and `--polyglot`
-command line options which allow JS scripts to access Java objects and classes.
+command-line options which allow JS scripts to access Java objects and classes.
 
-Given that being the case, a JS implementation of FreezeCoin can be easily written using the Appkit
+Given that being the case, a JS implementation of FreezeCoin can be easily written using the Appkit.
 API interface.
+
 Please see the full source code of [FreezeCoin JS
 implementation](https://github.com/aslesarenko/ergo-appkit-examples/blob/master/js-examples/FreezeCoin.js)
 for details.
-The following command use `node` launcher to execute FreezeCoin.js script.
+The following command uses the `node` launcher to execute the FreezeCoin.js script.
 
 ```shell
 $ node --jvm --vm.cp=build/libs/appkit-examples-3.1.0-all.jar \
@@ -440,7 +419,7 @@ $ node --jvm --vm.cp=build/libs/appkit-examples-3.1.0-all.jar \
 Note, the paths in the command are relative to the root of
 `ergo-appkit-examples` project directory.
 
-### Python
+#### Python
 
 GraalVM can [run Python
 scripts](https://www.graalvm.org/docs/reference-manual/languages/python/), though
@@ -457,7 +436,7 @@ $ graalpython --jvm --polyglot --vm.cp=build/libs/appkit-examples-3.1.0-all.jar 
    python-examples/FreezeCoin.py 1900000000
 ```
 
-### Ruby
+#### Ruby
 
 GraalVM can [run Ruby
 scripts](https://www.graalvm.org/docs/reference-manual/languages/ruby/) using
@@ -474,13 +453,13 @@ $ truffleruby --polyglot --jvm --vm.cp=build/libs/appkit-examples-3.1.0-all.jar 
     ruby-examples/FreezeCoin.rb 1900000000
 ```
 
-## 4. Ergo Native Shared Libraries
+### Ergo Native Shared Libraries
 
 Another great benefit of GraalVM is that we can compile Java classes down into a native shared library instead of an executable.
 
-To do this we declare one or more static methods as the `@CEntryPoint`.
+To do this, we declare one or more static methods as the `@CEntryPoint`.
 
-```java
+```Java
 public class FreezeCoin {
     ...
      /**
@@ -497,15 +476,14 @@ public class FreezeCoin {
         String configFileName = CTypeConversion.toJavaString(configFileNameC);
         String txJson = sendTx(amountToSend, configFileName);
 
-        // put resulting string into provided buffer
+        // put resulting string into the provided buffer
         CTypeConversion.toCString(txJson, resBuffer, bufferSize);
     }  
     ...
 }
 ```
 
-We can then compile down to a shared library and an automatically generated header
-file. Notice the use of the `--shared` option.
+We can then compile down to a shared library and an automatically generated header file. Notice the use of the `--shared` option.
 
 ```shell
 $ native-image --no-server \
@@ -519,19 +497,17 @@ $ native-image --no-server \
     
 $ otool -L c-examples/libfreezecoin.dylib 
 c-examples/libfreezecoin.dylib:
-	.../c-examples/libfreezecoin.dylib (compatibility version 0.0.0, current version 0.0.0)
-	/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1252.50.4)
-	/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 1455.12.0)
-	/usr/lib/libz.1.dylib (compatibility version 1.0.0, current version 1.2.11)
+  .../c-examples/libfreezecoin.dylib (compatibility version 0.0.0, current version 0.0.0)
+  /usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1252.50.4)
+  /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 1455.12.0)
+  /usr/lib/libz.1.dylib (compatibility version 1.0.0, current version 1.2.11)
 ```
 
-Now we have the ability to write a [C
-program](https://github.com/aslesarenko/ergo-appkit-examples/blob/master/c-examples/freezecoin.c)
+Now we have the ability to write a [C program](https://github.com/aslesarenko/ergo-appkit-examples/blob/master/c-examples/freezecoin.c)
 which uses the library.
- The interface to our native library does have a bit of 
-boilerplate (because the VM needs to manage a heap, threads, a garbage collector
-and more), and thus we need to create an instance and provide it
-our main thread.
+
+The interface to our native library does have a bit of  boilerplate (because the VM needs to manage a heap, threads, a garbage collector
+and more), and thus we need to create an instance and provide it with our main thread.
 
 ```java
 #include <stdlib.h>
@@ -574,18 +550,14 @@ $ otool -L call_freezecoin
 $ DYLD_LIBRARY_PATH=$GRAAL_HOME/jre/lib ./call_freezecoin 1000000000
 ```
 
-## 5. Debugging Your Polyglot Ergo Application
+### Debugging Your Polyglot Ergo Application
 
-You can debug JS, Python and Ruby in IntelliJ, but if for some reason this
-doesn't work for you or fit with your preferred editor, GraalVM offers another option.
+You can debug JS, Python and Ruby in IntelliJ, but if, for some reason this doesn't work for you or fit with your preferred editor, GraalVM offers another option.
 
-All of the GraalVM languages (except for Java) are implemented using the common
-[Truffle framework](https://github.com/oracle/graal/tree/master/truffle).
-Truffle allows for tooling like debuggers to be implemented once and be available
-for all supported languages.
+All of the GraalVM languages (except for Java) are implemented using the common [Truffle framework](https://github.com/oracle/graal/tree/master/truffle).
+Truffle allows for tooling like debuggers to be implemented once and be available for all supported languages.
 
-As such we can run our program with the flag `--inspect` which will give us a link to
-open in Chrome and will pause the program in the debugger.
+As such, we can run our program with the flag `--inspect`, which will give us a link to open in Chrome and will pause the program in the debugger.
 
 ```shell
 $ ruby --polyglot --jvm --inspect --vm.cp=build/libs/appkit-examples-3.1.0-all.jar \
@@ -596,29 +568,18 @@ To start debugging, open the following URL in Chrome:
 ...
 ```
 
-From here we can set breakpoints and continue execution. When it breaks we’ll see
-values of the variables, can continue again until the next breakpoint, and do everything we've come to expect from debuggers.
+From here, we can set breakpoints and continue execution. When it breaks, we’ll see values of the variables, can continue again until the next breakpoint, and do everything we've come to expect from debuggers.
 
 ![Debugger](/img/blog/debugger.png)
     
-## Conclusions
+### Conclusions
 
-And with all of that said and done, we see just how easy it is to use Appkit to
-develop Ergo Applications. Appkit relies on the same exact core libraries which
-were used in implementing the Ergo consensus protocol. These libraries include
-the ErgoScript compiler, cryptography, byte code interpreter, data serialisers
-and the other core components. Using GraalVM we are able to reuse these tried
-and tested components in different application contexts without any modification
-or rewriting them ourselves.
+And with all of that said and done, we see just how easy it is to use Appkit to develop Ergo Applications. Appkit relies on the same exact core libraries which were used in implementing the Ergo consensus protocol. These libraries include the ErgoScript compiler, cryptography, byte code interpreter, data serialises and the other core components. Using GraalVM, we are able to reuse these tried and tested components in different application contexts without any modification or rewriting them ourselves.
 
-No matter if you are using Java, JavaScript, Python or Ruby, you can take
-advantage of Appkit with GraalVM to drastically simplify the process of
-interacting with the Ergo blockchain while creating native-running (d)Apps.
+No matter if you are using Java, JavaScript, Python or Ruby, you can take advantage of Appkit with GraalVM to drastically simplify the process of interacting with the Ergo blockchain while creating native-running (d)Apps.
 
-Stay tuned. In future posts we will introduce you to other interesting potential
-applications powered by Appkit.
 
-## References
+### References
 
 1. [Ergo Site](https://ergoplatform.org/en/)
 2. [Ergo Sources](https://github.com/ergoplatform/ergo)

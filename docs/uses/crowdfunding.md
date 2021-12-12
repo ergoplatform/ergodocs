@@ -1,13 +1,13 @@
 
 # Crowdfunding
 
-Crowdfunding in different contexts is very much needed for building common infrastructure and applications in the Ergo ecosystem. 
+Crowdfunding in different contexts is needed for building common infrastructure and applications in the Ergo ecosystem. 
 
-This is a critical long term tool that has the capacity to slowly start shifting the funding and development toward the goal of a truly community driven network. Crowdfunding for common infrastructure and tooling on the Ergo network is a way for users, developers, and miners to work together to fund and advance the network far into the future.
+This is a critical long term tool that can slowly start shifting the funding and development toward the goal of a true community-driven network. Crowdfunding for common infrastructure and tooling on the Ergo network is a way for users, developers, and miners to work together to fund and advance the network far into the future.
 
 
 ## ErgoRaffle
-We already have crowdfunding on the Ergo blockchain via [ergoraffle.com](https://ergoraffle.com), this allows projects to host *'Raffles'* with a prize-percentage allocated to lucky donor. The code is available on [GitHub](https://github.com/ErgoRaffle).
+We already have crowdfunding on the Ergo blockchain via [ergoraffle.com](https://ergoraffle.com); this allows projects to host *'Raffles'* with a prize percentage allocated to the lucky donor. The code is available on [GitHub](https://github.com/ErgoRaffle).
 
 ## ErgoFund
 
@@ -15,14 +15,14 @@ ErgoFund will eventually provide a more sophisticated crowdfunding experience, w
 
 
 - [[WIP] ErgoFund structures and contracts](https://github.com/ergoplatform/eips/pull/33) proposes the contracts and standardized box formats for announcing crowdfunding campaigns and collecting funds
-- The design of the crowdfunding contracts and box templates is centered around blockchain scanning efficiency of an [off-chain](https://github.com/ergoplatform/scanner/pull/7) application
+- The design of the crowdfunding contracts and box templates is centred around blockchain scanning efficiency of an [off-chain](https://github.com/ergoplatform/scanner/pull/7) application
 - The ErgoFund [backend](https://github.com/ergoplatform/ergofund) will be built on top of the [Scanner](https://github.com/ergoplatform/scanner)
 
 Please see the [#ergofund](https://discord.gg/YB9WdQYHWr) channel on Discord to contribute to this project.
 
 - A simple ErgoFund contract with an [interactive scastie playground](https://scastie.scala-lang.org/FzcCv7pzTb2lQAamWsv1MQ) is available.  
 - The [pledge contract](https://wallet.plutomonkey.com/p2s/?source=ewogICB2YWwgY2FtcGFpZ25JZCA9IFNFTEYuUjRbSW50XS5nZXQKICAgdmFsIGJhY2tlclB1YktleSA9IHByb3ZlRGxvZyhTRUxGLlI1W0dyb3VwRWxlbWVudF0uZ2V0KQogICB2YWwgcHJvamVjdFB1YktleSA9IFNFTEYuUjZbU2lnbWFQcm9wXS5nZXQKICAgdmFsIGRlYWRsaW5lID0gU0VMRi5SN1tJbnRdLmdldCAvLyBoZWlnaHQKICAgdmFsIG1pblRvUmFpc2UgPSBTRUxGLlI4W0xvbmddLmdldAoKICAgdmFsIGZ1bmRyYWlzaW5nRmFpbHVyZSA9IEhFSUdIVCA+PSBkZWFkbGluZSAmJiBiYWNrZXJQdWJLZXkKICAgdmFsIGVub3VnaFJhaXNlZCA9IHsob3V0Qm94OiBCb3gpID0+IG91dEJveC52YWx1ZSA+PSBtaW5Ub1JhaXNlICYmIG91dEJveC5wcm9wb3NpdGlvbkJ5dGVzID09IHByb2plY3RQdWJLZXkucHJvcEJ5dGVzICYmIG91dEJveC5SNFtJbnRdLmdldCA9PSBjYW1wYWlnbklkfQoKICAgdmFsIGZ1bmRyYWlzaW5nU3VjY2VzcyA9IEhFSUdIVCA8IGRlYWRsaW5lICYmIGVub3VnaFJhaXNlZChPVVRQVVRTKDApKQogICBmdW5kcmFpc2luZ0ZhaWx1cmUgfHwgZnVuZHJhaXNpbmdTdWNjZXNzCiB9) supports ANY recipient contract 
-so it would be possible to crowdfund to a threshold sig address (controlled via Zero-Knowledge treasury), or emission script (so project will recieve the money slowly), etc
+so it would be possible to crowdfund to a threshold sig address (controlled via Zero-Knowledge treasury), or emission script (so the project will receive the money slowly), etc
 
  
 

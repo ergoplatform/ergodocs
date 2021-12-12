@@ -7,14 +7,14 @@ However, there are some big barriers for dApps to be extensively used by ordinar
 - specifying output registers
 - and simply not supporting dApp requests
 
-These issues will be resolved in the future for sure with wallets like Yoroi, but not so soon maybe!
-In this situation, dApps have no workarounds other than requiring users to have their node running or implement kind of a wallet themselves and ask users to trust and deposit there! The former is the case with Ergo Auction House which prevents it from being extensively used by everyone!
+These issues will be resolved in the future for sure with wallets like Yoroi, but not so soon, maybe!
+In this situation, dApps have no workarounds other than requiring users to have their node running or implement a kind of a wallet themselves and ask users to trust and deposit there! The former is the case with Ergo Auction House which prevents it from being extensively used by everyone!
 
 Specifically, the problem that this topic is going to address is to bypass the node requirements by having an off-chain service to assemble arbitrary transactions for dApps.
 
 ### A Solution
-The off-chain service will allow dApps to register some requests by proving an address (which user will deposit her assets to) and some other specifications.
-This topic is just for getting feedback and I still haven't designed the APIs to provide concrete examples, however:
+The off-chain service will allow dApps to register some requests by providing an address (which the user will deposit her assets) and some other specifications.
+This topic is just for getting feedback, and I still haven't designed the APIs to provide concrete examples, however:
 ```
 {
   "address":"address which user deposits to", // p2s address explained in Trusting Issues section
@@ -58,20 +58,20 @@ This topic is just for getting feedback and I still haven't designed the APIs to
   }
 }
 ```
-The above is a potential request that Ergo Auction House can register to the service which will start a new auction! So the Ergo Auction House app will ask the user to deposit the required assets to the _address_ (will discuss what this _address_ actually is in the next sections) using their favorite wallet and registers the request to the service.
+The above is a potential request that Ergo Auction House can register to the service, which will start a new auction! So the Ergo Auction House app will ask the user to deposit the required assets to the _address_ (will discuss what this _address_ actually is in the next sections) using their favourite wallet and registers the request to the service.
 
-After such a request, the service will follow the _address_ and when the conditions are met, assembles the tx and makes sure it will be mined. In case of failures, assets will be returned to the user; for example if the tx is for placing a bid and someone else places a bid before us!
+After such a request, the service will follow the _address_ and, when the conditions are met, assembles the tx and makes sure it will be mined. In case of failures, assets will be returned to the user; for example, if the tx is for placing a bid and someone else places a bid before us!
 
-Note that all input and data input boxes are in ids and no input raw will be required, makes it safe for dApps to avoid running nodes for themselves, or use random nodes in the network to get raw inputs.
+Note that all input and data input boxes are in ids, and no input raw will be required, which makes it safe for dApps to avoid running nodes for themselves or using random nodes in the network to get raw inputs.
 
-Also, note that the above approach doesn't solve the problem of finding necessary boxes (e.g. in case of placing a bid, the auction box) for dApps and it isn't the aim of this topic as well!
+Also, note that the above approach doesn't solve the problem of finding necessary boxes (e.g. in case of placing a bid, the auction box) for dApps, and it isn't the aim of this topic as well!
 
 Furthermore, the _txSpec_ is pretty raw, can be improved so that the service encodes the register to make it easier for dApps, but with the mentioned libraries around, I don't see it as a problem for dApps to encode registers themselves.
 
-With some improvements on the node's side, the service can be very fast and effective by using chained transactions to avoid wasting time for the deposits to be mined! So basically it will be like the user is running a node and is generating the tx directly without intermediate operations.
+With some improvements on the node's side, the service can be very fast and effective by using chained transactions to avoid wasting time for the deposits to be mined! So basically, it will be like the user is running a node and is generating the tx directly without intermediate operations.
 
 
-Last but not least, the service will of course provide some other APIs for dApps to see the result of their registered requests.
+Last but not least, the service will, of course, provide some other APIs for dApps to see the result of their registered requests.
 
 ### Trusting Issues
 How dApps and users should trust such a service is still a big problem. Several solutions:
@@ -80,12 +80,12 @@ How dApps and users should trust such a service is still a big problem. Several 
 - Using well-designed p2s addresses to prevent the service from stealing
 
 Although one can argue that the first two options can work under some circumstances, the last option is the one which I think is applicable for most use-cases and doesn't require trust!
-For example, the Ergo Auction House can use p2s addresses which will allow the assets to be spent only for placing a specific bid, and the user's address being specified as auction's bidder in the auction box and register it to the service!
+For example, the Ergo Auction House can use p2s addresses, which will allow the assets to be spent only for placing a specific bid, and the user's address is specified as auction's bidder in the auction box and register; it to the service!
 
 ### Service Provider Incentives
-Although I personally don't have plans to make profits out of the service, one can have multiple options and plans to make some profits with the service. For example, the service can follow the registered request for some minutes for free and after that remove the request if the conditions are not met to assemble the transaction, then dApps can pay the service to follow the request longer!
+Although I personally don't have plans to make profits out of the service, one can have multiple options and plans to make some profits with the service. For example, the service can follow the registered request for some minutes for free, and after that remove the request if the conditions are not met to assemble the transaction, then dApps can pay the service to follow the request longer!
 
-Until the dApp bridge in wallets is built, I think such a service will help a lot for the growth of dApps. Even after some wallets provide APIs for dApps, users still can benefit from such service by using any wallet they wish!
+Until the dApp bridge in wallets is built, I think such a service will help a lot for the growth of dApps. Even after some wallets provide APIs for dApps, users still can benefit from such a service by using any wallet they wish!
 Please let me know if something is overlooked.
 
 ### Motivation
@@ -93,7 +93,7 @@ Please let me know if something is overlooked.
 Currently, to craft a transaction, we need to use Kiosk, sigma-rust, Appkit or some other tool, which makes the entry barrier quite high. 
 Motivated from @anon_real's Tx Assembler and other proposals, I had been working on a tool to automate tx building for the off-chain components of an Ergo dApp.
 
-The tool, called simply "Tx Builder" can be used to create transactions for participating in several Ergo application protocols. The goal of Tx Builder is to allow people with just knowledge of Json to craft a transaction following certain rules.
+The tool called simply "Tx Builder" can be used to create transactions for participating in several Ergo application protocols. The goal of Tx Builder is to allow people with just knowledge of Json to craft a transaction following certain rules.
 
 ### Documentation
 

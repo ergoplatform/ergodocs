@@ -59,7 +59,7 @@ nav:
     - Developers: dev/index.md
     - Protocol: 
       - Protocol: dev/protocol/index.md
-      - UTXO State: dev/protocol/utxo-state.md
+      - eUTXO: dev/protocol/eutxo.md
       - Autolykos: dev/protocol/autolykos.md
       - Storage Rent: dev/protocol/rent.md
       - NIPoPoWS: dev/protocol/nipopow.md

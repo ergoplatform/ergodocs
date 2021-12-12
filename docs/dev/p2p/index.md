@@ -15,7 +15,7 @@ Significant improvements have been made to the P2P layer over the past few month
 ## [Handshake](/dev/p2p/p2p-handshake)
 
 
-Nodes perform *handshaking* by sending each other `handshake messages`
+Nodes perform *handshaking* by sending each other `handshake messages.`
 
 ## [Network Messages](/dev/p2p/network)
 
@@ -26,7 +26,7 @@ Nodes perform *handshaking* by sending each other `handshake messages`
 Ergo allows truly P2P smart contracts. Just run the node and a local interface.
 
 
-- [Mixicles - simple private contracts on top of oracle data](https://research.chain.link/mixicles.pdf) - Implementation-wise, onchain part would simple, p2p offchain interaction is needed (and would be the most labor-intensive part likely)
+- [Mixicles - simple private contracts on top of oracle data](https://research.chain.link/mixicles.pdf) - Implementation-wise, onchain part would simple, p2p off-chain interaction is needed (and would be the most labour-intensive part likely)
 - P2P Pools
 
 ## Misc

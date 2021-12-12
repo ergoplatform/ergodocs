@@ -12,8 +12,8 @@ Peer Feature
 
 A peer feature describes some properties of a peer. Every peer can have one or more peer features. Features are embedded into a handshake message and remain unchanged during the connection. Features are optional by default: a peer can add new ones, and if another peer is not recognizing it, The node will skip the feature. The feature format is arbitrary. Any number of features can be added to the handshake; only handshake message has a size limit (8 KB).
  
-The only feature the reference client supported before 3.3.7 is "mode feature" (describing the operating regime of the peer). 
-Since 3.3.7, a new feature describing network magic and (pseudorandom) session-id added. 
+The only feature the reference client supported before 3.3.7 is the "mode feature" (describing the operating regime of the peer). 
+Since 3.3.7, a new feature describing network magic and (pseudorandom) session-id was added. 
 
 Handshake Format
 ----------------
@@ -21,7 +21,7 @@ Handshake Format
 | Length         | Field Name                     | Details                                                      |
 | :------------  | :----------------------------  | :-----------                                                 |
 |6-8             | Time                           | Reported handshake time (VLQ-encoded, 6 bytes now, 8 bytes max)              |
-|1               | Agent name length              | Length of agent name string (unsigned byte) |
+|1               | Agent name length              | Length of an agent name string (unsigned byte) |
 |0-255           | Agent name                     | Agent name (e.g. "Cypra wallet") in UTF-8 encoding, 255 bytes max |
 |3               | Network protocol version       | Protocol version (e.g. [0, 1, 1]  |
 |1               | Peer name length               | Length of peer name string       |      

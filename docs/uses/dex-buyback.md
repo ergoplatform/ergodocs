@@ -1,10 +1,10 @@
-In this example we will consider a decentralized token-sale, where seller is providing buyback guarantees. 
+In this example, we will consider a decentralized token sale, where the seller is providing buyback guarantees. 
 
-This guarantee is done in following way: a seller is requiring a buyer to create a buy order at some price and of some token amount also. Rest is going to the seller. 
+This guarantee is done in the following way: a seller requires a buyer to create a buy order at some price and of some token amount also. The rest is going to the seller. 
 
-Every order can have unique buyback properties (to e.g. form a bonding curve).
+Every order can have unique buyback properties (e.g. form a bonding curve).
 
-We start with buyback contract. It has expiration (`buyerPk && sigmaProp(HEIGHT > 100)` condition), otherwise, the box has been spent if asked amount of tokens sent back to the original seller.
+We start with a buyback contract. It has expiration (`buyerPk && sigmaProp(HEIGHT > 100)` condition); otherwise, the box has been spent if asked the number of tokens sent back to the original seller.
 
 ```
     {
@@ -32,9 +32,9 @@ Sell contract is then as follows:
                  )
       }
 ```
-where `bbh` is buyback script hash. 
+Where `bbh` is buyback script hash. 
 
-Playground version you can experiment with is available: https://scastie.scala-lang.org/oVlOW1GpTkWGLPLzDmJTxA .
+A playground version you can experiment with is available: https://scastie.scala-lang.org/oVlOW1GpTkWGLPLzDmJTxA .
 
 
-Similarly to buy-back, we can enhance orders with different conditions, getting DEX functionality (and simple DEX orders) composable with complex logic (token-sale, liquidity providing etc). I'm calling this *smart orders*. The big question, however, how to do front-end apps and UIs for smart order based DEXes.
+Similarly to buyback, we can enhance orders with different conditions, getting DEX functionality (and simple DEX orders) composable with complex logic (token-sale, liquidity providing etc.). I'm calling this *smart orders*. The big question, however, is how to do front-end apps and UIs for smart order based DEXes.
