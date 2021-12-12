@@ -1,21 +1,14 @@
-## JSON dApp Environment (JDE) first release 
-### Introduction
+## JSON dApp Environment (JDE) 
 
-This is to announce the first release of JSON dApp Environment (JDE), a tool for interacting with the Ergo blockchain. 
+Ergo Platform allows sophisticated dApps via smart contracts written in ErgoScript. Some notable examples are the SigmaUSD stable coin bank and ErgoMixer. 
 
-https://github.com/ergoplatform/ergo-jde
+Interacting with such smart contracts requires a developer to write code in a language such as Scala (using the [AppKit](appkit.md) framework) or Rust (using [HDF](headless.md) / sigma-rust)
 
-### Background
-
-The Ergo platform allows sophisticated dApps via smart contracts written in ErgoScript. Some notable examples are the Sigma-USD stable coin bank and ErgoMixer. 
-
-Interacting with such smart contracts requires a developer to write code in a language such as Scala (using the App-Kit framework) or Rust (using HDF / sigma-rust)
-
-JSON dApp Environment (JDE) is another programming tool that can be used to interact with Ergo dApps. The differentiating feature of JDE is that its programming language is JSON.
+[JSON dApp Environment (JDE)](https://github.com/ergoplatform/ergo-jde) is another programming tool that can be used to interact with Ergo dApps. The differentiating feature of JDE is that its programming language is JSON.
 
 ### Goals
 
-JDE is designed with the following goals:
+This JDE is designed with the following goals in mind:
 
 1. Enable tech-savvy users and developers to interact with existing (and future) Ergo dApps such as Sigma USD by programming the off-chain logic in a user-friendly way. 
  
