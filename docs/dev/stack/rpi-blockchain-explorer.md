@@ -10,7 +10,7 @@ We will focus specifically on the Chain Grabber module from the [Ergo Blockchain
 ### Prerequisites
 
 * Raspberry Pi with official OS installed
-* Minimum 60GB of memory available
+* Minimum 60GB of disk space available
 * SSH enabled with stable internet connection
 
 <br>
