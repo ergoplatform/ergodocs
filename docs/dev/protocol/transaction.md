@@ -83,10 +83,7 @@ The selection of which boxes to spend is a secret of the wallet's random selecti
 The Accounts model contains a single box, and this box is not spent. It remains the same so that non-related coins will remain unaffected.
 
 
-
 The UTXO model, on the other hand, contains a set of boxes that represents the total amount of the user's balance and the unspent transaction output has to change with each spending transaction.  
-
-
 
 You may see a long list of tokens when swapping just 5 SigRSV as below:![](https://lh6.googleusercontent.com/wK-uprlqrj6wKt74AODkxBt6xR5Dey_qGB4kclXm5OuhWz2nfIuBTZm412oFA1h0OHXRi_oGcx6y7jR6A6kRcgpAUU7vSaQrfAMY6lKzdzy8THl2Hh2uEMzHjs5M5Sdlly6DO8f4=s0)
 
