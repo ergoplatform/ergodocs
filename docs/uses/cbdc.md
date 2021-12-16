@@ -1,4 +1,4 @@
-# CDBCs
+# CBDCs
 
 *As blockchain technology gains traction, central bank digital currencies are among the most powerful applications being developed. But these will inevitably fall far short of the ideal for one simple reason: control. In particular, that has implications for composability and privacy, and much else besides.*
 
