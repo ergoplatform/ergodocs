@@ -7,11 +7,12 @@ Ergo Platform has a research-based approach for long-term success and has a lot 
 - Layer 1, **(application layer)**, Ergo supports multiple on-chain scalability solutions such as Sharding.
 - Layer 2 **(off-chain)**. Ergo can utilise multiple off-chain solutions, such as [Hydra](https://iohk.io/en/research/library/papers/hydrafast-isomorphic-state-channels/) and sidechains to compress blockchain bloat and provide similar benefits as zk-rollups. Ergo can also be compatible with other UTXO Layer 2 solutions, such as Bitcoin's Lightning Network. The implementation here will depend on the needs of the applications being built on Ergo.
 
+
 ## Settlement Layer
 
-> The general idea is that large chunks of transactions can happen in layer 2, and the whole chunks will be settled in Ergo blockchain using a single transaction. Thanks to the high flexibility of the ErgoScript programming model, many different protocols will be possible on layer2, each one solving scalability problems in a specific domain (like simple payment transactions).
+The general idea is that large chunks of transactions can happen on layer 2, and be settled in Ergo using a single transaction. Thanks to the high flexibility of the ErgoScript programming model, many different protocols will be possible on layer2, each one solving scalability problems in a specific domain (like simple payment transactions which could be sped up with sub-block confirmation protocols). 
 
-> Thus, the Ergo blockchain can be considered a common settlement layer for many level2 protocols and applications.
+Thus, Ergo can be considered a common *settlement layer* for many Level-2 protocols and applications.
 
 ## TPS
 
@@ -25,9 +26,14 @@ Stateless clients allow light wallets and light miners to run with full node sec
 
 ## State Bloat
 
+About scaling, the main approach is to avoid bloat without compromising functionality. E.g. persistent updateable storage is possible, with updates to be checked by a blockchain contract, but only digest of authenticated data structure (and some additional bytes, less than 40 bytes anyway) are stored in the UTXO set dependless on data set size. Storage rent is helping to remove dust from the UTXO set. Then light clients: in Ergo you can have full-node guarantees without storing UTXO set, if you do not mine. That’s about much improved boostrapping and block validation times. With such improvements, it is possible to raise TPS without compromising classic blockchain assumptions and guarantees. 
+
+
 Ergo utilises "[Storage Rent Fee](https://ergoplatform.org/en/blog/2021-07-09-cryptocurrency-fees-a-solution-to-unreasonable-state-growth/)" to prevent spam and recirculate unused data bytes, known as dust. Storage Rent Fee helps clean the network pollution and encourages users to be more active.
 
+## Block size
 
+Parameters like block size etc are not set in stone, rather, miners can adjust them. So if a miner is experiencing low full block validation time (as hardware is getting better with time, as well as software), he may propose or vote to increase block size.
 
 
 ## Resources

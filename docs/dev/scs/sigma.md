@@ -7,6 +7,8 @@ Let's say someone picks up a phone in a bar. You can prove it's yours by hiding 
 
 In cryptography, most practical problems are associated with secrets. The most popular application lies in digital signatures, used by millions of people around the world every day. Essentially, these involve saying: *'This message proves I know the private key associated with this public key – but I'm not revealing the private key itself'.*
 
+Ergo provides superior access to discrete log based zero-knowledge proofs. 
+
 ##  Sigma protocols
 
 ErgoScript is the language used to specify the conditions under which currency can be spent. The language supports a type of non-interactive zero-knowledge proofs called Σ-protocols and is flexible enough to allow for ring-signatures, multi signatures, multiple currencies, atomic swaps, self-replicating scripts, and long-term computation.
@@ -69,14 +71,6 @@ ErgoMixer is a [state of the art](https://ergonaut.space/screenshot_2021-05-15_a
 - [Tornado Cash vs ErgoMixer](https://discord.com/channels/668903786361651200/762308254159863818/871703354970103818)
 - [anon2020s explaining the how ErgoMixer retains its anonymity](https://discord.com/channels/668903786361651200/762308254159863818/885284185173024799)
 
-## Lots more applications possible, many still undiscovered! 
- 
-- [A Simpler Collective-Spending Approach for Everyone!](https://www.ergoforum.org/t/a-simpler-collective-spending-approach-for-everyone/476)
-- [trustless prediction markets and on-chain insurance](https://discord.com/channels/668903786361651200/668903786902847502/752451091496435762)
-- [Trustless LETS](https://ergoplatform.org/en/blog/2019_05_29-exchange/)
-- ["I think global mutual credit system (trustless, so collateralized) can be perfectly combined with ErgoFund, so funds collected can be used to open credit-line basically to spend money for services in the mutual credit system"](https://discord.com/channels/668903786361651200/669143871758008321/850130154948919336)
-- ["So at the same time off the peg ring and threshold signatures, where from k-out-of-n signatures, it could not be concluded which k signers were real, so you have i think first zero knowledge multisig with no signers disclosure in cryptocurrency at the same time(on app level)."](https://discord.com/channels/668903786361651200/668903786902847502/751154111650594978)
-- ["You have to look more into the base at the moment to see future possibilities, at the base you have multisig with no signers disclosure, then new features like covert address, multi hop withdrawals discovered slowly thanks to contracts possibilities, mixer can be just run locally at the same time. You can build Monero on top of Ergo, will it have better privacy guarantees? it is yet to be discovered. But you can think of private order books for example at the same time, similar to a simple and interesting payment network. I think that combining these things with NYM in the future can have more sense for scalable privacy."](https://discord.com/channels/668903786361651200/762308254159863818/879821391644471306)
 
 
 ## Resources

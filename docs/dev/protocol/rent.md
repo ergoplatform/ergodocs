@@ -1,6 +1,6 @@
 > Participate in community discussions - [Ergo Emission: details, retargeting via a soft-fork](https://www.ergoforum.org/t/ergo-emission-details-retargeting-via-a-soft-fork/2778)
 
-__We've designed Ergo with long-term economic sustainability in mind, and storage rent is one of the ways we're ensuring miners stay profitable well into the future. One community member, Robert, describes this function as 'on-chain garbage collection' that reduces the problem of blockchain bloat – and even makes it profitable.__
+__We've designed Ergo with long-term economic sustainability in mind, and storage rent is one of the ways we're ensuring miners stay profitable well into the future. This can be thought of as 'on-chain garbage collection' that reduces the problem of blockchain bloat – and even makes it profitable.__
 
 **Key Points**
 

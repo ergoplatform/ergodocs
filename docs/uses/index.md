@@ -9,14 +9,11 @@
 - **Time Epoch:** Ergo Blockchain can be designed to have timed operations. For example, during an *ICO* (or *IDO*), a code in a smart contract can provide *timed-release* so that investors have a protective layer if the project owner isn’t delivering his/her promises. In Ethereum, programming such a kind of timed operation isn’t possible. 
 - **Parachain/Sidechains:** This is a yet-to-develop area for Ergo Blockchain. It’s certainly possible, and we know that the implementation of parachains has a significant impact on scalability. Our core developer *Alex Chepurnoy* is about to release a paper on it, so stay tuned!
 
-
-
-
-## Resources
-- [ErgoFaucet.org](https://github.com/zargarzadehm/ergo-faucet)
-- Various utilities are listed on [ergosites.github.io](https://ergosites.github.io/#ex2-tabs-3)
-- [ergo.watch](https://ergo.watch) | [Git](https://github.com/abchrisxyz/ergowatch)
-- [Self-Soverign Defi](https://www.ergoforum.org/t/self-sovereign-defi/260)
-- [Payment channels without multisignatures](https://www.ergoforum.org/t/payment-channels-without-multisignatures/2219)
-
-
+## Lots more applications possible, many still undiscovered! 
+ 
+- [A Simpler Collective-Spending Approach for Everyone!](https://www.ergoforum.org/t/a-simpler-collective-spending-approach-for-everyone/476)
+- [trustless prediction markets and on-chain insurance](https://discord.com/channels/668903786361651200/668903786902847502/752451091496435762)
+- [Trustless LETS](https://ergoplatform.org/en/blog/2019_05_29-exchange/)
+- ["I think global mutual credit system (trustless, so collateralized) can be perfectly combined with ErgoFund, so funds collected can be used to open credit-line basically to spend money for services in the mutual credit system"](https://discord.com/channels/668903786361651200/669143871758008321/850130154948919336)
+- ["So at the same time off the peg ring and threshold signatures, where from k-out-of-n signatures, it could not be concluded which k signers were real, so you have i think first zero knowledge multisig with no signers disclosure in cryptocurrency at the same time(on app level)."](https://discord.com/channels/668903786361651200/668903786902847502/751154111650594978)
+- ["You have to look more into the base at the moment to see future possibilities, at the base you have multisig with no signers disclosure, then new features like covert address, multi hop withdrawals discovered slowly thanks to contracts possibilities, mixer can be just run locally at the same time. You can build Monero on top of Ergo, will it have better privacy guarantees? it is yet to be discovered. But you can think of private order books for example at the same time, similar to a simple and interesting payment network. I think that combining these things with NYM in the future can have more sense for scalable privacy."](https://discord.com/channels/668903786361651200/762308254159863818/879821391644471306)

@@ -143,6 +143,7 @@ nav:
       - LETS: uses/lets.md
       - Email Client for Blocked Internet: uses/blocked_web.md
       - Atomic Swaps: dev/protocol/atomic.md
+      - ErgoData: uses/ErgoData.md
     - Further Ideas:
       - CDBC: uses/cbdc.md
       - Lotteries: uses/lottery.md
