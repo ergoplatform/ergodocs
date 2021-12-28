@@ -32,6 +32,11 @@ Please see the official wallet [https://ergoplatform.org/en/wallets/](wallet pag
 
 - Ledger Support in development (see below)  | Tesseract & Yoroi
 
+- [tesseract-one/ledger-app-ergo](https://github.com/tesseract-one/ledger-app-ergo)
+- [anon-br/ledgerjs-hw-app-ergo](https://github.com/anon-br/ledgerjs-hw-app-ergo)
+
+Here is [a guide](https://putukusuma.medium.com/build-an-app-for-ledger-nano-s-on-macbook-and-docker-46be51701206) on how to deploy it on the device (just skip the docker part): 
+
 ## Misc
 
 - [URL Wallet (Your key is in the URL, use this wallet for temporary use cases only!)](https://erg.urlwallet.org/)
