@@ -35,7 +35,13 @@
 - [Ergo P2S Playground](https://wallet.plutomonkey.com/p2s/?source=dHJ1ZQ==) | A web-based tool to quickly get the address corresponding to some script  
 - [ergo-monitoring](https://github.com/SabaunT/ergo-monitoring) | Debug service printing out useful for developers and managers information about ergo blockchain state.
 
+## On-Chain Analysis
+
+- [Ergo Vision](https://github.com/CryptoCream/ErgoVision) | A wallet visualization tool to be used for investigating transactions and addresses
+- [Ergo Intelligence](https://github.com/Eeysirhc/ergo_intelligence)
+
 ## Tools
+
 - [Transaction builder](https://transaction-builder.ergo.ga/) |  The application allows you to manipulate Ergo json transaction with a UI and to sign them with Yoroi, or to prepare the json for the Swagger API. It is also able to load the json of an unsigned transaction to edit it.  | [GitHub](https://github.com/ThierryM1212/transaction-builder/  | [Video](https://youtu.be/0VhfY7osT2k)
 
 

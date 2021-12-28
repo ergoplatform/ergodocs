@@ -23,6 +23,7 @@ Like Bitcoin, Ergo uses the ‘UTXO’ (unspent transaction outputs) model rathe
 
 Most people think that the balance of an account is a simple number that is updated when you send or receive funds. This is the obvious way to approach the problem; it is effectively how money works in the real world. Your bank account has a balance that is increased or decreased when different transfers are made in and out. The ‘Account’ model operates: transactions to and from the Account alter your balance on the blockchain.
 
+- [Learning Ergo 101 : eUTXO explained for human beings](https://dav009.medium.com/learning-ergo-101-blockchain-paradigm-eutxo-c90b0274cf5e)
 ## How much dough?
 
 The UTXO model, pioneered by Bitcoin, is quite different. You can think of this a bit like a person holding a series of lumps of bread dough, and their balance is the sum of these lumps or UTXOs. Lumps can be divided or combined before they are sent to a new address, but you always know where they came from. For example:

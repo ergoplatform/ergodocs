@@ -65,3 +65,8 @@ And here is how what they look like on the mainnet:
 * **Prefix byte** = `network type + address type` (for example, P2S script on the testnet starts with 0x13 before Base58)
 * **checksum** = `leftmost_4_bytes (blake2b256 (prefix byte || content bytes))`
 * **address** = `prefix byte || content bytes || checksum`
+
+
+## Resources
+
+- [Ergo Vision](https://github.com/CryptoCream/ErgoVision) | A wallet visualization tool to be used for investigating transactions and addresses
