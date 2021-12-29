@@ -95,6 +95,19 @@ rm -rf .ergo/state
 rm -rf .ergo/history
 ```
 
+## Deriving Addresses
+
+Navigate to `localhost:9053/swagger#/wallet/walletDeriveKey` 
+
+click **Try it out**
+
+```  
+"derivationPath": "m/44'/429'/0'/0/0" 
+```
+
+The wallet needs to be unlocked, and you need to authorize on top right on swagger
+click execute and check the address you get in the response
+
 ## Node security
 
 There are a few important aspects your wallet and money's safety depends on:
