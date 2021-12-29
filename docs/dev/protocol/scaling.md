@@ -16,13 +16,10 @@ Thus, Ergo can be considered a common *settlement layer* for many Level-2 protoc
 
 ### TPS
 
-TPS: v5 should be possible of 47.5tx/s - improvements on top of this are still possible.
+TPS: With the release of v5 the raw numbers should get around 47.5tx/s - improvements on top of this are still possible.
 
-However, TPS is mostly a vanity metric. It's not about how many but rather, computational cost, so gas limit per block.
+However, TPS is mostly a vanity metric. It's not about how many but rather, the computational cost, or gas limit per block. Cost limit depends on hardware miners have, size of the network, etc, but there is no concrete formula. The best path forward is to get transaction profiles when defi gets established and do load testing in the testnet
 
-The best path forward is to get transaction profiles when defi gets established and do load testing in the testnet
-
-Cost limit depends on hardware miners have, size of the network, etc, but there is no concrete formula
 
 ## Layer 0
 

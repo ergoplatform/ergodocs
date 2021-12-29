@@ -43,6 +43,9 @@ We hosted two hackathons in 2021, with a third lined up for Q1 2022!
 - ErgoEarn | earn for learning (Coinbase Earn)
 - ErgoStats | on-chain analysis (glassnode)
 
+### ERGOHACK III
+
+- [ErgoHack III: Privacy & Security](https://ergoplatform.org/en/blog/2021-12-21-ergohack-iii-privacy-security/)
 
 ## ErgoSummit
 
@@ -62,7 +65,7 @@ We hosted two hackathons in 2021, with a third lined up for Q1 2022!
 - [03:59:30](https://www.youtube.com/watch?v=zG-rxMCDIa0&amp;t=14370s) - Headless dApps: A Novel Technical & Business Model for the dApp Industry
 - [04:28:00](https://www.youtube.com/watch?v=zG-rxMCDIa0&amp;t=16080s) - Ergo - Cardano Collaboration
 - [04:38:00](https://www.youtube.com/watch?v=zG-rxMCDIa0&amp;t=16680s) - Understanding dApp Developer Tooling: An Introduction To Kiosk
-- [05:13:00] (https://www.youtube.com/watch?v=zG-rxMCDIa0&amp;t=18780s) - The Upcoming Ergo Hardening Upgrade - How It Will Change The Ecosystem From Top To Bottom
+- [05:13:00](https://www.youtube.com/watch?v=zG-rxMCDIa0&amp;t=18780s) - The Upcoming Ergo Hardening Upgrade - How It Will Change The Ecosystem From Top To Bottom
 - [05:26:30](https://www.youtube.com/watch?v=zG-rxMCDIa0&amp;t=19590s) - Oracle Pools Update - How Deviation Checking Consensus Improves Assurance
 - [05:57:00](https://www.youtube.com/watch?v=zG-rxMCDIa0&amp;t=21420s) - Updatable dApps In The EUTXO Model
 - [06:10:00](https://www.youtube.com/watch?v=zG-rxMCDIa0&amp;t=22200s) - Blockchain 2020: A DeFi Odyssey
