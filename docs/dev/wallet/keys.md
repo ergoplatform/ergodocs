@@ -6,6 +6,19 @@
 
 ## Derived Addresses
 
-Since very early versions, the Ergo node uses a secret root key (derived from seed) for the *change* address. After switching to EIP-3, supported by CoinBarn and Yoroi around that time, the node switched to the same change address as in the wallets, thus deriving an address corresponding to `m/44’/429’/0’/0/0`.
+Since very early versions, the Ergo node uses a secret root key (derived from seed) for the *change* address. After switching to EIP-3, supported by CoinBarn and Yoroi around that time, the node switched to the same change address as in the wallets, thus deriving an address corresponding to `m/44’/429’/0’/0/0`. (originally `m/1/2`)
 
 [Read More](https://www.ergoforum.org/t/an-issue-with-change-address-of-node-wallet/2940)
+
+## Deriving Addresses
+
+Navigate to `localhost:9053/swagger#/wallet/walletDeriveKey` 
+
+click **Try it out**
+
+```  
+"derivationPath": "m/44'/429'/0'/0/0" 
+```
+
+wallet needs to be unlocked, and you need to authorize on top right on swagger
+click execute and check the address you get in the response
