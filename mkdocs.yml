@@ -1,6 +1,7 @@
 site_name: ErgoDocs
-site_url: https://ergodocs.rtfd.io
+site_url: https://docs.ergoplatform.org
 repo_url: https://github.com/glasgowm148/ergodocs
+edit_uri: edit/main/docs/
 
 
 theme:
