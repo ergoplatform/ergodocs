@@ -28,6 +28,7 @@ Watch this space – because we have some great new developments on the way very
 - [Writing JDE Scripts](https://github.com/ergoplatform/ergo-jde#writing-jde-scripts)
 - [Using the web service](https://github.com/ergoplatform/ergo-jde#using-the-web-service)
 ### Explanations
+- [Understanding Headless dApps - Video](https://www.youtube.com/watch?v=temmjyKpsEU)
 ### References
 - [Sample Scripts](https://github.com/ergoplatform/ergo-jde/tree/main/sample-scripts)
 - [Syntax](https://github.com/ergoplatform/ergo-jde/blob/main/syntax.md)
