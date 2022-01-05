@@ -1,9 +1,8 @@
 Ergo Platform has a research-based approach for long-term success and has a lot in its toolbox to tackle scaling.
 
-
 The general idea is that large chunks of transactions can happen on layer 2, and be settled in Ergo using a single transaction. Thanks to the high flexibility of the ErgoScript programming model, many different protocols will be possible on layer2, each one solving scalability problems in a specific domain (like simple payment transactions which could be sped up with sub-block confirmation protocols). 
 
-Thus, Ergo can be considered a common *settlement layer* for many Level-2 protocols and applications.
+**Thus, Ergo can be considered a common *settlement layer* for many Level-2 protocols and applications.**
 
 
 ## Layers
@@ -14,14 +13,12 @@ Thus, Ergo can be considered a common *settlement layer* for many Level-2 protoc
 
 
 
-### TPS
+## Layer 1
 
-With the release of v5 the raw numbers should bring us to around 47.5tx/s - improvements on top of this are still possible.
+With the release of v5 the raw TPS numbers should bring us to around 47.5tx/s - improvements on top of this are still possible.
 
 **However, TPS is mostly a vanity metric.** It's not about how many transactions you can do but rather, the computational cost, or gas limit per block. The cost limit depends on the hardware miners have, size of the network, and other factors. But there is no concrete formula to calculate this. The best path forward is to log transaction profiles once DeFi on Ergo becomes more established and do load testing in the testnet.
 
-
-## Layer 0
 
 ### Stateless Clients
 
@@ -38,19 +35,34 @@ Ergo utilises "[Storage Rent Fee](https://ergoplatform.org/en/blog/2021-07-09-cr
 
 Parameters like block size etc are not set in stone, rather, miners can adjust them. So if a miner is experiencing low full block validation time (as hardware is getting better with time, as well as software), he may propose or vote to increase block size.
 
-## Layer 1
-
 ### Sharding
 
 - [On the Security and Performance of Blockchain Sharding](https://eprint.iacr.org/2021/1276)
+
 ## Layer 2
 
 ### Sub-block confirmation 
 
 Sub-block confirmation protocols ([Bitcoin-NG](https://www.usenix.org/system/files/conference/nsdi16/nsdi16-paper-eyal.pdf) or [Flux](https://www.usenix.org/system/files/atc20-li-chenxing.pdf), topic for research in 2022 )
 
+### Plasma
+
+Plasma is a layer-2 scaling solution that was originally proposed by Joseph Poon and Vitalik Buterin in their paper Plasma: Scalable Autonomous Smart Contracts. It is a framework for building scalable applications. Plasma uses a combination of smart contracts and cryptographic verification.
+
+Ergo implementation is currently being researched.
 
 
+### Lightning Network 
+
+Due to the shared UTXO architecture utilising Bitcoins Lightning network is also a possibility.
+
+### Hydra
+
+Ergo is mentioned in the Hydra whitepaper.
+
+### ZK-Rollups
+
+Zero-Knowledge Rollups 
 
 ## Resources
 
