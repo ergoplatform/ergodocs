@@ -1,6 +1,6 @@
 # Contributing
 
->  *Join us in creating grassroots finance!*
+>  *Lets create grassroots finance!*
 
 
 
