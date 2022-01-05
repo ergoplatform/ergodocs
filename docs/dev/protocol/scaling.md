@@ -51,18 +51,19 @@ Plasma is a layer-2 scaling solution that was originally proposed by Joseph Poon
 
 Ergo implementation is currently being researched.
 
+### Hydra
+
+Ergo is mentioned in the [Hydra whitepaper](https://eprint.iacr.org/2020/299.pdf). Research and discussions underway. 
+
 
 ### Lightning Network 
 
 Due to the shared UTXO architecture utilising Bitcoins Lightning network is also a possibility.
 
-### Hydra
-
-Ergo is mentioned in the Hydra whitepaper.
 
 ### ZK-Rollups
 
-Zero-Knowledge Rollups 
+Zero-Knowledge Rollups work by taking hundreds of transfers off-chain and combining or "rolling" them up into a single transaction
 
 ## Resources
 
