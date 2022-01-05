@@ -7,9 +7,9 @@ The general idea is that large chunks of transactions can happen on layer 2, and
 
 ## Layers
 
-- Layer 0 **(Peer 2 Peer)**. The Ergo Node Client has improved a lot since v4.0.8 and still has room to grow. Quick bootstrapping using [NiPoPoWs](/docs/node/nipopow.md) proofs and UTXO set snapshots in development
-- Layer 1, **(application layer)**, Ergo supports multiple on-chain scalability solutions such as Sharding.
-- Layer 2 **(off-chain)**. Ergo can utilise multiple off-chain solutions, such as [Hydra](https://iohk.io/en/research/library/papers/hydrafast-isomorphic-state-channels/) and sidechains to compress blockchain bloat and provide similar benefits as zk-rollups. Ergo can also be compatible with other UTXO Layer 2 solutions, such as Bitcoin's Lightning Network. The implementation here will depend on the needs of the applications being built on Ergo.
+- **Layer 0** *(Peer 2 Peer)*. The Ergo Node Client has improved a lot since v4.0.8 and still has room to grow. Quick bootstrapping using [NiPoPoWs](/docs/node/nipopow.md) proofs and UTXO set snapshots in development
+- **Layer 1** *(application layer)*, Ergo supports multiple on-chain scalability solutions such as Sharding.
+- **Layer 2** *(off-chain)*. Ergo can utilise multiple off-chain solutions, such as [Hydra](https://iohk.io/en/research/library/papers/hydrafast-isomorphic-state-channels/) and sidechains to compress blockchain bloat and provide similar benefits as zk-rollups. Ergo can also be compatible with other UTXO Layer 2 solutions, such as Bitcoin's Lightning Network. The implementation here will depend on the needs of the applications being built on Ergo.
 
 
 
