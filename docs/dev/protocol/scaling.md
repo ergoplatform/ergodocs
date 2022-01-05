@@ -13,7 +13,7 @@ The general idea is that large chunks of transactions can happen on layer 2, and
 
 
 
-## Layer 1
+## Layer 0
 
 With the release of v5 the raw TPS numbers should bring us to around 47.5tx/s - improvements on top of this are still possible.
 
@@ -34,6 +34,8 @@ Ergo utilises "[Storage Rent Fee](https://ergoplatform.org/en/blog/2021-07-09-cr
 ### Block size
 
 Parameters like block size etc are not set in stone, rather, miners can adjust them. So if a miner is experiencing low full block validation time (as hardware is getting better with time, as well as software), he may propose or vote to increase block size.
+
+## Layer 1
 
 ### Sharding
 
