@@ -32,7 +32,9 @@ with the following text
 	  }
 	}
 ```
-Then issue the following command to run the node for the first time (from within the `ergo` folder):
+Then issue the following command to run
+ the node for the first time (from within the `ergo` folder):
+
 ```
 java -jar -Xmx3G ergo-<release>.jar --mainnet -c ergo.conf
 # The -Xmx flag sets the max heap size for the jvm
