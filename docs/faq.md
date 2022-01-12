@@ -7,12 +7,38 @@
 - The development roadmap can be seen [here](https://ergonaut.space/en/roadmap).
 - To see the applications currently running on Ergo, please see [sigmaverse.io](https://sigmaverse.io/).
 - To read about Ergo from a less technical perspective, please visit [ergonaut.space](https://ergonaut.space/en/home). 
-- Similarly, miners should utilise the community-built [Miners Handbook](https://ergonaut.space/Mining).
-
+- Similarly, miners should check out the community-built [Miners Handbook](https://ergonaut.space/Mining).
 
 ## Why '*Ergo*'? 
 
 Ergo means "therefore" in Latin but "work" in Greek. Initially, we chose the name to point to the fact that the cryptocurrency's design is ERGOnomical.
+
+## Why Ergo?
+
+Ergo delivers a next-generation smart contract platform enabling ordinary people to participate in robust P2P DeFi with superior support for real-world financial agreements.
+
+The overwhelming majority of successful public blockchain use‐cases are related to financial applications.  Just like Bitcoin, Ergo has digital scarcity. There is a limited supply, mined into existence through Proof of Work. In this respect, Ergo is a conservative blockchain. However, Ergo also incorporates many novel features using over a decade of scientific research and development. We extend Bitcoin's UTXO and way of writing contracts by attaching a *guard script* to every coin. 
+
+
+**Objectives**
+
+- Research-led but real-world focused.
+- Powerful & Safe
+- Intelligent and Straightforward
+- Secure and Accessible
+
+**Key Features**
+
+- **Sigma Protocols (Σ)** - a type of non-interactive zero-knowledge proofs that are flexible enough to allow for ring-signatures, multi signatures, multiple currencies, atomic swaps, self-replicating scripts, and long-term computation.
+- **Multi-stage Contracts** - In addition to the regular protection offered by using a threshold `m‐of‐n` signature, Ergo also allows specifying the possible recipients of these coins, which may be another contract with similar complex conditions. This *"chaining"* approach allows the implementation of **secure and efficient smart contracts of arbitrary complexity**. 
+- **Non-Interactive Proofs of Proof of Work (NIPoPoWs)**  -  are essential for two reasons: Light Clients and Side Chains. 
+- **Storage Rent** - on-chain garbage collection
+
+
+Keeping all this in mind, we expect Ergo's design to be uniquely useful as Contractual Money.
+
+
+
 
 ## What is the [Emission Schedule](https://ergoplatform.org/en/blog/2019_05_20-curve/)?
 

@@ -55,7 +55,6 @@ nav:
     - Contributing: contribute.md
     - FAQ: faq.md
     - Events: events.md
-
   - Developers:
     - Developers: dev/index.md
     - Protocol: 
@@ -85,7 +84,6 @@ nav:
       - Network Messages: dev/p2p/network.md
       - Modifiers Exchange: dev/p2p/modifiers.md
      # - BlockP2P: dev/p2p/BlockP2P.md
-    
     - Resources: 
       - Libraries:
         - AppKit: dev/stack/appkit.md
