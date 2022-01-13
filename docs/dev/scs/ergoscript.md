@@ -33,6 +33,7 @@ Please see this [Quick Primer on ErgoScript](https://github.com/ergoplatform/erg
 
 ### Resources
 - [FlowCards](flowcards.md) | A Declarative Framework for Development of Ergo dApps (Also see [flowcardLib](https://github.com/lucagdangelo/flowcardLib))
+- [flowcardLib: Ergo FlowCard library for diagrams.net](https://github.com/lucagdangelo/flowcardLib)
 - Compile ErgoScript directly in your browser with [ErgoScript Playground](https://wallet.plutomonkey.com/p2s/)
 - [Kiosk](/dev/stack/kiosk) lets anyone play with ErgoScript using a basic web-based UI
 
