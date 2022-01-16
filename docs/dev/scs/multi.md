@@ -1,7 +1,12 @@
 # Multi-Stage Contracts
 
 
-> *Smart contracts* are the backbone of *decentralized finance*. Through smart contracts, users can interact with *dApps* without middlemen. *Blockchain* design has a significant impact on the capabilities of smart contracts. Ergo Blockchain’s UTXO model allows *multi-stage contracts* to operate on a highly scalable network.
+
+
+Multi-Stage Contracts provide an extension to Bitcoin’s UTXO model with on-chain computations. 
+
+Extended UTXO systems enable Turing complete smart contracts. This is a novel innovation that allows the latest generation of blockchains to reclaim the original model that Bitcoin used, but with a lot more power.
+
 
 
 ## Tutorials & Guides
@@ -27,4 +32,4 @@ The problem lies elsewhere. We don’t ask if our stock is genuine or is it a fa
 
 So you’ve heard about smart contracts, but what are multi-stage contracts? Multi-stage contracts refer to smart contracts that are operating on a stateful level. Because Ergo uses the *UTXO model* (first seen in Bitcoin), it is possible to process parallelized actions on top of smart contracts. Ethereum’s *Account-Based model*, however, doesn’t allow such operations. The Account-Based model has its ease of use, but it also comes with a high load of operation power. Ergo’s multi-stage contracts are developed on the extended UTXO model. It’s a complex design that aims for *infinite scalability*; therefore, it creates more space to build complex solutions.
 
-For a blockchain to contain smart contracts, it should have loops. These loops can later refer to themselves and check whether an operation is working or not. Bitcoin’s UTXO design is very primitive, and it doesn’t contain Turing-complete smart contracts. Ethereum has this capability, but it’s a primitive version of a Turing-complete language. Ergo Blockchain provides a different approach to multi-stage contracts, empowered by the *extended UTXO* model, permitting a lighter network and broader use cases.
+For a blockchain to contain smart contracts, it should have loops. These loops can later refer to themselves and check whether an operation is working or not. Bitcoin’s UTXO design is very primitive, and it doesn’t contain Turing-complete smart contracts. Ethereum has this capability, but it’s a primitive version of a Turing-complete language.

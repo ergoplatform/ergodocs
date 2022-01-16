@@ -15,7 +15,8 @@ Ergo means "therefore" in Latin but "work" in Greek. Initially, we chose the nam
 
 ## Why Ergo?
 
-Ergo delivers a next-generation smart contract platform enabling ordinary people to participate in robust P2P DeFi with superior support for real-world financial agreements.
+Ergo delivers a next-generation smart contract platform that aims to empower ordinary people with access to simple and self-sovereign peer-to-peer financial contracts!
+
 
 The overwhelming majority of successful public blockchain use‐cases are related to financial applications.  Just like Bitcoin, Ergo has digital scarcity. There is a limited supply, mined into existence through Proof of Work. In this respect, Ergo is a conservative blockchain. However, Ergo also incorporates many novel features using over a decade of scientific research and development. We extend Bitcoin's UTXO and way of writing contracts by attaching a *guard script* to every coin. 
 
