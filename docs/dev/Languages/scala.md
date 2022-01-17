@@ -9,7 +9,7 @@ Ergo's primary language is Scala. Similarily, the scripting language used by erg
 Tutorials, How to Guides and Explanations found in the relevent sections
 - See [ErgoScript](../lib/ergoscript.md/)
 - See [AppKit](../lib/back-end.md/#Appkit)
-
+- [zackbalbin/ErgoTutorials](https://github.com/zackbalbin/ErgoTutorials)
 
 
 ### References
