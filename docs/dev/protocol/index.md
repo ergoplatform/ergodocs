@@ -38,7 +38,7 @@ Ergo provides **superior support for real-world financial agreements**. It does 
 Creating financial contracts on the blockchain isn't just about the functionality; it's about making that functionality safe and accessible, and powerful. 
 
 
-### [Sigma Protocols](/site/dev/scs/sigma/index.html)
+### [Sigma Protocols](/dev/scs/sigma)
 
 The cryptographic part of ErgoScript is based on **Sigma Protocols** and naturally supports threshold `m-of-n` signatures, ring signatures, and more. Keeping all this in mind, we expect ErgoScript and Ergo's design to be uniquely useful as **Contractual Money** with countless possible applications. 
 

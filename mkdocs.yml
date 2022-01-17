@@ -59,11 +59,13 @@ nav:
     - Developers: dev/index.md
     - Protocol: 
       - Protocol: dev/protocol/index.md
-      - eUTXO: dev/protocol/eutxo.md
-      - Autolykos: dev/protocol/autolykos.md
-      - Storage Rent: dev/protocol/rent.md
-      - NIPoPoWS: dev/protocol/nipopow.md
+      - Components: 
+        - eUTXO: dev/protocol/eutxo.md
+        - Autolykos: dev/protocol/autolykos.md
+        - Storage Rent: dev/protocol/rent.md
+        - NIPoPoWS: dev/protocol/nipopow.md
       - Scaling: dev/protocol/scaling.md
+      - EIPs: dev/protocol/eip.md
     - Data Model:
       - Transactions: dev/protocol/transaction.md
       - Box: dev/data-model/box.md

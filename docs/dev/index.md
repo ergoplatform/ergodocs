@@ -4,9 +4,3 @@ There are several pathways to start developing on Ergo. A typical dApp is usuall
 
 - [Learning Ergo 101 : Development Workflow](https://medium.com/cryptostars/learning-ergo-101-development-workflow-aa17dd63ef6)
 
-## [Ergo Improvement Proposals](https://github.com/ergoplatform/eips)
-
-Ergo Improvement Proposals (EIPs) specify and/or describe standards for the Ergo Platform, including core protocol specifications, client APIs, dApp/contract standards, and other such things.
-
-Please check out existing EIPs to understand the general expectation of how EIPs are supposed to be formatted.
-
