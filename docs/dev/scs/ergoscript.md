@@ -10,7 +10,7 @@ As a simple example, the below script allows only Alice to spend a box before a 
 
 The scripting language in itself is non-Turing complete, but applications can be made to be Turing complete as demonstrated in [this peer-reviewed paper](https://arxiv.org/pdf/1806.10116v1.pdf).
 
-Please see this [Quick Primer on ErgoScript](https://github.com/ergoplatform/ergo/wiki/ErgoScript-Overview) for an overview of key concepts and some basic examples. 
+Please see this [Quick Primer on ErgoScript](/dev/scs/ergoscript-primer) for an overview of key concepts and some basic examples. 
 
 
 ### Tutorials & Guides

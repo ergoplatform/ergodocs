@@ -77,7 +77,7 @@ nav:
     - Smart Contracts:
       - Smart Contracts: dev/scs/index.md
       - ErgoScript: 
-        - ErgoScript: dev/scs/ergoscript.md
+        - Overview: dev/scs/ergoscript.md
         - Quick Primer: dev/scs/ergoscript-primer.md
       - FlowCards: dev/scs/flowcards.md
       - Sigma Protocols: dev/scs/sigma.md
