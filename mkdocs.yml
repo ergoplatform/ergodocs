@@ -74,7 +74,9 @@ nav:
       - Hierarchical keys: dev/wallet/keys.md
     - Smart Contracts:
       - Smart Contracts: dev/scs/index.md
-      - ErgoScript: dev/scs/ergoscript.md
+      - ErgoScript: 
+        - ErgoScript: dev/scs/ergoscript.md
+        - Quick Primer: dev/scs/ergoscript-primer.md
       - FlowCards: dev/scs/flowcards.md
       - Sigma Protocols: dev/scs/sigma.md
       - Multi-Stage Contracts: dev/scs/multi.md 
@@ -103,7 +105,9 @@ nav:
         - Dust: node/dust.md
         - Pi Blockchain Explorer: dev/stack/rpi-blockchain-explorer.md
       - Integration: dev/Integration/guide.md
-      - Misc: dev/start/resources.md
+      - Misc: 
+        - Bookmarks: dev/start/resources.md
+        - Test-net: dev/start/testnet.md
 
 
   - Node:
