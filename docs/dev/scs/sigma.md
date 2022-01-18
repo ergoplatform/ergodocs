@@ -62,15 +62,40 @@ There are also strong arguments for optional privacy for adoption and regulation
 
 In future, privacy by default could be enabled for every transaction in Ergo. Maybe the community will do it someday, or maybe integrating mix-nets and other novel ideas on the application layer will be sufficient.  
 
-- ["With non-optional privacy you can't have (efficient) powerful contracts. Even more, even for simple payments formalizing (in order to minimize with guarantee) leakage is hard, for arbitrary contracts not feasible at all I guess"](https://discord.com/channels/668903786361651200/668903786902847502/819670159769337938)
+With non-optional privacy you can't have (efficient) powerful contracts. Even more, even for simple payments formalizing (in order to minimize with guarantee) leakage is hard, for arbitrary contracts not feasible at all.
 
 ## ErgoMixer 
 
-ErgoMixer is a [state of the art](https://ergonaut.space/screenshot_2021-05-15_at_22.26.39.png) (and worlds first) non-interactive and non-custodial token mixer and the first real implementation of Sigma protocols on Ergo. [Mac/Windows applications are available!](https://github.com/ergoMixer/ergoMixBack/releases). Check out this page on [ergonaut.space](https://ergonaut.space/en/ErgoMixer) for more information including research papers / presentations; and these discussions in Discords.
+ErgoMixer is a [state of the art](https://ergonaut.space/screenshot_2021-05-15_at_22.26.39.png) (and worlds first) non-interactive and non-custodial token mixer. 
 
-- [Tornado Cash vs ErgoMixer](https://discord.com/channels/668903786361651200/762308254159863818/871703354970103818)
+ErgoMixer must be run as a local application preserve anonymity. (Mac/Windows applications [are available!](https://github.com/ergoMixer/ergoMixBack/releases)). 
+
+### Why is this better than Tornado Cash? 
+
+Tornado.Cash uses `zk-SNARKs`. This requires a "ceremony" for generation of parameters required by the zk-SNARKs algorithm itself. This used to be done in a Multi-party-computation way so it's enough if only one participant of the MPC setup was honest, all others can try to cheat and it will be secure anyway. 
+
+However if all of the participant cheated and cooperate they will have the ability to generate fake proofs later and nobody will know about it.
+
+In the specific case of tornado cash it would mean that if all of the 1114 ceremony setup participants cheated, they could generate fake proofs and drain money from the tornado.cash smartcontract.
+
+However if only one of them was honest, then it's secure for people to use.
+
+ErgoMixer doesn't require this "ceremony" setup, so in this way it's better than tornado.cash 
+
+The computer where MPC ceremony hold place should also be secure and destroyed after the ceremony - otherwise it could leak keys which can be used for construction of fake proofs. There's really strong game theoric incentive to integrate some backdoor to the software or even hardware of MPC computer. 
+
+There were even attacks (not on MPC computer but on some computer somewhere), where malware transferred private keys out of the device by extremely fast blinking of led diodes on notebook (people couldn't see it, but the high fps camera could). You can even use high frequency audio output or even "esoteric" hard to detect things like high frequency RF noise. You would be surprised what's possible. Imagine that you are building a mixer which will hold billions of dollars and if you are clever enough you can introduce some genius backdoor as I mentioned and drain mixer step by step in a clever way that nobody will know about it. So there's huge game theoric incentive for you to do it. Same goes for the authors of the cryptographic protocol itself. 
+
+
+### Resources
+- [ErgoMixer GitHub](https://github.com/ergoMixer/ergoMixBack)
+- Technical Paper: [ZeroJoin: Combining ZeroCoin and CoinJoin](https://eprint.iacr.org/2020/560.pdf)
+- [Presentation: ZeroJoin - Combining Zerocoin and CoinJoin](https://ergoplatform.org/docs/CBT_2020_ZeroJoin_Combining_Zerocoin_and_CoinJoin_v3.pdf)
+- [Video tutorial](https://www.youtube.com/watch?v=03_2HH82Plw)
+- [ErgoMixer ELI5](https://ergoplatform.org/en/blog/2021-05-12-ergomixer/)
+- [Ergo: What are *'Mixers'* ?](https://ergoplatform.org/en/blog/2021-05-19-ergo-what-are-bitcoin-mixers/)
 - [anon2020s explaining the how ErgoMixer retains its anonymity](https://discord.com/channels/668903786361651200/762308254159863818/885284185173024799)
-
+ErgoMixer (aka ZeroJoin) combines Zerocoin and CoinJoin
 
 
 ## Resources
