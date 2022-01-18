@@ -1,0 +1,21 @@
+{
+    "grammarly.overrides": [
+        {
+            "files": [
+                "**/docs/dev/wallet/keys.md"
+            ],
+            "config": {
+                "audience": "expert",
+                "dialect": "british",
+                "domain": "academic",
+                "emotions": [
+                    "analytical"
+                ],
+                "goals": [
+                    "inform",
+                    "describe"
+                ]
+            }
+        }
+    ]
+}

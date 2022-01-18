@@ -1,4 +1,4 @@
-Currently there is one Ergo testnet available. 
+Currently, there is one Ergo testnet available. 
 
 Explorer is available at [testnet.ergoplatform.com](https://testnet.ergoplatform.com/)
 
@@ -8,7 +8,7 @@ To join the testnet, just download [latest Ergo protocol reference client](https
 java -jar -Xmx3G ergo-*.jar --testnet -c testnet.conf
 ```
 
-where minimal testnet.conf would be:
+where a minimal `test net.conf` would be:
 
 ```
 ergo {

@@ -58,7 +58,7 @@ This topic is just for getting feedback, and I still haven't designed the APIs t
   }
 }
 ```
-The above is a potential request that Ergo Auction House can register to the service, which will start a new auction! So the Ergo Auction House app will ask the user to deposit the required assets to the _address_ (will discuss what this _address_ actually is in the next sections) using their favourite wallet and registers the request to the service.
+The above is a potential request that Ergo Auction House can register to the service, which will start a new auction! So the Ergo Auction House app will ask the user to deposit the required assets to the _address_ (will discuss what this _address_ is in the next sections) using their favourite wallet and registers the request to the service.
 
 After such a request, the service will follow the _address_ and, when the conditions are met, assembles the tx and makes sure it will be mined. In case of failures, assets will be returned to the user; for example, if the tx is for placing a bid and someone else places a bid before us!
 
@@ -83,7 +83,7 @@ Although one can argue that the first two options can work under some circumstan
 For example, the Ergo Auction House can use p2s addresses, which will allow the assets to be spent only for placing a specific bid, and the user's address is specified as auction's bidder in the auction box and register; it to the service!
 
 ### Service Provider Incentives
-Although I personally don't have plans to make profits out of the service, one can have multiple options and plans to make some profits with the service. For example, the service can follow the registered request for some minutes for free, and after that remove the request if the conditions are not met to assemble the transaction, then dApps can pay the service to follow the request longer!
+Although there are no plans to make profits out of the service, one can have multiple options and plans to make some profits with the service. For example, the service can follow the registered request for some minutes for free, and after that remove the request if the conditions are not met to assemble the transaction, then dApps can pay the service to follow the request longer!
 
 Until the dApp bridge in wallets is built, I think such a service will help a lot for the growth of dApps. Even after some wallets provide APIs for dApps, users still can benefit from such a service by using any wallet they wish!
 Please let me know if something is overlooked.

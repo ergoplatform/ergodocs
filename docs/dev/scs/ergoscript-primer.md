@@ -5,7 +5,7 @@ This article gives a short introduction to ErgoScript.
 
 ## What is ErgoScript?
 
-The Ergo node actually does not understand ErgoScript. It only understands a low-level language called
+The Ergo node does not understand ErgoScript. It only understands a low-level language called
  [**ErgoTree**](https://ergoplatform.org/docs/ErgoTree.pdf), which is a "tree" based language (somewhat like XML). 
  However, writing code in ErgoTree is difficult.  
 
@@ -14,16 +14,16 @@ Ergo nodes execute the ErgoTree program contained in a transaction and consider 
 An example of such a program can be `AND(OR(condition_1, condition_2), condition_3)`, which implies that the transaction is valid if 
 `condition_3` and at least one of `condition_1` or `condition_2` hold.    
 
-ErgoScript is a high level developer-friendly language for writing smart-contracts that are then compiled to ErgoTree before being written to the blockchain.
+ErgoScript is a high-level developer-friendly language for writing smart contracts that are then compiled to ErgoTree before being written to the blockchain.
 The equivalent of the above program in ErgoScript will be `(condition_1 || condition_2) && condition_3`. 
 
 ## Key Concepts
 
 1. Since Ergo is UTXO based, therefore ErgoScript has many UTXO-specific constructs such as `Box`, `INPUTS`, `OUTPUTS`, etc. 
-A complete list is available [here](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/LangSpec.md). A `Box` is essentially a UTXO and consists of up to ten registers for storing data. Similar to Bitcoin, a transaction spends one or more existing boxes (denoted using the `INPUTS` array), and creates one or more new boxes (denoted using the `OUTPUTS` array).  
+A complete list is available [here](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/LangSpec.md). A `Box` is essentially a UTXO and consists of up to ten registers for storing data. Similar to Bitcoin, a transaction spends one or more existing boxes (denoted using the `INPUTS` array) and creates one or more new boxes (denoted using the `OUTPUTS` array).  
 
 2. ErgoScript's syntax is a subset of Scala's. However, knowledge of Scala is not necessary to learn ErgoScript because 
-the amount of Scala needed to write ErgoScript is tiny. That being said, some prior experience in Scala will definitely 
+the amount of Scala needed to write ErgoScript is tiny. That being said, some prior experience in Scala will  
 be useful in picking up ErgoScript and Scala is a [good language to have on your resume](https://insights.dice.com/2020/06/04/24-programming-languages-pay-top-salaries-scala/) anyway.  
 
 3. Like Scala, ErgoScript supports functional programming, which makes it easier
@@ -32,7 +32,7 @@ to deal with collections using metaphors such as `foreach`, `exists`, `fold`, et
 4. Like ErgoTree, an ErgoScript program consists of a sequence of boolean predicates joined using `&&` and `||`. 
 
 5. ErgoScript provides cryptographic operations via `BigInt` and `GroupElement` (Elliptic curve point) types along with relevant
-operations such as addition, multiplication and exponentiation. Note that unlike Scala, `BigInt` operations in ErgoScript are actually performed modulo `2^256`, and thus, care must be taken about overflow. 
+operations such as addition, multiplication and exponentiation. Note that, unlike Scala, `BigInt` operations in ErgoScript are performed modulo `2^256`, and thus, care must be taken about overflow. 
 
 ## ErgoScript Examples
 
@@ -65,7 +65,7 @@ At the other end of the spectrum are ErgoScript programs that always evaluate to
 **Notes:**    
 1. Funds sent to such addresses cannot be spent by anyone and consequently such scripts are called **no-one-can-spend**.
 Please don't send funds to such addresses.  
-2. Ergo has the concept of [*garbage collection* / storage rent](https://ergoplatform.org/en/blog/2020_04_21_ergo_positioning/), so such boxes will eventually be removed from the blockchain over a long period of time.
+2. Ergo has the concept of [*garbage collection* / storage rent](https://ergoplatform.org/en/blog/2020_04_21_ergo_positioning/), so such boxes will eventually be removed from the blockchain over a long period.
  
 ### Context Variables
 
@@ -121,7 +121,7 @@ to some public key, similar to Bitcoin's P2PK addresses.
 
 ErgoScript provides multiple ways to create such "public-key" scripts, but the most common one uses the predicate `proveDlog(ecPoint)`, 
 which evaluates to true if the spender supplies a valid proof of knowledge of the discrete logarithm corresponding to `ecPoint`, a point on an elliptic curve over a finite field. This is equivalent to a "signature" in Bitcoin. 
-Ergo uses the same [Secp256k1 curve of Bitcoin](https://en.bitcoin.it/wiki/Secp256k1), so the representation of `ecPoint` is exactly the same, a 33 byte array with the first byte representing the sign (Ergo does not support uncompressed points). 
+Ergo uses the same [Secp256k1 curve of Bitcoin](https://en.bitcoin.it/wiki/Secp256k1), so the representation of `ecPoint` is the same, a 33-byte array with the first byte representing the sign (Ergo does not support uncompressed points). 
 However, unlike Bitcoin (which uses ECDSA), Ergo uses Schnorr signatures to construct the proofs. 
 
 The following steps illustrate how to create an address encoding the `proveDlog` script. 
@@ -156,7 +156,7 @@ The following program encodes these conditions:
 
 The [address corresponding to the above program](https://wallet.plutomonkey.com/p2s/?source=ICAgIHsKICAgICAgIHZhbCB6ID0gZGVjb2RlUG9pbnQoZnJvbUJhc2U2NCgiQWxDR090WktoNjZLTCtnOEd2R29RRHkxUDFQa2h0aFJIYTJLQkloK1d5TlMiKSkKICAgICAgIGRlZiBzYW1lQXNNZShib3g6Qm94KSA9IGJveC5wcm9wb3NpdGlvbkJ5dGVzID09IFNFTEYucHJvcG9zaXRpb25CeXRlcwogICAgICAgcHJvdmVEbG9nKHopICYmIElOUFVUUy5mb3JhbGwoc2FtZUFzTWUpCiAgICB9Cg==) is `3PwBHASpxaJa5i3vmLtUTvEqjbJWcpqnyuX9hSmUbaK2HAmoDLHmYSMm4up5pCRytSStEhsHnzTfpHzvCRZ`
  
-One may think that the lack of `var` keyword may seem restrictive as it enforces everything to be immutable.
+One may think that the lack of the `var` keyword may seem restrictive as it enforces everything to be immutable.
 For instance, to compute the sum of all the inputs, one might want to store the accumulated value in a `var` and iterate 
 over all the inputs, updating the `var` at each iteration.
 
@@ -184,7 +184,7 @@ Both the `INPUTS` and `OUTPUTS` arrays are a collection of `Box` type, which has
 3. An array of tokens (optional assets): `tokens`
 4. The registers of a box `R4..R9` used to store arbitrary data
 
-Each element of `tokens` is a pair of type `(tokenId, amount)`, where `tokenId` is an array of 32 bytes and amount is `Long`. 
+Each element of `tokens` is a pair of type `(tokenId, amount)`, where `tokenId` is an array of 32 bytes and the amount is `Long`. 
 An example of using tokens is the script:
 
     {
@@ -212,6 +212,6 @@ The following snippet shows how to use registers in your code:
        } 
     }
      
-The line `SELF.R4[GroupElement]` returns an `Option[GroupElement]` type. The semantics of the `Option` type are exactly
+The line `SELF.R4[GroupElement]` returns an `Option[GroupElement]` type. The semantics of the `Option` type is exactly
 the [same as in Scala](https://alvinalexander.com/scala/using-scala-option-some-none-idiom-function-java-null/). If the `Option` is defined, i.e., `SELF.R4` indeed contains a `GroupElement` type, then the first branch 
-is executed, otherwise the second branch is executed. 
+is executed, otherwise, the second branch is executed. 

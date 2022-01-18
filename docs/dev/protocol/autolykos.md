@@ -22,7 +22,7 @@ Autolykos will adjust slowly, but it also helps prevent **adversarial** hopping.
 
 Having a quicker difficulty readjustment can lead to Timewarp attacks (amongst others).
 
-Ergo is already using an epoch length of ~1.5 days (with normal block rate), not Bitcoin's two weeks. However, more epochs were considered, but the retargeting function is also non-linear, so that it may adjust sooner than the linear function in certain popular scenarios. 
+Ergo is already using an epoch length of ~1.5 days (with normal block rate), not Bitcoin's two weeks. However, more epochs were considered, but the retargeting function is also non-linear, so it may adjust sooner than the linear function in certain popular scenarios. 
 
 ## Hardforking policy
 
@@ -52,7 +52,7 @@ Ergo aims to avoid hard-forks. As any change regarding core parts of design esse
 
 **Basic Ideas:**
 
-- Like Autlykos-1, based on the k-sum problem, so a miner needs to find `k (k=32)` out of `N (2^n = 2^26)` elements, and the hash of their sum must be less than the target value (inverse of the difficulty)
+- Like Autlykos-1, based on the k-sum problem, a miner needs to find `k (k=32)` out of `N (2^n = 2^26)` elements and the hash of their sum must be less than the target value (inverse of the difficulty)
 - k indexes are pseudorandom values derived from block candidate and nonce
 - N elements are derived from block height and constants, unlike Autolykos v.1, so miners can recalculate block candidates quickly now (so only indexes are depending on them)
 - Indexes calculation also involving the same table (which elements are last 31 bytes of `H(i | | h | | M )`, where i is in [0, N), `h` is block height, M is padding to slow down hash calculation (8kb of constant data).
@@ -85,7 +85,7 @@ Mining pools offer a buffer against such network attacks as the hash rate is dis
 
 Ergo's memory-hardened aspect also makes this attack vector more expensive as there is no ASIC support to rent. With the collective rentable rigs at the moment, this isn't a viable path to a 51% attack. In theory, someone could build a massive GPU farm to try to launch such an attack. If a bad actor can rent a warehouse of ASIC and mine on a small chain with 51% attacks are a viable option... if there is an offramp. 
 
-This attack is usually performed for-profit and results in massive dumping on an exchange as it is occurring. The attacker will dump tokens on an exchange than "double-spend" them back into their wallet. The current exchange situation doesn't provide the liquidity for a viable offramp, and the rentable ASIC support isn't an option. So is it possible, in theory, yes, practical or likely? I don't think so at all.
+This attack is usually performed for profit and results in massive dumping on an exchange as it is occurring. The attacker will dump tokens on an exchange then "double-spend" them back into their wallet. The current exchange situation doesn't provide the liquidity for a viable offramp, and the rentable ASIC support isn't an option. So is it possible, in theory, yes, practical or likely? I don't think so at all.
 
 Ethereum classic is perhaps a bad example, as it shares the same mining algorithm as Eth. One could buy more than 100% current hash rate of eth classic on NiceHash, and it's not the same case for Ergo. Ergo also believes in the 'Good Miner' principle; in the case of Bitcoin - it was a good thing 51% existed. 
 

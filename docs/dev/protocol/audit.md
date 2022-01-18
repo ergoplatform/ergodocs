@@ -5,7 +5,7 @@ The detailed report is below. Nothing critical is found. Comments on issues foun
 
 1. On wallet password, we'll provide a recommendation in subsequent versions of the protocol client. Not sure hard enforcement on passwords will take place, but we'll do more consultations on this.
 
-2. Changing "n" and "k" parameters makes sense only when launching a new network. Changing these parameters in the mining node will make blocks produced invalid for other nodes. Changing these parameters in the protocol client means going on another fork (blocks coming from the honest protocol participants will be rejected). So no need for extra checks maybe, as people launching new networks will set "n" and "k" properly.
+2. Changing "n" and "k" parameters makes sense only when launching a new network. Changing these parameters in the mining node will make blocks produced invalid for other nodes. Changing these parameters in the protocol client means going on another fork (blocks coming from the honest protocol participants will be rejected). So no need for extra checks, as people launching new networks will set "n" and "k" properly.
 
 3. Currently, the Ergo node (as well as other blockchain protocol clients and wallets we're aware of and the cryptographic libraries we're using) does not protect from side-channel attacks running locally (e.g. timing attacks or memory inspection by malware or viruses). So please protect the machines you're running wallets on!  
 
@@ -92,7 +92,7 @@ Another process or user sharing the same memory address space could potentially 
 
 ​After previously reviewing the security of the Autolykos PoW, we performed another round of review focusing on its latest verification logic, and notably, the changes in the commit [eb0f85a](https://github.com/ergoplatform/ergo/commit/eb0f85ac48b0ee8194c12369faf4cc5f16954af9).
 
-​The main relevant file is [AutolykosPowScheme](https://github.com/ergoplatform/ergo/blob/master/src/main/scala/org/ergoplatform/mining/AutolykosPowScheme.scala),and other important operations are for example implemented in
+​The main relevant file is [AutolykosPowScheme](https://github.com/ergoplatform/ergo/blob/master/src/main/scala/org/ergoplatform/mining/AutolykosPowScheme.scala), and other important operations are for example implemented in
 [HeadersProcessor](https://github.com/ergoplatform/ergo/blob/master/src/main/scala/org/ergoplatform/nodeView/history/storage/modifierprocessors/HeadersProcessor.scala) and [ModifierValidator](https://github.com/ScorexFoundation/Scorex/blob/master/src/main/scala/scorex/core/validation/ModifierValidator.scala).
 
 ​We checked that the implemented verification logic is consistent with that specified in the Autolykos specifications and that it is appropriately integrated into the block header validation logic.

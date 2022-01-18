@@ -62,7 +62,7 @@ The first condition forbids anyone from spending the box before the Ergo
 blockchain grows to the given height. Because new blocks on the blockchain are mined approximately every 2 minutes on average, using the current
 blockchain height, it is easy to define any duration of delays we wish, such as 1 day, 1 week, or 1 month. _(i.e. (60 / 2) * 24 * 7 = 5040, which is the # of blocks per week)_.
 
-We will now be going in-depth on how we can take this Freezer Contract and integrate it with the Apkit library in order to create the FreezeCoin console application so that anyone and everyone can choose to freeze their coins if they so wish. (Granted, this contract/dApp is not actually useful; however, it is an effective, simple example for displaying how this technology stack works so that you yourself can build useful dApps down the line.)
+We will now be going in-depth on how we can take this Freezer Contract and integrate it with the Apkit library in order to create the FreezeCoin console application so that anyone and everyone can choose to freeze their coins if they so wish. (Granted, this contract/dApp is not useful; however, it is an effective, simple example for displaying how this technology stack works so that you can build useful dApps down the line.)
 
 
 ### Java Ergo App Development
@@ -391,7 +391,7 @@ This is just one of the great benefits of GraalVM, which we get to take advantag
 GraalVM supports so-called *polyglot programming* in which different components of
 an application can be developed using the most suitable language and then seamlessly combined together at runtime. In this way, a unique library written in, say, Java can be used in a node.js application written in JavaScript, for example.
 
-To support polyglot programming GraalVM platform has its own high-performance implementations of popular languages. We are going to take advantage of this for our FreezeCoin example project to show you how easy this is to use your preferred language.
+To support polyglot programming GraalVM platform has high-performance implementations of popular languages. We are going to take advantage of this for our FreezeCoin example project to show you how easy this is to use your preferred language.
 
 Before running the examples below (in JavaScript, Python and Ruby), please make sure that you have the Java version of FreezeCoin working locally in order to ensure everything is set up correctly.
 
@@ -503,7 +503,7 @@ c-examples/libfreezecoin.dylib:
   /usr/lib/libz.1.dylib (compatibility version 1.0.0, current version 1.2.11)
 ```
 
-Now we have the ability to write a [C program](https://github.com/aslesarenko/ergo-appkit-examples/blob/master/c-examples/freezecoin.c)
+Now we can write a [C program](https://github.com/aslesarenko/ergo-appkit-examples/blob/master/c-examples/freezecoin.c)
 which uses the library.
 
 The interface to our native library does have a bit of  boilerplate (because the VM needs to manage a heap, threads, a garbage collector
@@ -552,7 +552,7 @@ $ DYLD_LIBRARY_PATH=$GRAAL_HOME/jre/lib ./call_freezecoin 1000000000
 
 ### Debugging Your Polyglot Ergo Application
 
-You can debug JS, Python and Ruby in IntelliJ, but if, for some reason this doesn't work for you or fit with your preferred editor, GraalVM offers another option.
+You can debug JS, Python and Ruby in IntelliJ, but if, for some reason, this doesn't work for you or fit with your preferred editor, GraalVM offers another option.
 
 All of the GraalVM languages (except for Java) are implemented using the common [Truffle framework](https://github.com/oracle/graal/tree/master/truffle).
 Truffle allows for tooling like debuggers to be implemented once and be available for all supported languages.
@@ -574,7 +574,7 @@ From here, we can set breakpoints and continue execution. When it breaks, we’l
     
 ### Conclusions
 
-And with all of that said and done, we see just how easy it is to use Appkit to develop Ergo Applications. Appkit relies on the same exact core libraries which were used in implementing the Ergo consensus protocol. These libraries include the ErgoScript compiler, cryptography, byte code interpreter, data serialises and the other core components. Using GraalVM, we are able to reuse these tried and tested components in different application contexts without any modification or rewriting them ourselves.
+And with all of that said and done, we see just how easy it is to use Appkit to develop Ergo Applications. Appkit relies on the same core libraries which were used in implementing the Ergo consensus protocol. These libraries include the ErgoScript compiler, cryptography, byte code interpreter, data serialises and the other core components. Using GraalVM, we can reuse these tried and tested components in different application contexts without any modification or rewriting them ourselves.
 
 No matter if you are using Java, JavaScript, Python or Ruby, you can take advantage of Appkit with GraalVM to drastically simplify the process of interacting with the Ergo blockchain while creating native-running (d)Apps.
 

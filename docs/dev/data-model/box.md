@@ -1,6 +1,6 @@
 ## What is a 'Box'? 
 
-Ergo has a Bitcoin-like UTXO transactional model: a transaction is spending one-time objects and creating new one-time objects. We call this object a box. A box is an immutable object which can be only created or removed. A box is not simply a coin; it contains registers with data (and code). Even more, there's nothing inbox but registers. There are four predefined registers, with monetary value, protecting script, and identifier of a transaction which created the box and output index (and creation height). Because data of transaction which created the box is included in it, the box has unique contents and, therefore, a unique id. A box is a first-class citizen in the Ergo protocol. Active boxes set is authenticated via a hash-based data structure, which allows building lightweight full-nodes (as described in [this paper](https://eprint.iacr.org/2016/994)). A box may have up to six additional registers with typed data. A script may access its registers (as well as registers of input and output boxes of the spending transaction).
+Ergo has a Bitcoin-like UTXO transactional model: a transaction is spending one-time objects and creating new one-time objects. We call this object a box. A box is an immutable object which can be only created or removed. A box is not simply a coin; it contains data (and code) registers. Even more, there's nothing inbox but registers. There are four predefined registers, with monetary value, protecting script, and identifier of a transaction which created the box and output index (and creation height). Because data of transaction which created the box is included in it, the box has unique contents and, therefore, a unique id. A box is a first-class citizen in the Ergo protocol. Active boxes set is authenticated via a hash-based data structure, which allows building lightweight full-nodes (as described in [this paper](https://eprint.iacr.org/2016/994)). A box may have up to six additional registers with typed data. A script may access its registers (as well as registers of input and output boxes of the spending transaction).
 
 ## Example
 
@@ -38,7 +38,7 @@ A box, at the minimum, has four pieces of information.
 
 ## Optional Registers 
 
-In addition, a box can have six optional registers (R4-R9) to store custom data for use in smart contracts. Registers must be densely packed; that is, we cannot sandwich empty registers between non-empty ones. The optional registers can contain data of any of the following types:
+In addition, a box can have six optional registers (R4-R9) to store custom data for use in smart contracts. Registers must be densely packed; we cannot sandwich empty registers between non-empty ones. The optional registers can contain data of any of the following types:
 
 - `Int`, `Long` with the usual semantics of Scala.
 `BigInt` is a 256-bit integer (i.e., all computation is done modulo 2^256).
@@ -47,7 +47,7 @@ In addition, a box can have six optional registers (R4-R9) to store custom data 
 - Collection of the above, i.e., `Coll[Int]`, `Coll[GroupElement]`, `Coll[Coll[Byte]]`, etc.
 - A boxId is calculated based on the contents of all the registers. This boxId uniquely defines a box and can be considered equivalent to Bitcoin's (txId, vOut) pairs.
 
->Note that Ergo `txId` depends only on the message and not on signatures (similar to Bitcoin SegWit transactions). Hence, a txId is available even before signing. Similar to Bitcoin, Ergo supports chained transactions (i.e., spending of boxes with 0 confirmations).
+>Note that Ergo `txId` depends only on the message and not on signatures (similar to Bitcoin SegWit transactions). Hence, a txId is available even before signing. Like Bitcoin, Ergo supports chained transactions (i.e., spending of boxes with 0 confirmations).
 
 
 ## Resources

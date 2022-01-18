@@ -5,7 +5,7 @@
 
 Multi-Stage Contracts provide an extension to Bitcoin’s UTXO model with on-chain computations. 
 
-Extended UTXO systems enable Turing complete smart contracts. This is a novel innovation that allows the latest generation of blockchains to reclaim the original model that Bitcoin used, but with a lot more power.
+Extended UTXO systems enable *Turing complete* smart contracts. This is a novel innovation that allows the latest generation of blockchains to reclaim the original model that Bitcoin used, but with a lot more power.
 
 
 

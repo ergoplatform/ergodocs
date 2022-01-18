@@ -14,11 +14,11 @@ Since very early versions, the Ergo node uses a secret root key (derived from se
 
 Navigate to `localhost:9053/swagger#/wallet/walletDeriveKey` 
 
-click **Try it out**
+Click **Try it out**
 
 ```  
 "derivationPath": "m/44'/429'/0'/0/0" 
 ```
 
-wallet needs to be unlocked, and you need to authorize on top right on swagger
-click execute and check the address you get in the response
+- The wallet needs to be unlocked, and you need to authorize on top right on swagger
+- Click execute and check the address you get in the response

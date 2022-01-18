@@ -23,7 +23,7 @@ sudo apt full-upgrade
 
 ### Download latest Java version
 ```
-sudo apt install default-jdk
+sudo apt install default-JDK
 ```
 
 ### Download sbt
