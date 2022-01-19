@@ -4,21 +4,23 @@ The node has seen great improvements recently (starting from 4.0.8), significant
 
 Implementations for bootstrapping with NiPoPoW proofs and UTXO set snapshots are in development. Then we can think about sub-block confirmation protocols and L2.
 
+
+**However, TPS is mostly a vanity metric.** It's not about how many transactions you can do but rather, the computational cost, or gas limit per block. The cost limit depends on the hardware miners have, size of the network, and other factors. But there is no concrete formula to calculate this. The best path forward is to log transaction profiles once DeFi on Ergo becomes more established and do load testing in the testnet. Large chunks of transactions can happen on layer 2, and be settled in Ergo using a single transaction. Thanks to the high flexibility of the ErgoScript programming model, many different protocols will be possible on layer2, each one solving scalability problems in a specific domain (like simple payment transactions which could be sped up with sub-block confirmation protocols). [We are already seeing the beginnings of the strengths of eUTXO take shape with anetaBTC airdropping 3,000 wallets in a single transaction](https://twitter.com/HazeyOneKenobi/status/1481775230297288706). With the release of v5 the raw TPS numbers should bring us to around 47.5tx/s - improvements on top of this are still possible.
+
+**Ergo can be considered a common *settlement layer* for many Level-2 protocols and applications.**
+
+
 ## Layers
 
 - **Layer 0** *(Network Layer)*. The Ergo Node Client has improved a lot since v4.0.8 and still has room to grow. Quick bootstrapping using [NiPoPoWs](/docs/node/nipopow.md) proofs and UTXO set snapshots in development
 - **Layer 1** *(Blockchain)*, Ergo supports multiple on-chain scalability solutions such as Sharding.
 - **Layer 2** *(Off-Chain)*. Ergo can utilise multiple off-chain solutions, such as [Hydra](https://iohk.io/en/research/library/papers/hydrafast-isomorphic-state-channels/) and sidechains to compress blockchain bloat and provide similar benefits as zk-rollups. Ergo can also be compatible with other UTXO Layer 2 solutions, such as Bitcoin's Lightning Network. The implementation here will depend on the needs of the applications being built on Ergo.
 
-Large chunks of transactions can happen on layer 2, and be settled in Ergo using a single transaction. Thanks to the high flexibility of the ErgoScript programming model, many different protocols will be possible on layer2, each one solving scalability problems in a specific domain (like simple payment transactions which could be sped up with sub-block confirmation protocols). 
-
-**Thus, Ergo can be considered a common *settlement layer* for many Level-2 protocols and applications.**
-
-## Layer 0
+### Layer 0 *(Network Layer)*
 
 ### Stateless Clients
 
-Stateless clients allow light wallets and light miners to run with full node security. NIPoPoW implementation via Velvet soft forks will enable infinite sidechains on top of Ergo. 
+Stateless clients allow light wallets and light miners to run with full node security. NIPoPoW implementations via *Velvet soft forks* enable **infinite scalability** via sidechains on top of Ergo. 
 
 ### State Bloat
 
@@ -31,17 +33,11 @@ Ergo utilises "[Storage Rent Fee](https://ergoplatform.org/en/blog/2021-07-09-cr
 
 Parameters like block size etc are not set in stone, rather, miners can adjust them. So if a miner is experiencing low full block validation time (as hardware is getting better with time, as well as software), he may propose or vote to increase the block size.
 
-## Layer 1 (Blockchain)
+### Layer 1 (Blockchain)
 
-### Sharding
+**Sharding:** [On the Security and Performance of Blockchain Sharding](https://eprint.iacr.org/2021/1276)
 
-- [On the Security and Performance of Blockchain Sharding](https://eprint.iacr.org/2021/1276)
-
-### Sub-block confirmation 
-
-Sub-block confirmation protocols such as ([Bitcoin-NG](https://www.usenix.org/system/files/conference/nsdi16/nsdi16-paper-eyal.pdf) or [Flux](https://www.usenix.org/system/files/atc20-li-chenxing.pdf) are an active topic for research in 2022.
-
-An Ergo block has *extension section* with **mandatory and arbitrary key-value data**, By putting certain anchors there it is possible to do BitcoinNG-style microblocks, Aspen-like service-chains or generic sidechains with just velvet or soft forks. 
+**Sub-block confirmation protocols:** such as ([Bitcoin-NG](https://www.usenix.org/system/files/conference/nsdi16/nsdi16-paper-eyal.pdf) or [Flux](https://www.usenix.org/system/files/atc20-li-chenxing.pdf) are an active topic for research in 2022. Ergo blocks has *extension sections* with **mandatory and arbitrary key-value data**, By putting certain anchors there it is possible to do BitcoinNG-style microblocks, Aspen-like service-chains or generic sidechains with just velvet or soft forks. 
 
 ## Layer 2 (Off-Chain)
 
@@ -81,11 +77,7 @@ Ergo is mentioned in the [Hydra whitepaper](https://eprint.iacr.org/2020/299.pdf
 
 
 
-## TPS
 
-With the release of v5 the raw TPS numbers should bring us to around 47.5tx/s - improvements on top of this are still possible.
-
-**However, TPS is mostly a vanity metric.** It's not about how many transactions you can do but rather, the computational cost, or gas limit per block. The cost limit depends on the hardware miners have, size of the network, and other factors. But there is no concrete formula to calculate this. The best path forward is to log transaction profiles once DeFi on Ergo becomes more established and do load testing in the testnet.
 
 
 ## Resources
