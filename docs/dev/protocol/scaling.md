@@ -1,6 +1,7 @@
 Ergo Platform has a research-based approach for long-term success and has a lot in its toolbox to tackle scaling as we grow. Which options we implement will depend on the needs to applications building ontop of Ergo, as well as the success of the solutions in other protocols. #
 
-**TPS**
+**TPS (Transactions per second)**
+
 To get the elephant out the room - *'What is the TPS (Transactions per second) '* It's important to keep in mind that **TPS is mostly a vanity metric.** It's not about how many transactions you can do but rather the weight of those transactions and the computational cost limit per block. This cost limit depends on the hardware miners have, the size of the network, and other dynamic factors but there is no concrete formula to calculate scalability. The best path forward is to log transaction profiles once DeFi on Ergo becomes more established and perform load testing in the testnet. With the release of v5, the raw TPS numbers should bring us to around 47.5tx/s - improvements on top of this are still possible. The focus is on raising TPS without compromising classic blockchain assumptions and guarantees. 
 
 Thanks to the high flexibility of the ErgoScript programming model, large chunks of transactions can happen on layer two and be settled in Ergo using a single transaction. Many different protocols will be possible on layer2, each one solving scalability problems in a specific domain (like simple payment transactions, sped up with sub-block confirmation protocols). [We are already seeing the beginnings of the strengths of eUTXO take shape with anetaBTC airdropping 3,000 wallets in a single transaction](https://twitter.com/HazeyOneKenobi/status/1481775230297288706). 
