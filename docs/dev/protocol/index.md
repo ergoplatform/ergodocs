@@ -35,7 +35,7 @@ Ergo provides **superior support for real-world financial agreements**. It does 
 4. Easy Oracle creation
 5. Native support for complex signature schemes
 
-Creating financial contracts on the blockchain isn't just about the functionality; it's about making that functionality safe and accessible, and powerful. 
+Creating financial contracts on the blockchain isn't just about the functionality; it's about making that functionality safe, accessible, and powerful. 
 
 
 ### [Sigma Protocols](/dev/scs/sigma)
@@ -56,7 +56,7 @@ Another unique feature of Ergo is the concept of storage-rent, which is the abil
 
 ## [Scaling](/dev/protocol/scaling)
 
-The scaling aspect in Ergo Platform's design has been a high priority since the mainnet launch. Scalability refers to the efficient use of computational resources and high throughput. Ergo's design is built on the extended UTXO model with its novel language, ErgoScript, relying on peer-reviewed academic research. With years of research, Ergo developed various features such as stateless clients, NIPoPoWs and UTXO based smart contracts.
+Ergo Platform has a research-based approach for long-term success and has a lot in its toolbox to tackle scaling as we grow. Which options we implement will depend on the needs of applications building on top of Ergo, as well as the success of the solutions in other protocols. 
 
 
 

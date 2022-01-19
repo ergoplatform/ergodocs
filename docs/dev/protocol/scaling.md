@@ -1,4 +1,4 @@
-Ergo Platform has a research-based approach for long-term success and has a lot in its toolbox to tackle scaling as we grow. Which options we implement will depend on the needs to applications building ontop of Ergo, as well as the success of the solutions in other protocols. #
+Ergo Platform has a research-based approach for long-term success and has a lot in its toolbox to tackle scaling as we grow. Which options we implement will depend on the needs of applications building on top of Ergo, as well as the success of the solutions in other protocols. 
 
 **TPS (Transactions per second)**
 

@@ -16,7 +16,7 @@ It's also discussed here on ['Unblocked with Robert Kornacki' (14:45)](https://w
 
 Ergo uses the **linear least square method**, which smoothes over eight epoch's (each epoch is 1024 blocks x 2 minutes), as described in [this paper](https://eprint.iacr.org/2017/731.pdf). 
 
-Autolykos will adjust slowly, but it also helps prevent **adversarial** hopping.
+Autolykos will adjust slowly, but it also helps prevent **adversarial** hopping. This algorithm has a 1.9% error rate compared to bitcoins 9.1% error rate (exponential 10% hash rate growth)
 
 **Can it be quicker?**
 
@@ -95,7 +95,7 @@ Ethereum classic is perhaps a bad example, as it shares the same mining algorith
 
 The two biggest concerns about decentralising mining are specialised hardware (such as ASICs) and centralised pools. 
 
-With ASICs, a big player capable of investing enough money into R&D can get an unfair advantage from privately owned efficient hardware. In principle, for any computational activity, it is always possible to develop specialised hardware performing better than commodity computing units, such and CPUs and GPUs. However, R&D efforts and the possible outcome could vary greatly for different computational tasks. The reasoning behind a search for a perfect (or close enough to perfect) could be quite complex (see, e.g. 30 pages long [Equihash paper](http://ledgerjournal.org/ojs/index.php/ledger/article/view/48)).
+With ASICs, a big player capable of investing enough money into R&D can get an unfair advantage from privately owned efficient hardware. In principle, for any computational activity, it is always possible to develop specialised hardware performing better than commodity computing units, such as CPUs and GPUs. However, R&D efforts and the possible outcome could vary greatly for different computational tasks. The reasoning behind a search for a perfect (or close enough to perfect) could be quite complex (see, e.g. 30 pages long [Equihash paper](http://ledgerjournal.org/ojs/index.php/ledger/article/view/48)).
 
 For most Proof-of-Work cryptocurrencies (including Bitcoin, Ethereum, ZCash), 2 to 4 centralised mining pools control most mining power. This could mean easy censorship or frontrunning on applications (for example, 
 reordering exchange orders), as in centralised pools, only the pool decides block candidate for the whole pool to work on.
