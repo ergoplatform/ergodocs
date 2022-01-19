@@ -1,13 +1,9 @@
-Ergo Platform has a research-based approach for long-term success and has a lot in its toolbox to tackle scaling.
+Ergo Platform has a research-based approach for long-term success and has a lot in its toolbox to tackle scaling as we grow. Which options we implement will depend on the needs to applications building ontop of Ergo, as well as the success of the solutions in other protocols. #
 
-The node has seen great improvements starting from v4.0.8; significant improvements are still possible by optimizing the node code.
+**TPS**
+To get the elephant out the room - *'What is the TPS (Transactions per second) '* It's important to keep in mind that **TPS is mostly a vanity metric.** It's not about how many transactions you can do but rather the weight of those transactions and the computational cost limit per block. This cost limit depends on the hardware miners have, the size of the network, and other dynamic factors but there is no concrete formula to calculate scalability. The best path forward is to log transaction profiles once DeFi on Ergo becomes more established and perform load testing in the testnet. With the release of v5, the raw TPS numbers should bring us to around 47.5tx/s - improvements on top of this are still possible. The focus is on raising TPS without compromising classic blockchain assumptions and guarantees. 
 
-Implementations for bootstrapping with NiPoPoW proofs and UTXO set snapshots are in development. Then we can think about sub-block confirmation protocols and L2.
-
-
-The common question is *'What is the TPS (Transactions per second) '* **However, TPS is mostly a vanity metric.** It's not about how many transactions you can do but rather the computational cost or gas limit per block. The cost limit depends on the hardware miners have, the size of the network, and other factors. But there is no concrete formula to calculate scalability. The best path forward is to log transaction profiles once DeFi on Ergo becomes more established and load testing in the testnet. 
-
-Thanks to the high flexibility of the ErgoScript programming model, large chunks of transactions can happen on layer two and be settled in Ergo using a single transaction. Many different protocols will be possible on layer2, each one solving scalability problems in a specific domain (like simple payment transactions, sped up with sub-block confirmation protocols). [We are already seeing the beginnings of the strengths of eUTXO take shape with anetaBTC airdropping 3,000 wallets in a single transaction](https://twitter.com/HazeyOneKenobi/status/1481775230297288706). With the release of v5, the raw TPS numbers should bring us to around 47.5tx/s - improvements on top of this are still possible. The focus is on raising TPS without compromising classic blockchain assumptions and guarantees. 
+Thanks to the high flexibility of the ErgoScript programming model, large chunks of transactions can happen on layer two and be settled in Ergo using a single transaction. Many different protocols will be possible on layer2, each one solving scalability problems in a specific domain (like simple payment transactions, sped up with sub-block confirmation protocols). [We are already seeing the beginnings of the strengths of eUTXO take shape with anetaBTC airdropping 3,000 wallets in a single transaction](https://twitter.com/HazeyOneKenobi/status/1481775230297288706). 
 
 **Ergo can be considered a common *settlement layer* for many Level-2 protocols and applications.**
 
@@ -22,7 +18,7 @@ The network or *peer to peer* layer. The Ergo Node Client has improved a lot sin
 
 **Block size:** Parameters like block size etc., are not set in stone; rather, miners can adjust them. So if a miner is experiencing low full block validation time (as hardware is getting better with time and software), he may propose or vote to increase the block size.
 
-**Logarithmic space mining:**  allows for *light miners.* Similar to light clients, light miners can bootstrap with block headers without downloading the entire blockchain. Integrating logarithmic space mining in Ergo is possible via a velvet (soft) fork; see this video from Dionysis Zindros from The University of Athens for an [introduction and their progress so far](https://www.youtube.com/watch?v=s05ypkSC7gk)
+**Logarithmic space mining:**  allows for *light miners.* Similar to light clients, light miners can bootstrap with block headers without downloading the entire blockchain. Integrating logarithmic space mining in Ergo is possible via a velvet (soft) fork; see this video from Dionysis Zindros from The University of Athens for a [introduction and their progress so far](https://www.youtube.com/watch?v=s05ypkSC7gk).
 
 ## Layer 1 (Blockchain)
 
@@ -53,18 +49,13 @@ Ergo can utilize multiple off-chain solutions, such as [Hydra](https://iohk.io/e
 
 **ZK-Rollups:** utilize [zkSNARKs](https://blog.ethereum.org/2016/12/05/zksnarks-in-a-nutshell/) (zero-knowledge succinct non-interactive arguments of knowledge), they can decrease network load by taking hundreds of transfers off-chain and combining or "rolling" them up into a single transaction. The security of the transactions relies directly on the main chain secured by adding mathematical proofs to validate transactions. However, it is relatively harder than hybrid approaches to implement all the functionalities of the mainnet with full security. Various projects are attempting to implement zkSNARKs.
 
-**Optimistic Rollups:** [Optimistic Rollups](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/optimistic_rollups/) work a little bit differently than plasma and zkSNARK in terms of securing the layer. Optimistic rollups compute the transactions on a parallel EVM compatible chain called Optimistic Virtual Machine (OVM) and communicate with the main chain. The model is optimistic because it relies on the Fraud-Proof principle, where the aggregators are not actively verifying layer two. Still, they interfere in the event of a fraud dispute.
+**Optimistic Rollups:** compute the transactions on a parallel EVM compatible chain called Optimistic Virtual Machine (OVM) that communicates with the main chain. The model is optimistic because it relies on the *Fraud-Proof principle*, where the aggregators are not actively verifying layer two. Still, they interfere in the event of a fraud dispute.
 
 **Zero-Knowledge Contingent Payments:** It's possible to make payments that are released if and only if the payee discloses some knowledge (in a trustless manner where neither the payer nor payee can cheat). This is achieved using the combination of a `hash-locked transaction` and an external protocol to ensure the correct data is revealed in the hash lock release.
 
 **FairSwap/FastSwap protocols:** As described in [this paper](https://eprint.iacr.org/2019/1296)
 
 **Coinpools:** Another L2 solution for the UTXO model to consider as described in [this paper](https://discrete-blog.github.io/coinpool/)
-
-
-
-
-
 
 
 ## Resources
