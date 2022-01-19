@@ -10,30 +10,23 @@ Implementations for bootstrapping with NiPoPoW proofs and UTXO set snapshots are
 **Ergo can be considered a common *settlement layer* for many Level-2 protocols and applications.**
 
 
-## Layers
 
-- **Layer 0** *(Network Layer)*. The Ergo Node Client has improved a lot since v4.0.8 and still has room to grow. Quick bootstrapping using [NiPoPoWs](/docs/node/nipopow.md) proofs and UTXO set snapshots in development
-- **Layer 1** *(Blockchain)*, Ergo supports multiple on-chain scalability solutions such as Sharding.
-- **Layer 2** *(Off-Chain)*. Ergo can utilise multiple off-chain solutions, such as [Hydra](https://iohk.io/en/research/library/papers/hydrafast-isomorphic-state-channels/) and sidechains to compress blockchain bloat and provide similar benefits as zk-rollups. Ergo can also be compatible with other UTXO Layer 2 solutions, such as Bitcoin's Lightning Network. The implementation here will depend on the needs of the applications being built on Ergo.
+## Layer 0 *(Network Layer)*
 
-### Layer 0 *(Network Layer)*
+The network or *peer to peer* layer. The Ergo Node Client has improved a lot since v4.0.8 and still has room to grow. Quick bootstrapping using [NiPoPoWs](/docs/node/nipopow.md) proofs and UTXO set snapshots in development
 
-### Stateless Clients
+**Stateless Clients:** Then light clients: in Ergo you can have full-node guarantees - without storing the full *UTXO set* (assuming you do not mine). This should bring a much-improved bootstrapping and block validation times. With such improvements, it is possible to raise TPS without compromising classic blockchain assumptions and guarantees. 
 
-Stateless clients allow light wallets and light miners to run with full node security. NIPoPoW implementations via *Velvet soft forks* enable **infinite scalability** via sidechains on top of Ergo. 
-
-### State Bloat
-
-About scaling, the main approach is to avoid bloat without compromising functionality. E.g. persistent updateable storage is possible, with updates to be checked by a blockchain contract, but only digest of authenticated data structure (and some additional bytes, less than 40 bytes anyway) are stored in the UTXO set regardless of data set size. Storage rent is helping to remove dust from the UTXO set. Then light clients: in Ergo you can have full-node guarantees - without storing the full **UTXO set** (assuming you do not mine). This should bring a much-improved bootstrapping and block validation times. With such improvements, it is possible to raise TPS without compromising classic blockchain assumptions and guarantees. 
+**State Bloat:** One of the major strengths Ergo has when scaling is to avoid bloat without compromising functionality. E.g. persistent updateable storage is possible, with updates to be checked by a blockchain contract, but only digest of authenticated data structure (and some additional bytes, less than 40 bytes anyway) are stored in the UTXO set regardless of data set size. Storage rent is helping to remove dust from the UTXO set. 
 
 
 Ergo utilises "[Storage Rent Fee](https://ergoplatform.org/en/blog/2021-07-09-cryptocurrency-fees-a-solution-to-unreasonable-state-growth/)" to prevent spam and recirculate unused data bytes, known as dust. Storage Rent Fee helps clean the network pollution and encourages users to be more active.
 
-### Block size
+**Block size: ** Parameters like block size etc are not set in stone, rather, miners can adjust them. So if a miner is experiencing low full block validation time (as hardware is getting better with time, as well as software), he may propose or vote to increase the block size.
 
-Parameters like block size etc are not set in stone, rather, miners can adjust them. So if a miner is experiencing low full block validation time (as hardware is getting better with time, as well as software), he may propose or vote to increase the block size.
+## Layer 1 (Blockchain)
 
-### Layer 1 (Blockchain)
+Ergo supports multiple on-chain scalability solutions such as Sharding.
 
 **Sharding:** [On the Security and Performance of Blockchain Sharding](https://eprint.iacr.org/2021/1276)
 
@@ -41,6 +34,7 @@ Parameters like block size etc are not set in stone, rather, miners can adjust t
 
 ## Layer 2 (Off-Chain)
 
+Ergo can utilise multiple off-chain solutions, such as [Hydra](https://iohk.io/en/research/library/papers/hydrafast-isomorphic-state-channels/) and sidechains to compress blockchain bloat and provide similar benefits as zk-rollups. Ergo can also be compatible with other UTXO Layer 2 solutions, such as Bitcoin's Lightning Network. The implementation here will depend on the needs of the applications being built on Ergo.
 
 **Lightning Network:** Due to the shared UTXO architecture utilising Bitcoins Lightning network is also a possibility. Basically in a lightning channel, two participants send their funds to a specific type of joint multisig wallet that allows them to create and enforce off chain agreements. The network itself is just a bunch of these channels connected together. You can then structure an off chain payment across many channels, where none of the funds actually leaves any individual channel, but instead just shuffles around like an abacus.
 
@@ -54,26 +48,15 @@ Parameters like block size etc are not set in stone, rather, miners can adjust t
 
 **State Channels:** Lastly, a model called state channel is a type of peer-to-peer signing model and the design can also be used as payment channels for simple purposes. The problem, however, is the state channels are pre-set contracts for which the participants are defined at the launch. Each time a new participant wants to use the channel, a new contract creation is needed. In return, there is higher privacy and security but little to no flexibility for an open system. IOHK research members published a new model called [Hydra: Isomorphic State Channels](https://iohk.io/en/research/library/papers/hydrafast-isomorphic-state-channels/) that introduces multi-party state channels by utilizing both on-chain and off-chain computations powered by the eUTXO design. Other novel state channel constructions should be possible possible as well. It would be good to apply offchain techniques to certain applications, such as ErgoMixer.
 
-**NIPoPoWs:** [Non-interactive proofs of proof of work](http://docs.ergoplatform.org/dev/protocol/nipopow/) is a generalized term that refers to light clients and side-chains. Light clients, which consist of light nodes and light wallets, are efficient clients that do not need to hold the whole blockchain to verify transactions and enable efficient mobile wallets and faster miner bootstrapping. Clients can interact with each other using only the block headers, thus reducing computational resources. Ergo has enabled NIPoPoW support since the genesis block and they can be applied to Ergo’s blockchain with an easy to implement [velvet fork](https://www.coindesk.com/markets/2018/03/15/velvet-forks-crypto-updates-without-the-controversy/). NIPoPoWs can also be deployed to support PoW and PoS cross-chain communication.
+**NIPoPoWs:** [Non-interactive proofs of proof of work](http://docs.ergoplatform.org/dev/protocol/nipopow/) is a generalized term that refers to light clients and side-chains. Light clients, which consist of light nodes and light wallets, are efficient clients that do not need to hold the whole blockchain to verify transactions and enable efficient mobile wallets and faster miner bootstrapping. Clients can interact with each other using only the block headers, thus reducing computational resources. Ergo has enabled NIPoPoW support since the genesis block and they can be applied to Ergo’s blockchain with an easy to implement [velvet fork](https://www.coindesk.com/markets/2018/03/15/velvet-forks-crypto-updates-without-the-controversy/). NIPoPoWs can also be deployed to support PoW and PoS cross-chain communication. NIPoPoW implementations via *Velvet soft forks* enable **infinite scalability** via sidechains on top of Ergo. 
 
-**Zero-Knowledge Contingent Payments**
+**Zero-Knowledge Contingent Payments:** It's possible to make paymentswhich are released if and only if some knowledge is disclosed by the payee (in a trustless manner where neither the payer or payee can cheat). This is achieved using the combination of a `hash-locked transaction` and a external protocol to ensure the correct data revealed in the hashlock release.
 
-It's possible to make paymentswhich are released if and only if some knowledge is disclosed by the payee (in a trustless manner where neither the payer or payee can cheat). This is achieved using the combination of a `hash-locked transaction` and a external protocol to ensure the correct data revealed in the hashlock release.
+**FairSwap/FastSwap protocols:** As described in [this paper](https://eprint.iacr.org/2019/1296)
 
+**Coinpools:** Another L2 solution for the UTXO model to consider as described in [this paper](https://discrete-blog.github.io/coinpool/)
 
-**FairSwap/FastSwap protocols**
-
-As described in [this paper](https://eprint.iacr.org/2019/1296)
-
-**Coinpools**
-
-Another L2 solution for the UTXO model to consider as described in [this paper](https://discrete-blog.github.io/coinpool/)
-
-
-
-**Hydra**
-
-Ergo is mentioned in the [Hydra whitepaper](https://eprint.iacr.org/2020/299.pdf). Research and discussions are underway. 
+**Hydra:** Ergo is mentioned in the [Hydra whitepaper](https://eprint.iacr.org/2020/299.pdf). Research and discussions are underway. 
 
 
 
