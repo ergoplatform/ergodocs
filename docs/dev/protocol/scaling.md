@@ -62,6 +62,9 @@ An Ergo block has *extension section* with **mandatory and arbitrary key-value d
 
 **Zero-Knowledge Contingent Payments**
 
+It's possible to make paymentswhich are released if and only if some knowledge is disclosed by the payee (in a trustless manner where neither the payer or payee can cheat). This is achieved using the combination of a `hash-locked transaction` and a external protocol to ensure the correct data revealed in the hashlock release.
+
+
 **FairSwap/FastSwap protocols**
 
 As described in [this paper](https://eprint.iacr.org/2019/1296)
@@ -72,7 +75,7 @@ Another L2 solution for the UTXO model to consider as described in [this paper](
 
 
 
-### Hydra
+**Hydra**
 
 Ergo is mentioned in the [Hydra whitepaper](https://eprint.iacr.org/2020/299.pdf). Research and discussions are underway. 
 
