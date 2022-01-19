@@ -17,38 +17,43 @@ The network or *peer to peer* layer. The Ergo Node Client has improved a lot sin
 
 **Stateless Clients:** Then light clients: in Ergo you can have full-node guarantees - without storing the full *UTXO set* (assuming you do not mine). This should bring a much-improved bootstrapping and block validation times. With such improvements, it is possible to raise TPS without compromising classic blockchain assumptions and guarantees. 
 
-**State Bloat:** One of the major strengths Ergo has when scaling is to avoid bloat without compromising functionality. E.g. persistent updateable storage is possible, with updates to be checked by a blockchain contract, but only digest of authenticated data structure (and some additional bytes, less than 40 bytes anyway) are stored in the UTXO set regardless of data set size. Storage rent is helping to remove dust from the UTXO set. 
+**State Bloat:** One of the major strengths Ergo has when scaling is to avoid bloat without compromising functionality. E.g. persistent updateable storage is possible, with updates to be checked by a blockchain contract, but only digest of authenticated data structure (and some additional bytes, less than 40 bytes anyway) are stored in the UTXO set regardless of data set size. Ergo utilises a [Storage Rent Fee](https://ergoplatform.org/en/blog/2021-07-09-cryptocurrency-fees-a-solution-to-unreasonable-state-growth/) to prevent spam and recirculate unused data bytes, known as dust. Storage Rent Fee helps clean the network pollution and encourages users to be more active.
 
+**Block size:** Parameters like block size etc are not set in stone, rather, miners can adjust them. So if a miner is experiencing low full block validation time (as hardware is getting better with time, as well as software), he may propose or vote to increase the block size.
 
-Ergo utilises "[Storage Rent Fee](https://ergoplatform.org/en/blog/2021-07-09-cryptocurrency-fees-a-solution-to-unreasonable-state-growth/)" to prevent spam and recirculate unused data bytes, known as dust. Storage Rent Fee helps clean the network pollution and encourages users to be more active.
-
-**Block size: ** Parameters like block size etc are not set in stone, rather, miners can adjust them. So if a miner is experiencing low full block validation time (as hardware is getting better with time, as well as software), he may propose or vote to increase the block size.
+**Logarithmic space mining:**  allows for *light miners.* Similar to light clients, light miners can bootstrap with block headers without downloading the entire blockchain. In a blockchain, it is also possible to store just a few necessary blocks to verify the whole blockchain. This essentially eradicates the need for miners to store all of the blockchain. The integration of logarithmic space mining in Ergo is possible via velvet (soft) forks, therefore preventing the need for painful hard forks. See this video from Dionysis Zindros from The University of Athens for an [introduction](https://www.youtube.com/watch?v=s05ypkSC7gk)
 
 ## Layer 1 (Blockchain)
 
 Ergo supports multiple on-chain scalability solutions such as Sharding.
 
-**Sharding:** [On the Security and Performance of Blockchain Sharding](https://eprint.iacr.org/2021/1276)
-
 **Sub-block confirmation protocols:** such as ([Bitcoin-NG](https://www.usenix.org/system/files/conference/nsdi16/nsdi16-paper-eyal.pdf) or [Flux](https://www.usenix.org/system/files/atc20-li-chenxing.pdf) are an active topic for research in 2022. Ergo blocks has *extension sections* with **mandatory and arbitrary key-value data**, By putting certain anchors there it is possible to do BitcoinNG-style microblocks, Aspen-like service-chains or generic sidechains with just velvet or soft forks. 
+
+**Sharding:** as per [On the Security and Performance of Blockchain Sharding](https://eprint.iacr.org/2021/1276)
 
 ## Layer 2 (Off-Chain)
 
 Ergo can utilise multiple off-chain solutions, such as [Hydra](https://iohk.io/en/research/library/papers/hydrafast-isomorphic-state-channels/) and sidechains to compress blockchain bloat and provide similar benefits as zk-rollups. Ergo can also be compatible with other UTXO Layer 2 solutions, such as Bitcoin's Lightning Network. The implementation here will depend on the needs of the applications being built on Ergo.
 
-**Lightning Network:** Due to the shared UTXO architecture utilising Bitcoins Lightning network is also a possibility. Basically in a lightning channel, two participants send their funds to a specific type of joint multisig wallet that allows them to create and enforce off chain agreements. The network itself is just a bunch of these channels connected together. You can then structure an off chain payment across many channels, where none of the funds actually leaves any individual channel, but instead just shuffles around like an abacus.
+### Under Research
 
-**Rainbow Network** as described in [this paper](http://research.paradigm.xyz/RainbowNetwork.pdf)
+**Hydra:** Ergo is mentioned in the [Hydra whitepaper](https://eprint.iacr.org/2020/299.pdf). Research and discussions are underway. 
 
 **Plasma Chains:** This is a hybrid approach (which is applied by Polygon) that uses a proof-of-stake (PoS) consensus layer on top of Ethereum. This parallel side-chain, which is based on the [plasma chains](https://ethereum.org/en/developers/docs/scaling/plasma/) design, is a lower-cost chain that relies on stakeholders to secure the network. As the staking tokens interact with the main chain, the model uses some part of Ethereum’s security and some part of its own inside PoS consensus. When users stake their tokens, they delegate the consensus to a validating operator, known as trusted and secure server providers. An Ergo implementation is currently being researched.
-
-**ZK-Rollups:** utilise [zkSNARK](https://blog.ethereum.org/2016/12/05/zksnarks-in-a-nutshell/)s (zero-knowledge succinct non-interactive arguments of knowledge), they can decrease network load by taking hundreds of transfers off-chain and combining or "rolling" them up into a single transaction. The security of the transactions relies directly on the main chain secured by adding mathematical proofs to validate transactions. However, it is relatively harder than hybrid approaches to implement all the functionalities of the mainnet with full security. Various projects are developing their approach for implementing zkSNARKs.
-
-**Optimistic Rollups:** [Optimistic Rollups](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/optimistic_rollups/) work a little bit differently than plasma and zkSNARK in terms of securing the layer. Optimistic rollups compute the transactions on a parallel EVM compatible chain called Optimistic Virtual Machine (OVM) and communicate with the main chain. The model is called optimistic because it relies on the Fraud-Proof principle, where the aggregators are not actively verifying layer 2 but they interfere in the event of a fraud dispute. 
 
 **State Channels:** Lastly, a model called state channel is a type of peer-to-peer signing model and the design can also be used as payment channels for simple purposes. The problem, however, is the state channels are pre-set contracts for which the participants are defined at the launch. Each time a new participant wants to use the channel, a new contract creation is needed. In return, there is higher privacy and security but little to no flexibility for an open system. IOHK research members published a new model called [Hydra: Isomorphic State Channels](https://iohk.io/en/research/library/papers/hydrafast-isomorphic-state-channels/) that introduces multi-party state channels by utilizing both on-chain and off-chain computations powered by the eUTXO design. Other novel state channel constructions should be possible possible as well. It would be good to apply offchain techniques to certain applications, such as ErgoMixer.
 
 **NIPoPoWs:** [Non-interactive proofs of proof of work](http://docs.ergoplatform.org/dev/protocol/nipopow/) is a generalized term that refers to light clients and side-chains. Light clients, which consist of light nodes and light wallets, are efficient clients that do not need to hold the whole blockchain to verify transactions and enable efficient mobile wallets and faster miner bootstrapping. Clients can interact with each other using only the block headers, thus reducing computational resources. Ergo has enabled NIPoPoW support since the genesis block and they can be applied to Ergo’s blockchain with an easy to implement [velvet fork](https://www.coindesk.com/markets/2018/03/15/velvet-forks-crypto-updates-without-the-controversy/). NIPoPoWs can also be deployed to support PoW and PoS cross-chain communication. NIPoPoW implementations via *Velvet soft forks* enable **infinite scalability** via sidechains on top of Ergo. 
+
+### Other Possibilities
+
+**Lightning Network:** Due to the shared UTXO architecture utilising Bitcoins Lightning network is also a possibility. Basically in a lightning channel, two participants send their funds to a specific type of joint multisig wallet that allows them to create and enforce off chain agreements. The network itself is just a bunch of these channels connected together. You can then structure an off chain payment across many channels, where none of the funds actually leaves any individual channel, but instead just shuffles around like an abacus.
+
+**Rainbow Network:** as described in [this paper](http://research.paradigm.xyz/RainbowNetwork.pdf)
+
+**ZK-Rollups:** utilise [zkSNARKs](https://blog.ethereum.org/2016/12/05/zksnarks-in-a-nutshell/) (zero-knowledge succinct non-interactive arguments of knowledge), they can decrease network load by taking hundreds of transfers off-chain and combining or "rolling" them up into a single transaction. The security of the transactions relies directly on the main chain secured by adding mathematical proofs to validate transactions. However, it is relatively harder than hybrid approaches to implement all the functionalities of the mainnet with full security. Various projects are attempting to implement zkSNARKs.
+
+**Optimistic Rollups:** [Optimistic Rollups](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/optimistic_rollups/) work a little bit differently than plasma and zkSNARK in terms of securing the layer. Optimistic rollups compute the transactions on a parallel EVM compatible chain called Optimistic Virtual Machine (OVM) and communicate with the main chain. The model is called optimistic because it relies on the Fraud-Proof principle, where the aggregators are not actively verifying layer 2 but they interfere in the event of a fraud dispute.
 
 **Zero-Knowledge Contingent Payments:** It's possible to make paymentswhich are released if and only if some knowledge is disclosed by the payee (in a trustless manner where neither the payer or payee can cheat). This is achieved using the combination of a `hash-locked transaction` and a external protocol to ensure the correct data revealed in the hashlock release.
 
@@ -56,7 +61,6 @@ Ergo can utilise multiple off-chain solutions, such as [Hydra](https://iohk.io/e
 
 **Coinpools:** Another L2 solution for the UTXO model to consider as described in [this paper](https://discrete-blog.github.io/coinpool/)
 
-**Hydra:** Ergo is mentioned in the [Hydra whitepaper](https://eprint.iacr.org/2020/299.pdf). Research and discussions are underway. 
 
 
 
