@@ -1,3 +1,5 @@
+[This repository](https://github.com/ScorexFoundation/sigmastate-interpreter#sigma-language-background.md) contains implementations of ErgoScript compiler and ErgoTree Interpreter for a family of Sigma-protocol based authentication languages (or simply Sigma language).
+
 ## Sigma Language Background
 
 Every coin in Bitcoin is protected by a program in the stack-based Script
@@ -68,4 +70,3 @@ The checker then verifies the proof, which means it verifies that all the
 necessary secrets have been known and used to construct the proof (i.e. sign the
 transaction).
 
-[This repository](https://github.com/ScorexFoundation/sigmastate-interpreter#sigma-language-background.md) contains implementations of ErgoScript compiler and ErgoTree Interpreter for a family of Sigma-protocol based authentication languages (or simply Sigma language).
