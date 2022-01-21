@@ -79,6 +79,7 @@ nav:
       - ErgoScript: 
         - Overview: dev/scs/ergoscript.md
         - Quick Primer: dev/scs/ergoscript-primer.md
+        - Sigma Language: dev/scs/sigma-lang.md
       - FlowCards: dev/scs/flowcards.md
       - Sigma Protocols: dev/scs/sigma.md
       - Multi-Stage Contracts: dev/scs/multi.md 

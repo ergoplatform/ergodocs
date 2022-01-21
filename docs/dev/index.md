@@ -4,3 +4,9 @@ There are several pathways to start developing on Ergo. A typical dApp is usuall
 
 - [Learning Ergo 101 : Development Workflow](https://medium.com/cryptostars/learning-ergo-101-development-workflow-aa17dd63ef6)
 
+## ErgoPad-QuickStart
+
+ErgoPad has [released a set of docker containers](https://github.com/ergo-pad/ergopad) combined to create a React/MaterialUI frontend, REST API backend, assembler to interact with smart contracts and supporting services like ergonode, redis and postgres.
+
+
+
