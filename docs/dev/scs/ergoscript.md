@@ -53,18 +53,24 @@ Typically most people use P2S because it is a lot easier to use. P2SH means you 
 
 #### Box
 
-here is a box to experiment with 
-- This address [address](https://wallet.plutomonkey.com/p2s/?source=c2lnbWFQcm9wKFNFTEYuaWQgPT0gSU5QVVRTKDApLmlkKQ==) 
-- Will create an output at this [box](https://api.ergoplatform.com/api/v0/transactions/boxes/byAddress/unspent/ZX44DGQZJ4SoDVh58XRuNZjAq )
+Here is a box to experiment with - this [address](https://wallet.plutomonkey.com/p2s/?source=c2lnbWFQcm9wKFNFTEYuaWQgPT0gSU5QVVRTKDApLmlkKQ==) will create an output at this [box](https://api.ergoplatform.com/api/v0/transactions/boxes/byAddress/unspent/ZX44DGQZJ4SoDVh58XRuNZjAq)
 
 ## Proxy Contracts
+The idea of proxy contracts came to life with the [Ergo Assembler](https://github.com/anon-real/ergo-assembler) which helped dApp developments like [Ergo Auction House](https://ergoauctions.org/), [ErgoUtils](https://ergoutils.org/), and [SigmaUSD web interface](https://sigmausd.io/#/) despite not having a wallet-bridge like MetaMask (Ethereum wallet) in the ecosystem.
 
-Outsourcing transaction generation to an external service/dApp can be useful or even needed in various circumstances. For example, avoiding wallet limitations to generate any transaction on behalf of the user - Ergo Assembler is designed for this purpose. Another example is to scale dApps to be able to fulfil many requests without double-spending or data invalidation - SigmaUSD dApp can use proxy contracts to avoid bank double-spending and ERG/USD oracle data invalidation.
+During this time, the structure of proxy contracts evolved as some malicious users tried to take advantage of some minor vulnerabilities, mostly in the [SigmaUSD dApp](https://sigmausd.io/#/).
 
-- [EIP-0017](https://github.com/ergoplatform/eips/blob/master/eip-0017.md)
+**Generally, you should ensure your proxy contracts**
 
+- Prevent dApp developers or any other attacker from taking advantage of user's funds in any manner
+- Preserve the integrity of the dApp by preventing attacks like the ones explained in the above examples.
 
+For more information please see [EIP-0017](https://github.com/ergoplatform/eips/blob/master/eip-0017.md)
 
+## Resources
+
+- [ErgoPad Staking Contracts](https://github.com/ergo-pad/ergopad/blob/staking-contracts/backend/app/contracts/staking.md)
+- [GetBlok.io Smart Pools](https://github.com/GetBlok-io/ergo-smartpooling-contracts)
 
 
 

@@ -18,3 +18,7 @@ The sigma-rust GitHub repo is [here](https://github.com/ergoplatform/sigma-rust)
 
 Use `https://wallet.plutomonkey.com/p2s/?source=` to compile any contract to P2S address and then use it in rust like this - `https://github.com/ergoplatform/sigma-rust/blob/fd197d0c0892cd24bbcb475e0a83243784700e32/ergotree-interpreter/src/contracts.rs#L159-L167`
 This approach should work in JS/TS WASM bindings as well.
+
+## Resources
+
+- [doc.rust-lang.org](https://doc.rust-lang.org/book/)
