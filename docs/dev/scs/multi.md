@@ -1,12 +1,6 @@
 # Multi-Stage Contracts
 
-
-
-
-Multi-Stage Contracts provide an extension to Bitcoin’s UTXO model with on-chain computations. 
-
-Extended UTXO systems enable *Turing complete* smart contracts. This is a novel innovation that allows the latest generation of blockchains to reclaim the original model that Bitcoin used, but with a lot more power.
-
+Multi-stage contracts refer to smart contracts that are operating on a stateful level. Because Ergo uses the *UTXO model* (first seen in Bitcoin), it is possible to process parallelized actions on top of smart contracts. Multi-Stage Contracts provide an extension to Bitcoin’s UTXO model with on-chain computations. It’s a complex design that aims for *infinite scalability*; therefore, it creates more space to build complex solutions that introduce the concept of *UTXO chains*.
 
 
 ## Tutorials & Guides
@@ -19,6 +13,7 @@ Extended UTXO systems enable *Turing complete* smart contracts. This is a novel 
 - [Talk](http://deic.uab.cat/conferences/cbt/cbt2019/resources/chepurnoy.ogv) ~ [Slides](http://deic.uab.cat/conferences/cbt/cbt2019/resources/chepurnoy.pdf) ~ [Paper](https://link.springer.com/chapter/10.1007/978-3-030-31500-9_16)
 - [https://ergoplatform.org/docs/teaser.pdf](https://ergoplatform.org/docs/teaser.pdf)
 - [https://ergoplatform.org/docs/ErgoScript.pdf](https://ergoplatform.org/docs/ErgoScript.pdf)
+
 
 ### **Decentralized Finance**
 
