@@ -74,6 +74,7 @@ nav:
       - Wallets: dev/wallet/index.md
       - Addresses: dev/wallet/address.md
       - Hierarchical keys: dev/wallet/keys.md
+      - ErgoPay: dev/wallet/ergo-pay.md
     - Smart Contracts:
       - Smart Contracts: dev/scs/index.md
       - ErgoScript: 

@@ -14,7 +14,7 @@ The UI for the front-end is available at [anon-real/sigma-usd](https://github.co
 - [Lessons for sigmausd from the DJED paper](https://www.ergoforum.org/t/lessons-for-sigmausd-from-the-djed-paper/2345)
 
 
-## Dexy
+## DexyUSD
 
 - [Dexy: USD Simplest Stablecoin](https://www.ergoforum.org/t/dexy-usd-simplest-stablecoin-design/1430)
 

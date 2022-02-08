@@ -17,6 +17,7 @@ Using Appkit, Ergo applications can be written in one of the languages supported
 - [Tutorial starting with Appkit on Gradle projects](https://github.com/ergoplatform/ergo-appkit/wiki/Tutorial-starting-with-Appkit-on-Gradle-projects)
 - [AppKit by Example (Video)](https://www.youtube.com/watch?v=Md5s-XV6-Hs)
 - [Appkit Examples](https://github.com/aslesarenko/ergo-appkit-examples)
+- [ErgoPay tutorial](https://medium.com/@bschulte19e/d95e17a51410)
   
 ### How-to Guides
 
