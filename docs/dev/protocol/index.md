@@ -13,7 +13,13 @@ Ensuring economic freedom for ordinary people through decentralized, private and
 
 ### Grassroots
 
-No smart contract platform is fairer. With 95.57% of the token available to the public.
+
+Ergo had a fair launch with no-premine and with only a 4.37% of funds allocated to ecosystem development (released over the course of two and a half years through the mining protocol). No smart contract platform is fairer. With 95.57% of the token available to the public.
+
+The current structure of financial markets is broken. A small number of elites can easily access every aspect of the global market - to the detriment of the average citizen.  Blockchain technologies now offer the tools for ordinary people to protect themselves. Ergo aims to be a leader in this market by continually building tools and features that promote and maintain decentralization, privacy and open access.
+
+
+
 
 ## Core
 
@@ -65,6 +71,7 @@ The cryptographic part of ErgoScript is based on **Sigma Protocols** and natural
 Multi-stage contracts refer to smart contracts that are operating on a stateful level. Because Ergo uses the UTXO model, it is possible to process parallelized actions on top of smart contracts.
 
 ### [Data Inputs](/dev/scs/data-inputs)
+
 
 
 
