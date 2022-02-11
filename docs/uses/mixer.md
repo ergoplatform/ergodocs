@@ -4,9 +4,10 @@ ErgoMixer is the **first *non-custodial, programmable, non-interactive* mixer in
 
 ErgoMixer utilises Ergo’s [**Sigma protocols**](/dev/scs/sigma) to enable efficient, trustless mixing of funds, enabling a high degree of privacy and security.
 
+ErgoMixer must be run as a local application to preserve anonymity. 
 
 
-- ErgoMixer must be run as a local application to preserve anonymity. Download the latest release [here](https://github.com/ergoMixer/ergoMixBack/releases) 
+Download the latest release [here](https://github.com/ergoMixer/ergoMixBack/releases) 
 
 
 **Introductory**
@@ -15,6 +16,7 @@ ErgoMixer utilises Ergo’s [**Sigma protocols**](/dev/scs/sigma) to enable effi
 - [ErgoMixer ELI5](https://ergoplatform.org/en/blog/2021-05-12-ergomixer/)
 
 **Video Tutorials**
+
 - [ErgoMixer Tutorial - Taking Fire](https://www.youtube.com/watch?v=Cc3n8CjaGPE)
 - [How to set up and configure mixer on Windows](https://www.youtube.com/watch?v=03_2HH82Plw)
 - [Video: How to mix tokens with ErgoMixer](https://www.youtube.com/watch?v=T9M6j6xfx4w)
