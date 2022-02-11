@@ -22,7 +22,8 @@ There were even attacks (not on MPC computer but some computer somewhere), where
 
 ## Best Practices
 
-there are different aspects to discuss. 
+There are several different aspects to consider;
+
 - If you send 1000 ERG to the mixer and, after millions of rounds, withdraw all of them to one single address, you will ruin the security gain. It is very important to withdraw carefully, to several addresses and with some time intervals.
 - This mixer is **non-interactive with no middle man**. You only work on your side and interact with the blockchain.
 Assume the mixing as a series of *mini-mixes* (rounds). At each round, you mix with one available box from another user. (note that there is no interaction with that user. You fetch the available boxes, choose one of them, create a tx spending your box, and create two 50-50 boxes.) Only you and the other party will know the mapping, and no one else will distinguish the mapping.
@@ -47,7 +48,7 @@ ErgoMixer will integrate this feature in future.
 ## Token
 
 @anon2020s has minted a new token, 'FEMX', Future ErgoMixer Token.
-Token Id: 83c473e4ad477b1921023f61ab5bd1550a242c287475ff1c804f029d97672ae7
+Token Id: `83c473e4ad477b1921023f61ab5bd1550a242c287475ff1c804f029d97672ae7`
 
 Holders of this token are eligible to receive ErgoMixer's token when ready.
 
@@ -57,16 +58,19 @@ The tokenomics of the final token is not clear yet. Still, whatever it comes to 
 
 ### Resources
 
+**Tutorials**
+
+- [Video tutorial](https://www.youtube.com/watch?v=03_2HH82Plw)
+- [ErgoMixer ELI5](https://ergoplatform.org/en/blog/2021-05-12-ergomixer/)
+- [Ergo: What are *'Mixers'* ?](https://ergoplatform.org/en/blog/2021-05-19-ergo-what-are-bitcoin-mixers/)
+
 **GitHub**
+
 - [ErgoMixer GitHub](https://github.com/ergoMixer/)
 
 **Documentation**
+
 - Technical Paper: [ZeroJoin: Combining ZeroCoin and CoinJoin](https://eprint.iacr.org/2020/560.pdf)
 - [Presentation: ZeroJoin - Combining Zerocoin and CoinJoin](https://ergoplatform.org/docs/CBT_2020_ZeroJoin_Combining_Zerocoin_and_CoinJoin_v3.pdf)
 
 
-
-**Tutorials**
-- [Video tutorial](https://www.youtube.com/watch?v=03_2HH82Plw)
-- [ErgoMixer ELI5](https://ergoplatform.org/en/blog/2021-05-12-ergomixer/)
-- [Ergo: What are *'Mixers'* ?](https://ergoplatform.org/en/blog/2021-05-19-ergo-what-are-bitcoin-mixers/)
