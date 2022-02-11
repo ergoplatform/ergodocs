@@ -42,23 +42,16 @@ atLeast(
 }
 ```
 
-This an example `3-out-of-5` **threshold signature** which can be compiled to a `P2S` address, sending ergs to the [resulting address](https://wallet.plutomonkey.com/p2s/?source=ewphdExlYXN0KAogIDMsIAogIENvbGwoCiAgICBQSygiOWY4WlF0MVN1ZTZXNUFDZE1TUFJ6c0hqM2pqaVprYll5M0NFdEI0QmlzeEV5azRSc05rIiksIAogICAgUEsoIjloRldQeWhDSmN3NEtReUNHdTR5QUdmQzFpZVJBS3lGZzI0RktqTEpLMnVEZ0E4NzN1cSIpLCAKICAgIFBLKCI5ZmRWUDJqY2ExZTVuQ1RUNnE5aWpaTHNzR2o2djRqdVk4Z0VBeFVocDdZVHVTc0xzcFMiKSwgCiAgICBQSygiOWdBS2VSdTFXNERoNmFkV1hublltZnFqQ1RueG5TTXR5bTJMUFBNUEVyQ2t1c0NkNkYzIiksCiAgICBQSygiOWdtTnNxcnFkU3BwTFVCcWcyVXpSRW1taXZncWgxcjNqbU5jTEFjNTNoazNZQ3ZBR1dFIikKICApCikKfQ==) (protected by the threshold sig).
+This is an example `3-out-of-5` **threshold signature** which can be compiled to a `P2S` address, sending ergs to the [resulting address](https://wallet.plutomonkey.com/p2s/?source=ewphdExlYXN0KAogIDMsIAogIENvbGwoCiAgICBQSygiOWY4WlF0MVN1ZTZXNUFDZE1TUFJ6c0hqM2pqaVprYll5M0NFdEI0QmlzeEV5azRSc05rIiksIAogICAgUEsoIjloRldQeWhDSmN3NEtReUNHdTR5QUdmQzFpZVJBS3lGZzI0RktqTEpLMnVEZ0E4NzN1cSIpLCAKICAgIFBLKCI5ZmRWUDJqY2ExZTVuQ1RUNnE5aWpaTHNzR2o2djRqdVk4Z0VBeFVocDdZVHVTc0xzcFMiKSwgCiAgICBQSygiOWdBS2VSdTFXNERoNmFkV1hublltZnFqQ1RueG5TTXR5bTJMUFBNUEVyQ2t1c0NkNkYzIiksCiAgICBQSygiOWdtTnNxcnFkU3BwTFVCcWcyVXpSRW1taXZncWgxcjNqbU5jTEFjNTNoazNZQ3ZBR1dFIikKICApCikKfQ==) (protected by the threshold sig).
 
-Here is a good intro to [making a signature](https://www.youtube.com/watch?v=daP67yp-Czs&list=PLUWruihtE-HtL-JZk8Vb4Yn_H18aE3rb6&index=4).
-
-
-
-
-
+Here is a good introduction to [making a signature](https://www.youtube.com/watch?v=daP67yp-Czs&list=PLUWruihtE-HtL-JZk8Vb4Yn_H18aE3rb6&index=4).
 
 
 ## 'Optional' Privacy?
 
-A rich smart-contract language is a priority in Ergo.
+A rich smart-contract language is a priority in Ergo, and with non-optional privacy, you can't have (efficient) powerful contracts. Even more, for simple payments, formalising leakage is hard, and for arbitrary contracts simply not feasible.
 
-With non-optional privacy, you can't have (efficient) powerful contracts. Even more, for simple payments, formalising (to minimise with guarantee) leakage is hard, and for arbitrary contracts are not feasible.
-
-There are plenty of reasons to want optional privacy - transparent ledgers are a feature for many use-cases. e.g. charities that want everyone to have full access to the flow of funds.   The ability to operate with privacy or with transparency is a feature. 
+There are also plenty of reasons someone might want optional privacy - transparent ledgers are a feature for many use-cases. e.g. charities that want everyone to have full access to the flow of funds.  
 
 There are also strong arguments for optional privacy for adoption and regulation. ErgoMixer is non-interactive, so it works with the blockchain alone; no off-chain coordination with others (and trusted coordinator) is needed.
 
