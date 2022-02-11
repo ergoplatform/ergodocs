@@ -1,8 +1,34 @@
-## ErgoMixer
+# ErgoMixer
 
-**ErgoMixer** is the first working non-custodial, programmable, non-interactive mixer in the cryptocurrency space, and it is also the only **token mixer** to our knowledge. 
+The **first working non-custodial, programmable, non-interactive mixer in the cryptocurrency space** (and it is also the only **token mixer** to our knowledge.)
 
-ErgoMixer must be run as a local application to preserve anonymity. (Mac/Windows applications [are available!](https://github.com/ergoMixer/ergoMixBack/releases)). 
+The project uses Ergo’s Sigma protocols to enable efficient, trustless mixing of funds, enabling a high degree of privacy and security.
+
+ErgoMixer must be run as a local application to preserve anonymity. 
+
+- [Download the latest release](https://github.com/ergoMixer/ergoMixBack/releases) 
+
+**Documentation**
+
+- [Technical Paper](https://eprint.iacr.org/2020/560.pdf)
+- [Presentation](https://ergoplatform.org/docs/CBT_2020_ZeroJoin_Combining_Zerocoin_and_CoinJoin_v3.pdf)
+- [GitHub](https://github.com/ergoMixer/)
+
+**Tutorials**
+
+- [ErgoMixer ELI5](https://ergoplatform.org/en/blog/2021-05-12-ergomixer/)
+- [Ergo: What are *'Mixers'* ?](https://ergoplatform.org/en/blog/2021-05-19-ergo-what-are-bitcoin-mixers/)
+- [https://www.youtube.com/watch?v=Cc3n8CjaGPE](ErgoMixer Tutorial - Taking Fire - Version 3.0.1 & Above)
+- [Introduction to Ergo Mixer - How to set up and configure mixer on Windows](https://www.youtube.com/watch?v=03_2HH82Plw)
+
+
+## Covert address
+
+You can configure a covert address in ErgoMixer, this is handy for displaying an address publicly to receive funds. You can set this address to automatically mix and withdraw your erg (or sigUSD if you prefer). 
+
+## Tor support
+
+Since ErgoMixer v3.0.0 there is Tor support available.
 
 ### Why is this better than Tornado Cash? 
 
@@ -36,14 +62,25 @@ Therefore, in theory, the final distinguishability is 2^(-rounds).
 - If you consider the whole system is only mixing by you and the attacker, or if all other parties are corrupted and conspiring with the attacker, the security is gain is zero. 
 - Simply, it is a non-interactive multi-party protocol in which the colluding parties should not be ALL other parties. So, if at least one honest party is mixing in the pool, the resulting map will be indistinguishable to some degree from the attacker.
 
+Ever wonder how the ErgoMixer clients receive Rings, Fees, Levels, etc.? [Please see this forum post for some insights](https://www.ergoforum.org/t/ergomixer-zerojoin-mixer-for-erg-and-tokens/318/10?u=anon2020s)
+
 
 ## Identifiability
 
-You can tell if a coin is mixed or not due to its history and contract address. 
+ErgoUtils now support obfuscating entry points for ErgoMixer.
 
-But, when you withdraw the mixed coins (during or after), there are strategies to mitigate this, such as regularly moving them around since they are regular boxes with regular contracts (like other coins in the network). This eliminates the *tainting issue* to some degree. You can do this manually or using multi-hop withdrawal (available at https://ergoutils.org/#/others).
-ErgoMixer will integrate this feature in future.
-"Your mixer withdrawal will go through many random addresses, and you will receive them from an ordinary address."
+When you withdraw from the mixer to a wallet, it is obvious that that person has received some funds from the mixer and when he spends those boxes, it is also obvious that those boxes are from the mixer.
+
+Those who care about privacy and use ErgoMixer, also probably care about not anyone being able to tell that they are using the mixer easily when they interact with their wallets. This tool is designed to address this issue.
+
+Just create an (or more if you wish) obfuscating address with your desired hop number [here](https://ergoutils.org/#/others) and use it permanently. To use it, withdraw from the mixer to the address that is created for you; your received funds in that address will automatically go through some random addresses (randomly created outputs, both number of outputs and output amounts) and finally be received in your wallet.
+
+As an example, try to figure out if this [transaction](https://explorer.ergoplatform.com/en/transactions/9cf412c71fc49a53f7f6ae498f22730be474127436334e5a38da92ce0d40530b) is from the mixer or not - a lot harder to figure out.
+
+As always, utilities in ErgoUtils are completely free to use!
+
+- [ergoutils GitHub](https://github.com/anon-real/ergoutils)
+- [mixerHop.js](https://github.com/anon-real/ErgoUtils/blob/master/src/utils/mixerHop.js)
 
 ## Token
 
@@ -54,23 +91,15 @@ Holders of this token are eligible to receive ErgoMixer's token when ready.
 
 The tokenomics of the final token is not clear yet. Still, whatever it comes to be, they will airdrop some percentage of the tokens to community members, privacy and mixer related dapps, related tutorials, dapps and wallets integrating with the mixer, appkit development, ergo DAO, etc.
 
+- [ErgoProfitSharingDapp](https://github.com/mhssamadani/ErgoProfitSharingDapp)
 
 
-### Resources
+## Vulnerabilities
 
-**Tutorials**
-
-- [Video tutorial](https://www.youtube.com/watch?v=03_2HH82Plw)
-- [ErgoMixer ELI5](https://ergoplatform.org/en/blog/2021-05-12-ergomixer/)
-- [Ergo: What are *'Mixers'* ?](https://ergoplatform.org/en/blog/2021-05-19-ergo-what-are-bitcoin-mixers/)
-
-**GitHub**
-
-- [ErgoMixer GitHub](https://github.com/ergoMixer/)
-
-**Documentation**
-
-- Technical Paper: [ZeroJoin: Combining ZeroCoin and CoinJoin](https://eprint.iacr.org/2020/560.pdf)
-- [Presentation: ZeroJoin - Combining Zerocoin and CoinJoin](https://ergoplatform.org/docs/CBT_2020_ZeroJoin_Combining_Zerocoin_and_CoinJoin_v3.pdf)
+- [Second ErgoMix vulnerability blog post (fixed in 2020)](https://blog.plutomonkey.com/2020/09/another-ergomix-vulnerability/) 
 
 
+
+## Resources
+
+- [A tutorial for importing magnum (or any other wallet)](https://www.ergoforum.org/t/magnum-wallet-closing-in-20-days/468/6)
