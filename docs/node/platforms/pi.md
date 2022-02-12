@@ -2,137 +2,55 @@
 
 This page explains how to install and run a full Ergo node. It does not cover mining. 
 
-- UNIX Systems can run [ergo-installer.sh](https://github.com/ergoplatform/ergo/blob/master/ergo-installer.sh)
+Linux Systems can run [ergo-installer.sh](https://github.com/ergoplatform/ergo/blob/master/ergo-installer.sh)
 
-
-## Tutorial
-
-### Getting Started
-
-To run an Ergo node you need a **JDK/JRE version >= 9** installed on your system. We recommend either version 9 or 11. One way to do this is to install [SDKMAN](https://sdkman.io/install) for UNIX based systems 
-
-```
-curl -s "https://get.sdkman.io" | bash
-sdk install java
-```
-
-
-### Running the node
-
-Create a dedicated folder (such as `~/ergo`) for running the node.
 ```bash
-mkdir ergo
-cd ergo
+curl -s https://raw.githubusercontent.com/ergoplatform/ergo/master/ergo-installer.sh | sh -s -- --api-key=<YOUR_API_KEY>
 ```
 
-Download the latest [Ergo client release](https://github.com/ergoplatform/ergo/releases/) `.jar` 
+With this script you'll have the latest Ergo node installed without any hassle.
 
-Create a configuration file `ergo.conf` 
+If you'd prefer to get set up manually, here's a [step-by-step.](/node/platforms/tutorial).
 
-```
-touch ergo.conf
-```
-with the following text
-```
-	ergo {
-	  node {
-	    mining = false
-	  }
-	}
-```
-
-Then issue the following command to run the node for the first time (from within the `ergo` folder):
-
-```
-java -jar -Xmx3G -Dlogback.stdout.level=WARN -Dlogback.file.level=ERR ergo.jar --mainnet -c ergo.conf
-# The -Xmx flag sets the max heap size for the jvm
-# low-level logging only
-```
-The node will start syncing immediately after this. Wait for a few minutes for the API to start and go to the next step.
-
-
-### Securing the API
-
-We need to set a secret password to protect the API. In this example we'll use `hello` - but you **must use a different and strong secret.**
-
-Go to [127.0.0.1:9053/swagger#/utils/hashBlake2b](http://127.0.0.1:9053/swagger#/utils/hashBlake2b) and call the API to compute the `Blake2b` hash of your secret. 
-
-> ![Compute Hash of secret](https://user-images.githubusercontent.com/23208922/69916676-ed233400-1483-11ea-8582-f61c38478d31.png)
-
-Copy the hash response which we'll place back in the `ergo.conf` file. 
-
-> ![response](https://user-images.githubusercontent.com/23208922/69916509-c3690d80-1481-11ea-869f-630cd59cc525.png)
-
-We then need to update the config file with API key hash
-
+## Light Mode
 ```conf
-	ergo {
-	  node {
-	    mining = false
-	  }
-	}
-	
-	scorex {
-	 restApi {
-	    ## Hex-encoded Blake2b256 hash of an API key. 
-	    ## Should be 64-chars long Base16 string.
-	    ## below is the hash of the string 'hello'
-	    ## replace with your actual hash 
-	    apiKeyHash = "324dcf027dd4a30a932c441f365a25e86b173defa4b8e58948253471b81b72cf"
-	  }
-	}
+ergo {
+    node {
+        # Full options available at 
+        # https://github.com/ergoplatform/ergo/blob/master/src/main/resources/application.conf
+        
+        mining = false
+
+        # Skip validation of transactions in the mainnet before block 417,792 (in v1 blocks).
+        # Block 417,792 is checkpointed by the protocol (so its UTXO set as well).
+        # The node still applying transactions to UTXO set and so checks UTXO set digests for each block.
+        skipV1TransactionsValidation = true
+        
+        # Number of last blocks to keep with transactions and ADproofs, for all other blocks only header will be stored.
+        # Keep all blocks from genesis if negative
+        blocksToKeep = 1440 # keep ~2 days of blocks
+        
+        # State type.  Possible options are:
+        # "utxo" - keep full utxo set, that allows to validate arbitrary block and generate ADProofs
+        # "digest" - keep state root hash only and validate transactions via ADProofs
+
+        stateType = digest # Note: You cannot validate arbitrary block and generate ADProofs due to this
+
+
+    }
+
+}      
+        
+scorex {
+    restApi {
+        apiKeyHash = "$BLAKE_HASH"
+        
+    }
+    network {
+		    # Max P2P connections
+			# Lower number better for low-RAM
+            maxConnections = 10
+
+        }
+}
 ```
-
-Your node should now be syncing. If you'd like to initialise a wallet place see [this page](/node/wallet)
-
-### Check if the node is synced
-
-While the node is syncing, the panel will show "Active synchronization" (see the image below).
-
-> ![active synchronization](https://user-images.githubusercontent.com/23208922/71128146-94d58b80-2212-11ea-9010-5b61a91e8549.png)
-
-After the node is fully synced, the text will change to "Node is synced", as shown below.
-
-> ![synced](https://user-images.githubusercontent.com/23208922/71301767-8da4ae00-23c9-11ea-8fc0-a92a9d78b821.png)
-
-In the case of unexpected shutdowns the database may become corrupted and you need to resync.
-
-To do so remove the following two folders and restart the node. 
-
-```
-rm -rf .ergo/state
-rm -rf .ergo/history
-```
-
-### Deriving Addresses
-
-Navigate to `localhost:9053/swagger#/wallet/walletDeriveKey` 
-
-click **Try it out**
-
-```  
-"derivationPath": "m/44'/429'/0'/0/0" 
-```
-
-The wallet needs to be unlocked, and you need to authorize on top right on swagger
-click execute and check the address you get in the response. Please note that Swagger will accept any password in the UI, but will fail to execute commands if the password provided is incorrect.
-
-If you are certain the password you're using is correct, this issue can occur during database corruption. First, attempt to restart and see if the node can fix itself.  Otherwise, a resync will be required. 
-
-See the [Swagger API](/node/swagger) page for more infomation. 
-
-## Node security
-
-Unless you are running the node on a publicly accessible web-server, your node should be protected by your router. 
-
-If you wish to host a public node, there are a few important aspects your wallet and money's safety depends on:
-
-* You should never make the `ergo.conf` file public.
-* Sensitive API methods require a security token, which should never be sent over untrusted channels.
-* Access to the Ergo REST API must be restricted to known hosts. In particular, the API must not be accessible from the Internet.
-
-There is an [example nginx.conf](https://github.com/glasgowm148/ergoscripts/blob/main/misc/nginx.config) available.  
-
-## Compiling from source
-
-Note that instead of downloading the precompiled Ergo jar, you can clone the repository and compile the jar from the source using the [`sbt assembly`](https://www.scala-sbt.org/)  command.
