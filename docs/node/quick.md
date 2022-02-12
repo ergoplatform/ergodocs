@@ -1,6 +1,6 @@
 # Quick Install
 
-Run the following command to
+Run the following command to get started
 
 ```
 bash -c "$(curl -s https://node.phenotype.dev)"
@@ -40,7 +40,7 @@ See [this guide](https://www.windowscentral.com/install-windows-subsystem-linux-
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux 
 ```
 
-## Docker
+## Docker Compose
 
 ```
 version: "2"

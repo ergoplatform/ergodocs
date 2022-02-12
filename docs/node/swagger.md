@@ -47,3 +47,20 @@ To access protected API routes (such as for wallet), you must provide your secre
 * */wallet/deriveNextKey* to derive a new key according to EIP-3 (BIP 44 implementation for Ergo)
 * */wallet/balances* to get wallet balance (for all the addresses) 
 * */wallet/transactions* to get wallet transactions (for all the addresses) 
+
+
+### Deriving Addresses
+
+Navigate to `localhost:9053/swagger#/wallet/walletDeriveKey` 
+
+click **Try it out**
+
+```  
+"derivationPath": "m/44'/429'/0'/0/0" 
+```
+
+The wallet needs to be unlocked, and you need to authorize on top right on swagger
+click execute and check the address you get in the response. Please note that Swagger will accept any password in the UI, but will fail to execute commands if the password provided is incorrect.
+
+If you are certain the password you're using is correct, this issue can occur during database corruption. First, attempt to restart and see if the node can fix itself.  Otherwise, a resync will be required. 
+

@@ -116,7 +116,14 @@ nav:
 
   - Node:
     - Node: node/index.md
-    - Quick Install: node/quick.md
+    - Getting Started: 
+      - Platforms: node/platforms/index.md
+      - Mac: node/platforms/mac.md
+      - Windows: node/platforms/windows.md
+      - Linux: node/platforms/linux.md
+      - Pi: node/platforms/pi.md
+      - Docker: node/platforms/docker.md
+    #- Quick Install: node/quick.md
     - Wallet: node/wallet.md
     - Overview: 
       - Swagger API: node/swagger.md
@@ -126,7 +133,7 @@ nav:
       - Digest State: node/digest-state.md
       - History Pruning: node/history-pruning.md
       - Snapshots: node/snapshots.md
-      - NiPoPoWS: node/nipopow.md
+      - NiPoPoWS: dev/protocol/nipopow.md
 
   - Applications:
     - Applications: uses/index.md
