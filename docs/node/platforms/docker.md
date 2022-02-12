@@ -19,22 +19,27 @@ All data will be stored in your host directory `/path/on/host/to/ergo/data`.
 ## Docker Compose
 
 ```
-version: "2"
+version: '3.8'
 
 services:
   node:
-    image: ergoplatform/ergo
-    container_name: ergo-mainnet
-    ports:
-      - 9053:9053
-      - 9030:9030
-    environment:
-      - MAX_HEAP=3G
-    volumes:
-      - ~/.data/ergo/mainnet:/home/ergo/.ergo
-      - ./myergo.conf:/etc/myergo.conf
-    restart: unless-stopped
-    command: --mainnet -c /etc/myergo.conf
+      image: ergoplatform/ergo
+      container_name: ergo-mainnet
+      restart: always
+      environment:
+        - MAX_HEAP=3G
+      ports:
+        - 9053:9053
+        - 9030:9030
+      command: "--mainnet -c /etc/myergo.conf"
+      volumes:
+        - ./.ergo:/home/ergo/.ergo
+        - ./ergo.conf:/etc/myergo.conf
+      deploy:
+        resources:
+          limits:
+            cpus: '0.4'
+            memory: 1400M
 ```
 
 Run the node with
@@ -47,6 +52,16 @@ Follow the logs with
 ```
 docker logs -f ergo-mainnet -n 200
 ```
+
+Node's data will be saved in `.ergo` directory which you have to create beforehand and change its group like this: 
+
+```bash
+chown -R 9052:9052 .ergo
+```
+
+Your config file must be in the same directory with name `ergo.conf`
+
+This will also limit the memory usage of node to 1400MB and cpu to 40%.
 
 
 ## Running other versions
