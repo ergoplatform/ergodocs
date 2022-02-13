@@ -1,53 +1,7 @@
-# Events
-
-Ergo hosts regular events such as Hackathons and Developer Summits; check out ERGOHACK III and ERGO SUMMIT II, both expected Q1 2022. 
-
-A brief overview of events is below, with related articles and repositories. 
-
-- [Weekly Dev Updates](https://www.reddit.com/r/ergonauts/search?sort=new&restrict_sr=on&q=flair%3AWEEKLY-DEV)
-- [AMAs](https://www.reddit.com/r/ergonauts/search?q=flair%3AAMA&restrict_sr=on&sort=relevance&t=all)
-
-## Hackathon
-
-We hosted two hackathons in 2021, with a third lined up for Q1 2022!
-
-### ERGOHACK I
-
-* [Hackerthon Jun 12th!](https://ergoplatform.org/en/blog/2021-06-04-ergo-community-launches-its-first-hackathon-ergohack/)
-
-**Participants**
-
-- [ErgoRaffle](https://github.com/ErgoRaffle) *(now live @ [ergoraffle.io](https://ergoraffle.io))*
-- Ergo Index Fund
-- [Smart Pools](https://github.com/WilfordGrimley/ErgoSmartPools) *(now live @ [GetBlok.io](https://getblok.io))*
-- [Sigma Stamp](https://www.sigmastamp.ml/)
-- Ergo Charts
-- [Simpler Joint Spending Tool](https://www.ergoforum.org/t/a-simpler-collective-spending-approach-for-everyone/476%20)
-
-### ERGOHACK II
-
-**Participants**
-
-- [ErgoLend](https://github.com/Ergo-Lend/) *(now live @ [ergolend.org](https://ergolend.org))*
-- [Minotaur Wallet](https://github.com/minotaur-ergo/minotaur-wallet)
-- [Ergopad](https://github.com/Ergohack-Dashboard-Project) *(now live @ [ergopad.io](https://ergopad.io))*
-- [Ergo Subpooling](https://github.com/K-Singh/ergo-subpooling) *(now live @ [GetBlok.io](https://getblok.io))*
-- [HYPO10USE: QUIDGAMES](https://github.com/hypo10use/quid-games)
-- Ergo Audio
+# ErgoSummit
 
 
-**IDEA INCUBATOR**
-
-- ErgoFans | Decentralised content producer platform | Patreon/Onlyfans
-- ErgoGigs | Decentralised gigs! (Fiverr)
-- ErgoEarn | earn for learning (Coinbase Earn)
-- ErgoStats | on-chain analysis (glassnode)
-
-### ERGOHACK III
-
-- [ErgoHack III: Privacy & Security](https://ergoplatform.org/en/blog/2021-12-21-ergohack-iii-privacy-security/)
-
-## ErgoSummit
+##  ErgoSummit I
 
 ###  Timestamps
 

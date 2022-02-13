@@ -54,7 +54,10 @@ nav:
     - Getting Started: index.md
     - Contributing: contribute.md
     - FAQ: faq.md
-    - Events: events.md
+    - Events: 
+      - Events: events/index.md
+      - ERGOHACK: events/ergohack.md
+      - ErgoSummit: events/ergosummit.md
   - Developers:
     - Developers: dev/index.md
     - Protocol: 
