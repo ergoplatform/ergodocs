@@ -47,7 +47,7 @@ We've hosted three ERGOHACK events so far - which each more successful than the 
 - SkyHarbor - fixing last issue
 - [Nautilus](https://github.com/capt-nemo429/nautilus-wallet/pull/6)
 - [SAFEW](pdf/SAFEW_ergohack3_report.pdf)
-- Satergo - 14:45 UTC (Ledger implementation)
+- [Satergo](https://drive.google.com/drive/folders/1ERas6ZyJpkY_7W1az5q0X88OfYu5OipC?usp=sharing)
 - [NightOwl](pdf/Night_Owl_-_Ergo_Hack_lll_Presentation_Final.pdf)
 - ErgoDNS - coming in 30m
 - [Hypo10use](https://github.com/hypo10use/quid-games)
@@ -55,3 +55,86 @@ We've hosted three ERGOHACK events so far - which each more successful than the 
 - [GuapSwap](pdf/GuapSwap_-_ErgoHack3_Project_Report.pdf)
 - [PetriNets](https://github.com/iandebeer/ergo-castanet/blob/main/docs/Conclusion.md)
 - [anetaBTC](https://medium.com/@anetaBTC/ergohack-summary-and-development-update-dad3224227b7)
+
+
+### Stealth Addresses
+
+This hackathon seen not one, but two seperate teams working on stealth addresses. 
+
+@aragogi 
+
+@_jd_
+
+### SkyHarbor
+
+SkyHarbor will be the primary place to quickly buy and sell NFT’s on the Ergo blockchain using Ergo Smart Contracts. Connect your dApp connector and immediately put your NFT up for sale for the price you’re looking for, or buy an NFT from our verified collections (ERGnomes, Ergosaurs, Space Farmers, etc...). It will also be fast and efficient, making it super easy and simple to interact with the blockchain, using databases and the latest infrastructure to make the website blazing fast.
+
+### Wallets
+
+With Nautilus nearing the finish line with Ledger they extended an invitation to help any other projects integrate either Ledger or the dApp connector.
+
+**Nautilus**
+
+- Ledger support added using the ledgerjs-hw-app-ergo binding library
+ - All ledger interactions are done, however transactions are getting rejected by the mempool due to an issue on the device app, which is being fixed by tesseract team.
+- Helped another teams with dApp connector integration
+
+Implementation: https://github.com/capt-nemo429/nautilus-wallet/pull/6
+Special thanks to @zuozas for the amazing Ledger illustrations. 
+
+- [Video Report](https://twitter.com/NautilusWallet/status/1493064272028393473)
+
+**Satergo**
+
+Project: Implement Ledger support into Satergo
+
+Tasks done:
+
+- Implemented HID for Nano S and Nano X
+- Implemented Speculos Ledger emulator interface
+- Implemented the Ergo Ledger app protocol in Java
+- Created utils to attest and sign transactions
+- Integrated Ledger support into program
+ 
+Both the Ledger interface library and the Ergo Ledger app protocol are reusable and can easily be integrated to other Java Ergo applications.
+It is planned to publish them on Maven Central after the API has been stabilized.
+
+**SAFEW**
+
+- Ledger Support
+- ErgoMixer support
+- Transaction History
+
+[Full report](pdf/SAFEW_ergohack3_report.pdf)
+
+### NightOwl
+
+See their [presentation]](pdf/Night_Owl_-_Ergo_Hack_lll_Presentation_Final.pdf)
+
+**Backend**
+- SC Overview
+- LP Contract
+- Customizable Game Engine
+- ErgoMixer and Night Owl
+- Swap Contract
+- Night Owl Backend Code
+
+**Frontend**
+- Home Page Mockup
+- Swap Mockup
+- Liquidity Mockup
+- Roulette Mockup
+- Coinflip Mockup
+- Night Owl Frontend Code 
+
+### ErgoDNS
+
+### HYPO10USE
+
+### Delphi
+
+### GuapSwap
+
+### PetriNets
+
+### anetaBTC
