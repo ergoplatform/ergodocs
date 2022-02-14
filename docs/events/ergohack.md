@@ -57,7 +57,7 @@ We've hosted three ERGOHACK events so far - which each more successful than the 
 - [anetaBTC](https://medium.com/@anetaBTC/ergohack-summary-and-development-update-dad3224227b7)
 
 
-### Stealth Addresses
+#### Stealth Addresses
 
 This hackathon seen not one, but two seperate teams working on stealth addresses. 
 
@@ -65,11 +65,11 @@ This hackathon seen not one, but two seperate teams working on stealth addresses
 
 @_jd_
 
-### SkyHarbor
+#### SkyHarbor
 
 SkyHarbor will be the primary place to quickly buy and sell NFT’s on the Ergo blockchain using Ergo Smart Contracts. Connect your dApp connector and immediately put your NFT up for sale for the price you’re looking for, or buy an NFT from our verified collections (ERGnomes, Ergosaurs, Space Farmers, etc...). It will also be fast and efficient, making it super easy and simple to interact with the blockchain, using databases and the latest infrastructure to make the website blazing fast.
 
-### Wallets
+#### Wallets
 
 With Nautilus nearing the finish line with Ledger they extended an invitation to help any other projects integrate either Ledger or the dApp connector.
 
@@ -107,7 +107,7 @@ It is planned to publish them on Maven Central after the API has been stabilized
 
 [Full report](pdf/SAFEW_ergohack3_report.pdf)
 
-### NightOwl
+#### NightOwl
 
 See their [presentation]](pdf/Night_Owl_-_Ergo_Hack_lll_Presentation_Final.pdf)
 
@@ -127,14 +127,29 @@ See their [presentation]](pdf/Night_Owl_-_Ergo_Hack_lll_Presentation_Final.pdf)
 - Coinflip Mockup
 - Night Owl Frontend Code 
 
-### ErgoDNS
+#### ErgoDNS
 
-### HYPO10USE
+#### HYPO10USE
 
-### Delphi
+HYPO10USE joins us again after getting their POC live in ERGOHACKII. 
 
-### GuapSwap
+- [Hypo10use](https://github.com/hypo10use/quid-games)
 
-### PetriNets
+#### The Delphi Project
 
-### anetaBTC
+[The Delphi Project](https://delphiproject.org/#) aims to help anyone explore, run, and launch decentralized oracles on the Ergo blockchain, or simply learn more about oracle pools.
+
+- [ErgoHack III Submission](https://hackmd.io/@abchris/S1dHZcwyc)
+
+#### GuapSwap
+
+- [GuapSwap](pdf/GuapSwap_-_ErgoHack3_Project_Report.pdf)
+
+#### PetriNets
+
+- [PetriNets](https://github.com/iandebeer/ergo-castanet/blob/main/docs/Conclusion.md)
+
+#### anetaBTC
+
+- [anetaBTC](https://medium.com/@anetaBTC/ergohack-summary-and-development-update-dad3224227b7)
+
