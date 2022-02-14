@@ -64,9 +64,14 @@ Our biggest Hackathon yet, with thirteen teams in total participating.
 - [SAFEW](pdf/SAFEW_ergohack3_report.pdf)
 - [Satergo](https://drive.google.com/drive/folders/1ERas6ZyJpkY_7W1az5q0X88OfYu5OipC?usp=sharing)
 
+
+---- 
 ### The Delphi Project
 
-[The Delphi Project](https://delphiproject.org/#) aims to help anyone explore, run, and launch decentralized oracles on the Ergo blockchain. Read their full submission [here](https://hackmd.io/@abchris/S1dHZcwyc).
+The Delphi Project aims to help anyone explore, run, and launch decentralized oracles on the Ergo blockchain. 
+
+- [Website](https://delphiproject.org/#)
+- [Final Report](https://hackmd.io/@abchris/S1dHZcwyc)
 
 ### NightOwl
 
@@ -109,12 +114,20 @@ Features in progress:
 
 Guapswap is a fully decentralized smart contract profit swapping service on the Ergo Blockchain.
 
+- [GitHub](https://github.com/GuapSwap)
 - [Project Report](pdf/GuapSwap_-_ErgoHack3_Project_Report.pdf)
   
 ### HYPO10USE
 
 HYPO10USE joins us again after getting their POC live in ERGOHACKII. 
 
+> Our Dapp, a game platform to feature various multiplayer games is still early work in progress. In the last hackathon we were focusing on how to break down game mechanics into the eUTXO model and found good examples of elaborate use cases such as the ErgoRaffle example and worked on them. This time we were focusing mainly on compiling the contracts and building the transactions and submitting them to the blockchain, which we managed to do after long debugging and troubleshooting sessions. 
+> 
+> **Firstly**, we have managed to create a site to trigger a new round of a game, which will be automated in the backend to generate a new round every n blocks for each game. User then can participate in this round until n-x blocks, as x will be used to evaluate the round and the winners. We start with one example but quickly will add on top of each other. We have some great ideas but we will start testing them once our framework stands and allows to quickly explore the possibilites of the Ergo infrastructure. We cannot wait to get into this phase, but first the "hard" job needs to be done. 
+>
+> **Secondly**, we managed to create a transaction to participate in a games round. The last step missing here is the collection of any winnings, once this is also setup, conceptually any game could be concluded, there will be variations to this model, but this is our concept for now. We were trying to do as much as we can in the frontend using angular but we saw that there are still unimplemented stuff not featuring all functions of ergo appkit, hence we still have a backend doing the composition and compilation of all the contracts.
+
+- [Website](https://quid-game.netlify.app/)
 - [Github](https://github.com/hypo10use/quid-games)
   
 ### ergo-castanet
@@ -122,7 +135,7 @@ HYPO10USE joins us again after getting their POC live in ERGOHACKII.
 ergo-castanet uses Petri Nets as a tool to define and validate Smart Contract Protocol specifications (EIP-0006), for creation of headless dApps.
 Using a Colored Petri Net for Smart Contract orchestration and testing. 
 
-- [Project Report](https://github.com/iandebeer/ergo-castanet/blob/main/docs/Conclusion.md).
+- [Project Report](https://github.com/iandebeer/ergo-castanet/blob/main/docs/Conclusion.md)
 
 ### anetaBTC
 
@@ -130,6 +143,7 @@ Using a Colored Petri Net for Smart Contract orchestration and testing.
 Users can connect their Yoroi or Nautilus Wallet and sign transactions. The next step is writing the ErgoScript smart contracts.
 We were also able to integrate our analytics dashboard into the bridge app and our developers will soon release our updated analytics page to track the stats of the protocol.
 
+- [Website](http://anetabtc.io/)
 - [Project Report](https://medium.com/@anetaBTC/ergohack-summary-and-development-update-dad3224227b7)
 
 ### Stealth Addresses
