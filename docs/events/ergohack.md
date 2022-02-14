@@ -29,64 +29,80 @@ We've hosted three ERGOHACK events so far - which each more successful than the 
 - Ergo Audio
 
 
-**IDEA INCUBATOR**
+## [ErgoHack III: Privacy & Security](https://ergoplatform.org/en/blog/2021-12-21-ergohack-iii-privacy-security/)
 
-- ErgoFans | Decentralised content producer platform | Patreon/Onlyfans
-- ErgoGigs | Decentralised gigs! (Fiverr)
-- ErgoEarn | earn for learning (Coinbase Earn)
-- ErgoStats | on-chain analysis (glassnode)
+Our biggest Hackathon yet, with thirteen teams in total participating.
 
-## ERGOHACK III
+### Overview
 
-- [ErgoHack III: Privacy & Security](https://ergoplatform.org/en/blog/2021-12-21-ergohack-iii-privacy-security/)
 
-**Teams** 
+**Tooling**
 
+- [Delphi](https://hackmd.io/@abchris/S1dHZcwyc)
+- [Ergo-Castanet](https://github.com/iandebeer/ergo-castanet/blob/main/docs/Conclusion.md)
+
+**Exchange**
+
+- [SkyHarbor](https://www.youtube.com/watch?v=nnLmTG-43m8)
+- [GuapSwap](pdf/GuapSwap_-_ErgoHack3_Project_Report.pdf)
+- [anetaBTC](https://medium.com/@anetaBTC/ergohack-summary-and-development-update-dad3224227b7)
+
+**Gaming**
+
+- [Hypo10use](https://github.com/hypo10use/quid-games)
+- [NightOwl](pdf/Night_Owl_-_Ergo_Hack_lll_Presentation_Final.pdf)
+
+**Identity**
+
+- [ErgoDNS](https://www.youtube.com/watch?v=G7glbtnAnMY)
 - [Stealth Addresses #1](https://github.com/aragogi/Stealth-doc)
 - [Stealth Addresses #2](https://github.com/ergoplatform/ergo-playgrounds/pull/24)
-- SkyHarbor - fixing last issue
+
+**Wallets**
+
 - [Nautilus](https://github.com/capt-nemo429/nautilus-wallet/pull/6)
 - [SAFEW](pdf/SAFEW_ergohack3_report.pdf)
 - [Satergo](https://drive.google.com/drive/folders/1ERas6ZyJpkY_7W1az5q0X88OfYu5OipC?usp=sharing)
-- [NightOwl](pdf/Night_Owl_-_Ergo_Hack_lll_Presentation_Final.pdf)
-- [ErgoDNS](https://www.youtube.com/watch?v=G7glbtnAnMY)
-- [Hypo10use](https://github.com/hypo10use/quid-games)
-- [Delphi](https://hackmd.io/@abchris/S1dHZcwyc)
-- [GuapSwap](pdf/GuapSwap_-_ErgoHack3_Project_Report.pdf)
-- [Ergo-Castanet](https://github.com/iandebeer/ergo-castanet/blob/main/docs/Conclusion.md)
-- [anetaBTC](https://medium.com/@anetaBTC/ergohack-summary-and-development-update-dad3224227b7)
-
 
 ### The Delphi Project
 
-[The Delphi Project](https://delphiproject.org/#) aims to help anyone explore, run, and launch decentralized oracles on the Ergo blockchain, or simply learn more about oracle pools. Read their full submission [here](https://hackmd.io/@abchris/S1dHZcwyc)
+[The Delphi Project](https://delphiproject.org/#) aims to help anyone explore, run, and launch decentralized oracles on the Ergo blockchain. Read their full submission [here](https://hackmd.io/@abchris/S1dHZcwyc).
 
 ### NightOwl
 
-A Decentralised Casino ontop Ergo.
+A Decentralised Casino ontop Ergo. Live at [dev.nightowlcasino.io](https://dev.nightowlcasino.io/).
 
-[dev.nightowlcasino.io](https://dev.nightowlcasino.io/)
-
-See their [presentation](pdf/Night_Owl_-_Ergo_Hack_lll_Presentation_Final.pdf)
+Read their [presentation](pdf/Night_Owl_-_Ergo_Hack_lll_Presentation_Final.pdf)
 
 ### ErgoDNS
 
-We have created a MVP for ergo-dns service to resolve Ergo Names to the wallet addresses.
+a MVP for ergo-dns service to resolve Ergo Names to the wallet addresses. 
 
-**Key Features**
+Features;
 
-- Registration - Ownership of Ergo Names can be established by minting Ergo Name NFT.
-- Resolution - ergo-dns service can be used to resolve Ergo Name to Wallet Address where Ergo Name NFT currently resides.
-Transfer - When ownership of Ergo Name NFT changes, the resolution changes automatically.
+- Registration - Ownership of Ergo Names can be established by minting a *Ergo Name NFT*.
+- Resolution - ergo-dns service can be used to resolve Ergo Name to Wallet Address where the Ergo Name NFT currently resides.
+- Transfer - When ownership of Ergo Name NFT changes, the resolution changes automatically.
 
 The service is fully decentralised and all the ownership data is maintained on-chain.
 
-[Watch the presentation](https://www.youtube.com/watch?v=G7glbtnAnMY)
+- [GitHub]
+- [Video](https://www.youtube.com/watch?v=G7glbtnAnMY)
+- [Demo Website](https://ergo-names.firebaseapp.com/home)
 
 
 ### SkyHarbor
 
-SkyHarbor will be the primary place to quickly buy and sell NFT’s on the Ergo blockchain using Ergo Smart Contracts. Connect your dApp connector and immediately put your NFT up for sale for the price you’re looking for, or buy an NFT from our verified collections (ERGnomes, Ergosaurs, Space Farmers, etc...). It will also be fast and efficient, making it super easy and simple to interact with the blockchain, using databases and the latest infrastructure to make the website blazing fast.
+> Sky Harbor will be the primary place to quickly buy and sell NFT’s on the Ergo blockchain using Ergo Smart Contracts. Connect your wallet and immediately put your NFT up for sale for the price you’re looking for, or buy an NFT from our verified collections. It will also be fast and efficient, making it super easy and simple to interact with the blockchain, using databases and the latest infrastructure to make the website blazing fast.
+
+Current features:
+- Buy and sell NFT's, cancel sales
+
+Features in progress:
+- DB setup to speed up retrieval of blockchain data
+- Previous sales, volume and floor price of collections
+
+- [Video](https://www.youtube.com/watch?v=nnLmTG-43m8)
 
 ### GuapSwap
 
@@ -97,13 +113,10 @@ SkyHarbor will be the primary place to quickly buy and sell NFT’s on the Ergo 
 
 [HYPO10USE](https://github.com/hypo10use/quid-games) joins us again after getting their POC live in ERGOHACKII. 
 
-
 ### ergo-castanet
 
 ergo-castanet uses Petri Nets as a tool to define and validate Smart Contract Protocol specifications (EIP-0006), for creation of headless dApps.
-Using a Colored Petri Net for Smart Contract orchestration and testing
-
-- [PetriNets](https://github.com/iandebeer/ergo-castanet/blob/main/docs/Conclusion.md)
+Using a Colored Petri Net for Smart Contract orchestration and testing. Read their [report](https://github.com/iandebeer/ergo-castanet/blob/main/docs/Conclusion.md).
 
 ### anetaBTC
 
@@ -115,11 +128,11 @@ We were also able to integrate our analytics dashboard into the bridge app and o
 
 ### Stealth Addresses
 
-This hackathon seen not one, but two seperate teams working on stealth addresses. 
+This hackathon seen not one, but two seperate teams working on the stealth addresses concept introduced in [this forum post](https://www.ergoforum.org/t/stealth-address-contract/255)
 
-@aragogi 
+`@aragogi` - [Stealth Scanner project + customized version of mixer in this repo](https://github.com/aragogi/Stealth-doc)
 
-@_jd_
+`@_jd_` - [adds addSignWithDhtData so user can sign a transaction w/ single dht tuple](https://github.com/ergoplatform/ergo-playgrounds/pull/24)
 
 ### Wallets
 
@@ -131,8 +144,8 @@ With Nautilus nearing the finish line with Ledger they extended an invitation to
  - All ledger interactions are done, however transactions are getting rejected by the mempool due to an issue on the device app, which is being fixed by tesseract team.
 - Helped another teams with dApp connector integration
 
-Implementation: https://github.com/capt-nemo429/nautilus-wallet/pull/6
-Special thanks to @zuozas for the amazing Ledger illustrations. 
+[Implementation](https://github.com/capt-nemo429/nautilus-wallet/pull/6)
+*Special thanks to `@zuozas` for the amazing Ledger illustrations.*
 
 - [Video Report](https://twitter.com/NautilusWallet/status/1493064272028393473)
 
