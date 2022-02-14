@@ -70,9 +70,11 @@ Our biggest Hackathon yet, with thirteen teams in total participating.
 
 ### NightOwl
 
-A Decentralised Casino ontop Ergo. Live at [dev.nightowlcasino.io](https://dev.nightowlcasino.io/).
+A Decentralised Casino ontop Ergo. 
 
-Read their [presentation](pdf/Night_Owl_-_Ergo_Hack_lll_Presentation_Final.pdf)
+- [Website](https://dev.nightowlcasino.io/)
+- [GitHub](https://github.com/nightowlcasino)
+- [Slides](pdf/Night_Owl_-_Ergo_Hack_lll_Presentation_Final.pdf)
 
 ### ErgoDNS
 
@@ -86,7 +88,6 @@ Features;
 
 The service is fully decentralised and all the ownership data is maintained on-chain.
 
-- [GitHub]
 - [Video](https://www.youtube.com/watch?v=G7glbtnAnMY)
 - [Demo Website](https://ergo-names.firebaseapp.com/home)
 
@@ -106,17 +107,22 @@ Features in progress:
 
 ### GuapSwap
 
-[GuapSwap](pdf/GuapSwap_-_ErgoHack3_Project_Report.pdf) is a fully decentralized smart contract profit swapping service on the Ergo Blockchain.
+Guapswap is a fully decentralized smart contract profit swapping service on the Ergo Blockchain.
 
-
+- [Project Report](pdf/GuapSwap_-_ErgoHack3_Project_Report.pdf)
+  
 ### HYPO10USE
 
-[HYPO10USE](https://github.com/hypo10use/quid-games) joins us again after getting their POC live in ERGOHACKII. 
+HYPO10USE joins us again after getting their POC live in ERGOHACKII. 
 
+- [Github](https://github.com/hypo10use/quid-games)
+  
 ### ergo-castanet
 
 ergo-castanet uses Petri Nets as a tool to define and validate Smart Contract Protocol specifications (EIP-0006), for creation of headless dApps.
-Using a Colored Petri Net for Smart Contract orchestration and testing. Read their [report](https://github.com/iandebeer/ergo-castanet/blob/main/docs/Conclusion.md).
+Using a Colored Petri Net for Smart Contract orchestration and testing. 
+
+- [Project Report](https://github.com/iandebeer/ergo-castanet/blob/main/docs/Conclusion.md).
 
 ### anetaBTC
 
@@ -124,7 +130,7 @@ Using a Colored Petri Net for Smart Contract orchestration and testing. Read the
 Users can connect their Yoroi or Nautilus Wallet and sign transactions. The next step is writing the ErgoScript smart contracts.
 We were also able to integrate our analytics dashboard into the bridge app and our developers will soon release our updated analytics page to track the stats of the protocol.
 
-- [anetaBTC](https://medium.com/@anetaBTC/ergohack-summary-and-development-update-dad3224227b7)
+- [Project Report](https://medium.com/@anetaBTC/ergohack-summary-and-development-update-dad3224227b7)
 
 ### Stealth Addresses
 
@@ -144,9 +150,10 @@ With Nautilus nearing the finish line with Ledger they extended an invitation to
  - All ledger interactions are done, however transactions are getting rejected by the mempool due to an issue on the device app, which is being fixed by tesseract team.
 - Helped another teams with dApp connector integration
 
-[Implementation](https://github.com/capt-nemo429/nautilus-wallet/pull/6)
+
 *Special thanks to `@zuozas` for the amazing Ledger illustrations.*
 
+- [Implementation](https://github.com/capt-nemo429/nautilus-wallet/pull/6)
 - [Video Report](https://twitter.com/NautilusWallet/status/1493064272028393473)
 
 > **Satergo**
@@ -167,4 +174,4 @@ Both the Ledger interface library and the Ergo Ledger app protocol are reusable 
 - ErgoMixer support
 - Transaction History
 
-[Full report](pdf/SAFEW_ergohack3_report.pdf)
+- [Project report](pdf/SAFEW_ergohack3_report.pdf)
