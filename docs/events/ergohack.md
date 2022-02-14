@@ -4,20 +4,18 @@ We've hosted three ERGOHACK events so far - which each more successful than the 
 
 
 
-## ERGOHACK I
-
-* [Hackerthon Jun 12th!](https://ergoplatform.org/en/blog/2021-06-04-ergo-community-launches-its-first-hackathon-ergohack/)
+## [ERGOHACK I](https://ergoplatform.org/en/blog/2021-06-04-ergo-community-launches-its-first-hackathon-ergohack/))
 
 **Participants**
 
 - [ErgoRaffle](https://github.com/ErgoRaffle) *(now live @ [ergoraffle.io](https://ergoraffle.io))*
-- Ergo Index Fund
-- [Smart Pools](https://github.com/WilfordGrimley/ErgoSmartPools) *(now live @ [GetBlok.io](https://getblok.io))*
+- [Smart Pools](https://github.com/WilfordGrimley/ErgoSmartPools) *(Inspired [GetBlok.io](https://getblok.io))*
 - [Sigma Stamp](https://www.sigmastamp.ml/)
-- Ergo Charts
 - [Simpler Joint Spending Tool](https://www.ergoforum.org/t/a-simpler-collective-spending-approach-for-everyone/476%20)
+- Ergo Index Fund
+- Ergo Charts
 
-## ERGOHACK II
+## [ERGOHACK II](https://ergoplatform.org/en/blog/2021-09-07-ergohack-ii/)
 
 **Participants**
 
@@ -38,7 +36,7 @@ Our biggest Hackathon yet, with thirteen teams in total participating.
 
 **Tooling**
 
-- [Delphi](https://hackmd.io/@abchris/S1dHZcwyc)
+- [The Delphi Project](https://hackmd.io/@abchris/S1dHZcwyc)
 - [Ergo-Castanet](https://github.com/iandebeer/ergo-castanet/blob/main/docs/Conclusion.md)
 
 **Exchange**
@@ -184,8 +182,6 @@ Both the Ledger interface library and the Ergo Ledger app protocol are reusable 
 
 > **SAFEW**
 
-- Ledger Support
-- ErgoMixer support
-- Transaction History
+Implemented Ledger support and the beginnings of ErgoMixer support. 
 
 - [Project report](pdf/SAFEW_ergohack3_report.pdf)
