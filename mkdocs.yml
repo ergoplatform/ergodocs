@@ -130,8 +130,8 @@ nav:
       - Pi: node/platforms/pi.md
       - Docker: node/platforms/docker.md
     #- Quick Install: node/quick.md
-    - Wallet: node/wallet.md
     - Overview: 
+      - Wallet: node/wallet.md
       - Swagger API: node/swagger.md
       - Architecture: node/architecture.md
       - Distributed Signatures: node/sigs.md

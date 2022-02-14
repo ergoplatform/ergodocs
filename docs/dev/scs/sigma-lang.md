@@ -13,9 +13,9 @@ hard-fork is required.
 Generalizing the Bitcoin Script, ErgoScript compiler and ErgoTree interpreter
 implements an _authentication language_ which allows expressing coin spending
 conditions. The [ErgoScript
-Compiler](sigmastate/src/main/scala/sigmastate/lang/SigmaCompiler.scala#L48)
+Compiler](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/sigmastate/src/main/scala/sigmastate/lang/SigmaCompiler.scala#L48)
 compiles the source code into
-[ErgoTree](sigmastate/src/main/scala/sigmastate/Values.scala#L990) byte code,
+[ErgoTree](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/sigmastate/src/main/scala/sigmastate/Values.scala#L990) byte code,
 which can be saved in UTXO coins to protect their spending (same as in Bitcoin).
 
 ErgoTree, in turn, is a bytecode language and memory representation that can be
@@ -26,14 +26,14 @@ combines predicates over a context and cryptographic statements provable via
 with AND, OR, k-out-of-n connectives.
 
 An _interacting party_ willing to spend the coin first constructs a
-[prover](sigmastate/src/main/scala/sigmastate/interpreter/ProverInterpreter.scala)
+[prover](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/sigmastate/src/main/scala/sigmastate/interpreter/ProverInterpreter.scala)
 with a set of secrets, it knows and then the prover is executed in two steps:
 
 - _Reduction_ - the prover uses the ErgoTree interpreter and deterministically
 reduces the ErgoTree proposition to a compound _cryptographic statement_(aka
 sigma proposition, Σ-protocol) by evaluating ErgoTree over known shared context
 (state of the blockchain system and a spending transaction). This step produces
-a value of the [SigmaBoolean](sigmastate/src/main/scala/sigmastate/Values.scala)
+a value of the [SigmaBoolean](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/sigmastate/src/main/scala/sigmastate/Values.scala)
 type.
 
 - Signing - the prover is turning the obtained (and possibly
@@ -43,7 +43,7 @@ produces a _proof_ that the party knows the secrets such that the knowledge can
 be verified before the spending transaction is added to the blockchain.
 
 To allow valid coin spending a
-[verifier](sigmastate/src/main/scala/sigmastate/interpreter/Interpreter.scala)
+[verifier](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/sigmastate/src/main/scala/sigmastate/interpreter/Interpreter.scala)
 is running the ErgoTree interpreter with the following three inputs:
 - a guarding proposition given by an ErgoTree 
 - a blockchain _context_ of the transaction being verified
@@ -54,7 +54,7 @@ executed in three steps:
 
 - _Reduction_ - same as prover, the verifier uses the ErgoTree interpreter and
 deterministically produces a value of the
-[SigmaBoolean](sigmastate/src/main/scala/sigmastate/Values.scala) type. 
+[SigmaBoolean](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/sigmastate/src/main/scala/sigmastate/Values.scala) type. 
 However, this step must finish evaluation for any possible inputs within
 concrete fixed time limit (aka maximum cost), which is checked by the interpreter.
 

@@ -4,7 +4,7 @@ We've hosted three ERGOHACK events so far - which each more successful than the 
 
 
 
-## [ERGOHACK I](https://ergoplatform.org/en/blog/2021-06-04-ergo-community-launches-its-first-hackathon-ergohack/))
+## [ERGOHACK I](https://ergoplatform.org/en/blog/2021-06-04-ergo-community-launches-its-first-hackathon-ergohack/)
 
 **Participants**
 
@@ -100,9 +100,11 @@ The service is fully decentralised and all the ownership data is maintained on-c
 > Sky Harbor will be the primary place to quickly buy and sell NFT’s on the Ergo blockchain using Ergo Smart Contracts. Connect your wallet and immediately put your NFT up for sale for the price you’re looking for, or buy an NFT from our verified collections. It will also be fast and efficient, making it super easy and simple to interact with the blockchain, using databases and the latest infrastructure to make the website blazing fast.
 
 Current features:
+
 - Buy and sell NFT's, cancel sales
 
 Features in progress:
+
 - DB setup to speed up retrieval of blockchain data
 - Previous sales, volume and floor price of collections
 
