@@ -39,3 +39,19 @@ We've hosted three ERGOHACK events so far - which each more successful than the 
 ### ERGOHACK III
 
 - [ErgoHack III: Privacy & Security](https://ergoplatform.org/en/blog/2021-12-21-ergohack-iii-privacy-security/)
+
+**Teams** 
+
+- [Stealth Addresses #1](https://github.com/aragogi/Stealth-doc)
+- [Stealth Addresses #2](https://github.com/ergoplatform/ergo-playgrounds/pull/24)
+- SkyHarbor - fixing last issue
+- [Nautilus](https://github.com/capt-nemo429/nautilus-wallet/pull/6)
+- [SAFEW](pdf/SAFEW_ergohack3_report.pdf)
+- Satergo - 14:45 UTC (Ledger implementation)
+- [NightOwl](pdf/Night_Owl_-_Ergo_Hack_lll_Presentation_Final.pdf)
+- ErgoDNS - coming in 30m
+- [Hypo10use](https://github.com/hypo10use/quid-games)
+- [Delphi](https://hackmd.io/@abchris/S1dHZcwyc)
+- [GuapSwap](pdf/GuapSwap_-_ErgoHack3_Project_Report.pdf)
+- [PetriNets](https://github.com/iandebeer/ergo-castanet/blob/main/docs/Conclusion.md)
+- [anetaBTC](https://medium.com/@anetaBTC/ergohack-summary-and-development-update-dad3224227b7)
