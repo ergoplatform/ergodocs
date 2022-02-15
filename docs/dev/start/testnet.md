@@ -43,7 +43,6 @@ Payouts are frozen for right now, if any of you need testnet ERG then you can ta
 
 ## Notes
 
-### IDs
 
 |                | mainnet  | testnet   |
 |----------------|----------|-----------|
@@ -53,6 +52,6 @@ Payouts are frozen for right now, if any of you need testnet ERG then you can ta
  
 ### HDF
 
-Headless framework does not work with testnet addresses.[ref](https://github.com/ergoplatform/ergo-headless-dapp-framework/blob/main/src/encoding.rs#L104)
+Headless framework does not work with testnet addresses. [ref](https://github.com/ergoplatform/ergo-headless-dapp-framework/blob/main/src/encoding.rs#L104)
 
 
