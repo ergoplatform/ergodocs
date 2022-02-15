@@ -51,7 +51,7 @@ Payouts are frozen for right now, if any of you need testnet ERG then you can ta
 addressPrefix = 16
 ```
 
-## Ports
+### Ports
 
 API is `9052` on testnet, `9053` on mainnet. P2P port is `9020` on testnet, `9030` on mainnet
  
