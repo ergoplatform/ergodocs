@@ -55,5 +55,4 @@ Payouts are frozen for right now, if any of you need testnet ERG then you can ta
 
 Headless framework does not work with testnet addresses.[ref](https://github.com/ergoplatform/ergo-headless-dapp-framework/blob/main/src/encoding.rs#L104)
 
-so 0x10 for the testnet, 0x00 for the mainnet
 
