@@ -12,7 +12,7 @@ java -jar -Xmx3G ergo-*.jar --testnet -c testnet.conf
 
 A minimal `testnet.conf` would be:
 
-```json
+```
 ergo {
   networkType = "testnet"
 }
