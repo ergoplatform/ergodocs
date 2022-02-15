@@ -45,15 +45,11 @@ Payouts are frozen for right now, if any of you need testnet ERG then you can ta
 
 ### IDs
 
-
-```
-# Network address prefix, currently reserved values are 0 (mainnet) and 16 (testnet)
-addressPrefix = 16
-```
-
-### Ports
-
-API is `9052` on testnet, `9053` on mainnet. P2P port is `9020` on testnet, `9030` on mainnet
+|                | mainnet  | testnet   |
+|----------------|----------|-----------|
+| API Port       | 9052     | 9053      | 
+| P2P Port       | 9030     | 9020      |
+| address prefix | (0) 0x00 | (16) 0x10 |
  
 ### HDF
 
