@@ -4,11 +4,7 @@
 
 ## Getting Started
 
-### Prerequisites 
-
 To run an Ergo node you need Java installed on your system. 
-
-The most painless way to do this is with [SDKMAN](https://sdkman.io/install).
 
 ```
 curl -s "https://get.sdkman.io" | bash
@@ -16,42 +12,16 @@ curl -s "https://get.sdkman.io" | bash
 sdk install java 11.0.13.8.1-amzn
 ```
 
-### Setup Script
-
-This script will:
-
-1. Download the latest version of the node in a folder called `ergo` in the current directory.
-2. Prompt you to set an API password.
-3. Computes the hash of that password and relaunches the node. 
-
-You can then view the status by tracking the `height`, `headersHeight` and monitoring the `.log` files. 
+Then run the following script to download the node and setup your `API` password
 
 ```
 bash -c "$(curl -s https://n.phenotype.dev)"
 ```
 
-### Shutdown 
-
-In the case of unexpected shutdowns, the database may become corrupted and you will need to resync from scratch. 
-
-To safely shut down the node, use the following command
-
-```
-curl -X POST "http://127.0.0.1:9053/node/shutdown" -H "api_key: hello"
-```
-
-To relaunch the node
-
-```bash
-java -jar -Xmx3G -Dlogback.stdout.level=WARN -Dlogback.file.level=ERR ergo.jar --mainnet -c ergo.conf
-```
-
-Please see the [troubleshooting page](/docs/node/troubleshooting) for more information. 
+You can track the status of the sync by comparing the heights found in [127.0.0.1:9053/info](http://127.0.0.1:9053/info) to the the ones on the [explorer](https://explorer.ergoplatform.com/en/).
 
 
-### Wallet
-
-If you'd like to initialise a wallet place see [this page](/node/wallet)
+Please see the [troubleshooting page](/node/platforms/troubleshooting) for more information. 
 
 ## One-Liner (Experimental)
 

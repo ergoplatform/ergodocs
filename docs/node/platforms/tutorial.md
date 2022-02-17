@@ -5,37 +5,25 @@
 
 ### Running the node
 
-Create a dedicated folder (such as `~/ergo`) for running the node.
-```bash
-mkdir ergo
-cd ergo
-```
+Create a dedicated folder (such as `~/ergo`) for running the node and download the latest [Ergo client release](https://github.com/ergoplatform/ergo/releases/) `.jar` 
 
-Download the latest [Ergo client release](https://github.com/ergoplatform/ergo/releases/) `.jar` 
-
-Create a configuration file `ergo.conf` 
-
+Create a configuration file `ergo.conf` containing the following text
 ```
-touch ergo.conf
-```
-with the following text
-```
-	ergo {
-	  node {
-	    mining = false
-	  }
+ergo {
+	node {
+		mining = false
 	}
+}
 ```
 
-Then issue the following command to run the node for the first time (from within the `ergo` folder):
+Then issue the following command to run the node for the first time.
 
-```
+```bash
 java -jar -Xmx3G -Dlogback.stdout.level=WARN -Dlogback.file.level=ERR ergo.jar --mainnet -c ergo.conf
 ```
 
-- The `-Xmx` flag sets the max heap size for the jvm
-- The `-Dlogback` flags reduces the amount of logs returned. 
-
+- The `-Xmx3G` flag sets the max heap size for the JVM. 3-4G recommended.
+- The `-Dlogback` flags reduces the number of logs returned. 
 
 The node will start syncing immediately after this. Wait for a few minutes for the API to start and go to the next step.
 
@@ -52,15 +40,7 @@ Copy the hash response which we'll place back in the `ergo.conf` file.
 
 As you can see 
 
-```
-hello
-```
-
-corresponds to the `Blake2b` hash 
-
-```
-324dcf027dd4a30a932c441f365a25e86b173defa4b8e58948253471b81b72cf
-```
+`hello` corresponds to the `Blake2b` hash `324dcf027dd4a30a932c441f365a25e86b173defa4b8e58948253471b81b72cf`
 
 > ![response](https://user-images.githubusercontent.com/23208922/69916509-c3690d80-1481-11ea-869f-630cd59cc525.png)
 
@@ -96,13 +76,22 @@ After the node is fully synced, the text will change to "Node is synced", as sho
 
 > ![synced](https://user-images.githubusercontent.com/23208922/71301767-8da4ae00-23c9-11ea-8fc0-a92a9d78b821.png)
 
-In the case of unexpected shutdowns the database may become corrupted and you need to resync.
+### Shutdown 
 
-To do so remove the following two folders and restart the node. 
+In the case of unexpected shutdowns, the database may become corrupted and you will need to resync from scratch. 
+
+To safely shut down the node, use the following command
 
 ```
-rm -rf .ergo/state
-rm -rf .ergo/history
+curl -X POST "http://127.0.0.1:9053/node/shutdown" -H "api_key: hello"
 ```
+
+To relaunch the node
+
+```bash
+java -jar -Xmx3G -Dlogback.stdout.level=WARN -Dlogback.file.level=ERR ergo.jar --mainnet -c ergo.conf
+```
+
+Please see the [troubleshooting page](/node/platforms/troubleshooting) for more information. 
 
 
