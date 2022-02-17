@@ -1,30 +1,25 @@
 # Troubleshooting
 
-## Stuck on 'Active Syncronisation' 
+## Sync
 
-If your node is stuck on Active Syncronisation with no noticable increase in the height, please attempt the following steps.
+### Stuck on 'Active Syncronisation' 
 
-1. Grep your log file using the commands from [here](/commands) to see if there's anything noticably wrong.
+If your node is stuck on Active Syncronisation with no noticeable increase in the height, please attempt the following steps.
+
+1. Grep your log file using the commands from [here](/commands) to see if there's anything noticeably wrong.
 2. Shut down your instance, take a backup and attempt to restart.
 3. Join the [#node](https://discord.gg/jjRP2uNAv5) channel on Discord for support or open an issue on GitHub.
 
-## Displays as 'Syncronised' even though it isn't.
+### Displays as 'Synchronised' even though it isn't.
 
-If your node is displaying as syncronised even though the height does not match the latest one found on [the explorer](https://explorer.ergoplatform.com/). 
+If your node is displaying as synchronised even though the height does not match the latest one found on [the explorer](https://explorer.ergoplatform.com/). 
 
 
-## Is there anyway to revert without resyncing?
+### Is there any way to revert without resyncing?
 
-The node will attempt to do this itself, but if it fails - there is no way to manually rollback. 
+The node will attempt to do this itself, but if it fails - there is no way to manually roll back. 
 
-## My correct address/balance is not displayed
-
-1. Ensure wallet is syncronised.
-2. Attempt to derive new addresses as per the [swagger](/node/swagger) instructions.
-3. Ensure you derived the additional addresses during sync.
-4. Restore on an alternative wallet. 
-
-## Searching the logs
+### Searching the logs
 Here's some useful log greps
 
 ```bash
@@ -36,7 +31,7 @@ tail -Fn+0 ergo.log | grep xception
 tail -Fn+0 ergo.log | grep "stuck"
 ```
 
-## How do I resync from scratch? 
+### How do I resync from scratch? 
 
 To resync, remove the following two folders and restart the node. 
 
@@ -45,12 +40,21 @@ rm -rf .ergo/state
 rm -rf .ergo/history
 ```
 
+## Wallet
+
+### My correct address/balance is not displayed
+
+1. Ensure the wallet is synchronised.
+2. Attempt to derive new addresses as per the [swagger](/node/swagger) instructions.
+3. Ensure you derived the additional addresses during sync.
+4. Restore on an alternative wallet. 
+
 
 ## Error Messages
 
 ###  Got GetReaders request in state (None,None,None,None)
 
-This means that the database cannot be read. If this is happening continously it likely indicates a database corruption. This can happen due to unexpected shutdowns and also due to some bugs in the database libraries (Mac/Ubuntu)
+This means that the database cannot be read. If this is happening continuously it likely indicates database corruption. This can happen due to unexpected shutdowns and also due to some bugs in the database libraries (Mac/Ubuntu)
 
 ```
 02:17:20.457 WARN  [ergoref-api-dispatcher-9] o.e.n.ErgoReadersHolder - Got GetReaders request in state (None,None,None,None)
@@ -58,7 +62,7 @@ This means that the database cannot be read. If this is happening continously it
 
 ### Invalid z bytes
 
-It has to do with parsing z value for this constructor 
+It has to do with parsing `z` value for this constructor 
 ```
 UncheckedSchnorr(dl, None, challenge, SecondDLogProverMessage(z))
 ```
