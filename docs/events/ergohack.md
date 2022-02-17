@@ -93,6 +93,10 @@ The service is fully decentralised and all the ownership data is maintained on-c
 
 - [Video](https://www.youtube.com/watch?v=G7glbtnAnMY)
 - [Demo Website](https://ergo-names.firebaseapp.com/home)
+- [Current front end code](https://github.com/jaythiya/ergodns-frontend/)
+- [Back end](https://github.com/ergonames/ergo-names-backend)
+- [Resolver API](https://github.com/chriswill/ErgoNames.Api)
+- [contracts](https://github.com/ergonames)
 
 
 ### SkyHarbor
