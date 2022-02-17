@@ -43,7 +43,11 @@ You can configure a covert address in ErgoMixer, this is handy for displaying an
 
 - [stealth address contract](https://www.ergoforum.org/t/stealth-address-contract/255)
 
+Our latest ERGOHACK seen not one, but two seperate teams working on the stealth addresses concept introduced in [this forum post](https://www.ergoforum.org/t/stealth-address-contract/255)
 
+`@aragogi` - [Stealth Scanner project + customized version of mixer in this repo](https://github.com/aragogi/Stealth-doc)
+
+`@_jd_` - [adds addSignWithDhtData so user can sign a transaction w/ single dht tuple](https://github.com/ergoplatform/ergo-playgrounds/pull/24)
 
 ## Tor support
 
