@@ -1,4 +1,6 @@
-Currently, there is one Ergo testnet available. 
+# Testnet
+
+Currently, there are two Ergo testnet available. 
 
 Explorer is available at [testnet.ergoplatform.com](https://testnet.ergoplatform.com/)
 
@@ -8,7 +10,7 @@ To join the testnet, just download [latest Ergo protocol reference client](https
 java -jar -Xmx3G ergo-*.jar --testnet -c testnet.conf
 ```
 
-where a minimal `test net.conf` would be:
+A minimal `testnet.conf` would be:
 
 ```
 ergo {
@@ -23,7 +25,33 @@ scorex {
 }
 ```
 
-Testnet Faucet
-==============
+**Faucet**
 
 You can  get 60 testERG by sending a request to `https://testnet.ergofaucet.org/payment/address/TESTNET_WALLET_ADDRESS` 
+
+
+## GetBlok 
+
+This should help out any devs who need to do work on testnet but don't know how to run a solo mining node. It should also give an give an alternative way to start up testnet in case the usual miner is down. 
+
+```
+ergo-testnet.getblok.io:3056
+```
+
+Payouts are frozen for right now, if any of you need testnet ERG then you can tag @CheeseEnthusiast on Discord and he can start them up again.
+
+
+## Notes
+
+
+|                | mainnet  | testnet   |
+|----------------|----------|-----------|
+| API Port       | 9052     | 9053      | 
+| P2P Port       | 9030     | 9020      |
+| address prefix | (0) 0x00 | (16) 0x10 |
+ 
+### HDF
+
+Headless framework does not work with testnet addresses. [ref](https://github.com/ergoplatform/ergo-headless-dapp-framework/blob/main/src/encoding.rs#L104)
+
+
