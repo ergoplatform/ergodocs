@@ -112,7 +112,7 @@ nav:
         - Front-End: dev/resources/stack/front-end.md 
         - Back-End: dev/resources/stack/back-end.md
       - Tutorials:
-        - Dust: node/dust.md
+       #- Dust: node/dust.md
         - Pi Blockchain Explorer: dev/stack/rpi-blockchain-explorer.md
       - Integration: dev/Integration/guide.md
       - Misc: 
