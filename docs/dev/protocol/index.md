@@ -11,15 +11,7 @@ Ensuring economic freedom for ordinary people through decentralized, private and
 ### [The Manifesto](https://ergoplatform.org/en/blog/2021-04-26-the-ergo-manifesto/)                                                      
 > Cryptocurrency should provide tools to enrich ordinary people. Small businesses struggling to make ends meet, not big depersonalised financial capital.
 
-### Grassroots
-
-
 Ergo had a fair launch with no-premine and with only a 4.37% of funds allocated to ecosystem development (released over the course of two and a half years through the mining protocol). No smart contract platform is fairer. With 95.57% of the token available to the public.
-
-The current structure of financial markets is broken. A small number of elites can easily access every aspect of the global market - to the detriment of the average citizen.  Blockchain technologies now offer the tools for ordinary people to protect themselves. Ergo aims to be a leader in this market by continually building tools and features that promote and maintain decentralization, privacy and open access.
-
-
-
 
 ## Core
 
