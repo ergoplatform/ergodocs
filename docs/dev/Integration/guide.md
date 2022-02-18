@@ -8,9 +8,13 @@ Some quick facts useful for an integration:
 * like Bitcoin, a transaction in Ergo has multiple inputs and outputs. Unspent outputs are single-use entities. However, Ergo is built from scratch; thus, scripts and transaction formats are different.
 * like in Bitcoin, there are some standard scripts in Ergo associated with addresses, e.g. P2PK addresses. There's an article on address schemes available [here](https://ergoplatform.org/en/blog/2019_07_24_ergo_address/)
 * Ergo has an inbuilt wallet API which is enough for most use-cases. API has a Swagger interface (on 127.0.0.1:9053 by default in the mainnet, 127.0.0.1:9052 in the testnet) with descriptions and examples for API methods.
-* How to set up a node: https://ergoplatform.org/en/blog/2019_12_02_how_to_setup/, https://github.com/ergoplatform/ergo/wiki/Set-up-a-full-node
+* [How to set up a node]
 
-Please run the node with -Xmx3G flag, e.g. ```java -jar -Xmx3G ergo-4.0.4.jar --mainnet -c mainnet.conf```
+Please run the node with -Xmx3G flag, e.g. 
+
+```
+java -jar -Xmx3G ergo-4.0.4.jar --mainnet -c mainnet.conf
+```
 
 Node Wallet
 -----------
@@ -41,24 +45,25 @@ Available libraries are:
 
 Offline Signing
 ---------------
-Transaction assembly and offline signing demo using ergo-wallet and Java is provided in [this gist](https://gist.github.com/kushti/c040f244865a451b94df01032c7a3456 )
 
-Transaction assembly and signing in Rust
-https://github.com/ergoplatform/sigma-rust/blob/d70bea875792c4e383bfdd71754338695bdb37f8/ergo-lib/src/wallet/tx_builder.rs#L552-L592
-
-https://github.com/ergoplatform/sigma-rust/blob/d70bea875792c4e383bfdd71754338695bdb37f8/ergo-lib/src/wallet/signing.rs#L133-L161
-
-Transaction assembly and signing in JavaScript
-https://github.com/ergoplatform/sigma-rust/blob/d70bea875792c4e383bfdd71754338695bdb37f8/bindings/ergo-lib-wasm/tests/test_transaction.js#L9-L69
+- Transaction assembly and offline signing demo using ergo-wallet and Java is provided in [this gist](https://gist.github.com/kushti/c040f244865a451b94df01032c7a3456 )
+- Transaction assembly and signing in Rust: [tx_builder.rs](https://github.com/ergoplatform/sigma-rust/blob/d70bea875792c4e383bfdd71754338695bdb37f8/ergo-lib/src/wallet/tx_builder.rs#L552-L592) and [signing.rs](https://github.com/ergoplatform/sigma-rust/blob/d70bea875792c4e383bfdd71754338695bdb37f8/ergo-lib/src/wallet/signing.rs#L133-L161)
+- [Transaction assembly and signing in JavaScript](https://github.com/ergoplatform/sigma-rust/blob/d70bea875792c4e383bfdd71754338695bdb37f8/bindings/ergo-lib-wasm/tests/test_transaction.js#L9-L69)
 
 Composing transactions outside the node
 --------------------------------------
 
 To get unspent UTXOs for some address, please use transactions/boxes/byAddress/unspent Explorer API method: 
+
 ```
 https://api.ergoplatform.com/transactions/boxes/byAddress/unspent/9gAE5e454UT5s3NB1625u1LynQYPS2XzzBEK4xumvSZdqnXT35M 
 ```
-You need to exclude UTXOs spent in the mempool! Use /transactions/unconfirmed/byAddress Explorer API method for that: https://api.ergoplatform.com/transactions/unconfirmed/byAddress/9gAE5e454UT5s3NB1625u1LynQYPS2XzzBEK4xumvSZdqnXT35M
+
+You need to exclude UTXOs spent in the mempool! Use /transactions/unconfirmed/byAddress Explorer API method for that:
+
+```
+https://api.ergoplatform.com/transactions/unconfirmed/byAddress/9gAE5e454UT5s3NB1625u1LynQYPS2XzzBEK4xumvSZdqnXT35M
+```
 
 Broadcasting transaction
 ------------------------
@@ -70,7 +75,12 @@ To broadcast a transaction made outside the node, the easiest way is to serializ
    System.out.println(json.toString());
 ```
 
-and then send this JSON via a POST request to the public Explorer *https://api.ergoplatform.com/api/v0/transactions/send*, your private Explorer or a node with open API (POST to http://{node_ip}:9053/transactions )
+and then send this JSON via a POST request to the public Explorer 
+```
+https://api.ergoplatform.com/api/v0/transactions/send*
+```
+
+your private Explorer or a node with open API (`POST` to `http://{node_ip}:9053/transactions` )
 
 Address generation
 ------------------
@@ -84,6 +94,7 @@ Own Testnet and Explorer Infrastructure
 You can use [*ergo-bootstrap*](https://github.com/ergoplatform/ergo-bootstrap) to install Explorer backend easily (and so not rely on public ones). 
 
 To start your own testnet, use the following node:
+
 ```
 ergo {
   networkType = "testnet"
