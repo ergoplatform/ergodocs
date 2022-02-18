@@ -1,6 +1,6 @@
 # Contributing
 
->  **In general, anything educative for the community is subject to some bounty even if not specifically listed. **Lets create grassroots finance!**
+>  In general, anything educative for the community is subject to some bounty even if not specifically listed. **Lets create grassroots finance!**
 
 ## Developers
 
