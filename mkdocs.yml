@@ -147,11 +147,11 @@ nav:
   - Applications:
     - Applications: uses/index.md
     - Live dApps:
-      - Decentralised Exchanges: uses/dex.md
+      - DEXs: uses/dex.md
       - Stablecoins: uses/stablecoins.md
       - Oracles: uses/oracles.md
       - NFTs: uses/nft.md
-      - ErgoMixer: uses/mixer.md
+      - Mixing: uses/mixer.md
       - CrowdFunding: uses/crowdfunding.md
     - In Development:
       - ProfitSharing: uses/profit.md

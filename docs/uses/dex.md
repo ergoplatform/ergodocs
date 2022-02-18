@@ -7,8 +7,9 @@ Until 2020 DeFi Summer, Value Locked in DeFi ([TVL](https://medium.com/coinmonks
 
 
 
-The [ErgoLabs](https://github.com/ergolabs) repositorty contains all the related code for ErgoDex
+The [ErgoLabs](https://github.com/ergolabs) repositorty contains all the related code for ErgoDex. 
 
+- [Running an off-chain matching bot](https://github.com/ergolabs/ergo-dex-backend#building--running-the-off-chain-services)
 - [EIP-0014: Decentalized Exchange Contracts](https://github.com/ergoplatform/eips/pull/27)
 - [Single-Chain Swap Contracts (DEX basis) by Alex Chepurnoy](https://www.youtube.com/watch)
 

@@ -1,5 +1,34 @@
+# Applications
+
+Ergo's novel design makes 
+
+## Current Applications
 > Check out [sigmaverse.io](https://sigmaverse.io/) - *your portal to the Ergo Universe* 
 
+
+|                |   Category   | Status | Token | Resources                                                                                                                   |
+|:--------------:|:------------:|:------:|:-----:|-----------------------------------------------------------------------------------------------------------------------------|
+| SigmaUSD       | Stablecoin   | ✅      | ✅     | [Git](https://github.com/anon-real/sigma-usd) │[Web](https://sigmausd.io/)│[Docs](https://ergonaut.space/en/dApps/SigmaUSD) |
+| ErgoDex        | Exchange     | ✅      | 🔜     |                                                                                                                             |
+| ErgoRaffle     | Crowdfunding | ✅      | 🔜     |                                                                                                                             | ErgoAuctions   | NFT Market   | ✅      | 🔜     |                                                                                                                             
+| anetaBTC       | wrappedBTC   | 🚧      | ✅     |                                                                                                                             |
+| ErgoPad        | Launchpad    | 🚧      | ✅     |                                                                                                                             |
+| SkyHarbor      | NFT Market   | 🚧      |       |                                                                                                                             |
+| Delphi Project | Oracles      | 🚧      |       |                                                                                                                             |                                                                                                                           |
+| ErgoNames      | DNS          | 🚧      |       |                                                                                                                             |
+| ShrimpCoin     | Oracles      | 😴      |       |                                                                                                                             |
+| DeepChainADA   | AI           | 🚧      |       |                                                                                                                             |
+| GuapSwap       | Exchange     | 🚧      |       |                                                                                                                             |
+| SigmaValley    | Metaverse    | ✅      | ✅     |                                                                                                                             |
+| ErgoFund       | Crowdfunding | 🚧      |       |                                                                                                                             |
+| ErgoLend       | Lending      | 🚧      |       |                                                                                                                             |
+| ErgoTeams      | DAO Tooling  | 🚧      |       |                                                                                                                             |
+| Paideia        | DAO Tooling  | 🚧      | 🔜     |                                                                                                                             |
+| GetBlok        | SmartPools   | ✅      |       |                                                                                                                             |
+| BlitzTCG       | Gaming       | 🚧      |       |                                                                                                                             |
+| Eternaeon      | Gaming       | 🚧      |       |                                                                                                                             |
+| NightOwl       | Casino       | 🚧      |       |                                                                                                                             |
+| HYPO10USE      | Gaming       | 🚧      |       |  
 
 ## **Main** Use Cases **of Ergo**
 
