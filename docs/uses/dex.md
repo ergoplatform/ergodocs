@@ -11,3 +11,11 @@ The [ErgoLabs](https://github.com/ergolabs) repositorty contains all the related
 
 - [EIP-0014: Decentalized Exchange Contracts](https://github.com/ergoplatform/eips/pull/27)
 - [Single-Chain Swap Contracts (DEX basis) by Alex Chepurnoy](https://www.youtube.com/watch)
+
+## GuapSwap
+
+Guapswap is a fully decentralized smart contract profit swapping service on the Ergo Blockchain.
+
+- [GitHub](https://github.com/GuapSwap)
+- [Project Report](pdf/GuapSwap_-_ErgoHack3_Project_Report.pdf)
+  
