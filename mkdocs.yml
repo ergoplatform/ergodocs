@@ -114,10 +114,10 @@ nav:
       - Tutorials:
        #- Dust: node/dust.md
         - Pi Blockchain Explorer: dev/stack/rpi-blockchain-explorer.md
-      - Integration: dev/Integration/guide.md
+        - Integration: dev/Integration/guide.md
       - Misc: 
         - Bookmarks: dev/start/resources.md
-        - Test-net: dev/start/testnet.md
+        
 
 
   - Node:
@@ -131,6 +131,7 @@ nav:
       - Docker: node/platforms/docker.md
       - Troubleshooting: node/platforms/troubleshooting.md 
       - FAQ: node/platforms/FAQ.md 
+      - Test-net: dev/start/testnet.md
     #- Quick Install: node/quick.md
     - Overview: 
       - Wallet: node/wallet.md
