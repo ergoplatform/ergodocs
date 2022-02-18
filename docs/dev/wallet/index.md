@@ -10,6 +10,7 @@
 | Minotaur     | Web     | Yes           |          | Yes     |        |       |
 | Paper Wallet | Cold    | Yes           |          |         |        |       |
 | Viawallet    | Mobile  | Yes           |          |         |        |       |
+| [URL Wallet](https://erg.urlwallet.org/)   | URL     |               |          |         |        |       |
 
 Note that some wallets are supported by third parties, we only provide the information below as a courtesy.
 
