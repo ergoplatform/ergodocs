@@ -1,6 +1,5 @@
 # Applications
 
-Ergo's novel design makes 
 
 ## Current Applications
 > Check out [sigmaverse.io](https://sigmaverse.io/) - *your portal to the Ergo Universe* 
