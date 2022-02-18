@@ -6,9 +6,9 @@
 | Ergo Wallet  | Mobile  | Yes           |          |         |        |       |
 | SAFEW        | Web     | Yes           |          |         | Soon   | Yes   |
 | Node Wallet  | Desktop | Yes           | Yes      | Yes     |        |       |
-| Satergo      | Desktop | Yes           |          |         | Soon   | Soon  |
+| [Satergo](https://www.satergo.com)      | Desktop | Yes           |          |         | Soon   | Soon  |
 | Minotaur     | Web     | Yes           |          | Yes     |        |       |
-| Paper Wallet | Cold    | Yes           |          |         |        |       |
+| [Paper Wallet](https://anon-br.github.io/ergo-paper-wallet/) | Cold    | Yes           |          |         |        |       |
 | Viawallet    | Mobile  | Yes           |          |         |        |       |
 | [URL Wallet](https://erg.urlwallet.org/)   | URL     |               |          |         |        |       |
 
