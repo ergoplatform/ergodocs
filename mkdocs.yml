@@ -98,19 +98,19 @@ nav:
      # - BlockP2P: dev/p2p/BlockP2P.md
     - Resources: 
       - Libraries:
-        - AppKit: dev/stack/appkit.md
-        - ErgoTool: dev/stack/ergotool.md
-        - Kiosk: dev/stack/kiosk.md
-        - JDE: dev/stack/jde.md
-        - Assembler: dev/stack/assembler.md
+        - AppKit: dev/resources/lib/appkit.md 
+        - ErgoTool: dev/resources/lib/ergotool.md
+        - Kiosk: dev/resources/lib/kiosk.md
+        - JDE: dev/resources/lib/jde.md
+        - Assembler: dev/resources/lib/assembler.md
       - Languages:
-        - Scala: dev/Languages/scala.md
-        - Java: dev/Languages/java.md
-        - Rust: dev/Languages/rust.md
-        - C#: dev/Languages/csharp.md
+        - Scala: dev/resources/lang/scala.md 
+        - Java: dev/resources/lang/java.md
+        - Rust: dev/resources/lang/rust.md
+        - C#: dev/resources/lang/csharp.md
       - Stack: 
-        - Front-End: dev/stack/front-end.md
-        - Back-End: dev/stack/back-end.md
+        - Front-End: dev/resources/stack/front-end.md 
+        - Back-End: dev/resources/stack/back-end.md
       - Tutorials:
         - Dust: node/dust.md
         - Pi Blockchain Explorer: dev/stack/rpi-blockchain-explorer.md
@@ -152,15 +152,15 @@ nav:
       - NFTs: uses/nft.md
       - ErgoMixer: uses/mixer.md
       - CrowdFunding: uses/crowdfunding.md
+      - Zero-Knowledge: uses/zk.md
     - In Development:
       - ProfitSharing: uses/profit.md
       - ICOs: uses/ico.md
       - Index Coins: uses/index_coins.md
       - Lending: uses/lending.md
-      - Zero-Knowledge: uses/zk.md      
+      - DAO: uses/dao.md     
     - Planned:
       - Asset Tokenisation: uses/tokenisation.md
-      - DAO: uses/dao.md
       - Buy Back Guarantees: uses/dex-buyback.md
       - LETS: uses/lets.md
       - Email Client for Blocked Internet: uses/blocked_web.md
