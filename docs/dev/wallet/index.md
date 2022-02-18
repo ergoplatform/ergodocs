@@ -1,6 +1,13 @@
 # Wallets
 
-To see the latest stable releases of wallets please see [ergoplatform.org/en/wallets/](https://ergoplatform.org/en/wallets/)
+|    Wallet   |   Type  | Native asset support | Multisig | Scripts support | Audited         |
+|:-----------:|:-------:|:--------------------:|:--------:|:---------------:|-----------------|
+| Nautilus    | Web     | Yes                  | No       |        No       | No              |
+| Ergo Wallet | Mobile  | Yes                  | No       | No              | Checked by core |
+| SAFEW       | Web     | Yes                  | No       | No              | No              |
+| Node Wallet | Desktop | Yes                  | Yes      | Yes             | Yes             |
+| Satergo     | Desktop | Yes                  | No       | No              | No              |
+| Minotaur    | Web     | Yes                  | No       | Yes             |                 |
 
 Note that some wallets are supported by third parties, we only provide the information below as a courtesy.
 
