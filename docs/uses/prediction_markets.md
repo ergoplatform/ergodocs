@@ -1,0 +1,1 @@
+- [trustless prediction markets and on-chain insurance](https://discord.com/channels/668903786361651200/668903786902847502/752451091496435762)
