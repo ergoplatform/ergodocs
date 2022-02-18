@@ -1,13 +1,13 @@
 # Wallets
 
-|    Wallet   |   Type  | Native asset support | Multisig | Scripts support |
-|:-----------:|:-------:|:--------------------:|:--------:|:---------------:|
-| Nautilus    | Web     | Yes                  | No       |        No       |
-| Ergo Wallet | Mobile  | Yes                  | No       | No              |
-| SAFEW       | Web     | Yes                  | No       | No              |
-| Node Wallet | Desktop | Yes                  | Yes      | Yes             |
-| Satergo     | Desktop | Yes                  | No       | No              |
-| Minotaur    | Web     | Yes                  | No       | Yes             |
+|    Wallet   |   Type  | Native assets | Multisig | Scripts support |
+|:-----------:|:-------:|:-------------:|:--------:|:---------------:|
+| Nautilus    | Web     | Yes           | No       |        No       |
+| Ergo Wallet | Mobile  | Yes           | No       | No              |
+| SAFEW       | Web     | Yes           | No       | No              |
+| Node Wallet | Desktop | Yes           | Yes      | Yes             |
+| Satergo     | Desktop | Yes           | No       | No              |
+| Minotaur    | Web     | Yes           | No       | Yes             |
 
 Note that some wallets are supported by third parties, we only provide the information below as a courtesy.
 
