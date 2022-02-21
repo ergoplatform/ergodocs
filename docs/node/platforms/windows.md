@@ -1,7 +1,6 @@
-## Windows
+# Windows
 
-- [How to set up and configure a full Ergo node on Windows - July, 2020](https://www.youtube.com/watch?v=fpEDJ1CM6ns)
-
+## Steps
 1. [Install java runtime environment](https://www.oracle.com/java/technologies/javase-downloads.html)
 2. [Get the latest Ergo node](https://github.com/ergoplatform/ergo/releases/)
 3. Create the configuration files
@@ -13,7 +12,7 @@ ergo {
         mining = false
     }
 }
-
+```
 You can now follow the steps in the [tutorial](/node/platforms/tutorial)
 
 ## WSL
@@ -25,3 +24,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 ```
 
 You can then follow the steps outlines in the [Linux](/node/platforms/linux) page. 
+
+## Resources
+
+- [How to set up and configure a full Ergo node on Windows - July, 2020](https://www.youtube.com/watch?v=fpEDJ1CM6ns)

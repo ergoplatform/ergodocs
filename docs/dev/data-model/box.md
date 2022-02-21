@@ -1,12 +1,24 @@
-## What is a 'Box'? 
+# Box
 
-Ergo has a Bitcoin-like UTXO transactional model: transactions spend and create one-time objects. We call this object a **box**. 
+Ergo has a *Bitcoin-like* **UTXO** transactional model: transactions spend and create one-time objects. We call this object a ***'box'***. 
 
-A box is an immutable object which can be only created or removed. A box is not simply a coin; it contains data (and code) registers. Even more, there's nothing inbox but registers. There are four predefined registers, with monetary value, protecting script, and identifier of a transaction which created the box and output index (and creation height). Because data of transaction which created the box is included in it, the box has unique contents and, therefore, a unique id. A box is a first-class citizen in the Ergo protocol. Active boxes set is authenticated via a hash-based data structure, which allows building lightweight full-nodes (as described in [this paper](https://eprint.iacr.org/2016/994)). A box may have up to six additional registers with typed data. A script may access its registers (as well as registers of input and output boxes of the spending transaction).
 
-## Example
+## Overview 
 
-Example of a box (proof-of-no-premine from Ergo genesis state, which contains last block ids from Bitcoin and Ethereum at the moment of launch, and also latest news headlines):
+- A box is an **immutable object** which can be only created or removed. 
+- A box is not simply a coin; it contains data (and code) registers. Even more, there's nothing inbox but registers. 
+- There are four predefined registers, with monetary value, protecting script, and identifier of a transaction which created the box and output index (and creation height).
+- Because data of transaction which created the box is included in it, the box has unique contents and, therefore, a unique id. 
+- A box is a **first-class citizen** in the Ergo protocol. 
+- Active boxes set is authenticated via a hash-based data structure, which allows building lightweight full-nodes (as described in [this paper](https://eprint.iacr.org/2016/994)). 
+- A box may have up to six additional registers with typed data. A script may access its registers (as well as registers of input and output boxes of the spending transaction).
+
+
+
+As an example of a *box*. We take the *proof-of-no-premine* from Ergo genesis state, which contains last block ids from Bitcoin and Ethereum at the moment of launch, and also latest news headlines:
+
+
+
 ```
      {
     "boxId": "b8ce8cfe331e5eadfb0783bdc375c94413433f65e1e45857d71550d42e4d83bd",
@@ -24,6 +36,9 @@ Example of a box (proof-of-no-premine from Ergo genesis state, which contains la
   }
 ```
 
+
+## Registers 
+
 A box, at the minimum, has four pieces of information.
 
 1. The value in NanoErgs (`1 Erg = 1000000000 NanoErgs`).
@@ -31,14 +46,16 @@ A box, at the minimum, has four pieces of information.
 3. Additional assets (tokens) are stored in this box.
 4. Creation info of the box (`txId`, the transaction identifier that created the box along with an output index). It also contains a `maxCreation` height parameter defined by the box creator (this is not the creation height; its use is to create "payment channels easily").
 
+**These are stored in the first four registers of the box.**
+
+
 - `R0` = monetary value
 - `R1` = protecting script
-- `R2` = tokens <— this was missed
+- `R2` = tokens
 - `R3` = identifier of a transaction which created the box and output index in the transaction (and also creation height).
 
-**These are stored in the first four registers (numbered R0-R3) of the box.**
 
-## Optional Registers 
+### Optional Registers 
 
 In addition, a box can have six optional registers (R4-R9) to store custom data for use in smart contracts. Registers must be densely packed; we cannot sandwich empty registers between non-empty ones. The optional registers can contain data of any of the following types:
 
