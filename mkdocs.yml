@@ -94,11 +94,12 @@ nav:
         - Overview: dev/scs/ergoscript.md
         - Quick Primer: dev/scs/ergoscript-primer.md
         - Sigma Language: dev/scs/sigma-lang.md
-      - Sigma Protocols: dev/scs/sigma.md
-      - Data Inputs: dev/scs/data-inputs.md
-      - ErgoTree: dev/scs/ergotree.md
-      - Multi-Stage Contracts: dev/scs/multi.md 
+      - Features: 
+        - Sigma Protocols: dev/scs/sigma.md
+        - Data Inputs: dev/scs/data-inputs.md
+        - Multi-Stage Contracts: dev/scs/multi.md 
       - FlowCards: dev/scs/flowcards.md
+      - ErgoTree: dev/scs/ergotree.md
     - P2P:
       - P2P: dev/p2p/index.md
       - Handshaking: dev/p2p/p2p-handshake.md
@@ -117,6 +118,7 @@ nav:
         - Scala: dev/Languages/scala.md
         - Java: dev/Languages/java.md
         - Rust: dev/Languages/rust.md
+        - Python: dev/Languages/python.md
         - C#: dev/Languages/csharp.md
       - Stack: 
         - Front-End: dev/stack/front-end.md

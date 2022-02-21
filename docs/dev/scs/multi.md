@@ -11,8 +11,7 @@ Multi-stage contracts refer to smart contracts that are operating on a stateful 
 
 
 ## References & Resources
-- [Multi-Stage Contracts](https://ergoplatform.org/en/blog/2021-04-16-multi-stage-contracts/)
-- [Talk](http://deic.uab.cat/conferences/cbt/cbt2019/resources/chepurnoy.ogv) ~ [Slides](http://deic.uab.cat/conferences/cbt/cbt2019/resources/chepurnoy.pdf) ~ [Paper](https://link.springer.com/chapter/10.1007/978-3-030-31500-9_16)
+- [Talk](http://deic.uab.cat/conferences/cbt/cbt2019/resources/chepurnoy.ogv) ┃ [Slides](http://deic.uab.cat/conferences/cbt/cbt2019/resources/chepurnoy.pdf) ┃ [Paper](https://link.springer.com/chapter/10.1007/978-3-030-31500-9_16)
 - [https://ergoplatform.org/docs/teaser.pdf](https://ergoplatform.org/docs/teaser.pdf)
 - [https://ergoplatform.org/docs/ErgoScript.pdf](https://ergoplatform.org/docs/ErgoScript.pdf)
 

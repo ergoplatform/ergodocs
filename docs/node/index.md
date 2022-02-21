@@ -18,6 +18,13 @@ Supporting pages
 - [Using the TestNet](/dev/start/testnet)
 
 
+## API
+
+- [API Docs](https://api.ergoplatform.com/api/v1/docs/)
+- [Node API](https://git.io/fjqwb)
+- [Explorer API](https://git.io/fjqwN)
+
+
 ## FAQ
 
 ### Is there any benefits for running a node?

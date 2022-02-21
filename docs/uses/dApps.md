@@ -111,7 +111,7 @@ See this [overview](https://github.com/Emurgo/Emurgo-Research/blob/master/oracle
 
 ### Misc
 
-- [ergofaucet.org](https:/ErgoFaucet.org) ~ [Github](https://github.com/zargarzadehm/ergo-faucet)
+- [ergofaucet.org](https:/ErgoFaucet.org) ┃ [Github](https://github.com/zargarzadehm/ergo-faucet)
 - [ergo.watch](https://ergo.watch) | [Git](https://github.com/abchrisxyz/ergowatch)
 - Various utilities are listed on [ergosites.github.io](https://ergosites.github.io/#ex2-tabs-3)
 - [Token Minter](https://tokenminter.ergo.ga/)

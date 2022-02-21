@@ -1,11 +1,15 @@
 ## Constant Segregation
 
->Ergo supports flexible language [ErgoTree](https://ergoplatform.org/docs/ErgoTree.pdf) of guarding propositions that protect UTXO boxes. The propositions are stored in the blockchain according to ErgoTree serialization format, which is designed for compact storage and fast script execution and transaction validation.
+We describe a typed abstract syntax of the language called [ErgoTree](https://ergoplatform.org/docs/ErgoTree.pdf) which is used to define logical propositions protecting boxes (generalization of coins) in Ergo. Serialized ErgoTree expressions are written into UTXO boxes and then evaluated by the transaction verifier. Most of Ergo users won't use ErgoTree directly since they are developing contracts in higher-level language, such as ErgoScript, which is then compiled to ErgoTree.
 
->However, ErgoTree binary format intentionally doesn't include metadata, which may be
-necessary for various Ergo applications.
 
->This standard defines the extended serialization format of contract templates, which may be reused across different protocol implementations, applications and tools on many execution environments.
+The reference implementation of ErgoTree uses Scala, however alternative implementations can use other languages
+
+The propositions are stored in the blockchain according to ErgoTree serialization format, which is designed for compact storage and fast script execution and transaction validation.
+
+However, the ErgoTree binary format intentionally doesn't include metadata, which may be necessary for various Ergo applications.
+
+This standard defines the extended serialization format of contract templates, which may be reused across different protocol implementations, applications and tools on many execution environments.
 
 There is an ErgoTree serialization section in https://ergoplatform.org/docs/ErgoTree.pdf.
 
@@ -15,16 +19,24 @@ There is an ErgoTree serialization section in https://ergoplatform.org/docs/Ergo
 
 **Massive script validation**
 
-Consider a transaction `tx` which have an INPUTS collection of boxes to spend. Every input box can have a script protecting it (propostionBytes property). This script should be executed in the context of the current transaction. The simplest transaction has a `1` input box. Thus if we want to have a sustained block validation of `1000` transactions per second, we need to be able to validate 1000 scripts per second at minimum. Additionally, the block validation time should be as small as possible so that a miner can start solving the PoW puzzle as soon as possible to increase the probability of successful mining. For every script (of an input box), the following is done in order to validate it (and should be executed as fast as possible):
+Consider a transaction that has an `INPUTS` collection of boxes to spend. 
 
-1. A Context object is created with SELF = box
+- Every input box can have a script protecting it (`propostionBytes` property). 
+- This script should be executed in the context of the current transaction. 
+- The simplest transaction has a `1` input box. 
+- Thus if we want to have a sustained block validation of `1000` transactions per second, we need to be able to validate 1000 scripts per second at minimum. 
+
+
+Additionally, the block validation time should be as small as possible so that a miner can start solving the PoW puzzle as soon as possible to increase the probability of successful mining. For every script (of an input box), the following is done in order to validate it (and should be executed as fast as possible):
+
+1. A Context object is created with `SELF = box`
 2. ErgoTree is traversed to build a cost graph - the graph for the cost estimation
 3. Cost estimation is computed by evaluating the cost graph with the current context
 4. If the cost is within the limit, the ErgoTree is evaluated using the context to obtain sigma
-proposition (see SigmaProp)
+proposition (see `SigmaProp`)
 5. Sigma protocol verification procedure is executed
 
-D.2.2 The Potential Script Processing Optimization
+## The Potential Script Processing Optimization
 
 
 Before an ErgoScript contract can be stored in a blockchain, it should be first compiled from its source code into ErgoTree and then serialized into a byte array. Because the ErgoTree is purely functional graph-based IR, the compiler may perform various optimizations for reducing the size of the tree. This will have an effect of normalization/unification, in which different original scripts may be compiled into the identical ErgoTrees and, as a result, the identical serialized bytes. In many cases, two boxes will have the same ErgoTree up to a substitution of constants. For example, all pay-to-public-key scripts have the same ErgoTree template in which only the public key (constant of GroupElement type) is replaced.
