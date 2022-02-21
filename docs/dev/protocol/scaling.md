@@ -65,5 +65,4 @@ Ergo can utilize multiple off-chain solutions, such as [Hydra](https://iohk.io/e
 
 - [A Scalability Plan for Ergo](https://www.ergoforum.org/t/a-scalability-plan-for-ergo/226)
 - [Network congestion on Jul, 10th, 2021](https://www.ergoforum.org/t/network-congestion-on-jul-10th-2021/1945)
-
-
+- [Long-term vision for Ergo](https://www.ergoforum.org/t/long-term-vision-for-ergo/2629)
