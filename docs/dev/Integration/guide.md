@@ -1,18 +1,20 @@
 # Integration
 
-A guide for helping developers from exchanges/pools/etc *integrate* Ergo. 
+A guide for helping developers from exchanges/pools/etc integrate Ergo. 
 
-Any suggestions for improvements are welcomed! Please send them to team@ergoplatform.org or [`#development` on Discord](https://discord.gg/kj7s7nb)
+Any suggestions for improvements are welcomed! 
+
+Please send them to team@ergoplatform.org or join us on [`#development` on Discord](https://discord.gg/kj7s7nb).
 
 
 ## Getting Started
 
 
-Some quick facts about Ergo that will be useful for integration. 
+Some quick facts about Ergo that are useful to know. 
 
 * like Bitcoin, a transaction in Ergo has multiple *inputs* and *outputs*. Unspent outputs are **single-use entities**. However, Ergo is built from scratch; thus, scripts and transaction formats are different.
-* Just like Bitcoin, there are some standard scripts in Ergo associated with addresses, e.g. `P2PK` addresses. [Read more on the address scheme](/dev/wallet/address)
-* Ergo has an inbuilt wallet API which is enough for most use-cases. API has a Swagger interface (on `127.0.0.1:9053` by default in the mainnet, 127.0.0.1:9052 in the testnet) with descriptions and examples for API methods.
+* Just like Bitcoin, there are some standard scripts in Ergo associated with addresses, e.g. `P2PK` addresses. [Read more here on the address scheme](/dev/wallet/address)
+* Ergo has an inbuilt wallet API which is enough for most use-cases. API has a Swagger interface on `127.0.0.1:9053` by default in the mainnet (`9052` on testnet).
 * See the full guide on setting [How to set up a node](/node/platforms/tutorial) and the associated [troubleshooting](/node/platforms/troubleshooting) page.
 
 
@@ -51,6 +53,12 @@ Available libraries are:
 - Transaction assembly and signing in Rust: [tx_builder.rs](https://github.com/ergoplatform/sigma-rust/blob/d70bea875792c4e383bfdd71754338695bdb37f8/ergo-lib/src/wallet/tx_builder.rs#L552-L592) and [signing.rs](https://github.com/ergoplatform/sigma-rust/blob/d70bea875792c4e383bfdd71754338695bdb37f8/ergo-lib/src/wallet/signing.rs#L133-L161)
 - [Transaction assembly and signing in JavaScript](https://github.com/ergoplatform/sigma-rust/blob/d70bea875792c4e383bfdd71754338695bdb37f8/bindings/ergo-lib-wasm/tests/test_transaction.js#L9-L69)
 
+
+### Address generation
+
+- Secret seed and derived addresses generation demo using ergo-wallet and Java is provided in [AdressGenerationDemo.java](https://gist.github.com/kushti/70dcfa841dfb504721f09c911b0fc53d)
+
+
 ### Composing transactions outside the node
 
 
@@ -85,15 +93,19 @@ https://api.ergoplatform.com/api/v0/transactions/send*
 your private Explorer or a node with open API (`POST` to `http://{node_ip}:9053/transactions` )
 
 
-### Address generation
 
 
-Secret seed and derived addresses generation demo using ergo-wallet and Java is provided in [this gist](https://gist.github.com/kushti/70dcfa841dfb504721f09c911b0fc53d)
+## Infrastructure
 
+### Explorer
 
-## Testnet and Explorer Infrastructure
+There is a public explorer hosted at [explorer.ergoplatform.com](https://explorer.ergoplatform.com/)
 
-You can use [*ergo-bootstrap*](https://github.com/ergoplatform/ergo-bootstrap) to install Explorer backend easily (and so not rely on public ones). 
+You can use [*ergo-bootstrap*](https://github.com/ergoplatform/ergo-bootstrap) to easily install the Explorer backend (and not rely on public ones). 
+
+### Testnet
+
+See [this page](/dev/start/testnet) for information on the public testnets.
 
 To start your testnet, use the following node:
 
@@ -124,7 +136,7 @@ scorex {
 }
 ```
 
-Then the node will CPU-mine its chain. 
+Then your node will CPU-mine its chain. 
 
 ## Troubleshooting
 
@@ -137,10 +149,11 @@ If left unchecked, these *dusty* wallets can result in too many outputs in the w
 
 To solve, 
 
-1) Get utxos from `/wallet/boxes/unspent` with min number of confirmations
-2) Get their `ids` and `total sum`
-3) Get their *binary representations* of utxos via `/utxo/byIdBinary/{boxId}`
-4) construct payment transaction like :
+- Get utxos from `/wallet/boxes/unspent` with min number of confirmations
+- Get their `ids` and `total sum`
+- Get their *binary representations* of utxos via `/utxo/byIdBinary/{boxId}`
+- Finally, construct the payment transaction like:
+  
 ```
 {
   "requests": [
