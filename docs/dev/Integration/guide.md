@@ -68,7 +68,7 @@ To get unspent UTXOs for some address, please use `transactions/boxes/byAddress/
 https://api.ergoplatform.com/transactions/boxes/byAddress/unspent/9gAE5e454UT5s3NB1625u1LynQYPS2XzzBEK4xumvSZdqnXT35M 
 ```
 
-You need to exclude UTXOs spent in the mempool! Use `/transactions/unconfirmed/byAddress` Explorer API method for that:
+You need to exclude UTXOs spent in the mempool. Use `/transactions/unconfirmed/byAddress` Explorer API method for that:
 
 ```
 https://api.ergoplatform.com/transactions/unconfirmed/byAddress/9gAE5e454UT5s3NB1625u1LynQYPS2XzzBEK4xumvSZdqnXT35M
@@ -144,7 +144,7 @@ Then your node will CPU-mine its chain.
 
 Please consider collecting deposits dust from miners periodically (who create a lot of small UTXOs).
 
-Ergo is based on the extended-UTXO model. A side-effect of UTXOs is a term coined *dust*. Dust refers to fractional values of ERG and is usually below the protocol fee, miner wallets are prone to becoming *dusty* with the stream of rewards coming into thier wallet. All these excess UTXOs can cause a slowdown and ultimately, make your node inaccessible. 
+Ergo is based on the extended-UTXO model. A side-effect of UTXOs is a term coined *dust*. Dust refers to fractional values of ERG and is usually below the protocol fee, miner wallets are prone to becoming *dusty* with the stream of rewards coming into their wallet. All these excess UTXOs can cause a slowdown and ultimately, make your node inaccessible. 
 
 
 
@@ -193,7 +193,7 @@ ergo {
 }
 ```
 
-and send 1 ERG to the change address, however, the node will attach 100 dust inputs and so send big change to the change address as well
+and send `1 ERG` to the change address, however, the node will attach 100 dust inputs (so send any large amounts of change to the change address as well)
 
 
 
