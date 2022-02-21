@@ -159,7 +159,7 @@ nav:
       - NFTs: uses/nft.md
       - Mixing: uses/mixer.md
       - CrowdFunding: uses/crowdfunding.md
-      - ErgoRaffle: uses/raffle.md
+     #- ErgoRaffle: uses/raffle.md
     - In Development:
       - ProfitSharing: uses/profit.md
       - ICOs: uses/ico.md
