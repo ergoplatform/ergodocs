@@ -1,29 +1,34 @@
-This guide is for helping developers integrate Ergo into exchanges, wallets, pools wallets etc.
+# Integration
 
-Introduction
-------------
 
-Some quick facts useful for an integration:
+This guide is to helping (exchanges, wallets, pools wallets, etc) developers integrate Ergo.
 
-* like Bitcoin, a transaction in Ergo has multiple inputs and outputs. Unspent outputs are single-use entities. However, Ergo is built from scratch; thus, scripts and transaction formats are different.
-* like in Bitcoin, there are some standard scripts in Ergo associated with addresses, e.g. P2PK addresses. There's an article on address schemes available [here](https://ergoplatform.org/en/blog/2019_07_24_ergo_address/)
-* Ergo has an inbuilt wallet API which is enough for most use-cases. API has a Swagger interface (on 127.0.0.1:9053 by default in the mainnet, 127.0.0.1:9052 in the testnet) with descriptions and examples for API methods.
+
+## Introduction
+
+
+Some quick facts about Ergo that will be useful for integration. 
+
+* like Bitcoin, a transaction in Ergo has multiple *inputs* and *outputs*. Unspent outputs are **single-use entities**. However, Ergo is built from scratch; thus, scripts and transaction formats are different.
+* like in Bitcoin, there are some standard scripts in Ergo associated with addresses, e.g. `P2PK` addresses. [Read more on the address scheme](https://ergoplatform.org/en/blog/2019_07_24_ergo_address/)
+* Ergo has an inbuilt wallet API which is enough for most use-cases. API has a Swagger interface (on `127.0.0.1:9053` by default in the mainnet, 127.0.0.1:9052 in the testnet) with descriptions and examples for API methods.
 * [How to set up a node](/node/platforms)
 
-Please run the node with -Xmx3G flag, e.g. 
+Please run the node with `-Xmx3G` flag.
 
 ```
 java -jar -Xmx3G ergo-4.0.4.jar --mainnet -c mainnet.conf
 ```
 
-Node Wallet
------------
+## Node Wallet
+
 
 - **Web interface**: [127.0.0.1:9053/panel](https://127.0.0.1:9053/panel) (`9052` on the testnet). 
 
 Main methods:
 
-* `/wallet/init` and `/wallet/restore` to create a wallet (and a secret mnemonic) and restore wallet from mnemonic
+* `/wallet/init` to create a wallet (and a secret mnemonic)  
+* `/wallet/restore` to restore a wallet from mnemonic
 * `/wallet/unlock` to unlock the wallet (it is unlocked after init but locked after restart)
 * `/wallet/lock` to lock the wallet
 * `/wallet/payment/send` to send a simple payment
@@ -32,10 +37,9 @@ Main methods:
 * `/wallet/balances` to get wallet balance (for all the addresses) 
 * `/wallet/transactions` to get wallet transactions (for all the addresses) 
 
-Create an external wallet.
-========================
+## Creating an external wallet.
 
-If you plan to perform your wallet logic externally, you can do so with a library and the block explorer. **Please note, you need to consider mempool transactions to avoid double-spending generation**.
+If you plan to perform your wallet logic externally, you can do so with a library and the block explorer. **Please note, you will need to consider mempool transactions to avoid double-spending generation**.
 
 Available libraries are:
 
@@ -45,53 +49,53 @@ Available libraries are:
 * [*ergo-golang*](https://github.com/azhiganov/ergo-golang) in Go (still raw)
 
 
-Offline Signing
----------------
+## Offline Signing
 
 - Transaction assembly and offline signing demo using ergo-wallet and Java is provided in [this gist](https://gist.github.com/kushti/c040f244865a451b94df01032c7a3456 )
 - Transaction assembly and signing in Rust: [tx_builder.rs](https://github.com/ergoplatform/sigma-rust/blob/d70bea875792c4e383bfdd71754338695bdb37f8/ergo-lib/src/wallet/tx_builder.rs#L552-L592) and [signing.rs](https://github.com/ergoplatform/sigma-rust/blob/d70bea875792c4e383bfdd71754338695bdb37f8/ergo-lib/src/wallet/signing.rs#L133-L161)
 - [Transaction assembly and signing in JavaScript](https://github.com/ergoplatform/sigma-rust/blob/d70bea875792c4e383bfdd71754338695bdb37f8/bindings/ergo-lib-wasm/tests/test_transaction.js#L9-L69)
 
-Composing transactions outside the node
---------------------------------------
+## Composing transactions outside the node
 
-To get unspent UTXOs for some address, please use transactions/boxes/byAddress/unspent Explorer API method: 
+
+To get unspent UTXOs for some address, please use `transactions/boxes/byAddress/unspent` Explorer API method: 
 
 ```
 https://api.ergoplatform.com/transactions/boxes/byAddress/unspent/9gAE5e454UT5s3NB1625u1LynQYPS2XzzBEK4xumvSZdqnXT35M 
 ```
 
-You need to exclude UTXOs spent in the mempool! Use /transactions/unconfirmed/byAddress Explorer API method for that:
+You need to exclude UTXOs spent in the mempool! Use `/transactions/unconfirmed/byAddress` Explorer API method for that:
 
 ```
 https://api.ergoplatform.com/transactions/unconfirmed/byAddress/9gAE5e454UT5s3NB1625u1LynQYPS2XzzBEK4xumvSZdqnXT35M
 ```
 
-Broadcasting transaction
-------------------------
+## Broadcasting transaction
 
-To broadcast a transaction made outside the node, the easiest way is to serialize it into JSON; in Java, it could be like:
+
+To broadcast a transaction made outside the node, the easiest way is to serialize it into `JSON`; in Java, it could be like:
 
 ```
 Json json = JsonCodecsWrapper.ergoLikeTransactionEncoder().apply(tx);
 System.out.println(json.toString());
 ```
 
-and then send this JSON via a POST request to the public Explorer 
+and then send this `JSON` via a POST request to the public Explorer 
+
 ```
 https://api.ergoplatform.com/api/v0/transactions/send*
 ```
 
 your private Explorer or a node with open API (`POST` to `http://{node_ip}:9053/transactions` )
 
-Address generation
-------------------
+
+## Address generation
+
 
 Secret seed and derived addresses generation demo using ergo-wallet and Java is provided in [this gist](https://gist.github.com/kushti/70dcfa841dfb504721f09c911b0fc53d)
 
 
-Own Testnet and Explorer Infrastructure
----------------------------------------
+## Testnet and Explorer Infrastructure
 
 You can use [*ergo-bootstrap*](https://github.com/ergoplatform/ergo-bootstrap) to install Explorer backend easily (and so not rely on public ones). 
 
@@ -126,4 +130,4 @@ scorex {
 
 Then the node will CPU-mine its chain. 
 
-Any suggestions for improvements are welcomed! Please send them to [team@ergoplatform.org](mailto:team@ergoplatform.org) or [`#development` on Discord](https://discord.gg/kj7s7nb)
+Any suggestions for improvements are welcomed! Please send them to team@ergoplatform.org or [`#development` on Discord](https://discord.gg/kj7s7nb)
