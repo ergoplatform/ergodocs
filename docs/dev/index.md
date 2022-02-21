@@ -1,6 +1,6 @@
 # Developers
 
-This page should provide an entry-point to every section of Ergo development.
+This page should provide an entry-point to every section of Ergo development. For a high-level introduction to Ergo please see the [protocol page](/dev/protocol)
 
 ## Architecture 
 
@@ -30,9 +30,10 @@ Users of *AppKit* will usually write Scala code (although AppKit supports many o
 
 - [Front-end libraries](stack/front-end/)
 
-## ErgoScript
+## [ErgoScript](scs/ergoscript/) 
 
-- [ErgoScript](scs/ergoscript/) 
+ErgoScript is a rich smart-contract language based on scala.
+
 
 
 ## Walkthroughs
@@ -41,7 +42,8 @@ Users of *AppKit* will usually write Scala code (although AppKit supports many o
 - [Tutorial starting with Appkit on Gradle projects](https://github.com/ergoplatform/ergo-appkit/wiki/Tutorial-starting-with-Appkit-on-Gradle-projects)
 - [AppKit by Example (Video)](https://www.youtube.com/watch?v=Md5s-XV6-Hs)
 - [ErgoPay](/docs/dev/wallet/payments/ergo-pay.md)
+- [You can do some simple apps](https://www.youtube.com/watch?v=d6Mf-oxaLIc) with just the node and ErgoScript to `P2S` address compiler available at [wallet.plutomonkey.com/p2s](https://wallet.plutomonkey.com/p2s/).
 
 ## DeCo
 
-Over eight weeks, participants will learn about extended UTXO and boxes, registers, ErgoScript, designing simple systems, multi-transaction systems, and much more. Join the [ErgoLend Discord](https://discord.gg/W7YXzVdz8k) for more information. 
+Over eight weeks, participants will learn about extended UTXO and boxes, registers, ErgoScript, designing simple systems, multi-transaction systems, and much more. Join the [ErgoLend Discord](https://discord.gg/NBJ68Fvr) for more information. 

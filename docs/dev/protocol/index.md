@@ -10,7 +10,7 @@ Ensuring economic freedom for ordinary people through decentralized, private and
                                                 
 > Cryptocurrency should provide tools to enrich ordinary people. Small businesses struggling to make ends meet, not big depersonalised financial capital.
 
-Ergo had a fair launch with no-premine and with only a 4.37% of funds allocated to ecosystem development (released over the course of two and a half years through the mining protocol). No smart contract platform is fairer. 
+Ergo had a fair launch with only a 4.37% of funds allocated to ecosystem development. No smart contract platform is fairer. 
 
 ## Core Components
 
@@ -31,7 +31,7 @@ Ergo uses a so-called *extended-UTXO model*, which implies UTXOs with the abilit
 
 
 
-## [ErgoScript](/dev/scs/ergoscript)
+### [ErgoScript](/dev/scs/ergoscript)
 
 
 > Ergo provides **superior support for real-world financial agreements**. It does this through:
@@ -43,7 +43,11 @@ Ergo uses a so-called *extended-UTXO model*, which implies UTXOs with the abilit
 4. Easy Oracle creation
 6. Ergo's Smart contracts have a unique [Data Inputs](/dev/scs/data-inputs) concept, enabling a radically different approach to provide robust, flexible cryptography using easy, safe scripting on privacy-centric **Sigma Protocols** (non-interactive zero-knowledge proofs). 
 7. The cryptographic part of ErgoScript is based on [Sigma Protocols](/dev/scs/sigma) and naturally supports threshold `m-of-n` signatures, ring signatures, and more. 
-8. Support for [Multi-Stage contracts](/dev/scs/multi)  that are operating on a stateful level. 
+8. Support for [Multi-Stage contracts](/dev/scs/multi) that operate on a stateful level. 
+
+The overwhelming majority of successful public blockchain use‐cases are related to financial applications. Ergo extends Bitcoin's way of writing contracts by attaching a guard script (together with additional custom data) to every coin. For example, in addition to regular protection by some `m‐of‐n` signature, Ergo allows specifying the possible recipients of these coins, which may be another contract with similar complex conditions. 
+
+> This "chaining" approach allows the implementation of **secure and efficient contracts of arbitrary complexity.**
 
 
 **Creating financial contracts on the blockchain isn't just about the functionality; it's about making that functionality safe, accessible, and powerful.**

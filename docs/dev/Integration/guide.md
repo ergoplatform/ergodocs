@@ -142,9 +142,10 @@ Then your node will CPU-mine its chain.
 
 ### Dust Collection
 
-Please consider collecting deposits dust from miners periodically (who create a lot of small UTXOs)
+Please consider collecting deposits dust from miners periodically (who create a lot of small UTXOs).
 
-If left unchecked, these *dusty* wallets can result in too many outputs in the wallet and problems operating the node.
+Ergo is based on the extended-UTXO model. A side-effect of UTXOs is a term coined *dust*. Dust refers to fractional values of ERG and is usually below the protocol fee, miner wallets are prone to becoming *dusty* with the stream of rewards coming into thier wallet. All these excess UTXOs can cause a slowdown and ultimately, make your node inaccessible. 
+
 
 
 To solve, 

@@ -13,7 +13,9 @@ There is an ErgoTree serialization section in https://ergoplatform.org/docs/Ergo
 
 ## Rational
 
-Massive script validation Consider a transaction tx which have an INPUTS collection of boxes to spend. Every input box can have a script protecting it (propostionBytes property). This script should be executed in the context of the current transaction. The simplest transaction has a `1` input box. Thus if we want to have a sustained block validation of `1000` transactions per second, we need to be able to validate 1000 scripts per second at minimum. Additionally, the block validation time should be as small as possible so that a miner can start solving the PoW puzzle as soon as possible to increase the probability of successful mining. For every script (of an input box), the following is done in order to validate it (and should be executed as fast as possible):
+**Massive script validation**
+
+Consider a transaction `tx` which have an INPUTS collection of boxes to spend. Every input box can have a script protecting it (propostionBytes property). This script should be executed in the context of the current transaction. The simplest transaction has a `1` input box. Thus if we want to have a sustained block validation of `1000` transactions per second, we need to be able to validate 1000 scripts per second at minimum. Additionally, the block validation time should be as small as possible so that a miner can start solving the PoW puzzle as soon as possible to increase the probability of successful mining. For every script (of an input box), the following is done in order to validate it (and should be executed as fast as possible):
 
 1. A Context object is created with SELF = box
 2. ErgoTree is traversed to build a cost graph - the graph for the cost estimation

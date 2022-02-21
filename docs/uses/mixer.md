@@ -78,7 +78,7 @@ There are several different aspects to consider;
 
 - If you send 1000 ERG to the mixer and, after millions of rounds, withdraw all of them to one single address, you will ruin the security gain. It is very important to withdraw carefully, to several addresses and with some time intervals.
 - This mixer is **non-interactive with no middle man**. You only work on your side and interact with the blockchain.
-Assume the mixing as a series of *mini-mixes* (rounds). At each round, you mix with one available box from another user. (note that there is no interaction with that user. You fetch the available boxes, choose one of them, create a tx spending your box, and create two 50-50 boxes.) Only you and the other party will know the mapping, and no one else will distinguish the mapping.
+Assume the mixing as a series of *mini-mixes* (rounds). At each round, you mix with one available box from another user. (note that there is no interaction with that user. You fetch the available boxes, choose one of them, create a transaction spending your box, and create two 50-50 boxes.) Only you and the other party will know the mapping, and no one else will distinguish the mapping.
 - In theory, each round's distinguishability is 2^-1 for any observer but 100% for each participant.
 Therefore, in theory, the final distinguishability is 2^(-rounds).
 - In the worst-case practice, this distinguishability can be 100%. Consider there are only you and an attacker mixing the boxes. In each step, he knows the mapping, so he knows the final mapping. Here comes the pool size. If there are more people in the mixing pool, at least some of the boxes will be mixed with other people's, resulting in more indistinguishability.

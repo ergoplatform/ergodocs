@@ -60,7 +60,7 @@ This topic is just for getting feedback, and I still haven't designed the APIs t
 ```
 The above is a potential request that Ergo Auction House can register to the service, which will start a new auction! So the Ergo Auction House app will ask the user to deposit the required assets to the _address_ (will discuss what this _address_ is in the next sections) using their favourite wallet and registers the request to the service.
 
-After such a request, the service will follow the _address_ and, when the conditions are met, assembles the tx and makes sure it will be mined. In case of failures, assets will be returned to the user; for example, if the tx is for placing a bid and someone else places a bid before us!
+After such a request, the service will follow the _address_ and, when the conditions are met, assembles the transaction and makes sure it will be mined. In case of failures, assets will be returned to the user; for example, if the transaction is for placing a bid and someone else places a bid before us!
 
 Note that all input and data input boxes are in ids, and no input raw will be required, which makes it safe for dApps to avoid running nodes for themselves or using random nodes in the network to get raw inputs.
 
@@ -68,7 +68,7 @@ Also, note that the above approach doesn't solve the problem of finding necessar
 
 Furthermore, the _txSpec_ is pretty raw, can be improved so that the service encodes the register to make it easier for dApps, but with the mentioned libraries around, I don't see it as a problem for dApps to encode registers themselves.
 
-With some improvements on the node's side, the service can be very fast and effective by using chained transactions to avoid wasting time for the deposits to be mined! So basically, it will be like the user is running a node and is generating the tx directly without intermediate operations.
+With some improvements on the node's side, the service can be very fast and effective by using chained transactions to avoid wasting time for the deposits to be mined! So basically, it will be like the user is running a node and is generating the transaction directly without intermediate operations.
 
 
 Last but not least, the service will, of course, provide some other APIs for dApps to see the result of their registered requests.

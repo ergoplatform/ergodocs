@@ -58,17 +58,17 @@ nav:
       - Events: events/index.md
       - ERGOHACK: events/ergohack.md
       - ErgoSummit: events/ergosummit.md
-  - Developers:
+  - 🔬 ┃ Learn: 
+    - Protocol: dev/protocol/index.md
+    - Components: 
+      - eUTXO: dev/protocol/eutxo.md
+      - Autolykos: dev/protocol/autolykos.md
+      - Storage Rent: dev/protocol/rent.md
+      - NIPoPoWS: dev/protocol/nipopow.md
+    - Scaling: dev/protocol/scaling.md
+    - EIPs: dev/protocol/eip.md
+  - 🛠 ┃ Build:
     - Developers: dev/index.md
-    - Protocol: 
-      - Protocol: dev/protocol/index.md
-      - Components: 
-        - eUTXO: dev/protocol/eutxo.md
-        - Autolykos: dev/protocol/autolykos.md
-        - Storage Rent: dev/protocol/rent.md
-        - NIPoPoWS: dev/protocol/nipopow.md
-      - Scaling: dev/protocol/scaling.md
-      - EIPs: dev/protocol/eip.md
     - Data Model:
       - Transactions: dev/protocol/transaction.md
       - Box: dev/data-model/box.md
@@ -80,6 +80,7 @@ nav:
       - Payments:
         - ErgoPay: dev/wallet/payments/ergo-pay.md
         - dApp Connector: dev/wallet/payments/dApp.md
+        - Proxy Contracts: dev/wallet/payments/proxy.md
         - Ledger: dev/wallet/payments/ledger.md
     - Smart Contracts:
       - Smart Contracts: dev/scs/index.md
@@ -87,14 +88,14 @@ nav:
         - Overview: dev/scs/ergoscript.md
         - Quick Primer: dev/scs/ergoscript-primer.md
         - Sigma Language: dev/scs/sigma-lang.md
-      - FlowCards: dev/scs/flowcards.md
       - Sigma Protocols: dev/scs/sigma.md
       - Multi-Stage Contracts: dev/scs/multi.md 
+      - FlowCards: dev/scs/flowcards.md
     - P2P:
       - P2P: dev/p2p/index.md
       - Handshaking: dev/p2p/p2p-handshake.md
       - Network Messages: dev/p2p/network.md
-      - Modifiers Exchange: dev/p2p/modifiers.md
+     # - Modifiers Exchange: dev/p2p/modifiers.md
      # - BlockP2P: dev/p2p/BlockP2P.md
     - Resources: 
       - Libraries:
@@ -117,10 +118,7 @@ nav:
         - Integration: dev/Integration/guide.md
       - Misc: 
         - Bookmarks: dev/start/resources.md
-        
-
-
-  - Node:
+  - 📦 ┃  Node:
     - Node: node/index.md
     - Getting Started: 
       - Platforms: node/platforms/index.md
@@ -131,20 +129,18 @@ nav:
       - Docker: node/platforms/docker.md
       - Troubleshooting: node/platforms/troubleshooting.md 
       - FAQ: node/platforms/FAQ.md 
-      - Test-net: dev/start/testnet.md
-    #- Quick Install: node/quick.md
     - Overview: 
       - Wallet: node/wallet.md
       - Swagger API: node/swagger.md
-      - Architecture: node/architecture.md
+      #- Architecture: node/architecture.md
       - Distributed Signatures: node/sigs.md
+      - Test-net: dev/start/testnet.md
     - Light Modes: 
       - Digest State: node/digest-state.md
       - History Pruning: node/history-pruning.md
       - Snapshots: node/snapshots.md
       - NiPoPoWS: dev/protocol/nipopow.md
-
-  - Applications:
+  - 💡 ┃  Applications:
     - Applications: uses/index.md
     - Live dApps:
       - DEXs: uses/dex.md

@@ -10,7 +10,7 @@ __We've designed Ergo with long-term economic sustainability in mind, and storag
 
 The 2020 block reward reduction was the most important halving event Bitcoin has experienced. This was the point where the narrative of programmatic scarcity and digital gold was truly be proven in the context of the sharpest economic downturn in living memory. In previous halvings, Bitcoin has still been in its infancy, a niche experiment. Future halvings will confirm the principle. But this one is the watershed.
 
-Looking ahead, though, what happens in 20 or 30 years, when block rewards have fallen so far that miners have to rely on tx fees and potentially other sources of revenue? Will Bitcoin be sustainable? What will be the impact on the ecosystem?
+Looking ahead, though, what happens in 20 or 30 years, when block rewards have fallen so far that miners have to rely on transaction fees and potentially other sources of revenue? Will Bitcoin be sustainable? What will be the impact on the ecosystem?
 
 *The simple answer is that we don't know.*
 
