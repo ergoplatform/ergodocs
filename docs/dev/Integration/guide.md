@@ -134,15 +134,12 @@ Please consider collecting deposits dust from miners periodically (who create a 
 
 If left unchecked, these *dusty* wallets can result in too many outputs in the wallet and problems operating the node.
 
-```
-Failed to find boxes to assemble a transaction for List(ErgoBoxCandidate(...
-```
 
-You can check the status of this by checking  `/wallet/boxes/unspent` and assemble transactions from this. 
+To solve, 
 
-1) get utxos from `/wallet/boxes/unspent` with min number of confirmations
-2) get their ids and total sum
-3) get binary representations of utxos via `/utxo/byIdBinary/{boxId}`
+1) Get utxos from `/wallet/boxes/unspent` with min number of confirmations
+2) Get their `ids` and `total sum`
+3) Get their *binary representations* of utxos via `/utxo/byIdBinary/{boxId}`
 4) construct payment transaction like :
 ```
 {
@@ -161,7 +158,7 @@ You can check the status of this by checking  `/wallet/boxes/unspent` and assemb
 } 
 ```
 
-and post to `/wallet/transaction/send` , `utxo1` , `utxo2` here is about binary utxos. 
+and post to `/wallet/transaction/send`
 
 Set value and fee accordingly, `value + fee = total sum of utxos`
 
@@ -170,7 +167,6 @@ You can query with specific parameters like this,
 ```
 curl -X GET "http://127.0.0.1:9053/wallet/boxes/unspent?minConfirmations=10&minInclusionHeight=0" -H  "accept: application/json" -H  "api_key: hello"
 ```
-
 
 Another (and simple) way to collect is to set 
 
