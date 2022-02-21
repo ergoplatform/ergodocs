@@ -171,6 +171,7 @@ nav:
       - DAO: uses/dao.md
       - Buy Back Guarantees: uses/dex-buyback.md
       - LETS: uses/lets.md
+      - Trustlss LETS: uses/trustless-lets.md
       - Email Client for Blocked Internet: uses/blocked_web.md
       - Atomic Swaps: dev/protocol/atomic.md
       - ErgoData: uses/ErgoData.md
