@@ -79,6 +79,7 @@ nav:
       - Box: dev/data-model/box.md
       - Block: dev/data-model/block.md
       - Registers: dev/data-model/registers.md
+      #- UTXO-State: 
     - Wallets:
       - Wallets: dev/wallet/index.md
       - Addresses: dev/wallet/address.md
@@ -129,6 +130,7 @@ nav:
         - Integration: dev/Integration/guide.md
       - Misc: 
         - Bookmarks: dev/start/resources.md
+        - Audit: dev/protocol/audit.md
   - 📦 ┃  Node:
     - Node: node/index.md
     - Getting Started: 
@@ -139,6 +141,8 @@ nav:
       - Pi: node/platforms/pi.md
       - Docker: node/platforms/docker.md
       - Troubleshooting: node/platforms/troubleshooting.md 
+      - FAQ: node/platforms/FAQ.md
+      - Tutorial: node/platforms/tutorial.md
     - Overview: 
       - Wallet: node/wallet.md
       - Swagger API: node/swagger.md
