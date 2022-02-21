@@ -1,7 +1,6 @@
 # Integration
 
-
-This guide is to helping (exchanges, wallets, pools wallets, etc) developers integrate Ergo.
+A guide for helping developers from exchanges/pools/etc *integrate* Ergo. 
 
 
 ## Introduction
