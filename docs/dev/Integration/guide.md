@@ -185,10 +185,9 @@ and send 1 ERG to the change address, however, the node will attach 100 dust inp
 
 ### Native Asssets
 
+In the case of large airdrops, many users mistakenly end up putting exchange addresses to receive native assets. An *auto-burn* method will be in future versions of the node to reduce the manual component of this task. See this [Issue](https://github.com/ergoplatform/ergo/issues/1604) for more information.
+
 Send the following request via `/wallet/payment/send`, replacing the `tokenId` with the IDs from the tokens spamming your wallets. 
-
-auto-burn methods will be in future versions of the node to reduce the manual component of this task. See this [Issue](https://github.com/ergoplatform/ergo/issues/1604) for more information.
-
 
 ```
 [
@@ -205,7 +204,7 @@ auto-burn methods will be in future versions of the node to reduce the manual co
 
 #### Tokens with Value
 
-- SigUSD: `472c3d4ecaa08fb7392ff041ee2e6af75f4a558810a74b28600549d5392810e8`
+- SigUSD ($1): `472c3d4ecaa08fb7392ff041ee2e6af75f4a558810a74b28600549d5392810e8` 
 - SigRSV
 - ergopad
 - NETA
