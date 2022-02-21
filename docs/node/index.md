@@ -15,6 +15,8 @@ Supporting pages
 - [Troubleshooting](/node/platforms/troubleshooting)
 - [Tutorial](/node/platforms/tutorial)
 - [FAQ](/node/#faq)
+- [Using the TestNet](/dev/start/testnet)
+
 
 ## FAQ
 

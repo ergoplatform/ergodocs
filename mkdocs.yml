@@ -48,6 +48,11 @@ plugins:
 markdown_extensions:
   - meta
   - admonition
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 
 nav:
   - Getting Started:
@@ -73,6 +78,7 @@ nav:
       - Transactions: dev/protocol/transaction.md
       - Box: dev/data-model/box.md
       - Block: dev/data-model/block.md
+      - Registers: dev/data-model/registers.md
     - Wallets:
       - Wallets: dev/wallet/index.md
       - Addresses: dev/wallet/address.md
@@ -89,6 +95,8 @@ nav:
         - Quick Primer: dev/scs/ergoscript-primer.md
         - Sigma Language: dev/scs/sigma-lang.md
       - Sigma Protocols: dev/scs/sigma.md
+      - Data Inputs: dev/scs/data-inputs.md
+      - ErgoTree: dev/scs/ergotree.md
       - Multi-Stage Contracts: dev/scs/multi.md 
       - FlowCards: dev/scs/flowcards.md
     - P2P:
@@ -104,6 +112,7 @@ nav:
         - Kiosk: dev/stack/kiosk.md
         - JDE: dev/stack/jde.md
         - Assembler: dev/stack/assembler.md
+        - HDF: dev/stack/headless.md
       - Languages:
         - Scala: dev/Languages/scala.md
         - Java: dev/Languages/java.md
@@ -148,6 +157,7 @@ nav:
       - NFTs: uses/nft.md
       - Mixing: uses/mixer.md
       - CrowdFunding: uses/crowdfunding.md
+      - ErgoRaffle: uses/raffle.md
     - In Development:
       - ProfitSharing: uses/profit.md
       - ICOs: uses/ico.md
@@ -172,8 +182,12 @@ nav:
       - Math Fun: uses/math_fun.md
       - PoW Tokens: uses/PoW_tokens.md
       - Collateral Mining: uses/collateral-mining.md
+      - Mutual Credit: uses/mutual_credit.md
+      - Prediction Markets: uses/prediction_markets.md
+      - Privacy: uses/privacy.md
       - Perpetual Tokens: uses/perpetual.md
       - Bonding Curve: uses/bonding.md
+      - Context Claims: uses/context-claims.md
 
 
       
