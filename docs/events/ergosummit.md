@@ -1,9 +1,21 @@
 # ErgoSummit
 
 
-##  ErgoSummit I
+##  Ergo Summit 2022 Privacy & Security
 
-###  Timestamps
+- [Upgrading Macroeconomic Policy via Softfork | Dionysis Zindros](https://www.youtube.com/watch?v=2OrHmBaBn9E)
+- [Decentralizing the Internet | Johnny Wu](https://www.youtube.com/watch?v=EGcp_T3AiWk)
+- [Weekly Update & AMA - Feb 18, 2022 PART 1](https://www.youtube.com/watch?v=z-6PNEq8dEs) & [PART 2](https://www.youtube.com/watch?v=p3-XJHqsMWs)
+- [Blockchain Privacy and Security Explained | NiceHash](https://www.youtube.com/watch?v=8FzdkxVD_YM&t=2s)
+- [SmartPools - the Future of PoW Mining | GetBlok](https://www.youtube.com/watch?v=pc3GEqMik48)
+- [Trustless AI Training | PGWAD](https://www.youtube.com/watch?v=lvpBW31rVhw)
+- [Bringing Bitcoin to Ergo | Frosty](https://www.youtube.com/watch?v=Zx09-aPiOLI)
+- [Dev Update Feb 20th | ErgoHack, Games, Wallets, NFTs, Mixer upgrades + more](https://www.youtube.com/watch?v=-l390QBcSIw)
+- [The Deep Ocean Dark Pool Protocol | Oliver Cracknell](https://www.youtube.com/watch?v=SaBmvAxah0E)
+- [Ergo: A Platform for Cryptographic Applications | Kushti](https://www.youtube.com/watch?v=h6g5WahEUSk)
+
+
+##  ErgoSummit I
 
 - [00:00:00](https://www.youtube.com/watch?v=zG-rxMCDIa0&amp;t=0s) - The Summit
 - [00:01:00](https://www.youtube.com/watch?v=zG-rxMCDIa0&amp;t=60s) - Ergo 101: The Basics
@@ -29,6 +41,3 @@
 - [07:45:30](https://www.youtube.com/watch?v=zG-rxMCDIa0&amp;t=27930s) - The Ergo Foundation’s Grant-Based Approach To Developing The UTXO-Based dApp Ecosystem
 - [08:05:30](https://www.youtube.com/watch?v=zG-rxMCDIa0&amp;t=29130s) - 2021 Ergo Roadmap reveal
 
-## ErgoSummit II
-
-> Q1 2022

@@ -35,7 +35,7 @@ The fastest way to get started is to start a [Raffle](https://ergoraffle.com/). 
 2. Join the [@ErgoSocials](https://t.me/ErgoSocials) or the [#marketing](https://discord.gg/TBFXMzha7X) channel on Discord and collaborate. 
 3. Read the community built [Guerrilla Marketing handbook](https://ergonaut.space/en/guerrilla-marketing) or add to anywhere else on ergonaut.space
 4. Collaborate on the - [Shared Figma Graphic Space](https://www.figma.com/file/pd92vgB3xNFThaacIKodYs/Guide-ID?node-id=1%3A756)
-
+5. Follow us [across socials](https://linktr.ee/ergoplatform)
 
 
 

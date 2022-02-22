@@ -63,6 +63,7 @@ nav:
       - Events: events/index.md
       - ERGOHACK: events/ergohack.md
       - ErgoSummit: events/ergosummit.md
+    - Documents: documents.md
   - 🔬 ┃ Learn: 
     - Protocol: dev/protocol/index.md
     - Components: 

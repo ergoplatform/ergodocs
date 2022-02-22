@@ -5,6 +5,11 @@ Ergo aims to provide an efficient, secure, and easy way to implement financial c
 > Privacy must remain an option to protect the individual. It does not have to be forced; let people make their own choices. Privacy is the ability to create barriers and erect boundaries to create a space for the individual. It is up to each what borders and boundaries they choose to make. - *The Ergo Manifesto*
 
 
+## Tutorials
+
+- [Verifying Schnorr Signatures in ErgoScript](https://www.ergoforum.org/t/verifying-schnorr-signatures-in-ergoscript/3407)
+- [Updateable Multisig Pattern](https://www.ergoforum.org/t/updateable-multisig-pattern/3356)
+
 ## Zero-Knowledge Proofs
 
 Ergo provides superior access to ***discrete log-based* zero-knowledge proofs**, but what exactly is a zero-knowledge proof? 

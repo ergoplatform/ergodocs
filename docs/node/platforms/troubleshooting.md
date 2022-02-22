@@ -92,3 +92,23 @@ In Akka, messages that can't be delivered are routed to a synthetic actor which 
 ```
 tail -Fn+0 ergo.log | grep "akka.log-dead-letters"
 ```
+
+
+
+
+## Run
+
+```
+java -jar -Xmx4G ergo.jar --mainnet -c ergo.conf
+
+## Run with INFO logs suppressed
+java -jar -Xmx8G -Dlogback.stdout.level=WARN -Dlogback.file.level=ERR ergo.jar --mainnet -c mainnet.conf
+
+## Pipe output to a log file instead of the terminal
+java -jar -Xmx4G ergo.jar --mainnet -c ergo.conf > new.log 2>&1 & 
+```
+The `-Xmx4G` flag specifies the amount of memory you want to allocate to the JVM Heap. 4 GB is recommended even if you can allocate more.  
+
+
+
+
