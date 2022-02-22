@@ -59,6 +59,14 @@ If you wish to host a public node, there are a few important aspects your wallet
 curl -X POST "http://127.0.0.1:9053/node/shutdown" -H "api_key: hello"
 ```
 
+If you cannot safely shut-down, you can kill the ports. 
+
+```
+kill -9 $(lsof -t -i:9053)
+kill -9 $(lsof -t -i:9030)
+```
+
+
 ### Compiling from source
 
 Note that instead of downloading the precompiled Ergo jar, you can clone the repository and compile the jar from the source using the [`sbt assembly`](https://www.scala-sbt.org/)  command.

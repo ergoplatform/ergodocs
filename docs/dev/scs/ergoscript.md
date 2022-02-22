@@ -20,14 +20,20 @@ Allows
 Please see this [Quick Primer on ErgoScript](/dev/scs/ergoscript-primer) for an overview of key concepts and some basic examples. 
 
 
-### Tutorials & Guides
+### Tutorials 
 
 - [Learn ErgoScript By Example Via The Ergo Playground with Robert Kornacki (Video)](https://www.youtube.com/watch?v=8l2v1asHgyA)
 - [ErgoScript by Example Repository](https://github.com/ergoplatform/ergoscript-by-example)
+- [Testing Ergo Contracts Off-chain](https://github.com/anon-real/contract-testing)
+
+### Advanced Tutorials
+
 - [Advanced ErgoScript Tutorial](https://ergoplatform.org/docs/AdvancedErgoScriptTutorial.pdf)
 - [ErgoScript tutorial](https://ergoplatform.org/docs/ErgoScript.pdf)
 
+
 ### Explanations
+
 - [ErgoScript Design patterns](https://www.ergoforum.org/t/ergoscript-design-patterns/222)
 - [SigmaState Protocols](https://docs.ergoplatform.com/sigmastate_protocols.pdf)
 

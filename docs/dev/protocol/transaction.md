@@ -1,8 +1,4 @@
-
-
-
-
-### Anatomy of an Ergo transaction
+# Transactions
 
 Each transaction executed on Ergo consists of these three things. 
 

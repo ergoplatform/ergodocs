@@ -141,7 +141,6 @@ nav:
       - Pi: node/platforms/pi.md
       - Docker: node/platforms/docker.md
       - Troubleshooting: node/platforms/troubleshooting.md 
-      - FAQ: node/platforms/FAQ.md
       - Tutorial: node/platforms/tutorial.md
     - Overview: 
       - Wallet: node/wallet.md

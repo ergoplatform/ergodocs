@@ -14,4 +14,3 @@ Supporting pages
 
 - [Troubleshooting](/node/platforms/troubleshooting)
 - [Tutorial](/node/platforms/tutorial)
-- [FAQ](/node/platforms/faq)

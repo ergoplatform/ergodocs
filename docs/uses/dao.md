@@ -8,4 +8,5 @@ ErgoTeam will not only be for simple joint-spendings like it was initially inten
 
 To achieve that, certain procedures must be improved. Here is one aspect of it: 
 
-- [A more efficient UTXO voting](https://www.ergoforum.org/t/a-more-efficient-utxo-voting/3144) https://www.ergoforum.org/t/a-more-efficient-utxo-voting/3144
+- [A more efficient UTXO voting](https://www.ergoforum.org/t/a-more-efficient-utxo-voting/3144)
+- [GitHub: ErgoTeam](https://github.com/anon-real/ergo-team)
