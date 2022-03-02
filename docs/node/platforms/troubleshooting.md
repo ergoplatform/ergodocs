@@ -60,6 +60,14 @@ This means that the database cannot be read. If this is happening continuously i
 02:17:20.457 WARN  [ergoref-api-dispatcher-9] o.e.n.ErgoReadersHolder - Got GetReaders request in state (None,None,None,None)
 ```
 
+To resync, remove the following two folders and restart the node. 
+
+```
+rm -rf .ergo/state
+rm -rf .ergo/history
+```
+
+
 ### Invalid z bytes
 
 It has to do with parsing `z` value for this constructor 
