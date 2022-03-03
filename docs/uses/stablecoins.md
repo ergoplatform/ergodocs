@@ -16,8 +16,10 @@ The UI for the front-end is available at [anon-real/sigma-usd](https://github.co
 
 ## DexyUSD
 
+Dexy uses seigniorage
+
+- [Dexy Stablecoin Design]https://github.com/ergoplatform/ergo-jde/blob/main/kiosk/src/test/scala/kiosk/dexy/Dexy.md
 - [Dexy: USD Simplest Stablecoin](https://www.ergoforum.org/t/dexy-usd-simplest-stablecoin-design/1430)
-
-
+- [Dexy enhancements to counter various attacks in vanilla proposal](https://github.com/ergoplatform/ergo-jde/blob/main/kiosk/src/test/scala/kiosk/dexy)
 
 
