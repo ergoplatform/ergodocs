@@ -6,7 +6,7 @@ Blockchain assets can be extremely volatile. That’s why investors often seek d
 ## SigmaUSD
 > [sigmausd.io](https://sigmausd.io), The worlds first UTxO-based stable coin - an instantiation of the [AgeUSD protocol](https://github.com/Emurgo/age-usd). Its economic model designed in partnership between IOHK, Ergo, and Emurgo maintains the conservative settings for collateral reserves and avoids the need for liquidations. Along with that, it supports a fully decentralised stablecoin emission setup.
 
-The UI for the front-end is available at [anon-real/sigma-usd](https://github.com/anon-real/sigma-usd). For more information and a more general overview please see [ergonaut.space](https://ergonaut.space
+The UI for the front-end is available at [anon-real/sigma-usd](https://github.com/anon-real/sigma-usd). For more information and a more general overview please see [ergonaut.space](https://ergonaut.space)
 
 - [Ergo Summit 2021 - The IOHK Perspective - Designing the AgeUSD StableCoin](https://youtu.be/zG-rxMCDIa0?t=9247)
 - [Overview Video (with diagrams)](https://www.youtube.com/watch?v=O3hPEp3tzoU)
