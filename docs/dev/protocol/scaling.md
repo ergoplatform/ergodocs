@@ -22,7 +22,7 @@ It's important to keep in mind that **TPS is mostly a vanity metric.** It's not 
 
 ## Settlement Layer
 
-Below you will find a developer harnessing the power of eUTXO to airdrop native tokens to [10,000 addresses at once](https://ergoplatform.org/admin/%5Bhttps://explorer.ergoplatform.com/en/transactions/e2c4954665ccf87791f42983ae4f7031205c2e719709907cbf2ff09e5489d4b8%5D(%3Chttps://explorer.ergoplatform.com/en/transactions/c4e5276182543b17eae4e767d60965feceaf1fd1ba1f5bde76aae751b33a6bb8)
+Below you will find a developer harnessing the power of eUTXO to airdrop native tokens to [10,000 addresses at once](https://ergoplatform.org/admin/%5Bhttps://explorer.ergoplatform.com/en/transactions/e2c4954665ccf87791f42983ae4f7031205c2e719709907cbf2ff09e5489d4b8%5D)
 
 Thanks to the high flexibility of the ErgoScript programming model, large chunks of transactions can happen on layer two and be settled in Ergo using a single transaction. 
 
