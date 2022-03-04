@@ -107,7 +107,7 @@ You can use [*ergo-bootstrap*](https://github.com/ergoplatform/ergo-bootstrap) t
 
 See [this page](/dev/start/testnet) for information on the public testnets.
 
-To start your testnet, use the following node:
+To start your testnet, use the following `testnet.conf`:
 
 ```
 ergo {
