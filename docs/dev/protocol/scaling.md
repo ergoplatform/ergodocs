@@ -1,10 +1,32 @@
+# Scaling
+
+Currently, there are three generations of blockchain, each capable of more complex behaviors than the last. First generation refers to the original use BTC was intended for, that is to provide a reliable and accurate method of maintaining a public transaction ledger. Second generation blockchains were created with implementation of smart contracts as priority, with the most popular one being ETH (Ethereum). One of the big differences in ETH is the language used to code smart-contracts. ETH utilizes a [turing complete](https://www.cs.odu.edu/~zeil/cs390/latest/Public/turing-complete/index.html) language (known as Solidity), meaning it is computationally universal. 
+
+The third generation of blockchain technology now focuses on solving issues with congestion and scalability. As this technology becomes more decentralized, there will inevitably be an exponential increase in the number of users interacting with the blockchain. DOT, ADA and ERG are third generation blockchains, meaning they have smart-contract capabilities while proposing solutions to scalability for a global audience. Third generation blockchains generally have the ability to process off-chain transactions, helping speed up transactions significantly. Ergo also has various innovations to address scalability. NIPoPows on Ergo allow for connection to side chains and light chains, opening up a whole world of possibilities.
+
 Ergo Platform has a research-based approach for long-term success and has a lot in its toolbox to tackle scaling as we grow. Which options we implement will depend on the needs of applications building on top of Ergo, as well as the success of the solutions in other protocols. 
 
-**TPS (Transactions per second)**
+## Transaction Speed
 
-To get the elephant out the room - *'What is the TPS (Transactions per second) '* It's important to keep in mind that **TPS is mostly a vanity metric.** It's not about how many transactions you can do but rather the weight of those transactions and the computational cost limit per block. This cost limit depends on the hardware miners have, the size of the network, and other dynamic factors but there is no concrete formula to calculate scalability. The best path forward is to log transaction profiles once DeFi on Ergo becomes more established and perform load testing in the testnet. With the release of v5, the raw TPS numbers should bring us to around 47.5tx/s - improvements on top of this are still possible. The focus is on raising TPS without compromising classic blockchain assumptions and guarantees. 
+Transaction speed is generally measured in Transactions per Block/Second (TPS). Below are approximated TPS values for other blockchains:
 
-Thanks to the high flexibility of the ErgoScript programming model, large chunks of transactions can happen on layer two and be settled in Ergo using a single transaction. Many different protocols will be possible on layer2, each one solving scalability problems in a specific domain (like simple payment transactions, sped up with sub-block confirmation protocols). [We are already seeing the beginnings of the strengths of eUTXO take shape with anetaBTC airdropping 3,000 wallets in a single transaction](https://twitter.com/HazeyOneKenobi/status/1481775230297288706). 
+* `BTC - ~7 TPS (Gobbel, 2017)`
+* `ETH - ~15 TPS (Clincy et al (table1), 2019)`
+* `XRP - ~ 1500 TPS (Clincy et al (table1), 2019)`
+* `ADA - ~ ~7 TPS (~250 in controlled tests) (Stamoulis, 2021)`
+* `DOT - ~1500 TPS (Hiemstra et al., 2021)`
+
+Transaction speed, more specifically TPS measures the transactions per block/second a blockchain can perform, essentially quantifying how fast a blockchain can perform transactions.  
+
+It's important to keep in mind that **TPS is mostly a vanity metric.** It's not about how many transactions you can do but rather the weight of those transactions and the computational cost limit per block. This cost limit depends on the hardware miners have, the size of the network, and other dynamic factors but there is no concrete formula to calculate scalability. The best path forward is to log transaction profiles once DeFi on Ergo becomes more established and perform load testing in the testnet. With the release of v5, the raw TPS numbers should bring us to around **47.5tx/s** - improvements on top of this are still possible. The focus is on raising TPS without compromising classic blockchain assumptions and guarantees. 
+
+## Settlement Layer
+
+Below you will find a developer harnessing the power of eUTXO to airdrop native tokens to [10,000 addresses at once](https://ergoplatform.org/admin/%5Bhttps://explorer.ergoplatform.com/en/transactions/e2c4954665ccf87791f42983ae4f7031205c2e719709907cbf2ff09e5489d4b8%5D)
+
+Thanks to the high flexibility of the ErgoScript programming model, large chunks of transactions can happen on layer two and be settled in Ergo using a single transaction. 
+
+ErgoScript adds several improvements such as time-weighted data, turing completeness, read-only data-inputs, multi-stage contracts, sigma protocols and NIPoPoWs that make many different protocols will possible on Layer 2, each one solving scalability problems in a specific domain (like simple payment transactions, sped up with sub-block confirmation protocols).
 
 **Ergo can be considered a common *settlement layer* for many Level-2 protocols and applications.**
 

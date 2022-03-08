@@ -59,6 +59,13 @@ Available libraries are:
 - Secret seed and derived addresses generation demo using ergo-wallet and Java is provided in [AdressGenerationDemo.java](https://gist.github.com/kushti/70dcfa841dfb504721f09c911b0fc53d)
 
 
+To generate new addresses in the same wallet you can use the `/wallet/deriveNextKey` API method
+
+```bash
+curl -X GET "http://localhost:9053/wallet/deriveNextKey" -H  "accept: application/json" -H  "api_key: hello"
+```
+
+
 ### Composing transactions outside the node
 
 
@@ -107,7 +114,7 @@ You can use [*ergo-bootstrap*](https://github.com/ergoplatform/ergo-bootstrap) t
 
 See [this page](/dev/start/testnet) for information on the public testnets.
 
-To start your testnet, use the following node:
+To start your testnet, use the following `testnet.conf`:
 
 ```
 ergo {
