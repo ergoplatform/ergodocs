@@ -132,6 +132,7 @@ nav:
       - Misc: 
         - Bookmarks: dev/start/resources.md
         - Audit: dev/protocol/audit.md
+        - EIP27: dev/lib/eip27.md
   - 📦 ┃  Node:
     - Node: node/index.md
     - Getting Started: 
