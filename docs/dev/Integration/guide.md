@@ -37,7 +37,9 @@ Main methods:
 
 ### Creating an external wallet.
 
-If you plan to perform your wallet logic externally, you can do so with a library and the block explorer. **Please note, you will need to consider mempool transactions to avoid double-spending generation**.
+If you plan to perform your wallet logic externally, you can do so with a library and the block explorer. 
+
+**Please note, you will need to consider mempool transactions to avoid double-spending generation**.
 
 Available libraries are:
 
@@ -99,28 +101,6 @@ https://api.ergoplatform.com/api/v0/transactions/send*
 
 your private Explorer or a node with open API (`POST` to `http://{node_ip}:9053/transactions` )
 
-Soproper request would look like
-
-```bash
- curl -X 'POST' \
-  'http://localhost:9053/wallet/transaction/send' \
-  -H 'accept: application/json' \
-  -H 'api_key: hello' \
-  -H 'Content-Type: application/json' \
-  -d '{
-  "requests": [
-    {
-      "address": "3WxnJdxb42b4gB4sRca2ezduZVxU9mP2Ew1W1s55M4r2WcVHHucB",
-      "value": 2500000000
-    }
-  ],
-  "fee": 1000000,
-  "inputsRaw": []}'
-```
-
-Set the `value` and `fee` accordingly, `value + fee = total sum of utxos`
-
-Pass an empty array if you don't want to specify inputs yourself. (Inputs are to be provided with just a sequence of bytes)
 
 
 ## Infrastructure
