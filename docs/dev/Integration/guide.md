@@ -99,27 +99,28 @@ https://api.ergoplatform.com/api/v0/transactions/send*
 
 your private Explorer or a node with open API (`POST` to `http://{node_ip}:9053/transactions` )
 
-Inputs are to be provided with just a sequence of bytes, so proper request would look like
+Soproper request would look like
 
 ```bash
-curl --location --request POST 'http://localhost:9053/wallet/transaction/send' \
---header 'api_key: hello' \
---header 'Content-Type: application/json' \
---data-raw '{
+ curl -X 'POST' \
+  'http://localhost:9053/wallet/transaction/send' \
+  -H 'accept: application/json' \
+  -H 'api_key: hello' \
+  -H 'Content-Type: application/json' \
+  -d '{
   "requests": [
     {
-      "address": "9h...",
-      "value": 1027522065
+      "address": "3WxnJdxb42b4gB4sRca2ezduZVxU9mP2Ew1W1s55M4r2WcVHHucB",
+      "value": 2500000000
     }
   ],
   "fee": 1000000,
-  "inputsRaw": ["boxId/utxo"],
-  "dataInputsRaw": []
-}'
+  "inputsRaw": []}'
 ```
 
 Set the `value` and `fee` accordingly, `value + fee = total sum of utxos`
 
+Pass an empty array if you don't want to specify inputs yourself. (Inputs are to be provided with just a sequence of bytes)
 
 
 ## Infrastructure
