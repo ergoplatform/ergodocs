@@ -32,7 +32,7 @@ NIPoPoWs enable Ergo to build a mobile SPV client that requires around just 100K
 ### SPV Security
 
 
-* There's often tension in the crypto world between security and convenience. That trade-off is unacceptable if we want these technologies to be widely used. Here's how Ergo addresses one common and critical issue.*
+> *There's often tension in the crypto world between security and convenience. That trade-off is unacceptable if we want these technologies to be widely used. Here's how Ergo addresses one common and critical issue.*
 
 We all know that the most secure way to use Bitcoin, or any crypto, is to download a copy of the blockchain and run a full node yourself. Every time you or anyone else makes a transaction, your client checks the blockchain to ensure it's valid. You don't have to trust anyone else.
 
