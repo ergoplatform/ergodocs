@@ -37,7 +37,9 @@ Main methods:
 
 ### Creating an external wallet.
 
-If you plan to perform your wallet logic externally, you can do so with a library and the block explorer. **Please note, you will need to consider mempool transactions to avoid double-spending generation**.
+If you plan to perform your wallet logic externally, you can do so with a library and the block explorer. 
+
+**Please note, you will need to consider mempool transactions to avoid double-spending generation**.
 
 Available libraries are:
 
@@ -101,7 +103,6 @@ your private Explorer or a node with open API (`POST` to `http://{node_ip}:9053/
 
 
 
-
 ## Infrastructure
 
 ### Explorer
@@ -151,16 +152,20 @@ Then your node will CPU-mine its chain.
 
 Please consider collecting deposits dust from miners periodically (who create a lot of small UTXOs).
 
-Ergo is based on the extended-UTXO model. A side-effect of UTXOs is a term coined *dust*. Dust refers to fractional values of ERG and is usually below the protocol fee, miner wallets are prone to becoming *dusty* with the stream of rewards coming into their wallet. All these excess UTXOs can cause a slowdown and ultimately, make your node inaccessible. 
+
+
+Ergo is based on the extended-UTXO model. A side-effect of UTXOs is a term coined *dust*. Dust refers to fractional values of ERG and is usually below the protocol fee, miner wallets are prone to becoming *dusty* with the stream of rewards coming into their wallet. All these excess UTXOs can cause a slowdown and ultimately, make impact your nodes functionability. **This is important to set-up for large exchanges who will recieve a lot of mining traffic. You need to collect dust aggressively, new dust arrives all the time for miners**
 
 
 
-To solve, 
+**To solve**
 
 - Get utxos from `/wallet/boxes/unspent` with min number of confirmations
 - Get their `ids` and `total sum`
 - Get their *binary representations* of utxos via `/utxo/byIdBinary/{boxId}`
-- Finally, construct the payment transaction like:
+
+
+Finally, construct the payment transaction like:
   
 ```
 {
@@ -202,6 +207,14 @@ ergo {
 
 and send `1 ERG` to the change address, however, the node will attach 100 dust inputs (so send any large amounts of change to the change address as well)
 
+#### Failed to sign boxes
+
+This error can occur as a result of too many inputs being collected in a transaction for dusty wallets. 
+
+```bash
+Failed to sign boxes due to Estimated execution cost 1001580 exceeds the limit 1000000: Vector(ErgoBox(0275eb3a125bc02fe997cb98c0de8131bd9b2e4617110d
+```
+
 
 
 ### Native Asssets
@@ -231,3 +244,4 @@ Send the following request via `/wallet/payment/send`, replacing the `tokenId` w
 - NETA
 - LunaDog
 - Erdoge
+
