@@ -1,1 +1,3 @@
-Coming soon...
+# Snapshots
+
+UTXO set-snapshots use NIPoPoWs
