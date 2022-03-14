@@ -75,6 +75,14 @@ The computer where the MPC ceremony holds place should also be secure and destro
 
 There were even attacks (not on MPC computer but some computer somewhere), where malware transferred private keys out of the device by extremely fast blinking of LEDs on notebook (people couldn't see it, but the high fps camera could). You can even use high-frequency audio output or even "esoteric" hard to detect things like high-frequency RF noise. You would be surprised what's possible. Imagine that you are building a mixer that will hold billions of dollars. If you are clever enough, you can introduce some genius backdoor, as I mentioned and drain mixer step by step in a clever way that nobody will know about it. So there's a huge game theoric incentive for you to do it. The same goes for the authors of the cryptographic protocol itself. 
 
+### Showing as 'corrupted' on Mac
+
+This can happen due to security preferences on Mac. Please run the following command.
+
+```
+do xattr -r -d com.apple.quarantine /Applications/ergoMixer.app
+```
+
 ### Best Practices
 
 There are several different aspects to consider;

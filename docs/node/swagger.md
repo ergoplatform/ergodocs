@@ -26,11 +26,11 @@ You should see the same list of addresses as you saw earlier from the panel.
 > ![Get addresses](https://user-images.githubusercontent.com/23208922/69916855-f9a88c00-1485-11ea-8705-887ccffe6471.png)
 
 
-# API
+## API
 
 An Ergo node provides a REST API accessible via HTTP. The full API specification (in OpenAPI format) is available [here](https://github.com/ergoplatform/ergo/blob/master/src/main/resources/api/openapi.yaml). 
 
-## Accessing the API
+### Accessing the API
 
 Once the node is running, the API can be accessed at [`127.0.0.1:9052`](http://127.0.0.1:9052). 
 
