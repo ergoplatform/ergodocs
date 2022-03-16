@@ -1,7 +1,9 @@
 # Modes of Operation
 
 
-Ergo (since the very first testing network Testnet0) is supporting multiple security models. In addition to full node mode, which is similar to Bitcoin fullnode, Ergo reference implementation supports Light-SPV, Light-Fullnode and Pruned-Fullnode modes.
+Ergo (since the very first testing network `Testnet0`) supports multiple security models. 
+
+In addition to running in "full node mode", which is similar to Bitcoin fullnode, Ergo reference implementation supports `Light-SPV`, `Light-Fullnode` and `Pruned-Fullnode` modes.
 
 ## Full-Node Mode
 

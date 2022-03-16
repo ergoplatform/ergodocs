@@ -26,7 +26,7 @@ We can also spend a data-input box in the same transaction as long as it existed
 d2b9b6536287b242f436436ce5a1e4a117d7b4843a13ce3abe3168bff99924a1
 ```
 
-was used as both an input and a data-input in [this transaction](). 
+was used as both an input and a data input in [this transaction](). 
 
 While the use of data-inputs may not be immediately apparent, they play a major role in making Ergo more friendly to DeFi applications where we want to refer to a box without needing (or having the ability) to spend it, such as in decentralized order-books (DEX). 
 
@@ -41,18 +41,11 @@ For a comparison between the logic used in eUTXO and account-based models, pleas
 
 A box is made of **registers** *(and nothing but registers!)*, we allow every box in the system to have up to 10 registers. We denote the registers as `R_0,R_1,...,R_9`. From these registers, four are filled with mandatory values: `R_0` contains monetary value of a box, `R_1` contains serialized guard script, `R_2` contains tokens, `R_3` contains declared creation height, unique identifier of transaction which created the coin and also an index of the box in the transaction.
 
-Each register is an expression in sigma language. Thus the registers are
-typed: every register contains a value of some type. Types are defined
-in TODO. The value should be evaluated (i.e. it
-should be a concrete constant value, not a function of a known output
-type).
+Each register is an expression in sigma language. Thus the registers are typed: every register contains a value of some type. Types are defined in TODO. The value should be evaluated (i.e. it should be a concrete constant value, not a function of a known output type).
 
-We introduce `extract({})` function, which is reading contents of a
-register, for example, `extract({c, R_0})` extracts monetary value from
-the box `c`.
+We introduce `extract({})` function, which is reading contents of a register, for example, `extract({c, R_0})` extracts monetary value from the box `c`.
 
-Box bytes used to obtain the box identifier, build authenticated tree
-for the state, and build a transaction, are to be formed as follows:
+Box bytes used to obtain the box identifier, build authenticated tree for the state, and build a transaction, are to be formed as follows:
 
 -   *monetary value.* We use VLQ-encoded unsigned long value to store monetary value of the box
 -   *bytes of a script.* To see how the script is serialized, see (TODO). The script is to be represented as register R1 by wrapping its bytes are constant array of constant bytes.
