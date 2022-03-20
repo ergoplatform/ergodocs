@@ -13,8 +13,7 @@ Note that wallets are supported by third parties, we only provide the informatio
 | [Paper Wallet](https://anon-br.github.io/ergo-paper-wallet/)                                           | Cold    | ✅             | 🚫              |              |       |         |
 | [Viawallet](https://apps.apple.com/us/app/viawallet-multi-chain-wallet/id1462031389)                   | Mobile  | 🚫             | 🚫              |              |       |         |
 | [URL Wallet](https://erg.urlwallet.org/)                                                               | URL     | ?             | 🚫              |              |       |         |
-| [Yoroi](https://yoroi-wallet.com/)                                                                                                  | Web     | ✅             | ✅              |              |       |         |
-
+| Yoroi                                                                                                  | Web     | ✅             | ✅              |              |       |         |
 
 For interacting with dApps the best solution is to use [Nautilus](https://github.com/capt-nemo429/nautilus-wallet) which is available on the chrome extension store.
 
