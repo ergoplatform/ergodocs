@@ -2,18 +2,18 @@
 
 Note that wallets are supported by third parties, we only provide the information below as a courtesy.
 
-| Wallet                                                                                                 | Type    | Native assets | dApp Connector | Cold Storage | Mixer | ErgoPay |
-|--------------------------------------------------------------------------------------------------------|---------|---------------|----------------|--------------|-------|---------|
-| [Nautilus](https://chrome.google.com/webstore/detail/nautilus-wallet/gjlmehlldlphhljhpnlddaodbjjcchai) | Web     | ✅             | ✅              | 🔜            | 🔜     |         |
-| [Ergo Wallet](https://ergoplatform.org/en/mobile_wallets/)                                             | Mobile  | ✅             | 🚫              | ✅            |       | ✅       |
-| [SAFEW](https://github.com/ThierryM1212/SAFEW/releases)                                                | Web     | ✅             | ✅              | 🔜            | ✅     |         |
-| [Node Wallet](https://docs.ergoplatform.com/node/platforms/)                                           | Desktop | ✅             | 🚫              |              |       |         |
-| [Satergo](https://www.satergo.com)                                                                     | Desktop | ✅             | 🚫              | 🔜            | 🔜     |         |
-| [Minotaur](https://github.com/minotaur-ergo/minotaur-wallet)                                           | Web     | ✅             | ✅              |              |       |         |
-| [Paper Wallet](https://anon-br.github.io/ergo-paper-wallet/)                                           | Cold    | ✅             | 🚫              |              |       |         |
-| [Viawallet](https://apps.apple.com/us/app/viawallet-multi-chain-wallet/id1462031389)                   | Mobile  | 🚫             | 🚫              |              |       |         |
-| [URL Wallet](https://erg.urlwallet.org/)                                                               | URL     | ?             | 🚫              |              |       |         |
-| Yoroi                                                                                                  | Web     | ✅             | ✅              |              |       |         |
+| Wallet                                                                                                 | Type    | Native assets | dApp Connector | Cold Storage | Mixer | ErgoPay | SigmaUSD |
+|--------------------------------------------------------------------------------------------------------|---------|---------------|----------------|--------------|-------|---------|----------|
+| [Nautilus](https://chrome.google.com/webstore/detail/nautilus-wallet/gjlmehlldlphhljhpnlddaodbjjcchai) | Web     | ✅             | ✅              | 🔜            | 🔜     |         |          |
+| [Ergo Wallet](https://ergoplatform.org/en/mobile_wallets/)                                             | Mobile  | ✅             | 🚫              | ✅            |       | ✅       |          |
+| [SAFEW](https://github.com/ThierryM1212/SAFEW/releases)                                                | Web     | ✅             | ✅              | 🔜            | ✅     |         |          |
+| [Node Wallet](https://docs.ergoplatform.com/node/platforms/)                                           | Desktop | ✅             | 🚫              |              |       |         |          |
+| [Satergo](https://www.satergo.com)                                                                     | Desktop | ✅             | 🚫              | 🔜            | 🔜     |         |          |
+| [Minotaur](https://github.com/minotaur-ergo/minotaur-wallet)                                           | Web     | ✅             | 🚫              |              |       |         | ✅        |
+| [Paper Wallet](https://anon-br.github.io/ergo-paper-wallet/)                                           | Cold    | ✅             | 🚫              |              |       |         |          |
+| [Viawallet](https://apps.apple.com/us/app/viawallet-multi-chain-wallet/id1462031389)                   | Mobile  | 🚫             | 🚫              |              |       |         |          |
+| [URL Wallet](https://erg.urlwallet.org/)                                                               | URL     | ?             | 🚫              |              |       |         |          |
+| [Yoroi](https://yoroi-wallet.com/)                                                                     | Web     | ✅             | ✅              |              |       |         |          |
 
 For interacting with dApps the best solution is to use [Nautilus](https://github.com/capt-nemo429/nautilus-wallet) which is available on the chrome extension store.
 
