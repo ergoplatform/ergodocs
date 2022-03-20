@@ -2,6 +2,7 @@
 
 Note that wallets are supported by third parties, we only provide the information below as a courtesy.
 
+
 | Wallet                                                                                                 | Type    | Native assets | dApp Connector | [ErgoPay](https://github.com/ergoplatform/eips/blob/master/eip-0020.md) | Cold Storage | [Mixer](https://docs.ergoplatform.com/uses/mixer/#ergomixer) | [SigmaUSD](https://sigmausd.io/) |
 |--------------------------------------------------------------------------------------------------------|---------|---------------|----------------|-------------------------------------------------------------------------|--------------|--------------------------------------------------------------|----------------------------------|
 | [Nautilus](https://chrome.google.com/webstore/detail/nautilus-wallet/gjlmehlldlphhljhpnlddaodbjjcchai) | Web     | ✅             | ✅              |                                                                         | 🔜            | 🔜                                                            |                                  |
@@ -14,7 +15,6 @@ Note that wallets are supported by third parties, we only provide the informatio
 | [Viawallet](https://apps.apple.com/us/app/viawallet-multi-chain-wallet/id1462031389)                   | Mobile  | 🚫             | 🚫              |                                                                         |              |                                                              |                                  |
 | [URL Wallet](https://erg.urlwallet.org/)                                                               | URL     | ?             | 🚫              |                                                                         |              |                                                              |                                  |
 | [Yoroi](https://yoroi-wallet.com/)                                                                     | Web     | ✅             | ✅              |                                                                         |              |                                                              |                                  |
-
 ## Web Wallets
 
 ### Nautilus
