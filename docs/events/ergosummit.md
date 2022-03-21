@@ -1,55 +1,21 @@
-# Events
-
-Ergo hosts regular events such as Hackathons and Developer Summits; check out ERGOHACK III and ERGO SUMMIT II, both expected Q1 2022. 
-
-A brief overview of events is below, with related articles and repositories. 
-
-- [Weekly Dev Updates](https://www.reddit.com/r/ergonauts/search?sort=new&restrict_sr=on&q=flair%3AWEEKLY-DEV)
-- [AMAs](https://www.reddit.com/r/ergonauts/search?q=flair%3AAMA&restrict_sr=on&sort=relevance&t=all)
-
-## Hackathon
-
-We hosted two hackathons in 2021, with a third lined up for Q1 2022!
-
-### ERGOHACK I
-
-* [Hackerthon Jun 12th!](https://ergoplatform.org/en/blog/2021-06-04-ergo-community-launches-its-first-hackathon-ergohack/)
-
-**Participants**
-
-- [ErgoRaffle](https://github.com/ErgoRaffle) *(now live @ [ergoraffle.io](https://ergoraffle.io))*
-- Ergo Index Fund
-- [Smart Pools](https://github.com/WilfordGrimley/ErgoSmartPools) *(now live @ [GetBlok.io](https://getblok.io))*
-- [Sigma Stamp](https://www.sigmastamp.ml/)
-- Ergo Charts
-- [Simpler Joint Spending Tool](https://www.ergoforum.org/t/a-simpler-collective-spending-approach-for-everyone/476%20)
-
-### ERGOHACK II
-
-**Participants**
-
-- [ErgoLend](https://github.com/Ergo-Lend/) *(now live @ [ergolend.org](https://ergolend.org))*
-- [Minotaur Wallet](https://github.com/minotaur-ergo/minotaur-wallet)
-- [Ergopad](https://github.com/Ergohack-Dashboard-Project) *(now live @ [ergopad.io](https://ergopad.io))*
-- [Ergo Subpooling](https://github.com/K-Singh/ergo-subpooling) *(now live @ [GetBlok.io](https://getblok.io))*
-- [HYPO10USE: QUIDGAMES](https://github.com/hypo10use/quid-games)
-- Ergo Audio
+# ErgoSummit
 
 
-**IDEA INCUBATOR**
+##  Ergo Summit 2022 Privacy & Security
 
-- ErgoFans | Decentralised content producer platform | Patreon/Onlyfans
-- ErgoGigs | Decentralised gigs! (Fiverr)
-- ErgoEarn | earn for learning (Coinbase Earn)
-- ErgoStats | on-chain analysis (glassnode)
+- [Upgrading Macroeconomic Policy via Softfork | Dionysis Zindros](https://www.youtube.com/watch?v=2OrHmBaBn9E)
+- [Decentralizing the Internet | Johnny Wu](https://www.youtube.com/watch?v=EGcp_T3AiWk)
+- [Weekly Update & AMA - Feb 18, 2022 PART 1](https://www.youtube.com/watch?v=z-6PNEq8dEs) & [PART 2](https://www.youtube.com/watch?v=p3-XJHqsMWs)
+- [Blockchain Privacy and Security Explained | NiceHash](https://www.youtube.com/watch?v=8FzdkxVD_YM&t=2s)
+- [SmartPools - the Future of PoW Mining | GetBlok](https://www.youtube.com/watch?v=pc3GEqMik48)
+- [Trustless AI Training | PGWAD](https://www.youtube.com/watch?v=lvpBW31rVhw)
+- [Bringing Bitcoin to Ergo | Frosty](https://www.youtube.com/watch?v=Zx09-aPiOLI)
+- [Dev Update Feb 20th | ErgoHack, Games, Wallets, NFTs, Mixer upgrades + more](https://www.youtube.com/watch?v=-l390QBcSIw)
+- [The Deep Ocean Dark Pool Protocol | Oliver Cracknell](https://www.youtube.com/watch?v=SaBmvAxah0E)
+- [Ergo: A Platform for Cryptographic Applications | Kushti](https://www.youtube.com/watch?v=h6g5WahEUSk)
 
-### ERGOHACK III
 
-- [ErgoHack III: Privacy & Security](https://ergoplatform.org/en/blog/2021-12-21-ergohack-iii-privacy-security/)
-
-## ErgoSummit
-
-###  Timestamps
+##  ErgoSummit I
 
 - [00:00:00](https://www.youtube.com/watch?v=zG-rxMCDIa0&amp;t=0s) - The Summit
 - [00:01:00](https://www.youtube.com/watch?v=zG-rxMCDIa0&amp;t=60s) - Ergo 101: The Basics
@@ -75,6 +41,3 @@ We hosted two hackathons in 2021, with a third lined up for Q1 2022!
 - [07:45:30](https://www.youtube.com/watch?v=zG-rxMCDIa0&amp;t=27930s) - The Ergo Foundation’s Grant-Based Approach To Developing The UTXO-Based dApp Ecosystem
 - [08:05:30](https://www.youtube.com/watch?v=zG-rxMCDIa0&amp;t=29130s) - 2021 Ergo Roadmap reveal
 
-## ErgoSummit II
-
-> Q1 2022

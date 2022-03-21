@@ -10,11 +10,18 @@ __We've designed Ergo with long-term economic sustainability in mind, and storag
 
 The 2020 block reward reduction was the most important halving event Bitcoin has experienced. This was the point where the narrative of programmatic scarcity and digital gold was truly be proven in the context of the sharpest economic downturn in living memory. In previous halvings, Bitcoin has still been in its infancy, a niche experiment. Future halvings will confirm the principle. But this one is the watershed.
 
-Looking ahead, though, what happens in 20 or 30 years, when block rewards have fallen so far that miners have to rely on tx fees and potentially other sources of revenue? Will Bitcoin be sustainable? What will be the impact on the ecosystem?
+Looking ahead, though, what happens in 20 or 30 years, when block rewards have fallen so far that miners have to rely on transaction fees and potentially other sources of revenue? Will Bitcoin be sustainable? What will be the impact on the ecosystem?
 
 *The simple answer is that we don't know.*
 
 Mining rewards are a key feature in maintaining the security of proof-of-work blockchains like Bitcoin and Ergo. And so, while we have deliberately kept many of Bitcoin's tried and tested features, we have updated this one to give miners a boost when block rewards have fallen to zero.
+
+## Storage fees
+
+Fees will be deducted slowly, over time – the unmoved UTXOs will not simply be appropriated by miners. Anyone who wants to avoid this simply needs to move their balances once every four years, which is not an onerous requirement for helping incentivise miners and avoiding the deflationary consequences of lost coins. You can read more about how fees will be levied in [this paper](https://fc18.ifca.ai/bitcoin/papers/bitcoin18-final18.pdf).
+
+In this way, Ergo seeks to ensure a balance between maintaining digital scarcity, on the one hand, and giving miners long-term incentives to secure the blockchain, on the other – long past the point where new coins have ceased to be released.
+
 
 ## Lost coins
 
@@ -28,19 +35,9 @@ Where coins have genuinely been permanently taken out of circulation in this way
 
 Ergo's halving schedule is faster than Bitcoin's. Block rewards start at 75 ERG and decrease steadily after the first two years. There is no 'long tail' of emission, and after eight years, block rewards will fall to zero. After that, the total supply will be fixed. The number of ERG in existence will never be more than 97,739,925.
 
-## Storage fees
-
-From that point, however, miners will need further incentives to secure the network. Miners have ongoing costs in terms of bandwidth and storage, and in cases where coins are simply left for years, there is typically no charge for reflecting the value of securing them. The tx fee that is paid up-front in Bitcoin is the only charge ever made for storing those coins.
-
-In Ergo, in addition to transaction fees, miners will also be able to collect storage rent fees on UTXOs that have not been moved for four years or more. 
-
-Fees will be deducted slowly, over time – the unmoved UTXOs will not simply be appropriated by miners. Anyone who wants to avoid this simply needs to move their balances once every four years, which is not an onerous requirement for helping incentivise miners and avoiding the deflationary consequences of lost coins. You can read more about how fees will be levied in [this paper](https://fc18.ifca.ai/bitcoin/papers/bitcoin18-final18.pdf).
-
-In this way, Ergo seeks to ensure a balance between maintaining digital scarcity, on the one hand and giving miners long-term incentives to secure the blockchain, on the other – long past the point where new coins have ceased to be released.
 
 
-
-
+## A Systematic Approach To Cryptocurrency Fee
 
 This article is a continuation and summarization of *[A Systematic Approach To Cryptocurrency Fees](https://fc18.ifca.ai/bitcoin/papers/bitcoin18-final18.pdf)* (hereinafter referred to as the paper) by Alex (Kushti) Chepurnoy, Vasily Kharin and Dmitry Meshkov. In the paper, the authors address the problem of storage resources utilization. There is a concern that once an element of the state is created, it exists forever and inevitably balloons node disk space. This will lead to unreasonable state growth of the blockchain.
 
@@ -50,7 +47,7 @@ While cryptocurrencies address transaction fees as an atomic concept, the paper 
 
 
 
-## Blockchain Costs
+### Blockchain Costs
 
 Proof of Work blockchain technology relies on miners to guard the integrity of the blockchain. Miner resources, such as memory and electricity, are costly, and therefore a revenue scheme is needed to incentivize miners. Miner incentives are currently comprised of block rewards and transaction fees. Transactions fees are an important component in preventing spam attacks that exhaust miner resources.
 
@@ -64,7 +61,7 @@ The 3-dimensional scale shown above is based on storage-oriented load, computati
 
 In Ergo, the total size of the state is the sum of the sizes of all UTXOs. That is to say that this data contains the execution of smart contracts, all the transactions and nodal information. Because the memory resources provided by miners are limited, a state deterioration fee should be added to miners' revenue streams in order to encourage decreasing the system load while securing future miners' contributions.
 
-## Storage Rent
+### State Growth
 
 **Unreasonable state growth** is an economic problem, and it can lead to spam attacks and network congestion. Another problem could be the deflation of a cryptocurrency if coins are lost and/or forgotten. So instead of being used as the base for smart contracts, the currency becomes unreasonably scarce, making the system heavy and limiting coin flow.
 
@@ -77,8 +74,6 @@ Additionally, the use of blockchains as cloud storage is gaining attraction, so 
 For the purposes of research and this article, it is worth noting that the concept of storage rent was also proposed in 2014 by [Freicoin](http://freico.in):
 
 > *"Demurrage forces freicoins to circulate at deliberately high rates. Separation of money's roles as store-of-value and medium-of-exchange allows money to flow when it is needed, in good times and bad. "*
-
-
 
 
 ## Resources

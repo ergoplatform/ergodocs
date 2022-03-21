@@ -5,35 +5,33 @@
 
 - Ergo is currently available on the following [wallets](https://ergoplatform.org/en/wallets/) and [exchanges](https://ergoplatform.org/en/exchanges/). 
 - The development roadmap can be seen [here](https://ergonaut.space/en/roadmap).
-- To see the applications currently running on Ergo, please see [sigmaverse.io](https://sigmaverse.io/).
-- To read about Ergo from a less technical perspective, please visit [ergonaut.space](https://ergonaut.space/en/home). 
-- Similarly, miners should check out the community-built [Miners Handbook](https://ergonaut.space/Mining).
+- To see the applications currently running on Ergo, check out [sigmaverse.io](https://sigmaverse.io/).
+- To read about Ergo from a less technical perspective, visit [ergonaut.space](https://ergonaut.space/en/home). 
+- If you want to mine, see the [Miners Handbook](https://ergonaut.space/Mining).
 
 ## Why '*Ergo*'? 
 
-Ergo means "therefore" in Latin but "work" in Greek. Initially, we chose the name to point to the fact that the cryptocurrency's design is ERGOnomical.
+Ergo means "therefore" in Latin but "work" in Greek. This is also a play on the fact that the cryptocurrency's design is ***ergo***nomical.
 
 ## Why Ergo?
 
-Ergo delivers a next-generation smart contract platform that aims to empower ordinary people with access to simple and self-sovereign peer-to-peer financial contracts!
+Ergo is a next-generation smart contract platform that enables anyone to participate in the digital DeFi revolution now.
 
+Ensuring economic freedom for ordinary people through decentralized, private and secure financial tools.
 
-The overwhelming majority of successful public blockchain use‐cases are related to financial applications.  Just like Bitcoin, Ergo has digital scarcity. There is a limited supply, mined into existence through Proof of Work. In this respect, Ergo is a conservative blockchain. However, Ergo also incorporates many novel features using over a decade of scientific research and development. We extend Bitcoin's UTXO and way of writing contracts by attaching a *guard script* to every coin. 
-
-
-**Objectives**
+**🔑 Key Objectives**
 
 - Research-led but real-world focused.
 - Powerful & Safe
 - Intelligent and Straightforward
 - Secure and Accessible
 
-**Key Features**
+**🔑 Key Features**
 
-- **Sigma Protocols (Σ)** - a type of non-interactive zero-knowledge proofs that are flexible enough to allow for ring-signatures, multi signatures, multiple currencies, atomic swaps, self-replicating scripts, and long-term computation.
-- **Multi-stage Contracts** - In addition to the regular protection offered by using a threshold `m‐of‐n` signature, Ergo also allows specifying the possible recipients of these coins, which may be another contract with similar complex conditions. This *"chaining"* approach allows the implementation of **secure and efficient smart contracts of arbitrary complexity**. 
-- **Non-Interactive Proofs of Proof of Work (NIPoPoWs)**  -  are essential for two reasons: Light Clients and Side Chains. 
-- **Storage Rent** - on-chain garbage collection
+- **[Sigma Protocols](/dev/scs/sigma) (Σ)** - a type of non-interactive zero-knowledge proofs that are flexible enough to allow for ring-signatures, multi signatures, multiple currencies, atomic swaps, self-replicating scripts, and long-term computation.
+- **[Multi-stage Contracts](/dev/scs/multi)** - In addition to the regular protection offered by using a threshold `m‐of‐n` signature, Ergo also allows specifying the possible recipients of these coins, which may be another contract with similar complex conditions. This *"chaining"* approach allows the implementation of **secure and efficient smart contracts of arbitrary complexity**. 
+- **[Non-Interactive Proofs of Proof of Work (NIPoPoWs)](/dev/protocol/nipopow/)**  are essential for two reasons: Light Clients and Side Chains. 
+- **[Storage Rent](/dev/protocol/rent/)** acts as *on-chain garbage collection*
 
 
 Keeping all this in mind, we expect Ergo's design to be uniquely useful as Contractual Money.
@@ -43,13 +41,13 @@ Keeping all this in mind, we expect Ergo's design to be uniquely useful as Contr
 
 ## What is the [Emission Schedule](https://ergoplatform.org/en/blog/2019_05_20-curve/)?
 
-Ergo has a maximum supply of **97,739,925** Ergs, to be completed in **8 years** after launch. The emission in Ergo is controlled by a pre-agreed smart contract, so we tried to have a simple enough emission curve with a total limited supply being close to 100M (and emission to be done in 8-10 years)
+Ergo has a maximum supply of **97,739,925** Ergs, to be completed in **8 years** after launch. However, there is currently voting underway to extend this to 2045. 
 
 ## When was Ergo launched?
 
 Mainnet July 2019. Before this, there was *Ergo-First-Year-Token*
 
-### What is EFYT?
+**What is EFYT?**
 
 Ergo-First-Year-Token was airdropped and distributed on Waves DEX starting with a 100,000 EFYT airdrop in May 2017. EFYT served the dual purposes of helping to build an early community of stakeholders and enthusiasts for Ergo and of raising a small number of funds for the platform before launch to fund development, promotion etc. EFYT is strictly a Waves token and is not the same as an Erg, which is the Ergo mainnet native token mined after Ergo's mainnet launch.
 
@@ -82,12 +80,13 @@ Ergo is designed and implemented by experienced developers and researchers who h
 
 The full team can be seen on Ergo's [Hall of Fame](https://ergoplatform.org/en/hall_of_fame/).
 
+## Interview
 
-## Extended UTXO is a new contract framework, are their plants to put together a Plutus Pioneer-style program for ErgoScript? 
+### Extended UTXO is a new contract framework, are their plants to put together a Plutus Pioneer-style program for ErgoScript? 
  
 The Ergo Foundation can sponsor the money for educational programs, and this is of the core goals of the Ergo Foundation as an organization. 
 
-## How do you see the Ergo network funding development over time?  
+### How do you see the Ergo network funding development over time?  
 
 Longer-term, we propose a community development DAO that operates in parallel to the Ergo Foundation. One potential mechanism to fund this would be through projects that tokenize on the Ergo Blockchain. Open source development often comes with a variety of assistance from the community. 
 
@@ -95,11 +94,11 @@ If new projects are willing to donate a small allocation of their tokens to eith
 
 We have already started discussions with projects. 
  
-## To what extent can there be competing for dApps? For example, it is hard to imagine more than one Dex on Ergo, but maybe? What potential synergies are there?
+### To what extent can there be competing for dApps? For example, it is hard to imagine more than one Dex on Ergo, but maybe? What potential synergies are there?
 
 We actively encourage competing dapps. Competition is a critical part of creating a DEFI environment. It opens the ability for traders to arbitrage across dapps and creates increased activity on the network. Competing marketplaces also increases market efficiency. We encourage competition. It creates market opportunities and incentives to innovate. 
  
-## Free software is great, but it does tend to undercut incentives. But, I also notice that Ergo isn't super fast about posting new code. Is that what is going on with that, preserving incentives?
+### Free software is great, but it does tend to undercut incentives. But, I also notice that Ergo isn't super fast about posting new code. Is that what is going on with that, preserving incentives?
  
 Free software is amazing. Bitcoin would not exist without free software. Much of the internet would not exist without Linux. Ergo is a new contract model. Most projects are based on EVM or previous forks.
 
@@ -107,7 +106,7 @@ Much of the infrastructure has to be created from scratch to match Ergo’s mode
 
 So far we have produced the first extended UTXO dapp, stablecoin, oracle framework, NFT, and dex. Currently, there is ongoing R&D into multiple L2 solutions. Ergo will most likely start with plasma channels first, and expand to models with more complexity. We are also in the development process of bridging to other ecosystems. Additionally, a framework for sidechains has come out of our R&D group and will be implemented in 2022. 
  
-## Who is using Ergo? What are the top countries using the chain? How does the user profile differ from other chains?
+### Who is using Ergo? What are the top countries using the chain? How does the user profile differ from other chains?
  
 Ergo is still a very young network. At this point, the primary users are either investors or miners. However, as we build tooling, we have a path to capture multiple markets. Ergo is not a native token. It is a base layer blockchain; the focus is to create the basic tooling to support demand on top of the base layer. 
 
@@ -115,7 +114,7 @@ Unique needs arise when analyzing different projects. We are already putting tog
 
 Market specialization is the focus of developers and projects on top of Ergo. Our goal is to build a variety of tooling and infrastructure to support this growth. 
  
-## Where does Ergo excel? What disadvantages relative to other chains? 
+### Where does Ergo excel? What disadvantages relative to other chains? 
  
 Ergo’s advantages beyond the benefits of Extended UTXO, we have a lot of interesting privacy options with Sigma protocols, Ergo also has a simple path to sidechains and a way to revolutionize SPV client implementation. Ultralite SPV clients via Nipopows with full node security have never been implemented. 
 
@@ -129,7 +128,7 @@ Real decentralization, privacy, and resilience are not attractive when you don�
 
 This type of network does come with a tradeoff vs systems designed to be more centralized, permissioned, and optimized. The value of resilience only matters in difficult environments.  
  
-## I would be interested in some real critique rather than nonsense FUD about PoW not being environmentally friendly.
+### I would be interested in some real critique rather than nonsense FUD about PoW not being environmentally friendly.
  
 POW is energy-intensive relative to POS. However, the security model is known. The design of Ergo is pretty conservative. We chose Sigma protocols because they are well known. They have been studied and tested in depth for a long time. 
 
@@ -151,31 +150,31 @@ If POS projects support stake migration, how will that alter network congestion,
 
 There are a lot of factors that are hard to predict. Ergo is not anti-proof of stake. However, there are many unknowns and complexities project to project. 
 
-## Sufficient provision of production inputs -Human capital How much effort is the chain making to onboard talents & produce its future army of developers?
+### Sufficient provision of production inputs -Human capital How much effort is the chain making to onboard talents & produce its future army of developers?
 
 Onboarding developers is first a matter of documentation and developer tools. This is in motion and we will continue to increase resources towards this end. We also offer bounties that give developers a pathway to learn, improve and familiarize themselves with the inner workings of Ergo. We also have hosted hackathons that have brought about projects converting into dapps. Moving forward, I would like to increase the frequency of hackathons and increase the offered prizes. Hackathon Ideas Privacy Tokenizing on Top of Ergo Documentation and Developer Tools.
 
-## How easy is it for non-web3 developers to convert? (e.g. C++ & Java peeps can learn Rust, used by Solana, in a month. For Avalanche you can code in multiple languages. Few likes Solidity.) 
+### How easy is it for non-web3 developers to convert? (e.g. C++ & Java peeps can learn Rust, used by Solana, in a month. For Avalanche you can code in multiple languages. Few likes Solidity.) 
 
 This honestly depends on the talent of the actual developers to start with. Not all developers start with an equal skillset. As we create additional resources, documentation, and educational tools, this process will be more streamlined. You can build on top of Ergo in a variety of languages.
 
-## Financial capital How much financial ammunition does the chain have in the pipeline?
+### Financial capital How much financial ammunition does the chain have in the pipeline?
 
 The Ergo Foundation has a small allocation of block rewards. We are in the process of designing frameworks for additional funding and community DAO’s. Financial ammunition sounds like a really sexy way to say how large of a position is not public. This did not happen with Ergo. Why? To promote decentralization.
 Personally I think that partnering with larger firms or investors makes sense after a significant period of being on the market (as with bitcoin) rather than an insider advantage from launch.
 
-## Infrastructure: How much infrastructure does the chain have or is planned at least? Peer competition within industries?
+### Infrastructure: How much infrastructure does the chain have or is planned at least? Peer competition within industries?
 
 Ergo has a pretty broad technical base. Native tokens, smart contracts, Bridges, L2 solutions, Oracles, Privacy tools, Sidechains, SPV clients. All of these are iterative and will evolve as the network develops. These are built on top of the extended UTXO model, which bring native advantages (security, parallelism, and predictable costing)
 
-## Are there signs of strong rivalry in the same niches emerging within the L1?
+### Are there signs of strong rivalry in the same niches emerging within the L1?
 
 Most L1s (IMO) are built for throughput at the cost of resiliency.
 Throughput is attractive, but the most efficient model for throughput will always be centralized.
 The benefit/tradeoff of a decentralized network is resilience. Ergo has the capacity to increase throughput with L2 solutions, and sidechains. But it will never be as fast as a centralized system.
 The closer a system gets to centralization or as the user requirements increase, the faster it gets.
 
-## Does the dev culture of the chain strike the right balance btw encouraging peer knowledge sharing & respecting proprietary IP?
+### Does the dev culture of the chain strike the right balance btw encouraging peer knowledge sharing & respecting proprietary IP?
 
 IP requires trust in the “proprietary technology.” Closed projects require a leap of faith. The point of bitcoin was to remove faith and replace it with auditable certainty.
 How many times in crypto have we heard…
@@ -191,27 +190,27 @@ https://ambcrypto.com/now-fixed-solana-protocol-library-bug-had-potential-to-exp
 The goal of the Ergo network is the benefit the users. I believe that IP protects profit, often at the user’s expense.
 Projects with a strong attachment to IP can build on other networks and always bridge into Ergo to access the network liquidity and tooling.
 
-## Clusters of supporting sectors Are there signs of synergetic niches / industries emerging within the L1 ecosystem?
+### Clusters of supporting sectors Are there signs of synergetic niches / industries emerging within the L1 ecosystem?
 
 Ergo was built for financial smart contracts before DEFI was even a term. Given the strengths of the extended UTXO model, this is a significant growth sector for ERG. As Ergoscript and the Extended UTXO model develop I believe new innovative frameworks will be discovered.
 
-## Quality of domestic demand How does the user profile of this L1 compare to other chains?
+### Quality of domestic demand How does the user profile of this L1 compare to other chains?
 
 At this point, the primary users are miners, developers, and investors, aside from the telegram trading chat, which is the traditional degenerate dumpster fire crypto chat. I am honestly quite impressed with the overall mindset, contributions, skills, and principles of the active community.
 
-## Where in the world is the chain getting the most adoption?
+### Where in the world is the chain getting the most adoption?
 
 Currently, the most extensive set of users are miners and investors. These are relatively globally distributed. I believe this is a product of the Extended UTXO model being young. We have a large number of community developers and the work/advancements being made can be tracked weekly.
 
-## Role of the blockchain itself? What’s the chain doing to promote rivalry among its native projects & stimulate innovation?
+### Role of the blockchain itself? What’s the chain doing to promote rivalry among its native projects & stimulate innovation?
 
 Innovation and competition are stimulated through open-source code. Ergo brought a new smart contract model to market and has led the way in building on this model. As we move forward we need to bootstrap tooling and documentation for new developers.
 
-## What’s the chain doing to improve infrastructure & human capital supply?
+### What’s the chain doing to improve infrastructure & human capital supply?
 
 We actively offer incentives, put together documentation educational tools, and expand open development positions for the core network.
 
-## Is the chain “subsidizing” certain projects to help them gain ST advantage, which may inadvertently undermine innovation & competition in LT?
+### Is the chain “subsidizing” certain projects to help them gain ST advantage, which may inadvertently undermine innovation & competition in LT?
 
 It may appear that way to some.
 We are a young network (being we have a new smart contract model) We are very competitive long-term with the tech we bring to the table. The network is still in its infancy. Price does lead to developer adoption. However, it is hard to claim or disavow strategic advantages when you lack competition. That is due to bringing a new type of network to crypto.

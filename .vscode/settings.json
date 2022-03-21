@@ -17,5 +17,8 @@
                 ]
             }
         }
-    ]
+    ],
+    "files.watcherExclude": {
+        "**/target": true
+    }
 }

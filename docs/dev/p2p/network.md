@@ -1,4 +1,7 @@
-Message format
+# Network Messages
+
+
+## Message format
 ----------------
 
 Every message in the P2P protocol has the following format:

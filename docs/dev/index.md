@@ -1,12 +1,35 @@
 # Developers
 
-There are several pathways to start developing on Ergo. A typical dApp is usually composed of a [**Front-end**](stack/front-end/) user-interface built in your framework of choice, a [**Backend**](stack/back-end) where we can perform logic off-chain, and finally, the [**Smart Contract**](scs/) component where the magic happens, the on-chain validation of the off-chain logic.
+This page should provide an entry-point to every section of Ergo development. For a high-level introduction to Ergo please see the [protocol page](/dev/protocol)
 
-- [Learning Ergo 101 : Development Workflow](https://medium.com/cryptostars/learning-ergo-101-development-workflow-aa17dd63ef6)
+## Architecture 
 
-## ErgoPad-QuickStart
+Apps in the Ergo ecosystem looks a bit like this. 
 
-ErgoPad has [released a set of docker containers](https://github.com/ergo-pad/ergopad) combined to create a React/MaterialUI frontend, REST API backend, assembler to interact with smart contracts and supporting services like ergonode, redis and postgres.
+![](../assets/img/arch.png)
+
+Your application will communicate with the blockchain via a locally run instance of the Ergo Node. The Node provides an API that is used by your SDK logic to carry out operations on the blockchain.
+
+- [Set up a local Node](/node/)
 
 
 
+## Libraries
+
+- [Back-end libraries (SDKs)](stack/back-end)
+- [Front-end libraries](stack/front-end/)
+
+## Languages
+
+Users of *AppKit* will usually write Scala code (although AppKit supports many other languages). *Headless dApp Framework (HDF)* users will need to write Rust code, allowing it to be used across platforms. (The HDF also provides some additional abstractions on top of the original ergo API). *JDE*  users will have to write JSON.
+
+- [Start coding in JVM (Scala/Java)](/dev/stack/appkit/)
+- [Start coding in Rust](/dev/Languages/rust)
+- [Start coding in Python](/dev/Languages/python)
+- [Start coding in JSON](/dev/stack/jde)
+- [Start coding in ErgoScript](scs/ergoscript/)
+
+
+## DeCo
+
+DeCo (Decentralised Collaboration) teaches participants will learn about extended UTXO and boxes, registers, ErgoScript, designing simple systems, multi-transaction systems, and much more. Join the [ErgoLend Discord](https://discord.gg/NBJ68Fvr) for more information. 

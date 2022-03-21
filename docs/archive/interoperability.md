@@ -37,4 +37,3 @@ In another version of this use case, an address might be created using multi-par
 
 This is just one possibility that seamless interoperability raises. There will be many more that we look forward to exploring as Gravity and additional protocols come online.
 
-<!--EndFragment-->

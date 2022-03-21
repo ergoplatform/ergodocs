@@ -5,15 +5,14 @@
 We take a closer look into the Ergo address formatting, how they work and what makes them preferable to other types of blockchain addresses.
 
 The moment you install any cryptocurrency wallet, you automatically create an address with it. Very loosely speaking, you can compare a wallet to a traditional bank account and an address to the matching account number.
-It is precisely one of these alphanumeric addresses needed to either send money from person A to person B, receive money, or [withdraw your mining rewards](https://ergoplatform.org/en/blog/2019_07_03_mining_withdrawal/).
-If you want to start using the Ergo wallet and dive deeper into its functions, check out the [the following link](https://ergoplatform.org/en/blog/2019_06_04_wallet-documentation/).
 
+It is precisely one of these alphanumeric addresses needed to either send money from person A to person B, receive money, or [withdraw your mining rewards](https://ergoplatform.org/en/blog/2019_07_03_mining_withdrawal/).
 
 
 ## Now, what exactly are addresses?
 
 
-Addresses are short strings that correspond to specific scripts and are used to protect a [box](../data-model/box.md)
+Addresses are short strings that correspond to specific scripts and are used to protect a [box](../data-model/box)
 
 Unlike a (hex-encoded) binary representation of a script, an Ergo address use a `Base58-encoding` and therefore has some advantageous characteristics which the binary representation does not offer:
 
@@ -50,15 +49,15 @@ in the case of a P2S address, the box will be locked by a script encoded in the 
 
 Here is an example of how particular addresses are going to look on the testnet: 
 
-* `3` - **P2PK** (`3WvsT2Gm4EpsM9Pg18PdY6XyhNNMqXDsvJTbbf6ihLvAmSb7u5RN`)
-* `?` - **P2SH** (`rbcrmKEYduUvADj9Ts3dSVSG27h54pgrq5fPuwB`)
-* `?` - **P2S** (`Ms7smJwLGbUAjuWQ`)
+* **P2PK** (`3WvsT2Gm4EpsM9Pg18PdY6XyhNNMqXDsvJTbbf6ihLvAmSb7u5RN`)
+* **P2SH** (`rbcrmKEYduUvADj9Ts3dSVSG27h54pgrq5fPuwB`)
+* **P2S** (`Ms7smJwLGbUAjuWQ`)
 
 And here is how what they look like on the mainnet:
 
-* `9 `- **P2PK** (`9fRAWhdxEsTcdb8PhGNrZfwqa65zfkuYHAMmkQLcic1gdLSV5vA`)
-* `?` - **P2SH** (`8UApt8czfFVuTgQmMwtsRBZ4nfWquNiSwCWUjMg`)
-* `?` - **P2S** (`4MQyML64GnzMxZgm, BxKBaHkvrTvLZrDcZjcsxsF7aSsrN73ijeFZXtbj4CXZHHcvBtqSxQ`)
+* **P2PK** (`9fRAWhdxEsTcdb8PhGNrZfwqa65zfkuYHAMmkQLcic1gdLSV5vA`)
+* **P2SH** (`8UApt8czfFVuTgQmMwtsRBZ4nfWquNiSwCWUjMg`)
+* **P2S** (`4MQyML64GnzMxZgm, BxKBaHkvrTvLZrDcZjcsxsF7aSsrN73ijeFZXtbj4CXZHHcvBtqSxQ`)
 
 ## Summary
 

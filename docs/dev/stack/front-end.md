@@ -26,9 +26,4 @@ The Ergo Raffle [documentation](https://github.com/ErgoRaffle/raffle-documentati
 
 ## Payments
 
-- Yoroi dApp connector
-- proxy contracts
-- Ergo-Pay. 
-
-
-
+- [ErgoPay](../wallet/payments/ergo-pay.md)

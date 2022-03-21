@@ -21,16 +21,18 @@ Nodes perform *handshaking* by sending each other `handshake messages.`
 
 ## [Modifier Exchange](/dev/p2p/modifiers)
 
-## P2P Smart Contracts
+## Syncing
 
-Ergo allows truly P2P smart contracts. Just run the node and a local interface.
-
-
-- [Mixicles - simple private contracts on top of oracle data](https://research.chain.link/mixicles.pdf) - Implementation-wise, onchain part would simple, p2p off-chain interaction is needed (and would be the most labour-intensive part likely)
-- P2P Pools
 
 ## Misc
 
 - On mainnet P2P uses port `9030` (`9053` for the API)
 - For crawling [https://libp2p.io/](libp2p.io/)
 
+### P2P Smart Contracts
+
+Ergo allows truly P2P smart contracts. Just run the node and a local interface.
+
+
+- [Mixicles - simple private contracts on top of oracle data](https://research.chain.link/mixicles.pdf) - Implementation-wise, onchain part would simple, p2p off-chain interaction is needed (and would be the most labour-intensive part likely)
+- P2P Pools

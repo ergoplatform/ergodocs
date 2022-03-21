@@ -1,1 +1,0 @@
-[SUSY Gateway (Gravity)](https://www.ergoforum.org/t/susy-gateway-gravity/488)

@@ -14,15 +14,20 @@ Using Appkit, Ergo applications can be written in one of the languages supported
 
 
 ### Tutorials
+
 - [Tutorial starting with Appkit on Gradle projects](https://github.com/ergoplatform/ergo-appkit/wiki/Tutorial-starting-with-Appkit-on-Gradle-projects)
 - [AppKit by Example (Video)](https://www.youtube.com/watch?v=Md5s-XV6-Hs)
 - [Appkit Examples](https://github.com/aslesarenko/ergo-appkit-examples)
-  
+- [ErgoPay tutorial](/dev/wallet/ergo-pay/#implement-a-dapp-using-ergopay)
+- [Testing Ergo Contracts Off-chain](https://github.com/anon-real/contract-testing)
+
+
 ### How-to Guides
 
 - [Ergo Android](https://github.com/aslesarenko/ergo-android) | Example Android application which demonstrates how Ergo Appkit can be used to develop Ergo applications running on Android.
 
 ### Explanations
+
 - [AppKit Introduction](https://ergoplatform.org/en/blog/2019_12_03_top5/).
 
 ### References
@@ -31,6 +36,7 @@ Using Appkit, Ergo applications can be written in one of the languages supported
 
 
 ## Features
+
 [Ergo Appkit](https://github.com/aslesarenko/ergo-appkit) is a library for polyglot development of Ergo Applications based on [GraalVM](https://www.graalvm.org/). GraalVM has many [great use cases](https://medium.com/graalvm/graalvm-ten-things-12d9111f307d). Expanding on that, in this article, we will go through some of the Appkit features inherited from GraalVM and take you step-by-step in learning how to take advantage of them.
 
 ### Example Scenario
