@@ -7,7 +7,7 @@
 
 ```
 ergo {
-    directory = "E:/ergo"
+    directory = "C:\ergo"
     node {
         mining = false
     }
