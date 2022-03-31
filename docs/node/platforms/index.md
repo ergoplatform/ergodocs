@@ -42,10 +42,10 @@ ergo {
 Then issue the following command to run the node for the first time.
 
 ```bash
-java -jar -Xmx3G -Dlogback.stdout.level=WARN -Dlogback.file.level=ERR ergo.jar --mainnet -c ergo.conf
+java -jar -Xmx4G -Dlogback.stdout.level=WARN -Dlogback.file.level=ERR ergo.jar --mainnet -c ergo.conf
 ```
 
-- The `-Xmx3G` flag sets the max heap size for the JVM. `3-4G` recommended.
+- The `-Xmx4G` flag sets the max heap size for the JVM. `3-4G` recommended.
 - The `-Dlogback` flags reduces the number of logs returned. 
 
 The node will start syncing immediately after this. Wait for a few minutes for the API to start and go to the next step.
