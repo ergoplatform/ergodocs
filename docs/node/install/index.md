@@ -3,7 +3,7 @@
 The Ergo Node is a critical piece of infrastructure developers will use to interact with the blockchain. If you're simply looking for a daily wallet we advise one of the options in the [wallets](/dev/wallet) page. (Ergo Mobile even has a cold-storage feature!)
 
 ## Prerequisites
-To run an Ergo node you need a **JDK/JRE version >= 9** installed on your system. We strongly **recommend either version 9 or 11**. One way to do this is to install 
+To run an Ergo node you need a **JDK/JRE version >= 9** installed on your system. We strongly **recommend either version 9 or 11**. 
 
 **Note that Oracle JDK/JRE <= 8 is no longer supported**. 
 
