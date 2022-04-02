@@ -2,24 +2,28 @@
 
 The Ergo Node is a critical piece of infrastructure developers will use to interact with the blockchain. If you're simply looking for a daily wallet we advise one of the options in the [wallets](/dev/wallet) page. (Ergo Mobile even has a cold-storage feature!)
 
-Supporting pages
-
-- [Troubleshooting](/node/platforms/troubleshooting)
-- [FAQ](/node/#faq)
-- [Using the TestNet](/dev/start/testnet)
-
 ## Prerequisites
-To run an Ergo node you need a **JDK/JRE version >= 9** installed on your system. We strongly **recommend either version 9 or 11**. One way to do this is to install [Oracle Java SE](https://www.oracle.com/technetwork/java/javase/overview/index.html).
+To run an Ergo node you need a **JDK/JRE version >= 9** installed on your system. We strongly **recommend either version 9 or 11**. One way to do this is to install 
 
 **Note that Oracle JDK/JRE <= 8 is no longer supported**. 
 
-The next step is to download the latest [Ergo client release](https://github.com/ergoplatform/ergo/releases/) jar file and create a node configuration file.
+We recommend [Oracle Java SE](https://www.oracle.com/technetwork/java/javase/overview/index.html) or for Unix-based operating systems, SDKMAN.
 
-Note that instead of downloading the precompiled Ergo jar, you can clone the repository and compile the jar from the source using [SBT](https://www.scala-sbt.org/) by issuing the `sbt assembly` command.
+```bash
+curl -s "https://get.sdkman.io" | bash
+sdk install java 11.0.13.8.1-amzn
+```
+
+
+
 
 ## Running the node
 
 Create a dedicated folder (such as `~/ergo`) for running the node and download the latest [Ergo client release](https://github.com/ergoplatform/ergo/releases/) `.jar` 
+
+> Note that instead of downloading the precompiled Ergo jar, you can clone the repository and compile the jar from the source using [SBT](https://www.scala-sbt.org/) by issuing the `sbt assembly` command. Alternatively, you can also use [Docker](/node/install/docker)
+
+
 
 Create a configuration file `ergo.conf` containing the following text
 ```
@@ -42,18 +46,18 @@ java -jar -Xmx4G -Dlogback.stdout.level=WARN -Dlogback.file.level=ERR ergo.jar -
 It is better to use more memory on heap`-Xmx4g` for initial syncing. `-Xmx1g` should be enough when node is full synced.
 The node will start syncing immediately after this. Wait for a few minutes for the API to start and go to the next step.
 
-**Note:** You can use any name for the file instead of `ergo.conf`. All configuration parameters are to be passed through this file and you only need to rewrite parameters that you want to change from the default values. The above config file actually has the default values. 
+> **Note:** You can use any name for the file instead of `ergo.conf`. All configuration parameters are to be passed through this file and you only need to rewrite parameters that you want to change from the default values. The above config file actually has the default values. 
 
-The node will start syncing immediately after this. Wait for a few minutes for the API to start and go to the next step.
+The node will start syncing immediately after this. 
 
 
 ## Securing the API
 
-We need to set a secret password to protect the API. In this example we'll use `hello` - but you **must use a different and strong secret.**
+We need to set a secret password to protect the API. In this example we'll use `hello` - but **you must use a different and strong secret.**
 
 Go to [127.0.0.1:9053/swagger#/utils/hashBlake2b](http://127.0.0.1:9053/swagger#/utils/hashBlake2b) and call the API to compute the `Blake2b` hash of your secret. 
 
-> ![Compute Hash of secret](https://user-images.githubusercontent.com/23208922/69916676-ed233400-1483-11ea-8582-f61c38478d31.png)
+![Compute Hash of secret](https://user-images.githubusercontent.com/23208922/69916676-ed233400-1483-11ea-8582-f61c38478d31.png)
 
 Copy the hash response which we'll place back in the `ergo.conf` file. 
 
@@ -61,11 +65,11 @@ As you can see
 
 `hello` corresponds to the `Blake2b` hash `324dcf027dd4a30a932c441f365a25e86b173defa4b8e58948253471b81b72cf`
 
-> ![response](https://user-images.githubusercontent.com/23208922/69916509-c3690d80-1481-11ea-869f-630cd59cc525.png)
+![response](https://user-images.githubusercontent.com/23208922/69916509-c3690d80-1481-11ea-869f-630cd59cc525.png)
 
 We then need to update the config file with API key hash
 
-```conf
+```bash
 	ergo {
 	  node {
 	    mining = false
@@ -85,7 +89,13 @@ We then need to update the config file with API key hash
 
 Restart and your node should now be syncing and you should be able to access the API. 
 
-If you'd like to initialise a wallet see [this page](/node/wallet)
+
+**Next Steps**
+
+- [Initialising a wallet](/node/wallet)
+- [Troubleshooting](/node/install/troubleshooting)
+- [FAQ](/node/#faq)
+- [Using the TestNet](/dev/start/testnet)
 
 ## Check if the node is synced
 
@@ -98,6 +108,12 @@ After the node is fully synced, the text will change to "Node is synced", as sho
 > ![synced](https://user-images.githubusercontent.com/23208922/71301767-8da4ae00-23c9-11ea-8fc0-a92a9d78b821.png)
 
 You can also check this at [127.0.0.1:9053/info](http://127.0.0.1:9053/info) and compare to the latest block height given at [explorer.ergoplatform.com](https://explorer.ergoplatform.com/en/)
+
+Running this command in a new terminal will let you spot any errors or warnings. 
+
+```
+tail -Fn+0 ergo.log | grep 'ERROR\|WARN'
+```
 
 ## Shutdown 
 
@@ -115,11 +131,16 @@ To relaunch the node
 java -jar -Xmx4G -Dlogback.stdout.level=WARN -Dlogback.file.level=ERR ergo.jar --mainnet -c ergo.conf
 ```
 
-Please see the [troubleshooting page](/node/platforms/troubleshooting) for more information. 
+Please see the [troubleshooting page](/node/install/troubleshooting) for more information. 
+
+
+
+
+
 
 ## Install Script
 
-> Experimental
+> Warning: Experimental
 
 Simply run the following command
 
@@ -127,12 +148,7 @@ Simply run the following command
 bash -c "$(curl -s https://node.phenotype.dev)"
 ```
 
-
-For a full install including prerequisites (Java)
-
-- [Mac](/node/platforms/mac)
-- [Linux](/node/platforms/linux)
-- [Pi](/node/platforms/pi)
-- [Windows](/node/platforms/windows)
-- [Docker](/node/platforms/docker)
-
+- [Mac](/node/install/mac)
+- [Linux](/node/install/linux)
+- [Pi](/node/install/pi)
+- [Windows](/node/install/windows)

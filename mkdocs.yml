@@ -135,15 +135,15 @@ nav:
         - EIP27: dev/protocol/eip27.md
   - 📦 ┃  Node:
     - Node: node/index.md
-    - Getting Started: 
-      - Platforms: node/platforms/index.md
-      - Mac: node/platforms/mac.md
-      - Windows: node/platforms/windows.md
-      - Linux: node/platforms/linux.md
-      - Pi: node/platforms/pi.md
-      - Docker: node/platforms/docker.md
-      - Troubleshooting: node/platforms/troubleshooting.md 
-      - Tutorial: node/platforms/tutorial.md
+    - Install: 
+      - Install: node/install/index.md
+      #- Mac: node/install/mac.md
+      #- Windows: node/install/windows.md
+      #- Linux: node/install/linux.md
+      #- Pi: node/install/pi.md
+      - Docker: node/install/docker.md
+      - Troubleshooting: node/install/troubleshooting.md 
+      #- Tutorial: node/install/tutorial.md
     - Overview: 
       - Wallet: node/wallet.md
       - Swagger API: node/swagger.md
