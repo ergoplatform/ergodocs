@@ -8,7 +8,14 @@ Supporting pages
 - [FAQ](/node/#faq)
 - [Using the TestNet](/dev/start/testnet)
 
+## Prerequisites
+To run an Ergo node you need a **JDK/JRE version >= 9** installed on your system. We strongly **recommend either version 9 or 11**. One way to do this is to install [Oracle Java SE](https://www.oracle.com/technetwork/java/javase/overview/index.html).
 
+**Note that Oracle JDK/JRE <= 8 is no longer supported**. 
+
+The next step is to download the latest [Ergo client release](https://github.com/ergoplatform/ergo/releases/) jar file and create a node configuration file.
+
+Note that instead of downloading the precompiled Ergo jar, you can clone the repository and compile the jar from the source using [SBT](https://www.scala-sbt.org/) by issuing the `sbt assembly` command.
 
 ## Running the node
 
@@ -29,8 +36,13 @@ Then issue the following command to run the node for the first time.
 java -jar -Xmx4G -Dlogback.stdout.level=WARN -Dlogback.file.level=ERR ergo.jar --mainnet -c ergo.conf
 ```
 
-- The `-Xmx4G` flag sets the max heap size for the JVM. `3-4G` recommended.
+- The `-Xmx4G` flag sets the max heap size for the JVM. `4-6G` recommended.
 - The `-Dlogback` flags reduces the number of logs returned. 
+
+It is better to use more memory on heap`-Xmx4g` for initial syncing. `-Xmx1g` should be enough when node is full synced.
+The node will start syncing immediately after this. Wait for a few minutes for the API to start and go to the next step.
+
+**Note:** You can use any name for the file instead of `ergo.conf`. All configuration parameters are to be passed through this file and you only need to rewrite parameters that you want to change from the default values. The above config file actually has the default values. 
 
 The node will start syncing immediately after this. Wait for a few minutes for the API to start and go to the next step.
 
