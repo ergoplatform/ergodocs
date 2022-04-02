@@ -1,6 +1,6 @@
 # Getting Started
 
-The Ergo Node is a critical piece of infrastructure developers will use to interact with the blockchain. If you're simply recommending a daily wallet we advice one of the options in the [wallets](/dev/wallet) page. 
+The Ergo Node is a critical piece of infrastructure developers will use to interact with the blockchain. If you're simply looking for a daily wallet we advise one of the options in the [wallets](/dev/wallet) page. (Ergo Mobile even has a cold-storage feature!)
 
 Supporting pages
 
