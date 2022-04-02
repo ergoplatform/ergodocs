@@ -5,7 +5,7 @@ Please open a [git issue](https://github.com/ergoplatform/ergo/issues/new/choose
 - Node version
 - Java command used
 - RAM/CPU
-- OS
+- Operating System
 - JVM version
 - Storage location (Cloud, SSD, etc)
 - output of ERROR/WARN
@@ -27,7 +27,14 @@ If your node is stuck on Active Syncronisation with no noticeable increase in th
 
 ### Displays as 'Synchronised' even though it isn't.
 
-If your node is displaying as synchronised even though the height does not match the latest one found on [the explorer](https://explorer.ergoplatform.com/). 
+If your node is displaying as synchronised even though the height does not match the latest one found on [the explorer](https://explorer.ergoplatform.com/) you can add this to your `.conf` file under `ergo { node {`
+
+```conf
+# A node is considering that the chain is synced if sees a block header with timestamp no more
+# than headerChainDiff blocks on average from future
+# 800 blocks ~= 1600 minutes (~1.1 days)
+# headerChainDiff = 80
+```
 
 
 ### Is there any way to revert without resyncing?
