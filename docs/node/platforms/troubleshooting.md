@@ -1,5 +1,19 @@
 # Troubleshooting
 
+Please open a git issue with the following details
+
+- Node version
+- Java command used
+- RAM/CPU
+- OS
+- JVM version
+- Storage location (Cloud, SSD, etc)
+- output of ERROR/WARN
+
+```
+tail -Fn+0 ergo.log | grep 'ERROR\|WARN' > output.log
+```
+
 ## Sync
 
 ### Stuck on 'Active Syncronisation' 
