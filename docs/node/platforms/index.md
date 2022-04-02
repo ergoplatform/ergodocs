@@ -100,7 +100,7 @@ curl -X POST "http://127.0.0.1:9053/node/shutdown" -H "api_key: hello"
 To relaunch the node
 
 ```bash
-java -jar -Xmx3G -Dlogback.stdout.level=WARN -Dlogback.file.level=ERR ergo.jar --mainnet -c ergo.conf
+java -jar -Xmx4G -Dlogback.stdout.level=WARN -Dlogback.file.level=ERR ergo.jar --mainnet -c ergo.conf
 ```
 
 Please see the [troubleshooting page](/node/platforms/troubleshooting) for more information. 
