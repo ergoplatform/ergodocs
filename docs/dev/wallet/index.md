@@ -30,7 +30,7 @@ Yoroi is a light-wallet built by Emurgo, a founding partner of Cardano.
 
 ### Ergo Wallet
 
-Please see the official wallet [https://ergoplatform.org/en/wallets/](wallet page). 
+Please see the official wallet [wallet page](https://ergoplatform.org/en/mobile_wallets/). 
 
 ## Desktop
 
