@@ -1,6 +1,6 @@
 # Troubleshooting
 
-Please open a git issue with the following details
+Please open a [git issue](https://github.com/ergoplatform/ergo/issues/new/choose) with the following details
 
 - Node version
 - Java command used
@@ -9,6 +9,7 @@ Please open a git issue with the following details
 - JVM version
 - Storage location (Cloud, SSD, etc)
 - output of ERROR/WARN
+
 
 ```
 tail -Fn+0 ergo.log | grep 'ERROR\|WARN' > output.log
