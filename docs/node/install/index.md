@@ -1,6 +1,8 @@
 # Getting Started
 
-The Ergo Node is a critical piece of infrastructure developers will use to interact with the blockchain. If you're simply looking for a daily wallet we advise one of the options in the [wallets](/dev/wallet) page. (Ergo Mobile even has a cold-storage feature!)
+The Ergo Node is a critical piece of infrastructure developers will use to interact with the blockchain. 
+
+> If you're simply looking for a daily wallet we advise one of the options in the [wallets](/dev/wallet) page. (Ergo Mobile even has a cold-storage feature!)
 
 ## Prerequisites
 To run an Ergo node you need a **JDK/JRE version >= 9** installed on your system. We strongly **recommend either version 9 or 11**. 
@@ -97,17 +99,11 @@ Restart and your node should now be syncing and you should be able to access the
 - [FAQ](/node/#faq)
 - [Using the TestNet](/dev/start/testnet)
 
-## Check if the node is synced
+To safely shut down the node, use the following command
 
-While the node is syncing, the panel will show "Active synchronization" (see the image below).
-
-> ![active synchronization](https://user-images.githubusercontent.com/23208922/71128146-94d58b80-2212-11ea-9010-5b61a91e8549.png)
-
-After the node is fully synced, the text will change to "Node is synced", as shown below.
-
-> ![synced](https://user-images.githubusercontent.com/23208922/71301767-8da4ae00-23c9-11ea-8fc0-a92a9d78b821.png)
-
-You can also check this at [127.0.0.1:9053/info](http://127.0.0.1:9053/info) and compare to the latest block height given at [explorer.ergoplatform.com](https://explorer.ergoplatform.com/en/)
+```
+curl -X POST "http://127.0.0.1:9053/node/shutdown" -H "api_key: hello"
+```
 
 Running this command in a new terminal will let you spot any errors or warnings. 
 
@@ -115,40 +111,20 @@ Running this command in a new terminal will let you spot any errors or warnings.
 tail -Fn+0 ergo.log | grep 'ERROR\|WARN'
 ```
 
-## Shutdown 
 
-In the case of unexpected shutdowns, the database may become corrupted and you will need to resync from scratch. 
+## Check if the node is synced
 
-To safely shut down the node, use the following command
+While the node is syncing, the panel will show "Active synchronization" (see the image below).
 
-```
-curl -X POST "http://127.0.0.1:9053/node/shutdown" -H "api_key: hello"
-```
+![active synchronization](https://user-images.githubusercontent.com/23208922/71128146-94d58b80-2212-11ea-9010-5b61a91e8549.png)
 
-To relaunch the node
+After the node is fully synced, the text will change to "Node is synced", as shown below.
 
-```bash
-java -jar -Xmx4G -Dlogback.stdout.level=WARN -Dlogback.file.level=ERR ergo.jar --mainnet -c ergo.conf
-```
+![synced](https://user-images.githubusercontent.com/23208922/71301767-8da4ae00-23c9-11ea-8fc0-a92a9d78b821.png)
 
-Please see the [troubleshooting page](/node/install/troubleshooting) for more information. 
+You can also check this at [127.0.0.1:9053/info](http://127.0.0.1:9053/info) and compare to the latest block height given at [explorer.ergoplatform.com](https://explorer.ergoplatform.com/en/)
 
 
 
 
 
-
-## Install Script
-
-> Warning: Experimental
-
-Simply run the following command
-
-```
-bash -c "$(curl -s https://node.phenotype.dev)"
-```
-
-- [Mac](/node/install/mac)
-- [Linux](/node/install/linux)
-- [Pi](/node/install/pi)
-- [Windows](/node/install/windows)
