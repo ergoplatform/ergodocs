@@ -1,10 +1,7 @@
 # Docker
 
-To run last Ergo version in mainnet as a console application with logs printed to console:
+To run the latest Ergo version in mainnet as a console application with logs printed to console:
 
-
-
-## Docker
 
 ```
 sudo docker run --rm -p 9030:9030 -p 127.0.0.1:9053:9053 -v /path/on/host/to/ergo/data:/home/ergo/.ergo ergoplatform/ergo --mainnet
@@ -18,7 +15,7 @@ All data will be stored in your host directory `/path/on/host/to/ergo/data`.
 
 ## Docker Compose
 
-```
+```bash
 version: '3.8'
 
 services:
@@ -27,7 +24,7 @@ services:
       container_name: ergo-mainnet
       restart: always
       environment:
-        - MAX_HEAP=3G
+        - MAX_HEAP=4G
       ports:
         - 9053:9053
         - 9030:9030
@@ -44,16 +41,17 @@ services:
 
 Run the node with
 
-```
+```bash
 docker-compose up -d
 ```
 
 Follow the logs with
-```
+
+```bash
 docker logs -f ergo-mainnet -n 200
 ```
 
-Node's data will be saved in `.ergo` directory which you have to create beforehand and change its group like this: 
+Note that the node's data will be saved in `.ergo` directory you must create beforehand and change its group : 
 
 ```bash
 chown -R 9052:9052 .ergo
@@ -74,7 +72,7 @@ To run specific Ergo version `<VERSION>` as a service with custom config `/path/
         -p 127.0.0.1:9053:9053 \
         -v /path/on/host/to/ergo/data:/home/ergo/.ergo \
         -v /path/on/host/system/to/myergo.conf:/etc/myergo.conf \
-        -e MAX_HEAP=3G \
+        -e MAX_HEAP=4G \
         ergoplatform/ergo:<VERSION> --<networkId> -c /etc/myergo.conf
 ```
 Available versions can be found on [Ergo Docker image page](https://hub.docker.com/r/ergoplatform/ergo/tags), for example, `v4.0.23`.

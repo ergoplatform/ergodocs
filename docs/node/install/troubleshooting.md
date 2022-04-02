@@ -27,14 +27,15 @@ If your node is stuck on Active Syncronisation with no noticeable increase in th
 
 ### Displays as 'Synchronised' even though it isn't.
 
-If your node is displaying as synchronised even though the height does not match the latest one found on [the explorer](https://explorer.ergoplatform.com/). 
+If your node is displaying as synchronised even though the height does not match the latest one found on [the explorer](https://explorer.ergoplatform.com/). There is currently an open issue for a [header downloading problem during synchronization](https://github.com/ergoplatform/ergo/issues/1657)
 
 
 ### Is there any way to revert without resyncing?
 
-The node will attempt to do this itself, but if it fails - there is no way to manually roll back. 
+The latest versions of the node will attempt to fix any errors itself, but if it fails - there is no way to manually roll-back. 
 
 ### Searching the logs
+
 Here's some useful log greps
 
 ```bash
@@ -62,14 +63,23 @@ rm -rf .ergo/history
 1. Ensure the wallet is synchronised.
 2. Attempt to derive new addresses as per the [swagger](/node/swagger) instructions.
 3. Ensure you derived the additional addresses during sync.
-4. Restore on an alternative wallet. 
+4. Restore on an alternative wallet if unsuccessful.  
 
 
 ## Error Messages
 
+### Unable to define external address. 
+
+This warning means you aren't running a public node and can be ignored.
+
+```
+17:01:44.408 WARN [tor.default-dispatcher-11] s.c.n.NetworkController - Unable to define external address. Specify it manually in `scorex.network.declaredAddress`.
+```
+
+
 ###  Got GetReaders request in state (None,None,None,None)
 
-This means that the database cannot be read. If this is happening continuously it likely indicates database corruption. This can happen due to unexpected shutdowns and also due to some bugs in the database libraries (Mac/Ubuntu)
+This means that the database cannot be read. If this is happening continuously it likely indicates database corruption. This can happen due to unexpected shutdowns and also due to 
 
 ```
 02:17:20.457 WARN  [ergoref-api-dispatcher-9] o.e.n.ErgoReadersHolder - Got GetReaders request in state (None,None,None,None)
