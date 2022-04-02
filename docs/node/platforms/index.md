@@ -1,22 +1,6 @@
 # Getting Started
 
-The simplest way to get started is to run the following command
-
-```
-bash -c "$(curl -s https://node.phenotype.dev)"
-```
-
-## Tutorial
-
 The Ergo Node is a critical piece of infrastructure developers will use to interact with the blockchain. If you're simply recommending a daily wallet we advice one of the options in the [wallets](/dev/wallet) page. 
-
-For a full install including prerequisites (Java)
-
-- [Mac](/node/platforms/mac)
-- [Linux](/node/platforms/linux)
-- [Pi](/node/platforms/pi)
-- [Windows](/node/platforms/windows)
-- [Docker](/node/platforms/docker)
 
 Supporting pages
 
@@ -121,4 +105,22 @@ java -jar -Xmx3G -Dlogback.stdout.level=WARN -Dlogback.file.level=ERR ergo.jar -
 
 Please see the [troubleshooting page](/node/platforms/troubleshooting) for more information. 
 
+## Install Script
+
+> Experimental
+
+Simply run the following command
+
+```
+bash -c "$(curl -s https://node.phenotype.dev)"
+```
+
+
+For a full install including prerequisites (Java)
+
+- [Mac](/node/platforms/mac)
+- [Linux](/node/platforms/linux)
+- [Pi](/node/platforms/pi)
+- [Windows](/node/platforms/windows)
+- [Docker](/node/platforms/docker)
 
