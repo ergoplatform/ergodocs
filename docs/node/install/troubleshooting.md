@@ -38,6 +38,19 @@ If your node is displaying as synchronised even though the height does not match
 
 There is currently an open issue for a [header downloading problem during synchronization](https://github.com/ergoplatform/ergo/issues/1657)
 
+### Lowering maxConnections
+
+To allieviate some of the performance issues on later blocks please add the following to your `ergo.conf`
+
+```bash
+network {
+        maxConnections = 10
+
+          }
+```
+
+This will lower the default `maxConnections` from 30 to 10, the sync will be slower but require less resources and sync smoother.
+
 ### Is there any way to revert without resyncing?
 
 The latest versions of the node will attempt to fix any errors itself, but if it fails - there is no way to manually roll-back. 
