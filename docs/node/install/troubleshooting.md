@@ -104,6 +104,8 @@ This warning means you aren't running a public node and can be ignored.
 
 ###  Got GetReaders request in state None
 
+> It is normal to recieve this in the first few minutes of starting the node.
+
 This means that the database cannot be read. If this is happening continuously it likely indicates database corruption. This can happen due to unexpected shutdowns and also due to 
 
 ```
