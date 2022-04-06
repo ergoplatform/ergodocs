@@ -2,6 +2,7 @@
 
 >  In general, anything educative for the community is subject to some bounty even if not specifically listed. **Lets create grassroots finance!**
 
+
 ## Developers
 
 
@@ -12,11 +13,22 @@
 
 It's no secret that the best way to learn something is to try and explain it - so keep a note of your progress while learning and claim some of the bounties available for [Tutorials and Guides for developers](https://github.com/ergoplatform/grow-ergo/issues/15)! 
 
+### Grants and Bounties
+
+You can tackle any of the bounties available on Ergo repositories, 
+
+You can submit any payment requests for bounties completed [here](https://q9fwzopidh8.typeform.com/to/G5gAKC4r)
+
+
+
 ### Grants
 
-Alternatively, you can tackle any of the bounties available on Ergo repositories, submit a grant request to the [Good Whale Fund](https://github.com/ergoplatform/grow-ergo/issues/13), [DarkFund0](https://github.com/ergoplatform/grow-ergo/issues/1) - or email us directly at the [ergo foundation](mailto:team@ergoplatform.org).
+Submit a grant request to the [Good Whale Fund](https://github.com/ergoplatform/grow-ergo/issues/13), [DarkFund0](https://github.com/ergoplatform/grow-ergo/issues/1) - or email us directly at the [ergo foundation](mailto:team@ergoplatform.org).
+
+
 
 The fastest way to get started is to start a [Raffle](https://ergoraffle.com/). This provides a clear funding goal, shows community support - and can be topped up by grant/foundation funding. 
+
 
 ## General
 
