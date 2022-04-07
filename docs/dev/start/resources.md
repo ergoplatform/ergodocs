@@ -23,6 +23,7 @@
 - [API Docs](https://api.ergoplatform.com/api/v1/docs/)
   - [Node API](https://git.io/fjqwb)
   - [Explorer API](https://git.io/fjqwN)
+  - [Ergo.Watch API](https://ergo.watch/api/v0/docs)
 
 ## Test vectors
 
