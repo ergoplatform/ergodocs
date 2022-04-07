@@ -13,7 +13,7 @@
 
 It's no secret that the best way to learn something is to try and explain it - so keep a note of your progress while learning and claim some of the bounties available for [Tutorials and Guides for developers](https://github.com/ergoplatform/grow-ergo/issues/15)! 
 
-### Grants and Bounties
+### Bounties
 
 You can tackle any of the bounties available on Ergo repositories, 
 
