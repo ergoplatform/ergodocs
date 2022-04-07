@@ -135,27 +135,29 @@ nav:
         - EIP27: dev/protocol/eip27.md
   - 📦 ┃  Node:
     - Node: node/index.md
-    - Getting Started: 
-      - Platforms: node/platforms/index.md
-      - Mac: node/platforms/mac.md
-      - Windows: node/platforms/windows.md
-      - Linux: node/platforms/linux.md
-      - Pi: node/platforms/pi.md
-      - Docker: node/platforms/docker.md
-      - Troubleshooting: node/platforms/troubleshooting.md 
-      - Tutorial: node/platforms/tutorial.md
-    - Overview: 
+    - Install: 
+      - Install: node/install/index.md
+      #- Mac: node/install/mac.md
+      #- Windows: node/install/windows.md
+      #- Linux: node/install/linux.md
+      - Troubleshooting: node/install/troubleshooting.md
+      - Docker: node/install/docker.md
+      - Pi: node/install/pi.md
+      
+      #- Tutorial: node/install/tutorial.md
+    - Overview:
       - Wallet: node/wallet.md
       - Swagger API: node/swagger.md
+      - FAQ: node/install/faq.md
       #- Architecture: node/architecture.md
       - Distributed Signatures: node/sigs.md
       - Test-net: dev/start/testnet.md
-    - Modes of Operation: node/modes.md
-    - Light Modes: 
-      - Digest State: node/digest-state.md
-      - History Pruning: node/history-pruning.md
-      - Snapshots: node/snapshots.md
-      - NiPoPoWS: dev/protocol/nipopow.md
+      - Modes of Operation: node/modes.md
+    #- Light Modes: 
+    #  - Digest State: node/digest-state.md
+    #  - History Pruning: node/history-pruning.md
+    #  - Snapshots: node/snapshots.md
+   #   - NiPoPoWS: dev/protocol/nipopow.md
   - 💡 ┃  Applications:
     - Applications: uses/index.md
     - Live dApps:

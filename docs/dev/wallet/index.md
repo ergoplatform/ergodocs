@@ -14,6 +14,7 @@ Note that wallets are supported by third parties, we only provide the informatio
 | [Viawallet](https://apps.apple.com/us/app/viawallet-multi-chain-wallet/id1462031389)                   |         | 🚫             |                |                                                                         |              |                                                              | Mobile  |                                  |
 | [URL Wallet](https://erg.urlwallet.org/)                                                               |         | ?             |                |                                                                         |              |                                                              | URL     |                                  |
 | [Yoroi](https://yoroi-wallet.com/)                                                                     |         | ✅             | ✅              |                                                                         |              |                                                              | Web     |                                  |                              |                               |
+
 ## Web Wallets
 
 ### Nautilus
@@ -29,7 +30,7 @@ Yoroi is a light-wallet built by Emurgo, a founding partner of Cardano.
 
 ### Ergo Wallet
 
-Please see the official wallet [https://ergoplatform.org/en/wallets/](wallet page). 
+Please see the official wallet [wallet page](https://ergoplatform.org/en/mobile_wallets/). 
 
 ## Desktop
 
