@@ -25,6 +25,7 @@ Please see this [Quick Primer on ErgoScript](/dev/scs/ergoscript-primer) for an 
 - [Learn ErgoScript By Example Via The Ergo Playground with Robert Kornacki (Video)](https://www.youtube.com/watch?v=8l2v1asHgyA)
 - [ErgoScript by Example Repository](https://github.com/ergoplatform/ergoscript-by-example)
 - [Testing Ergo Contracts Off-chain](https://github.com/anon-real/contract-testing)
+- [DeCo ErgoScript Week #1 4-7-22 Functional & ErgoScript Based Programming Introduction](https://www.youtube.com/watch?v=pMVfTEgqyTc)
 
 ### Advanced Tutorials
 
