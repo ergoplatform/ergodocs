@@ -16,6 +16,8 @@ Looking ahead, though, what happens in 20 or 30 years, when block rewards have f
 
 Mining rewards are a key feature in maintaining the security of proof-of-work blockchains like Bitcoin and Ergo. And so, while we have deliberately kept many of Bitcoin's tried and tested features, we have updated this one to give miners a boost when block rewards have fallen to zero.
 
+- [Ergo Explainer: Storage Rent](https://ergoplatform.org/en/blog/2022-02-18-ergo-explainer-storage-rent/)
+
 ## Storage fees
 
 Fees will be deducted slowly, over time – the unmoved UTXOs will not simply be appropriated by miners. Anyone who wants to avoid this simply needs to move their balances once every four years, which is not an onerous requirement for helping incentivise miners and avoiding the deflationary consequences of lost coins. You can read more about how fees will be levied in [this paper](https://fc18.ifca.ai/bitcoin/papers/bitcoin18-final18.pdf).
