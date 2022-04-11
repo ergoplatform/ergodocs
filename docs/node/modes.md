@@ -177,23 +177,14 @@ else {
 
 ## Light-SPV Mode
 
-This mode is not about checking any full blocks. Like in Bitcoin, an SPV
-node is downloading block headers only, and so checks only proofs of
-work and links. Unlike Bitcoin's SPV, the Light-SPV is downloading and
-checking not all the headers but a sublinear(in blockchain length)
-number of them(in benchmarks, this is about just tens of kilobytes
-instead of tens or hundreds of megabytes for Bitcoin/Ethereum).
-Light-SPV mode is intended to be useful for mobile phones and low-end
-hardware.
+A Light SPV node doesn't check full blocks and is useful for mobile phones and low-end hardware. An SPV node downloads the block headers only (and checks proofs of work and links). Unlike Bitcoin's SPV, Ergo's Light-SPV downloads and checks not every header but a sublinear number (in blockchain length). In benchmarks, this results in tens of kilobytes compared to tens or hundreds of megabytes in Bitcoin/Ethereum. 
 
 ### Bootstrap
 
 1.  Send GetPoPoWProof for all connections.
-
 2.  On receive PoPoWProof apply it to History (History should be able to
     determine, whether this PoPoWProof is better than it's current best
     header chain).
-
 3.  GOTO regular regime.
 
 ### Regular
