@@ -9,7 +9,7 @@ Extended UTXO systems enable *Turing complete* smart contracts. This is a novel 
 
  Ergo has a similar approach to Cardano’s eUTXO with its own Multi-Stage UTXO model that introduces the concept of *UTXO chains* and allows chaining together smart contracts of arbitrary complexity. 
 
-A good introductory article can be found [here](https://dav009.medium.com/learning-ergo-101-blockchain-paradigm-eutxo-c90b0274cf5e). 
+A good introductory article can be found [here](https://dav009.medium.com/learning-ergo-101-blockchain-paradigm-eutxo-c90b0274cf5e) or [DeCo EU Layman Class #1 4-6-22 Basics of eUTxO](https://www.youtube.com/watch?v=SAWeW6wajEw)
 
 ## ErgoScript
 
