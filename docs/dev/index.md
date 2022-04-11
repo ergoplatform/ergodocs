@@ -32,4 +32,4 @@ Users of *AppKit* will usually write Scala code (although AppKit supports many o
 
 ## DeCo
 
-DeCo (Decentralised Collaboration) teaches participants will learn about extended UTXO and boxes, registers, ErgoScript, designing simple systems, multi-transaction systems, and much more. Join the [ErgoLend Discord](https://discord.gg/NBJ68Fvr) for more information. 
+[DeCo (Decentralised Collaboration)](https://www.youtube.com/channel/UCyOIxD7YSHN5QwLIulOWrew) teaches participants will learn about extended UTXO and boxes, registers, ErgoScript, designing simple systems, multi-transaction systems, and much more. Join the [ErgoLend Discord](https://discord.gg/NBJ68Fvr) for more information. 
