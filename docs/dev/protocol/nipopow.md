@@ -33,11 +33,6 @@ NIPoPoWs enable Ergo to build a mobile SPV client that requires around just 100K
 
 ### SPV Security
 
-
-> *There's often tension in the crypto world between security and convenience. That trade-off is unacceptable if we want these technologies to be widely used. Here's how Ergo addresses one common and critical issue.*
-
-We all know that the most secure way to use Bitcoin, or any crypto, is to download a copy of the blockchain and run a full node yourself. Every time you or anyone else makes a transaction, your client checks the blockchain to ensure it's valid. You don't have to trust anyone else.
-
 A full Bitcoin node checks all the blocks in the blockchain (using headers) and makes sure there are no fraudulent transactions. It's a very secure way of using crypto – but there's a problem. It requires significant bandwidth, storage, and processing power. That kind of commodity hardware is expensive, and using a full node to validate and make transactions is unsuitable for mobile devices. This is particularly true for Bitcoin, where the blockchain is over [270 GB and counting](https://www.blockchain.com/charts/blocks-size).
 
 Simplified Payment Verification (SPV) is designed to address this problem, as described in the [Bitcoin white paper](https://bitcoin.org/bitcoin.pdf):
