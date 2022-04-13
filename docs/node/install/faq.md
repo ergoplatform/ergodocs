@@ -39,7 +39,7 @@ kill -9 $(lsof -t -i:9030)
 
 The node uses Java so should work across all operating systems. You can even run on a [Raspberri Pi](/docs/node/install/pi.md). 
 
-> Note that due to the intensive disk I/O, 4-6GB of ram is recommended with a fast SSD. 
+> Note that due to the intensive disk I/O, 4-6GB of ram is recommended with a fast SSD, running with the `-Xmx4G` flag on JVM9/11
 
 ### Commands
 
