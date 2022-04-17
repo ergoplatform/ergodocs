@@ -81,10 +81,10 @@ Code = 65
 
 Requests an [Inv](#inv) message that provides modifier IDs required to the sender to synchronize his or her blockchain with the recipient. It allows a peer which has been disconnected or started for the first time to get the data it needs to request the blocks it hasn't seen.
 
-| Data type                     | Field name                       |
-|:------------------------------|:---------------------------------|
-| VLQ unsigned short            | Count of last header IDs         |
-| byte\[\]\[lastHeaderIdCount\] | Last header IDs (ID byte arrays) |
+| Data type                       | Field name                       |
+|:--------------------------------|:---------------------------------|
+| VLQ unsigned short              | Count of last header IDs         |
+| byte\[32\]\[lastHeaderIdCount\] | Last header IDs (ID byte arrays) |
 
 ## Inv
 
@@ -94,11 +94,11 @@ Transmits one or more inventories of objects known to the transmitting peer.
 
 It can be sent unsolicited to announce new transactions or blocks, or it can be sent in reply to a [Sync Info](#sync-info) message.
 
-| Data type                | Field name                |
-|:-------------------------|:--------------------------|
-| unsigned byte            | Type ID                   |
-| VLQ unsigned int         | Count of elements         |
-| byte\[\]\[elementCount\] | Elements (ID byte arrays) |
+| Data type                  | Field name                |
+|:---------------------------|:--------------------------|
+| unsigned byte              | Type ID                   |
+| VLQ unsigned int           | Count of elements         |
+| byte\[32\]\[elementCount\] | Elements (ID byte arrays) |
 
 ## Request Modifier
 
@@ -110,11 +110,11 @@ This message cannot be used to request arbitrary data, such as historic transact
 
 For this reason, this message should usually only be used to request data from a node which previously advertised it had that data by sending an [Inv](#inv) message.
 
-| Data type                | Field name                |
-|:-------------------------|:--------------------------|
-| unsigned byte            | Modifier type ID          |
-| VLQ unsigned int         | Count of elements         |
-| byte\[\]\[elementCount\] | Elements (ID byte arrays) |
+| Data type                  | Field name                |
+|:---------------------------|:--------------------------|
+| unsigned byte              | Modifier type ID          |
+| VLQ unsigned int           | Count of elements         |
+| byte\[32\]\[elementCount\] | Elements (ID byte arrays) |
 
 ## Modifier
 
