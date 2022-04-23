@@ -57,4 +57,4 @@ Accounts make storing the ‘state’ easier, but easy doesn’t always mean bet
 - [Interesting explanation on the eUTXO model and dapps built in it](https://youtu.be/Yt4Sg6rs80Q)
 - [The Extended UTXO Model - IOHK Research](https://iohk.io/en/research/library/papers/the-extended-utxo-model/)
 - [Understanding the Extended UTXO model - docs.cardano](https://docs.cardano.org/plutus/eutxo-explainer)
-
+- [5. Blockchain Basics & Transactions, UTXO and Script Code](https://www.youtube.com/watch?v=zGDTt9Q3vyM)
