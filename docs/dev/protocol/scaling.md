@@ -62,6 +62,7 @@ Ergo can utilize multiple off-chain solutions, such as [Hydra](https://iohk.io/e
 > Plasma tutorials for Ergo have now been released. Please see [Bank](https://github.com/ergoplatform/ergo-jde/blob/main/kiosk/src/test/scala/kiosk/avltree/bank/Bank.md) & [AVLTrees](https://github.com/ergoplatform/ergo-jde/blob/main/kiosk/src/test/scala/kiosk/avltree/AvlTrees.md)
 
 - [Offchain Bank operating at Layer 2](https://www.ergoforum.org/t/offchain-bank-operating-at-layer-2/3367)
+- [GetBlok Plasma](https://github.com/GetBlok-io/GetBlok-Plasma)
 
 **NIPoPoWs:** [Non-interactive proofs of proof of work](http://docs.ergoplatform.org/dev/protocol/nipopow/) are essential for two reasons: Light Clients and Side Chains. Light clients, which consist of light nodes and light wallets, are efficient clients that do not need to hold the whole blockchain to verify transactions and enable efficient mobile wallets and faster miner bootstrapping. Clients can interact using only the block headers, thus reducing computational resources. Ergo has enabled NIPoPoW support since the genesis block. They can be applied to Ergo's blockchain with an easy to implement [velvet fork](https://www.coindesk.com/markets/2018/03/15/velvet-forks-crypto-updates-without-the-controversy/). NIPoPoWs can also be deployed to support PoW and PoS cross-chain communication. NIPoPoW implementations via *Velvet soft forks* enable **infinite scalability** via sidechains on top of Ergo. 
 
