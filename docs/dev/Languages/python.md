@@ -1,5 +1,7 @@
 # Python
 
+- [ergpy](https://github.com/mgpai22/ergpy)
+
 ## Tutorials
 
 - [Using Appkit from Python](https://github.com/ergoplatform/ergo-appkit/wiki/Using-Appkit-from-Python)
