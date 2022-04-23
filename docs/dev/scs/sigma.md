@@ -77,6 +77,11 @@ It's relatively easy to swap coins or custom tokens trustlessly across any Bitco
 
 ErgoMixer is a [state of the art](https://ergonaut.space/screenshot_2021-05-15_at_22.26.39.png) (and worlds first) non-interactive and non-custodial token mixer. 
 
+### SigmaJoin
+
+
+- [Outsourceable mix](https://www.ergoforum.org/t/yet-another-mixing-protocol/3359/2?u=scalahub)
+- [Stealth transfer](https://www.ergoforum.org/t/yet-another-mixing-protocol/3359/3?u=scalahub)
 
 
 ## Resources
