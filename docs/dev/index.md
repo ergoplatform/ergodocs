@@ -16,12 +16,17 @@ Your application will communicate with the blockchain via a locally run instance
 
 ## Libraries
 
+- Users of *AppKit* will usually write Scala code (although AppKit supports many other languages). 
+- *Headless dApp Framework (HDF)* users will need to write Rust code, allowing it to be used across platforms. 
+  - (The HDF also provides some additional abstractions on top of the original ergo API). 
+  - *JDE*  users will have to write JSON.
+
+
 - [Back-end libraries (SDKs)](stack/back-end)
 - [Front-end libraries](stack/front-end/)
 
 ## Languages
 
-Users of *AppKit* will usually write Scala code (although AppKit supports many other languages). *Headless dApp Framework (HDF)* users will need to write Rust code, allowing it to be used across platforms. (The HDF also provides some additional abstractions on top of the original ergo API). *JDE*  users will have to write JSON.
 
 - [Start coding in JVM (Scala/Java)](/dev/stack/appkit/)
 - [Start coding in Rust](/dev/Languages/rust)
