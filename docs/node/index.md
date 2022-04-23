@@ -14,5 +14,5 @@ If you want to install a node see [this page](install/)
 - [Explorer API](https://git.io/fjqwN)
 - [Ergo.Watch API](https://ergo.watch/api/v0/docs)
 - [TokenJay API](https://api.tokenjay.app/swagger-ui/index.html;jsessionid=59429AD4DF081E2E3450C2834095D427?attribute=redirectWithRedirectView)
-
+- [synced-node](https://github.com/mgpai22/ergo-synced-node)
 
