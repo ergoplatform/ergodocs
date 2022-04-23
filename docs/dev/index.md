@@ -30,6 +30,8 @@ Users of *AppKit* will usually write Scala code (although AppKit supports many o
 - [Start coding in ErgoScript](scs/ergoscript/)
 
 
-## DeCo
+## Other entry points
 
-[DeCo (Decentralised Collaboration)](https://www.youtube.com/channel/UCyOIxD7YSHN5QwLIulOWrew) teaches participants will learn about extended UTXO and boxes, registers, ErgoScript, designing simple systems, multi-transaction systems, and much more. Join the [ErgoLend Discord](https://discord.gg/NBJ68Fvr) for more information. 
+- DeCo (Decentralised Collaboration) teaches participants will learn about extended UTXO and boxes, registers, ErgoScript, designing simple systems, multi-transaction systems, and much more. Join the [ErgoLend Discord](https://discord.gg/NBJ68Fvr) for more information or watch their full courses on [youtube.](https://www.youtube.com/channel/UCyOIxD7YSHN5QwLIulOWrew)
+- [ErgoTutorials](https://www.youtube.com/channel/UCyOIxD7YSHN5QwLIulOWrew)
+- [The Future of ErgoGames.io — Hosting Educational Classes on Game Building and Design](https://medium.com/@lgmeister/the-future-of-ergogames-io-hosting-educational-classes-on-game-building-and-design-679afd2632d4)
