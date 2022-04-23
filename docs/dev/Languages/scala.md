@@ -1,6 +1,6 @@
 # Scala
 
-Ergo's primary language is Scala. Similarily, the scripting language used by ergo, *[ergoscript](/docs/dev/lib/ergoscript.md)*, is similarly based on Scala.
+Ergo's primary language is [Scala](https://www.udemy.com/course/rock-the-jvm-scala-for-beginners/). Similarily, the scripting language used by ergo, *[ergoscript](/docs/dev/lib/ergoscript.md)*, is similarly based on Scala.
 
 This [Ergo Scala Skeleton App](https://github.com/dav009/ergo-scala-skeleton-app) is a great place to start. 
 
