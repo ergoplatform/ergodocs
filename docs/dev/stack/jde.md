@@ -19,6 +19,7 @@ Goal #2 rules out many programming languages such as Java/Scala and Rust. This r
 ### Capabilities
 
 Let us take the use-case of purchasing, say, 10 Sigma-USD reserve coins as an example, which involves the following steps: 
+
    1. Find the current oracle pool box and obtain the rate from register R4.
    2. Find the current bank box and obtain the relevant parameters (tokens in circulation and base reserves).
    3. Use the formulae to obtain the delta in base reserves. 
@@ -29,6 +30,7 @@ Let us take the use-case of purchasing, say, 10 Sigma-USD reserve coins as an ex
 All the above tasks can be programmed in JDE, as done [in this script](https://raw.githubusercontent.com/ergoplatform/ergo-jde/main/sample-scripts/mintReserveCoinAdvanced.json).  
 
 In general, JDE allows us to do the following:
+
 1. Find some boxes by address and/or box Id
 2. Extract values from those boxes (nanoErgs, registers and tokens), and define variables using those.
 3. Define constant values
@@ -41,6 +43,7 @@ In general, JDE allows us to do the following:
 A compiled JAR is available on the [release](https://github.com/ergoplatform/ergo-jde/releases) page. You can also generate the JAR yourself using the `sbt assembly` command. 
 
 The following are the steps in using JDE. 
+
 1. Understand the scripting language by looking at the sample scripts and the documentation.
 2. Ensure you have a fully synced Ergo node running.
 3. Write your script or edit the existing script for the task at hand.
