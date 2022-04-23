@@ -1,8 +1,7 @@
 ## How to set up and configure a full Ergo node
 
-This page explains how to install and run a full Ergo node. It does not cover mining. 
 
-Linux Systems can run [ergo-installer.sh](https://github.com/ergoplatform/ergo/blob/master/ergo-installer.sh)
+You can run [ergo-installer.sh](https://github.com/ergoplatform/ergo/blob/master/ergo-installer.sh)
 
 ```bash
 curl -s https://raw.githubusercontent.com/ergoplatform/ergo/master/ergo-installer.sh | sh -s -- --api-key=<YOUR_API_KEY>
