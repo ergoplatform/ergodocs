@@ -73,7 +73,7 @@ It's relatively easy to swap coins or custom tokens trustlessly across any Bitco
 
 
 
-### [ErgoMixer](/docs/uses/mixer)
+### [ErgoMixer](/uses/mixer)
 
 ErgoMixer is a [state of the art](https://ergonaut.space/screenshot_2021-05-15_at_22.26.39.png) (and worlds first) non-interactive and non-custodial token mixer. 
 
