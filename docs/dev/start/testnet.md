@@ -46,7 +46,7 @@ Payouts are frozen for right now, if any of you need testnet ERG then you can ta
 
 |                | mainnet  | testnet   |
 |----------------|----------|-----------|
-| API Port       | 9052     | 9053      | 
+| API Port       | 9053     | 9052      | 
 | P2P Port       | 9030     | 9020      |
 | address prefix | (0) 0x00 | (16) 0x10 |
  
