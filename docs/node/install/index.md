@@ -43,7 +43,6 @@ java -jar -Xmx4G ergo-*.jar --mainnet -c ergo.conf
 ```
 
 - The `-Xmx4G` flag sets the max heap size for the JVM. `4-6G` recommended.
-- The `-Dlogback` flags reduces the number of logs returned. 
 
 It is better to use more memory on heap`-Xmx4g` for initial syncing. `-Xmx1g` should be enough when node is full synced.
 The node will start syncing immediately after this. Wait for a few minutes for the API to start and go to the next step.
