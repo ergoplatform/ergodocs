@@ -39,7 +39,7 @@ ergo {
 Then issue the following command to run the node for the first time.
 
 ```bash
-java -jar -Xmx4G -Dlogback.stdout.level=WARN -Dlogback.file.level=ERR ergo.jar --mainnet -c ergo.conf
+java -jar -Xmx4G ergo-*.jar --mainnet -c ergo.conf
 ```
 
 - The `-Xmx4G` flag sets the max heap size for the JVM. `4-6G` recommended.
