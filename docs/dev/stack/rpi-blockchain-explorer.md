@@ -59,10 +59,11 @@ createuser ergo -P --interactive
 psql
 create database explorer;
 \c explorer;
-/i /explorer-backend-9.4.3/modules/explorer-core/src/main/resources/db/V9__Schema.sql
+\i /explorer-backend-9.4.3/modules/explorer-core/src/main/resources/db/V9__Schema.sql
 ```
-
 The final line of code above executes a SQL script that creates a bunch of tables and indices to be populated later by the Chain Grabber.
+
+
 
 ### Update app config
 
@@ -73,6 +74,8 @@ sudo nano explorer-backend-9.4.3/modules/chain-grabber/src/main/resources/applic
 ```
 
 ### Launch chain-grabber
+
+Run the following command from within the `explorer-backend` directory. 
 ```
 sbt chain-grabber/run
 ```
