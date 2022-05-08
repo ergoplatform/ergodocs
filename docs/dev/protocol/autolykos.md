@@ -16,13 +16,11 @@ It's also discussed here on ['Unblocked with Robert Kornacki' (14:45)](https://w
 
 Ergo uses the **linear least square method** to calculate difficulty in response to fluctuating hashrate. This function is based on the past eight epochs (1024 blocks), as described in [this paper](https://eprint.iacr.org/2017/731.pdf). 
 
-Autolykos does adjust slowly, but it also helps prevent **adversarial** hopping. This algorithm has a 1.9% error rate compared to bitcoins 9.1% error rate (exponential 10% hash rate growth)
+Autolykos does adjust slowly, but it also helps prevent **adversarial** hopping. This algorithm has a 1.9% error rate compared to bitcoins 9.1% error rate (exponential 10% hash rate growth). 
 
 **Can it be quicker?**
 
-Having a quicker difficulty readjustment can lead to Timewarp attacks (amongst others).
-
-Ergo already uses an epoch length of ~1.5 days (with normal block rate), compared to Bitcoin's two weeks. More epochs were considered, but the retargeting function is also non-linear, so it can adjust sooner than the linear function in certain popular scenarios. 
+Ergo already uses an epoch length of ~1.5 days (with normal block rate), compared to Bitcoin's two weeks. Having a quicker difficulty readjustment can lead to Timewarp attacks (amongst others). More epochs were considered, but the retargeting function is also non-linear, so it can adjust sooner than the linear function in certain popular scenarios; and it is unclear whether any hard-fork would be required at this stage. 
 
 ## Hardforking policy
 
