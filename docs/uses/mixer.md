@@ -11,7 +11,7 @@
 ErgoMixer is the **first *non-custodial, programmable, non-interactive* mixer in the space** (and it is also the only **token mixer** to our knowledge). Download the latest release [here](https://github.com/ergoMixer/ergoMixBack/releases) (must be run as a local application to preserve anonymity.)
 
 
-ErgoMixer utilises Ergo’s [**Sigma protocols**](/dev/scs/sigma) to enable efficient, trustless mixing of funds, enabling a high degree of privacy and security.
+ErgoMixer utilizes Ergo's [**Sigma protocols**](/dev/scs/sigma) to enable efficient, trustless mixing of funds, enabling a high degree of privacy and security.
 
 **Introductory**
 
@@ -40,13 +40,13 @@ ErgoMixer utilises Ergo’s [**Sigma protocols**](/dev/scs/sigma) to enable effi
 
 ## *Covert* Addresses
 
-You can configure a covert address in ErgoMixer, this is handy for displaying an address publicly to receive funds. You can set this address to automatically mix and withdraw your erg (or sigUSD if you prefer). 
+You can configure a covert address in ErgoMixer; this is handy for displaying an address publicly to receive funds. You can set this address to automatically mix and withdraw your erg (or sigUSD if you prefer). 
 
 ## *Stealth* Addresses
 
 - [stealth address contract](https://www.ergoforum.org/t/stealth-address-contract/255)
 
-Our latest ERGOHACK seen not one, but two seperate teams working on the stealth addresses concept introduced in [this forum post](https://www.ergoforum.org/t/stealth-address-contract/255)
+Our latest ERGOHACK saw not one but two separate teams working on the stealth address concept introduced in [this forum post](https://www.ergoforum.org/t/stealth-address-contract/255)
 
 `@aragogi` - [Stealth Scanner project + customized version of mixer in this repo](https://github.com/aragogi/Stealth-doc)
 
@@ -54,7 +54,7 @@ Our latest ERGOHACK seen not one, but two seperate teams working on the stealth 
 
 ## Tor support
 
-Since ErgoMixer v3.0.0 there is Tor support available.
+Since ErgoMixer v3.0.0, there is Tor support available.
 
 
 ## FAQ
@@ -72,8 +72,6 @@ However, if only one of them were honest, it would be secure for people to use.
 ErgoMixer doesn't require this "ceremony" setup.
 
 The computer where the MPC ceremony holds place should also be secure and destroyed after the ceremony. Otherwise, it could leak keys that a malicious attack can use to construct fake proofs. There's a really strong game theoric incentive to integrate some backdoor to the software or even hardware of MPC computer. 
-
-There were even attacks (not on MPC computer but some computer somewhere), where malware transferred private keys out of the device by extremely fast blinking of LEDs on notebook (people couldn't see it, but the high fps camera could). You can even use high-frequency audio output or even "esoteric" hard to detect things like high-frequency RF noise. You would be surprised what's possible. Imagine that you are building a mixer that will hold billions of dollars. If you are clever enough, you can introduce some genius backdoor, as I mentioned and drain mixer step by step in a clever way that nobody will know about it. So there's a huge game theoric incentive for you to do it. The same goes for the authors of the cryptographic protocol itself. 
 
 ### Showing as 'corrupted' on Mac
 
@@ -93,10 +91,10 @@ Assume the mixing as a series of *mini-mixes* (rounds). At each round, you mix w
 - In theory, each round's distinguishability is 2^-1 for any observer but 100% for each participant.
 Therefore, in theory, the final distinguishability is 2^(-rounds).
 - In the worst-case practice, this distinguishability can be 100%. Consider there are only you and an attacker mixing the boxes. In each step, he knows the mapping, so he knows the final mapping. Here comes the pool size. If there are more people in the mixing pool, at least some of the boxes will be mixed with other people's, resulting in more indistinguishability.
-- There is no way to differentiate between boxes in the pool; your mixer only knows yours and the mapping of last mixed boxes with others. 
+- There is no way to differentiate between boxes in the pool; your mixer only knows yours and the mapping of the last mixed boxes with others. 
 - Mixer fetches the available boxes and picks one randomly.  *Note that there are some delays between mixes, and it is configurable, so the whole mixing parties are working asynchronously.*
 - you can configure your mixer to mix every 10 minutes or every ten days. *the idea is if there are more than two parties in the mixing pool during your mixing period, suddenly, some of the boxes will be picked from a party that is not the attacker.*
-- If you consider the whole system is only mixing by you and the attacker, or if all other parties are corrupted and conspiring with the attacker, the security is gain is zero. 
+- If you consider the whole system is only mixing by you and the attacker, or if all other parties are corrupted and conspiring with the attacker, the security gain is zero. 
 - Simply, it is a non-interactive multi-party protocol in which the colluding parties should not be ALL other parties. So, if at least one honest party is mixing in the pool, the resulting map will be indistinguishable to some degree from the attacker.
 
 Ever wonder how the ErgoMixer clients receive Rings, Fees, Levels, etc.? [Please see this forum post for some insights](https://www.ergoforum.org/t/ergomixer-zerojoin-mixer-for-erg-and-tokens/318/10?u=anon2020s)
@@ -106,7 +104,7 @@ Ever wonder how the ErgoMixer clients receive Rings, Fees, Levels, etc.? [Please
 
 ErgoUtils now support obfuscating entry points for ErgoMixer.
 
-When you withdraw from the mixer to a wallet, it is obvious that that person has received some funds from the mixer and when he spends those boxes, it is also obvious that those boxes are from the mixer.
+When you withdraw from the mixer to a wallet, it is obvious that that person has received some funds from the mixer, and when he spends those boxes, it is also obvious that those boxes are from the mixer.
 
 Those who care about privacy and use ErgoMixer, also probably care about not anyone being able to tell that they are using the mixer easily when they interact with their wallets. This tool is designed to address this issue.
 
