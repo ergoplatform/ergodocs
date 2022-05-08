@@ -11,19 +11,16 @@
 - ErgoScript's syntax is a subset of Scala's. However, knowledge of Scala is not necessary to learn ErgoScript because the amount of Scala needed to write ErgoScript is small e.g. `val`
 - Note that arrays in Scala are accessed using round parentheses, not square brackets like in Java or Python. Thus, `OUTPUTS(0)` refers to the first element of the `OUTPUTS` array
 - Unlike Scala, ErgoScript does not support the `var` keyword, and thus everything is immutable
+- The scripting language in itself is non-Turing complete, but applications can be made to be Turing complete as demonstrated in [this peer-reviewed paper](https://arxiv.org/pdf/1806.10116v1.pdf).
 
+## Simple Example
 
-The scripting language in itself is non-Turing complete, but applications can be made to be Turing complete as demonstrated in [this peer-reviewed paper](https://arxiv.org/pdf/1806.10116v1.pdf).
+```
+if (HEIGHT < 100000) alicePubKey else bobPubKey
+```
 
-**Simple Example**
-
-Allows 
-
-1. Only Alice to spend a box before a certain height 
-2. Only Bob to spend the box after that.
-
-`if (HEIGHT < 100000) alicePubKey else bobPubKey `
-
+1. Allows Only Alice to spend a box before a certain height 
+2. Allows Only Bob to spend the box after that.
 
 
 Please see this [Quick Primer on ErgoScript](/dev/scs/ergoscript-primer) for an overview of key concepts and some basic examples. 
