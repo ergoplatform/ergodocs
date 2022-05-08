@@ -10,6 +10,8 @@ Apps in the Ergo ecosystem looks a bit like this.
 
 Your application will communicate with the blockchain via a locally run instance of the Ergo Node. The Node provides an API that is used by your SDK logic to carry out operations on the blockchain.
 
+- [Set up a local Node on mainnet or testnet](/node/)
+
 For your first interaction with the Ergo blockchain, [this video](https://www.youtube.com/watch?v=Md5s-XV6-Hs) takes you through the steps to programmatically create & submit a transaction. Alternatively, dive straight into ErgoScript or any of the other paths laid out below. 
 
 ### Educational Courses
@@ -19,11 +21,8 @@ For your first interaction with the Ergo blockchain, [this video](https://www.yo
 
 ### ERGOHACK
 
-We host regular Hackathons on our Discord server. See [ergohack.io/](https://ergohack.io/)
+We host regular Hackathons on our Discord server. See [ergohack.io](https://ergohack.io/) for more information.
 
-## Infrastructure
-
-- [Set up a local Node on mainnet or testnet](/node/)
 
 ## Libraries
 
