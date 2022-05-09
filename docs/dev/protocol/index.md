@@ -53,11 +53,6 @@ Ergo uses a so-called *extended-UTXO model*, which implies UTXOs with the abilit
 7. The cryptographic part of ErgoScript is based on [Sigma Protocols](/dev/scs/sigma) and naturally supports threshold `m-of-n` signatures, ring signatures, and more. 
 8. Support for [Multi-Stage contracts](/dev/scs/multi) that operate on a stateful level. 
 
-The overwhelming majority of successful public blockchain use‐cases are related to financial applications. Ergo extends Bitcoin's way of writing contracts by attaching a guard script (together with additional custom data) to every coin. For example, in addition to regular protection by some `m‐of‐n` signature, Ergo allows specifying the possible recipients of these coins, which may be another contract with similar complex conditions. 
-
-> This "chaining" approach allows the implementation of **secure and efficient contracts of arbitrary complexity.**
-
-
 **Creating financial contracts on the blockchain isn't just about the functionality; it's about making that functionality safe, accessible, and powerful.**
 
 
