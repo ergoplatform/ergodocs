@@ -9,7 +9,7 @@ curl -s https://raw.githubusercontent.com/ergoplatform/ergo/master/ergo-installe
 
 With this script you'll have the latest Ergo node installed without any hassle.
 
-If you'd prefer to get set up manually, here's a [step-by-step.](https://ergoplatform.org/en/blog/2019_12_02_how_to_setup/). 
+If you'd prefer to get set up manually, here's a [step-by-step.](https://ergoplatform.org/en/blog/2019_12_02_how_to_setup/) 
 
 ## Light Mode
 ```conf
