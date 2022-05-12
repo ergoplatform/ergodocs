@@ -1,5 +1,6 @@
-## How to set up and configure a full Ergo node
+# How to set up and configure a full Ergo node
 
+## Quick Start
 
 You can run [ergo-installer.sh](https://github.com/ergoplatform/ergo/blob/master/ergo-installer.sh)
 
@@ -9,7 +10,42 @@ curl -s https://raw.githubusercontent.com/ergoplatform/ergo/master/ergo-installe
 
 With this script you'll have the latest Ergo node installed without any hassle.
 
-If you'd prefer to get set up manually, here's a [step-by-step.](/node/platforms/tutorial).
+If you'd prefer to get set up manually, here's a [step-by-step guide](https://github.com/ergoplatform/ergo/wiki/Set-up-a-full-node).
+
+## Optimization
+
+The Raspberry Pi is a very powerful device but it has hardware limitations which prevent it from syncing a full Ergo node quickly and efficiently. Below are a few things you can do to ensure a smooth setup process.
+
+> Note: This was written as of Ergo node release 4.0.27 and tested on multiple Pi4 with 4gb RAM
+
+### Memory
+
+If you are booting from a microSD card then it is definintely worth paying a little more for the extra headroom. 
+
+* 32gb: completed node sync in 4.5 days
+* 256gb: completed node sync in 40 hours
+
+### SWAP Size
+
+Increase the system's total accessible memory beyond its hardware capabilities. 
+
+```bash
+sudo dphys-swapfile swapoff
+sudo nano /etc/dphys-swapfile
+CONF_SWAPSIZE=4096 
+sudo dphys-swapfile setup
+sudo dphys-swapfile swapon
+sudo reboot now
+```
+
+### Limit Heap
+
+When ready to launch the node we want to set a maximum limit of 2gb.
+
+```bash
+java -Xmx2g -jar ergo-<release-version>.jar --mainnet -c ergo.conf
+```
+
 
 ## Light Mode
 ```conf
@@ -55,6 +91,9 @@ scorex {
 ```
 
 
-### Resources
+## Resources
 
 - [How to setup an Ergo Node on a Raspberry Pi](https://youtu.be/yDqhlgz0244)
+
+
+
