@@ -4,10 +4,10 @@
 ## Getting Started
 
 - Ergo is currently available on the following [wallets](https://ergoplatform.org/en/wallets/) and [exchanges](https://ergoplatform.org/en/exchanges/). 
-- The development roadmap can be seen [here](https://ergonaut.space/en/roadmap).
+- The development roadmap can be seen [here](https://ergoplatform.org/en/ecosystem/#Roadmap).
 - To see the applications currently running on Ergo, check out [sigmaverse.io](https://sigmaverse.io/).
 - To read about Ergo from a less technical perspective, visit [ergonaut.space](https://ergonaut.space/en/home). 
-- If you want to mine, see the [Miners Handbook](https://ergonaut.space/Mining).
+- If you want to mine, see the [Miners Handbook](https://ergonaut.space/en/Guides/Mining).
 
 ## Why '*Ergo*'? 
 

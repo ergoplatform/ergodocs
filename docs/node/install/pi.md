@@ -94,6 +94,3 @@ scorex {
 ## Resources
 
 - [How to setup an Ergo Node on a Raspberry Pi](https://youtu.be/yDqhlgz0244)
-
-
-

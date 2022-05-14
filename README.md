@@ -1,7 +1,7 @@
 Ergo Platform documentation
 =======================================
 
-[docs.ergoplatform.org](https://docs.ergoplatform.org)
+[docs.ergoplatform.com](https://docs.ergoplatform.com/)
 
 ## Contributing
 
