@@ -31,9 +31,7 @@ Please see the official wallet [wallet page](https://ergoplatform.org/en/mobile_
 
 > The first multi-platform wallet for ergo.
 
-Minotaur is a multi-platform dApp wallet based on this [framework] 
-
-As well as supporting the usual functions, minotaur has dApp stack support - Allowing any dApp to be embedded directly in app. 
+Minotaur is a multi-platform dApp wallet that has *dApp stack support* - Allowing any dApp to be embedded directly in app. 
 
 
 ### SAFEW
