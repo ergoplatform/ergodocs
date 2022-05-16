@@ -69,16 +69,7 @@ More information available on their [GitHub](https://github.com/Satergo/Satergo)
 
 ### [Node](/node) (Desktop) 
 
-The node comes with a wallet panel interface. 
-
-
-## Hardware
-
-
-Please join the Nautilus chat and get in touch with Captain Nemo.
-
-- [tesseract-one/ledger-app-ergo](https://github.com/tesseract-one/ledger-app-ergo)
-- [anon-br/ledgerjs-hw-app-ergo](https://github.com/anon-br/ledgerjs-hw-app-ergo)
+The full node comes with a wallet panel interface. 
 
 
 ### Yoroi
@@ -89,6 +80,8 @@ Yoroi is a light-wallet built by Emurgo, a founding partner of Cardano.
 
 ## Misc
 
+- [tesseract-one/ledger-app-ergo](https://github.com/tesseract-one/ledger-app-ergo)
+- [anon-br/ledgerjs-hw-app-ergo](https://github.com/anon-br/ledgerjs-hw-app-ergo)
 - [URL Wallet (Your key is in the URL, use this wallet for temporary use cases only!)](https://erg.urlwallet.org/)
 - [Ergo Paper Wallet](https://anon-br.github.io/ergo-paper-wallet/)
 - [SwiftAPI](https://github.com/ergoplatform/sigma-rust/blob/31aa0922d03f632d22fdc348b2604d23ed296586/bindings/ergo-wallet-ios/Sources/ErgoWallet/ErgoWallet.swift)
