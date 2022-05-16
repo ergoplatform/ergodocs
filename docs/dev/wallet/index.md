@@ -25,7 +25,7 @@ Ledger support is currently in development, this can be tested with Nautilus if 
 
 ### Ergo Wallet (Mobile)
 
-Please see the official wallet [wallet page](https://ergoplatform.org/en/mobile_wallets/). 
+Please see the official wallet [wallet page](https://ergoplatform.org/en/mobile-wallets/). 
 
 ### Minotaur
 
