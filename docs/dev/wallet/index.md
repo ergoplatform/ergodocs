@@ -6,20 +6,21 @@ Note that wallets are supported by third parties, we only provide the informatio
 |---|---|---|---|---|---|---|
 | [Nautilus](https://chrome.google.com/webstore/detail/nautilus-wallet/gjlmehlldlphhljhpnlddaodbjjcchai) | Web | ✅ |  | ✅ |  | 🔜 |
 | [Ergo Wallet](https://ergoplatform.org/en/mobile_wallets/) | Mobile |  | 🔗 | 🔜 | ✅ |  |
-| [SAFEW](https://ergoplatform.org/en/blog/2022-03-25-storing-ergo-safew/) | Web | ✅ |  | ✅ | ✅* | ✅ |
+| [SAFEW](https://ergoplatform.org/en/blog/2022-03-25-storing-ergo-safew/) | Web | ✅ |  | ✅ | 🤝 | ✅ |
 | [Node Wallet](https://docs.ergoplatform.com/node/platforms/) | Desktop |  | ✅ |  |  |  |
 | [Satergo](https://www.satergo.com) | Desktop |  | ✅ | 🔜 |  | 🔜 |
-| [Minotaur](https://github.com/minotaur-ergo/minotaur-wallet) | Web |  |  |  |  | 🔜 |
+| [Minotaur](https://github.com/minotaur-ergo/minotaur-wallet) | Web |  |  |  | 🤝 | 🔜 |
 | [Paper Wallet](https://anon-br.github.io/ergo-paper-wallet/) | Cold |  |  |  |  |  |
 | [Viawallet](https://apps.apple.com/us/app/viawallet-multi-chain-wallet/id1462031389) | Mobile |  |  |  |  |  |
 | [URL Wallet](https://erg.urlwallet.org/) | URL |  |  |  |  |  |
 | [Yoroi](https://yoroi-wallet.com/) | Web | ✅ |  |  |  |  |
 
+
 ## Wallets
 
 ### Nautilus (Web)
 
-Nautilus is a privacy-focused web-based wallet 
+> Nautilus is a privacy-focused web-based wallet 
 
 Ledger support is currently in development, this can be tested with Nautilus if you have a Ledger Nano **S**. 
 
@@ -29,9 +30,16 @@ Please see the official wallet [wallet page](https://ergoplatform.org/en/mobile_
 
 ### Minotaur
 
+> The first multi-platform wallet for ergo.
+
+Minotaur is a multi-platform dApp wallet based on this [framework] 
+
+As well as supporting the usual functions, minotaur has dApp stack support - Allowing any dApp to be embedded directly in app. 
+
+
 ### SAFEW
 
-Simple And Fast Ergo Wallet is the most feature-rich wallet, best suited for developers. It has several features such as
+> Simple And Fast Ergo Wallet is the most feature-rich wallet, best suited for developers. It has several features such as
 
 - Ergopay-support
 - Ledger Support
@@ -45,7 +53,7 @@ More information available on their [GitHub](https://github.com/ThierryM1212/SAF
 
 ### Satergo (Desktop) 
 
-Desktop wallet for the cryptocurrency Ergo with embedded node functionality. Available at [satergo.com](https://www.satergo.com)
+> Desktop wallet for the cryptocurrency Ergo with embedded node functionality. Available at [satergo.com](https://www.satergo.com)
 
 Why use Satergo?
 - **Secure**: Everything is encrypted and stored with the program
