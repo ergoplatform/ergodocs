@@ -8,9 +8,21 @@ You can run [ergo-installer.sh](https://github.com/ergoplatform/ergo/blob/master
 curl -s https://raw.githubusercontent.com/ergoplatform/ergo/master/ergo-installer.sh | sh -s -- --api-key=<YOUR_API_KEY>
 ```
 
-With this script you'll have the latest Ergo node installed without any hassle.
-
 If you'd prefer to get set up manually, here's a [step-by-step guide](https://github.com/ergoplatform/ergo/wiki/Set-up-a-full-node).
+
+
+## Preperation
+
+```
+sudo apt update
+sudo apt upgrade
+```
+
+Download dependencies
+
+```
+sudo apt install default-jdk
+```
 
 ## Optimization
 
@@ -37,6 +49,7 @@ sudo dphys-swapfile setup
 sudo dphys-swapfile swapon
 sudo reboot now
 ```
+
 
 ### Limit Heap
 
