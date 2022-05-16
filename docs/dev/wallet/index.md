@@ -1,6 +1,7 @@
 # Wallets
 
 Note that wallets are supported by third parties, we only provide the information below as a courtesy.
+
 | Wallet                                                                                                 | Type    | dApp-C | Full Node | Ledger | [E-Pay](https://github.com/ergoplatform/eips/blob/master/eip-0020.md) | Tokens | [Mixer](https://docs.ergoplatform.com/uses/mixer/#ergomixer) |   |
 |--------------------------------------------------------------------------------------------------------|---------|--------|-----------|--------|-----------------------------------------------------------------------|--------|--------------------------------------------------------------|---|
 | [Nautilus](https://chrome.google.com/webstore/detail/nautilus-wallet/gjlmehlldlphhljhpnlddaodbjjcchai) | Web     | ✅      |           | ✅      |                                                                       | ✅      | 🔜                                                            |   |
