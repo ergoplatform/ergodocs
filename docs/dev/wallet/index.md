@@ -19,6 +19,8 @@ Note that wallets are supported by third parties, we only provide the informatio
 
 ### Nautilus
 
+Nautilus is a privacy-focused web-based wallet 
+
 ### Yoroi
 
 Yoroi is a light-wallet built by Emurgo, a founding partner of Cardano. 
@@ -45,12 +47,13 @@ The node comes with a wallet panel interface.
 
 ## Hardware
 
-- Ledger Support in development (see below)  | Tesseract & Yoroi
+Ledger support is currently in development, this can be tested with Nautilus if you have a Ledger Nano **S**. 
+
+Please join the Nautilus chat and get in touch with Captain Nemo.
 
 - [tesseract-one/ledger-app-ergo](https://github.com/tesseract-one/ledger-app-ergo)
 - [anon-br/ledgerjs-hw-app-ergo](https://github.com/anon-br/ledgerjs-hw-app-ergo)
 
-Here is [a guide](https://putukusuma.medium.com/build-an-app-for-ledger-nano-s-on-macbook-and-docker-46be51701206) on how to deploy it on the device (just skip the docker part): 
 
 ## Misc
 
