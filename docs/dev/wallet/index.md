@@ -15,39 +15,65 @@ Note that wallets are supported by third parties, we only provide the informatio
 | [URL Wallet](https://erg.urlwallet.org/) | URL |  |  |  |  |  |
 | [Yoroi](https://yoroi-wallet.com/) | Web | ✅ |  |  |  |  |
 
-## Web Wallets
+## Wallets
 
-### Nautilus
+### Nautilus (Web)
 
 Nautilus is a privacy-focused web-based wallet 
 
-### Yoroi
+Ledger support is currently in development, this can be tested with Nautilus if you have a Ledger Nano **S**. 
 
-Yoroi is a light-wallet built by Emurgo, a founding partner of Cardano. 
-
-[Yoroi Frontend GitHub](https://github.com/Emurgo/yoroi-frontend)
-
-
-## Mobile Wallets
-
-### Ergo Wallet
+### Ergo Wallet (Mobile)
 
 Please see the official wallet [wallet page](https://ergoplatform.org/en/mobile_wallets/). 
 
-## Desktop
+### Minotaur
 
-### Satergo
+### SAFEW
 
-As an alternative to the full-node on desktop, there is a JVM wallet available at [satergo.com](https://www.satergo.com)
+Simple And Fast Ergo Wallet is the most feature-rich wallet, best suited for developers. It has several features such as
 
-### [Node](/node)
+- Ergopay-support
+- Ledger Support
+- Export CSV
+- Configure Explorer, Node, UI address used
+- ErgoMixer access
+- Transaction builder in Expert mode (mint/burn/etc)
+- Chained transactions
+
+More information available on their [GitHub](https://github.com/ThierryM1212/SAFEW)
+
+### Satergo (Desktop) 
+
+Desktop wallet for the cryptocurrency Ergo with embedded node functionality. Available at [satergo.com](https://www.satergo.com)
+
+Why use Satergo?
+- **Secure**: Everything is encrypted and stored with the program
+- **Independent**: Host your own node if you want to
+- **Invaluable**: Contribute to the Ergo network
+- **Portable**: Does not depend on any other software being installed
+- **Cross-platform**: Supports all major desktop platforms
+- **Fully featured**: Has many features but still easy to use
+- **Deterministic**: Know what runs on your computer
+- **Light**: Usable in slow or portable operating system environments
+
+**Supported platforms**
+
+- Windows (x64)
+- Linux (x64 and aarch64)
+- Mac (x64 and aarch64)
+- Universal (Java 17+)
+
+More information available on their [GitHub](https://github.com/Satergo/Satergo)
+
+
+### [Node](/node) (Desktop) 
 
 The node comes with a wallet panel interface. 
 
 
 ## Hardware
 
-Ledger support is currently in development, this can be tested with Nautilus if you have a Ledger Nano **S**. 
 
 Please join the Nautilus chat and get in touch with Captain Nemo.
 
@@ -55,9 +81,16 @@ Please join the Nautilus chat and get in touch with Captain Nemo.
 - [anon-br/ledgerjs-hw-app-ergo](https://github.com/anon-br/ledgerjs-hw-app-ergo)
 
 
+### Yoroi
+
+Yoroi is a light-wallet built by Emurgo, a founding partner of Cardano. 
+
+[Yoroi Frontend GitHub](https://github.com/Emurgo/yoroi-frontend)
+
 ## Misc
 
 - [URL Wallet (Your key is in the URL, use this wallet for temporary use cases only!)](https://erg.urlwallet.org/)
 - [Ergo Paper Wallet](https://anon-br.github.io/ergo-paper-wallet/)
 - [SwiftAPI](https://github.com/ergoplatform/sigma-rust/blob/31aa0922d03f632d22fdc348b2604d23ed296586/bindings/ergo-wallet-ios/Sources/ErgoWallet/ErgoWallet.swift)
 - iOS (Tethered) Beta | [Ergo Light Client](https://github.com/bjenkinsgit/ErgoIOSLiteClient.git) | Community | Requires a full node
+
