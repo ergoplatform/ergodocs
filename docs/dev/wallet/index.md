@@ -2,18 +2,19 @@
 
 Note that wallets are supported by third parties, we only provide the information below as a courtesy.
 
-| Wallet                                                                                                 | Type    | dApp-C | Node | Ledger | [E-Pay](https://github.com/ergoplatform/eips/blob/master/eip-0020.md) | Tokens | [Mixer](https://docs.ergoplatform.com/uses/mixer/#ergomixer) |
-|--------------------------------------------------------------------------------------------------------|---------|--------|-----------|--------|-----------------------------------------------------------------------|--------|--------------------------------------------------------------|
-| [Nautilus](https://chrome.google.com/webstore/detail/nautilus-wallet/gjlmehlldlphhljhpnlddaodbjjcchai) | Web     | ✅      |           | ✅      |                                                                       | ✅      | 🔜                                                            |
-| [Ergo Wallet](https://ergoplatform.org/en/mobile_wallets/)                                             | Mobile  |        | 🔗         | 🔜      | ✅                                                                     | ✅      |                                                              |
-| [SAFEW](https://ergoplatform.org/en/blog/2022-03-25-storing-ergo-safew/)                               | Web     | ✅      |           | ✅      | ✅*                                                                    | ✅      | ✅                                                            |
-| [Node Wallet](https://docs.ergoplatform.com/node/platforms/)                                           | Desktop |        | ✅         |        |                                                                       | ✅      |                                                              |
-| [Satergo](https://www.satergo.com)                                                                     | Desktop |        |           | 🔜      |                                                                       | ✅      | 🔜                                                            |
-| [Minotaur](https://github.com/minotaur-ergo/minotaur-wallet)                                           | Web     |        |           |        |                                                                       | ✅      | 🔜                                                            |
-| [Paper Wallet](https://anon-br.github.io/ergo-paper-wallet/)                                           | Cold    |        |           |        |                                                                       | ✅      |                                                              |
-| [Viawallet](https://apps.apple.com/us/app/viawallet-multi-chain-wallet/id1462031389)                   | Mobile  |        |           |        |                                                                       | 🚫      |                                                              |
-| [URL Wallet](https://erg.urlwallet.org/)                                                               | URL     |        |           |        |                                                                       | ?      |                                                              |
-| [Yoroi](https://yoroi-wallet.com/)                                                                     | Web     | ✅      |           |        |                                                                       | ✅      |                                                              |
+| Wallet | Type | dApp-C | Node | Ledger | [E-Pay](https://github.com/ergoplatform/eips/blob/master/eip-0020.md) | [Mixer](https://docs.ergoplatform.com/uses/mixer/#ergomixer) |
+|---|---|---|---|---|---|---|
+| [Nautilus](https://chrome.google.com/webstore/detail/nautilus-wallet/gjlmehlldlphhljhpnlddaodbjjcchai) | Web | ✅ |  | ✅ |  | 🔜 |
+| [Ergo Wallet](https://ergoplatform.org/en/mobile_wallets/) | Mobile |  | 🔗 | 🔜 | ✅ |  |
+| [SAFEW](https://ergoplatform.org/en/blog/2022-03-25-storing-ergo-safew/) | Web | ✅ |  | ✅ | ✅* | ✅ |
+| [Node Wallet](https://docs.ergoplatform.com/node/platforms/) | Desktop |  | ✅ |  |  |  |
+| [Satergo](https://www.satergo.com) | Desktop |  |  | 🔜 |  | 🔜 |
+| [Minotaur](https://github.com/minotaur-ergo/minotaur-wallet) | Web |  |  |  |  | 🔜 |
+| [Paper Wallet](https://anon-br.github.io/ergo-paper-wallet/) | Cold |  |  |  |  |  |
+| [Viawallet](https://apps.apple.com/us/app/viawallet-multi-chain-wallet/id1462031389) | Mobile |  |  |  |  |  |
+| [URL Wallet](https://erg.urlwallet.org/) | URL |  |  |  |  |  |
+| [Yoroi](https://yoroi-wallet.com/) | Web | ✅ |  |  |  |  |
+
 ## Web Wallets
 
 ### Nautilus
