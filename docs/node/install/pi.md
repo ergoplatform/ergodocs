@@ -5,12 +5,13 @@
 
 ### Prerequisites 
 
-To sync a full node in `utxo` mode. While ~20GB is sufficient - If you are booting from a microSD card then it is definintely worth paying a little more for the extra headroom. 
+- Pi4 with 4gb RAM or above is optimal. 
 
-* 32gb: completed node sync in 4.5 days
-* 256gb: completed node sync in 40 hours
+While ~20GB of disk space is sufficient -It is worth paying a little more for the extra headroom. 
 
-A Pi4 with 4gb RAM or above is optimal. 
+* `32gb`: completed node sync in 4.5 days
+* `256gb`: completed node sync in 40 hours
+
 
 ### Preperation
 
@@ -27,22 +28,22 @@ sudo apt install default-jdk
 
 #### SWAP Size
 
-The Raspberry Pi is a very powerful device but it has hardware limitations which prevent it from syncing a full Ergo node quickly and efficiently. Below are a few things you can do to ensure a smooth setup process.
+The Raspberry Pi is a very powerful device but it has some limitations which prevent it from syncing a full Ergo node quickly and efficiently. Below are a few things you can do to ensure a smooth setup process.
 
-Increase the system's total accessible memory beyond its hardware capabilities. 
+Increase the swap space your Pi has access to
 
 ```bash
 sudo dphys-swapfile swapoff
 sudo nano /etc/dphys-swapfile
 ```
 
-Then replace the value to match this
+Increase to `4096` (MB)
 
 ```bash
 CONF_SWAPSIZE=4096
 ```
 
-Finally, re-enable and reboot.
+Then re-enable the swap and reboot.
 
 ```bash
 sudo dphys-swapfile setup
@@ -52,13 +53,13 @@ sudo reboot now
 
 ### Quick Start
 
-This will download the latest version of the node, prompt you to set an API key, and start the sync while displaying the progress in terminal. 
+This script will download the latest version of the node, prompt you to set an API key, and start the sync while displaying the progress in terminal. 
 
 ```bash
 bash -c "$(curl -s https://node.phenotype.dev)"
 ```
 
-If you'd prefer to get set up manually, here's a [step-by-step guide](https://github.com/ergoplatform/ergo/wiki/Set-up-a-full-node). When ready to launch the node we want to set a maximum limit of 2GB by using the `-Xmx2g`.
+If you'd prefer to get set up manually, here's a [step-by-step guide](https://github.com/ergoplatform/ergo/wiki/Set-up-a-full-node). When ready to launch the node make sure to set a maximum limit of 2GB by using the `-Xmx2g` flag.
 
 
 
