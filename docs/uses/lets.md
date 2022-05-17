@@ -1,8 +1,6 @@
 # Local Exchange Trading Systems
 
-A local exchange trading system (LETS) is a local mutual credit association in which members are allowed to create common credit money individually, with all the deals in the system written into a common ledger. In the present circumstances, a [Local Exchange Trading System (LETS) would be a strong use case for Ergo](https://ergoplatform.org/en/blog/2019_04_22-lets). LETS can be thought of as a mechanism to facilitate the velocity of trade, goods, and services out-with the existing monetary system, allowing us to create sustainable local economies.
-
-For example, let's assume Alice has a zero balance. She wants to buy a litre of milk from Bob and borrows the agreed price of 2 euros from the common pot. Alice's account now registers -2 euros and Bob's +2 euros. 
+A local exchange trading system (LETS) is a local mutual credit association in which members are allowed to create common credit money individually, with all the deals in the system written into a common ledger. In the present circumstances, a [Local Exchange Trading System (LETS) would be a strong use case for Ergo](https://ergoplatform.org/en/blog/2019_04_22-lets). LETS can be thought of as a mechanism to facilitate the velocity of trade, goods, and services out-with the existing monetary system, allowing us to create **sustainable local economies**.
 
 > As an example, assume that Alice, with zero balance, is willing to buy a litre of raw milk from Bob.
 
