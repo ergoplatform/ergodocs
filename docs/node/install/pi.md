@@ -1,6 +1,9 @@
 # ErgoPi
 
-## Prerequisites 
+## Getting Started
+
+
+### Prerequisites 
 
 To sync a full node in `utxo` mode. While ~20GB is sufficient - If you are booting from a microSD card then it is definintely worth paying a little more for the extra headroom. 
 
@@ -9,7 +12,7 @@ To sync a full node in `utxo` mode. While ~20GB is sufficient - If you are booti
 
 A Pi4 with 4gb RAM or above is optimal. 
 
-## Preperation
+### Preperation
 
 ```
 sudo apt update
@@ -22,7 +25,7 @@ Install the Java JDK
 sudo apt install default-jdk
 ```
 
-### SWAP Size
+#### SWAP Size
 
 The Raspberry Pi is a very powerful device but it has hardware limitations which prevent it from syncing a full Ergo node quickly and efficiently. Below are a few things you can do to ensure a smooth setup process.
 
@@ -47,7 +50,7 @@ sudo dphys-swapfile swapon
 sudo reboot now
 ```
 
-## Quick Start
+### Quick Start
 
 This will download the latest version of the node, prompt you to set an API key, and start the sync while displaying the progress in terminal. 
 
@@ -62,13 +65,15 @@ If you'd prefer to get set up manually, here's a [step-by-step guide](https://gi
 
 ## Light Mode
 
+There are several configuration options that be tweaked in your `ergo.conf` file. 
 
-- `skipV1TransactionsValidation`
-- `blocksToKeep` denotes the number of blocks to keep with transactions and `ADproofs`. (ie, 1440 would keep ~2 days worth of blocks)
+
+- `skipV1TransactionsValidation`: Skip validation of transactions before block 417,792
+- `blocksToKeep` denotes the number of blocks to keep with transactions and `ADproofs`. 
 - `stateType` with the options `utxo` and `digest`.
   - `utxo` keep full utxo set, that allows to validate arbitrary block and generate ADProofs. (default)
   - `digest` - keep state root hash only and validate transactions via ADProofs.
-- `maxConnections` 
+- `maxConnections`: The maximum amount of peers the node should try and connect to over the P2P layer. 
 
 ```conf
 ergo {
@@ -104,8 +109,8 @@ scorex {
         
     }
     network {
-		    # Max P2P connections
-			# Lower number better for low-RAM
+	   # Max P2P connections
+	   # Lower number better for low-RAM
             maxConnections = 10
 
         }
