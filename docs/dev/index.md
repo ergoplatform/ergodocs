@@ -40,6 +40,7 @@ We host regular Hackathons on our Discord server. See [ergohack.io](https://ergo
 
 ## Tutorials
 
+- [Interactive tutorials for javascript dApp development onErgo Platform](https://play.dappstep.com/)
 - [ErgoTutorials](https://www.youtube.com/channel/UCyOIxD7YSHN5QwLIulOWrew)
 - [Kbit: Learning blockchains like Cardano and Ergo](https://www.youtube.com/watch?v=HDn49bToTMI)
 - [Ergo 101 : Side tooling for building dApps on Ergo](https://dav009.medium.com/ergo-101-side-tooling-for-building-dapps-on-ergo-c71889d60826)
