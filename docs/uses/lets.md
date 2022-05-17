@@ -18,10 +18,16 @@ Our reference implementation is simple and consists of two contracts: a manageme
 
 Nevertheless, we will introduce a couple of new terms in the following sentences.
 
-If a token is issued with an amount equal to one, we call it the singleton token. Similarly, a box that contains the singleton token is called the singleton box.
+If a token is issued with an amount equal to one, we call it the **singleton token**. Similarly, a box that contains the singleton token is called the **singleton box**.
 
-The management contract controls a singleton box that holds members of the LETS system. 
-The contract enables the adding of new members at the pace of one member per transaction. The box is not storing members but only a small digest of authenticated data structure built on top of the members' directory. A member is associated with a singleton token issued in a transaction that adds the member to the directory. The transaction creates a new member's box containing the member's singleton token. The exchange contract protects the member's box. Also, the newly created member's box has the initial balance written down into the R4 register, and the balance is equal to zero in our example. The transaction creating a new member must provide proof of correctness for directory transformation.
+- The management contract controls a singleton box that holds members of the LETS system. 
+- The contract enables the adding of new members at the pace of one member per transaction. 
+- The box is not storing members but only a small digest of authenticated data structure built on top of the members' directory. 
+- A member is associated with a singleton token issued in a transaction that adds the member to the directory. 
+- The transaction creates a new member's box containing the member's singleton token. 
+- The exchange contract protects the member's box. 
+- Also, the newly created member's box has the initial balance written down into the R4 register, and the balance is equal to zero in our example.
+- The transaction creating a new member must provide proof of correctness for directory transformation.
 
 The management contract box is controlled usually by a committee, and the committee could evolve over time. To support that, we allow committee logic to reside in the register R5. For example, assume that a new committee member has been added along with a new LETS member, the input management contract box requires 2-out-of-3 signatures, and the output box requires 3-out-of-4 signatures. In this case, the contents of the R5 register in the input and the output box would differ.
 
@@ -284,11 +290,13 @@ The following table summarizes the variants:
 
 We considered LETS transactions involving a single sender-receiver pair. More advanced models can allow multiple senders and receivers and need not be in pairs. 
 
+
+**Crossing the last mile**
+
+
 *The need to reform the global financial system has been clear since the last crisis in 2008. Now, COVID-19 has forced our hands. We cannot delay, and the best way to start is from the grassroots.*
 
 As lockdowns across the world effectively shut down whole sectors and a large part of the economy, we are entering a new era at a breakneck pace. Central banks are taking unprecedented action in the form of money printing, but, just like last time around, they will almost certainly fail at the 'last mile' (intentionally or otherwise): while their efforts will benefit the financial sector and the wealthy, the funds will not reach those small businesses and individuals who need them the most.
-
-**Crossing the last mile**
 
 Technology like the Ergo platform can address this problem efficiently, building bridges into and within our local economies without the need for commercial or central banks. A key principle of Ergo, and one stated in the white paper, is that it is for regular people. The developers have spent considerable time building technology that can be applied to real-world use cases. (This is the idea behind '[Smart contracts for the people](http://chepurnoy.org/blog/2018/10/smart-contracts-for-the-people/)', for example.)
 
