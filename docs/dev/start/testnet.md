@@ -1,5 +1,7 @@
 # Testnet
 
+The testnet is an alternative Ergo block chain you can use for testing and experimentation, without having to use real ERG or worrying about breaking the main chain. The testnet runs on different ports than the mainnet and can be accessed by changing your `.conf` and running with the `--testnet` flag. 
+
 
 |                | mainnet  | testnet   |
 |----------------|----------|-----------|
