@@ -20,7 +20,7 @@ You can submit any **payment requests** for bounties completed [here](https://q9
 
 There are several grant programmes available for larger-scale projects. Submit a grant request directly to the [Good Whale Fund](https://github.com/ergoplatform/grow-ergo/issues/13), [DarkFund0](https://github.com/ergoplatform/grow-ergo/issues/1) - or email us directly at the [ergo foundation](mailto:team@ergoplatform.org).
 
-> However we strongly recommend that your initial step would be to start a [Raffle](https://ergoraffle.com/). This provides a clear funding goal, shows community support - and can be topped up by grant/foundation funding. 
+> We recommend that your initial step should be to start a [Raffle](https://ergoraffle.com/). This provides a clear funding goal, shows community support - and can be topped up by grant/foundation funding. 
 
 
 ## General
