@@ -44,7 +44,17 @@ Increase the system's total accessible memory beyond its hardware capabilities.
 ```bash
 sudo dphys-swapfile swapoff
 sudo nano /etc/dphys-swapfile
-CONF_SWAPSIZE=4096 
+```
+
+Then replace the value to match this
+
+```bash
+CONF_SWAPSIZE=4096
+```
+
+Finally, re-enable and reboot.
+
+```bash
 sudo dphys-swapfile setup
 sudo dphys-swapfile swapon
 sudo reboot now
@@ -61,6 +71,15 @@ java -Xmx2g -jar ergo-<release-version>.jar --mainnet -c ergo.conf
 
 
 ## Light Mode
+
+
+- `skipV1TransactionsValidation`
+- `blocksToKeep` denotes the number of blocks to keep with transactions and `ADproofs`. (ie, 1440 would keep ~2 days worth of blocks)
+- `stateType` with the options `utxo` and `digest`.
+  - `utxo` keep full utxo set, that allows to validate arbitrary block and generate ADProofs. (default)
+  - `digest` - keep state root hash only and validate transactions via ADProofs.
+- `maxConnections` 
+
 ```conf
 ergo {
     node {
