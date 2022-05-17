@@ -17,7 +17,7 @@ Bob can spend his balance with other participants of the LETS, and the creation 
 - [LETS Discussion Summary](https://www.ergoforum.org/t/lets-discussion-summary/3492)
 
 
-## Implementation
+## Basic Implementation
 
 Our reference implementation is simple and consists of two contracts: a management contract and an exchange contract. We skip Ergo preliminaries, so please read [the ICO article](https://github.com/ergoplatform/ergo/wiki/An-ICO-Example-On-Top-Of-Ergo) and ErgoScript tutorials([basic](https://ergoplatform.org/docs/ErgoScript.pdf) and [advanced](https://ergoplatform.org/docs/sigmastate_protocols.pdf)) for starters.
 
@@ -134,7 +134,7 @@ the singleton token of the management box.
 A Local Exchange Trading System (LETS) aims to develop the local economy and is usually used by people of a locality in the vicinity of each other. See [this link](/blog/2019_04_22-lets/), which also describes an ErgoScript implementation of a committee-managed LETS, for a brief overview of LETS. We call such a system a _managed_ or _permissioned_since it depends on a committee of trusted members to enrol new members into the LETS. 
 Here we describe a **trustless** LETS, i.e., one where there is no management committee needed for enrolment. 
 
-## Overview
+## Trustless LETS
 
 LETS involves several parties that agree to use some form of "local currency", usually pegged to the country's main currency at a 1:1 rate. Assume that our LETS is based in a European country where the currency is Euros, and the exchange is done in "local Euros", which are considered equivalent to national Euros.
 
@@ -142,7 +142,7 @@ Each user in LETS has an account, which contains the LETS balance of that user (
 
 As an example, Alice, with zero balance, wishes to purchase one litre of milk for 2 Euros from Bob, a member of LETS with zero balance. She transfers 2 Euros from her account to Bob's, making her balance -2 and Bob's +2. Bob can then transfer some or all of his balance to another LETS user in exchange for goods or services.
 
-## Trustless LETS
+### Implementation
 
 Since we desire a trustless LETS, we cannot depend on any trusted group of people to admit users. Note that we will still have a committee to perform tasks such as setting up the LETS parameters (local currency, the maximum number of members, etc.) and consuming any joining fee.
 
@@ -152,7 +152,7 @@ At any instance, our LETS is uniquely defined by a global _token box_ that conta
 
 A LETS box represents a LETS member and must be used in every transaction. For simplicity, this article restricts all LETS transactions to involve exactly two members, one being the sender and the other the receiver, such that the sender transfers some positive amount of the LETS currency (local euros) to the receiver. Such a transaction consumes the member's boxes and recreates them as output with the updated balance.   
 
-### Variants
+#### Variants
 
 To prevent spam and DDoS attacks, we require at least a minimum number of ergs (`minErgsToJoin`) to be locked in the newly created member's box. The ergs will be locked until at least the `minWithdrawTime` number of blocks has been mined. A box can have a negative LETS balance up to the amount that can be covered by the locked ergs (using the rate at the time of trade).
 
@@ -245,7 +245,7 @@ Compared to the managed LETS, the above system has the following differences:
 * **No membership record**: Unlike the managed LETS, We don't store any membership information here. 
 * **Multiple-boxes**: A person can create multiple membership boxes, which is permitted. We only require that any negative balance be backed by the corresponding number of ergs locked. 
 
-#### LETS-1: Zero Sum, Collateral
+##### LETS-1: Zero Sum, Collateral
 
 The above is the basic variant, which we call **LETS-1**. It has the following features:
 
@@ -255,14 +255,14 @@ The above is the basic variant, which we call **LETS-1**. It has the following f
 
 The following are some variations of LETS-1.
 
-#### LETS-2: Zero Sum, No collateral
+##### LETS-2: Zero Sum, No collateral
 
 (A slight variation of LETS-1)
 
 * **Non-refundable joining fee**: Like LETS-1, a joining fee is needed to prevent spam attacks. However, unlike LETS-1, this fee is non-refundable and must be sent to some predefined management committee.
 * **Zero-Sum**: As in LETS-1.
 
-#### LETS-3: Positive-Sum, Collateral
+##### LETS-3: Positive-Sum, Collateral
 
 
 The above two variants require the total LETS balance to be always zero. Here we consider a positive value for this sum. In particular, this variant has the following properties:
@@ -273,7 +273,7 @@ The above two variants require the total LETS balance to be always zero. Here we
 
 We can also allow topping up the LETS balance during a transaction by adding the equivalent amount of ergs. 
 
-#### LETS-4: Positive-Sum, No collateral
+##### LETS-4: Positive-Sum, No collateral
 
 This is similar to LETS-3 but with some small variations:
 
