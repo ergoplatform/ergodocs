@@ -1,44 +1,23 @@
 # Local Exchange Trading Systems
 
+A local exchange trading system (LETS) is a local mutual credit association in which members are allowed to create common credit money individually, with all the deals in the system written into a common ledger. In the present circumstances, a [Local Exchange Trading System (LETS) would be a strong use case for Ergo](https://ergoplatform.org/en/blog/2019_04_22-lets). LETS can be thought of as a mechanism to facilitate the velocity of trade, goods, and services out-with the existing monetary system, allowing us to create sustainable local economies.
+
+For example, let's assume Alice has a zero balance. She wants to buy a litre of milk from Bob and borrows the agreed price of 2 euros from the common pot. Alice's account now registers -2 euros and Bob's +2 euros. 
+
+> As an example, assume that Alice, with zero balance, is willing to buy a litre of raw milk from Bob.
+
+> First, they agree on a price; for example, assume that the price is about 2 Euro (as Alice and Bob are living in Ireland). After the deal is written into a ledger, Alice's balance becomes -2 (minus two) Euro, and Bob's balance becomes 2 Euro. Then Bob may spend his 2 Euro, for example, on homemade beer from Charlie. Such systems often impose limits on negative balances, and sometimes even on positive ones, to promote exchange in the community.
+
+Bob can spend his balance with other participants of the LETS, and the creation of credit allows for economic activity and velocity of money even where people have, temporarily, no cash. Of course, borrowing limits can be imposed, even on positive ones, to prevent hoarding within the LETS. This system can be built **trustlessly** on Ergo. A Trustless LETS has no membership record; therefore, no management committee is needed for enrolment, allowing it to operate with full autonomy.
+
+
 - [A Local Exchange Trading System On Top Of Ergo](https://github.com/ergoplatform/ergo/wiki/A-Local-Exchange-Trading-System-On-Top-Of-Ergo)
 - [A Trustless Local Exchange Trading System](https://github.com/ergoplatform/ergo/wiki/A-Trustless-Local-Exchange-Trading-System)
 - [LETS start the discussion](https://ergoplatform.org/en/blog/2021-07-01-lets-start-the-discussion/)
 - [LETS Discussion Summary](https://www.ergoforum.org/t/lets-discussion-summary/3492)
 
 
-## LETS
-
-A local exchange trading system --- or 'LETS'-- facilitates exchange between members by providing a local currency and a directory of offers and needs. LETS allows people to create value within their community and barter collectively - exchanging their skills and services in return for skills and services they would have otherwise paid for. 
-
-LETS can be thought of as a mechanism to facilitate the velocity of trade, goods, and services out-with the existing monetary system, allowing us to create sustainable local economies. To give a tangible example, one member may offer a couple of hours of tech support and use those tokens gained to buy a piece of art listed by another member. 
-
-LETS have historically become popular during times of crisis. One of the first LETS' was founded by Michael Linton in a Canadian town stuck in depression back in 1981. LETS were also popular during the 1998-2002 Argentine Great Depression. Most LETS groups are small and consist of maybe 50 to 250 members, usually with paper-based credit notes and ledgers maintained by a committee. Similar systems have arisen in recent months amidst the pandemic --- [Tenino, Washington, started printing wooden money to facilitate trade between its residents](https://edition.cnn.com/2020/06/20/us/tenino-washington-wooden-money-trnd/index.html). However, these analogue systems are inherently prone to counterfeit notes, fraudulent activity by administrators, and, perhaps most importantly - human error. 
-
-As lockdowns across the world effectively shut down whole sectors and a large part of the economy, we are entering a new era at a breakneck pace. Technology like Ergo can efficiently address this problem, building bridges between local economies without commercial or central banks. These separated communities could still be connected via gateways, allowing liquidity to move between them and avoiding exposure to toxic debt, creating a system that is immune from both inflation and depression. Many variations of LETS could exist for individuals and small businesses, with varying participation criteria, credit limits, and collateralization requirements. 
-
-Additionally, thanks to Ergo's [sigma protocols](https://ergonaut.space/en/sigma-protocols), creating a '[Trustless LETS](https://github.com/ergoplatform/ergo/wiki/A-Trustless-Local-Exchange-Trading-System)' on top of Ergo is also possible. A Trustless LETS has no membership record; therefore, no management committee is needed for enrolment, allowing it to operate with full autonomy.
-
-If the ideas discussed here interest you, LETS start the discussion! Join us on the [\#lets](https://discord.gg/BVpT8vRUMa) channel on Discord -- or on [Ergo's Agora](https://t.me/ErgoAgora), a Telegram group chat used to facilitate open discussions around privacy, anonymity, trust, economics and related topics.
-
-The need to reform the global financial system has been evident since the last crisis in 2008. Now, COVID-19 has forced our hands. We cannot delay, and the best way to start is from the grassroots. 
-
-> Cryptocurrency should provide tools to enrich ordinary people. Their small businesses provide not much above making ends meet, not depersonalized big financial capital. This is what inspired me. This is my dream.
-
-> * [The Ergo Manifesto](https://ergoplatform.org/en/blog/2021-04-26-the-ergo-manifesto/)
-
-## A Local Exchange Trading System
-
-
-A local exchange trading system (LETS) is a local mutual credit association in which members are allowed to create common 
-credit money individually, with all the deals in the system written into a common ledger. 
-
-As an example, assume that Alice, with zero balance, is willing to buy a litre of raw milk from Bob.
-
-First, they agree on a price; for example, assume that the price is about 2 Euro (as Alice and Bob are living in Ireland). After the deal is written into a ledger, Alice's balance becomes -2 (minus two) Euro, and Bob's balance becomes 2 Euro. Then Bob may spend his 2 Euro, for example, on homemade beer from Charlie. Such systems often impose limits on negative balances, and sometimes even on positive ones, to promote exchange in the community.
-
-Historically, such systems have become popular during crisis times. Michael Linton established the first system in a Canadian town stuck in depression back in 1981. During the 1998-2002 Argentine Great Depression, local exchange trading systems were extremely popular. Most LETS groups range from 50 to 250 members, with a core committee maintaining paper-based credit notes and ledger. However, paper-based LETS currencies have shown some problems, such as counterfeit notes, possible rogue behaviour of system managers, etc. Therefore, blockchain-based LETS could be superior to the old systems. More information on LETS can be found in ["The Ecology of Money" book (by Richard Douthwaite)](http://feasta.org/documents/moneyecology/chaptertwo.htm) and [Wikipedia](https://en.wikipedia.org/wiki/Local_exchange_trading_system).
-
-This article shows how LETS could be implemented on top of Ergo. This is the first implementation of such kind of community currency on top of a blockchain, to the best of our knowledge.
+## Implementation
 
 Our reference implementation is simple and consists of two contracts: a management contract and an exchange contract. We skip Ergo preliminaries, so please read [the ICO article](https://github.com/ergoplatform/ergo/wiki/An-ICO-Example-On-Top-Of-Ergo) and ErgoScript tutorials([basic](https://ergoplatform.org/docs/ErgoScript.pdf) and [advanced](https://ergoplatform.org/docs/sigmastate_protocols.pdf)) for starters.
 
@@ -173,7 +152,7 @@ At any instance, our LETS is uniquely defined by a global _token box_ that conta
 
 A LETS box represents a LETS member and must be used in every transaction. For simplicity, this article restricts all LETS transactions to involve exactly two members, one being the sender and the other the receiver, such that the sender transfers some positive amount of the LETS currency (local euros) to the receiver. Such a transaction consumes the member's boxes and recreates them as output with the updated balance.   
 
-## The Basic Variant
+### Variants
 
 To prevent spam and DDoS attacks, we require at least a minimum number of ergs (`minErgsToJoin`) to be locked in the newly created member's box. The ergs will be locked until at least the `minWithdrawTime` number of blocks has been mined. A box can have a negative LETS balance up to the amount that can be covered by the locked ergs (using the rate at the time of trade).
 
@@ -266,7 +245,7 @@ Compared to the managed LETS, the above system has the following differences:
 * **No membership record**: Unlike the managed LETS, We don't store any membership information here. 
 * **Multiple-boxes**: A person can create multiple membership boxes, which is permitted. We only require that any negative balance be backed by the corresponding number of ergs locked. 
 
-## LETS-1: Zero Sum, Collateral
+#### LETS-1: Zero Sum, Collateral
 
 The above is the basic variant, which we call **LETS-1**. It has the following features:
 
@@ -276,14 +255,14 @@ The above is the basic variant, which we call **LETS-1**. It has the following f
 
 The following are some variations of LETS-1.
 
-## LETS-2: Zero Sum, No collateral
+#### LETS-2: Zero Sum, No collateral
 
 (A slight variation of LETS-1)
 
 * **Non-refundable joining fee**: Like LETS-1, a joining fee is needed to prevent spam attacks. However, unlike LETS-1, this fee is non-refundable and must be sent to some predefined management committee.
 * **Zero-Sum**: As in LETS-1.
 
-## LETS-3: Positive-Sum, Collateral
+#### LETS-3: Positive-Sum, Collateral
 
 
 The above two variants require the total LETS balance to be always zero. Here we consider a positive value for this sum. In particular, this variant has the following properties:
@@ -294,7 +273,7 @@ The above two variants require the total LETS balance to be always zero. Here we
 
 We can also allow topping up the LETS balance during a transaction by adding the equivalent amount of ergs. 
 
-## LETS-4: Positive-Sum, No collateral
+#### LETS-4: Positive-Sum, No collateral
 
 This is similar to LETS-3 but with some small variations:
 
@@ -310,20 +289,14 @@ The following table summarizes the variants:
 
 We considered LETS transactions involving a single sender-receiver pair. More advanced models can allow multiple senders and receivers and need not be in pairs. 
 
-
-_The need to reform the global financial system has been clear since the last crisis in 2008. Now, COVID-19 has forced our hands. We cannot delay, and the best way to start is from the grassroots._
+*The need to reform the global financial system has been clear since the last crisis in 2008. Now, COVID-19 has forced our hands. We cannot delay, and the best way to start is from the grassroots.*
 
 As lockdowns across the world effectively shut down whole sectors and a large part of the economy, we are entering a new era at a breakneck pace. Central banks are taking unprecedented action in the form of money printing, but, just like last time around, they will almost certainly fail at the 'last mile' (intentionally or otherwise): while their efforts will benefit the financial sector and the wealthy, the funds will not reach those small businesses and individuals who need them the most.
 
-## Crossing the last mile
+**Crossing the last mile**
 
 Technology like the Ergo platform can address this problem efficiently, building bridges into and within our local economies without the need for commercial or central banks. A key principle of Ergo, and one stated in the white paper, is that it is for regular people. The developers have spent considerable time building technology that can be applied to real-world use cases. (This is the idea behind '[Smart contracts for the people](http://chepurnoy.org/blog/2018/10/smart-contracts-for-the-people/)', for example.)
 
-## LETS
-
-In the present circumstances, a [Local Exchange Trading System (LETS) would be a strong use case for Ergo](https://ergoplatform.org/en/blog/2019_04_22-lets). A LETS is a mutual credit association in which individual members are allowed to borrow from a common pot of money, and all the loans are written into a ledger. Naturally, a blockchain system allows for strict and more granular rules around the size of loans and their use and user privacy.
-
-For example, let's assume Alice has a zero balance. She wants to buy a litre of milk from Bob and borrows the agreed price of 2 euros from the common pot. Alice's account now registers -2 euros and Bob's +2 euros. Bob can spend his balance with other participants of the LETS, and the creation of credit allows for economic activity and velocity of money even where people have, temporarily, no cash. Of course, borrowing limits can be imposed, even on positive ones, to prevent hoarding within the LETS. This system can be [built trustlessly on Ergo](https://ergoplatform.org/en/blog/2019_05_29-exchange/).
 
 ## Crisis measures
 
