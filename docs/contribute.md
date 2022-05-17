@@ -2,32 +2,25 @@
 
 >  In general, anything educative for the community is subject to some bounty even if not specifically listed. **Lets create grassroots finance!**
 
+Ergo operates an open model where contributions from all are welcomed. The Ergo Foundation has a small treasury it uses to promote ecosystem growth, for more information please see the following articles. 
 
-## Developers
+- [The Ergo Foundation](https://ergoplatform.org/en/blog/ergo-foundation/)
+- [Emission & Tokenomics](https://ergoplatform.org/en/blog/emission/)
+
+However, as a **platform**; you are encouraged to create your own value within the chain. For developers this can be achieved by claiming fees for your dApp, or seeking funding via [Ergo Raffle]() or [ErgoPad](). Alternatively there paid bounties scattered across the Ergo repositories which are summarised [here](https://github.com/ergoplatform/grow-ergo/). Notably, there are bounties for [Tutorials and Guides for developers](https://github.com/ergoplatform/grow-ergo/issues/15) at any skill level. 
+
+Join the [Ergo Discord](https://discord.gg/nr4JRnhAyV) (and enable the development channels) for any support, queries or comments. 
 
 
-1. Join the [Discord](https://discord.gg/nr4JRnhAyV)
-2. See available bounties on [grow-ergo](https://github.com/ergoplatform/grow-ergo/)
-3. See our [job listings](https://ergoplatform.org/en/careers/)
-
-
-It's no secret that the best way to learn something is to try and explain it - so keep a note of your progress while learning and claim some of the bounties available for [Tutorials and Guides for developers](https://github.com/ergoplatform/grow-ergo/issues/15)! 
-
-### Bounties
-
-You can tackle any of the bounties available on Ergo repositories, 
-
-You can submit any payment requests for bounties completed [here](https://q9fwzopidh8.typeform.com/to/G5gAKC4r)
+You can submit any **payment requests** for bounties completed [here](https://q9fwzopidh8.typeform.com/to/G5gAKC4r).
 
 
 
-### Grants
+**Grants**
 
-Submit a grant request to the [Good Whale Fund](https://github.com/ergoplatform/grow-ergo/issues/13), [DarkFund0](https://github.com/ergoplatform/grow-ergo/issues/1) - or email us directly at the [ergo foundation](mailto:team@ergoplatform.org).
+There are several grant programmes available for larger-scale projects. Submit a grant request directly to the [Good Whale Fund](https://github.com/ergoplatform/grow-ergo/issues/13), [DarkFund0](https://github.com/ergoplatform/grow-ergo/issues/1) - or email us directly at the [ergo foundation](mailto:team@ergoplatform.org).
 
-
-
-The fastest way to get started is to start a [Raffle](https://ergoraffle.com/). This provides a clear funding goal, shows community support - and can be topped up by grant/foundation funding. 
+> However we strongly recommend that your initial step would be to start a [Raffle](https://ergoraffle.com/). This provides a clear funding goal, shows community support - and can be topped up by grant/foundation funding. 
 
 
 ## General
