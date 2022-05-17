@@ -1,13 +1,18 @@
 # Testnet
 
-Currently, there are two Ergo testnet available. 
 
-Explorer is available at [testnet.ergoplatform.com](https://testnet.ergoplatform.com/)
+|                | mainnet  | testnet   |
+|----------------|----------|-----------|
+| API Port       | 9053     | 9052      | 
+| P2P Port       | 9030     | 9020      |
+| address prefix | (0) 0x00 | (16) 0x10 |
+
+- [Testnet Explorer](https://testnet.ergoplatform.com/)
 
 To join the testnet, just download [latest Ergo protocol reference client](https://github.com/ergoplatform/ergo/releases) and launch using
 
 ```bash
-java -jar -Xmx3G ergo-*.jar --testnet -c testnet.conf
+java -jar -Xmx4G ergo-*.jar --testnet -c testnet.conf
 ```
 
 A minimal `testnet.conf` would be:
@@ -29,10 +34,13 @@ scorex {
 
 You can  get 60 testERG by sending a request to `https://testnet.ergofaucet.org/payment/address/TESTNET_WALLET_ADDRESS` 
 
+> Please note that the [Headless dApp framework](/dev/stack/headless/#headless-dapp-framework) does not work with testnet addresses. [ref](https://github.com/ergoplatform/ergo-headless-dapp-framework/blob/main/src/encoding.rs#L104)
 
-## GetBlok 
 
-This should help out any devs who need to do work on testnet but don't know how to run a solo mining node. It should also give an give an alternative way to start up testnet in case the usual miner is down. 
+
+**GetBlok**
+
+Alternatively, GetBlok run a public testnet that should help out any devs who need to do work on testnet but don't know how to run a solo mining node. It should also give an give an alternative way to start up testnet in case the usual miner is down. 
 
 ```
 ergo-testnet.getblok.io:3056
@@ -40,18 +48,5 @@ ergo-testnet.getblok.io:3056
 
 Payouts are frozen for right now, if any of you need testnet ERG then you can tag @CheeseEnthusiast on Discord and he can start them up again.
 
-
-## Notes
-
-
-|                | mainnet  | testnet   |
-|----------------|----------|-----------|
-| API Port       | 9053     | 9052      | 
-| P2P Port       | 9030     | 9020      |
-| address prefix | (0) 0x00 | (16) 0x10 |
- 
-### HDF
-
-Headless framework does not work with testnet addresses. [ref](https://github.com/ergoplatform/ergo-headless-dapp-framework/blob/main/src/encoding.rs#L104)
 
 
