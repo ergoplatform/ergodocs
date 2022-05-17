@@ -2,9 +2,7 @@ The Ergo Node is part of Ergo's peer-to-peer network which hosts and synchronise
 
 There is no financial incentive to run a node, but doing so helps increase the security of the network.
 
-If you want to install a node see [this page](install/)
-
-or get [setup on the test-net](dev/start/testnet/)
+If you want to install a node see [this page](install/) or get [setup on the test-net](dev/start/testnet/)
 
 ## Resources
 
