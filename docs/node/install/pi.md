@@ -66,7 +66,24 @@ If you'd prefer to get set up manually, here's a [step-by-step guide](https://gi
 
 ## Light Mode
 
-There are several configuration options that be tweaked in your `ergo.conf` file. 
+A basic config on mainnet should look like this
+
+```conf
+ergo {
+    node {
+        mining = false
+    }
+
+}      
+        
+scorex {
+    restApi {
+        apiKeyHash = "$BLAKE_HASH"
+    }
+}
+```
+
+There are several configuration options that be tweaked in your `ergo.conf` file. The full options are visible [here](https://github.com/ergoplatform/ergo/blob/50adf3dff82e9ab2b19f6b2f96b2ff72ec6101f8/src/main/resources/application.conf)
 
 
 - `skipV1TransactionsValidation`: Skip validation of transactions before block 417,792
@@ -76,47 +93,7 @@ There are several configuration options that be tweaked in your `ergo.conf` file
   - `digest` - keep state root hash only and validate transactions via ADProofs.
 - `maxConnections`: The maximum amount of peers the node should try and connect to over the P2P layer. 
 
-```conf
-ergo {
-    node {
-        # Full options available at 
-        # https://github.com/ergoplatform/ergo/blob/master/src/main/resources/application.conf
-        
-        mining = false
 
-        # Skip validation of transactions in the mainnet before block 417,792 (in v1 blocks).
-        # Block 417,792 is checkpointed by the protocol (so its UTXO set as well).
-        # The node still applying transactions to UTXO set and so checks UTXO set digests for each block.
-        skipV1TransactionsValidation = true
-        
-        # Number of last blocks to keep with transactions and ADproofs, for all other blocks only header will be stored.
-        # Keep all blocks from genesis if negative
-        blocksToKeep = 1440 # keep ~2 days of blocks
-        
-        # State type.  Possible options are:
-        # "utxo" - keep full utxo set, that allows to validate arbitrary block and generate ADProofs
-        # "digest" - keep state root hash only and validate transactions via ADProofs
-
-        stateType = digest # Note: You cannot validate arbitrary block and generate ADProofs due to this
-
-
-    }
-
-}      
-        
-scorex {
-    restApi {
-        apiKeyHash = "$BLAKE_HASH"
-        
-    }
-    network {
-	   # Max P2P connections
-	   # Lower number better for low-RAM
-            maxConnections = 10
-
-        }
-}
-```
 
 
 ## Resources
