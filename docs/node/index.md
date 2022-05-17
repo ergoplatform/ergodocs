@@ -2,9 +2,9 @@ The Ergo Node is part of Ergo's peer-to-peer network which hosts and synchronise
 
 There is no financial incentive to run a node, but doing so helps increase the security of the network.
 
-Public nodes can be seen on [nodespyder](https://ergo.nodespyder.io/). (Note that unless you are running the node on a publicly accessible web-server, your node should be protected by your router and not visible on this website.)
-
 If you want to install a node see [this page](install/)
+
+or get [setup on the test-net](dev/start/testnet/)
 
 ## Resources
 
