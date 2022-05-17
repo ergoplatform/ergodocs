@@ -1,15 +1,13 @@
-# How to set up and configure a full Ergo node
+# ErgoPi
 
-## Quick Start
+## Prerequisites 
 
-You can run [ergo-installer.sh](https://github.com/ergoplatform/ergo/blob/master/ergo-installer.sh)
+To sync a full node in `utxo` mode. While ~20GB is sufficient - If you are booting from a microSD card then it is definintely worth paying a little more for the extra headroom. 
 
-```bash
-curl -s https://raw.githubusercontent.com/ergoplatform/ergo/master/ergo-installer.sh | sh -s -- --api-key=<YOUR_API_KEY>
-```
+* 32gb: completed node sync in 4.5 days
+* 256gb: completed node sync in 40 hours
 
-If you'd prefer to get set up manually, here's a [step-by-step guide](https://github.com/ergoplatform/ergo/wiki/Set-up-a-full-node).
-
+A Pi4 with 4gb RAM or above is optimal. 
 
 ## Preperation
 
@@ -18,26 +16,15 @@ sudo apt update
 sudo apt upgrade
 ```
 
-Download dependencies
+Install the Java JDK
 
 ```
 sudo apt install default-jdk
 ```
 
-## Optimization
+### SWAP Size
 
 The Raspberry Pi is a very powerful device but it has hardware limitations which prevent it from syncing a full Ergo node quickly and efficiently. Below are a few things you can do to ensure a smooth setup process.
-
-> Note: This was written as of Ergo node release 4.0.27 and tested on multiple Pi4 with 4gb RAM
-
-### Memory
-
-If you are booting from a microSD card then it is definintely worth paying a little more for the extra headroom. 
-
-* 32gb: completed node sync in 4.5 days
-* 256gb: completed node sync in 40 hours
-
-### SWAP Size
 
 Increase the system's total accessible memory beyond its hardware capabilities. 
 
@@ -60,14 +47,17 @@ sudo dphys-swapfile swapon
 sudo reboot now
 ```
 
+## Quick Start
 
-### Limit Heap
-
-When ready to launch the node we want to set a maximum limit of 2gb.
+This will download the latest version of the node, prompt you to set an API key, and start the sync while displaying the progress in terminal. 
 
 ```bash
-java -Xmx2g -jar ergo-<release-version>.jar --mainnet -c ergo.conf
+bash -c "$(curl -s https://node.phenotype.dev)"
 ```
+
+If you'd prefer to get set up manually, here's a [step-by-step guide](https://github.com/ergoplatform/ergo/wiki/Set-up-a-full-node). When ready to launch the node we want to set a maximum limit of 2GB by using the `-Xmx2g`.
+
+
 
 
 ## Light Mode
