@@ -51,6 +51,12 @@ sudo dphys-swapfile swapon
 sudo reboot now
 ```
 
+#### More tips
+
+- WiFi has less issues than Ethernet
+- Make sure your Pi is in a well-vented area. 
+- Disable your screen-saver for the sync. 
+
 ### Quick Start
 
 This script will download the latest version of the node, prompt you to set an API key, and start the sync while displaying the progress in terminal. 
