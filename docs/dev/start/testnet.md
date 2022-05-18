@@ -10,9 +10,13 @@ The testnet is an alternative Ergo block chain you can use for testing and exper
 | P2P Port       | 9030     | 9020      |
 | address prefix | (0) 0x00 | (16) 0x10 |
 
+To find public testnet nodes you can use [api.tokenjay.app/peers/list](https://api.tokenjay.app/peers/list) and swap the port til you find one that's running testnet.
+
 ## Resources
 
 - [Testnet Explorer](https://testnet.ergoplatform.com/)
+- [ergo-synced-node](https://github.com/mgpai22/ergo-synced-node#ergo-testnet-node-setup)
+- [Nautilus Testnet build](https://github.com/capt-nemo429/nautilus-wallet#testnet)
 
 ## Getting Started
 
