@@ -58,9 +58,15 @@ Please see this [Quick Primer on ErgoScript](/dev/scs/ergoscript-primer) for an 
 - [GetBlok.io Smart Pools](https://github.com/GetBlok-io/ergo-smartpooling-contracts)
 
 
-### Resources
+### Visual
+
 - [FlowCards](flowcards.md) | A Declarative Framework for Development of Ergo dApps (Also see [flowcardLib](https://github.com/lucagdangelo/flowcardLib))
 - [flowcardLib: Ergo FlowCard library for diagrams.net](https://github.com/lucagdangelo/flowcardLib)
+- [ergo-castanet](https://github.com/iandebeer/ergo-castanet)
+
+### Bookmarks
+
+
 - Compile ErgoScript directly in your browser with [ErgoScript Playground](https://wallet.plutomonkey.com/p2s/)
 - [Kiosk](/dev/stack/kiosk) lets anyone play with ErgoScript using a basic web-based UI
 - [ergoscript-compiler](https://github.com/ergoplatform/ergoscript-compiler)
