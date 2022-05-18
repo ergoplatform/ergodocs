@@ -83,8 +83,8 @@ scorex {
 }
 ```
 
-There are several configuration options that be tweaked in your `ergo.conf` file. The full options are visible [here](https://github.com/ergoplatform/ergo/blob/50adf3dff82e9ab2b19f6b2f96b2ff72ec6101f8/src/main/resources/application.conf)
-
+There are several configuration options that be tweaked in your `ergo.conf` file. The [resource directory on the main GitHub repository
+] (https://github.com/ergoplatform/ergo/tree/master/src/main/resources) has examples of all available options. 
 
 - `skipV1TransactionsValidation`: Skip validation of transactions before block 417,792
 - `blocksToKeep` denotes the number of blocks to keep with transactions and `ADproofs`. 
