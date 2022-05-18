@@ -2,6 +2,7 @@
 
 The testnet is an alternative Ergo block chain you can use for testing and experimentation, without having to use real ERG or worrying about breaking the main chain. The testnet runs on different ports than the mainnet and can be accessed by changing your `.conf` and running with the `--testnet` flag. 
 
+## Ports
 
 |                | mainnet  | testnet   |
 |----------------|----------|-----------|
@@ -9,7 +10,11 @@ The testnet is an alternative Ergo block chain you can use for testing and exper
 | P2P Port       | 9030     | 9020      |
 | address prefix | (0) 0x00 | (16) 0x10 |
 
+## Resources
+
 - [Testnet Explorer](https://testnet.ergoplatform.com/)
+
+## Getting Started
 
 To join the testnet, just download [latest Ergo protocol reference client](https://github.com/ergoplatform/ergo/releases) and launch using
 
@@ -32,7 +37,7 @@ scorex {
 }
 ```
 
-**Faucet**
+### Faucet
 
 You can  get 60 testERG by sending a request to `https://testnet.ergofaucet.org/payment/address/TESTNET_WALLET_ADDRESS` 
 
@@ -40,7 +45,7 @@ You can  get 60 testERG by sending a request to `https://testnet.ergofaucet.org/
 
 
 
-**GetBlok**
+## GetBlok testnet
 
 Alternatively, GetBlok run a public testnet that should help out any devs who need to do work on testnet but don't know how to run a solo mining node. It should also give an give an alternative way to start up testnet in case the usual miner is down. 
 
@@ -49,6 +54,3 @@ ergo-testnet.getblok.io:3056
 ```
 
 Payouts are frozen for right now, if any of you need testnet ERG then you can tag @CheeseEnthusiast on Discord and he can start them up again.
-
-
-
