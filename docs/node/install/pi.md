@@ -6,12 +6,7 @@
 ### Prerequisites 
 
 - Pi4 with 4gb RAM or above is optimal. 
-
-While ~20GB of disk space is sufficient -It is worth paying a little more for the extra headroom. 
-
-* `32gb`: completed node sync in 4.5 days
-* `256gb`: completed node sync in 40 hours
-
+- Due to the intensive disk I/O, a SSD with 64GB+ is preferred. 
 
 ### Preperation
 
