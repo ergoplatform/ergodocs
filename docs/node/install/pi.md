@@ -56,6 +56,7 @@ sudo reboot now
 - WiFi has less issues than Ethernet
 - Make sure your Pi is in a well-vented area. 
 - Disable your screen-saver for the sync. 
+- [Using ZRAM](https://ikarus.sg/using-zram-to-get-more-out-of-your-raspberry-pi/)
 
 ### Quick Start
 
