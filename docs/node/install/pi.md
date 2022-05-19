@@ -2,6 +2,8 @@
 
 ## Getting Started
 
+The Raspberry Pi is small, inexpensive, and meets the requirements to run an Ergo full node.
+
 
 ### Prerequisites 
 
@@ -85,7 +87,7 @@ scorex {
 }
 ```
 
-There are several configuration options that be tweaked in your `ergo.conf` file. The [resource directory on the main GitHub repository] (https://github.com/ergoplatform/ergo/tree/master/src/main/resources) has examples of all available options. 
+There are several configuration options that be tweaked in your `ergo.conf` file. The [resource directory on the main GitHub repository](https://github.com/ergoplatform/ergo/tree/master/src/main/resources) has examples of all available options. 
 
 - `skipV1TransactionsValidation`: Skip validation of transactions before block 417,792
 - `blocksToKeep` denotes the number of blocks to keep with transactions and `ADproofs`. 
