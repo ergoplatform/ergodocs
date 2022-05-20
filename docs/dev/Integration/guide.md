@@ -133,7 +133,7 @@ scorex {
  network {
     bindAddress = "0.0.0.0:9020"
     nodeName = "ergo-testnet-4.0.23"
-    knownPeers = []
+    #knownPeers = []
   }
 
  restApi {
