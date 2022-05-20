@@ -4,7 +4,7 @@
 
 ### Is there any benefits for running a node?
 
-There is no financial incentive to run a node, doing so helps increase the security of the network.
+There is no financial incentive to run a node, doing so helps increase the security of the network and allows you to interact with the blockchain directly if you're a developer. 
 
 
 ### Are nodes visible anywhere?
