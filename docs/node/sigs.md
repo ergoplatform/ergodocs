@@ -1,3 +1,6 @@
+# Distributed Signautres
+
+- [EIP-11 on distributed signatures](https://github.com/ergoplatform/eips/pull/8)
 
 ## Improved distributed signatures
 
