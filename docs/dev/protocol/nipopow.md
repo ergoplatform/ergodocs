@@ -1,10 +1,14 @@
 
 # NiPoPoWs
 
-Ergo implements **NiPoPoWs**, or Non-interactive Proof-of-Proof-of-Work. You can explore this technology on [nipopows.com](https://nipopows.com/). These are short stand-alone strings that a computer program can inspect to verify that an event happened on a proof-of-work-based blockchain without connecting to the blockchain network and downloading all block headers. For example, these proofs can illustrate that a cryptocurrency payment was made.
+Ergo implements **NiPoPoWs**, or Non-interactive Proof-of-Proof-of-Work. These are short stand-alone strings that a computer program can inspect to verify that an event happened on a proof-of-work-based blockchain without connecting to the blockchain network and downloading all block headers. For example, these proofs can illustrate that a cryptocurrency payment was made.
 
 - [NIPoPoWs on Ergo: Innovations in Blockchain - April, 2022](https://ergoplatform.org/en/blog/2022-04-01-nipopows-on-ergo-innovations-in-blockchain/)
 
+## Literature
+
+- [Non-Interactive Proofs of Proof-of-Work](https://eprint.iacr.org/2017/963.pdf)
+- [Compact Storage of Superblocks for NIPoPoW Applications](https://eprint.iacr.org/2019/1444.pdf)
 
 ## Blocks
 
