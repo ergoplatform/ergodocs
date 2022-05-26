@@ -153,6 +153,7 @@ nav:
       - Distributed Signatures: node/sigs.md
       - Test-net: dev/start/testnet.md
       - Modes of Operation: node/modes.md
+      - Explorer: node/explorer.md
     #- Light Modes: 
     #  - Digest State: node/digest-state.md
     #  - History Pruning: node/history-pruning.md
