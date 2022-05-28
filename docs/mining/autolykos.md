@@ -21,14 +21,34 @@ So algorithm tries to make mining efficient for ones that store the table, which
 
 Also, table size (N value) is growing with time as follows. Until block `614,400`, `N = 2^{26} = 67,108,864 elements (31 bytes each)`. From this block, and until block `4,198,400`, every `51,200 blocks` `N` is increased by 5 percent. Since block `4,198,400`, value of `N` is fixed and equals to `2,143,944,600`. Test vectors for `N` values are provided in the paper.
 
-More detailed information available [here](https://www.docdroid.net/mcoitvK/ergopow-pdf)
 
 
-## Test Vectors 
+## Difficulty Adjustment
+
+Ergo uses the **linear least square method** to calculate difficulty. This function is based on the past eight epochs (1024 blocks), as described in [this paper](https://eprint.iacr.org/2017/731.pdf) to obtain the target block interval of 120s (2 minutes). (On average, during steady-hash). 
+
+- [Coin hopping Attack — What after a month of Bitcoin hardfork?](https://medium.com/nikoin/coin-hopping-attack-what-after-a-month-of-bitcoin-hardfork-f5a92151fb7b)
+
+Autolykos will adjust slowly in response to fluctuating hashrate, but this helps prevent **adversarial** hopping. This algorithm has a 1.9% error rate compared to bitcoins 9.1% error rate (exponential 10% hash rate growth). 
+
+**Can it be quicker?**
+
+Ergo already uses an epoch length of ~1.5 days (with normal block rate), compared to Bitcoin's two weeks. Having a quicker difficulty readjustment can lead to Timewarp attacks (amongst others). More epochs were considered, but the retargeting function is also non-linear, so it can adjust sooner than the linear function in certain popular scenarios; and it is unclear whether any hard-fork would be required at this stage. 
+
+While the consistenty of payouts has not been ideal during price drops, and is more suited for larger hashrates. Changing it at this stage would require a hard-fork to change (and then a HF again to add it back at a larger hash - or some timed mechanism). 
+
+So the general consensus is people would rather deal with the inconsistent rewards until the mining landscape is clearer. 
+
+
+## Resources
+
+- [Yellow Paper](https://www.docdroid.net/mcoitvK/ergopow-pdf)
+
+### Test Vectors 
 
 - [Test vectors for increased N values ](https://www.ergoforum.org/t/test-vectors-for-increased-n-values/2887/2)
 
-## Solution Verification
+### Solution Verification
 ```
 Test Vectors - Ergo:
 credit: Wolf9466#9466 on Discord
