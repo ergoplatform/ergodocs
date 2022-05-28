@@ -1,5 +1,3 @@
-> Participate in community discussions - [Tracking storage rent potential](https://www.reddit.com/r/ergonauts/comments/tyymax/tracking_storage_rent_potential/)
-
 __We've designed Ergo with long-term economic sustainability in mind, and storage rent is one of the ways we're ensuring miners stay profitable well into the future. This can be thought of as 'on-chain garbage collection' that reduces the problem of blockchain bloat – and even makes it profitable.__
 
 **Key Points**
@@ -17,6 +15,8 @@ Looking ahead, though, what happens in 20 or 30 years, when block rewards have f
 Mining rewards are a key feature in maintaining the security of proof-of-work blockchains like Bitcoin and Ergo. And so, while we have deliberately kept many of Bitcoin's tried and tested features, we have updated this one to give miners a boost when block rewards have fallen to zero.
 
 - [Ergo Explainer: Storage Rent](https://ergoplatform.org/en/blog/2022-02-18-ergo-explainer-storage-rent/)
+- [Tracking storage rent potential](https://www.reddit.com/r/ergonauts/comments/tyymax/tracking_storage_rent_potential/)
+
 
 ## Storage fees
 
