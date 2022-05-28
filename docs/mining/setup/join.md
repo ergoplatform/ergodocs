@@ -4,9 +4,9 @@ Search your card here [Autolykos v2 hashrates](https://docs.google.com/spreadshe
 
 ## Miners
 
-There are multiple miners that can be used to mine Ergo (Autolykos2).  Below you will find a list of mining software that can be used to mine ERG.  There are various opinions as to which mining software is best and some are clear winners.  Best advice is to try them all if you can and see what works best for your rig set up specifically.   
+You can use multiple miners to mine Ergo (Autolykos2). Below you will find a list of mining software used to mine ERG. There are various opinions on which mining software is best, and some are clear winners. The best advice is to try them all and see what works best for you.
 
-In addition to dedicated mining software, there are also Mining OS or operating systems such as HiveOS, which is one of the more popular options.  This allows you to control your rig through dedicated software that will assist with connecting to pools, OC settings, and miners or mining software. These would be considered an all in one package where as using a specific miner may require other resources or plug ins.
+In addition to dedicated mining software, there are also Mining OS or operating systems such as HiveOS, one of the more popular options. This allows you to control your rig through dedicated software that will assist with connecting to pools, OC settings, and miners or mining software. These would be considered an all in one package, whereas using a specific miner may require other resources or plugins.
 
 ###  Software:
 
