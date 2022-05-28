@@ -234,5 +234,10 @@ create database explorer;
 
 
 
+```
+docker build explorer-backend/modules/chain-grabber/
+docker build explorer-backend/modules/chain-grabber/
+docker build explorer-backend/modules/chain-grabber/
+docker build explorer-backend/modules/chain-grabber/
+```
 
-sudo docker build explorer-backend/modules/chain-grabber/

@@ -4,7 +4,7 @@
 
 ### Is there any benefits for running a node?
 
-There is no financial incentive to run a node, doing so helps increase the security of the network and allows you to interact with the blockchain directly if you're a developer. 
+There is no financial incentive to run a node, doing so helps increase the security of the network.
 
 
 ### Are nodes visible anywhere?
@@ -59,4 +59,49 @@ If you wish to host a public node, there are a few important aspects your wallet
 
 Instead of downloading the precompiled Ergo jar, you can clone the repository and compile the jar from the source using the [`sbt assembly`](https://www.scala-sbt.org/)  command.
 
+### As a service
+
+```
+vi /etc/systemd/system/node.service
+```
+
+```
+[Unit]
+Description=ErgoNode Service
+[Service]
+User=user
+
+#change this to your workspace
+WorkingDirectory=/mnt/HC_Volume_19304500/ergo
+
+#path to executable. 
+#executable is a bash script which calls jar file
+ExecStart=/mnt/HC_Volume_19304500/run_node.sh
+
+SuccessExitStatus=143
+TimeoutStopSec=10
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
+```
+create the `sh` file
+
+```
+echo "#!/bin/sh
+sudo /usr/bin/java -jar -Xmx4G ergo.jar --mainnet -c ergo.conf" > run_node.sh
+chmod +x run_node.sh
+```
+
+
+
+enable and start the service
+
+```
+sudo systemctl daemon-reload
+sudo systemctl enable node.service
+sudo systemctl start node
+sudo systemctl status node
+```
 
