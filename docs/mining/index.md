@@ -14,11 +14,11 @@ Ergo mining is based on [Autolykos](/mining/autolykos), an ASIC resistant Proof 
 
 ## [Autolykos](autolykos)
 
-**History**
+- Autolykos v1 originally had pool-resistance built-in through the use of non-outsourceable puzzles.
+- **The Hardening Hard-Fork** on block `417,792` marked the launch of Autolykos v2, enabling mining pools. See this [paper](https://ia.cr/2020/044). 
+- [**EIP27:**](../dev/protocol/eip27) was passed with overwhelming community support, extending emissions until 2045. This will be activated block `777,272`
 
-- **Launch:** Ergo mainnet launched in 2019. Total Supply: `97,739,925` ERG.
-- **The Hardening** *(block `417,792`)`* Autolykos v1 originally had pool-resistance built-in through the use of non-outsourceable puzzles. Ergo had to adapt and support pooled mining to protect the chain’s consensus as unfortunately the non-out-sourceable puzzles concept was broken with smart contracts. See ["Bypassing Non-Outsourceable Proof-of-Work Schemes Using Collateralized Smart Contracts"](https://ia.cr/2020/044).
-- [**EIP27:**](../dev/protocol/eip27) Extends mining rewards to 2045. Activated block `777,272`
+
 
 
 
