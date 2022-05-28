@@ -144,7 +144,7 @@ nav:
       - Join a Pool: mining/setup/join.md
       - Solo Mining: mining/setup/solo.md
       - Host a Pool: mining/setup/pool.md
-      - Subpooling: mining/setup/pool.md
+      - Subpooling: mining/setup/subpool.md
     - Autolykos: mining/autolykos.md
     - Governance: mining/governance.md
     - Storage Rent: mining/rent.md
