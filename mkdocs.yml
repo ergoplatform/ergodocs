@@ -147,6 +147,7 @@ nav:
     - Autolykos: mining/autolykos.md
     - Governance: mining/governance.md
     - Storage Rent: mining/rent.md
+    - Log-Space Mining: mining/log_space.md
   - 📦 ┃  Node:
     - Node: node/index.md
     - Install: 

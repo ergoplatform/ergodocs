@@ -2,10 +2,6 @@
 
 Search your card here [Autolykos v2 hashrates](https://docs.google.com/spreadsheets/d/1NsuoDB27EwCo_BlSjCP3GMLfTSJRPIWIBsL-wPTllUg) to find the hashrate.
 
-- The [explorer](https://explorer.ergoplatform.com) can give you various information & stats on mining and the network. 
-- [Difficulty and epoch monitor.](http://cds.oette.info/ergo_diff.htm)
-
-
 ## Miners
 
 There are multiple miners that can be used to mine Ergo (Autolykos2).  Below you will find a list of mining software that can be used to mine ERG.  There are various opinions as to which mining software is best and some are clear winners.  Best advice is to try them all if you can and see what works best for your rig set up specifically.   

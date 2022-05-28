@@ -12,6 +12,13 @@ Ergo mining is based on [Autolykos](/mining/autolykos), an ASIC resistant Proof 
 - [Host a pool](setup/pool)
 
 
+**Resources**
+
+- The [Ergo Explorer](https://explorer.ergoplatform.com) can give you various information & stats on mining and the network. 
+- [Difficulty and epoch monitor.](http://cds.oette.info/ergo_diff.htm)
+- [Wallets](../dev/wallet/)
+
+
 ## [Autolykos](autolykos)
 
 - Autolykos v1 originally had pool-resistance built-in through the use of non-outsourceable puzzles.
