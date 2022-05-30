@@ -1,10 +1,5 @@
 # Resources
 
-- [awesome-ergo](https://github.com/ergoplatform/awesome-ergo)
-- [ergonaut.space](https://ergonaut.space/)
-- [ergosites.github](https://ergosites.github.io/)
-- [ErgoWiki](https://github.com/ergoplatform/ergo/wiki) | The official ergoplatform GitHub wiki
-- [ergotutorials.com](https://ergotutorials.com/)
 
 ## Explorer
 
@@ -24,7 +19,7 @@
   - [Node API](https://git.io/fjqwb)
   - [Explorer API](https://git.io/fjqwN)
   - [Ergo.Watch API](https://ergo.watch/api/v0/docs)
-  - [TokenJay API](https://api.tokenjay.app/swagger-ui/index.html;jsessionid=59429AD4DF081E2E3450C2834095D427?attribute=redirectWithRedirectView)
+ - [TokenJay API](https://api.tokenjay.app/swagger-ui/index.html;jsessionid=59429AD4DF081E2E3450C2834095D427?attribute=redirectWithRedirectView)
 
 ## Test vectors
 
@@ -41,6 +36,7 @@
 
 - [Ergo Vision](https://github.com/CryptoCream/ErgoVision) | A wallet visualization tool to be used for investigating transactions and addresses
 - [Ergo Intelligence](https://github.com/Eeysirhc/ergo_intelligence)
+- [Ergo.watch](https://ergo.watch)
 
 ## Tools
 
@@ -53,6 +49,11 @@
 > It looks like `0e2047ee2cbd52be01e0876c3e0b989a0d4d5f8955200b1fab0e6eeb2b182555c2fb`, where `0e` is type descriptor (byte array), `20` is bytestring length (0x20 in hex = 32), `47ee2cbd52be01e0876c3e0b989a0d4d5f8955200b1fab0e6eeb2b182555c2fb` is the hash of the file.
 
 
+- [awesome-ergo](https://github.com/ergoplatform/awesome-ergo)
+- [ergonaut.space](https://ergonaut.space/)
+- [ergosites.github](https://ergosites.github.io/)
+- [ErgoWiki](https://github.com/ergoplatform/ergo/wiki) | The official ergoplatform GitHub wiki
+- [ergotutorials.com](https://ergotutorials.com/)
 
 
 
