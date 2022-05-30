@@ -62,7 +62,7 @@ Protocol developers can disable some existing validation rules from the [Validat
 The protocol version upgrade is to be done in the following steps:
 
 - A protocol developer implements and releases software with changed rules and this software may deactivate some existing rules while also introducing new logic.
-A miner proposes increasing the protocol version and putting deactivated rules into extension.
+- A miner proposes increasing the protocol version and putting deactivated rules into extension.
 - Other miners are voting within 32 epochs for the proposal
 - If the soft-fork proposal is being rejected~(so if it gathers no more than $90\%$ of votes during the voting period, i.e. no more than $\lfloor 32 * 1024 * 90 / 100 \rfloor = 29491$ votes), new voting may be proposed next epoch after the voting is done.
 - If the soft-fork proposal is approved, an activation period of 32 epochs is starting. The first block

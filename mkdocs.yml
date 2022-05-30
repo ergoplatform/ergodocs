@@ -73,9 +73,8 @@ nav:
     - Social Contract: social_contract.md
   - 🔬 ┃ Learn: 
     - Protocol: dev/protocol/index.md
-    - Components: 
-      - eUTXO: dev/protocol/eutxo.md
-      - NIPoPoWS: dev/protocol/nipopow.md
+    - eUTXO: dev/protocol/eutxo.md
+    - NIPoPoWS: dev/protocol/nipopow.md
     - Scaling: dev/protocol/scaling.md
     - EIPs: dev/protocol/eip.md
   - 🛠 ┃ Build:

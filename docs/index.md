@@ -12,6 +12,6 @@ Get started on your development journey
 
 There's plenty of ways to earn while you learn with bounties and grants available.
 
-## [📌 ┃ FAQ](/faq)
+## [⛏┃ Mining](/mining)
 
-For everything else, your first point of contact is the Frequently Asked Questions section. 
+Start mining ERG today.
