@@ -1,6 +1,6 @@
 # Developers
 
-This page should provides an entry-point to Ergo development. For a high-level introduction to Ergo please see the [protocol page](/dev/protocol)
+This page should provides an entry-point to Ergo development. For a high-level introduction to Ergo please see the [protocol page](/dev/protocol). For a list of tools and services see [resources](dev/start/resources/) page.
 
 ## Getting Started
 
