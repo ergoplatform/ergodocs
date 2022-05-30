@@ -28,13 +28,15 @@ theme:
     logo: assets/logo.png
     font:
       text: Roboto
-extra_css: [assets/extra.css]
+extra_css: 
+  - assets/extra.css
+  - https://unpkg.com/mermaid@8.5.1/dist/mermaid.css
 extra_javascript:
   - assets/extra.js
   - assets/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-
+  - https://unpkg.com/mermaid@8.5.1/dist/mermaid.min.js
 
 extra:
   version:
@@ -55,9 +57,10 @@ markdown_extensions:
       custom_fences:
         - name: mermaid
           class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
+          format: !!python/name:pymdownx.superfences.fence_div_format
   - pymdownx.arithmatex:
       generic: true
+
 
 
 nav:
