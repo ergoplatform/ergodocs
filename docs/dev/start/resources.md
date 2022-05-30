@@ -1,5 +1,6 @@
 # Resources
 
+This page outlines the resources available on Ergo. Also check out the [dev-tools section on sigmaverse](https://sigmaverse.io/)
 
 ## Explorer
 
@@ -48,6 +49,8 @@
 
 > It looks like `0e2047ee2cbd52be01e0876c3e0b989a0d4d5f8955200b1fab0e6eeb2b182555c2fb`, where `0e` is type descriptor (byte array), `20` is bytestring length (0x20 in hex = 32), `47ee2cbd52be01e0876c3e0b989a0d4d5f8955200b1fab0e6eeb2b182555c2fb` is the hash of the file.
 
+
+## External 
 
 - [awesome-ergo](https://github.com/ergoplatform/awesome-ergo)
 - [ergonaut.space](https://ergonaut.space/)
