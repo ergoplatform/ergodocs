@@ -190,32 +190,40 @@ Implemented Ledger support and the beginnings of ErgoMixer support.
 
 ERGOHACKFEST (or ERGOHACK IV) was a three-week long event.
 
-- [Presentations](https://drive.google.com/drive/folders/12yBnyMjq0hdVhXGOlpp8X0bwcj_Wvbgh)
+To see all the final submissions, head over to the [Presentations drive](https://drive.google.com/drive/folders/12yBnyMjq0hdVhXGOlpp8X0bwcj_Wvbgh).
+
+Below you'll find some additional links and more information for each project. 
 
 ### Azorus
-> An intelligence platform for UTXO Blockchains
 
+An intelligence platform for UTXO Blockchains
 
-- [Project Demo]( https://www.youtube.com/watch?v=SD8bDf-nxTQ)
+- [Project Demo](https://www.youtube.com/watch?v=SD8bDf-nxTQ)
+- [Whitepaper](https://github.com/gsblabsio/azorus)
+- [IDO on ergopad](https://ergopad.io/projects/azorus)
 
 ### ColivingDAO
 
+ColivingDAO aims to facilitate the creation, development, and operations of an ecosystem of coliving projects all over the world.
+
+- [Website](https://colivingdao.io/)
+
 ### dAppStep
+
+Working on interactive tutorials for dapp developers with nodejs/javascript stack exclusively
 
 Two examples live @ [play.dappstep.com](https://play.dappstep.com/)
 
-> Tx preview polished by Ralf. Published NFT rent contract with the whole flow and 4 different transactions to interact with the contract.
 
 ### ergo-graphql
 
 - [GitHub](https://github.com/capt-nemo429/ergo-graphql)
 - [Final Report](pdf/ergo-graphql_-_Final_Report.pdf)
 
-> This week we reach parity in terms of functionality with current explorer API and did lots of code refactoring and optimizations
-
-
 
 ### ErgoNation
+
+A decentralized ID and governance project. Non-profit with full commitment to Ergo ideals.
 
 - [Final Report](pdf/Ergo_Nation_final_report%20(1).pdf)
 
@@ -225,7 +233,8 @@ Two examples live @ [play.dappstep.com](https://play.dappstep.com/)
 
 ### Ergrow
 
-> continued progress on previous updates. pretty sure i have all the required components in my head... just need time :)
+A fun project involving ergo and a love for gardening.
+
 
 ### LETS
 
@@ -233,30 +242,42 @@ Two examples live @ [play.dappstep.com](https://play.dappstep.com/)
 
 > Contracts and respective tests are complete. Off-chain ergopay code is in progress. Frontend is in progress. Diagrams of transactions have been made to easily explain the LETS creation and value transfer process.
 
-### Loqul
 
-### Metadex
 
 ### Multisig
+
+- [Documentation](https://github.com/lazypinkpatrick/minotaur-wallet/blob/main/doc/MultiSig.md)
+- [Documentation](https://drive.google.com/file/d/1lDOKaz55N3POy2H7Rz5SGWCgAAWJtiqB/view?usp=sharing)
+- [Usage Example](https://drive.google.com/file/d/1J4IdlvpqWIo1eV1wtiT2DsfPPmgmVNQb/view?usp=sharing)
+
+
 
 > In this week, first I focus on complete signing multisig transaction using QRCode. This transaction can see in linke https://testnet.ergoplatform.com/en/transactions/7bee9e557b81b47617ada7c8cd9e9dd6b9f89483bd4f00c2e38398ebf1d94f2e after complete transaction process I focus on a centeralized server to for communicating data between wallets. I complete this server and generate a multi-sig transaction using this server. In next 2 day I will record a video of how to use multi-sig in minotaur.
 
 ### NightOwl
 
+- [Final Presentation](https://docs.google.com/presentation/d/1LBezFjHTNC2JJdL4OFNWIbZMiyCJ5szsr-h95i1PKp8/edit)
+
 - [Night Owl’s Weekly Update (ErgoHack Edition)](https://medium.com/@NightOwlCasino/night-owls-weekly-update-ergohack-edition-25-05-2022-aba01f8ee9f3)
+- [dApp connector](https://github.com/nightowlcasino/dApp-connector-react-package)
 
 > In the final week the team was able to finish roulette, complete two novel RNG models, create a dapp connector react package. We have a live demo and also have working swap.
 
 ### Oracle-Pools2
 
-> Made lots of code contributions this week. I completed the bootstrap operation [Bootstrap command](https://github.com/ergoplatform/oracle-core/pull/32) as well as the reward extraction operation ([Extract reward(tokens) commands](https://github.com/ergoplatform/oracle-core/pull/36)). I also made ancillary improvements to the codebase: [Mock datapoint source in `test_subsequent_publish_datapoint`](https://github.com/ergoplatform/oracle-core/pull/39) and [Remove the data point value from PoolCommand::PublishDataPoint(i64)](https://github.com/ergoplatform/oracle-core/pull/35). Finally I have some draft PRs open on the repo for [Transfer oracle token command](https://github.com/ergoplatform/oracle-core/pull/37) and [Remove side-effects from `main`](https://github.com/ergoplatform/oracle-core/pull/41). I was unable to get a working testnet pool working in time for the deadline though. I have 2 working ergo nodes on testnet, but have been having trouble with the node rejecting my requests to sign transactions (`request content was malformed`). It's a bit weird since all unit tests using `sigma-rust` work fine with all the transactions that need to be signed.
+- [Final Report](https://docs.google.com/document/d/1YxSc0tKi86tDRU-2RRemwefZTRYBTFBwxnYuYbaOgBk/edit)
 
 ### SwampAudio
+
+A Layer-2 Music Launchpad
 
 - [Final Report & Summary](https://docs.google.com/document/d/1ARevOdDiUkqYLzJ3WjjsRNNkgChJebbhcxh8SSANzio/)
 - [IDO Details (ergopad)](https://ergopad.io/projects/swampaudio)
 
 ### Tensile
+
+A decentralized, open source and non-custodial trading platform that offers derivative contracts, trading with leverage and market hedging 
+regarding assets offered on the Ergo blockchain.
 
 - [Final Report](/docs/events/pdf/Tensile_Ergoscript_Course_Final_Presentation.pdf)
 
@@ -271,15 +292,27 @@ Two examples live @ [play.dappstep.com](https://play.dappstep.com/)
 > This week our team was able to successfully fork Ergo and implement our token emission parameters. Moreover, we set up a static IP master Node on a raspberry pie 4G and was able to mine blocks. However, as of right now we have yet to run a test transaction. The plan is to run a test transaction tomorrow if we don’t get the opportunity to finish it tonight. Additionally, we were able to build a mobile raspberry pi that has similar specs to the Nintendo Switch (costing ~250$USD). This establishes proof of concept for a handheld blockchain gaming device that also works as a node overcoming two major obstacles in blockchain gaming: running a full client node on a small device and circumventing companies like Apple who actively disparage/ban blockchain games from their app store. These handheld gaming devices will not only add more nodes to the network (more peers => faster confirmations => more confirmation per min, thus increasing security) but will also put blockchain technology in the hands of the next generation in a fun and easy to understand fashion.
 
 
+### Loqul
+
+Rental Protocol For Cryptocurrency Payments
+
+### Metadex
+
+
+
 ### Platform137
 
 > Mining from the app with dynamic selections. Clocking - fans - power - temp limits - mapping outputs from both rig data and internal gpu data. Ability to control 3 fans and both drivers where the official nvidia software isn't even proper. Analytics from minging - etc. The perfect any idiot with a gpu can mine on me tool without hassle. Possibly a built in wallet by 12 pm MTN for quick mining yet you would need to point at a node of oyur choice kaa keep it modular and microservice based to give computation to mining. The tool your grandma can use to get them dank lootz.
 
-### ergo-family-banners
 
-Withdrew
+### Withdrew
+**ergo-family-banners**
 
-### WolfVentures
+ErgoFamilyBanners wants to harness the existing talent and allow all participants to actively engage in the building and support of the Ergo ecosystem, regardless of expertise.
+
+**WolfVentures**
+
+WolfVentures is aiming to bring something akin to Olympus pro to Ergo. (Smart contract 1) Smart contract 2 is an evolution of that process that offers more flexibility to projects around building treasury and liquidity.
 
 > Unfortunately we will have to exit the Hackathon. One of our key resources has a conflict with another project they are working on and wont be available until after the event is over. We wont have the product that we want to deliver ready in time. We will continue to work on the product and will circle back around in a few weeks when things are back on track.
 
