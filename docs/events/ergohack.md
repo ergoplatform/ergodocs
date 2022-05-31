@@ -188,7 +188,9 @@ Implemented Ledger support and the beginnings of ErgoMixer support.
 
 ## ERGOHACKFEST 
 
-ERGOHACKFEST (or ERGOHACK IV) was a three-week long event 
+ERGOHACKFEST (or ERGOHACK IV) was a three-week long event.
+
+- [Presentations](https://drive.google.com/drive/folders/12yBnyMjq0hdVhXGOlpp8X0bwcj_Wvbgh)
 
 ### Azorus
 > An intelligence platform for UTXO Blockchains
@@ -215,7 +217,7 @@ Two examples live @ [play.dappstep.com](https://play.dappstep.com/)
 
 ### ErgoNation
 
-> First event tested. Prepared materials to run the first event about a week after Ergohack ends.
+- [Final Report](pdf/Ergo_Nation_final_report%20(1).pdf)
 
 ### ErgoSphere
 
@@ -226,6 +228,8 @@ Two examples live @ [play.dappstep.com](https://play.dappstep.com/)
 > continued progress on previous updates. pretty sure i have all the required components in my head... just need time :)
 
 ### LETS
+
+- [GitHub - LETS Backend](https://github.com/arkan294/LETS-backend)
 
 > Contracts and respective tests are complete. Off-chain ergopay code is in progress. Frontend is in progress. Diagrams of transactions have been made to easily explain the LETS creation and value transfer process.
 
