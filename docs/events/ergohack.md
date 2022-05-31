@@ -235,6 +235,8 @@ A decentralized ID and governance project. Non-profit with full commitment to Er
 
 A fun project involving ergo and a love for gardening.
 
+- [Website](http://ergrow.io/)
+
 
 ### LETS
 
@@ -288,6 +290,8 @@ regarding assets offered on the Ergo blockchain.
 
 
 ### SentientSWAP
+
+- [Github](https://github.com/SpaceSwapio)
 
 > This week our team was able to successfully fork Ergo and implement our token emission parameters. Moreover, we set up a static IP master Node on a raspberry pie 4G and was able to mine blocks. However, as of right now we have yet to run a test transaction. The plan is to run a test transaction tomorrow if we don’t get the opportunity to finish it tonight. Additionally, we were able to build a mobile raspberry pi that has similar specs to the Nintendo Switch (costing ~250$USD). This establishes proof of concept for a handheld blockchain gaming device that also works as a node overcoming two major obstacles in blockchain gaming: running a full client node on a small device and circumventing companies like Apple who actively disparage/ban blockchain games from their app store. These handheld gaming devices will not only add more nodes to the network (more peers => faster confirmations => more confirmation per min, thus increasing security) but will also put blockchain technology in the hands of the next generation in a fun and easy to understand fashion.
 
