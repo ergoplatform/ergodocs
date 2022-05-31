@@ -14,4 +14,4 @@ There's plenty of ways to earn while you learn with bounties and grants availabl
 
 ## [⛏┃ Mining](/mining)
 
-Start mining ERG today.
+Start mining ERG today or explore unique mining features available on Ergo.
