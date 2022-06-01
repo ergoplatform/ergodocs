@@ -252,10 +252,6 @@ A fun project involving ergo and a love for gardening.
 - [Documentation](https://drive.google.com/file/d/1lDOKaz55N3POy2H7Rz5SGWCgAAWJtiqB/view?usp=sharing)
 - [Usage Example](https://drive.google.com/file/d/1J4IdlvpqWIo1eV1wtiT2DsfPPmgmVNQb/view?usp=sharing)
 
-
-
-> In this week, first I focus on complete signing multisig transaction using QRCode. This transaction can see in linke https://testnet.ergoplatform.com/en/transactions/7bee9e557b81b47617ada7c8cd9e9dd6b9f89483bd4f00c2e38398ebf1d94f2e after complete transaction process I focus on a centeralized server to for communicating data between wallets. I complete this server and generate a multi-sig transaction using this server. In next 2 day I will record a video of how to use multi-sig in minotaur.
-
 ### NightOwl
 
 - [Final Presentation](https://docs.google.com/presentation/d/1LBezFjHTNC2JJdL4OFNWIbZMiyCJ5szsr-h95i1PKp8/edit)
@@ -295,6 +291,9 @@ regarding assets offered on the Ergo blockchain.
 
 ### InERGitance
 
+> a decentralized inheritance solution for the Ergo blockchain
+
+
 - [GitHub](https://github.com/inergitance)
 - [Documentation (contains EIP like overview of proposed solution including smartcontracts)](https://github.com/inergitance/doc)
 - [FrontEnd code (React + TypeScript + SigmaRust)](https://github.com/inergitance/frontend)
@@ -304,21 +303,24 @@ regarding assets offered on the Ergo blockchain.
 
 - [Final Presentation](https://drive.google.com/drive/folders/1wJrQGh0PaPgXZCX-QnITEVZPa3WPkGZX)
 
-> Mining from the app with dynamic selections. Clocking - fans - power - temp limits - mapping outputs from both rig data and internal gpu data. Ability to control 3 fans and both drivers where the official nvidia software isn't even proper. Analytics from minging - etc. The perfect any idiot with a gpu can mine on me tool without hassle. Possibly a built in wallet by 12 pm MTN for quick mining yet you would need to point at a node of oyur choice kaa keep it modular and microservice based to give computation to mining. The tool your grandma can use to get them dank lootz.
-    
 
-### Loqul
+### ErgoSock/ErgoNodes
 
-Rental Protocol For Cryptocurrency Payments
-
-### Metadex
-
-
-
-
+- [ErgoSock](pdf/ergosock.pdf)
+- [ErgoNodes](pdf/ergonodes.pdf)
 
 
 ### Withdrew
+
+
+**Loqul**
+
+Rental Protocol For Cryptocurrency Payments
+
+**Metadex**
+
+
+
 **ergo-family-banners**
 
 ErgoFamilyBanners wants to harness the existing talent and allow all participants to actively engage in the building and support of the Ergo ecosystem, regardless of expertise.
