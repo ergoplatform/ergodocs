@@ -4,3 +4,9 @@ The Yoroi's dapp connector [example code](https://github.com/Emurgo/yoroi-fronte
 
 
 Specifically with Nautilus, to avoid conflicts, you can call `ergoConnector.nautilus.connect()` in place of `window.ergo_request_read_access()` and `ergoConnector.nautilus.isConnected()` in place of `window.ergo_check_read_access()`
+
+
+## ergo-dapp-connector
+
+- [React that has a built-in dApp Connector](https://www.npmjs.com/package/ergo-dapp-connector)
+- [video tutorial](https://twitter.com/NightOwlCasino/status/1529452399475179520)
