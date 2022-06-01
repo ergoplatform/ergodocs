@@ -212,8 +212,8 @@ ColivingDAO aims to facilitate the creation, development, and operations of an e
 
 Working on interactive tutorials for dapp developers with nodejs/javascript stack exclusively
 
-Two examples live @ [play.dappstep.com](https://play.dappstep.com/)
-
+- Two examples live @ [play.dappstep.com](https://play.dappstep.com/)
+- [Final Submission](https://drive.google.com/drive/folders/1s1iiJwybYkX4FrNBM-OpcjvLKItUbmVB)
 
 ### ergo-graphql
 
@@ -229,21 +229,21 @@ A decentralized ID and governance project. Non-profit with full commitment to Er
 
 ### ErgoSphere
 
-> Still making some finishing touches to the UI, and started testing projects (explorer, mixer, ErgoDex-bot) with ErgoSphere
+- [ergosphere.cloud/](https://ergosphere.cloud/)
+- [Final Presentation](https://docs.google.com/document/d/1jdYS4Mt4Zkk3Hwl0CeA3ietaaIdAkETT/edit)
 
 ### Ergrow
 
 A fun project involving ergo and a love for gardening.
 
 - [Website](http://ergrow.io/)
-
+- [Final Presentation](https://drive.google.com/drive/folders/1HkLHj9xu_tawjGnfVzL02Lkrm8XZtCIS)
 
 ### LETS
 
 - [GitHub - LETS Backend](https://github.com/arkan294/LETS-backend)
 
 > Contracts and respective tests are complete. Off-chain ergopay code is in progress. Frontend is in progress. Diagrams of transactions have been made to easily explain the LETS creation and value transfer process.
-
 
 
 ### Multisig
@@ -259,11 +259,9 @@ A fun project involving ergo and a love for gardening.
 ### NightOwl
 
 - [Final Presentation](https://docs.google.com/presentation/d/1LBezFjHTNC2JJdL4OFNWIbZMiyCJ5szsr-h95i1PKp8/edit)
-
 - [Night Owl’s Weekly Update (ErgoHack Edition)](https://medium.com/@NightOwlCasino/night-owls-weekly-update-ergohack-edition-25-05-2022-aba01f8ee9f3)
 - [dApp connector](https://github.com/nightowlcasino/dApp-connector-react-package)
 
-> In the final week the team was able to finish roulette, complete two novel RNG models, create a dapp connector react package. We have a live demo and also have working swap.
 
 ### Oracle-Pools2
 
@@ -291,10 +289,23 @@ regarding assets offered on the Ergo blockchain.
 
 ### SentientSWAP
 
+- [Final Presentation](https://drive.google.com/drive/folders/1Xprwfz-MrgS4PFQ3cETE7JbTenPRtQRw)
 - [Github](https://github.com/SpaceSwapio)
 
-> This week our team was able to successfully fork Ergo and implement our token emission parameters. Moreover, we set up a static IP master Node on a raspberry pie 4G and was able to mine blocks. However, as of right now we have yet to run a test transaction. The plan is to run a test transaction tomorrow if we don’t get the opportunity to finish it tonight. Additionally, we were able to build a mobile raspberry pi that has similar specs to the Nintendo Switch (costing ~250$USD). This establishes proof of concept for a handheld blockchain gaming device that also works as a node overcoming two major obstacles in blockchain gaming: running a full client node on a small device and circumventing companies like Apple who actively disparage/ban blockchain games from their app store. These handheld gaming devices will not only add more nodes to the network (more peers => faster confirmations => more confirmation per min, thus increasing security) but will also put blockchain technology in the hands of the next generation in a fun and easy to understand fashion.
 
+### InERGitance
+
+- [GitHub](https://github.com/inergitance)
+- [Documentation (contains EIP like overview of proposed solution including smartcontracts)](https://github.com/inergitance/doc)
+- [FrontEnd code (React + TypeScript + SigmaRust)](https://github.com/inergitance/frontend)
+- [Video presentation of solution](https://dlhameteo.eu/ergohackfest.mp4)
+
+### Platform137
+
+- [Final Presentation](https://drive.google.com/drive/folders/1wJrQGh0PaPgXZCX-QnITEVZPa3WPkGZX)
+
+> Mining from the app with dynamic selections. Clocking - fans - power - temp limits - mapping outputs from both rig data and internal gpu data. Ability to control 3 fans and both drivers where the official nvidia software isn't even proper. Analytics from minging - etc. The perfect any idiot with a gpu can mine on me tool without hassle. Possibly a built in wallet by 12 pm MTN for quick mining yet you would need to point at a node of oyur choice kaa keep it modular and microservice based to give computation to mining. The tool your grandma can use to get them dank lootz.
+    
 
 ### Loqul
 
@@ -304,9 +315,7 @@ Rental Protocol For Cryptocurrency Payments
 
 
 
-### Platform137
 
-> Mining from the app with dynamic selections. Clocking - fans - power - temp limits - mapping outputs from both rig data and internal gpu data. Ability to control 3 fans and both drivers where the official nvidia software isn't even proper. Analytics from minging - etc. The perfect any idiot with a gpu can mine on me tool without hassle. Possibly a built in wallet by 12 pm MTN for quick mining yet you would need to point at a node of oyur choice kaa keep it modular and microservice based to give computation to mining. The tool your grandma can use to get them dank lootz.
 
 
 ### Withdrew
