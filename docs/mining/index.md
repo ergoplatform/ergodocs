@@ -7,9 +7,9 @@ Ergo mining is based on [Autolykos](/mining/autolykos), an ASIC resistant Proof 
 **Getting Started**
 
 
-- [Join a pool](setup/join)
-- [Solo Mine](setup/solo)
-- [Host a pool](setup/pool)
+- [Mining from a pool](setup/join)
+- [Solo Mining](setup/solo)
+- [Hosting a pool](setup/pool)
 
 
 **Resources**
@@ -23,7 +23,7 @@ Ergo mining is based on [Autolykos](/mining/autolykos), an ASIC resistant Proof 
 
 - Autolykos v1 originally had pool-resistance built-in through the use of non-outsourceable puzzles.
 - **The Hardening Hard-Fork** on block `417,792` marked the launch of Autolykos v2, enabling mining pools. See this [paper](https://ia.cr/2020/044). 
-- [**EIP27:**](../dev/protocol/eip27) was passed with overwhelming community support, extending emissions until 2045. This will be activated block `777217`
+- [**EIP27:**](../dev/protocol/eip27) was passed with overwhelming community support, extending emission by 4,566,336 blocks (~17.38 years). This will be activated on block `777217`
 
 
 
