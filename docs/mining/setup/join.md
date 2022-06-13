@@ -2,6 +2,8 @@
 
 Search your card here on the [Autolykos v2 hashrates spreadsheet](https://docs.google.com/spreadsheets/d/1NsuoDB27EwCo_BlSjCP3GMLfTSJRPIWIBsL-wPTllUg) to find your estimated hashrate.
 
+There are various pools available as seen on [miningpoolstats.stream/ergo](https://miningpoolstats.stream/ergo)
+
 ## Miners
 
 You can use multiple miners to mine Ergo (Autolykos2). Below you will find a list of mining software used to mine ERG. There are various opinions on which mining software is best, and some are clear winners. The best advice is to try them all and see what works best for you.
@@ -14,7 +16,7 @@ In addition to dedicated mining software, there are also Mining OS or operating 
 - [Nanominer](https://github.com/nanopool/nanominer/releases)
 - [NB Miner](https://github.com/NebuTech/NBMiner)
 - [SRB Miner](https://github.com/doktor83/SRBMiner-Multi/releases)
-- [SRBMiner-MULTI - How to mine Ergo coin (autolykos2)](https://www.youtube.com/watch?v=thBPstQJVWo)
+    - [SRBMiner-MULTI - How to mine Ergo coin (autolykos2)](https://www.youtube.com/watch?v=thBPstQJVWo)
 - [Team Red Miner](https://github.com/todxx/teamredminer/releases)
 - [Trex Miner](https://github.com/trexminer/T-Rex/releases)
 
@@ -40,6 +42,8 @@ In addition to dedicated mining software, there are also Mining OS or operating 
 
 ### [Nice Hash](https://www.nicehash.com/) 
 - [NiceTalk live with Ergo](https://www.nicehash.com/blog/post/join-us-live-with-ergo-on-nice-talk-on-the-29th)
+
+
 
 
 
