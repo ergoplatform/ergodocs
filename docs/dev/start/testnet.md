@@ -20,7 +20,7 @@ To find public testnet nodes you can use [api.tokenjay.app/peers/list](https://a
 
 ## Getting Started
 
-To join the testnet, just download [latest Ergo protocol reference client](https://github.com/ergoplatform/ergo/releases) and launch using
+To join the testnet, just download [latest Ergo protocol reference client](https://github.com/ergoplatform/ergo/releases/tag/testnet-sync ) and launch using
 
 ```bash
 java -jar -Xmx4G ergo-*.jar --testnet -c testnet.conf
@@ -38,6 +38,15 @@ scorex {
     # Below is hash corresponding to API_KEY = "hello" (with no quotes)
     apiKeyHash = "324dcf027dd4a30a932c441f365a25e86b173defa4b8e58948253471b81b72cf"
   }
+  
+network {
+   knownPeers = [
+      "213.239.193.208:9020",
+      "37.156.20.158:9020"
+    ]
+   peerDiscovery = false
+  }
+
 }
 ```
 
@@ -58,3 +67,7 @@ ergo-testnet.getblok.io:3056
 ```
 
 Payouts are frozen for right now, if any of you need testnet ERG then you can tag @CheeseEnthusiast on Discord and he can start them up again.
+
+
+
+
