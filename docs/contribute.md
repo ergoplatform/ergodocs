@@ -57,5 +57,7 @@ If you're interested in starting a regional branch - this can involve running re
 
 Check [our chats](https://linktr.ee/ergoplatform) to ensure a branch doesn't already exist for your region. 
 
+### Where can I submit a proposal?
 
+[ergoraffle.com/](http://ergoraffle.com/) is your best bet, alternatively you can apply for the grants above by emailing team@ergoplatform.org
 
