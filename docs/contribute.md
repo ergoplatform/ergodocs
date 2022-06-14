@@ -59,5 +59,5 @@ Check [our chats](https://linktr.ee/ergoplatform) to ensure a branch doesn't alr
 
 ### Where can I submit a proposal?
 
-[ergoraffle.com/](http://ergoraffle.com/) is your best bet, alternatively you can apply for the grants above by emailing team@ergoplatform.org
+[ergoraffle.com](http://ergoraffle.com/) is your best bet, alternatively you can apply for the grants above by emailing team@ergoplatform.org or join the idea incubator channels and speak to ErgoPad.
 
