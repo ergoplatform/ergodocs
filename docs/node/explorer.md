@@ -21,6 +21,7 @@ The Ergo Blockchain Explorer is your interface with the blockchain and provides 
 - [How to setup the Chain-Grabber module on a Raspberry Pi device](../dev/stack/rpi-blockchain-explorer.md)
 - [Ergo Nix Toolkit](https://github.com/ergoplatform/ergo-nix)
 - [Ergo Bootstrap](https://github.com/ergoplatform/ergo-bootstrap)
+- [ergo-explorer-cdn.getblok.io](https://ergo-explorer-cdn.getblok.io/) : Explorer end-point, no UI, only for API calls. 
 
 
 ## Running your own instance of Explorer 
