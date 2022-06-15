@@ -20,3 +20,7 @@ You may or may not need to use Stratum Server and Stratum Proxy to operate them.
 - [Ergo Node + Stratum Server mining tutorial](https://www.youtube.com/watch?v=_1M8dGpfKjU)
 - [Youtube: Mine Ergo from your own Node](https://www.youtube.com/watch?v=ubov4oweA20)
 - [ErgoForum: Q&A on mining (for pool operators and solo miner)](https://www.ergoforum.org/t/q-a-on-mining-for-pool-operators-and-solo-miners/587)
+
+## Pools
+
+There is now a solo-mining subpool on [getblok](https://www.getblok.io/smartpools/)
