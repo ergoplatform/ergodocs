@@ -1,5 +1,8 @@
 # ErgoScript
 
+**ErgoScript is a super-simple subset of Scala.** It is a top-level language translated into a low-level language called ErgoTree, which is translated during execution into cryptographic protocol. That’s how Ergo supports ring and threshold signatures and much more crypto protocols with no special cases made in the core!
+
+
 ## Key Concepts
 
 - Ergo is a UTXO based blockchain with Proof-of-Work consensus
