@@ -8,5 +8,5 @@ Specifically with Nautilus, to avoid conflicts, you can call `ergoConnector.naut
 
 ## ergo-dapp-connector
 
-- [React that has a built-in dApp Connector](https://www.npmjs.com/package/ergo-dapp-connector)
+- [React package that has a built-in dApp Connector](https://www.npmjs.com/package/ergo-dapp-connector)
 - [video tutorial](https://twitter.com/NightOwlCasino/status/1529452399475179520)
