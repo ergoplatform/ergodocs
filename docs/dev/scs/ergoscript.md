@@ -2,6 +2,8 @@
 
 **ErgoScript is a super-simple subset of Scala.** It is a top-level language translated into a low-level language called ErgoTree, which is translated during execution into cryptographic protocol. That’s how Ergo supports ring and threshold signatures and much more crypto protocols with no special cases made in the core!
 
+Ergo's support for sigma-protocols (aka generalized Schnorr proofs) is truly unique. As building bricks for composable statements, Ergo supports Schnorr protocols and proof-of-Diffie-Hellman-tuples, but more can be added via soft-forks
+
 
 ## Key Concepts
 
