@@ -23,4 +23,4 @@ You may or may not need to use Stratum Server and Stratum Proxy to operate them.
 
 ## Pools
 
-There is now a solo-mining subpool on [getblok](https://www.getblok.io/smartpools/)
+There is now a solo-mining smart subpool on [getblok](https://www.getblok.io/smartpools/). Alternatively 2Miners, solopool.org and others offer Solo mining. 
