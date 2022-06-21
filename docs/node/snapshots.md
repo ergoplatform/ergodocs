@@ -1,3 +1,3 @@
 # Snapshots
 
-UTXO set-snapshots use NIPoPoWs
+UTXO set-snapshots utilise Non-Interactive Proofs of Proof-of-Work (NIPoPoWs) 
