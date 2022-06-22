@@ -6,6 +6,8 @@ Ergo mining is based on [Autolykos](/mining/autolykos), an ASIC resistant Proof 
 
 **Getting Started**
 
+Unless you have 1TH/s+, you likely want to be mining from a pool. Available miners and pools listed in the pool section. 
+
 
 - [Mining from a pool](setup/join)
 - [Solo Mining](setup/solo)
