@@ -43,6 +43,7 @@ If you plan to perform your wallet logic externally, you can do so with a librar
 
 Available libraries are:
 
+* [*ergo-appkit*](https://github.com/ergoplatform/ergo-appkit) Complete java sdk wrapping the node api, explorer api and including ergo-wallet.
 * [*ergo-wallet*](https://mvnrepository.com/artifact/org.ergoplatform/ergo-wallet) made in Java (sources are in [Ergo node repository](https://github.com/ergoplatform/ergo/tree/master/ergo-wallet))
 * [*sigma-rust*](https://github.com/ergoplatform/sigma-rust/) in Rust with WASM bindings for JavaScript/TypeScript
 * [*ergo-ts*](https://github.com/coinbarn/ergo-ts) in TypeScript
