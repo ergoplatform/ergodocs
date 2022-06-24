@@ -14,8 +14,10 @@ Some quick facts about Ergo that are useful to know.
 
 * like Bitcoin, a transaction in Ergo has multiple *inputs* and *outputs*. Unspent outputs are **single-use entities**. However, Ergo is built from scratch; thus, scripts and transaction formats are different.
 * Just like Bitcoin, there are some standard scripts in Ergo associated with addresses, e.g. `P2PK` addresses. [Read more here on the address scheme](/dev/wallet/address)
+* Rather than storing a single amount (like BTC), an ergo eutxo box has some registers to store arbitrary values, like its native tokens. So, each box has an ERG amount and may or may not have a bunch of {tokenid, token amount} pairs, all in the UTXO model.
 * Ergo has an inbuilt wallet API which is enough for most use-cases. API has a Swagger interface on `127.0.0.1:9053` by default in the mainnet (`9052` on testnet).
 * See the full guide on setting [How to set up a node](/node/platforms/tutorial) and the associated [troubleshooting](/node/platforms/troubleshooting) page.
+
 
 
 ### Node Wallet
@@ -59,7 +61,7 @@ Available libraries are:
 
 ### Address generation
 
-- Secret seed and derived addresses generation demo using ergo-wallet and Java is provided in [AdressGenerationDemo.java](https://gist.github.com/kushti/70dcfa841dfb504721f09c911b0fc53d)
+Secret seed and derived addresses generation demo using ergo-wallet and Java is provided in [AdressGenerationDemo.java](https://gist.github.com/kushti/70dcfa841dfb504721f09c911b0fc53d)
 
 
 To generate new addresses in the same wallet you can use the `/wallet/deriveNextKey` API method
@@ -67,6 +69,8 @@ To generate new addresses in the same wallet you can use the `/wallet/deriveNext
 ```bash
 curl -X GET "http://localhost:9053/wallet/deriveNextKey" -H  "accept: application/json" -H  "api_key: hello"
 ```
+
+
 
 
 ### Composing transactions outside the node
