@@ -53,7 +53,7 @@ Ergo-First-Year-Token was airdropped and distributed on Waves DEX starting with 
 
 It should be noted that the max supply of EFYT is 1,970,945.0. This is 10% of the first year of Ergo token emission and the same number of Ergs that the Treasury will receive, meaning that the Treasury will have received 1,970,945.0 Ergs during year 1, sufficient to swap the max supply of EFYT for Erg.
 
-**Why 97,739,924?**
+## Why 97,739,924?
 
 > Emission in Ergo is controlled by pre-agreed smart contract, so we tried to have simple enough emission curve with total limited supply being close to 100M (and emission to be done in 8-10 years).
 
