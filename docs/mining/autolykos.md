@@ -43,6 +43,7 @@ So the general consensus is people would rather deal with the inconsistent rewar
 ## Resources
 
 - [Yellow Paper](https://www.docdroid.net/mcoitvK/ergopow-pdf)
+- [ergo/src/main/scala/org/ergoplatform/mining/](https://discord.com/channels/668903786361651200/668903786902847502/990962713675055114)
 
 ### Test Vectors 
 
