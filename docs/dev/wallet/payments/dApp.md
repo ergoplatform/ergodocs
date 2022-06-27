@@ -10,3 +10,4 @@ Specifically with Nautilus, to avoid conflicts, you can call `ergoConnector.naut
 
 - [React package that has a built-in dApp Connector](https://www.npmjs.com/package/ergo-dapp-connector)
 - [video tutorial](https://twitter.com/NightOwlCasino/status/1529452399475179520)
+- [Message signing and user authentication with Nautilus wallet and sigma-rust](https://www.dappstep.com/docs/tutorial-dapp-connector/message-signing-authentication)
