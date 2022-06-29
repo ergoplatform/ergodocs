@@ -50,6 +50,8 @@ network {
 }
 ```
 
+The node will be available at [localhost:9052/panel](http://localhost:9052/panel)
+
 ### Faucet
 
 You can  get 60 testERG by sending a request to `https://testnet.ergofaucet.org/payment/address/TESTNET_WALLET_ADDRESS` 
