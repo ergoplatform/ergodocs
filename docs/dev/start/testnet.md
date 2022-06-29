@@ -2,21 +2,6 @@
 
 The testnet is an alternative Ergo block chain you can use for testing and experimentation, without having to use real ERG or worrying about breaking the main chain. The testnet runs on different ports than the mainnet and can be accessed by changing your `.conf` and running with the `--testnet` flag. 
 
-## Ports
-
-|                | mainnet  | testnet   |
-|----------------|----------|-----------|
-| API Port       | 9053     | 9052      | 
-| P2P Port       | 9030     | 9020      |
-| address prefix | (0) 0x00 | (16) 0x10 |
-
-To find public testnet nodes you can use [api.tokenjay.app/peers/list](https://api.tokenjay.app/peers/list) and swap the port til you find one that's running testnet.
-
-## Resources
-
-- [Testnet Explorer](https://testnet.ergoplatform.com/)
-- [ergo-synced-node](https://github.com/mgpai22/ergo-synced-node#ergo-testnet-node-setup)
-- [Nautilus Testnet build](https://github.com/capt-nemo429/nautilus-wallet#testnet)
 
 ## Getting Started
 
@@ -69,6 +54,23 @@ ergo-testnet.getblok.io:3056
 ```
 
 Payouts are frozen for right now, if any of you need testnet ERG then you can tag @CheeseEnthusiast on Discord and he can start them up again.
+
+
+## Ports
+
+|                | mainnet  | testnet   |
+|----------------|----------|-----------|
+| API Port       | 9053     | 9052      | 
+| P2P Port       | 9030     | 9020      |
+| address prefix | (0) 0x00 | (16) 0x10 |
+
+To find public testnet nodes you can use [api.tokenjay.app/peers/list](https://api.tokenjay.app/peers/list) and swap the port til you find one that's running testnet.
+
+## Resources
+
+- [Testnet Explorer](https://testnet.ergoplatform.com/)
+- [ergo-synced-node](https://github.com/mgpai22/ergo-synced-node#ergo-testnet-node-setup)
+- [Nautilus Testnet build](https://github.com/capt-nemo429/nautilus-wallet#testnet)
 
 
 
