@@ -121,6 +121,7 @@ nav:
         - AppKit:
           - AppKit: dev/stack/appkit/index.md
           - Tutorial: dev/stack/appkit/tutorial.md
+          - Gradle: dev/stack/appkit/gradle.md
         - ErgoTool: dev/stack/ergotool.md
         - Kiosk: dev/stack/kiosk.md
         - JDE: dev/stack/jde.md

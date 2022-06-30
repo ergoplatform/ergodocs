@@ -14,20 +14,28 @@
 Using Appkit, Ergo applications can be written in one of the languages supported by GraalVM (i.e. Java, JavaScript, C/C++, Python, Ruby, R) and using this library, applications can communicate with Ergo nodes via unified API and programming model provided by Appkit. In addition, Appkit based Ergo applications can be compiled into native code using native-image ahead of time compiler and then executed without Java VM with very fast startup time and lower runtime memory overhead compared to a Java VM. This is an attractive option for high-performance, low-latency microservices.
 
 
-### Tutorials
+## Tutorials
 
-- [AppKit by Example (Video)](https://www.youtube.com/watch?v=Md5s-XV6-Hs)
-- [Tutorial starting with Appkit on Gradle projects](https://github.com/ergoplatform/ergo-appkit/wiki/Tutorial-starting-with-Appkit-on-Gradle-projects)
-- [Appkit Examples](https://github.com/aslesarenko/ergo-appkit-examples)
+
+- [Gradle](/dev/stack/appkit/gradle)
 - [ErgoPay tutorial](/dev/wallet/payments/ergo-pay/#implement-a-dapp-using-ergopay)
+- [General Tutorial](/dev/stack/appkit/tutorial.md)
+
+## Videos
+
+- [AppKit by Example](https://www.youtube.com/watch?v=Md5s-XV6-Hs)
+
+## Code examples
+
+- [Appkit Examples](https://github.com/aslesarenko/ergo-appkit-examples)
 - [Testing Ergo Contracts Off-chain](https://github.com/anon-real/contract-testing)
 
 
-### How-to Guides
+## How-to Guides
 
-- [Ergo Android](https://github.com/aslesarenko/ergo-android) | Example Android application which demonstrates how Ergo Appkit can be used to develop Ergo applications running on Android.
+-  [Ergo Android](https://github.com/aslesarenko/ergo-android) application that demonstrates how Ergo Appkit can be used to develop Ergo applications running on Android.
 
-### References
+## References
 
 - [ErgoTool](https://github.com/aslesarenko/ergo-tool) | A Command Line Interface for Ergo based on Appkit and [GraalVM](https://www.graalvm.org/) native-image. Read the [introduction and overview](https://ergoplatform.org/en/blog/2019_12_31_ergo_tool/).
 

@@ -12,6 +12,7 @@ Unless you have 1TH/s+, you likely want to be mining from a pool. Available mine
 - [Mining from a pool](setup/join)
 - [Solo Mining](setup/solo)
 - [Hosting a pool](setup/pool)
+- [Subpooling](/mining/setup/subpool)
 
 
 **Resources**

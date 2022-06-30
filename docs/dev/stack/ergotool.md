@@ -1,22 +1,13 @@
 
 ## Introduction
 
-[ErgoTool](https://github.com/aslesarenko/ergo-tool) is a command-line interface (CLI) for
-[Ergo blockchain](https://ergoplatform.org/). You can use ErgoTool without running your
-own Ergo node. Even though running a node is the most secure way to communicate with the
-However, the Ergo blockchain network, ErgoTool aims to provide more foundational tools at
-your disposal. Surely, you still can use it with your running node. 
+[ErgoTool](https://github.com/aslesarenko/ergo-tool) is a command-line interface (CLI) for [Ergo blockchain](https://ergoplatform.org/). You can use ErgoTool without running your own Ergo node. However, running a node is the most secure way to communicate with the blockchain. However, the Ergo blockchain network, ErgoTool, aims to provide more foundational tools at your disposal. Surely, you still can use it with your running node.
 
-In this post, we will walk through simple steps to generate a mnemonic phrase, create a
-local secret storage and use it to send ERGs between addresses, all with the help of
-ErgoTool commands.
+In this post, we will walk through simple steps to generate a mnemonic phrase, create a local secret storage and use it to send ERGs between addresses, all with the help of ErgoTool commands.
 
 ## Getting Started
 
-First, we need to install ErgoTool on our system from sources by following the
-[installation instructions](https://github.com/aslesarenko/ergo-tool#installation). In the
-directory where we cloned ErgoTool, there is the `ergo-tool.sh` script we will
-use to run commands. Run the following command to check ErgoTool is installed correctly.
+First, we need to install ErgoTool on our system from sources by following the [installation instructions](https://github.com/aslesarenko/ergo-tool#installation). In the directory where we cloned ErgoTool, there is the `ergo-tool.sh` script we will use to run commands. Run the following command to check that ErgoTool is installed correctly.
 
 ```bash
 $ ./ergo-tool.sh help     
@@ -28,50 +19,33 @@ Description:  prints usage help for a command
 Doc page: https://aslesarenko.github.io/ergo-tool/api/org/ergoplatform/appkit/ergotool/HelpCmd.html
 ```
 
-Let's see what we get here. ErgoTool outputs the error message with the information about
-the `help` command. This is a typical output of ErgoTool when one of the known commands is
-specified but used incorrectly. As we can learn from the message, the `help.`
-the command requires us to specify an additional `<commandName>` argument. Also, each command has
-an API doc page with all the details about command execution, so its URL is shown here.
+Let's see what we get here. ErgoTool outputs the error message with the information about the `help` command. This is a typical output of ErgoTool when one of the known commands is specified but used incorrectly. As we can learn from the message, the `help.` the command requires us to specify an additional `<commandName>` argument. Also, each command has an API doc page with all the details about command execution, so its URL is shown here.
 
 ## Create a New Mnemonic Phrase
 
-Mnemonic is a random sequence of characters that is used to generate a master key
-according to [Hierarchical Deterministic
-Wallets](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) specification.
-For random convenience sequence of English words is used, but this is not required.
-Run the following command to generate a new mnemonic phrase:
+A Mnemonic is a random sequence of characters that is used to generate a master key according to [Hierarchical Deterministic Wallets](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) specification. For random convenience sequence of English words is used, but this is not required. Run the following command to generate a new mnemonic phrase:
 
 ```bash
 $ ./ergo-tool.sh mnemonic          
 bird harbor wheat innocent business disease busy quick yellow trust time oil enter situate moon
 ```
 
-Write it down on paper and keep it in a safe and secret place. 
-As an additional security measure, you can create an arbitrary mnemonic password. 
-In some sense, it can serve as an additional non-vocabulary word in the mnemonic. 
-Mnemonic password is optional and is used for additional security.
-If you decide to use a mnemonic password, you should also write it down and keep it a secret and
-probably different from mnemonic. 
+Please write it down on paper and keep it in a safe and secret place. As an additional security measure, you can create a random mnemonic password. In some sense, it can serve as another non-vocabulary word in the mnemonic. A mnemonic password is optional and is used for additional security. If you decide to use a mnemonic password, you should also write it down and keep it a secret, probably different from a mnemonic one.
 
-**Important, both mnemonic phrases and mnemonic passwords are required to restore secret keys,
-if you lose any of them, then you will not be able to regenerate your master key again.**
+**Important, both mnemonic phrases and mnemonic passwords are required to restore secret keys, if you lose any of them, then you will not be able to regenerate your master key again.**
 
-Next, let's use the generated mnemonic to create storage with a master secret key.
+Next, use the generated Mnemonic to create storage with a master secret key.
 
 ## Create a New Encrypted Storage
 
-For better security, neither mnemonic phrase nor password is required by ErgoTool to
-perform the transaction signing. Instead, the secret key from the encrypted storage is
-required to sign a spending transaction. We can generate a secret key and store it in 
-encrypted storage using the `createStorage` command.
+For better security, neither a mnemonic phrase nor password is required by ErgoTool to perform the transaction signing. Instead, the secret key from the encrypted storage is required to sign a spending transaction. We can generate a secret key and store it in encrypted storage using the `createStorage` command.
 
 ```bash
 $ ./ergo-tool.sh help createStorage
 
 Command Name: createStorage
 Usage Syntax: ergo-tool createStorage [<storageDir>="storage"] [<storageFileName>="secret.json"]
-Description:  Creates an encrypted storage file for the mnemonic entered by the user
+Description:  Creates an encrypted storage file for the Mnemonic entered by the user
 Doc page:       https://aslesarenko.github.io/ergo-tool/api/org/ergoplatform/appkit/ergotool/CreateStorageCmd.html
 
 $ ./ergo-tool.sh createStorage 
@@ -83,25 +57,19 @@ Repeat storage password>
 Storage File: storage/secret.json
 ```
 
-A master secret key is generated from the (mnemonic phrase, mnemonic password) pair and
-saved encrypted in the `storage/secret.json` file. Mnemonic itself is not stored in the
-file, and there is no way to restore it from the file, even if you know the passwords.
+A master secret key is generated from the (mnemonic phrase, mnemonic password) pair and saved encrypted in the `storage/secret.json` file. The Mnemonic itself is not stored in the file, and there is no way to restore it from the file, even if you know the passwords.
  
 Please enter the correct mnemonic password, the one you chose and saved before.
+
 Since a mnemonic password is optional, you can leave it empty by pressing enter.
 
-If you forget the storage password (aka encryption password), you will not be able to use
-that storage file anymore; however, you can always restore your secret keys from (mnemonic
-the phrase, mnemonic password) pair and thus create a new storage file with a new password.
+If you forget the storage password (aka encryption password), you will not be able to use that storage file anymore; however, you can always restore your secret keys from (Mnemonic the phrase, mnemonic password) pair and thus create a new storage file with a new password.
 
-Keep your storage file and storage password in secret; anyone who obtain both your storage
-file and storage password will be able to decipher it and access secret keys.
+Keep your storage file and storage password in secret; anyone who obtains both your storage file and storage password will be able to decipher it and access secret keys.
 
 ## Extracting Data From Storage
 
-Secret storage contains a master secret key and can be used to compute both the
-public key and the pay-to-public-key address that correspond to that secret key. The
-`extractStorage` command is doing just that.
+Secret storage contains a master secret key and can be used to compute both the public key and the pay-to-public-key address corresponding to that secret key. The `extractStorage` command is doing just that.
 
 ```bash
 $ ./ergo-tool.sh help extractStorage
@@ -116,7 +84,7 @@ Storage password>
 9iHiSAg3ko2ZGxR2vhc1Aem3tShqfzEPDAF7XK5cdtbZ3Ut2CCf
 ```
 
-Here the command transforms the secret key to the corresponding public key and then creates  the pay-to-public-key address on the mainnet.
+Here the command transforms the secret key to the corresponding public key and then creates the pay-to-public-key address on the mainnet.
 
 In the same way, we can obtain the public key, private key and other data from the storage.
 
@@ -162,11 +130,7 @@ Description:  send the given <amountToSend> to the given <recipientAddr> using
  the given <storageFile> to sign transaction (requests storage password)
 Doc page: https://aslesarenko.github.io/ergo-tool/api/org/ergoplatform/appkit/ergotool/SendCmd.html
 ```
-The storage file is necessary to access the secret key and generate a signature. The
-ErgoTool will request a storage password to unlock and decipher the file content.
-The command `send` supports the `--dry-run` option, which forces ErgoTool to create the
-the signed transaction, but instead of sending it to the blockchain, ErgoTool prints the
-transaction on the console.
+The storage file is necessary to access the secret key and generate a signature. The ErgoTool will request a storage password to unlock and decipher the file content. The command `send` supports the `--dry-run` option, which forces ErgoTool to create the the signed transaction, but instead of sending it to the blockchain, ErgoTool prints the transaction on the console.
 
 ```bash
 $ ./ergo-tool.sh send --dry-run storage/E1.json 9hHDQb26AjnJUXxcqriqY1mnhpLuUeC81C4pggtK7tupr92Ea1K 5000000
@@ -221,12 +185,9 @@ Tx: {
 }
 ```
 
-Note the "ergoTree" scripts are deserialized and printed as abstract syntax trees. This
-printing format can be regulated by additional options so that the scripts can be printed as
-human-readable ErgoScript. (Not yet implemented, but somewhere on the roadmap.)
+Note the "ergoTree" scripts are deserialized and printed as abstract syntax trees. This printing format can be regulated by additional options so that the scripts can be printed as human-readable ErgoScript. (Not yet implemented, but somewhere on the roadmap.)
 
-If we exclude the `--dry-run` option, the transaction will be sent and included in the
-blockchain.
+If we exclude the `--dry-run` option, the transaction will be sent and included in the blockchain.
 
 ```bash
 $ ./ergo-tool.sh send storage/E1.json 9hHDQb26AjnJUXxcqriqY1mnhpLuUeC81C4pggtK7tupr92Ea1K 5000000          
@@ -241,7 +202,7 @@ The newly created transaction will be broadcast all over the blockchain, and min
 to include it in a new block. Once the new block with our transaction is mined and
 accepted by the network, our transfer is confirmed, and we can [see it in Explorer](https://explorer.ergoplatform.com/en/transactions/c5710af17f5124a232a5ef731fdf94a493025334c2a7d5a79e9923210972b962).
 
-We can also list boxes of the recipient address and see the coin we created, among others
+We can also list boxes of the recipient address and see the coin we created, among others.
 (until it is spent by the recipient)
 
 ```bash
@@ -273,7 +234,7 @@ ErgoTool is designed to look and feel like a typical CLI utility:
 At the same time, ErgoTool is designed to be easily extensible:
 
 - implemented in high-level language Scala
-- reuses the core libraries which are used in Ergo network client
+- reuses the core libraries which are used in the Ergo network client
 - open-sourced and fully documented
 
 This last point is especially important as many new commands can be easily added to ErgoTool, thanks to its architecture. If you need a specific feature or a command,  please file an issue or maybe even a PR.
