@@ -304,10 +304,10 @@ regarding assets offered on the Ergo blockchain.
 - [Final Presentation](https://drive.google.com/drive/folders/1wJrQGh0PaPgXZCX-QnITEVZPa3WPkGZX)
 
 
-### ErgoSock/ErgoNodes
+### ErgoSock/Ergonodes
 
 - [ErgoSock](pdf/ergosock.pdf)
-- [ErgoNodes](pdf/ergonodes.pdf)
+- [Ergonodes](pdf/ergonodes.pdf)
 
 
 ### Withdrew
@@ -318,7 +318,6 @@ regarding assets offered on the Ergo blockchain.
 Rental Protocol For Cryptocurrency Payments
 
 **Metadex**
-
 
 
 **ergo-family-banners**

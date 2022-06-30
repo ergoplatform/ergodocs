@@ -4,20 +4,6 @@ This page should provides an entry-point to Ergo development. For a high-level i
 
 ## Getting Started
 
-Apps in the Ergo ecosystem looks a bit like this. 
-
-```mermaid
-graph LR;
-    A[Your APP & SDK] -->|HTTPS| B(Ergo Node)
-    B -->|:9053| C[Ergo MainNet]
-    B -->|:9052| D[Ergo TestNET]
-    style C fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
-    style D fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
-    linkStyle 0 stroke-width:2px,fill:none,stroke:grey;
-    linkStyle 1 stroke-width:2px,fill:none,stroke:grey;
-    linkStyle 2 stroke-width:2px,fill:none,stroke:grey;
-
-```
 
 Your application will communicate with the blockchain via a locally run instance of the Ergo Node. The Node provides an API that is used by your SDK logic to carry out operations on the blockchain. The on-chain code is ErgoScript, the off-chain code can be done in a programming langage of your choice. 
 

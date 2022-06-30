@@ -72,7 +72,6 @@ nav:
       - Events: events/index.md
       - ERGOHACK: events/ergohack.md
       - ErgoSummit: events/ergosummit.md
-    - Documents: documents.md
     - Social Contract: social_contract.md
   - 🔬 ┃ Learn: 
     - Protocol: dev/protocol/index.md
@@ -80,13 +79,15 @@ nav:
     - NIPoPoWS: dev/protocol/nipopow.md
     - Scaling: dev/protocol/scaling.md
     - EIPs: dev/protocol/eip.md
+    - Documents: documents.md
   - 🛠 ┃ Build:
     - Developers: dev/index.md
     - Data Model:
       - Transactions: dev/protocol/transaction.md
-      - Box: dev/data-model/box.md
+      - Box:
+        - Box: dev/data-model/box/index.md
+        - Registers: dev/data-model/box/registers.md
       - Block: dev/data-model/block.md
-      - Registers: dev/data-model/registers.md
       #- UTXO-State: 
     - Wallets:
       - Wallets: dev/wallet/index.md
@@ -117,7 +118,9 @@ nav:
      # - BlockP2P: dev/p2p/BlockP2P.md
     - Resources: 
       - Libraries:
-        - AppKit: dev/stack/appkit.md
+        - AppKit:
+          - AppKit: dev/stack/appkit/index.md
+          - Tutorial: dev/stack/appkit/tutorial.md
         - ErgoTool: dev/stack/ergotool.md
         - Kiosk: dev/stack/kiosk.md
         - JDE: dev/stack/jde.md
@@ -161,22 +164,21 @@ nav:
       - Troubleshooting: node/install/troubleshooting.md
       - Docker: node/install/docker.md
       - Pi: node/install/pi.md
-      
-      #- Tutorial: node/install/tutorial.md
     - Overview:
       - Wallet: node/wallet.md
       - Swagger API: node/swagger.md
       - FAQ: node/install/faq.md
       #- Architecture: node/architecture.md
       - Distributed Signatures: node/sigs.md
-      - Test-net: dev/start/testnet.md
       - Modes of Operation: node/modes.md
       - Explorer: node/explorer.md
+    - Test-net: dev/start/testnet.md
     #- Light Modes: 
     #  - Digest State: node/digest-state.md
     #  - History Pruning: node/history-pruning.md
     #  - Snapshots: node/snapshots.md
    #   - NiPoPoWS: dev/protocol/nipopow.md
+
   - 💡 ┃  Applications:
     - Applications: uses/index.md
     - Live dApps:

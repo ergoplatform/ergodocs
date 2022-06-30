@@ -2,7 +2,7 @@
 
 Ergo Platform allows sophisticated dApps via smart contracts written in ErgoScript. Some notable examples are the SigmaUSD stable coin bank and ErgoMixer. 
 
-Interacting with such smart contracts requires a developer to write code in a language such as Scala (using the [AppKit](appkit.md) framework) or Rust (using [HDF](headless.md) / sigma-rust)
+Interacting with such smart contracts requires a developer to write code in a language such as Scala (using the [AppKit](/docs/dev/stack/appkit) framework) or Rust (using [HDF](headless.md) / sigma-rust)
 
 [JSON dApp Environment (JDE)](https://github.com/ergoplatform/ergo-jde) is another programming tool that you can use to interact with Ergo dApps. The differentiating feature of JDE is that its programming language is JSON.
 

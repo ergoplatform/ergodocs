@@ -6,17 +6,17 @@ Ergo has a *Bitcoin-like* **UTXO** transactional model: transactions spend and c
 ## Overview 
 
 - A box is an **immutable object** which can be only created or removed. 
-- A box is not simply a coin; it contains data (and code) registers. Even more, there's nothing inbox but registers. 
-- There are four predefined registers, with monetary value, protecting script, and identifier of a transaction which created the box and output index (and creation height).
-- Because data of transaction which created the box is included in it, the box has unique contents and, therefore, a unique id. 
-- A box is a **first-class citizen** in the Ergo protocol. 
-- Active boxes set is authenticated via a hash-based data structure, which allows building lightweight full-nodes (as described in [this paper](https://eprint.iacr.org/2016/994)). 
+- A box is not simply a coin; it contains data, code and registers. Even more, there's nothing in a box but registers. 
+- There are four predefined registers, with monetary value, protecting script, and an identifier of a transaction which created the box.
+- Because the data of the transaction that created the box is included, the box has unique contents and, therefore, a unique id. 
+- Boxes are **first-class citizens** in the Ergo protocol. 
+- The active boxes set is authenticated via a hash-based data structure, which allows building lightweight full-nodes (as described in [this paper](https://eprint.iacr.org/2016/994)). 
 - A box may have up to six additional registers with typed data. A script may access its registers (as well as registers of input and output boxes of the spending transaction).
+- Transactions contain both *input* and *output* boxes. 
 
+## Example 
 
-
-As an example of a *box*. We take the *proof-of-no-premine* from Ergo genesis state, which contains last block ids from Bitcoin and Ethereum at the moment of launch, and also latest news headlines:
-
+As an example of a *box*. We take the *proof-of-no-premine* from Ergo genesis state, which contains the last block ids from Bitcoin and Ethereum at the moment of launch, and also the latest news headlines:
 
 
 ```
@@ -37,27 +37,34 @@ As an example of a *box*. We take the *proof-of-no-premine* from Ergo genesis st
 ```
 
 
-## Registers 
+## [Registers](registers.md)
 
 A box, at the minimum, has four pieces of information.
 
-1. The value in NanoErgs (`1 Erg = 1000000000 NanoErgs`).
-2. The guard script (like `scriptPubKey` of Bitcoin). (aka the "smart contract.")
+1. The value in NanoErgs (1 Erg = 1000000000 NanoErgs).
+2. The guard script (like `scriptPubKey` of Bitcoin). (aka the "smart contract.") which protects the spending of the box.
 3. Additional assets (tokens) are stored in this box.
 4. Creation info of the box (`txId`, the transaction identifier that created the box along with an output index). It also contains a `maxCreation` height parameter defined by the box creator (this is not the creation height; its use is to create "payment channels easily").
 
-**These are stored in the first four registers of the box.**
-
-
-- `R0` = monetary value
-- `R1` = protecting script
-- `R2` = tokens
-- `R3` = identifier of a transaction which created the box and output index in the transaction (and also creation height).
-
+**These are stored in the first four registers of the box, leaving (R4-R9) to store custom data for use in smart contracts.**
 
 ### Optional Registers 
 
-In addition, a box can have six optional registers (R4-R9) to store custom data for use in smart contracts. Registers must be densely packed; we cannot sandwich empty registers between non-empty ones. The optional registers can contain data of any of the following types:
+| Register | Value |
+|---|---|
+| R0 | Value (in nanoErgs as Base58) |
+| R1 | Guard script (Smart Contract) |
+| R2 | Assets (tokens) |
+| R3 | Creation info |
+| R4 | Available for use |
+| R5 | Available for use |
+| R6 | Available for use |
+| R7 | Available for use |
+| R8 | Available for use |
+| R9 | Available for use |
+
+
+Registers must be densely packed; we cannot sandwich empty registers between non-empty ones. The optional registers can contain data of any of the following types:
 
 - `Int`, `Long` with the usual semantics of Scala.
 `BigInt` is a 256-bit integer (i.e., all computation is done modulo 2^256).

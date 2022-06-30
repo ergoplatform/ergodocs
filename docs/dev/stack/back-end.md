@@ -4,7 +4,7 @@ This page provides an overview of the tools used to interact with the Ergo block
 
 Users of AppKit will usually write Scala code (although AppKit supports many other languages). HDF users will need to write Rust code, allowing it to be used across platforms. (The HDF also provides some additional abstractions on top of the original ergo API). JDE users will have to write JSON.
 
-- [Appkit](appkit.md)
+- [Appkit](/docs/dev/stack/appkit)
 - [Headless dApp Framework](headless.md)
 - [JDE](jde.md)
 
