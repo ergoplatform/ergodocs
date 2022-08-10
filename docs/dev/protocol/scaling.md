@@ -51,21 +51,25 @@ Ergo supports multiple on-chain scalability solutions such as Sharding.
 
 **Sub-block confirmation protocols:** such as ([Bitcoin-NG](https://www.usenix.org/system/files/conference/nsdi16/nsdi16-paper-eyal.pdf) or [Flux](https://www.usenix.org/system/files/atc20-li-chenxing.pdf) are an active topic for research in 2022. Ergo blocks have *extension sections* with **mandatory and arbitrary key-value data**; by putting certain anchors there, it is possible to do BitcoinNG-style micro blocks, Aspen-like service-chains or generic sidechains with just velvet or soft forks. Also see *[Flux: Revisiting Near Blocks for Proof-of-Work Blockchains](https://eprint.iacr.org/2018/415.pdf)*
 
-**Sharding:** as per [On the Security and Performance of Blockchain Sharding](https://eprint.iacr.org/2021/1276)
+**Sharding** as per [*'On the Security and Performance of Blockchain Sharding'*](https://eprint.iacr.org/2021/1276)
 
 ## Layer 2 (Off-Chain)
 
-Ergo can utilize multiple off-chain solutions, such as [Hydra](https://iohk.io/en/research/library/papers/hydrafast-isomorphic-state-channels/) and sidechains to compress blockchain bloat and provide similar benefits as zk-rollups. Ergo can also be compatible with other UTXO Layer 2 solutions, such as Bitcoin's Lightning Network. The implementation here will depend on the applications being built on Ergo.
+Ergo can utilize multiple off-chain solutions, such as [Hydra](https://iohk.io/en/research/library/papers/hydrafast-isomorphic-state-channels/) and sidechains to compress blockchain bloat and provide similar benefits as zk-rollups. Ergo can also be compatible with other UTXO Layer 2 solutions, such as Bitcoin's Lightning Network. The implementation here will depend on the applications being built on Ergo. 
 
-### Research & Development
+### Plasma
 
-**Plasma Chains:** This is a hybrid approach (applied by Polygon) that uses a proof-of-stake (PoS) consensus layer on top of Ethereum. This parallel sidechain, which is based on the [plasma chains](https://ethereum.org/en/developers/docs/scaling/plasma/) design, is a lower-cost chain that relies on stakeholders to secure the network. As the staking tokens interact with the main chain, the model uses some part of Ethereum's security and its own inside PoS consensus. When users stake their tokens, they delegate the consensus to a validating operator, known as trusted and secure server providers. An Ergo implementation is currently being researched.
+**Plasma** The ledger is stored as an AVL tree, which is a balanced and sorted binary tree. Users perform offchain transactions with the bank and the ledger keeps changing. Occasionally, the bank publishes a compact snapshot of the ledger on the blockchain
+
 
 > Plasma tutorials for Ergo have now been released. Please see [Bank](https://github.com/ergoplatform/ergo-jde/blob/main/kiosk/src/test/scala/kiosk/avltree/bank/Bank.md) & [AVLTrees](https://github.com/ergoplatform/ergo-jde/blob/main/kiosk/src/test/scala/kiosk/avltree/AvlTrees.md)
 
-- [Offchain Bank operating at Layer 2](https://www.ergoforum.org/t/offchain-bank-operating-at-layer-2/3367)
+- [Plasma Example: Offchain Bank operating at Layer 2](https://www.ergoforum.org/t/offchain-bank-operating-at-layer-2/3367)
 - [GetBlok Plasma](https://github.com/GetBlok-io/GetBlok-Plasma)
+- [GetBlok: SmartPool Plasma](https://github.com/GetBlok-io/GetBlok-Plasma/blob/master/documents/SmartPool_Plasma.MD)
+- [Paideia - Plasma Staking](https://github.com/ergo-pad/paideia-contracts/blob/main/paideia_contracts/contracts/plasma_staking/ergoscript/latest/plasmaStaking.es)
 
+### NIPoPoWs
 **NIPoPoWs:** [Non-interactive proofs of proof of work](http://docs.ergoplatform.org/dev/protocol/nipopow/) are essential for two reasons: Light Clients and Side Chains. Light clients, which consist of light nodes and light wallets, are efficient clients that do not need to hold the whole blockchain to verify transactions and enable efficient mobile wallets and faster miner bootstrapping. Clients can interact using only the block headers, thus reducing computational resources. Ergo has enabled NIPoPoW support since the genesis block. They can be applied to Ergo's blockchain with an easy to implement [velvet fork](https://www.coindesk.com/markets/2018/03/15/velvet-forks-crypto-updates-without-the-controversy/). NIPoPoWs can also be deployed to support PoW and PoS cross-chain communication. NIPoPoW implementations via *Velvet soft forks* enable **infinite scalability** via sidechains on top of Ergo. 
 
 **State Channels (Hydra):** is a *peer-to-peer signing model*, and the design can work well for payment channels for simple purposes. The problem, however, is the state channels are pre-set contracts for which the participants are defined at the launch. Each time a new participant wants to use the channel, a new contract creation is needed. In return, there is higher privacy and security but little to no flexibility for an open system. IOHK has published a new model called [Hydra: Isomorphic State Channels](https://iohk.io/en/research/library/papers/hydrafast-isomorphic-state-channels/) that introduces multi-party state channels by utilizing both on-chain and off-chain computations powered by the eUTXO design. Other novel state channel constructions should be possible as well. It would be good to apply off-chain techniques to applications like ErgoMixer. Ergo is mentioned in the [Hydra whitepaper](https://eprint.iacr.org/2020/299.pdf). Research and discussions are underway. 
@@ -77,9 +81,18 @@ Ergo can utilize multiple off-chain solutions, such as [Hydra](https://iohk.io/e
 
 **Rainbow Network:** as described in [this paper](http://research.paradigm.xyz/RainbowNetwork.pdf)
 
-**ZK-Rollups:** utilize [zkSNARKs](https://blog.ethereum.org/2016/12/05/zksnarks-in-a-nutshell/) (zero-knowledge succinct non-interactive arguments of knowledge), they can decrease network load by taking hundreds of transfers off-chain and combining or "rolling" them up into a single transaction. The security of the transactions relies directly on the main chain secured by adding mathematical proofs to validate transactions. However, it is relatively harder than hybrid approaches to implement all the functionalities of the mainnet with full security. Various projects are attempting to implement zkSNARKs.
 
-**Optimistic Rollups:** compute the transactions on a parallel EVM compatible chain called Optimistic Virtual Machine (OVM) that communicates with the main chain. The model is optimistic because it relies on the *Fraud-Proof principle*, where the aggregators are not actively verifying layer two. Still, they interfere in the event of a fraud dispute.
+
+**Rollups**: They involve rolling up collections of transactions. Only concerns posting the data on-chain, not verification. 
+
+Then there are two options. 
+
+- **Optimistic Rollups:** compute the transactions on a parallel compatible chain that communicates with the main chain. The model is optimistic because it relies on the *Fraud-Proof principle*, where the aggregators are not actively verifying layer two. Still, they interfere in the event of a fraud dispute. Disputes in optimistic rollups when computations are done only on data which validity is disputed
+- ZK-Rollups utilize [zkSNARKs](https://blog.ethereum.org/2016/12/05/zksnarks-in-a-nutshell/) (zero-knowledge succinct non-interactive arguments of knowledge), they can decrease network load by taking hundreds of transfers off-chain and combining or "rolling" them up into a single transaction. The security of the transactions relies directly on the main chain secured by adding mathematical proofs to validate transactions. However, it is relatively harder than hybrid approaches to implement all the functionalities of the mainnet with full security. Various projects are attempting to implement zkSNARKs.
+
+
+The way optimistic rollups and ZK Rollups interact with smart contracts is another distinction. Optimistic rollups can run smart contracts on the main blockchain directly. On the other side, ZK Rollups are unable to execute smart contracts on the main chain. Zk rollups have a lot of issues in practice, and likely pairing friendly curves support in the core protocol would be required
+
 
 **Zero-Knowledge Contingent Payments:** It's possible to make payments that are released if and only if the payee discloses some knowledge (in a trustless manner where neither the payer nor payee can cheat). This is achieved using the combination of a `hash-locked transaction` and an external protocol to ensure the correct data is revealed in the hash lock release.
 
