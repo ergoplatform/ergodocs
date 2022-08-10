@@ -190,7 +190,7 @@ Implemented Ledger support and the beginnings of ErgoMixer support.
 
 ERGOHACKFEST (or ERGOHACK IV) was a three-week long event.
 
-To see all the final submissions, head over to the [Presentations drive](https://drive.google.com/drive/folders/12yBnyMjq0hdVhXGOlpp8X0bwcj_Wvbgh).
+To see all the final submissions, head over to the [presentations drive](https://drive.google.com/drive/folders/12yBnyMjq0hdVhXGOlpp8X0bwcj_Wvbgh).
 
 Below you'll find some additional links and more information for each project. 
 
@@ -261,6 +261,9 @@ A fun project involving ergo and a love for gardening.
 
 ### Oracle-Pools2
 
+This single-member team sought to build a minimum viable product (MVP) of version 2 of the oracle pools as described in EIP-23 and were able to implement 3 core operations for the pools. They will be continuing to implement more operations for the pool as well as getting a working pool on testnet.
+
+
 - [Final Report](https://docs.google.com/document/d/1YxSc0tKi86tDRU-2RRemwefZTRYBTFBwxnYuYbaOgBk/edit)
 
 ### SwampAudio
@@ -289,6 +292,11 @@ regarding assets offered on the Ergo blockchain.
 - [Github](https://github.com/SpaceSwapio)
 
 
+### MultiSig
+
+The team behind Multisig submitted a proposal to develop a new multi-signature wallet. During ErgoHack Fest they worked on designing the wallet and successfully completed the ability to sign a multi-sig transaction using a QR code. They then developed a server for communicating data between wallets. Once completed, the team was able to successfully generate a multi-sig transaction. 
+
+
 ### InERGitance
 
 > a decentralized inheritance solution for the Ergo blockchain
@@ -306,8 +314,12 @@ regarding assets offered on the Ergo blockchain.
 
 ### ErgoSock/Ergonodes
 
+Ergonodes uses ErgoSock to crawl the entire Ergo network and map out all the important details about its current state. With the help of Ergonodes, it is easy to find information about the state over time, the state and information of specific nodes and the growth rate. It is an important metric to measure the robustness of the network.
+
+
 - [ErgoSock](pdf/ergosock.pdf)
 - [Ergonodes](pdf/ergonodes.pdf)
+- [Ergoconnection GitHub](https://github.com/Satergo/Ergonnection)
 
 
 ### Withdrew
