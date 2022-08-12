@@ -20,6 +20,16 @@ You may or may not need to use Stratum Server and Stratum Proxy to operate them.
 - [ErgoStratumServer](https://github.com/mhssamadani/ErgoStratumServer)
 - [ErgoStratumProxy](https://github.com/mhssamadani/ErgoStratumProxy)
 
+To be able to spend any ERG mined this way, you will need to add this to your `.config`
+
+```
+ergo {
+  wallet {
+    checkEIP27 = true
+  }
+}
+```
+
 ## Resources
 
 - [Ergo Node + Stratum Server mining tutorial](https://www.youtube.com/watch?v=_1M8dGpfKjU)
