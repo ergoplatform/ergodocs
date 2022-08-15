@@ -159,16 +159,6 @@ nav:
         - Multi-Stage Contracts: dev/scs/multi.md 
       - FlowCards: dev/scs/flowcards.md
       - ErgoTree: dev/scs/ergotree.md
-    - Libraries:
-      - AppKit:
-        - AppKit: dev/stack/appkit/appkit.md
-        - Tutorial: dev/stack/appkit/tutorial.md
-        - Gradle: dev/stack/appkit/gradle.md
-      - ErgoTool: dev/stack/ergotool.md
-      - Kiosk: dev/stack/kiosk.md
-      - JDE: dev/stack/jde.md
-      - Assembler: dev/stack/assembler.md
-      - HDF: dev/stack/headless.md
     - Languages:
       - Scala: dev/Languages/scala.md
       - Java: dev/Languages/java.md
@@ -176,6 +166,17 @@ nav:
       - Python: dev/Languages/python.md
       - C#: dev/Languages/csharp.md
       - JS: dev/Languages/js.md
+    - Libraries:
+      - AppKit:
+        - AppKit: dev/stack/appkit/appkit.md
+        - Tutorial: dev/stack/appkit/tutorial.md
+        - Gradle: dev/stack/appkit/gradle.md
+      - Mosaik: dev/stack/mosaik/intro.md
+      - Kiosk: dev/stack/kiosk.md
+      - JDE: dev/stack/jde.md
+      - Assembler: dev/stack/assembler.md
+      - HDF: dev/stack/headless.md
+      - ErgoTool: dev/stack/ergotool.md
     - Tooling:
       - Mosaik: 
         - Introduction: dev/stack/mosaik/intro.md
@@ -200,49 +201,47 @@ nav:
 
 
   - 💡 ┃  Applications:
-    - Applications: uses/index.md
-    - Live dApps:
-      - DEXs: uses/dex.md
-      - Stablecoins: uses/stablecoins.md
-      - Oracles: uses/oracles.md
-      - NFTs: uses/nft.md
-      - Mixing: uses/mixer.md
-      - CrowdFunding: uses/crowdfunding.md
-     #- ErgoRaffle: uses/raffle.md
-    - In Development:
-      - ProfitSharing: uses/profit.md
-      - ICOs: uses/ico.md
-      - Index Coins: uses/index_coins.md
-      - Lending: uses/lending.md
-      - Zero-Knowledge: uses/zk.md      
-    - Planned:
-      - Asset Tokenisation: uses/tokenisation.md
-      - DAO: uses/dao.md
-      - Buy Back Guarantees: uses/dex-buyback.md
-      - LETS: uses/lets.md
-      - Trustlss LETS: uses/trustless-lets.md
-      - Email Client for Blocked Internet: uses/blocked_web.md
-      - Atomic Swaps: dev/protocol/atomic.md
-      - ErgoData: uses/ErgoData.md
-    - Further Ideas:
-      - CDBC: uses/cbdc.md
-      - Lotteries: uses/lottery.md
-      - Insurance: uses/insurance.md
-      - Derivatives: uses/deriv.md
-      - Yield Aggregation: uses/yield.md
-      - Micro Credit: dev/scs/microcredit.md
-      - Math Fun: uses/math_fun.md
-      - PoW Tokens: uses/PoW_tokens.md
-      - Collateral Mining: uses/collateral-mining.md
-      - Mutual Credit: uses/mutual_credit.md
-      - Prediction Markets: uses/prediction_markets.md
-      - Privacy: uses/privacy.md
-      - Perpetual Tokens: uses/perpetual.md
-      - Bonding Curve: uses/bonding.md
-      - Context Claims: uses/context-claims.md
-
-
-      
+    - Explore: 
+      - Applications: uses/index.md
+      - Live dApps:
+        - DEXs: uses/dex.md
+        - Stablecoins: uses/stablecoins.md
+        - Oracles: uses/oracles.md
+        - NFTs: uses/nft.md
+        - Mixing: uses/mixer.md
+        - CrowdFunding: uses/crowdfunding.md
+      #- ErgoRaffle: uses/raffle.md
+      - In Development:
+        - ProfitSharing: uses/profit.md
+        - ICOs: uses/ico.md
+        - Index Coins: uses/index_coins.md
+        - Lending: uses/lending.md
+        - Zero-Knowledge: uses/zk.md      
+      - Planned:
+        - Asset Tokenisation: uses/tokenisation.md
+        - DAO: uses/dao.md
+        - Buy Back Guarantees: uses/dex-buyback.md
+        - LETS: uses/lets.md
+        - Trustlss LETS: uses/trustless-lets.md
+        - Email Client for Blocked Internet: uses/blocked_web.md
+        - Atomic Swaps: dev/protocol/atomic.md
+        - ErgoData: uses/ErgoData.md
+      - Further Ideas:
+        - CDBC: uses/cbdc.md
+        - Lotteries: uses/lottery.md
+        - Insurance: uses/insurance.md
+        - Derivatives: uses/deriv.md
+        - Yield Aggregation: uses/yield.md
+        - Micro Credit: dev/scs/microcredit.md
+        - Math Fun: uses/math_fun.md
+        - PoW Tokens: uses/PoW_tokens.md
+        - Collateral Mining: uses/collateral-mining.md
+        - Mutual Credit: uses/mutual_credit.md
+        - Prediction Markets: uses/prediction_markets.md
+        - Privacy: uses/privacy.md
+        - Perpetual Tokens: uses/perpetual.md
+        - Bonding Curve: uses/bonding.md
+        - Context Claims: uses/context-claims.md  
 
 
 
