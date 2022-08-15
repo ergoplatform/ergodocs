@@ -149,6 +149,8 @@ nav:
         - dApp Connector: dev/wallet/payments/dApp.md
         - Proxy Contracts: dev/wallet/payments/proxy.md
         - Ledger: dev/wallet/payments/ledger.md
+    - Mosaik: 
+      - Introduction: dev/stack/mosaik/intro.md
     - Smart Contracts:
       - Smart Contracts: dev/scs/index.md
       - ErgoScript: 

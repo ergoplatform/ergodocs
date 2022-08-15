@@ -1,8 +1,4 @@
-# Ergo Mosaik: A UI system for Ergo dApps
-
-
-## Part 1: An introduction to the concept and what it aims for
-
+# *Ergo Mosaik*: A UI system for Ergo dApps
 
 ### On-chain and off-chain code
 
@@ -45,7 +41,7 @@ Let’s take a real look at Mosaik to get a feeling for the system. Clone the re
 
 `./gradlew desktop-demo:run` (or `gradlew desktop-demo:run` on Windows). Once downloading the necessary dependencies and compiling is done, you will be presented with the following window:
 
-![Mosaik 1](assets/img/mosaik/tutorial1-.png)
+![Mosaik 1](../../../assets/img/mosaik/tutorial1-1.png)
 
 The column on the right gives you info on the input values that the current view holds, as well as the JSON model that is currently shown. Most space is reserved for the actual Mosaik app that is running. The debugger shows a simple built-in app demonstrating a few view elements and actions. Let’s take a closer look at the JSON on the right-hand side. If you copy it in a better-suited editor, you’ll see that its outermost object contains two properties:
 
@@ -78,7 +74,7 @@ The Mosaik app consists of actions and view elements. Here, the root view elemen
 
 If you click this label in the desktop application, you will see that the view changes:
 
-![Mosaik 2](assets/img/mosaik/tutorial1-2.png)
+![Mosaik 2](../../../assets/img/mosaik/tutorial1-2.png)
 
 This was caused by the onClick attribute defined on the JSON above. It references “replaceLabel”. When you look at the list of defined actions, you’ll find this action declared as follows:
 
@@ -135,16 +131,16 @@ Tomcat started on port(s): 8080 (http) with context path ''
 
 Navigate to localhost:8080 by entering this into the navigation bar and hit enter:
 
-![Mosaik 3](assets/img/mosaik/tutorial1-3.png)
+![Mosaik 3](../../../assets/img/mosaik/tutorial1-3.png)
 
 
 Mosaik automatically determines that the actual Mosaik app is served from the path /appselect/ and presents a chooser. Let’s ignore the “typical errors” demo for now (it is meant to be checked by Mosaik executor developers) and make your choice!
 
 As this demo is not a built-in into the desktop debugger, it can be launched from an other existing Mosaik executor, the Ergo Wallet App for Android, as well:
 
-![Mosaik 4](assets/img/mosaik/tutorial1-4.png)
+![Mosaik 4](../../../assets/img/mosaik/tutorial1-4.png)
 
-![Mosaik 5](assets/img/mosaik/tutorial1-5.png)
+![Mosaik 5](../../../assets/img/mosaik/tutorial1-5.png)
 
 
 Other existing Mosaik executors are Ergo Wallet App for Desktop and the MosaikJS executor to run Mosaik apps in browser.
