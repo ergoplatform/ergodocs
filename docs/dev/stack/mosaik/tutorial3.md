@@ -142,19 +142,15 @@ We have now seen how to send data to the backend and process it. However, reacti
 changeView() is an action that contains a new mosaikView view content to attach it to the current screen. A view content is what you already delivered with your first main screen: it is an object holding a list of actions, and a root view element.
 
 
-    **Excursus: View element, view group, view content**
-
-
-    We already know all of these objects, but to make sure no one gets confused, we list a clarification definition here.
-
-
-    A **view element** is a basic element in a Mosaik view, like a label or a button.
-
-
-    A **view group** is a special view element containing other view elements, like Box, Column, Row, Card.
-
-
-    A **view content** defines the state of what Mosaik shows for your app. It is made up of is a _root view element_ and a _list of actions_ (which can be empty). Usually, the root view element should be a view group - otherwise, the screen would look very boring.
+>    **Excursus: View element, view group, view content**
+>
+>    We already know all of these objects, but to make sure no one gets confused, we list a clarification definition here.
+>
+>    A **view element** is a basic element in a Mosaik view, like a label or a button.
+> 
+>    A **view group** is a special view element containing other view elements, like Box, Column, Row, Card.
+>
+>    A **view content** defines the state of what Mosaik shows for your app. It is made up of is a _root view element_ and a _list of actions_ (which can be empty). Usually, the root view element should be a view group - otherwise, the screen would look very boring.
 
 The behavior of changeView() action needs some more explanation regarding how it actually affects existing screen content:
 
