@@ -4,7 +4,7 @@
 ## Part 1: An introduction to the concept and what it aims for
 
 
-#### On-chain and off-chain code
+### On-chain and off-chain code
 
 Ergo is a smart contract platform for decentralized applications to build on, working with bitcoin’s UTXO model. Smart contracts are guard scripts that define when an unspent box can be spent. It is written in ErgoScript, a subset of Scala.
 
@@ -15,7 +15,7 @@ Typically, the off-chain code is run in a centralized manner for user convenienc
 While on the one hand, Ergo’s off-chain code is very flexible as we can use it with any programming language, with existing SDKs already covering at least four programming languages. On the other hand, this complicates things for aspiring dApp developers: Which programming language should they use?
 
 
-#### UI code
+### UI code
 
 Another big challenge awaits the developer when that decision is made: A user interface is needed. Many user interface frameworks long to be used, but how should the user interface interact with the off-chain code?
 
@@ -24,7 +24,7 @@ In many cases, the decision is made to write everything in JavaScript. Many capa
 It is favorable to separate the off-chain and user interface code but creates another problem for aspiring dApp developers as it introduces the need for an actual client/server architecture and perhaps even different programming languages to be used, not to mention the problem of getting transactions signed by the user, which needs some more knowledge by the dApp developers to interact with wallet applications.
 
 
-#### Ergo Mosaik UI system
+### Ergo Mosaik UI system
 
 Ergo Mosaik UI system is a concept to solve this problem. It is designed to not restrict dApp developers in how they want to implement their dApp. Instead, it enhances the possibilities for experienced dApp developers while taking aspiring dApp developers at hand and providing a solution for working with off-chain code and user interfaces, supporting all types of wallets and platforms in the future.
 
@@ -39,7 +39,7 @@ At the time of this writing, two Mosaik executors are available: A desktop appli
 While now it is still too early to build a dApp solely on Mosaik, we recommend taking a look at the system and using it as an extension for your existing dApp, as it will give you a lot of visibility once the feature is rolling out to wallet users.
 
 
-#### Mosaik first hands-on
+### Mosaik first hands-on
 
 Let’s take a real look at Mosaik to get a feeling for the system. Clone the repository from [https://github.com/MrStahlfelge/mosaik](https://github.com/MrStahlfelge/mosaik) to your local system. You’ll need Java 11 or newer installed for the next steps. Start the Mosaik Desktop Executor (which also serves as a debugging tool) by invoking the following command.
 
