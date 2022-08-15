@@ -1,3 +1,11 @@
+---
+tags:
+  - ErgoScript
+---
+
+# ErgoTree
+
+
 ## Constant Segregation
 
 We describe a typed abstract syntax of the language called [ErgoTree](https://ergoplatform.org/docs/ErgoTree.pdf) which is used to define logical propositions protecting boxes (generalization of coins) in Ergo. Serialized ErgoTree expressions are written into UTXO boxes and then evaluated by the transaction verifier. Most of Ergo users won't use ErgoTree directly since they are developing contracts in higher-level language, such as ErgoScript, which is then compiled to ErgoTree.

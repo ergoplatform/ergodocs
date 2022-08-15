@@ -1,3 +1,10 @@
+---
+tags:
+  - UTXO
+---
+
+# eUTXO 
+
 Ergo has a similar approach to Cardano’s eUTXO with its own Multi-Stage UTXO model that introduces the concept of *UTXO chains* and allows chaining together smart contracts of arbitrary complexity. 
 
 UTXO provides superior 

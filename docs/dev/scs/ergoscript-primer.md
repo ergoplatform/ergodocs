@@ -1,3 +1,8 @@
+---
+tags:
+  - ErgoScript
+---
+
 # A Quick Primer on ErgoScript
 
 Ergo platform is getting a lot of attention these days. Several queries relate to ErgoScript, the underlying smart contract language of Ergo.

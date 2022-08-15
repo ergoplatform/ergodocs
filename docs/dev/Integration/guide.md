@@ -1,3 +1,9 @@
+---
+tags:
+  - Tutorial
+---
+
+
 # Integration
 
 A guide for helping developers from exchanges/pools/etc integrate Ergo. 

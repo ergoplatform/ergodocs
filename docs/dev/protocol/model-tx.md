@@ -1,4 +1,7 @@
-
+---
+tags:
+  - Data Model
+---
 
 ## Model Transaction
 

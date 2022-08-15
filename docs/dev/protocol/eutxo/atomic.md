@@ -1,3 +1,9 @@
+---
+tags:
+  - UTXO
+---
+
+# Atomic Swaps
 
 __Because a blockchain is a siloed, self-contained system by design, it interacts with other blockchain protocols. Atomic Swaps enable the cross-chain exchange of digital assets, avoiding the need for centralised exchanges.__
 
@@ -15,7 +21,7 @@ When the pre-image is revealed, 50,000 locked ERG will be sent from Bob’s addr
 * Once Alice sees that Bob has created his transaction on the Ergo blockchain, she can publish the secret and execute his transaction. Because the pre-image is now public, Bob can also execute the script that will send him his BTC.
 * Neither party can delete their transactions and scripts once they have been posted to the blockchain. They may include a condition that the transaction will expire within a certain time to avoid their coins being locked indefinitely if Alice does not reveal the secret.
 
-* Ergo’s atomic swaps
+## Ergo’s atomic swaps
 
 They are called ‘atomic’ swaps because the orders are either executed in their entirety or not – a kind of fill-or-kill order. But while that’s useful up to a point, it doesn’t allow for active trading, like you would be able to do on an exchange.  
 

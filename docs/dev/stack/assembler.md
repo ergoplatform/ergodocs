@@ -3,7 +3,9 @@
 > More likely you'll want to use [dApp-dev.md]
 
 The transaction assembler service allows you to bypass the node requirements for dApps. 
+
 ### The Problem
+
 Currently, with libraries like ergo-appkit, ergo-lib (aka sigma-rust), and ergo-ts, development on Ergo has become a lot more convenient and is becoming easier with further developments of ergo-lib.
 However, there are some big barriers for dApps to be extensively used by ordinary users. One of the main ones is that users can't use their assets to participate in dApps because current wallets don't support some key features needed by dApps like:
 - specifying input boxes
@@ -19,6 +21,7 @@ Specifically, the problem that this topic is going to address is to bypass the n
 ### A Solution
 The off-chain service will allow dApps to register some requests by providing an address (which the user will deposit her assets) and some other specifications.
 This topic is just for getting feedback, and I still haven't designed the APIs to provide concrete examples, however:
+
 ```
 {
   "address":"address which user deposits to", // p2s address explained in Trusting Issues section
