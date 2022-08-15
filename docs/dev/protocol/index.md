@@ -22,15 +22,15 @@ Ergo had a fair launch with only a 4.37% of funds allocated to ecosystem develop
 
 ## Core Components
 
-### [Autolykos](/dev/protocol/autolykos)
+### [Autolykos](autolykos.md)
 
 *Autolykos* is the underlying Memory-hard ASIC-resistant **Proof of Work** (PoW) algorithm oriented towards GPUs. 
 
-### [NIPoPoWs](/dev/protocol/nipopow)
+### [NIPoPoWs](nipopow.md)
 
 Extended support of light nodes makes Ergo friendly for end-users, allowing them to run contracts on common devices such as mobile phones without centralised intermediaries. 
 
-### [Storage Rent](/dev/protocol/rent)
+### [Storage Rent](rent.md)
 Another unique feature of Ergo is the concept of storage-rent, which is the ability of miners to take out a small amount of Ergs from boxes that have remained unspent for four or more years (the box is spent, and a new box is created with the lower value). This feature also allows Ergo to avoid long-term bloat of the UTXO set. 
 
 ### [eUTXO](eutxo.md)
@@ -39,7 +39,7 @@ Ergo uses a so-called *extended-UTXO model*, which implies UTXOs with the abilit
 
 
 
-### [ErgoScript](/dev/scs/ergoscript)
+### [ErgoScript](ergoscript.md)
 
 
 > Ergo provides **superior support for real-world financial agreements**. It does this through:
@@ -56,10 +56,10 @@ Ergo uses a so-called *extended-UTXO model*, which implies UTXOs with the abilit
 **Creating financial contracts on the blockchain isn't just about the functionality; it's about making that functionality safe, accessible, and powerful.**
 
 
-## [Scaling](/dev/protocol/scaling)
+## [Scaling](scaling.md)
 
 Ergo Platform has a research-based approach for long-term success and has a lot in its toolbox to tackle scaling as we grow. Which options we implement will depend on the needs of applications building on top of Ergo, as well as the success of the solutions in other protocols. 
 
-## [Audit](../protocol/audit.md)
+## [Audit](audit.md)
 
 Ergo has successfully passed a security audit of certain (most critical) parts of the code. This time the audit was done by Jean-Philipee Aumasson (aka veorq, aumasson.jp/).

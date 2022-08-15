@@ -19,7 +19,7 @@ Unless you have 1TH/s+, you likely want to be mining from a pool. Available mine
 
 - The [Ergo Explorer](https://explorer.ergoplatform.com) can give you various information & stats on mining and the network. 
 - [Difficulty and epoch monitor.](http://cds.oette.info/ergo_diff.htm)
-- [Wallets](../dev/wallet/)
+- [Wallets](wallets.md)
 
 
 ## [Autolykos](autolykos)

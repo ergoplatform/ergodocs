@@ -10,8 +10,8 @@ This [Ergo Scala Skeleton App](https://github.com/dav009/ergo-scala-skeleton-app
 
 Tutorials, How to Guides and Explanations found in the relevent sections
 
-- See [ErgoScript](../lib/ergoscript.md/)
-- See [AppKit](../lib/back-end.md/#Appkit)
+- See [ErgoScript](ergoscript.md)
+- See [AppKit](appkit.md)
 - [zackbalbin/ErgoTutorials](https://github.com/zackbalbin/ErgoTutorials)
 - [Learning Ergo 101 : Development Workflow](https://blog.cryptostars.is/learning-ergo-101-development-workflow-aa17dd63ef6)
 

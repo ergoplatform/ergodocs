@@ -81,6 +81,7 @@ nav:
     - FAQ:
       - General: faq/general.md
       - Interview: faq/interview.md
+      - Scaling: dev/protocol/scaling.md
     - Events: 
       - Events: events/index.md
       - ERGOHACK: events/ergohack.md
@@ -90,22 +91,24 @@ nav:
     - eUTXO:
       - Overview: dev/protocol/eutxo/eutxo.md
       - ELI5: dev/protocol/eutxo/accountveutxo.md
-    - Features: 
-      - NIPoPoWS: dev/protocol/nipopow.md
-      - Sigma Protocols: dev/scs/sigma.md
-      - Data Inputs: dev/scs/data-inputs.md
-      - Multi-Stage Contracts: dev/scs/multi.md
-      - Storage Rent: mining/rent.md 
-    - Scaling: dev/protocol/scaling.md
-    - References: 
-      - Documents: documents.md
-      - EIPs: dev/protocol/eip.md
-      - Audit: dev/protocol/audit.md
-      - Social Contract: social_contract.md
+    - NIPoPoWS: dev/protocol/nipopow.md
+    - Sigma Protocols: dev/scs/sigma.md
+  - ⛏ ┃  Mine:
+    - Mining: mining/index.md
+    - Dig in: 
+      - Join a Pool: mining/setup/join.md
+      - Solo Mining: mining/setup/solo.md
+      - Host a Pool: mining/setup/pool.md
+      - Subpooling: mining/setup/subpool.md
+    - Autolykos: mining/autolykos.md
+    - Governance: mining/governance.md
+    - Storage Rent: mining/rent.md
+    - Log-Space Mining: mining/log_space.md
+  
   - 🛠 ┃ Build:
     - Developers: dev/index.md
     - Node:
-      - Overview: node/node.md
+
       - Install: 
         - Install: node/install/index.md
         #- Mac: node/install/mac.md
@@ -128,12 +131,12 @@ nav:
       #  - History Pruning: node/history-pruning.md
       #  - Snapshots: node/snapshots.md
     #   - NiPoPoWS: dev/protocol/nipopow.md
-    - P2P:
-      - P2P: dev/p2p/index.md
-      - Handshaking: dev/p2p/p2p-handshake.md
-      - Network Messages: dev/p2p/network.md
-     # - Modifiers Exchange: dev/p2p/modifiers.md
-     # - BlockP2P: dev/p2p/BlockP2P.md
+      - P2P:
+        - P2P: dev/p2p/index.md
+        - Handshaking: dev/p2p/p2p-handshake.md
+        - Network Messages: dev/p2p/network.md
+        # - Modifiers Exchange: dev/p2p/modifiers.md
+        # - BlockP2P: dev/p2p/BlockP2P.md
     
     - Data Model:
       - Transactions: dev/protocol/transaction.md
@@ -167,7 +170,7 @@ nav:
     - Resources: 
       - Libraries:
         - AppKit:
-          - AppKit: dev/stack/appkit/index.md
+          - AppKit: dev/stack/appkit/appkit.md
           - Tutorial: dev/stack/appkit/tutorial.md
           - Gradle: dev/stack/appkit/gradle.md
         - ErgoTool: dev/stack/ergotool.md
@@ -182,28 +185,17 @@ nav:
         - Python: dev/Languages/python.md
         - C#: dev/Languages/csharp.md
         - JS: dev/Languages/js.md
-      - Stack: 
-        - Front-End: dev/stack/front-end.md
-        - Back-End: dev/stack/back-end.md
-      - Tutorials:
-        - Pi Blockchain Explorer: dev/stack/rpi-blockchain-explorer.md
-        - Integration: dev/Integration/guide.md
       - Misc: 
         - Bookmarks: dev/start/resources.md
+        - Pi Blockchain Explorer: dev/stack/rpi-blockchain-explorer.md
+        - Integration: dev/Integration/guide.md
+        - Documents: documents.md
+        - EIPs: dev/protocol/eip.md
+        - Audit: dev/protocol/audit.md
+        - Social Contract: social_contract.md
     
 
-  - ⛏ ┃  Mine:
-    - Mining: mining/index.md
-    - Dig in: 
-      - Join a Pool: mining/setup/join.md
-      - Solo Mining: mining/setup/solo.md
-      - Host a Pool: mining/setup/pool.md
-      - Subpooling: mining/setup/subpool.md
-    - Autolykos: mining/autolykos.md
-    - Governance: mining/governance.md
-    - Storage Rent: mining/rent.md
-    - Log-Space Mining: mining/log_space.md
-  
+
   - 💡 ┃  Applications:
     - Applications: uses/index.md
     - Live dApps:
