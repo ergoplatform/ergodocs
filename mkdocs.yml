@@ -87,13 +87,17 @@ nav:
       - ERGOHACK: events/ergohack.md
       - ErgoSummit: events/ergosummit.md
   - 🔬 ┃ Learn: 
-    - Protocol: dev/protocol/index.md
-    - eUTXO:
-      - Overview: dev/protocol/eutxo/eutxo.md
-      - ELI5: dev/protocol/eutxo/accountveutxo.md
-      - Atomic Swaps: dev/protocol/eutxo/atomic.md
-    - NIPoPoWS: dev/protocol/nipopow.md
-    - Sigma Protocols: dev/scs/sigma.md
+    - Key Features: 
+      - Protocol: dev/protocol/index.md
+      - eUTXO:
+        - Overview: dev/protocol/eutxo/eutxo.md
+        - ELI5: dev/protocol/eutxo/accountveutxo.md
+        - Atomic Swaps: dev/protocol/eutxo/atomic.md
+      - NIPoPoWS: dev/protocol/nipopow.md
+      - Sigma Protocols: dev/scs/sigma.md
+      - Storage Rent: mining/rent.md
+      - Autolykos: mining/autolykos.md
+
   - ⛏ ┃  Mine:
     - Mining: mining/index.md
     - Dig in: 
@@ -175,7 +179,9 @@ nav:
     - Tooling:
       - Mosaik: 
         - Introduction: dev/stack/mosaik/intro.md
-      - ErgoPay: dev/wallet/payments/ergo-pay.md
+      - ErgoPay:
+        - ErgoPay: dev/wallet/payments/ergopay/ergo-pay.md
+        - Tutorial: dev/wallet/payments/ergopay/ep-tutorial.md
       - dApp Connector: dev/wallet/payments/dApp.md
       - Proxy Contracts: dev/wallet/payments/proxy.md
     - Resources: 
