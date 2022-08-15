@@ -56,10 +56,10 @@ The following examples can be seen on the [Ergo JS Template](https://github.com/
 
 - [ErgoScript.js](https://www.youtube.com/watch?v=_jwMI8M_vrs)
 
-## Ergo Raffle
+### Ergo Raffle
 
 The Ergo Raffle [documentation](https://github.com/ErgoRaffle/raffle-documentation) provides a detailed description of their implmenetion. 
 
-## Quid Games
+### Quid Games
 
 - [hypo10use/quid-games](https://github.com/hypo10use/quid-games) (Angular)

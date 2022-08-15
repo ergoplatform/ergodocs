@@ -1,3 +1,9 @@
+---
+tags:
+  - dApp Development
+  - EIPs
+---
+
 # Proxy Contracts
 
 
