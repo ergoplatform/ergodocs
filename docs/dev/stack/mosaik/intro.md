@@ -153,7 +153,7 @@ As this demo is not a built-in into the desktop debugger, it can be launched fro
 ![Mosaik 5](../../../assets/img/mosaik/tutorial1-5.png)
 
 
-Other existing Mosaik executors are Ergo Wallet App for Desktop and the MosaikJS executor to run Mosaik apps in browser.
+Other existing Mosaik executors are Ergo Wallet App for Desktop and the [Mosaik web executor](https://github.com/MrStahlfelge/mosaik-kt-js) to run Mosaik apps in browser.
 
 Check out the view elements and actions provided, and feel free to check out the JSON shown in the desktop debugger.
 

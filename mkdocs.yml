@@ -169,6 +169,10 @@ nav:
       - JDE: dev/stack/jde.md
       - Assembler: dev/stack/assembler.md
       - HDF: dev/stack/headless.md
+      - Mosaik:
+          - Introduction: dev/stack/mosaik/intro.md
+          - A simple UI: dev/stack/mosaik/tutorial2.md
+          - Processing data: dev/stack/mosaik/tutorial3.md
     - Languages:
       - Scala: dev/Languages/scala.md
       - Java: dev/Languages/java.md
@@ -180,6 +184,7 @@ nav:
       - Mosaik: 
         - Introduction: dev/stack/mosaik/intro.md
         - A simple UI: dev/stack/mosaik/tutorial2.md
+        - Processing data: dev/stack/mosaik/tutorial3.md
       - ErgoPay:
         - ErgoPay: dev/wallet/payments/ergopay/ergo-pay.md
         - Tutorial: dev/wallet/payments/ergopay/ep-tutorial.md
