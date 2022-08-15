@@ -1,3 +1,8 @@
+---
+tags:
+  - dApp Development
+---
+
 # ErgoPay
 
 ErgoPay, Ergo's dApp connector for non-web wallet applications is now ready to use and test by end-users.

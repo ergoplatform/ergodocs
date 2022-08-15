@@ -1,3 +1,9 @@
+---
+tags:
+  - JSON
+  - dApp Development
+---
+
 # *Ergo Mosaik*: A UI system for Ergo dApps
 
 > At its core, Mosaik is a JSON-based markup language served via a REST API intended to be used by Ergo platform dApps. Therefore, it provides elements and interactions typically needed for these.
