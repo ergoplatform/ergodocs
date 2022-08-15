@@ -176,6 +176,7 @@ nav:
     - Languages:
       - Scala: dev/Languages/scala.md
       - Java: dev/Languages/java.md
+      - Kotlin: dev/Languages/kotlin.md
       - Rust: dev/Languages/rust.md
       - Python: dev/Languages/python.md
       - C#: dev/Languages/csharp.md
