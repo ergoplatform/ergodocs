@@ -1,3 +1,8 @@
+---
+tags:
+  - Data Model
+  - Transactions
+---
 # Transactions
 
 Each Ergo transaction is an **atomic state transition operation**. 

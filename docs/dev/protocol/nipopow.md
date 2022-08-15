@@ -1,4 +1,7 @@
-
+---
+tags:
+  - NIPoPoWs
+---
 # NiPoPoWs
 
 Ergo implements **NiPoPoWs**, or Non-interactive Proof-of-Proof-of-Work. These are short stand-alone strings that a computer program can inspect to verify that an event happened on a proof-of-work-based blockchain without connecting to the blockchain network and downloading all block headers. For example, these proofs can illustrate that a cryptocurrency payment was made.

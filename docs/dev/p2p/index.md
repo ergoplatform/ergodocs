@@ -1,3 +1,8 @@
+---
+tags:
+  - P2P
+---
+
 # P2P Protocol Overview
 
 The Ergo network protocol allows full nodes (peers) to collaboratively maintain a peer-to-peer network for block and transaction exchange.

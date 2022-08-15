@@ -1,3 +1,8 @@
+---
+tags:
+  - P2P
+---
+
 A simple implementation of VLQ and ZigZag can be found [here](https://gist.github.com/satsen/5e7bcc38565ad193cf7d906a856f804e), simply use the methods (you do not have to worry about whether it is ZigZag encoded or not).
 
 # Network Messages

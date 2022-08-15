@@ -1,6 +1,6 @@
 # Developers
 
-This page should provides an entry-point to Ergo development. For a high-level introduction to Ergo please see the [protocol page](/dev/protocol). For a list of tools and services see [resources](dev/start/resources/) page.
+This page should provides an entry-point to Ergo development. For a high-level introduction to Ergo please see the [protocol page](/dev/protocol). For a list of tools and services see [resources](resources.md) page.
 
 ## Getting Started
 
@@ -13,10 +13,6 @@ For your first interaction with the Ergo blockchain, [this video](https://www.yo
 
 Make sure to check out the [Resources page](dev/start/resources/) and [dev-tools tab on sigmaverse.io](https://sigmaverse.io/)
 
-## Libraries
-
-- [Back-end libraries (SDKs)](stack/back-end)
-- [Front-end libraries](stack/front-end/)
 
 ## Languages
 
@@ -25,8 +21,6 @@ Make sure to check out the [Resources page](dev/start/resources/) and [dev-tools
 - [Start coding in Python](/dev/Languages/python)
 - [Start coding in JSON](/dev/stack/jde)
 - [Start coding in ErgoScript](scs/ergoscript/)
-
-
 
 ## Tutorials
 
@@ -38,6 +32,12 @@ Make sure to check out the [Resources page](dev/start/resources/) and [dev-tools
 ## Interactive
 
 - [Interactive tutorials for javascript dApp development](https://play.dappstep.com/)
+
+## Libraries
+
+- [Back-end libraries (SDKs)](stack/back-end)
+- [Front-end libraries](stack/front-end/)
+
 
 
 ### Educational Courses

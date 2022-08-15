@@ -1,3 +1,7 @@
+---
+tags:
+  - NIPoPoWs
+---
 # Log-Space Mining
 
 Dionysis Zindros explains the technical landscape of Non-Interactive Proofs of Proof-of-Work. Dionysis takes a diligent approach for the Ergo Cast with a detailed rundown of what Non-Interactive Proofs of Proof-of-Work truly are. Furthermore, Dionysis evaluates the operation, implementation, and impact that his primitive delivers upon. 

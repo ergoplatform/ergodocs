@@ -1,3 +1,8 @@
+---
+tags:
+  - Sigma Protocols
+---
+
 *Everyone is talking about DeFi. Few people are asking what DeFi should look like. Ergo has a vision for what the sector can become.*
 
 2020 is shaping up to be the year in which [Decentralised Finance](https://ergoplatform.org/en/blog/2020-07-02-ergo-and-the-explosion-of-defi/) rose to mainstream attention, in the same way, that Bitcoin and blockchain did in 2016 and 2017. In July alone, Total Value Locked – the number of funds committed to DeFi app's smart contracts – doubled from $2 billion to $4 billion, largely driven by Compound's distribution of its COMP governance tokens.

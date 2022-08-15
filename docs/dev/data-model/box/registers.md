@@ -1,3 +1,7 @@
+---
+tags:
+  - Data Model
+---
 # Registers
 
 > [ErgoScript](/dev/scs/ergoscript) (as well as [ErgoTree](/dev/scs/ergotree)) is **typed**, so accessing a register is an operation that involves some expected type given in brackets. 

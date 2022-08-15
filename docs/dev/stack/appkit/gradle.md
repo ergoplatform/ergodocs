@@ -1,3 +1,8 @@
+---
+tags:
+  - Java
+---
+
 # Gradle 
 
 ## Setting up the Gradle project

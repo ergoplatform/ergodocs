@@ -1,3 +1,10 @@
+---
+tags:
+  - NIPoPoWs
+  - Plasma
+  - Sigma Protocols
+---
+
 # Scaling
 
 There are three generations of blockchain, each capable of more complex behaviours than the last. The first generation refers to the original use BTC was intended for, that is, to provide a reliable and accurate method of maintaining a public transaction ledger. Second-generation blockchains were created with the implementation of smart contracts as a priority, with the most popular one being ETH (Ethereum). One of the big differences in ETH is the language used to code smart-contracts. ETH utilizes a [turing complete](https://www.cs.odu.edu/~zeil/cs390/latest/Public/turing-complete/index.html) language (known as Solidity), meaning it is computationally universal. 

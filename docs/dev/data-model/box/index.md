@@ -1,3 +1,8 @@
+---
+tags:
+  - Data Model
+---
+
 # Box
 
 Ergo has a *Bitcoin-like* **UTXO** transactional model: transactions spend and create one-time objects. We call this object a ***'box'***. 

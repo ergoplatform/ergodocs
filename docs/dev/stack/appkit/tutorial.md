@@ -1,3 +1,9 @@
+---
+tags:
+  - Java
+  - Tutorial
+---
+
 ## Features
 
 [Ergo Appkit](https://github.com/aslesarenko/ergo-appkit) is a library for polyglot development of Ergo Applications based on [GraalVM](https://www.graalvm.org/). GraalVM has many [great use cases](https://medium.com/graalvm/graalvm-ten-things-12d9111f307d). Expanding on that, in this article, we will go through some of the Appkit features inherited from GraalVM and take you step-by-step in learning how to take advantage of them.

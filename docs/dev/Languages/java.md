@@ -1,2 +1,1 @@
-### Tutorials
-- See [AppKit](/dev/stack/appkit)
+See [AppKit](/dev/stack/appkit)

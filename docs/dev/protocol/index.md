@@ -6,12 +6,12 @@ Ergo is a next-generation smart contract platform that enables anyone to partici
 
 Ensuring economic freedom for ordinary people through decentralized, private and secure financial tools.
 
-The overwhelming majority of successful public blockchain use‐cases are related to financial applications. Ergo extends Bitcoin's way of writing contracts by attaching a guard script (together with additional custom data) to every coin. In addition to regular protection by some m‐of‐n signature, Ergo allows specifying the possible recipients of these coins, which may be another contract with similar complex conditions. This "chaining" approach allows the implementation of secure and efficient contracts of arbitrary complexity. 
+The overwhelming majority of successful public blockchain use‐cases are related to financial applications. Ergo extends Bitcoin's way of writing contracts by attaching a guard script (together with additional custom data) to every coin. In addition to regular protection by some m‐of‐n signature, Ergo allows specifying the possible recipients of these coins, which may be another contract with similar complex conditions. **This "chaining" approach allows the implementation of secure and efficient contracts of arbitrary complexity.**
 
 
-ErgoScript is the language used to specify the conditions under which currency can be spent. The language supports a type of non-interactive zero-knowledge proofs called Σ-protocols and is flexible enough to allow for ring-signatures, multi signatures, multiple currencies, atomic swaps, self-replicating scripts, and long-term computation.
+[ErgoScript](ergoscript-primer.md) is the language used to specify the conditions under which currency can be spent. The language supports a type of non-interactive zero-knowledge proofs called Σ-protocols and is flexible enough to allow for ring-signatures, multi signatures, multiple currencies, atomic swaps, self-replicating scripts, and long-term computation.
 
-Keeping all this in mind, we expect ErgoScript and Ergo's design to be uniquely useful as Contractual Money.
+> Keeping all this in mind, we expect ErgoScript and Ergo's design to be uniquely useful as Contractual Money.
 
 
 ## [Culture - The Manifesto](https://ergoplatform.org/en/blog/2021-04-26-the-ergo-manifesto/)

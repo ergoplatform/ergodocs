@@ -49,6 +49,17 @@ extra:
 
 plugins:
   - search
+  - awesome-pages
+  - tags: # https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/#
+      tags_file: tags.md
+  #- categories
+  - autolinks 
+  #- exclude-search # https://github.com/chrieke/mkdocs-exclude-search
+  #- semiliterate # http://studioinfinity.org/semiliterate/mkdocs_semiliterate/plugin/
+  #- awesome-list
+  #- pagenav-generator #https://github.com/Andre601/mkdocs-pagenav-generator
+
+
 
 markdown_extensions:
   - meta
@@ -67,21 +78,63 @@ nav:
   - Getting Started:
     - Getting Started: index.md
     - Contributing: contribute.md
-    - FAQ: faq.md
+    - FAQ:
+      - General: faq/general.md
+      - Interview: faq/interview.md
     - Events: 
       - Events: events/index.md
       - ERGOHACK: events/ergohack.md
       - ErgoSummit: events/ergosummit.md
-    - Social Contract: social_contract.md
   - 🔬 ┃ Learn: 
     - Protocol: dev/protocol/index.md
-    - eUTXO: dev/protocol/eutxo.md
-    - NIPoPoWS: dev/protocol/nipopow.md
+    - eUTXO:
+      - Overview: dev/protocol/eutxo/eutxo.md
+      - ELI5: dev/protocol/eutxo/accountveutxo.md
+    - Features: 
+      - NIPoPoWS: dev/protocol/nipopow.md
+      - Sigma Protocols: dev/scs/sigma.md
+      - Data Inputs: dev/scs/data-inputs.md
+      - Multi-Stage Contracts: dev/scs/multi.md
+      - Storage Rent: mining/rent.md 
     - Scaling: dev/protocol/scaling.md
-    - EIPs: dev/protocol/eip.md
-    - Documents: documents.md
+    - References: 
+      - Documents: documents.md
+      - EIPs: dev/protocol/eip.md
+      - Audit: dev/protocol/audit.md
+      - Social Contract: social_contract.md
   - 🛠 ┃ Build:
     - Developers: dev/index.md
+    - Node:
+      - Overview: node/node.md
+      - Install: 
+        - Install: node/install/index.md
+        #- Mac: node/install/mac.md
+        #- Windows: node/install/windows.md
+        #- Linux: node/install/linux.md
+        - Troubleshooting: node/install/troubleshooting.md
+        - Docker: node/install/docker.md
+        - Pi: node/install/pi.md
+      - Overview:
+        - Wallet: node/wallet.md
+        - Swagger API: node/swagger.md
+        - FAQ: node/install/faq.md
+        #- Architecture: node/architecture.md
+        - Distributed Signatures: node/sigs.md
+        - Modes of Operation: node/modes.md
+        - Explorer: node/explorer.md
+      - Test-net: dev/start/testnet.md
+      #- Light Modes: 
+      #  - Digest State: node/digest-state.md
+      #  - History Pruning: node/history-pruning.md
+      #  - Snapshots: node/snapshots.md
+    #   - NiPoPoWS: dev/protocol/nipopow.md
+    - P2P:
+      - P2P: dev/p2p/index.md
+      - Handshaking: dev/p2p/p2p-handshake.md
+      - Network Messages: dev/p2p/network.md
+     # - Modifiers Exchange: dev/p2p/modifiers.md
+     # - BlockP2P: dev/p2p/BlockP2P.md
+    
     - Data Model:
       - Transactions: dev/protocol/transaction.md
       - Box:
@@ -90,7 +143,7 @@ nav:
       - Block: dev/data-model/block.md
       #- UTXO-State: 
     - Wallets:
-      - Wallets: dev/wallet/index.md
+      - Software: dev/wallet/wallets.md
       - Addresses: dev/wallet/address.md
       - Hierarchical keys: dev/wallet/keys.md
       - Payments:
@@ -110,12 +163,7 @@ nav:
         - Multi-Stage Contracts: dev/scs/multi.md 
       - FlowCards: dev/scs/flowcards.md
       - ErgoTree: dev/scs/ergotree.md
-    - P2P:
-      - P2P: dev/p2p/index.md
-      - Handshaking: dev/p2p/p2p-handshake.md
-      - Network Messages: dev/p2p/network.md
-     # - Modifiers Exchange: dev/p2p/modifiers.md
-     # - BlockP2P: dev/p2p/BlockP2P.md
+
     - Resources: 
       - Libraries:
         - AppKit:
@@ -133,18 +181,18 @@ nav:
         - Rust: dev/Languages/rust.md
         - Python: dev/Languages/python.md
         - C#: dev/Languages/csharp.md
+        - JS: dev/Languages/js.md
       - Stack: 
         - Front-End: dev/stack/front-end.md
         - Back-End: dev/stack/back-end.md
       - Tutorials:
-       #- Dust: node/dust.md
         - Pi Blockchain Explorer: dev/stack/rpi-blockchain-explorer.md
         - Integration: dev/Integration/guide.md
       - Misc: 
         - Bookmarks: dev/start/resources.md
-        - Audit: dev/protocol/audit.md
-        - EIP27: dev/protocol/eip27.md
-  - ⛏ ┃  Mining:
+    
+
+  - ⛏ ┃  Mine:
     - Mining: mining/index.md
     - Dig in: 
       - Join a Pool: mining/setup/join.md
@@ -155,31 +203,7 @@ nav:
     - Governance: mining/governance.md
     - Storage Rent: mining/rent.md
     - Log-Space Mining: mining/log_space.md
-  - 📦 ┃  Node:
-    - Node: node/index.md
-    - Install: 
-      - Install: node/install/index.md
-      #- Mac: node/install/mac.md
-      #- Windows: node/install/windows.md
-      #- Linux: node/install/linux.md
-      - Troubleshooting: node/install/troubleshooting.md
-      - Docker: node/install/docker.md
-      - Pi: node/install/pi.md
-    - Overview:
-      - Wallet: node/wallet.md
-      - Swagger API: node/swagger.md
-      - FAQ: node/install/faq.md
-      #- Architecture: node/architecture.md
-      - Distributed Signatures: node/sigs.md
-      - Modes of Operation: node/modes.md
-      - Explorer: node/explorer.md
-    - Test-net: dev/start/testnet.md
-    #- Light Modes: 
-    #  - Digest State: node/digest-state.md
-    #  - History Pruning: node/history-pruning.md
-    #  - Snapshots: node/snapshots.md
-   #   - NiPoPoWS: dev/protocol/nipopow.md
-
+  
   - 💡 ┃  Applications:
     - Applications: uses/index.md
     - Live dApps:

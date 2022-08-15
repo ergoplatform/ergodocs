@@ -1,3 +1,7 @@
+# Assembler 
+
+> More likely you'll want to use [dApp-dev.md]
+
 The transaction assembler service allows you to bypass the node requirements for dApps. 
 ### The Problem
 Currently, with libraries like ergo-appkit, ergo-lib (aka sigma-rust), and ergo-ts, development on Ergo has become a lot more convenient and is becoming easier with further developments of ergo-lib.
