@@ -2,7 +2,7 @@
 
 ## 3: Processing data
 
-In Part 2 of this tutorial series for Ergo Mosaik, we learned how to define the first simple UI for a dApp that can be shown within Wallet applications (and in future on a web browser, too).
+In Part 2 of this tutorial series for Ergo Mosaik, we learned how to define the first simple UI for a dApp that can be shown within Wallet applications (and by using the Mosaik web executors in web browsers as well).
 
 ![Mosaik 1](../../../assets/img/mosaik/tutorial3-1.png)
 
