@@ -179,6 +179,7 @@ nav:
     - Tooling:
       - Mosaik: 
         - Introduction: dev/stack/mosaik/intro.md
+        - A simple UI: dev/stack/mosaik/tutorial2.md
       - ErgoPay:
         - ErgoPay: dev/wallet/payments/ergopay/ergo-pay.md
         - Tutorial: dev/wallet/payments/ergopay/ep-tutorial.md
