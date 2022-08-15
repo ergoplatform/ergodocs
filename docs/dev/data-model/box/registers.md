@@ -56,7 +56,7 @@ Tokens can represent a myriad of things such as shares, complementary currency u
 
 In the UTXO model, we call a token issued with an amount of exactly 1 a `singleton` token, these could be used to imitate long-living accounts existing in Waves, Ethereum Classic etc. Namely, a transaction spends an old box with the singleton token and creates a new one, and the script of the old box can demand the new box to have specific properties (e.g. a particular script or a particular amount). Thus the smart account marked with the token can live and have its state changed as prescribed by the smart account contract through a transaction chain. 
 
-A particular case for a singular token is an [oracle](../../../uses/oracles). 
+A particular case for a singular token is an [oracle](oracles.md). 
 
 One can create a token, e.g. ERG/EUR exchange rates oracle. Then a box which contains the token has an exchange rate encoded in a specific register. As the oracle is a long-living account, contracts can know the oracle token identifier in advance and refer to it. 
 
