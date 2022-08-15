@@ -2,16 +2,6 @@
 
 # Addresses
 
-We take a closer look into the Ergo address formatting, how they work and what makes them preferable to other types of blockchain addresses.
-
-The moment you install any cryptocurrency wallet, you automatically create an address with it. Very loosely speaking, you can compare a wallet to a traditional bank account and an address to the matching account number.
-
-It is precisely one of these alphanumeric addresses needed to either send money from person A to person B, receive money, or [withdraw your mining rewards](https://ergoplatform.org/en/blog/2019_07_03_mining_withdrawal/).
-
-
-## Now, what exactly are addresses?
-
-
 Addresses are short strings that correspond to specific scripts and are used to protect a [box](../data-model/box)
 
 Unlike a (hex-encoded) binary representation of a script, an Ergo address use a `Base58-encoding` and therefore has some advantageous characteristics which the binary representation does not offer:

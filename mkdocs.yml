@@ -122,6 +122,7 @@ nav:
       - Modes of Operation: node/modes.md
       - Explorer: node/explorer.md
       - Test-net: dev/start/testnet.md
+      - Hierarchical keys: dev/wallet/keys.md
       #- Light Modes: 
       #  - Digest State: node/digest-state.md
       #  - History Pruning: node/history-pruning.md
@@ -139,18 +140,8 @@ nav:
         - Box: dev/data-model/box/index.md
         - Registers: dev/data-model/box/registers.md
       - Block: dev/data-model/block.md
-      #- UTXO-State: 
-    - Wallets:
-      - Software: dev/wallet/wallets.md
       - Addresses: dev/wallet/address.md
-      - Hierarchical keys: dev/wallet/keys.md
-      - Payments:
-        - ErgoPay: dev/wallet/payments/ergo-pay.md
-        - dApp Connector: dev/wallet/payments/dApp.md
-        - Proxy Contracts: dev/wallet/payments/proxy.md
-        - Ledger: dev/wallet/payments/ledger.md
-    - Mosaik: 
-      - Introduction: dev/stack/mosaik/intro.md
+      #- UTXO-State: 
     - Smart Contracts:
       - Smart Contracts: dev/scs/index.md
       - ErgoScript: 
@@ -164,33 +155,41 @@ nav:
         - Multi-Stage Contracts: dev/scs/multi.md 
       - FlowCards: dev/scs/flowcards.md
       - ErgoTree: dev/scs/ergotree.md
-
+    - Libraries:
+      - AppKit:
+        - AppKit: dev/stack/appkit/appkit.md
+        - Tutorial: dev/stack/appkit/tutorial.md
+        - Gradle: dev/stack/appkit/gradle.md
+      - ErgoTool: dev/stack/ergotool.md
+      - Kiosk: dev/stack/kiosk.md
+      - JDE: dev/stack/jde.md
+      - Assembler: dev/stack/assembler.md
+      - HDF: dev/stack/headless.md
+    - Languages:
+      - Scala: dev/Languages/scala.md
+      - Java: dev/Languages/java.md
+      - Rust: dev/Languages/rust.md
+      - Python: dev/Languages/python.md
+      - C#: dev/Languages/csharp.md
+      - JS: dev/Languages/js.md
+    - Tooling:
+      - Mosaik: 
+        - Introduction: dev/stack/mosaik/intro.md
+      - ErgoPay: dev/wallet/payments/ergo-pay.md
+      - dApp Connector: dev/wallet/payments/dApp.md
+      - Proxy Contracts: dev/wallet/payments/proxy.md
     - Resources: 
-      - Libraries:
-        - AppKit:
-          - AppKit: dev/stack/appkit/appkit.md
-          - Tutorial: dev/stack/appkit/tutorial.md
-          - Gradle: dev/stack/appkit/gradle.md
-        - ErgoTool: dev/stack/ergotool.md
-        - Kiosk: dev/stack/kiosk.md
-        - JDE: dev/stack/jde.md
-        - Assembler: dev/stack/assembler.md
-        - HDF: dev/stack/headless.md
-      - Languages:
-        - Scala: dev/Languages/scala.md
-        - Java: dev/Languages/java.md
-        - Rust: dev/Languages/rust.md
-        - Python: dev/Languages/python.md
-        - C#: dev/Languages/csharp.md
-        - JS: dev/Languages/js.md
-      - Misc: 
-        - Bookmarks: dev/start/resources.md
+      - Bookmarks: dev/start/resources.md
+      - Tutorials: 
         - Pi Blockchain Explorer: dev/stack/rpi-blockchain-explorer.md
         - Integration: dev/Integration/guide.md
-        - Documents: documents.md
-        - EIPs: dev/protocol/eip.md
-        - Audit: dev/protocol/audit.md
-        - Social Contract: social_contract.md
+      - Documents: documents.md
+      - EIPs: dev/protocol/eip.md
+      - Audit: dev/protocol/audit.md
+      - Social Contract: social_contract.md
+      - Wallets:
+        - Software: dev/wallet/wallets.md
+        - Ledger: dev/wallet/payments/ledger.md
     
 
 
