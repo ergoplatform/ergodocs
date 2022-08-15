@@ -100,37 +100,31 @@ nav:
       - Solo Mining: mining/setup/solo.md
       - Host a Pool: mining/setup/pool.md
       - Subpooling: mining/setup/subpool.md
-    - Autolykos: mining/autolykos.md
-    - Governance: mining/governance.md
-    - Storage Rent: mining/rent.md
-    - Log-Space Mining: mining/log_space.md
+      - Autolykos: mining/autolykos.md
+      - Governance: mining/governance.md
+      - Storage Rent: mining/rent.md
+      - Log-Space Mining: mining/log_space.md
   
   - 🛠 ┃ Build:
     - Developers: dev/index.md
     - Node:
-
       - Install: 
         - Install: node/install/index.md
-        #- Mac: node/install/mac.md
-        #- Windows: node/install/windows.md
-        #- Linux: node/install/linux.md
         - Troubleshooting: node/install/troubleshooting.md
         - Docker: node/install/docker.md
         - Pi: node/install/pi.md
-      - Overview:
-        - Wallet: node/wallet.md
-        - Swagger API: node/swagger.md
-        - FAQ: node/install/faq.md
-        #- Architecture: node/architecture.md
-        - Distributed Signatures: node/sigs.md
-        - Modes of Operation: node/modes.md
-        - Explorer: node/explorer.md
+      - Wallet: node/wallet.md
+      - Swagger API: node/swagger.md
+      - FAQ: node/install/faq.md
+      #- Architecture: node/architecture.md
+      - Distributed Signatures: node/sigs.md
+      - Modes of Operation: node/modes.md
+      - Explorer: node/explorer.md
       - Test-net: dev/start/testnet.md
       #- Light Modes: 
       #  - Digest State: node/digest-state.md
       #  - History Pruning: node/history-pruning.md
       #  - Snapshots: node/snapshots.md
-    #   - NiPoPoWS: dev/protocol/nipopow.md
       - P2P:
         - P2P: dev/p2p/index.md
         - Handshaking: dev/p2p/p2p-handshake.md
