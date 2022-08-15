@@ -1,6 +1,6 @@
 # Ergo Mosaik: A UI system for Ergo dApps
 
-## Part 3: Processing data
+## 3: Processing data
 
 In Part 2 of this tutorial series for Ergo Mosaik, we learned how to define the first simple UI for a dApp that can be shown within Wallet applications (and in future on a web browser, too).
 
@@ -234,11 +234,11 @@ Restart the Spring server and reload the app in the desktop demo. You can now se
 
 As you can not only replace single elements but complete view groups of elements and even the former view root. This way, the whole screen content can be replaced.
 
-You will find some examples demonstrating the data flow and changing screen content in the two demo projects in the Mosaik repository. You can also take a look at the open-sourced AgeUSD Mosaik UI example here: [https://github.com/MrStahlfelge/mosaik-ageusddemo](https://github.com/MrStahlfelge/mosaik-ageusddemo)  (the AgeUSD and blockchain part is a mock so that you only have interface-relevant code here by intention).
+You will find some examples demonstrating the data flow and changing screen content in the two demo projects in the Mosaik repository. You can also take a look at the open-sourced AgeUSD Mosaik UI example [here](https://github.com/MrStahlfelge/mosaik-ageusddemo)  (the AgeUSD and blockchain part is a mock so that you only have interface-relevant code here by intention).
 
-You will find the example project in its state after completing this tutorial series part on GitHub: [https://github.com/MrStahlfelge/mosaik-tutorial-series/tree/656a3aff847d57892442309f3f8b3d58c4fba3f8](https://github.com/MrStahlfelge/mosaik-tutorial-series/tree/656a3aff847d57892442309f3f8b3d58c4fba3f8)
+You will find the example project in its state after completing this tutorial series part on [GitHub](https://github.com/MrStahlfelge/mosaik-tutorial-series/tree/656a3aff847d57892442309f3f8b3d58c4fba3f8)
 
-The next part of this tutorial series will demonstrate how to implement a Send Ergo amount screen: The user can choose one of his wallet addresses and an Ergo amount and start a transaction that gets submitted to the Ergo network. All in all, if you followed this course and also followed the ErgoPay introduction ([https://medium.com/@bschulte19e/implement-a-dapp-using-ergopay-d95e17a51410](https://medium.com/@bschulte19e/implement-a-dapp-using-ergopay-d95e17a51410)), you have all ingredients together to do the job - we just have to mix it together.
+The next part of this tutorial series will demonstrate how to implement a Send Ergo amount screen: The user can choose one of his wallet addresses and an Ergo amount and start a transaction that gets submitted to the Ergo network. All in all, if you followed this course and also followed the [ErgoPay introduction](ep-tutorial.md), you have all ingredients together to do the job - we just have to mix it together.
 
 We close this course with a sneak peek at how our example looks using the [Mosaik web executor](https://github.com/MrStahlfelge/mosaik-kt-js). As you can see, it looks similar to how the desktop debugger and the Ergo Wallet App show our implemented screen, which is exactly how it should be.
 

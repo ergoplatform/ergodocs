@@ -1,7 +1,7 @@
 # Ergo Mosaik: A UI system for Ergo dApps
 
 
-## Part 2: Building a simple UI with Mosaik Kotlin DSL and Spring Boot
+## 2: Building a simple UI with Mosaik Kotlin DSL and Spring Boot
 
 In Part 1 of this tutorial series for Ergo Mosaik, we have seen that Ergo Mosaik is a UI layer for dApps using the Ergo platform. It is not the exclusive UI layer but aims to streamline the development process for dApp developers by providing a way to implement both off-chain code and UI code on the same tech stack. Additionally, some wallet applications ship with a built-in Mosaik executor so that your dApp UI can be used within these wallet applications.
 
@@ -221,6 +221,6 @@ Although the clashingAction does not seem to be used anywhere in the code, it ov
 
 You can now play around, adding some other view elements and actions. Take a look at the view elements and actions demo to see what is available and how to add it. In the next part of the tutorial series, we take a closer look at how the screen content can be altered.
 
-If you had any problems in creating the code, you will find it here:
+If you had any problems in creating the code, you will find it [here](https://github.com/MrStahlfelge/mosaik-tutorial-series/tree/20ed591936a959fd6ab640e6520dc01e6d6c2d66) 
 
-[https://github.com/MrStahlfelge/mosaik-tutorial-series/tree/20ed591936a959fd6ab640e6520dc01e6d6c2d66](https://github.com/MrStahlfelge/mosaik-tutorial-series/tree/20ed591936a959fd6ab640e6520dc01e6d6c2d66) 
+
