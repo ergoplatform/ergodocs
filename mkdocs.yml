@@ -50,10 +50,10 @@ extra:
 plugins:
   - search
   - awesome-pages
+  - autolinks 
   - tags: # https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/#
       tags_file: tags.md
   #- categories
-  - autolinks 
   #- exclude-search # https://github.com/chrieke/mkdocs-exclude-search
   #- semiliterate # http://studioinfinity.org/semiliterate/mkdocs_semiliterate/plugin/
   #- awesome-list
