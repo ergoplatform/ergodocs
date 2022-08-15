@@ -1,5 +1,9 @@
 # *Ergo Mosaik*: A UI system for Ergo dApps
 
+> At its core, Mosaik is a JSON-based markup language served via a REST API intended to be used by Ergo platform dApps. Therefore, it provides elements and interactions typically needed for these.
+
+
+
 ### On-chain and off-chain code
 
 Ergo is a smart contract platform for decentralized applications to build on, working with bitcoin’s UTXO model. Smart contracts are guard scripts that define when an unspent box can be spent. It is written in ErgoScript, a subset of Scala.
