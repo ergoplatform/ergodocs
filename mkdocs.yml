@@ -162,6 +162,7 @@ nav:
     - Languages:
       - Scala: dev/Languages/scala.md
       - Java: dev/Languages/java.md
+      - Kotlin: dev/Languages/kotlin.md
       - Rust: dev/Languages/rust.md
       - Python: dev/Languages/python.md
       - C#: dev/Languages/csharp.md
@@ -180,6 +181,8 @@ nav:
     - Tooling:
       - Mosaik: 
         - Introduction: dev/stack/mosaik/intro.md
+        - A simple UI: dev/stack/mosaik/tutorial2.md
+        - Processing data: dev/stack/mosaik/tutorial3.md
       - ErgoPay:
         - ErgoPay: dev/wallet/payments/ergopay/ergo-pay.md
         - Tutorial: dev/wallet/payments/ergopay/ep-tutorial.md
@@ -201,7 +204,7 @@ nav:
 
 
   - 💡 ┃  Applications:
-    - Explore: 
+    - Explore:
       - Applications: uses/index.md
       - Live dApps:
         - DEXs: uses/dex.md
@@ -216,7 +219,7 @@ nav:
         - ICOs: uses/ico.md
         - Index Coins: uses/index_coins.md
         - Lending: uses/lending.md
-        - Zero-Knowledge: uses/zk.md      
+        - Zero-Knowledge: uses/zk.md
       - Planned:
         - Asset Tokenisation: uses/tokenisation.md
         - DAO: uses/dao.md
@@ -241,7 +244,7 @@ nav:
         - Privacy: uses/privacy.md
         - Perpetual Tokens: uses/perpetual.md
         - Bonding Curve: uses/bonding.md
-        - Context Claims: uses/context-claims.md  
+        - Context Claims: uses/context-claims.md
 
 
 
