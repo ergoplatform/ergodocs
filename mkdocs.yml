@@ -49,8 +49,8 @@ extra:
 
 plugins:
   - search
-  #- awesome-pages
-  #- autolinks 
+  - awesome-pages
+  - autolinks 
   - tags: # https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/#
       tags_file: tags.md
   #- categories
