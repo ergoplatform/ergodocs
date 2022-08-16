@@ -84,7 +84,9 @@ Ergo can utilize multiple off-chain solutions, such as [Hydra](https://iohk.io/e
 
 ### Other Possibilities
 
-#### **Lightning Network:**, possible due to the shared UTXO architecture utilizing Bitcoins, the Lightning network is also possible. Basically, in a lightning channel, two participants send their funds to a specific type of joint multi-sig wallet that allows them to create and enforce off-chain agreements. The network itself is just a bunch of these channels connected. You can then structure an off-chain payment across many channels, where none of the funds leaves any individual channel but shuffles around like an abacus.
+#### **Lightning Network:** 
+
+possible due to the shared UTXO architecture utilizing Bitcoins, the Lightning network is also possible. Basically, in a lightning channel, two participants send their funds to a specific type of joint multi-sig wallet that allows them to create and enforce off-chain agreements. The network itself is just a bunch of these channels connected. You can then structure an off-chain payment across many channels, where none of the funds leaves any individual channel but shuffles around like an abacus.
 
 #### **Rainbow Network:** 
 
