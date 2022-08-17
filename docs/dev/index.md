@@ -1,20 +1,21 @@
 # Developers
 
-This page should provides an entry-point to Ergo development. For a high-level introduction to Ergo please see the [protocol page](/dev/protocol). For a list of tools and services see [resources](resources.md) page.
+This page provides a general entry-point to Ergo development. 
+
+> Join us on [discord](https://discord.gg/7kWWQeMCwe) if you get stuck!
+
 
 ## Getting Started
 
+- Make sure to familiarise yourself with the Ergo [protocol](/dev/protocol) and the [eUTXO](eutxo.md) model.  
+- You communicate with the blockchain via a locally run instance of the Ergo [Node](/node/install). 
+- The node provides an [API](resources.md#api) that is used by your SDK logic to carry out operations on the blockchain. 
 
-Your application will communicate with the blockchain via a locally run instance of the Ergo Node. The Node provides an API that is used by your SDK logic to carry out operations on the blockchain. The on-chain code is ErgoScript, the off-chain code can be done in a programming langage of your choice. 
-
-- [Set up a local Node on mainnet or testnet](/node/)
-
-For your first interaction with the Ergo blockchain, [this video](https://www.youtube.com/watch?v=Md5s-XV6-Hs) takes you through the steps to programmatically create & submit a transaction. Alternatively, dive straight into ErgoScript or any of the other paths laid out below. 
-
-Make sure to check out the [Resources page](dev/start/resources/) and [dev-tools tab on sigmaverse.io](https://sigmaverse.io/)
-
+> The **on-chain**  code is [ErgoScript](ergoscript.md), the ***off-chain*** code can be done in a programming langage of your choice. 
 
 ## Languages
+
+
 
 - [Start coding in JVM (Scala/Java)](/dev/stack/appkit/)
 - [Start coding in Rust](/dev/Languages/rust)
@@ -25,6 +26,7 @@ Make sure to check out the [Resources page](dev/start/resources/) and [dev-tools
 
 ## Tutorials
 
+- For your first interaction with the Ergo blockchain, [this video](https://www.youtube.com/watch?v=Md5s-XV6-Hs) takes you through the steps to programmatically create & submit a transaction. 
 - [Interactive tutorials for javascript dApp development](https://play.dappstep.com/)
 - [ErgoTutorials](https://www.youtube.com/channel/UCyOIxD7YSHN5QwLIulOWrew)
 - [Kbit: Learning blockchains like Cardano and Ergo](https://www.youtube.com/watch?v=HDn49bToTMI)
@@ -37,6 +39,8 @@ Make sure to check out the [Resources page](dev/start/resources/) and [dev-tools
 
 - [Back-end libraries (SDKs)](stack/back-end)
 - [Front-end libraries](js.md)
+- 
+> Make sure to check out the [Resources page](dev/start/resources/) and [dev-tools tab on sigmaverse.io](https://sigmaverse.io/)
 
 
 
