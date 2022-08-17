@@ -191,6 +191,7 @@ nav:
         - Introduction: dev/stack/mosaik/intro.md
         - A simple UI: dev/stack/mosaik/tutorial2.md
         - Processing data: dev/stack/mosaik/tutorial3.md
+        - Example apps: dev/stack/mosaik/examples.md
       - ErgoPay:
         - ErgoPay: dev/wallet/payments/ergopay/ergo-pay.md
         - Tutorial: dev/wallet/payments/ergopay/ep-tutorial.md

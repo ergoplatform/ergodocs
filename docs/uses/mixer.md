@@ -78,7 +78,7 @@ The computer where the MPC ceremony holds place should also be secure and destro
 This can happen due to security preferences on Mac. Please run the following command.
 
 ```
-do xattr -r -d com.apple.quarantine /Applications/ergoMixer.app
+sudo xattr -r -d com.apple.quarantine /Applications/ergoMixer.app
 ```
 
 ### Best Practices
