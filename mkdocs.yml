@@ -127,32 +127,37 @@ nav:
         - Docker: node/install/docker.md
         - Pi: node/install/pi.md
       - Wallet: node/wallet.md
-      - Swagger API: node/swagger.md
+      - API: node/swagger.md
       - FAQ: node/install/faq.md
-      #- Architecture: node/architecture.md
-      - Distributed Signatures: node/sigs.md
-      - Modes of Operation: node/modes.md
-      - Explorer: node/explorer.md
-      - Test-net: dev/start/testnet.md
-      - Hierarchical keys: dev/wallet/keys.md
+      - Resources:
+        - Explorer: node/explorer.md
+        - Test-net: dev/start/testnet.md
+        #- Architecture: node/architecture.md
+        - Distributed Signatures: node/sigs.md
+        - Modes of Operation: node/modes.md
+        - Hierarchical keys: dev/wallet/keys.md
       #- Light Modes: 
       #  - Digest State: node/digest-state.md
       #  - History Pruning: node/history-pruning.md
       #  - Snapshots: node/snapshots.md
-      - P2P:
-        - P2P: dev/p2p/index.md
-        - Handshaking: dev/p2p/p2p-handshake.md
-        - Network Messages: dev/p2p/network.md
-        # - Modifiers Exchange: dev/p2p/modifiers.md
-        # - BlockP2P: dev/p2p/BlockP2P.md
+        - P2P:
+          - P2P: dev/p2p/index.md
+          - Handshaking: dev/p2p/p2p-handshake.md
+          - Network Messages: dev/p2p/network.md
+          # - Modifiers Exchange: dev/p2p/modifiers.md
+          # - BlockP2P: dev/p2p/BlockP2P.md
     
     - Data Model:
-      - Transactions: dev/protocol/transaction.md
+      - Transactions: 
+        - Transactions: dev/protocol/transaction.md
+        - Model Transaction: dev/protocol/model-tx.md
       - Box:
         - Box: dev/data-model/box/index.md
         - Registers: dev/data-model/box/registers.md
       - Block: dev/data-model/block.md
       - Addresses: dev/wallet/address.md
+      - Data Inputs: dev/scs/data-inputs.md
+      - Multi-Stage Contracts: dev/scs/multi.md 
       #- UTXO-State: 
     - Smart Contracts:
       - Smart Contracts: dev/scs/index.md
@@ -160,11 +165,8 @@ nav:
         - Overview: dev/scs/ergoscript.md
         - Quick Primer: dev/scs/ergoscript-primer.md
         - Sigma Language: dev/scs/sigma-lang.md
-        - Debugging: dev/scs/debugging.md
-      - Features: 
         - Sigma Protocols: dev/scs/sigma.md
-        - Data Inputs: dev/scs/data-inputs.md
-        - Multi-Stage Contracts: dev/scs/multi.md 
+        - Debugging: dev/scs/debugging.md
       - FlowCards: dev/scs/flowcards.md
       - ErgoTree: dev/scs/ergotree.md
     - Languages:

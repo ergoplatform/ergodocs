@@ -1,6 +1,6 @@
 # Assembler 
 
-> More likely you'll want to use [dApp-dev.md]
+> More likely you'll want to use [dApp-dev](dApp.md)
 
 The transaction assembler service allows you to bypass the node requirements for dApps. 
 
