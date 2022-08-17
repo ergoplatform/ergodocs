@@ -2,19 +2,45 @@
 
 This page outlines the resources available on Ergo. Also check out the [dev-tools section on sigmaverse](https://sigmaverse.io/)
 
-## Explorer
+
+## Libraries
+
+### SDKs
+
+- [Appkit](/docs/dev/stack/appkit) (Java)
+- [Sigma-Rust](rust.md)
+
+
+### Frameworks
+
+- [Headless dApp Framework](headless.md) (Rust)
+- [Mosaik](intro.md) (Kotlin)
+- [JDE](jde.md) (JSON)
+
+### Wrappers
+
+- [ErgPy](https://github.com/mgpai22/ergpy) (python-jvm)
+- [ergo-python-appkit](https://github.com/ergo-pad/ergo-python-appkit)
+
+### Toolkits
+
+- [Fleet (JS)](https://github.com/capt-nemo429/fleet)
+
+## Blockchain
+
+### Explorer
 
 **Explorer**
 
 - [Mainnet explorer](https://explorer.ergoplatform.com/)
 
-## Testnet
+### Testnet
 
 - [Testnet explorer](https://testnet.ergoplatform.com/)
   - [Using Ergo-Testnet](https://github.com/ergoplatform/ergo/wiki/Ergo-Testnet)
   - [Testnet Faucet](https://testnet.ergofaucet.org/)
 
-## API
+### API
 
 - [API Docs](https://api.ergoplatform.com/api/v1/docs/)
   - [Node API](https://git.io/fjqwb)
@@ -22,7 +48,7 @@ This page outlines the resources available on Ergo. Also check out the [dev-tool
   - [Ergo.Watch API](https://ergo.watch/api/v0/docs)
  - [TokenJay API](https://api.tokenjay.app/swagger-ui/index.html;jsessionid=59429AD4DF081E2E3450C2834095D427?attribute=redirectWithRedirectView)
 
-## Test vectors
+### Test vectors
 
 - [Ergo transaction serialization](https://git.io/fjqwX)
 - [Signature scheme](https://git.io/fjqwH)

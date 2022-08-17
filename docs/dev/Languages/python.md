@@ -6,7 +6,9 @@ tags:
 
 # Python
 
-- [ergpy](https://github.com/mgpai22/ergpy)
+- [ergpy](https://github.com/mgpai22/ergpy): A python-jvm wrapper for interacting with the Ergo blockchain.
+
+
 
 ## Tutorials
 

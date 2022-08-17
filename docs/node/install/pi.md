@@ -13,8 +13,8 @@ The Raspberry Pi is small, inexpensive, and meets the requirements to run an Erg
 ### Preperation
 
 ```
-sudo apt update
-sudo apt upgrade
+sudo apt update && sudo apt upgrade -y
+sudo apt install default-jdk -y
 ```
 
 Install the Java JDK
@@ -47,6 +47,7 @@ sudo dphys-swapfile setup
 sudo dphys-swapfile swapon
 sudo reboot now
 ```
+
 
 #### More tips
 
@@ -99,6 +100,16 @@ There are several configuration options that be tweaked in your `ergo.conf` file
 
 
 
+#### Launch
+
+```
+java -jar -Xmx2g ergo.jar --mainnet -c ergo.conf
+```
+
+
+
 ## Resources
 
 - [How to setup an Ergo Node on a Raspberry Pi](https://youtu.be/yDqhlgz0244)
+- [ergo-rpi](https://github.com/Eeysirhc/ergo-rpi)
+
