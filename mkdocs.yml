@@ -97,6 +97,14 @@ nav:
       - Sigma Protocols: dev/scs/sigma.md
       - Storage Rent: mining/rent.md
       - Autolykos: mining/autolykos.md
+    - Resources:
+      - Documents: documents.md
+      - EIPs: dev/protocol/eip.md
+      - Audit: dev/protocol/audit.md
+      - Social Contract: social_contract.md
+      - Key Sites:
+        - Sigmaverse: https://sigmaverse.io
+        - Community Spaces: https://ergoplatform.org/en/community/
 
   - ⛏ ┃  Mine:
     - Mining: mining/index.md
@@ -193,10 +201,6 @@ nav:
       - Tutorials: 
         - Pi Blockchain Explorer: dev/stack/rpi-blockchain-explorer.md
         - Integration: dev/Integration/guide.md
-      - Documents: documents.md
-      - EIPs: dev/protocol/eip.md
-      - Audit: dev/protocol/audit.md
-      - Social Contract: social_contract.md
       - Wallets:
         - Software: dev/wallet/wallets.md
         - Ledger: dev/wallet/payments/ledger.md
