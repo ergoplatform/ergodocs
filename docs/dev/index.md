@@ -19,24 +19,24 @@ Make sure to check out the [Resources page](dev/start/resources/) and [dev-tools
 - [Start coding in JVM (Scala/Java)](/dev/stack/appkit/)
 - [Start coding in Rust](/dev/Languages/rust)
 - [Start coding in Python](/dev/Languages/python)
+- [Start coding in JavaScript](js.md)
 - [Start coding in JSON](/dev/stack/jde)
 - [Start coding in ErgoScript](scs/ergoscript/)
 
 ## Tutorials
 
-
+- [Interactive tutorials for javascript dApp development](https://play.dappstep.com/)
 - [ErgoTutorials](https://www.youtube.com/channel/UCyOIxD7YSHN5QwLIulOWrew)
 - [Kbit: Learning blockchains like Cardano and Ergo](https://www.youtube.com/watch?v=HDn49bToTMI)
 - [Ergo 101 : Side tooling for building dApps on Ergo](https://dav009.medium.com/ergo-101-side-tooling-for-building-dapps-on-ergo-c71889d60826)
 
-## Interactive
 
-- [Interactive tutorials for javascript dApp development](https://play.dappstep.com/)
+
 
 ## Libraries
 
 - [Back-end libraries (SDKs)](stack/back-end)
-- [Front-end libraries](stack/front-end/)
+- [Front-end libraries](js.md)
 
 
 
