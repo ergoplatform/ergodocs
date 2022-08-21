@@ -68,6 +68,8 @@ Ergo can utilize multiple off-chain solutions, such as [Hydra](https://iohk.io/e
 
 **Plasma** The ledger is stored as an AVL tree, a balanced and sorted binary tree. Users perform off-chain transactions with the bank, and the ledger keeps changing. Occasionally, the bank publishes a compact snapshot of the ledger on the blockchain.
 
+You can use Plasma to create Plasma chains and make a full L2 solution. Right now it’s mostly just used for data compression and simplifying contracts, though Plasma chains will likely come in the future.
+
 
 > Plasma tutorials for Ergo have now been released. Please see [Bank](https://github.com/ergoplatform/ergo-jde/blob/main/kiosk/src/test/scala/kiosk/avltree/bank/Bank.md) & [AVLTrees](https://github.com/ergoplatform/ergo-jde/blob/main/kiosk/src/test/scala/kiosk/avltree/AvlTrees.md)
 
