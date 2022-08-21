@@ -98,14 +98,14 @@ as described in [this paper](http://research.paradigm.xyz/RainbowNetwork.pdf)
 
 #### **Rollups**: 
 
-They involve rolling up collections of transactions. The only concern is posting the data on-chain, not verification. 
+Rollups are also possible via AVL trees. This involves rolling up collections of transactions. The only concern is posting the data on-chain, not verification. 
 
-Then there are two options. 
+There are two types of Rollups. 
 
 - **Optimistic Rollups:** compute the transactions on a parallel compatible chain that communicates with the main chain. The model is optimistic because it relies on the *Fraud-Proof principle*, where the aggregators are not actively verifying layer two. Still, they interfere in the event of a fraud dispute. Disputes in optimistic rollups when computations are done only on data whose validity is disputed
-- ZK-Rollups utilize [zkSNARKs](https://blog.ethereum.org/2016/12/05/zksnarks-in-a-nutshell/) (zero-knowledge succinct non-interactive arguments of knowledge), they can decrease network load by taking hundreds of transfers off-chain and combining or "rolling" them up into a single transaction. The security of the transactions relies directly on the main chain secured by adding mathematical proofs to validate transactions. However, it is relatively harder than hybrid approaches to implement all the functionalities of the mainnet with full security. Various projects are attempting to implement zkSNARKs.
+- **ZK-Rollups** utilize [zkSNARKs](https://blog.ethereum.org/2016/12/05/zksnarks-in-a-nutshell/) (zero-knowledge succinct non-interactive arguments of knowledge), they can decrease network load by taking hundreds of transfers off-chain and combining or "rolling" them up into a single transaction. The security of the transactions relies directly on the main chain secured by adding mathematical proofs to validate transactions. However, it is relatively harder than hybrid approaches to implement all the functionalities of the mainnet with full security. Various projects are attempting to implement zkSNARKs.
 
-Another distinction is how optimistic and ZK Rollups interact with smart contracts. Optimistic rollups can run smart contracts on the main blockchain directly; conversely, ZK Rollups cannot execute smart contracts on the main chain. Zk rollups have a lot of issues in practice, and pairing compatible curves support in the core protocol would likely be required.
+Zk rollups have a lot of issues in practice, and pairing compatible curves support in the core protocol would likely be required.
 
 
 #### **Zero-Knowledge Contingent Payments:** 
