@@ -16,21 +16,24 @@ A minimal `testnet.conf` would be:
 
 ```
 ergo {
-  node {
-    mining = false
-  }
+  networkType = "testnet"
 }
-
 scorex {
  restApi {
-    # Hex-encoded Blake2b256 hash of an API key.
-    # Should be 64-chars long Base16 string.
-    # below is the hash of the string 'hello'
-    # replace with your actual hash
+    # Hex-encoded Blake2b256 hash of an API key. Should be 64-chars long Base16 string.
+    # Below is hash corresponding to API_KEY = "hello" (with no quotes)
     apiKeyHash = "324dcf027dd4a30a932c441f365a25e86b173defa4b8e58948253471b81b72cf"
   }
-} 
+  
+network {
+   knownPeers = [
+      "213.239.193.208:9020",
+      "37.156.20.158:9020"
+    ]
+   peerDiscovery = false
+  }
 
+}
 ```
 
 The node will be available at `localhost:9052/panel`
@@ -57,15 +60,17 @@ You can get some testERG from [testnet.ergofaucet.org](https://testnet.ergofauce
 |                | mainnet  | testnet   |
 |----------------|----------|-----------|
 | API Port       | 9053     | 9052      | 
-| P2P Port       | 9030     | 9020      |
+| P2P Port       | 9030     | 9021      |
 | address prefix | (0) 0x00 | (16) 0x10 |
 
 To find public testnet nodes, you can use [api.tokenjay.app/peers/list](https://api.tokenjay.app/peers/list) and swap the port till you find one that's running testnet.
 
 
 
-## Alternative Testnets
+### GetBlok testnet
 
-- [paiNet](https://github.com/mgpai22/paiNet)
-- ergo-testnet.getblok.io:3056
+Alternatively, GetBlok runs a public testnet that should help devs who need to work on the testnet but don't know how to run a solo mining node. It should also give an alternative way to start a testnet in case the usual miner is down. 
 
+```
+ergo-testnet.getblok.io:3056
+```
