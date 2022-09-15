@@ -64,10 +64,8 @@ To find public testnet nodes, you can use [api.tokenjay.app/peers/list](https://
 
 
 
-### GetBlok testnet
+## Alternative Testnets
 
-Alternatively, GetBlok runs a public testnet that should help devs who need to work on the testnet but don't know how to run a solo mining node. It should also give an alternative way to start a testnet in case the usual miner is down. 
+- [paiNet](https://github.com/mgpai22/paiNet)
+- ergo-testnet.getblok.io:3056
 
-```
-ergo-testnet.getblok.io:3056
-```
