@@ -5,7 +5,7 @@ The testnet is an alternative Ergo blockchain you can use for testing and experi
 
 ## Synchronising a full node
 
-To join the testnet, download [latest Ergo protocol reference client](https://github.com/ergoplatform/ergo/releases/tag/testnet-sync) and launch using
+To join the testnet, download [latest Ergo protocol reference client](https://github.com/ergoplatform/ergo/releases/tag/5.0-RC2) and launch using
 
 ```bash
 java -jar -Xmx4G ergo-*.jar --testnet -c testnet.conf
@@ -16,24 +16,21 @@ A minimal `testnet.conf` would be:
 
 ```
 ergo {
-  networkType = "testnet"
+  node {
+    mining = false
+  }
 }
+
 scorex {
  restApi {
-    # Hex-encoded Blake2b256 hash of an API key. Should be 64-chars long Base16 string.
-    # Below is hash corresponding to API_KEY = "hello" (with no quotes)
+    # Hex-encoded Blake2b256 hash of an API key.
+    # Should be 64-chars long Base16 string.
+    # below is the hash of the string 'hello'
+    # replace with your actual hash
     apiKeyHash = "324dcf027dd4a30a932c441f365a25e86b173defa4b8e58948253471b81b72cf"
   }
-  
-network {
-   knownPeers = [
-      "213.239.193.208:9020",
-      "37.156.20.158:9020"
-    ]
-   peerDiscovery = false
-  }
+} 
 
-}
 ```
 
 The node will be available at `localhost:9052/panel`
