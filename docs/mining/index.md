@@ -10,7 +10,7 @@ Unless you have 1TH/s+, you likely want to be mining from a pool. Available mine
 
 
 - [Mining from a pool](setup/join)
-- [Solo Mining](setup/solo)
+- [Solo Mining](setup/solo) - [Can I solo mine?](https://docs.google.com/forms/d/e/1FAIpQLScBFv3mxpu5Erv55zvfFuIo2NnaWht3cc70xZoRo-3c58Cv0A/viewform)
 - [Hosting a pool](setup/pool)
 - [Subpooling](/mining/setup/subpool)
 
@@ -20,7 +20,15 @@ Unless you have 1TH/s+, you likely want to be mining from a pool. Available mine
 - The [Ergo Explorer](https://explorer.ergoplatform.com) can give you various information & stats on mining and the network. 
 - [Difficulty and epoch monitor.](http://cds.oette.info/ergo_diff.htm)
 - [Wallets](wallets.md)
+- [Ergo Mining Breakeven Price Calculator](https://babygrenade.github.io/ergo-profit-calc/)
+- [Discovering Ergo's Storage Rent Potential](https://www.reddit.com/r/ergonauts/comments/xeke0b/discover_ergos_storage_rent_potential/)
+- [What are smart pools?](https://ergoplatform.org/en/blog/2021-11-19-ergo-smartpools-and-decentralized-mining/)
 
+- [Mining Guide](https://ergonaut.space/en/Mining)
+
+**Discussions**
+
+- [Ergo Emission: details, retargeting via a soft fork](https://www.ergoforum.org/t/ergo-emission-details-retargeting-via-a-soft-fork/2778/2)
 
 ## [Autolykos](autolykos)
 
