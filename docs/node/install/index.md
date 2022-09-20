@@ -19,7 +19,7 @@ If you want to install a node see this page or get [setup on the test-net](/dev/
 
 The Ergo Node is a critical piece of infrastructure developers will use to interact with the blockchain. 
 
-> If you're simply looking for a daily wallet we advise one of the options in the [wallets](/dev/wallet) page. (Ergo Mobile even has a cold-storage feature!)
+> If you're simply looking for a daily wallet we advise one of the options in the [wallets](/dev/wallet) page. (Ergo Mobile even has a cold-storage feature!). You can also use the [Satergo desktop wallet](dev/wallet/wallets/#satergo-desktop) which has an option to install a full node with it. 
 
 ## Prerequisites
 To run an Ergo node you need a **JDK/JRE version >= 9** installed on your system. We strongly **recommend either version 9 or 11**. 
