@@ -33,13 +33,15 @@ Autolykos will adjust slowly in response to fluctuating hashrate, but this helps
 
 You can use the [difficulty & epoch monitor](https://cds.oette.info/ergo_diff.htm) to get an estimate for the next difficulty due. 
 
+**Why 2 minutes?**
+
+As Ergo is a P2P cryptocurrency that supports smart contracts, there is need for security buffer for all the issues and attacks possible; propagation delays, spam attacks, verifier dilemma etc
+
 **Can it be quicker?**
 
 Ergo already uses an epoch length of ~1.5 days (with normal block rate), compared to Bitcoin's two weeks. Having a quicker difficulty readjustment can lead to Timewarp attacks. More epochs were considered, but the retargeting function is also non-linear, so it can adjust sooner than the linear function in certain popular scenarios; and it is unclear whether any hard-fork would be required at this stage. 
 
-While the consistenty of payouts has not been ideal during price drops, and is more suited for larger hashrates. Changing it at this stage would require a hard-fork to change (and then a HF again to add it back at a larger hash - or some timed mechanism). 
-
-So the general consensus is people would rather deal with the inconsistent rewards until the mining landscape is clearer. 
+There is a discussion ongoing on [ergoforum](https://www.ergoforum.org/t/diff-adjustment-potential-design-tradeoffs/3875/30) regarding a potential improvement to this algorithm. 
 
 
 ## Resources
