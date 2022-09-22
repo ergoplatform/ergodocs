@@ -81,7 +81,7 @@ For proof-of-no-premine, the pre-genesis state in Ergo contains block hashes fro
   }
 ```
 
-"`JSON
+```JSON
  {
 "boxId": "b8ce8cfe331e5eadfb0783bdc375c94413433f65e1e45857d71550d42e4d83bd",
 "value": 1000000000,
