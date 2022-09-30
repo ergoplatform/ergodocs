@@ -69,7 +69,7 @@ In total, this happens to be 97,739,924.5 ERG.
 
 For proof-of-no-premine, the pre-genesis state in Ergo contains block hashes from Bitcoin and eth and also headlines from the Guardian, Vedomosti and Xinhua around the moment of launch, which can be seen in [mainnet.conf](https://github.com/ergoplatform/ergo/blob/1935c95560a30b19cdb52c1a291e8a389ba63c97/src/main/resources/mainnet.conf#L11)
 
-"`scala
+```scala
   /**
     * Genesis box that contains proofs of no premine.
     * It is a long-living box with special bytes in registers
@@ -81,7 +81,7 @@ For proof-of-no-premine, the pre-genesis state in Ergo contains block hashes fro
   }
 ```
 
-"`JSON
+```JSON
  {
 "boxId": "b8ce8cfe331e5eadfb0783bdc375c94413433f65e1e45857d71550d42e4d83bd",
 "value": 1000000000,

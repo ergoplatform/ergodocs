@@ -56,9 +56,9 @@ The network or *peer to peer* layer. The Ergo Node Client has greatly improved s
 
 Ergo supports multiple on-chain scalability solutions such as Sharding.
 
-**Sub-block confirmation protocols:** such as ([Bitcoin-NG](https://www.usenix.org/system/files/conference/nsdi16/nsdi16-paper-eyal.pdf) or [Flux](https://www.usenix.org/system/files/atc20-li-chenxing.pdf) are an active topic for research in 2022. Ergo blocks have *extension sections* with **mandatory and arbitrary key-value data**; by putting certain anchors there, it is possible to do BitcoinNG-style micro blocks, Aspen-like service-chains or generic sidechains with just velvet or soft forks. Also see *[Flux: Revisiting Near Blocks for Proof-of-Work Blockchains](https://eprint.iacr.org/2018/415.pdf)*
-
 **Sharding** as per [*' On the Security and Performance of Blockchain Sharding'*](https://eprint.iacr.org/2021/1276)
+
+**Sub-block confirmation protocols:** such as ([Bitcoin-NG](https://www.usenix.org/system/files/conference/nsdi16/nsdi16-paper-eyal.pdf) or [Flux](https://www.usenix.org/system/files/atc20-li-chenxing.pdf) are an active topic for research in 2022. Ergo blocks have *extension sections* with **mandatory and arbitrary key-value data**; by putting certain anchors there, it is possible to do BitcoinNG-style micro blocks, Aspen-like service-chains or generic sidechains with just velvet or soft forks. Also see *[Flux: Revisiting Near Blocks for Proof-of-Work Blockchains](https://eprint.iacr.org/2018/415.pdf)*
 
 ## Layer 2 (Off-Chain)
 

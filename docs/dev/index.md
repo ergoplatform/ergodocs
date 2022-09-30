@@ -20,7 +20,7 @@ Essentially,
 Dive in if you have a language in mind you want to use, or some of the best introductionary pathways are outlined directly below. 
 
 
-- [JVM (Scala/Java)](/dev/stack/appkit/)
+- [JVM (Scala/Java)](/dev/stack/appkit/appkit)
 - [Rust](/dev/Languages/rust)
 - [Python](/dev/Languages/python)
 - [JavaScript](js.md)

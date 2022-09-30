@@ -5,7 +5,7 @@ The testnet is an alternative Ergo blockchain you can use for testing and experi
 
 ## Synchronising a full node
 
-To join the testnet, download [latest Ergo protocol reference client](https://github.com/ergoplatform/ergo/releases/tag/testnet-sync) and launch using
+To join the testnet, download [latest Ergo protocol reference client](https://github.com/ergoplatform/ergo/releases/tag/5.0-RC2) and launch using
 
 ```bash
 java -jar -Xmx4G ergo-*.jar --testnet -c testnet.conf
@@ -60,7 +60,7 @@ You can get some testERG from [testnet.ergofaucet.org](https://testnet.ergofauce
 |                | mainnet  | testnet   |
 |----------------|----------|-----------|
 | API Port       | 9053     | 9052      | 
-| P2P Port       | 9030     | 9020      |
+| P2P Port       | 9030     | 9021      |
 | address prefix | (0) 0x00 | (16) 0x10 |
 
 To find public testnet nodes, you can use [api.tokenjay.app/peers/list](https://api.tokenjay.app/peers/list) and swap the port till you find one that's running testnet.
