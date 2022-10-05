@@ -2,6 +2,8 @@
 
 The testnet is an alternative Ergo blockchain you can use for testing and experimentation without having to use real ERG or worrying about breaking the main chain. The testnet runs on different ports than the mainnet and can be accessed by changing your `.conf` and running with the `--testnet` flag. 
 
+The easiest way to get setup on the testnet is to use [PaiNet](https://github.com/mgpai22/paiNet)
+
 
 ## Synchronising a full node
 
