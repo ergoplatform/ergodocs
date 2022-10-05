@@ -33,7 +33,7 @@ Market specialization is the focus of developers and projects on top of Ergo. Ou
  
 #### Where does Ergo excel? What disadvantages relative to other chains? 
  
-Ergo's advantages are beyond the benefits of Extended UTXO; we have a lot of interesting privacy options with Sigma protocols; Ergo also has a simple path to sidechains and a way to revolutionize SPV client implementation. Ultralite SPV clients via Nipopows with full node security have never been implemented. 
+Ergo's advantages are beyond the benefits of Extended UTXO; we have a lot of interesting privacy options with Sigma protocols; Ergo also has a simple path to sidechains and a way to revolutionize SPV client implementation. Ultralite SPV clients via NIPoPoWs with full node security have never been implemented. 
 
 Ergo is pushing the boundaries of Proof of Work and Extended UTXO simultaneously. We plan to continue the research first approach and push the boundaries of what POW is capable of. 
 

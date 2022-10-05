@@ -22,21 +22,11 @@ Ensuring economic freedom for ordinary people through decentralised, private and
 
 **🔑 Key Objectives**
 
-**Research-led but real-world-focused.**
+- **Research-led but real-world-focused:** Ergo draws on ten years of blockchain development, complementing tried and tested principles with the best peer-reviewed academic research into cryptography, consensus models and digital currencies. We start with solid blockchain basics and implement [new and powerful cryptography natively](documents.md).
 
-Ergo draws on ten years of blockchain development, complementing tried and tested principles with the best peer-reviewed academic research into cryptography, consensus models and digital currencies. We start with solid blockchain basics and implement new and powerful cryptography natively.
-
-**Powerful & Safe**
-
-Ergo provides superior support for real-world financial agreements. Ergo can support versatile dApps that run predictably, with known costs, and don't have any of the dangers of unrestricted functionality. Ergo's smart contracts allow us to execute wide-ranging tasks and can be Turing complete, but we always know in advance how much the code will cost and whether it will run successfully.
-
-**Intelligent and Straightforward**
-
-Sigma Protocols (Σ-Protocols) are the foundation of Ergo's smart contracts. They allow for a class of efficient zero-knowledge protocols that enable us to implement sophisticated tasks that would otherwise be impossible, risky, or expensive. Welcome to self-sovereign application-level privacy: trustless scripts that can access mixers or other functionality without any third parties required.
-
-**Secure and Accessible**
-
-Ordinary users who do not run a full node should enjoy the same security benefits as miners. Non-Interactive Proofs of Proof-of-Work (NIPOPOWS) allow us to make and verify transactions with complete confidence without needing the storage, bandwidth and time required to download the full blockchain. As little as 1 MB of data is necessary, meaning you can use any device.
+- **Powerful & Safe**: Ergo provides superior support for real-world financial agreements. Ergo can support versatile dApps that run predictably, with known costs, and don't have any of the dangers of unrestricted functionality. Ergo's [smart contracts](../../dev/scs) allow us to execute wide-ranging tasks and can be Turing complete, but we always know in advance how much the code will cost and whether it will run successfully.
+- **Intelligent and Straightforward**: Sigma Protocols [(Σ-Protocols)](sigma.md) are the foundation of Ergo's smart contracts. They allow for a class of efficient zero-knowledge protocols that enable us to implement sophisticated tasks that would otherwise be impossible, risky, or expensive. Welcome to self-sovereign application-level privacy: trustless scripts that can access mixers or other functionality without any third parties required.
+- **Secure and Accessible**: Ordinary users who do not run a full node should enjoy the same security benefits as miners. Non-Interactive Proofs of Proof-of-Work [(NIPoPoWs)](nipopow.md) allow us to make and verify transactions with complete confidence without needing the storage, bandwidth and time required to download the full blockchain. As little as 1 MB of data is necessary, meaning you can use any device.
 
 [**🔑 Key Features**](../../dev/protocol/)
 
@@ -163,11 +153,11 @@ Mining pools have certain benefits just now being exposed by Ergo, like more equ
 
 Mining pools offer a buffer against network attacks as the hash rate is distributed across thousands of individual miners.
 
-The memory hardened aspect of ergo also makes this attack vector more expensive as there is no ASIC support to rent. With the collective rentable rigs, there are more viable paths to a 51% attack. In theory, someone could build a massive GPU farm to try to launch such an attack. If a bad actor can rent a warehouse of ASIC and mine on a small chain with 51% attacks is a viable option... if there is an offramp. 
+The memory hardened aspect of ergo also makes this attack vector more expensive as there is no ASIC support to rent. With the collective rentable rigs, there are more viable paths to a 51% attack. In theory, someone could build a massive GPU farm to try to launch such an attack. If a bad actor can rent a warehouse of ASIC and mine on a small chain with 51% attacks is a viable option.
 
-Usually, this attack is made for profit, and massive dumping occurs on an exchange as it is occurring. The attacker will dump tokens on a business and then "double-spend" them back into their wallet. The current exchange situation doesn't provide the liquidity for a viable offramp, and the rentable ASIC support isn't an option. Is it possible, in theory, yes, practical or likely? I don't think so.
+Usually, this attack is made for profit, and massive dumping occurs on an exchange as it is occurring. The attacker will dump tokens on a business and then "double-spend" them back into their wallet. The current exchange situation doesn't provide the liquidity for a viable offramp, and the rentable ASIC support isn't an option. 
 
-Ethereum classic is a bad example, as it shares the same mining algorithm as Eth. One could buy more than 100% current hash rate of eth classic on NiceHash, and it's not the same case for Ergo. Ergo also believes in the 'Good Miner' principle; in the case of Bitcoin - it was a good thing 51% existed. 
+Other coins like Ethereum classic are a bad comparisons, as they shared the same mining algorithm as Eth. One could buy more than 100% of the hash rate of eth classic on NiceHash, and it's not the same case for Ergo. Ergo also believes in the 'Good Miner' principle; in the case of Bitcoin - it was a good thing 51% existed. 
 
 
 
@@ -192,10 +182,6 @@ For more info on earning off your Erg, look at the [Yield guide](https://ergonau
 
 Ergo follows a soft-forkability approach --- if a supermajority (90%+) of the network accepts a new feature, it is activated; however, old nodes that do not upgrade continue to operate normally and skip over this feature validation. Disruptive hard forks should be avoided in Ergo unless critical. 
 
-Ergo mining will always be stable, unlike Bitcoin and other PoW currencies, in which mining may become unstable after the emission period. Second, state size growth becomes controllable and predictable, reducing hardware requirements for Ergo miners. Third, by collecting storage fees from outdated boxes, miners return lost coins to circulation, preventing a steady decrease in the circulating supply due to lost keys. To achieve survivability, Ergo provides economic and technical improvements, the most central of which is a storage fee component which plays an important role in Ergo's stability.
-
-All cryptocurrencies rely on contributions from the scientific research community. Gladly Ergo brings it to the core! 
-
 ### [EIP-0027](https://github.com/ergoplatform/eips/blob/master/eip-0027.md)
 
 With the updated emission schedule described, re-emission (with 3 ERG re-emission rewards per block) would be enough for 4,566,336 blocks (~17.38 years).
@@ -212,5 +198,5 @@ It calculates the difficulty in two ways according to the past eight epochs of 1
 Then it takes an average from classic and predictive difficulties and limits the change so that the test can never be changed by more than 50% per epoch.
 
 
-Broader conversations about difficulty adjustments: https://www.ergoforum.org/t/diff-adjustment-potential-design-tradeoffs/3875
+Broader conversations about [difficulty adjustments on ergoforum](https://www.ergoforum.org/t/diff-adjustment-potential-design-tradeoffs/3875)
 

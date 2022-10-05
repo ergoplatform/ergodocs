@@ -2,11 +2,11 @@
 tags:
   - NIPoPoWs
 ---
-# NiPoPoWs
+# NIPoPoWs
 
-Ergo implements **NiPoPoWs**, or Non-interactive Proof-of-Proof-of-Work. These are short stand-alone strings that a computer program can inspect to verify that an event happened on a proof-of-work-based blockchain without connecting to the blockchain network and downloading all block headers. For example, these proofs can illustrate that a cryptocurrency payment was made.
+Ergo implements **NIPoPoWs**, or Non-interactive Proof-of-Proof-of-Work. These are short stand-alone strings that a computer program can inspect to verify that an event happened on a proof-of-work-based blockchain without connecting to the blockchain network and downloading all block headers. For example, these proofs can illustrate that a cryptocurrency payment was made.
 
-- [NIPoPoWs on Ergo: Innovations in Blockchain - April, 2022](https://ergoplatform.org/en/blog/2022-04-01-nipopows-on-ergo-innovations-in-blockchain/)
+- [NIPoPoWs on Ergo: Innovations in Blockchain - April, 2022](https://ergoplatform.org/en/blog/2022-04-01-NIPoPoWs-on-ergo-innovations-in-blockchain/)
 
 ## Literature
 
@@ -56,9 +56,9 @@ There are proposals to reduce the requirements for SPV mode by checking just a f
 
 ### Efficient SPV
 
-Several years have been spent researching and developing secure protocols for efficient SPV clients. The two best-known and most reliable protocols are NiPoPoWs and FlyClient.
+Several years have been spent researching and developing secure protocols for efficient SPV clients. The two best-known and most reliable protocols are NIPoPoWs and FlyClient.
 
-Ergo implements NiPoPoWs, or Non-interactive Proof-of-Proof-of-Work. You can explore this technology in full on this dedicated website: [https://nipopows.com](https://nipopows.com):
+Ergo implements NIPoPoWs, or Non-interactive Proof-of-Proof-of-Work. You can explore this technology in full on this dedicated website: [https://NIPoPoWs.com](https://NIPoPoWs.com):
 
 - *Non-Interactive Proofs of Proof-of-Work (NIPoPoWs) are short stand-alone strings that a computer program can inspect to verify that an event happened on a proof-of-work-based blockchain without connecting to the blockchain network and without downloading all block headers. For example, these proofs can illustrate that a cryptocurrency payment was made.*
 
@@ -72,7 +72,7 @@ A super-efficient Ergo wallet with SPV security is in development, so stay tuned
 ## Log-Space Mining
 Dionysis Zindros explains the technical landscape of Non-Interactive Proofs of Proof-of-Work. Dionysis takes a diligent approach for the Ergo Cast with a detailed rundown of what Non-Interactive Proofs of Proof-of-Work truly are. Furthermore, Dionysis evaluates the operation, implementation, and impact that his primitive delivers upon. Furthermore, we unveil a brand-new piece of research that -as of yet- has never been shared publicly: log-space mining.
 
-- [NiPoPoWs & Log-Space Mining – Ergo Cast Episode #5](https://ergocast.io/episode/nipopows-ergo-cast-episode-5/)
+- [NIPoPoWs & Log-Space Mining – Ergo Cast Episode #5](https://ergocast.io/episode/NIPoPoWs-ergo-cast-episode-5/)
 
 
 This section is based on a [recently published](https://eprint.iacr.org/2021/623.pdf) article by IOHK. For an additional resource, please see the following [video.](https://www.youtube.com/watch?v=s05ypkSC7gk)
@@ -82,7 +82,7 @@ Miners must constantly maintain the blockchain, whether it is Ergo, Bitcoin, or 
 
 A new miner's problem: Is downloading all the data from the genesis block strictly necessary? Why is it not possible to download only the most relevant blocks to maintain the network?
 
-The block headers of the blockchain should be enough to access the necessary data. [NIPoPoWs](https://nipopows.com/) (Non-Interactive Proofs of Proof of Work) can be integrated to form interlinked block header sets that will reduce historical data storage.
+The block headers of the blockchain should be enough to access the necessary data. [NIPoPoWs](https://NIPoPoWs.com/) (Non-Interactive Proofs of Proof of Work) can be integrated to form interlinked block header sets that will reduce historical data storage.
 
 When needing to access key blocks in the blockchain, miners should be able to do this from the headers of the old blocks efficiently. That is because each new block must indicate all of the current networks. As new blocks are created, a set of new block headers can be enough to check for the current UTXO set. Since the new blocks contain the data of old stringed block header sets, it enables light mining by eliminating the need to download all the blockchain data.
 
@@ -103,7 +103,7 @@ NIPoPoWs enable smart contracts to maintain historical data so that new "light" 
 
 Another implementation is cross-chain communication with Proof of Stake networks. PoS networks such as Cardano can interact with Ergo through NIPoPoW integration. Such verification schemes can erase the need for centralised DAO structures and create new non-interactive cross-chain operations. 
 
-To put it simply, NiPoPoWs act as sidechains. Two or more separate chains can integrate through NiPoPoWs without the need for change in other chains. Such integration would erase the need for, for example, "Wrapped Tokens," tokens that rely on DAO governance. 
+To put it simply, NIPoPoWs act as sidechains. Two or more separate chains can integrate through NIPoPoWs without the need for change in other chains. Such integration would erase the need for, for example, "Wrapped Tokens," tokens that rely on DAO governance. 
 
 NIPoPoW is a robust tool in creating blockchain networks and provides easier client access. They're also helpful in enhancing scalability by creating Layer 2 organisations. 
 

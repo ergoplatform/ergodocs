@@ -6,7 +6,7 @@ tags:
 
 Dionysis Zindros explains the technical landscape of Non-Interactive Proofs of Proof-of-Work. Dionysis takes a diligent approach for the Ergo Cast with a detailed rundown of what Non-Interactive Proofs of Proof-of-Work truly are. Furthermore, Dionysis evaluates the operation, implementation, and impact that his primitive delivers upon. 
 
-- [NiPoPoWs & Log-Space Mining – Ergo Cast Episode #5](https://ergocast.io/episode/nipopows-ergo-cast-episode-5/)
+- [NIPoPoWs & Log-Space Mining – Ergo Cast Episode #5](https://ergocast.io/episode/NIPoPoWs-ergo-cast-episode-5/)
 
 
 This section is based on a [recently published](https://eprint.iacr.org/2021/623.pdf) article by IOHK. For an additional resource, please see the following [video.](https://www.youtube.com/watch?v=s05ypkSC7gk)
@@ -17,7 +17,7 @@ Miners must constantly maintain the blockchain, whether it is Ergo, Bitcoin, or 
 
 A new miner's problem: Is downloading all the data from the genesis block strictly necessary? Why is it not possible to download only the most relevant blocks to maintain the network?
 
-The block headers of the blockchain should be enough to access the necessary data. [NIPoPoWs](https://nipopows.com/) (Non-Interactive Proofs of Proof of Work) can be integrated to form interlinked block header sets that will reduce historical data storage.
+The block headers of the blockchain should be enough to access the necessary data. [NIPoPoWs](https://NIPoPoWs.com/) (Non-Interactive Proofs of Proof of Work) can be integrated to form interlinked block header sets that will reduce historical data storage.
 
 When needing to access key blocks in the blockchain, miners should be able to do this from the headers of the old blocks efficiently. That is because each new block must indicate all of the current networks. As new blocks are created, a set of new block headers can be enough to check for the current UTXO set. Since the new blocks contain the data of old stringed block header sets, it enables light mining by eliminating the need to download all the blockchain data.
 

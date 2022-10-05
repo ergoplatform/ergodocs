@@ -20,7 +20,7 @@ So assume Alice is willing to buy *X* ERGs from Bob (paying with cash), but the 
 
 > Please note that outputs with respective identifiers are known for a signed transaction.
 
-2. Bob sends the transaction over (e)mail to a gateway. The gateway sends an efficient [NiPoPoW](https://nipopows.com/) proof for a header having enough confirmations + proof of box membership against state digest from the header. This proof is small, tens of kilobytes. For better security, Bob may also ask another gateway for header proof. 
+2. Bob sends the transaction over (e)mail to a gateway. The gateway sends an efficient [NiPoPoW](https://NIPoPoWs.com/) proof for a header having enough confirmations + proof of box membership against state digest from the header. This proof is small, tens of kilobytes. For better security, Bob may also ask another gateway for header proof. 
 
 3. Bob shows the proof to Alice. Alice checks proofs and ensures that the deadline will not likely be met when a new transaction with their deal reaches the Ergo blockchain. Bob signs the new transaction: spending the deal box created in step 1 and creating the output box for Alice.
 

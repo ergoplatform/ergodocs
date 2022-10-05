@@ -9,7 +9,7 @@ tags:
 
 There are three generations of blockchain, each capable of more complex behaviours than the last. The first generation refers to the original use BTC was intended for, that is, to provide a reliable and accurate method of maintaining a public transaction ledger. Second-generation blockchains were created with the implementation of smart contracts as a priority, with the most popular one being ETH (Ethereum). One of the big differences in ETH is the language used to code smart-contracts. ETH utilizes a [turing complete](https://www.cs.odu.edu/~zeil/cs390/latest/Public/turing-complete/index.html) language (known as Solidity), meaning it is computationally universal. 
 
-The third generation of blockchain technology now focuses on solving issues with congestion and scalability. As this technology becomes more decentralized, there will inevitably be an exponential increase in the number of users interacting with the blockchain. DOT, ADA and ERG are third-generation blockchains, meaning they have smart-contract capabilities while proposing solutions to scalability for a global audience. Third-generation blockchains generally can process off-chain transactions, helping speed up transactions significantly. Ergo also has various innovations to address scalability. NIPoPows on Ergo allow for connection to side chains and light chains, opening up a whole world of possibilities.
+The third generation of blockchain technology now focuses on solving issues with congestion and scalability. As this technology becomes more decentralized, there will inevitably be an exponential increase in the number of users interacting with the blockchain. DOT, ADA and ERG are third-generation blockchains, meaning they have smart-contract capabilities while proposing solutions to scalability for a global audience. Third-generation blockchains generally can process off-chain transactions, helping speed up transactions significantly. Ergo also has various innovations to address scalability. NIPoPoWs on Ergo allow for connection to side chains and light chains, opening up a whole world of possibilities.
 
 Ergo Platform has a research-based approach for long-term success and has a lot in its toolbox to tackle scaling as we grow, which scaling options we implement will depend on the needs of applications building on top of Ergo, as well as the success of the solutions in other protocols. 
 
@@ -40,7 +40,7 @@ ErgoScript adds several improvements such as time-weighted data, Turing complete
 
 ## Layer 0 *(Network Layer)*
 
-The network or *peer to peer* layer. The Ergo Node Client has greatly improved since v4.0.8 and still has room to grow. Quick bootstrapping using [NiPoPoWs](/docs/node/nipopow.md) proofs and UTXO set snapshots in development
+The network or *peer to peer* layer. The Ergo Node Client has greatly improved since v4.0.8 and still has room to grow. Quick bootstrapping using [NIPoPoWs](/docs/node/nipopow.md) proofs and UTXO set snapshots in development
 
 **Stateless Clients:** Then light clients: You can have full-node guarantees in Ergo without storing the full *UTXO set*. Bringing improved bootstrapping and block validation times.  
 
@@ -129,7 +129,7 @@ Another L2 solution for the UTXO model to consider as described in [this paper](
 
 > for improving the performance of the network, the reference protocol client (Ergo node) is getting different performance improvements in the p2p layer and not only right now
 
-> bootstrapping via UTXO set snapshot and NiPoPoWs are in progress now. Should allow for a client to have much faster bootstrapping with no compromising security
+> bootstrapping via UTXO set snapshot and NIPoPoWs are in progress now. Should allow for a client to have much faster bootstrapping with no compromising security
 
 > 5.0 soft-fork is going to be proposed to miners soon; the main change is about switching to just-in-time-costing in ErgoTree evaluation which is giving a 5-6x boost in scripts processing (on real blockchain data)
 

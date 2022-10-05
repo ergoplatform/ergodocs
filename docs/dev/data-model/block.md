@@ -16,7 +16,7 @@ In Ergo, just like Bitcoin, Ethereum, and other blockchains, blocks are broken i
 * Extensions
 * Proofs of UTXO transformation
 
-The 'extension' section contains certain mandatory fields (including links for NiPoPoWs, once per 1,024 block epoch) and parameters for miner voting, such as current block size. It can also contain arbitrary fields.
+The 'extension' section contains certain mandatory fields (including links for NIPoPoWs, once per 1,024 block epoch) and parameters for miner voting, such as current block size. It can also contain arbitrary fields.
 
 **What this means in practice is that different types of nodes and clients can download only those sections of the blocks they need – reducing the demands for storage, bandwidth, and CPU cycles.**
 

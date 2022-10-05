@@ -93,7 +93,7 @@ nav:
         - Overview: dev/protocol/eutxo/eutxo.md
         - ELI5: dev/protocol/eutxo/accountveutxo.md
         - Atomic Swaps: dev/protocol/eutxo/atomic.md
-      - NIPoPoWS: dev/protocol/nipopow.md
+      - NIPoPoWs: dev/protocol/nipopow.md
       - Sigma Protocols: dev/scs/sigma.md
       - Storage Rent: mining/rent.md
       - Autolykos: mining/autolykos.md
