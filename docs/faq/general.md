@@ -159,6 +159,21 @@ Usually, this attack is made for profit, and massive dumping occurs on an exchan
 
 Other coins like Ethereum classic are a bad comparisons, as they shared the same mining algorithm as Eth. One could buy more than 100% of the hash rate of eth classic on NiceHash, and it's not the same case for Ergo. Ergo also believes in the 'Good Miner' principle; in the case of Bitcoin - it was a good thing 51% existed. 
 
+### How fast is Ergo?
+
+TPS (Transactions Per Second) is not a useful metric. On Ergo Reference Node v.5, TPS is estimated to be a minimum of 47.5 tx/s. However, transactions can happen in three scaling layers or levels:
+ - L0: Ergo Reference Nodes, which can be bootstrapped using NiPoPoWs proofs and UTXO set snapshots.
+- L1: Ergo has extensions that allow for a wide variety of scaling solutions such as Sharding, Hydra, or BitcoinNG-style macroblocks.
+- L2 (off-chain): Ergo should be compatible with the Lightning Network, Rainbow Network, and many more. The implementation here will depend on the needs of the applications being built on Ergo.
+
+The general idea is that many transactions can happen in L1 or L2 and these transactions can be bundled and settled on the L0 layer of the Ergo blockchain using a single transaction. Thanks to the high flexibility of ErgoScript programming model, many different protocols are possible, each one solving scalability problem in a specific domain (like simple payment transactions).
+Ergo blockchain can be thought as common settlement layer for many L1/L2 protocols and applications.
+
+See the [scaling](scaling.md) page for more information.
+
+## Is Proof of Useful Work being considered?
+
+While Proof of Useful Work is an interesting idea, it is still in its research phase. Ergo is open to implementing new ideas. But, a radical change to its concensus mechanism that requires a hard fork would likely be outside the scope and resources of Ergo's small core development team and limited budget.
 
 
 ## How can I stake my Erg?
