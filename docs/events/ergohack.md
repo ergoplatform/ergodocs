@@ -10,26 +10,27 @@ Click any of the event names below to jump directly to an overview and related r
 
 - (Jun 21) [ERGOHACK I: *Hack For Change*](#ergohack-i) 
 - (Oct 21) [ERGOHACK II: *Social Transformation*](#ergohack-ii) 
-- (May 21) [ERGOHACK III: *Privacy and Security*](#ergohack-iii-privacy--security) 
-- (Feb 22) [ERGOHACKFEST:](#ergohackfest) was a three-week event in conjunction with ErgoPad
+- (Feb 22) [ERGOHACK III: *Privacy and Security*](#ergohack-iii-privacy--security) 
+- (Jun 22) [ERGOHACKFEST:](#ergohackfest) was a three-week event in conjunction with ErgoPad
 - (Oct 22) [ERGOHACK V: *Mining & Minting*](#ergohackv) 
 
 ### ERGOHACKV
 
-- [**DumDumDum**](#dumdumdum) is building a decentralised Twitter alternative stored **on-chain** using NFTs.
-- [**Cyti**](#cyti) A *mineable* smart contracts allows you to Choose Your Token ID.
+- [**DumDumDum:**](#dumdumdum) A decentralised **on-chain** Twitter alternative.
+- [**Cyti:**](#cyti) A *mineable* smart contract that allows you to Choose Your Token ID.
 - [**EIP38**](#eip38-partial-voting) aims to empower miners with a 'partial' vote option. 
-- [**Succinct, Non-Interactive Share Proofs**](#snisp) allow for calculations of performed work on the blockchain. 
-- [**Dlop**](#dlop-art-generator) is creating a art generator for the community. 
-- [**Paizo**](#paizo) is working on-chain governance education for miners.
-- [**Ergo-Payroll**](#ergo-payroll) is a automated payroll distribution tool.
-- [**Obolflip**](#obolflip) is a decentralised CoinFlip game.
+- [**Succinct, Non-Interactive Share Proofs**](#snisp) allow for efficient on-chain calculations of PoW. 
+- [**Paizo:**](#paizo) on-chain governance education for miners.
+- [**Ergo-Payroll:**](#ergo-payroll) Automated payroll distribution tool.
+- [**Obolflip:**](#obolflip) A decentralised CoinFlip game.
 - [**ergo-audit**](#ergo-audit) is *code-auditing* DAO.
-- [**ErgoNames**](#ergonames) bringing easy to remember names to Ergo. *(~you.erg)*
-- [**SigmaBalls**](#sigmaballs) is working on options trading solution. 
-- [**MineErgo**](#mineergo) rewards miners with NFTs.
-- [**Sigma-Rust-Jit**](#sigma-rust-jit) is enhancing sigma-rust with JIT Costing. 
-- [**Satergo**](https://satergo.com/) is adding a stratum mining server module.
+- [**ErgoNames:**](#ergonames) bringing easy to remember names to Ergo. 
+- [**SigmaBalls:**](#sigmaballs) An options trading solution. 
+- [**MineErgo:**](#mineergo) Rewarding miners with NFTs.
+- [**Sigma-Rust-Jit**](#sigma-rust-jit) is enhancing [sigma-rust](rust.md) with JIT Costing. 
+- [**Satergo**](https://satergo.com/) is adding a stratum mining server module to their wallet. 
+- [**Dlop**](#dlop-art-generator) is creating a art generator for the community. 
+
 
 ### ERGOHACKFEST
 
