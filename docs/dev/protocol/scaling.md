@@ -75,6 +75,7 @@ You can use Plasma to create Plasma chains and make a full L2 solution. Right no
 
 - [Plasma Example: Off-chain Bank operating at Layer 2](https://www.ergoforum.org/t/offchain-bank-operating-at-layer-2/3367)
 - [GetBlok Plasma](https://github.com/GetBlok-io/GetBlok-Plasma)
+- [AVL Trees / Plasma In ErgoScript: Basics, Tips, and Design Patterns](https://github.com/GetBlok-io/GetBlok-Plasma/blob/master/documents/AVL_Trees.MD)
 - [GetBlok: SmartPool Plasma](https://github.com/GetBlok-io/GetBlok-Plasma/blob/master/documents/SmartPool_Plasma.MD)
 - [Paideia - Plasma Staking](https://github.com/ergo-pad/paideia-contracts/blob/main/paideia_contracts/contracts/plasma_staking/ergoscript/latest/plasmaStaking.es)
 
