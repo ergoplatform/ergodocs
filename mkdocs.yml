@@ -195,6 +195,7 @@ nav:
         - Processing data: dev/stack/mosaik/tutorial3.md
         - ErgoPay: dev/stack/mosaik/tutorial4.md
         - Web UI: dev/stack/mosaik/tutorial5.md
+        - Deployment: dev/stack/mosaik/mosaik-docker-flux.md
         - Example apps: dev/stack/mosaik/examples.md
       - ErgoPay:
         - ErgoPay: dev/wallet/payments/ergopay/ergo-pay.md
