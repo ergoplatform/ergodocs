@@ -10,6 +10,7 @@ The following Mosaik apps are open-sourced can be used to take inspiration from 
 * [Mosaik view elements and actions](https://github.com/MrStahlfelge/mosaik/tree/develop/backend-demo-kotlin) - Showcasing all available view elements and actions
 * [Burn tokens demo](https://github.com/MrStahlfelge/mosaik-demo-tokenburn) - UI for burning tokens, fully functional with ErgoPay
 * [NFT marketplace](https://github.com/MrStahlfelge/mosaiknftmarketplace) - Example UI for an NFT marketplace
+* [Obol Flip](https://github.com/obolflip/obolflip-client) - Decentralized coin flip, downloadable Mosaik client
 
 ### Spring and Java
 * [LazyBox, Alignments](https://github.com/MrStahlfelge/mosaik/tree/develop/backend-demo) - Example app building UI in pure Java
