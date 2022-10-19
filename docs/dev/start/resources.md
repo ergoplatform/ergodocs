@@ -30,15 +30,13 @@ This page outlines the resources available on Ergo. Also check out the [dev-tool
 
 ### Explorer
 
-**Explorer**
-
 - [Mainnet explorer](https://explorer.ergoplatform.com/)
 
 ### Testnet
 
 - [Testnet explorer](https://testnet.ergoplatform.com/)
-  - [Using Ergo-Testnet](https://github.com/ergoplatform/ergo/wiki/Ergo-Testnet)
-  - [Testnet Faucet](https://testnet.ergofaucet.org/)
+    - [Using Ergo-Testnet](https://github.com/ergoplatform/ergo/wiki/Ergo-Testnet)
+    - [Testnet Faucet](https://testnet.ergofaucet.org/)
 
 ### API
 

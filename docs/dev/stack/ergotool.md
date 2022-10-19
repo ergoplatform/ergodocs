@@ -3,7 +3,7 @@
 
 ## Introduction
 
-[ErgoTool](https://github.com/aslesarenko/ergo-tool) is a command-line interface (CLI) for [Ergo blockchain](https://ergoplatform.org/). You can use ErgoTool without running your own Ergo node. However, running a node is the most secure way to communicate with the blockchain. However, the Ergo blockchain network, ErgoTool, aims to provide more foundational tools at your disposal. Surely, you still can use it with your running node.
+[ErgoTool](https://github.com/aslesarenko/ergo-tool) is a command-line interface (CLI) for [Ergo blockchain](https://ergoplatform.org/). You can use ErgoTool without running your own Ergo node. However, running a node is the most secure way to communicate with the blockchain. 
 
 In this post, we will walk through simple steps to generate a mnemonic phrase, create a local secret storage and use it to send ERGs between addresses, all with the help of ErgoTool commands.
 

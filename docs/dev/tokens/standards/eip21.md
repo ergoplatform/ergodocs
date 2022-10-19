@@ -11,7 +11,7 @@ Tokens can be minted by every user, with a name and description free to choose. 
 
 ## Ergo tokens background
 
-[See EIP-4](eip-0004.md): Ergo supports custom tokens as first-class citizens. A transaction can create out-of-thin-air tokens in its outputs if the token 
+[See EIP-4](eip4.md): Ergo supports custom tokens as first-class citizens. A transaction can create out-of-thin-air tokens in its outputs if the token 
 identifier is equal to the identifier of the first input box of the transaction.
 As the box identifier is cryptographically unique, there's no chance to have the second token with the same identifier while the hash function being used 
 is collision-resistant. 
