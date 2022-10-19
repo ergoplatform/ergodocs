@@ -127,7 +127,7 @@ These proofs can be applied to any PoW blockchain. They should allow for the cre
 
 
 #### dlop-art-generator
-> Live @ [https://twotens.art/build.html](twotens.art/build.html)
+> Live @ [twotens.art/build.html](https://twotens.art/build.html)
 
 A UI and website for generating 1010s art pieces so the community will be able to make their own. [Time willing, this entry] will also experiment with SVG format (versus PNG) and enable minting the piece in a connected wallet. [Final Submission](https://twotens.art/ergohack_v.html)
 

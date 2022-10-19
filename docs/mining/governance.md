@@ -15,6 +15,8 @@ To vote **Yes** and propose a change in the first block of an epoch, a miner is 
 
 ## Parameters table
 
+> Try out these parameters on [deadit.github.io/paizo/](https://deadit.github.io/paizo/)
+
 
 The following table describes vote identifiers, default values (during launch), possible steps, and minimum and maximum values. If the step is not defined in the table, its value is defined as $\max(\lfloor current\_value / 100 \rfloor, 1)$. If the minimum value for a parameter is not defined, it equals zero. If the maximum value is not defined, it equals `1,073,741,823`.
 

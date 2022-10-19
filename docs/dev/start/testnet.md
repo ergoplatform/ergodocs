@@ -4,6 +4,13 @@ The testnet is an alternative Ergo blockchain you can use for testing and experi
 
 The easiest way to get setup on the testnet is to use [PaiNet](https://github.com/mgpai22/paiNet)
 
+- [live node](https://pai-net.mempoolnode.live/panel)
+- [explorer](https://explorer.mempoolnode.live/)
+- [api](https://api.mempoolnode.live/api/v1/docs/) 
+- [gql](https://gql.mempoolnode.live/)
+- You can get some testERG from [testnet.ergofaucet.org](https://painet-faucet.mempoolnode.live/)
+
+
 
 ## Synchronising a full node
 
@@ -42,7 +49,6 @@ The node will be available at `localhost:9052/panel`
 
 Once the node is syncronised, a user interface for [Swagger](/node/swagger/) is available at `localhost:9052/swagger`. 
 
-You can get some testERG from [testnet.ergofaucet.org](https://testnet.ergofaucet.org/)
 
 
 ## Resources

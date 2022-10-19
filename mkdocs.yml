@@ -140,7 +140,6 @@ nav:
       - API: node/swagger.md
       - FAQ: node/install/faq.md
       - Resources:
-        - Explorer: node/explorer.md
         - Test-net: dev/start/testnet.md
         #- Architecture: node/architecture.md
         - Distributed Signatures: node/sigs.md
@@ -156,7 +155,7 @@ nav:
           - Network Messages: dev/p2p/network.md
           # - Modifiers Exchange: dev/p2p/modifiers.md
           # - BlockP2P: dev/p2p/BlockP2P.md
-    - Anatomy:
+    - Anatomy of Ergo:
       - Box:
         - Box: dev/data-model/box/index.md
         - Registers: dev/data-model/box/registers.md
@@ -183,6 +182,7 @@ nav:
             - Payment Request URI: dev/wallet/payments/standards/eip25.md
           - Data Inputs: dev/scs/data-inputs.md
           - ErgoTool: dev/stack/ergotool.md
+        - Sending A Chained Transaction: dev/anatomy/transactions/chained.md
 
       - Addresses: dev/wallet/address.md
       - Block: dev/data-model/block.md
@@ -203,7 +203,7 @@ nav:
       - Rust: dev/lang/rust.md
       - Python: dev/lang/python.md
       - C#: dev/lang/csharp.md
-      - JS: dev/lang/js.md
+      - JavaScript: dev/lang/js.md
     - Frameworks & Toolkits:
       - What framework should I use?: dev#getting-started
       - AppKit:
@@ -215,10 +215,13 @@ nav:
       - Headless dApp Framework: dev/stack/headless.md
       - Fleet JS Toolkit: dev/stack/fleet.md
     - Explorer & APIs: 
-      - Explorer: dev/stack/explorer/explorer.md
-      - Local Setup: dev/stack/explorer/explorer_local.md
+      - Explorer: 
+        - ergo-explorer: dev/stack/explorer/explorer.md
+        - Local Setup: dev/stack/explorer/explorer_local.md
+        - Pi Blockchain Explorer: dev/stack/rpi-blockchain-explorer.md
       - GraphQL: dev/stack/explorer/graphql.md
-      - Pi Blockchain Explorer: dev/stack/rpi-blockchain-explorer.md
+      - APIs: dev/stack/api.md
+
     - Smart Contracts:
       - Creating a simple P2S app: dev/scs/p2s.md
       - Smart Contracts: dev/scs/index.md
