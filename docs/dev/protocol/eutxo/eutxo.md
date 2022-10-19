@@ -16,8 +16,11 @@ UTXO provides superior
 
 Extended UTXO systems enable **Turing complete** smart contracts. This is a novel innovation that allows the latest generation of blockchains to reclaim the original model that Bitcoin used, but with a lot more power, while adding support for more expressive smart contracts. 
 
+## Overviews
 
-A good introductory article can be found [here](https://dav009.medium.com/learning-ergo-101-blockchain-paradigm-eutxo-c90b0274cf5e) or [DeCo EU Layman Class - Basics of eUTxO](https://www.youtube.com/watch?v=SAWeW6wajEw)
+- [Ergo Blockchain Crash Course Part 1: eUTXO Model Review](https://www.youtube.com/watch?v=gGRAjK-VwJs&list=PL8-KVrs6vXLTVXGwmYXjOBRx3VymB4Vm2&index=1)
+- [Learning Ergo 101 : eUTXO explained for human beings](https://dav009.medium.com/learning-ergo-101-blockchain-paradigm-eutxo-c90b0274cf5e) 
+- [DeCo EU Layman Class - Basics of eUTxO](https://www.youtube.com/watch?v=SAWeW6wajEw)
 
 ## ErgoScript
 

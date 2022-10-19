@@ -23,7 +23,7 @@ The Ergo development stack looks a bit like this,
 
 - For Java, [AppKit By Example](https://www.youtube.com/watch?v=Md5s-XV6-Hs) takes you through the steps to programmatically create & submit a transaction. 
 - For JavaScript, we have the [Hitchhiker's guide to dApp development on Ergo](https://www.youtube.com/playlist?list=PLzY-irO3z3G8FVDifned2NMFc-PgQqnny). 
-- Start from the basics with the [DeCo Education Laymen's Course](https://www.youtube.com/channel/UCyOIxD7YSHN5QwLIulOWrew/playlists) 
+- Start from the basics with the [DeCo Education Laymen's Course](https://www.youtube.com/channel/UCyOIxD7YSHN5QwLIulOWrew/playlists) or the [Ergo Blockchain Crash Course](https://www.youtube.com/playlist?list=PL8-KVrs6vXLTVXGwmYXjOBRx3VymB4Vm2)
 - Dive into [ErgoScript](scs/ergoscript/)
 
 
@@ -42,6 +42,7 @@ This [introduction to Mosaik](stack/mosaik/intro.md) provides a brief overview o
 
 ### Educational Courses
 
+- [Ergo Blockchain Crash Course](https://www.youtube.com/playlist?list=PL8-KVrs6vXLTVXGwmYXjOBRx3VymB4Vm2)
 - DeCo (Decentralised Collaboration) teaches participants about extended UTXO and boxes, registers, ErgoScript, designing simple systems, multi-transaction systems, and more. Join their [Discord](https://discord.gg/PQPyFbKZ9z) for more information.
 - [Educational Classes on Game Building and Design](https://medium.com/@lgmeister/the-future-of-ergogames-io-hosting-educational-classes-on-game-building-and-design-679afd2632d4) from [ErgoGames.io](https://ergogames.io)
 

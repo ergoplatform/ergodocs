@@ -95,12 +95,11 @@ Click any of the event names below to jump directly to an overview and related r
 > [In collaboration with The Djed Alliance, Alephium and Flux](https://ergoplatform.org/en/blog/Ergo-Foundation-Announces-ErgoHack-5-Mining-and-Minting/)
 
 
-#### DumDumDum
+#### [DumDumDum](https://github.com/kii-dot/dumdumdum)
 
 **DumDumDum** is a decentralised Twitter alternative stored **on-chain** using NFTs.
 
 - [Documentation](https://kii-dot.notion.site/kii-dot/Ergo-Twitter-063eb242ab034fa7bb17d4e0088226b8)
-- [ergo-twitter](https://github.com/kii-dot/ergo-twitter)
 
 
 #### [Cyti](https://github.com/ThierryM1212/cyti)
@@ -109,12 +108,14 @@ Click any of the event names below to jump directly to an overview and related r
 
 CYTI stands for Choose Your Token ID. A 'minable' smart contract that allows an entity to mint tokens with a given character sequence at the beginning of the token ID. A token minter creates a CYTI request, and miners generate the proper token ID using the CYTI miner software.
 
+- [A demo video of CYTI minting a NFT collection in one transaction](https://youtu.be/xjAHZoT0L7A)
 
 #### [EIP38-Partial-Voting](https://github.com/WilfordGrimley/eip38PartialVoting)
 
 This EIP proposes modifying how parameter identifiers are communicated in the extension section of block headers, such that in addition to miners being able to vote for or against a change, they can vote partially in support of a change (for indicative voting). This will enable mining pools to pass along true governance power to their miners when combined with a method for miner voting within a pool (such as GetBlok's proof-of-vote)."
 
-- [(Unfinished) EIP](https://github.com/WilfordGrimley/eip38PartialVoting/blob/master/EIP-0038.md)
+- [video presentation](https://dalek.zone/w/quqExPoNiabYLKFx1FqUsf)
+- [EIP-0038](https://github.com/WilfordGrimley/eip38PartialVoting/blob/master/EIP-0038.md)
 - [Draft PR](https://github.com/WilfordGrimley/ergo/blob/EIP-0038/src/main/scala/org/ergoplatform/nodeView/state/VotingData.scala)
 
 #### SNISP
@@ -122,16 +123,19 @@ This EIP proposes modifying how parameter identifiers are communicated in the ex
 
 These proofs can be applied to any PoW blockchain. They should allow for the creation of decentralised mining pools with better security assumptions than alternatives like P2Pool, and better scalability than ETH-based SmartPools. They may also be used for other applications which involve measuring performed work (such as direct work-based governance, work-backed assets, etc)
 
-> [Draft paper](pdf/SNISP_First_Draft.pdf)
+> [Draft paper](pdf/SNISP_FINAL_NO_CITATIONS.pdf)
 
 
 #### dlop-art-generator
+> Live @ [https://twotens.art/build.html](twotens.art/build.html)
 
-A UI and website for generating 1010s art pieces so the community will be able to make their own. [Time willing, this entry] will also experiment with SVG format (versus PNG) and enable minting the piece in a connected wallet. See an example [here](https://twotens.art/sets/ptl.html)
+A UI and website for generating 1010s art pieces so the community will be able to make their own. [Time willing, this entry] will also experiment with SVG format (versus PNG) and enable minting the piece in a connected wallet. [Final Submission](https://twotens.art/ergohack_v.html)
 
 
 #### [Paizo](https://github.com/deadit/paizo)
 
+> Live @ [deadit.github.io/paizo/](https://deadit.github.io/paizo/)
+> 
 Paizo will be an on-chain mining governance simulation tool to help educate miners on how chain governance works. Currently, this information is highly technical and not intuitive to learn for the average user, so we want to make this information simple to understand so miners are empowered to make their voices heard on chain.
 
 
@@ -139,9 +143,13 @@ Paizo will be an on-chain mining governance simulation tool to help educate mine
 
 Ergo-payroll will be an automated payroll distribution tool for ERGO. Enter your employees, enter the amount (count) in token or the amount of USD in token, enter frequency, and their wallets. Users only need to keep filling up the bank, and the system will take care of the rest.
 
+- [GitHub](https://github.com/andrehafner/ergo-payroll)
+
 #### [Obolflip](https://github.com/obolflip)
 
-> LIVE @ [Local](https://github.com/obolflip/obolflip-client#running-obol-flip-client) with JVM11 & ErgoPay
+> [LIVE on flux](https://obolflip.app.runonflux.io/)
+
+- [Documentation](https://github.com/obolflip/obolflip-client)
 
 **A decentralised CoinFlip application on Ergo where users can bet on head or tail.**
 
