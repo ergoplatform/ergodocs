@@ -1,7 +1,10 @@
 # ErgoSummit
 
 
-##  Ergo Summit 2022 Privacy & Security
+
+##  **Ergo Summit 2022:** *Privacy & Security*
+
+This event will featured presentations and discussions by developers and blockchain experts on the state of DeFi, where it needs to go, and the DeFi solutions that are being built on Ergo.
 
 - [Upgrading Macroeconomic Policy via Softfork | Dionysis Zindros](https://www.youtube.com/watch?v=2OrHmBaBn9E)
 - [Decentralizing the Internet | Johnny Wu](https://www.youtube.com/watch?v=EGcp_T3AiWk)

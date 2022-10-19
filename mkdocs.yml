@@ -159,6 +159,11 @@ nav:
       - Data Inputs: dev/scs/data-inputs.md
       - Multi-Stage Contracts: dev/scs/multi.md 
       #- UTXO-State: 
+    - Tokens:
+      - Create a token: dev/tokens/issue.md
+      - Standards:
+        - EIP-4 Asset Standard: dev/tokens/standards/eip4.md
+        - EIP-21 Geniune Token Verification: dev/tokens/standards/eip21.md
     - Smart Contracts:
       - Smart Contracts: dev/scs/index.md
       - ErgoScript: 
@@ -170,13 +175,13 @@ nav:
       - FlowCards: dev/scs/flowcards.md
       - ErgoTree: dev/scs/ergotree.md
     - Languages:
-      - Scala: dev/Languages/scala.md
-      - Java: dev/Languages/java.md
-      - Kotlin: dev/Languages/kotlin.md
-      - Rust: dev/Languages/rust.md
-      - Python: dev/Languages/python.md
-      - C#: dev/Languages/csharp.md
-      - JS: dev/Languages/js.md
+      - Scala: dev/lang/scala.md
+      - Java: dev/lang/java.md
+      - Kotlin: dev/lang/kotlin.md
+      - Rust: dev/lang/rust.md
+      - Python: dev/lang/python.md
+      - C#: dev/lang/csharp.md
+      - JS: dev/lang/js.md
     - Libraries:
       - AppKit:
         - AppKit: dev/stack/appkit/appkit.md
@@ -202,6 +207,8 @@ nav:
         - Tutorial: dev/wallet/payments/ergopay/ep-tutorial.md
       - dApp Connector: dev/wallet/payments/dApp.md
       - Proxy Contracts: dev/wallet/payments/proxy.md
+      - Off-Chain:
+        - Oracle-Core: dev/oc/oracle.md
     - Resources: 
       - Bookmarks: dev/start/resources.md
       - Tutorials: 
@@ -240,7 +247,7 @@ nav:
         - Atomic Swaps: dev/protocol/atomic.md
         - ErgoData: uses/ErgoData.md
       - Further Ideas:
-        - CDBC: uses/cbdc.md
+     #  - CDBC: uses/cbdc.md
         - Lotteries: uses/lottery.md
         - Insurance: uses/insurance.md
         - Derivatives: uses/deriv.md
@@ -251,7 +258,7 @@ nav:
         - Collateral Mining: uses/collateral-mining.md
         - Mutual Credit: uses/mutual_credit.md
         - Prediction Markets: uses/prediction_markets.md
-        - Privacy: uses/privacy.md
+       # - Privacy: uses/privacy.md
         - Perpetual Tokens: uses/perpetual.md
         - Bonding Curve: uses/bonding.md
         - Context Claims: uses/context-claims.md

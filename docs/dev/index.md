@@ -21,8 +21,8 @@ Dive in if you have a language in mind you want to use, or some of the best intr
 
 
 - [JVM (Scala/Java)](/dev/stack/appkit/appkit)
-- [Rust](/dev/Languages/rust)
-- [Python](/dev/Languages/python)
+- [Rust](/dev/lang/rust)
+- [Python](/dev/lang/python)
 - [JavaScript](js.md)
 - [JSON](/dev/stack/jde)
 - [ErgoScript](scs/ergoscript/)
