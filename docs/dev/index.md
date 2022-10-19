@@ -2,7 +2,7 @@
 
 This page provides a general entry-point to all aspects of Ergo development. 
 
-> Join our [Discord](https://discord.gg/7kWWQeMCwe) server for regular [Hackathons](ergohack.md) or dev-support
+> Join our [Discord server](https://discord.gg/7kWWQeMCwe) dev-support (and regular [ERGOHACKs](ergohack.md))
 
 
 
@@ -11,7 +11,7 @@ This page provides a general entry-point to all aspects of Ergo development.
 
 To get started, make sure to familiarise yourself with the [Ergo protocol](/dev/protocol) the [eUTXO](eutxo.md) model and it's [differences from the account model](accountveutxo.md).
 
-Essentially, 
+The Ergo development stack looks a bit like this, 
 
 - Ergo has a Bitcoin-like UTXO transactional model: transactions spend and create one-time objects. We call this object a [box](data-model/box/index.md).
 - The **on-chain** code is written in [ErgoScript](ergoscript.md) (a subset of scala), the ***off-chain*** code can be done in a programming langage of your choice. 
@@ -27,28 +27,23 @@ Essentially,
 - Dive into [ErgoScript](scs/ergoscript/)
 
 
-**SDKs**
+## Frameworks, Toolkits and Standard Development Kits (SDKs)
 
-SDKs are now available with the most popular being [ergo-appkit](appkit.md) for JVM languages (used in Scala, Java and Kotlin projects), and JS languages through [sigma-rust](rust.md) or more recently [Fleet](fleet.md). There is also tooling for [Python](/dev/lang/python) and a [JSON dApp Environment (JDE)](jde.md).
+There are several robust options now available with the most popular being [ergo-appkit](appkit.md) for JVM languages (used in Scala, Java and Kotlin projects), and JS languages through [sigma-rust](rust.md) or more recently [Fleet](fleet.md). There are also [Python wrappers](/dev/lang/python) and a [JSON dApp Environment (JDE)](jde.md).
 
 This [introduction to Mosaik](stack/mosaik/intro.md) provides a brief overview of some of the design decisions you'll need to make when creating your application.
 
 
 
+## Resources 
 
-
-
+> Make sure to check out the [resources](resources.md) page and the *dev-tools* tab on [sigmaverse.io](https://sigmaverse.io/)
 
 
 ### Educational Courses
 
 - DeCo (Decentralised Collaboration) teaches participants about extended UTXO and boxes, registers, ErgoScript, designing simple systems, multi-transaction systems, and more. Join their [Discord](https://discord.gg/PQPyFbKZ9z) for more information.
 - [Educational Classes on Game Building and Design](https://medium.com/@lgmeister/the-future-of-ergogames-io-hosting-educational-classes-on-game-building-and-design-679afd2632d4) from [ErgoGames.io](https://ergogames.io)
-
-
-## Resources 
-
-> Make sure to check out the [resources](resources.md) page and the *dev-tools* tab on [sigmaverse.io](https://sigmaverse.io/)
 
 ### Introductionary Articles 
 

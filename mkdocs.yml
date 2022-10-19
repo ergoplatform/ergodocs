@@ -167,13 +167,24 @@ nav:
       - Block: dev/data-model/block.md
       - Addresses: dev/wallet/address.md
       - Data Inputs: dev/scs/data-inputs.md
-      - Multi-Stage Contracts: dev/scs/multi.md 
       #- UTXO-State: 
     - Tokens:
       - Create a token: dev/tokens/issue.md
       - Standards:
         - EIP-4 Asset Standard: dev/tokens/standards/eip4.md
         - EIP-21 Geniune Token Verification: dev/tokens/standards/eip21.md
+    - Payments: 
+      - ErgoPay:
+        - ErgoPay: dev/wallet/payments/ergopay/ergo-pay.md
+        - Tutorial: dev/wallet/payments/ergopay/ep-tutorial.md
+      - dApp Connector: dev/wallet/payments/dApp.md
+      - Proxy Contracts:
+        - Proxy Contracts: dev/wallet/payments/proxy.md
+        - Assembler: dev/stack/assembler.md
+      - Standards:
+        - Proxy Contracts: dev/wallet/payments/standards/eip17.md
+        - ErgoPay Protocol: dev/wallet/payments/standards/eip20.md
+        - Payment Request URI: dev/wallet/payments/standards/eip25.md
     - Programming Languages:
       - What language should I use?: dev#getting-started
       - Scala: dev/lang/scala.md
@@ -202,21 +213,11 @@ nav:
         - Sigma Protocols: dev/scs/sigma.md
         - Debugging: dev/scs/debugging.md
       - FlowCards: dev/scs/flowcards.md
+      - Multi-Stage Contracts: dev/scs/multi.md 
       - ErgoTree: dev/scs/ergotree.md
       - Kiosk: dev/stack/kiosk.md
   
-    - Payments: 
-      - ErgoPay:
-        - ErgoPay: dev/wallet/payments/ergopay/ergo-pay.md
-        - Tutorial: dev/wallet/payments/ergopay/ep-tutorial.md
-      - dApp Connector: dev/wallet/payments/dApp.md
-      - Proxy Contracts:
-        - Proxy Contracts: dev/wallet/payments/proxy.md
-        - Assembler: dev/stack/assembler.md
-      - Standards:
-        - Proxy Contracts: dev/wallet/payments/standards/eip17.md
-        - ErgoPay Protocol: dev/wallet/payments/standards/eip20.md
-        - Payment Request URI: dev/wallet/payments/standards/eip25.md
+   
     - Resources: 
       - Off-Chain:
         - Oracle-Core: dev/oc/oracle.md
