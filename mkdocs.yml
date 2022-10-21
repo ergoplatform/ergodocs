@@ -162,9 +162,15 @@ nav:
       - Tokens:
         - Create a token: dev/tokens/issue.md
         - Burning a token: dev/tokens/burn.md
+        - NFTs:
+          - NFTs: dev/tokens/nfts/index.md
+          - Create a NFT: dev/tokens/nfts/create.md
+          - Royalties: dev/tokens/nfts/royalties.md
         - Standards:
           - Asset Standard: dev/tokens/standards/eip4.md
           - Geniune Token Verification: dev/tokens/standards/eip21.md
+          - Auction Contract: dev/tokens/standards/eip22.md
+          - Artwork Contract: dev/tokens/standards/eip24.md
       - Transactions: 
         - Transactions: dev/protocol/transaction.md
         - Model Transaction: dev/protocol/model-tx.md
@@ -196,7 +202,6 @@ nav:
           - Cold Wallet: dev/wallet/standards/eip19.md
       #- UTXO-State: 
     - Programming Languages:
-      - What language should I use?: dev#getting-started
       - Scala: dev/lang/scala.md
       - Java: dev/lang/java.md
       - Kotlin: dev/lang/kotlin.md
@@ -204,7 +209,7 @@ nav:
       - Python: dev/lang/python.md
       - C#: dev/lang/csharp.md
       - JavaScript: dev/lang/js.md
-    - Frameworks & Toolkits:
+    - Frameworks:
       - What framework should I use?: dev#getting-started
       - AppKit:
         - AppKit: dev/stack/appkit/appkit.md
@@ -213,7 +218,13 @@ nav:
       - Mosaik: dev/stack/mosaik/intro.md
       - JSON dApp Environment: dev/stack/jde.md
       - Headless dApp Framework: dev/stack/headless.md
-      - Fleet JS Toolkit: dev/stack/fleet.md
+      - RustKit: https://github.com/rust-ergo/rustkit
+    - Libaries:
+      - Fleet (JS): dev/stack/fleet.md
+      - GetBlok Plasma: dev/lib/plasma.md
+      - Scrypto: dev/lib/scrypto.md
+      - EIP12-Types: https://github.com/capt-nemo429/eip12-types
+     # - SigmaJS
     - Explorer & APIs: 
       - Explorer: 
         - ergo-explorer: dev/stack/explorer/explorer.md
@@ -267,7 +278,7 @@ nav:
         - Buy Back Guarantees: uses/dex-buyback.md
         - LETS: uses/lets.md
         - Trustless LETS: uses/trustless-lets.md
-        - Atomic Swaps: dev/protocol/atomic.md
+       # - Atomic Swaps: dev/protocol/atomic.md
         - ErgoData: uses/ErgoData.md
         - Email Client for Blocked Internet: uses/blocked_web.md
         - Lotteries: uses/lottery.md

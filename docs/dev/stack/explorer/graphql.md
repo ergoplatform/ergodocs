@@ -1,5 +1,7 @@
 # GraphQL
 
+There is no formal doc for ergo-graphql but you can play around with Apollo Studio, see the schema structure and make queries on it easily.
+
 [Ergo GraphQL](https://github.com/capt-nemo429/ergo-graphql) server on top of Ergo Platform's explorer database schema.
 
 ## Instances

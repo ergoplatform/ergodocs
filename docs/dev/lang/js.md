@@ -49,18 +49,9 @@ The following examples can be seen on the [Ergo JS Template](https://github.com/
 
 ## Resources
 
-### Ergo-Raffle-Bot
 
 - [Ergo-Raffle-Bot Github](https://github.com/zkastn/ergo-raffle-bot)
-
-### ErgoScript.js
-
 - [ErgoScript.js](https://www.youtube.com/watch?v=_jwMI8M_vrs)
-
-### Ergo Raffle
-
-The Ergo Raffle [documentation](https://github.com/ErgoRaffle/raffle-documentation) provides a detailed description of their implmenetion. 
-
-### Quid Games
-
+- The Ergo Raffle [documentation](https://github.com/ErgoRaffle/raffle-documentation) provides a detailed description of their implmenetion. 
 - [hypo10use/quid-games](https://github.com/hypo10use/quid-games) (Angular)
+- [sigmajs-crypto-facade](https://github.com/anon-br/sigmajs-crypto-facade) which will replace BouncyCastle's elliptic curve dependencies on Sigma.JS compilation.

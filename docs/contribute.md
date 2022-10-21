@@ -3,20 +3,27 @@
 
 ## Who can contribute?
 
-Ergo operates an open model where contributions from all are welcomed. 
+Ergo operates an open model where contributions from all are welcomed. **Let's create grassroots finance!**
 
-> **Let's create grassroots finance!**
+## How is Ergo Funded? 
+
+The Ergo Foundation uses a small treasury to promote ecosystem growth; please see the following articles for more information. [The Ergo Foundation](https://ergoplatform.org/en/blog/ergo-foundation/) & [Emission & Tokenomics](https://ergoplatform.org/en/blog/emission/)
 
 
-## How can I contribute?
-
-Anything educative for the community is subject to some bounty, even if not specifically listed. 
+## How can I contribute as a developer?
 
 There are paid bounties scattered across the Ergo repositories, which are summarised [here](https://github.com/ergoplatform/grow-ergo/). Notably, there are active bounties for [Tutorials and Guides for developers](https://github.com/ergoplatform/grow-ergo/issues/15) at any skill level. 
+
+Anything educative for the community is subject to some bounty, even if not specifically listed. 
 
 Join the [Ergo Discord](https://discord.gg/nr4JRnhAyV) (and enable the development channels) for any support, queries or comments. 
 
 You can submit any **payment requests** for bounties completed [here](https://q9fwzopidh8.typeform.com/to/G5gAKC4r).
+
+## Are you looking for developers?
+
+While the Ergo Foundation occasionally advertises full-time roles, these are usually specialised senior positions. The quickest way to get involved is to start completing some (paid) [bounties](https://github.com/ergoplatform/grow-ergo/) or get involved in the ecosystem chats and see where you can help out!
+
 
 ## How can I submit a grant request? 
 
@@ -25,9 +32,6 @@ We recommend that your initial step should be to start a [Raffle](https://ergora
 There are several grant programmes available for larger-scale projects. Submit a grant request directly to the [Good Whale Fund](https://github.com/ergoplatform/grow-ergo/issues/13), [DarkFund0](https://github.com/ergoplatform/grow-ergo/issues/1) - or email us directly at the [team@ergoplatform.org](mailto:team@ergoplatform.org).
 
 
-## Are you looking for developers?
-
-While the Ergo Foundation occasionally advertises full-time roles, these are usually specialised senior positions. The quickest way to get involved is to start completing some (paid) [bounties](https://github.com/ergoplatform/grow-ergo/). 
 
 ## Are you looking for regional managers? 
 
@@ -45,6 +49,3 @@ While there are several paid community managers within the ergo ecosystem, they 
 * See the [Dropbox](https://www.dropbox.com/sh/jionpgnj89eod2f/AAC5S1vnOwO3gm2vRYOmDBQ-a?dl=0) for graphics, or [awesome-ergo](https://github.com/ergoplatform/awesome-ergo/tree/master/graphics/Logo) for logos. 
 * Apply to the [Sigmanaut Training Programme](https://ergoplatform.org/en/blog/the-sigmanauts-programme/) to help shape & grow ergo. 
 
-## How is Ergo Funded? 
-
-The Ergo Foundation uses a small treasury to promote ecosystem growth; please see the following articles for more information. [The Ergo Foundation](https://ergoplatform.org/en/blog/ergo-foundation/) & [Emission & Tokenomics](https://ergoplatform.org/en/blog/emission/)

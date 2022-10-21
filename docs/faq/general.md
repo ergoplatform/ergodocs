@@ -56,7 +56,7 @@ To fund development, promotion, events, and any other activities which may advan
 
 ### What is the [Emission Schedule](https://ergoplatform.org/en/blog/2019_05_20-curve/)?
 
-Ergo has a maximum supply of **97,739,925** Ergs, to be completed by 2045.
+Ergo has a maximum supply of **97,739,925** Ergs, to be completed by 2045. The block reward lowers to 3ERG in 2026. You can see this emission schedule on [ergo.watch](https://ergo.watch/emission)
 
 ### When was Ergo launched?
 
