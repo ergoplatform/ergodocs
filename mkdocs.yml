@@ -222,7 +222,7 @@ nav:
     - Libaries:
       - Fleet (JS): dev/stack/fleet.md
       - GetBlok Plasma: dev/lib/plasma.md
-      - Scrypto: dev/lib/scrypto.md
+      - Scrypto: https://github.com/input-output-hk/scrypto
       - EIP12-Types: https://github.com/capt-nemo429/eip12-types
      # - SigmaJS
     - Explorer & APIs: 
