@@ -130,31 +130,63 @@ nav:
   
   - 🛠 ┃ Build:
     - Developers: dev/index.md
-    - Node:
-      - Install: 
-        - Install: node/install/index.md
-        - Troubleshooting: node/install/troubleshooting.md
-        - Docker: node/install/docker.md
-        - Pi: node/install/pi.md
-      - Wallet: node/wallet.md
-      - API: node/swagger.md
-      - FAQ: node/install/faq.md
-      - Resources:
-        - Test-net: dev/start/testnet.md
-        #- Architecture: node/architecture.md
-        - Distributed Signatures: node/sigs.md
-        - Modes of Operation: node/modes.md
-        - Hierarchical keys: dev/wallet/keys.md
-      #- Light Modes: 
-      #  - Digest State: node/digest-state.md
-      #  - History Pruning: node/history-pruning.md
-      #  - Snapshots: node/snapshots.md
-        - P2P:
-          - P2P: dev/p2p/index.md
-          - Handshaking: dev/p2p/p2p-handshake.md
-          - Network Messages: dev/p2p/network.md
-          # - Modifiers Exchange: dev/p2p/modifiers.md
-          # - BlockP2P: dev/p2p/BlockP2P.md
+    
+    - Tooling:
+      - Node:
+        - Install: 
+          - Install: node/install/index.md
+          - Troubleshooting: node/install/troubleshooting.md
+          - Docker: node/install/docker.md
+          - Pi: node/install/pi.md
+        - Wallet: node/wallet.md
+        - API: node/swagger.md
+        - FAQ: node/install/faq.md
+        - Resources:
+          - Test-net: dev/start/testnet.md
+          #- Architecture: node/architecture.md
+          - Distributed Signatures: node/sigs.md
+          - Modes of Operation: node/modes.md
+          - Hierarchical keys: dev/wallet/keys.md
+        #- Light Modes: 
+        #  - Digest State: node/digest-state.md
+        #  - History Pruning: node/history-pruning.md
+        #  - Snapshots: node/snapshots.md
+          - P2P:
+            - P2P: dev/p2p/index.md
+            - Handshaking: dev/p2p/p2p-handshake.md
+            - Network Messages: dev/p2p/network.md
+            # - Modifiers Exchange: dev/p2p/modifiers.md
+            # - BlockP2P: dev/p2p/BlockP2P.md
+      - Programming Languages:
+        - Scala: dev/lang/scala.md
+        - Java: dev/lang/java.md
+        - Kotlin: dev/lang/kotlin.md
+        - Rust: dev/lang/rust.md
+        - Python: dev/lang/python.md
+        - C#: dev/lang/csharp.md
+        - JavaScript: dev/lang/js.md
+      - Frameworks:
+        - AppKit:
+          - AppKit: dev/stack/appkit/appkit.md
+          - Tutorial: dev/stack/appkit/tutorial.md
+          - Gradle: dev/stack/appkit/gradle.md
+        - Mosaik: dev/stack/mosaik/intro.md
+        - JSON dApp Environment: dev/stack/jde.md
+        - Headless dApp Framework: dev/stack/headless.md
+        - RustKit: https://github.com/rust-ergo/rustkit
+      - Libaries:
+        - Fleet (JS): dev/stack/fleet.md
+        - GetBlok Plasma: dev/lib/plasma.md
+        - Scrypto: https://github.com/input-output-hk/scrypto
+        - EIP12-Types: https://github.com/capt-nemo429/eip12-types
+      # - SigmaJS
+      - Explorer & APIs: 
+        - Explorer: 
+          - ergo-explorer: dev/stack/explorer/explorer.md
+          - Local Setup: dev/stack/explorer/explorer_local.md
+          - Pi Blockchain Explorer: dev/stack/rpi-blockchain-explorer.md
+        - GraphQL: dev/stack/explorer/graphql.md
+        - APIs: dev/stack/api.md
     - Anatomy of Ergo:
       - Box:
         - Box: dev/data-model/box/index.md
@@ -201,38 +233,6 @@ nav:
           - Deterministic Wallet Standard: dev/wallet/standards/eip3.md
           - Cold Wallet: dev/wallet/standards/eip19.md
       #- UTXO-State: 
-    - Programming Languages:
-      - Scala: dev/lang/scala.md
-      - Java: dev/lang/java.md
-      - Kotlin: dev/lang/kotlin.md
-      - Rust: dev/lang/rust.md
-      - Python: dev/lang/python.md
-      - C#: dev/lang/csharp.md
-      - JavaScript: dev/lang/js.md
-    - Frameworks:
-      - What framework should I use?: dev#getting-started
-      - AppKit:
-        - AppKit: dev/stack/appkit/appkit.md
-        - Tutorial: dev/stack/appkit/tutorial.md
-        - Gradle: dev/stack/appkit/gradle.md
-      - Mosaik: dev/stack/mosaik/intro.md
-      - JSON dApp Environment: dev/stack/jde.md
-      - Headless dApp Framework: dev/stack/headless.md
-      - RustKit: https://github.com/rust-ergo/rustkit
-    - Libaries:
-      - Fleet (JS): dev/stack/fleet.md
-      - GetBlok Plasma: dev/lib/plasma.md
-      - Scrypto: https://github.com/input-output-hk/scrypto
-      - EIP12-Types: https://github.com/capt-nemo429/eip12-types
-     # - SigmaJS
-    - Explorer & APIs: 
-      - Explorer: 
-        - ergo-explorer: dev/stack/explorer/explorer.md
-        - Local Setup: dev/stack/explorer/explorer_local.md
-        - Pi Blockchain Explorer: dev/stack/rpi-blockchain-explorer.md
-      - GraphQL: dev/stack/explorer/graphql.md
-      - APIs: dev/stack/api.md
-
     - Smart Contracts:
       - Creating a simple P2S app: dev/scs/p2s.md
       - Smart Contracts: dev/scs/index.md
