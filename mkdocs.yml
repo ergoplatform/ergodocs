@@ -177,6 +177,7 @@ nav:
         - JSON dApp Environment: dev/stack/jde.md
         - Headless dApp Framework: dev/stack/headless.md
         - RustKit: https://github.com/rust-ergo/rustkit
+        - SigmaRust: dev/lang/rust.md
       - Libaries:
         - Fleet (JS): dev/stack/fleet.md
         - GetBlok Plasma: dev/lib/plasma.md
