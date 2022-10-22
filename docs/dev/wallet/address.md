@@ -53,6 +53,7 @@ And here is how what they look like on the mainnet:
 
 **P2S** has no limit since it is the serialized script.
 **P2SH** is 192 bits since it is the "first 192 bits of the Blake2b256 hash of serialized script bytes"
+**P2PK** length is fixed. you can use the linked class to validate an address (it gives a runtime exception when created from an invalid string). 
 
 in P2S everyone is able to see the script, in P2SH the script is going to be known when is it going to be spent.
 
@@ -74,6 +75,31 @@ equals
 * **Prefix byte** = `network type + address type` (for example, P2S script on the testnet starts with 0x13 before Base58)
 * **checksum** = `leftmost_4_bytes (blake2b256 (prefix byte || content bytes))`
 * **address** = `prefix byte || content bytes || checksum`
+
+**What is the generation algorithm of boxid?**
+
+It is a hash over the box contents.
+
+[See the code in AppKit]( https://github.com/ergoplatform/ergo-appkit/blob/9e19c13d82966eaee59433d16c4fb987bea363a7/lib-impl/src/main/java/org/ergoplatform/appkit/impl/OutBoxBuilderImpl.scala#L66)
+
+Bytes are unique as box contains id of parent tx and output position in the tx, and tx id is unique as well
+
+**Are P2S and P2SH are two address formats for the same script?**
+
+It can be. so you can create a p2s and a p2sh address from the same script. in p2s the script is serialized into the address, in p2sh you only have a hash of that serialized script
+
+**Will there be any problems with supporting addresses other than P2PK?**
+
+no problem if the user knows what is he doing which is not true in lots of cases. it also adds more complexity. Specially for p2s address since you cannot validate the input size in your form. 
+
+**ergoTree<->address related conversions**
+
+When you use appkit, there is Address.create() that takes the address string. You can get the ergotree from the resulting object
+
+**Some transactions don't charge fees?**
+
+Fees are not part of the core protocol, but if you miss them, the transaction wont be propagated around the network by default
+
 
 
 ## Resources
