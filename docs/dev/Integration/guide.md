@@ -126,36 +126,7 @@ You can use [*ergo-bootstrap*](https://github.com/ergoplatform/ergo-bootstrap) t
 
 See [this page](/dev/start/testnet) for information on the public testnets.
 
-To start your testnet, use the following `testnet.conf`:
 
-```
-ergo {
-  networkType = "testnet"
-
-  node {
-    mining = true
-    offlineGeneration = true
-    useExternalMiner = false
-  }
-}
-
-scorex {
-
- network {
-    bindAddress = "0.0.0.0:9020"
-    nodeName = "ergo-testnet-4.0.23"
-    #knownPeers = []
-  }
-
- restApi {
-    # Hex-encoded Blake2b256 hash of an API key. Should be 64-chars long Base16 string.
-    # Below is hash corresponding to API_KEY = "hello" (with no quotes)
-    apiKeyHash = "324dcf027dd4a30a932c441f365a25e86b173defa4b8e58948253471b81b72cf"
-  }
-}
-```
-
-Then your node will CPU-mine its chain. 
 
 ## Troubleshooting
 

@@ -2,7 +2,18 @@
 
 # Addresses
 
+## Introduction 
+
+Rather than storing a single amount (like BTC), an ergo [eutxo](eutxo.md) box has some registers to store arbitrary values, like its native tokens.
+
 Addresses are short strings that correspond to specific scripts and are used to protect a [box](../data-model/box)
+
+So, each box has an ERG amount and may or may not have a bunch of `{tokenid, token amount}` pairs, all in the UTXO model.
+
+Unlike account based models like eth, ergo tokens are native and are not smart contracts.
+
+
+## Base58
 
 Unlike a (hex-encoded) binary representation of a script, an Ergo address use a `Base58-encoding` and therefore has some advantageous characteristics which the binary representation does not offer:
 
@@ -13,7 +24,7 @@ Unlike a (hex-encoded) binary representation of a script, an Ergo address use a 
 
 Let's look at the prefix byte, which contains information about the network and address types:
 
-## Possible Types
+### Possible Types
 
 Possible network types are:
 
@@ -33,11 +44,9 @@ For an address type, we form content bytes as follows:
 * **P2SH** - first 192 bits of the Blake2b256 hash of serialized script bytes
 * **P2S**  - serialized script (this is where mining rewards go!)
 
-For example, sending 10 Ergs to a P2PK address usually means that a corresponding transaction will contain a box in which 10 Ergs are locked by a public key encoded in the P2PK address. Similarly,
-in the case of a P2S address, the box will be locked by a script encoded in the address. In the most complicated case of a P2SH script, the box will be protected by a special predefined script that takes the first 192 bits of Blake2b256 hash value for a script shown by an input spending the box. 
+For example, sending 10 Ergs to a P2PK address usually means that a corresponding transaction will contain a box in which 10 Ergs are locked by a public key encoded in the P2PK address. Similarly, in the case of a P2S address, the box will be locked by a script encoded in the address. In the most complicated case of a P2SH script, the box will be protected by a special predefined script that takes the first 192 bits of Blake2b256 hash value for a script shown by an input spending the box. 
 
-
-Here is an example of how particular addresses are going to look on the testnet: 
+Here are some examples of the various types of addresses you'll see on the testnet: 
 
 * **P2PK** (`3WvsT2Gm4EpsM9Pg18PdY6XyhNNMqXDsvJTbbf6ihLvAmSb7u5RN`)
 * **P2SH** (`rbcrmKEYduUvADj9Ts3dSVSG27h54pgrq5fPuwB`)
@@ -48,6 +57,8 @@ And here is how what they look like on the mainnet:
 * **P2PK** (`9fRAWhdxEsTcdb8PhGNrZfwqa65zfkuYHAMmkQLcic1gdLSV5vA`)
 * **P2SH** (`8UApt8czfFVuTgQmMwtsRBZ4nfWquNiSwCWUjMg`)
 * **P2S** (`4MQyML64GnzMxZgm, BxKBaHkvrTvLZrDcZjcsxsF7aSsrN73ijeFZXtbj4CXZHHcvBtqSxQ`)
+
+> Note: **P2S** can start with any number, D, M, any other of base58. `9` is always a **P2PK** address on mainnet.
 
 ## Length
 
@@ -100,9 +111,12 @@ When you use appkit, there is Address.create() that takes the address string. Yo
 
 Fees are not part of the core protocol, but if you miss them, the transaction wont be propagated around the network by default
 
+**If I transfer 1Erg to the P2S address and P2SH address of the same script, will I check the balance through the P2S or P2SH address equal to 2Erg?**
 
+No. They are two different addresses with two different spending requirements. Also, the node/explorer has no clue that they are two representations of an identical script.
 
 ## Resources
 
+- [ergo-simple-addresses](https://github.com/kushti/ergo-simple-addresses) contains few zero-dependencies Java-friendly utils for working with addresses.
 - [Ergo Vision](https://github.com/CryptoCream/ErgoVision) | A wallet visualization tool to be used for investigating transactions and addresses
 - [Integration Guide for Exchanges](guide.md)
