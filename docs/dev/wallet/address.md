@@ -51,9 +51,9 @@ And here is how what they look like on the mainnet:
 
 ## Length
 
-**P2S** has no limit since it is the serialized script.
-**P2SH** is 192 bits since it is the "first 192 bits of the Blake2b256 hash of serialized script bytes"
-**P2PK** length is fixed. you can use the linked class to validate an address (it gives a runtime exception when created from an invalid string). 
+- **P2S** has no limit since it is the serialized script.
+- **P2SH** is 192 bits since it is the "first 192 bits of the Blake2b256 hash of serialized script bytes"
+- **P2PK** length is fixed. you can use the [linked class](https://github.com/ergoplatform/ergo-appkit/blob/9e19c13d82966eaee59433d16c4fb987bea363a7/lib-impl/src/main/java/org/ergoplatform/appkit/impl/OutBoxBuilderImpl.scala#L66) to validate an address (it gives a runtime exception when created from an invalid string). 
 
 in P2S everyone is able to see the script, in P2SH the script is going to be known when is it going to be spent.
 
@@ -80,7 +80,7 @@ equals
 
 It is a hash over the box contents.
 
-[See the code in AppKit]( https://github.com/ergoplatform/ergo-appkit/blob/9e19c13d82966eaee59433d16c4fb987bea363a7/lib-impl/src/main/java/org/ergoplatform/appkit/impl/OutBoxBuilderImpl.scala#L66)
+[See the code in AppKit](https://github.com/ergoplatform/ergo-appkit/blob/9e19c13d82966eaee59433d16c4fb987bea363a7/lib-impl/src/main/java/org/ergoplatform/appkit/impl/OutBoxBuilderImpl.scala#L66)
 
 Bytes are unique as box contains id of parent tx and output position in the tx, and tx id is unique as well
 
