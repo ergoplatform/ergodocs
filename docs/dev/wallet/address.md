@@ -105,3 +105,4 @@ Fees are not part of the core protocol, but if you miss them, the transaction wo
 ## Resources
 
 - [Ergo Vision](https://github.com/CryptoCream/ErgoVision) | A wallet visualization tool to be used for investigating transactions and addresses
+- [Integration Guide for Exchanges](guide.md)
