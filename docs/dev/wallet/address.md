@@ -49,6 +49,26 @@ And here is how what they look like on the mainnet:
 * **P2SH** (`8UApt8czfFVuTgQmMwtsRBZ4nfWquNiSwCWUjMg`)
 * **P2S** (`4MQyML64GnzMxZgm, BxKBaHkvrTvLZrDcZjcsxsF7aSsrN73ijeFZXtbj4CXZHHcvBtqSxQ`)
 
+## Length
+
+**P2S** has no limit since it is the serialized script.
+**P2SH** is 192 bits since it is the "first 192 bits of the Blake2b256 hash of serialized script bytes"
+
+in P2S everyone is able to see the script, in P2SH the script is going to be known when is it going to be spent.
+
+P2SH has `0x12` at the beginning, and P2S has `0x13` on testnet and `0x02` and `0x03` on mainnet accordingly (note that in hex you can see that but in base58 it can change to anything).
+
+For an exchange, you can restrict people to only withdraw to P2PK addresses and invalidate any other address. Supporting other types is not recommended.
+
+
+as you can see 
+
+> 88dhgzEuTXaRxf1rbqBRZ6Zbw9iigdB4PCdjyFKLrk22gnmjKcxZBe53vqJVetRa4tTNF9oowQWPp2c6 
+
+equals
+
+> **03** 10 02 04 a0 0b 08 cd 02 a1 f5 67 16 cb 8d f4 fe b9 37 14 37 90 4b 91 25 b8 2d b9 39 23 8c d7 d9 48 78 6d b3 3d e3 13 9f ea 02 d1 92 a3 9a 8c c7 a7 01 73 00 73 01 8c 23 55 af
+
 ## Summary
 
 * **Prefix byte** = `network type + address type` (for example, P2S script on the testnet starts with 0x13 before Base58)
