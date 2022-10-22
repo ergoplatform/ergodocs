@@ -1,72 +1,42 @@
-[This repository](https://github.com/ScorexFoundation/sigmastate-interpreter#sigma-language-background.md) contains implementations of ErgoScript compiler and ErgoTree Interpreter for a family of Sigma-protocol based authentication languages (or simply Sigma language).
+# The ***'Sigma Language'***
+
+The [sigmastate-interpreter](https://github.com/ScorexFoundation/sigmastate-interpreter#sigma-language-background.md) repository contains implementations of ErgoScript compiler and ErgoTree Interpreter for a family of Sigma-protocol based authentication languages (or simply ***Sigma language***).
 
 ## Sigma Language Background
 
-Every coin in Bitcoin is protected by a program in the stack-based Script
-language. An interpreter for the language is evaluating the program against a
-context (a few variables containing information about a spending transaction and
-the blockchain), producing a single boolean value as a result. While Bitcoin
-Script allows for some contracts to be programmed, its abilities are limited.
-Also, to add new cryptographic primitives, for example, ring signatures, a
-hard-fork is required.
+Every coin in Bitcoin is protected by a program in the stack-based Script language. An interpreter for the language evaluates the program against a context (a few variables containing information about a spending transaction and the blockchain), producing a single boolean value. While Bitcoin Script allows some contracts to be programmed, its abilities are limited. Also, a hard fork would be required to add new cryptographic primitives, such as ring signatures.
 
-Generalizing the Bitcoin Script, ErgoScript compiler and ErgoTree interpreter
-implements an _authentication language_ which allows expressing coin spending
-conditions. The [ErgoScript
-Compiler](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/sigmastate/src/main/scala/sigmastate/lang/SigmaCompiler.scala#L48)
-compiles the source code into
-[ErgoTree](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/sigmastate/src/main/scala/sigmastate/Values.scala#L990) byte code,
-which can be saved in UTXO coins to protect their spending (same as in Bitcoin).
+Generalizing the Bitcoin Script, ErgoScript compiler and ErgoTree interpreter implement an **authentication language** which allows developers to specify coin spending conditions. The [ErgoScript Compiler](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/sigmastate/src/main/scala/sigmastate/lang/SigmaCompiler.scala#L48) compiles the source code into [ErgoTree](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/sigmastate/src/main/scala/sigmastate/Values.scala#L990) byte code, which can be saved in UTXO coins to protect their spending (same as in Bitcoin).
 
-ErgoTree, in turn, is a bytecode language and memory representation that can be
-deterministically interpreted in the given _blockchain context_. 
-ErgoTree defines guarding proposition for a coin as a logic formula which
-combines predicates over a context and cryptographic statements provable via
-[Σ-protocols](https://en.wikipedia.org/wiki/Proof_of_knowledge#Sigma_protocols)
-with AND, OR, k-out-of-n connectives.
+ErgoTree, in turn, is a bytecode language and memory representation that can be deterministically interpreted in the given _blockchain context_.
 
-An _interacting party_ willing to spend the coin first constructs a
-[prover](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/sigmastate/src/main/scala/sigmastate/interpreter/ProverInterpreter.scala)
-with a set of secrets, it knows and then the prover is executed in two steps:
+> ErgoTree defines guarding proposition for a coin as a logic formula which combines predicates over a context and cryptographic statements provable via [Σ-protocols](https://en.wikipedia.org/wiki/Proof_of_knowledge#Sigma_protocols) with AND, OR, k-out-of-n connectives.
 
-- _Reduction_ - the prover uses the ErgoTree interpreter and deterministically
-reduces the ErgoTree proposition to a compound _cryptographic statement_(aka
-sigma proposition, Σ-protocol) by evaluating ErgoTree over known shared context
-(state of the blockchain system and a spending transaction). This step produces
-a value of the [SigmaBoolean](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/sigmastate/src/main/scala/sigmastate/Values.scala)
-type.
+## Spending 
 
-- Signing - the prover is turning the obtained (and possibly
-complex) Σ-proposition into a signature with the help of a [Fiat-Shamir
-transformation](https://en.wikipedia.org/wiki/Fiat-Shamir_heuristic). This step
-produces a _proof_ that the party knows the secrets such that the knowledge can
-be verified before the spending transaction is added to the blockchain.
+An interacting party willing to spend the coin first constructs a [prover](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/sigmastate/src/main/scala/sigmastate/interpreter/ProverInterpreter.scala) with a set of secrets, it knows and then the prover is executed in two steps:
 
-To allow valid coin spending a
-[verifier](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/sigmastate/src/main/scala/sigmastate/interpreter/Interpreter.scala)
-is running the ErgoTree interpreter with the following three inputs:
+- **Reduction** - the prover uses the ErgoTree interpreter which deterministically reduces the ErgoTree proposition to a compound _cryptographic statement_ (aka sigma proposition, Σ-protocol) by evaluating ErgoTree over known shared context (state of the blockchain system and a spending transaction). This step produces a value of the [SigmaBoolean](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/sigmastate/src/main/scala/sigmastate/Values.scala) type.
+- **Signing** - the prover is turning the obtained (and possibly complex) Σ-proposition into a signature with the help of a [Fiat-Shamir transformation](https://en.wikipedia.org/wiki/Fiat-Shamir_heuristic). This step produces a _proof_ that the party knows the secrets such that the knowledge can be verified before the spending transaction is added to the blockchain.
+
+To allow valid coin spending a [verifier](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/sigmastate/src/main/scala/sigmastate/interpreter/Interpreter.scala) is running the ErgoTree interpreter with the following three inputs:
+
 - a guarding proposition given by an ErgoTree 
 - a blockchain _context_ of the transaction being verified
 - a _proof_ (aka transaction signature) generated by a _prover_ 
  
-The verifier is executed as part of transaction validation for each input and is
-executed in three steps:
+The verifier is executed as part of transaction validation for each input and is executed in three steps:
 
-- _Reduction_ - same as prover, the verifier uses the ErgoTree interpreter and
-deterministically produces a value of the
-[SigmaBoolean](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/sigmastate/src/main/scala/sigmastate/Values.scala) type. 
-However, this step must finish evaluation for any possible inputs within
-concrete fixed time limit (aka maximum cost), which is checked by the interpreter.
+### Reduction 
 
-- Cost estimation - the verifier estimates the complexity of the cryptographic Sigma
-proposition (based on the size and the concrete nodes of SigmaBoolean tree). The
-spending fails if the estimated cost exceeds the maximum limit.
+Same as prover, the verifier uses the ErgoTree interpreter and deterministically produces a value of the [SigmaBoolean](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/sigmastate/src/main/scala/sigmastate/Values.scala) type.  However, this step must finish the evaluation for any possible inputs within concrete fixed time limit (aka maximum cost), which the interpreter checks.
 
-- Signature verification - the signature checker takes 1) the proof, 2) the
-SigmaBoolean (aka [sigma
-protocol](https://en.wikipedia.org/wiki/Proof_of_knowledge#Sigma_protocols)
-proposition) and 3) the signed message (e.g. transaction bytes).
-The checker then verifies the proof, which means it verifies that all the
-necessary secrets have been known and used to construct the proof (i.e. sign the
-transaction).
+### Cost estimation 
+
+The verifier estimates the complexity of the cryptographic Sigma proposition (based on the size and the concrete nodes of the SigmaBoolean tree). The spending fails if the estimated cost exceeds the maximum limit. 
+
+
+### Signature verification 
+
+The signature checker, takes 1) the proof, 2) the SigmaBoolean (aka [sigma protocol](https://en.wikipedia.org/wiki/Proof_of_knowledge#Sigma_protocols) proposition) and 3) the signed message (e.g. transaction bytes). The checker then verifies the proof, which means it verifies that all the necessary secrets have been known and used to construct the proof (i.e. sign the transaction). 
 

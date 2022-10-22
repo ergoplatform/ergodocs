@@ -76,6 +76,12 @@ To generate new addresses in the same wallet you can use the `/wallet/deriveNext
 curl -X GET "http://localhost:9053/wallet/deriveNextKey" -H  "accept: application/json" -H  "api_key: hello"
 ```
 
+### Address validation
+
+For an exchange, you can restrict people to only withdraw to P2PK addresses and invalidate any other address. Supporting other types is not recommended. See [address.md] for more information of the types of addresses. 
+
+[ergo-simple-addresses](https://github.com/kushti/ergo-simple-addresses) contains few zero-dependencies Java-friendly utils for working with addresses.
+
 
 
 
@@ -226,4 +232,33 @@ Send the following request via `/wallet/payment/send`, replacing the `tokenId` w
 - NETA
 - LunaDog
 - Erdoge
+
+### FAQ
+
+**Are P2S and P2SH two address formats for the same script?**
+
+It can be. So you can create a p2s and a p2sh address from the same script. In p2s, the script is serialized into the Address; in p2sh, you only have a hash of that serialized script.
+
+**Will there be any problems with supporting addresses other than P2PK?**
+
+No problem if the user knows what he is doing, which is not true in many cases. It also adds more complexity. Especially for p2s Addresses since you cannot validate the input size in your form. 
+
+**ergoTree<->address related conversions**
+
+When you use appkit, Address.create() takes the address string. You can get the ergotree from the resulting object.
+
+**Some transactions don't seem to pay fees?**
+
+Fees are not part of the core protocol, but if you miss them, the transaction won't be propagated around the network by default.
+
+**What is the generation algorithm of boxid?**
+
+It is a hash over the box contents.
+
+[See the code in AppKit](https://github.com/ergoplatform/ergo-appkit/blob/9e19c13d82966eaee59433d16c4fb987bea363a7/lib-impl/src/main/java/org/ergoplatform/appkit/impl/OutBoxBuilderImpl.scala#L66)
+
+Bytes are unique as the box contains
+- The `id` of the parent transaction, 
+- the output position in the transaction
+- a unique transaction id. 
 

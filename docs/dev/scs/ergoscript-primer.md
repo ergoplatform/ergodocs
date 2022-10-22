@@ -5,21 +5,19 @@ tags:
 
 # A Quick Primer on ErgoScript
 
-Ergo platform is getting a lot of attention these days. Several queries relate to ErgoScript, the underlying smart contract language of Ergo.
-This article gives a short introduction to ErgoScript.
+The Ergo node does not understand ErgoScript. Instead it uses a low-level language called [**ErgoTree**](https://ergoplatform.org/docs/ErgoTree.pdf), which is a "tree" based language (somewhat like XML). 
 
-## What is ErgoScript?
-
-The Ergo node does not understand ErgoScript. It only understands a low-level language called
- [**ErgoTree**](https://ergoplatform.org/docs/ErgoTree.pdf), which is a "tree" based language (somewhat like XML). 
- However, writing code in ErgoTree is difficult.  
+However, writing code in ErgoTree is *difficult*.  
 
 ErgoTree is similar to Bitcoin's Script in some aspects. An ErgoTree program is deterministic and consists of a sequence of boolean predicates joined using `AND` and `OR`.
+
 Ergo nodes execute the ErgoTree program contained in a transaction and consider it valid if it evaluates to `true`.
+
 An example of such a program can be `AND(OR(condition_1, condition_2), condition_3)`, which implies that the transaction is valid if 
 `condition_3` and at least one of `condition_1` or `condition_2` hold.    
 
-ErgoScript is a high-level developer-friendly language for writing smart contracts that are then compiled to ErgoTree before being written to the blockchain.
+[ErgoScript](ergoscript.md) is a high-level developer-friendly language for writing smart contracts that are then compiled to ErgoTree before being written to the blockchain.
+
 The equivalent of the above program in ErgoScript will be `(condition_1 || condition_2) && condition_3`. 
 
 ## Key Concepts
@@ -27,23 +25,17 @@ The equivalent of the above program in ErgoScript will be `(condition_1 || condi
 1. Since Ergo is UTXO based, therefore ErgoScript has many UTXO-specific constructs such as `Box`, `INPUTS`, `OUTPUTS`, etc. 
 A complete list is available [here](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/LangSpec.md). A `Box` is essentially a UTXO and consists of up to ten registers for storing data. Similar to Bitcoin, a transaction spends one or more existing boxes (denoted using the `INPUTS` array) and creates one or more new boxes (denoted using the `OUTPUTS` array).  
 
-2. ErgoScript's syntax is a subset of Scala's. However, knowledge of Scala is not necessary to learn ErgoScript because 
-the amount of Scala needed to write ErgoScript is tiny. That being said, some prior experience in Scala will  
-be useful in picking up ErgoScript and Scala is a [good language to have on your resume](https://insights.dice.com/2020/06/04/24-programming-languages-pay-top-salaries-scala/) anyway.  
+2. ErgoScript's syntax is a subset of Scala's. However, knowledge of Scala is not necessary to learn ErgoScript because the amount of Scala needed to write ErgoScript is tiny. That being said, some prior experience in Scala will be useful in picking up ErgoScript and Scala is a [good language to have on your resume](https://insights.dice.com/2020/06/04/24-programming-languages-pay-top-salaries-scala/) anyway.  
 
-3. Like Scala, ErgoScript supports functional programming, which makes it easier
-to deal with collections using metaphors such as `foreach`, `exists`, `fold`, etc.  
+3. Like Scala, ErgoScript supports functional programming, which makes it easier to deal with collections using metaphors such as `foreach`, `exists`, `fold`, etc.  
 
 4. Like ErgoTree, an ErgoScript program consists of a sequence of boolean predicates joined using `&&` and `||`. 
 
-5. ErgoScript provides cryptographic operations via `BigInt` and `GroupElement` (Elliptic curve point) types along with relevant
-operations such as addition, multiplication and exponentiation. Note that, unlike Scala, `BigInt` operations in ErgoScript are performed modulo `2^256`, and thus, care must be taken about overflow. 
+5. ErgoScript provides cryptographic operations via `BigInt` and `GroupElement` (Elliptic curve point) types along with relevant operations such as addition, multiplication and exponentiation. Note that, unlike Scala, `BigInt` operations in ErgoScript are performed modulo `2^256`, and thus, care must be taken about overflow. 
 
 ## ErgoScript Examples
 
-**Tip:** For beginners, we highly recommend Jason Davies' [ErgoScript P2S playground](https://wallet.plutomonkey.com/p2s/), 
-which can be used to get the Ergo address
-corresponding to some arbitrary ErgoScript program. Please use the P2S playground only for experiments and not for storing any large amounts.
+> **Tip:** For beginners, we highly recommend the [ErgoScript P2S playground](https://wallet.plutomonkey.com/p2s/), which can be used to get the Ergo address corresponding to some arbitrary ErgoScript program. Please use the P2S playground only for experiments and not for storing any large amounts.
 
 ### Anyone-Can-Spend Scripts
 
@@ -54,6 +46,7 @@ The simplest ErgoScript program is a single boolean predicate such as:
 This corresponds to the [address](https://wallet.plutomonkey.com/p2s/?source=dHJ1ZQ==) `4MQyML64GnzMxZgm`.
 
 **Notes:**    
+
 1. Any funds sent to this address can be spent by anyone because the script always evaluates to `true`.
 2. Scripts that always evaluate to `true` (and the corresponding boxes) are called **anyone-can-spend**. 
 
@@ -68,9 +61,9 @@ At the other end of the spectrum are ErgoScript programs that always evaluate to
     true && false               // address m3iBKr65o53izn
 
 **Notes:**    
-1. Funds sent to such addresses cannot be spent by anyone and consequently such scripts are called **no-one-can-spend**.
-Please don't send funds to such addresses.  
-2. Ergo has the concept of [*garbage collection* / storage rent](https://ergoplatform.org/en/blog/2020_04_21_ergo_positioning/), so such boxes will eventually be removed from the blockchain over a long period.
+
+1. Funds sent to such addresses cannot be spent by anyone and consequently such scripts are called **no-one-can-spend**. Please do not send funds to these addresses.  
+2. Ergo has the concept of [*garbage collection* / storage rent](rent.md), so such boxes will eventually be removed from the blockchain over a long period.
  
 ### Context Variables
 

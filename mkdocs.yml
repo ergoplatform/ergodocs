@@ -204,6 +204,7 @@ nav:
           - Geniune Token Verification: dev/tokens/standards/eip21.md
           - Auction Contract: dev/tokens/standards/eip22.md
           - Artwork Contract: dev/tokens/standards/eip24.md
+      - Addresses: dev/wallet/address.md
       - Transactions: 
         - Transactions: dev/protocol/transaction.md
         - Model Transaction: dev/protocol/model-tx.md
@@ -223,7 +224,6 @@ nav:
           - ErgoTool: dev/stack/ergotool.md
         - Sending A Chained Transaction: dev/anatomy/transactions/chained.md
 
-      - Addresses: dev/wallet/address.md
       - Block: dev/data-model/block.md
       - Wallets:
         - Software: dev/wallet/wallets.md
