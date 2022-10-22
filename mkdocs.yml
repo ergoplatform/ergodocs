@@ -91,7 +91,7 @@ nav:
       - Protocol: dev/protocol/index.md
       - eUTXO:
         - Overview: dev/protocol/eutxo/eutxo.md
-        - ELI5: dev/protocol/eutxo/accountveutxo.md
+        - eUTXO vs Account: dev/protocol/eutxo/accountveutxo.md
         - Atomic Swaps: dev/protocol/eutxo/atomic.md
       - NIPoPoWs: dev/protocol/nipopow.md
       - Sigma Protocols: dev/scs/sigma.md
@@ -138,7 +138,7 @@ nav:
           - Troubleshooting: node/install/troubleshooting.md
           - Docker: node/install/docker.md
           - Pi: node/install/pi.md
-        - Test-net: dev/start/testnet.md
+        - Testnet: dev/start/testnet.md
         - Wallet: node/wallet.md
         - API: node/swagger.md
         - FAQ: node/install/faq.md
@@ -157,6 +157,11 @@ nav:
             - Network Messages: dev/p2p/network.md
             # - Modifiers Exchange: dev/p2p/modifiers.md
             # - BlockP2P: dev/p2p/BlockP2P.md
+      - Explorer: 
+        - explorer: dev/stack/explorer/index.md
+        - Local Setup: dev/stack/explorer/explorer_local.md
+        - Pi Blockchain Explorer: dev/stack/rpi-blockchain-explorer.md
+        - GraphQL: dev/stack/explorer/graphql.md
       - Programming Languages:
         - Scala: dev/lang/scala.md
         - Java: dev/lang/java.md
@@ -179,14 +184,8 @@ nav:
         - GetBlok Plasma: dev/lib/plasma.md
         - Scrypto: https://github.com/input-output-hk/scrypto
         - EIP12-Types: https://github.com/capt-nemo429/eip12-types
-      # - SigmaJS
-      - Explorer & APIs: 
-        - Explorer: 
-          - ergo-explorer: dev/stack/explorer/explorer.md
-          - Local Setup: dev/stack/explorer/explorer_local.md
-          - Pi Blockchain Explorer: dev/stack/rpi-blockchain-explorer.md
-        - GraphQL: dev/stack/explorer/graphql.md
-        - APIs: dev/stack/api.md
+      # - SigmaJS        
+      - APIs: dev/stack/api.md
       - Off-Chain:
         - Oracle-Core: dev/oc/oracle.md
       - Bookmarks: dev/start/resources.md
