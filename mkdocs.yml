@@ -78,10 +78,7 @@ nav:
   - Getting Started:
     - Getting Started: index.md
     - Contributing: contribute.md
-    - FAQ:
-      - General: faq/general.md
-      - Interview: faq/interview.md
-      - Scaling: dev/protocol/scaling.md
+    - FAQ: faq/general.md
     - Events: 
       - Events: events/index.md
       - ERGOHACK: events/ergohack.md
@@ -97,6 +94,7 @@ nav:
       - Sigma Protocols: dev/scs/sigma.md
       - Storage Rent: mining/rent.md
       - Autolykos: mining/autolykos.md
+    - Scaling: dev/protocol/scaling.md
     - Resources:
       - Documents: documents.md
       - EIPs:
