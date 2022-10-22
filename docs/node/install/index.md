@@ -1,30 +1,13 @@
-The Ergo Node is part of Ergo's peer-to-peer network which hosts and synchronises a copy of the entire Ergo blockchain. 
+The Ergo Node is part of Ergo's peer-to-peer network which hosts and synchronises a copy of the entire Ergo blockchain and a critical piece of infrastructure developers will use to interact with the blockchain. 
 
 There is no financial incentive to run a node, but doing so helps increase the security of the network.
 
 If you want to install a node see this page or get [setup on the test-net](/dev/start/testnet/)
 
-## Resources
-
-- [FAQ](faq.md)
-- [API Docs](https://api.ergoplatform.com/api/v1/docs/)
-- [Node API](https://git.io/fjqwb)
-- [Explorer API](https://git.io/fjqwN)
-- [Ergo.Watch API](https://ergo.watch/api/v0/docs)
-- [TokenJay API](https://api.tokenjay.app/swagger-ui/index.html;jsessionid=59429AD4DF081E2E3450C2834095D427?attribute=redirectWithRedirectView)
-- [synced-node](https://github.com/mgpai22/ergo-synced-node)
-- [ergonodes.net](http://ergonodes.net/) 
-
-# Getting Started
-
-The Ergo Node is a critical piece of infrastructure developers will use to interact with the blockchain. 
-
 > If you're simply looking for a daily wallet we advise one of the options in the [wallets](/dev/wallet) page. (Ergo Mobile even has a cold-storage feature!). You can also use the [Satergo desktop wallet](dev/wallet/wallets/#satergo-desktop) which has an option to install a full node with it. 
 
 ## Prerequisites
-To run an Ergo node you need a **JDK/JRE version >= 9** installed on your system. We strongly **recommend either version 9 or 11**. 
-
-**Note that Oracle JDK/JRE <= 8 is no longer supported**. 
+To run an Ergo node you need a **JDK/JRE version >= 9** installed on your system. 
 
 We recommend [Oracle Java SE](https://www.oracle.com/technetwork/java/javase/overview/index.html) or for Unix-based operating systems, SDKMAN.
 
@@ -33,8 +16,7 @@ curl -s "https://get.sdkman.io" | bash
 sdk install java 11.0.13.8.1-amzn
 ```
 
-
-
+The only hardware requirements is ~20GB of space to store the chain, and ~8GB of RAM memory for handling the sync.
 
 ## Running the node
 
@@ -79,9 +61,7 @@ Go to [127.0.0.1:9053/swagger#/utils/hashBlake2b](http://127.0.0.1:9053/swagger#
 
 Copy the hash response which we'll place back in the `ergo.conf` file. 
 
-As you can see 
-
-`hello` corresponds to the `Blake2b` hash `324dcf027dd4a30a932c441f365a25e86b173defa4b8e58948253471b81b72cf`
+As you can see `hello` corresponds to the `Blake2b` hash `324dcf027dd4a30a932c441f365a25e86b173defa4b8e58948253471b81b72cf`
 
 ![response](https://user-images.githubusercontent.com/23208922/69916509-c3690d80-1481-11ea-869f-630cd59cc525.png)
 
@@ -140,6 +120,17 @@ After the node is fully synced, the text will change to "Node is synced", as sho
 
 You can also check this at [127.0.0.1:9053/info](http://127.0.0.1:9053/info) and compare to the latest block height given at [explorer.ergoplatform.com](https://explorer.ergoplatform.com/en/)
 
+
+## Resources
+
+- [FAQ](faq.md)
+- [API Docs](https://api.ergoplatform.com/api/v1/docs/)
+- [Node API](https://git.io/fjqwb)
+- [Explorer API](https://git.io/fjqwN)
+- [Ergo.Watch API](https://ergo.watch/api/v0/docs)
+- [TokenJay API](https://api.tokenjay.app/swagger-ui/index.html;jsessionid=59429AD4DF081E2E3450C2834095D427?attribute=redirectWithRedirectView)
+- [synced-node](https://github.com/mgpai22/ergo-synced-node)
+- [ergonodes.net](http://ergonodes.net/) 
 
 
 
