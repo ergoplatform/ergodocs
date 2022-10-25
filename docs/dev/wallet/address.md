@@ -73,7 +73,7 @@ And here is how what they look like on the mainnet:
 
 ## Address validation
 
-[ergo-simple-addresses](https://github.com/kushti/ergo-simple-addresses) contains few zero-dependencies Java-friendly utils for working with addresses. The [Integration Guide for Exchanges](guide.md) may also be relevant. 
+[ergo-simple-addresses](https://github.com/kushti/ergo-simple-addresses) contains few zero-dependencies Java-friendly utils for working with addresses. The [Integration Guide for Exchanges](guide.md) may also be relevant. There is also a simple method in [Fleet](https://github.com/fleet-sdk/core/blob/master/src/models/ergoAddress.ts#L164). 
 
 - **P2S** has no limit since it is the serialized script.
 - **P2SH** is 192 bits since it is the "first 192 bits of the Blake2b256 hash of serialized script bytes."
@@ -93,10 +93,6 @@ equals
 
 
 
-
-
-
 ## Resources
-
 
 - [Ergo Vision](https://github.com/CryptoCream/ErgoVision) | A wallet visualization tool to be used for investigating transactions and addresses

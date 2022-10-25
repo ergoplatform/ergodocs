@@ -157,3 +157,5 @@ cython_debug/
 .vscode/settings.json
 *.db
 .vscode/settings.json
+docs/assets/img/.DS_Store
+docs/assets/.DS_Store

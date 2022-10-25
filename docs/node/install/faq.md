@@ -29,13 +29,27 @@ kill -9 $(lsof -t -i:9030)
 ```
 
 
-
-
-
-
 ## Running the node
 
 ### Minimum Requirements
+
+## Prerequisites
+
+### Java 
+
+To run an Ergo node you need a **JDK/JRE version >= 9** installed on your system. 
+
+We recommend [Oracle Java SE](https://www.oracle.com/technetwork/java/javase/overview/index.html) or for Unix-based operating systems, SDKMAN.
+
+```bash
+curl -s "https://get.sdkman.io" | bash
+sdk install java 11.0.13.8.1-amzn
+```
+
+### Hardware
+
+The only hardware requirements is ~20GB of space to store the chain, and ~8GB of RAM memory for handling the sync.
+
 
 The node uses Java so should work across all operating systems. You can even run on a [Raspberri Pi](/docs/node/install/pi.md). 
 

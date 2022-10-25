@@ -156,8 +156,13 @@ In Akka, messages that can't be delivered are routed to a synthetic actor which 
 [INFO] [akkaDeadLetter][06/11/2021 10:37:47.246] [ergoref-akka.actor.default-dispatcher-7] [akka://ergoref/user/networkController] Message [scorex.core.network.NetworkController$ReceivableMessages$ShutdownNetwork$] to Actor[akka://ergoref/user/networkController#-2029702693] was not delivered. [4] dead letters encountered. If this is not an expected behavior then Actor[akka://ergoref/user/networkController#-2029702693] may have terminated unexpectedly. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'.
 ```
 
-## Failed to connect to localhost port 9053: Connection refused
+### Failed to connect to localhost port 9053: Connection refused
 
 
 netstat -ln | grep 9053
 sudo netstat -tulpn
+
+
+### Tree root should be real 
+
+This it usually means that you trying to sign a box that you don't own (does not know the private key needed to sign).

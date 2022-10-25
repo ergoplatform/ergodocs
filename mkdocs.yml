@@ -30,6 +30,7 @@ theme:
       text: Roboto
 extra_css: 
   - assets/extra.css
+  - assets/neoteroi-mkdocs.css
   - https://unpkg.com/mermaid@8.5.1/dist/mermaid.css
 extra_javascript:
   - assets/extra.js
@@ -49,7 +50,8 @@ extra:
 
 plugins:
   - search
-  - awesome-pages
+  - section-index #https://github.com/oprypin/mkdocs-section-index
+  #- awesome-pages https://github.com/lukasgeiter/mkdocs-awesome-pages-plugin
   - autolinks 
   - tags: # https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/#
       tags_file: tags.md
@@ -62,7 +64,10 @@ plugins:
 
 
 markdown_extensions:
+  - neoteroi.cards
   - meta
+  - toc:
+        permalink: "#"
   - admonition
   - pymdownx.superfences:
       custom_fences:
@@ -116,29 +121,34 @@ nav:
 
   - ⛏ ┃  Mine:
     - Mining: mining/index.md
-    - Dig in: 
+    - Start Mining: 
+      - mining/setup/join.md
       - Join a Pool: mining/setup/join.md
       - Solo Mining: mining/setup/solo.md
       - Host a Pool: mining/setup/pool.md
       - Subpooling: mining/setup/subpool.md
+    - Autolykos:
+      - mining/autolykos.md
       - Autolykos: mining/autolykos.md
       - Governance: mining/governance.md
       - Storage Rent: mining/rent.md
       - Log-Space Mining: mining/log_space.md
-  
+    
   - 🛠 ┃ Build:
     - Developers: dev/index.md
     
     - Tooling:
       - Node:
+        - Install: node/install/index.md
         - Install: 
           - Install: node/install/index.md
+          - Manual: node/install/manual.md
           - Troubleshooting: node/install/troubleshooting.md
           - Docker: node/install/docker.md
           - Pi: node/install/pi.md
+        - Swagger API: node/swagger.md
         - Testnet: dev/start/testnet.md
-        - Wallet: node/wallet.md
-        - API: node/swagger.md
+        - Node Wallet: node/wallet.md
         - FAQ: node/install/faq.md
         - Resources:
           #- Architecture: node/architecture.md
@@ -189,6 +199,7 @@ nav:
         - Oracle-Core: dev/oc/oracle.md
       - Bookmarks: dev/start/resources.md
     - Anatomy of Ergo:
+      - dev/data-model/box/index.md
       - Box:
         - Box: dev/data-model/box/index.md
         - Registers: dev/data-model/box/registers.md
@@ -238,6 +249,7 @@ nav:
       - Creating a simple P2S app: dev/scs/p2s.md
       - Smart Contracts: dev/scs/index.md
       - ErgoScript: 
+        - dev/scs/ergoscript.md
         - Overview: dev/scs/ergoscript.md
         - Quick Primer: dev/scs/ergoscript-primer.md
         - Sigma Language: dev/scs/sigma-lang.md

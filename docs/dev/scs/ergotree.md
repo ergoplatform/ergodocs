@@ -5,19 +5,19 @@ tags:
 
 # ErgoTree
 
-
-## Constant Segregation
-
-We describe a typed abstract syntax of the language called [ErgoTree](https://ergoplatform.org/docs/ErgoTree.pdf) which is used to define logical propositions protecting boxes (generalization of coins) in Ergo. Serialized ErgoTree expressions are written into UTXO boxes and then evaluated by the transaction verifier. Most of Ergo users won't use ErgoTree directly since they are developing contracts in higher-level language, such as ErgoScript, which is then compiled to ErgoTree.
+Most of Ergo users won't use ErgoTree directly since they are developing contracts in higher-level language, such as ErgoScript, which is then compiled to ErgoTree. However this standard defines the extended serialization format of contract templates, which may be reused across different protocol implementations, applications and tools on many execution environments.
 
 
-The reference implementation of ErgoTree uses Scala, however alternative implementations can use other languages
 
-The propositions are stored in the blockchain according to ErgoTree serialization format, which is designed for compact storage and fast script execution and transaction validation.
+**Key Concepts**
 
-However, the ErgoTree binary format intentionally doesn't include metadata, which may be necessary for various Ergo applications.
+- [ErgoTree](https://ergoplatform.org/docs/ErgoTree.pdf) is used to define logical propositions protecting boxes (generalization of coins) in Ergo. 
+- Serialized ErgoTree expressions are written into UTXO boxes and then evaluated by the transaction verifier. 
+- 
+- The reference implementation of ErgoTree uses Scala, however alternative implementations can use other languages
+- The propositions are stored in the blockchain according to ErgoTree serialization format, which is designed for compact storage and fast script execution and transaction validation.
+- However, the ErgoTree binary format intentionally doesn't include metadata, which may be necessary for various Ergo applications.
 
-This standard defines the extended serialization format of contract templates, which may be reused across different protocol implementations, applications and tools on many execution environments.
 
 There is an ErgoTree serialization section in https://ergoplatform.org/docs/ErgoTree.pdf.
 
