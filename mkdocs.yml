@@ -94,7 +94,7 @@ nav:
       - eUTXO:
         - dev/protocol/eutxo/eutxo.md
         - eUTXO vs Account: dev/protocol/eutxo/accountveutxo.md
-        - Atomic Swaps: dev/protocol/eutxo/atomic.md
+        #- Atomic Swaps: dev/protocol/eutxo/atomic.md
       - NIPoPoWs:
         - dev/protocol/nipopow/nipopow.md
         - Light Nodes: dev/protocol/nipopow/nipopow_nodes.md
