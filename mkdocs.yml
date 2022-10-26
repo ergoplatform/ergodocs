@@ -8,12 +8,12 @@ theme:
     name: material
     favicon: assets/favicon.png
     palette: # dark scheme toggle on material + dark orange
-      - scheme: slate
+      - scheme: default
         primary: red
         toggle:
           icon: material/toggle-switch-off-outline
           name: Switch to dark mode
-      - scheme: default
+      - scheme: slate
         primary: red
         toggle:
           icon: material/toggle-switch
@@ -133,6 +133,9 @@ nav:
       - Governance: mining/governance.md
       - Storage Rent: mining/rent.md
       - Log-Space Mining: mining/log_space.md
+      - Standards:
+        - Emission Retargeting Soft-Fork: mining/standards/eip27.md
+        - Tweaking Difficulty Adjustment Algorithm: mining/standards/eip37.md
     
   - 🛠 ┃ Build:
     - Developers: dev/index.md
@@ -183,7 +186,14 @@ nav:
           - AppKit: dev/stack/appkit/appkit.md
           - Tutorial: dev/stack/appkit/tutorial.md
           - Gradle: dev/stack/appkit/gradle.md
-        - Mosaik: dev/stack/mosaik/intro.md
+        - Mosaik: 
+          - Introduction: dev/stack/mosaik/intro.md
+          - A simple UI: dev/stack/mosaik/tutorial2.md
+          - Processing data: dev/stack/mosaik/tutorial3.md
+          - ErgoPay: dev/stack/mosaik/tutorial4.md
+          - Web UI: dev/stack/mosaik/tutorial5.md
+          - Deployment: dev/stack/mosaik/mosaik-docker-flux.md
+          - Example apps: dev/stack/mosaik/examples.md
         - JSON dApp Environment: dev/stack/jde.md
         - Headless dApp Framework: dev/stack/headless.md
         - RustKit: https://github.com/rust-ergo/rustkit
