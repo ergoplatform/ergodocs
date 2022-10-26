@@ -92,7 +92,7 @@ nav:
     - Key Features: 
       - Protocol: dev/protocol/index.md
       - eUTXO:
-        - Overview: dev/protocol/eutxo/eutxo.md
+        - dev/protocol/eutxo/eutxo.md
         - eUTXO vs Account: dev/protocol/eutxo/accountveutxo.md
         - Atomic Swaps: dev/protocol/eutxo/atomic.md
       - NIPoPoWs: dev/protocol/nipopow.md
@@ -103,7 +103,7 @@ nav:
     - Resources:
       - Documents: documents.md
       - EIPs:
-        - What is an EIP?: dev/protocol/eip.md
+        - dev/protocol/eip.md
         - UTXO-Set Scanning Wallet API: dev/wallet/standards/eip1.md
         - Deterministic Wallet Standard: dev/wallet/standards/eip3.md
         - Asset Standard: dev/tokens/standards/eip4.md
@@ -123,7 +123,6 @@ nav:
     - Mining: mining/index.md
     - Start Mining: 
       - mining/setup/join.md
-      - Join a Pool: mining/setup/join.md
       - Solo Mining: mining/setup/solo.md
       - Host a Pool: mining/setup/pool.md
       - Subpooling: mining/setup/subpool.md
@@ -183,11 +182,11 @@ nav:
         - JavaScript: dev/lang/js.md
       - Frameworks:
         - AppKit:
-          - AppKit: dev/stack/appkit/appkit.md
+          - dev/stack/appkit/appkit.md
           - Tutorial: dev/stack/appkit/tutorial.md
           - Gradle: dev/stack/appkit/gradle.md
         - Mosaik: 
-          - Introduction: dev/stack/mosaik/intro.md
+          - dev/stack/mosaik/intro.md
           - A simple UI: dev/stack/mosaik/tutorial2.md
           - Processing data: dev/stack/mosaik/tutorial3.md
           - ErgoPay: dev/stack/mosaik/tutorial4.md
@@ -207,7 +206,7 @@ nav:
       - APIs: dev/stack/api.md
       - Off-Chain:
         - Oracle-Core: dev/oc/oracle.md
-      - Bookmarks: dev/start/resources.md
+      #- Bookmarks: dev/start/resources.md
     - Anatomy of Ergo:
       - dev/data-model/box/index.md
       - Box:
@@ -227,7 +226,7 @@ nav:
           - Artwork Contract: dev/tokens/standards/eip24.md
       - Addresses: dev/wallet/address.md
       - Transactions: 
-        - Transactions: dev/protocol/transaction.md
+        - dev/protocol/transaction.md
         - Model Transaction: dev/protocol/model-tx.md
         - Composing Transactions: 
           - ErgoPay:
@@ -247,7 +246,7 @@ nav:
 
       - Block: dev/data-model/block.md
       - Wallets:
-        - Software: dev/wallet/wallets.md
+        - dev/wallet/wallets.md
         - Ledger: dev/wallet/payments/ledger.md
         - Integration: dev/Integration/guide.md
         - Standards:
@@ -271,7 +270,7 @@ nav:
       - Kiosk: dev/stack/kiosk.md
      
 
-  - 💡 ┃  Applications:
+  - 💡 ┃  Applications: 
     - Explore:
       - Applications: uses/index.md
       - Live dApps:

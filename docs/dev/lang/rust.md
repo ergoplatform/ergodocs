@@ -34,4 +34,6 @@ Read the full [contributing](https://github.com/ergoplatform/sigma-rust/blob/dev
 - [Ergo Utilities](https://github.com/robkorn/ergo-utilities-rust/) | simplify writing off-chain code in Rust.
 
 
+## Resources
 
+- [ergo-monitoring](https://github.com/SabaunT/ergo-monitoring) | Debug service printing out useful for developers and managers information about ergo blockchain state.

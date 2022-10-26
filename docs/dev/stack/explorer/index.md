@@ -10,10 +10,10 @@ There is a publicly available explorer at [explorer.ergoplatform.com](https://ex
 - [ergo-setup](https://github.com/abchrisxyz/ergo-setup) is a Docker based Ergo setup (Node, Explorer & GraphQL). Somewhat similar to Ergo Bootstrap except it offers much less options and is not NixOS-based.
 
 
-## uexplorer
+## uExplorer
 
-[ergo-uexplorer](https://github.com/pragmaxim/ergo-uexplorer/) is a supplementary, lightweight Ergo explorer with CassandraDB backend :
+- [uExplorer](https://github.com/pragmaxim/ergo-uexplorer/) is a supplementary, lightweight Ergo explorer with CassandraDB backend :
 
 ## GetBlok
 
-- [ergo-explorer-cdn.getblok.io](https://ergo-explorer-cdn.getblok.io/) Explorer end-point, no UI, only for API calls. 
+- [ergo-explorer-cdn.getblok.io](https://ergo-explorer-cdn.getblok.io/) hosts a explorer end-point, no UI, only for API calls. 

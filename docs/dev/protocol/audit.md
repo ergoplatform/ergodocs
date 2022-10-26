@@ -1,5 +1,7 @@
 
-We want to announce that Ergo has successfully passed a security audit of certain (most critical) parts of the code. This time the audit was done by Jean-Philipee Aumasson (aka veorq, [aumasson.jp/](https://aumasson.jp/)).
+# Security Audit 
+
+Ergo has successfully passed a security audit of certain (most critical) parts of the code. The audit was performed by Jean-Philipee Aumasson (aka veorq, [aumasson.jp/](https://aumasson.jp/)).
 
 The detailed report is below. Nothing critical is found. Comments on issues found:
 

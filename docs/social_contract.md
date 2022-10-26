@@ -1,6 +1,4 @@
-## Ergo Vision
-
-
+# Ergo's Social Contract
 
 The Ergo protocol is very flexible and may be changed in the future by the community. In this section, we define the main principles that should be followed in Ergo which might be referred to as **Ergo's Social Contract**.
 
