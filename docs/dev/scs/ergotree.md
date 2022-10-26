@@ -5,23 +5,16 @@ tags:
 
 # ErgoTree
 
-Most of Ergo users won't use ErgoTree directly since they are developing contracts in higher-level language, such as ErgoScript, which is then compiled to ErgoTree. However this standard defines the extended serialization format of contract templates, which may be reused across different protocol implementations, applications and tools on many execution environments.
-
+Most of Ergo users won't use ErgoTree directly since they are developing contracts in higher-level language, such as ErgoScript, which is then compiled to ErgoTree. 
 
 
 **Key Concepts**
 
 - [ErgoTree](https://ergoplatform.org/docs/ErgoTree.pdf) is used to define logical propositions protecting boxes (generalization of coins) in Ergo. 
 - Serialized ErgoTree expressions are written into UTXO boxes and then evaluated by the transaction verifier. 
-- 
 - The reference implementation of ErgoTree uses Scala, however alternative implementations can use other languages
 - The propositions are stored in the blockchain according to ErgoTree serialization format, which is designed for compact storage and fast script execution and transaction validation.
 - However, the ErgoTree binary format intentionally doesn't include metadata, which may be necessary for various Ergo applications.
-
-
-There is an ErgoTree serialization section in https://ergoplatform.org/docs/ErgoTree.pdf.
-
-- Constant-less lambdas part here https://github.com/ScorexFoundation/sigmastate-interpreter/issues/264
 
 ## Rational
 
@@ -70,3 +63,8 @@ The collection of constants contains the serialized constant data (using Constan
 
 [EIP5 is based on this ErgoTree feature](https://github.com/ergoplatform/eips/blob/master/eip-0005.md)
 
+## Resources
+
+
+- There is an ErgoTree serialization section [available](https://ergoplatform.org/docs/ErgoTree.pdf)
+- [Constant-less lambdas](https://github.com/ScorexFoundation/sigmastate-interpreter/issues/264)

@@ -1,6 +1,4 @@
-
-
-## Sidechains
+# Sidechains
 
 Another implementation is cross-chain communication with Proof of Stake networks. PoS networks such as Cardano can interact with Ergo through NIPoPoW integration. Such verification schemes can erase the need for centralised DAO structures and create new non-interactive cross-chain operations. 
 

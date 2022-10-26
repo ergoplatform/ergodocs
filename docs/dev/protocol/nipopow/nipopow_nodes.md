@@ -1,5 +1,5 @@
 
-## Light Nodes
+# Light Nodes
 
 **Light Clients** are essential when considering the hurdles cryptocurrency faces with mass adoption. Most crypto users do not have the necessary tools to run a full node. Running a full node means having a strong processor with high electricity wattage and more than a hundred gigabytes of memory to store the entire blockchain. Light clients are useful because they enable verification with a limited supply of data providers (nodes) and significantly reduce the amount of data storage and bandwidth needed for everyday users.
 
