@@ -95,7 +95,11 @@ nav:
         - dev/protocol/eutxo/eutxo.md
         - eUTXO vs Account: dev/protocol/eutxo/accountveutxo.md
         - Atomic Swaps: dev/protocol/eutxo/atomic.md
-      - NIPoPoWs: dev/protocol/nipopow.md
+      - NIPoPoWs:
+        - dev/protocol/nipopow/nipopow.md
+        - Light Nodes: dev/protocol/nipopow/nipopow_nodes.md
+        - Log-Space Mining: dev/protocol/nipopow/logspace.md
+        - Sidechains: dev/protocol/nipopow/sidechains.md
       - Sigma Protocols: dev/scs/sigma.md
       - Storage Rent: mining/rent.md
       - Autolykos: mining/autolykos.md
@@ -206,6 +210,7 @@ nav:
       - APIs: dev/stack/api.md
       - Off-Chain:
         - Oracle-Core: dev/oc/oracle.md
+        - Spectrum.DEX off-chain services: dev/oc/dex_bots.md
       #- Bookmarks: dev/start/resources.md
     - Anatomy of Ergo:
       - dev/data-model/box/index.md
@@ -264,9 +269,9 @@ nav:
         - Sigma Language: dev/scs/sigma-lang.md
         - Sigma Protocols: dev/scs/sigma.md
         - Debugging: dev/scs/debugging.md
+      - ErgoTree: dev/scs/ergotree.md
       - FlowCards: dev/scs/flowcards.md
       - Multi-Stage Contracts: dev/scs/multi.md 
-      - ErgoTree: dev/scs/ergotree.md
       - Kiosk: dev/stack/kiosk.md
      
 

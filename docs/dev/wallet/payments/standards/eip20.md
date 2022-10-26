@@ -101,7 +101,7 @@ wallet app containing the same transaction details as the dApp screen.
 
 6) The user compares the dApp's screen, the Wallet's screen and the
 transaction details and confirms the payment by using a "Sign" button. If the Hot
-Wallet also supports [EIP-0019](eip-0019.md) and private keys are not available,
+Wallet also supports [EIP-0019](eip19.md) and private keys are not available,
 then the sign button behaves like a "Cold Sign" button according to EIP-0019. 
 
 7) The wallet application signs the transaction either using local private keys
@@ -133,7 +133,7 @@ monitoring that transaction.
 
 The data formats of this EIP are based on a new binary data structure and
 serialization format called `ReducedTransaction` which is described in
-[EIP-0019](eip-0019.md).
+[EIP-0019](eip19.md).
 
 Below we describe the data formats specified by this EIP and refer to the
 formats defined in EIP-0019.

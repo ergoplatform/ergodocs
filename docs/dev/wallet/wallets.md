@@ -53,6 +53,7 @@ More information available on their [GitHub](https://github.com/ThierryM1212/SAF
 > Desktop wallet for the cryptocurrency Ergo with embedded node functionality. Available at [satergo.com](https://www.satergo.com)
 
 Why use Satergo?
+
 - **Secure**: Everything is encrypted and stored with the program
 - **Independent**: Host your own node if you want to
 - **Invaluable**: Contribute to the Ergo network
