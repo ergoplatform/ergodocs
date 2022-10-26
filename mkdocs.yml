@@ -172,7 +172,7 @@ nav:
             # - Modifiers Exchange: dev/p2p/modifiers.md
             # - BlockP2P: dev/p2p/BlockP2P.md
       - Explorer: 
-        - explorer: dev/stack/explorer/index.md
+        - dev/stack/explorer/explorer.md
         - Local Setup: dev/stack/explorer/explorer_local.md
         - Pi Blockchain Explorer: dev/stack/rpi-blockchain-explorer.md
         - GraphQL: dev/stack/explorer/graphql.md
