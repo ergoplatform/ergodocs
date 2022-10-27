@@ -190,6 +190,7 @@ nav:
           - dev/stack/appkit/appkit.md
           - Tutorial: dev/stack/appkit/tutorial.md
           - Gradle: dev/stack/appkit/gradle.md
+          - Using Appkit from Python: dev/stack/appkit/appkit_py.md
         - Mosaik: 
           - dev/stack/mosaik/intro.md
           - A simple UI: dev/stack/mosaik/tutorial2.md
@@ -214,6 +215,7 @@ nav:
       - Off-Chain:
         - Oracle-Core: dev/oc/oracle.md
         - Spectrum.DEX off-chain services: dev/oc/dex_bots.md
+        - Ergo Utilities Rust: dev/oc/ergo_utilities.md
       #- Bookmarks: dev/start/resources.md
     - Anatomy of Ergo:
       - Box: 
