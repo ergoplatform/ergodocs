@@ -168,7 +168,7 @@ We split validation of a single transaction into two stages. There are `stateles
 Below are rules for block validation when a node is verifying transactions (`VerifyTransactions = 1`)
 
 -   every transaction in a block is referencing to inputs from the UTXO set or created by previous transactions in the block. 
-    -   Please note that it is not possible for an input to refer to an output of some follow-up transaction of the block.
+-   Please note that it is not possible for an input to refer to an output of some follow-up transaction of the block.
 -   every transaction in a block is valid (see Section [4.6](#transaction-validation-rules) for transaction validation rules).
 -   total cost of validation of all the inputs of all the transactions in the block is no more than allowed limit.
 -   root hash of the authenticated UTXO set after application of the block transactions is the same as in the header.
@@ -176,3 +176,8 @@ Below are rules for block validation when a node is verifying transactions (`Ver
 -   header is valid  (link to header validation rules)
 
 (mention emission rules. extractEmissionBox is buggy probably. extension validation rules)
+
+
+## Tools
+
+- [Transaction builder](https://transaction-builder.ergo.ga/) |  The application allows you to manipulate Ergo json transactions with a UI and to sign them with Yoroi, or to prepare the JSON for the Swagger API. It is also able to load the JSON of an unsigned transaction to edit it.  | [GitHub](https://github.com/ThierryM1212/transaction-builder/)  | [Video](https://youtu.be/0VhfY7osT2k)

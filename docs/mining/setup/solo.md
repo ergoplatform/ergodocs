@@ -22,6 +22,8 @@ You may or may not need to use Stratum Server and Stratum Proxy to operate them.
 
 To be able to spend any ERG mined this way, you will need to add this to your `.config`
 
+A [Java library](https://github.com/Satergo/stratum4ergo) for creating Stratum mining pool servers for Ergo.
+
 ```
 ergo {
   wallet {

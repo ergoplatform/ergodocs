@@ -100,7 +100,7 @@ nav:
         - Light Nodes: dev/protocol/nipopow/nipopow_nodes.md
         - Log-Space Mining: dev/protocol/nipopow/logspace.md
         - Sidechains: dev/protocol/nipopow/sidechains.md
-      - Sigma Protocols: dev/scs/sigma.md
+      - Privacy: dev/zkp/zkp.md
       - Storage Rent: mining/rent.md
       - Autolykos: mining/autolykos.md
     - Scaling: dev/protocol/scaling.md
@@ -198,7 +198,9 @@ nav:
           - Deployment: dev/stack/mosaik/mosaik-docker-flux.md
           - Example apps: dev/stack/mosaik/examples.md
         - JSON dApp Environment: dev/stack/jde.md
-        - Headless dApp Framework: dev/stack/headless.md
+        - Headless dApp Framework: 
+          - dev/stack/headless/headless.md
+          - dev/stack/headless/modules.md
         - RustKit: https://github.com/rust-ergo/rustkit
         - SigmaRust: dev/lang/rust.md
       - Libaries:
@@ -213,10 +215,10 @@ nav:
         - Spectrum.DEX off-chain services: dev/oc/dex_bots.md
       #- Bookmarks: dev/start/resources.md
     - Anatomy of Ergo:
-      - dev/data-model/box/index.md
-      - Box:
-        - Box: dev/data-model/box/index.md
-        - Registers: dev/data-model/box/registers.md
+      - Box: 
+        - dev/data-model/box/box.md
+        - Box Modelling: dev/data-model/box/box_modeling.md
+      - Registers: dev/data-model/box/registers.md
       - Tokens:
         - Create a token: dev/tokens/issue.md
         - Burning a token: dev/tokens/burn.md
@@ -267,7 +269,10 @@ nav:
         - Overview: dev/scs/ergoscript.md
         - Quick Primer: dev/scs/ergoscript-primer.md
         - Sigma Language: dev/scs/sigma-lang.md
-        - Sigma Protocols: dev/scs/sigma.md
+        - Sigma Protocols: 
+          - dev/scs/sigma/sigma.md
+          - 3-out-of-5 Threshold Signature: dev/scs/sigma/3-out-of-5.md
+          - Verifying Schnorr Signatures: dev/scs/sigma/verifying.md
         - Debugging: dev/scs/debugging.md
       - ErgoTree: dev/scs/ergotree.md
       - FlowCards: dev/scs/flowcards.md

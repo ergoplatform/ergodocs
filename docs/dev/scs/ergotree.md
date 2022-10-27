@@ -68,3 +68,4 @@ The collection of constants contains the serialized constant data (using Constan
 
 - There is an ErgoTree serialization section [available](https://ergoplatform.org/docs/ErgoTree.pdf)
 - [Constant-less lambdas](https://github.com/ScorexFoundation/sigmastate-interpreter/issues/264)
+- [ErgoTree as an Authentication Language](https://www.ergoforum.org/t/ergotree-as-an-authentication-language/)

@@ -6,6 +6,8 @@ Ensuring economic freedom for ordinary people through decentralized, private and
 
 ## Why Ergo?
 
+Ergo is multi-asset Proof-of-Work cryptocurrency with powerful financial contracts in the extended UTXO model, unique flexible crypto-contracts based on sigma-protocols, storage rent, stateless and ultra-efficient SPV clients support and focus on long-term survivability. Based on a scientific approach, but also very practical in any aspect. Ergo is a DeFi and crypto contracts platform that takes a radically different approach to smart contracts than other networks, non-custodial and non-interactive approaches including off-the-peg use of ring and threshold signatures – great for new privacy applications
+
 The overwhelming majority of successful public blockchain use‐cases are related to financial applications. Ergo extends Bitcoin's way of writing contracts by attaching a guard script (together with additional custom data) to every coin. 
 
 In addition to regular protection by some `m‐of‐n` signature, Ergo allows specifying the possible recipients of these coins, which may be another contract with similar complex conditions. This "chaining" approach allows the implementation of secure and efficient contracts of arbitrary complexity.
