@@ -107,22 +107,12 @@ nav:
     - Scaling: dev/protocol/scaling.md
     - Resources:
       - Documents: documents.md
-      - EIPs:
-        - dev/protocol/eip.md
-        - UTXO-Set Scanning Wallet API: dev/wallet/standards/eip1.md
-        - Deterministic Wallet Standard: dev/wallet/standards/eip3.md
-        - Asset Standard: dev/tokens/standards/eip4.md
-        - Cold Wallet: dev/wallet/standards/eip19.md
-        - Geniune Token Verification: dev/tokens/standards/eip21.md
-        - Proxy Contracts: dev/wallet/payments/standards/eip17.md
-        - ErgoPay Protocol: dev/wallet/payments/standards/eip20.md
-        - Payment Request URI: dev/wallet/payments/standards/eip25.md
-
+      - EIPs: dev/protocol/eip.md
       - Audit: dev/protocol/audit.md
       - Social Contract: social_contract.md
       - Key Sites:
-        - Sigmaverse: https://sigmaverse.io
-        - Community Spaces: https://ergoplatform.org/en/community/
+        - 🔗 Sigmaverse: https://sigmaverse.io
+        - 🔗 Community Spaces: https://ergoplatform.org/en/community/
 
   - ⛏ ┃  Mine:
     - Mining: mining/index.md
@@ -153,13 +143,13 @@ nav:
         - Install: 
           - Install: node/install/index.md
           - Manual: node/install/manual.md
-          - Troubleshooting: node/install/troubleshooting.md
           - Docker: node/install/docker.md
           - Pi: node/install/pi.md
+          - Troubleshooting: node/install/troubleshooting.md
+          - FAQ: node/install/faq.md
         - Swagger API: node/swagger.md
         - Testnet: dev/start/testnet.md
         - Node Wallet: node/wallet.md
-        - FAQ: node/install/faq.md
         - Resources:
           #- Architecture: node/architecture.md
           - Distributed Signatures: node/sigs.md

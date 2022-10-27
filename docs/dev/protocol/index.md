@@ -39,7 +39,7 @@ Ergo provides **superior support for real-world financial agreements**. It does 
 2. Support for formal verification of contracts, bringing improved security guarantees.
 3. *Turing complete* smart contracts as demonstrated in [this peer-reviewed paper](https://arxiv.org/pdf/1806.10116v1.pdf).
 4. Easy Oracle creation
-5. A unique [Data Inputs](/dev/scs/data-inputs) concept, enabling a radically different approach to provide robust, flexible cryptography using easy, safe scripting on privacy-centric **Sigma Protocols**. 
+5. A unique [Data Inputs](/dev/scs/data-inputs) concept, enabling a radically different approach to provide robust, flexible cryptography.
 6. The cryptographic part of ErgoScript is based on [Sigma Protocols](/dev/scs/sigma) and naturally supports threshold `m-of-n` signatures, ring signatures, and more. 
 7. Support for [Multi-Stage contracts](/dev/scs/multi) that operate on a stateful level. 
 
