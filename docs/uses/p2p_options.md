@@ -1,6 +1,6 @@
 #  Decentralized P2P options contracts
 
-> From [ergoforum](https://www.ergoforum.org/t/decentralized-p2p-options-contracts-on-ergo/3763)
+> 🔗 From [ergoforum](https://www.ergoforum.org/t/decentralized-p2p-options-contracts-on-ergo/3763)
 
 Options contracts can be useful in many situations for profitable trading, reducing risks, hedging portfolio etc. It is desirable to have on-chain options contracts where writing and trading options contracts do not involve additional security risks (in comparison with e.g. trading on ErgoDEX).
 

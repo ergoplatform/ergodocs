@@ -1,6 +1,6 @@
 # Issuing a token
 
-> From [EIP-0004](eip4.md)
+> 🔗 From [EIP-0004](eip4.md)
 
 Ergo supports custom tokens as **first-class citizens**.
 - A special [register](registers.md) `R2` of a [box](/docs/dev/data-model/box/index.md) contains (tokenId -> amount) pairs.

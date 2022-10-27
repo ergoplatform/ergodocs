@@ -1,6 +1,6 @@
 # Proxy contracts
 
-> From [EIP-0017](https://raw.githubusercontent.com/ergoplatform/eips/master/eip-0017.md)
+> 🔗 From [EIP-0017](https://raw.githubusercontent.com/ergoplatform/eips/master/eip-0017.md)
 
 * Author: anon_real
 * Status: Proposed

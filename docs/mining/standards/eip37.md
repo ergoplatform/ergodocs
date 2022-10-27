@@ -1,6 +1,6 @@
 # Tweaking Difficulty Adjustment Algorithm
 
-> From [EIP-0037](https://github.com/ergoplatform/eips/blob/ddbca24fef5e91e0c80c6881fc31d8831ae69768/eip-0037.md)
+> 🔗 From [EIP-0037](https://github.com/ergoplatform/eips/blob/ddbca24fef5e91e0c80c6881fc31d8831ae69768/eip-0037.md)
 
 
 * Author: kushti

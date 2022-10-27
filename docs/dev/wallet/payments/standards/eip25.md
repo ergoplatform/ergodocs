@@ -1,7 +1,7 @@
 # EIP-0025: URI scheme for payment requests
 
 
-> From [EIP-0025](https://raw.githubusercontent.com/ergoplatform/eips/master/eip-0025.md)
+> 🔗 From [EIP-0025](https://raw.githubusercontent.com/ergoplatform/eips/master/eip-0025.md)
 
 
 * Author: MrStahlfelge

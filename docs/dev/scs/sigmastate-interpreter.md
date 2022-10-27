@@ -1,5 +1,5 @@
 
-This repository contains implementations of ErgoScript compiler and ErgoTree
+The [sigmastate-interpreter](https://github.com/ScorexFoundation/sigmastate-interpreter#sigma-language-background.md) repository contains implementations of ErgoScript compiler and ErgoTree
 Interpreter for a family of Sigma-protocol based authentication languages (or simply
 Sigma language).
 

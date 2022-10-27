@@ -133,7 +133,10 @@ nav:
       - Subpooling: mining/setup/subpool.md
     - Autolykos:
       - mining/autolykos.md
-      - Autolykos: mining/autolykos.md
+      - Algorithm: 
+        - mining/algorithm.md
+        - Solution Verification: mining/solution-verification.md
+        - Difficulty Adjustment: mining/difficulty.md
       - Governance: mining/governance.md
       - Storage Rent: mining/rent.md
       - Log-Space Mining: mining/log_space.md
@@ -281,18 +284,26 @@ nav:
         - dev/scs/ergoscript.md
         - Overview: dev/scs/ergoscript.md
         - Quick Primer: dev/scs/ergoscript-primer.md
-        - Sigma Language: dev/scs/sigma-lang.md
-        - sigmastate-interpreter: dev/scs/sigmastate-interpreter.md
+        - Sigma Language:
+          - dev/scs/sigma-lang.md
+          - Language Description: dev/scs/sigma/lang-spec.md
+          - Simple Syntax: dev/scs/syntax.md
+          - Sigma Propositions: dev/scs/sigma/sigma-prop.md
+          - The Blockchain context: dev/scs/blockchain-context.md
+          - Accessing boxes and registers: dev/scs/boxes-and-registers.md
+          - Global Functions: dev/scs/global-functions.md
+          - Language Operations: dev/scs/sigma/lang-ops.md
+          - sigmastate-interpreter: dev/scs/sigmastate-interpreter.md
         - Sigma Protocols: 
           - dev/scs/sigma/sigma.md
           - 3-out-of-5 Threshold Signature: dev/scs/sigma/3-out-of-5.md
           - Verifying Schnorr Signatures: dev/scs/sigma/verifying.md
         - Debugging: dev/scs/debugging.md
       - ErgoTree: dev/scs/ergotree.md
-      - FlowCards: dev/scs/flowcards.md
       - Multi-Stage Contracts: dev/scs/multi.md
       - Data Inputs: dev/scs/data-inputs.md
       - Tooling:
+        - FlowCards: dev/scs/flowcards.md
         - ErgoScala: dev/stack/ergoscala.md
         - Compiler: dev/stack/compiler.md
         - Kiosk: dev/stack/kiosk.md

@@ -1,6 +1,6 @@
 # ChainCash
 
-> From [ergoforum](https://www.ergoforum.org/t/chaincash-a-spender-signed-currency-on-ergo/4015)
+> 🔗 From [ergoforum](https://www.ergoforum.org/t/chaincash-a-spender-signed-currency-on-ergo/4015)
 
 Currently, DeFi space has a lot of issues. Stablecoin protocols are requiring solid overcollateralization or depend on external actors to preserve peg (such as Luna Foundation Guard). No any framework to combine collaterals and trust has been proposed to the moment. As a result, DeFi is not widely used outside of cryptocurrency users circles. I am going to propose a possible solution for DeFi which can be useful in the real world.
 

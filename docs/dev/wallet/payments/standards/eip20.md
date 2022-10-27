@@ -1,6 +1,6 @@
 # ErgoPay: an interaction protocol between wallet application and dApp
 
-> From [EIP-0020](https://raw.githubusercontent.com/ergoplatform/eips/master/eip-0020.md)
+> 🔗 From [EIP-0020](https://raw.githubusercontent.com/ergoplatform/eips/master/eip-0020.md)
 
 
 * Author: @aslesarenko, @MrStahlfelge
