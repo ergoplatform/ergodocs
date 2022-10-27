@@ -209,7 +209,7 @@ nav:
         - GetBlok Plasma: dev/lib/plasma.md
         - Scrypto: https://github.com/input-output-hk/scrypto
         - EIP12-Types: https://github.com/capt-nemo429/eip12-types
-      # - SigmaJS        
+        - SigmaJS: dev/lib/sigmajs.md
       - APIs: dev/stack/api.md
       - Off-Chain:
         - Oracle-Core: dev/oc/oracle.md
@@ -272,6 +272,7 @@ nav:
         - Overview: dev/scs/ergoscript.md
         - Quick Primer: dev/scs/ergoscript-primer.md
         - Sigma Language: dev/scs/sigma-lang.md
+        - sigmastate-interpreter: dev/scs/sigmastate-interpreter.md
         - Sigma Protocols: 
           - dev/scs/sigma/sigma.md
           - 3-out-of-5 Threshold Signature: dev/scs/sigma/3-out-of-5.md

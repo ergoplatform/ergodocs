@@ -24,16 +24,25 @@ This approach should work in JS/TS WASM bindings as well.
 
 
 ## Contributing
-There is a labelled issues tab on [sigma-rust](https://github.com/ergoplatform/sigma-rust/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) that anyone can pick up.  If you are working on something, leave a comment, so others know. [@greenhat](https://discord.gg/Q86PNMwRsu) is ready to assist with anyone interested.
+There is a labelled issues tab on [sigma-rust](https://github.com/ergoplatform/sigma-rust/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) that anyone can pick up.  If you are working on something, leave a comment, so others know. `@greenhat` is ready to assist with anyone interested [on Discord](https://discord.gg/Q86PNMwRsu).
 
 Read the full [contributing](https://github.com/ergoplatform/sigma-rust/blob/develop/CONTRIBUTING.md) guidelines.
 
-## References
+## Resources
+
+
+##### Libraries
+
+- [sigma_rb](https://github.com/thedlop/sigma_rb) Ruby wrapper around C bindings for ErgoLib from Sigma-Rust
+
+
+##### References 
+
 - This [document](https://github.com/ergoplatform/sigma-rust/blob/develop/docs/architecture.md) describes the high-level architecture of ErgoScript compiler and ErgoTree interpreter.
 - [Rust port of AVL tree from scrypto package.](https://github.com/knizhnik/scorex_crypto_avltree/blob/main/crypto_avltree.md)
 - [Ergo Utilities](https://github.com/robkorn/ergo-utilities-rust/) | simplify writing off-chain code in Rust.
 
 
-## Resources
+##### Resources
 
 - [ergo-monitoring](https://github.com/SabaunT/ergo-monitoring) | Debug service printing out useful for developers and managers information about ergo blockchain state.
