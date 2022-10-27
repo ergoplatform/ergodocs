@@ -50,6 +50,7 @@ extra:
 
 plugins:
   - search
+  - mkdocs-jupyter #https://github.com/danielfrg/mkdocs-jupyter
   - section-index #https://github.com/oprypin/mkdocs-section-index
   #- awesome-pages https://github.com/lukasgeiter/mkdocs-awesome-pages-plugin
   - autolinks 
@@ -231,7 +232,9 @@ nav:
           - Geniune Token Verification: dev/tokens/standards/eip21.md
           - Auction Contract: dev/tokens/standards/eip22.md
           - Artwork Contract: dev/tokens/standards/eip24.md
-      - Addresses: dev/wallet/address.md
+      - Addresses: 
+        - dev/wallet/address.md
+        - Address Encoding: assets/py/Ergo_Address_Encoding.ipynb
       - Transactions: 
         - dev/protocol/transaction.md
         - Model Transaction: dev/protocol/model-tx.md
@@ -277,7 +280,10 @@ nav:
       - ErgoTree: dev/scs/ergotree.md
       - FlowCards: dev/scs/flowcards.md
       - Multi-Stage Contracts: dev/scs/multi.md 
-      - Kiosk: dev/stack/kiosk.md
+      - Tooling:
+        - ErgoScala: dev/stack/ergoscala.md
+        - Compiler: dev/stack/compiler.md
+        - Kiosk: dev/stack/kiosk.md
      
 
   - 💡 ┃  Applications: 

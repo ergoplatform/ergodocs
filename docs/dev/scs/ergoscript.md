@@ -35,55 +35,59 @@ Please see this [Quick Primer on ErgoScript](/dev/scs/ergoscript-primer) for an 
 
 ## Resources
 
-### Tutorials 
 
+##### Courses
+
+- [ErgoScript 101 Crash Course](https://docs.google.com/presentation/d/10gYO82z_7qloRrFOcCxTFuzpP40IImPyIKMV2ZFd9M4/edit#slide=id.p) (Slides)
 - [Learn ErgoScript By Example Via The Ergo Playground with Robert Kornacki (Video)](https://www.youtube.com/watch?v=8l2v1asHgyA)
-- [ErgoScript by Example Repository](https://github.com/ergoplatform/ergoscript-by-example)
 - [The ErgoScript Developer Course from DeCo Education](https://github.com/DeCo-Education/ErgoScript-Developer-Course)
 - [Deco Education: 2022 Script Class](https://www.youtube.com/watch?v=qR0_k7VH6KI&list=PLopsKGshj0B4DfFnS-pvriZhba050eaXu)
+
+
+##### Tutorials 
+
+- [ErgoScript by Example Repository](https://github.com/ergoplatform/ergoscript-by-example)
 - [Testing Ergo Contracts Off-chain](https://github.com/anon-real/contract-testing)
 
 
-### Advanced Tutorials
+##### Advanced Tutorials
 
 - [Advanced ErgoScript Tutorial](https://ergoplatform.org/docs/AdvancedErgoScriptTutorial.pdf)
 - [ErgoScript tutorial](https://ergoplatform.org/docs/ErgoScript.pdf)
 
 
-### Explanations
+##### Explanations
 
 - [ErgoScript Design patterns](https://www.ergoforum.org/t/ergoscript-design-patterns/222)
 - [SigmaState Protocols](https://docs.ergoplatform.com/sigmastate_protocols.pdf)
 
-### References
+##### References
 
 - [ErgoScript Language Spec](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/LangSpec.md)
 - [ErgoScript](https://ergoplatform.org/docs/ErgoScript.pdf) 
 - [ErgoTree](https://ergoplatform.org/docs/ErgoTree.pdf)
 - [High Level Design Patterns In Extended UTXO Systems](https://github.com/Emurgo/Emurgo-Research/blob/master/smart-contracts/High%20Level%20Design%20Patterns%20In%20Extended%20UTXO%20Systems.md)
 
-### Examples
+##### Examples
 
 - [ErgoPad Staking Contracts](https://github.com/ergo-pad/ergopad/blob/staking-contracts/backend/app/contracts/staking.md)
 - [GetBlok.io Smart Pools](https://github.com/GetBlok-io/ergo-smartpooling-contracts)
 
 
-### Visual
+##### Visual
 
 - [FlowCards](flowcards.md) is *A Declarative Framework for Development of Ergo dApps* 
 - [flowcardLib: Ergo FlowCard library for diagrams.net](https://github.com/lucagdangelo/flowcardLib)
 - [ergo-castanet](https://github.com/iandebeer/ergo-castanet)
 
-### Bookmarks
+##### Bookmarks
 
 
 - Compile ErgoScript directly in your browser with [ErgoScript Playground](https://wallet.plutomonkey.com/p2s/)
 - [Kiosk](/dev/stack/kiosk) lets anyone play with ErgoScript using a basic web-based UI
 - [ergoscript-compiler](https://github.com/ergoplatform/ergoscript-compiler)
 
-
-
-## Box
+##### Box
 
 Here is a box to experiment with 
 

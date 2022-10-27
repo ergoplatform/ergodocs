@@ -1,7 +1,9 @@
 # Send A Chained Transaction
 
 
-> This *simple-send* example was adapted from [ergpy examples](https://github.com/mgpai22/ergpy/tree/main/examples)
+- The *simple-send* example below was adapted from [ergpy examples](https://github.com/mgpai22/ergpy/tree/main/examples). 
+- There is also some writings from GetBlok for a [Transaction Group framework](https://github.com/GetBlok-io/Subpooling#frameworks--abstractions) for sending large sets of transactions that are interrelated.
+
 
 ## Create connection to the blockchain
 
