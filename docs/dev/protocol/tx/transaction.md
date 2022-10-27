@@ -10,12 +10,6 @@ tags:
 Each Ergo transaction is an **atomic state transition operation**. It destroys a [box](box.md) from the state and creates new ones. 
 
 
-## Overview
-
-- If the transaction is spending boxes protected by a non-trivial script, its inputs should also contain *proof of spending correctness* - context extension (user-defined key-value map) and data inputs (links to existing boxes in the state) that you may use during script reduction to crypto, signatures that satisfies the remaining cryptographic protection of the script. 
-- Transactions are not encrypted, meaning you can publicly view transactions included in blocks.
-
-
 ## Anatomy
 
 Each transaction executed on Ergo consists of **these three things**. 
@@ -33,7 +27,15 @@ Each transaction executed on Ergo consists of **these three things**.
 
 ### Data Inputs
 
-[**Data inputs**](read-only-inputs.md) are unique concept created by Ergo and we included into Cardano with the Vasil Hardfork. These allow multiple transactions to share a data-input box, which will store only a single reference to the box in the block. 
+[**Data inputs**](read-only-inputs.md) are unique concept created by Ergo and were included into Cardano with the Vasil Hardfork. These allow multiple transactions to share a data-input box, which will store only a single reference to the box in the block. 
+
+
+## Overview
+
+- If the transaction is spending boxes protected by a non-trivial script, its inputs should also contain *proof of spending correctness* - context extension (user-defined key-value map) and data inputs (links to existing boxes in the state) that you may use during script reduction to crypto, signatures that satisfies the remaining cryptographic protection of the script. 
+- Transactions are not encrypted, meaning you can publicly view transactions included in blocks.
+
+
 
 
 
