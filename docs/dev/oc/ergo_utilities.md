@@ -5,4 +5,4 @@
 ## Current Libraries
 
 ### Ergo Off-Chain Utilities
-Utilities related to encoding/hashing/serialization values/data what is useful for off-chain application.
+Utilities related to encoding/hashing/serialization values/data useful for off-chain applications.

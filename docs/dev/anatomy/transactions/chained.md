@@ -2,10 +2,10 @@
 
 
 - The *simple-send* example below was adapted from [ergpy examples](https://github.com/mgpai22/ergpy/tree/main/examples). 
-- There is also some writings from GetBlok for a [Transaction Group framework](https://github.com/GetBlok-io/Subpooling#frameworks--abstractions) for sending large sets of transactions that are interrelated.
+- There are also some writings from GetBlok for a [Transaction Group framework](https://github.com/GetBlok-io/Subpooling#frameworks--abstractions) for sending large sets of transactions that are interrelated.
 
 
-## Create connection to the blockchain
+## Create a connection to the blockchain
 
 ```python
 # Assign a node_url, either MainNet or TestNet
@@ -17,7 +17,7 @@ ergo = appkit.ErgoAppKit(node_url=node_url)
 ## Wallet mnemonic
 
 ```python
-wallet_mnemonic = "decline reward asthma enter three clean borrow repeat identify wisdom horn pull entire adapt neglect"
+wallet_mnemonic = "decline reward asthma enter three clean borrow repeat identify wisdom horn pull entire adapt neglect."
 
 receiver_addresses = [
     "3WwdXmYP39DLmDWJ6grH9ArXbWuCt2uGAh46VTfeGPrHKJJY6cSJ",
@@ -33,7 +33,7 @@ consecutive_transactions = 3
 # the amount of time in seconds the program will pause in between submitting txs
 sleep_time = 0.5 
 
-# here we calculate the amount of ergs required for the genesis outbox
+# here, we calculate the number of ergs required for the genesis outbox
 genesis_amount = [consecutive_transactions * (0.22 + 0.33 + 0.11) + (consecutive_transactions + 1) * 0.001]
 
 # wallet of sender

@@ -12,8 +12,8 @@ We call this object a ***'box'***.
 
 ## Overview 
 
-- A box is an **immutable object** which can be only created or removed. 
-- A box is not simply a coin; it contains data, code and registers. Even more, there's nothing in a box but registers. 
+- A box is an **immutable object** which can only be created or removed. 
+- A box is not simply a coin; it contains data, code and registers. Even more, there's nothing in the box but registers. 
 - There are four predefined registers, with monetary value, protecting script, and an identifier of a transaction which created the box.
 - Because the data of the transaction that created the box is included, the box has unique contents and, therefore, a unique id. 
 - Boxes are **first-class citizens** in the Ergo protocol. 
@@ -51,7 +51,7 @@ A box, at the minimum, has four pieces of information.
 1. The value in NanoErgs (1 Erg = 1000000000 NanoErgs).
 2. The guard script (like `scriptPubKey` of Bitcoin). (aka the "smart contract.") which protects the spending of the box.
 3. Additional assets (tokens) are stored in this box.
-4. Creation info of the box (`txId`, the transaction identifier that created the box along with an output index). It also contains a `maxCreation` height parameter defined by the box creator (this is not the creation height; its use is to create "payment channels easily").
+4. Creation info of the box (`txId`, the transaction identifier that created the box, along with an output index). It also contains a `maxCreation` height parameter defined by the box creator (this is not the creation height; its use is to create "payment channels easily").
 
 **These are stored in the first four registers of the box, leaving (R4-R9) to store custom data for use in smart contracts.**
 

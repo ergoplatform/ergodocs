@@ -1,5 +1,5 @@
 
-## EIP27
+# EIP27: Emission Retargeting Soft-Fork
 
 ## Ergo Tokenomics and Emission
 As a Proof of Work blockchain, Ergo has a defined emission schedule for the release of ERG tokens. When Ergo launched in 2019, there was no ICO (initial coin offering), no pre-mine and no pre-allocation of tokens to any founders or venture capitalists. Once the mainnet was activated, Ergo’s emission schedule was set to be completed within eight years with a strict supply of 97,739,925 ERG. During the first two and a half (2.5) years, the emission schedule sent a small portion of each block to the Ergo Foundation Treasury - for the purposes of funding promotion and development on Ergo. After two and a half years, the Ergo Foundation ceased to receive any rewards from the mining protocol and will have received 4.43% of the total ERG supply to fund that entity’s initiatives.

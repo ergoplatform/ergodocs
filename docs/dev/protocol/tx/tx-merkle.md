@@ -1,0 +1,6 @@
+
+### Transaction Merkle Tree 
+
+Similar to how a miner in Bitcoin builds a Merkle tree of block transactions, as well as a Merkle tree of transaction witnesses (after the Segwit upgrade), in Ergo, a miner should build a Merkle tree (and include a correct root hash of the tree into a block header), which is in case of Ergo combines both transactions and their respective spending proofs.
+
+This tree is to be constructed as follows. A data block under a leaf of the tree could be empty or 64 bytes in length. Data of 64 bytes contains the identifier of the transaction (256-bit digest of transaction bytes without spending proofs) and 256 bits of a digest of all the spending proofs for the transaction combined. Data for the `i-th` transaction in the block (starting from 0) is authenticated by the `i-th` leaf. A leaf is `hash(0 || pos || data)`, if the `data` is not empty  (we do add prefix for domain separation), or `null` otherwise. Here, `pos` is the position of the transaction in the block. For internal nodes, a node is `hash(1 || left\_child || right\_child)`; if either the node's left child or right child is not `null`, `null` otherwise. If the root hash is `null`, we write all zeros (of hash function output length) instead.

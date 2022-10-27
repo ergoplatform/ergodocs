@@ -6,6 +6,8 @@ Firstly, check out this [calculator](https://docs.google.com/forms/d/e/1FAIpQLSc
 
 There is now a solo-mining smart subpool on [getblok](https://www.getblok.io/smartpools/). Alternatively 2Miners, solopool.org and others offer Solo mining. 
 
+[stratum4ergo](https://github.com/Satergo/stratum4ergo) is a Java library for creating Stratum mining pool servers for Ergo.
+
 
 
 ## Getting Started
@@ -22,7 +24,6 @@ You may or may not need to use Stratum Server and Stratum Proxy to operate them.
 
 To be able to spend any ERG mined this way, you will need to add this to your `.config`
 
-A [Java library](https://github.com/Satergo/stratum4ergo) for creating Stratum mining pool servers for Ergo.
 
 ```
 ergo {

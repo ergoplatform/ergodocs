@@ -238,23 +238,31 @@ nav:
         - dev/wallet/address.md
         - Address Encoding: assets/py/Ergo_Address_Encoding.ipynb
       - Transactions: 
-        - dev/protocol/transaction.md
-        - Model Transaction: dev/protocol/model-tx.md
-        - Composing Transactions: 
-          - ErgoPay:
-            - ErgoPay: dev/wallet/payments/ergopay/ergo-pay.md
-            - Tutorial: dev/wallet/payments/ergopay/ep-tutorial.md
-          - dApp Connector: dev/wallet/payments/dApp.md
-          - Proxy Contracts:
-            - Proxy Contracts: dev/wallet/payments/proxy.md
-            - Assembler: dev/stack/assembler.md
+        - dev/protocol/tx/transaction.md
+        - Model Transaction: dev/protocol/tx/model-tx.md
+        - Composing Transactions:
+          - Sending A Chained Transaction: dev/anatomy/transactions/chained.md
+          - Frameworks: 
+            - ErgoPay:
+              - ErgoPay: dev/wallet/payments/ergopay/ergo-pay.md
+              - Tutorial: dev/wallet/payments/ergopay/ep-tutorial.md
+            - dApp Connector: dev/wallet/payments/dApp.md
+            - Proxy Contracts:
+              - dev/wallet/payments/proxy.md
+              - Assembler: dev/stack/assembler.md
+          - Manually: 
+            - Format: dev/protocol/tx/format.md
+            - Merkle Tree: dev/protocol/tx/tx-merkle.md
+            - Signing: dev/protocol/tx/signing.md
+            - Validation: dev/protocol/tx/validation.md
+            - Data Inputs: dev/protocol/tx/read-only-inputs.md
+          
           - Standards:
             - Proxy Contracts: dev/wallet/payments/standards/eip17.md
             - ErgoPay Protocol: dev/wallet/payments/standards/eip20.md
             - Payment Request URI: dev/wallet/payments/standards/eip25.md
-          - Data Inputs: dev/scs/data-inputs.md
+          
           - ErgoTool: dev/stack/ergotool.md
-        - Sending A Chained Transaction: dev/anatomy/transactions/chained.md
 
       - Block: dev/data-model/block.md
       - Wallets:
@@ -282,7 +290,8 @@ nav:
         - Debugging: dev/scs/debugging.md
       - ErgoTree: dev/scs/ergotree.md
       - FlowCards: dev/scs/flowcards.md
-      - Multi-Stage Contracts: dev/scs/multi.md 
+      - Multi-Stage Contracts: dev/scs/multi.md
+      - Data Inputs: dev/scs/data-inputs.md
       - Tooling:
         - ErgoScala: dev/stack/ergoscala.md
         - Compiler: dev/stack/compiler.md

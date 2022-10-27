@@ -6,7 +6,7 @@ tags:
 
 # Integration
 
-A guide for helping developers from exchanges/pools/etc integrate Ergo. 
+A guide to help developers integrate Ergo. 
 
 Any suggestions for improvements are welcomed! 
 
@@ -16,12 +16,12 @@ Please send them to team@ergoplatform.org or join us on [`#development` on Disco
 ## Getting Started
 
 
-Some quick facts about Ergo that are useful to know. 
+Here are some quick facts about Ergo that are useful to know;
 
-* like Bitcoin, a transaction in Ergo has multiple *inputs* and *outputs*. Unspent outputs are **single-use entities**. However, Ergo is built from scratch; thus, scripts and transaction formats are different.
+* like Bitcoin, a transaction in Ergo has multiple *inputs* and *outputs*. Unspent outputs are **single-use entities**. However, Ergo is built from scratch; thus, scripts and transaction formats differ.
 * Just like Bitcoin, there are some standard scripts in Ergo associated with addresses, e.g. `P2PK` addresses. [Read more here on the address scheme](/dev/wallet/address)
 * Rather than storing a single amount (like BTC), an ergo eutxo box has some registers to store arbitrary values, like its native tokens. So, each box has an ERG amount and may or may not have a bunch of {tokenid, token amount} pairs, all in the UTXO model.
-* Ergo has an inbuilt wallet API which is enough for most use-cases. API has a Swagger interface on `127.0.0.1:9053` by default in the mainnet (`9052` on testnet).
+* Ergo has an inbuilt wallet API which is enough for most use cases. API has a Swagger interface on `127.0.0.1:9053` by default in the mainnet (`9052` on testnet).
 * See the full guide on setting [How to set up a node](/node/platforms/tutorial) and the associated [troubleshooting](/node/platforms/troubleshooting) page.
 
 
@@ -35,12 +35,12 @@ Main methods:
 
 * `/wallet/init` to create a wallet (and a secret mnemonic)  
 * `/wallet/restore` to restore a wallet from mnemonic
-* `/wallet/unlock` to unlock the wallet (it is unlocked after init but locked after restart). You have to unlock it before signing transactions
+* `/wallet/unlock` to unlock the wallet (unlocked after init but locked after restart). You have to unlock it before signing transactions
 * `/wallet/lock` to lock the wallet
 * `/wallet/payment/send` to send a simple payment
 * `/wallet/status` to get wallet status
 * `/wallet/deriveNextKey` to derive a new key according to EIP-3 (BIP 44 implementation for Ergo)
-* `/wallet/balances` to get wallet balance (for all the addresses) 
+* `/wallet/balances` to get the wallet balance (for all the addresses) 
 * `/wallet/transactions` to get wallet transactions (for all the addresses) 
 
 ### Creating an external wallet.
@@ -70,7 +70,7 @@ Available libraries are:
 Secret seed and derived addresses generation demo using ergo-wallet and Java is provided in [AdressGenerationDemo.java](https://gist.github.com/kushti/70dcfa841dfb504721f09c911b0fc53d)
 
 
-To generate new addresses in the same wallet you can use the `/wallet/deriveNextKey` API method
+You can use the `/wallet/deriveNextKey` API to generate new addresses in the same wallet.
 
 ```bash
 curl -X GET "http://localhost:9053/wallet/deriveNextKey" -H  "accept: application/json" -H  "api_key: hello"
@@ -78,9 +78,9 @@ curl -X GET "http://localhost:9053/wallet/deriveNextKey" -H  "accept: applicatio
 
 ### Address validation
 
-For an exchange, you can restrict people to only withdraw to P2PK addresses and invalidate any other address. Supporting other types is not recommended. See [address.md] for more information of the types of addresses. 
+For an exchange, you can restrict people to only withdraw to P2PK addresses and invalidate any other address. Supporting other types is not recommended. See [address.md] for more information on the types of addresses. 
 
-[ergo-simple-addresses](https://github.com/kushti/ergo-simple-addresses) contains few zero-dependencies Java-friendly utils for working with addresses.
+[ergo-simple-addresses](https://github.com/kushti/ergo-simple-addresses) contains a few zero-dependencies Java-friendly utils for working with addresses.
 
 
 
@@ -94,7 +94,7 @@ To get unspent UTXOs for some address, please use `transactions/boxes/byAddress/
 https://api.ergoplatform.com/transactions/boxes/byAddress/unspent/9gAE5e454UT5s3NB1625u1LynQYPS2XzzBEK4xumvSZdqnXT35M 
 ```
 
-You need to exclude UTXOs spent in the mempool. Use `/transactions/unconfirmed/byAddress` Explorer API method for that:
+It would be best if you excluded UTXOs spent in the mempool. Use `/transactions/unconfirmed/byAddress` Explorer API method for that:
 
 ```
 https://api.ergoplatform.com/transactions/unconfirmed/byAddress/9gAE5e454UT5s3NB1625u1LynQYPS2XzzBEK4xumvSZdqnXT35M
@@ -103,14 +103,14 @@ https://api.ergoplatform.com/transactions/unconfirmed/byAddress/9gAE5e454UT5s3NB
 ### Broadcasting transaction
 
 
-To broadcast a transaction made outside the node, the easiest way is to serialize it into `JSON`; in Java, it could be like:
+To broadcast a transaction made outside the node, the easiest way is to serialize it into `JSON`; in Java, it could be like this:
 
 ```
 Json json = JsonCodecsWrapper.ergoLikeTransactionEncoder().apply(tx);
 System.out.println(json.toString());
 ```
 
-and then send this `JSON` via a POST request to the public Explorer 
+And then, send this `JSON` via a POST request to the public Explorer. 
 
 ```
 https://api.ergoplatform.com/api/v0/transactions/send*
@@ -130,7 +130,7 @@ You can use [*ergo-bootstrap*](https://github.com/ergoplatform/ergo-bootstrap) t
 
 ### Testnet
 
-See [this page](/dev/start/testnet) for information on the public testnets.
+See [this page](/dev/start/testnet) for information on the public testnets.
 
 
 
@@ -138,11 +138,11 @@ See [this page](/dev/start/testnet) for information on the public testnets.
 
 ### Dust Collection
 
-Please consider collecting deposits dust from miners periodically (who create a lot of small UTXOs).
+Please collect dust from miners' deposits periodically (which creates many small UTXOs).
 
 
 
-Ergo is based on the extended-UTXO model. A side-effect of UTXOs is a term coined *dust*. Dust refers to fractional values of ERG and is usually below the protocol fee, miner wallets are prone to becoming *dusty* with the stream of rewards coming into their wallet. All these excess UTXOs can cause a slowdown and ultimately, make impact your nodes functionability. **This is important to set-up for large exchanges who will recieve a lot of mining traffic. You need to collect dust aggressively, new dust arrives all the time for miners**
+Ergo is based on the extended-UTXO model. A side-effect of UTXOs is a term coined *dust*. Dust refers to fractional values of ERG and is usually below the protocol fee; miner wallets are prone to becoming *dusty* with the stream of rewards coming into their wallet. All these excess UTXOs can cause a slowdown and ultimately impact your node functionality. **This is important to set up for big exchanges that will receive a lot of mining traffic. You must collect dust aggressively; new dust arrives all the time for miners**
 
 
 
@@ -153,7 +153,7 @@ Ergo is based on the extended-UTXO model. A side-effect of UTXOs is a term coine
 - Get their *binary representations* of utxos via `/utxo/byIdBinary/{boxId}`
 
 
-Finally, construct the payment transaction like:
+Finally, construct the payment transaction like this:
   
 ```
 {
@@ -193,11 +193,11 @@ ergo {
 }
 ```
 
-and send `1 ERG` to the change address, however, the node will attach 100 dust inputs (so send any large amounts of change to the change address as well)
+And send `1 ERG` to the change address; however, the node will attach 100 dust inputs (so send any large amounts of change to the change address as well)
 
 #### Failed to sign boxes
 
-This error can occur as a result of too many inputs being collected in a transaction for dusty wallets. 
+This error can occur due to too many inputs being collected in a transaction for dusty wallets. 
 
 ```bash
 Failed to sign boxes due to Estimated execution cost 1001580 exceeds the limit 1000000: Vector(ErgoBox(0275eb3a125bc02fe997cb98c0de8131bd9b2e4617110d
@@ -253,7 +253,7 @@ Fees are not part of the core protocol, but if you miss them, the transaction wo
 
 **What is the generation algorithm of boxid?**
 
-It is a hash over the box contents.
+It is a hash of the box contents.
 
 [See the code in AppKit](https://github.com/ergoplatform/ergo-appkit/blob/9e19c13d82966eaee59433d16c4fb987bea363a7/lib-impl/src/main/java/org/ergoplatform/appkit/impl/OutBoxBuilderImpl.scala#L66)
 
