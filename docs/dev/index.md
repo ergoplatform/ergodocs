@@ -2,7 +2,7 @@
 
 This page provides a general entry point to all aspects of Ergo development. 
 
-Join our [Discord server](https://discord.gg/7kWWQeMCwe) dev-support (and regular [Hackathons](ergohack.md))
+Join our [Discord server](https://discord.gg/7kWWQeMCwe) dev-support (and regular [Hackathons](ergohack.md)). Alternatively you can search the chats without logging in via [linen.dev/d/ergo](https://www.linen.dev/d/ergo).
 
 
 
