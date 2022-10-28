@@ -276,13 +276,14 @@ nav:
         - Quick Primer: dev/scs/ergoscript-primer.md
         - Sigma Language:
           - dev/scs/sigma-lang.md
-          - Language Description: dev/scs/sigma/lang-spec.md
-          - Simple Syntax: dev/scs/syntax.md
-          - Sigma Propositions: dev/scs/sigma/sigma-prop.md
-          - The Blockchain context: dev/scs/blockchain-context.md
-          - Accessing boxes and registers: dev/scs/boxes-and-registers.md
-          - Global Functions: dev/scs/global-functions.md
-          - Language Operations: dev/scs/sigma/lang-ops.md
+          - Language Description: 
+            - dev/scs/sigma/lang-spec.md
+            - Simple Syntax: dev/scs/syntax.md
+            - Sigma Propositions: dev/scs/sigma/sigma-prop.md
+            - The Blockchain context: dev/scs/blockchain-context.md
+            - Accessing boxes and registers: dev/scs/boxes-and-registers.md
+            - Global Functions: dev/scs/global-functions.md
+            - Language Operations: dev/scs/sigma/lang-ops.md
           - sigmastate-interpreter: dev/scs/sigmastate-interpreter.md
         - Sigma Protocols: 
           - dev/scs/sigma/sigma.md
