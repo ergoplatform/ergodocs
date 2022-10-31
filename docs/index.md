@@ -32,7 +32,7 @@
     "title": "💳 Wallets",
     "content": "Storing your ERG safely & securely.",
     "image": "./assets/img/grid/05.png",
-    "url": "dev/wallet/wallets"
+    "url": "dev/wallets"
   },
   {
     "title": "❓ FAQ",

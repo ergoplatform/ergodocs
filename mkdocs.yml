@@ -167,7 +167,7 @@ nav:
             # - Modifiers Exchange: dev/p2p/modifiers.md
             # - BlockP2P: dev/p2p/BlockP2P.md
       - Explorer: 
-        - dev/stack/explorer/explorer.md
+        - dev/stack/explorer.md
         - Local Setup: dev/stack/explorer/explorer_local.md
         - Pi Blockchain Explorer: dev/stack/rpi-blockchain-explorer.md
         - GraphQL: dev/stack/explorer/graphql.md
@@ -201,8 +201,8 @@ nav:
             - Example apps: dev/stack/mosaik/examples.md
         - JSON dApp Environment: dev/stack/jde.md
         - Headless dApp Framework: 
-          - dev/stack/headless/headless.md
-          - dev/stack/headless/modules.md
+          - dev/stack/headless.md
+          - Modules: dev/stack/headless/modules.md
         - RustKit: https://github.com/rust-ergo/rustkit
         - SigmaRust: dev/stack/sigma-rust.md
       - Libaries:
@@ -219,7 +219,7 @@ nav:
       #- Bookmarks: dev/start/resources.md
     - Anatomy of Ergo:
       - Box: 
-        - dev/data-model/box/box.md
+        - dev/data-model/box.md
         - Box Modelling: dev/data-model/box/box_modeling.md
       - Registers: dev/data-model/box/registers.md
       - Tokens:
@@ -238,7 +238,7 @@ nav:
         - dev/wallet/address.md
         - Address Encoding: assets/py/Ergo_Address_Encoding.ipynb
       - Transactions: 
-        - dev/protocol/tx/transaction.md
+        - dev/protocol/transactions.md
         - Model Transaction: dev/protocol/tx/model-tx.md
         - Composing Transactions:
           - Sending A Chained Transaction: dev/anatomy/transactions/chained.md
@@ -266,7 +266,7 @@ nav:
 
       - Block: dev/data-model/block.md
       - Wallets:
-        - dev/wallet/wallets.md
+        - dev/wallets.md
         - Ledger: dev/wallet/payments/ledger.md
         - Integration: dev/Integration/guide.md
         - Standards:

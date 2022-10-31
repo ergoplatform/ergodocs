@@ -33,7 +33,7 @@ Ergo had a fair launch with no premine, ICO or VC funding.
   {
     "title": "Wallets",
     "content": "Get your wallet setup",
-    "url": "../../dev/wallet/wallets"
+    "url": "../../dev/wallets"
   },
   {
     "title": "Autolykos",

@@ -17,7 +17,7 @@ Join our [Discord server](https://discord.gg/7kWWQeMCwe) dev-support (and regula
     "title": "Anatomy",
     "content": "Dive into boxes, registers and more in the anatomy of Ergo.",
     "image": "../../assets/img/dev-grid/anatomy.png",
-    "url": "../../../dev/data-model/box/box"
+    "url": "../../../dev/data-model/box"
 
   },
   {
@@ -132,7 +132,7 @@ Join our [Discord server](https://discord.gg/7kWWQeMCwe) dev-support (and regula
     "title": "Headless dApp Framework",
     "content": "A Rust framework for developing Ergo *headless* dApps.",
     "image": "../../assets/img/dev-grid/rust.png",
-    "url": "../headless/headless/"
+    "url": "../headless/"
   },
   {
     "title": "RustKit",

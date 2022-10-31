@@ -17,7 +17,7 @@ tags:
   {
     "title": "HDF",
     "content": "Headless dApp Framework",
-    "url": "../../stack/headless/headless/"
+    "url": "../../stack/headless/"
   },
   {
     "title": "RustKit",

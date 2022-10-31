@@ -6,7 +6,7 @@ See an overview of live nodes at [ergonodes.net](http://ergonodes.net/)
 
 The node is a critical piece of infrastructure developers use to interact with the chain. 
 
-See the [wallets](/dev/wallet) page if you're just looking for a place to store your ERG, [Satergo](dev/wallet/wallets/#satergo-desktop) even has the option to install a full node alongside it. 
+See the [wallets](/dev/wallet) page if you're just looking for a place to store your ERG, [Satergo](dev/wallets/#satergo-desktop) even has the option to install a full node alongside it. 
 
 To install from scratch please see the [manual install](manual.md) page, or get setup on the [testnet](testnet.md).
 
