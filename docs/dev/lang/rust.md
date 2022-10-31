@@ -11,7 +11,7 @@ tags:
 [
   {
     "title": "sigma-rust",
-    "content": "Interact with the blockchain locally or via a remote server.",
+    "content": "",
     "url": "../../stack/sigma-rust"
   },
   {

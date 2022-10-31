@@ -22,7 +22,7 @@ Join our [Discord server](https://discord.gg/7kWWQeMCwe) dev-support (and regula
   },
   {
     "title": "🔗 Sigmaverse",
-    "content": "Build a mobile app or Android or iOS.",
+    "content": "",
     "image": "../../assets/img/dev-grid/sigmaverse.svg",
     "url": "https://sigmaverse.io"
   },

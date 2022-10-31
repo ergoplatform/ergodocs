@@ -5,13 +5,13 @@
 [
   {
     "title": "Android",
-    "content": "Frontend development with JavaScript, TypeScript",
+    "content": "",
     "image": "/assets/img/dev-grid/android.png",
     "url": "../../stack/android"
   },
   {
     "title": "iOS",
-    "content": "Frontend development with JavaScript, TypeScript, Rust, or the Mosaik Framework",
+    "content": "",
     "image": "/assets/img/dev-grid/ios.png",
     "url": "../../stack/iOS"
 

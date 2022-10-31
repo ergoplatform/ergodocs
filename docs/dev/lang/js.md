@@ -12,12 +12,12 @@ tags:
 [
   {
     "title": "Fleet",
-    "content": "Interact with the blockchain locally or via a remote server.",
+    "content": "",
     "url": "../../dev/stack/desktop"
   },
   {
     "title": "Sigma.JS",
-    "content": "with support of tokens and complex transactions",
+    "content": "",
     "url": "../stack/mobile"
   },
   {
@@ -32,7 +32,7 @@ tags:
   },
   {
     "title": "sigma-rust",
-    "content": "Interact with the blockchain locally or via a remote server.",
+    "content": "",
     "url": "../../dev/stack/desktop"
   },
 
@@ -52,7 +52,7 @@ tags:
   },
   {
     "title": "dApp Development Course",
-    "content": "with support of tokens and complex transactions",
+    "content": "",
     "url": "https://www.youtube.com/watch?v=uC6QO3I4m8o&list=PLzY-irO3z3G8FVDifned2NMFc-PgQqnny"
   }
 
