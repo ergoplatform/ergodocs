@@ -5,10 +5,24 @@ You want to develop with Java/Kotlin/Scala and run on iOS.
 
 ## Platforms 
 
-- [AppKit](appkit.md) is a library for polyglot development of Ergo Applications 
-- [Gradle](/dev/stack/appkit/gradle)
+::cards::
 
+[
 
+  {
+    "title": "AppKit",
+    "content": "A library for polyglot development of Ergo Applications",
+    "url": "../../stack/appkit/appkit"
+  },
+  {
+    "title": "Gradle",
+    "content": "UI system for dApps",
+    "url": "../../stack/appkit/gradle"
+
+  }
+]
+
+::/cards::
 
 
 
@@ -23,7 +37,6 @@ You want to develop with Java/Kotlin/Scala and run on iOS.
     "content": "UI system for dApps",
     "image": "../../assets/img/dev-grid/mosaik.png",
     "url": "../../stack/mosaik/intro"
-
   }
 ]
 
