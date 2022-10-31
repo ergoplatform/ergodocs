@@ -12,9 +12,31 @@ You may want to run Java/Kotlin/Scala and want to run on Android.
 
 ## Tools available on the platform 
 
-- [Ergo Android](https://github.com/aslesarenko/ergo-android) application that demonstrates how Ergo Appkit can be used to develop Ergo applications running on Android.
+- [Ergo Android](https://github.com/aslesarenko/ergo-android) 
 
+## Utilities
 
+::cards::
+
+[
+
+  {
+    "title": "Mosaik",
+    "content": "UI system for dApps",
+    "image": "../../assets/img/dev-grid/mosaik.png",
+    "url": "../../stack/mosaik/intro"
+
+  },
+  {
+    "title": "Ergo Android",
+    "content": "Simple application that demonstrates how Ergo Appkit can be used to develop Ergo applications running on Android.",
+    "image": "../../assets/img/dev-grid/mosaik.png",
+    "url": "https://github.com/aslesarenko/ergo-android"
+
+  }
+]
+
+::/cards::
 
 
 ## Getting Started
