@@ -15,6 +15,13 @@
     "image": "/assets/img/dev-grid/ios.png",
     "url": "../../stack/iOS"
 
+  },
+  {
+    "title": "Mosaik",
+    "content": "UI system for dApps",
+    "image": "../../assets/img/dev-grid/mosaik.png",
+    "url": "../../stack/mosaik/intro"
+
   }
 
 ]

@@ -13,13 +13,6 @@
     "image": "../../assets/img/dev-grid/browser.png",
     "url": "../../stack/front-end"
 
-  },
-  {
-    "title": "Mosaik",
-    "content": "UI system for dApps",
-    "image": "../../assets/img/dev-grid/mosaik.png",
-    "url": "../../stack/mosaik/intro"
-
   }
 
 ]
