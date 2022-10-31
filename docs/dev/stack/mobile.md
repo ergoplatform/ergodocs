@@ -13,7 +13,7 @@
     "title": "iOS",
     "content": "Frontend development with JavaScript, TypeScript, Rust, or the Mosaik Framework",
     "image": "/assets/img/dev-grid/ios.png",
-    "url": "../../stack/ios"
+    "url": "../../stack/iOS"
 
   }
 
