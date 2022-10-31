@@ -9,9 +9,9 @@ To develop an android application you can develop with the JVM suite (Java/Kotli
 [
 {
     "title": "Gradle",
-    "content": "UI system for dApps",
-    "image": "../../assets/img/dev-grid/mosaik.png",
-    "url": "../../stack/mosaik/intro"
+    "content": "Build automation tool",
+    "image": "../../assets/img/dev-grid/gradle.png",
+    "url": "../../stack/appkit/gradle"
   },
   {
     "title": "Mosaik",

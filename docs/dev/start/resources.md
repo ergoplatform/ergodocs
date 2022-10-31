@@ -14,7 +14,7 @@ This page outlines the resources available on Ergo. Also check out the [dev-tool
 ### Frameworks
 
 - [Headless dApp Framework](headless.md) (Rust)
-- [Mosaik](intro.md) (Kotlin)
+- [Mosaik](mosaik.md) (Kotlin)
 - [JDE](jde.md) (JSON)
 
 ### Wrappers

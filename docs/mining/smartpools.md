@@ -1,0 +1,1 @@
+- [What are smart pools?](https://ergoplatform.org/en/blog/2021-11-19-ergo-smartpools-and-decentralized-mining/)

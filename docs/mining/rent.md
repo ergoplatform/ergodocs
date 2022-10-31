@@ -1,3 +1,22 @@
+# Storage Rent
+
+- [Discovering Ergo's Storage Rent Potential](https://www.reddit.com/r/ergonauts/comments/xeke0b/discover_ergos_storage_rent_potential/)
+
+**Storage Rent is a nominal fee (.14ERG per 4 years from an unmoved box) + transaction fees.**
+
+This “fee” part may look like a disadvantage. However, programmers can quickly realize the importance of it by just imagining life without garbage collection in their language of choice.
+
+> *Claiming fees sound great… But what happens if a UTXO cannot pay the fee?*
+
+Miners can take over assets inside a UTXO if there are not enough ERGs to pay for rent. This feature is one of the most interesting reward mechanisms a PoW blockchain can offer miners. The relevance of this is particularly important in a blockchain that has the capacity to have a wide variety of assets.
+
+As Ergo matures, more revenue streams will become available to miners. 
+
+- Sidechain Rewards
+- Bridge Infrastructure
+- L2 Infrastructure
+
+
 __We've designed Ergo with long-term economic sustainability in mind, and storage rent is one of the ways we're ensuring miners stay profitable well into the future. This can be thought of as 'on-chain garbage collection' that reduces the problem of blockchain bloat – and even makes it profitable.__
 
 **Key Points**

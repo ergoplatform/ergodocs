@@ -34,13 +34,13 @@ There are many tools, libraries, SDKs, frameworks and utilities developers can u
     "title": "Beginner",
     "content": "Just testing the waters? Not sure where to start?",
     "image": "../assets/img/dev-grid/noob.png",
-    "url": "../stack/intro"
+    "url": "../stack/introduction"
   },
   {
     "title": "Frameworks",
     "content": "Jump straight to all frameworks",
     "image": "../assets/img/dev-grid/frameworks.jpg",
-    "url": "../stack/intro#frameworks"
+    "url": "../stack/introduction#frameworks"
   },
 
 ]

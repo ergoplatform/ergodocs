@@ -19,7 +19,7 @@
 - [Ergo Intelligence](https://github.com/Eeysirhc/ergo_intelligence)
 - [Ergo.watch](https://ergo.watch)
 
-> Make sure to check out the [resources](resources.md) page and the *dev-tools* tab on [sigmaverse.io](https://sigmaverse.io/). 
+> Make sure to check out the *dev-tools* tab on [sigmaverse.io](https://sigmaverse.io/). 
 
 
 
@@ -65,7 +65,7 @@ Need help figuring out where to start developing? This [introduction to Mosaik](
 
 ##### Developing on Mobile
 
-- Develop on Mobile (or Desktop!) with [Gradle](Gradle.md)
+- Develop on Mobile (or Desktop!) with [Gradle](gradle.md)
 
 ##### [**ErgoScript**](ergoscript.md)
 

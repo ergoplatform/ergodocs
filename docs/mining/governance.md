@@ -1,5 +1,9 @@
 # Governance
 
+Ergo Miners have the ability to adjust the block size which increases the amount of transactions per block. This increases potential rewards but also adds additional storage requirements. adjust the emission macroeconomics, meaning the long term economic security of the protocol is up to miners to decide. 
+
+In addition to the protocol parameters above that can be changed via on-chain miner voting, most things on Ergo can be changed via a soft-forking protocol (90% support required). This excludes critical changes such as changing the max supply. 
+
 Many parameters can be changed on-the-fly via miners voting, such as instructions costs, computational cost limit per block, block size limit, storage fee factor, block version, etc. 
 
 Voting for the block version lasts 32 epochs and requires more than 90 percent of the miners to vote for the change. A simple majority is enough for less critical changes such as block size limit. We will further refer to the changes of the first kind as foundational changes, and we refer to the changes of the second kind as everyday changes. Per block, a miner can vote for two everyday changes and one foundational change, with the votes to be included in the block's header.

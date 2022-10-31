@@ -91,6 +91,7 @@ nav:
       - ERGOHACK: events/ergohack.md
       - ErgoSummit: events/ergosummit.md
   - 🔬 ┃ Learn: 
+    - dev/protocol/index.md
     - Key Features: 
       - Protocol: dev/protocol/index.md
       - eUTXO:
@@ -139,9 +140,9 @@ nav:
     - dev/start.md    
     - Tooling:
       - Node:
-        - Install: node/install/index.md
+        - node/install/install.md
         - Install: 
-          - Install: node/install/index.md
+          - node/install/install.md
           - Manual: node/install/manual.md
           - Docker: node/install/docker.md
           - Pi: node/install/pi.md
@@ -185,19 +186,21 @@ nav:
           - Gradle: dev/stack/appkit/gradle.md
           - Using Appkit from Python: dev/stack/appkit/appkit_py.md
         - Mosaik: 
-          - dev/stack/mosaik/intro.md
-          - A simple UI: dev/stack/mosaik/tutorial2.md
-          - Processing data: dev/stack/mosaik/tutorial3.md
-          - ErgoPay: dev/stack/mosaik/tutorial4.md
-          - Web UI: dev/stack/mosaik/tutorial5.md
-          - Deployment: dev/stack/mosaik/mosaik-docker-flux.md
-          - Example apps: dev/stack/mosaik/examples.md
+          - About: dev/stack/mosaik/mosaik.md
+          - Tutorial:
+            - dev/stack/mosaik/intro.md
+            - A simple UI: dev/stack/mosaik/tutorial2.md
+            - Processing data: dev/stack/mosaik/tutorial3.md
+            - ErgoPay: dev/stack/mosaik/tutorial4.md
+            - Web UI: dev/stack/mosaik/tutorial5.md
+            - Deployment: dev/stack/mosaik/mosaik-docker-flux.md
+            - Example apps: dev/stack/mosaik/examples.md
         - JSON dApp Environment: dev/stack/jde.md
         - Headless dApp Framework: 
           - dev/stack/headless/headless.md
           - dev/stack/headless/modules.md
         - RustKit: https://github.com/rust-ergo/rustkit
-        - SigmaRust: dev/lang/rust.md
+        - SigmaRust: dev/stack/sigma-rust.md
       - Libaries:
         - Fleet (JS): dev/stack/fleet.md
         - GetBlok Plasma: dev/lib/plasma.md
@@ -298,7 +301,7 @@ nav:
         - ErgoScala: dev/stack/ergoscala.md
         - Compiler: dev/stack/compiler.md
         - Kiosk: dev/stack/kiosk.md
-    - Resources: dev/stack/intro.md
+    - Resources: dev/stack/introduction.md
 
      
 

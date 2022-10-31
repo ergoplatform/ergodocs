@@ -4,19 +4,42 @@ Java+JVM/JavaFX/JS+Electron/Rust/Python
 
 ## Platforms 
 
-- [AppKit](appkit.md) is a library for polyglot development of Ergo Applications 
 
-The JVM execution environment lets you use Appkit with Java/Scala/Kotlin
-Rust allows use HDF, Pools, NiPoPoW
-JS: Fleet, ergo-js, Sigma.js etc.
+::cards::
 
-## Tools available on the platform 
+[
+  {
+    "title": "JVM",
+    "content": "",
+    "image": "/assets/img/dev-grid/jvm.png",
+    "url": "../../lang/jvm"
+  },
+  {
+    "title": "Rust",
+    "content": "",
+    "image": "/assets/img/dev-grid/rust.png",
+    "url": "../../lang/rust"
 
+  },
+  {
+    "title": "JS/TS + Electron",
+    "content": "",
+    "image": "/assets/img/dev-grid/js.png",
+    "url": "../../lang/js"
+  },
+  {
+    "title": "Rust",
+    "content": "",
+    "image": "/assets/img/dev-grid/rust.png",
+    "url": "../../lang/rust"
+  },
+  {
+    "title": "Python",
+    "content": "",
+    "image": "/assets/img/dev-grid/python.png",
+    "url": "../../lang/python"
+  }
 
+]
 
-
-
-## Getting Started
-
-
-## Advanced use cases
+::/cards::

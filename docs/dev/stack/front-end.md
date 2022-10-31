@@ -15,7 +15,7 @@ tags:
     "url": "../../lang/js"
   },
   {
-    "title": "sigma-rust",
+    "title": "Rust",
     "content": "Sigma Rust can be used in front-end development with...",
     "image": "/assets/img/dev-grid/rust.png",
     "url": "../../lang/rust"

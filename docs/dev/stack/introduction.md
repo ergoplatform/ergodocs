@@ -17,32 +17,32 @@ Join our [Discord server](https://discord.gg/7kWWQeMCwe) dev-support (and regula
     "title": "Anatomy",
     "content": "Dive into boxes, registers and more in the anatomy of Ergo.",
     "image": "../../assets/img/dev-grid/anatomy.png",
-    "url": "../stack/front-end"
+    "url": "../../../dev/data-model/box/box"
 
   },
   {
     "title": "sigmaverse",
     "content": "Build a mobile app or Android or iOS.",
     "image": "../../assets/img/dev-grid/sigmaverse.svg",
-    "url": "../lang/mobile"
+    "url": "sigmaverse.io"
   },
   {
     "title": "Come chat!",
     "content": "Join the action on Discord",
     "image": "../../assets/img/dev-grid/discord.png",
-    "url": "../lang/desktop"
+    "url": "https://discord.gg/Q86PNMwRsu"
   },
   {
     "title": "Testnet",
     "content": "An alternative blockchain you can use for experimentation",
     "image": "../../assets/img/dev-grid/testnet.png",
-    "url": "../start/testnet"
+    "url": "../../start/testnet"
   },
   {
     "title": "Read our FAQ",
     "content": "Frequently asked questions.",
     "image": "../../assets/img/dev-grid/faq.png",
-    "url": "../stack/intro"
+    "url": "../../../faq/general"
   }
 ]
 

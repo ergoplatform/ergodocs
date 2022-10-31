@@ -1,6 +1,8 @@
 ---
 tags:
   - Java
+  - Scala
+  - Kotlin
 ---
 # Appkit
 
