@@ -2,16 +2,17 @@
 
 To develop an android application you can develop with the JVM suite (Java/Kotlin/Scala). There 
 
-## Tools
+## Platforms 
 
 ::cards::
 
 [
-{
-    "title": "Gradle",
-    "content": "Build automation tool",
-    "image": "../../assets/img/dev-grid/gradle.png",
-    "url": "../../stack/appkit/gradle"
+
+  {
+    "title": "AppKit",
+    "content": "A library for polyglot development of Ergo Applications",
+    "image": "../../assets/img/dev-grid/jvm.png",
+    "url": "../../stack/appkit/appkit"
   },
   {
     "title": "Mosaik",
@@ -29,7 +30,9 @@ To develop an android application you can develop with the JVM suite (Java/Kotli
 
 ::/cards::
 
-## Utilities
+
+
+## Tools
 
 ::cards::
 
@@ -46,6 +49,21 @@ To develop an android application you can develop with the JVM suite (Java/Kotli
 ::/cards::
 
 ## Getting Started
+
+::cards::
+
+[
+
+
+  {
+    "title": "Gradle",
+    "content": "Getting started with Gradle to build on Android.",
+    "image": "../../assets/img/dev-grid/gradle.png",
+    "url": "../../stack/appkit/gradle"
+  }
+]
+
+::/cards::
 
 
 ## Advanced use cases

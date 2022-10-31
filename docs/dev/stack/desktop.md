@@ -28,12 +28,6 @@ Java+JVM/JavaFX/JS+Electron/Rust/Python
     "url": "../../lang/js"
   },
   {
-    "title": "Rust",
-    "content": "",
-    "image": "/assets/img/dev-grid/rust.png",
-    "url": "../../lang/rust"
-  },
-  {
     "title": "Python",
     "content": "",
     "image": "/assets/img/dev-grid/python.png",

@@ -12,25 +12,9 @@ You want to develop with Java/Kotlin/Scala and run on iOS.
   {
     "title": "AppKit",
     "content": "A library for polyglot development of Ergo Applications",
+    "image": "../../assets/img/dev-grid/jvm.png",
     "url": "../../stack/appkit/appkit"
   },
-  {
-    "title": "Gradle",
-    "content": "UI system for dApps",
-    "url": "../../stack/appkit/gradle"
-  }
-]
-
-::/cards::
-
-
-
-## Tools
-
-::cards::
-
-[
-
   {
     "title": "Mosaik",
     "content": "UI system for dApps",
@@ -46,6 +30,10 @@ You want to develop with Java/Kotlin/Scala and run on iOS.
 ]
 
 ::/cards::
+
+
+
+## Tools
 
 ## Getting Started
 

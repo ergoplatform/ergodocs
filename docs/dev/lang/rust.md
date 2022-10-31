@@ -21,7 +21,7 @@ tags:
   },
   {
     "title": "RustKit",
-    "content": "WIP",
+    "content": "(WIP), A SDK for building applications on the Ergo blockchain",
     "url": "../../stack/rustkit"
   },
 

@@ -172,13 +172,17 @@ nav:
         - Pi Blockchain Explorer: dev/stack/rpi-blockchain-explorer.md
         - GraphQL: dev/stack/explorer/graphql.md
       - Programming Languages:
-        - Scala: dev/lang/scala.md
-        - Java: dev/lang/java.md
-        - Kotlin: dev/lang/kotlin.md
-        - Rust: dev/lang/rust.md
-        - Python: dev/lang/python.md
-        - C#: dev/lang/csharp.md
+        - JVM: 
+          - Scala: dev/lang/scala.md
+          - Java: dev/lang/java.md
+          - Kotlin: dev/lang/kotlin.md
         - JavaScript: dev/lang/js.md
+        - Rust: dev/lang/rust.md
+        - Others: 
+          - Python: dev/lang/python.md
+          - C#: dev/lang/csharp.md
+          - Go: dev/lang/go.md
+        
       - Frameworks:
         - AppKit:
           - dev/stack/appkit/appkit.md

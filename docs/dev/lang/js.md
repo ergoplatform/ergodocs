@@ -12,28 +12,28 @@ tags:
 [
   {
     "title": "Fleet",
-    "content": "",
-    "url": "../../dev/stack/desktop"
+    "content": "Lets you easily create Ergo transactions with a pure JS library.",
+    "url": "../../dev/stack/fleet"
   },
   {
     "title": "Sigma.JS",
     "content": "",
-    "url": "../stack/mobile"
+    "url": ""
   },
   {
     "title": "ergo-ts",
     "content": "with support of tokens and complex transactions",
-    "url": "../stack/mobile"
+    "url": "https://github.com/coinbarn/ergo-ts"
   },
   {
     "title": "AppKit",
     "content": "can be configured to run JavaScript under GraalVM",
-    "url": "../stack/intro"
+    "url": "../../stack/appkit/appkit"
   },
   {
     "title": "sigma-rust",
     "content": "",
-    "url": "../../dev/stack/desktop"
+    "url": "../../stack/sigma-rust"
   },
 
 ]

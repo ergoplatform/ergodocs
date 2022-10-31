@@ -1,9 +1,6 @@
----
-tags:
-  - JavaScript
----
+# Browser
 
-# Front end development
+There are a couple of options developers can pick from to interact with the *user* in browser. 
 
 ::cards::
 
@@ -25,19 +22,3 @@ tags:
 
 ::/cards::
 
-## Utilities
-
-::cards::
-
-[
-
-  {
-    "title": "Mosaik",
-    "content": "UI system for dApps",
-    "image": "../../assets/img/dev-grid/mosaik.png",
-    "url": "../../stack/mosaik/intro"
-
-  }
-]
-
-::/cards::

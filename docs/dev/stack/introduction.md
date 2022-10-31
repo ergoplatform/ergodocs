@@ -111,7 +111,7 @@ Join our [Discord server](https://discord.gg/7kWWQeMCwe) dev-support (and regula
   },
   {
     "title": "Fleet",
-    "content": "lets you easily create Ergo transactions with a pure JS library.",
+    "content": "Lets you easily create Ergo transactions with a pure JS library.",
     "image": "../../assets/img/dev-grid/js.png",
     "url": "../fleet"
 

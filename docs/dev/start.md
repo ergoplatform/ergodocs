@@ -10,19 +10,19 @@ There are many tools, libraries, SDKs, frameworks and utilities developers can u
     "title": "Server",
     "content": "Interact with the blockchain locally or via a remote server.",
     "image": "../assets/img/dev-grid/server.png",
-    "url": "../../dev/stack/back-end"
+    "url": "../stack/server"
   },
   {
     "title": "Browser",
-    "content": "Interact with users in the browser",
+    "content": "Interact with users in browser",
     "image": "../assets/img/dev-grid/browser.png",
-    "url": "../stack/front-end"
+    "url": "../stack/browser"
   },
   {
     "title": "Desktop",
     "content": "Create a local application.",
     "image": "../assets/img/dev-grid/desktop.png",
-    "url": "../../dev/stack/desktop"
+    "url": "../stack/desktop"
   },
   {
     "title": "Mobile Application",
