@@ -14,7 +14,7 @@ You may want to run Java/Kotlin/Scala and want to run on Android.
 
 - [Ergo Android](https://github.com/aslesarenko/ergo-android) 
 
-## Utilities
+## Tools
 
 ::cards::
 
@@ -26,18 +26,26 @@ You may want to run Java/Kotlin/Scala and want to run on Android.
     "image": "../../assets/img/dev-grid/mosaik.png",
     "url": "../../stack/mosaik/intro"
 
-  },
+  }
+]
+
+::/cards::
+
+## Utilities
+
+::cards::
+
+[
+
   {
     "title": "Ergo Android",
     "content": "Simple application that demonstrates how Ergo Appkit can be used to develop Ergo applications running on Android.",
-    "image": "../../assets/img/dev-grid/mosaik.png",
     "url": "https://github.com/aslesarenko/ergo-android"
 
   }
 ]
 
 ::/cards::
-
 
 ## Getting Started
 
