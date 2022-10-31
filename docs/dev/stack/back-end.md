@@ -42,12 +42,6 @@ Developers can use tools to read data from the blockchain, compute using that da
     "content": "",
     "image": "/assets/img/dev-grid/python.png",
     "url": "../../lang/python"
-  },
-    {
-    "title": "JSON",
-    "content": "",
-    "image": "/assets/img/dev-grid/json.png",
-    "url": "../../lang/json"
   }
 
 ]
@@ -63,10 +57,17 @@ Developers can use tools to read data from the blockchain, compute using that da
 [
   {
     "title": "Mosaik",
-    "content": "A declarative zero-coding plugin system",
+    "content": "UI system for dApps",
     "image": "../../assets/img/dev-grid/mosaik.png",
     "url": "../../stack/mosaik/intro"
 
+  },
+
+  {
+    "title": "JSON",
+    "content": "",
+    "image": "/assets/img/dev-grid/json.png",
+    "url": "../../lang/json"
   }
 
 ]
