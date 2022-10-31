@@ -84,7 +84,8 @@ nav:
   - Getting Started:
     - Getting Started: index.md
     - Contributing: contribute.md
-    - FAQ: faq/general.md
+    - FAQ: 
+      - faq/general.md
     - Events: 
       - Events: events/index.md
       - ERGOHACK: events/ergohack.md
@@ -134,9 +135,8 @@ nav:
         - Emission Retargeting Soft-Fork: mining/standards/eip27.md
         - Tweaking Difficulty Adjustment Algorithm: mining/standards/eip37.md
     
-  - 🛠 ┃ Build:
-    - Developers: dev/index.md
-    
+  - 🛠 ┃ Build: 
+    - dev/start.md    
     - Tooling:
       - Node:
         - Install: node/install/index.md
@@ -298,6 +298,8 @@ nav:
         - ErgoScala: dev/stack/ergoscala.md
         - Compiler: dev/stack/compiler.md
         - Kiosk: dev/stack/kiosk.md
+    - Resources: dev/stack/intro.md
+
      
 
   - 💡 ┃  Applications: 

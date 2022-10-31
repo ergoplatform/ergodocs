@@ -1,17 +1,75 @@
 # Back-end
 
-This page provides an overview of the tools used to interact with the Ergo blockchain. Developers can use these tools to read data from the blockchain, compute using that data and create transactions to be broadcast. Each tool requires the developer to "program" in some language.
+Developers can use tools to read data from the blockchain, compute using that data and create transactions to be broadcast. Each tool requires the developer to "program" in some language.
 
-Users of AppKit will usually write Scala code (although AppKit supports many other languages). HDF users will need to write Rust code, allowing it to be used across platforms. (The HDF also provides some additional abstractions on top of the original ergo API). JDE users will have to write JSON.
+## Primary Platforms
 
-- [Appkit](/docs/dev/stack/appkit)
-- [Headless dApp Framework](headless.md)
-- [JDE](jde.md)
+::cards::
 
-## HDF vs AppKit
+[
+  {
+    "title": "JVM",
+    "content": "",
+    "image": "/assets/img/dev-grid/jvm.png",
+    "url": "../../lang/jvm"
+  },
+  {
+    "title": "Rust",
+    "content": "",
+    "image": "/assets/img/dev-grid/rust.png",
+    "url": "../../lang/rust"
 
-HDF is based on Rust
+  },
+  {
+    "title": "JS/TS",
+    "content": "",
+    "image": "/assets/img/dev-grid/js.png",
+    "url": "../../lang/js"
+  }
 
-Appkit, on the other hand, reflects the Ergo programming model and provides Java friendly interfaces to interact with Ergo.
+]
 
-There is also [JS SDK](https://github.com/ergolabs/ergo-dex-sdk-js) from Ergo Labs 
+::/cards::
+
+
+## Other options
+
+::cards::
+
+[
+  {
+    "title": "Python",
+    "content": "",
+    "image": "/assets/img/dev-grid/python.png",
+    "url": "../../lang/python"
+  },
+    {
+    "title": "JSON",
+    "content": "",
+    "image": "/assets/img/dev-grid/json.png",
+    "url": "../../lang/json"
+  }
+
+]
+
+::/cards::
+
+
+
+## Utilities
+
+::cards::
+
+[
+  {
+    "title": "Mosaik",
+    "content": "A declarative zero-coding plugin system",
+    "image": "../../assets/img/dev-grid/mosaik.png",
+    "url": "../../stack/mosaik/intro"
+
+  }
+
+]
+
+::/cards::
+

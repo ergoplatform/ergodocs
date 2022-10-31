@@ -13,7 +13,7 @@
     "title": "🛠 Start Developing",
     "content": "Get started on your development journey",
     "image": "./assets/img/grid/002-fly.png",
-    "url": "dev"
+    "url": "dev/start"
 
   },
   {
@@ -38,7 +38,7 @@
     "title": "❓ FAQ",
     "content": "View some of the most frequently asked questions.",
     "image": "./assets/img/grid/001-point.png",
-    "url": "faq"
+    "url": "faq/general"
   }
 ]
 

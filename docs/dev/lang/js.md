@@ -5,53 +5,62 @@ tags:
 
 # Javascript
 
-[Dappstep Docs](https://www.dappstep.com/) include many practical examples with Javascript and Nodejs that will help you to understand to implement different aspects of dapp functionality on Ergo
+## Frameworks
 
+::cards::
 
-## Ergo JS Template
+[
+  {
+    "title": "Fleet",
+    "content": "Interact with the blockchain locally or via a remote server.",
+    "url": "../../dev/stack/desktop"
+  },
+  {
+    "title": "Sigma.JS",
+    "content": "with support of tokens and complex transactions",
+    "url": "../stack/mobile"
+  },
+  {
+    "title": "ergo-ts",
+    "content": "with support of tokens and complex transactions",
+    "url": "../stack/mobile"
+  },
+  {
+    "title": "AppKit",
+    "content": "can be configured to run JavaScript under GraalVM",
+    "url": "../stack/intro"
+  },
 
-The Ergo JS Template aims to serve as an entry point to Ergo dApp Development
+]
 
-Bootstrapped with Create React App. It contains ergo-ts and ergo-lib libraries as dependencies and some examples of how to use these libraries.
+::/cards::
 
-The following examples can be seen on the [Ergo JS Template](https://github.com/anon-real/ergo-js-template) repository
+## Tutorials
 
-- Interacting with the explorer
-- Encoding different data types
-- Decoding fields (registers) of tokens
+::cards::
 
-- [ergo-ts](https://github.com/coinbarn/ergo-ts) with support of tokens and complex transactions
-- [ergo-js](https://github.com/ergoplatform/ergo-js) with basic transaction operations
+[
+  {
+    "title": "dAppStep Docs",
+    "content": "include many practical examples with Javascript and Nodejs that will help you to understand to implement different aspects of dapp functionality on Ergo",
+    "url": "[../../dev/stack/desktop](https://www.dappstep.com/)"
+  },
+  {
+    "title": "dApp Development Course",
+    "content": "with support of tokens and complex transactions",
+    "url": "https://www.youtube.com/watch?v=uC6QO3I4m8o&list=PLzY-irO3z3G8FVDifned2NMFc-PgQqnny"
+  }
 
+]
 
-## Tooling
+::/cards::
 
-
-### Fleet
-
-> Fluent Ergo Toolkit (pure js transaction toolkit)
-
-
-- [Github](https://github.com/capt-nemo429/fleet)
-
-
-### dAppStep
-
-> Interactive tutorials for javascript dApp development on Ergo Platform.
-
-- [dappstep.com](https://www.dappstep.com/docs/intro)
-- [Ergo dApp Development Course](https://www.youtube.com/watch?v=uC6QO3I4m8o&list=PLzY-irO3z3G8FVDifned2NMFc-PgQqnny)
-
-### [AppKit](appkit.md)
-
-- [AppKit](https://github.com/ergoplatform/ergo-appkit) can be configured to run JavaSript under GraalVM
 
 
 ## Resources
 
 
-- [Ergo-Raffle-Bot Github](https://github.com/zkastn/ergo-raffle-bot)
+- [Ergo-Raffle-Bot](https://github.com/zkastn/ergo-raffle-bot) Github
 - [ErgoScript.js](https://www.youtube.com/watch?v=_jwMI8M_vrs)
 - The Ergo Raffle [documentation](https://github.com/ErgoRaffle/raffle-documentation) provides a detailed description of their implmenetion. 
 - [hypo10use/quid-games](https://github.com/hypo10use/quid-games) (Angular)
-- [sigmajs-crypto-facade](https://github.com/anon-br/sigmajs-crypto-facade) which will replace BouncyCastle's elliptic curve dependencies on Sigma.JS compilation.

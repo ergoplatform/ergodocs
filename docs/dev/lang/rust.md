@@ -3,6 +3,30 @@ tags:
   - Rust
 ---
 
+## Frameworks
+
+::cards::
+
+[
+  {
+    "title": "sigma-rust",
+    "content": "Interact with the blockchain locally or via a remote server.",
+    "url": "../../dev/stack/desktop"
+  },
+  {
+    "title": "HDF",
+    "content": "Creating a bundled mobile app for Android or iOS.",
+    "url": "../stack/mobile"
+  },
+  {
+    "title": "RustKit",
+    "content": "Just testing the waters? Not sure where to start?",
+    "url": "../stack/intro"
+  },
+
+]
+
+::/cards::
 
 # Rust
 
