@@ -30,6 +30,11 @@ tags:
     "content": "can be configured to run JavaScript under GraalVM",
     "url": "../stack/intro"
   },
+  {
+    "title": "sigma-rust",
+    "content": "Interact with the blockchain locally or via a remote server.",
+    "url": "../../dev/stack/desktop"
+  },
 
 ]
 

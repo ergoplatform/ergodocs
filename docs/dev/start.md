@@ -14,13 +14,13 @@ There are many tools, libraries, SDKs, frameworks and utilities developers can u
   },
   {
     "title": "Browser",
-    "content": "Creating a bundled mobile app for Android or iOS.",
+    "content": "Interact with users in the browser",
     "image": "../assets/img/dev-grid/browser.png",
     "url": "../stack/front-end"
   },
   {
     "title": "Desktop",
-    "content": "Interact with the blockchain locally or via a remote server.",
+    "content": "Create a local application.",
     "image": "../assets/img/dev-grid/desktop.png",
     "url": "../../dev/stack/desktop"
   },
@@ -35,6 +35,12 @@ There are many tools, libraries, SDKs, frameworks and utilities developers can u
     "content": "Just testing the waters? Not sure where to start?",
     "image": "../assets/img/dev-grid/noob.png",
     "url": "../stack/intro"
+  },
+  {
+    "title": "Frameworks",
+    "content": "Jump straight to all frameworks",
+    "image": "../assets/img/dev-grid/frameworks.jpg",
+    "url": "../stack/intro#frameworks"
   },
 
 ]

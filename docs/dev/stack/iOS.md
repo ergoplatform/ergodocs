@@ -18,8 +18,12 @@ You want to develop with Java/Kotlin/Scala and run on iOS.
     "title": "Gradle",
     "content": "UI system for dApps",
     "url": "../../stack/appkit/gradle"
-
-  }
+  },
+  {
+    "title": "sigma-rust",
+    "content": "Interact with the blockchain locally or via a remote server.",
+    "url": "../../dev/stack/desktop"
+  },
 ]
 
 ::/cards::
