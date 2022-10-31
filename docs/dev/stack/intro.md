@@ -10,38 +10,38 @@ Join our [Discord server](https://discord.gg/7kWWQeMCwe) dev-support (and regula
   {
     "title": "Key Features",
     "content": "Discover Ergo's key features",
-    "image": "../../assets/img/dev-grid/server.png",
+    "image": "../../assets/img/dev-grid/key.png",
     "url": "../stack/back-end"
   },
   {
     "title": "Anatomy",
-    "content": "Frontend development with JavaScript, TypeScript, Rust, or the Mosaik Framework",
-    "image": "../../assets/img/dev-grid/browser.png",
+    "content": "Dive into boxes, registers and more in the anatomy of Ergo.",
+    "image": "../../assets/img/dev-grid/anatomy.png",
     "url": "../stack/front-end"
 
   },
   {
     "title": "sigmaverse",
     "content": "Build a mobile app or Android or iOS.",
-    "image": "../../assets/img/dev-grid/mobile.png",
+    "image": "../../assets/img/dev-grid/sigmaverse.svg",
     "url": "../lang/mobile"
   },
   {
     "title": "Come chat!",
     "content": "Join the action on Discord",
-    "image": "../../assets/img/dev-grid/desktop.png",
+    "image": "../../assets/img/dev-grid/discord.png",
     "url": "../lang/desktop"
   },
   {
     "title": "Testnet",
-    "content": "An alternative Ergo blockchain you can use for testing and experimentation",
+    "content": "An alternative blockchain you can use for experimentation",
     "image": "../../assets/img/dev-grid/testnet.png",
     "url": "../start/testnet"
   },
   {
     "title": "Read our FAQ",
-    "content": "Not sure where to start? Check out some of our introductionary materials.",
-    "image": "../../assets/img/dev-grid/intro.png",
+    "content": "Frequently asked questions.",
+    "image": "../../assets/img/dev-grid/faq.png",
     "url": "../stack/intro"
   }
 ]

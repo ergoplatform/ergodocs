@@ -18,19 +18,14 @@ You want to develop with Java/Kotlin/Scala and run on iOS.
     "title": "Gradle",
     "content": "UI system for dApps",
     "url": "../../stack/appkit/gradle"
-  },
-  {
-    "title": "sigma-rust",
-    "content": "Interact with the blockchain locally or via a remote server.",
-    "url": "../../dev/stack/desktop"
-  },
+  }
 ]
 
 ::/cards::
 
 
 
-## Utilities
+## Tools
 
 ::cards::
 
@@ -41,6 +36,12 @@ You want to develop with Java/Kotlin/Scala and run on iOS.
     "content": "UI system for dApps",
     "image": "../../assets/img/dev-grid/mosaik.png",
     "url": "../../stack/mosaik/intro"
+  },
+  {
+    "title": "sigma-rust",
+    "content": "iOS bindings are implemented in sigma-rust",
+    "image": "../../assets/img/dev-grid/rust.png",
+    "url": "../../stack/sigma-rust"
   }
 ]
 

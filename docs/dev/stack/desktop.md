@@ -1,4 +1,4 @@
-# Desktop# Desktop
+# Desktop
 
 Java+JVM/JavaFX/JS+Electron/Rust/Python
 

@@ -15,12 +15,12 @@ tags:
   },
   {
     "title": "HDF",
-    "content": "Creating a bundled mobile app for Android or iOS.",
+    "content": "Headless dApp Framework",
     "url": "../stack/mobile"
   },
   {
     "title": "RustKit",
-    "content": "Just testing the waters? Not sure where to start?",
+    "content": "WIP",
     "url": "../stack/intro"
   },
 

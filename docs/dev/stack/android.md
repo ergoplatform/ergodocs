@@ -1,31 +1,29 @@
 # Android
 
-You may want to run Java/Kotlin/Scala and want to run on Android.
-
-
-## Platforms 
-
-- [AppKit](appkit.md) is a library for polyglot development of Ergo Applications 
-- [Gradle](/dev/stack/appkit/gradle)
-
-
-
-## Tools available on the platform 
-
-- [Ergo Android](https://github.com/aslesarenko/ergo-android) 
+To develop an android application you can develop with the JVM suite (Java/Kotlin/Scala). There 
 
 ## Tools
 
 ::cards::
 
 [
-
+{
+    "title": "Gradle",
+    "content": "UI system for dApps",
+    "image": "../../assets/img/dev-grid/mosaik.png",
+    "url": "../../stack/mosaik/intro"
+  },
   {
     "title": "Mosaik",
     "content": "UI system for dApps",
     "image": "../../assets/img/dev-grid/mosaik.png",
     "url": "../../stack/mosaik/intro"
-
+  },
+  {
+    "title": "sigma-rust",
+    "content": "Android bindings are implemented in sigma-rust",
+    "image": "../../assets/img/dev-grid/rust.png",
+    "url": "../../stack/sigma-rust"
   }
 ]
 

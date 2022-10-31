@@ -6,13 +6,26 @@ tags:
 
 # Python
 
-- [ergpy](https://github.com/mgpai22/ergpy): A python-jvm wrapper for interacting with the Ergo blockchain.
+## Frameworks
 
+::cards::
 
+[
+  {
+    "title": "ergpy",
+    "content": "A python-jvm wrapper for interacting with the Ergo blockchain.",
+    "url": "https://github.com/mgpai22/ergpy"
+  },
+  {
+    "title": "AppKit",
+    "content": "Using Appkit from Python",
+    "url": "https://github.com/ergoplatform/ergo-appkit/wiki/Using-Appkit-from-Python"
+  },
 
-## Tutorials
+]
 
-- [Using Appkit from Python](https://github.com/ergoplatform/ergo-appkit/wiki/Using-Appkit-from-Python)
+::/cards::
+
 
 
 

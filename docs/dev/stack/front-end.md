@@ -15,8 +15,8 @@ tags:
     "url": "../../lang/js"
   },
   {
-    "title": "Rust",
-    "content": "Frontend development with JavaScript, TypeScript, Rust, or the Mosaik Framework",
+    "title": "sigma-rust",
+    "content": "Sigma Rust can be used in front-end development with...",
     "image": "/assets/img/dev-grid/rust.png",
     "url": "../../lang/rust"
 
