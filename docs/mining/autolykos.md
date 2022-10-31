@@ -1,5 +1,31 @@
 # Autolykos
 
+## Getting Started
+
+::cards::
+
+[
+
+  {
+    "title": "Governance",
+    "content": "Learn more about governance on Ergo.",
+    "url": "governance.md"
+  },
+  {
+    "title": "Storage Rent",
+    "content": "Storage Rent is a nominal fee (.14ERG per 4 years from an unmoved box)",
+    "url": "rent.md"
+  },
+  {
+    "title": "Difficulty Adjustment",
+    "content": "",
+    "url": "rent.md"
+  },
+]
+
+::/cards::
+
+## Key Points
 
 - Autolykos v1 originally had pool-resistance built-in through the use of non-outsourceable puzzles.
 - **The Hardening Hard-Fork** on block `417,792` marked the launch of Autolykos v2, enabling mining pools. See this [paper](https://ia.cr/2020/044). 

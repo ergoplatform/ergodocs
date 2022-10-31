@@ -11,7 +11,7 @@ Join our [Discord server](https://discord.gg/7kWWQeMCwe) dev-support (and regula
     "title": "Key Features",
     "content": "Discover Ergo's key features",
     "image": "../../assets/img/dev-grid/key.png",
-    "url": "../stack/back-end"
+    "url": "../../protocol"
   },
   {
     "title": "Anatomy",
@@ -21,13 +21,13 @@ Join our [Discord server](https://discord.gg/7kWWQeMCwe) dev-support (and regula
 
   },
   {
-    "title": "sigmaverse",
+    "title": "🔗 Sigmaverse",
     "content": "Build a mobile app or Android or iOS.",
     "image": "../../assets/img/dev-grid/sigmaverse.svg",
-    "url": "sigmaverse.io"
+    "url": "https://sigmaverse.io"
   },
   {
-    "title": "Come chat!",
+    "title": "🔗 Come chat!",
     "content": "Join the action on Discord",
     "image": "../../assets/img/dev-grid/discord.png",
     "url": "https://discord.gg/Q86PNMwRsu"
@@ -79,18 +79,18 @@ Join our [Discord server](https://discord.gg/7kWWQeMCwe) dev-support (and regula
   {
     "title": "DeCo Laymens Course",
     "content": "Discover Ergo's key features",
-    "url": "../stack/back-end"
+    "url": "https://www.youtube.com/watch?v=SAWeW6wajEw&list=PLopsKGshj0B6C1mg6RpDsj0rhYxam3_RZ"
   },
   {
     "title": "Ergo Blockchain Crash Course",
     "content": "",
-    "url": "../stack/front-end"
+    "url": "https://www.youtube.com/playlist?list=PL8-KVrs6vXLTVXGwmYXjOBRx3VymB4Vm2"
 
   },
   {
-    "title": "DeCo Introduction Course",
+    "title": "DeCo Intro Lessons",
     "content": "Build a mobile app or Android or iOS.",
-    "url": "../lang/mobile"
+    "url": "https://www.youtube.com/watch?v=qR0_k7VH6KI&list=PLopsKGshj0B4BpMoSMh5hQk8gVfWk-si6"
   }
 ]
 
@@ -107,44 +107,44 @@ Join our [Discord server](https://discord.gg/7kWWQeMCwe) dev-support (and regula
     "title": "AppKit",
     "content": "for JVM languages (used in Scala, Java and Kotlin projects)",
     "image": "../../assets/img/dev-grid/jvm.png",
-    "url": "../stack/appkit/appkit.md"
+    "url": "../stack/appkit/appkit"
   },
   {
     "title": "Fleet",
     "content": "lets you easily create Ergo transactions with a pure JS library.",
     "image": "../../assets/img/dev-grid/js.png",
-    "url": "../stack/front-end"
+    "url": "../fleet"
 
   },
   {
     "title": "Sigma-Rust",
     "content": "An alternative and simple implementation of ErgoTree interpreter and transaction-building tools.",
     "image": "../../assets/img/dev-grid/rust.png",
-    "url": "../lang/rust"
+    "url": "../sigma-rust"
   },
   {
     "title": "Mosaik",
     "content": "is a JSON-based markup language served via a REST API intended to be used by Ergo platform dApps.",
     "image": "../../assets/img/dev-grid/mosaik.png",
-    "url": "../lang/mobile"
+    "url": "../mosaik/mosaik/"
   },
   {
     "title": "Headless dApp Framework",
     "content": "A Rust framework for developing Ergo *headless* dApps.",
     "image": "../../assets/img/dev-grid/rust.png",
-    "url": "../lang/mobile"
+    "url": "../headless/headless/"
   },
   {
     "title": "RustKit",
     "content": "(WIP), a library on top of sigma-rust for easily creating transactions.",
     "image": "../../assets/img/dev-grid/rust.png",
-    "url": "../lang/mobile"
+    "url": "../rustkit/"
   },
   {
     "title": "JDE",
     "content": "JSON dApp Environment",
     "image": "../../assets/img/dev-grid/json.png",
-    "url": "../lang/mobile"
+    "url": "../jde"
   }
 ]
 

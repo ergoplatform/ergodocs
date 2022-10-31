@@ -22,6 +22,8 @@ You may or may not need to use Stratum Server and Stratum Proxy to operate them.
 - [ErgoStratumServer](https://github.com/mhssamadani/ErgoStratumServer)
 - [ErgoStratumProxy](https://github.com/mhssamadani/ErgoStratumProxy)
 
+## EIP27 Rules
+
 To be able to spend any ERG mined this way, you will need to add this to your `.config`
 
 
@@ -44,9 +46,9 @@ ergo {
 }
 ```
 
-- pk is public key as binary
-- n is nonce
-- w and d are not used anymore in Autolykos2 and **constant**
+- **pk** is public key *as binary*
+- **n** is nonce
+- **w** and d are not used anymore in Autolykos2 and **constant**.
 
 ## Resources
 

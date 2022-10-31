@@ -12,7 +12,7 @@ Ergo had a fair launch with no premine, ICO or VC funding.
 [
   {
     "title": "Join a pool",
-    "content": "A python-jvm wrapper for interacting with the Ergo blockchain.",
+    "content": "Join a pool and start mining today.",
     "url": "setup/join"
   },
   {
@@ -37,24 +37,16 @@ Ergo had a fair launch with no premine, ICO or VC funding.
   },
   {
     "title": "Autolykos",
-    "content": "Read about the *Autolykos* Algorithm",
+    "content": "Read about the *Autolykos* Algorithm, Governance, Storage Rent and more.",
     "url": "autolykos.md"
   },
-  {
-    "title": "Governance",
-    "content": "Learn more about governance on Ergo.",
-    "url": "governance.md"
-  },
+  
   {
     "title": "SmartPools and *Subpooling*",
     "content": "Mine in localised subpools.",
     "url": "smartpools.md"
   },
-  {
-    "title": "Storage Rent",
-    "content": "Storage Rent is a nominal fee (.14ERG per 4 years from an unmoved box)",
-    "url": "rent.md"
-  },
+  
 ]
 
 ::/cards::
