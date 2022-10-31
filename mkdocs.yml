@@ -85,7 +85,7 @@ nav:
     - Getting Started: index.md
     - Contributing: contribute.md
     - FAQ: 
-      - faq/general.md
+      - faq.md
     - Events: 
       - Events: events/index.md
       - ERGOHACK: events/ergohack.md
@@ -95,7 +95,7 @@ nav:
     - Key Features: 
       - Protocol: dev/protocol/index.md
       - eUTXO:
-        - dev/protocol/eutxo/eutxo.md
+        - dev/protocol/eutxo.md
         - eUTXO vs Account: dev/protocol/eutxo/accountveutxo.md
         - Atomic Swaps: dev/protocol/eutxo/atomic.md
       - NIPoPoWs:
@@ -147,7 +147,7 @@ nav:
           - Docker: node/install/docker.md
           - Pi: node/install/pi.md
           - Troubleshooting: node/install/troubleshooting.md
-          - FAQ: node/install/faq.md
+          - FAQ: node/install/node-faq.md
         - Swagger API: node/swagger.md
         - Testnet: dev/start/testnet.md
         - Node Wallet: node/wallet.md
@@ -185,12 +185,12 @@ nav:
         
       - Frameworks:
         - AppKit:
-          - dev/stack/appkit/appkit.md
+          - dev/stack/appkit.md
           - Tutorial: dev/stack/appkit/tutorial.md
           - Gradle: dev/stack/appkit/gradle.md
           - Using Appkit from Python: dev/stack/appkit/appkit_py.md
         - Mosaik: 
-          - About: dev/stack/mosaik/mosaik.md
+          - dev/stack/mosaik.md
           - Tutorial:
             - dev/stack/mosaik/intro.md
             - A simple UI: dev/stack/mosaik/tutorial2.md

@@ -12,7 +12,7 @@ To develop an android application you can develop with the JVM suite (Java/Kotli
     "title": "AppKit",
     "content": "A library for polyglot development of Ergo Applications",
     "image": "../../assets/img/dev-grid/jvm.png",
-    "url": "../../stack/appkit/appkit"
+    "url": "../../stack/appkit"
   },
   {
     "title": "Mosaik",

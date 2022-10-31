@@ -13,7 +13,7 @@ You want to develop with Java/Kotlin/Scala and run on iOS.
     "title": "AppKit",
     "content": "A library for polyglot development of Ergo Applications",
     "image": "../../assets/img/dev-grid/jvm.png",
-    "url": "../../stack/appkit/appkit"
+    "url": "../../stack/appkit"
   },
   {
     "title": "Mosaik",

@@ -4,6 +4,71 @@ Ergo is a [next-generation](scaling.md) smart contract platform that enables any
 
 Ensuring economic freedom for ordinary people through decentralized, private and secure financial tools.
 
+::cards::
+
+[
+  {
+    "title": "Why Ergo?",
+    "content": "",
+    "url": ""
+  },
+  {
+    "title": "Contributing",
+    "content": "",
+    "url": ""
+  },
+  {
+    "title": "FAQ",
+    "content": "",
+    "url": ""
+  },
+
+
+]
+
+::/cards::
+
+## Core Components
+
+::cards::
+
+[
+  {
+    "title": "Autolykos",
+    "content": "",
+    "url": ""
+  },
+  {
+    "title": "eUTXO",
+    "content": "",
+    "url": "eutxo"
+  },
+  {
+    "title": "NIPoPoWs",
+    "content": "",
+    "url": ""
+  },
+  {
+    "title": "Privacy",
+    "content": "",
+    "url": ""
+  },
+  {
+    "title": "Scaling",
+    "content": "",
+    "url": ""
+  },
+  {
+    "title": "ErgoScript",
+    "content": "",
+    "url": ""
+  },
+
+
+]
+
+::/cards::
+
 ## Why Ergo?
 
 Ergo is multi-asset Proof-of-Work cryptocurrency with powerful financial contracts in the extended UTXO model, unique flexible crypto-contracts based on sigma-protocols, storage rent, stateless and ultra-efficient SPV clients support and focus on long-term survivability. Based on a scientific approach, but also very practical in any aspect. Ergo is a DeFi and crypto contracts platform that takes a radically different approach to smart contracts than other networks, non-custodial and non-interactive approaches including off-the-peg use of ring and threshold signatures – great for new privacy applications

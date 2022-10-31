@@ -42,7 +42,7 @@ Join our [Discord server](https://discord.gg/7kWWQeMCwe) dev-support (and regula
     "title": "Read our FAQ",
     "content": "Frequently asked questions.",
     "image": "../../assets/img/dev-grid/faq.png",
-    "url": "../../../faq/general"
+    "url": "../../../faq/"
   }
 ]
 
@@ -107,7 +107,7 @@ Join our [Discord server](https://discord.gg/7kWWQeMCwe) dev-support (and regula
     "title": "AppKit",
     "content": "for JVM languages (used in Scala, Java and Kotlin projects)",
     "image": "../../assets/img/dev-grid/jvm.png",
-    "url": "../stack/appkit/appkit"
+    "url": "../stack/appkit"
   },
   {
     "title": "Fleet",
@@ -126,7 +126,7 @@ Join our [Discord server](https://discord.gg/7kWWQeMCwe) dev-support (and regula
     "title": "Mosaik",
     "content": "is a JSON-based markup language served via a REST API intended to be used by Ergo platform dApps.",
     "image": "../../assets/img/dev-grid/mosaik.png",
-    "url": "../mosaik/mosaik/"
+    "url": "../mosaik/"
   },
   {
     "title": "Headless dApp Framework",

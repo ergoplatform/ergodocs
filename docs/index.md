@@ -38,7 +38,7 @@
     "title": "❓ FAQ",
     "content": "View some of the most frequently asked questions.",
     "image": "./assets/img/grid/06.png",
-    "url": "faq/general"
+    "url": "faq/"
   }
 ]
 

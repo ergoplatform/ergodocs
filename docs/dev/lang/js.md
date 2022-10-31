@@ -28,7 +28,7 @@ tags:
   {
     "title": "AppKit",
     "content": "can be configured to run JavaScript under GraalVM",
-    "url": "../../stack/appkit/appkit"
+    "url": "../../stack/appkit"
   },
   {
     "title": "sigma-rust",
