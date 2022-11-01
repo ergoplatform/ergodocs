@@ -4,7 +4,7 @@ There are a couple of options developers can pick from to interact with the *use
 
 You will first need to decide if you want to develop using JavaScript or Rust. 
 
-## Languages
+## Platform
 
 
 ::cards::

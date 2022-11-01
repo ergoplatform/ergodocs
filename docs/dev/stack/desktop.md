@@ -45,19 +45,19 @@ Java+JVM/JavaFX/JS+Electron/Rust/Python
 
 [
   {
-    "title": "Ergo Wallet",
+    "title": "🔗 Ergo Wallet",
     "content": "",
-    "url": "../../lang/jvm"
+    "url": "https://github.com/ergoplatform/ergo-wallet-app"
   },
   {
-    "title": "ErgoMixer",
+    "title": "🔗 ErgoMixer",
     "content": "",
-    "url": "../../lang/jvm"
+    "url": "https://github.com/ergoMixer"
   },
   {
-    "title": "Satergo",
+    "title": "🔗 Satergo",
     "content": "",
-    "url": "../../lang/jvm"
+    "url": "https://satergo.com/"
   },
 
 ]

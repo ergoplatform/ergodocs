@@ -35,7 +35,7 @@ Using Appkit, Ergo applications can be written in one of the languages supported
     "url": "../../stack/appkit/tutorial"
   },
   {
-    "title": "AppKit By Example",
+    "title": "🔗 AppKit By Example",
     "content": "Follow this example to create and programmaticaly send a transaction.",
     "url": "https://www.youtube.com/watch?v=Md5s-XV6-Hs"
   },

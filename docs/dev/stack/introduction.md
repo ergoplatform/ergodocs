@@ -82,16 +82,16 @@ Need help figuring out where to start developing? This [introduction to Mosaik](
 
 [
   {
-    "title": "Learning blockchains like Cardano and Ergo",
+    "title": "🔗 Learning blockchains like Cardano and Ergo",
     "url": "https://www.youtube.com/watch?v=HDn49bToTMI"
   },
   {
-    "title": "Side tooling for building dApps on Ergo",
+    "title": "🔗 Side tooling for building dApps on Ergo",
     "url": "https://dav009.medium.com/ergo-101-side-tooling-for-building-dapps-on-ergo-c71889d60826"
 
   },
   {
-    "title": "DeCo Education: DApp Components - Backend",
+    "title": "🔗 DeCo Education: DApp Components - Backend",
     "url": "https://deco-education.github.io/deco-docs/docs/into-the-woods/trail2-ergo-coding/dapp-components"
   }
 ]
@@ -106,18 +106,18 @@ Need help figuring out where to start developing? This [introduction to Mosaik](
 
 [
   {
-    "title": "DeCo Laymens Course",
+    "title": "🔗 DeCo Laymens Course",
     "content": "Discover Ergo's key features",
     "url": "https://www.youtube.com/watch?v=SAWeW6wajEw&list=PLopsKGshj0B6C1mg6RpDsj0rhYxam3_RZ"
   },
   {
-    "title": "Ergo Blockchain Crash Course",
+    "title": "🔗 Ergo Blockchain Crash Course",
     "content": "",
     "url": "https://www.youtube.com/playlist?list=PL8-KVrs6vXLTVXGwmYXjOBRx3VymB4Vm2"
 
   },
   {
-    "title": "DeCo Intro Lessons",
+    "title": "🔗 DeCo Intro Lessons",
     "content": "Build a mobile app or Android or iOS.",
     "url": "https://www.youtube.com/watch?v=qR0_k7VH6KI&list=PLopsKGshj0B4BpMoSMh5hQk8gVfWk-si6"
   }

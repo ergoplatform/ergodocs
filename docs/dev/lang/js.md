@@ -23,7 +23,7 @@ The combination of Fleet and Sigma.JS provide a similar level of functionality t
     "url": ""
   },
   {
-    "title": "ergo-ts",
+    "title": "🔗 ergo-ts",
     "content": "with support of tokens and complex transactions",
     "url": "https://github.com/coinbarn/ergo-ts"
   },
@@ -48,12 +48,12 @@ The combination of Fleet and Sigma.JS provide a similar level of functionality t
 
 [
   {
-    "title": "dAppStep Docs",
+    "title": "🔗 dAppStep Docs",
     "content": "include many practical examples with Javascript and Nodejs that will help you to understand to implement different aspects of dapp functionality on Ergo",
-    "url": "[../../dev/stack/desktop](https://www.dappstep.com/)"
+    "url": "https://www.dappstep.com/"
   },
   {
-    "title": "dApp Development Course",
+    "title": "🔗 dApp Development Course",
     "content": "",
     "url": "https://www.youtube.com/watch?v=uC6QO3I4m8o&list=PLzY-irO3z3G8FVDifned2NMFc-PgQqnny"
   }

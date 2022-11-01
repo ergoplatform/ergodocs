@@ -66,7 +66,7 @@ Also take a look at tests where various usage scenarios were implemented.
 
 [
   {
-    "title": "Ergo Utilities",
+    "title": "🔗 Ergo Utilities",
     "content": "simplify writing off-chain code in Rust.",
     "url": "https://github.com/robkorn/ergo-utilities-rust/"
   },

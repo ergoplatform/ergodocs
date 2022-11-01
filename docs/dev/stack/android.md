@@ -39,7 +39,7 @@ To develop an android application you can develop with the JVM suite (Java/Kotli
 [
 
   {
-    "title": "Ergo Android",
+    "title": "🔗 Ergo Android",
     "content": "Simple application that demonstrates how Ergo Appkit can be used to develop Ergo applications running on Android.",
     "url": "https://github.com/aslesarenko/ergo-android"
 
