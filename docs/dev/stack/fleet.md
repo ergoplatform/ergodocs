@@ -1,3 +1,8 @@
+---
+tags:
+  - JavaScript
+---
+
 # Fleet
 
 [Fleet](https://github.com/capt-nemo429/fleet) lets you easily create Ergo transactions with a pure JS library.

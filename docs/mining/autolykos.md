@@ -19,7 +19,7 @@
   {
     "title": "Difficulty Adjustment",
     "content": "",
-    "url": "rent.md"
+    "url": "difficulty.md"
   },
 
 ]

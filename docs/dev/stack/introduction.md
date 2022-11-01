@@ -1,8 +1,5 @@
 # Resources
 
-Join our [Discord server](https://discord.gg/7kWWQeMCwe) dev-support (and regular [Hackathons](ergohack.md)). Alternatively you can search the chats without logging in via [linen.dev/d/ergo](https://www.linen.dev/d/ergo).
-
-## First Steps
 
 ::cards::
 
@@ -48,7 +45,14 @@ Join our [Discord server](https://discord.gg/7kWWQeMCwe) dev-support (and regula
 
 ::/cards::
 
-## Introductionary Articles
+Join our [Discord server](https://discord.gg/7kWWQeMCwe) dev-support (and regular [Hackathons](ergohack.md)). Alternatively you can search the chats without logging in via [linen.dev/d/ergo](https://www.linen.dev/d/ergo).
+
+
+## Introductionary 
+
+General materials not specific to ErgoScript or a particular section of development are categorised here.
+
+### Overview Articles
 
 ::cards::
 
@@ -70,8 +74,33 @@ Join our [Discord server](https://discord.gg/7kWWQeMCwe) dev-support (and regula
 
 ::/cards::
 
+### Dev-Articles
 
-## Introductionary Courses
+Need help figuring out where to start developing? This [introduction to Mosaik](intro.md) provides a brief overview of some of the design decisions you'll need to make when creating your application. 
+
+::cards::
+
+[
+  {
+    "title": "Learning blockchains like Cardano and Ergo",
+    "url": "https://www.youtube.com/watch?v=HDn49bToTMI"
+  },
+  {
+    "title": "Side tooling for building dApps on Ergo",
+    "url": "https://dav009.medium.com/ergo-101-side-tooling-for-building-dapps-on-ergo-c71889d60826"
+
+  },
+  {
+    "title": "DeCo Education: DApp Components - Backend",
+    "url": "https://deco-education.github.io/deco-docs/docs/into-the-woods/trail2-ergo-coding/dapp-components"
+  }
+]
+
+::/cards::
+
+
+### Courses
+
 
 ::cards::
 
@@ -203,6 +232,55 @@ Join our [Discord server](https://discord.gg/7kWWQeMCwe) dev-support (and regula
 
 ::/cards::
 
+## Simple Examples 
+
+::cards::
+
+[
+  {
+    "title": "Creating a simple *pay-to-script* app",
+    "content": "",
+    "url": "../stack/back-end"
+  },
+  {
+    "title": "Creating a signature",
+    "content": "",
+    "url": "../stack/front-end"
+
+  },
+  {
+    "title": "Sending a chained transaction",
+    "content": "",
+    "url": "../lang/mobile"
+  }
+]
+
+::/cards::
+
+
+
+
+
+
+## Utilities
+
+- [Miner rewards script](https://github.com/lorien/ergotools) | Simple command-line tool to find miner rewards not spent and form withdrawing transaction requests for them
+- [Ergo P2S Playground](https://wallet.plutomonkey.com/p2s/?source=dHJ1ZQ==) | A web-based tool to quickly get the address corresponding to some script  
+- [ergo-monitoring](https://github.com/SabaunT/ergo-monitoring) | Debug service printing out useful for developers and managers information about ergo blockchain state.
+- [Transaction builder](https://transaction-builder.ergo.ga/) |  The application allows you to manipulate Ergo JSON transactions with a UI and to sign them with Yoroi or to prepare the JSON for the Swagger API. It can also load the JSON of an unsigned transaction to edit it.  | [GitHub](https://github.com/ThierryM1212/transaction-builder/)  | [Video](https://youtu.be/0VhfY7osT2k)
+
+## Test vectors
+
+- [Ergo transaction serialization](https://git.io/fjqwX)
+- [Signature scheme](https://git.io/fjqwH)
+
+## Analysis
+
+- [Ergo Vision](https://github.com/CryptoCream/ErgoVision) | A wallet visualization tool to be used for investigating transactions and addresses
+- [Ergo Intelligence](https://github.com/Eeysirhc/ergo_intelligence)
+- [Ergo.watch](https://ergo.watch)
+
+> Make sure to check out the *dev-tools* tab on [sigmaverse.io](https://sigmaverse.io/). 
 
 
 

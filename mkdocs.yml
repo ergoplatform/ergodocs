@@ -93,17 +93,18 @@ nav:
   - 🔬 ┃ Learn: 
     - dev/protocol/index.md
     - Key Features: 
+      - Why Ergo: dev/protocol/why.md
       - Protocol: dev/protocol/index.md
       - eUTXO:
         - dev/protocol/eutxo.md
         - eUTXO vs Account: dev/protocol/eutxo/accountveutxo.md
         - Atomic Swaps: dev/protocol/eutxo/atomic.md
       - NIPoPoWs:
-        - dev/protocol/nipopow/nipopow.md
+        - dev/protocol/nipopows.md
         - Light Nodes: dev/protocol/nipopow/nipopow_nodes.md
         - Log-Space Mining: dev/protocol/nipopow/logspace.md
         - Sidechains: dev/protocol/nipopow/sidechains.md
-      - Privacy: dev/zkp/zkp.md
+      - Privacy: dev/protocol/zkp.md
       - Storage Rent: mining/rent.md
       - Autolykos: mining/autolykos.md
     - Scaling: dev/protocol/scaling.md
