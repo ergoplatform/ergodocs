@@ -34,7 +34,7 @@ The combination of Fleet and Sigma.JS provide a similar level of functionality t
   },
   {
     "title": "sigma-rust",
-    "content": "",
+    "content": "Rust port of the sigmastate-interpreter",
     "url": "../../stack/sigma-rust"
   },
 

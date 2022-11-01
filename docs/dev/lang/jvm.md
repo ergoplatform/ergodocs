@@ -1,6 +1,6 @@
 # JVM
 
-## Frameworks
+Where you want to develop using Java, Scala or Kotlin - you'll likely want to be using AppKit.
 
 ::cards::
 
@@ -18,35 +18,3 @@
 
 
 
-
-## Tools
-
-
-## Getting Started
-
-
-::cards::
-
-[
-  {
-    "title": "General Example",
-    "content": "",
-    "url": "../../stack/appkit/tutorial"
-  },
-  {
-    "title": "AppKit By Example",
-    "content": "Follow this example to create and programmaticaly send a transaction.",
-    "url": "https://www.youtube.com/watch?v=Md5s-XV6-Hs"
-  },
-  {
-    "title": "ErgoPay Example",
-    "url": "../../wallet/payments/ergopay/ergo-pay/"
-  },
-  
-
-]
-
-::/cards::
-
-
-## Advanced use cases

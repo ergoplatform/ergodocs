@@ -138,7 +138,15 @@ nav:
         - Tweaking Difficulty Adjustment Algorithm: mining/standards/eip37.md
     
   - 🛠 ┃ Build: 
-    - dev/start.md    
+    - Getting Started: 
+      - dev/start.md
+      - Server: dev/stack/server.md
+      - Browser: dev/stack/browser.md
+      - Desktop: dev/stack/desktop.md
+      - Mobile: 
+        - dev/stack/mobile.md
+        - iOS: dev/stack/ios.md   
+        - Android: dev/stack/android.md  
     - Tooling:
       - Node:
         - node/install/install.md

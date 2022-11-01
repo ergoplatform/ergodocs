@@ -6,6 +6,29 @@ tags:
 ---
 # Appkit
 
+::cards::
+
+[
+  {
+    "title": "General Example",
+    "content": "",
+    "url": "../../stack/appkit/tutorial"
+  },
+  {
+    "title": "AppKit By Example",
+    "content": "Follow this example to create and programmaticaly send a transaction.",
+    "url": "https://www.youtube.com/watch?v=Md5s-XV6-Hs"
+  },
+  {
+    "title": "ErgoPay Example",
+    "url": "../../wallet/payments/ergopay/ergo-pay/"
+  },
+  
+
+]
+
+::/cards::
+
 
 [Ergo Appkit](https://github.com/aslesarenko/ergo-appkit) is a library for polyglot development of Ergo Applications based on [GraalVM](https://www.graalvm.org/).
 
