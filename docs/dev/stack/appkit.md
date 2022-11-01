@@ -6,28 +6,6 @@ tags:
 ---
 # Appkit
 
-::cards::
-
-[
-  {
-    "title": "General Example",
-    "content": "",
-    "url": "../../stack/appkit/tutorial"
-  },
-  {
-    "title": "AppKit By Example",
-    "content": "Follow this example to create and programmaticaly send a transaction.",
-    "url": "https://www.youtube.com/watch?v=Md5s-XV6-Hs"
-  },
-  {
-    "title": "ErgoPay Example",
-    "url": "../../wallet/payments/ergopay/ergo-pay/"
-  },
-  
-
-]
-
-::/cards::
 
 
 [Ergo Appkit](https://github.com/aslesarenko/ergo-appkit) is a library for polyglot development of Ergo Applications based on [GraalVM](https://www.graalvm.org/).
@@ -48,6 +26,32 @@ Using Appkit, Ergo applications can be written in one of the languages supported
 
 ## Tutorials
 
+::cards::
+
+[
+  {
+    "title": "General Example",
+    "content": "",
+    "url": "../../stack/appkit/tutorial"
+  },
+  {
+    "title": "AppKit By Example",
+    "content": "Follow this example to create and programmaticaly send a transaction.",
+    "url": "https://www.youtube.com/watch?v=Md5s-XV6-Hs"
+  },
+  {
+    "title": "ErgoPay Example",
+    "url": "../../wallet/payments/ergopay/ergo-pay/"
+  },
+  {
+    "title": "Gradle",
+    "url": "../../stack/appkit/gradle"
+  },
+  
+
+]
+
+::/cards::
 
 - [Gradle](/dev/stack/appkit/gradle)
 - [ErgoPay tutorial](/dev/wallet/payments/ergo-pay/#implement-a-dapp-using-ergopay)

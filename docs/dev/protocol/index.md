@@ -61,7 +61,7 @@ Ensuring economic freedom for ordinary people through decentralized, private and
   {
     "title": "Storage Rent",
     "content": "Storage Rent is a nominal fee incurred by unmoved boxes after four years.",
-    "url": "scaling"
+    "url": "../../mining/rent"
   },
   {
     "title": "ErgoScript",

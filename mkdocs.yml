@@ -138,6 +138,7 @@ nav:
         - Tweaking Difficulty Adjustment Algorithm: mining/standards/eip37.md
     
   - 🛠 ┃ Build: 
+    - dev/start.md
     - Getting Started: 
       - dev/start.md
       - Server: dev/stack/server.md
@@ -319,6 +320,7 @@ nav:
      
 
   - 💡 ┃  Applications: 
+    - uses/index.md
     - Explore:
       - Applications: uses/index.md
       - Live dApps:

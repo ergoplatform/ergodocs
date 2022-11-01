@@ -42,12 +42,12 @@ You will first need to decide if you want to develop using JavaScript or Rust.
   {
     "title": "ErgoPay",
     "content": "",
-    "url": "../../lang/js"
+    "url": "../../wallet/payments/ergopay/ergo-pay/"
   },
   {
     "title": "dApp Connector",
     "content": "",
-    "url": "../../lang/rust"
+    "url": "../../wallet/payments/dApp/"
 
   }
 ]
