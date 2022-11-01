@@ -2,6 +2,8 @@
 
 There are a couple of options developers can pick from to interact with the *user* in browser. 
 
+You will first need to decide if you want to develop using JavaScript or Rust. 
+
 ## Languages
 
 
@@ -25,74 +27,9 @@ There are a couple of options developers can pick from to interact with the *use
 
 ::/cards::
 
-## Frameworks
-
-::cards::
-
-[
-  {
-    "title": "Fleet",
-    "content": "Lets you easily create Ergo transactions with a pure JS library.",
-    "url": "../../dev/stack/fleet"
-  },
-  {
-    "title": "ergo-ts",
-    "content": "with support of tokens and complex transactions",
-    "url": "https://github.com/coinbarn/ergo-ts"
-  },
-  {
-    "title": "HDF",
-    "content": "Headless dApp Framework",
-    "url": "../../stack/headless/"
-  },
-
-  
-
-]
-
-::/cards::
-
-## Interpreters
-
-::cards::
-
-[
-
-  {
-    "title": "Sigma.JS",
-    "content": "",
-    "url": ""
-  },
-  {
-    "title": "sigma-rust",
-    "content": "",
-    "url": "../../stack/sigma-rust"
-  },
 
 
-]
 
-::/cards::
-
-## Getting Started
-
-::cards::
-
-[
-  {
-    "title": "dAppStep Docs",
-    "content": "include many practical examples with Javascript and Nodejs that will help you to understand to implement different aspects of dapp functionality on Ergo",
-    "url": "https://www.dappstep.com/"
-  },
-  {
-    "title": "dApp Development Course",
-    "content": "Hitchhiker's guide to dApp development on Ergo",
-    "url": "https://www.youtube.com/watch?v=uC6QO3I4m8o&list=PLzY-irO3z3G8FVDifned2NMFc-PgQqnny"
-  }
-
-]
-
-::/cards::
 
 
 

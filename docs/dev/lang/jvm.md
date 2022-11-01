@@ -8,7 +8,7 @@
   {
     "title": "AppKit",
     "content": "A library for polyglot development of Ergo Applications ",
-    "url": "../../../dev/stack/appkit/appkit"
+    "url": "../../../dev/stack/appkit"
   }
 
 ]

@@ -2,7 +2,7 @@
 
 Developers can use tools to read data from the blockchain, compute using that data and create transactions to be broadcast. Each tool requires the developer to "program" in some language.
 
-## Primary Platforms
+## Platforms
 
 ::cards::
 
@@ -21,28 +21,24 @@ Developers can use tools to read data from the blockchain, compute using that da
 
   },
   {
-    "title": "JS/TS",
+    "title": "Node.js",
     "content": "",
     "image": "/assets/img/dev-grid/js.png",
     "url": "../../lang/js"
-  }
-
-]
-
-::/cards::
-
-
-## Other options
-
-::cards::
-
-[
+  },
   {
     "title": "Python",
     "content": "",
     "image": "/assets/img/dev-grid/python.png",
     "url": "../../lang/python"
-  }
+  },
+  {
+    "title": "Mosaik",
+    "content": "UI system for dApps",
+    "image": "../../assets/img/dev-grid/mosaik.png",
+    "url": "../../stack/mosaik/intro"
+  },
+
 
 ]
 
@@ -50,25 +46,23 @@ Developers can use tools to read data from the blockchain, compute using that da
 
 
 
-## Utilities
+
+
+
+
+
+## Tools
 
 ::cards::
 
 [
   {
-    "title": "Mosaik",
-    "content": "UI system for dApps",
-    "image": "../../assets/img/dev-grid/mosaik.png",
-    "url": "../../stack/mosaik/intro"
-
-  },
-
-  {
-    "title": "JSON",
+    "title": "JSON dApp Environment",
     "content": "",
     "image": "/assets/img/dev-grid/json.png",
     "url": "../../lang/json"
   }
+
 
 ]
 

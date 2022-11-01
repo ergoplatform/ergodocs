@@ -37,3 +37,29 @@ Java+JVM/JavaFX/JS+Electron/Rust/Python
 ]
 
 ::/cards::
+
+## Examples 
+
+
+::cards::
+
+[
+  {
+    "title": "Ergo Wallet",
+    "content": "",
+    "url": "../../lang/jvm"
+  },
+  {
+    "title": "ErgoMixer",
+    "content": "",
+    "url": "../../lang/jvm"
+  },
+  {
+    "title": "Satergo",
+    "content": "",
+    "url": "../../lang/jvm"
+  },
+
+]
+
+::/cards::

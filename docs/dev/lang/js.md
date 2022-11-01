@@ -5,6 +5,8 @@ tags:
 
 # Javascript
 
+The combination of Fleet and Sigma.JS provide a similar level of functionality to [AppKit](appkit.md)
+
 ## Frameworks
 
 ::cards::
@@ -17,7 +19,7 @@ tags:
   },
   {
     "title": "Sigma.JS",
-    "content": "",
+    "content": "JavaScript port of the sigmastate-interpreter",
     "url": ""
   },
   {
