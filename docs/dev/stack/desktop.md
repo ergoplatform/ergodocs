@@ -1,6 +1,5 @@
 # Desktop
 
-Java+JVM/JavaFX/JS+Electron/Rust/Python
 
 ## Platforms 
 
@@ -10,6 +9,12 @@ Java+JVM/JavaFX/JS+Electron/Rust/Python
 [
   {
     "title": "JVM",
+    "content": "",
+    "image": "/assets/img/dev-grid/jvm.png",
+    "url": "../../lang/jvm"
+  },
+  {
+    "title": "JavaFX",
     "content": "",
     "image": "/assets/img/dev-grid/jvm.png",
     "url": "../../lang/jvm"

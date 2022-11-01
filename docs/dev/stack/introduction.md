@@ -19,7 +19,7 @@
   },
   {
     "title": "🔗 Sigmaverse",
-    "content": "",
+    "content": "Your portal to the Ergo universe.",
     "image": "../../assets/img/dev-grid/sigmaverse.svg",
     "url": "https://sigmaverse.io"
   },

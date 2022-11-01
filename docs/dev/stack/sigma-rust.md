@@ -1,7 +1,6 @@
 # Sigma Rust
 
-[sigma-rust](https://github.com/ergoplatform/sigma-rust) is an alternative and simple implementation of ErgoTree interpreter and transaction building tools. The goal for the Rust version is to be on par with the Scala version feature-wise. Now Rust version is still significantly behind. Also, the goal for the Rust version is to have bindings for web, iOS and Android. The Scala version will continue to be the primary choice for the JVM ecosystem, with the Rust version covering the rest.
-
+[sigma-rust](https://github.com/ergoplatform/sigma-rust) is an alternative and simple implementation of ErgoTree interpreter and transaction building tools. 
 
 See [Architecture](https://github.com/ergoplatform/sigma-rust/blob/develop/docs/architecture.md) for high-level overview.
 
