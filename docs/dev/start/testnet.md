@@ -73,11 +73,30 @@ ergo-testnet.getblok.io:3056
 
 > Please note that the [Headless dApp framework](/dev/stack/headless/#headless-dapp-framework) [does not work with testnet addresses](https://github.com/ergoplatform/ergo-headless-dapp-framework/blob/main/src/encoding.rs#L104)
 
-## Mining your own chain
+## (CPU) Mining your own chain
 
-To start your testnet, use the following `testnet.conf`:
 
-More options can be seen at [application.conf#L150](https://github.com/ergoplatform/ergo/blob/670b2832422e62a7c84f1b274f76ff5656873a5d/src/main/resources/application.conf#L150)
+### Generating genesisStateDigestHex
+
+You will need to generate your `genesisStateDigestHex`, this is a Base16 representation of the *genesis state* roothash and retrieved by changing your desired values in [src/main/resources/testnet.conf](https://github.com/ergoplatform/ergo/blob/master/src/main/resources/testnet.conf). 
+
+
+### Compiling the node
+
+```
+sbt assembly
+```
+
+This will create an ergo.jar at `/target/scala*/ergo-*.jar`
+
+
+### Running the node
+
+```
+java -jar -Xmx4G ergo-*.jar --testnet -c testnet.conf
+```
+
+Your `testnet.conf` looks like this; 
 
 ```
 ergo {
@@ -88,6 +107,10 @@ ergo {
     offlineGeneration = true
     useExternalMiner = false
   }
+  
+  #chain {
+  #     genesisStateDigestHex = "Still to be generated at this stage"
+  #}
 }
 
 scorex {
@@ -105,5 +128,8 @@ scorex {
   }
 }
 ```
+The console should return the new `genesisStateDigestHex` value, place that inbetween the quotation marks and uncomment the lines above.
 
-Then your node will CPU-mine its chain. 
+### Start Mining
+
+Restart your node and it will now CPU-mine its own chain! 
