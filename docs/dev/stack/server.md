@@ -1,6 +1,6 @@
 # Server
 
-Developers can use tools to read data from the blockchain, compute using that data and create transactions to be broadcast. Each tool requires the developer to "program" in some language.
+Developers can use tools to read data from the blockchain, compute using that data and create transactions to be broadcast. Each tool requires the developer to program in some language.
 
 ## Platforms
 

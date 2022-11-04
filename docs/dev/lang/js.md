@@ -15,7 +15,7 @@ The combination of Fleet and Sigma.JS provide a similar level of functionality t
   {
     "title": "Fleet",
     "content": "Lets you easily create Ergo transactions with a pure JS library.",
-    "url": "../../dev/stack/fleet"
+    "url": "../../stack/fleet"
   },
   {
     "title": "Sigma.JS",

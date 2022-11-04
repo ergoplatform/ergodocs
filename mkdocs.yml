@@ -266,13 +266,12 @@ nav:
             - Signing: dev/protocol/tx/signing.md
             - Validation: dev/protocol/tx/validation.md
             - Data Inputs: dev/protocol/tx/read-only-inputs.md
-          
-          - Standards:
-            - Proxy Contracts: dev/wallet/payments/standards/eip17.md
-            - ErgoPay Protocol: dev/wallet/payments/standards/eip20.md
-            - Payment Request URI: dev/wallet/payments/standards/eip25.md
-          
-          - ErgoTool: dev/stack/ergotool.md
+        - Standards:
+          - Babel Fees: dev/protocol/tx/babel-fees.md
+          - Proxy Contracts: dev/wallet/payments/standards/eip17.md
+          - ErgoPay Protocol: dev/wallet/payments/standards/eip20.md
+          - Payment Request URI: dev/wallet/payments/standards/eip25.md
+        - ErgoTool: dev/stack/ergotool.md
 
       - Block: dev/data-model/block.md
       - Wallets:

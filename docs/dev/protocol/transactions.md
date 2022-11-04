@@ -7,7 +7,7 @@ tags:
 
 
 
-Each Ergo transaction is an **atomic state transition operation**. It destroys a [box](box.md) from the state and creates new ones. 
+Each Ergo transaction is an **atomic state transition operation**. Meaning that it *destroys* a [box](box.md) from the state and creates new ones. 
 
 
 ## Anatomy
@@ -27,7 +27,7 @@ Each transaction executed on Ergo consists of **these three things**.
 
 ### Data Inputs
 
-[**Data inputs**](read-only-inputs.md) are unique concept created by Ergo and were included into Cardano with the Vasil Hardfork. These allow multiple transactions to share a data-input box, which will store only a single reference to the box in the block. 
+[**Data inputs**](read-only-inputs.md) are a unique concept created by Ergo which have been included into Cardano with the *Vasil* Hardfork. These allow multiple transactions to share a data-input box, which will store only a single reference to the box in the block. 
 
 
 ## Overview

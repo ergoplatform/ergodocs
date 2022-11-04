@@ -77,6 +77,8 @@ ergo-testnet.getblok.io:3056
 
 To start your testnet, use the following `testnet.conf`:
 
+More options can be seen at [application.conf#L150](https://github.com/ergoplatform/ergo/blob/670b2832422e62a7c84f1b274f76ff5656873a5d/src/main/resources/application.conf#L150)
+
 ```
 ergo {
   networkType = "testnet"

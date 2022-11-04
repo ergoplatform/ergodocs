@@ -1,6 +1,21 @@
 ## Why Ergo?
 
+Ergo provides **superior support for real-world financial agreements**. It does this through:
+
+   
+1. A simple high-level language, [ErgoScript](/dev/scs/ergoscript), enabling clear descriptions of contractual logic.
+2. Support for formal verification of contracts, bringing improved security guarantees.
+3. *Turing complete* smart contracts as demonstrated in [this peer-reviewed paper](https://arxiv.org/pdf/1806.10116v1.pdf).
+4. Easy Oracle creation
+5. A unique [Data Inputs](/dev/scs/data-inputs) concept, enabling a radically different approach to provide robust, flexible cryptography.
+6. The cryptographic part of ErgoScript is based on [Sigma Protocols](/dev/scs/sigma) and naturally supports threshold `m-of-n` signatures, ring signatures, and more. 
+7. Support for [Multi-Stage contracts](/dev/scs/multi) that operate on a stateful level. 
+
+## Summary
+
 Ergo is multi-asset Proof-of-Work cryptocurrency with powerful financial contracts in the extended UTXO model, unique flexible crypto-contracts based on sigma-protocols, storage rent, stateless and ultra-efficient SPV clients support and focus on long-term survivability. Based on a scientific approach, but also very practical in any aspect. Ergo is a DeFi and crypto contracts platform that takes a radically different approach to smart contracts than other networks, non-custodial and non-interactive approaches including off-the-peg use of ring and threshold signatures – great for new privacy applications
+
+## Contractual Money
 
 The overwhelming majority of successful public blockchain use‐cases are related to financial applications. Ergo extends Bitcoin's way of writing contracts by attaching a guard script (together with additional custom data) to every coin. 
 
