@@ -81,7 +81,19 @@ ergo-testnet.getblok.io:3056
 You will need to generate your `genesisStateDigestHex`, this is a Base16 representation of the *genesis state* roothash and retrieved by changing your desired values in [src/main/resources/testnet.conf](https://github.com/ergoplatform/ergo/blob/master/src/main/resources/testnet.conf). 
 
 
+### Pre-requisites
+
+You will need to have sbt installed, a build tool for Scala. 
+
+[SDKMAN](https://sdkman.io/) is the easiest way to get setup with sbt. 
+
+```
+curl -s "https://get.sdkman.io" | bash 
+sdk install sbt
+```
+
 ### Compiling the node
+
 
 ```
 sbt assembly
@@ -90,13 +102,9 @@ sbt assembly
 This will create an ergo.jar at `/target/scala*/ergo-*.jar`
 
 
-### Running the node
+### Configuring your .conf file
 
-```
-java -jar -Xmx4G ergo-*.jar --testnet -c testnet.conf
-```
-
-Your `testnet.conf` looks like this; 
+Your `testnet.conf` should look like this at this stage; 
 
 ```
 ergo {
@@ -128,8 +136,13 @@ scorex {
   }
 }
 ```
-The console should return the new `genesisStateDigestHex` value, place that inbetween the quotation marks and uncomment the lines above.
 
-### Start Mining
+### Running the node
+
+```
+java -jar -Xmx4G ergo-*.jar --testnet -c testnet.conf
+```
+
+The console should return a new `genesisStateDigestHex` value, place that inbetween the quotation marks and uncomment the lines above.
 
 Restart your node and it will now CPU-mine its own chain! 
