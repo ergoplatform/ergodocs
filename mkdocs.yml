@@ -170,16 +170,16 @@ nav:
             - application.conf: 
               - node/conf.md
               - ergo: 
-                - Node: node/conf/conf-node.md
-                - Cache: node/conf/conf-cache.md
-                - Chain: node/conf/conf-chain.md
-                - Wallet: node/conf/conf-wallet.md
-                - Voting: node/conf/conf-voting.md
-              - bounded-mailbox: node/conf/conf-voting.md
-              - akka: node/conf/conf-voting.md
-              - scorex: node/conf/conf-voting.md
-              - critical-dispatcher: node/conf/conf-voting.md
-              - api-dispatcher: node/conf/conf-voting.md
+                - node: node/conf/conf-node.md
+                - cache: node/conf/conf-cache.md
+                - chain: node/conf/conf-chain.md
+                - wallet: node/conf/conf-wallet.md
+                - voting: node/conf/conf-voting.md
+              - bounded-mailbox: node/conf/conf-bounded.md
+              - akka: node/conf/conf-akka.md
+              - scorex: node/conf/conf-scorex.md
+              - critical-dispatcher: node/conf/conf-crit.md
+              - api-dispatcher: node/conf/conf-api.md
         #- Light Modes: 
         #  - Digest State: node/digest-state.md
         #  - History Pruning: node/history-pruning.md

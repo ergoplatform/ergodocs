@@ -1,9 +1,9 @@
 
-### chain 
+## chain 
 
 Chain-specific settings. Change only if you are going to launch a new chain. 
 
-#### protocolVersion
+### protocolVersion
 ```
 protocolVersion = 3
 ```
@@ -12,25 +12,25 @@ Blockchain protocol version supported by the client.
 
 Please do not increase this value manually; this should be done by client developers.
 
-#### addressPrefix 
+### addressPrefix 
 ```
 addressPrefix = 16
 ```
 Network address prefix, currently reserved values are 0 (Ergo mainnet) and 16 (Ergo testnet)
 
-#### monetary
-##### fixedRatePeriod
+### monetary
+#### fixedRatePeriod
 ```
 fixedRatePeriod = 525600
 ```
 The number of blocks reward won't change (2 years)
 
-##### fixedRate
+#### fixedRate
 ```
 fixedRate = 75000000000
 ```
 number of coins issued every block during fixedRatePeriod (75 Ergo)
-##### foundersInitialReward
+#### foundersInitialReward
 ```
 foundersInitialReward = 7500000000
 ```
@@ -38,13 +38,13 @@ foundersInitialReward = 7500000000
 Part of coins issued, that is going to the foundation during fixedRatePeriod (7.5 Ergo)
 
 
-##### epochLength
+#### epochLength
 ```
  epochLength = 64800
 ```
 number of blocks between reward reduction (90 days)
 
-##### oneEpochReduction
+#### oneEpochReduction
 ```
 oneEpochReduction = 3000000000
 ```
@@ -52,42 +52,42 @@ oneEpochReduction = 3000000000
 The number of coins reward decreases every epoch (3 Ergo)
 
 
-##### minerRewardDelay
+#### minerRewardDelay
 ```
 minerRewardDelay = 720
 ```
 The delay between the block mined and a time when the reward can be spent. ~ 1 day.
-#### reemission
-##### checkReemissionRules
+### reemission
+#### checkReemissionRules
 ```
 checkReemissionRules = false
 ```
-##### emissionNftId
+#### emissionNftId
 ```
       emissionNftId = ""
 ```
-##### reemissionTokenId
+#### reemissionTokenId
 ```
       reemissionTokenId = ""
 ```
-##### reemissionNftId
+#### reemissionNftId
 ```
 reemissionNftId = ""
 ```
-##### activationHeight
+#### activationHeight
 ```
 activationHeight = 777217
 ```
 
-##### reemissionStartHeight
+#### reemissionStartHeight
 ```
 reemissionStartHeight = 2080800
 ```
-##### injectionBoxBytesEncoded
+#### injectionBoxBytesEncoded
 ```
 injectionBoxBytesEncoded = ""
 ```
-#### noPremineProof
+### noPremineProof
 ```
 noPremineProof = [
       "'Chaos reigns': what the papers say about the no-deal Brexit vote", # https://www.theguardian.com/politics/2019/mar/14/chaos-reigns-what-the-papers-say-about-the-no-deal-brexit-vote
@@ -101,7 +101,7 @@ noPremineProof = [
 Latest news from media (the Guardian, Xinhua, Vedomosti), existing cryptocurrency block ids (Bitcoin, Ethereum)
 
 
-####  foundersPubkeys 
+###  foundersPubkeys 
 ```
  foundersPubkeys = [
       "039bb5fe52359a64c99a60fd944fc5e388cbdc4d37ff091cc841c3ee79060b8647",
