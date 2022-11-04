@@ -65,7 +65,7 @@ The maximum a transaction can cost for it to be propagated.
 maxTransactionSize = 98304 // 96 kb
 ```
 
-Maximum size of a transaction to be accepted into mempool.
+Maximum size of a transaction to be accepted into memory pool.
 
 #### useExternalMiner
 ```
@@ -102,20 +102,22 @@ Public key mining rewards will be dedicated to (P2PK address is also accepted)
 offlineGeneration = false
 ```
 
-If true, a node generates blocks being offline. The only really useful case for it is to start a new blockchain.
+If true, the node will generate blocks while disconnected from the ergo mainnet. The only really useful case for this is when you want to launch your own blockchain. See the [testnet](testnet.md) page for more information.
 
 #### keepVersions
 ```
 keepVersions = 200
 ```
 
-The number of state snapshots diffs to keep. Defines maximum rollback depth
+The number of state snapshots diffs to keep. Defines maximum rollback depth.
 
 #### acceptableChainUpdateDelay
 ```
 acceptableChainUpdateDelay = 30m
 ```
 The acceptable difference between NOW and the timestamp of the latest chain update or best block. This helps to discover syncing issues.
+
+> TODO: The 'acceptable difference' between the current time, and the timestamp of the latest chain update (or best block). This helps to discover syncing issues. 
 
 #### mempoolCapacity
 ```
@@ -129,28 +131,33 @@ mempoolCapacity = 1000
 mempoolCleanupDuration = 30m
 ```
 
-Interval for mempool transaction re-check. We check the transaction when it enters the mempool and then re-check it for every interval value.
+The interval for the *re-check* of a transaction in memory pool. The transaction is initially checked when it enters the memory pool, and then again at an the specified interval.
 
 #### mempoolSorting
 ```
 mempoolSorting = "random"
 ```
 
-Mempool transaction sorting scheme ("random", "bySize", or "byExecutionCost")
+Specify the mempool transaction sorting scheme. The three options available are; 
+
+- `random`
+- `bySize`
+- `byExecutionCost`
+
 
 #### rebroadcastCount
 ```
 rebroadcastCount = 3
 ```
 
-Number of transactions from mempool to be re-broadcasted at each epoch
+The number of transactions currently in the mempool to be re-broadcasted at each epoch.
 
 #### minimalFeeAmount
 ```
 minimalFeeAmount = 1000000
 ```
 
-Minimal fee amount of transactions mempool accepts.
+The minimal fee amount for transactions that the memory pool will accept.
 
 #### blacklistedTransactions
 
@@ -158,7 +165,7 @@ Minimal fee amount of transactions mempool accepts.
 blacklistedTransactions = []
 ```
 
-List with hex-encoded identifiers of transactions banned from getting into the memory pool.
+List with hex-encoded identifiers of transactions banned from the memory pool.
 
 
 #### headerChainDiff
@@ -167,9 +174,10 @@ List with hex-encoded identifiers of transactions banned from getting into the m
 # default value is 100 blocks ~= 200 minutes
 headerChainDiff = 100
 ```
-The node is downloading headers first and only then full blocks. Depending on the settings, the node is downloading whether a suffix of the blockchain (if stateType = "digest" and "blocksToKeep" >= 0) or all the full blocks (otherwise).
 
-The node considers that the headers-chain is synced if it sees a block's header generated closely to the current moment. The node considers that a header is close if its timestamp is no more than "headerChainDiff" blocks on average than the node's clocks.
+The node downloads the headers first before moving on to full blocks. Depending on the settings specified by the user, the node downloads a *suffix* of the blockchain (if [stateType](#statetype) = "digest" and ["blocksToKeep"](#blockstokeep) >= 0) or all the full blocks (otherwise).
+
+The node considers the headers-chain synced if it sees a block's header generated closely to the current moment. The node considers that a header is close if its timestamp is no more than `headerChainDiff` blocks on average ahead of the node's clocks.
 
 
 #### checkpoint
@@ -179,7 +187,7 @@ The node considers that the headers-chain is synced if it sees a block's header 
 checkpoint = null
 ```
 
-Optional and individual checkpoint. If you are going to provide it, set the height and corresponding block header id like
+An optional and individual checkpoint that can be specified. If you want to use this, set the `height` and corresponding block header id as such;
 
 ```
 checkpoint = {
@@ -188,15 +196,15 @@ checkpoint = {
 }
 ```
    
-- Before the height given (including it), validation of scripts is missed.
+- Before (and including) the height given, validation of scripts is missed.
 - This improves performance and memory usage during initial bootstrapping.
 - The node still applies transactions to the UTXO set and checks UTXO set digests for each block.
-- Block at checkpoint height is to be checked against the expected one.
+- Block at checkpoint height are checked against the expected height.
     
 
 #### adProofsSuffixLength
 
-Dump `ADProofs` only for the suffix given during bootstrapping
+Only dump the `ADProofs` for this suffix length given during bootstrapping.
 
 
 ```
