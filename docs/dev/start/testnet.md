@@ -78,7 +78,7 @@ ergo-testnet.getblok.io:3056
 
 ### Generating genesisStateDigestHex
 
-You will need to generate your `genesisStateDigestHex`, this is a Base16 representation of the *genesis state* roothash and retrieved by changing your desired values in [src/main/resources/testnet.conf](https://github.com/ergoplatform/ergo/blob/master/src/main/resources/testnet.conf). 
+You will need to generate your `genesisStateDigestHex`, this is a Base16 representation of the *genesis state* roothash and generated configuring your chains values in [src/main/resources/testnet.conf](https://github.com/ergoplatform/ergo/blob/master/src/main/resources/testnet.conf) and then compiling the node. 
 
 
 ### Pre-requisites

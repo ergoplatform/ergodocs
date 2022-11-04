@@ -166,6 +166,20 @@ nav:
           - Distributed Signatures: node/sigs.md
           - Modes of Operation: node/modes.md
           - Hierarchical keys: dev/wallet/keys.md
+          - Configuration Files:
+            - application.conf: 
+              - node/conf.md
+              - ergo: 
+                - Node: node/conf/conf-node.md
+                - Cache: node/conf/conf-cache.md
+                - Chain: node/conf/conf-chain.md
+                - Wallet: node/conf/conf-wallet.md
+                - Voting: node/conf/conf-voting.md
+              - bounded-mailbox: node/conf/conf-voting.md
+              - akka: node/conf/conf-voting.md
+              - scorex: node/conf/conf-voting.md
+              - critical-dispatcher: node/conf/conf-voting.md
+              - api-dispatcher: node/conf/conf-voting.md
         #- Light Modes: 
         #  - Digest State: node/digest-state.md
         #  - History Pruning: node/history-pruning.md
