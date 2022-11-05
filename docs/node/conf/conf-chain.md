@@ -8,9 +8,9 @@ Chain-specific settings. Change only if you are going to launch a new chain.
 protocolVersion = 3
 ```
 
-Blockchain protocol version supported by the client.
+`protocolVersion` specifies the blockchain protocol version supported by the client.
 
-Please do not increase this value manually; this should be done by client developers.
+> Please do not increase this value manually; this should be done by client developers.
 
 ### addressPrefix 
 ```
@@ -37,6 +37,7 @@ foundersInitialReward = 7500000000
 
 Part of coins issued, that is going to the foundation during fixedRatePeriod (7.5 Ergo)
 
+> TODO: Clarify
 
 #### epochLength
 ```
@@ -56,7 +57,7 @@ The number of coins reward decreases every epoch (3 Ergo)
 ```
 minerRewardDelay = 720
 ```
-The delay between the block mined and a time when the reward can be spent. ~ 1 day.
+The delay between the block mined and when the miner can spend the reward. ~ 1 day.
 ### reemission
 #### checkReemissionRules
 ```

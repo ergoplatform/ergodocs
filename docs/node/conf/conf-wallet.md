@@ -80,7 +80,7 @@ optimalInputs = 3
 ```
 # testMnemonic = "ozone drill grab fiber curtain grace pudding thank cruise elder eight picnic"
 ```
-Mnemonic seed used in the wallet for tests. If set, the wallet operates in test mode.
+The mnemonic seed to be used in the wallet for tests. If set, the wallet operates in test mode.
 
 ## testKeysQty
 ```
@@ -95,7 +95,7 @@ tokensWhitelist = null
 
 Whitelisted tokens, if non-null, the wallet will automatically burn non-whitelisted tokens from inputs when doing transactions.
 
-If tokensWhitelist = [], all the tokens will be burnt, tokensWhitelist = ["example"] means that all the tokens except for "example" will be burnt
+If `tokensWhitelist = []`, any incoming tokens will be burnt, `tokensWhitelist = ["example"]` means that all the tokens except for "example" will be burnt
 
 tokensWhitelist = null means no tokens burnt automatically
 ## checkEIP27

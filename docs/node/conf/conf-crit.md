@@ -1,6 +1,33 @@
 
 # critical-dispatcher 
 
+The dispatcher which is used only for the block candidate generator and `NodeViewHolder` actors. 
+
+
+## type
+```
+type = Dispatcher
+```
+
+## executor
+```
+executor = "thread-pool-executor"
+```
+
+## thread-pool-executor
+### fixed-pool-size
+```
+fixed-pool-size = 2
+```
+## throughput
+```
+throughput = 1
+```
+
+
+## Full Code Snippet
+
+
 ```
 critical-dispatcher {
   type = Dispatcher
@@ -11,4 +38,3 @@ critical-dispatcher {
   throughput = 1
 }
 ```
-The dispatcher which is used for block candidate generator and `NodeViewHolder` actors only
