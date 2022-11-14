@@ -150,9 +150,9 @@ nav:
         - Android: dev/stack/android.md  
     - Tooling:
       - Node:
-        - node/install/install.md
+        - node/install.md
         - Install: 
-          - node/install/install.md
+          - node/install.md
           - Manual: node/install/manual.md
           - Docker: node/install/docker.md
           - Pi: node/install/pi.md

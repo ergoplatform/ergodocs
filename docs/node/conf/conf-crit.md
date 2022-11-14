@@ -1,7 +1,7 @@
 
 # critical-dispatcher 
 
-The dispatcher which is used only for the block candidate generator and `NodeViewHolder` actors. 
+The `critical-dispatcher` is used only for the block candidate generator and `NodeViewHolder` actors. 
 
 
 ## type
