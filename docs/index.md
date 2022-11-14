@@ -19,7 +19,7 @@
   {
     "title": "⛏ Start Mining",
     "content": "Start mining ERG today or explore unique mining features available on Ergo.",
-    "image": "./assets/img/grid/03.png",
+    "image": "./assets/img/grid/06.png",
     "url": "mining"
   },
   {
@@ -37,7 +37,7 @@
   {
     "title": "❓ FAQ",
     "content": "View some of the most frequently asked questions.",
-    "image": "./assets/img/grid/06.png",
+    "image": "./assets/img/grid/03.png",
     "url": "faq/"
   }
 ]

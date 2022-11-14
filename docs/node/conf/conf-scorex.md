@@ -127,12 +127,20 @@ magicBytes = [2, 2, 2, 2]
 Magic bytes will be added to every p2p message to distinguish different networks (e.g. testnet/mainnet).
    
 #### declaredAddress
+
 ```
 # declaredAddress = ""
 ```
 
+To broadcast on IPV6, you must enter your IPV6 address here as such;
+
+```
+declaredAddress = "[2345:0425:2CA1:0000:0000:0567:5673:23b5]:9030"
+```
+
 
 String with IP address and port to send as external address during the handshake.
+
 It could be set automatically if UPnP is enabled.
 
 If `declared-address` is set, which is the common scenario for nodes running in the cloud, the node will just listen to incoming connections on `bindAddress:port` and broadcast its `declaredAddress` to its peers.
@@ -144,8 +152,7 @@ If the declared address is not set and UPnP is not enabled, the node will not li
 If the declared address is not set and UPnP is enabled, the node will attempt to connect to an IGD, retrieve its external IP address and configure the gateway to allow traffic through. If the node succeeds, the IGD's external IP address becomes the node's declared address.
 
 In some cases, you may both set `decalredAddress` and enable UPnP (e.g. when IGD can't reliably determine its
-external IP address). In such cases, the node will attempt to configure an IGD to pass traffic from the external port
-to the `bind-address:port`. Please note, however, that this setup is not recommended.
+external IP address). In such cases, the node will attempt to configure an IGD to pass traffic from the external port to the `bind-address:port`. Please note, however, that this setup is not recommended.
 
 #### upnpEnabled
 ```
