@@ -177,13 +177,13 @@ Since the miner already stores _list R_ in RAM, the miner does not need to compu
  
 Once the 32 _r_ values are looked up, they are summed.
  
-_Line 9, 10, 11, 12 – check if hash of sum is below target_
+### Line 9, 10, 11, 12 – check if hash of sum is below target
  
 The sum of the 32 _r_ values is hashed using Algorithm 3, and if the output is below target _b_, the PoW is successful, _m_ and _nonce_ are returned to network nodes, and the miner is rewarded in ERG. If the sum hash is above the target, _Lines 4 – 11_ are repeated with a new nonce.
  
 If you have made it this far, congratulations! After reading all of this information, you should have a good understanding of Autolykos v2! If you would like to see a visual demonstration of Autolykos, please see the graphic at the end of this document. If you would like a video explanation, you can find it [here](https://youtu.be/pPYcfLQGIHg). 
 
-### ASIC Resistance
+## ASIC Resistance
  
 We know from Ethereum that ‘memory hard’ algorithms can be conquered by integrating memory on ASICs. Ergo is different but let’s first revise why an ASIC with limited memory is uncompetitive and why a miner needs to store _list R_. Line 8 of Autolykos block mining deters machines with limited memory. If an ASIC miner does not store _list R_, they require a lot of cores to generate the 31-byte numeric hashes on the fly. 32 _r_ values cannot be efficiently calculated using a single core loop because an output would only be generated every 32nd hash cycle. Given _J,_ to compute one nonce _per hash cycle,_ at least 32 Blake2b256 instances running _dropMsb(H(j||h||M))_ are needed. As we mentioned above, this increases die size and cost significantly. It’s clear that storing _list R_ is worthwhile because having 32, or even 16, cores is very expensive. More to the point, reading memory is faster than computing Blake instances every time a nonce is tested.
  
@@ -199,7 +199,7 @@ The last area that can be optimized for Autolykos is memory read/write speed. Et
  
 The above photo is an FPGA with 8 memory chips on the front, and there are another 8 on the back. The total SRAM memory is only 576MB. Fitting sufficient SRAM on a die won’t work because the SRAM will need to be placed further from the core as it is note dense enough to fit in one layer around the core. This can result in read/write delays because electricity needs to travel longer distances even though the hardware itself is faster. Additionally, to mine Ergo, the memory requirement increases as N increases so fitting sufficient SRAM is not feasible overtime. Thus, SRAM ASICs are not worthwhile exploring even if one had enough cash to spend on SRAM itself.
  
-### Blake2b256
+## Blake2b256
  
 One major difference between an algorithm like Autolykos and others is the use of Blake2b256. This is no coincidence. Blake relies heavily on addition operations for hash mixing instead of XOR operations. An operation like XOR can be done bit by bit whereas addition requires carry bits. Thus, Blake requires more power and core area compared to SHA algorithms, but it is still as secure and in fact, faster. As mentioned on the Blake2 website, “BLAKE2 is fast in software because it exploits features of modern CPUs, namely instruction-level parallelism, SIMD instruction set extensions, and multiple cores.”[3] Thus, while an ASIC can output Blake instances faster, the innate nature of the function limits optimizations by requiring addition and involving features found in CPUs as well as GPUs.
  
@@ -207,7 +207,7 @@ One major difference between an algorithm like Autolykos and others is the use o
  
 ![unnamed (8).png](https://storage.googleapis.com/ergo-cms-media/unnamed_8_e6913d1172/unnamed_8_e6913d1172.png)
 
-### Conclusion
+## Conclusion
 
 Autolykos is a great innovation that is a necessary response to combat the rise of PoW-optimized ASIC machines. We hope this 2-part series has helped you to understand Autolykos at a more technical level and why it is more memory hard than Ethash. As Ethereum transitions to a PoS network, there will be a large community of miners looking for a place to direct their hashrate power, and Ergo should be a significant player in attracting those miners. 
 

@@ -130,7 +130,7 @@ You can use [*ergo-bootstrap*](https://github.com/ergoplatform/ergo-bootstrap) t
 
 ### Testnet
 
-See [this page](/dev/start/testnet) for information on the public testnets.
+See [this page](/node/testnet) for information on the public testnets.
 
 
 

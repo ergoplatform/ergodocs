@@ -33,7 +33,7 @@
     "title": "Testnet",
     "content": "An alternative blockchain you can use for experimentation",
     "image": "../../assets/img/dev-grid/testnet.png",
-    "url": "../../start/testnet"
+    "url": "../../../node/testnet"
   },
   {
     "title": "Read our FAQ",
@@ -136,7 +136,7 @@ Need help figuring out where to start developing? This [introduction to Mosaik](
     "title": "AppKit",
     "content": "for JVM languages (used in Scala, Java and Kotlin projects)",
     "image": "../../assets/img/dev-grid/jvm.png",
-    "url": "../stack/appkit"
+    "url": "../appkit"
   },
   {
     "title": "Fleet",

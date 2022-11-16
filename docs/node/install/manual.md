@@ -100,4 +100,4 @@ tail -Fn+0 ergo.log | grep 'ERROR\|WARN'
 - [Initialising a wallet](/node/wallet)
 - [Troubleshooting](/node/install/troubleshooting)
 - [FAQ](/node/#faq)
-- [Using the TestNet](/dev/start/testnet)
+- [Using the TestNet](/node/testnet)
