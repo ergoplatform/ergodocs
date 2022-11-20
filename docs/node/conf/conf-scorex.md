@@ -138,6 +138,12 @@ To broadcast on IPV6, you must enter your IPV6 address here as such;
 declaredAddress = "[2345:0425:2CA1:0000:0000:0567:5673:23b5]:9030"
 ```
 
+Similarly to sync a node using ipv6 only you need to place this line in your config. 
+
+```
+scorex.network.knownPeers = ["[2601:204:c003:57e3:95b6:6344:5577:3e9c]:9030"]
+```
+
 
 String with IP address and port to send as external address during the handshake.
 

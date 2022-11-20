@@ -1,6 +1,9 @@
 # CPU Mining
 
-If you want to mine your own blocks on the testnet, you'll need to enable `mining` and disable `useExternalMiner` in your configuration file. 
+## Getting Set-up
+> Please refer to [node](node.md) for basic node set-up up to this point.
+
+To CPU mine on the testnet, your `testnet.conf` should look like this. 
 
 ```
 ergo {
@@ -58,3 +61,7 @@ curl -X GET "http://127.0.0.1:9052/mining/rewardPublicKey" -H  "accept: applicat
 ```
 
 Please note that blocks take 720 confirmations on Ergo.
+
+## Resources
+
+[testnet.sigmaexplorer.org](https://testnet.sigmaexplorer.org/) is a handy alternative version of the ergo explorer that shows miner distribution, hashrate and difficulty. 
