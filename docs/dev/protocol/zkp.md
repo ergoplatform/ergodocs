@@ -1,3 +1,8 @@
+---
+tags:
+  - Sigma Protocols
+---
+
 # Zero-Knowledge Proofs
 
 Ergo provides superior access to ***discrete log-based* zero-knowledge proofs**, but what exactly is a zero-knowledge proof? 

@@ -343,13 +343,14 @@ nav:
     - Explore:
       - Applications: uses/index.md
       - Live dApps:
-        - SigmaUSD:
-          - uses/sigmausd.md
-          - Examples: uses/sigmausd/examples.md
-          - Mining Incentives: uses/sigmausd/mining-incentives.md
-          - Other Stablecoins: uses/sigmausd/comparison.md
         - DEXs: uses/dex.md
-        - Stablecoins: uses/stablecoins.md
+        - Stablecoins: 
+          - uses/stablecoins.md
+          - SigmaUSD:
+            - uses/sigmausd.md
+            - Examples: uses/sigmausd/examples.md
+            - Mining Incentives: uses/sigmausd/mining-incentives.md
+            - Other Stablecoins: uses/sigmausd/comparison.md
         - Oracles: uses/oracles.md
         - NFTs: uses/nft.md
         - Mixing: uses/mixer.md

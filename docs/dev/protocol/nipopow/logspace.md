@@ -1,3 +1,8 @@
+---
+tags:
+  - NIPoPoWs
+  - Mining
+---
 
 # Log-Space Mining
 
