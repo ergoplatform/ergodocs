@@ -24,6 +24,7 @@ theme:
         - navigation.sections # The bold sections in navigation
         - navigation.tracking
         - navigation.indexes
+        - content.tabs.link
       #  - toc.integrate
     logo: assets/logo.png
     font:
@@ -65,6 +66,7 @@ plugins:
 
 
 markdown_extensions:
+  - pymdownx.superfences
   - neoteroi.cards
   - meta
   - toc:
@@ -77,6 +79,8 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_div_format
   - pymdownx.arithmatex:
       generic: true
+  - pymdownx.tabbed:
+      alternate_style: true 
 
 
 
@@ -327,6 +331,7 @@ nav:
           - Verifying Schnorr Signatures: dev/scs/sigma/verifying.md
         - Debugging: dev/scs/debugging.md
       - ErgoTree: dev/scs/ergotree.md
+      - AVL Trees: dev/protocol/avl.md
       - Multi-Stage Contracts: dev/scs/multi.md
       - Data Inputs: dev/scs/data-inputs.md
       - Tooling:

@@ -15,7 +15,9 @@ Ergo Platform has a research-based approach for long-term success and has a lot 
 
 ## Transaction Speed
 
-Transaction speed is generally measured in Transactions per Block/Second (TPS). Below are approximated TPS values for other blockchains:
+Transaction speed is commonly measured in Transactions per Block/Second (TPS). Transaction speed, specifically TPS, measures the transactions per block/second a blockchain can perform, quantifying how quickly a blockchain can complete transactions.  
+
+Below are approximated TPS values for other blockchains:
 
 * `BTC - ~7 TPS (Gobbel, 2017).`
 * `ETH - ~15 TPS (Clincy et al (table1), 2019)`
@@ -23,15 +25,15 @@ Transaction speed is generally measured in Transactions per Block/Second (TPS). 
 * `ADA - ~ ~7 TPS (~250 in controlled tests) (Stamoulis, 2021)`
 * `DOT - ~1500 TPS (Hiemstra et al., 2021)`
 
-Transaction speed, specifically TPS, measures the transactions per block/second a blockchain can perform, quantifying how quickly a blockchain can complete transactions.  
 
-It's important to remember that **TPS is mostly a vanity metric.** It's not about how many transactions you can do but rather the weight of those transactions and the computational cost limit per block. This cost limit depends on the hardware miners have, the size of the network, and other dynamic factors, but there is no concrete formula to calculate scalability. The best path forward is to log transaction profiles once DeFi on Ergo is established and perform load testing in the testnet. With the release of v5, the raw TPS numbers should bring us to around **47.5tx/s** - improvements on top of this are still possible. The focus is on raising TPS without compromising classic blockchain assumptions and guarantees. 
+It's important to remember that **TPS is mostly a vanity metric.** It's not about how many transactions you can do but rather the weight of those transactions and the computational cost limit per block. This cost limit depends on the hardware miners have, the size of the network, and other dynamic factors, but there is no concrete formula to calculate scalability. The best path forward is to log transaction profiles once DeFi on Ergo is established and perform load testing in the testnet. With the release of v5, the raw TPS numbers should bring us to around **47.5tx/s** - improvements on top of this are still possible. The focus is on raising the TPS without compromising classic blockchain assumptions and guarantees. 
 
 ## Settlement Layer
 
+Thanks to the high flexibility of the ErgoScript programming model, large chunks of transactions can happen on layer two and be settled in Ergo using a single transaction. 
+
 Below you will find a developer harnessing the power of eUTXO to airdrop native tokens to [10,000 addresses at once](https://explorer.ergoplatform.com/en/transactions/e2c4954665ccf87791f42983ae4f7031205c2e719709907cbf2ff09e5489d4b8)
 
-Thanks to the high flexibility of the ErgoScript programming model, large chunks of transactions can happen on layer two and be settled in Ergo using a single transaction. 
 
 ErgoScript adds several improvements such as time-weighted data, Turing completeness, read-only data inputs, multi-stage contracts, sigma protocols and NIPoPoWs that make many different protocols will possible on Layer 2, each one solving scalability problems in a specific domain (like simple payment transactions, sped up with sub-block confirmation protocols).
 
@@ -58,7 +60,7 @@ Ergo supports multiple on-chain scalability solutions, such as Sharding.
 
 **Sharding** as per [*' On the Security and Performance of Blockchain Sharding'*](https://eprint.iacr.org/2021/1276)
 
-**Sub-block confirmation protocols:** such as ([Bitcoin-NG](https://www.usenix.org/system/files/conference/nsdi16/nsdi16-paper-eyal.pdf) or [Flux](https://www.usenix.org/system/files/atc20-li-chenxing.pdf) are an active topic for research in 2022. Ergo blocks have *extension sections* with **mandatory and arbitrary key-value data**; by putting certain anchors there, it is possible to do BitcoinNG-style micro blocks, Aspen-like service chains or generic sidechains with just velvet or soft forks. Also see *[Flux: Revisiting Near Blocks for Proof-of-Work Blockchains](https://eprint.iacr.org/2018/415.pdf)*
+**Sub-block confirmation protocols:** as seen in ([Bitcoin-NG](https://www.usenix.org/system/files/conference/nsdi16/nsdi16-paper-eyal.pdf) or [Flux](https://www.usenix.org/system/files/atc20-li-chenxing.pdf) are an active topic for research in 2023. Ergo blocks have *extension sections* with **mandatory and arbitrary key-value data**; by putting certain anchors there, it is possible to do BitcoinNG-style micro blocks, Aspen-like service chains or generic sidechains with just velvet or soft forks. Also see *[Flux: Revisiting Near Blocks for Proof-of-Work Blockchains](https://eprint.iacr.org/2018/415.pdf)*
 
 ## Layer 2 (Off-Chain)
 

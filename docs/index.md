@@ -11,7 +11,7 @@
   },
   {
     "title": "🛠 Start Developing",
-    "content": "Get started on your development journey",
+    "content": "Get started on your development journey.",
     "image": "./assets/img/grid/02.png",
     "url": "dev/start"
 
