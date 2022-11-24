@@ -7,6 +7,12 @@ There are many tools, libraries, SDKs, frameworks and utilities developers can u
 
 [
   {
+    "title": "Basics Tutorial",
+    "content": "Generate keys and address, send and receive payments.",
+    "image": "../assets/img/dev-grid/noob.png",
+    "url": "../stack/basics"
+  },
+  {
     "title": "Server",
     "content": "Interact with the blockchain locally or via a remote server.",
     "image": "../assets/img/dev-grid/server.png",
