@@ -145,6 +145,7 @@ nav:
     - dev/start.md
     - Getting Started: 
       - dev/start.md
+      - Basics: dev/stack/basics.md
       - Server: dev/stack/server.md
       - Browser: dev/stack/browser.md
       - Desktop: dev/stack/desktop.md
