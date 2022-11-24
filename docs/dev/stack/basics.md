@@ -164,7 +164,7 @@ Luckily, our SDKs help you by providing high-level methods for this common task.
               false
             ).withEip3Secret(0).build()
 
-            UnsignedTransaction unsignedTransaction = BoxOperations.createForProver(prover, ctx)
+            String txId = BoxOperations.createForProver(prover, ctx)
                     .withAmountToSpend(amountToSend)
                     .withInputBoxesLoader(new ExplorerAndPoolUnspentBoxesLoader().withAllowChainedTx(true))
                     .send(recipient);
