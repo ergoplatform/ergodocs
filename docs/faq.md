@@ -38,6 +38,24 @@ Ensuring economic freedom for ordinary people through decentralised, private and
 
 Keeping all this in mind, we expect Ergo's design to be uniquely useful as Contractual Money.
 
+### Where can I see a Roadmap? 
+
+The roadmap [on our website](https://ergoplatform.org/en/ecosystem/#Roadmap) includes some of the most anticipated projects and features coming to Ergo. (As well as links to read more!)
+
+For the upcoming year our main priorities will be
+
+- Building up the developer education & tooling
+- Bridge Infrastructure
+- Cross-chain swaps
+- Privacy Tooling
+- Scaling Solutions
+- Sidechains
+- Light Clients
+- Research and new designs (Dexy, ChainCash, SigmaJoin, etc)
+
+For more detailed information of our current and potential research & development see Appendix D. 
+
+
 
 ### What is the *Ergo Foundation*?
 
