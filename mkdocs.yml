@@ -112,14 +112,15 @@ nav:
       - Storage Rent: mining/rent.md
       - Autolykos: mining/autolykos.md
     - Scaling: dev/protocol/scaling.md
-    - Resources:
-      - Documents: documents.md
-      - EIPs: dev/protocol/eip.md
-      - Audit: dev/protocol/audit.md
+    - Documents: 
+      - documents.md
+      - Research & Whitepapers: documents.md
       - Social Contract: social_contract.md
-      - Key Sites:
-        - 🔗 Sigmaverse: https://sigmaverse.io
-        - 🔗 Community Spaces: https://ergoplatform.org/en/community/
+      - Know Your Assumptions: kya.md
+      - Audit: dev/protocol/audit.md
+    - EIPs: dev/protocol/eip.md
+
+    
 
   - ⛏ ┃  Mine:
     - Mining: mining/index.md
