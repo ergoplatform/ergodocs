@@ -3,15 +3,11 @@
 
 There are many tools, libraries, SDKs, frameworks and utilities developers can use to interact with the blockchain, build their applications, and display them to users. 
 
+## Stack
+
 ::cards::
 
 [
-  {
-    "title": "Basics Tutorial",
-    "content": "Generate keys and address, send and receive payments.",
-    "image": "../assets/img/dev-grid/noob.png",
-    "url": "../stack/basics"
-  },
   {
     "title": "Server",
     "content": "Interact with the blockchain locally or via a remote server.",
@@ -36,6 +32,22 @@ There are many tools, libraries, SDKs, frameworks and utilities developers can u
     "image": "../assets/img/dev-grid/mobile.png",
     "url": "../stack/mobile"
   },
+
+]
+
+::/cards::
+
+## Just Starting Out
+
+::cards::
+
+[
+  {
+    "title": "Basics Tutorial",
+    "content": "Generate keys and address, send and receive payments.",
+    "image": "../assets/img/dev-grid/noob.png",
+    "url": "../stack/basics"
+  },
   {
     "title": "Beginner",
     "content": "Just testing the waters? Not sure where to start?",
@@ -44,7 +56,7 @@ There are many tools, libraries, SDKs, frameworks and utilities developers can u
   },
   {
     "title": "Frameworks",
-    "content": "Jump straight to all frameworks",
+    "content": "Jump straight to an overview of all frameworks",
     "image": "../assets/img/dev-grid/frameworks.jpg",
     "url": "../stack/introduction#frameworks"
   },
