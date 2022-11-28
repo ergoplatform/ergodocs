@@ -7,11 +7,19 @@ tags:
 
 # Scaling
 
-There are three generations of blockchain, each capable of more complex behaviours than the last. The first generation refers to the original use BTC was intended for, that is, to provide a reliable and accurate method of maintaining a public transaction ledger. Second-generation blockchains were created with the implementation of smart contracts as a priority, with the most popular one being ETH (Ethereum). One of the big differences in ETH is the language used to smart code contracts. ETH utilises a [turing complete](https://www.cs.odu.edu/~zeil/cs390/latest/Public/turing-complete/index.html) language (known as Solidity), meaning it is computationally universal. 
 
-The third generation of blockchain technology now focuses on solving issues with congestion and scalability. As this technology becomes more decentralised, there will inevitably be an exponential increase in the number of users interacting with the blockchain. DOT, ADA and ERG are third-generation blockchains, meaning they have smart-contract capabilities while proposing solutions to scalability for a global audience. Third-generation blockchains generally can process off-chain transactions, helping speed up transactions significantly. Ergo also has various innovations to address scalability. NIPoPoWs on Ergo allow for connection to side chains and light chains, opening up a whole world of possibilities.
+There are three generations of blockchain, each capable of more complex behaviours than the last. 
 
-Ergo Platform has a research-based approach for long-term success and has a lot in its toolbox to tackle scaling as we grow; which scaling options we implement will depend on the needs of applications building on top of Ergo and the success of the solutions in other protocols. 
+- The first generation refers to the original use BTC was intended for, that is, to provide a reliable and accurate method of maintaining a public transaction ledger. 
+- Second-generation blockchains were created with the implementation of smart contracts as a priority, with the most popular one being ETH (Ethereum). One of the big differences in ETH is the language used to smart code contracts. ETH utilises a [turing complete](https://www.cs.odu.edu/~zeil/cs390/latest/Public/turing-complete/index.html) language (known as Solidity), meaning it is computationally universal. 
+- The third generation of blockchain technology now focuses on solving issues with congestion and scalability. As this technology becomes more decentralised, there will inevitably be an exponential increase in the number of users interacting with the blockchain. DOT, ADA and ERG are third-generation blockchains, meaning they have smart-contract capabilities while proposing solutions to scalability for a global audience. 
+
+Third-generation blockchains generally can process off-chain transactions, helping speed up transactions significantly. In the account model, both storage changes and validity checks are performed on-chain during code execution. In contrast, Ergo transactions are created off-chain, and only validation checks are performed on-chain, reducing the number of operations performed by every node on the network. In addition, due to the immutability of the transaction graph, various optimization strategies are possible to improve the throughput of transactions per second in the network. 
+
+Light verifying nodes are also possible, thus further facilitating scalability and accessibility of the network.
+
+Based on a decade of research, extensive testing pre-launch and ongoing development, the Ergo community has launched a blockchain that has all the tools to scale to global scale over time. 
+
 
 ## Transaction Speed
 
@@ -26,7 +34,10 @@ Below are approximated TPS values for other blockchains:
 * `DOT - ~1500 TPS (Hiemstra et al., 2021)`
 
 
-It's important to remember that **TPS is mostly a vanity metric.** It's not about how many transactions you can do but rather the weight of those transactions and the computational cost limit per block. This cost limit depends on the hardware miners have, the size of the network, and other dynamic factors, but there is no concrete formula to calculate scalability. The best path forward is to log transaction profiles once DeFi on Ergo is established and perform load testing in the testnet. With the release of v5, the raw TPS numbers should bring us to around **47.5tx/s** - improvements on top of this are still possible. The focus is on raising the TPS without compromising classic blockchain assumptions and guarantees. 
+It's important to remember that TPS (Transactions Per Second) is a vanity metric. It's not about how many transactions you can do but rather the weight of those transactions and the computational cost limit per block. This cost limit depends on the hardware miners have, the size of the network, and other dynamic factors, but focusing on how many simple transactions you can do at once is meaningless; especially on Ergo. 
+
+
+With the release of v5, the raw TPS numbers should bring us to around **47.5tx/s** - improvements on top of this are still possible. The focus is on raising the TPS without compromising classic blockchain assumptions and guarantees. 
 
 ## Settlement Layer
 
@@ -34,9 +45,7 @@ Thanks to the high flexibility of the ErgoScript programming model, large chunks
 
 Below you will find a developer harnessing the power of eUTXO to airdrop native tokens to [10,000 addresses at once](https://explorer.ergoplatform.com/en/transactions/e2c4954665ccf87791f42983ae4f7031205c2e719709907cbf2ff09e5489d4b8)
 
-
-ErgoScript adds several improvements such as time-weighted data, Turing completeness, read-only data inputs, multi-stage contracts, sigma protocols and NIPoPoWs that make many different protocols will possible on Layer 2, each one solving scalability problems in a specific domain (like simple payment transactions, sped up with sub-block confirmation protocols).
-
+ErgoScript adds several improvements such as time-weighted data, Turing completeness, read-only data inputs, multi-stage contracts, sigma protocols, NIPoPoWs and more that make many different protocols possible on Layer 2, each one solving scalability problems in a specific domain (like simple payment transactions, sped up with sub-block confirmation protocols).
 **Ergo can be considered a common *settlement layer* for many Level-2 protocols and applications.**
 
 

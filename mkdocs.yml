@@ -347,6 +347,8 @@ nav:
 
   - 💡 ┃  Applications: 
     - uses/index.md
+    - Infrastructure: 
+      - Rosen Bridge: uses/rosen.md
     - dApps:
       - DEXs: uses/dex.md
       - Stablecoins: 
@@ -363,8 +365,7 @@ nav:
       - Gaming: uses/gaming.md
       - Metaverse: uses/metaverse.md
       - ErgoRaffle: uses/raffle.md
-    - Infrastructure: 
-      - Rosen Bridge: uses/rosen.md
+
     - Ideas:
       - ProfitSharing: uses/profit.md
       - ICOs: uses/ico.md
