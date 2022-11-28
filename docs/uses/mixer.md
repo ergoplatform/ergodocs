@@ -1,12 +1,11 @@
 # Mixers
 
-## YAMP
+Basic tool to restore fungibility of digital notes.
 
-- [Yet Another Mixing Protocol](https://www.ergoforum.org/t/yet-another-mixing-protocol/3359)
+Basic scheme, ZeroJoin, is based on ring signatures and proof of knowledge for a Diffie-Hellman tuple (for publicly known g, h, u, v, there exists w, such as g&w == u && h^w == v)
+
 
 ## ErgoMixer
-
-
 
 ErgoMixer is the **first *non-custodial, programmable, non-interactive* mixer in the space** (and it is also the only **token mixer** to our knowledge). Download the latest release [here](https://github.com/ergoMixer/ergoMixBack/releases) (must be run as a local application to preserve anonymity.)
 
@@ -43,6 +42,8 @@ ErgoMixer utilizes Ergo's [**Sigma protocols**](/dev/scs/sigma) to enable effici
 You can configure a covert address in ErgoMixer; this is handy for displaying an address publicly to receive funds. You can set this address to automatically mix and withdraw your erg (or sigUSD if you prefer). 
 
 ## *Stealth* Addresses
+
+A tool to hide recipient privacy. 
 
 - [stealth address contract](https://www.ergoforum.org/t/stealth-address-contract/255)
 

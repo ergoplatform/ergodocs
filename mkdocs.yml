@@ -354,54 +354,61 @@ nav:
     - uses/index.md
     - Infrastructure: 
       - Rosen Bridge: uses/rosen.md
-    - dApps:
-      - DEXs: uses/dex.md
-      - Privacy:
-        - Zero-Knowledge Treasury: uses/zkt.md
-        - Mixing: uses/mixer.md
-      - Stablecoins: 
-        - uses/stablecoins.md
-        - SigmaUSD:
-          - uses/sigmausd.md
-          - Examples: uses/sigmausd/examples.md
-          - Mining Incentives: uses/sigmausd/mining-incentives.md
-          - Other Stablecoins: uses/sigmausd/comparison.md
       - Oracles: uses/oracles.md
-      - NFTs: uses/nft.md
-      - CrowdFunding: uses/crowdfunding.md
-      - Gaming: uses/gaming.md
-      - Metaverse: uses/metaverse.md
-      - ErgoRaffle: uses/raffle.md
-
-    - Ideas:
-      - ProfitSharing: uses/profit.md
-      - P2P:
-        - P2P Options Contract: uses/p2p_options.md
-        - ChainCash: uses/chaincash.md
-        - Yield Aggregation: uses/yield.md
-        - Grid Trading: uses/grid_trading.md
-        - Lending: uses/lending.md
-      - Alternative Economics:
-        - LETS: uses/lets.md
-        - Trustless LETS: uses/trustless-lets.md
       - Sidechains: 
         - ErgoData: uses/ErgoData.md
+    - dApps:
+      - Exchange:
+        - DEXs: uses/dex.md
+        - NFTs: uses/nft.md
+        - Stablecoins: 
+          - uses/stablecoins.md
+          - SigmaUSD:
+            - uses/sigmausd.md
+            - Examples: uses/sigmausd/examples.md
+            - Mining Incentives: uses/sigmausd/mining-incentives.md
+            - Other Stablecoins: uses/sigmausd/comparison.md
+          - Dexy: uses/dexy.md
+      
+      - Zero-Knowledge:
+        - Zero-Knowledge Treasury: uses/zkt.md
+        - Mixing: uses/mixer.md
+        - Trustless LETS: uses/trustless-lets.md
+      
+      
+      - CrowdFunding: 
+        - uses/crowdfunding.md
+        - ErgoRaffle: uses/raffle.md
+      - Gaming: 
+        - uses/gaming.md
+        - Lotteries: uses/lottery.md
+
+      - P2P:
+        - Monetary Systems:
+          - LETS: uses/lets.md
+          - ChainCash: uses/chaincash.md
+        - Markets: 
+          - Prediction Markets: uses/prediction_markets.md
+        - Financial Instruments:
+          - P2P Options Contract: uses/p2p_options.md
+          - Lending: uses/lending.md
+          - Derivatives: uses/deriv.md
+          - Yield Aggregation: uses/yield.md
+          - Grid Trading: uses/grid_trading.md
+          - Micro Credit: dev/scs/microcredit.md
+          - Mutual Credit: uses/mutual_credit.md
+          - Bonding Curve: uses/bonding.md
+          - Insurance: uses/insurance.md
+      - DAOs: uses/dao.md 
+      - Misc:
+        - ProfitSharing: uses/profit.md
+        - Email Client for Blocked Internet: uses/blocked_web.md
       - Tokens:
         - ICOs: uses/ico.md
         - Index Coins: uses/index_coins.md
         - PoW Tokens: uses/PoW_tokens.md
         - Perpetual Tokens: uses/perpetual.md
         - Buy Back Guarantees: uses/dex-buyback.md
-      - Trustless:
-        - Derivatives: uses/deriv.md
-        - Micro Credit: dev/scs/microcredit.md
-        - Prediction Markets: uses/prediction_markets.md
-        - Bonding Curve: uses/bonding.md
-        - Insurance: uses/insurance.md
-        - Mutual Credit: uses/mutual_credit.md
-        - Lotteries: uses/lottery.md
-      - DAOs: uses/dao.md 
-      - Email Client for Blocked Internet: uses/blocked_web.md
       
       
       
