@@ -127,10 +127,13 @@ The full team can be seen on Ergo's [Hall of Fame](https://ergoplatform.org/en/h
 
 Ergo is based on the [Autolykos](/en/Glossary/Autolykos) Proof-of-Work protocol. 
 
-Proof-of-Work (PoW) has tried and tested methods and provides several benefits over Proof-of-Stake (PoS). You can see Charles Hoskinson discussing some of those benefits in a [recent AMA (timestamped)](https://youtu.be/Y27Q3wL_Hko?t=207)
+Ergo was created for regular people, Proof of Work allows a truly fair start and the highest degree of decentralisation. It's widely studied, has very high-security guarantees and is friendly to light clients meaning you can use the blockchain without third parties.
 
-- Proof of Work has **proven security guarantees** that are needed for hard contractual money that's ready *today*.
-- Ergo focuses on proven/simple tech. Simple base layer then complexity on-top
+These are all essential for having useful contractual, programmable money that's ready today.
+
+### Why Scala? 
+
+Ergo's primary language is Scala. Similarly, the scripting language used by Ergo, ErgoScript, is also based on Scala, but the off-chain code can be written in any language. Developers have access to a growing selection of tools and Software Development Kits (SDKs) for JVM, Rust and JS/TS.
 
 ### What about energy consumption? 
 

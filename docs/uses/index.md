@@ -72,7 +72,7 @@
 
 ## Live dApps
 
-### [ErgoDex](https://ergodex.io)
+### [Spectrum](https://spectrum.fi)
 
 - [ErgoLabs](https://github.com/ergolabs) Repository
 - [EIP-0014: Decentalized Exchange Contracts](https://github.com/ergoplatform/eips/pull/27)

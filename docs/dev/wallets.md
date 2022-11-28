@@ -7,7 +7,7 @@ Note that wallets are supported by third parties, we only provide the informatio
 | [Nautilus](https://chrome.google.com/webstore/detail/nautilus-wallet/gjlmehlldlphhljhpnlddaodbjjcchai) | Web | ✅ |  | ✅ |  | 🔜 |
 | [Ergo Wallet](https://ergoplatform.org/en/mobile_wallets/) | Mobile |  | 🔗 | ✅ | ✅ |  |
 | [SAFEW](https://ergoplatform.org/en/blog/2022-03-25-storing-ergo-safew/) | Web | ✅ | 🔗 | ✅ | 🔗 | ✅ |
-| [Node Wallet](https://docs.ergoplatform.com/node/platforms/) | Desktop |  | ✅ |  |  |  |
+| [Node Wallet](https://docs.ergoplatform.com/node/install/) | Desktop |  | ✅ |  |  |  |
 | [Satergo](https://www.satergo.com) | Desktop |  | ✅ | 🔜 |  | 🔜 |
 | [Minotaur](https://github.com/minotaur-ergo/minotaur-wallet) | Web |  |  | ✅ | 🔗 | 🔜 |
 | [Paper Wallet](https://anon-br.github.io/ergo-paper-wallet/) | Cold |  |  |  |  |  |

@@ -2,7 +2,7 @@
 
 > 🔗 From [ergoforum](https://www.ergoforum.org/t/decentralized-p2p-options-contracts-on-ergo/3763)
 
-Options contracts can be useful in many situations for profitable trading, reducing risks, hedging portfolio etc. It is desirable to have on-chain options contracts where writing and trading options contracts do not involve additional security risks (in comparison with e.g. trading on ErgoDEX).
+Options contracts can be useful in many situations for profitable trading, reducing risks, hedging portfolio etc. It is desirable to have on-chain options contracts where writing and trading options contracts do not involve additional security risks (in comparison with e.g. trading on Spectrum).
 
 In this post I am going to sketch a solution for doing options on top of Ergo, which could be useful in other applications, thus can be considered as a DeFi design pattern. Our solution creates fully p2p decentralized options contracts, following idea of self-sovereign DeFi. UTXO nature of the Ergo blockchain makes the solution truly elegant.
 

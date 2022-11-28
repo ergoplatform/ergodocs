@@ -5,8 +5,6 @@ tags:
 
 # eUTXO 
 
-Ergo has a similar approach to Cardano’s eUTXO with its own Multi-Stage UTXO model that introduces the concept of *UTXO chains* and allows chaining together smart contracts of arbitrary complexity. 
-
 UTXO provides superior 
 
 - **Privacy**, as UTXOs are one-time objects making it possible to formalise privacy leaks.
@@ -14,7 +12,9 @@ UTXO provides superior
 - **Interoperability**, as off-chain and sidechain protocols. One-time objects are more straightforward to work with from an off-chain point of view.
 - **Transaction Cost Predictability**, where the only on-chain action is validating the smart contracts. As a result, the transaction cost is significantly lower, and most importantly, the transaction cost is predictable, eliminating the need for ‘gas.’
 
-Extended UTXO systems enable **Turing complete** smart contracts. This is a novel innovation that allows the latest generation of blockchains to reclaim the original model that Bitcoin used, but with a lot more power, while adding support for more expressive smart contracts. 
+Ergo uses the so-called 'extended-UTXO' model (eUTXO), based on the original model that Bitcoin used, with a lot more power, while adding support for more expressive smart contracts. 
+
+Ergo's Multi-Stage UTXO model enables Turing-complete smart-contracts as demonstrated in [this peer-reviewed paper](https://fc18.ifca.ai/bitcoin/papers/bitcoin18-final18.pdf). 
 
 ## Overviews
 
