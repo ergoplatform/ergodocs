@@ -327,13 +327,18 @@ nav:
             - Global Functions: dev/scs/global-functions.md
             - Language Operations: dev/scs/sigma/lang-ops.md
           - sigmastate-interpreter: dev/scs/sigmastate-interpreter.md
-        - Sigma Protocols: 
-          - dev/scs/sigma/sigma.md
-          - 3-out-of-5 Threshold Signature: dev/scs/sigma/3-out-of-5.md
-          - Verifying Schnorr Signatures: dev/scs/sigma/verifying.md
         - Debugging: dev/scs/debugging.md
       - ErgoTree: dev/scs/ergotree.md
-      - AVL Trees: dev/protocol/avl.md
+      - Data Structures:
+        - AVL Trees: dev/protocol/avl.md
+      - Cryptographic: 
+        - crypto.md
+        - Sigma Protocols: 
+          - dev/scs/sigma/sigma.md
+          - Verifying Schnorr Signatures: dev/scs/sigma/verifying.md
+        - Mixer: dev/crypto/mixers.md
+        - Ring Signatures:
+          - 3-out-of-5 Threshold Signature: dev/scs/sigma/3-out-of-5.md
       - Multi-Stage Contracts: dev/scs/multi.md
       - Data Inputs: dev/scs/data-inputs.md
       - Tooling:
@@ -351,6 +356,9 @@ nav:
       - Rosen Bridge: uses/rosen.md
     - dApps:
       - DEXs: uses/dex.md
+      - Privacy:
+        - Zero-Knowledge Treasury: uses/zkt.md
+        - Mixing: uses/mixer.md
       - Stablecoins: 
         - uses/stablecoins.md
         - SigmaUSD:
@@ -360,7 +368,6 @@ nav:
           - Other Stablecoins: uses/sigmausd/comparison.md
       - Oracles: uses/oracles.md
       - NFTs: uses/nft.md
-      - Mixing: uses/mixer.md
       - CrowdFunding: uses/crowdfunding.md
       - Gaming: uses/gaming.md
       - Metaverse: uses/metaverse.md
@@ -368,36 +375,45 @@ nav:
 
     - Ideas:
       - ProfitSharing: uses/profit.md
-      - ICOs: uses/ico.md
-      - Index Coins: uses/index_coins.md
-      - Lending: uses/lending.md
-      - Zero-Knowledge: uses/zk.md
-      - DAOs: uses/dao.md       
-      - Grid Trading: uses/grid_trading.md
-      - Buy Back Guarantees: uses/dex-buyback.md
-      - LETS: uses/lets.md
-      - Trustless LETS: uses/trustless-lets.md
-      # - Atomic Swaps: dev/protocol/atomic.md
-      - ErgoData: uses/ErgoData.md
+      - P2P:
+        - P2P Options Contract: uses/p2p_options.md
+        - ChainCash: uses/chaincash.md
+        - Yield Aggregation: uses/yield.md
+        - Grid Trading: uses/grid_trading.md
+        - Lending: uses/lending.md
+      - Alternative Economics:
+        - LETS: uses/lets.md
+        - Trustless LETS: uses/trustless-lets.md
+      - Sidechains: 
+        - ErgoData: uses/ErgoData.md
+      - Tokens:
+        - ICOs: uses/ico.md
+        - Index Coins: uses/index_coins.md
+        - PoW Tokens: uses/PoW_tokens.md
+        - Perpetual Tokens: uses/perpetual.md
+        - Buy Back Guarantees: uses/dex-buyback.md
+      - Trustless:
+        - Derivatives: uses/deriv.md
+        - Micro Credit: dev/scs/microcredit.md
+        - Prediction Markets: uses/prediction_markets.md
+        - Bonding Curve: uses/bonding.md
+        - Insurance: uses/insurance.md
+        - Mutual Credit: uses/mutual_credit.md
+        - Lotteries: uses/lottery.md
+      - DAOs: uses/dao.md 
       - Email Client for Blocked Internet: uses/blocked_web.md
-      - Lotteries: uses/lottery.md
-      - Insurance: uses/insurance.md
-      - Derivatives: uses/deriv.md
-      - P2P Options Contract: uses/p2p_options.md
-      - ChainCash: uses/chaincash.md
-      - Yield Aggregation: uses/yield.md
-      - Micro Credit: dev/scs/microcredit.md
-      - PoW Tokens: uses/PoW_tokens.md
-      - Mutual Credit: uses/mutual_credit.md
-      - Prediction Markets: uses/prediction_markets.md
-      - Perpetual Tokens: uses/perpetual.md
-      - Bonding Curve: uses/bonding.md
+      
+      
+      
+      
+      
       # - Context Claims: uses/context-claims.md
     #  - Asset Tokenisation: uses/tokenisation.md
       # - Privacy: uses/privacy.md
     #  - Collateral Mining: uses/collateral-mining.md
     #  - Math Fun: uses/math_fun.md
     #  - CDBC: uses/cbdc.md
+    # - Atomic Swaps: dev/protocol/atomic.md
 
 
 

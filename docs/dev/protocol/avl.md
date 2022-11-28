@@ -2,9 +2,7 @@
 
 Ergo has native support for AVL trees, an efficient authenticated data structure which allows proving various properties of the data without needing to know the entire set.
 
-This enables
-Verification on low-end hardware
-Mining on commodity hardware
+
 
 
 ## Single Operation Proof Size

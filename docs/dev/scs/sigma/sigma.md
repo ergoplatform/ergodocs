@@ -6,10 +6,14 @@ tags:
 
 # Sigma Protocols
 
+
+
 ## Introduction
 
 
-Among the hundreds or even thousands of [zero-knowledge protocols](zkp.md), there is a sub-class of efficient and composable proof-of-knowledge protocols called **Sigma Protocols** (Σ-Protocols or *Generalized Schnorr Proofs*). 
+Among the hundreds or even thousands of [zero-knowledge protocols](zkp.md), there is a sub-class of efficient and composable proof-of-knowledge protocols called **Sigma Protocols** (Σ-Protocols or *Generalized Schnorr Proofs*).
+
+Sigma protocols in Ergo allow you to combine AND, OR, and THRESHOLD (k-of-n). There are proofs of Schnorr and Diffie-Hellman tuple but more can be added via a soft fork. Native support for ring and threshold signatures, where from k-out-of-n signatures, it could not be concluded which k signers were real.
 
 Sigma protocols can be represented as digital signatures in a straightforward way, so we can effectively think of them as signatures in the context of blockchain.
 
@@ -44,6 +48,9 @@ With Ergo, this kind of application can be created quickly, thanks to native Sig
 
 ## Resources
 
+## Videos
+
+- [Ergo: A Platform for Cryptographic Applications | Kushti | Ergo Summit 2022](https://www.youtube.com/watch?v=h6g5WahEUSk)
 
 ### Applications
 
