@@ -17,6 +17,12 @@ To vote **Yes** and propose a change in the first block of an epoch, a miner is 
 - Voting epochs before approved foundational change activation = `128`
 
 
+## Current settings
+
+- `maxBlockSize` : 1271009 bytes
+- Max box size: 4096 bytes
+- Max transaction size: 96kb
+
 ## Parameters table
 
 > Try out these parameters on [deadit.github.io/paizo/](https://deadit.github.io/paizo/)

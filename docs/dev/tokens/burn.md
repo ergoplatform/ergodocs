@@ -20,6 +20,7 @@ To delete tokens from your Ergo wallet, you have a few options.
 
 - [TokenJay](https://www.tokenjay.app/app/#burntoken) (This requires a Ergopay compatible wallet like Ergo Mobile Wallet)
 - [Ergo Token Minter / Burner](https://github.com/ThierryM1212/ergo-token-minter) (Possible with a Ergo wallet extension, such as Nautilus)
+- [SAFEW] supports token burning.
 
 ## Programmatically
 
@@ -32,7 +33,7 @@ Just spend an UTXO with tokens you want to burn and do not include them into out
 
 ### Ergo Token Minter
 
-The burn token feature I implemented is visible [here](https://github.com/ThierryM1212/ergo-token-minter/blob/main/src/index.js#L254), the important steps to me are:
+The burn token feature `ThierryM1212` implemented are visible [here](https://github.com/ThierryM1212/ergo-token-minter/blob/main/src/index.js#L254), the important steps are:
 
 1. Select the input boxes for the amount of tokens to burn and a small amount of ERG
 2. Create the output boxes without considering the tokens, the transaction builder will create an additional output change box including all the tokens
