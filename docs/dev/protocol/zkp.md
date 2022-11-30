@@ -18,6 +18,8 @@ In cryptography, most practical problems are associated with secrets. The most p
 
 [ErgoScript](ergoscript.md) is the language used to specify the conditions under which currency can be spent. The language supports a type of non-interactive zero-knowledge proof called [Σ-protocols](sigma.md). It is flexible enough to allow for ring signatures, multi-signatures, multiple currencies, atomic swaps, self-replicating scripts, and long-term computation.
 
+The two Sigma Protocols right now are proof of discrete log and proof of Diffie-Hellman tuple
+
 
 ## 'Optional' Privacy?
 

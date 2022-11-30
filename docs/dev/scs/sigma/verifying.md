@@ -1,11 +1,14 @@
 # Schnorr Signatures
 
 There are several use-cases where we need to verify a Schnorr signature on-chain.
-This post describes how to do so in ErgoScript.
+
+This page describes how to do so in ErgoScript.
 
 ## Initial Setup
 
-Ergo uses the same curve as Bitcoin (Secp256k1), which we call `G`. The curve also defines a default generator `g`.
+Ergo uses the same curve as Bitcoin (Secp256k1), which we call `G`. 
+
+The curve also defines a default generator `g`.
 
 1. Secret key is integer `x` 
 2. Public key is `Y = g^x`, an element of `G`

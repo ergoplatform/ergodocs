@@ -212,7 +212,7 @@ Need help figuring out where to start developing? This [introduction to Mosaik](
   {
     "title": "GetBlok Plasma",
     "content": "a library on top of Ergo Appkit that provides an abstraction layer to simplify the process of integrating AVL Trees (AKA Plasma) into off-chain code.",
-    "url": "../dev/lib/plasma"
+    "url": "../../../dev/lib/plasma"
   },
   {
     "title": "Scrypto",
