@@ -326,24 +326,30 @@ nav:
             - Accessing boxes and registers: dev/scs/boxes-and-registers.md
             - Global Functions: dev/scs/global-functions.md
             - Language Operations: dev/scs/sigma/lang-ops.md
+        - Cryptographic: 
+          - crypto.md
+          - Sigma Protocols: 
+            - dev/scs/sigma.md
+            - Schnorr: 
+              - Verifying Schnorr Signatures: dev/scs/sigma/verifying.md
+            - Diffe: 
+              - dev/scs/sigma/diffe.md
+              - Mixer: dev/crypto/mixers.md
+          - Ring Signatures:
+            - 3-out-of-5 Threshold Signature: dev/scs/sigma/3-out-of-5.md
           - sigmastate-interpreter: dev/scs/sigmastate-interpreter.md
-        - Debugging: dev/scs/debugging.md
-      - ErgoTree: dev/scs/ergotree.md
-      - Data Structures:
-        - AVL Trees: dev/protocol/avl.md
-      - Cryptographic: 
-        - crypto.md
-        - Sigma Protocols: 
-          - dev/scs/sigma.md
-          - Schnorr: 
-            - Verifying Schnorr Signatures: dev/scs/sigma/verifying.md
-          - Diffe: dev/scs/sigma/diffe.md
-        - Mixer: dev/crypto/mixers.md
-        - Ring Signatures:
-          - 3-out-of-5 Threshold Signature: dev/scs/sigma/3-out-of-5.md
-      - Multi-Stage Contracts: dev/scs/multi.md
-      - Data Inputs: dev/scs/data-inputs.md
+        - ErgoTree: dev/scs/ergotree.md
+        - Data Structures:
+          - AVL Trees: dev/protocol/avl.md
+        - Multi-Stage: 
+          - dev/scs/multi.md
+          - Transactions:
+            - Transaction Chains: dev/scs/tx/tx-chains.md
+            - Transaction Trees: dev/scs/tx/tx-tree.md
+            - Transaction Graphs: dev/scs/tx/tx-graphs.md
+        - Data Inputs: dev/scs/data-inputs.md
       - Tooling:
+        - Debugging: dev/scs/debugging.md
         - FlowCards: dev/scs/flowcards.md
         - ErgoScala: dev/stack/ergoscala.md
         - Compiler: dev/stack/compiler.md

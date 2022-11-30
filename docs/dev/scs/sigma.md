@@ -10,12 +10,22 @@ tags:
 
 ## Introduction
 
+[ErgoScript](ergoscript.md) incorporates proving and verifying as first-class primitives, giving developers access to a subclass of cryptographic proof systems known as non-interactive **Σ-protocols** (pronounced “sigma-protocols”). A script protecting a transaction output can contain statements (**Σ-statements**) that need to be proven (by producing **Σ-proofs**) to spend the output.
 
-Among the hundreds or even thousands of [zero-knowledge protocols](zkp.md), there is a sub-class of efficient and composable proof-of-knowledge protocols called **Sigma Protocols** (Σ-Protocols or *Generalized Schnorr Proofs*).
+Conceptually, [Σ-proofs](https://arxiv.org/abs/1801.00687) are generalizations  of digital signatures. The Schnorr signature scheme  (whose more recent version is popularly known as [EdDSA](https://ed25519.cr.yp.to/)) is the canonical example of a Σ-proof: it proves that the recipient knows the discrete logarithm of the public key (the proof is attached to a specific message, such as a particular transaction, and thus becomes a signature on the message; all Σ-proofs described here are attached to specific messages). 
 
-Sigma protocols in Ergo allow you to combine AND, OR, and THRESHOLD (k-of-n). There are proofs of Schnorr and Diffie-Hellman tuple but more can be added via a soft fork. Native support for ring and threshold signatures, where from k-out-of-n signatures, it could not be concluded which k signers were real.
 
-Sigma protocols can be represented as digital signatures in a straightforward way, so we can effectively think of them as signatures in the context of blockchain.
+**ErgoScript provides two elementary Σ-protocols over a group of prime order (such as an elliptic curve)**
+
+- A proof of knowledge of discrete logarithm with respect to a fixed group generator: (Also known as a **Schnorr signature**).
+- A proof that of equality of discrete logarithms (i.e., a proof of a **Diffie-Hellman** tuple)
+
+Σ-protocols exist for proving a variety of properties and, importantly for ErgoScript, elementary Σ-protocols can be combined into more sophisticated ones using the techniques described in [*'Proofs of Partial Knowledge and Simplified Design of Witness Hiding Protocols'*](http://www.win.tue.nl/~berry/papers/crypto94.pdf).
+
+For an introduction to Σ-protocols, we refer the reader to the paper [*'On Σ-protocols'*](http://www.cs.au.dk/~ivan/Sigma.pdf).
+
+ErgoScript also provides the ability to build more sophisticated Σ-protocols by using connectives **AND**, **OR**, and THRESHOLD (also known as **k-out-of-n**). Crucially, the proof for an OR and a THRESHOLD connective does not reveal which of the relevant values the prover knows.
+
 
 ## Composability
 
@@ -29,7 +39,6 @@ Or you can ask,
 
 > ‘Prove to me knowledge of any two of these three secrets’ (a two-of-three ring signature).
 
-Σ-protocols are flexible enough to allow for ring-signatures, multi signatures, multiple currencies, atomic swaps, self-replicating scripts, and long-term computation. 
 
 ## Use Cases
 

@@ -12,17 +12,14 @@ val bool: Boolean = true
 
 What’s going on here?
 
-`val` - A keyword used to create a basic, immutable, value of any type
+- `val` is a keyword used to create a basic, immutable, value of any type.
+- `bool` is the name used for the value created.
+- `: Boolean` specifies the type of the value, this is not always necessary, but does make code more understandable.
+- `= true` sets our Boolean value bool equal to true.
 
-`bool` - The name used for the value created
+ErgoScript is **strongly typed**, you should always know what types you are dealing with.
 
-`: Boolean` - Specifying the type of the value, this is not always necessary, but does make code more understandable
-
-`= true` - We are setting our Boolean value bool equal to true
-
-ErgoScript is strongly typed, you should always know what types you are dealing with
-
-> Learn to think in `true` and `false` statements. Booleans (More specifically, Sigma Propositions) are the core of every ErgoScript contract
+Learn to think in `true` and `false` statements. Booleans (More specifically, Sigma Propositions) are the **core of every ErgoScript contract**.
 
 ## More ErgoScript Syntax Examples:
 
