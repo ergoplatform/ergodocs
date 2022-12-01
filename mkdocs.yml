@@ -314,8 +314,9 @@ nav:
       - Smart Contracts: dev/scs/index.md
       - ErgoScript: 
         - dev/scs/ergoscript.md
-        - Overview: dev/scs/ergoscript.md
-        - Quick Primer: dev/scs/ergoscript-primer.md
+        - Overview: 
+          - dev/scs/ergoscript.md
+          - Quick Primer: dev/scs/ergoscript-primer.md
         - Sigma Language:
           - dev/scs/sigma-lang.md
           - Language Description: 
@@ -326,19 +327,19 @@ nav:
             - Accessing boxes and registers: dev/scs/boxes-and-registers.md
             - Global Functions: dev/scs/global-functions.md
             - Language Operations: dev/scs/sigma/lang-ops.md
-        - Cryptographic: 
-          - crypto.md
-          - Sigma Protocols: 
-            - dev/scs/sigma.md
-            - Schnorr: 
-              - Verifying Schnorr Signatures: dev/scs/sigma/verifying.md
-            - Diffe: 
-              - dev/scs/sigma/diffe.md
-              - Mixer: dev/crypto/mixers.md
-          - Ring Signatures:
-            - 3-out-of-5 Threshold Signature: dev/scs/sigma/3-out-of-5.md
-          - sigmastate-interpreter: dev/scs/sigmastate-interpreter.md
-        - ErgoTree: dev/scs/ergotree.md
+          - Cryptographic: 
+            - crypto.md
+            - Sigma Protocols: 
+              - dev/scs/sigma.md
+              - Schnorr: 
+                - Verifying Schnorr Signatures: dev/scs/sigma/verifying.md
+              - Diffe: 
+                - dev/scs/sigma/diffe.md
+                - Mixer: dev/crypto/mixers.md
+            - Ring Signatures:
+              - 3-out-of-5 Threshold Signature: dev/scs/sigma/3-out-of-5.md
+            - sigmastate-interpreter: dev/scs/sigmastate-interpreter.md
+          - ErgoTree: dev/scs/ergotree.md
         - Data Structures:
           - AVL Trees: dev/protocol/avl.md
         - Multi-Stage: 
