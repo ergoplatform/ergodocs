@@ -339,7 +339,7 @@ nav:
                 - Mixer: dev/crypto/mixers.md
             - Ring Signatures:
               - 3-out-of-5 Threshold Signature: dev/scs/sigma/3-out-of-5.md
-            - sigmastate-interpreter: dev/scs/sigmastate-interpreter.md
+          - sigmastate-interpreter: dev/scs/sigmastate-interpreter.md
           - ErgoTree: dev/scs/ergotree.md
         - Data Structures:
           - AVL Trees: dev/protocol/avl.md

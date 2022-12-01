@@ -26,4 +26,11 @@ This page contains links to documents with a general overview of Ergo platform, 
 - [EDRAX: A Cryptocurrency with Stateless Transaction Validation](https://eprint.iacr.org/2018/968.pdf)
 - [On Contractual Money](https://pdfs.semanticscholar.org/d51b/51fd136b1b74ece7caa6a7cb9c8f74b1b829.pdf)
 - [Multi-stage Contracts in the UTXO Model](https://ergoplatform.org/docs/paper_26.pdf)
+
+
+## Post-Mainnet
+
 - [Bypassing Non-Outsourceable Proof-of-Work Schemes Using Collateralized Smart Contracts](https://eprint.iacr.org/2020/044.pdf)
+- [SigmaJoin](https://github.com/ergoplatform/ergo-jde/blob/main/kiosk/src/test/scala/kiosk/mixer/doc/main.pdf)
+- [Succinct, Non-Interactive Share Proofs](https://docs.ergoplatform.com/events/pdf/SNISP_FINAL_NO_CITATIONS.pdf) (GetBlok)
+- [Ergo Hackathon: Crowdfunded Smart Contract Pools Research and Conceptualization](https://eprint.iacr.org/2021/846)

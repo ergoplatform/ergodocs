@@ -77,18 +77,16 @@ Ergo can utilise multiple off-chain solutions, such as [Hydra](https://iohk.io/e
 
 ### Plasma
 
-**Plasma** The ledger is stored as an AVL tree, a balanced and sorted binary tree. Users perform off-chain transactions with the bank, and the ledger keeps changing. Occasionally, the bank publishes a compact snapshot of the ledger on the blockchain.
+Ergo has native support for [AVL trees](avl.md), an efficient authenticated data structure which allows proving various properties of the data without needing to know the entire set.
+
+Using **[Plasma](plasma.md)**, the ledger is stored as an AVL tree. Users perform off-chain transactions with the bank, and the ledger keeps changing. Occasionally, the bank publishes a compact snapshot of the ledger on the blockchain.
 
 You can use Plasma to create Plasma chains and make a full L2 solution. Right now, it’s mostly just used for data compression and simplifying contracts, though Plasma chains will likely come in the future.
 
 
 > Plasma tutorials for Ergo have now been released. Please see [Bank](https://github.com/ergoplatform/ergo-jde/blob/main/kiosk/src/test/scala/kiosk/avltree/bank/Bank.md) & [AVLTrees](https://github.com/ergoplatform/ergo-jde/blob/main/kiosk/src/test/scala/kiosk/avltree/AvlTrees.md)
 
-- [Plasma Example: Off-chain Bank operating at Layer 2](https://www.ergoforum.org/t/offchain-bank-operating-at-layer-2/3367)
-- [GetBlok Plasma](https://github.com/GetBlok-io/GetBlok-Plasma)
-- [AVL Trees / Plasma In ErgoScript: Basics, Tips, and Design Patterns](https://github.com/GetBlok-io/GetBlok-Plasma/blob/master/documents/AVL_Trees.MD)
-- [GetBlok: SmartPool Plasma](https://github.com/GetBlok-io/GetBlok-Plasma/blob/master/documents/SmartPool_Plasma.MD)
-- [Paideia - Plasma Staking](https://github.com/ergo-pad/paideia-contracts/blob/main/paideia_contracts/contracts/plasma_staking/ergoscript/latest/plasmaStaking.es)
+
 
 ### NIPoPoWs
 **NIPoPoWs:** [Non-interactive proofs of proof of work](http://docs.ergoplatform.org/dev/protocol/nipopow/) are essential for two reasons: Light Clients and Side Chains. Light clients, which consist of light nodes and light wallets, are efficient clients that do not need to hold the whole blockchain to verify transactions and enable efficient mobile wallets and faster miner bootstrapping. Clients can interact using only the block headers, thus reducing computational resources. Ergo has enabled NIPoPoW support since the genesis block. They can be applied to Ergo's blockchain with an easy-to-implement [velvet fork](https://www.coindesk.com/markets/2018/03/15/velvet-forks-crypto-updates-without-the-controversy/). NIPoPoWs can also be deployed to support PoW and PoS cross-chain communication. NIPoPoW implementations via *Velvet soft forks* enable **infinite scalability** via sidechains on top of Ergo. 
@@ -104,9 +102,11 @@ Due to the shared UTXO architecture, utilising a Lightning network is also possi
 
 #### **Rainbow Network:** 
 
-as described in [this paper](http://research.paradigm.xyz/RainbowNetwork.pdf)
 
 
+The Rainbow Network an off-chain non-custodial exchange and payment network supporting any assets for which two parties can agree on a price oracle. The Rainbow Network allows a user to trade, borrow, lend, and make payments in synthetic assets, entirely off-chain, while having only one on-chain payment channel collateralized by a single asset.
+
+As described in [this paper](http://research.paradigm.xyz/RainbowNetwork.pdf)
 
 #### **Rollups**: 
 

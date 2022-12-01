@@ -16,7 +16,7 @@ proveDHTuple(g^r, g^y, u^r, u^y).
 ### Mixers
 
 
-The security of ZeroJoin is based on the Decision Diffie-Hellman (DDH) assumption.
+The security of ZeroJoin is based on the [Decision Diffie-Hellman (DDH) assumption](https://en.wikipedia.org/wiki/Decisional_Diffie%E2%80%93Hellman_assumption), a computational hardness assumption about a certain problem involving discrete logarithms in cyclic groups.
 
 - Basic tool to restore fungibility of digital notes.
 - Basic scheme, ZeroJoin, is based on ring signatures and proof of knowledge for a **Diffie-Hellman tuple** 
@@ -27,21 +27,21 @@ The security of ZeroJoin is based on the Decision Diffie-Hellman (DDH) assumptio
 | No onchain mixing | Trusted setup-based or inefficient | Efficient, minimal trust assumptions |
 
 
-Join is based on two-party interactions called Σ-protocols. Specifically, we need two types of Σ-protocols described below. Let `G` be a multiplicative group of prime order `q` where the decision Diffie-Hellman (DDH) problem is **hard**. 
+ZeroJoin is based on two-party interactions called Σ-protocols. Specifically, we need two types of Σ-protocols described below. Let `G` be a multiplicative group of prime order `q` where the decision Diffie-Hellman (DDH) problem is *hard*. 
 
-The **first protocol**, denoted `proveDlog(u)`, is a **proof of knowledge of Discrete Logarithm** of some group element `u` with respect to some fixed generator `g`. 
+The **first protocol**, denoted `proveDlog(u)`, is a proof of knowledge of Discrete Logarithm of some group element `u` with respect to some fixed generator `g`. 
 
 That is, the prover proves knowledge of `x` such that `u = g x` by using Schnorr signatures. 
 
-The second protocol primitive, denoted `proveDHTuple(g, h, u, v)`, is a proof of knowledge of DiffieHellman Tuple, where the prover proves knowledge of `x` such that `u = g x` and `v = h x` for a arbitrary generators `g` and `h`. 
+The **second protocol primitive**, denoted `proveDHTuple(g, h, u, v)`, is a proof of knowledge of Diffie-Hellman Tuple, where the prover proves knowledge of `x` such that u = g<sup>x</sup> and v = h<sup>x</sup> for a arbitrary generators `g` and `h`. 
 
 This is essentially two instances of the first protocol running in parallel as follows.
 
-1. The prover picks `r R ← Zq`, computes `(t0, t1) = (g r , hr )` and sends `(t0, t1)` to the verifier.
-2. The verifier picks `c R ← Zq` and sends `c` to prover.
-3. The prover sends `z = r + cx` to the verifier, who accepts `if g z = t0 · u c` and `h z = t1 · v c` .
+1. The prover picks r ←<sup>R</sup> Zq, computes (t<sub>0</sub>, t<sub>1</sub>) = (g<sup>r</sup> , h<sup>r</sup> ) and sends (t<sub>0</sub>, t<sub>1</sub>) to the verifier.
+2. The verifier picks c <sup>R</sup> ← Zq and sends `c` to prover.
+3. The prover sends `z = r + cx` to the verifier, who accepts if g<sup>z</sup> = t<sub>0</sub> · u<sup>c</sup> and h<sup>z</sup> = t<sub>1</sub> · v<sup>c</sup>.
 
-We use the non-interactive variant of the above protocol obtained via the Fiat-Shamir transform, where `c = H(t0kt1km)` for some message `m` to be signed. 
+We use the non-interactive variant of the above protocol obtained via a Fiat-Shamir transformation, where `c = H(t0kt1km)` for some message `m` to be signed. 
 
 Observe that `proveDHTuple` requires 4 exponentiations for verification, while `proveDlog` requires 2. 
 
