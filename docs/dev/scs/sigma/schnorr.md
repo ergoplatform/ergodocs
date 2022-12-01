@@ -18,4 +18,4 @@ In the simplest case a signature in Ergo transaction is a Schnorr signature, in 
 
 - [sign function based on schnorr protocol](https://github.com/ErgoGravity/gateway-proxy/blob/9cbf72b934b08e258457367e366050a1734f1050/app/gateway/Adaptor.scala#L391) 
 
-Generic auth is used on the blockchain. So in general case if you want to sign an arbitrary message with a pubkey used onchain, the key is in generalized Schnorr statetement aka `SigmaBoolean` form
+Generic auth is used on the blockchain. So in general case if you want to sign an arbitrary message with a pubkey used onchain, the key is in generalized Schnorr statetement aka [SigmaBoolean](sigmaboolean.md) form

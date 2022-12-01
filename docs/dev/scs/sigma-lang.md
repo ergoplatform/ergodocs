@@ -29,7 +29,7 @@ The verifier is executed as part of transaction validation for each input and is
 
 ### Reduction 
 
-Same as prover, the verifier uses the ErgoTree interpreter and deterministically produces a value of the [SigmaBoolean](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/sigmastate/src/main/scala/sigmastate/Values.scala) type.  However, this step must finish the evaluation for any possible inputs within concrete fixed time limit (aka maximum cost), which the interpreter checks.
+Same as prover, the verifier uses the ErgoTree interpreter and deterministically produces a value of the [SigmaBoolean](sigmaboolean.md) type.  However, this step must finish the evaluation for any possible inputs within concrete fixed time limit (aka maximum cost), which the interpreter checks.
 
 ### Cost estimation 
 

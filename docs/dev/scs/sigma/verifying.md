@@ -1,61 +1,62 @@
 # Schnorr Signatures
 
-There are several use-cases where we need to verify a Schnorr signature on-chain.
+There are several use-cases where you might need to verify a Schnorr signature on-chain.
 
 This page describes how to do so in ErgoScript.
 
 ## Initial Setup
 
-Ergo uses the same curve as Bitcoin (Secp256k1), which we call `G`. 
+Ergo uses the same curve as Bitcoin (Secp256k1), which we call **G**. 
 
-The curve also defines a default generator `g`.
+The curve also defines a default generator **g**.
 
-1. Secret key is integer `x` 
-2. Public key is `Y = g^x`, an element of `G`
+1. Secret key is integer **x** 
+2. Public key is **Y = g<sup>x</sup>**, an element of **G**
 
 ## Signing
 
-Let the hash of the message to be signed be `M`. The signature is computed as follows:
+Let the hash of the message to be signed be **M**. The signature is computed as follows:
 
-1. Generate a random integer `r` and compute `U = g^r`. 
-2. Compute the integer `c = Hash(U || M)` 
-3. Compute `s = r - cx`.
-4. Send the value `(c, s)` to the verifier as the "signature"
+1. Generate a random integer **r** and compute **U = g<sup>r</sup>**. 
+2. Compute the integer **c = Hash(U || M)** 
+3. Compute **s = r - cx**.
+4. Send the value **(c, s)** to the verifier as the "signature"
 
-Note that the signature is a `pair of integers`.
+Note that the signature is a **pair of integers**.
 
 ## Verification
 
 ### Schnorr Identification
 
-To understand verification, first consider a variant called "Schnorr identification".
-In this, instead of `(c, s)`, the value `(U, s)` -- a group element and an integer -- is sent.
+To understand verification, first consider a variant called *Schnorr identification*.
 
-The verifier computes `c = Hash(U || M)` and accepts if `g^s = U / Y^c`.
+In this, instead of **(c, s)**, the value **(U, s)** (a group element and an integer) is sent.
 
-This works because LHS `= g^s = g^(r - cx) = g^r / (g^x)^c =` RHS.  
+The verifier computes **c = Hash(U || M)** and accepts if **g<sup>s</sup> = U / Y<sup>c</sup>**.
+
+This works because  **LHS = g<sup>s</sup> = g<sup>(r - cx)</sup> = g<sup>r</sup> / (g<sup>x</sup>)<sup>c</sup> = RHS**.  
 
 ### Schnorr Signature Verification
 
-Given the signature `(c, s)`, we perform the "reverse" of the identification in some sense.
+Given the signature **(c, s)**, we perform the "reverse" of the identification in some sense.
 
-Recall that the verifier of the identification scheme computes `c` from `U` using `Hash` and then verifies some condition.
+Recall that the verifier of the identification scheme computes **c** from **U** using **Hash** and then verifies some condition.
 
-The verifier of the signature scheme instead computes `U` from `c` using the condition and then verifies `Hash`.
+The verifier of the signature scheme instead computes **U** from **c** using the condition and then verifies **Hash**.
 
-In other words, the verifier first computes `U = g^s  Y^c` and accepts if `c = Hash(U || M)`.
+In other words, the verifier first computes **U = g<sup>s</sup>  Y<sup>c</sup>** and accepts if **c = Hash(U || M)**.
 
 ## Verification in ErgoScript
 
 We use the following setup in our example: 
 
-1. The public key `Y` is provided as a `GroupElement` in R4. 
-2. The message `M` is provided as a `Coll[Byte]` in R5.
-3. The value `c` of the signature is provided as a `Coll[Byte]` (for convenience) in context variable 0.
-4. The value `s` of the signature is provided as a `BigInt` in context variable 1.
-5. The hash function is Sha256. 
+1. The public key **Y** is provided as a **GroupElement** in R4. 
+2. The message **M** is provided as a **[Coll](../../sigma/lang-spec/#collt)[Byte]** in R5.
+3. The value **c** of the signature is provided as a **Coll[Byte]** (for convenience) in context variable 0.
+4. The value **s** of the signature is provided as a **[BigInt](../../sigma/lang-spec/#data-types)** in context variable 1.
+5. The hash function is [Sha256](../../global-functions/#sha256). 
 
-The following is the script.
+Which looks like this in ErgoScript
 
 ```scala
 {
