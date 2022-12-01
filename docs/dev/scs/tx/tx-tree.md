@@ -18,4 +18,7 @@ if (condition) { out.propositionBytes == state_2_code }
 else { out.propositionBytes == SELF.propositionBytes }
 ```
 
+Most useful contracts can be represented using branches and simple loops but no cycles (as shown by examples in the paper). Ergo can be used to create such contracts using UTXOs.
+
+
 Next we'll look at [Transaction Graphs](tx-graphs.md)

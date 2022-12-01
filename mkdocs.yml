@@ -332,9 +332,10 @@ nav:
             - Sigma Protocols: 
               - dev/scs/sigma.md
               - Schnorr: 
+                - dev/scs/sigma/schnorr.md
                 - Verifying Schnorr Signatures: dev/scs/sigma/verifying.md
               - Diffe: 
-                - dev/scs/sigma/diffe.md
+                - dev/scs/sigma/diffie.md
                 - Mixer: dev/crypto/mixers.md
             - Ring Signatures:
               - 3-out-of-5 Threshold Signature: dev/scs/sigma/3-out-of-5.md

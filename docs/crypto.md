@@ -14,6 +14,7 @@ Ergo has generic support for variety of cryptographic protocols (via composable 
 - **Signing Algorithm**: ECDSA (`secp256k1`) & Schnorr 
 - **Primitive Secrets**: Schnorr Signature & Diffie-Hellman tuple
 - **Non-Interactive**: The proof of sigma-statements are made non-interactive with the **Fiat-Shamir** transformation.
+- [EIP-0003: Deterministic Wallet Standard](eip3.md)
 
 See [this page](/dev/scs/global-functions/#cryptographic-functions) for a description of the global Cryptographic functions available in ErgoScript.
 

@@ -20,6 +20,50 @@ We describe how to emulate persistent storage in UTXO based systems using a tech
 
 ## References & Resources
 - [Multi-Stage Contracts in the UTXO Model](https://storage.googleapis.com/ergo-cms-media/docs/paper_26.pdf)
+- [Multi-Stage Contracts in the UTXO Model: Delivery by Alexander Chepurnoy & Amitabh Saxena](https://www.youtube.com/watch?v=g3FlM_WOwBU)
 - [https://ergoplatform.org/docs/ErgoScript.pdf](https://ergoplatform.org/docs/ErgoScript.pdf)
 
+## Video Transcript
 
+- A UTXO platform like Bitcoin
+- Advanced scripting capabilities using Ergoscript
+    - Functional programming using scala-like syntax
+        - `INPUTS.exist({utxo:Box} => utxo.value >= 100})`
+    - Conditional statements `If (condition) {block1} else {block2}`
+    - Store data in [registers](registers.md) of UTXO (up to 10 registers)
+- Enriched context
+    - Allows multistage contracts using transaction chaining. 
+
+## What is a multistage contract?
+
+- Consider a protocol for an Ethereum contract
+- Contract starts in State 1 and ends in State 3
+
+
+## Enriched Context Levels
+
+- Level 1: current UTXO, height and timestampt
+- Level 2: current transaction (inputs and outputs)
+- Level 3: current block header and block solution
+- Level 4: current block (other sibling transactions)
+
+
+- Script code can have predicates on objects in context. 
+    - Example `OUTPUT(0).value >= 1000`
+- It is known that Level 2 can emulate Turing complete (hence Ethereum)
+    - However proof uses Rule 110 cellular automation. Reduction is not efficient
+- We need something more efficient than Rule 110. This is our contribution.
+
+
+## How to ensure that each stage follows protocol?
+
+Code in context Level 2 and higher allows multistage protocols
+
+Spending transaction must create another UTXO with the required properties. 
+
+```scala
+out.propositionBytes == state_n_code && 
+out.R4[Int].get == SELF.R4[Int].get // ensure data is propagated
+```
+
+- [Transaction Trees](tx-tree.md): First UTXO chained to second, Second to third, etc.
