@@ -1,106 +1,115 @@
 # Tweaking Difficulty Adjustment Algorithm
 
-> 🔗 From [EIP-0037](https://github.com/ergoplatform/eips/blob/ddbca24fef5e91e0c80c6881fc31d8831ae69768/eip-0037.md)
 
+## EIP Details
 
 * Author: kushti
-* Status: Implmented
+* Status: Implemented
 * Created: 23-Sep-2022
 * Last edited: 02-Oct-2022
 * License: CC0
-* Forking: hard-fork needed 
+* Forking: hard fork needed 
 
-Motivation 
-----------
+> 🔗 From [EIP-0037](https://github.com/ergoplatform/eips/blob/ddbca24fef5e91e0c80c6881fc31d8831ae69768/eip-0037.md)
 
-Difficulty adjustment (also, readjustment) algorithm tries to stabilize averate time to generate a block by changing difficulty of solving a Proof-of-Work puzzle by observing difficulties and timestamps of historical blocks. First Proof-of-Work cryptocurrency, Bitcoin, used simplest lienar difficulty recalculation[1], with some limits for it, such as a difficulty never be changed by more than a factor of 4 either way to prevent large changes. 
 
-Bitcoin's difficulty readjustment works more or less well since only dedicated and so loyal mining hardware working on PoW puzzlez. However, in other environments different issues were observed with it, including coin hopping. Thus different solutions to coin hopping appeared, inluding using a least squares method based predictive algorithm [3] as done in Ergo currently.
+## Motivation 
 
-The Ergo's algorithm works well in most cases, inluding huge price drops, 100x initial difficulty misestimation during mainnet launch, and so on. However, current simplified and limitless version of algorithm is bumpy. Big influx of mining hashrate over multiple epochs, especially with super-linear hashrate growth over time may result in huge spike of difficulty. Similarly, few slow epochs may cause huge drop. Also, for dapps and other applications it would be desirable to make difficulty readjustment more reactive (currently, readjustment takes place every 1024 blocks, and 8 epochs, so about two weeks normally, are considered).   
 
-Related Work
-------------
+A difficulty adjustment (and readjustment) algorithm observing the difficulties and timestamps of historical blocks in an attempt to stabilize the average time to generate a block by changing the difficulty of solving a Proof-of-Work puzzle by. 
 
-To prevent disastrous effects of hopping, widespread approach (see e.g. https://read.cash/@jtoomim/bch-upgrade-proposal-use-asert-as-the-new-daa-1d875696 ) is to use weighted averaging functions over past epochs which do prefer last epochs.
-Hovewer, in case of natural hashrate migration such functions will likely be lagging (in opposite to proactive nature of predictive least square method). 
+The First Proof-of-Work cryptocurrency, Bitcoin, used [simplest linear difficulty recalculation](https://en.bitcoinwiki.org/wiki/Difficulty_in_Mining), with some limits for it, such as a difficulty never being changed by more than a factor of 4 either way to prevent large changes. 
 
-Proposed Changes
-----------------
+Bitcoin's difficulty readjustment works more or less well since only dedicated and so loyal mining hardware working on PoW puzzles. However, in other environments, different issues were observed with it, including coin hopping. Thus different solutions to coin hopping appeared, including using the least squares method-based predictive algorithm (Meshkov D., Chepurnoy A., Jansen M. Short paper: Revisiting difficulty control for blockchain systems) as done in Ergo.
 
-We propose to make current difficulty readjustment more reactive and smoother by shortening epoch length, amplifying weight of the last epoch and put some limits on difficulty change as follows.
+The Ergo algorithm works well in most cases, including huge price drops, 100x initial difficulty misestimation during mainnet launch, etc. However, the current simplified and limitless version of the algorithm is bumpy. A big influx of mining hash rate over multiple epochs, especially with super-linear hash rate growth over time, may result in a huge difficulty spike. Similarly, a few slow epochs may cause a huge drop. Also, for dapps and other applications, it would be desirable to make difficulty readjustment more reactive (currently, readjustment takes place every 1024 blocks, and eight epochs, so about two weeks normally, are considered).   
+
+## Related Work
+
+
+To prevent disastrous effects of hopping, a general approach (see, e.g. [bch](https://read.cash/@jtoomim/bch-upgrade-proposal-use-asert-as-the-new-daa-1d875696) ) is to use weighted averaging functions over past epochs which do prefer last epochs.
+
+However, in the case of natural hash rate migration, such functions will likely lag (in contrast to the proactive nature of the predictive least square method). 
+
+## Proposed Changes
+
+We propose to make current difficulty readjustment more reactive and smoother by shortening epoch length, amplifying the weight of the last epoch and putting some limits on difficulty change as follows.
 
 1. Epoch length to be set to 128 blocks. 
 2. We calculate *predictive* difficulty according to 8 epochs 128 blocks each and *classic* difficulty as done in Bitcoin. 
-We limit predictive difficulty change so that it never be changed by more than 50% per epoch. Then we took average from classic and predictive difficulties. 
+We limit predictive difficulty change so that it never be changed by more than 50% per epoch. Then we took the average from classic and predictive difficulties. 
 3. We limit change so that difficulty never be changed by more than 50% per epoch.
 
 
-Simulations
------------
-
-Previous simulations [4,5] are based on observing historical data so ignoring the fact that miners will behave differently in the presence of different difficulty adjustment method.
-
-Thus we made playground simulating random price walking in uptrend or downtrend. In a simulation, a blockchain is being mined by rational hashpower only. Hashrate is looking at current price and diffuculty. We assume that price and difficulty are changed at the same time, and then hashrate is moving in or out, which is affecting average block generation time *t*. We may assume then that *t = d * c / p*, so average block generation time *t* is proportinal to difficulty *d* and inversely proportional to price *p*. Fixing *t* (which is set to target block generation time, so 2 minutes), *d* and *p* at the beginning of the experiment, we can evaluate *c*. Then on each step we are randomly changing *p* and, according to difficulty from the previous epoch, we can get average block generation time for the new epoch. To have a trend in price, we are changing *p* by adding (or subtracting) a random value with fixed average, and also adding a random fluctuation. 
-
-Test results:
-
-* if price growth is up to 5% per epoch, and possible fluctuation (up or down) is up to 10%:
-
-*Bitcoin DAA*: total error: 158841, max delay: 133
-*Current DAA*: total error: 189403, max delay: 151
-*Proposed DAA: total error: 163893, max delay: 141 
+## Simulations
 
 
-* if no price growth, and possible fluctuation (up or down) is up to 25% (so price is jumping up and down like crazy):
+Previous simulations (See [here](https://read.cash/@jtoomim/bch-upgrade-proposal-use-asert-as-the-new-daa-1d875696) and [here](https://github.com/ergoplatform/ergo/blob/0af9dd9d8846d672c1e2a77f8ab29963fa5acd1e/src/test/scala/org/ergoplatform/tools/DifficultyControlSimulator.scala)) are based on observing historical data and ignore the fact that miners will behave differently in the presence of different difficulty adjustment method.
 
-*Bitcoin DAA*: total error: 393770, max delay: 161
-*Current DAA*: total error: 528003, max delay: 224
-*Proposed DAA: total error: 429667, max delay: 193 
+To combat this, we made a playground simulating random price walking in an uptrend or downtrend. In this simulation, the blockchain is mined by rational hashpower only, and Hashrate looks at the current price and difficulty. 
 
-* if average price growth is up 2% per epoch (max delay missed as it is 120s max for all the options):
+1. We assume that price and difficulty are changed simultaneously, and then the hash rate moves in or out, affecting average block generation time **t**. 
+2. We may assume then that **t = d * c / p**, so average block generation time **t** is proportional to difficulty **d** and inversely proportional to price **p**. 
+3. Fixing **t** (set to target block generation time, so 2 minutes), **d** and **p** at the beginning of the experiment, we can evaluate **c**. 
+4. Then, on each step, we are randomly changing **p**, and according to the difficulty from the previous epoch, we can get the average block generation time for the new epoch.
+5. To have a trend in price, we are changing **p** by adding (or subtracting) a random value with a fixed average and a random fluctuation. 
 
-*Bitcoin DAA*: total error: 30409
-*Current DAA*: total error: 19111
-*Proposed DAA: total error: 20691
+**Test results:**
 
-* if average price growth is up 10% per epoch (max delay missed as it is 120s max for all the options):
+> If price growth is up to 5% per epoch, and possible fluctuation (up or down) is up to 10%:
 
-*Bitcoin DAA*: total error: 143161
-*Current DAA*: total error: 92861
-*Proposed DAA: total error: 105741
-
-* 3 epochs price going up, 3 epochs down , 25% max change
-*Bitcoin DAA*: total error: 380139, max delay: 160
-*Current DAA*: total error: 464081, max delay: 221
-*Proposed DAA*: total error: 387880, max delay: 185
-
-* Coin hopping - first epoch up to 50% of total hashrate jumping on, next epoch jumping off 
-*Bitcoin DAA*: total error: 770422, max delay: 192
-*Current DAA*: total error: 586972, max delay: 210
-*Proposed DAA*: total error: 670691, max delay: 182
-
-Total error here is sum of differences between observed block generation time and target (120 s). The less total error, the better.
-
-As we can see, proposed DAA as well as current one is working better during trends, and also in case of 1-epoch coin hopping, and proposed DAA softens swings better than current one. 
-
-Activation
-----------
-
-It is possible to activate EIP-37 after block #843,776 and before block #851,969 . For activation, 232 or more votes for activation required in the last 256 blocks, with voting checked every 128 blocks (for blocks which height % 128 == 1), and immediate activation once threshold is met. 
-
-Implementation
---------------
-
-Proposed difficulty adjustment algorithm and its activation procedure are implemented in the reference protocol client 4.0.100, all the newer versions support them as well [6]. 
+- *Bitcoin DAA*: total error: 158841, max delay: 133
+- *Current DAA*: total error: 189403, max delay: 151
+- *Proposed DAA*: total error: 163893, max delay: 141 
 
 
-References
-----------
+> If no price growth and possible fluctuation (up or down) is up to 25% (so the price is jumping up and down like crazy):
 
-1. BitcoinWiki. Difficulty in Mining https://en.bitcoinwiki.org/wiki/Difficulty_in_Mining
-2. Bitcoin Wiki. Target https://en.bitcoin.it/wiki/Target#When_does_the_target_change_next.3F
-3. Meshkov D., Chepurnoy A., Jansen M. Short paper: Revisiting difficulty control for blockchain systems
-4. jtoomim BCH upgrade proposal: Use ASERT as the new DAA https://read.cash/@jtoomim/bch-upgrade-proposal-use-asert-as-the-new-daa-1d875696
-5. Ergo Developers. DifficultyControlSimulator.scala https://github.com/ergoplatform/ergo/blob/0af9dd9d8846d672c1e2a77f8ab29963fa5acd1e/src/test/scala/org/ergoplatform/tools/DifficultyControlSimulator.scala
-6. Ergo reference protocol client releases https://github.com/ergoplatform/ergo/releases
+- *Bitcoin DAA*: total error: 393770, max delay: 161
+- *Current DAA*: total error: 528003, max delay: 224
+- *Proposed DAA*: total error: 429667, max delay: 193 
+
+> If average price growth is up 2% per epoch (max delay missed as it is 120s max for all the options):
+
+- *Bitcoin DAA*: total error: 30409
+- *Current DAA*: total error: 19111
+- *Proposed DAA*: total error: 20691
+
+> If average price growth is up 10% per epoch (max delay missed as it is 120s max for all the options):
+
+- *Bitcoin DAA*: total error: 143161
+- *Current DAA*: total error: 92861
+- *Proposed DAA*: total error: 105741
+
+> 3 epochs price going up, three epochs down, 25% max change
+
+- *Bitcoin DAA*: total error: 380139, max delay: 160
+- *Current DAA*: total error: 464081, max delay: 221
+- *Proposed DAA*: total error: 387880, max delay: 185
+
+> Coin hopping - first epoch up to 50% of the total hash rate jumping on, next epoch jumping off 
+
+- *Bitcoin DAA*: total error: 770422, max delay: 192
+- *Current DAA*: total error: 586972, max delay: 210
+- *Proposed DAA*: total error: 670691, max delay: 182
+
+The total error is the sum of differences between the observed block generation time and target (120s): the less total error, the better.
+
+As we can see, the proposed DAA, as well as the current one, is working better during trends, and also, in the case of 1-epoch coin hopping, the proposed DAA softens swings better than the current one. 
+
+## Activation
+
+
+It is possible to activate EIP-37 after block #843,776 and before block #851,969. For activation, 232 or more votes for activation required in the last 256 blocks, with voting checked every 128 blocks (for blocks whose height % 128 == 1), and immediate activation once the threshold is met. 
+
+## Implementation
+
+The proposed difficulty adjustment algorithm and its activation procedure are implemented in the reference protocol client 4.0.100; [all the newer versions]((https://github.com/ergoplatform/ergo/releases) will also support them. 
+
+
+## References
+
+
+1. [Bitcoin Wiki. Target](https://en.bitcoin.it/wiki/Target#When_does_the_target_change_next.3F)
+
+

@@ -4,7 +4,9 @@ Ergo uses the **linear least square method** to calculate difficulty. This funct
 
 - [Coin hopping Attack — What after a month of Bitcoin hardfork?](https://medium.com/nikoin/coin-hopping-attack-what-after-a-month-of-bitcoin-hardfork-f5a92151fb7b)
 
-Autolykos will adjust slowly in response to fluctuating hashrate, but this helps prevent **adversarial** hopping. This algorithm has a 1.9% error rate compared to bitcoins 9.1% error rate (exponential 10% hash rate growth). 
+Before [EIP37](eip37.md) Autolykos adjusted slowly in response to fluctuating hashrate, this helped to prevent **adversarial** hopping with a 1.9% error rate compared to bitcoins 9.1% error rate (exponential 10% hash rate growth). 
+
+EIP37 was implemented as a big influx of mining hashrate over multiple epochs, especially with super-linear hashrate growth over time (as we seen with the ETH merge) results in huge spike of difficulty. Similarly, few slow epochs may cause huge drop. 
 
 You can use the [difficulty & epoch monitor](https://cds.oette.info/ergo_diff.htm) to get an estimate for the next difficulty due. 
 
@@ -14,6 +16,6 @@ As Ergo is a P2P cryptocurrency that supports smart contracts, there is need for
 
 **Can it be quicker?**
 
-Ergo already uses an epoch length of ~1.5 days (with normal block rate), compared to Bitcoin's two weeks. Having a quicker difficulty readjustment can lead to Timewarp attacks. More epochs were considered, but the retargeting function is also non-linear, so it can adjust sooner than the linear function in certain popular scenarios; and it is unclear whether any hard-fork would be required at this stage. 
+Ergo already uses an epoch length of ~4.2 hours (with normal block rate), compared to Bitcoin's two weeks. Having a quicker difficulty readjustment can lead to Timewarp attacks. 
 
-There is a discussion ongoing on [ergoforum](https://www.ergoforum.org/t/diff-adjustment-potential-design-tradeoffs/3875/30) regarding a potential improvement to this algorithm. 
+
