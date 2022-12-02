@@ -5,7 +5,11 @@
 ::cards::
 
 [
-
+  {
+    "title": "Algorithm",
+    "content": "Technical breakdown of the Autolykos algorithm",
+    "url": "governance.md"
+  },
   {
     "title": "Governance",
     "content": "Learn more about governance on Ergo.",
@@ -26,26 +30,27 @@
 
 ::/cards::
 
-## Key Points
-
-- Autolykos v1 originally had pool-resistance built-in through the use of non-outsourceable puzzles.
-- **The Hardening Hard-Fork** on block `417,792` marked the launch of Autolykos v2, enabling mining pools. See this [paper](https://ia.cr/2020/044). 
-- [**EIP27:**](../dev/protocol/eip27) was passed with overwhelming community support, extending emission by 4,566,336 blocks (~17.38 years). This will be activated on block `777217`
-
-
-Autolykos, named after the Greek God Autolycus for the original non-outsourcability built-in in version one. However, it became apparent that pool resistance was infeasible due to large players having an advantage with smart contracts. ["Bypassing Non-Outsourceable Proof-of-Work Schemes Using Collateralized Smart Contracts"](https://ia.cr/2020/044) was presented by Alex Chepurnoy at the WTSC workshop associated with Financial Cryptography and Data Security 2020 in Malaysia.
-
-
 
 
 ## Resources
 
+### Papers
+
+- [White Paper](https://www.docdroid.net/mcoitvK/ergopow-pdf)
 - [Yellow Paper](https://www.docdroid.net/mcoitvK/ergopow-pdf)
-- [ergo/src/main/scala/org/ergoplatform/mining/](https://discord.com/channels/668903786361651200/668903786902847502/990962713675055114)
+- ["Bypassing Non-Outsourceable Proof-of-Work Schemes Using Collateralized Smart Contracts"](https://ia.cr/2020/044)
+
+### Code
+
+The following folder contains the scala files relating to mining. 
+
+- [ergo/src/main/scala/org/ergoplatform/mining/](https://github.com/ergoplatform/ergo/tree/master/src/main/scala/org/ergoplatform/mining)
 
 ### Test Vectors 
 
 - [Test vectors for increased N values ](https://www.ergoforum.org/t/test-vectors-for-increased-n-values/2887/2)
+
+### Discussions
 
 - [Ergo Emission: details, retargeting via a soft fork](https://www.ergoforum.org/t/ergo-emission-details-retargeting-via-a-soft-fork/2778/2)
 
