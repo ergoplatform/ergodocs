@@ -59,6 +59,8 @@ Next, open your command line and navigate to the extracted Ledger App folder.
 
 ### Deploy
 
+Now it's time to deploy the binary file `app.hex` into the Ledger device:
+
 Make sure your ledger is connected, but the Ledger Manager is **closed**. 
 
 ```

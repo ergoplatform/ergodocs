@@ -24,4 +24,4 @@ Observe that `proveDHTuple` requires 4 exponentiations for verification, while `
 
 ErgoScript supports both the protocols, and thus has all the primitives needed to implement ZeroJoin.
 
-![](../../../assets/img/scs/zerojoin.png)
+![](../../assets/img/scs/zerojoin.png)

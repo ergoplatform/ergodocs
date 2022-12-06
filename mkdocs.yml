@@ -336,7 +336,7 @@ nav:
                 - Verifying Schnorr Signatures: dev/scs/sigma/verifying.md
               - Diffie: 
                 - dev/scs/sigma/diffie.md
-                - ZeroJoin: dev/crypto/mixers.md
+                - ZeroJoin: dev/crypto/zerojoin.md
             - Ring Signatures:
               - 3-out-of-5 Threshold Signature: dev/scs/sigma/3-out-of-5.md
           - sigmastate-interpreter: dev/scs/sigmastate-interpreter.md
