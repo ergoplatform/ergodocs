@@ -340,7 +340,9 @@ nav:
             - Ring Signatures:
               - 3-out-of-5 Threshold Signature: dev/scs/sigma/3-out-of-5.md
           - sigmastate-interpreter: dev/scs/sigmastate-interpreter.md
-          - ErgoTree: dev/scs/ergotree.md
+          - ErgoTree: 
+            - dev/scs/ergotree.md
+            - Serialization: dev/scs/ergotree/serialization.md
         - Data Structures:
           - AVL Trees: dev/protocol/avl.md
         - Multi-Stage: 
@@ -365,7 +367,10 @@ nav:
     - Infrastructure: 
       - Rosen Bridge: uses/rosen.md
       - Oracles: uses/oracles.md
+      - Tooling:
+        - Azorus: uses/azorus.md
       - Sidechains: 
+        - dev/protocol/nipopow/sidechains.md
         - ErgoData: uses/ErgoData.md
     - dApps:
       - Exchange:

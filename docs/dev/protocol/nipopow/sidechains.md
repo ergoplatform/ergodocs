@@ -6,6 +6,9 @@ Sidechains are beneficial for various elements such as introducing private chain
 
 In order to send money to a sidechain they must attach a proof that proves they have the funds. Without these, the sidechain would be prone to double-spending attacks. 
 
+
+## NiPoPoWs
+
 NIPOPOWS enable trustless sidechain through SPV (simplified payment verification) proofs and is resistant to such attacks while also being small enough that they can actually be sent over the network.
 
 While "compact SPV proofs" have been proposed previously, they've proved vulnerable to certain attacks, ones that would potentially allow miners to steal money left on the sidechains.
@@ -13,10 +16,7 @@ While "compact SPV proofs" have been proposed previously, they've proved vulnera
 To put it simply, NIPoPoWs can be of great use in sidechains. Two or more separate chains can integrate through NIPoPoWs without the need for change in other chains. Such integration would erase the need for, for example, "Wrapped Tokens," tokens that rely on DAO governance. 
 
 
-
-
-
-## Resources
+### Resources
 
 ##### Articles
 

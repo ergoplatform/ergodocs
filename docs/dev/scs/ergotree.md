@@ -8,6 +8,7 @@ tags:
 Most of Ergo users won't use ErgoTree directly since they are developing contracts in higher-level language, such as ErgoScript, which is then compiled to ErgoTree. 
 
 
+
 **Key Concepts**
 
 - [ErgoTree](https://ergoplatform.org/docs/ErgoTree.pdf) is used to define logical propositions protecting boxes (generalization of coins) in Ergo. 
