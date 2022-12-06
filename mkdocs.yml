@@ -342,7 +342,14 @@ nav:
           - sigmastate-interpreter: dev/scs/sigmastate-interpreter.md
           - ErgoTree: 
             - dev/scs/ergotree.md
+            - Introduction: dev/scs/ergotree/ergotree-intro.md
+            - As a Language: dev/scs/ergotree/ergotree-lang.md
+            - Typing: dev/scs/ergotree/typing.md
+            - Evaluation: dev/scs/ergotree/evaluation.md
             - Serialization: dev/scs/ergotree/serialization.md
+            - Types: dev/scs/ergotree/types.md
+            - Functions: dev/scs/ergotree/functions.md
+            - Encoding: dev/scs/ergotree/encoding.md
         - Data Structures:
           - AVL Trees: dev/protocol/avl.md
         - Multi-Stage: 
