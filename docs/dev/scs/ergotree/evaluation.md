@@ -1,7 +1,4 @@
 # ErgoTree Evaluation
-
-> This page is a WIP. Please see [ErgoTree.pdf](https://storage.googleapis.com/ergo-cms-media/docs/ErgoTree.pdf) for full details.
-
 $$
 \newcommand{\TEnv}{\Gamma}
 \newcommand{\Der}[2]{#1~\vdash~#2}
@@ -38,11 +35,11 @@ call-by-value (CBV) lambda calculus. Evaluation of $\corelang$ is specified
 using denotational semantics. To do that, we first specify denotations of
 types, then typed terms and then equations of denotational semantics.
 
-**The following CBV terms are called values:**
+> Definition 1: **The following CBV terms are called values:**
 
-> $$V :== x \mid C(d, T) \mid \Lam{x}{M}$$
+$$V :== x \mid C(d, T) \mid \Lam{x}{M}$$
 
-All CBV terms are called producers. (This is because, when evaluated, they produce a value.)
+> All CBV terms are called producers. (This is because, when evaluated, they produce a value.)
 
 
 We now describe and explain a denotational semantics for the $\corelang$
@@ -68,52 +65,47 @@ allow us to apply $\Lam{x}{M}$ to any term $N$ of type $A$. But $N$ will be
 evaluated before it interracts with $\Lam{x}{M}$, so $\Lam{x}{M}$ is really only applied to the value that $N$ produces.
 
 
-> A **context** $\Gamma$ is a finite sequence of identifiers with valuetypes $x_1:A_1, \dots ,x_n:A_n$. Sometimes we omit the identifiers and write $\Gamma$ as a list of value types.
+> **Definition 2:** A **context** $\Gamma$ is a finite sequence of identifiers with valuetypes $x_1:A_1, \dots ,x_n:A_n$. Sometimes we omit the identifiers and write $\Gamma$ as a list of value types.
 
-Given a context $\Gamma = x_1:A_1,\dots,x_n:A_n$, an environment (list of
-bindings for identifiers) associates to each $x_i$ as value of type $A_i$. So
-the environment denotes an element of $(\Denot{A_1},\dots,\Denot{A_n})$, and
-we write $\Denot{\Gamma}$ for this set.
-
-Given a \corelang term $\DerEnv{M: B}$, we see that $M$, together with
-environment, gives a closed term of type $B$. So $M$ denotes a function
-$\Denot{M}$ from $\Denot{\Gamma}$ to $\Denot{B}$.
+- Given a context $\Gamma = x_1:A_1,\dots,x_n:A_n$, an environment (list of bindings for identifiers) associates to each $x_i$ as value of type $A_i$. So
+the environment denotes an element of $(\Denot{A_1},\dots,\Denot{A_n})$, and we write $\Denot{\Gamma}$ for this set.
+- Given a $\corelang$ term $\DerEnv{M: B}$, we see that $M$, together with environment, gives a closed term of type $B$. So $M$ denotes a function $\Denot{M}$ from $\Denot{\Gamma}$ to $\Denot{B}$.
 
 In summary, the denotational semantics is organized as follows.
+
 - A type $A$ denotes a set $\Denot{A}$
 - A context $x_1:A_1,\dots,x_n:A_n$ denotes the set $(\Denot{A_1},\dots,\Denot{A_n})$
 - A term $\DerEnv{M: B}$ denotes a function $\Denot{M}$:
 - $\Denot{\Gamma} \to \Denot{B}$
 
 
-The denotations of types and terms is given in Figure~\ref{fig:denotations}.
+The denotations of $\corelang$ **types**
 
 
+$$\Denot{\lst{Boolean}}  =  \{ \lst{true}, \lst{false} \}$$  
 
-The denotations of $\corelang$ types
+$$\Denot{\lst{P}}  = \text{see set of values in Appendix A}$$
 
+$$\Denot{(T_1,\dots,T_n)} =  (\Denot{T_1},\dots,\Denot{T_n}) $$
 
-- $\Denot{\lst{Boolean}}$  =  $\{ \lst{true}, \lst{false} \}$  
-- $\Denot{\lst{P}}$  = $\text{see Appendix A}$
-- $\Denot{(T_1,\dots,T_n)}$ =  $(\Denot{T_1},\dots,\Denot{T_n}) $
-- $\Denot{A \to B}$  =  $\Denot{A} \to \Denot{B}$
-
-
-The denotations of $\corelang$ terms
+$$\Denot{A \to B}  =  \Denot{A} \to \Denot{B}$$
 
 
-$\Apply{ \Denot{\lst{x}}			}{(\rho,\lst{x}\mapsto x, \rho')}$ = x
+The denotations of $\corelang$ **terms**
 
-$\Apply{ \Denot{C(d, T)} 			}{\rho}$  =  d
 
-$\Apply{ \Denot{(\Ov{M_i})} 		}{\rho}$  =  $(\Ov{ \Apply{\Denot{M_i}}{\rho} })$	
+$$\Apply{ \Denot{\lst{x}}			}{(\rho,\lst{x}\mapsto x, \rho')} = x$$
 
-$\Apply{ \Denot{\Apply{\delta}{N}} }{\rho}$  = $\Apply{ (\Apply{\Denot{\delta}}{\rho}) }{ v }~where~v = \Apply{\Denot{N}}{\rho}$
+$$\Apply{ \Denot{C(d, T)} 			}{\rho}  =  d$$
 
-$\Apply{ \Denot{\Lam{\lst{x}}{M}}	}{\rho}$  =  $\Lam{x}{ \Apply{\Denot{M}}{(\rho, \lst{x}\mapsto x)} }$	
+$$\Apply{ \Denot{(\Ov{M_i})} 		}{\rho}  =  (\Ov{ \Apply{\Denot{M_i}}{\rho} })$$	
 
-$\Apply{ \Denot{\Apply{M_f}{N}}	}{\rho}$  =  $\Apply{ (\Apply{\Denot{M_f}}{\rho}) }{ v }~where~v = \Apply{\Denot{N}}{\rho}$ 
+$$\Apply{ \Denot{\Apply{\delta}{N}} }{\rho}  = \Apply{ (\Apply{\Denot{\delta}}{\rho}) }{ v }~where~v = \Apply{\Denot{N}}{\rho}$$
 
-$\Apply{ \Denot{\Apply{M_I.\lst{m}}{\Ov{N_i}} }	}{\rho}$  =  $\Apply{ (\Apply{\Denot{M_I}}{\rho}).m }{ \Ov{v_i} }~where~\Ov{v_i = \Apply{\Denot{N_i}}{\rho}}$ 
+$$\Apply{ \Denot{\Lam{\lst{x}}{M}}	}{\rho}  =  \Lam{x}{ \Apply{\Denot{M}}{(\rho, \lst{x}\mapsto x)} }$$	
+
+$$\Apply{ \Denot{\Apply{M_f}{N}}	}{\rho}  =  \Apply{ (\Apply{\Denot{M_f}}{\rho}) }{ v }~where~v = \Apply{\Denot{N}}{\rho}$$
+
+$$\Apply{ \Denot{\Apply{M_I.\lst{m}}{\Ov{N_i}} }	}{\rho}  =  \Apply{ (\Apply{\Denot{M_I}}{\rho}).m }{ \Ov{v_i} }~where~\Ov{v_i = \Apply{\Denot{N_i}}{\rho}}$$ 
 
 

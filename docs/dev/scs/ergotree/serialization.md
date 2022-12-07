@@ -202,7 +202,7 @@ Figure 8: AvlTree serialization format
 
 ### Constant Serialization
 
-The **Constant** format is simple and self-sufficient to represent any data value. Serialized bytes of the Constant format contain both the **type bytes** and the **data bytes**; thus, they can be stored or wire transferred and then later unambiguously interpreted. The format is shown in Figure 9
+The **Constant** format is simple and self-sufficient to represent any data value. Serialized bytes of the Constant format contains both the **type bytes** and the **data bytes**; thus, they can be stored, or wire transferred and then later unambiguously interpreted. The format is shown in Figure 9
 
 Figure 9: Constant serialization format
 
