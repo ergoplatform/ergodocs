@@ -39,6 +39,7 @@ extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - https://unpkg.com/mermaid@8.5.1/dist/mermaid.min.js
+  - https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML
 
 extra:
   version:
@@ -67,8 +68,12 @@ plugins:
 
 markdown_extensions:
   - pymdownx.superfences
+  - extra
+  - tables
   - neoteroi.cards
   - meta
+  - mdx_math
+  - fenced_code
   - toc:
         permalink: "#"
   - admonition

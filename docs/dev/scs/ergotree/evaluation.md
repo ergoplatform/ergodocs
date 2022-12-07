@@ -2,55 +2,118 @@
 
 > This page is a WIP. Please see [ErgoTree.pdf](https://storage.googleapis.com/ergo-cms-media/docs/ErgoTree.pdf) for full details.
 
+$$
+\newcommand{\TEnv}{\Gamma}
+\newcommand{\Der}[2]{#1~\vdash~#2}
+\newcommand{\DerV}[2]{#1~\vdash^{\text{\lst{v}}}~#2}
+\newcommand{\DerC}[2]{#1~\vdash^{\text{\lst{c}}}~#2}
+\newcommand{\DerEnv}[1]{\Der{\TEnv}{#1}}
+\newcommand{\DerEnvV}[1]{\DerV{\TEnv}{#1}}
+\newcommand{\DerEnvC}[1]{\DerC{\TEnv}{#1}}
+\newcommand{\lst}[1]{#1}
+\newcommand{\Tup}[1]{(#1)}
+\newcommand{\Apply}[2]{#1\langle#2\rangle}
+\newcommand{\MSig}[3]{\text{def}~#1(#2): #3}
+\newcommand{\Ov}[1]{\overline{#1}}
+\newcommand{\TyLam}[3]{\lambda(\Ov{#1:#2}).#3}
+\newcommand{\Trait}[2]{\text{trait}~#1~\{ #2 \}}
+\newcommand{\To}{\mapsto}
+\newcommand{\Low}[1]{\mathcal{L}{[\![#1]\!]}}
+\newcommand{\Lam}[2]{\lambda#1.#2}
+\newcommand{\IfThenElse}[3]{\text{if}~(#1)~#2~\text{else}~#3}
+\newcommand{\False}{\text{false}}
+\newcommand{\True}{\text{true}}
+\newcommand{\langname}{ErgoTree}
+\newcommand{\corelang}{Core-\lambda}
+\newcommand{\Denot}[1]{[\![#1]\!]}  
+$$
 
-In this section we describe evaluation semantics of the ErgoTree language and the corresponding
-reference implementation of the interpreter
 
-## Semantics
+Evaluation of $\langname$ is specified by its translation to $\corelang$, whose
+terms form a subset of $\langname$ terms. Thus, typing rules of $\corelang$ form
+a subset of typing rules of $\langname$.
 
-Evaluation of ErgoTree is specified by its translation to **Core-λ**, whose terms form a subset of ErgoTree terms. Thus, typing rules of **Core-λ** form a subset of typing rules of ErgoTree.
+Here we specify evaluation semantics of $\corelang$, which is based on
+call-by-value (CBV) lambda calculus. Evaluation of $\corelang$ is specified
+using denotational semantics. To do that, we first specify denotations of
+types, then typed terms and then equations of denotational semantics.
 
-Here we specify evaluation semantics of **Core-λ**, which is based on call-by-value (CBV) lambda calculus. Evaluation of **Core-λ** is specified using denotational semantics. To do that, we first specify denotations of types, then typed terms and then equations of denotational semantics.
+**The following CBV terms are called values:**
 
-> Definition 1 (values, producers) The following **Core-λ** terms are called values:
-> 
-> - V :== x | C(d, T ) | λx.M
-> 
-> All **Core-λ** terms are called producers. (This is because, when evaluated, they produce a value.)
+> $$V :== x \mid C(d, T) \mid \Lam{x}{M}$$
 
-We now describe and explain a denotational semantics for the **Core-λ** language. The key principle is that each type A denotes a set JAK whose elements are the denotations of values of the type A.
+All CBV terms are called producers. (This is because, when evaluated, they produce a value.)
 
-Thus, the type Boolean denotes the 2-element set {true, false}, because there are two values of type Boolean. Likewise the type (T1, . . . , Tn) denotes (JT1K, . . . , JTnK) because a value of type (T1, . . . , Tn) must be of the form (V1, . . . , Vn), where each Vi is value of type Ti. 
 
-Given a value V of type A, we write JV K for the element of A that it denotes. Given a close term M of type A, we recall that it produces a value V of type A. So M will denote an element JM K of JAK.
+We now describe and explain a denotational semantics for the $\corelang$
+language. The key principle is that each type $A$ denotes a set $\Denot{A}$
+whose elements are the denotations of values of the type $A$.
 
-A value of type A → B is of the form λx.M . This, when applied to a value of type A gives a value of type B. So A → B denotes JAK → JBK. It is true that the syntax appears to allow us to apply λx.M to any term N of type A. But N will be evaluated before it interracts with λx.M , so λx.M is really only applied to the value that N produces (hence the semantics is call-by-value).
+Thus the type \lst{Boolean} denotes the 2-element set
+$\{\lst{true},\lst{false}\}$, because there are two values of type
+\lst{Boolean}. Likewise the type $(T_1,\dots,T_n)$ denotes
+$(\Denot{T_1},\dots,\Denot{T_n})$ because a value of type $(T_1,\dots,T_n)$
+must be of the form $(V_1,\dots,V_n)$, where each $V_i$ is value of type
+$T_i$.
 
-> **Definition 2** A context Γ is a finite sequence of identifiers with value types x1 : A1, . . . , xn : An.
+Given a value $V$ of type $A$, we write $\Denot{V}$ for the element of $A$
+that it denotes. Given a close term $M$ of type $A$, we recall that it
+produces a value $V$ of type $A$. So $M$ will denote an element $\Denot{M}$
+of $\Denot{A}$.
 
-Sometimes we omit the identifiers and write Γ as a list of value types.
+A value of type $A \to B$ is of the form $\Lam{x}{M}$. This, when
+applied to a value of type $A$ gives a value of type $B$. So $A \to B$
+denotes $\Denot{A} \to \Denot{B}$. It is true that the syntax appears to
+allow us to apply $\Lam{x}{M}$ to any term $N$ of type $A$. But $N$ will be
+evaluated before it interracts with $\Lam{x}{M}$, so $\Lam{x}{M}$ is really only applied to the value that $N$ produces.
 
-Given a context Γ = x1 : A1, . . . , xn : An, an environment (list of bindings for identifiers) associates to each xi as value of type Ai. So the environment denotes an element of (JA1K, . . . , JAnK), and we write JΓK for this set.
 
-Given a **Core-λ** term Γ  M : B, we see that M , together with environment, gives a closed term of type B. So M denotes a function JM K from JΓK to JBK.
+> A **context** $\Gamma$ is a finite sequence of identifiers with valuetypes $x_1:A_1, \dots ,x_n:A_n$. Sometimes we omit the identifiers and write $\Gamma$ as a list of value types.
+
+Given a context $\Gamma = x_1:A_1,\dots,x_n:A_n$, an environment (list of
+bindings for identifiers) associates to each $x_i$ as value of type $A_i$. So
+the environment denotes an element of $(\Denot{A_1},\dots,\Denot{A_n})$, and
+we write $\Denot{\Gamma}$ for this set.
+
+Given a \corelang term $\DerEnv{M: B}$, we see that $M$, together with
+environment, gives a closed term of type $B$. So $M$ denotes a function
+$\Denot{M}$ from $\Denot{\Gamma}$ to $\Denot{B}$.
 
 In summary, the denotational semantics is organized as follows.
- A type A denotes the set JAK
-7
- A context x1 : A1, . . . , xn : An denotes the set (JA1K, . . . , JAnK)
- A term Γ ` M : B denotes a function JM K : JΓK → JBK
-The denotations of types and terms is given in Figure 4.
-Figure 4: Denotational semantics of **Core-λ**
-The denotations of **Core-λ** types
-JBooleanK = {true, false}
-JPK = see set of values in Appendix A
-J(T1, . . . , Tn)K = (JT1K, . . . , JTnK)
-JA → BK = JAK → JBK
-The denotations of **Core-λ** terms which together specify the function J K : JΓK → JT K
-JxK〈(ρ, x 7 → x, ρ′)〉 = x
-JC(d, T )K〈ρ〉 = d
-J(Mi)K〈ρ〉 = (JMiK〈ρ〉)
-Jδ〈N 〉K〈ρ〉 = (JδK〈ρ〉)〈v〉 where v = JN K〈ρ〉
-Jλx.M K〈ρ〉 = λx.JM K〈(ρ, x 7 → x)〉
-JMf 〈N 〉K〈ρ〉 = (JMf K〈ρ〉)〈v〉 where v = JN K〈ρ〉
-JMI .m〈Ni〉K〈ρ〉 = (JMI K〈ρ〉).m〈vi〉 where vi = JNiK〈ρ〉
+- A type $A$ denotes a set $\Denot{A}$
+- A context $x_1:A_1,\dots,x_n:A_n$ denotes the set $(\Denot{A_1},\dots,\Denot{A_n})$
+- A term $\DerEnv{M: B}$ denotes a function $\Denot{M}$:
+- $\Denot{\Gamma} \to \Denot{B}$
+
+
+The denotations of types and terms is given in Figure~\ref{fig:denotations}.
+
+
+
+The denotations of $\corelang$ types
+
+
+- $\Denot{\lst{Boolean}}$  =  $\{ \lst{true}, \lst{false} \}$  
+- $\Denot{\lst{P}}$  = $\text{see Appendix A}$
+- $\Denot{(T_1,\dots,T_n)}$ =  $(\Denot{T_1},\dots,\Denot{T_n}) $
+- $\Denot{A \to B}$  =  $\Denot{A} \to \Denot{B}$
+
+
+The denotations of $\corelang$ terms
+
+
+$\Apply{ \Denot{\lst{x}}			}{(\rho,\lst{x}\mapsto x, \rho')}$ = x
+
+$\Apply{ \Denot{C(d, T)} 			}{\rho}$  =  d
+
+$\Apply{ \Denot{(\Ov{M_i})} 		}{\rho}$  =  $(\Ov{ \Apply{\Denot{M_i}}{\rho} })$	
+
+$\Apply{ \Denot{\Apply{\delta}{N}} }{\rho}$  = $\Apply{ (\Apply{\Denot{\delta}}{\rho}) }{ v }~where~v = \Apply{\Denot{N}}{\rho}$
+
+$\Apply{ \Denot{\Lam{\lst{x}}{M}}	}{\rho}$  =  $\Lam{x}{ \Apply{\Denot{M}}{(\rho, \lst{x}\mapsto x)} }$	
+
+$\Apply{ \Denot{\Apply{M_f}{N}}	}{\rho}$  =  $\Apply{ (\Apply{\Denot{M_f}}{\rho}) }{ v }~where~v = \Apply{\Denot{N}}{\rho}$ 
+
+$\Apply{ \Denot{\Apply{M_I.\lst{m}}{\Ov{N_i}} }	}{\rho}$  =  $\Apply{ (\Apply{\Denot{M_I}}{\rho}).m }{ \Ov{v_i} }~where~\Ov{v_i = \Apply{\Denot{N_i}}{\rho}}$ 
+
+
