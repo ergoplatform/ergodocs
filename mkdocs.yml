@@ -19,12 +19,14 @@ theme:
           icon: material/toggle-switch
           name: Switch to light mode
     features:
-        - navigation.tabs.sticky
+        - navigation.tabs
         - navigation.instant
-        - navigation.sections # The bold sections in navigation
+        #- navigation.sections # The bold sections in navigation
         - navigation.tracking
         - navigation.indexes
         - content.tabs.link
+        - toc.follow
+
       #  - toc.integrate
     logo: assets/logo.png
     font:
@@ -100,7 +102,7 @@ nav:
       - Events: events/index.md
       - ERGOHACK: events/ergohack.md
       - ErgoSummit: events/ergosummit.md
-  - 🔬 ┃ Learn: 
+  - Learn the basics: 
     - dev/protocol/index.md
     - Key Features: 
       - Why Ergo: dev/protocol/why.md
@@ -128,7 +130,7 @@ nav:
 
     
 
-  - ⛏ ┃  Mine:
+  - Miners:
     - Mining: mining/index.md
     - Start Mining: 
       - mining/setup/join.md
@@ -148,7 +150,7 @@ nav:
         - Emission Retargeting Soft-Fork: mining/standards/eip27.md
         - Tweaking Difficulty Adjustment Algorithm: mining/standards/eip37.md
     
-  - 🛠 ┃ Build: 
+  - Developers: 
     - dev/start.md
     - Getting Started: 
       - dev/start.md
@@ -375,7 +377,7 @@ nav:
 
      
 
-  - 💡 ┃  Applications: 
+  - Applications & Use Cases: 
     - uses/index.md
     - Infrastructure: 
       - Rosen Bridge: uses/rosen.md

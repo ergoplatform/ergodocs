@@ -329,16 +329,12 @@ For the motivation behind this type of encoding, please see Appendix~\ref{sec:ap
 
 The whole space of 256 codes is divided as the following:
 
-
-$$\bf{Interval}$$ \& \bf{Distribution}
-
-$$\lst{0x00}$$ \& special value to represent undefined type (\lst{NoType} in \ASDag)
-
-$$\lst{0x01 - 0x6F(111)}$$ & data types including primitive types, arrays, options
-aka nullable types, classes (in future), 111 = 255 - 144 different codes 
-
-\lst{0x70(112) - 0xFF(255)} & function types \lst{T1 => T2}, 144 = 12 x 12
-different codes 
+|Interval | Distribution|
+|--|--|
+$\bf{Interval}$ | $\bf{Distribution}$
+$\lst{0x00}$ | special value to represent undefined type ($\lst{NoType}$ in $\ASDag$)
+$\lst{0x01 - 0x6F(111)}$ | data types including primitive types, arrays, options aka nullable types, classes (in future), 111 = 255 - 144 different codes 
+$\lst{0x70(112) - 0xFF(255)}$ | function types $\lst{T1 => T2}$, 144 = 12 x 12 different codes 
  
 
 ### Encoding Data Types
@@ -346,18 +342,19 @@ different codes
 There are nine different values for primitive types, and two more are reserved for future extensions.
 Each primitive type has an id in a range {1,...,11} as the following.
 
-
-1     &   Boolean   
-2     &   Byte  
-3     &   Short (16 bit)  
-4     &   Int (32 bit)  
-5     &   Long (64 bit)  
-6     &   BigInt (java.math.BigInteger)  
-7     &   GroupElement (org.bouncycastle.math.ec.ECPoint)  
-8     &   SigmaProp   
-9     &   reserved for Char   
-10    &   reserved for Double   
-11    &   reserved   
+|Id | Type|
+|--|--|
+1     |   Boolean   
+2     |   Byte  
+3     |   Short (16 bit)  
+4     |   Int (32 bit)  
+5     |   Long (64 bit)  
+6     |   BigInt (java.math.BigInteger)  
+7     |   GroupElement (org.bouncycastle.math.ec.ECPoint)  
+8     |   SigmaProp   
+9     |   reserved for Char   
+10    |   reserved for Double   
+11    |   reserved   
 
 
 For each type constructor like $\lst{Coll}$ or $\lst{Option}$ we use the encoding

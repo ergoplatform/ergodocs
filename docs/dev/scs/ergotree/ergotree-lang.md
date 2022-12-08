@@ -20,19 +20,19 @@ $$
 
 # ErgoTree as a language
 
-In this section, we define an abstract syntax for the ErgoTree language. It is **a typed call-by-value, higher-order functional language without recursion**.
+In this section, we define an abstract syntax for the ErgoTree language. It is a typed **call-by-value, higher-order functional language without recursion**.
 
 It supports single-assignment blocks, tuples, optional values, indexed collections with higher-order operations, short-cutting logicals, and ternary ’if’ with lazy branches. 
 
-**All operations are deterministic, without side effects and all values are immutable.**
+**All operations are deterministic, without side effects and all values are *immutable*.**
 
-The semantics of ErgoTree is specified by first translating it to a core calculus (***Core-λ***) and then by giving its denotational evaluation semantics. 
+The semantics of ErgoTree is specified by first translating it to core calculus (***Core-λ***) and then giving its denotational evaluation semantics. 
 
-In the table below, ErgoTree is defined below using abstract syntax notation. This corresponds to the **Value** class of the reference implementation, which can be serialized to an array of bytes using **ValueSerializer**. 
+In Table 1, ErgoTree is defined below using abstract syntax notation. This corresponds to the **Value** class of the reference implementation, which can be serialized to an array of bytes using **ValueSerializer**. 
 
-The values in the *'mnemonic'* column correspond to classes of the reference implementation.
+The values in the *'mnemonic'* column correspond to reference implementation classes.
 
-## **Figure 1: Abstract syntax of ErgoScript language**
+### **Table 1: Abstract syntax of ErgoScript language**
 
 | Set Name | | Syntax | Mnemonic | Description |
 |--||--|--|----|
@@ -55,12 +55,12 @@ $cd$    |   ::= |   $\Trait{I}{\overline{ms_i}}$    | **STypeCompanion** | inter
 $ms$    |   ::= | $\MSig{m[\overline{\tau_i}]}{\overline{x_i : T_i}}{T}$    | **SMethod** | method signature declaration   
 
 
-We assign types to the terms in a standard way following typing rules shown in [typing](typing.md).
+We assign types to the terms in a standard way following the typing rules shown in [Typing](typing.md).
 
 - **Constants** keep both the type and the data value of that type. To be well-formed, the type of the constant should correspond to its value.
 - **Variables** are always typed and identified by a unique id, which refers to either lambda bound variable or a val bound variable.
 - **Lambda expressions** can take a list of lambda-bound variables which can be used in the body expression, which can be a **block expression**.
-- **Function application** takes an expression of functional type (e.g. T<sub>1</sub> → T<sub>n</sub>) and a list of arguments. The reason we do not write it $e_f(e<sup>-</sup>) is that this notation suggests that (e) is a subterm, which it is not.
+- **Function application** takes an expression of functional type (e.g. $T_1 \to T_n$) and a list of arguments. The reason we do not write it $e_f(\Ov{e})$ is that this notation suggests that $(\Ov{e})$ is a subterm, which it is not.
 - **Method invocation** allows us to apply functions that are defined as methods of types. If expression e has type T and method m is declared in the type T, method invocation e.m(args) is defined for the appropriate args. See section A for the specification of types and their methods.
 - **Conditional expressions** of ErgoTree are strict in the condition and lazy in both of the branches.
     - Each branch is an expression executed depending on the result of the condition—this laziness of branches is specified by lowering to Core-λ (see Figure 2).
@@ -70,7 +70,7 @@ Each **type** may be associated with a list of method declarations, in which cas
 
 Each **method** can be parameterized by type variables, which can be used in the method signature. Because ErgoTree supports only monomorphic values, each method call is monomorphic, and all type variables are assigned to concrete types (see MethodCall typing rule in [typing](typing.md)).
 
-The semantics of ErgoTree is specified by translating all its terms to a somewhat lower and simplified language, which we call Core-λ and which doesn’t have lazy operations.
+The semantics of ErgoTree is specified by translating all its terms to a somewhat lower and simplified language, which we call Core-λ and does not have lazy operations.
 
 ## **Figure 2: Lowering to Core-λ**
 
@@ -90,11 +90,13 @@ $\Low{ e }$     | $\To$ |  $e$
 
 All $n$-ary lambdas when $n>1$ are transformed to single arguments lambdas using tupled arguments.
 
-Note that $\IfThenElse{e_{cond}}{e_1}{e_2}$ term of $\langname$ has a lazy evaluation of its branches whereas right-hand-side $\lst{if}$ is a primitive operation and has a strict evaluation of the arguments. The laziness is achieved using lambda expressions of $\lst{Unit}$ $\to$ $\lst{Boolean}$ type.
+> Note that $\IfThenElse{e_{cond}}{e_1}{e_2}$ term of $\langname$ has a lazy evaluation of its branches whereas right-hand-side $\lst{if}$ is a primitive operation and has a strict evaluation of the arguments. The laziness is achieved using lambda expressions of $\lst{Unit}$ $\to$ $\lst{Boolean}$ type.
 
 We translate logical operations ($\lst{||}$, &&) of $\langname$, which are lazy on second argument to $\lst{if}$ term of $\langname$, which is recursively translated to the corresponding $\corelang$ term.
 
 Syntactic blocks of $\langname$ are eliminated and translated to nested lambda expressions, which unambiguously specify the evaluation semantics of blocks. The $\corelang$ is specified in [evaluation](evaluation.md).
 
-Note, that we use lowering transformation only to specify semantics. Implementations can optimize by evaluating ErgoTree directly as long as the semantics is preserved.
+Note that we use lowering transformation only to specify semantics. 
+
+Implementations can optimize by evaluating ErgoTree directly as long as the semantics is preserved.
 

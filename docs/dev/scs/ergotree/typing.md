@@ -33,64 +33,25 @@ $\langname$ is a strictly typed language, in which every term should have a type
 
 
 
-\(\begin{array}{c c c}
-    \frac{}{\Der{\Gamma}{C(\_, T)~:~T}}~(Const)
-    & 
-    \frac{}{\Der{\Gamma,x~:~T}{x~:~T}}~(Var)
-    &
-    \frac{
-        \Ov{\DerEnv{e_i:~T_i}}~~
-        ptype(\delta, \Ov{T_i}) :~(T_1,\dots,T_n) \to T
-    }{
-        \Apply{\delta}{\Ov{e_i}}:~T
-    }~(Prim) \\
-    & & \\ 
-\end{array}\) 
+$$\frac{}{\Der{\Gamma}{C(\_, T)~:~T}}~(Const)$$
+
+$$\frac{}{\Der{\Gamma,x~:~T}{x~:~T}}~(Var)$$
+
+$$\frac{\Ov{\DerEnv{e_i:~T_i}}~~ptype(\delta, \Ov{T_i}) :~(T_1,\dots,T_n) \to T}{\Apply{\delta}{\Ov{e_i}}:~T}~(Prim)$$
+
+$$\frac{\DerEnv{e_1 :~T_1}~~\dots~~\DerEnv{e_n :~T_n}}      {\DerEnv{(e_1,\dots,e_n)~:~(T_1,\dots,T_n)}}~(Tuple)$$
+
+$$\frac{\DerEnv{e~:~I,~e_i:~T_i}~~mtype(m, I, \Ov{T_i})~:~(I, T_1,\dots,T_n) \to T}{ \Apply{e.m}{\Ov{e_i}}:~T }~(MethodCall)$$ 
 
 
+$$\frac{\Der{\TEnv,\Ov{x_i:~T_i}}{e~:~T}}{\Der{\Gamma}{\TyLam{x_i}{T_i}{e}~:~(T_0,\dots,T_n) \to T}}~(FuncExpr)$$
 
-\(\begin{array}{c}
-\frac{\DerEnv{e_1 :~T_1}~~\dots~~\DerEnv{e_n :~T_n}}
-     {\DerEnv{(e_1,\dots,e_n)~:~(T_1,\dots,T_n)}}~(Tuple) \\
-\\ 
-\end{array}\) 
+$$\frac{\Der{\TEnv}{e_f:~(T_1,\dots,T_n) \to T}~~~\Ov{\Der{\TEnv}{e_i:~T_i}} }{ \Der{\Gamma}{\Apply{e_f}{\Ov{e_i}}~:~T} }~(Apply)$$
 
 
-\(\begin{array}{c}
-\frac{
-        \DerEnv{e~:~I,~e_i:~T_i}~~
-        mtype(m, I, \Ov{T_i})~:~(I, T_1,\dots,T_n) \to T
-    }
-    { \Apply{e.m}{\Ov{e_i}}:~T }~(MethodCall) \\
-\\ 
-\end{array}\) 
+$$\frac{\DerEnv{e_{cond}:~\lst{Boolean}}~~\DerEnv{e_1:~T}~~\DerEnv{e_2 :~T} }{\DerEnv{\IfThenElse{e_{cond}}{e_1}{e_2}~:~T} }~\lst{(If)}$$
 
-
-\(\begin{array}{c c}
-    \frac{\Der{\TEnv,\Ov{x_i:~T_i}}{e~:~T}}
-         {\Der{\Gamma}{\TyLam{x_i}{T_i}{e}~:~(T_0,\dots,T_n) \to T}}~(FuncExpr)
-          & 
-    \frac{ \Der{\TEnv}{e_f:~(T_1,\dots,T_n) \to T}~~~\Ov{\Der{\TEnv}{e_i:~T_i}} }
-         { \Der{\Gamma}{\Apply{e_f}{\Ov{e_i}}~:~T} }~(Apply) \\
-& \\ 
-\end{array}\) 
-
-
-\(\begin{array}{c c}
-    \frac{ \DerEnv{e_{cond} :~Boolean}}~~\DerEnv{e_1 :~T}~~\DerEnv{e_2 :~T} 
-        { \DerEnv{\IfThenElse{e_{cond}}{e_1}{e_2}~:~T} }~(If)
-         & 
-         \\
-         & \\ 
-\end{array}\) 
-\(
-    \frac{ 
-        \DerEnv{e_1 :~T_1}~\wedge~
-        \forall k\in\{2,\dots,n\}~\Der{\Gamma,x_1:~T_1,\dots,x_{k-1}:~T_{k-1}}{e_k:~T_k}~\wedge~
-        \Der{\Gamma,x_1:~T_1,\dots,x_n:~T_n}{e:~T}
-        }
-        { \DerEnv{\{ \Ov{\text{val}}~x_i = e_i;}~e\}~:~T} ~(BlockExpr)
-\)
+$\frac{\DerEnv{e_1 :~T_1}~\wedge~\forall k\in\{2,\dots,n\}~\Der{\Gamma,x_1:~T_1,\dots,x_{k-1}:~T_{k-1}}{e_k:~T_k}~\wedge~\Der{\Gamma,x_1:~T_1,\dots,x_n:~T_n}{e:~T}}{ \DerEnv{\{ \Ov{\text{val}}~x_i = e_i;}~e\}~:~T} ~(BlockExpr)$
 
 
 
