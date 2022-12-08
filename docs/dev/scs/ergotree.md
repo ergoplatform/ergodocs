@@ -70,3 +70,8 @@ The collection of constants contains the serialized constant data (using Constan
 - There is an ErgoTree serialization section [available](https://ergoplatform.org/docs/ErgoTree.pdf)
 - [Constant-less lambdas](https://github.com/ScorexFoundation/sigmastate-interpreter/issues/264)
 - [ErgoTree as an Authentication Language](https://www.ergoforum.org/t/ergotree-as-an-authentication-language/)
+- [Human representation for ergo tree #812](https://github.com/ScorexFoundation/sigmastate-interpreter/pull/812)
+
+### [ergotree-pseudo-code](https://github.com/ross-weir/ergo-script-re/tree/main/ergotree-pseudo-code)
+
+Pseudo code generator for compiled ergo trees. Attempts to create pseudo code roughly representing the ergo script that produced the tree. In some cases it can produce a script that is the equivilent (pseudo code compiles to the same ergo tree) but this is on a best effort basis.

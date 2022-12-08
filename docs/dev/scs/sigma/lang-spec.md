@@ -4,28 +4,16 @@
 
 ### Introduction
 
-ErgoScript is a language to write contracts for [Ergo
-blockchain](https://ergoplatform.org). ErgoScript contracts can be compiled to
-[ErgoTrees](https://ergoplatform.org/docs/ErgoTree.pdf), serialized and stored
-in UTXOs.
+ErgoScript is a language to write contracts for [Ergo blockchain](https://ergoplatform.org). ErgoScript contracts can be compiled to [ErgoTrees](ergotree.md), [serialized](serialization.md) and stored in UTXOs.
 
-A good starting point to writing contracts is to use [ErgoScript by
-Example](https://github.com/ergoplatform/ergoscript-by-example) with [Ergo
-Playgrounds](https://github.com/ergoplatform/ergo-playgrounds) or
-[Appkit](https://github.com/ergoplatform/ergo-appkit).
+A good starting point to writing contracts is to use [ErgoScript by Example](https://github.com/ergoplatform/ergoscript-by-example) with [Ergo Playgrounds](https://github.com/ergoplatform/ergo-playgrounds) or [Appkit](https://github.com/ergoplatform/ergo-appkit).
 
-ErgoScript compiler is
-[published](https://mvnrepository.com/artifact/org.scorexfoundation/sigma-state)
-as a library which is cross compiled for Java 7 and Java 8+ and thus can be used
-from any JVM lanugage and also on Android and JavaFX platforms.
+The ErgoScript compiler is [published](https://mvnrepository.com/artifact/org.scorexfoundation/sigma-state)
+as a library which is cross compiled for Java 7 and Java 8+ and can be used from any JVM lanugage, Android or JavaFX.
 
-The following example shows how source code of ErgoScript contract can be used
-to create new transaction using
-[Appkit](https://github.com/ergoplatform/ergo-appkit), see [full
-example](https://github.com/aslesarenko/ergo-appkit-examples/blob/master/java-examples/src/main/java/org/ergoplatform/appkit/examples/FreezeCoin.java)
-for details.
+The following example shows how source code of ErgoScript contract can be used to create new transaction using [Appkit](https://github.com/ergoplatform/ergo-appkit), see [FreezeCoin.java](https://github.com/aslesarenko/ergo-appkit-examples/blob/master/java-examples/src/main/java/org/ergoplatform/appkit/examples/FreezeCoin.java) for more details.
 
-```java
+```scala
 // To create transaction we use a builder obtained from the context
 // the builder keeps relationship with the context to access necessary blockchain data.
 UnsignedTransactionBuilder txB = ctx.newTxBuilder();
@@ -46,40 +34,37 @@ OutBox newBox = txB.outBoxBuilder()
         .build();
 ```
 
-The contract is given as the string literal which contains the block of `val`
-declarations followed by the logical expression. The expression defines the all
-possible conditions to spend the box. The contract can also contain _named
-constants_ (which cannot be represented as literals in the source code). 
-In the example `freezeDeadline` and `pkOwner` are named constants. The concrete
-values of named constants should be given to the compiler (see `compileContract`
-method)
+The contract is given as the string literal which contains the block of `val` declarations followed by the logical expression. The expression defines the all possible conditions to spend the box. The contract can also contain _**named
+constants**_ (which cannot be represented as literals in the source code). 
 
-The following sections describe ErgoScript and its operations. 
+In the example `freezeDeadline` and `pkOwner` are named constants. The concrete values of named constants should be given to the compiler (see `compileContract` method)
+
+**The following sections describe ErgoScript and its operations. **
 
 #### ErgoScript language features overview
 
-- syntax borrowed from Scala and Kotlin
-- standard syntax and semantics for well known constructs (operations, code blocks, if branches etc.)
-- high-order language with first-class lambdas which are used in collection operations
-- call-by-value (eager evaluation)
-- statically typed with local type inference
-- blocks are expressions 
-- semicolon inference in blocks
-- type constructors: Pair, Coll, Option
+- Syntax borrowed from Scala and Kotlin
+- Standard syntax and semantics for well known constructs (operations, code blocks, if branches etc.)
+- High-order language with first-class lambdas which are used in collection operations
+- Call-by-value (eager evaluation)
+- Statically typed with local type inference
+- Blocks are expressions 
+- Semicolon inference in blocks
+- Type constructors: Pair, Coll, Option
 
 #### Operations and constructs overview
 
 - Binary operations: `>, <, >=, <=, +, -, &&, ||, ==, !=, |, &, *, /, %, ^, ++`
-- predefined primitives: `blake2b256`, `byteArrayToBigInt`, `proveDlog` etc. 
-- val declarations: `val h = blake2b256(pubkey)`
-- if-then-else clause: `if (x > 0) 1 else 0`
-- collection literals: `Coll(1, 2, 3, 4)`
-- generic high-order collection operations: `map`, `filter`, `fold`, `exists`, `forall`, etc.
-- accessing fields of any predefined types: `box.value`
-- method invocation for predefined types: `coll.map({ x => x + 1 })`
-- function invocations (predefined and user defined): `proveDlog(pubkey)` 
-- user defined function declarations: `def isProven(pk: GroupElement) = proveDlog(pk).isProven`
-- lambdas and high-order methods: `OUTPUTS.exists { (out: Box) => out.value >= minToRaise }`
+- Predefined primitives: `blake2b256`, `byteArrayToBigInt`, `proveDlog` etc. 
+- Val declarations: `val h = blake2b256(pubkey)`
+- If-then-else clause: `if (x > 0) 1 else 0`
+- Collection literals: `Coll(1, 2, 3, 4)`
+- Generic high-order collection operations: `map`, `filter`, `fold`, `exists`, `forall`, etc.
+- Accessing fields of any predefined types: `box.value`
+- Method invocation for predefined types: `coll.map({ x => x + 1 })`
+- Function invocations (predefined and user defined): `proveDlog(pubkey)` 
+- User defined function declarations: `def isProven(pk: GroupElement) = proveDlog(pk).isProven`
+- Lambdas and high-order methods: `OUTPUTS.exists { (out: Box) => out.value >= minToRaise }`
 
 #### Data types 
 

@@ -7,7 +7,6 @@
 
 ```scala
 val bool: Boolean = true
-
 ```
 
 What’s going on here?

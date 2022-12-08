@@ -25,7 +25,7 @@ $$
 \newcommand{\Set}[1]{\{ #1 \}}
 $$
 
-## Predefined types
+# Predefined types
 
 
 ### Boolean

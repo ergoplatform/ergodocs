@@ -76,6 +76,10 @@ markdown_extensions:
   - meta
   - mdx_math
   - fenced_code
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
   - toc:
         permalink: "#"
   - admonition
@@ -354,8 +358,8 @@ nav:
             - Typing: dev/scs/ergotree/typing.md
             - Evaluation: dev/scs/ergotree/evaluation.md
             - Serialization: dev/scs/ergotree/serialization.md
-            - Types: dev/scs/ergotree/types.md
-            - Functions: dev/scs/ergotree/functions.md
+            - Predefined Types: dev/scs/ergotree/types.md
+            - Predefined Functions: dev/scs/ergotree/functions.md
             - Encoding: dev/scs/ergotree/encoding.md
         - Data Structures:
           - AVL Trees: dev/protocol/avl.md
