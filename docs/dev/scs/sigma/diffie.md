@@ -1,8 +1,8 @@
 # Diffie
 
-Diffie-Hellman is a way of generating a shared secret between two people in such a way that the secret can't be seen by observing the communication. That's an important distinction: 
+Diffie-Hellman generates a shared secret between two people so that the secret cannot be seen by observing the communication. That is an important distinction: 
 
-**You're not sharing information during the key exchange, you're creating a key together.** This is useful for creating shared public keys in MultiSig and Ring Signature settings.
+**You are not sharing information during the key exchange. You are creating a key together.** This is useful for creating shared public keys in MultiSig and Ring Signature settings.
 
 
 ## Diffie-Hellman Tuple
@@ -27,7 +27,7 @@ We call this **[proveDHTTuple](../../global-functions/#provedhtuple)(g, h, u, v)
 
 The security of ZeroJoin is based on the [Decision Diffie-Hellman (DDH) assumption](https://en.wikipedia.org/wiki/Decisional_Diffie%E2%80%93Hellman_assumption), a computational hardness assumption about a certain problem involving discrete logarithms in cyclic groups.
 
-- Basic tool to restore fungibility of digital notes.
+- A basic tool to restore the fungibility of digital notes.
 - Basic scheme, ZeroJoin, is based on ring signatures and proof of knowledge for a **Diffie-Hellman tuple** 
 - [Paper with contracts](https://eprint.iacr.org/2020/560)
 
@@ -39,7 +39,7 @@ The security of ZeroJoin is based on the [Decision Diffie-Hellman (DDH) assumpti
 
 ### Stealth Addresses
 
-Another solution for improving privacy is using stealth addresses. A stealth address preserves recipient privacy without per-transaction interaction needed (so receiver published an address e.g. on its website, and then sender can obtain some unique one-time address from it.
+Another solution for improving privacy is using stealth addresses. A stealth address preserves recipient privacy without per-transaction interaction needed (so the receiver publishes an address, e.g. on its website, and then the sender can obtain some unique one-time address from it.
 
 A solution in Ergo can be based on a non-interactive Diffie-Hellman key exchange. 
 
@@ -47,7 +47,7 @@ A solution in Ergo can be based on a non-interactive Diffie-Hellman key exchange
 - Then the buyer with public key **g<sup>y</sup>** obtains shared secret **(g<sup>x</sup>)<sup>y</sup> = (g<sup>y</sup>)<sup>x</sup>**
 - The box created by the buyer could be protected by **[ProveDLog](../../global-functions/#provedlog)(g<sup>xy</sup>** for generator **g<sup>y</sup>**).
 - Unfortunately, Ergo ProveDLog in Ergo does not support custom generators, but it can be bypassed with a little Ergo magic: **proveDHTuple(g<sup>y</sup>, g<sup>y</sup>, g<sup>xy</sup>, g<sup>xy</sup>)**. 
-- For one-time keys, the buyer can use a one-time secret **g<sup>r</sup>**.
+The buyer can use a one-time secret **g<sup>r</sup>**for one-time keys.
 
 
 

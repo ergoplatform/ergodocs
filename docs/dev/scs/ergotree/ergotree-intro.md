@@ -4,7 +4,7 @@ This section describes a **typed abstract syntax** of the ErgoTree language, whi
 
 Serialized ErgoTree expressions are written into *UTXO* boxes and then evaluated by the transaction verifier. 
 
-> Most Ergo users don't use ErgoTree directly since they are developing contracts in a higher-level language, such as [ErgoScript](ergoscript.md), which is then compiled into ErgoTree.
+> Most Ergo users do not use ErgoTree directly since they are developing contracts in a higher-level language, such as [ErgoScript](ergoscript.md), which is then compiled into ErgoTree.
 
 The reference implementation of ErgoTree uses Scala; however, alternative implementations can use other languages. This documentation provides a language-neutral specification of ErgoTree for developers of alternative ErgoTree implementations.
 
@@ -13,7 +13,7 @@ The design space of programming languages is very broad, ranging from general-pu
 The language for writing contracts on the blockchain must have several properties to serve as a robust platform for contractual money.
 
 1. First, **the language and the contract execution environment should be deterministic**. Once created and stored in the blockchain, a smart contract should always behave predictably and deterministically; it should only depend on well-defined data context and nothing else. 
-      1. As long as the data context doesn't change, any execution of the contract should return the same value any time it is executed on any execution platform using any compliant language implementation. No general-purpose programming language is deterministic because they provide non-deterministic operations, and ErgoTree doesn't have non-deterministic operations.
+      1. As long as the data context does not change, any execution of the contract should return the same value any time it is executed on any execution platform using any compliant language implementation. No general-purpose programming language is deterministic because they provide non-deterministic operations, and ErgoTree does not have non-deterministic operations.
 2. Second, **the language should facilitate spam-resistance**, i.e. defending against attacks when malicious contracts can overload the network nodes and bring the blockchain down ([Ler17](https://bitslog.wordpress.com/2017/01/08/a-bitcoin-transaction-that-takes-5-hours-to-verify/)). 
       1. To fulfil this goal transaction model of ErgoTree supports predictable cost estimation and the fast calculation of contract execution costs to ensure the evaluation cost of the given transaction is always
 within acceptable bounds. In a general (Turing-complete) case, such cost prediction is not possible and requires special mechanisms such as Gas ([Woo14](http://gavwood.com/Paper.pdf)). Gas limits on transactions indeed protect the network from spam attacks. Still, at the expense of the users, who need to be careful to specify the gas limit large enough for the transaction to complete; otherwise, the gas used for the failed transaction will be kept by the miners for their work, and the user will not get it back.

@@ -1,6 +1,6 @@
 # 3-out-of-5 Threshold Signature
 
-Let's say you want to create a ***ring spending contract***, where either of us can make a transaction from the same address, but we don't want anyone else to know which one of us is spending the funds. That's not possible with Bitcoin, and while Ethereum can, it would be expensive and complicated – especially with a ring size of 10 or 20 members, required for robust privacy.
+Lets say you want to create a ***ring spending contract***, where either of us can make a transaction from the same address, but we do not want anyone else to know which one of us is spending the funds. That is not possible with Bitcoin, and while Ethereum can, it would be expensive and complicated – especially with a ring size of 10 or 20 members, required for robust privacy.
 
 With Ergo, this kind of application can be created quickly, thanks to integrating Sigma protocols in the core that enables **self-sovereign application-level privacy**: trustless scripts that can be used to access mixers or other functionality without any third parties required.
 
@@ -20,7 +20,7 @@ atLeast(
 }
 ```
 
-This is an example `3-out-of-5` **threshold signature** which can be compiled to a `P2S` address. 
+The above is an example `3-out-of-5` **threshold signature**, which can be compiled to a `P2S` address. 
 
 Sending ergs to the [resulting address](https://wallet.plutomonkey.com/p2s/?source=ewphdExlYXN0KAogIDMsIAogIENvbGwoCiAgICBQSygiOWY4WlF0MVN1ZTZXNUFDZE1TUFJ6c0hqM2pqaVprYll5M0NFdEI0QmlzeEV5azRSc05rIiksIAogICAgUEsoIjloRldQeWhDSmN3NEtReUNHdTR5QUdmQzFpZVJBS3lGZzI0RktqTEpLMnVEZ0E4NzN1cSIpLCAKICAgIFBLKCI5ZmRWUDJqY2ExZTVuQ1RUNnE5aWpaTHNzR2o2djRqdVk4Z0VBeFVocDdZVHVTc0xzcFMiKSwgCiAgICBQSygiOWdBS2VSdTFXNERoNmFkV1hublltZnFqQ1RueG5TTXR5bTJMUFBNUEVyQ2t1c0NkNkYzIiksCiAgICBQSygiOWdtTnNxcnFkU3BwTFVCcWcyVXpSRW1taXZncWgxcjNqbU5jTEFjNTNoazNZQ3ZBR1dFIikKICApCikKfQ==) (protected by the threshold sig).
 

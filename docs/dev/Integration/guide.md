@@ -88,13 +88,13 @@ For an exchange, you can restrict people to only withdraw to P2PK addresses and 
 ### Composing transactions outside the node
 
 
-To get unspent UTXOs for some address, please use `transactions/boxes/byAddress/unspent` Explorer API method: 
+To get unspent UTXOs for some address, please use the `transactions/boxes/byAddress/unspent` Explorer API method: 
 
 ```
 https://api.ergoplatform.com/transactions/boxes/byAddress/unspent/9gAE5e454UT5s3NB1625u1LynQYPS2XzzBEK4xumvSZdqnXT35M 
 ```
 
-It would be best if you excluded UTXOs spent in the mempool. Use `/transactions/unconfirmed/byAddress` Explorer API method for that:
+It would be best if you excluded UTXOs spent in the mempool. Use the`/transactions/unconfirmed/byAddress` Explorer API method for that:
 
 ```
 https://api.ergoplatform.com/transactions/unconfirmed/byAddress/9gAE5e454UT5s3NB1625u1LynQYPS2XzzBEK4xumvSZdqnXT35M
@@ -110,7 +110,7 @@ Json json = JsonCodecsWrapper.ergoLikeTransactionEncoder().apply(tx);
 System.out.println(json.toString());
 ```
 
-And then, send this `JSON` via a POST request to the public Explorer. 
+And then send this `JSON` via a POST request to the public Explorer. 
 
 ```
 https://api.ergoplatform.com/api/v0/transactions/send*
@@ -172,7 +172,7 @@ Finally, construct the payment transaction like this:
 } 
 ```
 
-and post to `/wallet/transaction/send`
+And post to `/wallet/transaction/send`.
 
 Set value and fee accordingly, `value + fee = total sum of utxos`
 
@@ -197,7 +197,7 @@ And send `1 ERG` to the change address; however, the node will attach 100 dust i
 
 #### Failed to sign boxes
 
-This error can occur due to too many inputs being collected in a transaction for dusty wallets. 
+This error can occur due to too many inputs collected in a transaction for dusty wallets. 
 
 ```bash
 Failed to sign boxes due to Estimated execution cost 1001580 exceeds the limit 1000000: Vector(ErgoBox(0275eb3a125bc02fe997cb98c0de8131bd9b2e4617110d
@@ -205,7 +205,7 @@ Failed to sign boxes due to Estimated execution cost 1001580 exceeds the limit 1
 
 
 
-### Native Asssets
+### Native Assets
 
 In the case of large airdrops, many users mistakenly end up putting exchange addresses to receive native assets. An *auto-burn* method will be in future versions of the node to reduce the manual component of this task. See this [Issue](https://github.com/ergoplatform/ergo/issues/1604) for more information.
 
@@ -249,7 +249,7 @@ When you use appkit, Address.create() takes the address string. You can get the 
 
 **Some transactions don't seem to pay fees?**
 
-Fees are not part of the core protocol, but if you miss them, the transaction won't be propagated around the network by default.
+Fees are not part of the core protocol, but if you miss them, the transaction will not be propagated around the network by default.
 
 **What is the generation algorithm of boxid?**
 

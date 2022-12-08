@@ -196,7 +196,7 @@ Need help figuring out where to start developing? This [introduction to Mosaik](
     "title": "Sigma.JS",
     "content": "",
     "image": "../../assets/img/dev-grid/js.png",
-    "url": "../../lang/jvm"
+    "url": "../../../dev/lib/sigmajs/"
   },
 
 ]
@@ -217,13 +217,13 @@ Need help figuring out where to start developing? This [introduction to Mosaik](
   {
     "title": "Scrypto",
     "content": "cryptographic toolkit designed to make it easier and safer for developers to use cryptography in their applications.",
-    "url": "../stack/front-end"
+    "url": "../../../dev/lib/scrypto/"
 
   },
   {
     "title": "EIP12-types",
     "content": "static typing library",
-    "url": "../lang/mobile"
+    "url": "../../../dev/lib/eip12-types/"
   }
 ]
 
@@ -239,18 +239,18 @@ Need help figuring out where to start developing? This [introduction to Mosaik](
   {
     "title": "Node & Explorer Tools",
     "content": "",
-    "url": "../stack/back-end"
+    "url": "/dev/stack/explorer"
   },
   {
     "title": "APIs",
     "content": "",
-    "url": "../stack/front-end"
+    "url": "/dev/stack/api"
 
   },
   {
     "title": "Off-chain Tooling",
     "content": "",
-    "url": "../lang/mobile"
+    "url": "/dev/lib/off-chain/"
   }
 ]
 
@@ -264,18 +264,18 @@ Need help figuring out where to start developing? This [introduction to Mosaik](
   {
     "title": "Creating a simple *pay-to-script* app",
     "content": "",
-    "url": "../stack/back-end"
+    "url": "/dev/scs/p2s/"
   },
   {
     "title": "Creating a signature",
     "content": "",
-    "url": "../stack/front-end"
+    "url": "/dev/scs/sigma/3-out-of-5/"
 
   },
   {
     "title": "Sending a chained transaction",
     "content": "",
-    "url": "../lang/mobile"
+    "url": "/dev/anatomy/transactions/chained/"
   }
 ]
 

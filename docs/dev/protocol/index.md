@@ -1,6 +1,6 @@
 # Powering the future of finance
 
-Ergo is a [next-generation](scaling.md) smart contract platform that enables anyone to participate in the digital DeFi revolution now.
+Ergo is a [next-generation](scaling.md) smart contract platform that enables anyone to participate in the digital DeFi revolution *now*.
 
 Ensuring economic freedom for ordinary people through decentralized, private and secure financial tools.
 
@@ -79,7 +79,7 @@ Ensuring economic freedom for ordinary people through decentralized, private and
 
 ::/cards::
 
-> *Creating financial contracts on the blockchain isn't just about the functionality; it's about making that functionality safe, accessible, and powerful.* 
+> *"Creating financial contracts on the blockchain isn't just about the functionality; it's about making that functionality safe, accessible, and powerful."* 
 
 
 

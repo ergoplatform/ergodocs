@@ -331,7 +331,6 @@ The whole space of 256 codes is divided as the following:
 
 |Interval | Distribution|
 |--|--|
-$\bf{Interval}$ | $\bf{Distribution}$
 $\lst{0x00}$ | special value to represent undefined type ($\lst{NoType}$ in $\ASDag$)
 $\lst{0x01 - 0x6F(111)}$ | data types including primitive types, arrays, options aka nullable types, classes (in future), 111 = 255 - 144 different codes 
 $\lst{0x70(112) - 0xFF(255)}$ | function types $\lst{T1 => T2}$, 144 = 12 x 12 different codes 

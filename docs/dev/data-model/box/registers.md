@@ -7,14 +7,14 @@ tags:
 > [ErgoScript](/dev/scs/ergoscript) (as well as [ErgoTree](/dev/scs/ergotree)) is **typed**, so accessing a register is an operation that involves some expected type given in brackets. 
 
     
-For example, `val x = SELF.R4[Int]` expects the register (if it is present) to have type `Int`.  Thus, the `SELF.R4[Int]` expression should evaluate a valid value of the `Option[Int]` type.
+For example, `val x = SELF.R4[Int]` expects the register (if it is present) to have the type `Int`.  Thus, the `SELF.R4[Int]` expression should evaluate a valid value of the `Option[Int]` type.
 
 
 **There are three cases:**
 
 1. If the register does not exist. Then `val x = SELF.R4[Int]` succeeds and returns the None value, which conforms to any value of type `Option[T]` for any T. (In the example above, T equals `Int`). Calling `x.get` fails when x is equal to None, but `x.isDefined` succeeds and returns `false`.
 2. If the register contains a value `v` of type `Int`. Then `val x = SELF.R4[Int]` succeeds and returns `Some(v)`, which is a valid value of type `Option[Int]`. In this case, calling `x.get` succeeds and returns the value `v` of type `Int`. Calling `x.isDefined` returns `true`.
-3. If the register contains a value `v` of type T other than `Int`. Then `val x = SELF.R4[Int]` fails because there is no way to return a valid value of type `Option[Int]`. The register value is present, so returning it as None would break the typed semantics of registers collection.
+3. If the register contains a value `v` of type T other than `Int`. Then `val x = SELF.R4[Int]` fails because there is no way to return a valid value of type `Option[Int]`. The register value is present, so returning it as None would break the typed semantics of the register's collection.
     
 Within some use cases, a register may have values of different types. We can use an additional register as a tag to access such a register.
 
@@ -47,7 +47,7 @@ The Erg amount is written directly (with no identifier) as a number into the reg
 
 There are some more significant differences between Ergs and other tokens:
 
-* **ERGs can not be burnt**: the total amount of ergs in transaction inputs should equal the total amount of the outputs. Unlike , we can burn other tokens: the total amount for a token in transaction inputs should be no less than the amount of the outputs.
+* **ERGs can not be burnt**: the total amount of ergs in transaction inputs should equal the total amount of the outputs. Unlike we can burn other tokens: the total amount for a token in transaction inputs should be no less than the amount of the outputs.
 * [Storage rent](/mining/rent) is **only payable in ERG**.
 
 Tokens can represent myriad things, such as shares, complementary currency units, or whatever else you can think of. 

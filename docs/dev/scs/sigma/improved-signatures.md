@@ -1,12 +1,12 @@
 
-Initial implementation of distributed signatures support in the node worked well in simple cases, and ZK Treasury built on top of it. However, in complex cases it has some problems:
+The initial implementation of distributed signatures support in the node worked well in simple cases, and ZK Treasury built on top of it. However, in complex cases, it has some problems:
 
-* hints generated (such as commitments) were not tied to a position of a sub-expression in a sigma-expression. For example, for statement like "atLeast(2, Coll(pkAlice, pkBob, pkCharlie)) && (pkBob || pkDiana)", the same commitment would be generated for Bob. Which is improper and insecure at all - a signature would reveal Bob's secret key (as the same randomness used twice for different challenges in Schnorr protocols).
+* hints generated (such as commitments) were not tied to a position of a sub-expression in a sigma-expression. For example, for a statement like "atLeast(2, Coll(pkAlice, pkBob, pkCharlie)) && (pkBob || pkDiana)", the same commitment would be generated for Bob. This is improper and insecure - a signature would reveal Bob's secret key (as the same randomness is used twice for different challenges in Schnorr protocols).
 * similarly, hints generated were not tied to inputs.
 
-This is fixed with new API introduced in distributed-sigs branch. Now all the hints tied with input indexes and also with positions in sigma-tree after script reduction with current context. Also, API is now simpler-to-use I suppose.
+This is fixed with the new API introduced in the distributed-sigs branch. Now all the hints are tied with input indexes and positions in the sigma tree after script reduction with the current context. Also, API is now simpler-to-use.
 
-So let me provide a new tutorial on collective signing. Like in the previous tutorial, first we pay to 2-out-of-3 spending script (with keys stored in registers):
+So let me provide a new tutorial on collective signing. Like in the previous tutorial, first, we pay to 2-out-of-3 spending script (with keys stored in registers):
 
 ```
 {
@@ -18,7 +18,7 @@ atLeast(2, Coll(proveDlog(pkA), proveDlog(pkB), proveDlog(pkC)))
 }
 ```
 
-Then, when a transaction is confirmed (https://explorer.ergoplatform.com/en/transactions/71aa67f95e96827193bdf711f6ccf41b30ef8bbbdaef63ed672dfb7420a4c314) , we get output bytes via /utxo/byIdBinary/{boxId} . Then we generate an unsigned transaction by providing inputs directly, in our example, by providing the following input to /wallet/transaction/generateUnsigned : 
+Then, when a transaction is confirmed (https://explorer.ergoplatform.com/en/transactions/71aa67f95e96827193bdf711f6ccf41b30ef8bbbdaef63ed672dfb7420a4c314), we get output bytes via /utxo/byIdBinary/{boxId}. Then we generate an unsigned transaction by providing inputs directly, in our example, by providing the following input to /wallet/transaction/generateUnsigned : 
  
 ```
 {
@@ -37,7 +37,7 @@ Then, when a transaction is confirmed (https://explorer.ergoplatform.com/en/tran
 }
 ```
 
-Then Alice generates commitments for the unsigned transaction by sending it to the NEW /wallet/generateCommitments (additional secrets to be used along with wallet's can be provided also), and in the output she's getting both secret and public hints:
+Then Alice generates commitments for the unsigned transaction by sending it to the NEW /wallet/generateCommitments (additional secrets to be used along with wallets can also be provided), and in the output, she is getting both secret and public hints:
 
 ```
 {
@@ -75,7 +75,7 @@ Then Alice generates commitments for the unsigned transaction by sending it to t
 
 (secret randomness is omitted to avoid private key extraction).
 
-Then Alice must store secret hints locally and provide public to Bob. Bob is signing using Alice's hints by sending a request to /wallet/transaction/sign like: 
+Then Alice must store secret hints locally and provide the public with Bob. Bob is signing using Alice's hints by sending a request to /wallet/transaction/sign like: 
 
 ```
 {
@@ -142,9 +142,9 @@ Then Alice must store secret hints locally and provide public to Bob. Bob is sig
 }
 ```
 
-and sending signed (but invalid) transaction to Alice (he can send hints generated on the next step instead).
+And he sent signed (but invalid) transactions to Alice (he can send hints generated on the next step instead).
 
-Now Alice is extracting commitment from Bob and Carol from the transaction, by sending a request to /script/extractHints like:
+Now Alice is extracting a commitment from Bob and Carol from the transaction by sending a request to `/script/extractHints` like:
 
 ```
 {
@@ -199,7 +199,7 @@ Now Alice is extracting commitment from Bob and Carol from the transaction, by s
 }
 ```
 
-and then she adds her secret hint to generate valid signed transaction, a request to /wallet/transaction/sign would be like: 
+And then she adds her secret hint to generate a valid signed transaction, a request to /wallet/transaction/sign would be like this: 
 
 ```
 {
@@ -308,6 +308,5 @@ and then she adds her secret hint to generate valid signed transaction, a reques
 
 (secret randomness omitted again)
 
-And now generated signed valid transaction can be broadcasted. 
+And now a generated signed valid transaction could be broadcasted. 
 
-@anon_real please update ZK Treasury accordingly and check it with complex statements.

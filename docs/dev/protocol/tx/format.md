@@ -5,7 +5,7 @@ A box is made of **registers** *(and nothing but registers!)*; we allow every bo
 
 Each register is an expression in the sigma language. Thus the registers are typed: every register contains a value of some type. Types are defined in TODO. The value should be evaluated (i.e. it should be a concrete constant value, not a function of a known output type).
 
-We introduce `extract({})` function, which is reading contents of a register, for example, `extract({c, R_0})` extracts monetary value from the box `c`.
+We introduce the `extract({})` function, which reads the contents of a register, for example, `extract({c, R_0})` extracts monetary value from the box `c`.
 
 Box bytes used to obtain the box identifier, build authenticated tree for the state, and build a transaction, are to be formed as follows:
 
@@ -14,7 +14,7 @@ Box bytes used to obtain the box identifier, build authenticated tree for the st
 -   *creation height* VLQ-encoded unsigned integer value
 -   *number of tokens* which box is carrying. Represented as a one-byte unsigned integer.
 -   *tokens*. A box can carry multiple tokens. A single record in this field is represented as a tuple `token\_identifier -> amount`, where the identifier is 32 bytes, and the amount is a VLQ-encoded integer.
--   *number of additional registers.* Extra registers should come in order (R4, \..., etc), so this number, represented as a 1-byte unsigned value, defines how much non-empty registers are coming after mandatory ones. If the number is zero, the next field is missed.
+-   *number of additional registers.* Extra registers should come in order (R4, \..., etc.), so this number, represented as a 1-byte unsigned value, defines how much longer non-empty registers are coming after mandatory ones. If the number is zero, the next field is missed.
 -   *additional registers.* Extra registers are serialized without any delimiters. Each register is serialized as a sigma expression.
 -   *transaction identifier.* 32-byte long identifier of a transaction which created the box 
 -   *index of a transaction output.* VLQ-encoded index of the box in the transaction outputs.
@@ -30,8 +30,8 @@ To solve the issue, we split the concepts of a box and a box candidate. A box ca
 Ergo transaction consists of 3 parts:
 
 - `inputs` - links to boxes that will be removed from the state during the transaction application. Every input consists of box id, proof for the final sigma proposition of this box-protecting script, and a context extension to be used during script evaluation.
-- `data inputs` - links to boxes that won't be removed from the state but will be available in the context of regular inputs scripts.
-- `outputs` - new boxes that will be included in the state during the transaction application.
+- `data inputs` - links to boxes that will not be removed from the state but will be available in the context of regular input scripts.
+- `outputs` - new boxes will be included in the state during the transaction application.
 
 Transaction bytes are to be formed as follows:
 

@@ -13,7 +13,7 @@ We call this object a ***'box'***.
 ## Overview 
 
 - A box is an **immutable object** which can only be created or removed. 
-- A box is not simply a coin; it contains data, code and registers. Even more, there's nothing in the box but registers. 
+- A box is not simply a coin; it contains data, code and registers. Even more, there is nothing in the box but registers. 
 - There are four predefined registers, with monetary value, protecting script, and an identifier of a transaction which created the box.
 - Because the data of the transaction that created the box is included, the box has unique contents and, therefore, a unique id. 
 - Boxes are **first-class citizens** in the Ergo protocol. 
@@ -74,7 +74,7 @@ A box, at the minimum, has four pieces of information.
 Registers must be densely packed; we cannot sandwich empty registers between non-empty ones. The optional registers can contain data of any of the following types:
 
 - `Int`, `Long` with the usual semantics of Scala.
-`BigInt` is a 256-bit integer (i.e., all computation is done modulo 2^256).
+`BigInt` is a 256-bit integer (i.e., all computation is modulo 2^256).
 - `GroupElement`, a point on the Secp256k1 curve represented in compressed format.
 - `Coll[Byte]`, a collection of bytes, semantically similar to `Array[Byte]` in Scala.
 - Collection of the above, i.e., `Coll[Int]`, `Coll[GroupElement]`, `Coll[Coll[Byte]]`, etc.

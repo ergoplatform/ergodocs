@@ -1,5 +1,4 @@
-
-### Signing A Transaction
+# Signing A Transaction
 
 To spend a box, a spending transaction `tx` has as an input; one needs to use `bytesToSign(tx)` (note that different inputs can be signed in parallel; however, the coins being spent are to be specified before signing), as well as the current state of the blockchain, or `context`. The signer also can extend the context by putting values there.
 
@@ -11,7 +10,7 @@ By having this data, a signer (or a prover) of an input first reduces the guardi
 -   expression still containing predicates over the context. That means more than context is needed to evaluate some predicates over it. Prover can look into its own not yet revealed secrets to extend context. If the secrets are found, the prover the expression further and does the next step if there is nothing more to evaluate. Otherwise, the prover aborts.
 -   expression containing only expressions over secret information provable via `\Sigma`-protocols. This is the most common case, and we will explain it further.
 
-We are having possible complex expression, like `dlog(x_1) \lor (dlog(x2) /\ dlog(x3))`, where `dlog(x)` means "prove me knowledge of a secret `w`, such as for a known group with generator `g`, `g^w = x`, via a non-interactive form of the Schnorr protocol". Internally, this expression is represented as a tree (TODO). This proof is to be proven and then serialized into a binary spending proof (which could be included in a transaction) as follows:
+We have possible complex expressions, like `dlog(x_1) \lor (dlog(x2) /\ dlog(x3))`, where `dlog(x)` means "prove me knowledge of a secret `w`, such as for a known group with generator `g`, `g^w = x`, via a non-interactive form of the Schnorr protocol". Internally, this expression is represented as a tree (TODO). This proof is to be proven and then serialized into a binary spending proof (which could be included in a transaction) as follows:
 
 **Proving steps for a tree:**
 
@@ -20,7 +19,7 @@ We are having possible complex expression, like `dlog(x_1) \lor (dlog(x2) /\ dlo
 
 > Note that all descendants of a simulated node will be later simulated, even if marked as real. This is what the next step will do.
 
-Root should end up real according to this rule -- else you won't be able to carry out the proof in the end.
+Root should end up real according to this rule -- else you will not be able to carry out the proof.
 
 1. **top-down:** mark every child of a simulated node \"simulated.\" If two or more children of a real `\lor` are real, mark all but one simulated.
 2. **top-down:** compute a challenge for every simulated child of every `\lor` and `\land`, according to the following rules. If `\lor`, then every simulated child gets a fresh random challenge. If `\land` (which means `\land` itself is simulated, and all its children are), then every child gets the same challenge as the `\land`.

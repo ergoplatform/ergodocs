@@ -1,6 +1,6 @@
 # Transaction Graphs
 
-Ergo supports a more advanced technique called transaction graphs, where cycles are allowed in contract references, as shown below.
+As shown below, Ergo supports a more advanced technique called transaction graphs, where cycles are allowed in contract references.
 
 ![](../../../assets/img/scs/tx-graph.png)
 

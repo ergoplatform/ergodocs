@@ -1,6 +1,6 @@
 # Send A Chained Transaction
 
-Chained transactions (spending outputs of offchain transactions)
+Chained transactions (spending outputs of off-chain transactions)
 
 
 - The *simple-send* example below was adapted from [ergpy examples](https://github.com/mgpai22/ergpy/tree/main/examples). 
@@ -32,7 +32,7 @@ amount = [0.22, 0.33, 0.11]
 
 consecutive_transactions = 3
 
-# the amount of time in seconds the program will pause in between submitting txs
+# the amount of time in seconds the program will pause in between submitting transactions
 sleep_time = 0.5 
 
 # here, we calculate the number of ergs required for the genesis outbox

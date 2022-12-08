@@ -1,5 +1,4 @@
-
-### Transaction Merkle Tree 
+# Transaction Merkle Tree 
 
 Similar to how a miner in Bitcoin builds a Merkle tree of block transactions, as well as a Merkle tree of transaction witnesses (after the Segwit upgrade), in Ergo, a miner should build a Merkle tree (and include a correct root hash of the tree into a block header), which is in case of Ergo combines both transactions and their respective spending proofs.
 
