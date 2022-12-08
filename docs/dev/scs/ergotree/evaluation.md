@@ -26,14 +26,9 @@ $$
 $$
 
 
-Evaluation of $\langname$ is specified by its translation to $\corelang$, whose
-terms form a subset of $\langname$ terms. Thus, typing rules of $\corelang$ form
-a subset of typing rules of $\langname$.
+Evaluation of $\langname$ is specified by its translation to $\corelang$, whose terms form a subset of $\langname$ terms. Thus, typing rules of $\corelang$ form a subset of typing rules of $\langname$.
 
-Here we specify evaluation semantics of $\corelang$, which is based on
-call-by-value (CBV) lambda calculus. Evaluation of $\corelang$ is specified
-using denotational semantics. To do that, we first specify denotations of
-types, then typed terms and then equations of denotational semantics.
+Here we specify evaluation semantics of $\corelang$, which is based on call-by-value (CBV) lambda calculus. Evaluation of $\corelang$ is specified using denotational semantics. To do that, we first specify denotations of types, then typed terms and then equations of denotational semantics.
 
 > Definition 1: **The following CBV terms are called values:**
 
@@ -41,34 +36,18 @@ $$V :== x \mid C(d, T) \mid \Lam{x}{M}$$
 
 > All CBV terms are called producers. (This is because, when evaluated, they produce a value.)
 
+We now describe and explain a denotational semantics for the $\corelang$ language. The key principle is that each type $A$ denotes a set $\Denot{A}$ whose elements are the denotations of values of the type $A$.
 
-We now describe and explain a denotational semantics for the $\corelang$
-language. The key principle is that each type $A$ denotes a set $\Denot{A}$
-whose elements are the denotations of values of the type $A$.
+Thus the type \lst{Boolean} denotes the 2-element set $\{\lst{true},\lst{false}\}$, because there are two values of type $\lst{Boolean}$. Likewise the type $(T_1,\dots,T_n)$ denotes $(\Denot{T_1},\dots,\Denot{T_n})$ because a value of type $(T_1,\dots,T_n)$ must be of the form $(V_1,\dots,V_n)$, where each $V_i$ is value of type $T_i$.
 
-Thus the type \lst{Boolean} denotes the 2-element set
-$\{\lst{true},\lst{false}\}$, because there are two values of type
-\lst{Boolean}. Likewise the type $(T_1,\dots,T_n)$ denotes
-$(\Denot{T_1},\dots,\Denot{T_n})$ because a value of type $(T_1,\dots,T_n)$
-must be of the form $(V_1,\dots,V_n)$, where each $V_i$ is value of type
-$T_i$.
+Given a value $V$ of type $A$, we write $\Denot{V}$ for the element of $A$ that it denotes. Given a close term $M$ of type $A$, we recall that it produces a value $V$ of type $A$. So $M$ will denote an element $\Denot{M}$ of $\Denot{A}$.
 
-Given a value $V$ of type $A$, we write $\Denot{V}$ for the element of $A$
-that it denotes. Given a close term $M$ of type $A$, we recall that it
-produces a value $V$ of type $A$. So $M$ will denote an element $\Denot{M}$
-of $\Denot{A}$.
-
-A value of type $A \to B$ is of the form $\Lam{x}{M}$. This, when
-applied to a value of type $A$ gives a value of type $B$. So $A \to B$
-denotes $\Denot{A} \to \Denot{B}$. It is true that the syntax appears to
-allow us to apply $\Lam{x}{M}$ to any term $N$ of type $A$. But $N$ will be
-evaluated before it interracts with $\Lam{x}{M}$, so $\Lam{x}{M}$ is really only applied to the value that $N$ produces.
+A value of type $A \to B$ is of the form $\Lam{x}{M}$. This, when applied to a value of type $A$ gives a value of type $B$. So $A \to B$ denotes $\Denot{A} \to \Denot{B}$. It is true that the syntax appears to allow us to apply $\Lam{x}{M}$ to any term $N$ of type $A$. But $N$ will be evaluated before it interracts with $\Lam{x}{M}$, so $\Lam{x}{M}$ is really only applied to the value that $N$ produces.
 
 
 > **Definition 2:** A **context** $\Gamma$ is a finite sequence of identifiers with valuetypes $x_1:A_1, \dots ,x_n:A_n$. Sometimes we omit the identifiers and write $\Gamma$ as a list of value types.
 
-- Given a context $\Gamma = x_1:A_1,\dots,x_n:A_n$, an environment (list of bindings for identifiers) associates to each $x_i$ as value of type $A_i$. So
-the environment denotes an element of $(\Denot{A_1},\dots,\Denot{A_n})$, and we write $\Denot{\Gamma}$ for this set.
+- Given a context $\Gamma = x_1:A_1,\dots,x_n:A_n$, an environment (list of bindings for identifiers) associates to each $x_i$ as value of type $A_i$. So the environment denotes an element of $(\Denot{A_1},\dots,\Denot{A_n})$, and we write $\Denot{\Gamma}$ for this set.
 - Given a $\corelang$ term $\DerEnv{M: B}$, we see that $M$, together with environment, gives a closed term of type $B$. So $M$ denotes a function $\Denot{M}$ from $\Denot{\Gamma}$ to $\Denot{B}$.
 
 In summary, the denotational semantics is organized as follows.

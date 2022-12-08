@@ -1,3 +1,4 @@
+## Predefined types
 $$
 \newcommand{\TEnv}{\Gamma}
 \newcommand{\Der}[2]{#1~\vdash~#2}
@@ -20,151 +21,474 @@ $$
 \newcommand{\False}{\text{false}}
 \newcommand{\True}{\text{true}}
 \newcommand{\langname}{ErgoTree}
-\newcommand{\corelang}{$Core-}\lambda
+\newcommand{\corelang}{Core-\lambda}
+\newcommand{\Denot}[1]{[\![#1]\!]}
+\newcommand{\Set}[1]{\{ #1 \}}
 $$
 
-# Type Serialization
+### Boolean
 
-> This page is a WIP. Please see [ErgoTree.pdf](https://storage.googleapis.com/ergo-cms-media/docs/ErgoTree.pdf) for full details.
-> 
+### Byte 
 
-In this section, we describe how the types (like \lst{Int}, \lst{Coll[Byte]},
-etc.) are serialized; then, we define the serialization of typed data. This will
-give us a basis to describe the serialization of Constant nodes of \ASDag. From
-that, we proceed to serialization of arbitrary \ASDag trees.
+#### Byte.toByte (106.1)
 
-For the motivation behind this type of encoding, please see Appendix~\ref{sec:appendix:motivation:type}.
+- *Description*: Converts this numeric value to **Byte**, throwing exception if overflow.
+- *Signature*: **`def toByte: Byte`**
+- *Serialized as:* Downcast
 
-## Distribution of type codes
+#### Byte.toShort (106.2)
 
+- *Description*: Converts this numeric value to Short, throwing exception if overflow.
+- *Signature*: **`def toShort: Short`**
+- *Serialized as:* Upcast
 
-The whole space of 256 codes is divided as the following:
+#### Byte.toInt (106.3)
 
+- *Description*: Converts this numeric value to Int, throwing exception if overflow.
+- *Signature*: **`def toInt: Int`**
+- *Serialized as:* Upcast
 
-$$\bf{Interval}$$ \& \bf{Distribution}
+#### Byte.toLong (106.4)
 
-$$\lst{0x00}$$ \& special value to represent undefined type (\lst{NoType} in \ASDag)
+- *Description*: Converts this numeric value to Long, throwing exception if overflow.
+- *Signature*: **`def toLong: Long`**
+- *Serialized as:* Upcast
 
-$$\lst{0x01 - 0x6F(111)}$$ & data types including primitive types, arrays, options
-aka nullable types, classes (in future), 111 = 255 - 144 different codes 
+#### Byte.toBigInt (106.5)
 
-\lst{0x70(112) - 0xFF(255)} & function types \lst{T1 => T2}, 144 = 12 x 12
-different codes 
- 
-
-### Encoding Data Types
-
-There are nine different values for primitive types, and two more are reserved for future extensions.
-Each primitive type has an id in a range {1,...,11} as the following.
-
-
-1     &   Boolean   
-2     &   Byte  
-3     &   Short (16 bit)  
-4     &   Int (32 bit)  
-5     &   Long (64 bit)  
-6     &   BigInt (java.math.BigInteger)  
-7     &   GroupElement (org.bouncycastle.math.ec.ECPoint)  
-8     &   SigmaProp   
-9     &   reserved for Char   
-10    &   reserved for Double   
-11    &   reserved   
+- *Description*: Converts this numeric value to BigInt
+- *Signature*: **`def toBigInt: BigInt`**
+- *Serialized as:* Upcast
 
 
-For each type constructor like $\lst{Coll}$ or $\lst{Option}$ we use the encoding
-schema defined below. Type constructor has associated $\emph{base code}$ (e.g.
-12 for $\lst{Coll[_]}$, 24 for $\lst{Coll[Coll[_]]}$ etc. ), which is multiple of
-12.
-Base code can be added to primitive type id to produce code of constructed
-type; for example, 12 + 1 = 13 is a code of \lst{Coll[Byte]}. The code of the type constructor (12 in this example) is used when the type parameter is a non-primitive type (e.g. \lst{Coll[(Byte, Int)]}). In this case, the code of type
-constructor is read first, and then recursive descent is performed to read
-bytes of the parameter type (in this case \lst{(Byte, Int)}) This encoding
-allows very simple and quick decoding by using div and mod operations.
+### Short 
 
-The interval of codes for data types is divided as the following:
+#### Short.toByte (106.1)
 
-\begin{figure}[h] \footnotesize
-    \(\begin{tabularx}{\textwidth}{| l | l | X |}
+- *Description*: Converts this numeric value to Byte, throwing exception if overflow.
+- *Signature*: **`def toByte: Byte`**
+- *Serialized as:* Downcast
 
-\bf{Interval} & \bf{Type constructor} & \bf{Description}  
-0x01 - 0x0B(11)     &                    & primitive types (including 2 reserved)  
-0x0C(12)            & \lst{Coll[_]}          & Collection of non-primitive types (\lst{Coll[(Int,Boolean)]})  
-0x0D(13) - 0x17(23) & \lst{Coll[_]}          & Collection of primitive types (\lst{Coll[Byte]}, \lst{Coll[Int]}, etc.)  
-0x18(24)            & \lst{Coll[Coll[_]]}    & Nested collection of non-primitive types (\lst{Coll[Coll[(Int,Boolean)]]})  
-0x19(25) - 0x23(35) & \lst{Coll[Coll[_]]}    & Nested collection of primitive types (\lst{Coll[Coll[Byte]]}, \lst{Coll[Coll[Int]]})  
-0x24(36)            & \lst{Option[_]}        & Option of non-primitive type (\lst{Option[(Int, Byte)]})  
-0x25(37) - 0x2F(47) & \lst{Option[_]}        & Option of primitive type (\lst{Option[Int]})  
-0x30(48)            & \lst{Option[Coll[_]]}  & Option of Coll of non-primitive type (\lst{Option[Coll[(Int, Boolean)]]})  
-0x31(49) - 0x3B(59) & \lst{Option[Coll[_]]}  & Option of Coll of primitive type (\lst{Option[Coll[Int]]})  
-0x3C(60)            & \lst{(_,_)}            & Pair of non-primitive types (\lst{((Int, Byte), (Boolean,Box))}, etc.)  
-0x3D(61) - 0x47(71) & \lst{(_, Int)}         & Pair of types where first is primitive (\lst{(_, Int)})  
-0x48(72)            & \lst{(_,_,_)}          & Triple of types   
-0x49(73) - 0x53(83) & \lst{(Int, _)}         & Pair of types where second is primitive (\lst{(Int, _)})  
-0x54(84)            & \lst{(_,_,_,_)}        & Quadruple of types   
-0x55(85) - 0x5F(95) & \lst{(_, _)}           & Symmetric pair of primitive types (\lst{(Int, Int)}, \lst{(Byte,Byte)}, etc.)  
-0x60(96)            & \lst{(_,...,_)}        & \lst{Tuple} type with more than 4 items \lst{(Int, Byte, Box, Boolean, Int)}  
-0x61(97)            & \lst{Any}             & Any type   
-0x62(98)            & \lst{Unit}            & Unit type  
-0x63(99)            & \lst{Box}             & Box type   
-0x64(100)           & \lst{AvlTree}         & AvlTree type   
-0x65(101)           & \lst{Context}         & Context type   
-0x65(102)           & \lst{String}          & String   
-0x66(103)           & \lst{IV}              & TypeIdent   
-0x67(104)- 0x6E(110)&                    & reserved for future use   
-0x6F(111)           &                    & Reserved for future \lst{Class} type (e.g. user-defined types)   
-\end{tabularx}\)
-\label{fig:ser:type:primtypes}
-\end{figure}
+#### Short.toShort (106.2)
 
-\subsubsection{Encoding Function Types}
+- *Description*: Converts this numeric value to Short, throwing exception if overflow.
+- *Signature*: **`def toShort: Short`**
+- *Serialized as:* Downcast
 
-We use $12$ different values for both domain and range types of functions. This
-gives us $12 * 12 = 144$ function types in total and allows us to represent $11 *
-11 = 121$ functions over primitive types using just a single byte.
+#### Short.toInt (106.3)
 
-Each code $F$ in a range of function types can be represented as
-$F = D * 12 + R + 112$, where $D, R \in \{0,\dots,11\}$ - indices of domain and range types correspondingly, 
-$112$ - is the first code in an interval of function types. 
+- *Description*: Converts this numeric value to Int, throwing exception if overflow.
+- *Signature*: **`def toInt: Int`**
+- *Serialized as:* Downcast
 
-If $D = 0$, then the domain type is not primitive and recursive descent is necessary to write/read the domain type.
+#### Short.toLong (106.4)
 
-If $R = 0$, then the range type is not primitive and recursive descent is necessary to write/read the range type.
+- *Description*: Converts this numeric value to Long, throwing exception if overflow.
+- *Signature*: **`def toLong: Long`**
+- *Serialized as:* Upcast
 
-\subsubsection{Recursive Descent}
 
-When an argument of a type constructor is not a primitive type, we fallback to
-the simple encoding schema.
+#### Short.toBigInt (106.5)
 
-In such a case, we emit the special code for the type constructor according to
-the table above and descend recursively to every child node of the type tree.
+- *Description*: Converts this numeric value to BigInt
+- *Signature*: **`def toBigInt: BigInt`**
+- *Serialized as:* Upcast
 
-We do this descend only for those children whose code cannot be embedded in
-the parent code. For example, serialization of \lst{Coll[(Int,Boolean)]}
-proceeds as the following:
-\begin{enumerate}
-\item emit \lst{0x0C} because element of collection is not primitive 
-\item recursively serialize \lst{(Int, Boolean)}
-\item emit \lst{0x3D} because the first item in the pair is primitive
-\item recursively serialize \lst{Boolean}
-\item emit \lst{0x02} - the code for primitive type \lst{Boolean}
-\end{enumerate}
+### Int 
 
-\noindent Examples
+#### Int.toByte (106.1)
 
-\begin{figure}[h] \footnotesize
-\(\begin{tabularx}{\textwidth}{| l | c | c | l | c | X |}
+- *Description*: Converts this numeric value to Byte, throwing exception if overflow.
+- *Signature*: **`def toByte: Byte`**
+- *Serialized as:* Downcast
 
-\bf{Type}                &\bf{D} & \bf{R} & \bf{Bytes} & \bf{\#Bytes} &  \bf{Comments}  
-\lst{Byte}               &     &     &  1                   &  1     &     
-\lst{Coll[Byte]}         &     &     &  12 + 1 = 13         &  1     &     
-\lst{Coll[Coll[Byte]]}   &     &     &  24 + 1 = 25         &  1     &      
-\lst{Option[Byte]}       &     &     &  36 + 1 = 37         &  1     & register     
-\lst{Option[Coll[Byte]]} &     &     &  48 + 1 = 49         &  1     & register     
-\lst{(Int,Int)}          &     &     &  84 + 3 = 87         &  1     & fold     
-\lst{Box=>Boolean}       & 7   & 2   &  198 = 7*12+2+112    &  1     & exist, for all     
-\lst{(Int,Int)=>Int}     & 0   & 3   &  115=0*12+3+112, 87  &  2     &  fold     
-\lst{(Int,Boolean)}      &     &     &  60 + 3, 2           &  2     &       
-\lst{(Int,Box)=>Boolean} & 0   & 2   &  0*12+2+112, 60+3, 7 &  3     &      
-\end{tabularx}\)
-\label{fig:ser:type:primtypes}
-\end{figure}
+
+#### Int.toShort (106.2)
+
+- *Description*: Converts this numeric value to Short, throwing exception if overflow.
+- *Signature*: **`def toShort: Short`**
+- *Serialized as:* Downcast
+
+#### Int.toInt (106.3)
+
+- *Description*: Converts this numeric value to Int, throwing exception if overflow.
+- *Signature*: **`def toInt: Int`**
+- *Serialized as:* Downcast
+
+#### Int.toLong (106.4)
+
+- *Description*: Converts this numeric value to Long, throwing exception if overflow.
+- *Signature*: **`def toLong: Long`**
+- *Serialized as:* Upcast
+
+#### Int.toBigInt (106.5)
+
+- *Description*: Converts this numeric value to BigInt.
+- *Signature*: **`def toBigInt: BigInt`**
+- *Serialized as:* Upcast
+
+### Long 
+
+#### Long.toByte (106.1)
+
+- *Description*: Converts this numeric value to Byte, throwing exception if overflow.
+- *Signature*: **`def toByte: Byte`**
+- *Serialized as:* Downcast
+
+#### Long.toShort (106.2)
+
+- *Description*: Converts this numeric value to Short, throwing exception if overflow.
+- *Signature*: **`def toShort: Short`**
+- *Serialized as:* Downcast
+
+#### Long.toInt (106.3)
+
+- *Description*: Converts this numeric value to Int, throwing exception if overflow.
+- *Signature*: **`def toInt: Int`**
+- *Serialized as:* Downcast
+
+#### Long.toLong (106.4)
+
+- *Description*: Converts this numeric value to Long, throwing exception if overflow.
+- *Signature*: **`def toLong: Long`**
+- *Serialized as:* Downcast
+
+#### Long.toBigInt (106.5)
+
+- *Description*: Converts this numeric value to BigInt
+- *Signature*: **`def toBigInt: BigInt`**
+- *Serialized as:* Upcast
+
+
+### BigInt 
+
+#### BigInt.toBigInt (106.5)
+
+- *Description*: Converts this numeric value to BigInt
+- *Signature*: **`def toBigInt: BigInt`**
+- *Serialized as:* Downcast
+
+
+### GroupElement 
+
+#### GroupElement.getEncoded (7.2)
+
+- *Description*: Get an encoding of the point value.
+- *Signature*: **`def getEncoded: Coll[Byte]`**
+- *Serialized as:* PropertyCall
+
+#### GroupElement.exp (7.3)
+
+- *Description*: Exponentiate this GroupElement to the given number. Returns this to the power of k
+- *Signature*: **`def exp(k: BigInt): GroupElement`**
+- - *Parameters*: `k` The power
+- *Serialized as:* Exponentiate
+
+#### GroupElement.multiply (7.4)
+
+- *Description*: Group operation.
+- *Signature*: **`def multiply(other: GroupElement): GroupElement`**
+- *Parameters*: `other` other element of the group
+- *Serialized as:* MultiplyGroup
+
+#### GroupElement.negate (76.5)
+
+- *Description*: Inverse element of the group.
+- *Signature*: **`def negate: GroupElement`**
+- *Serialized as:* PropertyCall
+
+
+### SigmaProp 
+
+Values of **SigmaProp** type hold sigma propositions, which can be proved and verified using Sigma protocols. Each sigma proposition is represented as an expression where sigma protocol primitives such as **ProveDlog**, and **ProveDHTuple** are used as constants and special sigma protocol connectives like **&&**,**||** and **THRESHOLD** are used as operation.
+
+The abstract syntax of sigma propositions is shown below. 
+
+
+| Set | | Syntax | Mnemonic | Description |
+|--||--|--|----|
+| $Tree \ni t$	| := 	| $\lst{Trivial(b)}$ 	| $\lst{TrivialProp}$	| boolean value $\lst{b}$ as sigma proposition  
+|   | $\mid$	| $\lst{Dlog(ge)}$ 	| $\lst{ProveDLog}$	| knowledge of discrete logarithm of $\lst{ge}$
+|   | $\mid$    | $\lst{DHTuple(g,h,u,v)}$ 	| $\lst{ProveDHTuple}$	| knowledge of Diffie-Hellman tuple 
+|   | $\mid$    | $\lst{THRESHOLD}(k,t_1,\dots,t_n)$ 	| $\lst{THRESHOLD}$	| knowledge of $k$ out of $n$ secrets
+|   | $\mid$    | $\lst{OR}(t_1,\dots,t_n)$	| $\lst{OR}$	| knowledge of any one of $n$ secrets
+|   | $\mid$    | $\lst{AND}(t_1,\dots,t_n)$	| $\lst{AND}$	| knowledge of all $n$ secrets
+
+
+Every well-formed tree of sigma proposition is a value of type $\lst{SigmaProp}$, thus following the notation of the [evaluation section](evaluation.md) we can define denotation of $\lst{SigmaProp}$
+
+$$\Denot{\lst{SigmaProp}} = \Set{t \in Tree}$$
+
+
+The following methods can be called on all instances of $\lst{SigmaProp}$ type.
+
+#### SigmaProp.propBytes (8.1)
+
+- *Description*: Serialized bytes of this sigma proposition taken as ErgoTree.
+- *Parameters*: 
+- *Result*: `Coll[Byte]`
+- *Serialized as:* SigmaPropBytes
+
+#### SigmaProp.isProven (8.2)
+
+- *Description*: Verify that sigma proposition is proven. (FRONTEND ONLY)
+- *Parameters*: 
+- *Result*: `Boolean`
+
+For a full list of primitive operations on  $\lst{SigmaProp}$ type, see [Appendix B](https://raw.githubusercontent.com/ScorexFoundation/sigmastate-interpreter/fada073b82a16a928c457693b888da4c0310aca6/docs/spec/spec.pdf#appendix.B)
+
+### Box 
+
+
+#### Box.value (99.1)
+
+- *Description*: Mandatory: Monetary value, in Ergo tokens (NanoErg unit of measure
+- *Parameters*: 
+- *Result*: $\lst{Long}$
+- *Serialized as:* ExtractAmount
+
+#### Box.propositionBytes (99.2)
+
+- *Description*: Serialized bytes of guarding script, which should be evaluated to true in order
+to open this box. (aka spend it in a transaction)
+- *Parameters*: 
+- *Result*: $\lst{Coll[Byte]}$
+- *Serialized as:* ExtractScriptBytes
+
+#### Box.bytes (99.3)
+
+- *Description*: Serialized bytes of this box’s content, including proposition bytes.
+- *Parameters*: 
+- *Result*: $\lst{Coll[Byte]}$
+- *Serialized as:* ExtractBytes
+
+#### Box.bytesWithoutRef (99.4)
+
+- *Description*: Serialized bytes of this box’s content, excluding transactionId and index of
+output.
+- *Parameters*: 
+- *Result*: $\lst{Coll[Byte]}$
+- *Serialized as:* ExtractBytesWithNoRef
+
+#### Box.value (99.5)
+
+- *Description*: Blake2b256 hash of this box’s content, basically equals to blake2b256(bytes).
+- *Parameters*: 
+- *Result*: $\lst{Coll[Byte]}$
+- *Serialized as:* ExtractId
+
+#### Box.creationInfo (99.6)
+
+- *Description*: If tx is a transaction which generated this box, then $\lst{creationInfo._1}$ is a height of the tx’s block. The $\lst{creationInfo._2}$ is a serialized transaction identifier followed by box index in the transaction outputs.
+- *Parameters*: 
+- *Result*: $\lst{(Int,Coll[Byte])}$
+- *Serialized as:* ExtractCreationInfo
+
+#### Box.getReg (99.7)
+
+- *Description*: Extracts register by id and type. Type param T expected type of the register. Returns Some(value) if the register is defined and has given type and None otherwise
+- *Parameters*: $\lst{regId : Int}$ // zero-based identifier of the register.
+- *Result*: $\lst{Option[T]}$
+- *Serialized as:* ExtractRegisterAs
+
+#### Box.tokens (99.8)
+
+- *Description*: Secondary tokens.
+- *Parameters*: 
+- *Result*: $\lst{Coll[(Coll[Byte],Long)]}$
+- *Serialized as:* PropertyCall
+
+#### Box.R0 (99.9)
+
+- *Description*: Monetary value, in Ergo tokens. 
+- *Parameters*: 
+- *Result*: $\lst{Option[T]}$
+- *Serialized as:* ExtractRegisterAs
+
+#### Box.value (99.10)
+
+- *Description*: Guarding script
+- *Parameters*: 
+- *Result*: $\lst{Option[T]}$
+- *Serialized as:* ExtractRegisterAs
+
+#### Box.value (99.11)
+
+- *Description*: Secondary tokens.
+- *Parameters*: 
+- *Result*: $\lst{Option[T]}$
+- *Serialized as:* ExtractRegisterAs
+
+#### Box.R3 (99.12)
+
+- *Description*: Reference to transaction and output id where the box was created
+- *Parameters*: 
+- *Result*: $\lst{Option[T]}$
+- *Serialized as:* ExtractRegisterAs
+
+#### Box.R4 (99.13)
+
+- *Description*: Non-mandatory register.
+- *Parameters*: 
+- *Result*: $\lst{Option[T]}$
+- *Serialized as:* ExtractRegisterAs
+
+#### Box.R5 (99.14)
+
+- *Description*: Non-mandatory register.
+- *Parameters*: 
+- *Result*: $\lst{Option[T]}$
+- *Serialized as:* ExtractRegisterAs
+
+#### Box.R6 (99.15)
+
+- *Description*: Mandatory: Monetary value, in Ergo tokens (NanoErg unit of measure
+- *Parameters*: 
+- *Result*: $\lst{Long}$
+- *Serialized as:* ExtractRegisterAs
+
+#### Box.R7 (99.16)
+
+- *Description*: Mandatory: Monetary value, in Ergo tokens (NanoErg unit of measure
+- *Parameters*: 
+- *Result*: $\lst{Long}$
+- *Serialized as:* ExtractRegisterAs
+
+#### Box.R8 (99.17)
+
+- *Description*: Mandatory: Monetary value, in Ergo tokens (NanoErg unit of measure
+- *Parameters*: 
+- *Result*: $\lst{Long}$
+- *Serialized as:* ExtractRegisterAs
+
+#### Box.R9 (99.18)
+
+- *Description*: Mandatory: Monetary value, in Ergo tokens (NanoErg unit of measure
+- *Parameters*: 
+- *Result*: $\lst{Long}$
+- *Serialized as:* ExtractRegisterAs
+
+### AvlTree 
+
+#### AvlTree.digest (100.1)
+
+- *Description*: Returns digest of the state represented by this tree. Authenticated tree $\lst{digest = root hash bytes ++ tree height}$
+- *Parameters*: 
+- *Result*: $\lst{Coll[Byte]}$
+- *Serialized as:* PropertyCall
+
+#### AvlTree.enabledOperations (100.2)
+
+- *Description*: Flags of enabled operations packed in single byte.
+- *Parameters*: 
+- *Result*: $\lst{Byte}$
+- *Serialized as:* PropertyCall
+
+```
+isInsertAllowed == (enabledOperations & 0x01) != 0
+isUpdateAllowed == (enabledOperations & 0x02) != 0
+isRemoveAllowed == (enabledOperations & 0x04) != 0
+```
+
+#### AvlTree.keyLength (100.3)
+
+- *Description*: 
+- *Parameters*: 
+- *Result*: $\lst{Int}$
+- *Serialized as:* PropertyCall
+
+#### AvlTree.valueLengthOpt (100.4)
+
+- *Description*: 
+- *Parameters*: 
+- *Result*: $\lst{Coll[Byte]}$
+- *Serialized as:* PropertyCall
+
+#### AvlTree.isInsertAllowed (100.5)
+
+- *Description*: 
+- *Parameters*: 
+- *Result*: $\lst{Coll[Byte]}$
+- *Serialized as:* PropertyCall
+
+#### AvlTree.isUpdateAllowed (100.6)
+
+- *Description*: 
+- *Parameters*: 
+- *Result*: $\lst{Boolean}$
+- *Serialized as:* PropertyCall
+
+#### AvlTree.isRemovedAllowed (100.7)
+
+- *Description*: 
+- *Parameters*: 
+- *Result*: $\lst{Boolean}$
+- *Serialized as:* PropertyCall
+
+#### AvlTree.updateOperations (100.8)
+
+- *Description*: 
+- *Parameters*: 
+- *Result*: $\lst{AvlTree}$
+- *Serialized as:* MethodCall
+
+#### AvlTree.contains (100.9)
+
+- *Description*: 
+- *Parameters*: 
+- *Result*: $\lst{Boolean}$
+- *Serialized as:* MethodCall
+
+#### AvlTree.get (100.10)
+
+- *Description*: 
+- *Parameters*: 
+- *Result*: $\lst{Option[Coll[Byte]]}$
+- *Serialized as:* MethodCall
+
+#### AvlTree.getMeny (100.11)
+
+- *Description*: 
+- *Parameters*: 
+- *Result*: $\lst{Coll[Option[Coll[Byte]]]}$
+- *Serialized as:* MethodCall
+
+#### AvlTree.insert (100.12)
+
+- *Description*: 
+- *Parameters*: 
+- *Result*: $\lst{Option[AvlTree]}$
+- *Serialized as:* MethodCall
+
+#### AvlTree.update (100.13)
+
+- *Description*: 
+- *Parameters*: 
+- *Result*: $\lst{Option[AvlTree]}$
+- *Serialized as:* MethodCall
+
+#### AvlTree.remove (100.14)
+
+- *Description*:
+- *Parameters*: 
+- *Result*: $\lst{Option[AvlTree]}$
+- *Serialized as:* MethodCall
+
+#### AvlTree.updateDigest (100.15)
+
+- *Description*: 
+- *Parameters*: 
+- *Result*: $\lst{AvlTree}$
+- *Serialized as:* MethodCall
+
+### Header 
+
+### PreHeader 
+
+### Context 
+
+### Global 
+
+### Coll 
+
+### Option 

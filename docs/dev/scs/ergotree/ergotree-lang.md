@@ -20,23 +20,23 @@ $$
 
 # ErgoTree as a language
 
-> This page is a WIP. Please see [ErgoTree.pdf](https://storage.googleapis.com/ergo-cms-media/docs/ErgoTree.pdf) for full details.
+In this section, we define an abstract syntax for the ErgoTree language. It is **a typed call-by-value, higher-order functional language without recursion**.
 
+It supports single-assignment blocks, tuples, optional values, indexed collections with higher-order operations, short-cutting logicals, and ternary ’if’ with lazy branches. 
 
-In this section, we define an abstract syntax for the ErgoTree language. It is a typed call-by-value, higher-order functional language without recursion. It supports single-assignment blocks, tuples, optional values, indexed collections with higher-order operations, short-cutting logicals, and ternary ’if’ with lazy branches. All operations are deterministic, without side effects and all values are
-immutable.
+**All operations are deterministic, without side effects and all values are immutable.**
 
-The semantics of ErgoTree is specified by first translating it to a core calculus (Core-λ) and then by giving its denotational evaluation semantics. 
+The semantics of ErgoTree is specified by first translating it to a core calculus (***Core-λ***) and then by giving its denotational evaluation semantics. 
 
-ErgoTree is defined below using abstract syntax notation. This corresponds to the **Value** class of the reference implementation, which can be serialized to an array of bytes using **ValueSerializer**. 
+In the table below, ErgoTree is defined below using abstract syntax notation. This corresponds to the **Value** class of the reference implementation, which can be serialized to an array of bytes using **ValueSerializer**. 
 
-The *mnemonic* names shown in the figure correspond to classes of the reference implementation.
+The values in the *'mnemonic'* column correspond to classes of the reference implementation.
 
 ## **Figure 1: Abstract syntax of ErgoScript language**
 
 | Set Name | | Syntax | Mnemonic | Description |
 |--||--|--|----|
-$\mathcal{T} \ni T$ | ::=   |    **P**  | **SPredefType**   | [predefined types]
+$\mathcal{T} \ni T$ | ::=   |    **P**  | **SPredefType**   | See [Types](types.md)
 |   | $\mid$    | $\tau$    | **STypeVar** | type variable 
 |   | $\mid$    | $(T_1, ... ,T_n)$ | **STuple** | tuple of $n$ elements (see [Tuple] type)
 |   | $\mid$    | $(T_1,...,T_n) \to T$ | **SFunc** | function of $n$ arguments (see [Func] type) 
@@ -55,7 +55,7 @@ $cd$    |   ::= |   $\Trait{I}{\overline{ms_i}}$    | **STypeCompanion** | inter
 $ms$    |   ::= | $\MSig{m[\overline{\tau_i}]}{\overline{x_i : T_i}}{T}$    | **SMethod** | method signature declaration   
 
 
-We assign types to the terms in a standard way following typing rules shown in [Figure 3](typing.md).
+We assign types to the terms in a standard way following typing rules shown in [typing](typing.md).
 
 - **Constants** keep both the type and the data value of that type. To be well-formed, the type of the constant should correspond to its value.
 - **Variables** are always typed and identified by a unique id, which refers to either lambda bound variable or a val bound variable.
@@ -68,7 +68,7 @@ We assign types to the terms in a standard way following typing rules shown in [
 
 Each **type** may be associated with a list of method declarations, in which case we say the type has methods. The semantics of the methods is the same as in Java. Having an instance of some type with methods, it is possible to call methods on the instance with additional arguments. 
 
-Each **method** can be parameterized by type variables, which can be used in the method signature. Because ErgoTree supports only monomorphic values, each method call is monomorphic, and all type variables are assigned to concrete types (see MethodCall typing rule in [Figure 3](typing.md)).
+Each **method** can be parameterized by type variables, which can be used in the method signature. Because ErgoTree supports only monomorphic values, each method call is monomorphic, and all type variables are assigned to concrete types (see MethodCall typing rule in [typing](typing.md)).
 
 The semantics of ErgoTree is specified by translating all its terms to a somewhat lower and simplified language, which we call Core-λ and which doesn’t have lazy operations.
 
