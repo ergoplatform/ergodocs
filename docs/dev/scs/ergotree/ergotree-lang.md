@@ -96,4 +96,5 @@ We translate logical operations ($\lst{||}$, &&) of $\langname$, which are lazy 
 
 Syntactic blocks of $\langname$ are eliminated and translated to nested lambda expressions, which unambiguously specify the evaluation semantics of blocks. The $\corelang$ is specified in [evaluation](evaluation.md).
 
+Note, that we use lowering transformation only to specify semantics. Implementations can optimize by evaluating ErgoTree directly as long as the semantics is preserved.
 

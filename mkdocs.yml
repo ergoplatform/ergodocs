@@ -74,12 +74,7 @@ markdown_extensions:
   - tables
   - neoteroi.cards
   - meta
-  - mdx_math
   - fenced_code
-  - pymdownx.highlight:
-      anchor_linenums: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
   - toc:
         permalink: "#"
   - admonition
