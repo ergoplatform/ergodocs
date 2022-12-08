@@ -30,15 +30,15 @@ Evaluation of $\langname$ is specified by its translation to $\corelang$, whose 
 
 Here we specify evaluation semantics of $\corelang$, which is based on call-by-value (CBV) lambda calculus. Evaluation of $\corelang$ is specified using denotational semantics. To do that, we first specify denotations of types, then typed terms and then equations of denotational semantics.
 
-> Definition 1: **The following CBV terms are called values:**
+> Definition 1: **The following $\corelang$ terms are called values:**
 
 $$V :== x \mid C(d, T) \mid \Lam{x}{M}$$
 
-> All CBV terms are called producers. (This is because, when evaluated, they produce a value.)
+> All $\corelang$ terms are called producers. (This is because, when evaluated, they produce a value.)
 
 We now describe and explain a denotational semantics for the $\corelang$ language. The key principle is that each type $A$ denotes a set $\Denot{A}$ whose elements are the denotations of values of the type $A$.
 
-Thus the type \lst{Boolean} denotes the 2-element set $\{\lst{true},\lst{false}\}$, because there are two values of type $\lst{Boolean}$. Likewise the type $(T_1,\dots,T_n)$ denotes $(\Denot{T_1},\dots,\Denot{T_n})$ because a value of type $(T_1,\dots,T_n)$ must be of the form $(V_1,\dots,V_n)$, where each $V_i$ is value of type $T_i$.
+Thus the type [$\lst{Boolean}$](types.md#boolean) denotes the 2-element set $\{\lst{true},\lst{false}\}$, because there are two values of type $\lst{Boolean}$. Likewise the type $(T_1,\dots,T_n)$ denotes $(\Denot{T_1},\dots,\Denot{T_n})$ because a value of type $(T_1,\dots,T_n)$ must be of the form $(V_1,\dots,V_n)$, where each $V_i$ is value of type $T_i$.
 
 Given a value $V$ of type $A$, we write $\Denot{V}$ for the element of $A$ that it denotes. Given a close term $M$ of type $A$, we recall that it produces a value $V$ of type $A$. So $M$ will denote an element $\Denot{M}$ of $\Denot{A}$.
 
@@ -54,8 +54,7 @@ In summary, the denotational semantics is organized as follows.
 
 - A type $A$ denotes a set $\Denot{A}$
 - A context $x_1:A_1,\dots,x_n:A_n$ denotes the set $(\Denot{A_1},\dots,\Denot{A_n})$
-- A term $\DerEnv{M: B}$ denotes a function $\Denot{M}$:
-- $\Denot{\Gamma} \to \Denot{B}$
+- A term $\DerEnv{M: B}$ denotes a function $\Denot{M}$: $\Denot{\Gamma} \to \Denot{B}$
 
 
 The denotations of $\corelang$ **types**
@@ -69,15 +68,15 @@ $$\Denot{(T_1,\dots,T_n)} =  (\Denot{T_1},\dots,\Denot{T_n}) $$
 
 $$\Denot{A \to B}  =  \Denot{A} \to \Denot{B}$$
 
-
-The denotations of $\corelang$ **terms**
+The denotations of $\corelang$ **terms** which together specify the function $\Denot{\_}: \Denot{\Gamma} \to \Denot{T}$
 
 
 $$\Apply{ \Denot{\lst{x}}			}{(\rho,\lst{x}\mapsto x, \rho')} = x$$
 
 $$\Apply{ \Denot{C(d, T)} 			}{\rho}  =  d$$
 
-$$\Apply{ \Denot{(\Ov{M_i})} 		}{\rho}  =  (\Ov{ \Apply{\Denot{M_i}}{\rho} })$$	
+$$\Apply{ \Denot{(\Ov{M_i})} 		}{\rho}  =  (\Ov{ \Apply{\Denot{M_i}}{\rho} })$$
+	
 
 $$\Apply{ \Denot{\Apply{\delta}{N}} }{\rho}  = \Apply{ (\Apply{\Denot{\delta}}{\rho}) }{ v }~where~v = \Apply{\Denot{N}}{\rho}$$
 

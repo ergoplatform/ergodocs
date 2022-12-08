@@ -1,4 +1,3 @@
-## Predefined types
 $$
 \newcommand{\TEnv}{\Gamma}
 \newcommand{\Der}[2]{#1~\vdash~#2}
@@ -25,6 +24,9 @@ $$
 \newcommand{\Denot}[1]{[\![#1]\!]}
 \newcommand{\Set}[1]{\{ #1 \}}
 $$
+
+## Predefined types
+
 
 ### Boolean
 

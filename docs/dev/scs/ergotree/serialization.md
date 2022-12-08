@@ -1,16 +1,52 @@
+$$
+\newcommand{\TEnv}{\Gamma}
+\newcommand{\Der}[2]{#1~\vdash~#2}
+\newcommand{\DerV}[2]{#1~\vdash^{\text{\lst{v}}}~#2}
+\newcommand{\DerC}[2]{#1~\vdash^{\text{\lst{c}}}~#2}
+\newcommand{\DerEnv}[1]{\Der{\TEnv}{#1}}
+\newcommand{\DerEnvV}[1]{\DerV{\TEnv}{#1}}
+\newcommand{\DerEnvC}[1]{\DerC{\TEnv}{#1}}
+\newcommand{\lst}[1]{#1}
+\newcommand{\Tup}[1]{(#1)}
+\newcommand{\Apply}[2]{#1\langle#2\rangle}
+\newcommand{\MSig}[3]{\text{def}~#1(#2): #3}
+\newcommand{\Ov}[1]{\overline{#1}}
+\newcommand{\TyLam}[3]{\lambda(\Ov{#1:#2}).#3}
+\newcommand{\Trait}[2]{\text{trait}~#1~\{ #2 \}}
+\newcommand{\To}{\mapsto}
+\newcommand{\Low}[1]{\mathcal{L}{[\![#1]\!]}}
+\newcommand{\Lam}[2]{\lambda#1.#2}
+\newcommand{\IfThenElse}[3]{\text{if}~(#1)~#2~\text{else}~#3}
+\newcommand{\False}{\text{false}}
+\newcommand{\True}{\text{true}}
+\newcommand{\langname}{ErgoTree}
+\newcommand{\corelang}{Core-\lambda}
+\newcommand{\MaxVlqSize}{VLQ_{max}}
+\newcommand{\MaxBits}{Bits_{max}}
+\newcommand{\MaxBytes}{Bytes_{max}}
+\newcommand{\MaxTypeSize}{T_{max}}
+\newcommand{\MaxDataSize}{D_{max}}
+\newcommand{\MaxBox}{Box_{max}}
+\newcommand{\MaxSigmaProp}{SigmaProp_{max}}
+\newcommand{\MaxAvlTree}{AvlTree_{max}}
+\newcommand{\MaxConstSize}{C_{max}}
+\newcommand{\MaxExprSize}{Expr_{max}}
+\newcommand{\MaxErgoTreeSize}{ErgoTree_{max}}
+\newcommand{\Denot}[1]{[\![#1]\!]}
+\newcommand{\ASDag}{ErgoTree}
+$$
+
 # Serialization
 
-> This page is a WIP. Please see [ErgoTree.pdf](https://storage.googleapis.com/ergo-cms-media/docs/ErgoTree.pdf) for full details.
+This section defines a binary format used to store ErgoTree contracts in persistent stores, transfer them over the wire, and enable cross-platform interoperation.
 
-> This section defines a binary format used to store ErgoTree contracts in persistent stores, transfer them over the wire, and enable cross-platform interoperation.
+The terms of the [language](ergotree-lang.md) can be serialized to an array of bytes to be stored in the Ergo blockchain (e.g., **Box.propositionBytes**).
 
-The terms of the language described in [Section 2] can be serialized to an array of bytes to be stored in the Ergo blockchain (e.g., **Box.propositionBytes**).
-
-When the guarding script of an input box of a transaction is validated, the **propositionBytes** array is deserialized to an ErgoTree IR (represented by the ErgoTree class), which can be evaluated as it is specified in [Section 4].
+When the guarding script of an input box of a transaction is validated, the **propositionBytes** array is deserialized to an **ErgoTree** **IR** (represented by the **ErgoTree** class), which can be [evaluated](evaluation.md).
 
 Here we specify the serialization procedure in general. The serialization format of ErgoTree types (**SType** class) and nodes (**Value** class) is correspondingly specified in [section 5.1] and [Appendix C].
 
-The table below shows size limits checked during contract deserialization, which is important to resist malicious script attacks.
+Table 1 shows size limits checked during contract deserialization, which is important to resist malicious script attacks.
 
 ## Table 1: Serialization limits
 
@@ -28,9 +64,33 @@ All the serialization formats used and defined throughout this section are liste
 
 ## Table 2: Serialization formats
 
-The serialization format of ErgoTree is optimized for compact storage and rapid deserialization.
-
+|   Format          | #bytes          | Description |
+|---|---|---|
+|   $\lst{Byte}$    | $1$            | 8-bit signed two's-complement integer 
+|   $\lst{Short}$ | $2$ | 16-bit signed two's-complement integer (big-endian) 
+|   $\lst{Int}$ | $4$ | 32-bit signed two's-complement integer (big-endian) 
+|   $\lst{Long}$ | $8$ | 64-bit signed two's-complement integer (big-endian) 
+|   $\lst{UByte}$ | $1$ | 8-bit unsigned integer 
+|   $\lst{UShort}$ | $2$ | 16-bit unsigned integer (big-endian) 
+|   $\lst{UInt}$ | $4$ | 32-bit unsigned integer (big-endian) 
+|   $\lst{ULong}$ | $8$ | 64-bit unsigned integer (big-endian) 
+|   $\lst{VLQ(UShort)}$ | $[1..3]$ | Encoded unsigned $\lst{Short}$ value using VLQ. 
+|   $\lst{VLQ(UInt)}$ | $[1..5]$ | Encoded unsigned 32-bit integer using VLQ. 
+|   $\lst{VLQ(ULong)}$ | $[1..\MaxVlqSize]$ | Encoded unsigned 64-bit integer using VLQ. 
+|$\lst{Bits}$ | $[1..\MaxBits]$ | A collection of bits packed in a sequence of bytes. 
+|$\lst{Bytes}$ | $[1..\MaxBytes]$ | A sequence of bytes, which size is stored elsewhere or wellknown. 
+|$\lst{Type}$ | $[1..\MaxTypeSize]$ | Serialized type terms of $\langname$. 
+|$\lst{Data}$ | $[1..\MaxDataSize]$ | Serialized data values of $\langname$. 
+|$\lst{GroupElement}$ | $33$ | Serialized elements of eliptic curve group. 
+|$\lst{SigmaProp}$ | $[1..\MaxSigmaProp]$ | Serialized sigma propositions.
+|$\lst{AvlTree}$ | $44$ | Serialized dynamic dictionary digest.
+|$\lst{Constant}$ | $[1..\MaxConstSize]$ | Serialized $\langname$ constants (values with types). 
+|$\lst{Expr}$ | $[1..\MaxExprSize]$ | Serialized expression terms of $\langname$. 
+|$\lst{ErgoTree}$ | $[1..\MaxErgoTreeSize]$ | Serialized instances of $\langname$ contracts. 
+    
 We use the `[1..n]` notation when serialization may produce from **1 to n bytes** (depending on the actual data).
+
+The serialization format of ErgoTree is optimized for compact storage and rapid deserialization.
 
 In many cases, the serialization procedure is *data dependent* and thus has branching logic. 
 
@@ -44,25 +104,42 @@ The notation is summarized in Table 3.
 
 ## Table 3: Serialization Notation
 
+|   Notation   | Description |
+|---|---|
+$\Denot{T}$ where $T$ - type | Denotes a set of values of type $T$  
+$v \in \Denot{T}$ | The value $v$ belongs to the set $\Denot{T}$ 
+$v : T$ | Same as $v \in \Denot{T}$ 
+$\lst{match}$ $(t, v)$ | Pattern match on pair $(t, v)$ where $t, v$ - values 
+$\lst{with}$ $(Unit, v \in \Denot{Unit})$ | Pattern case 
+$\lst{for}$ i=1 $\lst{to}$ len \ $~\lst{serialize(}$v_i$\lst{)}$ \\ $\lst{end for}$ | Call the given $\lst{serialize}$ function repeatedly.The outputs bytes of all invocations are concatenated and become the output of the $\lst{for}$ statement.
+$$\lst{if}~$condition$~\lst{then}$$ | Serialize one of the branches depending of the *condition*. The output bytes of the executed branch becomes the output of the $\lst{if}$ statement.
+$~~\lst{serialize1(}$v_1$\lst{)}$ |  $\lst{else} | ~~\lst{serialize2(}$v_2$\lst{)} | \lst{end if} | 
+
 In the next section, we describe how types (**Int**, **Coll[Byte]**, etc.) are serialized; then, we define the serialization of typed data. 
 
 This will give us a basis to describe the serialization of Constant nodes of ErgoTree. After that, we will proceed to the serialization of arbitrary ErgoTree trees.
 
 ## Type Serialization
 
-For the motivation behind this type of encoding, please see [Appendix D.1].
+For the motivation behind this type of encoding, please see [Appendix D.1](https://raw.githubusercontent.com/ScorexFoundation/sigmastate-interpreter/4daec63275fd4e1364cf7a1132f3e7be6157bb5c/docs/spec/ergotree.pdf).
+
 
 ### Distribution of type codes
 
-The whole space of 256 one-byte codes is divided, as shown in [Figure 4].
+The whole space of 256 one-byte codes is divided, as shown in Table 4.
 
 #### Table 4: Distribution of type codes between Data and Function types
+|   Value/Interval   | Distribution |
+|---|---|
+$\lst{0x00}$ | special value to represent undefined type ($\lst{NoType}$ in $\ASDag$) 
+$\lst{0x01 - 0x6F(111)}$ | **data types** including primitive types, arrays, options aka nullable types, classes (in future), 111 = 255 - 144 different codes 
+$\lst{0x70(112) - 0xFF(255)}$ | **function types** $\lst{T1 => T2}$, 144 = 12 x 12 different codes~\footnote{Note that the function types are never serialized in version 1 of the Ergo protocol, this encoding is reserved for future development of the protocol.} 
 
 
 
 ### Encoding of Data Types
 
-There are eight different values for *embeddable* types, and three more are reserved for future extensions. Each embeddable type has a type code in the range `1,...,11` as shown in [Figure 5].
+There are eight different values for *embeddable* types, and three more are reserved for future extensions. Each embeddable type has a type code in the range `1,...,11` as shown in Table 5.
 
 
 
@@ -70,15 +147,15 @@ There are eight different values for *embeddable* types, and three more are rese
 
 | Code | Type |
 |-|-|
-| 1 | Boolean |
-| 2 | Byte |
-| 3 | Short (16-bit) |
-| 4 | Int (32 bit) |
-| 5 | Long (64-bit) |
-| 6 | BigInt (represented by java.math.BigInteger) |
-| 7 | GroupElement (represented by org.bouncycastle.math.ec.ECPoint) |
-| 8 | SigmaProp |
-| 9 | reserved for Char |
+| 1 | **Boolean** |
+| 2 | **Byte** |
+| 3 | **Short** (16-bit) |
+| 4 | **Int** (32 bit) |
+| 5 | **Long** (64-bit) |
+| 6 | **BigInt** (represented by java.math.BigInteger) |
+| 7 | **GroupElement** (represented by org.bouncycastle.math.ec.ECPoint) |
+| 8 | **SigmaProp** |
+| 9 | reserved for **Char** |
 | 10 | reserved |
 | 11 | reserved |
 
@@ -231,3 +308,146 @@ Once the new bytes are required, a new language version should be created and im
 The default behavior of ErgoTreeSerializer is to preserve the original structure of ErgoTree and check the consistency. In case of any inconsistency, the serializer throws an exception.
 
 If constant segregation Bit4 is set to 1, then the constants collection contains the constants for which there may be ConstantPlaceholder nodes in the tree. However, if the constant segregation bit is 0, then the constants collection should be empty, and any placeholder in the tree will lead to an exception.
+
+
+
+
+## Type Serialization
+
+> This page is a WIP. Please see [ErgoTree.pdf](https://storage.googleapis.com/ergo-cms-media/docs/ErgoTree.pdf) for full details.
+> 
+
+In this section, we describe how the types (like \lst{Int}, \lst{Coll[Byte]},
+etc.) are serialized; then, we define the serialization of typed data. This will
+give us a basis to describe the serialization of Constant nodes of \ASDag. From
+that, we proceed to serialization of arbitrary \ASDag trees.
+
+For the motivation behind this type of encoding, please see Appendix~\ref{sec:appendix:motivation:type}.
+
+## Distribution of type codes
+
+
+The whole space of 256 codes is divided as the following:
+
+
+$$\bf{Interval}$$ \& \bf{Distribution}
+
+$$\lst{0x00}$$ \& special value to represent undefined type (\lst{NoType} in \ASDag)
+
+$$\lst{0x01 - 0x6F(111)}$$ & data types including primitive types, arrays, options
+aka nullable types, classes (in future), 111 = 255 - 144 different codes 
+
+\lst{0x70(112) - 0xFF(255)} & function types \lst{T1 => T2}, 144 = 12 x 12
+different codes 
+ 
+
+### Encoding Data Types
+
+There are nine different values for primitive types, and two more are reserved for future extensions.
+Each primitive type has an id in a range {1,...,11} as the following.
+
+
+1     &   Boolean   
+2     &   Byte  
+3     &   Short (16 bit)  
+4     &   Int (32 bit)  
+5     &   Long (64 bit)  
+6     &   BigInt (java.math.BigInteger)  
+7     &   GroupElement (org.bouncycastle.math.ec.ECPoint)  
+8     &   SigmaProp   
+9     &   reserved for Char   
+10    &   reserved for Double   
+11    &   reserved   
+
+
+For each type constructor like $\lst{Coll}$ or $\lst{Option}$ we use the encoding
+schema defined below. Type constructor has associated $**{base code}$ (e.g.
+12 for $\lst{Coll[_]}$, 24 for $\lst{Coll[Coll[_]]}$ etc. ), which is multiple of
+12.
+Base code can be added to primitive type id to produce code of constructed
+type; for example, 12 + 1 = 13 is a code of \lst{Coll[Byte]}. The code of the type constructor (12 in this example) is used when the type parameter is a non-primitive type (e.g. \lst{Coll[(Byte, Int)]}). In this case, the code of type
+constructor is read first, and then recursive descent is performed to read
+bytes of the parameter type (in this case \lst{(Byte, Int)}) This encoding
+allows very simple and quick decoding by using div and mod operations.
+
+The interval of codes for data types is divided as the following:
+
+$$
+\bf{Interval} & \bf{Type constructor} & \bf{Description}  
+0x01 - 0x0B(11)     &                    & primitive types (including 2 reserved)  
+0x0C(12)            & \lst{Coll[_]}          & Collection of non-primitive types (\lst{Coll[(Int,Boolean)]})  
+0x0D(13) - 0x17(23) & \lst{Coll[_]}          & Collection of primitive types (\lst{Coll[Byte]}, \lst{Coll[Int]}, etc.)  
+0x18(24)            & \lst{Coll[Coll[_]]}    & Nested collection of non-primitive types (\lst{Coll[Coll[(Int,Boolean)]]})  
+0x19(25) - 0x23(35) & \lst{Coll[Coll[_]]}    & Nested collection of primitive types (\lst{Coll[Coll[Byte]]}, \lst{Coll[Coll[Int]]})  
+0x24(36)            & \lst{Option[_]}        & Option of non-primitive type (\lst{Option[(Int, Byte)]})  
+0x25(37) - 0x2F(47) & \lst{Option[_]}        & Option of primitive type (\lst{Option[Int]})  
+0x30(48)            & \lst{Option[Coll[_]]}  & Option of Coll of non-primitive type (\lst{Option[Coll[(Int, Boolean)]]})  
+0x31(49) - 0x3B(59) & \lst{Option[Coll[_]]}  & Option of Coll of primitive type (\lst{Option[Coll[Int]]})  
+0x3C(60)            & \lst{(_,_)}            & Pair of non-primitive types (\lst{((Int, Byte), (Boolean,Box))}, etc.)  
+0x3D(61) - 0x47(71) & \lst{(_, Int)}         & Pair of types where first is primitive (\lst{(_, Int)})  
+0x48(72)            & \lst{(_,_,_)}          & Triple of types   
+0x49(73) - 0x53(83) & \lst{(Int, _)}         & Pair of types where second is primitive (\lst{(Int, _)})  
+0x54(84)            & \lst{(_,_,_,_)}        & Quadruple of types   
+0x55(85) - 0x5F(95) & \lst{(_, _)}           & Symmetric pair of primitive types (\lst{(Int, Int)}, \lst{(Byte,Byte)}, etc.)  
+0x60(96)            & \lst{(_,...,_)}        & \lst{Tuple} type with more than 4 items \lst{(Int, Byte, Box, Boolean, Int)}  
+0x61(97)            & \lst{Any}             & Any type   
+0x62(98)            & \lst{Unit}            & Unit type  
+0x63(99)            & \lst{Box}             & Box type   
+0x64(100)           & \lst{AvlTree}         & AvlTree type   
+0x65(101)           & \lst{Context}         & Context type   
+0x65(102)           & \lst{String}          & String   
+0x66(103)           & \lst{IV}              & TypeIdent   
+0x67(104)- 0x6E(110)&                    & reserved for future use   
+0x6F(111)           &                    & Reserved for future \lst{Class} type (e.g. user-defined types)   
+$$
+
+## Encoding Function Types
+
+We use $12$ different values for both domain and range types of functions. This gives us $12 * 12 = 144$ function types in total and allows us to represent $11*11 = 121$ functions over primitive types using just a single byte.
+
+Each code $F$ in a range of function types can be represented as
+$F = D * 12 + R + 112$, where $D, R \in \{0,\dots,11\}$ - indices of domain and range types correspondingly, 
+$112$ - is the first code in an interval of function types. 
+
+If $D = 0$, then the domain type is not primitive and recursive descent is necessary to write/read the domain type.
+
+If $R = 0$, then the range type is not primitive and recursive descent is necessary to write/read the range type.
+
+\subsubsection{Recursive Descent}
+
+When an argument of a type constructor is not a primitive type, we fallback to
+the simple encoding schema.
+
+In such a case, we emit the special code for the type constructor according to
+the table above and descend recursively to every child node of the type tree.
+
+We do this descend only for those children whose code cannot be embedded in
+the parent code. For example, serialization of \lst{Coll[(Int,Boolean)]}
+proceeds as the following:
+\begin{enumerate}
+\item emit \lst{0x0C} because element of collection is not primitive 
+\item recursively serialize \lst{(Int, Boolean)}
+\item emit \lst{0x3D} because the first item in the pair is primitive
+\item recursively serialize \lst{Boolean}
+\item emit \lst{0x02} - the code for primitive type \lst{Boolean}
+\end{enumerate}
+
+\noindent Examples
+
+\begin{figure}[h] \footnotesize
+\(\begin{tabularx}{\textwidth}{| l | c | c | l | c | X |}
+
+\bf{Type}                &\bf{D} & \bf{R} & \bf{Bytes} & \bf{\#Bytes} &  \bf{Comments}  
+\lst{Byte}               &     &     &  1                   &  1     &     
+\lst{Coll[Byte]}         &     &     &  12 + 1 = 13         &  1     &     
+\lst{Coll[Coll[Byte]]}   &     &     &  24 + 1 = 25         &  1     &      
+\lst{Option[Byte]}       &     &     &  36 + 1 = 37         &  1     & register     
+\lst{Option[Coll[Byte]]} &     &     &  48 + 1 = 49         &  1     & register     
+\lst{(Int,Int)}          &     &     &  84 + 3 = 87         &  1     & fold     
+\lst{Box=>Boolean}       & 7   & 2   &  198 = 7*12+2+112    &  1     & exist, for all     
+\lst{(Int,Int)=>Int}     & 0   & 3   &  115=0*12+3+112, 87  &  2     &  fold     
+\lst{(Int,Boolean)}      &     &     &  60 + 3, 2           &  2     &       
+\lst{(Int,Box)=>Boolean} & 0   & 2   &  0*12+2+112, 60+3, 7 &  3     &      
+\end{tabularx}\)
+\label{fig:ser:type:primtypes}
+\end{figure}

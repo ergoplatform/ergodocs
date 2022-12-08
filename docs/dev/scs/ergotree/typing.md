@@ -20,12 +20,13 @@ $$
 \newcommand{\False}{\text{false}}
 \newcommand{\True}{\text{true}}
 \newcommand{\langname}{ErgoTree}
-\newcommand{\corelang}{$Core-}\lambda
+\newcommand{\corelang}{Core-\lambda}
 $$
 
 
 # ErgoTree Typing
-> This page is a WIP. Please see [ErgoTree.pdf](https://storage.googleapis.com/ergo-cms-media/docs/ErgoTree.pdf) for full details.
+
+$\langname$ is a strictly typed language, in which every term should have a type in order to be wellformed and evaluated. Typing judgement of the form $\Der{\Gamma}{e : T}$ say that $e$ is a term of type $T$ in the typing context $\Gamma$.
 
 
 ### **Figure 3: Typing rules of ErgoTree**
@@ -96,9 +97,9 @@ $$
 
 
 
-Note that each well-typed term has exactly one type; hence we assume there exists a function $termType: Term \to \mathcal{T}$ which relates each well-typed term with the corresponding type.
+> Note that each well-typed term has exactly one type; hence we assume there exists a function $termType: Term \to \mathcal{T}$ which relates each well-typed term with the corresponding type.
 
-Primitive operations can be parameterized with type variables; for example, addition [primops]() has the signature $+~:~ (T,T) \to T$ where $T$ is a numeric type [predeftypes](). Function $ptype$, defined in [primops](), returns a type of primitive operation specialized for concrete types of its arguments, for example, $ptype(+,Int, Int) = (Int, Int) \to Int$.
+**Primitive operations** can be parameterized with type variables; for example,[addition](https://raw.githubusercontent.com/ScorexFoundation/sigmastate-interpreter/4daec63275fd4e1364cf7a1132f3e7be6157bb5c/docs/spec/ergotree.pdf) has the signature $+~:~ (T,T) \to T$ where $T$ is a [numeric type](types.md). Function $ptype$, defined in [primops](), returns a type of primitive operation specialized for concrete types of its arguments, for example, $ptype(+,Int, Int) = (Int, Int) \to Int$.
 
 Similarly, the function $mtype$ returns a type of method specialized for concrete types of the arguments of the MethodCall term.
 
