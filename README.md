@@ -27,3 +27,4 @@ mkdocs serve
 - Move more research papers into markdown so they're indexed and searchable. 
 - Transfer over any remaining information from ergonaut.space
 - Missing text bottom of modes of operation
+- Tidy Light Nodes page (on learn the basics)

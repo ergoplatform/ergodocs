@@ -115,7 +115,7 @@ nav:
         - dev/protocol/nipopows.md
         - Light Nodes: dev/protocol/nipopow/nipopow_nodes.md
         - Log-Space Mining: dev/protocol/nipopow/logspace.md
-        - Sidechains: dev/protocol/nipopow/sidechains.md
+        - Sidechains: dev/protocol/nipopow/nipopow-sidechains.md
       - Privacy: dev/protocol/zkp.md
       - Storage Rent: mining/rent.md
       - Autolykos: mining/autolykos.md
@@ -172,7 +172,6 @@ nav:
           - Pi: node/install/pi.md
           - Troubleshooting: node/install/troubleshooting.md
           - FAQ: node/install/node-faq.md
-        - Swagger API: node/swagger.md
         - Testnet: 
           - node/testnet.md
           - Full Sync: node/testnet/testnet-full.md
@@ -180,13 +179,15 @@ nav:
           - Your own chain: node/testnet/mine-your-own-chain.md
           - Development: node/testnet/testnet-dev.md
           - Resources: node/testnet/testnet-resources.md
-        - Node Wallet: 
-          - node/wallet.md
-          - Hierarchical keys: dev/wallet/keys.md
-        - Resources:
-          #- Architecture: node/architecture.md
-          - Modes of Operation: node/modes.md
-          
+        #- Architecture: node/architecture.md
+        - Configuration:
+          - Node Wallet: 
+            - node/wallet.md
+            - Hierarchical keys: dev/wallet/keys.md
+          - Swagger API: node/swagger.md
+          - Modes of Operation: 
+            - node/modes.md
+            - NiPoPoWS: node/node-nipopows.md
           - Configuration Files:
             - application.conf: 
               - node/conf.md
@@ -205,12 +206,12 @@ nav:
         #  - Digest State: node/digest-state.md
         #  - History Pruning: node/history-pruning.md
         #  - Snapshots: node/snapshots.md
-          - P2P Protocol:
-            - P2P: dev/p2p/index.md
-            - Handshaking: dev/p2p/p2p-handshake.md
-            - Network Messages: dev/p2p/network.md
-            # - Modifiers Exchange: dev/p2p/modifiers.md
-            # - BlockP2P: dev/p2p/BlockP2P.md
+        - P2P Protocol:
+          - P2P: dev/p2p/index.md
+          - Handshaking: dev/p2p/p2p-handshake.md
+          - Network Messages: dev/p2p/network.md
+          # - Modifiers Exchange: dev/p2p/modifiers.md
+          # - BlockP2P: dev/p2p/BlockP2P.md
       - Explorer: 
         - dev/stack/explorer.md
         - Local Setup: dev/stack/explorer/explorer_local.md
@@ -236,11 +237,14 @@ nav:
           - Go: dev/lang/go.md
         
       - Frameworks:
+        - dev/stack/frameworks.md
         - AppKit:
           - dev/stack/appkit.md
           - Tutorial: dev/stack/appkit/tutorial.md
           - Gradle: dev/stack/appkit/gradle.md
           - Using Appkit from Python: dev/stack/appkit/appkit_py.md
+        - RustKit: dev/stack/rustkit.md
+        - Fleet (JS): dev/stack/fleet.md
         - Mosaik: 
           - dev/stack/mosaik.md
           - Tutorial:
@@ -255,15 +259,16 @@ nav:
         - Headless dApp Framework: 
           - dev/stack/headless.md
           - Modules: dev/stack/headless/modules.md
-        - RustKit: dev/stack/rustkit.md
+        
         
       - Libaries:
-        - Fleet (JS): dev/stack/fleet.md
+        - dev/stack/libraries.md
         - GetBlok Plasma: dev/lib/plasma.md
         - Scrypto: https://github.com/input-output-hk/scrypto
         - EIP12-Types: https://github.com/capt-nemo429/eip12-types
         - SigmaJS: dev/lib/sigmajs.md
       - Interpreters:
+        - dev/stack/interpreters.md
         - sigmastate-interpreter: dev/scs/sigmastate-interpreter.md
         - SigmaRust: dev/stack/sigma-rust.md
       #- Bookmarks: dev/start/resources.md
@@ -306,6 +311,7 @@ nav:
             - Signing: dev/protocol/tx/signing.md
             - Validation: dev/protocol/tx/validation.md
             - Data Inputs: dev/protocol/tx/read-only-inputs.md
+            - Fees: dev/protocol/tx/min-fee.md
         - Standards:
           - Babel Fees: dev/protocol/tx/babel-fees.md
           - Proxy Contracts: dev/wallet/payments/standards/eip17.md
