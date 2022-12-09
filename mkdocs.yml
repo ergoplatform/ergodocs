@@ -296,6 +296,7 @@ nav:
         - dev/protocol/transactions.md
         - Model Transaction: dev/protocol/tx/model-tx.md
         - Composing Transactions:
+          - dev/protocol/tx/composing.md
           - Sending A Chained Transaction: dev/anatomy/transactions/chained.md
           - Frameworks: 
             - ErgoPay:
@@ -322,7 +323,9 @@ nav:
       - Block: dev/data-model/block.md
       - Wallets:
         - dev/wallets.md
-        - MultiSig: dev/wallet/multisig.md
+        - MultiSig: 
+          - dev/wallet/multisig.md
+          - Minotaur: dev/wallet/minotaur-multisig.md
         - Ledger: dev/wallet/payments/ledger.md
         - Integration: dev/Integration/guide.md
         - Standards:
@@ -367,13 +370,13 @@ nav:
           - Predefined Functions: dev/scs/ergotree/functions.md
           - Encoding: dev/scs/ergotree/encoding.md
 
-      - Multi-Stage: 
+      - Multi-Stage Contracts: 
         - dev/scs/multi.md
         - Transactions:
           - Transaction Chains: dev/scs/tx/tx-chains.md
           - Transaction Trees: dev/scs/tx/tx-tree.md
           - Transaction Graphs: dev/scs/tx/tx-graphs.md
-      - Data Inputs: dev/scs/data-inputs.md
+      #- Data Inputs: dev/scs/data-inputs.md
        
     - Cryptographic: 
             - crypto.md

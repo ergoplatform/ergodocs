@@ -6,12 +6,11 @@
 
 The initial implementation of distributed signatures support in the node worked well in simple cases, and ZK Treasury built on top of it. However, in complex cases, it has some problems:
 
-* The hints generated (such as commitments) were not tied to a position of a sub-expression in a sigma-expression. For example, for a statement like "atLeast(2, Coll(pkAlice, pkBob, pkCharlie)) && (pkBob || pkDiana)", the same commitment would be generated for Bob. This is improper and insecure - a signature would reveal Bob's secret key (as the same randomness is used twice for different challenges in Schnorr protocols).
-* similarly, hints generated were not tied to inputs.
+* The hints generated (such as commitments) were not tied to a position of a sub-expression in a sigma-expression. For example, for a statement like "atLeast(2, Coll(pkAlice, pkBob, pkCharlie)) && (pkBob || pkDiana)", the same commitment would be generated for Bob. This is improper and insecure - a signature would reveal Bob's secret key (as the same randomness is used twice for different challenges in Schnorr protocols). Similarly, hints generated were not tied to inputs.
 
 This is fixed with the new API introduced in the distributed-sigs branch. Now all the hints are tied with input indexes and positions in the sigma-tree after script reduction with the current context. Also, API is now simpler-to-use.
 
-So let me provide a new tutorial on collective signing. Like in the previous tutorial, first, we pay to 2-out-of-3 spending script (with keys stored in registers):
+So let me provide a new tutorial on collective signing. Like in the previous tutorial, first, we pay to a 2-out-of-3 spending script (with keys stored in registers):
 
 ```
 {

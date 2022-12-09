@@ -3,8 +3,7 @@
 Chained transactions (spending outputs of off-chain transactions)
 
 
-- The *simple-send* example below was adapted from [ergpy examples](https://github.com/mgpai22/ergpy/tree/main/examples). 
-- There are also some writings from GetBlok for a [Transaction Group framework](https://github.com/GetBlok-io/Subpooling#frameworks--abstractions) for sending large sets of transactions that are interrelated.
+- The *simple-send* example below was adapted from [ergpy examples](https://github.com/mgpai22/ergpy/tree/main/examples). There are also some writings from GetBlok for a [Transaction Group framework](https://github.com/GetBlok-io/Subpooling#frameworks--abstractions) for sending large interrelated transactions.
 
 
 ## Create a connection to the blockchain

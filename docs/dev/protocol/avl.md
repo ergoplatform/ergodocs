@@ -1,6 +1,6 @@
 # AVL Trees
 
-Ergo has native support for AVL trees, an efficient authenticated data structure which allows proving various properties of the data without needing to know the entire set.
+Ergo has native support for AVL trees, an efficient authenticated data structure that allows proving various properties of the data without needing to know the entire set.
 
 [GetBlok Plasma](plasma.md) is a library on top of Ergo Appkit that provides an abstraction layer to simplify the process of integrating AVL Trees (AKA Plasma) into off-chain code. The goal is to give developers an easy way to use this Layer-2 scaling solution in contracts, off-chain code, and distributed systems managing the Plasma itself 
 

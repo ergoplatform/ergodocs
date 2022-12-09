@@ -116,31 +116,28 @@ this address from a mnemonic phrase the following way:
 
 === "Python"
 
-    ``` 
-      # Import `ergpy`
-      from jpype import java
-      from ergpy import helper_functions, appkit
+    ```
+        from jpype import java
+        from ergpy import helper_functions, appkit
 
-      ergo = appkit.ErgoAppKit(node_url=node_url)
-      ergo_address = helper_functions.get_wallet_address(ergo=ergo, amount=1, wallet_mnemonic=mnemonic)[0]
+        ergo = appkit.ErgoAppKit(node_url=node_url)
+        ergo_address = helper_functions.get_wallet_address(ergo=ergo, amount=1, wallet_mnemonic=mnemonic)[0]
 
-      # Proper exit()
-      helper_functions.exit()
+        # Proper exit()
+        helper_functions.exit()
     ```
 
 Having the string representation of the address for your mnemonic, you can already receive payments.
 
 ## Sending payments
 
-If you created an address like described above and sent some ERG to it, you can send payments from
-this address.
+If you created an address like described above and sent some ERG to it, you can send payments from this address.
 
-Sending payments on Ergo is always done within a transaction. Ergo follows Bitcoin's model: A 
-transaction is a set of input boxes and output boxes. The input boxes are spent within a 
-transaction, and output boxes are created. For a transaction to be valid, it must be signed with 
+Sending payments on Ergo is always done within a transaction. Ergo follows Bitcoin's model: A transaction is a set of input boxes and output boxes. The input boxes are spent within a transaction, and output boxes are created. For a transaction to be valid, it must be signed with 
 the private key of the address of the input boxes.
 
 So sending payments needs the following steps to be done:
+
 - Search for unspent boxes covering the amount to be send
 - Create an unsigned transaction with the input boxes found and output boxes for the payment recipient
 - Sign the transaction
@@ -179,19 +176,18 @@ Luckily, our SDKs help you by providing high-level methods for this common task.
 
 === "Python"
 
-    ``` 
-      # Import `ergpy`
-      from jpype import java
-      from ergpy import helper_functions, appkit
+    ```
+        from jpype import java
+        from ergpy import helper_functions, appkit
 
-      ergo = appkit.ErgoAppKit(node_url=node_url)
-      amount_send = 1 # 1 ERG
+        ergo = appkit.ErgoAppKit(node_url=node_url)
+        amount_send = 1 # 1 ERG
 
-      helper_functions.simple_send(ergo=ergo, amount=amount_send, wallet_mnemonic=mnemonic,
-        receiver_addresses=recipient)
+        helper_functions.simple_send(ergo=ergo, amount=amount_send, wallet_mnemonic=mnemonic,
+          receiver_addresses=recipient)
 
-      # Proper exit()
-      helper_functions.exit()
+        # Proper exit()
+        helper_functions.exit()
     ```
 
 
