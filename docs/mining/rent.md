@@ -21,6 +21,7 @@ __We've designed Ergo with long-term economic sustainability in mind, and storag
 
 **Key Points**
 
+- After block **1,051,200** a miner can charge storage rent, or spend the box fully if its value not covering rent.
 - An important consequence of storage fees is that they provide additional rewards (besides block and transaction rewards) for miners.
 - Storage fees decrease the storage load and eliminate extra costs that could be added during unreasonable state growth.
 - Storage fees encourage coin flow and prevent deflation, which can cause illiquidity and the congestion of a currency system.
