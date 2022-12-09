@@ -1,7 +1,7 @@
 # Mining
 
 
-Ergo mining is based on [Autolykos](/mining/autolykos), an ASIC resistant Proof of Work algorithm written in Scala that runs cool and increases mining equipment longevity. Combined with the [eUTXO model](eutxo.md), this creates a highly efficient Proof of Work. 
+Ergo mining is based on [Autolykos](/mining/autolykos), an ASIC-resistant Proof of Work algorithm written in Scala that runs cool and increases mining equipment longevity. Combined with the [eUTXO model](eutxo.md), this creates a highly efficient form of Proof of Work. 
 
 Ergo had a fair launch with no premine, ICO or VC funding. 
 
@@ -104,15 +104,3 @@ Ergo had a fair launch with no premine, ICO or VC funding.
 ]
 
 ::/cards::
-
-
-
-
-
-
-
-
-
-
-
-

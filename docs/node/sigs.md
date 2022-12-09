@@ -1,17 +1,17 @@
 # Distributed Signautres
 
-- [EIP-11 on distributed signatures](https://github.com/ergoplatform/eips/pull/8)
+
 
 ## Improved distributed signatures
 
-Initial implementation of distributed signatures support in the node worked well in simple cases, and ZK Treasury built on top of it. However, in complex cases it has some problems:
+The initial implementation of distributed signatures support in the node worked well in simple cases, and ZK Treasury built on top of it. However, in complex cases, it has some problems:
 
-* hints generated (such as commitments) were not tied to a position of a sub-expression in a sigma-expression. For example, for statement like "atLeast(2, Coll(pkAlice, pkBob, pkCharlie)) && (pkBob || pkDiana)", the same commitment would be generated for Bob. Which is improper and insecure at all - a signature would reveal Bob's secret key (as the same randomness used twice for different challenges in Schnorr protocols).
+* The hints generated (such as commitments) were not tied to a position of a sub-expression in a sigma-expression. For example, for a statement like "atLeast(2, Coll(pkAlice, pkBob, pkCharlie)) && (pkBob || pkDiana)", the same commitment would be generated for Bob. This is improper and insecure - a signature would reveal Bob's secret key (as the same randomness is used twice for different challenges in Schnorr protocols).
 * similarly, hints generated were not tied to inputs.
 
-This is fixed with new API introduced in distributed-sigs branch. Now all the hints tied with input indexes and also with positions in sigma-tree after script reduction with current context. Also, API is now simpler-to-use I suppose.
+This is fixed with the new API introduced in the distributed-sigs branch. Now all the hints are tied with input indexes and positions in the sigma-tree after script reduction with the current context. Also, API is now simpler-to-use.
 
-So let me provide a new tutorial on collective signing. Like in the previous tutorial, first we pay to 2-out-of-3 spending script (with keys stored in registers):
+So let me provide a new tutorial on collective signing. Like in the previous tutorial, first, we pay to 2-out-of-3 spending script (with keys stored in registers):
 
 ```
 {
@@ -23,7 +23,7 @@ atLeast(2, Coll(proveDlog(pkA), proveDlog(pkB), proveDlog(pkC)))
 }
 ```
 
-Then, when a transaction is confirmed (https://explorer.ergoplatform.com/en/transactions/71aa67f95e96827193bdf711f6ccf41b30ef8bbbdaef63ed672dfb7420a4c314) , we get output bytes via /utxo/byIdBinary/{boxId} . Then we generate an unsigned transaction by providing inputs directly, in our example, by providing the following input to /wallet/transaction/generateUnsigned : 
+Then, when a transaction is confirmed (https://explorer.ergoplatform.com/en/transactions/71aa67f95e96827193bdf711f6ccf41b30ef8bbbdaef63ed672dfb7420a4c314), we get output bytes via /utxo/byIdBinary/{boxId}. Then we generate an unsigned transaction by providing inputs directly, in our example, by providing the following input to /wallet/transaction/generateUnsigned : 
  
 ```
 {
@@ -42,7 +42,7 @@ Then, when a transaction is confirmed (https://explorer.ergoplatform.com/en/tran
 }
 ```
 
-Then Alice generates commitments for the unsigned transaction by sending it to the NEW /wallet/generateCommitments (additional secrets to be used along with wallet's can be provided also), and in the output she's getting both secret and public hints:
+Then Alice generates commitments for the unsigned transaction by sending it to the NEW /wallet/generateCommitments (additional secrets to be used along with wallets can also be provided), and in the output, she is getting both secret and public hints:
 
 ```
 {
@@ -80,7 +80,7 @@ Then Alice generates commitments for the unsigned transaction by sending it to t
 
 (secret randomness is omitted to avoid private key extraction).
 
-Then Alice must store secret hints locally and provide public to Bob. Bob is signing using Alice's hints by sending a request to /wallet/transaction/sign like: 
+Then Alice must store secret hints locally and provide the public to Bob. Bob is signing using Alice's hints by sending a request to /wallet/transaction/sign like: 
 
 ```
 {
@@ -147,9 +147,9 @@ Then Alice must store secret hints locally and provide public to Bob. Bob is sig
 }
 ```
 
-and sending signed (but invalid) transaction to Alice (he can send hints generated on the next step instead).
+And sending signed (but invalid) transactions to Alice (he can send hints generated on the next step instead).
 
-Now Alice is extracting commitment from Bob and Carol from the transaction, by sending a request to /script/extractHints like:
+Now Alice is extracting a commitment from Bob and Carol from the transaction by sending a request to /script/extractHints like:
 
 ```
 {
@@ -204,7 +204,7 @@ Now Alice is extracting commitment from Bob and Carol from the transaction, by s
 }
 ```
 
-and then she adds her secret hint to generate valid signed transaction, a request to /wallet/transaction/sign would be like: 
+And then she adds her secret hint to generate a valid signed transaction, a request to /wallet/transaction/sign would be like this: 
 
 ```
 {
@@ -313,17 +313,17 @@ and then she adds her secret hint to generate valid signed transaction, a reques
 
 (secret randomness omitted again)
 
-And now generated signed valid transaction can be broadcasted. 
+And now generated signed valid transactions can be broadcasted. 
 
-Taken from the forum post [Improved distributed signatures](https://www.ergoforum.org/t/improved-distributed-signatures/366) ~ Sept, 2020
+Taken from the forum post [Improved distributed signatures](https://www.ergoforum.org/t/improved-distributed-signatures/366) ~ Sept 2020
 
 ## Let’s sign collectively! Distributed signatures API
 
-It is well-known (among hardcore Ergonauts) that Ergo Platform has support for variety of composeable and efficient zero-knowledge proofs of knowledge in its authentication language. In particular, it provides possibility for ring and threshold signatures preserving zero-knowledge, so, for example, by observing 2-out-of-3 threshold signature associated with public keys of (Alice, Bob, Carol) on the blockchain, it is not possible to figure out who were those two parties who signed.
+It is well-known (among hardcore Ergonauts) that the Ergo Platform supports various composable and efficient zero-knowledge proofs of knowledge in its authentication language. In particular, it provides the possibility for ring and threshold signatures preserving zero-knowledge, so, for example, by observing 2-out-of-3 threshold signatures associated with public keys of (Alice, Bob, and Carol) on the blockchain, it is not possible to figure out who were those two parties who signed.
 
-While Ergo Platform protocol supports threshold and ring signatures since day one, concrete applications doing signing were not available eventually. First, the ErgoMix implementations (by @anon92048  and then @anon2020s ) are using kind of ring signature hiding a spending path. And recently [EIP-11](https://github.com/ergoplatform/eips/pull/8) was introduced which is about adding support for distributed signing to the reference client (and not only).  The implementation of EIP-11 is mostly done in [this PR](https://github.com/ergoplatform/ergo/pull/1118) and in I'm going to explain how to use new API method
+While the Ergo Platform protocol supports threshold and ring signatures since day one, concrete applications doing signing were not available eventually. First, the ErgoMix implementations (by @ anon92048 and then @ anon2020s) use a ring signature, hiding a spending path. Moreover, recently [EIP-11](https://github.com/ergoplatform/eips/pull/8) was introduced, which is about adding support for distributed signing to the reference client (and not only).  The implementation of EIP-11 is mostly done in [this PR](https://github.com/ergoplatform/ergo/pull/1118), which explains how to use the new API method
 
-First, let's make a script for a box protected with 2-out-of-3 threshold signature. One option is about to hardcode public keys in the script, I've chosen another way, namely, to put public keys of signers into registers:
+First, make a script for a box protected with a 2-out-of-3 threshold signature. One option is about to hardcode public keys in the script; I've chosen another way, namely, to put the public keys of signers into registers:
 
     {
     val pkA  = SELF.R4[GroupElement].get
@@ -349,13 +349,14 @@ Then we need to lock money with concrete keys. It seems the node Swagger API is 
 
 (use /utils/addressToRaw/{address} method to get encoded points from P2PK addresses shown by the wallet and prepend group element type descriptor "07" then).  
 
-Thus we're getting the following box, for example (output #0): https://explorer.ergoplatform.com/en/transactions/0ffc5ba326262f25016c59c58a34b2f7fed2ea1b69f8f007d270f6ef07bced49 . We can get binary representation of unspent box via /utxo/byIdBinary API method, e.g. utxo/byIdBinary/f1892011ed31b8e51f3f3ae44f6d9132070343a7bf6db61b3342696a7873a085 gives us:
+Thus we are getting the following box, for example [(output #0)](https://explorer.ergoplatform.com/en/transactions/0ffc5ba326262f25016c59c58a34b2f7fed2ea1b69f8f007d270f6ef07bced49):. We can get the binary representation of unspent box via **/utxo/byIdBinary** API method, e.g. `utxo/byIdBinary/f1892011ed31b8e51f3f3ae44f6d9132070343a7bf6db61b3342696a7873a085` gives us:
 
+```
 "8094ebdc0310010404987300830308cde4c6a70407cde4c6a70507cde4c6a70607abdd0f00030702b353df14cd94849c36194bba03000dafaeb91b3a425a863f5660565189ddfe8f070354efc32652cad6cf1231be987afa29a686af30b5735995e3ce51339c4d0ca380070235647199b150d8fab315d74e44b78866787d0330241fd471f98bf6c2bffe1e8d0ffc5ba326262f25016c59c58a34b2f7fed2ea1b69f8f007d270f6ef07bced4900"
+```
+We use the first two keys for signing (as it is 2-out-of). Please note that members of the signing ring know (and choose) who is signing and who will be simulated.   
 
-We use first two keys for signing (as it is 2-out-of). Please note that members of the signing ring know (and choose) who's signing and who will be simulated.   
-
-Let's assume that the first key belongs to Alice, and the second key belongs to Bob. The the signing procedure could be as follows:
+Let us assume that the first key belongs to Alice and the second key belongs to Bob. The signing procedure could be as follows:
 
 First, Alice generates secret randomness and public commitment to it by posting the following request to /script/generateCommitment : 
 
@@ -364,16 +365,16 @@ First, Alice generates secret randomness and public commitment to it by posting 
       "h": "02b353df14cd94849c36194bba03000dafaeb91b3a425a863f5660565189ddfe8f"
     } 
 
-result is :
+Result is :
     {
        "r": "...",
       "a": "02c103443ab26655a1ef36f44643700cc5f4730a2a1830085dda1072ccfb30940f"
      }
   
 ("r" is omitted to avoid private key recovery) 
-She sends then "a" value to Bob along with unsigned transaction generated via /wallet/transaction/generateUnsigned.
+She then sends "a" value to Bob, and an unsigned transaction is generated via /wallet/transaction/generateUnsigned.
 
-Now Bob is generating invalid (partial) signature by sending the following signing request to /wallet/transaction/sign with Alice's commitment included as hint: 
+Now Bob is generating an invalid (partial) signature by sending the following signing request to /wallet/transaction/sign with Alice's commitment included as a hint: 
 
     {
       "tx": {
@@ -429,7 +430,7 @@ Now Bob is generating invalid (partial) signature by sending the following signi
       ]
     }
 
-Bob is sending transaction with invalid signature to Alice. First, she extracts Bob's and Carol's (simulated by Bob actually) commitments and partial signatures by feeding Bob's invalid transaction and Bob's and Carol's pubkeys into /script/extractHints : 
+Bob is sending a transaction with an invalid signature to Alice. First, she extracts Bob's and Carol's (simulated by Bob actually) commitments and partial signatures by feeding Bob's invalid transaction and Bob's and Carol's pubkeys into /script/extractHints : 
 
     {
       "transaction": {
@@ -482,7 +483,7 @@ Bob is sending transaction with invalid signature to Alice. First, she extracts 
       ]
     } 
 
-and then she adds a hint with her commitment and randomness and produces  transaction. A request to /wallet/transaction/sign is as follows:
+And then, she adds a hint of her commitment and randomness and produces a transaction. A request to /wallet/transaction/sign is as follows:
 
     {
       "tx": {
@@ -571,7 +572,11 @@ and then she adds a hint with her commitment and randomness and produces  transa
 
 ("secret" aka "r" skipped again)
 
-As result, we're getting JSON-encoded transaction which can be broadcasted via POST request to /transactions to get the transaction on the blockchain.
+As a result, we're getting JSON-encoded transactions which can be broadcasted via a POST request to /transactions to get the transaction on the blockchain.
 
-Still, the code is not finalized ("op": -51 looks ugly, however, it was done previously) and not user-friendly, so as a next step, some applications working with the API are needed.
+Still, the code is not finalized ("op": -51 looks ugly; however, it was done previously) and is not user-friendly, so as a next step, some applications working with the API are needed.
 - [Let’s sign collectively! Distributed signatures API](https://www.ergoforum.org/t/lets-sign-collectively-distributed-signatures-api/259) ~ June, 2020
+
+## Resources
+
+- [EIP-11 on distributed signatures](https://github.com/ergoplatform/eips/pull/8)

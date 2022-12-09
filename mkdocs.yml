@@ -183,7 +183,6 @@ nav:
         - Node Wallet: node/wallet.md
         - Resources:
           #- Architecture: node/architecture.md
-          - Distributed Signatures: node/sigs.md
           - Modes of Operation: node/modes.md
           - Hierarchical keys: dev/wallet/keys.md
           - Configuration Files:
@@ -336,18 +335,6 @@ nav:
             - Accessing boxes and registers: dev/scs/boxes-and-registers.md
             - Global Functions: dev/scs/global-functions.md
             - Language Operations: dev/scs/sigma/lang-ops.md
-          - Cryptographic: 
-            - crypto.md
-            - Sigma Protocols: 
-              - dev/scs/sigma.md
-              - Schnorr: 
-                - dev/scs/sigma/schnorr.md
-                - Verifying Schnorr Signatures: dev/scs/sigma/verifying.md
-              - Diffie: 
-                - dev/scs/sigma/diffie.md
-                - ZeroJoin: dev/crypto/zerojoin.md
-            - Ring Signatures:
-              - 3-out-of-5 Threshold Signature: dev/scs/sigma/3-out-of-5.md
           - sigmastate-interpreter: dev/scs/sigmastate-interpreter.md
           - ErgoTree: 
             - dev/scs/ergotree.md
@@ -368,12 +355,27 @@ nav:
             - Transaction Trees: dev/scs/tx/tx-tree.md
             - Transaction Graphs: dev/scs/tx/tx-graphs.md
         - Data Inputs: dev/scs/data-inputs.md
+      
       - Tooling:
         - Debugging: dev/scs/debugging.md
         - FlowCards: dev/scs/flowcards.md
         - ErgoScala: dev/stack/ergoscala.md
         - Compiler: dev/stack/compiler.md
         - Kiosk: dev/stack/kiosk.md
+    - Cryptographic: 
+            - crypto.md
+            - Sigma Protocols: 
+              - dev/scs/sigma.md
+              - Schnorr: 
+                - dev/scs/sigma/schnorr.md
+                - Verifying Schnorr Signatures: dev/scs/sigma/verifying.md
+              - Diffie: 
+                - dev/scs/sigma/diffie.md
+                - ZeroJoin: dev/crypto/zerojoin.md
+            - Ring Signatures:
+              - 3-out-of-5 Threshold Signature: dev/scs/sigma/3-out-of-5.md
+              - Distributed Signatures: node/sigs.md
+          
     - Resources: dev/stack/introduction.md
 
      
