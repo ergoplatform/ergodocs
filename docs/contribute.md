@@ -1,5 +1,6 @@
 # Contributing
 
+Join the [Ergo Discord](https://discord.gg/nr4JRnhAyV) (and enable the development channels) for any support, queries or comments. 
 
 ## Who can contribute?
 
@@ -10,11 +11,23 @@ Ergo operates an open model where contributions from all are welcomed.
 
 ## How can I contribute as a developer?
 
-There are paid bounties scattered across the Ergo repositories, which are summarised [here](https://github.com/ergoplatform/grow-ergo/). Notably, there are active bounties for [Tutorials and Guides for developers](https://github.com/ergoplatform/grow-ergo/issues/15) at any skill level. 
+### Education Bounties
 
-Anything educative for the community is subject to some bounty, even if not specifically listed. 
+> **Anything educative for the community is subject to some bounty, even if not specifically listed.**
 
-Join the [Ergo Discord](https://discord.gg/nr4JRnhAyV) (and enable the development channels) for any support, queries or comments. 
+
+Notably, there are active bounties for [Tutorials and Guides for developers](https://github.com/ergoplatform/grow-ergo/issues/15) at any skill level. 
+
+
+Please make pull requests [directly to the repository for this documentation](https://github.com/glasgowm148/ergodocs)
+
+### Development Bounties
+
+There are paid bounties scattered across the Ergo repositories, which are summarised [here](https://github.com/ergoplatform/grow-ergo/). 
+
+
+
+### Payment 
 
 You can submit any **payment requests** for bounties completed [here](https://q9fwzopidh8.typeform.com/to/G5gAKC4r).
 

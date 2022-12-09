@@ -12,3 +12,18 @@ Please submit a pull request.
 ```
 mkdocs serve
 ```
+
+
+## ToDo
+
+- Tidy and clarify the Multi-Stage contract/transaction pages. 
+- Make sections on NiPoPoWs more cohesive. (Mining, Scaling, Light Clients)
+- Finish moving over ErgoTree specification
+- (BUG) Syntax Highlighting not working
+- (BUG) LaTex commands need refresh to work sometimes. (Preload in Mathjax.js)
+- Flesh out & tidy Apps & Use Cases section (new title?)
+  - P2P
+- Split and tidy scaling page
+- Move more research papers into markdown so they're indexed and searchable. 
+- Transfer over any remaining information from ergonaut.space
+- Missing text bottom of modes of operation

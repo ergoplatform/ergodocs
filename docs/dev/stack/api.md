@@ -1,6 +1,4 @@
-
-## APIs
-
+# APIs
 
 - [API Docs](https://api.ergoplatform.com/api/v1/docs/)
   - [Node API](https://git.io/fjqwb)

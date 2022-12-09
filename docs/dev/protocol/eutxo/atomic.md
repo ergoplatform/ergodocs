@@ -5,7 +5,7 @@ tags:
 
 # Atomic Swaps
 
-__Because a blockchain is a siloed, self-contained system by design, it interacts with other blockchain protocols. Atomic Swaps enable the cross-chain exchange of digital assets, avoiding the need for centralised exchanges.__
+__Because a blockchain is a siloed, self-contained system by design, it must interact with other blockchain protocols. Atomic Swaps enable the cross-chain exchange of digital assets, avoiding the need for centralised exchanges.__
 
 Blockchains are excellent at decentralised value transfer within their domains. That is, you can send BTC to any Bitcoin address securely and efficiently, and you can send LTC to any Litecoin address securely and efficiently too.
 

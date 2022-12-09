@@ -1,9 +1,9 @@
 # Modes of Operation
 
 
-Ergo (since the very first testing network `Testnet0`) supports multiple security models. 
+The Ergo node supports multiple security models. (since `Testnet0`!, the very first testing network)
 
-In addition to running in "full node mode", which is similar to Bitcoin fullnode, Ergo reference implementation supports `Light-SPV`, `Light-Fullnode` and `Pruned-Fullnode` modes.
+In addition to running in "full node mode", which is similar to Bitcoin fullnode, Ergo reference implementation supports [Light-SPV](#light-spv-mode), [Light-Fullnode](#light-full-node-mode) and [Pruned-Fullnode](#pruned-full-node-mode) modes.
 
 ## Full-Node Mode
 
@@ -26,20 +26,20 @@ if(history.apply(header).isSuccess) {
 1.  On receiving transaction ids from header:
 
 ```java
-    transactionIdsForHeader.filter(txId => !MemPool.contains(txId)).foreach { txId =>
+transactionIdsForHeader.filter(txId => !MemPool.contains(txId)).foreach { txId =>
     request transaction with txId
-    }
+}
 ```
 
 2.  On receiving a transaction:
 
 ```java
-    if(Mempool.apply(transaction).isSuccess) {
+if(Mempool.apply(transaction).isSuccess) {
     if(!isInitialBootstrapping) Broadcast INV for this transaction
-    Mempool.getHeadersWithAllTransactions { BlockTransactions =>
-        GOTO 7
+        Mempool.getHeadersWithAllTransactions { BlockTransactions =>
+            GOTO 7
     }
-    }
+}
 ```
 
 3.  Now we have `BlockTransactions`: all transactions corresponding to some Header
@@ -57,11 +57,11 @@ if(History.apply(BlockTransactions) == Success(ProgressInfo)) {
     (e.g. every 30000 blocks like in Ethereum).
     This UTXOSnapshot should be required for mining by Rollerchain*/
     if(State().apply(ProgressInfo) == Success((newState, ADProofs))) {
-    if("mode"="full" || "mode"=="pruned-full") ADProofs.foreach ( ADProof => History.apply(ADProof))
-    if("mode"=="pruned-full" || "mode"=="light-full") drop BlockTransactions and ADProofs older than BlocksToKeep
+        if("mode"="full" || "mode"=="pruned-full") ADProofs.foreach ( ADProof => History.apply(ADProof))
+        if("mode"=="pruned-full" || "mode"=="light-full") drop BlockTransactions and ADProofs older than BlocksToKeep
     } else {
-    //Drop Header from history, because it's transaction sequence is not valid
-    History.drop(BlockTransactions.headerId)
+        //Drop Header from history, because it's transaction sequence is not valid
+        History.drop(BlockTransactions.headerId)
     }
 } else {
 blacklist peer who sent header
@@ -133,8 +133,10 @@ current digest validity by using the previous one as well as
 AD-transformations.
 - **additional-depth** - depth to start additional checks from.
 
-1.  Send ErgoSyncInfo message to connected peers.
-2.  Get response with INV message, containing ids of blocks, better than our best block.
+Steps:
+
+1.  Send **ErgoSyncInfo** message to connected peers.
+2.  Get response with **INV** message, containing ids of blocks, better than our best block.
 3.  Request headers for all ids from 2.
 4.  On receiving header:
 
@@ -181,11 +183,11 @@ A Light SPV node doesn't check full blocks and is useful for mobile phones and l
 
 ### Bootstrap
 
-1.  Send GetPoPoWProof for all connections.
-2.  On receive PoPoWProof apply it to History (History should be able to
+1.  Send **`GetPoPoWProof`** for all connections.
+2.  On receive **`PoPoWProof`** apply it to History (History should be able to
     determine, whether this PoPoWProof is better than it's current best
     header chain).
-3.  GOTO regular regime.
+3.  **`GOTO`** regular regime.
 
 ### Regular
 
@@ -197,10 +199,10 @@ A Light SPV node doesn't check full blocks and is useful for mobile phones and l
 
 ```java
     if(History.apply(header).isSuccess) {
-    State.apply(header) // just change state roothash
+        State.apply(header) // just change state roothash
     if(!isInitialBootstrapping) Broadcast INV for this header
     } else {
-    blacklist peer
+        blacklist peer
     }
 ```
 
@@ -208,13 +210,13 @@ A Light SPV node doesn't check full blocks and is useful for mobile phones and l
 
 Ergo has the following settings determines a mode:
 
--   ADState: Boolean - keeps state roothash only.
--   VerifyTransactions: Boolean - download block transactions and verify them (requires BlocksToKeep == 0 if disabled).
--   PoPoWBootstrap: Boolean - download PoPoW proof only
--   BlocksToKeep: Int - number of last blocks to keep with transactions,
+-   **`ADState: Boolean`** - keeps state roothash only.
+-   **`VerifyTransactions: Boolean`** - download block transactions and verify them (requires BlocksToKeep == 0 if disabled).
+-   **`PoPoWBootstrap: Boolean`** - download PoPoW proof only
+-   **`BlocksToKeep: Int`** - number of last blocks to keep with transactions,
     for all other blocks it keep header only. Keep all blocks from
     genesis if negative
--   MinimalSuffix: Int - minimal suffix size for PoPoW proof (may be
+-   **`MinimalSuffix: Int`** - minimal suffix size for PoPoW proof (may be
     pre-defined constant).
 
 `if(VerifyTransactions == false) require(BlocksToKeep == 0)` Mode from "multimode.md" can be determined as follows:

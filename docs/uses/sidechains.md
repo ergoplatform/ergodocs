@@ -9,7 +9,7 @@ In order to send money to a sidechain they must attach a proof that proves they 
 
 ## NiPoPoWs
 
-NIPOPOWS enable trustless sidechain through SPV (simplified payment verification) proofs and is resistant to such attacks while also being small enough that they can actually be sent over the network.
+NiPoPoWs enable trustless sidechain through [***Simplified Payment Verification***](modes.md) (SPV) proofs and is resistant to such attacks while also being small enough that they can actually be sent over the network.
 
 While "compact SPV proofs" have been proposed previously, they've proved vulnerable to certain attacks, ones that would potentially allow miners to steal money left on the sidechains.
 

@@ -161,8 +161,8 @@ nav:
       - Mobile: 
         - dev/stack/mobile.md
         - iOS: dev/stack/ios.md   
-        - Android: dev/stack/android.md  
-    - Tooling:
+        - Android: dev/stack/android.md
+    - Interacting with Ergo:
       - Node:
         - node/install.md
         - Install: 
@@ -180,11 +180,13 @@ nav:
           - Your own chain: node/testnet/mine-your-own-chain.md
           - Development: node/testnet/testnet-dev.md
           - Resources: node/testnet/testnet-resources.md
-        - Node Wallet: node/wallet.md
+        - Node Wallet: 
+          - node/wallet.md
+          - Hierarchical keys: dev/wallet/keys.md
         - Resources:
           #- Architecture: node/architecture.md
           - Modes of Operation: node/modes.md
-          - Hierarchical keys: dev/wallet/keys.md
+          
           - Configuration Files:
             - application.conf: 
               - node/conf.md
@@ -203,7 +205,7 @@ nav:
         #  - Digest State: node/digest-state.md
         #  - History Pruning: node/history-pruning.md
         #  - Snapshots: node/snapshots.md
-          - P2P:
+          - P2P Protocol:
             - P2P: dev/p2p/index.md
             - Handshaking: dev/p2p/p2p-handshake.md
             - Network Messages: dev/p2p/network.md
@@ -214,6 +216,13 @@ nav:
         - Local Setup: dev/stack/explorer/explorer_local.md
         - Pi Blockchain Explorer: dev/stack/rpi-blockchain-explorer.md
         - GraphQL: dev/stack/explorer/graphql.md
+      - APIs: dev/stack/api.md
+      - Off-Chain:
+        - Oracle-Core: dev/oc/oracle.md
+        - Spectrum.DEX off-chain services: dev/oc/dex_bots.md
+        - Ergo Utilities Rust: dev/oc/ergo_utilities.md
+      
+    - Developer Tooling:
       - Programming Languages:
         - JVM: 
           - Scala: dev/lang/scala.md
@@ -246,19 +255,17 @@ nav:
         - Headless dApp Framework: 
           - dev/stack/headless.md
           - Modules: dev/stack/headless/modules.md
-        - RustKit: https://github.com/rust-ergo/rustkit
-        - SigmaRust: dev/stack/sigma-rust.md
+        - RustKit: dev/stack/rustkit.md
+        
       - Libaries:
         - Fleet (JS): dev/stack/fleet.md
         - GetBlok Plasma: dev/lib/plasma.md
         - Scrypto: https://github.com/input-output-hk/scrypto
         - EIP12-Types: https://github.com/capt-nemo429/eip12-types
         - SigmaJS: dev/lib/sigmajs.md
-      - APIs: dev/stack/api.md
-      - Off-Chain:
-        - Oracle-Core: dev/oc/oracle.md
-        - Spectrum.DEX off-chain services: dev/oc/dex_bots.md
-        - Ergo Utilities Rust: dev/oc/ergo_utilities.md
+      - Interpreters:
+        - sigmastate-interpreter: dev/scs/sigmastate-interpreter.md
+        - SigmaRust: dev/stack/sigma-rust.md
       #- Bookmarks: dev/start/resources.md
     - Anatomy of Ergo:
       - Box: 
@@ -318,50 +325,50 @@ nav:
           - Cold Wallet: dev/wallet/standards/eip19.md
       #- UTXO-State: 
     - Smart Contracts:
-      - Creating a simple P2S app: dev/scs/p2s.md
       - Smart Contracts: dev/scs/index.md
       - ErgoScript: 
         - dev/scs/ergoscript.md
         - Overview: 
           - dev/scs/ergoscript.md
           - Quick Primer: dev/scs/ergoscript-primer.md
-        - Sigma Language:
-          - dev/scs/sigma-lang.md
-          - Language Description: 
-            - dev/scs/sigma/lang-spec.md
-            - Simple Syntax: dev/scs/syntax.md
-            - Sigma Propositions: dev/scs/sigma/sigma-prop.md
-            - The Blockchain context: dev/scs/blockchain-context.md
-            - Accessing boxes and registers: dev/scs/boxes-and-registers.md
-            - Global Functions: dev/scs/global-functions.md
-            - Language Operations: dev/scs/sigma/lang-ops.md
-          - sigmastate-interpreter: dev/scs/sigmastate-interpreter.md
-          - ErgoTree: 
-            - dev/scs/ergotree.md
-            - Introduction: dev/scs/ergotree/ergotree-intro.md
-            - As a Language: dev/scs/ergotree/ergotree-lang.md
-            - Typing: dev/scs/ergotree/typing.md
-            - Evaluation: dev/scs/ergotree/evaluation.md
-            - Serialization: dev/scs/ergotree/serialization.md
-            - Predefined Types: dev/scs/ergotree/types.md
-            - Predefined Functions: dev/scs/ergotree/functions.md
-            - Encoding: dev/scs/ergotree/encoding.md
+          - Creating a simple P2S app: dev/scs/p2s.md
+        - Tooling:
+          - Debugging: dev/scs/debugging.md
+          - FlowCards: dev/scs/flowcards.md
+          - ErgoScala: dev/stack/ergoscala.md
+          - Compiler: dev/stack/compiler.md
+          - Kiosk: dev/stack/kiosk.md
+      - Sigma Language:
+        - dev/scs/sigma-lang.md
+        - Language Description: 
+          - dev/scs/sigma/lang-spec.md
+          - Simple Syntax: dev/scs/syntax.md
+          - Sigma Propositions: dev/scs/sigma/sigma-prop.md
+          - The Blockchain context: dev/scs/blockchain-context.md
+          - Accessing boxes and registers: dev/scs/boxes-and-registers.md
+          - Global Functions: dev/scs/global-functions.md
+          - Language Operations: dev/scs/sigma/lang-ops.md
         - Data Structures:
           - AVL Trees: dev/protocol/avl.md
-        - Multi-Stage: 
-          - dev/scs/multi.md
-          - Transactions:
-            - Transaction Chains: dev/scs/tx/tx-chains.md
-            - Transaction Trees: dev/scs/tx/tx-tree.md
-            - Transaction Graphs: dev/scs/tx/tx-graphs.md
-        - Data Inputs: dev/scs/data-inputs.md
-      
-      - Tooling:
-        - Debugging: dev/scs/debugging.md
-        - FlowCards: dev/scs/flowcards.md
-        - ErgoScala: dev/stack/ergoscala.md
-        - Compiler: dev/stack/compiler.md
-        - Kiosk: dev/stack/kiosk.md
+        - ErgoTree: 
+          - dev/scs/ergotree.md
+          - Introduction: dev/scs/ergotree/ergotree-intro.md
+          - As a Language: dev/scs/ergotree/ergotree-lang.md
+          - Typing: dev/scs/ergotree/typing.md
+          - Evaluation: dev/scs/ergotree/evaluation.md
+          - Serialization: dev/scs/ergotree/serialization.md
+          - Predefined Types: dev/scs/ergotree/types.md
+          - Predefined Functions: dev/scs/ergotree/functions.md
+          - Encoding: dev/scs/ergotree/encoding.md
+
+      - Multi-Stage: 
+        - dev/scs/multi.md
+        - Transactions:
+          - Transaction Chains: dev/scs/tx/tx-chains.md
+          - Transaction Trees: dev/scs/tx/tx-tree.md
+          - Transaction Graphs: dev/scs/tx/tx-graphs.md
+      - Data Inputs: dev/scs/data-inputs.md
+       
     - Cryptographic: 
             - crypto.md
             - Sigma Protocols: 
@@ -388,7 +395,7 @@ nav:
       - Tooling:
         - Azorus: uses/azorus.md
       - Sidechains: 
-        - dev/protocol/nipopow/sidechains.md
+        - uses/sidechains.md
         - ErgoData: uses/ErgoData.md
 
     - Exchanges:

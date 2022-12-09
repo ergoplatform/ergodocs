@@ -53,9 +53,6 @@ For the upcoming year our main priorities will be
 - Light Clients
 - Research and new designs (Dexy, ChainCash, SigmaJoin, etc)
 
-For more detailed information of our current and potential research & development see Appendix D. 
-
-
 
 ### What is the *Ergo Foundation*?
 
