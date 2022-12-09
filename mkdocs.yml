@@ -428,6 +428,8 @@ nav:
     - CrowdFunding: 
       - uses/crowdfunding.md
       - ErgoRaffle: uses/raffle.md
+      - ErgoWell: uses/ergowell.md
+      - ErgoFund: uses/ergofund.md
     - Gaming: 
       - uses/gaming.md
       - Lotteries: uses/lottery.md
