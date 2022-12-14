@@ -143,6 +143,8 @@ nav:
         - mining/algorithm.md
         - Solution Verification: mining/solution-verification.md
         - Difficulty Adjustment: mining/difficulty.md
+        - Emission: mining/emission.md
+        - ASICs & FPGAs: mining/fpga.md
       - Governance: mining/governance.md
       - Storage Rent: mining/rent.md
       - Log-Space Mining: mining/log_space.md

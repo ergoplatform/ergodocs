@@ -1,3 +1,16 @@
+# Start Mining
+
+
+1. You’ll need a computer with at least one GPU with more than 4Gb memory. 
+2. You’ll need to figure out what operating system will be best for you. 
+      1. Windows or Linux if you need a desktop and it’s your main PC, or you can go with a mining os like HiveOS or MinerstatOS if it’s going to be a dedicated mining rig.
+3. You’ll need to pick [mining software.](#software).
+      1. NB miner, lol miner, Trex miner, team red miner are all popular options, but pick one that works best with your set-up. (Team red miner for AMD) 
+4. Then you’ll need to pick a [mining pool](https://miningpoolstats.stream/ergo). Choose one that is smaller if you care about keeping ergo decentralised. 
+5. [Wallets](wallet.md)
+6. Overclocking
+
+
 ## Getting Started
 
 Search your card here on the [Autolykos v2 hashrates spreadsheet](https://docs.google.com/spreadsheets/d/1NsuoDB27EwCo_BlSjCP3GMLfTSJRPIWIBsL-wPTllUg) to find your estimated hashrate.
