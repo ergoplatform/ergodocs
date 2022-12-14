@@ -7,6 +7,9 @@ Some examples, like [Rarible](https://rarible.com/) or [Opensea](https://opensea
 ## Marketplaces
 
 - [ErgoAuctions]
+- [SkyHarbor]
+
+
 ### ErgoAuctions
 
 The [Ergo Auction House](http://ergoauctions.org/#/auction/active) lets you buy and sell collectible tokens, art, and much more.

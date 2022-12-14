@@ -20,6 +20,7 @@ mkdocs serve
 - Make sections on NiPoPoWs more cohesive. (Mining, Scaling, Light Clients)
 - Finish moving over ErgoTree specification
 - (BUG) Syntax Highlighting not working
+- (BUG) Python in multi-code selector boxes seems to have broken. 
 - (BUG) LaTex commands need refresh to work sometimes. (Preload in Mathjax.js)
 - Flesh out & tidy Apps & Use Cases section (new title?)
   - P2P

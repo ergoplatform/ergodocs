@@ -1,14 +1,22 @@
 # Storage Rent
 
+## FAQ
+
+### What is *'Storage Rent'* 
+
+Storage rent is a nominal fee charged on unspent output after four years, with a price per byte defined by the storage rent subprotocol. This works out to about 0.14 ERG per four years for a box with no tokens and no complex scripts. 
+
+### How much is the fee? 
+The default fee is 360 nanoERGs per byte but can be raised by [miners voting](governance.md)
+
+### What is the potential? 
+
 - [Discovering Ergo's Storage Rent Potential](https://www.reddit.com/r/ergonauts/comments/xeke0b/discover_ergos_storage_rent_potential/)
 
-**Storage Rent is a nominal fee (.14ERG per 4 years from an unmoved box) + transaction fees.**
 
-This “fee” part may look like a disadvantage. However, programmers can quickly realize the importance of it by just imagining life without garbage collection in their language of choice.
+### What about tokens, NFTs, etc?
 
-> *Claiming fees sound great… But what happens if a UTXO cannot pay the fee?*
-
-Miners can take over assets inside a UTXO if there are not enough ERGs to pay for rent. This feature is one of the most interesting reward mechanisms a PoW blockchain can offer miners. The relevance of this is particularly important in a blockchain that has the capacity to have a wide variety of assets.
+Miners can take over assets inside a UTXO if there are insufficient ERGs to pay rent. This feature is one of the most interesting reward mechanisms a PoW blockchain can offer miners. The relevance of this is particularly important in a blockchain that has the capacity to have a wide variety of assets.
 
 As Ergo matures, more revenue streams will become available to miners. 
 
@@ -23,12 +31,12 @@ __We've designed Ergo with long-term economic sustainability in mind, and storag
 
 - After block **1,051,200** a miner can charge storage rent, or spend the box fully if its value not covering rent.
 - An important consequence of storage fees is that they provide additional rewards (besides block and transaction rewards) for miners.
-- Storage fees decrease the storage load and eliminate extra costs that could be added during unreasonable state growth.
+- Storage fees decrease the storage load and eliminate extra costs that could be added during excessive state growth.
 - Storage fees encourage coin flow and prevent deflation, which can cause illiquidity and the congestion of a currency system.
 
-The 2020 block reward reduction was the most important halving event Bitcoin has experienced. This was the point where the narrative of programmatic scarcity and digital gold was truly be proven in the context of the sharpest economic downturn in living memory. In previous halvings, Bitcoin has still been in its infancy, a niche experiment. Future halvings will confirm the principle. But this one is the watershed.
+The 2020 block reward reduction was the most important halving event Bitcoin has experienced. This was where the narrative of programmatic scarcity and digital gold was truly proven in the context of the sharpest economic downturn in living memory. In previous halvings, Bitcoin is still a niche experiment in its infancy. Future halvings will confirm the principle. But this one is the watershed.
 
-Looking ahead, though, what happens in 20 or 30 years, when block rewards have fallen so far that miners have to rely on transaction fees and potentially other sources of revenue? Will Bitcoin be sustainable? What will be the impact on the ecosystem?
+Looking ahead, though, what happens in 20 or 30 years when block rewards have fallen so far that miners have to rely on transaction fees and potentially other sources of revenue? Will Bitcoin be sustainable? What will be the impact on the ecosystem?
 
 *The simple answer is that we don't know.*
 
@@ -40,28 +48,30 @@ Mining rewards are a key feature in maintaining the security of proof-of-work bl
 
 ## Storage fees
 
-Fees will be deducted slowly, over time – the unmoved UTXOs will not simply be appropriated by miners. Anyone who wants to avoid this simply needs to move their balances once every four years, which is not an onerous requirement for helping incentivise miners and avoiding the deflationary consequences of lost coins. You can read more about how fees will be levied in [this paper](https://fc18.ifca.ai/bitcoin/papers/bitcoin18-final18.pdf).
+Fees will be deducted slowly over time – miners will not simply appropriate the unmoved UTXOs. Anyone who wants to avoid this needs to move their balances once every four years, which is not an onerous requirement for helping incentivise miners and avoiding the deflationary consequences of lost coins. You can read more about how fees will be levied in [this paper](https://fc18.ifca.ai/bitcoin/papers/bitcoin18-final18.pdf).
 
-In this way, Ergo seeks to ensure a balance between maintaining digital scarcity, on the one hand, and giving miners long-term incentives to secure the blockchain, on the other – long past the point where new coins have ceased to be released.
+In this way, Ergo seeks to ensure a balance between maintaining digital scarcity, on the one hand and giving miners long-term incentives to secure the blockchain, on the other – long past the point where new coins have ceased to be released.
 
 
 ## Lost coins
 
 Digital scarcity is an important feature of Ergo. Like Bitcoin, ERG is designed to be a finite resource and long-term store of value. We do not agree with the principle of infinite inflation.
 
-And yet, this has to be balanced against the need to pay miners to secure the blockchain and process transactions. Without adequate compensation for miners, there is no viable blockchain at all. Ergo approaches this by slowly recycling lost coins, in a feature we call 'Storage rent'. 
+And yet, this has to be balanced against the need to pay miners to secure the blockchain and process transactions. With adequate compensation for miners, there is a viable blockchain. Ergo approaches this by slowly recycling lost coins, in a feature we call 'Storage rent'. 
 
-Studies suggest that as many as [4 million BTC may have been lost forever](https://bitcoinist.com/estimated-4-million-bitcoin-lost-forever-by-users-forgetfulness/). These are coins that were mined in the early days of Bitcoin and stored on hard drives that were subsequently thrown away or destroyed because the owners forgot about them or thought they were worthless, as well as coins in addresses for which the private keys have been lost. (And, of course, there are Satoshi's estimated holdings of 1 million BTC, which may never move.)
+Studies suggest that as many as [4 million BTC may have been lost forever](https://bitcoinist.com/estimated-4-million-bitcoin-lost-forever-by-users-forgetfulness/). These are coins mined in the early days of Bitcoin and stored on hard drives that were subsequently thrown away or destroyed because the owners forgot about them or thought they were worthless, as well as coins in addresses for which the private keys have been lost. (And, of course, there are Satoshi's estimated holdings of 1 million BTC, which may never move.)
 
 Where coins have genuinely been permanently taken out of circulation in this way, it makes sense to have a mechanism to recover them and put them back into the blockchain economy. That way, we can preserve digital scarcity without unnecessarily accelerating it. In other words, by attempting to stick to the intended algorithmic supply for any given point in time.
 
-Ergo's halving schedule is faster than Bitcoin's. Block rewards start at 75 ERG and decrease steadily after the first two years. There is no 'long tail' of emission, and after eight years, block rewards will fall to zero. After that, the total supply will be fixed. The number of ERG in existence will never be more than 97,739,925.
+Ergo's halving schedule is faster than Bitcoin's. Block rewards start at 75 ERG and decrease steadily after the first two years. There is no 'long tail' of emission, and block rewards will fall to zero after eight years. After that, the total supply will be fixed. The number of ERGs in existence will never be more than 97,739,925.
+
+> Please note this is no longer the case with EIP-27
 
 
 
 ## A Systematic Approach To Cryptocurrency Fee
 
-This article is a continuation and summarization of *[A Systematic Approach To Cryptocurrency Fees](https://fc18.ifca.ai/bitcoin/papers/bitcoin18-final18.pdf)* (hereinafter referred to as the paper) by Alex (Kushti) Chepurnoy, Vasily Kharin and Dmitry Meshkov. In the paper, the authors address the problem of storage resources utilization. There is a concern that once an element of the state is created, it exists forever and inevitably balloons node disk space. This will lead to unreasonable state growth of the blockchain.
+This article is a continuation and summarisation of *[A Systematic Approach To Cryptocurrency Fees](https://fc18.ifca.ai/bitcoin/papers/bitcoin18-final18.pdf)* (hereinafter referred to as the paper) by Alex (Kushti) Chepurnoy, Vasily Kharin and Dmitry Meshkov. In the paper, the authors address the problem of storage resource utilisation. There is a concern that once an element of the state is created, it exists forever and inevitably balloons node disk space. This will lead to unreasonable state growth of the blockchain.
 
 While cryptocurrencies address transaction fees as an atomic concept, the paper suggests that it is reasonable to take this into account on a 3-dimensional scale.
 
@@ -71,9 +81,9 @@ While cryptocurrencies address transaction fees as an atomic concept, the paper 
 
 ### Blockchain Costs
 
-Proof of Work blockchain technology relies on miners to guard the integrity of the blockchain. Miner resources, such as memory and electricity, are costly, and therefore a revenue scheme is needed to incentivize miners. Miner incentives are currently comprised of block rewards and transaction fees. Transactions fees are an important component in preventing spam attacks that exhaust miner resources.
+Proof of Work blockchain technology relies on miners to guard the integrity of the blockchain. Miner resources, such as memory and electricity, are costly, and therefore a revenue scheme is needed to incentivise miners. Miner incentives are currently comprised of block rewards and transaction fees. Transactions fees are an important component in preventing spam attacks that exhaust miner resources.
 
-Besides network utilization, transaction processing requires a miner to spend resources to maintain all the original blockchain data. In the case of Bitcoin, this might be less of a problem because it has yet to implement smart contract functionality. Cryptocurrencies that support smart contract languages, such as Solidity (Ethereum), however, may require a lot of computations, and corresponding costs will be included in the transaction fee.
+Besides network utilisation, transaction processing requires a miner to spend resources to maintain all the original blockchain data. In the case of Bitcoin, this might be less of a problem because it has yet to implement smart contract functionality. Cryptocurrencies that support smart contract languages, such as Solidity (Ethereum), however, may require a lot of computations, and corresponding costs will be included in the transaction fee.
 
 The 3-dimensional scale shown above is based on storage-oriented load, computational load and network load.
 

@@ -24,7 +24,6 @@ A couple that we know of (see below). Most likely only hobbyists at this stage f
 There is no public miner, so even if you got your hands on one, you couldn't use it without writing it yourself. There is a chip shortage, so unlikely to be competitive or available at scale for years. Assuming you could order an E300 at retail prices and run it today, ROI would take ~52 years.
 
 Here's [a benchmark on the Osprey E300](https://www.reddit.com/r/erg_miners/comments/rmwk9p/testing_my_fpga_at_over_3mhw/) (three XCVU35P FPGAs): 
-https://lovehindpa.ws/screens/ergofpga-07102022.png
 
 
 ### What is the E300? 
