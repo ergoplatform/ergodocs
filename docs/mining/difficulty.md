@@ -1,4 +1,4 @@
-## Difficulty Adjustment
+# Difficulty Adjustment
 
 Ergo uses the **linear least square method** to calculate difficulty. This function is based on the past eight epochs (8x1024 blocks), as described in [this paper](https://eprint.iacr.org/2017/731.pdf) to obtain a target block interval of 120s (2 minutes), on average, during steady-hash. 
 

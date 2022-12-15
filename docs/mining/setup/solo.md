@@ -50,6 +50,38 @@ ergo {
 - **n** is nonce
 - **w** and d are not used anymore in Autolykos2 and **constant**.
 
+## Why are mining rewards going to some strange address?
+
+Mining rewards are sent to UTXOs associated with special scripts that lock rewards to miner public keys for 720 blocks (72 in the testnet). You can see an example of such a script [here](https://explorer.ergoplatform.com/en/addresses/88dhgzEuTXaQ3tvkG8KeHesmXdvVomxHoHK5ExawGuxhs3nwBKkoQTxZogna6Dx9Jbu7KG2Wor22Uy73).
+
+Such UTXOs do not belong to the node wallet before the locking height, so the wallet does not include them into your balance. 
+
+However, such UTXOs are stored in a special node application with `id = 9` (wallet application id = 10), thus they can be found via `/scan/unspentBoxes/9` (so /scan/unspentBoxes node [Swagger](swagger.md) API method with id = 9).
+
+After enough confirmations (720 for the mainnet, 72 for the testnet) wallet shows mined rewards even if they still associated with long scripts, not short P2PK addresses.
+
+## How to check if a block is yours. 
+
+You can retrieve your mining rewards address with `/mining/rewardAddress` API call, which should return something like this:
+
+```
+{
+“rewardAddress”: “mPdcmQkPPvyMGoCDNg9oiasLyPpKJhHjgjpt89uJZE1oN9PJ9fKbdKDcfomtWoy3d1E7RFLTUbXbt1AS”
+}
+```
+
+Then you can check rewards on the [ergo explorer](https://explorer.ergoplatform.com/). 
+
+You can also retrieve your “raw” public key via the `/mining/rewardPublicKey` endpoint. 
+
+```
+{
+“rewardPubkey”: “03aa53abda9e6c958ed6046e6092b901662a26a01a2029c417b1c3f29b4b1c2799”
+}
+```
+
+Then check block headers (`pk` field) for this public key.
+
 ## Resources
 
 - [Ergo Node + Stratum Server mining tutorial](https://www.youtube.com/watch?v=_1M8dGpfKjU)

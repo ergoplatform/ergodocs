@@ -131,27 +131,40 @@ nav:
     
 
   - Miners:
-    - Mining: mining/index.md
-    - Start Mining: 
-      - mining/setup/join.md
-      - Solo Mining: mining/setup/solo.md
-      - Host a Pool: mining/setup/pool.md
-      - Subpooling: mining/setup/subpool.md
     - Autolykos:
       - mining/autolykos.md
       - Algorithm: 
         - mining/algorithm.md
-        - Solution Verification: mining/solution-verification.md
         - Difficulty Adjustment: mining/difficulty.md
         - Emission: mining/emission.md
-        - ASICs & FPGAs: mining/fpga.md
-      - Governance: mining/governance.md
+        - Solution Verification: mining/solution-verification.md
+      
       - Storage Rent: mining/rent.md
+      - ASIC Resistance: mining/asic.md     
+      - Resources:
+        - mining/mining-resources.md
+        - EIPs:
+          - Emission Retargeting Soft-Fork: mining/standards/eip27.md
+          - Tweaking Difficulty Adjustment Algorithm: mining/standards/eip37.md
+    - Mining: mining/index.md
+    - Start Mining: 
+      - mining/setup/join.md
+      - Software: mining/software.md
+      - Operating Systems: mining/os.md
+      - Overclocking: mining/overclocking.md
+      - Solo Mining: mining/setup/solo.md
+      - Host a Pool: mining/setup/pool.md
+    - Governance: mining/governance.md
+    - Features:
       - Log-Space Mining: mining/log_space.md
-      - Standards:
-        - Emission Retargeting Soft-Fork: mining/standards/eip27.md
-        - Tweaking Difficulty Adjustment Algorithm: mining/standards/eip37.md
+      - Smartpools: 
+        - mining/smartpools.md
+        - Subpooling: mining/setup/subpool.md
+
     
+
+
+
   - Developers: 
     - dev/start.md
     - Getting Started: 
@@ -429,7 +442,7 @@ nav:
     
     - CrowdFunding: 
       - uses/crowdfunding.md
-      - ErgoRaffle: uses/raffle.md
+      - ErgoRaffle: uses/ergoraffle.md
       - ErgoWell: uses/ergowell.md
       - ErgoFund: uses/ergofund.md
     - Gaming: 
