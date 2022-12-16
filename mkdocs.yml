@@ -95,7 +95,7 @@ markdown_extensions:
 nav:
   - Getting Started:
     - Getting Started: index.md
-    - Contributing: contribute.md
+    
     - FAQ: 
       - faq.md
     - Events: 
@@ -128,8 +128,6 @@ nav:
       - Audit: dev/protocol/audit.md
     - EIPs: dev/protocol/eip.md
 
-    
-
   - Miners:
     - Autolykos:
       - mining/autolykos.md
@@ -160,10 +158,6 @@ nav:
       - Smartpools: 
         - mining/smartpools.md
         - Subpooling: mining/setup/subpool.md
-
-    
-
-
 
   - Developers: 
     - dev/start.md
@@ -409,8 +403,6 @@ nav:
           
     - Resources: dev/stack/introduction.md
 
-     
-
   - Applications & Use Cases: 
     - uses/index.md
     - Infrastructure: 
@@ -489,7 +481,7 @@ nav:
     #  - CDBC: uses/cbdc.md
     # - Atomic Swaps: dev/protocol/atomic.md
 
-
+  - Get Involved!: contribute.md
 
 
 
