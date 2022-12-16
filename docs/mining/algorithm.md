@@ -8,24 +8,24 @@ This page provides a brief Overview of the [Autolykos](https://www.docdroid.net/
 
 - Autolykos v1 originally had pool-resistance built-in through the use of non-outsourceable puzzles.
 - **The Hardening Hard-Fork** on block `417,792` marked the launch of Autolykos v2, enabling mining pools. See this [paper](https://ia.cr/2020/044). 
-- [**EIP27:**](../dev/protocol/eip27) was passed with overwhelming community support, extending emission by 4,566,336 blocks (~17.38 years). This was activated on block `777217`
+- [**EIP27:**](eip27.md) was passed with overwhelming community support, extending emission by 4,566,336 blocks (~17.38 years). This was activated on block `777217`
 
 
 ### Autolykos V2
 
-Autolykos, named after the Greek God *Autolycus* for the original non-outsourcability built-in in. However, it became apparent that pool resistance was infeasible due to large players having an advantage with smart contracts. ["Bypassing Non-Outsourceable Proof-of-Work Schemes Using Collateralized Smart Contracts"](https://ia.cr/2020/044) was presented by Alex Chepurnoy at the WTSC workshop associated with Financial Cryptography and Data Security 2020 in Malaysia.
+Autolykos V1 was originally pool resistant.  However, it became apparent that pool resistance was infeasible due to large players having an advantage with smart contracts. ["Bypassing Non-Outsourceable Proof-of-Work Schemes Using Collateralized Smart Contracts"](https://ia.cr/2020/044) was presented by Alex Chepurnoy at the WTSC workshop associated with Financial Cryptography and Data Security 2020 in Malaysia.
 
 
 **Autolykos V2** has the following modifications
 
-- *non-outsourceable puzzles* were disabled. It turns out (based on more than one year of non-outsourceable PoW experience) that non-outsourceable PoW is not an attractive option for small miners.
-- Now, the algorithm tries to bind an efficient solving procedure with a single table of ~2 GB (initially), which significantly reduces memory optimisation possibilities.
-- Table size (memory requirements of a solving algorithm) grows with time.
-- The table depends solely on the block height, so there is no penalisation for recalculating block candidates for the same height
+- *non-outsourceable puzzles* were disabled. 
+- The algorithm tries to bind an efficient solving procedure with a single table of ~2 GB (initially), which significantly reduces memory optimisation possibilities.
+- The table size (memory requirements of a solving algorithm) grows with time.
+- The table depends solely on the block height, so there is no penalisation for recalculating block candidates for the same height.
 
-### Basic Ideas:
+**Basic Ideas:**
 
-- Like Autolykos-1, based on the **k-sum** problem, a miner needs to find **k (k=32)** out of **N (2^n = 2^26)** elements, and the hash of their sum must be less than the target value (inverse of the difficulty)
+- Like Autolykos-1, based on the **k-sum** problem, a miner needs to find **k (k=32)** out of **N (2<sup>n</sup> = 2<sup>26</sup>)** elements, and the hash of their sum must be less than the target value (inverse of the difficulty)
 - **k** *indexes* are pseudorandom values derived from block candidate and nonce
 - **N** *elements* are derived from block height and constants, unlike Autolykos v.1, so miners can recalculate block candidates quickly now (as only indexes depend on them)
 - Indexes calculation also involves the same table 
@@ -33,7 +33,7 @@ Autolykos, named after the Greek God *Autolycus* for the original non-outsourcab
         - **h** is block height, 
         - **M** is padding to slow down hash calculation (8kb of constant data).
 
-The algorithm attempts to make mining efficient for ones that store the table, which is **2^26 * 31 = 2,080,374,784** bytes initially (about 2GB). 
+The algorithm attempts to make mining efficient for ones that store the table, which is **2<sup>26</sup> * 31 = 2,080,374,784** bytes initially (about 2GB). 
 
 The table size (**N** value) grows with time as follows. 
 
@@ -52,7 +52,8 @@ Autolykos is based on the [Equihash paper and the birthday problem](https://www.
 
 To summarise, the miner is tasked to find **k (=32)** out of **N** elements, such that the hash of the sum of the elements is less than the target. 
 
-#### Autolykos Block Mining Pseudocode
+**Autolykos Block Mining Pseudocode**
+
 ![Screenshot 2022-06-01 at 23.41.49.png](https://storage.googleapis.com/ergo-cms-media/Screenshot_2022_06_01_at_23_41_49_b2cdf73a2a/Screenshot_2022_06_01_at_23_41_49_b2cdf73a2a.png)
 
 Before discussing the block mining procedure, the algorithm first requires 
@@ -64,7 +65,7 @@ Before discussing the block mining procedure, the algorithm first requires
 
 This prime group returns integers in **Z/qZ** during the *Blake2b256*-based hashing function.
 
-#### _Example cyclic group with generator z, identity element 1, order 6_
+_Example cyclic group with generator z, identity element 1, order 6_
 ![unnamed (1).png](https://storage.googleapis.com/ergo-cms-media/unnamed_1_44d138eaaf/unnamed_1_44d138eaaf.png)
 
 We will not focus extensively on the cyclic group as it only covers a small segment of the PoW scheme. Now, let’s tackle Autolykos Block mining line by line.
@@ -93,7 +94,7 @@ then **hash.mod(q)** is returned.
 
 If not, Algorithm 3 repeats until it reaches a numeric hash within the valid range. For reference, note that **q** is the prime order of group **G**, *Blake2b256* hash outputs are 256 bits, 64 digits long, and Algorithm 3 will always return a numeric hash in **Z/qZ**.
  
-#### *Blake2b256* Based Hash function
+***Blake2b256* Based Hash function**
 ![Screenshot 2022-06-02 at 03.17.18.png](https://storage.googleapis.com/ergo-cms-media/Screenshot_2022_06_02_at_03_17_18_ce898813d8/Screenshot_2022_06_02_at_03_17_18_ce898813d8.png)
  
 In line 2, the focus is the creation of **list R**. **List R** contains **r** values which are 31-byte numeric hashes created from integers in [0, N). **r** values are generated by **takeright(31,H(j||h||M))**. 
@@ -133,11 +134,11 @@ As stated in the [Autolykos v2 whitepaper](https://www.docdroid.net/mcoitvK/ergo
 
 The last two values listed in the table should be 2,143,944,600 and not 2,147,387,550. After block 4198400, the storage requirement of **list R** will be (31 bytes * 2,143,944,600) = 66.46GB.
 
-#### N elements based on block height
+**N elements based on block height**
 
 ![unnamed (3).png](https://storage.googleapis.com/ergo-cms-media/unnamed_3_978ffb3d8a/unnamed_3_978ffb3d8a.png)
 
-#### N elements, Ethash vs. Autolykos
+**N elements, Ethash vs. Autolykos**
  
 Autolykos is like Ethash in the sense that block height determines **N** elements to be stored in RAM. 
 
@@ -172,14 +173,14 @@ Line 6 produces **e**, a seed for index generating. Algorithm 3 is called with i
  
 Element index **J** is created using Algorithm 6 with inputs **e**, **m**,_ and **nonce**. Function **genIndexes** is a pseudorandom one-way that returns a list of **k** (=32) numbers in [0,N).
  
-#### genIndexes function
+**genIndexes function**
 
 ![unnamed (6).png](https://storage.googleapis.com/ergo-cms-media/unnamed_6_987fcaba80/unnamed_6_987fcaba80.png)
  
 A couple of extra steps are not shown in the pseudocode, such as a byteswap. The creation and application of genIndexes can be explained via the following example:
 
 
-#### GenIndexes(_e||m||nonce_)...
+**GenIndexes(_e||m||nonce_)...**
 
 - **hash** = *Blake2b256*(e||m||nonce) = [0xF963BAA1C0E8BF86, 0x317C0AFBA91C1F23, 0x56EC115FD3E46D89, 0x9817644ECA58EBFB]_
 - **hash64to32** = [0xC0E8BF86, 0xF963BAA1, 0xA91C1F23, 0x317C0AFB, 0xD3E46D89 0x56EC115F, 0xCA58EBFB, 0x9817644E]_
@@ -188,7 +189,7 @@ A couple of extra steps are not shown in the pseudocode, such as a byteswap. The
 
 The following python code shows slicing the extended hash, returning k indexes. In this example we are assuming _h_ < 614,400, thus N = 2<sup>26</sup> (67,108,864).
  
-#### Slicing and mod N[1]
+**Slicing and mod N[1]**
 
 ```python
 for i in range(8):
@@ -251,16 +252,3 @@ The sum of the 32 **r** values is hashed using Algorithm 3, and if the output is
  
 If you have made it this far, congratulations! After reading all of this information, you should have a good understanding of Autolykos v2! If you want a visual demonstration of Autolykos, please see the graphic at the end of this document. If you would like a video explanation, you can find it [here](https://youtu.be/pPYcfLQGIHg). 
 
-
-## Conclusion
-
-
-If you enjoyed this article, the author invites you to check out more content via their Twitter account, **@TheMiningApple**.
-
-![unnamed (9).png](https://storage.googleapis.com/ergo-cms-media/unnamed_9_1a59f3c52c/unnamed_9_1a59f3c52c.png)
-
-[1] Credit to Wolf9466#9466 on Discord
-[2] http://www.ldatech.com/_images/imageGallery/SBM09P-3_front.jpg
-[3] https://www.blake2.net/#:~:text=A%3A%20BLAKE2%20is%20fast%20in,of%20the%20designers%20of%20BLAKE2).
-
-There is a detailed three-part series on the Ergo blog; [Ergo and the Autolykos Consensus Mechanism](https://ergoplatform.org/en/blog/Ergo-and-the-Autolykos-Consensus-Mechanism-Part-I/)
