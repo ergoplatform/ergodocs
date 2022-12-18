@@ -403,7 +403,7 @@ nav:
           
     - Resources: dev/stack/introduction.md
 
-  - Applications & Use Cases: 
+  - Ecosystem: 
     - uses/index.md
     - Infrastructure: 
       - Rosen Bridge: uses/rosen.md
@@ -481,7 +481,15 @@ nav:
     #  - CDBC: uses/cbdc.md
     # - Atomic Swaps: dev/protocol/atomic.md
 
-  - Get Involved!: contribute.md
+  - Get Involved!: 
+    - contribute.md
+    - Developers: 
+      - contribute/devs.md
+      - Bounties: contribute/bounties.md
+      - Grants: contribute/grants.md
+      - Roles: contribute/roles.md
+    - Marketing: contribute/marketing.md
+    - Sigmanauts: contribute/sigmanauts.md
 
 
 

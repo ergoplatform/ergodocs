@@ -15,42 +15,39 @@
 
 ## Motivation 
 
+A difficulty adjustment algorithm attempts to stabilise the average time to generate a block by changing the difficulty of solving the Proof-of-Work puzzle. It does this by observing the difficulties and timestamps of historical blocks to determine how fast the current hashrate is mining blocks, and how much it needs to increase to reduce or increase the difficulty to reach the target of 120 seconds per block in Ergo's case.  
 
-A difficulty adjustment (and readjustment) algorithm observing the difficulties and timestamps of historical blocks in an attempt to stabilize the average time to generate a block by changing the difficulty of solving a Proof-of-Work puzzle by. 
+Bitcoin uses a simple [linear difficulty recalculation](https://en.bitcoinwiki.org/wiki/Difficulty_in_Mining), with some caveats, such as the difficulty never being changed by more than a factor of four each way to prevent large changes. 
 
-The First Proof-of-Work cryptocurrency, Bitcoin, used [simplest linear difficulty recalculation](https://en.bitcoinwiki.org/wiki/Difficulty_in_Mining), with some limits for it, such as a difficulty never being changed by more than a factor of 4 either way to prevent large changes. 
+Bitcoin's difficulty readjustment algorithm works fairly well when dedicated, and loyal mining hardware works on the PoW puzzles. However, in other environments, different issues were observed with it, including coin hopping. Thus different solutions to coin hopping appeared, including using the least squares method-based predictive algorithm (Meshkov D., Chepurnoy A., Jansen M. Short paper: Revisiting difficulty control for blockchain systems) as done in Ergo.
 
-Bitcoin's difficulty readjustment works more or less well since only dedicated and so loyal mining hardware working on PoW puzzles. However, in other environments, different issues were observed with it, including coin hopping. Thus different solutions to coin hopping appeared, including using the least squares method-based predictive algorithm (Meshkov D., Chepurnoy A., Jansen M. Short paper: Revisiting difficulty control for blockchain systems) as done in Ergo.
-
-The Ergo algorithm works well in most cases, including huge price drops, 100x initial difficulty misestimation during mainnet launch, etc. However, the current simplified and limitless version of the algorithm is bumpy. A big influx of mining hash rate over multiple epochs, especially with super-linear hash rate growth over time, may result in a huge difficulty spike. Similarly, a few slow epochs may cause a huge drop. Also, for dapps and other applications, it would be desirable to make difficulty readjustment more reactive (currently, readjustment takes place every 1024 blocks, and eight epochs, so about two weeks normally, are considered).   
+The original Ergo algorithm worked well in most cases, including huge price drops, 100x initial difficulty misestimation during mainnet launch, etc.However, the current simplified and limitless version of the algorithm is bumpy. A big influx of mining hash rate over multiple epochs, especially with super-linear hash rate growth over time, can result in a huge difficulty spike. Similarly, a few slow epochs may cause a huge drop. Also, for dapps and other applications, it would be desirable to make difficulty readjustment more reactive (currently, readjustment takes place every 1024 blocks, and eight epochs, so about two weeks normally, are considered).   
 
 ## Related Work
 
-
-To prevent disastrous effects of hopping, a general approach (see, e.g. [bch](https://read.cash/@jtoomim/bch-upgrade-proposal-use-asert-as-the-new-daa-1d875696) ) is to use weighted averaging functions over past epochs which do prefer last epochs.
+To prevent disastrous effects of hopping, a general approach (see, e.g. [bch](https://read.cash/@jtoomim/bch-upgrade-proposal-use-asert-as-the-new-daa-1d875696) ) is to use a weighted averaging function over past `x` epochs with no preference for the latest epochs.
 
 However, in the case of natural hash rate migration, such functions will likely lag (in contrast to the proactive nature of the predictive least square method). 
 
 ## Proposed Changes
 
-We propose to make current difficulty readjustment more reactive and smoother by shortening epoch length, amplifying the weight of the last epoch and putting some limits on difficulty change as follows.
+We propose to make current difficulty readjustment more reactive and smoother by shortening epoch length, amplifying the weight of the last epoch, and putting some limits on difficulty change as follows.
 
-1. Epoch length to be set to 128 blocks. 
-2. We calculate *predictive* difficulty according to 8 epochs 128 blocks each and *classic* difficulty as done in Bitcoin. 
-We limit predictive difficulty change so that it never be changed by more than 50% per epoch. Then we took the average from classic and predictive difficulties. 
-3. We limit change so that difficulty never be changed by more than 50% per epoch.
+1. The epoch length will be set to 128 blocks. 
+2. We calculate two figures. A *predictive* difficulty according to the past eight epochs (128 blocks each); and *classic* difficulty as done in Bitcoin
+3. We limit predictive difficulty change so that it never be changed by more than 50% per epoch. Then we take the average from the classic and predictive difficulties. 
+4. We limit change so that difficulty never be changed by more than 50% per epoch.
 
 
 ## Simulations
 
+For some previous simulations, see the [BCH upgrade proposal](https://read.cash/@jtoomim/bch-upgrade-proposal-use-asert-as-the-new-daa-1d875696) and [DifficultyControlSimulator.scala](https://github.com/ergoplatform/ergo/blob/0af9dd9d8846d672c1e2a77f8ab29963fa5acd1e/src/test/scala/org/ergoplatform/tools/DifficultyControlSimulator.scala)). However, these are based on observed historical data and ignore that miners will behave differently in the presence of different difficulty adjustment methods.
 
-Previous simulations (See [here](https://read.cash/@jtoomim/bch-upgrade-proposal-use-asert-as-the-new-daa-1d875696) and [here](https://github.com/ergoplatform/ergo/blob/0af9dd9d8846d672c1e2a77f8ab29963fa5acd1e/src/test/scala/org/ergoplatform/tools/DifficultyControlSimulator.scala)) are based on observing historical data and ignore the fact that miners will behave differently in the presence of different difficulty adjustment method.
-
-To combat this, we made a playground simulating random price walking in an uptrend or downtrend. In this simulation, the blockchain is mined by rational hashpower only, and Hashrate looks at the current price and difficulty. 
+To combat this, we made a playground simulating random price walking in an uptrend or downtrend. In this simulation, the blockchain is mined by rational hash power only, and Hashrate looks at the current price and difficulty. 
 
 1. We assume that price and difficulty are changed simultaneously, and then the hash rate moves in or out, affecting average block generation time **t**. 
 2. We may assume then that **t = d * c / p**, so average block generation time **t** is proportional to difficulty **d** and inversely proportional to price **p**. 
-3. Fixing **t** (set to target block generation time, so 2 minutes), **d** and **p** at the beginning of the experiment, we can evaluate **c**. 
+3. Fixing **t** (set to target block generation time, so 2 minutes), **d**, and **p** at the beginning of the experiment, we can evaluate **c**. 
 4. Then, on each step, we are randomly changing **p**, and according to the difficulty from the previous epoch, we can get the average block generation time for the new epoch.
 5. To have a trend in price, we are changing **p** by adding (or subtracting) a random value with a fixed average and a random fluctuation. 
 
@@ -99,17 +96,12 @@ As we can see, the proposed DAA, as well as the current one, is working better d
 
 ## Activation
 
-
-It is possible to activate EIP-37 after block #843,776 and before block #851,969. For activation, 232 or more votes for activation required in the last 256 blocks, with voting checked every 128 blocks (for blocks whose height % 128 == 1), and immediate activation once the threshold is met. 
+It is possible to activate EIP-37 after block #843,776 and before block #851,969. 
+For activation, 232 or more votes for activation required in the last 256 blocks, with voting checked every 128 blocks (for blocks whose height % 128 == 1)
+Immediate activation once the threshold is met. 
 
 ## Implementation
 
-The proposed difficulty adjustment algorithm and its activation procedure are implemented in the reference protocol client 4.0.100; [all the newer versions]((https://github.com/ergoplatform/ergo/releases) will also support them. 
-
-
-## References
-
-
-1. [Bitcoin Wiki. Target](https://en.bitcoin.it/wiki/Target#When_does_the_target_change_next.3F)
+The proposed difficulty adjustment algorithm and activation procedure are implemented in the reference protocol client 4.0.100 and [all newer versions]((https://github.com/ergoplatform/ergo/releases).
 
 

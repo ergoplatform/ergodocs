@@ -1,0 +1,22 @@
+Whether you are an investor or developer, during your time in crypto you have no doubt come across forums or Twitter threads talking about transaction efficiency, scalability, and costing. In order for a blockchain technology to establish long-term viability and adoption, it needs to be adaptable and scalable. With Ergo’s new Protocol Reference Client 5.0.0, the network makes some significant leaps forward, where the new features will provide substantial benefits across all levels of the ecosystem. Miners, developers, and users will benefit greatly from these new changes.
+
+If you are fairly new to blockchain, terms like scalability and costing may seem confusing. Scalability refers to a blockchain’s ability to handle increasing numbers of transactions. As a platform grows, it is to be expected that the number of users executing transactions will greatly increase. Without scaling, the network can become more congested and transactions may have longer execution times. When talking about costing, we are literally discussing the cost of a transaction. In blockchain, every transaction has a fee. There are also fees for checking the validity of a smart contract. With Proof of Work blockchains, costing has typically been determined by either AOT (ahead of time) or JIT (just in time) costing. Until now, Ergo has employed AOT costing, where cost estimates are determined before the execution of any script. This ensured that overly expensive scripts are excluded. 
+
+## Ergo Protocol Reference Client 5.0.0
+
+With the release of Reference Client 5.0.0, there are several network improvements. To put it simply, the network UX (user experience) will be greatly improved because more transactions will be processed in a block (thereby also benefiting miners), and the network will offer developers much more efficient costing. 
+
+As was mentioned, until now, Ergo has applied AOT costing to scripting. JIT costing is a method where costs are calculated at the moment a script is executed. With Reference Client 5.0.0, Ergo takes a significant step forward by balancing both AOT and JIT costing within a hybrid costing model. A previous Ergo blog post ([Ergo’s Hybrid Method for Counting Costs](https://ergoplatform.org/en/blog/2022-02-09-ergos-hybrid-method-for-counting-costs/)) offers a detailed breakdown on how Ergo’s new hybrid costing works:
+
+>“In the first stage, transaction inputs go through a verifier (one input after another) and each input’s script is reduced to a sigma proposition - a kind of spending condition which can be cryptographically verified. JIT costing is applied during this reduction stage. 
+When every input in the transaction has a sigma proposition, then AOT costing (which is both very simple and fast) is used to calculate the costs of all cryptographic operations in the transaction. All costs are then added together to determine the final cost of the transaction itself. Once the final cost of the transaction is obtained it is added to the block cost, which must be within the block budget before it can be added to it.” 
+
+However, these cryptographic operations are significantly more expensive than reduction and typically take 80% of the verification time.  From this perspective, AOT costing guarantees that a costing attack which uses crypto operations is not possible. At the same time, attacking reduction operations are divided by a factor of 5.
+
+
+>“The same process is repeated for each transaction in the block (in sequence) and the total cost of the block is accrued. Before it can be submitted to the blockchain, each block must be below the cost allowed per block. 
+With the deployment of this new two-part costing method, costs can be established more efficiently and accurately with less expense than using AOT costing alone.”
+
+As a result of these improvements in Reference Client 5.0.0, users and developers will enjoy faster script executions, and space within blocks will be used much more efficiently. With faster script execution, the network will enjoy even more increased transaction rates. With improved costing, blocks will also be able to include even more transactions, thereby increasing throughput. 
+
+For all the details on the new Reference Client 5.0.0, please visit the [Github](https://github.com/ergoplatform/ergo/releases/tag/v5.0.0) release. There, you will also find details for Sigma Interpreter 5.0.0, PaiNet testnet settings, as well as EIP39 implementation.
