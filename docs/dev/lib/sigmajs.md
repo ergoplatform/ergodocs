@@ -3,8 +3,7 @@
 > **Sigma JS is still a work in progress and not ready for use. **
 
 ## Introduction
-
-The combination of Sigma JS and [Fleet](fleet.md) will provide a similar level of usability to Javascript developers as [AppKit](appkit.md) does for JVM developers. 
+The combination of Sigma JS and [Fleet](fleet.md) will provide similar usability to Javascript developers as [AppKit](appkit.md) does for JVM developers. 
 
 ## Resources
 

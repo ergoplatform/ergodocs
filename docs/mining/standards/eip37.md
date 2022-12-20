@@ -96,9 +96,9 @@ As we can see, the proposed DAA, as well as the current one, is working better d
 
 ## Activation
 
-It is possible to activate EIP-37 after block #843,776 and before block #851,969. 
-For activation, 232 or more votes for activation required in the last 256 blocks, with voting checked every 128 blocks (for blocks whose height % 128 == 1)
-Immediate activation once the threshold is met. 
+- It is possible to activate EIP-37 after block #843,776 and before block #851,969. 
+- For activation, 232 or more votes for activation required in the last 256 blocks, with voting checked every 128 blocks (for blocks whose height % 128 == 1)
+- Immediate activation once the threshold is met. 
 
 ## Implementation
 

@@ -5,7 +5,7 @@ tags:
 
 # Fleet
 
-[Fleet](https://github.com/capt-nemo429/fleet) lets you easily create Ergo transactions with a pure JS library. 
+[Fleet](https://fleet-sdk.github.io/docs/) lets you easily create Ergo transactions with a pure JS library. 
 
 - 🪄 Easy to use
 - 🪶 Lightweight: [~12kB minified + gziped](https://bundlephobia.com/package/@fleet-sdk/core)
@@ -13,4 +13,3 @@ tags:
 - 🧪 100% code coverage
 - 🌲 Tree-shakeable
 
-See their documentation site [here](https://fleet-sdk.github.io/docs/).
