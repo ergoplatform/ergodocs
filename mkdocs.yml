@@ -406,53 +406,95 @@ nav:
   - Ecosystem: 
     - uses/index.md
     - Infrastructure: 
-      - Rosen Bridge: uses/rosen.md
-      - Oracles: uses/oracles.md
+      - Rosen Bridge: eco/rosen.md
+      - Oracles: 
+        - uses/oracles.md
+        - Oracle Pools V2: eco/oracle-v2.md
+        - Mixicles: uses/mixicles.md
+
       - Tooling:
-        - Azorus: uses/azorus.md
+        - Azorus: eco/azorus.md
       - Sidechains: 
         - uses/sidechains.md
         - ErgoData: uses/ErgoData.md
 
     - Exchanges:
-      - DEXs: uses/dex.md
-      - NFTs: uses/nft.md
-      - Stablecoins: 
-        - uses/stablecoins.md
-        - SigmaUSD:
-          - uses/sigmausd.md
-          - Examples: uses/sigmausd/examples.md
-          - Mining Incentives: uses/sigmausd/mining-incentives.md
-          - Other Stablecoins: uses/sigmausd/comparison.md
-        - Dexy: uses/dexy.md
-    
-    - Zero-Knowledge:
-      - Zero-Knowledge Treasury: uses/zkt.md
-      - Mixing: uses/mixer.md
-      - Trustless LETS: uses/trustless-lets.md
-    
+      - uses/dex.md
+      - Spectrum Finance: eco/spectrum.md
+      - Local Exchange Trading Systems (LETS): 
+        - uses/lets.md
+        - Trustless LETS: uses/trustless-lets.md
+
+
+    - NFT Markets:
+      - uses/nft.md
+      - Ergo Auctions: eco/ergo-auctions.md
+      - SkyHarbor: eco/skyharbor.md
+    - Stablecoins: 
+      - uses/stablecoins.md
+      - SigmaUSD:
+        - uses/sigmausd.md
+        - Examples: uses/sigmausd/examples.md
+        - Mining Incentives: uses/sigmausd/mining-incentives.md
+        - Other Stablecoins: uses/sigmausd/comparison.md
+      - DexyGold: eco/dexy.md
+      - ChainCash: uses/chaincash.md
+    - DAOs:
+      - uses/dao.md 
+      - ErgoPad: eco/ergopad.md
+      - Paideia: eco/paideia.md
+      - Swamp-Audio: eco/swamp-audio.md
+    - Privacy:
+      
+      - Zero Knowledge:
+        - ZK Treasury: uses/zkt.md
+      - Mixing: 
+        - uses/mixer.md
+        - Stealth Addresses: uses/stealth-address.md
+
+
+    - Decentralised ID:
+      - Ergo Nation: eco/ergonation.md
+
+    - Mining:
+      - CYTI: eco/cyti.md
+      - SNISP: eco/snisp.md
   
     - CrowdFunding: 
       - uses/crowdfunding.md
-      - ErgoRaffle: uses/ergoraffle.md
-      - ErgoWell: uses/p2p/ergowell.md
+      - ErgoRaffle: eco/ergoraffle.md
+      - ErgoWell: eco/ergowell.md
       - ErgoFund: uses/ergofund.md
     - Gaming: 
       - uses/gaming.md
       - Lotteries: uses/lottery.md
+      - BlitzTCG: eco/blitz.md
+      - Metaverse:
+        - Cyberverse: eco/cyberverse.md
+        - Sigmavalley: eco/sigmavalley.md
+      - Monetary-base:
+        - BlobsTopia: eco/blobstopia.md
+        - NightOwl Casino: eco/nightowl.md
+        - ErgFlip: eco/ergflip.md
+        - Obolflip: eco/obolflip.md
+      - NFT-Games:
+        - Digigoats: eco/digigoats.md
+        - Monster Pub Brawl: eco/monsterpub.md
+
+    
+    
+    - Lending:
+      - uses/lending.md
+      - ErgoLend: eco/ergolend.md
+      - duckpools: eco/duckpools.md
 
     - P2P:
       - uses/p2p.md
       - Sigma Finance: uses/p2p/sigma-finance.md
-      - Monetary Systems:
-        - LETS: uses/lets.md
-        - ChainCash: uses/chaincash.md
-      - Markets: 
+      - P2P Options Contract: uses/p2p_options.md
+    - Further Ideas: 
+      - P2P: 
         - Prediction Markets: uses/prediction_markets.md
-      - Financial Instruments:
-        - P2P Options Contract: uses/p2p_options.md
-        - Lending: uses/lending.md
-        - ErgoWell: uses/p2p/ergowell.md
         - Derivatives: uses/deriv.md
         - Yield Aggregation: uses/yield.md
         - Grid Trading: uses/grid_trading.md
@@ -460,21 +502,16 @@ nav:
         - Mutual Credit: uses/mutual_credit.md
         - Bonding Curve: uses/bonding.md
         - Insurance: uses/insurance.md
-    - DAOs: uses/dao.md 
-    - Misc:
-      - ProfitSharing: uses/profit.md
-      - Email Client for Blocked Internet: uses/blocked_web.md
-    - Tokens:
+      - Tokens:
         - ICOs: uses/ico.md
         - Index Coins: uses/index_coins.md
         - PoW Tokens: uses/PoW_tokens.md
         - Perpetual Tokens: uses/perpetual.md
         - Buy Back Guarantees: uses/dex-buyback.md
-      
-      
-      
-      
-      
+      - Misc:
+        - ProfitSharing: uses/profit.md
+        - Email Client for Blocked Internet: uses/blocked_web.md
+
       # - Context Claims: uses/context-claims.md
     #  - Asset Tokenisation: uses/tokenisation.md
       # - Privacy: uses/privacy.md
