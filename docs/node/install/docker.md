@@ -15,28 +15,29 @@ All data will be stored in your host directory `/path/on/host/to/ergo/data`.
 
 ## Docker Compose
 
-```bash
-version: '3.8'
+```
+version: "3.8"
 
 services:
+  # Ergo blockchain node
   node:
-      image: ergoplatform/ergo
-      container_name: ergo-mainnet
-      restart: always
-      environment:
+    image: ergoplatform/ergo
+    container_name: mn-ergo-node
+    command: --mainnet -c /etc/ergo.conf
+    volumes:
+      - ./.ergo:/home/ergo/.ergo
+      - ./ergo.conf:/etc/ergo.conf:ro
+    ports:
+      - 9053:9053
+      - 9030:9030
+    restart: unless-stopped
+    # Increase or decrease the max heap value as required
+    environment:
         - MAX_HEAP=4G
-      ports:
-        - 9053:9053
-        - 9030:9030
-      command: "--mainnet -c /etc/myergo.conf"
-      volumes:
-        - ./.ergo:/home/ergo/.ergo
-        - ./ergo.conf:/etc/myergo.conf
-      deploy:
-        resources:
-          limits:
-            cpus: '0.4'
-            memory: 1400M
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "3"
 ```
 
 Run the node with

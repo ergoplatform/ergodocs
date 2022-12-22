@@ -43,22 +43,28 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 ## Docker Compose
 
 ```
-version: "2"
+version: "3.8"
 
 services:
+  # Ergo blockchain node
   node:
     image: ergoplatform/ergo
-    container_name: ergo-mainnet
+    container_name: mn-ergo-node
+    command: --mainnet -c /etc/ergo.conf
+    volumes:
+      - ./.ergo:/home/ergo/.ergo
+      - ./ergo.conf:/etc/ergo.conf:ro
     ports:
       - 9053:9053
       - 9030:9030
-    environment:
-      - MAX_HEAP=3G
-    volumes:
-      - ~/.data/ergo/mainnet:/home/ergo/.ergo
-      - ./myergo.conf:/etc/myergo.conf
     restart: unless-stopped
-    command: --mainnet -c /etc/myergo.conf
+    # Increase or decrease the max heap value as required
+    environment:
+        - MAX_HEAP=4G
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "3"
 ```
 
 Run the node with
