@@ -11,6 +11,8 @@ See this [overview](https://github.com/Emurgo/Emurgo-Research/blob/master/oracle
 
 ### Oracle Pools V2
 
+- [How to bootstrap an ERG/XAU pool on testnet](https://github.com/ergoplatform/oracle-core/blob/develop/docs/how_to_bootstrap.md)
+
 This is a proposed update to the oracle pool v1.0 currently deployed and documented in [EIP16](https://github.com/ergoplatform/eips/blob/eip16/eip-0016.md).
 
 In order to motivate the changes proposed in this document, consider the drawbacks of Oracle pool v1.0:

@@ -66,7 +66,7 @@ This will lower the default `maxConnections` from 30 to 10, the sync will be slo
 
 ### Is there any way to revert without resyncing?
 
-The latest versions of the node will attempt to fix any errors itself, but if it fails - there is no way to manually roll-back. 
+The latest versions of the node will attempt to fix any errors itself, but if it fails - there is no way to manually roll back. 
 
 
 
