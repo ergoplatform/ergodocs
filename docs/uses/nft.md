@@ -6,22 +6,8 @@ Some examples, like [Rarible](https://rarible.com/) or [Opensea](https://opensea
 
 ## Marketplaces
 
-- [ErgoAuctions]
-- [SkyHarbor]
+- [ErgoAuctions](ergo-auctions.md)
+- [SkyHarbor](skyharbor.md)
 
 
-### ErgoAuctions
 
-The [Ergo Auction House](http://ergoauctions.org/#/auction/active) lets you buy and sell collectible tokens, art, and much more.
-
-- [Source code](https://github.com/anon-real/ErgoAuctionHouse)
-- [v2 contracts](https://github.com/ergoplatform/eips/pull/39/files)
-- More information available at [ergonaut.space/en/ErgoAuctions](https://ergonaut.space/en/ErgoAuctions)
-- [Research & Development: Auction House V2](https://www.ergoforum.org/t/auction-house-v2/2931)
-- [Artist Guidelines](https://www.ergoforum.org/t/artist-guideline/2929)
-
-### SkyHarbor
-
-[skyharbor.io](https://www.skyharbor.io/) is live. Their goal is to upgrade the ENFT space to match the full potential of Ergo. Verified collections to stop scams, NFT trading histories, and set-price trading.
-
-Their roadmap includes expanded Ergo token support, NFT mass minting, NFT drops, publicly available API data, and much more!

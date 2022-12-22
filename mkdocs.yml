@@ -409,11 +409,15 @@ nav:
       - Rosen Bridge: eco/rosen.md
       - Oracles: 
         - uses/oracles.md
-        - Oracle Pools V2: eco/oracle-v2.md
+        - Oracle Pools V2: eco/oracles-v2.md
         - Mixicles: uses/mixicles.md
 
       - Tooling:
         - Azorus: eco/azorus.md
+        - ZenGate Global:
+          - eco/zengate.md
+          - Solaris Portal: eco/solaris.md
+          - Cyberiad: eco/cyberaid.md
       - Sidechains: 
         - uses/sidechains.md
         - ErgoData: uses/ErgoData.md
@@ -421,6 +425,8 @@ nav:
     - Exchanges:
       - uses/dex.md
       - Spectrum Finance: eco/spectrum.md
+      - Palmyra ComDEX: eco/palmyra.md
+      - GuapSwap: eco/guapswap.md
       - Local Exchange Trading Systems (LETS): 
         - uses/lets.md
         - Trustless LETS: uses/trustless-lets.md
@@ -446,10 +452,16 @@ nav:
       - Swamp-Audio: eco/swamp-audio.md
     - Privacy:
       
-      - Zero Knowledge:
-        - ZK Treasury: uses/zkt.md
+      - ZK Treasury: uses/zkt.md
       - Mixing: 
         - uses/mixer.md
+        - ErgoMixer: 
+          - eco/ergomixer.md
+          - Identifiability: eco/ergomixer/identifiability.md
+          - Best Practices: eco/ergomixer/best-practices.md
+          - FAQ: eco/ergomixer/mixer-faq.md
+          - Token: eco/ergomixer/token.md
+        - SigmaJoin: eco/sigmajoin.md
         - Stealth Addresses: uses/stealth-address.md
 
 
@@ -459,6 +471,7 @@ nav:
     - Mining:
       - CYTI: eco/cyti.md
       - SNISP: eco/snisp.md
+      - GuapSwap: eco/guapswap.md
   
     - CrowdFunding: 
       - uses/crowdfunding.md

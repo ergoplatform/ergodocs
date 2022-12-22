@@ -9,7 +9,7 @@ The first instantiation will be **DexyGold**, which is pegged to USD/XAU v2 [ora
 
 ## Design
 
-Below are the main design aspects of Dexy-USD.
+Below are the main design aspects of Dexy.
 
 1. **One-way tethering**: There is a minting (or "emission") contract that emits Dexy tokens (for example, DexyUSD) in a one-way swap using the oracle pool rate. The swap is one-way because we can only buy Dexy tokens by selling ergs to the box, and we cannot do the reverse swap. 
    
@@ -52,3 +52,4 @@ We can take one or more of the following measures to prevent this attack.
 - [Dexy Stablecoin Design](https://github.com/ergoplatform/ergo-jde/blob/main/kiosk/src/test/scala/kiosk/dexy/Dexy.md)
 - [Dexy: USD Simplest Stablecoin](https://www.ergoforum.org/t/dexy-usd-simplest-stablecoin-design/1430)
 - [Dexy enhancements to counter various attacks in vanilla proposal](https://github.com/ergoplatform/ergo-jde/blob/main/kiosk/src/test/scala/kiosk/dexy)
+- DexyGold on [Telegram](https://t.me/dexygold) or [Discord](https://discord.gg/ergo-platform-668903786361651200).
