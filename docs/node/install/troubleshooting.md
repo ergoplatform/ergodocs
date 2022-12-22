@@ -15,7 +15,20 @@ Please open a [git issue](https://github.com/ergoplatform/ergo/issues/new/choose
 tail -Fn+0 ergo.log | grep 'ERROR\|WARN' > output.log
 ```
 
-## Sync
+## Searching the logs
+
+Here's some useful log greps
+
+```bash
+tail -Fn+0 ergo.log | grep 'ERROR\|WARN'
+tail -Fn+0 ergo.log | grep 'ERROR'
+tail -Fn+0 ergo.log | grep "not modified"
+tail -Fn+0 ergo.log | grep ERR
+tail -Fn+0 ergo.log | grep xception
+tail -Fn+0 ergo.log | grep "stuck"
+```
+
+## Sync Issues
 
 ### Stuck on 'Active Syncronisation' 
 
@@ -55,18 +68,7 @@ This will lower the default `maxConnections` from 30 to 10, the sync will be slo
 
 The latest versions of the node will attempt to fix any errors itself, but if it fails - there is no way to manually roll-back. 
 
-### Searching the logs
 
-Here's some useful log greps
-
-```bash
-tail -Fn+0 ergo.log | grep 'ERROR\|WARN'
-tail -Fn+0 ergo.log | grep 'ERROR'
-tail -Fn+0 ergo.log | grep "not modified"
-tail -Fn+0 ergo.log | grep ERR
-tail -Fn+0 ergo.log | grep xception
-tail -Fn+0 ergo.log | grep "stuck"
-```
 
 ### How do I resync from scratch? 
 

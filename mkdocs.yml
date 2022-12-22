@@ -431,11 +431,11 @@ nav:
       - Mixing: uses/mixer.md
       - Trustless LETS: uses/trustless-lets.md
     
-    
+  
     - CrowdFunding: 
       - uses/crowdfunding.md
       - ErgoRaffle: uses/ergoraffle.md
-      - ErgoWell: uses/ergowell.md
+      - ErgoWell: uses/p2p/ergowell.md
       - ErgoFund: uses/ergofund.md
     - Gaming: 
       - uses/gaming.md
@@ -443,6 +443,7 @@ nav:
 
     - P2P:
       - uses/p2p.md
+      - Sigma Finance: uses/p2p/sigma-finance.md
       - Monetary Systems:
         - LETS: uses/lets.md
         - ChainCash: uses/chaincash.md
@@ -451,6 +452,7 @@ nav:
       - Financial Instruments:
         - P2P Options Contract: uses/p2p_options.md
         - Lending: uses/lending.md
+        - ErgoWell: uses/p2p/ergowell.md
         - Derivatives: uses/deriv.md
         - Yield Aggregation: uses/yield.md
         - Grid Trading: uses/grid_trading.md
