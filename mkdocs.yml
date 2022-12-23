@@ -151,7 +151,11 @@ nav:
       - Operating Systems: mining/os.md
       - Overclocking: mining/overclocking.md
       - Solo Mining: mining/setup/solo.md
-      - Host a Pool: mining/setup/pool.md
+      - Host a Pool: 
+        - mining/setup/pool.md
+        - Node Configuration: mining/setup/solo-node.md
+        - Stratum: mining/setup/stratum.md
+        - MiningCore: mining/setup/miningcore.md
     - Governance: mining/governance.md
     - Features:
       - Log-Space Mining: mining/log_space.md
