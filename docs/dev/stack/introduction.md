@@ -19,7 +19,7 @@
   },
   {
     "title": "🔗 Sigmaverse",
-    "content": "Your portal to the Ergo universe.",
+    "content": "Your portal to the Ergo dApp universe.",
     "image": "../../assets/img/dev-grid/sigmaverse.svg",
     "url": "https://sigmaverse.io"
   },
@@ -48,9 +48,9 @@
 Join our [Discord server](https://discord.gg/7kWWQeMCwe) dev-support (and regular [Hackathons](ergohack.md)). Alternatively you can search the chats without logging in via [linen.dev/d/ergo](https://www.linen.dev/d/ergo).
 
 
-## Introductionary 
+## Introductory 
 
-General materials not specific to ErgoScript or a particular section of development are categorised here.
+General materials not specific to ErgoScript or a particular section of development are categorised below.
 
 ### Overview Articles
 
@@ -118,7 +118,7 @@ Need help figuring out where to start developing? This [introduction to Mosaik](
   },
   {
     "title": "🔗 DeCo Intro Lessons",
-    "content": "Build a mobile app or Android or iOS.",
+    "content": "Build a mobile app on Android or iOS.",
     "url": "https://www.youtube.com/watch?v=qR0_k7VH6KI&list=PLopsKGshj0B4BpMoSMh5hQk8gVfWk-si6"
   }
 ]
