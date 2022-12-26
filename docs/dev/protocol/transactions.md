@@ -41,4 +41,4 @@ Each transaction executed on Ergo consists of **these three things**.
 
 ## Tools
 
-- [Transaction builder](https://transaction-builder.ergo.ga/) |  The application allows you to manipulate Ergo JSON transactions with a UI and to sign them with Yoroi or to prepare the JSON for the Swagger API. It can also load the JSON of an unsigned transaction to edit it.  | [GitHub](https://github.com/ThierryM1212/transaction-builder/)  | [Video](https://youtu.be/0VhfY7osT2k)
+- [Transaction builder](https://transaction-builder.ergo.ga/) |  The application allows you to manipulate Ergo JSON transactions with a UI and to sign them with a wallet or to prepare the JSON for the Swagger API. It can also load the JSON of an unsigned transaction to edit it.  | [GitHub](https://github.com/ThierryM1212/transaction-builder/)  | [Video](https://youtu.be/0VhfY7osT2k)
