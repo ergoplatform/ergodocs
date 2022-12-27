@@ -20,7 +20,7 @@ theme:
           name: Switch to light mode
     features:
         - navigation.tabs
-        - navigation.instant
+        #- navigation.instant
         #- navigation.sections # The bold sections in navigation
         - navigation.tracking
         - navigation.indexes
@@ -262,7 +262,7 @@ nav:
         - RustKit: dev/stack/rustkit.md
         - Fleet (JS): dev/stack/fleet.md
         - Mosaik: 
-          - dev/stack/mosaik.md
+          - dev/stack/mosaik/intro.md
           - Tutorial:
             - dev/stack/mosaik/intro.md
             - A simple UI: dev/stack/mosaik/tutorial2.md
@@ -280,8 +280,8 @@ nav:
       - Libaries:
         - dev/stack/libraries.md
         - GetBlok Plasma: dev/lib/plasma.md
-        - Scrypto: https://github.com/input-output-hk/scrypto
-        - EIP12-Types: https://github.com/capt-nemo429/eip12-types
+        - Scrypto: dev/lib/scrypto.md
+        - EIP12-Types: dev/lib/eip12-types.md
         - SigmaJS: dev/lib/sigmajs.md
       - Interpreters:
         - dev/stack/interpreters.md

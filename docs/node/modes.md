@@ -1,16 +1,18 @@
 # Modes of Operation
 
 
-The Ergo node supports multiple security models. (since `Testnet0`!, the very first testing network)
+The Ergo node has supported multiple security models since the very first testing network (`Testnet0`)
 
-In addition to running in "full node mode," similar to a full Bitcoin node, Ergo reference implementation supports [Light-SPV](#light-spv-mode), [Light-Fullnode](#light-full-node-mode), and [Pruned-Fullnode](#pruned-full-node-mode) modes.
+In addition to running in the standard *full node mode*, like a full Bitcoin node, The Ergo reference implementation supports [Light-SPV](#light-spv-mode), [Light-Fullnode](#light-full-node-mode), and [Pruned-Fullnode](#pruned-full-node-mode) modes which are described below. 
 
 ## Full-Node Mode
 
-Like in Bitcoin, a full node stores all the blocks since the genesis block, and a full node checks proofs of work, linking structure correctness (parent block id, interlink elements), and all the blocks' transactions. A full node stores all the full blocks forever, and it is also holding a full UTXO set to be able to validate an arbitrary transaction. A full node's only optimisation is skipping downloading and checking the AD-transformation block part (see below in the "Light-Fullnode" section). For the full node regime, the modifiers processing workflow is as follows:
+A full node stores all the blocks since the genesis block, and a full node checks proofs of work, linking structure correctness (parent block id, interlink elements), and all the blocks' transactions. A full node forever stores all the full blocks and keeps a copy of the full UTXO set to validate an arbitrary transaction. A full node's only optimisation is skipping downloading and checking the AD-transformation block part (see below in the [Light-Fullnode](#light-full-node-mode) section). 
 
-1.  Send ErgoSyncInfo message to connected peers.
-Get a response with an INV message containing the ids of blocks, better than our best block.
+For the full node regime, the modifiers processing workflow is as follows:
+
+1.  Send **ErgoSyncInfo** message to connected peers.
+2.  Get a response with an INV message containing the ids of blocks, better than our best block.
 3.  Request headers for all ids from 2.
 4.  On receiving Header:
 
@@ -23,7 +25,7 @@ if(history.apply(header).isSuccess) {
     }
 ```
 
-1.  On receiving transaction ids from the Header:
+On receiving transaction ids from the Header:
 
 ```java
 transactionIdsForHeader.filter(txId => !MemPool.contains(txId)).foreach { txId =>
@@ -31,7 +33,7 @@ transactionIdsForHeader.filter(txId => !MemPool.contains(txId)).foreach { txId =
 }
 ```
 
-2.  On receiving a transaction:
+On receiving a transaction:
 
 ```java
 if(Mempool.apply(transaction).isSuccess) {
@@ -42,11 +44,14 @@ if(Mempool.apply(transaction).isSuccess) {
 }
 ```
 
-3.  Now we have `BlockTransactions`: all transactions corresponding to some Header
+Now we have **BlockTransactions**: all transactions corresponding to some Header
 
 ```java
+
 if(History.apply(BlockTransactions) == Success(ProgressInfo)) {
+
     if(!isInitialBootstrapping) Broadcast INV for BlockTransactions
+
     /*We should notify our neighbours that now we have all the transactions
     State apply modifiers (may be empty for a block in a forked chain)
     and generate ADProofs for them.
@@ -56,6 +61,7 @@ if(History.apply(BlockTransactions) == Success(ProgressInfo)) {
     it may also create UTXOSnapshot
     (e.g. every 30000 blocks like in Ethereum).
     This UTXOSnapshot should be required for mining by Rollerchain*/
+    
     if(State().apply(ProgressInfo) == Success((newState, ADProofs))) {
         if("mode"="full" || "mode"=="pruned-full") ADProofs.foreach ( ADProof => History.apply(ADProof))
         if("mode"=="pruned-full" || "mode"=="light-full") drop BlockTransactions and ADProofs older than BlocksToKeep
@@ -70,11 +76,12 @@ blacklist peer who sent Header
 
 ### Pruned Full-Node Mode
 
-This mode is similar to fast-sync in Geth or Grothendieck, warp-mode in Parity (all three are Ethereum protocol clients), but makes more aggressive optimizations. In particular, a pruned-full node is not downloading and storing full blocks not residing in a target blockchain suffix and removing full blocks from the suffix. In detail, a pruned client downloads all the headers, then, by using them, it checks proofs-of-work and linking structure(or parent id only?). Then it downloads a UTXO snapshot for some height from its peers. Finally, full blocks after the snapshot will be downloaded and applied to get a current UTXO set. A pruned full node also skips the AD-transformation block part, like a full node. Additional setting: \"suffix\" - how many full blocks to store(w. some minimum set?). Its regular modifiers processing is the same as for the full node regime, while its bootstrap process is different:
+This mode is similar to fast-sync in Geth or Grothendieck, warp-mode in Parity (all three are Ethereum protocol clients), but makes more aggressive optimizations. In particular, a pruned-full node does not download and storefull blocks that aren't residing in a target blockchain suffix while also removing full blocks from the suffix. 
 
-1.  Send an `ErgoSyncInfo` message to connected peers.
-2.  Get a response with an `INV` message containing the ids of blocks, better than
-    our best block.
+In detail, a pruned client downloads all the headers, then, by using them, it checks proofs-of-work and linking structure(or parent id only?). Then it downloads a UTXO snapshot for some height from its peers. Finally, full blocks after the snapshot will be downloaded and applied to get a current UTXO set. A pruned full node also skips the AD-transformation block part, like a full node. Additional setting: \"suffix\" - how many full blocks to store(w. some minimum set?). Its regular modifiers processing is the same as for the full node regime, while its bootstrap process is different:
+
+1.  Send an **ErgoSyncInfo** message to connected peers.
+2.  Get a response with an `INV` message containing the ids of blocks, better than our best block.
 3.  Request headers for all ids from 2.
 4.  On receiving Header:
 
