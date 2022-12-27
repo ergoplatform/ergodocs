@@ -113,7 +113,10 @@ nav:
         - Atomic Swaps: dev/protocol/eutxo/atomic.md
       - NIPoPoWs:
         - dev/protocol/nipopows.md
-        - Light Nodes: dev/protocol/nipopow/nipopow_nodes.md
+        - Light Nodes: 
+          - dev/protocol/nipopow/nipopow_nodes.md
+          - SPV Clients: dev/protocol/nipopow/spv.md
+          - UTXO Snapshots: dev/protocol/nipopow/utxo-snapshots.md
         - Log-Space Mining: dev/protocol/nipopow/logspace.md
         - Sidechains: dev/protocol/nipopow/nipopow-sidechains.md
       - Privacy: dev/protocol/zkp.md

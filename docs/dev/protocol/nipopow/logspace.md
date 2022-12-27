@@ -6,13 +6,6 @@ tags:
 
 # Log-Space Mining
 
-Dionysis Zindros explains the technical landscape of Non-Interactive Proofs of Proof-of-Work. Dionysis takes a diligent approach for the Ergo Cast with a detailed rundown of what Non-Interactive Proofs of Proof-of-Work truly are. Furthermore, Dionysis evaluates the operation, implementation, and impact that his primitive delivers upon. Furthermore, we unveil a brand-new piece of research that -as of yet- has never been shared publicly: log-space mining.
-
-- [NIPoPoWs & Log-Space Mining – Ergo Cast Episode #5](https://ergocast.io/episode/NIPoPoWs-ergo-cast-episode-5/)
-
-
-This section is based on a [recently published](https://eprint.iacr.org/2021/623.pdf) article by IOHK. For an additional resource, please see the following [video.](https://www.youtube.com/watch?v=s05ypkSC7gk)
-
 
 Miners must constantly maintain the blockchain, whether it is Ergo, Bitcoin, or another PoW consensus model. In addition to using computational resources, miners also use storage resources that maintain all blockchain data from the genesis block.
 
@@ -29,6 +22,12 @@ If we say **C=old** blocks and **K=new** blocks, then included blocks in the sna
 
 **NIPoPoW Implementation**
 
-Instead of accessing all of the blocks, superblocks (or light-clients) are enough to verify all of the blocks. This is accomplished by maintaining the historical data of the blockchain through smart contracts. The introduction of these superblock clients on NIPoPoWs can be done via 'velvet' or soft forks, and after that *"light"* miners can bootstrap through "online" mining.
+Instead of accessing all of the blocks, superblocks (or light clients) are enough to verify all of the blocks. This is accomplished by maintaining the historical data of the blockchain through smart contracts. The introduction of these superblock clients on NIPoPoWs can be done via 'velvet' or soft forks, and after that *"light"* miners can bootstrap through "online" mining.
 
-NIPoPoWs enable smart contracts to maintain historical data so that new *"light"* miners can work in a so-called "online" fashion. This is the main idea of Logarithmic Space Mining. Instead of saving all the blockchain data locally on nodes, the unnecessary part can be compiled into the blockchain itself. New miners do not need to carry the historical data, and as they continue to mine, new *"light"* miners will help other *"light"* miners bootstrap. There will be no need to carry old historical data, and old miners can abandon historical data for lighter mining. This is how the whole miner population can abandon old blocks and make the system much more efficient.
+NIPoPoWs enable smart contracts to maintain historical data so that new *"light"* miners can work in a so-called "online" fashion. This is the main idea of Logarithmic Space Mining. Instead of saving all the blockchain data locally on nodes, the unnecessary part can be compiled into the blockchain itself. New miners do not need to carry the historical data, and as they continue to mine, new *"light"* miners will help other *"light"* miners bootstrap. There will be no need to carry old historical data, and old miners can abandon historical data for lighter mining. This is how the miner population can abandon old blocks and make the system much more efficient.
+
+## Resources
+
+In [NIPoPoWs & Log-Space Mining – Ergo Cast Episode #5](https://ergocast.io/episode/NIPoPoWs-ergo-cast-episode-5/), Dionysis Zindros explains the technical landscape of Non-Interactive Proofs of Proof-of-Work. Dionysis takes a diligent approach for the Ergo Cast with a detailed rundown of what Non-Interactive Proofs of Proof-of-Work truly are. Furthermore, Dionysis evaluates the operation, implementation, and impact that his primitive delivers upon. Furthermore, we unveil a brand-new piece of research that -as of yet- has never been shared publicly: log-space mining.
+
+This section is based on a [recently published](https://eprint.iacr.org/2021/623.pdf) article by IOHK. For an additional resource, please see the following [video.](https://www.youtube.com/watch?v=s05ypkSC7gk)
