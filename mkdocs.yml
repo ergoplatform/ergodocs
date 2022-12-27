@@ -113,7 +113,7 @@ nav:
         - Atomic Swaps: dev/protocol/eutxo/atomic.md
       - NIPoPoWs:
         - dev/protocol/nipopows.md
-        - Light Nodes: 
+        - Light Clients: 
           - dev/protocol/nipopow/nipopow_nodes.md
           - SPV Clients: dev/protocol/nipopow/spv.md
           - UTXO Snapshots: dev/protocol/nipopow/utxo-snapshots.md
@@ -176,7 +176,7 @@ nav:
       - Desktop: dev/stack/desktop.md
       - Mobile: 
         - dev/stack/mobile.md
-        - iOS: dev/stack/ios.md   
+        - iOS: dev/stack/ios.md
         - Android: dev/stack/android.md
     - Interacting with Ergo:
       - Node:
