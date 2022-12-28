@@ -19,7 +19,7 @@ F-Droid is an installable catalog of FOSS (Free and Open Source Software) applic
 
 Within F-droid, search for “Termux - Terminal emulator with packages”. Download and install it.
 
-### Installing packages in Termux
+### Installing Packages in Termux
 
 The next step is to launch Termux and update and upgrade all packages. It is ok to use the default responses to all the prompts during the upgrade.
 
@@ -32,7 +32,7 @@ The next step is to install the packages wget and openjdk-17. These are necessar
 pkg install wget openjdk-17
 ```
 
-### Ergo client release download & setting up the config file
+### Ergo Client Release Download & Setting Up the Config File
 
 The next step is to download the latest Ergo client release from Github with wget. It can be found [here.](https://github.com/ergoplatform/ergo/releases) Make sure you copy the direct link to the file.
 
@@ -56,7 +56,7 @@ ergo {
 }
 ```
 
-### Running the node for the first time
+### Running the Node For the First Time
 
 Issue the following command to run the node for the first time. (make sure you replace <release> with the version of the node that you have downloaded)
 
@@ -68,7 +68,7 @@ At this point the node will begin synchronization. To view the progress, open a 
 
 Please refer to the Ergo node setup guide at https://ergoplatform.org/en/blog/2019_12_02_how_to_setup/ for more details regarding node configuration, however setting up the API key and wallet is not necessary.
 
-### Tips and tricks
+### Tips and Tricks
   
 I recommend downloading a different keyboard to be used in Termux. The stock Samsung keyboard was not working well in my case. A keyboard called Hacker’s Keyboard can be found in F-Droid that worked great for me.
   
