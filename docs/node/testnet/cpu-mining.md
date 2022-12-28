@@ -1,7 +1,7 @@
 # CPU Mining
 
 ## Getting Set-up
-> Please refer to [node](node.md) for basic node set-up up to this point.
+> Please refer to [node](install.md) for basic node set-up up to this point.
 
 To CPU mine on the testnet, your `testnet.conf` should look like this. 
 

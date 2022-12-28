@@ -27,11 +27,11 @@ mkdocs serve
 - Finish moving over ErgoTree specification
 - (BUG) Syntax Highlighting not working
 - (BUG) Python in multi-code selector boxes seems to have broken. 
-- (BUG) LaTex commands need refresh to work sometimes. (Preload in Mathjax.js)
-- Flesh out & tidy Apps & Use Cases section (new title?)
-  - P2P
+- [x] (BUG) LaTex commands need refresh to work sometimes. (Preload in Mathjax.js)
+- [x] Flesh out & tidy Apps & Use Cases section (new title?)
 - Split and tidy scaling page
 - Move more research papers into markdown so they're indexed and searchable. 
 - Transfer over any remaining information from ergonaut.space
 - Missing text bottom of modes of operation
 - Tidy Light Nodes page (on learn the basics)
+

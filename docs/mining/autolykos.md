@@ -7,7 +7,7 @@ Ergo mining is based on Autolykos, a fairly launched efficient ASIC-resistant Pr
 [
   {
     "title": "Start Mining",
-    "url": "join.md"
+    "url": "setup/join.md"
   },
   {
     "title": "Algorithm",
