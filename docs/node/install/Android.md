@@ -58,7 +58,7 @@ ergo {
 
 ### Running the Node For the First Time
 
-Issue the following command to run the node for the first time. (make sure you replace <release> with the version of the node that you have downloaded)
+Issue the following command to run the node for the first time. (make sure you replace ```<release>``` with the version of the node that you have downloaded)
 
 ```
 java -jar ergo-<release>.jar --mainnet -c ergo.conf
