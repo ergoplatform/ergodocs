@@ -46,7 +46,7 @@ Now a config file named ergo.conf needs to be created. To do this, we will use n
 nano ergo.conf
 ```
 
-Copy the following text into nano and do CTRL + O, then ENTER o save and CTRL + X to quit.
+Copy the following text into nano and do CTRL + O, then ENTER to save and CTRL + X to quit.
 
 ```
 ergo {
