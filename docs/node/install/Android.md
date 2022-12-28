@@ -66,7 +66,7 @@ java -jar ergo-<release>.jar --mainnet -c ergo.conf
   
 At this point the node will begin synchronization. To view the progress, open a browser on the device, and go to the Ergo Node panel at http://127.0.0.1:9053/panel.
 
-Please refer to the Ergo node setup guide at https://ergoplatform.org/en/blog/2019_12_02_how_to_setup/ for more details regarding node configuration, however setting up the API key and wallet is not necessary.
+Please refer to the [manual install](https://docs.ergoplatform.com/node/install/manual/) guide for more details regarding node configuration, however setting up the API key and wallet is not necessary.
 
 ### Tips and Tricks
   
