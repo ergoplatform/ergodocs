@@ -61,7 +61,7 @@ ergo {
 Issue the following command to run the node for the first time. (make sure you replace <release> with the version of the node that you have downloaded)
 
 ```
-Java -jar ergo-<release>.jar –mainnet -c ergo.conf
+java -jar ergo-<release>.jar --mainnet -c ergo.conf
 ```
   
 At this point the node will begin synchronization. To view the progress, open a browser on the device, and go to the Ergo Node panel at http://127.0.0.1:9053/panel.
