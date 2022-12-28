@@ -4,7 +4,7 @@
 
 ## Getting Started
 
-Running an Ergo full node on an Android device is an intersting prospect for a couple reasons. It enables an idividual who may not own a desktop or laptop computer to sychronize a copy of the entire Ergo blockchain on their mobile device, and it also makes it possible to utilize one's own node in applications such as the Ergo mobile wallet or the Ergo Mixer.
+Running an Ergo full node on an Android device is an intersting prospect for a couple reasons. It enables an idividual who may not own a desktop or laptop computer to sychronize a copy of the entire Ergo blockchain on their mobile device, and it also makes it possible to utilize one's own node in applications such as the Ergo mobile wallet or the Ergo Mixer on their mobile device.
 
 
 ### Device Requirements
