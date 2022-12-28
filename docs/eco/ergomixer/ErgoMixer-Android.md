@@ -1,4 +1,4 @@
-# How set up the Ergo Mixer on an Android device
+# How Set Up the Ergo Mixer on an Android Device
 
 ## Getting Started
 
