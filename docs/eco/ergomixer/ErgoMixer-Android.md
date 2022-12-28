@@ -2,11 +2,11 @@
 
 ## Getting Started
 
-Running the ErgoMixer on an Android device is important because it enables an idividual who may not own a desktop or laptop computer to take advantage of the privacy features available in the ErgoMixer. It will make it possible for someone with a mobile device to utilise Ergo's Sigma protocols to enable efficient, trustless mixing of funds, enabling a high degree of privacy and security.
+Running the ErgoMixer on an Android device is important because it enables an idividual who may not own a desktop or laptop computer to take advantage of the privacy features available in the ErgoMixer. It will make it possible for someone with a mobile device to utilize Ergo's Sigma protocols to enable efficient, trustless mixing of funds, enabling a high degree of privacy and security.
 
 ### Device Requirements
 
-To run the ErgoMixer on a device running Android OS, there are minimum system requirements. Android OS of version 7.0 or higher, a minimum of 10GB of available storage, and a minimum of 1GB ram available for apps.. So far this has been tested and is working well on a Samsung Galaxy S8+.
+To run the ErgoMixer on a device running Android OS, there are minimum system requirements. Android OS of version 7.0 or higher, a minimum of 10GB of available storage, and a minimum of 1GB ram available for apps. So far this has been tested and is working well on a Samsung Galaxy S8+.
 
 ### Prerequisites
 
