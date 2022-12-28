@@ -186,6 +186,7 @@ nav:
           - Manual: node/install/manual.md
           - Docker: node/install/docker.md
           - Pi: node/install/pi.md
+          - Android: node/install/node-android.md
           - Troubleshooting: node/install/troubleshooting.md
           - FAQ: node/install/node-faq.md
         - Testnet: 
@@ -468,6 +469,7 @@ nav:
           - Best Practices: eco/ergomixer/best-practices.md
           - FAQ: eco/ergomixer/mixer-faq.md
           - Token: eco/ergomixer/token.md
+          - Install on Android: eco/ergomixer/mixer-android.md
         - SigmaJoin: eco/sigmajoin.md
         - Stealth Addresses: uses/stealth-address.md
 
