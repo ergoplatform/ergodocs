@@ -9,7 +9,7 @@ To be able to spend any ERG mined this way, you will need to include the [EIP27 
 ```bash
 	ergo {
 	  node {
-	    mining = false
+	    mining = true
 	  }
     chain {
       reemission {
