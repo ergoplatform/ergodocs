@@ -129,6 +129,7 @@ nav:
       - Social Contract: social_contract.md
       - Know Your Assumptions: kya.md
       - Audit: dev/protocol/audit.md
+      - Transparency Report: ergo-foundation-2022.md
     - EIPs: dev/protocol/eip.md
 
   - Miners:
@@ -435,9 +436,10 @@ nav:
       - Spectrum Finance: eco/spectrum.md
       - Palmyra ComDEX: eco/palmyra.md
       - GuapSwap: eco/guapswap.md
-      - Local Exchange Trading Systems (LETS): 
-        - uses/lets.md
-        - Trustless LETS: uses/trustless-lets.md
+    - Local Exchange Trading Systems (LETS): 
+      - uses/lets.md
+      - Basic Implementation: uses/lets/basic-imp.md
+      - Trustless LETS: uses/trustless-lets.md
 
 
     - NFT Markets:

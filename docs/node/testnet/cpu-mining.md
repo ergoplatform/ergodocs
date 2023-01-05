@@ -1,4 +1,6 @@
 # CPU Mining
+> Please do not GPU mine the testnet! It prevents CPU miners from winning any blocks and then leaves a high difficulty when you stop. 
+
 
 ## Getting Set-up
 > Please refer to [node](install.md) for basic node set-up up to this point.
