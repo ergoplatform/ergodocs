@@ -3,7 +3,7 @@
 
 The Ergo Foundation (EF) is a non-profit foundation dedicated to advancing the adoption of Ergo. The foundation’s treasury is sourced from a small portion of mined blocks during the first 2.5 years from Ergo’s mainnet launch. This allocation amounted to 4,330,791.5 ERGs or 4.43% of the total supply.
 
-You can find information about the emission schedule [here](emission.md) or directly in the [whitepaper](https://ergoplatform.org/docs/whitepaper.pdf). 
+Read more about the [emission schedule](emission.md) or check out the [whitepaper](https://ergoplatform.org/docs/whitepaper.pdf). 
 
 
 ## Mission
@@ -59,11 +59,15 @@ The marketing department highlights projects building in the ecosystem. However,
 
 ### 'Core' Team
 
-**There is no official core team.** 
+**There is no official 'core' team.** While some people working on Ergo day-to-day are salaried, many are volunteers, collecting bounties or working on their own projects on top of Ergo. Core Marketing can include keen community members alongside salaried workers, and, similarly anyone with significant contributions to core repositories can be invited to Core Development chats without being an *employee*.
+
+
+
+
 
 ### Voting 
 
-The Ergo Foundation members and officers discuss proposals on Discord before putting them to a formal vote on the ergo forum, where they can pass with a majority of voting members. 
+The Ergo Foundation members and officers discuss proposals before putting them to a formal vote on the ergoforum, passed with a majority of voting members. 
 
 Before taking from the foundation treasury, we will attempt to first Good Whale, DarkFund0, or suggest creating a Raffle if appropriate. 
 
@@ -142,17 +146,22 @@ Possible reasons include the following:
 You can follow along on our [Weekly AMAs](https://www.youtube.com/@ErgoPlatform/streams) to catch any hints regarding the current exchange listing efforts. 
 
 ### Salaries
+
 Twenty people receive monthly salaries or rewards for their contributions. The vast majority (16/20) were promoted from within the community after exceptional contributions. 
 
-A rough breakdown is given as follows; 
+A monthly breakdown of long-term salary expenses
 
-- 6x EF Members, Advisors & Officers @ an average of $1664 per month
-- 5x Marketing, Editorial, and Branding @ an average of $1613 per month
-- 9x Developers @ an average of $3745 per month
+- Ergo Foundation: 3,500 ERG
+- Advisory: 2,820 ERG
+- Marketing: 7,000 USD
+- Development: 5600 ERG + 10k USD.
 
-Accurate as of 12 December 2022 with ERG at $1.35. Most people get paid on an ERG basis, meaning their income fluctuates with the price of ERG. 
+Outgoings are reviewed consistently depending on price and more formally every 60-90 days. 
 
 Salaries account for 70-90% of spending in most months, with the remainder in order of amounts usually being Bounties and Grants, Marketing expenses, and Administrative/General expenses. However, big one-off expenses, mainly exchange listings, lower this percentage substantially when looking at a longer time frame.
+
+kushti has not taken any payment from the EF for his work since Ergo's 2nd birthday (July 2021). 
+
 
 ## Ergo Foundation Members
 
@@ -180,10 +189,6 @@ Salaries account for 70-90% of spending in most months, with the remainder in or
 **Ergo Foundation Advisors**
 
 **Daniel Friedman** is a Strategic Advisor to the Ergo Foundation. He started his professional career as a developer for a San Francisco-based software company, 2Bridge. After moving to Japan, he became CTO of an Osaka-based software development firm specialising in Augmented Reality mobile applications. He is a strategic advisor to the Ergo Foundation Board and a business developer for IOHK.
-
-
-
-
 
 ## Timeline
 
@@ -267,10 +272,13 @@ As time goes on, the importance of the EF should diminish and shift towards the 
 
 The [Sigmanauts Programme](sigmanauts.md) was launched at the start of 2022 to fill this need and build the required structures to achieve this transition. 
 
-The Ergo Foundation will likely exist for some time yet and may exist in some form for perpetuity as a legal entity to take counterparty risk when dealing with centralised actors.
+The Ergo Foundation will likely exist for some time yet. It may exist in some form for perpetuity as a legal entity to take counterparty risk when dealing with centralised actors.
 
 Alternatively, it could continue to exist as a research branch to encourage the development of applications and protocols which adhere to its original goals of supporting blockchain technology for social good, truly decentralised infrastructure and privacy as a basic human right. 
 
+The best course of action is to grind and build infrastructure for when liquidity leaks or flees existing systems. Focus on user security assumptions, privacy and longer-term non-fragility. 
+
+Not something we can necessarily force, time or predict, but we can position ourselves.
 
 
 
