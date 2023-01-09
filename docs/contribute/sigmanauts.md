@@ -17,4 +17,4 @@ The Sigmanauts Program is designed to help people participate in, and take owner
 
 If this sounds like something you are interested in, there is a formal application process for becoming a Sigmanaut. Once accepted into the Sigmanauts Program, you will be assigned the role of SigCAN (Sigmanaut Candidate), where you will have the opportunity to showcase your skills and talents within a team. Over time, your role can evolve to become a Sigmanaut, and that comes with a great deal of responsibility. Community members will look to you as a trusted source of information. You will also be responsible for representing the Ergo ecosystem in a manner that upholds the professional standards of the ecosystem and the Ergo Foundation.
 
-[Sigmanaut Application Form](https://q9fwzopidh8.typeform.com/to/RdWAB3MS)
+[Sigmanaut Application Form](https://my.ergoport.dev/sigcan_form.html)

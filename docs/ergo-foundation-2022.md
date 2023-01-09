@@ -148,6 +148,11 @@ Before taking from the foundation treasury, we will attempt to first Good Whale,
 
 Foundation votes this year have mostly been related to exchanges, market-makers, banks, and grant requests.
 
+- (Dec) MrStahlfelge contract renewal
+- (Dec) Expenses reduction plan
+- (Sep) Miner subsidize
+- (Sep) Graphics support
+- (Sep) CW/Allision/Stacie -> EF Officers
 - (Sep) [exchange related - details under NDA]
 - (Aug) [exchange related - details under NDA]
 - (Aug) Market Maker contract
@@ -229,12 +234,14 @@ Twenty people receive monthly salaries or rewards for their contributions. The v
 A monthly breakdown of long-term salary commitments.
 
 - EF Members, Advisors and Officers: 6,320 ERG
-- Marketing: 1500 ERG + 7,000 USD
-- Development: 5600 ERG + 10,000 USD.
+- Marketing: 1,500 ERG + 7,000 USD
+- Development: 5,600 ERG + 10,000 USD.
 
 Outgoings are reviewed consistently depending on price and more formally every 60-90 days. We scaled back any extra spending and reduced our outgoings by ~15% at the end of 2022. 
 
-Please note that the foundation's role is to **bootstrap** the ecosystem. We have runway for another 2-3 years, excluding development financiers and token allocations from ecosystem projects we have supported in the pipeline. For more information, please see [The Ergo Foundation's Future](#the-ergo-foundations-future)
+Please note that the foundation's role is to **bootstrap** the ecosystem. We have the budget for another 2-3 years, excluding development financiers and token allocations from ecosystem projects we have supported in the pipeline. 
+
+For more information, please see [The Ergo Foundation's Future](#the-ergo-foundations-future)
 
 
 
