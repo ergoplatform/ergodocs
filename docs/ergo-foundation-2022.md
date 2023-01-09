@@ -25,6 +25,81 @@ The Ergo Foundation is committed to maximising the number of valuable ecosystem 
 
 The Foundation is also dedicated to helping with building trustless environments, smart contracts and payment frameworks for the public with privacy in mind. The Foundation believes that the Ergo Treasury should be distributed mainly to the community, including freelancers, hackers, experts and enthusiasts. 
 
+## Ergo Foundation Members
+
+**Alexander Chepurnoy (kushti)** is an Ergo Foundation board member and director. He has been active in blockchain since 2011, has written over twenty academic papers, and has more than fifteen years of experience in software development. Before co-founding  Ergo, he was also a co-founder of smartcontract.com (now Chainlink), a core developer at NXT, and one of the first employees at IOHK, where he was a Research Fellow and Team Scorex Manager.
+
+**Alexander Slesarenko (morphic)**  is an (honourary) Ergo Foundation board member and graduate of Applied Mathematics from Udmurt State University. He has more than 25 years of experience in software development as a team leader, software architect, engineer and researcher, focusing mainly on programming language design and implementation. He is a Blockchain Core Developer and the Lead Developer of ErgoScript Compiler, Sigmastate interpreter, and Appkit at Ergo. He was also an Expert Team Leader at Huawei Research Lab, focusing on high-performance computing and big data processing. 
+
+
+**Justin Simpson** is an Ergo Foundation board member. With over 13 years of Investment Banking experience, Justin has been involved with crypto and Bitcoin since 2013. Now exclusively focused on crypto, he is passionate about open, permissionless and decentralised blockchain platforms.
+
+**Joseph Armeanio** is an Ergo Foundation board member and director. Joseph has been involved in crypto on the investment side since 2013 and was a partner CIO at Big Bear Investments. Joseph has been on the board of the Universal Education Foundation, a 501(c)3 organisation, since 2008. He brings a passion for counter-economic frameworks and tools for social good. His role as a business developer is creating partnerships in the crypto industry, educational partnerships, and research opportunities while promoting the adoption of Ergo tooling in the public and non-profit sectors.
+
+**Mark Glasgow** is an Ergo Foundation board member and director who works across various roles in Ergo, including community management and developer education. As a Computing Science graduate passionate about improving inclusive systems, he is also the Technical Director for Disabled Students UK CIC, a non-profit named one of the most influential disability-led organisations in the UK.
+
+**Mohammad Hasan Samadani (mhs_sam)** is an (honourary) Ergo Foundation board member. He has a PhD in computer science and over 12 years of experience in security and software development as a product owner, researcher, and team leader. He became an Ergo Foundation Board Member in 2020 after outstanding contributions to developing the Ergo mining infrastructure, Stratum server, and ergopool (smart contract-based pool to bypass pool resistance of Autolykos v1).
+
+**Ergo Foundation Officers**
+
+**Alison Robson (anon_br)** is a software engineer passionate about facilitating crypto adoption through enhanced user experience. You will find him helping out in the Portuguese community and wallet chats while building tools to help the user experience, such as the Paper Wallet and Ledger.
+
+**Anastasiia Sidorova** is the Ergo Foundation Treasurer. She graduated with a degree in “Mathematical methods in Economics” and worked as a banking analyst for four years before pivoting into hospitality; however, she has always been passionate about Analytics and Accounting. 
+
+**Warwick (CW)** is the Marketing Officer for the Ergo Foundation. He was an active community member and was originally appointed Ergo Social Media Manager to build and maintain community engagement before joining the Foundation. He has over 13 years of experience in business and property investment and has been involved in crypto since 2015. 
+
+**Ergo Foundation Advisors**
+
+**Daniel Friedman** is a Strategic Advisor to the Ergo Foundation. He started his professional career as a developer for a San Francisco-based software company, 2Bridge. After moving to Japan, he became CTO of an Osaka-based software development firm specialising in Augmented Reality mobile applications. He is a strategic advisor to the Ergo Foundation Board and a business developer for IOHK.
+
+## Timeline
+
+### 2020
+
+- Jan 7, Introducing the Ergo Foundation, a community-driven entity
+
+**2020 Key Achievements**
+
+- Roadmap released, Discord started
+- Partnership with Emurgo and extensive joint research brought us Oracle Pools, SigmaUSD, and the headless dApp framework. 
+- Listing on CoinEx, Gate.io.
+
+
+### 2021
+
+- Joseph Armeanio joins the Ergo Foundation.
+- Mark Glasgow joins the Ergo Foundation, replacing Martin S.
+- Nov 1, IOHK Business Developer Daniel Friedman Appointed Advisor to Ergo Foundation Board.
+- Dec 19, The Ergo Foundation incorporates in Singapore.
+
+**2021 Key Achievements**
+
+- Autolykos v2 Hard-Fork opened Ergo to mining pools, improved liquidity and brought many new users into the ecosystem.
+- Partnership with Jinse and China marketing efforts that grew the Chinese community to >10k members.
+- Listing on KuCoin, Changelly.
+- UTXO Alliance formed. 
+- EIP-27 Discussions start.
+- The EF hired wallet developers to alleviate users' lack of usable wallet options.
+- Obtained a written US Legal Opinion that determines Ergo is unlikely to be classified as a security. 
+- Our first summits and two hackathons.
+- Incorporated the first legal entity in Singapore to meet the necessity of formal arrangements now required in the industry.
+
+### 2022
+
+- Warwick (CW), Stacie, and Alison Robson join the Ergo Foundation as Officers to help expand the EF to the wider community.
+- Created and distributed a pitch deck highlighting the ‘open source economy’ rapidly developing on Ergo and opportunities that present for private investors. 
+
+**2022 Key Achievements**
+
+
+- Listings on Indodax and Huobi, Bittrue. 
+- Parallel asset launches on Flux.
+- [EIP-27](eip27.md) re-emission soft-fork boosting confidence in Ergo and ensuring long-term network security.
+- [EIP-37](eip37.md) (Difficulty retargeting hard fork).
+- Two summits and three hackathons with 45 entries total.
+- The redesign & relaunch of [ergoplatform.org](https://ergoplatform.org) and [sigmaverse.io](https://sigmaverse.io)
+- Node [V5 JITC]().
+
 ## Scope
 
 ### Infrastructure
@@ -145,98 +220,25 @@ Possible reasons include the following:
 
 You can follow along on our [Weekly AMAs](https://www.youtube.com/@ErgoPlatform/streams) to catch any hints regarding the current exchange listing efforts. 
 
-### Salaries
-
-Twenty people receive monthly salaries or rewards for their contributions. The vast majority (16/20) were promoted from within the community after exceptional contributions. 
-
-A monthly breakdown of long-term salary expenses
-
-- Ergo Foundation: 3,500 ERG
-- Advisory: 2,820 ERG
-- Marketing: 7,000 USD
-- Development: 5600 ERG + 10k USD.
-
-Outgoings are reviewed consistently depending on price and more formally every 60-90 days. 
+## Salaries & Runway
 
 Salaries account for 70-90% of spending in most months, with the remainder in order of amounts usually being Bounties and Grants, Marketing expenses, and Administrative/General expenses. However, big one-off expenses, mainly exchange listings, lower this percentage substantially when looking at a longer time frame.
 
-kushti has not taken any payment from the EF for his work since Ergo's 2nd birthday (July 2021). 
+Twenty people receive monthly salaries or rewards for their contributions. The vast majority (16/20) were promoted from within the community after exceptional contributions. 
+
+A monthly breakdown of long-term salary commitments.
+
+- EF Members, Advisors and Officers: 6,320 ERG
+- Marketing: 1500 ERG + 7,000 USD
+- Development: 5600 ERG + 10,000 USD.
+
+Outgoings are reviewed consistently depending on price and more formally every 60-90 days. We scaled back any extra spending and reduced our outgoings by ~15% at the end of 2022. 
+
+Please note that the foundation's role is to **bootstrap** the ecosystem. We have runway for another 2-3 years, excluding development financiers and token allocations from ecosystem projects we have supported in the pipeline. For more information, please see [The Ergo Foundation's Future](#the-ergo-foundations-future)
 
 
-## Ergo Foundation Members
-
-**Alexander Chepurnoy (kushti)** is an Ergo Foundation board member and director. He has been active in blockchain since 2011, has written over twenty academic papers, and has more than fifteen years of experience in software development. Before co-founding  Ergo, he was also a co-founder of smartcontract.com (now Chainlink), a core developer at NXT, and one of the first employees at IOHK, where he was a Research Fellow and Team Scorex Manager.
-
-**Alexander Slesarenko (morphic)**  is an (honourary) Ergo Foundation board member and graduate of Applied Mathematics from Udmurt State University. He has more than 25 years of experience in software development as a team leader, software architect, engineer and researcher, focusing mainly on programming language design and implementation. He is a Blockchain Core Developer and the Lead Developer of ErgoScript Compiler, Sigmastate interpreter, and Appkit at Ergo. He was also an Expert Team Leader at Huawei Research Lab, focusing on high-performance computing and big data processing. 
 
 
-**Justin Simpson** is an Ergo Foundation board member. With over 13 years of Investment Banking experience, Justin has been involved with crypto and Bitcoin since 2013. Now exclusively focused on crypto, he is passionate about open, permissionless and decentralised blockchain platforms.
-
-**Joseph Armeanio** is an Ergo Foundation board member and director. Joseph has been involved in crypto on the investment side since 2013 and was a partner CIO at Big Bear Investments. Joseph has been on the board of the Universal Education Foundation, a 501(c)3 organisation, since 2008. He brings a passion for counter-economic frameworks and tools for social good. His role as a business developer is creating partnerships in the crypto industry, educational partnerships, and research opportunities while promoting the adoption of Ergo tooling in the public and non-profit sectors.
-
-**Mark Glasgow** is an Ergo Foundation board member and director who works across various roles in Ergo, including community management and developer education. As a Computing Science graduate passionate about improving inclusive systems, he is also the Technical Director for Disabled Students UK CIC, a non-profit named one of the most influential disability-led organisations in the UK.
-
-**Mohammad Hasan Samadani (mhs_sam)** is an (honourary) Ergo Foundation board member. He has a PhD in computer science and over 12 years of experience in security and software development as a product owner, researcher, and team leader. He became an Ergo Foundation Board Member in 2020 after outstanding contributions to developing the Ergo mining infrastructure, Stratum server, and ergopool (smart contract-based pool to bypass pool resistance of Autolykos v1).
-
-**Ergo Foundation Officers**
-
-**Alison Robson (anon_br)** is a software engineer passionate about facilitating crypto adoption through enhanced user experience. You will find him helping out in the Portuguese community and wallet chats while building tools to help the user experience, such as the Paper Wallet and Ledger.
-
-**Anastasiia Sidorova** is the Ergo Foundation Treasurer. She graduated with a degree in “Mathematical methods in Economics” and worked as a banking analyst for four years before pivoting into hospitality; however, she has always been passionate about Analytics and Accounting. 
-
-**Warwick (CW)** is the Marketing Officer for the Ergo Foundation. He was an active community member and was originally appointed Ergo Social Media Manager to build and maintain community engagement before joining the Foundation. He has over 13 years of experience in business and property investment and has been involved in crypto since 2015. 
-
-**Ergo Foundation Advisors**
-
-**Daniel Friedman** is a Strategic Advisor to the Ergo Foundation. He started his professional career as a developer for a San Francisco-based software company, 2Bridge. After moving to Japan, he became CTO of an Osaka-based software development firm specialising in Augmented Reality mobile applications. He is a strategic advisor to the Ergo Foundation Board and a business developer for IOHK.
-
-## Timeline
-
-### 2020
-
-- Jan 7, Introducing the Ergo Foundation, a community-driven entity
-
-**2020 Key Achievements**
-
-- Roadmap released, Discord started
-- Partnership with Emurgo and extensive joint research brought us Oracle Pools, SigmaUSD, and the headless dApp framework. 
-- Listing on CoinEx, Gate.io.
-
-
-### 2021
-
-- Joseph Armeanio joins the Ergo Foundation.
-- Mark Glasgow joins the Ergo Foundation, replacing Martin S.
-- Nov 1, IOHK Business Developer Daniel Friedman Appointed Advisor to Ergo Foundation Board.
-- Dec 19, The Ergo Foundation incorporates in Singapore.
-
-**2021 Key Achievements**
-
-- Autolykos v2 Hard-Fork opened Ergo to mining pools, improved liquidity and brought many new users into the ecosystem.
-- Partnership with Jinse and China marketing efforts that grew the Chinese community to >10k members.
-- Listing on KuCoin, Changelly.
-- UTXO Alliance formed. 
-- EIP-27 Discussions start.
-- The EF hired wallet developers to alleviate users' lack of usable wallet options.
-- Obtained a written US Legal Opinion that determines Ergo is unlikely to be classified as a security. 
-- Our first summits and two hackathons.
-- Incorporated the first legal entity in Singapore to meet the necessity of formal arrangements now required in the industry.
-
-### 2022
-
-- Warwick (CW), Stacie, and Alison Robson join the Ergo Foundation as Officers to help expand the EF to the wider community.
-- Created and distributed a pitch deck highlighting the ‘open source economy’ rapidly developing on Ergo and opportunities that present for private investors. 
-
-**2022 Key Achievements**
-
-
-- Listings on Indodax and Huobi, Bittrue. 
-- Parallel asset launches on Flux.
-- [EIP-27](eip27.md) re-emission soft-fork boosting confidence in Ergo and ensuring long-term network security.
-- [EIP-37](eip37.md) (Difficulty retargeting hard fork).
-- Two summits and three hackathons with 45 entries total.
-- The redesign & relaunch of [ergoplatform.org](https://ergoplatform.org) and [sigmaverse.io](https://sigmaverse.io)
-- Node [V5 JITC]().
 
 
 ## Historic Spending
@@ -270,7 +272,7 @@ The Foundation's role was to bootstrap the Ergo ecosystem in the initial years a
 
 As time goes on, the importance of the EF should diminish and shift towards the community entirely. This is essential for both the strength of the ecosystem and ensuring that Ergo is not classified as a security. 
 
-The [Sigmanauts Programme](sigmanauts.md) was launched at the start of 2022 to fill this need and build the required structures to achieve this transition. 
+The [Sigmanauts Programme](sigmanauts.md) was launched at the start of 2022 to fill this need and build the required structures to pass the baton to the community. 
 
 The Ergo Foundation will likely exist for some time yet. It may exist in some form for perpetuity as a legal entity to take counterparty risk when dealing with centralised actors.
 
