@@ -1,7 +1,7 @@
 # Ergo Foundation Transparency Report 2022
 
 
-The Ergo Foundation (EF) is a non-profit foundation dedicated to advancing the adoption of Ergo. The foundation’s treasury is sourced from a small portion of mined blocks during the first 2.5 years from Ergo’s mainnet launch. This allocation amounted to 4,330,791.5 ERGs or 4.43% of the total supply.
+The Ergo Foundation (EF) is a non-profit foundation dedicated to advancing the adoption of Ergo. The Foundation's Treasury is sourced from a small portion of mined blocks during the first 2.5 years from Ergo's mainnet launch. This allocation amounted to 4,330,791.5 ERGs or 4.43% of the total supply.
 
 Read more about the [emission schedule](emission.md) or check out the [whitepaper](https://ergoplatform.org/docs/whitepaper.pdf). 
 
@@ -17,13 +17,13 @@ The Ergo Foundation is a community-driven entity focused on the following:
 - Supporting truly decentralised infrastructure and;
 - Supporting privacy as a basic human right.
 
-Ergo Platform’s primary focus is to provide an efficient and secure way to implement financial contracts, the most widely used application of blockchain technology. This focus is recognised and supported by the Ergo Foundation.
+Ergo Platform's primary focus is to provide an efficient and secure way to implement financial contracts, the most widely used application of blockchain technology. This focus is recognised and supported by the Ergo Foundation.
 
 The Ergo Foundation is committed to organic and non-breaking development of the Ergo Platform protocol. The Foundation ensures that protocol changes are approved not only by miners - who express their will directly on the blockchain - but also by users and projects building on top of Ergo. 
 
 The Ergo Foundation is committed to maximising the number of valuable ecosystem developments accomplished in open-source with the least permissive licence possible.
 
-The Foundation is also dedicated to helping with building trustless environments, smart contracts and payment frameworks for the public with privacy in mind. The Foundation believes that the Ergo Treasury should be distributed mainly to the community, including freelancers, hackers, experts and enthusiasts. 
+The Foundation is also dedicated to helping with building trustless environments, smart contracts and payment frameworks for the public with privacy in mind. The Foundation believes that the Treasury should be distributed mainly to the community, including freelancers, hackers, experts and enthusiasts. 
 
 ## Ergo Foundation Members
 
@@ -44,7 +44,7 @@ The Foundation is also dedicated to helping with building trustless environments
 
 **Alison Robson (anon_br)** is a software engineer passionate about facilitating crypto adoption through enhanced user experience. You will find him helping out in the Portuguese community and wallet chats while building tools to help the user experience, such as the Paper Wallet and Ledger.
 
-**Anastasiia Sidorova** is the Ergo Foundation Treasurer. She graduated with a degree in “Mathematical methods in Economics” and worked as a banking analyst for four years before pivoting into hospitality; however, she has always been passionate about Analytics and Accounting. 
+**Anastasiia Sidorova** is the Ergo Foundation Treasurer. She graduated with a degree in "Mathematical methods in Economics" and worked as a banking analyst for four years before pivoting into hospitality; however, she has always been passionate about Analytics and Accounting. 
 
 **Warwick (CW)** is the Marketing Officer for the Ergo Foundation. He was an active community member and was originally appointed Ergo Social Media Manager to build and maintain community engagement before joining the Foundation. He has over 13 years of experience in business and property investment and has been involved in crypto since 2015. 
 
@@ -69,8 +69,8 @@ The Foundation is also dedicated to helping with building trustless environments
 
 - Joseph Armeanio joins the Ergo Foundation.
 - Mark Glasgow joins the Ergo Foundation, replacing Martin S.
-- Nov 1, IOHK Business Developer Daniel Friedman Appointed Advisor to Ergo Foundation Board.
-- Dec 19, The Ergo Foundation incorporates in Singapore.
+- On Nov 1, IOHK Business Developer Daniel Friedman was appointed Advisor to Ergo Foundation Board.
+- On Dec 19, The Ergo Foundation incorporates in Singapore.
 
 **2021 Key Achievements**
 
@@ -87,7 +87,7 @@ The Foundation is also dedicated to helping with building trustless environments
 ### 2022
 
 - Warwick (CW), Stacie, and Alison Robson join the Ergo Foundation as Officers to help expand the EF to the wider community.
-- Created and distributed a pitch deck highlighting the ‘open source economy’ rapidly developing on Ergo and opportunities that present for private investors. 
+- Created and distributed a pitch deck highlighting the 'open source economy' rapidly developing on Ergo and opportunities that present for private investors. 
 
 **2022 Key Achievements**
 
@@ -126,15 +126,15 @@ The current paid roles within marketing consist of
 
 Their efforts ensure ample information is available about ongoing developments on Ergo via blog posts and social media, as well as the promoting and operating of various marketing events, such as Ergo Summit and ErgoHack.
 
-Over the past 23 years, network effects have accounted for approximately 70% of the value creation in tech, and this figure is likely higher for a third-generation grassroots blockchain. While the EF strives to lay the foundations and help ignite community marketing and, subsequently, compounding growth, beyond this, the marketing and promotion of Ergo rest principally on the shoulders of the community. [(Get Involved!)](contribute.md)
+Over the past 23 years, network effects have accounted for approximately 70% of the value creation in tech, and this figure is likely higher for a third-generation grassroots blockchain. [While the EF strives to lay the foundations and help ignite community marketing and, subsequently, compounding growth](#sentence-frag), beyond this, the marketing and promotion of Ergo rest principally on the shoulders of the community. [(Get Involved!)](contribute.md)
 
 The EF does not commonly pay for influencers or ad campaigns and does its best to restrict frivolous spending, which is deemed not cost-effective  (i.e. airdrops, giveaways).
 
-The marketing department highlights projects building in the ecosystem. However, these initiatives do not constitute an endorsement from the Ergo Foundation. The Foundation will always use best practices to vet projects and ensure that there is no risk for potential users. Still, in the early stages of development, it is often unknowable if anything of substance will ultimately be produced. 
+The marketing department highlights projects building in the ecosystem. However, these initiatives do not constitute an endorsement from the Ergo Foundation. The Foundation will always use best practices to vet projects and ensure that there is no risk for potential users. [Still, in the early stages of development, it is often unknowable if anything of substance will ultimately be produced.](#Rethinking-structure)
 
 ### 'Core' Team
 
-**There is no official 'core' team.** While some people working on Ergo day-to-day are salaried, many are volunteers, collecting bounties or working on their own projects on top of Ergo. Core Marketing can include keen community members alongside salaried workers, and, similarly anyone with significant contributions to core repositories can be invited to Core Development chats without being an *employee*.
+**There is no official 'core' team.** While some people working on Ergo day-to-day are salaried, many are volunteers, collecting bounties or working on their own projects on top of Ergo. Core Marketing can include keen community members alongside salaried workers. Similarly, anyone with significant contributions to core repositories can be invited to Core Development chats without being a salaried *employee*.
 
 
 
@@ -144,13 +144,13 @@ The marketing department highlights projects building in the ecosystem. However,
 
 The Ergo Foundation members and officers discuss proposals before putting them to a formal vote on the ergoforum, passed with a majority of voting members. 
 
-Before taking from the foundation treasury, we will attempt to first Good Whale, DarkFund0, or suggest creating a Raffle if appropriate. 
+Before voting on spending treasury funds, we will approach the [Good Whale Fund](https://ergoplatform.org/en/blog/2021-11-02-good-whales-grant-fund/), [DarkFund0](https://www.ergoforum.org/t/darkfund0-zk-fund-for-privacy-applications/398), or suggest creating a [Raffle](https://ergoraffle.com/) if appropriate. 
 
 Foundation votes this year have mostly been related to exchanges, market-makers, banks, and grant requests.
 
 - (Dec) MrStahlfelge contract renewal
 - (Dec) Expenses reduction plan
-- (Sep) Miner subsidize
+- (Sep) Miner subsidise
 - (Sep) Graphics support
 - (Sep) CW/Allision/Stacie -> EF Officers
 - (Sep) [exchange related - details under NDA]
@@ -174,7 +174,7 @@ Foundation votes this year have mostly been related to exchanges, market-makers,
 
 ### Relationship to Development
 
-Relationships between the foundation and development only exist when there is a demand not met by the community, and this role is diminishing over time. Some EF members also have developer positions, and while their development activities are not part of their foundation involvement, they are listed here for transparency. 
+Relationships between the Foundation and development only exist when there is a demand not met by the community, and this role is diminishing over time. Some EF members also have developer positions, and while their development activities are not part of their foundation involvement, they are listed here for transparency. 
 
 - Kushti manages any bounties relating to the reference client repository and keeps a watch over [sigma-rust](sigma-rust.md) development and any other high-level development and research not covered below.
 - Morphic manages any JVM-related developers (Wallet devs, Scala devs, etc.) and the [sigmastate-interpreter](sigmastate-interpreter.md). 
@@ -185,7 +185,7 @@ Relationships between the foundation and development only exist when there is a 
 The average day-to-day for foundation members in 2022 mostly consisted of the continued effort of getting a bank account, incorporation, reincorporation, dealing with exchanges, market-makers and our internal accounting & budgeting. As well as overseeing the following activities:
 
 - Salaries for contracted developers.
-- Paying ‘bounties’ set on core repositories.
+- Paying 'bounties' set on core repositories.
 - Core protocol development.
 - Wallet development.
 - Exchange listings.
@@ -205,18 +205,18 @@ One of the primary reasons the Ergo Foundation exists is to act as a legal entit
 
 A *tier 1* exchange is defined as an exchange that appears in the top 10 of exchange ranking sites such as [defillama.com/cexs](https://defillama.com/cexs)
 
-Exchange discussions and details are always under Non-Disclosure Agreement (‘NDA’). To clear up some misconceptions, we can release the following details
+Exchange discussions and details are always under Non-Disclosure Agreement ('NDA'). To clear up some misconceptions, we can release the following details.
 
 - Listings are usually expensive. 
-- Exchanges do not buy liquidity or any of the native tokens or coins on the open market generally. Instead, we use a third-party Market Maker (‘MM’), which has access to an API with a preallocated amount of ERG and USDT it uses to create a liquid market. The MM can only buy/sell and lacks the credentials to withdraw assets. 
-- All major exchanges have been approached. The EF has not rejected any exchanges due to them being too expensive.   
+- Exchanges do not buy liquidity or any of the native tokens or coins on the open market generally. Instead, we use a third-party Market Maker ('MM'), which has access to an API with a preallocated amount of ERG and USDT it uses to create a liquid market. The MM can only buy/sell and lacks the credentials to withdraw assets. 
+- All major exchanges have been approached, and the EF has not rejected any exchanges due to them being too expensive.   
 
 **‘But why is coin x listed?’**
 
 Possible reasons include the following:
 
 - They are a native asset on an already integrated chain (i.e., ERC20, Cosmos, etc.). Therefore, very little work is required to add and maintain a new chain here.
-- For Layer 1’s:
+- For Layer 1's:
     - Have venture-capitalist funding and connections, which they can utilise to get listed early. 
     - Have a smaller public distribution than ERG and can bargain with exchanges for a percentage of their total supply. 
     - Are less complex than Ergo, with no native asset support, no need to worry about UTXO dust, etc. 
@@ -225,75 +225,73 @@ Possible reasons include the following:
 
 You can follow along on our [Weekly AMAs](https://www.youtube.com/@ErgoPlatform/streams) to catch any hints regarding the current exchange listing efforts. 
 
-## Salaries & Runway
+## Treasury
+
+The initial allocation was 4,330,776 ERG, or 4.43% of the total supply. 
+
+You can find the Ergo Foundation treasury and current balance [on-chain](https://explorer.ergoplatform.com/en/addresses/4L1ktFSzm3SH1UioDuUf5hyaraHird4D2dEACwQ1qHGjSKtA6KaNvSzRCZXZGf9jkfNAEC1SrYaZmCuvb2BKiXk5zW9xuvrXFT7FdNe2KqbymiZvo5UQLAm5jQY8ZBRhTZ4AFtZa1UF5nd4aofwPiL7YkJuyiL5hDHMZL1ZnyL746tHmRYMjAhCgE7d698dRhkdSeVy).
+
+
+### Historic Spending
+
+The Ergo Foundation has spent the majority of the Treasury for the benefit of the protocol and community. Funds were even spent when the ERG price was low, as it was necessary to bootstrap the thriving community Ergo now boasts.
 
 Salaries account for 70-90% of spending in most months, with the remainder in order of amounts usually being Bounties and Grants, Marketing expenses, and Administrative/General expenses. However, big one-off expenses, mainly exchange listings, lower this percentage substantially when looking at a longer time frame.
 
+| Spent | ERG | USD |
+|---|---|---|
+| 2022  | 723,000 | $2,247,640.00 |
+| 2021  | 889,001 | $3,793,485.00 |
+| 2020  | 1,080,000 | $500,292.50 |
+| 2019 | 757,051 | $590,239.31 |
+| Total | 3,449,052 | $7,131,656.80 |
+
+### Salaries
+
 Twenty people receive monthly salaries or rewards for their contributions. The vast majority (16/20) were promoted from within the community after exceptional contributions. 
 
-A monthly breakdown of long-term salary commitments.
+A monthly breakdown of long-term salary commitments is as follows:
 
 - EF Members, Advisors and Officers: 6,320 ERG
 - Marketing: 1,500 ERG + 7,000 USD
 - Development: 5,600 ERG + 10,000 USD.
 
-Outgoings are reviewed consistently depending on price and more formally every 60-90 days. We scaled back any extra spending and reduced our outgoings by ~15% at the end of 2022. 
 
-Please note that the foundation's role is to **bootstrap** the ecosystem. We have the budget for another 2-3 years, excluding development financiers and token allocations from ecosystem projects we have supported in the pipeline. 
+### budgeting
 
-For more information, please see [The Ergo Foundation's Future](#the-ergo-foundations-future)
+Outgoings are reviewed consistently depending on price and more formally every 60-90 days. The EF reduced their outgoings by ~15% at the end of 2022. 
 
-
-
+Please note that the Foundation's role is to **bootstrap** the ecosystem. There are funds for another 2-3 years at least, excluding development financiers and token allocations from ecosystem projects we have supported in the pipeline. 
 
 
+### Other commitments. 
 
-## Historic Spending
-
-The initial Allocation was 4,330,776 ERG or 4.43% of the total supply. 
-
-Below are the available EOY balances with a rough average price for that year given in brackets after the date. 
-
-- Jul 19 - Jan 20 ($0.85): 847k spent (169k/mo)
-- Jan 20 - Jan 21 ($0.43): 1.36m spent (113k/mo)
-- Jan 21 - Jan 22 ($6.98): 640k spent (53k/mo)
-- Jan 22 - Oct 22 ($2.98): 511k spent (51k/mo)
+Not included in the Salary section above are short-term commitments such as funding for Spectrum and Rosen in 2022. Full details will be given later (once their tokenomics are published). 
 
 
-The Ergo Foundation has spent the majority of the Treasury for the benefit of the protocol and community. Funds were even spent when the ERG price was low, as it was necessary to bootstrap the thriving community Ergo now boasts.
+### Token Liquidation Strategy
 
-
-You can find the Ergo Foundation treasury and current balance [on-chain](https://explorer.ergoplatform.com/en/addresses/4L1ktFSzm3SH1UioDuUf5hyaraHird4D2dEACwQ1qHGjSKtA6KaNvSzRCZXZGf9jkfNAEC1SrYaZmCuvb2BKiXk5zW9xuvrXFT7FdNe2KqbymiZvo5UQLAm5jQY8ZBRhTZ4AFtZa1UF5nd4aofwPiL7YkJuyiL5hDHMZL1ZnyL746tHmRYMjAhCgE7d698dRhkdSeVy).
-
+TBA
 
 
 ## The Ergo Foundations Future
-The Foundation's role was to bootstrap the Ergo ecosystem in the initial years and build up the infrastructure required for adoption, solving the ‘hard side’ of Ergo and leading to the vibrant ecosystem we see today with:
+The Foundation's role was to bootstrap the Ergo ecosystem in the initial years and build up the infrastructure required for adoption, solving the 'hard side' of Ergo and leading to the vibrant ecosystem we see today with:
 
 
 - 300+ community devs
 - 100+ Active contributors in the weekly dev chats
 - 45 Hackathon participants in 2022 alone.
-- 140+ projects developing on Ergo.
+- 140+ projects are developing on Ergo.
 - Stack consistently ranks Ergo as one of the highest in developer activity. 
 
 As time goes on, the importance of the EF should diminish and shift towards the community entirely. This is essential for both the strength of the ecosystem and ensuring that Ergo is not classified as a security. 
 
 The [Sigmanauts Programme](sigmanauts.md) was launched at the start of 2022 to fill this need and build the required structures to pass the baton to the community. 
 
-The Ergo Foundation will likely exist for some time yet. It may exist in some form for perpetuity as a legal entity to take counterparty risk when dealing with centralised actors.
+The Ergo Foundation will likely exist for some time yet, and it may exist in some form for perpetuity as a legal entity to take counterparty risk when dealing with centralised actors.
 
 Alternatively, it could continue to exist as a research branch to encourage the development of applications and protocols which adhere to its original goals of supporting blockchain technology for social good, truly decentralised infrastructure and privacy as a basic human right. 
 
 The best course of action is to grind and build infrastructure for when liquidity leaks or flees existing systems. Focus on user security assumptions, privacy and longer-term non-fragility. 
 
 Not something we can necessarily force, time or predict, but we can position ourselves.
-
-
-
-
-
-
-
-
-
