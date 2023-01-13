@@ -2,7 +2,6 @@
 
 An Ergo node provides a REST API accessible via HTTP. The full API specification (in OpenAPI format) is available [here](https://github.com/ergoplatform/ergo/blob/master/src/main/resources/api/openapi.yaml). When running the node, a user interface for Swagger is available at [`127.0.0.1:9053/swagger`](http://127.0.0.1:9053/swagger). 
 
-
 You use this UI to make API calls for advanced operations that are not available in the panel such as;
 
 1. Creating non-standard transactions with registers and context variables.
@@ -10,15 +9,11 @@ You use this UI to make API calls for advanced operations that are not available
 3. Creating transactions that use certain boxes as inputs. 
 
 
-
-
 ## Accessing the API
 
-
-
-
-
 Once the node is running, the API can be accessed at [`127.0.0.1:9052`](http://127.0.0.1:9052). 
+
+To have a look at the methods without setting up your own node, check out one of the public nodes like [204.48.31.129:9053/swagger#]
 
 To access protected API routes, you must provide your secret phrase in the request headers `[api_key, Content-Type]`. Alternatively, you can Authorize via the web interface in your browser by clicking the `Authorize` button in swagger and entering your secret phrase there.
 
