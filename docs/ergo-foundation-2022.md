@@ -246,6 +246,8 @@ Salaries account for 70-90% of spending in most months, with the remainder in or
 | 2019 | 757,051 | $590,239.31 |
 | Total | 3,449,052 | $7,131,656.80 |
 
+
+
 ### Salaries
 
 Twenty people receive monthly salaries or rewards for their contributions. The vast majority (16/20) were promoted from within the community after exceptional contributions. 
@@ -257,7 +259,7 @@ A monthly breakdown of long-term salary commitments is as follows:
 - Development: 5,600 ERG + 10,000 USD.
 
 
-### budgeting
+### Budgeting
 
 Outgoings are reviewed consistently depending on price and more formally every 60-90 days. The EF reduced their outgoings by ~15% at the end of 2022. 
 

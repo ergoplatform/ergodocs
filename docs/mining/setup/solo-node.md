@@ -2,9 +2,16 @@
 
 
 
-To be able to spend any ERG mined this way, you will need to include the [EIP27 rules](eip27.md) in your `.config`
+To be able to spend any ERG mined this way, you will need to include the [EIP27 rules](eip27.md) in your `ergo.conf` file which you run with the `.jar` as such
 
 
+## Run
+
+```bash
+java -Xmx4g -jar ergo-5.0.4.jar --mainnet -c ergo.conf
+```
+
+## ergo.conf
 
 ```bash
 	ergo {
@@ -26,11 +33,13 @@ To be able to spend any ERG mined this way, you will need to include the [EIP27 
 	    ## Hex-encoded Blake2b256 hash of an API key. 
 	    ## Should be 64-chars long Base16 string.
 	    ## below is the hash of the string 'hello'
-	    ## replace with your actual hash 
+	    ## replace with your actual hash generated from within swagger. 
 	    apiKeyHash = "324dcf027dd4a30a932c441f365a25e86b173defa4b8e58948253471b81b72cf"
 	  }
 	}
 ```
+
+You'll then either want to use the [Ergo Stratum](stratum.md) mining server or [Mining Core](miningcore.md).
 
 ## Resources
 
