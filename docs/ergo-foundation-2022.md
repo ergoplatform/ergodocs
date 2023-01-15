@@ -268,12 +268,7 @@ Please note that the Foundation's role is to **bootstrap** the ecosystem. There 
 
 ### Other commitments. 
 
-Not included in the Salary section above are short-term commitments such as funding for Spectrum and Rosen in 2022. Full details will be given later (once their tokenomics are published). 
-
-
-### Token Liquidation Strategy
-
-TBA
+Not included in the Salary section above are short-term commitments such as funding for Spectrum and Rosen in 2022. Full details will be given at a later date.
 
 
 ## The Ergo Foundations Future
