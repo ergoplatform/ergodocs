@@ -126,11 +126,11 @@ The current paid roles within marketing consist of
 
 Their efforts ensure ample information is available about ongoing developments on Ergo via blog posts and social media, as well as the promoting and operating of various marketing events, such as Ergo Summit and ErgoHack.
 
-Over the past 23 years, network effects have accounted for approximately 70% of the value creation in tech, and this figure is likely higher for a third-generation grassroots blockchain. [While the EF strives to lay the foundations and help ignite community marketing and, subsequently, compounding growth](#sentence-frag), beyond this, the marketing and promotion of Ergo rest principally on the shoulders of the community. [(Get Involved!)](contribute.md)
+Over the past 23 years, network effects have accounted for approximately 70% of the value creation in tech, and this figure is likely higher for a third-generation grassroots blockchain. While the EF strives to lay the foundations and help ignite community marketing and, subsequently, compounding growth, beyond this, the marketing and promotion of Ergo rest principally on the shoulders of the community. [(Get Involved!)](contribute.md)
 
 The EF does not commonly pay for influencers or ad campaigns and does its best to restrict frivolous spending, which is deemed not cost-effective  (i.e. airdrops, giveaways).
 
-The marketing department highlights projects building in the ecosystem. However, these initiatives do not constitute an endorsement from the Ergo Foundation. The Foundation will always use best practices to vet projects and ensure that there is no risk for potential users. [Still, in the early stages of development, it is often unknowable if anything of substance will ultimately be produced.](#Rethinking-structure)
+The marketing department highlights projects building in the ecosystem. However, these initiatives do not constitute an endorsement from the Ergo Foundation. The Foundation will always use best practices to vet projects and ensure that there is no risk for potential users. Still, in the early stages of development, it is often unknowable if anything of substance will ultimately be produced.
 
 ### 'Core' Team
 
