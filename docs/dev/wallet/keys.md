@@ -2,9 +2,9 @@
 
 [BIP-0044](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki) defines a logical hierarchy for deterministic wallets. This is a common standard that is used directly (or used as inspiration) by countless projects in the cryptocurrency sphere.
 
-Such a standard allows end users to move between different wallet software trivially, and thus sets down a framework for a more cohesive ecosystem to grow.
+Such a standard allows end users to move between different wallet software trivially and established the framework for a more cohesive ecosystem to grow.
 
-The standard has 5 levels part of its path:
+The standard has five levels as part of its path:
 
 ```
 m / 44' / coin_type' / account' / change / address_index
@@ -14,8 +14,6 @@ m / 44' / coin_type' / account' / change / address_index
 
 
 ## Coin Type
-
-
 
 Registered **coin_type**s can be found in [SLIP-0044](https://github.com/satoshilabs/slips/blob/master/slip-0044.md)
 
@@ -60,7 +58,7 @@ Ergo node uses a secret root key (derived from seed) for the *change* address. A
 
 Navigate to `localhost:9053/swagger#/wallet/walletDeriveKey` 
 
-Click **Try it out**
+Click ***"Try it out"***
 
 ```  
 "derivationPath": "m/44'/429'/0'/0/0" 

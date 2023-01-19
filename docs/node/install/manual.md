@@ -1,3 +1,9 @@
+# Manual Install
+
+This guide is for installing a full node on your server. 
+
+- If you want a full node on your desktop, try [satergo](https://satergo.com)
+
 ## Running the node
 
 Create a dedicated folder (such as `~/ergo`) for running the node and download the latest [Ergo client release](https://github.com/ergoplatform/ergo/releases/) `.jar` 
@@ -35,7 +41,9 @@ The node will start syncing immediately after this.
 
 We need to set a secret password to protect the API. In this example we'll use `hello` - but **you must use a different and strong secret.**
 
-Go to [127.0.0.1:9053/swagger#/utils/hashBlake2b](http://127.0.0.1:9053/swagger#/utils/hashBlake2b) and call the API to compute the `Blake2b` hash of your secret. 
+Navgiate [127.0.0.1:9053/swagger#/utils/hashBlake2b](http://127.0.0.1:9053/swagger#/utils/hashBlake2b) and call the API to compute the `Blake2b` hash of your secret. 
+
+> **Please note that `127.0.0.1` is your local machine** and the .jar must be running for it to be available. 
 
 ![Compute Hash of secret](https://user-images.githubusercontent.com/23208922/69916676-ed233400-1483-11ea-8582-f61c38478d31.png)
 
@@ -95,9 +103,10 @@ tail -Fn+0 ergo.log | grep 'ERROR\|WARN'
 ```
 
 
-**Next Steps**
+**Next up,** [initialising your wallet](/node/wallet)
 
-- [Initialising a wallet](/node/wallet)
+## Resources
+
 - [Troubleshooting](/node/install/troubleshooting)
 - [FAQ](/node/#faq)
 - [Using the TestNet](/node/testnet)

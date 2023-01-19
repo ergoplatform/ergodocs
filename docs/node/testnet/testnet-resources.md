@@ -4,6 +4,15 @@
 To find public testnet nodes, you can use [api.tokenjay.app/peers/list](https://api.tokenjay.app/peers/list) and swap ports until you find one that's running testnet.
 
 - [Testnet Explorer](https://testnet.ergoplatform.com/)
+- [ergo-synced-node](https://github.com/mgpai22/ergo-synced-node#ergo-testnet-node-setup)
+
+
+## Development 
+
+- [Nautilus Testnet build](https://github.com/capt-nemo429/nautilus-wallet#testnet)
+
+
+> Please note that the [Headless dApp framework](/dev/stack/headless/#headless-dapp-framework) [does not work with testnet addresses](https://github.com/ergoplatform/ergo-headless-dapp-framework/blob/main/src/encoding.rs#L104)
 
 
 
@@ -17,23 +26,3 @@ To find public testnet nodes, you can use [api.tokenjay.app/peers/list](https://
 
 
 
-
-## [PaiNet](https://github.com/mgpai22/paiNet)
-
-- [live node](https://pai-net.mempoolnode.live/panel)
-- [explorer](https://explorer.mempoolnode.live/)
-- [api](https://api.mempoolnode.live/api/v1/docs/) 
-- [gql](https://gql.mempoolnode.live/)
-- You can get some testERG from [testnet.ergofaucet.org](https://painet-faucet.mempoolnode.live/)
-
-## GetBlok testnet
-
-Alternatively, GetBlok runs a public testnet that should help devs who need to work on the testnet but don't know how to run a solo mining node. It should also give an alternative way to start a testnet in case the usual miner is down. 
-
-```
-ergo-testnet.getblok.io:3056
-```
-
-## Misc
-
-- [ergo-synced-node](https://github.com/mgpai22/ergo-synced-node#ergo-testnet-node-setup)

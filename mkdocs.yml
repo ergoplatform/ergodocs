@@ -113,10 +113,7 @@ nav:
         - Atomic Swaps: dev/protocol/eutxo/atomic.md
       - NIPoPoWs:
         - dev/protocol/nipopows.md
-        - Light Clients: 
-          - dev/protocol/nipopow/nipopow_nodes.md
-          - SPV Clients: dev/protocol/nipopow/spv.md
-          - UTXO Snapshots: dev/protocol/nipopow/utxo-snapshots.md
+        - Light Clients: dev/protocol/nipopow/nipopow_nodes.md
         - Log-Space Mining: dev/protocol/nipopow/logspace.md
         - Sidechains: dev/protocol/nipopow/nipopow-sidechains.md
       - Privacy: dev/protocol/zkp.md
@@ -184,18 +181,18 @@ nav:
         - node/install.md
         - Install: 
           - node/install.md
-          - Manual: node/install/manual.md
-          - Docker: node/install/docker.md
-          - Pi: node/install/pi.md
-          - Android: node/install/node-android.md
-          - Troubleshooting: node/install/troubleshooting.md
-          - FAQ: node/install/node-faq.md
+          - Manual: 
+            - node/install/manual.md
+            - Troubleshooting: node/install/troubleshooting.md
+            - FAQ: node/install/node-faq.md
+            - Pi: node/install/pi.md
+            - Android: node/install/node-android.md
+          - Docker: node/install/docker.md          
         - Testnet: 
           - node/testnet.md
           - Full Sync: node/testnet/testnet-full.md
           - CPU Mining: node/testnet/cpu-mining.md
           - Your own chain: node/testnet/mine-your-own-chain.md
-          - Development: node/testnet/testnet-dev.md
           - Resources: node/testnet/testnet-resources.md
         #- Architecture: node/architecture.md
         - Configuration:
@@ -205,7 +202,11 @@ nav:
           - Swagger API: node/swagger.md
           - Modes of Operation: 
             - node/modes.md
-            - NiPoPoWS: node/node-nipopows.md
+            - Full Node: 
+              - node/modes/full-node.md
+              - Light Full Node: node/modes/light-full-node.md
+              - Pruned Full Node: node/modes/pruned-full-node.md
+            - Light SPV: node/modes/light-spv-node.md
           - Configuration Files:
             - application.conf: 
               - node/conf.md

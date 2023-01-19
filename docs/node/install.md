@@ -15,18 +15,13 @@ You can also use [Docker](docker.md), and even a [Raspberri Pi](pi.md) with a fa
 ## Resources
 
 - [Frequently Asked Questions](faq.md)
+- [Modes of Operation](modes.md)
 
 ### Toolkits 
 
 - [Explorer & Node Bundles](explorer.md#toolkits)
 - [ergosphere](https://ergosphere.cloud/) is an Umbrel-like solution that allows an easy setup of self-hosted Ergo services. (BETA)
 
-### By Operating System
-
-- [Linux](linux.md)
-    - [Raspberri Pi](pi.md)
-- [Mac OSX](mac.md)
-- [Windows](windows.md)
 
 ### API 
 

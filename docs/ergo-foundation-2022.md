@@ -258,22 +258,21 @@ A monthly breakdown of long-term salary commitments is as follows:
 - Marketing: 1,500 ERG + 7,000 USD
 - Development: 5,600 ERG + 10,000 USD.
 
-
-### Budgeting
-
-Outgoings are reviewed consistently depending on price and more formally every 60-90 days. The EF reduced their outgoings by ~15% at the end of 2022. 
-
-Please note that the Foundation's role is to **bootstrap** the ecosystem. There are funds for another 2-3 years at least, excluding development financiers and token allocations from ecosystem projects we have supported in the pipeline. 
-
-
 ### Other commitments. 
 
 Not included in the Salary section above are short-term commitments such as funding for Spectrum and Rosen in 2022. Full details will be given at a later date.
 
 
-## The Ergo Foundations Future
-The Foundation's role was to bootstrap the Ergo ecosystem in the initial years and build up the infrastructure required for adoption, solving the 'hard side' of Ergo and leading to the vibrant ecosystem we see today with:
+### Budgeting
 
+Outgoings are reviewed consistently depending on price and more formally every 60-90 days. The EF reduced their outgoings by ~15% at the end of 2022 in response to market conditions. 
+
+Please note that the Foundation's primary role is to **bootstrap** the ecosystem. There are funds for at least another 2-3 years, excluding development financiers and token allocations from ecosystem projects we have supported in the pipeline. 
+
+
+## The Ergo Foundations Future
+
+The Foundation's role was to bootstrap the Ergo ecosystem in the initial years and build up the infrastructure required for adoption, solving the 'hard side' of Ergo and leading to the vibrant ecosystem we see today with:
 
 - 300+ community devs
 - 100+ Active contributors in the weekly dev chats

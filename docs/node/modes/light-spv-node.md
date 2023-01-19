@@ -1,6 +1,51 @@
+# Light-SPV Mode
+
+## Overview 
+
+
+[Simplified Payment Verification (SPV)](spv.md) allows for a simplified way of verifying transactions by only downloading and verifying the block headers, rather than the entire blockchain. This makes it possible for users with limited resources to participate in the network and make transactions without needing a full node.
+
+## Ergo's NIPoPoWs
+
+While SPV wallets are already very lightweight compared to full nodes, NIPoPoW-empowered SPV wallets need to download only a tiny sample of block headers, around 250, while other SPV clients need may to download around half a million block headers. The sample needed changes but does not grow much in size as the blockchain grows more extensive, even after accumulated decades of data.
+
+
+A highly efficient Ergo wallet with SPV security is currently in development. Keep an eye out for updates [here](https://github.com/ergoplatform/sigma-rust/milestone/17).
+
+
+
+
+## Technical Workflow
+
+### Bootstrap
+
+1.  Send **`GetPoPoWProof`** for all connections.
+2.  On receiving **`PoPoWProof`**, apply it to History (History should determine whether this PoPoWProof is better than its current best header chain).
+3.  **`GOTO`** regular regime.
+
+### Regular
+
+1.  Send ErgoSyncInfo message to connected peers
+2.  Get a response with an INV message containing the ids of blocks, better than
+    our best block.
+3.  Request headers for all ids from 2.
+4.  On receiving Header:
+
+```java
+    if(History.apply(header).isSuccess) {
+        State.apply(header) // just change state roothash
+    if(!isInitialBootstrapping) Broadcast INV for this header
+    } else {
+        blacklist peer
+    }
+```
+
+
+## Old
+
 # Simplified Payment Verification 
 
-A full Bitcoin node checks all the blocks in the blockchain (using headers) and ensures there are no fraudulent transactions. It's a very secure way of using crypto – but there's a problem. It requires significant bandwidth, storage, and processing power. That commodity hardware is expensive and using a full node to validate and make transactions is unsuitable for mobile devices. This is particularly true for Bitcoin, where the blockchain is over [270 GB and counting](https://www.blockchain.com/charts/blocks-size).
+A full Bitcoin node checks all the blocks in the blockchain (using headers) and ensures no fraudulent transactions. It is a very secure way of using crypto – but there is a problem. It requires significant bandwidth, storage, and processing power. That commodity hardware is expensive, and using a full node to validate and make transactions is unsuitable for mobile devices. This is particularly true for Bitcoin, where the blockchain is over [270 GB and counting](https://www.blockchain.com/charts/blocks-size).
 
 Simplified Payment Verification (SPV) is designed to address this problem, as described in the [Bitcoin white paper](https://bitcoin.org/bitcoin.pdf):
 
@@ -10,7 +55,7 @@ Satoshi notes that this is not a perfect solution and is vulnerable to an attack
 
 Moreover, while SPV mode is intended for resource-limited devices, this 'lite' approach is not always feasible. Ethereum's headers alone total around 5 GB to download. Thus Ethereum mobile clients do not validate chain validity and blindly have to trust third parties.
 
-There are proposals to reduce the requirements for SPV mode by checking just a few random headers instead of all of them. But it takes a lot of work to do that securely. 
+There are proposals to reduce the requirements for SPV mode by checking just a few random headers instead of all. However, it takes much work to do that securely. 
 
 
 

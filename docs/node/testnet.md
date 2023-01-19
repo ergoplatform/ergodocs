@@ -11,6 +11,11 @@ The testnet is an alternative Ergo blockchain you can use for testing and experi
     "url": "testnet/testnet-full.md"
   },
   {
+    "title": "ergo-synced-node",
+    "content": "A presynced testnet node from MGPai",
+    "url": "https://github.com/mgpai22/ergo-synced-node#ergo-testnet-node-setup"
+  },
+  {
     "title": "CPU Mining",
     "content": "You can use your CPU to mine on the testnet",
     "url": "testnet/cpu-mining.md"
