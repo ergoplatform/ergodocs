@@ -1,3 +1,8 @@
+---
+tags:
+  - NIPoPoWs
+---
+
 # NiPoPoW Sidechains
 
 NiPoPoWs enable trustless sidechains through [***Simplified Payment Verification***](modes.md) (SPV) proofs and is resistant to such attacks while also being small enough that they can actually be sent over the network.

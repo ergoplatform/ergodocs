@@ -1,3 +1,8 @@
+---
+tags:
+  - NIPoPoWs
+---
+
 # Pruned Full-Node Mode
 
 ## Overview 

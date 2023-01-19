@@ -23,16 +23,6 @@ We describe how to emulate persistent storage in UTXO based systems using a tech
 - [Multi-Stage Contracts in the UTXO Model: Delivery by Alexander Chepurnoy & Amitabh Saxena](https://www.youtube.com/watch?v=g3FlM_WOwBU)
 - [https://ergoplatform.org/docs/ErgoScript.pdf](https://ergoplatform.org/docs/ErgoScript.pdf)
 
-## Video Transcript
-
-- A UTXO platform like Bitcoin
-- Advanced scripting capabilities using Ergoscript
-    - Functional programming using scala-like syntax
-        - `INPUTS.exist({utxo:Box} => utxo.value >= 100})`
-    - Conditional statements `If (condition) {block1} else {block2}`
-    - Store data in [registers](registers.md) of UTXO (up to 10 registers)
-- Enriched context
-    - Allows multistage contracts using transaction chaining. 
 
 ## What is a multistage contract?
 

@@ -1,4 +1,17 @@
 
+## Video Transcript
+
+- A UTXO platform like Bitcoin
+- Advanced scripting capabilities using Ergoscript
+    - Functional programming using scala-like syntax
+        - `INPUTS.exist({utxo:Box} => utxo.value >= 100})`
+    - Conditional statements `If (condition) {block1} else {block2}`
+    - Store data in [registers](registers.md) of UTXO (up to 10 registers)
+- Enriched context
+    - Allows multistage contracts using transaction chaining. 
+
+
+
 ### Ergo’s approach
 
 This is essentially the approach that Ergo takes, providing superior support for real-world financial agreements. It does this through:

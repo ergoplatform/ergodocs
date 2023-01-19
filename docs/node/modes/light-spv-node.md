@@ -1,3 +1,8 @@
+---
+tags:
+  - NIPoPoWs
+---
+
 # Light-SPV Mode
 
 ## Overview 
