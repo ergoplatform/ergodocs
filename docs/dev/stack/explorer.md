@@ -13,7 +13,3 @@ There is a publicly available explorer at [explorer.ergoplatform.com](https://ex
 ## uExplorer
 
 - [uExplorer](https://github.com/pragmaxim/ergo-uexplorer/) is a supplementary, lightweight Ergo explorer with CassandraDB backend :
-
-## GetBlok
-
-- [ergo-explorer-cdn.getblok.io](https://ergo-explorer-cdn.getblok.io/) hosts a explorer end-point, no UI, only for API calls. 

@@ -512,6 +512,7 @@ nav:
       - uses/lending.md
       - ErgoLend: eco/ergolend.md
       - duckpools: eco/duckpools.md
+      - SigmaFi: eco/sigmafi.md
 
     - P2P:
       - uses/p2p.md
