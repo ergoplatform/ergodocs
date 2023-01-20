@@ -150,6 +150,16 @@ These are all essential for having useful contractual, programmable money that's
 
 Ergo's primary language is Scala. Similarly, the scripting language used by Ergo, ErgoScript, is also based on Scala, but the off-chain code can be written in any language. Developers have access to a growing selection of tools and Software Development Kits (SDKs) for JVM, Rust and JS/TS.
 
+
+Scala has several features that set it apart from other JVM languages. 
+
+- Firstly, it is truly cross-platform, as the same code can run on JVM and JavaScript natively. This is a feature that is not found in many other languages. 
+- Additionally, key ecosystem libraries for Scala support all platforms, and the popularity of Scala.js and Scala-native is increasing. 
+- Another advantage of Scala is its conciseness, both in terms of syntax and conceptual level. 
+- Despite its high-level nature, Scala can also be more efficient than similar Java code due to its ability to use primitive unboxed types, and the ability of the Scala compiler to perform code specialization. 
+- Furthermore, Scala is multi-paradigm, allowing for the combination of OOP, FP, and LP, making it suitable for a wide range of domains. 
+- Lastly, Scala3 brings even more powerful features such as metaprogramming and tools for zero-cost abstractions.
+
 ### What about energy consumption? 
 
 - [Proof of Work, Energy & Ergo](https://ergoplatform.org/en/blog/2022-03-29-proof-of-work-energy-and-ergo/)
