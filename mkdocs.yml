@@ -440,38 +440,55 @@ nav:
       - Sidechains: 
         - uses/sidechains.md
         - ErgoData: uses/ErgoData.md
+        
+    - Financial:
+      - Stablecoins: 
+        - uses/stablecoins.md
+        - SigmaUSD:
+          - uses/sigmausd.md
+          - Examples: uses/sigmausd/examples.md
+          - Mining Incentives: uses/sigmausd/mining-incentives.md
+          - Other Stablecoins: uses/sigmausd/comparison.md
+        - DexyGold: eco/dexy.md
+        - ChainCash: uses/chaincash.md
+      - Lending:
+        - uses/lending.md
+        - ErgoLend: eco/ergolend.md
+        - duckpools: eco/duckpools.md
+      - Bonds:
+        - SigmaFi: eco/sigmafi.md
+      - Options: 
+        - uses/p2p_options.md
+        - SigmaO: eco/sigmao.md
+      - CrowdFunding: 
+        - uses/crowdfunding.md
+        - ErgoRaffle: eco/ergoraffle.md
+        - ErgoWell: eco/ergowell.md
+        - ErgoFund: uses/ergofund.md
+     
 
     - Exchanges:
       - uses/dex.md
       - Spectrum Finance: eco/spectrum.md
       - Palmyra ComDEX: eco/palmyra.md
-      - GuapSwap: eco/guapswap.md
-    - Local Exchange Trading Systems (LETS): 
-      - uses/lets.md
-      - Basic Implementation: uses/lets/basic-imp.md
-      - Trustless LETS: uses/trustless-lets.md
+      - Local Exchange Trading Systems (LETS): 
+        - uses/lets.md
+        - Basic Implementation: uses/lets/basic-imp.md
+        - Trustless LETS: uses/trustless-lets.md
 
 
-    - NFT Markets:
+    - NFTs:
       - uses/nft.md
       - Ergo Auctions: eco/ergo-auctions.md
       - SkyHarbor: eco/skyharbor.md
-    - Stablecoins: 
-      - uses/stablecoins.md
-      - SigmaUSD:
-        - uses/sigmausd.md
-        - Examples: uses/sigmausd/examples.md
-        - Mining Incentives: uses/sigmausd/mining-incentives.md
-        - Other Stablecoins: uses/sigmausd/comparison.md
-      - DexyGold: eco/dexy.md
-      - ChainCash: uses/chaincash.md
+  
     - DAOs:
       - uses/dao.md 
       - ErgoPad: eco/ergopad.md
       - Paideia: eco/paideia.md
       - Swamp-Audio: eco/swamp-audio.md
-    - Privacy:
-      
+
+    - Privacy:      
       - ZK Treasury: uses/zkt.md
       - Mixing: 
         - uses/mixer.md
@@ -484,21 +501,18 @@ nav:
           - Install on Android: eco/ergomixer/mixer-android.md
         - SigmaJoin: eco/sigmajoin.md
         - Stealth Addresses: uses/stealth-address.md
+      - Decentralised ID:
+        - Ergo Nation: eco/ergonation.md
+      - P2P:
+        - uses/p2p.md
 
-
-    - Decentralised ID:
-      - Ergo Nation: eco/ergonation.md
 
     - Mining:
+      - Lithos: eco/lithos.md
       - CYTI: eco/cyti.md
       - SNISP: eco/snisp.md
       - GuapSwap: eco/guapswap.md
-  
-    - CrowdFunding: 
-      - uses/crowdfunding.md
-      - ErgoRaffle: eco/ergoraffle.md
-      - ErgoWell: eco/ergowell.md
-      - ErgoFund: uses/ergofund.md
+
     - Gaming: 
       - uses/gaming.md
       - Lotteries: uses/lottery.md
@@ -514,19 +528,7 @@ nav:
       - NFT-Games:
         - Digigoats: eco/digigoats.md
         - Monster Pub Brawl: eco/monsterpub.md
-
     
-    
-    - Lending:
-      - uses/lending.md
-      - ErgoLend: eco/ergolend.md
-      - duckpools: eco/duckpools.md
-      - SigmaFi: eco/sigmafi.md
-
-    - P2P:
-      - uses/p2p.md
-      - Sigma Finance: uses/p2p/sigma-finance.md
-      - P2P Options Contract: uses/p2p_options.md
     - Further Ideas: 
       - P2P: 
         - Prediction Markets: uses/prediction_markets.md

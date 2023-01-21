@@ -1,1 +1,4 @@
 # Ergopad
+
+[ErgoPad](https://www.ergopad.io/whitepaper) is a project incubator offering token IDOs which provide funding for new projects within the Ergo ecosystem. Ergopad released its own native token through an IDO (Initial Dex Offering), and users are now able to stake Ergopad tokens through smart contracts on-chain.If you stake ErgoPad tokens and reach one of the staking tiers, you'll be given an opportunity to contribute to the DAOs of projects launched through the Ergopad platform, before they go live on any dex. Seed round contributors will receive governance tokens at a lower value than what they'll launch at on the dex and allow participation in the governance of the DAOs of various projects.SigUSD and Erg raised by DAOs in the early contribution rounds will be used, as voted by DAO members, to build projects on the Ergo platform.
+
