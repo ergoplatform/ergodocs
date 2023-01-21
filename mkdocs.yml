@@ -455,16 +455,26 @@ nav:
         - uses/lending.md
         - ErgoLend: eco/ergolend.md
         - duckpools: eco/duckpools.md
+        - Micro Credit: dev/scs/microcredit.md
+        - Mutual Credit: uses/mutual_credit.md
       - Bonds:
         - SigmaFi: eco/sigmafi.md
+        - Bonding Curve: uses/bonding.md
       - Options: 
         - uses/p2p_options.md
         - SigmaO: eco/sigmao.md
+      - Derivatives:
+        - uses/deriv.md
+        - Tensile: eco/tensile.md
       - CrowdFunding: 
         - uses/crowdfunding.md
         - ErgoRaffle: eco/ergoraffle.md
         - ErgoWell: eco/ergowell.md
         - ErgoFund: uses/ergofund.md
+      - Further Ideas:
+        - Prediction Markets: uses/prediction_markets.md
+        - Grid Trading: uses/grid_trading.md
+        - Insurance: uses/insurance.md
      
 
     - Exchanges:
@@ -503,8 +513,7 @@ nav:
         - Stealth Addresses: uses/stealth-address.md
       - Decentralised ID:
         - Ergo Nation: eco/ergonation.md
-      - P2P:
-        - uses/p2p.md
+
 
 
     - Mining:
@@ -520,7 +529,7 @@ nav:
       - Metaverse:
         - Cyberverse: eco/cyberverse.md
         - Sigmavalley: eco/sigmavalley.md
-      - Monetary-base:
+      - Monetary-based:
         - BlobsTopia: eco/blobstopia.md
         - NightOwl Casino: eco/nightowl.md
         - ErgFlip: eco/ergflip.md
@@ -530,15 +539,6 @@ nav:
         - Monster Pub Brawl: eco/monsterpub.md
     
     - Further Ideas: 
-      - P2P: 
-        - Prediction Markets: uses/prediction_markets.md
-        - Derivatives: uses/deriv.md
-        - Yield Aggregation: uses/yield.md
-        - Grid Trading: uses/grid_trading.md
-        - Micro Credit: dev/scs/microcredit.md
-        - Mutual Credit: uses/mutual_credit.md
-        - Bonding Curve: uses/bonding.md
-        - Insurance: uses/insurance.md
       - Tokens:
         - ICOs: uses/ico.md
         - Index Coins: uses/index_coins.md

@@ -1,4 +1,4 @@
-# Yield Aggregation
+# Bonds
 
 So after an expansion of new decentralized exchanges such as [Bancor](https://bancor.network/), [Balancer](https://balancer.finance/), [Uniswap](https://uniswap.org/), [Sushiswap](https://www.sushi.com/), and [Curve](https://resources.curve.fi/), people are started to look for easier ways to move capital around those exchanges to create the best yields. Yield Aggregators are helping users to automate the liquidity farming actions. The first example of a yield aggregation protocol is [Yearn Finance](https://yearn.finance/). In the protocol, users can choose different yield farming strategies among the vaults deployed. Not only users but also developers can leverage yield farming platforms by creating their unique yield farming strategies and deploying them on protocols. Such examples will be very useful for market-making algorithms in the future by supporting deep liquidity all across DeFi.
 
