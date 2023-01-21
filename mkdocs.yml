@@ -124,7 +124,6 @@ nav:
       - documents.md
       - Research & Whitepapers: documents.md
       - Social Contract: social_contract.md
-      - Know Your Assumptions: kya.md
       - Audit: dev/protocol/audit.md
       - Transparency Report: ergo-foundation-2022.md
     - EIPs: dev/protocol/eip.md
@@ -413,8 +412,18 @@ nav:
           
     - Resources: dev/stack/introduction.md
 
+  #
+  # ECOSYSTEM SECTION
+  #
   - Ecosystem: 
     - uses/index.md
+    - Standards: 
+      - contribute/standards.md
+      - Chat Bridge: contribute/standards/chat-bridge.md
+      - Analytics: contribute/standards/analytics.md
+      - KYA: contribute/standards/kya.md
+      - Community Guidelines: contribute/standards/guidelines.md
+
     - Infrastructure: 
       - Rosen Bridge: eco/rosen.md
       - Oracles: 
@@ -546,6 +555,9 @@ nav:
     #  - CDBC: uses/cbdc.md
     # - Atomic Swaps: dev/protocol/atomic.md
 
+  #
+  # Get Involved
+  #
   - Get Involved!: 
     - contribute.md
     - Developers: 
@@ -555,6 +567,7 @@ nav:
       - Roles: contribute/roles.md
     - Marketing: contribute/marketing.md
     - Sigmanauts: contribute/sigmanauts.md
+    
 
 
 
