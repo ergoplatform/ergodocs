@@ -201,7 +201,7 @@ See the [scaling](scaling.md) page for more information.
 
 ## Is Proof of Useful Work being considered?
 
-While Proof of Useful Work is an interesting idea, it is still in its research phase. Ergo is open to implementing new ideas. But, a radical change to its concensus mechanism that requires a hard fork would likely be outside the scope and resources of Ergo's small core development team and limited budget.
+While Proof of Useful Work is an interesting idea, it is still in its research phase. Ergo is open to implementing new ideas. But, a radical change to its consensus mechanism that requires a hard fork would likely be outside the scope and resources of Ergo's small core development team and limited budget.
 
 
 ## How can I stake my Erg?
