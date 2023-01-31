@@ -85,7 +85,7 @@ This allows a customer to derive a one-time payment address for a store, without
 
 ### Checking A Signature
 
-You can do basic things in a contract like calculating the hash, but what if you want to to check a signature for abitrary message in a contract. This can be done trivially in Ergo, an example is available in SuSy bridge implementation
+You can do basic things in a contract like calculating the hash, but what if you want to check a signature for abitrary message in a contract. This can be done trivially in Ergo, an example is available in SuSy bridge implementation
 
 | Bitcoin           | Ethereum                           | Ergo                                 |
 |-------------------|------------------------------------|--------------------------------------|
