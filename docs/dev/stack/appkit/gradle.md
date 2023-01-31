@@ -15,7 +15,7 @@ The first step is setting up a plain Gradle project. How exactly this is done de
 * Spring: Use the [Spring Initializr](https://start.spring.io/) to create a new project with your preferred language, don't forget to select Gradle. Open the project in the IDE of your choice
 * For other frameworks, refer to their setup or starter guide
 
-When that is done, you will find one or more `build.gradle` files that define parameters of your project, most important the libraries your project depends on. Search for a `dependencies` block (for Android, it is in `app/build.gradle`, for Spring in the root-level file). You need to to add appkit here. Don't get confused with the `dependencies` block inside `buildscripts`, that's not for the project dependencies, but for dependencies Gradle needs to build the project.
+When that is done, you will find one or more `build.gradle` files that define parameters of your project, most important the libraries your project depends on. Search for a `dependencies` block (for Android, it is in `app/build.gradle`, for Spring in the root-level file). You need to add appkit here. Don't get confused with the `dependencies` block inside `buildscripts`, that's not for the project dependencies, but for dependencies Gradle needs to build the project.
 
 For **desktop and server-side applications**, it is just one line to add.
 
@@ -25,7 +25,7 @@ When you resync your project now, Gradle fetches Appkit and all needed libraries
 
 Things are a bit more complicated when targeting **Android**. Some older Android versions run an older version of Java, and while Appkit itself is compatible, some of the libraries it uses are not. So you need some more steps to do:
 
-Make sure core libary desugaring is enabled by checking if the app's `build.gradle` file contains the needed dependency and option [as described here](https://developer.android.com/studio/write/java8-support#library-desugaring)
+Make sure core library desugaring is enabled by checking if the app's `build.gradle` file contains the needed dependency and option [as described here](https://developer.android.com/studio/write/java8-support#library-desugaring)
 
 Additionally, you have to tell gradle to exclude the libraries that are not compatible with Android, but to use compatible versions instead. That is done by changing the line above like this:
 
@@ -63,7 +63,7 @@ All data available on the [Ergo Explorer](https://explorer.ergoplatform.com/en/)
 You can call Explorer API methods on the ergoApiService now. Check out Retrofit's documentation on how to interact with it.
 
 ### Interact with Ergo node, build transactions and sign them
-While Ergo Explorer is a central service to request information without the need to have the full blockchain, an Ergo node is part of the decentralized blockchain network. The node offers methods to the public, for example submitting a new transaction, while there are also private methods for its owner only to be used with an API key. This methods can be accessed through a `BlockchainContext` that you can obtain with the following code:
+While Ergo Explorer is a central service to request information without the need to have the full blockchain, an Ergo node is part of the decentralized blockchain network. The node offers methods to the public, for example submitting a new transaction, while there are also private methods for its owner only to be used with an API key. These methods can be accessed through a `BlockchainContext` that you can obtain with the following code:
 
         val ergoClient = RestApiErgoClient.create(
             nodeApiAddress,
