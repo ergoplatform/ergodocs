@@ -9,5 +9,7 @@ This makes it possible to get a verified UTXO set snapshot without checking ~95%
 Then bootstrapping with NiPoPoWs will be done. Hopefully, in Q1 2023, we will see a release with UTXO set snapshots + NiPoPoWs bootstrapping, giving full node security with bootstrapping in ~30-60 mins on an ordinary laptop.
 
 -  [Bootstrapping with UTXO set - Part 1: Snapshot creation #1444](https://github.com/ergoplatform/ergo/pull/1444)
+-  [Preparation for bootstrapping with UTXO set snapshot, part 2 #1940](https://github.com/ergoplatform/ergo/pull/1940)
+-  [Utxo set bootstrapping code part 3 #1947](https://github.com/ergoplatform/ergo/pull/1947)
 
 Most full nodes will provide snapshots. Security is theoretically the same as for a full node.
