@@ -461,8 +461,9 @@ nav:
         - SigmaFi: eco/sigmafi.md
         - Bonding Curve: uses/bonding.md
       - Options: 
-        - uses/p2p_options.md
+        - uses/options.md
         - SigmaO: eco/sigmao.md
+        - P2P Options: uses/p2p_options.md
       - Derivatives:
         - uses/deriv.md
         - Tensile: eco/tensile.md
