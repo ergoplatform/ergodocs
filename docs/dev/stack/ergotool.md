@@ -132,7 +132,7 @@ Description:  send the given <amountToSend> to the given <recipientAddr> using
  the given <storageFile> to sign transaction (requests storage password)
 Doc page: https://aslesarenko.github.io/ergo-tool/api/org/ergoplatform/appkit/ergotool/SendCmd.html
 ```
-The storage file is necessary to access the secret key and generate a signature. The ErgoTool will request a storage password to unlock and decipher the file content. The command `send` supports the `--dry-run` option, which forces ErgoTool to create the the signed transaction, but instead of sending it to the blockchain, ErgoTool prints the transaction on the console.
+The storage file is necessary to access the secret key and generate a signature. The ErgoTool will request a storage password to unlock and decipher the file content. The command `send` supports the `--dry-run` option, which forces ErgoTool to create the signed transaction, but instead of sending it to the blockchain, ErgoTool prints the transaction on the console.
 
 ```bash
 $ ./ergo-tool.sh send --dry-run storage/E1.json 9hHDQb26AjnJUXxcqriqY1mnhpLuUeC81C4pggtK7tupr92Ea1K 5000000

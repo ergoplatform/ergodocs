@@ -1,6 +1,6 @@
 ## Why are mining rewards going to some strange address?
 
-Mining rewards are sent to UTXOs associated with special scripts that lock rewards to miner public keys for 720 blocks (72 in the testnet). You can see an example of such a script [here](https://explorer.ergoplatform.com/en/addresses/88dhgzEuTXaQ3tvkG8KeHesmXdvVomxHoHK5ExawGuxhs3nwBKkoQTxZogna6Dx9Jbu7KG2Wor22Uy73).
+Mining rewards are sent to UTXOs associated with special scripts that lock rewards to miner public keys for 720 blocks. You can see an example of such a script [here](https://explorer.ergoplatform.com/en/addresses/88dhgzEuTXaQ3tvkG8KeHesmXdvVomxHoHK5ExawGuxhs3nwBKkoQTxZogna6Dx9Jbu7KG2Wor22Uy73).
 
 Such UTXOs do not belong to the node wallet before the locking height, so the wallet does not include them into your balance. 
 
