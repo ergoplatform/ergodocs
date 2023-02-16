@@ -33,7 +33,7 @@ Ensuring economic freedom for ordinary people through decentralised, private and
 - **[Sigma Protocols](/dev/scs/sigma) (Σ)** - a type of non-interactive zero-knowledge proofs that are flexible enough to allow for ring-signatures, multi signatures, multiple currencies, atomic swaps, self-replicating scripts, and long-term computation.
 - **[Multi-stage Contracts](/dev/scs/multi)** - In addition to the regular protection offered by using a threshold `m‐of‐n` signature, Ergo also allows specifying the possible recipients of these coins, which may be another contract with similar complex conditions. This *"chaining"* approach enables the implementation of **secure and efficient smart contracts of arbitrary complexity**. 
 - **[Non-Interactive Proofs of Proof of Work (NIPoPoWs)](/dev/protocol/nipopow/)**  are essential for two reasons: Light Clients and Side Chains. Ergo DApps and off-chain protocols may be implemented in a truly decentralised way due to light clients.
-- **[Storage Rent](/dev/protocol/rent/)** acts as *on-chain garbage collection*
+- **[Storage Rent](rent.md)** acts as *on-chain garbage collection*
 
 
 Keeping all this in mind, we expect Ergo's design to be uniquely useful as Contractual Money.
