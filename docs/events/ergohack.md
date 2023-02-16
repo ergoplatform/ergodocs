@@ -13,6 +13,27 @@ Click any of the event names below to jump directly to an overview and related r
 - (Feb 22) [ERGOHACK III: *Privacy and Security*](#ergohack-iii-privacy--security) 
 - (Jun 22) [ERGOHACKFEST:](#ergohackfest) was a three-week event in conjunction with ErgoPad
 - (Oct 22) [ERGOHACK V: *Mining & Minting*](#ergohackv) 
+- (Feb 23) [ERGOHACK VI: Cypherpunk Finance](#ergohackvi)
+
+### ERGOHACKVI
+
+- [**Analog-Ergo**](#analog-ergo): Cross-chain P2P atomic marketplace
+- [**Ergo Stats**](#ergo-stats): Mobile app for ergo.watch/tokenJay
+- [**Ergo Tizen**](#ergo-tizen): Ergo Node on smart devices
+- [**Lithos**](#lithos): Decentralised block production
+- [**ChainCash**](#chaincash): Elastic P2P money creation via trust & blockchain assets
+- [**Lilium**](#lilium): Decentralised NFT Platform
+- [**SigmaO**](#sigmao): Options on Ergo
+- [**Riadne Hlady2**](#riadne-hlady2): MultiSig token swapping
+- [**Privacy Guide**](#privacy-guide): Privacy Fundamentals Course
+- [**Perma Ergo**](#perma-ergo): Real World Food Production Decentralisation 
+- [**Net Notes**](#net-notes): Node browser
+- [**Sigma Subscriptions**](#sigma-subscriptions): Easily run a subscription service on Ergo.
+- [**Quantum Swap**](#quantum-swap): P2P NFT & Native Asset Exchange Service.
+- [**SIPS**](#sips): Sigma Improvement Proposals.
+- [**Explorer UI**](#explorer-ui): Improving the ergo explorer experience.
+- [**Open Board** (Withdrawn)](#open-board): Pin-board concept
+
 
 ### ERGOHACKV
 
@@ -90,6 +111,130 @@ Click any of the event names below to jump directly to an overview and related r
 
 
 ##  Events
+
+### ERGOHACKVI
+
+#### Analog-Ergo 
+
+Cross-chain P2P atomic marketplace
+
+> The basic idea is to use the cryptographic primitives available in atomic swaps as a basis for creating a cross-chain peer to peer marketplace, where Ergo users can list their own price for their own coins. Not only will this enable users to potentially earn arbitrage as a reward for liquidity on different blockchains, but they will also be able to set and agree to the value parameters for this at their own discretion in a highly private and fungible way. That means no intermediaries are involved in the transfer which also reduces any potential fees on both sides.
+
+- [Submission paper](pdf/ergohackvi/AnalogErgoProposalSimplified.pdf)
+
+#### Ergo Stats
+
+> The goal of this project is to support DeFi on Ergo with providing useful information such as blockchain statistics – currently found on ergo.watch and tokenJay - in a compact form on a mobile device
+
+- [Submission paper](pdf/ergohackvi/ErgoStats-iOS-app.pdf)
+
+#### Ergo Tizen
+
+> Create an Ergo node that runs natively on smart devices such as TVs, fridges, mobile phones, watches, etc. This will be achieved by targeting Tizen OS, Samsungs open source mobile operating system and done in a way where it should be easily portable to other platforms such as WebOS (LG smart TVs).
+
+> Currently there isn't a lot of light client based messages on the P2P layer of Ergo so this project aims to test viability of running nodes on smart devices without much functionality. At least connecting to a few peers and performing handshakes/probing for peers, etc.
+
+> At the end of ErgoHack VI the goal is to have a node running natively on a real Samsung TV and displaying basic network information.
+
+#### Lithos
+
+> The Lithos team will use ErgoHack VI to show off work done on the collateralization
+side of the Lithos Protocol. Given that the topic of this Hackathon is CypherPunk Finance, we hope to showcase a safe, effective way to gain yield on ERG while also helping to decentralize the Ergo blockchain. 
+
+> Our goal is to create the contracts necessary to allow for collateralized mining pools which interface with the rest of the Lithos protocol. In addition, we plan to show a mockup UI which will allow for lenders to collateralize their ERG. Collateralized mining pools serve as the first half of the Lithos protocol, and are essential in allowing for completely decentralized block production on the Ergo blockchain. 
+
+> Moreover, collateralization is a safe way to gain yield on ERG with minimal risk involved. We hope that our work on collateralized mining pools will allow for greater participation in Ergo’s DeFi ecosystem, while also helping the blockchain itself. 
+
+- [Submission paper](pdf/ergohackvi/Lithos-Paper.pdf)
+
+#### ChainCash
+
+Elastic P2P money creation via trust & blockchain assets
+
+- [Submission paper](pdf/ergohackvi/chaincash.pdf)
+
+
+#### Lilium
+
+> Lilium is a decentralized NFT sale platform for Ergo blockchain. We aim to be an infrastructure service for any business seeking an easy way to mint and distribute tokens, integrating seamlessly within their products and applications 
+Attachment file type: acrobat
+
+- [Submission paper](pdf/ergohackvi/Lilium---ErgoHack-6-Proposoal-1.pdf)
+
+#### SigmaO
+
+> SigmaO intends to provide Ergo users the ability to create Call or Put options on EIP-4 tokens, materialized by a standard EIP-4 token.
+
+> Reminder: An option contract offers the buyer the possibility but not the obligation to buy (Call) or sell (Put) the underlying asset at a fixed exercise price.
+
+- [Submission paper](pdf/ergohackvi/SigmaO_ergohack_plan.pdf)
+
+#### Riadne Hlady2
+
+> We are building a multisig token swapping service. It is mainly meant for users who want to swap their NFTs on Discord and want a trustless escrow service to perform the swap. Everything should happen in a single transaction, so no sending to a smart contract that the user does not understand is needed.
+
+
+#### Privacy Guide
+
+Privacy Fundamentals Course
+
+> My proposal is to create an online module that teaches users about the importance of privacy and how to maintain a safe, private online experience. The module will include written materials, video demonstrations, and a step by step guide that users can follow to create and use the Ergo blockchain privately. After completing the module, users will have an anonymous wallet and know how to use it without compromising their privacy. The course may end up on YouTube or a free learning management software like Coursera. This course will be 100% free for users.
+
+- [Submission paper](pdf/ergohackvi/Maintaining-Privacy-Online-1.pdf)
+
+
+#### Perma Ergo
+
+> Perma-Ergo is a realfi project that seeks to employ Ergo blockchain technology in holistic natural systems known as: Permaculture or Agroecology, through means of giving micro loans to farmers who neither have access to either farmlands nor the financial means to give them accessibility to land to cultivate, forming a vicious cycle spiraling to exclusion and poverty. Eventually the end goal of Perma-Ergo is to encourage: Real World Food Production Decentralisation
+
+
+- [Submission paper](pdf/ergohackvi/micro-finance-PERMERGO.pdf)
+
+
+#### Net Notes
+
+> An Ergo Node In a web browser
+
+> An application which consumes the node ont he native level, and then communicates with the wbe browser using file notes which are both symmetrtically and assymetrically encrypted in order to maximize their security, both wiuthin the session which they are created, and forensically in the future. 
+
+- [Submission Paper](https://github.com/networkspore/Netnotes/blob/main/Netnotes%20-%20ergohack%20VI.pdf)
+
+
+#### Sigma Subscriptions
+
+> A framework for anyone to easily run a subscription service on Ergo.
+
+- [Submission paper](pdf/ergohackvi/ErgoHack-VI-Project-Proposal-1.pdf)
+
+#### Quantum Swap
+
+P2P NFT & Native Asset Exchange Service.
+
+- [Submission paper](pdf/ergohackvi/Quantum-Swap-White-Paper2(2)%202.pdf)
+
+#### SIPS
+
+SigmaUSD Improvement Proposals.
+
+- [SigmaUSD Hack SIP Google Doc DRAFT](https://docs.google.com/document/d/1btfEVhPlJLK2OweAK2c1vY67cYE8hHULvxOA12G_5dk/edit#)
+
+#### Explorer UI
+
+Improving the ergo explorer experience.
+
+- [Submission paper](pdf/ergohackvi/Improved_Ergo_explorer_UXUI.pdf)
+
+
+#### Open Board
+
+(Withdrawn) Pin-board concept
+
+> OpenBoard's core idea is letting authors pin a few boxes of text, publicly available on the blockchain, and uncensorable unless all Ergo node's IP addresses are blacklisted. It would consist of an app fetching available pins from an Ergo node to display locally, and an easy
+way to update one's own pins with a transaction.
+
+> So life got in the way and I'll be travelling during most of the ErgoHack. I'll definitely keep working on OpenBoard, but as a regular small project and not within this Ergohack's timeline.
+
+- [Submission paper](pdf/ergohackvi/OpenBoard-an-ErgoHack-VI-proposal.pdf)
 
 ### ERGOHACKV
 > [In collaboration with The Djed Alliance, Alephium and Flux](https://ergoplatform.org/en/blog/Ergo-Foundation-Announces-ErgoHack-5-Mining-and-Minting/)

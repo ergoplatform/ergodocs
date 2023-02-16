@@ -65,7 +65,7 @@ This page outlines the resources available on Ergo. Also check out the [dev-tool
 
 ## Tools
 
-- [Transaction builder](https://transaction-builder.ergo.ga/) |  The application allows you to manipulate Ergo json transactions with a UI and to sign them with Yoroi, or to prepare the JSON for the Swagger API. It is also able to load the JSON of an unsigned transaction to edit it.  | [GitHub](https://github.com/ThierryM1212/transaction-builder/)  | [Video](https://youtu.be/0VhfY7osT2k)
+- [Transaction builder](https://thierrym1212.github.io/txbuilder/) |  The application allows you to manipulate Ergo json transactions with a UI and to sign them with Yoroi, or to prepare the JSON for the Swagger API. It is also able to load the JSON of an unsigned transaction to edit it.  | [GitHub](https://github.com/ThierryM1212/transaction-builder/)  | [Video](https://youtu.be/0VhfY7osT2k)
 
 ## Burning
 
