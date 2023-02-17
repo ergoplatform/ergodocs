@@ -34,7 +34,7 @@ theme:
 extra_css: 
   - assets/extra.css
   - assets/neoteroi-mkdocs.css
-  - https://unpkg.com/mermaid@8.5.1/dist/mermaid.css
+  - https://unpkg.com/mermaid@8.5.1/dist/mermaid.css #404 ? 
 extra_javascript:
   - assets/extra.js
   - assets/mathjax.js
@@ -48,6 +48,10 @@ extra_javascript:
 extra:
   version:
     provider: mike
+  extra:
+    analytics:
+      provider: google
+      property: G-5XM6BXT041
 
 
 extra:

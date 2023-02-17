@@ -48,7 +48,7 @@ The Erg amount is written directly (with no identifier) as a number into the reg
 There are some more significant differences between Ergs and other tokens:
 
 * **ERGs can not be burnt**: the total amount of ergs in transaction inputs should equal the total amount of the outputs. Unlike we can burn other tokens: the total amount for a token in transaction inputs should be no less than the amount of the outputs.
-* [Storage rent](/mining/rent) is **only payable in ERG**.
+* [Storage rent](rent.md) is **only payable in ERG**.
 
 Tokens can represent myriad things, such as shares, complementary currency units, or whatever else you can think of. 
 
