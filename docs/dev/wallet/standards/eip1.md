@@ -187,7 +187,7 @@ on his side can track a large enough part of the half-mix script not including A
 
 * *LETS*
 
-We consider trusted LETS described [in this blogpost](https://ergoplatform.org/en/blog/2019_04_22-lets/). 
+We consider a trusted LETS as described [here](trustless-lets.md)
 
 Management contract uses a singleton token, as does the exchange contract as well. Thus for both the managers
 and the user, boxes can be tracked via `CONTAINS_ASSET()` filter.

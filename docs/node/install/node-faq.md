@@ -9,7 +9,10 @@ There is no financial incentive to run a node, doing so helps increase the secur
 
 ### Are nodes visible anywhere?
 
-Public nodes can be seen on [nodespyder](https://ergo.nodespyder.io/). Please note that unless you are running the node on a publicly accessible web-server, your node should be protected by your router. 
+Public nodes can be seen on [ergonodes](ergonodes.net/).
+
+
+Please note that unless you are running the node on a publicly accessible web-server, your node should be protected by your router. 
 
 
 - To run a public node see this example [nginx.conf](https://github.com/glasgowm148/ergoscripts/blob/main/misc/nginx.config) available.  

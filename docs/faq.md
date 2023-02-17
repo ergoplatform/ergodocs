@@ -140,7 +140,7 @@ The full team can be seen on Ergo's [Hall of Fame](https://ergoplatform.org/en/h
 
 ### Why Proof-of-Work?
 
-Ergo is based on the [Autolykos](/en/Glossary/Autolykos) Proof-of-Work protocol. 
+Ergo is based on the [Autolykos](autolykos.md) Proof-of-Work protocol. 
 
 Ergo was created for regular people, Proof of Work allows a truly fair start and the highest degree of decentralisation. It's widely studied, has very high-security guarantees and is friendly to light clients meaning you can use the blockchain without third parties.
 

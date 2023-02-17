@@ -34,7 +34,7 @@ tail -Fn+0 ergo.log | grep "stuck"
 
 If your node is stuck on Active Syncronisation with no noticeable increase in the height, please attempt the following steps.
 
-1. Grep your log file using the commands from [here](/commands) to see if there's anything noticeably wrong.
+1. Grep your log file using the commands from above to see if there is anything noticeably wrong.
 2. Shut down your instance, take a backup and attempt to restart.
 3. Join the [#node](https://discord.gg/jjRP2uNAv5) channel on Discord for support or open an issue on GitHub.
 

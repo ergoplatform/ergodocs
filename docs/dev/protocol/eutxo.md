@@ -34,7 +34,7 @@ UTXO's was used as a base as it provides superior:
 ### Documentation
 
 - [The Extended UTXO Model - IOHK Research](https://iohk.io/en/research/library/papers/the-extended-utxo-model/)
-- [Understanding the Extended UTXO model - docs.cardano](https://docs.cardano.org/plutus/eutxo-explainer)
+- [Understanding the Extended UTXO model - docs.cardano](https://docs.cardano.org/learn/eutxo-explainer)
 
 
 ### Video

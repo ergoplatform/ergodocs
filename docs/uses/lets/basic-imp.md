@@ -119,5 +119,4 @@ the singleton token of the management box.
 
 
 
-A Local Exchange Trading System (LETS) aims to develop the local economy and is usually used by people of a locality in the vicinity of each other. See [this link](/blog/2019_04_22-lets/), which also describes an ErgoScript implementation of a committee-managed LETS, for a brief overview of LETS. We call such a system a _managed_ or _permissioned_since it depends on a committee of trusted members to enrol new members into the LETS. 
-Here we describe a **trustless** LETS, i.e., one where there is no management committee needed for enrolment. 
+

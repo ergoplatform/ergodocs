@@ -102,9 +102,9 @@ Click any of the event names below to jump directly to an overview and related r
 ### ERGOHACKI
 
 
-- [ErgoRaffle](https://github.com/ErgoRaffle) _(now live @ [ergoraffle.io](https://ergoraffle.io))_
+- [ErgoRaffle](https://github.com/ErgoRaffle) _(now live @ [ergoraffle.com](https://ergoraffle.com))_
 - [Smart Pools](https://github.com/WilfordGrimley/ErgoSmartPools) _(Inspired [GetBlok.io](https://getblok.io))_
-- [Sigma Stamp](https://www.sigmastamp.ml/)
+- [Sigma Stamp](https://github.com/sigmastamp)
 - [Simpler Joint Spending Tool](https://www.ergoforum.org/t/a-simpler-collective-spending-approach-for-everyone/476%20)
 - Ergo Index Fund
 - Ergo Charts
@@ -260,7 +260,6 @@ CYTI stands for Choose Your Token ID. A 'minable' smart contract that allows an 
 This EIP proposes modifying how parameter identifiers are communicated in the extension section of block headers, such that in addition to miners being able to vote for or against a change, they can vote partially in support of a change (for indicative voting). This will enable mining pools to pass along true governance power to their miners when combined with a method for miner voting within a pool (such as GetBlok's proof-of-vote)."
 
 - [video presentation](https://dalek.zone/w/quqExPoNiabYLKFx1FqUsf)
-- [EIP-0038](https://github.com/WilfordGrimley/eip38PartialVoting/blob/master/EIP-0038.md)
 - [Draft PR](https://github.com/WilfordGrimley/ergo/blob/EIP-0038/src/main/scala/org/ergoplatform/nodeView/state/VotingData.scala)
 
 #### SNISP
@@ -292,7 +291,6 @@ Ergo-payroll will be an automated payroll distribution tool for ERGO. Enter your
 
 #### [Obolflip](https://github.com/obolflip)
 
-> [LIVE on flux](https://obolflip.app.runonflux.io/)
 
 - [Documentation](https://github.com/obolflip/obolflip-client)
 
@@ -448,7 +446,6 @@ The team behind Multisig submitted a proposal to develop a new multi-signature w
 - [GitHub](https://github.com/inergitance)
 - [Documentation (contains EIP like overview of proposed solution including smartcontracts)](https://github.com/inergitance/doc)
 - [FrontEnd code (React + TypeScript + SigmaRust)](https://github.com/inergitance/frontend)
-- [Video presentation of solution](https://dlhameteo.eu/ergohackfest.mp4)
 
 #### Platform137
 
@@ -511,7 +508,7 @@ The Delphi Project aims to help anyone explore, run, and launch decentralised or
 
 A Decentralised Casino on top Ergo.
 
-- [Website](https://dev.nightowlcasino.io/)
+- [Website](https://nightowlcasino.io/)
 - [GitHub](https://github.com/nightowlcasino)
 - [Slides](pdf/Night_Owl_-_Ergo_Hack_lll_Presentation_Final.pdf)
 
@@ -626,9 +623,9 @@ SAFEW implemented Ledger support and the beginnings of ErgoMixer support.
 
 **Participants**
 
-- [ErgoRaffle](https://github.com/ErgoRaffle) _(now live @ [ergoraffle.io](https://ergoraffle.io))_
+- [ErgoRaffle](https://github.com/ErgoRaffle) _(now live @ [ergoraffle.com](https://ergoraffle.com))_
 - [Smart Pools](https://github.com/WilfordGrimley/ErgoSmartPools) _(Inspired [GetBlok.io](https://getblok.io))_
-- [Sigma Stamp](https://www.sigmastamp.ml/)
+- [Sigma Stamp](https://github.com/sigmastamp)
 - [Simpler Joint Spending Tool](https://www.ergoforum.org/t/a-simpler-collective-spending-approach-for-everyone/476%20)
 - Ergo Index Fund
 - Ergo Charts

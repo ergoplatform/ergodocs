@@ -6,7 +6,7 @@
 
 Rather than storing a single amount (like BTC), an ergo [eutxo](eutxo.md) box has some registers to store arbitrary values, like its native tokens.
 
-Addresses are short strings that correspond to specific scripts and are used to protect a [box](../data-model/box)
+Addresses are short strings that correspond to specific scripts and are used to protect a [box](box.md)
 
 So, each box has an ERG amount and may or may not have a bunch of `{tokenid, token amount}` pairs, all in the UTXO model.
 

@@ -22,7 +22,7 @@ Here are some quick facts about Ergo that are useful to know;
 * Just like Bitcoin, there are some standard scripts in Ergo associated with addresses, e.g. `P2PK` addresses. [Read more here on the address scheme](/dev/wallet/address)
 * Rather than storing a single amount (like BTC), an ergo eutxo box has some registers to store arbitrary values, like its native tokens. So, each box has an ERG amount and may or may not have a bunch of {tokenid, token amount} pairs, all in the UTXO model.
 * Ergo has an inbuilt wallet API which is enough for most use cases. API has a Swagger interface on `127.0.0.1:9053` by default in the mainnet (`9052` on testnet).
-* See the full guide on setting [How to set up a node](/node/platforms/tutorial) and the associated [troubleshooting](/node/platforms/troubleshooting) page.
+* See the full guide on setting [How to set up a node](install.md) and the associated [troubleshooting](troubleshooting.md) page.
 
 
 

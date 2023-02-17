@@ -51,11 +51,11 @@ ErgoScript adds several improvements such as time-weighted data, Turing complete
 
 ## Layer 0 *(Network Layer)*
 
-The network or *peer to peer* layer. The Ergo Node Client has greatly improved since v4.0.8 and still has room to grow. Quick bootstrapping using [NIPoPoWs](/docs/node/nipopow.md) proofs and UTXO set snapshots in development
+The network or *peer to peer* layer. The Ergo Node Client has greatly improved since v4.0.8 and still has room to grow. Quick bootstrapping using [NIPoPoWs](nipopows.md) proofs and UTXO set snapshots in development
 
 **Stateless Clients:** Light clients: You can have full-node guarantees in Ergo without storing the full *UTXO set*. Bringing improved bootstrapping and block validation times.  
 
-**State Bloat:** One of Ergo's major strengths when scaling is to avoid bloat without compromising functionality. For E.g. persistent updateable storage is possible, with updates to be checked by a blockchain contract. However, only the digest of the authenticated data structure (and some additional bytes, less than 40) is stored in the UTXO set regardless of the data set size. Ergo utilizes a [Storage Rent Fee](/dev/protocol/rent) to prevent spam and recirculate unused data bytes, known as dust. Storage Rent Fee helps clean the network pollution and encourages users to be more active.
+**State Bloat:** One of Ergo's major strengths when scaling is to avoid bloat without compromising functionality. For E.g. persistent updateable storage is possible, with updates to be checked by a blockchain contract. However, only the digest of the authenticated data structure (and some additional bytes, less than 40) is stored in the UTXO set regardless of the data set size. Ergo utilizes a [Storage Rent Fee](rent.md) to prevent spam and recirculate unused data bytes, known as dust. Storage Rent Fee helps clean the network pollution and encourages users to be more active.
 
 **Block size:** Parameters like block size, etc., are not set in stone; miners can adjust them. So if a miner is experiencing low full block validation time (as hardware is getting better with time and software), he may propose or vote to increase the block size. Currently set to `8MB`.
 

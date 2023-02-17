@@ -51,7 +51,7 @@
   {
     "title": "Parachains/Sidechains",
     "content": "",
-    "url": "/dev/protocol/nipopow/sidechains/"
+    "url": "/dev/protocol/nipopow/nipopow-sidechains.md"
   },
 
 

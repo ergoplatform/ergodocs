@@ -24,7 +24,7 @@ For instance, the above transaction used a "timestamping service" to timestamp a
 
 A script in Ergo can refer to other boxes in the transaction. For instance, the code snippet `INPUTS(0).value > 10000 && OUTPUTS(1).value > 20000` in any of the inputs boxes would enforce that the first input and the second output boxes must have a value greater than `10000` and `20000`, respectively.
 
-For a comparison between the logic used in eUTXO and account-based models, please see [Off Chain Logic & eUTXO](https://ergoplatform.org/en/blog/2021-10-04-off-chain-logic-and-eutxo/) and a [model transaction](/dev/protocol/model-tx)
+For a comparison between the logic used in eUTXO and account-based models, please see [Off Chain Logic & eUTXO](https://ergoplatform.org/en/blog/2021-10-04-off-chain-logic-and-eutxo/) and a [model transaction](model-tx.md)
 
 
 See this introductory article, [Unlocking The Potential Of The UTXO Model](https://github.com/Emurgo/Emurgo-Research/blob/master/smart-contracts/Unlocking%20The%20Potential%20Of%20The%20UTXO%20Model.md) for more information. There are also forum posts with more information; [Building A Portable And Reusable (PaR) UTXO dApp Standard](https://www.ergoforum.org/t/building-a-portable-and-reusable-par-utxo-dapp-standard/441) and [Data Inputs Semantics](https://www.ergoforum.org/t/data-inputs-semantics/654)
