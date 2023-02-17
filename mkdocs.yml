@@ -239,7 +239,7 @@ nav:
       - Desktop: dev/stack/desktop.md
       - Mobile: 
         - dev/stack/mobile.md
-        - iOS: dev/stack/ios.md
+        - iOS: dev/stack/iOS.md
         - Android: dev/stack/android.md
     - Interacting with Ergo:
       - Node:

@@ -8,7 +8,7 @@ tags:
 ## Overview 
 
 
-[Simplified Payment Verification (SPV)](spv.md) allows for a simplified way of verifying transactions by only downloading and verifying the block headers, rather than the entire blockchain. This makes it possible for users with limited resources to participate in the network and make transactions without needing a full node.
+Simplified Payment Verification (SPV) allows for a simplified way of verifying transactions by only downloading and verifying the block headers, rather than the entire blockchain. This makes it possible for users with limited resources to participate in the network and make transactions without needing a full node.
 
 ## Ergo's NIPoPoWs
 

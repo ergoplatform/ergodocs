@@ -178,7 +178,7 @@ Relationships between the Foundation and development only exist when there is a 
 
 - Kushti manages any bounties relating to the reference client repository and keeps a watch over [sigma-rust](sigma-rust.md) development and any other high-level development and research not covered below.
 - Morphic manages any JVM-related developers (Wallet devs, Scala devs, etc.) and the [sigmastate-interpreter](sigmastate-interpreter.md). 
-- mhs_sam manages a team of graduates and PhD students who have produced [Ergo Raffle](raffle.md), [ErgoWell](ergowell.md), [Minotaur-wallet](wallets.md), and [Rosen Bridge](rosen.md). 
+- mhs_sam manages a team of graduates and PhD students who have produced [Ergo Raffle](ergoraffle.md), [ErgoWell](ergowell.md), [Minotaur-wallet](wallets.md), and [Rosen Bridge](rosen.md). 
 
 ### Activities
 
