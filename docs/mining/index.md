@@ -68,7 +68,7 @@ Ergo mining is based on [Autolykos](/mining/autolykos), an ASIC-resistant Proof 
   {
     "title": "Reddit",
     "content": "Join us on Reddit.",
-    "url": "https://reddit.com/erg_miners"
+    "url": "https://reddit.com/r/erg_miners"
   },
   {
     "title": "Mining Guide",

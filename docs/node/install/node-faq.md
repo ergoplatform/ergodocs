@@ -9,7 +9,7 @@ There is no financial incentive to run a node, doing so helps increase the secur
 
 ### Are nodes visible anywhere?
 
-Public nodes can be seen on [ergonodes](https://ergonodes.net/).
+Public nodes can be seen on [ergonodes](http://ergonodes.net/).
 
 
 Please note that unless you are running the node on a publicly accessible web-server, your node should be protected by your router. 

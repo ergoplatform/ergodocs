@@ -54,7 +54,7 @@ Using Appkit, Ergo applications can be written in one of the languages supported
 ::/cards::
 
 - [Gradle](/dev/stack/appkit/gradle)
-- [ErgoPay tutorial](/dev/wallet/payments/ergo-pay/#implement-a-dapp-using-ergopay)
+- [ErgoPay tutorial](/dev/wallet/payments/ergo-pay#implement-a-dapp-using-ergopay)
 - [General Tutorial](/dev/stack/appkit/tutorial.md)
 
 ## Videos

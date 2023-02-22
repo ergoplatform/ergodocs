@@ -625,6 +625,6 @@ SAFEW implemented Ledger support and the beginnings of ErgoMixer support.
 - [ErgoRaffle](https://github.com/ErgoRaffle) _(now live @ [ergoraffle.com](https://ergoraffle.com))_
 - [Smart Pools](https://github.com/WilfordGrimley/ErgoSmartPools) _(Inspired [GetBlok.io](https://getblok.io))_
 - [Sigma Stamp](https://github.com/sigmastamp)
-- [Simpler Joint Spending Tool](https://www.ergoforum.org/t/a-simpler-collective-spending-approach-for-everyone/476%20)
+- [Simpler Joint Spending Tool](https://www.ergoforum.org/t/a-simpler-collective-spending-approach-for-everyone)
 - Ergo Index Fund
 - Ergo Charts
