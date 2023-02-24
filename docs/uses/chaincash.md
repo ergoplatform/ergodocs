@@ -1,5 +1,11 @@
 # ChainCash
 
+
+The goal of ChainCash is to create a peer-to-peer monetary system, utilizing spender-signed currency with decentralized issuance and an elastic supply.
+
+> ERGOHACK VI Update: With ErgoScript contracts complete, mainnet transactions have been successfully tested creating reserves, as well as issuing and spending notes. A to-do list of what’s still needed for overall project completion, and an early whitepaper draft have been made available for reference.
+
+
 > 🔗 From [ergoforum](https://www.ergoforum.org/t/chaincash-a-spender-signed-currency-on-ergo/4015)
 
 Currently, DeFi space has a lot of issues. Stablecoin protocols are requiring solid overcollateralization or depend on external actors to preserve peg (such as Luna Foundation Guard). No any framework to combine collaterals and trust has been proposed to the moment. As a result, DeFi is not widely used outside of cryptocurrency users circles. I am going to propose a possible solution for DeFi which can be useful in the real world.

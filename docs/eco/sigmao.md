@@ -1,10 +1,7 @@
 # Sigma'O
 
+> ERGOHACK VI Update: Sigma’O has delivered a working product and entered [public beta](https://www.sigmao.cc/)! UI improvements are ongoing.
 
-- The goal of the project is to provide a smart contract allowing to issue tokens behaving like an option.
-- The option type can be CALL or PUT with European or American style.
-- The underlying token needs an Oracle that provides the current price of the token in nanoERG.
-- The contract is permission less and fully hedged
-- A configurable fee for the UI provider is available
+The goal of Sigma’O is to create a permissionless and fully hedged smart contract, effectively allowing for call and put options on Ergo tokens.
 
-[SigmaO on GitHub](https://github.com/ThierryM1212/SigmaO/)
+- [GitHub](https://github.com/ThierryM1212/SigmaO/)

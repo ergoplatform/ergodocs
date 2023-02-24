@@ -118,12 +118,16 @@ nav:
       - NIPoPoWs:
         - dev/protocol/nipopows.md
         - Light Clients: dev/protocol/nipopow/nipopow_nodes.md
-        - Log-Space Mining: dev/protocol/nipopow/logspace.md
+        - Light Miners: dev/protocol/nipopow/logspace.md
         - Sidechains: dev/protocol/nipopow/nipopow-sidechains.md
       - Privacy: dev/protocol/zkp.md
       - Storage Rent: dev/protocol/storage-rent.md
       - Autolykos: dev/protocol/autolykos.md
-    - Scaling: dev/protocol/scaling.md
+    - Scaling: 
+      - dev/protocol/scaling.md
+      - Layer 0: dev/protocol/scaling/layer0.md
+      - Layer 1: dev/protocol/scaling/layer1.md
+      - Layer 2: dev/protocol/scaling/layer2.md
     - Documents: 
       - documents.md
       - Research & Whitepapers: documents.md
@@ -498,6 +502,7 @@ nav:
       - uses/nft.md
       - Ergo Auctions: eco/ergo-auctions.md
       - SkyHarbor: eco/skyharbor.md
+      - Lilium: eco/lilium.md
   
     - DAOs:
       - uses/dao.md 
