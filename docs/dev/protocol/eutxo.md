@@ -5,7 +5,7 @@ tags:
 
 # eUTXO 
 
-- Ergo uses the so-called 'extended-UTXO' model (eUTXO), based on the original model that Bitcoin used, with a lot more power, while adding support for more expressive smart contracts. 
+- Ergo uses the so-called 'extended-UTXO' model (eUTXO), based on Bitcoin's original model, with much more power, adding support for more expressive smart contracts. 
 - This enables smart contracts to use UTXOs as data inputs without changing them. Therefore nodes are checking transactions rather than balances. In comparison, in Ethereum’s Account model, nodes check all accounts to validate the system.
 - UTXO allows for parallel computation, and it’s easier to compute atomic swaps in a non-custodial manner. 
 - Ergo's Multi-Stage UTXO model enables Turing-complete smart-contracts as demonstrated in [this peer-reviewed paper](https://fc18.ifca.ai/bitcoin/papers/bitcoin18-final18.pdf). 

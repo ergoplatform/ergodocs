@@ -4,7 +4,7 @@ Layer 2 refers to the secondary protocol or system built on top of a [Layer 1](l
 
 Layer 2 solutions aim to enhance the underlying blockchain's functionality, scalability, and efficiency by enabling *off-chain* transactions or computations.
 
-Ergo is compatible with many UTXO Layer 2 solutions from other blockchains, such as Bitcoin's Lightning Network, and can utilise multiple off-chain solutions, such as [Hydra](https://iohk.io/en/research/library/papers/hydrafast-isomorphic-state-channels/) and sidechains, to compress blockchain bloat and provide similar benefits as ZK-rollups. 
+Ergo is compatible with many Layer 2 solutions from other UTXO blockchains, such as Bitcoin's Lightning Network, and can utilise multiple off-chain solutions, such as [Hydra](https://iohk.io/en/research/library/papers/hydrafast-isomorphic-state-channels/) and sidechains, to compress blockchain bloat and provide similar benefits as ZK-rollups. 
 
 The specific Layer 2 solutions that are implemented on Ergo will depend on the needs of the applications being built.
 

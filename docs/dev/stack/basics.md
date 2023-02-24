@@ -20,25 +20,25 @@ Import the SDK for the build system you are using in your project.
 
 === "Gradle"
 
-    ``` 
+     ```
       implementation ("org.ergoplatform:ergo-appkit_2.12:5.0.0")
-    ```
+     ```
 
 === "Maven"
 
-    ``` 
+     
 		<dependency>
 			<groupId>org.ergoplatform</groupId>
 			<artifactId>ergo-appkit_2.12</artifactId>
 			<version>5.0.0</version>
 		</dependency>
-    ```
+    
 
 === "SBT"
 
-    ``` 
+     
 		tbd
-    ```
+    
 
 === "npm"
 
@@ -74,7 +74,7 @@ this address from a mnemonic phrase the following way:
 
 === "Java"
 
-    ``` 
+     
 		String ergoAddress = Address.createEip3Address(
           index,
           NetworkType.MAINNET,
@@ -82,11 +82,11 @@ this address from a mnemonic phrase the following way:
           SecretString.empty(),
           false
         ).toString()
-    ```
+    
 
 === "Kotlin"
 
-    ``` 
+     
 		val ergoAddress = Address.createEip3Address(
           index,
           NetworkType.MAINNET,
@@ -94,11 +94,11 @@ this address from a mnemonic phrase the following way:
           SecretString.empty(),
           false
         ).toString()
-    ```
+    
 
 === "Scala"
 
-    ``` 
+    
         val ergoAddress = Address.createEip3Address(
           index, 
           NetworkType.MAINNET, 
@@ -106,17 +106,17 @@ this address from a mnemonic phrase the following way:
           SecretString.empty(),
           false
         ).toString
-    ```
+    
 
 === "JavaScript"
 
-    ``` 
+     
       tbd    
-    ```
+    
 
 === "Python"
 
-    ```
+
         from jpype import java
         from ergpy import helper_functions, appkit
 
@@ -125,7 +125,7 @@ this address from a mnemonic phrase the following way:
 
         # Proper exit()
         helper_functions.exit()
-    ```
+    
 
 Having the string representation of the address for your mnemonic, you can already receive payments.
 
@@ -147,7 +147,8 @@ Luckily, our SDKs help you by providing high-level methods for this common task.
 
 === "Java"
 
-    ``` 
+    
+
         ErgoClient ergoClient = RestApiErgoClient.create(nodeUrl, NetworkType.MAINNET, "", RestApiErgoClient.getDefaultExplorerUrl(NetworkType.MAINNET));
 
         //address receiving the tx
@@ -166,17 +167,18 @@ Luckily, our SDKs help you by providing high-level methods for this common task.
                     .withInputBoxesLoader(new ExplorerAndPoolUnspentBoxesLoader().withAllowChainedTx(true))
                     .send(recipient);
         });
-    ```
+    
 
 === "JavaScript"
 
-    ``` 
+     
       tbd    
-    ```
+    
 
 === "Python"
 
-    ```
+    
+
         from jpype import java
         from ergpy import helper_functions, appkit
 
@@ -188,7 +190,7 @@ Luckily, our SDKs help you by providing high-level methods for this common task.
 
         # Proper exit()
         helper_functions.exit()
-    ```
+    
 
 
 ## Receiving payments
@@ -202,7 +204,7 @@ shipping with some of our SDKs.
 
 === "Java"
 
-    ``` 
+     
         // appkit ships with a Retrofit interface
         DefaultApi ergoApiService = Retrofit.Builder()
             .baseUrl(RestApiErgoClient.defaultMainnetExplorerUrl)
@@ -210,16 +212,16 @@ shipping with some of our SDKs.
             .build().create(DefaultApi.class)
 
         // call methods on ergoApiService here
-    ```
+    
 
 === "JavaScript"
 
-    ``` 
+     
       tbd    
-    ```
+    
 
 === "Python"
 
-    ``` 
+     
       tbd
-    ```
+    
