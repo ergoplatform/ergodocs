@@ -128,6 +128,8 @@ nav:
       - Layer 0: dev/protocol/scaling/layer0.md
       - Layer 1: dev/protocol/scaling/layer1.md
       - Layer 2: dev/protocol/scaling/layer2.md
+      - Transactions Per Second: dev/protocol/scaling/TPS.md
+      - Roadmap: dev/protocol/scaling/roadmap.md
     - Documents: 
       - documents.md
       - Research & Whitepapers: documents.md
