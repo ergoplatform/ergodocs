@@ -7,16 +7,16 @@ tags:
 
 ## Overview 
 
-[NiPoPoWS](nipopows.md) make it possible to boot a full node using a verified UTXO set snapshot without checking ~95% of the blockchain.
+[NiPoPoWS](nipopows.md) make it possible to boot a full node using a *verified UTXO set snapshot* This provides full node security on an ordinary laptop in ~30-60 mins, without having to check ~95% of the blockchain. 
 
-This provides full node security on an ordinary laptop in ~30-60 mins.
+> Hopefully, in Q1 2023, we will see a release with UTXO set snapshots + NiPoPoWs bootstrapping; you can follow along on GitHub here, [Bootstrapping with UTXO set](https://github.com/ergoplatform/ergo/pull/1444)
 
-Hopefully, in Q1 2023, we will see a release with UTXO set snapshots + NiPoPoWs bootstrapping, you can follow along on GitHub here, [Bootstrapping with UTXO set](https://github.com/ergoplatform/ergo/pull/1444)
+This mode is similar to [*fast-sync*](https://ethereum.stackexchange.com/questions/1161/what-is-geths-fast-sync-and-why-is-it-faster) in Geth or Grothendieck, or [*warp-mode*](https://ethereum.stackexchange.com/questions/9991/what-is-paritys-warp-sync-and-why-is-it-faster-than-geth-fast) in Parity (all are Ethereum protocol clients), but makes more aggressive optimisations. 
 
-This mode is similar to fast-sync in Geth or Grothendieck, warp-mode in Parity (all three are Ethereum protocol clients), but makes more aggressive optimisations. In particular, a pruned-full node does not download and store full blocks that are not residing in a target blockchain suffix while also removing full blocks from the suffix. 
+Specifically, a pruned-full node does not download and store full blocks that do not reside in a target blockchain suffix while also removing full blocks from the suffix. 
 
 
-## Technical Workflow
+## Technical Workflow (WIP)
 
 In detail, a pruned client downloads all the headers, then, by using them, it checks proofs-of-work and linking structure(or parent id only?). Then it downloads a UTXO snapshot for some height from its peers. Finally, full blocks after the snapshot will be downloaded and applied to get a current UTXO set. A pruned full node also skips the AD-transformation block part, like a full node. Additional setting: \"suffix\" - how many full blocks to store(w. some minimum set?). Its regular modifiers processing is the same as for the full node regime, while its bootstrap process is different:
 

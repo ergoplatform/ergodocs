@@ -271,7 +271,9 @@ nav:
               - node/modes/full-node.md
               - Light Full Node: node/modes/light-full-node.md
               - Pruned Full Node: node/modes/pruned-full-node.md
-            - Light SPV: node/modes/light-spv-node.md
+            - Light SPV: 
+              - node/modes/light-spv-node.md
+              - SPV: node/modes/spv.md
           - Configuration Files:
             - application.conf: 
               - node/conf.md
@@ -306,7 +308,7 @@ nav:
         - Oracle-Core: dev/oc/oracle.md
         - Spectrum.DEX off-chain services: dev/oc/dex_bots.md
         - Ergo Utilities Rust: dev/oc/ergo_utilities.md
-      
+    - Tutorials: dev/tutorials.md
     - Developer Tooling:
       - Programming Languages:
         - JVM: 

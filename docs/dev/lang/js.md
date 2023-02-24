@@ -69,5 +69,5 @@ The combination of Fleet and Sigma.JS provide a similar level of functionality t
 
 - [Ergo-Raffle-Bot](https://github.com/zkastn/ergo-raffle-bot) Github
 - [ErgoScript.js](https://www.youtube.com/watch?v=_jwMI8M_vrs)
-- The Ergo Raffle [documentation](https://github.com/ErgoRaffle/raffle-documentation) provides a detailed description of their implmenetion. 
+- The Ergo Raffle [documentation](https://github.com/ErgoRaffle/raffle-documentation) provides a detailed description of their implementation. 
 - [hypo10use/quid-games](https://github.com/hypo10use/quid-games) (Angular)

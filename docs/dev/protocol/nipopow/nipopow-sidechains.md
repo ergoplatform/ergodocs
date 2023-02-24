@@ -14,12 +14,16 @@ To put it simply, NIPoPoWs can be of great use in sidechains. Two or more separa
 
 ### Resources
 
-##### Articles
+### Papers
+
+- [Proof of Work Sidechains](https://eprint.iacr.org/2018/1048.pdf)
+
+#### Articles
 
 - [SIDECHAINS: WHY THESE RESEARCHERS THINK THEY SOLVED A KEY PIECE OF THE PUZZLE](https://bitcoinmagazine.com/technical/sidechains-why-these-researchers-think-they-solved-key-piece-puzzle)
 - [The Sidechains Breakthrough Almost Everyone in Bitcoin Missed](https://www.coindesk.com/markets/2018/01/17/the-sidechains-breakthrough-almost-everyone-in-bitcoin-missed/)
 
-##### Videos
+#### Videos
 
 - [Thoughts on Cross Chain Communication, Sidechains, NiPoPoWs and Litecoin](https://www.youtube.com/watch?v=HvIAgDEUC4o)
 - [IOHK Research | Dionysis Zindros, Sidechains](https://www.youtube.com/watch?v=Y5QUGqFQnWg)

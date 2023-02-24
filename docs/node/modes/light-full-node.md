@@ -8,21 +8,28 @@ This mode uses a 2-party authenticated dynamic dictionary built on top of the UT
 ## Getting Started
 
 
-It's possible to run the node in this *light mode* using the `stateType` variable. 
+It's possible to run the node in this *light mode* by changing the the `stateType` variable. 
 
-Below is a sample `ergo.conf` for a light [node](install.md) (no UTXO, checking and storing only last 2880 blocks using the `blocksToKeep` variable  
+- `digest`
+- `utxo` (default)
 
+Mainnet `ergo.conf` for a **light node** (no UTXO, checking and storing only last 2880 blocks) 
+
+The `blocksToKeep` variable allows you to specify how many of the previous blocks you want to store. 
 
 ```
 ergo {
   node {
-    stateType = "digest" # default is 'utxo'
+    stateType = "digest"
     blocksToKeep = 2880
     mining = false
   }
+
+
 }
 
 scorex {
+
  restApi {
     # Hex-encoded Blake2b256 hash of an API key. Should be 64-chars long Base16 string.
     apiKeyHash = "6ed54addddaf10fe8fcda330bd443a57914fbce38a9fa27248b07e361cc76a41"

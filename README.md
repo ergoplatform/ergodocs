@@ -23,7 +23,7 @@ mkdocs serve
 ## ToDo
 
 - Tidy and clarify the Multi-Stage contract/transaction pages. 
-- Make sections on NiPoPoWs more cohesive. (Mining, Scaling, Light Clients)
+- [x] Make sections on NiPoPoWs more cohesive. (Mining, Scaling, Light Clients)
 - Finish moving over ErgoTree specification
 - (BUG) Syntax Highlighting not working
 - (BUG) Python in multi-code selector boxes seems to have broken. 
