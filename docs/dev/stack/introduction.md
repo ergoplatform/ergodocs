@@ -302,7 +302,13 @@ Need help figuring out where to start developing? This [introduction to Mosaik](
 
 - [Ergo Vision](https://github.com/CryptoCream/ErgoVision) | A wallet visualization tool to be used for investigating transactions and addresses
 - [Ergo Intelligence](https://github.com/Eeysirhc/ergo_intelligence)
-- [Ergo.watch](https://ergo.watch)
+- [Ergo.watch](https://ergo.watch), [Github](https://github.com/abchrisxyz/ergowatch)
+- [ErgoStats](https://github.com/ach2swift/ErgoStats)
+- [Ergo-monitoring](https://github.com/SabaunT/ergo-monitoring)
+- [Ergo Utils](https://github.com/anon-real/ErgoUtils)
+- [Ergo Tokenautics](https://github.com/babygrenade/ergo-tokenautics)
+- [Tidy Ergo](https://github.com/Eeysirhc/tidyergo)
+- [Ergo Analytics](https://github.com/gsblabsio/ergo-analytics)
 
 > Make sure to check out the *dev-tools* tab on [sigmaverse.io](https://sigmaverse.io/). 
 

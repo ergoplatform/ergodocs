@@ -3,9 +3,9 @@ tags:
   - P2P
 ---
 
-A simple implementation of VLQ and ZigZag can be found [here](https://gist.github.com/satsen/5e7bcc38565ad193cf7d906a856f804e), simply use the methods (you do not have to worry about whether it is ZigZag encoded or not).
 
 # Network Messages
+
 
 
 ## Message format
@@ -22,11 +22,11 @@ Every message in the P2P protocol has the following format:
 | byte\[4\]         | Handshake body checksum | First four bytes of blake2b(message body)                                                                                 |                                        
 | byte\[bodyLength] | Message body            | Message body                                                                                                              |
 
-# Records
+## Records
 
 ----------------
 
-## Peer
+### Peer
 
 | Data type               | Field name                    | Details                                                           |
 |:------------------------|:------------------------------|:------------------------------------------------------------------|
@@ -42,7 +42,7 @@ Every message in the P2P protocol has the following format:
 | unsigned byte           | Count of peer features        |
 | Feature\[featureCount\] | Features                      |
 
-## Feature
+### Feature
 
 | Data type          | Field name   |
 |:-------------------|:-------------|
@@ -50,7 +50,7 @@ Every message in the P2P protocol has the following format:
 | VLQ unsigned short | Body length  |
 | byte\[bodyLength\] | Body         |
 
-## Modifier (Record)
+### Modifier (Record)
 
 | Data type            | Field name       |
 |:---------------------|:-----------------|
@@ -58,23 +58,23 @@ Every message in the P2P protocol has the following format:
 | VLQ unsigned int     | Length of object |
 | byte\[objectLength\] | Object           |
 
-## Header
+### Header
 | Data type          | Field name      |
 |:-------------------|:----------------|
 | VLQ unsigned short | Length of bytes |
 | byte\[length]      | Bytes           |
 
-# Messages
+## Messages
 
 ----------------
 
-## Get Peers
+### Get Peers
 
 Code = 1
 
 Body is empty.
 
-## Peers
+### Peers
 
 Code = 2
 
@@ -85,7 +85,7 @@ Sent in response to Get Peers. Contains all the peers that are currently connect
 | VLQ ZZ int        | Count of peers |
 | [Peer](#peer)\[\] | Peers          |
 
-## Sync Info
+### Sync Info
 
 ### Sync Info (new)
 
@@ -155,11 +155,11 @@ Sent in response to Request Modifier.
 | VLQ unsigned int                              | Count of modifiers |
 | [Modifier](#modifier-record)\[modifierCount\] | Modifiers          |
 
-# PRs
+## PRs
 
 - [NiPoPoW powered bootstrapping #1365](https://github.com/ergoplatform/ergo/issues/1365)
 
-# Tests
+## Tests
 
 [Tests for parsing networking messages against test vectors #1264](https://github.com/ergoplatform/ergo/pull/1264)
 
@@ -179,3 +179,7 @@ Demo applications:
 
 - to generate address: [AddressGenerationDemo](https://github.com/ergoplatform/ergo/blob/master/ergo-wallet/src/test/java/org/ergoplatform/wallet/AddressGenerationDemo.java)
 - transaction JSON printing: [CreateTransactionDemo](https://github.com/ergoplatform/ergo/blob/master/ergo-wallet/src/test/java/org/ergoplatform/wallet/CreateTransactionDemo.java)
+
+## Resources
+
+A simple implementation of VLQ and ZigZag can be found [here](https://gist.github.com/satsen/5e7bcc38565ad193cf7d906a856f804e), simply use the methods (you do not have to worry about whether it is ZigZag encoded or not).

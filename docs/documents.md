@@ -32,7 +32,6 @@ This page contains links to documents with a general overview of Ergo platform, 
 
 - [Bypassing Non-Outsourceable Proof-of-Work Schemes Using Collateralized Smart Contracts](https://eprint.iacr.org/2020/044.pdf)
 - [Ergo Hackathon: Crowdfunded Smart Contract Pools Research and Conceptualization](https://eprint.iacr.org/2021/846)
-
 - [Succinct, Non-Interactive Share Proofs](https://docs.ergoplatform.com/events/pdf/SNISP_FINAL_NO_CITATIONS.pdf) (See [Lithos Protocol](lithos.md))
 - [Dexy](/assets/pdf/dexy.pdf) (See [Dexy](dexy.md))
 - [SigmaJoin](https://github.com/ergoplatform/ergo-jde/blob/main/kiosk/src/test/scala/kiosk/mixer/doc/main.pdf)

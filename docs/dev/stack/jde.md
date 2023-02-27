@@ -1,10 +1,10 @@
-## JSON dApp Environment (JDE) 
+# JSON dApp Environment (JDE) 
 
-Ergo Platform allows sophisticated dApps via smart contracts written in ErgoScript. Some notable examples are the SigmaUSD stable coin bank and ErgoMixer. 
+Ergo enables sophisticated dApps via smart contracts written in [ErgoScript](ergoscript.md).
 
-Interacting with such smart contracts requires a developer to write code in a language such as Scala (using the [AppKit](appkit.md) framework) or Rust (using [HDF](headless.md) / sigma-rust)
+Interacting with such smart contracts requires a developer to write code in a language such as Scala (using the [AppKit](appkit.md) framework) or Rust (using [HDF](headless.md) or [sigma-rust](sigma-rust.md))
 
-[JSON dApp Environment (JDE)](https://github.com/ergoplatform/ergo-jde) is another programming tool that you can use to interact with Ergo dApps. The differentiating feature of JDE is that its programming language is JSON.
+The [JSON dApp Environment (JDE)](https://github.com/ergoplatform/ergo-jde) described on this page is another programming tool you can use to interact with Ergo dApps. The differentiating feature of JDE is that its programming language is **JSON**.
 
 ### Goals
 
