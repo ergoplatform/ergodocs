@@ -26,12 +26,12 @@ mkdocs serve
 - [x] Make sections on NiPoPoWs more cohesive. (Mining, Scaling, Light Clients)
 - Finish moving over ErgoTree specification
 - (BUG) Syntax Highlighting not working
-- (BUG) Python in multi-code selector boxes seems to have broken. 
+- [x] (BUG) Python in multi-code selector boxes seems to have broken. 
 - [x] (BUG) LaTex commands need refresh to work sometimes. (Preload in Mathjax.js)
 - [x] Flesh out & tidy Apps & Use Cases section (new title?)
-- Split and tidy scaling page
-- Move more research papers into markdown so they're indexed and searchable. 
+- [x] Split and tidy scaling page
+- Move more research papers into markdown so they are indexed and searchable. 
 - Transfer over any remaining information from ergonaut.space
 - Missing text bottom of modes of operation
-- Tidy Light Nodes page (on learn the basics)
+- [x] Tidy Light Nodes page (on learn the basics)
 
