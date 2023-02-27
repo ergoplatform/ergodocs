@@ -8,9 +8,8 @@
 
 ### Code
 
-The following folder contains the scala files relating to mining. 
+The [following folder](https://github.com/ergoplatform/ergo/tree/master/src/main/scala/org/ergoplatform/mining) contains the scala files relating to mining. 
 
-- [ergo/src/main/scala/org/ergoplatform/mining/](https://github.com/ergoplatform/ergo/tree/master/src/main/scala/org/ergoplatform/mining)
 
 ### Test Vectors 
 
