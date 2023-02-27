@@ -110,7 +110,7 @@ praw==7.6.0
 prawcore==2.3.0
 prometheus-client==0.14.1
 prompt-toolkit==3.0.30
-protobuf==3.20.1
+protobuf==3.20.2
 psutil==5.9.1
 ptyprocess==0.7.0
 pure-eval==0.2.2
