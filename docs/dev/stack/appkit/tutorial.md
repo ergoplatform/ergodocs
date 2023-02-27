@@ -373,7 +373,7 @@ Before running the examples below (in JavaScript, Python and Ruby), please make 
 #### JavaScript
 
 GraalVM can [run JavaScript and
-Node.js](https://www.graalvm.org/docs/reference-manual/languages/js/)
+Node.js](https://www.graalvm.org/latest/reference-manual/rtlanguages/js/)
 applications out of the box. It is compatible with the [ECMAScript 2019
 specification](http://www.ecma-international.org/ecma-262/10.0/index.html).
 Additionally, `js` and `node` launchers accept special `--jvm` and `--polyglot`
@@ -397,9 +397,9 @@ Note, the paths in the command are relative to the root of
 #### Python
 
 GraalVM can [run Python
-scripts](https://www.graalvm.org/docs/reference-manual/languages/python/), though
+scripts](https://www.graalvm.org/latest/reference-manual/rtlanguages/python/), though
 the Python implementation is still experimental (see also
-[compatibility section](https://www.graalvm.org/docs/reference-manual/languages/python/#python-compatibility)
+[compatibility section](https://www.graalvm.org/latest/reference-manual/rtlanguages/python/#python-compatibility)
 for details).
 
 [Python example of
@@ -413,16 +413,14 @@ $ graalpython --jvm --polyglot --vm.cp=build/libs/appkit-examples-3.1.0-all.jar 
 
 #### Ruby
 
-GraalVM can [run Ruby
-scripts](https://www.graalvm.org/docs/reference-manual/languages/ruby/) using
-TruffleRuby implementation, which is however still experimental (see also
-[compatibility section](https://www.graalvm.org/docs/reference-manual/languages/ruby/#compatibility)
+GraalVM can [run Ruby scripts](https://www.graalvm.org/latest/reference-manual/ruby/) using
+TruffleRuby implementation, which is however still experimental (see also [compatibility section](https://www.graalvm.org/latest/reference-manual/ruby/#compatibility)
 for details).
+
 TruffleRuby aims to be fully compatible with the standard implementation of Ruby, MRI, version 2.6.2
 
-[Ruby example of
-FreezeCoin](https://github.com/aslesarenko/ergo-appkit-examples/blob/master/ruby-examples/FreezeCoin.rb)
-can be executed using the following command
+[Ruby example of FreezeCoin](https://github.com/aslesarenko/ergo-appkit-examples/blob/master/ruby-examples/FreezeCoin.rb) can be executed using the following command
+
 ```shell
 $ truffleruby --polyglot --jvm --vm.cp=build/libs/appkit-examples-3.1.0-all.jar \
     ruby-examples/FreezeCoin.rb 1900000000

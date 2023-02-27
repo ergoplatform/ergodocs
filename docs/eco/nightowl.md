@@ -9,4 +9,4 @@
 
 - [Website](https://nightowlcasino.io/)
 - [GitHub](https://github.com/nightowlcasino)
-- [Slides](../docs/events/pdf/Night_Owl_-_Ergo_Hack_lll_Presentation_Final.pdf)
+- [Slides](../events/pdf/Night_Owl_-_Ergo_Hack_lll_Presentation_Final.pdf)

@@ -87,6 +87,6 @@ Registers must be densely packed; we cannot sandwich empty registers between non
 
 - Box Type description in the [ErgoScript language specification](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/LangSpec.md#box-type)
 - [ErgoAddress.scala](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/ec71a6f988f7412bc36199f46e7ad8db643478c7/sigmastate/src/main/scala/org/ergoplatform/ErgoAddress.scala)
-- [ErgoBoxCandidate](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/sigmastate/src/main/scala/org/ergoplatform/ErgoBoxCandidate.scala#L24-L43)
-- [ErgoBox](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/sigmastate/src/main/scala/org/ergoplatform/ErgoBox.scala#L22-L59)
+- [ErgoBoxCandidate](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/org/ergoplatform/ErgoBoxCandidate.scala#L24-L43)
+- [ErgoBox](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/org/ergoplatform/ErgoBox.scala#L22-L59)
 - [Ergo Box Modeling](https://keitodot.medium.com/ergo-box-m-f58f444e00d5)

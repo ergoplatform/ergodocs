@@ -14,4 +14,4 @@
   }
 ```
 
-From [Values.scala](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/sigmastate/src/main/scala/sigmastate/Values.scala#L745)
+From [Values.scala](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/sigmastate/Values.scala#L745)

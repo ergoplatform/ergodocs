@@ -19,7 +19,7 @@ Click any of the event names below to jump directly to an overview and related r
 
 - [**Analog-Ergo**](#analog-ergo): Cross-chain P2P atomic marketplace
 - [**Ergo Stats**](#ergo-stats): Mobile app for ergo.watch/tokenJay
-- [**Ergo Tizen**](#ergo-tizen): Ergo Node on smart devices
+- [**Ergode**](#Ergode): Ergo Node on smart devices
 - [**Lithos**](#lithos): Decentralised block production
 - [**ChainCash**](#chaincash): Elastic P2P money creation via trust & blockchain assets
 - [**Lilium**](#lilium): Decentralised NFT Platform
@@ -32,7 +32,7 @@ Click any of the event names below to jump directly to an overview and related r
 - [**Quantum Swap**](#quantum-swap): P2P NFT & Native Asset Exchange Service.
 - [**SIPS**](#sips): Sigma Improvement Proposals.
 - [**Explorer UI**](#explorer-ui): Improving the ergo explorer experience.
-- [**Open Board** (Withdrawn)](#open-board): Pin-board concept
+- [**SigmaStamp**](#sigmastamp): A timestamping service. 
 
 
 ### ERGOHACKV
@@ -114,6 +114,8 @@ Click any of the event names below to jump directly to an overview and related r
 
 ### ERGOHACKVI
 
+> **See the Final Reports [here](https://drive.google.com/drive/folders/14Mgh5G1IFukXgnbG6APzHoDa7ynV7T27)**
+
 #### Analog-Ergo 
 
 Cross-chain P2P atomic marketplace
@@ -121,20 +123,25 @@ Cross-chain P2P atomic marketplace
 > The basic idea is to use the cryptographic primitives available in atomic swaps as a basis for creating a cross-chain peer to peer marketplace, where Ergo users can list their own price for their own coins. Not only will this enable users to potentially earn arbitrage as a reward for liquidity on different blockchains, but they will also be able to set and agree to the value parameters for this at their own discretion in a highly private and fungible way. That means no intermediaries are involved in the transfer which also reduces any potential fees on both sides.
 
 - [Submission paper](pdf/ergohackvi/AnalogErgoProposalSimplified.pdf)
+- [Final Report](https://drive.google.com/drive/folders/1NWvKsauGL0tA_7DRo9p76aOpjopcjKhp)
+- [GitHub](https://github.com/dzyphr/2pAtomicSwapExample)
 
 #### Ergo Stats
 
 > The goal of this project is to support DeFi on Ergo with providing useful information such as blockchain statistics – currently found on ergo.watch and tokenJay - in a compact form on a mobile device
 
 - [Submission paper](pdf/ergohackvi/ErgoStats-iOS-app.pdf)
+- [GitHub](https://github.com/ach2swift/ErgoStats)
 
-#### Ergo Tizen
+#### Ergode
 
 > Create an Ergo node that runs natively on smart devices such as TVs, fridges, mobile phones, watches, etc. This will be achieved by targeting Tizen OS, Samsungs open source mobile operating system and done in a way where it should be easily portable to other platforms such as WebOS (LG smart TVs).
 
 > Currently there isn't a lot of light client based messages on the P2P layer of Ergo so this project aims to test viability of running nodes on smart devices without much functionality. At least connecting to a few peers and performing handshakes/probing for peers, etc.
 
 > At the end of ErgoHack VI the goal is to have a node running natively on a real Samsung TV and displaying basic network information.
+
+- [GitHub](https://github.com/ross-weir/ergode)
 
 #### Lithos
 
@@ -146,12 +153,15 @@ side of the Lithos Protocol. Given that the topic of this Hackathon is CypherPun
 > Moreover, collateralization is a safe way to gain yield on ERG with minimal risk involved. We hope that our work on collateralized mining pools will allow for greater participation in Ergo’s DeFi ecosystem, while also helping the blockchain itself. 
 
 - [Submission paper](pdf/ergohackvi/Lithos-Paper.pdf)
-
+- [Final Report](https://github.com/Lithos-Protocol/Lithos/blob/ErgoHack/documents/ErgoHack.MD)
+- [GitHub](https://github.com/Lithos-Protocol)
+  
 #### ChainCash
 
 Elastic P2P money creation via trust & blockchain assets
 
 - [Submission paper](pdf/ergohackvi/chaincash.pdf)
+- [GitHub](https://github.com/kushti/chaincash)
 
 
 #### Lilium
@@ -160,6 +170,7 @@ Elastic P2P money creation via trust & blockchain assets
 Attachment file type: acrobat
 
 - [Submission paper](pdf/ergohackvi/Lilium---ErgoHack-6-Proposoal-1.pdf)
+- [Final Report](https://drive.google.com/drive/folders/1J-UUaV7HLhVSNkrk2_zIH8dzqRq6tqs4)
 
 #### SigmaO
 
@@ -168,12 +179,16 @@ Attachment file type: acrobat
 > Reminder: An option contract offers the buyer the possibility but not the obligation to buy (Call) or sell (Put) the underlying asset at a fixed exercise price.
 
 - [Submission paper](pdf/ergohackvi/SigmaO_ergohack_plan.pdf)
+- [sigmao.cc](https://www.sigmao.cc/)
+- [Github](https://github.com/ThierryM1212/SigmaO)
 
 #### Riadne Hlady2
 
 > We are building a multisig token swapping service. It is mainly meant for users who want to swap their NFTs on Discord and want a trustless escrow service to perform the swap. Everything should happen in a single transaction, so no sending to a smart contract that the user does not understand is needed.
 
-
+- [single-tx-swap.com](https://www.single-tx-swap.com/)
+- [GitHub](https://github.com/danieloravec/ergo-token-swap)
+  
 #### Privacy Guide
 
 Privacy Fundamentals Course
@@ -181,7 +196,7 @@ Privacy Fundamentals Course
 > My proposal is to create an online module that teaches users about the importance of privacy and how to maintain a safe, private online experience. The module will include written materials, video demonstrations, and a step by step guide that users can follow to create and use the Ergo blockchain privately. After completing the module, users will have an anonymous wallet and know how to use it without compromising their privacy. The course may end up on YouTube or a free learning management software like Coursera. This course will be 100% free for users.
 
 - [Submission paper](pdf/ergohackvi/Maintaining-Privacy-Online-1.pdf)
-
+- [The Ergonaut’s Guide to Privacy](https://drive.google.com/drive/folders/1hzFUJHDfQSQYapRZ-Msw0Uvo5QmqQm1i)
 
 #### Perma Ergo
 
@@ -189,7 +204,7 @@ Privacy Fundamentals Course
 
 
 - [Submission paper](pdf/ergohackvi/micro-finance-PERMERGO.pdf)
-
+- [GitHub](https://github.com/firashebili/permergo-microfinancing-dao)
 
 #### Net Notes
 
@@ -198,13 +213,14 @@ Privacy Fundamentals Course
 > An application which consumes the node ont he native level, and then communicates with the wbe browser using file notes which are both symmetrtically and assymetrically encrypted in order to maximize their security, both wiuthin the session which they are created, and forensically in the future. 
 
 - [Submission Paper](https://github.com/networkspore/Netnotes/blob/main/Netnotes%20-%20ergohack%20VI.pdf)
-
+- [Final Report](https://drive.google.com/drive/folders/1DFYp_arTeOMH8Rqyop8tB_k2DvQSF_ca)
 
 #### Sigma Subscriptions
 
 > A framework for anyone to easily run a subscription service on Ergo.
 
 - [Submission paper](pdf/ergohackvi/ErgoHack-VI-Project-Proposal-1.pdf)
+- [GitHub](https://github.com/cornbelt-dev/sigma-subscriptions)
 
 #### Quantum Swap
 
@@ -212,11 +228,18 @@ P2P NFT & Native Asset Exchange Service.
 
 - [Submission paper](pdf/ergohackvi/Quantum-Swap-White-Paper2(2)%202.pdf)
 
+#### SigmaStamp
+
+- [GitHub](https://github.com/sigmastamp)
+- [sigmastamp.ml](https://www.sigmastamp.ml)
+
+
 #### SIPS
 
 SigmaUSD Improvement Proposals.
 
 - [SigmaUSD Hack SIP Google Doc DRAFT](https://docs.google.com/document/d/1btfEVhPlJLK2OweAK2c1vY67cYE8hHULvxOA12G_5dk/edit#)
+- [SIP Strategy: GitHub Discussions](https://github.com/ergoplatform/sips/discussions/17)
 
 #### Explorer UI
 
@@ -263,17 +286,18 @@ This EIP proposes modifying how parameter identifiers are communicated in the ex
 - [Draft PR](https://github.com/WilfordGrimley/ergo/blob/EIP-0038/src/main/scala/org/ergoplatform/nodeView/state/VotingData.scala)
 
 #### SNISP
+
 **SNISPs** are *Succinct, Non-Interactive Share Proofs* which will allow for **accurate and efficient calculations of performed work on the blockchain**. 
 
 These proofs can be applied to any PoW blockchain. They should allow for the creation of decentralised mining pools with better security assumptions than alternatives like P2Pool, and better scalability than ETH-based SmartPools. They may also be used for other applications which involve measuring performed work (such as direct work-based governance, work-backed assets, etc)
 
-> [Draft paper](pdf/SNISP_FINAL_NO_CITATIONS.pdf)
+> [Draft paper](/../events/pdf/SNISP_FINAL_NO_CITATIONS.pdf)
 
 
 #### dlop-art-generator
 > Live @ [twotens.art/build.html](https://twotens.art/build.html)
 
-A UI and website for generating 1010s art pieces so the community will be able to make their own. [Time willing, this entry] will also experiment with SVG format (versus PNG) and enable minting the piece in a connected wallet. [Final Submission](https://twotens.art/ergohack_v.html)
+A UI and website for generating 1010s art pieces so the community will be able to make their own. [Time willing, this entry] will also experiment with SVG format (versus PNG) and enable minting the piece in a connected wallet. [Final Report](https://twotens.art/ergohack_v.html)
 
 
 #### [Paizo](https://github.com/deadit/paizo)
@@ -329,7 +353,7 @@ Enhancing [sigma-rust](rust.md) with [JIT 5.0 costing](JITC.md).
 
 ### ERGOHACKFEST 
 
-ERGOHACKFEST (or ERGOHACK IV) was a three-week-long event. To see all the final submissions, head to the [presentations drive](https://drive.google.com/drive/folders/12yBnyMjq0hdVhXGOlpp8X0bwcj_Wvbgh).
+ERGOHACKFEST (or ERGOHACK IV) was a three-week-long event. To see all the Final Reports, head to the [presentations drive](https://drive.google.com/drive/folders/12yBnyMjq0hdVhXGOlpp8X0bwcj_Wvbgh).
 
 Below you'll find some additional links and more information for each project. 
 
@@ -356,7 +380,7 @@ ColivingDAO aims to facilitate the creation, development, and operations of a gl
 Working on interactive tutorials for dapp developers with nodejs/javascript stack exclusively
 
 - Two examples live @ [play.dappstep.com](https://play.dappstep.com/)
-- [Final Submission](https://drive.google.com/drive/folders/1s1iiJwybYkX4FrNBM-OpcjvLKItUbmVB)
+- [Final Report](https://drive.google.com/drive/folders/1s1iiJwybYkX4FrNBM-OpcjvLKItUbmVB)
 
 #### ergo-graphql
 

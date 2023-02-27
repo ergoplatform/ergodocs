@@ -173,7 +173,7 @@ SigmaUSD still lacks a mature DeFi ecosystem, with 1% of each transaction going 
 
 ## What is SigmaUSD based on? 
 
-- The design was inspired by [StatiCoin](http://staticoin.com/whitepaper.pdf)
+- The design was inspired by **StatiCoin**
     - [Documentation](https://github.com/Emurgo/age-usd)
 - You can read the official [Emurgo announcement blog post here](https://ergoplatform.org/en/blog/2021_02_26-sigmausd-released/)
 
