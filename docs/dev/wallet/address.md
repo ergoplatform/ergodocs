@@ -92,6 +92,11 @@ equals
 > **03** 10 02 04 a0 0b 08 cd 02 a1 f5 67 16 cb 8d f4 fe b9 37 14 37 90 4b 91 25 b8 2d b9 39 23 8c d7 d9 48 78 6d b3 3d e3 13 9f ea 02 d1 92 a3 9a 8c c7 a7 01 73 00 73 01 8c 23 55 af
 
 
+## P2S vs P2SH
+
+**Typically most people use P2S because it is a lot easier to use. P2SH means you have to keep the contract ready off-chain to be submitted when you create the transaction, and if you lose it, then your funds are stuck forever.** This also makes it harder for other people to use your dApp as they need the contract themselves, rather than just the address. P2SH is technically cheaper since you store less data on-chain, but likely we won't see anyone using P2SH until we start to get heavy load on-chain.
+
+
 
 ## Resources
 

@@ -23,6 +23,4 @@ The 'extension' section contains certain mandatory fields (including links for N
 
 ## Resources
 
-See also
-
-- [Superblock Clients](log_space.md)
+- [Superblock Clients](log_space.md) are also possible on Ergo. 

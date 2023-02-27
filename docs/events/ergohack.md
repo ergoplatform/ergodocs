@@ -443,7 +443,7 @@ A Layer-2 Music Launchpad
 A decentralised, open source and non-custodial trading platform that offers derivative contracts, trading with leverage and market hedging 
 regarding assets offered on the Ergo blockchain.
 
-- [Final Report](../events/pdf/Tensile_Ergoscript_Course_Final_Presentation.pdf)
+- [Final Report](pdf/Tensile_Ergoscript_Course_Final_Presentation.pdf)
 
 #### RubyNFTs
 

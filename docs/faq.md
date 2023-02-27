@@ -32,7 +32,7 @@ Ensuring economic freedom for ordinary people through decentralised, private and
 
 - **[Sigma Protocols](/dev/scs/sigma) (Σ)** - a type of non-interactive zero-knowledge proofs that are flexible enough to allow for ring-signatures, multi signatures, multiple currencies, atomic swaps, self-replicating scripts, and long-term computation.
 - **[Multi-stage Contracts](/dev/scs/multi)** - In addition to the regular protection offered by using a threshold `m‐of‐n` signature, Ergo also allows specifying the possible recipients of these coins, which may be another contract with similar complex conditions. This *"chaining"* approach enables the implementation of **secure and efficient smart contracts of arbitrary complexity**. 
-- **[Non-Interactive Proofs of Proof of Work (NIPoPoWs)](/dev/protocol/nipopow/)**  are essential for two reasons: Light Clients and Side Chains. Ergo DApps and off-chain protocols may be implemented in a truly decentralised way due to light clients.
+- **[Non-Interactive Proofs of Proof of Work (NIPoPoWs)](nipopows.md)**  are essential for two reasons: Light Clients and Side Chains. Ergo DApps and off-chain protocols may be implemented in a truly decentralised way due to light clients.
 - **[Storage Rent](rent.md)** acts as *on-chain garbage collection*
 
 
@@ -190,7 +190,8 @@ Other coins like Ethereum classic are a bad comparisons, as they shared the same
 ### How fast is Ergo?
 
 TPS (Transactions Per Second) is not a useful metric. On Ergo Reference Node v.5, TPS is estimated to be a minimum of 47.5 tx/s. However, transactions can happen in three scaling layers or levels:
- - L0: Ergo Reference Nodes, which can be bootstrapped using NiPoPoWs proofs and UTXO set snapshots.
+
+- L0: Ergo Reference Nodes, which can be bootstrapped using NiPoPoWs proofs and UTXO set snapshots.
 - L1: Ergo has extensions that allow for a wide variety of scaling solutions such as Sharding, Hydra, or BitcoinNG-style macroblocks.
 - L2 (off-chain): Ergo should be compatible with the Lightning Network, Rainbow Network, and many more. The implementation here will depend on the needs of the applications being built on Ergo.
 

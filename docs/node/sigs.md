@@ -1,8 +1,4 @@
-# Distributed Signautres
-
-
-
-## Improved distributed signatures
+# Improved distributed signatures
 
 The initial implementation of distributed signatures support in the node worked well in simple cases, and ZK Treasury built on top of it. However, in complex cases, it has some problems:
 

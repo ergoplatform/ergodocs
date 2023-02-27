@@ -22,8 +22,8 @@ The equivalent of the above program in ErgoScript will be `(condition_1 || condi
 
 ## Key Concepts
 
-1. Since Ergo is UTXO based, therefore ErgoScript has many UTXO-specific constructs such as `Box`, `INPUTS`, `OUTPUTS`, etc. 
-A complete list is available [here](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/LangSpec.md). A `Box` is essentially a UTXO and consists of up to ten registers for storing data. Similar to Bitcoin, a transaction spends one or more existing boxes (denoted using the `INPUTS` array) and creates one or more new boxes (denoted using the `OUTPUTS` array).  
+1. Since Ergo is UTXO based, ErgoScript has many UTXO-specific constructs such as `Box`, `INPUTS`, `OUTPUTS`, etc. 
+A complete list is available [here](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/LangSpec.md). A [Box](box.md) is essentially a UTXO and consists of up to ten [registers](registers.md) for storing data. Similar to Bitcoin, a transaction spends one or more existing boxes (denoted using the `INPUTS` array) and creates one or more new boxes (denoted using the `OUTPUTS` array).  
 
 2. ErgoScript's syntax is a subset of Scala's. However, knowledge of Scala is not necessary to learn ErgoScript because the amount of Scala needed to write ErgoScript is tiny. That being said, some prior experience in Scala will be useful in picking up ErgoScript and Scala is a [good language to have on your resume](https://insights.dice.com/2020/06/04/24-programming-languages-pay-top-salaries-scala/) anyway.  
 
@@ -35,7 +35,7 @@ A complete list is available [here](https://github.com/ScorexFoundation/sigmasta
 
 ## ErgoScript Examples
 
-> **Tip:** For beginners, we highly recommend the [ErgoScript P2S playground](https://wallet.plutomonkey.com/p2s/), which can be used to get the Ergo address corresponding to some arbitrary ErgoScript program. Please use the P2S playground only for experiments and not for storing any large amounts.
+> **Tip:** For beginners, we highly recommend the [ErgoScript P2S playground](https://wallet.plutomonkey.com/p2s/), which can be used to get the Ergo address corresponding to some arbitrary ErgoScript program. Please use the P2S playground only for experiments.
 
 ### Anyone-Can-Spend Scripts
 

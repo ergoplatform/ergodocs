@@ -372,19 +372,18 @@ Before running the examples below (in JavaScript, Python and Ruby), please make 
 
 #### JavaScript
 
-GraalVM can [run JavaScript and
-Node.js](https://www.graalvm.org/latest/reference-manual/languages/js/)
-applications out of the box. It is compatible with the [ECMAScript 2019
+GraalVM can [run JavaScript and Node.js](https://www.graalvm.org/latest/reference-manual/js/) applications out of the box. It is compatible with the [ECMAScript 2019
 specification](http://www.ecma-international.org/ecma-262/10.0/index.html).
-Additionally, `js` and `node` launchers accept special `--jvm` and `--polyglot`
-command-line options which allow JS scripts to access Java objects and classes.
+
+Additionally, `js` and `node` launchers accept special `--jvm` and `--polyglot` command-line options which allow JS scripts to access Java objects and classes.
 
 Given that being the case, a JS implementation of FreezeCoin can be easily written using the Appkit.
+
 API interface.
 
-Please see the full source code of [FreezeCoin JS
-implementation](https://github.com/aslesarenko/ergo-appkit-examples/blob/master/js-examples/FreezeCoin.js)
+Please see the full source code of [FreezeCoin JS implementation](https://github.com/aslesarenko/ergo-appkit-examples/blob/master/js-examples/FreezeCoin.js)
 for details.
+
 The following command uses the `node` launcher to execute the FreezeCoin.js script.
 
 ```shell
@@ -397,14 +396,10 @@ Note, the paths in the command are relative to the root of
 #### Python
 
 GraalVM can [run Python
-scripts](https://www.graalvm.org/latest/reference-manual/python/), though
-the Python implementation is still experimental (see also
-[compatibility section](https://www.graalvm.org/latest/reference-manual/python/#python-compatibility)
-for details).
+scripts](https://www.graalvm.org/latest/reference-manual/python/), thoughthe Python implementation is still experimental (see also
+[compatibility section](https://www.graalvm.org/latest/reference-manual/python/#python-compatibility) for details).
 
-[Python example of
-FreezeCoin](https://github.com/aslesarenko/ergo-appkit-examples/blob/master/python-examples/FreezeCoin.py)
-can be executed using the following command
+[Python example of FreezeCoin](https://github.com/aslesarenko/ergo-appkit-examples/blob/master/python-examples/FreezeCoin.py) can be executed using the following command
 
 ```shell
 $ graalpython --jvm --polyglot --vm.cp=build/libs/appkit-examples-3.1.0-all.jar \
@@ -413,9 +408,7 @@ $ graalpython --jvm --polyglot --vm.cp=build/libs/appkit-examples-3.1.0-all.jar 
 
 #### Ruby
 
-GraalVM can [run Ruby scripts](https://www.graalvm.org/latest/reference-manual/ruby/) using
-TruffleRuby implementation, which is however still experimental (see also [compatibility section](https://www.graalvm.org/latest/reference-manual/ruby/#compatibility)
-for details).
+GraalVM can [run Ruby scripts](https://www.graalvm.org/latest/reference-manual/ruby/) using TruffleRuby implementation, which is however still experimental (see also [compatibility section](https://www.graalvm.org/latest/reference-manual/ruby/#compatibility) for details).
 
 TruffleRuby aims to be fully compatible with the standard implementation of Ruby, MRI, version 2.6.2
 

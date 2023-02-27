@@ -10,7 +10,7 @@ The following tutorial is written for Linux; see [this page if you're using Wind
 
 If you are deploying in production, you need to be careful on I/O and disk/CPU/memory as a public Miningcore API will pound on your database. Keep all things default for now; here's a [good simple article](https://www.postgresqltutorial.com/install-postgresql/)
 
-Installing Miningcore will depend if you are on Windows or Linux. Pay close attention to the dependencies needed as depicted in the [README](https://github.com/oliverw/miningcore/README.md). Stay away from docker unless you're sure. 
+Installing Miningcore will depend if you are on Windows or Linux. Pay close attention to the dependencies needed as depicted in the [README](https://github.com/oliverw/miningcore/blob/master/README.md). Stay away from docker unless you're sure. 
 
 ### Load the schema  
 

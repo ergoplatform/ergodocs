@@ -1,6 +1,8 @@
 # Swagger UI
 
-An Ergo node provides a REST API accessible via HTTP. The full API specification (in OpenAPI format) is available [here](https://github.com/ergoplatform/ergo/blob/master/src/main/resources/api/openapi.yaml). When running the node, a user interface for Swagger is available at [`127.0.0.1:9053/swagger`](http://127.0.0.1:9053/swagger). 
+An Ergo node provides a REST API accessible via HTTP. The full API specification (in OpenAPI format) is available [here](https://github.com/ergoplatform/ergo/blob/master/src/main/resources/api/openapi.yaml). When running the node, a user interface for Swagger is available at `127.0.0.1:9053/swagger`. 
+
+> Note: 127.0.0.1 is your local machine. 
 
 You use this UI to make API calls for advanced operations that are not available in the panel such as;
 
@@ -11,9 +13,9 @@ You use this UI to make API calls for advanced operations that are not available
 
 ## Accessing the API
 
-Once the node is running, the API can be accessed at [`127.0.0.1:9052`](http://127.0.0.1:9052). 
+Once the node is running, the API can be accessed at `127.0.0.1:9052`. 
 
-To have a look at the methods without setting up your own node, check out one of the public nodes like [204.48.31.129:9053/swagger#]
+To have a look at the methods without setting up your own node, check out one of the public nodes like [204.48.31.129:9053/swagger#](http://204.48.31.129:9053/swagger#)
 
 To access protected API routes, you must provide your secret phrase in the request headers `[api_key, Content-Type]`. Alternatively, you can Authorize via the web interface in your browser by clicking the `Authorize` button in swagger and entering your secret phrase there.
 
@@ -29,7 +31,7 @@ After the password is entered and you have clicked `"Authorize"`, you'll see the
 
 ![Logged in](https://user-images.githubusercontent.com/23208922/69916787-4a6bb500-1485-11ea-90c8-39b274d0f36d.png)
 
-Now navigate to [`127.0.0.1:9053/swagger#/wallet/walletAddresses`](http://127.0.0.1:9053/swagger#/wallet/walletAddresses) **in the same tab where you entered the password** and click `"Try it out"`. 
+Now navigate to `127.0.0.1:9053/swagger#/wallet/walletAddresses` **in the same tab where you entered the password** and click `"Try it out"`. 
 
 You should see the same list of addresses as you saw earlier from the panel. 
 
