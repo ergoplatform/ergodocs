@@ -373,7 +373,7 @@ Before running the examples below (in JavaScript, Python and Ruby), please make 
 #### JavaScript
 
 GraalVM can [run JavaScript and
-Node.js](https://www.graalvm.org/latest/reference-manual/rtlanguages/js/)
+Node.js](https://www.graalvm.org/latest/reference-manual/languages/js/)
 applications out of the box. It is compatible with the [ECMAScript 2019
 specification](http://www.ecma-international.org/ecma-262/10.0/index.html).
 Additionally, `js` and `node` launchers accept special `--jvm` and `--polyglot`
@@ -397,9 +397,9 @@ Note, the paths in the command are relative to the root of
 #### Python
 
 GraalVM can [run Python
-scripts](https://www.graalvm.org/latest/reference-manual/rtlanguages/python/), though
+scripts](https://www.graalvm.org/latest/reference-manual/python/), though
 the Python implementation is still experimental (see also
-[compatibility section](https://www.graalvm.org/latest/reference-manual/rtlanguages/python/#python-compatibility)
+[compatibility section](https://www.graalvm.org/latest/reference-manual/python/#python-compatibility)
 for details).
 
 [Python example of

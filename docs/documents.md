@@ -36,3 +36,4 @@ This page contains links to documents with a general overview of Ergo platform, 
 - [Dexy](/assets/pdf/dexy.pdf) (See [Dexy](dexy.md))
 - [SigmaJoin](https://github.com/ergoplatform/ergo-jde/blob/main/kiosk/src/test/scala/kiosk/mixer/doc/main.pdf)
 - [ChainCash](https://github.com/kushti/chaincash/blob/master/paper/chaincash.pdf)
+- [KYA - A Treatise On Assumptions in Cryptocurrencies and Defi](https://github.com/kushti/kya/blob/master/kya.pdf)

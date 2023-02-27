@@ -48,10 +48,10 @@ extra_javascript:
 extra:
   version:
     provider: mike
-  extra:
-    analytics:
-      provider: google
-      property: G-5XM6BXT041
+extra:
+  analytics:
+    provider: google
+    property: G-5XM6BXT041
 
 
 extra:
@@ -122,7 +122,7 @@ nav:
         - Sidechains: dev/protocol/nipopow/nipopow-sidechains.md
       - Privacy: dev/protocol/zkp.md
       - Storage Rent: dev/protocol/storage-rent.md
-      - Autolykos: dev/protocol/autolykos.md
+      - Autolykos: dev/protocol/autolykos-protocol.md
     - Scaling: 
       - dev/protocol/scaling.md
       - Layer 0: dev/protocol/scaling/layer0.md
@@ -497,7 +497,7 @@ nav:
       - Local Exchange Trading Systems (LETS): 
         - uses/lets.md
         - Basic Implementation: uses/lets/basic-imp.md
-        - Trustless LETS: uses/trustless-lets.md
+        - Trustless LETS: uses/lets/trustless-lets.md
 
 
     - NFTs:

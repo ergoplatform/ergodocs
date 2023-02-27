@@ -74,7 +74,7 @@ Please see this [Quick Primer on ErgoScript](/dev/scs/ergoscript-primer) for an 
 
 ##### Examples
 
-- [ErgoPad Plasma Staking Contracts](https://github.com/ergo-pad/paideia-contracts/blob/main/paideia_contracts/contracts/staking/ergoscript/latest/plasmaStaking.es)
+- [ErgoPad Plasma Staking Contracts](https://github.com/paideiadao/paideia-contracts/blob/main/paideia_contracts/contracts/plasma_staking/ergoscript/latest/plasmaStaking.es)
 - [GetBlok.io Smart Pools](https://github.com/GetBlok-io/ergo-smartpooling-contracts)
 
 

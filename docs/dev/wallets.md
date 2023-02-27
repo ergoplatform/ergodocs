@@ -73,7 +73,7 @@ Why use Satergo?
 More information available on their [GitHub](https://github.com/Satergo/Satergo)
 
 
-### [Node](/node) (Desktop) 
+### [Node](install.md) (Desktop) 
 
 The full node comes with a wallet panel interface. 
 

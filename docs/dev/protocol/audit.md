@@ -70,7 +70,7 @@ Ergo's wallet functionality enables its users to store a secret on disk and reco
 
 ​The first time a wallet is created, the `InitWallet` command does the following:
 
-* Generate `settings.walletSettings.seedStrengthBits` random bits, as initial entropy. [By default](https://github.com/ergoplatform/ergo/blob/master/src/main/resources/reference.conf), 160 bits are generated.
+* Generate `settings.walletSettings.seedStrengthBits` random bits, as initial entropy. [By default](https://github.com/ergoplatform/ergo/blob/master/src/main/resources/application.conf), 160 bits are generated.
 
 * Generate a BIP39 from the random bits generated, which can be seen as encoding the entropy bits. The standard BIP39 logic is used with an optional password.
 * Derive a seed from the mnemonic using BIP39's PBKDF2-based derivation logic.

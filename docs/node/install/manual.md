@@ -108,5 +108,5 @@ tail -Fn+0 ergo.log | grep 'ERROR\|WARN'
 ## Resources
 
 - [Troubleshooting](/node/install/troubleshooting)
-- [FAQ](/node/#faq)
+- [FAQ](node-faq.md)
 - [Using the TestNet](/node/testnet)
