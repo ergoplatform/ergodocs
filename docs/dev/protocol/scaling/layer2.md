@@ -36,14 +36,12 @@ One way this could work is by allowing smaller, less-secure blockchains to lever
 NiPoPoWs could also potentially be used to improve the scalability of layer 2 solutions, such as sidechains or state channels. By enabling these solutions to communicate with each other more efficiently and securely, NiPoPoW could help reduce the load on the main blockchain network and improve transaction throughput.
 
 
-**State Channels (Hydra)** is a *peer-to-peer signing model*, and the design can work well for payment channels for simple purposes. The problem, however, is that the state channels are pre-set contracts for which the participants are defined at the launch. New contract creation is needed each time a new participant wants to use the channel. In return, there is higher privacy and security but little flexibility for an open system. IOHK has published a new model called [Hydra: Isomorphic State Channels](https://iohk.io/en/research/library/papers/hydrafast-isomorphic-state-channels/) that introduces multi-party state channels by utilising both on-chain and off-chain-computations-powered-by-the-eUTXO-design. Other novel state channel constructions should be possible as well. It would be good to apply off-chain techniques to applications like ErgoMixer. Ergo is mentioned in the [Hydra whitepaper](https://eprint.iacr.org/2020/299.pdf). Research and discussions are underway. 
-
 
 ## Other Possibilities
 
 ### **Lightning Network** 
 
-Due to the shared UTXO architecture, utilising a Lightning network is also possible. In a lightning channel, two participants send their funds to a specific type of joint multi-sig wallet that allows them to create and enforce off-chain agreements. The network itself is just a bunch of these channels connected. You can then structure an off-chain payment across many channels, where none of the funds leaves any individual channel but shuffles around like an abacus.
+In a lightning channel, two participants send their funds to a specific type of joint multi-sig wallet that allows them to create and enforce off-chain agreements. The network itself is just a bunch of these channels connected. You can then structure an off-chain payment across many channels, where none of the funds leaves any individual channel but shuffles around like an abacus.
 
 ### **Rainbow Network** 
 
@@ -58,10 +56,14 @@ Rollups are also possible via AVL trees. A roll-up involves rolling up collectio
 There are two main types of *Rollups* used for scaling. 
 
 - **Optimistic Rollups** compute the transactions on a parallel compatible chain that communicates with the main chain. The model is optimistic because it relies on the *Fraud-Proof principle*, where aggregators do not actively verify layer two. Still, they interfere in the event of a fraud dispute. Disputes in optimistic rollups when computations are done only on data whose validity is disputed
-    - [Optimistic Rollups and Fraud Proofs in Ergo](https://www.ergoforum.org/t/optimistic-rollups-and-fraud-proofs-in-ergo/3819)
+    - See this [ergoforum](https://www.ergoforum.org/t/optimistic-rollups-and-fraud-proofs-in-ergo/3819) post for more information.
 - **ZK-Rollups** utilise [zkSNARKs](https://blog.ethereum.org/2016/12/05/zksnarks-in-a-nutshell/) (zero-knowledge succinct non-interactive arguments of knowledge), they can decrease network load by taking hundreds of transfers off-chain and combining or "rolling" them up into a single transaction. The security of the transactions relies directly on the main chain secured by adding mathematical proofs to validate transactions. However, it is relatively harder than hybrid approaches to implement all the functionalities of the mainnet with full security. Various projects are attempting to implement zkSNARKs.
     - Zk rollups have many issues in practice, and pairing compatible curves support in the core protocol is likely required.
 
+
+### Hydra
+
+**State Channels (Hydra)** is a *peer-to-peer signing model*, and the design can work well for payment channels for simple purposes. The problem, however, is that the state channels are pre-set contracts for which the participants are defined at the launch. New contract creation is needed each time a new participant wants to use the channel. In return, there is higher privacy and security but little flexibility for an open system. IOHK has published a new model called [Hydra: Isomorphic State Channels](https://iohk.io/en/research/library/papers/hydrafast-isomorphic-state-channels/) that introduces multi-party state channels by utilising both on-chain and off-chain-computations-powered-by-the-eUTXO-design. Other novel state channel constructions should be possible as well. It would be good to apply off-chain techniques to applications like ErgoMixer. 
 
 
 

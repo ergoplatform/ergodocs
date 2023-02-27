@@ -3,7 +3,7 @@
 
 
 
-To find public testnet nodes, you can use [api.tokenjay.app/peers/list](https://api.tokenjay.app/peers/list) and swap ports until you find one that's running testnet.
+To find public testnet nodes, you can use [api.tokenjay.app/peers/list](https://api.tokenjay.app/peers/list) and swap ports until you find one running testnet.
 
 - [Testnet Explorer](https://testnet.ergoplatform.com/)
 - [ergo-synced-node](https://github.com/mgpai22/ergo-synced-node#ergo-testnet-node-setup)

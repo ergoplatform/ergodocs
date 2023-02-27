@@ -27,3 +27,5 @@ The P2P layer facilitates the transmission of data and information across the bl
 
 **Transaction size:** As of node `4.0.23`, there is a transaction size limit of `96kb` for the mempool. Larger transactions can only be included manually by miners. 
 
+See the [Governance](governance.md) section for more information.
+

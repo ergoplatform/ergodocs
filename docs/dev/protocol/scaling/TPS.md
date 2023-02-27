@@ -13,6 +13,6 @@ Below are approximated TPS values for some popular blockchains:
 
 In the context of Ergo, the TPS (transactions per second) metric is not very insightful. While the number of transactions a platform can handle is important, on Ergo, the weight of the transactions and the computational cost limit per block are more crucial factors. The cost limit of transactions is affected by various dynamic factors, including the network size and the hardware miners have. 
 
-With the release of [Node v5](jitc.md), the raw TPS numbers should bring us to around **47.5tx/s** - improvements on top of this are still possible. 
+With the release of [Node v5](jitc.md), the raw TPS numbers should bring us to around **47.5tx/s** - improvements on top of this are still possible. See [this report](https://github.com/ergoplatform/ergo/blob/d3d95e19b37c83b98de13bdf71d6d62b398e8f0d/metrics/Report.ipynb) for technical information on how this is calculated. 
 
-The focus is on raising the TPS without compromising classic blockchain assumptions and guarantees. 
+To scale, Ergo must focus on raising the TPS without compromising classic blockchain assumptions and guarantees. 
