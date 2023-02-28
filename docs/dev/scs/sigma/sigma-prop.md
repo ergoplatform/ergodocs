@@ -1,4 +1,4 @@
-## Sigma Propositions
+# Sigma Propositions
 
 > 🔗 From [Deco Education - ErgoScript Developer Course](https://github.com/DeCo-Education/ErgoScript-Developer-Course/blob/main/Class-Documents/Class-1/Materials/Class1.MD)
 

@@ -32,6 +32,6 @@ mkdocs serve
 - [x] Split and tidy scaling page
 - Move more research papers into markdown so they are indexed and searchable. 
 - Transfer over any remaining information from ergonaut.space
-- Missing text bottom of modes of operation
+- [x] Missing text bottom of modes of operation
 - [x] Tidy Light Nodes page (on learn the basics)
 

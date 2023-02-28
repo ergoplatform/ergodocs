@@ -8,6 +8,10 @@ There are sometimes occasions where you want to delete a token out of your walle
 
 To delete tokens from your Ergo wallet, you have a few options.
 
+- [TokenJay](https://www.tokenjay.app/app/#burntoken) (This requires a Ergopay compatible wallet like Ergo Mobile Wallet)
+- [Ergo Token Minter / Burner](https://github.com/ThierryM1212/ergo-token-minter) (Possible with a Ergo wallet extension, such as Nautilus)
+- [SAFEW](https://github.com/ThierryM1212/SAFEW) supports token burning.
+- Send to `4MQyMKvMbnCJG3aJ`
 
 
 ### P2S
@@ -16,11 +20,8 @@ To delete tokens from your Ergo wallet, you have a few options.
 
 > It looks like `0e2047ee2cbd52be01e0876c3e0b989a0d4d5f8955200b1fab0e6eeb2b182555c2fb`, where `0e` is type descriptor (byte array), `20` is bytestring length (0x20 in hex = 32), `47ee2cbd52be01e0876c3e0b989a0d4d5f8955200b1fab0e6eeb2b182555c2fb` is the hash of the file.
 
-### Services
 
-- [TokenJay](https://www.tokenjay.app/app/#burntoken) (This requires a Ergopay compatible wallet like Ergo Mobile Wallet)
-- [Ergo Token Minter / Burner](https://github.com/ThierryM1212/ergo-token-minter) (Possible with a Ergo wallet extension, such as Nautilus)
-- [SAFEW] supports token burning.
+
 
 ## Programmatically
 

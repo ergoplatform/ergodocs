@@ -2,15 +2,13 @@
 
 # Addresses
 
-## Introduction 
-
-Rather than storing a single amount (like BTC), an ergo [eutxo](eutxo.md) box has some registers to store arbitrary values, like its native tokens.
-
 Addresses are short strings that correspond to specific scripts and are used to protect a [box](box.md)
+
+Rather than storing a single amount (like BTC), an ergo [eutxo](eutxo.md) box has some registers to store arbitrary values, like its [native tokens](tokens.md).
 
 So, each box has an ERG amount and may or may not have a bunch of `{tokenid, token amount}` pairs, all in the UTXO model.
 
-Unlike account-based models like eth, ergo tokens are native and are not smart contracts.
+Unlike account-based models like eth, ergo tokens are *native* and are not smart contracts.
 
 
 ## Base58

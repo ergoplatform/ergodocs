@@ -27,7 +27,7 @@ Each transaction executed on Ergo consists of **these three things**.
 
 ### Data Inputs
 
-[**Data inputs**](read-only-inputs.md) are a unique concept created by Ergo, which has been included in Cardano with the *Vasil* Hardfork. These allow multiple transactions to share a data-input box, which will store only a single reference to the box in the block. 
+- [**Data inputs**](read-only-inputs.md) are a unique concept created by Ergo, which were added to Cardano with the *Vasil* Hardfork. These allow multiple transactions to share a data-input box, storing only a single reference to the box in the block. 
 
 
 ## Overview

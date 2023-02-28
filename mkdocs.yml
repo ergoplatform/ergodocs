@@ -175,12 +175,14 @@ nav:
 
   - Developers: 
     - dev/start.md
+    - Tutorials: dev/tutorials.md
     - Anatomy of Ergo:
       - Box: 
         - dev/data-model/box.md
         - Box Modelling: dev/data-model/box/box_modeling.md
       - Registers: dev/data-model/box/registers.md
       - Tokens:
+        - dev/data-model/box/tokens.md
         - Create a token: dev/tokens/issue.md
         - Burning a token: dev/tokens/burn.md
         - NFTs:
@@ -196,7 +198,6 @@ nav:
         ##- Address Encoding: assets/py/Ergo_Address_Encoding.ipynb
       - Transactions: 
         - dev/protocol/transactions.md
-        - Model Transaction: dev/protocol/tx/model-tx.md
         - Composing Transactions:
           - dev/protocol/tx/composing.md
           - Sending A Chained Transaction: dev/anatomy/transactions/chained.md
@@ -215,12 +216,14 @@ nav:
             - Validation: dev/protocol/tx/validation.md
             - Data Inputs: dev/protocol/tx/read-only-inputs.md
             - Fees: dev/protocol/tx/min-fee.md
-        - Standards:
-          - Babel Fees: dev/protocol/tx/babel-fees.md
-          - Proxy Contracts: dev/wallet/payments/standards/eip17.md
-          - ErgoPay Protocol: dev/wallet/payments/standards/eip20.md
-          - Payment Request URI: dev/wallet/payments/standards/eip25.md
-        - ErgoTool: dev/stack/ergotool.md
+        - Resources: 
+          - Standards:
+            - Babel Fees: dev/protocol/tx/babel-fees.md
+            - Proxy Contracts: dev/wallet/payments/standards/eip17.md
+            - ErgoPay Protocol: dev/wallet/payments/standards/eip20.md
+            - Payment Request URI: dev/wallet/payments/standards/eip25.md
+          - ErgoTool: dev/stack/ergotool.md
+          - Model Transaction: dev/protocol/tx/model-tx.md
 
       - Block: dev/data-model/block.md
       - Wallets:
@@ -235,7 +238,6 @@ nav:
           - Deterministic Wallet Standard: dev/wallet/standards/eip3.md
           - Cold Wallet: dev/wallet/standards/eip19.md
       #- UTXO-State: 
-    
     - Development Stack: 
       - dev/start.md
       - Starter Tutorial: dev/stack/basics.md
@@ -313,7 +315,6 @@ nav:
         - Oracle-Core: dev/oc/oracle.md
         - Spectrum.DEX off-chain services: dev/oc/dex_bots.md
         - Ergo Utilities Rust: dev/oc/ergo_utilities.md
-    - Tutorials: dev/tutorials.md
     - Developer Tooling:
       - Programming Languages:
         - JVM: 
@@ -369,13 +370,10 @@ nav:
       - Smart Contracts: dev/scs/index.md
       - Sigma Language:
         - dev/scs/sigma-lang.md
-        - Data Structures:
-          - AVL Trees: dev/protocol/avl.md
         - ErgoScript: 
           - dev/scs/ergoscript.md
-          - Overview: 
-            - dev/scs/ergoscript.md
-            - Quick Primer: dev/scs/ergoscript-primer.md
+          - Quick Primer: 
+            - dev/scs/ergoscript-primer.md
             - Creating a simple P2S app: dev/scs/p2s.md
           - Language Description: 
             - dev/scs/sigma/lang-spec.md
@@ -385,12 +383,27 @@ nav:
             - Accessing boxes and registers: dev/scs/boxes-and-registers.md
             - Global Functions: dev/scs/global-functions.md 
             - Language Operations: dev/scs/sigma/lang-ops.md
+          - Cryptographic: 
+              - crypto.md
+              - Sigma Protocols: 
+                - dev/scs/sigma.md
+                - Schnorr: 
+                  - dev/scs/sigma/schnorr.md
+                  - Verifying Schnorr Signatures: dev/scs/sigma/verifying.md
+                - Diffie: 
+                  - dev/scs/sigma/diffie.md
+                  - ZeroJoin: dev/crypto/zerojoin.md
+              - Ring Signatures:
+                - 3-out-of-5 Threshold Signature: dev/scs/sigma/3-out-of-5.md
+                - Distributed Signatures: node/sigs.md
           - Tooling:
             - Debugging: dev/scs/debugging.md
             - FlowCards: dev/scs/flowcards.md
             - ErgoScala: dev/stack/ergoscala.md
             - Compiler: dev/stack/compiler.md
             - Kiosk: dev/stack/kiosk.md
+        - Data Structures:
+          - AVL Trees: dev/protocol/avl.md
         - ErgoTree: 
           - dev/scs/ergotree.md
           - Introduction: dev/scs/ergotree/ergotree-intro.md
@@ -409,19 +422,7 @@ nav:
         - Transaction Graphs: dev/scs/tx/tx-graphs.md
       #- Data Inputs: dev/scs/data-inputs.md
        
-      - Cryptographic: 
-              - crypto.md
-              - Sigma Protocols: 
-                - dev/scs/sigma.md
-                - Schnorr: 
-                  - dev/scs/sigma/schnorr.md
-                  - Verifying Schnorr Signatures: dev/scs/sigma/verifying.md
-                - Diffie: 
-                  - dev/scs/sigma/diffie.md
-                  - ZeroJoin: dev/crypto/zerojoin.md
-              - Ring Signatures:
-                - 3-out-of-5 Threshold Signature: dev/scs/sigma/3-out-of-5.md
-                - Distributed Signatures: node/sigs.md
+      
           
     - Resources: dev/stack/introduction.md
 
