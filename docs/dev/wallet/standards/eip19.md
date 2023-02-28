@@ -52,25 +52,21 @@ Interaction with the Cold Wallet device can be done via QR codes (in case of mob
 or by transferring files (in case of Raspberry Pi). For simplicity, only QR code is mentioned in the 
 following text. This does not mean any restriction of the transportation method.
 
-1) A user creates a transaction in the Hot Wallet application and then
-presses a "Sign With Cold Wallet" button
-2) The Hot Wallet application shows a QR code with serialized transaction
-bytes on the screen
-3) User scans the QR code using the Cold Wallet device, signs the
-transaction after which QR code of the signed transaction is displayed.
-4) Then user scans the QR code of the signed transaction and sends it to blockchain.
+- A user creates a transaction in the Hot Wallet application and then presses a "Sign With Cold Wallet" button
+- The Hot Wallet application shows a QR code with serialized transaction bytes on the screen
+- User scans the QR code using the Cold Wallet device, signs the transaction after which QR code of the signed transaction is displayed.
+- Then user scans the QR code of the signed transaction and sends it to blockchain.
 
 The design of Ergo contracts allows for a simple and universal implementation
 which we describe in [Reference Implementation](#reference-implementation)
 section.
 
 In the following sections we:
- 1) describe the main problem we need to solve; 
- 2) describe a solution;  
- 3) specify a protocol with two roles: HotWallet and
-ColdWallet which must be implemented by complying Wallet applications and 
- 4) describe a reference implementation of both Hot and Cold roles in [Ergo Wallet
-for Android](https://github.com/MrStahlfelge/ergo-wallet-android).
+
+- describe the main problem we need to solve; 
+- describe a solution;  
+- specify a protocol with two roles: HotWallet and ColdWallet which must be implemented by complying Wallet applications and 
+- describe a reference implementation of both Hot and Cold roles in [Ergo Wallet for Android](https://github.com/MrStahlfelge/ergo-wallet-android).
 
 ## Cold Signing Problem
 

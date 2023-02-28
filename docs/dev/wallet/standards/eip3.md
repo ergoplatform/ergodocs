@@ -5,7 +5,7 @@
 Motivation
 ----------
 
-The [BIP-0044](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki) defines a logical hierarchy for deterministic wallets. This is a common standard that is used directly (or used as inspiration) by countless projects in the cryptocurrency sphere.
+[BIP-0044](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki) defines a logical hierarchy for deterministic wallets. This is a common standard that is used directly (or used as inspiration) by countless projects in the cryptocurrency sphere.
 
 Such a standard allows end users to move between different wallet software trivially, and thus sets down a framework for a more cohesive ecosystem to grow.
 
@@ -33,14 +33,12 @@ Thus our path will look as such:
 
 ```
 m / 44' / 429' / account' / change / address_index
-
 ```
 
 And the first default key pair for an Ergo wallet will be:
 
 ```
 m / 44' / 429' / 0' / 0 / 0
-
 ```
 
 Change

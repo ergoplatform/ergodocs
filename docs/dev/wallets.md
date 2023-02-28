@@ -13,7 +13,6 @@ Note that wallets are supported by third parties, we only provide the informatio
 | [Paper Wallet](https://anon-br.github.io/ergo-paper-wallet/) | Cold |  |  |  |  |  |
 | [Viawallet](https://apps.apple.com/us/app/viawallet-multi-chain-wallet/id1462031389) | Mobile |  |  |  |  |  |
 | [URL Wallet](https://erg.urlwallet.org/) | URL |  |  |  |  |  |
-| [Yoroi](https://yoroi-wallet.com/) | Web | ✅ |  |  |  |  |
 
 ## Wallets
 
@@ -78,11 +77,7 @@ More information available on their [GitHub](https://github.com/Satergo/Satergo)
 The full node comes with a wallet panel interface. 
 
 
-### Yoroi
 
-Yoroi is a light-wallet built by Emurgo, a founding partner of Cardano. 
-
-[Yoroi Frontend GitHub](https://github.com/Emurgo/yoroi-frontend)
 
 ## Misc
 

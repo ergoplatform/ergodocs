@@ -3,7 +3,7 @@ tags:
   - Data Model
 ---
 
-## Model Transaction
+# Model Transaction
 
 You may have experienced some confusion if you have checked the explorer to view your transaction details. The UTXO model is critically different from the Account model via the concept of "boxes" we introduce for data-keeping. In the Accounts model, there is a single account where you receive your coins. In the UTXO model, however, every transaction creates a new box, and your balance is the sum of all the boxes linked to your addresses.
 
