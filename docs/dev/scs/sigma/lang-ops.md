@@ -1,3 +1,7 @@
+# Language Operations
+
+## Opcodes
+
 |   Code	|   Operation	|   Comment	|
 |---	|---	|---	|
 |   1	| $LT(left: Value[SInt], right: Value[SInt])$$	|   	|
@@ -56,12 +60,24 @@
 
 
 
-UnknownByteArray
+## UnknownByteArray
 
-TaggedVariable
+## TaggedVariable
 
-SGroupElement
+- [Remove unused TaggedVariable node #657](https://github.com/ScorexFoundation/sigmastate-interpreter/pull/657)
+  
+## SGroupElement
 
-Blockchain related objects (BoxLeafConstant, SAvlTree (AvlTreeData))
+The 'S' in front of `SGroupElement` refers to the sigma state code under the ErgoScript. When working on the ErgoScript directly, you will use `GroupElement`.
 
-Height
+
+## Blockchain related objects 
+
+### BoxLeafConstant 
+### SAvlTree (AvlTreeData)
+
+- ["AvlTree" -> SAvlTree](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/fe7319f6ddd131d4bc02f46313f3590721f39f3b/parsers/shared/src/main/scala/sigmastate/lang/Types.scala#L40)
+
+- [case class AvlTreeData(digest: ADDigest](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/fe7319f6ddd131d4bc02f46313f3590721f39f3b/interpreter/shared/src/main/scala/sigmastate/AvlTreeData.scala#L54)
+
+## Height

@@ -167,12 +167,18 @@ nav:
         - Node Configuration: mining/setup/solo-node.md
         - Stratum: mining/setup/stratum.md
         - MiningCore: mining/setup/miningcore.md
-    - Governance: mining/governance.md
-    - Features:
+    - Governance: mining/governance.md      
+    - Tooling:
+      - GuapSwap: eco/guapswap.md
+      - Lithos: 
+        - eco/lithos.md
+        - SNISPs: eco/snisp.md
+      - CYTI: eco/cyti.md
       - Log-Space Mining: mining/log_space.md
       - Smartpools: 
         - mining/smartpools.md
         - Subpooling: mining/setup/subpool.md
+
 
   - Developers: 
     - dev/start.md
@@ -532,11 +538,7 @@ nav:
 
 
 
-    - Mining:
-      - Lithos: eco/lithos.md
-      - CYTI: eco/cyti.md
-      - SNISP: eco/snisp.md
-      - GuapSwap: eco/guapswap.md
+
 
     - Gaming: 
       - uses/gaming.md
