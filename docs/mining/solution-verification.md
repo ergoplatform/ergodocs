@@ -1,4 +1,4 @@
-## Solution Verification
+# Solution Verification
 
 ```
 Test Vectors - Ergo:

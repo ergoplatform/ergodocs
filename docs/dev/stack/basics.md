@@ -111,7 +111,7 @@ this address from a mnemonic phrase the following way:
 === "JavaScript"
 
      
-      tbd    
+      tbd
     
 
 === "Python"
@@ -172,7 +172,35 @@ Luckily, our SDKs help you by providing high-level methods for this common task.
 === "JavaScript"
 
      
-      tbd    
+        import { TransactionBuilder, OutputBuilder } from "@fleet-sdk/core";
+
+        new TransactionBuilder(creationHeight);
+
+        type Box = {
+          boxId: string;
+          value: string | bigint;
+          assets: { tokenId: string; amount: string | bigint }[];
+          ergoTree: string;
+          creationHeight: number;
+          additionalRegisters: NonMandatoryRegisters;
+          index: number;
+          transactionId: TransactionId;
+        };
+
+        new TransactionBuilder(creationHeight)
+          .from(inputs)
+          .withDataFrom(dataInputs);
+
+        new TransactionBuilder(creationHeight)
+          .from(inputs)
+          .to(
+            new OutputBuilder(
+              "1000000", // amount of nanoergs
+              "9gNvAv97W71Wm33GoXgSQBFJxinFubKvE6wh2dEhFTSgYEe783j" // recipient address
+            )
+        );
+
+
     
 
 === "Python"

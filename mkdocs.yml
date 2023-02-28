@@ -136,6 +136,7 @@ nav:
       - Social Contract: social_contract.md
       - Audit: dev/protocol/audit.md
       - Transparency Report: ergo-foundation-2022.md
+      - The Howey Test: security.md
     - EIPs: dev/protocol/eip.md
 
   - Miners:
@@ -474,12 +475,12 @@ nav:
       - Bonds:
         - SigmaFi: eco/sigmafi.md
         - Bonding Curve: uses/bonding.md
-      - Options: 
-        - uses/options.md
-        - SigmaO: eco/sigmao.md
       - Derivatives:
         - uses/deriv.md
         - Tensile: eco/tensile.md
+        - Options: 
+          - uses/options.md
+          - SigmaO: eco/sigmao.md
       - CrowdFunding: 
         - uses/crowdfunding.md
         - ErgoRaffle: eco/ergoraffle.md
