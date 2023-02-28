@@ -476,7 +476,6 @@ nav:
       - Options: 
         - uses/options.md
         - SigmaO: eco/sigmao.md
-        - P2P Options: uses/p2p_options.md
       - Derivatives:
         - uses/deriv.md
         - Tensile: eco/tensile.md

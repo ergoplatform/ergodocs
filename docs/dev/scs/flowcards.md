@@ -425,8 +425,7 @@ create and use `*.flowcard` files.
 - [Ergo Appkit](https://github.com/ergoplatform/ergo-appkit)
 - [Introduction to Appkit](https://ergoplatform.org/en/blog/2019_12_03_top5/)
 - [Appkit Examples](https://github.com/aslesarenko/ergo-appkit-examples)
-- [Spectrum ScalaDocs](https://ergoplatform.github.io/ergo-dex/api/org/ergoplatform/dex/ErgoDexTool$.html)
 - [ErgoTree Specification](https://ergoplatform.org/docs/ErgoTree.pdf)
 - [flowcardLib: Ergo FlowCard library for diagrams.net](https://github.com/lucagdangelo/flowcardLib)
-- 
+
 > With thanks to [Robert Kornacki](https://github.com/robkorn) for polishing off the draft.

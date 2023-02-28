@@ -10,7 +10,6 @@ There is no formal doc for ergo-graphql but you can play around with Apollo Stud
 Currently we have a few public community/partner maintained explorer instances with GraphQL support:
 
 - [gql.ergoplatform.com](https://gql.ergoplatform.com)
-- [ergo-explorer.getblok.io/graphql](https://ergo-explorer.getblok.io/graphql)
 - [explore.sigmaspace.io/api/graphql](https://explore.sigmaspace.io/api/graphql)
 - [graphql.erg.zelcore.io/](https://graphql.erg.zelcore.io/)
 - custom explorer instance using GraphQL backend at [sigmaexplorer.org/](https://sigmaexplorer.org/)

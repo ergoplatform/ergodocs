@@ -293,7 +293,7 @@ Need help figuring out where to start developing? This [introduction to Mosaik](
 ## Test vectors
 
 - [Ergo transaction serialization](https://git.io/fjqwX)
-- [Signature scheme](https://git.io/fjqwH)
+- [Signature scheme](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/test/scala/sigmastate/crypto/SigningSpecification.scala)
 
 ## Analysis
 

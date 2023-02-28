@@ -63,7 +63,7 @@ Please see this [Quick Primer on ErgoScript](/dev/scs/ergoscript-primer) for an 
 ##### Explanations
 
 - [ErgoScript Design patterns](https://www.ergoforum.org/t/ergoscript-design-patterns/222)
-- [SigmaState Protocols](https://docs.ergoplatform.com/sigmastate_protocols.pdf)
+- [SigmaState Protocols](https://storage.googleapis.com/ergo-cms-media/docs/sigmastate_protocols.pdf)
 
 ##### References
 

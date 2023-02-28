@@ -9,11 +9,18 @@ In order to send money to a sidechain they must attach a proof that proves they 
 
 ## NiPoPoWs
 
-NiPoPoWs enable trustless sidechain through [***Simplified Payment Verification***](spv.md) (SPV) proofs and is resistant to such attacks while also being small enough that they can actually be sent over the network.
 
-While "compact SPV proofs" have been proposed previously, they've proved vulnerable to certain attacks, ones that would potentially allow miners to steal money left on the sidechains.
+NiPoPoWs (Non-Interactive Proofs of Proof-of-Work) are a type of proof that allows for the efficient verification of large amounts of data stored in a blockchain. They are useful for creating sidechains, which are separate blockchains that can be linked to a main blockchain. Sidechains can scale a blockchain network by offloading some transaction processing to a separate chain.
 
-To put it simply, NIPoPoWs can be of great use in sidechains. Two or more separate chains can integrate through NIPoPoWs without the need for change in other chains. Such integration would erase the need for, for example, "Wrapped Tokens," tokens that rely on DAO governance. 
+NiPoPoWs work by allowing for the efficient verification of a subset of blocks in a blockchain rather than requiring the entire blockchain to be verified. This makes it possible to link a sidechain to a main chain while ensuring it remains secure and trustworthy.
+
+One way that NiPoPoWs can be used for scaling is by allowing for the creation of off-chain state channels. State channels allow transactions to be processed off-chain, reducing the load on the main blockchain. NiPoPoWs can be used to ensure the integrity of state channel transactions while still allowing for efficient verification of the blockchain.
+
+Another way that NiPoPoWs can be used for scaling is by allowing for the creation of ["light"](light-spv-node.md) or ["thin"](pruned-full-node.md) clients that don't need to download and verify the entire blockchain. Instead, they can use NiPoPoWs to verify a subset of blocks, reducing the client's storage and processing requirements.
+
+Overall, NiPoPoWs are useful for creating sidechains and scaling blockchain networks. They allow for efficient verification of a subset of blocks, reducing client storage and processing requirements and enabling off-chain state channel creation.
+
+
 
 
 ## Resources
