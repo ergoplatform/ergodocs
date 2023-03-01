@@ -30,7 +30,12 @@ mkdocs serve
 - [x] Split and tidy scaling page
 - [x] Missing text bottom of modes of operation
 - [x] Tidy Light Nodes page (on learn the basics)
+- [x] SigmaRust and ergpy added to frameworks index
+- [x] ergopuppet to ergoscript tooling
 - [ ] Tidy and clarify the Multi-Stage contract/transaction pages. 
-- [ ] Move more research papers into markdown so they are indexed and searchable. 
+- [ ] Move more research papers into markdown, so they are indexed and searchable. 
 - [ ] Transfer over any remaining information from ergonaut.space
 - [ ] Finish moving over ErgoTree specification
+- [ ] Improve lang index pages
+- [ ] off-chain bots
+- [ ] box index -> registers index

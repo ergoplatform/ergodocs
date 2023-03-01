@@ -57,4 +57,22 @@
 
 ## ErgoScript
 
-- [ErgoScript By Example](ergoscript.md)
+### Courses
+
+- [ErgoScript 101 Crash Course](https://docs.google.com/presentation/d/10gYO82z_7qloRrFOcCxTFuzpP40IImPyIKMV2ZFd9M4/edit#slide=id.p) (Slides)
+- [Learn ErgoScript By Example Via The Ergo Playground with Robert Kornacki (Video)](https://www.youtube.com/watch?v=8l2v1asHgyA)
+- [The ErgoScript Developer Course from DeCo Education](https://github.com/DeCo-Education/ErgoScript-Developer-Course)
+- [Deco Education: 2022 Script Class](https://www.youtube.com/watch?v=qR0_k7VH6KI&list=PLopsKGshj0B4DfFnS-pvriZhba050eaXu)
+
+
+### Tutorials 
+
+- [ErgoScript by Example Repository](https://github.com/ergoplatform/ergoscript-by-example)
+- [Testing Ergo Contracts Off-chain](https://github.com/anon-real/contract-testing)
+
+
+### Advanced Tutorials
+
+- [Advanced ErgoScript Tutorial](https://ergoplatform.org/docs/AdvancedErgoScriptTutorial.pdf)
+- [ErgoScript tutorial](https://ergoplatform.org/docs/ErgoScript.pdf)
+

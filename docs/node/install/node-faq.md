@@ -32,11 +32,10 @@ kill -9 $(lsof -t -i:9030)
 ```
 
 
-## Running the node
 
-### Minimum Requirements
 
-## Prerequisites
+
+## Minimum Requirements
 
 ### Java 
 
@@ -57,6 +56,10 @@ The only hardware requirements is ~20GB of space to store the chain, and ~8GB of
 The node uses Java so should work across all operating systems. You can even run on a [Raspberri Pi](pi.md). 
 
 > Note that due to the intensive disk I/O, 4-6GB of ram is recommended with a fast SSD, running with the `-Xmx4G` flag on JVM9/11
+
+
+## Running the node
+
 
 ### Commands
 

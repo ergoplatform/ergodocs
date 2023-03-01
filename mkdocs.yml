@@ -320,8 +320,8 @@ nav:
       - APIs: dev/stack/api.md
       - Off-Chain:
         - Oracle-Core: dev/oc/oracle.md
-        - Spectrum.DEX off-chain services: dev/oc/dex_bots.md
-        - Ergo Utilities Rust: dev/oc/ergo_utilities.md
+        - Off-Chain Bots: dev/oc/dex_bots.md
+        - Rust Utilities: dev/oc/ergo_utilities.md
     - Developer Tooling:
       - Programming Languages:
         - JVM: 
@@ -345,6 +345,7 @@ nav:
         - SigmaRust: dev/stack/sigma-rust.md
         - Fleet (JS): dev/stack/fleet.md
         - Others:
+          - Ergpy: dev/stack/ergpy.md
           - RustKit: dev/stack/rustkit.md
           - Mosaik: 
             - dev/stack/mosaik/intro.md
@@ -406,6 +407,7 @@ nav:
           - Tooling:
             - Debugging: dev/scs/debugging.md
             - FlowCards: dev/scs/flowcards.md
+            - ErgoPuppet: dev/scs/puppet.md
             - ErgoScala: dev/stack/ergoscala.md
             - Compiler: dev/stack/compiler.md
             - Kiosk: dev/stack/kiosk.md

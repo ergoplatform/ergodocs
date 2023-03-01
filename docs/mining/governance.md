@@ -1,14 +1,15 @@
 # Governance
 
-Ergo Miners have the ability to adjust the block size which increases the amount of transactions per block. This increases potential rewards but also adds additional storage requirements. adjust the emission macroeconomics, meaning the long term economic security of the protocol is up to miners to decide. 
+Many parameters in Ergo can be changed on-the-fly via miners voting. Things like instructions costs, computational cost limit per block, block size limit, storage fee factor, and block version. Meaning the long-term economic security of the protocol is up to miners to decide. 
 
-In addition to the protocol parameters above that can be changed via on-chain miner voting, most things on Ergo can be changed via a soft-forking protocol (90% support required). This excludes critical changes such as changing the max supply. 
+In addition to the protocol parameters [listed below](#parameters-table) that can be changed via on-chain miner voting, most things on Ergo can be changed via a soft-forking protocol (90% support required). This excludes critical changes such as changing the max supply. 
 
-Many parameters can be changed on-the-fly via miners voting, such as instructions costs, computational cost limit per block, block size limit, storage fee factor, block version, etc. 
+Voting for the block version lasts **32 epochs** and requires more than **90 percent** of the miners to vote for the change. A simple majority is enough for less critical changes such as block size limit. We will further refer to the changes of the first kind as 'foundational changes', and we refer to the changes of the second kind as 'everyday changes'. 
 
-Voting for the block version lasts 32 epochs and requires more than 90 percent of the miners to vote for the change. A simple majority is enough for less critical changes such as block size limit. We will further refer to the changes of the first kind as foundational changes, and we refer to the changes of the second kind as everyday changes. Per block, a miner can vote for two everyday changes and one foundational change, with the votes to be included in the block's header.
+> Per block, a miner can vote for two everyday changes and one foundational change, with the votes to be included in the block's header.
 
-To vote **Yes** and propose a change in the first block of an epoch, a miner is publishing the identifier of the change directly in the block header. To vote **No** (or avoid voting at all, which is the same), a miner writes zero value instead of a corresponding byte (another option is to provide a vote identifier not considered within the epoch).
+- To vote **Yes** and propose a change in the first block of an epoch, a miner publishes the identifier of the change directly in the block header. 
+- To vote **No** (or avoid voting at all, which is the same), a miner writes zero value instead of a corresponding byte (another option is to provide a vote identifier not considered within the epoch).
 
 ## System constants:
 
@@ -25,13 +26,15 @@ To vote **Yes** and propose a change in the first block of an epoch, a miner is 
 
 ## Parameters table
 
+The following table describes vote identifiers, default values (during launch), possible steps, and minimum and maximum values. 
+
+- If the step is not defined in the table, its value is defined as $\max(\lfloor current\_value / 100 \rfloor, 1)$. 
+- If the minimum value for a parameter is not defined, it equals zero. 
+- If the maximum value is not defined, it equals `1,073,741,823`.
+
+A miner includes a parameter identifier ($id$) into the block header to propose or vote for increasing a parameter. If the miner supports decreasing the parameter, they would include ($-id$) into the block header.
+
 > Try out these parameters on [deadit.github.io/paizo/](https://deadit.github.io/paizo/)
-
-
-The following table describes vote identifiers, default values (during launch), possible steps, and minimum and maximum values. If the step is not defined in the table, its value is defined as $\max(\lfloor current\_value / 100 \rfloor, 1)$. If the minimum value for a parameter is not defined, it equals zero. If the maximum value is not defined, it equals `1,073,741,823`.
-
-A miner includes a parameter identifier ($id$) into the block header to propose or vote for increasing a parameter. If the miner supports decreasing the parameter, he includes ($-id$) into the block header.
-
 
 | ID | Description | Default | Step | Min | Max |
 |---|---|---|---|---|---|
@@ -47,6 +50,7 @@ A miner includes a parameter identifier ($id$) into the block header to propose 
 
 Parameter values are to be written into the extension section on the first block of a voting epoch,
 that is, in the extension of a block when its $height\,mod\,1024 = 0$.
+
 Parameters for the initial moment of time~$(height = 1)$ are hardcoded.
 
 ## Proposing a change and voting for it

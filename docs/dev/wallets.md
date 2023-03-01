@@ -20,20 +20,18 @@ Note that wallets are supported by third parties, we only provide the informatio
 
 > Nautilus is a privacy-focused web-based wallet 
 
-Ledger support is currently in development, this can be tested with Nautilus if you have a Ledger Nano **S**. 
+Ledger support is currently in available [in developer mode for ledger](ledger.md)
 
-### Ergo Wallet (Mobile)
+### Ergo Wallet (Android) / Terminus (iOS)
 
-Please see the official wallet [wallet page](https://ergoplatform.org/en/mobile-wallets/). 
+Please see the official [wallet page](https://ergoplatform.org/en/mobile-wallets/). 
 
-### Minotaur
+### Minotaur (Multi-Platform)
 
-> The first multi-platform wallet for ergo.
-
-Minotaur is a multi-platform dApp wallet that has *dApp stack support* - Allowing any dApp to be embedded directly in app. 
+Minotaur is a multi-platform dApp wallet with _dApp stack support_, allowing any dApp to be embedded directly in the app. 
 
 
-### SAFEW
+### SAFEW (Web)
 
 > Simple And Fast Ergo Wallet is the most feature-rich wallet, best suited for developers. It has several features such as
 
@@ -45,41 +43,23 @@ Minotaur is a multi-platform dApp wallet that has *dApp stack support* - Allowin
 - Transaction builder in Expert mode (mint/burn/etc)
 - Chained transactions
 
-More information available on their [GitHub](https://github.com/ThierryM1212/SAFEW)
+More information is available on their [GitHub](https://github.com/ThierryM1212/SAFEW)
 
 ### Satergo (Desktop) 
 
 > Desktop wallet for the cryptocurrency Ergo with embedded node functionality. Available at [satergo.com](https://www.satergo.com)
 
-Why use Satergo?
-
-- **Secure**: Everything is encrypted and stored with the program
-- **Independent**: Host your own node if you want to
-- **Invaluable**: Contribute to the Ergo network
-- **Portable**: Does not depend on any other software being installed
-- **Cross-platform**: Supports all major desktop platforms
-- **Fully featured**: Has many features but still easy to use
-- **Deterministic**: Know what runs on your computer
-- **Light**: Usable in slow or portable operating system environments
-
-**Supported platforms**
-
-- Windows (x64)
-- Linux (x64 and aarch64)
-- Mac (x64 and aarch64)
-- Universal (Java 17+)
-
-More information available on their [GitHub](https://github.com/Satergo/Satergo)
+More information is available on their [GitHub](https://github.com/Satergo/Satergo)
 
 
-### [Node](install.md) (Desktop) 
+### [Node](install.md) (Server) 
 
-The full node comes with a wallet panel interface. 
+The full node comes with a wallet panel interface. This is generally only recommended for developers. 
 
 
 
 
-## Misc
+## Others
 
 - [tesseract-one/ledger-app-ergo](https://github.com/tesseract-one/ledger-app-ergo)
 - [anon-br/ledgerjs-hw-app-ergo](https://github.com/anon-br/ledgerjs-hw-app-ergo)
