@@ -9,7 +9,8 @@ Handshaking
 
 To establish a connection with another peer, a handshake messages exchange is needed in the first place. This document describes handshaking procedure and messages format. 
 
-There is also [github.com/SabaunT/ergo-handshake](https://github.com/SabaunT/ergo-handshake)
+- An implementation can be found in [Ergonnection](https://github.com/Satergo/Ergonnection/blob/master/src/main/java/com/satergo/ergonnection/ErgoSocket.java), a P2P Java library for Ergo
+- There is also [github.com/SabaunT/ergo-handshake](https://github.com/SabaunT/ergo-handshake)
 
 Peer Feature
 ------------
