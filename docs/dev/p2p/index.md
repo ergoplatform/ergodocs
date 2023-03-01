@@ -9,10 +9,7 @@ The Ergo network protocol uses full nodes (peers) to maintain a collaborative pe
 
 ## Introduction
 
-The [**Full Node**](install.md) downloads and verifies every block (and transactions) before it relays them to other nodes. 
-
-[Significant improvements](https://github.com/ergoplatform/ergo/pull/1290) have recently been made to the P2P layer under [Layer 0 scaling](layer0.md) efforts. See all open [P2P issues](https://github.com/ergoplatform/ergo/issues?q=p2p+is%3Aopen).
-
+The [**Full Node**](install.md) downloads and verifies every block (and transaction) before it relays them to other nodes.
 
 
 ## [Handshake](/dev/p2p/p2p-handshake)
