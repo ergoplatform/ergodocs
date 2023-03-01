@@ -21,7 +21,7 @@ You can also use [Docker](docker.md), and even a [Raspberri Pi](pi.md) with a fa
 
 - [Explorer & Node Bundles](explorer.md#toolkits)
 - [ergosphere](https://ergosphere.cloud/) is an Umbrel-like solution that allows an easy setup of self-hosted Ergo services. (BETA)
-
+- [Ergode](https://github.com/ross-weir/ergode) (ergo-node) is a Ergo node implemented in TypeScript targeting web & native runtimes. 
 
 ### API 
 

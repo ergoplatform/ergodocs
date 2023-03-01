@@ -9,3 +9,5 @@ The fourth criterion, entrepreneurial or managerial efforts of others, requires 
 This decentralisation will increase over time as more third-party developers bring value to the Platform. The Foundation is community-led and has made great efforts to inform and encourage discussion with the community. If the foundation were to vanish, the development would not need to stop, and miners could extract and spend all of the Foundation's funds through storage rent. Therefore, it is difficult to argue that the success of the Platform and the value of ERG tokens necessarily rely on the Foundation or its members. Overall, the value of ERG tokens is becoming [more market-driven and independent of the Foundation](ergo-foundation-2022.md), which suggests that **the fourth criterion of the Howey Test is not met.** 
 
 As a result, ERG tokens should not be considered securities for federal securities law purposes.
+
+> Please note, this page is solely an opinion to answer some questions within the community based on the established framework of the Howey Test and does not constitute investment or legal advice. 

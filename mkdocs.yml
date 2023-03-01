@@ -137,6 +137,7 @@ nav:
       - Audit: dev/protocol/audit.md
       - Transparency Report: ergo-foundation-2022.md
       - The Howey Test: security.md
+      - Privacy Guide: doc/privacy-guide.md
     - EIPs: dev/protocol/eip.md
 
   - Miners:
@@ -504,12 +505,16 @@ nav:
     - Exchanges:
       - uses/dex.md
       - Spectrum Finance: eco/spectrum.md
-      - Analog Ergo: eco/analog-ergo.md
-      - Palmyra ComDEX: eco/palmyra.md
-      - Local Exchange Trading Systems (LETS): 
-        - uses/lets.md
-        - Basic Implementation: uses/lets/basic-imp.md
-        - Trustless LETS: uses/lets/trustless-lets.md
+      - P2P: 
+          - Token Jay: eco/token-jay.md
+          - Analog Ergo: eco/analog-ergo.md
+          - Single Tx Swap: eco/single-tx-swap.md
+      - Others:
+        - Palmyra ComDEX: eco/palmyra.md
+        - Local Exchange Trading Systems (LETS): 
+          - uses/lets.md
+          - Basic Implementation: uses/lets/basic-imp.md
+          - Trustless LETS: uses/lets/trustless-lets.md
 
 
     - NFTs:
