@@ -14,13 +14,13 @@ tags:
 
 Every message in the P2P protocol has the following format:
 
-| Data type         | Field name              | Details                                                                                                                   |  
-|:------------------|:------------------------|:--------------------------------------------------------------------------------------------------------------------------|
-| byte\[4\]         | Magic bytes             | For the mainnet, the magic bytes are `{1, 0, 2, 4}`. For testnet, `{2, 0, 0, 1}`.                                         |              
-| unsigned byte     | Message code            | One byte describing message type                                                                                          |
-| int               | Message body length     | No `VLQ` and `ZigZag` encoding is used for message length (for historical reasons); bytes are coming in big-endian order. |
-| byte\[4\]         | Handshake body checksum | First four bytes of blake2b(message body)                                                                                 |                                        
-| byte\[bodyLength] | Message body            | Message body                                                                                                              |
+| Data type         | Field name              | Details                                                                                                                      |  
+|:------------------|:------------------------|:-----------------------------------------------------------------------------------------------------------------------------|
+| byte\[4\]         | Magic bytes             | For the mainnet, the magic bytes are `{1, 0, 2, 4}`. For testnet, `{2, 0, 0, 1}`.                                            |              
+| unsigned byte     | Message code            | One byte describing message type                                                                                             |
+| int               | Message body length     | No `VLQ` or `ZigZag` encoding is used for the message length (for historical reasons); bytes are coming in big-endian order. |
+| byte\[4\]         | Handshake body checksum | First four bytes of blake2b256(message body)                                                                                 |                                        
+| byte\[bodyLength] | Message body            | Message body                                                                                                                 |
 
 ## Records
 
@@ -55,6 +55,7 @@ Every message in the P2P protocol has the following format:
 | Data type            | Field name       |
 |:---------------------|:-----------------|
 | byte\[32\]           | Modifier type ID |
+| byte\[32\]           | Modifier ID      |
 | VLQ unsigned int     | Length of object |
 | byte\[objectLength\] | Object           |
 
@@ -183,3 +184,5 @@ Demo applications:
 ## Resources
 
 A simple implementation of VLQ and ZigZag can be found [here](https://gist.github.com/satsen/5e7bcc38565ad193cf7d906a856f804e), simply use the methods (you do not have to worry about whether it is ZigZag encoded or not).
+
+A complete implementation of the P2P protocol written in Java, [Ergonnection](https://github.com/Satergo/Ergonnection).
