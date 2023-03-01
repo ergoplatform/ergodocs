@@ -44,9 +44,12 @@
 | #       | Description                                                  |
 | ------- | ------------------------------------------------------------ |
 | **3.1** | Enable [OrgRobot](https://tgdev.io/bot/orgrobot) with custom questions. |
+| **3.1** | [tgdev](https://tgdev.io/bot/orgrobot) has a few handy free bots like [daysandbox_bot](https://tgdev.io/bot/daysandbox_bot) & [grep_robot](https://tgdev.io/bot/grep_robot) |
 | **3.2** | The built-in spam protection should be sufficient if properly configured.         |
 | **3.3** | [Bridge your chats](#bridge) with the Ergo Discord |
 | **3.3** | Get your Telegram added to [@ErgoChats](https://t.me/Ergo_Chats) on Telegram. |
+| **3.3** | Create a PR to add yourself to [this documentation](https://github.com/glasgowm148/ergodocs) |
+| **3.3** | Get added on [ergcube](https://ergcube.com/index.php?do=static&page=socials) and [sigmaverse](https://github.com/ergoplatform/sigmaverse) |
 | **3.4** | Participate in the weekly developer and marketing updates. |
 | **3.4** | Particpate in [ergoforum.org/c/marketing](https://www.ergoforum.org/c/marketing/13) |
 | **3.5** | Teach good principles like [KYA](kya.md). |

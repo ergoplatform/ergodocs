@@ -492,6 +492,7 @@ nav:
       - CrowdFunding: 
         - uses/crowdfunding.md
         - ErgoRaffle: eco/ergoraffle.md
+        - Sigma Subscriptions: eco/sigma-subscriptions.md
         - ErgoWell: eco/ergowell.md
         - ErgoFund: uses/ergofund.md
       - Further Ideas:
@@ -503,6 +504,7 @@ nav:
     - Exchanges:
       - uses/dex.md
       - Spectrum Finance: eco/spectrum.md
+      - Analog Ergo: eco/analog-ergo.md
       - Palmyra ComDEX: eco/palmyra.md
       - Local Exchange Trading Systems (LETS): 
         - uses/lets.md
@@ -515,6 +517,7 @@ nav:
       - Ergo Auctions: eco/ergo-auctions.md
       - SkyHarbor: eco/skyharbor.md
       - Lilium: eco/lilium.md
+      - SigmaStamp: eco/sigma-stamp.md
   
     - DAOs:
       - uses/dao.md 
@@ -544,16 +547,17 @@ nav:
 
     - Gaming: 
       - uses/gaming.md
-      - Lotteries: uses/lottery.md
       - BlitzTCG: eco/blitz.md
       - Metaverse:
         - Cyberverse: eco/cyberverse.md
         - Sigmavalley: eco/sigmavalley.md
       - Monetary-based:
         - BlobsTopia: eco/blobstopia.md
-        - NightOwl Casino: eco/nightowl.md
-        - ErgFlip: eco/ergflip.md
-        - Obolflip: eco/obolflip.md
+        - Grand Gambit: eco/grand-gambit.md
+        - Others:
+          - Lotteries: uses/lottery.md
+          - NightOwl Casino: eco/nightowl.md
+          - Obolflip: eco/obolflip.md
       - NFT-Games:
         - Digigoats: eco/digigoats.md
         - Monster Pub Brawl: eco/monsterpub.md

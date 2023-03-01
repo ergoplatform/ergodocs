@@ -1,5 +1,4 @@
-
-### Oracle Pools V2
+# Oracle Pools V2
 
 - [How to bootstrap an ERG/XAU pool on testnet](https://github.com/ergoplatform/oracle-core/blob/develop/docs/how_to_bootstrap.md)
 
