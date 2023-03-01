@@ -54,7 +54,6 @@ Every message in the P2P protocol has the following format:
 
 | Data type            | Field name       |
 |:---------------------|:-----------------|
-| byte\[32\]           | Modifier type ID |
 | byte\[32\]           | Modifier ID      |
 | VLQ unsigned int     | Length of object |
 | byte\[objectLength\] | Object           |

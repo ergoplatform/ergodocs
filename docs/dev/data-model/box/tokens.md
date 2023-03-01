@@ -3,7 +3,7 @@
 
 Ergo supports custom tokens as first-class citizens. 
 
-Namely, a special [register](registers.md) (`R2`) of a box contains (`tokenId -> amount`) pairs. The hard limit for the number of tokens per box or transaction is pretty liberal; namely, there could be up to **255** secondary tokens in a transaction or a box; however, there are indirect limits (box could be no more than **4** kilobytes, and also tokens add to the estimated computational cost of the transaction).
+Namely, a special [register](registers.md) (`R2`) of a [box](box.md) contains (`tokenId -> amount`) pairs. The hard limit for the number of tokens per box or transaction is pretty liberal; namely, there could be up to **255** secondary tokens in a transaction or a box; however, there are indirect limits (box could be no more than **4** kilobytes, and also tokens add to the estimated computational cost of the transaction).
 
 The Erg amount is written directly (with no identifier) as a number in the register `R0`. 
 

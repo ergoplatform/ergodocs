@@ -1,6 +1,16 @@
 # Transaction Tree
 
-A **transaction tree** is an extension of [transaction chains](tx-chains.md) where the code can contain `if` statements and simple loops, i.e., where some start and end nodes are the same. The following figure illustrates a transaction tree.
+A *transaction tree* is a structure that represents a sequence of related transactions in a hierarchical manner, with each transaction in the tree having one or more child transactions that are dependent on its successful execution.
+
+A transaction tree can be thought of as a more complex version of a [transaction chain](tx-chains.md), in which each transaction in the chain may have multiple child transactions, each of which may in turn have their own child transactions. This creates a branching structure that resembles a tree, with the original transaction at the root and subsequent transactions branching off from it.
+
+Transaction trees can be useful for representing more complex transaction sequences and dependencies, particularly in the context of smart contracts and other advanced blockchain applications. They can help to ensure that transactions are executed in the correct order and with appropriate dependencies, while also providing a more detailed and flexible view of the overall transaction sequence.
+
+Overall, transaction trees are a powerful tool for representing complex blockchain transactions, and can help to improve the efficiency, scalability, and security of blockchain-based systems and applications.
+
+## Process
+
+A transaction tree is an extension of transaction chains where the code can contain `if` statements and simple loops, i.e., where some start and end nodes are the same. The following figure illustrates a transaction tree.
 
 ![](../../../assets/img/scs/tx-tree.png)
 

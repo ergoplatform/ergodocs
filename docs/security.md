@@ -1,6 +1,8 @@
 # The Howey Test
 
-The Howey Test is a legal framework used to determine whether a financial instrument, such as the ERG token, is classified as a security. The test has **four criteria** that must all be met for an instrument to be considered a security: ***investment of money, common enterprise, reasonable expectation of profits, and entrepreneurial or managerial efforts of others.***
+The Howey Test is a legal framework used to determine whether a financial instrument, such as the ERG token, is classified as a security and whether it qualifies as an "investment contract" under US securities law. The test is named after the Supreme Court case SEC v. Howey, which established the criteria for determining whether a particular transaction constitutes an investment contract.
+
+The test has **four criteria** that must all be met for an instrument to be considered a security: ***investment of money, common enterprise, reasonable expectation of profits, and entrepreneurial or managerial efforts of others.***
 
 In the case of ERG tokens, they are regularly traded on cryptocurrency exchanges. They can be mined by purchasing hardware and paying for electricity, which suggests that **the first and second criteria of the Howey Test may be met**. However, the promotion of the ERG tokens within the Platform is to improve security and functionality through proof-of-work mining, and the advancement of the [eUTXO](eutxo.md) system rather pitched as an investment with a reasonable expectation of profits. Additionally, the original Platform and Foundation developers have not taken steps to increase the market value of ERG tokens or sell them to investors as an investment. **Therefore, it is likely that the third criterion of the Howey Test is not met.**
 
