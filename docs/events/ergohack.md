@@ -19,7 +19,7 @@ Click any of the event names below to jump directly to an overview and related r
 
 - [**Analog-Ergo**](#analog-ergo): Cross-chain P2P atomic marketplace
 - [**Ergo Stats**](#ergo-stats): Mobile app for ergo.watch/tokenJay
-- [**Ergode**](#Ergode): Ergo Node on smart devices
+- [**Ergode**](#ergode): Ergo Node on smart devices
 - [**Lithos**](#lithos): Decentralised block production
 - [**ChainCash**](#chaincash): Elastic P2P money creation via trust & blockchain assets
 - [**Lilium**](#lilium): Decentralised NFT Platform

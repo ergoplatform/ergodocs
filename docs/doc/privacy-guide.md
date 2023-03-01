@@ -73,11 +73,11 @@ The advantage of Tor over a VPN is that Tor is more decentralised and does not r
 
 Finally, it is important for users to realize that even when using a VPN and/or the Tor Browser, you can still download and run malicious programs that will compromise your machine and any sensitive information contained on it. You should be cautious about what you access online and only download things from trusted parties. Downloading things from random places across the internet is a surefire way to get hacked. 
 
-### Privacy on the Blockchain
+## Privacy on the Blockchain
 
 The following topics are related to privacy and security in crypto, specifically.
 
-#### Protecting Your Seed Phrases
+### Protecting Your Seed Phrases
 
 In crypto, your seed phrase is everything. This is the 15 to 24 words that can be used to restore your wallet on any device, without any more information. Most wallets will only show you this information at the time of creation, so you must take care to record it correctly and store it safely. This is the most sensitive information you possess; if your seed phrase is compromised, your funds are as good as stolen. If you lose your seed phrase, or copy it incorrectly, the funds in that wallet will not be accessible to you or anyone else. It is absolutely imperative that you double check and securely store your seed phrases. Failure to do so will result in a loss of funds, with no way to get them back. 
 
@@ -89,20 +89,20 @@ It is important to note that storing seed phrases online is not advised. Exposin
 
 For the highest level of security with your seed phrases, please also see the section below about private cold wallets and hardware wallets.
 
-### Setting Up the Mixer
+## Setting Up the Mixer
 
 Given that most users are required to complete KYC in order to purchase crypto, the only way to achieve anonymity is through privacy coins or a mixer. Since we are all Ergonauts here, I will describe how to set up and use the mixer to create an anonymous wallet (See CW’s fantastic overview here).
 
 About the ErgoMixer: This is a local application that runs on the user’s machine alone. This means that no third parties have to be trusted to operate the mixer. It is capable of mixing all native Ergo assets, however, it is limited to those with liquidity in the mixer. It works by combining funds from every mixer user and then redistributing the funds in appropriate amounts. This essentially means that, with enough users in the pool, funds sent through the mixer cannot be traced. 
 
-#### Installing the mixer: 
+### Installing the mixer: 
 - Ensure you have JDK8+ installed on your machine. 
 - Go to https://github.com/ergoMixer/ergoMixBack 
 - On the right hand side of the screen, click on the latest release of the mixer. As of January 2023, that would be version 4.3.0. 
 - Download the file (.jar for unix, .dmg for mac, .exe for windows)
 - Install the mixer on your machine
 
-#### Sending funds:
+### Sending funds:
 
 - Click Active Mixes
 - Start New Mix
@@ -113,7 +113,7 @@ About the ErgoMixer: This is a local application that runs on the user’s machi
 - Set the mixing level and note the mixing fee
 - Click ‘start mixing’, then deposit the total amount (mixing amount + fee) to the address indicated. 
 
-#### Covert address: 
+### Covert address: 
 
 A covert address allows you to share an address publicly without exposing your personal wallet. Imagine owning a shop- this will allow customers to send you funds without letting them see your actual address. 
 
@@ -126,7 +126,7 @@ A covert address allows you to share an address publicly without exposing your p
 
 Recently, the SAFEW wallet integrated mixer functionality directly into the wallet. This allows users to send funds through the mixer right from their wallet. Granted, this will not be as private as using the mixer directly, but it is quite simple and accessible. 
 
-#### Creating Private Wallets
+### Creating Private Wallets
 Now that you know how to use the mixer, you can use it to create an anonymous wallet. This anonymous wallet may be useful for maintaining privacy while interacting with DeFi applications or with others online. It may be helpful in maintaining a pseudonym on social media with a known address, without that address being linked to your true identity. To create a private wallet follow these steps: First, create a brand new wallet. Second, send funds from a non-private wallet through the mixer to this new wallet. It is best to send a few mixed transactions, rather than just a single one, and spread them out over time. 
 
 This new wallet will have funds and no association to your identity or public addresses. Activity in this wallet will be separated from those addresses until you break that anonymity by either revealing personal information (sending money to someone who knows you personally from that wallet) or by sending funds from that wallet to one of your own public addresses. If you wish to maintain the anonymity of this wallet, do not use it in association with your identity or any of your publicly known addresses, and use a VPN when accessing it. 
@@ -134,7 +134,7 @@ This new wallet will have funds and no association to your identity or public ad
 The wallet described above is what is known as a ‘Hot Wallet’, meaning that it is connected to a computer and is available for use online. A ‘Cold Wallet’, on the other hand, is a wallet that is not, and has never been, connected to the internet. 
 Hardware Wallets
 
-#### Sending and Receiving Funds Privately
+### Sending and Receiving Funds Privately
 
 Caution: Nothing is 100% Private
 
