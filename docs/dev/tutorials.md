@@ -19,6 +19,7 @@
 
 - [Issuing a token](issue.md)
 - [Burning a token](burn.md)
+- [Minting a NFT](create.md)
 
 ## Transaction Basics
 
@@ -39,6 +40,8 @@
 
 - [Creating a simple pay-to-script app](p2s.md)
 - [Get started with Ergo Mosaik: A UI system for Ergo dApps](mosaik.md)
+- [Using AppKit from Python](https://github.com/ergoplatform/ergo-appkit/wiki/Using-Appkit-from-Python)
+
 
 ## Zero-Knowledge
 
@@ -46,9 +49,12 @@
 - [Message signing and user authentication](message-signing.md)
 - [Verifying Schnorr Signatures in ErgoScript](https://www.ergoforum.org/t/verifying-schnorr-signatures-in-ergoscript/3407)
 - [Updateable Multisig Pattern](https://www.ergoforum.org/t/updateable-multisig-pattern/3356)
-
+- [Making and implementing a signature, elliptic curves, and extended keys: Ergo with C#](https://www.youtube.com/watch?v=aUuki-fAxwc&list=PLUWruihtE-HtL-JZk8Vb4Yn_H18aE3rb6)  
 
 ## Oracles
 
 - [Bootstrap an Oracle Pool on testnet](oracle-bootstrap.md)
 
+## ErgoScript
+
+- [ErgoScript By Example](ergoscript.md)
