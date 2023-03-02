@@ -97,19 +97,11 @@ markdown_extensions:
 
 
 nav:
-  - Getting Started:
+  - Introduction:
     - Getting Started: index.md
-    
-    - FAQ: 
-      - faq.md
-    - Events: 
-      - Events: events/index.md
-      - ERGOHACK: events/ergohack.md
-      - ErgoSummit: events/ergosummit.md
-  - Learn the basics: 
-    - dev/protocol/index.md
+    - Why Ergo: dev/protocol/why.md   
     - Key Features: 
-      - Why Ergo: dev/protocol/why.md
+      - dev/protocol/index.md
       - Protocol: dev/protocol/index.md
       - eUTXO:
         - dev/protocol/eutxo.md
@@ -139,48 +131,164 @@ nav:
       - The Howey Test: security.md
       - Privacy Guide: doc/privacy-guide.md
     - EIPs: dev/protocol/eip.md
+    - FAQ: faq.md
+    - Events: 
+      - Events: events/index.md
+      - ERGOHACK: events/ergohack.md
+      - ErgoSummit: events/ergosummit.md
 
-  - Miners:
-    - Autolykos:
-      - mining/autolykos.md
-      - Algorithm: 
-        - mining/algorithm.md
-        - Difficulty Adjustment: mining/difficulty.md
-        - Emission: mining/emission.md
-        - Solution Verification: mining/solution-verification.md
-      
-      - Storage Rent: mining/rent.md
-      - ASIC Resistance: mining/asic.md     
-      - Resources:
-        - mining/mining-resources.md
-        - EIPs:
-          - Emission Retargeting Soft-Fork: mining/standards/eip27.md
-          - Tweaking Difficulty Adjustment Algorithm: mining/standards/eip37.md
-    - Mining: mining/index.md
-    - Start Mining: 
-      - mining/setup/join.md
-      - Software: mining/software.md
-      - Operating Systems: mining/os.md
-      - Overclocking: mining/overclocking.md
-      - Solo Mining: mining/setup/solo.md
-      - Host a Pool: 
-        - mining/setup/pool.md
-        - Node Configuration: mining/setup/solo-node.md
-        - Stratum: mining/setup/stratum.md
-        - MiningCore: mining/setup/miningcore.md
-        - FAQ:  mining/setup/solo-faq.md
-    - Governance: mining/governance.md      
-    - Tooling:
-      - GuapSwap: eco/guapswap.md
-      - Lithos: 
-        - eco/lithos.md
-        - SNISPs: eco/snisp.md
-      - CYTI: eco/cyti.md
-      - Log-Space Mining: mining/log_space.md
-      - Smartpools: 
-        - mining/smartpools.md
-        - Subpooling: mining/setup/subpool.md
+  #
+  # ECOSYSTEM SECTION
+  #
+  - Ecosystem: 
+    - uses/index.md
+    - Standards: 
+      - contribute/standards.md
+      - Chat Bridge: contribute/standards/chat-bridge.md
+      - Analytics: contribute/standards/analytics.md
+      - KYA: contribute/standards/kya.md
+      - Community Guidelines: contribute/standards/guidelines.md
 
+    - Infrastructure: 
+      - Rosen Bridge: eco/rosen.md
+      - Oracles: 
+        - uses/oracles.md
+        - Oracle Pools V2: eco/oracles-v2.md
+        - Mixicles: uses/mixicles.md
+
+      - Tooling:
+        - Azorus: eco/azorus.md
+        - ZenGate Global:
+          - eco/zengate.md
+          - Solaris Portal: eco/solaris.md
+          - Cyberiad: eco/cyberaid.md
+      - Sidechains: 
+        - uses/sidechains.md
+        - ErgoData: uses/ErgoData.md
+        
+    - Financial:
+      - Stablecoins: 
+        - uses/stablecoins.md
+        - SigmaUSD:
+          - uses/sigmausd.md
+          - Examples: uses/sigmausd/examples.md
+          - Mining Incentives: uses/sigmausd/mining-incentives.md
+          - Other Stablecoins: uses/sigmausd/comparison.md
+        - DexyGold: eco/dexy.md
+        - ChainCash: uses/chaincash.md
+      - Lending:
+        - uses/lending.md
+        - ErgoLend: eco/ergolend.md
+        - duckpools: eco/duckpools.md
+        - Micro Credit: dev/scs/microcredit.md
+        - Mutual Credit: uses/mutual_credit.md
+      - Bonds:
+        - SigmaFi: eco/sigmafi.md
+        - Bonding Curve: uses/bonding.md
+      - Derivatives:
+        - uses/deriv.md
+        - Tensile: eco/tensile.md
+        - Options: 
+          - uses/options.md
+          - SigmaO: eco/sigmao.md
+      - CrowdFunding: 
+        - uses/crowdfunding.md
+        - ErgoRaffle: eco/ergoraffle.md
+        - Sigma Subscriptions: eco/sigma-subscriptions.md
+        - ErgoWell: eco/ergowell.md
+        - ErgoFund: uses/ergofund.md
+      - Further Ideas:
+        - Prediction Markets: uses/prediction_markets.md
+        - Grid Trading: uses/grid_trading.md
+        - Insurance: uses/insurance.md
+     
+
+    - Exchanges:
+      - uses/dex.md
+      - Spectrum Finance: eco/spectrum.md
+      - Machina Finance: eco/machina-finance.md
+      - P2P: 
+          - eco/p2p-trading.md
+          - Token Jay: eco/token-jay.md
+          - Analog Ergo: eco/analog-ergo.md
+          - Single Tx Swap: eco/single-tx-swap.md
+      - Others:
+        - Palmyra ComDEX: eco/palmyra.md
+        - Local Exchange Trading Systems (LETS): 
+          - uses/lets.md
+          - Basic Implementation: uses/lets/basic-imp.md
+          - Trustless LETS: uses/lets/trustless-lets.md
+
+
+    - NFTs:
+      - uses/nft.md
+      - Ergo Auctions: eco/ergo-auctions.md
+      - SkyHarbor: eco/skyharbor.md
+      - Lilium: eco/lilium.md
+      - SigmaStamp: eco/sigma-stamp.md
+  
+    - DAOs:
+      - uses/dao.md 
+      - ErgoPad: eco/ergopad.md
+      - Paideia: eco/paideia.md
+      - Swamp-Audio: eco/swamp-audio.md
+
+    - Privacy:      
+      - ZK Treasury: uses/zkt.md
+      - Mixing: 
+        - uses/mixer.md
+        - ErgoMixer: 
+          - eco/ergomixer.md
+          - Identifiability: eco/ergomixer/identifiability.md
+          - Best Practices: eco/ergomixer/best-practices.md
+          - FAQ: eco/ergomixer/mixer-faq.md
+          - Token: eco/ergomixer/token.md
+          - Install on Android: eco/ergomixer/mixer-android.md
+        - SigmaJoin: eco/sigmajoin.md
+        - Stealth Addresses: uses/stealth-address.md
+      - Decentralised ID:
+        - Ergo Nation: eco/ergonation.md
+
+
+
+
+
+    - Gaming: 
+      - uses/gaming.md
+      - BlitzTCG: eco/blitz.md
+      - Metaverse:
+        - Cyberverse: eco/cyberverse.md
+        - Sigmavalley: eco/sigmavalley.md
+      - Monetary-based:
+        - BlobsTopia: eco/blobstopia.md
+        - Grand Gambit: eco/grand-gambit.md
+        - Others:
+          - Lotteries: uses/lottery.md
+          - NightOwl Casino: eco/nightowl.md
+          - Obolflip: eco/obolflip.md
+      - NFT-Games:
+        - Digigoats: eco/digigoats.md
+        - Monster Pub Brawl: eco/monsterpub.md
+    
+    - Further Ideas: 
+      - Tokens:
+        - ICOs: uses/ico.md
+        - Index Coins: uses/index_coins.md
+        - PoW Tokens: uses/PoW_tokens.md
+        - Perpetual Tokens: uses/perpetual.md
+        - Buy Back Guarantees: uses/dex-buyback.md
+      - Misc:
+        - ProfitSharing: uses/profit.md
+        - Email Client for Blocked Internet: uses/blocked_web.md
+
+      # - Context Claims: uses/context-claims.md
+    #  - Asset Tokenisation: uses/tokenisation.md
+      # - Privacy: uses/privacy.md
+    #  - Collateral Mining: uses/collateral-mining.md
+    #  - Math Fun: uses/math_fun.md
+    #  - CDBC: uses/cbdc.md
+    # - Atomic Swaps: dev/protocol/atomic.md
+  
 
   - Developers: 
     - dev/start.md
@@ -447,156 +555,46 @@ nav:
           
     - Resources: dev/stack/introduction.md
 
-  #
-  # ECOSYSTEM SECTION
-  #
-  - Ecosystem: 
-    - uses/index.md
-    - Standards: 
-      - contribute/standards.md
-      - Chat Bridge: contribute/standards/chat-bridge.md
-      - Analytics: contribute/standards/analytics.md
-      - KYA: contribute/standards/kya.md
-      - Community Guidelines: contribute/standards/guidelines.md
-
-    - Infrastructure: 
-      - Rosen Bridge: eco/rosen.md
-      - Oracles: 
-        - uses/oracles.md
-        - Oracle Pools V2: eco/oracles-v2.md
-        - Mixicles: uses/mixicles.md
-
-      - Tooling:
-        - Azorus: eco/azorus.md
-        - ZenGate Global:
-          - eco/zengate.md
-          - Solaris Portal: eco/solaris.md
-          - Cyberiad: eco/cyberaid.md
-      - Sidechains: 
-        - uses/sidechains.md
-        - ErgoData: uses/ErgoData.md
-        
-    - Financial:
-      - Stablecoins: 
-        - uses/stablecoins.md
-        - SigmaUSD:
-          - uses/sigmausd.md
-          - Examples: uses/sigmausd/examples.md
-          - Mining Incentives: uses/sigmausd/mining-incentives.md
-          - Other Stablecoins: uses/sigmausd/comparison.md
-        - DexyGold: eco/dexy.md
-        - ChainCash: uses/chaincash.md
-      - Lending:
-        - uses/lending.md
-        - ErgoLend: eco/ergolend.md
-        - duckpools: eco/duckpools.md
-        - Micro Credit: dev/scs/microcredit.md
-        - Mutual Credit: uses/mutual_credit.md
-      - Bonds:
-        - SigmaFi: eco/sigmafi.md
-        - Bonding Curve: uses/bonding.md
-      - Derivatives:
-        - uses/deriv.md
-        - Tensile: eco/tensile.md
-        - Options: 
-          - uses/options.md
-          - SigmaO: eco/sigmao.md
-      - CrowdFunding: 
-        - uses/crowdfunding.md
-        - ErgoRaffle: eco/ergoraffle.md
-        - Sigma Subscriptions: eco/sigma-subscriptions.md
-        - ErgoWell: eco/ergowell.md
-        - ErgoFund: uses/ergofund.md
-      - Further Ideas:
-        - Prediction Markets: uses/prediction_markets.md
-        - Grid Trading: uses/grid_trading.md
-        - Insurance: uses/insurance.md
-     
-
-    - Exchanges:
-      - uses/dex.md
-      - Spectrum Finance: eco/spectrum.md
-      - Machina Finance: eco/machina-finance.md
-      - P2P: 
-          - Token Jay: eco/token-jay.md
-          - Analog Ergo: eco/analog-ergo.md
-          - Single Tx Swap: eco/single-tx-swap.md
-      - Others:
-        - Palmyra ComDEX: eco/palmyra.md
-        - Local Exchange Trading Systems (LETS): 
-          - uses/lets.md
-          - Basic Implementation: uses/lets/basic-imp.md
-          - Trustless LETS: uses/lets/trustless-lets.md
-
-
-    - NFTs:
-      - uses/nft.md
-      - Ergo Auctions: eco/ergo-auctions.md
-      - SkyHarbor: eco/skyharbor.md
-      - Lilium: eco/lilium.md
-      - SigmaStamp: eco/sigma-stamp.md
-  
-    - DAOs:
-      - uses/dao.md 
-      - ErgoPad: eco/ergopad.md
-      - Paideia: eco/paideia.md
-      - Swamp-Audio: eco/swamp-audio.md
-
-    - Privacy:      
-      - ZK Treasury: uses/zkt.md
-      - Mixing: 
-        - uses/mixer.md
-        - ErgoMixer: 
-          - eco/ergomixer.md
-          - Identifiability: eco/ergomixer/identifiability.md
-          - Best Practices: eco/ergomixer/best-practices.md
-          - FAQ: eco/ergomixer/mixer-faq.md
-          - Token: eco/ergomixer/token.md
-          - Install on Android: eco/ergomixer/mixer-android.md
-        - SigmaJoin: eco/sigmajoin.md
-        - Stealth Addresses: uses/stealth-address.md
-      - Decentralised ID:
-        - Ergo Nation: eco/ergonation.md
-
-
-
-
-
-    - Gaming: 
-      - uses/gaming.md
-      - BlitzTCG: eco/blitz.md
-      - Metaverse:
-        - Cyberverse: eco/cyberverse.md
-        - Sigmavalley: eco/sigmavalley.md
-      - Monetary-based:
-        - BlobsTopia: eco/blobstopia.md
-        - Grand Gambit: eco/grand-gambit.md
-        - Others:
-          - Lotteries: uses/lottery.md
-          - NightOwl Casino: eco/nightowl.md
-          - Obolflip: eco/obolflip.md
-      - NFT-Games:
-        - Digigoats: eco/digigoats.md
-        - Monster Pub Brawl: eco/monsterpub.md
-    
-    - Further Ideas: 
-      - Tokens:
-        - ICOs: uses/ico.md
-        - Index Coins: uses/index_coins.md
-        - PoW Tokens: uses/PoW_tokens.md
-        - Perpetual Tokens: uses/perpetual.md
-        - Buy Back Guarantees: uses/dex-buyback.md
-      - Misc:
-        - ProfitSharing: uses/profit.md
-        - Email Client for Blocked Internet: uses/blocked_web.md
-
-      # - Context Claims: uses/context-claims.md
-    #  - Asset Tokenisation: uses/tokenisation.md
-      # - Privacy: uses/privacy.md
-    #  - Collateral Mining: uses/collateral-mining.md
-    #  - Math Fun: uses/math_fun.md
-    #  - CDBC: uses/cbdc.md
-    # - Atomic Swaps: dev/protocol/atomic.md
+  - Miners:
+    - Autolykos:
+      - mining/autolykos.md
+      - Algorithm: 
+        - mining/algorithm.md
+        - Difficulty Adjustment: mining/difficulty.md
+        - Emission: mining/emission.md
+        - Solution Verification: mining/solution-verification.md
+      
+      - Storage Rent: mining/rent.md
+      - ASIC Resistance: mining/asic.md     
+      - Resources:
+        - mining/mining-resources.md
+        - EIPs:
+          - Emission Retargeting Soft-Fork: mining/standards/eip27.md
+          - Tweaking Difficulty Adjustment Algorithm: mining/standards/eip37.md
+    - Mining: mining/index.md
+    - Start Mining: 
+      - mining/setup/join.md
+      - Software: mining/software.md
+      - Operating Systems: mining/os.md
+      - Overclocking: mining/overclocking.md
+      - Solo Mining: mining/setup/solo.md
+      - Host a Pool: 
+        - mining/setup/pool.md
+        - Node Configuration: mining/setup/solo-node.md
+        - Stratum: mining/setup/stratum.md
+        - MiningCore: mining/setup/miningcore.md
+        - FAQ:  mining/setup/solo-faq.md
+    - Governance: mining/governance.md      
+    - Tooling:
+      - GuapSwap: eco/guapswap.md
+      - Lithos: 
+        - eco/lithos.md
+        - SNISPs: eco/snisp.md
+      - CYTI: eco/cyti.md
+      - Log-Space Mining: mining/log_space.md
+      - Smartpools: 
+        - mining/smartpools.md
+        - Subpooling: mining/setup/subpool.md
 
   #
   # Get Involved

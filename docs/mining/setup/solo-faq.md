@@ -1,3 +1,10 @@
+# Solo Mining FAQ
+
+## Funds not showing in wallet 
+
+Mining rewards belong to *time-and-pubkey lock script*, not your "normal" p2pk address. Just send all the funds to yourself in the node wallet, and Explorer will show them after the transfer is confirmed on chain 
+
+
 ## Why are mining rewards going to some strange address?
 
 Mining rewards are sent to UTXOs associated with special scripts that lock rewards to miner public keys for 720 blocks. You can see an example of such a script [here](https://explorer.ergoplatform.com/en/addresses/88dhgzEuTXaQ3tvkG8KeHesmXdvVomxHoHK5ExawGuxhs3nwBKkoQTxZogna6Dx9Jbu7KG2Wor22Uy73).
@@ -30,9 +37,6 @@ You can also retrieve your “raw” public key via the `/mining/rewardPublicKey
 
 Then check block headers (`pk` field) for this public key.
 
-## Funds not showing in wallet 
-
-Mining rewards belong to time-and-pubkey lock script, not your "normal" p2pk address. Just send all the funds to yourself in the node wallet, and Explorer will show them after the transfer is confirmed on chain 
 
 
 ##  ​/mining​/solution entrypoint
