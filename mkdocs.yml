@@ -168,6 +168,7 @@ nav:
         - Node Configuration: mining/setup/solo-node.md
         - Stratum: mining/setup/stratum.md
         - MiningCore: mining/setup/miningcore.md
+        - FAQ:  mining/setup/solo-faq.md
     - Governance: mining/governance.md      
     - Tooling:
       - GuapSwap: eco/guapswap.md
@@ -383,6 +384,16 @@ nav:
           - dev/scs/ergoscript.md
           - Quick Primer: 
             - dev/scs/ergoscript-primer.md
+            - Key Concepts: dev/scs/ergoscript/ergoscript-key-concepts.md
+            - Examples: 
+              - Anyone Can Spend: dev/scs/ergoscript/anyone-can-spend.md
+              - No-one-Can Spend: dev/scs/ergoscript/no-one-can-spend.md
+              - Context Variables: dev/scs/ergoscript/context-variables.md
+              - Code-blocks: dev/scs/ergoscript/code-blocks.md
+              - Public-keys: dev/scs/ergoscript/public-keys.md
+              - Functional Programming: dev/scs/ergoscript/functional-programming.md
+              - Box Structure: dev/scs/ergoscript/box-structure.md
+              - Storing Data: dev/scs/ergoscript/storing-data.md
             - Creating a simple P2S app: dev/scs/p2s.md
           - Language Description: 
             - dev/scs/sigma/lang-spec.md
@@ -425,7 +436,7 @@ nav:
           - Predefined Functions: dev/scs/ergotree/functions.md
           - Encoding: dev/scs/ergotree/encoding.md
 
-      - Multi-Stage Contracts: 
+      - Multi-Stage Protocols: 
         - dev/scs/multi.md
         - Transaction Chains: dev/scs/tx/tx-chains.md
         - Transaction Trees: dev/scs/tx/tx-tree.md
@@ -505,6 +516,7 @@ nav:
     - Exchanges:
       - uses/dex.md
       - Spectrum Finance: eco/spectrum.md
+      - Machina Finance: eco/machina-finance.md
       - P2P: 
           - Token Jay: eco/token-jay.md
           - Analog Ergo: eco/analog-ergo.md

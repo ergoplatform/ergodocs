@@ -38,6 +38,7 @@ mkdocs serve
 - [ ] box index -> registers index
 - [ ] dev/libraries add context text to panes
 - [ ] Rewrite /uses/nft
+- [ ] Add text to Monster Pub Brawl, simple swap
 
 ### Big Jobs
 - [x] Tidy Light Nodes page (on learn the basics)
