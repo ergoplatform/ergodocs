@@ -1,10 +1,13 @@
 ## How can I get involved with community marketing? 
 
+Ergo boasts a vibrant community with dozens of sub-ecosystems and tens of thousands of Ergonauts across our socials. 
+
 * Join  [@ErgoSocials on Telegram](https://t.me/ErgoSocials) or the [#marketing channel on Discord](https://discord.gg/TBFXMzha7X) and collaborate. 
-* Read (or add to) [ergonaut.space](https://ergonaut.space/en/Guides/Guerrilla-Marketing).
+* There is also the community-run Wiki located at [ergonaut.space](https://ergonaut.space/en/home) and regional spaces for over forty languages creating translations of resources, helping out others, and helping to grow Ergo in their own ways. 
 * Collaborate on the - [Shared Figma Graphic Space](https://www.figma.com/file/pd92vgB3xNFThaacIKodYs/Guide-ID?node-id=1%3A756).
 * See the [Dropbox](https://www.dropbox.com/sh/jionpgnj89eod2f/AAC5S1vnOwO3gm2vRYOmDBQ-a?dl=0) for graphics, or [awesome-ergo](https://github.com/ergoplatform/awesome-ergo/tree/master/graphics/Logo) for logos. 
 * Apply to the [Sigmanaut Training Programme](https://ergoplatform.org/en/blog/the-sigmanauts-programme/) to help shape & grow ergo. 
+
 
 ## Are you looking for regional managers? 
 

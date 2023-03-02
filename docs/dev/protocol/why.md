@@ -14,10 +14,11 @@ Ergo is a next-generation Proof of Work smart-contract platform that enables new
 ## **🔑 Key Features**
 
 - **[ErgoScript](ergoscript.md)** is the language used to specify the conditions under which currency can be spent which is flexible enough to allow for ring signatures, multi signatures, multiple currencies, atomic swaps, self-replicating scripts, and long-term computation.
-- **[Sigma Protocols](/dev/scs/sigma) (Σ)** a type of non-interactive zero-knowledge proof that are composable, using simple AND/OR logic. 
+- **[Sigma Protocols](/dev/scs/sigma) (Σ)** are a type of non-interactive zero-knowledge proof that is composable using simple *AND/OR* logic. 
 - **[Multi-stage Contracts](/dev/scs/multi)** In addition to the regular protection offered by using a threshold `m‐of‐n` signature, Ergo also allows specifying the possible recipients of these coins, which may be another contract with similar complex conditions. This *"chaining"* approach enables the implementation of **secure and efficient smart contracts of arbitrary complexity**. 
-- **[Non-Interactive Proofs of Proof of Work (NIPoPoWs)](nipopows.md)**  are essential for two reasons: Light Clients and Side Chains. Ergo DApps and off-chain protocols may be implemented in a truly decentralised way due to light clients.
-- **[Storage Rent](rent.md)** acts as *on-chain garbage collection*
+- **[Non-Interactive Proofs of Proof of Work (NIPoPoWs)](nipopows.md)**  are essential for two reasons: **Light Clients** and Side Chains. Ergo DApps and off-chain protocols may be implemented in a truly decentralised way due to light clients.
+- **[Storage Rent](rent.md)** which acts as *on-chain garbage collection* that reduces the problem of blockchain bloat – and even makes it profitable.
+- The **[eUTXO](eutxo.md)** model provides superior privacy, scalability and interoperability. 
 
 Most successful public blockchain use cases are related to financial applications. Ergo extends Bitcoin's way of writing contracts by attaching a guard script (together with additional custom data) to every coin. 
 
@@ -47,13 +48,14 @@ The full team can be seen in Ergo's [Hall of Fame](https://ergoplatform.org/en/h
 
 In order to ensure that Ergo had a fair launch and token distribution, the platform did not pursue any initial venture capitalists or deep-pocketed investors. The goal was to resemble Bitcoin as much as possible in this aspect. The only funds that were set aside (through the mining protocol) were allocated for a small treasury to cover essential costs and funding.
 
-The Ergo Foundation (“EF”) is a non-profit foundation dedicated to advancing the adoption of Ergo. The foundation’s treasury is sourced from a small portion of mined blocks during the first 2.5 years from Ergo’s mainnet launch. This allocation amounted to 4,330,791.5 ERGs, or 4.43% of the total supply. Additional details on the Ergo Foundation can be found [here](ergo-foundation-2022.md)
+The Ergo Foundation is a non-profit foundation dedicated to advancing the adoption of Ergo. The foundation’s treasury is sourced from a small portion of mined blocks during the first 2.5 years from Ergo’s mainnet launch. This allocation amounted to 4,330,791.5 ERGs, or 4.43% of the total supply. 
+
+Additional details on the Ergo Foundation can be found [here](ergo-foundation-2022.md)
+
+> The absence of VC funding for the main protocol early on is a feature not a bug. This motivates the community to take the lead which is the only long-term sustainable decentralized solution.
 
 
-
-## Comparisons
-
-### BTC
+## What Problems Faced by Bitcoin Does Ergo Solve?
 
 | Problems Faced by Bitcoin | Ergo's Solution |
 |---|---|
@@ -64,9 +66,9 @@ The Ergo Foundation (“EF”) is a non-profit foundation dedicated to advancing
 | Weak and cumbersome optional privacy tools, some of which have been compromised | Sigma protocols enable true peer to peer privacy. ErgoMixer is the only token-mixer that can provide better anonymity than Monero given enough utilisation.  |
 | Massive scaling challenges which led  to the ‘Blocksize Wars’ | Decentralized on-chain governance based on extensive research - block size can be increased securely. NiPoPoWs enable light clients with full node security guarantees. Ergo offers more Layer-2 options than Bitcoin.  |
 
-### ETH
+## What Problems Faced by Ethereum Does Ergo Solve?
 
-The Account model of Ethereum is imperative. This means that the typical task of sending coins from Alice to Bob requires changing the balances in storage as a series of operations. On the other hand,Ergo's UTXO based programming model is declarative. 
+The Account model of Ethereum is imperative. This means that the typical task of sending coins from Alice to Bob requires changing the balances in storage as a series of operations. On the other hand, Ergo's UTXO based programming model is **declarative**. 
 
 ErgoScript contracts specify conditions for a transaction to be accepted by the blockchain (not changes to be made in the storage state as a result of the contract execution).
 
@@ -81,29 +83,21 @@ ErgoScript contracts specify conditions for a transaction to be accepted by the 
 | Poor security and frequent hacks costing billions | UTXO model and efficient onchain verification with most computation done off chain |
 | Poor privacy tools because the Account ledger model is not suitable for attaining high privacy | Combination of the eUTXO model and sigma protocols can achieve optional privacy superior to that achieved by Monero |
 
-## Grassroots Finance
 
-> The absence of VC funding for the main protocol early on is a feature not a bug. This motivates the community to take the lead which is the only long-term sustainable decentralized solution.
+## Where can I find out more?
 
-Ergo boasts a vibrant community with dozens of sub-ecosystems and tens of thousands of Ergonauts across our socials. Dive in on [Telegram](https://t.me/Ergo_Chats), [Discord](https://discordapp.com/invite/gYrVrjS) or [Reddit](https://www.reddit.com/r/ergonauts).
 
-There is also the community-run Wiki located at [ergonaut.space](https://ergonaut.space/en/home) and regional spaces for over forty languages creating translations of resources, helping out others, and helping to grow Ergo in their own ways. 
+Here are some good places to start
 
-Various other forms of community-based marketing are also present in Ergo. There is an active “Community-Based Marketing” channel on Telegram/Discord filled with Ergonauts working on how to best promote Ergo. Recent projects include a #DiscoverErgo campaign launched by the community to increase promotion and activity on Twitter. 
-
-- [cafebedouin - Why Ergo](https://cafebedouin.org/2021/12/09/why-ergo/)
+- Check out the [FAQ](faq.md)
+- Read cafebedouin's Article [*Why Ergo*](https://cafebedouin.org/2021/12/09/why-ergo/)
+- Come chat to us on:
+    - [Telegram](https://t.me/Ergo_Chats)
+    - [Discord](https://discordapp.com/invite/gYrVrjS)
+    - [Reddit](https://www.reddit.com/r/ergonauts)
+    - [ergoforum](https://www.ergoforum.org)
 
 
 ### [The Manifesto](https://ergoplatform.org/en/blog/2021-04-26-the-ergo-manifesto/)
                                                 
 > *"Cryptocurrency should provide tools to enrich ordinary people. Small businesses struggling to make ends meet, not big depersonalised financial capital."*
-
-### What is the Sigmanauts programme?
-
-
-The Sigmanauts programme is a community organized framework that aims to help shape and grow Ergo.
-
-The current cohort is almost 50 strong with sub committees focusing on governance (DAO), treasury, social engagement, documentation, and onboarding of new Sigmanauts. Sigmanauts work hand in hand with the current structure of the EF and aim to amplify current messaging. 
-
-They will self discover sources of funding from projects on Ergo as they gain the confidence of the community. 
-

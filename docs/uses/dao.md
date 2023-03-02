@@ -14,3 +14,8 @@ To achieve that, certain procedures must be improved. Here is one aspect of it:
 
 - [A more efficient UTXO voting](https://www.ergoforum.org/t/a-more-efficient-utxo-voting/3144)
 - [GitHub: ErgoTeam](https://github.com/anon-real/ergo-team)
+
+
+## Resources
+
+- [The Hidden Shortcomings of (D)AOs – An Empirical Study of On-Chain Governance](https://arxiv.org/pdf/2302.12125.pdf)
