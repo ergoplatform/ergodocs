@@ -384,21 +384,35 @@ nav:
           - Your own chain: node/testnet/mine-your-own-chain.md
           - Resources: node/testnet/testnet-resources.md
         #- Architecture: node/architecture.md
+        
+        - Modes of Operation: 
+          - node/modes.md
+          - Full Node: 
+            - node/modes/full-node.md
+            - Light Full Node: node/modes/light-full-node.md
+            - Pruned Full Node: node/modes/pruned-full-node.md
+          - Light SPV: 
+            - node/modes/light-spv-node.md
+            - SPV: node/modes/spv.md
+        - Protocol: 
+          - node/protocol.md
+          - P2P:
+            - dev/p2p/index.md
+            - Handshaking: dev/p2p/p2p-handshake.md
+            - Network Messages: dev/p2p/network.md
+          - Modifiers Processing: node/modifiers-processing.md
+          - Modifiers Validation: node/modifiers-validation.md
+          - Peer Management: node/peer-management.md
+          
+            # - Modifiers Exchange: dev/p2p/modifiers.md
+            # - BlockP2P: dev/p2p/BlockP2P.md
+      
         - Configuration:
           - Node Wallet: 
             - node/wallet.md
             - Hierarchical keys: dev/wallet/keys.md
           - Swagger API: node/swagger.md
-          - Modes of Operation: 
-            - node/modes.md
-            - Full Node: 
-              - node/modes/full-node.md
-              - Light Full Node: node/modes/light-full-node.md
-              - Pruned Full Node: node/modes/pruned-full-node.md
-            - Light SPV: 
-              - node/modes/light-spv-node.md
-              - SPV: node/modes/spv.md
-          - Configuration Files:
+          - Configuration Files: 
             - application.conf: 
               - node/conf.md
               - ergo: 
@@ -416,12 +430,6 @@ nav:
         #  - Digest State: node/digest-state.md
         #  - History Pruning: node/history-pruning.md
         #  - Snapshots: node/snapshots.md
-        - P2P Protocol:
-          - P2P: dev/p2p/index.md
-          - Handshaking: dev/p2p/p2p-handshake.md
-          - Network Messages: dev/p2p/network.md
-          # - Modifiers Exchange: dev/p2p/modifiers.md
-          # - BlockP2P: dev/p2p/BlockP2P.md
       - Explorer: 
         - dev/stack/explorer.md
         - Local Setup: dev/stack/explorer/explorer_local.md
