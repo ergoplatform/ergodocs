@@ -13,7 +13,7 @@ A *peer management structure* is a tuple (G, B, C), where G is the set of *good 
 - $G \subseteq \peers$,
 - $B \subseteq \peers$.
 
-## Peers penalization and blacklisting\label{subsec:peers-penalization-and-blacklisting
+## Peers penalization and blacklisting
 
 A *penalty* is a tuple `descr`, `score`, where `descr` is a misbehaviour description, and `score` is a penalty score.
 
@@ -36,7 +36,7 @@ Penalties of type `NonDeliveryPenalty, `MisbehaviorPenalty, `SpamPenalty` are no
 
 A *safe* interval is a delay between penalties application.
 
-Once some peer accumulates a critical penalty score it is added to the blacklist.
+Once some peer accumulates a critical penalty score, it is added to the blacklist.
 
 A *blacklist* is a mapping `ip` -> `ts`, where `ip` is a peer IP address and `ts` is a timestamp a peer is banned till.
 

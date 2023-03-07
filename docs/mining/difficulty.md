@@ -2,22 +2,11 @@
 
 > You can use the [difficulty & epoch monitor](https://cds.oette.info/ergo_diff.htm) to get an estimate for the next difficulty due. 
 
+Before [EIP37](https://docs.ergoplatform.com/mining/standards/eip37/) was implemented, Autolykos had a slow difficulty adjustment mechanism that responded to fluctuating hashrate, This helped prevent adversarial hopping with a 1.9% error rate compared to Bitcoin's 9.1% error rate. This adjustment was based on the linear least squares method, which used the past eight epochs (8 x 1024 blocks) to calculate the difficulty function, as described in [this paper](https://eprint.iacr.org/2017/731.pdf), to achieve a target block interval of 120 seconds (2 minutes on average during steady hashrate).
 
-Before [EIP37](eip37.md) Autolykos adjusted slowly in response to fluctuating hashrate, this helped to prevent **adversarial** hopping with a 1.9% error rate compared to bitcoins 9.1%.
-
-This used the **linear least square method** to calculate difficulty. This function was based on the past eight epochs (8x1024 blocks), as described in [this paper](https://eprint.iacr.org/2017/731.pdf) to obtain a target block interval of 120s (2 minutes), on average, during steady-hash. 
-
-- [Coin hopping Attack — What after a month of Bitcoin hardfork?](https://medium.com/nikoin/coin-hopping-attack-what-after-a-month-of-bitcoin-hardfork-f5a92151fb7b)
-
-EIP37 was implemented as a big influx of mining hashrate over multiple epochs, especially with super-linear hashrate growth over time (as we seen with the ETH merge) results in huge spike of difficulty. Similarly, few slow epochs may cause huge drop. 
+However, a large influx of mining hashrate over multiple epochs, especially with super-linear hashrate growth over time (as we seen with the ETH merge), resulted in a huge spike in difficulty, while a few slow epochs can cause a significant drop. EIP37 was proposed and implemented to address this issue. This proposal allows for a more efficient and timely adjustment of the difficulty level based on a shorter, more recent block history, reducing the impact of sudden changes in hashrate. The implementation of EIP37 has made Ergo's mining process more robust and resistant to adversarial.
 
 
 **Why 2 minutes?**
 
-As Ergo is a P2P cryptocurrency that supports smart contracts, there is need for security buffer for all the issues and attacks possible; propagation delays, spam attacks, verifier dilemma etc
-
-**Can it be quicker?**
-
-Ergo already uses an epoch length of ~4.2 hours (with normal block rate), compared to Bitcoin's two weeks. Having a quicker difficulty readjustment can lead to Timewarp attacks. 
-
-
+The 2-minute target block interval in Ergo is chosen to provide a security buffer against various issues and attacks that can arise in a P2P cryptocurrency network that supports smart contracts. These include propagation delays, spam attacks, and verifier dilemmas, among others. A shorter block interval could expose the network to Timewarp attacks, a type of difficulty manipulation attack that can result in blocks being mined too quickly or too slowly. Moreover, using an epoch length of ~4.2 hours (with a normal block rate) in Ergo already greatly improves Bitcoin's two weeks. Overall, a 2-minute block interval strikes a balance between network security and transaction speed, making Ergo an efficient and secure cryptocurrency for everyday use.

@@ -403,6 +403,8 @@ nav:
           - Modifiers Processing: node/modifiers-processing.md
           - Modifiers Validation: node/modifiers-validation.md
           - Peer Management: node/peer-management.md
+          - Synchronisation: node/synchronisation.md
+          - Modifiers: node/modifiers.md
           
             # - Modifiers Exchange: dev/p2p/modifiers.md
             # - BlockP2P: dev/p2p/BlockP2P.md
