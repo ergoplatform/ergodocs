@@ -8,7 +8,7 @@ In Ethereum, we can do this by sending funds to an account having a contract C<s
 
 In Ergo, this is done by a two-stage protocol, where the second stage implements C<sub>b</sub> and the first stage implements Ca. The following script, called withdrawScript, implements the second stage. This will be the guarding script of the hot wallet's withdrawal transaction paying to Bob.
 
-```java
+```scala
 val bob = SELF.R4[SigmaProp].get // public key of customer withdrawing 
 val bobDeadline = SELF.R5[Int].get // max locking height 
 (bob && HEIGHT > bobDeadline) || (carol && HEIGHT <= bobDeadline)
@@ -16,7 +16,7 @@ val bobDeadline = SELF.R5[Int].get // max locking height
 
 This above script is referenced in the first stage script given next.
 
-```java
+```scala
 val isChange = {(b:Box) => b.propositionBytes == SELF.propositionBytes} 
 val isWithdraw = {(b:Box) => b.R5[Int].get >= HEIGHT + blocksIn24h && b.propositionBytes == withdrawScript }
 alice && OUTPUTS.forall({(b:Box) => isChange(b) || isWithdraw(b)})

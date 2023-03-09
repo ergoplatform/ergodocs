@@ -12,7 +12,7 @@ This works fine, assuming that Alice is well-behaved, i.e., she always opens her
 The complete game is coded in ErgoScript in two stages. In the first stage, Alice creates a start-game box that encodes her game rules. In the second stage, Bob spends the start-game box and creates two end-game boxes spendable by the winner. These new boxes indicate that the game has ended.
 To start the game, Alice decides a game amount x (of Ergo’s primary token), which each player must contribute. She then selects a secret s and computes a commitment c = H(a||s) to a. Finally, she locks up x tokens and her commitment c inside the start-game box protected by the following script:"
 
-```java
+```scala
 OUTPUTS.forall(
     {(out:Box) =>
         val b = out.R4[Byte].get
@@ -27,7 +27,7 @@ OUTPUTS(0).R4[Byte].get == OUTPUTS(1).R4[Byte].get // same b
 
 The above code requires that the spending transaction create exactly two outputs, one paying to each player in the event of a draw or both paying to the winner otherwise. In particular, the code requires that (1) register R7 of the first output must contain Alice’s public key (for use in the draw scenario), (2) register R4 of each output must contain Bob’s choice, and (3) each output must contain at least x tokens protected by outScript, which is given below:
 
-```java
+```scala
 val s = getVar[Coll[Byte]](0).get // Alice’s secret byte string s
 val a = getVar[Byte](1).get // Alice’s secret choice a
 val b = SELF.R4[Byte].get // Bob’s public choice b
