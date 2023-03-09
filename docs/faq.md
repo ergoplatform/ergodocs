@@ -60,19 +60,24 @@ In total, this happens to be 97,739,924.5 ERG.
 
 For proof-of-no-premine, the pre-genesis state in Ergo contains block hashes from Bitcoin and Eth and also headlines from the Guardian, Vedomosti and Xinhua around the moment of launch, which can be seen in [mainnet.conf](https://github.com/ergoplatform/ergo/blob/1935c95560a30b19cdb52c1a291e8a389ba63c97/src/main/resources/mainnet.conf#L11)
 
-"`scala
-  /**
-    * Genesis box that contains proofs of no premine.
-    * It is a long-living box with special bytes in registers
+```scala
+   /**
+    * Generates a genesis box that contains proofs of no premine.
+    * This is a long-living box with special bytes in registers.
+    * @param chainSettings Chain settings of the Ergo network
+    * @return The genesis box with the given properties
     */
   private def noPremineBox(chainSettings: ChainSettings): ErgoBox = {
+    // create a map of ErgoBox non-mandatory registers with the premine proofs
     val proofsBytes = chainSettings.noPremineProof.map(b => ByteArrayConstant(b.getBytes("UTF-8")))
     val proofs = ErgoBox.nonMandatoryRegisters.zip(proofsBytes).toMap
+    // create a genesis box with a value of CoinsInOneErgo, a proposition script of FalseLeaf, an empty tokens sequence, and the premine proofs in non-mandatory registers
     createGenesisBox(EmissionRules.CoinsInOneErgo, Constants.FalseLeaf, Seq.empty, proofs)
   }
+
 ```
 
-"`JSON
+```JSON
  {
 "boxId": "b8ce8cfe331e5eadfb0783bdc375c94413433f65e1e45857d71550d42e4d83bd",
 "value": 1000000000,

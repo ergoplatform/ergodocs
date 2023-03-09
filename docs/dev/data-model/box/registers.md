@@ -13,7 +13,7 @@ Rather than storing a single amount (like BTC), an [eutxo](eutxo.md) box has som
     
 For example, 
 
-```
+```scala
 val x = SELF.R4[Int]
 ```
 

@@ -108,7 +108,7 @@ WantedBy=multi-user.target
 ```
 create the `sh` file
 
-```
+```bash
 echo "#!/bin/sh
 sudo /usr/bin/java -jar -Xmx4G ergo.jar --mainnet -c ergo.conf" > run_node.sh
 chmod +x run_node.sh

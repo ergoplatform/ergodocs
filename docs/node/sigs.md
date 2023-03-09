@@ -8,7 +8,7 @@ This is fixed with the new API introduced in the distributed-sigs branch. Now al
 
 So let me provide a new tutorial on collective signing. Like in the previous tutorial, first, we pay to a 2-out-of-3 spending script (with keys stored in registers):
 
-```
+```json
 {
 val pkA  = SELF.R4[GroupElement].get
 val pkB  = SELF.R5[GroupElement].get
@@ -20,7 +20,7 @@ atLeast(2, Coll(proveDlog(pkA), proveDlog(pkB), proveDlog(pkC)))
 
 Then, when a transaction is confirmed (https://explorer.ergoplatform.com/en/transactions/71aa67f95e96827193bdf711f6ccf41b30ef8bbbdaef63ed672dfb7420a4c314), we get output bytes via /utxo/byIdBinary/{boxId}. Then we generate an unsigned transaction by providing inputs directly, in our example, by providing the following input to /wallet/transaction/generateUnsigned : 
  
-```
+```json
 {
   "requests": [
     {
@@ -39,7 +39,7 @@ Then, when a transaction is confirmed (https://explorer.ergoplatform.com/en/tran
 
 Then Alice generates commitments for the unsigned transaction by sending it to the NEW /wallet/generateCommitments (additional secrets to be used along with wallets can also be provided), and in the output, she is getting both secret and public hints:
 
-```
+```json
 {
   "secretHints": {
     "0": [
@@ -77,7 +77,7 @@ Then Alice generates commitments for the unsigned transaction by sending it to t
 
 Then Alice must store secret hints locally and provide the public to Bob. Bob is signing using Alice's hints by sending a request to /wallet/transaction/sign like: 
 
-```
+```json
 {
   "tx": {
   "id": "6c7bf7a9720d26bec5c3b5bf1bc6199e9a5b876ba5994ab5e4214b0d8eed1492",
@@ -146,7 +146,7 @@ And sending signed (but invalid) transactions to Alice (he can send hints genera
 
 Now Alice is extracting a commitment from Bob and Carol from the transaction by sending a request to /script/extractHints like:
 
-```
+```json
 {
   "transaction": {
   "id": "6c7bf7a9720d26bec5c3b5bf1bc6199e9a5b876ba5994ab5e4214b0d8eed1492",
@@ -201,7 +201,7 @@ Now Alice is extracting a commitment from Bob and Carol from the transaction by 
 
 And then she adds her secret hint to generate a valid signed transaction, a request to /wallet/transaction/sign would be like this: 
 
-```
+```json
 {
   "tx": {
   "id": "6c7bf7a9720d26bec5c3b5bf1bc6199e9a5b876ba5994ab5e4214b0d8eed1492",

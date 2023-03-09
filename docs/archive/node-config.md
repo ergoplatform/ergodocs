@@ -9,7 +9,7 @@ Below you can find a complete Ergo Node configuration file. This is the default 
 It is possible to overwrite any parameters by providing an additional configuration file. You can pass an additional configuration file
 by providing the path to it as the first command line parameter when starting Ergo Node application.
 
-```
+```bash
 ergo {
   # Directory to keep data
   directory = ${user.dir}"/ergo/data"

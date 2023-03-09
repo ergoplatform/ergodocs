@@ -26,7 +26,7 @@ We call this object a ***'box'***.
 As an example of a *box*. We take the *proof-of-no-premine* from Ergo genesis state, which contains the last block ids from Bitcoin and Ethereum at the moment of launch, and also the latest news headlines:
 
 
-```
+```JSON
      {
     "boxId": "b8ce8cfe331e5eadfb0783bdc375c94413433f65e1e45857d71550d42e4d83bd",
     "value": 1000000000,

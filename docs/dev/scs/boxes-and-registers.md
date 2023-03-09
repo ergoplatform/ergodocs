@@ -30,18 +30,25 @@ Outside of the registers themselves, each box has a specific identification hash
 
 ```scala
 {
+	// Retrieve the value and token multipliers from the registers of the current box
 	val valueMultiplier = SELF.R4[Int].get
 	val tokenMultiplier = INPUTS(1).R4[Int].get
 
+	// Check if the current box is the same as the first input box
 	if(SELF.id == INPUTS(0).id){
+		// If it is, check if the output box has the correct value and token amounts
 		val outputValue = OUTPUTS(0).value == SELF.value * valueMultiplier 
 		val outputTokens = OUTPUTS(0).tokens(0)._2 == SELF.value * tokenMultiplier 
+		// Return a Sigma proposition that is true only if both outputValue and outputTokens are true
 		sigmaProp(outputValue && outputTokens)
 	}else{
+		// If the current box is not the same as the first input box, check if the output goes to a specified address
 		val outputGoesToCheese = {
+			// Create a public key that corresponds to a specific address
 			PK("9etXmP7D3ZkWssDopWcWkCPpjn22RVuEyXoFSbVPWAvvzDbcDXE").propBytes
 				== OUTPUTS(0).propositionBytes
 		}
+		// Return a Sigma proposition that is true only if outputGoesToCheese is true
 		sigmaProp(outputGoesToCheese)
 	}
 }

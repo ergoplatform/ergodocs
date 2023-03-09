@@ -89,6 +89,7 @@ def substConstants[T](scriptBytes: Coll[Byte],
 
 It allows a contract to construct another contract’s propositional bytes using the given parameters. Because a contract’s address is created using its contents, inputting different constants within a contract can change it’s address(and therefore, the contract itself). This function allows for a contract of the same “template” to be created using a new set of constants. In order to be used properly, one must provide a sample of the contract’s propositional bytes(parameter `scriptBytes`), along with the `positions` at which certain constants of type `T` must be replaced with the values in the `newValues` parameter.
 
+
 ## Example: Alcohol Sale Proxy Contract
 
 ```scala

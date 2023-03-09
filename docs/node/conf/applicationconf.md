@@ -7,7 +7,7 @@
 Settings for node view holder regime. See papers.yellow.ModifiersProcessing.md
 
 #### stateType
-```
+```conf
 stateType = "utxo"
 ```
 
@@ -18,14 +18,14 @@ State type.  Possible options are:
 
 
 #### verifyTransactions
-```
+```conf
 verifyTransactions = true
 ```
 
 Download block transactions and verify them (requires BlocksToKeep == 0 if disabled)
 
 #### blocksToKeep
-```
+```conf
 blocksToKeep = -1
 ```
 
@@ -35,21 +35,21 @@ Keep all blocks from genesis if negative
 Please do not set it more than 114,688 (default adProofsSuffixLength), otherwise, it could be hard to find proofs around the peers
 
 #### PoPoWBootstrap
-```
+```conf
 PoPoWBootstrap = false
 ```
 
 Download PoPoW proof on node bootstrap
 
 #### minimalSuffix
-```
+```conf
 minimalSuffix = 10
 ```
 
 Minimal suffix size for PoPoW proof (may be pre-defined constant or settings parameter)
 
 #### mining
-```
+```conf
 mining = false
 ```
 
@@ -57,39 +57,39 @@ Is the node is doing mining
 
 
 #### maxTransactionCost
-```
+```conf
 maxTransactionCost = 1000000
 ```
 
 maximum cost of transaction for it to be propagated
 #### maxTransactionSize
-```
+```conf
 maxTransactionSize = 98304 // 96 kb
 ```
 
 Maximum size of transaction to be accepted into mempool
 
 #### useExternalMiner
-```
+```conf
 useExternalMiner = true
 ```
 
 Use external miner, native miner is used if set to `false`
 
 #### internalMinersCount
-```
+```conf
 internalMinersCount = 1
 ```
 How many internal miner threads to spawn (used mainly for testing)
 #### internalMinerPollingInterval
-```
+```conf
 internalMinerPollingInterval = 500ms
 ```
 
 How frequently to ask for new block candidate
 #### miningPubKeyHex
 
-```
+```conf
 miningPubKeyHex = null
 ```
 
@@ -98,21 +98,21 @@ Public key mining rewards will be dedicated to (P2PK address is also accepted)
 
 
 #### offlineGeneration
-```
+```conf
 offlineGeneration = false
 ```
 
 If true, a node generates blocks being offline. The only really useful case for it probably is to start a new blockchain
 
 #### keepVersions
-```
+```conf
 keepVersions = 200
 ```
 
 Number of state snapshot diffs to keep. Defines maximum rollback depth
 
 #### acceptableChainUpdateDelay
-```
+```conf
 acceptableChainUpdateDelay = 30m
 ```
 Acceptable difference between NOW and timestamp of the latest chain update or best block. This helps to discover syncing issues.
@@ -121,32 +121,32 @@ Acceptable difference between NOW and timestamp of the latest chain update or be
 
 Maximum number of unconfirmed transactions node can accept
 
-```
+```conf
 mempoolCapacity = 1000
 ```
 #### mempoolCleanupDuration
-```
+```conf
 mempoolCleanupDuration = 30m
 ```
 
 Interval for mempool transaction re-check. We check transaction when it is entering the mempool, and then re-check it every interval valie
 
 #### mempoolSorting
-```
+```conf
 mempoolSorting = "random"
 ```
 
 Mempool transaction sorting scheme ("random", "bySize", or "byExecutionCost")
 
 #### rebroadcastCount
-```
+```conf
 rebroadcastCount = 3
 ```
 
 Number of transactions from mempool to be re-broadcasted at each epoch
 
 #### minimalFeeAmount
-```
+```conf
 minimalFeeAmount = 1000000
 ```
 
@@ -154,7 +154,7 @@ Minimal fee amount of transactions mempool accepts
 
 #### blacklistedTransactions
 
-```
+```conf
 blacklistedTransactions = []
 ```
 
@@ -199,7 +199,7 @@ checkpoint = {
 Dump `ADProofs` only for the suffix given during bootstrapping
 
 
-```
+```conf
 adProofsSuffixLength = 114688 // 112k
 ```
 
@@ -210,23 +210,23 @@ What to keep in memory
 
 #### history
 ##### blockSectionsCacheSize
-```
+```conf
 blockSectionsCacheSize = 12
 ```
 Number of recently used block sections that will be kept in memory
 ##### headersCacheSize
-```
+```conf
 headersCacheSize = 1000
 ```
 Number of recently used headers that will be kept in memory
 ##### indexesCacheSize
-```
+```conf
 indexesCacheSize = 10000
 ```
 Number of recently used indexes that will be kept in memory
 #### network
 ##### invalidModifiersBloomFilterCapacity
-```
+```conf
 invalidModifiersBloomFilterCapacity = 10000000
 ```
 Maximum number of invalid modifiers to keep in DeliveryTracker

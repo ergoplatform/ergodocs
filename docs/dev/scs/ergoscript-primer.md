@@ -15,7 +15,7 @@ However, writing code in ErgoTree is *difficult*.
 
 An example of such an ErgoTree program would be 
 
-```
+```scala
 AND(OR(condition_1, condition_2), condition_3)
 ```
 
@@ -25,7 +25,7 @@ which implies that the transaction is valid if `condition_3` and at least one of
 
 The equivalent of the above program in ErgoScript would be 
 
-```
+```scala
 (condition_1 || condition_2) && condition_3
 ```
 

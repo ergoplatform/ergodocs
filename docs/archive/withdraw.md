@@ -32,7 +32,7 @@ In order to clear the state of your node you need to stop the node and then remo
 
 Remember that mnemonic sentence you set in the `config.json` when configuring your Autolykos miner - now you need to restore build-in wallet from it. In order to restore your wallet start the node again and send a POST request to `http://[your_node_ip]:9053/wallet/restore` containing the `application/json` content-type body like:
 
-```scala
+```json
 {
   "pass": "your_wallet_pass",
   "mnemonic": "mnemonic_sentense_from_your_miner",
@@ -50,7 +50,7 @@ ATTENTION: In order to let the wallet scan all the blocks from the genesis you n
 
 When your node got synced with the network check `/wallet/balances` API method. The response should look like:
 
-```scala
+```json
 {
   "height": 3560,
   "balance": 67500000000,
@@ -64,7 +64,7 @@ Pay attention to the `height` field first - it should equal `fullHeight` display
 
 In order to withdraw a reward from your wallet, create a new payment transaction using `/wallet/payment/send` API route. In order to perform this operation send a POST request containing an `application/json` content-type body like:
 
-```scala
+```json
 {
   "address": "your_address",
   "value": 10000000

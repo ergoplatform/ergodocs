@@ -59,27 +59,32 @@ We use the following setup in our example:
 Which looks like this in ErgoScript
 
 ```scala
-{
-  // Checking Schnorr signature in a script
+{ 
+  // (Checking Schnorr signature in a script)
+  
+  // Getting the generator of the elliptic curve group 
   val g: GroupElement = groupGenerator
 
-  // Public key for a signature
+  // Getting the public key for a signature
   val Y = SELF.R4[GroupElement].get
 
-  // Message to sign
+  // Getting the message to be signed
   val M = SELF.R5[Coll[Byte]].get
 
-  // c of signature in (c, s)
+  // Retrieving the c value of the signature (c, s)
   val cBytes = getVar[Coll[Byte]](0).get
   val c = byteArrayToBigInt(cBytes)
   
-  // s of signature in (c, s)
+  // Retrieving the s value of the signature (c, s)
   val s = getVar[BigInt](1).get
   
+  // Calculating U = g^s * Y^c
   val U = g.exp(s).multiply(Y.exp(c)).getEncoded // as a byte array
   
+  // Checking the validity of the Schnorr signature
   sigmaProp(cBytes == sha256(U ++ M))
 }
+
 ```
 
 The complete process of signature generation off-chain and verification on-chain is explained in [this test](https://github.com/ergoplatform/ergo-jde/blob/main/kiosk/src/test/scala/kiosk/schnorr/SchnorrSpec.scala).

@@ -19,7 +19,7 @@ After enough confirmations (720 for the mainnet, 72 for the testnet) wallet show
 
 You can retrieve your mining rewards address with `/mining/rewardAddress` API call, which should return something like this:
 
-```
+```json
 {
 “rewardAddress”: “mPdcmQkPPvyMGoCDNg9oiasLyPpKJhHjgjpt89uJZE1oN9PJ9fKbdKDcfomtWoy3d1E7RFLTUbXbt1AS”
 }
@@ -29,7 +29,7 @@ Then you can check rewards on the [ergo explorer](https://explorer.ergoplatform.
 
 You can also retrieve your “raw” public key via the `/mining/rewardPublicKey` endpoint. 
 
-```
+```json
 {
 “rewardPubkey”: “03aa53abda9e6c958ed6046e6092b901662a26a01a2029c417b1c3f29b4b1c2799”
 }
@@ -41,7 +41,7 @@ Then check block headers (`pk` field) for this public key.
 
 ##  ​/mining​/solution entrypoint
 
-```
+```json
 {
   "pk": "0350e25cee8562697d55275c96bb01b34228f9bd68fd9933f2a25ff195526864f5",
   "w": "0366ea253123dfdb8d6d9ca2cb9ea98629e8f34015b1e4ba942b1d88badfcc6a12",

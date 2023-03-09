@@ -17,7 +17,7 @@ ErgoScript is built considering Bitcoin’s security and privacy to make all kin
 
 ## Simple Example
 
-```
+```scala
 if (HEIGHT < 100000) alicePubKey else bobPubKey
 ```
 

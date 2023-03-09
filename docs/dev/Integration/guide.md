@@ -90,13 +90,13 @@ For an exchange, you can restrict people to only withdraw to P2PK addresses and 
 
 To get unspent UTXOs for some address, please use the `transactions/boxes/byAddress/unspent` Explorer API method: 
 
-```
+```bash
 https://api.ergoplatform.com/transactions/boxes/byAddress/unspent/9gAE5e454UT5s3NB1625u1LynQYPS2XzzBEK4xumvSZdqnXT35M 
 ```
 
 It would be best if you excluded UTXOs spent in the mempool. Use the`/transactions/unconfirmed/byAddress` Explorer API method for that:
 
-```
+```bash
 https://api.ergoplatform.com/transactions/unconfirmed/byAddress/9gAE5e454UT5s3NB1625u1LynQYPS2XzzBEK4xumvSZdqnXT35M
 ```
 
@@ -105,14 +105,14 @@ https://api.ergoplatform.com/transactions/unconfirmed/byAddress/9gAE5e454UT5s3NB
 
 To broadcast a transaction made outside the node, the easiest way is to serialize it into `JSON`; in Java, it could be like this:
 
-```
+```Java
 Json json = JsonCodecsWrapper.ergoLikeTransactionEncoder().apply(tx);
 System.out.println(json.toString());
 ```
 
 And then send this `JSON` via a POST request to the public Explorer. 
 
-```
+```bash
 https://api.ergoplatform.com/api/v0/transactions/send*
 ```
 
@@ -155,7 +155,7 @@ Ergo is based on the extended-UTXO model. A side-effect of UTXOs is a term coine
 
 Finally, construct the payment transaction like this:
   
-```
+```JSON
 {
   "requests": [
     {
@@ -178,13 +178,13 @@ Set value and fee accordingly, `value + fee = total sum of utxos`
 
 You can query with specific parameters like this, 
 
-```
+```bash
 curl -X GET "http://127.0.0.1:9053/wallet/boxes/unspent?minConfirmations=10&minInclusionHeight=0" -H  "accept: application/json" -H  "api_key: hello"
 ```
 
 Another (and simple) way to collect is to set 
 
-```
+```conf
 ergo {
  wallet {
    maxInputs = 300 
@@ -211,7 +211,7 @@ In the case of large airdrops, many users mistakenly end up putting exchange add
 
 Send the following request via `/wallet/payment/send`, replacing the `tokenId` with the IDs from the tokens spamming your wallets. 
 
-```
+```JSON
 [
   {
     "address": "4MQyMKvMbnCJG3aJ",

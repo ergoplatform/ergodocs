@@ -33,7 +33,8 @@ The only requirements besides the node are that you have the following installed
  - Docker and Docker-compose (included in Docker for Windows). [Docker](https://www.docker.com/get-started)
 
 ### Building
-First you need to download the code from this repo. The easiest way to keep it updated in the future is by using git:
+First, you need to download the code from this repo. The easiest way to keep it updated in the future is by using git:
+
 ```
 cd <the folder you want to keep the off-chain services code in>
 git clone https://github.com/ergolabs/ergo-dex-backend.git

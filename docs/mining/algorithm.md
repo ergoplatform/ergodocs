@@ -213,7 +213,7 @@ Using the index generated in _line 7_, the miner retrieves the corresponding **k
  
 Continuing the example above, the miner stores the following indexes:
 
-```
+```json
 {0 | 46,131,392},
 {1 | 65,585,313},
 {2 | 12,624,314},
@@ -223,7 +223,7 @@ Continuing the example above, the miner stores the following indexes:
 ```
 
 Given the indexes above, the miner retrieves the following r values from **list R** stored in memory.
-```
+```json
 {0 | 46,131,392} → _dropMsb(H(46,131,392||h||M))_
 {1 | 65,585,313} → _dropMsb(H(65,585,313||h||M))_
 {2 | 12,624,314} → _dropMsb(H(12,624,314||h||M))_

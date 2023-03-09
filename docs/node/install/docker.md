@@ -3,7 +3,7 @@
 To run the latest Ergo version in mainnet as a console application with logs printed to console:
 
 
-```
+```bash
 sudo docker run --rm -p 9030:9030 -p 127.0.0.1:9053:9053 -v /path/on/host/to/ergo/data:/home/ergo/.ergo ergoplatform/ergo --mainnet
 ```
 This will connect to Ergo mainnet with default config and open port 9030 globally and 9053 locally on the host system. 

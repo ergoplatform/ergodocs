@@ -37,7 +37,7 @@ mkdir explorer && cd "$_"
 
 > `.db_env` 
 
-```
+```bash
 echo "DB_URL=jdbc:postgresql://postgres:5432/explorer
 DB_USER=postgres
 DB_PASS=1234" > .db_env
@@ -45,7 +45,7 @@ DB_PASS=1234" > .db_env
 
 > `.redis_env` 
 
-```
+```bash
 echo "REDIS_URL=redis://localhost:6379" > .redis_env
 ```
 

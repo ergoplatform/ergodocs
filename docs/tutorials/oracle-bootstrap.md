@@ -10,7 +10,7 @@ Let's say we have 5 operators. We want to keep consensus above 1/2, so it means 
 
 Generate an oracle config file from the default template with:
 
-```console
+```bash
 oracle-core generate-oracle-config
 ```
 
@@ -21,7 +21,7 @@ and set the required parameters:
 
 Run
 
-```console
+```bash
 oracle-core bootstrap --generate-config-template bootstrap.yaml
 ```
 
@@ -39,7 +39,7 @@ So in the end, it looked like - <https://gist.github.com/greenhat/2c6135462fba48
 
 Run
 
-```console
+```bash
 oracle-core bootstrap bootstrap.yaml
 ```
 
@@ -53,7 +53,7 @@ To invite other operators, I'm sending one oracle, reward, and ballot tokens to 
 
 I started my oracle with the following:
 
-```console
+```bash
 oracle-core run
 ```
 
@@ -63,7 +63,7 @@ And it posted the first data point.
 
 Besides the tokens the pool config file that you are running now should be sent as well. Send `pool_config.yaml` to the operators and ask them to start the oracle with
 
-```console
+```bash
 oracle-core run
 ```
 

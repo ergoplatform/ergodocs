@@ -24,6 +24,13 @@ ErgoScript makes this quite easy (Once the constants and registers are figured o
         """.stripMargin
 ```
 
+ It compares a given scalar value (x) to an elliptic curve multiplication operation of Secp256k1 generator (G) and checks if they are equal.
+
+ It decodes the generator point and extracts a scalar value from the transaction output. It then checks if the point computed from the scalar multiplication of the generator point and the extracted scalar value is equal to a predefined point. If the two points are equal, the transaction is valid.
+
+
+
+
 - [Deploying](https://tn-ergo-explorer.anetabtc.io/en/transactions/b9d6a5796e0fa7b8fdf374426219d8fe2d64e7d9976e04845a0a6886414343b9)
 - [Spending](https://tn-ergo-explorer.anetabtc.io/en/transactions/8c2440eff436a0c2f2af4b8b2d2ac53fbcfd43762b411217a26899f0ce749ba0)
 - [Scala](https://github.com/dzyphr/ScalaSigmaParticle/blob/main/ScalarLock/src/main/scala/ScalarLock.scala)

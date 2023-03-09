@@ -22,7 +22,7 @@ Specifically, the problem that this topic is going to address is to bypass the n
 The off-chain service will allow dApps to register some requests by providing an address (which the user will deposit her assets) and some other specifications.
 This topic is just for getting feedback, and I still haven't designed the APIs to provide concrete examples, however:
 
-```
+```json
 {
   "address":"address which user deposits to", // p2s address explained in Trusting Issues section
   "returnTo":"address to return assets to in case of failure",

@@ -234,7 +234,7 @@ The first signer also creates his/her commitment and sends the following JSON to
   At the same time, entering the password by the signer indicates to the wallet that he/she accepts the transaction and is willing to sign it.
 * When the number of commitments reaches the required count,
   every wallet signs the transaction and sends it to all other signers in the following format:
-```
+```json
 {
   "type": "sign"
   "simulated": [<list of simulated public keys; the first signer generated this list, and no one has changed it yet.>]

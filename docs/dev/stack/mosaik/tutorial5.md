@@ -127,7 +127,7 @@ directly link to certain Mosaik apps by adding “routes” entries in the mosai
 Let’s change the routes entry as follows:
 
 
-```
+```json
 {
   "starturl": "firstapp",
   "routes": {
@@ -168,7 +168,7 @@ in your own project. You can find them here:
 For the web executor to know where to connect to, the mosaikconfig.json file needs to be edited as follows:
 
 
-```
+```json
 {
  "starturl": "firstapp",
  "chooseWalletErgoPay": {

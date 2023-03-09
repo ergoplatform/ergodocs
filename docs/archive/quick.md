@@ -2,7 +2,7 @@
 
 Run the following command to get started
 
-```
+```bash
 bash -c "$(curl -s https://node.phenotype.dev)"
 ```
 source available on [GitHub](https://github.com/glasgowm148/ergoscripts)
@@ -13,7 +13,7 @@ source available on [GitHub](https://github.com/glasgowm148/ergoscripts)
 - Windows Subsystem if running Windows
 
 ## Java
-```
+```bash
 curl -s "https://get.sdkman.io" | bash
 sdk install java
 ```
@@ -22,7 +22,7 @@ Java 11 is recommended.
 
 ## Python
 
-```
+```bash
 # Ubuntu
 sudo apt update && upgrade
 sudo apt install python3 python3-pip ipython3
@@ -36,13 +36,13 @@ brew install python
 ## Windows
 See [this guide](https://www.windowscentral.com/install-windows-subsystem-linux-windows-10) or run this command in your terminal. This will enable the *Linux Subsystem* and allow you to execute as Linux. 
 
-```
+```bash
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux 
 ```
 
 ## Docker Compose
 
-```
+```bash
 version: "3.8"
 
 services:
@@ -69,11 +69,12 @@ services:
 
 Run the node with
 
-```
+```bash
 docker-compose up -d
 ```
 
 Follow the logs with
-```
+
+```bash
 docker logs -f ergo-mainnet -n 200
 ```

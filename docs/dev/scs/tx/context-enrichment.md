@@ -41,3 +41,11 @@ out.propositionBytes == state_n_code &&
 out.R4[Int].get == SELF.R4[Int].get // ensure data is propagated
 ```
 
+This code is checking two conditions:
+
+- Whether the propositionBytes of the out box is equal to state_n_code.
+- Whether the R4 register of the out box is equal to the R4 register of the current SELF box.
+
+The first condition checks if the script of the output box matches the expected script (as represented by state_n_code). If this condition is not satisfied, the script will reject the transaction.
+
+The second condition ensures that a certain data value stored in the R4 register is propagated from the current box to the output box. If this condition is not satisfied, the script will reject the transaction.
