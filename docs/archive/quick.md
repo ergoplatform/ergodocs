@@ -42,7 +42,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 
 ## Docker Compose
 
-```bash
+```yaml
 version: "3.8"
 
 services:

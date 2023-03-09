@@ -94,6 +94,7 @@ Type Name        |   Description
 
 The type constructors `Coll`, `(_,_)` can be used to construct complex
 types as in the following example.
+
 ```scala
 {
   val keyValues = OUTPUTS(0).R4[Coll[(Int, (Byte, Long))]].get
@@ -105,12 +106,13 @@ types as in the following example.
 
 Literals are used to introduce values of some types directly in program text
 like in the following example:
-```
- val unit: Unit = ()       // unit constant
- val long: Int = 10        // interger value literal
- val bool: Boolean = true  // logical literal
- val arr = Coll(1, 2, 3)   // constructs a collection with given items
- val str = "abc"           // string of characters 
+
+```scala
+val unit: Unit = ()       // unit constant
+val long: Int = 10        // interger value literal
+val bool: Boolean = true  // logical literal
+val arr = Coll(1, 2, 3)   // constructs a collection with given items
+val str = "abc"           // string of characters 
 ```
 Note that many types don't have literal syntax and their values are introduced 
 by applying operations, for example `deserialize` function can be used to introduce
@@ -121,14 +123,14 @@ a constant of any type by using Base64 encoded string (See [predefined function]
 
 #### Primitive Types
 
-Below we specify methods of pre-defined types using Scala-like declaration of
-classes. Note, the `Boolean` type doesn't have pre-defined methods in addition
-to the standard operations.
+Below we specify methods of pre-defined types using Scala-like declaration of classes. 
 
-Note, ErgoScript doesn't allow to define new `class` types, however it has many
-pre-defined classes with methods defined below.
+Note, the `Boolean` type doesn't have pre-defined methods in addition to the standard operations.
+
+> Note, ErgoScript doesn't allow to define new `class` types, however it has many pre-defined classes with methods defined below.
 
 Every numeric type has the following methods.
+
 ```scala
 /** Base supertype for all numeric types. */
 class Numeric {
@@ -159,7 +161,7 @@ class Numeric {
 
 All the predefined numeric types inherit Numeric class and its methods.
 
-They can be thought as being pre-defined like the following.
+They can be thought of as being pre-defined, like the following.
 
 ```scala 
 class Byte extends Numeric
@@ -417,7 +419,8 @@ class Box {
 
 Besides properties, every box can have up to 10 numbered registers.
 The following syntax is supported to access registers on box objects:
-```
+
+```scala
 box.R3[Int].get          // access R3 register, check that its value of type Int and return it
 box.R3[Int].isDefined    // check that value of R3 is defined and has type Int
 box.R3[Int].getOrElse(d) //access R3 register, check that its value of type Int, return it if defined, otherwise return `d`
@@ -770,7 +773,7 @@ class Coll[A] {
 ```
 
 Each item can be accessed by constant index, for example:
-```
+```scala
 val myOutput = OUTPUTS(0)
 val myInput = INPUTS(0)
 ```
@@ -778,14 +781,14 @@ val myInput = INPUTS(0)
 Any collection have the `size` property which returns the number of elements in
 the collection.
 
-```
+```scala
 val size = OUTPUTS.size
 ```
 
-The following script check an existence of some element in the collection
+The following script check the existence of some element in the collection
 satisfying some predicate (condition)
 
-```
+```scala
 val ok = OUTPUTS.exists { (box: Box) => box.value > 1000 }
 ``` 
 

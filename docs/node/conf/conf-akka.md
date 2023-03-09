@@ -16,16 +16,16 @@ http {
 ```
 ### server
 #### request-timeout
-```bash
+```conf
 request-timeout = 1 minute
-```bash
+```conf
 #### max-connections
-```bash
+```conf
 max-connections = 128
 ```
 ### parsing
 #### max-uri-length
-```bash
+```conf
 max-uri-length = 8192
 ```
 

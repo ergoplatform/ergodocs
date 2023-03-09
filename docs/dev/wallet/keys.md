@@ -6,7 +6,7 @@ Such a standard allows end users to move between different wallet software trivi
 
 The standard has five levels as part of its path:
 
-```
+```bash
 m / 44' / coin_type' / account' / change / address_index
 ```
 
@@ -25,13 +25,13 @@ We will be using the word **ergo** summed based on the numerical values of the A
 
 Thus our path will look as such:
 
-```
+```bash
 m / 44' / 429' / account' / change / address_index
 ```
 
 And the first default key pair for an Ergo wallet will be:
 
-```
+```bash
 m / 44' / 429' / 0' / 0 / 0
 ```
 
@@ -60,7 +60,7 @@ Navigate to `localhost:9053/swagger#/wallet/walletDeriveKey`
 
 Click ***"Try it out"***
 
-```  
+```bash
 "derivationPath": "m/44'/429'/0'/0/0" 
 ```
 

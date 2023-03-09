@@ -156,7 +156,7 @@ For example, a 32-wide GPU such as the RTX570 can fill **list R** in just a few 
 
 ### Lines 3, 4 – begin while loop and guessing
 
-```
+```bash
 Calculate r
 while true do
 ```

@@ -6,22 +6,22 @@
 Execution context used in tests
 
 ### type
-```
+```conf
 type = Dispatcher
 ```
 
 ### executor
-```
+```conf
 executor = "thread-pool-executor"
 ```
 ### thread-pool-executor
 #### fixed-pool-size
-```
+```conf
 fixed-pool-size = 16
 ```
 
 ### throughput
-```
+```conf
 throughput = 1
 ```
 
@@ -38,12 +38,12 @@ executionContext {
 ```
 
 ## dataDir
-```
+```conf
 dataDir = ${user.home}"/scorex"
 ```
 
 ## logDir
-```
+```conf
 logDir = ${scorex.dataDir}"/log"
 
   logging {
@@ -56,19 +56,19 @@ logDir = ${scorex.dataDir}"/log"
 Node's REST API settings
 
 ### bindAddress
-```
+```conf
 bindAddress = "0.0.0.0:9052"
 ```
 The network address to bind to
 ### apiKeyHash
-```
+```conf
 apiKeyHash = "324dcf027dd4a30a932c441f365a25e86b173defa4b8e58948253471b81b72cf"
 ```
 Hex-encoded Blake2b256 hash of an API key. It should be a 64-char long Base16 string.
 Below is the hash of the "hello" string.
 Change it!
 ### corsAllowedOrigin
-```
+```conf
 corsAllowedOrigin = "*"
 ```
 Enable/disable CORS support.
@@ -76,13 +76,13 @@ This is an optional parameter and will allow cors in case this setting is set.
 If this setting is omitted, cors will be prohibited.
 
 ### timeout
-```
+```conf
 timeout = 5s
 ```
 Request processing timeout
 
 ### publicUrl
-```
+```conf
 publicUrl = "https://example.com:80"
 ```
 A node that exposes restApi in the firewall should define a publicly accessible URL.
@@ -93,17 +93,17 @@ A node that exposes restApi in the firewall should define a publicly accessible 
 P2P Network settings
 ### Node information to be declared during the handshake
 #### nodeName
-```
+```conf
 nodeName = "ergo-node"
 ```
 Node name to send during the handshake
 #### appVersion
-```
+```conf
 appVersion = 5.0.1
 ```
 Network protocol version to be sent in handshakes
 #### agentName
-```
+```conf
 agentName = "ergoref"
 ```
 
@@ -213,18 +213,18 @@ getPeersInterval = 2m
 The interval between GetPeers messages to be sent by our node to a random one
 
 #### maxConnections
-```
+```conf
 maxConnections = 30
 ```
 Number of network connections
 #### connectionTimeout
-```
+```conf
 connectionTimeout = 1s
 ```
 
 Network connection timeout
 #### peerEvictionInterval
-```
+```conf
 peerEvictionInterval = 1h
 ```
 
@@ -233,12 +233,12 @@ the interval of evicting random peer to avoid eclipsing
 ### Delivery Settings Limits
 
 #### deliveryTimeout
-```
+```conf
 deliveryTimeout = 10s
 ```
 Network delivery timeout
 #### maxDeliveryChecks
-```
+```conf
 maxDeliveryChecks = 100
 ```
 
@@ -248,13 +248,13 @@ Max number of delivery checks. Stop expecting a modifier if it was not delivered
 
 
 #### inactiveConnectionDeadline
-```
+```conf
 inactiveConnectionDeadline = 10m
 ```
 
 Timeout for dropping dead connections
 #### syncInterval
-```
+```conf
 syncInterval = 5s
 ```
 
@@ -263,7 +263,7 @@ The interval between `SyncInfo` messages when our node is not synchronized yet
 
 
 #### syncIntervalStable
-```
+```conf
 syncIntervalStable = 15s
 ```
 
@@ -271,7 +271,7 @@ The interval between `SyncInfo` messages when our node is already synchronized
 
    
 #### syncTimeout 
-```
+```conf
 syncTimeout = 10s
 ```
 
@@ -285,11 +285,11 @@ syncStatusRefresh = 60s
 Synchronization status update interval
 
 #### syncStatusRefreshStable
-```
+```conf
 syncStatusRefreshStable = 90s
 ```
 #### syncIntervalStable
-```
+```conf
 syncIntervalStable = 30s
 ```
 
@@ -297,7 +297,7 @@ Synchronization status update interval for a stable regime
 
 
 #### controllerTimeout 
-```
+```conf
 controllerTimeout = 5s
 ```
 
@@ -306,14 +306,14 @@ Network controller timeout
 ### Size limits 
 
 #### desiredInvObjects
-```
+```conf
 desiredInvObjects = 400
 ```
 
 Desired number of inv objects. Our requests will have this size.
 
 #### maxModifiersCacheSize
-```
+```conf
 maxModifiersCacheSize = 1024
 ```
 
@@ -322,14 +322,14 @@ How many persistent modifiers to store in the cache.
 The cache stores modifiers that are waiting to be applied.
 
 #### maxPeerSpecObjects
-```
+```conf
 maxPeerSpecObjects = 64
 ```
 
 The maximum number of PeerSpec objects in one Peers message
 
 #### temporalBanDuration
-```
+```conf
 temporalBanDuration = 60m
 ```
 
@@ -337,21 +337,21 @@ Default ban duration unless the permanent penalty is applied.
 
 
 #### penaltySafeInterval
-```
+```conf
 penaltySafeInterval = 2m
 ```
 
 Misbehaving peer penalty score will not increase within this interval unless a permanent penalty is applied.
     
 #### penaltyScoreThreshold
-```
+```conf
 penaltyScoreThreshold = 500
 ```
 
 Max penalty score a peer can accumulate before being banned.
 
 #### peerDiscovery
-```
+```conf
 peerDiscovery = true
 ```
 
@@ -363,19 +363,19 @@ If set to false, the node will use only peers from the database (with a fallback
 ## ntp
 
 ### server
-```
+```conf
 server = "pool.ntp.org"
 ```
 
 NTP server address
 
 ### updateEvery
-```
+```conf
 updateEvery = 30m
 ```
 update time rate
 ### timeout
-```
+```conf
 timeout = 30s
 ```
 server answer timeout

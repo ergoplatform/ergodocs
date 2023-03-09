@@ -2,7 +2,6 @@
 
 
 ```scala
-
   /** Algebraic data type of sigma proposition expressions.
     * Values of this type are used as values of SigmaProp type of SigmaScript and SigmaDsl
     */

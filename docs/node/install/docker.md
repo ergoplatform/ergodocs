@@ -15,7 +15,7 @@ All data will be stored in your host directory `/path/on/host/to/ergo/data`.
 
 ## Docker Compose
 
-```
+```yaml
 version: "3.8"
 
 services:

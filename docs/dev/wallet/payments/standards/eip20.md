@@ -192,12 +192,9 @@ ErgoPayTransactionId:
   - txId: String
 ```
 
-dApps should not rely on this request to be made. It could happen that the transaction was 
-submitted to a node, but the reply couldn't be executed. dApps know the transaction id and
-should monitor the mempool and blockchain on their own.
+dApps should not rely on this request to be made. It could happen that the transaction was submitted to a node, but the reply couldn't be executed. dApps know the transaction id and should monitor the mempool and blockchain on their own.
 
-In case no **transaction** was provided, the wallet app displays the **message** that should inform the
-user about further steps needed.
+In case no **transaction** was provided, the wallet app displays the **message** that should inform the user about further steps needed.
 
 
 ### Option 2: dApp providing URI scheme containing ReducedTransaction
@@ -207,8 +204,7 @@ also be encoded in the QR code or link:
 
 `ergopay:<ReducedTransaction, base 64 url safe encoded>`
 
-It is not possible to provide **description**, **address**, **message** and **replyToUrl** in this simpler
-interchange format.
+It is not possible to provide **description**, **address**, **message** and **replyToUrl** in this simpler interchange format.
 
 dApp developers should keep in mind that there are length restrictions for URI schemes
 and QR codes. Both should be able handle up to 2900 chars, but QR codes with a lot of 

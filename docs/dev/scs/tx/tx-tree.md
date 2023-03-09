@@ -15,19 +15,24 @@ A transaction tree is an extension of transaction chains where the code can cont
 
 An `if` statement is handled using the following pseudocode.
 
-```
-if (condition) { out.propositionBytes == state_3_code }
-else { out.propositionBytes == state_4_code }
+```scala
+if (condition) {
+    out.propositionBytes == state_3_code // if true, set proposition to state_3_code
+} else {
+    out.propositionBytes == state_4_code // if false, set proposition to state_4_code
+}
 ```
 
 A simple loop is a special case of the `if` statement:
 
-```
-if (condition) { out.propositionBytes == state_2_code }
-else { out.propositionBytes == SELF.propositionBytes }
+```scala
+if (condition) {
+    out.propositionBytes == state_2_code // if true, set proposition to state_2_code
+} else {
+    out.propositionBytes == SELF.propositionBytes // if false, set proposition to SELF.propositionBytes
+}
 ```
 
 Most useful contracts can be represented using branches and simple loops but no cycles (as shown by examples in the paper). Ergo can be used to create such contracts using UTXOs.
 
-
-Next, we'll look at [Transaction Graphs](tx-graphs.md)
+Next, we will look at [Transaction Graphs](tx-graphs.md)

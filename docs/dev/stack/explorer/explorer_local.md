@@ -28,7 +28,7 @@ The Ergo Blockchain Explorer is your interface with the blockchain and provides 
 
 First we'll create a working directory and `cd` into it. 
 
-```
+```bash
 mkdir explorer && cd "$_"
 ```
 
@@ -55,7 +55,7 @@ Additional configurations are made by adding entries to the `env_file` field in 
 
 ### explorer-frontend
 
-```
+```bash
 git clone https://github.com/ergoplatform/explorer-frontend
 sudo mkdir -p front/build
 sudo cp -r explorer-frontend/build /front
@@ -66,7 +66,7 @@ sudo vi docker-compose.yaml
 
 ### explorer-backend
 
-```
+```bash
 git clone https://github.com/ergoplatform/explorer-backend
 cd explorer-backend/modules
 
@@ -85,7 +85,7 @@ docker network create explorer-network
 
 > Configure other services (such as: nginx, postgres, redis, adminer) according to their documentaion
 
-```
+```bash
 # Run from /explorer/
 docker-compose up -d
 
@@ -100,7 +100,7 @@ docker ps -a
 - `apiUrl` points to your to backend API. 
 - `environments.url` points to your frontend
 
-```
+```bash
 var __APP_CONFIG__ = {
   apiUrl: 'https://api.ergoplatform.org',
   alternativeLogo: false, // true by default
@@ -119,7 +119,7 @@ if (typeof global !== 'undefined') {
 
 > `docker-compose.yaml`
 
-```
+```yaml
 version: '3.4'
 
 services:

@@ -56,7 +56,7 @@ Let’s take a real look at Mosaik to get a feeling for the system. Clone the re
 The column on the right gives you info on the input values that the current view holds, as well as the JSON model that is currently shown. Most space is reserved for the actual Mosaik app that is running. The debugger shows a simple built-in app demonstrating a few view elements and actions. Let’s take a closer look at the JSON on the right-hand side. If you copy it in a better-suited editor, you’ll see that its outermost object contains two properties:
 
 
-```
+```JSON
     {
       "actions": [...],
       "view": {
@@ -70,7 +70,7 @@ The column on the right gives you info on the input values that the current view
 The Mosaik app consists of actions and view elements. Here, the root view element is a column. One of the child view elements is the label that shows the text “Label (alignment end, click it)
 
 
-```
+```JSON
     {
      "id": "clickLabel",
      "type": "Label",
@@ -89,7 +89,7 @@ If you click this label in the desktop application, you will see that the view c
 This was caused by the onClick attribute defined on the JSON above. It references “replaceLabel”. When you look at the list of defined actions, you’ll find this action declared as follows:
 
 
-```
+```JSON
     {
      "type": "ChangeSiteAction",
      "id": "replaceLabel",
@@ -114,7 +114,7 @@ Before we look at a more interesting example, let’s try a simple feature the d
 Locate the definition for the headline label defined as follows in the right-hand pane:
 
 
-```
+```JSON
     {
         	"type": "Label",
         	"style": "HEADLINE2",
@@ -134,7 +134,7 @@ You can fire up the view elements and actions demo by calling the following comm
 After some compiling, the app is waiting to get fetched on port 8080:
 
 
-```
+```bash
 Tomcat started on port(s): 8080 (http) with context path ''
 ```
 

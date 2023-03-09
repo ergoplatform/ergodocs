@@ -22,6 +22,8 @@ Learn to think in `true` and `false` statements. Booleans (More specifically, Si
 
 ## More ErgoScript Syntax Examples:
 
+This code does not do anything useful in terms of a real-world application, but it serves as an example of the ErgoScript syntax and how to use some basic features of the language. It defines a simple contract with two possible execution paths based on a boolean input value, and creates some variables with different data types to demonstrate how to use them in the code.
+
 ```scala
   if(bool == true){
     val x = 0
@@ -34,10 +36,9 @@ Learn to think in `true` and `false` statements. Booleans (More specifically, Si
     val a: (Long, Coll[Long]) = (x, y) // Build complex types by layering together pairs and colls
     val b: Coll[((Long, Long), Boolean)] = Coll(((2L, 4L), true), ((7L, 2L), false))
   }
-
 ```
 
-ErgoScript is based off of Scala, which brings means we have some standard functional programming methods and syntax
+ErgoScript is based on Scala, which brings means we have some standard functional programming methods and syntax
 
 ```scala
 // Wrap this val statement into a function that returns a collection of integers paired with longs
@@ -72,6 +73,12 @@ val intCollection = Coll(0, 1, 2)
 
 ```
 
-The two statements above **do the exact same thing**. The difference is that `val` statements are calculated when the script initializes itself to be run. `def` statements are instead calculated whenever the call is made.
+The two statements above **do the exact same thing**. 
+
+- **computeAsDef** is defined using the def keyword. This means that the function is defined at the time of the script's initialisation, but the actual calculation of `myInt + 1` will occur each time the function is called.
+- **computeAsVal** is defined using the val keyword and is a function literal. This means that the function is defined at the time of the script's initialisation and the calculation of myInt + 1 will only occur when the function is called.
+
+In other words, the difference between val and def is when the function is calculated. `val` functions are calculated when the script is initialised, while def functions are calculated each time they are called.
+
 In most instances, you will likely use `val` statements
 

@@ -56,9 +56,9 @@ Please note that Swagger will accept any password in the UI, but will fail to ex
 
 Navigate to `localhost:9053/swagger#/wallet/walletDeriveKey` 
 
-click **Try it out**
+and then click *Try it out*
 
-```  
+```bash
 "derivationPath": "m/44'/429'/0'/0/0" 
 ```
 

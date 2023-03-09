@@ -41,7 +41,7 @@ A quick check on [http://localhost:8080](http://localhost:8080) will give you a 
 Let’s change this by adding a class “MosaikAppController.kt” in the same directory (or better: “package”) as our main “MosaikappApplication”. Annotate this class and add a method as shown:
 
 
-```
+```java
 @RestController
 class MosaikAppController {
    @GetMapping("/")
@@ -63,10 +63,10 @@ Returned objects of the REST API methods are automatically serialized to JSON by
 
 ### Adding Mosaik to the project
 
-After making sure that Spring Boot is working, we now have to add Mosaik to the app. In the JVM ecosystem, libraries are served by Nexus servers, and the build tool fetches these libraries and adds them to the project during the build. We use Gradle as our build tool, and the dependencies for our project are declared in the **build.gradle.kts** file. Open it. You’ll find the following section:
+After making sure that Spring Boot is working, we now have to add Mosaik to the app. In the JVM ecosystem, libraries are served by Nexus servers, and the build tool fetches these libraries and adds them to the project during the build. We use Gradle as our build tool, and the dependencies for our project are declared in the **build.gradle.kts** file. Open it. You will find the following section:
 
 
-```
+```scala
 dependencies {
   implementation("org.springframework.boot:spring-boot-starter-web")
   implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
@@ -80,7 +80,7 @@ dependencies {
 So at the moment, spring boot web and some Kotlin extensions are declared. We add mosaik below the existing entries:
 
 
-```
+```scala
 // Mosaik
 val mosaikVersion = "0.5.0"
 implementation("com.github.MrStahlfelge.mosaik:common-model:$mosaikVersion")
@@ -89,10 +89,10 @@ implementation("com.github.MrStahlfelge.mosaik:serialization-jackson:$mosaikVers
 ```
 
 
-We also need to declare another Nexus server that host these files. Change the repositories section (it is in the same **build.gradle.kts** file) like this:
+We also need to declare another Nexus server that hosts these files. Change the repositories section (it is in the same **build.gradle.kts** file) like this:
 
 
-```
+```sbt
 repositories {
    mavenCentral()
    maven("https://jitpack.io")
@@ -105,7 +105,7 @@ If you use IntelliJ, it will automatically offer to resync the project. Do it, a
 Well done! We need one little tweak now. As said before, Spring will automatically serialize objects to JSON. This automated serialization works well in most cases - but for some cases in Mosaik, the default serialization of Jackson, the library used by Spring here, is not what the standard describes and the executing application expects. So we need to tell Spring that some of our Mosaik objects need a different serialization than the default. Configurations like that are done on the Application class, so we change the application class in **<code>MosaikappApplication.kt</code></strong> like the following:
 
 
-```
+```scala
 @SpringBootApplication
 class MosaikappApplication {
   @Bean
@@ -131,7 +131,7 @@ Now we want to define the first screen users get presented when they open up our
 Let's change our getMainPage method to return a Mosaik app:
 
 
-```
+```scala
 @GetMapping("/")
 fun getMainPage(): MosaikApp {
    return mosaikApp(
@@ -151,7 +151,7 @@ A view screen consists of multiple view elements, and some layout elements can c
 You should use one of these group elements as your root view element on a screen. We will use a card here. Inside the card, we define a label with a standard text for a first project.
 
 
-```
+```scala
 return mosaikApp(
    "First Mosaik App", // app name shown in executors
    1 // the app version
@@ -171,7 +171,7 @@ Start the Spring Boot server and use the desktop demo application to run your Mo
 We see the app name, a somehow expected screen content, and we can also see how our viewtree looks like in JSON. Let’s spice this up a lot.
 
 
-```
+```scala
 // define the view here
 card {
    column(Padding.DEFAULT) {
@@ -202,7 +202,7 @@ On the button, an onClickAction is set and given an action that shows a dialog w
 Although the code looks like regular programming, it is crucial to keep in mind what is going on behind the scenes to make the JSON serialization work. The behavior implies that defining two different actions with the same id will result in the first action being overwritten:
 
 
-```
+```scala
 column(Padding.DEFAULT) {
    label("Hello Ergo world!", LabelStyle.HEADLINE2)
 

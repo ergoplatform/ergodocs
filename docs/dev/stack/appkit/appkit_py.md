@@ -12,7 +12,7 @@ For Appkit to work on your system, you'll need a JDK8 or JDK11 installed and you
 
 The general wrapper for your Python code is then something like this:
 
-```
+```python
 # Enable Java imports
 import jpype.imports
 
@@ -104,7 +104,7 @@ Putting this all together, we can use the following code to construct and a 1 ER
 into a `ReducedTransaction` and use Python features for Base64 encoding. This way, we've built the juicy part of an
 ErgoPay Request in Python.
 
-```
+```python
 import base64
 from jpype import JImplements, JOverride
 
@@ -160,44 +160,47 @@ This method takes another lambda for building the actual token, so this time we 
 
 Building the token itself is easy: Eip4TokenBuilder provides all necessary methods to hide away complexity.
 
-```
+```python
+# Import the Eip4TokenBuilder class from the ergoplatform library 
 from org.ergoplatform.appkit.impl import Eip4TokenBuilder
 
-
-# helper class for next executor
+# Define a helper class for the executor
 @JImplements(java.util.function.Function)
 class TokenBuilder(object):
     @JOverride
+    # Define the apply function for the TokenBuilder class
     def apply(self, token_id):
-        # other possible method: buildNftAudioToken with same parameters
-        return Eip4TokenBuilder.buildNftPictureToken(token_id,
-                                                     1,  # amount to issue
-                                                     "Picture token",  # name
-                                                     "Description",
-                                                     0,  # decimals - should be 0 for NFT
-                                                     bytearray(),  # sha256 hash TODO fill yourself
-                                                     "ipfs://..."  # link to image content (can be https as well)
-                                                     )
+        # Build a non-fungible picture token with Eip4TokenBuilder
+        return Eip4TokenBuilder.buildNftPictureToken(token_id, 1, "Picture token", "Description", 0, bytearray(), "ipfs://...")
 
-
-# this executor mints a token
+# Define the MintTokenExecutor class
 @JImplements(java.util.function.Function)
 class MintTokenExecutor(object):
+    # Initialize the class with a provided address
     def __init__(self, address):
         self.address = address
 
     @JOverride
+    # Define the apply function for the MintTokenExecutor class
     def apply(self, blockchain_context):
+        # Set the round_trip_address to the class address
         round_trip_address = self.address
-        unsigned_tx = BoxOperations.createForSender(Address.create(round_trip_address),
-                                                    blockchain_context).withAmountToSpend(
-            1000 * 1000).mintTokenToContractTxUnsigned(Address.create(round_trip_address).toErgoContract(),
-                                                       TokenBuilder())
+        # Create a BoxOperations object with the sender's address
+        unsigned_tx = BoxOperations.createForSender(Address.create(round_trip_address), blockchain_context).withAmountToSpend(1000 * 1000).mintTokenToContractTxUnsigned(Address.create(round_trip_address).toErgoContract(), TokenBuilder())
+        # Return the reduced unsigned transaction from the newProverBuilder
         return blockchain_context.newProverBuilder().build().reduce(unsigned_tx, 0)
 
-
+# Print the reduced transaction from the MintTokenExecutor class
 print(get_base64_reduced_tx(MintTokenExecutor("3Wwxnaem5ojTfp91qfLw3Y4Sr7ZWVcLPvYSzTsZ4LKGcoxujbxd3")))
+
 ```
 
+This code defines two classes, `TokenBuilder` and `MintTokenExecutor`. The `TokenBuilder` class has a single apply function that creates a non-fungible picture token with `Eip4TokenBuilder.buildNftPictureToken`.
+
+The `MintTokenExecutor` class has an `__init__` function to set the provided address and an apply function that creates a BoxOperations object with the provided address and calls `withAmountToSpend` to spend a specific amount of Ergo to mint the non-fungible picture token to the address. This transaction is unsigned, and the reduce function is used to reduce it to a format suitable for transmission.
+
+The reduced unsigned transaction is then printed using `get_base64_reduced_tx`.
+
+
 ### Please note
-You can find published Python artifacts here https://github.com/ergo-pad/ergo-python-appkit
+You can find published Python artefacts here https://github.com/ergo-pad/ergo-python-appkit

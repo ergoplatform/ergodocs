@@ -5,17 +5,21 @@
 Motivation
 ----------
 
-[BIP-0044](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki) defines a logical hierarchy for deterministic wallets. This is a common standard that is used directly (or used as inspiration) by countless projects in the cryptocurrency sphere.
+Motivation
+----------
 
-Such a standard allows end users to move between different wallet software trivially, and thus sets down a framework for a more cohesive ecosystem to grow.
+[BIP-0044](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki) defines a logical hierarchy for deterministic wallets. BIP-0044 is a common standard that is used directly (or used as inspiration) by countless projects in the cryptocurrency sphere.
 
-The standard has 5 levels part of its path:
+Such a standard allows end users to move between different wallet software trivially, thus setting a framework for a more cohesive ecosystem to grow.
+
+The standard has five levels part of its path:
 
 ```
 m / 44' / coin_type' / account' / change / address_index
 ```
 
-This EIP attempts to define a specific `coin_type` for the Ergo ecosystem, as well as a policy for how wallets use the `change` level.
+
+This EIP attempts to define a specific `coin_type` for the Ergo ecosystem and a policy for how wallets use the `change` level.
 
 
 Coin Type

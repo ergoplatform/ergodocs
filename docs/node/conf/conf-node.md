@@ -6,7 +6,7 @@
 See papers.yellow.ModifiersProcessing.md
 
 #### stateType
-```
+```conf
 stateType = "utxo"
 ```
 
@@ -17,14 +17,14 @@ Sets the *state type*. The possible options are:
 
 
 #### verifyTransactions
-```
+```conf
 verifyTransactions = true
 ```
 
 Download block transactions and verify them (requires `BlocksToKeep == 0` if disabled)
 
 #### blocksToKeep
-```
+```conf
 blocksToKeep = -1
 ```
 
@@ -34,21 +34,21 @@ The number of last blocks to keep with transactions and ADproofs; only the heade
 - Please do not set above `114,688` (which corresponds to the default [`adProofsSuffixLength`](#adproofssuffixlength); otherwise, finding proofs around the peers could be hard.
 
 #### PoPoWBootstrap
-```
+```conf
 PoPoWBootstrap = false
 ```
 
 Download the *PoPoW proof* (Proof of Proof of Work) on node bootstrap
 
 #### minimalSuffix
-```
+```conf
 minimalSuffix = 10
 ```
 
 Minimal suffix size for PoPoW proof (maybe pre-defined constant or settings parameter)
 
 #### mining
-```
+```conf
 mining = false
 ```
 
@@ -56,34 +56,34 @@ If you are mining through the node.
 
 
 #### maxTransactionCost
-```
+```conf
 maxTransactionCost = 1000000
 ```
 
 The maximum a transaction can cost for it to be propagated. 
 
 #### maxTransactionSize
-```
+```conf
 maxTransactionSize = 98304 // 96 kb
 ```
 
 Maximum size of a transaction to be accepted into the memory pool.
 
 #### useExternalMiner
-```
+```conf
 useExternalMiner = true
 ```
 
 Use external miner; native miner is used if set to `false.`
 
 #### internalMinersCount
-```
+```conf
 internalMinersCount = 1
 ```
 How many internal miner threads to spawn (used mainly for testing)
 
 #### internalMinerPollingInterval
-```
+```conf
 internalMinerPollingInterval = 500ms
 ```
 
@@ -91,7 +91,7 @@ How frequently to ask for new block candidates.
 
 #### miningPubKeyHex
 
-```
+```conf
 miningPubKeyHex = null
 ```
 
@@ -100,21 +100,21 @@ This variable will dedicate public key mining rewards (P2PK address is also acce
 
 
 #### offlineGeneration
-```
+```conf
 offlineGeneration = false
 ```
 
 If true, the node will generate blocks while disconnected from the ergo mainnet. The only useful case for this is when you want to launch your own blockchain. See the [testnet](testnet.md) page for more information.
 
 #### keepVersions
-```
+```conf
 keepVersions = 200
 ```
 
 The number of state snapshots diffs to keep, which defines the maximum rollback depth.
 
 #### acceptableChainUpdateDelay
-```
+```conf
 acceptableChainUpdateDelay = 30m
 ```
 The acceptable difference between NOW and the timestamp of the latest chain update or best block. (Helps to discover syncing issues.)
@@ -122,21 +122,21 @@ The acceptable difference between NOW and the timestamp of the latest chain upda
 > TODO: The 'acceptable difference' between the current time and the timestamp of the latest chain update (or best block). This helps to discover syncing issues. 
 
 #### mempoolCapacity
-```
+```conf
 mempoolCapacity = 1000
 ```
 
 `mempoolCapacity` specifies the maximum number of unconfirmed transactions the node will accept.
 
 #### mempoolCleanupDuration
-```
+```conf
 mempoolCleanupDuration = 30m
 ```
 
 The interval for the *re-check* of a transaction in the memory pool. The transaction is initially checked when it enters the memory pool and then again at the specified interval.
 
 #### mempoolSorting
-```
+```conf
 mempoolSorting = "random"
 ```
 
@@ -148,14 +148,14 @@ Specify the mempool transaction sorting scheme. The three options available are;
 
 
 #### rebroadcastCount
-```
+```conf
 rebroadcastCount = 3
 ```
 
 The number of transactions currently in the mempool that are to be re-broadcasted at each epoch.
 
 #### minimalFeeAmount
-```
+```conf
 minimalFeeAmount = 1000000
 ```
 
@@ -163,7 +163,7 @@ The minimal fee amount for transactions that the memory pool will accept.
 
 #### blacklistedTransactions
 
-```
+```conf
 blacklistedTransactions = []
 ```
 

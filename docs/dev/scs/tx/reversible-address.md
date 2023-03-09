@@ -9,16 +9,28 @@ In Ethereum, we can do this by sending funds to an account having a contract C<s
 In Ergo, this is done by a two-stage protocol, where the second stage implements C<sub>b</sub> and the first stage implements Ca. The following script, called withdrawScript, implements the second stage. This will be the guarding script of the hot wallet's withdrawal transaction paying to Bob.
 
 ```scala
-val bob = SELF.R4[SigmaProp].get // public key of customer withdrawing 
-val bobDeadline = SELF.R5[Int].get // max locking height 
+// Get Bob's public key who is withdrawing 
+val bob = SELF.R4[SigmaProp].get 
+
+// Get Bob's maximum locking height
+val bobDeadline = SELF.R5[Int].get 
+
+// Check if either Bob's deadline has passed or if Carol is withdrawing before the deadline 
 (bob && HEIGHT > bobDeadline) || (carol && HEIGHT <= bobDeadline)
 ```
 
 This above script is referenced in the first stage script given next.
 
 ```scala
+// Define a function `isChange` that returns true if the propositionBytes of the box `b` equals the propositionBytes of SELF.
 val isChange = {(b:Box) => b.propositionBytes == SELF.propositionBytes} 
+
+// Define a function `isWithdraw` that returns true if the R5 register of the box `b` is greater than or equal to HEIGHT + blocksIn24h
+// and if the propositionBytes of the box `b` equals the withdrawScript.
 val isWithdraw = {(b:Box) => b.R5[Int].get >= HEIGHT + blocksIn24h && b.propositionBytes == withdrawScript }
+
+// Check if alice is true and if all of the OUTPUTS satisfy either the `isChange` function or the `isWithdraw` function.
+// If both conditions are met, the expression will evaluate to true.
 alice && OUTPUTS.forall({(b:Box) => isChange(b) || isWithdraw(b)})
 ```
 

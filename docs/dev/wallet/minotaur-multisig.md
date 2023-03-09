@@ -96,7 +96,7 @@ For a specified path, using each signer's extended public key, an address is der
 
 The list of derived addresses for all signers is used to compile a multi-sig contract like:
 
-```
+```scala
 atLeast(
   N,
   Coll(
@@ -109,6 +109,7 @@ atLeast(
   )
 )
 ```
+
 The contract mentioned above results in distinguishable (different) addresses when two signer addresses swap. In order to prevent this, the list of signers' addresses are always sorted before being used in the contract.
 
 Second, the Sigma-rust library cannot compile any contract. One might think of Node as a solution, but it does not fulfil the project criteria since it disables cold signing. Our solution to this problem is to manually create the required ergiTree array as follows:

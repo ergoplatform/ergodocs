@@ -386,7 +386,7 @@ output.
 - *Result*: $\lst{Byte}$
 - *Serialized as:* PropertyCall
 
-```
+```scala
 isInsertAllowed == (enabledOperations & 0x01) != 0
 isUpdateAllowed == (enabledOperations & 0x02) != 0
 isRemoveAllowed == (enabledOperations & 0x04) != 0

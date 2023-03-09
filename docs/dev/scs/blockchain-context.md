@@ -36,16 +36,24 @@ The `CONTEXT.preHeader` function gives your contract access to the `PreHeader`. 
 
 ```scala
 {
-	// Don't worry about the fields accessed in our CONTEXT data, we will go more in depth
-	// in the next section. Instead focus on how we are accessing this data and then using
-	// using it in our contract.
+	// Focus on how we are accessing this data and using it in our contract
+
+	// Checking if the id of our first input box is the same as the id of our output box
 	val selfAtZero = SELF.id == INPUTS(0).id
-	val boxAmountToAdd: Long = CONTEXT.dataInputs(0).R4[Long].get // Get's a long from R4
+	// Retrieving a long value from R4 of the first data input and adding it to our output value
+	val boxAmountToAdd: Long = CONTEXT.dataInputs(0).R4[Long].get 
 	val amountAddedInOutputs = OUTPUTS(0).value == SELF.value + boxAmountToAdd
+	// Ensuring the height is greater than 700000
 	val heightIsValid: Boolean = HEIGHT > 700000
+	// Ensuring the nonce is even
 	val randomValueIsEven: Boolean = CONTEXT.headers(0).powNonce(0) % 2 == 0
 
+	// If the first condition is true, then the second condition is not checked
+	// Checking if either our output box has the correct value added or the nonce is even and height is greater than 700000
 	sigmaProp(amountAddedInOutputs && selfAtZero) 
 			|| sigmaProp(heightIsValid && randomValueIsEven)
 }
+
 ```
+
+The code uses various fields of the CONTEXT object to check certain conditions and produce a SigmaProp output. The code then combines these conditions in a true SigmaProp output if either `amountAddedInOutputs && selfAtZero` or `heightIsValid && randomValueIsEven` is true.

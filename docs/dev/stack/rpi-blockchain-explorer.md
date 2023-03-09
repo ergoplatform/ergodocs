@@ -16,13 +16,13 @@ We will focus specifically on the Chain Grabber module from the [Ergo Blockchain
 <br>
 
 ### Preparing the RPi
-```
+```bash
 sudo apt update
 sudo apt full-upgrade
 ```
 
 ### Download latest Java version
-```
+```bash
 sudo apt install default-JDK
 ```
 
@@ -38,7 +38,7 @@ sudo apt install sbt
 
 If you are reading this in the future, please visit the [code release repo](https://github.com/ergoplatform/explorer-backend/releases) and replace it with the appropriate version.
 
-```
+```bash
 wget https://github.com/ergoplatform/explorer-backend/archive/refs/tags/<version>.zip
 
 unzip explorer-backend-<version>
@@ -48,14 +48,14 @@ unzip explorer-backend-<version>
 
 In the code snippet below, we created "ergo" as the username.
 
-```
+```bash
 sudo apt install postgresql
 sudo su postgres
 createuser ergo -P --interactive
 ```
 
 ### Setup and load database schema
-```
+```bash
 psql
 create database explorer;
 \c explorer;
@@ -69,14 +69,14 @@ The final line of code above executes a SQL script that creates a bunch of table
 
 This is where you need to edit the database username and password you set up earlier. 
 
-```
+```bash
 sudo nano explorer-backend-9.4.3/modules/chain-grabber/src/main/resources/application.conf
 ```
 
 ### Launch chain-grabber
 
 Run the following command from within the `explorer-backend` directory. 
-```
+```bash
 sbt chain-grabber/run
 ```
 
@@ -84,7 +84,7 @@ sbt chain-grabber/run
 
 If all goes well, the code below returns the latest block height that was stored in the database.
 
-```
+```bash
 select max(height) from node_headers;
 ```
 

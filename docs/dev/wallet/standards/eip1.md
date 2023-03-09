@@ -35,6 +35,7 @@ Predicates available are:
 The following is an example of a predicate which states that the registered scan will search for boxes that contain a 
 given asset and also the provided bytes in R1 (*"0e24..."* in the example is a byte array which contains a script 
 represented in ErgoTree form).
+
 ```haskell
 AND(
     CONTAINS_ASSET("bc01de24311298068c07857d3860625abf3277997e2a2b8ff8ea91dda28d47a5"), 

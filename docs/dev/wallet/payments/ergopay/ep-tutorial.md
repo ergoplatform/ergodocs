@@ -16,7 +16,7 @@ Spring provides an IDE, but it is not needed so you can work with the IDE of you
 
 You can start your application with Gradle by typing
 
-```
+```bash
 ./gradlew bootRun // MacOS/Linux
 gradlew bootRun   // Windows
 ```
@@ -70,7 +70,7 @@ If you start your Spring Boot application now and open http://localhost:8080/erg
 Use the endpoint from the wallet application
 
 It’s all good to see the response in your browser, but of course you want to see this in a wallet app. If you have a mobile device with the Ergo wallet app 1.6 or higher installed and it is connected to the same network than the machine running the Spring Boot application, you can test this. Generally, you just need to replace the “http(s)” prefix with “ergopay” and wrap the URL into a QR code to scan it with the wallet app. In this specific case, you must also replace “localhost” (which is only correct on the same machine) with the IP address of your computer within the network. So the URL wrapped into the QR code should look something like this:
-```
+```bash
 ergopay://192.168.0.1:8080/ergopay
 ```
 
@@ -79,7 +79,8 @@ Now generate a QR code from this URL, for example on www.qrstuff.com. Make sure 
 ### Building and reducing a transaction
 
 The spice of ErgoPay is building a transaction on the dApp side and let the user sign it. For this, ErgoPayResponse has a field “reducedTx”. But how to build a transaction and “reduce” it? For this, we need to integrate the Ergo SDK into our Spring Boot project. To pull in the SDK, edit the build.gradle file of your Spring project and add the following line in the dependencies section, right below the spring-boot-starter-web dependency declaration:
-```
+
+```java
 dependencies {
    implementation 'org.springframework.boot:spring-boot-starter-web'
 *  implementation 'org.ergoplatform:ergo-appkit_2.11:4.0.6'
@@ -91,28 +92,38 @@ dependencies {
 When this is done, you can add the following helper method that builds a transaction for sending a certain amount of nanoERG from “sender” to “recipient”:
 
 ```java
+    // This function takes in boolean, long, address of sender and address of recipient
+    // and returns a reduced transaction object.
     private ReducedTransaction getReducedSendTx(boolean isMainNet, long amountToSend, Address sender, Address recipient) {
+        // Determine the network type
         NetworkType networkType = isMainNet ? NetworkType.MAINNET : NetworkType.TESTNET;
+        // Create a REST API client with default explorer url
         return RestApiErgoClient.create(
                 getDefaultNodeUrl(isMainNet),
                 networkType,
                 "",
                 RestApiErgoClient.getDefaultExplorerUrl(networkType)
         ).execute(ctx -> {
+            // Create a new Ergo contract with the recipient's Ergo address
             ErgoTreeContract contract = new ErgoTreeContract(recipient.getErgoAddress().script());
+            // Create an unsigned transaction to put the given amount of funds to the contract
             UnsignedTransaction unsignedTransaction = BoxOperations.putToContractTxUnsigned(ctx,
                     Collections.singletonList(sender),
                     contract, amountToSend, Collections.emptyList());
+            // Use a new prover builder to build the transaction and reduce it
             return ctx.newProverBuilder().build().reduce(unsignedTransaction, 0);
         });
     }
 
+    // Constants for mainnet and testnet nodes
     public static final String NODE_MAINNET = "http://213.239.193.208:9053/";
     public static final String NODE_TESTNET = "http://213.239.193.208:9052/";
 
+    // Get the default node URL based on the network type
     private static String getDefaultNodeUrl(boolean mainNet) {
         return mainNet ? NODE_MAINNET : NODE_TESTNET;
     }
+
 ```
 
 Of course, you should change the node address to your own node you run for your dApp.
@@ -125,6 +136,7 @@ Now, all we have to do is add a method that wraps this helper method into a GET 
     @GetMapping("/roundTrip/{address}")
     public ErgoPayResponse roundTrip(@PathVariable String address) {
         // sends 1 ERG around to and from the address
+        
 
         ErgoPayResponse response = new ErgoPayResponse();
 
@@ -154,13 +166,13 @@ Our endpoint only expects a single parameter: an address. We use this address to
 It is important to catch all exceptions that could be thrown and use the error messages in the response back to the user. For example, an exception will be thrown for every address that does not have enough balance to send 1 ERG. When you catch the exception like this, the user will get the error message presented — not a very beautiful one, there is lots of space left to polish this for a professional dApp. But if you don’t catch the error here, Spring will respond to the requesting wallet app with a server error, and you can place all bets that this will be more ugly for end users and won’t make your dApp look professional.
 When you now try this endpoint manually, you’ll need to add a testnet or mainnet address:
 
-```
+```bash
 http://localhost:8080/roundTrip/<address>
 ```
 
 When trying the endpoint with your wallet app, you don’t need to do this — ErgoPay defines a placeholder that wallet applications fill with the address a user-selected. Wrap an address like this into a QR code to try:
 
-```
+```bash
 ergopay://<yourIP>:8080/roundTrip/#P2PK_ADDRESS#
 ```
 

@@ -18,34 +18,34 @@ Within F-droid, search for `Termux - Terminal emulator with packages` and then d
 
 The next step is to launch Termux and update and upgrade all packages. Using the default responses to all the prompts during the upgrade is okay.
 
-```
+```bash
 pkg upgrade
 ```
 
 Now install the package proot-distro. This is necessary to run OpenJDK-8 in Ubuntu, as it is currently unavailable for the base Linux environment in Android.
 
-```
+```bash
 pkg install proot-distro
 ```
 
 The next step is to download Ubuntu with proot-distro.
 
-```
+```bash
 proot-distro install ubuntu
 ```
 
 Now we need to log in to Ubuntu. 
 
-```
+```bash
 proot-distro login ubuntu
 ```
 
 And now, we need to update Ubuntu; then, we can install wget and OpenJDK-8.
 
-```
+```bash
 apt-get update
 ```
-```
+```bash
 apt-get install wget openjdk-8-jdk
 ```
 
@@ -53,13 +53,13 @@ apt-get install wget openjdk-8-jdk
 
 The next step is to download the latest release of ErgoMixer using wget. You can find the latest release [here.](https://github.com/ergoMixer/ergoMixBack/releases/tag/4.2.0)
 
-```
+```bash
 wget https://github.com/ergoMixer/ergoMixBack/releases/download/4.2.0/ergoMixer-4.2.0.jar
 ```
 
 And now, you can run the mixer with the following command:
 
-```
+```bash
 java -jar ergoMixer-4.2.0.jar
 ```
 

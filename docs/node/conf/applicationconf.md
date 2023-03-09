@@ -318,26 +318,31 @@ Part of coins issued, that is going to the foundation during fixedRatePeriod (7.
 
 
 ##### epochLength
+
 ```
- epochLength = 64800
+epochLength = 64800
 ```
 number of blocks between reward reduction (90 days)
 
 ##### oneEpochReduction
+
 ```
 oneEpochReduction = 3000000000
 ```
 
-number of coins reward decrease every epochs (3 Ergo)
+The number of coins reward decreases every epochs (3 Ergo)
 
 
 ##### minerRewardDelay
 ```
 minerRewardDelay = 720
 ```
-The delay between the block mined and a time, when the reward can be spend. ~ 1 day.
+The delay between when a block is mined and when the reward can be spent. (720 blocks == ~1 day).
+
 #### reemission
+
 ##### checkReemissionRules
+
 ```
 checkReemissionRules = false
 ```

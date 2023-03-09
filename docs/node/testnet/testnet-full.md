@@ -9,7 +9,7 @@ java -jar -Xmx4G ergo-*.jar --testnet -c testnet.conf
 
 A minimal `testnet.conf` would be:
 
-```
+```conf
 ergo {
   networkType = "testnet"
 }
@@ -24,5 +24,5 @@ scorex {
 
 The node will be available at `localhost:9052/panel`
 
-Once the node is syncronised, a user interface for [Swagger](swagger.md) is available at `localhost:9052/swagger`. 
+Once the node is synchronised, a user interface for [Swagger](swagger.md) is available at `localhost:9052/swagger`. 
 

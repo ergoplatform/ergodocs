@@ -34,8 +34,10 @@ The states contain data and the code that was executed in the transaction.
 Hardwire state `n`’s code and data inside state `n − 1`’s code. Then require the code of state `n − 1` to output a box containing state n’s code and data. An example is given in the following pseudocode:
 
 ```scala
+// Ensure the output box has the same ErgoScript code as the state box and the same R4 data
+// This is used to propagate data from the state box to the output box
 out.propositionBytes == state_n_code &&
-out.R4[Int].get == SELF.R4[Int].get // ensure data is propagated
+out.R4[Int].get == SELF.R4[Int].get
 ```
 
 The above code uses the field `propositionBytes` of a box, which contains the binary representation of its guard script as a collection of bytes.

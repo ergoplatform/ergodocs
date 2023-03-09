@@ -76,7 +76,7 @@ If you would like your node to be reachable, port forwarding will need to be set
   
 Specifying the Java heap space with the -Xmx flag may be necessary on your device. On the Samsung S8+, a heap size of -Xmx1536M worked well. An example of the node start command with a heap size of 2Gb looks like 
 
-```
+```bash
 java -Xmx2G  -jar ergo-<release>.jar --mainnet -c ergo.conf
 ```  
 If you have the Ergo Wallet App, you can replace the default node with [http://127.0.0.1:9053](http://127.0.0.1:9053). This way, you can use the node running on the Android device. 
