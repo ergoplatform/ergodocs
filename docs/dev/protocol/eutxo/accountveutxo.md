@@ -7,7 +7,7 @@ tags:
 # Account vs UTXO
 
 
-Like Bitcoin, Ergo uses the ‘UTXO’ (unspent transaction outputs) model rather than the Account model used by platforms like Ethereum. We have made this choice for several reasons, but first, it’s worth explaining how the UTXO or ‘Box’ model works.
+Like Bitcoin, Ergo uses the ‘UTXO’ (unspent transaction outputs) model rather than the Account model used by platforms like Ethereum. We have made this choice for several reasons, but first, it’s worth explaining how the UTXO or [Box](box.md) model works.
 
 Most people think that the balance of an account is a simple number that is updated when you send or receive funds. This is the obvious way to approach the problem; it is how money works in the real world. Your bank account has an increased or decreased balance when different transfers are made in and out. The ‘Account’ model operates: transactions to and from the Account alter your balance on the blockchain.
 

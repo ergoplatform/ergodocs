@@ -6,7 +6,6 @@ A transaction tree can be thought of as a more complex version of a [transaction
 
 Transaction trees can be useful for representing more complex transaction sequences and dependencies, particularly in the context of smart contracts and other advanced blockchain applications. They can help to ensure that transactions are executed in the correct order and with appropriate dependencies, while also providing a more detailed and flexible view of the overall transaction sequence.
 
-Overall, transaction trees are a powerful tool for representing complex blockchain transactions, and can help to improve the efficiency, scalability, and security of blockchain-based systems and applications.
 
 ## Process
 
