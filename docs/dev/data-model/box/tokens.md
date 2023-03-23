@@ -9,14 +9,14 @@ The Erg amount is written directly (with no identifier) as a number in the regis
 
 There are some more significant differences between Ergs and other tokens:
 
-* **ERGs can not be burnt**: the total amount of ergs in transaction inputs should equal the total amount of the outputs. Unlike we can burn other tokens: the total amount for a token in transaction inputs should be no less than the amount of the outputs.
+* **ERGs can not be burnt**: the total amount of ergs in transaction inputs should equal the total amount of the outputs. Unlike **ERGs**, we can burn other tokens: the total amount for a token in transaction inputs should be no less than the amount of the outputs.
 * [Storage rent](rent.md) is **only payable in ERG**.
 
-Tokens can represent myriad things, such as shares, complementary currency units, or whatever else you can think of. 
+Tokens can represent a myriad of things such as shares, complementary currency units, or whatever else you can think of. 
 
 ### Singletons
 
-In the UTXO model, we call a token issued with an amount of exactly one a `singleton` token; these could be used to imitate long-living accounts existing in Waves, Ethereum Classic etc. Namely, a transaction spends an old box with the singleton token and creates a new one, and the script of the old box can demand the new box to have specific properties (e.g. a particular script or a particular amount). Thus the smart account marked with the token can live and have its state changed as prescribed by the smart account contract through a transaction chain. 
+In the UTXO model, we call a token issued with an amount of exactly one unit, a `singleton` token; these could be used to imitate long-living accounts existing in Waves, Ethereum Classic etc. Namely, a transaction spends an old box with the singleton token and creates a new one, and the script of the old box can demand the new box to have specific properties (e.g. a particular script or a particular amount). Thus the smart account marked with the token can live and have its state changed as prescribed by the smart account contract through a transaction chain. 
 
 A particular case for a singular token is an [oracle](oracles.md). 
 
