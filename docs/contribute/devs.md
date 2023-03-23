@@ -4,6 +4,8 @@
 
 Join the [Ergo Discord](https://discord.gg/nr4JRnhAyV) (and enable the development channels) for any support, queries or comments. 
 
+Check out the [Bounties](bounties.md) and [Grants](grants.md) pages. 
+
 
 
 ### Payment 

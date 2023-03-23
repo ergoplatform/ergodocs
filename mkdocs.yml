@@ -156,7 +156,6 @@ nav:
         - uses/oracles.md
         - Oracle Pools V2: eco/oracles-v2.md
         - Mixicles: uses/mixicles.md
-
       - Tooling:
         - Azorus: eco/azorus.md
         - ZenGate Global:
@@ -166,6 +165,8 @@ nav:
       - Sidechains: 
         - uses/sidechains.md
         - ErgoData: uses/ErgoData.md
+      - Hardware:
+        - ErgoPOS: eco/ergopos.md
         
     - Financial:
       - Stablecoins: 
