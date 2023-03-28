@@ -169,6 +169,18 @@ You can 'stake' native tokens on Ergo in some form (on ergopad.io *live*, Night 
 For more info on earning off your Erg, look at the [Yield guide](https://ergonaut.space/en/Guides/yield).
 
 
+## Quantum 
+
+The development of practical quantum computers remains a subject of speculation, and their exact timeline is unclear. In anticipation of this potential threat, various post-quantum (PQ) digital signature schemes have been proposed, such as Lamport signatures. However, these PQ schemes often face limitations in terms of efficiency, thorough study, and standardization.
+
+Ergo employs an efficient class of zero-knowledge proofs known as sigma-protocols, but the known post-quantum alternatives are still considered exotic and impractical for widespread use. As a result, it may be premature to implement any concrete changes to address the potential risks posed by quantum computing.
+
+In the event of a crypto-disaster—such as the development of an efficient quantum computer, number-theoretical attacks on elliptic curves, or other unforeseen vulnerabilities—transitioning to a blockchain with robust post-quantum security measures would be the best course of action. 
+
+Until the threat of quantum computing becomes more imminent or tangible, it may be more productive to focus on monitoring developments in the field, exploring potential post-quantum solutions, and considering strategies for smoothly transitioning to a more secure blockchain in the event of a crypto-disaster.
+
+- [Quantum Computing and Resistance | Ergo Clips](https://www.youtube.com/watch?v=A5SJy7c3bfs&ab_channel=ErgoClips)
+
 ## EIPs
 
 ### What is Ergo's approach to Forking?

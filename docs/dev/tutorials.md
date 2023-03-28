@@ -57,6 +57,9 @@
 
 ## ErgoScript
 
+- [A Quick Primer on ErgoScript](ergoscript-primer.md)
+- [ergoscript-primer.md/#ergoscript-examples]
+
 ### Courses
 
 - [ErgoScript 101 Crash Course](https://docs.google.com/presentation/d/10gYO82z_7qloRrFOcCxTFuzpP40IImPyIKMV2ZFd9M4/edit#slide=id.p) (Slides)
