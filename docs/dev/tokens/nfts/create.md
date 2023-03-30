@@ -11,6 +11,7 @@ The first [on-chain NFT](https://ergotokens.org/#/?token=eba6ac4ee7f63f056594502
 
 ## Resources
 
+- [Lilium](lilium.md) seeks to create decentralised NFT minting, distribution, and sales infrastructure capable of being seamlessly integrated into business applications and programs.
 - [ergpy](https://github.com/mgpai22/ergpy) has bulk-minting (with royalties!) 
 - [ergo-nft-bulk-minter](https://github.com/mgpai22/ergo-nft-bulk-minter)
 - [ergonfts.org/](https://ergonfts.org/)

@@ -160,3 +160,6 @@ cython_debug/
 docs/assets/img/.DS_Store
 docs/assets/.DS_Store
 *.csv
+zip_files.py
+md_files.zip
+.DS_Store
