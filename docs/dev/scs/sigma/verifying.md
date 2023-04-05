@@ -88,3 +88,63 @@ Which looks like this in ErgoScript
 ```
 
 The complete process of signature generation off-chain and verification on-chain is explained in [this test](https://github.com/ergoplatform/ergo-jde/blob/main/kiosk/src/test/scala/kiosk/schnorr/SchnorrSpec.scala).
+
+## Off-chain code
+
+The problem with verifying signatures on-chain is that there is only 256-bits big integer data type. 
+
+Thus better to reduce number of bigints used by using simpler textbook version of Schnorr validation (message details missed):
+
+
+```
+{
+    val message = ...
+    // Computing challenge
+    val e: Coll[Byte] = blake2b256(message) // weak Fiat-Shamir
+    val eInt = byteArrayToBigInt(e) // challenge as big integer
+          
+     // a of signature in (a, z)
+     val a = getVar[GroupElement](1).get
+     val aBytes = a.getEncoded
+
+     // z of signature in (a, z)
+     val zBytes = getVar[Coll[Byte]](2).get
+     val z = byteArrayToBigInt(zBytes)
+
+     // Signature is valid if g^z = a * x^e
+     val properSignature = g.exp(z) == a.multiply(holder.exp(eInt))
+    
+     sigmaProp(properSignature)
+}
+```
+ 
+and then in offchain code we need to be sure that `z` big integer fits into 255 bits. The following code is simply iterating over signatures while one which can be provided used on the blockchain 
+
+```
+  def randBigInt: BigInt = {
+    val random = new SecureRandom()
+    val values = new Array[Byte](32)
+    random.nextBytes(values)
+    BigInt(values).mod(SecP256K1.q)
+  }
+
+  @tailrec
+  def sign(msg: Array[Byte], secretKey: BigInt): (GroupElement, BigInt) = {
+    val r = randBigInt
+    val g: GroupElement = CryptoConstants.dlogGroup.generator
+    val a: GroupElement = g.exp(r.bigInteger)
+    val z = (r + secretKey * BigInt(scorex.crypto.hash.Blake2b256(msg))) % CryptoConstants.groupOrder
+
+    if(z.bitLength <= 255) {
+      (a, z)
+    } else {
+      sign(msg,secretKey)
+    }
+  }
+```
+
+
+Examples on building transactions can be found in ChainCash repository, e.g. this test  https://github.com/kushti/chaincash/blob/master/src/test/scala/kiosk/ChainCashSpec.scala
+
+
+Please note that Schnorr here is using weak Fiat-Shamir transformation, but that should not be a problem as public key is fixed.

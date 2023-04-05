@@ -32,6 +32,7 @@
 ## Infrastructure
 
 - [Install the node](install.md)
+- Get setup on the [Testnet](testnet.md)
 - [Blockchain Explorer with Raspberry Pi](rpi-blockchain-explorer.md)
 - [Mining your own chain](mine-your-own-chain.md)
 
@@ -76,6 +77,6 @@
 
 ### Advanced Tutorials
 
-- [Advanced ErgoScript Tutorial](https://ergoplatform.org/docs/AdvancedErgoScriptTutorial.pdf)
 - [ErgoScript tutorial](https://ergoplatform.org/docs/ErgoScript.pdf)
+- [Advanced ErgoScript Tutorial](https://ergoplatform.org/docs/AdvancedErgoScriptTutorial.pdf)
 

@@ -11,6 +11,13 @@ The first [on-chain NFT](https://ergotokens.org/#/?token=eba6ac4ee7f63f056594502
 
 ## Resources
 
+### Articles
+
+- [How-to: Minting a Non-Fungible Token (NFT) on the Ergo Blockchain](https://ergoplatform.org/en/blog/2022-03-08-how-to-minting-a-non-fungible-token-nft-on-the-ergo-blockchain/)
+
+## Tooling
+
+
 - [Lilium](lilium.md) seeks to create decentralised NFT minting, distribution, and sales infrastructure capable of being seamlessly integrated into business applications and programs.
 - [ergpy](https://github.com/mgpai22/ergpy) has bulk-minting (with royalties!) 
 - [ergo-nft-bulk-minter](https://github.com/mgpai22/ergo-nft-bulk-minter)
