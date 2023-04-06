@@ -14,3 +14,10 @@ Please make pull requests [directly to the repository for this documentation](ht
 
 There are paid bounties scattered across the Ergo repositories, which are summarised [here](https://github.com/ergoplatform/grow-ergo/). 
 
+You can email [team@ergoplatform.org] to request payment for a bounty. 
+
+Please include all relevant details such as:
+
+- Where the bounty was advertised
+- Proof of completion
+- Your ergo address.

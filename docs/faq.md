@@ -14,6 +14,14 @@ This page aims to provide a background on Ergo and answers to some of the most f
 
 Ergo means "therefore" in Latin but "work" in Greek. This is also a play on the fact that the cryptocurrency's design is ***ergo***nomical.
 
+### How does it differ from Bitcoin?
+
+The Ergo project is a cryptocurrency that builds upon the same UTXO model as Bitcoin but extends its functionality with additional features. Ergo allows for more complex programmability by providing access to the entire spending transaction and the block solution in the execution context. This enables the creation of Turing-complete contracts and the implementation of contractual money, where digital coins can be explicitly bound to a contract in the form of executable code.
+
+## What is contractual money?
+
+Contractual money is digital money that is bound to a contract in the form of executable code, which enforces specific rules and conditions for its usage. This is in contrast to traditional money, where contracts are external to the money itself and may be in the form of laws, corporate terms, or informal agreements. Contractual money allows for more precise control over how the money is spent and can be used to implement various use cases, such as microcredit systems or local exchange trading systems.
+
 
 ### What is the *Ergo Foundation*?
 
