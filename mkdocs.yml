@@ -221,7 +221,12 @@ nav:
           - Basic Implementation: uses/lets/basic-imp.md
           - Trustless LETS: uses/lets/trustless-lets.md
 
-
+    - Tokens:
+        - ICOs: uses/ico.md
+        - Index Coins: uses/index_coins.md
+        - PoW Tokens: uses/PoW_tokens.md
+        - Perpetual Tokens: uses/perpetual.md
+        - Buy Back Guarantees: uses/dex-buyback.md
     - NFTs:
       - uses/nft.md
       - Ergo Auctions: eco/ergo-auctions.md
@@ -271,15 +276,7 @@ nav:
       - NFT-Games:
         - Digigoats: eco/digigoats.md
         - Monster Pub Brawl: eco/monsterpub.md
-    
     - Further Ideas: 
-      - Tokens:
-        - ICOs: uses/ico.md
-        - Index Coins: uses/index_coins.md
-        - PoW Tokens: uses/PoW_tokens.md
-        - Perpetual Tokens: uses/perpetual.md
-        - Buy Back Guarantees: uses/dex-buyback.md
-      - Misc:
         - ProfitSharing: uses/profit.md
         - Email Client for Blocked Internet: uses/blocked_web.md
 
