@@ -1,3 +1,4 @@
+# Using AppKit from Python
 To use Appkit from Python, you need to bridge to a JVM instance running the Appkit code. To do so, we use [JPype](https://github.com/jpype-project/jpype) for this guide. It is presumed that you've already set up a proper Python environment.
 
 ### General setup

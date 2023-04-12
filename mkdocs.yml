@@ -467,6 +467,7 @@ nav:
         - AppKit:
           - dev/stack/appkit.md
           - Tutorial: dev/stack/appkit/tutorial.md
+          - Interacting with a local node: dev/stack/appkit/appkit-node.md
           - Gradle: dev/stack/appkit/gradle.md
           - Using Appkit from Python: dev/stack/appkit/appkit_py.md
         - SigmaRust: dev/stack/sigma-rust.md
