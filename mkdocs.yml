@@ -303,6 +303,7 @@ nav:
       - Tokens:
         - dev/data-model/box/tokens.md
         - Create a token: dev/tokens/issue.md
+        - Create a perpetual Token: dev/tokens/perpetual.md
         - Burning a token: dev/tokens/burn.md
         - NFTs:
           - NFTs: dev/tokens/nfts/index.md
