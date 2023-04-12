@@ -302,12 +302,16 @@ nav:
       - Registers: dev/data-model/box/registers.md
       - Tokens:
         - dev/data-model/box/tokens.md
-        - Create a token: dev/tokens/issue.md
-        - Create a perpetual Token: dev/tokens/perpetual.md
+        - Minting a token: dev/tokens/issue.md
+        - Creating a perpetual token: dev/tokens/perpetual.md
         - Burning a token: dev/tokens/burn.md
         - NFTs:
           - NFTs: dev/tokens/nfts/index.md
-          - Create a NFT: dev/tokens/nfts/create.md
+          - Minting a NFT: 
+            - dev/tokens/nfts/create.md
+            - Design V1 v V2: dev/tokens/nfts/v1v2.md
+            - Simple Example: dev/tokens/nfts/nft-examples.md
+            - On-chain NFTs: dev/tokens/nfts/on-chain.md
           - Royalties: dev/tokens/nfts/royalties.md
         - Standards:
           - Asset Standard: dev/tokens/standards/eip4.md

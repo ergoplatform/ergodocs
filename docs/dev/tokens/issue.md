@@ -10,6 +10,8 @@ Ergo supports custom tokens as **first-class citizens**.
     - A box can be no more than 4 kilobytes
     - Tokens add to the computational cost of the transaction.
 
+## Examples
+
 - [Mint a token with Fleet SDK](https://fleet-sdk.github.io/docs/transaction-building#step-4-2-mint-a-token)
 
 ## Resources
