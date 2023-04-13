@@ -1,4 +1,4 @@
-## On-chain NFTs
+# On-chain NFTs
 
 > *Please note:* This method is not yet included in [EIP-0004: Asset Standard](eip4.md) - [See discussion](https://discord.com/channels/668903786361651200/940209605299036170/942656843619106827)
 
