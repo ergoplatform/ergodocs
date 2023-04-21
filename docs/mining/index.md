@@ -103,3 +103,4 @@ Ergo mining is based on [Autolykos](/mining/autolykos), an ASIC-resistant Proof 
 ]
 
 ::/cards::
+
