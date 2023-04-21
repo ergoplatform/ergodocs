@@ -170,7 +170,7 @@ Another incentive for miners on the Ergo Platform is through [**Storage Rent**](
 
 Miners can also benefit from custom emission contracts as part of a Fair Initial Mining Offering (FIMO) process. These contracts reward miners with non-native tokens, ensuring new projects have equal opportunities to distribute tokens to the community while incentivizing miners to participate in mining.
 
-Moreover, miners can operate [off-chain execution bots](dex_bots.md) on the same machine to earn additional ERG rewards. [Machine Finance](machina.md) is also developing an *extensible* off-chain bot framework.
+Moreover, miners can operate [off-chain execution bots](dex_bots.md) on the same machine to earn additional ERG rewards. [Machina Finance](machina-finance.md) is also developing an *extensible* off-chain bot framework.
 
 In summary, miners on the Ergo Platform are incentivized through transaction fees (including MEV), storage rent, custom emission contracts that reward non-native tokens as part of the FIMO (Fair Initial Mining Offering), and more.
 
