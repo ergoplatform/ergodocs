@@ -161,6 +161,19 @@ Ergo blockchain can be thought as common settlement layer for many L1/L2 protoco
 
 See the [scaling](scaling.md) page for more information.
 
+## How will miners be supported after emissions?
+
+After the scheduled emissions conclude in 2045, miners on Ergo will continue to be incentivized through alternative methods. One such approach involves transaction fees and Miner Extracted Value (MEV). Transactions on the Ergo Platform generate fees (paid in Ergs), with a portion of these fees awarded to miners. MEV represents the total value miners can extract from a block using tactics like reordering, front-running, and other advanced techniques. Miners can increase their MEV earnings by efficiently executing transactions in high MEV blocks, which encourages them to contribute their hash power to the network.
+
+
+Another incentive for miners on the Ergo Platform is through [**Storage Rent**](rent.md). This mechanism requires users to pay for the storage their data occupies on the network. Consequently, miners receive a consistent income stream, as they earn Ergs from fees users pay for content storage. [This post](https://www.reddit.com/r/ergonauts/comments/xeke0b/discover_ergos_storage_rent_potential/) provides insight into future mining rewards from storage rent.
+
+Miners can also benefit from custom emission contracts as part of a Fair Initial Mining Offering (FIMO) process. These contracts reward miners with non-native tokens, ensuring new projects have equal opportunities to distribute tokens to the community while incentivizing miners to participate in mining.
+
+Moreover, miners can operate [off-chain execution bots](dex_bots.md) on the same machine to earn additional ERG rewards. [Machine Finance](machina.md) is also developing an *extensible* off-chain bot framework.
+
+In summary, miners on the Ergo Platform are incentivized through transaction fees (including MEV), storage rent, custom emission contracts that reward non-native tokens as part of the FIMO (Fair Initial Mining Offering), and more.
+
 ## Is Proof of Useful Work being considered?
 
 While Proof of Useful Work is an interesting idea, it is still in its research phase. Ergo is open to implementing new ideas. But, a radical change to its consensus mechanism that requires a hard fork would likely be outside the scope and resources of Ergo's small core development team and limited budget.
@@ -188,6 +201,10 @@ In the event of a crypto-disaster—such as the development of an efficient quan
 Until the threat of quantum computing becomes more imminent or tangible, it may be more productive to focus on monitoring developments in the field, exploring potential post-quantum solutions, and considering strategies for smoothly transitioning to a more secure blockchain in the event of a crypto-disaster.
 
 - [Quantum Computing and Resistance | Ergo Clips](https://www.youtube.com/watch?v=A5SJy7c3bfs&ab_channel=ErgoClips)
+
+## What is the difference between Cardano's eUTXO Model? 
+
+Cardano and Ergo both use extended UTXO (eUTXO) models, but there are some differences between them. For example, Ergo's eUTXO model is based on a smart contract language called ErgoScript, while Cardano's eUTXO model is based on Plutus, which is similar to Haskell. Additionally, Ergo's model allows for non-fungible assets and complex types to be represented on the blockchain, whereas Cardano's model does not natively support these features (although they can be implemented through workarounds). Another difference is that Ergo's model supports oracles and other off-chain data input, which can trigger conditions for transactions to be executed or prevent them from being included in blocks.
 
 ## EIPs
 

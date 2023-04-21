@@ -24,6 +24,9 @@ Most successful public blockchain use cases are related to financial application
 
 **Keeping all this in mind, we expect Ergo's design to be uniquely useful as Contractual Money.**
 
+See the [Ecosystem](https://docs.ergoplatform.com/uses/) section for an overview of all the current and potential uses for Ergo.
+
+
 ## Why Proof-of-Work?
 
 Ergo is based on the [Autolykos](autolykos.md) Proof-of-Work protocol. 
