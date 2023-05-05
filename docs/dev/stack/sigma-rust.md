@@ -1,6 +1,6 @@
 # Sigma Rust
 
-[sigma-rust](https://github.com/ergoplatform/sigma-rust) is an alternative and simple implementation of ErgoTree interpreter and transaction building tools. 
+[sigma-rust](https://github.com/ergoplatform/sigma-rust) is an alternative and simple implementation of ErgoTree interpreter and transaction-building tools. 
 
 See [Architecture](https://github.com/ergoplatform/sigma-rust/blob/develop/docs/architecture.md) for high-level overview.
 
