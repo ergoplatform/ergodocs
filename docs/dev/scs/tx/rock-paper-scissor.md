@@ -1,4 +1,5 @@
-Our next example of a multi-stage contract is the Rock-Paper-Scissors game, often used to introduce Ethereum [11]. The game is played between two players, Alice and Bob. Each player chooses a secret independently, and the game is decided after the secrets are revealed.
+Our next example of a multi-stage contract is the Rock-Paper-Scissors game, often used to introduce Ethereum. The game is played between two players, Alice and Bob. Each player chooses a secret independently, and the game is decided after the secrets are revealed.
+
 Let a, b ∈ Z3 be the secrets of Alice and Bob, respectively, with the understanding that (0, 1, 2) represent (rock, paper, scissors). If a = b, then the game is a draw; otherwise, if a − b ∈ {1, −2}, then Alice wins, else Bob wins. The first party to reveal the secret is disadvantaged since the other party can adaptively choose and win. In the real world, both parties reveal their secrets simultaneously to prevent this. In the virtual world, however, this cannot be enforced. Hence this attack must be handled using cryptographic commitments, where the first party, Alice, does not initially reveal her secret but rather only a commitment to that secret.
 
 The modified game using commitments is as follows:

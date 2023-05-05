@@ -17,15 +17,15 @@ This page contains links to documents with a general overview of Ergo platform, 
 
 ## Foundational papers
 
-- [ZeroJoin: Combining ZeroCoin and CoinJoin](https://eprint.iacr.org/2020/560.pdf)
+- [On Contractual Money](https://pdfs.semanticscholar.org/d51b/51fd136b1b74ece7caa6a7cb9c8f74b1b829.pdf)
 - [Improving authenticated dynamic dictionaries, with applications to cryptocurrencies](https://eprint.iacr.org/2016/994.pdf)
-- [A Systematic Approach To Cryptocurrency Fees](https://fc18.ifca.ai/bitcoin/papers/bitcoin18-final18.pdf)
-- [Revisiting Difficulty Control for Blockchain Systems](https://eprint.iacr.org/2017/731.pdf)
 - [Self-reproducing Coins as Universal Turing Machine](https://arxiv.org/pdf/1806.10116)
 - [Multi-mode Cryptocurrency Systems](https://eprint.iacr.org/2018/129.pdf)
-- [EDRAX: A Cryptocurrency with Stateless Transaction Validation](https://eprint.iacr.org/2018/968.pdf)
-- [On Contractual Money](https://pdfs.semanticscholar.org/d51b/51fd136b1b74ece7caa6a7cb9c8f74b1b829.pdf)
 - [Multi-stage Contracts in the UTXO Model](https://ergoplatform.org/docs/paper_26.pdf)
+- [EDRAX: A Cryptocurrency with Stateless Transaction Validation](https://eprint.iacr.org/2018/968.pdf)
+- [Revisiting Difficulty Control for Blockchain Systems](https://eprint.iacr.org/2017/731.pdf)
+- [Storage Rent](rent.md): [A Systematic Approach To Cryptocurrency Fees](https://fc18.ifca.ai/bitcoin/papers/bitcoin18-final18.pdf)
+- [ZeroJoin: Combining ZeroCoin and CoinJoin](https://eprint.iacr.org/2020/560.pdf)
 
 
 ## Post-Mainnet

@@ -145,4 +145,5 @@ valuesCorrect && outTreeCorrect && selfOutputCorrect && tokenPreserved
 ```
 
 Note that the above ICO example contains many simplifications. For instance, we don’t consider fees when spending the project box. 
-Additionally, the project does not self-destruct after the withdrawal stage. We refer the reader to [14](https://ergoplatform.org/en/blog/2019_04_10-ico-example/) for the full example.
+
+Additionally, the project does not self-destruct after the withdrawal stage.

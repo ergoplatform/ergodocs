@@ -296,7 +296,7 @@ nav:
       - Box: 
         - dev/data-model/box.md
         - Box Modelling: dev/data-model/box/box_modeling.md
-      - Registers: dev/data-model/box/registers.md
+        - Registers: dev/data-model/box/registers.md
       - Tokens:
         - dev/data-model/box/tokens.md
         - Minting a token: dev/tokens/issue.md
@@ -464,13 +464,14 @@ nav:
         - AppKit:
           - dev/stack/appkit.md
           - Tutorial: dev/stack/appkit/tutorial.md
-          - Interacting with a local node: dev/stack/appkit/appkit-node.md
+          - Interacting with a local Node: dev/stack/appkit/appkit-node.md
           - Gradle: dev/stack/appkit/gradle.md
           - Using Appkit from Python: dev/stack/appkit/appkit_py.md
         - SigmaRust: dev/stack/sigma-rust.md
         - Fleet (JS): dev/stack/fleet.md
         - Others:
           - Ergpy: dev/stack/ergpy.md
+          - FleetSharp: dev/stack/fleetsharp.md
           - RustKit: dev/stack/rustkit.md
           - Mosaik: 
             - dev/stack/mosaik/intro.md
@@ -497,57 +498,56 @@ nav:
       - Interpreters:
         - dev/stack/interpreters.md
         - sigmastate-interpreter: dev/scs/sigmastate-interpreter.md
+        - sigma-rust: dev/stack/sigma-rust.md
         
       #- Bookmarks: dev/start/resources.md
     - Smart Contracts:
-      - Smart Contracts: dev/scs/index.md
-      - Sigma Language:
-        - dev/scs/sigma-lang.md
-        - ErgoScript: 
-          - dev/scs/ergoscript.md
-          - Quick Primer: 
-            - dev/scs/ergoscript-primer.md
-            - Key Concepts: dev/scs/ergoscript/ergoscript-key-concepts.md
-            - Examples: 
-              - Anyone Can Spend: dev/scs/ergoscript/anyone-can-spend.md
-              - No-one-Can Spend: dev/scs/ergoscript/no-one-can-spend.md
-              - Context Variables: dev/scs/ergoscript/context-variables.md
-              - Code-blocks: dev/scs/ergoscript/code-blocks.md
-              - Public-keys: dev/scs/ergoscript/public-keys.md
-              - Functional Programming: dev/scs/ergoscript/functional-programming.md
-              - Box Structure: dev/scs/ergoscript/box-structure.md
-              - Storing Data: dev/scs/ergoscript/storing-data.md
-            - Creating a simple P2S app: dev/scs/p2s.md
-          - Language Description: 
-            - dev/scs/sigma/lang-spec.md
-            - Simple Syntax: dev/scs/syntax.md
-            - Sigma Propositions: dev/scs/sigma/sigma-prop.md
-            - The Blockchain context: dev/scs/blockchain-context.md
-            - Accessing boxes and registers: dev/scs/boxes-and-registers.md
-            - Global Functions: dev/scs/global-functions.md 
-            - Language Operations: dev/scs/sigma/lang-ops.md
-          - Cryptographic: 
-              - crypto.md
-              - Sigma Protocols: 
-                - dev/scs/sigma.md
-                - Schnorr: 
-                  - dev/scs/sigma/schnorr.md
-                  - Verifying Schnorr Signatures: dev/scs/sigma/verifying.md
-                - Diffie: 
-                  - dev/scs/sigma/diffie.md
-                  - ZeroJoin: dev/crypto/zerojoin.md
-              - Ring Signatures:
-                - 3-out-of-5 Threshold Signature: dev/scs/sigma/3-out-of-5.md
-                - Distributed Signatures: node/sigs.md
-          - Tooling:
-            - Debugging: dev/scs/debugging.md
-            - FlowCards: dev/scs/flowcards.md
-            - ErgoPuppet: dev/scs/puppet.md
-            - ErgoScala: dev/stack/ergoscala.md
-            - Compiler: dev/stack/compiler.md
-            - Kiosk: dev/stack/kiosk.md
-        - Data Structures:
-          - AVL Trees: dev/protocol/avl.md
+      - dev/scs/index.md
+      - ErgoScript: 
+        - dev/scs/ergoscript.md
+        - Quick Primer: 
+          - dev/scs/ergoscript-primer.md
+          - Key Concepts: dev/scs/ergoscript/ergoscript-key-concepts.md
+          - Examples: 
+            - Anyone Can Spend: dev/scs/ergoscript/anyone-can-spend.md
+            - No-one-Can Spend: dev/scs/ergoscript/no-one-can-spend.md
+            - Context Variables: dev/scs/ergoscript/context-variables.md
+            - Code-blocks: dev/scs/ergoscript/code-blocks.md
+            - Public-keys: dev/scs/ergoscript/public-keys.md
+            - Functional Programming: dev/scs/ergoscript/functional-programming.md
+            - Box Structure: dev/scs/ergoscript/box-structure.md
+            - Storing Data: dev/scs/ergoscript/storing-data.md
+          - Creating a simple P2S app: dev/scs/p2s.md
+        - Sigma Language:
+          - dev/scs/sigma-lang.md
+          - Language Description: dev/scs/sigma/lang-spec.md
+          - Simple Syntax: dev/scs/syntax.md
+          - Sigma Propositions: dev/scs/sigma/sigma-prop.md
+          - The Blockchain context: dev/scs/blockchain-context.md
+          - Accessing boxes and registers: dev/scs/boxes-and-registers.md
+          - Global Functions: dev/scs/global-functions.md 
+          - Language Operations: dev/scs/sigma/lang-ops.md
+        - Cryptographic: 
+            - crypto.md
+            - Sigma Protocols: 
+              - dev/scs/sigma.md
+              - Schnorr: 
+                - dev/scs/sigma/schnorr.md
+                - Verifying Schnorr Signatures: dev/scs/sigma/verifying.md
+              - Diffie: 
+                - dev/scs/sigma/diffie.md
+                - ZeroJoin: dev/crypto/zerojoin.md
+            - Ring Signatures:
+              - 3-out-of-5 Threshold Signature: dev/scs/sigma/3-out-of-5.md
+              - Distributed Signatures: node/sigs.md
+        - Tooling:
+          - Debugging: dev/scs/debugging.md
+          - FlowCards: dev/scs/flowcards.md
+          - ErgoPuppet: dev/scs/puppet.md
+          - ErgoScala: dev/stack/ergoscala.md
+          - Compiler: dev/stack/compiler.md
+          - Kiosk: dev/stack/kiosk.md
+      - Data Structures:
         - ErgoTree: 
           - dev/scs/ergotree.md
           - Introduction: dev/scs/ergotree/ergotree-intro.md
@@ -558,6 +558,8 @@ nav:
           - Predefined Types: dev/scs/ergotree/types.md
           - Predefined Functions: dev/scs/ergotree/functions.md
           - Encoding: dev/scs/ergotree/encoding.md
+        - AVL Trees: dev/protocol/avl.md
+        
 
       - Multi-Stage Protocols: 
         - dev/scs/multi.md
@@ -628,6 +630,7 @@ nav:
       - Roles: contribute/roles.md
     - Marketing: contribute/marketing.md
     - Sigmanauts: contribute/sigmanauts.md
+    - Contribute to the docs!: contribute/docs.md
     
 
 

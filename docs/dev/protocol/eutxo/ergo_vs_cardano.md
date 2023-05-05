@@ -7,7 +7,7 @@ Ergo and Cardano are two blockchain platforms that have implemented the extended
 
 ## Languages and Data Storage
 
-Ergo uses a language called [ErgoScript](ergoscript.md), which is inspired by Scala(scala.md). On the other hand, Cardano employs a language called Plutus, inspired by Haskell. Ergo stores data as [registers](registers.md), while Cardano uses "datum" for data storage. Regardless of these differences, both platforms provide a space within the UTXO to maintain the state of decentralised applications (dApps).
+Ergo uses a language called [ErgoScript](ergoscript.md), which is inspired by [Scala](scala.md). On the other hand, Cardano employs a language called Plutus, inspired by Haskell. Ergo stores data as [registers](registers.md), while Cardano uses "datum" for data storage. Regardless of these differences, both platforms provide a space within the UTXO to maintain the state of decentralised applications (dApps). Cardano uses a two-layer architecture, with Plutus for smart contracts and Marlowe for financial contracts.
 
 The design of Ergo's scripting language, ErgoScript, facilitates the development of complex smart contracts and advanced features. Cardano's Plutus language is also robust and powerful, but in some cases, certain complex functionalities may require incorporating supplementary components or alternative approaches to implementation.
 
@@ -54,9 +54,17 @@ While ErgoScript is not inherently Turing complete, it is possible to achieve Tu
 
 By organizing transactions in this way, developers can create more complex and flexible smart contracts on the Ergo platform, similar to those written in Cardano's Plutus language. However, it is important to note that this method requires more manual construction of transaction structures and may not be as intuitive as using a Turing-complete language like Plutus.
 
-Ergo's transaction validation uses the ErgoLikeStateContext trait and CErgoLikeStateContext case class to represent the blockchain context. The sigmaLastHeaders method provides information about the previous blocks, while the previousStateDigest method provides the UTXO set digest from the last header. The sigmaPreHeader method provides information about the current block being validated. [View code on GitHub](https://github.com/ScorexFoundation/sigmastate-interpreter/sdk/shared/src/main/scala/org/ergoplatform/sdk/wallet/protocol/context/ErgoLikeStateContext.scala)
+Ergo's transaction validation uses the ErgoLikeStateContext trait and [ErgoLikeStateContext](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/sdk/shared/src/main/scala/org/ergoplatform/sdk/wallet/protocol/context/ErgoLikeStateContext.scala) case class to represent the blockchain context. The sigmaLastHeaders method provides information about the previous blocks, while the previousStateDigest method provides the UTXO set digest from the last header. The sigmaPreHeader method provides information about the current block being validated.
 
-On the other hand, Cardano uses Plutus, a Turing-complete, higher-order functional programming language based on Haskell. Plutus is designed for writing smart contracts on the Cardano blockchain. While ErgoScript focuses on the transactional model and guarding propositions for coins, Plutus provides a more general-purpose language for writing smart contracts.
+On the other hand, Cardano uses Plutus, a Turing-complete, higher-order functional programming language subset of Haskell, designed specifically for smart contracts. While ErgoScript focuses on the transactional model and guarding propositions for coins, Plutus provides a more general-purpose language for writing smart contracts.
+
+See these foundational papers for more information. 
+
+- [Improving authenticated dynamic dictionaries, with applications to cryptocurrencies](https://eprint.iacr.org/2016/994.pdf)
+- [Self-reproducing Coins as Universal Turing Machine](https://arxiv.org/pdf/1806.10116)
+- [Multi-stage Contracts in the UTXO Model](https://ergoplatform.org/docs/paper_26.pdf)
+- [EDRAX: A Cryptocurrency with Stateless Transaction Validation](https://eprint.iacr.org/2018/968.pdf)
+
 
 ## Privacy Features
 Security and privacy are essential aspects of both Ergo and Cardano's designs. Ergo's cryptographic design, which incorporates the Sigma protocol, provides extensive access to discrete log-based zero-knowledge proofs, offering potential advantages in privacy and security. Zero-knowledge proofs are cryptographic techniques that enable a prover to demonstrate the truth of a statement to a verifier without revealing any additional information. In the context of blockchain technology, zero-knowledge proofs can enhance privacy and security by allowing transactions and smart contracts to be executed without disclosing sensitive data.
@@ -96,6 +104,7 @@ One notable development between the Ergo and Cardano communities is the Rosen Br
 Moreover, ErgoMixer, as the only token mixer in the space, enables users to mix wrapped ADA and other native tokens, such as wrapped HOSKY. After mixing the tokens in ErgoMixer, users can bridge them back to Cardano. These native tokens can be used in SigmaFi, SigmaO, or any budding dApps available on sigmaverse.io.
 
 Through these collaborations and developments, Ergo and Cardano can enhance their respective platforms, promote interoperability, and advance the adoption of the eUTXO model in the blockchain community.
+
 
 
 ## Conclusion
