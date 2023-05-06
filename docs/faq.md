@@ -202,9 +202,18 @@ Until the threat of quantum computing becomes more imminent or tangible, it may 
 
 - [Quantum Computing and Resistance | Ergo Clips](https://www.youtube.com/watch?v=A5SJy7c3bfs&ab_channel=ErgoClips)
 
-## What is the difference between Cardano's eUTXO Model? 
+## Atomic Composability
 
-Cardano and Ergo both use extended UTXO (eUTXO) models, but there are some differences between them. For example, Ergo's eUTXO model is based on a smart contract language called ErgoScript, while Cardano's eUTXO model is based on Plutus, which is similar to Haskell. Additionally, Ergo's model allows for non-fungible assets and complex types to be represented on the blockchain, whereas Cardano's model does not natively support these features (although they can be implemented through workarounds). Another difference is that Ergo's model supports oracles and other off-chain data input, which can trigger conditions for transactions to be executed or prevent them from being included in blocks.
+Ergo's approach to scalability and atomic composability revolves around a combination of innovative and diverse solutions that address multiple layers of the protocol. By leveraging the Extended UTXO (eUTXO) model, advanced cryptography, and off-chain transactions, Ergo mitigates the scalability concerns that have plagued other blockchain platforms.
+
+## Sharding
+
+Sharding is a scaling technique in which the blockchain is divided into smaller, parallel chains, called shards, that can process transactions and smart contracts independently. This allows for increased throughput and parallelism while maintaining the security and decentralization properties of the main chain.
+
+Ergo is designed to support sharding with its unique architecture. Ergo blocks have extension sections with mandatory and arbitrary key-value data. By placing certain anchors in these sections, it is possible to implement sharding solutions like Bitcoin-NG style micro blocks, Aspen-like service chains, or generic sidechains using velvet or soft forks. Sharding allows Ergo to process multiple transactions simultaneously across different shards, significantly improving the blockchain's overall transaction throughput.
+
+
+
 
 ## EIPs
 

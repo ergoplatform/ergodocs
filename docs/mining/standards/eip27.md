@@ -1,4 +1,5 @@
 
+<!-- TODO TAGS -->
 # EIP27: Emission Retargeting Soft-Fork
 
 ## Ergo Tokenomics and Emission
