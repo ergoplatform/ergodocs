@@ -122,6 +122,7 @@ nav:
       - Layer 1: dev/protocol/scaling/layer1.md
       - Layer 2: dev/protocol/scaling/layer2.md
       - Transactions Per Second: dev/protocol/scaling/TPS.md
+      - Atomic Composability: dev/protocol/scaling/atomic-composability.md
       - Roadmap: dev/protocol/scaling/roadmap.md
     - Documents: 
       - documents.md
