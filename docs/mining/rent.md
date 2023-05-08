@@ -51,6 +51,8 @@ However, there are drawbacks to this mechanism. Users who are not aware of the s
 
 It is worth noting that a proposed EIP (Ergo Improvement Proposal) [EIP-33: Token burning during rent collection #68](https://github.com/ergoplatform/eips/pull/68) is under consideration, which could potentially address some of these concerns. Users should carefully weigh the pros and cons of Ergo's storage rent mechanism and ensure they have sufficient ERG to cover their storage rent to protect their valuable assets.
 
+## How do I check the age of my boxes? 
+
 [TokenJay](tokenjay.md) has a handy [Box consolidation tool](https://tokenjay.app/app/#boxconsolidation) that checks the number and age of boxes in your wallet and consolidates when necessary. You can also message [@ergoportbot](https://t.me/ergoportbot) on Telegram and use the command `/ep boxage ADDRESS` to check. 
 
 ## How does it work?
@@ -145,8 +147,6 @@ Additionally, using blockchains as cloud storage is gaining attraction, so perma
 For research and this article, it is worth noting that the concept of storage rent was also proposed in 2014 by [Freicoin](http://freico.in):
 
 > *"Demurrage forces freicoins to circulate at deliberately high rates. Separation of money's roles as store-of-value and medium-of-exchange allows money to flow when it is needed, in good times and bad. "*
-
-
 
 
 

@@ -22,7 +22,7 @@ In comparison, GPU mining, as seen in Autolykos, is less susceptible to botnet a
 
 Several instances of botnets have been discovered that use Monero as their target cryptocurrency for mining purposes. These botnets infect a large number of computers or servers, either through exploiting vulnerabilities in web apps and databases or using social engineering tactics to trick users into downloading and installing malware. Once the botnet gains control of a large number of devices, it can use their combined computing power to mine Monero and earn a significant profit for the botnet owner.
 
-However, some members of the Monero community have argued that botnets, despite being a security concern, can actually help protect the network from a 51% attack. This is because the fragmented processing power of a botnet can make it harder for a single entity to control the majority of the network's hashing power, which is required for a successful 51% attack 
+It's worth mentioning that some members of the Monero community have argued that botnets, despite being a security concern, can actually help protect the network from a 51% attack. This is because the fragmented processing power of a botnet can make it harder for a single entity to control the majority of the network's hashing power, which is required for a successful 51% attack 
 
 ## Performance
 
