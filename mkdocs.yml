@@ -591,6 +591,7 @@ nav:
       - ASIC Resistance: mining/asic.md     
       - Resources:
         - mining/mining-resources.md
+        - CPU vs GPU: mining/cpu.md
         - EIPs:
           - Emission Retargeting Soft-Fork: mining/standards/eip27.md
           - Tweaking Difficulty Adjustment Algorithm: mining/standards/eip37.md

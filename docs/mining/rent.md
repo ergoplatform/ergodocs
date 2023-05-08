@@ -147,6 +147,27 @@ For research and this article, it is worth noting that the concept of storage re
 > *"Demurrage forces freicoins to circulate at deliberately high rates. Separation of money's roles as store-of-value and medium-of-exchange allows money to flow when it is needed, in good times and bad. "*
 
 
+
+I have added more rows to the table with additional points. Please note that some of the points are general observations about GPUs and CPUs, and not specific to Autolykos or RandomX:
+
+|       | Autolykos (Ergo)         | RandomX (Monero)           |
+|-------|--------------------------|----------------------------|
+| Pros  | - ASIC-resistant         | - ASIC-resistant           |
+|       | - Memory-hard            | - Memory-hard              |
+|       | - Based on Equihash      | - Complex and random code  |
+|       | - Decentralized mining   | - Decentralized mining     |
+|       | - Privacy-focused        | - Privacy-centric          |
+|       | - GPU-optimized          | - CPU-friendly             |
+|-------|--------------------------|----------------------------|
+| Cons  | - Less CPU-friendly      | - Less optimized for GPUs  |
+|       |                          | - Complex design & CPUs    |
+|       |                          |   lead to higher power     |
+|       |                          |   consumption              |
+
+
+
+
+
 ## Resources
 
 
