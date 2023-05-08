@@ -4,7 +4,7 @@ __We've designed Ergo with long-term economic sustainability in mind, and storag
 
 **Key Points**
 
-- After block **1,051,200**, a miner can charge storage rent or spend the box fully if its value is not covering rent.
+- After block **1,051,200** (July 20th, 2023), a miner can charge storage rent or spend the box fully if its value is not covering rent.
 - An important consequence of storage fees is that they provide miners with additional rewards (besides block and transaction rewards).
 - Storage fees decrease the storage load and eliminate extra costs that could be added during excessive state growth.
 - Storage fees encourage coin flow and prevent deflation, which can cause illiquidity and the congestion of a currency system.
@@ -15,19 +15,9 @@ You can read more about how fees will be levied in [this paper](https://fc18.ifc
 
 Storage rent is a nominal fee charged on unspent output after four years, with a price per byte defined by the storage rent subprotocol. This works out to about 0.14 ERG per four years for a box with no tokens and no complex scripts. You can read more details on [the forum](https://www.ergoforum.org/t/storage-rent-details/256)
 
-## Fee Determination
+## Fees 
 
-A box cannot be created with fewer ergs than a minimum value per byte (of the box). The default value is **360 nanoergs per byte**. Miners can vote to adjust this value within the range of `[0, 10000]` nanoergs per byte (inclusive). They can vote to increase by 2 or decrease by -2, with a per-epoch step of 10 nanoergs/byte. 
-
-> For example, if the majority of miners vote to increase the default value during an epoch of 1,024 blocks, the value in the next epoch will be 370 nanoergs/block.
-
-Every four years, **a miner can collect a storage rent fee by spending the box and recreating it while preserving all registers**, except R0 (which holds the monetary value) and R3 (which holds the creation height and a reference to the transaction identifier and output index where the box was created). The storage rent fee is determined through network consensus by voting on the storage rent fee per byte value. The default value for this parameter is 1,250,000 nanoergs/byte. Miners can vote to change this value within the `[0…2,500,000]` range by voting for 1 or -1, with a step of 25,000.
-
-For more information please see the [Governance](governance.md) section
-
-## Modeling 
-
-FeeSimulator.scala is a tool that outputs simulation results related to blockchain storage fees to the console. One of its calculations is the average size of a "standard box," which is derived from the sizes of two P2PK-protected boxes – one containing only ergs and the other containing an additional asset. The results are as follows:
+[FeeSimulator.scala](https://github.com/ergoplatform/ergo/blob/master/src/test/scala/org/ergoplatform/tools/FeeSimulator.scala) is a tool that outputs simulation results related to blockchain storage fees to the console. One of its calculations is the average size of a "standard box," which is derived from the sizes of two P2PK-protected boxes – one containing only ergs and the other containing an additional asset. The results are as follows:
 
 - **Box size**: 105 bytes
 - **Storage fee for an ordinary box**: 0.13125 ergs
@@ -37,6 +27,19 @@ This means a simple box will incur a storage fee of approximately 0.13 ergs ever
 The crucial question is how miners will connect transaction fees to storage fees. For instance, let's say miners require a transaction to pay for input boxes' byte size proportionally to their lifetimes. In this case, miners will receive a constant reward from the UTXO set of a fixed size for four years. After that, the reward per block will be calculated as `perOutputFee * (numberOfBoxes / (4 * BlocksPerYear))`. Assuming Ergo's UTXO set size is similar to Bitcoin's (~60 million), the estimated reward per block would be:
 
 - 7.49 Erg + transaction fees
+
+### Fee Adjustment
+
+A box cannot be created with fewer ergs than a minimum value per byte (of the box). The default value is **360 nanoergs per byte**. Miners can vote to adjust this value within the range of `[0, 10000]` nanoergs per byte (inclusive). They can vote to increase by 2 or decrease by -2, with a per-epoch step of 10 nanoergs/byte. 
+
+> For example, if the majority of miners vote to increase the default value during an epoch of 1,024 blocks, the value in the next epoch will be 370 nanoergs/block.
+
+Every four years, **a miner can collect a storage rent fee by spending the box and recreating it while preserving all registers**, except R0 (which holds the monetary value) and R3 (which holds the creation height and a reference to the transaction identifier and output index where the box was created). The storage rent fee is determined through network consensus by voting on the storage rent fee per byte value. The default value for this parameter is 1,250,000 nanoergs/byte. Miners can vote to change this value within the `[0…2,500,000]` range by voting for 1 or -1, with a step of 25,000.
+
+For more information please see the [Governance](governance.md) section
+
+
+## Modeling 
 
 There is also a great post on r/ergonauts, [Discovering Ergo's Storage Rent Potential](https://www.reddit.com/r/ergonauts/comments/xeke0b/discover_ergos_storage_rent_potential/)
 
@@ -69,9 +72,10 @@ This line of code checks if the box has been stored for at least the required st
 ```
 context.preHeader.height - context.self.creationHeight >= Constants.StoragePeriod
 ```
-   (Reference: ErgoInterpreter, line 64)
 
-The "spending proof" for the expired box refers to a cryptographic proof that is typically required to authorize the spending of a box (or transaction output). In the case of an expired box, the condition "spending proof must be empty" means that no such cryptographic proof is needed to spend the box. This allows anyone to spend the expired box without providing any proof of ownership, as long as the other conditions are met (such as the box being stored for at least the required storage fee period).
+- (Reference: [ErgoInterpreter.scala, line 73](https://github.com/ergoplatform/ergo/blob/49b9f0fe7d0eba1a5ff81e524353acdd9a3cc6dd/ergo-wallet/src/main/scala/org/ergoplatform/wallet/interpreter/ErgoInterpreter.scala#L73))
+
+The "*spending proof*" for the expired box refers to a cryptographic proof that is typically required to authorize the spending of a box (or transaction output). In the case of an expired box, the condition "spending proof must be empty" means that no such cryptographic proof is needed to spend the box. This allows anyone to spend the expired box without providing any proof of ownership, as long as the other conditions are met (such as the box being stored for at least the required storage fee period).
 
 If these conditions are met, anyone can spend the expired box by providing an index of a recreated box (or an index of any box if the expired box doesn't have enough funds to cover the storage fee) in context extension variable #127, which is stored in the input.
 
@@ -109,6 +113,7 @@ While cryptocurrencies address transaction fees as an atomic concept, the paper 
 ![Figure A.](https://ergoplatform.org/img/uploads/3d.png)
 
 ### Key Takeaways
+
 - Transaction fee schemes based on space and duration of objects in the state
 - State growth in blockchain technology can lead to centralization and SPV mining
 - Fee differentiation algorithm for transactions in a blockchain network
