@@ -1,8 +1,10 @@
 # Multi-Stage Protocols
 
-While UTXOs scale better and are less error-prone, Ethereum's accounts allow for persistent storage and shared global context. Multi-Stage Contracts in the UTXO Model [(Paper)](https://storage.googleapis.com/ergo-cms-media/docs/paper_26.pdf) & [(Presentation)](https://www.youtube.com/watch?v=g3FlM_WOwBU) refers to a a technique using [*transaction trees*](tx-tree.md) that can emulate persistent storage in UTXO-based systems by linking several UTXOs containing small pieces of code to form a large multi-stage protocol. Adding _on-chain computations_ and making it possible to process parallelised actions on top of smart contracts.
+While UTXOs scale better and are less error-prone, Ethereum's accounts allow for persistent storage and shared global context.* Multi-Stage Contracts* refers to a a technique using [*transaction trees*](tx-tree.md) that can emulate persistent storage in UTXO-based systems by linking several UTXOs containing small pieces of code to form a large multi-stage protocol. Adding _on-chain computations_ and making it possible to process parallelised actions on top of smart contracts. 
 
 This enables functionality similar to Ethereum's accounts without the overhead of accounts. 
+
+For more information see the *Multi-Stage Contracts in the UTXO Model* [(Paper)](https://storage.googleapis.com/ergo-cms-media/docs/paper_26.pdf) & [(Video Presentation)](https://www.youtube.com/watch?v=g3FlM_WOwBU)
 
 
 ## Examples
