@@ -1,6 +1,8 @@
 # Dexy
 
-Dexy is an alternative stablecoin design that uses seigniorage, currently in development. 
+Dexy is an alternative stablecoin design that uses seigniorage, currently in development.
+
+You can read the [draft whitepaper here](../assets/pdf/dexy.pdf)
 
 
 ## DexyGold
