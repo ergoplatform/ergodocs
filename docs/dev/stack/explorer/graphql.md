@@ -1,12 +1,12 @@
 # GraphQL
 
-[gql.ergoplatform.com](https://gql.ergoplatform.com) is a GraphQL server on top of Ergo Platform's explorer database schema.
 
-## Overview
+GraphQL queries allow flexible data fetching, reducing over-fetching and under-fetching. [gql.ergoplatform.com](https://gql.ergoplatform.com) is a GraphQL server on top of Ergo Platform's explorer database schema.
 
-GraphQL queries allow flexible data fetching, reducing over-fetching and under-fetching. Play around with Apollo Studio to explore the schema and make queries easily.
 
 ## Examples
+
+Play around with Apollo Studio on the GraphQL instance to explore the schema and make queries easily. 
 
 Here are some query categories based on the schema:
 

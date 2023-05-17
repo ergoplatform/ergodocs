@@ -418,7 +418,9 @@ nav:
           - Node Wallet: 
             - node/wallet.md
             - Hierarchical keys: dev/wallet/keys.md
-          - Swagger API: node/swagger.md
+          - Swagger API: 
+            - node/swagger.md
+            - Indexed Node API: node/indexed-node.md
           - Configuration Files: 
             - application.conf: 
               - node/conf.md
