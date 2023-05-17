@@ -13,6 +13,7 @@ Note that wallets are supported by third parties, we only provide the informatio
 | [Paper Wallet](https://anon-br.github.io/ergo-paper-wallet/) | Cold |  |  |  |  |  |
 | [Viawallet](https://apps.apple.com/us/app/viawallet-multi-chain-wallet/id1462031389) | Mobile |  |  |  |  |  |
 | [URL Wallet](https://erg.urlwallet.org/) | URL |  |  |  |  |  |
+| [Zelcore](https://erg.urlwallet.org/) | 3rd party |  |  |  |  |  |
 
 ## Wallets
 
@@ -20,7 +21,7 @@ Note that wallets are supported by third parties, we only provide the informatio
 
 > Nautilus is a privacy-focused web-based wallet 
 
-Ledger support is currently in available [in developer mode for ledger](ledger.md)
+Ledger support is currently available [in developer mode for ledger](ledger.md)
 
 ### Ergo Wallet (Android) / Terminus (iOS)
 
@@ -38,7 +39,7 @@ Minotaur is a multi-platform dApp wallet with _dApp stack support_, allowing any
 - Ergopay-support
 - Ledger Support
 - Export CSV
-- Configure Explorer, Node, UI address used
+- Configure Explorer, Node, and UI address used.
 - ErgoMixer access
 - Transaction builder in Expert mode (mint/burn/etc)
 - Chained transactions
@@ -55,9 +56,6 @@ More information is available on their [GitHub](https://github.com/Satergo/Sater
 ### [Node](install.md) (Server) 
 
 The full node comes with a wallet panel interface. This is generally only recommended for developers. 
-
-
-
 
 ## Others
 
