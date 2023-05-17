@@ -68,8 +68,3 @@ The full node comes with a wallet panel interface. This is generally only recomm
 - [SwiftAPI](https://github.com/ergoplatform/sigma-rust/blob/31aa0922d03f632d22fdc348b2604d23ed296586/bindings/ergo-wallet-ios/Sources/ErgoWallet/ErgoWallet.swift)
 - iOS (Tethered) Beta | [Ergo Light Client](https://github.com/bjenkinsgit/ErgoIOSLiteClient.git) | Community | Requires a full node
 
-#
-
-GitHub does not provide issues-only access permissions. Closest would be a Triage Collaborator 
-
-@abebeos If you want a fight go to #gulag to get it out of your system, not sure who hurt you but your account is a week old and you've only made a handful of comments on the ergo repo - which kushti replied to. Would have probably given you access if you gave him a chance but your attitude is bizarre and not doing you any favours. Do you think he wants to keep all the juicy project management to himself? 
