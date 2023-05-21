@@ -1,75 +1,55 @@
+# Cache Configuration
 
-# cache 
+The `cache` configuration specifies what data to keep in memory to optimize the performance of the system.
 
-What to keep in memory
+## History
 
-## history
-### blockSectionsCacheSize
-```
+### Block Sections Cache Size
+```conf
 blockSectionsCacheSize = 12
 ```
-The number of recently used block sections that will be kept in memory.
+The `blockSectionsCacheSize` setting determines the number of recently used block sections that will be kept in memory. In this configuration, the last 12 block sections are stored.
 
-### headersCacheSize
-```
+### Headers Cache Size
+```conf
 headersCacheSize = 1000
 ```
-The number of recently used headers that will be kept in memory.
-### indexesCacheSize
-```
+The `headersCacheSize` setting specifies the number of recently used headers that will be kept in memory. Here, the last 1000 headers are stored.
+
+### Indexes Cache Size
+```conf
 indexesCacheSize = 10000
 ```
-The number of recently used indexes that will be kept in memory.
-## network
-### invalidModifiersBloomFilterCapacity
-```
+The `indexesCacheSize` setting determines the number of recently used indexes that will be kept in memory. In this configuration, the last 10000 indexes are stored.
+
+## Network
+
+### Invalid Modifiers Bloom Filter Capacity
+```conf
 invalidModifiersBloomFilterCapacity = 10000000
 ```
-The maximum number of invalid modifiers to keep in DeliveryTracker.
+The `invalidModifiersBloomFilterCapacity` setting specifies the maximum number of invalid modifiers that the DeliveryTracker will keep.
 
-### invalidModifiersBloomFilterExpirationRate
-```
+### Invalid Modifiers Bloom Filter Expiration Rate
+```conf
 invalidModifiersBloomFilterExpirationRate = 0.1
 ```
-Non-zero fraction of 1 as a rate of element expiration when capacity is full; the lower, the more gradual expiration.
-Example: 0.1 is represented as 10 bloom filters expiring one by one.
+The `invalidModifiersBloomFilterExpirationRate` setting defines the rate of element expiration when the capacity is full. It's represented as a non-zero fraction of 1. The lower the number, the more gradual the expiration. In this configuration, a rate of 0.1 is represented as 10 bloom filters expiring one by one.
 
-### invalidModifiersCacheSize
-```
+### Invalid Modifiers Cache Size
+```conf
 invalidModifiersCacheSize = 10000
 ```
-Maximum number of invalid modifiers to keep in the cache, following modifiers are kept in bloom filters.
+The `invalidModifiersCacheSize` setting determines the maximum number of invalid modifiers kept in the cache. Any modifiers beyond this number are kept in bloom filters.
 
-### invalidModifiersCacheExpiration
-```
+### Invalid Modifiers Cache Expiration
+```conf
 invalidModifiersCacheExpiration = 6h
 ```
+The `invalidModifiersCacheExpiration` setting defines how long invalid modifiers are kept in the cache. In this configuration, they are kept for 6 hours.
 
-Determines how long we keep invalid modifiers in the cache.
+## Mempool
 
-## mempool
-### invalidModifiersBloomFilterCapacity
-```
-invalidModifiersBloomFilterCapacity = 10000000
-```
-Maximum number of invalid modifiers to keep in DeliveryTracker
+The mempool section has the same configuration options as the network section, with the same parameters, but they apply to the mempool rather than the network. In particular, these settings control how many invalid modifiers are kept in memory and how long they are kept before being removed. 
 
-### invalidModifiersBloomFilterExpirationRate
-```
-invalidModifiersBloomFilterExpirationRate = 0.1
-```
-Non-zero fraction of 1 as a rate of element expiration when capacity is full; the lower, the more gradual expiration.
-Example: 0.1 is represented as 10 bloom filters expiring one by one.
-
-### invalidModifiersCacheSize
-```
-invalidModifiersCacheSize = 10000
-```
-Maximum number of invalid modifiers to keep in the cache, following modifiers are kept in bloom filters.
-
-### invalidModifiersCacheExpiration
-```
-invalidModifiersCacheExpiration = 6h
-```
-
-Determines how long we keep invalid modifiers in the cache.
+Overall, the cache configuration allows you to manage your memory usage and performance effectively, helping to keep your system running smoothly even under heavy load.

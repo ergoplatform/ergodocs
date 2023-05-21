@@ -1,123 +1,100 @@
+# Wallet Configuration
 
-# wallet 
+## Secret Storage
 
-## secretStorage
-### secretDir
+### Secret Directory
 ```conf
 secretDir = ${ergo.directory}"/wallet/keystore"
 ```
-### encryption
+This configures the directory where the wallet's secret information, such as private keys, will be stored. The directory is set to a "keystore" folder inside the "wallet" folder at the location specified by `${ergo.directory}`.
 
-#### prf
+### Encryption
+The encryption section contains configurations related to how the wallet's secret information is encrypted.
+
+#### Pseudo-random function
 ```conf
 prf = "HmacSHA256"
 ```
+The `prf` configures the pseudo-random function used in the encryption. In this case, it is set to "HmacSHA256".
 
-Pseudo-random function with an output of length `dkLen` (PBKDF2 param)
-
-#### c
+#### Number of PBKDF2 Iterations
 ```conf
 c = 128000
 ```
-Number of PBKDF2 iterations (PBKDF2 param)
+The `c` configures the number of iterations used in the PBKDF2 (Password-Based Key Derivation Function 2) encryption algorithm.
 
-#### dkLen
-
+#### Desired Bit-length of the Derived Key
 ```conf
 dkLen = 256
 ```
+The `dkLen` sets the desired length of the derived encryption key, in bits.
 
-Desired bit-length of the derived key (PBKDF2 param)
-## seedStrengthBits
+## Seed Strength Bits
 ```conf
 seedStrengthBits = 160
 ```
+This configures the length of the seed used in generating the wallet's private keys, in bits. Options include 128, 160, 192, 224, and 256.
 
-Generating seed length in bits
-Options: 128, 160, 192, 224, 256
-
-
-## mnemonicPhraseLanguage
+## Mnemonic Phrase Language
 ```conf
 mnemonicPhraseLanguage = "english"
 ```
+This sets the language to be used for the wallet's mnemonic seed phrase. Options include "chinese_simplified", "chinese_traditional", "english", "french", "italian", "japanese", "korean", and "spanish".
 
-Language to be used in the mnemonic seed.
-
-Options: "chinese_simplified", "chinese_traditional", "english", "french", "italian", "japanese", "korean", "spanish"
-
-
-## keepSpentBoxes
+## Keep Spent Boxes
 ```conf
 keepSpentBoxes = false
 ```
-Save used boxes (may consume additional disk space) or delete them immediately
-## defaultTransactionFee
+This option determines whether to keep spent transaction outputs or to delete them immediately. 
+
+## Default Transaction Fee
 ```conf
 defaultTransactionFee = 1000000
 ```
+This sets the default transaction fee the wallet uses when a fee is not specified.
 
-The default fee the wallet uses when the fee is not specified.
-
-## usePreEip3Derivation
+## Use Pre-EIP3 Derivation
 ```conf
 usePreEip3Derivation = false
 ```
+This setting determines whether to use the pre-EIP3 key derivation scheme or not.
 
-Use the pre-EIP3 key derivation scheme.
-
-## dustLimit
+## Dust Limit
 ```conf
 dustLimit = null
 ```
-## maxInputs
-```
-maxInputs = 100
-```
+This sets the minimum amount of tokens that can be in a transaction output. If it's set to null, there's no minimum limit.
 
-## optimalInputs
+## Maximum and Optimal Inputs
 ```conf
+maxInputs = 100
 optimalInputs = 3
 ```
-## testMnemonic
+The `maxInputs` setting determines the maximum number of inputs a transaction can have. The `optimalInputs` setting specifies the preferred number of inputs for a transaction.
+
+## Test Mnemonic and Keys Quantity
 ```conf
 # testMnemonic = "ozone drill grab fiber curtain grace pudding thank cruise elder eight picnic"
-```
-The mnemonic seed to be used in the wallet for tests. If set, the wallet operates in test mode.
-
-## testKeysQty
-```
 # testKeysQty = 5
 ```
-Number of keys to be generated for tests
+These settings are used for testing purposes. If a `testMnemonic` is set, the wallet will operate in test mode, using this mnemonic seed. The `testKeysQty` determines the number of keys to generate for the test.
 
-## tokensWhitelist
+## Tokens Whitelist
 ```conf
 tokensWhitelist = null
 ```
+If set, the wallet will automatically burn non-whitelisted tokens from inputs when making transactions. If it's null, no tokens will be automatically burnt.
 
-Whitelisted tokens, if non-null, the wallet will automatically burn non-whitelisted tokens from inputs when doing transactions.
-
-If `tokensWhitelist = []`, any incoming tokens will be burnt, `tokensWhitelist = ["example"]` means that all the tokens except for "example" will be burnt
-
-tokensWhitelist = null means no tokens burnt automatically
-## checkEIP27
+## Check EIP27
 ```conf
 checkEIP27 = false
 ```
-Enable this setting to handle re-emission tokens in the wallet properly,
-e.g. doing transfers correctly in the presence of re-emission tokens
-## profile
+This setting determines whether to handle re-emission tokens in the wallet correctly. For example, it affects how transfers are done in the presence of re-emission tokens.
+
+## Profile
+
+
 ```conf
 profile = "user"
 ```
-
-Wallet profile allows to say wallet what kind of load it should expect, and so spend memory on caches and Bloom filters accordingly.
-
-There are three options: user, exchange, and appServer.
-
-The user profile is about ordinary planned usage.
-
-Exchange consumes ~20 MB of RAM for high-load ready Bloom filters.
-
-AppServer is in between
+The wallet profile helps the wallet understand the expected load and allocate memory for caches and Bloom filters accordingly. Options are: "user" (for ordinary usage), "exchange" (for high load situations, consuming ~20MB of RAM for Bloom filters), and "appServer" (in between).

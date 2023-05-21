@@ -1,215 +1,93 @@
+# Node Configuration
 
-### node 
+The `node{}` configuration section specifies general settings for the node view holder regime. It includes parameters for state type, extra index, block and transaction verification, mining configuration, memory pool management, and more. 
 
-`node{}` specifies general settings for the node view holder regime. 
-
-See papers.yellow.ModifiersProcessing.md
-
-#### stateType
+## State Type
 ```conf
 stateType = "utxo"
 ```
+The `stateType` setting sets the type of state the node maintains. Possible options are `utxo`, where the node keeps a full utxo set allowing it to validate arbitrary blocks and generate ADProofs, and `digest`, where the node only keeps the state root hash and validates transactions via ADProofs.
 
-Sets the *state type*. The possible options are:
+## Extra Index
+```conf
+extraIndex = false
+extraCacheSize = 500
+```
+The `extraIndex` setting, if set to true, allows the node to store all transactions, boxes, and addresses in an index. `extraCacheSize` sets the number of recently used extra indexes kept in memory.
 
-- `utxo` - keep full utxo set, which allows you to validate arbitrary blocks and generate ADProofs
-- `digest` - keep state root hash only and validate transactions via ADProofs
-
-
-#### verifyTransactions
+## Verify Transactions
 ```conf
 verifyTransactions = true
 ```
+If `verifyTransactions` is set to true, the node will download block transactions and verify them. 
 
-Download block transactions and verify them (requires `BlocksToKeep == 0` if disabled)
-
-#### blocksToKeep
+## Blocks to Keep
 ```conf
 blocksToKeep = -1
 ```
+The `blocksToKeep` setting defines the number of last blocks to keep with transactions and ADproofs. Only the header will be stored for other blocks.
 
-The number of last blocks to keep with transactions and ADproofs; only the header will be stored for all other blocks.
-
-- Keep all blocks from genesis if negative.
-- Please do not set above `114,688` (which corresponds to the default [`adProofsSuffixLength`](#adproofssuffixlength); otherwise, finding proofs around the peers could be hard.
-
-#### PoPoWBootstrap
+## PoPoW Bootstrap
 ```conf
 PoPoWBootstrap = false
 ```
+If `PoPoWBootstrap` is set to true, the node will download the Proof of Proof of Work (PoPoW) on node bootstrap.
 
-Download the *PoPoW proof* (Proof of Proof of Work) on node bootstrap
-
-#### minimalSuffix
-```conf
-minimalSuffix = 10
-```
-
-Minimal suffix size for PoPoW proof (maybe pre-defined constant or settings parameter)
-
-#### mining
+## Mining
 ```conf
 mining = false
-```
-
-If you are mining through the node. 
-
-
-#### maxTransactionCost
-```conf
 maxTransactionCost = 1000000
-```
-
-The maximum a transaction can cost for it to be propagated. 
-
-#### maxTransactionSize
-```conf
 maxTransactionSize = 98304 // 96 kb
-```
-
-Maximum size of a transaction to be accepted into the memory pool.
-
-#### useExternalMiner
-```conf
 useExternalMiner = true
-```
-
-Use external miner; native miner is used if set to `false.`
-
-#### internalMinersCount
-```conf
 internalMinersCount = 1
-```
-How many internal miner threads to spawn (used mainly for testing)
-
-#### internalMinerPollingInterval
-```conf
 internalMinerPollingInterval = 500ms
-```
-
-How frequently to ask for new block candidates.
-
-#### miningPubKeyHex
-
-```conf
 miningPubKeyHex = null
 ```
+These settings determine if you are mining through the node, the maximum transaction cost and size to propagate, whether to use an external miner, the number of internal miner threads to spawn, how frequently to ask for new block candidates, and a dedicated public key for mining rewards.
 
-This variable will dedicate public key mining rewards (P2PK address is also accepted)
-
-
-
-#### offlineGeneration
+## Offline Generation
 ```conf
 offlineGeneration = false
 ```
+If `offlineGeneration` is set to true, the node will generate blocks while disconnected from the mainnet.
 
-If true, the node will generate blocks while disconnected from the ergo mainnet. The only useful case for this is when you want to launch your own blockchain. See the [testnet](testnet.md) page for more information.
-
-#### keepVersions
+## Keep Versions
 ```conf
 keepVersions = 200
 ```
+The `keepVersions` setting specifies the number of state snapshots diffs to keep, which defines the maximum rollback depth.
 
-The number of state snapshots diffs to keep, which defines the maximum rollback depth.
-
-#### acceptableChainUpdateDelay
+## Acceptable Chain Update Delay
 ```conf
 acceptableChainUpdateDelay = 30m
 ```
-The acceptable difference between NOW and the timestamp of the latest chain update or best block. (Helps to discover syncing issues.)
+The `acceptableChainUpdateDelay` setting is the acceptable difference between the current time and the timestamp of the latest chain update or best block. It helps to discover syncing issues.
 
-> TODO: The 'acceptable difference' between the current time and the timestamp of the latest chain update (or best block). This helps to discover syncing issues. 
+## Memory Pool Configuration
+The mempool settings define the maximum number of unconfirmed transactions the node will accept, the interval for re-checking a transaction in the memory pool, the mempool transaction sorting scheme, the number of transactions to rebroadcast at each epoch, and the minimum fee amount for transactions.
 
-#### mempoolCapacity
-```conf
-mempoolCapacity = 1000
-```
-
-`mempoolCapacity` specifies the maximum number of unconfirmed transactions the node will accept.
-
-#### mempoolCleanupDuration
-```conf
-mempoolCleanupDuration = 30m
-```
-
-The interval for the *re-check* of a transaction in the memory pool. The transaction is initially checked when it enters the memory pool and then again at the specified interval.
-
-#### mempoolSorting
-```conf
-mempoolSorting = "random"
-```
-
-Specify the mempool transaction sorting scheme. The three options available are; 
-
-- `random`
-- `bySize`
-- `byExecutionCost`
-
-
-#### rebroadcastCount
-```conf
-rebroadcastCount = 3
-```
-
-The number of transactions currently in the mempool that are to be re-broadcasted at each epoch.
-
-#### minimalFeeAmount
-```conf
-minimalFeeAmount = 1000000
-```
-
-The minimal fee amount for transactions that the memory pool will accept.
-
-#### blacklistedTransactions
-
+## Blacklisted Transactions
 ```conf
 blacklistedTransactions = []
 ```
+The `blacklistedTransactions` setting is a list of hex-encoded identifiers of transactions banned from the memory pool.
 
-List with hex-encoded identifiers of transactions banned from the memory pool.
-
-
-#### headerChainDiff
-
+## Header Chain Diff
 ```conf
-# default value is 100 blocks ~= 200 minutes
 headerChainDiff = 100
 ```
+The `headerChainDiff` setting defines the number of blocks the node considers to be "close" in time when syncing the header chain.
 
-The node downloads the headers first before moving on to full blocks. Depending on the settings specified by the user, the node downloads a *suffix* of the blockchain (if [stateType](#statetype) = "digest" and ["blocksToKeep"](#blockstokeep) >= 0) or all the full blocks (otherwise).
-
-The node considers the headers-chain synced if it sees a block's header generated closer to the current moment. The node considers that a header is "close" if its timestamp is no more than `headerChainDiff` blocks on average ahead of the node's clocks.
-
-
-#### checkpoint
-
-
+## Checkpoint
 ```conf
 checkpoint = null
 ```
+The `checkpoint` setting allows you to specify an optional individual checkpoint to skip script validation for performance and memory usage improvements during initial bootstrapping.
 
-You can specify an optional and individual checkpoint. If you want to use this, set the `height` and corresponding block header id as such;
+## ADProofs
 
-```
-checkpoint = {
-    height = 703848
-    blockId = "ed64513030a0396f492385410ba643bb24ca69f0a72b83c9bae8f04d1fa9c5cd"
-}
-```
-   
-- Before (and including) the height given, validation of scripts is missed.
-- This improves performance and memory usage during initial bootstrapping.
-- The node still applies transactions to the UTXO set and checks UTXO set digests for each block.
-- Block at checkpoint height are checked against the expected height.
-    
-
-#### adProofsSuffixLength
-
-Only dump the `ADProofs` for this suffix length given during bootstrapping.
-
-
-```
+ Suffix Length
+```conf
 adProofsSuffixLength = 114688 // 112k
 ```
-
+The `adProofsSuffixLength` setting specifies the length of the `ADProofs` suffix dumped during bootstrapping.

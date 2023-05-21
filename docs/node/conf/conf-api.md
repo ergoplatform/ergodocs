@@ -1,73 +1,57 @@
-## api-dispatcher 
+# API Dispatcher Configuration
 
-Controls the dispatcher for some API-related actors
+The `api-dispatcher` configuration controls the dispatcher responsible for managing API-related actors. In actor-based systems, the dispatcher is responsible for the execution of messages from the actor's mailbox.
 
-
-### type
-```
+## Dispatcher Type
+```conf
 type = Dispatcher
 ```
+The `type` setting specifies the dispatcher type. In this configuration, `Dispatcher` is used, representing an event-based dispatcher.
 
-The dispatcher is the name of the event-based dispatcher.
-
-### executor
-```
+## Executor Type
+```conf
 executor = "fork-join-executor"
 ```
+The `executor` setting determines the type of execution service used. Here, the `fork-join-executor` is utilized, which allows tasks to be split into smaller parts and executed concurrently, increasing efficiency.
 
-What kind of ExecutionService to use
-
-### fork-join-executor
-#### parallelism-min
-```
+## Fork-Join Executor
+### Minimum Parallelism
+```conf
 parallelism-min = 1
 ```
+The `parallelism-min` setting indicates the minimum number of threads to cap the factor-based parallelism number.
 
-Min number of threads to cap factor-based parallelism number to
-#### parallelism-factor
-```
+### Parallelism Factor
+```conf
 parallelism-factor = 2.0
 ```
+The `parallelism-factor` setting is used to calculate the parallelism, i.e., the number of threads. It is calculated as the ceiling of the number of available processors multiplied by the factor.
 
-Parallelism (threads) ... ceil(available processors * factor)
+### Maximum Parallelism
+```conf
+parallelism-max = 2
+```
+The `parallelism-max` setting determines the maximum number of threads to cap the factor-based parallelism number.
 
-#### parallelism-max
-```
-parallelism-max
-```
-The maximum number of threads to limit the factor-based parallelism number to
-### throughput
-```
+## Throughput
+```conf
 throughput = 4
 ```
-
-Throughput defines the maximum number of messages 
-processed per actor before the thread jumps to the next actor.
-Set to 1 for as fair as possible.
-
+The `throughput` setting defines the maximum number of messages processed per actor before the thread switches to the next actor. A lower value results in fairer, but potentially less efficient execution. Here, it's set to 4.
 
 ## Full Code Snippet
 
-```
+```conf
 api-dispatcher {
-  # Dispatcher is the name of the event-based dispatcher
   type = Dispatcher
-  # What kind of ExecutionService to use
   executor = "fork-join-executor"
-  # Configuration for the fork-join pool
   fork-join-executor {
-    # Min number of threads to cap factor-based parallelism number to
     parallelism-min = 1
-    # Parallelism (threads) ... ceil(available processors * factor)
     parallelism-factor = 2.0
-    # Max number of threads to cap factor-based parallelism number to
     parallelism-max = 2
   }
-  # Throughput defines the maximum number of messages to be
-  # processed per actor before the thread jumps to the next actor.
-  # Set to 1 for as fair as possible.
   throughput = 4
 }
 ```
 
-
+Overall, the `api-dispatcher` configuration plays a crucial role in controlling the efficiency and fairness of processing messages for API-related actors in your application.

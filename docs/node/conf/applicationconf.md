@@ -40,14 +40,23 @@ verifyTransactions = true
 Download block transactions and verify them (requires BlocksToKeep == 0 if disabled)
 
 #### blocksToKeep
+
 ```conf
 blocksToKeep = -1
 ```
 
-Number of last blocks to keep with transactions and ADproofs, for all other blocks only header will be stored.
+Number of last blocks to keep with transactions and ADproofs, for all other blocks only the header will be stored.
 
 Keep all blocks from genesis if negative
 Please do not set it more than 114,688 (default adProofsSuffixLength), otherwise, it could be hard to find proofs around the peers
+
+
+### utxoBootstrap
+
+```conf
+# Download and apply UTXO set snapshot and full-blocks after that
+utxoBootstrap = false
+```
 
 #### PoPoWBootstrap
 ```conf
@@ -363,11 +372,11 @@ checkReemissionRules = false
 ```
 ##### emissionNftId
 ```
-      emissionNftId = ""
+emissionNftId = ""
 ```
 ##### reemissionTokenId
 ```
-      reemissionTokenId = ""
+reemissionTokenId = ""
 ```
 ##### reemissionNftId
 ```
@@ -462,6 +471,7 @@ keepSpentBoxes = false
 ```
 Save used boxes (may consume additional disk space) or delete them immediately
 #### defaultTransactionFee
+
 ```
 defaultTransactionFee = 1000000
 ```

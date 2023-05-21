@@ -1,3 +1,9 @@
+---
+tags:
+  - Voting
+---
+
+
 # Governance
 
 Many parameters in Ergo can be changed on-the-fly via miners voting. Things like instructions costs, computational cost limit per block, block size limit, storage fee factor, and block version. Meaning the long-term economic security of the protocol is up to miners to decide. 
