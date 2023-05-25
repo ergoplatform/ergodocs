@@ -544,6 +544,9 @@ nav:
               - 3-out-of-5 Threshold Signature: dev/scs/sigma/3-out-of-5.md
               - Distributed Signatures: node/sigs.md
         - Tooling:
+          - Playgrounds:
+            - Scastie: dev/scs/ergoscript/scastie.md
+            - P2S Playground: dev/stack/utilities/plutomonkey.md
           - Debugging: dev/scs/debugging.md
           - FlowCards: dev/scs/flowcards.md
           - ErgoPuppet: dev/scs/puppet.md

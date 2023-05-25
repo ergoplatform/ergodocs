@@ -29,6 +29,14 @@ Please see this [Quick Primer on ErgoScript](/dev/scs/ergoscript-primer) for an 
 
 ## Resources
 
+### Playgrounds
+
+
+- Compile ErgoScript directly in your browser with [ErgoScript Playground](https://wallet.plutomonkey.com/p2s/)
+- There is also [Scastie](https://scastie.scala-lang.org/greenhat/T2jSEv11QcWpXX1XrcHUdw/31)
+- [Kiosk](/dev/stack/kiosk) lets anyone play with ErgoScript using a basic web-based UI
+- [ergoscript-compiler](https://github.com/ergoplatform/ergoscript-compiler)
+
 
 ##### Courses
 
@@ -74,12 +82,6 @@ Please see this [Quick Primer on ErgoScript](/dev/scs/ergoscript-primer) for an 
 - [flowcardLib: Ergo FlowCard library for diagrams.net](https://github.com/lucagdangelo/flowcardLib)
 - [ergo-castanet](https://github.com/iandebeer/ergo-castanet)
 
-##### Bookmarks
-
-
-- Compile ErgoScript directly in your browser with [ErgoScript Playground](https://wallet.plutomonkey.com/p2s/)
-- [Kiosk](/dev/stack/kiosk) lets anyone play with ErgoScript using a basic web-based UI
-- [ergoscript-compiler](https://github.com/ergoplatform/ergoscript-compiler)
 
 ##### Box
 

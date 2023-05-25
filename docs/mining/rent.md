@@ -41,7 +41,10 @@ For more information please see the [Governance](governance.md) section
 
 ## Modeling 
 
-There is also a great post on r/ergonauts, [Discovering Ergo's Storage Rent Potential](https://www.reddit.com/r/ergonauts/comments/xeke0b/discover_ergos_storage_rent_potential/)
+There is also a great post on r/ergonauts, 
+- [Part 1 - Tracking storage rent potential](https://www.reddit.com/r/ergonauts/comments/tyymax/tracking_storage_rent_potential/)
+- [Part 1 - Discovering Ergo's Storage Rent Potential](https://www.reddit.com/r/ergonauts/comments/xeke0b/discover_ergos_storage_rent_potential/). 
+- [Part 3 - Tracking storage rent potential](https://www.reddit.com/r/ergonauts/comments/13e8f8g/tracking_storage_rent_potential_3rd_ed/)
 
 
 ## What about tokens, NFTs, etc?
