@@ -3,9 +3,9 @@ site_url: https://docs.ergoplatform.com
 repo_url: https://github.com/glasgowm148/ergodocs
 edit_uri: edit/main/docs/
 
-
 theme:
     name: material
+    custom_dir: overrides
     favicon: assets/favicon.png
     palette: # dark scheme toggle on material + dark orange
       - scheme: default
@@ -19,6 +19,9 @@ theme:
           icon: material/toggle-switch
           name: Switch to light mode
     features:
+        - content.action.edit
+        - content.action.view
+        - content.code.copy
         - navigation.tabs
         #- navigation.instant
         #- navigation.sections # The bold sections in navigation

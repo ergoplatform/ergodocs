@@ -14,10 +14,9 @@ We call this object a ***'box'***.
 
 - A box is an **immutable object** which can only be created or removed. 
 - A box is not simply a coin; it contains data, code and registers. Even more, there is nothing in the box but registers. 
-- There are four predefined registers, with monetary value, protecting script, and an identifier of a transaction which created the box.
+- There are four predefined registers, with monetary value, protecting script, and an identifier of a transaction that created the box.
 - Because the data of the transaction that created the box is included, the box has unique contents and, therefore, a unique id. 
-- Boxes are **first-class citizens** in the Ergo protocol. 
-- The active boxes set is authenticated via a hash-based data structure, which allows building lightweight full-nodes (as described in [this paper](https://eprint.iacr.org/2016/994)). 
+- Boxes are **first-class citizens** in the Ergo protocol. The active box set is authenticated via a hash-based data structure, which allows the building of lightweight full nodes (as described in [this paper](https://eprint.iacr.org/2016/994)). 
 - A box may have up to six additional [registers](registers.md) with typed data. A script may access its registers (as well as registers of input and output boxes of the spending transaction).
 - Transactions contain both *input* and *output* boxes. 
 

@@ -1,4 +1,5 @@
-# Roles
+# Career Opportunities
 
+Although the Ergo Foundation occasionally publicizes full-time positions, these are typically specialized and senior roles. The most direct route to becoming an integral part of our team is by undertaking some of our compensated [bounties](https://github.com/ergoplatform/grow-ergo/). These tasks allow you to contribute significantly to our mission while gaining a better understanding of our platform.
 
-While the Ergo Foundation occasionally advertises full-time roles, these are usually specialised senior positions. The quickest way to get involved is to start completing some (paid) [bounties](https://github.com/ergoplatform/grow-ergo/) or get involved in the ecosystem chats and see where you can help out!
+Furthermore, actively participating in our ecosystem discussions is a great way to identify areas where your skills can make a difference. It's not just about technical expertise; we value diversity in knowledge and perspectives. Whether you're a developer, a researcher, or an enthusiast, your input can contribute to the growth and success of Ergo. It's the perfect starting point for a potential long-term partnership with us.

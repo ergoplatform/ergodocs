@@ -1,23 +1,21 @@
 # Bounties
 
-## Education Bounties
+## Educational Reward Program
 
-> **Anything educative for the community is subject to some bounty, even if not specifically listed.**
+> **Any educational content beneficial to the community could be eligible for a reward, even if it isn't explicitly mentioned.**
 
+We currently offer active rewards for [Developer Tutorials and Guides](https://github.com/ergoplatform/grow-ergo/issues/15), which can cater to any skill level. 
 
-Notably, there are active bounties for [Tutorials and Guides for developers](https://github.com/ergoplatform/grow-ergo/issues/15) at any skill level. 
+Please submit your educational contributions [directly to our documentation repository](https://github.com/glasgowm148/ergodocs).
 
+## Development Reward Program
 
-Please make pull requests [directly to the repository for this documentation](https://github.com/glasgowm148/ergodocs)
+We provide paid rewards for valuable contributions across various Ergo repositories, which are comprehensively outlined [here](https://github.com/ergoplatform/grow-ergo/). 
 
-## Development Bounties
+If you wish to claim a reward, please send an email to team@ergoplatform.org. 
 
-There are paid bounties scattered across the Ergo repositories, which are summarised [here](https://github.com/ergoplatform/grow-ergo/). 
+Ensure to include all pertinent details such as:
 
-You can email [team@ergoplatform.org] to request payment for a bounty. 
-
-Please include all relevant details such as:
-
-- Where the bounty was advertised
-- Proof of completion
-- Your ergo address.
+- The platform where the reward was announced
+- Evidence of your work completion
+- Your Ergo address.
