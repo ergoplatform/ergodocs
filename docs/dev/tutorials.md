@@ -1,19 +1,11 @@
 # Tutorials
 
-## Introductory
+## Infrastructure
 
-### Articles
-
-- [Side tooling for building dApps on Ergo](https://dav009.medium.com/ergo-101-side-tooling-for-building-dapps-on-ergo-c71889d60826)
-- [DeCo Education: DApp Components - Backend](https://deco-education.github.io/deco-docs/docs/into-the-woods/trail2-ergo-coding/dapp-components)
-
-### Video
-
-- [Learning blockchains like Cardano and Ergo](https://www.youtube.com/watch?v=HDn49bToTMI)
-- [Ergo Blockchain Crash Course](https://www.youtube.com/playlist?list=PL8-KVrs6vXLTVXGwmYXjOBRx3VymB4Vm2)
-- [DeCo Intro Lessons: Build a mobile app on Android or iOS](https://www.youtube.com/watch?v=qR0_k7VH6KI&list=PLopsKGshj0B4BpMoSMh5hQk8gVfWk-si6)
-
-
+- [Install the node](install.md)
+- Get setup on the [Testnet](testnet.md)
+- [Blockchain Explorer with Raspberry Pi](rpi-blockchain-explorer.md)
+- [Mining your own chain](mine-your-own-chain.md)
 
 ## Tokens
 
@@ -29,19 +21,22 @@
 - [Sending a chained transaction](chained-tx.md) with Ergpy
 - [Getting Started](https://fleet-sdk.github.io/docs/getting-started) with Fleet SDK
 
-## Infrastructure
-
-- [Install the node](install.md)
-- Get setup on the [Testnet](testnet.md)
-- [Blockchain Explorer with Raspberry Pi](rpi-blockchain-explorer.md)
-- [Mining your own chain](mine-your-own-chain.md)
-
-
 ## App development
 
 - [Creating a simple pay-to-script app](p2s.md)
 - [Get started with Ergo Mosaik: A UI system for Ergo dApps](mosaik.md)
 - [Using AppKit from Python](https://github.com/ergoplatform/ergo-appkit/wiki/Using-Appkit-from-Python)
+
+### Introductory Articles
+
+- [Side tooling for building dApps on Ergo](https://dav009.medium.com/ergo-101-side-tooling-for-building-dapps-on-ergo-c71889d60826)
+- [DeCo Education: DApp Components - Backend](https://deco-education.github.io/deco-docs/docs/into-the-woods/trail2-ergo-coding/dapp-components)
+
+### Introductory Video
+
+- [Learning blockchains like Cardano and Ergo](https://www.youtube.com/watch?v=HDn49bToTMI)
+- [Ergo Blockchain Crash Course](https://www.youtube.com/playlist?list=PL8-KVrs6vXLTVXGwmYXjOBRx3VymB4Vm2)
+- [DeCo Intro Lessons: Build a mobile app on Android or iOS](https://www.youtube.com/watch?v=qR0_k7VH6KI&list=PLopsKGshj0B4BpMoSMh5hQk8gVfWk-si6)
 
 
 ## Zero-Knowledge
@@ -59,7 +54,7 @@
 ## ErgoScript
 
 - [A Quick Primer on ErgoScript](ergoscript-primer.md)
-- [ergoscript-primer.md/#ergoscript-examples]
+- [ErgoScript Examples](ergoscript-primer.md#ergoscript-examples)
 
 ### Courses
 

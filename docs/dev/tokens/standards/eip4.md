@@ -39,7 +39,7 @@ Though this is not required by the protocol, we propose the following structure 
 | R5              | Token description (UTF-8 representation)        | "Nothing backed USD token"   | "0e184e6f7468696e67206261636b65642055534420746f6b656e"  |
 | R6              | Number of decimals                              | "2"                          | "0e0132"                         |
 
-Note, that additional registers (R4-R6) are encoded as **Coll[Byte]** type of ErgoScript and their encoded representation is received as `'\x0e' + intToVlq(byteArray.length) + byteArray` where `byteArray` is UTF-8 representation of the original string.
+Note, that additional [registers](registers.md) (R4-R6) are encoded as **Coll[Byte]** type of ErgoScript and their encoded representation is received as `'\x0e' + intToVlq(byteArray.length) + byteArray` where `byteArray` is UTF-8 representation of the original string.
 The example above issues one thousand tokens called "USD" with two decimals each.
 The transaction that issues such a token was included in block 98288 and may be found in block [explorer](https://explorer.ergoplatform.com/en/transactions/5c131f8ae9fa68dab1bac654aa66d364bc7da12107f337a0c9d3d80d8951ee41))
 

@@ -26,7 +26,7 @@ One can create a token, e.g. ERG/EUR exchange rates oracle. Then a box which con
 
 There is a notable exception to the weak preservation rule *(total amount in inputs is no less than the total amount in outputs)*; namely, a transaction can create out-of-thin-air tokens in its outputs if the asset identifier is equal to the identifier of the first input box of the transaction. As the box identifier is cryptographically unique, there is no chance of having a second asset with the same identifier. At the same time, the hash function used is collision-resistant (and it indeed is). This rule also means that we can create only one new asset per transaction. 
 
-The Ergo reference implementation wallet uses specific registers in a certain way, though the protocol does not require this: 
+The Ergo reference implementation wallet uses specific [registers](registers.md) in a certain way, though the protocol does not require this: 
 
 * `R4` - verbose name
 * `R5` - description

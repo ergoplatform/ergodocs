@@ -43,7 +43,7 @@ which only spend boxes from P2PK addresses.
 The reason for this is simple. In Ergo's eUTXO model a box can be protected by
 an arbitrarily complex contract (aka spending condition) and any spending
 transaction should satisfy that condition by adding required context variables,
-creating expected number of outputs with specific registers depending on the
+creating expected number of outputs with specific [registers](registers.md) depending on the
 contract. There is no way for a universal wallet application to know all
 the specific details of all the possible contracts.
 

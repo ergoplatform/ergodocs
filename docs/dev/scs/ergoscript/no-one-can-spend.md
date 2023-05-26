@@ -1,11 +1,13 @@
-# No-one-Can-Spend Scripts
+# Unspendable Scripts in ErgoScript
 
-At the other end of the spectrum are ErgoScript programs that always evaluate to `false`, such as 
+In contrast to the previous examples, ErgoScript can also create programs that always evaluate to `false`. Such scripts are found at the opposite end of the flexibility spectrum. Here's an example of such a script:
 
-    true && false               // address m3iBKr65o53izn
+```scala
+true && false  // Corresponds to address m3iBKr65o53izn
+```
 
-**Notes:**    
+**Notes:**
 
-1. Funds sent to such addresses cannot be spent by anyone and consequently such scripts are called **no-one-can-spend**. Please do not send funds to these addresses.  
-2. Ergo has the concept of [*garbage collection* / storage rent](rent.md), so such boxes will eventually be removed from the blockchain over a long period.
- 
+1. The script in the example above results in an address to which funds can be sent, but not spent. These scripts are referred to as **no-one-can-spend scripts** due to this characteristic. It's crucial to remember not to send funds to these addresses as they cannot be retrieved.
+
+2. Ergo features a concept known as [*garbage collection* or storage rent](rent.md). This mechanism ensures that boxes, such as those produced by no-one-can-spend scripts, are eventually removed from the blockchain over time to maintain the efficiency of the system.

@@ -19,7 +19,7 @@ the wallet but can be added by a user or an external application.
 Specification: Scanning
 -----------------------
 
-A new request to scan is initiated which registers said scan to be checked for all future UTXO-set changes (thus it is forward-looking).
+A new request to scan is initiated which [registers](registers.md) said scan to be checked for all future UTXO-set changes (thus it is forward-looking).
 
 A predicate (function which returns a boolean value for a box) is required to register a scan.
 Predicates available are:

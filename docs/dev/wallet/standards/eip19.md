@@ -73,7 +73,7 @@ In the following sections we:
 In the Ergo's eUTXO model a box can be protected by an arbitrary complex
 contract (aka spending condition) and the spending transaction should satisfy
 that condition by adding required context variables, creating expected number of
-outputs with specific registers etc. i.e. a special data structure called
+outputs with specific [registers](registers.md) etc. i.e. a special data structure called
 `Context`. The Context should be created for each input of the transaction
 and then passed to the Prover which will generate a signature for that input.
 See [general overview of signing and

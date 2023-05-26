@@ -4,7 +4,7 @@
 
 Addresses are short strings that correspond to specific scripts and are used to protect a [box](box.md)
 
-Rather than storing a single amount (like BTC), an ergo [eutxo](eutxo.md) box has some registers to store arbitrary values, like its [native tokens](tokens.md).
+Rather than storing a single amount (like BTC), an ergo [eutxo](eutxo.md) box has some [registers](registers.md) to store arbitrary values, like its [native tokens](tokens.md).
 
 So, each box has an ERG amount and may or may not have a bunch of `{tokenid, token amount}` pairs, all in the UTXO model.
 

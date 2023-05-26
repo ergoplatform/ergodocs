@@ -1,6 +1,6 @@
 # Boxes and Registers
 
-Boxes are the main entity used to hold ERG according to the eUTXO model. Registers are pieces of data that can be attached to any box. They allow your contract to store data and incorporate it into transactions at a later point. There are 4 mandatory registers present within each box in the Ergo blockchain, these registers describe information that is necessary for a box to exist and be valid. Besides the mandatory registers, there are 5 additional registers that may store arbitrary data. This data could be obtained both off-chain and on-chain and allows you to incorporate more data when creating the spending conditions for your contract.
+Boxes are the main entity used to hold ERG according to the eUTXO model. Registers are pieces of data that can be attached to any box. They allow your contract to store data and incorporate it into transactions at a later point. There are 4 mandatory [registers](registers.md) present within each box in the Ergo blockchain, these registers describe information that is necessary for a box to exist and be valid. Besides the mandatory registers, there are 5 additional registers that may store arbitrary data. This data could be obtained both off-chain and on-chain and allows you to incorporate more data when creating the spending conditions for your contract.
 
 ### R0
 

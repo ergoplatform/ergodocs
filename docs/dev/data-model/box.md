@@ -18,7 +18,7 @@ We call this object a ***'box'***.
 - Because the data of the transaction that created the box is included, the box has unique contents and, therefore, a unique id. 
 - Boxes are **first-class citizens** in the Ergo protocol. 
 - The active boxes set is authenticated via a hash-based data structure, which allows building lightweight full-nodes (as described in [this paper](https://eprint.iacr.org/2016/994)). 
-- A box may have up to six additional registers with typed data. A script may access its registers (as well as registers of input and output boxes of the spending transaction).
+- A box may have up to six additional [registers](registers.md) with typed data. A script may access its registers (as well as registers of input and output boxes of the spending transaction).
 - Transactions contain both *input* and *output* boxes. 
 
 ## Example 

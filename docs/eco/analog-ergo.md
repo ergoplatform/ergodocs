@@ -7,7 +7,7 @@ This project aims to use cryptographic primitives (well established, low level a
 ## ScalarLock
 
 > Successfully tested a Scalar Lock contract, this allows you to lock funds to a scalar value like a random 256bit number that you can test by comparing it with an Elliptic curve multiplication operation against the Secp256k1 Generator. A key component of how values are checked when verifying cryptographic signatures and will enable the final step to Atomic Swaps!. 
-ErgoScript makes this quite easy (Once the constants and registers are figured out):
+ErgoScript makes this quite easy (Once the constants and [registers](registers.md) are figured out):
 
 ```scala
  val scalarLockScript: String = {

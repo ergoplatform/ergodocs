@@ -132,7 +132,7 @@ Parameters (creator’s public key and price) are specified via registers, meani
 
 Babel fee box creator can spend the babel box in any circumstances.
 
-Other users, on the other hand, can spend this box as input to their transaction only when they also recreate it as the output of their transaction with the very same registers (R4, R5) values together with the insertion of a required amount of babel tokens (the amount of inserted babel tokens multiplied by the price specified in the R5 register has to be equal to or bigger than the amount of nanoErgs spent from the babel fee box).
+Other users, on the other hand, can spend this box as input to their transaction only when they also recreate it as the output of their transaction with the very same [registers](registers.md) (R4, R5) values together with the insertion of a required amount of babel tokens (the amount of inserted babel tokens multiplied by the price specified in the R5 register has to be equal to or bigger than the amount of nanoErgs spent from the babel fee box).
 
 Wallets implementation
 --------------------------------------------

@@ -6,7 +6,7 @@ An Ergo node provides a REST API accessible via HTTP. The full API specification
 
 You use this UI to make API calls for advanced operations that are not available in the panel such as;
 
-1. Creating non-standard transactions with registers and context variables.
+1. Creating non-standard transactions with [registers](registers.md) and context variables.
 2. Creating transactions that issue tokens.
 3. Creating transactions that use certain boxes as inputs. 
 

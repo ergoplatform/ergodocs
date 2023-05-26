@@ -21,7 +21,7 @@ So let me provide a new tutorial on collective signing. Like in the previous tut
 
 ```
 
-This code defines a script that requires at least two out of three public keys to be included in the spending transaction. The public keys are retrieved from the registers R4, R5, and R6 of the input box using the get method. These public keys are then converted to sigma proveDlog objects and put in a collection. Finally, the atLeast function is called with a threshold of 2 and the collection of sigma proveDlog objects as arguments.
+This code defines a script that requires at least two out of three public keys to be included in the spending transaction. The public keys are retrieved from the [registers](registers.md) R4, R5, and R6 of the input box using the get method. These public keys are then converted to sigma proveDlog objects and put in a collection. Finally, the atLeast function is called with a threshold of 2 and the collection of sigma proveDlog objects as arguments.
 
 Then, when a transaction is confirmed (https://explorer.ergoplatform.com/en/transactions/71aa67f95e96827193bdf711f6ccf41b30ef8bbbdaef63ed672dfb7420a4c314), we get output bytes via `/utxo/byIdBinary/{boxId}`. Then we generate an unsigned transaction by providing inputs directly, in our example, by providing the following input to `/wallet/transaction/generateUnsigned`: 
  
