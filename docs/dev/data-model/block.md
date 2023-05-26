@@ -1,28 +1,20 @@
----
-tags:
-  - Data Model
----
-# Blocks
+## Blocks in Ergo
 
-The Ergo block interval is 2 minutes, and each block will release 75 Ergs to be shared between the miners and the Treasury for the first two years. However, starting at year 2, the emission rate will fall by 3.0 Ergs and, after that, further decline every three months by an additional 3.0 Ergs, which originally resulted in an end to emission eight years after launch. With EIP-27, this has been extended to ~2045. 
-
+The block interval in Ergo is set to 2 minutes, and each block releases 75 Ergs to be distributed among the miners and the Treasury during the first two years. However, starting from the second year, the emission rate decreases by 3.0 Ergs, and after that, it continues to drop every three months by an additional 3.0 Ergs. This decline was originally designed to stop emission eight years after the launch. However, with EIP-27, this emission period has been extended to approximately the year 2045.
 
 ## Extension Section
 
-In Ergo, blocks are broken into sections, just like Bitcoin, Ethereum, and other blockchains. In Bitcoin, there is simply a block header and the transactions themselves. However, in Ergo, we have some extra sections that enable new functionality:
+Like Bitcoin, Ethereum, and other blockchains, Ergo divides blocks into different sections. In Bitcoin, a block comprises just a block header and the transactions. In contrast, Ergo introduces extra sections that enable additional functionalities:
 
 * Header
 * Transactions
 * Extensions
 * Proofs of UTXO transformation
 
-The 'extension' section contains certain mandatory fields (including links for NIPoPoWs, once per 1,024 block epoch) and parameters for miner voting, such as current block size. It can also contain arbitrary fields.
+The 'extension' section contains certain mandatory fields, including links for NIPoPoWs (once every 1,024 block epoch) and parameters for miner voting, such as the current block size. It can also hold arbitrary fields.
 
-**What this means in practice is that different types of nodes and clients can download only those sections of the blocks they need – reducing the demands for storage, bandwidth, and CPU cycles.**
-
+This design allows various types of nodes and clients to download only those block sections that they need, thereby reducing the demands on storage, bandwidth, and CPU usage.
 
 ## Resources
 
-- [Superblock Clients](log_space.md) are also possible on Ergo. 
-
-
+- Ergo also supports [Superblock Clients](log_space.md), offering additional flexibility and efficiency.

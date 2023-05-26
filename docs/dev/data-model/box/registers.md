@@ -2,50 +2,48 @@
 tags:
   - Data Model
 ---
-# Registers
+# Understanding Registers
 
-A [box](box.md) can have up to six additional registers with typed data. A script can access its registers (as well as registers of input and output boxes of the spending transaction).
+In a [box](box.md), up to six extra registers can be used to store typed data. Scripts have the ability to access their own registers and the registers of input and output boxes of the spending transaction.
 
-Rather than storing a single amount (like BTC), a [eutxo](eutxo.md) box has some registers to store arbitrary values, like its native [tokens](tokens.md).
+A [eutxo](eutxo.md) box in Ergo platform extends the traditional concept of a box (as in Bitcoin, which holds a single amount), and uses registers to store various values, like its native [tokens](tokens.md).
 
-[ErgoScript](/dev/scs/ergoscript) (as well as [ErgoTree](/dev/scs/ergotree)) is **typed**, so accessing a register is an operation that involves some expected type given in brackets. 
+Both [ErgoScript](/dev/scs/ergoscript) and [ErgoTree](/dev/scs/ergotree) are **typed**, meaning that when a script accesses a register, it anticipates a specific type which is denoted in brackets.
 
-    
-For example, 
+For instance,
 
 ```scala
 // Assign the value of the R4 register of the current box to the variable x
 val x = SELF.R4[Int]
 ```
 
-expects the register (if it is present) to have the type `Int`. Thus, the `SELF.R4[Int]` expression should evaluate a valid `Option[Int]` type value.
+In the above example, the register is expected to have an `Int` type. Therefore, the expression `SELF.R4[Int]` should return a valid `Option[Int]` type value.
 
-There are three possible cases when attempting to get the value of the register SELF.R4[Int]:
+When you try to retrieve the value of the register `SELF.R4[Int]`, there are three potential scenarios:
 
-1. The register does not exist, so `SELF.R4[Int].isDefined` is `false`.
-2. The register contains a value of type Int, in which `SELF.R4[Int].get` returns that value, and `SELF.R4[`Int].isDefined` is true.
-3. The register contains a value of a type other than Int, in which case `SELF.R4[Int]` fails and cannot return a valid value of type `Option[Int]`.
+1. The register does not exist, hence `SELF.R4[Int].isDefined` will return `false`.
+2. The register has an `Int` type value, thus `SELF.R4[Int].get` will fetch that value, and `SELF.R4[Int].isDefined` will be `true`.
+3. The register carries a value of a different type, in which case `SELF.R4[Int]` will fail, and it will not produce a valid `Option[Int]` type value.
 
-    
-Within some use cases, a register may have values of different types. We can use an additional register as a tag to access such a register.
+In some use cases, a register may contain values of various types. An additional register can be employed as a tag to facilitate the access of such a register.
 
 ```scala
-val tagOpt = SELF.R5[Int] // get the value of the register R5 that is of type Int, and assign it to the variable `tagOpt`
-val res = if (tagOpt.isDefined) { // check if `tagOpt` is not empty
-  val tag = tagOpt.get // get the value of `tagOpt` and assign it to the variable `tag`
-  if (tag == 1) { // check if `tag` is equal to 1
-    val x = SELF.R4[Int].get // get the value of the register R4 that is of type Int and assign it to the variable `x`
-    // compute `res` using the value `x` of type Int
-  } else if (tag == 2) { // check if `tag` is equal to 2
-    val x = SELF.R4[GroupElement].get // get the value of the register R4 that is of type GroupElement and assign it to the variable `x`
-    // compute `res` using the value `x` of type GroupElement
-  } else if (tag == 3) { // check if `tag` is equal to 3
-    val x = SELF.R4[ Array[Byte] ].get // get the value of the register R4 that is of type Array[Byte] and assign it to the variable `x`
-    // compute `res` using the value `x` of type Array[Byte]
+val tagOpt = SELF.R5[Int] // Retrieve the value of the register R5 of type Int and assign it to the variable `tagOpt`
+val res = if (tagOpt.isDefined) { // Check if `tagOpt` is not empty
+  val tag = tagOpt.get // Obtain the value of `tagOpt` and assign it to the variable `tag`
+  if (tag == 1) { // Check if `tag` equals 1
+    val x = SELF.R4[Int].get // Retrieve the value of the register R4 of type Int and assign it to the variable `x`
+    // Compute `res` using the value `x` of type Int
+  } else if (tag == 2) { // Check if `tag` equals 2
+    val x = SELF.R4[GroupElement].get // Retrieve the value of the register R4 of type GroupElement and assign it to the variable `x`
+    // Compute `res` using the value `x` of type GroupElement
+  } else if (tag == 3) { // Check if `tag` equals 3
+    val x = SELF.R4[ Array[Byte] ].get // Retrieve the value of the register R4 of type Array[Byte] and assign it to the variable `x`
+    // Compute `res` using the value `x` of type Array[Byte]
   } else {
-    // compute `res` when `tag` is not 1, 2 or 3
+    // Compute `res` when `tag` is neither 1, 2, nor 3
   }
 } else {
-  // compute the value of `res` when the register is not present
+  // Compute `res` when the register is not present
 }
 ```
