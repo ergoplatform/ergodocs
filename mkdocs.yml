@@ -475,9 +475,9 @@ nav:
           - Using Appkit from Python: dev/stack/appkit/appkit_py.md
         - SigmaRust: dev/stack/sigma-rust.md
         - Fleet (JS): dev/stack/fleet.md
+        - FleetSharp: dev/stack/fleetsharp.md
         - Others:
           - Ergpy: dev/stack/ergpy.md
-          - FleetSharp: dev/stack/fleetsharp.md
           - RustKit: dev/stack/rustkit.md
           - Mosaik: 
             - dev/stack/mosaik/intro.md
@@ -550,12 +550,13 @@ nav:
           - Playgrounds:
             - Scastie: dev/scs/ergoscript/scastie.md
             - P2S Playground: dev/stack/utilities/plutomonkey.md
+            - Kiosk: dev/stack/kiosk.md
+            - ErgoPuppet: dev/scs/puppet.md
+          - Compilers:
+            - ErgoScala: dev/stack/ergoscala.md
+            - CLI Compiler: dev/stack/compiler.md
           - Debugging: dev/scs/debugging.md
           - FlowCards: dev/scs/flowcards.md
-          - ErgoPuppet: dev/scs/puppet.md
-          - ErgoScala: dev/stack/ergoscala.md
-          - Compiler: dev/stack/compiler.md
-          - Kiosk: dev/stack/kiosk.md
       - Data Structures:
         - ErgoTree: 
           - dev/scs/ergotree.md

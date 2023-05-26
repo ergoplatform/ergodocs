@@ -1,78 +1,81 @@
-# Ergo Box Modeling
+# Exploring Ergo Box Design
 
-> [From Keith Lim](https://keitodot.medium.com/ergo-box-m-f58f444e00d5)
+> [Article by Keith Lim](https://keitodot.medium.com/ergo-box-m-f58f444e00d5)
 
+## Understanding the Core Component: Box
 
-## Details of a Box
+At the heart of a UTXO system are boxes. They serve as essential vessels carrying the value of a currency within a blockchain. The Ergo blockchain enhances this concept by equipping boxes with [registers](registers.md) that are protected by a contract.
 
-Boxes are a core element within a UTXO system and can be seen as an object that carries the currency's value within a blockchain. The beauty of the Ergo blockchain is that it provides boxes with [registers](registers.md) that are guarded by a contract.
+Registers offer the capability to store data and information at specific addresses in the blockchain. Drawing a comparison with everyday items, you might envision these boxes as remote controls, supercharged piggy banks, or simple cups that only allow liquid to be poured in. Taking the cup as an example:
 
-The registers allow the storage of data and information stored at addresses in the blockchain. If compared to a component, in the real world, these boxes can be seen in forms like remote control, a piggy bank on steroids, or a basic cup that allows only liquid to be poured in. Suppose we were to take a cup to be used as an example.
+**A Cup:**
 
-**A cup**
+- Primarily used to hold liquid
+- Accommodates up to a certain quantity of liquid
 
-- Used mainly to store liquid
-- Store up to a certain amount of liquid
+This can be translated into a box-like concept:
 
-If we were to replicate it into a box, we could do something similar like
+**A Cup Box:**
 
-**A cup box**
+- Designed to store only Ergs or a specific token
+- Allows storage up to a certain limit (enforced by a guard script)
 
-- Can store only Ergs or a specific token
-- Store up to a certain amount of it (guard script)
+A guard script or contract imposes restrictions on the box. Without this, a box is merely a storage unit for storing information or a certain amount of currency. The incorporation of guard scripts, which set particular rules for the boxes, introduces rigidity to the boxes and shapes their function, much like a remote control. We're less concerned about the internal workings of a remote control (guard script) or the data it transmits (registers and storage), focusing instead on its functionality - pressing a button changes the TV channel.
 
-The guard script or the contract forces a function to be placed onto the box. Without the guard script, a box is essentially a storage box that allows you to store information or an amount of currency. The implementation of guard scripts that sets specific rules for the boxes gives the boxes a form of rigidity, giving it its function like a remote control, for instance. We do not care how a remote control's internal system (guard script) works or the transmitted data (registers and storage). All we care about is that when we press a button on the remote control, it transmits the data needed to the TV and changes to the desired channel.
-What is Box Modeling?
+## What is Box Modeling?
 
-Box modelling is a framework that allows developers or box designers to design a box to carry out specific functions. A framework allows structured and easily followable instructions to design and comprehend the functions carried by a box and how the functions operate.
-Rules to Modeling
+Box modeling provides a structure that assists developers or box designers in crafting a box to perform certain tasks. This framework promotes a structured and straightforward approach to understanding the roles of a box and the mechanics of its operations.
 
-A blockchain is essentially a financial canvas, and it provides developers, engineers, and designers to design financial systems on top of it. However, a flawed design will cause a system to be susceptible to security attacks, unscalable designs, and inefficient processes. To prevent these flaws, we must consider the opposite when designing.
-Three rules to box design
+## Designing a Box: Key Principles
+
+A blockchain acts as a financial canvas, providing developers, engineers, and designers the ability to create financial systems atop it. However, any design shortcomings can lead to vulnerabilities to security breaches, unscalable designs, and inefficient processes. Thus, it is crucial to prioritize security, scalability, and efficiency during design.
+
+Three foundational principles for box design:
 
 ##### Security
 
-Ensuring that outsiders can not abuse the box
+Ensure that the box is not exploitable by unauthorized users.
 
 ##### Scalability
 
-Allowing the system or design to be carried out in a format where it can process multiple requests simultaneously
+Design the system to handle multiple concurrent requests seamlessly.
 
-#####  Efficient
+#####  Efficiency
 
-Simplistic design allows engineers to comprehend and improve on the design easily.
+A simple design allows engineers to understand and enhance the design effortlessly.
 
-## Box Modeling Framework
+## Steps for Box Modeling
 
-Before considering the three rules, we should understand the basics of modelling a box.
+Before addressing the above principles, understanding the fundamentals of box modeling is essential.
 
-When modelling a box, we should first ask ourselves these questions:
+While modeling a box, we should ponder:
 
-##### What is the function of this box?
+##### What purpose does this box serve?
 
-For example, a lending box is a box that facilitates the process of getting a loan.
+A lending box, for example, is designed to streamline the loan process.
 
-##### What data should the box store?
+##### What data should the box contain?
 
-In regards to the function of the box, we should consider what data should be stored in the box for it to carry out its function. For example, a lending box will store details about the lending information in its registers.
+The function of the box determines the data stored in it. For instance, a lending box would hold lending-related information in its registers.
 
-##### How can the box carry out its function?
+##### How will the box execute its function?
 
-This part has a complication that comes with it as we have to start thinking about it in terms of the overall transaction as a whole rather than the box itself. This is also the part where we write the guard script (aka smart contract) so that it carries out the function that it is supposed to carry through the usage of the data stored in the registers.
-Registers
+This step is a bit complex as it requires thinking about the overall transaction, not just the box. This stage involves scripting the guard script (or smart contract) to perform its intended function using the data stored in the registers.
 
-Registers store data in a few formats, which we can separate into single or multiple entries.
+### Register Data Types
 
-**Single data:**
+Registers can store data in various formats, which can be categorized into single or multiple entries.
+
+**Single data entries include:**
 
 - `Long`
-- `Coll[Byte]` aka *String*
+- `Coll[Byte]` also known as *String*
 - `Bool`
 
-**Multiple entries:**
+**Multiple data entries include:**
 
 - `Coll[Long]`
 - `Coll[Coll[Byte]]`
 - `Coll[Bool]`
 
-As we move forward, we will look into how we can use these ideas and concepts to create replicability and a framework to design boxes efficiently and blow the shrouds of confusion and overwhelming information into a simple step-by-step guide to modelling boxes.
+As we progress, we'll explore how these concepts can be harnessed to develop a replicable framework for designing boxes efficiently, simplifying the potentially overwhelming process into an easy-to-follow guide.
