@@ -13,7 +13,7 @@ To find public testnet nodes, you can use [api.tokenjay.app/peers/list](https://
 |                | mainnet  | testnet   |
 |----------------|----------|-----------|
 | API Port       | 9053     | 9052      | 
-| P2P Port       | 9030     | 9021      |
+| P2P Port       | 9030     | 9022      |
 | address prefix | (0) 0x00 | (16) 0x10 |
 
 
