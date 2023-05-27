@@ -1,7 +1,9 @@
 
-## Node Config File
+# Node Config File
 
-> !!!Note!!! This guide is outdated and should be actualized to current config format
+Please see [conf](conf.md)
+
+<!-- !!!Note!!! This guide is outdated and should be actualized to current config format
 
 ### Actual for version 1.6.1
 
@@ -271,3 +273,4 @@ You should also remember that environment variables names are case sensitive in 
 
 - [How to setup an Ergo node on a Raspberry Pi](https://youtu.be/yDqhlgz0244)
 
+-->

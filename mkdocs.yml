@@ -441,7 +441,9 @@ nav:
               - scorex: node/conf/conf-scorex.md
               - critical-dispatcher: node/conf/conf-crit.md
               - api-dispatcher: node/conf/conf-api.md
-
+            - testnet.conf: 
+              - node/testnet/testnetconf.md
+              - devnet.conf: node/testnet/devnetconf.md
       - Explorer: 
         - dev/stack/explorer.md
         - Local Setup: dev/stack/explorer/explorer_local.md

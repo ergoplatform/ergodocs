@@ -1,6 +1,7 @@
 # application.conf
+Please refer to [conf](conf.md)
 
-[View code on GitHub](https://raw.githubusercontent.com/ergoplatform/ergo/master/src/main/resources/application.conf)
+<!--[View code on GitHub](https://raw.githubusercontent.com/ergoplatform/ergo/master/src/main/resources/application.conf)
 
 The code in this file is responsible for configuring various settings for the Ergo project. It covers settings related to the node, wallet, network, and caching. The node settings include options for state type, transaction verification, block storage, mining, and mempool management. The wallet settings cover secret storage, seed strength, mnemonic phrase language, and transaction fee management. The network settings handle connection management, peer discovery, and synchronization. The cache settings optimize memory usage for various components.
 
@@ -921,3 +922,4 @@ The dispatcher which is used for block candidate generator and `NodeViewHolder` 
 
 
 
+-->
