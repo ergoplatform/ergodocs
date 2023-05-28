@@ -16,6 +16,7 @@ You can also use [Docker](docker.md), and even a [Raspberri Pi](pi.md) with a fa
 
 - [Frequently Asked Questions](faq.md)
 - [Modes of Operation](modes.md)
+- [APIs](apis.md)
 
 ### Toolkits 
 
@@ -23,10 +24,3 @@ You can also use [Docker](docker.md), and even a [Raspberri Pi](pi.md) with a fa
 - [ergosphere](https://ergosphere.cloud/) is an Umbrel-like solution that allows an easy setup of self-hosted Ergo services. (BETA)
 - [Ergode](https://github.com/ross-weir/ergode) (ergo-node) is a Ergo node implemented in TypeScript targeting web & native runtimes. 
 
-### API 
-
-- [API Docs](https://api.ergoplatform.com/api/v1/docs/)
-- [Node API](https://git.io/fjqwb)
-- [Explorer API](https://git.io/fjqwN)
-- [Ergo.Watch API](https://api.ergo.watch/docs)
-- [TokenJay API](https://api.tokenjay.app/swagger-ui/index.html;jsessionid=59429AD4DF081E2E3450C2834095D427?attribute=redirectWithRedirectView)

@@ -6,7 +6,7 @@ edit_uri: edit/main/docs/
 theme:
     name: material
     custom_dir: overrides
-    favicon: assets/favicon.png
+    #favicon: assets/favicon.png
     palette: # dark scheme toggle on material + dark orange
       - scheme: default
         primary: red
@@ -37,14 +37,14 @@ theme:
 extra_css: 
   - assets/extra.css
   - assets/neoteroi-mkdocs.css
-  - https://unpkg.com/mermaid@8.5.1/dist/mermaid.css #404 ? 
+  #- https://unpkg.com/mermaid@8.5.1/dist/mermaid.css #404 ? 
 extra_javascript:
   - assets/extra.js
-  - assets/mathjax.js
+  #- assets/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - https://unpkg.com/mermaid@8.5.1/dist/mermaid.min.js
-  - https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML
+ # - https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML
 
   
 
@@ -57,8 +57,8 @@ extra:
     property: G-5XM6BXT041
 
 
-extra:
-  generator: false
+#extra:
+#  generator: false
 
 
 plugins:
