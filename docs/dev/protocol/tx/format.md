@@ -1,7 +1,13 @@
+---
+tags:
+  - Box
+---
 
 # Box Format
 
 A box is made of **registers** *(and nothing but registers!)*; we allow every box in the system to have up to 10 registers. We denote the [registers](registers.md) as $R_0,R_1,...,R_9$. From these registers, four are filled with mandatory values: $R_0$ contains the monetary value of a box, $R_1$ contains serialized guard script, $R_2$ contains tokens, $R_3$ contains declared creation height, unique identifier of transaction which created the coin and also an index of the box in the transaction.
+
+The term 'box' in Ergo's context captures the idea that these entities are like containers holding various types of information (value, tokens, custom data, etc.), beyond just the unspent transaction output balance. This makes the boxes in Ergo significantly more flexible and functional, enabling more complex operations, such as running scripts or smart contracts, directly on the blockchain.
 
 Each register is an expression in the sigma language. Thus the registers are typed: every register contains a value of some type. Types are defined [here](types.md). The value should be evaluated (i.e. it should be a concrete constant value, not a function of a known output type).
 

@@ -1,30 +1,40 @@
+---
+tags:
+  - Box
+  - Registers
+---
+
 # Boxes and Registers
 
-Boxes are the main entity used to hold ERG according to the eUTXO model. Registers are pieces of data that can be attached to any box. They allow your contract to store data and incorporate it into transactions at a later point. There are 4 mandatory [registers](registers.md) present within each box in the Ergo blockchain, these registers describe information that is necessary for a box to exist and be valid. Besides the mandatory registers, there are 5 additional registers that may store arbitrary data. This data could be obtained both off-chain and on-chain and allows you to incorporate more data when creating the spending conditions for your contract.
+In [ErgoScript](ergoscript.md), a 'box' is akin to a more versatile version of what a UTXO (Unspent Transaction Output) represents in Bitcoin and many other cryptocurrencies. A box is not only a ledger entry denoting the amount of cryptocurrency owned by a particular address, but it also carries 'registers', allowing it to contain additional data. This data could range from simple values to more complex structures, which can later be integrated into transactions and used in the execution of smart contracts.
 
-### R0
+This makes Ergo's box different from a traditional UTXO, which only represents an amount of unspent cryptocurrency associated with a certain address. In UTXO-based cryptocurrencies, each transaction consumes one or more UTXOs as inputs and creates one or more UTXOs as outputs, with the 'unspent' outputs being the 'coins' that can be spent in future transactions.
 
-Contains the monetary value of the box in nanoERGs. This register is accessed using `Box.value`, where `Box` could represent either `SELF` or one of the boxes in the `INPUTS` or `OUTPUTS` collection.
+The term 'box' in Ergo's context captures the idea that these entities are like containers holding various types of information (value, tokens, custom data, etc.), beyond just the unspent transaction output balance. This makes the boxes in Ergo significantly more flexible and functional, enabling more complex operations, such as running scripts or smart contracts, directly on the blockchain.
 
-### R1
+### Register R0
 
-Contains the collection of proposition bytes of the guarding ErgoScript contract for the box. It is accessed using `Box.propositionBytes`.
+This register encapsulates the monetary value of the box in nanoERGs. It can be accessed using the `Box.value` command, where `Box` could signify `SELF` or any box in the `INPUTS` or `OUTPUTS` collections.
 
-### R2
+### Register R1
 
-Contains a collection of the tokens stored in the box. A token contains is represented by two pieces of information: the unique token id; and the amount of the specified token. The collection is accessed using `Box.tokens`.
+Register R1 contains the proposition bytes of the guarding ErgoScript contract associated with the box. Access this register using `Box.propositionBytes`.
 
-### R3
+### Register R2
 
-Contains information about the box’s creation such as: the transaction id from which the box was created as an output; the outputs index of the box (i.e. the index used in `OUTPUTS`); and the creation height of the block of the transaction from which the box came from. This collection is accessed using `Box.creationInfo`. The height referenced here is used as part of Ergo’s unique storage rent feature, where boxes may be spent after 4 years so that miners may take some fee and recycle ERG back into the blockchain.
+R2 holds a collection of tokens stored in the box. Each token is identified by two elements: a unique token id and the quantity of the specific token. Use `Box.tokens` to access this collection.
 
-### R4 - R9
+### Register R3
 
-Contains arbitrary data that is set whenever the box is first outputted from a transaction. This data may essentially be any type commonly found in ErgoScript, along with more complex types built from Pairs and Collections. Registers may also store more complex types such as `Box`, `SigmaProp`, `GroupElement`, and `AVLTree`.
+R3 stores information about the box’s creation, such as the originating transaction id, the box's output index (i.e., the index used in `OUTPUTS`), and the block height at the creation time of the transaction from which the box originates. Access this register using `Box.creationInfo`. The creation height plays a role in Ergo's unique storage rent feature, where boxes can be spent after four years, enabling miners to charge a small fee and recycle ERGs back into the blockchain.
 
-### Other Box Functions
+### Registers R4 - R9
 
-Outside of the registers themselves, each box has a specific identification hash that may be referenced using the `id` function. Box ids are formed by taking the `blake2b256` hash of the boxes content as a `Coll[Byte]` . You may directly reference the un-hashed collection of bytes representing a box using the `bytes` function. Keep in mind that each box’s content and id are cryptographically unique, meaning that no two boxes within the blockchain may have the same id or content bytes. This is achieved due to the inclusion of `creationInfo` within each box, as transaction ids and associated output indexes are all values that must be unique to a given UTXO.  You may use the `bytesWithoutRef` function to return a `Coll[Byte]` that does not contain such information.
+These registers can contain any data defined when the box first originates from a transaction. The data could be of any common type found in ErgoScript, along with more complex types built from Pairs and Collections. These registers may also contain complex types such as `Box`, `SigmaProp`, `GroupElement`, and `AVLTree`.
+
+### Additional Box Functions
+
+Besides the registers, each box features a unique identification hash that can be referenced using the `id` function. Box ids are computed by applying the `blake2b256` hash function to the box's content, expressed as a `Coll[Byte]`. You can directly access the un-hashed byte collection representing a box using the `bytes` function. Note that each box’s content and id are cryptographically unique, meaning that no two boxes within the blockchain can share the same id or content bytes. This uniqueness is guaranteed by the inclusion of `creationInfo` in each box, as transaction ids and associated output indexes must be unique to a given UTXO. The `bytesWithoutRef` function can be used to retrieve a `Coll[Byte]` that excludes such information.
 
 ## Example
 

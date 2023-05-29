@@ -4,7 +4,7 @@
 
 
 ## Motivation 
-With the discovery that we can easily use spent boxes in contracts ([see here](https://www.ergoforum.org/t/ergoscript-design-patterns/222/23?u=anon_real)), some new features are introduced for artworks and can be extended further in the future. This EIP is an extension of [Asset [standard](eip4.md) and tends to standardize artwork issuance in particular.
+With the discovery that we can easily use spent boxes in contracts ([see here](https://www.ergoforum.org/t/ergoscript-design-patterns/222/23?u=anon_real)), some new features are introduced for artworks and can be extended further in the future. This EIP is an extension of [Asset standard](eip4.md) and tends to standardize artwork issuance in particular.
 
 ## Design V1
 

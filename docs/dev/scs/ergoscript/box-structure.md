@@ -1,4 +1,12 @@
+---
+tags:
+  - Box
+---
+
 # Understanding the Structure of a Box in ErgoScript
+
+The term ['box'](box.md) in Ergo's context captures the idea that these entities are like containers holding various types of information (value, tokens, custom data, etc.), beyond just the unspent transaction output balance. This makes the boxes in Ergo significantly more flexible and functional, enabling more complex operations, such as running scripts or smart contracts, directly on the blockchain.
+
 
 Both `INPUTS` and `OUTPUTS` are arrays, comprising of objects of the `Box` type. A `Box` contains the following key fields:
 

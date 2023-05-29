@@ -1,11 +1,15 @@
 ---
 tags:
   - Data Model
+  - Box
 ---
 
 # Understanding the Ergo 'Box'
 
 The Ergo platform employs a transactional model akin to Bitcoin, known as the Unspent Transaction Output (UTxO) model. Here, transactions expend and generate single-use entities, referred to as a ***'box'***. 
+
+The term 'box' in Ergo's context captures the idea that these entities are like containers holding various types of information (value, tokens, custom data, etc.), beyond just the unspent transaction output balance. This makes the boxes in Ergo significantly more flexible and functional, enabling more complex operations, such as running scripts or smart contracts, directly on the blockchain.
+
 
 ## Introduction
 
