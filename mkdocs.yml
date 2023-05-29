@@ -340,9 +340,11 @@ nav:
             - Format: dev/protocol/tx/format.md
             - Merkle Tree: dev/protocol/tx/tx-merkle.md
             - Signing: dev/protocol/tx/signing.md
+            - Signing Backend: tutorials/sign-tx.md
             - Validation: dev/protocol/tx/validation.md
             - Data Inputs: dev/protocol/tx/read-only-inputs.md
             - Fees: dev/protocol/tx/min-fee.md
+            - Unified Transactions: dev/protocol/tx/unified.md
         - Resources: 
           - Standards:
             - Babel Fees: dev/protocol/tx/babel-fees.md
@@ -426,6 +428,7 @@ nav:
           - Node Wallet: 
             - node/wallet.md
             - Hierarchical keys: dev/wallet/keys.md
+            - Wallet Setup: node/wallet-setup.md
           - Swagger API: 
             - node/swagger.md
             - Indexed Node API: node/indexed-node.md
@@ -518,6 +521,7 @@ nav:
         - Quick Primer: 
           - dev/scs/ergoscript-primer.md
           - Key Concepts: dev/scs/ergoscript/ergoscript-key-concepts.md
+          - Context Claims: uses/context-claims.md
           - Examples: 
             - Anyone Can Spend: dev/scs/ergoscript/anyone-can-spend.md
             - No-one-Can Spend: dev/scs/ergoscript/no-one-can-spend.md
@@ -620,8 +624,10 @@ nav:
         - Node Configuration: mining/setup/solo-node.md
         - Stratum: mining/setup/stratum.md
         - MiningCore: mining/setup/miningcore.md
+        - Withdraw: mining/withdraw.md
         - FAQ:  mining/setup/solo-faq.md
     - Governance: mining/governance.md      
+    - Revenue: mining/revenue.md
     - Tooling:
       - GuapSwap: eco/guapswap.md
       - Lithos: 

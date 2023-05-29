@@ -1,30 +1,39 @@
 # Data Inputs
 
+This section provides an overview of data inputs in the Ergo Platform Blockchain. It explains the concept of data inputs, their benefits, and their usage in transactions. 
 
-Rather than forcing all transactions to destroy/spend all inputs as is the norm in historic UTXO-based Blockchains, what if we instead brought in the concept of *"read-only inputs"*? These would allow any transaction to reference any other box (UTXO) currently in the UTXO-set and read the data held in it without any of the problems normally inherent in eUTXO. 
+## Understanding Data Inputs
 
-This is exactly what data inputs are.
+In traditional UTXO-based blockchains, transactions typically require spending and destroying all inputs. However, Ergo introduces the concept of **data inputs** to allow transactions to reference existing UTXOs and read their data without consuming them. This innovation solves the limitations normally associated with eUTXO.
 
-No smart contract execution occurs because the box is not being destroyed/spent. This means that a given UTXO can be read by every single tx in a block/slot in parallel as none consume the data, but all share a reference to it. Transaction fees decrease due to no contract execution and no extra output needing to be created. All further negatives are also addressed, making data inputs a clear design choice that all UTXO-based blockchains should implement.
+Data inputs enable multiple transactions within a block or slot to read the data from the same UTXO concurrently, as none of them actually spend or destroy the data. This parallel processing of data inputs reduces transaction fees, as smart contract execution is not required, and there is no need to create extra outputs. Additionally, data inputs address various other challenges, making them a valuable design choice for all UTXO-based blockchains.
 
+## Benefits of Data Inputs
 
-**Data inputs** are unique to Ergo and not yet present in other extended-UTXO systems. Multiple transactions can share a data-input box, which will store only a single reference to the box in the block. 
+By incorporating data inputs, Ergo provides the following advantages:
 
-We can also spend a data-input box in the same transaction as long as it existed before the transaction was applied. As an example, the box with the id. 
+1. **Reduced Transaction Fees**: Since data inputs do not trigger smart contract execution or require additional outputs, transaction fees are reduced.
 
-```
-d2b9b6536287b242f436436ce5a1e4a117d7b4843a13ce3abe3168bff99924a1
-```
+2. **Concurrent Data Access**: Multiple transactions can read data from the same UTXO concurrently, improving efficiency and scalability.
 
-It was used as both an input and a data input in [this transaction](). 
+3. **Enhanced DeFi Applications**: Data inputs are particularly beneficial for decentralized finance (DeFi) applications. They allow referencing a box without the need to spend it, making them suitable for use cases like decentralized order-books (DEX).
 
-While the use of data inputs may not be immediately apparent, they play a major role in making Ergo more friendly to DeFi applications where we want to refer to a box without needing (or have the ability) to spend it, such as in decentralized order-books (DEX). 
+## Working with Data Inputs
 
-For instance, the above transaction used a "timestamping service" to timestamp a box provided as data input.
+In Ergo, data inputs are unique to the platform and not yet present in other extended-UTXO systems. Multiple transactions can share a data input box, which contains a single reference to the box within the block.
 
-A script in Ergo can refer to other boxes in the transaction. For instance, the code snippet `INPUTS(0).value > 10000 && OUTPUTS(1).value > 20000` in any of the inputs boxes would enforce that the first input and the second output boxes must have a value greater than `10000` and `20000`, respectively.
+It is also possible to spend a data input box in the same transaction, provided that it existed before the transaction was applied. This allows for flexibility in transaction construction.
 
-For a comparison between the logic used in eUTXO and account-based models, please see [Off Chain Logic & eUTXO](https://ergoplatform.org/en/blog/2021-10-04-off-chain-logic-and-eutxo/) and a [model transaction](model-tx.md)
+To illustrate the usage of data inputs, consider the example transaction where a box with the ID `d2b9b6536287b242f436436ce5a1e4a117d7b4843a13ce3abe3168bff99924a1` is both an input and a data input. This transaction demonstrates how data inputs can be utilized effectively.
 
+When writing scripts in Ergo, you can refer to other boxes in the transaction. For instance, the code snippet `INPUTS(0).value > 10000 && OUTPUTS(1).value > 20000` enforces a condition on the first input and the second output boxes.
 
-See this introductory article, [Unlocking The Potential Of The UTXO Model](https://github.com/Emurgo/Emurgo-Research/blob/master/smart-contracts/Unlocking%20The%20Potential%20Of%20The%20UTXO%20Model.md) for more information. There are also forum posts with more information; [Building A Portable And Reusable (PaR) UTXO dApp Standard](https://www.ergoforum.org/t/building-a-portable-and-reusable-par-utxo-dapp-standard/441) and [Data Inputs Semantics](https://www.ergoforum.org/t/data-inputs-semantics/654)
+For a more detailed comparison between the logic used in eUTXO and account-based models, refer to the [Off Chain Logic & eUTXO](https://ergoplatform.org/en/blog/2021-10-04-off-chain-logic-and-eutxo/) article. Additionally, you can explore the [model transaction](model-tx.md) to gain a better understanding of transaction structure.
+
+## Additional Resources
+
+To learn more about the potential of the UTXO model and its implementation in Ergo, we recommend reading the introductory article [Unlocking The Potential Of The UTXO Model](https://github.com/Emurgo/Emurgo-Research/blob/master/smart-contracts/Unlocking%20The%20Potential%20Of%20The%20UTXO%20Model.md). You can also find further information and discussions in the following forum posts:
+
+- [Building A Portable And Reusable (PaR) UTXO dApp Standard](https://www.ergoforum.org/t/building-a-portable-and-reusable-par-utxo-dapp-standard/441)
+- [Data Inputs Semantics](https://www.ergoforum.org/t/data-inputs-semantics/654)
+

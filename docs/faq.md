@@ -254,3 +254,75 @@ Then it takes an average from classic and predictive difficulties and limits the
 
 Broader conversations about [difficulty adjustments on ergoforum](https://www.ergoforum.org/t/diff-adjustment-potential-design-tradeoffs/3875)
 
+## General FAQs
+
+**Q: Are there plans to put together a Plutus Pioneer-style program for ErgoScript?**
+
+A: The Ergo Foundation aims to sponsor educational programs, and fostering talent is one of its core goals. The Foundation actively supports the development of educational initiatives for ErgoScript.
+
+**Q: How do you see the Ergo network funding development over time?**
+
+A: In the longer term, the Ergo network envisions a community development DAO that operates in parallel with the Ergo Foundation. Funding for this DAO could come from projects that tokenize on the Ergo Blockchain. By donating a portion of their tokens to the Ergo Foundation or the community DAO, projects can contribute to the ongoing funding of the network.
+
+**Q: To what extent can there be competition for dApps?**
+
+A: Competition among dApps is actively encouraged within the Ergo ecosystem. Competition is essential for fostering a vibrant DEFI environment. It enables traders to arbitrage across dApps, increases network activity, and improves market efficiency. The Ergo network welcomes competition as it creates opportunities for innovation and market growth.
+
+**Q: Free software tends to undercut incentives. How does Ergo address this?**
+
+A: While free software is highly valued in the blockchain community, Ergo acknowledges the need to strike a balance between incentivizing development and providing open-source solutions. Ergo's unique contract model, built on the Extended UTXO framework, requires the creation of infrastructure from scratch. By developing innovative tools and infrastructure, Ergo aims to attract developers and promote the growth of the ecosystem.
+
+**Q: Who is using Ergo? How does the user profile differ from other chains?**
+
+A: Ergo is still a young network, with primary users currently consisting of miners, developers, and investors. However, as Ergo continues to build tooling and infrastructure, it aims to cater to a broader range of markets and user profiles. Ergo's focus is on developing specialized solutions to support different projects and their unique requirements.
+
+**Q: Where does Ergo excel? What are its disadvantages compared to other chains?**
+
+A: Ergo excels in several areas, leveraging the benefits of the Extended UTXO model, such as advanced privacy options with Sigma protocols, sidechain integration, and the potential to revolutionize SPV client implementation. However, Ergo recognizes that it lags behind in terms of mindshare compared to chains built on the Ethereum Virtual Machine (EVM). Ergo is actively working to overcome this challenge and believes that the market mindset will shift over time to embrace the resilience and privacy advantages offered by the network.
+
+**Q: How does Ergo address environmental concerns related to Proof-of-Work (PoW)?**
+
+A: Ergo acknowledges that PoW is energy-intensive compared to Proof-of-Stake (PoS). However, Ergo's design is conservative, focusing on well-known and tested Sigma protocols for privacy. The network is designed to be upgradeable, allowing for the adoption of newer, resilient cryptographic frameworks in the future. Ergo values research and employs methods and cryptography that have been rigorously tested to ensure security and store of value properties.
+
+**Q: How is Ergo onboarding developers and cultivating its developer community?**
+
+A: Ergo recognizes the importance of documentation, developer tools, and educational resources in onboarding developers. The network is actively working on creating these resources to streamline the process of converting non-web3 developers to Ergo. Ergo offers bounties, hackathons, and prizes to incentivize developers to learn, improve, and contribute to the Ergo ecosystem.
+
+**Q: Is Ergo supporting peer knowledge sharing and respecting proprietary IP?**
+
+A: Ergo promotes open-source development and transparency. While intellectual property (IP) exists
+
+ in the blockchain industry, Ergo believes that open-source frameworks accelerate innovation, provide replicable metrics, and undergo community review, resulting in stronger and more secure projects. Ergo encourages developers to embrace open-source principles and the benefits it brings to the ecosystem.
+
+**Q: Are there signs of rivalry and synergy within the Ergo ecosystem?**
+
+A: Ergo's extended UTXO model and smart contract capabilities create opportunities for synergy within the ecosystem. Ergo is designed to support smart financial contracts and innovative frameworks. While competition naturally arises in the market, Ergo focuses on fostering collaboration and innovation through open-source code, allowing projects to leverage the network's tooling and infrastructure.
+
+**Q: How does Ergo improve infrastructure and develop human capital?**
+
+A: Ergo actively invests in improving infrastructure, offering incentives, expanding documentation, creating educational tools, and providing opportunities for developers to contribute to the core network. The network aims to attract and cultivate talent by offering resources and support for developers.
+
+**Q: Does Ergo subsidize certain projects, potentially undermining long-term innovation and competition?**
+
+A: Ergo aims to provide a level playing field for all projects and promotes decentralization. While it may appear that certain projects receive subsidies, Ergo strives to ensure fair competition and prevent insider advantages. The network believes that long-term competitiveness should be based on technological merit and benefits to users rather than preferential treatment from the start.
+
+**Q: Does Ergo stimulate innovation and competition among its native projects?**
+
+A: Ergo encourages innovation and competition through open-source code and the development of unique smart contract frameworks. The network continuously works towards improving tooling, documentation, and resources to support developers and stimulate innovation within the ecosystem.
+
+**Q: How does the user profile of Ergo compare to other chains?**
+
+A: As a young network, Ergo's user profile primarily consists of miners, developers, and investors. However, as the ecosystem grows and expands its tooling, Ergo aims to attract users from diverse backgrounds and cater to different markets and industries.
+
+**Q: Which regions are adopting Ergo the most?**
+
+A: Ergo's user base is globally distributed, with miners and investors coming from various regions. The network is still in its early stages, and as it develops further, adoption in different regions may vary based on market demands and specific use cases.
+
+**Q: How does Ergo strike a balance between encouraging peer knowledge sharing and respecting proprietary IP?**
+
+A: Ergo advocates for transparency and open-source development, considering the benefits it brings to the community. While proprietary IP exists, Ergo believes that open collaboration and community review lead to stronger projects and increased security. The network aims to provide replicable metrics and transparency, enabling developers to build on top of Ergo's open infrastructure.
+
+**Q: Are there signs of collaboration and synergy within the Ergo ecosystem?**
+
+A: Ergo was built to support smart financial contracts, and as the extended UTXO model and ErgoScript develop, new innovative frameworks are expected to emerge. The ecosystem benefits from the collaboration and specialization of developers and projects built on top of Ergo, fostering synergy within specific niches and industries.
+

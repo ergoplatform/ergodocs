@@ -1,39 +1,57 @@
-# How to sign transaction using backend wallet
+# Signing Transactions Using a Backend Wallet
 
-There are many cases when it's required to sign a transaction on backend.
+There are various scenarios where signing a transaction on the backend is necessary. This documentation provides instructions on how to accomplish this task using the Ergo Platform Blockchain. We will outline two common use cases: NFT vending machine and off-chain bots that withdraw funds from contracts.
 
-Use cases:
+## Use Cases
 
-- NFT vending machine - mint token and send to user when the address gets funded
-- Off-chain bot that withdraws funds from a contract.
-  
-In both cases, you may want to define a wallet on your backend to be able to sign those txs.
-Here is a code reference on how it is done on the [dAppstep repo](https://github.com/nirvanush/dappstep-play/blob/main/src/services/WalletFromMnemonics.ts)
+### NFT Vending Machine
 
-
-#### And here is how you can use it in your app:
+In this use case, you may need to mint a token and send it to a user when their address is funded. To achieve this, it is recommended to define a wallet on your backend that can sign the transactions. The following code snippet demonstrates how this can be done:
 
 ```javascript
 import SignerWallet from '../src/services/WalletFromMnemonics';
 
-// example tx
+// Example transaction
 const unsignedTx = {
   inputs: [...], 
   outputs: [...],
   ...
 }
 
-// You should never write the seedphrase in your code, always use a secret manager.
-const wallet = await new SignerWallet().fromMnemonics('add your seed phrase of 12 words here');
+// It is crucial to avoid storing the seed phrase in your code; always use a secret manager.
+const wallet = await new SignerWallet().fromMnemonics('add your 12-word seed phrase here');
 
 const signedTx = wallet.sign(unsignedTx);
 
-// Now you can submit this tx to mempool
+// The signed transaction can now be submitted to the mempool.
 
 ```
 
+### Off-Chain Bot
 
-#### References:
-1. **Sigma-rust** https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-wasm
-2. **Sigma-rust discord** https://discord.com/channels/668903786361651200/729692906209673257
+In this use case, an off-chain bot is responsible for withdrawing funds from a contract. Similar to the previous use case, you will need a backend wallet to sign the transactions. The code snippet below illustrates how to achieve this:
 
+```javascript
+import SignerWallet from '../src/services/WalletFromMnemonics';
+
+// Example transaction
+const unsignedTx = {
+  inputs: [...], 
+  outputs: [...],
+  ...
+}
+
+// It is crucial to avoid storing the seed phrase in your code; always use a secret manager.
+const wallet = await new SignerWallet().fromMnemonics('add your 12-word seed phrase here');
+
+const signedTx = wallet.sign(unsignedTx);
+
+// The signed transaction can now be submitted to the mempool.
+
+```
+
+## Additional References
+
+1. **Sigma-rust** - For more details on the Ergo Platform's sigma-rust library, please refer to the [sigma-rust repository](https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-wasm).
+2. **Sigma-rust Discord** - Join the [Sigma-rust Discord channel](https://discord.com/channels/668903786361651200/729692906209673257) to engage in discussions and receive support related to the Ergo Platform's sigma-rust library.
+3. **dAppstep Repo** - Visit the [dAppstep repository](https://github.com/nirvanush/dappstep-play/blob/main/src/services/WalletFromMnemonics.ts) for further information on using the backend wallet for transaction signing.

@@ -1,5 +1,5 @@
 
-#### Are their plants to put together a Plutus Pioneer-style program for ErgoScript? 
+<!-- #### Are their plants to put together a Plutus Pioneer-style program for ErgoScript? 
  
 The Ergo Foundation can sponsor the money for educational programs, and this is of the core goals of the Ergo Foundation as an organization. 
 
@@ -132,3 +132,4 @@ We actively offer incentives, put together documentation educational tools, and 
 It may appear that way to some.
 We are a young network (being we have a new smart contract model). We are very competitive long-term with the tech we bring to the table. The network is still in its infancy. Price does lead to developer adoption. However, it is hard to claim or disavow strategic advantages when you lack competition. That is due to bringing a new type of network to crypto.
 Extended UTXO has a bright future but is still very young. The advantages are obvious, but it is relatively new.
+-->

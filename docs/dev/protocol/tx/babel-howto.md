@@ -1,4 +1,5 @@
 ## The Problem
+
 Every blockchain requires a fee to fund transactions, and it is most often a blockchain's respective coin that pays for transactions on the network. In the case of Ergo, every transaction requires a payment in $ERG.
 
 For those who are active within a blockchain’s ecosystem, there is often a desire to hold assets other than that blockchain’s coin. You may want to buy NFTs, or you may want other tokens native to the blockchain. Depending on a wallet's holdings, the need to use $ERG to pay for transactions may create some complexities. What if the wallet does not have enough $ERG to fund a transaction where the user is trying to send a native token? This sort of scenario might discourage a person from using the chain because they cannot fund a transaction with $ERG.  
