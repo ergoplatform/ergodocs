@@ -1,6 +1,6 @@
 # Data Inputs
 
-This section provides an overview of data inputs in the Ergo Platform Blockchain. It explains the concept of data inputs, their benefits, and their usage in transactions. 
+This section provides an overview of data inputs in Ergo. It explains the concept of data inputs, their benefits, and their usage in transactions. 
 
 ## Understanding Data Inputs
 

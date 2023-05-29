@@ -47,4 +47,4 @@ Alternatively, you can simply create additional key pairs by utilizing the `/wal
 
 Note: The current wallet operations can only be performed via the Ergo node's REST API.
 
-Feel free to explore the various features of the Ergo Platform Blockchain and the extensive capabilities of the Ergo wallet.
+Feel free to explore the various features of Ergo and the extensive capabilities of the Ergo wallet.
