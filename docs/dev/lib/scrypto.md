@@ -1,8 +1,10 @@
-# Scrypto
+# Scrypto: Your Cryptographic Toolkit
 
-[Scrypto](https://github.com/input-output-hk/scrypto) is an open source cryptographic toolkit designed to make it easier and safer for developers to use cryptography in their applications.
+[Scrypto](https://github.com/input-output-hk/scrypto) is a comprehensively built open-source cryptographic toolkit, specifically engineered to simplify and safeguard the process of integrating cryptography into your applications.
 
-- AVL+ Trees
-- Batch Merkle Proof serialization + deserialization
+Features of Scrypto:
 
-It was extracted from Scorex, open-source modular blockchain & cryptocurrency framework.
+- AVL+ Trees: This data structure ensures efficient and secure access to your data.
+- Batch Merkle Proof Serialization and Deserialization: An essential feature to confirm the integrity and authenticity of your data transactions.
+
+Scrypto has its origins rooted in Scorex, a highly modular open-source platform known for its blockchain and cryptocurrency frameworks. By leveraging Scrypto, developers can tap into powerful, reliable cryptographic functionalities while minimizing the risks associated with such implementations.

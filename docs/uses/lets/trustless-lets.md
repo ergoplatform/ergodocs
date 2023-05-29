@@ -1,22 +1,36 @@
-## Trustless LETS
+# Trustless LETS
 
-LETS involves several parties that agree to use some form of "local currency", usually pegged to the country's main currency at a 1:1 rate. Assume that our LETS is based in a European country where the currency is Euros, and the exchange is done in "local Euros", which are considered equivalent to national Euros.
+A [Local Exchange Trading System](lets.md) (also known as *LETS*) involves several participants who agree to use a form of "local currency," typically pegged to the national currency at a 1:1 ratio. Let's consider an example of a LETS located in a European country, where the currency is Euros. The exchange is conducted in "local Euros," which are deemed equivalent to national Euros.
 
-Each user in LETS has an account, which contains the LETS balance of that user (in Local Euros). On joining, each user has a balance of zero. The balance is stored in a (possibly decentralized) ledger. An interesting feature of LETS is that a user with zero balance can also "withdraw" money, but only for paying another LETS user. At any time, the sum of LETS balances of all the users is zero.
+In LETS, each participant has an account holding their LETS balance (in Local Euros). New members start with a balance of zero, recorded in a ledger that could be decentralized. One distinctive aspect of LETS is that a member with a zero balance can "withdraw" money, but solely for payments to another LETS member. Consequently, the sum of all users' LETS balances is always zero at any given moment.
 
-As an example, Alice, with zero balance, wishes to purchase one litre of milk for 2 Euros from Bob, a member of LETS with zero balance. She transfers 2 Euros from her account to Bob's, making her balance -2 and Bob's +2. Bob can then transfer some or all of his balance to another LETS user in exchange for goods or services.
+For instance, Alice, a LETS member with a zero balance, decides to buy one liter of milk from Bob, also a LETS member with a zero balance. Alice transfers 2 Euros from her account to Bob's, resulting in her balance becoming -2 and Bob's +2. Bob can then transfer some or all of his balance to another LETS member in return for goods or services.
 
 ### Implementation
 
-Since we desire a trustless LETS, we cannot depend on any trusted group of people to admit users. Note that we will still have a committee to perform tasks such as setting up the LETS parameters (local currency, the maximum number of members, etc.) and consuming any joining fee.
+As we aim to establish a decentralized LETS, we cannot rely on any trusted group to authenticate users. However, we will maintain a committee responsible for tasks like defining LETS parameters (local currency, the maximum number of members, etc.) and processing any joining fees.
 
-We will only assume a trusted _pricing oracle_ that gives the current rate of euros to ergs identified by some global id (`rateTokenID`) and a _singleton box_ containing exactly one token with this id. A singleton box is a box containing a _singleton token_, i.e., a token with only one quantity in existence. This box also contains the rate of ergs to euros at any given period. The rate is updated by spending this box and creating another singleton box with the new rate.
+We'll rely on a trusted _pricing oracle_ that provides the current conversion rate of euros to ergs, identified by a global id (`rateTokenID`). The oracle operates through a _singleton box_ that contains precisely one token with this id. A singleton box, which carries a _singleton token_ (a token with only one unit in existence), also holds the rate of ergs to euros for any given period. The rate gets updated by spending this box and creating another singleton box with the new rate.
 
-At any instance, our LETS is uniquely defined by a global _token box_ that contains some _membership tokens_ with id `letsTokenID`. This box defines the LETS parameters such as the location, the currency unit, `rateTokenID`, etc. The token box is initially started with, say, 10000 membership tokens. Users can spend this box and create their individual _LETS boxes_ as outputs of the transaction, such that each such output has exactly one membership token. The balance membership tokens are put in a newly created token box. 
+Our LETS at any given moment is distinctly defined by a global _token box_ that houses some _membership tokens_ with id `letsTokenID`. This box outlines the LETS parameters such as location, currency unit, `rateTokenID`, and so on. Initially, the token box is started with a specified number, say 10,000 membership tokens. Users can spend this box and create their individual _LETS boxes_ as transaction outputs, where each output contains exactly one membership token. The remaining membership tokens are stored in a newly generated token box.
 
-A LETS box represents a LETS member and must be used in every transaction. For simplicity, this article restricts all LETS transactions to involve exactly two members, one being the sender and the other the receiver, such that the sender transfers some positive amount of the LETS currency (local euros) to the receiver. Such a transaction consumes the member's boxes and recreates them as output with the updated balance.   
+A LETS box symbolizes a LETS member and must be used in every transaction. For simplicity, this document restricts all LETS transactions to involve only two members - one sender and one receiver. In such transactions, the sender transfers a positive amount of the LETS currency (local euros) to the receiver, consuming the members' boxes and recreating them as outputs with updated balances.
 
-#### Variants
+### Variations
+
+The following table provides a brief overview of the LETS variants:
+
+|   |Zero Sum|Positive Sum|
+|---|---|---|
+|**Collateral**|[LETS-1](#lets-1-zero-sum-collateral)|[LETS-3](#lets-3-positive-sum-collateral)|
+|**No collateral**|[LETS-2](#lets-2-zero-sum-no-collateral)|[LETS-4](#lets-4-positive-sum-no-collateral)|
+
+We have considered LETS transactions involving a single sender-receiver pair in the examples above. However, more advanced models can include multiple senders and receivers and need not strictly be in
+
+ a 1:1 ratio. Additionally, while we initially defined the balance as a simple integer, a more complicated system could employ a more advanced datatype such as a vector of integers, which would allow more sophisticated operations like loans.
+
+Please follow the individual links above for a detailed explanation of each LETS variation.
+
 
 To prevent spam and DDoS attacks, we require at least a minimum number of ergs (`minErgsToJoin`) to be locked in the newly created member's box. The ergs will be locked until at least the `minWithdrawTime` number of blocks has been mined. A box can have a negative LETS balance up to the amount that can be covered by the locked ergs (using the rate at the time of trade).
 
@@ -144,14 +158,6 @@ This is similar to LETS-3 but with some small variations:
 * **Non-refundable Joining Fee**: As in LETS-2
 * **Positive-Sum**: As in LETS-3
 
-The following table summarizes the variants:
-
-|   |Zero Sum|Positive Sum|
-|---|---|---|
-|**Collateral**|LETS-1|LETS-3|
-|**No collateral**|LETS-2|LETS-4|
-
-We considered LETS transactions involving a single sender-receiver pair. More advanced models can allow multiple senders and receivers and need not be in pairs. 
 
 
 **Crossing the last mile**

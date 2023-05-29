@@ -12,7 +12,7 @@ Suppose we [set up a full node](https://github.com/ergoplatform/ergo/wiki/Set-up
 $ java -jar -Xmx4G target/scala-2.12/ergo-4.0.8.jar --testnet -c ergo-testnet.conf
 ```
 
-We will need some configuration parameters which can be loaded from [ergotool.json](ergotool.json) file
+We will need some configuration parameters which can be loaded from `ergotool.json` file
 
 ```json
 {
@@ -55,7 +55,7 @@ ErgoNodeConfig nodeConf = conf.getNode();
 ErgoClient ergoClient = RestApiErgoClient.create(nodeConf, null);
 ```
 
-Using `ErgoClient` we can [execute](lib-api/src/main/java/org/ergoplatform/appkit/ErgoClient.java) any block of code in the current blockchain context.
+Using `ErgoClient` we can execute `lib-api/src/main/java/org/ergoplatform/appkit/ErgoClient.java` any block of code in the current blockchain context.
 
 ```java
 String txJson = ergoClient.execute((BlockchainContext ctx) -> {
@@ -114,7 +114,7 @@ Note, in order to compile `ErgoContract` from source, the `compileContract` meth
 
 If no such constants are used, then `ConstantsBuilder.empty()` can be passed.
 
-In this specific case, we pass the public key of the `prover` for `pkOwner` placeholder of the script meaning the box can be spent only by the owner of the public key from the `wallet` section of [ergotool.json](ergotool.json).
+In this specific case, we pass the public key of the `prover` for `pkOwner` placeholder of the script meaning the box can be spent only by the owner of the public key from the `wallet` section of `ergotool.json`.
 
 
 Next, we create an unsigned transaction using all the data collected so far.

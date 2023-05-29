@@ -10,7 +10,7 @@ With the discovery that we can easily use spent boxes in contracts ([see here](h
 
 There are two important boxes in the issuance process of an artwork.
 
-- The issuance box, which follows [Asset standard](eip-0004.md) depending on the type of artwork.
+- The issuance box, which follows [Asset standard](eip4.md) depending on the type of artwork.
 - The issuer box, which is the first input of the transaction that is issuing the artwork. In particular, the box with the same ID as the artwork's token ID.
 
 Now we will discuss why the issuer box is important and define a standard for it.
@@ -18,7 +18,7 @@ Now we will discuss why the issuer box is important and define a standard for it
 The issuer box is important because it has the same ID as the artwork's token ID and we can include it (although it is spent) in our transactions either in [registers](registers.md) or as context data. This means that we can prove/verify certain features that an artwork may have using this box. The following is the v1 standard for this box - which may be extended in the future (refer to Design V2 part).
 
 - `R4` of this box is an `Int`, showing 1000 * royalty percentage of the artwork. e.g, 20 for 2% royalty. If `R4` of the issuer box of an artowrk is empty or non-positive, then royalty is considered to be 0%.
-- In the current design of the [Auction contranct](eip-0022.md), proposition bytes of this box is the contract that the royalty percentage will be sent to. This is a suboptimal design because of AOT costing mechanism which is supposed to be replaced with JIT costing with a soft-fork that will happen with v5.0 of [ergo node](https://github.com/ergoplatform/ergo).
+- In the current design of the [Auction contranct](eip22.md), proposition bytes of this box is the contract that the royalty percentage will be sent to. This is a suboptimal design because of AOT costing mechanism which is supposed to be replaced with JIT costing with a soft-fork that will happen with v5.0 of [ergo node](https://github.com/ergoplatform/ergo).
   
 As mentioned, royalty amount will go to the propositiona bytes of the issuer box. In the case of a simple proxy contract (proposition bytes of the issuer box), this means that the artist will receive the royalty share. However, the proxy contract may enforce the royalty to go to any other complex contract - e.g., 20% to the artist, and 80% to some charity.
 

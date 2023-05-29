@@ -16,7 +16,7 @@ You can also use [Docker](docker.md), and even a [Raspberri Pi](pi.md) with a fa
 
 - [Frequently Asked Questions](faq.md)
 - [Modes of Operation](modes.md)
-- [APIs](apis.md)
+- [APIs](api.md)
 
 ### Toolkits 
 

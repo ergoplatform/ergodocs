@@ -4,7 +4,7 @@ The Ergo Blockchain API provides a set of endpoints to interact with the Ergo bl
 
 The base URL for all the API endpoints is `http://213.239.193.208:9053/blockchain/`.
 
-Please note that this is a public instance, but for anything beyond testing you should host your own version of the [node](node.md) and enable the indexing by setting the `ergo.node.extraIndex` property to true in the config file.
+Please note that this is a public instance, but for anything beyond testing you should host your own version of the [node](install.md) and enable the indexing by setting the `ergo.node.extraIndex` property to true in the config file.
 
 
 ## Methods

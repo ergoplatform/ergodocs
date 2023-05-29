@@ -53,7 +53,7 @@ More information about the Ergo Foundation can be found [here](ergo-foundation-2
 
 ### Research-Based Approach
 
-The Ergo Blockchain is a result of extensive research and uses innovative solutions to address the issues and inefficiencies that have been identified in previous blockchains. It employs an array of research-driven features such as non-interactive proof of proof of works ([NiPoPoWS](nipopow.md)), which offer enhanced privacy, and a memory-hard mining proof of work mining algorithm which ensures decentralisation and adaptability.
+The Ergo Blockchain is a result of extensive research and uses innovative solutions to address the issues and inefficiencies that have been identified in previous blockchains. It employs an array of research-driven features such as non-interactive proof of proof of works ([NiPoPoWS](nipopows.md)), which offer enhanced privacy, and a memory-hard mining proof of work mining algorithm which ensures decentralisation and adaptability.
 
 The architecture is designed to be flexible, allowing it to adapt to new technologies and changes in user requirements over time. Its blockchain pruning feature allows nodes to discard unnecessary historical data while still maintaining complete security, which is a significant step towards improving the scalability of the blockchain.
 

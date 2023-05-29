@@ -1,122 +1,115 @@
+# Fundamental Implementation
 
-## Basic Implementation
+The basic blueprint of our system encompasses two contracts: an administrative contract and a trade contract. Before delving into the details, we recommend acquainting yourself with the foundational aspects of Ergo by reviewing [this ICO article](https://github.com/ergoplatform/ergo/wiki/An-ICO-Example-On-Top-Of-Ergo) as well as ErgoScript tutorials ([basic](https://ergoplatform.org/docs/ErgoScript.pdf) and [advanced](https://ergoplatform.org/docs/sigmastate_protocols.pdf)).
 
-Our reference implementation is simple and consists of two contracts: a management contract and an exchange contract. We skip Ergo preliminaries, so please read [the ICO article](https://github.com/ergoplatform/ergo/wiki/An-ICO-Example-On-Top-Of-Ergo) and ErgoScript tutorials([basic](https://ergoplatform.org/docs/ErgoScript.pdf) and [advanced](https://ergoplatform.org/docs/sigmastate_protocols.pdf)) for starters.
+Despite the aforementioned recommendations, we will elucidate a few novel terms in the upcoming sections.
 
-Nevertheless, we will introduce a couple of new terms in the following sentences.
+In Ergo, when a token is minted with a value of one, it is termed a **singleton token**. Similarly, a box containing a singleton token is known as a **singleton box**.
 
-If a token is issued with an amount equal to one, we call it the **singleton token**. Similarly, a box that contains the singleton token is called the **singleton box**.
+- The administrative contract oversees a singleton box that encompasses the members of the LETS system. 
+- This contract facilitates the addition of new members, at a rate of one member per transaction. 
+- Instead of storing members, the box merely holds a succinct digest of an authenticated data structure based on the members' directory. 
+- Each member is linked with a singleton token minted during a transaction that adds the member to the directory. 
+- This transaction generates a new member's box, housing the member's singleton token. 
+- The trade contract safeguards the member's box. 
+- Moreover, the freshly generated member's box records the initial balance in the R4 register, which in this case is zero.
+- The transaction that adds a new member is obligated to validate the correctness of the directory transformation.
 
-- The management contract controls a singleton box that holds members of the LETS system. 
-- The contract enables the adding of new members at the pace of one member per transaction. 
-- The box is not storing members but only a small digest of authenticated data structure built on top of the members' directory. 
-- A member is associated with a singleton token issued in a transaction that adds the member to the directory. 
-- The transaction creates a new member's box containing the member's singleton token. 
-- The exchange contract protects the member's box. 
-- Also, the newly created member's box has the initial balance written down into the R4 register, and the balance is equal to zero in our example.
-- The transaction creating a new member must provide proof of correctness for directory transformation.
+A committee generally manages the administrative contract box, and the composition of this committee may change over time. To accommodate this, we allow the committee's logic to reside in the R5 register. For instance, if a new member is added to both the committee and the LETS system, the incoming administrative contract box would require signatures from two out of three members, while the outgoing box would require three out of four signatures. Consequently, the data within the R5 register of the input and output boxes would vary.
 
-The management contract box is controlled usually by a committee, and the committee could evolve over time. To support that, we allow committee logic to reside in the register R5. For example, assume that a new committee member has been added along with a new LETS member, the input management contract box requires 2-out-of-3 signatures, and the output box requires 3-out-of-4 signatures. In this case, the contents of the R5 register in the input and the output box would differ.
-
-The management contract code in ErgoScript with comments is provided below. Please note that  `userContractHash` is about the exchange contract hash. 
+Below, we provide the administrative contract's code written in ErgoScript, complete with comments. Note that `userContractHash` corresponds to the hash of the trade contract. 
 
 ```scala
     val selfOut = OUTPUTS(0)
  
-    // Management script
-    val managementScript = selfOut.R5[SigmaProp].get
+    // Administrative script
+    val adminScript = selfOut.R5[SigmaProp].get
  
-    // The management script template is replicating self, and management script is satisfied
-    val scriptCorrect = (selfOut.propositionBytes == SELF.propositionBytes) && managementScript
+    // Confirming that the script replicates itself and the administrative script is satisfied
+    val scriptIsCorrect = (selfOut.propositionBytes == SELF.propositionBytes) && adminScript
  
-    // A spending transaction is creating boxes for directory, user, fee.
-    val outsSizeCorrect = OUTPUTS.size == 3
+    // A spending transaction creates boxes for the directory, user, and fee
+    val isOutputSizeCorrect = OUTPUTS.size == 3
  
-    // Checks that the management label token is replicating self
-    val outTokenCorrect = (selfOut.tokens.size == 1) && (selfOut.tokens(0)._1 == letsToken)
+    // Verifies the replication of the administrative label token 
+    val isTokenOutputCorrect = (selfOut.tokens.size == 1) && (selfOut.tokens(0)._1 == letsToken)
  
-    // Checks that new token is issued, and its amount is correct
-    // OUTPUTS(0) tokens already checked via outtokenCorrect
+    // Validates the issuance of a new token and its amount
+    // OUTPUTS(0) tokens are already checked via isTokenOutputCorrect
     val issuedTokenId = INPUTS(0).id
     val userOut = OUTPUTS(1)
-    val correctTokenAmounts =
+    val areTokenAmountsCorrect =
       (userOut.tokens.size == 1 &&
         userOut.tokens(0)._1 == issuedTokenId &&
         userOut.tokens(0)._2 == 1 &&
         OUTPUTS(2).tokens.size == 0 &&
-        outTokenCorrect)
+        isTokenOutputCorrect)
  
-    // Checks that the new user has been created with the zero balance
-    val zeroUserBalance  = userOut.R4[Long].get == 0
+    // Verifies that the new user is created with a zero balance
+    val isUserBalanceZero  = userOut.R4[Long
+
+].get == 0
  
-    val properUserScript = blake2b256(userOut.propositionBytes) == userContractHash
+    val isUserScriptProper = blake2b256(userOut.propositionBytes) == userContractHash
  
-    // Checks that the new token identifier has been added to the directory
+    // Validates the addition of the new token identifier to the directory
     val selfTree = SELF.R4[AvlTree].get
     val toAdd: Coll[(Coll[Byte], Coll[Byte])] = Coll((issuedTokenId, Coll[Byte]()))
     val proof = getVar[Coll[Byte]](1).get
-    val modifiedTree = selfTree.insert(toAdd, proof).get
+    val updatedTree = selfTree.insert(toAdd, proof).get
     val expectedTree = selfOut.R4[AvlTree].get
-    val treeCorrect = modifiedTree == expectedTree
+    val isTreeCorrect = updatedTree == expectedTree
  
-    correctTokenAmounts && scriptCorrect && treeCorrect && zeroUserBalance && properUserScript       
-    correctTokenAmounts && scriptCorrect && treeCorrect && zeroUserBalance && properUserScript correctTokenAmounts && scriptCorrect && treeCorrect && zeroUserBalance && properUserScript      
+    areTokenAmountsCorrect && scriptIsCorrect && isTreeCorrect && isUserBalanceZero && isUserScriptProper      
 ```
 
-The exchange contract script is fairly straightforward and provided below, along with comments describing its logic. The contract assumes that a spending transaction for an exchange contract box receives at least two inputs, and the first two inputs should be protected by the exchange contract script and contain LETS member tokens. To check
-that singleton member tokens in the inputs do indeed belong to the LETS system; a spending transaction provides the management
-contract box as the first read-only data input and also should provide proof that the member tokens do belong to 
-the directory authenticated via the R4 register of the management contract box. "letsToken" in the script is about
-the singleton token of the management box. 
+The trade contract script, presented below with explanatory comments, is fairly straightforward. The contract requires that a transaction spending an exchange contract box should have at least two inputs. The first two inputs must be protected by the exchange contract script and contain LETS member tokens. To validate the legitimacy of singleton member tokens in the inputs, the transaction provides the administrative contract box as the first read-only data input and also supplies proof that the member tokens indeed belong to the directory authenticated via the R4 register of the administrative contract box. The "letsToken" in the script refers to the singleton token of the administrative box. 
 
 ```scala
-  // Minimal balance allowed for LETS trader
+  // Minimum balance allowed for a LETS trader
   val minBalance = -20000
 
   val lookupProof = getVar[Coll[Byte]](1).get
 
-  // The read-only box which contains directory of LETS members
+  // Read-only box containing the directory of LETS members
   val treeHolderBox = CONTEXT.dataInputs(0)
-  val properLetsToken = treeHolderBox.tokens(0)._1 == letsToken
+  val isLetsTokenProper = treeHolderBox.tokens(0)._1 == letsToken
   val membersTree = treeHolderBox.R4[AvlTree].get
 
-  // A spending transaction is taking two boxes of LETS members willing to make a deal,
-  // and returns boxes with modified balances.
+  // A spending transaction takes two LETS members' boxes willing to make a trade, 
+  // and returns boxes with updated balances.
   val participant0 = INPUTS(0)
   val participant1 = INPUTS(1)
   val participantOut0 = OUTPUTS(0)
   val participantOut1 = OUTPUTS(1)
 
-  //Check that members do indeed belong to the LETS
+  // Check that members do indeed belong to the LETS
   val token0 = participant0.tokens(0)._1
   val token1 = participant1.tokens(0)._1
   val memberTokens = Coll(token0, token1)
-  val membersExist = membersTree.getMany(memberTokens, lookupProof).forall({ (o: Option[Coll[Byte]]) => o.isDefined })
+  val doMembersExist = membersTree.getMany(memberTokens, lookupProof).forall({ (o: Option[Coll[Byte]]) => o.isDefined })
 
-  // Check that LETS member balance changes during the deal are correct
+  // Verify that changes in LETS member balances during the transaction are correct
   val initialBalance0 = participant0.R4[Long].get
   val initialBalance1 = participant1.R4[Long].get
-  val finishBalance0  = participantOut0.R4[Long].get
-  val finishBalance1  = participantOut1.R4[Long].get
-  val diff0 = finishBalance0 - initialBalance0
-  val diff1 = finishBalance1 - initialBalance1
-  val diffCorrect = diff0 == -diff1
-  val balancesCorrect = (finishBalance0 > minBalance) && (finishBalance1 > minBalance) && diffCorrect
+  val finalBalance0  = participantOut0.R4[Long].get
+  val finalBalance1  = participantOut1.R4[Long].get
+  val balanceDifference0 = finalBalance0 - initialBalance0
+  val balanceDifference1 = finalBalance1 - initialBalance1
+  val areBalanceDifferencesCorrect = balanceDifference0 == -balanceDifference1
+  val areBalancesCorrect = (finalBalance0 > minBalance) && (finalBalance1 > minBalance) && areBalanceDifferencesCorrect
 
-  // Check that member boxes save their scripts.
-  // todo: optimization could be made here
-  val script0Saved = participantOut0.propositionBytes == participant0.propositionBytes
-  val script1Saved = participantOut1.propositionBytes == participant1.propositionBytes
-  val scriptsSaved = script0Saved && script1Saved
+  // Check that member boxes retain their scripts.
+  val isScript0Preserved = participantOut0.propositionBytes == participant0.propositionBytes
+  val isScript1Preserved = participantOut1.propositionBytes == participant1.propositionBytes
+  val areScriptsPreserved = isScript0Preserved && isScript1Pres
 
-  // Member-specific box protection
+erved
+
+  // Protection specific to member boxes
   val selfPubKey = SELF.R5[SigmaProp].get
 
-  selfPubKey && properLetsToken && membersExist && diffCorrect && scriptsSaved
+  selfPubKey && isLetsTokenProper && doMembersExist && areBalanceDifferencesCorrect && areScriptsPreserved
 ```
 
-> Note that we can modify both contracts in many ways to get new systems with different properties. 
-
-
-
-
+Please note that both the administrative and trade contracts can be modified in various ways to create new systems with different characteristics.

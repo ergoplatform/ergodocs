@@ -59,7 +59,7 @@ It is worth noting that a proposed EIP (Ergo Improvement Proposal) [EIP-33: Toke
 
 ## How do I check the age of my boxes? 
 
-[TokenJay](tokenjay.md) has a handy [Box consolidation tool](https://tokenjay.app/app/#boxconsolidation) that checks the number and age of boxes in your wallet and consolidates when necessary. You can also message [@ergoportbot](https://t.me/ergoportbot) on Telegram and use the command `/ep boxage ADDRESS` to check. 
+[TokenJay](token-jay.md) has a handy [Box consolidation tool](https://tokenjay.app/app/#boxconsolidation) that checks the number and age of boxes in your wallet and consolidates when necessary. You can also message [@ergoportbot](https://t.me/ergoportbot) on Telegram and use the command `/ep boxage ADDRESS` to check. 
 
 ## How does it work?
 

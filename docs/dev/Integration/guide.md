@@ -3,59 +3,49 @@ tags:
   - Tutorial
 ---
 
+# Ergo Platform Blockchain Integration Guide
 
-# Integration
-
-A guide to help developers integrate Ergo. 
-
-Any suggestions for improvements are welcomed! 
-
-Please send them to team@ergoplatform.org or join us on [`#development` on Discord](https://discord.gg/kj7s7nb).
-
+This guide facilitates developers in integrating the Ergo Blockchain Platform. For suggestions on improvements, please contact us at team@ergoplatform.org or join our [`#development` on Discord](https://discord.gg/kj7s7nb).
 
 ## Getting Started
 
+Here's a brief overview of key features of Ergo:
 
-Here are some quick facts about Ergo that are useful to know;
-
-* like Bitcoin, a transaction in Ergo has multiple *inputs* and *outputs*. Unspent outputs are **single-use entities**. However, Ergo is built from scratch; thus, scripts and transaction formats differ.
-* Just like Bitcoin, there are some standard scripts in Ergo associated with addresses, e.g. `P2PK` addresses. [Read more here on the address scheme](/dev/wallet/address)
-* Rather than storing a single amount (like BTC), an ergo eutxo box has some [registers](registers.md) to store arbitrary values, like its native tokens. So, each box has an ERG amount and may or may not have a bunch of {tokenid, token amount} pairs, all in the UTXO model.
-* Ergo has an inbuilt wallet API which is enough for most use cases. API has a Swagger interface on `127.0.0.1:9053` by default in the mainnet (`9052` on testnet).
-* See the full guide on setting [How to set up a node](install.md) and the associated [troubleshooting](troubleshooting.md) page.
-
-
+* Transactions in Ergo, akin to Bitcoin, involve multiple *inputs* and *outputs*. Unspent outputs are used once, termed as **single-use entities**. Although built from scratch, Ergo's scripts and transaction formats differ from Bitcoin's.
+* Ergo contains standard scripts, associated with addresses like `P2PK` addresses, similar to Bitcoin. [Learn more about the address scheme here.](/dev/wallet/address)
+* An ergo eutxo box stores [registers](registers.md) to hold arbitrary values, such as its native tokens, instead of a single amount (like BTC). Thus, each box contains an ERG amount and may include {tokenid, token amount} pairs, all following the UTXO model.
+* Ergo's inbuilt wallet API suffices for most use cases. The API uses a Swagger interface on `127.0.0.1:9053` by default in the mainnet (`9052` on the testnet).
+* A comprehensive guide on [setting up a node](install.md) and a dedicated [troubleshooting page](troubleshooting.md) are available.
 
 ### Node Wallet
 
+- **Web interface**: Access the web interface at [127.0.0.1:9053/panel](https://127.0.0.1:9053/panel) (`9052` on the testnet). 
 
-- **Web interface**: [127.0.0.1:9053/panel](https://127.0.0.1:9053/panel) (`9052` on the testnet). 
+Major functionalities include:
 
-Main methods:
+* Wallet creation (`/wallet/init`) and mnemonic generation
+* Wallet restoration (`/wallet/restore`) from mnemonic
+* Wallet unlock (`/wallet/unlock`) for transaction signing
+* Wallet lock (`/wallet/lock`)
+* Sending a simple payment (`/wallet/payment/send`)
+* Checking wallet status (`/wallet/status`)
+* Deriving a new key according to EIP-3 (BIP 44 implementation for Ergo) (`/wallet/deriveNextKey`)
+* Checking wallet balance (`/wallet/balances`) for all addresses
+* Retrieving wallet transactions (`/wallet/transactions`) for all addresses 
 
-* `/wallet/init` to create a wallet (and a secret mnemonic)  
-* `/wallet/restore` to restore a wallet from mnemonic
-* `/wallet/unlock` to unlock the wallet (unlocked after init but locked after restart). You have to unlock it before signing transactions
-* `/wallet/lock` to lock the wallet
-* `/wallet/payment/send` to send a simple payment
-* `/wallet/status` to get wallet status
-* `/wallet/deriveNextKey` to derive a new key according to EIP-3 (BIP 44 implementation for Ergo)
-* `/wallet/balances` to get the wallet balance (for all the addresses) 
-* `/wallet/transactions` to get wallet transactions (for all the addresses) 
+### Creating an External Wallet
 
-### Creating an external wallet.
+You can develop your wallet logic externally using one of the available libraries and the block explorer. 
 
-If you plan to perform your wallet logic externally, you can do so with a library and the block explorer. 
+**Please ensure to take into consideration mempool transactions to avoid double-spending.**
 
-**Please note, you will need to consider mempool transactions to avoid double-spending generation**.
+Available libraries include:
 
-Available libraries are:
-
-* [*ergo-appkit*](https://github.com/ergoplatform/ergo-appkit) Complete java sdk.
-* [*ergo-wallet*](https://mvnrepository.com/artifact/org.ergoplatform/ergo-wallet) made in Java (sources are in [Ergo node repository](https://github.com/ergoplatform/ergo/tree/master/ergo-wallet))
-* [*sigma-rust*](https://github.com/ergoplatform/sigma-rust/) in Rust with WASM bindings for JavaScript/TypeScript
-* [*ergo-ts*](https://github.com/coinbarn/ergo-ts) in TypeScript
-* [*ergo-golang*](https://github.com/azhiganov/ergo-golang) in Go (still raw)
+* [*ergo-appkit*](https://github.com/ergoplatform/ergo-appkit): A complete Java SDK.
+* [*ergo-wallet*](https://mvnrepository.com/artifact/org.ergoplatform/ergo-wallet): Developed in Java, the source code is available at the [Ergo node repository](https://github.com/ergoplatform/ergo/tree/master/ergo-wallet).
+* [*sigma-rust*](https://github.com/ergoplatform/sigma-rust/): A Rust library with WASM bindings for JavaScript/TypeScript.
+* [*ergo-ts*](https://github.com/coinbarn/ergo-ts): Developed in TypeScript.
+* [*ergo-golang*](https://github.com/azhiganov/ergo-golang): This is a Go library, still in early development stages.
 
 
 ### Offline Signing
