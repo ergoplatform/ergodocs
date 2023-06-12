@@ -1,9 +1,5 @@
 # Exploring Ergo Box Design
 
-> [Article by Keith Lim](https://keitodot.medium.com/ergo-box-m-f58f444e00d5)
-
-## Understanding the Core Component: Box
-
 At the heart of a UTXO system are boxes. They serve as essential vessels carrying the value of a currency within a blockchain. The Ergo blockchain enhances this concept by equipping boxes with [registers](registers.md) that are protected by a contract.
 
 Registers offer the capability to store data and information at specific addresses in the blockchain. Drawing a comparison with everyday items, you might envision these boxes as remote controls, supercharged piggy banks, or simple cups that only allow liquid to be poured in. Taking the cup as an example:
@@ -78,4 +74,5 @@ Registers can store data in various formats, which can be categorized into singl
 - `Coll[Coll[Byte]]`
 - `Coll[Bool]`
 
-As we progress, we'll explore how these concepts can be harnessed to develop a replicable framework for designing boxes efficiently, simplifying the potentially overwhelming process into an easy-to-follow guide.
+
+> Based on the [article by Keith Lim](https://keitodot.medium.com/ergo-box-m-f58f444e00d5)

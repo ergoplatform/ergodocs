@@ -2,29 +2,27 @@
 tags:
   - UTXO
 ---
+---
+# UTXO vs Account: Understanding Ergo's Transaction Model
 
+Ergo, like Bitcoin, utilizes the Unspent Transaction Outputs (UTXO) model instead of the Account model used in platforms like Ethereum. This documentation aims to explain the UTXO model, also known as the Box model, and highlight the advantages it brings.
 
-# Account vs UTXO
+## Account Balance and UTXO
 
+In the Account model, a balance is a simple numerical value that increases or decreases with transactions. This is similar to real-world transactions where your bank balance changes when money is added or deducted. Transactions to and from an account directly affect the blockchain balance.
 
-Like Bitcoin, Ergo uses the ‘UTXO’ (unspent transaction outputs) model rather than the Account model used by platforms like Ethereum. We have made this choice for several reasons, but first, it’s worth explaining how the UTXO or [Box](box.md) model works.
+The UTXO model, introduced by Bitcoin, takes a different approach. It considers an individual's balance as a collection of unspent outputs, comparable to having multiple portions of bread dough. The total balance is the sum of these portions, or UTXOs. These UTXOs can be split or merged before being transferred to another address. Let's illustrate this with an example:
 
-Most people think that the balance of an account is a simple number that is updated when you send or receive funds. This is the obvious way to approach the problem; it is how money works in the real world. Your bank account has an increased or decreased balance when different transfers are made in and out. The ‘Account’ model operates: transactions to and from the Account alter your balance on the blockchain.
+1. Alice has 100 units (100 ERG). She sends 75 units to Bob and keeps 25 units for herself.
+2. Charlie has 250 units. He transfers 150 units to Bob and retains 100 units.
+3. Bob splits 20 units from the 150 units received from Charlie and merges them with the 75 units received from Alice. He then sends a total of 205 units to Dave, keeping 20 units for himself.
 
-The UTXO model, pioneered by Bitcoin, is quite different. This is a bit like a person holding a series of lumps of bread dough, and their balance is the sum of these lumps or UTXOs. Lumps can be divided or combined before they are sent to a new address, but you always know where they came from. For example:
+Dave now owns 205 units previously owned by Charlie, Alice, and Bob. In the UTXO model, these units can be split and merged, but they maintain their original identity, unlike bread dough. The transaction history of these units can be traced back to when they were initially created.
 
-Alice has 100g of bread dough (100 ERG). She breaks off a lump of 75g and gives it to Bob, keeping 25g of ‘change’ for herself.
-Charlie has 250g of dough, breaks off 150g and gives it to Bob, keeping 100g of change for himself.
-Bob breaks 20g of dough off the 150g lump he received from Charlie and combines the resulting 130g with the 75g he received from Alice. He gives the total of 205g to Dave, keeping the 20g change for himself.
+### Advantages of UTXO
 
-Dave now has 205g of bread dough, which used to belong to Charlie. Before Charlie owned it, 75g used to belong to Alice, while 130g belonged to Bob.
+The UTXO model offers several benefits. Firstly, each UTXO is immutable, meaning it cannot be modified during a transaction like an account balance can be. The balance is determined by the transaction history since its creation.
 
-In the UTXO model, ‘lumps’ of coins can be combined and divided, but they aren’t mixed, unlike bread dough. You can follow the funds' history back to the Coinbase transaction in which those coins were first mined. That’s very different from the Account model, where the balance of each Account is changed. (You can check the blockchain to make sure the Account says what it should, but that’s not intrinsically necessary like it is with the UTXO approach.)
+This immutability provides a layer of simplicity and enhances security. A UTXO either exists in its expected form or it doesn't. In the Account model, verifying that an account is in the expected state can be challenging for developers and often leads to mistakes. The UTXO model also provides better support for off-chain protocols like sidechains and the Lightning Network.
 
-### Why UTXO?
-
-The UXTO model has several implications. For a start, each object is immutable – lumps of coins cannot be ‘edited’ like an Account balance is edited when a transaction is made. The balance is calculated from the transaction history when those coins first came into existence. 
-
-That makes security much simpler because either a UTXO exists in the form you expect or it does not exist. With the account model, you need to carefully check that the Account you’re dealing with is in the state it should be (and developers typically don’t do that correctly). This also makes UTXOs more friendly for off-chain protocols, like sidechains and the Lightning Network.
-
-Accounts make storing the ‘state’ easier, but easy doesn’t always mean better. With Ergo’s extended UTXO model, state transitions are more explicit and cleaner – there are no unwanted surprises. It might be a bit more burdensome to deal with, but it’s a lot better and more straightforward security.
+While Account models simplify state storage, simplicity doesn't always equate to effectiveness. Ergo's extended UTXO model makes state transitions clearer and more explicit, reducing the chances of unexpected outcomes. Although it may require more effort to handle, it ultimately offers superior and straightforward security.

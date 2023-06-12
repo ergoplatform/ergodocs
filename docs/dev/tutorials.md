@@ -3,7 +3,7 @@
 ## Infrastructure
 
 - [Install the node](install.md)
-- Get setup on the [Testnet](testnet.md)
+- Get setup on the [testnet](testnet.md)
 - [Blockchain Explorer with Raspberry Pi](rpi-blockchain-explorer.md)
 - [Mining your own chain](mine-your-own-chain.md)
 
@@ -11,7 +11,7 @@
 
 - [Issuing a token](issue.md)
 - [Burning a token](burn.md)
-- [Minting a NFT](create.md)
+- [Minting an NFT](create.md)
 
 ## Transaction Basics
 
@@ -58,10 +58,10 @@
 
 ### Courses
 
+- [DeCo (Decentralised Collaboration) Education](deco.md)
 - [ErgoScript 101 Crash Course](https://docs.google.com/presentation/d/10gYO82z_7qloRrFOcCxTFuzpP40IImPyIKMV2ZFd9M4/edit#slide=id.p) (Slides)
 - [Learn ErgoScript By Example Via The Ergo Playground with Robert Kornacki (Video)](https://www.youtube.com/watch?v=8l2v1asHgyA)
-- [The ErgoScript Developer Course from DeCo Education](https://github.com/DeCo-Education/ErgoScript-Developer-Course)
-- [Deco Education: 2022 Script Class](https://www.youtube.com/watch?v=qR0_k7VH6KI&list=PLopsKGshj0B4DfFnS-pvriZhba050eaXu)
+
 
 
 ### Tutorials 

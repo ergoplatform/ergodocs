@@ -245,23 +245,3 @@ It allows a contract to construct another contract’s propositional bytes using
 	
 }
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -115,3 +115,22 @@ Ergo's approach to minting policies allows for more complex NFTs and token attri
 
 Ultimately, both Ergo and Cardano offer unique strengths and capabilities, making them appealing choices for developers, users, and investors alike. As these platforms continue to evolve and collaborate, they will undoubtedly contribute significantly to the advancement of blockchain technology and the adoption of the eUTXO model.
 
+## Frequently Asked Questions
+
+### Are Ergo native assets basically the same as Cardano ones?
+
+While Ergo and Cardano both support native assets, their implementations and characteristics may differ. Both blockchains use the eUTXO model, but they have different scripting languages (ErgoScript for Ergo and Plutus for Cardano) and slightly different approaches to data storage, global state management, and minting policies. 
+
+### Is Ergo's multiasset ledger compatible with Cardano's?
+
+Ergo and Cardano's ledger models have similarities due to their shared use of the eUTXO model. However, their ledgers are not directly compatible due to differences in their scripting languages, minting policies, and data handling. 
+
+### Is there an equivalent of CIP25 in Ergo?
+
+- 
+
+### Is there an Ergo equivalent of dbsync?
+
+- [explorer](explorer.md)
+
+

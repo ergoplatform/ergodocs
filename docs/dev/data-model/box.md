@@ -4,14 +4,19 @@ tags:
   - Box
 ---
 
-# Understanding the Ergo 'Box'
+# The Ergo 'Box' model
 
 The Ergo platform employs a transactional model akin to Bitcoin, known as the Unspent Transaction Output (UTxO) model. Here, transactions expend and generate single-use entities, referred to as a ***'box'***. 
+
+In [ErgoScript](ergoscript.md), a 'box' is akin to a more versatile version of what a UTXO (Unspent Transaction Output) represents in Bitcoin and many other cryptocurrencies. A box is not only a ledger entry denoting the amount of cryptocurrency owned by a particular address, but it also carries 'registers', allowing it to contain additional data. This data could range from simple values to more complex structures, which can later be integrated into transactions and used in the execution of smart contracts.
+
+This makes Ergo's box different from a traditional UTXO, which only represents an amount of unspent cryptocurrency associated with a certain address. In UTXO-based cryptocurrencies, each transaction consumes one or more UTXOs as inputs and creates one or more UTXOs as outputs, with the 'unspent' outputs being the 'coins' that can be spent in future transactions.
 
 The term 'box' in Ergo's context captures the idea that these entities are like containers holding various types of information (value, tokens, custom data, etc.), beyond just the unspent transaction output balance. This makes the boxes in Ergo significantly more flexible and functional, enabling more complex operations, such as running scripts or smart contracts, directly on the blockchain.
 
 
-## Introduction
+
+## Key Points
 
 - A box is an immutable unit, which can be created or removed, but never altered. 
 - The box is not just a simple coin; it houses data, code, and registers, with all of its contents exclusively stored in the registers. 
@@ -21,7 +26,8 @@ The term 'box' in Ergo's context captures the idea that these entities are like 
 - A box can hold up to six additional [registers](registers.md) with typed data, accessible by the script.
 - Transactions consist of both *input* and *output* boxes. 
 
-## Example 
+
+## An example box 
 
 Consider the 'proof-of-no-premine' from the Ergo genesis state. This box contains the last block IDs from Bitcoin and Ethereum at the launch time, as well as the latest news headlines:
 
@@ -44,40 +50,37 @@ Consider the 'proof-of-no-premine' from the Ergo genesis state. This box contain
   }
 ```
 
+## Additional Box Functions
 
-## [Registers](registers.md)
+Besides the registers, each box features a unique identification hash that can be referenced using the `id` function. Box ids are computed by applying the `blake2b256` hash function to the box's content, expressed as a `Coll[Byte]`. You can directly access the un-hashed byte collection representing a box using the `bytes` function. Note that each box’s content and id are cryptographically unique, meaning that no two boxes within the blockchain can share the same id or content bytes. This uniqueness is guaranteed by the inclusion of `creationInfo` in each box, as transaction ids and associated output indexes must be unique to a given UTXO. The `bytesWithoutRef` function can be used to retrieve a `Coll[Byte]` that excludes such information.
 
-Each box, at the very least, holds four key pieces of information:
+### Example
 
-1. The value in NanoErgs (1 Erg = 1000000000 NanoErgs).
-2. The protection script (akin to Bitcoin's `scriptPubKey`) or "smart contract", safeguarding the box's expenditure.
-3. Any additional assets or tokens housed within the box.
-4. Creation details of the box, including the `txId`, which is the ID of the transaction that created the box, and an output index. This information also includes a `maxCreation` height parameter set by the box creator (note: this is not the actual creation height; it aids in the creation of "payment channels").
+```scala
+{
+	// Retrieve the value and token multipliers from the registers of the current box
+	val valueMultiplier = SELF.R4[Int].get
+	val tokenMultiplier = INPUTS(1).R4[Int].get
 
-These pieces of information are stored in the first four registers of the box. The rest of the registers, from R4 to R9, can be used to store custom data for use in smart contracts.
-
-### Optional Registers 
-
-| Register | Value |
-|---|---|
-| R0 | Value (in nanoErgs as Base58) |
-| R1 | Protection script (Smart Contract) |
-| R2 | Assets (tokens) |
-| R3 | Creation details |
-| R4-R9 | Available for custom use |
-
-Remember, registers need to be densely packed; you cannot place an empty register between non-empty ones. The optional registers can hold any of the following data types:
-
-- `Int`, `Long` with standard Scala semantics.
-- `BigInt` - a 256-bit integer (all computations are modulo 2^256).
-- `GroupElement` - a point on the Secp256k1 curve represented in compressed format.
-- `Coll[Byte]` - a byte collection, conceptually akin to Scala's `Array[Byte]`.
-- Collection of the above (i.e., `Coll[Int]`, `Coll[GroupElement]`, `Coll[Coll[Byte]]`, and so forth).
-
-A boxId is calculated based on the contents of all the registers, uniquely defining a box. This can be equated to Bitcoin's (txId, vOut) pairs.
-
->Note that Ergo `txId` is dependent solely on the message and not on signatures (similar to Bitcoin SegWit transactions). Hence, a txId is accessible even before signing. Like Bitcoin, Ergo supports chained transactions, meaning boxes with 0 confirmations can be spent.
-
+	// Check if the current box is the same as the first input box
+	if(SELF.id == INPUTS(0).id){
+		// If it is, check if the output box has the correct value and token amounts
+		val outputValue = OUTPUTS(0).value == SELF.value * valueMultiplier 
+		val outputTokens = OUTPUTS(0).tokens(0)._2 == SELF.value * tokenMultiplier 
+		// Return a Sigma proposition that is true only if both outputValue and outputTokens are true
+		sigmaProp(outputValue && outputTokens)
+	}else{
+		// If the current box is not the same as the first input box, check if the output goes to a specified address
+		val outputGoesToCheese = {
+			// Create a public key that corresponds to a specific address
+			PK("9etXmP7D3ZkWssDopWcWkCPpjn22RVuEyXoFSbVPWAvvzDbcDXE").propBytes
+				== OUTPUTS(0).propositionBytes
+		}
+		// Return a Sigma proposition that is true only if outputGoesToCheese is true
+		sigmaProp(outputGoesToCheese)
+	}
+}
+```
 
 ## Additional Resources
 

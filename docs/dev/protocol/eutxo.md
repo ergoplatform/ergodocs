@@ -3,24 +3,28 @@ tags:
   - UTXO
 ---
 
-# eUTXO 
+# Extending the Power of the UTXO Model
 
-- Ergo uses the so-called 'extended-UTXO' model (eUTXO), based on Bitcoin's original model, with much more power, adding support for more expressive smart contracts. 
-- This enables smart contracts to use UTXOs as data inputs without changing them. Therefore nodes are checking transactions rather than balances. In comparison, in Ethereum’s Account model, nodes check all accounts to validate the system.
-- UTXO allows for parallel computation, and it’s easier to compute atomic swaps in a non-custodial manner. 
-- Ergo's Multi-Stage UTXO model enables Turing-complete smart-contracts as demonstrated in [this peer-reviewed paper](https://fc18.ifca.ai/bitcoin/papers/bitcoin18-final18.pdf). 
+Ergo utilizes the extended-UTXO (eUTXO) model, based on Bitcoin's original UTXO model but with enhanced capabilities that enable more expressive smart contracts. This section explores the advantages and features of eUTXO.
 
+## eUTXO and Smart Contracts
 
-## UTXO
+In the eUTXO model, Ergo allows smart contracts to utilize UTXOs as data inputs without modifying them. This means that nodes primarily verify transactions rather than balances. In comparison, Ethereum's Account model requires nodes to check all accounts to validate the system.
 
-UTXO's was used as a base as it provides superior:
+By leveraging eUTXO, Ergo enables parallel computation and facilitates non-custodial atomic swaps. This makes it easier to perform complex operations securely and efficiently.
 
-- **Privacy**, as UTXOs are one-time objects making it possible to formalise privacy leaks.
-- **Scalability**, as parallel transaction processing is more straightforward in UTXO. UTXOs are also more friendly to known stateless client solutions.
-- **Interoperability**, as off-chain and sidechain protocols. One-time objects are more straightforward to work with from an off-chain point of view.
-- **Transaction Cost Predictability**, where the only on-chain action is validating the smart contracts. As a result, the transaction cost is significantly lower, and most importantly, the transaction cost is predictable, eliminating the need for ‘gas.’
+Furthermore, Ergo's Multi-Stage UTXO model, as detailed in a peer-reviewed paper, enables the implementation of Turing-complete smart contracts. You can find more information on this topic in [this paper](https://fc18.ifca.ai/bitcoin/papers/bitcoin18-final18.pdf).
 
+## Benefits of UTXO
 
+The choice to build upon UTXO brings several significant advantages to Ergo:
+
+- **Privacy**: UTXOs being one-time objects allow for formalized privacy measures, enhancing user confidentiality.
+- **Scalability**: UTXO's inherent design supports parallel transaction processing, making it simpler to scale the network. Additionally, UTXOs are more compatible with stateless client solutions.
+- **Interoperability**: UTXOs are well-suited for off-chain and sidechain protocols, enabling seamless integration with various solutions beyond the main chain.
+- **Transaction Cost Predictability**: In Ergo, the on-chain action is primarily focused on validating smart contracts, resulting in significantly lower transaction costs. Moreover, the transaction costs are predictable, eliminating the need for gas-like mechanisms found in other platforms.
+
+By leveraging the advantages of UTXO and extending its capabilities with eUTXO, Ergo provides a powerful and efficient platform for building and executing smart contracts.
 
 
 ## Resources

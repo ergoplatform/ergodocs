@@ -107,9 +107,9 @@ nav:
     - Key Features: 
       - dev/protocol/index.md
       - Protocol: dev/protocol/index.md
-      - eUTXO:
+      - eUTxO:
         - dev/protocol/eutxo.md
-        - eUTXO vs Account: dev/protocol/eutxo/accountveutxo.md
+        - UTxO vs Account: dev/protocol/eutxo/accountveutxo.md
         - Atomic Swaps: dev/protocol/eutxo/atomic.md
       - NIPoPoWs:
         - dev/protocol/nipopows.md
@@ -303,12 +303,13 @@ nav:
         - dev/data-model/box.md
         - Registers: dev/data-model/box/registers.md
         - Box Modelling: dev/data-model/box/box_modeling.md
-        - Tokens:
-          - dev/data-model/box/tokens.md
-          - Minting a token: dev/tokens/issue.md
-          - Creating a perpetual token: dev/tokens/perpetual.md
-          - Burning a token: dev/tokens/burn.md
-          - NFTs:
+        - Assets: 
+          - Tokens:
+            - dev/data-model/box/tokens.md
+            - Minting a token: dev/tokens/issue.md
+            - Creating a perpetual token: dev/tokens/perpetual.md
+            - Burning a token: dev/tokens/burn.md
+          - Non-Fungible Tokens:
             - NFTs: dev/tokens/nfts/index.md
             - Minting a NFT: 
               - dev/tokens/nfts/create.md
@@ -316,13 +317,17 @@ nav:
               - Simple Example: dev/tokens/nfts/nft-examples.md
               - On-chain NFTs: dev/tokens/nfts/on-chain.md
             - Royalties: dev/tokens/nfts/royalties.md
+          - Singletons: dev/tokens/singletons.md
           - Standards:
             - Asset Standard: dev/tokens/standards/eip4.md
             - Geniune Token Verification: dev/tokens/standards/eip21.md
             - Auction Contract: dev/tokens/standards/eip22.md
             - Artwork Contract: dev/tokens/standards/eip24.md
-      - Addresses: dev/wallet/address.md
-        ##- Address Encoding: assets/py/Ergo_Address_Encoding.ipynb
+      - Addresses: 
+        - dev/wallet/address.md
+        - Types: dev/wallet/address/address_types.md
+        - Validation: dev/wallet/address/address_validation.md
+        - Encoding: assets/py/Ergo_Address_Encoding.ipynb
       - Transactions: 
         - dev/protocol/transactions.md
         - Composing Transactions:

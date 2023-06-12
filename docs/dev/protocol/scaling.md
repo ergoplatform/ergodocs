@@ -5,33 +5,24 @@ tags:
   - Sigma Protocols
 ---
 
-# Scaling
+# Expanding Ergo's Blockchain Technology
 
-Based on a decade of [research](documents.md), extensive testing pre-launch and ongoing development, the Ergo community has launched a blockchain with all the tools to scale globally. 
+Building a scalable blockchain infrastructure is no small feat. Ergo, backed by a decade's worth of [research](documents.md), meticulous testing, and continuous development, has proven up to the challenge. This document will guide you through Ergo's advanced scalability features
 
-Scalability is a complex topic that covers many aspects, including:
-- The Cryptoeconomic incentive model – making sure miners are compensated for the various increased costs of a scaled blockchain - including state-related costs
-- The Consensus model and its impact on what solutions are possible (for example, Proof of Stake does not allow the use of NiPoPoWs)
-- The Accounting model for transactions and operations - Bitcoin  uses the UTXO Model versus the Account Model used in Ethereum
+Three primary factors are integral to blockchain scalability:
 
-When it comes to addressing scalability, Ergo’s solutions are innovative, diverse and complex. 
+- **Cryptoeconomic incentive model**: This framework ensures that miners are appropriately rewarded for the various costs that come with scaling a blockchain, which can include an increase in state-related costs.
+- **Consensus model**: Depending on the chosen model, certain scalability solutions may or may not be feasible. For instance, the Proof of Stake consensus model does not support Non-interactive Proofs of Proof-of-Work (NiPoPoWs).
+- **Accounting model**: This refers to how transactions and operations are managed within the blockchain. While Bitcoin employs the UTXO Model, Ethereum operates on the Account Model.
 
-In the Account model (Ethereum), both storage changes and validity checks are performed on-chain during code execution. In contrast, Ergo transactions are created off-chain and validation checks are performed on-chain, reducing the number of operations performed by every node on the network. In addition, due to the immutability of the transaction graph, various optimisation strategies are possible to improve the throughput of transactions per second in the network. Light-verifying nodes are also possible, thus further facilitating scalability and accessibility of the network.
+These aspects underpin Ergo's innovative approach to scalability, distinguishing it from other blockchain technologies. Unlike Ethereum's Account model which handles storage changes and validity checks on-chain during code execution, Ergo's [eUTXO](eutxo.md) adopts a different strategy: transactions are created off-chain and validation checks are performed on-chain. 
 
-These sections explore all past and potential scaling across each layer. If you're a developer the [Plasma Library](plasma.md) is available to use in your application.  
+This system minimizes the operational demand on each node in the network, thereby improving overall efficiency. With the transaction graph's immutability, we can further optimize this process to enhance the number of transactions processed per second. Moreover, the incorporation of light-verifying nodes augments both the scalability and accessibility of the network.
 
-- [Layer 0](layer0.md): The *Network* or *P2P* Layer
-- [Layer 1](layer1.md): The Blockchain
-- [Layer 2](layer2.md): Off-chain
+For a deeper understanding of Ergo's scalability, explore each layer's role in this process:
 
-## The next evolution of blockchain.
+- [Layer 0](layer0.md): The *Network* or *Peer-to-Peer* Layer
+- [Layer 1](layer1.md): The Core Blockchain Layer
+- [Layer 2](layer2.md): The Off-chain Layer
 
-There are three generations of blockchain technology, each capable of handling more complex behaviours than the last.
-
-- The first generation is the original use case of BTC, which was to maintain a public transaction ledger accurately and reliably.
-- Second-generation blockchains were created with the implementation of smart contracts as a priority, and Ethereum (ETH) is the most popular example. One significant difference with ETH is the language used to code smart contracts. It uses a Turing-complete language (Solidity), making it computationally universal.
-- The third generation of blockchain technology focuses on solving issues related to congestion and scalability. As the technology becomes more decentralised, there will be an exponential increase in the number of users interacting with the blockchain. Third-generation blockchains generally can process off-chain transactions, helping speed up transactions significantly. DOT, ADA, and ERG are third-generation blockchains with smart-contract capabilities while proposing solutions for scalability to a global audience.
-
-The account model Ethereum uses performs both storage changes and validity checks on-chain during code execution. In contrast, Ergo transactions are created off-chain, and only validation checks are performed on-chain, reducing the number of operations performed by every node on the network. In addition, due to the immutability of the transaction graph, various optimisation strategies can improve the throughput of transactions per second in the network. 
-
-
+Each layer works synergistically to bolster Ergo's scalability, making it a versatile and powerful choice for developers and users alike. This cooperative model allows Ergo to offer robust, scalable solutions ready to meet the demands of global expansion.

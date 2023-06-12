@@ -40,12 +40,12 @@ Ensuring economic freedom for ordinary people through decentralized, private and
   },
   {
     "title": "eUTXO",
-    "content": "Ergo uses a so-called *extended-UTXO model*, which implies UTXOs with the ability to contain *arbitrary data and sophisticated scripts*. ",
+    "content": "Ergo uses a so-called *extended-UTXO model*, which implies UTXOs with the ability to contain **arbitrary data and sophisticated scripts**. ",
     "url": "eutxo"
   },
   {
     "title": "NIPoPoWs",
-    "content": "Enable extended support of light nodes which makes Ergo friendly for end-users, allowing them to run contracts on common devices such as mobile phones without centralised intermediaries. ",
+    "content": "Enable extended support of **light nodes** which makes Ergo friendly for end-users, allowing them to run contracts on common devices such as mobile phones without centralised intermediaries. ",
     "url": "nipopows"
   },
   {

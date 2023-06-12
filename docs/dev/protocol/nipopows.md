@@ -3,36 +3,39 @@ tags:
   - NIPoPoWs
 ---
 
-# Exploring NIPoPoWs in the Ergo Blockchain
+# Non-interactive Proof-of-Proof-of-Work
 
-Ergo Blockchain leverages a robust feature known as **NIPoPoWs**, an acronym for Non-interactive Proof-of-Proof-of-Work. NIPoPoWs are concise, self-sufficient data structures that allow a computer program to verify an event's occurrence on a proof-of-work-based blockchain without the need to connect to the blockchain network or download all block headers. A real-world implementation of this feature can include verifying the occurrence of a cryptocurrency transaction.
+The Ergo Blockchain incorporates a powerful feature known as **NIPoPoWs**, or Non-interactive Proof-of-Proof-of-Work. Simply put, NIPoPoWs are compact data structures that validate the occurrence of events on a blockchain using proof-of-work, without needing to connect to the blockchain network or download all block headers. This feature can be used practically to confirm a cryptocurrency transaction.
 
-In the Bitcoin ecosystem, you'd commonly encounter a block header accompanied by the transactions. However, Ergo's [blocks](block.md) introduce **several additional sections**, opening avenues for new capabilities. For example, the 'extension' section contains mandatory fields (inclusive of NIPoPoWs links, refreshed every 1,024 block epochs) and parameters for miner voting like the present block size. It also has the capacity to hold arbitrary fields.
+Ergo's [blocks](block.md) go beyond the standard block header and transaction format you might encounter in systems like Bitcoin, offering **additional sections** for expanded functionality. The 'extension' section, for instance, holds mandatory fields (including NIPoPoWs links updated every 1,024 block epochs) and parameters for miner voting like the current block size. It's also designed to store arbitrary fields.
 
-**This distinctive structure allows various types of nodes and clients to selectively download the block sections they need, thereby optimizing storage, bandwidth, and CPU utilization.**
+**This unique structure enables various types of nodes and clients to selectively download only the necessary block sections, optimizing storage space, bandwidth, and CPU usage.**
 
 ## Applications
 
-Each of the following application pages presents a unique use case for NIPoPoWs within the Ergo ecosystem:
+Here are some innovative applications of NIPoPoWs within the Ergo ecosystem:
 
 - [Light Clients](nipopow_nodes.md)
 - [Light Miners](logspace.md)
 - [Sidechains](nipopow-sidechains.md)
 
-**NIPoPoWs have been a fundamental part of the Ergo Blockchain since its foundation. Yet, we're continuously exploring the full spectrum of their potential. We're devoted to broadening this research field, in collaboration with our partners at [IOHK](https://iohk.io/), and eagerly anticipate an increased application of NIPoPoWs with ongoing contributions from the developer community.**
+**NIPoPoWs have been a fundamental part of the Ergo Blockchain since its inception. We're committed to continuously exploring the potential of NIPoPoWs, expanding this research area in collaboration with our partners at [IOHK](https://iohk.io/). We look forward to seeing an increased use of NIPoPoWs with ongoing contributions from our vibrant developer community.**
 
-## For Further Exploration
+## Logarithmic Space Mining
+
+One notable application of NIPoPoWs is [logarithmic space mining](https://www.youtube.com/watch?v=s05ypkSC7gk). This technology enables "light miners" to start with block headers like light clients, without the need to download the entire blockchain. In fact, you can keep only a select few important blocks to validate the whole blockchain, removing the need for miners to store the complete set of blockchains. This approach can be integrated with Ergo through velvet (soft) forks, avoiding the complexities of hard forks.
+
+## Enhancing Decentralization
+
+Another exciting application of NIPoPoWs was proposed by a team named SmartPools during the inaugural [ErgoHack](ergohack.md). Their method aims to improve the **Nakamoto Coefficient**, a measure used to estimate a network's decentralization. The team seeks to boost Ergo's decentralization by empowering mining entities with collateralized smart contracts, intending to provide returns for non-miner investors and prevent large GPU farms from dominating the system.
+
+## Implementing Second-layer Blockchains
+
+Perhaps, the most significant application of NIPoPoWs is in developing second-layer blockchains. These secondary layers interact with various blockchains to improve scalability and create private sidechains for enterprise-grade applications. They generate blockchains on top of the primary one for diversified use cases. As transactions on these secondary layers do not require constant synchronous updates, we can significantly reduce network load by maintaining everything on the main chain at all times.
+
+## Additional Resources
+
+For those wishing to delve deeper into NIPoPoWs:
 
 - [Non-Interactive Proofs of Proof-of-Work](https://eprint.iacr.org/2017/963.pdf)
 - [Compact Storage of Superblocks for NIPoPoW Applications](https://eprint.iacr.org/2019/1444.pdf)
-
-
-<!--TODO: Reorg 
-
-One of the remarkable applications of NIPoPoWs, as discussed in an earlier article, is [logarithmic space mining](https://www.youtube.com/watch?v=s05ypkSC7gk). This mechanism facilitates "light miners" who can initialize with block headers like light clients, without needing to download the entire blockchain. What's more, you can store only a handful of crucial blocks to validate the entire blockchain, thereby eliminating the need for miners to store all blockchains. Integrating logarithmic space mining with Ergo is feasible through velvet (soft) forks, averting the complications of hard forks.
-
-Another exciting application of NIPoPoWs came from a team called SmartPools during the inaugural [ErgoHack](ergohack.md). They proposed a method to enhance the **Nakamoto Coefficient** — a measure used to estimate a network's decentralization. The team's goal is to boost Ergo's decentralization by bootstrapping mining entities with collateralized smart contracts. The intent is to yield returns for non-miner investors and prevent large GPU farms from dominating the system.
-
-Perhaps, the most notable use of NIPoPoWs lies in implementing second-layer blockchains. These secondary layers interact with various blockchains, augment scalability, and develop private sidechains for enterprise-grade applications. They generate blockchains on top of the primary one for diversified use cases. Since transactions on these secondary layers do not necessitate constant synchronous updates, we can substantially reduce network load by maintaining everything on the main chain at all times.
--->
-

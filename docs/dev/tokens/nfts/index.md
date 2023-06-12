@@ -1,5 +1,4 @@
-## Introduction
-
+# Non-Fungible Tokens on Ergo
 NFTs *(Non-Fungible Tokens)* are unique and indivisible blockchain tokens. They can be used to represent and prove ownership of digital products such as works of art, in-game items or characters, virtual trading cards and much, much more. Because an NFT can be used to represent ultimate ownership, they allow users to trade digital items and cryptographically guarantee provenance.
 
 - [How do I mint a NFT?](create.md)
