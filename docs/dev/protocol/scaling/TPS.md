@@ -1,18 +1,19 @@
+# Evaluating Transaction Speed
 
-# Transaction Speed
+Transaction speed, commonly referred to as TPS (Transactions Per Second), is a key performance indicator for blockchains. This metric quantifies the rate at which a blockchain can process transactions, measured in transactions per block/second. 
 
-Transaction speed, specifically TPS, measures the transactions per block/second a blockchain can perform, quantifying how quickly a blockchain can complete transactions.  
+Here are the estimated TPS values for a few well-known blockchains:
 
-Below are approximated TPS values for some popular blockchains:
+* Bitcoin (BTC) - Approximately 7 TPS (Gobbel, 2017).
+* Ethereum (ETH) - Approximately 15 TPS (Clincy et al., 2019)
+* Ripple (XRP) - Approximately 1500 TPS (Clincy et al., 2019)
+* Cardano (ADA) - Approximately 7 TPS (Around 250 in controlled tests) (Stamoulis, 2021).
+* Polkadot (DOT) - Approximately 1500 TPS (Hiemstra et al., 2021)
 
-* BTC - ~7 TPS (Gobbel, 2017).
-* ETH - ~15 TPS (Clincy et al (table1), 2019)
-* XRP - ~ 1500 TPS (Clincy et al (table1), 2019)
-* ADA - ~ ~7 TPS (~250 in controlled tests) (Stamoulis, 2021).
-* DOT - ~1500 TPS (Hiemstra et al., 2021)
+However, the standard TPS metric provides only a partial view of Ergo's capabilities. It's not just the quantity of transactions that counts; the transaction weight and the computational cost limit per block also play critical roles. These factors are influenced by various dynamic elements, including the network's size and the hardware resources of miners.
 
-In the context of Ergo, the TPS (transactions per second) metric is not very insightful. While the number of transactions a platform can handle is important, on Ergo, the weight of the transactions and the computational cost limit per block are more crucial factors. The cost limit of transactions is affected by various dynamic factors, including the network size and the hardware miners have. 
+With [Node v5](jitc.md) already live, Ergo's raw TPS stands at approximately **47.5 transactions/second**, and there's potential for further optimization. For a comprehensive technical understanding of how this figure is calculated, refer to [this report](https://github.com/ergoplatform/ergo/blob/d3d95e19b37c83b98de13bdf71d6d62b398e8f0d/metrics/Report.ipynb).
 
-With the release of [Node v5](jitc.md), the raw TPS numbers should bring us to around **47.5tx/s** - improvements on top of this are still possible. See [this report](https://github.com/ergoplatform/ergo/blob/d3d95e19b37c83b98de13bdf71d6d62b398e8f0d/metrics/Report.ipynb) for technical information on how this is calculated. 
+Ergo's transaction management system incorporates the Extended Unspent Transaction Output (eUTXO) model, which surpasses the traditional UTXO model in terms of efficiency and versatility. This model supports multiple outputs in a transaction, each possibly carrying different tokens. Further, Ergo can accommodate complex DeFi transactions, fostering a wide array of DeFi applications within the network. By processing multiple token types per transaction output and enabling the concurrent execution of complex transactions within a block, Ergo effectively enhances its blockchain's performance and scalability.
 
-To scale, Ergo must focus on raising the TPS without compromising classic blockchain assumptions and guarantees. 
+In scaling Ergo, the goal must be to boost TPS while maintaining the core assumptions and guarantees typically associated with blockchain technology.

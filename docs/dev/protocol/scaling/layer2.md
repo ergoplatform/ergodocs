@@ -1,80 +1,70 @@
-# Layer 2 (Off-Chain)
+# Unraveling Layer 2 Solutions (Off-Chain)
 
-Layer 2 refers to the secondary protocol or system built on top of a [Layer 1](layer1.md) blockchain protocol. 
+Layer 2 refers to a supplementary protocol or framework constructed over a [Layer 1](layer1.md) blockchain protocol. The primary objective of Layer 2 solutions is to augment the underlying blockchain's efficiency, scalability, and capabilities by enabling *off-chain* transactions or computations.
 
-Layer 2 solutions aim to enhance the underlying blockchain's functionality, scalability, and efficiency by enabling *off-chain* transactions or computations.
+Ergo displays a broad range of compatibility with various Layer 2 solutions derived from other UTXO blockchains, including the likes of Bitcoin's Lightning Network. Additionally, Ergo can employ numerous off-chain solutions, such as [Hydra](https://iohk.io/en/research/library/papers/hydrafast-isomorphic-state-channels/) and sidechains. These tools aid in reducing blockchain congestion while providing similar benefits to ZK-rollups.
 
-Ergo is compatible with many Layer 2 solutions from other UTXO blockchains, such as Bitcoin's Lightning Network, and can utilise multiple off-chain solutions, such as [Hydra](https://iohk.io/en/research/library/papers/hydrafast-isomorphic-state-channels/) and sidechains, to compress blockchain bloat and provide similar benefits as ZK-rollups. 
+The incorporation of specific Layer 2 solutions into Ergo is driven by the demands of the applications under construction.
 
-The specific Layer 2 solutions that are implemented on Ergo will depend on the needs of the applications being built.
+> Participate in the Layer 2 conversation on [Telegram](https://t.me/ErgoLayer2) or [Discord]().
 
-> Join the Layer 2 chat on [Telegram](https://t.me/ErgoLayer2) or [Discord]()
+## The Power of ErgoScript
 
-## ErgoScript
+The flexible design of [ErgoScript](ergoscript.md) enables large parts of transactions to be executed on Layer 2, which are then settled on the Ergo blockchain in a single transaction. For instance, a developer effectively utilized the eUTXO model to airdrop native tokens to [10,000 addresses simultaneously](https://explorer.ergoplatform.com/en/transactions/e2c4954665ccf87791f42983ae4f7031205c2e719709907cbf2ff09e5489d4b8). 
 
-The [ErgoScript](ergoscript.md) programming model is highly flexible, allowing for large portions of transactions to occur on Layer 2 and then be settled on the Ergo blockchain using a single transaction. For example, here you can see a developer harnessing the power of eUTXO to airdrop native tokens to [10,000 addresses at once](https://explorer.ergoplatform.com/en/transactions/e2c4954665ccf87791f42983ae4f7031205c2e719709907cbf2ff09e5489d4b8). 
+ErgoScript boasts several advancements like time-weighted data, Turing completeness, read-only data inputs, multi-stage contracts, sigma protocols, NIPoPoWs, and more. These enhancements pave the way for a myriad of protocols on Layer 2, each addressing scalability issues in their own unique way.
 
-ErgoScript includes several improvements, such as time-weighted data, Turing completeness, read-only data inputs, multi-stage contracts, sigma protocols, NIPoPoWs, and more. These improvements enable many different protocols on Layer 2, each solving scalability problems in a specific domain.
+> **As such, Ergo can be viewed as a shared *settlement layer* for multiple Level-2 protocols and applications.**
 
-> **Therefor, Ergo can be considered a common *settlement layer* for many Level-2 protocols and applications.**
+## Embracing Plasma
 
+Ergo inherently supports [AVL trees](avl.md), an effective authenticated data structure that allows for proving different properties of the data without accessing the entire dataset.
 
-## Plasma
+The ledger is maintained as an AVL tree using **[Plasma](plasma.md)**. Users carry out off-chain transactions with the bank, leading to changes in the ledger. Periodically, the bank publishes a compact snapshot of the ledger on the blockchain.
 
-Ergo has native support for [AVL trees](avl.md), an efficient authenticated data structure that allows for proving the data's various properties without knowing the entire set.
+The [Plasma Library](plasma.md) can be utilized to construct *Plasma chains*, leading to a comprehensive L2 solution. Currently, it's primarily used for data compression and simplifying contracts, though the development of Plasma chains is a promising future prospect.
 
-The ledger is stored as an AVL tree using **[Plasma](plasma.md)**. Users perform off-chain transactions with the bank, and the ledger keeps changing. Occasionally, the bank publishes a compact snapshot of the ledger on the blockchain.
+## Harnessing NIPoPoWs
 
-You can use the [Plasma Library](plasma.md) to create *Plasma chains* and make a full L2 solution. Right now, it is mostly used for data compression and simplifying contracts, though Plasma chains are possible in future.
+[NiPoPoWs](nipopows.md) hold the potential for scalability by facilitating the interoperability of diverse blockchain networks. This capability can ease the load on individual chains by distributing it across multiple networks.
 
-## NIPoPoWs
+One practical application could involve smaller, less secure blockchains leveraging the security of larger, more established chains. For instance, a minor blockchain could periodically submit proofs of work to a larger chain, anchoring their blockchain to the larger network. This approach would not only boost the security of the smaller chain but also enable the transfer of assets between chains without a centralized intermediary.
 
-[NiPoPoWs](nipopows.md) can potentially be used for scaling by enabling the interoperability of different blockchain networks, which can help reduce the burden on individual chains and distribute the load across multiple networks.
+NiPoPoWs could further improve the scalability of Layer 2 solutions like sidechains or state channels. By enabling these solutions to communicate more securely and efficiently, NiPoPoWs could decrease the load on the main blockchain network and enhance transaction throughput.
 
-One way this could work is by allowing smaller, less-secure blockchains to leverage the security of larger, more-established chains. For example, a smaller blockchain could periodically submit proofs of work to a larger chain to anchor their own blockchain to the larger network. This would provide the smaller chain with additional security, as well as the ability to transfer assets between chains without the need for a centralized intermediary.
+## Exploring Other Possibilities
 
-NiPoPoWs could also potentially be used to improve the scalability of layer 2 solutions, such as sidechains or state channels. By enabling these solutions to communicate with each other more efficiently and securely, NiPoPoW could help reduce the load on the main blockchain network and improve transaction throughput.
-
-
-
-## Other Possibilities
+Several promising Layer 2 solutions are on the horizon:
 
 ### **Lightning Network** 
 
-In a lightning channel, two participants send their funds to a specific type of joint multi-sig wallet that allows them to create and enforce off-chain agreements. The network itself is just a bunch of these channels connected. You can then structure an off-chain payment across many channels, where none of the funds leaves any individual channel but shuffles around like an abacus.
+The Lightning Network operates through a system where two participants pool their funds into a particular type of joint multi-sig wallet. This wallet enables them to create and enforce off-chain agreements. The network itself consists of these interconnected channels, allowing off-chain payments to be structured across multiple channels, akin to an abacus.
 
 ### **Rainbow Network** 
 
-The Rainbow Network is an off-chain non-custodial exchange and payment network supporting any assets for which two parties can agree on a price oracle. The Rainbow Network allows users to trade, borrow, lend, and make payments in synthetic assets entirely off-chain while having only one on-chain payment channel collateralised by a single asset.
-
-As described in [this paper](http://research.paradigm.xyz/RainbowNetwork.pdf)
+The Rainbow Network, an off-chain non-custodial exchange and payment network, supports any assets where two parties can agree on a price oracle. The Rainbow Network empowers users to trade, borrow, lend, and make payments in synthetic assets entirely off-chain, despite only having one on-chain payment channel collateralized by a single asset. More details can be found in [this paper](http://research.paradigm.xyz/RainbowNetwork.pdf).
 
 ### **Rollups**
 
-Rollups are also possible via AVL trees. A roll-up involves rolling up collections of transactions, and the only concern is posting the data on-chain, not verification. 
+Rollups are feasible via AVL trees. A roll-up involves bundling up groups of transactions, with the primary concern being data posting on-chain, not verification. 
 
-There are two main types of *Rollups* used for scaling. 
+There are two main types of *Rollups* employed for scaling. 
 
-- **Optimistic Rollups** compute the transactions on a parallel compatible chain that communicates with the main chain. The model is optimistic because it relies on the *Fraud-Proof principle*, where aggregators do not actively verify layer two. Still, they interfere in the event of a fraud dispute. Disputes in optimistic rollups when computations are done only on data whose validity is disputed
-    - See this [ergoforum](https://www.ergoforum.org/t/optimistic-rollups-and-fraud-proofs-in-ergo/3819) post for more information.
-- **ZK-Rollups** utilise [zkSNARKs](https://blog.ethereum.org/2016/12/05/zksnarks-in-a-nutshell/) (zero-knowledge succinct non-interactive arguments of knowledge), they can decrease network load by taking hundreds of transfers off-chain and combining or "rolling" them up into a single transaction. The security of the transactions relies directly on the main chain secured by adding mathematical proofs to validate transactions. However, it is relatively harder than hybrid approaches to implement all the functionalities of the mainnet with full security. Various projects are attempting to implement zkSNARKs.
-    - Zk rollups have many issues in practice, and pairing compatible curves support in the core protocol is likely required.
+- **Optimistic Rollups** handle transactions on a parallel chain compatible with the main chain. This model is optimistic because it relies on the *Fraud-Proof principle*, where aggregators do not actively verify Layer 2, but intervene in case of fraud disputes. More information can be found in this [ergoforum](https://www.ergoforum.org/t/optimistic-rollups-and-fraud-proofs-in-ergo/3819) post.
+- **ZK-Rollups** leverage [zkSNARKs](https://blog.ethereum.org/2016/12/05/zksnarks-in-a-nutshell/) (zero-knowledge succinct non-interactive arguments of knowledge) to decrease network load by bundling hundreds of transfers off-chain into a single transaction. Although their implementation is more challenging than hybrid approaches, numerous projects are making attempts in this direction.
 
+### **Hydra**
 
-### Hydra
-
-**State Channels (Hydra)** is a *peer-to-peer signing model*, and the design can work well for payment channels for simple purposes. The problem, however, is that the state channels are pre-set contracts for which the participants are defined at the launch. New contract creation is needed each time a new participant wants to use the channel. In return, there is higher privacy and security but little flexibility for an open system. IOHK has published a new model called [Hydra: Isomorphic State Channels](https://iohk.io/en/research/library/papers/hydrafast-isomorphic-state-channels/) that introduces multi-party state channels by utilising both on-chain and off-chain-computations-powered-by-the-eUTXO-design. Other novel state channel constructions should be possible as well. It would be good to apply off-chain techniques to applications like ErgoMixer. 
-
-
+**State Channels (Hydra)** is a *peer-to-peer signing model* that works well for payment channels for simple applications. A potential limitation, however, is that state channels predefine the participants at launch, which necessitates a new contract each time a new participant wishes to use the channel. Despite offering high privacy and security, it has limited flexibility for an open system. IOHK introduced [Hydra: Isomorphic State Channels](https://iohk.io/en/research/library/papers/hydrafast-isomorphic-state-channels/) that uses both on-chain and off-chain computations, powered by the eUTXO design, to facilitate multi-party state channels. Other novel state channel constructions are also possible and could find applications in tools like ErgoMixer.
 
 ### **Zero-Knowledge Contingent Payments** 
 
-It is possible to make payments that are released if and only if the payee discloses some knowledge (in a trustless manner where neither the payer nor payee can cheat). Achieved using a combination of a `hash-locked transaction` and an external protocol to ensure the correct data is revealed in the hash lock release.
+Payments can be designed such that they are released only if the payee discloses some knowledge in a trustless manner where neither the payer nor payee can cheat. This is achieved using a combination of a `hash-locked transaction` and an external protocol to ensure the correct data is revealed in the hash lock release.
 
 ### **FairSwap/FastSwap protocols** 
 
-As described in [this paper](https://eprint.iacr.org/2019/1296)
+These protocols are detailed in [this paper](https://eprint.iacr.org/2019/1296).
 
 ### **Coinpools** 
 
-Another L2 solution for the UTXO model to consider is described in [this paper](https://discrete-blog.github.io/coinpool/)
+Another potential Layer 2 solution for the UTXO model is described in [this paper](https://discrete-blog.github.io/coinpool/).

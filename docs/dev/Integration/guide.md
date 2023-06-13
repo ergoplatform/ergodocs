@@ -44,7 +44,6 @@ Available libraries include:
 * [*ergo-appkit*](https://github.com/ergoplatform/ergo-appkit): A complete Java SDK.
 * [*ergo-wallet*](https://mvnrepository.com/artifact/org.ergoplatform/ergo-wallet): Developed in Java, the source code is available at the [Ergo node repository](https://github.com/ergoplatform/ergo/tree/master/ergo-wallet).
 * [*sigma-rust*](https://github.com/ergoplatform/sigma-rust/): A Rust library with WASM bindings for JavaScript/TypeScript.
-* [*ergo-ts*](https://github.com/coinbarn/ergo-ts): Developed in TypeScript.
 * [*ergo-golang*](https://github.com/azhiganov/ergo-golang): This is a Go library, still in early development stages.
 
 

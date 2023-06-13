@@ -23,11 +23,6 @@ The combination of Fleet and Sigma.JS provide a similar level of functionality t
     "url": ""
   },
   {
-    "title": "🔗 ergo-ts",
-    "content": "with support of tokens and complex transactions",
-    "url": "https://github.com/coinbarn/ergo-ts"
-  },
-  {
     "title": "AppKit",
     "content": "can be configured to run JavaScript under GraalVM",
     "url": "../../stack/appkit"
