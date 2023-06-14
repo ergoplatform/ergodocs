@@ -3,62 +3,54 @@ tags:
   - ErgoScript
 ---
 
-# ErgoTree
+# ErgoTree: The Core of Ergo's Infrastructure
 
-Most of Ergo users won't use ErgoTree directly since they are developing contracts in higher-level language, such as ErgoScript, which is then compiled to ErgoTree. 
-
-
+ErgoTree is a fundamental part of Ergo's infrastructure, serving as the backbone of its contract development process. However, most users interact with ErgoTree indirectly. They typically develop contracts using a higher-level language, such as ErgoScript, which is then compiled into ErgoTree.
 
 **Key Concepts**
 
-- [ErgoTree](https://ergoplatform.org/docs/ErgoTree.pdf) is used to define logical propositions protecting boxes (generalization of coins) in Ergo. 
-- Serialized ErgoTree expressions are written into UTXO boxes and then evaluated by the transaction verifier. 
-- The reference implementation of ErgoTree uses Scala, however alternative implementations can use other languages
-- The propositions are stored in the blockchain according to ErgoTree serialization format, which is designed for compact storage and fast script execution and transaction validation.
-- However, the ErgoTree binary format intentionally doesn't include metadata, which may be necessary for various Ergo applications.
+- [ErgoTree](https://ergoplatform.org/docs/ErgoTree.pdf) is a tool used to define logical propositions that safeguard boxes (an abstraction of coins) in Ergo.
+- Serialized ErgoTree expressions are inscribed into UTXO boxes and subsequently evaluated by the transaction verifier.
+- While the reference implementation of ErgoTree is in Scala, alternative implementations can utilize other languages.
+- The propositions are stored in the blockchain following the ErgoTree serialization format, which is optimized for compact storage, swift script execution, and efficient transaction validation.
+- However, the ErgoTree binary format intentionally excludes metadata, which might be necessary for various Ergo applications.
 
-## Rational
+## Rationale
 
-**Massive script validation**
+**Efficient Script Validation**
 
-Consider a transaction that has an `INPUTS` collection of boxes to spend. 
+Consider a transaction that has an `INPUTS` collection of boxes to spend. Each input box can have a script (referred to as the `propositionBytes` property) that protects it. This script needs to be executed within the context of the current transaction. For a simple transaction with a single input box, we need to validate 1000 scripts per second at a minimum to maintain a steady block validation of `1000` transactions per second.
 
-- Every input box can have a script protecting it (`propostionBytes` property). 
-- This script should be executed in the context of the current transaction. 
-- The simplest transaction has a `1` input box. 
-- Thus if we want to have a sustained block validation of `1000` transactions per second, we need to be able to validate 1000 scripts per second at minimum. 
+Additionally, to increase the probability of successful mining, the block validation time should be minimized, allowing a miner to start solving the PoW puzzle as soon as possible. For every script (of an input box), the following steps are performed to validate it:
 
+1. A Context object is created with `SELF = box`.
+2. ErgoTree is traversed to build a cost graph for cost estimation.
+3. The cost estimation is computed by evaluating the cost graph with the current context.
+4. If the cost is within the limit, the ErgoTree is evaluated using the context to obtain a sigma proposition (see `SigmaProp`).
+5. The sigma protocol verification procedure is executed.
 
-Additionally, the block validation time should be as small as possible so that a miner can start solving the PoW puzzle as soon as possible to increase the probability of successful mining. For every script (of an input box), the following is done in order to validate it (and should be executed as fast as possible):
+## Potential Script Processing Optimization
 
-1. A Context object is created with `SELF = box`
-2. ErgoTree is traversed to build a cost graph - the graph for the cost estimation
-3. Cost estimation is computed by evaluating the cost graph with the current context
-4. If the cost is within the limit, the ErgoTree is evaluated using the context to obtain sigma
-proposition (see `SigmaProp`)
-5. Sigma protocol verification procedure is executed
+Before an ErgoScript contract can be stored in a blockchain, it must be compiled from its source code into ErgoTree and then serialized into a byte array. Due to ErgoTree's purely functional graph-based IR, the compiler can perform various optimizations to reduce the size of the tree. This results in normalization/unification, where different original scripts may compile into identical ErgoTrees and, consequently, identical serialized bytes. In many cases, two boxes will have the same ErgoTree, with only the substitution of constants. For example, all pay-to-public-key scripts have the same ErgoTree template, with only the public key (a constant of GroupElement type) replaced.
 
-## The Potential Script Processing Optimization
+Due to normalization and script template reusability, the number of different script templates is much less than the number of actual ErgoTrees in the UTXO boxes. For example, we may have 1000s of different script templates in a blockchain with millions of UTXO boxes.
 
+The average reusability ratio is 1000 in this case. And even those 1000 different scripts may have different usage frequencies. Having a high reusability ratio, we can optimize script evaluation by performing step 2 from section D.2.1 only once per unique script.
 
-Before an ErgoScript contract can be stored in a blockchain, it should be first compiled from its source code into ErgoTree and then serialized into a byte array. Because the ErgoTree is purely functional graph-based IR, the compiler may perform various optimizations for reducing the size of the tree. This will have an effect of normalization/unification, in which different original scripts may be compiled into the identical ErgoTrees and, as a result, the identical serialized bytes. In many cases, two boxes will have the same ErgoTree up to a substitution of constants. For example, all pay-to-public-key scripts have the same ErgoTree template in which only the public key (constant of GroupElement type) is replaced.
+The compiled cost graph can be cached in Map[Array[Byte], Context => Int]. Every ErgoTree template extracted from an input box can be used as the key in this map to obtain the
 
+graph which is ready to execute.
 
-Because of normalization and also because of script template reusability, the number of different scripts templates is much less than the number of actual ErgoTrees in the UTXO boxes. For example, we may have 1000s of different script templates in a blockchain with millions of UTXO boxes.
+However, there is an obstacle to the optimization by caching, i.e., the constants embedded in contracts. In many cases, it is natural to embed constants in the ErgoTree body, with the most notable scenario being when public keys are embedded. As a result, two functionally identical scripts are serialized to different byte arrays because they have different embedded constants.
 
-
-The average reusability ratio is 1000 in this case. And even those 1000 different scripts may have different usage frequencies. Having a big reusability ratio, we can optimize script evaluation by performing step 2 from section D.2.1 only once per unique script.
-
-The compiled cost graph can be cached in Map[Array[Byte], Context => Int]. Every ErgoTree template extracted from an input box can be used as the key in this map to obtain the graph which is ready to execute.
-
-However, there is an obstacle to the optimization by caching, i.e. the constants embedded in contracts. In many cases, it is natural to embed constants in the ErgoTree body, with the most notable scenario being when public keys are embedded. As a result, two functionally identical scripts are serialized to the different byte arrays because they have different embedded constants. D.2.3 Templatized ErgoTree
+### Templatized ErgoTree
 
 A solution to the problem with embedded constants is simple; we don’t need to embed constants. Each constant in the body of ErgoTree can be replaced with an indexed placeholder node (see 63 ConstantPlaceholder). Each placeholder has an index of the constant in the constants collection of ErgoTree. The transformation is part of the compilation and is performed ahead of time. Each ErgoTree has an array of all the constants extracted from its body. Each placeholder refers to the constant by the constant’s index in the array. The index of the placeholder can be assigned by breadth-first topological order of the graph traversal during the compilation of ErgoScript into ErgoTree. Whatever method is used, a placeholder should always refer to an existing constant.
 
-Thus the format of serialized ErgoTree is shown in Figure 11, which contains:
+Thus the format of serialized ErgoTree contains:
 
-1. The bytes of a collection with segregated constants
-2. The bytes of script expression with placeholders
+1. The bytes of a collection with segregated constants.
+2. The bytes of script expression with placeholders.
 
 The collection of constants contains the serialized constant data (using ConstantSerializer) one after another. The script expression is a serialized Value with placeholders. Using such script format, we can use the script expression bytes as a key in the cache. The observation is that after the constants are segregated, what remains is the template. Thus, instead of applying steps 1-2 from section D.2.1 to constant-full scripts, we can apply them to constant-less templates. Before applying steps 3 - 5, we need to bind placeholders with actual values taken from the constants collection and then evaluate both the cost graph and ErgoTree.
 
@@ -66,12 +58,11 @@ The collection of constants contains the serialized constant data (using Constan
 
 ## Resources
 
-
-- There is an ErgoTree serialization section [available](https://ergoplatform.org/docs/ErgoTree.pdf)
-- [Constant-less lambdas](https://github.com/ScorexFoundation/sigmastate-interpreter/issues/264)
-- [ErgoTree as an Authentication Language](https://www.ergoforum.org/t/ergotree-as-an-authentication-language/)
-- [Human representation for ergo tree #812](https://github.com/ScorexFoundation/sigmastate-interpreter/pull/812)
+- There is an ErgoTree serialization section [available](https://ergoplatform.org/docs/ErgoTree.pdf).
+- [Constant-less lambdas](https://github.com/ScorexFoundation/sigmastate-interpreter/issues/264).
+- [ErgoTree as an Authentication Language](https://www.ergoforum.org/t/ergotree-as-an-authentication-language/).
+- [Human representation for ergo tree #812](https://github.com/ScorexFoundation/sigmastate-interpreter/pull/812).
 
 ### [ergotree-pseudo-code](https://github.com/ross-weir/ergo-script-re/tree/main/ergotree-pseudo-code)
 
-Pseudo code generator for compiled ergo trees. Attempts to create pseudo code roughly representing the ergo script that produced the tree. In some cases it can produce a script that is the equivilent (pseudo code compiles to the same ergo tree) but this is on a best effort basis.
+This is a pseudo code generator for compiled ergo trees. It attempts to create pseudo code that roughly represents the ergo script that produced the tree. In some cases, it can produce a script that is equivalent (pseudo code compiles to the same ergo tree), but this is on a best effort basis.

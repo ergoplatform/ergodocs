@@ -406,15 +406,15 @@ nav:
           - node/modes.md
           - Full Node: 
             - node/modes/full-node.md
-            - Light Full Node: node/modes/light-full-node.md
-            - Pruned Full Node: node/modes/pruned-full-node.md
           - Light Modes: 
+            - node/modes/light-full-node.md
             - Digest State: node/digest-state.md
             - History Pruning: node/history-pruning.md
-            - Snapshots: node/snapshots.md
-          - Light SPV: 
-            - node/modes/light-spv-node.md
-            - SPV: node/modes/spv.md
+            - Pruned Full Node: node/modes/pruned-full-node.md
+          - SPV: 
+            - node/modes/spv.md
+            - Light SPV: node/modes/light-spv-node.md
+  
         - Protocol: 
           - node/protocol.md
           - P2P:
