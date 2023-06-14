@@ -38,13 +38,13 @@ $$
 
 # Serialization
 
-This section defines a binary format used to store ErgoTree contracts in persistent stores, transfer them over the wire, and enable cross-platform interoperation.
+This page defines a binary format used to store ErgoTree contracts in persistent stores, transfer them over the wire, and enable cross-platform interoperation.
 
 The terms of the [language](ergotree-lang.md) can be serialized to an array of bytes to be stored in the Ergo blockchain (e.g., **Box.propositionBytes**).
 
-When the guarding script of an input box of a transaction is validated, the **propositionBytes** array is deserialized to an **ErgoTree** **IR** (represented by the **ErgoTree** class), which can be [evaluated](evaluation.md).
+When the guarding script of an input box of a transaction is validated, the **propositionBytes** array is deserialized to an **ErgoTree IR** (represented by the **ErgoTree** class), which can be [evaluated](evaluation.md).
 
-Here we specify the serialization procedure in general. The serialization format of ErgoTree types (**SType** class) and nodes (**Value** class) is correspondingly specified in [section 5.1] and [Appendix C].
+The serialization procedure is specified in general terms. The serialization format of ErgoTree types (specified in the **SType** class) and nodes (specified in the **Value** class) is correspondingly defined in [section 5.1](#serialization-limits) and [Appendix C](#serialization-formats).
 
 Table 1 shows size limits checked during contract deserialization, which is important to resist malicious script attacks.
 
@@ -112,8 +112,10 @@ $v : T$ | Same as $v \in \Denot{T}$
 $\lst{match}$ $(t, v)$ | Pattern match on pair $(t, v)$ where $t, v$ - values 
 $\lst{with}$ $(Unit, v \in \Denot{Unit})$ | Pattern case 
 $\lst{for}$ i=1 $\lst{to}$ len \ $~\lst{serialize(}$v_i$\lst{)}$ \\ $\lst{end for}$ | Call the given $\lst{serialize}$ function repeatedly.The outputs bytes of all invocations are concatenated and become the output of the $\lst{for}$ statement.
-$$\lst{if}~$condition$~\lst{then}$$ | Serialize one of the branches depending of the *condition*. The output bytes of the executed branch becomes the output of the $\lst{if}$ statement.
-$~~\lst{serialize1(}$v_1$\lst{)}$ |  $\lst{else} | ~~\lst{serialize2(}$v_2$\lst{)} | \lst{end if} | 
+$$\lst{if}~$condition$~$\lst{then}$ | Serialize one of the branches depending of the *condition*. The output bytes of the executed branch becomes the output of the $\lst{if}$ statement.
+$\lst{serialize1(}$v_1$\lst{)} |  \lst{else} | ~~\lst{serialize2(}$v_2$\lst{)} | \lst{end if}$$ | 
+
+<!--TODO: broken lst-->
 
 In the next section, we describe how types (**Int**, **Coll[Byte]**, etc.) are serialized; then, we define the serialization of typed data. 
 
@@ -356,94 +358,84 @@ Each primitive type has an id in a range {1,...,11} as the following.
 11    |   reserved   
 
 
-For each type constructor like $\lst{Coll}$ or $\lst{Option}$ we use the encoding
-schema defined below. Type constructor has associated $**{base code}$ (e.g.
-12 for $\lst{Coll[_]}$, 24 for $\lst{Coll[Coll[_]]}$ etc. ), which is multiple of
-12.
-Base code can be added to primitive type id to produce code of constructed
-type; for example, 12 + 1 = 13 is a code of \lst{Coll[Byte]}. The code of the type constructor (12 in this example) is used when the type parameter is a non-primitive type (e.g. \lst{Coll[(Byte, Int)]}). In this case, the code of type
-constructor is read first, and then recursive descent is performed to read
-bytes of the parameter type (in this case \lst{(Byte, Int)}) This encoding
-allows very simple and quick decoding by using div and mod operations.
+For each type constructor like `Coll` or `Option`, we follow the encoding schema defined below. Each type constructor has an associated **base code** (e.g., 12 for `Coll[_]`, 24 for `Coll[Coll[_]]`, etc.), which is a multiple of 12.
+
+To obtain the code of a constructed type, the base code is added to the primitive type ID. For example, 12 + 1 = 13 represents the code for `Coll[Byte]`. The code of the type constructor (12 in this example) is used when the type parameter is a non-primitive type, such as `Coll[(Byte, Int)]`. In this case, the code of the type constructor is read first, followed by a recursive descent to read the bytes of the parameter type (in this case, `(Byte, Int)`).
+
+This encoding scheme enables simple and efficient decoding by utilizing division and modulus operations.
 
 The interval of codes for data types is divided as the following:
 
-$$
-\bf{Interval} & \bf{Type constructor} & \bf{Description}  
-0x01 - 0x0B(11)     &                    & primitive types (including 2 reserved)  
-0x0C(12)            & \lst{Coll[_]}          & Collection of non-primitive types (\lst{Coll[(Int,Boolean)]})  
-0x0D(13) - 0x17(23) & \lst{Coll[_]}          & Collection of primitive types (\lst{Coll[Byte]}, \lst{Coll[Int]}, etc.)  
-0x18(24)            & \lst{Coll[Coll[_]]}    & Nested collection of non-primitive types (\lst{Coll[Coll[(Int,Boolean)]]})  
-0x19(25) - 0x23(35) & \lst{Coll[Coll[_]]}    & Nested collection of primitive types (\lst{Coll[Coll[Byte]]}, \lst{Coll[Coll[Int]]})  
-0x24(36)            & \lst{Option[_]}        & Option of non-primitive type (\lst{Option[(Int, Byte)]})  
-0x25(37) - 0x2F(47) & \lst{Option[_]}        & Option of primitive type (\lst{Option[Int]})  
-0x30(48)            & \lst{Option[Coll[_]]}  & Option of Coll of non-primitive type (\lst{Option[Coll[(Int, Boolean)]]})  
-0x31(49) - 0x3B(59) & \lst{Option[Coll[_]]}  & Option of Coll of primitive type (\lst{Option[Coll[Int]]})  
-0x3C(60)            & \lst{(_,_)}            & Pair of non-primitive types (\lst{((Int, Byte), (Boolean,Box))}, etc.)  
-0x3D(61) - 0x47(71) & \lst{(_, Int)}         & Pair of types where first is primitive (\lst{(_, Int)})  
-0x48(72)            & \lst{(_,_,_)}          & Triple of types   
-0x49(73) - 0x53(83) & \lst{(Int, _)}         & Pair of types where second is primitive (\lst{(Int, _)})  
-0x54(84)            & \lst{(_,_,_,_)}        & Quadruple of types   
-0x55(85) - 0x5F(95) & \lst{(_, _)}           & Symmetric pair of primitive types (\lst{(Int, Int)}, \lst{(Byte,Byte)}, etc.)  
-0x60(96)            & \lst{(_,...,_)}        & \lst{Tuple} type with more than 4 items \lst{(Int, Byte, Box, Boolean, Int)}  
-0x61(97)            & \lst{Any}             & Any type   
-0x62(98)            & \lst{Unit}            & Unit type  
-0x63(99)            & \lst{Box}             & Box type   
-0x64(100)           & \lst{AvlTree}         & AvlTree type   
-0x65(101)           & \lst{Context}         & Context type   
-0x65(102)           & \lst{String}          & String   
-0x66(103)           & \lst{IV}              & TypeIdent   
-0x67(104)- 0x6E(110)&                    & reserved for future use   
-0x6F(111)           &                    & Reserved for future \lst{Class} type (e.g. user-defined types)   
-$$
+
+| Interval | Type constructor | Description |
+|---|---|---|
+| 0x01 - 0x0B(11) | | primitive types (including 2 reserved) |
+| 0x0C(12) | `Coll[_]` | Collection of non-primitive types (`Coll[(Int,Boolean)]`) |
+| 0x0D(13) - 0x17(23) | `Coll[_]` | Collection of primitive types (`Coll[Byte]`, `Coll[Int]`, etc.) |
+| 0x18(24) | `Coll[Coll[_]]` | Nested collection of non-primitive types (`Coll[Coll[(Int,Boolean)]]`) |
+| 0x19(25) - 0x23(35) | `Coll[Coll[_]]` | Nested collection of primitive types (`Coll[Coll[Byte]]`, `Coll[Coll[Int]]`) |
+| 0x24(36) | `Option[_]` | Option of non-primitive type (`Option[(Int, Byte)]`) |
+| 0x25(37) - 0x2F(47) | `Option[_]` | Option of primitive type (`Option[Int]`) |
+| 0x30(48) | `Option[Coll[_]]` | Option of Coll of non-primitive type (`Option[Coll[(Int, Boolean)]]`) |
+| 0x31(49) - 0x3B(59) | `Option[Coll[_]]` | Option of Coll of primitive type (`Option[Coll[Int]]`) |
+| 0x3C(60) | `(_,_)` | Pair of non-primitive types (`((Int, Byte), (Boolean,Box))`, etc.) |
+| 0x3D(61) - 0x47(71) | `(_, Int)` | Pair of types where first is primitive (`(_, Int)`) |
+| 0x48(72) | `(_,_,_)` | Triple of types |
+| 0x49(73) - 0x53(83) | `(Int, _)` | Pair of types where second is primitive (`(Int, _)`) |
+| 0x54(84) | `(_,_,_,_)` | Quadruple of types |
+| 0x55(85) - 0x5F(95) | `(_, _)` | Symmetric pair of primitive types (`(Int, Int)`, `(Byte,Byte)`, etc.) |
+| 0x60(96) | `(_, ..., _)` | `Tuple` type with more than 4 items `(Int, Byte, Box, Boolean, Int)` |
+| 0x61(97) | `Any` | Any type |
+| 0x62(98) | `Unit` | Unit type |
+| 0x63(99) | `Box` | Box type |
+| 0x64(100) | `AvlTree` | AvlTree type |
+| 0x65(101) | `Context` | Context type |
+| 0x65(102) | `String` | String |
+| 0x66(103) | `IV` | TypeIdent |
+| 0x67(104) - 0x6E(110) | | reserved for future use |
+| 0x6F(111) | | Reserved for future `Class` type (e.g. user-defined types) |
+
 
 ## Encoding Function Types
 
 We use $12$ different values for both domain and range types of functions. This gives us $12 * 12 = 144$ function types in total and allows us to represent $11*11 = 121$ functions over primitive types using just a single byte.
 
-Each code $F$ in a range of function types can be represented as
-$F = D * 12 + R + 112$, where $D, R \in \{0,\dots,11\}$ - indices of domain and range types correspondingly, 
-$112$ - is the first code in an interval of function types. 
+Each code $F$ in a range of function types can be represented as $F = D * 12 + R + 112$, where $D, R \in \{0,\dots,11\}$ - indices of domain and range types correspondingly, $112$ - is the first code in an interval of function types. 
 
 If $D = 0$, then the domain type is not primitive and recursive descent is necessary to write/read the domain type.
 
 If $R = 0$, then the range type is not primitive and recursive descent is necessary to write/read the range type.
 
-\subsubsection{Recursive Descent}
+## Recursive Descent
 
-When an argument of a type constructor is not a primitive type, we fallback to
-the simple encoding schema.
+When an argument of a type constructor is not a primitive type, we fallback to the simple encoding schema.
 
-In such a case, we emit the special code for the type constructor according to
-the table above and descend recursively to every child node of the type tree.
+In such a case, we emit the special code for the type constructor according to the table above and descend recursively to every child node of the type tree.
 
-We do this descend only for those children whose code cannot be embedded in
-the parent code. For example, serialization of \lst{Coll[(Int,Boolean)]}
-proceeds as the following:
-\begin{enumerate}
-\item emit \lst{0x0C} because element of collection is not primitive 
-\item recursively serialize \lst{(Int, Boolean)}
-\item emit \lst{0x3D} because the first item in the pair is primitive
-\item recursively serialize \lst{Boolean}
-\item emit \lst{0x02} - the code for primitive type \lst{Boolean}
-\end{enumerate}
+We only perform this descent for those children whose code cannot be embedded in the parent code. For example, serialization of `Coll[(Int,Boolean)]` proceeds as follows:
 
-\noindent Examples
+- Emit `0x0C` because the element of the collection is not primitive.
+- Recursively serialize `(Int, Boolean)`.
+- Emit `0x3D` because the first item in the pair is primitive.
+- Recursively serialize `Boolean`.
+- Emit `0x02` - the code for the primitive type `Boolean`.
 
-\begin{figure}[h] \footnotesize
-\(\begin{tabularx}{\textwidth}{| l | c | c | l | c | X |}
 
-\bf{Type}                &\bf{D} & \bf{R} & \bf{Bytes} & \bf{\#Bytes} &  \bf{Comments}  
-\lst{Byte}               &     &     &  1                   &  1     &     
-\lst{Coll[Byte]}         &     &     &  12 + 1 = 13         &  1     &     
-\lst{Coll[Coll[Byte]]}   &     &     &  24 + 1 = 25         &  1     &      
-\lst{Option[Byte]}       &     &     &  36 + 1 = 37         &  1     & register     
-\lst{Option[Coll[Byte]]} &     &     &  48 + 1 = 49         &  1     & register     
-\lst{(Int,Int)}          &     &     &  84 + 3 = 87         &  1     & fold     
-\lst{Box=>Boolean}       & 7   & 2   &  198 = 7*12+2+112    &  1     & exist, for all     
-\lst{(Int,Int)=>Int}     & 0   & 3   &  115=0*12+3+112, 87  &  2     &  fold     
-\lst{(Int,Boolean)}      &     &     &  60 + 3, 2           &  2     &       
-\lst{(Int,Box)=>Boolean} & 0   & 2   &  0*12+2+112, 60+3, 7 &  3     &      
-\end{tabularx}\)
-\label{fig:ser:type:primtypes}
-\end{figure}
+<!-- TODO: \noindent Examples --> 
+
+### Table: Size of Serialized Types
+
+| Type                     | D   | R   | Bytes                 | #Bytes | Comments     |
+|--------------------------|-----|-----|-----------------------|--------|--------------|
+| `Byte`                   |     |     | 1                     | 1      |              |
+| `Coll[Byte]`             |     |     | 12 + 1 = 13           | 1      |              |
+| `Coll[Coll[Byte]]`       |     |     | 24 + 1 = 25           | 1      |              |
+| `Option[Byte]`           |     |     | 36 + 1 = 37           | 1      | register     |
+| `Option[Coll[Byte]]`     |     |     | 48 + 1 = 49           | 1      | register     |
+| `(Int,Int)`              |     |     | 84 + 3 = 87           | 1      | fold         |
+| `Box => Boolean`         | 7   | 2   | 198 = 7 * 12 + 2 + 112 | 1      | exist, for all |
+| `(Int,Int) => Int`       | 0   | 3   | 115 = 0 * 12 + 3 + 112, 87 | 2      | fold         |
+| `(Int,Boolean)`          |     |     | 60 + 3, 2             | 2      |              |
+| `(Int,Box) => Boolean`   | 0   | 2   | 0 * 12 + 2 + 112, 60 + 3, 7 | 3      |              |
+
+

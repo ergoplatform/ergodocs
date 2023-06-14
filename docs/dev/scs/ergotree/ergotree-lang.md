@@ -16,64 +16,51 @@ $$
 \newcommand{\corelang}{Core-\lambda}
 $$
 
+# ErgoTree as a Language
 
+This section provides an improved and clearer documentation for the ErgoTree language. ErgoTree is a typed, call-by-value, higher-order functional language without recursion. It supports various features such as single-assignment blocks, tuples, optional values, indexed collections with higher-order operations, short-cutting logical operations, and ternary if-else expressions with lazy branches. It is important to note that all operations in ErgoTree are deterministic, without side effects, and all values are immutable.
 
-# ErgoTree as a language
+The semantics of ErgoTree are specified by first translating it to a lower-level language called Core-λ and then providing its denotational evaluation semantics. The abstract syntax of ErgoTree is defined in Table 1, which represents the **Value** class of the reference implementation. The values in the "Mnemonic" column correspond to specific classes in the reference implementation.
 
-In this section, we define an abstract syntax for the ErgoTree language. It is a typed **call-by-value, higher-order functional language without recursion**.
+### Table 1: Abstract syntax of ErgoTree language
 
-It supports single-assignment blocks, tuples, optional values, indexed collections with higher-order operations, short-cutting logicals, and ternary ’if’ with lazy branches. 
+| Set Name | Syntax | Mnemonic | Description |
+|----------|--------|----------|-------------|
+| $\mathcal{T} \ni T$ | **P** | **SPredefType** | See [Types](types.md) |
+| | $\tau$ | **STypeVar** | Type variable |
+| | $(T_1, \ldots, T_n)$ | **STuple** | Tuple of $n$ elements (see [Tuple] type) |
+| | $(T_1, \ldots, T_n) \to T$ | **SFunc** | Function of $n$ arguments (see [Func] type) |
+| | ${{Coll}}[T]$ | **SCollection** | Collection of elements of type $T$ |
+| | ${{Option}}[T]$ | **SOption** | Optional value of type $T$ |
+| $Term \ni e$ | $C(v, T)$ | **Constant** | Typed constant |
+| | $x$ | **ValUse** | Variable |
+| | $\TyLam{x_i}{T_i}{e}$ | **FuncExpr** | Lambda expression |
+| | $\Apply{e_f}{\Ov{e_i}}$ | **Apply** | Application of a functional expression |
+| | $\Apply{e.m}{\Ov{e_i}}$ | **MethodCall** | Method invocation |
+| | $\Apply{e_f}{\Ov{e_i}}$ | **Tuple** | Constructor of a tuple with $n$ items |
+| | $\Apply{\delta}{\Ov{e_i}}$ | | Primitive application |
+| | $\text{if}~(e_{\text{cond}})~e_1~\text{else}~e_2$ | **If** | If-then-else expression |
+| | $\{{ \overline{{\text{val}}}~x_i = e_i;}~e\}$ | **BlockExpr** | Block expression |
+| $cd$ | $\Trait{I}{\overline{ms_i}}$ | **STypeCompanion** | Interface declaration |
+| $ms$ | $\MSig{m[\overline{\tau_i}]}{\overline{x_i : T_i}}{T}$ | **SMethod** | Method signature declaration |
 
-**All operations are deterministic, without side effects and all values are *immutable*.**
+The terms in ErgoTree are assigned types according to the typing rules specified in [Typing](typing.md).
 
-The semantics of ErgoTree is specified by first translating it to core calculus (***Core-λ***) and then giving its denotational evaluation semantics. 
+- **Constants** contain both the type and the data value of that type. The type of a constant must correspond to its value for it to be well-formed.
+- **Variables** are always typed and identified by a unique ID, which refers to either a lambda-bound variable or a val-bound variable.
+- **Lambda expressions** can take a list of lambda-bound variables, which can be used in the body expression. The body expression can also be a **block expression**.
+- **Function application** takes an expression of functional type (e.g., $T_1 \to T_n$) and a list of arguments. The notation $e_f(\Ov{e})$ is not used to represent function application because it suggests that $(\Ov{e})$ is a subterm, which it is not.
+- **Method invocation** allows the application of functions defined as methods of types. If an expression $e$ has type $T$, and a method $m$ is declared in type $T$, the method invocation $e.m(args)$ is valid. For more information on types and their methods, refer to section A.
+- **Conditional expressions** in ErgoTree evaluate the condition strictly and the branches lazily. Each branch is an expression executed based on the result of the condition. This laziness is specified by lowering the expressions to Core-λ (see Figure 2).
+- **Block expressions** contain a list of **val** definitions of variables. Each subsequent definition in the block can only refer to previously defined variables. The result of block execution is the result of the expression $e$, which can refer to any block variable.
 
-In Table 1, ErgoTree is defined below using abstract syntax notation. This corresponds to the **Value** class of the reference implementation, which can be serialized to an array of bytes using **ValueSerializer**. 
+Each **type** in ErgoTree can be associated with a list of method declarations, indicating that the type has methods. The semantics of these methods follow the same principles as in Java. When an instance of a type with methods exists, it is possible to call methods on the instance with additional arguments.
 
-The values in the *'mnemonic'* column correspond to reference implementation classes.
+Each **method** in ErgoTree can be parameterized by type variables, which are used in the method signature. Since ErgoTree only supports monomorphic values, each method call is monomorphic, and all type variables are assigned concrete types (see the MethodCall typing rule in [typing](typing.md)).
 
-### **Table 1: Abstract syntax of ErgoScript language**
+To specify the semantics of ErgoTree, its terms are translated to a lower-level language called Core-λ, which is a simplified language without lazy operations. The lowering rules are defined in Figure 2.
 
-| Set Name | | Syntax | Mnemonic | Description |
-|--||--|--|----|
-$\mathcal{T} \ni T$ | ::=   |    **P**  | **SPredefType**   | See [Types](types.md)
-|   | $\mid$    | $\tau$    | **STypeVar** | type variable 
-|   | $\mid$    | $(T_1, ... ,T_n)$ | **STuple** | tuple of $n$ elements (see [Tuple] type)
-|   | $\mid$    | $(T_1,...,T_n) \to T$ | **SFunc** | function of $n$ arguments (see [Func] type) 
-|   | $\mid$    | ${{Coll}}[T]$         | **SCollection** | collection of elements of type $T$   
-|   | $\mid$    | ${{Option}}[T]$       | **SOption** | optional value of type $T$  
-$Term\ni e$ | ::=       |   $C(v, T)$               | **Constant** | typed constants  
-|   | $\mid$    |   $x$                     | **ValUse** | variables  
-|   | $\mid$    |   $\TyLam{x_i}{T_i}{e}$       | **FuncExpr** | lambda expression 
-|   | $\mid$    |   $\Apply{e_f}{\Ov{e_i}}$     | **Apply** | application of functional expression 
-|   | $\mid$    |   $\Apply{e.m}{\Ov{e_i}}$     | **MethodCall** | method invocation  
-|   | $\mid$    |   $\Apply{e_f}{\Ov{e_i}}$     | **Tuple** | constructor of tuple with $n$ items 
-|   | $\mid$    |   $\Apply{\delta}{\Ov{e_i}}$  | | primitive application
-|   | $\mid$    |   if $(e_{cond})$ $e_1$ **else} $e_2$ | **If** | if-then-else expression 
-|   | $\mid$    |   $\{{{ \overline{{val}}}~x_i = e_i;}~e\}$  | **BlockExpr** | block expression 
-$cd$    |   ::= |   $\Trait{I}{\overline{ms_i}}$    | **STypeCompanion** | interface declaration    
-$ms$    |   ::= | $\MSig{m[\overline{\tau_i}]}{\overline{x_i : T_i}}{T}$    | **SMethod** | method signature declaration   
-
-
-We assign types to the terms in a standard way following the typing rules shown in [Typing](typing.md).
-
-- **Constants** keep both the type and the data value of that type. To be well-formed, the type of the constant should correspond to its value.
-- **Variables** are always typed and identified by a unique id, which refers to either lambda bound variable or a val bound variable.
-- **Lambda expressions** can take a list of lambda-bound variables which can be used in the body expression, which can be a **block expression**.
-- **Function application** takes an expression of functional type (e.g. $T_1 \to T_n$) and a list of arguments. The reason we do not write it $e_f(\Ov{e})$ is that this notation suggests that $(\Ov{e})$ is a subterm, which it is not.
-- **Method invocation** allows us to apply functions that are defined as methods of types. If expression e has type T and method m is declared in the type T, method invocation e.m(args) is defined for the appropriate args. See section A for the specification of types and their methods.
-- **Conditional expressions** of ErgoTree are strict in the condition and lazy in both of the branches.
-    - Each branch is an expression executed depending on the result of the condition—this laziness of branches is specified by lowering to Core-λ (see Figure 2).
-- **Block expression** contains a list of **val** definitions of variables. To be wellformed, each subsequent definition can only refer to the previously defined variables. The result of block execution is the result of the expression e, which can refer to any block variable.
-
-Each **type** may be associated with a list of method declarations, in which case we say the type has methods. The semantics of the methods is the same as in Java. Having an instance of some type with methods, it is possible to call methods on the instance with additional arguments. 
-
-Each **method** can be parameterized by type variables, which can be used in the method signature. Because ErgoTree supports only monomorphic values, each method call is monomorphic, and all type variables are assigned to concrete types (see MethodCall typing rule in [typing](typing.md)).
-
-The semantics of ErgoTree is specified by translating all its terms to a somewhat lower and simplified language, which we call Core-λ and does not have lazy operations.
-
-## **Figure 2: Lowering to Core-λ**
-
+## Figure 2: Lowering to Core-λ
 
 | $Term_{ErgoTree}$ | | $Term_{Core}$  | 
 |---||---|
@@ -88,15 +75,12 @@ $\Low{ \{ \Ov{\text{val}~x_i: T_i = e_i;}~e\} }$ | $\To$ | $\Apply{ (\Lam{(x_1:T
 $\Low{ \Apply{\delta}{\Ov{e_i}} }$ | $\To$ | $\Apply{\delta}{\Ov{ \Low{e_i} }}$ 
 $\Low{ e }$     | $\To$ |  $e$  
 
-All $n$-ary lambdas when $n>1$ are transformed to single arguments lambdas using tupled arguments.
+All $n$-ary lambdas where $n > 1$ are transformed into single-argument lambdas using tupled arguments.
 
-> Note that $\IfThenElse{e_{cond}}{e_1}{e_2}$ term of $\langname$ has a lazy evaluation of its branches whereas right-hand-side $\lst{if}$ is a primitive operation and has a strict evaluation of the arguments. The laziness is achieved using lambda expressions of $\lst{Unit}$ $\to$ $\lst{Boolean}$ type.
+It should be noted that the $\IfThenElse{e_{\text{cond}}}{e_1}{e_2}$ term in ErgoTree has lazy evaluation of its branches, while the right-hand-side $\lst{if}$ is a primitive operation with strict evaluation of the arguments. Laziness is achieved using lambda expressions of type $\lst{Unit} \to \lst{Boolean}$.
 
-We translate logical operations ($\lst{||}$, &&) of $\langname$, which are lazy on second argument to $\lst{if}$ term of $\langname$, which is recursively translated to the corresponding $\corelang$ term.
+Logical operations ($\lst{||}$, &&) in ErgoTree, which are lazy on the second argument, are translated to $\lst{if}$ terms in ErgoTree, which are recursively translated to the corresponding Core-λ terms.
 
-Syntactic blocks of $\langname$ are eliminated and translated to nested lambda expressions, which unambiguously specify the evaluation semantics of blocks. The $\corelang$ is specified in [evaluation](evaluation.md).
+Syntactic blocks in ErgoTree are eliminated and translated into nested lambda expressions, which unambiguously specify the evaluation semantics of blocks. The evaluation semantics of Core-λ are specified in [evaluation](evaluation.md).
 
-Note that we use lowering transformation only to specify semantics. 
-
-Implementations can optimize by evaluating ErgoTree directly as long as the semantics is preserved.
-
+Note that the lowering transformation is used solely to specify semantics. Implementations may optimize the evaluation of ErgoTree directly as long as the semantics are preserved.
