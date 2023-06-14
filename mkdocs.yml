@@ -570,18 +570,20 @@ nav:
             - CLI Compiler: dev/stack/compiler.md
           - Debugging: dev/scs/debugging.md
           - FlowCards: dev/scs/flowcards.md
-      - Data Structures:
-        - ErgoTree: 
-          - dev/scs/ergotree.md
-          - Introduction: dev/scs/ergotree/ergotree-intro.md
-          - As a Language: dev/scs/ergotree/ergotree-lang.md
-          - Typing: dev/scs/ergotree/typing.md
-          - Evaluation: dev/scs/ergotree/evaluation.md
-          - Serialization: dev/scs/ergotree/serialization.md
-          - Predefined Types: dev/scs/ergotree/types.md
-          - Predefined Functions: dev/scs/ergotree/functions.md
-          - Encoding: dev/scs/ergotree/encoding.md
-        - AVL Trees: dev/protocol/avl.md
+      - ErgoTree: 
+        - dev/scs/ergotree.md
+        #- Introduction: dev/scs/ergotree/ergotree-intro.md
+        - As a Language: dev/scs/ergotree/ergotree-lang.md
+        - Typing: dev/scs/ergotree/typing.md
+        - Evaluation: dev/scs/ergotree/evaluation.md
+        - Serialization: dev/scs/ergotree/serialization.md
+        - Predefined Types: dev/scs/ergotree/types.md
+        - Predefined Functions: dev/scs/ergotree/functions.md
+        - Encoding: dev/scs/ergotree/encoding.md
+        - Script Validation: dev/scs/ergotree/script-validation.md
+        - Script Optimisation: dev/scs/ergotree/script-optimisation.md
+        - Templates: dev/scs/ergotree/ergotree-templates.md
+      - AVL Trees: dev/protocol/avl.md
         
 
       - Multi-Stage Protocols: 
