@@ -45,6 +45,7 @@ The picture itself is stored somewhere on a third-party storage (ipfs, imgbb.com
 Ergo on-chain NFTs do not use third-party storage, their images are stored directly on the blockchain, in the `R9` register of NFT box. Here is the fundamental difference with regular NFTs. But there are significant limitations (in any blockchain) for on-chain NFTs. In Ergo the size cannot exceed **4 Kb**. The actual limit is approximately **3.5 Kb**, as space is needed for the NFT name, description, and other data. It's a challenge for an artist to be able to fit something more or less interesting for a collector into such a small size.
 
 **How to make on-chain SVG:**
+
  - draw something relatively simple in SVG vector format;
  - optimize your art by hand: smoothe lines, remove small details, decrease color number, etc;
  - optimize again programmatically by svg-optimizers;
@@ -59,6 +60,7 @@ Ergo on-chain NFTs do not use third-party storage, their images are stored direc
  
 
 **Vector Minimalism** collection:
+
 - [Landscape #06. View from the train window](https://ergotokens.org/#/?token=62e9e8fc25e148a35e4bb99d70b810a897e78a7fd26adda0e8335a2ad17ef58c)
 - [Landscape #08. Flight over the desert](https://ergotokens.org/#/?token=cf3f157c32c22749742fb0acc85aa07e6640b61290b26a89efd9e40f5070a938)
 - [Monument #11. Moai](https://ergotokens.org/#/?token=1d7430bacd2a0b1d83366cfad766a8dfb221c2de80ee95ab271a29bfdf7fc0a0)
@@ -66,8 +68,9 @@ Ergo on-chain NFTs do not use third-party storage, their images are stored direc
 - ![VectorMinimalism](https://github.com/ergoplatform/ergodocs/assets/99899807/10efaf86-a7ba-46ec-a620-db9a4f59a29a)
 
 
-**Tokenart** collection where SVG used as a container for **ASСII art**:
+**Tokenart** collection where SVG is used as a container for **ASСII art**:
+
 - [Tokenart Cat #2](https://ergotokens.org/#/?token=14435234f5fdf1bfc0f98c2186512db292266bf4ac8d0c74f6ad056dcfaf36d1)  
 - [Tokenart Shark #2](https://ergotokens.org/#/?token=723f7eb846895bd0294619300488eb1974e6827e27d1624289019b42ec7252a3)
 - inside svg is pure text:
-     - ![svgASCII](https://github.com/ergoplatform/ergodocs/assets/99899807/02b1142b-a25d-4cc4-8092-c6026baa046c)
+- ![svgASCII](https://github.com/ergoplatform/ergodocs/assets/99899807/02b1142b-a25d-4cc4-8092-c6026baa046c)
