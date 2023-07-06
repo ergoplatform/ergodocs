@@ -1,6 +1,8 @@
 # ErgoSummit
 
+## **ErgoVersary 2023** (July 1-3rd)
 
+- [Announcement](https://ergoplatform.org/en/news/ErgoVersary-2023/)
 
 ##  **Ergo Summit 2022:** *Privacy & Security*
 
