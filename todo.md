@@ -2,3 +2,6 @@
 
  Edge - https://github.com/Ergo-Lend/edge
 Ergo-play-boilerplate - https://github.com/kii-dot/ergo-play-boilerplate 
+
+
+- [Completeness of Ergo | Kushti | Ergoversary Summit 2023](https://www.youtube.com/watch?v=49UmOkx6pj0&list=PL8-KVrs6vXLRxmOmprVdXkHDcO4IaQZOY&index=2)

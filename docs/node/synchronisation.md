@@ -1,102 +1,69 @@
-
-# Blockchain synchronization
+# Blockchain Synchronization
 
 Ergo modifiers can be in one of the following states:
 
+- **Unknown:** The synchronization process for the corresponding modifier is not started yet.
+- **Requested:** The modifier was requested from another peer.
+- **Received:** The modifier was received from another peer, but is not applied to history yet.
+- **Held:** The modifier was held by NodeViewHolder. Persistent Modifiers are held by History, Ephemianl modifiers are held by Mempool.
+- **Invalid:** The modifier is permanently invalid.
 
-* Unknown synchronization process for corresponding modifier is not started yet.
-* Requested modifier was requested from another peer.
-* Received modifier was received from another peer, but is not applied to history yet.
-* Held modifier was held by NodeViewHolder PersistentModifiers are held by History, Ephemeral modifiers are held by Mempool.
-* Invalid modifier is permanently invalid.
-
-
-The goal of the synchronization process is to move modifiers from Unknown to Held state.
-
-In the success path modifier changes his statuses Unknown->Requested->Received->Held, however if something went wrong (e.g. modifier was not delivered) it goes back to Unknown state (if node is going to receive it in future) or to Invalidstate (if node is not going to receive this modifier anymore).
+The goal of the synchronization process is to move modifiers from the Unknown to Held state. 
 
 ## From Unknown to Requested
 
-Modifier can go from Unknown state to Requested one by different ways, that depend on
-current node status (bootstrapping/stable) and modifier type.
+The modifier can transition from the Unknown state to the Requested one in different ways, depending on the current node status (bootstrapping/stable) and modifier type.
 
-**Inv protocol
+### Inv Protocol
 
-Inv (inventory) message contains a pair: (ModifierTypeId, Seq[ModifierId]).
-When one node sends Inv message to another one, it is assumed that this node
-contains modifiers with the specified ids and type and is ready to send on request.
+The Inv (inventory) message contains a pair: (ModifierTypeId, Seq[ModifierId]). When one node sends an Inv message to another, it is assumed that this node contains modifiers with the specified ids and type and is ready to send on request.
 
-Node broadcasts Inv message in 2 cases:
+A node broadcasts the Inv message in two cases:
 
-    *  When it successfully applies a modifier to History and modifier is new enough.
-    This is useful to propagate new modifiers as fast as possible when nodes are already synced with the network
-    *  When it receives ErgoSyncInfo message (see **Headers synchronization for more details)
+- When it successfully applies a modifier to History, and the modifier is new enough. This approach helps propagate new modifiers as fast as possible when nodes are already synced with the network.
+- When it receives an ErgoSyncInfo message (see **Headers synchronization** for more details).
 
+When a node receives an Inv message, it:
 
-When node received Inv message it
+- Filters out modifiers that are not in the Unknown state.
+- Requests the remaining modifiers from the peer that sent the Inv message. The Modifier then transitions into the Requested state.
 
-    *  filter out modifiers, that are not in state Unknown
-    *  request remaining modifiers from the peer that sent Inv message.
-    Modifier goes into Requested state.
+### Headers Synchronization
 
+Firstly, a node should synchronize its headers chain with the network. To achieve this, every `syncInterval` seconds, the node calculates an ErgoSyncInfo message, containing ids of the last `ErgoSyncInfo.MaxBlockIds` headers and sends it to peers, defined by function `peersToSyncWith()`.
 
-**Headers synchronization
+To achieve more efficient synchronization, the node also sends an ErgoSyncInfo message every time when the headers chain is not synced yet, but the number of requested headers is small enough (less than `desiredInvObjects / 2`).
 
-First, node should synchronize it's headers chain with the network.
-In order to achieve this every syncInterval seconds node calculates ErgoSyncInfo message,
-containing ids of last ErgoSyncInfo.MaxBlockIds headers and send it to peers,
-defined by function peersToSyncWith().
-If there are outdated peers (peers, which status
-was last updated earlier than syncStatusRefresh seconds ago) peersToSyncWith() return outdated peers,
-otherwise it returns one random peer which blockchain is better and all peers with status Unknown
-\dnote{peersToSyncWith() logic is not intuitive, it's better to write description, why this choice?.
+On receiving an ErgoSyncInfo message, the node calculates OtherNodeSyncingStatus, which contains node status (Younger, Older, Equal, Nonsense or Unknown) and extension - Inv for the next `maxInvObjects` headers missed by ErgoSyncInfo sender. After that, the node sends this Inv message to the ErgoSyncInfo sender.
 
-To achieve more efficient synchronization, node also sends ErgoSyncInfo message every time when headers chain is
-not synced yet, but number of requested headers is small enough (less than $desiredInvObjects / 2$).
+### Block Section Synchronization
 
-On receiving ErgoSyncInfo message, node calculates OtherNodeSyncingStatus,
-which contains node status (Younger, Older, Equal, Nonsense or Unknown) and extension -
-Inv for next maxInvObjects headers missed by ErgoSyncInfo sender.
-After that node sends this Inv message to ErgoSyncInfo sender.
+After applying headers, a node should synchronize block sections (BlockTransactions, Extension, and ADProofs), which amount and composition may vary based on node settings.
 
-**Block section synchronization**
+To achieve this, every `syncInterval` seconds, a node calculates `nextModifiersToDownload()` - block sections for headers starting at the height of the best full block that is in the Unknown state.
 
-After headers application, a node should synchronize block sections (BlockTransactions, Extension and ADProofs), which amount and composition may vary on node settings (node with UTXO state does not need to download ADProofs, node with non-negative blocksToKeep should download only block sections for last blocksToKeep blocks, etc.).
+These modifiers are requested from random peers (since we do not know a peer who has it) and they switch to the Requested state.
 
-In order to achieve this, every syncInterval seconds node calculate nextModifiersToDownload() - block sections for headers starting at height of best full block, that are in Unknown state.
+To achieve more efficient synchronization, the node also requests `nextModifiersToDownload()` every time when the headers chain is already synced and the number of requested block sections is small enough (less than `desiredInvObjects / 2`).
 
-These modifiers are requested from random peers (since we does not know a peer who have it), \footnote{we can keep a separate modifierId->peers map for modifiers, that are not received yet and try to download from this peers first.
-and they switch to state Requested.
+When the headers chain is already synced and the node applies a block header, it returns ProgressInfo with a ToDownload section, that contains modifiers our node should download and apply to update the full block chain.
 
-To achieve more efficient synchronization, node also requests nextModifiersToDownload() every time when
-headers chain is already synced and number of requested block sections is small enough (less than $desiredInvObjects / 2$).
-
-When headers chain is already synced and node applies block header, it return ProgressInfo with ToDownload section, that contains modifiers our node should download and apply to update full block chain.
-
-When NVS receives this ToDownload request, it requests these modifiers from random peers and these modifiers goes to state Requested.
+When NVS receives this ToDownload request, it requests these modifiers from random peers, and these modifiers transition to the Requested state.
 
 ## From Requested to Received
 
-When our node requests a modifier from other peer, it puts this modifier and corresponding peer to special map requested in DeliveryTracker and sends CheckDelivery to self with deliveryTimeout delay.
+When our node requests a modifier from another peer, it adds this modifier and corresponding peer to a special map, `requested` in `DeliveryTracker`, and sends `CheckDelivery` to self with a `deliveryTimeout` delay.
 
-When a node receives modifier in requested map (and peer delivered this modifier is the same as written in requested) -
-NVS parse it and perform initial validation.
+When a node receives a modifier in the requested map (and the peer who delivered this modifier is the same as written in requested), NVS parses it and performs initial validation.
 
-If modifier is invalid (and we know, that this modifier will always be invalid) NVS penalize peer and move modifier to state Invalid.
-If the peer have provided incorrect modifier bytes (we can not check, that these bytes corresponds to current id) penalize peer and move modifier to state Unknown.
-If everything is fine, NVS sends modifier to NodeViewHolder(NVH) and set modifier to state Received.
+If the modifier is invalid, NVS penalizes the peer and moves the modifier to the Invalid state. If the peer has provided incorrect modifier bytes, penalize the peer and move the modifier to the Unknown state. If everything is fine, NVS sends the modifier to `NodeViewHolder(NVH)` and sets the modifier to the Received state.
 
-When CheckDelivery message comes, node check for modifier if it is already in Received state, do nothing.
-
-If modifier is not delivered yet, node continue to wait it up to maxDeliveryChecks times, and after that
-penalize peer (if not requested from random peer) and stop expecting after that (modifier goes to Unknown state).
+When `CheckDelivery` message comes, the node checks for the modifier if it is already in the Received state, does nothing. If the modifier is not delivered yet, the node continues to wait for it up to `maxDeliveryChecks` times, and after that penalizes the peer (if not requested from a random peer) and stops expecting after that (the modifier goes to the Unknown state).
 
 ## From Received to Held
 
-When NVH receives new modifiers it puts these modifiers to modifiersCache and then applies as much modifiers from cache as possible.
+When `NVH` receives new modifiers, it puts these modifiers into `modifiersCache` and then applies as many modifiers from the cache as possible.
 
-NVH publish SyntacticallySuccessfulModifier message for every applied modifier and when NVS receives this message it moves modifier to state Held.
+`NVH` publishes a `SyntacticallySuccessfulModifier` message for every applied modifier, and when `NVS` receives this message, it moves the modifier to the Held state.
 
-If after all applications cache size exceeds size limit, NVH remove outdated modifiers from cache and publish
-ModifiersProcessingResult message with all just applied and removed modifiers.
-When NVS receives ModifiersProcessingResult message it moves all modifiers removed from cache without application to state Unknown.
+If after all applications, the cache size exceeds the size limit, `NVH` removes outdated modifiers from the cache and publishes a `ModifiersProcessingResult` message with all just applied and removed modifiers. When `NVS` receives a `ModifiersProcessingResult` message, it moves all modifiers removed from the cache without application to the Unknown state.

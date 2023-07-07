@@ -2,7 +2,7 @@
 
 ## **ErgoVersary 2023** (July 1-3rd)
 
-- [Announcement](https://ergoplatform.org/en/news/ErgoVersary-2023/)
+For our fourth anniversary we hosted a jam-packed summit with two dozen videos. Check out [the full playlist on YouTube](https://www.youtube.com/playlist?list=PL8-KVrs6vXLRxmOmprVdXkHDcO4IaQZOY)
 
 ##  **Ergo Summit 2022:** *Privacy & Security*
 
