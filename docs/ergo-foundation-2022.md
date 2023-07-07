@@ -231,6 +231,8 @@ The initial allocation was 4,330,776 ERG, or 4.43% of the total supply.
 
 You can find the Ergo Foundation treasury and current balance [on-chain](https://explorer.ergoplatform.com/en/addresses/4L1ktFSzm3SH1UioDuUf5hyaraHird4D2dEACwQ1qHGjSKtA6KaNvSzRCZXZGf9jkfNAEC1SrYaZmCuvb2BKiXk5zW9xuvrXFT7FdNe2KqbymiZvo5UQLAm5jQY8ZBRhTZ4AFtZa1UF5nd4aofwPiL7YkJuyiL5hDHMZL1ZnyL746tHmRYMjAhCgE7d698dRhkdSeVy).
 
+You can read more in the [emission](emission.md) section. 
+
 
 ### Historic Spending
 

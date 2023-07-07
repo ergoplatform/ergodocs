@@ -1,6 +1,7 @@
 # Enhanced Oracle Pools: Version 2.0
 
-> For those interested in setting up an ERG/XAU oracle pool in a testnet environment, we have created a comprehensive guide to walk you through the process. The guide provides detailed instructions, making it easy even for those relatively new to the field. Follow the link to access our [Bootstrap an ERG/XAU pool on testnet guide](https://github.com/ergoplatform/oracle-core/blob/develop/docs/how_to_bootstrap.md).
+> See the latest overview video from the summit here: [Oracle Pool v2 | greenhat | Ergoversary Summit 2023](youtube.com/watch?v=WeQcUmVUhoI)
+
 
 The document described below outlines a proposed upgrade to Oracle Pool version 1.0, as presently deployed and detailed in [EIP16](https://github.com/ergoplatform/eips/blob/eip16/eip-0016.md). The necessity for these modifications emerges from several perceived limitations within Oracle Pool v1.0:
 
@@ -29,3 +30,5 @@ Version 2.0 of Oracle Pool aims to mitigate these issues. The main features and 
 - **Transferable Ballot Tokens**: Analogous to oracle tokens, ballot tokens can be freely transferred between public keys.
 
 For a detailed technical description and further understanding, refer to [EIP-0023 Oracle Pool 2.0](https://github.com/ergoplatform/eips/pull/41).
+
+> For those interested in setting up an ERG/XAU oracle pool in a testnet environment, we have created a comprehensive guide to walk you through the process. The guide provides detailed instructions, making it easy even for those relatively new to the field. Follow the link to access our [Bootstrap an ERG/XAU pool on testnet guide](https://github.com/ergoplatform/oracle-core/blob/develop/docs/how_to_bootstrap.md).
