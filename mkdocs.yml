@@ -183,6 +183,8 @@ nav:
           - Mining Incentives: uses/sigmausd/mining-incentives.md
           - Other Stablecoins: uses/sigmausd/comparison.md
         - DexyGold: eco/dexy.md
+        - SigmaGold: eco/siggold.md
+        - Hodlcoin: eco/hodlcoin.md
         - ChainCash: uses/chaincash.md
       - Lending:
         - uses/lending.md
