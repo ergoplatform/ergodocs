@@ -22,7 +22,7 @@ The Ergo P2P protocol includes a suite of network messages such as Get Peers, Pe
 
 In Ergo's P2P protocol, blocks and transactions are called "modifiers". Modifiers are transmitted between nodes as part of the network synchronization process. The Modifier Exchange process encompasses the protocols and systems in place to exchange this information efficiently and securely across the network.
 
-## [Synchronization](syncronisation.md)
+## [Synchronization](synchronisation.md)
 
 Ergo blockchain synchronization revolves around transitioning the state of modifiers from 'Unknown' to 'Held.' The states in between include 'Requested,' 'Received,' and 'Held.' During synchronization, different protocols come into play, such as the Inv protocol, which deals with the transmission and request of modifiers, and Headers synchronization, responsible for synchronizing the node's headers chain with the network. Further, Block Section synchronization ensures the alignment of block sections with the network. The 'DeliveryTracker' ensures the transition from the 'Requested' state to 'Received,' while the NodeViewHolder (NVH) handles the move from 'Received' to 'Held.' This process facilitates the seamless synchronization and updating of the Ergo blockchain.
 

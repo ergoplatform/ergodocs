@@ -22,7 +22,7 @@ ergo {
 scorex {
 
  network {
-    bindAddress = "0.0.0.0:9020"
+    bindAddress = "0.0.0.0:9022"
     nodeName = "ergo-testnet"
     #knownPeers = []
   }

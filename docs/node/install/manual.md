@@ -1,109 +1,122 @@
-# Manual Install
+# Ergo Full Node Manual Installation
 
-This guide is for installing a full node on a server. If you want a full node on your desktop, try [Satergo](https://satergo.com)
+This document provides a systematic process for the manual installation of an Ergo full node on a server. For desktop installation, the [Satergo](https://satergo.com) platform is recommended.
 
-## Running the node
+---
 
-Create a dedicated folder (such as `~/ergo`) for running the node and download the latest [Ergo client release](https://github.com/ergoplatform/ergo/releases/) `.jar` 
-
-> Note that instead of downloading the precompiled Ergo jar, you can clone the repository and compile the jar from the source using [SBT](https://www.scala-sbt.org/) by issuing the `sbt assembly` command. Alternatively, you can also use [Docker](/node/install/docker)
+The node uses Java so should work across all operating systems. You can even run on a [Raspberri Pi](pi.md). The only hardware requirement is ~20GB of space to store the chain and ~8GB of RAM for handling the sync.
 
 
 
-Create a configuration file `ergo.conf` in the same directory as the .jar with the following text
-```
+## 1. Initial Setup
+
+### 1.1 Acquire Ergo Client
+
+Initiate the process by establishing a designated folder (e.g., `~/ergo`) for the node operation and download the latest [Ergo client release](https://github.com/ergoplatform/ergo/releases/) `.jar` file. Alternatively, clone the Ergo repository and compile the `.jar` file from the source using [SBT](https://www.scala-sbt.org/) (`sbt assembly` command), or via [Docker](/node/install/docker).
+
+### 1.2 Configure Node
+
+Subsequently, create an `ergo.conf` configuration file in the same directory as the `.jar` file, containing the following:
+
+```bash
 ergo {
-	node {
-		mining = false
-	}
+    node {
+        mining = false
+    }
 }
 ```
 
-Then issue the following command to run the node for the first time.
+Launch the node with the command:
 
 ```bash
 java -jar -Xmx4G ergo-*.jar --mainnet -c ergo.conf
 ```
 
-> The `-Xmx4G` flag sets the max heap size for the JVM. `4-6G` is recommended depending on your memory allocation.  It is better to use more memory on heap`-Xmx4g` for initial syncing. `-Xmx1g` should be sufficient once the node is fully synced.
+See [this page](node-faq.md#java) for getting setup with java.
 
+* The `-Xmx4G` flag determines the JVM's max heap size; recommended setting is `4-6G` based on available memory. 
+* During the initial syncing process, allocate more memory using `-Xmx4g`. Upon completion of the syncing process, reduce this to `-Xmx1g`.
 
-The node will start syncing immediately after this. Wait for a few minutes for the API to start and go to the next step.
+Following the execution of this command, the node will commence syncing. Wait for the API initialization before proceeding to the subsequent step.
 
-> **Note:** You can use any name for the file instead of `ergo.conf`. All configuration parameters are to be passed through this file and you only need to rewrite parameters that you want to change from the default values. The above config file actually has the default values. 
+> **Note:** The filename `ergo.conf` can be modified as desired. This file is a repository for all configuration parameters, and only parameters differing from the default values need to be overwritten.
 
+---
 
+## 2. API Security
 
-## Securing the API
+### 2.1 Generate Secret Password
 
-We need to set a secret password to protect the API. In this example, we'll use `hello`, but **you must** use a different and strong secret.**
+To secure the API, set a unique and robust secret password (avoid using the demonstration secret `hello`).
 
-Navigate [127.0.0.1:9053/swagger#/utils/hashBlake2b](http://127.0.0.1:9053/swagger#/utils/hashBlake2b) and call the API to compute the `Blake2b` hash of your secret. 
+### 2.2 Compute Secret's Hash
 
-> **Please note that `127.0.0.1` is your local machine** and the .jar must be running for it to be available. 
+Use the API at [127.0.0.1:9053/swagger#/utils/hashBlake2b](http://127.0.0.1:9053/swagger#/utils/hashBlake2b) to compute your secret's `Blake2b` hash.
+
+> **Note:** Ensure the `.jar` file is actively running to access the API at `127.0.0.1`, which denotes your local machine.
 
 ![Compute Hash of secret](https://user-images.githubusercontent.com/23208922/69916676-ed233400-1483-11ea-8582-f61c38478d31.png)
 
-Copy the hash response, which we will place back in the `ergo.conf` file. 
+### 2.3 Update Configuration File
 
-As you can see `hello` corresponds to the `Blake2b` hash `324dcf027dd4a30a932c441f365a25e86b173defa4b8e58948253471b81b72cf`
+After obtaining the hash response, input it into the `ergo.conf` file. For instance, the `Blake2b` hash of `hello` is `324dcf027dd4a30a932c441f365a25e86b173defa4b8e58948253471b81b72cf`.
 
 ![response](https://user-images.githubusercontent.com/23208922/69916509-c3690d80-1481-11ea-869f-630cd59cc525.png)
 
-We then need to update the config file with API key hash
+Update the configuration file with the API key hash:
 
 ```bash
-	ergo {
-	  node {
-	    mining = false
-	  }
-	}
-	
-	scorex {
-	 restApi {
-	    ## Hex-encoded Blake2b256 hash of an API key. 
-	    ## Should be 64-chars long Base16 string.
-	    ## below is the hash of the string 'hello'
-	    ## replace with your actual hash 
-	    apiKeyHash = "324dcf027dd4a30a932c441f365a25e86b173defa4b8e58948253471b81b72cf"
-	  }
-	}
+ergo {
+  node {
+    mining = false
+  }
+}
+
+scorex {
+ restApi {
+    apiKeyHash = "324dcf027dd4a30a932c441f365a25e86b173defa4b8e58948253471b81b72cf"
+  }
+}
 ```
 
-Restart and your node should now be syncing and you should be able to access the API. 
+Restart the node to initiate syncing and enable API access.
 
+---
 
-## Check if the node is synced
+## 3. Node Synchronization Verification
 
-While the node is syncing, the panel will show "Active synchronization" (see the image below).
+During synchronization, the panel displays "Active synchronization".
 
 ![active synchronization](https://user-images.githubusercontent.com/23208922/71128146-94d58b80-2212-11ea-9010-5b61a91e8549.png)
 
-After the node is fully synced, the text will change to "Node is synced", as shown below.
+Upon completion of synchronization, the panel updates to "Node is synced".
 
 ![synced](https://user-images.githubusercontent.com/23208922/71301767-8da4ae00-23c9-11ea-8fc0-a92a9d78b821.png)
 
-You can also check this at [127.0.0.1:9053/info](http://127.0.0.1:9053/info) and compare to the latest block height given at [explorer.ergoplatform.com](https://explorer.ergoplatform.com/en/)
+Additional verification can be performed at [127.0.0.1:9053/info](http://127.0.0.1:9053/info) by comparing the block height to the latest block height at [explorer.ergoplatform.com](https://explorer.ergoplatform.com/en/).
 
-## Shutdown
+---
 
-To safely shut down the node, use the following command
+## 4. Shutdown Procedure
 
-```
+To safely terminate the node, use the following command:
+
+```bash
 curl -X POST "http://127.0.0.1:9053/node/shutdown" -H "api_key: hello"
 ```
 
-Running this command in a new terminal will let you spot any errors or warnings. 
+Monitor for potential issues using this command in a new terminal:
 
-```
+```bash
 tail -Fn+0 ergo.log | grep 'ERROR\|WARN'
 ```
 
+**Following Steps:** Proceed with [initialising your wallet](/node/wallet).
 
-**Next up,** [initialising your wallet](/node/wallet)
+---
 
-## Resources
+## 5. Resources
 
-- [Troubleshooting](/node/install/troubleshooting)
-- [FAQ](node-faq.md)
-- [Using the TestNet](/node/testnet)
+* [Troubleshooting Guide](/node/install/troubleshooting)
+* [Frequently Asked Questions (FAQ)](node-faq.md)
+* [Using the TestNet Tutorial](/node/testnet)

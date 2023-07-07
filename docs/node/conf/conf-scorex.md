@@ -85,7 +85,7 @@ network {
     nodeName = "ergo-node"
     appVersion = 5.0.1
     agentName = "ergoref"
-    bindAddress = "0.0.0.0:9020"
+    bindAddress = "0.0.0.0:9022"
     magicBytes = [2, 2, 2, 2]
     // declaredAddress details omitted for brevity...
     upnpEnabled = no

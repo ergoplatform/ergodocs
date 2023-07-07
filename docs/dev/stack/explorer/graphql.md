@@ -4,6 +4,24 @@
 GraphQL queries allow flexible data fetching, reducing over-fetching and under-fetching. [gql.ergoplatform.com](https://gql.ergoplatform.com) is a GraphQL server on top of Ergo Platform's explorer database schema.
 
 
+## Instances
+
+Public community/partner-maintained explorer instances with GraphQL support:
+
+- [gql.ergoplatform.com](https://gql.ergoplatform.com)
+- [explore.sigmaspace.io/api/graphql](https://explore.sigmaspace.io/api/graphql)
+- [graphql.erg.zelcore.io/](https://graphql.erg.zelcore.io/)
+- [sigmaexplorer.org/](https://sigmaexplorer.org/)
+
+## Testnet Instances
+
+- [gql-testnet.ergoplatform.com/](https://gql-testnet.ergoplatform.com/)
+
+## Resources
+
+- [Ergo GraphQL Github](https://github.com/capt-nemo429/ergo-graphql)
+
+
 ## Examples
 
 Play around with Apollo Studio on the GraphQL instance to explore the schema and make queries easily. 
@@ -244,20 +262,3 @@ mutation {
 
 In this mutation, we're submitting a transaction with a single input, data input, and output. For each of these, we fill in the necessary data according to the `SignedTransaction` input type in the schema.
 
-
-## Instances
-
-Public community/partner-maintained explorer instances with GraphQL support:
-
-- [gql.ergoplatform.com](https://gql.ergoplatform.com)
-- [explore.sigmaspace.io/api/graphql](https://explore.sigmaspace.io/api/graphql)
-- [graphql.erg.zelcore.io/](https://graphql.erg.zelcore.io/)
-- [sigmaexplorer.org/](https://sigmaexplorer.org/)
-
-## Testnet Instances
-
-- [gql-testnet.ergoplatform.com/](https://gql-testnet.ergoplatform.com/)
-
-## Resources
-
-- [Ergo GraphQL Github](https://github.com/capt-nemo429/ergo-graphql)

@@ -228,7 +228,7 @@ nav:
           - Trustless LETS: uses/lets/trustless-lets.md
 
     - Tokens:
-        - ICOs: uses/ico.md
+        - ICOs: uses/ergo-ico.md
         - Index Coins: uses/index_coins.md
         - PoW Tokens: uses/PoW_tokens.md
         - Perpetual Tokens: uses/perpetual.md
@@ -385,35 +385,22 @@ nav:
     - Interacting with Ergo:
       - Node:
         - node/install.md
-        - Install: 
-          - node/install.md
-          - Manual: 
-            - node/install/manual.md
-            - Troubleshooting: node/install/troubleshooting.md
-            - FAQ: node/install/node-faq.md
-            - Pi: node/install/pi.md
-            - Android: node/install/node-android.md
+        - Setup: 
+          - node/install/manual.md
+          - Troubleshooting: node/install/troubleshooting.md
+          - FAQ: node/install/node-faq.md
+          - Pi: node/install/pi.md
+          - Android: node/install/node-android.md
           - Docker: node/install/docker.md          
         - Testnet: 
           - node/testnet.md
           - Full Sync: node/testnet/testnet-full.md
           - CPU Mining: node/testnet/cpu-mining.md
-          - Your own chain: node/testnet/mine-your-own-chain.md
+          - Fork your own chain: node/testnet/mine-your-own-chain.md
           - Resources: node/testnet/testnet-resources.md
         #- Architecture: node/architecture.md
         
-        - Modes of Operation: 
-          - node/modes.md
-          - Full Node: 
-            - node/modes/full-node.md
-          - Light Modes: 
-            - node/modes/light-full-node.md
-            - Digest State: node/digest-state.md
-            - History Pruning: node/history-pruning.md
-            - Pruned Full Node: node/modes/pruned-full-node.md
-          - SPV: 
-            - node/modes/spv.md
-            - Light SPV: node/modes/light-spv-node.md
+        
   
         - Protocol: 
           - node/protocol.md
@@ -439,6 +426,18 @@ nav:
           - Swagger API: 
             - node/swagger.md
             - Indexed Node API: node/indexed-node.md
+          - Modes of Operation: 
+            - node/modes.md
+            - Full Node: 
+              - node/modes/full-node.md
+            - Light Modes: 
+              - node/modes/light-full-node.md
+              - Digest State: node/digest-state.md
+              - History Pruning: node/history-pruning.md
+              - Pruned Full Node: node/modes/pruned-full-node.md
+            - SPV: 
+              - node/modes/spv.md
+              - Light SPV: node/modes/light-spv-node.md
           - Configuration Files: 
             - application.conf: 
               - node/conf.md
@@ -469,6 +468,7 @@ nav:
     - Developer Tooling:
       - Programming Languages:
         - JVM: 
+          - dev/lang/jvm.md
           - Scala: dev/lang/scala.md
           - Java: dev/lang/java.md
           - Kotlin: dev/lang/kotlin.md

@@ -772,7 +772,7 @@ network {
     agentName = "ergoref"
 
     # Network address
-    bindAddress = "0.0.0.0:9020"
+    bindAddress = "0.0.0.0:9022"
 
     ########################
     # Connection settings  #
