@@ -1,3 +1,7 @@
+---
+tags:
+  - Data Model
+---
 # Understanding Blocks in Ergo
 
 Ergo operates with a block interval [set at two minutes](difficulty.md). Each block initially releases 75 Ergs, which are distributed among the miners and the Treasury. This arrangement is applicable for the first two years of operation. Starting from the second year, the release rate undergoes a decrease by 3.0 Ergs, followed by a consistent reduction of an additional 3.0 Ergs every three months. This systematic decrease was initially programmed to halt the emission eight years after Ergo's launch. However, following the introduction of [EIP-27](eip27.md), the emission period has been extended up until approximately the year 2045.

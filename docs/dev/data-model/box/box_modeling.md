@@ -1,3 +1,7 @@
+---
+tags:
+  - UTXO
+---
 # Exploring Ergo Box Design
 
 At the heart of a UTXO system are boxes. They serve as essential vessels carrying the value of a currency within a blockchain. The Ergo blockchain enhances this concept by equipping boxes with [registers](registers.md) that are protected by a contract.

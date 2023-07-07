@@ -609,11 +609,16 @@ nav:
       - mining/autolykos.md
       - Algorithm: 
         - mining/algorithm.md
-        - Difficulty Adjustment: mining/difficulty.md
         - Emission: mining/emission.md
+        - Difficulty Adjustment: mining/difficulty.md
         - Solution Verification: mining/solution-verification.md
       
-      - Storage Rent: mining/rent.md
+      - Storage Rent: 
+        - mining/rent.md
+        - Fees: mining/rent/rent-fees.md
+        - Tokens: mining/rent/rent-tokens.md
+        - Spending: mining/rent/rent-spending.md
+        - State Growth: mining/rent/rent-paper.md
       - ASIC Resistance: mining/asic.md     
       - Resources:
         - mining/mining-resources.md

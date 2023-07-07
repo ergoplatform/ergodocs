@@ -1,3 +1,8 @@
+---
+tags:
+  - Privacy
+  - Decision Diffie-Hellman
+---
 # Understanding ZeroJoin
 
 Mixers serve as fundamental tools in the process of restoring fungibility for digital tokens. In Ergo, the first such mechanism implemented is known as ZeroJoin. It's constructed on the foundation of ring signatures and a proof of knowledge for a Diffie-Hellman tuple, defined as *(for publicly known g, h, u, v, there exists w, such as g&w == u and h<sup>w</sup> == v)*.

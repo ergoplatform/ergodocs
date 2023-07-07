@@ -1,3 +1,8 @@
+---
+tags:
+  - Data Model
+---
+
 # Tokens on Ergo
 
 In the Ergo ecosystem, custom tokens are treated as first-class citizens. These tokens are stored in the `R2` [register](registers.md) of a [box](box.md), which holds pairs of `tokenId` and `amount`.
