@@ -2,48 +2,38 @@ $$
 \newcommand{\peers}{\mathcal{P}}
 $$
 
-# Peer management protocol
+# Peer Management Protocol
 
-A *peer* is a pair `addr`, `port`, where `addr` is its IPv4/6 address and `port` is its port.
+## Definitions
 
-A *peer management structure* is a tuple (G, B, C), where G is the set of *good peers*, B is the set of *banned peers, and C is the set of *connected peers*, satisfying the following conditions:
+A **peer** is defined as a pair consisting of `addr` and `port`, where `addr` refers to its IPv4/6 address, and `port` denotes its port number.
 
-- $G \cap B = \emptyset$,
-- $C \subseteq G$,
-- $G \subseteq \peers$,
-- $B \subseteq \peers$.
+A **peer management structure** is a tuple, (G, B, C), in which G represents the set of *good peers*, B stands for the set of *banned peers*, and C signifies the set of *connected peers*. This structure adheres to the following conditions:
 
-## Peers penalization and blacklisting
+- The intersection of G and B is an empty set i.e., $G \cap B = \emptyset$.
+- The set C is a subset of G i.e., $C \subseteq G$.
+- The set G is a subset of all peers i.e., $G \subseteq \peers$.
+- The set B is a subset of all peers i.e., $B \subseteq \peers$.
 
-A *penalty* is a tuple `descr`, `score`, where `descr` is a misbehaviour description, and `score` is a penalty score.
+## Peer Penalization and Blacklisting
 
-A _penalty score_ defines how bad a concrete kind of misbehaviour is.
+A **penalty** is a tuple `descr`, `score`, where `descr` describes misbehaviour, and `score` is the penalty score that signifies the degree of misbehaviour.
 
-Penalties are divided into four categories:
+There are four categories of penalties:
 
+* **NonDeliveryPenalty**: This penalty is applied when a peer fails to deliver the requested modifier within the stipulated time frame.
+* **MisbehaviorPenalty**: This penalty comes into play when a peer delivers an invalid modifier.
+* **SpamPenalty**: This penalty is applied when a peer delivers a non-requested modifier.
+* **PermanentPenalty**: This penalty is levied on peers who deviate from the actual network protocol.
 
-* **NonDeliveryPenalty** - applied when a peer did not deliver the requested modifier in time
-* **MisbehaviorPenalty** - applied when some modifier delivered by a peer appeared to be invalid
-* **SpamPenalty** - applied when a peer-delivered non-requested modifier
-* **PermanentPenalty** - applied to peers deviating from an actual network protocol
+When a penalty is imposed, the penalized peer is added to the penalty book. A **penalty book** is a mapping `ip` -> (`score, `ts), where `ip` represents a peer IP address, `score` signifies the accumulated penalty score, and `ts` is the timestamp of when the peer was last penalized.
 
+The penalties of type `NonDeliveryPenalty`, `MisbehaviorPenalty`, and `SpamPenalty` are not imposed on the same peer repetitively within a specified safe interval. A **safe interval** refers to the delay between the application of penalties.
 
-Once some penalty is applied, a penalised peer is added to the penalty book.
+When a peer accumulates a critical penalty score, it gets added to the blacklist. A **blacklist** is a mapping `ip` -> `ts`, where `ip` stands for a peer IP address and `ts` represents the timestamp when a peer is banned.
 
-A *penalty book* is a mapping `ip` -> (`score, `ts), where `ip` is a peer IP address, `score` is an accumulated penalty score and `ts` is a timestamp when a corresponding peer was penalised last time.
-
-Penalties of type `NonDeliveryPenalty, `MisbehaviorPenalty, `SpamPenalty` are not applied to the same peer repeatedly within a safe interval.
-
-A *safe* interval is a delay between penalties application.
-
-Once some peer accumulates a critical penalty score, it is added to the blacklist.
-
-A *blacklist* is a mapping `ip` -> `ts`, where `ip` is a peer IP address and `ts` is a timestamp a peer is banned till.
-
-The `PermanentPenalty` is applied immediately and leads to a permanent ban of a peer
+The application of `PermanentPenalty` is immediate and results in the permanent ban of the peer.
 
 ## Peer Discovery
 
-A peer discovery protocol requests new peers from a source and inserts them into the set of good peers G.
-
-Generally, a source may be another peer, a trusted central server or an untrusted communication channel (e.g. IRC, Twitter, ...).
+The peer discovery protocol seeks new peers from a source and introduces them to the set of good peers, G. The source could be another peer, a trusted central server, or an untrusted communication channel such as IRC, Twitter, etc.
