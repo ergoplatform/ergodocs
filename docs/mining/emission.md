@@ -78,3 +78,5 @@ The [Ergo Foundation](https://ergoplatform.org/en/foundation/) is a community-dr
 
 
 To fund development, promotion, events, and any other activities which may advance the platform, Ergo has in place a Treasury, which will receive **4.43%** of the Ergs released during emission. During the first two years post‐mainnet launch, the Treasury received 7.5 Ergs per block. 
+
+For more information see the latest [transparency report](ergo-foundation-2022.md)

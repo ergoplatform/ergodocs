@@ -1,3 +1,8 @@
+---
+tags:
+  - EIPs
+---
+
 # EIP-0021: Genuine Token Verification
 
 ## Description 

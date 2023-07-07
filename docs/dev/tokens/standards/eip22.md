@@ -1,3 +1,8 @@
+---
+tags:
+  - EIPs
+---
+
 # EIP-0022: Auction Contract
 
 > 🔗 From [EIP-0022:](https://github.com/ergoplatform/eips/blob/master/eip-0022.md)

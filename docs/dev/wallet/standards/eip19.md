@@ -1,3 +1,8 @@
+---
+tags:
+  - EIPs
+---
+
 # EIP-0019 Cold Wallet: an interaction protocol between Hot and Cold mobile wallets
 
 > 🔗 From [EIP-0019](https://github.com/ergoplatform/eips/blob/master/eip-0019.md)

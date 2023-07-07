@@ -1,3 +1,8 @@
+---
+tags:
+  - EIPs
+---
+
 # EIP-0004: Asset Standard
 
 > 🔗 From [EIP-0004:](https://github.com/ergoplatform/eips/blob/master/eip-0004.md)

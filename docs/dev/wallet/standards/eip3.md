@@ -1,3 +1,8 @@
+---
+tags:
+  - EIPs
+---
+
 # EIP-0003: Deterministic Wallet Standard
 
 > 🔗 From [EIP-0003](https://github.com/ergoplatform/eips/blob/master/eip-0003.md)

@@ -1,3 +1,8 @@
+---
+tags:
+  - EIPs
+---
+
 # EIP-0024: Artwork Contract
 
 > 🔗 From [EIP-0024:](https://github.com/ergoplatform/eips/blob/master/eip-0024.md)

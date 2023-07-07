@@ -1,3 +1,8 @@
+---
+tags:
+  - EIPs
+---
+
 # Tweaking Difficulty Adjustment Algorithm
 
 

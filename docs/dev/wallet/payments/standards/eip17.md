@@ -1,3 +1,7 @@
+---
+tags:
+  - EIPs
+---
 # Proxy contracts
 
 > 🔗 From [EIP-0017](https://raw.githubusercontent.com/ergoplatform/eips/master/eip-0017.md)
