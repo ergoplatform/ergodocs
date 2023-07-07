@@ -7,14 +7,6 @@ tags:
 
 Ergo utilizes the extended-UTXO (eUTXO) model, based on Bitcoin's original UTXO model but with enhanced capabilities that enable more expressive smart contracts. This section explores the advantages and features of eUTXO.
 
-## eUTXO and Smart Contracts
-
-In the eUTXO model, Ergo allows smart contracts to utilize UTXOs as data inputs without modifying them. This means that nodes primarily verify transactions rather than balances. In comparison, Ethereum's Account model requires nodes to check all accounts to validate the system.
-
-By leveraging eUTXO, Ergo enables parallel computation and facilitates non-custodial atomic swaps. This makes it easier to perform complex operations securely and efficiently.
-
-Furthermore, Ergo's Multi-Stage UTXO model, as detailed in a peer-reviewed paper, enables the implementation of Turing-complete smart contracts. You can find more information on this topic in [this paper](https://fc18.ifca.ai/bitcoin/papers/bitcoin18-final18.pdf).
-
 ## Benefits of UTXO
 
 The choice to build upon UTXO brings several significant advantages to Ergo:
@@ -25,6 +17,16 @@ The choice to build upon UTXO brings several significant advantages to Ergo:
 - **Transaction Cost Predictability**: In Ergo, the on-chain action is primarily focused on validating smart contracts, resulting in significantly lower transaction costs. Moreover, the transaction costs are predictable, eliminating the need for gas-like mechanisms found in other platforms.
 
 By leveraging the advantages of UTXO and extending its capabilities with eUTXO, Ergo provides a powerful and efficient platform for building and executing smart contracts.
+
+
+
+## eUTXO and Smart Contracts
+
+In the eUTXO model, Ergo allows smart contracts to utilize UTXOs as data inputs without modifying them. This means that nodes primarily verify transactions rather than balances. In comparison, Ethereum's Account model requires nodes to check all accounts to validate the system.
+
+By leveraging eUTXO, Ergo enables parallel computation and facilitates non-custodial atomic swaps. This makes it easier to perform complex operations securely and efficiently.
+
+Furthermore, Ergo's Multi-Stage UTXO model, as detailed in a peer-reviewed paper, enables the implementation of Turing-complete smart contracts. You can find more information on this topic in [this paper](https://fc18.ifca.ai/bitcoin/papers/bitcoin18-final18.pdf).
 
 
 ## Resources

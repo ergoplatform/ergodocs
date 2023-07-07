@@ -14,12 +14,12 @@ Ensuring economic freedom for ordinary people through decentralized, private and
   },
   {
     "title": "Contributing",
-    "content": "Participate in decentralised finance!",
+    "content": "Ergo operates an open model where contributions from all are welcomed. Participate in decentralised finance!",
     "url": "../../contribute"
   },
   {
     "title": "FAQ",
-    "content": "Frequently Asked Questions",
+    "content": "Check out the Frequently Asked Questions",
     "url": "../../faq"
   },
 
@@ -27,6 +27,8 @@ Ensuring economic freedom for ordinary people through decentralized, private and
 ]
 
 ::/cards::
+
+> *"Creating financial contracts on the blockchain isn't just about the functionality; it's about making that functionality safe, accessible, and powerful."* 
 
 ## Core Components
 
@@ -78,8 +80,5 @@ Ensuring economic freedom for ordinary people through decentralized, private and
 ]
 
 ::/cards::
-
-> *"Creating financial contracts on the blockchain isn't just about the functionality; it's about making that functionality safe, accessible, and powerful."* 
-
 
 
