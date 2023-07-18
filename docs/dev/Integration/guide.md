@@ -122,6 +122,9 @@ You can use [*ergo-bootstrap*](https://github.com/ergoplatform/ergo-bootstrap) t
 See [this page](/node/testnet) for information on the public testnets.
 
 
+### Node
+
+There is a public node available at [213.239.193.208:9053](http://213.239.193.208:9053). If a redundancy is needed please contact us at team@ergoplatform.org or via the established group chat for access. A dynamic list of available public nodes can be found at [api.tokenjay.app/peers/list](https://api.tokenjay.app/peers/list)
 
 ## Troubleshooting
 
