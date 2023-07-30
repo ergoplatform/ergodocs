@@ -111,20 +111,25 @@ your private Explorer or a node with open API (`POST` to `http://{node_ip}:9053/
 
 ## Infrastructure
 
+### Node
+
+There is a public node available at [213.239.193.208:9053](http://213.239.193.208:9053). If a redundancy is needed please contact us at team@ergoplatform.org or via the established group chat for access. A dynamic list of available public nodes can be found at [api.tokenjay.app/peers/list](https://api.tokenjay.app/peers/list)
+
+### Testnet
+
+See [this page](/node/testnet) for information on the public testnets.
+
 ### Explorer
 
 There is a public explorer hosted at [explorer.ergoplatform.com](https://explorer.ergoplatform.com/)
 
 You can use [*ergo-bootstrap*](https://github.com/ergoplatform/ergo-bootstrap) to easily install the Explorer backend (and not rely on public ones). 
 
-### Testnet
+### GQL 
 
-See [this page](/node/testnet) for information on the public testnets.
+GraphQL queries allow flexible data fetching, reducing over-fetching and under-fetching. [gql.ergoplatform.com](https://gql.ergoplatform.com) is a GraphQL server on top of Ergo Platform's explorer database schema.
 
-
-### Node
-
-There is a public node available at [213.239.193.208:9053](http://213.239.193.208:9053). If a redundancy is needed please contact us at team@ergoplatform.org or via the established group chat for access. A dynamic list of available public nodes can be found at [api.tokenjay.app/peers/list](https://api.tokenjay.app/peers/list)
+[explore.sigmaspace.io/api/graphql](https://explore.sigmaspace.io/api/graphql) is the most reliable instance ATM
 
 ## Troubleshooting
 
