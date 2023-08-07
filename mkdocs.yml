@@ -304,7 +304,6 @@ nav:
       - Box: 
         - dev/data-model/box.md
         - Registers: dev/data-model/box/registers.md
-        - Box Modelling: dev/data-model/box/box_modeling.md
         - Assets: 
           - Tokens:
             - dev/data-model/box/tokens.md
@@ -325,6 +324,7 @@ nav:
             - Geniune Token Verification: dev/tokens/standards/eip21.md
             - Auction Contract: dev/tokens/standards/eip22.md
             - Artwork Contract: dev/tokens/standards/eip24.md
+        - Modelling: dev/data-model/box/box_modeling.md
       - Addresses: 
         - dev/wallet/address.md
         - Types: dev/wallet/address/address_types.md
@@ -434,7 +434,7 @@ nav:
               - node/modes/full-node.md
               - Pruned Full Node: 
                 - node/modes/pruned-full-node.md
-                - Implementation: node/modes/pruned-impl.md
+                - Implementation: node/modes/pruned/pruned-impl.md
             - Light Modes: 
               - node/modes/light-full-node.md
               - Digest State: node/digest-state.md

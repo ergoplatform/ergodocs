@@ -55,3 +55,7 @@ Ergo serves as the foundation for various decentralized finance (DeFi) applicati
 These DeFi applications benefit from Ergo's robust security, flexibility, and scalability, enabling users to engage in decentralized financial activities with confidence.
 
 The KYA model in Ergo, coupled with the research paper's insights, contributes to a better understanding of the assumptions and security considerations underlying cryptocurrency and DeFi protocols. It empowers users to make informed decisions and participate in the ecosystem more securely.
+
+## More Information
+
+See this [detailed forum post]([Know Your Assumptions (KYA) An Alternative to Traditional Know-Your-Customer (KYC) Practices](https://www.ergoforum.org/t/know-your-assumptions-kya-an-alternative-to-traditional-know-your-customer-kyc-practices/4409) for an overview and discussion on KYA. 
