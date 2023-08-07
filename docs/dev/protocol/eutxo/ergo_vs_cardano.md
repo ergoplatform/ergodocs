@@ -28,14 +28,16 @@ Both Ergo and Cardano's models support non-fungible assets and complex types of 
 
 ## Minting Policies on Ergo and Cardano
 
-Minting is the process of creating new tokens on a blockchain network, and it is a crucial feature that allows for the creation of native assets, such as NFTs, on the blockchain. Both Ergo and Cardano offer native asset support through their respective eUTXO models, but they differ in their approach to minting and issuing tokens.
+Minting is the process of creating new tokens on a blockchain network, and it is a crucial feature that allows for the creation of native assets, such as NFTs. Both Ergo and Cardano offer native asset support through their respective eUTXO models, but they differ in their approach to minting and issuing tokens.
 
 
 ### Cardano's Minting Policy
+
 Cardano's minting policy defines each native asset with a unique policy ID attached permanently, which stems from the policy script. The policy script defines other attributes, such as the asset's name and amount/value. Asset names are not unique, so Cardano NFTs must be identified by the policy ID, which can be publicly available to differentiate fraudulent/duplicate NFTs from the original tokens. Cardano's minting policy offers a simpler approach to token issuance and is suitable for assets with fewer attributes. It ensures that NFTs are unique and easily identifiable through the policy ID.
 
 
 ### Ergo's Minting Policy
+
 Ergo's minting policy is flexible and supports a wide range of token attributes, making it suitable for complex assets such as NFTs. Developers can create custom policies to define the conditions and rules for creating and managing tokens, including NFTs with various attributes and properties. Ergo's minting policy also supports off-chain data input, which can trigger conditions for transactions to be executed or prevent them from being included in blocks.
 
 Ergo's minting policy is defined by the [Ergo Improvement Proposal (EIP) 0024](eip24.md), which offers two design versions for artwork issuance: V1 and V2. Both designs involve two important boxes in the issuance process: the issuance box and the issuer box. The main difference between V1 and V2 lies in the issuer box.
@@ -50,7 +52,7 @@ In terms of tangible examples, Ergo's minting policy allows for more complex NFT
 
 Ergo and Cardano handle global state differently in terms of their scripting languages and transaction validation. Ergo uses ErgoScript, designed as a call-by-value, higher-order functional language without recursion. ErgoScript defines a guarding proposition for a coin as a logic formula that combines predicates over a context and cryptographic statements provable via Σ-protocols with AND, OR, k-out-of-n connectives. 
 
-While ErgoScript is not inherently Turing complete, it is possible to achieve Turing completeness in Ergo by using transaction trees. A transaction tree is a structure where transactions are organized into a tree, with each transaction referencing its parent transaction(s). This allows for complex, multi-step computations to be executed across multiple transactions, effectively making the Ergo platform Turing complete.
+While ErgoScript is not inherently Turing complete, it is possible to achieve Turing completeness in Ergo by using transaction trees as outlined in this [peer reviewed paper](https://arxiv.org/pdf/1806.10116v1.pdf). A transaction tree is a structure where transactions are organized into a tree, with each transaction referencing its parent transaction(s). This allows for complex, multi-step computations to be executed across multiple transactions, effectively making the Ergo platform Turing complete.
 
 By organizing transactions in this way, developers can create more complex and flexible smart contracts on the Ergo platform, similar to those written in Cardano's Plutus language. However, it is important to note that this method requires more manual construction of transaction structures and may not be as intuitive as using a Turing-complete language like Plutus.
 
@@ -134,3 +136,6 @@ Ergo and Cardano's ledger models have similarities due to their shared use of th
 - [explorer](explorer.md)
 
 
+### Mithril vs NiPoPoWs
+
+- [NiPoPoW and Mithril](youtube.com/watch?v=tXHids3WAb4) from *PG: Blockchain & Deep Learning* on YouTube
