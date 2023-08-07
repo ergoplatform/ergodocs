@@ -18,6 +18,8 @@ This mode is similar to Ethereum protocol clients' *fast-sync* in Geth or Grothe
 
 ## Enabling
 
+> Please note, that you cannot restore an old wallet with a pruned node, your best option is to create a new wallet and transfer funds across.
+
 Add the following `utxo` and `nipopow` sections to your node configuration to enable UTXO Set Snapshots. 
 
 ```conf
