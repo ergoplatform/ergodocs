@@ -26,7 +26,7 @@ This page contains links to documents with a general overview of Ergo platform, 
 - [Revisiting Difficulty Control for Blockchain Systems](https://eprint.iacr.org/2017/731.pdf)
 - [Storage Rent](rent.md): [A Systematic Approach To Cryptocurrency Fees](https://fc18.ifca.ai/bitcoin/papers/bitcoin18-final18.pdf)
 - [ZeroJoin: Combining ZeroCoin and CoinJoin](https://eprint.iacr.org/2020/560.pdf)
-
+- [Soft Power: Upgrading Chain Macroeconomic Policy Through Soft Forks](https://eprint.iacr.org/2021/577.pdf)
 
 ## Post-Mainnet
 

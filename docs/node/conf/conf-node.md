@@ -91,3 +91,19 @@ The `checkpoint` setting allows you to specify an optional individual checkpoint
 adProofsSuffixLength = 114688 // 112k
 ```
 The `adProofsSuffixLength` setting specifies the length of the `ADProofs` suffix dumped during bootstrapping.
+
+## UTXO Bootstrap
+```conf
+utxoBootstrap = false
+storingUtxoSnapshots = 2
+p2pUtxoSnapshots = 2
+```
+The `utxoBootstrap` setting, if set to true, allows the node to download and apply UTXO set snapshot and full-blocks after that. `storingUtxoSnapshots` sets the number of UTXO set snapshots to store, 0 means that they are not stored at all. `p2pUtxoSnapshots` sets the number of UTXO set snapshots for a height with the same id we need to find in the p2p network in order to start downloading it.
+
+## NiPoPoW Bootstrap
+```conf
+nipopowBootstrap = false
+p2pNipopows = 2
+nipopowSuffix = 10
+```
+The `nipopowBootstrap` setting, if set to true, allows the node to download the Proof of Proof of Work (NiPoPoW) on node bootstrap. `p2pNipopows` sets the number of different proofs we are downloading from other peers and comparing with each other, before choosing the best one. `nipopowSuffix` sets the minimal suffix size for NiPoPoW proof.

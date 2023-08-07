@@ -432,13 +432,14 @@ nav:
             - node/modes.md
             - Full Node: 
               - node/modes/full-node.md
-            - Light Modes: 
-              - node/modes/light-full-node.md
-              - Digest State: node/digest-state.md
-              - History Pruning: node/history-pruning.md
               - Pruned Full Node: 
                 - node/modes/pruned-full-node.md
                 - Implementation: node/modes/pruned-impl.md
+            - Light Modes: 
+              - node/modes/light-full-node.md
+              - Digest State: node/digest-state.md
+              - blocksToKeep: node/history-pruning.md
+              - Technical Details: node/modes/light-techworkflow.md
             - SPV: 
               - node/modes/spv.md
               - Light SPV: node/modes/light-spv-node.md
