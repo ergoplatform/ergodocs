@@ -2,6 +2,8 @@
 
 Ergo is a forward-thinking, proof-of-work smart contract platform designed to bring innovative financial interaction models to life. This platform is supported by a robust and secure scripting language, an array of potent zero-knowledge proofs, and a foundation built on the best principles and research in cryptography and blockchain technology. 
 
+Check out our [Monthly Wrap-Ups on Substack](https://substack.com/@ergoplatform) to catch up on the latest developments.
+
 ## Understanding Ergo's Objectives
 
 ### Research-oriented, Practical Focus
