@@ -1,3 +1,10 @@
+---
+tags:
+  - Sharding
+  - Sub Block Confirmation Protocols
+  - Microblocks
+---
+
 # Layer 1 (On-chain)
 
 Layer 1 signifies the bedrock protocol layer of a blockchain system. This base layer handles fundamental functions including transaction processing, consensus mechanisms, and the implementation of security protocols.
@@ -13,7 +20,7 @@ Ergo's Layer 1 paves the way for enhancing scalability through techniques such a
 
 **Sharding** segregates the blockchain database into smaller partitions known as 'shards.' Each shard is equipped with the functionality to independently process transactions and smart contracts. By facilitating the parallel processing of several transactions, this technique considerably enhances the scalability of a blockchain. While not currently integrated into Ergo, sharding represents a promising direction for future development.
 
-For a more detailed study of sharding, consider the paper [*' On the Security and Performance of Blockchain Sharding'*](https://eprint.iacr.org/2021/1276). You can also explore this page on [sharding and atomic composability on Ergo](atomic-composability/#sharding-and-atomic-composability) for more context.
+For a more detailed study of sharding, consider the paper [*' On the Security and Performance of Blockchain Sharding'*](https://eprint.iacr.org/2021/1276). You can also explore this page on [sharding and atomic composability on Ergo](../atomic-composability/#sharding-and-atomic-composability) for more context.
 
 ### Sub-Block Confirmation Protocols and Micro Blocks
 

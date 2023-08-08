@@ -1,11 +1,12 @@
 ---
 tags:
   - JavaScript
+  - TypeScript
 ---
 
-# Javascript
+# JavaScript & TypeScript
 
-The combination of Fleet and Sigma.JS provide a similar level of functionality to [AppKit](appkit.md)
+The combination of Fleet and Sigma.JS will provide a similar level of functionality to [AppKit](appkit.md)
 
 ## Frameworks
 
@@ -29,9 +30,29 @@ The combination of Fleet and Sigma.JS provide a similar level of functionality t
   },
   {
     "title": "sigma-rust",
-    "content": "Rust port of the sigmastate-interpreter",
+    "content": "Interact with a WebAssembly library using JS/TS bindings",
     "url": "../../stack/sigma-rust"
   },
+
+]
+
+::/cards::
+
+## Bindings
+
+::cards::
+
+[
+  {
+    "title": "ergo-lib-wasm-browser",
+    "content": "",
+    "url": "../../stack/fleet"
+  },
+  {
+    "title": "ergo-lib-wasm-nodejs",
+    "content": "",
+    "url": ""
+  }
 
 ]
 
@@ -51,7 +72,22 @@ The combination of Fleet and Sigma.JS provide a similar level of functionality t
     "title": "🔗 dApp Development Course",
     "content": "",
     "url": "https://www.youtube.com/watch?v=uC6QO3I4m8o&list=PLzY-irO3z3G8FVDifned2NMFc-PgQqnny"
-  }
+  },
+  {
+    "title": "📹 Video Tutorial",
+    "content": "[NightOwl dApp Connector](dApp.md) React Package",
+    "url": "https://twitter.com/NightOwlCasino/status/1529452399475179520"
+  },
+  {
+    "title": "Address Generation Demo",
+    "content": "using sigma-rust and TypeScript",
+    "url": "https://github.com/ergoplatform/sigma-rust/blob/develop/bindings/ergo-lib-wasm/examples/address-generation-demo/README.md"
+  },
+  {
+    "title": "Create Transaction Demo",
+    "content": "using sigma-rust and TypeScript",
+    "url": "https://github.com/ergoplatform/sigma-rust/blob/develop/bindings/ergo-lib-wasm/examples/create-transaction-demo/README.md"
+  },
 
 ]
 

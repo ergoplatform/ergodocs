@@ -44,9 +44,7 @@ Implement a mechanism for secure and efficient communication between shards, ena
 
 #### Locking mechanisms
 
-Introduce locking
-
- mechanisms to prevent double-spending and fraud during cross-shard transactions. Temporarily locking involved assets until the transaction completes helps maintain atomic composability.
+Introduce locking mechanisms to prevent double-spending and fraud during cross-shard transactions. Temporarily locking involved assets until the transaction completes helps maintain atomic composability.
 
 #### Two-phase commit protocols
 

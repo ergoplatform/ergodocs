@@ -470,6 +470,7 @@ nav:
         - Oracle-Core: dev/oc/oracle.md
         - Off-Chain Bots: dev/oc/dex_bots.md
         - Rust Utilities: dev/oc/ergo_utilities.md
+        - Plasma: dev/lib/plasma.md
     - Developer Tooling:
       - Programming Languages:
         - JVM: 
@@ -516,7 +517,7 @@ nav:
         
       - Libaries:
         - dev/libraries.md
-        - GetBlok Plasma: dev/lib/plasma.md
+        - Plasma: dev/lib/plasma.md
         - Scrypto: dev/lib/scrypto.md
         - EIP12-Types: dev/lib/eip12-types.md
         - SigmaJS: dev/lib/sigmajs.md
@@ -526,12 +527,12 @@ nav:
         - sigma-rust: dev/stack/sigma-rust.md
         
       #- Bookmarks: dev/start/resources.md
-    - Smart Contracts:
-      - dev/scs/index.md
-      - ErgoScript: 
+
+    - ErgoScript: 
         - dev/scs/ergoscript.md
         - Quick Primer: 
           - dev/scs/ergoscript-primer.md
+          - Paradigm: dev/scs/index.md
           - Key Concepts: dev/scs/ergoscript/ergoscript-key-concepts.md
           - Context Claims: uses/context-claims.md
           - Examples: 
@@ -577,33 +578,34 @@ nav:
             - CLI Compiler: dev/stack/compiler.md
           - Debugging: dev/scs/debugging.md
           - FlowCards: dev/scs/flowcards.md
-      - ErgoTree: 
-        - dev/scs/ergotree.md
-        #- Introduction: dev/scs/ergotree/ergotree-intro.md
-        - As a Language: dev/scs/ergotree/ergotree-lang.md
-        - Typing: dev/scs/ergotree/typing.md
-        - Evaluation: dev/scs/ergotree/evaluation.md
-        - Serialization: dev/scs/ergotree/serialization.md
-        - Predefined Types: dev/scs/ergotree/types.md
-        - Predefined Functions: dev/scs/ergotree/functions.md
-        - Encoding: dev/scs/ergotree/encoding.md
-        - Script Validation: dev/scs/ergotree/script-validation.md
-        - Script Optimisation: dev/scs/ergotree/script-optimisation.md
-        - Templates: dev/scs/ergotree/ergotree-templates.md
-      - AVL Trees: dev/protocol/avl.md
-        
+        - ErgoTree: 
+          - dev/scs/ergotree.md
+          #- Introduction: dev/scs/ergotree/ergotree-intro.md
+          - As a Language: dev/scs/ergotree/ergotree-lang.md
+          - Typing: dev/scs/ergotree/typing.md
+          - Evaluation: dev/scs/ergotree/evaluation.md
+          - Serialization: dev/scs/ergotree/serialization.md
+          - Predefined Types: dev/scs/ergotree/types.md
+          - Predefined Functions: dev/scs/ergotree/functions.md
+          - Encoding: dev/scs/ergotree/encoding.md
+          - Script Validation: dev/scs/ergotree/script-validation.md
+          - Script Optimisation: dev/scs/ergotree/script-optimisation.md
+          - Templates: dev/scs/ergotree/ergotree-templates.md
+        - AVL Trees: 
+          - dev/protocol/avl.md
+          - Plasma: dev/lib/plasma.md
 
-      - Multi-Stage Protocols: 
-        - dev/scs/multi.md
-        - Transaction Chains: dev/scs/tx/tx-chains.md
-        - Transaction Trees: dev/scs/tx/tx-tree.md
-        - Transaction Graphs: dev/scs/tx/tx-graphs.md
-        - Context Enrichment: dev/scs/tx/context-enrichment.md
-        - Examples:
-          - Reversible Address: dev/scs/tx/reversible-address.md
-          - Rock/Paper/Scissors: dev/scs/tx/rock-paper-scissor.md
-          - ICO: dev/scs/tx/ico.md
-      #- Data Inputs: dev/scs/data-inputs.md
+        - Multi-Stage Protocols: 
+          - dev/scs/multi.md
+          - Transaction Chains: dev/scs/tx/tx-chains.md
+          - Transaction Trees: dev/scs/tx/tx-tree.md
+          - Transaction Graphs: dev/scs/tx/tx-graphs.md
+          - Context Enrichment: dev/scs/tx/context-enrichment.md
+          - Examples:
+            - Reversible Address: dev/scs/tx/reversible-address.md
+            - Rock/Paper/Scissors: dev/scs/tx/rock-paper-scissor.md
+            - ICO: dev/scs/tx/ico.md
+        #- Data Inputs: dev/scs/data-inputs.md
        
       
           

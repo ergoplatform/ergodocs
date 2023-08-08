@@ -1,4 +1,13 @@
-# Unraveling Layer 2 Solutions (Off-Chain)
+---
+tags:
+  - Plasma
+  - NIPoPoWs
+  - Lightning
+  - Rollups
+  - Hydra
+---
+
+# Layer 2 Solutions (Off-Chain)
 
 Layer 2 refers to a supplementary protocol or framework constructed over a [Layer 1](layer1.md) blockchain protocol. The primary objective of Layer 2 solutions is to augment the underlying blockchain's efficiency, scalability, and capabilities by enabling *off-chain* transactions or computations.
 

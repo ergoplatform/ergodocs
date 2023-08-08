@@ -1,8 +1,6 @@
 # Browser
 
-There are a couple of options developers can pick from to interact with the *user* in browser. 
-
-You will first need to decide if you want to develop using JavaScript or Rust. 
+There are a couple of options developers can pick from to interact with the user in browser. You will first need to decide if you want to develop using JavaScript or Rust. You'll also have to decide whether you want to integrate the dApp connector or ErgoPay.
 
 ## Platform
 
@@ -11,14 +9,14 @@ You will first need to decide if you want to develop using JavaScript or Rust.
 
 [
   {
-    "title": "JS",
+    "title": "JS/TS",
     "content": "Frontend development with JavaScript, TypeScript",
     "image": "/assets/img/dev-grid/js.png",
     "url": "../../lang/js"
   },
   {
     "title": "Rust",
-    "content": "Sigma Rust can be used in front-end development with...",
+    "content": "Sigma Rust can be used in front-end development",
     "image": "/assets/img/dev-grid/rust.png",
     "url": "../../lang/rust"
 
@@ -41,12 +39,12 @@ You will first need to decide if you want to develop using JavaScript or Rust.
 [
   {
     "title": "ErgoPay",
-    "content": "",
+    "content": "Ergo's dApp connector for non-web wallet applications",
     "url": "../../wallet/payments/ergopay/ergo-pay/"
   },
   {
     "title": "dApp Connector",
-    "content": "",
+    "content": "For web-based wallets (Nautilus/SAFEW)",
     "url": "../../wallet/payments/dApp/"
 
   }
@@ -54,12 +52,3 @@ You will first need to decide if you want to develop using JavaScript or Rust.
 
 ::/cards::
 
-
-
-## Resources
-
-
-- [Ergo-Raffle-Bot](https://github.com/zkastn/ergo-raffle-bot) Github
-- [ErgoScript.js](https://www.youtube.com/watch?v=_jwMI8M_vrs)
-- The Ergo Raffle [documentation](https://github.com/ErgoRaffle/raffle-documentation) provides a detailed description of their implmenetion. 
-- [hypo10use/quid-games](https://github.com/hypo10use/quid-games) (Angular)
