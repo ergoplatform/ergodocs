@@ -124,9 +124,10 @@ nav:
       - Layer 0: dev/protocol/scaling/layer0.md
       - Layer 1: dev/protocol/scaling/layer1.md
       - Layer 2: dev/protocol/scaling/layer2.md
-      - Transactions Per Second: dev/protocol/scaling/TPS.md
-      - Atomic Composability: dev/protocol/scaling/atomic-composability.md
-      - Roadmap: dev/protocol/scaling/roadmap.md
+      - Discussions:
+        - Roadmaps: dev/protocol/scaling/roadmap.md
+        - Transactions Per Second: dev/protocol/scaling/TPS.md
+        - Atomic Composability: dev/protocol/scaling/atomic-composability.md
     - Documents: 
       - documents.md
       - Research & Whitepapers: documents.md
@@ -182,6 +183,7 @@ nav:
           - Examples: uses/sigmausd/examples.md
           - Mining Incentives: uses/sigmausd/mining-incentives.md
           - Other Stablecoins: uses/sigmausd/comparison.md
+          - Why?: uses/sigmausd/why-sigusd.md
         - DexyGold: eco/dexy.md
         - SigmaGold: eco/siggold.md
         - Hodlcoin: eco/hodlcoin.md
@@ -272,6 +274,7 @@ nav:
       - uses/gaming.md
       - BlitzTCG: eco/blitz.md
       - Metaverse:
+        - uses/metaverse.md
         - Cyberverse: eco/cyberverse.md
         - Sigmavalley: eco/sigmavalley.md
       - Monetary-based:
@@ -287,6 +290,7 @@ nav:
     - Further Ideas: 
         - ProfitSharing: uses/profit.md
         - Email Client for Blocked Internet: uses/blocked_web.md
+        - A CBDC For All: uses/cbdc.md
 
       # - Context Claims: uses/context-claims.md
     #  - Asset Tokenisation: uses/tokenisation.md
@@ -339,6 +343,7 @@ nav:
             - ErgoPay:
               - ErgoPay: dev/wallet/payments/ergopay/ergo-pay.md
               - Tutorial: dev/wallet/payments/ergopay/ep-tutorial.md
+            - ErgoAuth: dev/wallet/payments/ergoauth.md
             - dApp Connector: dev/wallet/payments/dApp.md
             - Proxy Contracts:
               - dev/wallet/payments/proxy.md

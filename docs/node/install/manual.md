@@ -10,11 +10,11 @@ The node uses Java so should work across all operating systems. You can even run
 
 ## 1. Initial Setup
 
-### 1.1 Acquire Ergo Client
+### 1.1 Download the Ergo Client
 
 Initiate the process by establishing a designated folder (e.g., `~/ergo`) for the node operation and download the latest [Ergo client release](https://github.com/ergoplatform/ergo/releases/) `.jar` file. Alternatively, clone the Ergo repository and compile the `.jar` file from the source using [SBT](https://www.scala-sbt.org/) (`sbt assembly` command), or via [Docker](/node/install/docker).
 
-### 1.2 Configure Node
+### 1.2 Create a configuration file
 
 Subsequently, create an `ergo.conf` configuration file in the same directory as the `.jar` file, containing the following:
 
