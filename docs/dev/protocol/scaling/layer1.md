@@ -10,7 +10,7 @@ tags:
 Layer 1 signifies the bedrock protocol layer of a blockchain system. This base layer handles fundamental functions including transaction processing, consensus mechanisms, and the implementation of security protocols.
 
 
-- **Mainnet 5.0 Activation:** The [*'Just in time costing'*](JITC.md) update introduced in Node V5 increased block capacity by approximately 5-10 times. Boosting the network's transaction processing capability and overall throughput.
+- **Mainnet 5.0 Activation:** The [*'Just in time costing'*](jitc.md) update introduced in Node V5 increased block capacity by approximately 5-10 times. Boosting the network's transaction processing capability and overall throughput.
 
 ## Future Research
 

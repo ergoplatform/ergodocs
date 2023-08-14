@@ -346,7 +346,7 @@ Working on a project that rewards miners with NFTs alongside their Ergo
 
 #### Sigma-rust-jit
 
-Enhancing [sigma-rust](rust.md) with [JIT 5.0 costing](JITC.md). 
+Enhancing [sigma-rust](rust.md) with [JIT 5.0 costing](jitc.md). 
 
 
 

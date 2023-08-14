@@ -6,7 +6,11 @@ tags:
 
 # JavaScript & TypeScript
 
-The combination of Fleet and Sigma.JS will provide a similar level of functionality to [AppKit](appkit.md)
+[Appkit](appkit) was designed as an abstraction layer on top of Sigma. This gives a lot of freedom on the core level in [Sigma](sigmastate-interpreter.md), while keeping dApp-facing APIs stable.
+
+With the availability of Sigma.js, Fleet can play the same role for JS/TS.
+
+
 
 ## Frameworks
 

@@ -363,12 +363,14 @@ nav:
             - Proxy Contracts: dev/wallet/payments/standards/eip17.md
             - ErgoPay Protocol: dev/wallet/payments/standards/eip20.md
             - Payment Request URI: dev/wallet/payments/standards/eip25.md
+            - Just-In-Time Costing: node/jitc.md
           - ErgoTool: dev/stack/ergotool.md
           - Model Transaction: dev/protocol/tx/model-tx.md
 
       - Block: dev/data-model/block.md
       - Wallets:
         - dev/wallets.md
+        - Satergo: dev/wallet/satergo.md
         - MultiSig: 
           - dev/wallet/multisig.md
           - Minotaur: dev/wallet/minotaur-multisig.md
@@ -433,21 +435,6 @@ nav:
           - Swagger API: 
             - node/swagger.md
             - Indexed Node API: node/indexed-node.md
-          - Modes of Operation: 
-            - node/modes.md
-            - Full Node: 
-              - node/modes/full-node.md
-              - Pruned Full Node: 
-                - node/modes/pruned-full-node.md
-                - Implementation: node/modes/pruned/pruned-impl.md
-            - Light Modes: 
-              - node/modes/light-full-node.md
-              - Digest State: node/digest-state.md
-              - blocksToKeep: node/history-pruning.md
-              - Technical Details: node/modes/light-techworkflow.md
-            - SPV: 
-              - node/modes/spv.md
-              - Light SPV: node/modes/light-spv-node.md
           - Configuration Files: 
             - application.conf: 
               - node/conf.md
@@ -465,6 +452,23 @@ nav:
             - testnet.conf: 
               - node/testnet/testnetconf.md
               - devnet.conf: node/testnet/devnetconf.md
+        - Modes of Operation: 
+            - node/modes.md
+            - Full Node: 
+              - node/modes/full-node.md
+              - Pruned Full Node: 
+                - node/modes/pruned-full-node.md
+                - Implementation: node/modes/pruned/pruned-impl.md
+            - Light Modes: 
+              - node/modes/light-full-node.md
+              - Digest State: node/digest-state.md
+              - blocksToKeep: node/history-pruning.md
+              - Technical Details: node/modes/light-techworkflow.md
+            - SPV: 
+              - node/modes/spv.md
+              - Light SPV: node/modes/light-spv-node.md
+            - Tor: node/tor.md
+          
       - Explorer: 
         - dev/stack/explorer.md
         - Local Setup: dev/stack/explorer/explorer_local.md
@@ -472,7 +476,9 @@ nav:
         - GraphQL: dev/stack/explorer/graphql.md
       - APIs: dev/stack/api.md
       - Off-Chain:
-        - Oracle-Core: dev/oc/oracle.md
+        - Oracle-Core: 
+          - dev/oc/oracle.md
+          - Bootstrap an Oracle Pool: tutorials/oracle-bootstrap.md
         - Off-Chain Bots: dev/oc/dex_bots.md
         - Rust Utilities: dev/oc/ergo_utilities.md
         - Plasma: dev/lib/plasma.md
