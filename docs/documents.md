@@ -11,10 +11,6 @@ This page contains links to documents with a general overview of Ergo platform, 
 - [Teaser: The Ergo Platform Project Overview](https://ergoplatform.org/docs/teaser.pdf)
 - [Whitepaper III: Advanced ErgoScript Tutorial](https://ergoplatform.org/docs/AdvancedErgoScriptTutorial.pdf)
 
-## Presentations
-
-- [ZeroJoin: Combining Zerocoin and Coinjoin](https://ergoplatform.org/docs/CBT_2020_ZeroJoin_Combining_Zerocoin_and_CoinJoin_v3.pdf)
-
 ## Foundational papers
 
 - [On Contractual Money](https://pdfs.semanticscholar.org/d51b/51fd136b1b74ece7caa6a7cb9c8f74b1b829.pdf)
@@ -27,6 +23,7 @@ This page contains links to documents with a general overview of Ergo platform, 
 - [Storage Rent](rent.md): [A Systematic Approach To Cryptocurrency Fees](https://fc18.ifca.ai/bitcoin/papers/bitcoin18-final18.pdf)
 - [ZeroJoin: Combining ZeroCoin and CoinJoin](https://eprint.iacr.org/2020/560.pdf)
 - [Soft Power: Upgrading Chain Macroeconomic Policy Through Soft Forks](https://eprint.iacr.org/2021/577.pdf)
+
 
 ## Post-Mainnet
 
