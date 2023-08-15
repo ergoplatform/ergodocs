@@ -2,6 +2,14 @@
 
 Not sure where to start? This page will provide a basic overview of the entire site and the various entry pathways for developers. 
 
+Any problem come chat to us on [Telegram](https://t.me/Ergo_Chats), [Discord](https://discord.gg/ergo-platform-668903786361651200), or [Matrix](https://matrix.to/#/#ergo-platform:matrix.org) which are bridged between each other. Alternative join us on [ergoforum.org](https://www.ergoforum.org/)
+
+**Community sites**
+
+- [ergo.watch](https://ergo.watch/) for on-chain analytics
+- [ergonaut.space](https://ergonaut.space/) is Ergo's community wiki.
+- To explore dApps, we have [sigmaverse.io](https://sigmaverse.io/) and [ergcube](https://ergcube.com/) 
+
 ## Background
 
 - [Why Ergo](why.md) gives a quick overview of Ergo, some key features and the tech and decisions behind it. The [FAQ](faq.md) leads on from this, providing answers to some of the most frequently asked questions.
@@ -65,54 +73,58 @@ The [Ergo Node](install.md) is a critical component of Ergo's peer-to-peer netwo
 
 The [Node API](swagger.md) provides comprehensive access to Ergo node functionalities, including blockchain data retrieval, transaction submission, wallet management, and more. It offers a wide range of endpoints to interact with the Ergo network programmatically. If you don't want or need to run your own node, there are also several public [APIs](api.md) that offer different functionalities.
 
+
+
 There is a publicly available explorer at [explorer.ergoplatform.com](https://explorer.ergoplatform.com/) (or [testnet.ergoplatform.com](https://testnet.ergoplatform.com/)), as well as [GraphQL](graphql.md) instances. You can install these all locally at once using a [Explorer & Node Bundles](install.md#Toolkits). 
 
-Alternatively there is [uExplorer](ergo-uexplorer.md), a supplementary, lightweight Ergo explorer with CassandraDB backend. 
+- [uExplorer](ergo-uexplorer.md), a supplementary, lightweight Ergo explorer with CassandraDB backend. 
+- [Blockchain Explorer with Raspberry Pi](rpi-blockchain-explorer.md)
+- [Mining your own chain](mine-your-own-chain.md)
 
-::cards::
 
-[
-  {
-    "title": "Node & Explorer Tools",
-    "content": "",
-    "url": "/dev/stack/explorer"
-  },
-  {
-    "title": "APIs",
-    "content": "",
-    "url": "/dev/stack/api"
+## Transactional Basics
 
-  },
-  {
-    "title": "Off-chain Tooling",
-    "content": "",
-    "url": "/dev/lib/off-chain/"
-  }
-]
 
-::/cards::
 
-## Stack
+- [Ergo Platform Basic Starter Tutorial](basics.md)
+- [Create and send a transaction](https://www.youtube.com/watch?v=Md5s-XV6-Hs) using AppKit
+- [Sign a transaction](sign-tx.md) using Sigma Rust
+- [Sending a chained transaction](chained-tx.md) with Ergpy
+- [Getting Started](https://fleet-sdk.github.io/docs/getting-started) with Fleet SDK
+
+**Tokens**
+
+- [Issuing a token](issue.md)
+- [Burning a token](burn.md)
+- [Minting an NFT](create.md)
+
+
+## App development
 
 There are many tools, libraries, SDKs, frameworks and utilities developers can use to interact with the blockchain, build their applications, and display them to users. The [Developer](start.md) section provides grid-buttons that let you narrow down your technical stack requirements and find the most appropriate tooling.
 
 There are several *Standard Development Kits* and Frameworks available on Ergo. If your plan is develop a fully fleshed out decentralised application, You'll likely want to use one of the following depending on your needs.
 
-### Primary SDKs
+**Primary SDKs**
 
 - [AppKit](appkit.md) is the primary SDK, and the entry-point for JVM developers. (Java, Scala, Kotlin, Mobile)
-- [SigmaRust](sigma-rust.md) is an alternative and simple implementation of ErgoTree interpreter and transaction building tools that has bindings for JS/TS/Swift/Java/C/Ruby.
 - [Fleet SDK](fleet.md) lets you easily create Ergo transactions with a pure JS library. 
+- [SigmaRust](sigma-rust.md) is an alternative and simple implementation of ErgoTree interpreter and transaction building tools that has bindings for JS/TS/Swift/Java/C/Ruby.
 
-### Alternative SDKs
+**Alternative SDKs**
 
 - [ergpy](ergpy.md) is a python-jvm wrapper for interacting with the Ergo blockchain.
 - [Mosaik](mosaik.md) is a *UI system for Ergo dApps*
-- [RustKit](rustkit.md) is also in development, which aims to bring the Rust experience in-line with the JVM one. 
 - [Headless dApp Framework](headless.md) is a Rust framework for developing Ergo Headless dApps. The Ergo HDF provides developers with the first portable UTXO-based headless dApp development framework on any blockchain.
 - [JSON dApp Environment](jde.md)
+- [RustKit](rustkit.md) is also in development, which aims to bring the Rust experience in-line with the JVM one. 
 
-The [Tutorials](tutorials.md) section serves as a directory for all the tutorials available on Ergo. Here you can find further details on setting up various infrastructure, playing with tokens & NFTs, transaction basics as well as more advanced areas like ErgoScript, Zero-Knowledge Proofs, and Oracle Core. 
+**Tutorials**
+
+- [Creating a simple pay-to-script app](p2s.md)
+- [Get started with Ergo Mosaik: A UI system for Ergo dApps](mosaik.md)
+- [Using AppKit from Python](https://github.com/ergoplatform/ergo-appkit/wiki/Using-Appkit-from-Python)
+
 
 
 ::cards::
@@ -157,7 +169,7 @@ There are two implementations of the ErgoScript compiler and ErgoTree interprete
 - The [sigmastate-interpreter](sigmastate-interpreter.md) for JVM languages which is used by [AppKit](appkit.md)
 - [sigma-rust](sigma-rust.md) is an alternative and simple implementation of ErgoTree interpreter and transaction-building tools. 
 
-#### Tooling
+**Tooling**
 
 - [ErgoScala](ergoscala.md) is a compiler for Ergo smart contracts written in ErgoScala (a subset of Scala).
 - [CLI Compiler](compiler.md)
@@ -198,16 +210,6 @@ See [this page](/dev/scs/global-functions/#cryptographic-functions) for a descri
 ### Multi-Stage Protocols
 
 Multi-Stage Contracts is a technique wherein using transaction trees we can emulate persistent storage in UTXO-based systems by linking several UTXOs containing small pieces of code to form a large [multi-stage protocol](multi.md). This enables *on-chain computations*, making it possible to process parallelised actions on top of smart contracts.
-
-
-
-## Resources
-
-- Test vectors
-- Analysis
-
-
-> Make sure to check out the *dev-tools* tab on [sigmaverse.io](https://sigmaverse.io/). 
 
 
 

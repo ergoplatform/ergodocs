@@ -209,9 +209,9 @@ nav:
         - Sigma Subscriptions: eco/sigma-subscriptions.md
         - ErgoWell: eco/ergowell.md
         - ErgoFund: uses/ergofund.md
+      - Grid Trading: uses/grid_trading.md
       - Further Ideas:
         - Prediction Markets: uses/prediction_markets.md
-        - Grid Trading: uses/grid_trading.md
         - Insurance: uses/insurance.md
      
 
@@ -231,12 +231,7 @@ nav:
           - Basic Implementation: uses/lets/basic-imp.md
           - Trustless LETS: uses/lets/trustless-lets.md
 
-    - Tokens:
-        - ICOs: uses/ergo-ico.md
-        - Index Coins: uses/index_coins.md
-        - PoW Tokens: uses/PoW_tokens.md
-        - Perpetual Tokens: uses/perpetual.md
-        - Buy Back Guarantees: uses/dex-buyback.md
+
     - NFTs:
       - uses/nft.md
       - Ergo Auctions: eco/ergo-auctions.md
@@ -291,6 +286,12 @@ nav:
         - ProfitSharing: uses/profit.md
         - Email Client for Blocked Internet: uses/blocked_web.md
         - A CBDC For All: uses/cbdc.md
+        - Tokens:
+          - ICOs: uses/ergo-ico.md
+          - Index Coins: uses/index_coins.md
+          - PoW Tokens: uses/PoW_tokens.md
+          - Perpetual Tokens: uses/perpetual.md
+          - Buy Back Guarantees: uses/dex-buyback.md
 
       # - Context Claims: uses/context-claims.md
     #  - Asset Tokenisation: uses/tokenisation.md
