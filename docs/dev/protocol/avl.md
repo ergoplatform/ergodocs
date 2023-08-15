@@ -1,6 +1,6 @@
 # AVL Trees in Ergo
 
-AVL trees are highly efficient authenticated data structures that provide native support in Ergo, a blockchain platform. These trees offer several benefits, including the ability to authenticate data properties without accessing the entire dataset. This page provides an overview of AVL trees, their integration with Ergo, and their performance characteristics.
+AVL trees are highly efficient authenticated data structures that provide native support in Ergo. These trees offer several benefits, including the ability to authenticate data properties without accessing the entire dataset. This page provides an overview of AVL trees, their integration with Ergo, and their performance characteristics.
 
 ## AVL Trees in Ergo
 

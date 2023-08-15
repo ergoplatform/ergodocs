@@ -3,6 +3,10 @@ tags:
   - ErgoScript
 ---
 
+<!--TODO: Split Paradigm out of this-->
+
+FlowCards aim to radically simplify dApp development on the Ergo platform by providing a high-level declarative language, execution runtime, storage format and a graphical notation.
+
 
 ## Introduction 
 

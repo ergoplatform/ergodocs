@@ -303,7 +303,9 @@ nav:
 
   - Developers: 
     - dev/start.md
-    - ⭐️ Tutorials: dev/tutorials.md
+    - 📌 Getting Started:
+      - dev/get-started.md
+      - Tutorials: dev/tutorials.md
     - Anatomy of Ergo:
       - Box: 
         - dev/data-model/box.md
