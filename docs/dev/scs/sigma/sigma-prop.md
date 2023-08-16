@@ -1,19 +1,16 @@
 # Sigma Propositions
 
-> 🔗 From [Deco Education - ErgoScript Developer Course](https://github.com/DeCo-Education/ErgoScript-Developer-Course/blob/main/Class-Documents/Class-1/Materials/Class1.MD)
+Sigma Propositions are the core of every single ErgoScript contract.
 
-
-Sigma Propositions are the core of every single ErgoScript contract
-SigmaProps represent some conditions about the transaction that must be met in order to spend a certain box.
+- `SigmaProps` represent some conditions about the transaction that must be met in order to spend a certain box.
 They are quite similar to booleans, in that they may be reduced into two values, `true` or `false`.
-SigmaProps enable the usage of Zero-Knowledge Proofs, an important part of modern-day cryptography and one of the defining features of Ergo in terms of its privacy
-
-**All contracts in ErgoScript return a Sigma Proposition at the very end**. This SigmaProp represents the conditions needed
-to spend the box protected by your contract. For this reason, all the code you make within an ErgoScript contract should affect the outcome of your Sigma Proposition in some way.
+- SigmaProps enable the usage of Zero-Knowledge Proofs, an important part of modern-day cryptography and one of the defining features of Ergo in terms of its privacy
+- **All contracts in ErgoScript return a Sigma Proposition at the very end**. 
+    - This SigmaProp represents the conditions needed to spend the box protected by your contract. For this reason, all the code you make within an ErgoScript contract should affect the outcome of your Sigma Proposition in some way.
 
 SigmaProps come in a few different forms, but there are two main ways you will see them in ErgoScript contracts.
 
-### SigmaProps From Booleans
+## SigmaProps From Booleans
 
 You may create SigmaProps from booleans using the `sigmaProp` function. This
 allows you to define arbitrary spending conditions for any contract.
@@ -27,7 +24,7 @@ allows you to define arbitrary spending conditions for any contract.
 
 ```
 
-### SigmaProps From Public Keys
+## SigmaProps From Public Keys
 
 Public Keys (Essentially, the part of your address that makes it different from everyone else's)
 are also SigmaProps. When a public key is passed as a SigmaProp, your contract checks whether or not the given PK is the one that signed the transaction
@@ -45,7 +42,7 @@ that the transaction was authorized by you.
 
 ```
 
-### SigmaProp Operations
+## SigmaProp Operations
 
 Much like booleans, you may use logical operations on SigmaProps in order to build more complex spending logic for your contract
 
@@ -64,7 +61,7 @@ You can see in the above contract that usage of `||` creates two spending paths 
 
 Now you've seen the basics, for the end of this section, lets look at a simple ErgoScript contract, the pin-lock we mentioned earlier
 
-### Pin-lock Contract
+## Pin-lock Contract
 
 ```scala
 {
@@ -80,7 +77,7 @@ We may spend Input 0 of this transaction if and only if there exists an output w
 contains the hash of the collection of bytes found in R4 of the Input.
 This contract refers to itself as `INPUTS(0)`, for a more clear example, look at the following, where the box being spent refers to itself within its own contract:
 
-### Pin-lock Contract (with SELF)
+## Pin-lock Contract (with SELF)
 
 ```scala
 {
@@ -94,3 +91,4 @@ That is, are there any spending conditions that exist in which one contract coul
 
 
 
+> 🔗 From [Deco Education - ErgoScript Developer Course](https://github.com/DeCo-Education/ErgoScript-Developer-Course/blob/main/Class-Documents/Class-1/Materials/Class1.MD)

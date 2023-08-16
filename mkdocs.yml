@@ -86,6 +86,8 @@ markdown_extensions:
   - fenced_code
   - toc:
         permalink: "#"
+        baselevel: 1
+        toc_depth: 2
   - admonition
   - pymdownx.inlinehilite
   - pymdownx.superfences:

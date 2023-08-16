@@ -1,24 +1,20 @@
 # ErgoScript Syntax
 
-> 🔗 From [Deco Education - ErgoScript Developer Course](https://github.com/DeCo-Education/ErgoScript-Developer-Course/blob/main/Class-Documents/Class-1/Materials/Class1.MD)
+ErgoScript is **strongly typed**, you should always know what types you are dealing with.
 
-
-## Basic Syntax In ErgoScript
+What’s going on here?
 
 ```scala
 val bool: Boolean = true
 ```
-
-What’s going on here?
 
 - `val` is a keyword used to create a basic, immutable, value of any type.
 - `bool` is the name used for the value created.
 - `: Boolean` specifies the type of the value, this is not always necessary, but does make code more understandable.
 - `= true` sets our Boolean value bool equal to true.
 
-ErgoScript is **strongly typed**, you should always know what types you are dealing with.
+Learn to think in `true` and `false` statements. Booleans (More specifically, [Sigma Propositions](sigma-prop.md)) are the **core of every ErgoScript contract**.
 
-Learn to think in `true` and `false` statements. Booleans (More specifically, Sigma Propositions) are the **core of every ErgoScript contract**.
 
 ## More ErgoScript Syntax Examples:
 
@@ -82,3 +78,6 @@ In other words, the difference between val and def is when the function is calcu
 
 In most instances, you will likely use `val` statements
 
+## Resources
+
+> Adapted from [Deco Education - ErgoScript Developer Course](https://github.com/DeCo-Education/ErgoScript-Developer-Course/blob/main/Class-Documents/Class-1/Materials/Class1.MD)
