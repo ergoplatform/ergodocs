@@ -62,7 +62,7 @@ For in-depth discussions and community interactions, join our forum at [ergoforu
 
 ::/cards::
 
-### **Ergo Community Resources**
+#### **Ergo Community Resources**
 
 ##### **Analytics & Insights**
 
