@@ -1,4 +1,6 @@
-In other words, a token that is guaranteed to exist forever, unless it gets garbage-collected!
+# Perpetual Tokens
+
+You can use ErgoScript to create a '*perpetual token*', in other words, a token that is guaranteed to exist forever, unless it gets garbage-collected!
 
 
 ```scala
@@ -10,13 +12,11 @@ In other words, a token that is guaranteed to exist forever, unless it gets garb
       sigmaProp(OUTPUTS.exists(isPerpetual))
     }
 ```
-
-To be precise, this is a perpetual collection of tokens (possibly of size zero). But if you protect a singleton token with this script, then it guarantees the token will never be destroyed other than by garbage collection
+To clarify, this construct establishes a collection of perpetual tokens, even if the collection's size is zero. However, should you safeguard a singleton token using this script, it ensures the token will never be destroyed other than by garbage collection.
 
 See [this thread](https://www.ergoforum.org/t/a-perpetual-token/205/3) for the full discussion.
 
-I apologize for the confusion. Here's the explanation with more details and code blocks to make it easier for a beginner programmer to understand:
-
+<!--TODO: Segway?-->
 ## Multi-Stage Protocols
 
 Multi-stage protocols are used in scenarios where multiple scripts interact with each other. In these protocols, one script can reference the script of a subsequent stage.
