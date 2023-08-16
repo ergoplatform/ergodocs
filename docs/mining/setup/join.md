@@ -1,9 +1,18 @@
 # Start Mining
 
-Follow these steps to start mining Ergo ([Autolykos2](autolykos.md)). 
+This guide will walk you through the process of starting to mine Ergo using [Autolykos2](autolykos.md). 
 
-1. You’ll need a computer with at least one GPU with more than 4GB memory. You can see estimated hashrates on the [Autolykos v2 hashrates spreadsheet](https://docs.google.com/spreadsheets/d/1NsuoDB27EwCo_BlSjCP3GMLfTSJRPIWIBsL-wPTllUg).
-3. Select your [mining software](software.md) or [operating system](os.md) for dedicated rigs. 
-4. Pick a [wallet](wallet.md) for payouts.  
-5. Then you’ll need to pick a [pool](pools.md). 
-6. [Overclocking](overclocking.md)
+## Prerequisites
+
+Before you begin, ensure that you have the following:
+
+- A computer equipped with at least one GPU that has more than 4GB of memory. You can refer to the [Autolykos v2 hashrates spreadsheet](https://docs.google.com/spreadsheets/d/1NsuoDB27EwCo_BlSjCP3GMLfTSJRPIWIBsL-wPTllUg) to get an estimate of potential hashrates.
+
+## Steps to Start Mining
+
+1. Choose your preferred [mining software](software.md). If you're using a dedicated rig, select an appropriate [operating system](os.md).
+2. Set up a [wallet](wallet.md) where your mining payouts will be deposited.
+3. Select a [mining pool](pools.md) to join. Mining in a pool can help you achieve more consistent returns.
+4. Consider [overclocking](overclocking.md) your GPU to maximize your mining performance. Be aware that this can increase power consumption and potentially shorten the lifespan of your hardware.
+
+Happy mining!

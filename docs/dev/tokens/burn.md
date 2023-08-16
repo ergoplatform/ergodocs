@@ -1,44 +1,35 @@
-## Burning
+# Burning a token
 
-There are sometimes occasions where you want to delete a token out of your wallet. Common reasons include:
+There are sometimes occasions when you want to delete a token from your wallet. 
 
 - Your address was airdropped a token you no longer want
-- You created an NFT but something about it is not right. So, you want to delete one you created to remint it
-- A project sent reserve, voting or other tokens that you no longer need
+- You created an NFT but something about it is not right. 
+- A project sent you voting or other tokens that you no longer need
 
-To delete tokens from your Ergo wallet, you have a few options.
+To get rid of those tokens, you have a few options.
 
-- [TokenJay](https://www.tokenjay.app/app/#burntoken) (This requires a Ergopay compatible wallet like Ergo Mobile Wallet)
-- [Ergo Token Minter / Burner](https://github.com/ThierryM1212/ergo-token-minter) (Possible with a Ergo wallet extension, such as Nautilus)
-- [SAFEW](https://github.com/ThierryM1212/SAFEW) supports token burning.
-- Send to `4MQyMKvMbnCJG3aJ`
-
-
-### P2S
-
-`4MQyMKvMbnCJG3aJ` is a P2S (Pay-to-Script) representation of “false” condition, i.e. the box is unspendable. Hash is written into R4 register of the box, in the explorer 
-
-> It looks like `0e2047ee2cbd52be01e0876c3e0b989a0d4d5f8955200b1fab0e6eeb2b182555c2fb`, where `0e` is type descriptor (byte array), `20` is bytestring length (0x20 in hex = 32), `47ee2cbd52be01e0876c3e0b989a0d4d5f8955200b1fab0e6eeb2b182555c2fb` is the hash of the file.
-
-
+- **Mobile Wallet:** [TokenJay](https://www.tokenjay.app/app/#burntoken) (This requires an Ergopay compatible wallet like Ergo Mobile Wallet)
+- **Nautilus:** [Ergo Token Minter / Burner](https://github.com/ThierryM1212/ergo-token-minter)
+- **[SAFEW](https://github.com/ThierryM1212/SAFEW)** supports token burning natively.
+- Send to `4MQyMKvMbnCJG3aJ`, a **[P2S (Pay-to-Script)](p2s.md)** representation of a “false” condition, i.e. the box is unspendable. <!--TODO: What? Hash is written into `R4` register of the box, in the explorer It looks like `0e2047ee2cbd52be01e0876c3e0b989a0d4d5f8955200b1fab0e6eeb2b182555c2fb`, where `0e` is type descriptor (byte array), `20` is bytestring length (0x20 in hex = 32), `47ee2cbd52be01e0876c3e0b989a0d4d5f8955200b1fab0e6eeb2b182555c2fb` is the hash of the file. --->
 
 
 ## Programmatically
 
-Just spend an UTXO with tokens you want to burn and do not include them into output. (for custom tokens sum in outputs can be less than sum in inputs, for ERG, strict equality is required). 
+To burn tokens programmatically, simply spend an Unspent Transaction Output (UTXO) containing the tokens you wish to eliminate. Ensure not to include these tokens in the output of the transaction.
 
+### Using AppKit
 
-### AppKit
+If you're working with [AppKit](appkit.md), the transaction builder conveniently offers a `burntoken` method tailored for this purpose.
 
-- Transaction builder has a `burntoken` method.
+### Ergo Token Minter Integration
 
-### Ergo Token Minter
+The burn token functionality integrated by `ThierryM1212` can be observed [here](https://github.com/ThierryM1212/ergo-token-minter/blob/main/src/index.js#L254). The crucial steps involved are as follows:
 
-The burn token feature `ThierryM1212` implemented are visible [here](https://github.com/ThierryM1212/ergo-token-minter/blob/main/src/index.js#L254), the important steps are:
+1. Identify and select the input boxes holding the tokens to be burnt, along with a small ERG amount.
+2. Construct the output boxes, excluding consideration of the tokens. The transaction builder automatically appends an additional output change box encompassing all tokens.
+3. Retrieve the transaction JSON representation.
+4. Edit the output change box details to eliminate the tokens intended for burning.
+5. Dispatch the modified transaction (JSON) to the network.
 
-1. Select the input boxes for the amount of tokens to burn and a small amount of ERG
-2. Create the output boxes without considering the tokens, the transaction builder will create an additional output change box including all the tokens
-3. Get the transaction json
-4. Re-write the output change box in order to remove the tokens you want to burn
-5. Send the modified transaction (json)
-
+This streamlined approach simplifies the process of burning tokens while maintaining transaction integrity.

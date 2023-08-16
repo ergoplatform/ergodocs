@@ -6,14 +6,13 @@ tags:
 
 # The Ergo 'Box' model
 
-The Ergo platform employs a transactional model akin to Bitcoin, known as the Unspent Transaction Output (UTxO) model. Here, transactions expend and generate single-use entities, referred to as a ***'box'***. 
+The Ergo platform uses a transactional model similar to Bitcoin's Unspent Transaction Output (UTxO) model. In this model, transactions create and consume single-use entities called ***'boxes'***. 
 
-In [ErgoScript](ergoscript.md), a 'box' is akin to a more versatile version of what a UTXO (Unspent Transaction Output) represents in Bitcoin and many other cryptocurrencies. A box is not only a ledger entry denoting the amount of cryptocurrency owned by a particular address, but it also carries 'registers', allowing it to contain additional data. This data could range from simple values to more complex structures, which can later be integrated into transactions and used in the execution of smart contracts.
+In [ErgoScript](ergoscript.md), a 'box' is a versatile version of a UTXO. It represents not only the amount of cryptocurrency owned by an address, but also contains 'registers' for additional data. This data can range from simple values to complex structures, which can be used in transactions and smart contract execution.
 
 This makes Ergo's box different from a traditional UTXO, which only represents an amount of unspent cryptocurrency associated with a certain address. In UTXO-based cryptocurrencies, each transaction consumes one or more UTXOs as inputs and creates one or more UTXOs as outputs, with the 'unspent' outputs being the 'coins' that can be spent in future transactions.
 
 The term 'box' in Ergo's context captures the idea that these entities are like containers holding various types of information (value, tokens, custom data, etc.), beyond just the unspent transaction output balance. This makes the boxes in Ergo significantly more flexible and functional, enabling more complex operations, such as running scripts or smart contracts, directly on the blockchain.
-
 
 
 ## Key Points

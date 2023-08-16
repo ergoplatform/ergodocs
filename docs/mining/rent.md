@@ -1,10 +1,10 @@
 # Ergo's Storage Rent
 
-Ergo's design prioritizes long-term economic sustainability and one of the key strategies to ensure this is the implementation of storage rent or *'demurrage'*. This can be likened to 'on-chain garbage collection', a mechanism that not only mitigates the issue of blockchain bloat but also turns it into a profitable venture.
+Ergo's design emphasizes long-term economic sustainability. One of the key strategies to ensure this is the implementation of storage rent or *'demurrage'*. This mechanism, akin to 'on-chain garbage collection', not only mitigates the issue of blockchain bloat but also turns it into a profitable venture.
 
 ## Key Features
 
-- Starting from block **1,051,200** (July 20th, 2023), miners have the option to charge storage rent or fully spend the box if its value doesn't cover the rent.
+- Starting from block **1,051,200** (July 20th, 2023), miners can charge storage rent or fully spend the box if its value doesn't cover the rent.
 - Storage fees serve as an additional source of rewards for miners, supplementing block and transaction rewards.
 - By reducing the storage load, storage fees eliminate potential extra costs that could arise from excessive state growth.
 - Storage fees stimulate coin circulation and deter deflation, thereby preventing illiquidity and congestion in the currency system.
@@ -22,7 +22,6 @@ Ergo's storage rent mechanism rewards miners uniquely by allowing them to claim 
 ## How to Check the Age of Your Boxes? 
 
 [TokenJay](token-jay.md) offers a convenient [Box consolidation tool](https://tokenjay.app/app/#boxconsolidation) that checks the number and age of boxes in your wallet and consolidates them when necessary. [Nautilus](nautilus.md) also features a built-in box consolidation tool that alerts you if your UTxO set requires consolidation. Alternatively, you can message [@ergoportbot](https://t.me/ergoportbot) on Telegram and use the command `/ep boxage ADDRESS` to check. 
-
 
 ## Additional Resources
 

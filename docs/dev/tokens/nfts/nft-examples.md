@@ -3,7 +3,9 @@
 
 ## Using Scala
 
-[minting-for-dummies](https://github.com/lucagdangelo/minting-for-dummies) is a basic tool for NFT minting really quickly in Scala. You can see the [mint() logic here](https://github.com/lucagdangelo/minting-for-dummies/blob/cd99049f13eb6ab4489f0f880e8d36e33b27bdb2/src/main/scala/app/MintForDummiesCommands.scala#L11)
+[minting-for-dummies](https://github.com/lucagdangelo/minting-for-dummies) is a basic tool for NFT minting quickly in Scala. 
+
+You can see the [mint() logic here](https://github.com/lucagdangelo/minting-for-dummies/blob/cd99049f13eb6ab4489f0f880e8d36e33b27bdb2/src/main/scala/app/MintForDummiesCommands.scala#L11)
 
 
 ## Using Ergo Python Appkit

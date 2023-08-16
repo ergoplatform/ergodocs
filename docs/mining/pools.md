@@ -1,29 +1,27 @@
 # Mining Pools
 
-A list of all pools is available on [miningpoolstats](miningpoolstats.stream/ergo). 
+Mining pools are groups of miners who combine their computational resources to increase their chances of finding a block. The reward is then split among the pool members, proportional to the amount of work they contributed. 
 
-> Please do not mine to the largest 2-3 pools and help keep ergo decentralised 
+A comprehensive list of Ergo mining pools is available on [Mining Pool Stats](https://miningpoolstats.stream/ergo). 
 
+> To help maintain Ergo's decentralization, consider joining a smaller pool instead of the largest 2-3 pools.
 
-## Do I earn more in a larger pool?
+## Earnings and Pool Size
 
-Larger pools win blocks more often, which allows them to provide more consistent payouts. But over time, there is no difference. In a smaller pool you might not see a payout until they win a block. 
+While larger pools win blocks more frequently and can provide more consistent payouts, your long-term earnings should be roughly the same regardless of the pool size. In smaller pools, you might not receive a payout until the pool wins a block.
 
 ## Dual Mining
 
-It's possible to dual mine Ergo with other coins such as KAS and ALPH, [miningpoolstats](miningpoolstats.stream/ergo) provides details for pools currently offering this natively. 
+Dual mining allows you to mine Ergo alongside other coins such as KAS and ALPH. [Mining Pool Stats](https://miningpoolstats.stream/ergo) provides details on pools currently offering this feature natively.
 
 ## Solo Pools
 
-There are several solo pools available on [miningpoolstats](miningpoolstats.stream/ergo)
+For miners who prefer to work independently, several solo pools are available. You can find a list of these on [Mining Pool Stats](https://miningpoolstats.stream/ergo).
 
-## What are SmartPools? 
+## SmartPools
 
-[Smartpools](smartpools.md) replace centralized mining pools with an autonomous on-chain smart contracts. 
+[SmartPools](smartpools.md) are a decentralized alternative to traditional mining pools. They replace centralized mining pools with autonomous on-chain smart contracts. Keep an eye on [Lithos Protocol](lithos.md) for the next generation of these. 
 
 ## Resources
 
-
-### [Nice Hash](https://www.nicehash.com/) 
-- [NiceTalk live with Ergo](https://www.nicehash.com/blog/post/join-us-live-with-ergo-on-nice-talk-on-the-29th)
-
+- [Nice Hash](https://www.nicehash.com/) is a popular platform for cryptocurrency mining and trading that supports Ergo. They hosted a live event with Ergo, which you can watch [here](https://www.nicehash.com/blog/post/join-us-live-with-ergo-on-nice-talk-on-the-29th).

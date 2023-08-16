@@ -11,12 +11,18 @@ If you encounter any issues or have questions, feel free to reach out to us on a
 
 For in-depth discussions and community interactions, join our forum at [ergoforum.org](https://www.ergoforum.org/).
 
+##### Contributing
+
+- We host regular hackathons you can use to dip your toes in. For more information and links to past entries see [this page](ergohack.md)
+- See the [Contributing Guidelines](guidelines.md) for information on bounties and grants. 
+
+
 ## Background
 
 ##### **Introduction to Ergo**
 
-- **[Why Ergo?](why.md)**: Get a concise overview of Ergo, its standout features, and the technology and decisions that power it.
-- **[FAQ](faq.md)**: Find answers to the most common questions about Ergo.
+- Get a concise overview of Ergo, its standout features, and the technology and decisions that power it on the **[*Why Ergo?*](why.md)** page.
+- Find answers to the most common questions about Ergo in our **[FAQ](faq.md)**. 
 
 ##### **Technical Insights**
 

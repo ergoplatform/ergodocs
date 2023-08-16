@@ -1,18 +1,18 @@
 # Emission Schedule
 
-Ergo has a maximum supply of 97,739,925 Ergs, which is expected to be completed by 2045. The block reward is set to decrease to 3 ERG in 2026 as per [EIP27](eip27.md). 
+Ergo's maximum supply is capped at 97,739,925 Ergs, with full emission expected by 2045. As per [EIP27](eip27.md), the block reward is set to decrease to 3 ERG in 2026. 
 
-You can view a graph of the emission schedule on [ergo.watch](https://ergo.watch/emission).
+You can visualize the emission schedule on [ergo.watch](https://ergo.watch/emission).
 
-## Launch Date
+## Ergo's Journey
 
-Ergo development began in 2017, and the mainnet was successfully launched in July 2019. Prior to the mainnet launch, during the year leading up to it, there was a token called "Ergo-First-Year-Token" (EFYT).
+Ergo's development journey began in 2017, culminating in the successful launch of the mainnet in July 2019. In the year leading up to the mainnet launch, a token called "Ergo-First-Year-Token" (EFYT) was in circulation.
 
-## What is EFYT?
+## Ergo-First-Year-Token (EFYT)
 
-Ergo-First-Year-Token (EFYT) was airdropped and distributed on the Waves DEX. The airdrop began with 100,000 EFYT tokens in May 2017. The purpose of EFYT was twofold: to foster an early community of stakeholders and enthusiasts for Ergo and to raise funds for the platform's development and promotion before the mainnet launch. 
+EFYT was airdropped and distributed on the Waves DEX, starting with 100,000 EFYT tokens in May 2017. The dual purpose of EFYT was to build an early community of stakeholders and enthusiasts for Ergo and to raise funds for the platform's development and promotion before the mainnet launch. 
 
-> It's essential to understand that EFYT is a Waves token and is not the same as Erg, the native token of Ergo. After Ergo's mainnet launch, mining began to produce ERG tokens.
+> Note: EFYT is a Waves token and is not the same as Erg, the native token of Ergo. After Ergo's mainnet launch, mining began to produce ERG tokens.
 
 The maximum supply of EFYT is 1,970,945.0, which corresponds to 10% of Ergo's first-year token emission. The Treasury receives an equivalent number of ERG, allowing for the conversion of EFYT to Erg.
 
@@ -23,7 +23,7 @@ Here are some resources related to EFYT:
 
 ## Why 97,739,924 ERGs?
 
-The maximum supply of 97,739,924.5 ERGs was determined based on a pre-agreed smart contract that controls emission in Ergo. The goal was to create a simple emission curve with a total limited supply close to 100 million Ergs, to be completed within 8-10 years.
+The maximum supply of 97,739,924.5 ERGs was determined by a pre-agreed smart contract that controls emission in Ergo. The goal was to create a simple emission curve with a total limited supply close to 100 million Ergs, to be completed within 8-10 years.
 
 This specific amount was chosen to cover the initial genesis state, including:
 
@@ -39,7 +39,7 @@ The code for the emission schedule can be found [here](https://github.com/ergopl
 
 ## Ergo Foundation
 
-The Ergo Foundation is a community-driven entity focused on various aspects:
+The Ergo Foundation is a community-driven entity with a focus on:
 
 - Promoting the non-breaking development of the Ergo Platform protocol.
 - Encouraging the widespread adoption and use of Ergo Platform and its native token (ERG).
