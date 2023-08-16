@@ -1,52 +1,50 @@
-## Initialize wallet
+## Initialize Wallet
 
-Restart the node and go to [http://127.0.0.1:9053/panel](http://127.0.0.1:9053/panel) to access the panel. Then set the API key secret from the previous step. Note that you need to set the **secret** and not the hash from the config file. In our example, this is the string `hello`. 
+To initialize the wallet, restart the node and navigate to the [panel](http://127.0.0.1:9053/panel). Set the API key secret from the previous step. Remember to use the **secret**, not the hash from the config file. In our example, this is the string `hello`. 
 
 ![set API key](https://user-images.githubusercontent.com/23208922/69916579-b7ca1680-1482-11ea-880e-251c8139a613.png)
 
-Click on **Initialize wallet**. After the pop-up opens, there are two ways to proceed depending on your scenario.
+Click on **Initialize wallet**. A pop-up will appear with two options:
 
-1. If this is the first time you are running the node then you need to initialize it with a new mnemonic sentence.
-2. If you had created a wallet earlier and would like to obtain the same address (possibly because there are funds stored in it), then you have to restore the wallet using the mnemonic sentence you had saved earlier. 
+1. **Initialize a new wallet**: If this is your first time running the node, you need to initialize it with a new mnemonic sentence.
+2. **Restore an existing wallet**: If you have created a wallet before and want to access the same address (possibly because it contains funds), you need to restore the wallet using the previously saved mnemonic sentence. 
 
-Follow one of the below steps depending on your situation. 
+Choose the option that suits your situation. 
 
-### Initialize wallet from scratch
+### Initialize Wallet from Scratch
 
 ![Initialize wallet](https://user-images.githubusercontent.com/23208922/69916584-d4fee500-1482-11ea-838c-e8aba9f41c76.png)
 
-In the pop-up that opens, you must enter a wallet password. The mnemonic password is optional. After you click send, the wallet will return a mnemonic sentence as shown below. 
+In the pop-up, enter a wallet password. The mnemonic password is optional. After clicking send, the wallet will return a mnemonic sentence. 
 
 ![mnemonic sentence](https://user-images.githubusercontent.com/23208922/69916693-2360b380-1484-11ea-9366-1bf9eb0f8b30.png)
 
-You must copy this sentence and save it in a safe place. This sentence will be needed to restore the wallet on a different computer.
+Make sure to copy this sentence and store it in a safe place. You will need this sentence to restore the wallet on a different computer.
 
-### Restore wallet from earlier
+### Restore Wallet from Earlier
 
-Copy the mnemonic sentence from earlier paste it into the "Mnemonic" field in the Restore-wallet form. Enter a secure wallet password. Leave the Mnemonic password empty (it is only for advanced users). Refer to the figure below.
+To restore a wallet, copy the previously saved mnemonic sentence and paste it into the "Mnemonic" field in the Restore-wallet form. Enter a secure wallet password. Leave the Mnemonic password field empty (it is only for advanced users). 
 
 ![restore wallet](https://user-images.githubusercontent.com/23208922/71127599-66a37c00-2211-11ea-9b9e-9a69ac80c306.png)
 
-After the wallet has been successfully restored from the mnemonic sentence, you will see a confirmation as shown in the figure below.
+After successfully restoring the wallet from the mnemonic sentence, you will see a confirmation message.
 
 ![successfully restored confirmation](https://user-images.githubusercontent.com/23208922/71127600-673c1280-2211-11ea-95eb-7c775c59180d.png)
 
-### Get wallet addresses
+### Get Wallet Addresses
 
-This is a test to ensure you have set up the node properly. It will return the current addresses in the wallet. 
-In the panel at [http://127.0.0.1:9053/panel](http://127.0.0.1:9053/panel) click on the `Wallet` tab on the left and then on `Get all wallet addresses` to view the addresses currently maintained by the wallet. It should return at least one address if the node is set correctly.
+To ensure the node is set up properly, you can test it by retrieving the current addresses in the wallet. In the panel, click on the `Wallet` tab on the left and then on `Get all wallet addresses`. The wallet should return at least one address if the node is set up correctly.
 
 ![Get addresses](https://user-images.githubusercontent.com/23208922/69978955-5b82f780-1553-11ea-85b6-413c63a46334.png)
 
-### Check wallet balance
+### Check Wallet Balance
 
-Once the node is synced, use the wallet API in the panel to see your balance, as shown below.
+Once the node is synced, you can check your balance using the wallet API in the panel.
 
 ![check balance](https://user-images.githubusercontent.com/23208922/71127598-66a37c00-2211-11ea-9d53-f6d7738d1726.png)
 
-### Sending funds
+### Sending Funds
 
-If there is a non-zero balance, you can send Ergs to any other address using the panel as shown below:
+If your balance is non-zero, you can send Ergs to any other address using the panel.
 
 ![send ergs](https://user-images.githubusercontent.com/23208922/71129066-a28c1080-2214-11ea-9806-7d768059980a.png)
-
