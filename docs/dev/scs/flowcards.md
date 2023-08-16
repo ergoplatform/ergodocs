@@ -7,7 +7,7 @@ tags:
 
 FlowCards aim to radically simplify dApp development on the Ergo platform by providing a high-level declarative language, execution runtime, storage format and a graphical notation.
 
-
+See also, [flowcardLib: Ergo FlowCard library for diagrams.net](https://github.com/lucagdangelo/flowcardLib)
 ## Introduction 
 
 [ErgoScript](https://ergoplatform.org/docs/ErgoScript.pdf) is the smart contract language used by the Ergo blockchain. While it has concise syntax adopted from Scala/Kotlin, it still may seem confusing at first because conceptually, ErgoScript is quite different compared to conventional languages, which we all know and love. This is because Ergo is a UTXO based blockchain, whereas smart contracts are traditionally associated with account-based systems like Ethereum. However, Ergo's transaction model has many advantages over the account-based model, and with the right approach, it can even be significantly easier to develop Ergo contracts than to write and debug Solidity code.

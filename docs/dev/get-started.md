@@ -4,11 +4,6 @@ Not sure where to start? This page will provide a basic overview of the entire s
 
 Any problem come chat to us on [Telegram](https://t.me/Ergo_Chats), [Discord](https://discord.gg/ergo-platform-668903786361651200), or [Matrix](https://matrix.to/#/#ergo-platform:matrix.org) which are bridged between each other. Alternative join us on [ergoforum.org](https://www.ergoforum.org/)
 
-**Community sites**
-
-- [ergo.watch](https://ergo.watch/) for on-chain analytics
-- [ergonaut.space](https://ergonaut.space/) is Ergo's community wiki.
-- To explore dApps, we have [sigmaverse.io](https://sigmaverse.io/) and [ergcube](https://ergcube.com/) 
 
 ## Background
 
@@ -36,6 +31,13 @@ Any problem come chat to us on [Telegram](https://t.me/Ergo_Chats), [Discord](ht
 ]
 
 ::/cards::
+
+**Community sites**
+
+- [ergo.watch](https://ergo.watch/) for on-chain analytics
+- [ergonaut.space](https://ergonaut.space/) is Ergo's community wiki.
+- To explore dApps, we have [sigmaverse.io](https://sigmaverse.io/) and [ergcube](https://ergcube.com/) 
+
 
 
 ## Learn
@@ -69,22 +71,18 @@ Any problem come chat to us on [Telegram](https://t.me/Ergo_Chats), [Discord](ht
 
 ## Infrastructure
 
-The [Ergo Node](install.md) is a critical component of Ergo's peer-to-peer network, responsible for hosting and synchronizing a copy of the entire blockchain. You can [bootstrap from a verified UTXO snapshot](pruned-full-node.md), allowing you to get a pruned full node up and running on [testnet](testnet.md) in a couple of minutes. 
+The [Ergo Node](install.md) is a critical component of Ergo's peer-to-peer network, responsible for hosting and synchronizing a copy of the entire blockchain. You can [bootstrap from a verified UTXO snapshot](pruned-full-node.md), allowing you to get a pruned full node up and running on [testnet](testnet.md) in a couple of minutes. You can even easily [fork your own chain](mine-your-own-chain.md) with custom parameters. 
+
 
 The [Node API](swagger.md) provides comprehensive access to Ergo node functionalities, including blockchain data retrieval, transaction submission, wallet management, and more. It offers a wide range of endpoints to interact with the Ergo network programmatically. If you don't want or need to run your own node, there are also several public [APIs](api.md) that offer different functionalities.
 
-
-
-There is a publicly available explorer at [explorer.ergoplatform.com](https://explorer.ergoplatform.com/) (or [testnet.ergoplatform.com](https://testnet.ergoplatform.com/)), as well as [GraphQL](graphql.md) instances. You can install these all locally at once using a [Explorer & Node Bundles](install.md#Toolkits). 
+There is a publicly available explorer at [explorer.ergoplatform.com](https://explorer.ergoplatform.com/) (or [testnet.ergoplatform.com](https://testnet.ergoplatform.com/)), as well as [GraphQL](graphql.md) instances. You can install these all locally using one of the [Explorer & Node Bundles](install.md#Toolkits). 
 
 - [uExplorer](ergo-uexplorer.md), a supplementary, lightweight Ergo explorer with CassandraDB backend. 
 - [Blockchain Explorer with Raspberry Pi](rpi-blockchain-explorer.md)
-- [Mining your own chain](mine-your-own-chain.md)
-
+- 
 
 ## Transactional Basics
-
-
 
 - [Ergo Platform Basic Starter Tutorial](basics.md)
 - [Create and send a transaction](https://www.youtube.com/watch?v=Md5s-XV6-Hs) using AppKit
@@ -103,11 +101,12 @@ There is a publicly available explorer at [explorer.ergoplatform.com](https://ex
 
 There are many tools, libraries, SDKs, frameworks and utilities developers can use to interact with the blockchain, build their applications, and display them to users. The [Developer](start.md) section provides grid-buttons that let you narrow down your technical stack requirements and find the most appropriate tooling.
 
-There are several *Standard Development Kits* and Frameworks available on Ergo. If your plan is develop a fully fleshed out decentralised application, You'll likely want to use one of the following depending on your needs.
+There are several *Standard Development Kits* and Frameworks available on Ergo. If you plan to develop a fully fleshed-out decentralised application, You'll likely want to use one of the following depending on your needs.
 
 **Primary SDKs**
 
 - [AppKit](appkit.md) is the primary SDK, and the entry-point for JVM developers. (Java, Scala, Kotlin, Mobile)
+    - [Using AppKit from Python](https://github.com/ergoplatform/ergo-appkit/wiki/Using-Appkit-from-Python)
 - [Fleet SDK](fleet.md) lets you easily create Ergo transactions with a pure JS library. 
 - [SigmaRust](sigma-rust.md) is an alternative and simple implementation of ErgoTree interpreter and transaction building tools that has bindings for JS/TS/Swift/Java/C/Ruby.
 
@@ -119,13 +118,6 @@ There are several *Standard Development Kits* and Frameworks available on Ergo. 
 - [JSON dApp Environment](jde.md)
 - [RustKit](rustkit.md) is also in development, which aims to bring the Rust experience in-line with the JVM one. 
 
-**Tutorials**
-
-- [Creating a simple pay-to-script app](p2s.md)
-- [Get started with Ergo Mosaik: A UI system for Ergo dApps](mosaik.md)
-- [Using AppKit from Python](https://github.com/ergoplatform/ergo-appkit/wiki/Using-Appkit-from-Python)
-
-
 
 ::cards::
 
@@ -133,14 +125,20 @@ There are several *Standard Development Kits* and Frameworks available on Ergo. 
 
   {
     "title": "📕 Side tooling for building dApps on Ergo",
-    "url": "https://dav009.medium.com/ergo-101-side-tooling-for-building-dapps-on-ergo-c71889d60826"
+    "url": "https://dav009.medium.com/ergo-101-side-tooling-for-building-dapps-on-ergo-c71889d60826",
+    "content": "Building functional dApps on Ergo requires more than just smart contracts and transactions."
 
   },
   {
     "title": "📕 DeCo Education: DApp Components - Backend",
     "url": "https://deco-education.github.io/deco-docs/docs/into-the-woods/trail2-ergo-coding/dapp-components"
+  }  ,
+  {
+    "title": "📕 DeCo Intro Lessons: Build a mobile app on Android or iOS",
+    "url": "https://www.youtube.com/watch?v=qR0_k7VH6KI&list=PLopsKGshj0B4BpMoSMh5hQk8gVfWk-si6"
   }
 ]
+
 
 ::/cards::
 
@@ -151,16 +149,41 @@ ErgoScript is a super-simple subset of Scala. It is a top-level language transla
 
 - [Quick Primer](ergoscript-primer.md)
 - [Sigma Language](sigma-lang.md)
+- [Creating a simple pay-to-script app](p2s.md)
+
 
 ### Experimenting
 
 - To compile any ErgoScript contract in a P2S, you can use [**plutomonkey**](plutomonkey.md). Here are some [simple examples](p2s.md)
 - [Scastie](scastie.md) is an online compiler for the Scala programming language. It's an ideal environment for developers looking to experiment, share, or learn Scala.
+- [Kiosk](/dev/stack/kiosk) lets anyone play with ErgoScript using a basic web-based UI.
+- [ergo-puppet](puppet.md) is an advanced tool, building upon the foundational capabilities of the Ergo Playground. It is designed to facilitate experimentation with and unit testing of Ergo contracts in an off-chain setting.
 
-- [Kiosk](/dev/stack/kiosk) lets anyone play with ErgoScript using a basic web-based UI
-- [ergo-puppet](puppet.md) is an advanced tool, building upon the foundational capabilities of the Ergo Playground. It is designed to facilitate experimentation with and unit testing of Ergo contracts in an offchain setting.
 
-Courses, tutorials, explanations and further references can be found on the [ErgoScript Resources](ergoscript.md#resources) page. 
+**Tooling**
+
+- [ErgoScala](ergoscala.md) is a compiler for Ergo smart contracts written in ErgoScala (a subset of Scala).
+- [CLI Compiler](compiler.md) Command Line Interface tool designed to compile ErgoScript code into an Ergo address.
+- [FlowCards](flowcards.md) is *A Declarative Framework for Development of Ergo dApps* 
+- [Vscode ErgoScript Language Support](https://github.com/GuapSwap/vscode-ergoscript-language-support)
+
+
+**Courses**
+
+- [ErgoScript 101 Crash Course](https://docs.google.com/presentation/d/10gYO82z_7qloRrFOcCxTFuzpP40IImPyIKMV2ZFd9M4/edit#slide=id.p) (Slides)
+- [Learn ErgoScript By Example Via The Ergo Playground with Robert Kornacki (Video)](https://www.youtube.com/watch?v=8l2v1asHgyA)
+
+**Tutorials**
+
+- [ErgoScript by Example Repository](https://github.com/ergoplatform/ergoscript-by-example)
+- [Testing Ergo Contracts Off-chain](https://github.com/anon-real/contract-testing)
+- [Debugging ErgoScript](debugging.md)
+**Advanced Tutorials**
+
+- [ErgoScript tutorial](https://ergoplatform.org/docs/ErgoScript.pdf)
+- [Advanced ErgoScript Tutorial](https://ergoplatform.org/docs/AdvancedErgoScriptTutorial.pdf)
+
+
 
 ### Interpreters
 
@@ -168,15 +191,6 @@ There are two implementations of the ErgoScript compiler and ErgoTree interprete
 
 - The [sigmastate-interpreter](sigmastate-interpreter.md) for JVM languages which is used by [AppKit](appkit.md)
 - [sigma-rust](sigma-rust.md) is an alternative and simple implementation of ErgoTree interpreter and transaction-building tools. 
-
-**Tooling**
-
-- [ErgoScala](ergoscala.md) is a compiler for Ergo smart contracts written in ErgoScala (a subset of Scala).
-- [CLI Compiler](compiler.md)
-- [FlowCards](flowcards.md) is *A Declarative Framework for Development of Ergo dApps* 
-- [flowcardLib: Ergo FlowCard library for diagrams.net](https://github.com/lucagdangelo/flowcardLib)
-- [ergo-castanet](https://github.com/iandebeer/ergo-castanet)
-
 
 ### Cryptographic
 
@@ -199,9 +213,13 @@ See [this page](/dev/scs/global-functions/#cryptographic-functions) for a descri
 
 
 - [Scrypto](scrypto.md) is a comprehensively built open-source cryptographic toolkit, specifically engineered to simplify and safeguard the process of integrating cryptography into your applications. Supporting AVL+ Trees and Batch Merkle Proof Serialization and Deserialization. 
-- Learn how to create a threshold ring signature, verify schnorr signatures and more in the [Zero-Knowledge Tutorials](tutorials.md#zero-knowledge) section.
 
 
+- [Creating a 3-out-of-5 Threshold Signature](sig.md)
+- [Message signing and user authentication](message-signing.md)
+- [Verifying Schnorr Signatures in ErgoScript](https://www.ergoforum.org/t/verifying-schnorr-signatures-in-ergoscript/3407)
+- [Updateable Multisig Pattern](https://www.ergoforum.org/t/updateable-multisig-pattern/3356)
+- [Making and implementing a signature, elliptic curves, and extended keys: Ergo with C#](https://www.youtube.com/watch?v=aUuki-fAxwc&list=PLUWruihtE-HtL-JZk8Vb4Yn_H18aE3rb6)  
 
 ### AVL Trees
 
@@ -211,7 +229,7 @@ See [this page](/dev/scs/global-functions/#cryptographic-functions) for a descri
 
 Multi-Stage Contracts is a technique wherein using transaction trees we can emulate persistent storage in UTXO-based systems by linking several UTXOs containing small pieces of code to form a large [multi-stage protocol](multi.md). This enables *on-chain computations*, making it possible to process parallelised actions on top of smart contracts.
 
+## Off-chain
 
-
-
-
+- [Bootstrap an Oracle Pool on testnet](oracle-bootstrap.md)
+- [Running off-chain bots](dex_bots.md)
