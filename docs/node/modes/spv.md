@@ -1,24 +1,17 @@
-# Simplified Payment Verification 
+# Simplified Payment Verification (SPV)
 
-A full Bitcoin node checks all the blocks in the blockchain (using headers) and ensures no fraudulent transactions. It is a very secure way of using crypto – but there is a problem. It requires significant bandwidth, storage, and processing power. That commodity hardware is expensive, and using a full node to validate and make transactions is unsuitable for mobile devices. This is particularly true for Bitcoin, where the blockchain is over [270 GB and counting](https://www.blockchain.com/charts/blocks-size).
+A full Bitcoin node checks all the blocks in the blockchain (using headers) and ensures no fraudulent transactions. However, running a full node requires significant bandwidth, storage, and processing power, making it unsuitable for resource-limited devices like mobile devices. This is especially true for Bitcoin, where the blockchain size has exceeded 270 GB and continues to grow ([source](https://www.blockchain.com/charts/blocks-size)).
 
-Simplified Payment Verification (SPV) is designed to address this problem, as described in the [Bitcoin white paper](https://bitcoin.org/bitcoin.pdf):
+To address this issue, Satoshi Nakamoto proposed Simplified Payment Verification (SPV) in the [Bitcoin white paper](https://bitcoin.org/bitcoin.pdf). SPV allows users to verify payments without running a full network node. Instead, users only need to keep a copy of the block headers of the longest proof-of-work chain. By querying network nodes, users can obtain the Merkle branch linking their transaction to the block it's timestamped in. Although users cannot independently verify the transaction, they can trust that a network node has accepted it and that subsequent blocks confirm its validity.
 
-> It is possible to verify payments without running a full network node. A user only needs to keep a copy of the block headers of the longest proof-of-work chain, which he can get by querying network nodes until he's convinced he has the longest chain and obtain the Merkle branch linking the transaction to the block it's timestamped in. He can't check the transaction for himself, but by linking it to a place in the chain, he can see that a network node has accepted it, and blocks are added after it confirms the network has accepted it.
- 
-Satoshi notes that this is not a perfect solution and is vulnerable to an attacker overpowering the network and fooling SPV users.
+It's important to note that SPV is not a perfect solution and is vulnerable to attacks where an attacker overpowers the network and deceives SPV users.
 
-Moreover, while SPV mode is intended for resource-limited devices, this 'lite' approach is not always feasible. Ethereum's headers alone total around 5 GB to download. Thus Ethereum mobile clients do not validate chain validity and blindly have to trust third parties.
+While SPV mode is intended for resource-limited devices, it may not always be feasible. For example, Ethereum's headers alone total around 5 GB to download, making it challenging for Ethereum mobile clients to validate chain validity. As a result, these clients often have to blindly trust third parties.
 
-There are proposals to reduce the requirements for SPV mode by checking just a few random headers instead of all. However, it takes much work to do that securely. 
+Efforts have been made to reduce the requirements for SPV mode by checking only a few random headers instead of all. However, securely implementing this approach requires significant work.
 
-## Efficient SPV
+## Efficient SPV with NIPoPoWs
 
-Several years have been spent researching and developing secure protocols for efficient SPV clients. The two best-known and most reliable protocols are NIPoPoWs and FlyClient.
+To further enhance the efficiency of SPV wallets, Ergo implements Non-Interactive Proofs of Proof-of-Work (NIPoPoWs). NIPoPoWs are short stand-alone strings that allow a computer program to verify events on a proof-of-work-based blockchain without connecting to the blockchain network or downloading all block headers. These proofs can demonstrate that a cryptocurrency payment was made, for example.
 
-Ergo implements NIPoPoWs, or Non-interactive Proof-of-Proof-of-Work. 
-
-> *Non-Interactive Proofs of Proof-of-Work (NIPoPoWs) are short stand-alone strings that a computer program can inspect to verify that an event happened on a proof-of-work-based blockchain without connecting to the blockchain network and without downloading all block headers. For example, these proofs can illustrate that a cryptocurrency payment was made.*
-
-NIPoPoWs allow very efficient ['Light SPV'](light-spv-node.md) mobile wallets to be created. SPV wallets are already very lightweight compared to full nodes because they only require the download of block headers, not the whole blockchain. NIPoPoW wallets need to download only a ***tiny sample*** of the block headers, around 250, while SPV clients need to download half a million block headers. The sample needed changes but does not grow much in size, even after accumulating decades of data.
-
+By leveraging NIPoPoWs, Ergo enables the creation of highly efficient ['Light SPV'](light-spv-node.md) mobile wallets. Compared to full nodes, SPV wallets are already lightweight as they only require the download of block headers instead of the entire blockchain. NIPoPoW wallets need to download only a small sample of block

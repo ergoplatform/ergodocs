@@ -455,22 +455,26 @@ nav:
             - testnet.conf: 
               - node/testnet/testnetconf.md
               - devnet.conf: node/testnet/devnetconf.md
+          - Tor: node/tor.md
         - Modes of Operation: 
             - node/modes.md
-            - Full Node: 
-              - node/modes/full-node.md
-              - Pruned Full Node: 
-                - node/modes/pruned-full-node.md
-                - Implementation: node/modes/pruned/pruned-impl.md
-            - Light Modes: 
+            - Archival Full Node: 
+              - node/modes/archival-node.md
+              - Technical Details: node/modes/archive-node-workflow.md
+            - Pruned Full Node: 
+              - node/modes/pruned-full-node.md
+              - Technical Details: node/modes/pruned/pruned-impl.md
+            - Light Full Node: 
               - node/modes/light-full-node.md
               - Digest State: node/digest-state.md
               - blocksToKeep: node/history-pruning.md
               - Technical Details: node/modes/light-techworkflow.md
-            - SPV: 
-              - node/modes/spv.md
-              - Light SPV: node/modes/light-spv-node.md
-            - Tor: node/tor.md
+            - Light SPV: 
+              - node/modes/light-spv-node.md
+              - Simplified Payment Verification: node/modes/spv.md
+              - Technical Details: node/modes/light-spv-mode-workflow.md
+              
+            
           
       - Explorer: 
         - dev/stack/explorer.md

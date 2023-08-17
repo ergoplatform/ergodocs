@@ -1,5 +1,5 @@
 
-## Technical Workflow
+# Light Full Node Technical Workflow
 
 It checks all the full blocks, or some suffix of the full blockchain, depending on the setting, thus starting from a trusted pre-genesis digest or some digest in the blockchain.
 

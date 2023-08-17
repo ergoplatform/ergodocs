@@ -1,4 +1,9 @@
-## Implementation Details for UTXO Set Snapshots
+# Implementation Details for UTXO Set Snapshots
+
+The UTXO set authentication uses an AVL+ tree, outlined in [this research paper](https://eprint.iacr.org/2016/994.pdf) and available in the [Scrypto framework](https://github.com/input-output-hk/scrypto) on GitHub. Snapshots are taken every 51,200 blocks (~72 days), specifically after a block where *h % 51200 == 51199*. 
+
+[This research paper](https://eprint.iacr.org/2018/129) indicates that this method can be as secure as processing all blocks under certain statistical assumptions. 
+
 
 ### Implementation Details
 

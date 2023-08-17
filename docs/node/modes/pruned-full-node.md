@@ -6,13 +6,11 @@ tags:
 
 # Pruned Full-Node Mode
 
-## Overview and Motivation
-
-[Ergo Protocol Reference Client 5.0.13](https://github.com/ergoplatform/ergo/releases/tag/v5.0.13) introduced enabled bootstrapping using a combination of a *verified UTXO set snapshot* and [NiPoPoWS](nipopows.md). This enables full node security on a standard laptop within 10-60 minutes, avoiding the need to check about 95% of the blockchain. Addressing the growing requirements for downloading, storing, and processing the entire blockchain.
+[Ergo Protocol Reference Client 5.0.13](https://github.com/ergoplatform/ergo/releases/tag/v5.0.13) introduced bootstrapping using a combination of a *verified UTXO set snapshot* and [NiPoPoWS](nipopows.md). This enables full node security on a standard laptop within minutes, avoiding the need to check about 95% of the blockchain. Addressing the growing requirements for downloading, storing, and processing the entire blockchain.
 
 This mode is similar to Ethereum protocol clients' *fast-sync* in Geth or Grothendieck and *warp-mode* in Parity, but with more aggressive optimizations.
 
-## Enabling
+## Getting Started
 
 > Please note, that you cannot restore an old wallet with a pruned node, your best option is to create a new wallet and transfer funds across.
 
