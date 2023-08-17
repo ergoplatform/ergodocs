@@ -1,33 +1,29 @@
 # Solo Mining FAQ
 
-## Funds not showing in wallet 
+## Why Aren't My Funds Showing in My Wallet?
 
-Mining rewards belong to *time-and-pubkey lock script*, not your "normal" p2pk address. Just send all the funds to yourself in the node wallet, and Explorer will show them after the transfer is confirmed on chain 
+Mining rewards are initially tied to a *time-and-pubkey lock script*, not your standard P2PK address. To make these funds visible in your wallet, you need to send all the funds to your own address in the node wallet. Once the transfer is confirmed on the chain, the Explorer will display them.
 
+## Why Are Mining Rewards Going to an Unfamiliar Address?
 
-## Why are mining rewards going to some strange address?
+Mining rewards are initially sent to UTXOs (Unspent Transaction Outputs) associated with special scripts. These scripts lock the rewards to the miner's public keys for 720 blocks. You can see an example of such a script [here](https://explorer.ergoplatform.com/en/addresses/88dhgzEuTXaQ3tvkG8KeHesmXdvVomxHoHK5ExawGuxhs3nwBKkoQTxZogna6Dx9Jbu7KG2Wor22Uy73).
 
-Mining rewards are sent to UTXOs associated with special scripts that lock rewards to miner public keys for 720 blocks. You can see an example of such a script [here](https://explorer.ergoplatform.com/en/addresses/88dhgzEuTXaQ3tvkG8KeHesmXdvVomxHoHK5ExawGuxhs3nwBKkoQTxZogna6Dx9Jbu7KG2Wor22Uy73).
+These UTXOs are not part of the node wallet before the locking height, so they are not included in your balance. However, they are stored in a special node application with `id = 9` (wallet application id = 10). You can find them via the `/scan/unspentBoxes/9` API endpoint.
 
-Such UTXOs do not belong to the node wallet before the locking height, so the wallet does not include them into your balance. 
+After 720 confirmations on the mainnet (or 72 on the testnet), the wallet will display the mined rewards, even if they are still associated with long scripts instead of short P2PK addresses.
 
-However, such UTXOs are stored in a special node application with `id = 9` (wallet application id = 10), thus they can be found via `/scan/unspentBoxes/9` (so /scan/unspentBoxes node [Swagger](swagger.md) API method with id = 9).
+## How Can I Check If a Block Is Mine?
 
-After enough confirmations (720 for the mainnet, 72 for the testnet) wallet shows mined rewards even if they still associated with long scripts, not short P2PK addresses.
-
-## How to check if a block is yours. 
-
-You can retrieve your mining rewards address with `/mining/rewardAddress` API call, which should return something like this:
+You can retrieve your mining rewards address with the `/mining/rewardAddress` API call. The response should look something like this:
 
 ```json
 {
 “rewardAddress”: “mPdcmQkPPvyMGoCDNg9oiasLyPpKJhHjgjpt89uJZE1oN9PJ9fKbdKDcfomtWoy3d1E7RFLTUbXbt1AS”
 }
 ```
+You can then check your rewards on the [Ergo Explorer](https://explorer.ergoplatform.com/).
 
-Then you can check rewards on the [ergo explorer](https://explorer.ergoplatform.com/). 
-
-You can also retrieve your “raw” public key via the `/mining/rewardPublicKey` endpoint. 
+You can also retrieve your "raw" public key via the `/mining/rewardPublicKey` endpoint:
 
 ```json
 {

@@ -31,11 +31,16 @@ You want to develop with Java/Kotlin/Scala and run on iOS.
 
 ::/cards::
 
-
-
-## Tools
-
 ## Getting Started
 
+::cards::
 
-## Advanced use cases
+[
+  {
+    "title": "📕 DeCo Intro Lessons: Build a mobile app on Android or iOS",
+    "url": "https://www.youtube.com/watch?v=qR0_k7VH6KI&list=PLopsKGshj0B4BpMoSMh5hQk8gVfWk-si6"
+  }
+]
+
+::/cards::
+

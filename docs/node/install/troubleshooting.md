@@ -1,6 +1,6 @@
-# Ergo Troubleshooting Guide
+#  Node Troubleshooting Guide
 
-This document aims to help you troubleshoot common issues with Ergo. If you encounter a problem not covered here, please create a [new issue on GitHub](https://github.com/ergoplatform/ergo/issues/new/choose) and provide the following details:
+This document aims to help you troubleshoot common issues with the Ergo reference client. If you encounter a problem not covered here, please create a [new issue on GitHub](https://github.com/ergoplatform/ergo/issues/new/choose) and provide the following details:
 
 - Node version
 - Java command used
