@@ -272,7 +272,7 @@ Not included in the Salary section above are short-term commitments such as fund
 
 Outgoings are reviewed consistently depending on price and more formally every 60-90 days. The EF reduced their outgoings by ~15% at the end of 2022 in response to market conditions. 
 
-Please note that the Foundation's primary role is to **bootstrap** the ecosystem. There are funds for at least another 2-3 years, excluding development financiers and token allocations from ecosystem projects we have supported in the pipeline. 
+Please note that the Foundation's primary role is to **bootstrap** the ecosystem. There are funds for at least another 2-3 years, (excluding any development financiers and token allocations from ecosystem projects we may have in the pipeline).  
 
 
 ## The Ergo Foundations Future
