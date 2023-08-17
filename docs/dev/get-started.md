@@ -82,7 +82,7 @@ For in-depth discussions and community interactions, join our forum at [ergoforu
 
 - **[Sigmaverse.io](https://sigmaverse.io/)**: Explore a diverse range of dApps built on Ergo.
 - **[ErgCube](https://ergcube.com/)**: Another platform to discover and interact with Ergo dApps.
-- The [**Ecosystem**](uses.md) section on this site acts as directory for projects building on Ergo and potential future ideas.
+- The [**Ecosystem**](../uses/index.md) section on this site acts as directory for projects building on Ergo and potential future ideas.
 
 
 ## **Understanding Ergo**
@@ -94,7 +94,7 @@ Ergo is a next-generation Proof of Work smart-contract platform that enables new
 
 - Ergo adopts a transactional approach similar to Bitcoin's Unspent Transaction Output (UTxO) model. In this model, transactions utilize and produce single-use entities known as a ['box'](box.md).
 - Every [transaction](transactions.md) in Ergo represents an atomic state transition. This means a transaction eliminates a box from the state and introduces new ones in its place.
-- The eUTXO model allows each UTXO to carry arbitrary data and to be protected by an arbitrary predicate (or [spending condition](sigma-bool.md)). The data can be used to represent arbitrary tokens or smart contract states.
+- The eUTXO model allows each UTXO to carry arbitrary data and to be protected by an arbitrary predicate (or [spending condition](types.md#sigmaprop)). The data can be used to represent arbitrary tokens or smart contract states.
 
 ##### **Boxes & Their Components**
 
