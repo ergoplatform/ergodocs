@@ -3,14 +3,11 @@ tags:
   - P2P
 ---
 
+# Network Messages in Ergo's P2P Protocol
 
-# Network Messages
-
-
+This document provides a detailed overview of the network messages in Ergo's P2P protocol. Understanding these messages is crucial for interacting with the Ergo network at a low level. Each message in the protocol has a specific format and serves a unique purpose in the communication between nodes.
 
 ## Message format
-
-----------------
 
 Every message in the P2P protocol has the following format:
 
@@ -24,49 +21,50 @@ Every message in the P2P protocol has the following format:
 
 ## Records
 
-----------------
+Records are structured data types used in the P2P protocol. They include Peer, Feature, Modifier, and Header records.
 
 ### Peer
 
-| Data type               | Field name                    | Details                                                           |
-|:------------------------|:------------------------------|:------------------------------------------------------------------|
-| unsigned byte           | *Length of next field*        |
-| UTF-8 String            | Agent name                    |
-| byte\[3\]               | Version                       | For example, `{4, 0, 25}`                                         |
-| unsigned byte           | *Length of next field*        |
-| UTF-8 String            | Peer name                     |
-| boolean                 | Whether public address exists |
-| (unsigned byte)         | Length of the IP **plus 4**   | When decoding, subtract the value with 4 to get the actual length |
-| (byte\[ipLength - 4\])  | The public IP address         |
-| (VLQ unsigned **int**)  | Port                          |
-| unsigned byte           | Count of peer features        |
-| Feature\[featureCount\] | Features                      |
+ Data type               | Field name                    | Details                                                           |
+:------------------------|:------------------------------|:------------------------------------------------------------------|
+ unsigned byte           | *Length of next field*        |
+ UTF-8 String            | Agent name                    |
+ byte\[3\]               | Version                       | For example, `{4, 0, 25}`                                         |
+ unsigned byte           | *Length of next field*        |
+ UTF-8 String            | Peer name                     |
+ boolean                 | Whether public address exists |
+ (unsigned byte)         | Length of the IP **plus 4**   | When decoding, subtract the value with 4 to get the actual length |
+ (byte\[ipLength - 4\])  | The public IP address         |
+ (VLQ unsigned **int**)  | Port                          |
+ unsigned byte           | Count of peer features        |
+ Feature\[featureCount\] | Features                      |
 
 ### Feature
 
-| Data type          | Field name   |
-|:-------------------|:-------------|
-| unsigned byte      | Feature code |
-| VLQ unsigned short | Body length  |
-| byte\[bodyLength\] | Body         |
+ Data type          | Field name   |
+:-------------------|:-------------|
+ unsigned byte      | Feature code |
+ VLQ unsigned short | Body length  |
+ byte\[bodyLength\] | Body         |
 
 ### Modifier (Record)
 
-| Data type            | Field name       |
-|:---------------------|:-----------------|
-| byte\[32\]           | Modifier ID      |
-| VLQ unsigned int     | Length of object |
-| byte\[objectLength\] | Object           |
+ Data type            | Field name       |
+:---------------------|:-----------------|
+ byte\[32\]           | Modifier ID      |
+ VLQ unsigned int     | Length of object |
+ byte\[objectLength\] | Object           |
 
 ### Header
-| Data type          | Field name      |
-|:-------------------|:----------------|
-| VLQ unsigned short | Length of bytes |
-| byte\[length]      | Bytes           |
+
+ Data type          | Field name      |
+:-------------------|:----------------|
+ VLQ unsigned short | Length of bytes |
+ byte\[length]      | Bytes           |
 
 ## Messages
 
-----------------
+Messages are the primary means of communication between nodes in the P2P network. They include Get Peers, Peers, Sync Info, Inv, Request Modifier, and Modifier messages.
 
 ### Get Peers
 
@@ -80,10 +78,10 @@ Code = 2
 
 Sent in response to Get Peers. Contains all the peers that are currently connected to. Used for node discovery.
 
-| Data type         | Field name     |
-|:------------------|:---------------|
-| VLQ ZZ int        | Count of peers |
-| [Peer](#peer)\[\] | Peers          |
+ Data type         | Field name     |
+:------------------|:---------------|
+ VLQ ZZ int        | Count of peers |
+ [Peer](#peer)\[\] | Peers          |
 
 ### Sync Info
 
@@ -95,12 +93,12 @@ Added in 4.0.16. It is sent only to nodes that report a version of or higher tha
 
 Requests an [Inv](#inv) message that provides modifier IDs required to the sender to synchronize his or her blockchain with the recipient. It allows a peer which has been disconnected or started for the first time to get the data it needs to request the blocks it hasn't seen.
 
-| Data type                        | Field name              |
-|:---------------------------------|:------------------------|
-| VLQ unsigned short               | The constant value `0`  |
-| byte                             | The constant value `-1` |
-| unsigned byte                    | Count of headers        |
-| [Header](#header)\[headerCount\] | Headers                 |
+ Data type                        | Field name              |
+:---------------------------------|:------------------------|
+ VLQ unsigned short               | The constant value `0`  |
+ byte                             | The constant value `-1` |
+ unsigned byte                    | Count of headers        |
+ [Header](#header)\[headerCount\] | Headers                 |
 
 ### Sync Info (old)
 
@@ -108,10 +106,10 @@ Code = 65
 
 The old (before 4.0.16) version of the Sync Info message.
 
-| Data type                       | Field name                       |
-|:--------------------------------|:---------------------------------|
-| VLQ unsigned short              | Count of last header IDs         |
-| byte\[32\]\[lastHeaderIdCount\] | Last header IDs (ID byte arrays) |
+ Data type                       | Field name                       |
+:--------------------------------|:---------------------------------|
+ VLQ unsigned short              | Count of last header IDs         |
+ byte\[32\]\[lastHeaderIdCount\] | Last header IDs (ID byte arrays) |
 
 ## Inv
 
@@ -121,11 +119,11 @@ Transmits one or more inventories of objects known to the transmitting peer.
 
 It can be sent unsolicited to announce new transactions or blocks, or it can be sent in reply to a [Sync Info](#sync-info) message.
 
-| Data type                  | Field name                |
-|:---------------------------|:--------------------------|
-| unsigned byte              | Type ID                   |
-| VLQ unsigned int           | Count of elements         |
-| byte\[32\]\[elementCount\] | Elements (ID byte arrays) |
+ Data type                  | Field name                |
+:---------------------------|:--------------------------|
+ unsigned byte              | Type ID                   |
+ VLQ unsigned int           | Count of elements         |
+ byte\[32\]\[elementCount\] | Elements (ID byte arrays) |
 
 ## Request Modifier
 

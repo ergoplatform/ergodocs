@@ -8,8 +8,8 @@ tags:
 
 # Java Development with Ergo
 
-[Ergo AppKit](appkit.md) is a crucial library for Java developers interested in building applications on the Ergo platform. Leveraging the power of [GraalVM](https://www.graalvm.org/), Ergo AppKit provides a wide range of functionalities to facilitate the development process.
+The [Ergo AppKit](appkit.md) is an essential tool for Java developers who are keen on creating applications using the Ergo platform. It utilizes the capabilities of [GraalVM](https://www.graalvm.org/), offering a broad spectrum of features to streamline the development process.
 
-Ergo AppKit serves as a lightweight interface to the core components of the ErgoScript interpreter and Ergo protocol implementations, both of which are written in Scala. This allows Java developers to interact with Ergo's underlying infrastructure without needing to delve into the Scala codebase.
+The Ergo AppKit acts as a compact interface to the core elements of the ErgoScript interpreter and Ergo protocol implementations, both of which are developed in Scala. This setup enables Java developers to engage with the Ergo's foundational infrastructure without the necessity to explore the Scala codebase.
 
-By using Ergo AppKit, Java developers can focus on building innovative applications on the Ergo platform, harnessing the power of Ergo's unique features and robust blockchain infrastructure.
+With the help of Ergo AppKit, Java developers can concentrate on crafting innovative applications using the Ergo platform, leveraging the unique features and robust blockchain infrastructure that Ergo provides.

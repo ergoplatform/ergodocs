@@ -3,41 +3,34 @@ tags:
   - P2P
 ---
 
-Handshaking
-===========
+# Handshaking in P2P Protocol
 
 
-To establish a connection with another peer, a handshake messages exchange is needed in the first place. This document describes handshaking procedure and messages format. 
+This document outlines the procedure and format of handshake messages, which are essential for establishing a connection with another peer. 
 
-- An implementation can be found in [Ergonnection](https://github.com/Satergo/Ergonnection/blob/master/src/main/java/com/satergo/ergonnection/ErgoSocket.java), a P2P Java library for Ergo
-- There is also [github.com/SabaunT/ergo-handshake](https://github.com/SabaunT/ergo-handshake)
+For implementation examples, refer to:
+- [Ergonnection](https://github.com/Satergo/Ergonnection/blob/master/src/main/java/com/satergo/ergonnection/ErgoSocket.java), a P2P Java library for Ergo
+- [github.com/SabaunT/ergo-handshake](https://github.com/SabaunT/ergo-handshake)
 
-Peer Feature
-------------
+## Peer Features
 
-A peer feature describes some properties of a peer. Every peer can have one or more peer features. Features are embedded into a handshake message and remain unchanged during the connection. Features are optional by default: a peer can add new ones, and if another peer is not recognizing it, The node will skip the feature. The feature format is arbitrary. Any number of features can be added to the handshake; only handshake message has a size limit (8 KB).
+
+Peer features are properties that describe a peer. A peer can have multiple features, which are embedded in a handshake message and remain constant throughout the connection. Features are optional, and a peer can add new ones. If a feature is unrecognized by another peer, it will be skipped. The format of the feature is arbitrary, and any number can be added to the handshake, subject to the handshake message size limit of 8 KB.
  
-The only feature the reference client supported before 3.3.7 is the "mode feature" (describing the operating regime of the peer). 
-Since 3.3.7, a new feature describing network magic and (pseudorandom) session-id was added. 
+Before version 3.3.7, the reference client only supported the "mode feature" (which describes the operating regime of the peer). Since version 3.3.7, a new feature that describes network magic and a pseudorandom session-id has been added. 
 
-Handshake Format
-----------------
+## Handshake Format
 
-| Length         | Field Name                     | Details                                                      |
-| :------------  | :----------------------------  | :-----------                                                 |
-|6-8             | Time                           | Reported handshake time (VLQ-encoded, 6 bytes now, 8 bytes max)              |
-|1               | Agent name length              | Length of an agent name string (unsigned byte) |
-|0-255           | Agent name                     | Agent name (e.g. "Cypra wallet") in UTF-8 encoding, 255 bytes max |
-|3               | Network protocol version       | Protocol version (e.g. [0, 1, 1]  |
-|1               | Peer name length               | Length of peer name string       |      
-|0-255           | Peer name                      | Peer name (e.g. "kushti's node") in UTF-8 encoding, 255 bytes max
-|1               | Public node flag               | Flag indicating whether the node has a public address (0 or 1) |
-|(1)             | Public address length          | Length of public address |
-|(*)             | Public address                 | Public IP address bytes, IPv4 of IPv6, 4 or 6 bytes, see Note 2 |
-|(4)             | Public address port            | Public address port | 
-|1               | Number of peer features        | How many features are encoded further (unsigned byte) | 
-|*               | Features                       | Serialized features, one after another (specified below) | 
 
+The table below outlines the format of a handshake message:
+
+ Length         | Field Name                     | Details                                                      |
+ :------------  | :----------------------------  | :-----------                                                 |
+6-8             | Time                           | Reported handshake time (VLQ-encoded, 6 bytes now, 8 bytes max)              |
+1               | Agent name length              | Length of an agent name string (unsigned byte) |
+0-255           | Agent name                     | Agent name (e.g. "Cypra wallet") in UTF-8 encoding, 255 bytes max |
+3               | Network protocol version       | Protocol version (e.g. [0, 1, 1])  |
+1               | Peer name length               | Length of peer name string       |      
 
 
 For client capabilities (Mode feature):
