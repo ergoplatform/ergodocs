@@ -5,23 +5,23 @@ tags:
 
 # Ergo Platform Blockchain Integration Guide
 
-This guide facilitates developers in integrating the Ergo Blockchain Platform. For suggestions on improvements, please contact us at team@ergoplatform.org or join our [`#development` on Discord](https://discord.gg/kj7s7nb).
+This guide is designed to assist developers in integrating the Ergo Blockchain Platform. For suggestions on improvements, please contact us at team@ergoplatform.org or join our [`#development` on Discord](https://discord.gg/kj7s7nb).
 
 ## Getting Started
 
-Here's a brief overview of key features of Ergo:
+Here's a brief overview of the key features of Ergo:
 
-* Transactions in Ergo, akin to Bitcoin, involve multiple *inputs* and *outputs*. Unspent outputs are used once, termed as **single-use entities**. Although built from scratch, Ergo's scripts and transaction formats differ from Bitcoin's.
-* Ergo contains standard scripts, associated with addresses like `P2PK` addresses, similar to Bitcoin. [Learn more about the address scheme here.](/dev/wallet/address)
+* Transactions in Ergo, similar to Bitcoin, involve multiple *inputs* and *outputs*. Unspent outputs are used once, termed as **single-use entities**. Despite being built from scratch, Ergo's scripts and transaction formats differ from Bitcoin's. For more details, refer to the [Ergo 'Box' model](../data-model/box.md).
+* Ergo includes standard scripts, associated with addresses like `P2PK` addresses, similar to Bitcoin. [Learn more about the address scheme here.](/dev/wallet/address)
 * An ergo eutxo box stores [registers](registers.md) to hold arbitrary values, such as its native tokens, instead of a single amount (like BTC). Thus, each box contains an ERG amount and may include {tokenid, token amount} pairs, all following the UTXO model.
-* Ergo's inbuilt wallet API suffices for most use cases. The API uses a Swagger interface on `127.0.0.1:9053` by default in the mainnet (`9052` on the testnet).
+* Ergo's built-in wallet API is sufficient for most use cases. The API uses a Swagger interface on `127.0.0.1:9053` by default in the mainnet (`9052` on the testnet).
 * A comprehensive guide on [setting up a node](install.md) and a dedicated [troubleshooting page](troubleshooting.md) are available.
 
 ### Node Wallet
 
 - **Web interface**: Access the web interface at [127.0.0.1:9053/panel](https://127.0.0.1:9053/panel) (`9052` on the testnet). 
 
-Major functionalities include:
+The major functionalities include:
 
 * Wallet creation (`/wallet/init`) and mnemonic generation
 * Wallet restoration (`/wallet/restore`) from mnemonic
@@ -49,14 +49,14 @@ Available libraries include:
 
 ### Offline Signing
 
-- Transaction assembly and offline signing demo using ergo-wallet and Java is provided in [AdressGenerationDemo.java](https://gist.github.com/kushti/c040f244865a451b94df01032c7a3456 )
+- A demo for transaction assembly and offline signing using ergo-wallet and Java is provided in [AdressGenerationDemo.java](https://gist.github.com/kushti/c040f244865a451b94df01032c7a3456 )
 - Transaction assembly and signing in Rust: [tx_builder.rs](https://github.com/ergoplatform/sigma-rust/blob/d70bea875792c4e383bfdd71754338695bdb37f8/ergo-lib/src/wallet/tx_builder.rs#L552-L592) and [signing.rs](https://github.com/ergoplatform/sigma-rust/blob/d70bea875792c4e383bfdd71754338695bdb37f8/ergo-lib/src/wallet/signing.rs#L133-L161)
 - [Transaction assembly and signing in JavaScript](https://github.com/ergoplatform/sigma-rust/blob/d70bea875792c4e383bfdd71754338695bdb37f8/bindings/ergo-lib-wasm/tests/test_transaction.js#L9-L69)
 
 
 ### Address generation
 
-Secret seed and derived addresses generation demo using ergo-wallet and Java is provided in [AdressGenerationDemo.java](https://gist.github.com/kushti/70dcfa841dfb504721f09c911b0fc53d)
+A demo for secret seed and derived addresses generation using ergo-wallet and Java is provided in [AdressGenerationDemo.java](https://gist.github.com/kushti/70dcfa841dfb504721f09c911b0fc53d)
 
 
 You can use the `/wallet/deriveNextKey` API to generate new addresses in the same wallet.
@@ -258,4 +258,5 @@ Bytes are unique as the box contains
 - The `id` of the parent transaction, 
 - the output position in the transaction
 - a unique transaction id. 
+
 

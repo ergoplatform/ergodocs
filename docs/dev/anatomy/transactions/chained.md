@@ -1,6 +1,6 @@
 # Executing a Chained Transaction
 
-A chained transaction allows for the sequential use of outputs from off-chain transactions. This guide elaborates on how to submit a chained transaction on Ergo. The basic method illustrated here is derived from the [ergpy examples](https://github.com/mgpai22/ergpy/tree/main/examples). Additional guidance on using the [Transaction Group framework](https://github.com/GetBlok-io/Subpooling#frameworks--abstractions) for managing extensive interlinked transactions is available from GetBlok.
+Chained transactions allow for the sequential use of outputs from off-chain transactions. This guide will walk you through the process of submitting a chained transaction on Ergo. The basic method demonstrated here is based on the [ergpy examples](https://github.com/mgpai22/ergpy/tree/main/examples). For managing extensive interlinked transactions, you can refer to the [Transaction Group framework](https://github.com/GetBlok-io/Subpooling#frameworks--abstractions) provided by GetBlok.
 
 ## Establish a Blockchain Connection
 

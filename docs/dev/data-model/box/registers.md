@@ -1,11 +1,14 @@
 ---
 tags:
   - Data Model
+  - Registers
 ---
 
-# Box Registers
+# Ergo Box Registers
 
-Each [box](box.md) contains at least four essential pieces of information:
+In Ergo's blockchain model, a [box](box.md) is a versatile entity that not only holds the value of cryptocurrency but also contains additional data in the form of registers. This makes it a more functional and flexible version of the Unspent Transaction Output (UTXO) found in Bitcoin and many other cryptocurrencies.
+
+Each box contains at least four essential pieces of information:
 
 1. The value in NanoErgs (1 Erg = 1000000000 NanoErgs).
 2. The protection script (similar to Bitcoin's `scriptPubKey`) or "smart contract", which secures the box's expenditure.
@@ -98,4 +101,6 @@ val res = if (tagOpt.isDefined) { // Check if `tagOpt` is not empty
   // Compute `res` when the register is not present
 }
 ```
+
+
 

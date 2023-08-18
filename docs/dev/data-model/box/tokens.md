@@ -3,22 +3,23 @@ tags:
   - Data Model
 ---
 
-# Tokens on Ergo
+# Ergo Tokens
 
-Tokens on Ergo have broad utility and can represent various assets such as shares, complementary currency units, or any imaginable item. Ergo's token infrastructure ensures seamless representation and transfer of diverse assets, empowering their integration into the blockchain as *first-class citizens*. 
+Ergo tokens are versatile and can represent a wide range of assets, including but not limited to shares, complementary currency units, and other tangible or intangible items. The infrastructure of Ergo ensures a smooth representation and transfer of these diverse assets, integrating them into the blockchain as *first-class citizens*. 
 
-However, ERG has two distinct characteristics compared to other tokens:
+It's important to note that ERG, the native token of Ergo, has two unique characteristics:
 
-- ERGs cannot be burnt; the total input and output amounts must be equal.
-- [Storage rent](rent.md) is payable exclusively in ERGs.
+- ERGs are non-destructible; the total input and output amounts in any transaction must be equal.
+- [Storage rent](rent.md) can only be paid in ERGs.
 
-Tokens are stored in the `R2` [register](registers.md) of a [box](box.md), which holds pairs of `tokenId` and `amount`.
+Tokens in Ergo are stored in the `R2` [register](registers.md) of a [box](box.md). Each box holds pairs of `tokenId` and `amount`.
 
-A box can contain at most 255 secondary tokens.
+A single box can hold up to 255 secondary tokens.
 
-However, there are also some indirect limits:
-- A box can be no more than 4 kilobytes
-- Tokens add to the computational cost of the transaction.
+There are also some indirect constraints to consider:
+- The size of a box cannot exceed 4 kilobytes.
+- The presence of tokens increases the computational cost of the transaction.
+
 
 
 
