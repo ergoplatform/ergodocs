@@ -1,48 +1,44 @@
+# Transaction Validation Rules 
 
+The validation of a single transaction is divided into two stages: stateless checks and stateful checks. Stateless checks are performed solely based on the transaction itself, while stateful checks require knowledge of the current state, including the UTXO set or a part of it, and the specific boxes a transaction is destroying, along with their proof of authenticity (against a root hash included in the last block header).
 
-### Transaction Validation Rules 
+**Stateless Checks:**
 
-
-We split the validation of a single transaction into two stages. There are $stateless checks$ which could be done by the transaction only being presented. Stateful checks require knowledge of the current state, in the form of the whole UTXO set or a part of it, namely concrete boxes a transaction is destroying, along with proof of authenticity for them ( against a root hash included in the last block header).
-
-**Stateless checks are:**
-
--   a transaction must spend at least one input and create at least one output. A transaction spends no more than $32767$ inputs and creates no more than $32767$ outputs.
--   all the output amounts must be non-negative.
--   an output can not contain more than four assets, and all the assets' amounts must be positive.
--   transaction outputs collectively could not contain more than 16 assets.
+-   A transaction must spend at least one input and create at least one output. A transaction can spend up to $32767$ inputs and create up to $32767$ outputs.
+-   All output amounts must be non-negative.
+-   An output cannot contain more than four assets, and all the assets' amounts must be positive.
+-   The transaction outputs collectively cannot contain more than 16 assets.
 
 > Notes
 
->- Should we allow a 0-value?
-- Check box and transaction sizes
-- describe precisely during https://github.com/ergoplatform/ergo/issues/581
+> - Consideration: Should we allow a 0-value?
+> - Check box and transaction sizes
+> - Precise description to be provided during https://github.com/ergoplatform/ergo/issues/581
 
 
-**Stateful checks are:**
+**Stateful Checks:**
 
--   all the input boxes are members of the UTXO set or were created by other transactions within the same block. 
--   all the data input boxes are members of the UTXO set or were created by other transactions within the same block. 
--   total input and output ERG amounts must be the same, and adding up should be done with overflow checks.
--   all the inputs have valid spending proofs.
--   total transaction cost which consists of cost of all spending proofs verification plus the cost of all tokens containing in transaction inputs and outputs validation (calculated as $(\sum_{i=1}^{n_{in}} m_{i} + m_{tx} + \sum_{i=1}^{n_{out}} k_{i} + k_{tx}) * e$, where $n_{in}$ - number of inputs, $m_{i}$ - number of tokens in $i$'th input, $m_{tx}$ - number of tokens in all inputs in total, $n_{out}$ - number of outputs, $k_{i}$ - number of tokens in $i$'th output, $k_{tx}$ - number of tokens in all outputs in total, $e$ - cost of accessing a single token (adjustable via miners voting)) should not be greater than a limit per block (which is adjustable via miners voting as well).
--   for each kind of asset in the outputs, the total output amount for the asset should be no more than the total input amount if the asset identifier is not equal to the identifier of the first input; otherwise, the total output amount must be positive. The latter case corresponds to issuing a new asset, while the former sets the asset preservation rule. 
+-   All the input boxes must be members of the UTXO set or created by other transactions within the same block. 
+-   All the data input boxes must be members of the UTXO set or created by other transactions within the same block. 
+-   The total input and output ERG amounts must be the same, with overflow checks.
+-   All the inputs must have valid spending proofs.
+-   The total transaction cost, which includes the cost of all spending proofs verification and the cost of all tokens in transaction inputs and outputs validation, should not exceed a limit per block (adjustable via miners voting).
+-   For each kind of asset in the outputs, the total output amount for the asset should not exceed the total input amount unless the asset identifier is the identifier of the first input; in this case, the total output amount must be positive. This rule ensures asset preservation and allows for new asset issuance. 
 
-> Please note that for the total input amount of an asset, we do not require strict equality of the input and output amounts: the output amount could be less than the input amount (or zero).
+> Note: For the total input amount of an asset, we do not require strict equality of the input and output amounts: the output amount could be less than the input amount (or zero).
 
 
 ### Full-Block Validation Rules
 
-Below are rules for block validation when a node is verifying transactions
+The following rules apply for block validation when a node is verifying transactions ($VerifyTransactions = 1$):
 
-($VerifyTransactions = 1$)
+-   Every transaction in a block must reference inputs from the UTXO set or created by previous transactions in the block. 
+-   Note: An input cannot refer to an output of a subsequent block transaction.
+-   Every transaction in a block must be valid (refer to the transaction validation rules above).
+-   The total cost of validation of all the inputs of all the transactions in the block must not exceed the allowed limit.
+-   The root hash of the authenticated UTXO set after applying the block transactions must match the one in the header.
+-   For a node maintaining UTXO, the hash of the calculated state transformations proof must match the one announced in the block's header.
+-   The header must be valid (refer to header validation rules).
 
--   Every transaction in a block references inputs from the UTXO set or created by previous transactions in the block. 
--   Please note that it is impossible for an input to refer to an output of some follow-up block transaction.
--   Every transaction in a block is valid (see Section [4.6](#transaction-validation-rules) for transaction validation rules).
--   Total cost of validation of all the inputs of all the transactions in the block is no more than the allowed limit.
--   Root hash of the authenticated UTXO set after the application of the block transactions is the same as in the header.
--   For a node keeping UTXO, the hash of the calculated state transformations proof is the same as announced in the block's header.
--   Header is valid  (link to header validation rules)
+> TODO: (Mention emission rules. The extractEmissionBox function may have bugs. Extension validation rules need to be added.)
 
-> TODO: (mention emission rules. extractEmissionBox is buggy, probably. Extension validation rules)

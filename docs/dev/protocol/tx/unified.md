@@ -1,21 +1,21 @@
-# Unified Transactions
+# Unified Transactions in Ergo
 
-In Ergo, transactions play a crucial role in facilitating various operations within the network. This section provides an overview of unified transactions, highlighting important aspects such as the fee structure and the absence of out-of-thin-air emission in the "coinbase" transaction.
+Transactions in Ergo are pivotal in enabling a variety of operations within the network. This section delves into the concept of unified transactions, focusing on key elements such as the fee structure and the prohibition of out-of-thin-air emission in the "coinbase" transaction.
 
-## Fee as Boxes
+## Fee Structure: The Concept of Boxes
 
-When conducting transactions on Ergo, fees are represented as boxes. Boxes are fundamental units that store and transfer value within the blockchain. They encapsulate different types of assets, including cryptocurrencies, tokens, or other digital representations of value.
+In Ergo, transaction fees are uniquely represented as boxes. These boxes are the fundamental units that hold and transfer value within the blockchain. They can encapsulate various types of assets, including but not limited to cryptocurrencies, tokens, and other forms of digital value.
 
-To ensure the smooth functioning of the network and incentivize miners to include transactions in blocks, users must attach an appropriate fee to their transactions. This fee is represented as an output box, which is created alongside the other outputs of the transaction.
+To maintain the network's efficiency and to motivate miners to include transactions in blocks, users are required to attach a suitable fee to their transactions. This fee is manifested as an output box, which is generated in conjunction with the other outputs of the transaction.
 
-By attaching a fee box to a transaction, users indicate the amount they are willing to pay for the processing of their transaction by miners. The fee serves as a reward for miners, encouraging them to validate and include the transaction in the blockchain.
+The act of attaching a fee box to a transaction signifies the user's willingness to compensate miners for processing their transaction. This fee acts as an incentive for miners, motivating them to validate and incorporate the transaction into the blockchain.
 
-## Absence of Out-of-Thin-Air Emission in the "Coinbase" Transaction
+## No Out-of-Thin-Air Emission in the "Coinbase" Transaction
 
-The "coinbase" transaction, also known as the generation transaction, is the initial transaction in each block that rewards the miner for successfully mining and adding the block to the blockchain. Unlike some other blockchain protocols, Ergo does not allow out-of-thin-air emission in the "coinbase" transaction.
+The "coinbase" transaction, also referred to as the generation transaction, is the first transaction in each block. It rewards the miner for their efforts in mining and appending the block to the blockchain. Ergo stands out from some other blockchain protocols by disallowing out-of-thin-air emission in the "coinbase" transaction.
 
-Out-of-thin-air emission refers to the creation of new coins or tokens during the coinbase transaction, without any previous inputs or transactions. In Ergo, all coins or tokens in circulation must have originated from a valid source and be accounted for in the transaction history.
+Out-of-thin-air emission is the process of creating new coins or tokens during the coinbase transaction, without any preceding inputs or transactions. In Ergo, every coin or token in circulation must have originated from a legitimate source and must be traceable in the transaction history.
 
-By disallowing out-of-thin-air emission, Ergo ensures the integrity and scarcity of its native cryptocurrency, Erg. This design choice enhances the security and economic soundness of the blockchain, making it resilient to inflationary practices.
+By prohibiting out-of-thin-air emission, Ergo maintains the integrity and scarcity of its native cryptocurrency, Erg. This strategic decision bolsters the security and economic stability of the blockchain, making it resistant to inflationary practices.
 
-The unified transaction model in Ergo enables users to attach fees as boxes, incentivizing miners and contributing to the network's sustainability. Additionally, the absence of out-of-thin-air emission in the "coinbase" transaction strengthens the security and integrity of the blockchain's native cryptocurrency.
+Ergo's unified transaction model allows users to attach fees as boxes, providing incentives for miners and contributing to the network's sustainability. Moreover, the prohibition of out-of-thin-air emission in the "coinbase" transaction further enhances the security and integrity of the blockchain's native cryptocurrency.
