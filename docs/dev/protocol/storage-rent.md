@@ -1,8 +1,8 @@
-# Storage Rent
+# Ergo's Storage Rent System
 
-We've designed Ergo with long-term economic sustainability in mind, and storage rent is one of the ways we're ensuring miners stay profitable well into the future. This can be thought of as *'on-chain garbage collection'* that reduces the problem of blockchain bloat – and even makes it profitable.
+Ergo's design prioritizes long-term economic sustainability. One of the key strategies we've implemented to ensure this is the concept of storage rent. This can be likened to an *'on-chain garbage collection'* mechanism that not only mitigates the issue of blockchain bloat but also turns it into a profitable venture.
 
-Storage rent is a nominal fee charged on unspent output after four years, with a price per byte defined by the storage rent subprotocol. This works out to about 0.14 ERG per four years for your average [box](box.md). 
+Storage rent is a minimal fee levied on unspent output after a period of four years. The fee per byte is determined by the storage rent subprotocol. On average, this amounts to approximately 0.14 ERG every four years for a typical [box](box.md).
 
-You can read more details [here](rent.md)
+For a more in-depth understanding of Ergo's storage rent system, please refer to this [detailed guide](rent.md).
 

@@ -1,10 +1,10 @@
 # Data Storage in ErgoScript
 
-The Ergo blockchain allows data storage primarily through placing it in the [*registers*](registers.md) during the creation of a [box](box.md). Another method involves using [_context variables_](context-variables.md) when a box is being spent, but for this discussion, we'll focus on the former.
+ErgoScript, the language used in the Ergo blockchain, provides two primary methods for data storage. The first method involves the use of [*registers*](registers.md) during the creation of a [box](box.md). The second method utilizes [_context variables_](context-variables.md) when a box is being spent. For the purpose of this discussion, we will concentrate on the use of registers.
 
-An Ergo box consists of ten registers, labeled `R0` through `R9`. The first four of these (`R0` through `R3`) are reserved by the protocol. The remaining six registers (`R4` through `R9`) are available for data storage and are initially empty. It's worth noting that an empty register cannot be sandwiched between full registers.
+An Ergo box is equipped with ten registers, labeled from `R0` to `R9`. The protocol reserves the first four registers (`R0` through `R3`). The remaining six registers (`R4` through `R9`) are available for data storage and are initially empty. It's important to note that you cannot have an empty register between two filled registers.
 
-Here's an example of how registers can be utilized in ErgoScript:
+Below is an example demonstrating how registers can be used in ErgoScript:
 
 ```scala
 {

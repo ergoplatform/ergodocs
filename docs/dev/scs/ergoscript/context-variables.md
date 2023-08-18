@@ -1,6 +1,6 @@
-# Utilizing Context Variables in ErgoScript
+# Leveraging Context Variables in ErgoScript
 
-ErgoScript allows for more complex programs with predicates defined on context. Consider the following example:
+ErgoScript provides the capability to create intricate programs with predicates that are context-dependent. Let's take a look at an example:
 
 ```scala
 HEIGHT < 4000000            // address 2fp75qcgMrTNR2vuLhiJYQt

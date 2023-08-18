@@ -3,21 +3,18 @@ tags:
   - Box
 ---
 
-# Understanding the Structure of a Box in ErgoScript
+# Deep Dive into ErgoScript's Box Structure
 
-The term ['box'](box.md) in Ergo's context captures the idea that these entities are like containers holding various types of information (value, tokens, custom data, etc.), beyond just the unspent transaction output balance. This makes the boxes in Ergo significantly more flexible and functional, enabling more complex operations, such as running scripts or smart contracts, directly on the blockchain.
+In Ergo's ecosystem, the term ['box'](box.md) is more than just an unspent transaction output balance. It's a versatile container that holds various types of information (value, tokens, custom data, etc.), making Ergo's boxes highly flexible and functional. This functionality allows for complex operations, such as executing scripts or smart contracts, directly on the blockchain.
 
+The `INPUTS` and `OUTPUTS` in ErgoScript are arrays, each consisting of `Box` type objects. A `Box` encapsulates the following key fields:
 
-Both `INPUTS` and `OUTPUTS` are arrays, comprising of objects of the `Box` type. A `Box` contains the following key fields:
+1. `value`: The amount held in the box, denoted in nanoErgs.
+2. `propositionBytes`: The script, serialized into a byte array.
+3. `tokens`: An optional field that holds an array of tokens or assets.
+4. `R4..R9`: These are the [registers](registers.md) of a box, capable of storing any type of data.
 
-1. `value`: The amount contained in the box, expressed in nanoErgs.
-2. `propositionBytes`: This is the script serialized as an array of bytes.
-3. `tokens`: This optional field is an array of tokens or assets.
-4. `R4..R9`: These are the [registers](registers.md) of a box used to store any kind of data.
-
-Each element within the `tokens` array is a pair, with the structure `(tokenId, amount)`. Here, `tokenId` is an array of 32 bytes, and `amount` is a `Long` value. 
-
-An example of using tokens within a script is as follows:
+Each element in the `tokens` array is a pair, structured as `(tokenId, amount)`. Here, `tokenId` is a 32-byte array, and `amount` is a `Long` value. 
 
 ```scala
 {

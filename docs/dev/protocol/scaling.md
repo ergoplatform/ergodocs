@@ -5,24 +5,24 @@ tags:
   - Sigma Protocols
 ---
 
-# Expanding Ergo's Blockchain Technology
+# Enhancing Ergo's Blockchain Technology
 
-Building a scalable blockchain infrastructure is no small feat. Ergo, backed by a decade's worth of [research](documents.md), meticulous testing, and continuous development, has proven up to the challenge. This document will guide you through Ergo's advanced scalability features
+Creating a scalable blockchain infrastructure is a complex task. Ergo, fortified by a decade of [research](documents.md), rigorous testing, and ongoing development, has risen to the challenge. This guide will walk you through Ergo's sophisticated scalability features.
 
-Three primary factors are integral to blockchain scalability:
+Blockchain scalability is primarily influenced by three factors:
 
-- **Cryptoeconomic incentive model**: This framework ensures that miners are appropriately rewarded for the various costs that come with scaling a blockchain, which can include an increase in state-related costs.
-- **Consensus model**: Depending on the chosen model, certain scalability solutions may or may not be feasible. For instance, the Proof of Stake consensus model does not support Non-interactive Proofs of Proof-of-Work (NiPoPoWs).
-- **Accounting model**: This refers to how transactions and operations are managed within the blockchain. While Bitcoin employs the UTXO Model, Ethereum operates on the Account Model.
+- **Cryptoeconomic incentive model**: This model ensures that miners receive suitable rewards for the various costs associated with scaling a blockchain, which may include an increase in state-related costs.
+- **Consensus model**: The chosen model can determine the feasibility of certain scalability solutions. For example, the Proof of Stake consensus model does not support Non-interactive Proofs of Proof-of-Work (NiPoPoWs).
+- **Accounting model**: This pertains to the management of transactions and operations within the blockchain. Bitcoin uses the UTXO Model, while Ethereum uses the Account Model.
 
-These aspects underpin Ergo's innovative approach to scalability, distinguishing it from other blockchain technologies. Unlike Ethereum's Account model which handles storage changes and validity checks on-chain during code execution, Ergo's [eUTXO](eutxo.md) adopts a different strategy: transactions are created off-chain and validation checks are performed on-chain. 
+Ergo's innovative approach to scalability, underpinned by these aspects, sets it apart from other blockchain technologies. Unlike Ethereum's Account model, which manages storage changes and validity checks on-chain during code execution, Ergo's [eUTXO](eutxo.md) employs a unique strategy: transactions are created off-chain, and validation checks are conducted on-chain. 
 
-This system minimizes the operational demand on each node in the network, thereby improving overall efficiency. With the transaction graph's immutability, we can further optimize this process to enhance the number of transactions processed per second. Moreover, the incorporation of light-verifying nodes augments both the scalability and accessibility of the network.
+This approach reduces the operational load on each network node, thereby enhancing overall efficiency. The immutability of the transaction graph allows for further optimization of this process, increasing the number of transactions processed per second. Additionally, the use of light-verifying nodes boosts both the scalability and accessibility of the network.
 
-For a deeper understanding of Ergo's scalability, explore each layer's role in this process:
+To gain a comprehensive understanding of Ergo's scalability, delve into the role of each layer in this process:
 
 - [Layer 0](layer0.md): The *Network* or *Peer-to-Peer* Layer
 - [Layer 1](layer1.md): The Core Blockchain Layer
 - [Layer 2](layer2.md): The Off-chain Layer
 
-Each layer works synergistically to bolster Ergo's scalability, making it a versatile and powerful choice for developers and users alike. This cooperative model allows Ergo to offer robust, scalable solutions ready to meet the demands of global expansion.
+These layers work in harmony to enhance Ergo's scalability, making it a flexible and potent choice for both developers and users. This collaborative model enables Ergo to provide robust, scalable solutions that are prepared to meet the challenges of global expansion.
