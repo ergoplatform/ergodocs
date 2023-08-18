@@ -1,3 +1,8 @@
+---
+comments: true
+---
+
+
 # Discover Ergo: The Blockchain of the Future
 
 Ergo, a revolutionary proof-of-work smart contract platform, is designed to bring the future of financial interactions to the present. It is backed by a powerful and secure scripting language, a suite of powerful zero-knowledge proofs, and a foundation rooted in the best principles and research in cryptography and blockchain technology. 

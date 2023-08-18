@@ -1,15 +1,22 @@
 # Developers
 
-## How can I contribute as a developer?
+## How to Contribute as a Developer
 
-Join the [Ergo Discord](https://discord.gg/nr4JRnhAyV) (and enable the development channels) for any support, queries or comments. 
+If you're interested in contributing to the Ergo platform as a developer, here's how you can get started:
 
-Check out the [Bounties](bounties.md) and [Grants](grants.md) pages. 
+1. **Join the Ergo Community:** Connect with other developers and Ergo team members on our [Discord Server](https://discord.gg/nr4JRnhAyV). Make sure to enable the development channels for relevant discussions.
 
+2. **Explore Opportunities:** Visit our [Bounties](bounties.md) and [Grants](grants.md) pages to find out about the ongoing projects and tasks that you can contribute to.
 
+3. **Submit Your Work:** Once you've completed a task or project, you can submit your work for review. 
 
-### Payment 
+### Submitting Payment Requests
 
-You can submit any **payment requests** for bounties completed to team@ergoplatform.org
+If you've completed a bounty, you can submit a payment request. Here's how:
 
+1. **Draft an Email:** Write an email detailing your claim and send it to team@ergoplatform.org.
+2. **Include Relevant Details:** Make sure to include all necessary details in your email, such as the platform where the bounty was announced or a reference to the bounty page.
+3. **Attach Evidence:** Attach any documents, files, or links that showcase your completed work.
+4. **Provide Your Ergo Address:** This is where we will send your bounty reward.
 
+We appreciate your contributions and look forward to working with you!
