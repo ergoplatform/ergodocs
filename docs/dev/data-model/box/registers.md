@@ -3,47 +3,42 @@ tags:
   - Data Model
 ---
 
-# Registers
+# Box Registers
 
-Each [box](box.md), at the very least, holds four key pieces of information:
+Each [box](box.md) contains at least four essential pieces of information:
 
 1. The value in NanoErgs (1 Erg = 1000000000 NanoErgs).
-2. The protection script (akin to Bitcoin's `scriptPubKey`) or "smart contract", safeguarding the box's expenditure.
-3. Any additional assets or tokens housed within the box.
-4. Creation details of the box, including the `txId`, which is the ID of the transaction that created the box, and an output index. This information also includes a `maxCreation` height parameter set by the box creator (note: this is not the actual creation height; it aids in the creation of "payment channels").
+2. The protection script (similar to Bitcoin's `scriptPubKey`) or "smart contract", which secures the box's expenditure.
+3. Any additional assets or tokens contained within the box.
+4. Details about the box's creation, including the `txId`, which is the ID of the transaction that created the box, and an output index. This information also includes a `maxCreation` height parameter set by the box creator (note: this is not the actual creation height; it aids in the creation of "payment channels").
 
-These pieces of information are stored in the first four registers of the box. The rest of the registers, from R4 to R9, can be used to store custom data for use in smart contracts. Scripts can access their own registers and the registers of input and output boxes of the spending transaction.
+These pieces of information are stored in the first four registers of the box. The remaining registers, from R4 to R9, can be used to store custom data for use in smart contracts. Scripts can access their own registers and the registers of input and output boxes of the spending transaction.
 
-| Register | Value |
-|---|---|
-| R0 | Value (in nanoErgs as Base58) |
-| R1 | Protection script (Smart Contract) |
-| R2 | Assets (tokens) |
-| R3 | Creation details |
-| R4-R9 | Available for custom use |
+ Register | Value |
+---|---|
+ R0 | Value (in nanoErgs as Base58) |
+ R1 | Protection script (Smart Contract) |
+ R2 | Assets (tokens) |
+ R3 | Creation details |
+ R4-R9 | Available for custom use |
 
-> Remember, registers need to be densely packed; you cannot place an empty register between non-empty ones. 
-
+> Note: Registers must be densely packed; you cannot place an empty register between non-empty ones. 
 
 ### Register R0
 
-This register encapsulates the monetary value of the box in nanoERGs. It can be accessed using the `Box.value` command, where `Box` could signify `SELF` or any box in the `INPUTS` or `OUTPUTS` collections.
+Register R0 holds the monetary value of the box in nanoERGs. Use the `Box.value` command to access this register, where `Box` could signify `SELF` or any box in the `INPUTS` or `OUTPUTS` collections.
 
 ### Register R1
 
-Register R1 contains the proposition bytes of the guarding ErgoScript contract associated with the box. Access this register using `Box.propositionBytes`.
+Register R1 stores the proposition bytes of the guarding ErgoScript contract associated with the box. Use `Box.propositionBytes` to access this register.
 
 ### Register R2
 
-R2 holds a collection of tokens stored in the box. Each token is identified by two elements: a unique token id and the quantity of the specific token. Use `Box.tokens` to access this collection.
+Register R2 contains a collection of tokens stored in the box. Each token is identified by two elements: a unique token id and the quantity of the specific token. Use `Box.tokens` to access this collection.
 
 ### Register R3
 
-R3 stores information about the box’s creation, such as the originating transaction id, the box's output index (i.e., the index used in `OUTPUTS`), and the block height at the creation time of the transaction from which the box originates. Access this register using `Box.creationInfo`. The creation height plays a role in Ergo's unique storage rent feature, where boxes can be spent after four years, enabling miners to charge a small fee and recycle ERGs back into the blockchain.
-
-### Registers 
-
-
+Register R3 holds information about the box’s creation, such as the originating transaction id, the box's output index (i.e., the index used in `OUTPUTS`), and the block height at the creation time of the transaction from which the box originates. Use `Box.creationInfo` to access this register. The creation height is part of Ergo's unique storage rent feature, where boxes can be spent after four years, allowing miners to charge a small fee and recycle ERGs back into the blockchain.
 
 ### Optional Registers R4 - R9
 
@@ -54,19 +49,17 @@ The optional registers can hold any of the following data types:
 - `Int`, `Long` with standard Scala semantics.
 - `BigInt` - a 256-bit integer (all computations are modulo 2^256).
 - `GroupElement` - a point on the Secp256k1 curve represented in compressed format.
-- `Coll[Byte]` - a byte collection, conceptually akin to Scala's `Array[Byte]`.
+- `Coll[Byte]` - a byte collection, conceptually similar to Scala's `Array[Byte]`.
 - Collection of the above (i.e., `Coll[Int]`, `Coll[GroupElement]`, `Coll[Coll[Byte]]`, and so forth).
 
-A `boxId` is calculated based on the contents of all the registers, uniquely defining a box. This can be equated to Bitcoin's (txId, vOut) pairs.
+A `boxId` is calculated based on the contents of all the registers, uniquely defining a box. This can be compared to Bitcoin's (txId, vOut) pairs.
 
-> Note that Ergo `txId` is dependent solely on the message and not on signatures (similar to Bitcoin SegWit transactions). Hence, a txId is accessible even before signing. Like Bitcoin, Ergo supports chained transactions, meaning boxes with 0 confirmations can be spent.
+> Note: Ergo `txId` is dependent solely on the message and not on signatures (similar to Bitcoin SegWit transactions). Hence, a txId is accessible even before signing. Like Bitcoin, Ergo supports chained transactions, meaning boxes with 0 confirmations can be spent.
 
+## Typed Registers
 
+Both [ErgoScript](/dev/scs/ergoscript) and [ErgoTree](/dev/scs/ergotree) are **typed**, meaning that when a script accesses a register, it expects a specific type which is denoted in brackets.
 
-
-## Typed
-
-Both [ErgoScript](/dev/scs/ergoscript) and [ErgoTree](/dev/scs/ergotree) are **typed**, meaning that when a script accesses a register, it anticipates a specific type which is denoted in brackets.
 
 For instance,
 
@@ -105,3 +98,4 @@ val res = if (tagOpt.isDefined) { // Check if `tagOpt` is not empty
   // Compute `res` when the register is not present
 }
 ```
+

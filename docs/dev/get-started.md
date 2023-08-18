@@ -1,9 +1,12 @@
-# Getting Started Guide
 
-Welcome! If you're new here and feeling a bit overwhelmed, don't worry. This guide is designed to give you a comprehensive overview of our site and introduce you to the various resources available for developers.
+# Developer's Guide
 
-### **Connect with Us**
-If you encounter any issues or have questions, feel free to reach out to us on any of the following platforms. Remember, all our chat platforms are bridged, ensuring seamless communication:
+Welcome to the Ergo Developer's Guide
+
+This comprehensive guide is designed to provide an overview of our platform and introduce you to the various resources available for developers. Whether you're a seasoned blockchain developer or just starting out, this guide will help you navigate the Ergo ecosystem and understand its key features and functionalities.
+
+### **Connect with Our Community**
+If you encounter any issues or have questions, feel free to connect with us on any of the following platforms. All our chat platforms are bridged, ensuring seamless communication:
 
 - [Telegram](https://t.me/Ergo_Chats)
 - [Discord](https://discord.gg/ergo-platform-668903786361651200)
@@ -13,11 +16,16 @@ For in-depth discussions and community interactions, join our forum at [ergoforu
 
 ##### Contributing
 
-- We host regular hackathons you can use to dip your toes in. For more information and links to past entries see [this page](ergohack.md)
+- We host regular hackathons which are a great opportunity to get involved. For more information and links to past entries see [this page](ergohack.md)
 - See the [Contributing Guidelines](guidelines.md) for information on bounties and grants. 
 
 
-## Background
+## Ergo Platform Overview
+
+Ergo is a revolutionary platform that establishes the foundation for a new wave of blockchain-based applications. It is designed with a focus on decentralization, scalability, and security. Ergo's standout features include its advanced smart contract capabilities, efficient proof-of-work consensus algorithm, and robust transactional model. This section provides an overview of the Ergo platform, its key features, and resources for further exploration.
+
+
+
 
 ##### **Introduction to Ergo**
 
@@ -26,15 +34,15 @@ For in-depth discussions and community interactions, join our forum at [ergoforu
 
 ##### **Technical Insights**
 
-- **[Protocol Overview](protocol.md)**: Delve into the core of Ergo's protocol.
-- **[EUTXO Benefits](eutxo.md)**: Ergo uses a so-called *extended* UTXO model, which implies UTXOs with the ability to contain arbitrary data and sophisticated scripts. 
+- **[Protocol Overview](protocol.md)**: Dive deep into the core mechanisms of Ergo's protocol.
+- **[EUTXO Benefits](eutxo.md)**: Understand the advantages of Ergo's Extended UTXO model, which allows UTXOs to carry arbitrary data and complex scripts.
 - **Key Features**:
-    -  Ergo mining is based on [Autolykos](autolykos.md), a fairly launched efficient ASIC-resistant Proof of Work algorithm.
-          -  [Emission](emission.md) details.
-    - [NiPoPoWs](nipopows.md) are compact data structures that validate the occurrence of events on a blockchain using proof-of-work, without needing to connect to the blockchain network or download all block headers. These enable efficient light clients, log-space mining, and trustless sidechains through SPV proofs that are resistant to double-spending attacks, while also being small enough to be sent over the network efficiently.
-    - A simple high-level language, ErgoScript, which enables clear descriptions of contractual logic and unique flexible crypto-contracts based on Σ-protocols
-    - [Storage Rent](rent.md) or *demurrage* can be likened to 'on-chain garbage collection', a mechanism that not only mitigates the issue of blockchain bloat but also turns it into a profitable venture.
-    - [Turing complete smart contracts](#multi-stage-protocols)
+    -  **Mining**: Ergo utilizes [Autolykos](autolykos.md), an efficient, ASIC-resistant Proof of Work algorithm designed for fair launch.
+          -  Learn about Ergo's [Emission](emission.md) schedule.
+    - **NiPoPoWs**: Short for Non-Interactive Proofs of Proof-of-Work, [NiPoPoWs](nipopows.md) are compact data structures that validate blockchain events without needing full network connectivity or downloading all block headers. They enable efficient light clients, log-space mining, and trustless sidechains.
+    - **ErgoScript**: A simple high-level language that enables clear descriptions of contractual logic and supports flexible crypto-contracts based on Σ-protocols.
+    - **Storage Rent**: Also known as [demurrage](rent.md), this mechanism mitigates blockchain bloat and turns it into a profitable venture by charging for on-chain storage.
+    - **Turing Complete Smart Contracts**: Ergo supports [Turing complete smart contracts](#multi-stage-protocols), enabling complex on-chain computations.
 
 
 ##### **Documentation & Reports**
@@ -57,7 +65,7 @@ For in-depth discussions and community interactions, join our forum at [ergoforu
     "url": "https://www.youtube.com/watch?v=SAWeW6wajEw"
   },
   {
-    "title": "📹 More introductionary videos",
+    "title": "📹 More introductory videos",
     "url": "tutorials/introductory-video"
   },
   {
@@ -78,7 +86,7 @@ For in-depth discussions and community interactions, join our forum at [ergoforu
 
 - **[Ergonaut Space](https://ergonaut.space/)**: Discover Ergo's community-driven wiki, filled with insights and information.
 
-##### **Explorer the ecosystem!**
+##### **Explore the Ecosystem!**
 
 - **[Sigmaverse.io](https://sigmaverse.io/)**: Explore a diverse range of dApps built on Ergo.
 - **[ErgCube](https://ergcube.com/)**: Another platform to discover and interact with Ergo dApps.
@@ -132,27 +140,27 @@ Here are some introductory resources that cover these concepts.
 
 ##### **Ergo Node & Network**
 
-- **[Ergo Node](install.md)**: The backbone of Ergo's P2P network, responsible for hosting and synchronizing the entire blockchain.
-  - **[Bootstrap from UTXO Snapshot](pruned-full-node.md)**: Quickly set up a pruned full node on the [testnet](testnet.md).
-  - **[Fork Your Own Chain](mine-your-own-chain.md)**: Customize and create your own chain with specific parameters.
+- **[Ergo Node](install.md)**: The Ergo Node forms the core of Ergo's P2P network, maintaining and synchronizing the entire blockchain.
+  - **[Bootstrap from UTXO Snapshot](pruned-full-node.md)**: Expedite the setup of a pruned full node on the [testnet](testnet.md) by bootstrapping from a UTXO snapshot.
+  - **[Fork Your Own Chain](mine-your-own-chain.md)**: Learn how to customize and create your own chain with specific parameters.
 
 ##### **API & Programmatic Access**
 
-- **[Node API](swagger.md)**: Comprehensive access to Ergo node functionalities, from blockchain data retrieval to wallet management.
-  - **[Public APIs](api.md)**: If running your own node isn't for you, utilise these public APIs for varied functionalities.
+- **[Node API](swagger.md)**: Gain comprehensive access to Ergo node functionalities, ranging from blockchain data retrieval to wallet management.
+  - **[Public APIs](api.md)**: If you prefer not to run your own node, you can utilize these public APIs for a variety of functionalities.
 
 ##### **Explorers**
 
-- **Public Explorers** are accessible at [explorer.ergoplatform.com](https://explorer.ergoplatform.com/) and [testnet.ergoplatform.com](https://testnet.ergoplatform.com/).
-- Dive deeper with **[GraphQL](graphql.md)**.
-- **[Explorer & Node Bundles](install.md#Toolkits)**: Install both locally for a comprehensive experience.
-    - **[uExplorer](explorer.md)**: A lightweight Ergo explorer with a CassandraDB backend.
-    - **[Blockchain Explorer with Raspberry Pi](rpi-blockchain-explorer.md)**: Set up an explorer using Raspberry Pi.
+- **Public Explorers** can be accessed at [explorer.ergoplatform.com](https://explorer.ergoplatform.com/) and [testnet.ergoplatform.com](https://testnet.ergoplatform.com/).
+- Delve deeper into blockchain data with **[GraphQL](graphql.md)**.
+- **[Explorer & Node Bundles](install.md#Toolkits)**: Install both locally for a comprehensive blockchain experience.
+    - **[uExplorer](explorer.md)**: A lightweight Ergo explorer backed by CassandraDB.
+    - **[Blockchain Explorer with Raspberry Pi](rpi-blockchain-explorer.md)**: Learn how to set up an explorer using Raspberry Pi.
 
 
 ##### **Toolkits**
 
-- **[danaides](https://github.com/ergopad/danaides)** is a performant blockchain toolset.
+- **[danaides](https://github.com/ergopad/danaides)**: A high-performance blockchain toolkit.
 
 ##### **Off-chain**
 
@@ -164,16 +172,16 @@ Here are some introductory resources that cover these concepts.
 ##### **Tutorials & Guides**
 
 - **[Ergo Platform Basic Starter Tutorial](basics.md)**
-- **[Create & Send a Transaction](https://www.youtube.com/watch?v=Md5s-XV6-Hs)** using AppKit
-- **[Sign a Transaction](sign-tx.md)** with Sigma Rust
-- **[Sending a Chained Transaction](chained-tx.md)** using Ergpy
-- **[Getting Started with Fleet SDK](https://fleet-sdk.github.io/docs/getting-started)**
+- **[Create & Send a Transaction](https://www.youtube.com/watch?v=Md5s-XV6-Hs)**: A video tutorial on creating and sending a transaction using AppKit.
+- **[Sign a Transaction](sign-tx.md)**: Learn how to sign a transaction with Sigma Rust.
+- **[Sending a Chained Transaction](chained-tx.md)**: A guide on sending a chained transaction using Ergpy.
+- **[Getting Started with Fleet SDK](https://fleet-sdk.github.io/docs/getting-started)**: A beginner's guide to the Fleet SDK.
 
 ##### **Tokens & NFTs**
 
-- **[Issuing a Token](issue.md)**
-- **[Burning a Token](burn.md)**
-- **[Minting an NFT](create.md)**
+- **[Issuing a Token](issue.md)**: A step-by-step guide on how to issue a token on Ergo.
+- **[Burning a Token](burn.md)**: Learn how to burn a token, effectively removing it from circulation.
+- **[Minting an NFT](create.md)**: A comprehensive guide on creating a Non-Fungible Token (NFT) on Ergo.
 
 
 ## App development
@@ -191,6 +199,8 @@ If you're aiming to develop a comprehensive decentralized application on Ergo, c
     - [AppKit by Example](https://www.youtube.com/watch?v=Md5s-XV6-Hs)
 - **[Fleet SDK](fleet.md)**: A pure JS library designed for effortless Ergo transaction creation.
 - **[SigmaRust](sigma-rust.md)** is a ErgoTree interpreter with transaction tools and bindings for JS/TS/Swift/Java/C/Ruby.
+    - [Address Generation Demo](https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-wasm/examples/address-generation-demo)
+    - [Create Transaction Demo](https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-wasm/examples/create-transaction-demo)
 
 ##### **Alternative SDKs**
 
@@ -334,4 +344,5 @@ See [this page](/dev/scs/global-functions/#cryptographic-functions) for a descri
 
 
 Multi-Stage Contracts is a technique wherein using transaction trees we can emulate persistent storage in UTXO-based systems by linking several UTXOs containing small pieces of code to form a large [multi-stage protocol](multi.md). This enables *on-chain computations*, making it possible to process parallelised actions on top of smart contracts and construct **Turing-complete** applications.
+
 
