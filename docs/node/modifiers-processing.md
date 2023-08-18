@@ -1,28 +1,43 @@
 # Ergo Modifiers Processing
 
-Ergo's modifiers processing algorithm functions across all security modes. In contrast to many blockchain systems, Ergo features several types of modifiers which can be categorized into two distinct categories: In-memory and Persistent.
+Ergo's modifiers processing algorithm is a universal mechanism that operates consistently across all security modes. Unlike many blockchain systems, Ergo introduces several types of modifiers, which can be broadly classified into two categories: In-memory and Persistent.
 
 ## In-memory Modifiers
 
-1. **Transaction**: This is an in-memory modifier.
-2. **TransactionIdsForHeader**: These are the ids of transactions associated with a particular block.
-3. **UTXOSnapshotManifest**: These are the ids of UTXO chunks.
+In-memory modifiers are temporary and do not persist across sessions. They include:
+
+1. **Transaction**: A single transaction represents an in-memory modifier.
+2. **TransactionIdsForHeader**: These are identifiers associated with transactions for a specific block.
+3. **UTXOSnapshotManifest**: These are identifiers for chunks of the Unspent Transaction Output (UTXO) set.
 
 ## Persistent Modifiers
 
-1. **BlockTransactions**: These are sequences of transactions, each corresponding to a single block.
-2. **ADProofs**: These are proofs verifying transaction correctness relative to the corresponding UTXO.
-3. **Header**: Contains data needed to verify PoW, provides a link to the previous block, and carries the state root hash and root hash to its payload (BlockTransactions, ADProofs, Interlinks, etc).
-4. **UTXOSnapshotChunk**: Represents a portion of UTXO.
-5. **PoPoWProof**
+Persistent modifiers are data elements that are stored and persist across sessions. They play a crucial role in maintaining the continuity and integrity of the Ergo network. The following are the types of persistent modifiers:
 
-Ergo employs certain parameters that define a specific security regime:
+1. **BlockTransactions**: These are sequences of transactions, each corresponding to a single block. They provide a detailed record of all transactions within a block.
 
-1. **ADState**: A boolean value. If true, only the state roothash is kept.
-2. **VerifyTransactions**: A boolean value. If true, block transactions are downloaded and verified. If disabled, `BlocksToKeep` must equal 0.
-3. **PoPoWBootstrap**: A boolean value. If true, only the PoPoW proof is downloaded.
-4. **BlocksToKeep**: An integer value specifying the number of the most recent blocks to retain with their transactions. For all other blocks, only the header is kept. If the value is negative, all blocks from genesis are retained.
-5. **MinimalSuffix**: An integer value representing the minimal suffix size for the PoPoW proof. This could be a pre-defined constant.
+2. **ADProofs**: These are proofs that validate the correctness of transactions relative to the corresponding Unspent Transaction Output (UTXO). They ensure that all transactions are valid and consistent with the UTXO.
+
+3. **Header**: This contains essential data needed to verify Proof of Work (PoW), provides a link to the previous block, and carries the state root hash and root hash to its payload (BlockTransactions, ADProofs, Interlinks, etc). It serves as the backbone of the blockchain, linking all blocks together.
+
+4. **UTXOSnapshotChunk**: This represents a portion of the UTXO set. It allows the UTXO set to be managed in manageable chunks, improving efficiency.
+
+5. **PoPoWProof**: This is a proof of Proof of Work (PoPoW) that provides evidence of the computational work done to add a new block to the blockchain.
+
+In addition to these modifiers, Ergo employs certain parameters that define a specific security regime. 
+
+These parameters include:
+
+1. **ADState**: A boolean value. If true, only the state root hash is kept. This parameter helps in reducing the storage requirements by only keeping the state root hash.
+
+2. **VerifyTransactions**: A boolean value. If true, block transactions are downloaded and verified. This parameter ensures the integrity of the transactions within the blocks. If disabled, `BlocksToKeep` must equal 0.
+
+3. **PoPoWBootstrap**: A boolean value. If true, only the PoPoW proof is downloaded. This parameter allows for a lighter bootstrap process by only downloading the PoPoW proof.
+
+4. **BlocksToKeep**: An integer value specifying the number of the most recent blocks to retain with their transactions. For all other blocks, only the header is kept. If the value is negative, all blocks from genesis are retained. This parameter helps in managing the storage requirements by specifying the number of blocks to keep.
+
+5. **MinimalSuffix**: An integer value representing the minimal suffix size for the PoPoW proof. This could be a pre-defined constant. This parameter helps in managing the size of the PoPoW proof.
+
 
 The system enforces the following condition:
 
@@ -82,9 +97,17 @@ def updateHeadersChainToBestInNetwork() = {
 
 ## Bootstraping
 
-The bootstrap process involves two main steps: downloading headers and downloading the initial state to begin transaction processing.
+## Bootstrapping
 
+Bootstrapping is the initial setup process that prepares the node for transaction processing. It involves two main steps: 
 
+1. **Downloading Headers**: The process of downloading headers depends on the value of the **PoPoW** parameter. If **PoPoW** is *true*, the node sends a `GetPoPoWProof` request to all connections. Upon receiving the `PoPoWProof`, it applies it to the History. If **PoPoW** is *false*, the node updates the headers chain to the best in the network.
+
+2. **Downloading Initial State**: The system checks the `ADState` and `BlocksToKeep` values to decide how to initialize the state. If `ADState` is *true*, the state is initialized with the state root hash from the block header `BlocksToKeep` ago. If `BlocksToKeep` is less than 0 or greater than `History.headersHeight`, the state is initialized with the genesis state. Otherwise, the system requests a historical `UTXOSnapshotManifest` for at least `BlocksToKeep` back, and upon receiving the `UTXOSnapshotManifest`, it requests each chunk from the sender. The received `UTXOSnapshotChunk` is then applied to the State.
+
+After the initial state is downloaded, the state is updated to the best headers height. Depending on the values of `State.bestHeader`, `History.bestHeader`, and `VerifyTransactions`, the state is updated accordingly. If `State.bestHeader` equals `History.bestHeader`, no action is taken as the state is already updated. If `VerifyTransactions` is *false*, the state root hash is simply updated to the best header in history. If `VerifyTransactions` is *true*, transaction ids are requested from all headers without transactions, and transaction processing continues as described in the original text.
+
+Once the bootstrapping process is complete, the system transitions to regular mode.
 
 ### Download headers
 
@@ -173,43 +196,45 @@ Depending on the values of State.bestHeader, History.bestHeader, and VerifyTrans
 ### GOTO regular mode.
 
 
-
 ## Regular Mode
 
-In the regular mode, two infinite loops run in different threads, each performing a different function:
+In regular mode, the system operates two infinite loops in separate threads, each performing a distinct function:
 
-- Updating the headers chain to the best in the network.
-- Downloading and updating full blocks when needed.
+1. **Updating the Headers Chain**: This loop continuously updates the headers chain to match the best in the network.
 
-Depending on the values of `State.bestHeader`, `History.bestHeader`, and `VerifyTransactions`, specific actions are taken.
+2. **Downloading and Updating Full Blocks**: This loop is responsible for downloading and updating full blocks as needed.
 
+The specific actions taken within these loops depend on the values of `State.bestHeader`, `History.bestHeader`, and `VerifyTransactions`.
 
 ```java
- if(State.bestHeader == History.bestHeader) {
-    //Do nothing, State is already updated
-  } else if(VerifyTransactions == false) {
-    //Just update State rootshash to best header in history
+if(State.bestHeader == History.bestHeader) {
+    // No action is taken as the state is already updated
+} else if(VerifyTransactions == false) {
+    // The state root hash is updated to the best header in history
     State.setBestHeader(History.bestHeader)
-  } else {
-    //we have headers chain better then full block
-    3.1. Request transaction ids from all headers without transactions
-      assert(history contains header chain from State.bestHeader to History.bestHeaders)
-      History.continuation(from = State.bestHeader, size = ???).get.foreach { header =>
+} else {
+    // If the headers chain is better than the full block
+    // Request transaction ids from all headers without transactions
+    assert(history contains header chain from State.bestHeader to History.bestHeaders)
+    History.continuation(from = State.bestHeader, size = ???).get.foreach { header =>
         sendToRandomFullNode(GetTransactionIdsForHeader(header))
         if(ADState == true) sendToRandomFullNode(GetADProofsForHeader(header))
-      }
-    3.2. On receiving TransactionIdsForHeader:
-      Mempool.apply(TransactionIdsForHeader)
-      TransactionIdsForHeader.filter(txId => !MemPool.contains(txId)).foreach { txId =>
+    }
+    // On receiving TransactionIdsForHeader
+    Mempool.apply(TransactionIdsForHeader)
+    TransactionIdsForHeader.filter(txId => !MemPool.contains(txId)).foreach { txId =>
         request transaction with txId
-      }
-    3.3. On receiving a transaction:
-      if(Mempool.apply(transaction).isSuccess) {
-         Broadcast INV for this transaction
-         Mempool.getHeadersWithAllTransactions { BlockTransactions =>
-            GOTO 3.4 //now we have BlockTransactions
-         }
-      }
-    3.4. (same as 3.2. from bootstrap)
-  }
+    }
+    // On receiving a transaction
+    if(Mempool.apply(transaction).isSuccess) {
+        // Broadcast INV for this transaction
+        Mempool.getHeadersWithAllTransactions { BlockTransactions =>
+            // Now we have BlockTransactions
+            // Continue with the next step
+        }
+    }
+    // Continue with the process as described in the bootstrap section
+}
 ```
+
+In this mode, the system is continuously updating its state and transactions, ensuring it stays in sync with the network.

@@ -8,6 +8,7 @@ This is fixed with the new API introduced in the distributed-sigs branch. Now al
 
 So let me provide a new tutorial on collective signing. Like in the previous tutorial, first, we pay to a 2-out-of-3 spending script (with keys stored in registers):
 
+
 ```json
 {
 val pkA  = SELF.R4[GroupElement].get

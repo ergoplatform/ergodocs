@@ -1,18 +1,16 @@
 # Modes of Operation
 
+The Ergo node supports multiple security models, providing flexibility for users to select the mode that best aligns with their requirements. 
 
+The available modes include:
 
-The Ergo node supports multiple security models, allowing users to choose the mode that best suits their needs. 
+- [**Full 'Archive' Node Mode**](full-node.md): This is the standard mode, akin to a full Bitcoin node. It stores all blocks from the genesis block onwards, checks the proofs of work, verifies the correctness of the linking structure, and maintains a copy of the entire UTXO set.
 
-The available modes are:
+- [**Pruned-Fullnode Mode**](pruned-full-node.md): This mode downloads all headers, validates proofs-of-work, and links structures. It then downloads a UTXO snapshot from peers and the full blocks succeeding it. 
 
-- [Full *'Archive'* Node Mode](full-node.md): This is the standard mode, similar to a full Bitcoin node.
-- [Pruned-Fullnode Mode](pruned-full-node.md): Downloads all headers, validates proofs-of-work, and links structures, followed by downloading a UTXO snapshot from peers and the full blocks succeeding it. 
-- [Light-Fullnode Mode](light-full-node.md) only holds the root digest of the dictionary and checks full blocks or a suffix of the blockchain, depending on the setting. 
-- [Light-SPV Mode](light-spv-node.md): A lightweight mode that allows users to verify transactions without downloading the entire blockchain.
+- [**Light-Fullnode Mode**](light-full-node.md): This mode only holds the root digest of the dictionary and checks full blocks or a suffix of the blockchain, depending on the setting. 
 
-
-
+- [**Light-SPV Mode**](light-spv-node.md): A lightweight mode that enables users to verify transactions with a small sample of block headers.
 
 <!--TODO: ## Mode-Related Settings
 

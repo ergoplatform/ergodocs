@@ -1,19 +1,22 @@
 $$
 \newcommand{\peers}{\mathcal{P}}
 $$
-
 # Peer Management Protocol
 
 ## Definitions
 
-A **peer** is defined as a pair consisting of `addr` and `port`, where `addr` refers to its IPv4/6 address, and `port` denotes its port number.
+A **peer** is a pair consisting of `addr` (IPv4/6 address) and `port` (port number).
 
-A **peer management structure** is a tuple, (G, B, C), in which G represents the set of *good peers*, B stands for the set of *banned peers*, and C signifies the set of *connected peers*. This structure adheres to the following conditions:
+A **peer management structure** is a tuple, (G, B, C), where:
+- G represents the set of *good peers*,
+- B stands for the set of *banned peers*,
+- C signifies the set of *connected peers*.
 
-- The intersection of G and B is an empty set i.e., $G \cap B = \emptyset$.
-- The set C is a subset of G i.e., $C \subseteq G$.
-- The set G is a subset of all peers i.e., $G \subseteq \peers$.
-- The set B is a subset of all peers i.e., $B \subseteq \peers$.
+This structure adheres to the following conditions:
+
+- Good peers (G) and banned peers (B) are disjoint: $G \cap B = \emptyset$.
+- Connected peers (C) are a subset of good peers: $C \subseteq G$.
+- Good peers (G) and banned peers (B) are subsets of all peers: $G \subseteq \peers$, $B \subseteq \peers$.
 
 ## Peer Penalization and Blacklisting
 
@@ -21,14 +24,14 @@ A **penalty** is a tuple `descr`, `score`, where `descr` describes misbehaviour,
 
 There are four categories of penalties:
 
-* **NonDeliveryPenalty**: This penalty is applied when a peer fails to deliver the requested modifier within the stipulated time frame.
-* **MisbehaviorPenalty**: This penalty comes into play when a peer delivers an invalid modifier.
-* **SpamPenalty**: This penalty is applied when a peer delivers a non-requested modifier.
-* **PermanentPenalty**: This penalty is levied on peers who deviate from the actual network protocol.
+* **NonDeliveryPenalty**: Applied when a peer fails to deliver the requested modifier within the stipulated time frame.
+* **MisbehaviorPenalty**: Applied when a peer delivers an invalid modifier.
+* **SpamPenalty**: Applied when a peer delivers a non-requested modifier.
+* **PermanentPenalty**: Levied on peers who deviate from the actual network protocol.
 
 When a penalty is imposed, the penalized peer is added to the penalty book. A **penalty book** is a mapping `ip` -> (`score, `ts), where `ip` represents a peer IP address, `score` signifies the accumulated penalty score, and `ts` is the timestamp of when the peer was last penalized.
 
-The penalties of type `NonDeliveryPenalty`, `MisbehaviorPenalty`, and `SpamPenalty` are not imposed on the same peer repetitively within a specified safe interval. A **safe interval** refers to the delay between the application of penalties.
+Penalties of type `NonDeliveryPenalty`, `MisbehaviorPenalty`, and `SpamPenalty` are not imposed on the same peer repetitively within a specified safe interval. A **safe interval** refers to the delay between the application of penalties.
 
 When a peer accumulates a critical penalty score, it gets added to the blacklist. A **blacklist** is a mapping `ip` -> `ts`, where `ip` stands for a peer IP address and `ts` represents the timestamp when a peer is banned.
 

@@ -1,11 +1,13 @@
 # Full Archival Node Technical Workflow
 
-The technical workflow for the full archival node mode in Ergo is as follows:
+This document outlines the technical workflow for the full archival node mode in Ergo. The process is as follows:
 
 1. Send an **ErgoSyncInfo** message to connected peers.
 2. Receive a response with an INV message containing the IDs of blocks that are better than our best block.
 3. Request headers for all the block IDs received in step 2.
-4. On receiving a header:
+
+Upon receiving a header, the following operations are performed:
+
 
 ```java
 if(history.apply(header).isSuccess) {
@@ -16,7 +18,8 @@ if(history.apply(header).isSuccess) {
     }
 ```
 
-On receiving transaction ids from the Header:
+
+When transaction IDs from the Header are received, the following operations are performed:
 
 ```java
 transactionIdsForHeader.filter(txId => !MemPool.contains(txId)).foreach { txId =>
@@ -24,7 +27,7 @@ transactionIdsForHeader.filter(txId => !MemPool.contains(txId)).foreach { txId =
 }
 ```
 
-On receiving a transaction:
+Upon receiving a transaction, the following operations are performed:
 
 ```java
 if(Mempool.apply(transaction).isSuccess) {
@@ -64,3 +67,4 @@ if(History.apply(BlockTransactions) == Success(ProgressInfo)) {
 blacklist peer who sent Header
 }
 ```
+For more information, please refer to the [Bootstrapping section of modifiers processing](modifiers-processing.md#bootstraping).

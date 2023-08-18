@@ -1,15 +1,17 @@
-# Archival Node Mode
+# Archival Node Mode in Ergo
 
-The archival node mode in Ergo is a type of full node that stores all the blocks since the genesis block. In addition to checking the proofs of work and linking structure correctness, an archival node keeps a copy of the entire UTXO set, allowing it to validate arbitrary transactions.
+The Archival Node Mode is the complete full node in Ergo. It is designed to store all blocks from the genesis block onwards. This mode not only checks the proofs of work and the correctness of the linking structure but also maintains a copy of the entire UTXO set. This allows it to validate any transaction, regardless of its complexity or origin.
 
-## Features and Functionality
+## Key Features and Functionalities
 
-The archival node mode provides the following features and functionality:
+The Archival Node Mode offers several unique features and functionalities:
 
-- **Full Blockchain Storage**: An archival node stores every block since the genesis block, ensuring the complete history of the blockchain is available.
-- **Proof-of-Work Verification**: The node checks the proofs of work for each block, ensuring the validity of the blockchain's consensus mechanism.
-- **Linking Structure Correctness**: The node verifies the correctness of the linking structure, including parent block IDs and interlink elements.
-- **UTXO Set Storage**: An archival node keeps a copy of the entire UTXO set, enabling it to validate arbitrary transactions.
+- **Comprehensive Blockchain Storage**: The archival node mode ensures the storage of every block since the genesis block. This guarantees the availability of the complete history of the blockchain.
 
-To set up a full node, you can refer to [this page](manual.md) for detailed instructions.
+- **Proof-of-Work Verification**: This feature allows the node to check the proofs of work for each block. This is crucial for maintaining the integrity and validity of the blockchain's consensus mechanism.
 
+- **Linking Structure Verification**: The node is capable of verifying the correctness of the linking structure. This includes parent block IDs and interlink elements, which are essential for the blockchain's operation.
+
+- **UTXO Set Storage**: The archival node mode maintains a copy of the entire UTXO set. This feature enables it to validate any transaction, regardless of its complexity or origin.
+
+For detailed instructions on setting up a full node, please refer to [this page](manual.md).
