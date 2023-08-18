@@ -8,64 +8,60 @@ tags:
   - Layer 2
 ---
 
-# Atomic Composability 
+# Understanding Atomic Composability in Blockchain Systems
 
-## The Importance of Atomic Composability
+## The Role of Atomic Composability in Decentralized Finance (DeFi)
 
-Decentralized Finance (DeFi) derives its power from its open-source nature, which allows for the reuse, modification, and integration of decentralized applications (dApps) into existing ones. This composability enhances the overall ecosystem's value. However, achieving atomic composability, where all relevant transactions either execute successfully or none at all, is crucial for certain DeFi applications involving flash loans and instant arbitrage. Some scaling solutions, such as sharding and Layer 2 platforms, can introduce complexity and hinder reliable atomic composability.
+In the realm of Decentralized Finance (DeFi), the power of open-source allows for the integration, modification, and reuse of decentralized applications (dApps). This ability to combine and reconfigure components is known as composability, and it significantly enhances the value of the overall ecosystem. A specific form of composability, known as atomic composability, is particularly crucial for certain DeFi applications. Atomic composability ensures that all related transactions either execute in their entirety or not at all, a feature vital for operations like flash loans and instant arbitrage. However, certain scaling solutions, such as sharding and Layer 2 platforms, can introduce complexities that may disrupt atomic composability.
 
-## The Challenge of Scaling with Atomic Composability
+## Balancing Scalability and Atomic Composability
 
-The challenge for blockchain technology is not just scalability but maintaining atomic composability at scale. Ergo aims to utilize the available "headroom" in conventional blockchain platforms by employing resources more intelligently, rather than implementing untested technologies.
+The challenge for blockchain technology lies not only in achieving scalability but also in maintaining atomic composability at scale. Ergo addresses this challenge by optimizing the use of resources within the constraints of existing blockchain platforms, rather than resorting to unproven technologies.
 
-## Scaling Solutions and Atomic Composability
+## The Impact of Scaling Solutions on Atomic Composability
 
-Scaling solutions often involve dividing the platform into subsections, such as shards or introducing a new layer on top of the base layer. However, incorrect implementation of these solutions can impede seamless interaction between assets and applications residing in different parts of the platform.
+Scaling solutions typically involve partitioning the platform into smaller sections, such as shards, or adding a new layer atop the base layer. However, if these solutions are not implemented correctly, they can disrupt the smooth interaction between assets and applications across different sections of the platform.
 
-## Achieving Atomic Composability in Ergo
+### The eUTXO Model and ErgoScript
 
-In Ergo, atomic composability is achieved through a combination of the eUTXO model, ErgoScript, Layer 2 solutions, and other proposed techniques.
+The [eUTXO](https://ergoplatform.org/docs/utxo/) model, in conjunction with the ErgoScript smart contract language, allows for the atomic execution of complex, [multi-stage transactions](multi.md) within a single transaction. This ensures that all components of a transaction are executed in full or not at all, a fundamental aspect of atomic composability. ErgoScript enables the creation and execution of complex smart contracts with predictable outcomes, while leveraging the benefits of the UTXO model, such as statelessness, improved parallelism, and reliable data handling.
 
-### eUTXO Model and ErgoScript
+### Layer 2 Solutions: Hydra State Channels
 
-The [eUTXO](https://ergoplatform.org/docs/utxo/) model, along with the ErgoScript smart contract language, enables the execution of complex, [multi-stage transactions](multi.md) atomically within a single transaction. Multistage protocols ensure that all parts of a transaction are executed or none are, which is fundamental to atomic composability. ErgoScript facilitates the creation and execution of intricate smart contracts with confidence in their outcomes, while leveraging the advantages of the UTXO model, such as statelessness, better parallelism, and more reliable data handling.
+Layer 2 solutions, such as [Hydra state channels](https://ergoplatform.org/docs/hydra/), also contribute to atomic composability. Hydra facilitates communication across different heads, allowing for the atomic execution of complex operations involving multiple state channel participants.
 
-### Layer 2 Solutions - Hydra State Channels
+### ACE: Enhancing the Execution of Complex Smart Contracts
 
-Layer 2 solutions like [Hydra state channels](https://ergoplatform.org/docs/hydra/) also support atomic composability. Hydra enables cross-head communication, allowing complex operations to be executed atomically across different heads, even when involving multiple state channel participants.
+Ergo's ability to execute complex and composable smart contracts could be further enhanced by implementing concepts like [ACE](https://eprint.iacr.org/2019/835.pdf). ACE suggests decomposing smart contracts into smaller, concurrent tasks that can be executed independently, thereby improving overall performance and throughput. It allows one contract to safely invoke another contract executed by a different set of service providers, facilitating off-chain execution of interactive smart contracts with flexible trust assumptions and enhancing atomic composability.
 
-### ACE (Asynchronous and Concurrent Execution of Complex Smart Contracts)
+## Sharding and Its Impact on Atomic Composability
 
-Ergo could further enhance its ability to execute complex and composable smart contracts by implementing ideas like [ACE](https://eprint.iacr.org/2019/835.pdf). ACE proposes breaking down smart contracts into smaller, concurrent tasks that can be executed independently, improving overall performance and throughput. It enables one contract to safely call another contract executed by a different set of service providers, facilitating off-chain execution of interactive smart contracts with flexible trust assumptions and enhancing atomic composability.
+### An Overview of Sharding
 
-## Sharding and Atomic Composability
+Sharding is a technique that divides a blockchain network into smaller sections, or shards, to enhance scalability. Each shard processes a subset of transactions independently. However, maintaining atomic composability, where all components of a multi-step transaction are executed in full or not at all, can be challenging in a sharded environment.
 
-### Sharding Explained
+### Strategies for Preserving Atomic Composability in Sharding
 
-Sharding is a technique that partitions a blockchain network into smaller sections called shards to improve scalability. Each shard independently processes a subset of transactions. However, ensuring atomic composability, where all parts of a multi-step transaction execute or none do, can be challenging in a sharded environment.
+Several strategies can help preserve atomic composability when implementing sharding:
 
-### Strategies for Maintaining Atomic Composability in Sharding
+#### Cross-shard Transactions
 
-Here are potential strategies to maintain atomic composability when sharding:
+Establish a mechanism for secure and efficient communication between shards to enable cross-shard transactions. This mechanism ensures that all components of a multi-step transaction are either fully committed or rolled back, even when the transaction spans multiple shards.
 
-#### Cross-shard transactions
+#### Locking Mechanisms
 
-Implement a mechanism for secure and efficient communication between shards, enabling cross-shard transactions. This mechanism ensures that all parts of a multi-step transaction are either committed or rolled back, even when spanning multiple shards.
+Introduce locking mechanisms to prevent double-spending and fraud during cross-shard transactions. Temporarily locking the assets involved until the transaction is complete can help preserve atomic composability.
 
-#### Locking mechanisms
+#### Two-phase Commit Protocols
 
-Introduce locking mechanisms to prevent double-spending and fraud during cross-shard transactions. Temporarily locking involved assets until the transaction completes helps maintain atomic composability.
+Employ [two-phase commit protocols](layer2.md) to coordinate cross-shard transactions. In the first phase, shards tentatively execute the transaction and lock the relevant assets. In the second phase, once all shards have confirmed the transaction, it is committed, and the locked assets are released. If any shard fails to confirm, the transaction is rolled back, and the locked assets are released.
 
-#### Two-phase commit protocols
+#### Optimistic Execution
 
-Utilize [two-phase commit protocols](layer2.md) to coordinate cross-shard transactions. In the first phase, shards tentatively execute the transaction and lock relevant assets. In the second phase, when all shards confirm the transaction, it is committed, and locked assets are released. If any shard fails to confirm, the transaction is rolled back, and locked assets are released.
+Allow shards to optimistically execute transactions, assuming dependencies between shards are resolved. If conflicts arise later, the transaction can be rolled back, and the network can learn from the conflict to prevent similar issues in the future.
 
-#### Optimistic execution
+#### State Channels or Sidechains
 
-Allow shards to optimistically execute transactions assuming resolved dependencies between shards. If conflicts arise later, the transaction can be rolled back, and the network can learn from the conflict to prevent similar issues.
+Use state channels or sidechains to process transactions off-chain, settling the final state back on the main chain. These off-chain solutions enable complex, multi-step transactions without directly involving multiple shards, thus preserving atomic composability.
 
-#### State channels or sidechains
-
-Employ state channels or sidechains to process transactions off-chain, settling the final state back on the main chain. These off-chain solutions enable complex, multi-step transactions without directly involving multiple shards, thus maintaining atomic composability.
-
-These strategies provide a general framework for maintaining atomic composability in a sharded blockchain environment. Specific implementation details would depend on the requirements and design of yet-to-emerge dApps.
+These strategies offer a general framework for preserving atomic composability in a sharded blockchain environment. The specific implementation details would depend on the requirements and design of emerging dApps.

@@ -1,17 +1,19 @@
-# Scaling Roadmap
+# Ergo Scaling Roadmap
 
-For discussions on scaling please join the [Telegram](https://t.me/ErgoLayer2) or [#layer2 on discord](https://discord.gg/nr4JRnhAyV)
+Join our discussions on scaling on [Telegram](https://t.me/ErgoLayer2) or [#layer2 on discord](https://discord.gg/nr4JRnhAyV). We welcome all insights and contributions.
 
-## Timeline
+## Current Focus
 
-Currently, our focus is on integrating UTXO set snapshots and Non-Interactive Proofs of Proof-of-Work (NiPoPoWs) to achieve ultra-fast bootstrapping. This approach will provide a fast sync with the same level of security as if they had processed every block since genesis. Upon successful stabilization of this implementation, we advise miners to contemplate increasing block limits once more.
+With the successful integration of UTXO set snapshots and Non-Interactive Proofs of Proof-of-Work (NiPoPoWs) for ultra-fast bootstrapping in the pruned full node, our focus has now shifted towards optimizing this implementation. We are also exploring ways to further increase block limits for miners, given the live status of the pruned full node.
 
-- (TBA) Node V6 Planning & scalability improvements
-- (WIP) SPV Client
-- Bootstrapping with UTXO Set [now live](pruned-full-node.md)
-- [Node V5](jitc.md) released.
-- GetBlok release [Plasma Library](plasma.md)
-- Plasma Tutorials released.
+## Recent Developments
+
+- (TBA) Planning for Node V6 & scalability improvements
+- (WIP) Development of SPV Client
+- Pruned Full Node is [now live](pruned-full-node.md)
+- Release of [Node V5](jitc.md)
+- GetBlok released the [Plasma Library](plasma.md)
+- Plasma Tutorials have been published
 
 ## Roadmaps
 
@@ -32,4 +34,5 @@ Currently, our focus is on integrating UTXO set snapshots and Non-Interactive Pr
 - (Jul 21) [Network congestion on Jul 10th, 2021](https://www.ergoforum.org/t/network-congestion-on-jul-10th-2021/1945)
 - (May 20) [Protecting mempool from computationally heavy transactions](https://www.ergoforum.org/t/protecting-mempool-from-computationally-heavy-transactions/231)
 - (May 20) [A Scalability Plan for Ergo](https://www.ergoforum.org/t/a-scalability-plan-for-ergo/226)
+
 
