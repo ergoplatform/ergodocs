@@ -83,6 +83,7 @@ Besides the registers, each box features a unique identification hash that can b
 
 ## Additional Resources
 
+- See the [Box Format](format.md) page for a more technical overview. 
 - For the box type description in the [ErgoScript language specification](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/LangSpec.md#box-type).
 - Visit [ErgoAddress.scala](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/ec71a6f988f7412bc36199f46e7ad8db643478c7/sigmastate/src/main/scala/org/ergoplatform/ErgoAddress.scala), [ErgoBoxCandidate](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/org/ergoplatform/ErgoBoxCandidate.scala#L24-L43), and [ErgoBox](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/org/ergoplatform/ErgoBox.scala#L22-L59).
 - For an in-depth explanation on Ergo box modeling, see [this page](box_modeling).

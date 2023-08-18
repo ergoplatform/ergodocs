@@ -19,7 +19,7 @@ On the other hand, the UTXO model, introduced by Bitcoin, takes a different appr
 
 Dave now owns 205 units previously owned by Charlie, Alice, and Bob. In the UTXO model, these units can be split and merged, but they retain their original identity, unlike bread dough. The transaction history of these units can be traced back to when they were initially created.
 
-## Advantages of the eUTxO Model to Account-Based Blockchains
+## Advantages of the eUTxO Model over Account-Based Blockchains
 
 The UTXO (Unspent Transaction Output) model used in Ergo offers several advantages over account-based blockchains like Ethereum. Let's compare the UTXO model to the account model to highlight these benefits:
 

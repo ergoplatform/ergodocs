@@ -6,27 +6,27 @@ tags:
 
 # Atomic Swaps
 
-__Atomic Swaps are an essential technology that allows interaction between different blockchain systems, facilitating the transfer of digital assets across chains without the need for centralized exchanges.__
+Atomic Swaps are a revolutionary technology that enables direct interaction between different blockchain systems. They facilitate the transfer of digital assets across chains without the need for centralized exchanges.
 
-Blockchain technology excels in facilitating secure and efficient decentralized transfers within its network. This means, for example, Bitcoin (BTC) can be sent safely and quickly to any Bitcoin address, and the same is true for Litecoin (LTC) or any other cryptocurrency within its network.
+Blockchain technology is excellent at facilitating secure and efficient decentralized transfers within its network. For instance, Bitcoin (BTC) can be safely and quickly sent to any Bitcoin address, and the same is true for Litecoin (LTC) or any other cryptocurrency within its network.
 
-However, the structure of a blockchain, which is built around the consensus among miners, isn't inherently designed to communicate with other blockchain systems. As a result, transferring assets between different blockchain networks has traditionally involved third-party intermediaries like exchanges or Over-The-Counter (OTC) desks, which can introduce additional risks and inefficiencies.
+However, the structure of a blockchain, built around the consensus among miners, isn't inherently designed to communicate with other blockchain systems. Consequently, transferring assets between different blockchain networks has traditionally involved third-party intermediaries like exchanges or Over-The-Counter (OTC) desks, which can introduce additional risks and inefficiencies.
 
 ## Cross-chain Swaps
 
-Atomic swaps provide a solution to this challenge, allowing for a secure and efficient cross-blockchain trade of cryptocurrencies. This innovative approach facilitates direct, trustless exchange of assets. Here's a simple step-by-step overview of how they work:
+Atomic swaps offer a solution to this challenge, enabling a secure and efficient cross-blockchain trade of cryptocurrencies. This innovative approach facilitates a direct, trustless exchange of assets. Here's a simplified step-by-step overview of how they work:
 
-* Alice and Bob agree to trade their cryptocurrencies. Alice will send 1 BTC to Bob, and in return, Bob will send Alice 50,000 ERG. As neither party trusts the other completely, both are hesitant to send their assets first.
-* Alice creates a secret - a unique, random number - and generates its hash. She then creates a transaction on the Bitcoin blockchain, attaching a script to lock her 1 BTC. This script specifies a condition: when the original secret (pre-image) of the generated hash is revealed, the locked BTC will be transferred to Bob's address. The hash can be safely included in the script, as the original secret cannot be deduced from it.
-* In response, Bob sets up a similar transaction on the Ergo blockchain, locking 50,000 ERG with a script containing the same hash Alice used. However, without the original secret, he can't execute Alice's transaction.
-* After confirming Bob's transaction on the Ergo blockchain, Alice can reveal the secret and execute Bob's transaction. With the original secret now in the open, Bob can also execute the script to receive his BTC.
-* Once published on the blockchain, neither Alice nor Bob can delete their transactions or scripts. However, they may set a time limit on the transactions to prevent their coins from being locked indefinitely if the secret isn't revealed within the set time.
+1. Alice and Bob agree to trade their cryptocurrencies. Alice will send 1 BTC to Bob, and in return, Bob will send Alice 50,000 ERG. As neither party trusts the other completely, both are hesitant to send their assets first.
+2. Alice creates a secret - a unique, random number - and generates its hash. She then creates a transaction on the Bitcoin blockchain, attaching a script to lock her 1 BTC. This script specifies a condition: when the original secret (pre-image) of the generated hash is revealed, the locked BTC will be transferred to Bob's address. The hash can be safely included in the script, as the original secret cannot be deduced from it.
+3. In response, Bob sets up a similar transaction on the Ergo blockchain, locking 50,000 ERG with a script containing the same hash Alice used. However, without the original secret, he can't execute Alice's transaction.
+4. After confirming Bob's transaction on the Ergo blockchain, Alice can reveal the secret and execute Bob's transaction. With the original secret now in the open, Bob can also execute the script to receive his BTC.
+5. Once published on the blockchain, neither Alice nor Bob can delete their transactions or scripts. However, they may set a time limit on the transactions to prevent their coins from being locked indefinitely if the secret isn't revealed within the set time.
 
 ## The Ergo Advantage in Atomic Swaps
 
-Atomic swaps in their traditional form operate on a binary execution principle - the transactions are either completed in full or not executed at all. This property makes them analogous to 'fill-or-kill' orders in conventional trading environments. While this ensures trustless exchange of assets, it lacks the flexibility found in a dynamic, conventional exchange environment.
+Traditional atomic swaps operate on a binary execution principle - the transactions are either completed in full or not executed at all. This property makes them analogous to 'fill-or-kill' orders in conventional trading environments. While this ensures trustless exchange of assets, it lacks the flexibility found in a dynamic, conventional exchange environment.
 
-Ergo builds upon the existing atomic swaps concept by leveraging its unique eUTXO (Extended Unspent Transaction Output) model, a significant evolution over the conventional UTXO model found in Bitcoin-like blockchains.
+Ergo enhances the existing atomic swaps concept by leveraging its unique eUTXO (Extended Unspent Transaction Output) model, a significant evolution over the conventional UTXO model found in Bitcoin-like blockchains.
 
 The eUTXO model allows each UTXO to carry arbitrary data and to be protected by an arbitrary predicate (or spending condition). The data can be used to represent arbitrary tokens or smart contract states, while ErgoScript can implement complex logic akin to Ethereum smart contracts.
 
@@ -117,3 +117,4 @@ print("Alice can now spend value locked to hash/public pair xG with x and their 
 It's important to note that this is a simplified illustration. In a real-world scenario, multiple additional layers of complexity and security would be required, including secure communication channels for the participants, comprehensive error handling, and transaction fees considerations.
 
 For a more comprehensive understanding of Ergo’s atomic swaps and the possibilities they offer for intra-chain and cross-chain token swaps, refer to the [ErgoScript white paper](https://ergoplatform.org/docs/ErgoScript.pdf).
+
