@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The UTXO (Unspent Transaction Output) state is a fundamental concept in blockchain technology, particularly in platforms that use the UTXO model, such as [Ergo](ergo.md) and [Cardano](cardano.md). This model differs from the account-based model used by other platforms like Ethereum. The account-based model requires nodes to check all accounts to validate the system, whereas in the UTXO model, nodes primarily verify transactions.
+The UTXO (Unspent Transaction Output) state is a fundamental concept in blockchain technology, particularly in platforms that use the UTXO model, such as Ergo and Cardano. This model differs from the account-based model used by other platforms like Ethereum. The account-based model requires nodes to check all accounts to validate the system, whereas in the UTXO model, nodes primarily verify transactions.
 
 ## UTXO and Transaction Validation
 

@@ -1,13 +1,15 @@
-# Exploring Anyone-Can-Spend Scripts in ErgoScript
+# Anyone-Can-Spend Scripts
 
-ErgoScript's most basic form is a single boolean predicate, for instance, `true`. This corresponds to the [address](https://wallet.plutomonkey.com/p2s/?source=dHJ1ZQ==) `4MQyML64GnzMxZgm`.
+The simplest form of ErgoScript is a single boolean predicate. For example, `true` corresponds to the address [4MQyML64GnzMxZgm](https://wallet.plutomonkey.com/p2s/?source=dHJ1ZQ==) `4MQyML64GnzMxZgm`.
 
-**Key Insights:**
+Any funds sent to this address can be spent by anyone, as the script always evaluates to `true`.
 
-1. Funds sent to this address can be spent by anyone. This is due to the script's constant evaluation to `true`.
-2. Scripts that invariably evaluate to `true`—along with their corresponding boxes—are known as **anyone-can-spend** scripts.
+Scripts that consistently evaluate to `true`, and their corresponding boxes, are referred to as **anyone-can-spend** scripts.
+
+
 
 ```
 true && (false || true)     // address NwAyzZpF2KcXAGBJvPrAH
 ```
+
 

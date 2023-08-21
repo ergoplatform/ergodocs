@@ -42,7 +42,7 @@
  **3.1** | Enable [OrgRobot](https://tgdev.io/bot/orgrobot) with custom questions |
  **3.1** | Consider using [tgdev](https://tgdev.io/bot/orgrobot) which has a few handy free bots like [daysandbox_bot](https://tgdev.io/bot/daysandbox_bot) & [grep_robot](https://tgdev.io/bot/grep_robot) |
  **3.2** | The built-in spam protection should be sufficient if properly configured |
- **3.3** | Consider [bridging your chats](bridge.md) with the Ergo Discord |
+ **3.3** | Consider [bridging your chats](chat-bridge.md) with the Ergo Discord |
  **3.3** | Get your Telegram added to [@ErgoChats](https://t.me/Ergo_Chats) on Telegram |
  **3.3** | Create a PR to add yourself to this documentation |
  **3.3** | Get added on [ergcube](https://ergcube.com/index.php?do=static&page=socials) and [sigmaverse](https://github.com/ergoplatform/sigmaverse) |
