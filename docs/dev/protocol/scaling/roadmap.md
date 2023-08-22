@@ -17,15 +17,49 @@ With the successful integration of UTXO set snapshots and Non-Interactive Proofs
 
 ## Roadmaps
 
-> [Kushti, 7 Aug, 2023](https://t.me/ergoplatform/419168)
-> 
-> Starting to design things. I think better to start from foundations. Ergo was designed as commodity money (digital gold) with programmability (even more, possibility for crypto contracts, like stealth addresses, arbitrarily complex signatures, mixing schemes and so on),to be a basis for unstoppable (by banksters or "regulators") grassroot economies, these days can be thought as cbdcs for the people (while cbdcs for large scale governments do not have sense imho). Initial experiments are going well considering the motivation.
+### Ergo Design and Implementation Roadmap
 
-> Now it is time for scaling and adoption. Which needs in the first place for defining adoption, as this term does not really mean anything concrete in most conversations in the space I've witnessed.
+#### Phase 1: Foundations
 
->  Then p2p level optimizations and rework, with considering options for pre block commitments to tx ordering (sub blocks), while increasing tps securily significantly as well. There are limits here anyway as there is requirement to have flat p2p network run on commodity hardware (not banksters' datacenters). Thus at the same time options for offloading transactions to l2 or sidechains also should be proposed (if not implemented). [KYA](kya.md) was in particular introduced to explain offloading options security in concise and understandable fashion.
+- Start with the basic design of Ergo as digital gold (commodity money).
+- Introduce programmability features including:
+  - Crypto contracts
+  - Stealth addresses
+  - Arbitrarily complex signatures
+  - Mixing schemes
+- Position Ergo as a basis for unstoppable, grassroots economies, serving as a decentralized central bank digital currency [(CBDC)](cbdc.md) for the people.
 
->  Thus few developments are going to converge.
+#### Phase 2: Initial Experiments
+
+- Conduct initial experiments to test functionality and user engagement.
+- Evaluate the outcomes considering the initial motivations.
+
+#### Phase 3: Defining Adoption
+
+- Clarify the term "adoption" as it is often ambiguous in industry discussions.
+- Develop metrics or KPIs to measure adoption success.
+
+#### Phase 4: Scaling and Optimization
+
+- Peer-to-peer (P2P) level optimizations and rework.
+- Consider pre-block commitments to transaction ordering (sub-blocks).
+- Aim to increase transactions per second (TPS) while maintaining security.
+
+#### Constraints for Scaling
+
+- Limitations include requirements for a flat P2P network running on commodity hardware.
+- No use of centralized or "bankster" data centers for scalability.
+
+#### Phase 5: Offloading Solutions
+
+- Propose options for offloading transactions to Layer 2 or sidechains, if not already implemented.
+- Introduce "Know Your Algorithm" [KYA](kya.md) as a way to explain security in offloading options in a concise and understandable manner.
+
+#### Phase 6: Convergence
+
+- Multiple developments in scaling, optimization, and offloading are expected to converge, culminating in a comprehensive solution for widespread adoption.
+
+Summarised from [Kushti, 7 Aug, 2023](https://t.me/ergoplatform/419168)
 
 
 - (Nov 22) [A Scalability Plan for Ergo](https://www.ergoforum.org/t/a-scalability-plan-for-ergo/226/4?u=glasgowm)

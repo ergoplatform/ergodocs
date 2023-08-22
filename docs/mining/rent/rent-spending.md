@@ -1,13 +1,13 @@
-# Spending an expired box
+# Spending an Expired Box
 
-The following conditions must be met in order to spend a box:
+To spend an expired box, the following conditions must be satisfied:
 
-1. The difference between the upcoming block's height (taken from the preheader) and the box's creation height must be greater than or equal to the storage fee period. In other words, the box must have been stored for at least the required storage fee period.
-1. The *spending proof* for the expired box must be empty.
+1. The box must have been stored for at least the required storage fee period. This is verified by checking if the difference between the upcoming block's height (from the preheader) and the box's creation height is greater than or equal to the storage fee period.
+1. The *spending proof* for the expired box must be empty. This means no cryptographic proof is required to authorize the spending of the box.
 
-
-This line of code checks if the box has been stored for at least the required storage fee period. It calculates the difference between the upcoming block's height (`context.preHeader.height`) and the box's creation height (`context.self.creationHeight`). If this difference is greater than or equal to the constant value representing the storage fee period (`Constants.StoragePeriod`), the condition is satisfied.
+The following line of code verifies if the box has been stored for the required storage fee period. It calculates the difference between the upcoming block's height (`context.preHeader.height`) and the box's creation height (`context.self.creationHeight`). If this difference is greater than or equal to the constant value representing the storage fee period (`Constants.StoragePeriod`), the condition is met.
    
+
 ```
 context.preHeader.height - context.self.creationHeight >= Constants.StoragePeriod
 ```
