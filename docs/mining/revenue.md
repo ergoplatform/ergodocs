@@ -1,10 +1,10 @@
-# Revenue Streams in Ergo Mining
+# Sustaining Ergo Mining: Revenue Streams Beyond Emissions
 
-Ergo's ecosystem offers miners various revenue streams, contributing to the network's growth and sustainability. This guide explores these revenue streams in detail:
+As Ergo's [emission schedule](emission.md) is set to conclude around the year 2045, questions naturally arise about the mechanisms that will incentivize miners to continue securing the network. Fortunately, Ergo's architecture includes support for a variety of revenue streams designed to promote both network growth and long-term sustainability.
 
 ## Transaction Fees
 
-While currently modest in size, [transaction fees](fees.md) represent a crucial revenue source for miners. The potential for front-running transactions offers additional financial incentives.
+While currently modest in size, [transaction fees](fees.md) represent a crucial revenue source for miners. The potential for front-running transactions offers additional financial incentives. This cost can be adjusted by miners through [on-chain voting](governance.md)
 
 ## Storage Rent / 'demurrage' 
 
