@@ -10,13 +10,23 @@ This page aims to provide a background on Ergo and answers to some of the most f
 - To read about Ergo from a less technical perspective, visit [ergonaut.space](https://ergonaut.space/en/home). 
 - If you want to mine, see the [Miners Handbook](https://ergonaut.space/en/Guides/Mining).
 
+### What is Ergo?
+
+Ergo is a Resilient Platform for Contractual Money. It is designed to be a platform for applications with the main focus to provide an efficient, secure and easy way to implement financial contracts.
+
+To achieve this goal, Ergo includes various technical and economic improvements to existing blockchain solutions. Every coin in Ergo is protected by a program in ErgoScript, which is a powerful and protocol friendly scripting language based on Σ-protocols. It specifies conditions under which a coin can be used: who can spend them, when, under what external conditions, to whom, and so on.
+
+Extended support of light nodes makes Ergo friendly for end users and allows it to run contracts on common devices such as mobile phones trustlessly. To be useful in the long-term, Ergo is strictly following a long‐term survivability approach — it uses widely-researched solutions that are not going to result in security issues in the future, while also preventing performance degradation over time with a new economic model.
+
+Finally, Ergo is a self‐amendable protocol, that allows it to absorb new ideas and improve itself in the future. The focuses on long‐term survivability and self‐amendability are what give Ergo its resiliency.
+
 ### Why '*Ergo*'? 
 
 Ergo means "therefore" in Latin but "work" in Greek. This is also a play on the fact that the cryptocurrency's design is ***ergo***nomical.
 
 ### How does it differ from Bitcoin?
 
-The Ergo project is a cryptocurrency that builds upon the same UTXO model as Bitcoin but extends its functionality with additional features. Ergo allows for more complex programmability by providing access to the entire spending transaction and the block solution in the execution context. This enables the creation of Turing-complete contracts and the implementation of contractual money, where digital coins can be explicitly bound to a contract in the form of executable code.
+Ergo is a cryptocurrency that builds upon the same UTXO model as Bitcoin but extends its functionality with additional features. Ergo allows for more complex programmability by providing access to the entire spending transaction and the block solution in the execution context. This enables the creation of Turing-complete contracts and the implementation of contractual money, where digital coins can be explicitly bound to a contract in the form of executable code.
 
 ## What is contractual money?
 
