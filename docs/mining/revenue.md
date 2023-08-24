@@ -2,13 +2,21 @@
 
 Ergo's ecosystem offers miners various revenue streams, contributing to the network's growth and sustainability. This guide explores these revenue streams in detail:
 
-## Storage Rent
+## Transaction Fees
 
-Storage Rent is already providing some income to Ergo miners today. See the [Storage Rent](rent.md) page for more information.
+While currently modest in size, [transaction fees](fees.md) represent a crucial revenue source for miners. The potential for front-running transactions offers additional financial incentives.
+
+## Storage Rent / 'demurrage' 
+
+Storage Rent is active and already providing some (small amount of) income today. See the [Storage Rent](rent.md) page for more information.
 
 ## Sidechain Rewards
 
 Sidechains in Ergo provide a platform for developers to deploy their decentralized applications (dApps) and blockchain solutions. Miners can secure these sidechains and earn rewards for their contributions. By validating transactions and maintaining the security of sidechain operations, miners play a crucial role in the Ergo ecosystem and generate additional income.
+
+A recent post on the forum in [*'A Scalability Plan for Ergo'*](https://www.ergoforum.org/t/a-scalability-plan-for-ergo/226/5) covers this in more detail. 
+
+> for incentivizing weak blocks reporting, they can commit to sidechains, thus making fast sidechains possible and miners will get rewards from that.
 
 ## Bridge Infrastructure
 
