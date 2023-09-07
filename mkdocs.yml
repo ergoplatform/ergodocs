@@ -657,15 +657,17 @@ nav:
       - Software: mining/software.md
       - Operating Systems: mining/os.md
       - Overclocking: mining/overclocking.md
-      - Solo Mining: mining/setup/solo.md
       - Pools: mining/pools.md
-      - Host a Pool: 
-        - mining/setup/pool.md
+      - Solo Mining: 
+        - mining/setup/solo.md
         - Node Configuration: mining/setup/solo-node.md
-        - Stratum: mining/setup/stratum.md
-        - MiningCore: mining/setup/miningcore.md
         - Withdraw: mining/withdraw.md
         - FAQ:  mining/setup/solo-faq.md
+      - Host a Pool: 
+        - mining/setup/pool.md
+        - Stratum: mining/setup/stratum.md
+        - MiningCore: mining/setup/miningcore.md
+       
     - Governance: mining/governance.md      
     - Revenue: mining/revenue.md
     - Tooling:
