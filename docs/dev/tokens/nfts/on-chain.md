@@ -7,7 +7,7 @@
 The first Ergo [on-chain NFT](https://ergotokens.org/#/?token=2994d36afcfaf29bb2cfbdcc5280bdd117852ef14044bf9c01b87a83dba8b2c6), known as [Auction House v.1](https://v1.ergoauctions.org/#/auction/specific/07d1c4367a2ff26492bbbb57b0cafb336aca19315646c73ab8a819fe55635152), was minted on 18/8/2021. You can find the related discussion [here](https://discord.com/channels/668903786361651200/669989266478202917/1010794626338263100). This was achieved by transforming the data into a **Data URI** and encoding it into the `R9` register. There are no size restrictions for a register, only for the entire box itself, which is limited to **4 Kb**.
 
 During the spring and summer of 2021, there were several on-chain projects on Cardano. For instance, the [on-chain interactive NFT](https://pool.pm/6c4fd3073bca09e62e85463e3380546e49d0344e7996c4d1b4cd0bd3.SHDEMO6) stored an entire [HTML page with JS in its metadata](https://cardanoscan.io/transaction/f685d279cfce4eedea32488c60331ea8d0e0b2f3015c6825959dc6c7f6f023fb?tab=metadata). However, if we delve deeper into history, we find that the pioneers were the team from Larva Labs with their [autoglyphs](https://www.larvalabs.com/autoglyphs) project, which was an ETH smart contract dated April 2019.
-The NFT hype in the fall of 2021 led to the emergence of [guides](youtube.com/watch?v=9oERTH9Bkw0) on on-chain NFT mining.
+The NFT hype in the fall of 2021 led to the emergence of [guides](https://youtube.com/watch?v=9oERTH9Bkw0) on on-chain NFT mining.
 
 
 ### The Technical Aspects of Regular Ergo NFTs
