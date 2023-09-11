@@ -14,7 +14,7 @@ The Swagger UI allows you to perform advanced operations that are not available 
 
 Once the node is running, the API can be accessed at `127.0.0.1:9052`. 
 
-To explore the methods without setting up your own node, you can check out one of the public nodes like [204.48.31.129:9053/swagger#](http://204.48.31.129:9053/swagger#).
+To explore the methods without setting up your own node, you can check out one of the public nodes, such as [204.48.31.129:9053/swagger#](http://204.48.31.129:9053/swagger#), [http://128.253.41.49:9053/swagger#](http://128.253.41.49:9053/swagger), etc. 
 
 To access protected API routes, you must provide your secret phrase in the request headers `[api_key, Content-Type]`. Alternatively, you can authorize via the web interface in your browser by clicking the `Authorize` button in Swagger and entering your secret phrase there.
 
