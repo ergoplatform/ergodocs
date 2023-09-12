@@ -10,10 +10,10 @@ The protocol introduces several actions or reactions, including fission, fusion,
 
 To determine the amounts obtained from fission and fusion, reaction equations and price equations are utilized. The price equations, although auxiliary in this protocol, help calculate the prices of neutrons and protons based on the Q function, which considers the oracle price. The Q ratio and beta decay fee formulas are vital components of the Gluon W± protocol.
 
-The protocol allows for buying and selling stablecoins and reservecoins through compositions of the primitive reactions. Bruno explains how these derived operations can be achieved by combining fission and beta decay. The user interfaces can simplify these processes for users, enabling them to focus on their desired transactions.
+The protocol allows for buying and selling stablecoins and reservecoins through compositions of primitive reactions. Bruno explains how these derived operations can be achieved by combining fission and beta decay. The user interfaces can simplify these processes for users, enabling them to focus on their desired transactions.
 
 Bruno introduces the concept of duality in relation to liquidity pools. While liquidity pools involve two assets remaining in the pool, Gluon W± operates with one asset (base coin) remaining in the reserve while the newly generated assets (stablecoins and reservecoins) exist outside the reserve. The protocol's design reflects this duality and mirrors the operations found in liquidity pools.
 
 Although a beta testnet for Gluon W± was not completed in time for the Ergoversary Summit, implementation on Ergo is underway. The contract is being developed by Kii for the backend, while Sangeet works on the frontend. The protocol will utilize the new Gold Oracle, similar to DexyGold. Depending on the success of SigmaGold, Gluon W± might replace minimal Djed in SigmaUSD or be used to deploy a new USD stablecoin.
 
-Bruno invites interested individuals to join their Discord server, follow them on Twitter, and explore their GitHub repositories. These platforms offer opportunities to engage with the team and stay updated on the development of Gluon W± and related projects.
+Bruno invites interested individuals to join the [Djed Alliance Discord server](https://discord.gg/6FY8qJesjn), follow them on [Twitter](https://twitter.com/DjedAlliance), and explore their [GitHub](https://github.com/DjedAlliance) repositories to stay updated on the development of Gluon W± and related projects.
