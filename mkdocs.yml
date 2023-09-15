@@ -197,6 +197,10 @@ nav:
         - uses/degfi.md
         - Hodlcoin: eco/hodlcoin.md
         - Auction Coin: eco/auction-coin.md
+        - Grand Gambit: eco/grand-gambit.md
+        - NightOwl Casino: eco/nightowl.md
+        - Obolflip: eco/obolflip.md
+        - Lotteries: uses/lottery.md
       - Lending:
         - uses/lending.md
         - duckpools: eco/duckpools.md
@@ -282,11 +286,7 @@ nav:
         - Sigmavalley: eco/sigmavalley.md
       - Monetary-based:
         - BlobsTopia: eco/blobstopia.md
-        - Grand Gambit: eco/grand-gambit.md
-        - Others:
-          - Lotteries: uses/lottery.md
-          - NightOwl Casino: eco/nightowl.md
-          - Obolflip: eco/obolflip.md
+
       - NFT-Games:
         - Digigoats: eco/digigoats.md
         - Monster Pub Brawl: eco/monsterpub.md

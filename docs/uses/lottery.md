@@ -1,34 +1,36 @@
-**First some background**
+# Background
 
-The idea in this post is motivated by the post about [Proof-of-Activity as a Smart Contract](https://www.ergoforum.org/t/proof-of-activity-as-a-smart-contract/132).
+The concept discussed in this post is inspired by the idea of [Proof-of-Activity as a Smart Contract](https://www.ergoforum.org/t/proof-of-activity-as-a-smart-contract/132). 
 
-The goal of "proof of activity" is to reward members for their "activity" (i.e., for running a full node). 
-Without going into details, the approach essentially is based on "proof-of-stake" such that people who are active receive larger rewards than inactive people holding a similar stake. The purpose is to discourage people from having a stake but not actively participating in the network.
+The primary objective of "proof of activity" is to incentivize members for their "activity", which in this context refers to running a full node.
 
-The key method behind all proof of stake and proof of activity is *follow-the-satoshi*, which picks a random satoshi from all the generated ones, and then the holder of that satoshi is eligible for the reward. If the satoshi is selected uniformly, then this is similar to a lottery system.
+The underlying approach is essentially based on "proof-of-stake". This means that active participants receive larger rewards than those who hold a similar stake but are inactive. The aim is to deter individuals from holding a stake without actively contributing to the network.
 
-**The Lottery**
+The fundamental method behind both proof of stake and proof of activity is *follow-the-satoshi*. This method selects a random satoshi from all the generated ones, and the holder of that satoshi becomes eligible for the reward. If the satoshi is selected uniformly, this process resembles a lottery system.
 
-The goal of this post is not to have proof of stake or proof of activity. Rather it is about emulating the follow-the-satoshi protocol to have a provably fair lottery system.
+# The Lottery
 
-The lottery that we will create emulates the following physical lottery:
-1. Company generates lottery tickets in sequential serial numbers
-2. There is only one place to buy the tickets
-3. Tickets can only be purchased in sequential serial numbers using the "next available serial number" rule (starting from serial number 0). 
-4. After the lottery is closed (so that no more tickets can be sold), the first unsold serial number ***n*** is noted. 
+The focus of this post is not on proof of stake or proof of activity. Instead, it is about replicating the follow-the-satoshi protocol to establish a provably fair lottery system. It's worth noting that a similar lottery system is currently live in the COMET project.
+
+The lottery system we aim to create will mimic the following physical lottery:
+
+1. A company generates lottery tickets with sequential serial numbers.
+2. There is a single location to purchase the tickets.
+3. Tickets can only be bought in sequential serial numbers using the "next available serial number" rule (starting from serial number 0). 
+4. Once the lottery is closed (meaning no more tickets can be sold), the first unsold serial number ***n*** is recorded. 
 5. A random number ***r*** is generated between 0 and ***n***-1 (both inclusive).
-6. The holder of the ticket with serial number ***r*** is the winner. 
+6. The holder of the ticket with serial number ***r*** is declared the winner. 
 
-We can emulate this with Ergo as follows.
+This can be emulated with Ergo as follows:
 
-The lottery owner creates a "lottery box" containing tokens and the current available serial number in **R4**. This is protected by a script that sells tokens, and the balance tokens are kept in an identical box with the serial number appropriately incremented. Furthermore, the purchased tokens are to be kept in a "purchase box" box containing in **R4** and **R5** respectively, the start and end serial numbers of purchased tokens. We additionally require the script in the purchase box to "lock" these values, so they cannot be altered by the buyer. 
+The lottery owner creates a "lottery box" that contains tokens and the current available serial number in **R4**. This box is protected by a script that sells tokens, and the remaining tokens are stored in an identical box with the serial number incremented accordingly. Moreover, the purchased tokens are stored in a "purchase box" that contains the start and end serial numbers of purchased tokens in **R4** and **R5** respectively. We also require the script in the purchase box to "lock" these values, preventing the buyer from altering them. 
 
-After the lottery ends, the last serial number ***n***is stored in **R4** of the lottery box. Using this, the winner is decided using, say, taking randomness from the previous block header to generate a number uniformly between 0 and ***n*** to decide the winner. The winner can use his purchase box to take the rewards.
+After the lottery concludes, the last serial number ***n*** is stored in **R4** of the lottery box. Using this, the winner is determined by, for example, using randomness from the previous block header to generate a number uniformly between 0 and ***n***. The winner can then use their purchase box to claim the rewards.
 
 The rewards can be stored in the lottery box itself, and each ticket purchased contributes to the reward. 
 
-While this works in a fair way, it is not deterministic as it depends on the last block header.
+While this system operates fairly, it is not deterministic as it depends on the last block header.
 
-Since each "previous block" decides a different winner for the same ***n***, this also can be used as a proof of activity because the current winner must be online.
+Since each "previous block" determines a different winner for the same ***n***, this can also be used as a proof of activity because the current winner must be online.
 
-See [this thread](https://www.ergoforum.org/t/a-lottery-on-top-of-ergo/137) for full discussion
+For a comprehensive discussion, refer to [this thread](https://www.ergoforum.org/t/a-lottery-on-top-of-ergo/137).
