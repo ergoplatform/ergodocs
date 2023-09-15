@@ -2,8 +2,6 @@
 
 > **Tool**: Utilize the [Difficulty & Epoch Monitor](https://cds.oette.info/ergo_diff.htm) to predict upcoming difficulty adjustments.
 
-## Overview
-
 Difficulty adjustment is a core mechanism in proof-of-work cryptocurrencies like Ergo. It ensures that blocks are added to the blockchain at a stable rate, aiming for a 120-second block interval in Ergo. This feature is critical for maintaining network security and fairness. Here we explore how Ergo's Autolykos protocol has been adapted over time to offer a robust difficulty adjustment mechanism.
 
 ## Autolykos Protocol: The Foundation for Difficulty Adjustment
@@ -14,11 +12,11 @@ Ergo's difficulty adjustment is grounded in its Autolykos protocol. Initially, A
 
 While effective, the original Autolykos mechanism had limitations. It was vulnerable to rapid changes in hash rate. For example, during periods of super-linear growth in hash rate, such as the ETH merge, the system would experience severe difficulty spikes. On the flip side, periods of low activity could result in considerable drops in difficulty.
 
-## EIP37: Refining Autolykos for Better Responsiveness
+### EIP37: Refining Autolykos for Better Responsiveness
 
-To address these vulnerabilities while retaining the strengths of the Autolykos protocol, Ergo introduced Ergo Improvement Proposal 37 (EIP37). This update made the difficulty adjustment mechanism more responsive by considering a shorter and more recent history of blocks. EIP37 didn't replace Autolykos but refined it, making it more resilient against sudden hash rate changes and adversarial disruptions.
+To address these vulnerabilities while retaining the strengths of the Autolykos protocol, Ergo introduced [Ergo Improvement Proposal 37 (EIP37)](eip37.md). This update made the difficulty adjustment mechanism more responsive by considering a shorter and more recent history of blocks. EIP37 didn't replace Autolykos but refined it, making it more resilient against sudden hash rate changes and adversarial disruptions.
 
-## Impact of EIP37 on Autolykos
+### Impact of EIP37 on Autolykos
 
 With the adoption of EIP37, the Autolykos-based difficulty adjustment in Ergo has become more robust and adaptive. It can now better handle sudden and substantial fluctuations in the network's hash rate, making the network more secure and maintaining the 120-second block interval more consistently.
 
