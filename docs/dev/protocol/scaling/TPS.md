@@ -2,6 +2,12 @@
 
 The speed of transactions, commonly known as Transactions Per Second (TPS), is a vital performance metric for blockchains. It quantifies the capacity of a blockchain to process transactions, expressed in transactions per second.
 
+The primary bottleneck for increasing transactions per second (TPS) is the peer-to-peer (p2p) network layer. Proof-of-Work (PoW) is already an efficient timestamping protocol for the base layer (Layer 0) because it operates asynchronously, without the need for additional network messages. Many alternative consensus mechanisms require extra bandwidth, making them less efficient. For instance, the original Ouroboros consensus protocol generated large log files, although this was later improved in the Praos version using Verifiable Random Functions (VRF). However, relying on novel cryptographic primitives can be risky, especially when significant assets are involved.
+
+While TPS could be boosted by introducing measures like supernodes or eliminating mempools, as seen in projects like Solana and Avalanche, these approaches compromise the decentralization and integrity of the network. Therefore, if the goal is to maintain a truly decentralized cryptocurrency, these methods should be avoided.
+
+The remaining viable solution for improving TPS lies in optimizing bandwidth usage and implementing [Layer 2](layer2.md) solutions and sidechains, also known as application-specific chains.
+
 ## Comparative TPS Values for Renowned Blockchains
 
 To provide a perspective, here are the estimated TPS values for some of the leading blockchains:

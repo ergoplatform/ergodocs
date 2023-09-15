@@ -123,7 +123,9 @@ nav:
       - Autolykos: dev/protocol/autolykos-protocol.md
     - Scaling: 
       - dev/protocol/scaling.md
-      - Layer 0: dev/protocol/scaling/layer0.md
+      - Layer 0:
+        - dev/protocol/scaling/layer0.md
+        - Weak Blocks: uses/sidechains/weak-blocks.md
       - Layer 1: dev/protocol/scaling/layer1.md
       - Layer 2: dev/protocol/scaling/layer2.md
       - Discussions:
