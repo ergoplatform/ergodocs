@@ -1,16 +1,49 @@
 # Understanding Difficulty Adjustment in Ergo
-> Utilize the [Difficulty & Epoch Monitor](https://cds.oette.info/ergo_diff.htm) to predict upcoming difficulty adjustments. 
 
-Before the introduction of [EIP37](https://docs.ergoplatform.com/mining/standards/eip37/), Ergo's Autolykos protocol employed a steady difficulty adjustment mechanism to counter hash rate variations. This approach, superior to Bitcoin's with a 1.9% error rate compared to Bitcoin's 9.1%, was designed to deter adversarial hopping. The adjustment mechanism, based on the linear least squares method, used the previous eight epochs (equivalent to 8,192 blocks) to predict the difficulty function, as explained in [this paper](https://eprint.iacr.org/2017/731.pdf). The goal was to maintain a 120-second (or 2-minute) block interval during stable hash rate periods.
+> **Tool**: Utilize the [Difficulty & Epoch Monitor](https://cds.oette.info/ergo_diff.htm) to predict upcoming difficulty adjustments.
 
-However, this system was vulnerable to significant hash rate surges over several epochs, especially when the hash rate growth was super-linear over time (as observed during the ETH merge). This vulnerability could result in severe difficulty spikes. Similarly, during slow epochs, the difficulty could drop significantly. To address these issues, EIP37 was proposed and later implemented. This new protocol offered a more responsive difficulty adjustment by considering a shorter, recent block history, thereby minimizing the impact of sudden hash rate changes. With EIP37, Ergo's mining process has become more robust and secure against adversarial disruptions.
+## Overview
+
+Difficulty adjustment is a core mechanism in proof-of-work cryptocurrencies like Ergo. It ensures that blocks are added to the blockchain at a stable rate, aiming for a 120-second block interval in Ergo. This feature is critical for maintaining network security and fairness. Here we explore how Ergo's Autolykos protocol has been adapted over time to offer a robust difficulty adjustment mechanism.
+
+## Autolykos Protocol: The Foundation for Difficulty Adjustment
+
+Ergo's difficulty adjustment is grounded in its Autolykos protocol. Initially, Autolykos employed the linear least squares method for this purpose. This technique relied on historical data from the previous eight epochs (equivalent to 8,192 blocks) to predict future difficulty levels. Compared to Bitcoin's mechanism, it achieved a significantly lower error rate—1.9% as opposed to Bitcoin's 9.1%, as explained in [this paper](https://eprint.iacr.org/2017/731.pdf)
+
+### Challenges and Vulnerabilities with the Original Autolykos Mechanism
+
+While effective, the original Autolykos mechanism had limitations. It was vulnerable to rapid changes in hash rate. For example, during periods of super-linear growth in hash rate, such as the ETH merge, the system would experience severe difficulty spikes. On the flip side, periods of low activity could result in considerable drops in difficulty.
+
+## EIP37: Refining Autolykos for Better Responsiveness
+
+To address these vulnerabilities while retaining the strengths of the Autolykos protocol, Ergo introduced Ergo Improvement Proposal 37 (EIP37). This update made the difficulty adjustment mechanism more responsive by considering a shorter and more recent history of blocks. EIP37 didn't replace Autolykos but refined it, making it more resilient against sudden hash rate changes and adversarial disruptions.
+
+## Impact of EIP37 on Autolykos
+
+With the adoption of EIP37, the Autolykos-based difficulty adjustment in Ergo has become more robust and adaptive. It can now better handle sudden and substantial fluctuations in the network's hash rate, making the network more secure and maintaining the 120-second block interval more consistently.
+
+
 
 ## The Rationale Behind a 2-Minute Block Interval
 
-Ergo's 2-minute target block interval was selected to offer a crucial security margin against various potential issues and attacks in a peer-to-peer cryptocurrency network that supports smart contracts. These potential threats include propagation delays, spam attacks, verifier dilemmas, among others. 
+Ergo's 2-minute target block interval is a carefully chosen parameter that offers a security cushion against a variety of potential issues and threats that could affect a peer-to-peer cryptocurrency network, especially one that supports complex smart contracts. This article elaborates on the reasons behind this design choice and its benefits.
 
-A shorter block interval might expose the network to Timewarp attacks — a type of difficulty manipulation attack that can cause blocks to be mined too quickly or too slowly. In a Timewarp attack, a miner manipulates the timestamps of the blocks they mine to trick the network into thinking more time has passed than actually has. This can lead to the network lowering the mining difficulty, allowing the attacker to mine blocks more quickly. 
+### Providing Buffers in Network Activities
 
-Moreover, a shorter block interval could also increase the risk of orphaned blocks. Orphaned blocks occur when two miners solve a block at nearly the same time. The network can only accept one, leaving the other as an 'orphan'. This not only wastes computational resources but can also lead to double-spending attacks if not properly managed.
+One of the often-overlooked advantages of the 2-minute block time is that it has provided essential buffers across various activities in the network. Specifically, it aids in decision-making processes related to the verifier's dilemma. In the world of blockchain mining, there is often a trade-off between adding more transactions to a new block and starting the mining process for that block as soon as possible. The 2-minute block time affords miners ample time to make these crucial decisions, thus enhancing the overall stability and integrity of the network.
 
-Ergo's epoch length is approximately 4.2 hours (assuming a normal block rate), a significant improvement over Bitcoin's two-week parameter. In summary, a 2-minute block interval strikes a balance between ensuring network security and maintaining transaction speed, making Ergo an efficient and secure cryptocurrency suitable for everyday use.
+### Resistance to Timewarp Attacks
+
+A shorter block interval could make the network more susceptible to Timewarp attacks. This type of attack involves a malicious miner manipulating the timestamps of the blocks they mine, tricking the network into believing that more time has passed than actually has. Consequently, the network may lower the mining difficulty, making it easier for the attacker to mine subsequent blocks rapidly. The 2-minute block interval adds a layer of security against such difficulty manipulation attacks.
+
+### Minimizing the Risk of Orphaned Blocks
+
+Another benefit of a 2-minute interval is the reduction in the likelihood of orphaned blocks. These occur when two miners solve a block almost simultaneously, causing the network to accept one and leave the other as an 'orphan.' Orphaned blocks are not only a waste of computational resources but also pose a risk for double-spending attacks. The longer block time allows for more robust propagation and verification processes, thereby minimizing the risks associated with orphaned blocks.
+
+### Efficiency in Epoch Length
+
+Ergo's epoch length, which is approximately 4.2 hours assuming a normal block rate, is considerably shorter than Bitcoin's two-week epoch. This allows for quicker adjustments in network parameters and provides an efficient mechanism for maintaining network health.
+
+## Introduction to 'Weak Blocks'
+
+Another important layer of scalability and efficiency comes from the concept of "weak blocks," a feature aimed at improving both the transaction throughput (TPS) and the speed of transaction confirmations. Weak blocks act as block candidates with lower difficulty levels than standard blocks. They are propagated through the network along with new transactions, effectively optimizing network bandwidth usage. Weak blocks are not only beneficial for faster transaction confirmations but also hold the potential to facilitate quicker and more efficient sidechain operations. For a detailed explanation and further reading on how weak blocks contribute to Ergo's scalability, please refer to [weak-blocks.md](weak-blocks.md).

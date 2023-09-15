@@ -1,3 +1,10 @@
+---
+tags:
+  - SigmaGold
+  - SigGold
+  - Oracles
+---
+
 # SigmaGold
 
 During the [Ergoversary Summit 2023](https://www.youtube.com/watch?v=tnvm1we6xts&list=PL8-KVrs6vXLRxmOmprVdXkHDcO4IaQZOY&index=23&t=803s), Bruno Woltzenlogel Paleo presented a new stablecoin protocol called Gluon W±. The protocol aims to address the limitations and issues found in existing stablecoin protocols like Djed and SigmaUSD. Bruno, along with Alexander Chapournoy, Kii, and Sangeet, has been working on developing Gluon W± with the support of the Djed Alliance.

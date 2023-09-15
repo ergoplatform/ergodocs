@@ -54,3 +54,5 @@ And here is how what they look like on the mainnet:
 ## P2S vs P2SH
 
 **Typically most people use P2S because it is a lot easier to use. P2SH means you have to keep the contract ready off-chain to be submitted when you create the transaction, and if you lose it, then your funds are stuck forever.** This also makes it harder for other people to use your dApp as they need the contract themselves, rather than just the address. P2SH is technically cheaper since you store less data on-chain, but likely we won't see anyone using P2SH until we start to get heavy load on-chain.
+
+P2SH is a good candidate for a pre-defined contract template (in terms of [EIP-5](eip5.md)) From this perspective context var id can be a template parameter. So fixing concrete id is not necessary. The template hex can be created once and then used across dApps. Sigma already support ContractTemplate, and the corresponding code can be made available in Fleet via Sigma-js.
