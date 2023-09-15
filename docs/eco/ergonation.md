@@ -1,3 +1,4 @@
+
 # ErgoNation
 
 [ErgoNation](https://ergonation.org/) is a community-driven project for decentralized identity (ΣID) verification. ΣIDs allow people to build reputation by engaging and contributing to the Ergo ecosystem. Users and projects of the ErgoNation are encouraged to protect the anonymity of participants, and strive for the ideals of a decentralized crypto ecosystem.
