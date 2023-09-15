@@ -1,3 +1,8 @@
+---
+tags:
+  - dApp-InDev
+---
+
 # NightOwl
 
 [Night Owl](https://www.nightowlcasino.io/) is the world's first fully decentralized casino 

@@ -1,12 +1,15 @@
+# ErgoNation: A Community-Driven Project for Decentralized Identity Verification
 
-# ErgoNation
+[ErgoNation](https://ergonation.org/) is a project that is driven by the community and focuses on decentralized identity (ΣID) verification. ΣIDs are a way for individuals to build a reputation by actively participating and contributing to the Ergo ecosystem. We encourage all users and projects within ErgoNation to uphold the anonymity of participants and strive towards the ideals of a decentralized crypto ecosystem.
 
-[ErgoNation](https://ergonation.org/) is a community-driven project for decentralized identity (ΣID) verification. ΣIDs allow people to build reputation by engaging and contributing to the Ergo ecosystem. Users and projects of the ErgoNation are encouraged to protect the anonymity of participants, and strive for the ideals of a decentralized crypto ecosystem.
-Why?
+## Why ErgoNation?
 
-"One person, one vote." This is easy to achieve using centralized, non-anonymous mechanisms such as nation states distributing IDs. However, this is hard to achieve in an anonymous, decentralized manner. Therefore, the majority of crypto projects use tokens for governance, which conceptually resemble stock shares and corporate governance; all these follow the credo "more investment, more voting power." ErgoNation tries to bring the concept "one person, one vote" in an anonymous and decentralized way to the Ergo community. Projects can then use the on-chain ΣID data to create an electoral list.
-How?
+The concept of "one person, one vote" is easily achievable through centralized, non-anonymous mechanisms such as nation states distributing IDs. However, this becomes a challenge in an anonymous, decentralized environment. As a result, most crypto projects resort to using tokens for governance, which conceptually resemble stock shares and corporate governance; these follow the principle of "more investment, more voting power." ErgoNation aims to implement the concept of "one person, one vote" in an anonymous and decentralized manner within the Ergo community. Projects can then utilize the on-chain ΣID data to create an electoral list.
 
-Participants start by creating a fresh Ergo wallet and fund it using the ErgoMixer. This preserves the participant’s anonymity. Once a month, participants are given an opportunity to complete an identity verification event. The events are designed to prove that the participating ΣIDs are not bots or multi-accounts. In practice, they have to complete a short game to get a verification code. That code is a small user-specific amount of ERG that is sent to a predefined address. The event start time, verification codes, and end are all announced on-chain, which makes the history verifiable and unchangeable.
-Ideals
-ErgoNation is a community where people are encouraged to not make any compromises on crypto ideals, decentralization and anonymity. There is no token, no treasury and no centralized team. That means the project relies completely on voluntary independent contributors, who can propose to add their work for the community. This also means that people are free to contribute work that inspires them, instead of being driven by commercial pressures of growth and profits.
+## How Does ErgoNation Work?
+
+Participants begin by creating a new Ergo wallet and funding it using the ErgoMixer, which helps maintain the participant’s anonymity. Once a month, participants are given an opportunity to complete an identity verification event. These events are designed to ensure that the participating ΣIDs are not bots or multi-accounts. In practice, participants are required to complete a short game to receive a verification code. This code is a small user-specific amount of ERG that is sent to a predefined address. The start time of the event, verification codes, and end are all announced on-chain, ensuring the history is verifiable and unchangeable.
+
+## ErgoNation Ideals
+
+ErgoNation is a community that encourages its members to uphold the ideals of crypto, decentralization, and anonymity. There is no token, no treasury, and no centralized team. This means that the project is entirely dependent on voluntary independent contributors, who can propose to add their work for the community. This also means that individuals are free to contribute work that inspires them, instead of being driven by the commercial pressures of growth and profits.

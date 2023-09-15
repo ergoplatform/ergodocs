@@ -1,3 +1,8 @@
+---
+tags:
+  - dApp-InDev
+---
+
 # Monster Pub Brawl
 
 Alcohol is an exceptionally rare resource capable of enhancing the monsters who use them with untold power. The raw materials to produce it are found in extremely hostile territories, and only the most skilled of alchemists are able to distill these materials into a potable concoction.

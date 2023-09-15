@@ -1,3 +1,8 @@
+---
+tags:
+  - dApp-InDev
+---
+
 # Analog Ergo
 
 This project aims to use cryptographic primitives (well established, low level algorithms) as the basis for a cross-chain peer-to-peer marketplace. It will enable users to set and agree to listing prices and other parameters in a private and fungible manner, without the involvement of intermediaries.

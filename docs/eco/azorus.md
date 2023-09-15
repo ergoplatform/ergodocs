@@ -1,3 +1,8 @@
+---
+tags:
+  - dApp-InDev
+---
+
 # Azorus
 
 An intelligence platform for UTXO Blockchains

@@ -1,3 +1,8 @@
+---
+tags:
+  - dApp-InDev
+---
+
 # Blitz TCG
 
 Blitz breaks free from traditional TCG factors through a few key traits: allowing players access to their entire deck, implementing a chess-like time bank system, and adding NPC alternatives to the game board.

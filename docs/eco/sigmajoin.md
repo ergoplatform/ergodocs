@@ -1,6 +1,8 @@
+---
+tags:
+  - dApp-Research
+---
 # Sigmajoin 
-
-
 
 ## What is Sigmajoin?
 

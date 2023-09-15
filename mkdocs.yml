@@ -166,6 +166,8 @@ nav:
         - Oracle Pools V2: eco/oracles-v2.md
         - Mixicles: uses/mixicles.md
       - Tooling:
+        - Crux Finance: eco/crux.md
+        - Thz.FM: eco/thz-fm.md
         - Azorus: eco/azorus.md
         - ZenGate Global:
           - eco/zengate.md
@@ -177,7 +179,7 @@ nav:
         - SentientChain: uses/sentientchain.md
         - PoUW: uses/pouw.md
       - Hardware:
-        - ErgoPOS: eco/ergopos.md
+        - TabbyPOS: eco/tabbypos.md
         
     - Financial:
       - Stablecoins: 
@@ -190,12 +192,15 @@ nav:
           - Why?: uses/sigmausd/why-sigusd.md
         - DexyGold: eco/dexy.md
         - SigmaGold: eco/siggold.md
-        - Hodlcoin: eco/hodlcoin.md
         - ChainCash: uses/chaincash.md
+      - DegFi:
+        - uses/degfi.md
+        - Hodlcoin: eco/hodlcoin.md
+        - Auction Coin: eco/auction-coin.md
       - Lending:
         - uses/lending.md
-        - ErgoLend: eco/ergolend.md
         - duckpools: eco/duckpools.md
+        - EXLE: eco/ergolend.md
         - Micro Credit: dev/scs/microcredit.md
         - Mutual Credit: uses/mutual_credit.md
       - Bonds:
@@ -222,6 +227,7 @@ nav:
     - Exchanges:
       - uses/dex.md
       - Spectrum Finance: eco/spectrum.md
+      - Palmyra: eco/palmyra.md
       - Machina Finance: eco/machina-finance.md
       - P2P: 
           - eco/p2p-trading.md
@@ -229,7 +235,6 @@ nav:
           - Analog Ergo: eco/analog-ergo.md
           - Single Tx Swap: eco/single-tx-swap.md
       - Others:
-        - Palmyra ComDEX: eco/palmyra.md
         - Local Exchange Trading Systems (LETS): 
           - uses/lets.md
           - Basic Implementation: uses/lets/basic-imp.md
@@ -247,7 +252,6 @@ nav:
       - uses/dao.md 
       - ErgoPad: eco/ergopad.md
       - Paideia: eco/paideia.md
-      - Swamp-Audio: eco/swamp-audio.md
 
     - Privacy:      
       - ZK Treasury: uses/zkt.md

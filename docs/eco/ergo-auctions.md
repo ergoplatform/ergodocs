@@ -1,3 +1,8 @@
+---
+tags:
+  - dApp-Live
+---
+
 # Ergo Auctions
 
 The [Ergo Auction House](http://ergoauctions.org/#/auction/active) lets you buy and sell collectible tokens, art, and much more.

@@ -1,3 +1,8 @@
+---
+tags:
+  - dApp-MVP
+---
+
 # Sigma'O
 
 > ERGOHACK VI Update: Sigma’O has delivered a working product and entered [public beta](https://www.sigmao.cc/)! UI improvements are ongoing.

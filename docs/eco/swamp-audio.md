@@ -1,3 +1,3 @@
 # Swamp Audio
 
-[Swamp.audio](https://swamp.audio/) is a music publisher which has been distributing audio in legacy media markets for a decade and represents an ever-growing catalog of music / roster of artists in the rights management space. The goals of swamp music are simple; to make life better for the artists/musicians, and to bring diverse ideas & people together to be something greater than the sum of their parts. Swamp is currently developing an open-source framework to replace existing legacy media monetisation & management platforms, harnessing the power of blockchain & Ergo.
+See [thz.fm]

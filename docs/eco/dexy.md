@@ -1,3 +1,8 @@
+---
+tags:
+  - dApp-InDev
+---
+
 # Dexy
 
 Dexy is an alternative stablecoin design that uses seigniorage, currently in development.

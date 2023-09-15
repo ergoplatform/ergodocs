@@ -1,3 +1,8 @@
+---
+tags:
+  - dApp-InDev
+---
+
 # Lithos
 
 Lithos is a project that aims to create a decentralized mining pool infrastructure by providing a low-risk opportunity for lenders to earn yield on their ERG by providing collateral to mining pools while promoting increasingly decentralized block production. This means that the project plans to enable miners to directly insert necessary transactions into blocks in a fully decentralized and trustless manner, bringing significant benefits to miners outside of just decentralization.

@@ -1,3 +1,8 @@
+---
+tags:
+  - dApp-Live
+---
+
 # Blobstopia
 
 [Blob's Topia](https://www.blobs-topia.fun/) is a game on Ergo blockchain in which you can own blob fighters smart contracts.

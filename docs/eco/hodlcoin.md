@@ -1,8 +1,27 @@
-# Hodlcoin
+---
+tags:
+  - dApp-Live
+---
 
-Holdcoin was a concept thought up by one of the designers of Djed (SigmaUSD). The game has simple rules: players can HODL their ERGs by depositing them into a common reserve or un-HODL by burning their HODL ERGs to withdraw ERGs from the reserve. When HODLing, there are no fees, but un-HODLing incurs a penalty fee (e.g., 3% or 10%) that remains in the common reserve. Players who continue to HODL benefit from the fees paid by un-HODLing players, creating an incentive to hold for longer.
+# Hodlcoin: A High-Risk, High-Reward Game
 
-> Yes. It dates back to 2020, actually. :-). I was trying to simplify the design of Djed/SigmaUSD, to try to come up with a stablecoin protocol that would need no reservecoin and no oracle. 😄 And then I ended up with hodlCoin. But I dismissed it back then as something crazy (which it is, if your goal is to create a stablecoin, since hodlERG's price only increases :-D)... 🙂 Then, in summer/autumn of 2022, I shared this idea with @kushti_ru and, in Spring of 2023, he convinced me that this would be an interesting DegenFi product. The collaboration with @pulsarzz started then and I am still amazed by how fast it all went from there. Ergo's capacity for innovation is incredible.
+## Introduction
 
-Unfortunately in the haste and secrecy, a vulnerability was introduced that allowed the bank box to be drained. Superstar of the month, Krasavice Blasen, the developer behind Duckpools and SkyHarbor [spotted this mistake](https://twitter.com/duckpools_io/status/1675786620904292352) and quickly drained the funds to prevent a malicious actor from doing so. A more detailed technical description of the flaw is described in [this Reddit post](https://www.reddit.com/r/ergonauts/comments/14plqu9/hodlcoin_update/). The funds are now being returned to the users and a v2 of Hodlcoin is underway with PhoenixErgo. This is being worked on by known community developers MGpai and lgd who are redoing the contract and using a proxy contract to further improve security.
-Reiterating the importance of [knowing your assumptions](kya.md). There are no guarantees in experimental decentralised finance. Time is always the best measure of a protocols reliability. Manage your risks and trade well. 
+Hodlcoin, a high-risk, high-reward game, was originally a concept conceived by one of the designers of Djed (SigmaUSD). The game encourages players to "HODL" their ERGs. The rules are straightforward: players can deposit their ERGs into a common reserve (HODLing) or withdraw ERGs from the reserve by burning their HODL ERGs (un-HODLing). While there are no fees for HODLing, un-HODLing incurs a penalty fee (e.g., 3% or 10%) that is added to the common reserve. This structure creates an incentive for players to hold their ERGs for longer periods, as they benefit from the fees paid by those who un-HODL.
+
+## History
+
+The idea for Hodlcoin dates back to 2020 when the goal was to simplify the design of Djed/SigmaUSD and create a stablecoin protocol that wouldn't require a reserve coin or an oracle. Although initially dismissed as a wild idea (especially if the goal was to create a stablecoin, given that the price of hodlERG only increases), the concept was revisited in 2022 and shared with @kushti_ru. By Spring of 2023, it was agreed that Hodlcoin could be an intriguing DegenFi product. The collaboration with @pulsarzz began shortly after, and the rapid progression of the project is a testament to Ergo's capacity for innovation.
+
+## Security Incident
+
+Regrettably, a vulnerability was introduced during the development process that allowed the bank box to be drained. Krasavice Blasen, the developer behind Duckpools and SkyHarbor, identified this error and swiftly drained the funds to prevent a malicious actor from doing so. A more detailed technical description of the flaw can be found in [this Reddit post](https://www.reddit.com/r/ergonauts/comments/14plqu9/hodlcoin_update/). The funds are currently being returned to the users.
+
+## Revamp and Relaunch
+
+In response to this, a second version of Hodlcoin has been developed and launched by PhoenixErgo. This new version is being worked on by community developers MGpai and lgd, who are revising the contract and using a proxy contract to enhance security. The relaunched Hodlcoin now operates with two frontends using the same bank, one is available at [Hodlcoin](https://app.hodlcoin.co.in/), and the other at [PhoenixFi](https://phoenixfi.app/).
+
+## Risk Management
+
+It's important to reiterate the significance of [knowing your assumptions](kya.md) when participating in experimental decentralized finance. There are no guarantees, and the reliability of a protocol is best measured over time. Always manage your risks and trade wisely. 
+

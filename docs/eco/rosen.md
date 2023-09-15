@@ -1,3 +1,8 @@
+---
+tags:
+  - dApp-Beta
+---
+
 # Rosen Bridge
 
 [Rosen Bridge](https://github.com/orgs/rosen-bridge/) is an ergocentric bridge currently [beta testing](https://soft.rosen.tech) it’s first bridge to Cardano. 

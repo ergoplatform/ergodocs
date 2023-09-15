@@ -1,3 +1,8 @@
+---
+tags:
+  - dApp-Live
+---
+
 # SigmaFi 
 
 [SigmaFi](https://sigmafi.app/) is an open-source P2P DeFi bond market currently in beta testing.
