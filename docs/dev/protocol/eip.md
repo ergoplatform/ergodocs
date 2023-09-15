@@ -1,6 +1,6 @@
 ---
 tags:
-  - EIPs
+  - EIP
 ---
 
 # Ergo Improvement Proposals (EIPs)

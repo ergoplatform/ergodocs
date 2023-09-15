@@ -1,6 +1,6 @@
 ---
 tags:
-  - EIPs
+  - EIP
 ---
 
 # EIP-0004: Asset Standard

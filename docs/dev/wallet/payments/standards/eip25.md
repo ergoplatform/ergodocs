@@ -1,6 +1,6 @@
 ---
 tags:
-  - EIPs
+  - EIP
 ---
 
 # EIP-0025: URI scheme for payment requests

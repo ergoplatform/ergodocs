@@ -1,6 +1,6 @@
 ---
 tags:
-  - EIPs
+  - EIP
 ---
 # Proxy contracts
 

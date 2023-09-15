@@ -1,6 +1,6 @@
 ---
 tags:
-  - EIPs
+  - EIP
 ---
 
 # EIP-0019 Cold Wallet: an interaction protocol between Hot and Cold mobile wallets

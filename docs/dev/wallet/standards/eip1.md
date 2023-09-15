@@ -1,6 +1,6 @@
 ---
 tags:
-  - EIPs
+  - EIP
 ---
 
 # EIP-0001: UTXO-Set Scanning Wallet API

@@ -1,6 +1,6 @@
 ---
 tags:
-  - EIPs
+  - EIP
 ---
 # EIP27: Emission Retargeting Soft-Fork
 

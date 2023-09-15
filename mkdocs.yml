@@ -292,9 +292,10 @@ nav:
         - Cyberverse: eco/cyberverse.md
         - Sigmavalley: eco/sigmavalley.md
       - BlobsTopia: eco/blobstopia.md
-      - NFT-Games:
+      - ErgoGames.io:
         - Digigoats: eco/digigoats.md
         - Monster Pub Brawl: eco/monsterpub.md
+        - Project Tesseract: eco/project-tesseract.md
     - Further Ideas: 
         - ProfitSharing: uses/profit.md
         - Email Client for Blocked Internet: uses/blocked_web.md

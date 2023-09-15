@@ -4,7 +4,7 @@ As Ergo's [emission schedule](emission.md) is set to conclude around the year 20
 
 ## Transaction Fees
 
-While currently modest in size, [transaction fees](fees.md) represent a crucial revenue source for miners. The potential for front-running transactions offers additional financial incentives. This cost can be adjusted by miners through [on-chain voting](governance.md)
+While currently modest in size, [transaction fees](min-fee.md) represent a crucial revenue source for miners. The potential for front-running transactions offers additional financial incentives. This cost can be adjusted by miners through [on-chain voting](governance.md)
 
 ## Storage Rent / 'demurrage' 
 

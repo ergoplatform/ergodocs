@@ -1,6 +1,6 @@
 ---
 tags:
-  - EIPs
+  - EIP
 ---
 
 # ErgoPay: an interaction protocol between wallet application and dApp
