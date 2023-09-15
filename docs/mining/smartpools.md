@@ -1,29 +1,43 @@
-# Smartpools
+# SmartPools: A Decentralized Mining Solution
 
-For those following the recent ErgoHacks, you may be aware of the “SmartPools” concept that was suggested at our first event. This project aimed to work towards replacing centralized mining pools with an autonomous on-chain smart contract. The team spent that weekend researching the idea and ultimately produced a whitepaper as their submission. Building on this work, a new developer entered ErgoHack II with the goal of continuing this project, implementing the ‘Sub Pooling’ design specified as a requirement in the SmartPools whitepaper. 
+SmartPools are a decentralized alternative to traditional mining pools. They replace centralized mining pools with autonomous on-chain smart contracts. The latest development in this area is the [Lithos Protocol](lithos.md), which represents the next generation of SmartPools.
 
-We are now pleased to announce GetBlok.io - the very first decentralized mining pool on Ergo! The ability to replace centralized mining pools with smart contracts is a game changer and could ultimately help reduce the risk of 51% attacks and other downfalls that centralization brings.
+## The Concept of SmartPools
 
-Mining pool fees can usually vary between 1-3% but miners can never truly be sure if they are getting their fair share. GetBlok aims to create transparency here so that miners can be sure that their shares will be distributed as earned. The fees on GetBlok are currently at 1% but it is expected to be lowered to around 0.1% in the future - this will help cover the upkeep costs.
+The concept of SmartPools was first introduced at the ErgoHacks event. The idea was to replace centralized mining pools with an autonomous on-chain smart contract. A team of developers spent a weekend researching this concept and produced a whitepaper outlining their findings. This work was continued by another developer at ErgoHack II, who implemented the 'Sub Pooling' design specified in the SmartPools whitepaper.
 
-With centralization comes the risk of abuse, or even network halting or double-spend attacks. However unlikely this may seem, as technology improves, the need to rely on centralized entities also diminishes. 
+## The Impact of SmartPools
 
-Here is a brief overview of what this project aims to solve:
+The introduction of SmartPools is a significant development in the world of mining. By replacing centralized mining pools with smart contracts, SmartPools can help reduce the risk of 51% attacks and other issues associated with centralization.
 
-    Centralized mining pools charge high fees and it is not possible to verify the payments.
-    Centralized mining pools carry a threat to network security as they control more shares in hash rate distribution.
-    Solo miners require mining pools; otherwise block finding times will be too great.
+## Transparency in Mining Pool Fees
 
-With the SmartPools mining model: 
+In traditional mining pools, fees can vary between 1-3%, and miners can never be sure if they are getting their fair share. SmartPools aim to create transparency in this area, ensuring that miners' shares are distributed as earned. While the fees for using SmartPools may initially be around 1%, it is expected that these will be reduced to approximately 0.1% in the future to cover upkeep costs.
 
-    Mining pool contracts and reward schemes will be verifiable and fair.
-    Fees that are needed to keep the server and fund the developers can be deducted on-chain. 
-    Decentralized mining models can prevent the manipulation of hash-power.
+## The Risks of Centralization
 
-Ergo believes that this project is a necessary and essential step towards future decentralization. As we build the blockchain of the future, we hope to see as many facets of decentralization as possible. Readers can explore the contracts and model for GetBlok here.
+Centralization carries the risk of abuse, network halting, or double-spend attacks. As technology improves, the need to rely on centralized entities diminishes, making solutions like SmartPools increasingly important.
 
+## The Problems SmartPools Aim to Solve
+
+SmartPools aim to address several issues associated with traditional mining pools:
+
+    - Centralized mining pools charge high fees and it is not possible to verify the payments.
+    - Centralized mining pools pose a threat to network security as they control more shares in hash rate distribution.
+    - Solo miners require mining pools; otherwise, block finding times will be too long.
+
+## The SmartPools Mining Model
+
+The SmartPools mining model offers several advantages:
+
+    - Mining pool contracts and reward schemes are verifiable and fair.
+    - Fees needed to maintain the server and fund the developers can be deducted on-chain.
+    - Decentralized mining models can prevent the manipulation of hash-power.
+
+Ergo believes that SmartPools represent a necessary and essential step towards future decentralization. As we build the blockchain of the future, we hope to see as many facets of decentralization as possible.
 
 ## Resources
+
 - [What are smart pools?](https://ergoplatform.org/en/blog/2021-11-19-ergo-smartpools-and-decentralized-mining/)
-- [Smart Pools](https://github.com/WilfordGrimley/ErgoSmartPools) _(Inspired [GetBlok.io](https://getblok.io))_
-- [SmartPools - the Future of PoW Mining | GetBlok](https://www.youtube.com/watch?v=pc3GEqMik48)
+- [Smart Pools](https://github.com/WilfordGrimley/ErgoSmartPools)
+- [SmartPools - the Future of PoW Mining](https://www.youtube.com/watch?v=pc3GEqMik48)

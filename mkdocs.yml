@@ -169,6 +169,7 @@ nav:
         - Crux Finance: eco/crux.md
         - Thz.FM: eco/thz-fm.md
         - Azorus: eco/azorus.md
+        - TabbyPOS: eco/tabbypos.md
         - ZenGate Global:
           - eco/zengate.md
           - Solaris Portal: eco/solaris.md
@@ -178,8 +179,6 @@ nav:
         - ErgoData: uses/ErgoData.md
         - SentientChain: uses/sentientchain.md
         - PoUW: uses/pouw.md
-      - Hardware:
-        - TabbyPOS: eco/tabbypos.md
         
     - Financial:
       - Stablecoins: 
@@ -226,6 +225,14 @@ nav:
       - Further Ideas:
         - Prediction Markets: uses/prediction_markets.md
         - Insurance: uses/insurance.md
+        - A CBDC For All: uses/cbdc.md
+        - Tokens:
+          - ICOs: uses/ergo-ico.md
+          - Index Coins: uses/index_coins.md
+          - PoW Tokens: uses/PoW_tokens.md
+          - Perpetual Tokens: uses/perpetual.md
+          - Buy Back Guarantees: uses/dex-buyback.md
+
      
 
     - Exchanges:
@@ -284,22 +291,14 @@ nav:
         - uses/metaverse.md
         - Cyberverse: eco/cyberverse.md
         - Sigmavalley: eco/sigmavalley.md
-      - Monetary-based:
-        - BlobsTopia: eco/blobstopia.md
-
+      - BlobsTopia: eco/blobstopia.md
       - NFT-Games:
         - Digigoats: eco/digigoats.md
         - Monster Pub Brawl: eco/monsterpub.md
     - Further Ideas: 
         - ProfitSharing: uses/profit.md
         - Email Client for Blocked Internet: uses/blocked_web.md
-        - A CBDC For All: uses/cbdc.md
-        - Tokens:
-          - ICOs: uses/ergo-ico.md
-          - Index Coins: uses/index_coins.md
-          - PoW Tokens: uses/PoW_tokens.md
-          - Perpetual Tokens: uses/perpetual.md
-          - Buy Back Guarantees: uses/dex-buyback.md
+    - Miner Tooling: eco/miner-tooling.md
 
       # - Context Claims: uses/context-claims.md
     #  - Asset Tokenisation: uses/tokenisation.md
@@ -677,6 +676,7 @@ nav:
     - Governance: mining/governance.md      
     - Revenue: mining/revenue.md
     - Tooling:
+      - eco/miner-tooling.md
       - GuapSwap: eco/guapswap.md
       - Lithos: 
         - eco/lithos.md
