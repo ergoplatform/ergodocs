@@ -29,22 +29,42 @@ Flash loans typically involve borrowing, action, and repayment within a single t
 
 ### Inter-Protocol Complexity and Data Inputs
 
-Flash loans often interact with multiple DeFi protocols. In eUTXO systems, this would mean bundling various UTXOs into a single transaction, a task that is complex but not necessarily prohibitive. Ergo's [data inputs](read-only-inputs.md) feature allows transactions to reference existing UTXOs without consuming them, offering a potential solution.
+Flash loans often interact with multiple DeFi protocols. In eUTXO systems, this would mean bundling various UTXOs into a single transaction, a task that is complex but not necessarily prohibitive. Ergo's [data inputs](read-only-inputs.md) feature allows transactions to reference existing UTXOs without consuming them. This feature could serve as a potential solution by providing a mechanism to reference multiple protocols within a single transaction. It allows for the creation of complex, interdependent transactions without the need for consuming the UTXOs involved. This could potentially pave the way for more dynamic and flexible transactions, akin to those seen in account-based systems, while still maintaining the security and predictability inherent in the UTXO model.
 
 ### Atomicity: Soft Fork and Hard Fork Options
 
-Flash loans in account-based systems are [atomic](atomic-composability.md)—either all transactions are completed, or none are. While eUTXO blockchains don't inherently offer this feature, it's not an insurmountable challenge. Ergo developers have discussed the possibility of introducing atomicity through a soft fork, using a special ID context variable to enforce a chain of transactions. Alternatively, a hard fork could also be considered to introduce atomicity, although this would be a more significant change requiring community consensus.
+Flash loans in account-based systems are [atomic](atomic-composability.md)—eeither the whole chain of transactions is completed, or none are. This is straightforward in account-based blockchains where multiple interactions can occur within the same block. eUTXO blockchains do not offer such guarantees, making it risky if a multi-step flash loan transaction spans across multiple blocks. However, Ergo developers have discussed the possibility of introducing atomicity through a soft fork, using a special ID context variable to enforce a chain of transactions. Alternatively, a hard fork could also be considered to introduce atomicity, although this would be a more significant change requiring community consensus.
 
 > **Community Insight**: A soft fork could be a less disruptive way to introduce atomicity, although it would add another layer of complexity. The hard fork option, while more significant, would also be a definitive way to address the issue.
 
-### Ethical and Security Implications
+## Ethical and Security Implications of Flash Loans
 
-Flash loans have been used to exploit protocols, as detailed in a [2021 paper](https://arxiv.org/pdf/2003.03810.pdf). The Ergo community remains cautious, citing concerns about potential attacks and ethical implications.
+Flash loans have increasingly gained notoriety for their role in exploiting vulnerabilities in decentralized finance (DeFi) protocols, as highlighted in a [2021 research paper](https://arxiv.org/pdf/2003.03810.pdf). While the technology itself is neutral, its impact is a topic of ongoing debate, especially within communities like Ergo that are concerned with both the ethical and security aspects of flash loans.
 
-> **Community Insight**: The debate within the Ergo community extends to the ethical dimension, questioning whether the benefits of flash loans outweigh the risks of making exploits more accessible and incentivizing manipulative behavior.
+### Risk Factors and Security Concerns
 
-## Conclusion: A Balanced Perspective
+1. **Isolation Factor**: Traditional financial attacks usually require the attacker to commit their own capital, exposing them to market risks. Flash loans, however, allow attackers to operate in isolation, bypassing the natural countermeasures in market-based security mechanisms.
 
-Ergo's eUTXO model offers robust security and predictability, valuable features in their own right. While the model presents challenges for implementing functionalities like flash loans, it also offers unique solutions like data inputs and multi-stage contracts. The discussion around flash loans in Ergo is complex, involving both technical and ethical considerations, and warrants a cautious yet open approach.
+2. **Absence of Market Counterbalance**: Financial markets usually self-correct, where for every action there is an opposite and equal reaction. For example, a large purchase order is often offset by a large sale. Flash loans upset this natural equilibrium by enabling outsized actions without immediate counterbalance.
 
-> **Community Insight**: The Ergo community leans towards a cautious stance, emphasizing the need for a balanced view that considers both the technical challenges and ethical implications of implementing flash loans.
+3. **Lowered Barriers to Entry**: While highly motivated and capitalized actors can exploit financial systems, flash loans make it easier for a wider array of attackers to engage in malicious activities, thus expanding the attack surface.
+
+4. **Time-Sensitivity**: Flash loans must be borrowed and repaid within a single transaction block, minimizing the time for countermeasures or market corrections to take effect.
+
+5. **Vulnerability of On-Chain Oracles**: Protocols relying on on-chain oracles for real-time price information are especially susceptible. Flash loans can rapidly distort market conditions within a single transaction block, effectively manipulating the oracles upon which these protocols depend.
+
+#### Case Study: Oracle Manipulation Scenario
+
+To better understand the security implications, consider the case outlined in the aforementioned research paper:
+
+In this transaction, an attacker uses a flash loan to borrow 7,500 ETH. They then proceed to convert portions of this amount into sUSD through a series of trades, strategically lowering the sUSD/ETH price as reported by Uniswap and Kyber Reserve—two Automated Market Makers (AMMs) serving as on-chain oracles. The attacker exploits this manipulated price to collateralize an excessive amount of sUSD, ultimately repaying the flash loan and walking away with a substantial profit.
+
+Under normal circumstances, rapid price changes on Uniswap and Kyber would trigger arbitrage bots to correct the market imbalance. This natural market reaction would make such an attack infeasible. However, the time-sensitive nature of flash loans circumvents this safeguard.
+
+#### Potential Mitigations
+
+- Implementing moving averages in on-chain oracles could provide a buffer against sudden price manipulations, making it more difficult for flash loans to exploit short-term market distortions.
+
+### Community Insight
+
+The Ergo community has been actively debating the ethical implications of flash loans. Critics question whether the utility these financial instruments provide justifies the heightened risks they introduce, including the potential to democratize financial malfeasance. Proponents argue that the technology itself is a neutral tool and its ethical implications depend on its application. Nonetheless, the community is divided on whether the benefits of flash loans outweigh the serious ethical and security concerns they present.
