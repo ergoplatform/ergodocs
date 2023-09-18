@@ -8,17 +8,16 @@ Difficulty adjustment is a core mechanism in proof-of-work cryptocurrencies like
 
 Ergo's difficulty adjustment is grounded in its Autolykos protocol. Initially, Autolykos employed the linear least squares method for this purpose. This technique relied on historical data from the previous eight epochs (equivalent to 8,192 blocks) to predict future difficulty levels. Compared to Bitcoin's mechanism, it achieved a significantly lower error rate—1.9% as opposed to Bitcoin's 9.1%, as explained in [this paper](https://eprint.iacr.org/2017/731.pdf)
 
-### Challenges and Vulnerabilities with the Original Autolykos Mechanism
+### Challenges and Vulnerabilities with the Original Difficulty Adjustment
 
-While effective, the original Autolykos mechanism had limitations. It was vulnerable to rapid changes in hash rate. For example, during periods of super-linear growth in hash rate, such as the ETH merge, the system would experience severe difficulty spikes. On the flip side, periods of low activity could result in considerable drops in difficulty.
+While effective, the original Autolykos algorithm. It was vulnerable to rapid changes in hash rate. For example, during periods of super-linear growth in hash rate, such as the ETH merge, the system would experience severe difficulty spikes. On the flip side, periods of low activity could result in considerable drops in difficulty.
 
 ### EIP37: Refining Autolykos for Better Responsiveness
 
 To address these vulnerabilities while retaining the strengths of the Autolykos protocol, Ergo introduced [Ergo Improvement Proposal 37 (EIP37)](eip37.md). This update made the difficulty adjustment mechanism more responsive by considering a shorter and more recent history of blocks. EIP37 didn't replace Autolykos but refined it, making it more resilient against sudden hash rate changes and adversarial disruptions.
 
-### Impact of EIP37 on Autolykos
-
 With the adoption of EIP37, the Autolykos-based difficulty adjustment in Ergo has become more robust and adaptive. It can now better handle sudden and substantial fluctuations in the network's hash rate, making the network more secure and maintaining the 120-second block interval more consistently.
+
 
 
 

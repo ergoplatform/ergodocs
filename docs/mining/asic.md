@@ -1,93 +1,48 @@
-# ASIC Resistance
+# The Mechanics of ASIC Resistance in Autolykos v2
 
-A part of ASIC resistance on Autolykos v2 is credited to Ergo’s periodic memory table adjustments. These adjuments slowly increase the minimum GPU vRAM required to mine Ergo over time. The goal is if someone built an integrated circuit (ASIC) for the memory table today, they would likely have issues with their ASIC machine when the memory table is adjusted (increased) according to the schedule at a later date.
- 
-## Memory-Hardness
+Ergo's Autolykos v2 employs a dynamic strategy to resist Application-Specific Integrated Circuits (ASICs). The system achieves this through scheduled memory table adjustments, effectively increasing the minimum GPU vRAM requirements for mining over time. This ensures that any ASIC built to mine Ergo today will find itself inefficient following future updates.
 
-We know from Ethereum that ‘memory hard’ algorithms can be conquered by integrating memory on ASICs. Ergo is different but let’s first revise why an ASIC with limited memory is uncompetitive and why a miner needs to store _**list R**_. 
+## Unpacking Memory-Hardness: Lessons from Ethereum and Beyond
 
-Line 8 of Autolykos block mining deters machines with limited memory. 
-- If an ASIC miner does not store _**list R**_, they require a lot of cores to generate the 31-byte numeric hashes on the fly.
-- 32 _**r**_ values cannot be efficiently calculated using a single core loop because an output would only be generated every 32nd hash cycle. 
-- Given _**J**,_ to compute one nonce _per hash cycle,_ at least 32 *Blake2b256* instances running _**dropMsb(H(j||h||M))**_ are needed. 
-- As we mentioned above, this increases die size and cost significantly. Storing _**list R**_ is worthwhile because having 32, or even 16, cores are very expensive. More to the point, reading memory is faster than computing Blake instances every time a nonce is tested.
- 
-> The difference between Ethash and Autolykos is that Ethash involves **N** elements when hashing the nonce, and the header mixes 64 times. In contrast, Autolykos involves **N** elements when fetching 32 _**r**_ values based on indexes generated. 
+Ethereum demonstrated that 'memory-hard' algorithms could still be manipulated by ASICs with on-board memory. Ergo's Autolykos v2 takes a different approach. Let's examine why ASICs with limited memory cannot compete effectively and explore the necessity of storing **_list R_**.
 
-For every tested nonce, Autolykos runs about 4 *Blake2b256* instances and 32 memory fetches, while Ethash runs about 65 SHA-3-like instances and 64 memory fetches. Not to mention, _**k**_ is currently set at 32, but this value can be increased to retrieve more _**r**_ values if needed. ASICs that run Ethash have a lot of room to increase SHA3 hashing speed since 65 hashes are completed per tested nonce compared to about four on Autolykos. The ratio of memory fetches to hash instances is much greater on Autolykos. For this reason, Autolykos is more memory-hard than Ethash since memory bandwidth plays a much larger role than hashing speed.
- 
-An area where Autolykos optimisation could take place is the filling of _**list R**_. The filling of _**list R**_ requires _**N**_ instances of a *Blake2b256* function. _**N**_ is large and only getting larger, so that’s a lot of hashing. An ASIC could optimise the speed of *Blake2b256*, yielding more time for block mining since _**list R**_ is filled sooner. Although this can be done, filling _**list R**_ requires cycling through [0, N) and a GPU with 32-wide multiprocessors can already fill _list R_ very fast (in seconds). One would need an ASIC with many Blake cores to be significantly faster – again, very expensive and probably not worthwhile since the bottleneck could become memory _write_ bandwidth (i.e., writing _**list R**_ to RAM rather than hashing speed).
- 
-The last area that can be optimised for Autolykos is a memory read/write speed. Ethash ASIC miners have a slightly faster read speed compared to GPUs, as the memory is clocked higher without the effect of GPU throttling. However, this difference is insignificant and is expected to become more insignificant as GPUs advance. This is because the memory hardware itself is the same: DRAM. One may question if faster memory hardware could be utilised whereby memory read and write speed is far quicker. SRAM, for instance, could be an imaginable next step in breaking memory hard algorithms, however, SRAM is not a feasible solution simply because it is less dense.
- 
- 
-## *Blake2b256*
- 
-One major difference between an algorithm like Autolykos and others is the use of *Blake2b256*. This is no coincidence. Blake relies heavily on addition operations for hash mixing instead of XOR operations. An operation like XOR can be done bit by bit, whereas addition requires carrying bits. Thus, Blake requires more power and core area compared to SHA algorithms, but it is still as secure and faster. As mentioned on the Blake2 website, “BLAKE2 is fast in software because it exploits features of modern CPUs, namely instruction-level parallelism, SIMD instruction set extensions, and multiple cores.”[3] Thus, while an ASIC can output Blake instances faster, the innate nature of the function limits optimisations by requiring addition and involving features found in CPUs and GPUs.
- 
-#### Blake2b speed relative to other hash functions
- 
-![unnamed (8).png](https://storage.googleapis.com/ergo-cms-media/unnamed_8_e6913d1172/unnamed_8_e6913d1172.png)
+### Diving Deeper into Autolykos
 
+To fully grasp the intricacies of Autolykos v2, we recommend going through the [technical breakdown](algo-technical.md) line by line. Here, we provide a high-level overview:
 
-## FPGAs
+- **Line 8**: This line serves as a gatekeeper, filtering out machines that do not meet the memory requirements.
+- **Hash Generation**: In the absence of **_list R_**, an ASIC would require multiple cores to dynamically generate 31-byte numerical hashes.
+- **Single-Core Loop Limitations**: The process of generating 32 **_r_** values in a single cycle is not efficient, resulting in sparse output.
+- **Computational Requirements**: To compute a single nonce per hash cycle based on a given **_J_**, at least 32 instances of Blake2b256 running **_dropMsb(H(j||h||M))_** are required.
+- **Cost and Efficiency**: The practice of storing **_list R_** proves to be cost-effective as fetching data from memory is quicker than performing repeated Blake2b256 hash calculations.
 
-A **Field-Programmable Gate Array** contains an array of programmable logic blocks and a hierarchy of reconfigurable interconnects, allowing blocks to be wired together. Logic blocks can be configured to perform complex combinational functions or act as simple logic gates like AND and XOR. 
+### Comparative Analysis: Ethash vs. Autolykos
 
-In most FPGAs, logic blocks also include memory elements, which may be simple flip-flops or more complete memory blocks. Many FPGAs can be reprogrammed to implement different logic functions, allowing flexible, reconfigurable computing performed in computer software.
+Ethash involves **N** elements when hashing, while Autolykos involves **N** elements for fetching 32 **_r_** values based on indexes generated. Autolykos is more memory-hard due to its higher reliance on memory bandwidth.
 
+## Potential Autolykos Optimizations and Constraints
 
-### Are there FPGAs on the network? 
+1. **Hashing Speed**: Speeding up the Blake2b256 function can reduce the time to fill **_list R_**, though this would entail a considerable investment in specialized hardware.
+2. **Memory Bandwidth**: Despite minor advantages for Ethash ASIC miners in read speed, this is expected to become negligible as GPU technology advances.
 
-A couple that we know of (see below). Most likely only hobbyists at this stage for the reasons described below. 
+## Blake2b256: Why It Matters
 
-### Will FPGAs make GPUs useless? 
+Blake2b256, unlike other hashing algorithms, emphasizes addition operations over XOR, making it both secure and computationally demanding. This makes it difficult for ASICs to gain a significant advantage.
 
-FPGAs have an edge in power consumption, but GPUs should still be competitive. 
+## FPGAs: A Current Assessment and Future Outlook
 
-### What are the benefits?  
+### Key Features and Considerations
 
-A 4090 can do 1.6Mh/w, and FPGAs can get up to 3Mh/W - so 2x the efficiency of the best Nvidia cards.
+- **Efficiency**: FPGAs can achieve up to 3Mh/W, double the efficiency of the best Nvidia cards.
+- **Availability**: A chip shortage and lack of public miners make FPGAs currently non-competitive.
+- **ROI**: If you could buy an E300 at retail prices today, the Return on Investment (ROI) would take approximately 52 years.
 
-### How long away are we from FPGAs being competitive? 
+### Community Perspective: To FPGA or Not to FPGA?
 
-There is no public miner, so even if you got your hands on one, you couldn't use it without writing it yourself. There is a chip shortage, so unlikely to be competitive or available at scale for years. Assuming you could order an E300 at retail prices and run it today, ROI would take ~52 years.
+The decision to allow or restrict FPGAs is up to the Ergo community. While FPGAs are more efficient, GPUs are more accessible, fostering greater decentralization.
 
-Here's [a benchmark on the Osprey E300](https://www.reddit.com/r/erg_miners/comments/rmwk9p/testing_my_fpga_at_over_3mhw/) (three XCVU35P FPGAs): 
+## The SRAM Dilemma in FPGA Mining
 
+SRAM, despite its faster read/write capabilities, is not a feasible long-term option for Ergo mining due to its lower density and the algorithm's increasing memory requirements.
 
-### What is the E300? 
-
-The E300 is an FPGA recently listed for sale by OspreyElectronics; it has High Bandwidth Memory (specifically Samsung Aquabolt HBM2 - the same memory which is on the Radeon VII, just two stacks, not four.) and retails at $4,999.00
-
-- [Ospreye Electronics has the E300](https://www.ospreyelectronics.io/product-page/e300-180m-eth-hash-rate) with Ergo listed as a 'future mining algorithm.
-- This led to [this video](https://youtu.be/ZnEOXKh0UHo) being circulated. 
-
-
-### Should we stop FPGAs?
-
-This is for the community to decide. 
-
-- FPGAs/ASICs signal support and, to some extent, unpreventable without constant HFs
-- Keeping them out is most important when the emission is high.
-- GPUs are better for decentralisation as they are easier to access, but FPGAs are better for decentralisation as they result in strong validators.
-- FPGAs efficiency benefits may make it the most favorable long-term option in light of energy concerns.
-
-### Who's working on FPGAs?
-
-@Wolf9466 has had a functional miner since 01/04/2022
-
-Some pictures of his [FPGAs](https://lovehindpa.ws/galleries/FPGAPics/) here: 
-Some [technical writings](https://lovehindpa.ws/writings/) here: 
-
-`@BigEvilSoloMiner` has also been working on FPGAs. 
-
-> I've been quietly mining both ETH and ERG with FPGAs and Nvidia GPUs. I have four different FPGA implementations for Autolykos V2, and the fifth one is still in development, so HBM FPGAs are on the network. But given their costs, GPUs still have the edge for now; it all comes down to your energy costs. I am going to be sponsoring some open source FPGA and GPU development for ERG mining.
-
- 
-### SRAM on FPGA[2]
- 
-![unnamed (7).png](https://storage.googleapis.com/ergo-cms-media/unnamed_7_87793f77f4/unnamed_7_87793f77f4.png)
- 
-The above photo is an FPGA with eight memory chips on the front and another eight on the back. The total SRAM memory is only 576MB. Fitting sufficient SRAM on a die won't work because the SRAM will need to be placed further from the core as it is not dense enough to fit in one layer around the core. This can result in read/write delays because electricity needs to travel long distances even though the hardware is faster. Additionally, to mine Ergo, the memory requirement increases as N increases, so fitting sufficient SRAM is not feasible over time. Thus, SRAM ASICs are not worthwhile exploring even if one has enough cash to spend on SRAM itself.
- 
+By understanding these components, we can appreciate how Autolykos v2 aims to create a more ASIC-resistant, secure, and ultimately, decentralized network.

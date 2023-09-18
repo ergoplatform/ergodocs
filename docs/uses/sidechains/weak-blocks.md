@@ -39,7 +39,7 @@ Sidechains allow for segregated, dedicated chains where specific tasks or applic
 
 ## Conclusion
 
-Weak-blocks and sidechains present an efficient approach to address some of the fundamental scalability issues in proof-of-work blockchains like Ergo. By focusing on these, Ergo aims to improve both the network efficiency and transaction confirmation speed without compromising decentralization.
+Weak-blocks and sidechains present an efficient approach to address some of the fundamental scalability issues in proof-of-work blockchains like Ergo. By focusing on these, Ergo aims to improve both the network efficiency and transaction confirmation speed without compromising decentralisation.
 
 ## References
 

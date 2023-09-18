@@ -1,48 +1,44 @@
-# A Systematic Approach To Cryptocurrency Fees
+# Understanding Cryptocurrency Fees: A Multi-Dimensional Approach
 
-This page is a continuation and summarisation of the paper storage rent was introducted in, *[A Systematic Approach To Cryptocurrency Fees](https://fc18.ifca.ai/bitcoin/papers/bitcoin18-final18.pdf)* (hereinafter referred to as the paper) by Alex (Kushti) Chepurnoy, Vasily Kharin and Dmitry Meshkov. In the paper, the authors address the problem of storage resource utilisation. There is a concern that once an element of the state is created, it exists forever and inevitably balloons node disk space, leading to unreasonable state growth of the blockchain.
+This article builds upon the research presented in the paper *[A Systematic Approach To Cryptocurrency Fees](https://fc18.ifca.ai/bitcoin/papers/bitcoin18-final18.pdf)*. Authored by Alex (Kushti) Chepurnoy, Vasily Kharin, and Dmitry Meshkov, the paper delves into the complexities surrounding blockchain storage and suggests a multi-dimensional fee structure as a solution.
 
-While cryptocurrencies address transaction fees as an atomic concept, the paper suggests that it is reasonable to consider this on a 3-dimensional scale.
+## The Double-Edged Sword of Blockchain Storage
 
-![Figure A.](https://ergoplatform.org/img/uploads/3d.png)
+Blockchain technology is remarkable for its capabilities of ensuring security, transparency, and an immutable transaction history. However, this very feature of permanence leads to ever-expanding blockchain states, raising a series of concerns:
 
-### Key Takeaways
+1. **Risk of Centralization**: As the state grows, fewer entities can effectively store it, escalating the centralization threat.
+2. **Spam Attack Vulnerability**: A bloated state is an inviting target for spam and denial-of-service attacks.
+3. **Resource Drain**: Larger states require more computational power, leading to increased operational costs.
+4. **Deflationary Pressures**: Lost or dormant coins risk deflating the currency’s value, undermining its utility.
 
-- Transaction fee schemes based on space and duration of objects in the state
-- State growth in blockchain technology can lead to centralization and SPV mining
-- Fee differentiation algorithm for transactions in a blockchain network
-- Differentiable pricing curve for storage in a blockchain network
-- Evaluation of pricing coefficients in a transaction classification system
-- Implementation of a fee component to make state size more predictable
-- Side effects of storage fees, such as returning lost coins into circulation
-- References to sources on the instability of Bitcoin without the block reward
-- Ethereum Project Yellow Paper outlining technical specifications and design principles
+![A 3-Dimensional Scale for Fees](https://ergoplatform.org/img/uploads/3d.png)
 
+The image above introduces a 3-dimensional scale to assess cryptocurrency fees based on three crucial factors: space (storage load), duration (time), and computational load. This visualization aids in understanding how a multi-faceted fee system could mitigate the inherent challenges tied to blockchain storage and resource utilization.
 
-### Blockchain Costs
+### Case Studies: Bitcoin and Ethereum
 
-Proof of Work blockchain technology relies on miners to guard the integrity of the blockchain. Miner resources, such as memory and electricity, are costly; therefore, a revenue scheme is needed to incentivise miners. Miner incentives are currently comprised of block rewards and transaction fees, and transaction fees are an important component in preventing spam attacks that exhaust miner resources.
+To illustrate these concerns, consider the spam attack on Bitcoin in July 2015 that led to 15 million new outputs, bloating the total UTXO size significantly. Ethereum faced a similar fate with an attack that added 18 million new accounts to its state, causing resource-intensive denial-of-service attacks on nodes.
 
-Besides network utilisation, transaction processing requires a miner to spend resources to maintain all the original blockchain data. In the case of Bitcoin, this might be less of a problem because it has yet to implement smart contract functionality. Cryptocurrencies that support smart contract languages, such as Solidity (Ethereum), however, may require a lot of computations, and related costs will be included in the transaction fee.
+### A Multi-Faceted Solution: Storage Rent
 
-The 3-dimensional scale shown above is based on storage-oriented, computational, and network load.
+The paper suggests the concept of "storage rent" as a remedy. This involves a recurring fee on each Unspent Transaction Output (UTXO) aimed at deterring indefinite data storage. By implementing this mechanism, blockchain systems could become more efficient, secure, and sustainable, aligning with earlier ideas such as the 2014 [Freicoin](http://freico.in) proposal for currency demurrage.
 
-* Storage-oriented load refers to the additional cost of storing old data in the blockchain. 
-* The execution of smart contracts creates a computational load. 
-* Network load is all the transactions that do not exist in the current block but will be added to the next block.
+## Highlights and Contributions of the Paper
 
-In Ergo, the total size of the state is the sum of the sizes of all UTXOs. This data contains the execution of smart contracts, all the transactions and nodal information. Because the memory resources miners provide are limited, a state deterioration fee should be added to miners' revenue streams to encourage decreasing the system load while securing future miners' contributions.
+- **Dimensional Fee Complexity**: The paper breaks new ground by considering fees in three dimensions—space, time, and computation—rather than as a monolithic entity.
+- **Unsustainability of Unchecked Growth**: State growth, if left unchecked, risks centralization and compromised security through reliance on Simplified Payment Verification (SPV) mining.
+- **Innovative Fee Algorithms**: The paper introduces fresh algorithms for fee differentiation and pricing curves for storage, aiming for a more predictable and economical fee structure.
+- **Strategic State Management**: The paper advocates for the introduction of a fee component specifically tailored to regulate state size effectively.
+- **Unintended Ripple Effects**: The research also touches on the secondary impacts of storage fees, such as the reactivation of lost or dormant coins.
 
-### State Growth
+## Miner Costs and Ecosystem Sustainability
 
-**Unreasonable state growth** is an economic problem, and it can lead to spam attacks and network congestion. Another problem could be the deflation of a cryptocurrency if coins are lost or forgotten. So instead of being used as the base for smart contracts, the currency becomes unreasonably scarce, making the system heavy and limiting coin flow.
+In a Proof-of-Work blockchain system, miners play a pivotal role, safeguarding the network's integrity at the cost of electricity and computational resources. To sustain this ecosystem, miners are compensated through block rewards and transaction fees.
 
-This leads to a perpetually increasing state (e.g. the Bitcoin's total UTXO size), which may grow faster during spam attacks. For example, 15 million outputs were created during spam attacks against Bitcoin in July 2015. An attack on Ethereum created 18 million new accounts added to the state - which previously held only 1 million - and performed successful "denial of service" attacks against the nodes.
+In platforms like Ethereum that support smart contracts, transactions may involve substantial computational overhead, necessitating a multi-dimensional fee structure that accounts for:
 
-The paper proposes a "storage rent" fee to tackle the unreasonable state growth problem. Storage rent is a scheduled fee based on the continuation of each UTXO created in the blockchain. This is achieved by using scheduled payments, and eradicating unused bytes after a certain time.
+- **Storage Load**: Represents the costs associated with preserving historical blockchain data.
+- **Computational Load**: Entails the computational resources expended in executing smart contracts.
+- **Network Load**: Includes the bandwidth and processing capacity needed to accommodate new, yet-to-be-blocked transactions.
 
-Additionally, using blockchains as cloud storage is gaining attraction, so permanently storing objects in the state without some form of recirculation procedure of the old data is not a plausible option.
-
-For research and this article, it is worth noting that the concept of storage rent was also proposed in 2014 by [Freicoin](http://freico.in):
-
-> *"Demurrage forces freicoins to circulate at deliberately high rates. Separation of money's roles as store-of-value and medium-of-exchange allows money to flow when it is needed, in good times and bad. "*
+For instance, in the Ergo blockchain, the paper recommends introducing a "state deterioration fee." This would incentivize miners to streamline system performance by effectively managing the state size, including all UTXOs, smart contracts, and transactional data.

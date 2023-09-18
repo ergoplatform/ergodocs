@@ -1,19 +1,26 @@
-# Spending an Expired Box
+# How to Spend an Expired Ergo Box
 
-To spend an expired box, the following conditions must be satisfied:
+Spending an expired Ergo box involves satisfying specific conditions that differ from spending a regular box. The following criteria must be met:
 
-1. The box must have been stored for at least the required storage fee period. This is verified by checking if the difference between the upcoming block's height (from the preheader) and the box's creation height is greater than or equal to the storage fee period.
-1. The *spending proof* for the expired box must be empty. This means no cryptographic proof is required to authorize the spending of the box.
+## Conditions for Spending an Expired Box
 
-The following line of code verifies if the box has been stored for the required storage fee period. It calculates the difference between the upcoming block's height (`context.preHeader.height`) and the box's creation height (`context.self.creationHeight`). If this difference is greater than or equal to the constant value representing the storage fee period (`Constants.StoragePeriod`), the condition is met.
-   
+1. **Storage Fee Duration**: The box must have been retained for at least the designated storage fee period. This is validated by calculating the difference between the height of the upcoming block, as indicated in the preheader, and the creation height of the box. This difference should be greater than or equal to the storage fee period.
+2. **Spending Proof**: For an expired box, the spending proof must be left empty, eliminating the need for cryptographic authorization for the box's spending.
 
-```
+### Code Snippet for Verifying Storage Fee Duration
+
+The following line of code checks whether the box has been stored for the required minimum duration, comparing the height of the upcoming block (`context.preHeader.height`) with the box's creation height (`context.self.creationHeight`):
+
+```scala
 context.preHeader.height - context.self.creationHeight >= Constants.StoragePeriod
 ```
 
-- (Reference: [ErgoInterpreter.scala, line 73](https://github.com/ergoplatform/ergo/blob/49b9f0fe7d0eba1a5ff81e524353acdd9a3cc6dd/ergo-wallet/src/main/scala/org/ergoplatform/wallet/interpreter/ErgoInterpreter.scala#L73))
+**Reference**: [ErgoInterpreter.scala, line 73](https://github.com/ergoplatform/ergo/blob/49b9f0fe7d0eba1a5ff81e524353acdd9a3cc6dd/ergo-wallet/src/main/scala/org/ergoplatform/wallet/interpreter/ErgoInterpreter.scala#L73)
 
-The "*spending proof*" for the expired box refers to a cryptographic proof that is typically required to authorize the spending of a box (or transaction output). In the case of an expired box, the condition "spending proof must be empty" means that no such cryptographic proof is needed to spend the box. This allows anyone to spend the expired box without providing any proof of ownership, as long as the other conditions are met (such as the box being stored for at least the required storage fee period).
+### Spending Proof for Expired Boxes
 
-If these conditions are met, anyone can spend the expired box by providing an index of a recreated box (or an index of any box if the expired box doesn't have enough funds to cover the storage fee) in context extension variable #127, which is stored in the input.
+The term "spending proof" typically refers to a cryptographic authorization required for spending a box. However, in the context of an expired box, this requirement is waived. The spending proof for the expired box must be empty, meaning that no cryptographic validation is needed to authorize its spending. This allows any participant to spend the expired box without needing to prove ownership, as long as the storage fee duration condition is fulfilled.
+
+### Additional Details for Spending an Expired Box
+
+If both the above conditions are met, the expired box can be spent by anyone. To do so, one needs to provide an index of a newly recreated box (or an index of any box, if the expired box lacks sufficient funds for the storage fee) in the context extension variable #127, which will be stored as part of the input.

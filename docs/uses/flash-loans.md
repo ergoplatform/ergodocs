@@ -19,7 +19,7 @@ UTXO blockchains are deterministic, meaning all outcomes must be predictable bef
 
 ### One Transaction, Many Steps
 
-Flash loans usually involve multiple steps: borrowing funds, performing an action like arbitrage, and then repaying the loan, all within one transaction. In eUTXO blockchains, this would be highly impractical. Each 'step' would require its own transaction, which would have to be computed beforehand due to the deterministic nature of these blockchains.
+Flash loans usually involve multiple steps: borrowing funds, performing an action like arbitrage, and then repaying the loan, all within one transaction. In eUTXO blockchains, this would be highly impractical. Each 'step' would require its own transaction, which would have to be computed beforehand due to the deterministic nature of the model.
 
 ### Cross-Protocol Interactions Are Complex
 
@@ -48,5 +48,11 @@ Flash loans are designed to be [atomic](atomic-composability.md)—either the wh
 1. **Still No Atomicity**: While these contracts can enable complex transactions, they can't guarantee that these will all be processed in the same block, a fundamental feature of flash loans.
   
 2. **High Complexity, High Risk**: The more complex the system, the higher the likelihood of security risks, particularly in financial operations like flash loans.
+
+## Hard Fork
+
+Atomicity of chained transactions can be supported via hard-fork extension. If the community wanted such a hard fork, we could extend the transaction serialisation format adding special extensions section for each transaction. This section can be used to mark some transactions as belonging to a chain, which will force all miners to either accept the whole chain, or not.
+
+## Conclusion
 
 The eUTXO model inherently promotes transaction security and predictability at the cost of some functionalities that are easier to implement in account-based systems, such as flash loans. While weak blocks and multi-stage contracts offer interesting workarounds, they do not fully address the challenges and risks posed by implementing flash loans in eUTXO blockchains.

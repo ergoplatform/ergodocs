@@ -6,31 +6,43 @@ tags:
 
 # Governance
 
-Many parameters in Ergo can be changed on-the-fly via miners voting. Things like instructions costs, computational cost limit per block, block size limit, storage fee factor, and block version. Meaning the long-term economic security of the protocol is up to miners to decide. 
+I apologize for the oversight. Here's a revised and clearer version of the original document:
 
-In addition to the protocol parameters [listed below](#parameters-table) that can be changed via on-chain miner voting, most things on Ergo can be changed via a soft-forking protocol (90% support required). This excludes critical changes such as changing the max supply. 
+---
 
-Voting for the block version lasts **32 epochs** and requires more than **90 percent** of the miners to vote for the change. A simple majority is enough for less critical changes such as block size limit. We will further refer to the changes of the first kind as 'foundational changes', and we refer to the changes of the second kind as 'everyday changes'. 
+## Governance in Ergo: Dynamic Parameters and Voting Mechanics
 
-> Per block, a miner can vote for two everyday changes and one foundational change, with the votes to be included in the block's header.
+### Overview
 
-- To vote **Yes** and propose a change in the first block of an epoch, a miner publishes the identifier of the change directly in the block header. 
-- To vote **No** (or avoid voting at all, which is the same), a miner writes zero value instead of a corresponding byte (another option is to provide a vote identifier not considered within the epoch).
+In Ergo, many network parameters are adjustable through a decentralized voting mechanism among miners. Such parameters include computational costs, block size limits, and storage fees. The long-term economic stability of the Ergo network is thus steered by miner consensus.
 
-## System constants:
+Miners can vote to change specific protocol parameters, as [outlined in the table below](#parameter-table). Soft-forking changes, requiring 90% miner support, can also alter many aspects of Ergo, barring critical elements like maximum supply.
 
-- Voting epoch length = `1024` blocks.
-- Voting epochs per foundational change = `32`
-- Voting epochs before approved foundational change activation = `128`
+### Voting Cycles and Types of Changes
 
+Votes on foundational changes, such as block version, span **32 epochs** and demand a **90% miner consensus**. Everyday changes, like block size adjustments, require only a simple majority. Each block allows miners to cast votes for up to two everyday changes and one foundational change. These votes are included in the block's header.
 
-## Current settings
+### Voting Mechanics
 
-- `maxBlockSize` : 1271009 bytes
-- Max box size: 4096 bytes
-- Max transaction size: 96kb
+#### Affirmative Votes
+To vote "Yes" for a change at the beginning of an epoch, a miner places the change's identifier directly into the block header.
 
-## Parameters table
+#### Negative or Neutral Votes
+To vote "No" or abstain, a miner enters a zero value in place of the identifier byte in the block header.
+
+### System Constants
+
+- Epoch length for voting: `1024` blocks
+- Epochs needed for foundational change: `32`
+- Epochs before activating approved foundational change: `128`
+
+### Current Network Settings
+
+- Maximum block size: `1271009` bytes
+- Maximum box size: `4096` bytes
+- Maximum transaction size: `96kb`
+
+## Parameters Table
 
 The following table describes vote identifiers, default values (during launch), possible steps, and minimum and maximum values. 
 
@@ -38,7 +50,9 @@ The following table describes vote identifiers, default values (during launch), 
 - If the minimum value for a parameter is not defined, it equals zero. 
 - If the maximum value is not defined, it equals `1,073,741,823`.
 
-A miner includes a parameter identifier ($id$) into the block header to propose or vote for increasing a parameter. If the miner supports decreasing the parameter, they would include ($-id$) into the block header.
+A miner includes a parameter identifier ($id$) into the block header to propose or vote for increasing a parameter. 
+
+If the miner supports decreasing the parameter, they would include ($-id$) into the block header.
 
 > Try out these parameters on [deadit.github.io/paizo/](https://deadit.github.io/paizo/)
 
@@ -54,14 +68,59 @@ A miner includes a parameter identifier ($id$) into the block header to propose 
 | 8 | Cost per one transaction output | 100 |  |  |  |
 | 120 | Soft-fork (increasing version of a block) |  |  |  |  |
 
+
+
 Parameter values are to be written into the extension section on the first block of a voting epoch,
 that is, in the extension of a block when its $height\,mod\,1024 = 0$.
 
 Parameters for the initial moment of time~$(height = 1)$ are hardcoded.
 
-## Proposing a change and voting for it
+## How to Propose and Vote for Changes
 
-To propose a change, in the first block of a voting epoch (of $1,024$ blocks, so in a block of
+To propose a change, a miner includes the vote identifier in the first block's header of a voting epoch. The header has three slots: two for everyday changes and one for soft forks. A zero should be set in any unoccupied slot. Votes can be arranged in any sequence.
+
+For example, if a miner proposes to increase the storage fee factor and also initiate a soft-fork, they would input `(0, 1, 120) in the header slots.
+
+
+
+## Soft-Fork Mechanism in Ergo
+
+Soft forks allow for protocol updates that can introduce new rules or deactivate existing ones. The decision to implement a soft fork is made through a carefully designed voting process that involves miners and lasts 32 epochs. This article aims to explain the steps involved in implementing a soft fork, the rules surrounding it, and how the process unfolds.
+
+### Preconditions for a Soft Fork
+
+1. **Software Update:** A protocol developer releases an updated version of the software that could alter existing rules or introduce new ones.
+2. **Proposal:** A miner flags the beginning of a soft-fork voting process by including a specific identifier (e.g., 120) in the first block of a new epoch.
+
+### Voting Process
+
+1. **Duration:** The voting phase spans 32 epochs.
+2. **Threshold:** For a soft fork to be approved, it must garner at least 90% of the votes, which equates to at least 29,491 votes out of a possible 32,768 (32 epochs * 1024 blocks per epoch).
+3. **Negative Outcome:** If the proposal fails to meet the 90% threshold, new proposals can be initiated in the following epoch.
+4. **Positive Outcome:** If approved, an activation period of 32 epochs begins.
+
+### Activation and Implementation
+
+1. **Activation Period:** Following a successful vote, the network enters an activation phase lasting 32 epochs.
+2. **Activation Height:** The first block after the activation period is termed the 'activation height.'
+3. **Block Versioning:** The block version in the extension sections will increase from the first block of the activation period. The protocol version in headers will be updated at the activation height.
+
+### Technical Details
+
+- To initiate a soft fork vote, a miner includes the identifier 120 in the first block of the epoch, denoted by height \(h_s\).
+- In the subsequent epoch, miners include the start height (\(122: h_s\)) and the votes collected in prior epochs (\(121: v_s\)) in the extension section of their blocks.
+
+### Examples
+
+1. **Starting a Vote:** Assume a vote is proposed in block #1024 by writing "120" into the extension. In that epoch, it gathers 500 votes. The next block, #2048, should include the pair \(122: 1024\) and \(121: 500\).
+2. **Counting Votes:** If the new epoch starting at block #2048 gathers 600 additional votes, the next miner at block #3072 should include the pairs \(121: 1100\) and \(122: 1024\).
+3. **Vote Outcome:** If the vote is unsuccessful, failing to gather more than 29,491 votes between blocks #1024 and #33791, the parameters are reset at block #34816. New voting can start in that epoch.
+4. **Vote Success and Activation:** If the vote is successful, the activation period starts immediately at block #33792, lasting for 32 epochs. Voting for a new soft fork during this time is prohibited. Protocol versions are updated at the activation height.
+
+For more practical examples, refer to this [ergoforum post](https://www.ergoforum.org/t/voting-for-a-soft-fork-in-ergo/2958).
+
+
+<!-- To propose a change, in the first block of a voting epoch (of $1,024$ blocks, so in a block of
 $height\,mod\,1024 = 0$), a miner is posting an identifier of a vote for a change. There are three slots (three bytes)
 in a block header for proposed changes, with two slots reserved for everyday changes and the third one for
 proposing a soft fork. A slot not occupied by a proposal is to be set to zero. Votes could come in any order.
@@ -73,7 +132,9 @@ To vote for a proposal~(which is proposed in the first block of an epoch) within
 
 If a majority of votes within an epoch support an everyday change (so at least 513 blocks contain an identifier), a new value of the parameter should be written into the extension section of the first block of the next epoch.
 
-## Voting for a soft-fork
+## Soft-Forking Mechanism
+
+Soft forks introduce new protocol versions and can potentially deactivate existing validation rules. A soft-fork process involves several steps and must secure more than 90% of votes during the 32-epoch voting period to be approved.
 
 A soft-fork happens when a protocol version supported by the network is being increased.
 The protocol version is being written into every block header, with the initial value during launch to be set to 1.
@@ -101,3 +162,4 @@ See this [ergoforum post](https://www.ergoforum.org/t/voting-for-a-soft-fork-in-
 - The voting is to be done on height $1024 + 1024*32 = 33792$, with the last vote written into block $\#33791$. Block $\#33792$ still should contain correct values for votes collected and voting starting height.
 - let us assume that voting for the soft-fork was not successful, i.e. no more than $29491$ votes for soft-fork have been gathered between blocks $\#1024$~(inclusive) and $\#33792$~(exclusive). Then the next epoch block, the block $\#34816$ should clear the old voting parameter values. New voting for soft-fork may be started in this new epoch, so in the block $\#34816$, if the block contains a vote for the soft-fork (i.e. a record with key = 120 in the extension section), then the block must contain new starting height and votes collected values (i.e. following pairs: $(121: 0)$ and $(122: 34816)$). If there is no new voting started, all the parameters regarding soft-fork voting must be cleared off of the block $\#34816$.
 - Now, assume that the voting for the soft-fork was successful, i.e. more than $29491$ votes for soft-fork have been gathered between blocks $\#1024$~(inclusive) and $\#33792$~(exclusive). In this case, the activation epoch is starting immediately after the voting has been done, so on height $33792$. The activation epoch lasts for 32 epochs, so the first block after the activation period has a height of $33792$. Please note that any vote for a soft-fork during the activation period is prohibited. Also, on the first block of a voting epoch, soft-fork voting parameters should be written~(height when voting had been started and also the number of votes collected). On the first block after activation, the protocol version written into a block must be increased. The first block after activation should carry soft-fork voting parameters. The parameters must be cleared next epoch so in a block $\#33792$. New voting may be started in the block $\#33792$, similarly to the case of a non-successful vote.
+-->
