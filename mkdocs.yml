@@ -644,6 +644,7 @@ nav:
         - Emission: mining/emission.md
         - Difficulty Adjustment: mining/difficulty.md
         - Solution Verification: mining/solution-verification.md
+        - Technical Breakdown: mining/algo-technical.md
       
       - Storage Rent: 
         - mining/rent.md
