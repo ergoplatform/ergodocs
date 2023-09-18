@@ -299,6 +299,7 @@ nav:
     - Further Ideas: 
         - ProfitSharing: uses/profit.md
         - Email Client for Blocked Internet: uses/blocked_web.md
+        - Flash Loans: uses/flash-loans.md
     - Miner Tooling: eco/miner-tooling.md
 
       # - Context Claims: uses/context-claims.md
