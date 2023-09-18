@@ -51,7 +51,6 @@ extra_javascript:
 extra:
   version:
     provider: mike
-extra:
   analytics:
     provider: google
     property: G-5XM6BXT041

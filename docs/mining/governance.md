@@ -16,7 +16,7 @@ I apologize for the oversight. Here's a revised and clearer version of the origi
 
 In Ergo, many network parameters are adjustable through a decentralized voting mechanism among miners. Such parameters include computational costs, block size limits, and storage fees. The long-term economic stability of the Ergo network is thus steered by miner consensus.
 
-Miners can vote to change specific protocol parameters, as [outlined in the table below](#parameter-table). Soft-forking changes, requiring 90% miner support, can also alter many aspects of Ergo, barring critical elements like maximum supply.
+Miners can vote to change specific protocol parameters, as [outlined in the table below](#parameters-table). Soft-forking changes, requiring 90% miner support, can also alter many aspects of Ergo, barring critical elements like maximum supply.
 
 ### Voting Cycles and Types of Changes
 
@@ -50,7 +50,7 @@ The following table describes vote identifiers, default values (during launch), 
 - If the minimum value for a parameter is not defined, it equals zero. 
 - If the maximum value is not defined, it equals `1,073,741,823`.
 
-A miner includes a parameter identifier ($id$) into the block header to propose or vote for increasing a parameter. 
+A miner includes a parameter identifier ($id$) into the block header to propose or vote for increasing a parameter.
 
 If the miner supports decreasing the parameter, they would include ($-id$) into the block header.
 

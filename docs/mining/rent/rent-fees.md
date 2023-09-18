@@ -40,4 +40,3 @@ If you're keen on diving deeper into Ergo's potential storage rent gains, here a
 - [Exploring Ergo's Storage Rent Potential: Part 1](https://www.reddit.com/r/ergonauts/comments/tyymax/tracking_storage_rent_potential/)
 - [Unlocking the Secrets of Ergo's Storage Rent: Part 2](https://www.reddit.com/r/ergonauts/comments/xeke0b/discover_ergos_storage_rent_potential/)
 - [A Continual Look at Ergo's Storage Rent Potential: Part 3](https://www.reddit.com/r/ergonauts/comments/13e8f8g/tracking_storage_rent_potential_3rd_ed/)
-

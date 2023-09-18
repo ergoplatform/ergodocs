@@ -1,6 +1,6 @@
-> This document is a work in progress and may contain inaccuracies. 
-
 # Comparing Ergo and Cardano's eUTXO Models
+
+> This document is a work in progress and may contain inaccuracies.
 
 Ergo and Cardano are two prominent blockchain platforms that have successfully implemented the extended UTXO (eUTXO) model. Despite their differences, both platforms leverage the eUTXO model to provide native asset support and distributed states for decentralized applications (dApps), among other features. This article aims to elucidate the key differences between Ergo and Cardano's eUTXO models.
 

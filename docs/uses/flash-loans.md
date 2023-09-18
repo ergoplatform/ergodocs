@@ -2,7 +2,7 @@
 tags:
   - Flash Loans
 ---
-# Flash Loans in Ergo's eUTXO Model: A Comprehensive Exploration
+# Flash Loans in Ergo's eUTXO Model
 
 Flash loans have emerged as a disruptive yet controversial innovation in the decentralized finance (DeFi) landscape, particularly within Ethereum's account-based blockchain. These loans offer a range of financial utilities but also come with inherent risks. The question at hand is: How compatible are flash loans with Ergo's eUTXO (Extended Unspent Transaction Output) blockchain model? The answer is nuanced and warrants a deep dive into the complexities involved.
 

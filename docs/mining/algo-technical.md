@@ -19,7 +19,7 @@ Before diving into the block mining procedure, it's important to understand that
 - a very large cyclic group **G** 
 - of prime order **q** 
 - with fixed generator **g** 
-- And identity element **e**. 
+- And identity element **e**.
 
 This prime group returns integers in **Z/qZ** during the *Blake2b256*-based hashing function.
 
