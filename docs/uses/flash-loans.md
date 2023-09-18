@@ -1,6 +1,11 @@
-# The Challenges of Implementing Flash Loans on eUTXO Blockchains
+---
+tags:
+  - Flash Loans
+---
 
-Flash loans have gained significant attention in the world of decentralized finance (DeFi), primarily on Ethereum's account-based blockchain. These loans allow users to borrow funds without collateral, with the stipulation that the borrowed amount is returned within the same transaction. While flash loans have revolutionized DeFi on account-based blockchains, implementing them on eUTXO (Extended Unspent Transaction Output) blockchains poses several challenges. 
+# The Challenges and Risks of Implementing Flash Loans on Ergo
+
+Flash loans, while gaining significant attention in the world of decentralized finance (DeFi), primarily on Ethereum's account-based blockchain, have also been the root cause of numerous attacks. These loans, which allow users to borrow funds without collateral and return them within the same transaction, have not only revolutionized but also destabilized DeFi on account-based blockchains due to their inherent risks. Implementing them on eUTXO (Extended Unspent Transaction Output) blockchains poses several challenges and potential concerns.
 
 ## Understanding UTXO and Its Distinctiveness
 
@@ -22,22 +27,26 @@ Flash loans often require interacting with multiple DeFi protocols rapidly. In e
 
 ### No Guarantees of Atomic Execution Within a Block
 
-Flash loans are designed to be atomic—either the whole chain of transactions is completed, or none are. This is straightforward in account-based blockchains where multiple interactions can occur within the same block. However, eUTXO blockchains do not offer such guarantees, making it risky if a multi-step flash loan transaction spans across multiple blocks.
+Flash loans are designed to be [atomic](atomic-composability.md)—either the whole chain of transactions is completed, or none are. This is straightforward in account-based blockchains where multiple interactions can occur within the same block. However, eUTXO blockchains do not offer such guarantees, making it risky if a multi-step flash loan transaction spans across multiple blocks.
 
 ## Potential Workarounds and Considerations
 
+### Data Inputs
+
+[Data inputs](read-only-inputs.md), a unique feature in Ergo's UTXO model, allow transactions to reference existing UTXOs and read their data without consuming them. This feature can be leveraged to address some of the limitations associated with flash loans in eUTXO systems by allowing multiple transactions within a block or slot to read the data from the same UTXO concurrently.
+
 ### Multi-Stage Contracts
 
-Multi-stage contracts offer a way to work around some of these limitations. These contracts allow a series of transactions to be 'chained' together, emulating more complex, multi-step processes. They can hold interim states and even facilitate parallelized actions.
+[Multi-stage contracts](multi.md) offer a way to work around some of these limitations. These contracts allow a series of transactions to be 'chained' together, emulating more complex, multi-step processes. They can hold interim states and even facilitate parallelized actions.
 
 1. **Interim State Management**: These contracts can 'remember' a partial state, enabling a more complex, sequenced series of transactions, somewhat simulating a flash loan's multi-step process.
    
 2. **Complex Logic and Parallel Actions**: These contracts can also facilitate more complex transaction logic, and even actions in parallel, which is closer to how flash loans operate on account-based blockchains.
 
-### Challenges of Multi-Stage Contracts
+**Challenges of Multi-Stage Contracts**
 
 1. **Still No Atomicity**: While these contracts can enable complex transactions, they can't guarantee that these will all be processed in the same block, a fundamental feature of flash loans.
   
 2. **High Complexity, High Risk**: The more complex the system, the higher the likelihood of security risks, particularly in financial operations like flash loans.
 
-The unique characteristics of eUTXO blockchains, such as their deterministic nature and the absence of on-chain 'triggering', make them inherently resistant to the implementation of flash loans as we know them. This is a positive aspect, as it enhances the security and predictability of transactions. While multi-stage contracts provide a potential avenue for more complex transactions, the eUTXO model's inherent strengths ensure a robust and secure environment that doesn't readily accommodate the risks associated with flash loans.
+The eUTXO model inherently promotes transaction security and predictability at the cost of some functionalities that are easier to implement in account-based systems, such as flash loans. While weak blocks and multi-stage contracts offer interesting workarounds, they do not fully address the challenges and risks posed by implementing flash loans in eUTXO blockchains.
