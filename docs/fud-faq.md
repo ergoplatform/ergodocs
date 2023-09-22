@@ -95,6 +95,10 @@ Ergo is a global project and is not tied to any specific country or region. Whil
 
 Ergo's status under the SEC's regulations is a gray area, as is the case with many cryptocurrencies. However, based on the Howey Test, Ergo is not considered a security. Ergo has one of the most extensive public distributions among smart contract platforms, and the initial allocation by the Ergo Foundation was primarily to kickstart the ecosystem.
 
+### The Foundation's actions are causing price depreciation
+
+The Ergo Foundation's monthly expenses are a minuscule portion of the total trading volume, equivalent to the mining rewards of 1-2 days. Most of these expenses are paid in ERG, meaning there are minimal direct liquidations. The recipients of these payments have the freedom to manage them as they see fit. It's worth noting that our developers often work for compensation below the market rate. For a detailed breakdown of the Foundation's expenditures, refer to the [Ergo Foundation 2022 Transparency Report](ergo-foundation-2022.md).
+
 ## Ecosystem
 
 ### Ergo's Total Value Locked (TVL) ratio is too low
