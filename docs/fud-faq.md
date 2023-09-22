@@ -26,7 +26,7 @@ For more information see [this page](emission.md)
 
 After the scheduled emissions conclude in 2045, miners on Ergo will continue to be incentivized through alternative methods. One such approach involves transaction fees and Miner Extracted Value (MEV). Transactions on the Ergo Platform generate fees (paid in Ergs), with a portion of these fees awarded to miners. MEV represents the total value miners can extract from a block using tactics like reordering, front-running, and other advanced techniques. Miners can increase their MEV earnings by efficiently executing transactions in high MEV blocks, which encourages them to contribute their hash power to the network.
 
-Another form of MEV we have on Ergo is through [**Storage Rent**](rent.md). This mechanism requires users to pay for the storage their data occupies on the network. Consequently, miners receive a consistent income stream, as they earn Ergs from fees users pay for content storage. See [this page](fees.md) for more information on the potential of storage rent. 
+Another form of MEV we have on Ergo is through [**Storage Rent**](rent.md). This mechanism requires users to pay for the storage their data occupies on the network. Consequently, miners receive a consistent income stream, as they earn Ergs from fees users pay for content storage. See [this page](rent-fees.md) for more information on the potential of storage rent.
 
 In future, Miners could also benefit from custom emission contracts as part of a Fair Initial Mining Offering (FIMO) process. These contracts reward miners with non-native tokens, ensuring new projects have equal opportunities to distribute tokens to the community while incentivizing miners to participate in mining.
 
@@ -44,7 +44,7 @@ While it's true that FPGAs can achieve up to 3Mh/W, double the efficiency of the
 
 ### Ergo is at risk of a 51% attack
 
-The current network status can be monitored using miningpoolstats. Even if a single entity were to control over 51% of the network's mining power, the real-world risk of an attack is very low. It is highly unlikely that a major player like 2miners would jeopardize their business by executing an attack on the network. Lithos is a project that aims to create a decentralized mining pool infrastructure.This protocol provides a low-risk opportunity for lenders to earn yield on their ERG by providing collateral to mining pools while promoting increasingly decentralized block production. This means that the project plans to enable miners to directly insert necessary transactions into blocks in a fully decentralized and trustless manner, bringing significant benefits to miners outside of just decentralization. For more information, please refer to the [Lithos project page](docs/eco/lithos.md).
+The current network status can be monitored using miningpoolstats. Even if a single entity were to control over 51% of the network's mining power, the real-world risk of an attack is very low. It is highly unlikely that a major player like 2miners would jeopardize their business by executing an attack on the network. Lithos is a project that aims to create a decentralized mining pool infrastructure.This protocol provides a low-risk opportunity for lenders to earn yield on their ERG by providing collateral to mining pools while promoting increasingly decentralized block production. This means that the project plans to enable miners to directly insert necessary transactions into blocks in a fully decentralized and trustless manner, bringing significant benefits to miners outside of just decentralization. For more information, please refer to the [Lithos project page](lithos.md).
 
 ### Ergo ignored miners who warned about the difficulty algorithm
 
@@ -143,7 +143,7 @@ While Ergo does offer privacy features, it is not solely a privacy coin. Ergo's 
 
 Ergo's 2-minute block interval, while seemingly slow, is a strategic choice to ensure network security and stability, especially for a system that supports complex smart contracts. This interval provides a buffer for various network activities, aids in decision-making processes, and adds a layer of security against potential threats. Additionally, Ergo can employ scaling methods like "weak blocks" to enhance transaction throughput and confirmation speed. 
 
-In addition to the 2-minute block interval, Ergo can utilise scaling methods such as the recently proposed ["weak blocks"]((weak-blocks.md)) to improve both the transaction throughput (TPS) and the speed of transaction confirmations. Weak blocks are block candidates with lower difficulty levels than standard blocks. They are propagated through the network along with new transactions, effectively optimizing network bandwidth usage. 
+In addition to the 2-minute block interval, Ergo can utilise scaling methods such as the recently proposed ["weak blocks"](weak-blocks.md) to improve both the transaction throughput (TPS) and the speed of transaction confirmations. Weak blocks are block candidates with lower difficulty levels than standard blocks. They are propagated through the network along with new transactions, effectively optimizing network bandwidth usage. 
 
 ### Ergo's development is too slow
 
