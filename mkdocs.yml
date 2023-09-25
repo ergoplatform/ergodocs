@@ -104,7 +104,10 @@ markdown_extensions:
 nav:
   - Introduction:
     - Getting Started: index.md
-    - Why Ergo: dev/protocol/why.md   
+    - Why Ergo:
+      - dev/protocol/why.md
+      - FAQ: faq.md
+      - Common Misconceptions: fud-faq.md
     - Key Features: 
       - dev/protocol/index.md
       - Protocol: dev/protocol/index.md
@@ -139,8 +142,7 @@ nav:
       - Transparency Report: ergo-foundation-2022.md
       - The Howey Test: security.md
       - Privacy Guide: doc/privacy-guide.md
-    - EIPs: dev/protocol/eip.md
-    - FAQ: faq.md
+      - Glossary: glossary.md    
     - Events: 
       - Events: events/index.md
       - ERGOHACK: events/ergohack.md
@@ -633,7 +635,10 @@ nav:
        
       
           
-    - Resources: dev/stack/introduction.md
+    - Resources: 
+      - dev/stack/introduction.md
+      - EIPs: dev/protocol/eip.md
+
 
   - Miners:
     - Autolykos:
