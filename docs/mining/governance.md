@@ -6,12 +6,6 @@ tags:
 
 # Governance
 
-I apologize for the oversight. Here's a revised and clearer version of the original document:
-
----
-
-## Governance in Ergo: Dynamic Parameters and Voting Mechanics
-
 ### Overview
 
 In Ergo, many network parameters are adjustable through a decentralized voting mechanism among miners. Such parameters include computational costs, block size limits, and storage fees. The long-term economic stability of the Ergo network is thus steered by miner consensus.
