@@ -52,7 +52,7 @@ It's important to remember, that *Ergo* is a collective community, not a single 
 
 The initial concerns from miners were indeed taken into account. However, these early warnings were primarily about potential difficulties during price fluctuations, not the 'death-spiral' scenario that eventually led to the hard fork. After extensive discussions with core developers and leading miners and pools, the consensus was that the current situation, while painful in the short-term, was less painful than implementing a hard fork. The community was hopeful that as Ergo gained more traction, a stable and increasing hashrate would naturally follow, mitigating these concerns.
 
-The unforeseen circumstances surrounding the ETH merge were exceptional and couldn't be predicted with absolute certainty. Although we had prepared for potential risks after a community developer brought this scenario to our attention, the specific details of the merge, the rapid migration of miners, and fluctuating prices surpassed our expectations, necessitating immediate intervention. We express our gratitude to the miners who intervened and donated their hash power to assist with the situation. We have since taken measures to streamline the EIP process and encourage greater miner participation.
+The unforeseen circumstances surrounding the ETH merge were exceptional and couldn't be predicted with absolute certainty. Although we had prepared for potential risks after a community developer brought this scenario to our attention, the specific details of the merge, the rapid migration of miners, and fluctuating prices surpassed our expectations, necessitating immediate intervention. We express our gratitude to the miners who intervened and donated their hash power to assist with the situation. We have since taken measures to streamline the [EIP](eip.md) process and encourage greater miner participation.
 
 Ergo empowers miners by returning control to them in the crypto-space, adhering to the fundamental principles of decentralization. Ergo's advanced [governance](governance.me) features and the inclusion of miners in key discussions, as demonstrated by the [EIP27](eip27.md) discussions, underscore this commitment. During these discussions, the community introduced 'vote tokens' to enable miners to participate actively, further establishing Ergo as a blockchain that values and supports its miners.
 
@@ -116,9 +116,6 @@ Ergo's ecosystem is steadily growing. The development team is continuously worki
 The introduction of a new stablecoin does not necessarily mean the end of SigmaUSD. The cryptocurrency market is vast and diverse, and there is room for multiple stablecoins to coexist. SigmaUSD has unique features that set it apart from other stablecoins, such as its algorithmic design and the security of the Ergo blockchain. Furthermore, competition in the stablecoin market can lead to innovation and improvement, benefiting the users in the end.
 
 ## Technical
-### Ergo's lack of in-built Sharding means it won't scale with atomic composability
-
-This misconception arises from a misunderstanding of how Ergo handles scalability and atomic composability. While it's true that Ergo doesn't use in-built sharding, it employs other strategies to ensure scalability without compromising atomic composability. Ergo optimizes the use of resources within the constraints of existing blockchain platforms, rather than resorting to unproven technologies. It also uses the eUTXO model and ErgoScript to allow for the atomic execution of complex, multi-stage transactions within a single transaction. Layer 2 solutions like Hydra state channels also contribute to atomic composability. Furthermore, concepts like ACE could enhance the execution of complex and composable smart contracts. Therefore, Ergo's approach to scalability and atomic composability is not reliant on in-built sharding.
 
 ###  eUTXO is too difficult for developers
 
@@ -127,6 +124,10 @@ The extended UTXO (eUTXO) model, adopted by Ergo, might initially seem complex, 
 ### Ergo should've used an easier language than Scala
 
 Ergo utilizes Scala as its primary language due to its cross-platform capabilities, conciseness, efficiency, and multi-paradigm nature. ErgoScript, based on Scala, is used for scripting, but off-chain code can be written in any language. Developers have access to a variety of tools and Software Development Kits (SDKs) for JVM, Rust, and JS/TS. Scala's unique features, such as the ability to run the same code on JVM and JavaScript natively, its concise syntax, and its ability to use primitive unboxed types for efficiency, make it a suitable choice for Ergo. 
+
+### Ergo's lack of in-built Sharding means it won't scale with atomic composability
+
+This misconception arises from a misunderstanding of how Ergo handles scalability and atomic composability. While it's true that Ergo doesn't use in-built sharding, it employs other strategies to ensure scalability without compromising atomic composability. Ergo optimizes the use of resources within the constraints of existing blockchain platforms, rather than resorting to unproven technologies. It also uses the eUTXO model and ErgoScript to allow for the atomic execution of complex, multi-stage transactions within a single transaction. Layer 2 solutions like Hydra state channels also contribute to atomic composability. Furthermore, concepts like ACE could enhance the execution of complex and composable smart contracts. Therefore, Ergo's approach to scalability and atomic composability is not reliant on in-built sharding.
 
 ###  Proof of Work is not sustainable
 
