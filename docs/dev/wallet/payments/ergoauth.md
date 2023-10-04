@@ -21,8 +21,7 @@
   - [Benefits for dApps](#benefits-for-dapps)
 
 ## Description
-This EIP defines a standard for trustless authentication of users of a wallet app and an online
-dApp.
+This EIP defines a standard for trustless authentication of users of a wallet app and an online dApp.
 
 ## Background And Motivation
 
