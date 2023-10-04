@@ -4,7 +4,7 @@ This document provides a systematic process for the manual installation of an Er
 
 ---
 
-The node uses Java so should work across all operating systems. You can even run on a [Raspberri Pi](pi.md). The only hardware requirement is ~20GB of space to store the chain and ~8GB of RAM for handling the sync.
+The node uses Java so should work across all operating systems. You can even run on a [Raspberry Pi](pi.md). The only hardware requirement is ~20GB of space to store the chain and ~8GB of RAM for handling the sync.
 
 
 

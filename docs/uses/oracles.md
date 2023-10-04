@@ -11,7 +11,7 @@ External oracle data, when posted on-chain, must be precisely encoded within a t
 
 ### Introduction to Oracle Pools V2
 
-The following section delves into the Oracle Pools V2, an innovative upgrade to the existing oracle pool v1.0, as documented in [EIP16](https://github.com/ergoplatform/eips/blob/eip16/eip-0016.md). This proposed update is designed to resolve various drawbacks associated with the first version such as generation of extensive dust, low rewards, complexity due to two types of pool boxes, and issues related to the non-transferability of oracle and ballot tokens.
+The following section delves into the Oracle Pools V2, an innovative upgrade to the existing Oracle Pool v1.0, as documented in [EIP16](https://github.com/ergoplatform/eips/blob/eip16/eip-0016.md). This proposed update is designed to resolve various drawbacks associated with the first version such as the generation of extensive dust, low rewards, complexity due to two types of pool boxes, and issues related to the non-transferability of oracle and ballot tokens.
 
 Oracle Pools V2 offers a range of new features and improvements including a single pool address, an epoch counter, a compact pool box, a refresh box, token-based rewards, no separate funding process, reward accumulation, and transferability of oracle and ballot tokens.
 
@@ -21,7 +21,7 @@ To gain a deeper understanding of these changes and how they enhance the overall
 
 For further details, refer to [Oracles-V2](oracles-v2.md).
 
-
+For an easy docker setup see [easy-ergo-oracle](https://github.com/reqlez/ergo-easy-oracle)
 
 ## Resources
 

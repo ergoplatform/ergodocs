@@ -68,7 +68,9 @@ We urge the Ergo community—both miners and developers—to actively participat
 
 ### Ergo's marketing sucks.
 
-Ergo's marketing strategy is community-driven and organic, focusing on building a strong, knowledgeable, and engaged community. While it may not follow the traditional marketing strategies seen in other projects, this approach ensures that the community is well-informed and actively involved in the project's development. Ergo's unique features and capabilities are its main selling points, and the team believes in letting these aspects speak for themselves. The project also regularly communicates updates and developments through various channels, including social media, blog posts, and community meetings.
+Ergo's marketing strategy is rooted in community engagement and organic growth, diverging from conventional marketing tactics often employed by other projects. This strategy prioritizes the cultivation of a well-informed and actively involved community. Ergo's unique features and capabilities serve as its primary selling points, and the team is committed to letting these attributes stand out on their own. Regular updates and developments are communicated through various channels, including social media, blog posts, and community meetings.
+
+The marketing efforts are primarily aimed at increasing awareness, educating the community, and highlighting the unique features and capabilities of Ergo. The objective is to stimulate organic growth and attract users who value the platform's technological advantages and commitment to privacy, security, and genuine decentralization. The [Sigmanauts](sigmanauts.md) programme has been successful, with mature pathways that allow for a smooth transition for individuals to make meaningful contributions and help shape and grow Ergo. This resilient marketing approach was designed to kickstart truly organic and decentralized compounding growth. Now, with their own treasury, the Sigmanauts are making proposals and expenditures, running campaigns, creating content, attending events, and planning for the future.
 
 ### Ergo won't succeed without VC investment
 

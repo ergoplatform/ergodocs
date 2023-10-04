@@ -4,11 +4,13 @@
 
 The Raspberry Pi is small, inexpensive, and meets the requirements to run an Ergo full node.
 
+Alternatively to the simple instructions below, see [Tutorial: Running an Ergo Full Node on a Headless Raspberry Pi](https://github.com/ccgarant/ergo-full-node-raspi) for a more comprehensive start to finish setup guide. 
+
 
 ### Prerequisites 
 
 - Pi4 with 4gb RAM or above is optimal. 
-- Due to the intensive disk I/O, a SSD with 64GB+ is preferred. 
+- Due to the intensive disk I/O, a SSD with 64GB+ is preferred.
 
 ### Preperation
 
