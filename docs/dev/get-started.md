@@ -198,6 +198,7 @@ If you're aiming to develop a comprehensive decentralized application on Ergo, c
     - [Using AppKit with Python](https://github.com/ergoplatform/ergo-appkit/wiki/Using-Appkit-from-Python)
     - [AppKit by Example](https://www.youtube.com/watch?v=Md5s-XV6-Hs)
 - **[Fleet SDK](fleet.md)**: A pure JS library designed for effortless Ergo transaction creation.
+    - [The Ergo Web Template](https://github.com/SavonarolaLabs/ergo-web-template), hosted on GitHub by SavonarolaLabs, serves as an introductory guide for individuals new to the Ergo platform. Designed as a comprehensive web project template, it provides functionalities like connecting or disconnecting a wallet, loading wallet balances, and constructing and sending transactions. Users can also mint eip004 NFTs, access USD/ERG Oracle data, load wallet UTXOs, and receive notifications. This resource aims to streamline the onboarding process for newcomers by offering them a hands-on experience with essential Ergo functionalities.
 - **[SigmaRust](sigma-rust.md)** is a ErgoTree interpreter with transaction tools and bindings for JS/TS/Swift/Java/C/Ruby.
     - [Address Generation Demo](https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-wasm/examples/address-generation-demo)
     - [Create Transaction Demo](https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-wasm/examples/create-transaction-demo)
@@ -215,6 +216,9 @@ If you're aiming to develop a comprehensive decentralized application on Ergo, c
 - [**ErgoPay**](ergo-pay.md) is Ergo's dApp connector for non-web wallet
 - [**dApp Connector**](dApp.md) is for connecting dApps to web-based wallets like Nautilus and SAFEW. 
 - [**Proxy Contracts**](proxy.md) are a smart contract design used in blockchain ecosystems to enable secure and controlled interaction between users and decentralized applications. 
+
+##### Templates
+
 
 ::cards::
 
