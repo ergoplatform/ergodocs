@@ -63,16 +63,16 @@ This setting determines whether to use the pre-EIP3 key derivation scheme or not
 ```conf
 dustLimit = null
 ```
-This sets the minimum amount of tokens that can be in a transaction output. If it's set to null (default), there's no minimum limit.
+The `dustLimit` sets the minimum amount of tokens that can be included in a transaction output. If it's set to null (default), there is no minimum limit.
 
-with `dustLimit = 1000000`` the node wallet will skip boxes to self having less than .001 ERG
+For example, with `dustLimit = 1000000`, the node wallet will ignore boxes to self that contain less than .001 ERG.
 
 ## Maximum and Optimal Inputs
 ```conf
 maxInputs = 100
 optimalInputs = 3
 ```
-The `maxInputs` setting determines the maximum number of inputs a transaction can have. The `optimalInputs` setting specifies the preferred number of inputs for a transaction. This allows you to merge dust when doing payments.
+The `maxInputs` setting determines the maximum number of inputs a transaction can have. The `optimalInputs` setting specifies the preferred number of inputs for a transaction.
 
 ## Test Mnemonic and Keys Quantity
 ```conf
