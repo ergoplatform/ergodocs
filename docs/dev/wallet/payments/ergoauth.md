@@ -177,3 +177,4 @@ safely validate if a user has access to certain Ergo addresses.
 - dApp's users don't need to worry about security of their private keys as the
 wallet guarantees they never leave the device. This is especially true if authentication
 is done with a cold device.
+

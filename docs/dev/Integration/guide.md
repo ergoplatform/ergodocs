@@ -137,10 +137,9 @@ GraphQL queries allow flexible data fetching, reducing over-fetching and under-f
 
 Please collect dust from miners' deposits periodically (which creates many small UTXOs).
 
-
-
 Ergo is based on the extended-UTXO model. A side-effect of UTXOs is a term coined *dust*. Dust refers to fractional values of ERG and is usually below the protocol fee; miner wallets are prone to becoming *dusty* with the stream of rewards coming into their wallet. All these excess UTXOs can cause a slowdown and ultimately impact your node functionality. **This is important to set up for big exchanges that will receive a lot of mining traffic. You must collect dust aggressively; new dust arrives all the time for miners**
 
+There are some node specific settings
 
 
 **To solve**
