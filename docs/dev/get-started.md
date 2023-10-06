@@ -182,7 +182,7 @@ Here are some introductory resources that cover these concepts.
 - **[Issuing a Token](issue.md)**: A step-by-step guide on how to issue a token on Ergo.
 - **[Burning a Token](burn.md)**: Learn how to burn a token, effectively removing it from circulation.
 - **[Minting an NFT](create.md)**: A comprehensive guide on creating a Non-Fungible Token (NFT) on Ergo.
-
+- **[Minting a on-chain NFT](on-chain.md)**: Don't want to rely on third-party storage? You can squeeze a NFT directly into the registers!
 
 ## App development
 
