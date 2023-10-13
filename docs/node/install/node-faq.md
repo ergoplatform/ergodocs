@@ -13,20 +13,7 @@ Yes, public nodes can be viewed at [ergonodes](http://ergonodes.net/). However, 
 - To run a public node, refer to this [nginx.conf](https://github.com/glasgowm148/ergoscripts/blob/main/misc/nginx.config) example.
 - Be cautious when using a [remote node](https://github.com/ergoplatform/ergo/blob/master/src/main/resources/mainnet.conf) as it can be insecure.
 
-### How do I safely shut down my node?
 
-Use the following command:
-
-```
-curl -X POST "http://127.0.0.1:9053/node/shutdown" -H "api_key: hello"
-```
-
-If a safe shutdown is not possible, you can terminate the ports:
-
-```
-kill -9 $(lsof -t -i:9053)
-kill -9 $(lsof -t -i:9030)
-```
 
 ## Minimum Requirements
 
@@ -47,7 +34,25 @@ The only hardware requirements are ~20GB of storage for the blockchain and ~8GB 
 
 ## Running the Node
 
-### Commands
+
+
+### API Commands
+
+### /node/shutdown
+
+Use the following command to safely shut down your node
+
+```
+curl -X POST "http://127.0.0.1:9053/node/shutdown" -H "api_key: hello"
+```
+
+If a safe shutdown is not possible, you can terminate the ports:
+
+```
+kill -9 $(lsof -t -i:9053)
+kill -9 $(lsof -t -i:9030)
+```
+
 
 Please refer to the section on [swagger](../swagger.md) for more information.
 

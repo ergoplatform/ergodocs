@@ -5,7 +5,7 @@ tags:
   - Sigma Protocols
 ---
 
-# Enhancing Ergo's Blockchain Technology
+# Scaling Ergo
 
 Creating a scalable blockchain infrastructure is a complex task. Ergo, fortified by a decade of [research](documents.md), rigorous testing, and ongoing development, has risen to the challenge. This guide will walk you through Ergo's sophisticated scalability features.
 

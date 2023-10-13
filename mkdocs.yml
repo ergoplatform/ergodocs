@@ -350,24 +350,17 @@ nav:
         - Composing Transactions:
           - dev/protocol/tx/composing.md
           - Sending A Chained Transaction: dev/anatomy/transactions/chained.md
-          - Frameworks: 
-            - ErgoPay:
-              - ErgoPay: dev/wallet/payments/ergopay/ergo-pay.md
-              - Tutorial: dev/wallet/payments/ergopay/ep-tutorial.md
-            - ErgoAuth: dev/wallet/payments/ergoauth.md
-            - dApp Connector: dev/wallet/payments/dApp.md
-            - Proxy Contracts:
-              - dev/wallet/payments/proxy.md
-              - Assembler: dev/stack/assembler.md
-          - Manually: 
-            - Format: dev/protocol/tx/format.md
-            - Merkle Tree: dev/protocol/tx/tx-merkle.md
-            - Signing: dev/protocol/tx/signing.md
-            - Signing Backend: tutorials/sign-tx.md
-            - Validation: dev/protocol/tx/validation.md
-            - Data Inputs: dev/protocol/tx/read-only-inputs.md
-            - Fees: dev/protocol/tx/min-fee.md
-            - Unified Transactions: dev/protocol/tx/unified.md
+          - Interacting with an Ergo Wallet: 
+            - dev/anatomy/transactions/payments.md
+            - Manually: 
+              - Format: dev/protocol/tx/format.md
+              - Merkle Tree: dev/protocol/tx/tx-merkle.md
+              - Signing: dev/protocol/tx/signing.md
+              - Signing Backend: tutorials/sign-tx.md
+              - Validation: dev/protocol/tx/validation.md
+              - Data Inputs: dev/protocol/tx/read-only-inputs.md
+              - Fees: dev/protocol/tx/min-fee.md
+              - Unified Transactions: dev/protocol/tx/unified.md
         - Resources: 
           - Standards:
             - Babel Fees: dev/protocol/tx/babel-fees.md
@@ -480,10 +473,7 @@ nav:
             - Light SPV: 
               - node/modes/light-spv-node.md
               - Simplified Payment Verification: node/modes/spv.md
-              - Technical Details: node/modes/light-spv-mode-workflow.md
-              
-            
-          
+              - Technical Details: node/modes/light-spv-mode-workflow.md       
       - Explorer: 
         - dev/stack/explorer.md
         - Local Setup: dev/stack/explorer/explorer_local.md
@@ -509,8 +499,7 @@ nav:
         - Others: 
           - Python: dev/lang/python.md
           - C#: dev/lang/csharp.md
-          - Go: dev/lang/go.md
-        
+          - Go: dev/lang/go.md  
       - Frameworks:
         - dev/stack/frameworks.md
         - AppKit:
@@ -539,7 +528,16 @@ nav:
           - Headless dApp Framework: 
             - dev/stack/headless.md
             - Modules: dev/stack/headless/modules.md
-        
+      - Payments: 
+            - ErgoPay:
+              - ErgoPay: dev/wallet/payments/ergopay/ergo-pay.md
+              - Tutorial: dev/wallet/payments/ergopay/ep-tutorial.md
+            - ErgoAuth: dev/wallet/payments/ergoauth.md
+            - dApp Connector: dev/wallet/payments/dApp.md
+            - Proxy Contracts:
+              - dev/wallet/payments/proxy.md
+              - Assembler: dev/stack/assembler.md
+            
         
       - Libaries:
         - dev/libraries.md

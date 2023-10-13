@@ -3,8 +3,9 @@
 Ergo thrives on an open model where contributions from everyone are welcomed and valued. Whether you're a developer, marketer, or just an enthusiast, there are numerous ways you can contribute to Ergo's growth and development.
 
 - [For Developers](devs.md): If you're a developer, check out this guide to learn how you can contribute to Ergo's codebase and technical infrastructure.
-
 - [For Marketing](marketing.md): If you're interested in marketing, this guide provides information on how you can help promote Ergo and increase its visibility.
+
+Those who want to take a more involved role in the ecosystem should apply to the [sigmanauts](sigmanauts.md) programme. 
 
 ***'Let's create grassroots finance!'***
 

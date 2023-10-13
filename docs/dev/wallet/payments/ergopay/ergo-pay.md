@@ -34,3 +34,6 @@ Ergo Wallet App 1.6 and above supports ErgoPay, a protocol to interchange transa
 What’s the difference between ErgoPay and a web dApp connector Yoroi and Nautilus wallet provide? ErgoPay can connect every kind of wallet with every kind of dApp, while a web dApp connector is restricted to web extension wallets and website dApps. It can only connect processes living in the same web browser.
 Because you don’t know which type of wallet application will connect to your dApp, a part of your logic must run on a server open to be connected by user’s wallet applications. For a website dApp it means that some of your code needs to live on your backend. This doesn’t make things more complicated — on the contrary, on the backend, you aren’t restricted to using JavaScript or derivates, but are free to choose the language and framework that fits your needs the bests.
 
+## Resources
+
+- [ergopay-payment-portal](https://github.com/MrStahlfelge/ergopay-payment-portal)
