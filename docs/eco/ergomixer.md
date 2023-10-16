@@ -41,14 +41,6 @@ As of ErgoMixer version 4.4.0, stealth addresses are supported!
 As a receiver, you can create and manage your Stealth Addresses using ErgoMixer. Please note that stealth addresses are not directly payable. If you are a sender, you can use the tool located at [ergomixer.github.io/stealth/](https://ergomixer.github.io/stealth/) to create a Stealth Payment Address and use this address as a regular address.
 
 
-
-## Efficiency Comparison
-
-| Bitcoin           | Ethereum                           | Ergo                                 |
-|-------------------|------------------------------------|--------------------------------------|
-| - | - | Efficient |
-
-
 ## Tor Support
 
 Starting from ErgoMixer v3.0.0, Tor support is available.
