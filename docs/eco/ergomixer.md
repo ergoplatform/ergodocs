@@ -34,10 +34,12 @@ Stealth addresses are a tool to maintain recipient privacy.
 
 With a stealth address, the recipient's privacy is preserved without the need for per-transaction interaction. This means that a receiver can publish an address, for example, on a website, and the sender can generate a unique one-time address from it.
 
-ErgoMixer version 4.4.0 now supports stealth addresses!
+For more technical information see the dedicated [stealth addresses](stealth-address.md) page.
 
-As a receiver, you can create and manage your Stealth Addresses using ErgoMixer. Please note that stealth addresses are not directly payable. If you are a sender, you can use this tool to create a Stealth Payment Address and use this address as a regular address.
-https://ergomixer.github.io/stealth/
+As of ErgoMixer version 4.4.0, stealth addresses are supported!
+
+As a receiver, you can create and manage your Stealth Addresses using ErgoMixer. Please note that stealth addresses are not directly payable. If you are a sender, you can use the tool located at [ergomixer.github.io/stealth/](https://ergomixer.github.io/stealth/) to create a Stealth Payment Address and use this address as a regular address.
+
 
 
 ## Efficiency Comparison
