@@ -1,86 +1,36 @@
 # SigmaUSD
 
-> [SigmaUSD.io](https://sigmausd.io/#/) was the first eUTxO-based stable coin - an implementation of the [AgeUSD protocol](https://github.com/Emurgo/age-usd). Its economic model is designed to maintain conservative settings for collateral reserves and avoids the need for liquidations. It supports a fully decentralised stablecoin emission setup. **Thus, SigmaUSD will offer the world a stable, simple, and decentralised stablecoin.**
+SigmaUSD, the first eUTxO-based stable coin, is an implementation of the [AgeUSD protocol](https://github.com/Emurgo/age-usd). It was designed by IOHK, Ergo, and Emurgo with an economic model that maintains conservative settings for collateral reserves, thus avoiding the need for liquidations. It supports a fully decentralised stablecoin emission setup, offering the world a stable, simple, and decentralised stablecoin.
 
 ## Overview 
 
-IOHK, Ergo, and Emurgo designed the economic model of SigmaUSD. Its economic model maintains the conservative settings for collateral reserves and avoids the need for liquidations. Along with that, it supports a fully decentralised stablecoin emission setup. Thus, SigmaUSD will offer the world a stable, simple, and decentralised stablecoin.
+**Reserve providers** submit ERGs to the dApp's reserves to mint *reserve coins* (**SigmaRSV**), each representing a portion of the underlying ERG reserves held. **SigmaUSD** users also submit ERGs to the dApp reserves to mint SigmaUSD, provided sufficient reserves are within the dApp. SigmaUSD users can redeem their SigmaUSD for an amount of ERGs from the reserves equal to the current exchange rate as sourced by the ERG-USD [oracle pool](https://explorer.ergoplatform.com/en/oracle-pool-state/ergusd). 
 
-**Reserve providers** submit ERGs to the dApp's reserves and, by doing so, mint *reserve coins* (**SigmaRSV**). Each SigmaRSV represents a portion of the underlying ERG reserves held.
+Reserve Providers can redeem their *reserve coins* for ERGs if the price of ERGs goes up (or a substantial amount of protocol fees are collected) and thus cover the value of all existing minted SigmaUSD plus an extra margin. By doing so, they profit as they receive more underlying reserve cryptocurrency than when they minted their *reserve coins*.
 
 **SigmaUSD** Users also submit ERGs to the dApp reserves; however, in their case, they mint SigmaUSD instead. The protocol only allows this if sufficient reserves are within the dApp (reserves are above the minimum reserve ratio). At any given moment, a SigmaUSD user can redeem their SigmaUSD in exchange for an amount of ERGs from the reserves equal to the current exchange rate as sourced by the ERG-USD [oracle pool](https://explorer.ergoplatform.com/en/oracle-pool-state/ergusd). 
 
-Reserve Providers can only redeem their *reserve coins* for ERGs if the price of ERGs goes up (or a substantial amount of protocol fees are collected) and thus cover the value of all existing minted SigmaUSD plus an extra margin. By redeeming their *reserve coins*, they profit as they receive more underlying reserve cryptocurrency than when they minted their *reserve coins* (the increased amount coming from users who minted SigmaUSD).
-
-> Reserve Providers allow SigmaUSD users to enjoy the stability of value. On their end, the Reserve Providers absorb the potential upside (if the value of the reserves goes up via the price of ERGs increasing compared to USD) and absorb the potential downside (if the underlying cryptocurrency in reserve goes down in price).
+## Where can I buy SigmaUSD?
 
 
 
-
-
-
-**Explore**
-
-- [ERG/USD Explorer](https://explorer.ergoplatform.com/en/oracle-pool-state/ergusd) 
-- [ergo.watch](https://ergo.watch/sigmausd)
-- [Bank Wallet](https://explorer.ergoplatform.com/en/addresses)
-
-
-**Calculators**
-
-- [sigusd.abchris.xyz](https://sigusd.abchris.xyz/)
-- [Spreadsheet](https://docs.google.com/spreadsheets/d/1_lX0FrkIpNHmpMNKWrhhJpC93Wt5wco8oKlf-Wef9fw/edit?usp=sharing)
-
-
+- [Tokenjay.app](https://tokenjay.app/)
+- [SigmaUSD.io](https://www.sigmausd.io)
+- ErgoMixer
+- Minotaur Wallet
+- Spectrum.fi
 
 
 ## How does the reserve work? 
 
-- SigmaUSD is operated on larger margin requirements than traditional crypto-backed stablecoins. ERG will back-SigmaUSD in a floating reserve between 4x1 to 8x1.
-- The minimum threshold (4x1) protects SigmaUSD holders; **sufficient ERG ALWAYS backs tokens for market volatility.**
-- The maximum threshold (8x1) protects SigmaRSV holders from experiencing unnecessary dilution of their P/B position. This limits inflationary pressures on SigmaRSV holders.
-- The SigmaUSD has locking mechanisms to keep the Reserves within this range. Users may temporarily find themselves unable to interact with the contract. This is the alternative to forced liquidations.
-- The Federal Reserve Board reduced reserve requirement ratios to zero percent effective March 26, 2020. This action eliminated reserve requirements for all depository institutions.
-- The global reserve currency is backed by 0% reserve ratios.
-- A minimum 400% reserve ratio backs-SigmaUSD. 
-
-
+SigmaUSD operates on larger margin requirements than traditional crypto-backed stablecoins. ERG backs SigmaUSD in a floating reserve between 4x1 to 8x1. The minimum threshold (4x1) protects SigmaUSD holders, ensuring sufficient ERG ALWAYS backs tokens for market volatility. The maximum threshold (8x1) protects SigmaRSV holders from experiencing unnecessary dilution of their P/B position, limiting inflationary pressures. SigmaUSD has locking mechanisms to keep the Reserves within this range, which may temporarily prevent users from interacting with the contract. This is the alternative to forced liquidations.
 
 ## I don't understand SigmaUSD - Where can I find more information?
 
 ![sigmausd_overview.png](sigmausd_overview.png)
 
-**Articles**
 
-- [Building Ergo: How the AgeUSD stablecoin works](https://ergoplatform.org/en/blog/2021-02-05-building-ergo-how-the-ageusd-stablecoin-works/)
-- [AgeUSD Protocol: SigRSV and SigUSD](https://ergoplatform.org/en/blog/2021-07-30-ergos-ageusd-protocol-sigrsv-and-sigusd/)
-- [SigmaUSD vs the competition.](https://curiaregiscrypto.medium.com/sigmausd-vs-the-competition-e70b23fe37a3)
-- [SigmaUSD on Ergo - Privacy, Stability and Governance](https://curiaregiscrypto.medium.com/sigmausd-on-ergo-a36e0cdff743)
-- [Risk and reward mechanism](https://veriumfellow.medium.com/introduction-to-ergos-sigmausd-stablecoin-risk-and-reward-mechanism-18690b52d672)
-
-**Explainer threads**
-
-- [Noob tries to explain SigmaUSD/RSV (an attempt at an ELI5)](https://www.reddit.com/r/ergonauts/comments/nhjc1f/noob_tries_to_explain_sigmausdrsv_an_attempt_at/)
-- [PSA: sigRSV is not a simple long position](https://www.reddit.com/r/ergonauts/comments/prxpag/psa_sigrsv_is_not_a_simple_long_position/)
-
-**Videos**
-
-- [Ergo Summit 2021 - The IOHK Perspective - Designing the AgeUSD StableCoin](https://youtu.be/zG-rxMCDIa0?t=9247)
-- [Overview Video (with diagrams)](https://www.youtube.com/watch?v=O3hPEp3tzoU)
-- [Youtube playlist](https://www.youtube.com/playlist?list=PL8-KVrs6vXLSu_rLQV5-Pu8389_PLd06q)
-- [Buying Guide](https://youtu.be/FR1NCJbzn7w)
-- [Buying Guide2](https://www.youtube.com/watch?v=cJuKRfRrTG4)
-
-
-
-## How do I buy SigUSD/RSV
-
-- [Tokenjay.app](https://tokenjay.app/)
-- [SigmaUSD.io](https://www.sigmausd.io)
-- ErgoMixer
-
-
-## The contract is currently locked
+## Contract Locks
 
 ![photo_2021-05-19_10.01.10.jpeg](photo_2021-05-19_10.01.10.jpeg)
 
@@ -104,15 +54,13 @@ This is v2, to read about v1 see these articles:
 - [Community Discussion on Reddit](https://www.reddit.com/r/ergonauts/comments/lx7an4/sigmausd_dao_bank_is_a_complex_beast_highlevel/gpr96fq/?context=3)
 - [SigmaUSD (v1) Release](https://ergoplatform.org/en/blog/2021_02_26-sigmausd-released/)
 
-
 ## Can I accept SigUSD as payment on my website? 
 
 Yes! SigmaUSD is accepted in [Cryptocurrency Checkout](https://cryptocurrencycheckout.com/coin/sigmausd) 
 
-
 ## My funds are stuck
 
-Use this link for a refund anytime if your funds are stuck in a proxy address: 
+If your funds are stuck in a proxy address, use this link for a refund anytime: 
 
 ```
 https://assm.sigmausd.io/return/your_address_set_in_ui/the_long_address_you_sent_to
@@ -181,3 +129,37 @@ SigmaUSD still lacks a mature DeFi ecosystem, with 1% of each transaction going 
 ## How does SigUSD compare against other stablecoins?
 
 See [comparison](comparison.md)
+
+
+## Explore
+
+- [ERG/USD Explorer](https://explorer.ergoplatform.com/en/oracle-pool-state/ergusd) 
+- [ergo.watch](https://ergo.watch/sigmausd)
+- [Bank Wallet](https://explorer.ergoplatform.com/en/addresses)
+
+### Calculators
+
+- [sigusd.abchris.xyz](https://sigusd.abchris.xyz/)
+- [Spreadsheet](https://docs.google.com/spreadsheets/d/1_lX0FrkIpNHmpMNKWrhhJpC93Wt5wco8oKlf-Wef9fw/edit?usp=sharing)
+
+### Articles
+
+- [Building Ergo: How the AgeUSD stablecoin works](https://ergoplatform.org/en/blog/2021-02-05-building-ergo-how-the-ageusd-stablecoin-works/)
+- [AgeUSD Protocol: SigRSV and SigUSD](https://ergoplatform.org/en/blog/2021-07-30-ergos-ageusd-protocol-sigrsv-and-sigusd/)
+- [SigmaUSD vs the competition.](https://curiaregiscrypto.medium.com/sigmausd-vs-the-competition-e70b23fe37a3)
+- [SigmaUSD on Ergo - Privacy, Stability and Governance](https://curiaregiscrypto.medium.com/sigmausd-on-ergo-a36e0cdff743)
+- [Risk and reward mechanism](https://veriumfellow.medium.com/introduction-to-ergos-sigmausd-stablecoin-risk-and-reward-mechanism-18690b52d672)
+
+### Explainer threads
+
+- [Noob tries to explain SigmaUSD/RSV (an attempt at an ELI5)](https://www.reddit.com/r/ergonauts/comments/nhjc1f/noob_tries_to_explain_sigmausdrsv_an_attempt_at/)
+- [PSA: sigRSV is not a simple long position](https://www.reddit.com/r/ergonauts/comments/prxpag/psa_sigrsv_is_not_a_simple_long_position/)
+
+### Videos
+
+- [Ergo Summit 2021 - The IOHK Perspective - Designing the AgeUSD StableCoin](https://youtu.be/zG-rxMCDIa0?t=9247)
+- [Overview Video (with diagrams)](https://www.youtube.com/watch?v=O3hPEp3tzoU)
+- [Youtube playlist](https://www.youtube.com/playlist?list=PL8-KVrs6vXLSu_rLQV5-Pu8389_PLd06q)
+- [Buying Guide](https://youtu.be/FR1NCJbzn7w)
+- [Buying Guide2](https://www.youtube.com/watch?v=cJuKRfRrTG4)
+

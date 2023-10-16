@@ -108,6 +108,7 @@ nav:
       - dev/protocol/why.md
       - FAQ: faq.md
       - Common Misconceptions: fud-faq.md
+      - A CBDC For All: uses/cbdc.md
     - Key Features: 
       - dev/protocol/index.md
       - Protocol: dev/protocol/index.md
@@ -226,7 +227,7 @@ nav:
       - Further Ideas:
         - Prediction Markets: uses/prediction_markets.md
         - Insurance: uses/insurance.md
-        - A CBDC For All: uses/cbdc.md
+        
         - Tokens:
           - ICOs: uses/ergo-ico.md
           - Index Coins: uses/index_coins.md

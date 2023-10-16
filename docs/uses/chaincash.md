@@ -5,7 +5,7 @@ tags:
 
 # ChainCash
 
-ChainCash is a decentralized, peer-to-peer monetary system aimed at creating money collectively through trust and blockchain assets. The system addresses the issue of inelasticity in blockchain asset supply, which hinders the real-world usage of blockchain assets in many cases. ChainCash allows for the elastic creation of money in a decentralized manner while maintaining the quality of the currency.
+[ChainCash](https://github.com/ChainCashLabs) is a decentralized, peer-to-peer monetary system aimed at creating money collectively through trust and blockchain assets. The system addresses the issue of inelasticity in blockchain asset supply, which hinders the real-world usage of blockchain assets in many cases. ChainCash allows for the elastic creation of money in a decentralized manner while maintaining the quality of the currency.
 
 ## New Developments: L1 and L2 Payments
 
