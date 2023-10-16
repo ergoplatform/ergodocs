@@ -14,6 +14,20 @@ Click any of the event names below to jump directly to an overview and related r
 - (Jun 22) [ERGOHACKFEST:](#ergohackfest) was a three-week event in conjunction with ErgoPad
 - (Oct 22) [ERGOHACK V: *Mining & Minting*](#ergohackv) 
 - (Feb 23) [ERGOHACK VI: Cypherpunk Finance](#ergohackvi)
+- (Oct 23) [ERGOHACK VII: Future of Finance: Ways of Adoption](#ergohackvii)
+
+### ERGOHACKVII
+
+- [Satergo](): nipopows (√)
+- SideChainProto (√)
+- Lilium: Event Ticketing (working on submission)
+- Atomic Swap: Web Interface (working on submission)
+- Metamask Integration (√)
+- Ergography
+- Hodlbox (√)
+- ReputationSystemTeam 
+- Ergo Poor Man's Wallet (10$ DIY HW wallet for ergo) (√)
+
 
 ### ERGOHACKVI
 
@@ -111,6 +125,57 @@ Click any of the event names below to jump directly to an overview and related r
 
 
 ##  Events
+
+### ERGOHACKVII
+
+### ReputationSystemTeam
+
+> We are working on a draft of a reputation system within the Ergo blockchain. 
+This system aims to assign reputation to various entities, 
+including UTXOs within Ergo and external objects such as addresses, URLs, and Git repositories.
+
+> The reputation system is based on reputation trees, which are sets of UTXOs. 
+Each tree has a root UTXO containing 100% reputation, with branches and leaves 
+pointing to other reputation proofs and external objects as metadata.
+
+> Key properties of the system include the ability for any user to submit reputation proofs, 
+the transfer of reputation between proofs, and the various types of reputation proofs for both on-chain and off-chain objects.
+
+> This system doesn't require consensus and allows users to assign reputation to entities they trust, 
+creating incentives for maintaining good reputations. It offers a decentralized approach to trust and reputation.
+
+> It has been our first development in Ergo, so we have spent quite some time dealing with basic things. Nevertheless, we are proud to have achieved a good design from the initial idea and a forward-looking approach for the project.
+
+> Our goal is to continue developing the reputation system, first as a general application for Ergo, and then adapt it to the distributed computing system I presented in the forum a few months ago.
+
+
+### SidechainProto
+
+whitepaper draft and sidechaining contracts done 
+
+
+### Atomic Swap: Web Interface
+
+> Just finished building debugging and testing the basic client and server RESTAPIs. Completed atomic swaps via 3 public API calls and no human interaction from server (swap initiator side). That means I can start integrating it into the webUI :ergonaut: working on text writeup too
+
+
+### ergsnap (Metamask Integration)
+
+https://github.com/nautls/ergsnap
+
+First transaction signed using metamask! This is a big milestone for our project because it uses a hand written and pure JS prover implementation
+
+https://explorer.ergoplatform.com/en/transactions/617c7aaff2102221f4752aa485f087d3ae6e416756cde4dbdf9d48bffa247294 
+Prover implementation: https://github.com/nautls/ergsnap/blob/main/packages/snap/src/ergo/ergoSchnorr.ts
+
+### Hodlbox
+
+project demo: https://twitter.com/c8e4d2/status/1713597673763217766
+
+
+https://github.com/SavonarolaLabs/hodlbox-xyz/blob/main/src/lib/contract/hodl.ts
+https://github.com/SavonarolaLabs/hodlbox-xyz/blob/main/src/lib/contract/hodl_hodlerg3.ts
+
 
 ### ERGOHACKVI
 

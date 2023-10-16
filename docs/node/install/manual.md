@@ -8,13 +8,13 @@ The node uses Java so should work across all operating systems. You can even run
 
 
 
-## 1. Initial Setup
+## Initial Setup
 
-### 1.1 Download the Ergo Client
+### Download the Ergo Client
 
 Initiate the process by establishing a designated folder (e.g., `~/ergo`) for the node operation and download the latest [Ergo client release](https://github.com/ergoplatform/ergo/releases/) `.jar` file. Alternatively, clone the Ergo repository and compile the `.jar` file from the source using [SBT](https://www.scala-sbt.org/) (`sbt assembly` command), or via [Docker](/node/install/docker).
 
-### 1.2 Create a configuration file
+### Create a configuration file
 
 Subsequently, create an `ergo.conf` configuration file in the same directory as the `.jar` file, containing the following:
 
@@ -43,13 +43,13 @@ Following the execution of this command, the node will commence syncing. Wait fo
 
 ---
 
-## 2. API Security
+## API Security
 
-### 2.1 Generate Secret Password
+### Generate Secret Password
 
 To secure the API, set a unique and robust secret password (avoid using the demonstration secret `hello`).
 
-### 2.2 Compute Secret's Hash
+### Compute Secret's Hash
 
 Use the API at [127.0.0.1:9053/swagger#/utils/hashBlake2b](http://127.0.0.1:9053/swagger#/utils/hashBlake2b) to compute your secret's `Blake2b` hash.
 
@@ -57,7 +57,7 @@ Use the API at [127.0.0.1:9053/swagger#/utils/hashBlake2b](http://127.0.0.1:9053
 
 ![Compute Hash of secret](https://user-images.githubusercontent.com/23208922/69916676-ed233400-1483-11ea-8582-f61c38478d31.png)
 
-### 2.3 Update Configuration File
+### Update Configuration File
 
 After obtaining the hash response, input it into the `ergo.conf` file. For instance, the `Blake2b` hash of `hello` is `324dcf027dd4a30a932c441f365a25e86b173defa4b8e58948253471b81b72cf`.
 
@@ -83,7 +83,7 @@ Restart the node to initiate syncing and enable API access.
 
 ---
 
-## 3. Node Synchronization Verification
+## Node Synchronization Verification
 
 During synchronization, the panel displays "Active synchronization".
 
@@ -97,25 +97,9 @@ Additional verification can be performed at [127.0.0.1:9053/info](http://127.0.0
 
 ---
 
-## 4. Shutdown Procedure
 
-To safely terminate the node, use the following command:
 
-```bash
-curl -X POST "http://127.0.0.1:9053/node/shutdown" -H "api_key: hello"
-```
-
-Monitor for potential issues using this command in a new terminal:
-
-```bash
-tail -Fn+0 ergo.log | grep 'ERROR\|WARN'
-```
-
-**Following Steps:** Proceed with [initialising your wallet](/node/wallet).
-
----
-
-## 5. Resources
+## Resources
 
 * [Troubleshooting Guide](/node/install/troubleshooting)
 * [Frequently Asked Questions (FAQ)](node-faq.md)

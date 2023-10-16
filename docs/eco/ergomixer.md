@@ -47,6 +47,24 @@ You can configure a covert address in ErgoMixer; this is handy for displaying an
 
 A tool to hide recipient privacy. 
 
+A stealth address preserves recipient privacy without per-transaction interaction needed (so the receiver publishes an address, e.g. on its website, and then the sender can obtain some unique one-time address from it.
+
+A solution in Ergo can be based on a non-interactive Diffie-Hellman key exchange. 
+
+- So a merchant, for example, is publishing its public key **g<sup>x</sup>** corresponding to the secret **x**. 
+- Then the buyer with public key **g<sup>y</sup>** obtains shared secret **(g<sup>x</sup>)<sup>y</sup> = (g<sup>y</sup>)<sup>x</sup>**
+- The box created by the buyer could be protected by **[ProveDLog](../../global-functions/#provedlog)(g<sup>xy</sup>** for generator **g<sup>y</sup>**).
+- Unfortunately, Ergo ProveDLog in Ergo does not support custom generators, but it can be bypassed with a little Ergo magic: **proveDHTuple(g<sup>y</sup>, g<sup>y</sup>, g<sup>xy</sup>, g<sup>xy</sup>)**. 
+The buyer can use a one-time secret **g<sup>r</sup>**for one-time keys.
+
+
+
+| Bitcoin           | Ethereum                           | Ergo                                 |
+|-------------------|------------------------------------|--------------------------------------|
+| - | - | Efficient |
+
+Some [draft contracts](https://www.ergoforum.org/t/stealth-address-contract/255) are available. 
+
 - [stealth address contract](https://www.ergoforum.org/t/stealth-address-contract/255)
 
 Our latest ERGOHACK saw not one but two separate teams working on the stealth address concept introduced in [this forum post](https://www.ergoforum.org/t/stealth-address-contract/255)
