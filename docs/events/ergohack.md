@@ -18,15 +18,14 @@ Click any of the event names below to jump directly to an overview and related r
 
 ### ERGOHACKVII
 
-- [Satergo](): nipopows (√)
-- SideChainProto (√)
-- Lilium: Event Ticketing (working on submission)
-- Atomic Swap: Web Interface (working on submission)
-- Metamask Integration (√)
-- Ergography
-- Hodlbox (√)
-- ReputationSystemTeam 
-- Ergo Poor Man's Wallet (10$ DIY HW wallet for ergo) (√)
+- [**Satergo**](#light-node-with-satergo): Light nodes with Satergo.
+- [**SideChainProto**](#sidechainproto): Exploring the implementation of sidechains on Ergo.
+- [**Lilium**](#lilium-event-ticketing): Event Ticketing.
+- [**Atomic Swap**](#atomic-swap-web-interface): Web Interface.
+- [**Ergsnap**](#ergsnap-metamask-integration): Metamask Integration.
+- [**Hodlbox**](#hodlbox): Gamified time-based non-custodial vault.
+- [**ReputationSystemTeam**](#reputationsystemteam): A reputation system on Ergo.
+- [**Ergo Poor Man's Wallet**](#ergo-poor-mans-wallet): A cheap hardware wallet solution.
 
 
 ### ERGOHACKVI
@@ -128,53 +127,39 @@ Click any of the event names below to jump directly to an overview and related r
 
 ### ERGOHACKVII
 
-### ReputationSystemTeam
+#### Light node with Satergo
 
-> We are working on a draft of a reputation system within the Ergo blockchain. 
-This system aims to assign reputation to various entities, 
-including UTXOs within Ergo and external objects such as addresses, URLs, and Git repositories.
+Satergo wallet now facilitates the configuration of light nodes. These nodes can leverage NiPoPoWs, UTXO set snapshots, or both. Light nodes provide a more user-friendly entry point for potential node hosters due to their faster sync times and lower disk space requirements. The final report is accessible [here](../events/pdf/ergohackvii/light_node_with_satergo.pdf).
 
-> The reputation system is based on reputation trees, which are sets of UTXOs. 
-Each tree has a root UTXO containing 100% reputation, with branches and leaves 
-pointing to other reputation proofs and external objects as metadata.
+#### SidechainProto
 
-> Key properties of the system include the ability for any user to submit reputation proofs, 
-the transfer of reputation between proofs, and the various types of reputation proofs for both on-chain and off-chain objects.
+The [ergohack-sidechain](https://github.com/ross-weir/ergohack-sidechain) project, initiated during ErgoHack VII, investigates the implementation of sidechains on Ergo. The project's whitepaper can be found [here](https://github.com/ross-weir/ergohack-sidechain/blob/main/docs/whitepaper/sidechain.pdf).
 
-> This system doesn't require consensus and allows users to assign reputation to entities they trust, 
-creating incentives for maintaining good reputations. It offers a decentralized approach to trust and reputation.
+#### Lilium: Event Ticketing
 
-> It has been our first development in Ergo, so we have spent quite some time dealing with basic things. Nevertheless, we are proud to have achieved a good design from the initial idea and a forward-looking approach for the project.
+[Lilium](lilium.md) is a decentralized platform for minting and distributing NFTs on the Ergo blockchain. Initially aimed at artists for large-scale NFT sales, Lilium has expanded its functionality to include event ticketing. The final report is available [here](../events/pdf/ergohackvii/ErgoHack%207%20Final%20Report%20-%20Lilium.pdf).
 
-> Our goal is to continue developing the reputation system, first as a general application for Ergo, and then adapt it to the distributed computing system I presented in the forum a few months ago.
+#### Atomic Swap: Web Interface
 
+[Analog Ergo](analog-ergo.md) is nearing its test-net launch. The project's main objective is to integrate Atomic Swap smart contracts into user-friendly peer-to-peer GUIs. During ErgoHack VII, a [web UI](https://github.com/dzyphr/AtomicAnalogSwapWebsite) was added. The final report can be found [here](../events/pdf/ergohackvii/AnalogErgoErgoHackTextPresentation2023.pdf).
 
-### SidechainProto
+#### ergsnap (Metamask Integration)
 
-whitepaper draft and sidechaining contracts done 
+[ergsnap](https://github.com/nautls/ergsnap) has successfully integrated Metamask Snap, enabling Ergo to be loaded directly onto Metamask. This integration can enhance the user experience for cross-chain activities such as atomic swaps and bridging. The final report is available [here](../events/pdf/ergohackvii/Metamask%20Integration.pdf).
 
+#### Hodlbox
 
-### Atomic Swap: Web Interface
+[hodlbox-xyz](https://github.com/SavonarolaLabs/hodlbox-xyz) is a non-custodial vault that helps users hold onto their ERG until a specific time or price point is reached on Spectrum DEX. Users receive a commemorative NFT when they purchase a Hodl Box. The [Project Demo](https://twitter.com/c8e4d2/status/1713597673763217766) is available for viewing.
 
-> Just finished building debugging and testing the basic client and server RESTAPIs. Completed atomic swaps via 3 public API calls and no human interaction from server (swap initiator side). That means I can start integrating it into the webUI :ergonaut: working on text writeup too
+#### ReputationSystemTeam
 
+[ReputationSystemTeam](https://github.com/jossemii/ergohack-vii) has initiated the development of a comprehensive reputation system for the Ergo blockchain. This system is designed to assign reputation scores to various entities, which can include UTXOs within Ergo, as well as external objects such as addresses, URLs, and Git repositories. The reputation system is built upon the concept of reputation trees, which are sets of UTXOs, with the root UTXO holding 100% reputation. The team is committed to further development and refinement of this system.
 
-### ergsnap (Metamask Integration)
+You can access the final report [here](../events/pdf/ergohackvii/REPUTATION_SYSTEM.md)
 
-https://github.com/nautls/ergsnap
+#### Ergo Poor Man's Wallet
 
-First transaction signed using metamask! This is a big milestone for our project because it uses a hand written and pure JS prover implementation
-
-https://explorer.ergoplatform.com/en/transactions/617c7aaff2102221f4752aa485f087d3ae6e416756cde4dbdf9d48bffa247294 
-Prover implementation: https://github.com/nautls/ergsnap/blob/main/packages/snap/src/ergo/ergoSchnorr.ts
-
-### Hodlbox
-
-project demo: https://twitter.com/c8e4d2/status/1713597673763217766
-
-
-https://github.com/SavonarolaLabs/hodlbox-xyz/blob/main/src/lib/contract/hodl.ts
-https://github.com/SavonarolaLabs/hodlbox-xyz/blob/main/src/lib/contract/hodl_hodlerg3.ts
+The Ergo Poor Man's Wallet, also known as [EPMW](https://github.com/epmw/epmw/), is a project that aims to provide a simple, DIY, and cost-effective hardware wallet solution for Ergo cryptocurrency. The wallet is designed with affordability in mind, with the total cost of components and shipping to Europe estimated to be around $10.
 
 
 ### ERGOHACKVI
