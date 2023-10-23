@@ -3,32 +3,64 @@ tags:
   - dApp-InDev
 ---
 
-# Auction Coin: An Autonomous, Decentralized Token Issuance Model
+# Whitepaper (to be merged with below)
 
-Auction Coin (AC) represents a novel way of issuing tokens autonomously and in a decentralized manner on the Ergo blockchain. By employing smart contracts as its core engine, Auction Coin simulates a digital commodity—akin to digital gold—but with unique and dynamic properties. This concept not only opens up avenues for asset issuance but also sets up an interesting game-theoretic environment that invites human interaction, offering a variant of decentralized finance, or "DegFi."
+Auction Coin is a decentralized token distribution protocol designed for fairness and trustlessness in the open market. It autonomously manages price discovery and offers several advantages:
 
-## How Auction Coin Works
+- **Token Locking and Emission:** Tokens are initially locked in a smart contract, and emission occurs through periodic auctions, enhancing fairness and decentralization.
+
+- **Token Distribution:** Teams can use Auction Coin for token distribution, ensuring fairness, decentralization, trustlessness, and improved price discovery, promoting community involvement and dApp adoption.
+
+- **Liquidity Provider:** The protocol can generate liquidity for Liquidity Pools (LP) through periodic token auctions, offering advantages over traditional methods.
+
+- **Raising Funds for Development:** Auctions' proceeds can support ongoing team development, aligning interests with project success and preventing market dumping.
+
+- **Built on Existing Infrastructures:** Built upon established Auction infrastructure, it simplifies complexity and enhances versatility for various use cases.
+
+- **Implementation:** The AuctionCoin token represents the initial implementation of this protocol, introducing an innovative financial game.
+
+- **Game-Theoretic Interactions and DegFi:** The transparent nature of Auction Coin invites strategic plays, fostering "pure degen finance" (DegFi).
+
+- **Tokenomics and Fee:** AuctionCoin supply is 100k in total, with allocations for the team, contributors, LP bootstrap, and locked with the main contract. A 3% operational fee from sold auctions supports development.
+
+- **Emission Schedule:** Every 4 days, 10 batches of declining price auctions with a total of 1k AuctionCoins will start and last for 3 days, resulting in a one-year emission schedule.
+
+The protocol offers a novel approach to decentralized token distribution and financial interactions on the Ergo blockchain.
+
+[More Details](https://www.ergoforum.org/t/auction-coin-auction-based-emission-and-degen-finance-autonomous-machine/4287)
+
+
+# Auction Coin: A Decentralized Token Issuance Model on Ergo Blockchain
+
+Auction Coin (AC) introduces a pioneering approach to token issuance that operates autonomously and decentralizes the process within the Ergo blockchain ecosystem. Powered by smart contracts, Auction Coin transforms digital assets into a dynamic commodity, resembling digital gold. This innovative concept not only facilitates asset issuance but also creates an intriguing game-theoretic environment, ushering in a unique form of decentralized finance, often referred to as "DegFi."
+
+You can try it out at [auctioncoin.app](auctioncoin.app).
+
+## How Auction Coin Functions
 
 ### Token Locking and Initialization
 
-Initially, all new Auction Coin tokens are locked in a smart contract, except for a few that are used to seed a liquidity pool. This pool is referenced in the contract, making it a part of the token's ecosystem.
+Initially, all newly minted Auction Coin tokens are securely locked within a smart contract, with only a small portion allocated to seed a liquidity pool. This liquidity pool becomes an integral component of the token's ecosystem, ensuring its liquidity.
 
 ### Token Auctions
 
-Every two days, corresponding to 1,440 blocks on the Ergo blockchain, a fixed quantity of AC tokens can be unlocked. These unlocked tokens are then put up for auction. The auction starts with a bid amount predefined by the smart contract and runs for one day (720 blocks).
+At regular intervals of two days, equivalent to 1,440 blocks on the Ergo blockchain, a fixed quantity of AC tokens is made available for unlocking and subsequently placed into auctions. These auctions commence with predefined bid amounts, governed by the smart contract, and run for precisely one day (720 blocks).
 
 ### Dynamic Pricing
 
-The starting bid for the auction can adjust dynamically. If the previous auction was successful, the starting bid for the next auction increases by 1%. Conversely, if the auction was not successful, the starting bid decreases by 1%. This dynamic pricing mechanism adds an element of adaptability and responsiveness to market conditions.
+The initial bid for each auction is subject to dynamic adjustments. Following a successful auction, the starting bid for the subsequent auction increases by 1%. Conversely, if an auction fails to meet its objectives, the starting bid decreases by 1%. This dynamic pricing mechanism enhances adaptability and responsiveness to prevailing market conditions.
 
-### Accumulating Ergs and Buying Back Tokens
+### Erg Accumulation and Token Buyback
 
-Every 20 days, or after 10 successful auctions, the smart contract uses the accumulated Ergs (the native token of the Ergo blockchain) to buy AC tokens back from the liquidity pool. This process is automated and follows specific contract logic similar to existing models for buying back tokens from liquidity pools.
+Every 20 days or after the completion of 10 successful auctions, the smart contract utilizes the accumulated Ergs (the native token of the Ergo blockchain) to repurchase AC tokens from the liquidity pool. This automated process adheres to a predefined contract logic, mirroring established models for token buybacks from liquidity pools.
 
 ## Game-Theoretic Interactions and DegFi
 
-The transparent and predictable nature of the Auction Coin mechanism invites various strategic plays. For instance, participants might choose to accumulate AC tokens before an expected buyback to sell them at a higher price after the smart contract's intervention. This sets the stage for "pure degen finance" (DegFi), which operates on top of a transparent mechanism with known assumptions.
+The transparent and predictable nature of the Auction Coin mechanism stimulates a range of strategic interactions. Participants may choose to accumulate AC tokens in anticipation of a forthcoming buyback event, with the intention of selling them at a higher price following the smart contract's intervention. This sets the stage for what is often referred to as "pure degen finance" (DegFi), operating atop a transparent mechanism with well-defined assumptions.
 
 ## Resources
 
 - [ergoforum: Auction Coin - auction-based emission and Degen Finance autonomous machine](https://www.ergoforum.org/t/auction-coin-auction-based-emission-and-degen-finance-autonomous-machine/4287)
+- [Whitepaper](https://auctioncoin.app/assets/whitepaper.pdf)
+- [Twitter](https://twitter.com/Auction_Coin)
+- [Git](https://github.com/orgs/Auction-Coin/repositories)

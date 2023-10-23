@@ -31,22 +31,42 @@ Both Ergo and Cardano's models support non-fungible assets and complex types of 
 Minting, the process of creating new tokens on a blockchain network, is a critical feature that enables the creation of native assets, such as NFTs. Both Ergo and Cardano offer native asset support through their respective eUTXO models, but their approach to minting and issuing tokens varies.
 
 
-### Cardano's Minting Policy
-
-Cardano's minting policy uniquely identifies each native asset with a permanent policy ID, which originates from the policy script. The policy script further defines other attributes, such as the asset's name and amount/value. Since asset names are not unique, Cardano NFTs must be identified by the policy ID, which can be publicly available to distinguish fraudulent/duplicate NFTs from the original tokens. Cardano's minting policy provides a straightforward approach to token issuance and is suitable for assets with fewer attributes. It ensures that NFTs are unique and easily identifiable through the policy ID.
-
-
 ### Ergo's Minting Policy
 
-Ergo's minting policy is versatile and supports a broad range of token attributes, making it suitable for complex assets such as NFTs. Developers can create custom policies to define the conditions and rules for creating and managing tokens, including NFTs with various attributes and properties. Ergo's minting policy also supports off-chain data input, which can trigger conditions for transactions to be executed or prevent them from being included in blocks.
+Ergo's token issuance is standardized through [EIP4](eip4.md).
 
-Ergo's minting policy is defined by the [Ergo Improvement Proposal (EIP) 0024](eip24.md), which offers two design versions for artwork issuance: V1 and V2. Both designs involve two important boxes in the issuance process: the issuance box and the issuer box. The main difference between V1 and V2 lies in the issuer box.
+In Ergo, tokens are stored in the `R2` [register](registers.md) of a [box](box.md). 
+
+ Register | Value |
+---|---|
+ R0 | Value (in nanoErgs as Base58) |
+ R1 | Protection script (Smart Contract) |
+ R2 | Assets (tokens) |
+ R3 | Creation details |
+ R4-R9 | Available for custom use |
+
+
+Each box can hold multiple tokens, represented as pairs of `tokenId` and `amount`. A single box can hold up to 255 secondary tokens. However, there are some constraints to consider:
+
+- The size of a box cannot exceed 4 kilobytes, ensuring efficient storage and processing of token-related data.
+- The presence of tokens increases the computational cost of a transaction, as additional calculations are required to handle the token-related operations.
+
+
+Ergo's NFT minting policy is defined by the [Ergo Improvement Proposal (EIP) 0024](eip24.md), which offers two design versions for artwork issuance: V1 and V2. 
+
+<!-- Ergo's minting policy is versatile and supports a broad range of token attributes, making it suitable for complex assets such as NFTs. Developers can create custom policies to define the conditions and rules for creating and managing tokens, including NFTs with various attributes and properties. Ergo's minting policy also supports off-chain data input, which can trigger conditions for transactions to be executed or prevent them from being included in blocks. 
 
 In V1, the issuer box includes an Int representing 1000 times the royalty percentage of the artwork and the proposition bytes representing the contract to which the royalty percentage will be sent. V1 primarily focuses on handling royalties for the artist or proxy contract.
 
 In V2, the issuer box contains more attributes, such as the artwork standard version, royalty recipients and their respective percentages, artwork traits (Properties, Levels, and Stats), the token ID of the collection, and additional information, such as explicit content. V2 offers more flexibility and features, such as handling multiple royalty recipients and detailed artwork traits. Ergo's minting policy also supports off-chain data input, which can trigger conditions for transactions to be executed or prevent them from being included in blocks.
 
-In terms of tangible examples, Ergo's minting policy allows for more complex NFTs with a wider range of attributes and detailed artwork traits. For instance, NFTs with dynamic or changing attributes could be created using Ergo's minting policy, which is not currently possible on Cardano. 
+In terms of tangible examples, Ergo's minting policy allows for more complex NFTs with a wider range of attributes and detailed artwork traits. For instance, NFTs with dynamic or changing attributes could be created using Ergo's minting policy, which is not currently possible on Cardano. -->
+
+### Cardano's Minting Policy
+
+Cardano's minting policy uniquely identifies each native asset with a permanent policy ID, which originates from the policy script. The policy script further defines other attributes, such as the asset's name and amount/value. Since asset names are not unique, Cardano NFTs must be identified by the policy ID, which can be publicly available to distinguish fraudulent/duplicate NFTs from the original tokens. Cardano's minting policy provides a straightforward approach to token issuance and is suitable for assets with fewer attributes. It ensures that NFTs are unique and easily identifiable through the policy ID.
+
+
 
 ## Global State Management
 
