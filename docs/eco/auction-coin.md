@@ -3,7 +3,7 @@ tags:
   - dApp-InDev
 ---
 
-# Whitepaper (to be merged with below)
+# Auction Coin: A Decentralized Token Issuance Model on Ergo Blockchain
 
 Auction Coin is a decentralized token distribution protocol designed for fairness and trustlessness in the open market. It autonomously manages price discovery and offers several advantages:
 
@@ -25,16 +25,9 @@ Auction Coin is a decentralized token distribution protocol designed for fairnes
 
 - **Emission Schedule:** Every 4 days, 10 batches of declining price auctions with a total of 1k AuctionCoins will start and last for 3 days, resulting in a one-year emission schedule.
 
-The protocol offers a novel approach to decentralized token distribution and financial interactions on the Ergo blockchain.
+The protocol offers a novel approach to decentralized token distribution and financial interactions on the Ergo blockchain. You can try it out at [auctioncoin.app](auctioncoin.app). 
 
-[More Details](https://www.ergoforum.org/t/auction-coin-auction-based-emission-and-degen-finance-autonomous-machine/4287)
-
-
-# Auction Coin: A Decentralized Token Issuance Model on Ergo Blockchain
-
-Auction Coin (AC) introduces a pioneering approach to token issuance that operates autonomously and decentralizes the process within the Ergo blockchain ecosystem. Powered by smart contracts, Auction Coin transforms digital assets into a dynamic commodity, resembling digital gold. This innovative concept not only facilitates asset issuance but also creates an intriguing game-theoretic environment, ushering in a unique form of decentralized finance, often referred to as "DegFi."
-
-You can try it out at [auctioncoin.app](auctioncoin.app).
+Join the discussion on [Telegram](https://t.me/auction_coin) or [Discord](https://discord.gg/ergo-platform-668903786361651200)
 
 ## How Auction Coin Functions
 
