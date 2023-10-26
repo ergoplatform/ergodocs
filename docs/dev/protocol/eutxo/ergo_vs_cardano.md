@@ -31,7 +31,7 @@ Both Ergo and Cardano's models support non-fungible assets and complex types of 
 Minting, the process of creating new tokens on a blockchain network, is a critical feature that enables the creation of native assets, such as NFTs. Both Ergo and Cardano offer native asset support through their respective eUTXO models, but their approach to minting and issuing tokens varies.
 
 
-### Ergo's Minting Policy
+### Native Tokens on Ergo
 
 Ergo's token issuance is standardized through [EIP4](eip4.md).
 
@@ -51,7 +51,6 @@ Each box can hold multiple tokens, represented as pairs of `tokenId` and `amount
 - The size of a box cannot exceed 4 kilobytes, ensuring efficient storage and processing of token-related data.
 - The presence of tokens increases the computational cost of a transaction, as additional calculations are required to handle the token-related operations.
 
-
 Ergo's NFT minting policy is defined by the [Ergo Improvement Proposal (EIP) 0024](eip24.md), which offers two design versions for artwork issuance: V1 and V2. 
 
 <!-- Ergo's minting policy is versatile and supports a broad range of token attributes, making it suitable for complex assets such as NFTs. Developers can create custom policies to define the conditions and rules for creating and managing tokens, including NFTs with various attributes and properties. Ergo's minting policy also supports off-chain data input, which can trigger conditions for transactions to be executed or prevent them from being included in blocks. 
@@ -62,9 +61,15 @@ In V2, the issuer box contains more attributes, such as the artwork standard ver
 
 In terms of tangible examples, Ergo's minting policy allows for more complex NFTs with a wider range of attributes and detailed artwork traits. For instance, NFTs with dynamic or changing attributes could be created using Ergo's minting policy, which is not currently possible on Cardano. -->
 
-### Cardano's Minting Policy
+### Native Tokens on Cardano 
 
-Cardano's minting policy uniquely identifies each native asset with a permanent policy ID, which originates from the policy script. The policy script further defines other attributes, such as the asset's name and amount/value. Since asset names are not unique, Cardano NFTs must be identified by the policy ID, which can be publicly available to distinguish fraudulent/duplicate NFTs from the original tokens. Cardano's minting policy provides a straightforward approach to token issuance and is suitable for assets with fewer attributes. It ensures that NFTs are unique and easily identifiable through the policy ID.
+Native tokens on Cardano allow for the transacting of multiple assets, including ada and custom tokens, without the need for smart contracts. This feature extends the accounting infrastructure to accommodate various assets. Native tokens are different from non-native tokens that require smart contracts. Assets on Cardano are uniquely identified by an asset ID, consisting of a policy ID and asset name, and tokens with the same asset ID are fungible. Ada is the principal currency for fees and rewards, while native tokens can be used for payments and transactions.
+
+Cardano's minting policy uniquely identifies each native asset with a permanent policy ID, which originates from the policy script. The policy script further defines other attributes, such as the asset's name and amount/value. Since asset names are not unique, Cardano NFTs must be identified by the policy ID, which can be publicly available to distinguish fraudulent/duplicate NFTs from the original tokens. 
+
+
+The minimum ada value is required to transfer native tokens between addresses. Token bundles organize tokens and are the standard way to represent assets on Cardano. Minting policies specify the rules for creating and burning tokens, and each asset has a permanent association with a minting policy. The native token lifecycle involves minting, issuing, using, redeeming, and burning tokens, with various actors involved, such as asset controllers, token issuers, and token holders. Tokens can also be reissued by token holders acting as reissuers for trading or liquidity purposes.
+
 
 
 

@@ -9,6 +9,23 @@ Ergo's primary language is [Scala](https://www.udemy.com/course/rock-the-jvm-sca
 
 If you're new to Scala development with Ergo, the [Ergo Scala Skeleton App](https://github.com/dav009/ergo-scala-skeleton-app) is a great place to start.
 
+## Why Scala? 
+
+### Why Scala? 
+
+Ergo's primary language is Scala. Similarly, the scripting language used by Ergo, ErgoScript, is also based on Scala, but the off-chain code can be written in any language. Developers have access to a growing selection of tools and Software Development Kits (SDKs) for JVM, Rust and JS/TS.
+
+
+Scala has several features that set it apart from other JVM languages.
+
+- Firstly, it is truly cross-platform, as the same code can run on JVM and JavaScript natively. This is a feature that is not found in many other languages. 
+- Additionally, key ecosystem libraries for Scala support all platforms, and the popularity of Scala.js and Scala-native is increasing. 
+- Another advantage of Scala is its conciseness, both in terms of syntax and conceptual level. 
+- Despite its high-level nature, Scala can also be more efficient than similar Java code due to its ability to use primitive unboxed types, and the ability of the Scala compiler to perform code specialization. 
+- Furthermore, Scala is multi-paradigm, allowing for the combination of OOP, FP, and LP, making it suitable for a wide range of domains. 
+- Lastly, Scala3 brings even more powerful features such as metaprogramming and tools for zero-cost abstractions.
+
+
 ## Learning Resources
 
 Here are some tutorials, guides, and explanations to help you get started with Scala development on Ergo:
