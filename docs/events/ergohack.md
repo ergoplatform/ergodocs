@@ -26,7 +26,7 @@ Click any of the event names below to jump directly to an overview and related r
 - [**Hodlbox**](#hodlbox): Gamified time-based non-custodial vault.
 - [**ReputationSystemTeam**](#reputationsystemteam): A reputation system on Ergo.
 - [**Ergo Poor Man's Wallet**](#ergo-poor-mans-wallet): A cheap hardware wallet solution.
-
+- [**Auction Coin**](#auctioncoin)
 
 ### ERGOHACKVI
 
@@ -179,6 +179,7 @@ You can access the final report [here](../events/pdf/ergohackvii/REPUTATION_SYST
 
 The Ergo Poor Man's Wallet, also known as [EPMW](https://github.com/epmw/epmw/), is a project that aims to provide a simple, DIY, and cost-effective hardware wallet solution for Ergo cryptocurrency. The wallet is designed with affordability in mind, with the total cost of components and shipping to Europe estimated to be around $10.
 
+#### AuctionCoin
 
 ### ERGOHACKVI
 
