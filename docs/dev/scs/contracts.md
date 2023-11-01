@@ -76,7 +76,7 @@
 - [AnetaBTC](https://github.com/anetabtc/aneta_contracts)
 - [Lithos](https://github.com/Lithos-Protocol/Lithos/tree/master/src/main/scala)
 - [SigmaJoin](https://github.com/ergoplatform/ergo-jde/tree/main/kiosk/src/test/scala/kiosk/mixer)
-
+- [Trade-In Contracts (BlitzTCG)](https://github.com/lucagdangelo/trade-in/tree/main/src/main/scala/contracts)
 
 ### Misc
 
@@ -87,13 +87,14 @@
 - [AgeUSD](https://github.com/ergoplatform/eips/pull/33)
 - [ErgoGravity](https://github.com/mhssamadani/gravity-core/blob/dev/contracts/ergo/gravity.scala) & [ErgoNebula](https://github.com/mhssamadani/gravity-core/blob/dev/contracts/ergo/nebula.scala)
 - [Oracle Pools v0.4a](https://github.com/scalahub/Kiosk/tree/master/src/test/scala/kiosk/oraclepool/v4a)
-
+- [NightOwl](https://github.com/nightowlcasino/ergoscript-contracts)
+- [Hodlcoin (V1?)](https://github.com/lucagdangelo/hodlcoin-contracts)
 
 ### ToDo
 
 - [single-tx-swap](https://github.com/danieloravec/ergo-token-swap)
-- [Gluon](#)
-- [Palmyra](#)
+- [Gluon](#private)
+- [Palmyra](#private)
 - [on-chain swaps contracts](https://github.com/ergoplatform/sigma-rust/pull/209)
 
 
