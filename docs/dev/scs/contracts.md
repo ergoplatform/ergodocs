@@ -40,6 +40,7 @@
 - [GuapSwap](https://github.com/GuapSwap/guapswap-ronin/tree/main/src/main/scala/contracts)
 - [Lilium](https://github.com/LiliumErgo/scala-api/blob/main/app/contracts/LiliumContracts.scala)
 - [Paideia](https://github.com/paideiadao/paideia-contracts)
+- [ErgoMixer](https://github.com/ergoMixer/ergoMixBack/tree/master/mixer/app/mixer)
 - [Rosen Bridge](https://github.com/rosen-bridge/contract)
 - [Thz.FM](https://github.com/TremendouslyHighFrequency/SmartContracts)
 - [EXLE](https://github.com/Ergo-Lend/edge/blob/main/src/main/scala/edge/contracts/Contract.scala)
@@ -89,7 +90,7 @@
 
 
 ### ToDo
-- [ErgoMixer](#)
+
 - [single-tx-swap](https://github.com/danieloravec/ergo-token-swap)
 - [Gluon](#)
 - [Palmyra](#)
