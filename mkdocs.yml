@@ -267,7 +267,6 @@ nav:
       - Paideia: eco/paideia.md
 
     - Privacy:      
-      - ZK Treasury: uses/zkt.md
       - Mixing: 
         - uses/mixer.md
         - ErgoMixer: 
@@ -278,8 +277,9 @@ nav:
           - Token: eco/ergomixer/token.md
           - Install on Android: eco/ergomixer/mixer-android.md
         - SigmaJoin: eco/sigmajoin.md
-        - Stealth Addresses: uses/stealth-address.md
-      - Decentralised ID:
+      - Stealth Addresses: uses/stealth-address.md
+      - ZK Treasury: uses/zkt.md
+      - Decentralised Anon ID:
         - Ergo Nation: eco/ergonation.md
 
 
