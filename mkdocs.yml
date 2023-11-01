@@ -594,6 +594,7 @@ nav:
               - 3-out-of-5 Threshold Signature: dev/scs/sigma/3-out-of-5.md
               - Distributed Signatures: node/sigs.md
         - Tooling:
+          - Contracts: dev/scs/contracts.md
           - Playgrounds:
             - Scastie: dev/scs/ergoscript/scastie.md
             - P2S Playground: dev/stack/utilities/plutomonkey.md
