@@ -1,11 +1,5 @@
 # Emission Schedule
 
-Ergo's maximum supply is capped at 97,739,925 Ergs, with full emission expected by 2045. As per [EIP27](eip27.md), the block reward is set to decrease to 3 ERG in 2026. 
-
-You can visualize the emission schedule on [ergo.watch](https://ergo.watch/emission).
-
-## Ergo's Journey
-
 Ergo's development journey began in 2017, culminating in the successful launch of the mainnet in July 2019. In the year leading up to the mainnet launch, a token called "Ergo-First-Year-Token" (EFYT) was in circulation.
 
 ## Ergo-First-Year-Token (EFYT)
@@ -33,6 +27,12 @@ This request follows an extensive two-year effort to rectify inaccuracies in our
 ), and [Kujira](https://twitter.com/technologypoet/status/1719326079700083069) appearing, the fee was promptly rescinded, and the necessary corrections to our circulating supply were made.
 
 Despite our intentions being solely to ensure accurate and transparent information for users, CoinMarketCap has responded unprofessionally. A note has been placed on the Ergo page which misrepresents our actions and intent. We believe this to be an unjust portrayal and remain committed to advocating for clarity and accuracy in data representation for the benefit of the entire cryptocurrency community.
+
+## Maximum Supply
+
+Ergo's maximum supply is capped at 97,739,925 Ergs, with full emission expected by 2045. As per [EIP27](eip27.md), the block reward is set to decrease to 3 ERG in 2026. 
+
+You can visualize the emission schedule on [ergo.watch](https://ergo.watch/emission).
 
 
 ## Why 97,739,924 ERGs?
