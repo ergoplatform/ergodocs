@@ -21,6 +21,17 @@ Here are some resources related to EFYT:
 - [Asset Distribution Report](http://pywaves.org/assets/725Yv9oceWsB4GsYwyy4A52kEwyVrL5avubkeChSnL46)
 - [EFYT on Waves Explorer](https://wavesexplorer.com/assets/725Yv9oceWsB4GsYwyy4A52kEwyVrL5avubkeChSnL46?search=725Yv9oceWsB4GsYwyy4A52kEwyVrL5avubkeChSnL46)
 
+## What's going on with that warning on CoinMarketCap?
+
+If you head over to the [coinmarketcap page for Ergo](https://coinmarketcap.com/currencies/ergo/), and toggle between the 'Price' and 'Market-cap' chart, a clear deviation from what most people expect to see is shown. To our knowledge, Ergo appears to be unique in this aspect, with no other projects exhibiting such a marked difference in their data representation.
+
+Recognizing the potential for confusion among users, we proposed that CoinMarketCap address this issue. We suggested that the EFYT data either be presented in an independent chart, similar to accommodations made for other projects, or be depicted in an alternative format that would mitigate any misunderstanding.
+
+This request follows an extensive two-year effort to rectify inaccuracies in our reported circulating supply. In the course of resolving this issue, we were unexpectedly presented with an invoice for $5,000 to continue the process. However, after publicizing this situation on Twitter, and with corroborating accounts from other projects like Radix, Nano, and Kujira, the fee was promptly rescinded, and the necessary corrections to our circulating supply were made.
+
+Despite our intentions being solely to ensure accurate and transparent information for users, CoinMarketCap has responded unprofessionally. A note has been placed on the Ergo page which misrepresents our actions and intent. We believe this to be an unjust portrayal and remain committed to advocating for clarity and accuracy in data representation for the benefit of the entire cryptocurrency community.
+
+
 ## Why 97,739,924 ERGs?
 
 The maximum supply of 97,739,924.5 ERGs was determined by a pre-agreed smart contract that controls emission in Ergo. The goal was to create a simple emission curve with a total limited supply close to 100 million Ergs, to be completed within 8-10 years.

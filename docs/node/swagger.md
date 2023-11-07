@@ -1,3 +1,8 @@
+---
+tags:
+  - RPC Endpoints
+---
+
 # Swagger UI for Ergo Node
 
 Ergo node provides a REST API that can be accessed via HTTP. The full API specification, in OpenAPI format, is available [here](https://github.com/ergoplatform/ergo/blob/master/src/main/resources/api/openapi.yaml). When the node is running, a user-friendly Swagger UI is available at `127.0.0.1:9053/swagger`.
