@@ -1,67 +1,36 @@
-# Emission Schedule
+# Ergo Emission Schedule
 
-Ergo's development journey began in 2017, culminating in the successful launch of the mainnet in July 2019. In the year leading up to the mainnet launch, a token called "Ergo-First-Year-Token" (EFYT) was in circulation.
+Ergo's journey, which began in 2017, saw the successful launch of its mainnet in July 2019. Prior to the mainnet, the Ergo-First-Year-Token (EFYT) was in circulation.
 
-## Ergo-First-Year-Token (EFYT)
+For detailed information on EFYT, including its tokenomics and distribution, please refer to [this page](efyt.md).
 
-EFYT was airdropped and distributed on the Waves DEX, starting with 100,000 EFYT tokens in May 2017. The dual purpose of EFYT was to build an early community of stakeholders and enthusiasts for Ergo and to raise funds for the platform's development and promotion before the mainnet launch. 
+## Total Supply and Allocation
 
-> **Note: EFYT is a Waves Platform asset and is not the same as Erg, the native token of Ergo. After Ergo's mainnet launch, mining began to produce ERG tokens.**
+Ergo's total supply is capped at **97,739,925 ERGs**, distributed as follows:
 
-100% of Ergo was available via mining. In the first two years after the mainnet launch, the Treasury received 7.5 Ergs per block which equals 4.43% of the total supply. EFYT was swapped back in the first year from the treasury wallet just like any other spending. 
+- **Genesis State Inclusions**: Includes 1 ERG for proof-of-no-premine and 4,330,791.5 ERGs for the [Foundation Treasury](https://explorer.ergoplatform.com/en/addresses/4L1ktFSzm3SH1UioDuUf5hyaraHird4D2dEACwQ1qHGjSKtA6KaNvSzRCZXZGf9jkfNAEC1SrYaZmCuvb2BKiXk5zW9xuvrXFT7FdNe2KqbymiZvo5UQLAm5jQY8ZBRhTZ4AFtZa1UF5nd4aofwPiL7YkJuyiL5hDHMZL1ZnyL746tHmRYMjAhCgE7d698dRhkdSeVy).
+- **Miner Rewards**: 93,409,132 ERGs, designated for 2,080,800 blocks, as per the emission schedule ([Miner Reward Box](https://explorer.ergoplatform.com/en/addresses/2Z4YBkDsDvQj8BX7xiySFewjitqp2ge9c99jfes2whbtKitZTxdBYqbrVZUvZvKv6aqn9by4kp3LE1c26LCyosFnVnm6b6U1JYvWpYmL2ZnixJbXLjWAWuBThV1D6dLpqZJYQHYDznJCk49g5TUiS4q8khpag2aNmHwREV7JSsypHdHLgJT7MGaw51aJfNubyzSKxZ4AJXFS27EfXwyCLzW1K6GVqwkJtCoPvrcLqmqwacAWJPkmh78nke9H4oT88XmSbRt2n9aWZjosiZCafZ4osUDxmZcc5QVEeTWn8drSraY3eFKe8Mu9MSCcVU)).
 
-Here are some resources related to EFYT:
+The Treasury's funds are governed by a smart contract, that released ERGs gradually over the first 2.5 years, without exceeding 10% of the circulating supply.
 
-- [Asset Distribution Report](http://pywaves.org/assets/725Yv9oceWsB4GsYwyy4A52kEwyVrL5avubkeChSnL46)
-- [EFYT on Waves Explorer](https://wavesexplorer.com/assets/725Yv9oceWsB4GsYwyy4A52kEwyVrL5avubkeChSnL46?search=725Yv9oceWsB4GsYwyy4A52kEwyVrL5avubkeChSnL46)
-- [EFYT on livecoinwatch](https://www.livecoinwatch.com/price/ErgoFirstYearToken-EFYT)
+## Mining and Emission Duration
 
+Ergo's block reward decreases by 3 ERG per block every quarter until 2026 and stabilizes at 3 ERG per block thereafter. The mining process is projected to continue until around 2045, extended from the original 2027 timeline with the passage of the [EIP27](eip27.md) soft-fork. For a visual overview, see the emission schedule on [ergo.watch](https://ergo.watch/emission).
 
-## What's going on with that warning on CoinMarketCap?
+## Proof of No Premine
 
-If you head over to the [CoinMarketCap page for Ergo](https://coinmarketcap.com/currencies/ergo/), and toggle between the 'Price' and 'Market-cap' chart, a clear deviation from what most people expect to see is shown. To our knowledge, Ergo appears to be unique in this aspect, with no other projects exhibiting such a marked difference in their data representation.
-
-Recognizing the potential for confusion among users, we proposed that CoinMarketCap address this issue. We suggested that the EFYT data either be presented in an independent chart, similar to accommodations made for other projects or be depicted in an alternative format that would mitigate any misunderstanding.
-
-This request follows an extensive two-year effort to rectify inaccuracies in our reported circulating supply. In the course of resolving this issue, we were unexpectedly presented with an invoice for $5,000 to continue the process. However, after publicizing this situation on Twitter, and with corroborating accounts from other projects like [Radix](https://twitter.com/Kansuler/status/1720954238723833966), [Nano](https://twitter.com/nano/status/1720048947450757522
-), and [Kujira](https://twitter.com/technologypoet/status/1719326079700083069) appearing, the fee was promptly rescinded, and the necessary corrections to our circulating supply were made.
-
-Despite our intentions being solely to ensure accurate and transparent information for users, CoinMarketCap has responded unprofessionally. A note has been placed on the Ergo page which misrepresents our actions and intent. We believe this to be an unjust portrayal and remain committed to advocating for clarity and accuracy in data representation for the benefit of the entire cryptocurrency community.
-
-## Maximum Supply
-
-Ergo's maximum supply is capped at 97,739,925 Ergs, with full emission expected by 2045. As per [EIP27](eip27.md), the block reward is set to decrease to 3 ERG in 2026. 
-
-You can visualize the emission schedule on [ergo.watch](https://ergo.watch/emission).
-
-
-## Why 97,739,924 ERGs?
-
-The maximum supply of 97,739,924.5 ERGs was determined by a pre-agreed smart contract that controls emission in Ergo. The goal was to create a simple emission curve with a total limited supply of close to 100 million Ergs, to be completed within 8-10 years.
-
-This specific amount was chosen to cover the initial genesis state, including:
-
-- A box with proof-of-no-premine (1 ERG)
-- The Foundation treasury, which currently holds 4,330,791.5 ERGs
-- The Miner Reward Box, which contains the required ERGs for 2,080,800 blocks according to the emission schedule until rewards reach 0 and storage rent and EIP-27-reemission-box take over (93,409,132 ERGs)
-
-The Treasury box is protected by a vesting smart contract that ensures an initial unlocked amount and then releases ERGs to provide funds for 2.5 years, without exceeding 10% of the circulating supply. These allocations result in a total supply of 97,739,924.5 ERGs.
-
-For proof-of-no-premine, the pre-genesis state in Ergo contains block hashes from Bitcoin and Ethereum, as well as headlines from news sources like The Guardian, Vedomosti, and Xinhua around the time of the launch. You can find the relevant information in the [mainnet.conf](https://github.com/ergoplatform/ergo/blob/1935c95560a30b19cdb52c1a291e8a389ba63c97/src/main/resources/mainnet.conf#L11) file.
-
-The code for the emission schedule can be found [here](https://github.com/ergoplatform/ergo/blob/e6086e23ecd45f1e01a3e4c0344f003cec1a5b11/src/test/scala/org/ergoplatform/mining/ErgoMinerPropSpec.scala#L24).
+Ergo embeds Bitcoin and Ethereum block hashes and headlines from The Guardian, Vedomosti, and Xinhua in its pre-genesis state for transparency. This is detailed in the [mainnet.conf](https://github.com/ergoplatform/ergo/blob/1935c95560a30b19cdb52c1a291e8a389ba63c97/src/main/resources/mainnet.conf#L11) file.
 
 ## Ergo Foundation
 
-The Ergo Foundation is a community-driven entity with a focus on:
+The Ergo Foundation focuses on protocol development, ecosystem growth, promoting Ergo's use for social good, supporting decentralized infrastructure, and upholding privacy rights. The Foundation's Treasury, receiving 4.43% of emitted ERGs, funds various initiatives. More information is in the [transparency report](ergo-foundation-2022.md).
 
-- Promoting the non-breaking development of the Ergo Platform protocol.
-- Encouraging the widespread adoption and use of Ergo Platform and its native token (ERG).
-- Developing the ecosystem surrounding the Ergo Platform.
-- Promoting the use of Ergo Platform and blockchain technology for social good.
-- Supporting truly decentralized infrastructure.
-- Upholding privacy as a fundamental human right.
+## Unique Aspects of Ergo's Emission
 
-To support the development, promotion, events, and other activities that advance the platform, Ergo has a Treasury in place. The Treasury receives 4.43% of the Ergs released during emission. In the first two years after the mainnet launch, the Treasury received 7.5 Ergs per block.
+### Verification Process
 
-For more information, you can refer to the latest [transparency report](ergo-foundation-2022.md).
+Ergo's emission logic underwent rigorous verification using the Stainless formal verification tool, ensuring accuracy and validity. Details can be found in [this code section](https://github.com/ScorexFoundation/sigmastate-interpreter/pull/580/files#diff-18d3c92c2086c9ddd9b462191b55cf5e8438a29b0e786c6ab541f7def8330808).
+
+### No Out-of-Thin-Air Emission
+
+Ergo's "coinbase" transaction, the first transaction in each block, does not create new tokens out of thin air. This policy ensures traceability of every coin or token from a legitimate source, enhancing the integrity and scarcity of Ergo's native currency, and contributing to economic stability.

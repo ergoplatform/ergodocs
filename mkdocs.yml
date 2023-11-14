@@ -646,7 +646,9 @@ nav:
       - mining/autolykos.md
       - Algorithm: 
         - mining/algorithm.md
-        - Emission: mining/emission.md
+        - Emission:
+          - mining/emission.md
+          - EFYT: efyt.md
         - Difficulty Adjustment: mining/difficulty.md
         - Solution Verification: mining/solution-verification.md
         - Technical Breakdown: mining/algo-technical.md
