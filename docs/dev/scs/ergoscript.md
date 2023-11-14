@@ -31,7 +31,7 @@ Please see this [Quick Primer on ErgoScript](/dev/scs/ergoscript-primer) for an 
 
 ### Playgrounds
 
-
+- [escript.online](https://escript.online/)
 - Compile ErgoScript directly in your browser with [ErgoScript Playground](https://wallet.plutomonkey.com/p2s/)
 - There is also [Scastie](https://scastie.scala-lang.org/greenhat/T2jSEv11QcWpXX1XrcHUdw/31)
 - [Kiosk](/dev/stack/kiosk) lets anyone play with ErgoScript using a basic web-based UI
