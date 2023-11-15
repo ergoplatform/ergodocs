@@ -54,7 +54,7 @@ The initial concerns from miners were indeed taken into account. However, these 
 
 The unforeseen circumstances surrounding the ETH merge were exceptional and couldn't be predicted with absolute certainty. Although we had prepared for potential risks after a community developer brought this scenario to our attention, the specific details of the merge, the rapid migration of miners, and fluctuating prices surpassed our expectations, necessitating immediate intervention. We express our gratitude to the miners who intervened and donated their hash power to assist with the situation. We have since taken measures to streamline the [EIP](eip.md) process and encourage greater miner participation.
 
-Ergo empowers miners by returning control to them in the crypto-space, adhering to the fundamental principles of decentralization. Ergo's advanced [governance](governance.me) features and the inclusion of miners in key discussions, as demonstrated by the [EIP27](eip27.md) discussions, underscore this commitment. During these discussions, the community introduced 'vote tokens' to enable miners to participate actively, further establishing Ergo as a blockchain that values and supports its miners.
+Ergo empowers miners by returning control to them in the crypto-space, adhering to the fundamental principles of decentralization. Ergo's advanced [governance](governance.md) features and the inclusion of miners in key discussions, as demonstrated by the [EIP27](eip27.md) discussions, underscore this commitment. During these discussions, the community introduced 'vote tokens' to enable miners to participate actively, further establishing Ergo as a blockchain that values and supports its miners.
 
 ### Ergo's current difficulty adjustment algorithm is being manipulated
 
@@ -174,6 +174,6 @@ Ergo also implements a feature known as Storage Rent, which helps manage blockch
 
 Finally, Ergo employs the eUTXO model, which enhances privacy, scalability, and interoperability. By extending Bitcoin's contract-writing method, Ergo attaches a guard script and additional custom data to each coin, positioning Ergo as a uniquely beneficial platform for Contractual Money.
 
-For more detailed information, please refer to the [Discover Ergo: The Blockchain of the Future](docs/dev/protocol/why.md) document.
+For more detailed information, please refer to the [Discover Ergo: The Blockchain of the Future](why.md) document.
 
 
