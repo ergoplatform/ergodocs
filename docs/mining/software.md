@@ -1,17 +1,17 @@
 # Software
 
 
-| Coins | Miners | nvidia | AMD | Intel |
-|---|---|---|---|---|
-| ERG | [lolminer](https://github.com/Lolliedieb/lolMiner-releases) | ✓ | ✓ | ✓ |
-| ERG | [Nanominer](https://github.com/nanopool/nanominer/releases) | ✓ | ✓ |  |
-| ERG | [SRB Miner](https://github.com/doktor83/SRBMiner-Multi/releases) | ✓ |  |  |
-| ERG | [NB Miner](https://github.com/NebuTech/NBMiner) | ✓ |  |  |
-| ERG | [Team Red Miner](https://github.com/todxx/teamredminer/releases) |  | ✓ |  |
-| ERG | [Trex Miner](https://github.com/trexminer/T-Rex/releases) |  | ✓ |  |
-| ERG+KAS | BzMiner | ✓ |  |  |
-| ERG+KAS | Gminer | ✓ |  |  |
-| ERG+KAS | [SRB Miner](https://github.com/doktor83/SRBMiner-Multi/releases) |  | ✓ |  |
+| Coins | Miners | nvidia | AMD | Intel | Dev Fee |
+|-------|--------|--------|-----|-------|---------|
+| ERG   | [lolminer](https://github.com/Lolliedieb/lolMiner-releases) | ✓ | ✓ | ✓ | 1.5 % |
+| ERG   | [Nanominer](https://github.com/nanopool/nanominer/releases) | ✓ | ✓ |  | 2.5 % or [5 %](https://help.nanopool.org/article/218-pool-information) |
+| ERG   | [SRB Miner](https://github.com/doktor83/SRBMiner-Multi/releases) | ✓ | ✓ |  | 2 % |
+| ERG   | [NB Miner](https://github.com/NebuTech/NBMiner) | ✓ |  |  | 2 % |
+| ERG   | [Team Red Miner](https://github.com/todxx/teamredminer/releases) |  | ✓ |  | 2 % |
+| ERG   | [Trex Miner](https://github.com/trexminer/T-Rex/releases) |  | ✓ |  | 2 % |
+| ERG+KAS | BzMiner | ✓ |  |  |  |
+| ERG+KAS | Gminer | ✓ |  |  |  |
+| ERG+KAS | [SRB Miner](https://github.com/doktor83/SRBMiner-Multi/releases) |  | ✓ |  | 2 % |
 
 
 

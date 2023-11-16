@@ -6,3 +6,4 @@ Storage rent is a minimal fee levied on unspent output after a period of four ye
 
 For a more in-depth understanding of Ergo's storage rent system, please refer to this [detailed guide](rent.md).
 
+> [How do I consolidate my wallet?](https://ergonaut.space/en/Guides/how-to-consolidate-a-wallet)

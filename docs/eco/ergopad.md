@@ -1,4 +1,13 @@
 # Ergopad
 
-[ErgoPad](https://www.ergopad.io/whitepaper) is a project incubator offering token IDOs which provide funding for new projects within the Ergo ecosystem. Ergopad released its own native token through an IDO (Initial Dex Offering), and users are now able to stake Ergopad tokens through smart contracts on-chain.If you stake ErgoPad tokens and reach one of the staking tiers, you'll be given an opportunity to contribute to the DAOs of projects launched through the Ergopad platform, before they go live on any dex. Seed round contributors will receive governance tokens at a lower value than what they'll launch at on the dex and allow participation in the governance of the DAOs of various projects.SigUSD and Erg raised by DAOs in the early contribution rounds will be used, as voted by DAO members, to build projects on the Ergo platform.
+[ErgoPad](https://www.ergopad.io/whitepaper) is a platform within the Ergo ecosystem that facilitates the incubation and launch of new projects. It provides a mechanism for token IDOs (Initial Dex Offerings), which serve as a source of funding for these projects. Ergopad has its own native token, which was introduced through an IDO and can be staked by users via on-chain smart contracts.
+
+Staking ErgoPad tokens enables users to achieve various staking tiers. Upon reaching a certain tier, users can contribute to the DAOs (Decentralized Autonomous Organizations) of projects initiated on the Ergopad platform, prior to their listing on any decentralized exchange (dex). Early contributors in the seed round receive governance tokens at a value lower than their launch price on the dex, allowing them to participate in the governance of the DAOs of different projects. The funds collected by DAOs in these early contribution rounds, in the form of SigUSD and Erg, are allocated towards the development of projects on the Ergo platform as decided by DAO members.
+
+
+The Ergopad team aims to support grassroots projects in shaping the future of global finance by creating products that democratize participation in commerce. They advocate for private money and provide services like funding, marketing, and blockchain development, which are crucial for the success of any new project.
+
+The Ergopad website provides a variety of information including announcements, upcoming projects, and a dashboard. Ergopad also has its own token which users can acquire with $Erg and stake. 
+
+For a more detailed understanding of Ergopad, you can visit their website at [https://ergopad.io/](https://ergopad.io/).
 

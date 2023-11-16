@@ -2,7 +2,7 @@
 
 There are several ecosystem projects focused on building miner tooling. Here are some of them:
 
-## decentralised Apps
+## Decentralised Apps
 
 ### GuapSwap
 

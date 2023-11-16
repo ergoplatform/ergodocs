@@ -157,6 +157,7 @@ nav:
     - Standards: 
       - contribute/standards.md
       - Chat Bridge: contribute/standards/chat-bridge.md
+      - ErgoTipperBot: contribute/standards/tipbot.md
       - Analytics: contribute/standards/analytics.md
       - KYA: contribute/standards/kya.md
       - Community Guidelines: contribute/standards/guidelines.md

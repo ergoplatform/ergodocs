@@ -25,6 +25,7 @@ Ergo's storage rent mechanism rewards miners uniquely by allowing them to claim 
 
 ## Additional Resources
 
+- [How to consolidate a wallet](https://ergonaut.space/en/Guides/how-to-consolidate-a-wallet)
 - [HF-4.0 Reduce storage rent period #1144](https://github.com/ergoplatform/ergo/issues/1144) - Rejected
 - [EIP-0045 Redistribution contracts for Storage Rent Fees #93](https://github.com/ergoplatform/eips/pull/93)
 - [EIP-39 Monotonic box creation height rule](https://github.com/ergoplatform/eips/blob/master/eip-0039.md)
