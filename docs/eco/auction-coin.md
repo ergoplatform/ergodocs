@@ -25,7 +25,7 @@ Auction Coin is a decentralized token distribution protocol designed for fairnes
 
 - **Emission Schedule:** Every 4 days, 10 batches of declining price auctions with a total of 1k AuctionCoins will start and last for 3 days, resulting in a one-year emission schedule.
 
-The protocol offers a novel approach to decentralized token distribution and financial interactions on the Ergo blockchain. You can try it out at [auctioncoin.app](auctioncoin.app). 
+The protocol offers a novel approach to decentralized token distribution and financial interactions on the Ergo blockchain. You can try it out at [auctioncoin.app](https://auctioncoin.app).
 
 Join the discussion on [Telegram](https://t.me/auction_coin) or [Discord](https://discord.gg/ergo-platform-668903786361651200)
 
