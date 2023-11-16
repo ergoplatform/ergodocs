@@ -2,6 +2,7 @@
 tags:
   - dApp-Live
 ---
+<!--TODO: Add comparison table https://ergonaut.space/en/Guides/Mining/Mining -->
 
 # ErgoMixer
 

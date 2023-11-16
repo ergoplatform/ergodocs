@@ -119,17 +119,71 @@ To learn more about the individuals contributing to Ergo's success, visit Ergo's
 
 Here are some resources to deepen your understanding of Ergo:
 
-- [The Ergo Manifesto](https://ergoplatform.org/en/blog/2021-04-26-the-ergo-manifesto/)
+- [The Ergo Manifesto](https://ergonaut.space/en/Ergo/manifesto)
 - Our comprehensive [FAQ](faq.md)
-- cafebedouin's insightful article [*Why Ergo*](https://cafebedouin.org/2021/12/09/why-ergo/)
 - Join our community discussions on:
     - [Matrix]()
     - [Telegram](https://t.me/Ergo_Chats)
     - [Discord](https://discordapp.com/invite/gYrVrjS)
     - [Reddit](https://www.reddit.com/r/ergonauts)
     - [ErgoForum](https://www.ergoforum.org)
+    - [Ergo Community (Public) Facebook Group](https://www.facebook.com/groups/3519158601522845/?ref=share)
+    - [Ergo Community (Private) Facebook Group](https://www.facebook.com/groups/ergoplatform)
+    - [Ergo Platform Facebook Page](https://www.facebook.com/Ergo-Platform-108753484685015)
+    - [Ergo Mining Facebook Group : Ergo Coin (ERG) GPU MINING](https://www.facebook.com/groups/779328612722261/)
+
+### Official Channels
+
+- [Website](https://ergoplatform.org/en/)
+- [Blog](https://ergoplatform.org/en/blog/)
+- [GitHub](https://github.com/ergoplatform)
+- [YouTube](https://www.youtube.com/channel/UC7cht_rw6ofX3wTirrQG8kw)
+- [Twitter](https://twitter.com/ergoplatformorg)
+
+### Articles
+
+- cafebedouin's insightful article [*Why Ergo*](https://cafebedouin.org/2021/12/09/why-ergo/)
+- [Comparisons](https://ergonaut.space/en/Community/Comparisons) with similar chains.
 
                                                
 > *"Cryptocurrency should provide tools to enrich ordinary people. Small businesses struggling to make ends meet, not big depersonalised financial capital."*
 
+### Community channels
+- [Ergo Platform Instagram](https://www.instagram.com/ergo_platform/)
+- [Ergo News Twitter](https://twitter.com/NewsErgo)
+- [Ergo Platform Twitter Espanol (Community-ran)](https://twitter.com/ErgoPlatformES)
 
+### Videos
+- [ErgoCast](https://ergocast.io/) - a podcast on Ergo 
+
+### Podcasts
+
+- [ErgoCast](https://ergocast.io/) - a podcast on Ergo 
+
+### Deep Dives
+
+- [ergonaut.space](https://ergonaut.space/en/home) | Community gathered resources for the Ergo blockchain (in markdown format)
+- [Ergo101](https://ergo101.org/) - A handpicked collection of information, videos and links all about ERGO.
+- [ergosites.github.io](https://ergosites.github.io/) | Resource page which links to various websites and utilities. 
+- [Ergo101](https://ergo101.org/) - A handpicked collection of information, videos and links all about ERGO.
+
+### Regional Telegrams
+- [English](https://t.me/ergoplatform)
+- [Romania](https://t.me/ergo_romania)
+- [Italy](https://t.me/Ergo_Italia)
+- [Armenian](https://t.me/ErgoArmeania)
+- [Arabic](https://t.me/ergoplatform_arabic)
+- [Chinese](https://t.me/ergoplatform_CH)
+- [German](https://t.me/ergoplatform_german)
+- [Spanish](https://t.me/ergoplatform_ES)
+- [Indonesia](https://t.me/Ergo_Indonesian)
+- [Vietnam](https://t.me/ErgoPlatform_Vietnam)
+- [Bharat(India) and Bangladesh](https://t.me/ergoplatform_bangla_hindi)
+- [Chinese](https://t.me/ergoplatform_CH)
+- [Russian](https://t.me/ergoplatformru)
+- [Persian](https://t.me/ergoplatform_IR)
+- [Srilankans](https://t.me/ergoplatform_sl)
+- [France](https://t.me/ergofrance)
+- [Turkey](https://t.me/ergoplatform_tr)
+- [Brazil](https://t.me/ergobrazil)
+- [Portugues](https://t.me/ErgoPortuguese)
