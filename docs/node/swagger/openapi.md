@@ -1,25 +1,23 @@
-# Ergo Node API v5.0.15
-
-API docs for Ergo Node. Models are shared between all Ergo products
+## Ergo Node API v5.0.15
 
 > Scroll down for code samples, example requests and responses. Select a language for code samples from the tabs above or the mobile navigation menu.
 
+API docs for Ergo Node. Models are shared between all Ergo products
 
 Base URLs:
 
-* Public node: <a href="http://213.239.193.208:9053">http://213.239.193.208:9053</a> - [Try it out here!](swagger_api.md)
+* <a href="/">/</a>
 
-Email: <a href="mailto:ergoplatform@protonmail.com">Ergo Platform Team</a> Web: <a href="https://ergoplatform.org">Ergo Platform Team</a> 
-
+* <a href="http://213.239.193.208:9053">http://213.239.193.208:9053</a>
 
 ## Authentication
 
 * API Key (ApiKeyAuth)
     - Parameter Name: **api_key**, in: header. 
 
-## Default
+## UTXO
 
-### default__utxo_getSnapshotsInfo
+### getSnapshotsInfo
 
 > Code samples
 
@@ -28,16 +26,12 @@ Email: <a href="mailto:ergoplatform@protonmail.com">Ergo Platform Team</a> Web: 
     ```shell
     ## You can also use wget
     curl -X DEFAULT /utxo/getSnapshotsInfo
-    
-    
     ```
 
 === "http"
 
     ```http
     DEFAULT /utxo/getSnapshotsInfo HTTP/1.1
-    
-    
     ```
 
 === "javascript"
@@ -54,8 +48,6 @@ Email: <a href="mailto:ergoplatform@protonmail.com">Ergo Platform Team</a> Web: 
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -69,8 +61,6 @@ Email: <a href="mailto:ergoplatform@protonmail.com">Ergo Platform Team</a> Web: 
       }
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -81,8 +71,6 @@ Email: <a href="mailto:ergoplatform@protonmail.com">Ergo Platform Team</a> Web: 
     r = requests.default('/utxo/getSnapshotsInfo')
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -111,8 +99,6 @@ Email: <a href="mailto:ergoplatform@protonmail.com">Ergo Platform Team</a> Web: 
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -131,8 +117,6 @@ Email: <a href="mailto:ergoplatform@protonmail.com">Ergo Platform Team</a> Web: 
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -155,8 +139,6 @@ Email: <a href="mailto:ergoplatform@protonmail.com">Ergo Platform Team</a> Web: 
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `DEFAULT /utxo/getSnapshotsInfo`
@@ -186,8 +168,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /blocks \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -196,8 +176,6 @@ This operation does not require authentication
     GET /blocks HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -219,8 +197,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -238,8 +214,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -253,8 +227,6 @@ This operation does not require authentication
     r = requests.get('/blocks', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -287,8 +259,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -307,8 +277,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -335,8 +303,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /blocks`
@@ -360,7 +326,6 @@ This operation does not require authentication
     [
       "8b7ae20a4acd23e3f1bf38671ce97103ad96d8f1c780b5e5e865e4873ae16337"
     ]
-    
     ```
 
 <h3 id="getheaderids-responses">Responses</h3>
@@ -396,8 +361,6 @@ This operation does not require authentication
     curl -X POST /blocks \
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -407,8 +370,6 @@ This operation does not require authentication
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -517,8 +478,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -537,8 +496,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -553,8 +510,6 @@ This operation does not require authentication
     r = requests.post('/blocks', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -588,8 +543,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -608,8 +561,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -637,8 +588,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /blocks`
@@ -737,7 +686,6 @@ This operation does not require authentication
       },
       "size": 0
     }
-    
     ```
 
 <h3 id="sendminedblock-parameters">Parameters</h3>
@@ -758,7 +706,6 @@ This operation does not require authentication
       "reason": "Internal server error",
       "detail": "string"
     }
-    
     ```
 
 <h3 id="sendminedblock-responses">Responses</h3>
@@ -784,8 +731,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /blocks/at/{blockHeight} \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -794,8 +739,6 @@ This operation does not require authentication
     GET /blocks/at/{blockHeight} HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -817,8 +760,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -836,8 +777,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -851,8 +790,6 @@ This operation does not require authentication
     r = requests.get('/blocks/at/{blockHeight}', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -885,8 +822,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -905,8 +840,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -933,8 +866,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /blocks/at/{blockHeight}`
@@ -957,7 +888,6 @@ This operation does not require authentication
     [
       "8b7ae20a4acd23e3f1bf38671ce97103ad96d8f1c780b5e5e865e4873ae16337"
     ]
-    
     ```
 
 <h3 id="getfullblockat-responses">Responses</h3>
@@ -993,8 +923,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /blocks/chainSlice \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -1003,8 +931,6 @@ This operation does not require authentication
     GET /blocks/chainSlice HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -1026,8 +952,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -1045,8 +969,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -1060,8 +982,6 @@ This operation does not require authentication
     r = requests.get('/blocks/chainSlice', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -1094,8 +1014,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -1114,8 +1032,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -1142,8 +1058,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /blocks/chainSlice`
@@ -1190,7 +1104,6 @@ This operation does not require authentication
         "adProofsId": "3ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117"
       }
     ]
-    
     ```
 
 <h3 id="getchainslice-responses">Responses</h3>
@@ -1247,8 +1160,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /blocks/{headerId} \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -1257,8 +1168,6 @@ This operation does not require authentication
     GET /blocks/{headerId} HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -1280,8 +1189,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -1299,8 +1206,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -1314,8 +1219,6 @@ This operation does not require authentication
     r = requests.get('/blocks/{headerId}', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -1348,8 +1251,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -1368,8 +1269,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -1396,8 +1295,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /blocks/{headerId}`
@@ -1504,7 +1401,6 @@ This operation does not require authentication
       },
       "size": 0
     }
-    
     ```
 
 <h3 id="getfullblockbyid-responses">Responses</h3>
@@ -1532,8 +1428,6 @@ This operation does not require authentication
     curl -X POST /blocks/headerIds \
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -1543,8 +1437,6 @@ This operation does not require authentication
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -1569,8 +1461,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -1589,8 +1479,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -1605,8 +1493,6 @@ This operation does not require authentication
     r = requests.post('/blocks/headerIds', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -1640,8 +1526,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -1660,8 +1544,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -1689,8 +1571,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /blocks/headerIds`
@@ -1705,7 +1585,6 @@ This operation does not require authentication
     [
       "string"
     ]
-    
     ```
 
 <h3 id="getfullblockbyids-parameters">Parameters</h3>
@@ -1810,7 +1689,6 @@ This operation does not require authentication
         "size": 0
       }
     ]
-    
     ```
 
 <h3 id="getfullblockbyids-responses">Responses</h3>
@@ -1903,8 +1781,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /blocks/{headerId}/header \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -1913,8 +1789,6 @@ This operation does not require authentication
     GET /blocks/{headerId}/header HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -1936,8 +1810,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -1955,8 +1827,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -1970,8 +1840,6 @@ This operation does not require authentication
     r = requests.get('/blocks/{headerId}/header', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -2004,8 +1872,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -2024,8 +1890,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -2052,8 +1916,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /blocks/{headerId}/header`
@@ -2097,7 +1959,6 @@ This operation does not require authentication
       "transactionsId": "3ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117",
       "adProofsId": "3ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117"
     }
-    
     ```
 
 <h3 id="getblockheaderbyid-responses">Responses</h3>
@@ -2124,8 +1985,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /blocks/{headerId}/transactions \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -2134,8 +1993,6 @@ This operation does not require authentication
     GET /blocks/{headerId}/transactions HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -2157,8 +2014,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -2176,8 +2031,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -2191,8 +2044,6 @@ This operation does not require authentication
     r = requests.get('/blocks/{headerId}/transactions', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -2225,8 +2076,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -2245,8 +2094,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -2273,8 +2120,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /blocks/{headerId}/transactions`
@@ -2339,7 +2184,6 @@ This operation does not require authentication
       ],
       "size": 0
     }
-    
     ```
 
 <h3 id="getblocktransactionsbyid-responses">Responses</h3>
@@ -2366,8 +2210,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /blocks/{headerId}/proofFor/{txId} \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -2376,8 +2218,6 @@ This operation does not require authentication
     GET /blocks/{headerId}/proofFor/{txId} HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -2399,8 +2239,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -2418,8 +2256,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -2433,8 +2269,6 @@ This operation does not require authentication
     r = requests.get('/blocks/{headerId}/proofFor/{txId}', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -2467,8 +2301,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -2487,8 +2319,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -2515,8 +2345,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /blocks/{headerId}/proofFor/{txId}`
@@ -2546,7 +2374,6 @@ This operation does not require authentication
         ]
       ]
     }
-    
     ```
 
 <h3 id="getprooffortx-responses">Responses</h3>
@@ -2572,8 +2399,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /blocks/lastHeaders/{count} \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -2582,8 +2407,6 @@ This operation does not require authentication
     GET /blocks/lastHeaders/{count} HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -2605,8 +2428,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -2624,8 +2445,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -2639,8 +2458,6 @@ This operation does not require authentication
     r = requests.get('/blocks/lastHeaders/{count}', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -2673,8 +2490,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -2693,8 +2508,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -2721,8 +2534,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /blocks/lastHeaders/{count}`
@@ -2768,7 +2579,6 @@ This operation does not require authentication
         "adProofsId": "3ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117"
       }
     ]
-    
     ```
 
 <h3 id="getlastheaders-responses">Responses</h3>
@@ -2823,8 +2633,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /blocks/modifier/{modifierId} \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -2833,8 +2641,6 @@ This operation does not require authentication
     GET /blocks/modifier/{modifierId} HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -2856,8 +2662,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -2875,8 +2679,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -2890,8 +2692,6 @@ This operation does not require authentication
     r = requests.get('/blocks/modifier/{modifierId}', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -2924,8 +2724,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -2944,8 +2742,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -2972,8 +2768,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /blocks/modifier/{modifierId}`
@@ -2998,7 +2792,6 @@ This operation does not require authentication
       "reason": "Internal server error",
       "detail": "string"
     }
-    
     ```
 
 <h3 id="getmodifierbyid-responses">Responses</h3>
@@ -3027,8 +2820,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /nipopow/popowHeaderById/{headerId} \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -3037,8 +2828,6 @@ This operation does not require authentication
     GET /nipopow/popowHeaderById/{headerId} HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -3060,8 +2849,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -3079,8 +2866,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -3094,8 +2879,6 @@ This operation does not require authentication
     r = requests.get('/nipopow/popowHeaderById/{headerId}', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -3128,8 +2911,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -3148,8 +2929,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -3176,8 +2955,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /nipopow/popowHeaderById/{headerId}`
@@ -3226,7 +3003,6 @@ This operation does not require authentication
         "3ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117"
       ]
     }
-    
     ```
 
 <h3 id="getpopowheaderbyid-responses">Responses</h3>
@@ -3253,8 +3029,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /nipopow/popowHeaderByHeight/{height} \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -3263,8 +3037,6 @@ This operation does not require authentication
     GET /nipopow/popowHeaderByHeight/{height} HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -3286,8 +3058,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -3305,8 +3075,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -3320,8 +3088,6 @@ This operation does not require authentication
     r = requests.get('/nipopow/popowHeaderByHeight/{height}', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -3354,8 +3120,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -3374,8 +3138,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -3402,8 +3164,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /nipopow/popowHeaderByHeight/{height}`
@@ -3452,7 +3212,6 @@ This operation does not require authentication
         "3ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117"
       ]
     }
-    
     ```
 
 <h3 id="getpopowheaderbyheight-responses">Responses</h3>
@@ -3479,8 +3238,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /nipopow/proof/{minChainLength}/{suffixLength} \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -3489,8 +3246,6 @@ This operation does not require authentication
     GET /nipopow/proof/{minChainLength}/{suffixLength} HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -3512,8 +3267,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -3531,8 +3284,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -3546,8 +3297,6 @@ This operation does not require authentication
     r = requests.get('/nipopow/proof/{minChainLength}/{suffixLength}', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -3580,8 +3329,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -3600,8 +3347,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -3628,8 +3373,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /nipopow/proof/{minChainLength}/{suffixLength}`
@@ -3740,7 +3483,6 @@ This operation does not require authentication
         }
       ]
     }
-    
     ```
 
 <h3 id="getpopowproof-responses">Responses</h3>
@@ -3766,8 +3508,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /nipopow/proof/{minChainLength}/{suffixLength}/{headerId} \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -3776,8 +3516,6 @@ This operation does not require authentication
     GET /nipopow/proof/{minChainLength}/{suffixLength}/{headerId} HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -3799,8 +3537,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -3818,8 +3554,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -3833,8 +3567,6 @@ This operation does not require authentication
     r = requests.get('/nipopow/proof/{minChainLength}/{suffixLength}/{headerId}', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -3867,8 +3599,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -3887,8 +3617,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -3915,8 +3643,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /nipopow/proof/{minChainLength}/{suffixLength}/{headerId}`
@@ -4028,7 +3754,6 @@ This operation does not require authentication
         }
       ]
     }
-    
     ```
 
 <h3 id="getpopowproofbyheaderid-responses">Responses</h3>
@@ -4056,8 +3781,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /info \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -4066,8 +3789,6 @@ This operation does not require authentication
     GET /info HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -4089,8 +3810,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -4108,8 +3827,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -4123,8 +3840,6 @@ This operation does not require authentication
     r = requests.get('/info', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -4157,8 +3872,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -4177,8 +3890,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -4205,8 +3916,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /info`
@@ -4256,7 +3965,6 @@ This operation does not require authentication
       "eip27Supported": true,
       "restApiUrl": "https://example.com"
     }
-    
     ```
 
 <h3 id="getnodeinfo-responses">Responses</h3>
@@ -4285,8 +3993,6 @@ This operation does not require authentication
     curl -X POST /transactions \
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -4296,8 +4002,6 @@ This operation does not require authentication
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -4358,8 +4062,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -4378,8 +4080,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -4394,8 +4094,6 @@ This operation does not require authentication
     r = requests.post('/transactions', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -4429,8 +4127,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -4449,8 +4145,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -4478,8 +4172,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /transactions`
@@ -4530,7 +4222,6 @@ This operation does not require authentication
       ],
       "size": 0
     }
-    
     ```
 
 <h3 id="sendtransaction-parameters">Parameters</h3>
@@ -4547,7 +4238,6 @@ This operation does not require authentication
 
     ```json
     "2ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117"
-    
     ```
 
 <h3 id="sendtransaction-responses">Responses</h3>
@@ -4574,8 +4264,6 @@ This operation does not require authentication
     curl -X POST /transactions/bytes \
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -4585,8 +4273,6 @@ This operation does not require authentication
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -4609,8 +4295,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -4629,8 +4313,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -4645,8 +4327,6 @@ This operation does not require authentication
     r = requests.post('/transactions/bytes', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -4680,8 +4360,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -4700,8 +4378,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -4729,8 +4405,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /transactions/bytes`
@@ -4743,7 +4417,6 @@ This operation does not require authentication
 
     ```json
     "\"02c9e71790399816b3e40b2207e9ade19a9b7fe0600186cfb8e2b115bfdb34b57f38cd3c9f2890d11720eb3bb993993f00ededf812a590d2993df094a7ca4f0213e4820e1ab831eed5dc5c72665396d3a01d2a12900f1c3ab77700b284ae24fa8e8f7754f86f2282c795db6b0b17df1c29cc0552e59d01f7d777c638a813333277271c2f8b4d99d01ff0e6ee8695697bdd5b568089395620d7198c6093ce8bc59b928611b1b12452c05addaa42f4beff6a0a6fe90000000380d0dbc3f40210090402040005c801040205c8010500040004000e2003faf2cb329f2e90d6d23b58d91bbb6c046aa143261cc21f52fbe2824bfcbf04d807d601e4c6a70408d602b2a5730000d603e4c6a70601d604e4c6a7080ed605e4c6a70505d606e4c6a70705d60795720399c1a7c1720299c17202c1a7eb027201d1ededededededededed93c27202c2a793e4c672020408720193e4c6720205059572039d9c72057eb272047301000573029d9c72057eb2720473030005730494e4c672020601720393e4c672020705720693e4c67202080e720493e4c67202090ec5a79572039072079c720672059272079c72067205917207730595ef720393b1db630872027306d801d608b2db63087202730700ed938c7208017308938c7208027206c8df35000508cd030c8f9c4dc08f3c006fa85a47c9156dedbede000a8b764c6e374fd097e873ba0405c8a8c105010105dc8b020e0266608cdea8baf0380008cd030c8f9c4dc08f3c006fa85a47c9156dedbede000a8b764c6e374fd097e873ba04c8df350000c0843d1005040004000e36100204a00b08cd0279be667ef9dcbbac55a06295ce870b07029bfcdb2dce28d959f2815b16f81798ea02d192a39a8cc7a701730073011001020402d19683030193a38cc7b2a57300000193c2b2a57301007473027303830108cdeeac93b1a57304c8df350000\""
-    
     ```
 
 <h3 id="sendtransactionasbytes-parameters">Parameters</h3>
@@ -4760,7 +4433,6 @@ This operation does not require authentication
 
     ```json
     "2ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117"
-    
     ```
 
 <h3 id="sendtransactionasbytes-responses">Responses</h3>
@@ -4787,8 +4459,6 @@ This operation does not require authentication
     curl -X POST /transactions/check \
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -4798,8 +4468,6 @@ This operation does not require authentication
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -4860,8 +4528,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -4880,8 +4546,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -4896,8 +4560,6 @@ This operation does not require authentication
     r = requests.post('/transactions/check', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -4931,8 +4593,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -4951,8 +4611,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -4980,8 +4638,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /transactions/check`
@@ -5032,7 +4688,6 @@ This operation does not require authentication
       ],
       "size": 0
     }
-    
     ```
 
 <h3 id="checktransaction-parameters">Parameters</h3>
@@ -5049,7 +4704,6 @@ This operation does not require authentication
 
     ```json
     "2ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117"
-    
     ```
 
 <h3 id="checktransaction-responses">Responses</h3>
@@ -5076,8 +4730,6 @@ This operation does not require authentication
     curl -X POST /transactions/checkBytes \
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -5087,8 +4739,6 @@ This operation does not require authentication
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -5111,8 +4761,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -5131,8 +4779,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -5147,8 +4793,6 @@ This operation does not require authentication
     r = requests.post('/transactions/checkBytes', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -5182,8 +4826,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -5202,8 +4844,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -5231,8 +4871,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /transactions/checkBytes`
@@ -5245,7 +4883,6 @@ This operation does not require authentication
 
     ```json
     "\"02c9e71790399816b3e40b2207e9ade19a9b7fe0600186cfb8e2b115bfdb34b57f38cd3c9f2890d11720eb3bb993993f00ededf812a590d2993df094a7ca4f0213e4820e1ab831eed5dc5c72665396d3a01d2a12900f1c3ab77700b284ae24fa8e8f7754f86f2282c795db6b0b17df1c29cc0552e59d01f7d777c638a813333277271c2f8b4d99d01ff0e6ee8695697bdd5b568089395620d7198c6093ce8bc59b928611b1b12452c05addaa42f4beff6a0a6fe90000000380d0dbc3f40210090402040005c801040205c8010500040004000e2003faf2cb329f2e90d6d23b58d91bbb6c046aa143261cc21f52fbe2824bfcbf04d807d601e4c6a70408d602b2a5730000d603e4c6a70601d604e4c6a7080ed605e4c6a70505d606e4c6a70705d60795720399c1a7c1720299c17202c1a7eb027201d1ededededededededed93c27202c2a793e4c672020408720193e4c6720205059572039d9c72057eb272047301000573029d9c72057eb2720473030005730494e4c672020601720393e4c672020705720693e4c67202080e720493e4c67202090ec5a79572039072079c720672059272079c72067205917207730595ef720393b1db630872027306d801d608b2db63087202730700ed938c7208017308938c7208027206c8df35000508cd030c8f9c4dc08f3c006fa85a47c9156dedbede000a8b764c6e374fd097e873ba0405c8a8c105010105dc8b020e0266608cdea8baf0380008cd030c8f9c4dc08f3c006fa85a47c9156dedbede000a8b764c6e374fd097e873ba04c8df350000c0843d1005040004000e36100204a00b08cd0279be667ef9dcbbac55a06295ce870b07029bfcdb2dce28d959f2815b16f81798ea02d192a39a8cc7a701730073011001020402d19683030193a38cc7b2a57300000193c2b2a57301007473027303830108cdeeac93b1a57304c8df350000\""
-    
     ```
 
 <h3 id="checktransactionasbytes-parameters">Parameters</h3>
@@ -5262,7 +4899,6 @@ This operation does not require authentication
 
     ```json
     "2ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117"
-    
     ```
 
 <h3 id="checktransactionasbytes-responses">Responses</h3>
@@ -5288,8 +4924,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /transactions/unconfirmed \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -5298,8 +4932,6 @@ This operation does not require authentication
     GET /transactions/unconfirmed HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -5321,8 +4953,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -5340,8 +4970,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -5355,8 +4983,6 @@ This operation does not require authentication
     r = requests.get('/transactions/unconfirmed', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -5389,8 +5015,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -5409,8 +5033,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -5437,8 +5059,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /transactions/unconfirmed`
@@ -5500,7 +5120,6 @@ This operation does not require authentication
         "size": 0
       }
     ]
-    
     ```
 
 <h3 id="getunconfirmedtransactions-responses">Responses</h3>
@@ -5525,16 +5144,12 @@ This operation does not require authentication
     ```shell
     ## You can also use wget
     curl -X HEAD /transactions/unconfirmed/{txId}
-    
-    
     ```
 
 === "http"
 
     ```http
     HEAD /transactions/unconfirmed/{txId} HTTP/1.1
-    
-    
     ```
 
 === "javascript"
@@ -5551,8 +5166,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -5566,8 +5179,6 @@ This operation does not require authentication
       }
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -5578,8 +5189,6 @@ This operation does not require authentication
     r = requests.head('/transactions/unconfirmed/{txId}')
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -5608,8 +5217,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -5628,8 +5235,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -5652,8 +5257,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `HEAD /transactions/unconfirmed/{txId}`
@@ -5689,8 +5292,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /transactions/unconfirmed/byTransactionId/{txId} \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -5699,8 +5300,6 @@ This operation does not require authentication
     GET /transactions/unconfirmed/byTransactionId/{txId} HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -5722,8 +5321,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -5741,8 +5338,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -5756,8 +5351,6 @@ This operation does not require authentication
     r = requests.get('/transactions/unconfirmed/byTransactionId/{txId}', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -5790,8 +5383,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -5810,8 +5401,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -5838,8 +5427,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /transactions/unconfirmed/byTransactionId/{txId}`
@@ -5898,7 +5485,6 @@ This operation does not require authentication
       ],
       "size": 0
     }
-    
     ```
 
 <h3 id="getunconfirmedtransactionbyid-responses">Responses</h3>
@@ -5925,8 +5511,6 @@ This operation does not require authentication
     curl -X POST /transactions/unconfirmed/byErgoTree \
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -5936,8 +5520,6 @@ This operation does not require authentication
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -5960,8 +5542,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -5980,8 +5560,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -5996,8 +5574,6 @@ This operation does not require authentication
     r = requests.post('/transactions/unconfirmed/byErgoTree', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -6031,8 +5607,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -6051,8 +5625,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -6080,8 +5652,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /transactions/unconfirmed/byErgoTree`
@@ -6094,7 +5664,6 @@ This operation does not require authentication
 
     ```json
     "\"100204a00b08cd021cf943317b0fdb50f60892a46b9132b9ced337c7de79248b104b293d9f1f078eea02d192a39a8cc7a70173007301\""
-    
     ```
 
 <h3 id="getunconfirmedtransactionsbyergotree-parameters">Parameters</h3>
@@ -6153,7 +5722,6 @@ This operation does not require authentication
         "size": 0
       }
     ]
-    
     ```
 
 <h3 id="getunconfirmedtransactionsbyergotree-responses">Responses</h3>
@@ -6179,8 +5747,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /transactions/poolHistogram \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -6189,8 +5755,6 @@ This operation does not require authentication
     GET /transactions/poolHistogram HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -6212,8 +5776,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -6231,8 +5793,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -6246,8 +5806,6 @@ This operation does not require authentication
     r = requests.get('/transactions/poolHistogram', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -6280,8 +5838,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -6300,8 +5856,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -6328,8 +5882,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /transactions/poolHistogram`
@@ -6356,7 +5908,6 @@ This operation does not require authentication
         "totalFee": 0
       }
     ]
-    
     ```
 
 <h3 id="getfeehistogram-responses">Responses</h3>
@@ -6382,8 +5933,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /transactions/getFee?waitTime=1&txSize=100 \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -6392,8 +5941,6 @@ This operation does not require authentication
     GET /transactions/getFee?waitTime=1&txSize=100 HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -6415,8 +5962,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -6436,8 +5981,6 @@ This operation does not require authentication
     }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -6453,8 +5996,6 @@ This operation does not require authentication
     }, headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -6487,8 +6028,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -6507,8 +6046,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -6535,8 +6072,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /transactions/getFee`
@@ -6558,7 +6093,6 @@ This operation does not require authentication
 
     ```json
     0
-    
     ```
 
 <h3 id="getrecommendedfee-responses">Responses</h3>
@@ -6584,8 +6118,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /transactions/waitTime?fee=1&txSize=100 \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -6594,8 +6126,6 @@ This operation does not require authentication
     GET /transactions/waitTime?fee=1&txSize=100 HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -6617,8 +6147,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -6638,8 +6166,6 @@ This operation does not require authentication
     }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -6655,8 +6181,6 @@ This operation does not require authentication
     }, headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -6689,8 +6213,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -6709,8 +6231,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -6737,8 +6257,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /transactions/waitTime`
@@ -6760,7 +6278,6 @@ This operation does not require authentication
 
     ```json
     0
-    
     ```
 
 <h3 id="getexpectedwaittime-responses">Responses</h3>
@@ -6788,8 +6305,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /transactions/unconfirmed/inputs/byBoxId/{boxId} \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -6798,8 +6313,6 @@ This operation does not require authentication
     GET /transactions/unconfirmed/inputs/byBoxId/{boxId} HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -6821,8 +6334,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -6840,8 +6351,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -6855,8 +6364,6 @@ This operation does not require authentication
     r = requests.get('/transactions/unconfirmed/inputs/byBoxId/{boxId}', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -6889,8 +6396,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -6909,8 +6414,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -6937,8 +6440,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /transactions/unconfirmed/inputs/byBoxId/{boxId}`
@@ -6975,7 +6476,6 @@ This operation does not require authentication
       "transactionId": "2ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117",
       "index": 0
     }
-    
     ```
 
 <h3 id="getunconfirmedtransactioninputboxbyid-responses">Responses</h3>
@@ -7003,8 +6503,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /transactions/unconfirmed/outputs/byBoxId/{boxId} \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -7013,8 +6511,6 @@ This operation does not require authentication
     GET /transactions/unconfirmed/outputs/byBoxId/{boxId} HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -7036,8 +6532,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -7055,8 +6549,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -7070,8 +6562,6 @@ This operation does not require authentication
     r = requests.get('/transactions/unconfirmed/outputs/byBoxId/{boxId}', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -7104,8 +6594,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -7124,8 +6612,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -7152,8 +6638,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /transactions/unconfirmed/outputs/byBoxId/{boxId}`
@@ -7190,7 +6674,6 @@ This operation does not require authentication
       "transactionId": "2ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117",
       "index": 0
     }
-    
     ```
 
 <h3 id="getunconfirmedtransactionoutputboxbyid-responses">Responses</h3>
@@ -7217,8 +6700,6 @@ This operation does not require authentication
     curl -X POST /transactions/unconfirmed/outputs/byErgoTree \
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -7228,8 +6709,6 @@ This operation does not require authentication
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -7252,8 +6731,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -7272,8 +6749,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -7288,8 +6763,6 @@ This operation does not require authentication
     r = requests.post('/transactions/unconfirmed/outputs/byErgoTree', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -7323,8 +6796,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -7343,8 +6814,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -7372,8 +6841,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /transactions/unconfirmed/outputs/byErgoTree`
@@ -7386,7 +6853,6 @@ This operation does not require authentication
 
     ```json
     "\"100204a00b08cd021cf943317b0fdb50f60892a46b9132b9ced337c7de79248b104b293d9f1f078eea02d192a39a8cc7a70173007301\""
-    
     ```
 
 <h3 id="getunconfirmedtransactionoutputboxesbyergotree-parameters">Parameters</h3>
@@ -7423,7 +6889,6 @@ This operation does not require authentication
         "index": 0
       }
     ]
-    
     ```
 
 <h3 id="getunconfirmedtransactionoutputboxesbyergotree-responses">Responses</h3>
@@ -7468,8 +6933,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /transactions/unconfirmed/outputs/byTokenId/{tokenId} \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -7478,8 +6941,6 @@ This operation does not require authentication
     GET /transactions/unconfirmed/outputs/byTokenId/{tokenId} HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -7501,8 +6962,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -7520,8 +6979,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -7535,8 +6992,6 @@ This operation does not require authentication
     r = requests.get('/transactions/unconfirmed/outputs/byTokenId/{tokenId}', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -7569,8 +7024,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -7589,8 +7042,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -7617,8 +7068,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /transactions/unconfirmed/outputs/byTokenId/{tokenId}`
@@ -7657,7 +7106,6 @@ This operation does not require authentication
         "index": 0
       }
     ]
-    
     ```
 
 <h3 id="getunconfirmedtransactionoutputboxesbytokenid-responses">Responses</h3>
@@ -7703,8 +7151,6 @@ This operation does not require authentication
     curl -X POST /transactions/unconfirmed/outputs/byRegisters \
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -7714,8 +7160,6 @@ This operation does not require authentication
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -7740,8 +7184,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -7760,8 +7202,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -7776,8 +7216,6 @@ This operation does not require authentication
     r = requests.post('/transactions/unconfirmed/outputs/byRegisters', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -7811,8 +7249,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -7831,8 +7267,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -7860,8 +7294,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /transactions/unconfirmed/outputs/byRegisters`
@@ -7876,7 +7308,6 @@ This operation does not require authentication
     {
       "R4": "100204a00b08cd0336100ef59ced80ba5f89c4178ebd57b6c1dd0f3d135ee1db9f62fc634d637041ea02d192a39a8cc7a70173007301"
     }
-    
     ```
 
 <h3 id="getunconfirmedtransactionoutputboxesbyregisters-parameters">Parameters</h3>
@@ -7913,7 +7344,6 @@ This operation does not require authentication
         "index": 0
       }
     ]
-    
     ```
 
 <h3 id="getunconfirmedtransactionoutputboxesbyregisters-responses">Responses</h3>
@@ -7960,8 +7390,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /peers/all \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -7970,8 +7398,6 @@ This operation does not require authentication
     GET /peers/all HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -7993,8 +7419,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -8012,8 +7436,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -8027,8 +7449,6 @@ This operation does not require authentication
     r = requests.get('/peers/all', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -8061,8 +7481,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -8081,8 +7499,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -8109,8 +7525,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /peers/all`
@@ -8133,7 +7547,6 @@ This operation does not require authentication
         "connectionType": "Incoming"
       }
     ]
-    
     ```
 
 <h3 id="getallpeers-responses">Responses</h3>
@@ -8179,8 +7592,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /peers/connected \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -8189,8 +7600,6 @@ This operation does not require authentication
     GET /peers/connected HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -8212,8 +7621,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -8231,8 +7638,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -8246,8 +7651,6 @@ This operation does not require authentication
     r = requests.get('/peers/connected', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -8280,8 +7683,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -8300,8 +7701,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -8328,8 +7727,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /peers/connected`
@@ -8352,7 +7749,6 @@ This operation does not require authentication
         "connectionType": "Incoming"
       }
     ]
-    
     ```
 
 <h3 id="getconnectedpeers-responses">Responses</h3>
@@ -8400,8 +7796,6 @@ This operation does not require authentication
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json' \
       -H 'api_key: API_KEY'
-    
-    
     ```
 
 === "http"
@@ -8411,8 +7805,6 @@ This operation does not require authentication
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -8436,8 +7828,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -8457,8 +7847,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -8474,8 +7862,6 @@ This operation does not require authentication
     r = requests.post('/peers/connect', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -8510,8 +7896,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -8530,8 +7914,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -8560,8 +7942,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /peers/connect`
@@ -8574,7 +7954,6 @@ This operation does not require authentication
 
     ```json
     "\"127.0.0.1:5673\""
-    
     ```
 
 <h3 id="connecttopeer-parameters">Parameters</h3>
@@ -8595,7 +7974,6 @@ This operation does not require authentication
       "reason": "Internal server error",
       "detail": "string"
     }
-    
     ```
 
 <h3 id="connecttopeer-responses">Responses</h3>
@@ -8622,8 +8000,6 @@ ApiKeyAuth ( Scopes: api_key )
     ## You can also use wget
     curl -X GET /peers/blacklisted \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -8632,8 +8008,6 @@ ApiKeyAuth ( Scopes: api_key )
     GET /peers/blacklisted HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -8655,8 +8029,6 @@ ApiKeyAuth ( Scopes: api_key )
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -8674,8 +8046,6 @@ ApiKeyAuth ( Scopes: api_key )
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -8689,8 +8059,6 @@ ApiKeyAuth ( Scopes: api_key )
     r = requests.get('/peers/blacklisted', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -8723,8 +8091,6 @@ ApiKeyAuth ( Scopes: api_key )
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -8743,8 +8109,6 @@ ApiKeyAuth ( Scopes: api_key )
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -8771,8 +8135,6 @@ ApiKeyAuth ( Scopes: api_key )
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /peers/blacklisted`
@@ -8791,7 +8153,6 @@ ApiKeyAuth ( Scopes: api_key )
         "string"
       ]
     }
-    
     ```
 
 <h3 id="getblacklistedpeers-responses">Responses</h3>
@@ -8817,8 +8178,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /peers/status \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -8827,8 +8186,6 @@ This operation does not require authentication
     GET /peers/status HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -8850,8 +8207,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -8869,8 +8224,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -8884,8 +8237,6 @@ This operation does not require authentication
     r = requests.get('/peers/status', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -8918,8 +8269,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -8938,8 +8287,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -8966,8 +8313,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /peers/status`
@@ -8987,7 +8332,6 @@ This operation does not require authentication
         "currentNetworkTime": 1524143059077
       }
     ]
-    
     ```
 
 <h3 id="getpeersstatus-responses">Responses</h3>
@@ -9023,8 +8367,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /peers/syncInfo \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -9033,8 +8375,6 @@ This operation does not require authentication
     GET /peers/syncInfo HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -9056,8 +8396,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -9075,8 +8413,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -9090,8 +8426,6 @@ This operation does not require authentication
     r = requests.get('/peers/syncInfo', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -9124,8 +8458,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -9144,8 +8476,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -9172,8 +8502,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /peers/syncInfo`
@@ -9200,7 +8528,6 @@ This operation does not require authentication
         "height": 65780
       }
     ]
-    
     ```
 
 <h3 id="getpeerssyncinfo-responses">Responses</h3>
@@ -9242,8 +8569,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /peers/trackInfo \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -9252,8 +8577,6 @@ This operation does not require authentication
     GET /peers/trackInfo HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -9275,8 +8598,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -9294,8 +8615,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -9309,8 +8628,6 @@ This operation does not require authentication
     r = requests.get('/peers/trackInfo', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -9343,8 +8660,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -9363,8 +8678,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -9391,8 +8704,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /peers/trackInfo`
@@ -9463,7 +8774,6 @@ This operation does not require authentication
         }
       }
     ]
-    
     ```
 
 <h3 id="getpeerstrackinfo-responses">Responses</h3>
@@ -9512,8 +8822,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /utils/seed \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -9522,8 +8830,6 @@ This operation does not require authentication
     GET /utils/seed HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -9545,8 +8851,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -9564,8 +8868,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -9579,8 +8881,6 @@ This operation does not require authentication
     r = requests.get('/utils/seed', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -9613,8 +8913,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -9633,8 +8931,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -9661,8 +8957,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /utils/seed`
@@ -9677,7 +8971,6 @@ This operation does not require authentication
 
     ```json
     "\"7e1e79dd4936bdc7d09f4ba9212849136b589fba4bcf4263a0961a95b65d08cb16\""
-    
     ```
 
 <h3 id="getrandomseed-responses">Responses</h3>
@@ -9703,8 +8996,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /utils/address/{address} \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -9713,8 +9004,6 @@ This operation does not require authentication
     GET /utils/address/{address} HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -9736,8 +9025,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -9755,8 +9042,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -9770,8 +9055,6 @@ This operation does not require authentication
     r = requests.get('/utils/address/{address}', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -9804,8 +9087,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -9824,8 +9105,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -9852,8 +9131,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /utils/address/{address}`
@@ -9878,7 +9155,6 @@ This operation does not require authentication
       "isValid": true,
       "error": "string"
     }
-    
     ```
 
 <h3 id="checkaddressvaliditywithget-responses">Responses</h3>
@@ -9905,8 +9181,6 @@ This operation does not require authentication
     curl -X POST /utils/address \
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -9916,8 +9190,6 @@ This operation does not require authentication
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -9940,8 +9212,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -9960,8 +9230,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -9976,8 +9244,6 @@ This operation does not require authentication
     r = requests.post('/utils/address', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -10011,8 +9277,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -10031,8 +9295,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -10060,8 +9322,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /utils/address`
@@ -10074,7 +9334,6 @@ This operation does not require authentication
 
     ```json
     "\"3WwbzW6u8hKWBcL1W7kNVMr25s2UHfSBnYtwSHvrRQt7DdPuoXrt\""
-    
     ```
 
 <h3 id="checkaddressvalidity-parameters">Parameters</h3>
@@ -10095,7 +9354,6 @@ This operation does not require authentication
       "isValid": true,
       "error": "string"
     }
-    
     ```
 
 <h3 id="checkaddressvalidity-responses">Responses</h3>
@@ -10121,8 +9379,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /utils/addressToRaw/{address} \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -10131,8 +9387,6 @@ This operation does not require authentication
     GET /utils/addressToRaw/{address} HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -10154,8 +9408,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -10173,8 +9425,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -10188,8 +9438,6 @@ This operation does not require authentication
     r = requests.get('/utils/addressToRaw/{address}', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -10222,8 +9470,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -10242,8 +9488,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -10270,8 +9514,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /utils/addressToRaw/{address}`
@@ -10292,7 +9534,6 @@ This operation does not require authentication
 
     ```json
     "02a7955281885bf0f0ca4a48678848cad8dc5b328ce8bc1d4481d041c98e891ff3"
-    
     ```
 
 <h3 id="addresstoraw-responses">Responses</h3>
@@ -10318,8 +9559,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /utils/rawToAddress/{pubkeyHex} \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -10328,8 +9567,6 @@ This operation does not require authentication
     GET /utils/rawToAddress/{pubkeyHex} HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -10351,8 +9588,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -10370,8 +9605,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -10385,8 +9618,6 @@ This operation does not require authentication
     r = requests.get('/utils/rawToAddress/{pubkeyHex}', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -10419,8 +9650,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -10439,8 +9668,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -10467,8 +9694,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /utils/rawToAddress/{pubkeyHex}`
@@ -10489,7 +9714,6 @@ This operation does not require authentication
 
     ```json
     "3WwbzW6u8hKWBcL1W7kNVMr25s2UHfSBnYtwSHvrRQt7DdPuoXrt"
-    
     ```
 
 <h3 id="rawtoaddress-responses">Responses</h3>
@@ -10515,8 +9739,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /utils/ergoTreeToAddress/{ergoTreeHex} \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -10525,8 +9747,6 @@ This operation does not require authentication
     GET /utils/ergoTreeToAddress/{ergoTreeHex} HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -10548,8 +9768,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -10567,8 +9785,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -10582,8 +9798,6 @@ This operation does not require authentication
     r = requests.get('/utils/ergoTreeToAddress/{ergoTreeHex}', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -10616,8 +9830,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -10636,8 +9848,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -10664,8 +9874,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /utils/ergoTreeToAddress/{ergoTreeHex}`
@@ -10686,7 +9894,6 @@ This operation does not require authentication
 
     ```json
     "3WwbzW6u8hKWBcL1W7kNVMr25s2UHfSBnYtwSHvrRQt7DdPuoXrt"
-    
     ```
 
 <h3 id="ergotreetoaddresswithget-responses">Responses</h3>
@@ -10713,8 +9920,6 @@ This operation does not require authentication
     curl -X POST /utils/ergoTreeToAddress \
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -10724,8 +9929,6 @@ This operation does not require authentication
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -10748,8 +9951,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -10768,8 +9969,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -10784,8 +9983,6 @@ This operation does not require authentication
     r = requests.post('/utils/ergoTreeToAddress', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -10819,8 +10016,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -10839,8 +10034,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -10868,8 +10061,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /utils/ergoTreeToAddress`
@@ -10882,7 +10073,6 @@ This operation does not require authentication
 
     ```json
     "\"100204a00b08cd021cf943317b0fdb50f60892a46b9132b9ced337c7de79248b104b293d9f1f078eea02d192a39a8cc7a70173007301\""
-    
     ```
 
 <h3 id="ergotreetoaddress-parameters">Parameters</h3>
@@ -10899,7 +10089,6 @@ This operation does not require authentication
 
     ```json
     "3WwbzW6u8hKWBcL1W7kNVMr25s2UHfSBnYtwSHvrRQt7DdPuoXrt"
-    
     ```
 
 <h3 id="ergotreetoaddress-responses">Responses</h3>
@@ -10925,8 +10114,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /utils/seed/{length} \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -10935,8 +10122,6 @@ This operation does not require authentication
     GET /utils/seed/{length} HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -10958,8 +10143,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -10977,8 +10160,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -10992,8 +10173,6 @@ This operation does not require authentication
     r = requests.get('/utils/seed/{length}', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -11026,8 +10205,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -11046,8 +10223,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -11074,8 +10249,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /utils/seed/{length}`
@@ -11096,7 +10269,6 @@ This operation does not require authentication
 
     ```json
     "\"83375fd213cfd7dfd984ce1901d62c302a1db53160b416674c8da1a393a6bbc316\""
-    
     ```
 
 <h3 id="getrandomseedwithlength-responses">Responses</h3>
@@ -11123,8 +10295,6 @@ This operation does not require authentication
     curl -X POST /utils/hash/blake2b \
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -11134,8 +10304,6 @@ This operation does not require authentication
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -11158,8 +10326,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -11178,8 +10344,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -11194,8 +10358,6 @@ This operation does not require authentication
     r = requests.post('/utils/hash/blake2b', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -11229,8 +10391,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -11249,8 +10409,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -11278,8 +10436,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /utils/hash/blake2b`
@@ -11292,7 +10448,6 @@ This operation does not require authentication
 
     ```json
     "\"7yaASMijGEGTbttYHg1MrXnWB8EbzjJnFLSWvmNoHrXV\""
-    
     ```
 
 <h3 id="hashblake2b-parameters">Parameters</h3>
@@ -11309,7 +10464,6 @@ This operation does not require authentication
 
     ```json
     "\"6ed54addddaf10fe8fcda330bd443a57914fbce38a9fa27248b07e361cc76a41\""
-    
     ```
 
 <h3 id="hashblake2b-responses">Responses</h3>
@@ -11339,8 +10493,6 @@ This operation does not require authentication
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json' \
       -H 'api_key: API_KEY'
-    
-    
     ```
 
 === "http"
@@ -11350,8 +10502,6 @@ This operation does not require authentication
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -11378,8 +10528,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -11399,8 +10547,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -11416,8 +10562,6 @@ This operation does not require authentication
     r = requests.post('/wallet/init', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -11452,8 +10596,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -11472,8 +10614,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -11502,8 +10642,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /wallet/init`
@@ -11519,7 +10657,6 @@ This operation does not require authentication
       "pass": "string",
       "mnemonicPass": "string"
     }
-    
     ```
 
 <h3 id="walletinit-parameters">Parameters</h3>
@@ -11538,7 +10675,6 @@ This operation does not require authentication
     {
       "mnemonic": "string"
     }
-    
     ```
 
 <h3 id="walletinit-responses">Responses</h3>
@@ -11567,8 +10703,6 @@ ApiKeyAuth ( Scopes: api_key )
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json' \
       -H 'api_key: API_KEY'
-    
-    
     ```
 
 === "http"
@@ -11578,8 +10712,6 @@ ApiKeyAuth ( Scopes: api_key )
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -11608,8 +10740,6 @@ ApiKeyAuth ( Scopes: api_key )
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -11629,8 +10759,6 @@ ApiKeyAuth ( Scopes: api_key )
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -11646,8 +10774,6 @@ ApiKeyAuth ( Scopes: api_key )
     r = requests.post('/wallet/restore', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -11682,8 +10808,6 @@ ApiKeyAuth ( Scopes: api_key )
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -11702,8 +10826,6 @@ ApiKeyAuth ( Scopes: api_key )
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -11732,8 +10854,6 @@ ApiKeyAuth ( Scopes: api_key )
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /wallet/restore`
@@ -11751,7 +10871,6 @@ ApiKeyAuth ( Scopes: api_key )
       "mnemonicPass": "string",
       "usePre1627KeyDerivation": true
     }
-    
     ```
 
 <h3 id="walletrestore-parameters">Parameters</h3>
@@ -11772,7 +10891,6 @@ ApiKeyAuth ( Scopes: api_key )
       "reason": "Internal server error",
       "detail": "string"
     }
-    
     ```
 
 <h3 id="walletrestore-responses">Responses</h3>
@@ -11801,8 +10919,6 @@ ApiKeyAuth ( Scopes: api_key )
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json' \
       -H 'api_key: API_KEY'
-    
-    
     ```
 
 === "http"
@@ -11812,8 +10928,6 @@ ApiKeyAuth ( Scopes: api_key )
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -11840,8 +10954,6 @@ ApiKeyAuth ( Scopes: api_key )
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -11861,8 +10973,6 @@ ApiKeyAuth ( Scopes: api_key )
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -11878,8 +10988,6 @@ ApiKeyAuth ( Scopes: api_key )
     r = requests.post('/wallet/check', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -11914,8 +11022,6 @@ ApiKeyAuth ( Scopes: api_key )
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -11934,8 +11040,6 @@ ApiKeyAuth ( Scopes: api_key )
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -11964,8 +11068,6 @@ ApiKeyAuth ( Scopes: api_key )
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /wallet/check`
@@ -11981,7 +11083,6 @@ ApiKeyAuth ( Scopes: api_key )
       "mnemonic": "string",
       "mnemonicPass": "string"
     }
-    
     ```
 
 <h3 id="checkseed-parameters">Parameters</h3>
@@ -12000,7 +11101,6 @@ ApiKeyAuth ( Scopes: api_key )
     {
       "matched": true
     }
-    
     ```
 
 <h3 id="checkseed-responses">Responses</h3>
@@ -12029,8 +11129,6 @@ ApiKeyAuth ( Scopes: api_key )
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json' \
       -H 'api_key: API_KEY'
-    
-    
     ```
 
 === "http"
@@ -12040,8 +11138,6 @@ ApiKeyAuth ( Scopes: api_key )
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -12067,8 +11163,6 @@ ApiKeyAuth ( Scopes: api_key )
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -12088,8 +11182,6 @@ ApiKeyAuth ( Scopes: api_key )
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -12105,8 +11197,6 @@ ApiKeyAuth ( Scopes: api_key )
     r = requests.post('/wallet/unlock', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -12141,8 +11231,6 @@ ApiKeyAuth ( Scopes: api_key )
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -12161,8 +11249,6 @@ ApiKeyAuth ( Scopes: api_key )
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -12191,8 +11277,6 @@ ApiKeyAuth ( Scopes: api_key )
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /wallet/unlock`
@@ -12207,7 +11291,6 @@ ApiKeyAuth ( Scopes: api_key )
     {
       "pass": "string"
     }
-    
     ```
 
 <h3 id="walletunlock-parameters">Parameters</h3>
@@ -12228,7 +11311,6 @@ ApiKeyAuth ( Scopes: api_key )
       "reason": "Internal server error",
       "detail": "string"
     }
-    
     ```
 
 <h3 id="walletunlock-responses">Responses</h3>
@@ -12256,8 +11338,6 @@ ApiKeyAuth ( Scopes: api_key )
     curl -X GET /wallet/lock \
       -H 'Accept: application/json' \
       -H 'api_key: API_KEY'
-    
-    
     ```
 
 === "http"
@@ -12266,8 +11346,6 @@ ApiKeyAuth ( Scopes: api_key )
     GET /wallet/lock HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -12290,8 +11368,6 @@ ApiKeyAuth ( Scopes: api_key )
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -12310,8 +11386,6 @@ ApiKeyAuth ( Scopes: api_key )
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -12326,8 +11400,6 @@ ApiKeyAuth ( Scopes: api_key )
     r = requests.get('/wallet/lock', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -12361,8 +11433,6 @@ ApiKeyAuth ( Scopes: api_key )
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -12381,8 +11451,6 @@ ApiKeyAuth ( Scopes: api_key )
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -12410,8 +11478,6 @@ ApiKeyAuth ( Scopes: api_key )
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /wallet/lock`
@@ -12430,7 +11496,6 @@ ApiKeyAuth ( Scopes: api_key )
       "reason": "Internal server error",
       "detail": "string"
     }
-    
     ```
 
 <h3 id="walletlock-responses">Responses</h3>
@@ -12459,8 +11524,6 @@ ApiKeyAuth ( Scopes: api_key )
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json' \
       -H 'api_key: API_KEY'
-    
-    
     ```
 
 === "http"
@@ -12470,8 +11533,6 @@ ApiKeyAuth ( Scopes: api_key )
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -12497,8 +11558,6 @@ ApiKeyAuth ( Scopes: api_key )
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -12518,8 +11577,6 @@ ApiKeyAuth ( Scopes: api_key )
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -12535,8 +11592,6 @@ ApiKeyAuth ( Scopes: api_key )
     r = requests.post('/wallet/rescan', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -12571,8 +11626,6 @@ ApiKeyAuth ( Scopes: api_key )
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -12591,8 +11644,6 @@ ApiKeyAuth ( Scopes: api_key )
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -12621,8 +11672,6 @@ ApiKeyAuth ( Scopes: api_key )
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /wallet/rescan`
@@ -12637,7 +11686,6 @@ ApiKeyAuth ( Scopes: api_key )
     {
       "fromHeight": 0
     }
-    
     ```
 
 <h3 id="walletrescan-parameters">Parameters</h3>
@@ -12659,7 +11707,6 @@ ApiKeyAuth ( Scopes: api_key )
       "reason": "Internal server error",
       "detail": "string"
     }
-    
     ```
 
 <h3 id="walletrescan-responses">Responses</h3>
@@ -12687,8 +11734,6 @@ ApiKeyAuth ( Scopes: api_key )
     curl -X GET /wallet/status \
       -H 'Accept: application/json' \
       -H 'api_key: API_KEY'
-    
-    
     ```
 
 === "http"
@@ -12697,8 +11742,6 @@ ApiKeyAuth ( Scopes: api_key )
     GET /wallet/status HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -12721,8 +11764,6 @@ ApiKeyAuth ( Scopes: api_key )
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -12741,8 +11782,6 @@ ApiKeyAuth ( Scopes: api_key )
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -12757,8 +11796,6 @@ ApiKeyAuth ( Scopes: api_key )
     r = requests.get('/wallet/status', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -12792,8 +11829,6 @@ ApiKeyAuth ( Scopes: api_key )
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -12812,8 +11847,6 @@ ApiKeyAuth ( Scopes: api_key )
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -12841,8 +11874,6 @@ ApiKeyAuth ( Scopes: api_key )
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /wallet/status`
@@ -12863,7 +11894,6 @@ ApiKeyAuth ( Scopes: api_key )
       "walletHeight": 0,
       "error": "string"
     }
-    
     ```
 
 <h3 id="getwalletstatus-responses">Responses</h3>
@@ -12892,8 +11922,6 @@ ApiKeyAuth ( Scopes: api_key )
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json' \
       -H 'api_key: API_KEY'
-    
-    
     ```
 
 === "http"
@@ -12903,8 +11931,6 @@ ApiKeyAuth ( Scopes: api_key )
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -12928,8 +11954,6 @@ ApiKeyAuth ( Scopes: api_key )
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -12949,8 +11973,6 @@ ApiKeyAuth ( Scopes: api_key )
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -12966,8 +11988,6 @@ ApiKeyAuth ( Scopes: api_key )
     r = requests.post('/wallet/updateChangeAddress', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -13002,8 +12022,6 @@ ApiKeyAuth ( Scopes: api_key )
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -13022,8 +12040,6 @@ ApiKeyAuth ( Scopes: api_key )
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -13052,8 +12068,6 @@ ApiKeyAuth ( Scopes: api_key )
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /wallet/updateChangeAddress`
@@ -13066,7 +12080,6 @@ ApiKeyAuth ( Scopes: api_key )
 
     ```json
     "3WwbzW6u8hKWBcL1W7kNVMr25s2UHfSBnYtwSHvrRQt7DdPuoXrt"
-    
     ```
 
 <h3 id="walletupdatechangeaddress-parameters">Parameters</h3>
@@ -13087,7 +12100,6 @@ ApiKeyAuth ( Scopes: api_key )
       "reason": "Internal server error",
       "detail": "string"
     }
-    
     ```
 
 <h3 id="walletupdatechangeaddress-responses">Responses</h3>
@@ -13116,8 +12128,6 @@ ApiKeyAuth ( Scopes: api_key )
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json' \
       -H 'api_key: API_KEY'
-    
-    
     ```
 
 === "http"
@@ -13127,8 +12137,6 @@ ApiKeyAuth ( Scopes: api_key )
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -13154,8 +12162,6 @@ ApiKeyAuth ( Scopes: api_key )
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -13175,8 +12181,6 @@ ApiKeyAuth ( Scopes: api_key )
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -13192,8 +12196,6 @@ ApiKeyAuth ( Scopes: api_key )
     r = requests.post('/wallet/deriveKey', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -13228,8 +12230,6 @@ ApiKeyAuth ( Scopes: api_key )
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -13248,8 +12248,6 @@ ApiKeyAuth ( Scopes: api_key )
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -13278,8 +12276,6 @@ ApiKeyAuth ( Scopes: api_key )
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /wallet/deriveKey`
@@ -13294,7 +12290,6 @@ ApiKeyAuth ( Scopes: api_key )
     {
       "derivationPath": "m/1/2"
     }
-    
     ```
 
 <h3 id="walletderivekey-parameters">Parameters</h3>
@@ -13313,7 +12308,6 @@ ApiKeyAuth ( Scopes: api_key )
     {
       "address": "3WwbzW6u8hKWBcL1W7kNVMr25s2UHfSBnYtwSHvrRQt7DdPuoXrt"
     }
-    
     ```
 
 <h3 id="walletderivekey-responses">Responses</h3>
@@ -13341,8 +12335,6 @@ ApiKeyAuth ( Scopes: api_key )
     curl -X GET /wallet/deriveNextKey \
       -H 'Accept: application/json' \
       -H 'api_key: API_KEY'
-    
-    
     ```
 
 === "http"
@@ -13351,8 +12343,6 @@ ApiKeyAuth ( Scopes: api_key )
     GET /wallet/deriveNextKey HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -13375,8 +12365,6 @@ ApiKeyAuth ( Scopes: api_key )
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -13395,8 +12383,6 @@ ApiKeyAuth ( Scopes: api_key )
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -13411,8 +12397,6 @@ ApiKeyAuth ( Scopes: api_key )
     r = requests.get('/wallet/deriveNextKey', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -13446,8 +12430,6 @@ ApiKeyAuth ( Scopes: api_key )
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -13466,8 +12448,6 @@ ApiKeyAuth ( Scopes: api_key )
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -13495,8 +12475,6 @@ ApiKeyAuth ( Scopes: api_key )
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /wallet/deriveNextKey`
@@ -13514,7 +12492,6 @@ ApiKeyAuth ( Scopes: api_key )
       "derivationPath": "m/1/2",
       "address": "3WwbzW6u8hKWBcL1W7kNVMr25s2UHfSBnYtwSHvrRQt7DdPuoXrt"
     }
-    
     ```
 
 <h3 id="walletderivenextkey-responses">Responses</h3>
@@ -13542,8 +12519,6 @@ ApiKeyAuth ( Scopes: api_key )
     curl -X GET /wallet/balances \
       -H 'Accept: application/json' \
       -H 'api_key: API_KEY'
-    
-    
     ```
 
 === "http"
@@ -13552,8 +12527,6 @@ ApiKeyAuth ( Scopes: api_key )
     GET /wallet/balances HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -13576,8 +12549,6 @@ ApiKeyAuth ( Scopes: api_key )
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -13596,8 +12567,6 @@ ApiKeyAuth ( Scopes: api_key )
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -13612,8 +12581,6 @@ ApiKeyAuth ( Scopes: api_key )
     r = requests.get('/wallet/balances', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -13647,8 +12614,6 @@ ApiKeyAuth ( Scopes: api_key )
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -13667,8 +12632,6 @@ ApiKeyAuth ( Scopes: api_key )
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -13696,8 +12659,6 @@ ApiKeyAuth ( Scopes: api_key )
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /wallet/balances`
@@ -13721,7 +12682,6 @@ ApiKeyAuth ( Scopes: api_key )
         }
       ]
     }
-    
     ```
 
 <h3 id="walletbalances-responses">Responses</h3>
@@ -13749,8 +12709,6 @@ ApiKeyAuth ( Scopes: api_key )
     curl -X GET /wallet/transactions \
       -H 'Accept: application/json' \
       -H 'api_key: API_KEY'
-    
-    
     ```
 
 === "http"
@@ -13759,8 +12717,6 @@ ApiKeyAuth ( Scopes: api_key )
     GET /wallet/transactions HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -13783,8 +12739,6 @@ ApiKeyAuth ( Scopes: api_key )
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -13803,8 +12757,6 @@ ApiKeyAuth ( Scopes: api_key )
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -13819,8 +12771,6 @@ ApiKeyAuth ( Scopes: api_key )
     r = requests.get('/wallet/transactions', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -13854,8 +12804,6 @@ ApiKeyAuth ( Scopes: api_key )
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -13874,8 +12822,6 @@ ApiKeyAuth ( Scopes: api_key )
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -13903,8 +12849,6 @@ ApiKeyAuth ( Scopes: api_key )
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /wallet/transactions`
@@ -13973,7 +12917,6 @@ ApiKeyAuth ( Scopes: api_key )
         "size": 0
       }
     ]
-    
     ```
 
 <h3 id="wallettransactions-responses">Responses</h3>
@@ -14034,8 +12977,6 @@ ApiKeyAuth ( Scopes: api_key )
     curl -X GET /wallet/transactionById?id=string \
       -H 'Accept: application/json' \
       -H 'api_key: API_KEY'
-    
-    
     ```
 
 === "http"
@@ -14044,8 +12985,6 @@ ApiKeyAuth ( Scopes: api_key )
     GET /wallet/transactionById?id=string HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -14068,8 +13007,6 @@ ApiKeyAuth ( Scopes: api_key )
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -14089,8 +13026,6 @@ ApiKeyAuth ( Scopes: api_key )
     }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -14107,8 +13042,6 @@ ApiKeyAuth ( Scopes: api_key )
     }, headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -14142,8 +13075,6 @@ ApiKeyAuth ( Scopes: api_key )
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -14162,8 +13093,6 @@ ApiKeyAuth ( Scopes: api_key )
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -14191,8 +13120,6 @@ ApiKeyAuth ( Scopes: api_key )
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /wallet/transactionById`
@@ -14258,7 +13185,6 @@ ApiKeyAuth ( Scopes: api_key )
         "size": 0
       }
     ]
-    
     ```
 
 <h3 id="walletgettransaction-responses">Responses</h3>
@@ -14320,8 +13246,6 @@ ApiKeyAuth ( Scopes: api_key )
     curl -X GET /wallet/transactionsByScanId/{scanId} \
       -H 'Accept: application/json' \
       -H 'api_key: API_KEY'
-    
-    
     ```
 
 === "http"
@@ -14330,8 +13254,6 @@ ApiKeyAuth ( Scopes: api_key )
     GET /wallet/transactionsByScanId/{scanId} HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -14354,8 +13276,6 @@ ApiKeyAuth ( Scopes: api_key )
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -14374,8 +13294,6 @@ ApiKeyAuth ( Scopes: api_key )
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -14390,8 +13308,6 @@ ApiKeyAuth ( Scopes: api_key )
     r = requests.get('/wallet/transactionsByScanId/{scanId}', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -14425,8 +13341,6 @@ ApiKeyAuth ( Scopes: api_key )
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -14445,8 +13359,6 @@ ApiKeyAuth ( Scopes: api_key )
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -14474,8 +13386,6 @@ ApiKeyAuth ( Scopes: api_key )
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /wallet/transactionsByScanId/{scanId}`
@@ -14546,7 +13456,6 @@ ApiKeyAuth ( Scopes: api_key )
         "size": 0
       }
     ]
-    
     ```
 
 <h3 id="wallettransactionsbyscanid-responses">Responses</h3>
@@ -14608,8 +13517,6 @@ ApiKeyAuth ( Scopes: api_key )
     curl -X GET /wallet/boxes \
       -H 'Accept: application/json' \
       -H 'api_key: API_KEY'
-    
-    
     ```
 
 === "http"
@@ -14618,8 +13525,6 @@ ApiKeyAuth ( Scopes: api_key )
     GET /wallet/boxes HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -14642,8 +13547,6 @@ ApiKeyAuth ( Scopes: api_key )
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -14662,8 +13565,6 @@ ApiKeyAuth ( Scopes: api_key )
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -14678,8 +13579,6 @@ ApiKeyAuth ( Scopes: api_key )
     r = requests.get('/wallet/boxes', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -14713,8 +13612,6 @@ ApiKeyAuth ( Scopes: api_key )
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -14733,8 +13630,6 @@ ApiKeyAuth ( Scopes: api_key )
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -14762,8 +13657,6 @@ ApiKeyAuth ( Scopes: api_key )
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /wallet/boxes`
@@ -14819,7 +13712,6 @@ ApiKeyAuth ( Scopes: api_key )
         ]
       }
     ]
-    
     ```
 
 <h3 id="walletboxes-responses">Responses</h3>
@@ -14878,8 +13770,6 @@ ApiKeyAuth ( Scopes: api_key )
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json' \
       -H 'api_key: API_KEY'
-    
-    
     ```
 
 === "http"
@@ -14889,8 +13779,6 @@ ApiKeyAuth ( Scopes: api_key )
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -14922,8 +13810,6 @@ ApiKeyAuth ( Scopes: api_key )
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -14943,8 +13829,6 @@ ApiKeyAuth ( Scopes: api_key )
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -14960,8 +13844,6 @@ ApiKeyAuth ( Scopes: api_key )
     r = requests.post('/wallet/boxes/collect', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -14996,8 +13878,6 @@ ApiKeyAuth ( Scopes: api_key )
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -15016,8 +13896,6 @@ ApiKeyAuth ( Scopes: api_key )
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -15046,8 +13924,6 @@ ApiKeyAuth ( Scopes: api_key )
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /wallet/boxes/collect`
@@ -15068,7 +13944,6 @@ ApiKeyAuth ( Scopes: api_key )
       ],
       "targetBalance": 0
     }
-    
     ```
 
 <h3 id="walletboxescollect-parameters">Parameters</h3>
@@ -15117,7 +13992,6 @@ ApiKeyAuth ( Scopes: api_key )
         ]
       }
     ]
-    
     ```
 
 <h3 id="walletboxescollect-responses">Responses</h3>
@@ -15175,8 +14049,6 @@ ApiKeyAuth ( Scopes: api_key )
     curl -X GET /wallet/boxes/unspent \
       -H 'Accept: application/json' \
       -H 'api_key: API_KEY'
-    
-    
     ```
 
 === "http"
@@ -15185,8 +14057,6 @@ ApiKeyAuth ( Scopes: api_key )
     GET /wallet/boxes/unspent HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -15209,8 +14079,6 @@ ApiKeyAuth ( Scopes: api_key )
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -15229,8 +14097,6 @@ ApiKeyAuth ( Scopes: api_key )
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -15245,8 +14111,6 @@ ApiKeyAuth ( Scopes: api_key )
     r = requests.get('/wallet/boxes/unspent', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -15280,8 +14144,6 @@ ApiKeyAuth ( Scopes: api_key )
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -15300,8 +14162,6 @@ ApiKeyAuth ( Scopes: api_key )
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -15329,8 +14189,6 @@ ApiKeyAuth ( Scopes: api_key )
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /wallet/boxes/unspent`
@@ -15386,7 +14244,6 @@ ApiKeyAuth ( Scopes: api_key )
         ]
       }
     ]
-    
     ```
 
 <h3 id="walletunspentboxes-responses">Responses</h3>
@@ -15444,8 +14301,6 @@ ApiKeyAuth ( Scopes: api_key )
     curl -X GET /wallet/balances/withUnconfirmed \
       -H 'Accept: application/json' \
       -H 'api_key: API_KEY'
-    
-    
     ```
 
 === "http"
@@ -15454,8 +14309,6 @@ ApiKeyAuth ( Scopes: api_key )
     GET /wallet/balances/withUnconfirmed HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -15478,8 +14331,6 @@ ApiKeyAuth ( Scopes: api_key )
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -15498,8 +14349,6 @@ ApiKeyAuth ( Scopes: api_key )
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -15514,8 +14363,6 @@ ApiKeyAuth ( Scopes: api_key )
     r = requests.get('/wallet/balances/withUnconfirmed', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -15549,8 +14396,6 @@ ApiKeyAuth ( Scopes: api_key )
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -15569,8 +14414,6 @@ ApiKeyAuth ( Scopes: api_key )
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -15598,8 +14441,6 @@ ApiKeyAuth ( Scopes: api_key )
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /wallet/balances/withUnconfirmed`
@@ -15623,7 +14464,6 @@ ApiKeyAuth ( Scopes: api_key )
         }
       ]
     }
-    
     ```
 
 <h3 id="walletbalancesunconfirmed-responses">Responses</h3>
@@ -15651,8 +14491,6 @@ ApiKeyAuth ( Scopes: api_key )
     curl -X GET /wallet/addresses \
       -H 'Accept: application/json' \
       -H 'api_key: API_KEY'
-    
-    
     ```
 
 === "http"
@@ -15661,8 +14499,6 @@ ApiKeyAuth ( Scopes: api_key )
     GET /wallet/addresses HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -15685,8 +14521,6 @@ ApiKeyAuth ( Scopes: api_key )
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -15705,8 +14539,6 @@ ApiKeyAuth ( Scopes: api_key )
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -15721,8 +14553,6 @@ ApiKeyAuth ( Scopes: api_key )
     r = requests.get('/wallet/addresses', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -15756,8 +14586,6 @@ ApiKeyAuth ( Scopes: api_key )
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -15776,8 +14604,6 @@ ApiKeyAuth ( Scopes: api_key )
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -15805,8 +14631,6 @@ ApiKeyAuth ( Scopes: api_key )
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /wallet/addresses`
@@ -15823,7 +14647,6 @@ ApiKeyAuth ( Scopes: api_key )
     [
       "3WwbzW6u8hKWBcL1W7kNVMr25s2UHfSBnYtwSHvrRQt7DdPuoXrt"
     ]
-    
     ```
 
 <h3 id="walletaddresses-responses">Responses</h3>
@@ -15860,8 +14683,6 @@ ApiKeyAuth ( Scopes: api_key )
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json' \
       -H 'api_key: API_KEY'
-    
-    
     ```
 
 === "http"
@@ -15871,8 +14692,6 @@ ApiKeyAuth ( Scopes: api_key )
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -15919,8 +14738,6 @@ ApiKeyAuth ( Scopes: api_key )
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -15940,8 +14757,6 @@ ApiKeyAuth ( Scopes: api_key )
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -15957,8 +14772,6 @@ ApiKeyAuth ( Scopes: api_key )
     r = requests.post('/wallet/transaction/generate', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -15993,8 +14806,6 @@ ApiKeyAuth ( Scopes: api_key )
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -16013,8 +14824,6 @@ ApiKeyAuth ( Scopes: api_key )
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -16043,8 +14852,6 @@ ApiKeyAuth ( Scopes: api_key )
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /wallet/transaction/generate`
@@ -16080,7 +14887,6 @@ ApiKeyAuth ( Scopes: api_key )
         "string"
       ]
     }
-    
     ```
 
 <h3 id="wallettransactiongenerate-parameters">Parameters</h3>
@@ -16140,7 +14946,6 @@ You may specify boxes to spend by providing them in "inputsRaw". Please note you
       ],
       "size": 0
     }
-    
     ```
 
 <h3 id="wallettransactiongenerate-responses">Responses</h3>
@@ -16170,8 +14975,6 @@ ApiKeyAuth ( Scopes: api_key )
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json' \
       -H 'api_key: API_KEY'
-    
-    
     ```
 
 === "http"
@@ -16181,8 +14984,6 @@ ApiKeyAuth ( Scopes: api_key )
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -16229,8 +15030,6 @@ ApiKeyAuth ( Scopes: api_key )
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -16250,8 +15049,6 @@ ApiKeyAuth ( Scopes: api_key )
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -16267,8 +15064,6 @@ ApiKeyAuth ( Scopes: api_key )
     r = requests.post('/wallet/transaction/generateUnsigned', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -16303,8 +15098,6 @@ ApiKeyAuth ( Scopes: api_key )
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -16323,8 +15116,6 @@ ApiKeyAuth ( Scopes: api_key )
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -16353,8 +15144,6 @@ ApiKeyAuth ( Scopes: api_key )
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /wallet/transaction/generateUnsigned`
@@ -16390,7 +15179,6 @@ ApiKeyAuth ( Scopes: api_key )
         "string"
       ]
     }
-    
     ```
 
 <h3 id="walletunsignedtransactiongenerate-parameters">Parameters</h3>
@@ -16441,7 +15229,6 @@ ApiKeyAuth ( Scopes: api_key )
         }
       ]
     }
-    
     ```
 
 <h3 id="walletunsignedtransactiongenerate-responses">Responses</h3>
@@ -16471,8 +15258,6 @@ ApiKeyAuth ( Scopes: api_key )
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json' \
       -H 'api_key: API_KEY'
-    
-    
     ```
 
 === "http"
@@ -16482,8 +15267,6 @@ ApiKeyAuth ( Scopes: api_key )
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -16599,8 +15382,6 @@ ApiKeyAuth ( Scopes: api_key )
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -16620,8 +15401,6 @@ ApiKeyAuth ( Scopes: api_key )
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -16637,8 +15416,6 @@ ApiKeyAuth ( Scopes: api_key )
     r = requests.post('/wallet/transaction/sign', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -16673,8 +15450,6 @@ ApiKeyAuth ( Scopes: api_key )
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -16693,8 +15468,6 @@ ApiKeyAuth ( Scopes: api_key )
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -16723,8 +15496,6 @@ ApiKeyAuth ( Scopes: api_key )
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /wallet/transaction/sign`
@@ -16829,7 +15600,6 @@ ApiKeyAuth ( Scopes: api_key )
         ]
       }
     }
-    
     ```
 
 <h3 id="wallettransactionsign-parameters">Parameters</h3>
@@ -16889,7 +15659,6 @@ Please note that the unsigned transaction contains only identifiers of inputs an
       ],
       "size": 0
     }
-    
     ```
 
 <h3 id="wallettransactionsign-responses">Responses</h3>
@@ -16919,8 +15688,6 @@ ApiKeyAuth ( Scopes: api_key )
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json' \
       -H 'api_key: API_KEY'
-    
-    
     ```
 
 === "http"
@@ -16930,8 +15697,6 @@ ApiKeyAuth ( Scopes: api_key )
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -16978,8 +15743,6 @@ ApiKeyAuth ( Scopes: api_key )
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -16999,8 +15762,6 @@ ApiKeyAuth ( Scopes: api_key )
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -17016,8 +15777,6 @@ ApiKeyAuth ( Scopes: api_key )
     r = requests.post('/wallet/transaction/send', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -17052,8 +15811,6 @@ ApiKeyAuth ( Scopes: api_key )
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -17072,8 +15829,6 @@ ApiKeyAuth ( Scopes: api_key )
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -17102,8 +15857,6 @@ ApiKeyAuth ( Scopes: api_key )
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /wallet/transaction/send`
@@ -17139,7 +15892,6 @@ ApiKeyAuth ( Scopes: api_key )
         "string"
       ]
     }
-    
     ```
 
 <h3 id="wallettransactiongenerateandsend-parameters">Parameters</h3>
@@ -17156,7 +15908,6 @@ ApiKeyAuth ( Scopes: api_key )
 
     ```json
     "2ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117"
-    
     ```
 
 <h3 id="wallettransactiongenerateandsend-responses">Responses</h3>
@@ -17186,8 +15937,6 @@ ApiKeyAuth ( Scopes: api_key )
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json' \
       -H 'api_key: API_KEY'
-    
-    
     ```
 
 === "http"
@@ -17197,8 +15946,6 @@ ApiKeyAuth ( Scopes: api_key )
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -17236,8 +15983,6 @@ ApiKeyAuth ( Scopes: api_key )
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -17257,8 +16002,6 @@ ApiKeyAuth ( Scopes: api_key )
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -17274,8 +16017,6 @@ ApiKeyAuth ( Scopes: api_key )
     r = requests.post('/wallet/payment/send', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -17310,8 +16051,6 @@ ApiKeyAuth ( Scopes: api_key )
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -17330,8 +16069,6 @@ ApiKeyAuth ( Scopes: api_key )
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -17360,8 +16097,6 @@ ApiKeyAuth ( Scopes: api_key )
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /wallet/payment/send`
@@ -17388,7 +16123,6 @@ ApiKeyAuth ( Scopes: api_key )
         }
       }
     ]
-    
     ```
 
 <h3 id="walletpaymenttransactiongenerateandsend-parameters">Parameters</h3>
@@ -17405,7 +16139,6 @@ ApiKeyAuth ( Scopes: api_key )
 
     ```json
     "2ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117"
-    
     ```
 
 <h3 id="walletpaymenttransactiongenerateandsend-responses">Responses</h3>
@@ -17435,8 +16168,6 @@ ApiKeyAuth ( Scopes: api_key )
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json' \
       -H 'api_key: API_KEY'
-    
-    
     ```
 
 === "http"
@@ -17446,8 +16177,6 @@ ApiKeyAuth ( Scopes: api_key )
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -17471,8 +16200,6 @@ ApiKeyAuth ( Scopes: api_key )
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -17492,8 +16219,6 @@ ApiKeyAuth ( Scopes: api_key )
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -17509,8 +16234,6 @@ ApiKeyAuth ( Scopes: api_key )
     r = requests.post('/wallet/getPrivateKey', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -17545,8 +16268,6 @@ ApiKeyAuth ( Scopes: api_key )
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -17565,8 +16286,6 @@ ApiKeyAuth ( Scopes: api_key )
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -17595,8 +16314,6 @@ ApiKeyAuth ( Scopes: api_key )
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /wallet/getPrivateKey`
@@ -17609,7 +16326,6 @@ ApiKeyAuth ( Scopes: api_key )
 
     ```json
     "3WwbzW6u8hKWBcL1W7kNVMr25s2UHfSBnYtwSHvrRQt7DdPuoXrt"
-    
     ```
 
 <h3 id="walletgetprivatekey-parameters">Parameters</h3>
@@ -17626,7 +16342,6 @@ ApiKeyAuth ( Scopes: api_key )
 
     ```json
     "433080ff80d0d52d7f8bfffff47f00807f44f680000949b800007f7f7ff1017f"
-    
     ```
 
 <h3 id="walletgetprivatekey-responses">Responses</h3>
@@ -17656,8 +16371,6 @@ ApiKeyAuth ( Scopes: api_key )
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json' \
       -H 'api_key: API_KEY'
-    
-    
     ```
 
 === "http"
@@ -17667,8 +16380,6 @@ ApiKeyAuth ( Scopes: api_key )
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -17748,8 +16459,6 @@ ApiKeyAuth ( Scopes: api_key )
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -17769,8 +16478,6 @@ ApiKeyAuth ( Scopes: api_key )
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -17786,8 +16493,6 @@ ApiKeyAuth ( Scopes: api_key )
     r = requests.post('/wallet/generateCommitments', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -17822,8 +16527,6 @@ ApiKeyAuth ( Scopes: api_key )
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -17842,8 +16545,6 @@ ApiKeyAuth ( Scopes: api_key )
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -17872,8 +16573,6 @@ ApiKeyAuth ( Scopes: api_key )
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /wallet/generateCommitments`
@@ -17942,7 +16641,6 @@ ApiKeyAuth ( Scopes: api_key )
         "string"
       ]
     }
-    
     ```
 
 <h3 id="generatecommitments-parameters">Parameters</h3>
@@ -17994,7 +16692,6 @@ ApiKeyAuth ( Scopes: api_key )
         }
       ]
     }
-    
     ```
 
 <h3 id="generatecommitments-responses">Responses</h3>
@@ -18024,8 +16721,6 @@ ApiKeyAuth ( Scopes: api_key )
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json' \
       -H 'api_key: API_KEY'
-    
-    
     ```
 
 === "http"
@@ -18035,8 +16730,6 @@ ApiKeyAuth ( Scopes: api_key )
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -18126,8 +16819,6 @@ ApiKeyAuth ( Scopes: api_key )
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -18147,8 +16838,6 @@ ApiKeyAuth ( Scopes: api_key )
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -18164,8 +16853,6 @@ ApiKeyAuth ( Scopes: api_key )
     r = requests.post('/wallet/extractHints', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -18200,8 +16887,6 @@ ApiKeyAuth ( Scopes: api_key )
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -18220,8 +16905,6 @@ ApiKeyAuth ( Scopes: api_key )
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -18250,8 +16933,6 @@ ApiKeyAuth ( Scopes: api_key )
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /wallet/extractHints`
@@ -18330,7 +17011,6 @@ ApiKeyAuth ( Scopes: api_key )
         "string"
       ]
     }
-    
     ```
 
 <h3 id="extracthints-parameters">Parameters</h3>
@@ -18382,7 +17062,6 @@ ApiKeyAuth ( Scopes: api_key )
         }
       ]
     }
-    
     ```
 
 <h3 id="extracthints-responses">Responses</h3>
@@ -18413,8 +17092,6 @@ ApiKeyAuth ( Scopes: api_key )
     curl -X GET /mining/candidate \
       -H 'Accept: application/json' \
       -H 'api_key: API_KEY'
-    
-    
     ```
 
 === "http"
@@ -18423,8 +17100,6 @@ ApiKeyAuth ( Scopes: api_key )
     GET /mining/candidate HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -18447,8 +17122,6 @@ ApiKeyAuth ( Scopes: api_key )
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -18467,8 +17140,6 @@ ApiKeyAuth ( Scopes: api_key )
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -18483,8 +17154,6 @@ ApiKeyAuth ( Scopes: api_key )
     r = requests.get('/mining/candidate', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -18518,8 +17187,6 @@ ApiKeyAuth ( Scopes: api_key )
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -18538,8 +17205,6 @@ ApiKeyAuth ( Scopes: api_key )
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -18567,8 +17232,6 @@ ApiKeyAuth ( Scopes: api_key )
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /mining/candidate`
@@ -18601,7 +17264,6 @@ ApiKeyAuth ( Scopes: api_key )
         ]
       }
     }
-    
     ```
 
 <h3 id="miningrequestblockcandidate-responses">Responses</h3>
@@ -18630,8 +17292,6 @@ ApiKeyAuth ( Scopes: api_key )
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json' \
       -H 'api_key: API_KEY'
-    
-    
     ```
 
 === "http"
@@ -18641,8 +17301,6 @@ ApiKeyAuth ( Scopes: api_key )
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -18706,8 +17364,6 @@ ApiKeyAuth ( Scopes: api_key )
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -18727,8 +17383,6 @@ ApiKeyAuth ( Scopes: api_key )
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -18744,8 +17398,6 @@ ApiKeyAuth ( Scopes: api_key )
     r = requests.post('/mining/candidateWithTxs', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -18780,8 +17432,6 @@ ApiKeyAuth ( Scopes: api_key )
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -18800,8 +17450,6 @@ ApiKeyAuth ( Scopes: api_key )
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -18830,8 +17478,6 @@ ApiKeyAuth ( Scopes: api_key )
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /mining/candidateWithTxs`
@@ -18884,7 +17530,6 @@ ApiKeyAuth ( Scopes: api_key )
         "size": 0
       }
     ]
-    
     ```
 
 <h3 id="miningrequestblockcandidatewithmandatorytransactions-parameters">Parameters</h3>
@@ -18919,7 +17564,6 @@ ApiKeyAuth ( Scopes: api_key )
         ]
       }
     }
-    
     ```
 
 <h3 id="miningrequestblockcandidatewithmandatorytransactions-responses">Responses</h3>
@@ -18947,8 +17591,6 @@ ApiKeyAuth ( Scopes: api_key )
     curl -X GET /mining/rewardAddress \
       -H 'Accept: application/json' \
       -H 'api_key: API_KEY'
-    
-    
     ```
 
 === "http"
@@ -18957,8 +17599,6 @@ ApiKeyAuth ( Scopes: api_key )
     GET /mining/rewardAddress HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -18981,8 +17621,6 @@ ApiKeyAuth ( Scopes: api_key )
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -19001,8 +17639,6 @@ ApiKeyAuth ( Scopes: api_key )
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -19017,8 +17653,6 @@ ApiKeyAuth ( Scopes: api_key )
     r = requests.get('/mining/rewardAddress', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -19052,8 +17686,6 @@ ApiKeyAuth ( Scopes: api_key )
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -19072,8 +17704,6 @@ ApiKeyAuth ( Scopes: api_key )
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -19101,8 +17731,6 @@ ApiKeyAuth ( Scopes: api_key )
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /mining/rewardAddress`
@@ -19119,7 +17747,6 @@ ApiKeyAuth ( Scopes: api_key )
     {
       "rewardAddress": "3WwbzW6u8hKWBcL1W7kNVMr25s2UHfSBnYtwSHvrRQt7DdPuoXrt"
     }
-    
     ```
 
 <h3 id="miningreadminerrewardaddress-responses">Responses</h3>
@@ -19147,8 +17774,6 @@ ApiKeyAuth ( Scopes: api_key )
     curl -X GET /mining/rewardPublicKey \
       -H 'Accept: application/json' \
       -H 'api_key: API_KEY'
-    
-    
     ```
 
 === "http"
@@ -19157,8 +17782,6 @@ ApiKeyAuth ( Scopes: api_key )
     GET /mining/rewardPublicKey HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -19181,8 +17804,6 @@ ApiKeyAuth ( Scopes: api_key )
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -19201,8 +17822,6 @@ ApiKeyAuth ( Scopes: api_key )
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -19217,8 +17836,6 @@ ApiKeyAuth ( Scopes: api_key )
     r = requests.get('/mining/rewardPublicKey', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -19252,8 +17869,6 @@ ApiKeyAuth ( Scopes: api_key )
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -19272,8 +17887,6 @@ ApiKeyAuth ( Scopes: api_key )
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -19301,8 +17914,6 @@ ApiKeyAuth ( Scopes: api_key )
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /mining/rewardPublicKey`
@@ -19319,7 +17930,6 @@ ApiKeyAuth ( Scopes: api_key )
     {
       "rewardPubkey": "02a7955281885bf0f0ca4a48678848cad8dc5b328ce8bc1d4481d041c98e891ff3"
     }
-    
     ```
 
 <h3 id="miningreadminerrewardpubkey-responses">Responses</h3>
@@ -19348,8 +17958,6 @@ ApiKeyAuth ( Scopes: api_key )
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json' \
       -H 'api_key: API_KEY'
-    
-    
     ```
 
 === "http"
@@ -19359,8 +17967,6 @@ ApiKeyAuth ( Scopes: api_key )
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -19389,8 +17995,6 @@ ApiKeyAuth ( Scopes: api_key )
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -19410,8 +18014,6 @@ ApiKeyAuth ( Scopes: api_key )
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -19427,8 +18029,6 @@ ApiKeyAuth ( Scopes: api_key )
     r = requests.post('/mining/solution', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -19463,8 +18063,6 @@ ApiKeyAuth ( Scopes: api_key )
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -19483,8 +18081,6 @@ ApiKeyAuth ( Scopes: api_key )
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -19513,8 +18109,6 @@ ApiKeyAuth ( Scopes: api_key )
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /mining/solution`
@@ -19532,7 +18126,6 @@ ApiKeyAuth ( Scopes: api_key )
       "n": "0000000000000000",
       "d": 987654321
     }
-    
     ```
 
 <h3 id="miningsubmitsolution-parameters">Parameters</h3>
@@ -19553,7 +18146,6 @@ ApiKeyAuth ( Scopes: api_key )
       "reason": "Internal server error",
       "detail": "string"
     }
-    
     ```
 
 <h3 id="miningsubmitsolution-responses">Responses</h3>
@@ -19585,8 +18177,6 @@ ApiKeyAuth ( Scopes: api_key )
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json' \
       -H 'api_key: API_KEY'
-    
-    
     ```
 
 === "http"
@@ -19596,8 +18186,6 @@ ApiKeyAuth ( Scopes: api_key )
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -19623,8 +18211,6 @@ ApiKeyAuth ( Scopes: api_key )
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -19644,8 +18230,6 @@ ApiKeyAuth ( Scopes: api_key )
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -19661,8 +18245,6 @@ ApiKeyAuth ( Scopes: api_key )
     r = requests.post('/utxo/getBoxesBinaryProof', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -19697,8 +18279,6 @@ ApiKeyAuth ( Scopes: api_key )
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -19717,8 +18297,6 @@ ApiKeyAuth ( Scopes: api_key )
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -19747,8 +18325,6 @@ ApiKeyAuth ( Scopes: api_key )
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /utxo/getBoxesBinaryProof`
@@ -19763,7 +18339,6 @@ ApiKeyAuth ( Scopes: api_key )
     [
       "1ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117"
     ]
-    
     ```
 
 <h3 id="getboxesbinaryproof-parameters">Parameters</h3>
@@ -19780,7 +18355,6 @@ ApiKeyAuth ( Scopes: api_key )
 
     ```json
     "3ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd1173ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd1173ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117"
-    
     ```
 
 <h3 id="getboxesbinaryproof-responses">Responses</h3>
@@ -19808,8 +18382,6 @@ ApiKeyAuth ( Scopes: api_key )
     ## You can also use wget
     curl -X GET /utxo/byId/{boxId} \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -19818,8 +18390,6 @@ ApiKeyAuth ( Scopes: api_key )
     GET /utxo/byId/{boxId} HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -19841,8 +18411,6 @@ ApiKeyAuth ( Scopes: api_key )
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -19860,8 +18428,6 @@ ApiKeyAuth ( Scopes: api_key )
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -19875,8 +18441,6 @@ ApiKeyAuth ( Scopes: api_key )
     r = requests.get('/utxo/byId/{boxId}', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -19909,8 +18473,6 @@ ApiKeyAuth ( Scopes: api_key )
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -19929,8 +18491,6 @@ ApiKeyAuth ( Scopes: api_key )
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -19957,8 +18517,6 @@ ApiKeyAuth ( Scopes: api_key )
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /utxo/byId/{boxId}`
@@ -19995,7 +18553,6 @@ ApiKeyAuth ( Scopes: api_key )
       "transactionId": "2ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117",
       "index": 0
     }
-    
     ```
 
 <h3 id="getboxbyid-responses">Responses</h3>
@@ -20022,8 +18579,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /utxo/byIdBinary/{boxId} \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -20032,8 +18587,6 @@ This operation does not require authentication
     GET /utxo/byIdBinary/{boxId} HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -20055,8 +18608,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -20074,8 +18625,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -20089,8 +18638,6 @@ This operation does not require authentication
     r = requests.get('/utxo/byIdBinary/{boxId}', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -20123,8 +18670,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -20143,8 +18688,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -20171,8 +18714,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /utxo/byIdBinary/{boxId}`
@@ -20196,7 +18737,6 @@ This operation does not require authentication
       "boxId": "1ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117",
       "bytes": "4ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117"
     }
-    
     ```
 
 <h3 id="getboxbyidbinary-responses">Responses</h3>
@@ -20223,8 +18763,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /utxo/withPool/byId/{boxId} \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -20233,8 +18771,6 @@ This operation does not require authentication
     GET /utxo/withPool/byId/{boxId} HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -20256,8 +18792,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -20275,8 +18809,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -20290,8 +18822,6 @@ This operation does not require authentication
     r = requests.get('/utxo/withPool/byId/{boxId}', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -20324,8 +18854,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -20344,8 +18872,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -20372,8 +18898,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /utxo/withPool/byId/{boxId}`
@@ -20410,7 +18934,6 @@ This operation does not require authentication
       "transactionId": "2ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117",
       "index": 0
     }
-    
     ```
 
 <h3 id="getboxwithpoolbyid-responses">Responses</h3>
@@ -20438,8 +18961,6 @@ This operation does not require authentication
     curl -X POST /utxo/withPool/byIds \
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -20449,8 +18970,6 @@ This operation does not require authentication
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -20475,8 +18994,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -20495,8 +19012,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -20511,8 +19026,6 @@ This operation does not require authentication
     r = requests.post('/utxo/withPool/byIds', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -20546,8 +19059,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -20566,8 +19077,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -20595,8 +19104,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /utxo/withPool/byIds`
@@ -20611,7 +19118,6 @@ This operation does not require authentication
     [
       "string"
     ]
-    
     ```
 
 <h3 id="getboxwithpoolbyids-parameters">Parameters</h3>
@@ -20646,7 +19152,6 @@ This operation does not require authentication
         "index": 0
       }
     ]
-    
     ```
 
 <h3 id="getboxwithpoolbyids-responses">Responses</h3>
@@ -20692,8 +19197,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /utxo/withPool/byIdBinary/{boxId} \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -20702,8 +19205,6 @@ This operation does not require authentication
     GET /utxo/withPool/byIdBinary/{boxId} HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -20725,8 +19226,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -20744,8 +19243,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -20759,8 +19256,6 @@ This operation does not require authentication
     r = requests.get('/utxo/withPool/byIdBinary/{boxId}', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -20793,8 +19288,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -20813,8 +19306,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -20841,8 +19332,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /utxo/withPool/byIdBinary/{boxId}`
@@ -20866,7 +19355,6 @@ This operation does not require authentication
       "boxId": "1ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117",
       "bytes": "4ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117"
     }
-    
     ```
 
 <h3 id="getboxwithpoolbyidbinary-responses">Responses</h3>
@@ -20892,16 +19380,12 @@ This operation does not require authentication
     ```shell
     ## You can also use wget
     curl -X GET /utxo/getSnapshotsInfo
-    
-    
     ```
 
 === "http"
 
     ```http
     GET /utxo/getSnapshotsInfo HTTP/1.1
-    
-    
     ```
 
 === "javascript"
@@ -20918,8 +19402,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -20933,8 +19415,6 @@ This operation does not require authentication
       }
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -20945,8 +19425,6 @@ This operation does not require authentication
     r = requests.get('/utxo/getSnapshotsInfo')
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -20975,8 +19453,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -20995,8 +19471,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -21019,8 +19493,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /utxo/getSnapshotsInfo`
@@ -21049,8 +19521,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /utxo/genesis \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -21059,8 +19529,6 @@ This operation does not require authentication
     GET /utxo/genesis HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -21082,8 +19550,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -21101,8 +19567,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -21116,8 +19580,6 @@ This operation does not require authentication
     r = requests.get('/utxo/genesis', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -21150,8 +19612,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -21170,8 +19630,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -21198,8 +19656,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /utxo/genesis`
@@ -21232,7 +19688,6 @@ This operation does not require authentication
         "index": 0
       }
     ]
-    
     ```
 
 <h3 id="genesisboxes-responses">Responses</h3>
@@ -21282,8 +19737,6 @@ This operation does not require authentication
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json' \
       -H 'api_key: API_KEY'
-    
-    
     ```
 
 === "http"
@@ -21293,8 +19746,6 @@ This operation does not require authentication
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -21320,8 +19771,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -21341,8 +19790,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -21358,8 +19805,6 @@ This operation does not require authentication
     r = requests.post('/script/p2sAddress', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -21394,8 +19839,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -21414,8 +19857,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -21444,8 +19885,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /script/p2sAddress`
@@ -21460,7 +19899,6 @@ This operation does not require authentication
     {
       "source": "string"
     }
-    
     ```
 
 <h3 id="scriptp2saddress-parameters">Parameters</h3>
@@ -21479,7 +19917,6 @@ This operation does not require authentication
     {
       "address": "3WwbzW6u8hKWBcL1W7kNVMr25s2UHfSBnYtwSHvrRQt7DdPuoXrt"
     }
-    
     ```
 
 <h3 id="scriptp2saddress-responses">Responses</h3>
@@ -21509,8 +19946,6 @@ ApiKeyAuth ( Scopes: api_key )
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json' \
       -H 'api_key: API_KEY'
-    
-    
     ```
 
 === "http"
@@ -21520,8 +19955,6 @@ ApiKeyAuth ( Scopes: api_key )
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -21547,8 +19980,6 @@ ApiKeyAuth ( Scopes: api_key )
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -21568,8 +19999,6 @@ ApiKeyAuth ( Scopes: api_key )
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -21585,8 +20014,6 @@ ApiKeyAuth ( Scopes: api_key )
     r = requests.post('/script/p2shAddress', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -21621,8 +20048,6 @@ ApiKeyAuth ( Scopes: api_key )
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -21641,8 +20066,6 @@ ApiKeyAuth ( Scopes: api_key )
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -21671,8 +20094,6 @@ ApiKeyAuth ( Scopes: api_key )
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /script/p2shAddress`
@@ -21687,7 +20108,6 @@ ApiKeyAuth ( Scopes: api_key )
     {
       "source": "string"
     }
-    
     ```
 
 <h3 id="scriptp2shaddress-parameters">Parameters</h3>
@@ -21706,7 +20126,6 @@ ApiKeyAuth ( Scopes: api_key )
     {
       "address": "3WwbzW6u8hKWBcL1W7kNVMr25s2UHfSBnYtwSHvrRQt7DdPuoXrt"
     }
-    
     ```
 
 <h3 id="scriptp2shaddress-responses">Responses</h3>
@@ -21734,8 +20153,6 @@ ApiKeyAuth ( Scopes: api_key )
     ## You can also use wget
     curl -X GET /script/addressToTree/{address} \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -21744,8 +20161,6 @@ ApiKeyAuth ( Scopes: api_key )
     GET /script/addressToTree/{address} HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -21767,8 +20182,6 @@ ApiKeyAuth ( Scopes: api_key )
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -21786,8 +20199,6 @@ ApiKeyAuth ( Scopes: api_key )
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -21801,8 +20212,6 @@ ApiKeyAuth ( Scopes: api_key )
     r = requests.get('/script/addressToTree/{address}', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -21835,8 +20244,6 @@ ApiKeyAuth ( Scopes: api_key )
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -21855,8 +20262,6 @@ ApiKeyAuth ( Scopes: api_key )
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -21883,8 +20288,6 @@ ApiKeyAuth ( Scopes: api_key )
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /script/addressToTree/{address}`
@@ -21907,7 +20310,6 @@ ApiKeyAuth ( Scopes: api_key )
     {
       "tree": "02a7955281885bf0f0ca4a48678848cad8dc5b328ce8bc1d4481d041c98e891ff3"
     }
-    
     ```
 
 <h3 id="addresstotree-responses">Responses</h3>
@@ -21933,8 +20335,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /script/addressToBytes/{address} \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -21943,8 +20343,6 @@ This operation does not require authentication
     GET /script/addressToBytes/{address} HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -21966,8 +20364,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -21985,8 +20381,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -22000,8 +20394,6 @@ This operation does not require authentication
     r = requests.get('/script/addressToBytes/{address}', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -22034,8 +20426,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -22054,8 +20444,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -22082,8 +20470,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /script/addressToBytes/{address}`
@@ -22106,7 +20492,6 @@ This operation does not require authentication
     {
       "bytes": "4ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117"
     }
-    
     ```
 
 <h3 id="addresstobytes-responses">Responses</h3>
@@ -22134,8 +20519,6 @@ This operation does not require authentication
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json' \
       -H 'api_key: API_KEY'
-    
-    
     ```
 
 === "http"
@@ -22145,8 +20528,6 @@ This operation does not require authentication
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -22306,8 +20687,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -22327,8 +20706,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -22344,8 +20721,6 @@ This operation does not require authentication
     r = requests.post('/script/executeWithContext', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -22380,8 +20755,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -22400,8 +20773,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -22430,8 +20801,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /script/executeWithContext`
@@ -22580,7 +20949,6 @@ This operation does not require authentication
         "initCost": 0
       }
     }
-    
     ```
 
 <h3 id="executewithcontext-parameters">Parameters</h3>
@@ -22603,7 +20971,6 @@ This operation does not require authentication
       },
       "cost": 10
     }
-    
     ```
 
 <h3 id="executewithcontext-responses">Responses</h3>
@@ -22635,8 +21002,6 @@ ApiKeyAuth ( Scopes: api_key )
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json' \
       -H 'api_key: API_KEY'
-    
-    
     ```
 
 === "http"
@@ -22646,8 +21011,6 @@ ApiKeyAuth ( Scopes: api_key )
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -22679,8 +21042,6 @@ ApiKeyAuth ( Scopes: api_key )
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -22700,8 +21061,6 @@ ApiKeyAuth ( Scopes: api_key )
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -22717,8 +21076,6 @@ ApiKeyAuth ( Scopes: api_key )
     r = requests.post('/scan/register', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -22753,8 +21110,6 @@ ApiKeyAuth ( Scopes: api_key )
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -22773,8 +21128,6 @@ ApiKeyAuth ( Scopes: api_key )
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -22803,8 +21156,6 @@ ApiKeyAuth ( Scopes: api_key )
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /scan/register`
@@ -22825,7 +21176,6 @@ ApiKeyAuth ( Scopes: api_key )
         "assetId": "02dada811a888cd0dc7a0a41739a3ad9b0f427741fe6ca19700cf1a51200c96bf7"
       }
     }
-    
     ```
 
 <h3 id="registerscan-parameters">Parameters</h3>
@@ -22844,7 +21194,6 @@ ApiKeyAuth ( Scopes: api_key )
     {
       "scanId": 0
     }
-    
     ```
 
 <h3 id="registerscan-responses">Responses</h3>
@@ -22874,8 +21223,6 @@ ApiKeyAuth ( Scopes: api_key )
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json' \
       -H 'api_key: API_KEY'
-    
-    
     ```
 
 === "http"
@@ -22885,8 +21232,6 @@ ApiKeyAuth ( Scopes: api_key )
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -22912,8 +21257,6 @@ ApiKeyAuth ( Scopes: api_key )
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -22933,8 +21276,6 @@ ApiKeyAuth ( Scopes: api_key )
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -22950,8 +21291,6 @@ ApiKeyAuth ( Scopes: api_key )
     r = requests.post('/scan/deregister', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -22986,8 +21325,6 @@ ApiKeyAuth ( Scopes: api_key )
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -23006,8 +21343,6 @@ ApiKeyAuth ( Scopes: api_key )
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -23036,8 +21371,6 @@ ApiKeyAuth ( Scopes: api_key )
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /scan/deregister`
@@ -23052,7 +21385,6 @@ ApiKeyAuth ( Scopes: api_key )
     {
       "scanId": 0
     }
-    
     ```
 
 <h3 id="deregisterscan-parameters">Parameters</h3>
@@ -23071,7 +21403,6 @@ ApiKeyAuth ( Scopes: api_key )
     {
       "scanId": 0
     }
-    
     ```
 
 <h3 id="deregisterscan-responses">Responses</h3>
@@ -23100,8 +21431,6 @@ ApiKeyAuth ( Scopes: api_key )
     curl -X GET /scan/listAll \
       -H 'Accept: application/json' \
       -H 'api_key: API_KEY'
-    
-    
     ```
 
 === "http"
@@ -23110,8 +21439,6 @@ ApiKeyAuth ( Scopes: api_key )
     GET /scan/listAll HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -23134,8 +21461,6 @@ ApiKeyAuth ( Scopes: api_key )
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -23154,8 +21479,6 @@ ApiKeyAuth ( Scopes: api_key )
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -23170,8 +21493,6 @@ ApiKeyAuth ( Scopes: api_key )
     r = requests.get('/scan/listAll', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -23205,8 +21526,6 @@ ApiKeyAuth ( Scopes: api_key )
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -23225,8 +21544,6 @@ ApiKeyAuth ( Scopes: api_key )
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -23254,8 +21571,6 @@ ApiKeyAuth ( Scopes: api_key )
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /scan/listAll`
@@ -23281,7 +21596,6 @@ ApiKeyAuth ( Scopes: api_key )
         }
       }
     ]
-    
     ```
 
 <h3 id="listallscans-responses">Responses</h3>
@@ -23331,8 +21645,6 @@ ApiKeyAuth ( Scopes: api_key )
     curl -X GET /scan/unspentBoxes/{scanId} \
       -H 'Accept: application/json' \
       -H 'api_key: API_KEY'
-    
-    
     ```
 
 === "http"
@@ -23341,8 +21653,6 @@ ApiKeyAuth ( Scopes: api_key )
     GET /scan/unspentBoxes/{scanId} HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -23365,8 +21675,6 @@ ApiKeyAuth ( Scopes: api_key )
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -23385,8 +21693,6 @@ ApiKeyAuth ( Scopes: api_key )
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -23401,8 +21707,6 @@ ApiKeyAuth ( Scopes: api_key )
     r = requests.get('/scan/unspentBoxes/{scanId}', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -23436,8 +21740,6 @@ ApiKeyAuth ( Scopes: api_key )
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -23456,8 +21758,6 @@ ApiKeyAuth ( Scopes: api_key )
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -23485,8 +21785,6 @@ ApiKeyAuth ( Scopes: api_key )
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /scan/unspentBoxes/{scanId}`
@@ -23543,7 +21841,6 @@ ApiKeyAuth ( Scopes: api_key )
         ]
       }
     ]
-    
     ```
 
 <h3 id="listunspentscans-responses">Responses</h3>
@@ -23601,8 +21898,6 @@ ApiKeyAuth ( Scopes: api_key )
     curl -X GET /scan/spentBoxes/{scanId} \
       -H 'Accept: application/json' \
       -H 'api_key: API_KEY'
-    
-    
     ```
 
 === "http"
@@ -23611,8 +21906,6 @@ ApiKeyAuth ( Scopes: api_key )
     GET /scan/spentBoxes/{scanId} HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -23635,8 +21928,6 @@ ApiKeyAuth ( Scopes: api_key )
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -23655,8 +21946,6 @@ ApiKeyAuth ( Scopes: api_key )
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -23671,8 +21960,6 @@ ApiKeyAuth ( Scopes: api_key )
     r = requests.get('/scan/spentBoxes/{scanId}', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -23706,8 +21993,6 @@ ApiKeyAuth ( Scopes: api_key )
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -23726,8 +22011,6 @@ ApiKeyAuth ( Scopes: api_key )
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -23755,8 +22038,6 @@ ApiKeyAuth ( Scopes: api_key )
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /scan/spentBoxes/{scanId}`
@@ -23813,7 +22094,6 @@ ApiKeyAuth ( Scopes: api_key )
         ]
       }
     ]
-    
     ```
 
 <h3 id="listspentscans-responses">Responses</h3>
@@ -23872,8 +22152,6 @@ ApiKeyAuth ( Scopes: api_key )
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json' \
       -H 'api_key: API_KEY'
-    
-    
     ```
 
 === "http"
@@ -23883,8 +22161,6 @@ ApiKeyAuth ( Scopes: api_key )
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -23911,8 +22187,6 @@ ApiKeyAuth ( Scopes: api_key )
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -23932,8 +22206,6 @@ ApiKeyAuth ( Scopes: api_key )
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -23949,8 +22221,6 @@ ApiKeyAuth ( Scopes: api_key )
     r = requests.post('/scan/stopTracking', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -23985,8 +22255,6 @@ ApiKeyAuth ( Scopes: api_key )
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -24005,8 +22273,6 @@ ApiKeyAuth ( Scopes: api_key )
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -24035,8 +22301,6 @@ ApiKeyAuth ( Scopes: api_key )
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /scan/stopTracking`
@@ -24052,7 +22316,6 @@ ApiKeyAuth ( Scopes: api_key )
       "scanId": 0,
       "boxId": "1ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117"
     }
-    
     ```
 
 <h3 id="scanstoptracking-parameters">Parameters</h3>
@@ -24072,7 +22335,6 @@ ApiKeyAuth ( Scopes: api_key )
       "scanId": 0,
       "boxId": "1ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117"
     }
-    
     ```
 
 <h3 id="scanstoptracking-responses">Responses</h3>
@@ -24101,8 +22363,6 @@ ApiKeyAuth ( Scopes: api_key )
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json' \
       -H 'api_key: API_KEY'
-    
-    
     ```
 
 === "http"
@@ -24112,8 +22372,6 @@ ApiKeyAuth ( Scopes: api_key )
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -24137,8 +22395,6 @@ ApiKeyAuth ( Scopes: api_key )
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -24158,8 +22414,6 @@ ApiKeyAuth ( Scopes: api_key )
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -24175,8 +22429,6 @@ ApiKeyAuth ( Scopes: api_key )
     r = requests.post('/scan/p2sRule', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -24211,8 +22463,6 @@ ApiKeyAuth ( Scopes: api_key )
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -24231,8 +22481,6 @@ ApiKeyAuth ( Scopes: api_key )
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -24261,8 +22509,6 @@ ApiKeyAuth ( Scopes: api_key )
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /scan/p2sRule`
@@ -24275,7 +22521,6 @@ ApiKeyAuth ( Scopes: api_key )
 
     ```json
     "4MQyML64GnzMxZgm"
-    
     ```
 
 <h3 id="scriptp2srule-parameters">Parameters</h3>
@@ -24294,7 +22539,6 @@ ApiKeyAuth ( Scopes: api_key )
     {
       "scanId": 0
     }
-    
     ```
 
 <h3 id="scriptp2srule-responses">Responses</h3>
@@ -24324,8 +22568,6 @@ ApiKeyAuth ( Scopes: api_key )
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json' \
       -H 'api_key: API_KEY'
-    
-    
     ```
 
 === "http"
@@ -24335,8 +22577,6 @@ ApiKeyAuth ( Scopes: api_key )
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -24381,8 +22621,6 @@ ApiKeyAuth ( Scopes: api_key )
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -24402,8 +22640,6 @@ ApiKeyAuth ( Scopes: api_key )
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -24419,8 +22655,6 @@ ApiKeyAuth ( Scopes: api_key )
     r = requests.post('/scan/addBox', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -24455,8 +22689,6 @@ ApiKeyAuth ( Scopes: api_key )
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -24475,8 +22707,6 @@ ApiKeyAuth ( Scopes: api_key )
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -24505,8 +22735,6 @@ ApiKeyAuth ( Scopes: api_key )
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /scan/addBox`
@@ -24540,7 +22768,6 @@ ApiKeyAuth ( Scopes: api_key )
         "index": 0
       }
     }
-    
     ```
 
 <h3 id="addbox-parameters">Parameters</h3>
@@ -24557,7 +22784,6 @@ ApiKeyAuth ( Scopes: api_key )
 
     ```json
     "2ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117"
-    
     ```
 
 <h3 id="addbox-responses">Responses</h3>
@@ -24587,8 +22813,6 @@ ApiKeyAuth ( Scopes: api_key )
     curl -X POST /node/shutdown \
       -H 'Accept: application/json' \
       -H 'api_key: API_KEY'
-    
-    
     ```
 
 === "http"
@@ -24597,8 +22821,6 @@ ApiKeyAuth ( Scopes: api_key )
     POST /node/shutdown HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -24621,8 +22843,6 @@ ApiKeyAuth ( Scopes: api_key )
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -24641,8 +22861,6 @@ ApiKeyAuth ( Scopes: api_key )
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -24657,8 +22875,6 @@ ApiKeyAuth ( Scopes: api_key )
     r = requests.post('/node/shutdown', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -24692,8 +22908,6 @@ ApiKeyAuth ( Scopes: api_key )
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -24712,8 +22926,6 @@ ApiKeyAuth ( Scopes: api_key )
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -24741,8 +22953,6 @@ ApiKeyAuth ( Scopes: api_key )
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /node/shutdown`
@@ -24761,7 +22971,6 @@ ApiKeyAuth ( Scopes: api_key )
       "reason": "Internal server error",
       "detail": "string"
     }
-    
     ```
 
 <h3 id="nodeshutdown-responses">Responses</h3>
@@ -24790,8 +22999,6 @@ ApiKeyAuth ( Scopes: api_key )
     ## You can also use wget
     curl -X GET /emission/at/{blockHeight} \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -24800,8 +23007,6 @@ ApiKeyAuth ( Scopes: api_key )
     GET /emission/at/{blockHeight} HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -24823,8 +23028,6 @@ ApiKeyAuth ( Scopes: api_key )
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -24842,8 +23045,6 @@ ApiKeyAuth ( Scopes: api_key )
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -24857,8 +23058,6 @@ ApiKeyAuth ( Scopes: api_key )
     r = requests.get('/emission/at/{blockHeight}', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -24891,8 +23090,6 @@ ApiKeyAuth ( Scopes: api_key )
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -24911,8 +23108,6 @@ ApiKeyAuth ( Scopes: api_key )
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -24939,8 +23134,6 @@ ApiKeyAuth ( Scopes: api_key )
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /emission/at/{blockHeight}`
@@ -24966,7 +23159,6 @@ ApiKeyAuth ( Scopes: api_key )
       "totalRemainCoins": 0,
       "reemitted": 0
     }
-    
     ```
 
 <h3 id="emissionat-responses">Responses</h3>
@@ -24992,8 +23184,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /emission/scripts \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -25002,8 +23192,6 @@ This operation does not require authentication
     GET /emission/scripts HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -25025,8 +23213,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -25044,8 +23230,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -25059,8 +23243,6 @@ This operation does not require authentication
     r = requests.get('/emission/scripts', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -25093,8 +23275,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -25113,8 +23293,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -25141,8 +23319,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /emission/scripts`
@@ -25161,7 +23337,6 @@ This operation does not require authentication
       "reemission": "string",
       "pay2Reemission": "string"
     }
-    
     ```
 
 <h3 id="emissionscripts-responses">Responses</h3>
@@ -25189,8 +23364,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /blockchain/indexedHeight \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -25199,8 +23372,6 @@ This operation does not require authentication
     GET /blockchain/indexedHeight HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -25222,8 +23393,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -25241,8 +23410,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -25256,8 +23423,6 @@ This operation does not require authentication
     r = requests.get('/blockchain/indexedHeight', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -25290,8 +23455,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -25310,8 +23473,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -25338,8 +23499,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /blockchain/indexedHeight`
@@ -25357,7 +23516,6 @@ This operation does not require authentication
       "indexedHeight": 0,
       "fullHeight": 0
     }
-    
     ```
 
 <h3 id="getindexedheight-responses">Responses</h3>
@@ -25391,8 +23549,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /blockchain/transaction/byId/{txId} \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -25401,8 +23557,6 @@ This operation does not require authentication
     GET /blockchain/transaction/byId/{txId} HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -25424,8 +23578,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -25443,8 +23595,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -25458,8 +23608,6 @@ This operation does not require authentication
     r = requests.get('/blockchain/transaction/byId/{txId}', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -25492,8 +23640,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -25512,8 +23658,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -25540,8 +23684,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /blockchain/transaction/byId/{txId}`
@@ -25606,7 +23748,6 @@ This operation does not require authentication
       "globalIndex": 3565445,
       "size": 0
     }
-    
     ```
 
 <h3 id="gettxbyid-responses">Responses</h3>
@@ -25633,8 +23774,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /blockchain/transaction/byIndex/{txIndex} \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -25643,8 +23782,6 @@ This operation does not require authentication
     GET /blockchain/transaction/byIndex/{txIndex} HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -25666,8 +23803,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -25685,8 +23820,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -25700,8 +23833,6 @@ This operation does not require authentication
     r = requests.get('/blockchain/transaction/byIndex/{txIndex}', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -25734,8 +23865,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -25754,8 +23883,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -25782,8 +23909,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /blockchain/transaction/byIndex/{txIndex}`
@@ -25848,7 +23973,6 @@ This operation does not require authentication
       "globalIndex": 3565445,
       "size": 0
     }
-    
     ```
 
 <h3 id="gettxbyindex-responses">Responses</h3>
@@ -25876,8 +24000,6 @@ This operation does not require authentication
     curl -X POST /blockchain/transaction/byAddress \
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -25887,8 +24009,6 @@ This operation does not require authentication
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -25911,8 +24031,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -25931,8 +24049,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -25947,8 +24063,6 @@ This operation does not require authentication
     r = requests.post('/blockchain/transaction/byAddress', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -25982,8 +24096,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -26002,8 +24114,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -26031,8 +24141,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /blockchain/transaction/byAddress`
@@ -26045,7 +24153,6 @@ This operation does not require authentication
 
     ```json
     "\"3WwbzW6u8hKWBcL1W7kNVMr25s2UHfSBnYtwSHvrRQt7DdPuoXrt\""
-    
     ```
 
 <h3 id="gettxsbyaddress-parameters">Parameters</h3>
@@ -26113,7 +24220,6 @@ This operation does not require authentication
       ],
       "total": 0
     }
-    
     ```
 
 <h3 id="gettxsbyaddress-responses">Responses</h3>
@@ -26177,8 +24283,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /blockchain/transaction/range \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -26187,8 +24291,6 @@ This operation does not require authentication
     GET /blockchain/transaction/range HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -26210,8 +24312,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -26229,8 +24329,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -26244,8 +24342,6 @@ This operation does not require authentication
     r = requests.get('/blockchain/transaction/range', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -26278,8 +24374,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -26298,8 +24392,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -26326,8 +24418,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /blockchain/transaction/range`
@@ -26351,7 +24441,6 @@ This operation does not require authentication
     [
       "3ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117"
     ]
-    
     ```
 
 <h3 id="gettxrange-responses">Responses</h3>
@@ -26387,8 +24476,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /blockchain/box/byId/{boxId} \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -26397,8 +24484,6 @@ This operation does not require authentication
     GET /blockchain/box/byId/{boxId} HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -26420,8 +24505,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -26439,8 +24522,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -26454,8 +24535,6 @@ This operation does not require authentication
     r = requests.get('/blockchain/box/byId/{boxId}', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -26488,8 +24567,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -26508,8 +24585,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -26536,8 +24611,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /blockchain/box/byId/{boxId}`
@@ -26579,7 +24652,6 @@ This operation does not require authentication
       "inclusionHeight": 147,
       "globalIndex": 83927
     }
-    
     ```
 
 <h3 id="getboxbyid-responses">Responses</h3>
@@ -26606,8 +24678,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /blockchain/box/byIndex/{boxIndex} \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -26616,8 +24686,6 @@ This operation does not require authentication
     GET /blockchain/box/byIndex/{boxIndex} HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -26639,8 +24707,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -26658,8 +24724,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -26673,8 +24737,6 @@ This operation does not require authentication
     r = requests.get('/blockchain/box/byIndex/{boxIndex}', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -26707,8 +24769,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -26727,8 +24787,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -26755,8 +24813,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /blockchain/box/byIndex/{boxIndex}`
@@ -26798,7 +24854,6 @@ This operation does not require authentication
       "inclusionHeight": 147,
       "globalIndex": 83927
     }
-    
     ```
 
 <h3 id="getboxbyindex-responses">Responses</h3>
@@ -26825,8 +24880,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /blockchain/box/byTokenId/{tokenId} \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -26835,8 +24888,6 @@ This operation does not require authentication
     GET /blockchain/box/byTokenId/{tokenId} HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -26858,8 +24909,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -26877,8 +24926,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -26892,8 +24939,6 @@ This operation does not require authentication
     r = requests.get('/blockchain/box/byTokenId/{tokenId}', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -26926,8 +24971,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -26946,8 +24989,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -26974,8 +25015,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /blockchain/box/byTokenId/{tokenId}`
@@ -27024,7 +25063,6 @@ This operation does not require authentication
       ],
       "total": 0
     }
-    
     ```
 
 <h3 id="getboxesbytokenid-responses">Responses</h3>
@@ -27093,8 +25131,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /blockchain/box/unspent/byTokenId/{tokenId} \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -27103,8 +25139,6 @@ This operation does not require authentication
     GET /blockchain/box/unspent/byTokenId/{tokenId} HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -27126,8 +25160,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -27145,8 +25177,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -27160,8 +25190,6 @@ This operation does not require authentication
     r = requests.get('/blockchain/box/unspent/byTokenId/{tokenId}', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -27194,8 +25222,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -27214,8 +25240,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -27242,8 +25266,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /blockchain/box/unspent/byTokenId/{tokenId}`
@@ -27291,7 +25313,6 @@ This operation does not require authentication
         "globalIndex": 83927
       }
     ]
-    
     ```
 
 <h3 id="getboxesbytokenidunspent-responses">Responses</h3>
@@ -27357,8 +25378,6 @@ This operation does not require authentication
     curl -X POST /blockchain/box/byAddress \
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -27368,8 +25387,6 @@ This operation does not require authentication
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -27392,8 +25409,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -27412,8 +25427,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -27428,8 +25441,6 @@ This operation does not require authentication
     r = requests.post('/blockchain/box/byAddress', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -27463,8 +25474,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -27483,8 +25492,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -27512,8 +25519,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /blockchain/box/byAddress`
@@ -27526,7 +25531,6 @@ This operation does not require authentication
 
     ```json
     "\"3WwbzW6u8hKWBcL1W7kNVMr25s2UHfSBnYtwSHvrRQt7DdPuoXrt\""
-    
     ```
 
 <h3 id="getboxesbyaddress-parameters">Parameters</h3>
@@ -27571,7 +25575,6 @@ This operation does not require authentication
       ],
       "total": 0
     }
-    
     ```
 
 <h3 id="getboxesbyaddress-responses">Responses</h3>
@@ -27641,8 +25644,6 @@ This operation does not require authentication
     curl -X POST /blockchain/box/unspent/byAddress \
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -27652,8 +25653,6 @@ This operation does not require authentication
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -27676,8 +25675,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -27696,8 +25693,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -27712,8 +25707,6 @@ This operation does not require authentication
     r = requests.post('/blockchain/box/unspent/byAddress', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -27747,8 +25740,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -27767,8 +25758,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -27796,8 +25785,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /blockchain/box/unspent/byAddress`
@@ -27810,7 +25797,6 @@ This operation does not require authentication
 
     ```json
     "\"3WwbzW6u8hKWBcL1W7kNVMr25s2UHfSBnYtwSHvrRQt7DdPuoXrt\""
-    
     ```
 
 <h3 id="getboxesbyaddressunspent-parameters">Parameters</h3>
@@ -27854,7 +25840,6 @@ This operation does not require authentication
         "globalIndex": 83927
       }
     ]
-    
     ```
 
 <h3 id="getboxesbyaddressunspent-responses">Responses</h3>
@@ -27919,8 +25904,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /blockchain/box/range \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -27929,8 +25912,6 @@ This operation does not require authentication
     GET /blockchain/box/range HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -27952,8 +25933,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -27971,8 +25950,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -27986,8 +25963,6 @@ This operation does not require authentication
     r = requests.get('/blockchain/box/range', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -28020,8 +25995,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -28040,8 +26013,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -28068,8 +26039,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /blockchain/box/range`
@@ -28093,7 +26062,6 @@ This operation does not require authentication
     [
       "3ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117"
     ]
-    
     ```
 
 <h3 id="getboxrange-responses">Responses</h3>
@@ -28130,8 +26098,6 @@ This operation does not require authentication
     curl -X POST /blockchain/box/byErgoTree \
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -28141,8 +26107,6 @@ This operation does not require authentication
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -28165,8 +26129,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -28185,8 +26147,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -28201,8 +26161,6 @@ This operation does not require authentication
     r = requests.post('/blockchain/box/byErgoTree', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -28236,8 +26194,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -28256,8 +26212,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -28285,8 +26239,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /blockchain/box/byErgoTree`
@@ -28299,7 +26251,6 @@ This operation does not require authentication
 
     ```json
     "\"100204a00b08cd021cf943317b0fdb50f60892a46b9132b9ced337c7de79248b104b293d9f1f078eea02d192a39a8cc7a70173007301\""
-    
     ```
 
 <h3 id="getboxesbyergotree-parameters">Parameters</h3>
@@ -28344,7 +26295,6 @@ This operation does not require authentication
       ],
       "total": 0
     }
-    
     ```
 
 <h3 id="getboxesbyergotree-responses">Responses</h3>
@@ -28413,8 +26363,6 @@ This operation does not require authentication
     curl -X POST /blockchain/box/unspent/byErgoTree \
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -28424,8 +26372,6 @@ This operation does not require authentication
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -28448,8 +26394,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -28468,8 +26412,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -28484,8 +26426,6 @@ This operation does not require authentication
     r = requests.post('/blockchain/box/unspent/byErgoTree', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -28519,8 +26459,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -28539,8 +26477,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -28568,8 +26504,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /blockchain/box/unspent/byErgoTree`
@@ -28582,7 +26516,6 @@ This operation does not require authentication
 
     ```json
     "\"100204a00b08cd021cf943317b0fdb50f60892a46b9132b9ced337c7de79248b104b293d9f1f078eea02d192a39a8cc7a70173007301\""
-    
     ```
 
 <h3 id="getboxesbyergotreeunspent-parameters">Parameters</h3>
@@ -28629,7 +26562,6 @@ This operation does not require authentication
       ],
       "total": 0
     }
-    
     ```
 
 <h3 id="getboxesbyergotreeunspent-responses">Responses</h3>
@@ -28698,8 +26630,6 @@ This operation does not require authentication
     ## You can also use wget
     curl -X GET /blockchain/token/byId/{tokenId} \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -28708,8 +26638,6 @@ This operation does not require authentication
     GET /blockchain/token/byId/{tokenId} HTTP/1.1
     
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -28731,8 +26659,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -28750,8 +26676,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -28765,8 +26689,6 @@ This operation does not require authentication
     r = requests.get('/blockchain/token/byId/{tokenId}', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -28799,8 +26721,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -28819,8 +26739,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -28847,8 +26765,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `GET /blockchain/token/byId/{tokenId}`
@@ -28876,7 +26792,6 @@ This operation does not require authentication
       "description": "string",
       "decimals": 8
     }
-    
     ```
 
 <h3 id="gettokenbyid-responses">Responses</h3>
@@ -28904,8 +26819,6 @@ This operation does not require authentication
     curl -X POST /blockchain/balance \
       -H 'Content-Type: application/json' \
       -H 'Accept: application/json'
-    
-    
     ```
 
 === "http"
@@ -28915,8 +26828,6 @@ This operation does not require authentication
     
     Content-Type: application/json
     Accept: application/json
-    
-    
     ```
 
 === "javascript"
@@ -28939,8 +26850,6 @@ This operation does not require authentication
     }).then(function(body) {
         console.log(body);
     });
-    
-    
     ```
 
 === "ruby"
@@ -28959,8 +26868,6 @@ This operation does not require authentication
       }, headers: headers
     
     p JSON.parse(result)
-    
-    
     ```
 
 === "python"
@@ -28975,8 +26882,6 @@ This operation does not require authentication
     r = requests.post('/blockchain/balance', headers = headers)
     
     print(r.json())
-    
-    
     ```
 
 === "php"
@@ -29010,8 +26915,6 @@ This operation does not require authentication
      }
     
      // ...
-    
-    
     ```
 
 === "java"
@@ -29030,8 +26933,6 @@ This operation does not require authentication
     }
     in.close();
     System.out.println(response.toString());
-    
-    
     ```
 
 === "go"
@@ -29059,8 +26960,6 @@ This operation does not require authentication
         resp, err := client.Do(req)
         // ...
     }
-    
-    
     ```
 
 `POST /blockchain/balance`
@@ -29073,7 +26972,6 @@ This operation does not require authentication
 
     ```json
     "\"3WwbzW6u8hKWBcL1W7kNVMr25s2UHfSBnYtwSHvrRQt7DdPuoXrt\""
-    
     ```
 
 <h3 id="getaddressbalancetotal-parameters">Parameters</h3>
@@ -29113,7 +27011,6 @@ This operation does not require authentication
         ]
       }
     }
-    
     ```
 
 <h3 id="getaddressbalancetotal-responses">Responses</h3>
@@ -29163,8 +27060,6 @@ This operation does not require authentication
         }
       }
     }
-    
-    
     ```
 
 #### Properties
@@ -29187,8 +27082,6 @@ This operation does not require authentication
     {
       "boxId": "1ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117"
     }
-    
-    
     ```
 
 #### Properties
@@ -29213,8 +27106,6 @@ This operation does not require authentication
         "1": "a2aed72ff1b139f35d1ad2938cb44c9848a34d4dcfd6d8ab717ebde40a7304f2541cf628ffc8b5c496e6161eba3f169c6dd440704b1719e0"
       }
     }
-    
-    
     ```
 
 #### Properties
@@ -29241,8 +27132,6 @@ This operation does not require authentication
         "1": "a2aed72ff1b139f35d1ad2938cb44c9848a34d4dcfd6d8ab717ebde40a7304f2541cf628ffc8b5c496e6161eba3f169c6dd440704b1719e0"
       }
     }
-    
-    
     ```
 
 Spending proof for transaction input
@@ -29269,8 +27158,6 @@ Spending proof for transaction input
       "boxId": "1ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117",
       "bytes": "4ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117"
     }
-    
-    
     ```
 
 #### Properties
@@ -29293,8 +27180,6 @@ Spending proof for transaction input
     {
       "bytes": "4ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117"
     }
-    
-    
     ```
 
 #### Properties
@@ -29318,8 +27203,6 @@ Spending proof for transaction input
         {}
       ]
     }
-    
-    
     ```
 
 #### Properties
@@ -29355,8 +27238,6 @@ Spending proof for transaction input
       "transactionId": "2ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117",
       "index": 0
     }
-    
-    
     ```
 
 #### Properties
@@ -29413,8 +27294,6 @@ Spending proof for transaction input
         1
       ]
     }
-    
-    
     ```
 
 #### Properties
@@ -29454,8 +27333,6 @@ Spending proof for transaction input
         }
       ]
     }
-    
-    
     ```
 
 Balance information
@@ -29503,8 +27380,6 @@ Balance information
       "inclusionHeight": 147,
       "globalIndex": 83927
     }
-    
-    
     ```
 
 #### Properties
@@ -29544,8 +27419,6 @@ and
       "description": "string",
       "decimals": 8
     }
-    
-    
     ```
 
 Token indexed with extra information
@@ -29606,8 +27479,6 @@ Token indexed with extra information
         }
       ]
     }
-    
-    
     ```
 
 Unsigned Ergo transaction
@@ -29670,8 +27541,6 @@ Unsigned Ergo transaction
       ],
       "size": 0
     }
-    
-    
     ```
 
 ErgoTransaction is an atomic operation which changes UTXO state.
@@ -29740,8 +27609,6 @@ ErgoTransaction is an atomic operation which changes UTXO state.
       ],
       "size": 0
     }
-    
-    
     ```
 
 Transaction augmented with some useful information
@@ -29814,8 +27681,6 @@ Transaction augmented with some useful information
       "globalIndex": 3565445,
       "size": 0
     }
-    
-    
     ```
 
 Transaction indexed with extra information
@@ -29847,8 +27712,6 @@ Transaction indexed with extra information
 
     ```json
     "3WwbzW6u8hKWBcL1W7kNVMr25s2UHfSBnYtwSHvrRQt7DdPuoXrt"
-    
-    
     ```
 
 Encoded Ergo Address
@@ -29872,8 +27735,6 @@ Encoded Ergo Address
     {
       "rewardAddress": "3WwbzW6u8hKWBcL1W7kNVMr25s2UHfSBnYtwSHvrRQt7DdPuoXrt"
     }
-    
-    
     ```
 
 #### Properties
@@ -29895,8 +27756,6 @@ Encoded Ergo Address
     {
       "rewardPubkey": "02a7955281885bf0f0ca4a48678848cad8dc5b328ce8bc1d4481d041c98e891ff3"
     }
-    
-    
     ```
 
 #### Properties
@@ -29916,8 +27775,6 @@ Encoded Ergo Address
 
     ```json
     "433080ff80d0d52d7f8bfffff47f00807f44f680000949b800007f7f7ff1017f"
-    
-    
     ```
 
 Hex-encoded big-endian 256-bits secret exponent
@@ -29945,8 +27802,6 @@ Hex-encoded big-endian 256-bits secret exponent
       "u": "02a7955281885bf0f0ca4a48678848cad8dc5b328ce8bc1d4481d041c98e891ff3",
       "v": "02a7955281885bf0f0ca4a48678848cad8dc5b328ce8bc1d4481d041c98e891ff3"
     }
-    
-    
     ```
 
 Hex-encoded big-endian 256-bits secret exponent "w" along with generators "g", "h", and group elements "u", "v", such as g^w = u, h^w = v
@@ -30064,8 +27919,6 @@ Hex-encoded big-endian 256-bits secret exponent "w" along with generators "g", "
         ]
       }
     }
-    
-    
     ```
 
 A request to sign a transaction with secrets provided
@@ -30095,8 +27948,6 @@ A request to sign a transaction with secrets provided
     {
       "address": "3WwbzW6u8hKWBcL1W7kNVMr25s2UHfSBnYtwSHvrRQt7DdPuoXrt"
     }
-    
-    
     ```
 
 Holds encoded ErgoAddress
@@ -30126,8 +27977,6 @@ Holds encoded ErgoAddress
       ],
       "targetBalance": 0
     }
-    
-    
     ```
 
 Holds request for wallet boxes
@@ -30190,8 +28039,6 @@ continued
         "string"
       ]
     }
-    
-    
     ```
 
 Holds many transaction requests and transaction fee
@@ -30241,8 +28088,6 @@ continued
     {
       "source": "string"
     }
-    
-    
     ```
 
 #### Properties
@@ -30299,8 +28144,6 @@ continued
         }
       ]
     }
-    
-    
     ```
 
 #### Properties
@@ -30355,8 +28198,6 @@ continued
       "powNonce": "4ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117",
       "powDistance": 123456789
     }
-    
-    
     ```
 
 Block header format used for sigma ErgoLikeContext
@@ -30406,8 +28247,6 @@ Block header format used for sigma ErgoLikeContext
       "votes": "000000",
       "minerPk": "0279be667ef9dcbbac55a06295ce870b07029bfcdb2dce28d959f2815b16f81798"
     }
-    
-    
     ```
 
 #### Properties
@@ -30438,8 +28277,6 @@ Block header format used for sigma ErgoLikeContext
       "keyLength": 0,
       "valueLength": 0
     }
-    
-    
     ```
 
 #### Properties
@@ -30594,8 +28431,6 @@ Block header format used for sigma ErgoLikeContext
       "costLimit": 0,
       "initCost": 0
     }
-    
-    
     ```
 
 #### Properties
@@ -30761,8 +28596,6 @@ Block header format used for sigma ErgoLikeContext
         "initCost": 0
       }
     }
-    
-    
     ```
 
 #### Properties
@@ -30791,8 +28624,6 @@ Block header format used for sigma ErgoLikeContext
       "v": "4ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117",
       "condition": true
     }
-    
-    
     ```
 
 Algebraic data type of sigma proposition expressions
@@ -30830,8 +28661,6 @@ Algebraic data type of sigma proposition expressions
         }
       ]
     }
-    
-    
     ```
 
 #### Properties
@@ -30883,8 +28712,6 @@ and
         }
       ]
     }
-    
-    
     ```
 
 #### Properties
@@ -30936,8 +28763,6 @@ and
         }
       ]
     }
-    
-    
     ```
 
 #### Properties
@@ -30984,8 +28809,6 @@ and
       },
       "cost": 10
     }
-    
-    
     ```
 
 Result of executeWithContext request (reduceToCrypto)
@@ -31010,8 +28833,6 @@ Result of executeWithContext request (reduceToCrypto)
     {
       "predicate": "string"
     }
-    
-    
     ```
 
 #### Properties
@@ -31035,8 +28856,6 @@ Result of executeWithContext request (reduceToCrypto)
       "register": "string",
       "bytes": "string"
     }
-    
-    
     ```
 
 #### Properties
@@ -31082,8 +28901,6 @@ and
       "register": "string",
       "bytes": "string"
     }
-    
-    
     ```
 
 #### Properties
@@ -31128,8 +28945,6 @@ and
       "predicate": "string",
       "assetId": "string"
     }
-    
-    
     ```
 
 #### Properties
@@ -31177,8 +28992,6 @@ and
         }
       ]
     }
-    
-    
     ```
 
 #### Properties
@@ -31226,8 +29039,6 @@ and
         }
       ]
     }
-    
-    
     ```
 
 #### Properties
@@ -31276,8 +29087,6 @@ and
         "assetId": "02dada811a888cd0dc7a0a41739a3ad9b0f427741fe6ca19700cf1a51200c96bf7"
       }
     }
-    
-    
     ```
 
 #### Properties
@@ -31317,8 +29126,6 @@ and
         "assetId": "02dada811a888cd0dc7a0a41739a3ad9b0f427741fe6ca19700cf1a51200c96bf7"
       }
     }
-    
-    
     ```
 
 #### Properties
@@ -31352,8 +29159,6 @@ and
     {
       "scanId": 0
     }
-    
-    
     ```
 
 #### Properties
@@ -31376,8 +29181,6 @@ and
       "scanId": 0,
       "boxId": "1ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117"
     }
-    
-    
     ```
 
 #### Properties
@@ -31419,8 +29222,6 @@ and
         "index": 0
       }
     }
-    
-    
     ```
 
 Ergo box with associated scans (their respective identifiers)
@@ -31446,8 +29247,6 @@ Ergo box with associated scans (their respective identifiers)
       "r": "433080ff80d0d52d7f8bfffff47f00807f44f680000949b800007f7f7ff1017f",
       "a": "02a7955281885bf0f0ca4a48678848cad8dc5b328ce8bc1d4481d041c98e891ff3"
     }
-    
-    
     ```
 
 Randomness and commitment for the first step of the Schnorr protocol
@@ -31536,8 +29335,6 @@ Randomness and commitment for the first step of the Schnorr protocol
         "string"
       ]
     }
-    
-    
     ```
 
 request to extract prover hints from a transaction
@@ -31577,8 +29374,6 @@ request to extract prover hints from a transaction
       "a": "string",
       "b": "string"
     }
-    
-    
     ```
 
 basic trait for prover commitments
@@ -31629,8 +29424,6 @@ basic trait for prover commitments
       "a": "string",
       "b": "string"
     }
-    
-    
     ```
 
 commitment to secret along with secret (!) randomness
@@ -31663,8 +29456,6 @@ commitment to secret along with secret (!) randomness
       "proof": "string",
       "position": "string"
     }
-    
-    
     ```
 
 #### Properties
@@ -31709,8 +29500,6 @@ commitment to secret along with secret (!) randomness
         }
       ]
     }
-    
-    
     ```
 
 hints for inputs, key is input index, values is a set of hints for the input
@@ -31785,8 +29574,6 @@ xor
         }
       ]
     }
-    
-    
     ```
 
 prover hints extracted from a transaction
@@ -31865,8 +29652,6 @@ prover hints extracted from a transaction
         "string"
       ]
     }
-    
-    
     ```
 
 request to generate commitments to sign a transaction
@@ -31905,8 +29690,6 @@ request to generate commitments to sign a transaction
         "R4": "100204a00b08cd0336100ef59ced80ba5f89c4178ebd57b6c1dd0f3d135ee1db9f62fc634d637041ea02d192a39a8cc7a70173007301"
       }
     }
-    
-    
     ```
 
 Request for generation of payment transaction to a given address
@@ -31938,8 +29721,6 @@ Request for generation of payment transaction to a given address
         }
       ]
     }
-    
-    
     ```
 
 Request for burning tokens in wallet
@@ -31971,8 +29752,6 @@ Request for burning tokens in wallet
         "R4": "100204a00b08cd0336100ef59ced80ba5f89c4178ebd57b6c1dd0f3d135ee1db9f62fc634d637041ea02d192a39a8cc7a70173007301"
       }
     }
-    
-    
     ```
 
 Request for generation of asset issue transaction
@@ -32086,8 +29865,6 @@ Request for generation of asset issue transaction
       },
       "size": 0
     }
-    
-    
     ```
 
 Block with header and transactions
@@ -32118,8 +29895,6 @@ Block with header and transactions
       "n": "0000000000000000",
       "d": 987654321
     }
-    
-    
     ```
 
 An object containing all components of pow solution
@@ -32161,8 +29936,6 @@ An object containing all components of pow solution
       "transactionsId": "3ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117",
       "adProofsId": "3ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117"
     }
-    
-    
     ```
 
 #### Properties
@@ -32225,8 +29998,6 @@ An object containing all components of pow solution
         "3ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117"
       ]
     }
-    
-    
     ```
 
 #### Properties
@@ -32336,8 +30107,6 @@ An object containing all components of pow solution
         }
       ]
     }
-    
-    
     ```
 
 #### Properties
@@ -32384,8 +30153,6 @@ An object containing all components of pow solution
       "transactionsId": "3ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117",
       "adProofsId": "3ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117"
     }
-    
-    
     ```
 
 Header of a block. It authenticates link to a previous block, other block sections (transactions, UTXO set transformation proofs, extension), UTXO set, votes for blockchain parameters to be changed and proof-of-work related data.
@@ -32467,8 +30234,6 @@ Header of a block. It authenticates link to a previous block, other block sectio
       ],
       "size": 0
     }
-    
-    
     ```
 
 Section of a block which contains transactions.
@@ -32497,8 +30262,6 @@ Section of a block which contains transactions.
       "digest": "4ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117",
       "size": 0
     }
-    
-    
     ```
 
 #### Properties
@@ -32529,8 +30292,6 @@ Section of a block which contains transactions.
         ]
       ]
     }
-    
-    
     ```
 
 Section of a block which contains extension data.
@@ -32556,8 +30317,6 @@ Section of a block which contains extension data.
     [
       "4ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117"
     ]
-    
-    
     ```
 
 Key-value record represented as a pair of hex strings in an array.
@@ -32630,8 +30389,6 @@ Key-value record represented as a pair of hex strings in an array.
       ],
       "votes": "000000"
     }
-    
-    
     ```
 
 Can be null if node is not mining or candidate block is not ready
@@ -32664,8 +30421,6 @@ Can be null if node is not mining or candidate block is not ready
     {
       "matched": true
     }
-    
-    
     ```
 
 #### Properties
@@ -32691,8 +30446,6 @@ Can be null if node is not mining or candidate block is not ready
       "walletHeight": 0,
       "error": "string"
     }
-    
-    
     ```
 
 Status of the node wallet
@@ -32721,8 +30474,6 @@ Status of the node wallet
       "pass": "string",
       "mnemonicPass": "string"
     }
-    
-    
     ```
 
 #### Properties
@@ -32745,8 +30496,6 @@ Status of the node wallet
     {
       "mnemonic": "string"
     }
-    
-    
     ```
 
 #### Properties
@@ -32771,8 +30520,6 @@ Status of the node wallet
       "mnemonicPass": "string",
       "usePre1627KeyDerivation": true
     }
-    
-    
     ```
 
 #### Properties
@@ -32798,8 +30545,6 @@ Status of the node wallet
       "mnemonic": "string",
       "mnemonicPass": "string"
     }
-    
-    
     ```
 
 #### Properties
@@ -32822,8 +30567,6 @@ Status of the node wallet
     {
       "pass": "string"
     }
-    
-    
     ```
 
 #### Properties
@@ -32845,8 +30588,6 @@ Status of the node wallet
     {
       "derivationPath": "m/1/2"
     }
-    
-    
     ```
 
 #### Properties
@@ -32868,8 +30609,6 @@ Status of the node wallet
     {
       "address": "3WwbzW6u8hKWBcL1W7kNVMr25s2UHfSBnYtwSHvrRQt7DdPuoXrt"
     }
-    
-    
     ```
 
 #### Properties
@@ -32892,8 +30631,6 @@ Status of the node wallet
       "derivationPath": "m/1/2",
       "address": "3WwbzW6u8hKWBcL1W7kNVMr25s2UHfSBnYtwSHvrRQt7DdPuoXrt"
     }
-    
-    
     ```
 
 #### Properties
@@ -32922,8 +30659,6 @@ Status of the node wallet
         ]
       ]
     }
-    
-    
     ```
 
 Merkle proof for a leaf, which is an array of bytes (e.g. a transaction identifier)
@@ -32971,8 +30706,6 @@ or
         }
       ]
     }
-    
-    
     ```
 
 Proof that a block corresponding to given header without PoW contains some transactions
@@ -33013,8 +30746,6 @@ Proof that a block corresponding to given header without PoW contains some trans
         ]
       }
     }
-    
-    
     ```
 
 Block candidate related data for external miner to perform work
@@ -33045,8 +30776,6 @@ Block candidate related data for external miner to perform work
       "lastSeen": 1524143059077,
       "connectionType": "Incoming"
     }
-    
-    
     ```
 
 #### Properties
@@ -33080,8 +30809,6 @@ Block candidate related data for external miner to perform work
       "lastIncomingMessage": 1524143059077,
       "currentNetworkTime": 1524143059077
     }
-    
-    
     ```
 
 #### Properties
@@ -33106,8 +30833,6 @@ Block candidate related data for external miner to perform work
       "verifyingTransactions": true,
       "fullBlocksSuffix": 2880
     }
-    
-    
     ```
 
 #### Properties
@@ -33139,8 +30864,6 @@ Block candidate related data for external miner to perform work
       "status": "Older",
       "height": 65780
     }
-    
-    
     ```
 
 #### Properties
@@ -33168,8 +30891,6 @@ Block candidate related data for external miner to perform work
       "version": "4.0.26",
       "checks": 4
     }
-    
-    
     ```
 
 #### Properties
@@ -33202,8 +30923,6 @@ Block candidate related data for external miner to perform work
         "checks": 4
       }
     }
-    
-    
     ```
 
 #### Properties
@@ -33227,8 +30946,6 @@ Block candidate related data for external miner to perform work
       "version": "4.0.26",
       "lastMessage": 1524143059077
     }
-    
-    
     ```
 
 #### Properties
@@ -33261,8 +30978,6 @@ Block candidate related data for external miner to perform work
         "lastMessage": 1524143059077
       }
     }
-    
-    
     ```
 
 #### Properties
@@ -33336,8 +31051,6 @@ Block candidate related data for external miner to perform work
         }
       }
     }
-    
-    
     ```
 
 #### Properties
@@ -33365,8 +31078,6 @@ Block candidate related data for external miner to perform work
         "string"
       ]
     }
-    
-    
     ```
 
 #### Properties
@@ -33421,8 +31132,6 @@ Block candidate related data for external miner to perform work
       "eip27Supported": true,
       "restApiUrl": "https://example.com"
     }
-    
-    
     ```
 
 Data container for /info API request output. Contains information about node's state and configuration. Contains data about best block, best header, state, etc. Best block is the block with the maximum height.
@@ -33484,8 +31193,6 @@ Data container for /info API request output. Contains information about node's s
       "dataInputCost": 100,
       "outputCost": 100
     }
-    
-    
     ```
 
 System parameters which could be readjusted via collective miners decision.
@@ -33516,8 +31223,6 @@ System parameters which could be readjusted via collective miners decision.
 
     ```json
     2
-    
-    
     ```
 
 Ergo blockchain protocol version
@@ -33539,8 +31244,6 @@ Ergo blockchain protocol version
 
     ```json
     "1ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117"
-    
-    
     ```
 
 Base16-encoded transaction box id bytes. Should be 32 bytes long
@@ -33562,8 +31265,6 @@ Base16-encoded transaction box id bytes. Should be 32 bytes long
 
     ```json
     "2ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117"
-    
-    
     ```
 
 Base16-encoded transaction id bytes
@@ -33585,8 +31286,6 @@ Base16-encoded transaction id bytes
 
     ```json
     "0008cd0336100ef59ced80ba5f89c4178ebd57b6c1dd0f3d135ee1db9f62fc634d637041"
-    
-    
     ```
 
 Base16-encoded ergo tree bytes
@@ -33610,8 +31309,6 @@ Base16-encoded ergo tree bytes
     {
       "tree": "02a7955281885bf0f0ca4a48678848cad8dc5b328ce8bc1d4481d041c98e891ff3"
     }
-    
-    
     ```
 
 #### Properties
@@ -33671,8 +31368,6 @@ Base16-encoded ergo tree bytes
         "size": 0
       }
     ]
-    
-    
     ```
 
 List of ErgoTransaction objects
@@ -33697,8 +31392,6 @@ List of ErgoTransaction objects
       "nTxns": 0,
       "totalFee": 0
     }
-    
-    
     ```
 
 Fee histogram bin
@@ -33726,8 +31419,6 @@ Fee histogram bin
         "totalFee": 0
       }
     ]
-    
-    
     ```
 
 Fee histogram for transactions in mempool
@@ -33752,8 +31443,6 @@ Fee histogram for transactions in mempool
       "tokenId": "4ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117",
       "amount": 1000
     }
-    
-    
     ```
 
 Token detail in the transaction
@@ -33778,8 +31467,6 @@ Token detail in the transaction
     {
       "R4": "100204a00b08cd0336100ef59ced80ba5f89c4178ebd57b6c1dd0f3d135ee1db9f62fc634d637041ea02d192a39a8cc7a70173007301"
     }
-    
-    
     ```
 
 Ergo box registers
@@ -33801,8 +31488,6 @@ Ergo box registers
 
     ```json
     "100204a00b08cd0336100ef59ced80ba5f89c4178ebd57b6c1dd0f3d135ee1db9f62fc634d637041ea02d192a39a8cc7a70173007301"
-    
-    
     ```
 
 Base-16 encoded serialized Sigma-state value
@@ -33824,8 +31509,6 @@ Base-16 encoded serialized Sigma-state value
 
     ```json
     "000000"
-    
-    
     ```
 
 Base16-encoded votes for a soft-fork and parameters
@@ -33847,8 +31530,6 @@ Base16-encoded votes for a soft-fork and parameters
 
     ```json
     "3ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117"
-    
-    
     ```
 
 Base16-encoded 32 byte modifier id
@@ -33870,8 +31551,6 @@ Base16-encoded 32 byte modifier id
 
     ```json
     "4ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117"
-    
-    
     ```
 
 Base16-encoded 32 byte digest
@@ -33893,8 +31572,6 @@ Base16-encoded 32 byte digest
 
     ```json
     "4ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117"
-    
-    
     ```
 
 Base16-encoded bytes
@@ -33916,8 +31593,6 @@ Base16-encoded bytes
 
     ```json
     "333ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117"
-    
-    
     ```
 
 Base16-encoded 33 byte digest - digest with extra byte with tree height
@@ -33939,8 +31614,6 @@ Base16-encoded 33 byte digest - digest with extra byte with tree height
 
     ```json
     "3ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd1173ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd1173ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117"
-    
-    
     ```
 
 Base16-encoded ad proofs
@@ -33962,8 +31635,6 @@ Base16-encoded ad proofs
 
     ```json
     "4ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd1173ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd1173ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117"
-    
-    
     ```
 
 Base16-encoded spending proofs
@@ -33985,8 +31656,6 @@ Base16-encoded spending proofs
 
     ```json
     "5ab9da11fc216660e974842cc3b7705e62ebb9e0bf5ff78e53f9cd40abadd117"
-    
-    
     ```
 
 Base16-encoded block signature
@@ -34008,8 +31677,6 @@ Base16-encoded block signature
 
     ```json
     1524143059077
-    
-    
     ```
 
 Basic timestamp definition
@@ -34036,8 +31703,6 @@ Basic timestamp definition
       "totalRemainCoins": 0,
       "reemitted": 0
     }
-    
-    
     ```
 
 Emission info for height
@@ -34066,8 +31731,6 @@ Emission info for height
       "reemission": "string",
       "pay2Reemission": "string"
     }
-    
-    
     ```
 
 Emission related scripts
@@ -34100,8 +31763,6 @@ Emission related scripts
         }
       ]
     }
-    
-    
     ```
 
 Amount of Ergo tokens and assets
@@ -34129,8 +31790,6 @@ Amount of Ergo tokens and assets
       "isValid": true,
       "error": "string"
     }
-    
-    
     ```
 
 Validity status of Ergo address
@@ -34158,8 +31817,6 @@ Validity status of Ergo address
       "reason": "Internal server error",
       "detail": "string"
     }
-    
-    
     ```
 
 Error response from API
