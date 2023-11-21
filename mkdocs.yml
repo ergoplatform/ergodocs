@@ -103,6 +103,8 @@ markdown_extensions:
       generic: true
   - pymdownx.tabbed:
       alternate_style: true 
+  - pymdownx.blocks.admonition
+  - pymdownx.blocks.details
 
 
 

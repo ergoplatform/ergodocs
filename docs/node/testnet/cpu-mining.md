@@ -62,7 +62,10 @@ Your rewards will be sent to your `rewardPublicKey`, which is different from you
 curl -X GET "http://127.0.0.1:9052/mining/rewardPublicKey" -H  "accept: application/json"
 ```
 
+/// admonition | Keep in mind
 Please note that blocks take 720 confirmations on Ergo.
+///
+
 
 ## Resources
 

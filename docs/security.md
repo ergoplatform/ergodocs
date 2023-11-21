@@ -1,5 +1,12 @@
 # The Howey Test and Ergo
 
+/// admonition | Disclaimer
+    type: warning
+
+Please note, this page is solely an opinion to answer some questions within the community based on the established framework of the Howey Test and does not constitute investment or legal advice.
+///
+
+
 The Howey Test is a legal framework used to determine whether a financial instrument, such as the ERG token, qualifies as an "investment contract" under US securities law. The test, named after the Supreme Court case SEC v. Howey, establishes the criteria for determining whether a transaction constitutes an investment contract.
 
 The Howey Test has **four criteria** that must all be met for an instrument to be considered an investment contract: ***investment of money, common enterprise, reasonable expectation of profits, and entrepreneurial or managerial efforts of others.***
@@ -16,4 +23,4 @@ This decentralization will increase over time as more third-party developers bri
 
 As a result, ERG tokens should not be considered securities for federal securities law purposes.
 
-> Please note, this page is solely an opinion to answer some questions within the community based on the established framework of the Howey Test and does not constitute investment or legal advice. 
+

@@ -1,9 +1,10 @@
 
 # Developer's Guide
 
-Welcome to the Ergo Developer's Guide
-
+/// admonition | Welcome to the Ergo Developer's Guide
 This comprehensive guide is designed to provide an overview of our platform and introduce you to the various resources available for developers. Whether you're a seasoned blockchain developer or just starting out, this guide will help you navigate the Ergo ecosystem and understand its key features and functionalities.
+///
+
 
 ### **Connect with Our Community**
 If you encounter any issues or have questions, feel free to connect with us on any of the following platforms. All our chat platforms are bridged, ensuring seamless communication:

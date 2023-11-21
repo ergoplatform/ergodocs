@@ -2,7 +2,12 @@
 
 [Ergo Headless dApp Framework](https://github.com/ergoplatform/ergo-headless-dapp-framework) is a Rust framework for developing Ergo Headless dApps. The Ergo HDF provides developers with the first portable UTXO-based headless dApp development framework on any blockchain.
 
-> Please note that the Headless dApp framework [does not work with testnet addresses](https://github.com/ergoplatform/ergo-headless-dapp-framework/blob/main/src/encoding.rs#L104)
+/// admonition | Disclaimer
+    type: warning
+
+Please note that the Headless dApp framework [does not work with testnet addresses](https://github.com/ergoplatform/ergo-headless-dapp-framework/blob/main/src/encoding.rs#L104)
+///
+
 
 ## What Are Headless dApps?
 

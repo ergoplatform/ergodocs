@@ -129,3 +129,28 @@ Please include a descriptive title and a detailed description of your changes.
 Once your pull request is submitted, our team will review your changes. We may request additional changes or clarification before merging your pull request. Please be patient, as we want to ensure that the documentation remains high-quality and consistent.
 
 
+## MkDocs formatting
+
+```
+/// admonition | Some title
+    type: warning
+
+Some content
+///
+```
+
+/// admonition | Some title
+    type: warning
+
+Some content
+///
+
+```
+/// note | Some title
+Some content
+///
+```
+
+/// note | Some title
+Some content
+///

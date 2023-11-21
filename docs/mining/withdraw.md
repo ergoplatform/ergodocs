@@ -1,4 +1,8 @@
-> Please note this page is a WIP, contain information that pre-dates [EIP-27](eip27.md)
+/// admonition | Keep in mind
+  type: warning
+  Please note this page is a WIP, contain information that pre-dates [EIP-27](eip27.md)
+///
+
 
 # Spending Mining Rewards
 

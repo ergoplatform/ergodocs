@@ -25,7 +25,13 @@ These pieces of information are stored in the first four registers of the box. T
  R3 | Creation details |
  R4-R9 | Available for custom use |
 
-> Note: Registers must be densely packed; you cannot place an empty register between non-empty ones. 
+
+/// admonition | Keep in mind!
+    type: warning
+
+Registers must be densely packed; you cannot place an empty register between non-empty ones.
+///
+
 
 ### Register R0
 
@@ -57,7 +63,10 @@ The optional registers can hold any of the following data types:
 
 A `boxId` is calculated based on the contents of all the registers, uniquely defining a box. This can be compared to Bitcoin's (txId, vOut) pairs.
 
-> Note: Ergo `txId` is dependent solely on the message and not on signatures (similar to Bitcoin SegWit transactions). Hence, a txId is accessible even before signing. Like Bitcoin, Ergo supports chained transactions, meaning boxes with 0 confirmations can be spent.
+/// admonition | Note
+Ergo `txId` is dependent solely on the message and not on signatures (similar to Bitcoin SegWit transactions). Hence, a txId is accessible even before signing. Like Bitcoin, Ergo supports chained transactions, meaning boxes with 0 confirmations can be spent.
+///
+
 
 ## Typed Registers
 

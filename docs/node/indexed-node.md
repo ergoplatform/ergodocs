@@ -5,8 +5,12 @@ The Ergo Blockchain API provides a set of endpoints to interact with the Ergo bl
 An indexed node is available [here](http://128.253.41.49:9053/swagger), the base URL for all the indexed API endpoints available is `/blockchain/`.
 
 
-
+/// admonition | Disclaimer
 Please note that this is a public instance, but for anything beyond testing you should host your own version of the [node](install.md) and enable the indexing by setting the `ergo.node.extraIndex` property to true in the config file.
+///
+
+
+
 
 
 ## Methods

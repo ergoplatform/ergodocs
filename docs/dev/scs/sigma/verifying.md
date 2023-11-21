@@ -147,4 +147,8 @@ and then in offchain code we need to be sure that `z` big integer fits into 255 
 Examples on building transactions can be found in ChainCash repository, e.g. this test  https://github.com/kushti/chaincash/blob/master/src/test/scala/kiosk/ChainCashSpec.scala
 
 
+/// admonition | Disclaimer
+    type: warning
+
 Please note that Schnorr here is using weak Fiat-Shamir transformation, but that should not be a problem as public key is fixed.
+///

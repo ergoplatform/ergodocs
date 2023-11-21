@@ -1,12 +1,14 @@
-## Ergo Node API v5.0.15
+# Ergo Node API v5.0.15
 
-> Scroll down for code samples, example requests and responses. Select a language for code samples from the tabs above or the mobile navigation menu.
 
-API docs for Ergo Node. Models are shared between all Ergo products
+/// admonition | Getting Started!
+API docs for Ergo Node. Scroll down for code samples, example requests and responses
+///
+
+
 
 Base URLs:
 
-* <a href="/">/</a>
 
 * <a href="http://213.239.193.208:9053">http://213.239.193.208:9053</a>
 
