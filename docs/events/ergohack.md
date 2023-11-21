@@ -179,7 +179,10 @@ You can access the final report [here](../events/pdf/ergohackvii/REPUTATION_SYST
 
 The Ergo Poor Man's Wallet, also known as [EPMW](https://github.com/epmw/epmw/), is a project that aims to provide a simple, DIY, and cost-effective hardware wallet solution for Ergo cryptocurrency. The wallet is designed with affordability in mind, with the total cost of components and shipping to Europe estimated to be around $10.
 
-#### AuctionCoin
+#### Auction Coin
+
+[Auction Coin](auction-coin.md) is an example of 'Degen Finance' ([DegFi](degfi.md)) operating on the Ergo blockchain. It uses a smart contract to automatically issue and auction tokens, with a game-theoretic mechanism that allows for speculative plays around token buybacks. It exemplifies how transparent, yet high-risk, DegFi can be.
+
 
 ### ERGOHACKVI
 
