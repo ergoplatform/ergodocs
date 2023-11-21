@@ -62,8 +62,12 @@ extra:
 
 plugins:
   - search
+  #- render_swagger:
+  #    allow_arbitrary_locations: true
+  #- neoteroi.mkdocsoad
   - mkdocs-jupyter #https://github.com/danielfrg/mkdocs-jupyter
   - section-index #https://github.com/oprypin/mkdocs-section-index
+  #- swagger
   #- awesome-pages https://github.com/lukasgeiter/mkdocs-awesome-pages-plugin
   - autolinks 
   - tags: # https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/#
@@ -77,6 +81,7 @@ plugins:
 
 
 markdown_extensions:
+  - pymdownx.details
   - codehilite
   - extra
   - tables
@@ -440,6 +445,8 @@ nav:
             - Wallet Setup: node/wallet-setup.md
           - Swagger API: 
             - node/swagger.md
+            - OpenAPI Spec: node/swagger/openapi.md
+            - Try it out!: node/swagger/swagger_api.md
             - Indexed Node API: node/indexed-node.md
           - Configuration Files: 
             - application.conf: 
