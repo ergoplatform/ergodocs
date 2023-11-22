@@ -6,7 +6,13 @@ tags:
 
 # Sidechains on Ergo
 
+
 Ergo's architecture supports the development and implementation of sidechains. This document explores the concept of sidechains, their utility, the use of NiPoPoWs, and a proposed method for two-way pegged sidechains on the Ergo platform.
+
+/// admonition | Recent Developments
+
+Check out [this recent](https://github.com/ross-weir/ergohack-sidechain/tree/main) ErgoHack VII project exploring the implementation of sidechains on Ergo.
+///
 
 ## What is a Sidechain?
 

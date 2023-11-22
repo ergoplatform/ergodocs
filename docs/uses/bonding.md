@@ -1,6 +1,10 @@
+# Bonding Curves
+
+Bonding curves are a useful primitive for continuous token offerings (CTOs), [augmented bonded curves](https://medium.com/giveth/deep-dive-augmented-bonding-curves-3f1f7c1fa751), and perhaps AMM DEXes. 
+
 There is a cheap way to do bonding curves on Ergo, with most of the load performed off-chain.
 
-Assume a project is willing to issue 100 tokens and sell the first one for `100` ergs, second for `200`, ..., 100th for `10,000` ergs (to raise 505,000) in total in case of full sale. This is a very simple example of a bonding curve. See [this article](https://blog.relevant.community/bonding-curves-in-depth-intuition-parametrization-d3905a681e0a) for more details. Bonding curves are a useful primitive for continuous token offerings (CTOs), [augmented bonded curves](https://medium.com/giveth/deep-dive-augmented-bonding-curves-3f1f7c1fa751), and perhaps AMM DEXes. 
+Assume a project is willing to issue 100 tokens and sell the first one for `100` ergs, second for `200`, ..., 100th for `10,000` ergs (to raise 505,000) in total in case of full sale. This is a very simple example of a bonding curve. See [this article](https://blog.relevant.community/bonding-curves-in-depth-intuition-parametrization-d3905a681e0a) for more details. 
 
 Sell-only 
 -------------

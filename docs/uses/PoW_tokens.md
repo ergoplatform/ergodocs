@@ -1,13 +1,13 @@
-## Proof-of-Work Backed Tokens
+# Proof-of-Work Backed Tokens
 
-In Ergo, one token per transaction can be issued, and the token id must be the same as the id of the box of the first input. 
+Ergo allows the issuance of one token per transaction, where the token id must match the id of the box of the first input.
 
-Thus if you have generated a box, you know the id of the future token. And this id is calculated via hashing.
+When a box is generated, the id of the future token is known. This id is computed through hashing.
 
-Thus via iterating over a register (e.g. `R4`) used as a nonce, you can create a token with specific id properties, e.g. starting with a certain number of zeroes. So some work could be required in order to make such a token. Something like VanityGen-address in Bitcoin, but now VanityGen token )
+By iterating over a register (for example, `R4`) used as a nonce, a token with specific id properties can be created. This could include ids starting with a certain number of zeroes. Therefore, some computational work may be required to generate such a token, similar to the VanityGen-address concept in Bitcoin, but applied to tokens.
 
-Then some contracts may accept such PoW-backed NFTs only. 
+Certain contracts may only accept these Proof-of-Work backed Non-Fungible Tokens (NFTs).
 
-I haven't thought about use-cases, though. Maybe some are related to filtering out spam.
+While specific use-cases have not been fully explored, potential applications could include spam filtering.
 
-Full discussions [here](https://www.ergoforum.org/t/proof-of-work-backed-tokens/224)
+For more detailed discussions, refer to this [link](https://www.ergoforum.org/t/proof-of-work-backed-tokens/224).
