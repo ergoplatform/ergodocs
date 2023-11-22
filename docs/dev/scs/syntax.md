@@ -79,5 +79,6 @@ In other words, the difference between val and def is when the function is calcu
 In most instances, you will likely use `val` statements
 
 ## Resources
-
+/// admonition | Please note
 > Adapted from [Deco Education - ErgoScript Developer Course](https://github.com/DeCo-Education/ErgoScript-Developer-Course/blob/main/Class-Documents/Class-1/Materials/Class1.MD)
+///

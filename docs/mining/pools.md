@@ -9,8 +9,12 @@ tags:
 
 Mining pools are groups of miners who combine their computational resources to increase their chances of finding a block. The reward is then split among the pool members, proportional to the amount of work they contributed. 
 
-A comprehensive list of Ergo mining pools is available on [Mining Pool Stats](https://miningpoolstats.stream/ergo). 
 
+
+/// admonition | Distribute your hashrate! Keep Ergo decentralised!
+    type: warning
+Please distribute your hashrate and mine towards smaller pools! A comprehensive list of Ergo mining pools is available on [Mining Pool Stats](https://miningpoolstats.stream/ergo). 
+///
 
 ## Earnings and Pool Size
 
@@ -32,7 +36,7 @@ Several mining pools offer a solo port for those who prefer this method. A compr
 
 ### Pools
 
-> Please do not mine to mining pools with large hashrate. Any pool close to 51% of the total network is at risk of an attack.
+
 
 - [LeafPool](https://ergo.leafpool.com/)
     - [Getting started on LeafPool](https://ergo.leafpool.com/getting-started)

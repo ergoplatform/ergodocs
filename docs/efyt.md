@@ -1,6 +1,6 @@
 # Ergo-First-Year-Token (EFYT)
 
-EFYT was systematically airdropped and then listed on the Waves DEX in May 2017, with an initial supply of 100,000 tokens. The token can be viewed on [Waves Explorer](https://wavesexplorer.com/assets/725Yv9oceWsB4GsYwyy4A52kEwyVrL5avubkeChSnL46?search=725Yv9oceWsB4GsYwyy4A52kEwyVrL5avubkeChSnL46). This launch aimed to build an early community around the Ergo platform and raise capital for development and marketing before launching the mainnet.
+EFYT was systematically airdropped and then listed on the Waves DEX in May 2017, with an initial supply of 100,000 tokens. This launch aimed to build an early community around the platform and raise capital for development and marketing before launching the mainnet.
 
 
 /// admonition | EFYT vs ERG
