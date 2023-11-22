@@ -7,7 +7,7 @@ tags:
 
 ## Overview
 
-Machina Finance is a revolutionary decentralized exchange (DEX) under development on the Ergo platform. The unique aspect of Machina Finance is its use of **[grid order contracts](grid_trading.md)**. These contracts have the potential to replace traditional liquidity pools, offering a more decentralized and peer-to-peer (P2P) trading experience.
+Machina Finance is a revolutionary decentralized exchange (DEX) under development on Ergo. The unique aspect of Machina Finance is its use of **[grid order contracts](grid_trading.md)**. These contracts have the potential to replace traditional liquidity pools, offering a more decentralized and peer-to-peer (P2P) trading experience.
 
 ## Goal
 

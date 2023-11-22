@@ -6,7 +6,7 @@ tags:
 
 # The Ergo 'Box' model
 
-The Ergo platform uses a transactional model similar to Bitcoin's Unspent Transaction Output (UTxO) model. In this model, transactions create and consume single-use entities called ***'boxes'***. 
+Ergo uses a transactional model similar to Bitcoin's Unspent Transaction Output (UTxO) model. In this model, transactions create and consume single-use entities called ***'boxes'***. 
 
 In [ErgoScript](ergoscript.md), a 'box' is a versatile version of a UTXO. It represents not only the amount of cryptocurrency owned by an address, but also contains 'registers' for additional data. This data can range from simple values to complex structures, which can be used in transactions and smart contract execution.
 

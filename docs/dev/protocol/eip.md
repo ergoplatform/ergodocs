@@ -5,7 +5,7 @@ tags:
 
 # Ergo Improvement Proposals (EIPs)
 
-Ergo Improvement Proposals (EIPs) are a set of guidelines and standards designed for the continuous improvement of the Ergo Platform. These proposals encompass a wide range of aspects, including but not limited to, core protocol specifications, client APIs, dApp/contract standards, and more.
+Ergo Improvement Proposals (EIPs) are a set of guidelines and standards designed for the continuous improvement of Ergo. These proposals encompass a wide range of aspects, including but not limited to, core protocol specifications, client APIs, dApp/contract standards, and more.
 
 Here are some of the EIPs that have been proposed and implemented:
 

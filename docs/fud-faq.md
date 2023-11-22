@@ -24,7 +24,7 @@ For more information see [this page](emission.md)
 
 ### Ergo won't be able to support miners after emissions ends
 
-After the scheduled emissions conclude in 2045, miners on Ergo will continue to be incentivized through alternative methods. One such approach involves transaction fees and Miner Extracted Value (MEV). Transactions on the Ergo Platform generate fees (paid in Ergs), with a portion of these fees awarded to miners. MEV represents the total value miners can extract from a block using tactics like reordering, front-running, and other advanced techniques. Miners can increase their MEV earnings by efficiently executing transactions in high MEV blocks, which encourages them to contribute their hash power to the network.
+After the scheduled emissions conclude in 2045, miners on Ergo will continue to be incentivized through alternative methods. One such approach involves transaction fees and Miner Extracted Value (MEV). Transactions on Ergo generate fees (paid in Ergs), with a portion of these fees awarded to miners. MEV represents the total value miners can extract from a block using tactics like reordering, front-running, and other advanced techniques. Miners can increase their MEV earnings by efficiently executing transactions in high MEV blocks, which encourages them to contribute their hash power to the network.
 
 Another form of MEV we have on Ergo is through [**Storage Rent**](rent.md). This mechanism requires users to pay for the storage their data occupies on the network. Consequently, miners receive a consistent income stream, as they earn Ergs from fees users pay for content storage. See [this page](rent-fees.md) for more information on the potential of storage rent.
 
@@ -82,7 +82,7 @@ The Ergo Foundation provides guidance in the early stages of the network, but it
 
 ###  Ergo could not operate without its foundation
 
-The Ergo Foundation undoubtedly plays a pivotal role in shaping the trajectory and fostering the development of the Ergo Platform. However, as the ERG token ecosystem evolves, it's steadily becoming more decentralized and less dependent on the Foundation or any singular centralized authority. Emblematic of its decentralized ethos, Ergo operates as an open-source, permissionless platform. This ensures that developers, innovators, and enthusiasts can introduce applications or tokens without seeking explicit endorsement or intervention from the Foundation.
+The Ergo Foundation undoubtedly plays a pivotal role in shaping the trajectory and fostering the development of Ergo. However, as the ERG token ecosystem evolves, it's steadily becoming more decentralized and less dependent on the Foundation or any singular centralized authority. Emblematic of its decentralized ethos, Ergo operates as an open-source, permissionless platform. This ensures that developers, innovators, and enthusiasts can introduce applications or tokens without seeking explicit endorsement or intervention from the Foundation.
 
 The development momentum would persist, and mechanisms like storage rent would enable miners to access and utilize the Foundation's funds. Many entities, encompassing mining pools, exchanges, dApps, and even teams like Spectrum Labs and ErgoPad, actively maintain the network nodes and contribute to its vitality.
 

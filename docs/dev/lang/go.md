@@ -5,11 +5,11 @@ tags:
 
 # Ergo Platform and Go 
 
-The resources for integrating the Ergo Platform using the Go programming language are currently limited. However, there is a significant project available that serves as a valuable resource for developers working with Go.
+The resources for integrating Ergo using the Go programming language are currently limited. However, there is a significant project available that serves as a valuable resource for developers working with Go.
 
 ### Ergo-Golang
 
-The [*ergo-golang*](https://github.com/azhiganov/ergo-golang) project is a promising tool for integrating with the Ergo platform. At present, the project is in its initial stages and may be considered as under development. This implies that while it offers basic functionalities to interact with the Ergo Blockchain, it may not have extensive features and may not be fully tested or optimized.
+The [*ergo-golang*](https://github.com/azhiganov/ergo-golang) project is a promising tool for integrating with Ergo. At present, the project is in its initial stages and may be considered as under development. This implies that while it offers basic functionalities to interact with the Ergo Blockchain, it may not have extensive features and may not be fully tested or optimized.
 
 As an open-source project, *ergo-golang* offers a fantastic opportunity for Go developers to contribute to its development by providing enhancements, fixes, and new features.
 

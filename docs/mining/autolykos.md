@@ -42,4 +42,8 @@ Ergo mining is based on Autolykos, a fairly launched efficient ASIC-resistant Pr
 ::/cards::
 
 
-- [How will miners be supported after emission ends?](faq.md#how-will-miners-be-supported-after-emissions)
+
+/// details | FAQ
+     {type: note, open: true}
+For information on how miners will be supported after emission ends see [this page](revenue.md)
+///

@@ -58,7 +58,7 @@ Central bank digital currencies are no longer a theoretical application of block
 
 CDBCs are not built on classic, open blockchain technology. While there are various approaches, they are all based on permissioned ledgers that restrict the role of securing the network and processing transactions to a group of approved entities. They also include a control layer that gives administrators the ability to intervene in transactions, blocking or reversing those they deem invalid.
 
-It's a far cry from the ideals of Bitcoin and the Ergo platform that aims to build on these. But it's only to be expected. The state has a role and a remit, and it's unlikely to give up the control it exercises. Unfortunately, though, there are two ways that holding onto control will mean that CBDCs fall far short of what they could be, meaning they may ultimately cede ground to open platforms like Ergo.
+It's a far cry from the ideals of Bitcoin and Ergo that aims to build on these. But it's only to be expected. The state has a role and a remit, and it's unlikely to give up the control it exercises. Unfortunately, though, there are two ways that holding onto control will mean that CBDCs fall far short of what they could be, meaning they may ultimately cede ground to open platforms like Ergo.
 
 ## Composability
 

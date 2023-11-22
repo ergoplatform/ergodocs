@@ -131,6 +131,9 @@ Once your pull request is submitted, our team will review your changes. We may r
 
 ## MkDocs formatting
 
+rST suggests the following “types”: attention, caution, danger, error, hint, important, note, tip, and warning; however, you’re free to use whatever you want.
+
+
 ```
 /// admonition | Some title
     type: warning
@@ -153,4 +156,51 @@ Some content
 
 /// note | Some title
 Some content
+///
+
+note, attention, caution, danger, error, tip, hint, warning.
+
+/// admonition | note
+    type: note
+
+Some note
+///
+
+/// admonition | caution
+    type: caution
+
+Some caution
+///
+
+/// admonition | danger
+    type: danger
+
+Some danger
+///
+
+/// admonition | error
+    type: error
+
+Some error
+///
+
+
+/// admonition | tip
+    type: tip
+
+Some tip
+///
+
+
+
+/// admonition | hint
+    type: hint
+
+Some hint
+///
+
+/// admonition | warning
+    type: warning
+
+Some warning
 ///

@@ -2,7 +2,7 @@
 
 ## Overview
 
-Token Jay is your one-stop solution for dealing with tokens on the Ergo platform. It offers open, fully documented applications that are accessible to everyone.
+Token Jay is your one-stop solution for dealing with tokens on Ergo. It offers open, fully documented applications that are accessible to everyone.
 
 You can trade tokens in a trustless and decentralized manner using TokenJay's open P2P Escrow service. Visit [tokenjay.app](https://tokenjay.app/) to get started. Please note that you will need an ErgoPay compatible Wallet Application.
 

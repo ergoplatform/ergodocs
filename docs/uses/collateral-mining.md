@@ -1,6 +1,6 @@
 # Collateral Mining
 
-We are pleased to introduce Collateral Mining, a unique feature of the Ergo Platform Blockchain that provides an innovative approach to mining and incentivizes participation in the network. This documentation will explain the intricacies of Collateral Mining, including its architecture, consensus mechanism, transaction validation, smart contracts, APIs, and various features, catering to both developers and end users.
+We are pleased to introduce Collateral Mining, a unique feature of Ergo Blockchain that provides an innovative approach to mining and incentivizes participation in the network. This documentation will explain the intricacies of Collateral Mining, including its architecture, consensus mechanism, transaction validation, smart contracts, APIs, and various features, catering to both developers and end users.
 
 ## Introduction
 
@@ -39,7 +39,7 @@ Furthermore, it is worth noting that the pool reward, initially set at 67.5 ERG,
 
 ## Additional Resources
 
-For further understanding and engagement with Collateral Mining on the Ergo Platform Blockchain, we recommend exploring the following resources:
+For further understanding and engagement with Collateral Mining on Ergo Blockchain, we recommend exploring the following resources:
 
 - Proposal of the Collateral Mechanism by [@scalahub](https://www.ergoforum.org/t/creating-an-ergo-mining-pool/42) in July 2019.
 - Research paper authored by [@kushti](https://eprint.iacr.org/2020/044) and [@scalahub](https://eprint.iacr.org/2020/044) detailing the Collateral Mining concept.

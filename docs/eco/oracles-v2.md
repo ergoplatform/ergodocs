@@ -1,7 +1,10 @@
-# Enhanced Oracle Pools: Version 2.0
+# Oracle Pools Version 2
 
-> See the latest overview video from the summit here: [Oracle Pool v2 | greenhat | Ergoversary Summit 2023](youtube.com/watch?v=WeQcUmVUhoI)
 
+/// details | Latest Developments
+     {type: tip, open: true}
+See the latest overview video from the summit here: [Oracle Pool v2 | greenhat | Ergoversary Summit 2023](youtube.com/watch?v=WeQcUmVUhoI)
+///
 
 The document described below outlines a proposed upgrade to Oracle Pool version 1.0, as presently deployed and detailed in [EIP16](https://github.com/ergoplatform/eips/blob/eip16/eip-0016.md). The necessity for these modifications emerges from several perceived limitations within Oracle Pool v1.0:
 

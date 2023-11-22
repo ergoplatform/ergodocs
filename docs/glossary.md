@@ -62,9 +62,9 @@
 
 * **Emission Schedule**: The plan detailing the release of new ERGs into circulation over time.
 * **Empowerment**: The act of enabling and supporting community members to take an active role in the growth and innovation of the Ergo ecosystem.
-* **[Ergo Improvement Proposals (EIPs)](eip.md)**: A set of guidelines and standards used for proposing and implementing continuous improvements to the Ergo Platform.
+* **[Ergo Improvement Proposals (EIPs)](eip.md)**: A set of guidelines and standards used for proposing and implementing continuous improvements to Ergo.
 * **Ergo Forum**: A platform for discussions and communication within the Ergo community.
-* **[Ergo Foundation ('EF')](ergo-foundation-2022.md)**: A non-profit, community-driven entity focused on promoting the development and adoption of the Ergo Platform.
+* **[Ergo Foundation ('EF')](ergo-foundation-2022.md)**: A non-profit, community-driven entity focused on promoting the development and adoption of Ergo.
 * **[ErgoScript](ergoscript.md)**: The scripting language used in Ergo's smart contracts.
 * **[Ergo's Social Contract](social_contract.md)**: The set of main principles that should be followed in the Ergo protocol, defining its core values and guiding philosophy.
 * **[Ergo Summit](ergosummit.md)**: An event or conference focused on Ergo blockchain-related topics.
@@ -193,7 +193,7 @@
 
 * **[Scalability](scalability.md)**: Another advantage of the UTXO model is its inherent support for parallel transaction processing, simplifying network scalability. It is also more compatible with stateless client solutions.
 * **Scripting Language**: A programming language used to specify the rules for spending cryptocurrency. ErgoScript is designed to support various features like ring signatures, atomic swaps, and more.
-* **[Security Audit](security-audit.md)**: A comprehensive assessment conducted to evaluate the security of certain components or aspects of the Ergo Platform. The goal is to identify vulnerabilities, weaknesses, and potential risks in the system.
+* **[Security Audit](security-audit.md)**: A comprehensive assessment conducted to evaluate the security of certain components or aspects of Ergo. The goal is to identify vulnerabilities, weaknesses, and potential risks in the system.
 * **Seed Phrase**: A set of words used to back up and restore a cryptocurrency wallet; it is crucial for wallet recovery.
 * **[Sharding](sharding.md)**: A scaling technique that divides the blockchain into smaller, parallel chains to increase throughput while maintaining security.
 * **Shared Figma Graphic Space**: A collaborative platform where community members can work together on visual content and design projects related to Ergo.

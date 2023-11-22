@@ -2,7 +2,7 @@
 
 ## How to Contribute as a Developer
 
-If you're interested in contributing to the Ergo platform as a developer, here's how you can get started:
+If you're interested in contributing to Ergo as a developer, here's how you can get started:
 
 1. **Join the Ergo Community:** Connect with other developers and Ergo team members on our [Discord Server](https://discord.gg/nr4JRnhAyV). Make sure to enable the development channels for relevant discussions.
 

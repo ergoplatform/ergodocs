@@ -1,6 +1,6 @@
 # Grand Gambit
 
-Grand Gambit, accessible at [grandgambit.io](https://grandgambit.io/), is the pioneering casino on the Ergo platform. It offers a variety of games that can be played using ERG and several other tokens. The platform is compatible with both desktop and mobile devices, although currently only Android is supported.
+Grand Gambit, accessible at [grandgambit.io](https://grandgambit.io/), is the pioneering casino on Ergo. It offers a variety of games that can be played using ERG and several other tokens. The platform is compatible with both desktop and mobile devices, although currently only Android is supported.
 
 The code for Grand Gambit is open source and can be reviewed by anyone interested. It has undergone a security review by an Ergo Core Developer to ensure its robustness. However, users are advised to bet with caution.
 

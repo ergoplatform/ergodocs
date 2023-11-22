@@ -1,15 +1,19 @@
-# NFTs
+# Non-Fungible Tokens
 
-Blockchains aren’t only about cryptocurrencies. Audio or visual artworks can also be deployed on immutable smart contracts of blockchains. These artworks are represented by [Non-Fungible Tokens](https://en.wikipedia.org/wiki/Non-fungible_token). Furthermore, artworks can be traded in decentralized auction houses. This would help artists to reach the world without any restrictions from governments or without any need for centralized licensing firms. It means the democratization of art markets with the help of public blockchain.
+Blockchains offer more than just cryptocurrencies. They can also host audio or visual artworks through immutable smart contracts. These artworks are represented as [Non-Fungible Tokens](https://en.wikipedia.org/wiki/Non-fungible_token) (NFTs). Moreover, these NFTs can be traded in decentralized auction houses, providing artists with a global platform free from governmental restrictions or the need for centralized licensing firms. This leads to the democratization of art markets through public blockchain.
 
-Some examples, like [Rarible](https://rarible.com/) or [Opensea](https://opensea.io/) are auction markets running on Ethereum Network. Any artist can create and sell their artwork there; however, gas prices to mint an NFT can take up to $100. Ergo’s scalable and faster design would reduce gas costs to almost zero without giving up security or speed. 
+There are existing examples like [Rarible](https://rarible.com/) and [Opensea](https://opensea.io/), which are auction markets operating on the Ethereum Network. While these platforms allow any artist to create and sell their artwork, the gas prices for minting an NFT can reach up to $100. Ergo's scalable and efficient design significantly reduces these gas costs without compromising on security or speed. 
 
-See the [developer section](create.md) for steps on minting your own NFTs.
+//// note | Marketplaces
+/// details | ErgoAuctions
+     {type: success, open: true}
+[ErgoAuctions](ergo-auctions.md) is a platform where you can bid on and sell a variety of collectible tokens, art, and more.
+///
+/// details | SkyHarbor
+     {type: success, open: true}
+[SkyHarbor](skyharbor.md) is a trusted marketplace that specializes in set price transactions. 
+///
+////
 
-## Marketplaces
-
-- [ErgoAuctions](ergo-auctions.md)
-- [SkyHarbor](skyharbor.md)
-
-
+For instructions on how to mint your own NFTs, refer to the [developer section](create.md).
 

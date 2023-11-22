@@ -4,7 +4,7 @@ ErgoTree forms the backbone of Ergo's contract development process, playing a vi
 
 ## Understanding ErgoTree
 
-ErgoTree is not only an integral part of Ergo's infrastructure but also serves as a domain-specific language. It encapsulates the [*ubiquitous language*](https://www.martinfowler.com/bliki/UbiquitousLanguage.html) of the Ergo blockchain, directly interacting with Boxes, Tokens, Zero-Knowledge Sigma-Propositions, among others. ErgoTree optimizes for compact storage and speedy execution, marking its prominence in the Ergo platform.
+ErgoTree is not only an integral part of Ergo's infrastructure but also serves as a domain-specific language. It encapsulates the [*ubiquitous language*](https://www.martinfowler.com/bliki/UbiquitousLanguage.html) of the Ergo blockchain, directly interacting with Boxes, Tokens, Zero-Knowledge Sigma-Propositions, among others. ErgoTree optimizes for compact storage and speedy execution, marking its prominence in Ergo.
 
 The language designed for writing blockchain contracts must be deterministic, fostering spam-resistance. It should also be simple yet expressive enough to act as a robust platform for contractual money. ErgoTree fulfills these criteria, emerging as a critical tool for creating, protecting, and managing boxes in the Ergo blockchain.
 

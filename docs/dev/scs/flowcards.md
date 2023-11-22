@@ -5,7 +5,7 @@ tags:
 
 <!--TODO: Split Paradigm out of this-->
 
-FlowCards aim to radically simplify dApp development on the Ergo platform by providing a high-level declarative language, execution runtime, storage format and a graphical notation.
+FlowCards aim to radically simplify dApp development on Ergo by providing a high-level declarative language, execution runtime, storage format and a graphical notation.
 
 See also, [flowcardLib: Ergo FlowCard library for diagrams.net](https://github.com/lucagdangelo/flowcardLib)
 ## Introduction 
@@ -108,7 +108,7 @@ Apps, LETS, etc.), designing contracts as preconditions for coin spending (or gu
 scripts) directly is not intuitive. In the next sections, we will consider a useful graphical notation to design contracts declaratively using _FlowCard Diagrams_, which is a visual
 representation of executable components (FlowCards). 
 
-_FlowCards aim to radically simplify dApp development on the Ergo platform by
+_FlowCards aim to radically simplify dApp development on Ergo by
 providing a high-level declarative language, execution runtime, storage format and
 a graphical notation_.
 

@@ -40,7 +40,7 @@ The [Ergo Foundation](https://ergoplatform.org/en/foundation/) is a community-dr
 
   - Promoting non-breaking development of Ergo Platform protocol;
   - Promoting the widespread adoption and use of Ergo Platform and its native token (ERG);
-  - Developing the ecosystem around the Ergo Platform;
+  - Developing the ecosystem around Ergo;
   - Promoting the use of Ergo Platform and blockchain technology for social good;
   - Supporting truly decentralised infrastructure and;
   - Supporting privacy as a basic human right.
@@ -173,16 +173,16 @@ See the [scaling](scaling.md) page for more information.
 
 ## How will miners be supported after emissions?
 
-After the scheduled emissions conclude in 2045, miners on Ergo will continue to be incentivized through alternative methods. One such approach involves transaction fees and Miner Extracted Value (MEV). Transactions on the Ergo Platform generate fees (paid in Ergs), with a portion of these fees awarded to miners. MEV represents the total value miners can extract from a block using tactics like reordering, front-running, and other advanced techniques. Miners can increase their MEV earnings by efficiently executing transactions in high MEV blocks, which encourages them to contribute their hash power to the network.
+After the scheduled emissions conclude in 2045, miners on Ergo will continue to be incentivized through alternative methods. One such approach involves transaction fees and Miner Extracted Value (MEV). Transactions on Ergo generate fees (paid in Ergs), with a portion of these fees awarded to miners. MEV represents the total value miners can extract from a block using tactics like reordering, front-running, and other advanced techniques. Miners can increase their MEV earnings by efficiently executing transactions in high MEV blocks, which encourages them to contribute their hash power to the network.
 
 
-Another incentive for miners on the Ergo Platform is through [**Storage Rent**](rent.md). This mechanism requires users to pay for the storage their data occupies on the network. Consequently, miners receive a consistent income stream, as they earn Ergs from fees users pay for content storage. [This post](https://www.reddit.com/r/ergonauts/comments/xeke0b/discover_ergos_storage_rent_potential/) provides insight into future mining rewards from storage rent.
+Another incentive for miners on Ergo is through [**Storage Rent**](rent.md). This mechanism requires users to pay for the storage their data occupies on the network. Consequently, miners receive a consistent income stream, as they earn Ergs from fees users pay for content storage. [This post](https://www.reddit.com/r/ergonauts/comments/xeke0b/discover_ergos_storage_rent_potential/) provides insight into future mining rewards from storage rent.
 
 Miners can also benefit from custom emission contracts as part of a Fair Initial Mining Offering (FIMO) process. These contracts reward miners with non-native tokens, ensuring new projects have equal opportunities to distribute tokens to the community while incentivizing miners to participate in mining.
 
 Moreover, miners can operate [off-chain execution bots](dex_bots.md) on the same machine to earn additional ERG rewards. [Machina Finance](machina-finance.md) is also developing an *extensible* off-chain bot framework.
 
-In summary, miners on the Ergo Platform are incentivized through transaction fees (including MEV), storage rent, custom emission contracts that reward non-native tokens as part of the FIMO (Fair Initial Mining Offering), and more.
+In summary, miners on Ergo are incentivized through transaction fees (including MEV), storage rent, custom emission contracts that reward non-native tokens as part of the FIMO (Fair Initial Mining Offering), and more.
 
 ## Is Proof of Useful Work being considered?
 

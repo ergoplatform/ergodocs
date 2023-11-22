@@ -45,7 +45,7 @@ Be sure to check out [ErgoGames.io](https://ergogames.io), a platform dedicated 
 //// note | Monetary-based Games
 /// details | Grand Gambit
      {type: success, open: true}
-[Grand Gambit](grand-gambit.md), is the pioneering casino on the Ergo platform. It offers a variety of games that can be played using ERG and several other tokens. The platform is compatible with both desktop and mobile devices, although currently only Android is supported.
+[Grand Gambit](grand-gambit.md), is the pioneering casino on Ergo. It offers a variety of games that can be played using ERG and several other tokens. The platform is compatible with both desktop and mobile devices, although currently only Android is supported.
 
 ///
 /// details | BlobsTopia (Inactive)

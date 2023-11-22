@@ -4,7 +4,7 @@ This page provides a collection of resources related to Ergo mining. It includes
 
 ## Academic Papers
 
-- [Ergo White Paper](https://www.docdroid.net/mcoitvK/ergopow-pdf): This paper provides a comprehensive overview of the Ergo platform, including its design principles, consensus algorithm, and economic model.
+- [Ergo White Paper](https://www.docdroid.net/mcoitvK/ergopow-pdf): This paper provides a comprehensive overview of Ergo, including its design principles, consensus algorithm, and economic model.
 
 - [Ergo Yellow Paper](https://www.docdroid.net/mcoitvK/ergopow-pdf): The Yellow Paper offers a more technical perspective on Ergo, detailing the platform's underlying algorithms and data structures.
 

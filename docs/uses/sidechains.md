@@ -7,7 +7,7 @@ tags:
 # Sidechains on Ergo
 
 
-Ergo's architecture supports the development and implementation of sidechains. This document explores the concept of sidechains, their utility, the use of NiPoPoWs, and a proposed method for two-way pegged sidechains on the Ergo platform.
+Ergo's architecture supports the development and implementation of sidechains. This document explores the concept of sidechains, their utility, the use of NiPoPoWs, and a proposed method for two-way pegged sidechains on Ergo.
 
 /// admonition | Recent Developments
 
@@ -45,7 +45,7 @@ NiPoPoWs facilitate several scalability solutions:
 
 ## Implementing Two-Way Pegged Sidechains on Ergo
 
-In the context of the Ergo platform, we can establish a two-way pegged sidechain by ensuring that the sidechain can interact with the main Ergo chain and recognize its state. This interaction happens through the process described simply below, for a more technical overview please see the [ergohack-sidechain](https://github.com/ross-weir/ergohack-sidechain/tree/main) project. 
+In the context of Ergo, we can establish a two-way pegged sidechain by ensuring that the sidechain can interact with the main Ergo chain and recognize its state. This interaction happens through the process described simply below, for a more technical overview please see the [ergohack-sidechain](https://github.com/ross-weir/ergohack-sidechain/tree/main) project. 
 
 1. **Initiating the Transfer**: A user sends a specified amount of ERG (Ergo's native cryptocurrency) to a specific contract on the main chain. This contract locks the funds and allows them to be unlocked only when there's proof of a corresponding deposit in the sidechain.
 

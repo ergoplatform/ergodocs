@@ -5,7 +5,7 @@ tags:
 
 # Blitz TCG
 
-Blitz TCG is an innovative gaming project being developed on the Ergo platform. It aims to revolutionize traditional TCG gameplay by introducing unique features such as access to the entire deck for players, a chess-like time bank system, and the inclusion of NPC alternatives on the game board. The team is committed to transparency and regularly shares development updates on Twitter.
+Blitz TCG is an innovative gaming project being developed on Ergo. It aims to revolutionize traditional TCG gameplay by introducing unique features such as access to the entire deck for players, a chess-like time bank system, and the inclusion of NPC alternatives on the game board. The team is committed to transparency and regularly shares development updates on Twitter.
 
 Blitz TCG is a self-funded project that prioritizes gameplay over profits. It aims to provide a play and earn model, as opposed to a play to earn model. The game is being developed for both the Ergo and Cardano platforms.
 

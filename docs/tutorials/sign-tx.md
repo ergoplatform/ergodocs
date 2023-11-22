@@ -52,6 +52,6 @@ const signedTx = wallet.sign(unsignedTx);
 
 ## Additional References
 
-1. **Sigma-rust** - For more details on the Ergo Platform's sigma-rust library, please refer to the [sigma-rust repository](https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-wasm).
-2. **Sigma-rust Discord** - Join the [Sigma-rust Discord channel](https://discord.com/channels/668903786361651200/729692906209673257) to engage in discussions and receive support related to the Ergo Platform's sigma-rust library.
+1. **Sigma-rust** - For more details on Ergo's sigma-rust library, please refer to the [sigma-rust repository](https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-wasm).
+2. **Sigma-rust Discord** - Join the [Sigma-rust Discord channel](https://discord.com/channels/668903786361651200/729692906209673257) to engage in discussions and receive support related to Ergo's sigma-rust library.
 3. **dAppstep Repo** - Visit the [dAppstep repository](https://github.com/nirvanush/dappstep-play/blob/main/src/services/WalletFromMnemonics.ts) for further information on using the backend wallet for transaction signing.
