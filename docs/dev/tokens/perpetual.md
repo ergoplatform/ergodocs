@@ -1,7 +1,6 @@
 # Perpetual Tokens
 
-You can use ErgoScript to create a '*perpetual token*', in other words, a token that is guaranteed to exist forever, unless it gets garbage-collected!
-
+ErgoScript allows the creation of a '*perpetual token*', a token that is designed to exist indefinitely, unless it is removed by garbage collection.
 
 ```scala
     {
@@ -12,16 +11,15 @@ You can use ErgoScript to create a '*perpetual token*', in other words, a token 
       sigmaProp(OUTPUTS.exists(isPerpetual))
     }
 ```
-To clarify, this construct establishes a collection of perpetual tokens, even if the collection's size is zero. However, should you safeguard a singleton token using this script, it ensures the token will never be destroyed other than by garbage collection.
+This code snippet ensures the persistence of a collection of perpetual tokens, even if the collection's size is zero. If you protect a single token using this script, it guarantees that the token will only be removed by garbage collection.
 
-See [this thread](https://www.ergoforum.org/t/a-perpetual-token/205/3) for the full discussion.
+For a comprehensive discussion, refer to [this thread](https://www.ergoforum.org/t/a-perpetual-token/205/3).
 
-<!--TODO: Segway?-->
 ## Multi-Stage Protocols
 
-Multi-stage protocols are used in scenarios where multiple scripts interact with each other. In these protocols, one script can reference the script of a subsequent stage.
+Multi-stage protocols are beneficial in situations where multiple scripts need to interact. In these protocols, a script can reference the script of a subsequent stage.
 
-Consider the following example:
+For instance, consider the following example:
 
 In `script1`, we have the statement:
 
@@ -29,16 +27,16 @@ In `script1`, we have the statement:
 hash(OUTPUTS(0).propositionBytes) == script2Hash
 ```
 
-This means that `script1` is checking whether the hash of the first output's `propositionBytes` equals the hash of `script2`.
+Here, `script1` verifies if the hash of the first output's `propositionBytes` matches the hash of `script2`.
 
-However, if we also want `script2` to refer back to `script1`, as in the example below:
+But, if we want `script2` to refer back to `script1`, as shown below:
 
 ```scala
 hash(OUTPUTS(0).propositionBytes) == script1Hash
 ```
 
-We encounter a cyclic reference issue, as both scripts are referring to each other.
+We face a cyclic reference problem, as both scripts are referencing each other.
 
-To resolve this, we can store `script1Hash` in a register of the [box](box.md) containing `script2`. Additionally, we need to modify `script1` to ensure that the corresponding register of any box containing `script2` is equal to `hash(SELF.propositionBytes)`.
+To overcome this, we can store `script1Hash` in a register of the [box](box.md) that contains `script2`. We also need to modify `script1` to ensure that the corresponding register of any box containing `script2` equals `hash(SELF.propositionBytes)`.
 
-While this "vanilla" perpetual token is interesting, a more powerful and flexible approach is the "max-once-per-block-use" perpetual token, which should be considered a separate design pattern.
+While the "vanilla" perpetual token is intriguing, the "max-once-per-block-use" perpetual token offers more flexibility and power, and should be considered as a distinct design pattern.

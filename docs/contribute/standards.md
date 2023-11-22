@@ -1,5 +1,9 @@
 # Ecosystem Standards
 
+/// note | Contributing to a project on Ergo?
+This page serves as a guide for contributing as a project on Ergo. It outlines the standards for identity, development, and community administration. Adhering to these standards ensures a secure and efficient ecosystem.
+///
+
 ## V1 Identity 
 
  #       | Description                                                  | [NIST §](https://pages.nist.gov/800-63-3/sp800-63b.html) |

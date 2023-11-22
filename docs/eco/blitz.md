@@ -5,19 +5,23 @@ tags:
 
 # Blitz TCG
 
-Blitz TCG is a highly anticipated gaming project that is building on top of Ergo. It breaks free from traditional TCG factors through a few key traits: allowing players access to their entire deck, implementing a chess-like time bank system, and adding NPC alternatives to the game board. The team has an extremely detailed whitepaper and is posting consistent development updates on Twitter.
+Blitz TCG is an innovative gaming project being developed on the Ergo platform. It aims to revolutionize traditional TCG gameplay by introducing unique features such as access to the entire deck for players, a chess-like time bank system, and the inclusion of NPC alternatives on the game board. The team is committed to transparency and regularly shares development updates on Twitter.
 
-Our goal is to create a digital TCG that mixes iconic aspects from several game genres together to create a refreshing alternative to standard TCG gameplay. Self-Funded. No presale. Gameplay First. Play and Earn, not Play to Earn. Ergo and Cardano. 
+Blitz TCG is a self-funded project that prioritizes gameplay over profits. It aims to provide a play and earn model, as opposed to a play to earn model. The game is being developed for both the Ergo and Cardano platforms.
+
+/// note | Recent Developments
+Blitz TCG is set for a full launch in Q1 2024. Stay updated with the latest news on their [Twitter](https://twitter.com/Blitz_TCG/status/1726797069745274925).
+///
 
 ## Game Mechanics
 
-For many competitive players, one virtue of gaming remains desired: consistency. In TCGs, this is the ability for a player to predict how their strategy will affect the state of a match, given the chance of drawing a specific card within a given number of turns. Some might compare consistency to fairness, specifically the minimizing of the chance a player will win or lose based on luck. Blitz TCG’s goal is to limit RNG (Random Number Generation) as much as possible and promote skill/strategy based gameplay.
+Blitz TCG is designed with competitive players in mind. It aims to provide a consistent gaming experience where players can predict the outcome of their strategies based on the probability of drawing specific cards within a given number of turns. The game seeks to minimize the role of luck and emphasize skill and strategy by limiting the use of RNG (Random Number Generation).
 
 ## Additional Resources
 
-For more information about Blitz TCG, you can check the following resources:
+For more information about Blitz TCG, please refer to the following resources:
 
-- [More information](http://linktr.ee/blitztcg) 
+- [General Information](http://linktr.ee/blitztcg) 
 - [Roadmap](https://www.blitz-tcg.com/roadmap)
 - [Whitepaper](https://www.blitz-tcg.com/_files/ugd/1938de_84e5fc9f92a54e0a99f19649dd946871.pdf)
 - [Twitter](https://twitter.com/Blitz_TCG)

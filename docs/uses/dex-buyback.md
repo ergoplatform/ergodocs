@@ -1,12 +1,14 @@
-In this example, we will consider a decentralized token sale, where the seller is providing buyback guarantees. 
+# Buy Back Guarantees
 
-This guarantee is done in the following way: a seller requires a buyer to create a buy order at some price and of some token amount also. The rest is going to the seller. 
+In this example, we will explore a decentralized token sale scenario where the seller provides buyback guarantees.
 
-Every order can have unique buyback properties (e.g. form a bonding curve).
+The guarantee works as follows: the seller requires the buyer to create a buy order at a specific price for a certain amount of tokens. The remaining amount goes to the seller.
 
-We start with a buyback contract. It has expiration (`buyerPk && sigmaProp(HEIGHT > 100)` condition); otherwise, the box has been spent if asked the number of tokens sent back to the original seller.
+Each order can have unique buyback properties, such as forming a bonding curve.
 
-```
+We begin with a buyback contract. It has an expiration condition (`buyerPk && sigmaProp(HEIGHT > 100)`); otherwise, the box has been spent if the original seller requests the number of tokens sent back.
+
+```scala
     {
         val defined = OUTPUTS(0).R2[Coll[(Coll[Byte], Long)]].isDefined &&  OUTPUTS(0).R4[Coll[Byte]].isDefined
         (buyerPk && sigmaProp(HEIGHT > 100)) || sigmaProp (if (defined) {
@@ -19,8 +21,10 @@ We start with a buyback contract. It has expiration (`buyerPk && sigmaProp(HEIGH
         } else { false } )
     }
 ```
-Sell contract is then as follows:
-```
+
+The sell contract is then defined as follows:
+
+```scala
       {
         sigmaProp(allOf(Coll(
                     blake2b256(OUTPUTS(0).propositionBytes) == bbh,
@@ -32,9 +36,9 @@ Sell contract is then as follows:
                  )
       }
 ```
-Where `bbh` is buyback script hash. 
+In this case, `bbh` represents the buyback script hash.
 
-A playground version you can experiment with is available: https://scastie.scala-lang.org/oVlOW1GpTkWGLPLzDmJTxA .
+You can experiment with a playground version of this code [on scastie](https://scastie.scala-lang.org/oVlOW1GpTkWGLPLzDmJTxA)
 
 
-Similarly to buyback, we can enhance orders with different conditions, getting DEX functionality (and simple DEX orders) composable with complex logic (token-sale, liquidity providing etc.). I'm calling this *smart orders*. The big question, however, is how to do front-end apps and UIs for smart order based DEXes.
+Just like the buyback, we can enhance orders with various conditions, thereby achieving DEX functionality. This makes simple DEX orders composable with complex logic such as token-sale, liquidity providing, etc. This concept is referred to as *smart orders*. However, the challenge lies in developing front-end apps and user interfaces for smart order-based DEXes.
