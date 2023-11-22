@@ -1,6 +1,6 @@
 # Ergo Full Node Manual Installation
 
-This document provides a systematic process for the manual installation of an Ergo full node on a server. For desktop installation, the [Satergo](https://satergo.com) platform is recommended.
+This document provides a systematic process for the manual installation of an Ergo full node on a server. For desktop installation, the [Satergo](https://satergo.com) wallet is available.
 
 ---
 
@@ -34,9 +34,13 @@ java -jar -Xmx4G ergo-*.jar --mainnet -c ergo.conf
 
 See [this page](node-faq.md#java) for getting setup with java.
 
+
+/// admonition | Xmx Flag
+    type: tip
+
 * The `-Xmx4G` flag determines the JVM's max heap size; recommended setting is `4-6G` based on available memory. 
 * During the initial syncing process, allocate more memory using `-Xmx4g`. Upon completion of the syncing process, reduce this to `-Xmx1g`.
-
+///
 Following the execution of this command, the node will commence syncing. Wait for the API initialization before proceeding to the subsequent step.
 
 > **Note:** The filename `ergo.conf` can be modified as desired. This file is a repository for all configuration parameters, and only parameters differing from the default values need to be overwritten.

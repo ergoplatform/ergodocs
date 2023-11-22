@@ -11,7 +11,7 @@ Generalizing the Bitcoin Script, ErgoScript compiler and ErgoTree interpreter im
 ErgoTree, in turn, is a bytecode language and memory representation that can be deterministically interpreted in the given _blockchain context_.
 
 /// admonition | Please note
-> ErgoTree defines guarding proposition for a coin as a logic formula which combines predicates over a context and cryptographic statements provable via [Σ-protocols](https://en.wikipedia.org/wiki/Proof_of_knowledge#Sigma_protocols) with AND, OR, k-out-of-n connectives.
+ErgoTree defines guarding proposition for a coin as a logic formula which combines predicates over a context and cryptographic statements provable via [Σ-protocols](sigma-protocols.md) with AND, OR, k-out-of-n connectives.
 ///
 ## Spending 
 

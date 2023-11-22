@@ -7,11 +7,13 @@ tags:
 
 **ErgoScript is a super-simple subset of Scala.** It is a top-level language translated into a low-level language called [ErgoTree](ergotree.md), which is translated during execution into cryptographic protocol. That's how Ergo supports ring and threshold signatures and much more crypto protocols with no special cases made in the core!
 
-Ergo's support for [sigma-protocols](sigma.md) (aka generalized Schnorr proofs) are truly unique as building blocks for composable statements. Schnorr protocols and proof-of-Diffie-Hellman-tuples are supported by default, with more options available that the community can add via soft forks.
-
-
 ErgoScript is built considering Bitcoin’s security and privacy to make all kinds of complex financial contracts accessible. In comparison, Bitcoin’s design doesn’t allow loops or building any complex smart contracts on top of it. ErgoScript allows for self-replication; therefore, we can use it to create Turing-Complete processes in a blockchain.
 
+/// admonition | Sigma Protocols
+    type: tip
+
+Ergo's support for [sigma-protocols](sigma.md) (aka generalized Schnorr proofs) are truly unique as building blocks for composable statements. Schnorr protocols and proof-of-Diffie-Hellman-tuples are supported by default, with more options available that the community can add via soft forks.
+///
 
 
 
@@ -25,7 +27,12 @@ if (HEIGHT < 100000) alicePubKey else bobPubKey
 2. Allows Only Bob to spend the box after that.
 
 
+
+/// admonition | Getting Started
+    type: note
+
 Please see this [Quick Primer on ErgoScript](/dev/scs/ergoscript-primer) for an overview of key concepts and some basic examples. 
+///
 
 ## Resources
 

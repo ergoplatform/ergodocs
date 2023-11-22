@@ -4,9 +4,17 @@ comments: true
 
 # Discover Ergo: The Blockchain of the Future
 
-Ergo, a revolutionary proof-of-work smart contract platform, is designed to bring the future of financial interactions to the present. It is backed by a powerful and secure scripting language, a suite of powerful zero-knowledge proofs, and a foundation rooted in the best principles and research in cryptography and blockchain technology.
+Ergo is a next-generation smart contract platform that ensures the economic freedom of ordinary people through secure, accessible, and decentralized financial tools.
+
+It is backed by a powerful and secure scripting language, a suite of powerful zero-knowledge proofs, and a foundation rooted in the best principles and research in cryptography and blockchain technology.
+
+/// admonition | Keep up to date!
+    type: tip
 
 Stay updated with our [Monthly Wrap-Ups on Substack](https://substack.com/@ergoplatform) for the latest developments.
+///
+
+
 
 ## The Vision Behind Ergo
 
