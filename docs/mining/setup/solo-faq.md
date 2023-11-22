@@ -4,7 +4,7 @@
 
 When you mine, the rewards are initially linked to a *time-and-pubkey lock script*, not your standard P2PK address. To make these funds visible in your wallet, you need to transfer all the funds to your own address in the node wallet. Once the transfer is confirmed on the chain, the Explorer will display them.
 
-## Why Do Mining Rewards Appear to Go to an Unknown Address?
+## Why Do My Rewards Go to a Different Address?
 
 Mining rewards are initially directed to UTXOs (Unspent Transaction Outputs) associated with specific scripts. These scripts lock the rewards to the miner's public keys for 720 blocks. You can see an example of such a script [here](https://explorer.ergoplatform.com/en/addresses/88dhgzEuTXaQ3tvkG8KeHesmXdvVomxHoHK5ExawGuxhs3nwBKkoQTxZogna6Dx9Jbu7KG2Wor22Uy73).
 

@@ -1,39 +1,39 @@
 # CPU Mining
-> Please do not GPU mine the testnet! It prevents CPU miners from winning any blocks and then leaves a high difficulty when you stop. 
 
+/// admonition | Warning!
+    type: warning
+Please do not GPU mine the testnet! It prevents CPU miners from winning any blocks and then leaves a high difficulty when you stop.
+///
 
 ## Getting Set-up
 > Please refer to [node](install.md) for basic node set-up up to this point.
 
 To CPU mine on the testnet, your `testnet.conf` should look like this. 
 
-```
-ergo {
-  networkType = "testnet"
+```conf
+  ergo {
+    networkType = "testnet"
 
-  node {
-    mining = true
-    useExternalMiner = false
+    node {
+      mining = true
+      useExternalMiner = false
+    }
   }
 
- 
-}
+  scorex {
 
-scorex {
+  network {
+      bindAddress = "0.0.0.0:9022"
+      nodeName = "ergo-testnet"
+      #knownPeers = []
+    }
 
- network {
-    bindAddress = "0.0.0.0:9022"
-    nodeName = "ergo-testnet"
-    #knownPeers = []
+  restApi {
+      # Hex-encoded Blake2b256 hash of an API key. Should be 64-chars long Base16 string.
+      # Below is hash corresponding to API_KEY = "hello" (with no quotes)
+      apiKeyHash = "324dcf027dd4a30a932c441f365a25e86b173defa4b8e58948253471b81b72cf"
+    }
   }
-
- restApi {
-    # Hex-encoded Blake2b256 hash of an API key. Should be 64-chars long Base16 string.
-    # Below is hash corresponding to API_KEY = "hello" (with no quotes)
-    apiKeyHash = "324dcf027dd4a30a932c441f365a25e86b173defa4b8e58948253471b81b72cf"
-  }
-}
-
 ```
 
 Then run 
