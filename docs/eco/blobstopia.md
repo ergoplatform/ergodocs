@@ -5,7 +5,15 @@ tags:
 
 # Blobstopia
 
-[Blob's Topia](https://www.blobs-topia.fun/) is a game on Ergo blockchain in which you can own blob fighters smart contracts.
+/// details | Status: Inactive
+     {type: warning, open: true}
+The original domain name is no longer active, which caused the site to go down. However, it has been restored at [here](http://51.77.221.96:8080/) This will allow users to withdraw their ERGs. While the game is not currently being updated or improved, it is still operational and available for enjoyment.
+///
+
+
+
+
+[Blob's Topia](http://51.77.221.96:8080/) is a game on Ergo blockchain in which you can own blob fighters smart contracts.
 
 Those blob fighters are owning an amount of ERG and can bet an amount for a fight.
 
@@ -22,3 +30,7 @@ Those blob fighters are owning an amount of ERG and can bet an amount for a figh
 - A Blobinator is a kind of super blob fighter that can be invoked once enough fights occured.
 - Any blobs can fight against a Blobinator if the player has earn enough Spicy Oatmeal Spicy Oatmeal to attract the Blobinator.
 - The Blobinator fight is "free" for the player that just needs to pay 2 transactions fees to try to get the amount in the Blobinator.
+
+## Resources
+
+- [Fight bot](https://github.com/ThierryM1212/blobs-topia/releases/tag/v1.1.0)

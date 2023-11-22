@@ -49,8 +49,8 @@ Be sure to check out [ErgoGames.io](https://ergogames.io), a platform dedicated 
 
 ///
 /// details | BlobsTopia (Inactive)
-     {type: warning, open: false}
-[Blob's Topia](blobstopia.md) is now live. The first ever Blobs fighter game powered by Ergo.
+     {type: success, open: true}
+[Blob's Topia](blobstopia.md) is now live. The first ever Blobs fighter game powered by Ergo. While the game is not currently being updated or improved, it is still operational and available for enjoyment.
 ///
 /// details | NightOwl (Inactive)
      {type: warning, open: false}
