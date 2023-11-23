@@ -1,4 +1,4 @@
-## Synchronising a full node
+# Synchronising a full node
 
 To join the testnet, download [latest Ergo protocol reference client](https://github.com/ergoplatform/ergo/releases) and launch using
 

@@ -1,9 +1,9 @@
 # Common Misconceptions
 
-/// admonition | Debunking Common Misconceptions
+/// admonition | title
     type: tip
 
-This section is dedicated to dispelling prevalent misconceptions about Ergo, providing clear and accurate information.
+This page aims to provide some clarity around some common misconceptions that have cropped up about Ergo.
 ///
 
 ## Emission

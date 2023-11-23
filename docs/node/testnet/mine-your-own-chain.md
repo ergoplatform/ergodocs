@@ -1,17 +1,18 @@
 # Fork your own chain!
 
+/// admonition | Create your own custom Ergo chain
+    type: tip
+
+This guide will walk you through the steps of creating your own fork of the Ergo chain. This enables you to initiate a completely new chain with parameters tailored to your needs.
+///
+
+
 ### Generating `genesisStateDigestHex`
 
-To mine your own chain, you need to generate the `genesisStateDigestHex`, which is a Base16 representation of the *genesis state* roothash. Follow these steps to configure your chain values in the [src/main/resources/testnet.conf](https://github.com/ergoplatform/ergo/blob/master/src/main/resources/testnet.conf) file and compile the node to obtain the `genesisStateDigestHex`.
+To mine your own chain, you need to generate the `genesisStateDigestHex`, which is a Base16 representation of the *genesis state* roothash. 
 
-### Prerequisites
+Follow these steps to configure your chain values in the [src/main/resources/testnet.conf](https://github.com/ergoplatform/ergo/blob/master/src/main/resources/testnet.conf) file and compile the node to obtain the `genesisStateDigestHex`.
 
-Before proceeding, ensure that you have sbt installed, which is a build tool for Scala. The easiest way to set up sbt is by using [SDKMAN](https://sdkman.io/).
-
-```shell
-curl -s "https://get.sdkman.io" | bash 
-sdk install sbt
-```
 
 ### Compiling the Node
 
@@ -21,13 +22,23 @@ To compile the node, run the following command:
 sbt assembly
 ```
 
+/// details | Prerequisites: sbt
+     {type: note, open: false}
+Before proceeding, ensure that you have sbt installed, which is a build tool for Scala. The easiest way to set up sbt is by using [SDKMAN](https://sdkman.io/).
+
+```shell
+curl -s "https://get.sdkman.io" | bash 
+sdk install sbt
+```
+///
+
 This command will create an `ergo.jar` file at `/target/scala*/ergo-*.jar`.
 
-### Configuring Your `.conf` File
+### Configuration
 
 At this stage, your `testnet.conf` file should have the following configuration:
 
-```shell
+```conf
 ergo {
   networkType = "testnet"
 
@@ -59,7 +70,7 @@ scorex {
 
 Use the following command to run the node:
 
-```shell
+```bash
 java -jar -Xmx4G ergo-*.jar --testnet -c testnet.conf
 ```
 
