@@ -2,7 +2,7 @@
 comments: true
 ---
 
-# Discover Ergo: The Blockchain of the Future
+# Why Ergo?
 
 Ergo is a next-generation smart contract platform that ensures the economic freedom of ordinary people through secure, accessible, and decentralized financial tools.
 

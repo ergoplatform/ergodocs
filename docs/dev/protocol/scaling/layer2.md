@@ -8,7 +8,7 @@ tags:
 ---
 
 
-# Layer 2 Solutions (Off-Chain)
+# Layer 2: Off-Chain
 
 Layer 2 solutions are secondary frameworks or protocols constructed on top of a [Layer 1](layer1.md) blockchain protocol. Their purpose is to enhance the efficiency, scalability, and capabilities of the underlying blockchain by facilitating *off-chain* transactions or computations.
 

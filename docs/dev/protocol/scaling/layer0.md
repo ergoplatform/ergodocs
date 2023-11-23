@@ -1,4 +1,4 @@
-# Layer 0 - The Network Layer
+# Layer 0: The Network Layer
 
 Layer 0, also known as the *Network* or *Peer-to-Peer* (P2P) layer, forms the bedrock of decentralized communication within a blockchain network. It plays a pivotal role in facilitating the exchange of data and information across the network, allowing nodes to distribute and validate transactions, blocks, and other data types without the need for a centralized authority.
 
