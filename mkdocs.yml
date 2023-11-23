@@ -62,8 +62,8 @@ extra:
 
 plugins:
   - search
-  #- render_swagger:
-  #    allow_arbitrary_locations: true
+  - render_swagger:
+      allow_arbitrary_locations: true
   #- neoteroi.mkdocsoad
   - mkdocs-jupyter #https://github.com/danielfrg/mkdocs-jupyter
   - section-index #https://github.com/oprypin/mkdocs-section-index
