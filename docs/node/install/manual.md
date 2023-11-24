@@ -35,8 +35,8 @@ java -jar -Xmx4G ergo-*.jar --mainnet -c ergo.conf
 See [this page](node-faq.md#java) for getting setup with java.
 
 
-/// admonition | Xmx Flag
-    type: tip
+/// details | -Xmx Flag
+    {type: tip, open: false}
 
 * The `-Xmx4G` flag determines the JVM's max heap size; recommended setting is `4-6G` based on available memory. 
 * During the initial syncing process, allocate more memory using `-Xmx4g`. Upon completion of the syncing process, reduce this to `-Xmx1g`.

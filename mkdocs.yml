@@ -331,7 +331,6 @@ nav:
         - Assets: 
           - Tokens:
             - dev/data-model/box/tokens.md
-            - Minting a token: dev/tokens/issue.md
             - Creating a perpetual token: dev/tokens/perpetual.md
             - Burning a token: dev/tokens/burn.md
           - Non-Fungible Tokens:

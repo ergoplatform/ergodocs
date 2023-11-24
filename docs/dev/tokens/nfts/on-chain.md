@@ -20,13 +20,11 @@ On-chain NFTs on Ergo differ from [regular NFTs](#the-technical-aspects-of-regul
 
 **Steps to create an on-chain SVG:**
 
-1. Draw a relatively simple image in SVG vector format.
-2. Manually optimize your art: smooth lines, remove minor details, reduce the number of colors, etc.
-2. Further optimize using svg-optimizers.
-4. Convert your *.svg file to [**Data URI format**](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) (_there are many online/offline converters available_):
-5. Check if your data fits within the **4 kb** box limit (<3.5 Kb). If not, return to the first step.
-6. Place this data in the `R9` register.
-7. **Most challenging part**: [Mint](https://docs.ergoplatform.com/dev/tokens/nfts/nft-examples/) the NFT using a tool that allows you to manipulate the `R9` register.
+1. Draw a relatively simple image in SVG vector format and manually optimize your art: smooth lines, remove minor details, reduce the number of colors, etc. Further optimize using svg-optimizers.
+2. Convert your *.svg file to [**Data URI format**](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) (_there are many online/offline converters available_).
+3. Check if your data fits within the **4 kb** box limit (<3.5 Kb). If not, return to the first step.
+4. Place this data in the `R9` register.
+5. **Most challenging part**: [Mint](https://docs.ergoplatform.com/dev/tokens/nfts/nft-examples/) the NFT using a tool that allows you to manipulate the `R9` register.
 
 /// admonition | Textual Data
     type: tip

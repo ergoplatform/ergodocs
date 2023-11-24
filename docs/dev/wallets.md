@@ -1,7 +1,14 @@
 # Wallets
 
-Note that wallets are supported by third parties, we only provide the information below as a courtesy.
 
+/// details | Disclaimer
+    {type: warning, open: true}
+Note that wallets are supported by third parties, we only provide the information below as a courtesy.
+///
+/// details | Funds stuck in Yoroi?
+    {type: warning, open: false}
+If you have your Ergo wallet open in Yoroi and know the password for it, you can use [this tool](https://github.com/satsen/yoroi-ergo-wallet-recover) to decrypt the wallet and send all funds to a new wallet of yours.
+///
 | Wallet | Type | dApp-C | Node | Cold Wallet | [E-Pay](https://github.com/ergoplatform/eips/blob/master/eip-0020.md) | [Mixer](https://docs.ergoplatform.com/uses/mixer/#ergomixer) |
 |---|---|---|---|---|---|---|
 | [Nautilus](https://chrome.google.com/webstore/detail/nautilus-wallet/gjlmehlldlphhljhpnlddaodbjjcchai) | Web | ✅ |  | ✅ |  | 🔜 |

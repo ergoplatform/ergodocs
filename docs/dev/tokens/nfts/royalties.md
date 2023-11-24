@@ -1,10 +1,15 @@
 # Royalties
 
-Royalties on Ergo are part of the minting `metadata` and are accessible through smart contracts. This means marketplaces have the option of including this in their sale contracts (which both sky harbor and auction house do). Any listing on a marketplace which respects royalties cannot have the royalties bypassed since it is part of their smart contract. 
+Ergo's royalty system is integrated into the minting `metadata` and can be accessed via smart contracts. This integration allows marketplaces to include royalties in their sale contracts, a feature utilized by both Sky Harbor and Auction House. Consequently, any listings on a marketplace that respects royalties will have the royalties embedded in their smart contract, preventing them from being bypassed.
 
-That said, NFTs can clearly just be sent p2p to each other (just like when you transfer across addresses) and in these situations or in private sales it's up to the discretion of the involved parties whether to honour the royalties. 
+/// admonition | Not enforced by the protocol
+    type: warning
 
-AuctionHouse V3 will support multiple recipients for royalties which enables artists to collaborate together. 
+However, it's important to note that NFTs can be transferred directly from one party to another, similar to transferring across addresses. In these cases, or in private sales, the decision to honor the royalties lies with the involved parties.
+///
+
+
+The upcoming AuctionHouse V3 will introduce the ability to support multiple recipients for royalties. This feature will facilitate collaborations among artists.
 
 ## Resources
 
