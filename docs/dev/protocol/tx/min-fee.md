@@ -10,7 +10,7 @@ Ergo's transaction fee system is both flexible and explicit, with a minimum thre
 
 /// details | Transactions
     {type: info, open: true}
-Each Ergo [transaction](transaction.md) is an atomic state transition operation, destroying one or more [boxes](format.md) from the state and creating new ones. Unlike Bitcoin's implicit fee system, Ergo's fee structure is explicit, requiring a distinct output to a specific address for fees.
+Each Ergo [transaction](transaction.md) is an atomic state transition operation, destroying one or more [boxes](format.md) from the state and creating new ones. Unlike Bitcoin's implicit fee system, Ergo's fee structure is explicit, requiring a distinct output to a specific address for fees. **This is in addition to the minimal ERG value required for a box to exist.**
 ///
 
 ## Fee Calculation
