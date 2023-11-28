@@ -20,9 +20,12 @@ Alternatively, if you want to get started on the testnet, there is a dedicated [
     {type: tip, open: false}
 For more convenience, Docker provides a streamlined way to install and run the Ergo Node. Refer to the [Docker](docker.md) guide for instructions on setting up the node using Docker.
 ///
-/// details | Run a node on a Raspberry Pi!
+/// details | [Run a node on a Raspberry Pi](pi.md)!
     {type: tip, open: false}
-Even a [Raspberry Pi](pi.md) with a fast SSD attached is sufficient to sync and run a full node.
+///
+/// details | Run a node on Android
+    {type: tip, open: false}
+Sync the entire Ergo blockchain on your [mobile device](node-android.md)!
 ///
 /// details | Check out the developer toolkits and bundles
     {type: notes, open: false}

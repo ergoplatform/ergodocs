@@ -1,6 +1,10 @@
 # Applications
 
-> Check out [sigmaverse.io](https://sigmaverse.io/) - *your portal to the Ergo Universe* 
+/// details | Explore the Ergo Universe!
+    {type: tip, open: true}
+Check out [sigmaverse.io](https://sigmaverse.io/) - ***your portal to the Ergo Universe*** !
+///
+
 
 
 ## Core Components
