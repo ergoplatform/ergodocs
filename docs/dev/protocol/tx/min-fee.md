@@ -19,7 +19,7 @@ Transaction fees depend on the fee box's serialized size, with a minimum of **36
 
 ## Miner Transaction Prioritization
 
-Miners prioritize transactions based on either the fee per byte or the validation cost unit. These criteria are adjustable via a decentralized voting mechanism among miners. Nodes can sort transactions based on these metrics, settable in the [node configuration](conf-node.md#mempool).
+Miners prioritize transactions based on either the fee per byte or the validation cost unit. These criteria are adjustable via a [voting mechanism among miners](governance.md). Nodes can sort transactions based on these metrics, settable in the [node configuration](conf-node.md#mempool).
 
 ```conf
 # Mempool transaction sorting scheme ("random", "bySize", or "byExecutionCost")
@@ -35,9 +35,24 @@ While the minimal fee is a standard, miners have the discretion to select transa
 
 Transaction fees are locked in a [contract](https://ergexplorer.com/addresses#2iHkR7CWvD1R4j1yZg5bkeDRQavjAaVPeTDFGGLZduHyfWMuYpmhHocX8GJoaieTx78FntzJbCBVL6rf96ocJoZdmWBL2fci7NqWgAirppPQmZ7fN9V6z13Ay6brPriBKYqLp1bT2Fk4FkFLCfdPpe), spendable only through a miner's script. The address used for fees is not protocol-fixed but is standard in the Ergo node reference implementation. The ErgoScript for this contract, implicitly defined in the ErgoTree, is detailed in [this method](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/f85f03cc8f063ae7f68d559371733c2b6bbc929a/sigmastate/src/main/scala/org/ergoplatform/ErgoScriptPredef.scala#L72).
 
+```
+ /**
+    * Proposition that allows to send coins to a box which is protected by the following proposition:
+    * prove dlog of miner's public key and height is at least `delta` blocks bigger then the current one.
+    */
+  def feeProposition(delta: Int = 720): ErgoTree = {
+    val out = ByIndex(Outputs, IntConstant(0))
+    AND(
+      EQ(Height, boxCreationHeight(out)),
+      EQ(ExtractScriptBytes(out), expectedMinerOutScriptBytesVal(delta, MinerPubkey)),
+      EQ(SizeOf(Outputs), 1)
+    ).toSigmaProp.treeWithSegregation
+  }
+```
+
 ## Determining Appropriate Fees
 
-The appropriate fee must meet the protocol's minimum requirements, based on the box size. For best practices, see the [Ergo GitHub repository](https://github.com/ergoplatform/ergo/blob/e784a70b8fabf7ae41f2ac9aa593a647f488100c/src/main/scala/org/ergoplatform/modifiers/mempool/ErgoTransaction.scala#L163).
+The appropriate fee must meet the protocol's minimum requirements, based on the box size. For best practices, see the [ErgoTransaction.scala](https://github.com/ergoplatform/ergo/blob/e784a70b8fabf7ae41f2ac9aa593a647f488100c/src/main/scala/org/ergoplatform/modifiers/mempool/ErgoTransaction.scala#L163).
 
 ## Confirmation Levels and Security
 
