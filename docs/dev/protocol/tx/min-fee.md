@@ -3,12 +3,15 @@ tags:
   - Fees
   - Transaction Fees
 ---
-# Dust-prevent Fees in Ergo
+
+# Transaction Fees in Ergo
+
+## Dust-prevent Fees
+
 Due to the Spam-preventing strategy, each box in Ergo should contain a minimal nanoerg, which is decided by the parameter voted by miners and the box's size. Every output box in a transaction should comply this rule. It is used for preventing dust in ergo thus alleviating spam attack to Ergo.
 To be more clear, Dust-prevent Fees is not a real fee users must pay to others(for example, to the miners). It is just a secure to the box, if users do not create more new boxes, the Dust-prevent Fees can be reused by putting the same amount into the newly created single box and if the newly created box is still under your control, you are guaranteed no money loss.
 
-
-# Transaction Fees in Ergo
+## Transaction Fees
 
 Ergo's transaction fee system is both flexible and explicit, with a minimum threshold defined by the protocol (the Dust-prevent Fees). This transaction fee is contained in a special output box and should be no less than the minimum threshold, known as the **fee box**.
 
