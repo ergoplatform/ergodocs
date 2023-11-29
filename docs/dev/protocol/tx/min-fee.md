@@ -3,23 +3,26 @@ tags:
   - Fees
   - Transaction Fees
 ---
+# Dust-prevent Fees in Ergo
+Due to the Spam-preventing strategy, each box in Ergo should contain a minimal nanoerg, which is decided by the parameter voted by miners and the box's size. Every output box in a transaction should comply this rule. It is used for preventing dust in ergo thus alleviating spam attack to Ergo.
+
 
 # Transaction Fees in Ergo
 
-Ergo's transaction fee system is both flexible and explicit, with a minimum threshold defined by the protocol. This minimum fee is determined by the serialized size of the box being created, known as the **fee box**.
+Ergo's transaction fee system is both flexible and explicit, with a minimum threshold defined by the protocol (the Dust-prevent Fees). This minimum fee is contained in a special output box and should be no less than the minimum threshold, known as the **fee box**.
 
 /// details | Transactions
     {type: info, open: true}
-Each Ergo [transaction](transaction.md) is an atomic state transition operation, destroying one or more [boxes](format.md) from the state and creating new ones. Unlike Bitcoin's implicit fee system, Ergo's fee structure is explicit, requiring a distinct output to a specific address for fees. **This is in addition to the minimal ERG value required for a box to exist.**
+Each Ergo [transaction](transaction.md) is an atomic state transition operation, destroying one or more [boxes](format.md) from the state and creating new ones. Unlike Bitcoin's implicit fee system, Ergo's fee structure is explicit, which means users should explicitly provide a fee box to the miner, which also means transaction requires a distinct output to a specific address for fees (the **fee box**). **This is in addition to the minimal ERG value required for a box to exist.**
 ///
 
 ## Fee Calculation
 
-Transaction fees depend on the fee box's serialized size, with a minimum of **360 nanoerg per byte**. A good rule of thumb is **0.001 ERG (1,000,000 NanoErg) per box**.
+Transaction fees depend on the users willing to the speed of transaction being processed, with a minimum of **360 nanoerg per byte** (the Dust-prevent Fees). A good rule of thumb is **0.001 ERG (1,000,000 NanoErg) per box**. The more Erg you put into this fee box, the faster your transaction may be included in a block and be processed.
 
 ## Miner Transaction Prioritization
 
-Miners prioritize transactions based on either the fee per byte or the validation cost unit. These criteria are adjustable via a [voting mechanism among miners](governance.md). Nodes can sort transactions based on these metrics, settable in the [node configuration](conf-node.md#mempool).
+Miners prioritize transactions based on either the fee per byte or the fee per validation cost unit. These criteria are adjustable via a [voting mechanism among miners](governance.md). Nodes can sort transactions based on these metrics, settable in the [node configuration](conf-node.md#mempool).
 
 ```conf
 # Mempool transaction sorting scheme ("random", "bySize", or "byExecutionCost")
@@ -29,6 +32,7 @@ mempoolSorting = "random"
 /// details | Special Considerations
     {type: info, open: true}
 While the minimal fee is a standard, miners have the discretion to select transactions based on economic incentives. This means that while transactions offering higher fees per byte or per execution unit are usually be prioritized. They can choose to include their transactions above others when [collecting storage rent](rent-fees.md).
+When calculating the fee per byte or the fee per validation cost unit, miners firstly filter out the fee boxs by checking the propositionBytes in R1 register using **feeProposition**, and then sum up these boxs' Erg value, finally, the sum is divided by the transaction's size or total validation cost to get a result. The final result is the basis for sorting those transactions in mempool.
 ///
 
 ## Collecting Fees
@@ -50,9 +54,21 @@ Transaction fees are locked in a [contract](https://ergexplorer.com/addresses#2i
   }
 ```
 
+And the method to extract the transaction fee method is below:
+
+```
+  private def extractFee(tx: ErgoTransaction): Long = {
+    tx.outputs
+      .filter(_.ergoTree == settings.chainSettings.monetary.feeProposition)
+      .map(_.value)
+      .sum
+  }
+```
+
+
 ## Determining Appropriate Fees
 
-The appropriate fee must meet the protocol's minimum requirements, based on the box size. For best practices, see the [ErgoTransaction.scala](https://github.com/ergoplatform/ergo/blob/e784a70b8fabf7ae41f2ac9aa593a647f488100c/src/main/scala/org/ergoplatform/modifiers/mempool/ErgoTransaction.scala#L163).
+The appropriate transaction fee must meet the protocol's minimum requirements (the Dust-prevent Fees), based on the box size. But miners can also set a **minimalFeeAmount** to prevent those transactions with fee box's Erg value smaller than this **minimalFeeAmount** being into mempool. For best practices, see the [ErgoTransaction.scala](https://github.com/ergoplatform/ergo/blob/e784a70b8fabf7ae41f2ac9aa593a647f488100c/src/main/scala/org/ergoplatform/modifiers/mempool/ErgoTransaction.scala#L163).
 
 ## Confirmation Levels and Security
 
