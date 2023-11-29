@@ -8,9 +8,9 @@ The [FeeSimulator.scala tool](https://github.com/ergoplatform/ergo/blob/master/s
 - **Storage Rent Fee**: 0.13125 ergs for a standard box
 - **Projected Storage Rent**: Approximately 0.13 ergs every four years
 
-## Connection to Transaction Fees
+## Connection to Dust-prevent Fees
 
-Understanding the relationship between transaction fees and storage fees is vital. Miners need to determine how these fees intersect when implementing the network's rules. For instance, requiring transactions to cover the byte size of input boxes, in proportion to their lifetimes, allows miners to consistently earn rewards from a fixed-size UTXO set over a four-year span. After that, the reward for each block becomes `perOutputFee * (numberOfBoxes / (4 * BlocksPerYear))`.
+Understanding the relationship between dust-prevent fees and storage fees is vital. Miners need to determine how these fees intersect when implementing the network's rules. For instance, requiring transactions to cover the byte size of input boxes, in proportion to their lifetimes, allows miners to consistently earn rewards from a fixed-size UTXO set over a four-year span. After that, the reward for each block becomes `perOutputFee * (numberOfBoxes / (4 * BlocksPerYear))`.
 
 Given that Ergo's UTXO set size is in the same ballpark as Bitcoin's (~60 million), the potential block reward could look like this:
 
