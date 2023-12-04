@@ -135,17 +135,17 @@
 * **Major Changes**: Indicates substantial updates or additions that require setting up a local development environment for documentation changes.
 * **Malware**: Malicious software designed to disrupt, damage, or gain unauthorized access to computer systems.
 * **Market Maker ('MM')**: A participant in the financial market who provides liquidity by buying and selling assets.
-* **[Memory-Hard Mining Proof of Work](memory-hard-mining.md)**: A PoW algorithm designed to be memory-intensive, ensuring decentralization.
+* **Memory-Hard Mining Proof of Work**: A PoW algorithm designed to be memory-intensive, ensuring decentralization.
 * **Mempool (Memory Pool)**: it is a data structure that holds pending transactions in a blockchain network before they are confirmed.
 * **[Miner-Adjustable Parameters](governance.md)**: Parameters that miners can modify to influence the network's scalability, including block size and transaction size, affecting throughput and computational load.
 * **Minor Changes**: Refers to small edits or updates that can be made directly through the GitHub interface, typically for minor corrections or improvements.
-* **[Mining](mining.md)**: The process of obtaining ERG tokens by solving computational problems using hardware and electricity.
-* **[Mining Pool](mining-pool.md)**: A collective group of miners who combine their computational resources to increase the chances of earning cryptocurrency rewards.
-* **[Miners](miners.md)**: Individuals or entities who validate transactions and add new blocks to the Ergo blockchain.
+* **[Mining](/mining)**: The process of obtaining ERG tokens by solving computational problems using hardware and electricity.
+* **[Mining Pool](pools.md)**: A collective group of miners who combine their computational resources to increase the chances of earning cryptocurrency rewards.
+* **Miners**: Individuals or entities who validate transactions and add new blocks to the Ergo blockchain.
 * **Miner Extracted Value (MEV)**: The total value miners can extract from a block using tactics like reordering and front-running.
 * **Miner Fee**: Fees that are rewarded to miners for confirming the transactions.
 * **[Mixing](mixer.md)**: A process that obscures the origin and destination of cryptocurrency transactions for increased privacy.
-* **[Multi-Stage UTXO Model](multi-stage.md)**: Ergo's extended UTXO model, detailed in a peer-reviewed paper, enables the implementation of Turing-complete smart contracts, offering advanced scripting capabilities.
+* **[Multi-Stage UTXO Model](multi.md)**: Ergo's extended UTXO model, detailed in a peer-reviewed paper, enables the implementation of Turing-complete smart contracts, offering advanced scripting capabilities.
 
 
 ## N
@@ -174,7 +174,7 @@
 * **Permissionless**: Refers to the philosophy that the Ergo protocol should be open and inclusive, allowing anyone to join the network and participate in the protocol without requiring preliminary actions
 * **Phishing Scam**: A fraudulent attempt to obtain sensitive information like usernames, passwords, and financial details by posing as a trustworthy entity.
 * **Privacy**: refers to the right to keep personal information and activities confidential and secure from unauthorized access or disclosure. In blockchain, privacy technologies protect user data and transaction details.
-* **[Privacy Tools](privacy-tools.md)**: Features and technologies, like Sigma protocols and ErgoMixer, used to enhance user privacy.
+* **Privacy Tools**: Features and technologies, like Sigma protocols and ErgoMixer, used to enhance user privacy.
 * **Proof-of-stake (PoS)**: A consensus mechanism in which validators are chosen to create new blocks and secure a blockchain network based on the number of tokens they hold and "stake.”
 * **Proof of Work (PoW)**: A consensus algorithm used by Ergo and many other blockchains, where miners compete to solve complex mathematical puzzles to validate transactions and create new blocks.
 * **Proprietary IP**: Intellectual property that is owned by a specific entity and not freely available to the public.
@@ -191,11 +191,11 @@
 
 ## S
 
-* **[Scalability](scalability.md)**: Another advantage of the UTXO model is its inherent support for parallel transaction processing, simplifying network scalability. It is also more compatible with stateless client solutions.
+* **[Scalability](scaling.md)**: Another advantage of the UTXO model is its inherent support for parallel transaction processing, simplifying network scalability. It is also more compatible with stateless client solutions.
 * **Scripting Language**: A programming language used to specify the rules for spending cryptocurrency. ErgoScript is designed to support various features like ring signatures, atomic swaps, and more.
-* **[Security Audit](security-audit.md)**: A comprehensive assessment conducted to evaluate the security of certain components or aspects of Ergo. The goal is to identify vulnerabilities, weaknesses, and potential risks in the system.
+* **[Security Audit](audit.md)**: A comprehensive assessment conducted to evaluate the security of certain components or aspects of Ergo. The goal is to identify vulnerabilities, weaknesses, and potential risks in the system.
 * **Seed Phrase**: A set of words used to back up and restore a cryptocurrency wallet; it is crucial for wallet recovery.
-* **[Sharding](sharding.md)**: A scaling technique that divides the blockchain into smaller, parallel chains to increase throughput while maintaining security.
+* **[Sharding](tags/#sharding)**: A scaling technique that divides the blockchain into smaller, parallel chains to increase throughput while maintaining security.
 * **Shared Figma Graphic Space**: A collaborative platform where community members can work together on visual content and design projects related to Ergo.
 * **[Sidechain](sidechains.md)**: A separate blockchain connected to the main blockchain, allowing for different features and scalability.
 * **[Sigma Protocols](sigma.md)**: A set of cryptographic protocols forming the backbone of Ergo's smart contracts. They enable efficient zero-knowledge proofs, enhancing privacy and trustlessness.
@@ -222,7 +222,7 @@
 * **Transaction Size**: The size limit for transactions in the mempool, which miners can adjust to balance transaction processing capacity and the computational load on nodes.
 * **[Transparency Report](ergo-foundation-2022.md)**: A document that provides a comprehensive overview of financial activities and expenditures, ensuring openness and accountability.
 * **Treasury**: The funds set aside by the Ergo Foundation to support the growth and development of the Ergo ecosystem.
-* **[Turing-Complete](turing-complete.md)**: A property of a computational system that can simulate a Turing machine, indicating that it can perform any computation that a Turing machine can, given enough resources.
+* **Turing-Complete**: A property of a computational system that can simulate a Turing machine, indicating that it can perform any computation that a Turing machine can, given enough resources.
 * **TVL (Total Value Locked)**: a measure of the total funds (cryptocurrency) locked in a specific protocol or smart contract in the DeFi ecosystem.
 * **Two Categories of Participation**: The Growth and Creative categories within the Sigmanauts Program, each catering to different strengths and skills of community members.
 
@@ -230,7 +230,7 @@
 ## U
 
 * **UI Fee**: Fees that the UI provider is rewarded with.
-* **[UTXO (Unspent Transaction Output) Model](utxo.md)**: A foundational concept in blockchain technology where transactions create outputs, which can later be used as inputs in new transactions. UTXOs represent ownership of cryptocurrency and are spent entirely in each transaction.
+* **[UTXO (Unspent Transaction Output) Model](eutxo.md)**: A foundational concept in blockchain technology where transactions create outputs, which can later be used as inputs in new transactions. UTXOs represent ownership of cryptocurrency and are spent entirely in each transaction.
 
 
 ## V
@@ -258,7 +258,7 @@
 
 ## Z
 
-* **[Zero-Knowledge Proofs](zk.md)**: Cryptographic methods that allow one party to prove the truth of a statement to another party without revealing any additional information. Ergo uses zero-knowledge proofs for privacy and security.
+* **[Zero-Knowledge Proofs](zkp.md)**: Cryptographic methods that allow one party to prove the truth of a statement to another party without revealing any additional information. Ergo uses zero-knowledge proofs for privacy and security.
 * **ZK-rollup**: A layer 2 scaling solution that aggregates multiple transactions into a single proof, enabling faster and more scalable blockchain transactions while maintaining security and decentralization.
 
 

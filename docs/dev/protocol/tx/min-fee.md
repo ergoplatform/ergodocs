@@ -6,7 +6,7 @@ tags:
 
 # Transaction Fees in Ergo
 
-Each Ergo [transaction](transaction.md) is an atomic state transition operation, which involves the destruction of one or more [boxes](format.md) from the state and the creation of new ones. Unlike Bitcoin's implicit fee system, Ergo's fee structure is explicit and requires a separate output to a specific address for fees.
+Each Ergo [transaction](transactions.md) is an atomic state transition operation, which involves the destruction of one or more [boxes](format.md) from the state and the creation of new ones. Unlike Bitcoin's implicit fee system, Ergo's fee structure is explicit and requires a separate output to a specific address for fees.
 
 Ergo's transaction fee system is designed to be both flexible and explicit. The protocol does not enforce a minimum transaction fee, however transactions without a fee are less likely to be included in a block by miners. As such, it is generally recommended to include a fee to incentivize miners to process your transaction. The larger the fee, the higher the likelihood of your transaction being included in a block and processed quickly.
 

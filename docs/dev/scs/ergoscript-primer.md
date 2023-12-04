@@ -9,7 +9,7 @@ tags:
 /// admonition | 1. Paradigm
     type: note
 
-Ergo's transaction model offers several advantages over the account-based model, explore this new [paradigm](paradigm.md).
+Ergo's transaction model offers several advantages over the account-based model, explore this new [paradigm](/dev/scs/#paradigm).
 ///
 
 /// admonition | 2. Key Concepts

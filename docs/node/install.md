@@ -1,6 +1,8 @@
 # Ergo Node
 
-The Ergo Node is a critical component of Ergo's peer-to-peer network, responsible for hosting and synchronizing a copy of the entire blockchain. This page provides an overview of the Ergo Node, its installation options, and additional resources for developers.
+The Ergo Node is a critical component of Ergo's peer-to-peer network, responsible for hosting and synchronizing a copy of the entire blockchain. 
+
+This page provides an overview of the Ergo Node, its installation options, and additional resources for developers.
 
 //// details | Installation
     {type: tip, open: true}

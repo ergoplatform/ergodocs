@@ -29,7 +29,7 @@ Ergo is designed to support consensus protocol evolution via soft-fork. Soft-for
 
 #### Change from AOTC to JITC
 
-JIT costing (JITC pronounced "jitsy") can only be activated via hard-fork. It is not possible to ensure that JITC always produces the same costs as AOTC by changing CostTable parameters. This is because JITC accurately accumulates the actual operations' cost, whereas AOTC approximates both data sizes and speculates on potential costs in case of branching logic. Please see detailed description of the changes in related [EIP8](eip-0008.md).
+JIT costing (JITC pronounced "jitsy") can only be activated via hard-fork. It is not possible to ensure that JITC always produces the same costs as AOTC by changing CostTable parameters. This is because JITC accurately accumulates the actual operations' cost, whereas AOTC approximates both data sizes and speculates on potential costs in case of branching logic. Please see detailed description of the changes in related [EIP8](https://github.com/ergoplatform/eips/pull/11).
 
 ### Implementation of the Hard-Fork on Ergo network
 

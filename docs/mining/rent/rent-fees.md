@@ -10,17 +10,7 @@ The [FeeSimulator.scala tool](https://github.com/ergoplatform/ergo/blob/master/s
 
 ## Connection to Transaction Fees
 
-Understanding the relationship between transaction fees and storage fees is vital. Miners need to determine how these fees intersect when implementing the network's rules. For instance, requiring transactions to cover the byte size of input boxes, in proportion to their lifetimes, allows miners to consistently earn rewards from a fixed-size UTXO set over a four-year span. After that, the reward for each block becomes `perOutputFee * (numberOfBoxes / (4 * BlocksPerYear))`.
-
-Given that Ergo's UTXO set size is in the same ballpark as Bitcoin's (~60 million), the potential block reward could look like this:
-
-- **Estimated Block Reward**: 7.49 Ergs plus transaction fees
-
-For an academic perspective on this topic, consult the research paper ["A Systematic Approach To Cryptocurrency Fees"](https://fc18.ifca.ai/bitcoin/papers/bitcoin18-final18.pdf).
-
-## Fee Value Adjustments
-
-A crucial detail is that each box must contain a minimum value per byte, which currently stands at **360 nanoergs per byte**. Miners can collectively decide to alter this number within a `[0, 10,000]` nanoergs per byte range. The adjustment parameters are as follows:
+While Ergo doesn't mandate a minimum transaction fee on the protocol level, a crucial detail is that each box must contain a minimum value per byte, which currently stands at **360 nanoergs per byte**. Miners can collectively decide to alter this number within a `[0, 10,000]` nanoergs per byte range. The adjustment parameters are as follows:
 
 - **Increment/Decrement Step**: 2 or -2
 - **Per-Epoch Adjustment Rate**: 10 nanoergs per byte
@@ -28,6 +18,17 @@ A crucial detail is that each box must contain a minimum value per byte, which c
 > **Example**: Should a majority of miners opt to increase the default value during an epoch consisting of 1,024 blocks, the value for the ensuing epoch would be modified to 370 nanoergs per block.
 
 For further details on how these fee adjustments are made, check out the [Governance section](governance.md).
+
+This enables miners to consistently earn rewards from a fixed-size UTXO set over a four-year span. After that, the reward for each block becomes `perOutputFee * (numberOfBoxes / (4 * BlocksPerYear))`.
+
+Given that Ergo's UTXO set size is in the same ballpark as Bitcoin's (~60 million), the potential block reward could look like this:
+
+
+- `perOutputFee * (numberOfBoxes / (4 * BlocksPerYear))`
+- 0.001 * (60,000,000 / (4 * ))
+- **Estimated Block Reward** =  7.49 Ergs plus transaction fees
+
+For an academic perspective on this topic, consult the research paper ["A Systematic Approach To Cryptocurrency Fees"](https://fc18.ifca.ai/bitcoin/papers/bitcoin18-final18.pdf).
 
 ## Storage Rent Fee Collection
 
