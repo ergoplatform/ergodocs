@@ -49,7 +49,7 @@ selfIndexIsZero && outputsCorrect && modifiedTree == expectedTree
 
 ```
 
-The first funding transaction spends this box and creates a box with the same script and updated data. Further funding transactions spend the box created from the previous funding transaction. The box checks that it is the first input of each funding transaction, which must have other input from investors. The investor inputs contain a hash of the withdrawal script in register R4. The script also checks (via proofs) that hashes and monetary values of the investing inputs are correctly added to the dictionary of the new box, which must be the only output with the correct amount of ergs (we ignore fee in this example). 
+The first funding transaction spends this box and creates a box with the same script and updated data. Further funding transactions spend the box created from the previous funding transaction. The box checks that it is the first input of each funding transaction, which must have other input from investors. The investor inputs contain a hash of the withdrawal script in register R4. The script also checks (via proofs) that hashes and monetary values of the investing inputs are correctly added to the dictionary of the new box, which must be the only output with the correct amount of ergs (we ignore fee in this example).
 
 In this stage, which lasts until height 2,000, withdrawals are not permitted, and ergs can only be put into the project. The first transaction with a height of 2,000 or more should keep the same data but change the output's script, called issuanceScript, described next.
 
@@ -90,7 +90,7 @@ val stateIsCorrect = projectPubKey && treeIsCorrect && valuePreserved && stateCh
 
 ## Withdrawal
 
-Investors can now withdraw ICO tokens under a guard script whose hash is stored in the dictionary. Withdrawals are made in batches of N. A withdrawing transaction, thus, has N + 1 outputs; the first output carries over the withdrawal sub-contract and balance tokens, and the remaining N outputs have guard scripts and token values as per the dictionary. The contract requires two proofs for the dictionary elements: one proving that values to be withdrawn are indeed in the dictionary, and the second proving that the resulting dictionary does not have the withdrawn values. 
+Investors can now withdraw ICO tokens under a guard script whose hash is stored in the dictionary. Withdrawals are made in batches of N. A withdrawing transaction, thus, has N + 1 outputs; the first output carries over the withdrawal sub-contract and balance tokens, and the remaining N outputs have guard scripts and token values as per the dictionary. The contract requires two proofs for the dictionary elements: one proving that values to be withdrawn are indeed in the dictionary, and the second proving that the resulting dictionary does not have the withdrawn values.
 
 The complete script called `withdrawScript` is given below:
 
@@ -144,6 +144,76 @@ val outTreeCorrect = OUTPUTS(0).R5[AvlTree].get == modifiedTree
 valuesCorrect && outTreeCorrect && selfOutputCorrect && tokenPreserved
 ```
 
-Note that the above ICO example contains many simplifications. For instance, we don’t consider fees when spending the project box. 
+Note that the above ICO example contains many simplifications. For instance, we don’t consider fees when spending the project box.
 
 Additionally, the project does not self-destruct after the withdrawal stage.
+
+## Comet Refundable ICO
+
+Comet has a refundable ICO live at [thecomettoken.com/ICO](https://thecomettoken.com/ICO)
+
+The contract used is [provided](https://github.com/CometCommunity/CometCommunity/blob/main/RefundableIcoContract):
+
+```scala
+{
+  // Receipt Tokens held in Contract
+  val receiptTokens = SELF.tokens(0)._2
+  // Comet Held in Contract
+  val cometTokens = SELF.tokens(1)._2
+  // Receipt Token Id
+  val receiptId = fromBase58("5HWxQHyjjVFNEWtswcc71922Bq84LsmtMbgEG5eNxAKZ")
+  // Comet Token Id
+  val cometId = fromBase58("s9d3vUc6AhNAPZhxnGXCitQFqdAXN6X7gXT3h9GupWE")
+  // Swap Price
+  val amountToSwap = 15 * (OUTPUTS(0).value - SELF.value) / 100000
+  // Refund Price
+  val amountToRefund = 15 * (SELF.value - OUTPUTS(0).value) / 100000
+
+  // Conditions that are always true
+  val alwaysTrue = allOf(Coll(
+    OUTPUTS(0).propositionBytes == SELF.propositionBytes, // OUTPUT(0) is contract box
+    OUTPUTS(0).R4[Coll[Byte]].get == SELF.id, // Protect against spending two contract boxes of same value in 1 tx.
+    OUTPUTS(0).tokens(0)._1 == receiptId // Contract always holds receipt tokens
+  ))
+
+  // Conditions that depend on spending action
+  val conditionals = if (OUTPUTS(0).value > SELF.value) { // Purchase comet condition
+    allOf(Coll(
+      OUTPUTS(0).tokens(0)._2 >= receiptTokens - amountToSwap, // Unlock value amount of receipt for spending
+      OUTPUTS(0).tokens(1)._1 == cometId,
+      OUTPUTS(0).tokens(1)._2 >= cometTokens - amountToSwap // Unlock value amount of comet for spending
+    ))
+  } else { // Refund comet condition
+    allOf(Coll(
+      OUTPUTS(0).tokens(0)._2 >= receiptTokens + amountToRefund, // Unlock receipt amount of Erg for spending
+      OUTPUTS(0).tokens(1)._1 == cometId,
+      OUTPUTS(0).tokens(1)._2 >= cometTokens + amountToRefund // Unlock comet amount of Erg for spending
+    ))
+  }
+
+  val drainAddressConditions = allOf(Coll(
+    OUTPUTS(0).value == SELF.value,
+    OUTPUTS(0).tokens(0)._2 == receiptTokens, // Cannot withdraw receipt tokens
+    OUTPUTS(0).tokens(1)._1 == cometId,
+    OUTPUTS(0).tokens(1)._2 >= 1 // Free up all comet
+  ))
+
+  val addFunds = alwaysTrue && allOf(Coll(
+    OUTPUTS(0).value >= SELF.value,
+    OUTPUTS(0).tokens(0)._2 == receiptTokens, // Cannot withdraw receipt tokens
+    OUTPUTS(0).tokens(1)._1 == cometId,
+    OUTPUTS(0).tokens(1)._2 >= SELF.tokens(1)._2,
+    OUTPUTS.size == 2 // Requires setup such that no change Box is made
+  ))
+
+  // Define the spending conditions for draining the address
+  val drainAddress = sigmaProp(alwaysTrue && drainAddressConditions && PK("9h6Ao31CVSsYisf4pWTM43jv6k3BaXV3jovGfaRj9PrqfYms6Rf"))
+  // Define the spending conditions before the deadline
+  val beforeDeadline = sigmaProp(alwaysTrue && conditionals)
+  // Define the spending conditions after the deadline
+  val afterDeadline = sigmaProp(PK("9h6Ao31CVSsYisf4pWTM43jv6k3BaXV3jovGfaRj9PrqfYms6Rf") && HEIGHT > 1550468)
+
+  // Combine all spending conditions using logical OR
+  sigmaProp(beforeDeadline || afterDeadline || drainAddress || addFunds)
+}
+```

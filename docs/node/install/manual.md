@@ -1,13 +1,5 @@
 # Ergo Full Node Manual Installation
 
-This document provides a systematic process for the manual installation of an Ergo full node on a server. For desktop installation, the [Satergo](https://satergo.com) wallet is available.
-
----
-
-The node uses Java so should work across all operating systems. You can even run on a [Raspberry Pi](pi.md). The only hardware requirement is ~20GB of space to store the chain and ~8GB of RAM for handling the sync.
-
-
-
 ## Initial Setup
 
 ### Download the Ergo Client
@@ -15,6 +7,12 @@ The node uses Java so should work across all operating systems. You can even run
 Initiate the process by establishing a designated folder (e.g., `~/ergo`) for the node operation and download the latest [Ergo client release](https://github.com/ergoplatform/ergo/releases/) `.jar` file. Alternatively, clone the Ergo repository and compile the `.jar` file from the source using [SBT](https://www.scala-sbt.org/) (`sbt assembly` command), or via [Docker](/node/install/docker).
 
 ### Create a configuration file
+
+/// details | ergo.conf
+    {type: note, open: false}
+The filename `ergo.conf` can be modified as desired. This file is a repository for all configuration parameters, and only parameters differing from the default values need to be overwritten.
+///
+
 
 Subsequently, create an `ergo.conf` configuration file in the same directory as the `.jar` file, containing the following:
 
@@ -41,9 +39,8 @@ See [this page](node-faq.md#java) for getting setup with java.
 * The `-Xmx4G` flag determines the JVM's max heap size; recommended setting is `4-6G` based on available memory. 
 * During the initial syncing process, allocate more memory using `-Xmx4g`. Upon completion of the syncing process, reduce this to `-Xmx1g`.
 ///
-Following the execution of this command, the node will commence syncing. Wait for the API initialization before proceeding to the subsequent step.
+Following the execution of this command, the node will commence syncing. Wait for the API initialization before proceeding to the next step.
 
-> **Note:** The filename `ergo.conf` can be modified as desired. This file is a repository for all configuration parameters, and only parameters differing from the default values need to be overwritten.
 
 ---
 
