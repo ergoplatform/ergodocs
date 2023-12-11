@@ -170,7 +170,18 @@ nav:
       - Community Guidelines: contribute/standards/guidelines.md
 
     - Infrastructure: 
-      - Rosen Bridge: eco/rosen.md
+      - Rosen Bridge:
+        - eco/rosen.md
+        - Watchers:
+          - eco/rosen/rosen-watcher.md
+          - Prerequisites: eco/rosen/rosen-prerequisites.md
+          - Setup Guides:
+            - Mac: eco/rosen/watcher-mac.md
+            - Windows: eco/rosen/watcher-win.md
+            - Linux: eco/rosen/watcher-linux.md
+        - Guards: eco/rosen/rosen-guard.md
+        - Tokenomics: eco/rosen/rosen-tokenomics.md
+        - FAQs: eco/rosen/rosen-faq.md
       - Oracles: 
         - uses/oracles.md
         - Oracle Pools V2: eco/oracles-v2.md
