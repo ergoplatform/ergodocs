@@ -1,6 +1,6 @@
 # Common Misconceptions
 
-/// details | title
+/// details | FUD FAQ
     type: tip
 
 This page aims to provide some clarity around some common misconceptions that have cropped up about Ergo.
