@@ -10,6 +10,9 @@ A collaboration was established with Zengate for Catalyst, as it involves Cardan
 
 The team has successfully completed and received funds from milestone 3 and has submitted milestone 4 for F10 funding.
 
+## History
+
+The Rosen Bridge team was initially assembled during [ERGOHACK I](https://docs.ergoplatform.com/events/ergohack/#ergohack-i). Under the mentorship of @mhs_sam, team members @RaaCT0R, @vorujack, and @zargarzadeh developed [ErgoRaffle](raffle.md). This marked the beginning of their significant contributions to the ecosystem, which include projects like [minotaur-wallet](minotaur.md) and [ergo-faucet](faucet.md). The concept of a bridge has been a consistent focus for the team since 2021, initially with [ErgoGravity](https://github.com/ErgoGravity), an Ergo connector to the Wormhole bridge. However, after the Wormhole bridge was [compromised, resulting in a loss of $325m](https://www.theverge.com/2022/2/3/22916111/wormhole-hack-github-error-325-million-theft-ethereum-solana), the team shifted their focus towards developing a bridge centered around Ergo.
 
 ## Founders
 
@@ -20,11 +23,12 @@ The team has successfully completed and received funds from milestone 3 and has 
 
 - [Mohammad Kermani](https://github.com/mkermani144) is a software engineer with over 7 years of experience, including five years in the industry. He enjoys the challenge of building user-centric applications and is always eager to learn new technologies.
 - [Fateme Rahmani](https://github.com/fatemeh-ra) is a dedicated developer on the Rosen Bridge team who's previously worked on the Ergo Raffle backend.
-- [Moein zargarzadeh](https://github.com/zargarzadehm) previous contributions include ergo-faucet and Ergo Raffle
+- [Moein Zargarzadeh](https://github.com/zargarzadehm) previous contributions include ergo-faucet and Ergo Raffle
 - [SepehrGanji](https://github.com/SepehrGanji) has previously contributed to FleetSDK, GraphQL
 - [RaaCT0R](https://github.com/RaaCT0R)
 - [Esmaeil Mohammed (vorujack)](https://github.com/vorujack) has previously contributed to [minotaur-wallet](https://github.com/minotaur-ergo/minotaur-wallet)
 
-## Is Rosen Bridge a product of Ergo/The Ergo Foundation?
+## Is Rosen Bridge Affiliated with Ergo or The Ergo Foundation?
 
-While Rosen was started by Ergo Foundation members, the foundation itself has no management or control over Rosen Bridge.
+Rosen Bridge, although initiated by members of the Ergo Foundation, operates independently. The Ergo Foundation does not exercise any managerial or controlling influence over Rosen Bridge. However, the Foundation has provided support to Rosen Bridge in the form of grants, a common practice for projects within the ecosystem. The Foundation is also set to receive 3% of the total supply of RSN. For more details, refer to the [Tokenomics](rosen-tokenomics.md) section.
+
