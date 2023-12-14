@@ -154,7 +154,9 @@ To interact with a headless server, you can use SSH (Secure Shell) to establish 
 ```bash
 ssh -L 3030:127.0.0.1:3030 user@watcher-server
 ```
+
 In this command:
+
 - `ssh` is the command to start the SSH client program.
 - `-L 3030:127.0.0.1:3030` specifies that the local port 3030 should be forwarded to port 3030 on the server. `127.0.0.1` is the loopback IP address, which refers to the server itself in this context.
 - `user@watcher-server` specifies the username and the server to connect to. Replace `user` with your actual username and `watcher-server` with the actual hostname or IP address of your server.

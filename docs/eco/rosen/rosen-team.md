@@ -1,14 +1,14 @@
 # Rosen Team
 
-The Rosen team currently includes 8 full-time developers and 2-3 part-time developers. Some frontend and UI tasks are outsourced. The team is further bolstered by the support of several advisors.
+The Rosen team is comprised of 8 full-time developers and 2-3 part-time developers. Some frontend and UI tasks are outsourced. The team's strength is further enhanced by the support of several advisors.
 
-Rosen Bridge is entirely self-funded, with no private sales, venture capital, or SAFT agreements involved, with all contracts being financed out of pocket as there is no emission yet. The core team consists of 6 main developers.
+Rosen Bridge operates entirely on self-funding, with no involvement of private sales, venture capital, or SAFT agreements. All contracts are financed out of pocket as there is no emission yet. The core team is made up of 6 main developers.
 
-Initial liquidity for Ergo, accounting for 5%, was deposited on the Spectrum LP. There were no bots or front-running involved. (See the [Tokenomics](rosen-tokenomics.md) section)
+Initial liquidity for Ergo, accounting for 5%, was deposited on the Spectrum LP. This process was carried out without the involvement of bots or front-running. (Refer to the [Tokenomics](rosen-tokenomics.md) section for more details)
 
-We collaborated with Zengate for Catalyst, as it involves Cardano politics, an area that falls within their realm of expertise.
+A collaboration was established with Zengate for Catalyst, as it involves Cardano politics, an area that falls within their realm of expertise.
 
-We have successfully completed and received funds from milestone 3 and have submitted milestone 4 for F10 funding.
+The team has successfully completed and received funds from milestone 3 and has submitted milestone 4 for F10 funding.
 
 
 ## Founders
