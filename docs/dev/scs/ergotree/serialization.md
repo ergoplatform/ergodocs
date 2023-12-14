@@ -259,6 +259,7 @@ For example, having a typed data object **d: (Int, Coll[Byte], Boolean)**, we ca
 To serialize/deserialize typed data, we need to know its type descriptor (type tree). The data serialization procedure is recursive over a type tree and the corresponding sub-components of the data object. For primitive types (the leaves of the type tree), the format is fixed. The data values of ErgoTree types are serialized according to the predefined recursive function shown in Figure 5
 which uses the notation from Table 3.
 
+<!--TODO-->
 Figure 5: Data serialization format
 
 #### GroupElement serialization
@@ -267,6 +268,7 @@ A value of the GroupElement type is represented in reference implementation usin
 
 The different encodings are considered during deserialization, including point compression for Fp (see X9.62 sec. 4.2.1 pg. 17).
 
+<!--TODO-->
 Figure 6: GroupElement serialization format
 
 #### SigmaProp serialization
@@ -277,6 +279,7 @@ In reference implementation values of the **SigmaProp** type are serialized usin
 
 In reference, implementation values of the **AvlTree** type are serialized using **AvlTreeData. serializer**.
 
+<!--TODO-->
 Figure 8: AvlTree serialization format
 
 ### Constant Serialization

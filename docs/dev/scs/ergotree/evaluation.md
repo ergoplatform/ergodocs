@@ -30,11 +30,18 @@ Evaluation of $\langname$ is specified by its translation to $\corelang$, whose 
 
 Here we specify evaluation semantics of $\corelang$, which is based on call-by-value (CBV) lambda calculus. Evaluation of $\corelang$ is specified using denotational semantics. To do that, we first specify denotations of types, then typed terms and then equations of denotational semantics.
 
-> Definition 1: **The following $\corelang$ terms are called values:**
+
+/// details | Definition 1
+    {type: note, open: true}
+
+**The following $\corelang$ terms are called values:**
 
 $$V :== x \mid C(d, T) \mid \Lam{x}{M}$$
 
-> All $\corelang$ terms are called producers. (This is because, when evaluated, they produce a value.)
+All $\corelang$ terms are called ***producers***. (This is because, when evaluated, they produce a value.)
+
+///
+
 
 We now describe and explain a denotational semantics for the $\corelang$ language. The key principle is that each type $A$ denotes a set $\Denot{A}$ whose elements are the denotations of values of the type $A$.
 
@@ -44,8 +51,12 @@ Given a value $V$ of type $A$, we write $\Denot{V}$ for the element of $A$ that 
 
 A value of type $A \to B$ is of the form $\Lam{x}{M}$. This, when applied to a value of type $A$ gives a value of type $B$. So $A \to B$ denotes $\Denot{A} \to \Denot{B}$. It is true that the syntax appears to allow us to apply $\Lam{x}{M}$ to any term $N$ of type $A$. But $N$ will be evaluated before it interracts with $\Lam{x}{M}$, so $\Lam{x}{M}$ is really only applied to the value that $N$ produces.
 
+/// details | Definition 2
+    {type: note, open: true}
+A **context** $\Gamma$ is a finite sequence of identifiers with valuetypes $x_1:A_1, \dots ,x_n:A_n$. Sometimes we omit the identifiers and write $\Gamma$ as a list of value types.
+///
 
-> **Definition 2:** A **context** $\Gamma$ is a finite sequence of identifiers with valuetypes $x_1:A_1, \dots ,x_n:A_n$. Sometimes we omit the identifiers and write $\Gamma$ as a list of value types.
+
 
 - Given a context $\Gamma = x_1:A_1,\dots,x_n:A_n$, an environment (list of bindings for identifiers) associates to each $x_i$ as value of type $A_i$. So the environment denotes an element of $(\Denot{A_1},\dots,\Denot{A_n})$, and we write $\Denot{\Gamma}$ for this set.
 - Given a $\corelang$ term $\DerEnv{M: B}$, we see that $M$, together with environment, gives a closed term of type $B$. So $M$ denotes a function $\Denot{M}$ from $\Denot{\Gamma}$ to $\Denot{B}$.

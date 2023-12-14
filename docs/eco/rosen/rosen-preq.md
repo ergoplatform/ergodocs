@@ -43,5 +43,4 @@ The recommended method for installing Docker Compose is to install Docker Deskto
 
 You can download Docker Desktop for your specific Operating System from the following link: [Docker Desktop](https://docs.docker.com/desktop/)
 
-## Postgres
 
