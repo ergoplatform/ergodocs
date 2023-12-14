@@ -23,7 +23,7 @@ The team has successfully completed and received funds from milestone 3 and has 
 - [Moein zargarzadeh](https://github.com/zargarzadehm) previous contributions include ergo-faucet and Ergo Raffle
 - [SepehrGanji](https://github.com/SepehrGanji) has previously contributed to FleetSDK, GraphQL
 - [RaaCT0R](https://github.com/RaaCT0R)
-- [Amir Arsalan](https://github.com/arsalanyavari) is an M.Sc. Student at Sharif University of Tehran with a passion for teaching and learning. He has a diverse range of skills including programming, Object-Oriented Programming, Data Structures, Algorithm Design, and more. He contributes his skills and knowledge to the development of Rosen Bridge.
+- [Esmaeil Mohammed (vorujack)](https://github.com/vorujack) has previously contributed to [minotaur-wallet](https://github.com/minotaur-ergo/minotaur-wallet)
 
 ## Is Rosen Bridge a product of Ergo/The Ergo Foundation?
 
