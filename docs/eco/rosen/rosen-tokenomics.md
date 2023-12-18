@@ -6,6 +6,8 @@ Rosen Bridge is designed to bootstrap liquidity across multiple ecosystems. The 
 
 Any user can join as a Watcher given they meet the collateral requirements needed to participate, and earn rewards for their services.
 
+
+
 ## Overview
 
 - **Token Name**: Rosen Bridge Token
@@ -34,3 +36,10 @@ Initial liquidity for Ergo, accounting for 5%, was deposited on the Spectrum LP.
 We collaborated with Zengate for Catalyst, as it involves Cardano politics, an area that falls within their realm of expertise.
 
 We have successfully completed and received funds from milestone 3 and have submitted milestone 4 for F10 funding.
+
+## Why is the RSN token needed?
+
+- Capital Formation. Development has costs. Also need to form liquidity on the market.
+- Creates incentives (event-based emission).
+
+See [this answer](https://youtu.be/5p-xmILkS2c?t=1455) from Armeanio in the Weekly Update & AMA - December 14th 2023.

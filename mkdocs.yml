@@ -389,6 +389,7 @@ nav:
       - Block: dev/data-model/block.md
       - Wallets:
         - dev/wallets.md
+        - Access Issues: tutorials/access-issues.md
         - Satergo: dev/wallet/satergo.md
         - MultiSig: 
           - dev/wallet/multisig.md
