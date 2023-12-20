@@ -2,6 +2,11 @@
 
 This page provides solutions to common access issues that users may encounter with their Ergo wallets. It covers scenarios where you have your seed phrase but the restored wallet doesn't contain any ERG or shows a different address, and situations where you do not have your seed phrase. It also provides instructions on deriving additional addresses and best practices for storing your seed securely.
 
+/// details | Your seed phrase / mnemonic
+     {type: info, open: true}
+A wallet is simply an *interface* for the blockchain, if you have your seed phrase, simply restore in one of our [wallets](wallets.md)
+///
+
 ## I have my seed phrase but the wallet restored doesn't contain any ERG and is a different address
 
 - **Were you using the Ergo mobile wallet or the Ergo Reference Client?**
