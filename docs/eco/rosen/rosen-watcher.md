@@ -59,7 +59,9 @@ Anyone. You can actively contribute to the expansion and security audit of the R
 
 /// details | Is there a limit on the number of watchers?
      {type: question, open: false}
-Effectively, yes. A minimum of 70%+1 of the total number of watchers is required to trigger an event, and a maximum of 20 commitments, adjustable by the guard set.
+77 is the one repo's capacity and cannot be changed, but we'll open other repos. So technically, we can have any number of repos that each has 77 watchers. However, in long run I assume one or two repos is sufficient for each network.
+
+A minimum of 60%+1 of the total number of watchers is required to trigger an event, adjustable by the guard set.
 ///
 
 /// details | Can I run multiple watchers?
