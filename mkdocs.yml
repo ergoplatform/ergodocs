@@ -151,6 +151,10 @@ nav:
       - The Howey Test: security.md
       - Privacy Guide: doc/privacy-guide.md
       - Glossary: glossary.md    
+    - Ergo Foundation:
+      - ef/ergo-foundation.md
+      - Treasury: ef/ef-treasury.md
+      - Achievements: ef/ef-achievements.md
     - Events: 
       - Events: events/index.md
       - ERGOHACK: events/ergohack.md

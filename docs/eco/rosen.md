@@ -28,6 +28,11 @@ One of the unique aspects of this bridge is that it eliminates the need for depl
 Initially, it's the greater of $10 or 0.5% of the transaction value, plus network fees, adjustable by the guard set. The fee is collected in the transferred token on Ergo. Network fees vary: static for Ergo and Cardano, dynamic for EVM-based networks.
 ///
 
+/// details | Why is the fee so high?
+     {type: info, open: false}
+Each event has to be reported on by 60%+1 of Watchers, and they need to be incentivised to do so. It also prevents all their permits being exhausted by low-value transactions. 
+///
+
 /// details | Is there a maximum amount for a single transaction on Rosen Bridge?
      {type: info, open: false}
 No fixed maximum, but large transfers may take longer, from hours to 1-2 days, due to manual guard intervention for fund transfers from cold to hot wallets.
