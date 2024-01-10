@@ -45,6 +45,11 @@ pie title 2023 Salary Averages
     "Development" : 63
 ```
 
+## Outstanding Obligations
+
+Currently, the Ergo Foundation has $132,500 in outstanding obligations.
+
+
 
 ## Historic Spending
 
