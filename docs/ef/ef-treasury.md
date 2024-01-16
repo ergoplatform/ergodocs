@@ -2,7 +2,12 @@
 
 The Ergo Foundation initially received an allocation of 4,330,776 ERG, which is equivalent to 4.43% of the total supply. A significant portion of this Treasury has been expended for the benefit of the protocol and the community. Even during periods of low ERG price, the Foundation continued to invest in order to foster and grow the Ergo community. Additionally, several projects that launched on Ergo have generously allocated a fraction of their tokens to the EF Treasury. 
 
-You can read more in the [emission](emission.md) section. 
+
+
+/// details | Emission
+     {type: info, open: true}
+For more information on the Ergo's emission schedule, tokenomics and allocation, visit the [emission](emission.md) section. 
+///
 
 
 ## Holdings
@@ -20,22 +25,28 @@ As of January 2024, the complete treasury of the foundation, including market ma
 | Gluon | 335,000    | N/A |  |
 | Total |  | | **$5,636,940** |
 
+/// details | How will the SPF/RSN and other tokens be utilized? 
+     {type: question, open: true}
+Please note that the majority of these funds are currently illiquid. We have converted a minor portion of SPF to cover some development expenses from the grants awarded (as detailed below), but we are cautious to avoid exerting any downward pressure on a project that is still maturing. This situation, however, presents an opportunity to significantly augment our expenditure once we reach a stage where these tokens can be freely utilized.
+///
+
 
 
 ## Wallets
 
 You can find the Ergo Foundation treasury and current balance on-chain at the following locations
 
-- [Old MultiSig](https://ergexplorer.com/addresses#4L1ktFSzm3SH1UioDuUf5hyaraHird4D2dEACwQ1qHGjSKtA6KaNvSzRCZXZGf9jkfNAEC1SrYaZmCuvb2BKiXk5zW9xuvrXFT7FdNe2KqbymiZvo5UQLAm5jQY8ZBRhTZ4AFtZa1UF5nd4aofwPiL7YkJuyiL5hDHMZL1ZnyL746tHmRYMjAhCgE7d698dRhkdSeVy).
-- [New MultiSig](https://ergexplorer.com/addresses#2BggBDgr9n9geTKjCJBCEWMReb2i7wcocw7fjVd3QyM7qFMtmVHyoFr78kChAxGekJxUTZru2aMjyZKcVoPfHX5d12RqNrnEAgzGqUCoJ2zkCiiUURror6NJ6HYyPxxUf5qj5FdQXqJ2zFv1a8U9Lieib59S8mxpE2oLAPt7P5cyngAa5sVEHHKeJrKkpp2yfQH3kshujjPCCc6qv2StJkmbzDTqAcxTpjcB9voMhi1tCybU4ikxSJEoAKmr5mppSfVAB5zSpREYstCVU)
-- [Hot Wallet](https://ergexplorer.com/addresses#9g1ReLmsbGevkTjfPGMdRMoFRdrAVskZVmSBpaEdVW2DfG4HDWm) managed by the Treasurer
+- The original EF Treasury MultiSig can be seen [here](https://ergexplorer.com/addresses#4L1ktFSzm3SH1UioDuUf5hyaraHird4D2dEACwQ1qHGjSKtA6KaNvSzRCZXZGf9jkfNAEC1SrYaZmCuvb2BKiXk5zW9xuvrXFT7FdNe2KqbymiZvo5UQLAm5jQY8ZBRhTZ4AFtZa1UF5nd4aofwPiL7YkJuyiL5hDHMZL1ZnyL746tHmRYMjAhCgE7d698dRhkdSeVy).
+- We are in the process of shifting to a new multisig which can be found [here](https://ergexplorer.com/addresses#2BggBDgr9n9geTKjCJBCEWMReb2i7wcocw7fjVd3QyM7qFMtmVHyoFr78kChAxGekJxUTZru2aMjyZKcVoPfHX5d12RqNrnEAgzGqUCoJ2zkCiiUURror6NJ6HYyPxxUf5qj5FdQXqJ2zFv1a8U9Lieib59S8mxpE2oLAPt7P5cyngAa5sVEHHKeJrKkpp2yfQH3kshujjPCCc6qv2StJkmbzDTqAcxTpjcB9voMhi1tCybU4ikxSJEoAKmr5mppSfVAB5zSpREYstCVU).
+- View the [Hot Wallet](https://ergexplorer.com/addresses#9g1ReLmsbGevkTjfPGMdRMoFRdrAVskZVmSBpaEdVW2DfG4HDWm) managed by the Treasurer when sending payments.
+
 
 
 ## Salaries
 
 Twenty people receive monthly salaries or rewards for their contributions. The vast majority (16/20) were promoted from within the community after exceptional contributions. 
 
-A breakdown of our usual salary commitments is as follows:
+An average breakdown of how people in Ergo are awarded.
 
 ``` mermaid
 pie title 2023 Salary Averages
@@ -44,6 +55,12 @@ pie title 2023 Salary Averages
     "Marketing" : 14
     "Development" : 63
 ```
+
+/// details | Roles
+     {type: info, open: true}
+More information on each of these roles can be seen on [this page](ergo-foundation.md).
+///
+
 
 ## Outstanding Obligations
 
@@ -73,19 +90,22 @@ In addition to the direct ERG spending above in 2023,
 - 160,000 SPF was donated to the [Sigmanauts](sigmanauts.md) Treasury
 - Totaling 1,622,000 SPF 
 
+
+
+
 /// details | The Ergo Foundations Future
      {type: info, open: true}
-Please see [this section](ergo-foundation.md#the-ergo-foundations-future) for more information on the long-term goals of The Foundation.
+Please see [this page](ef-future.md) for more information on the long-term goals of The Foundation.
 ///
 
 
 ## Votings
 
-The Ergo Foundation members and officers discuss proposals before putting them to a formal vote on the ergoforum, passed with a majority of voting members. 
+The Ergo Foundation members and officers discuss proposals before putting them to a formal vote on the ergoforum, passed with a majority of voting members.
 
 Before voting on spending treasury funds, we will approach the [Good Whale Fund](https://ergoplatform.org/en/blog/2021-11-02-good-whales-grant-fund/), [DarkFund0](https://www.ergoforum.org/t/darkfund0-zk-fund-for-privacy-applications/398), or suggest creating a [Raffle](https://ergoraffle.com/) if appropriate.
 
-Foundation votes this year have mostly been related to exchanges, market-makers, banks, and grant requests.
+Foundation votes this year are usually related to our internal structures, exchanges, market-makers, banks, and grant requests.
 
 - (Dec 23) Transfer of all or Part of Treasury to New Multi-sig
 - (Oct 23) Pay raise for anon-br

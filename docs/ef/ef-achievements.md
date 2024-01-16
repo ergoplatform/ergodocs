@@ -1,6 +1,77 @@
 
 # Timeline
 
+
+
+### 2024
+
+#### In Progress
+
+Discussions ongoing with several prominent on-ramps trying to secure US access, as well as smaller exchanges which should help our volume, and regional exchanges to ensure ERG is accesible worldwide.
+
+
+- ErgoSummit
+- Metamask
+- Website Refresh
+- Trust Wallet
+
+#### In Development
+
+- [Sub-block confirmation protocols](sub-blocks.md)
+- EVM Bridge for [Rosen](rosen.md)
+- [DexyGold](dexy.md)
+- [Machina Finance](machina.md)
+- [ChainCash](chaincash.md)
+
+##### Community
+
+- PalmyraComDex MVP  
+- [BlitzTCG](blitz.md)
+- [Paideia](paideia.md) 
+- [GuapSwap](guapswap.md) V2
+- [Thz.FM](thz-fm.md) MVP
+- ErgoNames
+- [Analog Ergo](analog-ergo.md)
+- [SigmaGold](sigmagold.md)
+
+
+
+### 2023
+
+- **Announcements**: [Significant donations made to EF Treasury from ecosystem projects](https://ergoplatform.org/en/news/news/The-Ergo-Foundation-Path-to-a-Robust-Digital-Ecosystem), Storage rent activation. EF makes a donation to the Sigmanauts Treasury
+- **Partnerships**: Bitpanda listing, nonkyc.io listings and native token integrations, Koinly integration, StealthEx listing.
+- **Events**: [Ergo Summit 2023](https://ergoplatform.org/en/news/Ergo-Summit-2023), ErgoVersary 2023, Ergohack VI and VII.
+- **Core**: Sigma.js, UTXO Set Snapshots and bootstrapping with NiPoPoWs, work on SigmaState. 
+- **Scaling**: An update from kushti *'A Scalability Plan for Ergo'* and work on a [sub-block confirmation protocol](https://ergoplatform.org/en/blog/Ergo’s-Newest-Advancement-Sub-Blocks).  
+- **Tooling**: FleetSDK, [Ledger in developer mode](https://ergoplatform.org/en/blog/Ledger-Launches-Ergo-Support-in-Developer-Mode), Oracles v2.
+
+#### Ecosystem & Community
+
+- **Community**: GreasyCEX, Erg0ne, Sigmanauts @ NFTxLV
+- **Mining**: Sigmanauts mining pool.
+
+##### Launched in 2023
+
+- [Rosen Lite](https://ergoplatform.org/en/news/Rosen-Bridge-Officially-Launches-on-Ergo-Mainnet/)
+- [SigmaFi](https://ergoplatform.org/en/blog/Sigma-Finance-A-Peer-to-Peer-Bond-Protocol)
+- [Duckpools](https://ergoplatform.org/en/blog/Duckpools-A-Lending-and-Borrowing-Protocol-on-Ergo)
+- [AuctionHouse v3](https://ergoplatform.org/en/news/Auction-House-V3-Launches-on-Mainnet)
+- [AuctionCoin](https://auctioncoin.app/) 
+- [Hodlcoin](https://app.hodlcoin.co.in/) & [PheonixFinance](https://phoenixfi.app/)
+- [Hodlbox](https://hodlbox.xyz/)
+- [Lilium](https://www.liliumergo.io/)
+- [single-tx-swap](https://www.single-tx-swap.com/)
+- Spectrum Finance launches yield farming
+- [EXLE MVP](https://ergoplatform.org/en/blog/Empowering-Communities-Interest-Free-Loans-Drive-Economic-Growth-for-Kenyan-Cooperative)
+- [TabbyPOS](https://www.tabbylab.io/)
+- [Crux Finance MVP](https://cruxfinance.io/)
+- **Tooling**: ergexplorer, ergo-lib-go, Off-The-Grid, uExplorer
+
+
+
+
+
+
 ### 2020
 
 - Jan 7, Introducing the Ergo Foundation, a community-driven entity
@@ -46,52 +117,3 @@
 - Two summits and three hackathons with 45 entries total.
 - The redesign & relaunch of [ergoplatform.org](https://ergoplatform.org) and [sigmaverse.io](https://sigmaverse.io)
 - Node [V5 JITC]().
-
-### 2023
-
-- **Announcements**: [Significant donations made to EF Treasury from ecosystem projects](https://ergoplatform.org/en/news/news/The-Ergo-Foundation-Path-to-a-Robust-Digital-Ecosystem), Storage rent activation. EF makes a donation to the Sigmanauts Treasury
-- **Partnerships**: Bitpanda listing, nonkyc listing and native token integrations, Koinly integration, StealthEx listing.
-- **Events**: [Ergo Summit 2023](https://ergoplatform.org/en/news/Ergo-Summit-2023), ErgoVersary 2023, Ergohack VI and VII.
-- **Core**: Sigma.js, UTXO Set Snapshots and bootstrapping with NiPoPoWs, Sigma
-- **Scaling**: An update from kushti *'A Scalability Plan for Ergo'* and work on a [sub-block confirmation protocol](https://ergoplatform.org/en/blog/Ergo’s-Newest-Advancement-Sub-Blocks).  
-- **Tooling**: FleetSDK, [Ledger in developer mode](https://ergoplatform.org/en/blog/Ledger-Launches-Ergo-Support-in-Developer-Mode), Oracles v2.
-
-#### Ecosystem & Community
-
-- **Community**: GreasyCEX, Erg0ne, Sigmanauts @ NFTxLV
-- **Mining**: Sigmanauts mining pool.
-
-##### Launched in 2023
-
-- [Rosen Lite](https://ergoplatform.org/en/news/Rosen-Bridge-Officially-Launches-on-Ergo-Mainnet/)
-- [SigmaFi](https://ergoplatform.org/en/blog/Sigma-Finance-A-Peer-to-Peer-Bond-Protocol)
-- [Duckpools](https://ergoplatform.org/en/blog/Duckpools-A-Lending-and-Borrowing-Protocol-on-Ergo)
-- [AuctionHouse v3](https://ergoplatform.org/en/news/Auction-House-V3-Launches-on-Mainnet)
-- [AuctionCoin](https://auctioncoin.app/) 
-- [Hodlcoin](https://app.hodlcoin.co.in/) & [PheonixFinance](https://phoenixfi.app/)
-- [Hodlbox](https://hodlbox.xyz/)
-- [Lilium](https://www.liliumergo.io/)
-- [single-tx-swap](https://www.single-tx-swap.com/)
-- Spectrum Finance launches yield farming
-- [EXLE MVP](https://ergoplatform.org/en/blog/Empowering-Communities-Interest-Free-Loans-Drive-Economic-Growth-for-Kenyan-Cooperative)
-- [TabbyPOS](https://www.tabbylab.io/)
-- [Crux Finance MVP](https://cruxfinance.io/)
-- **Tooling**: ergexplorer, ergo-lib-go, Off-The-Grid, uExplorer
-
-#### In Development
-
-- BlitzTCG Alpha
-- PalmyraComDex MVP  
-- Paideia Alpha 
-- DexyGold
-- GuapSwap V2
-- Thz.FM MVP
-- ErgoNames
-- Machina Finance 
-- Analog Ergo
-- SigmaGold
-- ChainCash
-
-
-
-
