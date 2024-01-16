@@ -108,7 +108,6 @@ In addition to the developers within the foundation members and officers,
 - soysor (ross-weir): sigma-rust
 - Benjamin Schulte: Wallet Developer (part-time)
 - Dmitry Usov: Front-end Developer
-- Ilya Oskin: Explorer
 
 However, most development is done through [bounties](bounties.md) and publicly logged [here](https://github.com/kushti/bounties/tree/master/data)
 

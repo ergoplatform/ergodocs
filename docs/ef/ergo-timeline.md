@@ -98,16 +98,21 @@ Please let us know in the development chats what is needed for AppKit, ergo-wall
 
 
 
-### 2020
+### 2022
 
-- Jan 7, Introducing the Ergo Foundation, a community-driven entity
+- Warwick (CW), Stacie, and Alison Robson join the Ergo Foundation as Officers to help expand the EF to the wider community.
+- Created and distributed a pitch deck highlighting the 'open source economy' rapidly developing on Ergo and opportunities that present for private investors. 
 
-**2020 Key Achievements**
+**2022 Key Achievements**
 
-- Roadmap released, Discord started
-- Partnership with Emurgo and extensive joint research brought us Oracle Pools, SigmaUSD, and the headless dApp framework. 
-- Listing on CoinEx, Gate.io.
 
+- Listings on Indodax and Huobi, Bittrue. 
+- Parallel asset launches on Flux.
+- [EIP-27](eip27.md) re-emission soft-fork boosting confidence in Ergo and ensuring long-term network security.
+- [EIP-37](eip37.md) (Difficulty retargeting hard fork).
+- Two summits and three hackathons with 45 entries total.
+- The redesign & relaunch of [ergoplatform.org](https://ergoplatform.org) and [sigmaverse.io](https://sigmaverse.io)
+- Node [V5 JITC]().
 
 ### 2021
 
@@ -128,18 +133,13 @@ Please let us know in the development chats what is needed for AppKit, ergo-wall
 - Our first summits and two hackathons.
 - Incorporated the first legal entity in Singapore to meet the necessity of formal arrangements now required in the industry.
 
-### 2022
+### 2020
 
-- Warwick (CW), Stacie, and Alison Robson join the Ergo Foundation as Officers to help expand the EF to the wider community.
-- Created and distributed a pitch deck highlighting the 'open source economy' rapidly developing on Ergo and opportunities that present for private investors. 
+- Jan 7, Introducing the Ergo Foundation, a community-driven entity
 
-**2022 Key Achievements**
+**2020 Key Achievements**
 
+- Roadmap released, Discord started
+- Partnership with Emurgo and extensive joint research brought us Oracle Pools, SigmaUSD, and the headless dApp framework. 
+- Listing on CoinEx, Gate.io.
 
-- Listings on Indodax and Huobi, Bittrue. 
-- Parallel asset launches on Flux.
-- [EIP-27](eip27.md) re-emission soft-fork boosting confidence in Ergo and ensuring long-term network security.
-- [EIP-37](eip37.md) (Difficulty retargeting hard fork).
-- Two summits and three hackathons with 45 entries total.
-- The redesign & relaunch of [ergoplatform.org](https://ergoplatform.org) and [sigmaverse.io](https://sigmaverse.io)
-- Node [V5 JITC]().
