@@ -1,53 +1,65 @@
 
-# Ergo Foundation
+# The Ergo Foundation
 
-The Ergo Foundation is a community-driven entity focused on the following:
+The Ergo Foundation is a community-led organization with a focus on the following areas:
 
-- Promoting non-breaking development of Ergo Platform protocol;
-- Promoting the widespread adoption and use of the Ergo Platform and its native token (ERG);
-- Developing the ecosystem around the Ergo Platform;
-- Promoting the use of the Ergo Platform and blockchain technology for social good;
-- Supporting truly decentralised infrastructure and;
-- Supporting privacy as a basic human right.
+- Encouraging the non-breaking development of the Ergo Platform protocol;
+- Advocating for the widespread adoption and use of the Ergo Platform and its native token (ERG);
+- Fostering the growth of the ecosystem around the Ergo Platform;
+- Promoting the use of the Ergo Platform and blockchain technology for societal benefit;
+- Supporting truly decentralized infrastructure;
+- Upholding privacy as a fundamental human right.
 
-## Ergo Foundation Members
+## Members
 
-**Alexander Chepurnoy (kushti)** is an Ergo Foundation board member and director. He has been active in blockchain since 2011, has written over twenty academic papers, and has more than fifteen years of experience in software development. Before co-founding  Ergo, he was also a co-founder of smartcontract.com (now Chainlink), a core developer at NXT, and one of the first employees at IOHK, where he was a Research Fellow and Team Scorex Manager.
+The members of the Ergo Foundation primarily serve as multi-signature guards, voting on proposals to allocate treasury funds in line with the Foundation's mission.
 
-**Alexander Slesarenko (morphic)**  is an (honourary) Ergo Foundation board member and graduate of Applied Mathematics from Udmurt State University. He has more than 25 years of experience in software development as a team leader, software architect, engineer and researcher, focusing mainly on programming language design and implementation. He is a Blockchain Core Developer and the Lead Developer of ErgoScript Compiler, Sigmastate interpreter, and Appkit at Ergo. He was also an Expert Team Leader at Huawei Research Lab, focusing on high-performance computing and big data processing. 
+**Alexander Chepurnoy (kushti)**, Core Developer and a member of the Ergo Foundation, has been active in the blockchain field since 2011. He has authored over twenty academic papers and has more than fifteen years of experience in software development. Prior to co-founding Ergo, he co-founded smartcontract.com (now Chainlink), served as a core developer at NXT, and was one of the first employees at IOHK, where he held the positions of Research Fellow and Team Scorex Manager.
 
-**Justin Simpson** is an Ergo Foundation board member. With over 13 years of Investment Banking experience, Justin has been involved with crypto and Bitcoin since 2013. Now exclusively focused on crypto, he is passionate about open, permissionless and decentralised blockchain platforms.
+**Justin Simpson**, a member of the Ergo Foundation, has over 13 years of experience in Investment Banking and has been involved with crypto and Bitcoin since 2013. He is now exclusively focused on crypto and is passionate about open, permissionless, and decentralized blockchain platforms.
 
-**Joseph Armeanio** is an Ergo Foundation board member and director. Joseph has been involved in crypto on the investment side since 2013 and was a partner CIO at Big Bear Investments. Joseph has been on the board of the Universal Education Foundation, a 501(c)3 organisation, since 2008. He brings a passion for counter-economic frameworks and tools for social good. His role as a business developer is creating partnerships in the crypto industry, educational partnerships, and research opportunities while promoting the adoption of Ergo tooling in the public and non-profit sectors.
+**Mark Glasgow** is a board member and director of the Ergo Foundation, working across various roles in Ergo, including community management and developer education. As a Computing Science graduate passionate about improving inclusive systems, he also serves as the Technical Director for Disabled Students UK CIC, a non-profit named one of the most influential disability-led organizations in the UK.
 
-**Mark Glasgow** is an Ergo Foundation board member and director who works across various roles in Ergo, including community management and developer education. As a Computing Science graduate passionate about improving inclusive systems, he is also the Technical Director for Disabled Students UK CIC, a non-profit named one of the most influential disability-led organisations in the UK.
+**Alexander Slesarenko (morphic)**, a member of the Ergo Foundation, is a graduate of Applied Mathematics from Udmurt State University. He has over 25 years of experience in software development in various roles such as team leader, software architect, engineer, and researcher. His main focus has been on programming language design and implementation. He is a Blockchain Core Developer and the Lead Developer of ErgoScript Compiler, Sigmastate interpreter, and Appkit at Ergo. He also served as an Expert Team Leader at Huawei Research Lab, focusing on high-performance computing and big data processing.
 
-**Mohammad Hasan Samadani (mhs_sam)** is an (honourary) Ergo Foundation board member. He has a PhD in computer science and over 12 years of experience in security and software development as a product owner, researcher, and team leader. He became an Ergo Foundation Board Member in 2020 after outstanding contributions to developing the Ergo mining infrastructure, Stratum server, and ergopool (smart contract-based pool to bypass pool resistance of Autolykos v1).
+**Mohammad Hasan Samadani (mhs_sam)** is an honorary board member of the Ergo Foundation. He holds a PhD in computer science and has over 12 years of experience in security and software development as a product owner, researcher, and team leader. He became a board member of the Ergo Foundation in 2020 after making significant contributions to the development of the Ergo mining infrastructure, Stratum server, and ergopool (a smart contract-based pool to bypass pool resistance of Autolykos v1).
 
-**Ergo Foundation Officers**
+**Joseph Armeanio** serves as a board member and the Business Development Director of the Ergo Foundation. Joseph has been involved in crypto on the investment side since 2013 and was a partner CIO at Big Bear Investments. He has been on the board of the Universal Education Foundation, a 501(c)3 organization, since 2008. He is passionate about counter-economic frameworks and tools for societal benefit. His role as a business developer involves creating partnerships in the crypto industry, educational partnerships, and research opportunities while promoting the adoption of Ergo tooling in the public and non-profit sectors.
 
-**Alison Robson (anon_br)** is a software engineer passionate about facilitating crypto adoption through enhanced user experience. You will find him helping out in the Portuguese community and wallet chats while building tools to help the user experience, such as the Paper Wallet and Ledger.
+### Ergo Foundation Officers
 
-**Anastasiia Sidorova** is the Ergo Foundation Treasurer. She graduated with a degree in "Mathematical methods in Economics" and worked as a banking analyst for four years before pivoting into hospitality; however, she has always been passionate about Analytics and Accounting. 
+**Alison Robson (anon_br)**, serving in Developer Relations, is a software engineer passionate about facilitating crypto adoption through enhanced user experience. He is active in the Portuguese community and wallet chats, and he develops tools to improve the user experience, such as the Paper Wallet and Ledger.
 
-**Ergo Foundation Advisors**
+**Anastasiia Sidorova** serves as the Treasurer of the Ergo Foundation. She holds a degree in "Mathematical methods in Economics" and worked as a banking analyst for four years before transitioning into hospitality. However, her passion for Analytics and Accounting has always remained.
 
-**Daniel Friedman** is a Strategic Advisor to the Ergo Foundation. He started his professional career as a developer for a San Francisco-based software company, 2Bridge. After moving to Japan, he became CTO of an Osaka-based software development firm specialising in Augmented Reality mobile applications. He is a strategic advisor to the Ergo Foundation Board and a business developer for IOHK.
+### Ergo Foundation Advisors
 
+**Daniel Friedman** is a Strategic Advisor to the Ergo Foundation. He began his professional career as a developer for a San Francisco-based software company, 2Bridge. After relocating to Japan, he became CTO of an Osaka-based software development firm specializing in Augmented Reality mobile applications. He serves as a strategic advisor to the Ergo Foundation Board and a business developer for IOHK.
 
-## Mission
+## Ergo Foundation Personnel
 
-Ergo Platform's primary focus is to provide an efficient and secure way to implement financial contracts, the most widely used application of blockchain technology. This focus is recognised and supported by the Ergo Foundation.
+The Ergo Foundation is made up of a diverse group of individuals, including salaried employees, volunteers, bounty collectors, and independent project developers within the Ergo ecosystem. It's important to note that there is no designated 'core' development team. The Core Marketing team, for instance, is a mix of dedicated community members and salaried professionals. Similarly, contributors who have made significant additions to core repositories may be invited to participate in Core Development discussions, regardless of their employment status.
+
+The current composition of our full-time personnel is as follows:
+
+- **Ergo Foundation**: Two members receive a salary for their contributions to the ecosystem, while two others are compensated with a modest amount of ERG. Both kushti and Justin choose not to receive any compensation.
+- **Marketing**: Four individuals are compensated for their efforts. Further details can be found in the [marketing](#marketing) section.
+- **Development**: Three individuals are salaried, with additional contributions being covered by [bounties](bounties.md).
+
+A detailed breakdown of our expenditure can be found in the [Treasury](ef-treasury.md) section.
+
+## Scope
+
+The primary focus of the Ergo Platform is to provide an efficient and secure way to implement financial contracts, which is the most widely used application of blockchain technology. This focus is recognized and supported by the Ergo Foundation.
 
 The Ergo Foundation is committed to organic and non-breaking development of the Ergo Platform protocol. The Foundation ensures that protocol changes are approved not only by miners - who express their will directly on the blockchain - but also by users and projects building on top of Ergo. 
 
-The Ergo Foundation is committed to maximising the number of valuable ecosystem developments accomplished in open-source with the least permissive licence possible.
+The Ergo Foundation is committed to maximizing the number of valuable ecosystem developments accomplished in open-source with the least permissive license possible.
 
 The Foundation is also dedicated to helping with building trustless environments, smart contracts and payment frameworks for the public with privacy in mind. The Foundation believes that the Treasury should be distributed mainly to the community, including freelancers, hackers, experts and enthusiasts. 
 
-
-
 ### Infrastructure
+
 - Support for protocol research, development of the reference client, alternative clients (if needed),  libraries, and developer tooling. 
 - Improving market access by getting Ergo on centralised exchanges, hardware wallets, bridges, or other means.
 
@@ -58,7 +70,6 @@ The Foundation is also dedicated to helping with building trustless environments
 ### Marketing
 
 The Foundation aims to promote the adoption of Ergo. While its operations in this area are conservative, it does fund a select few roles in linear marketing for areas not currently met by the community.
-
 
 The current paid roles within marketing consist of 
 
@@ -77,59 +88,6 @@ The EF does not commonly pay for influencers or ad campaigns and does its best t
 
 The marketing department highlights projects building in the ecosystem. However, these initiatives do not constitute an endorsement from the Ergo Foundation. The Foundation will always use best practices to vet projects and ensure that there is no risk for potential users. Still, in the early stages of development, it is often unknowable if anything of substance will ultimately be produced.
 
-### 'Core' Team
-
-**There is no official 'core' team.** While some people working on Ergo day-to-day are salaried, many are volunteers, collecting bounties or working on their own projects on top of Ergo. Core Marketing can include keen community members alongside salaried workers. Similarly, anyone with significant contributions to core repositories can be invited to Core Development chats without being a salaried *employee*.
-
-### Voting 
-
-The Ergo Foundation members and officers discuss proposals before putting them to a formal vote on the ergoforum, passed with a majority of voting members. 
-
-Before voting on spending treasury funds, we will approach the [Good Whale Fund](https://ergoplatform.org/en/blog/2021-11-02-good-whales-grant-fund/), [DarkFund0](https://www.ergoforum.org/t/darkfund0-zk-fund-for-privacy-applications/398), or suggest creating a [Raffle](https://ergoraffle.com/) if appropriate. 
-
-Foundation votes this year have mostly been related to exchanges, market-makers, banks, and grant requests.
-
-- (Dec 23) Transfer of all or Part of Treasury to New Multi-sig
-- (Oct 23) Pay raise for anon-br
-- (Sep 23) Pay a bonus to Angie in SPF
-- (Sep 23) Vote on spf conversions
-- (Aug 23) Bitpanda Listing
-- (Aug 23) Vote on taking down 2mm spf into a minimum 4-person multi-sig
-- (Jul 23) SPF Tokens to Sigmanauts
-- (Jul 23) Sigmanauts Treasury Fundraiser
-- (Jul 23) Dubai Entity Setup
-- (May 23) Partial Payment of dept to morphic
-- (May 23) Wechat Public Account Purchase - 1,200 ERG
-- (Feb 23) EF entity set up in Dubai
-- (Feb 23) Change to USD baserate for my rewards
-- (Feb 23) 40k ERGs to Treasury Wallet for Liquidation PENDING PRICE TARGETS
-- (Jan 23) Hackahton VI Funding
-- (Jan 23) ERGOHACK VI Funding
-- (Jan 23) MrStahlfelge contract renewal
-- (Dec 21) MrStahlfelge contract renewal
-- (Dec 21) Expenses reduction plan
-- (Sep 21) Miner subsidise
-- (Sep 21) Graphics support
-- (Sep 21) CW/Allision/Stacie -> EF Officers
-- (Sep 21) [exchange related - details under NDA]
-- (Aug 21) [exchange related - details under NDA]
-- (Aug 21) Market Maker contract
-- (Aug 21) [exchange related - details under NDA]
-- (May 21) GuapSwap Grant Request
-- (Apr 21) Bridge Funding
-- (Apr 21) Marketing Proposal
-- (Apr 21) DeCo Funding
-- (Mar 21) [exchange related - details under NDA]
-- (Feb 21) [exchange related - details under NDA]
-- (Feb 21) Renew development contract with morphic
-- (Feb 21) Vote for Continued Cooperation with Chinese publisher
-- (Jan 21) ErgoDex Funding
-- (Jan 21) Funding for website visual direction.
-- (Jan 21) Bank Account & Crypto custody account
-- (Jan 21) Education Grant
-
-
-
 ### Relationship to Development
 
 Relationships between the Foundation and development only exist when there is a demand not met by the community, and this role is diminishing over time. Some EF members also have developer positions, and while their development activities are not part of their foundation involvement, they are listed here for transparency. 
@@ -140,7 +98,7 @@ Relationships between the Foundation and development only exist when there is a 
 
 ### Activities
 
-The average day-to-day for foundation members in 2022 mostly consisted of the continued effort of getting a bank account, incorporation, reincorporation, dealing with exchanges, market-makers and our internal accounting & budgeting. As well as overseeing the following activities:
+The average day-to-day for foundation members is mostly organisational, dealing with exchanges, market-makers and our internal accounting & budgeting. As well as overseeing the following activities:
 
 - Salaries for contracted developers.
 - Paying 'bounties' set on core repositories.

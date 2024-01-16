@@ -77,3 +77,51 @@ In addition to the direct ERG spending above in 2023,
      {type: info, open: true}
 Please see [this section](ergo-foundation.md#the-ergo-foundations-future) for more information on the long-term goals of The Foundation.
 ///
+
+
+## Votings
+
+The Ergo Foundation members and officers discuss proposals before putting them to a formal vote on the ergoforum, passed with a majority of voting members. 
+
+Before voting on spending treasury funds, we will approach the [Good Whale Fund](https://ergoplatform.org/en/blog/2021-11-02-good-whales-grant-fund/), [DarkFund0](https://www.ergoforum.org/t/darkfund0-zk-fund-for-privacy-applications/398), or suggest creating a [Raffle](https://ergoraffle.com/) if appropriate.
+
+Foundation votes this year have mostly been related to exchanges, market-makers, banks, and grant requests.
+
+- (Dec 23) Transfer of all or Part of Treasury to New Multi-sig
+- (Oct 23) Pay raise for anon-br
+- (Sep 23) Pay a bonus to Angie in SPF
+- (Sep 23) Vote on spf conversions
+- (Aug 23) Bitpanda Listing
+- (Aug 23) Vote on taking down 2mm spf into a minimum 4-person multi-sig
+- (Jul 23) SPF Tokens to Sigmanauts
+- (Jul 23) Sigmanauts Treasury Fundraiser
+- (Jul 23) Dubai Entity Setup
+- (May 23) Partial Payment of dept to morphic
+- (May 23) Wechat Public Account Purchase - 1,200 ERG
+- (Feb 23) EF entity set up in Dubai
+- (Feb 23) Change to USD baserate for my rewards
+- (Feb 23) 40k ERGs to Treasury Wallet for Liquidation PENDING PRICE TARGETS
+- (Jan 23) Hackahton VI Funding
+- (Jan 23) ERGOHACK VI Funding
+- (Jan 23) MrStahlfelge contract renewal
+- (Dec 21) MrStahlfelge contract renewal
+- (Dec 21) Expenses reduction plan
+- (Sep 21) Miner subsidise
+- (Sep 21) Graphics support
+- (Sep 21) CW/Allision/Stacie -> EF Officers
+- (Sep 21) [exchange related - details under NDA]
+- (Aug 21) [exchange related - details under NDA]
+- (Aug 21) Market Maker contract
+- (Aug 21) [exchange related - details under NDA]
+- (May 21) GuapSwap Grant Request
+- (Apr 21) Bridge Funding
+- (Apr 21) Marketing Proposal
+- (Apr 21) DeCo Funding
+- (Mar 21) [exchange related - details under NDA]
+- (Feb 21) [exchange related - details under NDA]
+- (Feb 21) Renew development contract with morphic
+- (Feb 21) Vote for Continued Cooperation with Chinese publisher
+- (Jan 21) ErgoDex Funding
+- (Jan 21) Funding for website visual direction.
+- (Jan 21) Bank Account & Crypto custody account
+- (Jan 21) Education Grant
