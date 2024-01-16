@@ -1,14 +1,15 @@
 
 # Timeline
 
+This page gives a rundown of the Ergo Foundation's key achievements, developments, and milestones from 2020 till now. It highlights the yearly progress in different areas like partnerships, core developments, scaling, tooling, and community projects. The timeline also gives a snapshot of ongoing and future projects that are either in progress or under development. Since Ergo is a grassroots project, the line between EF and community achievements can sometimes blur, so we've included all accomplishments and made distinctions where possible.
 
+After adding UTXO set snapshots and NiPoPoWs to the [pruned full node](modes.md) for faster bootstrapping, core development is now focused on optimizing this implementation and exploring sub-block confirmation protocols to enhance transactions and finality. For more details, see the [scaling roadmap](roadmap.md).
 
 ### 2024
 
 #### In Progress
 
 Discussions ongoing with several prominent on-ramps trying to secure US access, as well as smaller exchanges which should help our volume, and regional exchanges to ensure ERG is accesible worldwide.
-
 
 - ErgoSummit
 - Metamask
@@ -25,14 +26,39 @@ Discussions ongoing with several prominent on-ramps trying to secure US access, 
 
 ##### Community
 
-- PalmyraComDex MVP  
+- PalmyraComDex MVP
 - [BlitzTCG](blitz.md)
-- [Paideia](paideia.md) 
+- [Paideia](paideia.md)
 - [GuapSwap](guapswap.md) V2
 - [Thz.FM](thz-fm.md) MVP
 - ErgoNames
 - [Analog Ergo](analog-ergo.md)
 - [SigmaGold](sigmagold.md)
+
+#### Core Development for Q1/Q2 2024
+
+**[Node](install.md) Development:**
+
+- Implementation of [sub-blocks](sub-blocks.md)
+- Optimization and review of the [P2P layer](p2p.md)
+- Avoidance of re-checking signatures when re-validation provides the same result (e.g., for P2PK inputs)
+- Further optimizations during bootstrapping
+- Storing only part of the UTXO set tree in RAM
+- Potential switch to RocksDb
+- Additional tests and polishing for extra indices, scans, and wallet
+- Modularization of the codebase to provide a framework for implementing sidechains
+
+**[Sigma](sigma-lang.md) Development:**
+
+- Implementation of Sigma 6.0
+- Investigation into the possibility of extending the validation context (useful for sidechains)
+
+**[Sigma-Rust](sigma-rust.md) Development:**
+
+- Implementation of [JIT costing](jitc.md)
+- Implementation of 6.0 features to match Scala's capabilities
+
+Please let us know in the development chats what is needed for AppKit, ergo-wallet, and other core repositories.
 
 
 

@@ -123,25 +123,24 @@ Foundation votes this year are usually related to our internal structures, excha
 - (Feb 23) 40k ERGs to Treasury Wallet for Liquidation PENDING PRICE TARGETS
 - (Jan 23) Hackahton VI Funding
 - (Jan 23) ERGOHACK VI Funding
-- (Jan 23) MrStahlfelge contract renewal
-- (Dec 21) MrStahlfelge contract renewal
-- (Dec 21) Expenses reduction plan
-- (Sep 21) Miner subsidise
-- (Sep 21) Graphics support
-- (Sep 21) CW/Allision/Stacie -> EF Officers
-- (Sep 21) [exchange related - details under NDA]
-- (Aug 21) [exchange related - details under NDA]
-- (Aug 21) Market Maker contract
-- (Aug 21) [exchange related - details under NDA]
-- (May 21) GuapSwap Grant Request
-- (Apr 21) Bridge Funding
-- (Apr 21) Marketing Proposal
-- (Apr 21) DeCo Funding
-- (Mar 21) [exchange related - details under NDA]
-- (Feb 21) [exchange related - details under NDA]
-- (Feb 21) Renew development contract with morphic
-- (Feb 21) Vote for Continued Cooperation with Chinese publisher
-- (Jan 21) ErgoDex Funding
-- (Jan 21) Funding for website visual direction.
-- (Jan 21) Bank Account & Crypto custody account
-- (Jan 21) Education Grant
+- (Dec 22) MrStahlfelge contract renewal
+- (Dec 22) Expenses reduction plan
+- (Sep 22) Miner subsidise
+- (Sep 22) Graphics support
+- (Sep 22) CW/Allision/Stacie -> EF Officers
+- (Sep 22) [exchange related - details under NDA]
+- (Aug 22) [exchange related - details under NDA]
+- (Aug 22) Market Maker contract
+- (Aug 22) [exchange related - details under NDA]
+- (May 22) GuapSwap Grant Request
+- (Apr 22) Bridge Funding
+- (Apr 22) Marketing Proposal
+- (Apr 22) Securing Funding for Deco Raffle (Raffle was 7k erg)
+- (Mar 22) [exchange related - details under NDA]
+- (Feb 22) [exchange related - details under NDA]
+- (Feb 22) Renew development contract with morphic
+- (Feb 22) Vote for Continued Cooperation with Chinese publisher
+- (Jan 22) ErgoDex Funding  $113,200
+- (Jan 22) Funding for website visual direction.
+- (Jan 22) Bank Account & Crypto custody account
+- (Jan 22) Education Grant

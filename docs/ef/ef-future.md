@@ -12,9 +12,9 @@ The Foundation's role was to bootstrap the Ergo ecosystem in the initial years a
 - 140+ projects are developing on Ergo. See [sigmaverse.io](sigmaverse.io) for an overview!
 - Consistently ranked in the top 100 for development activity on [artemis.xyz](https://app.artemis.xyz/developer-activity?ecosystemValue=Ergo)
 
-/// details | Achievements
+/// details | What's been done so far?
      {type: info, open: true}
-For an overview of what has been achieved since launch, please see [this page](ef-achievements.md)
+For an overview of what has been achieved since launch, please see [this page](ergo-timeline.md)
 ///
 
 

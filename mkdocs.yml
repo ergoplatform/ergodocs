@@ -153,8 +153,9 @@ nav:
       - Glossary: glossary.md    
     - Ergo Foundation:
       - ef/ergo-foundation.md
+      - Scope: ef/ef-scope.md
       - Treasury: ef/ef-treasury.md
-      - Achievements: ef/ef-achievements.md
+      - Timeline: ef/ergo-timeline.md
       - Future: ef/ef-future.md
     - Events: 
       - Events: events/index.md
