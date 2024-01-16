@@ -13,12 +13,12 @@ The Foundation is also dedicated to helping with building trustless environments
 Please see [this page](ef-future.md) for more information on the long-term goals of The Foundation.
 ///
 
-#### Infrastructure
+## Infrastructure
 
 - Support for protocol research, development of the reference client, alternative clients (if needed),  libraries, and developer tooling. 
 - Improving market access by getting Ergo on centralised exchanges, hardware wallets, bridges, or other means.
 
-#### Education
+## Education
 
 - Creating materials to educate developers and users directly or funding their creation through third parties from within the community. 
 
@@ -43,7 +43,7 @@ The EF does not commonly pay for influencers or ad campaigns and does its best t
 
 The marketing department highlights projects building in the ecosystem. However, these initiatives do not constitute an endorsement from the Ergo Foundation. The Foundation will always use best practices to vet projects and ensure that there is no risk for potential users. Still, in the early stages of development, it is often unknowable if anything of substance will ultimately be produced.
 
-#### Relationship to Development
+## Relationship to Development
 
 Relationships between the Foundation and development only exist when there is a demand not met by the community, and this role is diminishing over time. Some EF members also have developer positions, and while their development activities are not part of their foundation involvement, they are listed here for transparency. 
 
@@ -56,14 +56,14 @@ With the rest being covered by volunteers, bounties & grants
 
 
 
-#### Code Audits
+### Code Audits
 
 The Ergo Foundation does not review or endorse any code specifically. Code reviews are sometimes performed by Ergo Foundation members (due to their expertise in this area), but this does not constitute an endorsement, and users should be aware of their assumptions when interacting with experimental DeFi protocols. (See - [*Know Your Assumptions*](kya.md))
 
 
 
 
-#### Exchange Listings
+## Exchange Listings
 
 The Ergo Foundation, as a legal entity, is primarily responsible for liaising with centralized exchanges. Ergo has been listed on several exchanges, including three *Tier 1* exchanges (KuCoin, gate.io, Huobi). A *tier 1* exchange is defined as an exchange that appears in the top 10 of exchange ranking sites such as [defillama.com/cexs](https://defillama.com/cexs).
 
