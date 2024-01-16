@@ -22,7 +22,7 @@ Please see [this page](ef-future.md) for more information on the long-term goals
 
 - Creating materials to educate developers and users directly or funding their creation through third parties from within the community. 
 
-#### Relationship to Marketing
+## Relationship to Marketing
 
 The Foundation aims to promote the adoption of Ergo. While its operations in this area are conservative, it does fund a select few roles in linear marketing for areas not currently met by the community.
 

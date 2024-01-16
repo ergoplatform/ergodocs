@@ -184,6 +184,7 @@ nav:
         - Guards: eco/rosen/rosen-guard.md
         - Tokenomics: eco/rosen/rosen-tokenomics.md
         - Team: eco/rosen/rosen-team.md
+        - Uses: eco/rosen/rosen-uses.md
       - Oracles: 
         - uses/oracles.md
         - Oracle Pools V2: eco/oracles-v2.md
