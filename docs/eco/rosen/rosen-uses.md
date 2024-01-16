@@ -1,6 +1,6 @@
 # Rosen Bridge: Bridging Cardano and Ergo
 
-The Rosen Bridge provides a mechanism to bridge Cardano and Ergo, allowing for seamless interaction between the two blockchains. It's important to understand that this bridge does not facilitate a direct swap between ADA and ERG. Instead, it allows you to convert your ADA into rsERG on the Ergo blockchain, or your ERG into rsADA on the Cardano blockchain.
+The Rosen Bridge provides a mechanism to bridge Cardano and Ergo, allowing for seamless interaction between the two blockchains. It's important to understand that this bridge does not facilitate a direct swap between ADA and ERG. Instead, it allows you to convert your ADA into rsADA on the Ergo blockchain, or your ERG into rsERG on the Cardano blockchain.
 
 This functionality opens up new possibilities for ADA token holders within the Ergo DeFi ecosystem. Although the bridge has just been launched and dApps are still in the process of integrating this feature, there are already several ways you can utilize your wrapped tokens:
 
