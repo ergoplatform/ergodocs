@@ -48,16 +48,13 @@ For more information about the scope of the Foundation's work, please refer to t
 
 - **Role & Responsibilities:** No official EF duties other than voting. Works as a Core Developer on the reference client but is unpaid for this role.
 
-
 **Justin Simpson** has over 13 years of experience in Investment Banking and has been involved with crypto and Bitcoin since 2013. He is now exclusively focused on crypto and is passionate about open, permissionless, and decentralized blockchain platforms.
 
 - **Role & Responsibilities:** No official EF duties other than voting. He works in various roles behind the scenes such as investor relations, chinese marketing strategy, banking and accounting and is currently unpaid.
 
-
 **Mark Glasgow** works across various roles in Ergo, including community management and developer education. As a Computing Science graduate passionate about improving inclusive systems, he also serves as the Technical Director for Disabled Students UK CIC, a non-profit named one of the most influential disability-led organizations in the UK.
 
 - **Role & Responsibilities:** Official duties within the EF are to convey concerns from the community to the EF. Salaried for Community Management/Editorial/Documentation/etc.
-
 
 **Alexander Slesarenko (morphic)** is a graduate of Applied Mathematics from Udmurt State University. He has over 25 years of experience in software development in various roles such as team leader, software architect, engineer, and researcher. His main focus has been on programming language design and implementation. He also served as an Expert Team Leader at Huawei Research Lab, focusing on high-performance computing and big data processing. He manages [sigmastate-interpreter](sigmastate-interpreter.md) and other JVM-related development.
 
