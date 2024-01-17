@@ -47,7 +47,7 @@ The marketing department highlights projects building in the ecosystem. However,
 
 Relationships between the Foundation and development only exist when there is a demand not met by the community, and this role is diminishing over time. Some EF members also have developer positions, and while their development activities are not part of their foundation involvement, they are listed here for transparency. 
 
-- Kushti manages any bounties relating to the [reference client](node.md) repository and keeps a watch over [sigma-rust](sigma-rust.md) development and any other high-level development and research not covered below. He has not taken a wage for his work since July 2021.
+- Kushti manages any bounties relating to the reference client repository and keeps a watch over [sigma-rust](sigma-rust.md) development and any other high-level development and research not covered below. He has not taken a wage for his work since July 2021.
 - Morphic manages any JVM-related developers (Wallet devs, Scala devs, etc.) and the [sigmastate-interpreter](sigmastate-interpreter.md). 
 - Mohammad Hasan Samadani (mhs_sam) manages a team of graduates and PhD students who have produced [Ergo Raffle](ergoraffle.md), [ErgoWell](ergowell.md), [Minotaur-wallet](wallets.md), and [Rosen Bridge](rosen.md).
 - [Fleet-sdk](https://github.com/fleet-sdk) is managed by Alison Robson (anon_br)

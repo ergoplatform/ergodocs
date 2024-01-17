@@ -18,10 +18,10 @@ Discussions ongoing with several prominent on-ramps trying to secure US access, 
 
 #### In Development
 
-- [Sub-block confirmation protocols](sub-blocks.md)
+- [Sub-block confirmation protocols](subblocks.md)
 - EVM Bridge for [Rosen](rosen.md)
 - [DexyGold](dexy.md)
-- [Machina Finance](machina.md)
+- [Machina Finance](machina-finance.md)
 - [ChainCash](chaincash.md)
 
 ##### Community
@@ -33,14 +33,14 @@ Discussions ongoing with several prominent on-ramps trying to secure US access, 
 - [Thz.FM](thz-fm.md) MVP
 - ErgoNames
 - [Analog Ergo](analog-ergo.md)
-- [SigmaGold](sigmagold.md)
+- [SigmaGold](siggold.md)
 
 #### Core Development for Q1/Q2 2024
 
 **[Node](install.md) Development:**
 
-- Implementation of [sub-blocks](sub-blocks.md)
-- Optimization and review of the [P2P layer](p2p.md)
+- Implementation of [sub-blocks](subblocks.md)
+- Optimization and review of the P2P layer
 - Avoidance of re-checking signatures when re-validation provides the same result (e.g., for P2PK inputs)
 - Further optimizations during bootstrapping
 - Storing only part of the UTXO set tree in RAM

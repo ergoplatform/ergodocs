@@ -6,7 +6,7 @@ tags:
 
 # JavaScript & TypeScript
 
-[Appkit](appkit) was designed as an abstraction layer on top of Sigma. This gives a lot of freedom on the core level in [Sigma](sigmastate-interpreter.md), while keeping dApp-facing APIs stable.
+[Appkit](appkit.md) was designed as an abstraction layer on top of Sigma. This gives a lot of freedom on the core level in [Sigma](sigmastate-interpreter.md), while keeping dApp-facing APIs stable.
 
 With the availability of Sigma.js, Fleet can play the same role for JS/TS.
 

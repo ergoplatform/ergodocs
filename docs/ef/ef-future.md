@@ -8,8 +8,8 @@ The Foundation's role was to bootstrap the Ergo ecosystem in the initial years a
 
 - 300+ community devs
 - 100+ Active contributors in the weekly developer chat in Discord. 
-- Hosting multiple [events](events.md) per year. 
-- 140+ projects are developing on Ergo. See [sigmaverse.io](sigmaverse.io) for an overview!
+- Hosting multiple [events](../events/index.md) per year.
+- 140+ projects are developing on Ergo. See [sigmaverse.io](https://sigmaverse.io) for an overview!
 - Consistently ranked in the top 100 for development activity on [artemis.xyz](https://app.artemis.xyz/developer-activity?ecosystemValue=Ergo)
 
 /// details | What's been done so far?
@@ -28,7 +28,7 @@ The optimal strategy involves diligent work and the development of robust infras
 
 While the timing and nature of these shifts cannot be precisely predicted or controlled, strategic positioning can prepare us for various outcomes.
 
-The generous contributions from ecosystem projects to the Foundation's [treasury](treasury.md) ensure its sustainability, enabling it to fulfill its mission until such time as it becomes redundant.
+The generous contributions from ecosystem projects to the Foundation's [treasury](ef-treasury.md) ensure its sustainability, enabling it to fulfill its mission until such time as it becomes redundant.
 
 
 ## The Sigmanauts Programme

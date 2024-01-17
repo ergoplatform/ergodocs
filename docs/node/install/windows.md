@@ -13,7 +13,7 @@ ergo {
     }
 }
 ```
-You can now follow the steps in the [tutorial](/node/platforms/tutorial)
+You can now follow the steps in the [tutorial](tutorial.md)
 
 ## WSL
 
@@ -23,7 +23,7 @@ See [this guide](https://www.windowscentral.com/install-windows-subsystem-linux-
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux 
 ```
 
-You can then follow the steps outlines in the [Linux](/node/platforms/linux) page. 
+You can then follow the steps outlines in the [Linux](linux.md) page. 
 
 ## Resources
 

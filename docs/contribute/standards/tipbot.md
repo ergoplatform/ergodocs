@@ -79,7 +79,7 @@ You can restore the generated wallet in any supported Ergo wallet by using the r
   
 Simply DM the bot *Ergo Tipper Bot[BETA]#0902* on Discord and a menu will appear when you type `/`
   
-![screenshot_2022-01-19_at_10.11.07.png](/screenshot_2022-01-19_at_10.11.07.png)
+![screenshot_2022-01-19_at_10.11.07.png](screenshot_2022-01-19_at_10.11.07.png)
   
 ### Twitter
   

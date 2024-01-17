@@ -9,7 +9,7 @@ Simply run the following command
 bash -c "$(curl -s https://node.phenotype.dev)"
 ```
 
-- [Mac](/node/install/mac)
-- [Linux](/node/install/linux)
-- [Pi](/node/install/pi)
-- [Windows](/node/install/windows)
+- [Mac](mac.md)
+- [Linux](linux.md)
+- [Pi](pi.md)
+- [Windows](windows.md)

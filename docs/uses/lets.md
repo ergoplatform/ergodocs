@@ -18,7 +18,7 @@ Moreover, building lots of small credit systems on the same blockchain enables i
 
 ## More information
 
-There are draft contracts for [basic implmentation](basic-imp.md), and thanks to [Sigma Protocols](/dev/scs/sigma/) we can create a [Trustless LETS](trustless-lets.md) on Ergo with no membership record; therefore, no management committee is needed for enrolment, allowing it to operate with full autonomy.
+There are draft contracts for [basic implmentation](basic-imp.md), and thanks to [Sigma Protocols](crypto.md) we can create a [Trustless LETS](trustless-lets.md) on Ergo with no membership record; therefore, no management committee is needed for enrolment, allowing it to operate with full autonomy.
 
 See this [blog post](https://ergoplatform.org/en/blog/2021-07-01-lets-start-the-discussion/) for a longer introduction, or head over to the [LETS Discussion Summary on ergoforum](https://www.ergoforum.org/t/lets-discussion-summary/3492) to see the latest developments. 
 

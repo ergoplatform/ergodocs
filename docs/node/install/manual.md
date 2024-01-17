@@ -102,6 +102,6 @@ Additional verification can be performed at [127.0.0.1:9053/info](http://127.0.0
 
 ## Resources
 
-* [Troubleshooting Guide](/node/install/troubleshooting)
+* [Troubleshooting Guide](troubleshooting.md)
 * [Frequently Asked Questions (FAQ)](node-faq.md)
-* [Using the TestNet Tutorial](/node/testnet)
+* [Using the TestNet Tutorial](testnet.md)

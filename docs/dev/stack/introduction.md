@@ -8,13 +8,13 @@
     "title": "Key Features",
     "content": "Discover Ergo's key features",
     "image": "../../assets/img/dev-grid/key.png",
-    "url": "../../protocol"
+    "url": "/../../protocol.md"
   },
   {
     "title": "Anatomy",
     "content": "Dive into boxes, registers and more in the anatomy of Ergo.",
     "image": "../../assets/img/dev-grid/anatomy.png",
-    "url": "../../../dev/data-model/box"
+    "url": "../data-model/box.md"
 
   },
   {
@@ -33,19 +33,19 @@
     "title": "Testnet",
     "content": "An alternative blockchain you can use for experimentation",
     "image": "../../assets/img/dev-grid/testnet.png",
-    "url": "../../../node/testnet"
+    "url": "../../node/testnet.md"
   },
   {
     "title": "Read our FAQ",
     "content": "Frequently asked questions.",
     "image": "../../assets/img/dev-grid/faq.png",
-    "url": "../../../faq/"
+    "url": "../../faq.md"
   }
 ]
 
 ::/cards::
 
-Join our [Discord server](https://discord.gg/7kWWQeMCwe) dev-support (and regular [Hackathons](ergohack.md)). Alternatively you can search the chats without logging in via [linen.dev/d/ergo](https://www.linen.dev/d/ergo).
+Join our [Discord server](https://discord.gg/7kWWQeMCwe) dev-support (and regular [Hackathons](ergohack.md)). Alternatively you can search the chats without logging in via [linen.../d/ergo](https://www.linen.../d/ergo).
 
 
 ## Introductory 
@@ -136,38 +136,38 @@ Need help figuring out where to start developing? This [introduction to Mosaik](
     "title": "AppKit",
     "content": "for JVM languages (used in Scala, Java and Kotlin projects)",
     "image": "../../assets/img/dev-grid/jvm.png",
-    "url": "../appkit"
+    "url": "appkit.md"
   },
   {
     "title": "Fleet",
     "content": "Lets you easily create Ergo transactions with a pure JS library.",
     "image": "../../assets/img/dev-grid/js.png",
-    "url": "../fleet"
+    "url": "fleet.md"
 
   },
   {
     "title": "Mosaik",
     "content": "is a JSON-based markup language served via a REST API intended to be used by Ergo platform dApps.",
     "image": "../../assets/img/dev-grid/mosaik.png",
-    "url": "../mosaik/"
+    "url": "mosaik.md"
   },
   {
     "title": "Headless dApp Framework",
     "content": "A Rust framework for developing Ergo *headless* dApps.",
     "image": "../../assets/img/dev-grid/rust.png",
-    "url": "../headless/"
+    "url": "headless.md"
   },
   {
     "title": "RustKit",
     "content": "(WIP), a library on top of sigma-rust for easily creating transactions.",
     "image": "../../assets/img/dev-grid/rust.png",
-    "url": "../rustkit/"
+    "url": "rustkit.md"
   },
   {
     "title": "JDE",
     "content": "JSON dApp Environment",
     "image": "../../assets/img/dev-grid/json.png",
-    "url": "../jde"
+    "url": "jde.md"
   }
 ]
 
@@ -184,19 +184,19 @@ Need help figuring out where to start developing? This [introduction to Mosaik](
     "content": "",
     "image": "../../assets/img/dev-grid/jvm.png",
 
-    "url": "../../lang/jvm"
+    "url": "../lang/jvm.md"
   },
   {
     "title": "Sigma-Rust",
     "content": "An alternative and simple implementation of ErgoTree interpreter and transaction-building tools.",
     "image": "../../assets/img/dev-grid/rust.png",
-    "url": "../sigma-rust"
+    "url": "sigma-rust.md"
   },
   {
     "title": "Sigma.JS",
     "content": "",
     "image": "../../assets/img/dev-grid/js.png",
-    "url": "../../../dev/lib/sigmajs/"
+    "url": "../lib/sigmajs.md"
   },
 
 ]
@@ -212,18 +212,18 @@ Need help figuring out where to start developing? This [introduction to Mosaik](
   {
     "title": "GetBlok Plasma",
     "content": "a library on top of Ergo Appkit that provides an abstraction layer to simplify the process of integrating AVL Trees (AKA Plasma) into off-chain code.",
-    "url": "../../../dev/lib/plasma"
+    "url": "../lib/plasma.md"
   },
   {
     "title": "Scrypto",
     "content": "cryptographic toolkit designed to make it easier and safer for developers to use cryptography in their applications.",
-    "url": "../../../dev/lib/scrypto/"
+    "url": "../lib/scrypto.md"
 
   },
   {
     "title": "EIP12-types",
     "content": "static typing library",
-    "url": "../../../dev/lib/eip12-types/"
+    "url": "../lib/eip12-types.md"
   }
 ]
 
@@ -239,18 +239,13 @@ Need help figuring out where to start developing? This [introduction to Mosaik](
   {
     "title": "Node & Explorer Tools",
     "content": "",
-    "url": "/dev/stack/explorer"
+    "url": "explorer.md"
   },
   {
     "title": "APIs",
     "content": "",
-    "url": "/dev/stack/api"
+    "url": "../stack/api.md"
 
-  },
-  {
-    "title": "Off-chain Tooling",
-    "content": "",
-    "url": "/dev/lib/off-chain/"
   }
 ]
 
@@ -264,18 +259,18 @@ Need help figuring out where to start developing? This [introduction to Mosaik](
   {
     "title": "Creating a simple *pay-to-script* app",
     "content": "",
-    "url": "/dev/scs/p2s/"
+    "url": "../scs/p2s.md"
   },
   {
     "title": "Creating a signature",
     "content": "",
-    "url": "/dev/scs/sigma/3-out-of-5/"
+    "url": "../scs/sigma/3-out-of-5.md"
 
   },
   {
     "title": "Sending a chained transaction",
     "content": "",
-    "url": "/dev/anatomy/transactions/chained/"
+    "url": "../anatomy/transactions/chained.md"
   }
 ]
 

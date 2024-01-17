@@ -44,7 +44,7 @@ For more information about the scope of the Foundation's work, please refer to t
 
 ### Ergo Foundation Members
 
-**Alexander Chepurnoy (kushti)** has been active in the blockchain field since 2011. He has authored over twenty academic papers and has more than fifteen years of experience in software development. Prior to co-founding Ergo, he co-founded smartcontract.com (now Chainlink), served as a core developer at NXT, and was one of the first employees at IOHK, where he held the positions of Research Fellow and Team Scorex Manager. He manages any bounties relating to the [reference client](node.md) repository and keeps a watch over [sigma-rust](sigma-rust.md) development and any other high-level development and research not covered otherwise.
+**Alexander Chepurnoy (kushti)** has been active in the blockchain field since 2011. He has authored over twenty academic papers and has more than fifteen years of experience in software development. Prior to co-founding Ergo, he co-founded smartcontract.com (now Chainlink), served as a core developer at NXT, and was one of the first employees at IOHK, where he held the positions of Research Fellow and Team Scorex Manager. He manages any bounties relating to the eference client repository and keeps a watch over [sigma-rust](sigma-rust.md) development and any other high-level development and research not covered otherwise.
 
 - **Role & Responsibilities:** No official EF duties other than voting. Works as a Core Developer on the reference client but is unpaid for this role.
 
