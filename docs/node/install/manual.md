@@ -4,7 +4,7 @@
 
 ### Download the Ergo Client
 
-Initiate the process by establishing a designated folder (e.g., `~/ergo`) for the node operation and download the latest [Ergo client release](https://github.com/ergoplatform/ergo/releases/) `.jar` file. Alternatively, clone the Ergo repository and compile the `.jar` file from the source using [SBT](https://www.scala-sbt.org/) (`sbt assembly` command), or via [Docker](/node/install/docker).
+Initiate the process by establishing a designated folder (e.g., `~/ergo`) for the node operation and download the latest [Ergo client release](https://github.com/ergoplatform/ergo/releases/) `.jar` file. Alternatively, clone the Ergo repository and compile the `.jar` file from the source using [SBT](https://www.scala-sbt.org/) (`sbt assembly` command), or via [Docker](docker.md).
 
 ### Create a configuration file
 

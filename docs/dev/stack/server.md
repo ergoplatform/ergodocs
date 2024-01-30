@@ -10,33 +10,33 @@ Developers can use tools to read data from the blockchain, compute using that da
   {
     "title": "JVM",
     "content": "",
-    "image": "/assets/img/dev-grid/jvm.png",
-    "url": "../../lang/jvm"
+    "image": "../../assets/img/dev-grid/jvm.png",
+    "url": "../lang/jvm.md"
   },
   {
     "title": "Rust",
     "content": "",
-    "image": "/assets/img/dev-grid/rust.png",
-    "url": "../../lang/rust"
+    "image": "../../assets/img/dev-grid/rust.png",
+    "url": "../lang/rust.md"
 
   },
   {
     "title": "Node.js",
     "content": "",
-    "image": "/assets/img/dev-grid/js.png",
-    "url": "../../lang/js"
+    "image": "../../assets/img/dev-grid/js.png",
+    "url": "../lang/js.md"
   },
   {
     "title": "Python",
     "content": "",
-    "image": "/assets/img/dev-grid/python.png",
-    "url": "../../lang/python"
+    "image": "../../assets/img/dev-grid/python.png",
+    "url": "../lang/python.md"
   },
   {
     "title": "Mosaik",
     "content": "UI system for dApps",
     "image": "../../assets/img/dev-grid/mosaik.png",
-    "url": "../../stack/mosaik/intro"
+    "url": "mosaik/intro.md"
   },
 
 
@@ -59,8 +59,8 @@ Developers can use tools to read data from the blockchain, compute using that da
   {
     "title": "JSON dApp Environment",
     "content": "",
-    "image": "/assets/img/dev-grid/json.png",
-    "url": "../../lang/json"
+    "image": "../../assets/img/dev-grid/json.png",
+    "url": "../lang/json"
   }
 
 

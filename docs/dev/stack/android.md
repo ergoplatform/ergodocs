@@ -12,19 +12,19 @@ To develop an android application you can develop with the JVM suite (Java/Kotli
     "title": "AppKit",
     "content": "A library for polyglot development of Ergo Applications",
     "image": "../../assets/img/dev-grid/jvm.png",
-    "url": "../../stack/appkit"
+    "url": "appkit.md"
   },
   {
     "title": "Mosaik",
     "content": "UI system for dApps",
     "image": "../../assets/img/dev-grid/mosaik.png",
-    "url": "../../stack/mosaik/intro"
+    "url": "mosaik/intro.md"
   },
   {
     "title": "sigma-rust",
     "content": "Android bindings are implemented in sigma-rust",
     "image": "../../assets/img/dev-grid/rust.png",
-    "url": "../../stack/sigma-rust"
+    "url": "sigma-rust.md"
   }
 ]
 
@@ -42,7 +42,7 @@ To develop an android application you can develop with the JVM suite (Java/Kotli
     "title": "Gradle",
     "content": "Getting started with Gradle to build on Android.",
     "image": "../../assets/img/dev-grid/gradle.png",
-    "url": "../../stack/appkit/gradle"
+    "url": "appkit/gradle.md"
   },
   {
     "title": "📕 DeCo Intro Lessons: Build a mobile app on Android or iOS",

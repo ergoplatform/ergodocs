@@ -7,13 +7,13 @@
     "title": "Android",
     "content": "",
     "image": "/assets/img/dev-grid/android.png",
-    "url": "../../stack/android"
+    "url": "android.md"
   },
   {
     "title": "iOS",
     "content": "",
     "image": "/assets/img/dev-grid/ios.png",
-    "url": "../../stack/iOS"
+    "url": "iOS.md"
 
   }
 ]

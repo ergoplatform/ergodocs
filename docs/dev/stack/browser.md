@@ -11,14 +11,14 @@ There are a couple of options developers can pick from to interact with the user
   {
     "title": "JS/TS",
     "content": "Frontend development with JavaScript, TypeScript",
-    "image": "/assets/img/dev-grid/js.png",
-    "url": "../../lang/js"
+    "image": "../../assets/img/dev-grid/js.png",
+    "url": "../../lang/js.md"
   },
   {
     "title": "Rust",
     "content": "Sigma Rust can be used in front-end development",
-    "image": "/assets/img/dev-grid/rust.png",
-    "url": "../../lang/rust"
+    "image": "../../assets/img/dev-grid/rust.png",
+    "url": "../../lang/rust.md"
 
   }
 ]

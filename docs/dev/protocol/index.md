@@ -15,12 +15,12 @@ Ensuring economic freedom for ordinary people through decentralized, private and
   {
     "title": "Contributing",
     "content": "Ergo operates an open model where contributions from all are welcomed. Participate in decentralised finance!",
-    "url": "../../contribute"
+    "url": "../../contribute.md"
   },
   {
     "title": "FAQ",
     "content": "Check out the Frequently Asked Questions",
-    "url": "../../faq"
+    "url": "../../faq.md"
   },
 
 
@@ -38,42 +38,42 @@ Ensuring economic freedom for ordinary people through decentralized, private and
   {
     "title": "Autolykos",
     "content": "The underlying Memory-hard ASIC-resistant **Proof of Work** (PoW) algorithm oriented towards GPUs. ",
-    "url": "../../mining/autolykos"
+    "url": "../../mining/autolykos.md"
   },
   {
     "title": "eUTXO",
     "content": "Ergo uses a so-called *extended-UTXO model*, which implies UTXOs with the ability to contain **arbitrary data and sophisticated scripts**. ",
-    "url": "eutxo"
+    "url": "eutxo.md"
   },
   {
     "title": "NIPoPoWs",
     "content": "Enable extended support of **light nodes** which makes Ergo friendly for end-users, allowing them to run contracts on common devices such as mobile phones without centralised intermediaries. ",
-    "url": "nipopows"
+    "url": "nipopows.md"
   },
   {
     "title": "Privacy",
     "content": "Ergo provides **superior access** to discrete log-based zero-knowledge proofs",
-    "url": "zkp"
+    "url": "zkp.md"
   },
   {
     "title": "Scaling",
     "content": "Explore the various scaling solutions being explored on Ergo.",
-    "url": "scaling"
+    "url": "scaling.md"
   },
   {
     "title": "Storage Rent",
     "content": "Storage Rent is a nominal fee incurred by unmoved boxes after four years.",
-    "url": "../../mining/rent"
+    "url": "../../mining/rent/index.md"
   },
   {
     "title": "ErgoScript",
     "content": "A simple high-level language enabling clear descriptions of contractual logic.",
-    "url": "../../dev/scs/ergoscript"
+    "url": "../../dev/scs/ergoscript.md"
   },
   {
     "title": "Uses Cases",
     "content": "From oracles to alternative economic systems.",
-    "url": "../../dev/scs/ergoscript"
+    "url": "../../uses/index.md"
   }
 
 

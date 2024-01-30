@@ -114,18 +114,18 @@ The Foundation is also dedicated to helping with building trustless environments
 - Creating materials to educate developers and users directly or funding their creation through third parties from within the community. 
 
 ### Marketing
-The Foundation aims to promote the adoption of Ergo. While its operations in this area are conservative, it does fund a select few roles in linear marketing for areas not currently met by the community.
+
+The Foundation aims to promote the adoption of Ergo. While its operations in this area are conservative, it does fund a select few roles in linear marketing via an editorial department for areas not currently met by the community.
 
 
-The current paid roles within marketing consist of 
+The current roles outwith development consist of 
 
-- Director,
-- Youtube Manager,
-- Editor,
-- Writers (via paid bounties),
-- Chinese Marketing Manager,
-- General Marketing Manager,
-- Branding Advisor.
+- Editorial Director
+- Youtube Manager
+- Editor
+- Writers (via paid bounties)
+- Chinese Community Manager
+- Graphics Support
 
 Their efforts ensure ample information is available about ongoing developments on Ergo via blog posts and social media, as well as the promoting and operating of various marketing events, such as Ergo Summit and ErgoHack.
 

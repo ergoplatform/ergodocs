@@ -12,12 +12,12 @@ Ergo mining is based on [Autolykos](/mining/autolykos), an ASIC-resistant Proof 
   {
     "title": "Join a pool",
     "content": "Join a pool and start mining today.",
-    "url": "setup/join"
+    "url": "setup/join.md"
   },
   {
     "title": "Solo Mining",
     "content": "Only recommended if you have 1%+ net hash",
-    "url": "setup/solo"
+    "url": "setup/solo.md"
   },
 
 ]
@@ -32,7 +32,7 @@ Ergo mining is based on [Autolykos](/mining/autolykos), an ASIC-resistant Proof 
   {
     "title": "Wallets",
     "content": "Get your wallet setup",
-    "url": "../../dev/wallets"
+    "url": "../../dev/wallets.md"
   },
   {
     "title": "Autolykos",

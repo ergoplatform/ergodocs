@@ -20,7 +20,7 @@ With the availability of Sigma.js, Fleet can play the same role for JS/TS.
   {
     "title": "Fleet",
     "content": "Lets you easily create Ergo transactions with a pure JS library.",
-    "url": "../../stack/fleet"
+    "url": "../stack/fleet"
   },
   {
     "title": "Sigma.JS",
@@ -30,12 +30,12 @@ With the availability of Sigma.js, Fleet can play the same role for JS/TS.
   {
     "title": "AppKit",
     "content": "can be configured to run JavaScript under GraalVM",
-    "url": "../../stack/appkit"
+    "url": "../stack/appkit"
   },
   {
     "title": "sigma-rust",
     "content": "Interact with a WebAssembly library using JS/TS bindings",
-    "url": "../../stack/sigma-rust"
+    "url": "../stack/sigma-rust"
   },
 
 ]
@@ -50,7 +50,7 @@ With the availability of Sigma.js, Fleet can play the same role for JS/TS.
   {
     "title": "ergo-lib-wasm-browser",
     "content": "",
-    "url": "../../stack/fleet"
+    "url": "../stack/fleet"
   },
   {
     "title": "ergo-lib-wasm-nodejs",

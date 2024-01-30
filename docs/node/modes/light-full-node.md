@@ -21,7 +21,11 @@ ergo {
     stateType = "digest"
     blocksToKeep = 1440
     mining = false
-    nipopowBootstrap = true
+    nipopow {
+           nipopowBootstrap = true
+           p2pNipopows = 2
+    }
+    
   }
 
 
