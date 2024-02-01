@@ -30,7 +30,23 @@ Sigma Protocols [(Σ-Protocols)](sigma.md) form the backbone of Ergo's smart con
 
 Ergo is committed to democratizing blockchain security. Regular users, even without running a full node, can enjoy security benefits on par with miners. Non-Interactive Proofs of Proof-of-Work [(NIPoPoWs)](nipopows.md) allow users to make and verify transactions confidently, requiring only 1 MB of data, making it feasible for any device.
 
-## Key Features of Ergo
+
+## Use Cases
+
+Ergo is not merely a token associated with a blockchain project; it represents **commodity money**. Mining new ERG requires the consumption of electricity and, eventually, the wear and tear of hardware.
+
+This concept is not innovative; the digital space already hosts numerous commodities secured by cryptography, beginning with Bitcoin. Nonetheless, the Ergo network and its cryptocurrency, ERG, stand out due to several features, many of which remain unique even 4.5 years following the launch of its mainnet:
+
+- The mining industry benefits from long-term stability incentives.
+- Ergo represents a genuine commodity, complete with [demurrage](storage-rent.md)—introducing a concept where commodities incur ledger maintenance costs without demurrage seems somewhat unconventional.
+- The network facilitates decentralized derivatives and DeFi, eliminating the need to rely on a third party for lending your ERG, converting it to stablecoins, etc.
+- Furthermore, Ergo introduces a distinct form of peer-to-peer DeFi ([SigmaFi](sigmafi.md) bonds, among others) that allows for a comprehensive understanding of risks across the entire framework, down to the existence issues of one-way functions. This level of transparency and risk management is unachievable by any financial institution or venture capital-backed project with a freeze feature.
+- Ergo offers unparalleled support for developing [cryptographic protocols](cryptographic.md) as applications, enabling features like [non-interactive mixers](mixer.md) and [stealth addresses](stealth.md).
+- As a platform for contractual money, Ergo provides an unmatched environment for leveraging cryptocurrencies in real-world applications by creating money with precisely defined trust assumptions on top of them. More information on this topic can be found at [Ergo Forum](https://www.ergoforum.org/c/community/high-level-discussions/12).
+
+Ergo has achieved significant recognition as the leading Proof of Work (PoW) cryptocurrency in terms of the percentage of supply locked in DeFi, underscoring that the aforementioned features are not theoretical but have practical applications and benefits.
+
+## Key Features
 
 - **[ErgoScript](ergoscript.md)**: This programming language sets the rules for spending currency. It's designed to support a multitude of features like ring signatures, atomic swaps, multiple currencies, and self-replicating scripts.
 - **[Sigma Protocols](/dev/scs/sigma)**: These are non-interactive zero-knowledge proofs that can be composed using basic _AND/OR_ logic.
@@ -44,6 +60,8 @@ By extending Bitcoin's contract-writing method, Ergo attaches a guard script and
 **With these features, Ergo is poised to redefine the concept of Contractual Money.**
 
 Explore the [Ecosystem](https://docs.ergoplatform.com/uses/) section for an overview of all the current and potential uses for Ergo.
+
+
 
 ## The Genesis of Ergo
 

@@ -1,3 +1,9 @@
+---
+tags:
+  - Node
+  - Reference Client
+---
+
 # The Ergo Reference Client (Node)
 
 The Ergo Node, a key part of Ergo's P2P network, hosts and syncs the entire blockchain. This page outlines Ergo Node's installation options and developer resources.
