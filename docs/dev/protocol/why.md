@@ -20,7 +20,7 @@ Ergo is the culmination of a decade of blockchain development, combining tried-a
 
 ### Strength and Security
 
-Ergo is engineered to support a wide range of dApps (decentralized applications) that can execute tasks reliably with predictable costs, ensuring the security of financial agreements. Ergo's [smart contracts](../../dev/scs) are capable of performing a wide array of tasks, and even though they can be Turing complete, their cost and successful execution can always be predicted in advance.
+Ergo is engineered to support a wide range of dApps (decentralized applications) that can execute tasks reliably with predictable costs, ensuring the security of financial agreements. Ergo's [smart contracts](../scs) are capable of performing a wide array of tasks, and even though they can be Turing complete, their cost and successful execution can always be predicted in advance.
 
 ### Intelligent and User-Friendly
 
