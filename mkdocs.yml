@@ -135,7 +135,7 @@ nav:
       - dev/protocol/scaling.md
       - Layer 0:
         - dev/protocol/scaling/layer0.md
-        - Weak Blocks: uses/sidechains/weak-blocks.md
+        - Sub Blocks: uses/sidechains/subblocks.md
       - Layer 1: dev/protocol/scaling/layer1.md
       - Layer 2: dev/protocol/scaling/layer2.md
       - Discussions:
@@ -171,10 +171,9 @@ nav:
       - contribute/standards.md
       - Chat Bridge: contribute/standards/chat-bridge.md
       - ErgoTipperBot: contribute/standards/tipbot.md
-      - Analytics: contribute/standards/analytics.md
       - KYA: contribute/standards/kya.md
       - Community Guidelines: contribute/standards/guidelines.md
-
+    - Analytics: contribute/standards/analytics.md
     - Infrastructure: 
       - Rosen Bridge:
         - eco/rosen.md
@@ -200,10 +199,10 @@ nav:
           - Cyberiad: eco/cyberaid.md
       - Sidechains: 
         - uses/sidechains.md
+        - Sub Blocks: uses/sidechains/subblocks.md
         - ErgoData: uses/ErgoData.md
         - SentientChain: uses/sentientchain.md
         - PoUW: uses/pouw.md
-        
     - Financial:
       - Stablecoins: 
         - uses/stablecoins.md
@@ -419,6 +418,7 @@ nav:
         - iOS: dev/stack/iOS.md
         - Android: dev/stack/android.md
     - Interacting with Ergo:
+      - dev/interact.md
       - Node:
         - node/install.md
         - Setup: 

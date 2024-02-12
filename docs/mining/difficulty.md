@@ -6,7 +6,6 @@
 Utilize the [Difficulty & Epoch Monitor](https://cds.oette.info/ergo_diff.htm) to predict upcoming difficulty adjustments.
 ///
 
-
 Difficulty adjustment is a core mechanism in proof-of-work cryptocurrencies like Ergo. It ensures that blocks are added to the blockchain at a stable rate, aiming for a 120-second block interval in Ergo. This feature is critical for maintaining network security and fairness. Here we explore how Ergo's Autolykos protocol has been adapted over time to offer a robust difficulty adjustment mechanism.
 
 ## Autolykos Protocol: The Foundation for Difficulty Adjustment
@@ -15,7 +14,7 @@ Ergo's difficulty adjustment is grounded in its Autolykos protocol. Initially, A
 
 ### Challenges and Vulnerabilities with the Original Difficulty Adjustment
 
-While effective, the original Autolykos algorithm. It was vulnerable to rapid changes in hash rate. For example, during periods of super-linear growth in hash rate, such as the ETH merge, the system would experience severe difficulty spikes. On the flip side, periods of low activity could result in considerable drops in difficulty.
+While effective, the original Autolykos algorithm was vulnerable to rapid changes in hash rate. For example, during periods of super-linear growth in hash rate, such as the ETH merge, the system would experience severe difficulty spikes. On the flip side, periods of low activity could result in considerable drops in difficulty.
 
 ### EIP37: Refining Autolykos for Better Responsiveness
 
@@ -23,7 +22,13 @@ To address these vulnerabilities while retaining the strengths of the Autolykos 
 
 With the adoption of EIP37, the Autolykos-based difficulty adjustment in Ergo has become more robust and adaptive. It can now better handle sudden and substantial fluctuations in the network's hash rate, making the network more secure and maintaining the 120-second block interval more consistently.
 
+### The Future of Difficulty Adjustment
 
+The need for performance statistics on the current Difficulty Adjustment Algorithm (DAA) has been expressed. Such data would allow for a comparison with other popular options in backtesting. The efforts of the development team in refining the DAA, both initially and currently, are acknowledged.
+
+It's important to note that backtesting only shows how the DAA will perform against a static adversary. However, in reality, adversaries are adaptive, and all known DAAs are essentially of the same kind. A breakthrough would involve using an adaptive algorithm, although no specific ideas are currently available in this regard.
+
+Finally, the question of whether any other DAA with the same epoch length would perform better has been raised. If not, studying the effects of a shorter epoch length could be a worthwhile topic of investigation.
 
 
 ## The Rationale Behind a 2-Minute Block Interval

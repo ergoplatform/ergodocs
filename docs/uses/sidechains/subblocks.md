@@ -1,3 +1,12 @@
+---
+tags:
+  - Subblocks
+  - Sub-blocks
+  - Weak Blocks
+  - Scaling
+---
+
+
 # Sub Blocks
 
 As of August 2023, lighter clients have seen considerable advancements with versions 5.0.12 and 5.0.13 of the reference client offering support for bootstrapping with UTXO set snapshots and NiPoPoWs. While Layer 0 (L0) optimizations continue to be a hot topic, there is an increasing demand for faster transaction confirmations.
@@ -17,7 +26,7 @@ Proof-of-Work, while not requiring additional messages for block creation, still
 
 Bitcoin-NG was initially considered in Ergo's 2017 roadmap but later abandoned due to competing proposals. The principle behind Bitcoin-NG was to use microblocks to follow an empty PoW block, which serves merely as a leader election signal. Although microblocks can improve network utilization, alternative solutions like compact blocks offer similar results. Therefore, Ergo is considering the use of "subblocks" as an alternative.
 
-## What are subBlocks?
+## What are *Sub blocks*?
 
 subblocks are essentially block candidates with lower difficulty than a regular block. For instance, if a subblock has 1/128th of a regular block's difficulty, we could expect one subblock to be generated per second on average.
 

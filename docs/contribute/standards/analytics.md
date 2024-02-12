@@ -1,19 +1,27 @@
 
 # Analytics
 
-- [ergo.watch](https://ergo.watch/)
+## On-chain Analytics
 
-### DeFiLlama
+For on-chain metrics such as P2PK count, you can refer to [ergo.watch](https://ergo.watch/).
 
-To be included on [defillama.com/chain/Ergo](https://defillama.com/chain/Ergo), you must create an adaptor. 
+### DeFiLlama Integration
 
-### Developers
+If you wish to be included on [defillama.com/chain/Ergo](https://defillama.com/chain/Ergo), it is necessary to create an adaptor.
 
-To be featured in the yearly report published by [developerreport.com](https://www.developerreport.com/ecosystems/ergo/) and the weekly-refreshed [Artemis](https://app.artemis.xyz/developer-activity?ecosystemValue=Ergo) dashboard, add your GitHub organisation or repositories to [this repository](https://github.com/electric-capital/crypto-ecosystems/blob/master/data/ecosystems/e/ergo.toml).
+### Developer Contributions
 
-<!--TODO
-### Wallet Statistics 
+To have your contributions recognized in the yearly report by [developerreport.com](https://www.developerreport.com/ecosystems/ergo/) and the weekly-updated [Artemis](https://app.artemis.xyz/developer-activity?ecosystemValue=Ergo) dashboard, please add your GitHub organization or repositories to [this repository](https://github.com/electric-capital/crypto-ecosystems/blob/master/data/ecosystems/e/ergo.toml).
 
-This graph shows the installs over time for both the Ergo Wallet (iOS/Android) and Nautilus. The Android figures are plagued with Airdrop hunters, leading to the large decreases. Focusing solely on the Nautilus/iOS stats, we can see a slow but steady rise. With the number of installs roughly doubling since January 2023. 
+### Developer Statistics
 
---!>
+- Total community developers: 350
+- Active contributors: 100
+- Monthly Active Developers: 58+
+
+### dApps/Projects Statistics
+
+- Sub-ecosystems: ~40+
+- Tradable tokens: Information can be found [here](https://sigmaverse.io/all-projects)
+- dApps in development: A dozen. A community roadmap is available [here](https://docs.google.com/spreadsheets/d/1d8bzPkZ__Ta5aFc388C7xkLiEaI-95IQcbgSRg8_wkw/edit?usp=sharing).
+

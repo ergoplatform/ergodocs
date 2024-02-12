@@ -24,33 +24,19 @@ Finally, Ergo is a self‐amendable protocol, that allows it to absorb new ideas
 
 Ergo means "therefore" in Latin but "work" in Greek. This is also a play on the fact that the cryptocurrency's design is ***ergo***nomical.
 
+### Where can I see analytics on use?
+
+[analytics](analytics.md) provides an overview of various metrics available.
+
+
 ### How does it differ from Bitcoin?
 
 Ergo is a cryptocurrency that builds upon the same UTXO model as Bitcoin but extends its functionality with additional features. Ergo allows for more complex programmability by providing access to the entire spending transaction and the block solution in the execution context. This enables the creation of Turing-complete contracts and the implementation of contractual money, where digital coins can be explicitly bound to a contract in the form of executable code.
 
-## What is contractual money?
+### What is contractual money?
 
 Contractual money is digital money that is bound to a contract in the form of executable code, which enforces specific rules and conditions for its usage. This is in contrast to traditional money, where contracts are external to the money itself and may be in the form of laws, corporate terms, or informal agreements. Contractual money allows for more precise control over how the money is spent and can be used to implement various use cases, such as microcredit systems or local exchange trading systems.
 
-
-### What is the *Ergo Foundation*?
-
-
-The [Ergo Foundation](https://ergoplatform.org/en/foundation/) is a community-driven entity focused on:
-
-  - Promoting non-breaking development of Ergo Platform protocol;
-  - Promoting the widespread adoption and use of Ergo Platform and its native token (ERG);
-  - Developing the ecosystem around Ergo;
-  - Promoting the use of Ergo Platform and blockchain technology for social good;
-  - Supporting truly decentralised infrastructure and;
-  - Supporting privacy as a basic human right.
-
-
-To fund development, promotion, events, and any other activities which may advance the platform, Ergo has in place a Treasury, which will receive **4.43%** of the Ergs released during emission. During the first two years post‐mainnet launch, the Treasury received 7.5 Ergs per block. 
-
-### What is the [Emission Schedule](https://ergoplatform.org/en/blog/2019_05_20-curve/)?
-
-Ergo has a maximum supply of **97,739,925** Ergs, to be completed by 2045. The block reward lowers to 3ERG in 2026. You can see this emission schedule on [ergo.watch](https://ergo.watch/emission)
 
 ### When was Ergo launched?
 
@@ -115,6 +101,26 @@ The code for the emission schedule can be found [here](https://github.com/ergopl
 
 
 
+
+### What is the *Ergo Foundation*?
+
+
+The [Ergo Foundation](https://ergoplatform.org/en/foundation/) is a community-driven entity focused on:
+
+  - Promoting non-breaking development of Ergo Platform protocol;
+  - Promoting the widespread adoption and use of Ergo Platform and its native token (ERG);
+  - Developing the ecosystem around Ergo;
+  - Promoting the use of Ergo Platform and blockchain technology for social good;
+  - Supporting truly decentralised infrastructure and;
+  - Supporting privacy as a basic human right.
+
+
+To fund development, promotion, events, and any other activities which may advance the platform, Ergo has in place a Treasury, which will receive **4.43%** of the Ergs released during emission. During the first two years post‐mainnet launch, the Treasury received 7.5 Ergs per block. 
+
+### What is the [Emission Schedule](https://ergoplatform.org/en/blog/2019_05_20-curve/)?
+
+Ergo has a maximum supply of **97,739,925** Ergs, to be completed by 2045. The block reward lowers to 3ERG in 2026. You can see this emission schedule on [ergo.watch](https://ergo.watch/emission)
+
 ## Discussions
 
 ### Why Scala? 
@@ -130,6 +136,21 @@ Scala has several features that set it apart from other JVM languages.
 - Despite its high-level nature, Scala can also be more efficient than similar Java code due to its ability to use primitive unboxed types, and the ability of the Scala compiler to perform code specialization. 
 - Furthermore, Scala is multi-paradigm, allowing for the combination of OOP, FP, and LP, making it suitable for a wide range of domains. 
 - Lastly, Scala3 brings even more powerful features such as metaprogramming and tools for zero-cost abstractions.
+
+### How fast is Ergo?
+
+TPS (Transactions Per Second) is not a useful metric. On Ergo Reference Node v.5, TPS is estimated to be a minimum of 47.5 tx/s. However, transactions can happen in three scaling layers or levels:
+
+- L0: Ergo Reference Nodes, which can be bootstrapped using NiPoPoWs proofs and UTXO set snapshots.
+- L1: Ergo has extensions that allow for a wide variety of scaling solutions such as Sharding, Hydra, or BitcoinNG-style macroblocks.
+- L2 (off-chain): Ergo should be compatible with the Lightning Network, Rainbow Network, and many more. The implementation here will depend on the needs of the applications being built on Ergo.
+
+The general idea is that many transactions can happen in L1 or L2 and these transactions can be bundled and settled on the L0 layer of the Ergo blockchain using a single transaction. Thanks to the high flexibility of ErgoScript programming model, many different protocols are possible, each one solving scalability problem in a specific domain (like simple payment transactions).
+Ergo blockchain can be thought as common settlement layer for many L1/L2 protocols and applications.
+
+See the [scaling](scaling.md) page for more information.
+
+## Mining
 
 ### What about energy consumption? 
 
@@ -158,20 +179,7 @@ Usually, this attack is made for profit, and massive dumping occurs on an exchan
 
 Other coins like Ethereum classic are a bad comparisons, as they shared the same mining algorithm as Eth. One could buy more than 100% of the hash rate of eth classic on NiceHash, and it's not the same case for Ergo. Ergo also believes in the 'Good Miner' principle; in the case of Bitcoin - it was a good thing 51% existed. 
 
-### How fast is Ergo?
-
-TPS (Transactions Per Second) is not a useful metric. On Ergo Reference Node v.5, TPS is estimated to be a minimum of 47.5 tx/s. However, transactions can happen in three scaling layers or levels:
-
-- L0: Ergo Reference Nodes, which can be bootstrapped using NiPoPoWs proofs and UTXO set snapshots.
-- L1: Ergo has extensions that allow for a wide variety of scaling solutions such as Sharding, Hydra, or BitcoinNG-style macroblocks.
-- L2 (off-chain): Ergo should be compatible with the Lightning Network, Rainbow Network, and many more. The implementation here will depend on the needs of the applications being built on Ergo.
-
-The general idea is that many transactions can happen in L1 or L2 and these transactions can be bundled and settled on the L0 layer of the Ergo blockchain using a single transaction. Thanks to the high flexibility of ErgoScript programming model, many different protocols are possible, each one solving scalability problem in a specific domain (like simple payment transactions).
-Ergo blockchain can be thought as common settlement layer for many L1/L2 protocols and applications.
-
-See the [scaling](scaling.md) page for more information.
-
-## How will miners be supported after emissions?
+### How will miners be supported after emissions?
 
 After the scheduled emissions conclude in 2045, miners on Ergo will continue to be incentivized through alternative methods. One such approach involves transaction fees and Miner Extracted Value (MEV). Transactions on Ergo generate fees (paid in Ergs), with a portion of these fees awarded to miners. MEV represents the total value miners can extract from a block using tactics like reordering, front-running, and other advanced techniques. Miners can increase their MEV earnings by efficiently executing transactions in high MEV blocks, which encourages them to contribute their hash power to the network.
 
@@ -184,7 +192,8 @@ Moreover, miners can operate [off-chain execution bots](dex_bots.md) on the same
 
 In summary, miners on Ergo are incentivized through transaction fees (including MEV), storage rent, custom emission contracts that reward non-native tokens as part of the FIMO (Fair Initial Mining Offering), and more.
 
-## Is Proof of Useful Work being considered?
+
+### Is Proof of Useful Work being considered?
 
 While Proof of Useful Work (PoUW) is an interesting concept, it is still in the research phase. Ergo, being open to implementing new ideas, is willing to explore PoUW. However, a radical change to Ergo's consensus mechanism that requires a hard fork would likely be beyond the scope and resources of Ergo's small core development team and limited budget.
 
