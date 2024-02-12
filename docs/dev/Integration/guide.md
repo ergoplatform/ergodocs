@@ -5,23 +5,81 @@ tags:
 
 # Ergo Platform Blockchain Integration Guide
 
-This guide is designed to assist developers in integrating the Ergo Blockchain Platform. For suggestions on improvements, please contact us at team@ergoplatform.org or join our [`#development` on Discord](https://discord.gg/kj7s7nb).
+This guide aims to provide developers with the necessary information to integrate with the Ergo Blockchain Platform. For any suggestions to improve this guide, feel free to reach out to us at team@ergoplatform.org or join our [`#development` channel on Discord](https://discord.gg/kj7s7nb).
 
 ## Getting Started
 
-Here's a brief overview of the key features of Ergo:
+Let's start with a quick rundown of Ergo's key features:
 
-* Transactions in Ergo, similar to Bitcoin, involve multiple *inputs* and *outputs*. Unspent outputs are used once, termed as **single-use entities**. Despite being built from scratch, Ergo's scripts and transaction formats differ from Bitcoin's. For more details, refer to the [Ergo 'Box' model](../data-model/box.md).
-* Ergo includes standard scripts, associated with addresses like `P2PK` addresses, similar to Bitcoin. [Learn more about the address scheme here.](/dev/wallet/address)
-* An ergo eutxo box stores [registers](registers.md) to hold arbitrary values, such as its native tokens, instead of a single amount (like BTC). Thus, each box contains an ERG amount and may include {tokenid, token amount} pairs, all following the UTXO model.
-* Ergo's built-in wallet API is sufficient for most use cases. The API uses a Swagger interface on `127.0.0.1:9053` by default in the mainnet (`9052` on the testnet).
-* A comprehensive guide on [setting up a node](install.md) and a dedicated [troubleshooting page](troubleshooting.md) are available.
+* Ergo's transactions, akin to Bitcoin, consist of multiple *inputs* and *outputs*. Unspent outputs, known as **single-use entities**, are used once. Although Ergo is built from the ground up, its scripts and transaction formats are distinct from Bitcoin's. For an in-depth understanding, refer to the [Ergo 'Box' model](../data-model/box.md).
+* Ergo incorporates standard scripts, associated with `P2PK` addresses, much like Bitcoin. [Explore more about the address scheme here.](/dev/wallet/address)
+* An Ergo UTXO box utilizes [registers](registers.md) to store arbitrary values, such as its native tokens, rather than a single amount (like BTC). Consequently, each box holds an ERG amount and may also include {tokenid, token amount} pairs, adhering to the UTXO model.
+* Ergo's inbuilt wallet API caters to most use cases. The API employs a Swagger interface and operates on `127.0.0.1:9053` by default in the mainnet (`9052` on the testnet).
+* Comprehensive guides on [node setup](install.md) and a dedicated [troubleshooting page](troubleshooting.md) are readily available for your convenience.
+## Infrastructure
 
-### Node Wallet
+### Node
 
-- **Web interface**: Access the web interface at [127.0.0.1:9053/panel](https://127.0.0.1:9053/panel) (`9052` on the testnet). 
+We recommend running your own node for optimal performance. However, if you prefer to use a public node, one is available at [213.239.193.208:9053](http://213.239.193.208:9053). If you require redundancy, don't hesitate to contact us at team@ergoplatform.org or join our group chat. You can also find a dynamic list of public nodes at [api.tokenjay.app/peers/list](https://api.tokenjay.app/peers/list).
 
-The major functionalities include:
+If you choose to run a public node, the web interface can be accessed at [127.0.0.1:9053/panel](https://127.0.0.1:9053/panel). Please note that the port changes to `9052` when operating on the testnet. 
+
+To get started on the testnet, please refer to [this page](/node/testnet).
+
+#### Exchange Specific Node Settings
+
+If you are operating an exchange [node](install.md), consider implementing the following non-default [wallet settings](conf-wallet.md):
+
+* Set [`ergo.wallet.dustLimit = 1000000`](conf-wallet.md#dust-limit). This setting causes the node wallet to disregard incoming payments (such as airdrops) of 0.001 ERG or less. This value can be adjusted as per your needs. The default value is `null`, which means the wallet accounts for all incoming payments.
+* Set [`ergo.wallet.profile`](conf-wallet.md#profile) to `exchange`. This setting enables the wallet to use larger Bloom filters, leading to more efficient scanning when the wallet has a large number of addresses.
+* Set [`ergo.wallet.tokensWhitelist`](conf-wallet.md#tokens-whitelist) to a non-null value to automatically burn airdrop tokens and similar. An example of this can be seen in the code block below.
+
+These settings can be combined to create a configuration section as shown below:
+
+```
+  ergo {
+    ...
+    wallet {
+      ...  
+
+      # boxes with value smaller than dustLimit are disregarded in wallet scan logic
+      dustLimit = 1000000
+      
+      # Whitelisted tokens, if non-null, the wallet will automatically burn non-whitelisted tokens from
+      # inputs when doing transactions.
+      # If tokensWhitelist = [], all the tokens will be burnt,
+      # tokensWhitelist = ["example"] means that all the tokens except of "example" will be burnt
+      # tokensWhitelist = null means no tokens burnt automatically
+      tokensWhitelist = [
+        # SigUSD
+        "03faf2cb329f2e90d6d23b58d91bbb6c046aa143261cc21f52fbe2824bfcbf04",
+        # SigRSV
+        "003bd19d0187117f130b62e1bcab0939929ff5c7709f843c5c4dd158949285d0"
+      ]
+      
+
+      # Wallet profile allows to say wallet what kind of load it should expect,
+      # and so spend memory on caches and Bloom filters accordingly.
+      # There are three options: user, exchange, appServer
+      # User profile is about ordinary planned usage.
+      # Exchange consumes ~20 MB of RAM for high-load ready Bloom filters
+      # AppServer is in between
+      profile = "exchange"
+    }
+  }    
+```    
+
+
+
+
+#### Node Wallet
+
+/// admonition | Swagger
+    type: tip
+Ergo node also offers a REST API that can be accessed via HTTP. The complete API specification, presented in OpenAPI format, can be found [here](openapi.md). When the node is operational, a user-friendly Swagger UI is accessible at [127.0.0.1:9053/swagger](https://127.0.0.1:9053/panel). You can also experiment with it [here](swagger_api.md). Furthermore, an optional [indexed node API](indexed-node.md) is available. 
+///
+
+The major wallet functionalities include:
 
 * Wallet creation (`/wallet/init`) and mnemonic generation
 * Wallet restoration (`/wallet/restore`) from mnemonic
@@ -31,9 +89,25 @@ The major functionalities include:
 * Checking wallet status (`/wallet/status`)
 * Deriving a new key according to EIP-3 (BIP 44 implementation for Ergo) (`/wallet/deriveNextKey`)
 * Checking wallet balance (`/wallet/balances`) for all addresses
-* Retrieving wallet transactions (`/wallet/transactions`) for all addresses 
+* Retrieving wallet transactions (`/wallet/transactions`) for all addresses
 
-### Creating an External Wallet
+
+
+### Explorer
+
+The public explorer is available at [explorer.ergoplatform.com](https://explorer.ergoplatform.com/). Community-hosted alternatives can be found at [ergexplorer.com](https://ergexplorer.com/) and [sigmaspace.io](https://sigmaspace.io/).
+
+To install the Explorer backend independently, you can utilize [*ergo-bootstrap*](https://github.com/ergoplatform/ergo-bootstrap). 
+
+For additional details, mirrors, and resources, refer to the dedicated [Explorer](explorer.md) section. 
+
+### GQL 
+
+GraphQL queries provide a flexible approach to data fetching, minimizing both over-fetching and under-fetching. The GraphQL server, built on top of the Ergo Platform's explorer database schema, is accessible at [gql.ergoplatform.com](https://gql.ergoplatform.com).
+
+The most reliable instance currently is [explore.sigmaspace.io/api/graphql](https://explore.sigmaspace.io/api/graphql).
+
+## Creating an External Wallet
 
 You can develop your wallet logic externally using one of the available libraries and the block explorer. 
 
@@ -71,9 +145,6 @@ For an exchange, you can restrict people to only withdraw to P2PK addresses and 
 
 [ergo-simple-addresses](https://github.com/kushti/ergo-simple-addresses) contains a few zero-dependencies Java-friendly utils for working with addresses.
 
-
-
-
 ### Composing transactions outside the node
 
 
@@ -89,7 +160,7 @@ It would be best if you excluded UTXOs spent in the mempool. Use the`/transactio
 https://api.ergoplatform.com/transactions/unconfirmed/byAddress/9gAE5e454UT5s3NB1625u1LynQYPS2XzzBEK4xumvSZdqnXT35M
 ```
 
-### Broadcasting transaction
+### Broadcasting transactions
 
 
 To broadcast a transaction made outside the node, the easiest way is to serialize it into `JSON`; in Java, it could be like this:
@@ -108,28 +179,6 @@ https://api.ergoplatform.com/api/v0/transactions/send*
 your private Explorer or a node with open API (`POST` to `http://{node_ip}:9053/transactions` )
 
 
-
-## Infrastructure
-
-### Node
-
-There is a public node available at [213.239.193.208:9053](http://213.239.193.208:9053). If a redundancy is needed please contact us at team@ergoplatform.org or via the established group chat for access. A dynamic list of available public nodes can be found at [api.tokenjay.app/peers/list](https://api.tokenjay.app/peers/list)
-
-### Testnet
-
-See [this page](/node/testnet) for information on the public testnets.
-
-### Explorer
-
-There is a public explorer hosted at [explorer.ergoplatform.com](https://explorer.ergoplatform.com/)
-
-You can use [*ergo-bootstrap*](https://github.com/ergoplatform/ergo-bootstrap) to easily install the Explorer backend (and not rely on public ones). 
-
-### GQL 
-
-GraphQL queries allow flexible data fetching, reducing over-fetching and under-fetching. [gql.ergoplatform.com](https://gql.ergoplatform.com) is a GraphQL server on top of Ergo Platform's explorer database schema.
-
-[explore.sigmaspace.io/api/graphql](https://explore.sigmaspace.io/api/graphql) is the most reliable instance ATM
 
 ## Troubleshooting
 
@@ -220,42 +269,32 @@ Send the following request via `/wallet/payment/send`, replacing the `tokenId` w
 ]
 ```
 
-#### Tokens with Value
 
-- SigUSD ($1): `472c3d4ecaa08fb7392ff041ee2e6af75f4a558810a74b28600549d5392810e8` 
-- SigRSV
-- ergopad
-- NETA
-- LunaDog
-- Erdoge
+### Frequently Asked Questions
 
-### FAQ
+**Can P2S and P2SH be two address formats for the same script?**
 
-**Are P2S and P2SH two address formats for the same script?**
+Yes, it is possible to create both a P2S and a P2SH address from the same script. In the case of P2S, the script is serialized directly into the address. Conversely, for P2SH, the address contains only a hash of the serialized script.
 
-It can be. So you can create a p2s and a p2sh address from the same script. In p2s, the script is serialized into the Address; in p2sh, you only have a hash of that serialized script.
+**Are there any issues with supporting address types other than P2PK?**
 
-**Will there be any problems with supporting addresses other than P2PK?**
+Supporting other address types doesn't pose a problem as long as the user is aware of what they are doing. However, it's worth noting that this is often not the case and it can introduce additional complexity. This is particularly true for P2S addresses, as you cannot validate the input size in your form.
 
-No problem if the user knows what he is doing, which is not true in many cases. It also adds more complexity. Especially for p2s Addresses since you cannot validate the input size in your form. 
+**How are ergoTree and address related in terms of conversions?**
 
-**ergoTree<->address related conversions**
+When using the appkit, the `Address.create()` function accepts an address string as an argument. You can then obtain the ergoTree from the object that this function returns.
 
-When you use appkit, Address.create() takes the address string. You can get the ergotree from the resulting object.
+**Why do some transactions appear not to pay fees?**
 
-**Some transactions don't seem to pay fees?**
+While fees are not a mandatory part of the core protocol, transactions without them will not be propagated around the network by default.
 
-Fees are not part of the core protocol, but if you miss them, the transaction will not be propagated around the network by default.
+**What algorithm is used to generate a boxid?**
 
-**What is the generation algorithm of boxid?**
+The boxid is generated by hashing the contents of the box.
 
-It is a hash of the box contents.
+[Refer to the code in AppKit for more details](https://github.com/ergoplatform/ergo-appkit/blob/9e19c13d82966eaee59433d16c4fb987bea363a7/lib-impl/src/main/java/org/ergoplatform/appkit/impl/OutBoxBuilderImpl.scala#L66)
 
-[See the code in AppKit](https://github.com/ergoplatform/ergo-appkit/blob/9e19c13d82966eaee59433d16c4fb987bea363a7/lib-impl/src/main/java/org/ergoplatform/appkit/impl/OutBoxBuilderImpl.scala#L66)
-
-Bytes are unique as the box contains
+The bytes of a box are unique because they contain:
 - The `id` of the parent transaction, 
-- the output position in the transaction
-- a unique transaction id. 
-
-
+- The output position in the transaction,
+- A unique transaction id. 
