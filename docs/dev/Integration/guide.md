@@ -33,6 +33,54 @@ The major functionalities include:
 * Checking wallet balance (`/wallet/balances`) for all addresses
 * Retrieving wallet transactions (`/wallet/transactions`) for all addresses 
 
+#### Node Settings
+
+If you are running a node to serve needs of an exchange, please consider following non-default settings for your node:
+
+* set `ergo.wallet.dustLimit = 1000000`, and then node wallet will skip spammy incoming payments (airdrops etc) with amount of 0.001 ERG or less.
+The value can be change per your needs. Default value is `null`, so the wallet is accounting any incoming payments.
+
+* set `ergo.wallet.profile` to `exchange` value, and then wallet will use bigger Bloom filters (means more efficient scanning when the wallet has
+many addresses)
+
+* set `ergo.wallet.tokensWhitelist` to non-null value to burn airdrop tokens etc. An example can be found below.
+
+
+* combining, we can get config section like:
+
+```
+  ergo {
+    ...
+    wallet {
+      ...  
+
+      # boxes with value smaller than dustLimit are disregarded in wallet scan logic
+      dustLimit = 1000000
+      
+      # Whitelisted tokens, if non-null, the wallet will automatically burn non-whitelisted tokens from
+      # inputs when doing transactions.
+      # If tokensWhitelist = [], all the tokens will be burnt,
+      # tokensWhitelist = ["example"] means that all the tokens except of "example" will be burnt
+      # tokensWhitelist = null means no tokens burnt automatically
+      tokensWhitelist = [
+        # SigUSD
+        "03faf2cb329f2e90d6d23b58d91bbb6c046aa143261cc21f52fbe2824bfcbf04",
+        # SigRSV
+        "003bd19d0187117f130b62e1bcab0939929ff5c7709f843c5c4dd158949285d0"
+      ]
+      
+
+      # Wallet profile allows to say wallet what kind of load it should expect,
+      # and so spend memory on caches and Bloom filters accordingly.
+      # There are three options: user, exchange, appServer
+      # User profile is about ordinary planned usage.
+      # Exchange consumes ~20 MB of RAM for high-load ready Bloom filters
+      # AppServer is in between
+      profile = "exchange"
+    }
+  }    
+```    
+
 ### Creating an External Wallet
 
 You can develop your wallet logic externally using one of the available libraries and the block explorer. 
