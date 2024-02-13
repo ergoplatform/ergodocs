@@ -269,6 +269,7 @@ Send the following request via `/wallet/payment/send`, replacing the `tokenId` w
 ]
 ```
 
+There is no central database where tokens are registered currently, your best bet is to use community resources like [supported tokens in the ergotipper bot](https://github.com/Luivatra/ergotipper-tokens) and [spectrum-finance/ergo-token-list](https://github.com/spectrum-finance/ergo-token-list).
 
 ### Frequently Asked Questions
 

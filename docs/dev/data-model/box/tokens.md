@@ -26,6 +26,9 @@ This means that tokens in Ergo are not just metadata attached to transactions, b
 - For programmatic token minting, refer to this guide: [Minting a Token with Fleet SDK](https://fleet-sdk.github.io/docs/transaction-building#step-4-2-mint-a-token)
 ///
 
+
+There is no central database where tokens are registered currently, your best bet is to use community resources like [supported tokens in the ergotipper bot](https://github.com/Luivatra/ergotipper-tokens) and [spectrum-finance/ergo-token-list](https://github.com/spectrum-finance/ergo-token-list).
+
 ## Token Storage
 
 - Tokens are stored in a special [register](registers.md) `R2` of a [box](box.md) in the form of (tokenId -> amount) pairs.
