@@ -206,6 +206,14 @@ Most repositories are also categories on [grist](https://ergo.getgrist.com/jf9KP
 - [**dApp Connector**](dApp.md) is for connecting dApps to web-based wallets like Nautilus and SAFEW. 
 - [**Proxy Contracts**](proxy.md) are a smart contract design used in blockchain ecosystems to enable secure and controlled interaction between users and decentralized applications. 
 
+##### **Librarie**
+
+- [ergo-lib-go](https://github.com/ergoplatform/ergo-lib-go): Go wrapper around C bindings for ErgoLib from sigma-rust
+- [ergo-lib-wasm](https://github.com/ergoplatform/ergo-lib-wasm): ergo-lib bindings for JS/TS
+- [ergo_client](https://github.com/ross-weir/ergo_client):	Rust library containing HTTP clients for various Ergo applications
+- [sigma-builders](https://github.com/GuapSwap/sigma-builders): Easy to use library for creating protocol abstractions interacting with Ergo blockchain.
+
+
 ##### Templates
 
 
@@ -251,6 +259,7 @@ The Account model of Ethereum is imperative. This means that the typical task of
 
 ##### Experimenting
 
+- **[escript.online](https://escript.online/)**
 - **[PlutoMonkey](plutomonkey.md)**: Compile any ErgoScript contract into a P2S. Check out these [simple examples](p2s.md).
 - **[Scastie](scastie.md)**: An online compiler tailored for Scala, perfect for developers eager to experiment, share, or learn Scala.
 - **[Kiosk](/dev/stack/kiosk)**: A web-based UI to explore ErgoScript.
@@ -264,24 +273,23 @@ The Account model of Ethereum is imperative. This means that the typical task of
 - **[ErgoScala](ergoscala.md)**: A compiler for Ergo smart contracts written in ErgoScala (a subset of Scala).
 - **[CLI Compiler](compiler.md)**: A Command Line Interface tool to compile ErgoScript code into an Ergo address.
 - **[FlowCards](flowcards.md)**: A declarative framework for developing Ergo dApps.
-
-##### **Librarie**
-
-- [ergo-lib-go](https://github.com/ergoplatform/ergo-lib-go): Go wrapper around C bindings for ErgoLib from sigma-rust
-- [ergo-lib-wasm](https://github.com/ergoplatform/ergo-lib-wasm): ergo-lib bindings for JS/TS
-- [ergo_client](https://github.com/ross-weir/ergo_client):	Rust library containing HTTP clients for various Ergo applications
-- [sigma-builders](https://github.com/GuapSwap/sigma-builders): Easy to use library for creating protocol abstractions interacting with Ergo blockchain.
+- **[ergo-playgrounds](https://github.com/ergoplatform/ergo-playgrounds)**: Run contracts + off-chain code in the browser
+- **[ergo-script-re](https://github.com/ross-weir/ergo-script-re/tree/main)**: Libraries for Ergo Script reverse engineering and analysis
 
 ##### **Courses**
 
 - [ErgoScript 101 Crash Course](https://docs.google.com/presentation/d/10gYO82z_7qloRrFOcCxTFuzpP40IImPyIKMV2ZFd9M4/edit#slide=id.p) (Slides)
 - [Learn ErgoScript By Example Via The Ergo Playground with Robert Kornacki (Video)](https://www.youtube.com/watch?v=8l2v1asHgyA)
+- [DeCo-Education/ErgoScript-Developer-Course](https://github.com/DeCo-Education/ErgoScript-Developer-Course)
 
 ##### **Tutorials**
 
 - [ErgoScript by Example Repository](https://github.com/ergoplatform/ergoscript-by-example)
 - [Testing Ergo Contracts Off-chain](https://github.com/anon-real/contract-testing)
 - [Debugging ErgoScript](debugging.md)
+- [ergo-playground](https://github.com/jaysee260/ergo-playground): A collection of miscellaneous scenarios implemented on the Ergo blockchain.
+
+
 
 ##### **Boilerplate**
 
