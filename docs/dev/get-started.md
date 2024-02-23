@@ -5,7 +5,6 @@
 This comprehensive guide is designed to provide an overview of our platform and introduce you to the various resources available for developers. Whether you're a seasoned blockchain developer or just starting out, this guide will help you navigate the Ergo ecosystem and understand its key features and functionalities.
 ///
 
-
 ### **Connect with Our Community**
 If you encounter any issues or have questions, feel free to connect with us on any of the following platforms. All our chat platforms are bridged, ensuring seamless communication:
 
@@ -49,7 +48,7 @@ Ergo is a revolutionary platform that establishes the foundation for a new wave 
 ##### **Documentation & Reports**
 
 - **[Foundational Papers](documents.md)**: Explore the academic and technical papers that laid the groundwork for Ergo.
-- **[EF Transparency Report (2022)](ergo-foundation-2022.md)**: Gain insights into Ergo Foundation's operations and transparency initiatives.
+- **[EF Transparency Report](ergo-foundation.md)**: Gain insights into Ergo Foundation's operations and transparency initiatives.
 - **[Ergo's Social Contract](social_contract.md)**: Delve into the principles and commitments that guide Ergo's community and development.
 - **[Howey Test Analysis](security.md)**: Understand how Ergo measures up against the Howey Test for securities.
 
@@ -76,22 +75,6 @@ Ergo is a revolutionary platform that establishes the foundation for a new wave 
 ]
 
 ::/cards::
-
-#### **Ergo Community Resources**
-
-##### **Analytics & Insights**
-
-- **[Ergo Watch](https://ergo.watch/)**: Dive into on-chain analytics and data.
-
-##### **Community Knowledge Base**
-
-- **[Ergonaut Space](https://ergonaut.space/)**: Discover Ergo's community-driven wiki, filled with insights and information.
-
-##### **Explore the Ecosystem!**
-
-- **[Sigmaverse.io](https://sigmaverse.io/)**: Explore a diverse range of dApps built on Ergo.
-- **[ErgCube](https://ergcube.com/)**: Another platform to discover and interact with Ergo dApps.
-- The [**Ecosystem**](../uses/index.md) section on this site acts as directory for projects building on Ergo and potential future ideas.
 
 
 ## **Understanding Ergo**
@@ -138,6 +121,7 @@ Here are some introductory resources that cover these concepts.
 
 
 ## **Ergo Infrastructure**
+
 
 ##### **Ergo Node & Network**
 
@@ -187,10 +171,14 @@ Here are some introductory resources that cover these concepts.
 
 ## App development
 
-
 Developers have a plethora of tools, libraries, SDKs, frameworks, and utilities at their disposal to seamlessly interact with the blockchain, craft applications, and present them to users. Navigate through the [Developer Section](start.md) to use grid buttons that help refine your technical stack requirements and pinpoint the ideal tooling.
 
+
 If you're aiming to develop a comprehensive decentralized application on Ergo, consider the following SDKs and frameworks tailored to your specific needs:
+
+/// admonition | As a spreadsheet!
+Most repositories are also categories on [grist](https://ergo.getgrist.com/jf9KPR1HUDJH/Project-Management). This is a great place to start if you're looking for a specific repository or want to see what's currently being worked on.
+///
 
 ##### **Primary SDKs**
 
@@ -271,11 +259,18 @@ The Account model of Ethereum is imperative. This means that the typical task of
 
 ##### **Tooling**
 
+- **[Ergo Development Generics Elements](https://github.com/Ergo-Lend/edge)**
 - **[VSCode ErgoScript Language Support](https://github.com/GuapSwap/vscode-ergoscript-language-support)**
 - **[ErgoScala](ergoscala.md)**: A compiler for Ergo smart contracts written in ErgoScala (a subset of Scala).
 - **[CLI Compiler](compiler.md)**: A Command Line Interface tool to compile ErgoScript code into an Ergo address.
 - **[FlowCards](flowcards.md)**: A declarative framework for developing Ergo dApps.
 
+##### **Librarie**
+
+- [ergo-lib-go](https://github.com/ergoplatform/ergo-lib-go): Go wrapper around C bindings for ErgoLib from sigma-rust
+- [ergo-lib-wasm](https://github.com/ergoplatform/ergo-lib-wasm): ergo-lib bindings for JS/TS
+- [ergo_client](https://github.com/ross-weir/ergo_client):	Rust library containing HTTP clients for various Ergo applications
+- [sigma-builders](https://github.com/GuapSwap/sigma-builders): Easy to use library for creating protocol abstractions interacting with Ergo blockchain.
 
 ##### **Courses**
 
@@ -287,6 +282,13 @@ The Account model of Ethereum is imperative. This means that the typical task of
 - [ErgoScript by Example Repository](https://github.com/ergoplatform/ergoscript-by-example)
 - [Testing Ergo Contracts Off-chain](https://github.com/anon-real/contract-testing)
 - [Debugging ErgoScript](debugging.md)
+
+##### **Boilerplate**
+
+- [scala-play-next-ergo](https://github.com/kii-dot/scala-play-next-ergo)
+- [ergo-scala-skeleton-app](https://github.com/dav009/ergo-scala-skeleton-app)
+- [The Ergo Web Template](https://github.com/SavonarolaLabs/ergo-web-template), serves as an introductory guide for individuals new to Ergo. This resource aims to streamline the onboarding process for newcomers by offering them a hands-on experience with essential Ergo functionalities.
+- [Ergo-play-boilerplate](https://github.com/kii-dot/ergo-play-boilerplate)
 
 
 ##### **Advanced Tutorials**
@@ -340,14 +342,28 @@ See [this page](/dev/scs/global-functions/#cryptographic-functions) for a descri
 
 - **[Scrypto](scrypto.md)** is a comprehensively built open-source cryptographic toolkit, specifically engineered to simplify and safeguard the process of integrating cryptography into your applications. Supporting AVL+ Trees and Batch Merkle Proof Serialization and Deserialization. 
 
-### AVL Trees
+### AVL Trees (Plasma)
 
-**[AVL trees](avl.md)** are highly efficient authenticated data structures natively supported in Ergo. These trees offer several benefits, including the ability to authenticate data properties without accessing the entire dataset. Developers can seamlessly integrate AVL trees into their Ergo applications using the **[GetBlok Plasma library](plasma.md)**.
+**[AVL trees](avl.md)** are highly efficient authenticated data structures natively supported in Ergo. These trees offer several benefits, including the ability to authenticate data properties without accessing the entire dataset. Developers can seamlessly integrate AVL trees into their Ergo applications using one of the **[Plasma](plasma.md)** libraries.
 
 ### Multi-Stage Protocols
 
-
-
 Multi-Stage Contracts is a technique wherein using transaction trees we can emulate persistent storage in UTXO-based systems by linking several UTXOs containing small pieces of code to form a large [multi-stage protocol](multi.md). This enables *on-chain computations*, making it possible to process parallelised actions on top of smart contracts and construct **Turing-complete** applications.
 
+
+## **Ergo Community Resources**
+
+##### **Analytics & Insights**
+
+- **[Ergo Watch](https://ergo.watch/)**: Dive into on-chain analytics and data.
+
+##### **Community Knowledge Base**
+
+- **[Ergonaut Space](https://ergonaut.space/)**: Discover Ergo's community-driven wiki, filled with insights and information.
+
+##### **Explore the Ecosystem!**
+
+- **[Sigmaverse.io](https://sigmaverse.io/)**: Explore a diverse range of dApps built on Ergo.
+- **[ErgCube](https://ergcube.com/)**: Another platform to discover and interact with Ergo dApps.
+- The [**Ecosystem**](../uses/index.md) section on this site acts as directory for projects building on Ergo and potential future ideas.
 
