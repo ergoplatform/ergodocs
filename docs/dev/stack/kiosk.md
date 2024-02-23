@@ -1,4 +1,12 @@
 <!-- TODO: Check if this is still the most up to date info -->
+
+/// admonition | Archive
+    type: warning
+
+The Kiosk repository has been archived by the owner on May 26, 2022. It is now read-only.
+///
+
+
 # ErgoScript Playground with KioskWeb
 
 [KioskWeb](https://github.com/scalahub/KioskWeb), built on top of the [Kiosk](https://github.com/scalahub/Kiosk) project, offers a user-friendly web interface to interact with ErgoScript. It allows you to perform the following actions:

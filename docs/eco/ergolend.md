@@ -3,72 +3,47 @@ tags:
   - dApp-Beta
 ---
 
-# EXLE
+# EXLE (Ergo-Lend)
 
-[EXLE](https://exle.io/) is a lending solution being built on the Ergo Blockchain to reach those that most need DeFi.
+[EXLE](https://exle.io/) is enhancing financial access globally through its decentralized finance (DeFi) initiatives on the Ergo Blockchain. By targeting those typically excluded by traditional banking institutions, EXLE employs blockchain technology to create a global lending platform, governed transparently by a decentralized autonomous organization (DAO). Stay connected with EXLE through [Telegram](https://t.me/ErgoLend) and [Twitter](https://twitter.com/ErgoLend) for updates and community engagement.
 
-EXLE is a new paradigm for lending. The goal is to leverage blockchain technology to create a global lending platform. A decentralized autonomous organization (DAO) will manage the platform.
+/// details | Beta
+    {type: info, open: true}
+EXLE 2.0 is currently in private beta. Key developments include:
+- Peer-to-peer (P2P) lending: Completed
+- Crowdloans backend: Completed
+- Website redesign to integrate crowdloans feature: In progress
 
-Checkout the EXLE (Ergo-Lend) [litepaper](https://ergopad-pdfs.s3.us-west-2.amazonaws.com/ergo-lend-lite-paper-en.pdf).
+For more details, view the [EXLE 2.0 Project Proposal](https://t.me/ErgoLend/7785).
+///
 
-## Community Links
-- [EXLE website](https://www.ergolend.org/)
-- [Telegram](https://t.me/ErgoLend)
-- [Twitter](https://twitter.com/ErgoLend)
-- [Reddit](https://www.reddit.com/r/ergolend/)
 
------
+## Streamlining Microfinance in Kenya
 
-> The following is copied from the [EXLE project page](https://www.ergopad.io/projects/ergolend) on ergopad, where you can find more info regarding EXLE token roadmap, tokenomics, and distribution.
+EXLE is committed to using blockchain for social impact, as seen in its work in Kenya. Through peer-to-peer, uncollateralized loan projects, EXLE bridges the gap between lenders and borrowers in underserved areas. The shift from informal to structured, zero-interest loans under EXLE contracts, funded through raffles ([Exle P2P Microfinance Initiative](https://ergoraffle.com/raffle/show/dfe947631c9b669a8aaeea1fcc25c175104891e5e6dad8279a9daa1ab548f77d) and [Interest-Free Loans to a Kenyan Cooperative](https://ergoraffle.com/raffle/show/f3d8d94c2af7a9bc7ea8615cc4bacb827960a60392d0264944b3638bce1c8ff9)), showcases the potential of blockchain in microfinance.
 
-## Description
+In 2022, EXLE, in collaboration with the WEQNT Cardano Stake Pool, has made significant strides in increasing micro loan accessibility in Kenya, launching in Kakuma County and gaining government certification. This certification allows WEQNT and EXLE to legally issue microcredit and crypto-based loans, providing local businesses with fair and competitive loan options. This access to micro loans fosters the growth of new businesses and promotes social and economic engagement in the region.
 
-Ergo-Lend will be a person-to-person (P2P) lending platform with easy to use tools to borrow and lend money. The goals of the platform are to:
-1. Form a democratic, global lending and borrowing community.
-2. Provide a platform for unique investment opportunities.
-3. Lower loan financing costs through a global pool of lenders.
-4. Use blockchain technology to automate loan underwriting and improve access to loans.
+- [Introducing the first Micro-Credit Cooperative in Northern Kenyawith - lowest interest rates - WEQNT](https://www.youtube.com/watch?v=eA7iAvlKG2Y&t=3s)
 
-These are achievable goals. Borrowers will have more borrowing options and better rates. Lenders will have the opportunity to make direct loans, like a bank, and make better returns.
+### GoodThingsDAO
 
-## The Unbanked
+The GoodThingsDAO hasn't fully formed until it started in Paideia. Donors from both raffles will receive DAO membership tokens. The funds raised in both auctions are expected to be repaid by the borrowers who took the interest-free loans. The DAO will decide which loans to fund and plan future fundraisers. Currently, the process is facilitated through a Christian missionary cooperative in Kenya.
 
-The central problem of modern finance is it does not provide small loans at reasonable rates. Behemoth banks are unable to lend to everyone. Those they do not serve are sometimes described as “the unbanked”.
+Loan requests are made through an intake process on EXLE.
 
-This limit is a function of how banks operate. Every loan has underwriting costs, financing costs and carries a risk of default. These are all costs paid for by the borrower in interest.
+## Addressing Financial Exclusion
 
-These costs create minimal loan requirements. Below a certain level, a bank does not make a return on the loan. As a result, banks will not offer loans below this level.
+The core mission of EXLE is to address the challenges faced by the unbanked, offering solutions to the limitations imposed by traditional financial institutions. By focusing on reducing loan costs, including underwriting and financing expenses, EXLE aims to make financial services more accessible. This approach not only benefits borrowers with more options and better rates but also provides lenders with opportunities to make direct, impactful loans.
 
-## Loan Costs & Viability
+## Innovating with Blockchain
 
-Underwriting costs include the overhead of offices and underwriters. They include many fees. The application process takes a long time and is inefficient.
+EXLE leverages blockchain technology to automate loan processes and create a global pool of lenders, significantly reducing the cost and accessibility barriers associated with traditional loans. This innovation enables loans to be as accessible as an app on a cell phone, reaching individuals regardless of their location. The platform's design eliminates the need for physical bank branches, extensive legal frameworks, and the traditional banking infrastructure, making smaller loans viable for a broader audience.
 
-The costs of financing a loan are often dictated by the discount rates of national central banks. The central bank of Kenya benchmark rate has been between 7–18% over the past decade. In the United States, over the same period, the Federal Reserve offered benchmark rates between 0.25–2.5%.
+## Building a Community-Driven Platform
 
-Reducing these costs would make more loans viable.
+The foundation of EXLE's approach is the creation of a democratic lending and borrowing community, guided by the principles outlined in The Ergo Manifesto. The platform aims to foster a community DAO that will provide social underwriting for borrowers and decide on the development and financial products of the platform. This community-driven approach is aimed at ensuring fairer access to loans, thereby creating new economic relationships and opportunities.
 
-## The Opportunity
+## The Future of Lending with Ergo-Lend
 
-A global blockchain platform can level the playing field. Smart contracts can automate much of the loan process. And, a global pool of lenders can reduce the cost to finance loans.
-
-Blockchain technology, combined with cell phones, can reach people where they are. A loan is as close as an app on a cell phone, whether you are in a city or in a village. With this model, bank branches, mainframes and lawyers are not required.
-
-Without less overhead, it is possible to make smaller loans, to more people. The challenge is: how do you create a new lending infrastructure based on blockchains?
-
-With lower costs and better financing, the main loan risk is of borrower default. The answer to this problem is a combination of technology and community. Ergo-Lend will help create new financial tools and foster a community DAO.
-
-The Ergo-Lend DAO will decide the best way to provide social underwriting for borrowers. It will also decide the future development and financial products of the platform.
-
-## Transformative Lending
-
-Ergo-Lend is an attempt to bring the values outlined in The Ergo Manifesto to lending. Ergo’s creators have a vision: “… the tools of a cryptocurrency should allow people to do economic activity whatever the business size, geographic location, or interest rates set by big players.”
-
-A democratic lending community is a significant step toward this vision. Democratic access to financial services is worth investing in. Greater and fairer access to loans will create new economic relationships and opportunities. It is a clear example of where good values can also bring good investment returns.
-
-## The Ergo-Lend Approach
-
-The Ergo-Lend team has the technical and entrepreneurial capabilities to deliver. They are working with organizations on the ground in Kenya and Nigeria. Together, they will launch pilot projects. These will help develop the Ergo-Lend platform in real world environments. Then, these projects will be models for extending the platform to other communities around the world.
-
-## Conclusion
-
-Democratizing finance has enormous potential to transform the way we save and loan money. “The unbanked” are an untapped and underserved market. By reducing the costs of modern banking, more people can take advantage of financial services. Blockchains, smart contracts and community DAOs can reduce loan costs. By doing so, they can reshape the credit landscape: not just for the unbanked, but for everyone.
+With ongoing projects in Kenya and plans for expansion into other regions, EXLE is positioned to redefine the landscape of lending. By developing real-world pilot projects and leveraging the technical and entrepreneurial capabilities of the Ergo-Lend team, EXLE is not just providing immediate financial solutions but also laying the groundwork for sustainable economic empowerment. The platform's goal is to transform lending through blockchain technology, making it more inclusive, efficient, and accessible to all, thereby embodying the vision of democratic access to financial services.

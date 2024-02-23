@@ -40,7 +40,9 @@ $$
 
 This page defines a binary format used to store ErgoTree contracts in persistent stores, transfer them over the wire, and enable cross-platform interoperation.
 
-The terms of the [language](ergotree-lang.md) can be serialized to an array of bytes to be stored in the Ergo blockchain (e.g., **Box.propositionBytes**).
+## Overview
+
+The terms of the [language](ergotree-lang.md) can be serialized into an array of bytes for storage in the Ergo blockchain (e.g., **Box.propositionBytes**).
 
 When the guarding script of an input box of a transaction is validated, the **propositionBytes** array is deserialized to an **ErgoTree IR** (represented by the **ErgoTree** class), which can be [evaluated](evaluation.md).
 
@@ -48,7 +50,7 @@ The serialization procedure is specified in general terms. The serialization for
 
 Table 1 shows size limits checked during contract deserialization, which is important to resist malicious script attacks.
 
-## Table 1: Serialization limits
+### Table 1: Serialization limits
 
 | Constant | Value | Description |
 |---|---|---|
@@ -62,7 +64,7 @@ Table 1 shows size limits checked during contract deserialization, which is impo
 
 All the serialization formats used and defined throughout this section are listed in Table 2, which introduces a name for each format and shows the number of bytes each format may occupy in the byte stream.
 
-## Table 2: Serialization formats
+### Table 2: Serialization formats
 
 |   Format          | #bytes          | Description |
 |---|---|---|
@@ -102,7 +104,7 @@ Each slot specifies a fragment of the serialized stream of bytes, whereas operat
 
 The notation is summarized in Table 3.
 
-## Table 3: Serialization Notation
+### Table 3: Serialization Notation
 
 |   Notation   | Description |
 |---|---|

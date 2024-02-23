@@ -227,11 +227,7 @@ nav:
         - uses/lending.md
         - duckpools: eco/duckpools.md
         - EXLE: eco/ergolend.md
-        - Micro Credit: dev/scs/microcredit.md
-        - Mutual Credit: uses/mutual_credit.md
-      - Bonds:
         - SigmaFi: eco/sigmafi.md
-        - Bonding Curve: uses/bonding.md
       - Derivatives:
         - uses/deriv.md
         - Tensile: eco/tensile.md
@@ -248,7 +244,9 @@ nav:
       - Further Ideas:
         - Prediction Markets: uses/prediction_markets.md
         - Insurance: uses/insurance.md
-        
+        - Micro Credit: dev/scs/microcredit.md
+        - Mutual Credit: uses/mutual_credit.md
+        - Bonding Curve: uses/bonding.md
         - Tokens:
           - ICOs: uses/ergo-ico.md
           - Index Coins: uses/index_coins.md
