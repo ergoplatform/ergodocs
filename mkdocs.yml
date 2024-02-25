@@ -230,10 +230,8 @@ nav:
         - SigmaFi: eco/sigmafi.md
       - Derivatives:
         - uses/deriv.md
+        - SigmaO: eco/sigmao.md
         - Tensile: eco/tensile.md
-        - Options: 
-          - uses/options.md
-          - SigmaO: eco/sigmao.md
       - CrowdFunding: 
         - uses/crowdfunding.md
         - ErgoRaffle: eco/ergoraffle.md

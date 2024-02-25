@@ -278,9 +278,12 @@ The Account model of Ethereum is imperative. This means that the typical task of
 
 ##### **Courses**
 
-- [ErgoScript 101 Crash Course](https://docs.google.com/presentation/d/10gYO82z_7qloRrFOcCxTFuzpP40IImPyIKMV2ZFd9M4/edit#slide=id.p) (Slides)
-- [Learn ErgoScript By Example Via The Ergo Playground with Robert Kornacki (Video)](https://www.youtube.com/watch?v=8l2v1asHgyA)
-- [DeCo-Education/ErgoScript-Developer-Course](https://github.com/DeCo-Education/ErgoScript-Developer-Course)
+If you're interested in deepening your understanding of ErgoScript and the Ergo ecosystem, consider taking one of the following courses:
+
+- [DeCo Education: Into the Woods](https://deco-education.github.io/deco-docs/docs/category/into-the-woods): This course provides a comprehensive introduction to the Ergo ecosystem.
+- [ErgoScript 101 Crash Course](https://docs.google.com/presentation/d/10gYO82z_7qloRrFOcCxTFuzpP40IImPyIKMV2ZFd9M4/edit#slide=id.p) (Slides): A crash course that covers the basics of ErgoScript, perfect for beginners.
+- [Learn ErgoScript By Example Via The Ergo Playground with Robert Kornacki (Video)](https://www.youtube.com/watch?v=8l2v1asHgyA): This video tutorial offers practical examples of how to use ErgoScript in the Ergo Playground.
+- [DeCo-Education/ErgoScript-Developer-Course](https://github.com/DeCo-Education/ErgoScript-Developer-Course): A more advanced course for developers looking to build on their ErgoScript knowledge.
 
 ##### **Tutorials**
 
@@ -288,8 +291,6 @@ The Account model of Ethereum is imperative. This means that the typical task of
 - [Testing Ergo Contracts Off-chain](https://github.com/anon-real/contract-testing)
 - [Debugging ErgoScript](debugging.md)
 - [ergo-playground](https://github.com/jaysee260/ergo-playground): A collection of miscellaneous scenarios implemented on the Ergo blockchain.
-
-
 
 ##### **Boilerplate**
 
@@ -323,8 +324,6 @@ When combined with a blockchain, these composable proofs enable very powerful us
 
 
 ##### **Crypto Primitives**
-
-
 
 - **Hash**: `Sha256`, `Blake2b256`
 - **Encoding**: `Base58`
