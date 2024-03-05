@@ -245,7 +245,7 @@ Ergo is designed to support sharding with its unique architecture. Ergo blocks h
 
 
 
-## EIPs
+## [EIPs](eip.md)
 
 ### What is Ergo's approach to Forking?
 

@@ -15,3 +15,7 @@ Here are some of the EIPs that have been proposed and implemented:
 - [EIP-0027: Emission Retargeting Soft-Fork](eip27.md): This EIP proposes an amendment to the emission schedule to ensure the long-term sustainability of the mining protocol.
 
 To gain a better understanding of the structure and formatting of EIPs, we encourage you to review the existing [EIPs](https://github.com/ergoplatform/eips). This will provide you with a clear picture of the expectations and standards associated with EIPs.
+
+## Hardfork Wishlist
+
+- [Why does the limitation of 1 new token per transaction exist?](https://github.com/ergoplatform/ergo/issues/2013)

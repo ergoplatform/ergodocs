@@ -67,6 +67,6 @@ An exception to the rule of weak preservation *(the total amount in inputs shoul
 - [Ergo Token Minter](https://thierrym1212.github.io/tokenminter/index.html) or [CYTI](https://thierrym1212.github.io/cyti/index.html) which uses a Use CYTI minable smart contract to choose your token ID.
 - [ergoutils.org](https://ergoutils.org/#/token)
 - [Video Tutorial](https://www.youtube.com/watch?v=I3R6_PceM1k)
-
+- [Why does the limitation of 1 new token per transaction exist?](https://github.com/ergoplatform/ergo/issues/2013)
 
 

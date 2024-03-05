@@ -27,6 +27,12 @@ There are also indirect limits:
 
 A transaction can create *out-of-thin-air* tokens in its outputs if the token identifier is equal to the identifier of the first input box of the transaction.
 
+/// admonition | Info
+[Why does the limitation of 1 new token per transaction exist?](https://github.com/ergoplatform/ergo/issues/2013)
+///
+
+
+
 - As the box identifier is cryptographically unique, there is no chance of having the second token with the same identifier while the hash function is collision-resistant.
 - This rule also means that only one new token per transaction can be created.
 - Unlike ergs, other tokens can be burnt: the total amount for a token in transaction inputs should be no less than the amount of the outputs.
