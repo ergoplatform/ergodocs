@@ -11,36 +11,44 @@ Read the [draft whitepaper](../assets/pdf/dexy.pdf) for more details.
 
 ## DexyGold
 
-The first implementation of Dexy will be **DexyGold**, which aims to maintain a peg to the USD/XAU (gold) price using the v2 [oracle pool](oracles.md).
+The first implementation of Dexy will be **DexyGold**, which aims to maintain a peg to the USD/XAU (gold) price using a [XAU / ERG](https://explorer.ergoplatform.com/en/oracle-pool-state/xauerg) v2 [oracle pool](oracles.md).
+
+/// details | Beta
+    {type: info, open: true}
+- [LP UI](https://dexy.interface-ggd.pages.dev/)
+- [Bank UI](https://dexy-test.dexygold.com/)
+- [Testnet Nautilus (required):](https://github.com/nautls/nautilus-wallet/releases/tag/v0.9.2)
+- Testnet ERG is available via [the faucet](https://testnet.ergofaucet.org/)
+///
 
 ## Design Overview
 
 The Dexy design incorporates the following key components and mechanisms:
 
 1. **Emission (Minting) Contract**: 
-   - Allows one-way minting of new Dexy tokens by selling ERG at the oracle pool rate.
-   - Reverse swaps (selling Dexy for ERG) are not possible through this contract.
+    - Allows one-way minting of new Dexy tokens by selling ERG at the oracle pool rate.
+    - Reverse swaps (selling Dexy for ERG) are not possible through this contract.
 
 2. **Liquidity Pool (LP)**:
-   - Facilitates buying and selling of Dexy tokens using ERG.
-   - Utilizes Uniswap V2 logic with modifications based on the oracle pool rate.
-   - Prevents LP token redemptions when the oracle rate is significantly below (e.g., 90%) the LP rate.
+    - Facilitates buying and selling of Dexy tokens using ERG.
+    - Utilizes Uniswap V2 logic with modifications based on the oracle pool rate.
+    - Prevents LP token redemptions when the oracle rate is significantly below (e.g., 90%) the LP rate.
 
 3. **Arbitrage Mechanism**:
-   - When the oracle rate is higher than the LP rate, arbitrageurs can mint Dexy from the emission contract and sell to the LP for a profit.
-   - This helps push the Dexy price towards the peg.
+    - When the oracle rate is higher than the LP rate, arbitrageurs can mint Dexy from the emission contract and sell to the LP for a profit.
+    - This helps push the Dexy price towards the peg.
 
 4. **Top-up Swaps**:
-   - When the oracle rate is lower than the LP rate, ERG from the emission contract can be used to buy Dexy from the LP, pushing the price back up.
-   - Controlled by a swapping contract that monitors the oracle and LP rates.
-   - Uses a "cross-tracker" in the LP to record when the oracle rate falls below the LP rate.
-   - Swaps are only allowed if the oracle rate remains below the LP rate for a minimum number of blocks (e.g., 50).
+    - When the oracle rate is lower than the LP rate, ERG from the emission contract can be used to buy Dexy from the LP, pushing the price back up.
+    - Controlled by a swapping contract that monitors the oracle and LP rates.
+    - Uses a "cross-tracker" in the LP to record when the oracle rate falls below the LP rate.
+    - Swaps are only allowed if the oracle rate remains below the LP rate for a minimum number of blocks (e.g., 50).
 
 5. **Anti-Draining Measures**:
-   - To prevent cyclic draining of the emission contract through alternating arbitrage and top-up swaps, one or more of the following can be implemented:
-     - Locking minted Dexy tokens for a certain period.
-     - Locking ERG in the emission contract for a certain period.
-     - Disabling minting when it is profitable based on the current rates.
+    - To prevent cyclic draining of the emission contract through alternating arbitrage and top-up swaps, one or more of the following can be implemented:
+      - Locking minted Dexy tokens for a certain period.
+      - Locking ERG in the emission contract for a certain period.
+      - Disabling minting when it is profitable based on the current rates.
 
 ## Potential Vulnerabilities and Considerations
 
@@ -53,12 +61,6 @@ The Dexy design incorporates the following key components and mechanisms:
 - **Modeling and Simulation**: Thorough modeling of the economic incentives, game theory, and attack scenarios would provide valuable insights into the system's stability and resilience.
 
 - **Iteration and Monitoring**: Starting with DexyGold allows for iterative refinement before potentially moving to a USD-pegged version. Close monitoring of the system's performance under various market conditions is crucial.
-
-Dexy Public Testing Data:
-
-- LP UI: https://dexy.interface-ggd.pages.dev/
-- Bank UI: https://dexy-test.dexygold.com/
-- Testnet Nautilus (required): https://github.com/nautls/nautilus-wallet/releases/tag/v0.9.2
 
 ## Terra Comparison and Collateralization
 
