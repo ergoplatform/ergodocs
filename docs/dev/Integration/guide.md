@@ -11,23 +11,21 @@ This guide provides developers with the necessary information to integrate with 
 - Ergo's transactions consist of multiple *inputs* and *outputs*, similar to Bitcoin. Unspent outputs, known as **single-use entities**, are used once. Although built from the ground up, Ergo's scripts and transaction formats differ from Bitcoin's. For an in-depth understanding, refer to the [Ergo 'Box' model](../data-model/box.md).
 - Ergo incorporates standard scripts, associated with `P2PK` addresses, much like Bitcoin. [Explore more about the address scheme here](/dev/wallet/address).
 - An Ergo UTXO box utilizes [registers](registers.md) to store arbitrary values, such as native tokens, rather than a single amount (like BTC). Each box holds an ERG amount and may include {tokenid, token amount} pairs, adhering to the UTXO model.
-- The precision of each transaction on the Ergo platform is up to 10^-9 ERG. This means that transactions can be made with a precision of up to 0.000000001 ERG.
 - Ergo's built-in wallet API caters to most use cases. The API employs a Swagger interface and operates on `127.0.0.1:9053` by default in the mainnet (`9052` on the testnet).
-- Comprehensive guides on [node setup](install.md) and a dedicated [troubleshooting page](troubleshooting.md) are readily available.
+- The precision of each transaction on the Ergo platform is up to $10^{-9}$ ERG. This means that transactions can be made with a precision of up to 0.000000001 ERG.
+- The average interval time of each block on the Ergo blockchain is approximately 2 minutes.
 
 ## Infrastructure
 
 ### Node
 
-We recommend running your own node for optimal performance. However, a public node is available at [213.239.193.208:9053](http://213.239.193.208:9053). For redundancy, contact us at team@ergoplatform.org or join our group chat. A dynamic list of public nodes can be found at [api.tokenjay.app/peers/list](https://api.tokenjay.app/peers/list).
+For the best performance, we advise you to run your own node. If that's not feasible, you can use a public node available at [213.239.193.208:9053](http://213.239.193.208:9053). For backup options, feel free to reach out to us at team@ergoplatform.org or join our group chat. You can also find a dynamic list of public nodes at [api.tokenjay.app/peers/list](https://api.tokenjay.app/peers/list).
 
-When running a public node, access the web interface at [127.0.0.1:9053/panel](https://127.0.0.1:9053/panel). Note that the port changes to `9052` on the testnet. To get started on the testnet, refer to [this page](/node/testnet).
+If you choose to run a public node, you can access the web interface at [127.0.0.1:9053/panel](https://127.0.0.1:9053/panel). Please note that the port switches to `9052` on the testnet. For guidance on getting started with the testnet, please refer to [this page](/node/testnet).
 
-The average interval time of each block on the Ergo blockchain is approximately 2 minutes.
+Running an Ergo node requires a certain amount of disk space, which depends on factors like the size of the blockchain and the number of transactions. We recommend having at least 100 GB of disk space to ensure seamless operation.
 
-The required disk size for running an Ergo node depends on various factors such as the size of the blockchain and the number of transactions. It is recommended to have a disk size of at least 100 GB to ensure smooth operation.
-
-You can bootstrap a pruned node using a verified UTXO set snapshot and NiPoPoWs.
+For a more efficient setup, you can bootstrap a [pruned node using a verified UTXO set snapshot and NiPoPoWs](pruned-full-node.md).
 
 #### Exchange Specific Node Settings
 
@@ -91,13 +89,17 @@ Major wallet functionalities include:
 - Checking wallet balance (`/wallet/balances`) for all addresses
 - Retrieving wallet transactions (`/wallet/transactions`) for all addresses
 
+##### RPC Documention
+
+- [Overview](https://docs.ergoplatform.com/node/swagger/)
+- [API Spec](https://docs.ergoplatform.com/node/swagger/openapi/)
+- [Indexed Node](https://docs.ergoplatform.com/node/indexed-node/)
+
 ### Explorer
 
 The public explorer is available at [explorer.ergoplatform.com](https://explorer.ergoplatform.com/). Community-hosted alternatives include [ergexplorer.com](https://ergexplorer.com/) and [sigmaspace.io](https://sigmaspace.io/).
 
-To install the Explorer backend independently, use [*ergo-bootstrap*](https://github.com/ergoplatform/ergo-bootstrap). 
-
-For additional details, mirrors, and resources, refer to the dedicated [Explorer](explorer.md) section. 
+For more information, including additional details, toolkits, mirrors, and more, please visit the dedicated [Explorer](explorer.md) section.
 
 ### GQL 
 
@@ -140,13 +142,13 @@ curl -X GET "http://localhost:9053/wallet/deriveNextKey" -H  "accept: applicatio
 
 ### Address Validation
 
-For exchanges, restrict withdrawals to P2PK addresses and invalidate other types. Supporting other types is not recommended. See [address.md] for more information on address types. 
+For exchanges, restrict withdrawals to P2PK addresses and invalidate other types. Supporting other types is not recommended. See [address](address.md) for more information on address types.
 
 [ergo-simple-addresses](https://github.com/kushti/ergo-simple-addresses) contains Java-friendly utils for working with addresses.
 
 ### Composing Transactions Outside the Node
 
-Get unspent UTXOs for an address using the `transactions/boxes/byAddress/unspent` Explorer API method: 
+Get unspent UTXOs for an address using the `transactions/boxes/byAddress/unspent` Explorer API method:
 
 ```bash
 https://api.ergoplatform.com/transactions/boxes/byAddress/unspent/9gAE5e454UT5s3NB1625u1LynQYPS2XzzBEK4xumvSZdqnXT35M 
@@ -176,6 +178,22 @@ https://api.ergoplatform.com/api/v0/transactions/send*
 Or to your private Explorer or a node with open API (`POST` to `http://{node_ip}:9053/transactions`)
 
 ## Troubleshooting
+
+### **Determining Failed Transactions in UTXO Mode:**
+
+**Malformed transactions:**
+
+Simple transactions should produce an explicit error when signing and/or broadcasting such as:
+
+> Failed to sign boxes due to Estimated execution cost 1001580 exceeds the limit 1000000: Vector(ErgoBox(0275eb3a125bc02fe997cb98c0de8131bd9b2e4617110d
+
+This error can occur due to too many inputs collected in a transaction for dusty wallets.
+
+https://docs.ergoplatform.com/dev/Integration/guide/#dust-collection
+
+**Valid RBF transactions:**
+Dropped transactions will be removed from the mempool, this can be checked with the /transactions/unconfirmed/{txId} endpoint
+
 
 ### Dust Collection
 
@@ -294,16 +312,19 @@ A box's bytes are unique because they contain:
 - address = prefix byte || content bytes || checksum
 - Prefix byte = network type + address type
 - checksum = leftmost_4_bytes (blake2b256 (prefix byte || content bytes))
-- For more information, refer to the [Address Types documentation](https://docs.ergoplatform.com/dev/wallet/address/address_types/).
+- For more information, refer to the [Address Types](https://docs.ergoplatform.com/dev/wallet/address/address_types/) page.
 
 **Preventive Measures to Avoid Chain Forking:**
 
-- Ergo's view is that disruptive hard forks should be avoided in Ergo unless absolutely critical. Ergo implements various measures to prevent hard forks, such as pushing complexity to the application layer and enabling many things to be implemented via soft-forks.
-- If a supermajority (90%+) of the network accepts a new feature, it is activated; however, old nodes that do not upgrade continue to operate normally and skip over this feature validation.
-- Velvet-Fork: Only requires a minority of nodes to upgrade. Introduced by the NiPoPoW paper, the key idea is that you can use the scheme even if only some blocks in the chain include the interlink structure and allows for "gradual deployment" without harming the miners that haven't upgraded to the new rules. In this way, it acts similar to a soft fork in that clients that upgrade to new rules are still compatible with those that don't.
-- Soft-fork's require some nodes to upgrade. The recent re-emission Soft-Fork EIP37 was possible as it's enforced on miner nodes only via protocol rules. These can be approved with 90% support from miners.
-- Hard-Fork Requires all nodes to upgrade.
-- For more information, refer to the [Ergo Improvement Proposals (EIPs)](https://github.com/ergoplatform/eips).
+Ergo's view is that disruptive hard forks should be avoided in Ergo unless absolutely critical. Ergo implements various measures to prevent hard forks, such as pushing complexity to the application layer and enabling many things to be implemented via soft-forks.
+
+If a supermajority (90%+) of the network accepts a new feature, it is activated; however, old nodes that do not upgrade continue to operate normally and skip over this feature validation.
+
+- **Velvet-Fork**: Only requires a minority of nodes to upgrade. Introduced by the NiPoPoW paper, the key idea is that you can use the scheme even if only some blocks in the chain include the interlink structure and allows for "gradual deployment" without harming the miners that haven't upgraded to the new rules. In this way, it acts similar to a soft fork in that clients that upgrade to new rules are still compatible with those that don't.
+- **Soft-fork:** Requires some nodes to upgrade. The recent re-emission Soft-Fork EIP37 was possible as it's enforced on miner nodes only via protocol rules. These can be approved with 90% support from miners.
+- **Hard-Fork:** Requires all nodes to upgrade.
+
+For more information, refer to the [Ergo Improvement Proposals (EIPs)](https://github.com/ergoplatform/eips).
 
 **51% Attack Prevention:**
 
@@ -323,3 +344,5 @@ Wallet nodes do not necessarily need to expose their ports, although you can do 
 Ergo does not require adding your node's IP to a whitelist for synchronization.
 
 This comprehensive guide should provide exchanges and developers with the necessary information to integrate with the Ergo platform smoothly. It covers key features, infrastructure setup, wallet creation, troubleshooting, and addresses common concerns such as chain forking prevention, 51% attack mitigation, and storage rent. If you have any further questions or need assistance, please don't hesitate to reach out to the Ergo team or join the community discussions on Discord.
+
+
