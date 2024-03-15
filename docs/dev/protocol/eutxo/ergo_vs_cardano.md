@@ -1,11 +1,22 @@
-/// warning | DRAFT
-     {type: info, open: true}
+
+/// details | DRAFT
+     {type: warning, open: true}
 This document is a work in progress and may contain inaccuracies.
 ///
 
 # Comparing Ergo and Cardano's eUTXO Models
 
 Ergo and Cardano are two prominent blockchain platforms that have successfully implemented the extended UTXO (eUTXO) model. Despite their differences, both platforms leverage the eUTXO model to provide native asset support and distributed states for decentralized applications (dApps), among other features. This article aims to elucidate the key differences between Ergo and Cardano's eUTXO models.
+
+## History
+
+Ergo, a pioneering blockchain platform, was founded by Alex Chepurnoy (known as "kushti") and Dmitry Meshakov, two respected figures in the decentralized technology space. Alex's expertise, gained from working on projects like NXT and smart-contract.com, before his 'ScoreX' project caught the attention of IOG (Input Output Global), the company behind Cardano and he was hired as Research Fellow and Team Scorex Manager.
+
+However, driven by a shared vision to innovate, Alex and Dmitry decided to pursue an independent path, leaving IOG to create Ergo. They aimed to combine the strengths of the extended UTXO (eUTXO) model with the robustness of Proof-of-Work (PoW).
+
+Central to Ergo's ethos is a fair launch, ensuring a balanced token distribution and preventing wealth concentration. This commitment to fairness has resonated within the Ergo community.
+
+Leveraging their technical expertise, Alex and Dmitry have positioned Ergo at the forefront of innovation by integrating eUTXO with PoW as well as several other novel innovations. This unique framework enables the development of secure, scalable, and efficient decentralized applications.
 
 ## Programming Languages and Data Storage
 
@@ -29,6 +40,12 @@ Here's a comparison of ErgoScript and Plutus (Cardano's smart contract language)
 Both Ergo and Cardano's models support non-fungible assets and complex types of representation on the blockchain.
 
 After compilation, both ErgoScript and Plutus contracts output a JSON representation. For Ergo, this JSON could include the ErgoTree, compile-time constants, and compiler version. Having a standardized JSON output allows transactions to interact with the compiled contracts seamlessly.
+
+Here's an improved version of the text:
+
+For a tangible example, please refer to this [ErgoScript contract](https://gist.github.com/mgpai22/638dcd9efdec5f74113a476175c7ee74) that has been ported to the [Winter Cardano Contracts](https://github.com/zenGate-Global/winter-cardano-contracts) framework.
+
+In this example, the original ErgoScript contract has been adapted to work with the Cardano Contracts framework. The ported contract demonstrates how the logic and functionality of an ErgoScript contract can be translated to the Cardano ecosystem using the Winter framework. This allows developers to leverage their existing knowledge of ErgoScript and apply it to building smart contracts on Cardano.
 
 ## Token Minting Policies on Ergo and Cardano
 
@@ -74,11 +91,12 @@ Although ErgoScript is not inherently Turing complete, Turing completeness can b
 
 This organization of transactions enables developers to create more complex and flexible smart contracts on Ergo, similar to those written in Cardano's Plutus language. However, this method requires more manual construction of transaction structures and may not be as intuitive as using a Turing-complete language like Plutus.
 
-Ergo's transaction validation uses the ErgoLikeStateContext trait and [ErgoLikeStateContext](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/sdk/shared/src/main/scala/org/ergoplatform/sdk/wallet/protocol/context/ErgoLikeStateContext.scala) case class to represent the blockchain context. The sigmaLastHeaders method provides information about the previous blocks, while the previousStateDigest method provides the UTXO set digest from the last header. The sigmaPreHeader method provides information about the current block being validated.
+Ergo's transaction validation uses the *ErgoLikeStateContext* trait and [ErgoLikeStateContext](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/sdk/shared/src/main/scala/org/ergoplatform/sdk/wallet/protocol/context/ErgoLikeStateContext.scala) case class to represent the blockchain context. The sigmaLastHeaders method provides information about the previous blocks, while the previousStateDigest method provides the UTXO set digest from the last header. The sigmaPreHeader method provides information about the current block being validated.
 
 In contrast, Cardano uses Plutus, a Turing-complete, higher-order functional programming language subset of Haskell, designed specifically for smart contracts. While ErgoScript focuses on the transactional model and guarding propositions for coins, Plutus provides a more general-purpose language for writing smart contracts.
 
 For more information, refer to these foundational papers:
+
 - [Improving authenticated dynamic dictionaries, with applications to cryptocurrencies](https://eprint.iacr.org/2016/994.pdf)
 - [Self-reproducing Coins as Universal Turing Machine](https://arxiv.org/pdf/1806.10116)
 - [Multi-stage Contracts in the UTXO Model](https://ergoplatform.org/docs/paper_26.pdf)
@@ -97,11 +115,11 @@ Ergo's Sigma Protocols enable the implementation of sophisticated tasks that wou
 Spending UTXOs is at the core of the extended UTXO smart contract model, and all execution happens when a UTXO is spent. However, having to spend every single UTXO which you wish to read data from has several drawbacks:
 
 - The smart contract of the UTXO with the data must execute, thereby increasing computation complexity/cost.
-- The UTXO must be spent, meaning only one tx can use the UTXO data per block/slot.
-- Tx fees increase due to needless excess execution & recreation of the output data UTXO.
+- The UTXO must be spent, meaning only one transaction can use the UTXO data per block/slot.
+- Transaction fees increase due to needless excess execution & recreation of the output data UTXO.
 - Every UTXO which wishes to allow read access through spending must encode the logic directly within their smart contract.
 - It is liable to spam attacks by bad actors who wish to wreak havoc on a protocol.
-- Increased off-chain complexity in tx creation & finding the latest UTXO.
+- Increased off-chain complexity in transaction creation & finding the latest UTXO.
 
 To address these issues, the core Ergo developers, Alexander Slesarenko, Alex Chepurnoy, and Dmitry Meshkov, introduced the concept of "*read-only inputs*". These allow any transaction to reference any other box(UTXO) currently in the UTXO set and read the data without any problems listed in the previous section.
 
@@ -117,13 +135,9 @@ Cardano introduced reference inputs in the Vasil Hardfork, enabling functionalit
 
 Ergo and Cardano are pioneers in implementing the extended UTXO (eUTXO) model and have collaborated to advance research and development in this area through the eUTXO Alliance. Cardano's implementation of data inputs is just one example of how we can work together.
 
-One notable development between the Ergo and Cardano communities is the Rosen Bridge, currently in beta testing. This bridge enables the transfer of wrapped ADA tokens from Cardano to Ergo and vice versa, promoting interoperability and collaboration between the platforms and their communities. Cardano users can access the DeFi ecosystem on Ergo with this bridge using wrapped ADA or native ADA tokens.
+One notable development between the Ergo and Cardano communities is [Rosen Bridge](rosen.md), which is currently live. This bridge enables the transfer of wrapped ADA tokens from Cardano to Ergo and vice versa, promoting interoperability and collaboration between the platforms and their communities. Cardano users can now access the DeFi ecosystem on Ergo with this bridge using wrapped ADA or native ADA tokens.
 
 Moreover, ErgoMixer, as the only token mixer in the space, enables users to mix wrapped ADA and other native tokens, such as wrapped HOSKY. After mixing the tokens in ErgoMixer, users can bridge them back to Cardano. These native tokens can be used in SigmaFi, SigmaO, or any budding dApps available on sigmaverse.io.
-
-Through these collaborations and developments, Ergo and Cardano can enhance their respective platforms, promote interoperability, and advance the adoption of the eUTXO model in the blockchain community.
-
-One notable difference between the two ecosystems is the allocation of resources. Cardano, with its larger community and Catalyst funding, tends to have more developers working on specific problems and creating fleshed-out tooling. In contrast, Ergo's smaller developer community may focus on specific solutions rather than generic ones. However, Ergo developers would appreciate features like deserialize/serialize types in ErgoScript, especially for composite types (structs of other types), to make contracts cleaner and more readable.
 
 ## Conclusion
 
