@@ -10,7 +10,7 @@ Ergo and Cardano are two prominent blockchain platforms that have successfully i
 
 ## History
 
-Ergo, a pioneering blockchain platform, was founded by Alex Chepurnoy (known as "kushti") and Dmitry Meshakov, two respected figures in the decentralized technology space. Alex's expertise, gained from working on projects like NXT and smart-contract.com, before his 'ScoreX' project caught the attention of IOG (Input Output Global), the company behind Cardano and he was hired as Research Fellow and Team Scorex Manager.
+Ergo was founded by Alex Chepurnoy (known as "kushti") and Dmitry Meshakov, two respected figures in the decentralized technology space. Alex's expertise, gained from working on projects like NXT and smart-contract.com, before his 'ScoreX' project caught the attention of IOG (Input Output Global), the company behind Cardano and he was hired as Research Fellow and Team Scorex Manager.
 
 However, driven by a shared vision to innovate, Alex and Dmitry decided to pursue an independent path, leaving IOG to create Ergo. They aimed to combine the strengths of the extended UTXO (eUTXO) model with the robustness of Proof-of-Work (PoW).
 
@@ -40,8 +40,6 @@ Here's a comparison of ErgoScript and Plutus (Cardano's smart contract language)
 Both Ergo and Cardano's models support non-fungible assets and complex types of representation on the blockchain.
 
 After compilation, both ErgoScript and Plutus contracts output a JSON representation. For Ergo, this JSON could include the ErgoTree, compile-time constants, and compiler version. Having a standardized JSON output allows transactions to interact with the compiled contracts seamlessly.
-
-Here's an improved version of the text:
 
 For a tangible example, please refer to this [ErgoScript contract](https://gist.github.com/mgpai22/638dcd9efdec5f74113a476175c7ee74) that has been ported to the [Winter Cardano Contracts](https://github.com/zenGate-Global/winter-cardano-contracts) framework.
 
