@@ -1,6 +1,7 @@
 ---
 tags:
   - Tutorial
+  - Integration
 ---
 # Ergo Platform Blockchain Integration Guide
 

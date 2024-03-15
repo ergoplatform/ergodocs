@@ -28,7 +28,7 @@ The Foundation aims to promote the adoption of Ergo. While its operations in thi
 
 The current paid roles within marketing consist of 
 
-- Manager,
+- Editorial & Events Manager,
 - Youtube Manager,
 - Editor,
 - Writers (via paid bounties),

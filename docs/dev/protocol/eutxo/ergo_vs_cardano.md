@@ -1,77 +1,70 @@
-# Comparing Ergo and Cardano's eUTXO Models
+/// warning | DRAFT
+     {type: info, open: true}
+This document is a work in progress and may contain inaccuracies.
+///
 
-> This document is a work in progress and may contain inaccuracies.
+# Comparing Ergo and Cardano's eUTXO Models
 
 Ergo and Cardano are two prominent blockchain platforms that have successfully implemented the extended UTXO (eUTXO) model. Despite their differences, both platforms leverage the eUTXO model to provide native asset support and distributed states for decentralized applications (dApps), among other features. This article aims to elucidate the key differences between Ergo and Cardano's eUTXO models.
 
-
 ## Programming Languages and Data Storage
 
-Ergo employs a language known as [ErgoScript](ergoscript.md), which draws inspiration from [Scala](scala.md). Conversely, Cardano uses a language named Plutus, which is inspired by Haskell. Ergo stores data in [registers](registers.md), while Cardano uses "datum" for data storage. Despite these differences, both platforms allocate a space within the UTXO to maintain the state of decentralised applications (dApps). Cardano employs a two-layer architecture, utilizing Plutus for smart contracts and Marlowe for financial contracts.
+Ergo employs a language known as [ErgoScript](ergoscript.md), which draws inspiration from [Scala](scala.md). Conversely, Cardano uses a language named Plutus, which is inspired by Haskell. Ergo stores data in [registers](registers.md), while Cardano uses *"datum"* for data storage. Despite these differences, both platforms allocate a space within the UTXO to maintain the state of decentralised applications (dApps). Cardano employs a two-layer architecture, utilizing Plutus for smart contracts and Marlowe for financial contracts.
 
 ErgoScript, the scripting language of Ergo, facilitates the development of complex smart contracts and advanced features. Cardano's Plutus language is also robust and powerful, but in some cases, certain complex functionalities may necessitate the incorporation of supplementary components or alternative approaches to implementation.
 
-Here's a comparison of ErgoScript and Plutus (Cardano's smart contract language)
+Here's a comparison of ErgoScript and Plutus (Cardano's smart contract language):
 
- Feature | ErgoScript (Ergo) | Plutus (Cardano) |
------------------------------|---------------------------|---------------------------|
- Language design | Based on Scorex framework, influenced by Scala | Based on Haskell |
- Strongly typed | Yes | Yes |
- First-class functions | Yes | Yes |
- Higher-order functions | Yes | Yes |
- Rich data structures | Registers, boxes | Datum, UTXO |
- Zero-knowledge proofs | Supported | Planned for future development |
- Complex authentication schemes | Supported | Supported |
- Transaction Trees | Supported | Not Supported |
+| Feature                         | ErgoScript (Ergo)                                   | Plutus (Cardano)                  |
+|---------------------------------|-----------------------------------------------------|-----------------------------------|
+| Language design                 | Based on Scorex framework, influenced by Scala      | Based on Haskell                  |
+| Strongly typed                  | Yes                                                 | Yes                               |
+| First-class functions           | Yes                                                 | Yes                               |
+| Higher-order functions          | Yes                                                 | Yes                               |
+| Rich data structures            | Registers, boxes                                    | Datum, UTXO                       |
+| Zero-knowledge proofs           | Supported                                           | Planned for future development    |
+| Complex authentication schemes  | Supported                                           | Supported                         |
+| Transaction Trees               | Supported                                           | Not Supported                     |
 
 Both Ergo and Cardano's models support non-fungible assets and complex types of representation on the blockchain.
+
+After compilation, both ErgoScript and Plutus contracts output a JSON representation. For Ergo, this JSON could include the ErgoTree, compile-time constants, and compiler version. Having a standardized JSON output allows transactions to interact with the compiled contracts seamlessly.
 
 ## Token Minting Policies on Ergo and Cardano
 
 Minting, the process of creating new tokens on a blockchain network, is a critical feature that enables the creation of native assets, such as NFTs. Both Ergo and Cardano offer native asset support through their respective eUTXO models, but their approach to minting and issuing tokens varies.
 
 
-### Native Tokens on Ergo
+## Native Tokens on Ergo
 
-Ergo's token issuance is standardized through [EIP4](eip4.md).
+Ergo's token issuance is standardized through [EIP4](eip4.md). In Ergo, tokens are stored in the `R2` [register](registers.md) of a [box](box.md).
 
-In Ergo, tokens are stored in the `R2` [register](registers.md) of a [box](box.md). 
-
- Register | Value |
----|---|
- R0 | Value (in nanoErgs as Base58) |
- R1 | Protection script (Smart Contract) |
- R2 | Assets (tokens) |
- R3 | Creation details |
- R4-R9 | Available for custom use |
-
+| Register | Value                               |
+|----------|-------------------------------------|
+| R0       | Value (in nanoErgs as Base58)      |
+| R1       | Protection script (Smart Contract) |
+| R2       | Assets (tokens)                    |
+| R3       | Creation details                   |
+| R4-R9    | Available for custom use           |
 
 Each box can hold multiple tokens, represented as pairs of `tokenId` and `amount`. A single box can hold up to 255 secondary tokens. However, there are some constraints to consider:
 
-- The size of a box cannot exceed 4 kilobytes, ensuring efficient storage and processing of token-related data.
-- The presence of tokens increases the computational cost of a transaction, as additional calculations are required to handle the token-related operations.
+- The size of a box cannot exceed 4 kilobytes to ensure efficient storage and processing of token-related data.
+- The presence of tokens increases the computational cost of a transaction due to additional calculations required for token-related operations.
 
-Ergo's NFT minting policy is defined by the [Ergo Improvement Proposal (EIP) 0024](eip24.md), which offers two design versions for artwork issuance: V1 and V2. 
+Ergo's NFT minting policy is defined by the [Ergo Improvement Proposal (EIP) 0024](eip24.md), which offers two design versions for artwork issuance: V1 and V2.
 
-<!-- Ergo's minting policy is versatile and supports a broad range of token attributes, making it suitable for complex assets such as NFTs. Developers can create custom policies to define the conditions and rules for creating and managing tokens, including NFTs with various attributes and properties. Ergo's minting policy also supports off-chain data input, which can trigger conditions for transactions to be executed or prevent them from being included in blocks. 
+## Native Tokens on Cardano
 
-In V1, the issuer box includes an Int representing 1000 times the royalty percentage of the artwork and the proposition bytes representing the contract to which the royalty percentage will be sent. V1 primarily focuses on handling royalties for the artist or proxy contract.
+Native tokens on Cardano allow for the transacting of multiple assets, including ada and custom tokens, without the need for smart contracts. This feature extends the accounting infrastructure to accommodate various assets. Native tokens are different from non-native tokens that require smart contracts.
 
-In V2, the issuer box contains more attributes, such as the artwork standard version, royalty recipients and their respective percentages, artwork traits (Properties, Levels, and Stats), the token ID of the collection, and additional information, such as explicit content. V2 offers more flexibility and features, such as handling multiple royalty recipients and detailed artwork traits. Ergo's minting policy also supports off-chain data input, which can trigger conditions for transactions to be executed or prevent them from being included in blocks.
+Assets on Cardano are uniquely identified by an asset ID, consisting of a policy ID and asset name. Tokens with the same asset ID are fungible. Ada is the principal currency for fees and rewards, while native tokens can be used for payments and transactions.
 
-In terms of tangible examples, Ergo's minting policy allows for more complex NFTs with a wider range of attributes and detailed artwork traits. For instance, NFTs with dynamic or changing attributes could be created using Ergo's minting policy, which is not currently possible on Cardano. -->
+Cardano's minting policy uniquely identifies each native asset with a permanent policy ID, which originates from the policy script. The policy script further defines other attributes, such as the asset's name and amount/value. Since asset names are not unique, Cardano NFTs must be identified by the policy ID, which can be publicly available to distinguish fraudulent/duplicate NFTs from the original tokens.
 
-### Native Tokens on Cardano 
+A minimum ada value is required to transfer native tokens between addresses. Token bundles organize tokens and are the standard way to represent assets on Cardano.
 
-Native tokens on Cardano allow for the transacting of multiple assets, including ada and custom tokens, without the need for smart contracts. This feature extends the accounting infrastructure to accommodate various assets. Native tokens are different from non-native tokens that require smart contracts. Assets on Cardano are uniquely identified by an asset ID, consisting of a policy ID and asset name, and tokens with the same asset ID are fungible. Ada is the principal currency for fees and rewards, while native tokens can be used for payments and transactions.
-
-Cardano's minting policy uniquely identifies each native asset with a permanent policy ID, which originates from the policy script. The policy script further defines other attributes, such as the asset's name and amount/value. Since asset names are not unique, Cardano NFTs must be identified by the policy ID, which can be publicly available to distinguish fraudulent/duplicate NFTs from the original tokens. 
-
-
-The minimum ada value is required to transfer native tokens between addresses. Token bundles organize tokens and are the standard way to represent assets on Cardano. Minting policies specify the rules for creating and burning tokens, and each asset has a permanent association with a minting policy. The native token lifecycle involves minting, issuing, using, redeeming, and burning tokens, with various actors involved, such as asset controllers, token issuers, and token holders. Tokens can also be reissued by token holders acting as reissuers for trading or liquidity purposes.
-
-
-
+Minting policies specify the rules for creating and burning tokens, and each asset has a permanent association with a minting policy. The native token lifecycle involves minting, issuing, using, redeeming, and burning tokens, with various actors involved, such as asset controllers, token issuers, and token holders. Tokens can also be reissued by token holders acting as reissuers for trading or liquidity purposes.
 
 ## Global State Management
 
@@ -86,15 +79,14 @@ Ergo's transaction validation uses the ErgoLikeStateContext trait and [ErgoLikeS
 In contrast, Cardano uses Plutus, a Turing-complete, higher-order functional programming language subset of Haskell, designed specifically for smart contracts. While ErgoScript focuses on the transactional model and guarding propositions for coins, Plutus provides a more general-purpose language for writing smart contracts.
 
 For more information, refer to these foundational papers:
-
 - [Improving authenticated dynamic dictionaries, with applications to cryptocurrencies](https://eprint.iacr.org/2016/994.pdf)
 - [Self-reproducing Coins as Universal Turing Machine](https://arxiv.org/pdf/1806.10116)
 - [Multi-stage Contracts in the UTXO Model](https://ergoplatform.org/docs/paper_26.pdf)
 - [EDRAX: A Cryptocurrency with Stateless Transaction Validation](https://eprint.iacr.org/2018/968.pdf)
 
-
 ## Privacy Features
-Both Ergo and Cardano prioritize security and privacy in their designs. Ergo's cryptographic design incorporates [Sigma protocols](sigma.md), providing extensive access to discrete log-based zero-knowledge proofs, offering potential advantages in privacy and security. Zero-knowledge proofs are cryptographic techniques that enable a prover to demonstrate the truth of a statement to a verifier without revealing any additional information. In the context of blockchain technology, zero-knowledge proofs can enhance privacy and security by allowing transactions and smart contracts to be executed without disclosing sensitive data.
+
+Ergo's cryptographic design incorporates [Sigma protocols](sigma.md), providing extensive access to discrete log-based zero-knowledge proofs, offering potential advantages in privacy and security. Zero-knowledge proofs are cryptographic techniques that enable a prover to demonstrate the truth of a statement to a verifier without revealing any additional information. In the context of blockchain technology, zero-knowledge proofs can enhance privacy and security by allowing transactions and smart contracts to be executed without disclosing sensitive data.
 
 Discrete log-based zero-knowledge proofs refer to a class of zero-knowledge proofs that rely on the hardness of the discrete logarithm problem, a foundational concept in modern cryptography. ErgoScript, the scripting language used in Ergo, provides access to Σ-protocols, a subclass of cryptographic proof systems known as non-interactive Σ-protocols. These Σ-protocols include the Schnorr signature scheme and Diffie-Hellman tuple, which can be used to prove knowledge of discrete logarithms. This efficient and flexible implementation of zero-knowledge proofs can improve privacy-enhancing features and applications on Ergo.
 
@@ -120,9 +112,10 @@ Ergo's eUTXO model supports data inputs, which allow transactions to read data f
 ### Cardano's Reference Inputs
 
 Cardano introduced reference inputs in the Vasil Hardfork, enabling functionality similar to Ergo's data inputs. In Cardano's eUTXO model, reference inputs allow transactions to access data from other datums without consuming them. This facilitates the integration of off-chain data and oracles into Cardano's smart contracts, expanding the platform's possible applications and use cases.
-Collaboration
 
-Ergo and Cardano are pioneers in implementing the extended UTXO (eUTXO) model and have collaborated to advance research and development in this area through the eUTXO Alliance. Cardano’s implementation of data inputs is just one example of how we can work together.
+## Collaboration
+
+Ergo and Cardano are pioneers in implementing the extended UTXO (eUTXO) model and have collaborated to advance research and development in this area through the eUTXO Alliance. Cardano's implementation of data inputs is just one example of how we can work together.
 
 One notable development between the Ergo and Cardano communities is the Rosen Bridge, currently in beta testing. This bridge enables the transfer of wrapped ADA tokens from Cardano to Ergo and vice versa, promoting interoperability and collaboration between the platforms and their communities. Cardano users can access the DeFi ecosystem on Ergo with this bridge using wrapped ADA or native ADA tokens.
 
@@ -130,15 +123,17 @@ Moreover, ErgoMixer, as the only token mixer in the space, enables users to mix 
 
 Through these collaborations and developments, Ergo and Cardano can enhance their respective platforms, promote interoperability, and advance the adoption of the eUTXO model in the blockchain community.
 
-
+One notable difference between the two ecosystems is the allocation of resources. Cardano, with its larger community and Catalyst funding, tends to have more developers working on specific problems and creating fleshed-out tooling. In contrast, Ergo's smaller developer community may focus on specific solutions rather than generic ones. However, Ergo developers would appreciate features like deserialize/serialize types in ErgoScript, especially for composite types (structs of other types), to make contracts cleaner and more readable.
 
 ## Conclusion
 
 Ergo and Cardano are both innovative blockchain platforms that have implemented the extended UTXO model, offering native asset support, distributed states for decentralized applications, and a range of other features. While ErgoScript and Plutus, their respective scripting languages, have different foundations and design principles, they both enable the creation of sophisticated smart contracts and blockchain applications.
 
-Ergo's approach to minting policies allows for more complex NFTs and token attributes, while Cardano's policy provides a simpler method for token issuance. Both platforms have implemented solutions to access off-chain data and oracles through data inputs, broadening their potential applications and use cases. Furthermore, their collaboration through the eUTXO Alliance and developments like Spectrum, Rosen and Reference Inputs demonstrate the potential for cross-platform cooperation and growth in the blockchain ecosystem.
+Ergo's approach to minting policies allows for more complex NFTs and token attributes, while Cardano's policy provides a simpler method for token issuance. Both platforms have implemented solutions to access off-chain data and oracles through data inputs, broadening their potential applications and use cases. Furthermore, their collaboration through the eUTXO Alliance and developments like Rosen and Reference Inputs demonstrate the potential for cross-platform cooperation and growth in the blockchain ecosystem.
 
 Both Ergo and Cardano offer unique strengths and capabilities, making them appealing choices for developers, users, and investors alike. As these platforms continue to evolve and collaborate, they will undoubtedly contribute significantly to the advancement of blockchain technology and the adoption of the eUTXO model.
+
+
 
 ## Frequently Asked Questions
 
