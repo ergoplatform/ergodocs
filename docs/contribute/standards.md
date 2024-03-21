@@ -54,3 +54,6 @@ This page serves as a guide for contributing as a project on Ergo. It outlines t
  **3.4** | Participate in [ergoforum.org/c/marketing](https://www.ergoforum.org/c/marketing/13) |
  **3.5** | Teach good principles like [KYA](kya.md) |
  **3.5** | Warn users of scams being executed on the platform, particularly in response to support requests |
+ **3.5** | On Discord, disable threads as these are often used by scammers to imitate support tickets |
+ **3.5** | On Discord, use the built in automod feature to flag commonly mentioned spam and terms used by scammers. |
+ 
