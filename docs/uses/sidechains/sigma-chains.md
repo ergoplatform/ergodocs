@@ -1,6 +1,6 @@
 # Sigma Chains: The Future of Programmable Proof of Work on Ergo
 
-Welcome to the Ergo Platform documentation. This section introduces and explains Sigma Chains, a groundbreaking innovation designed to revitalize and expand the potential of Proof of Work (PoW) within the Ergo ecosystem. Sigma Chains represent a significant leap forward in making PoW cryptocurrencies more versatile, sustainable, and integral to decentralized finance (DeFi) applications.
+This section introduces and explains Sigma Chains, a groundbreaking innovation designed to revitalize and expand the potential of Proof of Work (PoW) within the Ergo ecosystem. Sigma Chains represent a significant leap forward in making PoW cryptocurrencies more versatile, sustainable, and integral to decentralized finance (DeFi) applications.
 
 ## Introduction to Sigma Chains
 Sigma Chains are a new series of blockchains backed by ASICs and empowered by Ergo's Sigma programming model. They aim to bring innovative functions, new options for existing miners, and support existing ASIC product lines while revitalizing Proof of Work. 
