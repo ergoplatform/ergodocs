@@ -200,6 +200,7 @@ nav:
       - Sidechains: 
         - uses/sidechains.md
         - Sub Blocks: uses/sidechains/subblocks.md
+        - Sigma Chains: uses/sidechains/sigma-chains.md
         - ErgoData: uses/ErgoData.md
         - SentientChain: uses/sentientchain.md
         - PoUW: uses/pouw.md
