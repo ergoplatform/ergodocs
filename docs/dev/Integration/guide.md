@@ -90,7 +90,7 @@ Major wallet functionalities include:
 - Checking wallet balance (`/wallet/balances`) for all addresses
 - Retrieving wallet transactions (`/wallet/transactions`) for all addresses
 
-##### RPC Documention
+##### RPC Documentation
 
 - [Overview](https://docs.ergoplatform.com/node/swagger/)
 - [API Spec](https://docs.ergoplatform.com/node/swagger/openapi/)
@@ -141,6 +141,17 @@ Use the `/wallet/deriveNextKey` API to generate new addresses in the same wallet
 curl -X GET "http://localhost:9053/wallet/deriveNextKey" -H  "accept: application/json" -H  "api_key: hello"
 ```
 
+The output would be:
+
+```json
+{
+  "derivationPath": "m/44'/429'/0'/0/1",
+  "address": "9gF9QP33MoPc8uekF95VHdosL4KzgSz7Ec7MLEtuhx4uPAd3eZs"
+}
+```
+
+Derivation is done according to BIP-32.
+
 ### Address Validation
 
 For exchanges, restrict withdrawals to P2PK addresses and invalidate other types. Supporting other types is not recommended. See [address](address.md) for more information on address types.
@@ -155,11 +166,36 @@ Get unspent UTXOs for an address using the `transactions/boxes/byAddress/unspent
 https://api.ergoplatform.com/transactions/boxes/byAddress/unspent/9gAE5e454UT5s3NB1625u1LynQYPS2XzzBEK4xumvSZdqnXT35M 
 ```
 
-Exclude UTXOs spent in the mempool using the `/transactions/unconfirmed/byAddress` Explorer API method:
+#### Handling Unconfirmed UTXOs
+
+To avoid double-spending, it's important to handle unconfirmed UTXOs properly. There are two main approaches:
+
+1. Fetch unconfirmed transactions using the `/transactions/unconfirmed/byErgoTree` endpoint and exclude inputs from these transactions. You can convert an address to ergoTree using the `ErgoAddress` class in fleetSDK:
+
+   ```java
+   ErgoAddress.fromPublicKey(hex.decode(publicKey), Network.Mainnet).ergoTree;
+   ```
+
+2. Download the whole mempool using the `/transactions/unconfirmed` endpoint and exclude unconfirmed UTXOs from your inputs.
+
+Here's an example of fetching unconfirmed transactions by ergoTree:
 
 ```bash
-https://api.ergoplatform.com/transactions/unconfirmed/byAddress/9gAE5e454UT5s3NB1625u1LynQYPS2XzzBEK4xumvSZdqnXT35M
+curl -X POST "https://api.ergoplatform.com/transactions/unconfirmed/byErgoTree" -H "Content-Type: application/json" -d "\"00020006f03234fca83e0f00e7fe45e4bdb9db03008f279f599273b471bd85e22d8f1ef01\""
 ```
+
+If the result is an empty array, there are no unconfirmed transactions for the given ergoTree.
+
+#### Batch Withdrawals
+
+Processing user withdrawals in batches by gathering them in a script and pushing all outputs in one transaction can be beneficial. Here's a high-level overview of the process:
+
+1. When a user initiates a withdrawal, store the transaction details in your system.
+2. Every X minutes (e.g., 5-10 minutes), collect all pending withdrawals.
+3. Build a new transaction with multiple inputs (from your exchange's wallet) and outputs (to the users' withdrawal addresses).
+4. Sign and broadcast the batch transaction.
+
+This approach can help optimize transaction processing and reduce overall fees. However, it may require adjustments to your existing code framework.
 
 ### Broadcasting Transactions
 
@@ -188,12 +224,12 @@ Simple transactions should produce an explicit error when signing and/or broadca
 
 > Failed to sign boxes due to Estimated execution cost 1001580 exceeds the limit 1000000: Vector(ErgoBox(0275eb3a125bc02fe997cb98c0de8131bd9b2e4617110d
 
-This error can occur due to too many inputs collected in a transaction for dusty wallets.
+This error can occur due to too many inputs collected in a transaction for [dusty wallets](#dust-collection).
 
-https://docs.ergoplatform.com/dev/Integration/guide/#dust-collection
+
 
 **Valid RBF transactions:**
-Dropped transactions will be removed from the mempool, this can be checked with the /transactions/unconfirmed/{txId} endpoint
+Dropped transactions will be removed from the mempool, this can be checked with the `/transactions/unconfirmed/{txId}` endpoint
 
 
 ### Dust Collection
@@ -258,6 +294,8 @@ This error can occur due to too many inputs collected in a transaction for dusty
 Failed to sign boxes due to Estimated execution cost 1001580 exceeds the limit 1000000: Vector(ErgoBox(0275eb3a125bc02fe997cb98c0de8131bd9b2e4617110d
 ```
 
+
+
 ### Native Assets
 
 For large airdrops, users may mistakenly put exchange addresses to receive native assets. An *auto-burn* method will be in future node versions to reduce manual effort. See this [Issue](https://github.com/ergoplatform/ergo/issues/1604) for more information.
@@ -293,9 +331,18 @@ Supporting other types isn't a problem if the user is aware of what they're doin
 
 In appkit, `Address.create()` accepts an address string and returns an object from which you can obtain the ergoTree.
 
-**Why do some transactions appear not to pay fees?**
+**Transaction Fees**
 
-Fees aren't mandatory in the core protocol, but transactions without them won't be propagated around the network by default.
+
+Ergo's transaction fee system is designed to be flexible and explicit. Although the protocol does not enforce a specific minimum transaction fee, it employs a spam-prevention strategy that requires each box to contain a minimum amount of ERG based on its size. This minimum value is determined by a parameter voted on by miners.
+
+As a guideline, it is suggested to allocate **0.001 ERG (1,000,000 NanoErg) for each box** involved in the transaction. Including a fee incentivizes miners to process your transaction more quickly.
+
+Miners prioritize transactions based on either the fee per byte or the validation cost unit, which are adjustable via a voting mechanism among miners. Transaction fees are collected in a specific contract that can only be spent through a miner's script.
+
+To determine the appropriate transaction fee, consider the protocol's minimum requirements based on the box size and the network's current hashrate. Higher hashrates reduce the risk of double-spend attacks, thus requiring fewer confirmations.
+
+For more detailed information on transaction fees, including minimum values, miner prioritization, fee collection, and related topics, please refer to the dedicated [Transaction Fees](min-fee.md) page.
 
 **What algorithm generates a boxid?**
 
@@ -343,7 +390,4 @@ Wallet nodes do not necessarily need to expose their ports, although you can do 
 **Whitelisting Node IP:**
 
 Ergo does not require adding your node's IP to a whitelist for synchronization.
-
-This comprehensive guide should provide exchanges and developers with the necessary information to integrate with the Ergo platform smoothly. It covers key features, infrastructure setup, wallet creation, troubleshooting, and addresses common concerns such as chain forking prevention, 51% attack mitigation, and storage rent. If you have any further questions or need assistance, please don't hesitate to reach out to the Ergo team or join the community discussions on Discord.
-
 

@@ -1,9 +1,15 @@
 # The Ergo Foundation's Future
 
+/// details | What's been done so far?
+     {type: info, open: true}
+- For an overview of what has been achieved since launch, please see [this page](ergo-timeline.md)
+- For a comprehensive overview of the scope of the Ergo Foundation see [this page](ef-scope.md)
+///
+
+
 ## Initial Role of the Ergo Foundation
 The Ergo Foundation's role was to bootstrap the Ergo ecosystem in the initial years and build up the infrastructure required for adoption, solving the 'hard side' of Ergo. This has led to the vibrant ecosystem we see today with:
 
-### Achievements
 - 300+ community developers
 - 100+ active contributors in the weekly developer chat on Discord
 - Hosting multiple [events](../events/index.md) per year
@@ -11,11 +17,6 @@ The Ergo Foundation's role was to bootstrap the Ergo ecosystem in the initial ye
 - Consistently ranked in the top 100 for development activity on [artemis.xyz](https://app.artemis.xyz/developer-activity?ecosystemValue=Ergo)
 
 
-/// details | What's been done so far?
-     {type: info, open: true}
-- For an overview of what has been achieved since launch, please see [this page](ergo-timeline.md)
-- For a comprehensive overview of the scope of the Ergo Foundation see [this page](ef-scope.md)
-///
 
 ## The Future
 As time goes on, the importance of the Ergo Foundation should diminish, and responsibility should shift towards the community. This is essential for both the strength and decentralization of the ecosystem.

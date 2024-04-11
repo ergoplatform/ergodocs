@@ -33,8 +33,8 @@ This page serves as a guide for contributing as a project on Ergo. It outlines t
 
  #       | Description                                               |
  ------- | --------------------------------------------------------- |
- **3.1** | Ensure Telegram groups have anti-spam protection in place |
- **3.2** | Ensure Discord groups have anti-spam protection in place  |
+ **3.1** | Ensure Telegram groups have anti-spam/scam protection in place |
+ **3.2** | Ensure Discord groups have anti-spam/scam protection in place  |
  **3.3** | Work towards reducing friction between chats |
  **3.4** | Strive to boost engagement |
  **3.5** | Make efforts to educate your community |
@@ -43,17 +43,16 @@ This page serves as a guide for contributing as a project on Ergo. It outlines t
 
  #       | Description                                                  |
  ------- | ------------------------------------------------------------ |
- **3.1** | Enable [OrgRobot](https://tgdev.io/bot/orgrobot) with custom questions |
- **3.1** | Consider using [tgdev](https://tgdev.io/bot/orgrobot) which has a few handy free bots like [daysandbox_bot](https://tgdev.io/bot/daysandbox_bot) & [grep_robot](https://tgdev.io/bot/grep_robot) |
- **3.2** | The built-in spam protection should be sufficient if properly configured |
+ **3.1** | Enable [OrgRobot](https://tgdev.io/bot/orgrobot) with custom questions which has a few handy free bots like [daysandbox_bot](https://tgdev.io/bot/daysandbox_bot), [grep_robot](https://tgdev.io/bot/grep_robot) and @WikiRobot, which can be used to reiterate a message at a set interval. |
+ **3.2** | The built-in spam protection should be sufficient if properly configured in `Server Settings -> Moderation -> Saftey Setup` make sure all protections are enabled. Under `Automod` you can define custom words to filter an example would be `.gd, .gg, @everyone, #Support, ✉️, ➡️, ➡, 🎟️, 👇, 👉, 🎁, 💌, 📨, 📩, 📪, 📭, 🆘, adminsupports, bch.gg, Create Ticket, dsc.gg, earn $, https://t.me, Open-Ticket, Raise a ticket, shrtm.nu, Support Ticket, supportservice`. Alternatively you can enable [Wickbot](https://wickbot.com/). |
+ **3.2** | The 'thread' permission is often abused by scammers, luring users into private threads where they imitate support staff, you should disable threads entirely if unused, otherwise disable them on a per-channel or role basis. |
  **3.3** | Consider [bridging your chats](chat-bridge.md) with the Ergo Discord |
  **3.3** | Get your Telegram added to [@ErgoChats](https://t.me/Ergo_Chats) on Telegram |
- **3.3** | Create a PR to add yourself to this documentation |
+ **3.3** | Create a PR to add yourself to [this documentation](https://github.com/glasgowm148/ergodocs) |
  **3.3** | Get added on [ergcube](https://ergcube.com/index.php?do=static&page=socials) and [sigmaverse](https://github.com/ergoplatform/sigmaverse) |
  **3.4** | Participate in the weekly developer and marketing updates |
  **3.4** | Participate in [ergoforum.org/c/marketing](https://www.ergoforum.org/c/marketing/13) |
  **3.5** | Teach good principles like [KYA](kya.md) |
  **3.5** | Warn users of scams being executed on the platform, particularly in response to support requests |
- **3.5** | On Discord, disable threads as these are often used by scammers to imitate support tickets |
- **3.5** | On Discord, use the built in automod feature to flag commonly mentioned spam and terms used by scammers. |
+
  

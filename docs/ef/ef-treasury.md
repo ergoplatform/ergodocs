@@ -12,18 +12,18 @@ For more information on the Ergo's emission schedule, tokenomics and allocation,
 
 ## Holdings
 
-As of January 2024, the complete treasury of the foundation, including market making funds, is as follows:
+As of March 2024, the complete treasury of the foundation, including market making funds, is as follows:
 
 
 | Currency | Amount | Price | Total |
 |-------|---------------|---|---|
-| ERG   | 481,122    | $1.60 | $769,795 |
-| RSN   | 30,000,000 | $0.102 | $3,060,000 |
-| SPF   | 28,500,000 | $0.0487 | $1,387,950 |
-| BTC   | 7.26       | $45,000 | $326,700 |
-| USD   | 92,495     | $1 | $92,495 |
-| Gluon | 335,000    | N/A |  |
-| Total |  | | **$5,636,940** |
+| ERG   | 482,053    | $1.88 | $906,261 |
+| RSN   | 30,000,000 | $0.1112 | $3,232,827 |
+| SPF   | 28,000,000 | $0.05367 | $1,497,890 |
+| BTC   | 7.26       | $71,404 | $518,393 |
+| USD   | 126,606     | $1 | $126,606 |
+| Gluon | 335,000    | $1 | $335,000 |
+| Total |  | | **$6,616,977** |
 
 /// details | How will the SPF/RSN and other tokens be utilized? 
      {type: question, open: true}
