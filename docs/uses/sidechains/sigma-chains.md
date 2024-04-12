@@ -2,7 +2,6 @@
 tags:
   - Sigma Chains
   - Sigma Layer
-  - Ergo
 ---
 
 # Sigma Chains: Empowering Ergo as the King of Chains
@@ -17,7 +16,13 @@ The Sigma Chain standard has already proven its success in the PoW and UTXO sett
 
 ## Ergo at the Center of Sigma Chains
 
-Sigma Chains are built upon the robust foundation of Ergo, leveraging its advanced features and technologies to create a thriving network of interconnected blockchains. As Sigma Chains gain traction, the demand for ERG will grow, creating inherent buy pressure as emissions decline. With Sigma Chains, Ergo gains access to new on-chain markets, allowing ERG to become more widely distributed and grow as collateral. The growth of Sigma Chains will also accelerate development and increase Ergo's mindshare in the blockchain space.
+Sigma Chains are built upon the robust foundation of Ergo, leveraging its advanced features and technologies to create a thriving network of interconnected blockchains. With different pegging mechanisms, Sigma Chains offer more flexibility compared to other blockchain ecosystems like Cosmos and Polkadot. This flexibility allows for a wide range of cross-chain interactions and enables the creation of a diverse ecosystem of interconnected chains.
+
+Sigma Chains also place a strong emphasis on cross-chain security. While the security assumptions behind solutions like Cosmos IBC, Polkadot, and BIP-301 may be unclear, Sigma Chains prioritize a robust and well-defined security model. By focusing on cross-chain security, Sigma Chains ensure that the interconnected network of blockchains remains resilient and resistant to attacks, providing a secure environment for users and developers alike.
+
+As Sigma Chains gain traction, the demand for ERG, the native token of the Ergo blockchain, will grow. This increased demand will create inherent buy pressure, especially as emissions decline over time. With Sigma Chains, Ergo gains access to new on-chain markets, allowing ERG to become more widely distributed and grow as collateral. This expanded use case for ERG will further drive its adoption and value within the ecosystem.
+
+Moreover, the growth of Sigma Chains will accelerate development and increase Ergo's mindshare in the blockchain space. As more developers and projects recognize the potential of Sigma Chains and the benefits of building on top of Ergo, the ecosystem will flourish. This increased mindshare will attract more talent, resources, and innovation to the Ergo ecosystem, cementing its position as a leading blockchain platform.
 
 ## Key Features of Sigma Chains
 
@@ -56,6 +61,8 @@ Sigma Chains offer various efficient sidechain constructions that cater to diffe
 - **Dedicated Mining Algorithms:** Sigma Chains support dedicated mining algorithms, allowing for the creation of sidechains tailored to specific hardware types. These sidechains feature a dedicated PoW consensus mechanism alongside the Sigma contractual layer and additional chain-specific features. With the inclusion of Autokoyos2 verification and built-in support for Ergo headers, trustless replay protection can be implemented through on-chain contracts, enabling the creation of SPV clients for sidechains. Sidechains with dedicated mining algorithms can utilize relay contracts to incentivize mainchain miners for submitting proper sidechain data on the mainchain, providing a clearer and more secure incentive mechanism compared to the BIP-301 proposal.
 
 ## Conclusion
+
+In time we can invest other options. Zk- trustless Bulletproof based relays on the mainchain. 
 
 Sigma Chains represent a significant leap forward for Ergo and the broader blockchain ecosystem. By empowering Ergo as the king of chains, Sigma Chains create new opportunities for miners, developers, and users alike. With increased demand for ERG, expanded collateral opportunities, and a thriving ecosystem of portable projects, Ergo is poised to lead the charge in the era of programmable PoW.
 

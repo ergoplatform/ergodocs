@@ -54,3 +54,4 @@ subblocks and sidechains present an efficient approach to address some of the fu
 
 - [ergoforum: A Scalability Plan for Ergo ](https://www.ergoforum.org/t/a-scalability-plan-for-ergo/226/5)
 - [Weak blocks WIP #1 #2055](https://github.com/ergoplatform/ergo/pull/2055)
+- [A sidechain prototype #2107](https://github.com/ergoplatform/ergo/pull/2107/)
