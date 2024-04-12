@@ -62,8 +62,8 @@ Sigma Chains offer various efficient sidechain constructions that cater to diffe
 
 ## Conclusion
 
-In time we can invest other options. Zk- trustless Bulletproof based relays on the mainchain. 
 
-Sigma Chains represent a significant leap forward for Ergo and the broader blockchain ecosystem. By empowering Ergo as the king of chains, Sigma Chains create new opportunities for miners, developers, and users alike. With increased demand for ERG, expanded collateral opportunities, and a thriving ecosystem of portable projects, Ergo is poised to lead the charge in the era of programmable PoW.
 
-As Sigma Chains gain momentum, Ergo will solidify its position as a key player in the blockchain space, driving innovation and adoption across all hardware classes. 
+Sigma Chains are a game-changer for Ergo and the entire blockchain landscape. They put Ergo at the forefront, opening up a world of opportunities for miners, devs, and users. As the demand for ERG rises and its use cases expand, Ergo is set to become a major player in the programmable PoW space.
+
+As Sigma Chains continue to evolve, we can explore other exciting possibilities like Zero-Knowledge Bulletproof-based relays on the mainchain, taking trustless cross-chain interactions to the next level. 
