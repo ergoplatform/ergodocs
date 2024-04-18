@@ -2,6 +2,7 @@
 tags:
   - dApp-Beta
 ---
+
 /// details | Status: Open Beta!
      {type: success, open: true}
 The Paideia beta is now live!
@@ -16,11 +17,13 @@ The Paideia beta is now live!
 This section will cover how to use the Paideia beta. Alternatively, you can watch [Paideia, Joining Your DAO | One Take Series](https://youtu.be/YUGNLQ6n8BA).
 
 ## Prerequisites
+
 1. You'll need an Ergo wallet such as Nautilus to interact with Paideia.
 2. During the beta phase, creating a DAO is free. Simply reach out to the Paideia team and provide one of your tokens.
 3. To create proposals, you'll need to hold at least 1000 bPaideia tokens in your wallet, obtainable from the [Ergo faucet](https://ergofaucet.org/).
 
 ## Getting Started
+
 1. Connect and authenticate your wallet on the Paideia platform.
 2. If you're creating a new DAO, contact the Paideia team and provide the necessary token. In the future, there will be a fee in PAI tokens to set up a new DAO.
 3. After [staking](https://app.paideia.im/Sigmanauts/staking/manage) your DAO token, you can participate in actions like voting or proposing changes.
@@ -38,7 +41,9 @@ This section will cover how to use the Paideia beta. Alternatively, you can watc
 DAO members can vote on active proposals. No bPaideia holdings are required for voting. Be aware that there may be a delay before votes are reflected in the UI, and a page refresh may be necessary.
 
 ## Staking and Unstaking
-Paideia supports staking and unstaking of tokens. During the beta phase, staking is done through ErgoPad at [ErgoPad.io/staking/paideia](https://ergopad.io/staking/paideia). In case of any issues with these functions, try the following:
+
+You can stake your Paideia tokens! During the beta phase, staking is done through [ErgoPad](https://ergopad.io/staking/paideia). In case of any issues with these functions, try the following:
+
 1. Ensure your wallet is properly synced and connected.
 2. Consolidate UTXOs in your wallet using the "Wallet Optimization Tool".
 3. Clear browser cache and reconnect your wallet.
