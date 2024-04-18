@@ -2,10 +2,12 @@
 tags:
   - dApp-Beta
 ---
-/// details
-| Status: Open Beta! {type: success, open: true}
-The Paideia beta is now live! 
+/// details | Status: Open Beta!
+     {type: success, open: true}
+The Paideia beta is now live!
 ///
+
+
 
 # Paideia
 [Paideia](https://www.paideia.im) is a project from the [ergopad](ergopad.md) team whose purpose is to create a functional, secure, and well-documented DAO software suite that supports DAOs as they form and develop. It will make it easy for anyone to initiate a DAO, distribute tokens using various methods, create proposals, and collect votes. It will help various organizations share funds in a secure and fair way.
