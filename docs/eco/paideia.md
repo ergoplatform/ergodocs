@@ -58,6 +58,7 @@ Paideia is developing tools for DAOs to self-moderate their proposals and discus
 
 ## Development Updates
 The Paideia team continues to work hard on improving the platform. Recent updates include:
+
 - Refactoring smart contracts for better code reuse
 - Adjusting the staking reward system to allow DAOs to change emission rates
 - Implementing generic refund and configuration logic in contracts
