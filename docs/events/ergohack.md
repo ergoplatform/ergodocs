@@ -5,6 +5,7 @@ We host regular ERGOHACK events where developers come together on the [Ergo Disc
 There are no entry requirements, and all are welcome! Even if you have an idea sharing it in the #icubator-form on Discord may pique some interest.
 
 ## Directory
+You can also check out the [Hall of Fame](https://ergohack.io/hall-of-fame/)
 
 Click any of the event names below to jump directly to an overview and related resources or browse by project directly below.
 
@@ -30,13 +31,17 @@ Click any of the event names below to jump directly to an overview and related r
 
 ### ERGOHACKVI
 
+Winning Projects
+
+1. [**Ergode**](#ergode): Ergo Node on smart devices
+2. [**SigmaO**](#sigmao): Options on Ergo
+3. [**Lithos**](#lithos): Decentralised block production
+
+
 - [**Analog-Ergo**](#analog-ergo): Cross-chain P2P atomic marketplace
 - [**Ergo Stats**](#ergo-stats): Mobile app for ergo.watch/tokenJay
-- [**Ergode**](#ergode): Ergo Node on smart devices
-- [**Lithos**](#lithos): Decentralised block production
 - [**ChainCash**](#chaincash): Elastic P2P money creation via trust & blockchain assets
 - [**Lilium**](#lilium): Decentralised NFT Platform
-- [**SigmaO**](#sigmao): Options on Ergo
 - [**Riadne Hlady2**](#riadne-hlady2): MultiSig token swapping
 - [**Privacy Guide**](#privacy-guide): Privacy Fundamentals Course
 - [**Perma Ergo**](#perma-ergo): Real World Food Production Decentralisation
