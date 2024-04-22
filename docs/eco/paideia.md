@@ -29,6 +29,7 @@ This section will cover how to use the Paideia beta. Alternatively, you can watc
 3. After [staking](https://app.paideia.im/Sigmanauts/staking/manage) your DAO token, you can participate in actions like voting or proposing changes.
 
 ## Creating Proposals
+
 1. Ensure you have at least 1000 bPaideia tokens in your wallet.
 2. Navigate to your DAO's page on the Paideia platform and click "Create Proposal".
 3. Enter the necessary details for your proposal and submit the transaction from your wallet.
@@ -50,13 +51,16 @@ You can stake your Paideia tokens! During the beta phase, staking is done throug
 4. Reach out to the Paideia team for further assistance.
 
 ## Moderation and Spam Prevention
+
 Paideia is developing tools for DAOs to self-moderate their proposals and discussions:
+
 - Creating a proposal will cost a small amount of Paideia tokens to discourage spam.
 - DAO members may be assigned different roles based on their token holdings, granting them varying levels of moderation privileges.
 - A community thumb up/down system is being considered to hide irrelevant posts.
 - Minimum token holding requirements may be implemented for posting comments in the future.
 
 ## Development Updates
+
 The Paideia team continues to work hard on improving the platform. Recent updates include:
 
 - Refactoring smart contracts for better code reuse

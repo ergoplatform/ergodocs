@@ -5,7 +5,7 @@ tags:
 
 # DuckPools: Ergo Lending Protocol
 
-DuckPools is a decentralized finance (DeFi) application (dApp) built on the Ergo blockchain. It offers lending pools that allow users to lend ERG and its tokens to earn yield and borrow assets.
+[duckpools.io](https://duckpools.io/) is a decentralized finance (DeFi) application (dApp) built on the Ergo blockchain. It offers lending pools that allow users to lend ERG and its tokens to earn yield and borrow assets.
 
 ## DuckPools: A Collateralized Lending Platform with Algorithmic Lending Pools
 
@@ -23,4 +23,5 @@ DuckPools aims to be a catalyst for an explosive DeFi ecosystem on Ergo. The pla
 
 - [Website](https://duckpools.io)
 - [Discord](https://discord.gg/znRMge8kQm)
+- [Github](https://github.com/duckpools)
 

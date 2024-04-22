@@ -24,6 +24,7 @@ ChainCash is an innovative approach to creating and using digital money. It allo
 6. 🌟 **Dynamic Quality (Note Reputation)**: As a note circulates and accumulates signatures from trusted agents, its perceived credibility and value can increase, even if the original issuer didn't have full collateral backing.
 
 The key advantages of ChainCash are:
+
 - 🔒 **Transparency**: The collateral backing the notes is publicly verifiable on the blockchain.
 - 🌈 **Flexibility**: Notes can be issued and endorsed by multiple agents, not just the original issuer.
 - 📈 **Stability**: By using gold as a unit of account, ChainCash provides a stable measure of value.
