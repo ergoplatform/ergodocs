@@ -1,58 +1,65 @@
----
-tags:
-  - dApp-InDev
----
+# ChainCash - Elastic Peer-to-Peer Money Creation via Trust and Blockchain Assets
 
-# ChainCash
+[ChainCash](https://github.com/ChainCashLabs) is a decentralized, peer-to-peer monetary system that enables the creation of money through trust and blockchain assets. The system addresses the issue of inelasticity in blockchain asset supply, which often hinders the real-world usage of these assets. ChainCash allows for the elastic creation of money in a self-sovereign way via trust or collateral, with collective backing and individual acceptance.
 
-[ChainCash](https://github.com/ChainCashLabs) is a decentralized, peer-to-peer monetary system aimed at creating money collectively through trust and blockchain assets. The system addresses the issue of inelasticity in blockchain asset supply, which hinders the real-world usage of blockchain assets in many cases. ChainCash allows for the elastic creation of money in a decentralized manner while maintaining the quality of the currency.
+/// details | Watch the presentation
+     {type: info, open: false}
+[Chaincash | Ergo Summit - Cypherpunk Finance](https://www.youtube.com/watch?v=NxIlIpO6ZVI)
+///
 
-## ChainCash Explained: A Decentralized Monetary System
+## Overview
 
-ChainCash is an innovative approach to creating and using digital money. It allows participants to issue their own notes, which are backed by collateral and trust. Here's a step-by-step explanation of how it works:
+In ChainCash, money is considered as a set of digital notes, where each note is collectively backed by all its previous spenders. Every agent (participant) can create reserves to be used as collateral. When an agent spends a note, whether received from another agent or self-created, they attach their signature to it. A note can be redeemed at any time against any of the reserves of the agents who previously signed the note.
 
-1. **Collateral (Backing the Notes)**: Participants, called agents, lock up some collateral (like cryptocurrency or other assets) in a smart contract. This collateral serves as the backing for the notes they'll issue.
+ChainCash allows an agent to issue and spend notes without a reserve. It is up to the agent's counter-parties to decide whether to accept and back the issued note with collateral or trust.
 
-2. **Issuing Notes (Creating Digital Money)**: Based on their collateral, agents can issue digital notes. Each note represents a promise to pay a certain amount of gold (or equivalent value). The gold is used as a stable unit of account.
+### Key Components
 
-3. **Circulation (Exchanging Notes)**: Agents can transfer their notes to other participants in exchange for goods, services, or other assets. Each time a note changes hands, the new holder digitally signs it, indicating their trust in the note.
+1. **Collateral**: Agents lock up collateral (e.g., cryptocurrency or other assets) in a smart contract, which serves as the backing for the notes they issue.
 
-4. **Acceptance (Receiving Notes)**: When an agent receives a note, they evaluate its credibility based on the signatures of the previous holders. If they trust the signers, they're more likely to accept the note as valid payment.
+2. **Note Issuance**: Agents can issue digital notes based on their collateral. The elastic money creation process allows for a flexible money supply.
 
-5. **Redemption (Cashing Out)**: At any point, the current holder of a note can redeem it with any of the previous holders. They can ask for the equivalent value of the note in gold or other agreed-upon assets.
+3. **Circulation**: Notes can be transferred between agents in exchange for goods, services, or other assets. Each time a note changes hands, the new holder digitally signs it, indicating their trust in the note.
 
-6. **Dynamic Quality (Note Reputation)**: As a note circulates and accumulates signatures from trusted agents, its perceived credibility and value can increase, even if the original issuer didn't have full collateral backing.
+4. **Acceptance**: When receiving a note, an agent evaluates its credibility based on the signatures of the previous holders and their individual acceptance rules. Widely accepted standards may exist alongside individual rules.
 
-The key advantages of ChainCash are:
+5. **Redemption**: The current holder of a note can redeem it with any of the previous holders for the equivalent value in the agreed-upon unit of account or other assets. However, any agent after the first one in the signatures chain receives a redemption receipt indicating the debt of previous signers before them. They can then redeem the receipt against the reserve of any previous signer, generating a new redeemable receipt. A redemption fee should be paid, incentivizing reserve provision and note usage instead of redemption.
 
-- **Transparency**: The collateral backing the notes is publicly verifiable on the blockchain.
-- **Flexibility**: Notes can be issued and endorsed by multiple agents, not just the original issuer.
-- **Stability**: By using gold as a unit of account, ChainCash provides a stable measure of value.
+6. **Dynamic Quality**: As a note circulates and accumulates signatures from trusted agents, its perceived credibility and value can increase, even if the original issuer didn't provide full collateral backing.
 
-In essence, ChainCash is a decentralized monetary system that enables the creation and exchange of digital notes based on collateral, trust, and a golden standard. It offers a flexible and transparent alternative to traditional centralized currencies.
+### Example Scenario
 
+Consider a small gold mining cooperative in Ghana issuing a note backed by tokenized gold. The note is then accepted by the national government as a means of tax payment. The government uses the note (now backed by gold and trust in the Ghana government, making it convertible to Ghanaian Cedi) to buy oil from a Saudi oil company. The oil company, having its own oil reserve, uses the note to buy equipment from China. Now, a Chinese company holds a note backed by gold, oil, and Cedis. It may be challenging for the Chinese company to redeem from the small cooperative in Ghana, so they can redeem from the Ghana government, which in turn may redeem from the cooperative.
 
-### Creation and Circulation of Digital Notes
+### Note Quality Estimation
 
-In our digital monetary system, we conceptualize money as a collection of digital notes. Each note's value is underpinned by the collective trust and collateral of all previous holders. Here's how it works:
+Each economic agent has an individual note quality estimation predicate Pi(n) that considers the collaterals and trust of previous spenders. Agents may have different collateralization estimation algorithms, whitelists, blacklists, or trust scores assigned to the note's previous spenders. Different agents may analyze the history of a single note, all notes issued by the note's signers, or apply other methods.
 
+In general, the payment sender needs to consult with the receiver to determine if the payment (consisting of one or more notes) can be accepted. However, in practice, standard predicates are likely to emerge, allowing payment receivers (e.g., online shops) to publish their predicate or predicate ID online, enabling payments without prior interaction.
 
-- **Issuing Notes**: Any participant, referred to as an agent, can create a digital note. This creation can serve as a form of collateral.
-- **Spending and Endorsing**: When an agent spends a note, either one received from another agent or self-created, they essentially endorse it with their signature.
-- **Redemption**: At any point, a note can be exchanged based on the reserves (collateral) of any agent who has previously signed it.
-- **Issuing Without Reserve**: Agents can issue and spend notes even without having reserves. In such cases, the decision to accept the note depends on the trustworthiness and willingness of the counter-party to back the note with their collateral or trust.
+## Blockchain Implementation
 
-### Practical Example
+ChainCash is implemented on top of the Ergo blockchain and consists of two main components:
 
-Consider a scenario where a small gold mining cooperative in Ghana issues a digital note, which is backed by their gold reserves (tokenized gold). This note is accepted by the Ghanaian government for tax payments, adding a layer of trust and government backing to the note. The government then uses this note, now backed by gold and trust, to purchase oil from a Saudi company. The Saudi company, with its oil reserves, uses the note to buy equipment from China. Thus, a Chinese company ends up holding a note backed by gold, oil, and the Ghanaian Cedi.
+1. **On-chain Contracts**: Contracts for notes, reserves, and redemption receipts are implemented on-chain. The most straightforward option is to have all these contracts on-chain. More scalable options, such as having only reserves (and possibly receipts) on-chain while notes circulate off-chain (e.g., on a side-chain or Layer 2 solution), are being considered.
 
-### Quality Estimation of Notes
+   - The reserve contract locks ERG native tokens on top of the Ergo blockchain and allows for the redemption of native or custom tokens when a note is presented.
+   - The note contract ensures that the note has a proper history, with a valid signature from the corresponding reserve owner added on each spend. It also allows for note splitting (payment and change) and redemption.
+   - The receipt contract, created during redemption, contains the ownership history copied from the note input and the position of the redeemed reserve in the ownership chain, along with the note's value. The receipt can then be used to redeem against a reserve.
 
-- **Individual Assessment**: Economic agents evaluate the quality of a note (`Pi(n)`) based on the collaterals and trust associated with its previous owners.
-- **Diverse Algorithms**: Different agents might use varied methodologies to assess collateralization. This could include analyzing the history of a specific note (`n`), considering all known notes, or applying different whitelists, blacklists, and trust scores.
-- **Standardization and Interaction**: In reality, there's likely to be a standardization of these estimation algorithms. Therefore, a receiver of payment (like an online shop) might publish their specific criteria or algorithm identifier. This allows for payments to be processed without needing prior approval or interaction between the payer and payee.
+2. **Client Software (ChainCash Server)**: This software, acting as a self-sovereign bank with client-side note validation, interacts with the blockchain (and possibly a side-chain or p2p network for off-chain note circulation) and implements the functionality of an agent, including the note quality estimation predicate Pi(n). The server can track reserves and notes, and its Pi(n) predicate can be configured via whitelists, blacklists, and collateralization requirements provided in the config.
 
-In summary, ChainCash relies on a unique approach where the value and trustworthiness of digital notes are dynamically shaped by the collective history and credibility of its prior endorsers, creating a fluid and interconnected digital economy.
+The on-chain contracts ensure the integrity of the notes, reserves, and redemption process. The ChainCash Server allows for individual agent behavior based on its configuration.
+
+## Applications
+
+ChainCash serves as a foundation for various monetary systems, such as:
+
+1. **Local Exchange Trading Systems (LETS)**: Members can whitelist each other to accept notes regardless of backing reserves, enabling the collective creation of money within the community. Implementations may range from LETS members unconditionally whitelisting only notes issued by other members to whitelisting notes ever signed by LETS members. Unlike traditional LETS, ChainCash notes can also easily circulate outside the LETS circle.
+
+2. **Local Currencies**: Local or national governments can issue notes and enforce their acceptance within their jurisdiction. Enforced acceptance rules may vary, similar to the LETS implementation. Local currencies often introduce redemption fees to promote local usage. In ChainCash, this can be achieved by modifying the reserve contract to charge a fee for non-local redemptions or by modifying the note contract to incur a fee when spending to non-local addresses. Demurrage, a concept associated with local currencies, can also be implemented by modifying the note contract. However, modifying the note contract makes the notes less appealing to others, which is common for local currencies.
+
+3. **Multilateral Trade-Credit Set-off**: Multilateral Trade-Credit Set-off is a technique for clearing invoices in closed loops against one another. In ChainCash, mutual debts can be cleared by atomically burning tokens backed by counter-parties in a single transaction, allowing participants to issue more notes afterward.
 
 ## New Developments: L1 and L2 Payments
 
@@ -62,17 +69,27 @@ One of the latest advancements in ChainCash involves the development of contract
 
 Inspired by historical peer-to-peer monetary systems such as the WAT system, ChainCash uses gold as its unit of account. One ChainCash token represents approximately one milligram of gold. This system enables users to issue notes of arbitrary values, which may or may not be backed by reserves in various digital tokens or real-world assets.
 
-## Currency Quality and Trust
+## Advantages and Drawbacks
 
-To maintain the quality of the currency, acceptance of a note depends on the collateral or trust in the issuer. Participants can issue notes without any reserves, allowing for different collateralization levels within various economic circles. As notes circulate, their quality generally improves due to the collective collateral and trust backing them.
+Advantages:
+- Combines trust and collateral in a unique way for money issuance
+- Provides elasticity of supply without enforcing individual users to accept lower quality notes
+- Supports the building of various monetary systems on top of it
 
-## Implementation Details
+Drawbacks:
+- Notes are non-fungible due to unique backing, which may limit their use in certain DeFi applications (e.g., liquidity pools, lending pools)
+- Currently lacks privacy features in payments (this topic is left for further research)
 
-ChainCash is implemented using two contracts on the Ergo blockchain: one for notes and one for reserves. The off-chain logic can track different note and reserve contracts, support various acceptance predicates and redemption mechanisms, and accommodate complementary currency systems such as Local Exchange Trading Systems (LETS) and local currencies.
+## Conclusion
 
-Although Layer Two implementation is still under consideration, ChainCash offers a flexible and decentralized monetary system that can potentially cater to different economic agents globally, addressing the limitations of traditional blockchain assets.
-
+ChainCash introduces a novel approach to decentralized money creation, combining trust and collateral to enable an elastic money supply. By allowing agents to issue and accept notes based on their individual rules, ChainCash provides a flexible foundation for various monetary systems while maintaining the quality of the currency. Although there are some limitations, such as the non-fungibility of notes and the lack of privacy features, ChainCash offers a promising alternative to traditional centralized currencies and blockchain assets with inelastic supply.
 
 ## References
 
+- [Whitepaper](https://github.com/ChainCashLabs/chaincash/blob/master/docs/whitepaper/chaincash.pdf)
 - [ergoforum: ChainCash - A Spender Signed Currency on Ergo](https://www.ergoforum.org/t/chaincash-a-spender-signed-currency-on-ergo/4015)
+- [The World Needs For More Collateral](https://www.ergoforum.org/t/the-world-needs-for-more-collateral/4451)
+- [ChainCash Server](https://github.com/ChainCashLabs/chaincash-rs)
+- [ChainCash Server Design Document](https://github.com/ChainCashLabs/chaincash/blob/master/docs/server.md)
+- [ChainCash Contracts](https://github.com/ChainCashLabs/chaincash/tree/master/contracts)
+- [ChainCash Tests](https://github.com/ChainCashLabs/chaincash/blob/master/src/test/scala/kiosk/ChainCashSpec.scala)
