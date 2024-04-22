@@ -7,35 +7,35 @@ tags:
 
 [ChainCash](https://github.com/ChainCashLabs) is a decentralized, peer-to-peer monetary system aimed at creating money collectively through trust and blockchain assets. The system addresses the issue of inelasticity in blockchain asset supply, which hinders the real-world usage of blockchain assets in many cases. ChainCash allows for the elastic creation of money in a decentralized manner while maintaining the quality of the currency.
 
-## ChainCash Explained: A Decentralized Monetary System 💰🌐
+## ChainCash Explained: A Decentralized Monetary System
 
 ChainCash is an innovative approach to creating and using digital money. It allows participants to issue their own notes, which are backed by collateral and trust. Here's a step-by-step explanation of how it works:
 
-1. 💼 **Collateral (Backing the Notes)**: Participants, called agents, lock up some collateral (like cryptocurrency or other assets) in a smart contract. This collateral serves as the backing for the notes they'll issue.
+1. **Collateral (Backing the Notes)**: Participants, called agents, lock up some collateral (like cryptocurrency or other assets) in a smart contract. This collateral serves as the backing for the notes they'll issue.
 
-2. 🖨️ **Issuing Notes (Creating Digital Money)**: Based on their collateral, agents can issue digital notes. Each note represents a promise to pay a certain amount of gold (or equivalent value). The gold is used as a stable unit of account.
+2. **Issuing Notes (Creating Digital Money)**: Based on their collateral, agents can issue digital notes. Each note represents a promise to pay a certain amount of gold (or equivalent value). The gold is used as a stable unit of account.
 
-3. 💸 **Circulation (Exchanging Notes)**: Agents can transfer their notes to other participants in exchange for goods, services, or other assets. Each time a note changes hands, the new holder digitally signs it, indicating their trust in the note.
+3. **Circulation (Exchanging Notes)**: Agents can transfer their notes to other participants in exchange for goods, services, or other assets. Each time a note changes hands, the new holder digitally signs it, indicating their trust in the note.
 
-4. ✅ **Acceptance (Receiving Notes)**: When an agent receives a note, they evaluate its credibility based on the signatures of the previous holders. If they trust the signers, they're more likely to accept the note as valid payment.
+4. **Acceptance (Receiving Notes)**: When an agent receives a note, they evaluate its credibility based on the signatures of the previous holders. If they trust the signers, they're more likely to accept the note as valid payment.
 
-5. 💱 **Redemption (Cashing Out)**: At any point, the current holder of a note can redeem it with any of the previous holders. They can ask for the equivalent value of the note in gold or other agreed-upon assets.
+5. **Redemption (Cashing Out)**: At any point, the current holder of a note can redeem it with any of the previous holders. They can ask for the equivalent value of the note in gold or other agreed-upon assets.
 
-6. 🌟 **Dynamic Quality (Note Reputation)**: As a note circulates and accumulates signatures from trusted agents, its perceived credibility and value can increase, even if the original issuer didn't have full collateral backing.
+6. **Dynamic Quality (Note Reputation)**: As a note circulates and accumulates signatures from trusted agents, its perceived credibility and value can increase, even if the original issuer didn't have full collateral backing.
 
 The key advantages of ChainCash are:
 
-- 🔒 **Transparency**: The collateral backing the notes is publicly verifiable on the blockchain.
-- 🌈 **Flexibility**: Notes can be issued and endorsed by multiple agents, not just the original issuer.
-- 📈 **Stability**: By using gold as a unit of account, ChainCash provides a stable measure of value.
+- **Transparency**: The collateral backing the notes is publicly verifiable on the blockchain.
+- **Flexibility**: Notes can be issued and endorsed by multiple agents, not just the original issuer.
+- **Stability**: By using gold as a unit of account, ChainCash provides a stable measure of value.
 
 In essence, ChainCash is a decentralized monetary system that enables the creation and exchange of digital notes based on collateral, trust, and a golden standard. It offers a flexible and transparent alternative to traditional centralized currencies.
 
-## Introduction
+
+### Creation and Circulation of Digital Notes
 
 In our digital monetary system, we conceptualize money as a collection of digital notes. Each note's value is underpinned by the collective trust and collateral of all previous holders. Here's how it works:
 
-### Creation and Circulation of Digital Notes
 
 - **Issuing Notes**: Any participant, referred to as an agent, can create a digital note. This creation can serve as a form of collateral.
 - **Spending and Endorsing**: When an agent spends a note, either one received from another agent or self-created, they essentially endorse it with their signature.
