@@ -72,11 +72,13 @@ Inspired by historical peer-to-peer monetary systems such as the WAT system, Cha
 ## Advantages and Drawbacks
 
 Advantages:
+
 - Combines trust and collateral in a unique way for money issuance
 - Provides elasticity of supply without enforcing individual users to accept lower quality notes
 - Supports the building of various monetary systems on top of it
 
 Drawbacks:
+
 - Notes are non-fungible due to unique backing, which may limit their use in certain DeFi applications (e.g., liquidity pools, lending pools)
 - Currently lacks privacy features in payments (this topic is left for further research)
 

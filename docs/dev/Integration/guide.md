@@ -391,3 +391,25 @@ Wallet nodes do not necessarily need to expose their ports, although you can do 
 
 Ergo does not require adding your node's IP to a whitelist for synchronization.
 
+### Frequently Asked Questions
+
+**What is the difference between the value field and assets array in a box?**
+Each box always has an ERG value in the value field. Assets are optional and are represented in the assets array. A box can contain a combination of ERG and tokens.
+
+**What is the difference between inclusionHeight and creationHeight?**
+Creation height is when the transaction was built, but it's not reliable since the person building the transaction can input a number <= current block height. Inclusion height is the block number where the transaction was first included (first confirmation).
+
+**How can I get the block number of the first transaction confirmation?**
+Call /blocks/{blockId}/header to get the block height. The height in the header defines the block number in which the transactions from that block received their first confirmation.
+
+**Is the numConfirmations value returned by /blockchain/transaction/byId/{txId} the number of transaction confirmations?**
+Yes, it is.
+
+**What is considered a safe number of confirmations?**
+A common practice is to use 10 confirmations for deposits, which takes about 20 minutes. Ergo doesn't have many forking events due to the relatively long block time.
+
+**What's the difference between /wallet/balances and /wallet/balances/withUnconfirmed endpoints?**
+/balances returns the balance excluding current unconfirmed transactions in the mempool. /balances/withUnconfirmed accounts for transactions in the mempool, returning the confirmed balance plus (or minus) unconfirmed transactions.
+
+**Which endpoint should be used to get the balance before sending a transaction?**
+When working with chained transactions, it's better to use /balances/withUnconfirmed to get the balance before sending a transaction, as it reflects the "new wallet balance" after sending the previous transaction.
