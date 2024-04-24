@@ -21,7 +21,7 @@ As of April 2024, the complete treasury of the foundation, including market maki
 | RSN   | 30,000,000 | $0.0976 | $2,928,000 |
 | SPF   | 28,000,000 | $0.04075 | $1,141,000 |
 | BTC   | 6.26       | $66,281 | $414,919 |
-| USD   | 59,515     | $1 | $126,606 |
+| USD   | 59,515     | $1 | $59,515 |
 | Gluon | 335,000    | $1 | $335,000 |
 | Total |  | | **$5,602,927** |
 
