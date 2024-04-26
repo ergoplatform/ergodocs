@@ -16,6 +16,10 @@ Click any of the event names below to jump directly to an overview and related r
 - (Oct 22) [ERGOHACK V: *Mining & Minting*](#ergohackv)
 - (Feb 23) [ERGOHACK VI: Cypherpunk Finance](#ergohackvi)
 - (Oct 23) [ERGOHACK VII: Future of Finance: Ways of Adoption](#ergohackvii)
+- (May 24) [ERGOHACK VIII: Ergo as a Smart Layer](#ergohackviii)
+
+### ERGOHACKVII
+
 
 ### ERGOHACKVII
 
