@@ -19,8 +19,6 @@ Sigma Chains are built upon the robust foundation of Ergo, leveraging its advanc
 
 Sigma Chains also place a strong emphasis on cross-chain security. While the security assumptions behind solutions like Cosmos IBC, Polkadot, and BIP-301 may be unclear, Sigma Chains prioritize a robust and well-defined security model. By focusing on cross-chain security, Sigma Chains ensure that the interconnected network of blockchains remains resilient and resistant to attacks, providing a secure environment for users and developers alike.
 
-As Sigma Chains gain traction, the demand for ERG, the native token of the Ergo blockchain, will grow. This increased demand will create inherent buy pressure, especially as emissions decline over time. With Sigma Chains, Ergo gains access to new on-chain markets, allowing ERG to become more widely distributed and grow as collateral. This expanded use case for ERG will further drive its adoption and value within the ecosystem.
-
 Moreover, the growth of Sigma Chains will accelerate development and increase Ergo's mindshare in the blockchain space. As more developers and projects recognize the potential of Sigma Chains and the benefits of building on top of Ergo, the ecosystem will flourish. This increased mindshare will attract more talent, resources, and innovation to the Ergo ecosystem, cementing its position as a leading blockchain platform.
 
 ## Key Features of Sigma Chains
