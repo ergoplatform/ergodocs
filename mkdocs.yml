@@ -82,6 +82,8 @@ plugins:
 
 markdown_extensions:
   - pymdownx.details
+  - pymdownx.tasklist:
+        custom_checkbox: true
   - codehilite
   - extra
   - tables

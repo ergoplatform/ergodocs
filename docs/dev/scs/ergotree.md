@@ -22,7 +22,7 @@ ErgoTree achieves this by combining:
 By evaluating these predicates, ErgoTree authenticates transactions, ensuring their legitimacy and adherence to set rules. Its ability to validate and secure transactions while adapting to the transaction context makes ErgoTree a versatile tool, extending its applicability to various digital platforms, including other cryptocurrencies and Central Bank Digital Currencies (CBDCs), or even non-monetary digital objects where smart access could be needed.
 
 - Additional parties can be authorized
-- PArties can delegate authorization
+- Parties can delegate authorization
 - AND/OR expressions
 - Conditions can be more than who signed. 
 

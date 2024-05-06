@@ -59,7 +59,6 @@ Several strategies can help preserve atomic composability when implementing shar
 
 Establish a mechanism for secure and efficient communication between shards to enable cross-shard transactions. This mechanism ensures that all components of a multi-step transaction are either fully committed or rolled back, even when the transaction spans multiple shards.
 
-![Cross-Shard Transaction](cross-shard-transaction.png)
 
 #### Locking Mechanisms
 
