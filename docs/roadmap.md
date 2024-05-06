@@ -27,6 +27,8 @@ Ergo’s commitment to decentralization, fairness, and accessibility is evident 
 - [x] **Turing-Complete Smart Contracts:** Allows for complex on-chain computations and advanced dApp development
 - [x] **Long-Term Economic Sustainability:** Ensured through storage rent, transaction fees from DeFi, and subpool mining
 
+For more information please see the [Why Ergo?](https://docs.ergoplatform.com/dev/protocol/why/) section.
+
 ////
 
 
@@ -104,9 +106,9 @@ The Sigma language and its associated SDKs are crucial for enabling advanced cry
 - [x] Threshold Signatures
 - [x] Sigma Protocols
 - [x] AVL Trees
-- [ ] Sigma 6.0 
-    - [ ] [MerkleTrees](https://github.com/ScorexFoundation/sigmastate-interpreter/issues/296)
-    - [ ] [Roadmap after v5.0](https://github.com/ScorexFoundation/sigmastate-interpreter/issues/810)
+- [ ] Sigma 6.0 ([EIP-0050](https://github.com/ergoplatform/eips/blob/278bee5cb4fccae65a474fe6691cc520454e7ece/eip-0050.md))
+- [ ] [MerkleTrees](https://github.com/ScorexFoundation/sigmastate-interpreter/issues/296)
+
 
 
 #### SDKs
@@ -119,7 +121,6 @@ The Sigma language and its associated SDKs are crucial for enabling advanced cry
     - [ ] Sigma-Rust-Mini development
 - [x] Sigma.js
 
-
 ### Scaling
 
 Scaling is a critical aspect of Ergo's development, ensuring that the platform can handle increasing transaction volumes and user activity. The Ergo team is actively exploring Layer 2 and sidechain offloading proposals, as well as introducing innovative concepts like "Know Your Assumptions" (KYA) for offloading security, to create a scalable and efficient blockchain network.
@@ -128,6 +129,27 @@ Scaling is a critical aspect of Ergo's development, ensuring that the platform c
 - [ ] Layer 2 or sidechain offloading proposals, engineered with long-term scaling in mind and using advanced, well-researched tools
 - [ ] "Know Your Assumptions" (KYA) introduction for offloading security
 
+### EIPs
+
+
+Ergo Improvement Proposals (EIPs) are a set of guidelines and standards designed for the continuous improvement of Ergo. These proposals encompass a wide range of aspects, including but not limited to, core protocol specifications, client APIs, dApp/contract standards, and more.
+
+Here are some of the EIPs that have been proposed and implemented:
+
+- [x] [EIP-0001: UTXO-Set Scanning Wallet API](eip1.md): This EIP focuses on extending the wallet to serve the needs of external applications by providing a flexible scanning interface.
+- [x] [EIP-0020: ErgoPay](eip20.md): An interaction protocol between wallet application and dApp for creating, signing and sending Ergo transactions.
+- [x] [EIP-0037: Tweaking Difficulty Adjustment Algorithm](eip37.md): This EIP proposes changes to make the current difficulty readjustment more reactive and smoother.
+- [x] [EIP-0027: Emission Retargeting Soft-Fork](eip27.md): This EIP proposes an amendment to the emission schedule to ensure the long-term sustainability of the mining protocol.
+
+To gain a better understanding of the structure and formatting of EIPs, we encourage you to review the existing EIPs on [GitHub](https://github.com/ergoplatform/eips) or within [this documentation](https://docs.ergoplatform.com/tags/#eip). This will provide you with a clear picture of the expectations and standards associated with EIPs.
+
+#### Open EIPs
+
+See the [Pull requests](https://github.com/ergoplatform/eips/pulls) section for full details on the open EIPs, some of the most notable are; 
+
+- [ ] [Ready to merge/implemented PRs #86](https://github.com/ergoplatform/eips/issues/86)
+- [ ] EIP-0042 Multi-Signature Wallet
+- [ ] [[WIP] EIP-50 - Sigma 6.0](https://github.com/ergoplatform/eips/pull/100)
 
 ### Upcoming Milestones
 
@@ -153,8 +175,8 @@ Each addition to our budding ecosystem helps to create even more trustless colla
 ### Decentralized Exchanges and Stablecoins
 - [x] SigmaUSD stablecoin (Djed protocol)
 - [x] Spectrum DEX (AMM-based)
-- [ ] [Gluon](gluon.md) stablecoin
-- [ ] [DexyGold](dexy.md) stablecoin
+- [ ] [Gluon](gluon.md) (stablecoin)
+- [ ] [DexyGold](dexy.md) (stablecoin)
 - [ ] [Machina Finance](machina.md) (grid DEX)
 - [ ] [PalmyraComDex](palmyra.md) (commodities DEX)
 
@@ -253,10 +275,10 @@ Each addition to our budding ecosystem helps to create even more trustless colla
 - 
 - 
 -->
-## History
+## References
 
 
-//// details | History
+//// details | Ergo Foundation History
     {type: tip, open: true}
 
 /// details | 2020
@@ -320,10 +342,10 @@ Each addition to our budding ecosystem helps to create even more trustless colla
 
 The following is adapted from [this post on the R&D DAO for Ergo Core thread](https://www.ergoforum.org/t/ergodevs-r-d-dao-for-ergo-core/4663). 
 
-### Vision
+**Vision**
 The Ergo Core Dev DAO envisions Ergo as Digital Gold 2.0, a mineable digital commodity with trustless derivatives and expressive contracts. By building upon Ergo's robust DeFi ecosystem and introducing sidechains, we aim to expand the decentralized monetary base and derivative money supply, creating a more inclusive and accessible financial system for the Ergo community and beyond.
 
-### Completed Milestones
+**Completed Milestones**
 The Ergo platform, with the support of the Ergo Foundation and community developers, has already made significant strides in developing its infrastructure and DeFi ecosystem. This includes launching basic infrastructure such as wallets and explorers, as well as a wide range of DeFi tools and trustless derivatives, such as:
 
 - [x] SigmaUSD stablecoin (Djed protocol)
@@ -342,7 +364,7 @@ The Ergo platform, with the support of the Ergo Foundation and community develop
 
 These tools collectively contribute to the creation of more trustless collateral through various means such as AuctionCoin, OptionCoin, and fair initial mining offerings. As a result, Ergo's decentralized monetary base and derivative money supply continue to grow. It's worth noting that the entire DeFi ecosystem on Ergo is built upon its unique ErgoTree/ErgoScript contractual layer, also known as Sigma, which provides a secure and flexible foundation for the development of complex financial applications.
 
-## Upcoming Milestones
+**Upcoming Milestones**
 Looking ahead, key milestones include:
 
 - [ ] The launch of new DeFi tools such as Paideia, Dexy/Gluon stablecoins, ChainCash, Analog Ergo, and OptionCoin
@@ -354,7 +376,7 @@ Looking ahead, key milestones include:
 
 By achieving these milestones, the Ergo Core Dev DAO aims to establish Ergo and its Sigma layer as a central hub for UTXO PoW blockchains with powerful smart contract capabilities.
 
-### Monetization Strategies for ErgoDevs DAO
+**Monetization Strategies for ErgoDevs DAO**
 To ensure the sustainability and growth of the Ergo ecosystem, the ErgoDevs DAO is exploring various monetization strategies, such as:
 
 - [ ] Receiving a percentage of sidechain token emissions, similar to the Ergo Treasury contract
