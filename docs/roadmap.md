@@ -123,8 +123,6 @@ The Sigma language and its associated SDKs are crucial for enabling advanced cry
 
 ### Scaling
 
-Scaling is a critical aspect of Ergo's development, ensuring that the platform can handle increasing transaction volumes and user activity. The Ergo team is actively exploring Layer 2 and sidechain offloading proposals, as well as introducing innovative concepts like "Know Your Assumptions" (KYA) for offloading security, to create a scalable and efficient blockchain network.
-
 - [x] Plasma Library on top of AVL Trees, drastically improving light client verification efficiency compared to traditional merkle tree data structures
 - [ ] Layer 2 or sidechain offloading proposals, engineered with long-term scaling in mind and using advanced, well-researched tools
 - [ ] "Know Your Assumptions" (KYA) introduction for offloading security
@@ -145,7 +143,7 @@ To gain a better understanding of the structure and formatting of EIPs, we encou
 
 #### Open EIPs
 
-See the [Pull requests](https://github.com/ergoplatform/eips/pulls) section for full details on the open EIPs, some of the most notable are; 
+See the [Pull requests](https://github.com/ergoplatform/eips/pulls) section for full details on the open EIPs, some of the most notable are;
 
 - [ ] [Ready to merge/implemented PRs #86](https://github.com/ergoplatform/eips/issues/86)
 - [ ] EIP-0042 Multi-Signature Wallet
@@ -165,7 +163,7 @@ See the [Pull requests](https://github.com/ergoplatform/eips/pulls) section for 
     - [ ] Light SPV Clients using NiPoPoWs
     - [ ] EIP-12 / EIP-20
     - [x] Nautilus
-        - [ ] v2 manifest rework
+        - [ ] Manifest v3 rework
 
 
 ## DeFi Ecosystem

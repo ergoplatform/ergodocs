@@ -22,7 +22,13 @@ Finally, Ergo is a self‐amendable protocol, that allows it to absorb new ideas
 
 ### Why '*Ergo*'? 
 
-Ergo means "therefore" in Latin but "work" in Greek. This is also a play on the fact that the cryptocurrency's design is ***ergo***nomical.
+"Ergo" is a versatile term with deep roots in both Latin and Greek. In Latin, "ergo" serves as a conjunction meaning "therefore," commonly used to introduce logical conclusions. This reflects the cryptocurrency's design, which aims for logical, straightforward, and efficient use.
+
+In Greek, the related word "ἔργον" (ergon) translates to "work" or "task," which subtly nods to the work or effort that goes into mining and maintaining the blockchain—key aspects of cryptocurrency functioning. The choice of the name "Ergo" cleverly plays on these themes, emphasizing the coin's user-friendly and work-efficient ethos, hence the description of its design as ergonomic. This aligns with the overall philosophy of reducing effort and increasing effectiveness in its applications and transactions.
+
+Additionally, "ERG" is the ticker symbol for the Ergo cryptocurrency, further tying back to the term's roots in work and energy (erg being a small unit of energy in physics), which metaphorically could be seen as the "energy" users invest in the network. 
+
+The name "Ergo" encapsulates both a philosophical approach and a practical application, making it a fitting choice for a digital currency designed to be efficient and logical.
 
 ### Where can I see analytics on use?
 
