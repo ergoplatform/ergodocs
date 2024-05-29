@@ -31,14 +31,14 @@ Ergo has a lively and diverse community made up of various sub-ecosystems. Here�
 - **Social Media**: Promote Ergo on platforms like Nostr, Bsky, Instagram, TikTok, Facebook, and subreddits. Wherever people gather online, there’s an opportunity to spread the word about Ergo.
 - **Ergo Forum**: Check out various strategies and tips on the [Ergo Forum](https://www.ergoforum.org/c/marketing/13) to enhance your marketing efforts.
 
-### Community Engagement, Support, and Regional Management
+### Community Engagement and Support
 
 - **Help New Users**: Be active on community forums, Discord, Telegram, and social media to help new users with their questions. Providing a welcoming environment can help retain new community members.
 - **Feedback and Suggestions**: Actively provide feedback and suggestions to the Ergo development team. Your insights can help improve the platform and ensure it meets the community’s needs.
 - **Proof of Work**: Show your dedication by creating and executing marketing initiatives. If your work gains traction and community support, consider running a raffle to fund further promotion (e.g., local events, stickers, etc.).
 - **Regional Managers**: If you're passionate about setting up a regional Ergo branch, managing local chats, organizing meet-ups, and fostering a thriving community, we’d love to hear from you. Engage with the community, demonstrate your capabilities, and your proactive involvement could lead to a more significant role.
 
-### Fundraising, Crowdfunding, and Treasury Proposals
+### Fundraising and Crowdfunding
 
 - **Crowdfunding Campaigns**: Organize crowdfunding campaigns to fund specific projects or initiatives within the Ergo ecosystem. If you have a great marketing idea, consider launching a crowdfunding campaign to gather support from the community.
 - **Create Raffles**: Organize community raffles to raise funds for marketing initiatives. Engage the community by offering exciting prizes and using the proceeds to support various marketing efforts.
