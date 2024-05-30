@@ -39,7 +39,7 @@ This section will cover how to use the Paideia beta. Alternatively, you can watc
    - Reach out to the Paideia team for further assistance.
 
 ## Voting on Proposals
-DAO members can vote on active proposals. No bPaideia holdings are required for voting. Be aware that there may be a delay before votes are reflected in the UI, and a page refresh may be necessary.
+DAO members can vote on active proposals. 0.1 bPaideia is required to vote on a proposal. Be aware that there may be a delay before votes are reflected in the UI, and a page refresh may be necessary.
 
 ## Staking and Unstaking
 
