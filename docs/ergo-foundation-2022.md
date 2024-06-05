@@ -1,8 +1,13 @@
----
-tags:
-  - Ergo Foundation
----
 # Ergo Foundation Transparency Report 2022
+
+
+
+/// admonition | Outdated
+    type: warning
+
+This is the 2022 Transparency report, for the latest version please see the [Ergo Foundation](ergo-foundation.md) section. 
+///
+
 
 The Ergo Foundation (EF) is a non-profit foundation dedicated to advancing the adoption of Ergo. The Foundation's Treasury is sourced from a small portion of mined blocks during the first 2.5 years from Ergo's mainnet launch. This allocation amounted to 4,330,791.5 ERGs or 4.43% of the total supply.
 

@@ -25,16 +25,16 @@ Click any of the event names below to jump directly to an overview and related r
 3. **Trustless Relays**: Superseding BTC custody solutions with Ergo smart-contracts
 4. **Cup of Sugar**: Promoting local farm-fresh, traceable products using blockchain to drive community-driven, sociable commerce.
 5. **Random Number Generator**: Developing robust, time-dependent RNG mechanisms powered by blockchain for unbiassed outcomes in games and lotteries.
-6. **ReputationSystem**: Incorporating Bitcoin Runes into the Reputation System and utilising reputation proofs on the Bitcoin blockchain.
+6. **ReputationSystem**: (Withdrawn) Incorporating Bitcoin Runes into the Reputation System and utilising reputation proofs on the Bitcoin blockchain.
 7. **Crystal Pool**: Self-custodial exchange that offers real time user experience comparable to a CEX. 
 8. **Lightning Swaps**: Integration for Bitcoin Lightning Network to Ergo atomic cross chain swaps.
 9. **Mining BTC Swap**: The Sigmanaut Core Mining Pool Team is working on Permissionless Pool Parameters and Reward Swapping
 10. **Space Wallet**: A cross-platform wallet which uses nipopows to sync against the chain (SPV workflow) and provides basic in app dApp/dApp connector functionalities.
 11. **Wallet Wonderland**: Creating visual guides and tutorials for various wallets, aiming to provide detailed and easily updatable documentation.
-12. **Empheral Messaging**: Desktop application to read and timestamp messages fast from the mempool, focusing on token-burning mechanisms for mining bonuses.
-13. **Sigma Wallet**: UX-focused wallet, inspired by known wallets but emphasizing privacy and non-reusable addresses.
+12. **Empheral Messaging**: (Withdrawn) Desktop application to read and timestamp messages fast from the mempool, focusing on token-burning mechanisms for mining bonuses.
+13. **Sigma Wallet**: (Withdrawn) UX-focused wallet, inspired by known wallets but emphasizing privacy and non-reusable addresses.
 14. **Huangians**: Project details to be confirmed. (late entry from a group of CS students @ Cornell)
-
+15. **Rosen Port**: Batching smaller orders to bypass the $10 minimum fee.
 
 ### ERGOHACKVII
 

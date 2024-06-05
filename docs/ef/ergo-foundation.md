@@ -1,4 +1,9 @@
-
+---
+tags:
+  - Ergo Foundation
+  - Transparency Report
+  - Treasury
+---
 # The Ergo Foundation
 
 This section provides a comprehensive overview of the Ergo Foundation, aiming to maintain transparency. For more detailed information, please refer to the respective sections:
