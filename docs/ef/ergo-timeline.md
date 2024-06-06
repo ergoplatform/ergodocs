@@ -73,7 +73,7 @@ Please let us know in the development chats what is needed for AppKit, ergo-wall
 
 #### Ecosystem & Community
 
-- **Community**: GreasyCEX, Erg0ne, Sigmanauts @ NFTxLV
+- **Community**: Erg0ne, Sigmanauts @ NFTxLV
 - **Mining**: Sigmanauts mining pool.
 
 ##### Launched in 2023

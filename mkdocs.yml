@@ -163,6 +163,25 @@ nav:
       - ERGOHACK: events/ergohack.md
       - ErgoSummit: events/ergosummit.md
 
+
+  #
+  # Get Involved
+  #
+  - Get Started:
+    - getting-started.md
+    - Contribute:
+      - contribute.md
+      - Developers:
+        - contribute/devs.md
+        - Bounties: contribute/bounties.md
+        - Grants: contribute/grants.md
+        - Roles: contribute/roles.md
+      - Marketing: contribute/marketing.md
+      - Sigmanauts: contribute/sigmanauts.md
+      - Contribute to the docs!: contribute/docs.md
+
+
+
   #
   # ECOSYSTEM SECTION
   #
@@ -719,21 +738,5 @@ nav:
       - Smartpools: 
         - mining/smartpools.md
         - Subpooling: mining/setup/subpool.md
-
-  #
-  # Get Involved
-  #
-  - Get Involved!: 
-    - contribute.md
-    - Developers: 
-      - contribute/devs.md
-      - Bounties: contribute/bounties.md
-      - Grants: contribute/grants.md
-      - Roles: contribute/roles.md
-    - Marketing: contribute/marketing.md
-    - Sigmanauts: contribute/sigmanauts.md
-    - Contribute to the docs!: contribute/docs.md
-    
-
 
 
