@@ -78,7 +78,7 @@ For more details regarding node configuration, please refer to the [manual insta
 - You might need to specify the Java heap space with the -Xmx flag depending on your device. On the Samsung S8+, a heap size of -Xmx1536M was optimal. The node start command with a heap size of 2Gb looks like this: 
 
 ```bash
-java -Xmx2G  -jar ergo-<release>.jar --mainnet -c ergo.conf
+java -Xmx2G  -jar ergo.jar --mainnet -c ergo.conf
 ```  
 
 - If you use the Ergo Wallet App, you can replace the default node with [http://127.0.0.1:9053](http://127.0.0.1:9053), allowing you to use the node running on your Android device. 
