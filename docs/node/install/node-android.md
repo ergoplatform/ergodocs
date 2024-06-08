@@ -65,7 +65,7 @@ Use the following command to run the node for the first time.
 java -jar ergo.jar --mainnet -c ergo.conf
 ```
   
-The node will now start synchronizing. To track progress, open a browser on your device and navigate to the Ergo Node panel at ``http://127.0.0.1:9053/panel``.
+The node will now start synchronizing. To track progress, open a browser on your device and navigate to the Ergo Node panel at [http://127.0.0.1:9053/panel](http://127.0.0.1:9053/panel).
 
 For more details regarding node configuration, please refer to the [manual install](manual.md) guide. Note that setting up the API key and wallet is not required.
 
