@@ -34,7 +34,7 @@ pkg install wget openjdk-17
 
 ## Downloading the Ergo Client Release & Setting Up the Config File
 
-Download the latest Ergo client release from Github using wget. You can find it [here](https://github.com/ergoplatform/ergo/releases), or use the following command to grab the latest release, and rename it to `ergo.jar`.
+Download the latest Ergo client release from Github using wget. You can find it [here](https://github.com/ergoplatform/ergo/releases), or use the following command to grab the latest release.
 
 ```
 wget -qO- "https://api.github.com/repos/ergoplatform/ergo/releases/latest" | grep -o 'https://github.com/ergoplatform/ergo/releases/download/.*ergo-[0-9.]*\.jar' | wget -q --show-progress -i- -O ergo.jar
