@@ -83,4 +83,4 @@ java -Xmx2G  -jar ergo.jar --mainnet -c ergo.conf
 
 - If you use the Ergo Wallet App, you can replace the default node with [http://127.0.0.1:9053](http://127.0.0.1:9053), allowing you to use the node running on your Android device. 
   
-- The package 'tmux' is useful, and recommended if youd like to run the node in the background. 
+- The package 'tmux' is useful, and recommended if you'd like to run the node in the background. 
