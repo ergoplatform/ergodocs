@@ -34,10 +34,11 @@ pkg install wget openjdk-17
 
 ## Downloading the Ergo Client Release & Setting Up the Config File
 
-Download the latest Ergo client release from Github using wget. You can find it [here](https://github.com/ergoplatform/ergo/releases). Ensure you copy the direct link to the file.
+Download the latest Ergo client release from Github using wget. You can find it [here](https://github.com/ergoplatform/ergo/releases), or use the following command to grab the latest release.
 
 ```
-wget https://github.com/ergoplatform/ergo/releases/download/v5.0.4/ergo-5.0.4.jar
+wget -qO- "https://api.github.com/repos/ergoplatform/ergo/releases/latest" | grep -o 'https://github.com/ergoplatform/ergo/releases/download/.*ergo-[0-9.]*\.jar' | wget -q --show-progress -i- -O ergo.jar
+
 ```
 
 Create a config file named `ergo.conf` using nano.
@@ -58,13 +59,13 @@ ergo {
 
 ## Launching the Node For the First Time
 
-Use the following command to run the node for the first time (replace "`<release>`" with the version of the node that you downloaded).
+Use the following command to run the node for the first time.
 
 ```
-java -jar ergo-<release>.jar --mainnet -c ergo.conf
+java -jar ergo.jar --mainnet -c ergo.conf
 ```
   
-The node will now start synchronizing. To track progress, open a browser on your device and navigate to the Ergo Node panel at http://127.0.0.1:9053/panel.
+The node will now start synchronizing. To track progress, open a browser on your device and navigate to the Ergo Node panel at [http://127.0.0.1:9053/panel](http://127.0.0.1:9053/panel).
 
 For more details regarding node configuration, please refer to the [manual install](manual.md) guide. Note that setting up the API key and wallet is not required.
 
@@ -77,9 +78,9 @@ For more details regarding node configuration, please refer to the [manual insta
 - You might need to specify the Java heap space with the -Xmx flag depending on your device. On the Samsung S8+, a heap size of -Xmx1536M was optimal. The node start command with a heap size of 2Gb looks like this: 
 
 ```bash
-java -Xmx2G  -jar ergo-<release>.jar --mainnet -c ergo.conf
+java -Xmx2G  -jar ergo.jar --mainnet -c ergo.conf
 ```  
 
-- If you use the Ergo Wallet App, you can replace the default node with [http://127.0.0.1:9053](http://127.0.0.1:9053), allowing you to use the node running on your Android device. 
+- If you use the Ergo Wallet App, you can replace the default node with ``http://127.0.0.1:9053``, allowing you to use the node running on your Android device. 
   
-- The package 'tmux' is useful if you want to run other programs alongside the node within Termux.
+- The package 'tmux' is useful, and recommended if you'd like to run the node in the background. 
