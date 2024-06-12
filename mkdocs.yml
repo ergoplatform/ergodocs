@@ -200,7 +200,7 @@ nav:
         - Watchers:
           - eco/rosen/ergo-watcher.md
           - Prerequisites: eco/rosen/rosen-preq.md
-          - eco/rosen/bitcoin-watcher.md
+          - Bitcoin Watcher: eco/rosen/bitcoin-watcher.md
         - Guards: eco/rosen/rosen-guard.md
         - Tokenomics: eco/rosen/rosen-tokenomics.md
         - Team: eco/rosen/rosen-team.md

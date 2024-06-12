@@ -264,28 +264,32 @@ In this command:
 - `user@watcher-server` specifies the username and the server to connect to. Replace `user` with your actual username and `watcher-server` with the actual hostname or IP address of your server.
 ///
 
-## Security Considerations
-
-- Keep your watcher machine and Docker install updated with the latest security patches.
-- Don't reuse your watcher's RPC password anywhere else.
-- Secure your machine's SSH login with a strong password and/or public key authentication.
-- Consider running the watcher in a dedicated VM or container for isolation.
-- Regularly monitor your watcher's logs and web UI for any signs of issues.
-- Keep your collateral wallet secure, as the wallet owner has control over unstaking collateral.
-
-## Monitoring and Alerting
-
-Maintaining high watcher uptime is critical to avoid collateral penalties. Consider setting up external monitoring and alerting:
-
-- Services like Uptime Robot or Pingdom can monitor your watcher's web UI and alert you if it goes down.
-- Use a service like Healthchecks.io to monitor your watcher's log for error keywords and send alerts.
-- The Rosen team's monitoring will alert in Telegram/Discord if your watcher is down, but additional self-monitoring is strongly recommended.
 
 ## Watcher FAQs
 
-## Troubleshooting
+
 
 ### Tips
+
+/// details | Security Considerations
+     {type: warning, open: false}
+
+Keep your watcher machine and Docker install updated with the latest security patches.
+Don't reuse your watcher's RPC password anywhere else.
+Secure your machine's SSH login with a strong password and/or public key authentication.
+Consider running the watcher in a dedicated VM or container for isolation.
+Regularly monitor your watcher's logs and web UI for any signs of issues.
+Keep your collateral wallet secure, as the wallet owner has control over unstaking collateral.
+///
+
+/// details | Monitoring and Alerting
+     {type: info, open: false}
+Maintaining high watcher uptime is critical to avoid collateral penalties. Consider setting up external monitoring and alerting:
+
+Services like Uptime Robot or Pingdom can monitor your watcher's web UI and alert you if it goes down.
+Use a service like Healthchecks.io to monitor your watcher's log for error keywords and send alerts.
+The Rosen team's monitoring will alert in Telegram/Discord if your watcher is down, but additional self-monitoring is strongly recommended.
+///
 
 /// details | Increasing Bitcoin Node DbCache
      {type: info, open: false}
@@ -372,6 +376,9 @@ Docker Compose will automatically load the variables from the `.env` file.
 ///
 
 
+
+
+## Troubleshooting
 
 ### UI Errors
 
