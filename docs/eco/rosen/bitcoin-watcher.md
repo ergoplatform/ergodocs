@@ -207,7 +207,7 @@ Your Bitcoin watcher is now set up and securing the Rosen bridge. Monitor the lo
 
 ## Updating the Watcher
 
-Watcher updates are periodically required, especially before network upgrades. Update announcements are posted in the [Rosen Telegram](https://t.me/rosenbridge) and [Discord](https://discord.gg/rosenbridge).
+Watcher updates are periodically required, especially before network upgrades. Update announcements are posted in the [Rosen Telegram](https://t.me/rosenbridge_erg) and [Discord](https://discord.gg/nhYh832X7P).
 
 To update:
 
@@ -460,7 +460,7 @@ You don't need to manually watch and approve transactions, the software will han
 2. Create a commitment using report permits.
 3. Aggregate all participating watchers commitment (into something called event trigger).
 4. Wait for guards stuff, especially target chain tx and reward tx submission.
-5. 5. Get rewards.
+5. Get rewards.
 ///
 
 
