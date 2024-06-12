@@ -288,7 +288,7 @@ Maintaining high watcher uptime is critical to avoid collateral penalties. Consi
 ### Tips
 
 /// details | Increasing Bitcoin Node DbCache
-{type: info, open: false}
+     {type: info, open: false}
 To speed up the initial sync of your Bitcoin node, you can increase the dbcache setting if you have sufficient RAM. For example, to allocate 4GB of cache, add the following line to your bitcoin.conf:
 ```
 dbcache=4096
@@ -297,11 +297,10 @@ dbcache=4096
 Adjust the value based on your available memory.
 ///
 /// details | Current Bitcoin Blockchain Size
-{type: info, open: false}
+     {type: info, open: false}
 As of June 2024, the Bitcoin blockchain size is approximately 657GB. Keep this in mind when provisioning storage for your Bitcoin node.
 ///
 /// details | Bitcoin Blockchain Snapshots
-{type: warning, open: false}
 There are services that provide Bitcoin blockchain snapshots to speed up the initial sync process. However, be cautious when using these snapshots, as they may not be compatible with the txindex=1 requirement for the Rosen Bitcoin watcher. Ensure that the snapshot is from a full node with transaction indexing enabled.
 ///
 
