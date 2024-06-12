@@ -46,7 +46,7 @@ Below you'll find a step-by-step guide to [setting up a Bitcoin Watcher](#settin
 
 ## Setting Up a Bitcoin Node (Optional)
 
-For optimal watcher performance and decentralization, it's recommended to run your own fully synced Bitcoin node:
+For optimal watcher performance and decentralization, it's recommended to run your own fully synced Bitcoin node. However this will consume significant disk space so alternatively you can use a public node as detailed in the next section. 
 
 1. Install Bitcoin Core following the [official instructions](https://bitcoin.org/en/download) for your OS.
 
@@ -76,11 +76,7 @@ For optimal watcher performance and decentralization, it's recommended to run yo
      ```
      rpcallowip=172.16.0.0/12
      ```
-   - Consider setting `minrelaytxfee` and `blockmaxweight` to lower values to ensure bridge transactions get mined promptly:
-     ```
-     minrelaytxfee=0.00001000
-     blockmaxweight=4000000
-     ```
+
    - Save the file
 
 5. If `bitcoind` was already running, stop and restart it:
@@ -96,6 +92,8 @@ For optimal watcher performance and decentralization, it's recommended to run yo
    Look for `"initialblockdownload": false` to confirm the node is synced.
 
 Your Bitcoin node is now ready to support your watcher. Proceed with watcher setup.
+
+
 
 ## Setting Up the Watcher
 
@@ -130,14 +128,31 @@ Your Bitcoin node is now ready to support your watcher. Proceed with watcher set
      bitcoin:
        type: 'esplora'
        esplora:
-         url: 'https://blockstream.info/api'
+         url: 'https://mempool.space'
          timeout: 60000
        initial:
          height: 847480
      ```
-     Adjust `timeout` as needed if you encounter timeout errors.
 
-3. Create a `docker-compose.yml` file to define the watcher service:
+- Replace 'https://mempool.space' with the base URL of your chosen API provider.
+- Adjust the timeout value (in milliseconds) if needed. This is how long the watcher will wait for a response from the API before timing out.
+- Set `initial.height` to a recent Bitcoin block height to minimize the number of blocks the watcher needs to scan during initial sync. You can find the current block height on a Bitcoin explorer like mempool.space.
+
+3. Save the `local.yaml` file and start your watcher as described in the main setup guide:
+
+   ```bash
+   docker compose up -d
+   ```
+
+   The watcher will now use the specified public Bitcoin API instead of a local node.
+
+Note that public API providers may have rate limits, which could slow down your watcher's syncing speed. If you encounter frequent rate limiting errors, consider upgrading to a paid plan or switching to a different provider.
+
+Also, keep in mind that using a public API makes your watcher dependent on a third-party service. If the API goes down or becomes unreliable, it will affect your watcher's performance. Running your own Bitcoin node, while more resource-intensive, gives you maximum reliability and privacy.
+
+
+
+4. Create a `docker-compose.yml` file to define the watcher service:
    ```yaml
    version: '3.7'
 
@@ -171,7 +186,7 @@ Your Bitcoin node is now ready to support your watcher. Proceed with watcher set
    - If setting up multiple watchers on the same machine, change `container_name` and the host port in `ports` to avoid conflicts.
    - The `networks` section allows the watcher to communicate with other Rosen containers on the same machine over the `rosen_default` Docker network.
 
-4. Create a `.env` file to set environment variables:
+5. Create a `.env` file to set environment variables:
    ```
    CURRENT_NETWORK=BITCOIN
    DATABASE_URL=file:/app/services/watcher/data/database/data.sqlite
@@ -180,13 +195,13 @@ Your Bitcoin node is now ready to support your watcher. Proceed with watcher set
    ```
    - If running multiple watchers, ensure `HTTP_PORT` is unique for each.
 
-5. Start the watcher:
+6. Start the watcher:
    ```
    docker compose up -d
    ```
    Docker will download the watcher image and start the container.
 
-6. Check the logs to monitor sync progress:
+7. Check the logs to monitor sync progress:
    ```
    docker compose logs -f service
    ```
@@ -195,9 +210,9 @@ Your Bitcoin node is now ready to support your watcher. Proceed with watcher set
    curl http://localhost:3030/api/status | jq '.result.scanner."bitcoin-rpc".progress'
    ```
 
-7. Once sync reaches the chain tip, access the watcher's web interface at `http://localhost:3030` (or the configured port).
+8. Once sync reaches the chain tip, access the watcher's web interface at `http://localhost:3030` (or the configured port).
 
-8. Use the web interface to lock your watcher collateral (800 ERG and 33,000.001 RSN), registering your watcher with the bridge.
+9. Use the web interface to lock your watcher collateral (800 ERG and 33,000.001 RSN), registering your watcher with the bridge.
    - If you encounter an insufficient funds error, check that your wallet has exactly the required amounts. The `/api/collateral` endpoint can provide the precise values.
    - After locking collateral, verify it shows as locked in the web interface and via the `/api/collateral` endpoint.
 
