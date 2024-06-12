@@ -56,4 +56,3 @@
 - [Troubleshooting Guide](troubleshooting.md)
 - [Frequently Asked Questions (FAQ)](node-faq.md)
 - [Using the TestNet Tutorial](testnet.md)
-

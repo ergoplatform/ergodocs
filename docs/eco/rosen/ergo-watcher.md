@@ -1,4 +1,4 @@
-# Rosen Watcher Setup
+# Ergo Rosen Bridge Watcher Setup
 
 Watchers are integral to Rosen Bridge, serving as cross-chain oracles. They observe and report deposit events on their network to Ergo, contributing to the network's security and expansion.
 
