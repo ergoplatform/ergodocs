@@ -93,7 +93,10 @@ For optimal watcher performance and decentralization, it's recommended to run yo
 
 Your Bitcoin node is now ready to support your watcher. Proceed with watcher setup.
 
-
+/// details | Running a Pruned Bitcoin Node
+{type: danger, open: false}
+A pruned Bitcoin node is not compatible with the Rosen Bitcoin bridge watcher. The watcher requires the txindex=1 setting, which is not supported by pruned nodes. If you initially synced a pruned node, you'll need to restart the sync with a full node.
+///
 
 ## Setting Up the Watcher
 
@@ -281,6 +284,95 @@ Maintaining high watcher uptime is critical to avoid collateral penalties. Consi
 ## Watcher FAQs
 
 ## Troubleshooting
+
+### Tips
+
+/// details | Increasing Bitcoin Node DbCache
+{type: info, open: false}
+To speed up the initial sync of your Bitcoin node, you can increase the dbcache setting if you have sufficient RAM. For example, to allocate 4GB of cache, add the following line to your bitcoin.conf:
+```
+dbcache=4096
+```
+
+Adjust the value based on your available memory.
+///
+/// details | Current Bitcoin Blockchain Size
+{type: info, open: false}
+As of June 2024, the Bitcoin blockchain size is approximately 657GB. Keep this in mind when provisioning storage for your Bitcoin node.
+///
+/// details | Bitcoin Blockchain Snapshots
+{type: warning, open: false}
+There are services that provide Bitcoin blockchain snapshots to speed up the initial sync process. However, be cautious when using these snapshots, as they may not be compatible with the txindex=1 requirement for the Rosen Bitcoin watcher. Ensure that the snapshot is from a full node with transaction indexing enabled.
+///
+
+
+/// details | Monitoring Bitcoin Node Sync Progress
+     {type: info, open: false}
+You can monitor the sync progress of your Bitcoin node using the `bitcoin-cli` command:
+
+```bash
+bitcoin-cli getblockchaininfo
+```
+
+Look for the `"verificationprogress"` field in the output. A value of `1.000000` indicates that the node is fully synced.
+///
+
+/// details | Using a Separate Machine for the Bitcoin Node
+     {type: info, open: false}
+If you have limited resources on your watcher machine, consider running the Bitcoin node on a separate machine. This way, the resource-intensive block syncing process won't affect the performance of your watcher.
+
+In this case, update the `rpc.url` in your watcher's `local.yaml` to point to the remote Bitcoin node's IP address and RPC port:
+
+```yaml
+bitcoin:
+  type: 'rpc'
+  rpc:
+    url: 'http://<user>:<password>@<remote-ip>:8332'
+```
+
+Make sure to configure the Bitcoin node's `rpcallowip` setting to allow connections from the watcher machine's IP.
+///
+
+/// details | Enabling Transaction Broadcasting
+     {type: info, open: false}
+If you want your Bitcoin node to be able to broadcast transactions (not required for the watcher but useful for debugging), make sure the following line is added to your `bitcoin.conf`:
+
+```
+zmqpubrawtx=tcp://0.0.0.0:28332
+```
+
+This enables the ZeroMQ raw transaction broadcasting feature.
+///
+
+/// details | Using a Config File for Environment Variables
+     {type: info, open: false}
+Instead of specifying environment variables in the `docker-compose.yml` file, you can use a separate `.env` file. This keeps your compose file cleaner and allows for easier management of environment variables.
+
+Create a `.env` file in the same directory as your `docker-compose.yml` with the following content:
+
+```
+CURRENT_NETWORK=BITCOIN
+DATABASE_URL=file:/app/services/watcher/data/database/data.sqlite
+HTTP_PORT=3030
+LOGGER_LEVEL=info
+```
+
+Update your `docker-compose.yml` to reference these variables:
+
+```yaml
+services:
+  service:
+    image: rosen/watcher:3.0.0
+    container_name: watcher_btc
+    env_file:
+      - .env
+    # ... rest of the service definition
+```
+
+Docker Compose will automatically load the variables from the `.env` file.
+///
+
+
 
 ### UI Errors
 
