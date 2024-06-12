@@ -94,8 +94,8 @@ For optimal watcher performance and decentralization, it's recommended to run yo
 Your Bitcoin node is now ready to support your watcher. Proceed with watcher setup.
 
 /// details | Running a Pruned Bitcoin Node
-{type: danger, open: false}
-A pruned Bitcoin node is not compatible with the Rosen Bitcoin bridge watcher. The watcher requires the txindex=1 setting, which is not supported by pruned nodes. If you initially synced a pruned node, you'll need to restart the sync with a full node.
+     {type: danger, open: false}
+A pruned Bitcoin node is not compatible with the Rosen Bitcoin bridge watcher. The watcher requires the `txindex=1` setting, which is not supported by pruned nodes. If you initially synced a pruned node, you'll need to restart the sync with a full node.
 ///
 
 ## Setting Up the Watcher
@@ -125,7 +125,7 @@ A pruned Bitcoin node is not compatible with the Rosen Bitcoin bridge watcher. T
      validThreshold: 72
    ```
    - Replace `<user>` and `<password>` with the RPC username and password from your `bitcoin.conf`.
-   - The `initialHeight` settings determine the starting block height for scanning. Set these to recent blocks to speed up initial sync. Find the current Ergo height at [explorer.ergoplatform.com](https://explorer.ergoplatform.com/) and Bitcoin height at [blockstream.info](https://blockstream.info/).
+   - The `initialHeight` settings determine the starting block height for scanning. Set these to recent blocks to speed up initial sync. Find the current Ergo height at [explorer.ergoplatform.com](https://explorer.ergoplatform.com/) and Bitcoin height at [mempool.space](https://mempool.space).
    - If using an external Bitcoin RPC provider instead of your own node, replace the `bitcoin` section with:
      ```yaml
      bitcoin:
@@ -464,7 +464,7 @@ Incompatibility with certain ARM chips in Raspberry Pis and (ARM Mac Mini M1 Asa
 ### Working with Docker
 
 /// details | Checking logs
-  {type: info, open: false}
+     {type: info, open: false}
 ```bash
 docker compose logs
 ```
