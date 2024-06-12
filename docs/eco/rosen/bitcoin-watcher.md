@@ -1,4 +1,19 @@
 # Bitcoin Rosen Bridge Watcher Setup
+/// details | IMPORTANT
+     {type: warning, open: open}
+
+IMPORTANT: Update all of your Watcher services before 18 JUN, 12 AM UTC by using the following from the Watcher directory:
+
+docker compose down
+docker compose pull
+docker compose up -d
+
+A breaking change has been implemented in this version. We will continue to support older versions until 18 JUN, 12 AM UTC.
+
+Please update your Watcher service as soon as possible, if you don't update your watcher before that time, your permits may be considered fraudulent, and you will lose them!
+
+Please reach out on Telegram or Discord if you require assistance.
+///
 
 Watchers are integral to the Rosen Bridge, serving as cross-chain oracles. They observe and report deposit events on the Bitcoin network to Ergo, contributing to the network's security and expansion.
 
@@ -12,7 +27,7 @@ Before setting up a Bitcoin Watcher, ensure you meet the following requirements:
 
 - A machine with the recommended specs:
   - 8GB+ RAM
-  - 1TB+ storage (especially if running a Bitcoin full node)
+  - 1TB+ storage if running a Bitcoin full node. 30GB otherwise for the Ergo Node. 
   - 2+ CPU cores
   - Reliable always-on internet connection (watcher must maintain 95%+ uptime)
 - [Docker and Docker Compose installed](https://docs.docker.com/get-docker/)
@@ -137,7 +152,7 @@ A pruned Bitcoin node is not compatible with the Rosen Bitcoin bridge watcher. T
          height: 847480
      ```
 
-- Replace 'https://mempool.space' with the base URL of your chosen API provider.
+- If you would like to use a different source than mempool, replace `https://mempool.space` with the base URL of your chosen API provider.
 - Adjust the timeout value (in milliseconds) if needed. This is how long the watcher will wait for a response from the API before timing out.
 - Set `initial.height` to a recent Bitcoin block height to minimize the number of blocks the watcher needs to scan during initial sync. You can find the current block height on a Bitcoin explorer like mempool.space.
 
@@ -245,7 +260,7 @@ To update:
 
 4. Verify in the web interface that the watcher version is the latest required.
 
-Failing to update by the announced deadline risks your collateral being slashed, so stay vigilant.
+
 
 ## Interacting with a Headless Server
 
@@ -265,11 +280,11 @@ In this command:
 ///
 
 
-## Watcher FAQs
 
 
 
-### Tips
+
+## Tips
 
 /// details | Security Considerations
      {type: warning, open: false}
@@ -568,6 +583,7 @@ You don't need to manually watch and approve transactions, the software will han
 5. Get rewards.
 ///
 
+## Watcher FAQs
 
 ### Collateral, Permits and Reporting
 
