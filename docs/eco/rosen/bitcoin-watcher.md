@@ -17,11 +17,11 @@ Before setting up a Bitcoin Watcher, ensure you meet the following requirements:
   - Reliable always-on internet connection (watcher must maintain 95%+ uptime)
 - [Docker and Docker Compose installed](https://docs.docker.com/get-docker/)
 - Basic command line knowledge
-- (Recommended) An [Ergo node synced](https://ergoplatform.org/en/blog/2019_12_02_how_to_setup/) on your machine
-- (Optional) [Bitcoin Core full node synced](https://bitcoin.org/en/full-node) on your machine
+- (Recommended) An [Ergo node synced](install.md) on your machine
+- (Optional) [Bitcoin Core full node synced](#setting-up-a-bitcoin-node-optional) on your machine
 - 800 ERG and 33,000.001 RSN for watcher collateral:
   - [Acquire ERG](https://ergoplatform.org/en/exchanges/)
-  - [Acquire RSN](https://app.ergodex.io/swap)
+  - [Acquire RSN](https://spectrum.fi/)
 ///
 
 There is a [General Watchers app Tutorials Playlist](https://youtube.com/playlist?list=PLyQeADPK2PWgztdc9lCvAyqjknPaN9woQ&si=SNYxoZMv2iID610o), and more tailored guides for each platform will be available soon.
@@ -437,12 +437,6 @@ Anyone. You can actively contribute to the expansion and security audit of the R
 - Enjoy reporting and getting rewards.
 ///
 
-/// details | Is there a limit on the number of watchers?
-     {type: question, open: false}
-77 is the one repo's capacity and cannot be changed, but we'll open other repos. So technically, we can have any number of repos that each has 77 watchers. However, in long run I assume one or two repos is sufficient for each network.
-
-A minimum of 60%+1 of the total number of watchers is required to trigger an event, adjustable by the guard set.
-///
 
 /// details | Can I run multiple watchers?
      {type: question, open: false}
