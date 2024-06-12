@@ -1,5 +1,3 @@
-I apologize for the confusion. Here's the updated Bitcoin Watcher setup guide, incorporating all the relevant information and matching the format of the Ergo Watcher guide:
-
 # Bitcoin Rosen Bridge Watcher Setup
 
 Watchers are integral to the Rosen Bridge, serving as cross-chain oracles. They observe and report deposit events on the Bitcoin network to Ergo, contributing to the network's security and expansion.
