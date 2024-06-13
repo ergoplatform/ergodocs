@@ -1,8 +1,8 @@
 # Bitcoin Rosen Bridge Watcher Setup
-/// details | IMPORTANT
-     {type: warning, open: open}
 
-IMPORTANT: Update all of your Watcher services before 18 JUN, 12 AM UTC by using the following from the Watcher directory:
+/// details | IMPORTANT
+     {type: warning, open: true}
+**IMPORTANT**: Update all of your Watcher services before 18 JUN, 12 AM UTC by using the following from the Watcher directory:
 
 docker compose down
 docker compose pull
