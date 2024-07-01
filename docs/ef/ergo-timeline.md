@@ -189,17 +189,18 @@ The year 2024 marked a significant milestone for the Ergo ecosystem, with the su
     - [x] PalmyraComDex MVP
     - [x] [Trade House](https://ergoauctions.org/trade?pair=ERG-SigUSD)
     - [x] [BlitzTCG](blitz.md)
-    - [x] [Paideia](paideia.md) beta
-    - [x] [Analog Ergo](analog-ergo.md) Alpha
-        - [x] Lightning Swaps
-    - [x] [SigmaGold](siggold.md) Testnet
-    - [x] [DexyGold](dexy.md) Testnet
     - [x] [SkyHarbor Raffle](https://skyharbor.medium.com/enhancing-the-nft-experience-skyharbors-new-initiative-9679e94e3cd8)
     - [x] optionPools
     - [x] Moria Finance
     - [x] Trustless Relys
     - [x] Random Number Generator
     - [x] Crystal Pool
+    - [x] [Paideia](paideia.md) beta
+    - [x] [Analog Ergo](analog-ergo.md) Alpha
+    - [x] Lightning Swaps
+    - [x] [SigmaGold](siggold.md) Testnet
+    - [x] [DexyGold](dexy.md) Testnet
+    - [ ] DexyGold
     - [ ] Raffle V2
     - [ ] [Machina Finance](machina-finance.md)
     - [ ] [ChainCash](chaincash.md)

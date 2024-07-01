@@ -93,12 +93,18 @@ The Ergo node is the backbone of the network, and its ongoing development and op
 - [x] Pruned Full Node & UTXO Set Snapshots
 - [x] [Babel Fees](babel.md)
 - [ ] P2P layer optimization
+- [ ] Bootstrapping improvements
 - [ ] Node V6 implementation
     - [ ] Composable Transactions
     - [ ] Zero-Knowledge Multi-Signature Setups
 - [ ] [Sub-blocks](sub-blocks.md)
+- [ ] Sidechain implementation modularization
+- [ ] Potential RocksDb integration
+- [ ] Signature re-checking optimization
+- [ ] Enhanced testing for indices, scans, and wallet
 
-### Sigma Language and SDKs
+
+### Sigma Language 
 
 The Sigma language and its associated SDKs are crucial for enabling advanced cryptographic features and smart contracts on the Ergo platform. The development of Sigma 6.0, along with the implementation of JIT costing and other optimizations, will further enhance the capabilities and performance of Ergo's smart contract ecosystem.
 
@@ -106,9 +112,11 @@ The Sigma language and its associated SDKs are crucial for enabling advanced cry
 - [x] Threshold Signatures
 - [x] Sigma Protocols
 - [x] AVL Trees
-- [ ] Sigma 6.0 ([EIP-0050](https://github.com/ergoplatform/eips/blob/278bee5cb4fccae65a474fe6691cc520454e7ece/eip-0050.md))
+- [ ] [Sigma 6.0 implementation](https://github.com/ergoplatform/eips/blob/a24fc414abbc10e6ee59f878b280d9ecc725e10c/eip-0050.md) and validation context extension research
+- [ ] Atomic Transactions
+- [ ] ErgoScript 2.0
 - [ ] [MerkleTrees](https://github.com/ScorexFoundation/sigmastate-interpreter/issues/296)
-
+- [ ] Revisiting formal verification implementation
 
 
 #### SDKs
@@ -120,15 +128,34 @@ The Sigma language and its associated SDKs are crucial for enabling advanced cry
     - [ ] 6.0 features implementation in Sigma-Rust
     - [ ] Sigma-Rust-Mini development
 - [x] Sigma.js
+- [ ] Consideration of high-level language support (e.g., Lisp)
+
+#### Libraries and Tooling
+
+- [x] [ergo-lib-go](https://github.com/sigmaspace-io/ergo-lib-go)
+- [x] [escript.online](https://escript.online)
+    - [x] [Blockly Playground Integration](https://escript.online/blockly)
+- [ ] Improvements to error-checking and debugging tools
+
 
 ### Scaling
 
 - [x] Plasma Library on top of AVL Trees, drastically improving light client verification efficiency compared to traditional merkle tree data structures
 - [ ] Layer 2 or sidechain offloading proposals, engineered with long-term scaling in mind and using advanced, well-researched tools
 - [ ] "Know Your Assumptions" (KYA) introduction for offloading security
+- [ ] Sigma Chains development
+    - [ ] Implementing sidechains with trustless transfers and various consensus mechanisms (merged mined with ERG, other blockchains, or double merged mined)
+    - [ ] Expanding Ergo's contractual layer to sidechains, incorporating features like Bulletproofs-based sigma protocols and elevating certain contracts to first-class citizens
+    - [ ] Experimenting with scalability solutions like sharding on sidechains
+    - [ ] Utilizing ERG and other tokens on Ergo and sidechains from launch, fostering a rich and diverse DeFi ecosystem
+    - [ ] Launching existing applications on sidechains, contingent on modifications to the contractual layer
+
+### Mining Infrastructure
+
+- [ ] Lithos decentralized mining pool infrastructure expected launch by end of 2024
+- [ ] Plans for reintroduction of Fair Initial Mining Offerings (FIMOs)
 
 ### EIPs
-
 
 Ergo Improvement Proposals (EIPs) are a set of guidelines and standards designed for the continuous improvement of Ergo. These proposals encompass a wide range of aspects, including but not limited to, core protocol specifications, client APIs, dApp/contract standards, and more.
 
@@ -149,34 +176,40 @@ See the [Pull requests](https://github.com/ergoplatform/eips/pulls) section for 
 - [ ] EIP-0042 Multi-Signature Wallet
 - [ ] [[WIP] EIP-50 - Sigma 6.0](https://github.com/ergoplatform/eips/pull/100)
 
-### Upcoming Milestones
+### Governance
+
+- Ongoing work to define rules for new releases and research-driven development frameworks
+- Encouragement of new stakeholder organizations within the Ergo ecosystem
+
+### Wallets
+
+- [x] Nautilus 
+    - [x] Manifest v3 rework
+- [ ] Light SPV Clients using NiPoPoWs
+- [ ] EIP-12 / EIP-20
 
 
-- [ ] The launch of new DeFi tools such as Paideia, Dexy/Gluon stablecoins, ChainCash, Analog Ergo, and OptionCoin
-- [ ] Sigma Chains development
-    - [ ] Implementing sidechains with trustless transfers and various consensus mechanisms (merged mined with ERG, other blockchains, or double merged mined)
-    - [ ] Expanding Ergo's contractual layer to sidechains, incorporating features like Bulletproofs-based sigma protocols and elevating certain contracts to first-class citizens
-    - [ ] Experimenting with scalability solutions like sharding on sidechains
-    - [ ] Utilizing ERG and other tokens on Ergo and sidechains from launch, fostering a rich and diverse DeFi ecosystem
-    - [ ] Launching existing applications on sidechains, contingent on modifications to the contractual layer
-- [ ] Wallets
-    - [ ] Light SPV Clients using NiPoPoWs
-    - [ ] EIP-12 / EIP-20
-    - [x] Nautilus
-        - [ ] Manifest v3 rework
 
 
 ## DeFi Ecosystem
 
 Each addition to our budding ecosystem helps to create even more trustless collaterral and expands the decentralised monetary base and deriviative money supply. 
 
-### Decentralized Exchanges and Stablecoins
-- [x] SigmaUSD stablecoin (Djed protocol)
+- [ ] The launch of new DeFi tools such as Paideia, Dexy/Gluon stablecoins, ChainCash, Analog Ergo, and OptionCoin
+
+### Decentralized Exchanges 
+
 - [x] Spectrum DEX (AMM-based)
-- [ ] [Gluon](gluon.md) (stablecoin)
-- [ ] [DexyGold](dexy.md) (stablecoin)
+- [x] Trade House
+- [x] Crystal Pool
 - [ ] [Machina Finance](machina.md) (grid DEX)
 - [ ] [PalmyraComDex](palmyra.md) (commodities DEX)
+
+###  Stablecoins
+
+- [x] SigmaUSD stablecoin (Djed protocol)
+- [ ] [Gluon](gluon.md) (stablecoin)
+- [ ] [DexyGold](dexy.md) (stablecoin)
 
 ### Lending and Borrowing
 - [x] [SigmaFi](sigmafi.md) (peer-to-peer loans via bonds)
@@ -192,10 +225,12 @@ Each addition to our budding ecosystem helps to create even more trustless colla
 
 ### Crowdfunding and Auctions
 - [x] [ErgoRaffle](raffle.md) (decentralized crowdfunding)
+    - [ ] v2
 - [x] [ErgoAuctionHouse](ergoauctions.md) (peer-to-peer auctions)
 - [x] [AuctionCoin](auctioncoin.md) (emission via auctions)
 
 ### Interoperability and Bridges
+
 - [x] [Rosen Bridge](rosen.md) (two-layered federated bridge)
     - [x] ADA Bridge
     - [ ] BTC Bridge
@@ -203,6 +238,7 @@ Each addition to our budding ecosystem helps to create even more trustless colla
     - [ ] EVM Bridge
 - [ ] [Analog Ergo](analog-ergo.md) (atomic swaps)
 - [x] [Oracle Pools](oracle.md) (federated transparent data providing)
+- [ ] Trustless Relays
 
 
 ### Privacy and Mixing
@@ -228,51 +264,6 @@ Each addition to our budding ecosystem helps to create even more trustless colla
 
 
 
-<!--
-#### DevDAO Core Development for Q1/Q2 2024 
-
-**[Node](install.md) Development:**
-
-- Implementation of [sub-blocks](subblocks.md)
-- Optimization and review of the P2P layer
-- Avoidance of re-checking signatures when re-validation provides the same result (e.g., for P2PK inputs)
-- Further optimizations during bootstrapping
-- Storing only part of the UTXO set tree in RAM
-- Potential switch to RocksDb
-- Additional tests and polishing for extra indices, scans, and wallet
-- Modularization of the codebase to provide a framework for implementing sidechains
-
-**[Sigma](sigma-lang.md) Development:**
-
-- Implementation of Sigma 6.0
-- Investigation into the possibility of extending the validation context (useful for sidechains)
-
-**[Sigma-Rust](sigma-rust.md) Development:**
-
-- Implementation of [JIT costing](jitc.md)
-- Implementation of 6.0 features to match Scala's capabilities
-
-
-#### Tooling
-
-
-- (TBD) Development of [SPV Client](spv.md)
-- [Sigma Chains](sigma-chains.md) 
-
-### Application Layer
-
-- EVM and BTC Bridge for [Rosen](rosen.md)
-- 
-- [DexyGold](dexy.md) 
-- [Machina Finance](machina-finance.md)
-- [ChainCash](chaincash.md)
-- [PalmyraComDex](palmyra.md)
-- [BlitzTCG](blitz.md)
-- [Paideia](paideia.md)
-- 
-- 
-- 
--->
 ## References
 
 
@@ -334,7 +325,6 @@ Each addition to our budding ecosystem helps to create even more trustless colla
     {type: info, open: false}
 
 
-
 /// details | Developing Digital Gold 2.0 and its Infrastructure 
     {type: tip, open: false}
 
@@ -382,6 +372,54 @@ To ensure the sustainability and growth of the Ergo ecosystem, the ErgoDevs DAO 
 
 These strategies will help fund ongoing development and foster a thriving community of developers and users around the Ergo platform, in collaboration with the Ergo Foundation and the wider Ergo community.
 ///
+
+
+
+<!--
+#### DevDAO Core Development for Q1/Q2 2024 
+
+**[Node](install.md) Development:**
+
+- Implementation of [sub-blocks](subblocks.md)
+- Optimization and review of the P2P layer
+- Avoidance of re-checking signatures when re-validation provides the same result (e.g., for P2PK inputs)
+- Further optimizations during bootstrapping
+- Storing only part of the UTXO set tree in RAM
+- Potential switch to RocksDb
+- Additional tests and polishing for extra indices, scans, and wallet
+- Modularization of the codebase to provide a framework for implementing sidechains
+
+**[Sigma](sigma-lang.md) Development:**
+
+- Implementation of Sigma 6.0
+- Investigation into the possibility of extending the validation context (useful for sidechains)
+
+**[Sigma-Rust](sigma-rust.md) Development:**
+
+- Implementation of [JIT costing](jitc.md)
+- Implementation of 6.0 features to match Scala's capabilities
+
+
+#### Tooling
+
+
+- (TBD) Development of [SPV Client](spv.md)
+- [Sigma Chains](sigma-chains.md) 
+
+### Application Layer
+
+- EVM and BTC Bridge for [Rosen](rosen.md)
+- 
+- [DexyGold](dexy.md) 
+- [Machina Finance](machina-finance.md)
+- [ChainCash](chaincash.md)
+- [PalmyraComDex](palmyra.md)
+- [BlitzTCG](blitz.md)
+- [Paideia](paideia.md)
+- 
+- 
+- 
+-->
 
 - (Nov 22) [A Scalability Plan for Ergo](https://www.ergoforum.org/t/a-scalability-plan-for-ergo/226/4?u=glasgowm)
 - (Dec 21) [Ergo protocol research and client development roadmap](https://www.reddit.com/r/ergonauts/comments/qfjhw4/ergo_protocol_research_and_client_development/)
