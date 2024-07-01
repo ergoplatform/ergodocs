@@ -143,6 +143,7 @@
 
 
 The year 2024 marked a significant milestone for the Ergo ecosystem, with the successful hosting of [ErgoHack VIII - Ergo as a Smart Layer](https://youtube.com/playlist?list=PL8-KVrs6vXLRp_oUjngJiiWMTFo4qZbAk), celebrating Ergo's 5th anniversary on July 1st. Notably, Ergo achieved the remarkable feat of becoming [#1 in TVL% of market cap for a PoW chain](https://x.com/cannon_qq/status/1772254513920876671?t=8KODg1I33kaPSNQw_wn2Bg). Furthermore, Ergo was listed on the MEXC exchange, and discussions for improved accessibility, including potential listings on US markets, were ongoing. The progress of these discussions can be tracked at [this link](https://ergo.getgrist.com/jf9KPR1HUDJH/Project-Management/p/28).
+
 - **Core Development Focus:**
     - [ ] [Sub-blocks](subblocks.md) implementation
     - [ ] P2P layer optimization and review
