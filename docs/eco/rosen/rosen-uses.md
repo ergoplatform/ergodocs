@@ -1,42 +1,61 @@
-# Rosen Bridge: Bridging Cardano and Ergo
+Here's an improved version with enhanced formatting and the inclusion of rsBTC:
 
-The Rosen Bridge provides a mechanism to bridge Cardano and Ergo, allowing for seamless interaction between the two blockchains. It's important to understand that this bridge does not facilitate a direct swap between ADA and ERG. Instead, it allows you to convert your ADA into rsADA on the Ergo blockchain, or your ERG into rsERG on the Cardano blockchain.
+# Rosen Bridge: Connecting Cardano, Ergo, and Bitcoin
 
-This functionality opens up new possibilities for ADA token holders within the Ergo DeFi ecosystem. Although the bridge has just been launched and dApps are still in the process of integrating this feature, there are already several ways you can utilize your wrapped tokens:
+The Rosen Bridge enables seamless interaction between the Cardano, Ergo, and Bitcoin blockchains. This bridge doesn't facilitate direct swaps between native tokens. Instead, it allows users to convert:
 
-## Tokens Listed
+- ADA into rsADA on the Ergo blockchain
+- ERG into rsERG on the Cardano blockchain
+- BTC into rsBTC on both Ergo and Cardano blockchains
 
+This functionality opens up new possibilities for token holders across these ecosystems.
 
-- ERG
-    - [SigUSD / SigRSV](sigmausd.md)
-    - RSN
-    - [COMET](https://thecomettoken.com/)
-- ADA
-    - Hosky
+## Supported Tokens
 
+| Token | Description | Network |
+|-------|-------------|---------|
+| ERG   | Native Ergo token | Ergo |
+| ADA   | Native Cardano token | Cardano |
+| BTC   | Native Bitcoin token | Bitcoin |
+| [SigUSD / SigRSV](sigmausd.md) | Ergo stablecoin and reserve | Ergo |
+| RSN   | Rosen Bridge token | Ergo |
+| [COMET](https://thecomettoken.com/) | Ergo ecosystem token | Ergo |
+| SPF   | Spectrum Finance token | Ergo |
+| Hosky | Cardano meme token | Cardano |
 
-## On Ergo
+## Ergo Ecosystem Opportunities
 
-If you simply want to get your hands on some native tokens like rsADA or rsHOSKY, you can use [ergodex](spectrum.md).
+1. **Token Swaps**: 
+   Use [Ergodex](spectrum.md) to acquire native tokens like rsADA, rsBTC, or rsHOSKY.
 
-- [**Auction House**](ergo-auctions.md) is a decentralized marketplace for NFTs, tokens, and more now accepts rsADA. List rsADA in bulk at a set price, or make an offer for it!
-- [**SigmaFi**](https://sigmafi.app/#/) is a decentralized peer-to-peer bonds market allows you to use rsADA as collateral.
-- [**DuckPools**](https://www.duckpools.io/): You can lend your rsADA tokens on this platform.
-- [**ErgoMixer**](ergomixer.md): This service allows you to mix your rsADA tokens for enhanced privacy.
-- [**SigmaO**](sigmao.md) create American style calls and puts on any wrapped token.
+2. **[Auction House](ergo-auctions.md)**: 
+   A decentralized marketplace for NFTs and tokens that now accepts rsADA and rsBTC. List tokens in bulk or make offers.
 
-/// details | I've bridged and now I don't have enough ERG for the transaction fee to send my tokens anywhere.
-     {type: info, open: true}
-You can use [babel-fees](babel-fees.md) in Ergo to pay for transaction fees with native tokens if you do not have enough ERG.
-///
+3. **[SigmaFi](https://sigmafi.app/#/)**:
+   A decentralized peer-to-peer bonds market where you can use wrapped tokens as collateral.
 
+4. **[DuckPools](https://www.duckpools.io/)**:
+   Lend rsADA, rsBTC, and other supported tokens.
 
-## On Cardano
+5. **[ErgoMixer](ergomixer.md)**:
+   Enhance privacy by mixing your wrapped tokens.
 
-- **Cardano DEXs**: You can gain exposure to Ergo to bridged tokens on Cardano DEXs such as Spectrum, Minswap, and Sundae.
-- [**Liqwid Finance**](https://app.liqwid.finance/governance/proposal/36): Proposal 36 aims to add bridged ERG (rsERG) as isolated collateral in the $ADA market with the following risk parameters: 51.4% maxLTV, 51.5% liquidationLTV, 15% Liquidation Penalty.
+6. **[SigmaO](sigmao.md)**:
+   Create American-style call and put options on any wrapped token.
 
+> **Tip**: Low on ERG for transaction fees? Use [babel-fees](babel-fees.md) on Ergo to pay transaction fees with native tokens when you don't have enough ERG.
 
-In the coming months, we anticipate more integrations and offerings involving rsADA. Stay tuned for more exciting developments!
+## Cardano Ecosystem Opportunities
 
+1. **Cardano DEXs**: Gain exposure to Ergo and Bitcoin bridged tokens on popular Cardano decentralized exchanges:
+        - Spectrum
+        - Minswap
+        - Sundaeswap
+2. **[Liqwid Finance](https://v2.liqwid.finance/market/ERG)**:
+   Participate in DeFi activities using bridged tokens, including rsERG and rsBTC.
+3. **[Lenfi](https://app.lenfi.io/)**:
+   Explore lending and borrowing options with bridged assets.
 
+## Future Developments
+
+As the bridge continues to evolve, we anticipate more integrations and offerings involving rsADA, rsERG, rsBTC, and other bridged tokens. Stay tuned for exciting developments across all three ecosystems!
