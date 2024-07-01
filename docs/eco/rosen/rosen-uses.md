@@ -1,5 +1,3 @@
-Here's an improved version with enhanced formatting and the inclusion of rsBTC:
-
 # Rosen Bridge: Connecting Cardano, Ergo, and Bitcoin
 
 The Rosen Bridge enables seamless interaction between the Cardano, Ergo, and Bitcoin blockchains. This bridge doesn't facilitate direct swaps between native tokens. Instead, it allows users to convert:
