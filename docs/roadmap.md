@@ -117,7 +117,7 @@ The Sigma language and its associated SDKs are crucial for enabling advanced cry
 - [ ] ErgoScript 2.0
 - [ ] [MerkleTrees](https://github.com/ScorexFoundation/sigmastate-interpreter/issues/296)
 - [ ] Revisiting formal verification implementation
-
+- [ ] Bulletproofs
 
 #### SDKs
 
