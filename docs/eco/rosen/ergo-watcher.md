@@ -2,6 +2,10 @@
 
 Watchers are integral to Rosen Bridge, serving as cross-chain oracles. They observe and report deposit events on their network to Ergo, contributing to the network's security and expansion.
 
+/// admonition | This section is adapted from the [deploy-docker.md](https://github.com/rosen-bridge/operation/blob/dev/docs/watcher/deploy-docker.md) section on the Rosen Bridge documentation.
+    type: info
+///
+
 
 ## Clone the Repository and Prepare the Environment
 First, clone the operational repository and navigate to the appropriate directory:

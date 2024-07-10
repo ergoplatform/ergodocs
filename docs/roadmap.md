@@ -7,6 +7,7 @@ tags:
 
 Ergo is a blockchain platform designed to provide a secure, efficient, and user-friendly environment for the development of decentralized applications and financial tools. This roadmap outlines the key milestones and objectives for the development and growth of the Ergo ecosystem.
 
+## Resources
 
 //// details | Vision & Key Features
     {type: info, open: false}
@@ -77,116 +78,242 @@ Summarised from [Kushti, 7 Aug, 2023](https://t.me/ergoplatform/419168)
 
 
 ////
-/// details | Who develops Ergo? 
+//// details | Who develops Ergo?
     {type: info, open: false}
-Ergo is developed a by a combination of the [Ergo Foundation](ergo-foundation.md), community developers and the recently launched [DevDAO](dev-dao.md)
+Ergo is developed a by a combination of the [Ergo Foundation](ergo-foundation.md), community developers and the recently launched [DevDAO](devdao.md)
+
+/// admonition | See the [code respositories supported by the Ergo Foundation](ef-scope.md#code-repositories-supported-by-the-ergo-foundation).
+    type: info
 ///
 
-## Core Development
+////
+
+## Ergo Timeline
 
 
-### Node (Reference Client Protocol)
+/// details | 2019: Genesis Year
+    {open: false}
 
-The Ergo node is the backbone of the network, and its ongoing development and optimization are crucial for ensuring a seamless user experience and maintaining the platform's security and performance. Key features and enhancements include:
-
-- [x] Node V5 with JITC (Just-in-Time Costing)
-- [x] Pruned Full Node & UTXO Set Snapshots
-- [x] [Babel Fees](babel.md)
-- [ ] P2P layer optimization
-- [ ] Bootstrapping improvements
-- [ ] Node V6 implementation
-    - [ ] Composable Transactions
-    - [ ] Zero-Knowledge Multi-Signature Setups
-- [ ] [Sub-blocks](sub-blocks.md)
-- [ ] Sidechain implementation modularization
-- [ ] Potential RocksDb integration
-- [ ] Signature re-checking optimization
-- [ ] Enhanced testing for indices, scans, and wallet
+- **Milestones:**
+    - **July 1:** Ergo mainnet launched during the "crypto winter"
+    - **Autumn:** Ergo Foundation established
+- **Development:**
+    - First tools and libraries emerged
+    - Inaugural crowdfunding using UTXOs and smart contracts
+    - Zero-join paper published
+    - Multi-stage contracts paper by Amitabh released
+    - First smart contract formally verified
+///
 
 
-### Sigma Language 
 
-The Sigma language and its associated SDKs are crucial for enabling advanced cryptographic features and smart contracts on the Ergo platform. The development of Sigma 6.0, along with the implementation of JIT costing and other optimizations, will further enhance the capabilities and performance of Ergo's smart contract ecosystem.
+/// details | 2020: Foundation Building
+    {open: false}
 
-- [x] Crypto contracts
-- [x] Threshold Signatures
-- [x] Sigma Protocols
-- [x] AVL Trees
-- [ ] [Sigma 6.0 implementation](https://github.com/ergoplatform/eips/blob/a24fc414abbc10e6ee59f878b280d9ecc725e10c/eip-0050.md) and validation context extension research
-- [ ] Atomic Transactions
-- [ ] ErgoScript 2.0
-- [ ] [MerkleTrees](https://github.com/ScorexFoundation/sigmastate-interpreter/issues/296)
-- [ ] Revisiting formal verification implementation
-- [ ] Bulletproofs
-
-#### SDKs
-
-- [x] [AppKit](appkit.md)
-- [x] [FleetSDK](fleet.md)
-- [x] [sigma-rust](sigma-rust.md)
-    - [ ] JIT costing implementation in Sigma-Rust
-    - [ ] 6.0 features implementation in Sigma-Rust
-    - [ ] Sigma-Rust-Mini development
-- [x] Sigma.js
-- [ ] Consideration of high-level language support (e.g., Lisp)
-
-#### Libraries and Tooling
-
-- [x] [ergo-lib-go](https://github.com/sigmaspace-io/ergo-lib-go)
-- [x] [escript.online](https://escript.online)
-    - [x] [Blockly Playground Integration](https://escript.online/blockly)
-- [ ] Improvements to error-checking and debugging tools
+- **Milestones:**
+    - **January 7:** Introduction of the Ergo Foundation as a community-driven entity
+- **Launches:**
+    - Ergo Mixer (initially a raw application, later improved by Anon2020)
+    - **Late August:** Oracle pools
+    - Zero-knowledge treasury by anon_real
+    - Auction House
+- **Partnerships:** Collaboration with Emurgo for joint research (Oracle Pools, SigmaUSD, headless dApp framework)
+- **Listings:** CoinEx, Gate.io
+- **Community:** Roadmap released and Discord community initiated
+///
 
 
-### Scaling
 
-- [x] Plasma Library on top of AVL Trees, drastically improving light client verification efficiency compared to traditional merkle tree data structures
-- [ ] Layer 2 or sidechain offloading proposals, engineered with long-term scaling in mind and using advanced, well-researched tools
-- [ ] "Know Your Assumptions" (KYA) introduction for offloading security
-- [ ] Sigma Chains development
-    - [ ] Implementing sidechains with trustless transfers and various consensus mechanisms (merged mined with ERG, other blockchains, or double merged mined)
-    - [ ] Expanding Ergo's contractual layer to sidechains, incorporating features like Bulletproofs-based sigma protocols and elevating certain contracts to first-class citizens
-    - [ ] Experimenting with scalability solutions like sharding on sidechains
-    - [ ] Utilizing ERG and other tokens on Ergo and sidechains from launch, fostering a rich and diverse DeFi ecosystem
-    - [ ] Launching existing applications on sidechains, contingent on modifications to the contractual layer
+/// details | 2021: Expansion and Recognition
+    {open: false}
 
-### Mining Infrastructure
+- **Launches:**
+    - **Q1:** SigmaUSD launched
+- **Ecosystem Growth:**
+    - Spectrum DEX and DeFi ecosystem development began
+    - Autolykos v2 hard fork: opened Ergo to mining pools, improved liquidity and brought many new users into the ecosystem
+- **Partnerships and Listings:**
+    - Collaboration with Jinse, Chinese community expanded to 10,000+ members
+    - Listed on KuCoin and Changelly
+- **Community Milestones:**
+    - UTXO Alliance formed
+    - Inaugural Ergo Summit and two hackathons
+- **Governance and Legal:**
+    - [EIP-27](eip27.md) discussions initiated
+    - US Legal Opinion obtained on Ergo's security classification
+    - **December 19:** Ergo Foundation incorporated in Singapore
+- **Team Expansion:**
+    - Joseph Armeanio and Mark Glasgow join Ergo Foundation (Mark replacing Martin S.)
+    - **November 1:** Daniel Friedman (IOHK) appointed Advisor to Ergo Foundation Board
+- **Additional Achievements:**
+    - The EF hired wallet developers to alleviate users' lack of usable wallet options
+///
 
-- [ ] Lithos decentralized mining pool infrastructure expected launch by end of 2024
-- [ ] Plans for reintroduction of Fair Initial Mining Offerings (FIMOs)
 
-### EIPs
+/// details | 2022: Technical Advancements
+    {open: false}
 
-Ergo Improvement Proposals (EIPs) are a set of guidelines and standards designed for the continuous improvement of Ergo. These proposals encompass a wide range of aspects, including but not limited to, core protocol specifications, client APIs, dApp/contract standards, and more.
+- **Protocol Upgrades:**
+    - [EIP-27](eip27.md) (emission soft-fork) was implemented
+    - [EIP-37](eip37.md) (difficulty retargeting hard fork) was implemented
+- Ergo was listed on the following exchanges:
+    - Indodax
+    - Huobi
+    - Bittrue
+- **Ecosystem Expansion:**
+    - Parallel asset was launched on Flux
+    - The [Sigmanauts Program](sigmanauts.md) was launched on 01/22
+- **Community Engagement:**
+    - Two summits and three hackathons were held, with a total of 45 entries
+    - [ergoplatform.org](https://ergoplatform.org) and [sigmaverse.io](https://sigmaverse.io) were redesigned and relaunched
+- **Technical Milestone:** Node V5 with [JITC](jitc.md) (Just-In-Time Compilation) was released
+- **Team Growth:**
+    - Warwick (CW), Stacie, and Alison Robson joined as Ergo Foundation Officers
+- **Marketing Initiative:** An 'open source economy' pitch deck was created and distributed
+///
 
-Here are some of the EIPs that have been proposed and implemented:
 
-- [x] [EIP-0001: UTXO-Set Scanning Wallet API](eip1.md): This EIP focuses on extending the wallet to serve the needs of external applications by providing a flexible scanning interface.
-- [x] [EIP-0020: ErgoPay](eip20.md): An interaction protocol between wallet application and dApp for creating, signing and sending Ergo transactions.
-- [x] [EIP-0037: Tweaking Difficulty Adjustment Algorithm](eip37.md): This EIP proposes changes to make the current difficulty readjustment more reactive and smoother.
-- [x] [EIP-0027: Emission Retargeting Soft-Fork](eip27.md): This EIP proposes an amendment to the emission schedule to ensure the long-term sustainability of the mining protocol.
 
-To gain a better understanding of the structure and formatting of EIPs, we encourage you to review the existing EIPs on [GitHub](https://github.com/ergoplatform/eips) or within [this documentation](https://docs.ergoplatform.com/tags/#eip). This will provide you with a clear picture of the expectations and standards associated with EIPs.
+/// details | 2023: Ecosystem Flourishing
+    {open: false}
 
-#### Open EIPs
+- **Milestones:**
+    - [Significant donations to EF Treasury from ecosystem projects](https://ergoplatform.org/en/news/news/The-Ergo-Foundation-Path-to-a-Robust-Digital-Ecosystem)
+    - Storage rent activation
+    - Sigmanauts
+        - **01/23**: [sigmanauts.com](https://sigmanauts.com/) launches.
+        - **03/23**: Sigmanauts [voting rework](https://docs.google.com/document/d/1kuf_l9tZOdg7vMgVSKuV0FIUlpHmxWiWjMi89z-XTdE/edit#heading=h.e1tnpe3qjzte).
+        - **03/23**: [Mission Statement](https://docs.google.com/document/d/1J6PdyyxoEEqI0nEr64ZZBGU4Lkr8Cr37GqNSs4qHo7Q/edit) published.
+        - **00/23**: The Sigmanauts attend their first event @ RareEVO.
+        - **00/23**: The Ergo Foundation donates 160,000 SPF to the Sigmanauts treasury.
+        - **00/23**: The Sigmanauts begin managing the Ergo_Foundation Twitter account.
+- **Integrations:**
+    - Bitpanda listing
+    - nonkyc.io
+    - Koinly
+    - StealthEx
+- **Core Developments:**
+    - Sigma.js
+    - UTXO Set Snapshots
+    - bootstrapping with NiPoPoWs
+    - SigmaState advancements
+    - Kushti's 'A Scalability Plan for Ergo' and [sub-block confirmation protocol](https://ergoplatform.org/en/blog/Ergo's-Newest-Advancement-Sub-Blocks) work
+- **Development:**
+    - [Pruned Full Node](pruned-full-node.md)
+    - Plasma Library on top of AVL Trees, drastically improving light client verification efficiency compared to traditional merkle tree data structures
+    - ergo-lib-go
+    - uExplorer
+    - FleetSDK
+    - [Ledger support (developer mode)](https://ergoplatform.org/en/blog/Ledger-Launches-Ergo-Support-in-Developer-Mode)
+    - Oracles v2
+- **Community Events:**
+    - [Ergo Summit 2023](https://ergoplatform.org/en/news/Ergo-Summit-2023)
+    - ErgoVersary 2023
+    - ErgoHack VI and VII
+- **Community Initiatives:**
+    - Erg0ne
+    - Sigmanauts @ NFTxLV
+    - Sigmanauts mining pool
+- **Ecosystem:**
+    - ergexplorer
+    - Off-The-Grid
+    - DeFi:
+        - [Rosen Lite](https://ergoplatform.org/en/news/Rosen-Bridge-Officially-Launches-on-Ergo-Mainnet/)
+        - [SigmaFi](https://ergoplatform.org/en/blog/Sigma-Finance-A-Peer-to-Peer-Bond-Protocol)
+        - [Duckpools](https://ergoplatform.org/en/blog/Duckpools-A-Lending-and-Borrowing-Protocol-on-Ergo)
+        - [AuctionHouse v3](https://ergoplatform.org/en/news/Auction-House-V3-Launches-on-Mainnet)
+        - [AuctionCoin](https://auctioncoin.app/)
+        - [Hodlcoin](https://app.hodlcoin.co.in/) & [PhoenixFinance](https://phoenixfi.app/)
+        - Spectrum Finance yield farming
+        - [Hodlbox](https://hodlbox.xyz/)
+        - [Lilium](https://www.liliumergo.io/)
+        - [single-tx-swap](https://www.single-tx-swap.com/)
+        - [EXLE MVP](https://ergoplatform.org/en/blog/Empowering-Communities-Interest-Free-Loans-Drive-Economic-Growth-for-Kenyan-Cooperative)
+        - [TabbyPOS](https://www.tabbylab.io/)
+        - [Crux Finance MVP](https://cruxfinance.io/)
+        - [x] SigmaO options trading platform
 
-See the [Pull requests](https://github.com/ergoplatform/eips/pulls) section for full details on the open EIPs, some of the most notable are;
+///
 
-- [ ] [Ready to merge/implemented PRs #86](https://github.com/ergoplatform/eips/issues/86)
-- [ ] EIP-0042 Multi-Signature Wallet
-- [ ] [[WIP] EIP-50 - Sigma 6.0](https://github.com/ergoplatform/eips/pull/100)
 
-### Governance
+/// details | 2024: Future Horizons (In Progress and Planned)
+    {open: true}
 
 - Ongoing work to define rules for new releases and research-driven development frameworks
 - Encouragement of new stakeholder organizations within the Ergo ecosystem
 
-### Wallets
+- **Milestones:**
+    - [x] [ErgoHack VIII - Ergo as a Smart Layer](http://docs.ergoplatform.org/events/ergohack/#ergohackviii) [(Playlist)](https://youtube.com/playlist?list=PL8-KVrs6vXLRp_oUjngJiiWMTFo4qZbAk)
+    - [x] [DAO for Ergo core](devdao.md)
+    - [x] Ergo achieved [#1 in TVL% of market cap for a PoW chain](https://x.com/cannon_qq/status/1772254513920876671?t=8KODg1I33kaPSNQw_wn2Bg)
+    - [x] Ergo listed on MEXC exchange
+    - [ ] Continous discussions for improved accessibility, including potential listings on US markets ([progress tracked here](https://ergo.getgrist.com/jf9KPR1HUDJH/Project-Management/p/28))
+    - **Sigmanauts**
+        - **00/24**: Sigmanauts Mining Pool launches.
+        - **01/24**: The [first proposal on Paideia](https://app.paideia.im/Sigmanauts/proposal/promote-richi-mana-to-sigmanaut-05b10641-0097-4b8a-9a47-c0aac5c67aeb) passes.
+        - **03/24**: The Sigmanauts [officially take over management of the Market-Making services](https://app.paideia.im/Sigmanauts/proposal/05825226-0ea4-4fb0-ae4a-cb0ecc984684).
+        - **03/24**: In recognition of the Sigmanauts' dedication and hard work on securing the MEXC listing, the Ergo Foundation [provides a substantial grant](https://twitter.com/Sigmanauts/status/1768369713472553068) matching the amount raised by the Sigmanauts.
 
-- [x] Nautilus 
-    - [x] Manifest v3 rework
-- [ ] Light SPV Clients using NiPoPoWs
-- [ ] EIP-12 / EIP-20
+- **Development Focus:**
+    - **Reference Client**:
+        - [ ] [Sub-blocks](subblocks.md) implementation
+        - [ ] P2P layer optimization and review
+        - [ ] Bootstrapping improvements
+        - [ ] Sidechain implementation modularization
+        - [ ] Potential RocksDb integration
+        - [ ] Enhanced testing for indices, scans, and wallet
+    - **Sigma**:
+        - [ ] [Sigma 6.0 implementation](https://github.com/ergoplatform/eips/blob/a24fc414abbc10e6ee59f878b280d9ecc725e10c/eip-0050.md) and validation context extension research
+        - [ ] Signature re-checking optimization
+        - [ ] ErgoScript 2.0
+        - [ ] [EIP-0046: Atomic Chains](https://github.com/ergoplatform/eips/blob/2de4ea0deff12a276f74df57ef3a14dab2c5dfb8/eip-0046.md)
+        - [ ] [EIP-0047: Pooled Transaction Inputs](https://github.com/ergoplatform/eips/blob/0836dd1eca323c6b5fd6b5172c27a465bd4449cd/eip-0047.md)
+        - [ ] [MerkleTrees](https://github.com/ScorexFoundation/sigmastate-interpreter/issues/296)
+        - [ ] Revisiting formal verification implementation
+        - [ ] Bulletproofs
+        - [ ] Exploration of Rust and JavaScript support in addition to ErgoScript
+        - [ ] Consideration of high-level language support (e.g., Lisp)
+        - [ ] Improvements to error-checking and debugging tools
+        - [ ] Revisiting formal verification implementation
+    - **SDKs**:
+        - [x] [AppKit](appkit.md)
+        - [x] [FleetSDK](fleet.md)
+        - [x] [sigma-rust](sigma-rust.md)
+            - [ ] JIT costing implementation in Sigma-Rust
+            - [ ] 6.0 features implementation in Sigma-Rust
+            - [ ] Sigma-Rust-Mini development
+        - [x] Sigma.js
+    - **Libraries & Tooling**
+        - [x] [ergo-lib-go](https://github.com/sigmaspace-io/ergo-lib-go)
+        - [x] [escript.online](https://escript.online)
+            - [x] [Blockly Playground Integration](https://escript.online/blockly)
+    - **Mining Ecosystem:**
+        - [ ] Lithos decentralized mining pool infrastructure expected launch by end of 2024
+        - [ ] Plans for reintroduction of Fair Initial Mining Offerings (FIMOs)
+    - **Interoperability:**
+        - [Sigma Chains](sigma-chains.md) - Revitalizing Proof of Work
+            - [ ] Implementing sidechains with trustless transfers and various consensus mechanisms (merged mined with ERG, other blockchains, or double merged mined)
+            - [ ] Expanding Ergo's contractual layer to sidechains, incorporating features like Bulletproofs-based sigma protocols and elevating certain contracts to first-class citizens
+            - [ ] Experimenting with scalability solutions like sharding on sidechains
+            - [ ] Utilizing ERG and other tokens on Ergo and sidechains from launch, fostering a rich and diverse DeFi ecosystem
+            - [ ] Launching existing applications on sidechains, contingent on modifications to the contractual layer
+        - [Rosen bridge](rosen.md) - A hub for cross-chain asset transfers
+            - [x] BTC Bridge Launched
+            - [ ] Plans for bridging with Ethereum and other EVM chains
+            - [ ] BSC Bridge
+            - [ ] Expansion of Rosen Bridge to Bitcoin Cash, Nervos, and other UTXO chains
+            - [ ] Bitcoin Runes layer planned for deployment on Ergo
+            - [ ] RGB++ protocol deployment in consideration
+    - **Wallets:**
+        - [x] Nautilus
+            - [x] Manifest v3 rework
+        - [ ] Light SPV Clients using NiPoPoWs
+        - [ ] EIP-12 / EIP-20
+        - [ ] Metamask integration
+        - [ ] Trustwallet Integration
+///
+
+
 
 
 
@@ -195,48 +322,59 @@ See the [Pull requests](https://github.com/ergoplatform/eips/pulls) section for 
 
 Each addition to our budding ecosystem helps to create even more trustless collaterral and expands the decentralised monetary base and deriviative money supply. 
 
-- [ ] The launch of new DeFi tools such as Paideia, Dexy/Gluon stablecoins, ChainCash, Analog Ergo, and OptionCoin
 
 ### Decentralized Exchanges 
 
 - [x] Spectrum DEX (AMM-based)
-- [x] Trade House
-- [x] Crystal Pool
+    - [x] Yield Farming on Spectrum
+
+- [x] [ErgoAuctionHouse](ergoauctions.md) (peer-to-peer auctions)
+    - [x] [Trade House](https://ergoauctions.org/trade?pair=ERG-SigUSD)
+- [x] [SkyHarbor](skyharbor.md)
+    - [x] [SkyHarbor Raffle for new UI](https://skyharbor.medium.com/enhancing-the-nft-experience-skyharbors-new-initiative-9679e94e3cd8)
+- [ ] Crystal Pool
+- [x] [single-tx-swap](https://www.single-tx-swap.com/)
 - [ ] [Machina Finance](machina.md) (grid DEX)
 - [ ] [PalmyraComDex](palmyra.md) (commodities DEX)
+    - [x] Alpha live
 
 ###  Stablecoins
 
 - [x] SigmaUSD stablecoin (Djed protocol)
+    - [ ] [SigmaUSD v2](https://gist.github.com/kushti/3f34ed7d70cc6919c29f5bc65772b02e)
 - [ ] [Gluon](gluon.md) (stablecoin)
 - [ ] [DexyGold](dexy.md) (stablecoin)
 
 ### Lending and Borrowing
 - [x] [SigmaFi](sigmafi.md) (peer-to-peer loans via bonds)
 - [x] [Duckpools](duckpools.md) (lending pools)
+    - [x] optionPools
 - [x] [EXLE](exle.md) (uncollateralized lending)
-- [ ] Yield Farming on Spectrum
+
 
 ### Derivatives and Synthetics
 - [x] [SigmaO](sigmao.md) (trustless options)
-- [x] [HodlCoin](hodlcoin.md) (trustless ERG derivative with non-declining price)
-- [ ] OptionCoin
+    - [ ] [OptionCoin](optioncoin.md)
 - [ ] [ChainCash](chaincash.md) (elastic money creation based on assets and trust)
+- [x] [HodlCoin](hodlcoin.md) (trustless ERG derivative with non-declining price)
+- [x] [AuctionCoin](auctioncoin.md) (emission via auctions)
+- [x] [Hodlbox](https://hodlbox.xyz/)
 
-### Crowdfunding and Auctions
+### Crowdfunding
 - [x] [ErgoRaffle](raffle.md) (decentralized crowdfunding)
     - [ ] v2
-- [x] [ErgoAuctionHouse](ergoauctions.md) (peer-to-peer auctions)
-- [x] [AuctionCoin](auctioncoin.md) (emission via auctions)
+
 
 ### Interoperability and Bridges
 
 - [x] [Rosen Bridge](rosen.md) (two-layered federated bridge)
     - [x] ADA Bridge
-    - [ ] BTC Bridge
+    - [x] BTC Bridge
         - [ ] Runes Integration
     - [ ] EVM Bridge
 - [ ] [Analog Ergo](analog-ergo.md) (atomic swaps)
+     - [x] Alpha Live
+     - [x] Lightning Swaps
 - [x] [Oracle Pools](oracle.md) (federated transparent data providing)
 - [ ] Trustless Relays
 
@@ -249,76 +387,35 @@ Each addition to our budding ecosystem helps to create even more trustless colla
 
 ### DAOs and Governance
 
-- [x] Paideia (DAO toolkit)
+- [x] [Paideia](paideia.md) (DAO toolkit)
 - [ ] [Lithos](lithos.md) (decentralized mining infrastructure)
-
-### Misc
-
-- [x] [GuapSwap](guapswap.md) (miner token swapping)
-
+- [ ] [Thz.FM](thz-fm.md) MVP
 
 ### Gaming and Metaverse
-- [x] BlitzTCG (trading card game)
+- [x] [BlitzTCG](blitz.md) (trading card game)
 - [x] CyberVerse (metaverse gaming platform)
+    - [x] Cyberverse Multiplayer
+
+### Miner Tooling
+
+- [x] [GuapSwap](guapswap.md) (miner token swapping)
+- [x] [CYTI](cyti.md)
+
+### Tooling
+
+- [x] [Lilium](https://www.liliumergo.io/)
+- [x] Moria Finance
+- [x] Trustless Relys
+- [x] Random Number Generator
+- [TabbyPOS](tabbypos.md) 
+- [Crux Finance](https://cruxfinance.io/)
+- [ ] ErgoNames
+
 
 
 
 
 ## References
-
-
-//// details | Ergo Foundation History
-    {type: tip, open: true}
-
-/// details | 2020
-    {type: success, open: false}
-- Introduced the Ergo Foundation, a community-driven entity.
-- Released roadmap and started Discord.
-- Partnered with Emurgo, bringing extensive joint research on Oracle Pools, SigmaUSD, and the headless dApp framework.
-- Listed on CoinEx and Gate.io.
-///
-/// details | 2021
-    {type: success, open: false}
-- Strengthened the Ergo Foundation with new members and advisors
-- Incorporated the first legal entity in Singapore to meet formal arrangements required in the industry
-- Achieved key milestones:
-  - Autolykos v2 Hard-Fork, opening Ergo to mining pools and improving liquidity
-  - Partnerships and marketing efforts in China, growing the community to >10k members
-  - Listings on KuCoin and Changelly
-  - Formation of the UTXO Alliance
-  - Initiation of EIP-27 discussions
-  - Hiring of wallet developers to address users' lack of usable wallet options
-  - Obtained a US Legal Opinion determining Ergo is unlikely to be classified as a security
-  - Organized first summits and two hackathons
-
-///
-/// details | 2022
-    {type: success, open: false}
-
-- Expanded the Ergo Foundation with new officers to engage the wider community
-- Created a pitch deck highlighting the rapidly developing 'open source economy' on Ergo
-- Achieved key milestones:
-  - Listings on Indodax, Huobi, and Bittrue
-  - Parallel asset launches on Flux
-  - [EIP-27](eip27.md) re-emission soft-fork and [EIP-37](eip37.md) difficulty retargeting hard fork
-  - Two summits and three hackathons with 45 entries
-  - Redesign and relaunch of [ergoplatform.org](https://ergoplatform.org) and [sigmaverse.io](https://sigmaverse.io)
-  - Release of Node [V5 JITC](jitc.md)
-///
-/// details | 2023
-    {type: success, open: false}
-- Significant donations to EF Treasury from ecosystem projects and activation of storage rent
-- New partnerships and listings, including Bitpanda, nonkyc.io, Koinly, and StealthEx
-- Organized [Ergo Summit 2023](https://ergoplatform.org/en/news/Ergo-Summit-2023), ErgoVersary 2023, and Ergohack VI and VII
-- Core developments: Sigma.js, UTXO Set Snapshots, bootstrapping with NiPoPoWs, work on SigmaState
-- Scaling updates from kushti and work on a [sub-block confirmation protocol](https://ergoplatform.org/en/blog/Ergo's-Newest-Advancement-Sub-Blocks)
-- New tooling: FleetSDK, [Ledger in developer mode](https://ergoplatform.org/en/blog/Ledger-Launches-Ergo-Support-in-Developer-Mode), Oracles v2
-- Thriving ecosystem with numerous projects launched, including [Rosen Lite](https://ergoplatform.org/en/news/Rosen-Bridge-Officially-Launches-on-Ergo-Mainnet/), [SigmaFi](https://ergoplatform.org/en/blog/Sigma-Finance-A-Peer-to-Peer-Bond-Protocol), [Duckpools](https://ergoplatform.org/en/blog/Duckpools-A-Lending-and-Borrowing-Protocol-on-Ergo), and many more
-- Pruned Full Node is [now live](pruned-full-node.md)
-- Plasma
-///
-////
-
 
 
 //// details | References
@@ -375,51 +472,8 @@ These strategies will help fund ongoing development and foster a thriving commun
 
 
 
-<!--
-#### DevDAO Core Development for Q1/Q2 2024 
-
-**[Node](install.md) Development:**
-
-- Implementation of [sub-blocks](subblocks.md)
-- Optimization and review of the P2P layer
-- Avoidance of re-checking signatures when re-validation provides the same result (e.g., for P2PK inputs)
-- Further optimizations during bootstrapping
-- Storing only part of the UTXO set tree in RAM
-- Potential switch to RocksDb
-- Additional tests and polishing for extra indices, scans, and wallet
-- Modularization of the codebase to provide a framework for implementing sidechains
-
-**[Sigma](sigma-lang.md) Development:**
-
-- Implementation of Sigma 6.0
-- Investigation into the possibility of extending the validation context (useful for sidechains)
-
-**[Sigma-Rust](sigma-rust.md) Development:**
-
-- Implementation of [JIT costing](jitc.md)
-- Implementation of 6.0 features to match Scala's capabilities
 
 
-#### Tooling
-
-
-- (TBD) Development of [SPV Client](spv.md)
-- [Sigma Chains](sigma-chains.md) 
-
-### Application Layer
-
-- EVM and BTC Bridge for [Rosen](rosen.md)
-- 
-- [DexyGold](dexy.md) 
-- [Machina Finance](machina-finance.md)
-- [ChainCash](chaincash.md)
-- [PalmyraComDex](palmyra.md)
-- [BlitzTCG](blitz.md)
-- [Paideia](paideia.md)
-- 
-- 
-- 
--->
 
 - (Nov 22) [A Scalability Plan for Ergo](https://www.ergoforum.org/t/a-scalability-plan-for-ergo/226/4?u=glasgowm)
 - (Dec 21) [Ergo protocol research and client development roadmap](https://www.reddit.com/r/ergonauts/comments/qfjhw4/ergo_protocol_research_and_client_development/)
