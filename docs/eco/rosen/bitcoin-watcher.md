@@ -243,7 +243,7 @@ For optimal watcher performance and decentralization, running your own fully syn
 
    - Paste the `rpcauth` line you copied
    - Add the following lines to enable the RPC server:
-     ```
+     ```bash
      server=1
      rpcbind=0.0.0.0
      rpcallowip=0.0.0.0/0
@@ -252,7 +252,7 @@ For optimal watcher performance and decentralization, running your own fully syn
      ```
    - To limit RPC access to only the watcher container, set `rpcallowip` to the Docker network range:
 
-     ```
+     ```bash
      rpcallowip=172.16.0.0/12
      ```
 
@@ -260,13 +260,13 @@ For optimal watcher performance and decentralization, running your own fully syn
 
 5. If `bitcoind` was already running, stop and restart it:
 
-   ```
+   ```bash
    bitcoin-cli stop
    bitcoind -daemon
    ```
 
 6. Verify the node is running and wait for it to sync:
-   ```
+   ```bash
    bitcoin-cli getblockchaininfo
    ```
    Look for `"initialblockdownload": false` to confirm the node is synced.
@@ -361,14 +361,14 @@ observation:
 ///
 
 
-Create a new wallet and set the wallet mnemonic:
+Create a new wallet and set the wallet mnemonic, you can also load this through an environmental variable so it's only stored in-memory.
 
 ```yaml
 ergo:
   mnemonic: "YOUR_WALLET_MNEMONIC"
 ```
 
-elect your primary data source:
+Select your primary data source:
 
 ```yaml
 ergo:
@@ -429,257 +429,7 @@ As a watcher, your primary responsibility is to monitor your network and report 
 2. **RSN for Permits:** Lock RSN tokens to receive permit tokens. Use these tokens to create report permits for reporting events. The number of report permits determines how many concurrent reports you can create. In the event of a valid report, the permit is refunded along with your reward. If the report is invalid, the permit is seized as a penalty.
 
 
-## Tips
 
-
-/// details | Interacting with a headless server
-     {type: info, open: false}
-To interact with a headless server, use SSH (Secure Shell) to establish a secure connection. You can also forward ports to access specific services on the server. For example, forward the local port 3030 to port 3030 on the server:
-
-```bash
-ssh -L 3030:127.0.0.1:3030 user@watcher
-
--server
-```
-
-In this command:
-
-- `ssh` starts the SSH client program.
-- `-L 3030:127.0.0.1:3030` specifies that the local port 3030 should be forwarded to port 3030 on the server.
-- `user@watcher-server` specifies the username and the server to connect to.
-  ///
-
-
-/// details | Security Considerations
-{type: warning, open: false}
-
-- Keep your watcher machine and Docker installation updated with the latest security patches.
-- Do not reuse your watcher's RPC password anywhere else.
-- Secure your machine's SSH login with a strong password and/or public key authentication.
-- Consider running the watcher in a dedicated VM or container for isolation.
-- Regularly monitor your watcher's logs and web UI for any signs of issues.
-- Keep your collateral wallet secure, as the wallet owner has control over unstaking collateral.
-  ///
-
-/// details | Monitoring and Alerting
-{type: info, open: false}
-Maintaining high watcher uptime is critical to avoid collateral penalties. Consider setting up external monitoring and alerting:
-
-- Use services like Uptime Robot or Pingdom to monitor your watcher's web UI and alert you if it goes down.
-- Use a service like Healthchecks.io to monitor your watcher's log for error keywords and send alerts.
-- The Rosen team's monitoring will alert in Telegram/Discord if your watcher is down, but additional self-monitoring is strongly recommended.
-  ///
-
-/// details | Using a Config File for Environment Variables
-{type: info, open: false}
-Instead of specifying environment variables in the `docker-compose.yml` file, you can use a separate `.env` file. This keeps your compose file cleaner and allows for easier management of environment variables.
-
-Create a `.env` file in the same directory as your `docker-compose.yml` with the following content:
-
-```shell
-CURRENT_NETWORK=BITCOIN
-DATABASE_URL=file:/app/services/watcher/data/database/data.sqlite
-HTTP_PORT=3030
-LOGGER_LEVEL=info
-```
-
-Update your `docker-compose.yml` to reference these variables:
-
-```yaml
-services:
-  service:
-    image: rapidfort/postgresql:16.0.0
-    container_name: watcher_btc
-    env_file:
-      - .env
-    # ... rest of the service definition
-```
-
-Docker Compose will automatically load the variables from the `.env` file.
+/// admonition | For tips, troubleshooting, FAQs, and other information, please refer to the main [watcher documentation](watcher.md).
+    type: info
 ///
-
-## Troubleshooting
-
-UI Errors
-
-/// details | scanner is out of sync
-{type: danger, open: false}
-Your scanner is out of sync. You need to wait until it scans all blocks. The service runs every 3 minutes. Depending on when it calls and blocks produced, it may drop a block sync here and there but catches up in most cases.
-
-Alternatively, delete Docker volumes and restart your watcher with a newer initial height. Then it doesn't need to scan as many blocks to be synced:
-
-```bash
-docker compose down --volumes
-```
-
-Then update the `local.yaml` initial height and rerun the watcher.
-///
-
-/// details | Permit Health Broken
-{type: danger, open: false}
-By default, the permit health warning parameter is set to 100. Adjust this locally by adding the following to your `local.yaml`:
-
-```yaml
-healthCheck:
-  permit:
-    warnCommitmentCount: 1 # amount of permits left before giving a warning
-    criticalCommitmentCount: 0 # amount of permits left it is critical
-```
-
-Adjust the numbers as necessary. `warnCommitmentCount` will change the warning to yellow when the available permits reduce to this number. `criticalCommitmentCount` will change to red when the available permits reduce to this number.
-///
-
-/// details | watcher-db-1 is unhealthy
-{type: danger, open: false}
-If you see "container watcher-db-1 is unhealthy":
-
-- Ensure your `.env` file is correctly named and not `.env.txt`.
-- Update your `local.yaml` with the current Ergo block height.
-
-As a last resort, prune existing images and rebuild:
-
-```bash
-docker system prune -a
-```
-
-**Ensure you don't have other Docker images to worry about.**
-///
-
-/// details | Lock, Unlock 500 Error
-{type: danger, open: false}
-If you receive a 500 error while trying to lock or unlock your ERG and/or RSN, it may be due to an insufficient box value on-chain. **This is fixed in the latest release. Please update if you have not done so already.**
-
-Update with:
-
-```bash
-docker compose pull
-docker compose down
-docker compose up -d
-```
-
-Check your service logs first. If you see a warning indicating "Box value BoxValue(1100000) is too low, minimum value for box size of ...", add the following to your `local.yaml` in the `ergo` section:
-
-```yaml
-minBoxValue: "2000000"
-```
-
-///
-
-/// details | UnhandledPromiseRejection
-{type: danger, open: false}
-If you encounter an UnhandledPromiseRejection error:
-
-> UnhandledPromiseRejection, promise rejected with reason Object.....LifeCycle script start failed
-
-This is due to an issue in Ogmios roll backward after a fork. A fix is in progress.
-///
-
-/// details | The requested image's platform (linux/amd64) does not match the detected host platform
-{type: danger, open: false}
-This error indicates incompatibility with certain ARM chips in Raspberry Pis and ARM Mac Mini M1 Asahi Linux. See [this PR](https://github.com/rosen-bridge/operation/issues/6).
-///
-
-### Operational
-
-
-/// details | Role and Rewards
-{type: question, open: false}
-Watchers are essential for accurate reporting and receive 70% of transaction fees as rewards for successful and accurate reporting (while 30% goes to the guard set). 25% of the emission is also reserved for _'Event-Based Emission (Rewards)'_.
-///
-
-
-/// details | Who can become a Watcher?
-{type: question, open: false}
-Anyone. You can actively contribute to the expansion and security audit of the Rosen Bridge by becoming a watcher. Watchers receive rewards for accurate reporting.
-
-- Configure and run the watcher app for Bitcoin.
-- Top it off with enough RSN and ERG.
-- Put in collateral and receive reporting permits.
-- Enjoy reporting and getting rewards.
-  ///
-
-
-/// details | Can I run multiple watchers?
-{type: question, open: false}
-Yes, but it incurs financial considerations to prevent abuse. Each instance needs a unique folder and `HTTP_PORT`.
-///
-
-
-/// details | Do I need to do anything after setup?
-{type: question, open: false}
-You don't need to manually watch and approve transactions. The software handles everything automatically. Just ensure the watcher keeps running.
-
-1. Observe an event and wait.
-2. Create a commitment using report permits.
-3. Aggregate all participating watchers' commitments (into something called event trigger).
-4. Wait for guards to take action, especially target chain transactions and reward transactions.
-5. Get rewards.
-   ///
-
-### Watcher FAQs
-
-
-/// details | Collateral Requirements
-{type: question, open: false}
-Each instance requires 800 ERG and 33,000.001 RSN as collateral. This collateral is fully redeemable and the amount is adjustable.
-///
-
-/// details | How do I redeem my collateral?
-{type: question, open: false}
-You can redeem it after redeeming your last permit token. If you have unsettled reports, you must wait until those permits are returned.
-///
-
-/// details | Permit Acquisition
-{type: question, open: false}
-To report, watchers must acquire permits, which are part of the 33,000.001 RSN collateral. Multiple permits are necessary for reporting concurrent events, and permits can be seized if reports are found fraudulent.
-///
-
-/// details | Reporting Process
-{type: question, open: false}
-
-- Watchers report deposit events as part of a collective effort.
-- A consensus among watchers on an event triggers a final report and guard intervention.
-- Guards take necessary actions based on these reports.
-- Watchers involved in successful cross-chain settlements are rewarded.
-  ///
-
-/// details | What if my report is successful?
-{type: question, open: false}
-You'll receive rewards and your staked amount will be returned.
-///
-
-/// details | What if my report is incorrect and uncorroborated?
-{type: question, open: false}
-You'll get a refund of your stake without any additional penalties.
-///
-
-/// details | What are the consequences of collusion and fraud in reporting?
-{type: question, open: false}
-Colluding watchers will lose the amount they staked.
-///
-
-/// details | Are permits spent or staked for reporting?
-{type: question, open: false}
-Permits are staked, not spent, and can be managed through your dashboard.
-///
-
-/// details | Can I adjust my permits?
-{type: question, open: false}
-Yes, you can increase or decrease your permits at any time and redeem them when leaving.
-///
-
-/// details | How many permits are needed for concurrent reporting?
-{type: question, open: false}
-The number depends on bridge activity, with about 160 needed to report one transaction per minute.
-///
-
-/// details | Do I still need RSN on Ergo to be a watcher on another chain?
-{type: question, open: false}
-Yes, all permit operations are conducted on the Ergo platform, and Rosen's logic is Ergo-based.
-///
-
-## Conclusion
-
-With your watcher set up, you are now an integral part of the Rosen ecosystem. Your watcher helps secure cross-chain asset transfers, enabling seamless interoperability between Bitcoin and Ergo.
-
-As the Rosen ecosystem grows, stay tuned for opportunities to earn rewards with your watcher. Thank you for supporting decentralized cross-chain infrastructure!

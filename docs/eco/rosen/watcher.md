@@ -164,6 +164,53 @@ In this command:
 - `user@watcher-server` specifies the username and the server to connect to. Replace `user` with your actual username and `watcher-server` with the actual hostname or IP address of your server.
 ///
 
+/// details | Security Considerations
+{type: warning, open: false}
+
+- Keep your watcher machine and Docker installation updated with the latest security patches.
+- Do not reuse your watcher's RPC password anywhere else.
+- Secure your machine's SSH login with a strong password and/or public key authentication.
+- Consider running the watcher in a dedicated VM or container for isolation.
+- Regularly monitor your watcher's logs and web UI for any signs of issues.
+- Keep your collateral wallet secure, as the wallet owner has control over unstaking collateral.
+  ///
+
+/// details | Monitoring and Alerting
+{type: info, open: false}
+Maintaining high watcher uptime is critical to avoid collateral penalties. Consider setting up external monitoring and alerting:
+
+- Use services like Uptime Robot or Pingdom to monitor your watcher's web UI and alert you if it goes down.
+- Use a service like Healthchecks.io to monitor your watcher's log for error keywords and send alerts.
+- The Rosen team's monitoring will alert in Telegram/Discord if your watcher is down, but additional self-monitoring is strongly recommended.
+  ///
+
+/// details | Using a Config File for Environment Variables
+{type: info, open: false}
+Instead of specifying environment variables in the `docker-compose.yml` file, you can use a separate `.env` file. This keeps your compose file cleaner and allows for easier management of environment variables.
+
+Create a `.env` file in the same directory as your `docker-compose.yml` with the following content:
+
+```shell
+CURRENT_NETWORK=BITCOIN
+DATABASE_URL=file:/app/services/watcher/data/database/data.sqlite
+HTTP_PORT=3030
+LOGGER_LEVEL=info
+```
+
+Update your `docker-compose.yml` to reference these variables:
+
+```yaml
+services:
+  service:
+    image: rapidfort/postgresql:16.0.0
+    container_name: watcher_btc
+    env_file:
+      - .env
+    # ... rest of the service definition
+```
+
+Docker Compose will automatically load the variables from the `.env` file.
+///
 
 
 
@@ -268,11 +315,11 @@ Incompatiblility with certain ARM chips in Rasberry Pi's and (ARM mac mini m1 As
 ### Working with docker
 
 /// details | Checking logs
-  {type: info, open: false}
-```
+     {type: info, open: false}
+```bash
 docker compose logs
 ```
-```
+
 ///
 
 
@@ -285,19 +332,21 @@ docker-compose up -d
 ```
 ///
 
-//// details | Restarting your watcher
+/// details | Restarting your watcher
      {type: info, open: false}
 You can restart your watcher instance simply by running the following command from within the same folder the `docker-compose.yaml` is stored.
 
 ```bash
 docker compose up -d
 ```
+
+///
+
 /// details | no configuration files provided: not found
      {type: danger, open: false}
 
 Check you're in the correct directory. You should be executing `docker compose` commands from within the `operation/watcher` folder
 ///
-////
 
 /// details | Dumping databases
      {type: info, open: false}
