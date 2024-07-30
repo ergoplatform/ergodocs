@@ -66,6 +66,8 @@ Additionally, outwith the EF members, we fund a few roles in development.
 - Dmitry Usov manages the Ergo website and works on various other projects such as the DexyGold front-end. (salaried)
 - The rest of the funds spent on development go towards bounties on the repositories given below
 
+The Ergo Foundation also pays for the hosting and bandwidth costs for several pieces of infrastructure such as the website and explorer. 
+
 #### Code Repositories Supported by the Ergo Foundation
 /// admonition | This section is a draft and still open for discussion from the community. 
     type: info
