@@ -23,13 +23,13 @@ As of July 2024, the complete treasury of the foundation is as follows:
 | RSN | 30,000,000 | 0.06639 | 1,991,700.00 |
 | **Subtotal - Illiquid Assets** | | | $2,684,344.98 |
 | **Assets in MM Accounts (Illiquid)** |
-| ERG | 165,016.00 | 0.84 | 138,613.44 |
-| BTC | 0.286645506 | 66,731 | 19,127.77 |
-| USDT/USD | 8,845.54 | 1.00 | 8,845.54 |
-| **Subtotal - Assets in MM Accounts** | | | $166,586.75 |
+| ERG | 164,016.09167 | 0.84 | 137,773.52 |
+| BTC | 0.00804 | 66,731 | 536.52 |
+| USDT | 8,843.41 | 1.00 | 8,843.41 |
+| **Subtotal - Assets in MM Accounts** | | | $147,153.45 |
 | **Total Liquid Assets** | | | $372,397.74 |
-| **Total Illiquid Assets** | | | $2,850,931.73 |
-| **Total Assets** | | | $3,223,329.47 |
+| **Total Illiquid Assets** | | | $2,831,498.43 |
+| **Total Assets** | | | $3,203,896.17 |
 
 /// details | Liquid vs Illiquid Funds20
      {type: warning, open: true}
