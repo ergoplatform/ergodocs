@@ -133,17 +133,6 @@ nav:
       - Privacy: dev/protocol/zkp.md
       - Storage Rent: dev/protocol/storage-rent.md
       - Autolykos: dev/protocol/autolykos-protocol.md
-    - Scaling: 
-      - dev/protocol/scaling.md
-      - Layer 0:
-        - dev/protocol/scaling/layer0.md
-        - Sub Blocks: uses/sidechains/subblocks.md
-      - Layer 1: dev/protocol/scaling/layer1.md
-      - Layer 2: dev/protocol/scaling/layer2.md
-      - Discussions:
-        - Roadmaps: dev/protocol/scaling/roadmap.md
-        - Transactions Per Second: dev/protocol/scaling/TPS.md
-        - Atomic Composability: dev/protocol/scaling/atomic-composability.md
     - Documents: 
       - documents.md
       - Research & Whitepapers: documents.md
@@ -152,8 +141,20 @@ nav:
       - The Howey Test: security.md
       - Privacy Guide: doc/privacy-guide.md
       - Glossary: glossary.md
-    - Roadmap: roadmap.md
-    - Entities: 
+    - Roadmap:
+      - roadmap.md
+      - Scaling:
+        - dev/protocol/scaling.md
+        - Layer 0:
+          - dev/protocol/scaling/layer0.md
+          - Sub Blocks: uses/sidechains/subblocks.md
+        - Layer 1: dev/protocol/scaling/layer1.md
+        - Layer 2: dev/protocol/scaling/layer2.md
+        - Discussions:
+          - Roadmaps: dev/protocol/scaling/roadmap.md
+          - Transactions Per Second: dev/protocol/scaling/TPS.md
+          - Atomic Composability: dev/protocol/scaling/atomic-composability.md
+    - Entities:
       - Ergo Foundation:
         - ef/ergo-foundation.md
         - Scope: ef/ef-scope.md

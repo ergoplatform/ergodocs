@@ -49,6 +49,7 @@ Over the past 23 years, network effects have accounted for approximately 70% of 
 The EF does not commonly pay for influencers or ad campaigns and does its best to restrict frivolous spending, which is deemed not cost-effective (i.e., airdrops, giveaways).
 
 The outreach department highlights projects building in the ecosystem. However, these initiatives do not constitute an endorsement from the Ergo Foundation. The Foundation will always use best practices to vet projects and ensure that there is no risk for potential users. Still, in the early stages of development, it is often unknowable if anything of substance will ultimately be produced.
+
 ### Development
 
 The Ergo Foundation's relationship with development is primarily focused on areas where there is a demand not met by the community. This role is expected to diminish over time as the community grows and takes on more development responsibilities.
@@ -58,6 +59,11 @@ Some Ergo Foundation members also hold developer positions, although their devel
 - Morphic manages JVM-related developers (Wallet devs, Scala devs, etc.) and the [sigmastate-interpreter](sigmastate-interpreter.md).
 - Mohammad Hasan Samadani (mhs_sam) manages a team of graduates and PhD students who have produced [Ergo Raffle](ergoraffle.md), [ErgoWell](ergowell.md), [Minotaur-wallet](wallets.md), and [Rosen Bridge](rosen.md).
 - [Fleet-sdk](https://github.com/fleet-sdk) is managed by Alison Robson (anon_br).
+
+Additionally, outwith the EF members:  
+
+- Dmitry Usov manages the Ergo website and works on various other projects such as the DexyGold front-end. 
+- The rest of the funds spent on development go towards bounties on the repositories given below
 
 #### Code Repositories Supported by the Ergo Foundation
 /// admonition | This section is a draft and still open for discussion from the community. 
