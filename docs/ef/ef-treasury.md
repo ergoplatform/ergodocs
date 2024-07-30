@@ -1,52 +1,58 @@
 # Ergo Foundation Treasury
 
-The Ergo Foundation initially received an allocation of 4,330,776 ERG, which is equivalent to 4.43% of the total supply. A significant portion of this Treasury has been expended for the benefit of the protocol and the community. Even during periods of low ERG price, the Foundation continued to invest in order to foster and grow the Ergo community. Additionally, several projects that launched on Ergo have generously allocated a fraction of their tokens to the EF Treasury. 
-
-
+The Ergo Foundation initially received an allocation of 4,330,776 ERG, which is equivalent to 4.43% of the total supply. A significant portion of this Treasury has been expended for the benefit of the protocol and the community. Even during periods of low ERG price, the Foundation continued to invest in order to foster and grow the Ergo community. 
 
 /// details | Emission
      {type: info, open: true}
-For more information on the Ergo's emission schedule, tokenomics and allocation, visit the [emission](emission.md) section. 
+For more information on the Ergo's emission schedule, tokenomics and allocation, visit the [emission](emission.md) section.
 ///
-
 
 ## Holdings
 
-As of April 2024, the complete treasury of the foundation is as follows:
+As of July 2024, the complete treasury of the foundation is as follows:
 
-/// details | Liquid vs Illiquid Funds
+
+
+| Asset | Indicator Amount | Indicative US$ Price | Indicative Total US$ Value |
+|-------|------------------|----------------------|----------------------------|
+| **Liquid Assets in Self-Hosted Wallets** |
+| ERG | 179,954.44 | 0.8368 | 150,587.27 |
+| BTC | 3.315399986 | 66,487 | 220,427.60 |
+| **Subtotal - Liquid Assets** | | | $371,014.87 |
+| **Illiquid Assets in Self-Hosted Wallets** |
+| Gluon | 335,000 | 1.00 | 335,000.00 |
+| SPF | 27,681,500 | 0.0100 | 276,815.00 |
+| RSN | 30,000,000 | 0.06639 | 1,991,700.00 |
+| **Subtotal - Illiquid Assets** | | | $2,603,515.00 |
+| **Assets in MM Accounts (Illiquid)** |
+| ERG | 165,016.00 | 0.8368 | 138,085.39 |
+| BTC | 0.286645506 | 66,487 | 19,057.92 |
+| USDT/USD | 8,845.54 | 1.00 | 8,845.54 |
+| **Subtotal - Assets in MM Accounts** | | | $165,988.85 |
+| **Total Liquid Assets** | | | $371,014.87 |
+| **Total Illiquid Assets** | | | $2,769,503.85 |
+| **Total Assets** | | | $3,140,518.72 |
+
+/// details | Liquid vs Illiquid Funds20
      {type: warning, open: true}
-**The majority of these funds are not liquid** and includes market-making funds. The foundations liquid BTC and ERG can be found in the subsequent section and totals around $400,000 as of July, 2024. 
+The Ergo Foundation's treasury consists of both liquid and illiquid assets, providing a diverse portfolio to support the growth and development of the Ergo ecosystem. The liquid assets, such as ERG and BTC, can be readily utilized for various purposes, while the illiquid assets, like Gluon, SPF, and RSN tokens, are held strategically to avoid exerting downward pressure on these early-stage projects.
 
-We distribute a small portion of SPF to cover some development expenses from the grants awarded (as detailed below), but we are cautious to avoid exerting any downward pressure on a project that is still maturing. This situation, however, presents an opportunity to significantly augment our expenditure once we reach a stage where these tokens can be freely utilized.
-
+As these projects mature and their tokens become more liquid, the Ergo Foundation will have the opportunity to leverage these assets to further augment its expenditure capabilities and support the Ergo ecosystem more effectively.
 ///
-
-| Currency | Amount | Price | Total |
-|-------|---------------|---|---|
-| ERG   | 467,415    | $1.55 | $724,493 |
-| RSN   | 30,000,000 | $0.0976 | $2,928,000 |
-| SPF   | 28,000,000 | $0.04075 | $1,141,000 |
-| BTC   | 3.315       | $69,466 | $230,405 |
-| USD   | 59,515     | $1 | $59,515 |
-| Gluon | 335,000    | $1 | $335,000 |
-| Total |  | | **$5,602,927** |
 
 
 ## Wallets
+You can find the Ergo Foundation treasury and current balance on-chain at the following locations:
 
-You can find the Ergo Foundation treasury and current balance on-chain at the following locations
-
-- [EF Multi-sig for ERG + Tokens](https://ergexplorer.com/addresses#2BggBDgr9n9geTKjCJBCEWMReb2i7wcocw7fjVd3QyM7qFMtmVHyoFr78kChAxGekJxUTZru2aMjyZKcVoPfHX5d12RqNrnEAgzGqUCoJ2v9xCqmT75V5xdhT1JBqQbeRKJZT4XGMg7hZAqVvbMsQF26nkWRPqiCqPoKfy7GZw9zuvr15qaqbB2ZcZXaGTrvqDN2o15SRTJwvVADDx2inzrk3U25cdjFWYBc6ECKSjmYpPWL8fn4msxsBZKNiGbP8vDrYWqQuPtMwJ5Ag).
+- [EF Multi-sig for ERG + Tokens](https://ergexplorer.com/addresses#2BggBDgr9n9geTKjCJBCEWMReb2i7wcocw7fjVd3QyM7qFMtmVHyoFr78kChAxGekJxUTZru2aMjyZKcVoPfHX5d12RqNrnEAgzGqUCoJ2v9xCqmT75V5xdhT1JBqQbeRKJZT4XGMg7hZAqVvbMsQF26nkWRPqiCqPoKfy7GZw9zuvr15qaqbB2ZcZXaGTrvqDN2o15SRTJwvVADDx2inzrk3U25cdjFWYBc6ECKSjmYpPWL8fn4msxsBZKNiGbP8vDrYWqQuPtMwJ5Ag)
      - [Hot Wallet](https://ergexplorer.com/addresses#9g1ReLmsbGevkTjfPGMdRMoFRdrAVskZVmSBpaEdVW2DfG4HDWm) managed by the Treasurer when sending payments.
 - [EF BTC Multi-sig](https://www.blockchain.com/explorer/addresses/btc/bc1q7zd0snrmt06vtq5ehl98gx30a79g4y4fz48wmt4l4vstreh3lz2s6t0axz)
 
-In addition, a large portion is locked up on centralised exchanges as market-making funds. 
-
+In addition, a portion of the treasury is locked up on centralized exchanges as market-making funds.
 
 ## Salaries
 
-Twenty people receive monthly salaries or rewards for their contributions. The vast majority (16/20) were promoted from within the community after exceptional contributions. 
+Several receive monthly salaries or rewards for their contributions to the Ergo ecosystem. The vast majority were promoted from within the community after exceptional contributions, demonstrating the Foundation's commitment to recognizing and rewarding talent within the Ergo community.
 
 An average breakdown of how people in Ergo are awarded.
 
@@ -60,7 +66,7 @@ pie title 2023 Salary Averages
 
 /// details | Roles
      {type: info, open: true}
-More information on each of these roles can be seen on [this page](ergo-foundation.md).
+More information on each of these roles can be seen on [this page](ef-scope.md#key-areas-of-focus).
 ///
 
 
@@ -86,8 +92,6 @@ In addition to the direct ERG spending above in 2023,
 - 650,000 SPF was paid as compensation ($21,000)
 - 160,000 SPF was donated to the [Sigmanauts](sigmanauts.md) Treasury
 - Totaling 1,622,000 SPF 
-
-
 
 
 /// details | The Ergo Foundations Future
@@ -171,15 +175,15 @@ Foundation votes this year are usually related to our internal structures, excha
 | (Feb 2022)  | Vote for Continued Cooperation with Jinse Finance - China     | Treasury Control  | Passed     |                                          |
 | (Feb 2022)  | Dmitry Usov performance sheet (Pay Increase Request)          | Treasury Control  | Failed     |                                          |
 | (Feb 2022)  | Marketing Partnership                                         | Treasury Control  | Failed     |                                          |
-| (Jan 2022)  | ErgoDex Proposal                                              | Treasury Control  | Passed     |                                          |
+| (Jan 2022)  | ErgoDex Proposal                                              | Treasury Control  | Passed     | $113,200                                         |
 | (Jan 2022)  | Funding for Website Visual Direction                          | Treasury Control  | Passed     |                                          |
 | (Jan 2022)  | Bank Account Opening with Equity Bank / Crypto Custody Account Opening with LionGate | Treasury Control | Passed |                        |
-| (Jan 2022)  | ErgoLearn Grant                                               | Treasury Control  | Passed     |                                          |
+| (Jan 2022)  | ErgoLearn Grant                                               | Treasury Control  | Passed     | 1,000 ERG                                         |
 | (Jan 2022)  | Apple Developer Program Account Funding                       | Treasury Control  | Failed     |                                          |
 | (Dec 2021)  | Matthew Salary Proposal (From Angie)                          | Treasury Control  | Failed     |                                          |
 | (Dec 2021)  | Bittrex Listing                                               | Treasury Control  | Failed     |                                          |
 | (Dec 2021)  | Website Update Funding (Spending Proposal From Dmitry U)      | Treasury Control  | Failed     |                                          |
-| (Dec 2021)  | Request for increasing the EF rewards                         | Treasury Control  | Passed     |                                          |
+| (Dec 2021)  | Request for increasing the EF rewards for Rosen Team                        | Treasury Control  | Passed     |                                          |
 | (Dec 2021)  | Bounties for Bugs                                             | Treasury Control  | Passed     |                                          |
 | (Dec 2021)  | Hire Monye David as a full-time Scala developer               | Treasury Control  | Passed     |                                          |
 | (Dec 2021)  | Hire Josef Koval as a full-time Scala developer               | Treasury Control  | Passed     |                                          |
@@ -217,7 +221,7 @@ Foundation votes this year are usually related to our internal structures, excha
 | (Jul 2021)  | Denton's Payment to Set up Legal Entity                       | Treasury Control  | Passed     |                                          |
 | (Jul 2021)  | Transfer of 5K ERG to morphic                                 | Treasury Control  | Passed     | 5,000 ERG                                |
 | (Jun 2021)  | Fund Up to $7.5k for Ergoversary marketing                    | Treasury Control  | Passed     | $7,500                                   |
-| (Jun 2021)  | ErgoDEX funding                                               | Treasury Control  | Passed     |                                          |
+| (Jun 2021)  | ErgoDEX funding                                               | Treasury Control  | Passed     | $15,000                                 |
 | (Jun 2021)  | Special ops budget                                            | Treasury Control  | Passed     |                                          |
 | (Jun 2021)  | Proposal to hire an Editor and a Product Manager to join the Content Team | Treasury Control | Passed |                                    |
 | (May 2021)  | Proposal to make Tango Ergo Ambassador in China               | Treasury Control  | Passed     |                                          |
