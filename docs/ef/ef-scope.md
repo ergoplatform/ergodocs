@@ -56,13 +56,14 @@ The Ergo Foundation's relationship with development is primarily focused on area
 
 Some Ergo Foundation members also hold developer positions, although their development activities are separate from their foundation involvement. For transparency, these roles are listed below:
 
-- Morphic manages JVM-related developers (Wallet devs, Scala devs, etc.) and the [sigmastate-interpreter](sigmastate-interpreter.md).
-- Mohammad Hasan Samadani (mhs_sam) manages a team of graduates and PhD students who have produced [Ergo Raffle](ergoraffle.md), [ErgoWell](ergowell.md), [Minotaur-wallet](wallets.md), and [Rosen Bridge](rosen.md).
-- [Fleet-sdk](https://github.com/fleet-sdk) is managed by Alison Robson (anon_br).
+- Morphic manages JVM-related developers (Wallet devs, Scala devs, etc.) and the [sigmastate-interpreter](sigmastate-interpreter.md). (salaried)
+- Mark Glasgow manages this documentation and various other developer-adjacent tasks. (salaried)
+- Mohammad Hasan Samadani (mhs_sam) manages a team of graduates and PhD students who have produced [Ergo Raffle](ergoraffle.md), [ErgoWell](ergowell.md), [Minotaur-wallet](wallets.md), and [Rosen Bridge](rosen.md). (rewarded until April 2024 - now working on a volunteer basis)
+- [Fleet-sdk](https://github.com/fleet-sdk) is managed by Alison Robson (anon_br). (salaried)
 
-Additionally, outwith the EF members:  
+Additionally, outwith the EF members, we fund a few roles in development.  
 
-- Dmitry Usov manages the Ergo website and works on various other projects such as the DexyGold front-end. 
+- Dmitry Usov manages the Ergo website and works on various other projects such as the DexyGold front-end. (salaried)
 - The rest of the funds spent on development go towards bounties on the repositories given below
 
 #### Code Repositories Supported by the Ergo Foundation
