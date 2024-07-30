@@ -11,27 +11,25 @@ For more information on the Ergo's emission schedule, tokenomics and allocation,
 
 As of July 2024, the complete treasury of the foundation is as follows:
 
-
-
 | Asset | Indicator Amount | Indicative US$ Price | Indicative Total US$ Value |
 |-------|------------------|----------------------|----------------------------|
 | **Liquid Assets in Self-Hosted Wallets** |
-| ERG | 179,954.44 | 0.8368 | 150,587.27 |
-| BTC | 3.315399986 | 66,487 | 220,427.60 |
-| **Subtotal - Liquid Assets** | | | $371,014.87 |
+| ERG | 179,954.44 | 0.84 | 151,161.73 |
+| BTC | 3.315399986 | 66,731 | 221,236.01 |
+| **Subtotal - Liquid Assets** | | | $372,397.74 |
 | **Illiquid Assets in Self-Hosted Wallets** |
 | Gluon | 335,000 | 1.00 | 335,000.00 |
-| SPF | 27,681,500 | 0.0100 | 276,815.00 |
+| SPF | 27,681,500 | 0.01292 | 357,644.98 |
 | RSN | 30,000,000 | 0.06639 | 1,991,700.00 |
-| **Subtotal - Illiquid Assets** | | | $2,603,515.00 |
+| **Subtotal - Illiquid Assets** | | | $2,684,344.98 |
 | **Assets in MM Accounts (Illiquid)** |
-| ERG | 165,016.00 | 0.8368 | 138,085.39 |
-| BTC | 0.286645506 | 66,487 | 19,057.92 |
+| ERG | 165,016.00 | 0.84 | 138,613.44 |
+| BTC | 0.286645506 | 66,731 | 19,127.77 |
 | USDT/USD | 8,845.54 | 1.00 | 8,845.54 |
-| **Subtotal - Assets in MM Accounts** | | | $165,988.85 |
-| **Total Liquid Assets** | | | $371,014.87 |
-| **Total Illiquid Assets** | | | $2,769,503.85 |
-| **Total Assets** | | | $3,140,518.72 |
+| **Subtotal - Assets in MM Accounts** | | | $166,586.75 |
+| **Total Liquid Assets** | | | $372,397.74 |
+| **Total Illiquid Assets** | | | $2,850,931.73 |
+| **Total Assets** | | | $3,223,329.47 |
 
 /// details | Liquid vs Illiquid Funds20
      {type: warning, open: true}

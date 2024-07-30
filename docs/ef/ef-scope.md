@@ -46,11 +46,11 @@ The Foundation aims to promote the adoption of Ergo through various outreach and
 
 Their efforts ensure ample information is available about ongoing developments on Ergo via blog posts and social media, as well as the promotion and operation of various events, such as Ergo Summit and ErgoHack. These initiatives aim to raise awareness, foster community engagement, and attract new users and developers to the Ergo ecosystem.
 
-/// details | Marketing
+/// details | Wen 'Marketing?'
      {type: warning, open: true}
-     For ethical and legal reasons, the Foundation does not take direct control over outward marketing efforts. Instead, it aims to empower community-driven innovation and help however it can, using initiatives such as donating to the Sigmanauts or the [Ecosystem Grant Framework](https://ergoplatform.org/en/blog/Ergo-Foundation-Announces-New-Initiative-to-Accelerate-Ecosystem-Growth/).
+The Ergo Foundation takes a principled approach to marketing and promotion, focusing on empowering community-driven initiatives and fostering organic growth. For ethical and legal reasons, the Foundation does not directly control outward marketing efforts. Instead, it aims to support and enable community-driven innovation through initiatives like the [Ecosystem Grant Framework](https://ergoplatform.org/en/blog/Ergo-Foundation-Announces-New-Initiative-to-Accelerate-Ecosystem-Growth/) and donations to community-led projects like the Sigmanauts.
 
-     Over the past 23 years, network effects have accounted for approximately 70% of the value creation in tech. This figure is likely higher for a third-generation, grassroots blockchain like Ergo. While the EF strives to lay the foundations and help ignite community outreach and compounding growth, the promotion and adoption of Ergo ultimately rest principally on the shoulders of the community. [(Get Involved!)](contribute.md)
+Network effects have been a significant driver of value creation in the tech industry, accounting for approximately 70% of value creation over the past 23 years. For a grassroots, third-generation blockchain like Ergo, this figure is likely even higher. While the Ergo Foundation strives to lay the foundations and help ignite community outreach and compounding growth, the ultimate promotion and adoption of Ergo rests principally on the shoulders of the community. The Foundation's role is to empower and support the community's efforts, fostering a self-sustaining and vibrant ecosystem. [(Get Involved!)](contribute.md)
 ///
 
 The EF does not commonly pay for influencers or ad campaigns and does its best to restrict frivolous spending, which is deemed not cost-effective (i.e., airdrops, giveaways). This approach reflects the Foundation's commitment to responsible and sustainable growth, focusing on building a strong foundation and fostering a vibrant community rather than relying on short-term marketing tactics.
