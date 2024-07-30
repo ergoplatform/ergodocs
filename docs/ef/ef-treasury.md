@@ -1,6 +1,8 @@
 # Ergo Foundation Treasury
 
-The Ergo Foundation initially received an allocation of 4,330,776 ERG, which is equivalent to 4.43% of the total supply. A significant portion of this Treasury has been expended for the benefit of the protocol and the community. Even during periods of low ERG price, the Foundation continued to invest in order to foster and grow the Ergo community. 
+The Ergo Foundation initially received an allocation of 4,330,776 ERG, which is equivalent to 4.43% of the total supply. Additionally, the Treasury exchanged 1,782,615 ERG for [EFYT](efyt.md), a token issued on the Waves Platform in 2017 to build an early community through airdrops and raise funds before the Ergo mainnet launch.
+
+A significant portion of this Treasury has been expended for the benefit of the Ergo protocol and community. Even during periods of low ERG price, the Foundation continued to invest in order to foster and grow the Ergo ecosystem.
 
 /// details | Emission
      {type: info, open: true}
@@ -31,7 +33,7 @@ As of July 2024, the complete treasury of the foundation is as follows:
 | **Total Illiquid Assets** | | | $2,831,498.43 |
 | **Total Assets** | | | $3,203,896.17 |
 
-/// details | Liquid vs Illiquid Funds20
+/// details | Liquid vs Illiquid Funds
      {type: warning, open: true}
 The Ergo Foundation's treasury consists of both liquid and illiquid assets, providing a diverse portfolio to support the growth and development of the Ergo ecosystem. The liquid assets, such as ERG and BTC, can be readily utilized for various purposes, while the illiquid assets, like Gluon, SPF, and RSN tokens, are held strategically to avoid exerting downward pressure on these early-stage projects.
 
@@ -39,14 +41,13 @@ As these projects mature and their tokens become more liquid, the Ergo Foundatio
 ///
 
 
-## Wallets
+### Wallets
 You can find the Ergo Foundation treasury and current balance on-chain at the following locations:
 
 - [EF Multi-sig for ERG + Tokens](https://ergexplorer.com/addresses#2BggBDgr9n9geTKjCJBCEWMReb2i7wcocw7fjVd3QyM7qFMtmVHyoFr78kChAxGekJxUTZru2aMjyZKcVoPfHX5d12RqNrnEAgzGqUCoJ2v9xCqmT75V5xdhT1JBqQbeRKJZT4XGMg7hZAqVvbMsQF26nkWRPqiCqPoKfy7GZw9zuvr15qaqbB2ZcZXaGTrvqDN2o15SRTJwvVADDx2inzrk3U25cdjFWYBc6ECKSjmYpPWL8fn4msxsBZKNiGbP8vDrYWqQuPtMwJ5Ag)
      - [Hot Wallet](https://ergexplorer.com/addresses#9g1ReLmsbGevkTjfPGMdRMoFRdrAVskZVmSBpaEdVW2DfG4HDWm) managed by the Treasurer when sending payments.
 - [EF BTC Multi-sig](https://www.blockchain.com/explorer/addresses/btc/bc1q7zd0snrmt06vtq5ehl98gx30a79g4y4fz48wmt4l4vstreh3lz2s6t0axz)
 
-In addition, a portion of the treasury is locked up on centralized exchanges as market-making funds.
 
 ## Salaries
 
