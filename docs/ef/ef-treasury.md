@@ -1,13 +1,18 @@
 # Ergo Foundation Treasury
 
-The Ergo Foundation initially received an allocation of 4,330,776 ERG, which is equivalent to 4.43% of the total supply. Additionally, the Treasury exchanged 1,782,615 ERG for [EFYT](efyt.md), a token issued on the Waves Platform in 2017 to build an early community through airdrops and raise funds before the Ergo mainnet launch.
+The Ergo Foundation initially received an allocation of 4,330,776 ERG, which is equivalent to 4.43% of the total supply.
 
 A significant portion of this Treasury has been expended for the benefit of the Ergo protocol and community. Even during periods of low ERG price, the Foundation continued to invest in order to foster and grow the Ergo ecosystem.
 
-/// details | Emission
+
+/// details | EFYT
      {type: info, open: true}
-For more information on the Ergo's emission schedule, tokenomics and allocation, visit the [emission](emission.md) section.
+Additionally, the Treasury exchanged 1,782,615 ERG for [EFYT](efyt.md), a token issued on the Waves Platform in 2017 to build an early community through airdrops and raise funds before the Ergo mainnet launch.
+
+After subtracting the 1,782,615 ERG exchanged for EFYT, the Ergo Foundation was left with 2,548,161 ERG, which is approximately 2.6% of the total supply.
 ///
+
+For more information on the Ergo's emission schedule, tokenomics and allocation, visit the [emission](emission.md) section.
 
 ## Holdings
 
@@ -55,7 +60,7 @@ Several receive monthly salaries or rewards for their contributions to the Ergo 
 
 An average breakdown of how people in Ergo are awarded.
 
-``` mermaid
+```mermaid
 pie title 2023 Salary Averages
     "EF" : 14.8
     "Advisory" : 7.5
