@@ -120,24 +120,29 @@ The repositories in this section are still part of the core ecosystem; however, 
 
 ### Grants and Ecosystem Support
 
-The Ergo Foundation recognizes the importance of fostering a vibrant and diverse ecosystem. To support this goal, the Foundation has provided grants to various projects that contribute to the growth and development of the Ergo ecosystem. These grants aim to fund innovative ideas, promote collaboration, and drive progress within the community.
+The Ergo Foundation recognizes the importance of fostering a vibrant and diverse ecosystem. To support this goal, the Foundation provides grants to various projects that contribute to the growth and development of the Ergo ecosystem. These grants aim to fund innovative ideas, promote collaboration, and drive progress within the community.
 
 Some notable grant recipients include:
 
-- **Spectrum Labs**: Received $128,200 to support their work on developing ergodex for the Ergo ecosystem between June 2021 and Jan 2022.
+- **Spectrum Labs**: Received $128,200 to support their work on developing ergodex for the Ergo ecosystem between June 2021 and January 2022.
 - **Rosen Bridge**: Awarded $272,400 for the period between May 2022 and April 2023 to fund the development of the Rosen Bridge, a cross-chain bridge connecting Ergo with other blockchain networks.
 
 The Ergo Foundation remains committed to supporting promising projects and initiatives that align with its mission of fostering innovation, collaboration, and growth within the Ergo ecosystem. By providing financial assistance through grants, the Foundation aims to empower developers, researchers, and community members to explore new ideas and contribute to the overall advancement of the Ergo platform.
 
 #### Code Audits
 
-The Ergo Foundation does not review or endorse any code specifically. Code reviews are sometimes performed by Ergo Foundation members (due to their expertise in this area), but this does not constitute an endorsement, and users should be aware of their assumptions when interacting with experimental DeFi protocols. (See - [*Know Your Assumptions*](kya.md))
+The Ergo Foundation does not review or endorse any code specifically. While code reviews are sometimes performed by Ergo Foundation members due to their expertise in this area, this does not constitute an endorsement. Users should be aware of their assumptions when interacting with experimental DeFi protocols. (See - [*Know Your Assumptions*](kya.md))
 
 This approach reflects the Foundation's commitment to transparency and user education, acknowledging the inherent risks associated with experimental technologies and the importance of individual responsibility in the decentralized ecosystem.
 
 ### Exchange Listings
 
-The Ergo Foundation, as a legal entity, is primarily responsible for liaising with centralized exchanges. Ergo has been listed on several exchanges, including three *Tier 1* exchanges (KuCoin, gate.io, Huobi). A *tier 1* exchange is defined as an exchange that appears in the top 10 of exchange ranking sites such as [defillama.com/cexs](https://defillama.com/cexs).
+/// admonition | For a detailed overview of current efforts, view the [public grist](https://ergo.getgrist.com/jf9KPR1HUDJH/Project-Management/p/28).
+    type: info
+///
+
+
+The Ergo Foundation, as a legal entity, is primarily responsible for liaising with centralized exchanges. Ergo has been listed on several exchanges, including three *Tier 1* exchanges (KuCoin, gate.io, Huobi). A *Tier 1* exchange is defined as an exchange that appears in the top 10 of exchange ranking sites such as [defillama.com/cexs](https://defillama.com/cexs).
 
 Exchange discussions and details are typically confidential due to Non-Disclosure Agreements ('NDA'). However, we can share some general insights:
 
@@ -147,14 +152,14 @@ Exchange discussions and details are typically confidential due to Non-Disclosur
 
 If you're wondering why certain coins are listed and Ergo is not, it could be due to several reasons:
 
-- They are a native asset on an already integrated chain (i.e., ERC20, Cosmos, etc.), which requires less effort to add and maintain.
+- They are a native asset on an already integrated chain (e.g., ERC20, Cosmos), which requires less effort to add and maintain.
 - They may have venture-capitalist funding and connections, which can be leveraged for early listings.
 - They may have a smaller public distribution than ERG and can negotiate with exchanges for a percentage of their total supply.
 - They may be less complex than Ergo, with no native asset support, no need to worry about UTXO dust, etc.
 - They may be older than Ergo and were listed during the last bear market.
-- Even though they are a unique Layer-1, they may only have a wrapped asset (i.e., on BSC) listed.
+- Even though they are a unique Layer-1, they may only have a wrapped asset (e.g., on BSC) listed.
 
-The Ergo Foundation is committed to expanding Ergo's presence on exchanges. However, certain factors such as low volume or market cap can affect our eligibility for listing on some platforms. This is not due to a lack of effort or resources, but rather the nature of the crypto market and the specific requirements of different exchanges.
+The Ergo Foundation is committed to expanding Ergo's presence on exchanges. However, certain factors such as low volume or market cap can affect our eligibility for listing on some platforms. This is not due to a lack of effort or resources but rather the nature of the crypto market and the specific requirements of different exchanges.
 
 We are also exploring the possibility of listing as wrapped tokens on exchanges, which could reduce barriers for high-quality tier 2/3 exchanges and help build up our access and volume. We are actively pursuing discussions with a global on-ramp to increase access for US users.
 
