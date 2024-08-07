@@ -426,13 +426,13 @@ Each addition to our budding ecosystem helps to create even more trustless colla
 
 ### Tooling
 
-- [x] [Lilium](https://www.liliumergo.io/)
+- [x] [Lilium](https://www.liliumergo.io/) (NFT sale platform)
 - [x] [Moria Finance](moria.finance.md) (fund management)
 - [x] Trustless Relys
-- [x] [Random Number Generator](sigmarand.md)
-- [x] [TabbyPOS](tabbypos.md)
-- [x] [Crux Finance](https://cruxfinance.io/)
-- [ ] [ErgoNames](ergonames.md)
+- [x] [Random Number Generator](sigmarand.md) 
+- [x] [TabbyPOS](tabbypos.md) (Point of Sale device)
+- [x] [Crux Finance](https://cruxfinance.io/) (Token charts, portfolio viewer and more)
+- [ ] [ErgoNames](ergonames.md) (decentralized naming system)
 - [ ] [Reputation System](reputation-system.md) (Testnet Live)
 
 #### Miner Tooling
