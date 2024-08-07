@@ -1,8 +1,7 @@
 ---
 tags:
-  - dApp-Live
+  - Degen Finance
 ---
-
 # Hodlcoin: A High-Risk, High-Reward Game
 
 Hodlcoin, a high-risk, high-reward game, was originally a concept conceived by one of the designers of Djed (SigmaUSD). The game encourages players to "HODL" their ERGs. The rules are straightforward: players can deposit their ERGs into a common reserve (HODLing) or withdraw ERGs from the reserve by burning their HODL ERGs (un-HODLing). While there are no fees for HODLing, un-HODLing incurs a penalty fee (e.g., 3% or 10%) that is added to the common reserve. This structure creates an incentive for players to hold their ERGs for longer periods, as they benefit from the fees paid by those who un-HODL.

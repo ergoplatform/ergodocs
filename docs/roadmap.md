@@ -314,21 +314,6 @@ Ergo is developed a by a combination of the [Ergo Foundation](ergo-foundation.md
     - **Mining Ecosystem:**
         - [ ] Lithos decentralized mining pool infrastructure expected launch by end of 2024
         - [ ] Plans for reintroduction of Fair Initial Mining Offerings (FIMOs)
-    - **Interoperability:**
-        - [Sigma Chains](sigma-chains.md) - Revitalizing Proof of Work
-            - [ ] Trustless Relays (Superseding BTC custody solutions with Ergo smart-contracts)
-            - [ ] Implementing sidechains with trustless transfers and various consensus mechanisms (merged mined with ERG, other blockchains, or double merged mined)
-            - [ ] Expanding Ergo's contractual layer to sidechains, incorporating features like Bulletproofs-based sigma protocols and elevating certain contracts to first-class citizens
-            - [ ] Experimenting with scalability solutions like sharding on sidechains
-            - [ ] Utilizing ERG and other tokens on Ergo and sidechains from launch, fostering a rich and diverse DeFi ecosystem
-            - [ ] Launching existing applications on sidechains, contingent on modifications to the contractual layer
-        - [Rosen bridge](rosen.md) - A hub for cross-chain asset transfers
-            - [x] BTC Bridge Launched
-            - [ ] Plans for bridging with Ethereum and other EVM chains
-            - [ ] BSC Bridge
-            - [ ] Expansion of Rosen Bridge to Bitcoin Cash, Nervos, and other UTXO chains
-            - [ ] Bitcoin Runes layer planned for deployment on Ergo
-            - [ ] RGB++ protocol deployment in consideration
     - **Wallets:**
         - [x] Nautilus
             - [x] Manifest v3 rework
@@ -354,22 +339,21 @@ Each addition to our budding ecosystem helps to create even more trustless colla
 
 ### Decentralized Exchanges 
 
-- [x] Spectrum DEX (AMM-based)
-    - [x] Yield Farming on Spectrum
-
+- [x] [ErgoDex](spectrum.md) (AMM + Yield Farming)
 - [x] [ErgoAuctionHouse](ergoauctions.md) (peer-to-peer auctions)
-    - [x] [Trade House](https://ergoauctions.org/trade?pair=ERG-SigUSD)
-- [x] [SkyHarbor](skyharbor.md)
+    - [x] [Trade House](https://ergoauctions.org/trade?pair=ERG-SigUSD) (orderbook-based P2P DEX)
+- [x] [SkyHarbor](skyharbor.md) (NFT Market)
     - [x] [SkyHarbor Raffle for new UI](https://skyharbor.medium.com/enhancing-the-nft-experience-skyharbors-new-initiative-9679e94e3cd8)
-- [ ] Crystal Pool
-- [x] [single-tx-swap](https://www.single-tx-swap.com/)
+- [x] [single-tx-swap](https://www.single-tx-swap.com/) (trustless p2p swaps)
+- [x] [TokenJay](https://tokenjay.app/app/#purchases) (p2p escrow)
+- [ ] [PalmyraComDex](palmyra.md) (commodities DEX) ([Alpha live](https://palmyra.app/)!)
+- [ ] [Crystal Pool](crystal-pool.md) (instant L1 order-based trading)
 - [ ] [Machina Finance](machina.md) (grid DEX)
-- [ ] [PalmyraComDex](palmyra.md) (commodities DEX)
-    - [x] Alpha live
+
 
 ###  Stablecoins
 
-- [x] SigmaUSD stablecoin (Djed protocol)
+- [x] [SigmaUSD](sigmausd.md) stablecoin (Djed protocol)
     - [ ] [SigmaUSD v2](https://gist.github.com/kushti/3f34ed7d70cc6919c29f5bc65772b02e)
 - [x] [Gluon](gluon.md) (gold stablecoin)
 - [ ] [DexyGold](dexy.md) (seigniorage stablecoin)
@@ -377,25 +361,30 @@ Each addition to our budding ecosystem helps to create even more trustless colla
 ### Lending and Borrowing
 - [x] [SigmaFi](sigmafi.md) (peer-to-peer loans via bonds)
 - [x] [Duckpools](duckpools.md) (lending pools)
-    - [x] optionPools
+    - [x] [optionPools](optionPools.md) (option markets)
 - [x] [EXLE](exle.md) (uncollateralized lending)
 
+### Gaming and Metaverse
+- [x] [BlitzTCG](blitz.md) (trading card game)
+- [x] [CyberVerse](cyberverse.md) (metaverse gaming platform)
+    - [x] Cyberverse Multiplayer
 
 ### Derivatives and Synthetics
 - [x] [SigmaO](sigmao.md) (trustless options)
-    - [ ] [OptionCoin](optioncoin.md) (option markets)
-- [ ] [ChainCash](chaincash.md) (elastic money creation based on assets and trust)
 - [x] [HodlCoin](hodlcoin.md) (trustless ERG derivative with non-declining price)
 - [x] [AuctionCoin](auctioncoin.md) (emission via auctions)
-- [x] [Hodlbox](https://hodlbox.xyz/)
+- [x] [Hodlbox](https://hodlbox.xyz/) (long-term locking)
+- [ ] [OptionCoin](optioncoin.md) (decentralized options trading with token emission)
+- [ ] [ChainCash](chaincash.md) (elastic p2p money creation based on assets and trust)
 
 ### Crowdfunding
-- [x] [ErgoRaffle](raffle.md) (decentralized crowdfunding)
-    - [ ] v2
 
+- [x] [ErgoRaffle](raffle.md) (decentralized crowdfunding)
+    - [ ] V2 [features](raffle.md#v2)
 
 ### Interoperability and Bridges
 
+- [x] [Oracle Pools](oracle.md) (federated transparent data providing)
 - [x] [Rosen Bridge](rosen.md) (two-layered federated bridge)
     - [x] ADA Bridge
     - [x] BTC Bridge
@@ -408,14 +397,21 @@ Each addition to our budding ecosystem helps to create even more trustless colla
     - [ ] DOGE Bridge
     - [ ] BCH Bridge
     - [ ] Hummingbot Integration / Customisation
+- [ ] [Sigma Chains](sigma-chains.md) - Revitalizing Proof of Work
+    - [ ] Trustless Relays (Superseding BTC custody solutions with Ergo smart-contracts)
+    - [ ] Implementing sidechains with trustless transfers and various consensus mechanisms (merged mined with ERG, other blockchains, or double merged mined)
+    - [ ] Expanding Ergo's contractual layer to sidechains, incorporating features like Bulletproofs-based sigma protocols and elevating certain contracts to first-class citizens
+    - [ ] Experimenting with scalability solutions like sharding on sidechains
+    - [ ] Utilizing ERG and other tokens on Ergo and sidechains from launch, fostering a rich and diverse DeFi ecosystem
+    - [ ] Launching existing applications on sidechains, contingent on modifications to the contractual layer
 - [ ] [Analog Ergo](analog-ergo.md) (atomic swaps)
      - [x] Alpha Live
      - [x] Lightning Swaps
-- [x] [Oracle Pools](oracle.md) (federated transparent data providing)
+
 
 
 ### Privacy and Mixing
-- [x] ErgoMixer (non-interactive, non-custodial mixer)
+- [x] [ErgoMixer](ergomixer.md) (non-interactive, non-custodial mixer)
     - [x] Stealth addresses
 - [ ] [SigmaJoin](sigmajoin.md)
 - [ ] Privacy-Preserving Voting
@@ -427,29 +423,22 @@ Each addition to our budding ecosystem helps to create even more trustless colla
 - [ ] [Thz.FM](thz-fm.md) (decentralised media monetisation & management)
 - [ ] [The Field](the-field.md) (peer-to-pool pledging protocol)
 
-### Gaming and Metaverse
-- [x] [BlitzTCG](blitz.md) (trading card game)
-- [x] CyberVerse (metaverse gaming platform)
-    - [x] Cyberverse Multiplayer
-
-### Miner Tooling
-
-- [x] [GuapSwap](guapswap.md) (miner token swapping)
-- [x] [CYTI](cyti.md)
 
 ### Tooling
 
 - [x] [Lilium](https://www.liliumergo.io/)
-- [x] Moria Finance
+- [x] [Moria Finance](moria.finance.md) (fund management)
 - [x] Trustless Relys
-- [x] Random Number Generator
+- [x] [Random Number Generator](sigmarand.md)
 - [x] [TabbyPOS](tabbypos.md)
 - [x] [Crux Finance](https://cruxfinance.io/)
-- [ ] ErgoNames
+- [ ] [ErgoNames](ergonames.md)
+- [ ] [Reputation System](reputation-system.md) (Testnet Live)
 
+#### Miner Tooling
 
-
-
+- [x] [GuapSwap](guapswap.md) (miner token swapping)
+- [x] [CYTI](cyti.md) (Choose Your Token ID)
 
 ## References
 

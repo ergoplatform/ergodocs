@@ -1,6 +1,6 @@
 ---
 tags:
-  - dApp-InDev
+  - Degen Finance
 ---
 
 # Auction Coin: A Decentralized Token Issuance Model on Ergo Blockchain

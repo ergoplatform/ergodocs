@@ -222,6 +222,10 @@ nav:
         - Thz.FM: eco/thz-fm.md
         - Azorus: eco/azorus.md
         - TabbyPOS: eco/tabbypos.md
+        - ErgoNames: eco/ergonames.md
+        - Reputation System: eco/reputation-system.md
+        - SigmaRand: eco/sigmarand.md
+        - Moria Finance: eco/moria-finance.md
         - ZenGate Global:
           - eco/zengate.md
           - Solaris Portal: eco/solaris.md
@@ -244,16 +248,19 @@ nav:
           - Other Stablecoins: uses/sigmausd/comparison.md
           - Why?: uses/sigmausd/why-sigusd.md
         - DexyGold: eco/dexy.md
-        - SigmaGold: eco/siggold.md
+        - Gluon: eco/gluon.md
         - ChainCash: uses/chaincash.md
       - DegFi:
         - uses/degfi.md
         - Hodlcoin: eco/hodlcoin.md
         - Auction Coin: eco/auction-coin.md
         - Grand Gambit: eco/grand-gambit.md
+        - Hodlbox: eco/hodlbox.md
+        - OptionCoin: eco/optioncoin.md
         - NightOwl Casino: eco/nightowl.md
         - Obolflip: eco/obolflip.md
         - Lotteries: uses/lottery.md
+        - The Field: eco/the-field.md
       - Lending:
         - uses/lending.md
         - duckpools: eco/duckpools.md
@@ -262,6 +269,7 @@ nav:
       - Derivatives:
         - uses/deriv.md
         - SigmaO: eco/sigmao.md
+        - OptionPools: eco/optionPools.md
         - Tensile: eco/tensile.md
       - CrowdFunding: 
         - uses/crowdfunding.md
@@ -289,6 +297,8 @@ nav:
       - uses/dex.md
       - Spectrum Finance: eco/spectrum.md
       - Palmyra: eco/palmyra.md
+      - Crystal Pool: eco/crystal-pool.md
+      - Trade Hosue: eco/ergo-auctions.md
       - Machina Finance: eco/machina-finance.md
       - P2P: 
           - eco/p2p-trading.md
