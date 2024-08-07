@@ -5,7 +5,7 @@ tags:
 ---
 # Sigma Chains
 
-Sigma Chains represent a groundbreaking innovation designed to revitalize Proof of Work (PoW) and solidify Ergo's position at the centre as a hub. By introducing programmability, cross-chain compatibility, and economic sustainability, Sigma Chains unlock a multitude of possibilities for Ergo and its ecosystem.
+Sigma Chains represent a groundbreaking innovation designed to revitalize Proof of Work (PoW) and solidify Ergo's position at the center as a hub. By introducing programmability, cross-chain compatibility, and economic sustainability, Sigma Chains unlock a multitude of possibilities for Ergo and its ecosystem.
 
 ## What are Sigma Chains?
 
@@ -57,10 +57,26 @@ Sigma Chains offer various efficient sidechain constructions that cater to diffe
 
 - **Dedicated Mining Algorithms:** Sigma Chains support dedicated mining algorithms, allowing for the creation of sidechains tailored to specific hardware types. These sidechains feature a dedicated PoW consensus mechanism alongside the Sigma contractual layer and additional chain-specific features. With the inclusion of Autokoyos2 verification and built-in support for Ergo headers, trustless replay protection can be implemented through on-chain contracts, enabling the creation of SPV clients for sidechains. Sidechains with dedicated mining algorithms can utilize relay contracts to incentivize mainchain miners for submitting proper sidechain data on the mainchain, providing a clearer and more secure incentive mechanism compared to the BIP-301 proposal.
 
+## Development Plan for Sigma Chains
+
+The development of Sigma Chains and the broader Sigma ecosystem will follow a structured plan:
+
+1. **Sigma 6.0 Release:** The first step is to finalize and release Sigma 6.0, which includes new features and fixes. The code is already 95% complete and under review.
+
+2. **Flexible Blockchain Context:** To support the creation of new blockchains easily, the blockchain context implementation in Sigma will be made more flexible.
+
+3. **Ergo Node Modifications:** Modifications to the Ergo node will be implemented to support merged-mined sidechains and standalone Sigma Chains.
+
+4. **First Sigma Chain Launch:** After the necessary groundwork, the first Sigma Chain will be launched. A key decision will be whether to start with a merged-mined sidechain or a standalone blockchain.
+
+5. **Sigma Chain Framework:** In parallel with the first Sigma Chain launch, a generic framework for Sigma Chains will be developed. This framework will be similar to Scorex, a framework previously developed by the Ergo team and used in various blockchains like Waves and V Systems.
+
+6. **Partnership and Collaboration:** To accelerate the development and adoption of Sigma Chains, partnerships and collaborations with other projects and teams will be actively pursued.
+
+By following this structured plan, the Ergo ecosystem aims to establish Sigma Chains as a leading standard for programmable PoW blockchains, enabling a diverse and interconnected ecosystem of chains built on the robust foundation of Ergo.
+
 ## Conclusion
 
+Sigma Chains represent a significant leap forward for Ergo and the broader blockchain ecosystem. By revitalizing Proof of Work, enabling cross-chain compatibility, and introducing economic sustainability, Sigma Chains create new opportunities for miners, developers, and users alike. With increased demand for ERG, expanded collateral opportunities, and a thriving ecosystem of portable projects, Ergo is poised to lead the charge in the era of programmable PoW.
 
-
-Sigma Chains represent a significant leap forward for Ergo and the broader blockchain ecosystem. Sigma Chains create new opportunities for miners, developers, and users alike. With increased demand for ERG, expanded collateral opportunities, and a thriving ecosystem of portable projects, Ergo is poised to lead the charge in the era of programmable PoW.
-
-As Sigma Chains gain momentum, Ergo will solidify its position as a key player in the blockchain space, driving innovation and adoption across all hardware classes. In time we can invest other options. Zk- trustless Bulletproof based relays on the mainchain. 
+As Sigma Chains gain momentum, Ergo will solidify its position as a key player in the blockchain space, driving innovation and adoption across all hardware classes. The development plan outlined above lays the foundation for a successful rollout of Sigma Chains, paving the way for a future where trustless, interoperable, and sustainable blockchain ecosystems become a reality.

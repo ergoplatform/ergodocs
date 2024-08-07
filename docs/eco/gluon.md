@@ -6,7 +6,7 @@ tags:
   - dApp-InDev
 ---
 
-# SigmaGold
+# Gluon
 
 ## Introduction
 

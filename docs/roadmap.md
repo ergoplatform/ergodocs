@@ -316,6 +316,7 @@ Ergo is developed a by a combination of the [Ergo Foundation](ergo-foundation.md
         - [ ] Plans for reintroduction of Fair Initial Mining Offerings (FIMOs)
     - **Interoperability:**
         - [Sigma Chains](sigma-chains.md) - Revitalizing Proof of Work
+            - [ ] Trustless Relays (Superseding BTC custody solutions with Ergo smart-contracts)
             - [ ] Implementing sidechains with trustless transfers and various consensus mechanisms (merged mined with ERG, other blockchains, or double merged mined)
             - [ ] Expanding Ergo's contractual layer to sidechains, incorporating features like Bulletproofs-based sigma protocols and elevating certain contracts to first-class citizens
             - [ ] Experimenting with scalability solutions like sharding on sidechains
@@ -331,10 +332,14 @@ Ergo is developed a by a combination of the [Ergo Foundation](ergo-foundation.md
     - **Wallets:**
         - [x] Nautilus
             - [x] Manifest v3 rework
+        - [ ] Ledger
+            - [x] Available in developer mode
+        - [ ] Keystone
         - [ ] Light SPV Clients using NiPoPoWs
         - [ ] EIP-12 / EIP-20
         - [ ] Metamask integration
         - [ ] Trustwallet Integration
+
 ///
 
 
@@ -366,8 +371,8 @@ Each addition to our budding ecosystem helps to create even more trustless colla
 
 - [x] SigmaUSD stablecoin (Djed protocol)
     - [ ] [SigmaUSD v2](https://gist.github.com/kushti/3f34ed7d70cc6919c29f5bc65772b02e)
-- [ ] [Gluon](gluon.md) (stablecoin)
-- [ ] [DexyGold](dexy.md) (stablecoin)
+- [x] [Gluon](gluon.md) (gold stablecoin)
+- [ ] [DexyGold](dexy.md) (seigniorage stablecoin)
 
 ### Lending and Borrowing
 - [x] [SigmaFi](sigmafi.md) (peer-to-peer loans via bonds)
@@ -378,7 +383,7 @@ Each addition to our budding ecosystem helps to create even more trustless colla
 
 ### Derivatives and Synthetics
 - [x] [SigmaO](sigmao.md) (trustless options)
-    - [ ] [OptionCoin](optioncoin.md)
+    - [ ] [OptionCoin](optioncoin.md) (option markets)
 - [ ] [ChainCash](chaincash.md) (elastic money creation based on assets and trust)
 - [x] [HodlCoin](hodlcoin.md) (trustless ERG derivative with non-declining price)
 - [x] [AuctionCoin](auctioncoin.md) (emission via auctions)
@@ -396,11 +401,17 @@ Each addition to our budding ecosystem helps to create even more trustless colla
     - [x] BTC Bridge
         - [ ] Runes Integration
     - [ ] EVM Bridge
+    - [ ] R&D for Monero
+    - [ ] RosenFast Service
+    - [ ] Bridge Expansion Kit
+    - [ ] Bridge SDK
+    - [ ] DOGE Bridge
+    - [ ] BCH Bridge
+    - [ ] Hummingbot Integration / Customisation
 - [ ] [Analog Ergo](analog-ergo.md) (atomic swaps)
      - [x] Alpha Live
      - [x] Lightning Swaps
 - [x] [Oracle Pools](oracle.md) (federated transparent data providing)
-- [ ] Trustless Relays
 
 
 ### Privacy and Mixing
@@ -413,7 +424,8 @@ Each addition to our budding ecosystem helps to create even more trustless colla
 
 - [x] [Paideia](paideia.md) (DAO toolkit)
 - [ ] [Lithos](lithos.md) (decentralized mining infrastructure)
-- [ ] [Thz.FM](thz-fm.md) MVP
+- [ ] [Thz.FM](thz-fm.md) (decentralised media monetisation & management)
+- [ ] [The Field](the-field.md) (peer-to-pool pledging protocol)
 
 ### Gaming and Metaverse
 - [x] [BlitzTCG](blitz.md) (trading card game)
@@ -431,8 +443,8 @@ Each addition to our budding ecosystem helps to create even more trustless colla
 - [x] Moria Finance
 - [x] Trustless Relys
 - [x] Random Number Generator
-- [TabbyPOS](tabbypos.md) 
-- [Crux Finance](https://cruxfinance.io/)
+- [x] [TabbyPOS](tabbypos.md)
+- [x] [Crux Finance](https://cruxfinance.io/)
 - [ ] ErgoNames
 
 
