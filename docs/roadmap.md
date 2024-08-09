@@ -319,12 +319,11 @@ Ergo is developed a by a combination of the [Ergo Foundation](ergo-foundation.md
             - [x] Manifest v3 rework
         - [ ] Ledger
             - [x] Available in developer mode
-        - [ ] Keystone
-        - [ ] Light SPV Clients using NiPoPoWs
+        - [ ] Keystone Integration
         - [ ] EIP-12 / EIP-20
         - [ ] Metamask integration
         - [ ] Trustwallet Integration
-
+        - [ ] Light SPV Clients using NiPoPoWs
 ///
 
 
@@ -333,8 +332,7 @@ Ergo is developed a by a combination of the [Ergo Foundation](ergo-foundation.md
 
 
 ## DeFi Ecosystem
-
-Each addition to our budding ecosystem helps to create even more trustless collaterral and expands the decentralised monetary base and deriviative money supply. 
+Every new addition to our growing DeFi ecosystem contributes to the expansion of trustless collateral, the decentralized monetary base, and the supply of derivative assets.
 
 
 ### Decentralized Exchanges 
@@ -348,7 +346,7 @@ Each addition to our budding ecosystem helps to create even more trustless colla
 - [x] [TokenJay](https://tokenjay.app/app/#purchases) (p2p escrow)
 - [ ] [PalmyraComDex](palmyra.md) (commodities DEX) ([Alpha live](https://palmyra.app/)!)
 - [ ] [Crystal Pool](crystal-pool.md) (instant L1 order-based trading)
-- [ ] [Machina Finance](machina.md) (grid DEX)
+- [ ] [Machina Finance](machina-finance.md) (grid DEX)
 
 
 ###  Stablecoins
@@ -372,15 +370,15 @@ Each addition to our budding ecosystem helps to create even more trustless colla
 ### Derivatives and Synthetics
 - [x] [SigmaO](sigmao.md) (trustless options)
 - [x] [HodlCoin](hodlcoin.md) (trustless ERG derivative with non-declining price)
-- [x] [AuctionCoin](auctioncoin.md) (emission via auctions)
+- [x] [AuctionCoin](auction-coin.md) (emission via auctions)
 - [x] [Hodlbox](https://hodlbox.xyz/) (long-term locking)
 - [ ] [OptionCoin](optioncoin.md) (decentralized options trading with token emission)
 - [ ] [ChainCash](chaincash.md) (elastic p2p money creation based on assets and trust)
 
 ### Crowdfunding
 
-- [x] [ErgoRaffle](raffle.md) (decentralized crowdfunding)
-    - [ ] V2 [features](raffle.md#v2)
+- [x] [ErgoRaffle](ergoraffle.md) (decentralized crowdfunding)
+    - [ ] V2 [features](ergoraffle.md#v2)
 
 ### Interoperability and Bridges
 
@@ -427,9 +425,9 @@ Each addition to our budding ecosystem helps to create even more trustless colla
 ### Tooling
 
 - [x] [Lilium](https://www.liliumergo.io/) (NFT sale platform)
-- [x] [Moria Finance](moria.finance.md) (fund management)
+- [x] [Moria Finance](moria-finance.md) (fund management)
 - [x] Trustless Relys
-- [x] [Random Number Generator](sigmarand.md) 
+- [x] [Random Number Generator](sigmarand.md)
 - [x] [TabbyPOS](tabbypos.md) (Point of Sale device)
 - [x] [Crux Finance](https://cruxfinance.io/) (Token charts, portfolio viewer and more)
 - [ ] [ErgoNames](ergonames.md) (decentralized naming system)

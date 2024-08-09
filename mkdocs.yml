@@ -264,7 +264,7 @@ nav:
       - Lending:
         - uses/lending.md
         - duckpools: eco/duckpools.md
-        - EXLE: eco/ergolend.md
+        - EXLE: eco/exle.md
         - SigmaFi: eco/sigmafi.md
       - Derivatives:
         - uses/deriv.md

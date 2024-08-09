@@ -7,7 +7,7 @@ Lending and borrowing are two components that increase liquidity flow in financi
 * With SigmaUSD, loans can be attractive to miners and not only.
 * Please also check the targeted microloan contract from ["Smart Contracts for the People" article](https://ergoplatform.org/en/blog/2018_10_19-smart-contracts/)
 
-## [ErgoLend](ergolend.md)
+## [ErgoLend](exle.md)
 
 ## [duckpools](duckpools.md)
 
