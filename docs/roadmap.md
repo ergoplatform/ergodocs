@@ -344,10 +344,11 @@ Every new addition to our growing DeFi ecosystem contributes to the expansion of
     - [x] [SkyHarbor Raffle for new UI](https://skyharbor.medium.com/enhancing-the-nft-experience-skyharbors-new-initiative-9679e94e3cd8)
 - [x] [single-tx-swap](https://www.single-tx-swap.com/) (trustless p2p swaps)
 - [x] [TokenJay](https://tokenjay.app/app/#purchases) (p2p escrow)
+- [x] [Crooks Finance](https://crooks-fi.com/) (buying, trading, and staking meme cryptocurrency tokens)
 - [ ] [PalmyraComDex](palmyra.md) (commodities DEX) ([Alpha live](https://palmyra.app/)!)
 - [ ] [Crystal Pool](crystal-pool.md) (instant L1 order-based trading)
 - [ ] [Machina Finance](machina-finance.md) (grid DEX)
-
+- [ ] [Mew Finance](https://mewfinance.com/)
 
 ###  Stablecoins
 
@@ -437,6 +438,13 @@ Every new addition to our growing DeFi ecosystem contributes to the expansion of
 
 - [x] [GuapSwap](guapswap.md) (miner token swapping)
 - [x] [CYTI](cyti.md) (Choose Your Token ID)
+
+
+#### Other Infrastructure
+
+- [ergexplorer](https://ergexplorer.com/)
+- [sigmaspace](https://sigmaspace.io/)
+
 
 ## References
 
