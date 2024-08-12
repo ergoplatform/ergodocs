@@ -86,7 +86,7 @@ rm -rf .ergo/history
 If your correct address or balance isn't displayed, follow these steps:
 
 1. Make sure the wallet is synchronised.
-2. Try to derive new addresses as per the [swagger](../swagger) instructions.
+2. Try to derive new addresses as per the [swagger](swagger.md) instructions.
 3. Ensure you derived additional addresses during the sync process.
 4. If the problem persists, restore the wallet on a different client.
 

@@ -25,7 +25,7 @@ bash -c "$(curl -s https://node.phenotype.dev)"
 You can track the status of the sync by comparing the heights found in [127.0.0.1:9053/info](http://127.0.0.1:9053/info) to the ones on the [explorer](https://explorer.ergoplatform.com/en/).
 
 
-Please see the [troubleshooting page](/node/platforms/troubleshooting) for more information. 
+Please see the [troubleshooting page](troubleshooting.md) for more information.
 
 ## Run each startup
 

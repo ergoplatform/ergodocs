@@ -87,7 +87,7 @@ Check out the [first decentralized grid order transaction on Ergo](https://twitt
 
 Machina Finance is another project on Ergo that is exploring the concept of grid trading. It is developing a decentralized exchange (DEX) that utilizes grid order contracts.
 
-Explore the project [here](../eco/machina-finance.md)
+Explore the project [here](machina-finance.md)
 
 ### Other bots
 

@@ -16,7 +16,7 @@ You will need to include the EIP27 rules mentioned on [this page](solo-node.md) 
 
 ## Step 2: Choose Your Pool Software
 
-Next, you need to choose your pool software. Ergo supports two options: [Miningcore](../miningcore) and [Ergo Stratum Server](stratum.md). Choose the one that best suits your needs.
+Next, you need to choose your pool software. Ergo supports two options: [Miningcore](miningcore.md) and [Ergo Stratum Server](stratum.md). Choose the one that best suits your needs.
 
 ## Step 3: Configure Your Miner
 

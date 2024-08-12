@@ -14,7 +14,7 @@ Ergo merges privacy, decentralization, and security into a robust platform, empo
 
 Mining on Ergo not only supports the network but also offers potential earnings. Learn about:
 
-- **[Setting Up Mining Operations](mining.md)**: Start mining ERG to contribute to network security and earn mining rewards.
+- **[Setting Up Mining Operations](autolykos.md)**: Start mining ERG to contribute to network security and earn mining rewards.
 
 ### For Traders
 
@@ -45,7 +45,7 @@ Developers can explore robust tools and resources to build on Ergo’s flexible 
 If you're new to cryptocurrencies or looking to understand Ergo’s basics:
 
 - **[Securing Your Investments](https://ergonaut.space/en/Guides/yield/getting-started)**: Learn how to purchase and securely store ERG.
-- **[Exploring the Ecosystem](uses.md)**: Discover how you can engage with various activities like NFTs, gaming, and charitable contributions.
+- **[Exploring the Ecosystem](/uses/index.md)**: Discover how you can engage with various activities like NFTs, gaming, and charitable contributions.
 - **[Airdrops, Token Sales, and IDOs](airdrops.md)**: Capitalize on airdrops, token sales, and initial DEX offerings.
 - **[Gaming on Ergo](gaming.md)**: Master gaming within the Ergo ecosystem.
 - **[Peer to Peer Trading](p2p-trading.md)**: Engage in direct trading activities with other users on the Ergo platform without the need for intermediaries, providing a decentralized and secure way to exchange assets.

@@ -11,7 +11,7 @@
     "title": "iOS",
     "content": "",
     "image": "/assets/img/dev-grid/ios.png",
-    "url": "ios.md"
+    "url": "iOS.md"
 
   },
   {

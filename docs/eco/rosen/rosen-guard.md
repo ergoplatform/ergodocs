@@ -1,6 +1,6 @@
 # Rosen Guards
 
-Rosen is an Ergo-centric bridge fortified with multi-layered security protection. In the initial layer, [Watchers](rosen-watcher.md) monitor network activities and report valid bridge-related events to the subsequent layer, Guards. These Guards then carefully process the reported events and execute required actions. In brief, Guards are dedicated to security maintenance and executing responses, while Watchers are focused on the ongoing monitoring of activities and transparent reporting.
+Rosen is an Ergo-centric bridge fortified with multi-layered security protection. In the initial layer, [Watchers](watcher.md) monitor network activities and report valid bridge-related events to the subsequent layer, Guards. These Guards then carefully process the reported events and execute required actions. In brief, Guards are dedicated to security maintenance and executing responses, while Watchers are focused on the ongoing monitoring of activities and transparent reporting.
 
 Guards are a federated group of entities managing the Rosen core. Their authority over Rosen is restricted through multisignature contracts and wallets. Failure or collusion of Guards will be tolerated while the majority of Guards are healthy. Each Guard has a reasonable amount of funds locked as collateral and will lose all their funds at once in case of malicious behaviour.
 

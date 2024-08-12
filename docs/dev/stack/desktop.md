@@ -17,7 +17,7 @@
     "title": "JavaFX",
     "content": "",
     "image": "../../assets/img/dev-grid/jvm.png",
-    "url": "../lang/jvm"
+    "url": "../lang/jvm.md"
   },
   {
     "title": "Rust",

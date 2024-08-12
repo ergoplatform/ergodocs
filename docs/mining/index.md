@@ -1,7 +1,7 @@
 # Mining
 
 
-Ergo mining is based on [Autolykos](/mining/autolykos), an ASIC-resistant Proof of Work algorithm written in Scala. 
+Ergo mining is based on [Autolykos](autolykos.md), an ASIC-resistant Proof of Work algorithm written in Scala. 
 
 
 ## Start Mining
@@ -32,7 +32,7 @@ Ergo mining is based on [Autolykos](/mining/autolykos), an ASIC-resistant Proof 
   {
     "title": "Wallets",
     "content": "Get your wallet setup",
-    "url": "../../dev/wallets.md"
+    "url": "../dev/wallets.md"
   },
   {
     "title": "Autolykos",

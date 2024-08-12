@@ -5,7 +5,7 @@ Building a mining rig for Ergo requires several components. Each component plays
 ## Components
 
 -   [Graphics Card (GPU)](https://ergonaut.space/en/Guides/Mining/Graphics_Cards): The GPU is the most important component of a mining rig. It's responsible for solving the complex mathematical problems that validate transactions on the Ergo network.
--   [Motherboards (MOBO)](/en/Guides/Mining/Motherboards): The motherboard is the main circuit board of your mining rig. It's where all other components are connected.
+-   Motherboards (MOBO): The motherboard is the main circuit board of your mining rig. It's where all other components are connected.
 -   Power Supply (PSU): The power supply provides electricity to your mining rig. Make sure to choose a PSU with enough capacity to support all your components.
 -   Processor (CPU): While not as important as the GPU for mining, the CPU handles the rest of your rig's operations.
 -   Memory (RAM): RAM is your rig's short-term memory. It temporarily stores data that your CPU uses while operating.

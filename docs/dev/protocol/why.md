@@ -34,7 +34,7 @@ Ergo transcends the traditional concept of a blockchain token, embodying **commo
 - [Demurrage](storage-rent.md), reinforcing Ergo as a genuine commodity
 - Support for decentralized derivatives and DeFi without intermediaries
 - SigmaFi ([SigmaFi](sigmafi.md) bonds), a peer-to-peer DeFi solution surpassing traditional financial institutions in transparency and risk management
-- Unparalleled support for developing [cryptographic protocols](cryptographic.md), including [non-interactive mixers](mixer.md) and [stealth addresses](stealth.md)
+- Unparalleled support for developing [cryptographic protocols](crypto.md), including [non-interactive mixers](mixer.md) and [stealth addresses](stealth-address.md)
 
 Ergo's recognition as the leading PoW cryptocurrency in DeFi supply demonstrates the practical application of its innovative features.
 

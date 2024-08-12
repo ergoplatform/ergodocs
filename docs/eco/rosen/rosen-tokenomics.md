@@ -2,7 +2,7 @@
 
 Rosen Bridge is designed to bootstrap liquidity across multiple ecosystems. The Rosen Token serves the as a sybil resistance mechanism for the Rosen framework, a fee distribution mechanism, and means to access services of the Rosen Bridge.
 
-[Watchers](rosen-watcher.md) are required to put collateral in RSN and ERG by staking, which allows them to acquire reporting permits. Guards need to lock RSN as collateral. Funds will be emitted to the Guard Set and involved Watchers in case of any successful bridge transfers. However, funds will be slashed/collected in case of malicious behavior. When RSN emission has ended, all bridge fees will be collected in the RSN token. Holding RSN will have special fee benefits for projects.
+[Watchers](watcher.md) are required to put collateral in RSN and ERG by staking, which allows them to acquire reporting permits. Guards need to lock RSN as collateral. Funds will be emitted to the Guard Set and involved Watchers in case of any successful bridge transfers. However, funds will be slashed/collected in case of malicious behavior. When RSN emission has ended, all bridge fees will be collected in the RSN token. Holding RSN will have special fee benefits for projects.
 
 Any user can join as a Watcher given they meet the collateral requirements needed to participate, and earn rewards for their services.
 

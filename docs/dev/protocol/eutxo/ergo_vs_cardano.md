@@ -167,4 +167,4 @@ Yes, Ergo provides a similar feature through its [Explorer](explorer.md) tool, w
 
 ### How do Mithril and NiPoPoWs compare in the context of Ergo?
 
-Both Mithril and NiPoPoWs are important concepts in the blockchain space. For a detailed comparison and understanding, you can refer to this [video](youtube.com/watch?v=tXHids3WAb4) from *PG: Blockchain & Deep Learning* on YouTube.
+Both Mithril and NiPoPoWs are important concepts in the blockchain space. For a detailed comparison and understanding, you can refer to this [video](https://youtube.com/watch?v=tXHids3WAb4) from *PG: Blockchain & Deep Learning* on YouTube.

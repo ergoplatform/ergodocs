@@ -338,7 +338,7 @@ Every new addition to our growing DeFi ecosystem contributes to the expansion of
 ### Decentralized Exchanges 
 
 - [x] [ErgoDex](spectrum.md) (AMM + Yield Farming)
-- [x] [ErgoAuctionHouse](ergoauctions.md) (peer-to-peer auctions)
+- [x] [ErgoAuctionHouse](ergo-auctions.md) (peer-to-peer auctions)
     - [x] [Trade House](https://ergoauctions.org/trade?pair=ERG-SigUSD) (orderbook-based P2P DEX)
 - [x] [SkyHarbor](skyharbor.md) (NFT Market)
     - [x] [SkyHarbor Raffle for new UI](https://skyharbor.medium.com/enhancing-the-nft-experience-skyharbors-new-initiative-9679e94e3cd8)

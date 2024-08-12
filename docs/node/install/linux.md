@@ -10,4 +10,4 @@ curl -s https://raw.githubusercontent.com/ergoplatform/ergo/master/ergo-installe
 
 With this script you'll have the latest Ergo node installed without any hassle.
 
-If you'd prefer to get set up manually, here's a [step-by-step.](/node/platforms/tutorial)
+If you'd prefer to get set up manually, here's a [step-by-step.](tutorial.md)

@@ -124,8 +124,9 @@ At the core of our system are Reputation Trees. These trees serve as hierarchica
 Branches point to other reputation proofs, creating a hierarchy of trust, while leaves represent reputation proofs assigned to external objects in the form of metadata. 
 This structure provides a systematic and scalable approach to reputation management.
 
+<!--
 ![reputation_system-example.svg](resources/reputation_system-example.svg)
-
+-->
 **User-Generated Reputation:**
 A feature of this system is the ability for any user to submit reputation proofs.
 It's a truly democratic approach to trust, empowering users to assign and transfer reputation.
