@@ -429,7 +429,10 @@ nav:
           - ErgoTool: dev/stack/ergotool.md
           - Model Transaction: dev/protocol/tx/model-tx.md
 
-      - Block: dev/data-model/block.md
+      - Block:
+        - dev/data-model/block.md
+        - Merkle Tree Format: merkle-tree.md
+        - Extension Section: dev/data-model/extension-section.md
       - Wallets:
         - dev/wallets.md
         - Access Issues: tutorials/access-issues.md
@@ -654,6 +657,7 @@ nav:
             - Ring Signatures:
               - 3-out-of-5 Threshold Signature: dev/scs/sigma/3-out-of-5.md
               - Distributed Signatures: node/sigs.md
+            - Signatute Scheme Internals: sig-scheme.md
         - Tooling:
           - Contracts: dev/scs/contracts.md
           - Playgrounds:
@@ -662,6 +666,7 @@ nav:
             - Kiosk: dev/stack/kiosk.md
             - ErgoPuppet: dev/scs/puppet.md
           - Compilers:
+            - Phases: dev/scs/ergoscript/compiler-phases.md
             - ErgoScala: dev/stack/ergoscala.md
             - CLI Compiler: dev/stack/compiler.md
           - Debugging: dev/scs/debugging.md
