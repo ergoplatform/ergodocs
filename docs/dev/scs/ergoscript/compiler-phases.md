@@ -3,14 +3,14 @@
 
 This document provides an overview of the key phases in the ErgoScript compiler pipeline, along with specific implementations in the sigma-rust and sigmastate-interpreter projects. The ErgoScript compiler takes high-level ErgoScript code and translates it into an intermediate form that can be evaluated by the ErgoTree interpreter or serialized for execution in the Ergo blockchain.
 
-1. Lexical Analysis (Lexer)
-2. Syntax Analysis (Parser)
-    1. High-Level Intermediate Representation (HIR)
-    2. Binding (Binder)
-    3. Type Inference
-    4. Middle Intermediate Representation (MIR)
-    5. Type Checking
-    6. Execution (ErgoTree Interpreter)
+- Lexical Analysis (Lexer)
+- Syntax Analysis (Parser)
+- High-Level Intermediate Representation (HIR)
+- Binding (Binder)
+- Type Inference
+- Middle Intermediate Representation (MIR)
+- Type Checking
+- Execution (ErgoTree Interpreter)
 
 ### 1. Lexer
 
@@ -20,10 +20,10 @@ This document provides an overview of the key phases in the ErgoScript compiler 
 - **Example**: Keywords like `if`, `else`, or operators like `+`, `-`, are converted into tokens that represent these elements in the language.
 
 - **In `sigma-rust`**: The Lexer is implemented using the `Logos` crate, which provides a highly efficient way to define lexing rules in Rust.
-  - **Location**: [`ergoscript-compiler/src/lexer.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergoscript-compiler/src/lexer.rs)
+    - **Location**: [`ergoscript-compiler/src/lexer.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergoscript-compiler/src/lexer.rs)
 
 - **In `sigmastate-interpreter`**: A custom Scala-based Lexer is used for tokenization.
-  - **Location**: [`parsers/shared/src/main/scala/sigmastate/lang/Lexer.scala`](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/parsers/shared/src/main/scala/sigmastate/lang/Lexer.scala)
+      - **Location**: [`parsers/shared/src/main/scala/sigmastate/lang/Lexer.scala`](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/parsers/shared/src/main/scala/sigmastate/lang/Lexer.scala)
 
 ### 2. Parser
 
@@ -33,10 +33,10 @@ This document provides an overview of the key phases in the ErgoScript compiler 
 - **Example**: An expression like `a + b` would be represented as a node in the AST with `+` as the root, and `a` and `b` as its children.
 
 - **In `sigma-rust`**: The parser uses the `Rowan` library to manage Concrete Syntax Trees (CST) and Abstract Syntax Trees (AST). AST nodes wrap Rowan’s trees and expose node-specific details through methods.
-  - **Location**: [`ergoscript-compiler/src/parser.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergoscript-compiler/src/parser.rs)
+    - **Location**: [`ergoscript-compiler/src/parser.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergoscript-compiler/src/parser.rs)
 
 - **In `sigmastate-interpreter`**: The Scala implementation utilizes its own parsing strategies to construct the AST from tokens.
-  - **Location**: [`parsers/shared/src/main/scala/sigmastate/lang/SigmaParser.scala`](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/parsers/shared/src/main/scala/sigmastate/lang/SigmaParser.scala)
+    - **Location**: [`parsers/shared/src/main/scala/sigmastate/lang/SigmaParser.scala`](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/parsers/shared/src/main/scala/sigmastate/lang/SigmaParser.scala)
 
 ### 3. High-level Intermediate Representation (HIR)
 
@@ -46,10 +46,10 @@ This document provides an overview of the key phases in the ErgoScript compiler 
 - **Example**: Complex language constructs in the AST are reduced to simpler, more uniform representations in the HIR.
 
 - **In `sigma-rust`**: Each HIR node has a kind (enum), span (source code reference), and an optional type. This makes it easier to perform operations like type inference and binding.
-  - **Location**: [`ergoscript-compiler/src/hir.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergoscript-compiler/src/hir.rs)
+    - **Location**: [`ergoscript-compiler/src/hir.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergoscript-compiler/src/hir.rs)
 
 - **In `sigmastate-interpreter`**: HIR serves a similar purpose, with emphasis on compatibility with the Scala language's functional programming features.
-  - **Location**: [`sc/shared/src/main/scala/sigma/compiler/ir/TypeDescs.scala`](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/sc/shared/src/main/scala/sigma/compiler/ir/TypeDescs.scala)
+    - **Location**: [`sc/shared/src/main/scala/sigma/compiler/ir/TypeDescs.scala`](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/sc/shared/src/main/scala/sigma/compiler/ir/TypeDescs.scala)
 
 ### 4. Binder
 
@@ -59,10 +59,10 @@ This document provides an overview of the key phases in the ErgoScript compiler 
 - **Example**: An identifier like `HEIGHT` in a script would be resolved to the actual block height from the environment.
 
 - **In `sigma-rust`**: The Binder rewrites the HIR, swapping identifiers and variables with their respective HIR nodes, ensuring correct references.
-  - **Location**: [`ergoscript-compiler/src/binder.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergoscript-compiler/src/binder.rs)
+    - **Location**: [`ergoscript-compiler/src/binder.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergoscript-compiler/src/binder.rs)
 
 - **In `sigmastate-interpreter`**: A similar process is implemented in Scala, using the Scala language's features for name resolution and binding.
-  - **Location**: [`sc/shared/src/main/scala/sigma/compiler/phases/SigmaBinder.scala`](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/sc/shared/src/main/scala/sigma/compiler/phases/SigmaBinder.scala)
+    - **Location**: [`sc/shared/src/main/scala/sigma/compiler/phases/SigmaBinder.scala`](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/sc/shared/src/main/scala/sigma/compiler/phases/SigmaBinder.scala)
 
 ### 5. Type Inference
 
@@ -72,10 +72,10 @@ This document provides an overview of the key phases in the ErgoScript compiler 
 - **Example**: In a script, if an integer is added to a floating-point number, the type inference will ensure that the operation is valid and determine the result's type.
 
 - **In `sigma-rust`**: Type inference is implemented as a separate phase that traverses the HIR and assigns types, ensuring type correctness before moving to the next phase.
-  - **Location**: [`ergoscript-compiler/src/type_infer.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergoscript-compiler/src/type_infer.rs)
+    - **Location**: [`ergoscript-compiler/src/type_infer.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergoscript-compiler/src/type_infer.rs)
 
 - **In `sigmastate-interpreter`**: Type inference follows Scala's type system rules, ensuring that all expressions are type-safe.
-  - **Location**: [`sc/shared/src/main/scala/sigma/compiler/phases/SigmaTyper.scala`](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/sc/shared/src/main/scala/sigma/compiler/phases/SigmaTyper.scala)
+    - **Location**: [`sc/shared/src/main/scala/sigma/compiler/phases/SigmaTyper.scala`](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/sc/shared/src/main/scala/sigma/compiler/phases/SigmaTyper.scala)
 
 ### 6. Middle-level Intermediate Representation (MIR)
 
@@ -85,10 +85,10 @@ This document provides an overview of the key phases in the ErgoScript compiler 
 - **Example**: Complex expressions might be broken down into simpler operations that are easier to optimize and execute.
 
 - **In `sigma-rust`**: MIR is the final form of the IR used by the interpreter and for serialization purposes.
-  - **Location**: [`ergotree-ir/src/mir.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergotree-ir/src/mir.rs)
+    - **Location**: [`ergotree-ir/src/mir.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergotree-ir/src/mir.rs)
 
 - **In `sigmastate-interpreter`**: MIR serves a similar role, focusing on preparing the script for evaluation by the ErgoTree interpreter.
-  - **Location**: [`sc/shared/src/main/scala/sigma/compiler/ir/ProgramGraphs.scala`](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/sc/shared/src/main/scala/sigma/compiler/ir/ProgramGraphs.scala)
+    - **Location**: [`sc/shared/src/main/scala/sigma/compiler/ir/ProgramGraphs.scala`](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/sc/shared/src/main/scala/sigma/compiler/ir/ProgramGraphs.scala)
 
 ### 7. Type Checking
 
@@ -97,7 +97,5 @@ This document provides an overview of the key phases in the ErgoScript compiler 
 - **How it works**: The Type Checker traverses the MIR, checking that each operation's input types are compatible with its output types, and ensuring that the script is type-safe.
 - **Example**: The Type Checker would flag an error if a string were incorrectly used in a numerical operation.
 
-- **In `sigma-rust`**: Type checking is performed
-
- alongside the MIR traversal, validating the correctness of the types before the script is executed.
+- **In `sigma-rust`**: Type checking is performed alongside the MIR traversal, validating the correctness of the types before the script is executed.
  

@@ -79,7 +79,23 @@ Ergo is a revolutionary platform that establishes the foundation for a new wave 
 
 ## **Understanding Ergo**
 
-Ergo is a next-generation Proof of Work smart-contract platform that enables new models of financial interaction, underpinned by a safe and rich scripting language (ErgoScript) and flexible and powerful Zero-Knowledge proofs (Σ-protocols). 
+Ergo is a next-generation Proof of Work (PoW) blockchain platform designed for secure and efficient smart contract execution. At its core, Ergo leverages a powerful scripting language called ErgoScript and flexible Zero-Knowledge Proofs (Σ-protocols) to enable new models of financial interaction.
+
+ErgoScript is a safe and expressive language that allows for clear descriptions of contractual logic. It supports the creation of flexible crypto-contracts based on Σ-protocols, which are a class of Zero-Knowledge Proofs. These protocols enable privacy-preserving transactions and complex smart contract functionality.
+
+Ergo's architecture is underpinned by the Extended UTXO (eUTXO) model, an evolution of Bitcoin's Unspent Transaction Output (UTXO) model. The eUTXO model allows each UTXO to carry arbitrary data and be protected by an arbitrary predicate or spending condition. This flexibility enables the representation of various assets, tokens, and smart contract states within the blockchain.
+
+/// admonition | Chatbots!
+    type: info
+
+To further explore and understand Ergo's concepts, you can interact with the following chatbots:
+
+General chat bot:
+https://www.chatbase.co/chatbot-iframe/zxB2uzZfYoHIpA98eTzgM
+
+ErgoScript chat bot:
+https://www.chatbase.co/chatbot-iframe/INAIfQ2ts4E6ykf4rseVu
+///
 
 
 ##### **Transactional Model**
@@ -325,14 +341,22 @@ When combined with a blockchain, these composable proofs enable very powerful us
 
 ##### **Crypto Primitives**
 
-- **Hash**: `Sha256`, `Blake2b256`
-- **Encoding**: `Base58`
-- **Signing Algorithm**: ECDSA (`secp256k1`) & Schnorr 
-- **Primitive Secrets**: [Schnorr Signature](schnorr.md) & [Diffie-Hellman tuple](diffie.md)
-    - **[Schnorr signature](schnorr.md)**: A proof of knowledge of discrete logarithm with respect to a fixed group generator.
-    - **[Diffie-Hellman tuple](diffie.md)**: A proof of equality of discrete logarithms.
-- **Non-Interactive**: The proof of sigma-statements are made non-interactive with the [**Fiat-Shamir** transformation](diffie.md#fiat-shamir-transformation).
-- [EIP-0003: Deterministic Wallet Standard](eip3.md)
+
+- **Hash**:
+    - `Sha256`: Secure Hash Algorithm 256-bit.
+    - `Blake2b256`: A cryptographic hash function that is faster than MD5 and SHA-256, yet provides security similar to the strongest hash functions available.
+- **Encoding**:
+    - `Base58`: A binary-to-text encoding scheme used for encoding Bitcoin addresses and other text-based data.
+- **Signing Algorithm**:
+    - `ECDSA (secp256k1)`: Elliptic Curve Digital Signature Algorithm over the secp256k1 curve, widely used in Bitcoin and other cryptocurrencies.
+    - `Schnorr`: A digital signature scheme that is simple, provably secure in the random oracle model, and allows for the aggregation of multiple signatures into a single signature, enhancing efficiency and privacy.
+- **Primitive Secrets**:
+    - **[Schnorr Signature](schnorr.md)**: A proof of knowledge of a discrete logarithm with respect to a fixed group generator.
+    - **[Diffie-Hellman Tuple](diffe.tex)**: A proof of equality of discrete logarithms, enabling secure exchange of cryptographic keys over a public channel.
+- **Non-Interactive Proofs**:
+    - The proofs of sigma-statements are made non-interactive with the [**Fiat-Shamir transformation**](diffie.md#fiat-shamir-transformation), which converts an interactive proof of knowledge into a non-interactive one by using a cryptographic hash function.
+- **Additional Cryptographic Standards**:
+    - **[EIP-0003: Deterministic Wallet Standard](eip3.md)**: A standard defining the structure and operation of deterministic wallets in the Ergo platform.
 
 See [this page](/dev/scs/global-functions/#cryptographic-functions) for a description of the global Cryptographic functions available in ErgoScript.
 

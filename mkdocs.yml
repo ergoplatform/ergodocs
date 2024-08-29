@@ -667,6 +667,7 @@ nav:
             - ErgoPuppet: dev/scs/puppet.md
           - Compilers:
             - Phases: dev/scs/ergoscript/compiler-phases.md
+            - Sigmastate-Interpreter: dev/scs/sigmastate.md
             - ErgoScala: dev/stack/ergoscala.md
             - CLI Compiler: dev/stack/compiler.md
           - Debugging: dev/scs/debugging.md
@@ -698,7 +699,6 @@ nav:
             - Reversible Address: dev/scs/tx/reversible-address.md
             - Rock/Paper/Scissors: dev/scs/tx/rock-paper-scissor.md
             - ICO: dev/scs/tx/ico.md
-        #- Data Inputs: dev/scs/data-inputs.md
        
       
           
