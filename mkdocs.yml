@@ -461,8 +461,9 @@ nav:
         - AVL Trees:
           - dev/protocol/avl.md
           - Plasma: dev/lib/plasma.md
-        - Proof of Proof-of-Work: dev/data-model/structures/popow.md
-        - Interlink Vectors: dev/data-model/structures/interlink-vectors.md
+        - Proof of Proof-of-Work: 
+          - dev/data-model/structures/popow.md
+          - Interlink Vectors: dev/data-model/structures/interlink-vectors.md
 
       - Wallets:
         - dev/wallets.md

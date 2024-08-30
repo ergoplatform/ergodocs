@@ -2,50 +2,80 @@
 
 ## Overview
 
-Interlink vectors are a crucial component in the Proof-of-Proof-of-Work (PoPow) protocol, which allows lightweight clients to verify the correctness of the blockchain without needing to download and validate the entire chain. These vectors store references to previous block headers at varying heights, forming a hierarchical structure that supports efficient validation and compression of blockchain data.
+Interlink vectors are a fundamental component of the [Proof-of-Proof-of-Work (PoPow) protocol](popow.md) in the Ergo blockchain. These vectors allow lightweight clients to verify the correctness of the blockchain without needing to download and validate the entire chain. By storing references to previous block headers at varying heights, interlink vectors create a hierarchical structure that supports efficient validation and compression of blockchain data, making them particularly useful for devices with limited resources such as mobile phones or IoT devices.
 
-Interlink vectors enable clients to follow the longest chain rule and verify that a blockchain follows this rule with minimal resource requirements. This documentation provides an overview of the structure, purpose, and implementation of interlink vectors in the Ergo blockchain.
+Interlink vectors work in conjunction with [Merkle trees](merkle-tree.md) and PoPow proofs to ensure that the blockchain follows the longest chain rule, which is critical for maintaining the security and integrity of the network.
 
 ## Purpose of Interlink Vectors
 
-In a blockchain, each block contains a reference to the previous block, forming a linked chain. However, in some cases, particularly in lightweight clients, it is impractical to download and validate every block. Interlink vectors address this by storing references to previous blocks in a way that allows the verification of the chain's integrity without requiring access to the entire blockchain.
+In traditional blockchains, each block references its immediate predecessor, forming a simple linear chain. For lightweight clients, downloading and validating every block in this chain is impractical due to resource constraints. Interlink vectors solve this problem by storing references to previous blocks in a hierarchical manner. This allows clients to verify the chain's integrity by checking only a subset of blocks, drastically reducing the amount of data they need to process.
 
-Interlink vectors are used in conjunction with Merkle trees and PoPow proofs to create a scalable and secure method for verifying the longest chain. They are particularly valuable for lightweight clients, such as mobile or IoT devices, where storage and processing power are limited.
+Interlink vectors are essential for enabling efficient and secure blockchain validation in scenarios where full nodes are impractical. They are a key part of ensuring that the network remains decentralized and accessible to a wide range of participants, including those with limited computing power.
 
 ## Structure of Interlink Vectors
 
-An interlink vector is essentially an array of block headers. Each element in the array points to a previous block header at a certain level of the chain. The levels are defined by the number of leading zeros in the block’s hash, which corresponds to the difficulty level of the block.
+An interlink vector is essentially an array of block headers, where each element points to a previous block header at a certain level of the chain. The levels in the interlink vector are determined by the number of leading zeros in the block’s hash, which corresponds to the difficulty level of the block.
 
-For example, the first element in the vector might point to a block with a single leading zero in its hash, the second to a block with two leading zeros, and so on. This structure allows for the efficient verification of the chain, as only a subset of blocks needs to be checked to confirm that the chain is valid.
+### Key Properties:
 
-The key properties of interlink vectors are:
+- **Efficiency**: Interlink vectors allow clients to verify the longest chain without needing to download the entire blockchain, making the process more efficient.
+- **Scalability**: They support the participation of lightweight clients by minimizing the data required for verification.
+- **Security**: By adhering to the longest chain rule, interlink vectors help ensure that the blockchain remains secure and that all participants can trust its integrity.
 
-- **Efficiency**: They enable the verification of the longest chain with minimal data.
-- **Scalability**: They allow lightweight clients to participate in the blockchain without needing to download the entire chain.
-- **Security**: They ensure that the chain being followed adheres to the longest chain rule.
+### Example Structure:
+
+For instance, if a block has two leading zeros in its hash, it might be placed at the second level of the interlink vector. Higher levels correspond to blocks with more leading zeros, indicating higher difficulty.
+
+```mermaid
+graph TD
+    A[Block Header at Level 0] --> B[Block Header at Level 1]
+    B --> C[Block Header at Level 2]
+    C --> D[Block Header at Level 3]
+    D --> E[Latest Block Header]
+```
+
+This hierarchical structure allows clients to verify the blockchain's integrity by checking only the relevant levels in the interlink vector.
 
 ## Implementation in Ergo
 
-Interlink vectors are implemented in the Ergo blockchain as part of the PoPow protocol. They are stored in the block headers and updated with each new block added to the chain. The vector is constructed by recursively hashing previous block headers, starting from the genesis block.
+Interlink vectors are implemented in the Ergo blockchain as part of the PoPow protocol and are stored in the block headers. The implementation involves recursively hashing previous block headers, starting from the genesis block, and updating the interlink vector with each new block.
 
-The steps for implementing and using interlink vectors in Ergo are as follows:
+### 1. **Creating the Interlink Vector**:
 
-1. **Creating the Interlink Vector**:
-    - When a new block is mined, its hash is calculated.
-    - The number of leading zeros in the hash determines the level of the block in the interlink vector.
-    - The block header is added to the vector at the corresponding level.
+When a new block is mined:
 
-2. **Updating the Interlink Vector**:
-    - As new blocks are added to the chain, the interlink vector is updated by adding references to the new block headers.
-    - If a block at a higher level (i.e., with more leading zeros) is found, it replaces the reference to the previous block at that level in the vector.
+- The block’s hash is computed.
+- The number of leading zeros in the hash determines the block's level in the interlink vector.
+- The block header is added to the vector at the corresponding level.
 
-3. **Verifying the Chain with Interlink Vectors**:
-    - To verify the correctness of the chain, a client only needs to check the blocks referenced in the interlink vector.
-    - The client can confirm that the chain follows the longest chain rule by verifying that each block in the vector adheres to the difficulty level required for that position in the vector.
+**Code Reference**: The logic for creating and managing interlink vectors is implemented within the [Scorex repository](https://github.com/ScorexFoundation/scrypto) used by the Ergo blockchain. Specifically, you can find the relevant code in the [BlockHeader.scala](https://github.com/ergoplatform/ergo/blob/master/src/main/scala/org/ergoplatform/modifiers/history/header/Header.scala) file.
 
-4. **Batch Merkle Proofs and Interlink Vectors**:
-    - Interlink vectors are often used in conjunction with batch Merkle proofs to provide efficient and secure verification.
-    - A batch Merkle proof allows the client to verify multiple elements in the interlink vector simultaneously, reducing the computational overhead.
+### 2. **Updating the Interlink Vector**:
+
+As new blocks are added:
+
+- The interlink vector is updated by adding references to new block headers.
+- If a block with more leading zeros (indicating a higher level) is found, it replaces the previous block at that level.
+
+**Code Reference**: The interlink vector update mechanism is handled within the [Ergo block header construction process](https://github.com/ergoplatform/ergo/blob/master/src/main/scala/org/ergoplatform/modifiers/history/header/Header.scala).
+
+### 3. **Verifying the Chain with Interlink Vectors**:
+
+To verify the blockchain:
+
+- A client checks the blocks referenced in the interlink vector.
+- By verifying that each block in the vector adheres to the required difficulty level, the client confirms that the chain follows the longest chain rule.
+
+**Code Reference**: Chain verification using interlink vectors is integrated into the block validation logic in the [Ergo codebase](https://github.com/ergoplatform/ergo/blob/master/src/main/scala/org/ergoplatform/nodeView/history/ErgoHistory.scala), particularly within the [ErgoHistory.scala](https://github.com/ergoplatform/ergo/blob/master/src/main/scala/org/ergoplatform/nodeView/history/ErgoHistory.scala) file.
+
+### 4. **Batch Merkle Proofs and Interlink Vectors**:
+
+Interlink vectors are often combined with batch Merkle proofs to enhance efficiency:
+
+- A batch Merkle proof allows the simultaneous verification of multiple elements in the interlink vector.
+- This reduces the computational overhead and ensures secure validation.
+
+**Code Reference**: Batch Merkle proof logic is implemented in the [sigma-rust library](https://github.com/ergoplatform/sigma-rust), specifically in the [batchmerkleproof.rs](https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-merkle-tree/src/batchmerkleproof.rs) file.
 
 ## Example Usage
 
@@ -65,4 +95,8 @@ fn verify_interlink_vector(tree: &MerkleTree, proof: &BatchMerkleProof) {
 }
 ```
 
-In this example, the client generates a batch Merkle proof for the interlink vector and verifies it against the Merkle root of the blockchain. This process ensures that the interlink vector is correctly formed and that the blockchain follows the longest chain rule.
+**Code Reference**: The example demonstrates the use of batch Merkle proofs from the [sigma-rust library](https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-merkle-tree/src/batchmerkleproof.rs) to verify the interlink vector against the blockchain's Merkle root.
+
+## Conclusion
+
+Interlink vectors are a key component of Ergo's PoPow protocol, enabling efficient and secure blockchain validation for lightweight clients. By understanding and utilizing interlink vectors, developers can ensure that their applications and clients maintain the highest standards of security and efficiency, even in resource-constrained environments.

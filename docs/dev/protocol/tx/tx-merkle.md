@@ -3,7 +3,7 @@ tags:
   - Merkle
 ---
 
-# Transaction Merkle Tree in Ergo
+# Transaction Merkle Tree
 
 ## Overview
 

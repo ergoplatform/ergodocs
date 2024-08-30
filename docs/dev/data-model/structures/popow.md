@@ -10,7 +10,7 @@ The PoPow protocol is built on top of several key data structures that facilitat
 
 The PoPow protocol relies on a combination of interlink vectors, NiPoPoW proofs, and Merkle trees to achieve its goals. Each of these data structures plays a specific role in enabling efficient verification of the blockchain's integrity.
 
-1. **Interlink Vectors**:
+1. [**Interlink Vectors**](interlink-vectors.md):
       - **Purpose**: Interlink vectors store references to previous block headers at different difficulty levels. They allow lightweight clients to verify the blockchain's integrity by checking only a subset of blocks, rather than the entire chain.
       - **Structure**: An interlink vector is an array where each element points to a previous block header. The level of each element is determined by the number of leading zeros in the block's hash, corresponding to the difficulty level of that block.
       - **Usage**: Interlink vectors are updated as new blocks are added to the blockchain, ensuring that the latest blocks are always accessible for verification. They are particularly useful in scenarios where quick and efficient chain validation is needed.
