@@ -1,3 +1,8 @@
+---
+tags:
+  - Merkle
+---
+
 # Extension Block Merkle Tree in Ergo
 
 ## Overview

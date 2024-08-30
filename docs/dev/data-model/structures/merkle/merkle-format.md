@@ -1,3 +1,8 @@
+---
+tags:
+  - Merkle
+---
+
 # Merkle Tree Format
 
 The Merkle Tree format used in Ergo follows a specific structure and encoding scheme, essential for developers working with Merkle proofs and validating transaction inclusion.

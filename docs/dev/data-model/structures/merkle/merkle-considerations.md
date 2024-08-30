@@ -1,3 +1,7 @@
+---
+tags:
+  - Merkle
+---
 # Considerations for Developers
 
 ### Efficiency and Performance

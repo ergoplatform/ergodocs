@@ -1,3 +1,8 @@
+---
+tags:
+  - Merkle
+---
+
 # Validation of Merkle Proofs in Ergo
 
 ## Overview
