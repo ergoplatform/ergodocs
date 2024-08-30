@@ -1,6 +1,16 @@
-## How to Use Merkle Batch Proofs in Ergo
+# Using Merkle Batch Proofs on Ergo
 
-### Using Sigma-Rust for Rust-based Applications
+## Overview
+
+While full support for Merkle Trees and Batch Proofs is available in the `sigma-rust` library, which is extensively used in Rust-based Ergo applications, integration into the core JVM-based `sigmastate-interpreter` for direct use within ErgoScript remains in progress. There is an open issue in the `sigmastate-interpreter` repository to support Merkle Trees natively, which would allow for direct handling of static data within ErgoScript, enhancing efficiency in various blockchain operations, such as proof-of-transaction and securing extension block data.
+
+Until this feature is fully integrated into `sigmastate-interpreter`, developers working in JVM-based environments can leverage `scrypto`, which provides essential cryptographic functionalities, including Merkle Tree management and Batch Proof generation and verification.
+
+For more details on the ongoing integration efforts, you can refer to the [GitHub issue #296](https://github.com/ergoplatform/ergo/issues/296) in the Ergo repository.
+
+Now, let's delve into the practical steps of using Merkle Batch Proofs in Ergo.
+
+## Using Sigma-Rust for Rust-based Applications
 
 The `sigma-rust` library provides comprehensive tools to create, manage, and verify Merkle Batch Proofs in Rust-based Ergo applications. Below is a step-by-step guide with code examples.
 
@@ -88,7 +98,7 @@ fn serialize_and_deserialize_proof(proof: &BatchMerkleProof) {
 }
 ```
 
-### Using Scrypto for JVM-based Applications
+## Using Scrypto for JVM-based Applications
 
 For JVM-based applications, `scrypto` provides similar functionalities to `sigma-rust`. It works closely with the `sigmastate-interpreter` to handle cryptographic operations, including Merkle Trees and Batch Proofs.
 

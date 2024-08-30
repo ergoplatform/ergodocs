@@ -7,9 +7,9 @@ tags:
 
 ## Overview
 
-The Extension Block Merkle Tree in the Ergo blockchain is a crucial implementation designed to ensure the integrity and authenticity of additional key-value data stored within the Extension Block of each block. This data includes miner votes, protocol parameters, and other auxiliary information that extends the functionality of the Ergo protocol beyond the standard transaction data.
+The Extension Block Merkle Tree in Ergo is crucial in ensuring the integrity and authenticity of additional key-value data stored within the extension section of each block. This data includes miner votes, protocol parameters, and other auxiliary information that extends the functionality of the Ergo protocol beyond the standard transaction data.
 
-By leveraging Merkle Trees, the Ergo blockchain can efficiently and securely verify the integrity of this auxiliary data, ensuring that it has not been tampered with. The cryptographic security provided by the Merkle Tree structure plays a vital role in maintaining the overall robustness of the blockchain.
+By leveraging Merkle Trees, the Ergo blockchain can efficiently and securely verify the integrity of this auxiliary data, ensuring that it has not been tampered with.
 
 ## Key Components of the Extension Block Merkle Tree
 
