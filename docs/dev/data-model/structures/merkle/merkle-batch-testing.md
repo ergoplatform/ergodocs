@@ -144,21 +144,7 @@ class MerkleBatchProofSpec extends AnyFlatSpec with Matchers {
 }
 ```
 
-### Explanation and Key Points:
-
-1. **Merkle Tree Creation**: 
-   - The tests create a Merkle tree from random data elements and verify that the root hash is correctly generated.
-
-2. **Batch Merkle Proof Generation**: 
-   - Tests ensure that batch proofs are generated correctly by checking that the proof contains the expected number of elements.
-
-3. **Batch Merkle Proof Verification**:
-   - The verification tests confirm that the generated proofs are valid, ensuring the data elements are part of the original Merkle tree.
-
-4. **Serialization and Deserialization**: 
-   - Serialization tests verify that the proofs can be serialized and deserialized without losing integrity, which is crucial for storing and transmitting proofs.
-
-These tests can be run using standard Rust and Scala testing tools (`cargo test` for Rust, `sbt test` for Scala) and are critical for validating the correctness of Merkle Batch Proof implementations in Ergo-based applications.#### Code References:
+#### Code References:
 - **MerkleTree**: [`MerkleTree.scala`](https://github.com/ScorexFoundation/scrypto/blob/master/src/main/scala/scorex/crypto/authds/merkle/MerkleTree.scala)
 - **BatchMerkleProof**: [`BatchMerkleProof.scala`](https://github.com/ScorexFoundation/scrypto/blob/master/src/main/scala/scorex/crypto/authds/merkle/BatchMerkleProof.scala)
 - **BatchMerkleProofSerializer**: [`BatchMerkleProofSerializer.scala`](https://github.com/ScorexFoundation/scrypto/blob/master/src/main/scala/scorex/crypto/authds/merkle/serialization/BatchMerkleProofSerializer.scala)
