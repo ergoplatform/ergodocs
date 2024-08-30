@@ -87,10 +87,12 @@ mod tests {
 }
 ```
 
-#### Code References:
+#### Code References
+
 - **MerkleTree**: [`merkletree.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-merkle-tree/src/merkletree.rs)
 - **BatchMerkleProof**: [`batchmerkleproof.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-merkle-tree/src/batchmerkleproof.rs)
 - **Serialization Methods**: [`scorex_serializable.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/sigma-ser/src/scorex_serializable.rs)
+
 
 ### Scala (`scrypto`) Testing
 
@@ -102,49 +104,59 @@ import org.scalatest.matchers.should.Matchers
 import scorex.crypto.authds.merkle.{MerkleTree, BatchMerkleProof}
 import scorex.crypto.authds.merkle.serialization.BatchMerkleProofSerializer
 import scorex.crypto.hash.{Blake2b256, Digest32}
+import scorex.utils.Random
 
 class MerkleBatchProofSpec extends AnyFlatSpec with Matchers {
   implicit val hf = Blake2b256
 
   "Merkle Tree" should "be created correctly" in {
-    val leafData = Seq.fill(3)(scorex.utils.Random.randomBytes(32))
-    val tree = MerkleTree(leafData.map(Digest32 @@ _))
+    val leafData = Seq.fill(3)(Random.randomBytes(32)) // Generate random leaf data
+    val tree = MerkleTree(leafData.map(Digest32 @@ _)) // Create a Merkle Tree
 
     tree.rootHash should not be null
   }
 
   "Batch Merkle Proof" should "be generated correctly" in {
-    val leafData = Seq.fill(3)(scorex.utils.Random.randomBytes(32))
-    val tree = MerkleTree(leafData.map(Digest32 @@ _))
+    val leafData = Seq.fill(3)(Random.randomBytes(32)) // Generate random leaf data
+    val tree = MerkleTree(leafData.map(Digest32 @@ _)) // Create a Merkle Tree
 
-    val proof = tree.proofByIndices(Seq(0, 2)).get
+    val proof = tree.proofByIndices(Seq(0, 2)).get // Generate batch proof for elements at index 0 and 2
     proof.indices.length shouldEqual 2
   }
 
   it should "verify correctly" in {
-    val leafData = Seq.fill(3)(scorex.utils.Random.randomBytes(32))
-    val tree = MerkleTree(leafData.map(Digest32 @@ _))
+    val leafData = Seq.fill(3)(Random.randomBytes(32)) // Generate random leaf data
+    val tree = MerkleTree(leafData.map(Digest32 @@ _)) // Create a Merkle Tree
 
-    val proof = tree.proofByIndices(Seq(0, 2)).get
-    proof.valid(tree.rootHash) shouldBe true
+    val proof = tree.proofByIndices(Seq(0, 2)).get // Generate batch proof for elements at index 0 and 2
+    proof.valid(tree.rootHash) shouldBe true // Verify the proof against the tree's root hash
   }
 
   it should "serialize and deserialize correctly" in {
-    val leafData = Seq.fill(3)(scorex.utils.Random.randomBytes(32))
-    val tree = MerkleTree(leafData.map(Digest32 @@ _))
+    val leafData = Seq.fill(3)(Random.randomBytes(32)) // Generate random leaf data
+    val tree = MerkleTree(leafData.map(Digest32 @@ _)) // Create a Merkle Tree
 
-    val proof = tree.proofByIndices(Seq(0, 2)).get
-    val serializer = new BatchMerkleProofSerializer[Digest32, Blake2b256.type]
+    val proof = tree.proofByIndices(Seq(0, 2)).get // Generate batch proof for elements at index 0 and 2
+    val serializer = new BatchMerkleProofSerializer[Digest32, Blake2b256.type] // Serializer for BatchMerkleProof
 
-    val serializedProof = serializer.serialize(proof)
-    val deserializedProof = serializer.deserialize(serializedProof).get
+    val serializedProof = serializer.serialize(proof) // Serialize the proof
+    val deserializedProof = serializer.deserialize(serializedProof).get // Deserialize the proof
 
-    proof shouldEqual deserializedProof
+    proof shouldEqual deserializedProof // Check that the original and deserialized proofs are equal
   }
 }
 ```
 
-#### Code References:
-- **MerkleTree**: [`MerkleTree.scala`](https://github.com/ScorexFoundation/scrypto/blob/master/src/main/scala/scorex/crypto/authds/merkle/MerkleTree.scala)
-- **BatchMerkleProof**: [`BatchMerkleProof.scala`](https://github.com/ScorexFoundation/scrypto/blob/master/src/main/scala/scorex/crypto/authds/merkle/BatchMerkleProof.scala)
-- **BatchMerkleProofSerializer**: [`BatchMerkleProofSerializer.scala`](https://github.com/ScorexFoundation/scrypto/blob/master/src/main/scala/scorex/crypto/authds/merkle/serialization/BatchMerkleProofSerializer.scala)
+#### Code References
+
+- **MerkleTree**: [`MerkleTree.scala`](https://github.com/input-output-hk/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/merkle/MerkleTree.scala)
+- **BatchMerkleProof**: [`BatchMerkleProof.scala`](https://github.com/input-output-hk/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/merkle/BatchMerkleProof.scala)
+- **BatchMerkleProofSerializer**: [`BatchMerkleProofSerializer.scala`](https://github.com/input-output-hk/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/merkle/serialization/BatchMerkleProofSerializer.scala)
+
+### Explanation:
+- **Merkle Tree Creation**: The test generates random leaf data and creates a `MerkleTree`. This ensures that the tree is correctly constructed and the root hash is generated.
+- **Batch Merkle Proof Generation**: The test creates a batch proof for selected elements (indices 0 and 2) of the Merkle Tree.
+- **Proof Verification**: The test verifies the validity of the generated batch proof against the Merkle root, ensuring the proof correctly represents the inclusion of those elements in the tree.
+- **Serialization and Deserialization**: The test checks the ability to serialize a batch proof, then deserialize it back to its original form, confirming the integrity of the proof after these operations.
+
+These tests collectively ensure that the core functionality of Merkle Batch Proofs in `scrypto` operates correctly, providing developers with confidence in using this library for cryptographic proofs in their applications.

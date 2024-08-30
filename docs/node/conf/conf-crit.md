@@ -28,7 +28,7 @@ throughput = 1
 `throughput` is the maximum number of messages to be processed per actor before the thread is made available to other actors. This setting helps control how long a thread can be occupied by an actor. In this case, it is set to 1.
 
 ## Complete Configuration Code
-Here's the complete code snippet with all the `critical-dispatcher` settings:
+
 ```conf
 critical-dispatcher {
   type = Dispatcher
