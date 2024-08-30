@@ -1,3 +1,9 @@
+---
+tags:
+  - Forking
+  - Fork
+---
+
 # Velvet Forks
 
 Velvet forking is a novel approach introduced in the paper ["A Wild Velvet Fork Appears! Inclusive Blockchain Protocol Changes in Practice"](http://diyhpl.us/~bryan/papers2/bitcoin/A%20wild%20velvet%20fork%20appears:%20Inclusive%20blockchain%20protocol%20changes%20in%20practice%20-%202018.pdf) by Zamyatin et al. It allows for introducing protocol changes in a backward-compatible and inclusive manner. The key idea is to render modifications to the protocol backward-compatible, enabling a gradual deployment without harming miners who have not upgraded to the new rules.

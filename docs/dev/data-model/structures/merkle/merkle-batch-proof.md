@@ -3,15 +3,23 @@ tags:
   - Merkle
 ---
 
+
 # Merkle Batch Proofs in Ergo
 
 Merkle Batch Proofs are an advanced cryptographic structure used in the Ergo blockchain to efficiently verify the inclusion of multiple data elements within a Merkle tree. This guide explains the concept of Merkle batch proofs, their benefits, how they are used within the Ergo ecosystem, and provides examples on how to implement and test them using the `sigma-rust` library.
 
 ## Introduction to Merkle Batch Proofs
 
-Merkle trees are a fundamental data structure in blockchain technology, providing a way to efficiently and securely verify the contents of large datasets. A Merkle tree is a binary tree where each leaf node represents a hash of a block of data, and each non-leaf node is a hash of its respective children. The root of the tree, known as the Merkle root, can be used to verify any piece of data in the tree.
+Merkle trees are a fundamental data structure, providing a way to efficiently and securely verify the contents of large datasets. A Merkle tree is a binary tree where each leaf node represents a hash of a block of data, and each non-leaf node is a hash of its respective children. The root of the tree, known as the Merkle root, can be used to verify any piece of data in the tree.
 
 A Merkle proof is a series of hashes that demonstrate the inclusion of a specific piece of data in a Merkle tree. A **Merkle batch proof** extends this concept by allowing the verification of multiple pieces of data simultaneously. This is particularly useful in scenarios where multiple data elements need to be verified together, as it reduces the computational overhead and the amount of data required for verification.
+
+```mermaid
+graph TD
+    A1[Leaf Hash 1] --> B1[Batch Proof Hash]
+    A2[Leaf Hash 2] --> B1
+    B1 --> C[Batch Merkle Root]
+```
 
 ## Why Use Merkle Batch Proofs?
 
@@ -78,6 +86,8 @@ fn create_merkle_tree() {
 }
 ```
 
+**Code Reference**: The `MerkleTree` structure is implemented in the [`merkletree.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-merkle-tree/src/merkletree.rs) file in the `sigma-rust` repository.
+
 ### Step 3: Generating a Batch Merkle Proof
 
 Once you have your Merkle tree, you can generate a batch Merkle proof for specific leaves.
@@ -90,6 +100,8 @@ fn generate_batch_merkle_proof(tree: &MerkleTree) {
     println!("Batch Merkle Proof: {:?}", proof);
 }
 ```
+
+**Code Reference**: The `BatchMerkleProof` structure and its methods are implemented in the [`batchmerkleproof.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/bindings/ergo-lib-ios/Sources/ErgoLib/BatchMerkleProof.swift) file in the `sigma-rust` repository.
 
 ### Step 4: Verifying the Batch Merkle Proof
 
@@ -155,3 +167,4 @@ fn main() {
 Merkle batch proofs are a powerful tool in the Ergo blockchain, enabling efficient and scalable verification of multiple data elements within a Merkle tree. By using the `sigma-rust` library, developers can easily create, verify, and manage these proofs, contributing to the robustness and scalability of their decentralized applications.
 
 Whether you are building a lightweight client, developing a PoPow protocol, or simply need efficient state verification, Merkle batch proofs offer a solution that balances security, efficiency, and scalability.
+

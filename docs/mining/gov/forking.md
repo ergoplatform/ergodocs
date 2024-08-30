@@ -1,3 +1,9 @@
+---
+tags:
+  - Forking
+  - Fork
+---
+
 # Forking
 
 Ergo's view is that disruptive hard forks should be avoided in Ergo unless absolutely critical. Ergo implements various measures to prevent hard forks, such as pushing complexity to the application layer and enabling many things to be implemented via soft-forks.

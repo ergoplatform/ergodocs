@@ -431,8 +431,23 @@ nav:
 
       - Block:
         - dev/data-model/block.md
-        - Merkle Tree Format: merkle-tree.md
         - Extension Section: dev/data-model/extension-section.md
+      - Data Structures:
+        - dev/data-model/data-structures.md
+        - Merkle Tree:
+          - dev/data-model/structures/merkle/merkle-tree.md
+          - Format: dev/data-model/structures/merkle/merkle-format.md
+          - Validation: dev/data-model/structures/merkle/merkle-validation.md
+          - Implementations:
+            - Transaction Merkle Trees: dev/protocol/tx/tx-merkle.md
+            - Merkle Batch Proofs: dev/data-model/structures/merkle/merkle-batch-proof.md
+            - Lightweight Client Proofs: dev/data-model/structures/merkle/merkle-light-proof.md
+        - AVL Trees:
+          - dev/protocol/avl.md
+          - Plasma: dev/lib/plasma.md
+        - Proof of Proof-of-Work: dev/data-model/structures/popow.md
+        - Interlink Vectors: dev/data-model/structures/interlink-vectors.md
+
       - Wallets:
         - dev/wallets.md
         - Access Issues: tutorials/access-issues.md
@@ -685,9 +700,6 @@ nav:
           - Script Validation: dev/scs/ergotree/script-validation.md
           - Script Optimisation: dev/scs/ergotree/script-optimisation.md
           - Templates: dev/scs/ergotree/ergotree-templates.md
-        - AVL Trees: 
-          - dev/protocol/avl.md
-          - Plasma: dev/lib/plasma.md
 
         - Multi-Stage Protocols: 
           - dev/scs/multi.md
@@ -752,10 +764,11 @@ nav:
     - Governance:
       - mining/governance.md
       - Voting: mining/gov/voting.md
-      - Forking: 
+      - Forking:
         - mining/gov/forking.md
         - Soft Forks: mining/gov/soft-fork.md
         - Velvet Forks: mining/gov/velvet-fork.md
+        - Hard Forks: mining/gov/hard-fork.md
     - Revenue: mining/revenue.md
     - Tooling:
       - eco/miner-tooling.md
