@@ -1,15 +1,17 @@
 ---
 tags:
-  - Data Structures 
+  - Data Structures
+  - Cryptography
+  - Security
 ---
 
-# Data Structures
+# Data Structures in Ergo
 
-In Ergo, several key data structures are employed to support its blockchain and smart contract functionality. Here's a list of the main data structures used within the Ergo ecosystem:
+In Ergo, several key data structures are employed to support its blockchain and smart contract functionality. These data structures are designed to ensure efficient and secure access to data, guaranteeing optimal performance and data integrity. Here's a list of the main data structures used within the Ergo ecosystem:
 
 ## 1. **AVL Trees (Authenticated Dynamic Dictionaries)**
-   - **Purpose**: AVL Trees in Ergo are used to store and authenticate dynamic sets of data in a compact and efficient manner. They are particularly useful for stateful smart contracts.
-   - **Usage**: 
+   - **Purpose**: AVL Trees in Ergo are a specialized type of self-balancing binary search tree, used to store and authenticate dynamic sets of data in a compact and efficient manner. They ensure efficient and secure access to your data, guaranteeing optimal performance and data integrity.
+   - **Usage**:
      - In the storage of UTXO states, where efficient verification of state changes is required.
      - In applications like off-chain code and distributed systems managing the Plasma infrastructure, where privacy-preserving transactions need to verify inclusion or exclusion of certain elements without revealing all details.
    - **Documentation Reference**: [AVL Trees in Ergo](avl.md), [Plasma](plasma.md)
@@ -19,7 +21,7 @@ In Ergo, several key data structures are employed to support its blockchain and 
    - **Usage**:
      - In the construction of the [Transaction Merkle Tree](tx-merkle.md), combining all transactions and their corresponding spending proofs into a single Merkle Tree.
      - In the [Extension Block Merkle Tree](merkle-extension.md), securing key-value data like miner votes and protocol parameters.
-     - In creating [Merkle Batch Proofs](merkle-batch-proof.md), allowing efficient verification of multiple data elements within a Merkle Tree.
+     - In creating [Merkle Batch Proofs](merkle-batch-proof.md), allowing efficient validation of the integrity and authenticity of data transactions. It supports the serialization and deserialization of Merkle proofs in batches, significantly improving the speed and efficiency of data verification processes.
      - In generating compact proofs of state transitions, enabling lightweight clients to securely participate in the network. An example of how a lite client can check a Merkle-tree-based membership proof is detailed in the [Lite Client Checking Merkle Proof](merkle-light-proof.md) documentation.
    - **Documentation Reference**: [Merkle Trees in Ergo](merkle-tree.md)
 
@@ -79,4 +81,3 @@ UTREEXO is a more efficient alternative for representing the UTXO set compared t
 ## Partially Stateless Clients
 
 Ergo currently employs an approach outlined in [this paper](https://eprint.iacr.org/2016/994.pdf) to support partially stateless clients. This approach balances security and efficiency, as fully stateless clients still depend on archival nodes for storing and updating client proofs.
-

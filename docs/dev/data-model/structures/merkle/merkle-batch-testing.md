@@ -1,8 +1,15 @@
+---
+tags:
+  - Merkle
+---
+
 # Testing Merkle Batch Proofs
 
-### Testing Merkle Batch Proofs in `sigma-rust` (Rust)
+Testing Merkle Batch Proofs is crucial to ensure the correctness of their implementation in the Ergo blockchain. This section provides examples of how to write tests for Merkle Batch Proofs using both Rust (`sigma-rust`) and Scala (`scrypto`). These tests cover the creation, verification, serialization, and deserialization of batch Merkle proofs.
 
-Here is a set of Rust-based tests using the `sigma-rust` library:
+### Rust (`sigma-rust`) Testing
+
+In Rust, the `sigma-rust` library provides the necessary tools to create and test Merkle Batch Proofs. Below is a series of tests written using the Rust testing framework.
 
 ```rust
 #[cfg(test)]
@@ -80,9 +87,14 @@ mod tests {
 }
 ```
 
-### Testing Merkle Batch Proofs in `scrypto` (Scala)
+#### Code References:
+- **MerkleTree**: [`merkletree.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-merkle-tree/src/merkletree.rs)
+- **BatchMerkleProof**: [`batchmerkleproof.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-merkle-tree/src/batchmerkleproof.rs)
+- **Serialization Methods**: [`scorex_serializable.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/sigma-ser/src/scorex_serializable.rs)
 
-Here is a set of Scala-based tests using the `scrypto` library:
+### Scala (`scrypto`) Testing
+
+For Scala, the `scrypto` library is used to test Merkle Batch Proofs. Below are the test cases using ScalaTest, covering tree creation, proof generation, verification, and serialization.
 
 ```scala
 import org.scalatest.flatspec.AnyFlatSpec
@@ -146,4 +158,7 @@ class MerkleBatchProofSpec extends AnyFlatSpec with Matchers {
 4. **Serialization and Deserialization**: 
    - Serialization tests verify that the proofs can be serialized and deserialized without losing integrity, which is crucial for storing and transmitting proofs.
 
-These tests can be run using standard Rust and Scala testing tools (`cargo test` for Rust, `sbt test` for Scala) and are critical for validating the correctness of Merkle Batch Proof implementations in Ergo-based applications.
+These tests can be run using standard Rust and Scala testing tools (`cargo test` for Rust, `sbt test` for Scala) and are critical for validating the correctness of Merkle Batch Proof implementations in Ergo-based applications.#### Code References:
+- **MerkleTree**: [`MerkleTree.scala`](https://github.com/ScorexFoundation/scrypto/blob/master/src/main/scala/scorex/crypto/authds/merkle/MerkleTree.scala)
+- **BatchMerkleProof**: [`BatchMerkleProof.scala`](https://github.com/ScorexFoundation/scrypto/blob/master/src/main/scala/scorex/crypto/authds/merkle/BatchMerkleProof.scala)
+- **BatchMerkleProofSerializer**: [`BatchMerkleProofSerializer.scala`](https://github.com/ScorexFoundation/scrypto/blob/master/src/main/scala/scorex/crypto/authds/merkle/serialization/BatchMerkleProofSerializer.scala)
