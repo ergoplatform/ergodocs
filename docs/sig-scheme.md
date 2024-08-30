@@ -16,26 +16,26 @@ In the Ergo blockchain, signature schemes are used to validate that a transactio
 
 #### How Schnorr Signatures Work:
 - **Key Generation**: 
-  - A user generates a private key \( x \) (a random number) and computes the corresponding public key \( P = xG \), where \( G \) is a generator point on the elliptic curve used by Ergo.
+    - A user generates a private key \( x \) (a random number) and computes the corresponding public key \( P = xG \), where \( G \) is a generator point on the elliptic curve used by Ergo.
 - **Signing**: 
-  - To sign a message \( m \), the user generates a random nonce \( k \) and computes \( R = kG \). The signature \( (s, e) \) is then computed as:
-    \[
-    e = H(R || P || m)
-    \]
-    \[
-    s = k + ex
-    \]
-  - Here, \( H \) is a cryptographic hash function, and \( || \) denotes concatenation.
+    - To sign a message \( m \), the user generates a random nonce \( k \) and computes \( R = kG \). The signature \( (s, e) \) is then computed as:
+      \[
+      e = H(R || P || m)
+      \]
+      \[
+      s = k + ex
+      \]
+    - Here, \( H \) is a cryptographic hash function, and \( || \) denotes concatenation.
 - **Verification**: 
-  - To verify the signature \( (s, e) \), the verifier computes:
-    \[
-    R' = sG - eP
-    \]
-    and checks if:
-    \[
-    e = H(R' || P || m)
-    \]
-  - If the equality holds, the signature is valid, proving that the signer possesses the private key corresponding to the public key \( P \).
+    - To verify the signature \( (s, e) \), the verifier computes:
+      \[
+      R' = sG - eP
+      \]
+      and checks if:
+      \[
+      e = H(R' || P || m)
+      \]
+    - If the equality holds, the signature is valid, proving that the signer possesses the private key corresponding to the public key \( P \).
 
 #### Advantages of Schnorr Signatures:
 - **Security**: Schnorr signatures are provably secure under the assumption of the hardness of the discrete logarithm problem.
@@ -88,7 +88,3 @@ Ergo's signature schemes enable a wide range of applications within the blockcha
 Ergo’s signature schemes, built on robust cryptographic foundations like Schnorr signatures and Sigma protocols, are central to the platform’s security and functionality. They allow for flexible, secure, and privacy-preserving transactions, making Ergo a powerful platform for decentralized applications and digital contracts.
 
 For more information and technical details, refer to the [ErgoScript documentation](https://github.com/ScorexFoundation/sigmastate-interpreter) and the [sigma-rust repository](https://github.com/ergoplatform/sigma-rust).
-
----
-
-This documentation provides a thorough explanation of the signature schemes used in Ergo, including their theoretical foundations, practical implementations, and applications within the Ergo ecosystem.

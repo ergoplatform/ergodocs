@@ -752,7 +752,10 @@ nav:
     - Governance:
       - mining/governance.md
       - Voting: mining/gov/voting.md
-      - Forking: mining/gov/forking.md
+      - Forking: 
+        - mining/gov/forking.md
+        - Soft Forks: mining/gov/soft-fork.md
+        - Velvet Forks: mining/gov/velvet-fork.md
     - Revenue: mining/revenue.md
     - Tooling:
       - eco/miner-tooling.md
