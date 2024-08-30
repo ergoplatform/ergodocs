@@ -439,6 +439,7 @@ nav:
           - Format: dev/data-model/structures/merkle/merkle-format.md
           - Validation: dev/data-model/structures/merkle/merkle-validation.md
           - Implementations:
+            - Extension Block Merkle: dev/data-model/structures/merkle/merkle-extension.md
             - Transaction Merkle Trees: dev/protocol/tx/tx-merkle.md
             - Merkle Batch Proofs: dev/data-model/structures/merkle/merkle-batch-proof.md
             - Lightweight Client Proofs: dev/data-model/structures/merkle/merkle-light-proof.md

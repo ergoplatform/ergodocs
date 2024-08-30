@@ -28,7 +28,7 @@ The [Transaction Merkle Tree](tx-merkle.md) is a core component of Ergo, combini
 
 ### Extension Block Merkle Tree
 
-Merkle Trees are also utilized within the [Extension Block](extension-block.md) to structure and secure additional key-value data. This data includes miner votes, protocol parameters, and other auxiliary information. The Merkle Tree ensures that this data is secured with cryptographic integrity.
+The [Extension Block Merkle Tree](merkle-extension.md) secures key-value data like miner votes and protocol parameters. It organizes this data into a binary Merkle Tree, with leaf nodes containing key-value pair hashes and non-leaf nodes containing child node hashes. The root hash is included in the block header, cryptographically committing to the Extension Block data. Merkle proofs allow efficient verification of specific key-value pairs without downloading the entire block. This tree ensures data integrity and enables secure storage of auxiliary blockchain information.
 
 **Code Reference**: The implementation can be found in the [Extension.scala](https://github.com/ergoplatform/ergo/blob/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/history/extension/Extension.scala) file.
 

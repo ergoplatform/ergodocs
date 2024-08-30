@@ -4,11 +4,11 @@ tags:
   - Fork
 ---
 
-# Hard Forks in the Ergo Blockchain
+# Hard Forks in Ergo
 
 ## Overview
 
-A hard fork in blockchain technology refers to a radical change to the protocol that makes previously invalid blocks/transactions valid, or vice versa. In the context of the Ergo blockchain, a hard fork typically involves significant changes to the underlying consensus mechanism or core protocol rules, which require all nodes or participants in the network to upgrade to the new version of the software. If a portion of the network's participants do not upgrade, the blockchain splits into two separate chains, with the new chain following the updated protocol and the old chain following the previous one.
+In the context of the Ergo blockchain, a hard fork typically involves significant changes to the underlying consensus mechanism or core protocol rules, which require all nodes or participants in the network to upgrade to the new version of the software. If a portion of the network's participants do not upgrade, the blockchain splits into two separate chains, with the new chain following the updated protocol and the old chain following the previous one.
 
 ## Why Hard Forks Are Necessary
 
@@ -25,9 +25,9 @@ Hard forks are necessary for several reasons:
 The implementation of a hard fork in Ergo follows these general steps:
 
 1. **Development and Testing:** 
-   - New protocol rules are developed and rigorously tested in a controlled environment, typically a testnet or developer network. This is crucial to ensure that all changes work as intended and do not introduce new issues.
-   
-   - The `ForkResolutionSpec` file, found in the [Ergo GitHub repository](https://github.com/ergoplatform/ergo), is an example of how forks are tested. This file contains integration tests designed to validate the behavior of the network during and after the fork, ensuring that the nodes correctly resolve different chain forks and eventually converge on a single valid chain.
+    - New protocol rules are developed and rigorously tested in a controlled environment, typically a testnet or developer network. This is crucial to ensure that all changes work as intended and do not introduce new issues.
+    
+    - The [`ForkResolutionSpec`](https://github.com/ergoplatform/ergo/blob/master/src/it/scala/org/ergoplatform/it/ForkResolutionSpec.scala) file, found in the [Ergo GitHub repository](https://github.com/ergoplatform/ergo), is an example of how forks are tested. This file contains integration tests designed to validate the behavior of the network during and after the fork, ensuring that the nodes correctly resolve different chain forks and eventually converge on a single valid chain.
 
    ```scala
    it should "Fork resolution after isolated mining" in {
@@ -49,9 +49,9 @@ The implementation of a hard fork in Ergo follows these general steps:
    ```
 
 3. **Activation and Monitoring:**
-   - At the predetermined block height or time, the new protocol rules are activated. The network continues to operate, but now all participants are following the new set of rules.
+    - At the predetermined block height or time, the new protocol rules are activated. The network continues to operate, but now all participants are following the new set of rules.
 
-   - Post-fork, developers and node operators monitor the network for any anomalies or issues that may arise as a result of the fork.
+    - Post-fork, developers and node operators monitor the network for any anomalies or issues that may arise as a result of the fork.
 
 4. **Handling Divergence:**
    - In the event that some nodes do not upgrade, the blockchain may split into two, creating a new chain (following the new rules) and a legacy chain (following the old rules). The `ErgoValidationSettings` class in the Ergo core provides mechanisms to enforce these new rules, ensuring that nodes adhering to the new rules can correctly validate blocks and transactions.
