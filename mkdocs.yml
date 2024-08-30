@@ -453,7 +453,10 @@ nav:
           - Implementations:
             - Extension Block Merkle: dev/data-model/structures/merkle/merkle-extension.md
             - Transaction Merkle Trees: dev/protocol/tx/tx-merkle.md
-            - Merkle Batch Proofs: dev/data-model/structures/merkle/merkle-batch-proof.md
+            - Merkle Batch Proofs:
+              - dev/data-model/structures/merkle/merkle-batch-proof.md
+              - Implementation: dev/data-model/structures/merkle/merkle-batch-impl.md
+              - Testing: dev/data-model/structures/merkle/merkle-batch-testing.md
             - Lightweight Client Proofs: dev/data-model/structures/merkle/merkle-light-proof.md
         - AVL Trees:
           - dev/protocol/avl.md
