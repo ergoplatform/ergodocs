@@ -749,7 +749,10 @@ nav:
         - Stratum: mining/setup/stratum.md
         - MiningCore: mining/setup/miningcore.md
        
-    - Governance: mining/governance.md      
+    - Governance:
+      - mining/governance.md
+      - Voting: mining/gov/voting.md
+      - Forking: mining/gov/forking.md
     - Revenue: mining/revenue.md
     - Tooling:
       - eco/miner-tooling.md
