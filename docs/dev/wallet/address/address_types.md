@@ -1,8 +1,5 @@
 # Address Types 
 
-Let's look at the prefix byte, which contains information about the network and address types:
-
-## Possible Types
 
 Possible network types are:
 

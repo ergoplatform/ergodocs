@@ -372,8 +372,20 @@ nav:
   
 
   - Developers: 
-    - dev/start.md
-    - 📌 Getting Started: dev/get-started.md
+    - dev/get-started.md
+    - 📌 Getting Started: 
+      - dev/get-started.md
+      - Development Stack: 
+        - dev/start.md
+        - Starter Tutorial: dev/stack/basics.md
+        - Server: dev/stack/server.md
+        - Browser: dev/stack/browser.md
+        - Desktop: dev/stack/desktop.md
+        - Mobile: 
+          - dev/stack/mobile.md
+          - iOS: dev/stack/iOS.md
+          - Android: dev/stack/android.md
+    
     - Anatomy of Ergo:
       - Box: 
         - dev/data-model/box.md
@@ -463,16 +475,6 @@ nav:
           - Deterministic Wallet Standard: dev/wallet/standards/eip3.md
           - Cold Wallet: dev/wallet/standards/eip19.md
       #- UTXO-State: 
-    - Development Stack: 
-      - dev/start.md
-      - Starter Tutorial: dev/stack/basics.md
-      - Server: dev/stack/server.md
-      - Browser: dev/stack/browser.md
-      - Desktop: dev/stack/desktop.md
-      - Mobile: 
-        - dev/stack/mobile.md
-        - iOS: dev/stack/iOS.md
-        - Android: dev/stack/android.md
     - Interacting with Ergo:
       - dev/interact.md
       - Node:
@@ -626,11 +628,7 @@ nav:
         - Scrypto: dev/lib/scrypto.md
         - EIP12-Types: dev/lib/eip12-types.md
         - SigmaJS: dev/lib/sigmajs.md
-      - Interpreters:
-        - dev/stack/interpreters.md
-        - sigmastate-interpreter: dev/scs/sigmastate-interpreter.md
-        - sigma-rust: dev/stack/sigma-rust.md
-        
+   
       #- Bookmarks: dev/start/resources.md
 
     - ErgoScript: 
@@ -681,11 +679,14 @@ nav:
             - P2S Playground: dev/stack/utilities/plutomonkey.md
             - Kiosk: dev/stack/kiosk.md
             - ErgoPuppet: dev/scs/puppet.md
-          - Compilers:
-            - Phases: dev/scs/ergoscript/compiler-phases.md
-            - Sigmastate-Interpreter: dev/scs/sigmastate.md
+          - Interpreters & Compilers:
+            - dev/stack/interpreters.md
+            - Compiler Phases: dev/scs/ergoscript/compiler-phases.md
+            - sigmastate-interpreter: dev/scs/sigmastate-interpreter.md
+            - sigma-rust: dev/stack/sigma-rust.md
             - ErgoScala: dev/stack/ergoscala.md
             - CLI Compiler: dev/stack/compiler.md
+
           - Debugging: dev/scs/debugging.md
           - FlowCards: dev/scs/flowcards.md
         - ErgoTree: 

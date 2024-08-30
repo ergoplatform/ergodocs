@@ -90,11 +90,9 @@ Ergo's architecture is underpinned by the Extended UTXO (eUTXO) model, an evolut
 
 To further explore and understand Ergo's concepts, you can interact with the following chatbots:
 
-General chat bot:
-https://www.chatbase.co/chatbot-iframe/zxB2uzZfYoHIpA98eTzgM
+- [General chat bot](https://www.chatbase.co/chatbot-iframe/zxB2uzZfYoHIpA98eTzgM)
+- [ErgoScript chat bot](https://www.chatbase.co/chatbot-iframe/INAIfQ2ts4E6ykf4rseVu)
 
-ErgoScript chat bot:
-https://www.chatbase.co/chatbot-iframe/INAIfQ2ts4E6ykf4rseVu
 ///
 
 
@@ -109,6 +107,7 @@ https://www.chatbase.co/chatbot-iframe/INAIfQ2ts4E6ykf4rseVu
 - **[Registers within Boxes](registers.md)**: Boxes come equipped with multiple registers capable of holding various assets and complex [ErgoScript](#ergoscript) types.
 - **[Assets in Ergo](tokens.md)**: Dive deeper into the different assets that can be held within these boxes.
 
+Ergo also supports advanced data structures like [AVL+ Trees](data-structures.md) which can be used to store and authenticate large amounts of data on-chain.
 
 Here are some introductory resources that cover these concepts.
 
