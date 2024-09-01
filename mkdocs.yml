@@ -189,18 +189,12 @@ nav:
 
 
 
-  #
-  # ECOSYSTEM SECTION
-  #
+#
+# ECOSYSTEM SECTION
+#
+
   - Ecosystem: 
     - uses/index.md
-    - Standards: 
-      - contribute/standards.md
-      - Chat Bridge: contribute/standards/chat-bridge.md
-      - ErgoTipperBot: contribute/standards/tipbot.md
-      - KYA: contribute/standards/kya.md
-      - Community Guidelines: contribute/standards/guidelines.md
-    - Analytics: contribute/standards/analytics.md
     - Infrastructure: 
       - Rosen Bridge:
         - eco/rosen.md
@@ -217,115 +211,121 @@ nav:
         - uses/oracles.md
         - Oracle Pools V2: eco/oracles-v2.md
         - Mixicles: uses/mixicles.md
-      - Tooling:
-        - Crux Finance: eco/crux.md
-        - Thz.FM: eco/thz-fm.md
-        - Azorus: eco/azorus.md
-        - TabbyPOS: eco/tabbypos.md
-        - ErgoNames: eco/ergonames.md
-        - Reputation System: eco/reputation-system.md
-        - SigmaRand: eco/sigmarand.md
-        - Moria Finance: eco/moria-finance.md
-        - ZenGate Global:
-          - eco/zengate.md
-          - Solaris Portal: eco/solaris.md
-          - Cyberiad: eco/cyberaid.md
       - Sidechains: 
         - uses/sidechains.md
         - Sub Blocks: uses/sidechains/subblocks.md
         - Sigma Chains: uses/sidechains/sigma-chains.md
-        - Archived:
-          - ErgoData: uses/ErgoData.md
-          - SentientChain: uses/sentientchain.md
-          - PoUW: uses/pouw.md
+        - PoUW: uses/pouw.md
+       # - Archived:
+       #   - ErgoData: uses/ErgoData.md
+        #  - SentientChain: uses/sentientchain.md
+          
+    
     - Financial:
-      - Stablecoins: 
-        - uses/stablecoins.md
+      - Decentralized Exchanges:
+        - uses/dex.md
+        - Spectrum Finance: eco/spectrum.md
+        - Trade House: eco/ergo-auctions.md
+        - Palmyra: eco/palmyra.md
+        - Crystal Pool: eco/crystal-pool.md
+        - Machina Finance: eco/machina-finance.md
+        - Mew Finance: eco/mew-finance.md
+        - P2P:
+          - eco/p2p-trading.md
+          - Token Jay: eco/token-jay.md
+          - Analog Ergo: eco/analog-ergo.md
+          - Single Tx Swap: eco/single-tx-swap.md
+
+
+      - Monetary Systems:
         - SigmaUSD:
           - uses/sigmausd.md
           - Examples: uses/sigmausd/examples.md
           - Mining Incentives: uses/sigmausd/mining-incentives.md
           - Other Stablecoins: uses/sigmausd/comparison.md
           - Why?: uses/sigmausd/why-sigusd.md
-        - DexyGold: eco/dexy.md
-        - Gluon: eco/gluon.md
         - ChainCash: uses/chaincash.md
-      - DegFi:
+        - Gluon: eco/gluon.md
+        - DexyGold: eco/dexy.md
+        - Local Exchange Trading Systems:
+          - uses/lets.md
+          - Basic Implementation: uses/lets/basic-imp.md
+          - Trustless LETS: uses/lets/trustless-lets.md
+      
+       # - uses/stablecoins.md
+      
+      - Decentralized Finance:
+        - Lending:
+          - uses/lending.md
+          - duckpools: eco/duckpools.md
+          - EXLE: eco/exle.md
+          - SigmaFi: eco/sigmafi.md
+        - Derivatives and Synthetics:
+          - uses/deriv.md
+          - Hodlbox: eco/hodlbox.md
+          - HodlCoin: eco/hodlcoin.md
+          - AuctionCoin: eco/auction-coin.md
+          - OptionCoin: eco/optioncoin.md
+          - OptionPools: eco/optionPools.md
+          - SigmaO: eco/sigmao.md
+
+          #- Tensile: eco/tensile.md
+        - Crowdfunding:
+          - uses/crowdfunding.md
+          - ErgoRaffle: eco/ergoraffle.md
+          - Sigma Subscriptions: eco/sigma-subscriptions.md
+         # - ErgoWell: eco/ergowell.md
+        #  - ErgoFund: uses/ergofund.md
+      - Degenerate Finance:
         - uses/degfi.md
         - Hodlcoin: eco/hodlcoin.md
         - Auction Coin: eco/auction-coin.md
         - Grand Gambit: eco/grand-gambit.md
         - Hodlbox: eco/hodlbox.md
         - OptionCoin: eco/optioncoin.md
-        - NightOwl Casino: eco/nightowl.md
+      #  - NightOwl Casino: eco/nightowl.md
         - Obolflip: eco/obolflip.md
         - Lotteries: uses/lottery.md
         - The Field: eco/the-field.md
-      - Lending:
-        - uses/lending.md
-        - duckpools: eco/duckpools.md
-        - EXLE: eco/exle.md
-        - SigmaFi: eco/sigmafi.md
-      - Derivatives:
-        - uses/deriv.md
-        - SigmaO: eco/sigmao.md
-        - OptionPools: eco/optionPools.md
-        - Tensile: eco/tensile.md
-      - CrowdFunding: 
-        - uses/crowdfunding.md
-        - ErgoRaffle: eco/ergoraffle.md
-        - Sigma Subscriptions: eco/sigma-subscriptions.md
-        - ErgoWell: eco/ergowell.md
-        - ErgoFund: uses/ergofund.md
-      - Grid Trading: uses/grid_trading.md
-      - Further Ideas:
-        - Prediction Markets: uses/prediction_markets.md
-        - Insurance: uses/insurance.md
-        - Micro Credit: dev/scs/microcredit.md
-        - Mutual Credit: uses/mutual_credit.md
-        - Bonding Curve: uses/bonding.md
-        - Tokens:
-          - ICOs: uses/ergo-ico.md
-          - Index Coins: uses/index_coins.md
-          - PoW Tokens: uses/PoW_tokens.md
-          - Perpetual Tokens: uses/perpetual.md
-          - Buy Back Guarantees: uses/dex-buyback.md
-
-     
-
-    - Exchanges:
-      - uses/dex.md
-      - Spectrum Finance: eco/spectrum.md
-      - Palmyra: eco/palmyra.md
-      - Crystal Pool: eco/crystal-pool.md
-      - Trade Hosue: eco/ergo-auctions.md
-      - Machina Finance: eco/machina-finance.md
-      - P2P: 
-          - eco/p2p-trading.md
-          - Token Jay: eco/token-jay.md
-          - Analog Ergo: eco/analog-ergo.md
-          - Single Tx Swap: eco/single-tx-swap.md
-      - Others:
-        - Local Exchange Trading Systems (LETS): 
-          - uses/lets.md
-          - Basic Implementation: uses/lets/basic-imp.md
-          - Trustless LETS: uses/lets/trustless-lets.md
-
-
+        
     - NFTs:
       - uses/nft.md
-      - Ergo Auctions: eco/ergo-auctions.md
+      - ErgoAuctionHouse: eco/ergo-auctions.md
       - SkyHarbor: eco/skyharbor.md
       - Lilium: eco/lilium.md
-      - SigmaStamp: eco/sigma-stamp.md
-  
-    - DAOs:
-      - uses/dao.md 
-      - ErgoPad: eco/ergopad.md
-      - Paideia: eco/paideia.md
+    # - SigmaStamp: eco/sigma-stamp.md
+    - Gaming:
+      - uses/gaming.md
+      - BlitzTCG: eco/blitz.md
+      #- Metaverse:
+      #  - uses/metaverse.md
+      - Cyberverse: eco/cyberverse.md
+     #   - Sigmavalley: eco/sigmavalley.md
+    #  - BlobsTopia: eco/blobstopia.md
+     # - ErgoGames.io:
+    #    - Digigoats: eco/digigoats.md
+     #   - Monster Pub Brawl: eco/monsterpub.md
+     #   - Project Tesseract: eco/project-tesseract.md
 
-    - Privacy:      
-      - Mixing: 
+    - Tooling:
+      - Crux Finance: eco/crux.md
+      #- Azorus: eco/azorus.md
+
+      - ErgoNames: eco/ergonames.md
+      - Reputation System: eco/reputation-system.md
+      - SigmaRand: eco/sigmarand.md
+      - Moria Finance: eco/moria-finance.md
+      - Grid Trading: uses/grid_trading.md
+    - Applications:
+        - Thz.FM: eco/thz-fm.md
+        - TabbyPOS: eco/tabbypos.md
+        - PandaV: eco/pandav.md
+        - ZenGate Global:
+          - eco/zengate.md
+          - Solaris Portal: eco/solaris.md
+          - Cyberiad: eco/cyberaid.md
+    - Privacy:
+      - Mixing:
         - uses/mixer.md
         - ErgoMixer: 
           - eco/ergomixer.md
@@ -336,31 +336,51 @@ nav:
           - Install on Android: eco/ergomixer/mixer-android.md
         - SigmaJoin: eco/sigmajoin.md
       - Stealth Addresses: uses/stealth-address.md
-      - ZK Treasury: uses/zkt.md
-      - Decentralised Anon ID:
-        - Ergo Nation: eco/ergonation.md
+      #- ZK Treasury: uses/zkt.md
+      #- Decentralised Anon ID:
+      #  - Ergo Nation: eco/ergonation.md
 
 
+    - DAOs:
+      - uses/dao.md
+      - Paideia: eco/paideia.md
+      - ErgoPad: eco/ergopad.md
+      - The Field: eco/the-field.md
+      - Thz.FM: eco/thz-fm.md
+
+    - Miners:
+      - eco/miner-tooling.md
+      - Lithos: eco/lithos.md
+      - GuapSwap: eco/guapswap.md
+      - CYTI: eco/cyti.md
+
+    
+    - Further Ideas:
+      - Profit Sharing: uses/profit.md
+      - Email Client for Blocked Internet: uses/blocked_web.md
+      - Flash Loans: uses/flash-loans.md
+      - Prediction Markets: uses/prediction_markets.md
+      - Insurance: uses/insurance.md
+      - Micro Credit: dev/scs/microcredit.md
+      - Mutual Credit: uses/mutual_credit.md
+      - Bonding Curve: uses/bonding.md
+      - Tokens:
+        - ICOs: uses/ergo-ico.md
+        - Index Coins: uses/index_coins.md
+        - PoW Tokens: uses/PoW_tokens.md
+        - Perpetual Tokens: uses/perpetual.md
+        - Buy Back Guarantees: uses/dex-buyback.md
 
 
+    - Standards:
+      - contribute/standards.md
+      - Chat Bridge: contribute/standards/chat-bridge.md
+      - ErgoTipperBot: contribute/standards/tipbot.md
+      - KYA: contribute/standards/kya.md
+      - Community Guidelines: contribute/standards/guidelines.md
+      - Analytics: contribute/standards/analytics.md
+    
 
-    - Gaming: 
-      - uses/gaming.md
-      - BlitzTCG: eco/blitz.md
-      - Metaverse:
-        - uses/metaverse.md
-        - Cyberverse: eco/cyberverse.md
-        - Sigmavalley: eco/sigmavalley.md
-      - BlobsTopia: eco/blobstopia.md
-      - ErgoGames.io:
-        - Digigoats: eco/digigoats.md
-        - Monster Pub Brawl: eco/monsterpub.md
-        - Project Tesseract: eco/project-tesseract.md
-    - Further Ideas: 
-        - ProfitSharing: uses/profit.md
-        - Email Client for Blocked Internet: uses/blocked_web.md
-        - Flash Loans: uses/flash-loans.md
-    - Miner Tooling: eco/miner-tooling.md
 
       # - Context Claims: uses/context-claims.md
     #  - Asset Tokenisation: uses/tokenisation.md
