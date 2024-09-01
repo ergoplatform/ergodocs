@@ -30,15 +30,14 @@ In the 21st century, digital peer-to-peer networks allow anyone to join and leav
 
 ChainCash provides a modern implementation of historical free banking systems, where multiple banks issued their own notes backed by their reserves. With the transparency and security of blockchain technology, ChainCash enables a decentralized, trust-based monetary system that adapts to the needs of its users.
 
-/// details | Watch the presentation
+/// details | Watch the presentations
      {type: info, open: false}
 [ChainCash | Ergo Summit - Cypherpunk Finance](https://www.youtube.com/watch?v=NxIlIpO6ZVI)
 [ChainCash - part II - Alex Chepurnoy ](https://www.youtube.com/watch?v=fk8ZFvNFDYc)
 ///
 
 /// details | Join the ChainCash Experiment! Calling All Monetary Hackers
-     {type: info, open: false} 
-
+     {type: warning, open: false} 
 
 ChainCash is now ready for real-world experimentation, and we invite monetary hackers and developers to dive into this groundbreaking system. With the recent success of the first ChainCash transactions via the server API and ongoing developments, including the testing of new note contract extensions, there's a unique opportunity for innovators to test, tweak, and expand the functionality of ChainCash.
 
