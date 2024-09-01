@@ -43,9 +43,9 @@ ChainCash is implemented on top of the Ergo blockchain and consists of two main 
 
 1. **On-chain Contracts**: Contracts for notes, reserves, and redemption receipts are implemented on-chain. The most straightforward option is to have all these contracts on-chain. More scalable options, such as having only reserves (and possibly receipts) on-chain while notes circulate off-chain (e.g., on a side-chain or Layer 2 solution), are being considered.
 
-   - The reserve contract locks ERG native tokens on top of the Ergo blockchain and allows for the redemption of native or custom tokens when a note is presented.
-   - The note contract ensures that the note has a proper history, with a valid signature from the corresponding reserve owner added on each spend. It also allows for note splitting (payment and change) and redemption.
-   - The receipt contract, created during redemption, contains the ownership history copied from the note input and the position of the redeemed reserve in the ownership chain, along with the note's value. The receipt can then be used to redeem against a reserve.
+      - The reserve contract locks ERG native tokens on top of the Ergo blockchain and allows for the redemption of native or custom tokens when a note is presented.
+      - The note contract ensures that the note has a proper history, with a valid signature from the corresponding reserve owner added on each spend. It also allows for note splitting (payment and change) and redemption.
+      - The receipt contract, created during redemption, contains the ownership history copied from the note input and the position of the redeemed reserve in the ownership chain, along with the note's value. The receipt can then be used to redeem against a reserve.
 
 2. **Client Software (ChainCash Server)**: This software, acting as a self-sovereign bank with client-side note validation, interacts with the blockchain (and possibly a side-chain or p2p network for off-chain note circulation) and implements the functionality of an agent, including the note quality estimation predicate Pi(n). The server can track reserves and notes, and its Pi(n) predicate can be configured via whitelists, blacklists, and collateralization requirements provided in the config.
 
