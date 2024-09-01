@@ -68,38 +68,61 @@ To start experimenting:
 
 ///
 
+
+
+## Benefits of ChainCash
+
+ChainCash offers several advantages over traditional and cryptocurrency-based systems:
+
+1. **Flexibility**: ChainCash allows for an elastic money supply that adjusts to economic needs.
+2. **Stability**: The value of ChainCash notes is supported by a combination of reserves and trust, providing a stable currency.
+3. **Decentralization**: There is no central authority, reducing the risk of manipulation.
+4. **Accessibility**: ChainCash makes financial services available to individuals and businesses worldwide, including those without access to traditional banking.
+5. **Efficiency**: By using blockchain technology, ChainCash reduces transaction costs and improves transaction speed.
+
+
+
 ## Real-World Applications
 
-### 6.1 Local Economies
+/// details | Local Economies
+     {type: info, open: false} 
 
 - **Community Currencies**: Local communities can create their own currencies backed by collective assets, promoting local trade.
 - **SME Support**: Small and medium-sized enterprises can use ChainCash for flexible financing and trade.
 
 **Example**: A town creates a local currency using ChainCash, backed by local businesses and residents, to stimulate the local economy.
 
-### 6.2 International Trade
+///
+
+/// details | International Trade
+     {type: info, open: false} 
 
 - **Cross-Border Payments**: ChainCash enables efficient international transactions without reliance on traditional banking systems.
 - **Trade Settlements**: Businesses can use ChainCash for quick, secure settlement of trade invoices.
 
 **Example**: An exporter and importer in different countries use ChainCash for faster and cheaper cross-border transactions.
 
-### 6.3 Financial Inclusion
+///
+
+/// details | Financial Inclusion
+     {type: info, open: false} 
 
 - **Banking for the Unbanked**: Individuals without access to traditional banking can participate in the financial system through ChainCash.
 - **Peer-to-Peer Lending**: ChainCash supports microfinance and peer lending, providing secure platforms for fund transfers and credit assessments.
 
 **Example**: Farmers in a remote area access microloans through ChainCash to purchase seeds and equipment.
 
-### 6.4 Supply Chains
+///
+
+/// details | Supply Chains
+     {type: info, open: false} 
 
 - **Streamlined Payments**: Suppliers, manufacturers, and retailers use ChainCash for timely payments, reducing delays and disputes.
 - **Asset Tracking**: The blockchain records help in tracking goods and verifying transactions throughout the supply chain.
 
 **Example**: A global corporation manages payments across its supply chain using ChainCash, ensuring transparency and efficiency.
 
-Here’s an improved version of the practical examples section, making them clearer, more compelling, and adding an additional example:
-
+///
 
 ### Practical Examples
 
@@ -217,93 +240,6 @@ At a major international tech and cultural festival, organizers want to introduc
 
 
 
-## Technical Details of ChainCash
-
-### 4.1 Core Components
-
-1. **Agents**
-
-      - **Definition**: Participants in the ChainCash network, including individuals, businesses, or organizations.
-      - **Role**: Agents issue, accept, and redeem notes. They provide reserves and establish trust within the network.
-      - **Code Reference**: For a detailed understanding of how agents interact within the system, see the [ChainCash server implementation](https://github.com/ChainCashLabs/chaincash-rs).
-
-2. **Reserves**
-
-      - **Definition**: Assets locked in smart contracts to back the notes issued by agents.
-      - **Purpose**: Reserves ensure that each note has tangible backing, providing stability and trust.
-      - **Code Reference**: The reserve contract is detailed in the [ChainCash contracts repository](https://github.com/ChainCashLabs/chaincash/tree/master/contracts).
-
-3. **Notes**
-
-      - **Definition**: Digital representations of value within ChainCash.
-      - **Characteristics**:
-         - Backed by reserves and the trust of all agents who have held or transacted with it.
-         - Transparent, with all transaction histories recorded on the blockchain.
-      - **Code Reference**: The note contract is explained in the [note contract section](https://github.com/ChainCashLabs/chaincash/tree/master/contracts) of the repository.
-
-4. **Smart Contracts**
-
-      - **Definition**: Contracts written in code that automatically execute transactions based on predefined conditions.
-      - **Functions**:
-         - Manage reserves, validate transactions, and handle redemptions.
-      - **Code Reference**: Details on smart contracts are available in the [ChainCash contracts repository](https://github.com/ChainCashLabs/chaincash/tree/master/contracts).
-
-5. **Trust Mechanisms**
-
-      - **Definition**: Protocols that allow agents to establish and evaluate trust within the network.
-      - **Implementation**:
-         - Reputation scores, whitelists, blacklists, and collective evaluations.
-      - **Code Reference**: The trust mechanisms are part of the [ChainCash server implementation](https://github.com/ChainCashLabs/chaincash-rs).
-
-### 4.2 Transaction Workflow
-
-Here's a step-by-step example of how a typical ChainCash transaction works:
-
-**Scenario**: Alice wants to buy goods from Bob using ChainCash.
-
-1. **Reserve Creation**
-
-      - Alice locks assets (e.g., cryptocurrency) in a smart contract to create a reserve.
-      - This reserve backs the notes she issues.
-
-2. **Note Issuance**
-
-      - Alice issues a digital note worth $100, backed by her reserve.
-      - The note is digitally signed and recorded on the blockchain.
-
-3. **Transaction**
-
-      - Alice transfers the note to Bob in exchange for goods.
-      - Bob checks the note's backing and Alice's reputation before accepting it.
-
-4. **Further Transfers**
-
-      - Bob can use the note to pay Charlie. Each transfer adds a new signature, increasing the note's backing.
-
-5. **Redemption**
-
-      - Charlie redeems the note for assets from any previous holder’s reserve.
-      - The smart contract handles the redemption and adjusts reserves accordingly.
-
-6. **Record Update**
-
-      - The blockchain is updated with all transaction details, ensuring transparency and traceability.
-
-This process is automated and managed by the smart contracts detailed in the [ChainCash contracts repository](https://github.com/ChainCashLabs/chaincash/tree/master/contracts).
-
-
-
-## Benefits of ChainCash
-
-ChainCash offers several advantages over traditional and cryptocurrency-based systems:
-
-1. **Flexibility**: ChainCash allows for an elastic money supply that adjusts to economic needs.
-2. **Stability**: The value of ChainCash notes is supported by a combination of reserves and trust, providing a stable currency.
-3. **Decentralization**: There is no central authority, reducing the risk of manipulation.
-4. **Accessibility**: ChainCash makes financial services available to individuals and businesses worldwide, including those without access to traditional banking.
-5. **Efficiency**: By using blockchain technology, ChainCash reduces transaction costs and improves transaction speed.
-
-
 
 ## Security and Trust in ChainCash
 
@@ -318,6 +254,56 @@ ChainCash offers several advantages over traditional and cryptocurrency-based sy
 - **Transparent Records**: Agents' transaction and reserve histories are publicly accessible, allowing for informed decision-making.
 - **Reputation Systems**: Agents build reputations based on theirtransaction history, influencing their trustworthiness.
 - **Dispute Resolution**: Smart contracts and transparent records facilitate fair and efficient dispute resolution.
+
+
+## Technical Details of ChainCash
+
+### Core Components
+
+1. **Agents**
+
+      - **Definition**: Participants in the ChainCash network, including individuals, businesses, or organizations.
+      - **Role**: Agents issue, accept, and redeem notes. They provide reserves and establish trust within the network.
+      - **Code Reference**: For a detailed understanding of how agents interact within the system, see the [ChainCash server implementation](https://github.com/ChainCashLabs/chaincash-rs).
+
+2. **Reserves**
+
+      - **Definition**: Assets locked in smart contracts to back the notes issued by agents.
+      - **Purpose**: Reserves ensure that each note has tangible backing, providing stability and trust.
+      - **Code Reference**: The reserve contract is detailed in the [ChainCash Reserve Contract](https://github.com/ChainCashLabs/chaincash/blob/master/contracts/onchain/reserve.es).
+
+3. **Notes**
+
+      - **Definition**: Digital representations of value within ChainCash.
+      - **Characteristics**:
+         - Backed by reserves and the trust of all agents who have held or transacted with it.
+         - Transparent, with all transaction histories recorded on the blockchain.
+      - **Code Reference**: The note contract is explained in the [ChainCash Note Contract](https://github.com/ChainCashLabs/chaincash/blob/master/contracts/onchain/note.es) section of the repository.
+
+4. **Smart Contracts**
+
+      - **Definition**: Contracts written in code that automatically execute transactions based on predefined conditions.
+      - **Functions**:
+         - Manage reserves, validate transactions, and handle redemptions.
+      - **Code Reference**: Details on smart contracts are available in the [ChainCash Smart Contracts Repository](https://github.com/ChainCashLabs/chaincash/tree/master/contracts).
+
+5. **Trust Mechanisms**
+
+      - **Definition**: Protocols that allow agents to establish and evaluate trust within the network.
+      - **Implementation**:
+         - Reputation scores, whitelists, blacklists, and collective evaluations.
+      - **Code Reference**: The trust mechanisms are part of the [ChainCash server implementation](https://github.com/ChainCashLabs/chaincash-rs).
+
+### Transaction Workflow
+
+1. Alice locks assets (e.g., cryptocurrency) in a smart contract to create a reserve that backs the notes she issues.
+2. Alice issues a digital note worth $100, backed by her reserve. The note is digitally signed and recorded on the blockchain.
+3. Alice transfers the note to Bob in exchange for goods. Bob checks the note's backing and Alice's reputation before accepting it.
+4. Bob can use the note to pay Charlie. Each transfer adds a new signature, increasing the note's backing.
+5. Charlie redeems the note for assets from any previous holder's reserve. The smart contract handles the redemption and adjusts reserves accordingly.
+6. The blockchain is updated with all transaction details, ensuring transparency and traceability.
+
+This process is automated and managed by the smart contracts detailed in the [ChainCash contracts repository](https://github.com/ChainCashLabs/chaincash/tree/master/contracts).
 
 
 
@@ -347,7 +333,6 @@ ChainCash offers several advantages over traditional and cryptocurrency-based sy
 
 
 
-
 ## FAQs
 
 **1. How does ChainCash ensure the value of its currency remains stable?**
@@ -358,29 +343,24 @@ ChainCash offers several advantages over traditional and cryptocurrency-based sy
 
   - Yes, ChainCash is designed to be inclusive, allowing anyone to participate by creating reserves, issuing, accepting, and redeeming notes.
 
+
 **3. What happens if an agent defaults?**
 
-  - If an agent defaults, the note can still be redeemed against the reserves of any previous holder, reducing the risk of default.
+  - If an agent who **issued or signed** a ChainCash note defaults (i.e., they are unable to fulfill their obligation to back the note), the note can still be redeemed against the reserves of any other previous **signer**. This means that the responsibility to redeem the note falls on those who have previously backed it by signing, not on the current holder. Simply accepting and using a ChainCash note does not put your reserves at risk unless you have issued or explicitly signed the note to provide backing.
+
 
 **4. How are disputes handled in ChainCash?**
 
-  - Disputes are managed through smart contracts and transparent transaction records, which provide a fair and efficient resolution process.
+- ChainCash prevents disputes through automatic enforcement of rules by smart contracts. Key mechanisms:
+         - Transactions follow predefined rules enforced by smart contracts.
+         - All transactions are recorded transparently and immutably on the blockchain.
+         - Redemption receipts document note history and signers.
+         - Smart contracts handle scenarios like refunds and partial redemptions programmatically.
 
 **5. Is ChainCash compatible with existing financial systems?**
 
   - Yes, ChainCash is designed to be flexible and interoperable, making it easy to integrate with existing financial systems and services.
 
-**6. What are the transaction costs in ChainCash?**
-
-  - Transaction costs are typically low, especially compared to traditional systems. These fees support network sustainability and incentivize proper usage.
-
-**7. How does ChainCash address privacy concerns?**
-
-  - Privacy features, such as zero-knowledge proofs, are planned for future development to allow private transactions without compromising system integrity.
-
-**8. Is ChainCash environmentally sustainable?**
-
-  - ChainCash aims to provide significant benefits to local economies, such as enabling community-driven currencies and facilitating financial inclusion. If widely adopted, these potential benefits can justify the resources required to secure the network. Additionally, the elastic money supply and trust-based system of ChainCash can promote sustainable economic growth within local communities, potentially offsetting any environmental impact.
 
 
 ## References
