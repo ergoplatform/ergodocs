@@ -169,23 +169,23 @@ nav:
       - Events: events/index.md
       - ERGOHACK: events/ergohack.md
       - ErgoSummit: events/ergosummit.md
-
+    - Contribute:
+          - contribute.md
+          - Developers:
+            - contribute/devs.md
+            - Bounties: contribute/bounties.md
+            - Grants: contribute/grants.md
+            - Roles: contribute/roles.md
+          - Marketing: contribute/marketing.md
+          - Sigmanauts: contribute/sigmanauts.md
+          - Contribute to the docs!: contribute/docs.md
 
   #
   # Get Involved
   #
-  - Get Started:
-    - getting-started.md
-    - Contribute:
-      - contribute.md
-      - Developers:
-        - contribute/devs.md
-        - Bounties: contribute/bounties.md
-        - Grants: contribute/grants.md
-        - Roles: contribute/roles.md
-      - Marketing: contribute/marketing.md
-      - Sigmanauts: contribute/sigmanauts.md
-      - Contribute to the docs!: contribute/docs.md
+  #- Get Started:
+   # - getting-started.md
+    
 
 
 
@@ -238,12 +238,11 @@ nav:
 
 
       - Monetary Systems:
-        - SigmaUSD:
-          - uses/sigmausd.md
-          - Examples: uses/sigmausd/examples.md
-          - Mining Incentives: uses/sigmausd/mining-incentives.md
-          - Other Stablecoins: uses/sigmausd/comparison.md
-          - Why?: uses/sigmausd/why-sigusd.md
+        - SigmaUSD: uses/sigmausd.md
+          #- Examples: uses/sigmausd/examples.md
+          #- Mining Incentives: uses/sigmausd/mining-incentives.md
+          #- Other Stablecoins: uses/sigmausd/comparison.md
+          #- Why?: uses/sigmausd/why-sigusd.md
         - ChainCash: uses/chaincash.md
         - Gluon: eco/gluon.md
         - DexyGold: eco/dexy.md

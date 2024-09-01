@@ -1,22 +1,29 @@
-# Trustless LETS
+# Trustless Local Exchange Trading Systems (LETS)
 
-A [Local Exchange Trading System](lets.md) (also known as *LETS*) involves several participants who agree to use a form of "local currency," typically pegged to the national currency at a 1:1 ratio. Let's consider an example of a LETS located in a European country, where the currency is Euros. The exchange is conducted in "local Euros," which are deemed equivalent to national Euros.
+## Introduction
+
+A [Local Exchange Trading System](lets.md) (LETS) involves several participants who agree to use a form of "local currency," typically pegged to the national currency at a 1:1 ratio. Let's consider an example of a LETS located in a European country, where the currency is Euros. The exchange is conducted in "local Euros," which are deemed equivalent to national Euros.
 
 In LETS, each participant has an account holding their LETS balance (in Local Euros). New members start with a balance of zero, recorded in a ledger that could be decentralized. One distinctive aspect of LETS is that a member with a zero balance can "withdraw" money, but solely for payments to another LETS member. Consequently, the sum of all users' LETS balances is always zero at any given moment.
 
 For instance, Alice, a LETS member with a zero balance, decides to buy one liter of milk from Bob, also a LETS member with a zero balance. Alice transfers 2 Euros from her account to Bob's, resulting in her balance becoming -2 and Bob's +2. Bob can then transfer some or all of his balance to another LETS member in return for goods or services.
 
-### Implementation
 
 As we aim to establish a decentralized LETS, we cannot rely on any trusted group to authenticate users. However, we will maintain a committee responsible for tasks like defining LETS parameters (local currency, the maximum number of members, etc.) and processing any joining fees.
 
+## Trusted Pricing Oracle
+
 We'll rely on a trusted _pricing oracle_ that provides the current conversion rate of euros to ergs, identified by a global id (`rateTokenID`). The oracle operates through a _singleton box_ that contains precisely one token with this id. A singleton box, which carries a _singleton token_ (a token with only one unit in existence), also holds the rate of ergs to euros for any given period. The rate gets updated by spending this box and creating another singleton box with the new rate.
+
+## Token Box and Membership Tokens
 
 Our LETS at any given moment is distinctly defined by a global _token box_ that houses some _membership tokens_ with id `letsTokenID`. This box outlines the LETS parameters such as location, currency unit, `rateTokenID`, and so on. Initially, the token box is started with a specified number, say 10,000 membership tokens. Users can spend this box and create their individual _LETS boxes_ as transaction outputs, where each output contains exactly one membership token. The remaining membership tokens are stored in a newly generated token box.
 
+## LETS Box and Transactions
+
 A LETS box symbolizes a LETS member and must be used in every transaction. For simplicity, this document restricts all LETS transactions to involve only two members - one sender and one receiver. In such transactions, the sender transfers a positive amount of the LETS currency (local euros) to the receiver, consuming the members' boxes and recreating them as outputs with updated balances.
 
-### Variations
+## Variations
 
 The following table provides a brief overview of the LETS variants:
 
@@ -123,7 +130,7 @@ Compared to the managed LETS, the above system has the following differences:
 * **No membership record**: Unlike the managed LETS, We don't store any membership information here. 
 * **Multiple-boxes**: A person can create multiple membership boxes, which is permitted. We only require that any negative balance be backed by the corresponding number of ergs locked. 
 
-##### LETS-1: Zero Sum, Collateral
+### LETS-1: Zero Sum, Collateral
 
 The above is the basic variant, which we call **LETS-1**. It has the following features:
 
@@ -133,14 +140,14 @@ The above is the basic variant, which we call **LETS-1**. It has the following f
 
 The following are some variations of LETS-1.
 
-##### LETS-2: Zero Sum, No collateral
+### LETS-2: Zero Sum, No collateral
 
 (A slight variation of LETS-1)
 
 * **Non-refundable joining fee**: Like LETS-1, a joining fee is needed to prevent spam attacks. However, unlike LETS-1, this fee is non-refundable and must be sent to some predefined management committee.
 * **Zero-Sum**: As in LETS-1.
 
-##### LETS-3: Positive-Sum, Collateral
+### LETS-3: Positive-Sum, Collateral
 
 
 The above two variants require the total LETS balance to be always zero. Here we consider a positive value for this sum. In particular, this variant has the following properties:
@@ -151,7 +158,7 @@ The above two variants require the total LETS balance to be always zero. Here we
 
 We can also allow topping up the LETS balance during a transaction by adding the equivalent amount of ergs. 
 
-##### LETS-4: Positive-Sum, No collateral
+### LETS-4: Positive-Sum, No collateral
 
 This is similar to LETS-3 but with some small variations:
 

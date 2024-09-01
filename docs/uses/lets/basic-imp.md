@@ -1,10 +1,18 @@
-# Fundamental Implementation
+# Basic Implementation of a Local Exchange Trading System (LETS)
 
-The basic blueprint of our system encompasses two contracts: an administrative contract and a trade contract. Before delving into the details, we recommend acquainting yourself with the foundational aspects of Ergo by reviewing [this ICO article](https://github.com/ergoplatform/ergo/wiki/An-ICO-Example-On-Top-Of-Ergo) as well as ErgoScript tutorials ([basic](https://ergoplatform.org/docs/ErgoScript.pdf) and [advanced](https://ergoplatform.org/docs/sigmastate_protocols.pdf)).
+## Overview
+
+The basic blueprint of our system encompasses two contracts: an administrative contract and a trade contract. Before delving into the details, we recommend acquainting yourself with the foundational aspects of Ergo by reviewing [this ICO article](ico.md) as well as [ErgoScript](ergoscript.md) tutorials.
 
 Despite the aforementioned recommendations, we will elucidate a few novel terms in the upcoming sections.
 
+### Singleton Tokens and Boxes
+
 In Ergo, when a token is minted with a value of one, it is termed a **singleton token**. Similarly, a box containing a singleton token is known as a **singleton box**.
+
+## Administrative Contract
+
+### Purpose
 
 - The administrative contract oversees a singleton box that encompasses the members of the LETS system. 
 - This contract facilitates the addition of new members, at a rate of one member per transaction. 
@@ -14,6 +22,8 @@ In Ergo, when a token is minted with a value of one, it is termed a **singleton 
 - The trade contract safeguards the member's box. 
 - Moreover, the freshly generated member's box records the initial balance in the R4 register, which in this case is zero.
 - The transaction that adds a new member is obligated to validate the correctness of the directory transformation.
+
+### Committee Management
 
 A committee generally manages the administrative contract box, and the composition of this committee may change over time. To accommodate this, we allow the committee's logic to reside in the R5 register. For instance, if a new member is added to both the committee and the LETS system, the incoming administrative contract box would require signatures from two out of three members, while the outgoing box would require three out of four signatures. Consequently, the data within the R5 register of the input and output boxes would vary.
 
