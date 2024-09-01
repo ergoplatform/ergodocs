@@ -18,7 +18,9 @@ This article explains ChainCash's functionality, explores practical applications
 /// details | Join the ChainCash Experiment! Calling All Monetary Hackers
      {type: note, open: false}
 
-ChainCash is now ready for real-world experimentation, and we invite monetary hackers and developers to dive into this groundbreaking system. With the recent success of the first ChainCash transactions via the server API, there's a unique opportunity for innovators to test, tweak, and expand the functionality of ChainCash.
+ChainCash is now ready for real-world experimentation, and we invite monetary hackers and developers to dive into this groundbreaking system. With the recent success of the first ChainCash transactions via the server API and ongoing developments, including the testing of new note contract extensions, there's a unique opportunity for innovators to test, tweak, and expand the functionality of ChainCash.
+
+Recent experiments have explored the potential to integrate Non-Fungible Tokens (NFTs) as control inputs in note contracts. This could impose specific limitations or unlock additional capabilities for ChainCash notes, bringing the full spectrum of Ergo’s contractual layer capabilities into play. Discussions are also ongoing about using ChainCash for community currencies, carbon credits, and other innovative applications.
 
 Here are the details of the first transactions:
 
