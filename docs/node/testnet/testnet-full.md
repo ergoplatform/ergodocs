@@ -26,3 +26,7 @@ The node will be available at `localhost:9052/panel`
 
 Once the node is synchronised, a user interface for [Swagger](swagger.md) is available at `localhost:9052/swagger`. 
 
+/// details | Mining
+    {type: info, open: true}
+If you want to help mine the testnet, you can do so by following the steps outlined on [CPU Mining](/node/testnet/cpu-mining.md).
+///

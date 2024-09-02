@@ -1,42 +1,10 @@
-# Fork your own chain!
-
-/// admonition | Create your own custom Ergo chain
-    type: tip
-
-This guide will walk you through the steps of creating your own fork of the Ergo chain. This enables you to initiate a completely new chain with parameters tailored to your needs.
-///
-
-
-### Generating `genesisStateDigestHex`
-
-To mine your own chain, you need to generate the `genesisStateDigestHex`, which is a Base16 representation of the *genesis state* roothash. 
-
-Follow these steps to configure your chain values in the [src/main/resources/testnet.conf](https://github.com/ergoplatform/ergo/blob/master/src/main/resources/testnet.conf) file and compile the node to obtain the `genesisStateDigestHex`.
-
-
-### Compiling the Node
-
-To compile the node, run the following command:
-
-```shell
-sbt assembly
-```
-
-/// details | Prerequisites: sbt
-     {type: note, open: false}
-Before proceeding, ensure that you have sbt installed, which is a build tool for Scala. The easiest way to set up sbt is by using [SDKMAN](https://sdkman.io/).
-
-```shell
-curl -s "https://get.sdkman.io" | bash 
-sdk install sbt
-```
-///
-
-This command will create an `ergo.jar` file at `/target/scala*/ergo-*.jar`.
+# Fork Your Own Ergo Chain
 
 ### Configuration
 
-At this stage, your `testnet.conf` file should have the following configuration:
+To start your custom Ergo chain, you need to modify the configuration to ensure it doesn't clash with the Ergo mainnet or public testnet. The key changes involve setting a unique `addressPrefix` and custom `magicBytes`.
+
+Here’s an updated configuration for your `testnet.conf` file:
 
 ```conf
 ergo {
@@ -47,14 +15,15 @@ ergo {
     offlineGeneration = true
     useExternalMiner = false
   }
-  
+
   chain {
-    genesisStateDigestHex = "Still to be generated at this stage"
+    addressPrefix = 32 #  to avoid address clashing with Ergo mainnet and public testnet
   }
 }
 
 scorex {
   network {
+    magicBytes = [2, 0, 4, 8] # custom value to avoid connections with other networks
     bindAddress = "0.0.0.0:9022"
     nodeName = "ergo-testnet-5"
     #knownPeers = []
@@ -66,14 +35,31 @@ scorex {
 }
 ```
 
-### Running the Node
+### Steps to Run the Node
 
-Use the following command to run the node:
+1. **Set Up the Configuration:**
+   - Make sure your `testnet.conf` file is configured as shown above. This will help prevent address clashes with the mainnet and public testnet by using a custom `addressPrefix` and `magicBytes`.
 
-```bash
-java -jar -Xmx4G ergo-*.jar --testnet -c testnet.conf
-```
+2. **Compile the Node:**
+   - Use the following command to compile the Ergo node:
+     ```shell
+     sbt assembly
+     ```
+   - This will generate an `ergo.jar` file at `/target/scala*/ergo-*.jar`.
 
-The console should display a new `genesisStateDigestHex` value. Copy that value and replace the placeholder text `"Still to be generated at this stage"` in the `testnet.conf` file. Remove the "#" characters to uncomment the lines.
+3. **Run the Node:**
+   - Start the node using the command:
+     ```bash
+     java -jar -Xmx4G ergo-*.jar --testnet -c testnet.conf
+     ```
 
-Restart your node, and it will start CPU mining its own chain!
+4. **Initialize and Unlock the Wallet:**
+   - Access the panel at `127.0.0.1:9052/panel` to initialize and unlock your wallet. This is necessary as the first blocks will be generated using Autolykos v1.
+
+### Additional Support
+
+For deeper modifications or any questions, you can join the community on:
+- **Telegram:** [Ergo Developers Chat](https://t.me/ErgoDevelopers)
+- **Discord:** [Ergo Platform Developers Channel](https://discord.gg/ergo-platform-668903786361651200)
+
+This setup ensures your custom chain runs independently and avoids conflicts with existing networks.
