@@ -158,6 +158,7 @@ For exchanges, restrict withdrawals to P2PK addresses and invalidate other types
 
 [ergo-simple-addresses](https://github.com/kushti/ergo-simple-addresses) contains Java-friendly utils for working with addresses.
 
+
 ### Composing Transactions Outside the Node
 
 Get unspent UTXOs for an address using the `transactions/boxes/byAddress/unspent` Explorer API method:
@@ -165,6 +166,18 @@ Get unspent UTXOs for an address using the `transactions/boxes/byAddress/unspent
 ```bash
 https://api.ergoplatform.com/transactions/boxes/byAddress/unspent/9gAE5e454UT5s3NB1625u1LynQYPS2XzzBEK4xumvSZdqnXT35M 
 ```
+
+When selecting UTXOs manually, be sure to use the binary-encoded version of the inputs. You can retrieve the binary data for a UTXO by making a call to `/utxo/byIdBinary/{boxId}`.
+
+For example:
+
+```bash
+curl -X 'GET' \
+  'http://127.0.0.1:9053/utxo/byIdBinary/{boxId}' \
+  -H 'accept: application/json'
+```
+
+Use the returned `bytes` field in your `inputsRaw` field of the transaction request.
 
 #### Handling Unconfirmed UTXOs
 
@@ -197,11 +210,35 @@ Processing user withdrawals in batches by gathering them in a script and pushing
 
 This approach can help optimize transaction processing and reduce overall fees. However, it may require adjustments to your existing code framework.
 
+#### Example Batch Transaction Request
+
+When manually creating transactions, make sure the `inputsRaw` field contains binary-encoded UTXOs retrieved as described earlier. An example transaction might look like this:
+
+```json
+{
+    "requests": [
+        {
+            "address": "9ek75mvKwhM5uTT39L9mEdsPGWtMkc7wKRUToVNYT5FSAHJazWc",
+            "value": 4664620000
+        },
+        {
+            "address": "9fF8dd6XcbAx6n475CZqu7JsxSXTLRJm2ov22GiV6kaxrugX1x6",
+            "value": 1000000000
+        }
+    ],
+    "fee": 1000000,
+    "inputsRaw": ["8089938d150008cd021d9e5e6e45f12c5dc22f7edbb78391c51483aef82300f0a4a3eaf2c6c66dfb0ffba5500000f97ba6d3d40d54cd2cabb69baf9fea0e2e23e263b9e0c17c360fc935167aa5fa01"],
+    "dataInputsRaw": []
+}
+```
+
+Submit this transaction via a POST request as described below.
+
 ### Broadcasting Transactions
 
 To broadcast a transaction made outside the node, serialize it into `JSON`. In Java:
 
-```Java
+```java
 Json json = JsonCodecsWrapper.ergoLikeTransactionEncoder().apply(tx);
 System.out.println(json.toString());
 ```
@@ -209,10 +246,21 @@ System.out.println(json.toString());
 Send this `JSON` via a POST request to the public Explorer:
 
 ```bash
-https://api.ergoplatform.com/api/v0/transactions/send*
+curl -X POST "https://api.ergoplatform.com/api/v0/transactions/send" \
+-H "Content-Type: application/json" \
+-d '{...}'
 ```
 
-Or to your private Explorer or a node with open API (`POST` to `http://{node_ip}:9053/transactions`)
+Or to your private Explorer or a node with open API (`POST` to `http://{node_ip}:9053/transactions`):
+
+```bash
+curl -X POST "http://{node_ip}:9053/transactions" \
+-H "Content-Type: application/json" \
+-d '{...}'
+```
+
+This ensures that the transaction is properly submitted to the Ergo network for confirmation.
+
 
 ## Troubleshooting
 
