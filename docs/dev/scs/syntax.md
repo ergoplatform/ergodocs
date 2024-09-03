@@ -12,8 +12,8 @@ Ergo operates on the UTXO (Unspent Transaction Output) model and employs a Proof
 
 Key concepts of ErgoScript related to the UTXO model include:
 
-- **Box**: A [Box](box.md) is essentially a UTXO in Ergo and can store data across up to ten [registers](registers.md). Like Bitcoin, Ergo transactions consume one or more existing boxes (represented by the `INPUTS` array) and produce one or more new boxes (represented by the `OUTPUTS` array).
-- **UTXO-Specific Constructs**: ErgoScript incorporates constructs like `Box`, `INPUTS`, and `OUTPUTS` that are specific to the UTXO model. A comprehensive list of these constructs can be found [here](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/LangSpec.md).
+- **Box**: A `Box` is essentially a UTXO in Ergo and can store data across up to ten registers. Like Bitcoin, Ergo transactions consume one or more existing boxes (represented by the `INPUTS` array) and produce one or more new boxes (represented by the `OUTPUTS` array).
+- **UTXO-Specific Constructs**: ErgoScript incorporates constructs like `Box`, `INPUTS`, and `OUTPUTS` that are specific to the UTXO model. The [LangSpec.md](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/LangSpec.md) document provides a comprehensive list of these constructs.
 - **Turing Completeness**: Although ErgoScript is not Turing complete, you can still build Turing complete applications, as detailed in [this peer-reviewed paper](https://arxiv.org/pdf/1806.10116v1.pdf).
 
 ### ErgoScript Syntax Overview
@@ -22,7 +22,7 @@ ErgoScript’s syntax is derived from Scala, but you don’t need to be a Scala 
 
 - **Immutable Values**: In ErgoScript, you define values using `val`, ensuring immutability (similar to constants in other languages). Unlike Scala, ErgoScript does not support the `var` keyword, meaning all values are immutable.
 - **Array Access**: Both Scala and ErgoScript use round parentheses for array access. For example, `OUTPUTS(0)` refers to the first element of the `OUTPUTS` array.
-- **Functional Programming**: ErgoScript supports functional programming constructs such as `foreach`, `exists`, and `fold`, making it easier to work with collections.
+- **Functional Programming**: ErgoScript supports functional programming constructs such as `foreach`, `exists`, and `fold`, making it easier to work with collections. More details on these can be found in the [ErgoScript Compiler Documentation](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/ergoscript-compiler.md).
 - **Boolean Predicates**: ErgoScript programs, like ErgoTree, consist of sequences of boolean predicates connected using `&&` (and) and `||` (or).
 - **Cryptographic Operations**: ErgoScript supports cryptographic operations with `BigInt` and `GroupElement` types, allowing for addition, multiplication, and exponentiation. Note that `BigInt` operations in ErgoScript are performed modulo `2^256`, so overflow management is crucial.
 
@@ -41,7 +41,6 @@ In this example:
 - **`: Boolean`**: The type of the variable (Boolean in this case). Specifying the type is optional but recommended for clarity.
 - **`= true`**: Assigns the value `true` to `bool`.
 
-Booleans, particularly [Sigma Propositions](sigma-prop.md), are fundamental in ErgoScript as they form the backbone of every contract.
 
 ### More ErgoScript Syntax Examples
 
@@ -64,13 +63,13 @@ if(bool == true){
 In this code:
 
 - **Control Structures**: The `if-else` statement directs the flow based on the `bool` value.
-
 - **Data Types**:
-    - `x` and `y` are integers.
-    - `z` is calculated based on arithmetic operations.
-    - `y` in the `else` block is a collection of `Long` values (`Coll[Long]`).
-    - `a` is a tuple combining a `Long` and a collection.
-    - `b` is a collection of tuples with pairs of `Long` values and Booleans.
+
+      - `x` and `y` are integers.
+      - `z` is calculated based on arithmetic operations.
+      - `y` in the `else` block is a collection of `Long` values (`Coll[Long]`).
+      - `a` is a tuple combining a `Long` and a collection.
+      - `b` is a collection of tuples with pairs of `Long` values and Booleans.
 
 ### Def vs Val: Understanding Function Definitions
 
@@ -113,11 +112,14 @@ In this example:
 - **`Coll[(Int, Long)]`**: Defines a collection of tuples with `Int` and `Long` pairs.
 - **`map` Function**: Applies a transformation to each element in the collection using a lambda expression, converting each `Int` to a `Long`.
 
+For more details on collections and functional programming in ErgoScript, refer to the [Colls.scala](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/core/shared/src/main/scala/sigma/Colls.scala) file.
 
 ## Additional Resources
 
 For further learning and a deeper dive into ErgoScript, explore the following resources:
 
 - [Deco Education - ErgoScript Developer Course](https://github.com/DeCo-Education/ErgoScript-Developer-Course/blob/main/Class-Documents/Class-1/Materials/Class1.MD)
-- [Sigma Propositions](sigma-prop.md): Learn more about the core components of ErgoScript contracts.
+- [ErgoScript Specification](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/sigma-dsl.md): Detailed reference for Sigma Protocols and ErgoScript.
+- [LangSpec.md](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/LangSpec.md): Comprehensive language specification for ErgoScript.
 - [ErgoScript Reference Guide](https://ergoplatform.org/en/blog/2021_07_26_ergo_script_guide/): A detailed guide on writing ErgoScript.
+

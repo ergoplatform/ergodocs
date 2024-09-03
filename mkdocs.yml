@@ -484,7 +484,7 @@ nav:
             - Modifiers Processing: node/modifiers-processing.md
             - Modifiers Validation: node/modifiers-validation.md
           
-            # - Modifiers Exchange: dev/p2p/modifiers.md
+            - Modifiers Exchange: dev/p2p/modifiers-exchange.md
             # - BlockP2P: dev/p2p/BlockP2P.md
           - Synchronisation: node/synchronisation.md
           - EIPs: dev/protocol/eip.md
