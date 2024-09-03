@@ -8,82 +8,142 @@ This comprehensive guide is designed to provide an overview of our platform and 
 ### **Connect with Our Community**
 If you encounter any issues or have questions, feel free to connect with us on any of the following platforms. All our chat platforms are bridged, ensuring seamless communication:
 
-- [Telegram](https://t.me/Ergo_Chats)
-- [Discord](https://discord.gg/ergo-platform-668903786361651200)
-- [Matrix](https://matrix.to/#/#ergo-platform:matrix.org)
-
-For in-depth discussions and community interactions, join our forum at [ergoforum.org](https://www.ergoforum.org/).
-
-##### Contributing
-
-- We host regular hackathons which are a great opportunity to get involved. For more information and links to past entries see [this page](ergohack.md)
-- See the [Contributing Guidelines](guidelines.md) for information on bounties and grants. 
-
-
-## Ergo Platform Overview
-
-Ergo is a revolutionary platform that establishes the foundation for a new wave of blockchain-based applications. It is designed with a focus on decentralization, scalability, and security. Ergo's standout features include its advanced smart contract capabilities, efficient proof-of-work consensus algorithm, and robust transactional model. This section provides an overview of Ergo, its key features, and resources for further exploration.
-
-
-
-
-##### **Introduction to Ergo**
-
-- Get a concise overview of Ergo, its standout features, and the technology and decisions that power it on the **[*Why Ergo?*](why.md)** page.
-- Find answers to the most common questions about Ergo in our **[FAQ](faq.md)**. 
-
-##### **Technical Insights**
-
-- **[Protocol Overview](protocol.md)**: Dive deep into the core mechanisms of Ergo's protocol.
-- **[EUTXO Benefits](eutxo.md)**: Understand the advantages of Ergo's Extended UTXO model, which allows UTXOs to carry arbitrary data and complex scripts.
-- **Key Features**:
-    -  **Mining**: Ergo utilizes [Autolykos](autolykos.md), an efficient, ASIC-resistant Proof of Work algorithm designed for fair launch.
-          -  Learn about Ergo's [Emission](emission.md) schedule.
-    - **NiPoPoWs**: Short for Non-Interactive Proofs of Proof-of-Work, [NiPoPoWs](nipopows.md) are compact data structures that validate blockchain events without needing full network connectivity or downloading all block headers. They enable efficient light clients, log-space mining, and trustless sidechains.
-    - **ErgoScript**: A simple high-level language that enables clear descriptions of contractual logic and supports flexible crypto-contracts based on Σ-protocols.
-    - **Storage Rent**: Also known as [demurrage](rent.md), this mechanism mitigates blockchain bloat and turns it into a profitable venture by charging for on-chain storage.
-    - **Turing Complete Smart Contracts**: Ergo supports [Turing complete smart contracts](#multi-stage-protocols), enabling complex on-chain computations.
-
-
-##### **Documentation & Reports**
-
-- **[Foundational Papers](documents.md)**: Explore the academic and technical papers that laid the groundwork for Ergo.
-- **[EF Transparency Report](ergo-foundation.md)**: Gain insights into Ergo Foundation's operations and transparency initiatives.
-- **[Ergo's Social Contract](social_contract.md)**: Delve into the principles and commitments that guide Ergo's community and development.
-- **[Howey Test Analysis](security.md)**: Understand how Ergo measures up against the Howey Test for securities.
-
 ::cards::
 
 [
   {
-    "title": "🧾 Blockchain for Beginners: What is a Blockchain?",
-    "url": "https://medium.com/@ergoplatform/blockchain-for-beginners-what-is-a-blockchain-23f3b66f7c62"
+    "title": "Come chat!",
+    "content": "Join the action on Discord",
+    "image": "../../assets/img/dev-grid/discord.png",
+    "url": "https://discord.gg/ergo-platform-668903786361651200"
   },
+  {
+    "title": "ERGOHACK",
+    "content": "We host regular hackathons which are a great opportunity to get involved.",
+    "image": "../../assets/img/grid/05.png",
+    "url": "/../../ergohack.md"
+  },
+  {
+    "title": "Contribute",
+    "content": "See the Contributing Guidelines for information on bounties and grants.",
+    "image": "../../assets/img/grid/05.png",
+    "url": "../data-model/guidelines.md"
+
+  }
+ 
+]
+
+::/cards::
+
+
+## Ergo Platform Overview
+
+Ergo is a next-generation Proof of Work (PoW) blockchain platform designed for secure, efficient, and decentralized smart contract execution. It establishes the foundation for a new wave of blockchain-based applications, with a strong focus on scalability, security, and privacy. Ergo leverages advanced technologies like a powerful scripting language called ErgoScript, flexible Zero-Knowledge Proofs, and the eUTXO model, which is an evolution of Bitcoin's UTXO model.
+
+- Get a concise overview of Ergo, its standout features, and the technology and decisions that power it on the **[*Why Ergo?*](why.md)** page.
+- Find answers to the most common questions about Ergo in our **[FAQ](faq.md)**.
+
+
+
+### **Key Features**
+
+- **ErgoScript**: A simple high-level language that enables clear descriptions of contractual logic. ErgoScript supports the creation of flexible crypto-contracts based on Σ-protocols, which are a class of Zero-Knowledge Proofs, allowing for privacy-preserving transactions and complex smart contract functionality.
+- **Extended UTXO Model (eUTXO)**: The [eUTXO](eutxo.md) model allows each UTXO to carry arbitrary data and be protected by an arbitrary predicate or spending condition. This flexibility enables the representation of various assets, tokens, and smart contract states within the blockchain.
+- **Mining with Autolykos**: Ergo utilizes [Autolykos](autolykos.md), an efficient, ASIC-resistant Proof of Work algorithm designed for fair launch.
+    - Learn about Ergo's [Emission](emission.md) schedule.
+- **[NiPoPoWs](nipopows.md)**: Short for Non-Interactive Proofs of Proof-of-Work are compact data structures that validate blockchain events without needing full network connectivity or downloading all block headers. They enable efficient light clients, log-space mining, and trustless sidechains.
+- **Storage Rent**: Also known as [demurrage](rent.md), this mechanism mitigates blockchain bloat and turns it into a profitable venture by charging for on-chain storage.
+- **Turing Complete Smart Contracts**: Ergo supports [Turing complete smart contracts](#multi-stage-protocols), enabling complex on-chain computations.
+
+
+::cards::
+
+[
   {
     "title": "📚 DeCo EU Layman Class - Basics of eUTxO",
     "content": "A Great Introductory course aimed at the laymen from Decentralised Collaboration",
     "url": "https://www.youtube.com/watch?v=SAWeW6wajEw"
   },
   {
-    "title": "📹 More introductory videos",
-    "url": "tutorials/introductory-video"
-  },
-  {
     "title": "🧾 Learning Ergo 101 : eUTXO explained for human beings",
     "url": "https://dav009.medium.com/learning-ergo-101-blockchain-paradigm-eutxo-c90b0274cf5e"
+  },
+
+  {
+    "title": "📹 Learning blockchains like Cardano and Ergo",
+    "content": "Discusses the process of learning blockchain concepts, emphasizing the significance of understanding these theoretical aspects, practical interaction through playgrounds and nodes.",
+    "url": "https://www.youtube.com/watch?v=HDn49bToTMI"
   }
+
 ]
 
 ::/cards::
 
+### **Documentation & Reports**
 
-## **Understanding Ergo**
+- **[Foundational Papers](documents.md)**: Explore the academic and technical papers that laid the groundwork for Ergo.
+- **[EF Transparency Report](ergo-foundation.md)**: Gain insights into Ergo Foundation's operations and transparency initiatives.
+- **[Ergo's Social Contract](social_contract.md)**: Delve into the principles and commitments that guide Ergo's community and development.
+- **[Howey Test Analysis](security.md)**: Understand how Ergo measures up against the Howey Test for securities.
 
-Ergo is a next-generation Proof of Work (PoW) blockchain platform designed for secure and efficient smart contract execution. At its core, Ergo leverages a powerful scripting language called ErgoScript and flexible Zero-Knowledge Proofs (Σ-protocols) to enable new models of financial interaction.
 
-ErgoScript is a safe and expressive language that allows for clear descriptions of contractual logic. It supports the creation of flexible crypto-contracts based on Σ-protocols, which are a class of Zero-Knowledge Proofs. These protocols enable privacy-preserving transactions and complex smart contract functionality.
+### **Transactional Model**
 
-Ergo's architecture is underpinned by the Extended UTXO (eUTXO) model, an evolution of Bitcoin's Unspent Transaction Output (UTXO) model. The eUTXO model allows each UTXO to carry arbitrary data and be protected by an arbitrary predicate or spending condition. This flexibility enables the representation of various assets, tokens, and smart contract states within the blockchain.
+Ergo adopts a transactional approach similar to Bitcoin's UTXO model. In this model, transactions utilize and produce single-use entities known as a ['box'](box.md). Every [transaction](transactions.md) in Ergo represents an atomic state transition, eliminating a box from the state and introducing new ones in its place. The eUTXO model allows each UTXO to carry arbitrary data and be protected by an arbitrary predicate (or [spending condition](types.md#sigmaprop)). The data can represent arbitrary tokens or smart contract states.
+
+#### **Boxes & Their Components**
+
+- **[Registers within Boxes](registers.md)**: Boxes come equipped with multiple registers capable of holding various assets and complex [ErgoScript](#ergoscript) types.
+- **[Assets in Ergo](tokens.md)**: Dive deeper into the different assets that can be held within these boxes.
+
+Ergo also supports advanced [data structures](data-structures.md) like [AVL+ Trees](data-structures.md) which can be used to store and authenticate large amounts of data on-chain.
+
+
+#### **Transactional Basics**
+
+##### **Tutorials & Guides**
+
+- **[Ergo Platform Basic Starter Tutorial](basics.md)**
+- **[Create & Send a Transaction](https://www.youtube.com/watch?v=Md5s-XV6-Hs)**: A video tutorial on creating and sending a transaction using AppKit.
+- **[Sign a Transaction](sign-tx.md)**: Learn how to sign a transaction with Sigma Rust.
+- **[Sending a Chained Transaction](chained-tx.md)**: A guide on sending a chained transaction using Ergpy.
+- **[Getting Started with Fleet SDK](https://fleet-sdk.github.io/docs/getting-started)**: A beginner's guide to the Fleet SDK.
+
+##### **Tokens & NFTs**
+
+- **[Issuing a Token](tokens.md)**: A step-by-step guide on how to issue a token on Ergo.
+- **[Burning a Token](burn.md)**: Learn how to burn a token, effectively removing it from circulation.
+- **[Minting an NFT](create.md)**: A comprehensive guide on creating a Non-Fungible Token (NFT) on Ergo.
+- **[Minting a on-chain NFT](on-chain.md)**: Don't want to rely on third-party storage? You can squeeze a NFT directly into the registers!
+
+
+
+### **Introductory Resources**
+
+::cards::
+
+[
+
+  {
+    "title": "📚 DeCo Intro Lessons",
+    "content": "Programming basics for the laymen, from DeCo (Decentralised Collaboration)",
+    "url": "https://www.youtube.com/watch?v=qR0_k7VH6KI&list=PLopsKGshj0B4BpMoSMh5hQk8gVfWk-si6"
+  },
+
+
+  {
+    "title": "📹 Ergo Blockchain Crash Course",
+    "content": "Ergo crash course, presented by developer Luca (lgd) covering the eUTXO model, Anatomy of Ergo and more.",
+    "url": "https://www.youtube.com/playlist?list=PL8-KVrs6vXLTVXGwmYXjOBRx3VymB4Vm2"
+  },
+
+  {
+    "title": "📹 More introductory videos",
+    "url": "tutorials/introductory-video"
+  }
+]
+
+::/cards::
 
 /// admonition | Chatbots!
     type: info
@@ -96,44 +156,6 @@ To further explore and understand Ergo's concepts, you can interact with the fol
 ///
 
 
-##### **Transactional Model**
-
-- Ergo adopts a transactional approach similar to Bitcoin's Unspent Transaction Output (UTxO) model. In this model, transactions utilize and produce single-use entities known as a ['box'](box.md).
-- Every [transaction](transactions.md) in Ergo represents an atomic state transition. This means a transaction eliminates a box from the state and introduces new ones in its place.
-- The eUTXO model allows each UTXO to carry arbitrary data and to be protected by an arbitrary predicate (or [spending condition](types.md#sigmaprop)). The data can be used to represent arbitrary tokens or smart contract states.
-
-##### **Boxes & Their Components**
-
-- **[Registers within Boxes](registers.md)**: Boxes come equipped with multiple registers capable of holding various assets and complex [ErgoScript](#ergoscript) types.
-- **[Assets in Ergo](tokens.md)**: Dive deeper into the different assets that can be held within these boxes.
-
-Ergo also supports advanced data structures like [AVL+ Trees](data-structures.md) which can be used to store and authenticate large amounts of data on-chain.
-
-Here are some introductory resources that cover these concepts.
-
-::cards::
-
-[
-  {
-    "title": "📹 Ergo Blockchain Crash Course",
-    "content": "Ergo crash course, presented by developer Luca (lgd) covering the eUTXO model, Anatomy of Ergo and more.",
-    "url": "https://www.youtube.com/playlist?list=PL8-KVrs6vXLTVXGwmYXjOBRx3VymB4Vm2"
-
-  },
-  {
-    "title": "📚 DeCo Intro Lessons",
-    "content": "Programming basics for the laymen, from DeCo (Decentralised Collaboration)",
-    "url": "https://www.youtube.com/watch?v=qR0_k7VH6KI&list=PLopsKGshj0B4BpMoSMh5hQk8gVfWk-si6"
-  },
-  {
-    "title": "📹 Learning blockchains like Cardano and Ergo",
-    "content": "Discusses the process of learning blockchain concepts, emphasizing the significance of understanding these theoretical aspects, practical interaction through playgrounds and nodes.",
-    "url": "https://www.youtube.com/watch?v=HDn49bToTMI"
-  },
-]
-
-::/cards::
-
 
 ## **Ergo Infrastructure**
 
@@ -141,8 +163,8 @@ Here are some introductory resources that cover these concepts.
 ##### **Ergo Node & Network**
 
 - **[Ergo Node](install.md)**: The Ergo Node forms the core of Ergo's P2P network, maintaining and synchronizing the entire blockchain.
-  - **[Bootstrap from UTXO Snapshot](pruned-full-node.md)**: Expedite the setup of a pruned full node on the [testnet](testnet.md) by bootstrapping from a UTXO snapshot.
-  - **[Fork Your Own Chain](mine-your-own-chain.md)**: Learn how to customize and create your own chain with specific parameters.
+   - **[Bootstrap from UTXO Snapshot](pruned-full-node.md)**: Expedite the setup of a pruned full node on the [testnet](testnet.md) by bootstrapping from a UTXO snapshot.
+   - **[Fork Your Own Chain](mine-your-own-chain.md)**: Learn how to customize and create your own chain with specific parameters.
 
 ##### **API & Programmatic Access**
 
@@ -167,22 +189,6 @@ Here are some introductory resources that cover these concepts.
 - [Bootstrap an Oracle Pool on testnet](oracle-bootstrap.md)
 - [Running off-chain bots](dex_bots.md)
 
-## **Transactional Basics**
-
-##### **Tutorials & Guides**
-
-- **[Ergo Platform Basic Starter Tutorial](basics.md)**
-- **[Create & Send a Transaction](https://www.youtube.com/watch?v=Md5s-XV6-Hs)**: A video tutorial on creating and sending a transaction using AppKit.
-- **[Sign a Transaction](sign-tx.md)**: Learn how to sign a transaction with Sigma Rust.
-- **[Sending a Chained Transaction](chained-tx.md)**: A guide on sending a chained transaction using Ergpy.
-- **[Getting Started with Fleet SDK](https://fleet-sdk.github.io/docs/getting-started)**: A beginner's guide to the Fleet SDK.
-
-##### **Tokens & NFTs**
-
-- **[Issuing a Token](tokens.md)**: A step-by-step guide on how to issue a token on Ergo.
-- **[Burning a Token](burn.md)**: Learn how to burn a token, effectively removing it from circulation.
-- **[Minting an NFT](create.md)**: A comprehensive guide on creating a Non-Fungible Token (NFT) on Ergo.
-- **[Minting a on-chain NFT](on-chain.md)**: Don't want to rely on third-party storage? You can squeeze a NFT directly into the registers!
 
 ## App development
 
