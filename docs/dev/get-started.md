@@ -378,6 +378,14 @@ See [this page](/dev/scs/global-functions/#cryptographic-functions) for a descri
 
 - **[Scrypto](scrypto.md)** is a comprehensively built open-source cryptographic toolkit, specifically engineered to simplify and safeguard the process of integrating cryptography into your applications. Supporting AVL+ Trees and Batch Merkle Proof Serialization and Deserialization. 
 
+### Merkle Trees
+
+**[Merkle Trees](merkle-tree.md)** are a fundamental data structure in the Ergo blockchain, ensuring the integrity and authenticity of data. They play a crucial role in various blockchain operations, from verifying transactions within blocks to securing additional metadata in the Extension Block. Ergo extends the concept of Merkle Trees by combining transactions and their corresponding spending proofs into a single Merkle Tree.
+
+Merkle Trees in Ergo follow a specific structure and encoding scheme, providing cryptographic security and deterministic byte representation. They are used in core applications such as the Transaction Merkle Tree, Extension Block Merkle Tree, Merkle Batch Proofs, and State Proofs.
+
+Developers should familiarize themselves with Merkle Trees and their associated code implementations to effectively leverage them in their Ergo projects.
+
 ### AVL Trees (Plasma)
 
 **[AVL trees](avl.md)** are highly efficient authenticated data structures natively supported in Ergo. These trees offer several benefits, including the ability to authenticate data properties without accessing the entire dataset. Developers can seamlessly integrate AVL trees into their Ergo applications using one of the **[Plasma](plasma.md)** libraries.
