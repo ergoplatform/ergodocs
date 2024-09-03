@@ -1,5 +1,7 @@
 # Welcome to Ergo
 
+Dive into the world of Ergo, a cutting-edge platform at the forefront of decentralized finance and smart contracts. This guide is structured to help you swiftly navigate to the sections most relevant to your interests—whether you’re mining, investing, developing, or exploring the basics of cryptocurrencies.
+
 ::cards::
 
 [
@@ -46,7 +48,6 @@
 
 
 
-Dive into the world of Ergo, a cutting-edge platform at the forefront of decentralized finance and smart contracts. This guide is structured to help you swiftly navigate to the sections most relevant to your interests—whether you’re mining, investing, developing, or exploring the basics of cryptocurrencies.
 
 ## Why Choose Ergo?
 
@@ -99,4 +100,42 @@ If you're new to cryptocurrencies or looking to understand Ergo’s basics:
 
 ## Engage with the Ergo Community
 
-Ergo’s community is vibrant and continuously evolving. Keep updated with the latest developments, participate in community discussions, and find support through forums and social platforms. 
+Ergo’s community is vibrant and continuously evolving. Keep updated with the latest developments, participate in community discussions, and find support through forums and social platforms.
+
+::cards::
+
+[
+  {
+    "title": "Key Features",
+    "content": "Discover Ergo's key features",
+    "image": "../../assets/img/dev-grid/key.png",
+    "url": "/../../protocol.md"
+  },
+  {
+    "title": "Anatomy",
+    "content": "Dive into boxes, registers and more in the anatomy of Ergo.",
+    "image": "../../assets/img/dev-grid/anatomy.png",
+    "url": "../data-model/box.md"
+
+  },
+  {
+    "title": "🔗 Sigmaverse",
+    "content": "Your portal to the Ergo dApp universe.",
+    "image": "../../assets/img/dev-grid/sigmaverse.svg",
+    "url": "https://sigmaverse.io"
+  },
+  {
+    "title": "🔗 Come chat!",
+    "content": "Join the action on Discord",
+    "image": "../../assets/img/dev-grid/discord.png",
+    "url": "https://discord.gg/Q86PNMwRsu"
+  },
+  {
+    "title": "Testnet",
+    "content": "An alternative blockchain you can use for experimentation",
+    "image": "../../assets/img/dev-grid/testnet.png",
+    "url": "../../node/testnet.md"
+  }
+]
+
+::/cards::

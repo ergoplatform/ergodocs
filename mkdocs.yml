@@ -133,14 +133,8 @@ nav:
       - Privacy: dev/protocol/zkp.md
       - Storage Rent: dev/protocol/storage-rent.md
       - Autolykos: dev/protocol/autolykos-protocol.md
-    - Documents: 
-      - documents.md
-      - Research & Whitepapers: documents.md
-      - Social Contract: social_contract.md
-      - Audit: dev/protocol/audit.md
-      - The Howey Test: security.md
-      - Privacy Guide: doc/privacy-guide.md
-      - Glossary: glossary.md
+
+    - Research & Whitepapers: documents.md
     - Roadmap:
       - roadmap.md
       - Scaling:
@@ -159,12 +153,10 @@ nav:
         - ef/ergo-foundation.md
         - Scope: ef/ef-scope.md
         - Treasury: ef/ef-treasury.md
-        
+
         - Future: ef/ef-future.md
       - DevDao: devdao.md
       - Sigmanauts: contribute/sigmanauts.md
-
-      
     - Events: 
       - Events: events/index.md
       - ERGOHACK: events/ergohack.md
@@ -179,6 +171,12 @@ nav:
           - Marketing: contribute/marketing.md
           - Sigmanauts: contribute/sigmanauts.md
           - Contribute to the docs!: contribute/docs.md
+    - Resources:
+        - Social Contract: social_contract.md
+        - Audit: dev/protocol/audit.md
+        - The Howey Test: security.md
+        - Privacy Guide: doc/privacy-guide.md
+        - Glossary: glossary.md
 
   #
   # Get Involved
@@ -392,20 +390,8 @@ nav:
 
   - Developers: 
     - dev/get-started.md
-    - 📌 Getting Started: 
-      - dev/get-started.md
-      - Development Stack: 
-        - dev/start.md
-        - Starter Tutorial: dev/stack/basics.md
-        - Server: dev/stack/server.md
-        - Browser: dev/stack/browser.md
-        - Desktop: dev/stack/desktop.md
-        - Mobile: 
-          - dev/stack/mobile.md
-          - iOS: dev/stack/iOS.md
-          - Android: dev/stack/android.md
-    
-    - Anatomy of Ergo:
+    - 📌 Getting Started: dev/get-started.md
+    - Data Model:
       - Box: 
         - dev/data-model/box.md
         - Registers: dev/data-model/box/registers.md
@@ -463,42 +449,9 @@ nav:
       - Block:
         - dev/data-model/block.md
         - Extension Section: dev/data-model/extension-section.md
-      - Data Structures:
-        - dev/data-model/data-structures.md
-        - Merkle Tree:
-          - dev/data-model/structures/merkle/merkle-tree.md
-          - Format: dev/data-model/structures/merkle/merkle-format.md
-          - Validation: dev/data-model/structures/merkle/merkle-validation.md
-          - Implementations:
-            - Extension Block Merkle: dev/data-model/structures/merkle/merkle-extension.md
-            - Transaction Merkle Trees: dev/protocol/tx/tx-merkle.md
-            - Merkle Batch Proofs:
-              - dev/data-model/structures/merkle/merkle-batch-proof.md
-              - Implementation: dev/data-model/structures/merkle/merkle-batch-impl.md
-              - Testing: dev/data-model/structures/merkle/merkle-batch-testing.md
-            - Lightweight Client Proofs: dev/data-model/structures/merkle/merkle-light-proof.md
-        - AVL Trees:
-          - dev/protocol/avl.md
-          - Plasma: dev/lib/plasma.md
-        - Proof of Proof-of-Work: 
-          - dev/data-model/structures/popow.md
-          - Interlink Vectors: dev/data-model/structures/interlink-vectors.md
-
-      - Wallets:
-        - dev/wallets.md
-        - Access Issues: tutorials/access-issues.md
-        - Satergo: dev/wallet/satergo.md
-        - MultiSig: 
-          - dev/wallet/multisig.md
-          - Minotaur: dev/wallet/minotaur-multisig.md
-        - Ledger: dev/wallet/payments/ledger.md
-        - Integration: dev/Integration/guide.md
-        - Standards:
-          - UTXO-Set Scanning Wallet API: dev/wallet/standards/eip1.md
-          - Deterministic Wallet Standard: dev/wallet/standards/eip3.md
-          - Cold Wallet: dev/wallet/standards/eip19.md
+    
       #- UTXO-State: 
-    - Interacting with Ergo:
+    - Infrastructure:
       - dev/interact.md
       - Node:
         - node/install.md
@@ -534,6 +487,7 @@ nav:
             # - Modifiers Exchange: dev/p2p/modifiers.md
             # - BlockP2P: dev/p2p/BlockP2P.md
           - Synchronisation: node/synchronisation.md
+          - EIPs: dev/protocol/eip.md
           
         - Configuration:
           - Node Wallet: 
@@ -593,19 +547,43 @@ nav:
         - Off-Chain Bots: dev/oc/dex_bots.md
         - Rust Utilities: dev/oc/ergo_utilities.md
         - Plasma: dev/lib/plasma.md
-    - Developer Tooling:
-      - Programming Languages:
-        - JVM: 
-          - dev/lang/jvm.md
-          - Scala: dev/lang/scala.md
-          - Java: dev/lang/java.md
-          - Kotlin: dev/lang/kotlin.md
-        - JavaScript: dev/lang/js.md
-        - Rust: dev/lang/rust.md
-        - Others: 
-          - Python: dev/lang/python.md
-          - C#: dev/lang/csharp.md
-          - Go: dev/lang/go.md  
+      - Wallets:
+        - dev/wallets.md
+        - Access Issues: tutorials/access-issues.md
+        - Satergo: dev/wallet/satergo.md
+        - MultiSig: 
+          - dev/wallet/multisig.md
+          - Minotaur: dev/wallet/minotaur-multisig.md
+        - Ledger: dev/wallet/payments/ledger.md
+        - Integration: dev/Integration/guide.md
+        - Standards:
+          - UTXO-Set Scanning Wallet API: dev/wallet/standards/eip1.md
+          - Deterministic Wallet Standard: dev/wallet/standards/eip3.md
+          - Cold Wallet: dev/wallet/standards/eip19.md
+    - Tooling:
+      - Pathways: 
+        - Development Stack: 
+          - dev/start.md
+          - Starter Tutorial: dev/stack/basics.md
+          - Server: dev/stack/server.md
+          - Browser: dev/stack/browser.md
+          - Desktop: dev/stack/desktop.md
+          - Mobile: 
+            - dev/stack/mobile.md
+            - iOS: dev/stack/iOS.md
+            - Android: dev/stack/android.md
+        - Programming Languages:
+          - JVM:
+            - dev/lang/jvm.md
+            - Scala: dev/lang/scala.md
+            - Java: dev/lang/java.md
+            - Kotlin: dev/lang/kotlin.md
+          - JavaScript: dev/lang/js.md
+          - Rust: dev/lang/rust.md
+          - Others:
+            - Python: dev/lang/python.md
+            - C#: dev/lang/csharp.md
+            - Go: dev/lang/go.md
       - Frameworks:
         - dev/stack/frameworks.md
         - AppKit:
@@ -634,6 +612,7 @@ nav:
           - Headless dApp Framework: 
             - dev/stack/headless.md
             - Modules: dev/stack/headless/modules.md
+      
       - Payments: 
             - ErgoPay:
               - ErgoPay: dev/wallet/payments/ergopay/ergo-pay.md
@@ -653,6 +632,42 @@ nav:
         - SigmaJS: dev/lib/sigmajs.md
    
       #- Bookmarks: dev/start/resources.md
+    - Cryptographic:
+            - Privacy:
+              - crypto.md
+              - Sigma Protocols:
+                - dev/scs/sigma.md
+                - Schnorr:
+                  - dev/scs/sigma/schnorr.md
+                  - Verifying Schnorr Signatures: dev/scs/sigma/verifying.md
+                - Diffie:
+                  - dev/scs/sigma/diffie.md
+                  - ZeroJoin: dev/crypto/zerojoin.md
+              - Ring Signatures:
+                - 3-out-of-5 Threshold Signature: dev/scs/sigma/3-out-of-5.md
+                - Distributed Signatures: node/sigs.md
+              - Signature Scheme Internals: sig-scheme.md
+            - Data Structures:
+              - dev/data-model/data-structures.md
+              - Merkle Tree:
+                - dev/data-model/structures/merkle/merkle-tree.md
+                - Format: dev/data-model/structures/merkle/merkle-format.md
+                - Validation: dev/data-model/structures/merkle/merkle-validation.md
+                - Implementations:
+                  - Extension Block Merkle: dev/data-model/structures/merkle/merkle-extension.md
+                  - Transaction Merkle Trees: dev/protocol/tx/tx-merkle.md
+                  - Merkle Batch Proofs:
+                    - dev/data-model/structures/merkle/merkle-batch-proof.md
+                    - Implementation: dev/data-model/structures/merkle/merkle-batch-impl.md
+                    - Testing: dev/data-model/structures/merkle/merkle-batch-testing.md
+                  - Lightweight Client Proofs: dev/data-model/structures/merkle/merkle-light-proof.md
+              - AVL Trees:
+                - dev/protocol/avl.md
+                - Plasma: dev/lib/plasma.md
+              - Proof of Proof-of-Work:
+                - dev/data-model/structures/popow.md
+                - Interlink Vectors: dev/data-model/structures/interlink-vectors.md
+
 
     - ErgoScript: 
         - dev/scs/ergoscript.md
@@ -681,37 +696,20 @@ nav:
           - Accessing boxes and registers: dev/scs/boxes-and-registers.md
           - Global Functions: dev/scs/global-functions.md 
           - Language Operations: dev/scs/sigma/lang-ops.md
-        - Cryptographic: 
-            - crypto.md
-            - Sigma Protocols: 
-              - dev/scs/sigma.md
-              - Schnorr: 
-                - dev/scs/sigma/schnorr.md
-                - Verifying Schnorr Signatures: dev/scs/sigma/verifying.md
-              - Diffie: 
-                - dev/scs/sigma/diffie.md
-                - ZeroJoin: dev/crypto/zerojoin.md
-            - Ring Signatures:
-              - 3-out-of-5 Threshold Signature: dev/scs/sigma/3-out-of-5.md
-              - Distributed Signatures: node/sigs.md
-            - Signatute Scheme Internals: sig-scheme.md
-        - Tooling:
-          - Contracts: dev/scs/contracts.md
-          - Playgrounds:
-            - Scastie: dev/scs/ergoscript/scastie.md
-            - P2S Playground: dev/stack/utilities/plutomonkey.md
-            - Kiosk: dev/stack/kiosk.md
-            - ErgoPuppet: dev/scs/puppet.md
-          - Interpreters & Compilers:
-            - dev/stack/interpreters.md
-            - Compiler Phases: dev/scs/ergoscript/compiler-phases.md
-            - sigmastate-interpreter: dev/scs/sigmastate-interpreter.md
-            - sigma-rust: dev/stack/sigma-rust.md
-            - ErgoScala: dev/stack/ergoscala.md
-            - CLI Compiler: dev/stack/compiler.md
-
-          - Debugging: dev/scs/debugging.md
-          - FlowCards: dev/scs/flowcards.md
+        - Interpreters & Compilers:
+          - dev/stack/interpreters.md
+          - Compiler Phases: dev/scs/ergoscript/compiler-phases.md
+          - sigmastate-interpreter: dev/scs/sigmastate-interpreter.md
+          - sigma-rust: dev/stack/sigma-rust.md
+          - ErgoScala: dev/stack/ergoscala.md
+          - CLI Compiler: dev/stack/compiler.md
+        - Playgrounds:
+          #- escript
+          - Scastie: dev/scs/ergoscript/scastie.md
+          - P2S Playground: dev/stack/utilities/plutomonkey.md
+          - Kiosk: dev/stack/kiosk.md
+          - ErgoPuppet: dev/scs/puppet.md
+      
         - ErgoTree: 
           - dev/scs/ergotree.md
           - Introduction: dev/scs/ergotree/ergotree-intro.md
@@ -725,23 +723,28 @@ nav:
           - Script Validation: dev/scs/ergotree/script-validation.md
           - Script Optimisation: dev/scs/ergotree/script-optimisation.md
           - Templates: dev/scs/ergotree/ergotree-templates.md
+        - Resources:
+          - Contracts: dev/scs/contracts.md
 
-        - Multi-Stage Protocols: 
-          - dev/scs/multi.md
-          - Transaction Chains: dev/scs/tx/tx-chains.md
-          - Transaction Trees: dev/scs/tx/tx-tree.md
-          - Transaction Graphs: dev/scs/tx/tx-graphs.md
-          - Context Enrichment: dev/scs/tx/context-enrichment.md
-          - Examples:
-            - Reversible Address: dev/scs/tx/reversible-address.md
-            - Rock/Paper/Scissors: dev/scs/tx/rock-paper-scissor.md
-            - ICO: dev/scs/tx/ico.md
-       
+          - Debugging: dev/scs/debugging.md
+          - FlowCards: dev/scs/flowcards.md
+
+          - Multi-Stage Protocols: 
+            - dev/scs/multi.md
+            - Transaction Chains: dev/scs/tx/tx-chains.md
+            - Transaction Trees: dev/scs/tx/tx-tree.md
+            - Transaction Graphs: dev/scs/tx/tx-graphs.md
+            - Context Enrichment: dev/scs/tx/context-enrichment.md
+            - Examples:
+              - Reversible Address: dev/scs/tx/reversible-address.md
+              - Rock/Paper/Scissors: dev/scs/tx/rock-paper-scissor.md
+              - ICO: dev/scs/tx/ico.md
+        
       
           
-    - Resources: 
-      - dev/stack/introduction.md
-      - EIPs: dev/protocol/eip.md
+   # - Resources: 
+      #- dev/stack/introduction.md
+
 
 
   - Miners:
