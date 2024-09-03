@@ -671,12 +671,20 @@ nav:
 
     - ErgoScript: 
         - dev/scs/ergoscript.md
-        - Quick Primer: 
-          - dev/scs/ergoscript-primer.md
-          - Paradigm: dev/scs/index.md
-          - Key Concepts: dev/scs/ergoscript/ergoscript-key-concepts.md
-          - Context Claims: uses/context-claims.md
+        #- Quick Primer: dev/scs/ergoscript-primer.md
+          
+        - Sigma Language:
+          - dev/scs/sigma-lang.md
+          - Simple Syntax: dev/scs/syntax.md
+          - Language Description: dev/scs/sigma/lang-spec.md
+          - Sigma Propositions: dev/scs/sigma/sigma-prop.md
+          - SigmaBoolean: dev/scs/types/sigmaboolean.md
+          - The Blockchain context: dev/scs/blockchain-context.md
+          - Accessing boxes and registers: dev/scs/boxes-and-registers.md
+          - Global Functions: dev/scs/global-functions.md 
+          - Language Operations: dev/scs/sigma/lang-ops.md
           - Examples: 
+            - Public Contracts: dev/scs/contracts.md
             - Anyone Can Spend: dev/scs/ergoscript/anyone-can-spend.md
             - No-one-Can Spend: dev/scs/ergoscript/no-one-can-spend.md
             - Context Variables: dev/scs/ergoscript/context-variables.md
@@ -685,30 +693,25 @@ nav:
             - Functional Programming: dev/scs/ergoscript/functional-programming.md
             - Box Structure: dev/scs/ergoscript/box-structure.md
             - Storing Data: dev/scs/ergoscript/storing-data.md
-          - Creating a simple P2S app: dev/scs/p2s.md
-        - Sigma Language:
-          - dev/scs/sigma-lang.md
-          - Language Description: dev/scs/sigma/lang-spec.md
-          - Simple Syntax: dev/scs/syntax.md
-          - Sigma Propositions: dev/scs/sigma/sigma-prop.md
-          - SigmaBoolean: dev/scs/types/sigmaboolean.md
-          - The Blockchain context: dev/scs/blockchain-context.md
-          - Accessing boxes and registers: dev/scs/boxes-and-registers.md
-          - Global Functions: dev/scs/global-functions.md 
-          - Language Operations: dev/scs/sigma/lang-ops.md
-        - Interpreters & Compilers:
-          - dev/stack/interpreters.md
-          - Compiler Phases: dev/scs/ergoscript/compiler-phases.md
-          - sigmastate-interpreter: dev/scs/sigmastate-interpreter.md
-          - sigma-rust: dev/stack/sigma-rust.md
-          - ErgoScala: dev/stack/ergoscala.md
-          - CLI Compiler: dev/stack/compiler.md
-        - Playgrounds:
-          #- escript
-          - Scastie: dev/scs/ergoscript/scastie.md
-          - P2S Playground: dev/stack/utilities/plutomonkey.md
-          - Kiosk: dev/stack/kiosk.md
-          - ErgoPuppet: dev/scs/puppet.md
+            - Creating a simple P2S app: dev/scs/p2s.md
+          - Data Inputs: uses/context-claims.md
+
+        - Tooling:
+          - Interpreters & Compilers:
+            - dev/stack/interpreters.md
+            - Compiler Phases: dev/scs/ergoscript/compiler-phases.md
+            - sigmastate-interpreter: dev/scs/sigmastate-interpreter.md
+            - sigma-rust: dev/stack/sigma-rust.md
+            - ErgoScala: dev/stack/ergoscala.md
+            - CLI Compiler: dev/stack/compiler.md
+          - Playgrounds:
+            #- escript
+            - Scastie: dev/scs/ergoscript/scastie.md
+            - P2S Playground: dev/stack/utilities/plutomonkey.md
+            - Kiosk: dev/stack/kiosk.md
+            - ErgoPuppet: dev/scs/puppet.md
+          - Debugging: dev/scs/debugging.md
+          - FlowCards: dev/scs/flowcards.md
       
         - ErgoTree: 
           - dev/scs/ergotree.md
@@ -724,10 +727,9 @@ nav:
           - Script Optimisation: dev/scs/ergotree/script-optimisation.md
           - Templates: dev/scs/ergotree/ergotree-templates.md
         - Resources:
-          - Contracts: dev/scs/contracts.md
+          #- Key Concepts: dev/scs/ergoscript/ergoscript-key-concepts.md
+          - Paradigm: dev/scs/index.md
 
-          - Debugging: dev/scs/debugging.md
-          - FlowCards: dev/scs/flowcards.md
 
           - Multi-Stage Protocols: 
             - dev/scs/multi.md

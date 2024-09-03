@@ -16,6 +16,30 @@ Ergo's support for [sigma-protocols](sigma.md) (aka generalized Schnorr proofs) 
 ///
 
 
+//// admonition | Background Reading
+/// admonition | 1. Paradigm
+    type: note
+
+Ergo's transaction model offers several advantages over the account-based model, explore this new [paradigm](/dev/scs/#paradigm).
+///
+
+/// admonition | 2. Key Concepts
+    type: tip
+
+Explore the [Core Concepts of ErgoScript](ergoscript-key-concepts.md).
+///
+/// admonition | 3. Context Claims
+    type: note
+
+Ergo offers a unique approach to smart contract-enabled blockchains, providing efficient global context claims through the concept of data inputs.
+
+///
+/// admonition | 4. ErgoScript vs ErgoTree
+    type: note
+
+ErgoScript is a high-level developer-friendly language for writing smart contracts that are then compiled to ErgoTree before being written to the blockchain. Explore the distinction [here](ergoscriptvergotree.md)
+///
+////
 
 ## Simple Example
 
