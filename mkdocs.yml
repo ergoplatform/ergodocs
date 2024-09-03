@@ -478,15 +478,14 @@ nav:
             - dev/p2p/index.md
             - Handshaking: dev/p2p/p2p-handshake.md
             - Network Messages: dev/p2p/network.md
-          - Peer Management: node/peer-management.md
-          - Modifiers: 
-            - node/modifiers.md
-            - Modifiers Processing: node/modifiers-processing.md
-            - Modifiers Validation: node/modifiers-validation.md
-          
-            - Modifiers Exchange: dev/p2p/modifiers-exchange.md
-            # - BlockP2P: dev/p2p/BlockP2P.md
-          - Synchronisation: node/synchronisation.md
+            - Peer Management: node/peer-management.md
+           # - BlockP2P: dev/p2p/BlockP2P.md
+            - Modifiers:
+              - node/modifiers.md
+              - Modifiers Exchange: dev/p2p/modifiers-exchange.md
+              - Modifiers Processing: node/modifiers-processing.md
+              - Modifiers Validation: node/modifiers-validation.md
+              - Synchronisation: node/synchronisation.md
           - EIPs: dev/protocol/eip.md
           
         - Configuration:
