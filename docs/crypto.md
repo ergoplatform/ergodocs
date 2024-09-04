@@ -21,13 +21,13 @@ $$
 \newcommand{\corelang}{Core-\lambda}
 $$
 
-# Cryptographic Primitives and Structures in Ergo
+# Cryptographic 
 
-This document provides an in-depth look at the cryptographic schemes, protocols, and data structures used in the Ergo blockchain. The security and functionality of transactions on the Ergo platform rely heavily on cryptographic signatures and data integrity mechanisms. These ensure that only authorized parties can approve transactions and maintain the integrity of the data. This document outlines the internal workings of these cryptographic schemes, focusing on their implementation within the Ergo ecosystem, particularly in [`sigmastate-interpreter`](https://github.com/ScorexFoundation/sigmastate-interpreter), [`sigma-rust`](https://github.com/ergoplatform/sigma-rust), and [`Scrypto`](https://github.com/input-output-hk/scrypto).
+This document provides an in-depth look at the cryptographic schemes, protocols, and data structures used in the Ergo blockchain. The security and functionality of transactions on the Ergo platform rely heavily on cryptographic signatures and data integrity mechanisms, ensuring that only authorized parties can approve transactions and that data integrity is maintained. This document outlines the internal workings of these cryptographic schemes, focusing on their implementation within the Ergo ecosystem, particularly in [`sigmastate-interpreter`](https://github.com/ScorexFoundation/sigmastate-interpreter), [`sigma-rust`](https://github.com/ergoplatform/sigma-rust), and [`Scrypto`](https://github.com/input-output-hk/scrypto).
 
 ## Overview
 
-Ergo supports a wide range of cryptographic protocols via **composable Sigma protocols** integrated into the core of its blockchain. Cryptographic signature schemes are used to verify that a transaction was created by the owner of the corresponding private key, preventing unauthorized spending and ensuring the security of smart contracts.
+Ergo supports a wide range of cryptographic protocols via **composable Sigma protocols** integrated into the core of its blockchain. These protocols are the foundation of Ergo’s cryptographic security and smart contract framework. Cryptographic signature schemes are used to verify that a transaction was created by the owner of the corresponding private key, preventing unauthorized spending and ensuring the security of smart contracts.
 
 ### Cryptographic Toolkit
 
@@ -43,33 +43,72 @@ For more information on cryptographic functions in ErgoScript, refer to [ErgoScr
 
 Ergo employs specialized cryptographic data structures, which are key to its efficiency and security:
 
-- **AVL+ Trees**: Used in Ergo's **Authenticated Dynamic Dictionary (ADD)**, AVL+ trees ensure that the state changes within the UTXO model are efficiently tracked and cryptographically verified. AVL+ trees maintain logarithmic performance for inserts, deletions, and lookups while providing cryptographic proofs of state changes. See the Scrypto implementation: [BatchAVLProver.scala](https://github.com/input-output-hk/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/avltree/batch/BatchAVLProver.scala) and [BatchAVLVerifier.scala](https://github.com/input-output-hk/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/avltree/batch/BatchAVLVerifier.scala).
+- **AVL+ Trees**: Used in Ergo's **Authenticated Dynamic Dictionary (ADD)**, AVL+ trees ensure that the state changes within the UTXO model are efficiently tracked and cryptographically verified. AVL+ trees maintain logarithmic performance for inserts, deletions, and lookups while providing cryptographic proofs of state changes. Learn more about the implementation in [BatchAVLProver.scala](https://github.com/input-output-hk/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/avltree/batch/BatchAVLProver.scala) and [BatchAVLVerifier.scala](https://github.com/input-output-hk/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/avltree/batch/BatchAVLVerifier.scala).
 
 - **Merkle Trees**: Merkle trees secure and verify large datasets, such as the transactions within a block. They allow for efficient verification of transaction integrity without needing to download the entire dataset. Learn more about [Merkle Trees](merkle-tree.md).
 
 ---
 
+## Sigma Protocols
+
+Sigma protocols, or **Σ-protocols**, are a fundamental part of Ergo’s cryptographic framework, allowing a prover to convince a verifier of knowledge of a secret without revealing the secret itself. This makes Sigma protocols ideal for privacy-preserving applications, such as multi-party computations, ring signatures, and threshold signatures.
+
+### How Sigma Protocols Work
+
+Sigma protocols allow for various cryptographic proofs, including:
+
+- **Proof of Knowledge of Discrete Logarithm**: Proving possession of a secret key without revealing it (e.g., Schnorr signatures).
+- **Proof of Equality of Discrete Logarithms (Diffie-Hellman Tuple)**: Proving that two logarithms are equal without revealing their values.
+
+These elementary Sigma protocols can be combined to form more complex proofs using logical connectives like **AND**, **OR**, and **Threshold (k-out-of-n)**.
+
+### Composability in Sigma Protocols
+
+One of the powerful features of Sigma protocols is their **composability**. They can be combined using simple logic to create complex cryptographic conditions for smart contracts:
+
+- **OR**: Prove knowledge of one of several secrets (e.g., **one-of-two ring signature**).
+- **AND**: Prove knowledge of all required secrets.
+- **Threshold (k-out-of-n)**: Prove knowledge of at least **k** secrets out of **n**. For example, a **3-out-of-5 threshold signature** could require three signatures from five possible participants.
+
+These flexible combinations allow Ergo developers to create powerful privacy-preserving smart contracts and applications.
+
+### Example: 3-out-of-5 Threshold Signature
+
+Consider a **3-out-of-5 threshold signature** that allows any three participants to sign a transaction. Here’s an example of an ErgoScript that implements such a threshold signature:
+
+```scala
+val ringScript = s"""
+{
+atLeast(
+  3, 
+  Coll(
+    PK("9f8ZQt1Sue6W5ACdMSPRzsHj3jjiZkbYy3CEtB4BisxEyk4RsNk"), 
+    PK("9hFWPyhCJcw4KQyCGu4yAGfC1ieRAKyFg24FKjLJK2uDgA873uq"), 
+    PK("9fdVP2jca1e5nCTT6q9ijZLssGj6v4juY8gEAxUhp7YTuSsLspS"), 
+    PK("9gAKeRu1W4Dh6adWXnnYmfqjCTnxnSMtym2LPPMPErCkusCd6F3"),
+    PK("9gmNsqrqdSppLUBqg2UzREmmivgqh1r3jmNcLAc53hk3YCvAGWE")
+  )
+)
+}
+```
+
+The above is a `3-out-of-5` **threshold signature** example, compiled into a **Pay-to-Script-Hash (P2S)** address. This allows three participants from a group of five to sign and spend funds.
+
+For more information please see the dedicated [Sigma Protocols](sigma.md) section.
+
+---
+
 ## Schnorr Signatures
 
-Schnorr signatures form a core part of Ergo’s cryptographic framework, known for their simplicity, efficiency, and security. Compared to ECDSA, Schnorr signatures are better suited for complex cryptographic protocols and privacy-preserving transactions in blockchains.
+Schnorr signatures form a core part of Ergo’s cryptographic framework. Known for their simplicity, efficiency, and security, Schnorr signatures are used to prove that the signer possesses the private key corresponding to a public key used in a transaction.
 
 ### How Schnorr Signatures Work
 
-The implementation of Schnorr signatures in Ergo is distributed across both the **sigmastate-interpreter** and **sigma-rust** repositories.
+The Schnorr signature scheme is based on the hardness of the discrete logarithm problem and operates as follows:
 
-```rust
-// Key Generation (sigma-rust)
-let private_key = SecretKey::random();
-let public_key = PublicKey::from(&private_key);
-```
-
-#### Key Generation
-
-A user generates a private key \(x\) and computes the public key \(P = xG\), where \(G\) is the generator point on the elliptic curve (SecP256K1). This is implemented in [`secret_key.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-lib/src/wallet/secret_key.rs).
-
-#### Signing
-
-To sign a message \(m\), the user generates a random nonce \(k\), computes \(R = kG\), and generates the signature:
+- **Key Generation**: A user generates a private key \(x\) and computes the corresponding public key \(P = xG\), where \(G\) is the generator point on the elliptic curve SecP256K1.
+  
+- **Signing**: To sign a message \(m\), the user generates a random nonce \(k\), computes \(R = kG\), and generates the signature:
 
 $$
 e = H(R || P || m)
@@ -79,104 +118,60 @@ $$
 s = k + ex
 $$
 
-The signing logic is implemented in [`signing.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-lib/src/wallet/signing.rs) and [`DLogProtocol.scala`](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/sigmastate/crypto/DLogProtocol.scala).
-
-#### Verification
-
-To verify the signature, the verifier computes:
+- **Verification**: The verifier checks the signature by computing \(R' = sG - eP\) and verifying:
 
 $$
-R' = sG - eP
+e = H(R' || P || m)
 $$
 
-If \(e = H(R' || P || m)\), the signature is valid.
+Schnorr signatures are efficient and secure, and are a core primitive in Ergo. They are used in multi-signature wallets, privacy-preserving transactions, and as part of complex Sigma protocols.
 
-### Example
+For more information please see the dedicated [Schnorr](schnorr.md) section.
 
-Here is an example demonstrating Schnorr signature signing and verification using **sigma-rust**:
+---
 
-```rust
-let message = "sample message";
-let (sig, _) = sign(&private_key, message);
-let is_valid = verify(&public_key, &sig, message);
-assert!(is_valid);
-```
+## Diffie-Hellman Protocol
 
-### Use Cases of Schnorr Signatures
+The **Diffie-Hellman (DH)** protocol is a method of securely exchanging cryptographic keys over a public channel. In Ergo, the **Diffie-Hellman Tuple (DHT)** is used to prove that two logarithms are equal, without revealing the logarithms themselves. This is a critical part of privacy-preserving applications like **stealth addresses** and **mixers**.
 
-- **Multi-Signature Protocols**: Schnorr signatures support **MuSig** (multi-signature aggregation), enabling multiple participants to collaboratively sign a transaction. This is useful for multi-signature wallets and allows trustless coordination.
+### Diffie-Hellman Tuple (DHT)
+
+In a **Diffie-Hellman Tuple**, a prover demonstrates knowledge of a shared secret \(x\) such that:
+
+$$
+u = g^x \quad \text{and} \quad v = h^x
+$$
+
+The protocol follows a challenge-response model to prove this relationship without revealing the secret \(x\).
+
+### Use Cases
+
+- **Stealth Addresses**: Stealth addresses use Diffie-Hellman key exchange to generate unique one-time addresses for every transaction, ensuring the recipient’s privacy.
   
-- **Adaptor Signatures**: These are used for private swaps, allowing conditional transactions (e.g., atomic swaps between different cryptocurrencies) to be executed without revealing sensitive information. Ergo has demonstrated private swaps with Bitcoin Cash using this technique.
+- **Mixers**: In Ergo’s **ZeroJoin** mixer, the security is based on the **Decision Diffie-Hellman (DDH) assumption**, ensuring that transactions are private and fungible.
+
+Learn more about how **Diffie-Hellman Tuples** are implemented in [sigma-rust](https://github.com/ergoplatform/sigma-rust/pull/315).
+
+For more information please see the dedicated [Diffie](diffie.md) section.
 
 ---
-
-## Sigma Protocols
-
-Sigma protocols enable privacy-preserving proofs and cryptographic operations in Ergo. They allow a prover to convince a verifier that they possess knowledge of a secret without revealing the secret itself, making them ideal for privacy-focused smart contracts.
-
-### Components of Sigma Protocols
-
-1. **Commitment**: The prover sends a commitment that doesn't reveal the secret.
-2. **Challenge**: The verifier sends a challenge to the prover.
-3. **Response**: The prover responds, demonstrating their knowledge of the secret without revealing it.
-
-Sigma protocols are particularly well-suited for multi-party computations and **zero-knowledge proofs**. Learn more about [Sigma Protocols](sigma.md).
-
-### Example
-
-Here is an example of how Sigma protocols are used to create zero-knowledge proofs:
-
-```scala
-val prover = new SigmaProver(secretKey)
-val proof = prover.prove(challenge)
-```
-
-### Non-Interactive Sigma Protocols
-
-Sigma protocols in blockchains are made **non-interactive** using the **Fiat-Shamir transformation**, allowing their use in decentralized applications. This transformation replaces the interactive challenge with a deterministic process, making the proof verifiable without interaction.
-
-Sigma protocol implementations can be found in:
-
-- [`SigmaPropProver.scala`](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/org/ergoplatform/SigmaPropProver.scala) (Scala)
-- [`prover_result.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-lib/src/chain/transaction/input/prover_result.rs) (Rust)
-
-### Use Cases of Sigma Protocols
-
-- **Mixers and Fungibility**: Ergo’s **ZeroJoin** mixer uses ring signatures and Sigma protocols to preserve transaction fungibility. Learn more in [ZeroJoin](zerojoin.md).
-- **Stealth Addresses**: Sigma protocols power **stealth addresses**, allowing users to receive payments privately without exposing their public keys. See more about [Stealth Addresses](stealth-address.md).
-
----
-
-## ErgoTree and Signature Schemes
-
-**ErgoTree** is Ergo’s smart contract framework. It allows the creation of complex spending conditions using Sigma protocols and Schnorr signatures.
-
-### Signature Scheme Integration in ErgoTree
-
-ErgoTree scripts define conditions under which UTXOs (called "boxes") can be spent. These conditions often require complex cryptographic operations, such as multi-signature verification or Sigma proof evaluations.
-
-- **Complex Spending Conditions**: ErgoTree allows contracts to define sophisticated conditions, including multi-signature schemes, time-based locks, and cryptographic proofs (e.g., Sigma proofs). For more details, refer to [ErgoTree](ergo-tree.md).
-- **Ring and Threshold Signatures**: ErgoTree supports **ring signatures** for privacy-preserving transactions and **threshold signatures** for collaborative smart contracts.
-
-### Example
-
-```scala
-val tree = ErgoTree.multiSig(2, List(pubKey1, pubKey2, pubKey3))
-val spendingCondition = tree.evaluate(tx)
-```
-
 
 ## Security Considerations
 
-Ergo’s cryptographic schemes are grounded in the **hardness of the discrete logarithm problem** and other well-established cryptographic assumptions. Proper use of cryptography is critical to ensuring the security of smart contracts. Developers must carefully design their ErgoTree scripts to avoid vulnerabilities like weak randomness or improper validation checks.
+Ergo’s cryptographic schemes are grounded in the **hardness of the discrete logarithm problem** and other well-established cryptographic assumptions. Proper use of cryptography is critical to ensuring smart contract security. Developers should carefully design contracts to avoid vulnerabilities, such as weak randomness or improper validation checks.
 
-For testing and verifying the security of cryptographic schemes, Ergo has robust test coverage in the `sigmastate-interpreter`, such as in the [SigningSpecification](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/test/scala/sigmastate/crypto/SigningSpecification.scala).
+Ergo’s cryptographic schemes are extensively tested in the `sigmastate-interpreter`, such as in [SigningSpecification.scala](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/test/scala/sigmastate/crypto/SigningSpecification.scala).
+
+---
 
 ## Conclusion
 
-Ergo's cryptographic framework is built on strong foundations like Schnorr signatures, Sigma protocols, **Scrypto** primitives, and robust data structures like **AVL+ trees** and **Merkle trees**. These cryptographic tools enable flexible, secure, and privacy-preserving transactions, supporting decentralized applications that require advanced security and efficiency. The cryptographic primitives, Sigma protocols, and signature schemes are implemented across the `sigmastate-interpreter` and `sigma-rust` repositories, providing a powerful platform for developers.
+Ergo’s cryptographic framework, based on Sigma protocols, Schnorr signatures, and Diffie-Hellman key exchanges, provides robust tools for secure and privacy-preserving decentralized applications. With the flexibility to combine cryptographic proofs into complex contracts using threshold signatures and ring signatures, Ergo enables developers to create powerful privacy-preserving applications, all while maintaining strong security guarantees.
 
-For more information, visit the [sigmastate-interpreter repository](https://github.com/ScorexFoundation/sigmastate-interpreter), [sigma-rust repository](https://github.com/ergoplatform/sigma-rust), and [Scrypto](https://github.com/input-output-hk/scrypto).
+For more information, visit:
+- [sigmastate-interpreter repository](https://github.com/ScorexFoundation/sigmastate-interpreter)
+- [sigma-rust repository](https://github.com/ergoplatform/sigma-rust)
+- [Scrypto repository](https://github.com/input-output-hk/scrypto)
 
 
 <!--
