@@ -1,5 +1,6 @@
-Here's an improved and more comprehensive version of your Diffie-Hellman page. The revisions focus on clarity, technical depth, consistent formatting, and integration with Sigma protocols and other Ergo cryptographic concepts.
-
+---
+tags:
+  - Diffie
 ---
 
 # Diffie-Hellman (DH) Protocol in Ergo

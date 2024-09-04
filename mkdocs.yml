@@ -719,11 +719,11 @@ nav:
           - Verifying Schnorr Signatures: dev/scs/sigma/verifying.md
         - Diffie:
           - dev/scs/sigma/diffie.md
-          - ZeroJoin: dev/crypto/zerojoin.md
         - Ring Signatures:
           - 3-out-of-5 Threshold Signature: dev/scs/sigma/3-out-of-5.md
           - Distributed Signatures: node/sigs.md
         #- Signature Scheme Internals: sig-scheme.md
+        - ZeroJoin: dev/crypto/zerojoin.md
       - Data Structures:
         - dev/data-model/data-structures.md
         - Merkle Tree:
