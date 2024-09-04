@@ -147,7 +147,6 @@ The protocol follows a challenge-response model to prove this relationship witho
 ### Use Cases
 
 - **Stealth Addresses**: Stealth addresses use Diffie-Hellman key exchange to generate unique one-time addresses for every transaction, ensuring the recipient’s privacy.
-  
 - **Mixers**: In Ergo’s **ZeroJoin** mixer, the security is based on the **Decision Diffie-Hellman (DDH) assumption**, ensuring that transactions are private and fungible.
 
 Learn more about how **Diffie-Hellman Tuples** are implemented in [sigma-rust](https://github.com/ergoplatform/sigma-rust/pull/315).
@@ -169,6 +168,7 @@ Ergo’s cryptographic schemes are extensively tested in the `sigmastate-interpr
 Ergo’s cryptographic framework, based on Sigma protocols, Schnorr signatures, and Diffie-Hellman key exchanges, provides robust tools for secure and privacy-preserving decentralized applications. With the flexibility to combine cryptographic proofs into complex contracts using threshold signatures and ring signatures, Ergo enables developers to create powerful privacy-preserving applications, all while maintaining strong security guarantees.
 
 For more information, visit:
+
 - [sigmastate-interpreter repository](https://github.com/ScorexFoundation/sigmastate-interpreter)
 - [sigma-rust repository](https://github.com/ergoplatform/sigma-rust)
 - [Scrypto repository](https://github.com/input-output-hk/scrypto)
