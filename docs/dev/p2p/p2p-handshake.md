@@ -19,7 +19,8 @@ Peer features are properties that describe a peer. A peer can have multiple feat
 
 Before version 3.3.7, the reference client only supported the "mode feature" (which describes the operating regime of the peer). Since version 3.3.7, a new feature that describes network magic and a pseudorandom session ID has been added.
 
-**Example Implementation**:
+**Example Implementation**:  
+
 - In the [Ergonnection library](https://github.com/Satergo/Ergonnection/blob/master/src/main/java/com/satergo/ergonnection/records/Feature.java), the `Feature` class represents individual peer features with an `id` and `data`. The features are serialized and deserialized to be included in handshake messages, ensuring that they can be transmitted and interpreted correctly during the handshake.
 
 ## Handshake Format
@@ -46,7 +47,8 @@ The table below outlines the format of a handshake message:
 | (4)    | NiPoPoW suffix length                       | Suffix length for NiPoPoW bootstrapping                           |
 | 1-4    | How many blocks kept                        | Signed integer (ZigZag then VLQ encoded), if -1 then all blocks are stored |
 
-**Example Implementation**:
+**Example Implementation**:  
+
 - The [Peer class](https://github.com/Satergo/Ergonnection/blob/master/src/main/java/com/satergo/ergonnection/records/Peer.java) in the Ergonnection library represents a peer in the network, including features such as agent name, peer name, version, and a list of features. This class handles serialization and deserialization of peer data during the handshake process.
 
 ### For Session Peer Feature Introduced in 3.3.7:
@@ -64,12 +66,14 @@ The table below outlines the format of a handshake message:
 2. For IPv4 or IPv6 address bytes, "The result is in network byte order: the highest order byte of the address is in `getAddress()[0]`." Please check `Inet4Address.getAddress()` or `Inet6Address.getAddress()` in Java's JDK for details.
 3. For the reference client, the session ID is currently used only to avoid connections to self.
 
-**Example Implementation**:
+**Example Implementation**:  
+
 - The `Protocol` class in the [Ergonnection library](https://github.com/Satergo/Ergonnection/blob/master/src/main/java/com/satergo/ergonnection/protocol/Protocol.java) manages the deserialization of various protocol messages, including those that handle session features. This ensures that features such as network magic and session IDs are correctly processed during the handshake.
 
 ## Handshake Procedure
 
 A peer sends a handshake message, and another peer replies. If no handshake is received within the `handshakeTimeout`, the connection is dropped. The default value for `handshakeTimeout` is 30 seconds.
 
-**Example Implementation**:
+**Example Implementation**:  
+
 - In the [ErgoSocket class](https://github.com/Satergo/Ergonnection/blob/master/src/main/java/com/satergo/ergonnection/ErgoSocket.java), the handshake process is handled through methods like `sendHandshake()` and `acceptHandshake()`, which manage the serialization and deserialization of handshake data, including the peer's features and session information.

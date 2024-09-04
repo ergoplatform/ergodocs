@@ -37,7 +37,8 @@ It's recommended to focus on learning UTXO model concepts first. The courses at 
 In ErgoScript, fees are handled explicitly as part of the transaction building process. See the Token Sale Service contract example: 
 https://github.com/ergoplatform/ergoscript-by-example/blob/main/tokenSalesService.md
 
-Key aspects:
+Key aspects:  
+
 - Tx fee (`MinTxFee`) must be set 
 - Box outputs handle the distribution of payment and token amounts
 - Fee is paid from input boxes controlled by the dApp/contract

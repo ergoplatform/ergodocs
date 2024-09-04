@@ -187,7 +187,8 @@ Here's a simple breakdown of potential returns on investment (ROI) when ERG reac
 
 Tim Ur, one of the project's contributors, encourages active community engagement and collaboration within the Ergo ecosystem, highlighting the educational value and potential advantages that such initiatives can offer to the community. 
 
-For more information, check out the following resources:
+For more information, check out the following resources:  
+
 - [Hodlbox Website](https://hodlbox.xyz/)
 - [Project Demo](https://twitter.com/c8e4d2/status/1713597673763217766)
 - [Interview on YouTube](https://www.youtube.com/watch?v=U5-zIxg4M6k)

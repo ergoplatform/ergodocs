@@ -309,7 +309,8 @@ This is a convention for improved usability because most of the conditions relat
 
 Let's consider the output created by the arrow labelled with `buyerOut@0`. This label tells us that the output is at the index `0` in the `OUTPUTS` collection of the transaction and that in the diagram, we can refer to this box by the `buyerOut` name. Thus we can label both the box itself and the arrow to give the box a name.
 
-Do the conditions shown in the `buyerOut` box have the form `bid ? condition`, which means they should be verified _on-chain_ in order to spend the `bid` box. The conditions have the following meaning:
+Do the conditions shown in the `buyerOut` box have the form `bid ? condition`, which means they should be verified _on-chain_ in order to spend the `bid` box. The conditions have the following meaning:  
+
 - `tAmt: TID` requires the box to have `tAmt` amount of `TID` token
 - `R4 == bid.id`  requires R4 register in the box to be equal to the id of the `bid` box.
 - `script == buyer` requires the `buyerOut` box to have the script of the wallet where it is located on the diagram, i.e. `pk(buyer).`

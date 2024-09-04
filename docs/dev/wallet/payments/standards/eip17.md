@@ -35,7 +35,8 @@ In the beginning, the sole purpose of proxy contracts was to protect users from 
 
 The above attacks were possible because proxy contracts were not designed to preserve the integrity of the whole dApp infrastructure but only the user's funds.
 
-Generally, proxy contracts should be designed to:
+Generally, proxy contracts should be designed to:  
+
 - prevent dApp developers or any other attacker from taking advantage of user's funds in any manner
 - preserve the integrity of the dApp by preventing attacks like the ones explained in the above examples.
 
@@ -70,7 +71,8 @@ To achieve all of the above, the below contract structure is proposed as an exam
 ```
 The above contract is the proxy contract of minting operation in the [SigmaUSD dApp](https://sigmausd.io/#/). Anything started with `$` in the contract must be provided to it based on the user's request at the time of compilation.
 
-The contract has three main parts:
+The contract has three main parts:  
+
 - Ensuring proper usage of user's funds, i.e., user will receive what he is paying for in proper amount without anyone being able to cheat.
 - Ensuring the integrity of the dApp procedures.
 - Ensuring that user will be refunded in any case of failures.

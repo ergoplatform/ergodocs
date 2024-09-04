@@ -24,7 +24,8 @@ In our implementation, sidechains equipped with NiPoPoW verifiers can validate p
 
 ## Applications and Use Cases
 
-NiPoPoWs sidechains have a variety of applications, including:
+NiPoPoWs sidechains have a variety of applications, including:  
+
 - **Cross-Chain Transactions**: Enable secure and trustless transactions between different blockchains.
 - **Decentralized Finance (DeFi)**: Facilitate the seamless transfer of assets for use in DeFi applications across various blockchains.
 - **Scalability Solutions**: Act as a scaling solution by offloading transactions from a congested main chain to a faster, more efficient sidechain.

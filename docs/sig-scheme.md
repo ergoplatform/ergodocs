@@ -13,6 +13,7 @@ This document provides an in-depth look at the signature schemes used in the Erg
 In the Ergo blockchain, signature schemes are used to validate that a transaction was indeed created by the owner of the associated private key. This is crucial for preventing unauthorized spending of funds and ensuring the security of smart contracts. Ergo uses several cryptographic protocols to achieve this, including Schnorr signatures and Sigma protocols.
 
 The implementation of these cryptographic protocols is spread across two main repositories:
+
 - [`sigmastate-interpreter`](https://github.com/ScorexFoundation/sigmastate-interpreter): Focuses on Scala-based ErgoTree interpretation and verification.
 - [`sigma-rust`](https://github.com/ergoplatform/sigma-rust): Provides a Rust-based implementation of the cryptographic primitives, enabling WASM and other Rust-native applications.
 
@@ -21,6 +22,7 @@ The implementation of these cryptographic protocols is spread across two main re
 **Schnorr Signatures** are a fundamental part of Ergo’s cryptographic toolkit. They are known for their simplicity, efficiency, and security, offering several advantages over other signature schemes such as ECDSA (Elliptic Curve Digital Signature Algorithm).
 
 #### How Schnorr Signatures Work:
+
 - **Key Generation**: 
     - A user generates a private key \( x \) (a random number) and computes the corresponding public key \( P = xG \), where \( G \) is a generator point on the elliptic curve used by Ergo.
     - In the Rust implementation, key generation is handled within the [`secret_key.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-lib/src/wallet/secret_key.rs) file, where cryptographic key management and generation take place.
@@ -45,6 +47,7 @@ The implementation of these cryptographic protocols is spread across two main re
     - The verification logic is implemented in the same files: [`signing.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-lib/src/wallet/signing.rs) for Rust and [`DLogProtocol.scala`](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/sigmastate/crypto/DLogProtocol.scala) for Scala.
 
 #### Advantages of Schnorr Signatures:
+
 - **Security**: Schnorr signatures are provably secure under the assumption of the hardness of the discrete logarithm problem.
 - **Efficiency**: They produce smaller signatures and require less computational overhead than many other signature schemes.
 - **Simplicity**: The signing and verification processes are straightforward, making them easy to implement and verify.
@@ -55,11 +58,13 @@ The implementation of these cryptographic protocols is spread across two main re
 **Sigma Protocols** are a class of cryptographic protocols that allow a prover to convince a verifier that they know a value \( x \) such that a statement about \( x \) is true, without revealing \( x \) itself. Ergo heavily relies on Sigma protocols for its privacy-preserving features and complex smart contracts.
 
 #### Key Components of Sigma Protocols:
+
 - **Commitment**: The prover sends a commitment to the verifier without revealing the secret value.
 - **Challenge**: The verifier sends a random challenge to the prover.
 - **Response**: The prover responds in a way that proves the knowledge of the secret while maintaining its privacy.
 
 The Sigma protocol is implemented in both the `sigmastate-interpreter` and `sigma-rust` repositories:
+
 - In Scala, the Sigma protocol's cryptographic functions are handled by the [`SigmaPropProver`](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/org/ergoplatform/SigmaPropProver.scala) class, which provides proof creation and validation mechanisms.
 - In Rust, the proof generation and verification can be found in [`prover_result.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-lib/src/chain/transaction/input/prover_result.rs), which handles proof construction during transactions.
 
@@ -68,11 +73,13 @@ The Sigma protocol is implemented in both the `sigmastate-interpreter` and `sigm
 **ErgoTree** is the core of Ergo's smart contract framework. It is a versatile and expressive language that uses Sigma protocols and Schnorr signatures to create conditions for spending boxes (Ergo's version of UTXOs).
 
 #### Signature Scheme Integration in ErgoTree:
+
 - **Complex Spending Conditions**: ErgoTree allows users to define sophisticated spending conditions that can include multiple signatures, time-based locks, and other cryptographic conditions.
 - **Multi-Signature Support**: ErgoTree natively supports multi-signature schemes, allowing multiple parties to authorize a transaction.
 - **Script Validation**: During transaction validation, the ErgoTree interpreter evaluates the conditions defined in the script, ensuring that the signatures match the requirements before the transaction is considered valid.
 
 The Scala-based `sigmastate-interpreter` plays a crucial role in interpreting ErgoTree scripts:
+
 - The [`ErgoLikeInterpreter`](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/org/ergoplatform/ErgoLikeInterpreter.scala) file in `sigmastate-interpreter` provides the main ErgoTree validation logic, where both Schnorr and Sigma signatures are verified.
 - In Rust, the validation and interpretation of ErgoTrees are found in the [`contract.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-lib/src/chain/contract.rs) file, which handles contract conditions and their associated proofs.
 

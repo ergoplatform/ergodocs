@@ -54,7 +54,8 @@ Well, in accordance with Ergo's principles, the system:
 
 ## System Design
 
-Each reputation proof has a token used to reflect the amount of reputation that can be assigned. When creating a reputation proof, you can either:
+Each reputation proof has a token used to reflect the amount of reputation that can be assigned. When creating a reputation proof, you can either:  
+
 - Generate it from scratch with a new token.
 - Extract it from another reputation proof, so the amount of reputation will be extracted from the previous proof.
 

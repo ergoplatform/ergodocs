@@ -7,7 +7,8 @@ $$
 
 A **peer** is a pair consisting of `addr` (IPv4/6 address) and `port` (port number).
 
-A **peer management structure** is a tuple, (G, B, C), where:
+A **peer management structure** is a tuple, (G, B, C), where:  
+
 - G represents the set of *good peers*,
 - B stands for the set of *banned peers*,
 - C signifies the set of *connected peers*.

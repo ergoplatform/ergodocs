@@ -115,7 +115,8 @@ out.R6[Long].get == SELF.R6[Long].get &&          // ... and creation height
 )
 ```
 
-The transaction spending a box with the above script requires:
+The transaction spending a box with the above script requires:  
+
 - The sum of the LETS balance of inputs and outputs is preserved
 - There are two LETS inputs and two LETS outputs
 - The public keys (stored in R5) are preserved in the corresponding output

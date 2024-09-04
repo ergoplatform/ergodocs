@@ -9,7 +9,8 @@ tags:
 
 /// details | Beta
     {type: info, open: true}
-EXLE 2.0 is currently in private beta. Key developments include:
+EXLE 2.0 is currently in private beta. Key developments include:  
+
 - Peer-to-peer (P2P) lending: Completed
 - Crowdloans backend: Completed
 - Website redesign to integrate crowdloans feature: In progress

@@ -13,7 +13,8 @@ Decentralized auctioning of any kind of tokens (artwork, share tokens, etc.) is 
 
 
 ## Design
-This proposed contract allows any kind of tokens to be auctioned while supporting the following features:
+This proposed contract allows any kind of tokens to be auctioned while supporting the following features:  
+
 - Any token as the auction's currency alongside ERG
 - "Buy it now" which allows a buyer to instantly buy the auctioned token by paying the predefined amount in the auction's currency
 - Auction duration as timestamp which is much more precise than block height and is independent of the network difficulty

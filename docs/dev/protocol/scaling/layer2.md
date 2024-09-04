@@ -48,7 +48,8 @@ This approach not only boosts the security of the smaller chain but also enables
 
 NIPoPoWs could further improve the scalability of Layer 2 solutions like sidechains or state channels. By providing a robust method for these technologies to communicate more securely and efficiently, NIPoPoWs help to offload transactions from the main blockchain. This reduces congestion and increases transaction throughput, addressing one of the primary challenges facing blockchain scalability today.
 
-#### Applications in Layer 2 Technologies:
+#### Applications in Layer 2 Technologies:  
+
 - **Sidechains**: NIPoPoWs enable sidechains to operate more autonomously from the main chain while still maintaining a connection secured by proof-of-work. This is particularly useful for applications requiring faster processing times or handling specialized transactions.
 - **State Channels**: By securing state channels with NIPoPoWs, transactions can be processed off the main chain with assurances of their eventual consistency and integrity when reconciled on the main chain.
 

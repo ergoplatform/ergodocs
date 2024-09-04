@@ -153,7 +153,8 @@ class MerkleBatchProofSpec extends AnyFlatSpec with Matchers {
 - **BatchMerkleProof**: [`BatchMerkleProof.scala`](https://github.com/input-output-hk/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/merkle/BatchMerkleProof.scala)
 - **BatchMerkleProofSerializer**: [`BatchMerkleProofSerializer.scala`](https://github.com/input-output-hk/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/merkle/serialization/BatchMerkleProofSerializer.scala)
 
-### Explanation:
+### Explanation:  
+
 - **Merkle Tree Creation**: The test generates random leaf data and creates a `MerkleTree`. This ensures that the tree is correctly constructed and the root hash is generated.
 - **Batch Merkle Proof Generation**: The test creates a batch proof for selected elements (indices 0 and 2) of the Merkle Tree.
 - **Proof Verification**: The test verifies the validity of the generated batch proof against the Merkle root, ensuring the proof correctly represents the inclusion of those elements in the tree.

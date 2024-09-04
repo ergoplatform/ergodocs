@@ -1,129 +1,131 @@
 # Schnorr Signatures
 
-There are several use-cases where you might need to verify a Schnorr signature on-chain.
+The **Schnorr signature** scheme is a key cryptographic primitive in Ergo, allowing for efficient, simple, and secure signatures. Whether verifying a transaction or proving the ownership of a private key on-chain, Schnorr signatures play a central role. This page explains how to verify a Schnorr signature in **ErgoScript**, starting from basic signing and verification steps to advanced on-chain validation.
 
-This page describes how to do so in ErgoScript.
+## Overview
 
-## Initial Setup
+Ergo uses the **Secp256k1** elliptic curve (the same curve used in Bitcoin), denoted as **G**, for its Schnorr signature scheme. The Schnorr signature allows a user to prove knowledge of a private key without revealing the key itself.
 
-Ergo uses the same curve as Bitcoin (Secp256k1), which we call **G**. 
+### Key Setup:
+1. The **secret key** is an integer **x**.
+2. The corresponding **public key** is **Y = g^x**, where **g** is the generator of the elliptic curve group **G**.
 
-The curve also defines a default generator **g**.
+## Schnorr Signing Process
 
-1. Secret key is integer **x** 
-2. Public key is **Y = g<sup>x</sup>**, an element of **G**
+To sign a message **M** (the hash of the message), follow these steps:
 
-## Signing
+1. Generate a random integer **r** and compute **U = g^r**.
+2. Compute the challenge **c = Hash(U || M)**.
+3. Compute the response **s = r - cx**.
 
-Let the hash of the message to be signed be **M**. The signature is computed as follows:
+The signature is the pair **(c, s)**, which is sent to the verifier.
 
-1. Generate a random integer **r** and compute **U = g<sup>r</sup>**. 
-2. Compute the integer **c = Hash(U || M)** 
-3. Compute **s = r - cx**.
-4. Send the value **(c, s)** to the verifier as the "signature"
-
-Note that the signature is a **pair of integers**.
-
-## Verification
+## Schnorr Signature Verification
 
 ### Schnorr Identification
 
-To understand verification, first consider a variant called *Schnorr identification*.
+Before diving into signature verification, it's helpful to understand the Schnorr identification process, a variant of Schnorr signatures:
 
-In this, instead of **(c, s)**, the value **(U, s)** (a group element and an integer) is sent.
-
-The verifier computes **c = Hash(U || M)** and accepts if **g<sup>s</sup> = U / Y<sup>c</sup>**.
-
-This works because  **LHS = g<sup>s</sup> = g<sup>(r - cx)</sup> = g<sup>r</sup> / (g<sup>x</sup>)<sup>c</sup> = RHS**.  
-
+- Instead of sending **(c, s)**, the prover sends **(U, s)** (a group element and an integer).
+- The verifier computes **c = Hash(U || M)** and checks if:
+  \[
+  g^s = U / Y^c
+  \]
+  This works because:
+  \[
+  g^s = g^{r - cx} = g^r / (g^x)^c = U / Y^c
+  \]
+  
 ### Schnorr Signature Verification
 
-Given the signature **(c, s)**, we perform the "reverse" of the identification in some sense.
+For Schnorr signatures, the signature **(c, s)** is verified differently. The verifier computes **U = g^s \cdot Y^c** and checks if:
+  \[
+  c = Hash(U || M)
+  \]
+This process ensures that the signature is valid and was produced by the holder of the secret key corresponding to the public key **Y**.
 
-Recall that the verifier of the identification scheme computes **c** from **U** using **Hash** and then verifies some condition.
+---
 
-The verifier of the signature scheme instead computes **U** from **c** using the condition and then verifies **Hash**.
+## On-Chain Verification in ErgoScript
 
-In other words, the verifier first computes **U = g<sup>s</sup>  Y<sup>c</sup>** and accepts if **c = Hash(U || M)**.
+In ErgoScript, verifying a Schnorr signature involves reconstructing **U** on-chain and checking the challenge.
 
-## Verification in ErgoScript
-
-We use the following setup in our example: 
-
-1. The public key **Y** is provided as a **GroupElement** in R4. 
-2. The message **M** is provided as a **[Coll](../../sigma/lang-spec/#collt)[Byte]** in R5.
-3. The value **c** of the signature is provided as a **Coll[Byte]** (for convenience) in context variable 0.
-4. The value **s** of the signature is provided as a **[BigInt](../../sigma/lang-spec/#data-types)** in context variable 1.
-5. The hash function is [Sha256](../../global-functions/#sha256). 
-
-Which looks like this in ErgoScript
+### ErgoScript Example:
 
 ```scala
 { 
-  // (Checking Schnorr signature in a script)
-  
   // Getting the generator of the elliptic curve group 
   val g: GroupElement = groupGenerator
 
-  // Getting the public key for a signature
+  // Getting the public key Y from R4
   val Y = SELF.R4[GroupElement].get
 
-  // Getting the message to be signed
+  // Getting the message M from R5
   val M = SELF.R5[Coll[Byte]].get
 
-  // Retrieving the c value of the signature (c, s)
-  val cBytes = getVar[Coll[Byte]](0).get
+  // Retrieving the c value (challenge) from context variable 0
+  val cBytes = getVar .get
   val c = byteArrayToBigInt(cBytes)
-  
-  // Retrieving the s value of the signature (c, s)
-  val s = getVar[BigInt](1).get
+
+  // Retrieving the s value (response) from context variable 1
+  val s = getVar .get
   
   // Calculating U = g^s * Y^c
   val U = g.exp(s).multiply(Y.exp(c)).getEncoded // as a byte array
   
-  // Checking the validity of the Schnorr signature
+  // Checking if the Schnorr signature is valid
   sigmaProp(cBytes == sha256(U ++ M))
 }
-
 ```
 
-The complete process of signature generation off-chain and verification on-chain is explained in [this test](https://github.com/ergoplatform/ergo-jde/blob/main/kiosk/src/test/scala/kiosk/schnorr/SchnorrSpec.scala).
+### Script Explanation:
 
-## Off-chain code
+- The generator of the elliptic curve is retrieved using **groupGenerator**.
+- The public key **Y** is stored in the register **R4** of the transaction box.
+- The message **M** (hash of the original message) is stored in register **R5**.
+- The challenge **c** and response **s** (signature components) are retrieved from context variables.
+- The script verifies the Schnorr signature by checking that the reconstructed **U** matches the hash used to generate **c**.
 
-The problem with verifying signatures on-chain is that there is only 256-bits big integer data type. 
+### Reference Test:
+The complete off-chain and on-chain interaction, including signature generation and verification, can be seen in [this test case](https://github.com/ergoplatform/ergo-jde/blob/main/kiosk/src/test/scala/kiosk/schnorr/SchnorrSpec.scala).
 
-Thus better to reduce number of bigints used by using simpler textbook version of Schnorr validation (message details missed):
+---
 
+## Advanced Schnorr Validation Off-Chain
 
-```
+### Efficient Off-Chain Code:
+In off-chain code, you can reduce complexity by using a simpler form of Schnorr validation. The problem arises from the fact that ErgoScript only supports 256-bit integers, so it's crucial to ensure that the signature integers fit within this constraint.
+
+```scala
 {
     val message = ...
-    // Computing challenge
-    val e: Coll[Byte] = blake2b256(message) // weak Fiat-Shamir
-    val eInt = byteArrayToBigInt(e) // challenge as big integer
+    // Compute challenge
+    val e: Coll[Byte] = blake2b256(message)
+    val eInt = byteArrayToBigInt(e) // Challenge as big integer
           
-     // a of signature in (a, z)
-     val a = getVar[GroupElement](1).get
-     val aBytes = a.getEncoded
+    // Retrieve a of signature (a, z)
+    val a = getVar .get
+    val aBytes = a.getEncoded
 
-     // z of signature in (a, z)
-     val zBytes = getVar[Coll[Byte]](2).get
-     val z = byteArrayToBigInt(zBytes)
+    // Retrieve z of signature (a, z)
+    val zBytes = getVar .get
+    val z = byteArrayToBigInt(zBytes)
 
-     // Signature is valid if g^z = a * x^e
-     val properSignature = g.exp(z) == a.multiply(holder.exp(eInt))
+    // Verify signature by checking if g^z = a * Y^e
+    val properSignature = g.exp(z) == a.multiply(holder.exp(eInt))
     
-     sigmaProp(properSignature)
+    sigmaProp(properSignature)
 }
 ```
- 
-and then in offchain code we need to be sure that `z` big integer fits into 255 bits. The following code is simply iterating over signatures while one which can be provided used on the blockchain 
 
-```
+### Off-Chain Signature Generation:
+
+To ensure **z** (part of the signature) fits within 255 bits, the following code iterates over possible random values until a valid **z** is found:
+
+```scala
   def randBigInt: BigInt = {
     val random = new SecureRandom()
-    val values = new Array[Byte](32)
+    val values = new Array 
     random.nextBytes(values)
     BigInt(values).mod(SecP256K1.q)
   }
@@ -138,17 +140,37 @@ and then in offchain code we need to be sure that `z` big integer fits into 255 
     if(z.bitLength <= 255) {
       (a, z)
     } else {
-      sign(msg,secretKey)
+      sign(msg, secretKey)
     }
   }
 ```
 
+For further examples of constructing off-chain transactions and verifying them on-chain, refer to the [ChainCash repository](https://github.com/kushti/chaincash/blob/master/src/test/scala/kiosk/ChainCashSpec.scala).
 
-Examples on building transactions can be found in ChainCash repository, e.g. this test  https://github.com/kushti/chaincash/blob/master/src/test/scala/kiosk/ChainCashSpec.scala
+---
 
+## Considerations and Limitations
 
-/// admonition | Disclaimer
-    type: warning
+- **Weak Fiat-Shamir Transformation**: In this setup, the Schnorr scheme uses a weak Fiat-Shamir transformation. This is acceptable for many use cases because the public key remains fixed. However, for certain advanced applications, it may be necessary to apply a stronger transformation.
+  
+---
 
-Please note that Schnorr here is using weak Fiat-Shamir transformation, but that should not be a problem as public key is fixed.
-///
+## Conclusion
+
+Schnorr signatures in Ergo provide a powerful, efficient, and flexible way to handle cryptographic authentication both on-chain and off-chain. Whether it's a simple transaction signature or a complex proof involving multi-signatures or privacy-preserving mechanisms, ErgoScript’s built-in support for Schnorr signatures makes it easy to implement.
+
+For more details, explore:
+
+- The [SchnorrSpec test case](https://github.com/ergoplatform/ergo-jde/blob/main/kiosk/src/test/scala/kiosk/schnorr/SchnorrSpec.scala), which demonstrates both on-chain verification of Schnorr signatures and off-chain signature generation in ErgoScript.
+- The [ChainCash repository](https://github.com/kushti/chaincash/blob/master/src/test/scala/kiosk/ChainCashSpec.scala) for further examples of Schnorr-based signature transactions and how to integrate them in more complex use cases.
+
+By understanding and leveraging Schnorr signatures in Ergo, you can implement secure, efficient, and scalable cryptographic proofs for a variety of applications, ranging from simple transactions to privacy-preserving protocols like atomic swaps, ring signatures, and threshold signatures.
+
+---
+
+## Resources
+
+1. **Schnorr Signature Paper**: [MuSig: A New Multi-Signature Standard](https://eprint.iacr.org/2018/068) – A foundational paper on Schnorr multi-signatures.
+2. **Adaptor Signatures**: [Adaptor Signatures for Cross-Chain Protocols](https://eprint.iacr.org/2018/123.pdf) – A deep dive into the use of Schnorr signatures for atomic swaps and privacy-preserving transactions.
+3. **Elliptic Curve Cryptography**: [SecP256K1 Curve Information](https://en.bitcoin.it/wiki/Secp256k1) – Detailed information on the elliptic curve used in both Bitcoin and Ergo.
+4. **SigmaBoolean Documentation**: [SigmaBoolean in Ergo](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/sigma-dsl.md) – Documentation on how to use SigmaBoolean and generalized Schnorr proofs in Ergo smart contracts.

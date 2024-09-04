@@ -3,77 +3,117 @@ tags:
   - Sigma Protocols
 ---
 
-
 # Sigma Protocols
-
-
 
 ## Introduction
 
-[ErgoScript](ergoscript.md) incorporates proving and verifying as first-class primitives, giving developers access to a subclass of cryptographic proof systems known as non-interactive **Σ-protocols** (pronounced “sigma-protocols”). A script protecting a transaction output can contain statements (**Σ-statements**) that need to be proven (by producing **Σ-proofs**) to spend the output.
+**Sigma protocols** (Σ-protocols) are a class of cryptographic proof systems that play a central role in the Ergo blockchain. These protocols allow a prover to convince a verifier that they know a value, such as a secret key, without revealing the value itself. Σ-protocols are the foundation for many privacy-preserving and multi-signature functionalities in Ergo.
 
-Conceptually, [Σ-proofs](https://arxiv.org/abs/1801.00687) are generalizations  of digital signatures. The Schnorr signature scheme  (whose more recent version is popularly known as [EdDSA](https://ed25519.cr.yp.to/)) is the canonical example of a Σ-proof: it proves that the recipient knows the discrete logarithm of the public key (the proof is attached to a specific message, such as a particular transaction, and thus becomes a signature on the message; all Σ-proofs described here are attached to specific messages). 
+In **ErgoScript**, proving and verifying cryptographic statements are first-class primitives, giving developers access to powerful Σ-protocols. Scripts protecting transaction outputs can contain **Σ-statements**, which must be proven (by generating **Σ-proofs**) before the outputs can be spent.
 
+Conceptually, Σ-proofs are generalizations of digital signatures. The **Schnorr signature scheme** is the canonical example of a Σ-proof: it allows the recipient to prove knowledge of a secret (discrete logarithm) without revealing it. Σ-proofs in Ergo extend this concept, allowing the creation of more complex cryptographic protocols like **multi-signature**, **ring signatures**, and **threshold signatures**.
 
-**ErgoScript provides two elementary Σ-protocols over a group of prime order (such as an elliptic curve)**
+### Elementary Σ-Protocols in ErgoScript
 
-- A proof of knowledge of discrete logarithm with respect to a fixed group generator: (Also known as a **Schnorr signature**).
-- A proof that of equality of discrete logarithms (i.e., a proof of a **Diffie-Hellman** tuple)
+ErgoScript offers two elementary Σ-protocols over a group of prime order, such as an elliptic curve group:
 
-Σ-protocols exist for proving a variety of properties and, importantly for ErgoScript, elementary Σ-protocols can be combined into more sophisticated ones using the techniques described in [*'Proofs of Partial Knowledge and Simplified Design of Witness Hiding Protocols'*](http://www.win.tue.nl/~berry/papers/crypto94.pdf).
+1. **Proof of Knowledge of Discrete Logarithm (Schnorr Signature)**: This protocol proves knowledge of the discrete logarithm of a given public key with respect to a fixed generator. Essentially, this is the Schnorr signature scheme.
+2. **Proof of Equality of Discrete Logarithms (Diffie-Hellman Tuple)**: This protocol proves that two values share the same discrete logarithm across two different generators.
 
-For an introduction to Σ-protocols, we refer the reader to the paper [*'On Σ-protocols'*](http://www.cs.au.dk/~ivan/Sigma.pdf).
+These basic protocols can be composed to create more advanced proofs using logical connectives like **AND**, **OR**, and **THRESHOLD**. This composability is what enables the creation of sophisticated smart contracts and multi-signature schemes.
 
-ErgoScript also provides the ability to build more sophisticated Σ-protocols by using connectives **AND**, **OR**, and THRESHOLD (also known as **k-out-of-n**). Crucially, the proof for an OR and a THRESHOLD connective does not reveal which of the relevant values the prover knows.
+For a detailed introduction to Σ-protocols, refer to the paper [On Σ-protocols](http://www.cs.au.dk/~ivan/Sigma.pdf).
 
+---
 
-## Composability
+## Composability of Σ-Protocols
 
-Sigma Protocols are the foundation of Ergo’s smart contracts, one of the great things about them is that they are composable, using simple AND/OR logic. 
+A powerful feature of Σ-protocols in Ergo is their **composability**. You can create logical combinations of cryptographic statements using basic AND/OR logic.
 
-So you can ask for a signature with the following statement: 
+Examples include:
 
-> ‘Prove to me knowledge of either this secret OR that secret’ (this is a one-of-two ring signature). 
+- **Ring Signatures**: A ring signature is a proof of knowledge of **one** of multiple secrets. For example:
+  > Prove knowledge of either secret A or secret B.
 
-Or you can ask, 
+- **Threshold Signatures**: A threshold signature is a proof that a certain number of secrets are known. For example:
+  > Prove knowledge of at least two of three secrets.
 
-> ‘Prove to me knowledge of any two of these three secrets’ (a two-of-three ring signature).
+These constructions allow for flexible and privacy-preserving proofs. The **THRESHOLD** construct (also known as **k-out-of-n**) is particularly useful for multi-party agreements, ensuring that a subset of participants can authorize a transaction without requiring everyone’s involvement.
 
+#### Example: 3-out-of-5 Threshold Signature
 
-## Use Cases
+```scala
+val ringScript = s"""
+{
+  atLeast(
+    3, 
+    Coll(
+      PK("9f8ZQt1Sue6W5ACdMSPRzsHj3jjiZkbYy3CEtB4BisxEyk4RsNk"), 
+      PK("9hFWPyhCJcw4KQyCGu4yAGfC1ieRAKyFg24FKjLJK2uDgA873uq"), 
+      PK("9fdVP2jca1e5nCTT6q9ijZLssGj6v4juY8gEAxUhp7YTuSsLspS"), 
+      PK("9gAKeRu1W4Dh6adWXnnYmfqjCTnxnSMtym2LPPMPErCkusCd6F3"),
+      PK("9gmNsqrqdSppLUBqg2UzREmmivgqh1r3jmNcLAc53hk3YCvAGWE")
+    )
+  )
+}
+"""
+```
 
-When combined with a blockchain, these composable proofs enable some very powerful use cases and enable us to implement sophisticated tasks that would otherwise be impossible, risky, or expensive on other platforms. 
+This contract is an example of a **3-out-of-5** threshold signature scheme. It can be compiled to a Pay-to-Script (P2S) address, where any three of the five public keys can authorize a transaction.
 
-Let's say you want to create a ring spending contract, where either of us can make a transaction from the same address, but we don't want anyone else to know which one of us is spending the funds. That's not possible with Bitcoin, and while Ethereum can, it would be expensive and complicated – especially with a ring size of 10 or 20 members, required for robust privacy.
+---
 
-The logic for proofs can also include conditions based on blockchain state.  For example, ‘If the deadline block height has been reached, Alice can provide knowledge of a secret key for a refund. OR a ring signature from Alice and Bob is required to spend coins.’ Or ‘If this account holds a minimum of 100 ERG, Alice OR Bob can remove funds above that amount.’
+## Use Cases of Σ-Protocols
 
+### 1. **Multi-Signature Wallets**
+Multi-signature wallets are a natural use case for Σ-protocols, where multiple parties are required to authorize a transaction. Σ-protocols allow you to set up flexible conditions such as requiring two out of three signatures, or even more complex schemes involving multiple participants.
 
-With Ergo, this kind of application can be created quickly, thanks to native Sigma protocols, enabling trustless scripts that can be used to access mixers or other functionality without any third parties required and fully self-sovereign application-level privacy.
+### 2. **Ring Signatures for Privacy**
+Ring signatures provide privacy by allowing a user to sign a transaction on behalf of a group without revealing which group member signed it. This is particularly useful for creating anonymous transactions and decentralized mixers, such as **ErgoMixer**. The privacy of ring signatures makes them ideal for applications where anonymity is crucial, such as anonymous donations or private payments.
 
+### 3. **Threshold Signatures**
+Threshold signatures are critical for decentralized control. For example, a corporate wallet could be protected by a 3-out-of-5 signature scheme, ensuring that no single party can unilaterally control the funds.
 
+### 4. **Time-Locked Conditions**
+Σ-protocols can be combined with time-locked conditions. For instance, you can construct a contract that allows a transaction to be spent if either a ring signature is provided by a set of participants **before** a certain block height, or the funds can be refunded by a single party **after** the block height has passed.
 
+### 5. **Decentralized Mixers**
+**ErgoMixer** is an advanced, non-custodial token mixer based on Σ-protocols. It leverages ring signatures and zero-knowledge proofs to provide enhanced privacy while ensuring that no third party is needed to manage or approve the mixing process. SigmaJoin, an off-chain implementation of ErgoMixer, further extends the concept of trustless and decentralized privacy mechanisms.
 
+---
 
-## Resources
+## Prover and Verifier Workflow
 
-## Videos
+In Ergo, transaction processing using Σ-protocols involves two main actors: the **Prover** and the **Verifier**.
 
-- [Ergo: A Platform for Cryptographic Applications | Kushti | Ergo Summit 2022](https://www.youtube.com/watch?v=h6g5WahEUSk)
+1. **Prover**:
+    - The Prover uses the ErgoTree interpreter to reduce a high-level spending condition into a **SigmaBoolean** (the cryptographic proposition that needs to be proven). The SigmaBoolean is then converted into a cryptographic proof using the [Fiat-Shamir transformation](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/sigma-dsl.md), ensuring that the transaction can only be authorized by parties who possess the necessary secrets (such as private keys).
+
+2. **Verifier**:
+    - The Verifier also uses the ErgoTree interpreter to reduce the spending condition into a SigmaBoolean. It then checks the cryptographic proof against this proposition, ensuring that the transaction is valid and all required conditions are met.
+
+---
+
+## Fiat-Shamir Transformation
+
+The **Fiat-Shamir transformation** is a cryptographic technique that makes interactive proof systems non-interactive, suitable for use in blockchain environments. This is crucial for Sigma protocols, as it allows Σ-proofs to be created and verified without requiring real-time interaction between the prover and the verifier.
+
+In Ergo, Σ-protocols rely on the Fiat-Shamir transformation to generate challenges (hash values) from the commitments and messages involved in the proof. This ensures that the proofs are non-interactive and can be verified deterministically on-chain.
+
+---
+
+## Applications and Resources
 
 ### Applications
 
-- [ErgoMixer](/uses/mixer) is a [state of the art](https://ergonaut.space/screenshot_2021-05-15_at_22.26.39.png) (and worlds first) non-interactive and non-custodial token mixer. 
-- Sigmajoin is a composable off chain implementation of ErgoMixer. [Documentation](https://github.com/ergoplatform/ergo-jde/blob/main/kiosk/src/test/scala/kiosk/mixer/doc/main.pdf) Original forum posts for [Outsourceable mix](https://www.ergoforum.org/t/yet-another-mixing-protocol/3359/2?u=scalahub) & [Stealth transfer](https://www.ergoforum.org/t/yet-another-mixing-protocol/3359/3?u=scalahub)
+- **ErgoMixer**: A state-of-the-art, non-custodial token mixer using Σ-protocols for privacy and anonymity.
+- **SigmaJoin**: An off-chain implementation of ErgoMixer for decentralized privacy-preserving transactions.
+- **Ergo Threshold Signature Contracts**: Use Σ-protocols to create custom multi-signature wallets and contracts.
 
 ### DarkFund0
 
-- [DarkFund0 - ZK Fund for privacy applications](https://www.ergoforum.org/t/darkfund0-zk-fund-for-privacy-applications/398) sponsors new developments in regards to privacy and private DeFi. 4000 ERG up for grabs!
+- **DarkFund0**: A ZK fund for privacy applications, sponsoring developments in privacy-focused decentralized finance (DeFi) on Ergo.
 
-### Articles
-
-- [Ergo utilises the eUTXO model for enhanced privacy & scalability options while also employing expressive smart contracts for Defi applications.](https://ergoplatform.org/en/blog/2021-08-17-ergo-advancing-on-bitcoin/)
-  
 ### Tutorials
 
 - [Verifying Schnorr Signatures in ErgoScript](https://www.ergoforum.org/t/verifying-schnorr-signatures-in-ergoscript/3407)
@@ -83,3 +123,12 @@ With Ergo, this kind of application can be created quickly, thanks to native Sig
 
 - [Sigma Protocols](https://crypto.sjtu.edu.cn/~yandi/2018%20BIU%20winter%20school/Part%203-Techniques%20for%20Efficient%20ZK%20(cont.)/WS-19-11-sigma-protocols-winter-school-2019-1.pdf)
 - [On Σ-protocols](https://cs.au.dk/~ivan/Sigma.pdf)
+
+---
+
+## Conclusion
+
+Sigma protocols form the backbone of Ergo’s smart contracts and cryptographic proofs, enabling flexible and privacy-preserving transactions. Whether it's for simple multi-signature wallets, complex threshold signatures, or advanced privacy-preserving ring signatures, Σ-protocols provide the necessary cryptographic tools for building secure and decentralized applications on the Ergo blockchain.
+
+With their composability and integration into ErgoScript, Σ-protocols make Ergo a versatile platform for privacy-focused cryptographic applications.
+

@@ -7,7 +7,8 @@ The transaction assembler service allows you to bypass the node requirements for
 ### The Problem
 
 Currently, with libraries like ergo-appkit, ergo-lib (aka sigma-rust), and ergo-ts, development on Ergo has become a lot more convenient and is becoming easier with further developments of ergo-lib.
-However, there are some big barriers for dApps to be extensively used by ordinary users. One of the main ones is that users can't use their assets to participate in dApps because current wallets don't support some key features needed by dApps like:
+However, there are some big barriers for dApps to be extensively used by ordinary users. One of the main ones is that users can't use their assets to participate in dApps because current wallets don't support some key features needed by dApps like:  
+
 - specifying input boxes
 - p2s protected boxes in inputs
 - specifying output registers
@@ -81,7 +82,8 @@ With some improvements on the node's side, the service can be very fast and effe
 Last but not least, the service will, of course, provide some other APIs for dApps to see the result of their registered requests.
 
 ### Trusting Issues
-How dApps and users should trust such a service is still a big problem. Several solutions:
+How dApps and users should trust such a service is still a big problem. Several solutions:  
+
 - With the service being open-sourced and maybe being provided by a trusted party
 - dApps can run the service for themselves, resolving the trust issue for at least themselves
 - Using well-designed p2s addresses to prevent the service from stealing

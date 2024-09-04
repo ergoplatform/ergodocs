@@ -103,7 +103,8 @@ Specification: Adding Boxes Externally
 --------------------------------------
 
 Sometimes it is simpler for an external application to find relevant boxes itself without using the
-wallet scanner. For that we have the following endpoint:
+wallet scanner. For that we have the following endpoint:  
+
 - `/scan/addBox`
 
 
