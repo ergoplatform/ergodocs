@@ -1,3 +1,7 @@
+---
+tags:
+  - Compiler
+---
 # ErgoScript Compiler Phases
 
 This document provides an overview of the key phases in the ErgoScript compiler pipeline, including specific implementations in the sigma-rust and sigmastate-interpreter projects. The ErgoScript compiler takes high-level ErgoScript code and translates it into an intermediate form that can be evaluated by the ErgoTree interpreter or serialized for execution in the Ergo blockchain.

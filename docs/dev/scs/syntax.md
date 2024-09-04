@@ -1,3 +1,7 @@
+---
+tags:
+  - Syntax
+---
 # ErgoScript Syntax
 
 ErgoScript is a strongly typed language designed specifically for the Ergo blockchain, enabling the creation of secure and efficient smart contracts. This guide provides an introduction to ErgoScript's syntax, its integration with Ergo's UTXO model, and essential concepts that will help you write robust contracts on the Ergo platform.

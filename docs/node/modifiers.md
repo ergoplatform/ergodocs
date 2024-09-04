@@ -1,3 +1,8 @@
+---
+tags:
+  - Modifiers
+  - Blocks
+---
 # Ergo Modifiers
 
 In Ergo's P2P protocol, blocks and transactions are called "modifiers". Modifiers are transmitted between nodes as part of the network synchronization process. The Modifier Exchange process encompasses the protocols and systems in place to exchange this information efficiently and securely across the network.

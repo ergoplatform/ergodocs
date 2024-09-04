@@ -64,7 +64,7 @@ Records are structured data types used in the P2P protocol. They include Peer, F
 | VLQ unsigned short | Length of bytes |
 | byte\[length]      | Bytes           |
 
-For a deeper understanding of how records are serialized, check out the [Ergo Serialization Documentation](https://github.com/ergoplatform/ergo/blob/master/src/main/scala/org/ergoplatform/serialization/ErgoSerializer.scala).
+For a deeper understanding of how records are serialized, check out the [Ergo Serialization Documentation](https://github.com/ergoplatform/ergo/blob/master/ergo-core/src/main/scala/org/ergoplatform/serialization/ErgoSerializer.scala).
 
 ## Messages
 
@@ -131,7 +131,7 @@ It can be sent unsolicited to announce new transactions or blocks, or it can be 
 | VLQ unsigned int           | Count of elements         |
 | byte\[32\]\[elementCount\] | Elements (ID byte arrays) |
 
-For an example of how INV messages are handled, see [InvSpec.scala](https://github.com/ergoplatform/ergo/blob/master/src/main/scala/org/ergoplatform/network/message/InvSpec.scala).
+For an example of how INV messages are handled, see [InvSpec.scala](https://github.com/ergoplatform/ergo/blob/master/ergo-core/src/main/scala/org/ergoplatform/network/message/InvSpec.scala).
 
 ### Request Modifier
 

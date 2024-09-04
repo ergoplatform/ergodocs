@@ -62,6 +62,7 @@ extra:
 
 plugins:
   - search
+
   - render_swagger:
       allow_arbitrary_locations: true
   - neoteroi.mkdocsoad
@@ -113,11 +114,7 @@ markdown_extensions:
 nav:
   - Introduction:
     - Getting Started: index.md
-    - Why Ergo:
-      - dev/protocol/why.md
-      - FAQ: faq.md
-      - Common Misconceptions: fud-faq.md
-      - A CBDC For All: uses/cbdc.md
+    - Why Ergo: dev/protocol/why.md
     - Key Features: 
       - dev/protocol/index.md
       - Protocol: dev/protocol/index.md
@@ -177,6 +174,9 @@ nav:
         - The Howey Test: security.md
         - Privacy Guide: doc/privacy-guide.md
         - Glossary: glossary.md
+        - FAQ: faq.md
+        - Common Misconceptions: fud-faq.md
+        - A CBDC For All: uses/cbdc.md
 
   #
   # Get Involved
@@ -426,16 +426,14 @@ nav:
           - dev/protocol/tx/composing.md
           - Sending A Chained Transaction: dev/anatomy/transactions/chained.md
           - Interacting with an Ergo Wallet: 
-            - dev/anatomy/transactions/payments.md
-            - Manually: 
-              - Format: dev/protocol/tx/format.md
-              - Merkle Tree: dev/protocol/tx/tx-merkle.md
-              - Signing: dev/protocol/tx/signing.md
-              - Signing Backend: tutorials/sign-tx.md
-              - Validation: dev/protocol/tx/validation.md
-              - Data Inputs: dev/protocol/tx/read-only-inputs.md
-              - Fees: dev/protocol/tx/min-fee.md
-              - Unified Transactions: dev/protocol/tx/unified.md
+            - Format: dev/protocol/tx/format.md
+            - Merkle Tree: dev/protocol/tx/tx-merkle.md
+            - Signing: dev/protocol/tx/signing.md
+            - Signing Backend: tutorials/sign-tx.md
+            - Validation: dev/protocol/tx/validation.md
+            - Data Inputs: dev/protocol/tx/read-only-inputs.md
+            - Fees: dev/protocol/tx/min-fee.md
+            - Unified Transactions: dev/protocol/tx/unified.md
         - Resources: 
           - Standards:
             - Babel Fees: dev/protocol/tx/babel-fees.md
@@ -445,6 +443,7 @@ nav:
             - Just-In-Time Costing: node/jitc.md
           - ErgoTool: dev/stack/ergotool.md
           - Model Transaction: dev/protocol/tx/model-tx.md
+          - Payments: dev/anatomy/transactions/payments.md
 
       - Block:
         - dev/data-model/block.md
@@ -631,49 +630,12 @@ nav:
         - SigmaJS: dev/lib/sigmajs.md
    
       #- Bookmarks: dev/start/resources.md
-    - Cryptographic:
-            - Privacy:
-              - crypto.md
-              - Sigma Protocols:
-                - dev/scs/sigma.md
-                - Schnorr:
-                  - dev/scs/sigma/schnorr.md
-                  - Verifying Schnorr Signatures: dev/scs/sigma/verifying.md
-                - Diffie:
-                  - dev/scs/sigma/diffie.md
-                  - ZeroJoin: dev/crypto/zerojoin.md
-              - Ring Signatures:
-                - 3-out-of-5 Threshold Signature: dev/scs/sigma/3-out-of-5.md
-                - Distributed Signatures: node/sigs.md
-              - Signature Scheme Internals: sig-scheme.md
-            - Data Structures:
-              - dev/data-model/data-structures.md
-              - Merkle Tree:
-                - dev/data-model/structures/merkle/merkle-tree.md
-                - Format: dev/data-model/structures/merkle/merkle-format.md
-                - Validation: dev/data-model/structures/merkle/merkle-validation.md
-                - Implementations:
-                  - Extension Block Merkle: dev/data-model/structures/merkle/merkle-extension.md
-                  - Transaction Merkle Trees: dev/protocol/tx/tx-merkle.md
-                  - Merkle Batch Proofs:
-                    - dev/data-model/structures/merkle/merkle-batch-proof.md
-                    - Implementation: dev/data-model/structures/merkle/merkle-batch-impl.md
-                    - Testing: dev/data-model/structures/merkle/merkle-batch-testing.md
-                  - Lightweight Client Proofs: dev/data-model/structures/merkle/merkle-light-proof.md
-              - AVL Trees:
-                - dev/protocol/avl.md
-                - Plasma: dev/lib/plasma.md
-              - Proof of Proof-of-Work:
-                - dev/data-model/structures/popow.md
-                - Interlink Vectors: dev/data-model/structures/interlink-vectors.md
-
-
     - ErgoScript: 
         - dev/scs/ergoscript.md
-        #- Quick Primer: dev/scs/ergoscript-primer.md
           
         - Sigma Language:
           - dev/scs/sigma-lang.md
+          - Core Concepts: dev/scs/ergoscript/ergoscript-key-concepts.md
           - Simple Syntax: dev/scs/syntax.md
           - Language Description: dev/scs/sigma/lang-spec.md
           - Sigma Propositions: dev/scs/sigma/sigma-prop.md
@@ -682,7 +644,17 @@ nav:
           - Accessing boxes and registers: dev/scs/boxes-and-registers.md
           - Global Functions: dev/scs/global-functions.md 
           - Language Operations: dev/scs/sigma/lang-ops.md
-          - Examples: 
+          - Interacting with an Ergo Wallet:
+              #- dev/anatomy/transactions/payments.md
+              - Format: dev/protocol/tx/format.md
+              - Merkle Tree: dev/protocol/tx/tx-merkle.md
+              - Signing: dev/protocol/tx/signing.md
+              - Signing Backend: tutorials/sign-tx.md
+              - Validation: dev/protocol/tx/validation.md
+              - Data Inputs: dev/protocol/tx/read-only-inputs.md
+              - Fees: dev/protocol/tx/min-fee.md
+              - Unified Transactions: dev/protocol/tx/unified.md
+          - Examples:
             - Public Contracts: dev/scs/contracts.md
             - Anyone Can Spend: dev/scs/ergoscript/anyone-can-spend.md
             - No-one-Can Spend: dev/scs/ergoscript/no-one-can-spend.md
@@ -693,9 +665,9 @@ nav:
             - Box Structure: dev/scs/ergoscript/box-structure.md
             - Storing Data: dev/scs/ergoscript/storing-data.md
             - Creating a simple P2S app: dev/scs/p2s.md
-          - Data Inputs: uses/context-claims.md
-
+          #- Data Inputs: uses/context-claims.md
         - Tooling:
+          - dev/scs/ergoscript-tooling.md
           - Interpreters & Compilers:
             - dev/stack/interpreters.md
             - Compiler Phases: dev/scs/ergoscript/compiler-phases.md
@@ -710,8 +682,7 @@ nav:
             - Kiosk: dev/stack/kiosk.md
             - ErgoPuppet: dev/scs/puppet.md
           - Debugging: dev/scs/debugging.md
-          - FlowCards: dev/scs/flowcards.md
-      
+          - FlowCards: dev/scs/flowcards.md     
         - ErgoTree: 
           - dev/scs/ergotree.md
           - Introduction: dev/scs/ergotree/ergotree-intro.md
@@ -725,11 +696,9 @@ nav:
           - Script Validation: dev/scs/ergotree/script-validation.md
           - Script Optimisation: dev/scs/ergotree/script-optimisation.md
           - Templates: dev/scs/ergotree/ergotree-templates.md
-        - Resources:
-          #- Key Concepts: dev/scs/ergoscript/ergoscript-key-concepts.md
-          - Paradigm: dev/scs/index.md
-
-
+        - Features:
+         # - Paradigm: dev/scs/index.md
+          - Data Inputs: dev/protocol/tx/read-only-inputs.md
           - Multi-Stage Protocols: 
             - dev/scs/multi.md
             - Transaction Chains: dev/scs/tx/tx-chains.md
@@ -741,7 +710,42 @@ nav:
               - Rock/Paper/Scissors: dev/scs/tx/rock-paper-scissor.md
               - ICO: dev/scs/tx/ico.md
         
-      
+    - Cryptographic:
+      - crypto.md
+      - Sigma Protocols:
+        - dev/scs/sigma.md
+        - Schnorr:
+          - dev/scs/sigma/schnorr.md
+          - Verifying Schnorr Signatures: dev/scs/sigma/verifying.md
+        - Diffie:
+          - dev/scs/sigma/diffie.md
+          - ZeroJoin: dev/crypto/zerojoin.md
+      - Ring Signatures:
+        - 3-out-of-5 Threshold Signature: dev/scs/sigma/3-out-of-5.md
+        - Distributed Signatures: node/sigs.md
+      #- Signature Scheme Internals: sig-scheme.md
+      - Data Structures:
+        - dev/data-model/data-structures.md
+        - Merkle Tree:
+          - dev/data-model/structures/merkle/merkle-tree.md
+          - Format: dev/data-model/structures/merkle/merkle-format.md
+          - Validation: dev/data-model/structures/merkle/merkle-validation.md
+          - Implementations:
+            - Extension Block Merkle: dev/data-model/structures/merkle/merkle-extension.md
+            - Transaction Merkle Trees: dev/protocol/tx/tx-merkle.md
+            - Merkle Batch Proofs:
+              - dev/data-model/structures/merkle/merkle-batch-proof.md
+              - Implementation: dev/data-model/structures/merkle/merkle-batch-impl.md
+              - Testing: dev/data-model/structures/merkle/merkle-batch-testing.md
+            - Lightweight Client Proofs: dev/data-model/structures/merkle/merkle-light-proof.md
+        - AVL Trees:
+          - dev/protocol/avl.md
+          - Plasma: dev/lib/plasma.md
+        - Proof of Proof-of-Work:
+          - dev/data-model/structures/popow.md
+          - Interlink Vectors: dev/data-model/structures/interlink-vectors.md
+
+
           
    # - Resources: 
       #- dev/stack/introduction.md
