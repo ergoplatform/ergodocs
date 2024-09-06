@@ -20,7 +20,6 @@ If you have your Ergo wallet open in Yoroi and know the password for it, you can
 | [Minotaur](https://github.com/minotaur-ergo/minotaur-wallet) | Web |  |  | ✅ | 🔗 | 🔜 |
 | [Paper Wallet](https://anon-br.github.io/ergo-paper-wallet/) | Cold |  |  |  |  |  |
 | [Viawallet](https://apps.apple.com/us/app/viawallet-multi-chain-wallet/id1462031389) | Mobile |  |  |  |  |  |
-| [URL Wallet](https://erg.urlwallet.org/) | URL |  |  |  |  |  |
 | [Zelcore](https://erg.urlwallet.org/) | 3rd party |  |  |  |  |  |
 
 
