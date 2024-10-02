@@ -4,9 +4,9 @@ tags:
 ---
 # Ergo Box Design: A Comprehensive Guide
 
-The UTXO system is the backbone of many blockchain networks, and at its core are boxes. These boxes are not just containers for the value of a currency within a blockchain, but they are also equipped with [registers](registers.md) that are protected by a contract, enhancing their functionality on the Ergo blockchain.
+The UTXO (Unspent Transaction Output) system is the backbone of many blockchain networks, and at its core are boxes. These boxes are not just containers for the value of a currency within a blockchain; they are also equipped with [registers](registers.md) that are protected by a contract, enhancing their functionality on the Ergo blockchain.
 
-Registers are essentially storage units for data and information at specific addresses in the blockchain. To visualize this, think of these boxes as remote controls, piggy banks on steroids, or cups that only allow liquid to be poured in. For instance, consider a cup:
+Registers are essentially storage units for data and information at specific addresses in the blockchain. To visualize this, think of these boxes as advanced storage units or containers. For instance, consider a cup:
 
 **A Cup:**
 
@@ -32,15 +32,15 @@ A blockchain serves as a financial canvas, allowing developers, engineers, and d
 
 The three pillars of box design are:
 
-##### Security
+### Security
 
 The box should be designed to prevent exploitation by unauthorized users.
 
-##### Scalability
+### Scalability
 
 The system should be designed to handle multiple concurrent requests smoothly.
 
-#####  Efficiency
+### Efficiency
 
 A straightforward design makes it easier for engineers to understand and improve the design.
 
@@ -50,15 +50,15 @@ Before diving into the principles mentioned above, it's essential to understand 
 
 When modeling a box, consider the following:
 
-##### What is the box's purpose?
+### What is the box's purpose?
 
 For instance, a lending box is designed to simplify the loan process.
 
-##### What data should the box store?
+### What data should the box store?
 
 The box's function determines the data stored in it. A lending box, for example, would store lending-related information in its registers.
 
-##### How will the box perform its function?
+### How will the box perform its function?
 
 This step involves thinking about the overall transaction, not just the box. It requires scripting the guard script (or smart contract) to perform its intended function using the data stored in the registers.
 
@@ -69,7 +69,7 @@ Registers can store data in various formats, which can be single or multiple ent
 **Single data entries include:**
 
 - `Long`
-- `Coll[Byte]` also known as *String*
+- `Coll[Byte]` (also known as *String*)
 - `Bool`
 
 **Multiple data entries include:**
@@ -78,7 +78,7 @@ Registers can store data in various formats, which can be single or multiple ent
 - `Coll[Coll[Byte]]`
 - `Coll[Bool]`
 
-> This guide is based on the [article by Keith Lim](https://keitodot.medium.com/ergo-box-m-f58f444e00d5)
+## Resources
 
-
-
+- This guide is based on the [article by Keith Lim](https://keitodot.medium.com/ergo-box-m-f58f444e00d5)
+- For more technical details on the format of a box, please see [this page](format.md)

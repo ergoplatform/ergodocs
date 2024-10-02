@@ -8,7 +8,7 @@ tags:
 
 In Ergo's blockchain model, a [box](box.md) is a versatile entity that not only holds the value of cryptocurrency but also contains additional data in the form of registers. This makes it a more functional and flexible version of the Unspent Transaction Output (UTXO) found in Bitcoin and many other cryptocurrencies.
 
-Each box contains at least four essential pieces of information:
+**Each box contains at least four essential pieces of information:**
 
 1. The value in NanoErgs (1 Erg = 1000000000 NanoErgs).
 2. The protection script (similar to Bitcoin's `scriptPubKey`) or "smart contract", which secures the box's expenditure.
@@ -49,7 +49,7 @@ Register R2 contains a collection of tokens stored in the box. Each token is ide
 
 Register R3 holds information about the box’s creation, such as the originating transaction id, the box's output index (i.e., the index used in `OUTPUTS`), and the block height at the creation time of the transaction from which the box originates. Use `Box.creationInfo` to access this register. The creation height is part of Ergo's unique storage rent feature, where boxes can be spent after four years, allowing miners to charge a small fee and recycle ERGs back into the blockchain.
 
-### Optional Registers R4 - R9
+### Registers R4 - R9 (Optional)
 
 These registers can contain any data defined when the box first originates from a transaction. The data could be of any common type found in ErgoScript, along with more complex types built from Pairs and Collections. These registers may also contain complex types such as `Box`, `SigmaProp`, `GroupElement`, and `AVLTree`.
 

@@ -10,7 +10,7 @@ tags:
 /// admonition | Sigma Protocols
     type: tip
 
-Ergo's support for [sigma-protocols](sigma.md) (aka generalized Schnorr proofs) are truly unique as building blocks for composable statements. Schnorr protocols and proof-of-Diffie-Hellman-tuples are supported by default, with more options available that the community can add via soft forks.
+Ergo's support for [sigma-protocols](sigma.md) (aka generalized Schnorr proofs) are truly unique as building blocks for composable statements. [Schnorr protocols](schnorr.md) and [proof-of-Diffie-Hellman-tuples](diffe.md) are supported by default, with more options available that the community can add via soft forks.
 ///
 
 
@@ -18,7 +18,8 @@ ErgoScript is built considering Bitcoin’s security and privacy to make all kin
 
 
 
-//// admonition | Background Reading
+//// details | Background Reading
+    {type: info, open: false}
 /// details | **What are the key aspects of the Ergo contract model that make it different?**
     {type: info, open: false}
 

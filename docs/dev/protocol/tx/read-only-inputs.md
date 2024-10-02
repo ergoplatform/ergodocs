@@ -5,38 +5,38 @@ tags:
 
 # Data Inputs in ErgoScript
 
-Data inputs are a unique and powerful feature in ErgoScript that extend the capabilities of traditional UTXO-based blockchains. This section provides an in-depth overview of data inputs, their benefits, and how they can be used in Ergo transactions.
+ErgoScript's data inputs are a novel feature that enhances the traditional UTXO-based blockchain's functionality. This section delves into the concept of data inputs, their advantages, and their application within Ergo transactions.
 
 ## Understanding Data Inputs
 
-In traditional UTXO-based blockchains, transactions typically involve spending and consuming inputs, which are then destroyed. However, Ergo introduces **data inputs**—a concept that allows transactions to reference existing UTXOs (unspent transaction outputs) and read their data without consuming them. This innovation addresses several limitations inherent in traditional UTXO models and brings enhanced flexibility and efficiency to the extended UTXO (eUTXO) model used by Ergo.
+Traditional UTXO-based blockchains involve the consumption and subsequent destruction of inputs during transactions. Ergo innovates on this model with **data inputs**, which permit transactions to reference and read from existing UTXOs without the need to consume them. This breakthrough overcomes several limitations of the classic UTXO model, adding a layer of flexibility and efficiency to Ergo's extended UTXO (eUTXO) model.
 
 ### Key Features of Data Inputs
 
-- **Non-Destructive Access:** Data inputs enable transactions to access the contents of UTXOs without consuming or spending them. This means that the referenced UTXOs remain intact and can be used in future transactions.
-- **Concurrent Data Access:** Multiple transactions within the same block can reference and read the data from a single UTXO simultaneously, as none of the transactions actually spend the UTXO. This capability supports parallel processing and reduces bottlenecks in transaction execution.
+- **Non-Destructive Access:** Data inputs grant transactions the ability to tap into UTXO contents without the need to spend or consume them, preserving the UTXOs for future transactions.
+- **Concurrent Data Access:** Data inputs allow for the simultaneous referencing and reading of a UTXO's data by multiple transactions within a single block, without any of them spending the UTXO. This feature facilitates parallel processing and alleviates transaction execution bottlenecks.
 
 ## Benefits of Data Inputs
 
-Incorporating data inputs into ErgoScript provides several significant advantages:
+The integration of data inputs into ErgoScript offers several notable benefits:
 
-1. **Reduced Transaction Fees:** Data inputs do not trigger the execution of scripts or the need to create additional outputs, leading to lower transaction fees. This makes them a cost-effective solution for complex transactions.
+1. **Reduced Transaction Fees:** Since data inputs do not necessitate script execution or the generation of new outputs, they contribute to lower transaction fees, making them an economical choice for intricate transactions.
   
-2. **Enhanced DeFi Applications:** Data inputs are particularly useful for decentralized finance (DeFi) applications, such as decentralized exchanges (DEXs) or order-book systems. They allow contracts to reference external data (e.g., oracle data or order book states) without consuming the data boxes, ensuring that multiple participants can interact with the same state concurrently.
+2. **Enhanced DeFi Applications:** Data inputs prove invaluable for decentralized finance (DeFi) applications, such as decentralized exchanges (DEXs) or order-book systems. They enable contracts to reference external data, like oracle data or order book states, without the need to consume the data boxes, facilitating concurrent interactions with the same state by multiple parties.
 
-3. **Improved Scalability and Efficiency:** By allowing multiple transactions to read from the same data input concurrently, data inputs help improve the scalability and efficiency of the network. This reduces the need for additional outputs and mitigates the risk of transaction conflicts.
+3. **Improved Scalability and Efficiency:** Data inputs contribute to network scalability and efficiency by allowing several transactions to concurrently read from the same data input, reducing the necessity for extra outputs and lessening the likelihood of transaction conflicts.
 
 ## Working with Data Inputs
 
-Data inputs are unique to Ergo and are not yet present in other eUTXO-based systems. When working with data inputs in ErgoScript, it’s important to understand how they function and how they can be utilized effectively in your smart contracts.
+Ergo's data inputs are a distinctive feature not found in other eUTXO-based systems. When employing data inputs in ErgoScript, it's crucial to grasp their operation and how to leverage them effectively in smart contracts.
 
 ### Usage in Transactions
 
-Data inputs in ErgoScript are essentially "read-only" boxes that provide necessary information for contract validation without being consumed by the transaction. For example, a DeFi contract might use a data input to check the current price of an asset from an oracle box, ensuring that the transaction adheres to certain conditions without altering the oracle box itself.
+In ErgoScript, data inputs are "read-only" boxes that supply vital information for contract validation without being spent in the transaction. For instance, a DeFi contract might utilize a data input to verify an asset's current price from an oracle box, ensuring the transaction complies with specific conditions without modifying the oracle box.
 
 ### Example Use Case
 
-Consider a transaction where a box with the ID `d2b9b6536287b242f436436ce5a1e4a117d7b4843a13ce3abe3168bff99924a1` is referenced as both an input and a data input. This scenario demonstrates the flexibility of data inputs, allowing a transaction to read and possibly update a box’s state in a single operation, provided the box existed before the transaction was applied.
+Imagine a transaction that references a box with the ID `d2b9b6536287b242f436436ce5a1e4a117d7b4843a13ce3abe3168bff99924a1` as both an input and a data input. This illustrates the versatility of data inputs, enabling a transaction to read and potentially update a box's state in one operation, assuming the box pre-existed the transaction.
 
 In ErgoScript, you can refer to other boxes in the transaction using constructs like:
 

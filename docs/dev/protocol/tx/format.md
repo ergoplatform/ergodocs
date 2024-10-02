@@ -45,9 +45,9 @@ Once the transaction is confirmed on the blockchain, the placeholder in $R_3$ is
 An Ergo transaction consists of three parts:
 
 1. **Inputs**: Links to boxes that will be removed from the state during transaction application. Each input consists of:
-   - A box ID.
-   - A proof for the final Sigma proposition of this box-protecting script.
-   - A context extension used during script evaluation.
+    - A box ID.
+    - A proof for the final Sigma proposition of this box-protecting script.
+    - A context extension used during script evaluation.
 
 2. **Data Inputs**: Links to boxes that will not be removed from the state but will be available in the context of regular input scripts. This allows transactions to reference additional data without consuming the box.
 
