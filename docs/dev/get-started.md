@@ -130,6 +130,12 @@ Ergo also supports advanced [data structures](data-structures.md) like [AVL+ Tre
     "url": "https://www.youtube.com/watch?v=qR0_k7VH6KI&list=PLopsKGshj0B4BpMoSMh5hQk8gVfWk-si6"
   },
 
+    {
+    "title": "📚 DeCo Education docs",
+    "content": "DeCo steps you through eUTXO & NFTs, dApp Development and Multi-Stage Tx's & Smart Contracts",
+    "url": "https://deco-education.github.io/deco-docs/docs/category/into-the-woods"
+  },
+
 
   {
     "title": "📹 Ergo Blockchain Crash Course",

@@ -390,7 +390,9 @@ nav:
 
   - Developers: 
     - dev/get-started.md
-    - 📌 Getting Started: dev/get-started.md
+    - 📌 Getting Started: 
+      - dev/get-started.md
+      - Students: students/index.md
     - Data Model:
       - Box: 
         - dev/data-model/box.md
