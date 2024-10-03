@@ -2,60 +2,90 @@
 tags:
   - KYA
 ---
-# 'Know Your Assumptions' (KYA) in Ergo
 
-Ergo operates on the KYA (Know Your Assumptions) model, which aims to educate users about the assumptions they make when interacting with decentralized finance (DeFi) protocols. This model has been embraced by the Ergo community and is utilized during the initialization of a wallet in Nautilus or when using dApps like Spectrum or Duckpools.
 
-## Research Paper: KYA - A Treatise On Assumptions in Cryptocurrencies and DeFi
+# Know Your Assumptions (KYA) in Ergo
 
-kushti has initiated the development of a research paper titled [KYA - A Treatise On Assumptions in Cryptocurrencies and DeFi](https://github.com/kushti/kya). The introduction of the paper is provided below:
+The Ergo ecosystem operates on the **KYA (Know Your Assumptions)** model, which encourages transparency and user awareness regarding the assumptions they make when interacting with decentralized finance (DeFi) protocols. This model, embraced by the Ergo community, plays a significant role during the initialization of a wallet in Nautilus and while using decentralized applications (dApps) like Spectrum and Duckpools.
 
-> This research paper aims to address several crucial questions that have been largely overlooked in the cryptocurrency industry, despite their fundamental importance. We firmly believe that the industry's existence heavily relies on these questions, and it is essential to provide affirmative answers to them.
+## Research Paper: *KYA - A Treatise on Assumptions in Cryptocurrencies and DeFi*
 
-> Additionally, we strive to systematize the knowledge surrounding the assumptions upon which cryptocurrency and DeFi protocols are built. Understanding the explicit or implicit assumptions that underpin these protocols is critical for properly comprehending their security and level of decentralization.
+Developer Kushti is working on a research paper titled [KYA - A Treatise on Assumptions in Cryptocurrencies and DeFi](https://github.com/kushti/kya), aiming to explore overlooked but fundamental questions in the cryptocurrency space. The introduction highlights the importance of identifying the assumptions on which blockchain and DeFi protocols are built, shedding light on security, decentralization, and potential risks.
 
-By exploring these questions and assumptions, the KYA model in Ergo contributes to the broader understanding of the cryptocurrency and DeFi landscape. It encourages users to be aware of the underlying assumptions and promotes a more informed and secure participation in the ecosystem.
+> "Traditional financial institutions rely on privacy-invasive checks such as KYC/AML. In the world of decentralized finance, we reverse that control, allowing users to check protocols for their underlying assumptions. KYA practices aim to introduce transparency where users can verify the security and properties of decentralized financial tools."
 
-## Bitcoin As A Digital Gold
+The KYA framework encourages users to take an active role in verifying the protocols they interact with, offering a more informed and secure participation in the decentralized financial ecosystem.
 
-The assumptions underlying the security of Bitcoin are based on several key factors:
 
-1. **Hash Function Security:** The security of Bitcoin relies on the assumption that the SHA-256 hash function is not broken. This assumption means that the known security properties of the hash function, such as collision resistance, second preimage resistance, and preimage resistance, hold true.
+## KYA Prompts in the Ergo Ecosystem
 
-2. **Digital Signature Scheme:** Bitcoin's security assumes that the digital signature scheme used is not broken. Specifically, the assumption is that quantum computers capable of solving the Discrete Log Problem for an elliptic curve of 128-bit security will not emerge.
+Ergo introduces **KYA prompts** to educate users about the assumptions involved when interacting with different protocols. These prompts serve as a summary, providing necessary information that users should consider before engaging with the ecosystem’s applications. For example, projects like **SigmaFi** have incorporated KYA prompts to assist users in reviewing critical assumptions and the underlying technology.
 
-3. **Honest Mining Hashrate:** The majority of the mining hashrate in the Bitcoin network is assumed to be honest, meaning that it follows the Bitcoin protocol. The definition of "honest" behavior varies, but generally, it involves building on the longest chain, adhering to protocol validation rules, and contributing valid inputs. While this assumption is complex due to the intricacies of the protocol, it forms a fundamental basis for the security of Bitcoin.
+For more information please see [Building a standard KYA Prompt](https://www.reddit.com/r/ergonauts/comments/159h9rs/building_a_standard_kya_prompt/)
 
-It is important to note that Bitcoin's assumptions are not without challenges and uncertainties. The real-world implementation of the protocol introduces complexities beyond simplified models, and deviations from the expected behavior can occur. However, Bitcoin has been functioning for over 13 years, and many theoretical issues have not materialized in practice.
 
-## Ergo
+## Ergo’s Assumptions
 
-Ergo aims to achieve a broad set of features securely while relying on a modest set of assumptions, building upon Bitcoin's foundation. Some key considerations in Ergo's assumptions include:
+Building upon Bitcoin’s security foundation, Ergo operates under a distinct but modest set of assumptions to ensure a secure and scalable system.
 
-1. **Bootstrapping Techniques:** Ergo offers multiple techniques for bootstrapping the protocol securely. These techniques include the use of hash-based authenticated data structures for UTXO set transformations, downloading UTXO set snapshots, and utilizing NiPoPoW proofs. These techniques ensure security guarantees while reducing storage requirements and enabling log-space storage for blockchain components.
+### 1. Bootstrapping Techniques
 
-2. **Signature Scheme:** Ergo employs Schnorr signatures, which are simpler and formally proven to be secure, on top of the secp256k1 curve used in Bitcoin. Additionally, Ergo supports building cryptographic protocols as applications based on sigma protocols, with some applications relying on the decisional Diffie-Hellman assumption.
+Ergo employs advanced techniques like hash-based authenticated data structures for UTXO transformations, NiPoPoW (Non-Interactive Proofs of Proof-of-Work) proofs, and UTXO set snapshots. These methods enhance the security while optimizing storage requirements and scalability.
 
-3. **Miners' Behavior:** Ergo shares similarities with Bitcoin regarding honest behavior expectations from miners. However, Ergo introduces the concept of storage rent, which aims to simplify miners' incentivization, particularly in the context of long-term block rewards.
+### 2. Signature Scheme
 
-Ergo's design allows for L1 scalability, feature-rich contracts, and cryptographic protocols while maintaining the same level of security as Bitcoin. It leverages existing assumptions while offering innovative solutions to address scalability challenges and expand functionality.
+Ergo uses **Schnorr signatures** for cryptographic security, relying on the well-established secp256k1 curve also used in Bitcoin. Moreover, Ergo incorporates sigma protocols, enabling the construction of advanced cryptographic applications, with some relying on the **decisional Diffie-Hellman assumption**.
 
-## DeFi Apps on Ergo
+### 3. Miner Behavior
 
-Ergo serves as the foundation for various decentralized finance (DeFi) applications. Some notable examples include:
+Like Bitcoin, Ergo assumes that the majority of miners will act honestly and follow protocol rules. However, Ergo's **storage rent** concept simplifies miner incentives for long-term sustainability of block rewards, while ensuring that data is retained efficiently.
 
-1. **Oracles:** Oracles play a crucial role in providing external data to DeFi protocols. Ergo supports the integration of oracles, enabling secure and reliable data feeds from the external world.
+### 4. Scalability and Security
 
-2. **ErgoDEX:** ErgoDEX, formerly known as Spectrum, is a decentralized exchange (DEX) built on Ergo. It leverages Ergo's security guarantees and features, enabling trustless peer-to-peer trading of digital assets.
+Ergo’s architecture supports Layer 1 (L1) scalability without compromising security. The platform offers feature-rich smart contracts and cryptographic protocols, ensuring secure interactions within the blockchain while addressing DeFi scalability challenges.
 
-3. **Djed and SigUSD:** Djed and SigUSD are stablecoin projects built on Ergo. They provide stable value representation and decentralized governance mechanisms, offering stability and transparency in the Ergo ecosystem.
+---
 
-4. **Dexy:** Dexy is another DEX built on Ergo that focuses on simplicity and user experience. It aims to provide an intuitive and efficient trading platform for Ergo users.
+## Bitcoin as Digital Gold
 
-These DeFi applications benefit from Ergo's robust security, flexibility, and scalability, enabling users to engage in decentralized financial activities with confidence.
+Bitcoin’s security model rests on several critical assumptions:
 
-The KYA model in Ergo, coupled with the research paper's insights, contributes to a better understanding of the assumptions and security considerations underlying cryptocurrency and DeFi protocols. It empowers users to make informed decisions and participate in the ecosystem more securely.
+1. **Hash Function Security**: Bitcoin’s reliance on the SHA-256 hash function assumes that its cryptographic properties—collision resistance, preimage resistance—will remain secure.
 
-## More Information
+2. **Digital Signature Scheme**: The elliptic curve signature scheme assumes that quantum computers capable of breaking 128-bit security will not emerge.
 
-See this [detailed forum post]([Know Your Assumptions (KYA) An Alternative to Traditional Know-Your-Customer (KYC) Practices](https://www.ergoforum.org/t/know-your-assumptions-kya-an-alternative-to-traditional-know-your-customer-kyc-practices/4409) for an overview and discussion on KYA. 
+3. **Honest Mining Hashrate**: The majority of Bitcoin’s mining power is expected to follow protocol rules, building on the longest chain. This forms the basis of Bitcoin’s consensus and overall security.
+
+Despite uncertainties, Bitcoin has functioned effectively for over 13 years, with no major issues regarding its core assumptions.
+
+---
+
+## DeFi Applications on Ergo
+
+The Ergo platform serves as a foundation for various decentralized finance (DeFi) applications, providing security, scalability, and flexibility.
+
+### 1. Oracles
+
+Ergo supports oracles, which bring reliable external data into DeFi protocols. This integration ensures secure data feeds, which are crucial for many dApps within the ecosystem.
+
+### 2. ErgoDEX
+
+ErgoDEX (formerly Spectrum) is a decentralized exchange (DEX) built on Ergo. Leveraging Ergo's security guarantees, it facilitates trustless peer-to-peer trading of digital assets.
+
+### 3. Stablecoins: Djed and SigUSD
+
+Djed and SigUSD are stablecoins designed on Ergo, providing a decentralized mechanism for stable value representation, contributing to the broader DeFi ecosystem with transparency and decentralization.
+
+### 4. Dexy
+
+Dexy is another decentralized exchange focused on a simplified and user-friendly trading experience. It builds on Ergo’s core security and scalability assumptions to offer a more intuitive platform for users.
+
+
+
+## References
+
+1. [Original KYA Post](https://www.ergoforum.org/t/know-your-assumptions/4198)
+2. [The Importance of KYA](https://ergoplatform.org/en/blog/The-Importance-of-Know-Your-Assumptions/)
+3. [KYA Research Paper](https://docs.ergoplatform.com/contribute/standards/kya/#research-paper)
+4. [Kushti’s KYA Paper](https://github.com/kushti/kya/blob/master/kya.pdf)
+5. [SigmaFi dApp](https://sigmafi.app/#/)
