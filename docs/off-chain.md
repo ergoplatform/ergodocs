@@ -3,8 +3,6 @@ tags:
   - Off-Chain Bots
   - Off-Chain Components
   - Automation Bots
-  - Decentralized Finance
-  - Ergo Ecosystem
 ---
 
 # Off-Chain Components in DeFi

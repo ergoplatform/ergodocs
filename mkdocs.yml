@@ -542,6 +542,7 @@ nav:
         - GraphQL: dev/stack/explorer/graphql.md
       - APIs: dev/stack/api.md
       - Off-Chain:
+        - off-chain.md
         - Oracle-Core: 
           - dev/oc/oracle.md
           - Bootstrap an Oracle Pool: tutorials/oracle-bootstrap.md
