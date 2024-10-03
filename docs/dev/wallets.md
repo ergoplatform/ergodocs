@@ -1,13 +1,11 @@
-/// details | Disclaimer
-    {type: warning, open: true}
-Please note that the wallets mentioned are maintained by external parties. The information provided here is for reference purposes only.
-///
-
-
 # Wallets
 
 Ergo offers a diverse array of wallets, with the [primary wallets](#primary-wallets) listed below being the most popular, representing 95% of all installations within the ecosystem.
 
+/// details | Disclaimer
+    {type: warning, open: true}
+Please note that the wallets mentioned are maintained by external parties. The information provided here is for reference purposes only.
+///
 
 ## Primary Wallets
 
@@ -15,7 +13,7 @@ Ergo offers a diverse array of wallets, with the [primary wallets](#primary-wall
 
 2. [**Ergo Mobile Wallet (Terminus on iOS):**](https://ergoplatform.org/en/ergo-wallet-app/) This mobile wallet is a community favorite for its user-friendly interface on smartphones, allowing for smooth token and NFT exchanges. It supports the receipt, transfer, and storage of $ERG and NFTs. It also enables the creation of secure offline cold wallets in flight mode and the recovery of funds through any EIP3 compliant wallet. The Ergo Mobile Wallet includes read-only watch wallets with fiat value comparison and the ability to scan QR codes for easy payments.
 
-3. [**Satergo:**](satergo.md) Satergo is a desktop node wallet tailored for the Ergo platform, offering an accessible solution for users who prefer not to run a full node. It supports the Ergo network and provides comprehensive wallet features, making it a suitable option for those looking for both ease of use and advanced wallet functionalities.
+3. [**Satergo:**](satergo.md) Satergo is a desktop node wallet tailored for the Ergo platform, offering an accessible solution for users who prefer to run a full node. It supports the Ergo network and provides comprehensive wallet features, making it a suitable option for those looking for both ease of use and advanced wallet functionalities.
 
 For a detailed comparison of wallet features, refer to the [feature overview](#feature-overview) section further down this page.
 
@@ -36,13 +34,13 @@ For a detailed comparison of wallet features, refer to the [feature overview](#f
 | Configure explorer           | ✅        | ✅       | ✅           | ❌       | ✅      |
 | View-only wallet             | ❌        | ✅       | ✅           | ✅       | ✅      |
 | [ErgoPay](eip20.md)          | ✅        | ❌       | ✅           | ✅       | ✅      |
-| Input address selection      | ✅        | ❌       | ✅           | ✅       | *IDK*   |
+| Input address selection      | ✅        | ❌       | ✅           | ✅       | *TBC*   |
 | Address management           | ✅        | ❌       | ✅           | ✅       | ❌      |
 | Chained TXs                  | ❌        | ✅       | ✅           | ❌       | ✅      |
 | Many price currencies        | ✅        | ✅       | ✅           | ❌       | ❌      |
-| NFT viewing                  | ❌        | ✅       | ✅           | ❌       | *IDK*   |
+| NFT viewing                  | ❌        | ✅       | ✅           | ❌       | *TBC*   |
 | Token prices                 | ❌        | ✅       | ✅           | ❌       | ✅      |
-| Babel fees                   | ❌        | ✅       | ✅           | ❌       | *IDK*   |
+| Babel fees                   | ❌        | ✅       | ✅           | ❌       | *TBC*   |
 | Independent software         | ✅        | ❌       | ✅           | ✅       | ❌      |
 | Website dApps                | ❌        | ✅       | ❌           | ❌       | ✅      |
 | Ledger                       | ❌        | ✅       | ❌           | ❌       | ✅      |
@@ -53,8 +51,8 @@ For a detailed comparison of wallet features, refer to the [feature overview](#f
 | Mnemonic password            | ✅        | ❌       | ❌           | ✅       | ❌      |
 | Full node                    | ✅        | ❌       | ❌           | ❌       | ❌      |
 | Add address at index         | ✅        | ❌       | ❌           | ❌       | ❌      |
-| Anti address reuse           | ❌        | ✅       | ❌           | ❌       | *IDK*   |
-| Sending to stealth addresses | ✅        | *IDK*    | *IDK*        | *IDK*    | *IDK*   |
+| Anti address reuse           | ❌        | ✅       | ❌           | ❌       | *TBC*   |
+| Sending to stealth addresses | ✅        | *TBC*    | *TBC*        | *TBC*    | *TBC*   |
 | **Total features**           | **12/24** | **12/24** | **13/24** | **8/24** | **11/24** |
 
 ## Other Wallets
@@ -66,20 +64,14 @@ These wallets are generally not recommended, but are left here for archival purp
 3. [**URL Wallet**](https://erg.urlwallet.org/): A temporary wallet solution where your key is in the URL. Recommended for temporary use cases only due to security concerns.
 
 
-## Resources
-
-
 /// details | Funds stuck in Yoroi?
     {type: warning, open: false}
 If you have your Ergo wallet open in Yoroi and know the password for it, you can use [this tool](https://github.com/satsen/yoroi-ergo-wallet-recover) to decrypt the wallet and send all funds to a new wallet of yours. Alternatively, check the [access issues](access-issues.md) page for troublehooting other issues.
 ///
 
 
-- [tesseract-one/ledger-app-ergo](https://github.com/tesseract-one/ledger-app-ergo)
-- [anon-br/ledgerjs-hw-app-ergo](https://github.com/anon-br/ledgerjs-hw-app-ergo)
-- [URL Wallet (Your key is in the URL, use this wallet for temporary use cases only!)](https://erg.urlwallet.org/)
+## Resources
 
-### Archived Resources
-
+- [Ergo Wallet Wonderland: Exploring the Best Wallet for Your Needs](./Ergo_Wallet_Wonderland_Exploring_Wallets__Needs.pdf)
 - [SwiftAPI](https://github.com/ergoplatform/sigma-rust/blob/31aa0922d03f632d22fdc348b2604d23ed296586/bindings/ergo-wallet-ios/Sources/ErgoWallet/ErgoWallet.swift)
 - iOS (Tethered) Beta | [Ergo Light Client](https://github.com/bjenkinsgit/ErgoIOSLiteClient.git) | Community | Requires a full node

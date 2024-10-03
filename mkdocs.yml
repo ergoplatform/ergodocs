@@ -168,6 +168,7 @@ nav:
           - Marketing: contribute/marketing.md
           - Sigmanauts: contribute/sigmanauts.md
           - Contribute to the docs!: contribute/docs.md
+    - Wallets: dev/wallets.md
     - Resources:
         - Social Contract: social_contract.md
         - Audit: dev/protocol/audit.md
@@ -549,21 +550,23 @@ nav:
         - Plasma: dev/lib/plasma.md
       - Wallets:
         - dev/wallets.md
-        - Access Issues: tutorials/access-issues.md
         - Types:
           - Satergo: dev/wallet/satergo.md
           - Nautilus: dev/wallet/nautilus.md
-          - Minotaur: dev/wallet/minotaur.md
+          - Minotaur:
+            - dev/wallet/minotaur.md
+            - Multi-Sig: dev/wallet/minotaur-multisig.md
           - SAFEW: dev/wallet/safew.md
           - Ledger: dev/wallet/payments/ledger.md
-        - MultiSig: 
-          - dev/wallet/multisig.md
-          - Minotaur: dev/wallet/minotaur-multisig.md
-        - Integration: dev/Integration/guide.md
-        - Standards:
-          - UTXO-Set Scanning Wallet API: dev/wallet/standards/eip1.md
-          - Deterministic Wallet Standard: dev/wallet/standards/eip3.md
-          - Cold Wallet: dev/wallet/standards/eip19.md
+        - Resources:
+          - Access Issues: tutorials/access-issues.md
+          - MultiSig: dev/wallet/multisig.md
+          - Standards:
+            - UTXO-Set Scanning Wallet API: dev/wallet/standards/eip1.md
+            - Deterministic Wallet Standard: dev/wallet/standards/eip3.md
+            - Cold Wallet: dev/wallet/standards/eip19.md
+      - Integration Guide: dev/Integration/guide.md
+
     - Tooling:
       - Pathways: 
         - Development Stack: 

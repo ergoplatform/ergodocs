@@ -2,23 +2,25 @@
 
 /// details | Disclaimer
     {type: warning, open: true}
-The SAFEW wallet is a web-based wallet that includes support for both a dApp connector and an ErgoPay connector. It is ideal for developers because it provides access to the ErgoMixer, a transaction builder in Expert mode, and additional advanced features. The wallet is not actively maintaned, but still usable for those who desire the extra features offered. 
+The wallet is not actively maintaned, but still usable for those who desire the extra features offered.
 ///
 
+
+
+[SafeW](https://github.com/ThierryM1212/SAFEW) is a Simple And Fast Ergo Wallet that integrates a dApp connector compatible with EIP-12. It is compatible with Chrome-based browsers (Opera, Brave, Edge, Kiwi, etc.) and Firefox. SAFEW was recognized in [ErgoHack](ergohack.md) 3.
+
+It is ideal for developers because it provides access to the ErgoMixer, a transaction builder in Expert mode, and additional advanced features.
+
+## Storing Ergo with SAFEW
+Learn more about storing Ergo with SAFEW in this [blog post](https://ergoplatform.org/en/blog/2022-03-25-storing-ergo-safew/).
 /// details | Comprehensive Video Guide
     {type: info, open: true}
 For a visual and detailed guide on how to use SAFEW, watch the comprehensive video tutorial available [here](https://www.youtube.com/watch?v=DFf-dDlCpzM).
 ///
 
 
-
-[SafeW](https://github.com/ThierryM1212/SAFEW) is a Simple And Fast Ergo Wallet that integrates a dApp connector compatible with EIP-12. It is compatible with Chrome-based browsers (Opera, Brave, Edge, Kiwi, etc.) and Firefox. SAFEW was recognized in ErgoHack 3 ([ErgoHack III Results](https://ergoplatform.org/en/blog/2022-03-01-ergohack-iii-results/)).
-
-## Storing Ergo with SAFEW
-Learn more about storing Ergo with SAFEW in this [blog post](https://ergoplatform.org/en/blog/2022-03-25-storing-ergo-safew/).
-
 ## Releases
-- Chrome, Edge, Brave, etc.: [Chrome Web Store](https://chrome.google.com/webstore/detail/simple-and-fast-ergo-wall/fmpbldieijjehhalgjblbpgjmijencll/)
+- Chrome, Edge, Brave, etc: [Chrome Web Store](https://chrome.google.com/webstore/detail/simple-and-fast-ergo-wall/fmpbldieijjehhalgjblbpgjmijencll/)
 - Firefox: [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/safew/)
 
 ## Features
@@ -35,9 +37,9 @@ Learn more about storing Ergo with SAFEW in this [blog post](https://ergoplatfor
 - Direct interaction with ErgoMixer from the wallet.
 - Transaction builder for advanced users to manipulate JSON of Ergo transactions.
     - Tutorials:
-            - [How to mint tokens](https://youtu.be/YR0jkbMLaAY)
-            - [How to burn tokens](https://youtu.be/OcyziMIXTtk)
-            - [How to send assets to several addresses](https://youtu.be/3N7Qn2BgH0U)
+                - [How to mint tokens](https://youtu.be/YR0jkbMLaAY)
+                - [How to burn tokens](https://youtu.be/OcyziMIXTtk)
+                - [How to send assets to several addresses](https://youtu.be/3N7Qn2BgH0U)
 - Export transaction history as CSV.
 - Display and mint NFTs including pictures, audio, and videos.
 - Burn tokens.

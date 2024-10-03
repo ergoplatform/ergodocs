@@ -1,14 +1,28 @@
-# Nautilus
+# Nautilus Wallet
 
-[Nautilus](https://twitter.com/NautilusWallet) is a web-based wallet with a strong emphasis on privacy. It allows users to manage their digital assets securely and with ease.
+[Nautilus Wallet](https://twitter.com/NautilusWallet) is a privacy-focused, web-based wallet designed for the secure management of digital assets within the Ergo ecosystem. It offers an intuitive user interface that caters to both novice and experienced users.
 
-For advanced users and developers, Nautilus provides support for Ledger hardware wallets, which is currently accessible in developer mode.
+## Features
 
-To install Nautilus, choose the appropriate extension for your browser:
-- For Chrome or Brave users: [Install Nautilus from the Chrome Web Store](https://chrome.google.com/webstore/detail/nautilus-wallet/gjlmehlldlphhljhpnlddaodbjjcchai)
-- For Firefox users: [Get Nautilus from Firefox Add-ons](https://addons.mozilla.org/bs/firefox/addon/nautilus/)
+- **Privacy Enhanced:** Nautilus prioritizes user privacy, employing advanced security measures to protect your digital assets.
+- **Ledger Integration:** For those seeking an extra layer of security, Nautilus supports Ledger hardware wallets, currently available in developer mode for advanced users and developers.
+
+## Installation
+
+Nautilus can be easily installed as a browser extension. Select the version compatible with your browser:
+
+- [Chrome Web Store](https://chrome.google.com/webstore/detail/nautilus-wallet/gjlmehlldlphhljhpnlddaodbjjcchai) - Install Nautilus for Google Chrome.
+- [Firefox Add-ons](https://addons.mozilla.org/bs/firefox/addon/nautilus/) - Get Nautilus for Mozilla Firefox.
+
+## Getting Started
 
 /// details | Comprehensive Video Guide
     {type: info, open: true}
-To get started with Nautilus and explore its features, watch the comprehensive video tutorial available [here](https://www.youtube.com/watch?v=hMwtwlUpnRQ).
+For a step-by-step guide on setting up and using Nautilus, watch the [comprehensive video tutorial](https://www.youtube.com/watch?v=hMwtwlUpnRQ).
 ///
+
+## Community Support
+
+Connect with the Nautilus community for support, updates, and discussions:
+
+Join the Nautilus community on [Telegram](http://t.me/@NautilusWallet) or [Discord](https://discord.gg/ergo-platform-668903786361651200), where the chats are bridged between each other for a cohesive conversation experience.
