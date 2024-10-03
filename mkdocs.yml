@@ -550,11 +550,15 @@ nav:
       - Wallets:
         - dev/wallets.md
         - Access Issues: tutorials/access-issues.md
-        - Satergo: dev/wallet/satergo.md
+        - Types:
+          - Satergo: dev/wallet/satergo.md
+          - Nautilus: dev/wallet/nautilus.md
+          - Minotaur: dev/wallet/minotaur.md
+          - SAFEW: dev/wallet/safew.md
+          - Ledger: dev/wallet/payments/ledger.md
         - MultiSig: 
           - dev/wallet/multisig.md
           - Minotaur: dev/wallet/minotaur-multisig.md
-        - Ledger: dev/wallet/payments/ledger.md
         - Integration: dev/Integration/guide.md
         - Standards:
           - UTXO-Set Scanning Wallet API: dev/wallet/standards/eip1.md

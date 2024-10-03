@@ -1,18 +1,23 @@
-# Satergo
+# Satergo Wallet
 
-Satergo is a desktop wallet with full embedded node functionality. 
+Explore the robust capabilities of [Satergo](https://satergo.com/), a comprehensive desktop wallet designed for the Ergo ecosystem, featuring an integrated full node for those who wish to support network decentralization or prefer self-reliance.
 
-## Secure, Independent, Invaluable
-Satergo is the only wallet with support for running a full node. Users can either contribute to the Ergo network or use a remote node.
+/// details | Comprehensive Video Guide
+    {type: info, open: true}
+Embark on a visual journey to master Satergo with our in-depth video tutorial, accessible [here](https://www.youtube.com/watch?v=68d5_3vkXO4).
+///
 
-## Portable, Fully Featured, Light
-Despite having many features, Satergo is still light and easy to use. It is usable in slow or portable environments and does not depend on any other software.
+## Empowering Users with Full Node Support
+Satergo stands out as the sole wallet in the Ergo ecosystem that offers full node support, enabling users to actively participate in the network or opt for a remote node connection for convenience.
 
-## Cross-Platform, Reliable
-Satergo supports all major desktop platforms.
+## Lightweight and Feature-Rich
+Satergo is engineered to be lightweight without compromising on features, ensuring a seamless experience even on less powerful devices. It operates independently, requiring no additional software, making it a versatile choice for users on the go.
 
-## Links
-- [Satergo Website](https://satergo.com/)
-- [Satergo on Twitter](https://twitter.com/SatergoWallet)
-- [Satergo on Telegram](https://t.me/Satergo)
-- [Satergo on GitHub](https://github.com/Satergo)
+## Universal Compatibility
+Satergo's cross-platform support ensures a consistent and reliable experience across all major desktop operating systems.
+
+## Connect with Satergo
+- Discover more on the [Satergo Website](https://satergo.com/)
+- Follow the latest updates on [Twitter](https://twitter.com/SatergoWallet)
+- Join the community on [Telegram](https://t.me/Satergo)
+- Contribute or explore the code on [GitHub](https://github.com/Satergo)
