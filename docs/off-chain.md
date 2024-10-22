@@ -40,7 +40,7 @@ Watchers, functioning as cross-chain oracles, are vital to the Rosen Bridge's op
 3. **Monitor Transactions**: Vigilant monitoring of cross-chain transactions is imperative for watchers to validate them in adherence to the protocol's guidelines.
 4. **Earn Rewards**: Watchers are remunerated in ERG for their pivotal role, with the distribution reflecting their contribution to network security and functionality.
 
-### Estimated Rewards 
+### Estimated Rewards
 The reward distribution for a watcher on the Rosen network from January 22, 2024, to February 3, 2024, is exemplified below. Note that rewards are contingent on bridge traffic and may fluctuate.
 
 - ERG Watcher Rewards:  100.217 ERG
@@ -109,3 +109,4 @@ Explore the project [here](machina-finance.md)
 ## Conclusion
 
 Ergo's ecosystem presents a plethora of off-chain earning prospects through roles such as watchers, oracles, and automated bots. These roles not only offer passive income streams but also significantly contribute to the Ergo blockchain's functionality and security. By participating in these opportunities, users can bolster the decentralized ecosystem and reap the benefits of its progression and success.
+
