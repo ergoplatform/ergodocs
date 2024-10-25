@@ -162,3 +162,15 @@ To check your liquidity pool positions, visit the "Pool" tab on Uniswap.
 This guide equips you with the knowledge to participate in rsERG/ETH liquidity pools effectively. Make sure to stay informed about ongoing risks, always verify contract addresses (such as on [Etherscan](https://etherscan.io/address/0x6C060Ba738af39A09F3b45ac6487dFC9Ebb885f6)), and use trusted platforms for your transactions.
 
 *Credit for this guide goes to Vadim on Telegram.*
+
+## Resources
+
+2. **Ethereum Token Details**:
+   - **Token Name**: rsERG
+   - **Contract Address**: `0x6C060Ba738af39A09F3b45ac6487dFC9Ebb885f6`
+   - **Liquidity Pool ID**: `0x85bb44d0a6f2a5844975ef19149d9c4b0bb77b7d`
+
+3. **Cardano Token Details**:
+   - **Asset ID**: `asset1a7ej28cdf078tndzcvswm5whk2jrpd0z98vlg4`
+   - **Policy ID**: `04b95368393c821f180deee8229fbd941baaf9bd748ebcdbf7adbb14`
+   - **Token Explorer**: [CardanoScan](https://cardanoscan.io/token/04b95368393c821f180deee8229fbd941baaf9bd748ebcdbf7adbb147273455247)
