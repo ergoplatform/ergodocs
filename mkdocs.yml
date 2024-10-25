@@ -208,6 +208,7 @@ nav:
         - Uses:
           - eco/rosen/rosen-uses.md
           - rsERG-LP: tutorials/rsERGLP.md
+          - Token Integration Guides: tutorials/token_integration.md
       - Oracles: 
         - uses/oracles.md
         - Oracle Pools V2: eco/oracles-v2.md

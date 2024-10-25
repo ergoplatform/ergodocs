@@ -21,7 +21,7 @@ The process is similar to [adding liquidity](rsERGLP.md), but there are addition
 
 #### Updating Details
 
-You can **File a Token Request**: Submit an issue on the [Uniswap Default Token List GitHub](https://github.com/Uniswap/default-token-list/issues/new?assignees=&labels=token+request&template=token-request.md&title=Add+%7BTOKEN_SYMBOL%7D%3A+%7BTOKEN_NAME%7D) with your token details. Ensure that token information such as decimals, symbol, and name is accurately reflected from the token contracts. 
+You can **File a Token Request**: Submit an issue on the [Uniswap Default Token List GitHub](https://github.com/Uniswap/default-token-list/issues/new?assignees=&labels=token+request&template=token-request.md&title=Add+%7BTOKEN_SYMBOL%7D%3A+%7BTOKEN_NAME%7D) with your token details. Ensure that token information such as decimals, symbol, and name is accurately reflected from the token contracts.
 
 Prioritizing a listing on CoinGecko is beneficial, as it serves as a data source for various platforms. Once listed, your token details will automatically propagate to multiple other services, reducing the need for additional manual updates.
 
