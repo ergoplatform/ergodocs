@@ -1,58 +1,64 @@
+# Integration Guide for Bridging ERG Tokens
 
-# Integration Guide for Bridging ERG tokens
+This guide provides a comprehensive approach to integrating and listing ERG tokens bridged to different networks, focusing on Ethereum, Cardano, and platform-specific analytics. Follow these steps to ensure your token is accurately recognized and accessible across various platforms and decentralized applications (dApps).
 
-This guide provides a comprehensive overview of the steps required to integrate and list tokens that have been bridged from ERG to ETH on various platforms. Follow these instructions to ensure your token is properly recognized and accessible across major platforms.
+## General Integration Steps
 
-## CoinGecko Integration
+### 1. CoinGecko
 
-To list your bridged token on CoinGecko, follow these steps:
+CoinGecko connects token data to multiple DeFi platforms. Listing here enhances visibility and accessibility across the ecosystem:
 
-- **Submit a New Token Request**: Visit the [CoinGecko Token Request Form](https://www.coingecko.com/request-form/tokens/new?locale=en) to submit your token details.
-- **Verification Guide**: Refer to the [CoinGecko Verification Guide](https://support.coingecko.com/hc/en-us/articles/23725417857817-Verification-Guide-for-Listing-Update-Requests-on-CoinGecko) for detailed instructions on the listing process.
+- **Submit a New Token Request**: Use the [CoinGecko Token Request Form](https://www.coingecko.com/request-form/tokens/new?locale=en) to input essential details, like the token contract address, symbol, and name.
+- **Verification Guide**: Follow the [CoinGecko Verification Guide](https://support.coingecko.com/hc/en-us/articles/23725417857817-Verification-Guide-for-Listing-Update-Requests-on-CoinGecko) to ensure your submission is accurate and meets listing criteria.
 
+### 2. DEX Integration Checklist
 
-## Ethereum
+Listing your bridged token on decentralized exchanges (DEXs) enables liquidity and trading. Each DEX has unique requirements for listing; however, general steps include:
 
-### Uniswap Integration
+- **Liquidity Pools**: Check each DEX’s documentation for specific pool requirements, such as initial liquidity contributions and associated fees.
+- **Submit a Token Request**: Many DEXs use public GitHub repositories or online forms to process token requests. Verify that the token’s details align with the contract information.
 
-To list your token on Uniswap, follow these steps:
+---
 
-The process is similar to [adding liquidity](rsERGLP.md), but there are additional requirements for initializing a pool, which incurs gas fees. These fees can vary significantly, ranging from approximately 0.05 ETH during low traffic periods to much higher amounts during peak times so please make sure you aren't paying over the odds!
+## Network-Specific Integrations
 
-#### Updating Details
+### Ethereum
 
-You can **File a Token Request**: Submit an issue on the [Uniswap Default Token List GitHub](https://github.com/Uniswap/default-token-list/issues/new?assignees=&labels=token+request&template=token-request.md&title=Add+%7BTOKEN_SYMBOL%7D%3A+%7BTOKEN_NAME%7D) with your token details. Ensure that token information such as decimals, symbol, and name is accurately reflected from the token contracts.
+Ethereum-based platforms are essential for ERG tokens bridged to the Ethereum network:
 
-Prioritizing a listing on CoinGecko is beneficial, as it serves as a data source for various platforms. Once listed, your token details will automatically propagate to multiple other services, reducing the need for additional manual updates.
+#### Uniswap
 
+1. **Liquidity Pool Setup**: Refer to the [Liquidity Guide](rsERGLP.md) for detailed steps on adding liquidity. Since gas fees vary significantly, check real-time gas prices on [ETH Gas Station](https://ethgasstation.info/) to avoid excessive costs.
+2. **Token Request on Uniswap**: Submit an issue to the [Uniswap Default Token List](https://github.com/Uniswap/default-token-list/issues/new?assignees=&labels=token+request&template=token-request.md&title=Add+%7BTOKEN_SYMBOL%7D%3A+%7BTOKEN_NAME%7D) GitHub repository. Ensure token details match the contract specifications.
 
-### Dexscreener Integration
+#### Ethereum Analytics Platforms
 
-To enhance your token's visibility on Dexscreener:
+Analytics platforms like Dexscreener and Dextools.io provide real-time data tracking for Ethereum-based tokens, enhancing visibility and attracting a larger user base:
 
-1. **Purchase Enhanced Token Info**: For $299, you can acquire [Enhanced Token Info](https://marketplace.dexscreener.com/product/token-info) to improve your token's profile.
+- **Dexscreener**: Purchase [Enhanced Token Info](https://marketplace.dexscreener.com/product/token-info) for $299 to improve your token’s profile with additional metrics, links, and a more robust display.
+- **Dextools.io Fast Track**: For quicker listing, use the Fast Track option by paying with $DEXT, $ETH, or $BNB via the [Dextools Fast Track Form](https://docs.google.com/forms/d/e/1FAIpQLSd1BAqjAl9nntlS2mOk76tE0Q-dEf-AT1bUblDXikjZ-PNP1Q/formResponse).
 
-2. **Token Page**: Access your token's page on [Dexscreener](https://dexscreener.com/ethereum/0x85bb44d0a6f2a5844975ef19149d9c4b0bb77b7d) for more details.
+---
 
-### Dextools.io Integration
+### Cardano
 
-To expedite your token's update on Dextools.io:
+Integrating with Cardano platforms extends your token's reach within the Cardano ecosystem:
 
-1. **Fast Track Update Fee**: Pay the fee using one of the following options:
-   - 1100 $DEXT
-   - 0.4 $ETH
-   - 2 $BNB
+#### Taptools
 
-2. **Submit Fast Track Request**: Complete the [Dextools Fast Track Form](https://docs.google.com/forms/d/e/1FAIpQLSd1BAqjAl9nntlS2mOk76tE0Q-dEf-AT1bUblDXikjZ-PNP1Q/formResponse) to initiate the process.
+Taptools tracks Cardano assets and supports token analytics. To list your bridged ERG token, reach out directly to Taptools through their website for specific listing steps.
 
-## Cardano
+#### Cardano DEXs
 
-### Taptools
+DEXs like Splash, Minswap, and WingRiders support bridged tokens. Visit [DeFiLlama’s Cardano section](https://defillama.com/chain/Cardano) to explore these DEXs and contact each platform individually for listing details.
 
-### DEXs
+#### Cardano Analytics Platforms
 
-Listed [here](https://defillama.com/chain/Cardano)
+Cardano-focused analytics platforms can improve visibility by providing Cardano-based metrics and trading data for your token.
+1. **Taptools.io**
+2. **Cardanoscan**: Display real-time transaction data for bridged tokens on [Cardanoscan](https://cardanoscan.io/).
+3. **AdaPulse**: AdaPulse covers Cardano asset updates and offers project-specific data for listed tokens.
 
-### dApps
+---
 
-See the current [rsERG cardano ecosystem opportunities](rosen-uses/#cardano-ecosystem-opportunities) for ideas on where to get your token listed. 
+Following these steps will help establish your bridged ERG token on various networks, ensuring broad visibility across DeFi ecosystems.

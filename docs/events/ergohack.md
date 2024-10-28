@@ -19,7 +19,7 @@ Click any of the event names below to jump directly to an overview and related r
 - (May 24) [ERGOHACK VIII: Ergo as a Smart Layer](#ergohackviii)
 - (Oct 24) ERGOHACK IV: Advancing UI/UX Design and Mining Solutions on Ergo
 
-### ERGOHACK IV
+### ERGOHACK IX
 
 ErgoHack IX will take place from Oct. 25-31, 2024 on Ergo’s Discord. Participants who have experience as UI/UX designers, front-end developers, and/or blockchain developers are all encouraged to apply. If you are a mining enthusiast or a student/hobbyist in blockchain tech, you are also welcome to submit an application.
 

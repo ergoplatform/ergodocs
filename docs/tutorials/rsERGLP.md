@@ -58,26 +58,8 @@ By following these steps, you can efficiently bridge your assets using Rosen Bri
 
 
 
----
-
-## Adding rsERG to MetaMask
-
-After bridging the rsERG token, you may need to manually add rsERG to your MetaMask to view your assets. Here’s how to do it:
-
-### Step 1: Open MetaMask
-- In your MetaMask wallet, click on **"Assets"**.
-
-### Step 2: Add Token
-- Scroll down and click on **"Import Tokens"**.
-
-### Step 3: Add Custom Token
-- Paste the rsERG contract address (`0x6C060Ba738af39A09F3b45ac6487dFC9Ebb885f6`) into the **Token Contract Address** field.
 
 
-### Step 4: Confirm
-- Click **"Add Custom Token"** and your rsERG tokens will now be visible in your MetaMask wallet.
-
----
 
 ## Step-by-Step: Providing Liquidity on Uniswap
 
@@ -88,8 +70,6 @@ Follow these steps to provide liquidity in the rsERG/ETH pool on Uniswap:
 
 ### Step 1: Open Uniswap
 - Access Uniswap via [this link](https://app.uniswap.org/) or by visiting it through a reliable source like DefiLlama (navigate to Chains > Ethereum > Uniswap).
-
-
 
 ### Step 2: Connect Your Wallet
 
@@ -116,6 +96,8 @@ Follow these steps to provide liquidity in the rsERG/ETH pool on Uniswap:
 
 ![Choosing ETH/rsERG Pair](7.jpg)
 
+
+You can also [add to the rsBTC pool]( https://app.uniswap.org/pools/840081), that way it may give btc holders some incentive to use the bridge:
 ### Step 6: Select the Fee Tier
 - The rsERG/ETH pair has a 1% fee pool, which is usually selected by default.
 
