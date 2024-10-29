@@ -1,19 +1,7 @@
-# Comprehensive Guide: Participating in rsERG/ETH Liquidity Pools
+# Comprehensive Guide: Participating in rsERG Liquidity Pools
 
 This guide walks you through the process of participating in rsERG/ETH liquidity pools. It covers essential precautions, the bridging process, and how to provide liquidity on Uniswap step by step. 
 
-
----
-
-## Table of Contents
-1. [Important Notes](#important-notes)
-2. [Preparing for the Bridge](#preparing-for-the-bridge)
-3. [Bridging Assets Using Rosen](#bridging-assets-using-rosen)
-4. [Adding rsERG to MetaMask](#adding-rserg-to-metamask)
-5. [Step-by-Step: Providing Liquidity on Uniswap](#step-by-step-providing-liquidity-on-uniswap)
-6. [Additional Tips and Notes](#additional-tips-and-notes)
-
----
 
 ## Important Notes
 
@@ -55,11 +43,7 @@ By following these steps, you can efficiently bridge your assets using Rosen Bri
 -  **Transaction Timing**: Transfers typically take around 2 hours, but delays can occur.
 - **Monitor Transaction Status**: Track your transaction progress on the [Rosen events page](https://app.rosen.tech/events).
 
-
-
-
-
-
+---
 
 ## Step-by-Step: Providing Liquidity on Uniswap
 
@@ -91,13 +75,11 @@ Follow these steps to provide liquidity in the rsERG/ETH pool on Uniswap:
 
 ![Access Pool](5.jpg)
 
-### Step 5: Choose the ETH/rsERG Pair
-- Enter ETH in the left field and copy-paste the rsERG contract address (`0x6C060Ba738af39A09F3b45ac6487dFC9Ebb885f6`) on the right side.
+### Step 5: Choose Pair
+- Enter ETH in the left field and rsERG from the dropdown list next to it.
 
-![Choosing ETH/rsERG Pair](7.jpg)
+You can also [add to the rsBTC pool](https://app.uniswap.org/pools/840081), which may give BTC holders some incentive to use the bridge.
 
-
-You can also [add to the rsBTC pool]( https://app.uniswap.org/pools/840081), that way it may give btc holders some incentive to use the bridge:
 ### Step 6: Select the Fee Tier
 - The rsERG/ETH pair has a 1% fee pool, which is usually selected by default.
 
@@ -132,6 +114,27 @@ Congratulations! You’ve successfully added assets to the rsERG/ETH liquidity p
 
 ---
 
+## Best Practices for Yield Farming and Liquidity Provision on Ergo
+
+- **Risk Management**: Understand the risks involved, including impermanent loss in liquidity pools and the volatility of the crypto market.
+- **Research**: Stay informed about the latest Ergo DeFi projects and yield farming opportunities. Joining the Ergo community on forums and social media can provide valuable insights.
+- **Diversify**: Spread your investments across different pools and farming opportunities to mitigate risk.
+- **Monitor Performance**: Regularly check the performance of your investments. Be prepared to adjust your strategy in response to changing market conditions or new opportunities.
+
+---
+
+## Leveraging SigmaUSD and SigmaRSV for Yield on Ergo
+
+SigmaUSD, along with SigmaRSV, offers varied strategies for yield farming within the Ergo ecosystem. These options range from direct minting to engaging in secondary market trades, each presenting unique opportunities and considerations.
+
+- **Minting SigmaUSD**: You can create SigmaUSD through a process of collateralization on the Ergo blockchain. While direct minting is typically done via platforms like SigmaUSD and TokenJay, or through the Minotaur wallet, it’s important to note that SigmaUSD’s site isn’t ‘official’ but rather one of the various user-friendly interfaces for the protocol.
+
+- **Secondary Market Dynamics**: SigmaUSD can also be acquired from secondary markets like the Spectrum liquidity pool. Here, the price of SigmaUSD may vary from its ideal peg, primarily due to supply and demand dynamics. For instance, if SigmaUSD’s demand exceeds its supply in the pool, its price might slightly increase above $1, and vice versa.
+
+- **Arbitrage Opportunities**: These price variations in the secondary market can lead to arbitrage opportunities. Savvy traders might buy SigmaUSD at a lower price from the secondary market and redeem it for $1 worth of collateral or sell it at a higher price when the demand spikes, earning a profit from these price discrepancies.
+
+---
+
 ## Additional Tips and Notes
 
 - **Track Your LP Tokens**: After adding liquidity, Uniswap may prompt you to add rsERG and LP tokens to your token list. Do this so that they appear in your wallet's assets tab.
@@ -147,12 +150,12 @@ This guide equips you with the knowledge to participate in rsERG/ETH liquidity p
 
 ## Resources
 
-2. **Ethereum Token Details**:
+1. **Ethereum Token Details**:
    - **Token Name**: rsERG
    - **Contract Address**: `0x6C060Ba738af39A09F3b45ac6487dFC9Ebb885f6`
    - **Liquidity Pool ID**: `0x85bb44d0a6f2a5844975ef19149d9c4b0bb77b7d`
 
-3. **Cardano Token Details**:
+2. **Cardano Token Details**:
    - **Asset ID**: `asset1a7ej28cdf078tndzcvswm5whk2jrpd0z98vlg4`
    - **Policy ID**: `04b95368393c821f180deee8229fbd941baaf9bd748ebcdbf7adbb14`
    - **Token Explorer**: [CardanoScan](https://cardanoscan.io/token/04b95368393c821f180deee8229fbd941baaf9bd748ebcdbf7adbb147273455247)
