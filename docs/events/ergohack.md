@@ -21,9 +21,47 @@ Click any of the event names below to jump directly to an overview and related r
 
 ### ERGOHACK IX
 
-ErgoHack IX will take place from Oct. 25-31, 2024 on Ergo’s Discord. Participants who have experience as UI/UX designers, front-end developers, and/or blockchain developers are all encouraged to apply. If you are a mining enthusiast or a student/hobbyist in blockchain tech, you are also welcome to submit an application.
 
-- [Announcement on the blog](https://ergoplatform.org/en/blog/ErgoHack-9-Advancing-Design-and-Mining-Solutions-on-Ergo/)
+ErgoHack IX [ran from October 25-31](https://ergoplatform.org/en/blog/ErgoHack-9-Advancing-Design-and-Mining-Solutions-on-Ergo/), bringing together developers, designers, blockchain enthusiasts, and students on Ergo’s Discord for a UI/UX-focused hackathon. Here’s a recap of the standout projects:
+
+
+#### 1. **Bene: Fundraising Platform**
+   - **Overview**: A decentralized app for projects to raise funds in ERG, using participation tokens to create a transparent community-driven support mechanism.
+   - [**Documentation**](bene.md) | [**Demo Video**](https://drive.google.com/file/d/1LPFa34CLwML5Y7ktFkmCrwgYTAQdl9W9/view?usp=sharing) | [**Presentation**](https://drive.google.com/file/d/1b0LvLwME64-e-8Hie_O46HDb32nHv9p8/view?usp=sharing)
+
+#### 2. **Last Byte Bar**
+   - **Overview**: Mints NFTs and tokens upon block discovery, rewarding miners with digital assets based on block data and mining contributions.
+   - **Features**: Algorithmic NFTs, fungible tokens influenced by block data, miner rewards.
+   - [**Documentation**](miners-rights.md) | [**Final Report**](pdf/ergohackix/mrp.pdf) | [**Presentation**](https://drive.google.com/file/d/1rUoahftGSvxDDI_U5RjSywLqS59QCu2i/view?usp=sharing)
+
+#### 3. **OnErgo**
+   - **Overview**: Central hub for Ergo community engagement, offering a dynamic event calendar and reward-based learning platform.
+   - [**Documentation**](onergo.md) | [**Presentation**](https://drive.google.com/file/d/1LiHsOrNhi8fXCbeNbk3UEMLEuPvRl69o/view?usp=sharing)
+
+#### 4. **Satergo Offline Vault**
+   - **Overview**: An Android app for secure offline seed storage, connecting to desktops via Bluetooth for transaction security.
+   - [**Documentation**](satergo-vault.md) | [**Final Video Presentation**](pdf/ergohackix/SatergoOfflineVault.mp4)
+
+#### 5. **Minotaur**
+   - **Overview**: Enhances multi-sig wallet transactions by improving communication among wallet signers, making collaborative signing faster and more reliable.
+   - [**Documentation**](minotaur-multisig.md#signing-server-for-multi-sig-communication-ergohack-ix) | [**Signing Demo**](https://drive.google.com/file/d/17ygkTGbkMyxQgs-jkl-5RZNBBd3jnoji/view?usp=sharing) | [**Registration Demo**](https://drive.google.com/file/d/1lZhlwJIOsnM1bIX5Ts-iSsjhpxRHxLKY/view?usp=sharing)
+
+#### 6. **OneStopShop**
+   - **Overview**: An onboarding guide for newcomers to the Ergo ecosystem, covering essential resources from wallets and DApps to transactions.
+   - [**Documentation**](one-stop-shop.md)
+
+#### 7. **Cup of Sugar**
+   - **Overview**: A community-centric micro grocer and café promoting local sourcing, blockchain use for local economies, and exploring LETS and decentralized incentives.
+   - [**Documentation**](cup-of-sugar.md) |[**Website**](https://cupofsugar.io/)
+
+#### 8. **3D Explorer**
+   - **Overview**: A 3D visualization tool that brings Ergo’s blockchain data to life, helping users understand the UTXO model and blockchain dynamics.
+   - [**Final Report**](pdf/ergohackix/ergohack-#9-3d-explorer.pdf) | [**Demo Video**](https://youtu.be/uspsmPDSqgw) | [**Try it**](https://www.3rgo.xyz/)
+
+#### 9. **Community Liquidity Bootstrap (CLB)**
+   - **Overview**: A nonprofit initiative to address liquidity in Ergo without venture capital, engaging the community with accessible returns.
+   - [**Follow on Twitter**](https://x.com/CLBDeFi)
+
 
 
 ### ERGOHACKVIII

@@ -21,3 +21,5 @@ Satergo's cross-platform support ensures a consistent and reliable experience ac
 - Follow the latest updates on [Twitter](https://twitter.com/SatergoWallet)
 - Join the community on [Telegram](https://t.me/Satergo)
 - Contribute or explore the code on [GitHub](https://github.com/Satergo)
+- Learn more about the [Satergo Offline Vault](satergo-vault.md), an Android application that securely stores your encrypted seed phrase and connects with desktops via Bluetooth for transaction safety.
+

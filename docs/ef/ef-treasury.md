@@ -1,9 +1,20 @@
 # Ergo Foundation Treasury
 
+## Quick Navigation
+- [Ergo Foundation Treasury](#ergo-foundation-treasury)
+  - [Quick Navigation](#quick-navigation)
+  - [Initial Allocation {#initial-allocation}](#initial-allocation-initial-allocation)
+  - [Holdings](#holdings)
+  - [Wallets](#wallets)
+  - [Salaries](#salaries)
+  - [Historic Spending](#historic-spending)
+  - [Votings](#votings)
+
+## Initial Allocation {#initial-allocation}
+
 The Ergo Foundation initially received an allocation of 4,330,776 ERG, which is equivalent to 4.43% of the total supply.
 
 A significant portion of this Treasury has been expended for the benefit of the Ergo protocol and community. Even during periods of low ERG price, the Foundation continued to invest in order to foster and grow the Ergo ecosystem.
-
 
 /// details | EFYT
      {type: info, open: true}
@@ -12,7 +23,7 @@ Additionally, the Treasury exchanged 1,782,615 ERG for [EFYT](efyt.md), a token 
 After subtracting the 1,782,615 ERG exchanged for EFYT, the Ergo Foundation was left with 2,548,161 ERG, which is approximately 2.6% of the total supply.
 ///
 
-For more information on the Ergo's emission schedule, tokenomics and allocation, visit the [emission](emission.md) section.
+For more information on Ergo's emission schedule, tokenomics and allocation, visit the [emission](emission.md) section.
 
 ## Holdings
 
@@ -45,14 +56,13 @@ The Ergo Foundation's treasury consists of both liquid and illiquid assets, prov
 As these projects mature and their tokens become more liquid, the Ergo Foundation will have the opportunity to leverage these assets to further augment its expenditure capabilities and support the Ergo ecosystem more effectively.
 ///
 
+## Wallets
 
-### Wallets
 You can find the Ergo Foundation treasury and current balance on-chain at the following locations:
 
 - [EF Multi-sig for ERG + Tokens](https://ergexplorer.com/addresses#2BggBDgr9n9geTKjCJBCEWMReb2i7wcocw7fjVd3QyM7qFMtmVHyoFr78kChAxGekJxUTZru2aMjyZKcVoPfHX5d12RqNrnEAgzGqUCoJ2v9xCqmT75V5xdhT1JBqQbeRKJZT4XGMg7hZAqVvbMsQF26nkWRPqiCqPoKfy7GZw9zuvr15qaqbB2ZcZXaGTrvqDN2o15SRTJwvVADDx2inzrk3U25cdjFWYBc6ECKSjmYpPWL8fn4msxsBZKNiGbP8vDrYWqQuPtMwJ5Ag)
      - [Hot Wallet](https://ergexplorer.com/addresses#9g1ReLmsbGevkTjfPGMdRMoFRdrAVskZVmSBpaEdVW2DfG4HDWm) managed by the Treasurer when sending payments.
 - [EF BTC Multi-sig](https://www.blockchain.com/explorer/addresses/btc/bc1q7zd0snrmt06vtq5ehl98gx30a79g4y4fz48wmt4l4vstreh3lz2s6t0axz)
-
 
 ## Salaries
 
@@ -72,8 +82,6 @@ pie title 2023 Salary Averages
      {type: info, open: true}
 More information on each of these roles can be seen on [this page](ef-scope.md#key-areas-of-focus).
 ///
-
-
 
 ## Historic Spending
 
@@ -97,12 +105,10 @@ In addition to the direct ERG spending above in 2023,
 - 160,000 SPF was donated to the [Sigmanauts](sigmanauts.md) Treasury
 - Totaling 1,622,000 SPF 
 
-
 /// details | The Ergo Foundations Future
      {type: info, open: true}
 Please see [this page](ef-future.md) for more information on the long-term goals of The Foundation.
 ///
-
 
 ## Votings
 
