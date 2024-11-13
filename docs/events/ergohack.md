@@ -17,7 +17,7 @@ Click any of the event names below to jump directly to an overview and related r
 - (Feb 23) [ERGOHACK VI: Cypherpunk Finance](#ergohackvi)
 - (Oct 23) [ERGOHACK VII: Future of Finance: Ways of Adoption](#ergohackvii)
 - (May 24) [ERGOHACK VIII: Ergo as a Smart Layer](#ergohackviii)
-- (Oct 24) ERGOHACK IV: Advancing UI/UX Design and Mining Solutions on Ergo
+- (Oct 24) [ERGOHACK IX: Advancing UI/UX Design and Mining Solutions on Ergo](#ergohackix)
 
 ### ERGOHACK IX
 
@@ -60,7 +60,7 @@ ErgoHack IX [ran from October 25-31](https://ergoplatform.org/en/blog/ErgoHack-9
 
 #### 9. **Community Liquidity Bootstrap (CLB)**
    - **Overview**: A nonprofit initiative to address liquidity in Ergo without venture capital, engaging the community with accessible returns.
-   - [**Follow on Twitter**](https://x.com/CLBDeFi)
+   - [**Follow on Twitter**](https://x.com/CLBDeFi) | [**GitHub**](https://github.com/AcoSmrkas/community-liquidity-bootstrap)
 
 
 
@@ -84,113 +84,112 @@ ErgoHack IX [ran from October 25-31](https://ergoplatform.org/en/blog/ErgoHack-9
 
 ### ERGOHACKVII
 
-- [**Satergo**](#light-node-with-satergo): Light nodes with Satergo.
-- [**SideChainProto**](#sidechainproto): Exploring the implementation of sidechains on Ergo.
-- [**Lilium**](#lilium-event-ticketing): Event Ticketing.
-- [**Atomic Swap**](#atomic-swap-web-interface): Web Interface.
-- [**Ergsnap**](#ergsnap-metamask-integration): Metamask Integration.
-- [**Hodlbox**](#hodlbox): Gamified time-based non-custodial vault.
-- [**ReputationSystemTeam**](#reputationsystemteam): A reputation system on Ergo.
-- [**Ergo Poor Man's Wallet**](#ergo-poor-mans-wallet): A cheap hardware wallet solution.
-- [**Auction Coin**](#auctioncoin)
+1. [**Satergo**](#light-node-with-satergo): Light nodes with Satergo.
+2. [**SideChainProto**](#sidechainproto): Exploring the implementation of sidechains on Ergo.
+3. [**Lilium**](#lilium-event-ticketing): Event Ticketing.
+4. [**Atomic Swap**](#atomic-swap-web-interface): Web Interface.
+5. [**Ergsnap**](#ergsnap-metamask-integration): Metamask Integration.
+6. [**Hodlbox**](#hodlbox): Gamified time-based non-custodial vault.
+7. [**ReputationSystemTeam**](#reputationsystemteam): A reputation system on Ergo.
+8. [**Ergo Poor Man's Wallet**](#ergo-poor-mans-wallet): A cheap hardware wallet solution.
+9. [**Auction Coin**](#auctioncoin): Issues and auctions tokens with a game-theoretic mechanism for speculative buybacks.
 
 ### ERGOHACKVI
 
-Winning Projects
+1. [**Analog-Ergo**](#analog-ergo): Cross-chain P2P atomic marketplace
+2. [**Ergo Stats**](#ergo-stats): Mobile app for ergo.watch/tokenJay
+3. [**ChainCash**](#chaincash): Elastic P2P money creation via trust & blockchain assets
+4. [**Lilium**](#lilium): Decentralised NFT Platform
+5. [**Riadne Hlady2**](#riadne-hlady2): MultiSig token swapping
+6. [**Privacy Guide**](#privacy-guide): Privacy Fundamentals Course
+7. [**Perma Ergo**](#perma-ergo): Real World Food Production Decentralisation
+8. [**Net Notes**](#net-notes): Node browser
+9. [**Sigma Subscriptions**](#sigma-subscriptions): Easily run a subscription service on Ergo.
+10. [**Quantum Swap**](#quantum-swap): P2P NFT & Native Asset Exchange Service.
+11. [**SIPS**](#sips): Sigma Improvement Proposals.
+12. [**Explorer UI**](#explorer-ui): Improving the ergo explorer experience.
+13. [**SigmaStamp**](#sigmastamp): A timestamping service.
+
+#### Winning Projects
 
 1. [**Ergode**](#ergode): Ergo Node on smart devices
 2. [**SigmaO**](#sigmao): Options on Ergo
 3. [**Lithos**](#lithos): Decentralised block production
 
 
-- [**Analog-Ergo**](#analog-ergo): Cross-chain P2P atomic marketplace
-- [**Ergo Stats**](#ergo-stats): Mobile app for ergo.watch/tokenJay
-- [**ChainCash**](#chaincash): Elastic P2P money creation via trust & blockchain assets
-- [**Lilium**](#lilium): Decentralised NFT Platform
-- [**Riadne Hlady2**](#riadne-hlady2): MultiSig token swapping
-- [**Privacy Guide**](#privacy-guide): Privacy Fundamentals Course
-- [**Perma Ergo**](#perma-ergo): Real World Food Production Decentralisation
-- [**Net Notes**](#net-notes): Node browser
-- [**Sigma Subscriptions**](#sigma-subscriptions): Easily run a subscription service on Ergo.
-- [**Quantum Swap**](#quantum-swap): P2P NFT & Native Asset Exchange Service.
-- [**SIPS**](#sips): Sigma Improvement Proposals.
-- [**Explorer UI**](#explorer-ui): Improving the ergo explorer experience.
-- [**SigmaStamp**](#sigmastamp): A timestamping service.
-
-
 ### ERGOHACKV
 
-- [**DumDumDum:**](#dumdumdum) A decentralised **on-chain** Twitter alternative.
-- [**Cyti:**](#cyti) A *mineable* smart contract that allows you to Choose Your Token ID.
-- [**EIP38**](#eip38-partial-voting) aims to empower miners with a 'partial' vote option.
-- [**Succinct, Non-Interactive Share Proofs**](#snisp) allow for efficient on-chain calculations of PoW.
-- [**Paizo:**](#paizo) on-chain governance education for miners.
-- [**Ergo-Payroll:**](#ergo-payroll) Automated payroll distribution tool.
-- [**Obolflip:**](#obolflip) A decentralised CoinFlip game.
-- [**ergo-audit**](#ergo-audit) is *code-auditing* DAO.
-- [**ErgoNames:**](#ergonames) bringing easy to remember names to Ergo.
-- [**SigmaBalls:**](#sigmaballs) An options trading solution.
-- [**MineErgo:**](#mineergo) Rewarding miners with NFTs.
-- [**Sigma-Rust-Jit**](#sigma-rust-jit) is enhancing [sigma-rust](rust.md) with JIT Costing.
-- [**Satergo**](https://satergo.com/) is adding a stratum mining server module to their wallet.
-- [**Dlop**](#dlop-art-generator) is creating a art generator for the community.
+1. [**DumDumDum:**](#dumdumdum) A decentralised **on-chain** Twitter alternative.
+2. [**Cyti:**](#cyti) A *mineable* smart contract that allows you to Choose Your Token ID.
+3. [**EIP38**](#eip38-partial-voting) aims to empower miners with a 'partial' vote option.
+4. [**Succinct, Non-Interactive Share Proofs**](#snisp) allow for efficient on-chain calculations of PoW.
+5. [**Paizo:**](#paizo) on-chain governance education for miners.
+6. [**Ergo-Payroll:**](#ergo-payroll) Automated payroll distribution tool.
+7. [**Obolflip:**](#obolflip) A decentralised CoinFlip game.
+8. [**ergo-audit**](#ergo-audit) is *code-auditing* DAO.
+9. [**ErgoNames:**](#ergonames) bringing easy to remember names to Ergo.
+10. [**SigmaBalls:**](#sigmaballs) An options trading solution.
+11. [**MineErgo:**](#mineergo) Rewarding miners with NFTs.
+12. [**Sigma-Rust-Jit**](#sigma-rust-jit) is enhancing [sigma-rust](rust.md) with JIT Costing.
+13. [**Satergo**](https://satergo.com/) is adding a stratum mining server module to their wallet.
+14. [**Dlop**](#dlop-art-generator) is creating a art generator for the community.
 
 
 ### ERGOHACKFEST
 
-- [**Azorus**](#Azorus) An intelligence platform for UTXO Blockchains
-- [**ergo-graphql**](#ergo-graphql) interactive JavaScript tutorials for dApp developers
-- [**dAppStep**](#dAppstep) JavaScript Tutorial for devs
-- [**ErgoSock & Ergonode**](#ergosock) see [ergonodes.net](http://ergonodes.net/)
-- [**ErgoNation**](#ergonation) is decentralised ID and governance project.
-- [**ErgoSphere**](#ergosphere) is an *Umbrel-like* solution for Ergo see [ergosphere.cloud](https://ergosphere.cloud/)
-- [**LETS**](#lets): Local Exchange Trading System
-- [**Multisig**](#multisig) Multi-Signature Wallet
-- [**NightOwl**](#nightowl) decentralised casino.
-- [**Oracle-Pools2**](#oracle-pools2) MVP of EIP-23
-- [**SwampAudio**](#swampaudio) is a Layer-2 Music Launchpad
-- [**Tensile**](#tensile) is a decentralised, open source and non-custodial derivatives platform.
-- [**ColivingDAO**](#ColivingDAO) aims to facilitate a global ecosystem of coliving projects.
-- [**RubyNFTs**](#rubynfts) minting library.
-- [**SentientChain**](#sentientswap) gaming sidechain.
-- [**InERGitance**](#inergitance) a decentralised inheritance solution for the Ergo blockchain
-- [**Platform137**](#platform137) mining GUI interface
-- [**Ergrow**](#ergrow) was a fun project involving ergo and a love for gardening.
+1. [**Azorus**](#Azorus): An intelligence platform for UTXO Blockchains.
+2. [**ergo-graphql**](#ergo-graphql): Interactive JavaScript tutorials for dApp developers.
+3. [**dAppStep**](#dAppstep): JavaScript Tutorial for devs.
+4. [**ErgoSock & Ergonode**](#ergosock): See [ergonodes.net](http://ergonodes.net/).
+5. [**ErgoNation**](#ergonation): A decentralised ID and governance project.
+6. [**ErgoSphere**](#ergosphere): An *Umbrel-like* solution for Ergo, see [ergosphere.cloud](https://ergosphere.cloud/).
+7. [**LETS**](#lets): Local Exchange Trading System.
+8. [**Multisig**](#multisig): Multi-Signature Wallet.
+9. [**NightOwl**](#nightowl): Decentralised casino.
+10. [**Oracle-Pools2**](#oracle-pools2): MVP of EIP-23.
+11. [**SwampAudio**](#swampaudio): A Layer-2 Music Launchpad.
+12. [**Tensile**](#tensile): A decentralised, open source, and non-custodial derivatives platform.
+13. [**ColivingDAO**](#ColivingDAO): Aims to facilitate a global ecosystem of coliving projects.
+14. [**RubyNFTs**](#rubynfts): Minting library.
+15. [**SentientChain**](#sentientswap): Gaming sidechain.
+16. [**InERGitance**](#inergitance): A decentralised inheritance solution for the Ergo blockchain.
+17. [**Platform137**](#platform137): Mining GUI interface.
+18. [**Ergrow**](#ergrow): A fun project involving Ergo and a love for gardening.
 
 ### ERGOHACKIII
 
-- [**The Delphi Project**](#the-delphi-project)
-- [**Ergo-Castanet**](#ergo-castanet)
-- [**SkyHarbor**](#skyharbor)
-- [**GuapSwap**](pdf/GuapSwap_-_ErgoHack3_Project_Report.pdf)
-- [**anetaBTC**](https://medium.com/@anetaBTC/ergohack-summary-and-development-update-dad3224227b7)
-- [**Hypo10use**](#hypo10use)
-- [**NightOwl**](#nightowl)
-- [**ErgoDNS**](https://www.youtube.com/watch?v=G7glbtnAnMY)
-- [**Stealth Addresses #1**](https://github.com/aragogi/Stealth-doc)
-- [**Stealth Addresses #2**](https://github.com/ergoplatform/ergo-playgrounds/pull/24)
-- [**Nautilus**](https://github.com/capt-nemo429/nautilus-wallet/pull/6)
-- [**SAFEW**](pdf/SAFEW_ergohack3_report.pdf)
-- [**Satergo**](https://drive.google.com/drive/folders/1ERas6ZyJpkY_7W1az5q0X88OfYu5OipC?usp=sharing)
+1. [**The Delphi Project**](#the-delphi-project)
+2. [**Ergo-Castanet**](#ergo-castanet)
+3. [**SkyHarbor**](#skyharbor)
+4. [**GuapSwap**](pdf/GuapSwap_-_ErgoHack3_Project_Report.pdf)
+5. [**anetaBTC**](https://medium.com/@anetaBTC/ergohack-summary-and-development-update-dad3224227b7)
+6. [**Hypo10use**](#hypo10use)
+7. [**NightOwl**](#nightowl)
+8. [**ErgoDNS**](https://www.youtube.com/watch?v=G7glbtnAnMY)
+9. [**Stealth Addresses #1**](https://github.com/aragogi/Stealth-doc)
+10. [**Stealth Addresses #2**](https://github.com/ergoplatform/ergo-playgrounds/pull/24)
+11. [**Nautilus**](https://github.com/capt-nemo429/nautilus-wallet/pull/6)
+12. [**SAFEW**](pdf/SAFEW_ergohack3_report.pdf)
+13. [**Satergo**](https://drive.google.com/drive/folders/1ERas6ZyJpkY_7W1az5q0X88OfYu5OipC?usp=sharing)
 
 ### ERGOHACKII
 
-- [**ErgoLend**](https://github.com/Ergo-Lend/) _(now live @ [ergolend.org](https://ergolend.org))_
-- [**Minotaur**](https://github.com/minotaur-ergo/minotaur-wallet) wallet
-- [**Ergopad**](https://github.com/Ergohack-Dashboard-Project) _(now live @ [ergopad.io](https://ergopad.io))_
-- [**Subpooling**](https://github.com/K-Singh/ergo-subpooling) _(now live @ [GetBlok.io](https://getblok.io))_
-- [**HYPO10USE**](https://github.com/hypo10use/quid-games) developed *QUIDGAMES*
-- **Ergo Audio**
+1. [**ErgoLend**](https://github.com/Ergo-Lend/) _(now live @ [ergolend.org](https://ergolend.org))_
+2. [**Minotaur**](https://github.com/minotaur-ergo/minotaur-wallet) wallet
+3. [**Ergopad**](https://github.com/Ergohack-Dashboard-Project) _(now live @ [ergopad.io](https://ergopad.io))_
+4. [**Subpooling**](https://github.com/K-Singh/ergo-subpooling) _(now live @ [GetBlok.io](https://getblok.io))_
+5. [**HYPO10USE**](https://github.com/hypo10use/quid-games) developed *QUIDGAMES*
+6. **Ergo Audio**
 
 ### ERGOHACKI
 
 
-- [ErgoRaffle](https://github.com/ErgoRaffle) _(now live @ [ergoraffle.com](https://ergoraffle.com))_
-- [Smart Pools](https://github.com/WilfordGrimley/ErgoSmartPools) _(Inspired [GetBlok.io](https://getblok.io))_
-- [Sigma Stamp](https://github.com/sigmastamp)
-- [Simpler Joint Spending Tool](https://www.ergoforum.org/t/a-simpler-collective-spending-approach-for-everyone)
-- Ergo Index Fund
-- Ergo Charts
+1. [ErgoRaffle](https://github.com/ErgoRaffle) _(now live @ [ergoraffle.com](https://ergoraffle.com))_
+2. [Smart Pools](https://github.com/WilfordGrimley/ErgoSmartPools) _(Inspired [GetBlok.io](https://getblok.io))_
+3. [Sigma Stamp](https://github.com/sigmastamp)
+4. [Simpler Joint Spending Tool](https://www.ergoforum.org/t/a-simpler-collective-spending-approach-for-everyone)
+5. Ergo Index Fund
+6. Ergo Charts
 
 
 ##  Events
