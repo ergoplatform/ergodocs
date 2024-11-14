@@ -210,7 +210,7 @@ Ergo is developed a by a combination of the [Ergo Foundation](ergo-foundation.md
         - **03/23**: [Mission Statement](https://docs.google.com/document/d/1J6PdyyxoEEqI0nEr64ZZBGU4Lkr8Cr37GqNSs4qHo7Q/edit) published.
         - **00/23**: The Sigmanauts attend their first event @ RareEVO.
         - **00/23**: The Ergo Foundation donates 160,000 SPF to the Sigmanauts treasury.
-        - **00/23**: The Sigmanauts begin managing the Ergo_Foundation Twitter account.
+        - **00/23**: The Sigmanauts begin managing the [@ergo_platform](https://x.com/ergo_platform) Twitter account.
 - **Integrations:**
     - Bitpanda listing
     - nonkyc.io
