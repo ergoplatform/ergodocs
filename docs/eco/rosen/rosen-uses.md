@@ -12,40 +12,63 @@ This functionality opens up new possibilities for token holders across these eco
 
 ## Supported Tokens
 
-| Token | Description | Network |
-|-------|-------------|---------|
-| ERG   | Native Ergo token | Ergo |
-| ADA   | Native Cardano token | Cardano |
-| BTC   | Native Bitcoin token | Bitcoin |
-| ETH   | Native Ethereum token | Ethereum |
-| BNB   | Native Binance Smart Chain token | Binance Smart Chain |
-| [SigUSD / SigRSV](sigmausd.md) | Ergo stablecoin and reserve | Ergo |
-| RSN   | Rosen Bridge token | Ergo |
-| [COMET](https://thecomettoken.com/) | Ergo ecosystem token | Ergo |
-| SPF   | Spectrum Finance token | Ergo |
-| Hosky | Cardano meme token | Cardano |
-| AHT   | ergouactions.org | Ergo |
-| BANA  | New supported token | Ergo |
-| Bober | New supported token | Ergo |
-| COS   | [Cup of Sugar](cup-of-sugar.md) | Ergo |
-| CYPX  | [Cyberverse](cyberverse.md) | TBD |
-| EPOS  | [EPOS](epos.md) | Ergo |
-| ErgOne| [ErgOne](ergone.md) | Ergo |
-| GIF   | [GreasyCex](greasycex.md) | Ergo |
-| GluonW GAU | [Gluon](gluon.md) | Ergo |
-| GluonW GAUC | [Gluon](gluon.md) | Ergo |
-| MEW   | [MewFinance](mewfinance.md) | Ergo |
-| MNT   | New supported token | Ergo |
-| NIKEPIG | New supported token | Cardano |
-| Paideia | [DAO Toolkit](paideia.md) | Ergo |
-| QUACKS | [Duckpools](duckpools.md) (Lending) | Ergo |
-| SUGAR | New supported token | TBC |
-| O     | New supported token | Cardano |
-| Troll | New supported token | Ergo |
-| WALRUS| New supported token | Ergo |
-| DIS   | New supported token | TBC |
-| sOADA | New supported token | Cardano |
-| OADA  | New supported token | Cardano |
+You can see a full list of locked assets [here](https://app.rosen.tech/assets).
+
+
+### Ergo Network
+| Token | Description |
+|-------|-------------|
+| ERG   | Native Ergo token |
+| [SigUSD / SigRSV](sigmausd.md) | Ergo stablecoin and reserve |
+| RSN   | Rosen Bridge token |
+| [COMET](https://thecomettoken.com/) | Ergo ecosystem token |
+| SPF   | Spectrum Finance token |
+| AHT   | ergouactions.org |
+| Bober | [Meme Coin](https://t.co/DXEIXJC8AW) |
+| COS   | [Cup of Sugar](cup-of-sugar.md) |
+| EPOS  | [EPOS](epos.md) |
+| ErgOne| [ErgOne](ergone.md) |
+| GIF   | [GreasyCex](greasycex.md) |
+| GluonW GAU | [Gluon](gluon.md) |
+| GluonW GAUC | [Gluon](gluon.md) |
+| MEW   | [MewFinance](mewfinance.md) |
+| Paideia | [DAO Toolkit](paideia.md) |
+| QUACKS | [Duckpools](duckpools.md) (Lending) |
+| Troll | New supported token |
+| WALRUS| New supported token |
+| CYPX  | [Cyberverse](cyberverse.md) |
+
+### Cardano Network
+| Token | Description |
+|-------|-------------|
+| ADA   | Native Cardano token |
+| Hosky | Cardano meme token |
+| NIKEPIG | Cardano meme token |
+| SUGAR | New supported token |
+| BANA  | New supported token |
+| O     | New supported token |
+| DIS   | New supported token |
+| sOADA | New supported token |
+| OADA  | New supported token |
+| MNT   | New supported token |
+
+
+### Bitcoin Network
+| Token | Description |
+|-------|-------------|
+| BTC   | Native Bitcoin token |
+
+### Ethereum Network
+| Token | Description |
+|-------|-------------|
+| ETH   | Native Ethereum token |
+
+### Binance Smart Chain Network
+| Token | Description |
+|-------|-------------|
+| BNB   | Native Binance Smart Chain token |
+
+
 
 ## Ergo Ecosystem Opportunities
 

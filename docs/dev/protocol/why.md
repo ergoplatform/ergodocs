@@ -30,10 +30,10 @@ Additionally, Ergo addresses sustainability through [Storage Rent](rent.md), inc
 
 Ergo transcends the traditional concept of a blockchain token, embodying **commodity money** with real-world consumption of resources for mining. This approach, rooted in securing commodities with cryptography, distinguishes Ergo with unique features:
 
-- Incentives for long-term mining stability
-- [Demurrage](storage-rent.md), reinforcing Ergo as a genuine commodity
-- Support for decentralized derivatives and DeFi without intermediaries
-- SigmaFi ([SigmaFi](sigmafi.md) bonds), a peer-to-peer DeFi solution surpassing traditional financial institutions in transparency and risk management
+- Incentives for long-term mining stability.
+- [Demurrage](storage-rent.md), reinforcing Ergo as a genuine commodity.
+- Support for decentralized derivatives and DeFi without intermediaries.
+- SigmaFi ([SigmaFi](sigmafi.md) bonds), a peer-to-peer DeFi solution surpassing traditional financial institutions in transparency and risk management.
 - Unparalleled support for developing [cryptographic protocols](crypto.md), including [non-interactive mixers](mixer.md) and [stealth addresses](stealth-address.md)
 
 Ergo's recognition as the leading PoW cryptocurrency in DeFi supply demonstrates the practical application of its innovative features.
@@ -98,7 +98,7 @@ Ergo is powered by experienced developers and researchers with strong academic b
 
 Notable contributor Alexander _kushti_ Chepurnoy co-founded smartcontract.com (now Chainlink), served as a core developer at NXT, and was among the first employees at IOHK.
 
-Visit Ergo's [Hall of Fame](https://ergoplatform.org/en/hall_of_fame/) to learn more about our contributors. For information on foundation members, refer to the [2022 Transparency Report](ergo-foundation-2022.md).
+Visit Ergo's [Hall of Fame](https://ergoplatform.org/en/hall_of_fame/) to learn more about our contributors. For information on foundation members, refer to the [EF Transparency Report](ergo-foundation.md).
 
 ### Roadmap
 

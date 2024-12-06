@@ -7,7 +7,7 @@ tags:
 
 The resources for integrating Ergo using the Go programming language are currently limited. However, there is a significant project available that serves as a valuable resource for developers working with Go.
 
-### Ergo-Golang
+## Ergo-Golang
 
 The [*ergo-golang*](https://github.com/azhiganov/ergo-golang) project is a promising tool for integrating with Ergo. At present, the project is in its initial stages and may be considered as under development. This implies that while it offers basic functionalities to interact with the Ergo Blockchain, it may not have extensive features and may not be fully tested or optimized.
 
@@ -15,4 +15,7 @@ As an open-source project, *ergo-golang* offers a fantastic opportunity for Go d
 
 Please note that if you come across any issues or require more detailed instructions, you can always connect with the Ergo community. The [`#development` Discord channel](https://discord.gg/kj7s7nb) is an excellent platform to receive support from seasoned Ergo developers and community members.
 
+### Ergo-lib-go
+
+[*ergo-lib-go*](https://github.com/sigmaspace-io/ergo-lib-go/tree/main) is a Go wrapper around C bindings for ErgoLib from sigma-rust. This library provides Go developers with the ability to interact with the Ergo blockchain using the robust functionalities of ErgoLib, which is originally written in Rust.
 

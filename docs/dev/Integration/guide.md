@@ -120,6 +120,7 @@ Available libraries:
 - [*ergo-wallet*](https://mvnrepository.com/artifact/org.ergoplatform/ergo-wallet): Developed in Java, source code available in the [Ergo node repository](https://github.com/ergoplatform/ergo/tree/master/ergo-wallet).
 - [*sigma-rust*](https://github.com/ergoplatform/sigma-rust/): A Rust library with WASM bindings for JavaScript/TypeScript.
 - [*ergo-golang*](https://github.com/azhiganov/ergo-golang): An early-stage Go library.
+- [*ergo-lib-go*](https://github.com/sigmaspace-io/ergo-lib-go/tree/main): A Go library for Ergo.
 
 Ergo's transactions, akin to Bitcoin, consist of multiple inputs and outputs. Unspent outputs, known as single-use entities, are used once. Although Ergo is built from the ground up, its scripts and transaction formats are distinct from Bitcoin's. For an in-depth understanding, refer to the [Ergo 'Box' model](../data-model/box.md).
 
