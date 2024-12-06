@@ -3,9 +3,9 @@ tags:
   - dApp-Beta
 ---
 
-/// details | Status: Open Beta!
+/// details | Status: Mainnet
      {type: success, open: true}
-The Paideia beta is now live!
+Paideia has moved out of beta, mainnet is now live!
 ///
 
 
@@ -14,36 +14,32 @@ The Paideia beta is now live!
 [Paideia](https://www.paideia.im) is a project from the [ergopad](ergopad.md) team whose purpose is to create a functional, secure, and well-documented DAO software suite that supports DAOs as they form and develop. It will make it easy for anyone to initiate a DAO, distribute tokens using various methods, create proposals, and collect votes. It will help various organizations share funds in a secure and fair way.
 
 ## Using Paideia
-This section will cover how to use the Paideia beta. Alternatively, you can watch [Paideia, Joining Your DAO | One Take Series](https://youtu.be/YUGNLQ6n8BA).
+This section will cover how to use Paideia. Alternatively, you can watch [Paideia, Joining Your DAO | One Take Series](https://youtu.be/YUGNLQ6n8BA).
 
 ## Prerequisites
 
 1. You'll need an Ergo wallet such as Nautilus to interact with Paideia.
-2. During the beta phase, creating a DAO is free. Simply reach out to the Paideia team and provide one of your tokens.
-3. To create proposals, you'll need to hold at least 1000 bPaideia tokens in your wallet, obtainable from the [Ergo faucet](https://ergofaucet.org/).
+2. Creating a DAO costs 100K Paideia tokens. Currently to create a DAO, simply reach out to the Paideia team.
+3. To create proposals, you'll need to hold at least 1000 Paideia tokens in your wallet.
 
 ## Getting Started
 
-1. Connect and authenticate your wallet on the Paideia platform.
-2. If you're creating a new DAO, contact the Paideia team and provide the necessary token. In the future, there will be a fee in PAI tokens to set up a new DAO.
-3. After [staking](https://app.paideia.im/Sigmanauts/staking/manage) your DAO token, you can participate in actions like voting or proposing changes.
+1. Connect and authenticate your wallet on the Paideia platform using the Connect Wallet button on the top right of the DAO homepage.
+2. Once connected, you can create a profile, including a username, short bio, and profile picture.
+3. To participate in the DAO, you must then stake the appropriate token for the DAO. This can be done under Staking, then Manage Stake.
 
 ## Creating Proposals
 
-1. Ensure you have at least 1000 bPaideia tokens in your wallet.
+1. Ensure you have at least 1000 Paideia tokens in your wallet.
 2. Navigate to your DAO's page on the Paideia platform and click "Create Proposal".
-3. Enter the necessary details for your proposal and submit the transaction from your wallet.
-4. If you encounter an error message stating "e.sent is undefined", try the following:
-   - Open the developer console by pressing F12 and check for any detailed error messages. Share these with the Paideia team.
-   - Clear browser cache and try again.
-   - Reach out to the Paideia team for further assistance.
+3. Enter the necessary details about your proposal, including any outputs, as well as the duration, then submit. The dApp connector will ask you to sign the transaction to complete the proposal creation.
 
 ## Voting on Proposals
-DAO members can vote on active proposals. 0.1 bPaideia is required to vote on a proposal. Be aware that there may be a delay before votes are reflected in the UI, and a page refresh may be necessary.
+DAO members can vote on active proposals. Check the DAO config for the ammount of Paideia required to vote on a proposal. The Sigmanauts DAO does not require any Paideia to vote. Be aware that there may be a delay before votes are reflected in the UI, and a page refresh may be necessary.
 
 ## Staking and Unstaking
 
-You can stake your Paideia tokens! During the beta phase, staking is done through [ErgoPad](https://ergopad.io/staking/paideia). In case of any issues with these functions, try the following:
+You can stake your Paideia tokens! Staking is done through [Paideia](https://app.paideia.im/Paideia/staking). In case of any issues with these functions, try the following:
 
 1. Ensure your wallet is properly synced and connected.
 2. Consolidate UTXOs in your wallet using the "Wallet Optimization Tool".
@@ -67,8 +63,6 @@ The Paideia team continues to work hard on improving the platform. Recent update
 - Adjusting the staking reward system to allow DAOs to change emission rates
 - Implementing generic refund and configuration logic in contracts
 - Planning a move to EIP-5 standard for contracts
-
-Stay tuned for more updates as development progresses toward a full launch in Q2 2024.
 
 ## Support and Issue Reporting
 
