@@ -164,11 +164,14 @@ const fetchBabelBox = async (ergoTree: string) => {
 
 - **Version**: `0.1.18`
 - **Dependencies**:
-  - `@fleet-sdk/core`
-  - `@fleet-sdk/common`
-  - `@fleet-sdk/serializer`
+- 
+    - `@fleet-sdk/core`
+    - `@fleet-sdk/common`
+    - `@fleet-sdk/serializer`
+  
 - **Environment**:
-  - Requires Node.js 18 or above.
+
+    - Requires Node.js 18 or above.
 
 ---
 
@@ -208,6 +211,3 @@ describe("BabelSwapPlugin Tests", () => {
 - **Fleet SDK Documentation**: [Fleet SDK Babel Fees Plugin](https://fleet-sdk.github.io/docs/plugins/babel-fees)
 - **Ergo Platform API**: [Ergo API Documentation](https://api.ergoplatform.com/api/v1/docs/)
 - **EIP-0031 Specification**: [Ergo Babel Fees EIP](https://github.com/ergoplatform/eips/blob/master/eip-0031.md)
-
-For real-world implementation examples, refer to [community tutorial](babel-impl.md) linked within the Fleet SDK documentation.
-
