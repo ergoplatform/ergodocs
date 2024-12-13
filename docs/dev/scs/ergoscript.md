@@ -91,6 +91,7 @@ Please see this [Quick Primer on ErgoScript](/dev/scs/ergoscript-primer) for an 
 
 ## Comparative Analysis
 ErgoScript stands out by:
+
 - Providing Turing-completeness without compromising blockchain efficiency
 - Supporting advanced cryptographic protocols
 - Enabling complex financial contracts with minimal overhead

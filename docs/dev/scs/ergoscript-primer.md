@@ -1,49 +1,113 @@
 ---
 tags:
   - ErgoScript
+  - Beginner Guide
 ---
 
-# A Quick Primer on ErgoScript
+# ErgoScript: A Beginner's Guide
 
-//// admonition | Background Reading
-/// admonition | 1. Paradigm
-    type: note
+## What is ErgoScript?
 
-Ergo's transaction model offers several advantages over the account-based model, explore this new [paradigm](/dev/scs/#paradigm).
-///
+ErgoScript is a powerful, developer-friendly programming language designed specifically for writing smart contracts on the Ergo blockchain. Think of it as a specialized language that allows you to create complex financial contracts and applications with unprecedented flexibility and security.
 
-/// admonition | 2. Key Concepts
-    type: tip
+## Key Characteristics
 
-Explore the [Core Concepts of ErgoScript](ergoscript-key-concepts.md).
-///
-/// admonition | 3. Context Claims
-    type: note
+### 1. UTXO-Based Model
+Unlike account-based blockchains, ErgoScript uses the UTXO (Unspent Transaction Output) model. This means:
 
-Ergo offers a unique approach to smart contract-enabled blockchains, providing efficient global context claims through the concept of data inputs.
+- Contracts define conditions for spending coins
+- Transactions are immutable and more secure
+- Improved scalability and parallel processing
 
-///
-/// admonition | 4. ErgoScript vs ErgoTree
-    type: note
+### 2. Declarative Programming
+ErgoScript is declarative, which means you specify **what** should happen, not **how** it happens. For example:
 
-ErgoScript is a high-level developer-friendly language for writing smart contracts that are then compiled to ErgoTree before being written to the blockchain. Explore the distinction [here](ergoscriptvergotree.md)
-///
-////
+```scala
+// A simple contract that allows spending only after a specific block height
+if (HEIGHT > 100000) signerPubKey else fail()
+```
 
+This contract says: "Allow spending only if the current blockchain height is greater than 100,000, otherwise fail."
 
+### 3. Sigma Protocols
+ErgoScript leverages advanced cryptographic techniques called Sigma Protocols, enabling:
 
+- Complex signature schemes
+- Ring signatures
+- Threshold signatures
+- Advanced privacy features
 
+## Getting Started
 
-## ErgoScript Examples
+### Basic Syntax
+ErgoScript is a subset of Scala, so if you're familiar with functional programming, you'll feel right at home. Here's a simple example:
 
-> **Tip:** For beginners, we highly recommend the [ErgoScript P2S playground](https://wallet.plutomonkey.com/p2s/), which can be used to get the Ergo address corresponding to some arbitrary ErgoScript program. Please use the P2S playground only for experiments.
+```scala
+// A contract that requires two of three signatures to spend
+val pubKey1 = ...
+val pubKey2 = ...
+val pubKey3 = ...
 
+sigmaProp(pubKey1 && pubKey2 || pubKey1 && pubKey3 || pubKey2 && pubKey3)
+```
 
-- [Anyone Can Spend Scripts](anyone-can-spend.md)
-- [No-one-Can Spend Scripts](no-one-can-spend.md)
-- [Context Variables](context-variables.md)
-- [Code-blocks](code-blocks.md)
-- [Public-keys](public-keys.md)
-- [Functional Programming](functional-programming.md)
-- [Box Structure](box-structure.md)
-- [Storing Data](storing-data.md)
+### Development Tools
+- [ErgoScript P2S Playground](https://wallet.plutomonkey.com/p2s/): Experiment and generate Ergo addresses
+- [Ergo AppKit](https://github.com/ergoplatform/ergo-appkit): Development framework for building Ergo applications
+
+## Common Use Cases
+
+1. **Multi-Signature Wallets**
+   Create wallets requiring multiple parties to approve transactions
+
+2. **Time-Locked Contracts**
+   Define contracts that can only be executed after a specific time or block height
+
+3. **Conditional Spending**
+   Set complex conditions for spending funds based on various parameters
+
+## Learning Paths
+
+### Beginner
+- [ErgoScript Overview](/dev/scs/ergoscript.md)
+- [UTXO Model Explained](/dev/protocol/eutxo)
+
+### Intermediate
+- [Sigma Protocols](/dev/scs/sigma.md)
+- [Advanced Contract Patterns](/dev/scs/contracts.md)
+
+### Advanced
+- [ErgoTree Compilation](/dev/scs/ergoscriptvergotree.md)
+- [Cryptographic Protocols](/dev/crypto/)
+
+## Best Practices
+
+1. Keep contracts simple and readable
+2. Use built-in cryptographic primitives
+3. Always consider transaction validation overhead
+4. Test contracts thoroughly in the playground
+
+## Common Pitfalls to Avoid
+
+- Overcomplicating contract logic
+- Ignoring performance implications
+- Neglecting error handling
+- Not understanding UTXO model nuances
+
+## Community and Support
+
+- [Ergo Developer Forum](https://www.ergoforum.org/)
+- [Ergo GitHub Discussions](https://github.com/ergoplatform/ergo/discussions)
+- [Ergo Developer Telegram](https://t.me/ergo_dev)
+
+## Next Steps
+
+1. Experiment with the P2S Playground
+2. Study example contracts
+3. Join community discussions
+4. Start building your first dApp!
+
+## Recommended Reading
+
+- [Ergo Whitepaper](https://ergoplatform.org/en/whitepaper/)
+- [ErgoScript Technical Documentation](/dev/scs/)

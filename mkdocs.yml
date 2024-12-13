@@ -440,6 +440,9 @@ nav:
             - Data Inputs: dev/protocol/tx/read-only-inputs.md
             - Fees: dev/protocol/tx/min-fee.md
             - Unified Transactions: dev/protocol/tx/unified.md
+        - Babel Fees: 
+          - dev/protocol/tx/babel-fees.md
+          - Babel Fees Plugin: dev/protocol/tx/babel-fleet.md
         - Resources: 
           - Standards:
             - Babel Fees: dev/protocol/tx/babel-fees.md

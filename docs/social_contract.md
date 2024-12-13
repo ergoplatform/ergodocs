@@ -4,8 +4,6 @@ The Ergo protocol is very flexible and may be changed in the future by the commu
 
 In case of intentional violation of any of these principles, the resulting protocol should not be called Ergo.
 
-
-
 ### Decentralization First.
 
 - Ergo should be as decentralized as possible: any parties (social leaders, software developers, hardware manufacturers, miners, funds and so on) whose absence or malicious behavior may affect the security of the network should be avoided.

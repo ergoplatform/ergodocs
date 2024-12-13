@@ -135,6 +135,12 @@ Ergo’s community is vibrant and continuously evolving. Keep updated with the l
     "content": "An alternative blockchain you can use for experimentation",
     "image": "../../assets/img/dev-grid/testnet.png",
     "url": "../../node/testnet.md"
+  },
+  {
+    "title": "Bookmarks",
+    "content": "An overview of Ergo resources",
+    "image": "../../assets/img/dev-grid/faq.png",
+    "url": "https://direct.me/ergo"
   }
 ]
 
