@@ -7,7 +7,7 @@ This guide will walk you through the process of starting to mine Ergo using [Aut
 Before you start mining, make sure you have the following:
 
 - Familiarity with Ergo. If you're new, start with [What is Ergo?](why.md)
-- A computer with at least one GPU that has more than 4GB of memory. Check the [Autolykos v2 hashrates spreadsheet](https://docs.google.com/spreadsheets/d/1NsuoDB27EwCo_BlSjCP3GMLfTSJRPIWIBsL-wPTllUg) for potential hashrates.
+- A computer with at least one GPU that has more than 6GB of memory. Check the [Autolykos v2 hashrates spreadsheet](https://docs.google.com/spreadsheets/d/1NsuoDB27EwCo_BlSjCP3GMLfTSJRPIWIBsL-wPTllUg) for potential hashrates.
 - If you're considering building a dedicated rig, refer to our guide on [Building a rig](rig.md).
 
 ## Steps to Start Mining
