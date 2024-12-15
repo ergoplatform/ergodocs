@@ -195,6 +195,8 @@ This snippet uses the Ergo API to locate and return a Babel Box. Developers supp
 
 
 For a detailed guide on how to mint a token, set up a Babel Box, and utilize the plugin within a web application, refer to [this guide](http://147.182.244.219/ergobabelfees.html).
+
+
 ---
 
 ## Development Insights
@@ -221,33 +223,6 @@ For a detailed guide on how to mint a token, set up a Babel Box, and utilize the
 - **Environment**:
 
     - Requires Node.js 18 or newer.
-
----
-
-## Testing and Validation
-
-### Unit Testing Example
-
-The unit test below verifies that the `BabelSwapPlugin` integrates Babel fee logic into a transaction. It sets a mock Babel Box, builds a transaction that uses the plugin, and checks whether the resulting transaction includes the Babel Box as a source of fee liquidity.
-
-```typescript
-describe("BabelSwapPlugin Tests", () => {
-  it("should integrate Babel Fee inputs and outputs", () => {
-    const babelBox = { /* Mock Babel Box with required fields */ };
-    const tx = new TransactionBuilder(1000000)
-      .from(inputs)
-      .extend(BabelSwapPlugin(babelBox, {
-        tokenId: "03faf2cb329f2e90d6d23b58d91bbb6c046aa143261cc21f52fbe2824bfcbf04",
-        amount: "50"
-      }))
-      .build();
-
-    expect(tx.inputs).toContain(babelBox);
-  });
-});
-```
-
-This test confirms the presence of the Babel Box in the transaction inputs. If it passes, developers know that the plugin logic runs correctly and that the transaction is now prepared for token-based fee payments.
 
 ---
 
