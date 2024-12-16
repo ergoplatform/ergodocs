@@ -18,7 +18,7 @@ In addition to these, Ergo also supports **[Logarithmic space mining](logspace.m
 
 ## Sub Blocks
 
-In the quest for Layer 0 (L0) scalability improvements, one of the most promising advancements is the introduction of "subblocks." These are essentially block candidates with lower proof-of-work difficulty, serving as temporary placeholders that facilitate faster transaction confirmations and optimize network bandwidth. For end-users, this translates into quicker, weakly confirmed transactions—often within 20 seconds—while also making better use of network resources. For a more in-depth look at weak blocks, their advantages, and their role in Ergo's scalability strategy, see this [page](sub-blocks.md).
+In the quest for Layer 0 (L0) scalability improvements, one of the most promising advancements is the introduction of "subblocks." These are essentially block candidates with lower proof-of-work difficulty, serving as temporary placeholders that facilitate faster transaction confirmations and optimize network bandwidth. For end-users, this translates into quicker, weakly confirmed transactions—often within 20 seconds—while also making better use of network resources. For a more in-depth look at weak blocks, their advantages, and their role in Ergo's scalability strategy, see this [page](subblocks.md).
 
 ## State Bloat Management
 

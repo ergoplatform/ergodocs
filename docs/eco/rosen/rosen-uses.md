@@ -26,12 +26,12 @@ You can see a full list of locked assets [here](https://app.rosen.tech/assets).
 | AHT   | ergouactions.org |
 | Bober | [Meme Coin](https://t.co/DXEIXJC8AW) |
 | COS   | [Cup of Sugar](cup-of-sugar.md) |
-| EPOS  | [EPOS](epos.md) |
+| EPOS  | [tabbypos](tabbypos.md) Point of sale |
 | ErgOne| [ErgOne](ergone.md) |
-| GIF   | [GreasyCex](greasycex.md) |
+| GIF   | GreasyCex |
 | GluonW GAU | [Gluon](gluon.md) |
 | GluonW GAUC | [Gluon](gluon.md) |
-| MEW   | [MewFinance](mewfinance.md) |
+| MEW   | [MewFinance](mew-finance.md) |
 | Paideia | [DAO Toolkit](paideia.md) |
 | QUACKS | [Duckpools](duckpools.md) (Lending) |
 | Troll | New supported token |

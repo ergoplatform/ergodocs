@@ -41,5 +41,5 @@ To start using the sigmastate-interpreter in your Scala project, add the followi
 libraryDependencies += "org.scorexfoundation" %% "sigma-state" % "5.0.14"
 ```
 
-For more advanced usage and direct interaction with the ErgoTree and Sigma protocols, refer to the detailed [Sigma Language documentation](docs/sigma-dsl.md).
+For more advanced usage and direct interaction with the ErgoTree and Sigma protocols, refer to the detailed [Sigma Language documentation](sigma-lang.md).
 

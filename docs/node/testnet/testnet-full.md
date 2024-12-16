@@ -28,5 +28,5 @@ Once the node is synchronised, a user interface for [Swagger](swagger.md) is ava
 
 /// details | Mining
     {type: info, open: true}
-If you want to help mine the testnet, you can do so by following the steps outlined on [CPU Mining](/node/testnet/cpu-mining.md).
+If you want to help mine the testnet, you can do so by following the steps outlined on [CPU Mining](cpu-mining.md).
 ///

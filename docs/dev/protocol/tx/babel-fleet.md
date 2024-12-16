@@ -16,26 +16,24 @@ Babel Fees offer key benefits:
 
 ## Key Features
 
+- **Transaction Extension**
 
+    - Provides a BabelSwapPlugin that seamlessly integrates with Fleet SDK's TransactionBuilder
+    - Modifies transaction inputs and outputs to incorporate Babel Fee logic
 
-- Transaction Extension:
+- **Babel Box Validation**
 
-    - Provides a BabelSwapPlugin that seamlessly integrates with Fleet SDK's TransactionBuilder.
-    - Modifies transaction inputs and outputs to incorporate Babel Fee logic.
+    - Offers utilities to validate the structure and parameters of Babel Boxes
+    - Ensures compliance with the Babel Fees protocol
 
-- Babel Box Validation:
+- **Contract Script Generation**
 
-    - Offers utilities to validate the structure and parameters of Babel Boxes.
-    - Ensures compliance with the Babel Fees protocol.
+    - Includes functions for building and verifying Babel Fee contract scripts (ErgoTree)
 
- - Contract Script Generation:
+- **Developer-Friendly**
 
-    - Includes functions for building and verifying Babel Fee contract scripts (ErgoTree).
-
-- Developer-Friendly:
-
-    - Supports ESM and CommonJS modules.
-    - Tree-shakeable design for smaller bundle sizes.
+    - Supports ESM and CommonJS modules
+    - Tree-shakeable design for smaller bundle sizes
 ---
 
 ## Installation

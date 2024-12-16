@@ -383,7 +383,7 @@ Ergo is developed a by a combination of the [Ergo Foundation](ergo-foundation.md
 - [ ] [EIP-0046: Atomic Chains](https://github.com/ergoplatform/eips/blob/2de4ea0deff12a276f74df57ef3a14dab2c5dfb8/eip-0046.md)
 - [ ] [EIP-0047: Pooled Transaction Inputs](https://github.com/ergoplatform/eips/blob/0836dd1eca323c6b5fd6b5172c27a465bd4449cd/eip-0047.md)
 - [ ] [MerkleTrees](https://github.com/ScorexFoundation/sigmastate-interpreter/issues/296)
-- [ ] [EIP-44](eip44.md): Implementation of "truthy boxes" for verifying minted tokens and encrypted NFT content
+- [ ] [EIP-44](https://github.com/ergoplatform/eips/blob/master/eip-0044.md): Arbitrary Data Signing Standard
 - [ ] Revisiting formal verification implementation
 - [ ] Bulletproofs
 - [ ] Exploration of Rust and JavaScript support in addition to ErgoScript

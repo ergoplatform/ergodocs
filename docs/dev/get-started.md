@@ -197,10 +197,10 @@ Sigma Protocols (Σ-Protocols) are the foundation of Ergo’s smart contracts. T
 
 - **Primitive Secrets**:
     - **[Schnorr Signature](schnorr.md)**: A proof of knowledge of a discrete logarithm with respect to a fixed group generator.
-    - **[Diffie-Hellman Tuple](diffe.md)**: A proof of equality of discrete logarithms, enabling secure exchange of cryptographic keys over a public channel.
+    - **[Diffie-Hellman Tuple](diffie.md)**: A proof of equality of discrete logarithms, enabling secure exchange of cryptographic keys over a public channel.
 
 - **Non-Interactive Proofs**:
-    - The proofs of sigma-statements are made non-interactive with the [**Fiat-Shamir transformation**](diffe.md#fiat-shamir-transformation), which converts an interactive proof of knowledge into a non-interactive one by using a cryptographic hash function.
+    - The proofs of sigma-statements are made non-interactive with the [**Fiat-Shamir transformation**](diffie.md#fiat-shamir-transformation), which converts an interactive proof of knowledge into a non-interactive one by using a cryptographic hash function.
 
 - **Additional Cryptographic Standards**:
     - **[EIP-0003: Deterministic Wallet Standard](eip3.md)**: A standard defining the structure and operation of deterministic wallets in the Ergo platform.

@@ -19,7 +19,7 @@ tags:
 /// admonition | Sigma Protocols
     type: tip
 
-Ergo's support for [sigma-protocols](sigma.md) (aka generalized Schnorr proofs) are truly unique as building blocks for composable statements. [Schnorr protocols](schnorr.md) and [proof-of-Diffie-Hellman-tuples](diffe.md) are supported by default, with more options available that the community can add via soft forks.
+Ergo's support for [sigma-protocols](sigma.md) (aka generalized Schnorr proofs) are truly unique as building blocks for composable statements. [Schnorr protocols](schnorr.md) and [proof-of-Diffie-Hellman-tuples](diffie.md) are supported by default, with more options available that the community can add via soft forks.
 ///
 
 ErgoScript is built considering Bitcoin's security and privacy to make all kinds of complex financial contracts accessible. In comparison, Bitcoin's design doesn't allow loops or building any complex smart contracts on top of it. ErgoScript allows for self-replication; therefore, we can use it to create Turing-Complete processes in a blockchain.

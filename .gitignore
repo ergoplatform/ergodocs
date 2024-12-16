@@ -164,3 +164,4 @@ zip_files.py
 md_files.zip
 .DS_Store
 prompt.md
+docs_env/*

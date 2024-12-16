@@ -37,7 +37,7 @@ Then call: `util.Compiler.compile(ergoScriptFile: String,  symbolsFile: Option[S
 
 ## Examples and Outputs
 
-The [src/test/resources](src/test/resources) directory contains sample ErgoScript and symbol files. Here's an example execution:
+The `src/test/resources` directory contains sample ErgoScript and symbol files. Here's an example execution:
 
 ```bash
 java -cp \

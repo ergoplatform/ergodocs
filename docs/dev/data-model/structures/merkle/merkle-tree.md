@@ -7,7 +7,7 @@ tags:
 
 ## Overview
 
-Merkle Trees are a fundamental [data structure](data-structure.md) in the Ergo blockchain, ensuring the integrity and authenticity of data. They play a crucial role in various blockchain operations, from verifying transactions within blocks to securing additional metadata in the Extension Block. While similar to the Merkle Tree implementation in Bitcoin—where trees are constructed for block transactions and transaction witnesses (introduced with the SegWit upgrade)—Ergo extends this concept by combining transactions and their corresponding spending proofs into a single Merkle Tree.
+Merkle Trees are a fundamental [data structure](data-structures.md) in the Ergo blockchain, ensuring the integrity and authenticity of data. They play a crucial role in various blockchain operations, from verifying transactions within blocks to securing additional metadata in the Extension Block. While similar to the Merkle Tree implementation in Bitcoin—where trees are constructed for block transactions and transaction witnesses (introduced with the SegWit upgrade)—Ergo extends this concept by combining transactions and their corresponding spending proofs into a single Merkle Tree.
 
 The Merkle Tree format in Ergo follows a specific structure and encoding scheme that is essential for developers working with Merkle proofs and validating data inclusion. For detailed information on the Merkle Tree format, leaf nodes, internal nodes, and the process of validating Merkle proofs, refer to the [Merkle Tree Format](merkle-format.md) and [Merkle Tree Validation](merkle-validation.md) sections.
 

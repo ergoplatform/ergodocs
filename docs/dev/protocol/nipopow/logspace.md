@@ -25,7 +25,7 @@ Log-Space Mining introduces the idea of mining blocks on top of NIPoPoWs instead
 
 Instead of maintaining the complete blockchain data locally, the unnecessary historical data can be compiled into the blockchain itself through smart contracts. This approach allows new "light" miners to bootstrap and operate in an "online" fashion, without the need to carry the burden of old historical data.
 <!--
-![Log-Space Mining Process](log-space-mining-process.png)
+!Log-Space Mining Process  log-space-mining-process.png
 
 The above diagram illustrates the Log-Space Mining process, where new blocks are built on top of NIPoPoWs, enabling lightweight mining operations.
 -->

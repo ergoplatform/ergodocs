@@ -49,10 +49,6 @@ Providing liquidity for Babel fees is a way to earn passive income while helping
 /// details | To provide Babel fee liquidity:
 
     {type: question, open: true}
-
-
-
-
 1. Go to the [Tokenjay](https://tokenjay.app/) site
 2. Click "Open App"
 3. Click "Purchase Tokens"
