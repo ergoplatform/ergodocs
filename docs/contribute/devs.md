@@ -4,7 +4,7 @@
 
 If you're interested in contributing to Ergo as a developer, here's how you can get started:
 
-1. **Join the Ergo Community:** Connect with other developers and Ergo team members on our [Discord Server](https://discord.gg/nr4JRnhAyV). Make sure to enable the development channels for relevant discussions.
+1. **Join the Ergo Community:** Connect with other developers and Ergo team members on our [Discord Server](https://discord.gg/ergo-platform-668903786361651200). Make sure to enable the development channels for relevant discussions.
 
 2. **Explore Opportunities:** Visit our [Bounties](bounties.md) and [Grants](grants.md) pages to find out about the ongoing projects and tasks that you can contribute to.
 
