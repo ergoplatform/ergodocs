@@ -732,18 +732,25 @@ nav:
         
     - Cryptographic:
       - crypto.md
-      - Sigma Protocols:
-        - dev/scs/sigma.md
-        - Schnorr:
-          - dev/scs/sigma/schnorr.md
-          - Verifying Schnorr Signatures: dev/scs/sigma/verifying.md
-        - Diffie:
-          - dev/scs/sigma/diffie.md
-        - Ring Signatures:
-          - 3-out-of-5 Threshold Signature: dev/scs/sigma/3-out-of-5.md
-          - Distributed Signatures: node/sigs.md
-        # - Signature Scheme Internals: sig-scheme.md
+      - Signature Schemes:
+        - Sigma Protocols:
+          - dev/scs/sigma.md
+          - Schnorr:
+            - dev/scs/sigma/schnorr.md
+            - Verifying Schnorr Signatures: dev/scs/sigma/verifying.md
+          - Diffie:
+            - dev/scs/sigma/diffie.md
+          - Other Signatures:
+            - Ring Signatures: dev/data-model/ring.md
+            - Threshold Signatures:
+              - dev/data-model/threshold.md
+              - 3-out-of-5 Threshold Signature: dev/scs/sigma/3-out-of-5.md
+            - Distributed Signatures: node/sigs.md
+            - Signature Scheme Internals: sig-scheme.md
+      - Zero-Knowledge Proofs:
+        - Non-Interactive ZK: dev/data-model/nizk.md
         - ZeroJoin: dev/crypto/zerojoin.md
+     
       - Data Structures:
         - dev/data-model/data-structures.md
         - Merkle Tree:

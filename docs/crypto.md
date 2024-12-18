@@ -48,7 +48,7 @@ For more details on cryptographic functions in ErgoScript, see [ErgoScript Crypt
 
 ### How Sigma Protocols Work
 
-At their core, Sigma protocols provide a secure way to prove the following properties:
+At their core, [Sigma protocols](sigma.md) provide a secure way to prove the following properties:
 
 1. **Proof of Knowledge of Discrete Logarithm**: Prove knowledge of the discrete logarithm of a given public key without revealing the secret key.
    
