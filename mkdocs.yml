@@ -457,6 +457,9 @@ nav:
 
       - Block:
         - dev/data-model/block.md
+        - Header: dev/data-model/block-header.md
+        - Transactions: dev/data-model/block-transactions.md
+        - ADProofs: dev/data-model/block-adproofs.md
         - Extension Section: dev/data-model/extension-section.md
     
       # - UTXO-State:
