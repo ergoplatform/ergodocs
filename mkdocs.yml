@@ -397,6 +397,7 @@ nav:
     - dev/get-started.md
     - Students: students/index.md
     - Data Model:
+      - dev/data-model/data-model.md
       - Box: 
         - dev/data-model/box.md
         - Registers: dev/data-model/box/registers.md
