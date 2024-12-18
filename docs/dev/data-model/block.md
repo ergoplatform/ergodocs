@@ -5,23 +5,23 @@ tags:
 
 # Understanding Blocks in Ergo
 
-Ergo's blockchain operates on a block interval [set at two minutes](difficulty.md). Initially, each block releases 75 Ergs, which are distributed among miners and the Treasury. This setup applies for the first two years of operation. From the second year onwards, the release rate decreases by 3.0 Ergs, with this reduction continuing every three months. This systematic decrease was initially programmed to halt emission eight years post Ergo's launch. However, with the introduction of [EIP-27](eip27.md), the emission period has been extended to approximately the year 2045.
+Ergo's blockchain operates on a block interval [set at two minutes](difficulty.md). Initially, each block released 75 ERG, which were distributed among miners and the EF Treasury. This setup applied for the first two years of operation. From the second year onwards, the release rate decreased by 3.0 ERGs, with this reduction continuing every three months. This systematic decrease was initially programmed to halt emission eight years post Ergo's launch. However, with the introduction of [EIP-27](eip27.md), the emission period has been extended to approximately the year 2045.
 
 ## Ergo Block Structure
 
 Ergo, similar to other blockchains like Bitcoin and Ethereum, segregates blocks into different sections for enhanced functionality. However, Ergo's structure is more complex than Bitcoin's, which only consists of a block header and transactions. Ergo's structure includes additional sections:
 
 1. **Header**: The header contains essential metadata about the block, including information necessary for synchronizing the chain and validating Proof-of-Work (PoW) accuracy. It also includes hashes that link to other sections of the block.
-    - **GitHub Reference**: The `Header` class, which defines the structure of the block header, can be explored in the [Header.scala](https://github.com/ergoplatform/ergo/blob/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/history/header/Header.scala) file on GitHub.
+    - The `Header` class, which defines the structure of the block header, can be explored in the [Header.scala](https://github.com/ergoplatform/ergo/blob/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/history/header/Header.scala) file on GitHub.
 
 2. **Block Transactions**: This section consists of all the transactions included within the block. It plays a critical role in defining the state changes in the Ergo blockchain.
-    - **GitHub Reference**: The transaction data structure is detailed in the [ErgoTransaction.scala](https://github.com/ergoplatform/ergo/blob/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/mempool/ErgoTransaction.scala) file.
+    - The transaction data structure is detailed in the [ErgoTransaction.scala](https://github.com/ergoplatform/ergo/blob/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/mempool/ErgoTransaction.scala) file.
 
 3. **ADProofs**: Also known as authenticated data proofs, these are associated with transactions in the corresponding Block Transactions section. ADProofs allow light clients to authenticate all transactions and compute a new root hash without downloading the entire block.
-    - **GitHub Reference**: ADProofs are managed and structured within the [ADProofs.scala](https://github.com/ergoplatform/ergo/blob/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/history/ADProofs.scala) file.
+    - ADProofs are managed and structured within the [ADProofs.scala](https://github.com/ergoplatform/ergo/blob/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/history/ADProofs.scala) file.
 
 4. **Extension**: This section holds additional information that doesn't fit into the previous sections. It includes interlinks and the chain's current parameters when the extension belongs to a block at the end of a voting epoch.
-    - **GitHub Reference**: For a detailed look at how the extension data is managed, refer to the [Extension.scala](https://github.com/ergoplatform/ergo/blob/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/history/extension/Extension.scala) file.
+    - For a detailed look at how the extension data is managed, refer to the [Extension.scala](https://github.com/ergoplatform/ergo/blob/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/history/extension/Extension.scala) file.
 
 ### The Extension Section in Detail
 

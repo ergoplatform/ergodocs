@@ -3,14 +3,14 @@
 ## Quick Navigation
 - [Ergo Foundation Treasury](#ergo-foundation-treasury)
   - [Quick Navigation](#quick-navigation)
-  - [Initial Allocation {#initial-allocation}](#initial-allocation-initial-allocation)
+  - [Initial Allocation](#initial-allocation)
   - [Holdings](#holdings)
   - [Wallets](#wallets)
   - [Salaries](#salaries)
   - [Historic Spending](#historic-spending)
   - [Votings](#votings)
 
-## Initial Allocation {#initial-allocation}
+## Initial Allocation
 
 The Ergo Foundation initially received an allocation of 4,330,776 ERG, which is equivalent to 4.43% of the total supply.
 

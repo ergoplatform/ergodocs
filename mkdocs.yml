@@ -409,7 +409,7 @@ nav:
             - NFTs: dev/tokens/nfts/index.md
             - Minting a NFT: 
               - dev/tokens/nfts/create.md
-              - Design V1 v V2: dev/tokens/nfts/v1v2.md
+              - V1 v V2: dev/tokens/nfts/v1v2.md
               - Simple Example: dev/tokens/nfts/nft-examples.md
               - On-chain NFTs: dev/tokens/nfts/on-chain.md
             - Royalties: dev/tokens/nfts/royalties.md
