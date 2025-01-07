@@ -152,8 +152,8 @@ The core logic for arbitrage is implemented in `src/arbitrategy.ts`. It defines 
 
 1. **Prepare Tokens:**
 
-        - Ensure you have supported tokens (ERG, ADA, RSN) on Ergo and Cardano chains.
-        - Use [Rosen Bridge](https://app.rosen.tech) to bridge assets if necessary.
+    - Ensure you have supported tokens (ERG, ADA, RSN) on Ergo and Cardano chains.
+    - Use [Rosen Bridge](https://app.rosen.tech) to bridge assets if necessary.
 
 2. **Visit the App:**
 

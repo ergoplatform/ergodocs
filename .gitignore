@@ -165,3 +165,5 @@ md_files.zip
 .DS_Store
 prompt.md
 docs_env/*
+
+.codegpt
