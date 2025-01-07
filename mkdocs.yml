@@ -146,7 +146,9 @@ nav:
       - Storage Rent: dev/protocol/storage-rent.md
       - Autolykos: dev/protocol/autolykos-protocol.md
 
-    - Research & Whitepapers: documents.md
+    - Research & Whitepapers: 
+      - documents.md
+      - Whitepaper I: doc/whitepaper.md
     - Roadmap:
       - roadmap.md
       - Scaling:
