@@ -73,7 +73,7 @@ plugins:
   - tags: # https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/#
       tags_file: tags.md
   - bibtex:
-      bib_file: "refs.bib"
+      bib_file: refs.bib
   # - categories
   # - exclude-search # https://github.com/chrieke/mkdocs-exclude-search
   # - semiliterate # http://studioinfinity.org/semiliterate/mkdocs_semiliterate/plugin/
@@ -148,7 +148,9 @@ nav:
 
     - Research & Whitepapers: 
       - documents.md
-      - Whitepaper I: doc/whitepaper.md
+      - Whitepaper: doc/whitepaper.md
+      - ErgoScript Whitepaper: doc/ergoscript-whitepaper.md
+      - On Contractual Money: doc/on-contractual-money.md
     - Roadmap:
       - roadmap.md
       - Scaling:
