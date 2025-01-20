@@ -27,27 +27,26 @@ For more information on Ergo's emission schedule, tokenomics and allocation, vis
 
 ## Holdings
 
-As of July 2024, the complete treasury of the foundation is as follows:
+As of January 2025, the complete treasury of the foundation is as follows:
 
 | Asset | Indicator Amount | Indicative US$ Price | Indicative Total US$ Value |
 |-------|------------------|----------------------|----------------------------|
 | **Liquid Assets in Self-Hosted Wallets** |
-| ERG | 179,954.44 | 0.84 | 151,161.73 |
-| BTC | 3.315399986 | 66,731 | 221,236.01 |
-| **Subtotal - Liquid Assets** | | | $372,397.74 |
+| ERG | 156,160 | 1.7 | 265,475 |
+| BTC | 2.230499 | 108,059 | 241,025 |
+| **Subtotal - Liquid Assets** | | | $506,500 | 506500
 | **Illiquid Assets in Self-Hosted Wallets** |
 | Gluon | 335,000 | 1.00 | 335,000.00 |
-| SPF | 27,681,500 | 0.01292 | 357,644.98 |
-| RSN | 30,000,000 | 0.06639 | 1,991,700.00 |
-| **Subtotal - Illiquid Assets** | | | $2,684,344.98 |
+| SPF | 26,600,000 | 0.01292 | 277,970 |
+| RSN | 30,000,000 | 0.06639 | 2,805,900 |
+| **Subtotal - Illiquid Assets** | | | $3,418,870 |
 | **Assets in MM Accounts (Illiquid)** |
-| ERG | 164,016.09167 | 0.84 | 137,773.52 |
-| BTC | 0.00804 | 66,731 | 536.52 |
-| USDT | 8,843.41 | 1.00 | 8,843.41 |
-| **Subtotal - Assets in MM Accounts** | | | $147,153.45 |
-| **Total Liquid Assets** | | | $372,397.74 |
-| **Total Illiquid Assets** | | | $2,831,498.43 |
-| **Total Assets** | | | $3,203,896.17 |
+| ERG | 58,715 | 1.7 | 99,815.5 |
+| USDT | 35,746 | 1.00 | 35,746 |
+| **Subtotal - Assets in MM Accounts** | | | $135,561 |
+| **Total Liquid Assets** | | | $506,500 |
+| **Total Illiquid Assets** | | | $3,554,431 |
+| **Total Assets** | | | $4,060,931 |
 
 /// details | Liquid vs Illiquid Funds
      {type: warning, open: true}
@@ -62,7 +61,7 @@ You can find the Ergo Foundation treasury and current balance on-chain at the fo
 
 - [EF Multi-sig for ERG + Tokens](https://ergexplorer.com/addresses#2BggBDgr9n9geTKjCJBCEWMReb2i7wcocw7fjVd3QyM7qFMtmVHyoFr78kChAxGekJxUTZru2aMjyZKcVoPfHX5d12RqNrnEAgzGqUCoJ2v9xCqmT75V5xdhT1JBqQbeRKJZT4XGMg7hZAqVvbMsQF26nkWRPqiCqPoKfy7GZw9zuvr15qaqbB2ZcZXaGTrvqDN2o15SRTJwvVADDx2inzrk3U25cdjFWYBc6ECKSjmYpPWL8fn4msxsBZKNiGbP8vDrYWqQuPtMwJ5Ag)
      - [Hot Wallet](https://ergexplorer.com/addresses#9g1ReLmsbGevkTjfPGMdRMoFRdrAVskZVmSBpaEdVW2DfG4HDWm) managed by the Treasurer when sending payments.
-- [EF BTC Multi-sig](https://www.blockchain.com/explorer/addresses/btc/bc1q7zd0snrmt06vtq5ehl98gx30a79g4y4fz48wmt4l4vstreh3lz2s6t0axz)
+- [EF BTC Multi-sig](https://www.blockchain.com/explorer/addresses/BTC/bc1qhps44rcl0rln47te839wr5rx25z624gawsgdye0cs4m0pq2mkhnq8dmkkc)
 
 ## Salaries
 
@@ -89,14 +88,19 @@ The Ergo Foundation has spent the majority of the Treasury for the benefit of th
 
 <!--TODO: Yearly figures don't add up to total difference between total allocation & spending, 90k difference, probably missed a tx -->
 
-| Spent | ERG | USD |
-|---|---|---|
-| 2023  | 424,150 | $589,777 |
-| 2022  | 723,000 | $2,247,640 |
-| 2021  | 889,001 | $3,793,485 |
-| 2020  | 1,080,000 | $500,292 |
-| 2019 | 757,051 | $590,239 |
-| Total | 3,963,209 | $7,721,433 |
+
+| **Spent** | **ERG**      | **SPF**       | **BTC**     | **TOTAL VALUE**   |
+|-----------|--------------|---------------|-------------|-------------------|
+| 2024      | 209,646      | 1,627,500     | 1.95        | TBC               |
+| 2023      | 424,150      | 1,622,000     | -           | $589,777          |
+| 2022      | 723,000      | -             | -           | $2,247,640        |
+| 2021      | 889,001      | -             | -           | $3,793,485        |
+| 2020      | 1,080,000    | -             | -           | $500,292          |
+| 2019      | 757,051      | -             | -           | $590,239          |
+| **Total** | **4,082,848**| **3,249,500** | **1.95**    | **$7,721,433**    |
+
+
+
 
 In addition to the direct ERG spending above in 2023, 
 
@@ -122,7 +126,15 @@ Foundation votes this year are usually related to our internal structures, excha
 
 | Date        | Description                                                   | Category          | Status     | Amount                                   |
 |-------------|---------------------------------------------------------------|-------------------|------------|------------------------------------------|
-| (Jul 2024)  | Fund Gluon Gold Marketing Effort                              | Treasury Control  | Passed     | 9540 ERG                                         |
+| (Dec 2024)  | Alt Social Media Manager Role                                 | Treasury Control  | Passed     | $20 per hour                             |
+| (Nov 2024)  | Ergo Mining Ecosystem Development and Community Expansion     | Treasury Control  | Passed     | $24k over 12mo                           |
+| (Oct 2024)  | Ledger UI implementation for Stax and Flex devices            | Treasury Control  | Passed     | 6k USD in ERG                            |
+| (Oct 2024)  | ERGOHACK IX Funding                                           | Treasury Control  | Passed     | $9.5k                                    |
+| (Oct 2024)  | Keystone bounty                                               | Treasury Control  | Passed     | 3k ERG                                 |
+| (Sep 2024)  | Sponsor sigmaspace.io                                         | Treasury Control  | Passed     | 250 USD worth in ERG monthly                                 |
+| (Sep 2024)  | DevOps Proposal                                               | Treasury Control  | Failed     | $1.5k/mo                                 |
+| (Aug 2024)  | Marketing for Cyberverse Grant                                | Treasury Control  | Passed     | 12,000 USD                               |
+| (Jul 2024)  | Fund Gluon Gold Marketing Effort                              | Treasury Control  | Passed     | 9540 ERG                                 |
 | (Jul 2024)  | Make MGpai EF member                                          | Ergo Foundation   | Passed     |                                          |
 | (Jul 2024)  | Appoint Glasgow as Permanent Authorised Signatory / Confirm EF Members | Ergo Foundation       | Passed     |                                          |
 | (Jun 2024)  | Monthly budget reduction                                      | Treasury Control  |            |                                          |
