@@ -4,7 +4,7 @@
 
 A reputation system addresses a fundamental need in the blockchain ecosystem - trust. Trust is essential in any ecosystem, and this system aims to bridge the trust gap by providing a decentralized, user-driven mechanism for assigning and transferring reputation.
 
-View the [reputation-systems](https://github.com/reputation-systems) repository on GitHub and this [explainer post](https://www.ergoforum.org/t/reputation-system/4782)
+View the [Sigma Reputation System](https://github.com/sigma-rps) repository on GitHub and this [explainer post](https://www.ergoforum.org/t/reputation-system/4782)
 
 **Trust and Reputation:**
 
