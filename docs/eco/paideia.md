@@ -19,8 +19,8 @@ This section will cover how to use Paideia. Alternatively, you can watch [Paidei
 ## Prerequisites
 
 1. You'll need an Ergo wallet such as Nautilus to interact with Paideia.
-2. Creating a DAO costs 100K Paideia tokens. Currently to create a DAO, simply reach out to the Paideia team.
-3. To create proposals, you'll need to hold at least 1000 Paideia tokens in your wallet.
+2. Creating a DAO costs 50000 Paideia tokens. Currently to create a DAO, simply reach out to the Paideia team.
+3. To create proposals, you'll need to hold at least 500 Paideia tokens in your wallet.
 
 ## Getting Started
 
@@ -30,7 +30,7 @@ This section will cover how to use Paideia. Alternatively, you can watch [Paidei
 
 ## Creating Proposals
 
-1. Ensure you have at least 1000 Paideia tokens in your wallet.
+1. Ensure you have at least 500 Paideia tokens in your wallet.
 2. Navigate to your DAO's page on the Paideia platform and click "Create Proposal".
 3. Enter the necessary details about your proposal, including any outputs, as well as the duration, then submit. The dApp connector will ask you to sign the transaction to complete the proposal creation.
 
@@ -69,5 +69,3 @@ The Paideia team continues to work hard on improving the platform. Recent update
 Please submit any issues directly to the Paideia Discord by opening a support ticket. The link to open a ticket can be found [here](https://discord.gg/jP25DeTC8U) 
 
 If you encounter an error message or unexpected behavior, please capture the console logs (accessible by pressing F12 in most browsers) and share them with the Paideia team to aid in debugging.
-
-Please note that Paideia is currently in beta, and some features may evolve or change. Refer to the official Paideia documentation for the most up-to-date information.
