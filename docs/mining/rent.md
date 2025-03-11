@@ -1,6 +1,6 @@
-# Ergo's Storage Rent
+# Ergo's Demurrage (aka Storage Rent)
 
-Ergo's design emphasizes long-term economic sustainability. One of the key strategies to ensure this is the implementation of storage rent or *'demurrage'*. This mechanism, akin to 'on-chain garbage collection', not only mitigates the issue of blockchain bloat but also turns it into a profitable venture.
+Ergo's design emphasizes long-term economic sustainability. One of the key strategies to ensure this is the implementation of *'demurrage'* or storage rent. This mechanism, akin to 'on-chain garbage collection', not only mitigates the issue of blockchain bloat but also turns it into a profitable venture.
 
 ## Key Features
 
@@ -9,15 +9,15 @@ Ergo's design emphasizes long-term economic sustainability. One of the key strat
 - By reducing the storage load, storage fees eliminate potential extra costs that could arise from excessive state growth.
 - Storage fees stimulate coin circulation and deter deflation, thereby preventing illiquidity and congestion in the currency system.
 
-## Understanding *'Storage Rent'* 
+## Understanding *'Demurrage'* 
 
-Storage rent is a nominal fee levied on unspent output after four years. The fee per byte is determined by the storage rent subprotocol. For a box without tokens and complex scripts, this amounts to approximately 0.14 ERG every four years. 
+Demurrage is a nominal fee levied on unspent output after four years. The fee per byte is determined by the _storage rent_ subprotocol. For a box without tokens and complex scripts, this amounts to approximately 0.14 ERG every four years. 
 
 For a comprehensive understanding of the storage rent fees within the Ergo blockchain, including how these fees are calculated, applied, and adjusted over time, visit [this page](rent-fees.md).
 
 ## What About Tokens, NFTs, etc?
 
-Ergo's storage rent mechanism rewards miners uniquely by allowing them to claim valuable assets within a UTXO if the ERGs available are insufficient to cover the rent. This principle applies to various assets, including NFTs and stablecoins like SigUSD, and promotes increased participation and active asset management. While it enhances network security and reduces blockchain bloat, it could lead to uninformed users inadvertently losing valuable assets if they fail to maintain enough ERGs. **Users are strongly advised to thoroughly understand Ergo's storage rent mechanism and ensure they possess enough ERGs to protect their valuable assets.** For more information, [click here](rent-tokens.md).
+Ergo's demurrage mechanism rewards miners uniquely by allowing them to claim valuable assets within a UTXO if the ERGs available are insufficient to cover the rent. This principle applies to various assets, including NFTs and stablecoins like SigUSD, and promotes increased participation and active asset management. While it enhances network security and reduces blockchain bloat, it could lead to uninformed users inadvertently losing valuable assets if they fail to maintain enough ERGs. **Users are strongly advised to thoroughly understand Ergo's demurrage mechanism and ensure they possess enough ERGs to protect their valuable assets.** For more information, [click here](rent-tokens.md).
 
 ## How to Check the Age of Your Boxes? 
 
@@ -30,4 +30,4 @@ Ergo's storage rent mechanism rewards miners uniquely by allowing them to claim 
 - [EIP-0045 Redistribution contracts for Storage Rent Fees #93](https://github.com/ergoplatform/eips/pull/93)
 - [EIP-39 Monotonic box creation height rule](https://github.com/ergoplatform/eips/blob/master/eip-0039.md)
 - [EIP-33: Token burning during rent collection #68](https://github.com/ergoplatform/eips/pull/68)
-- [Storage rent details (ergoforum)](https://www.ergoforum.org/t/storage-rent-details/256).
+- [Demurrage details (ergoforum)](https://www.ergoforum.org/t/storage-rent-details/256).
