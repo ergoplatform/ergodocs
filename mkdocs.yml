@@ -2,6 +2,7 @@ site_name: ErgoDocs
 site_url: https://docs.ergoplatform.com
 repo_url: https://github.com/glasgowm148/ergodocs
 edit_uri: edit/main/docs/
+site_description: Ergo Platform Documentation
 
 theme:
     name: material
@@ -70,18 +71,15 @@ plugins:
   - neoteroi.mkdocsoad
   - mkdocs-jupyter #https://github.com/danielfrg/mkdocs-jupyter
   - section-index #https://github.com/oprypin/mkdocs-section-index
-  # - swagger
-  # - awesome-pages #https://github.com/lukasgeiter/mkdocs-awesome-pages-plugin
+  #- awesome-nav #https://github.com/lukasgeiter/mkdocs-awesome-pages-plugin
   - autolinks 
   - tags: # https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/#
-      tags_file: tags.md
   - bibtex:
       bib_file: refs.bib
-  # - categories
-  # - exclude-search # https://github.com/chrieke/mkdocs-exclude-search
-  # - semiliterate # http://studioinfinity.org/semiliterate/mkdocs_semiliterate/plugin/
-  # - awesome-list
-  # - pagenav-generator #https://github.com/Andre601/mkdocs-pagenav-generator
+  #- categories
+  - exclude-search # https://github.com/chrieke/mkdocs-exclude-search
+  - semiliterate # http://studioinfinity.org/semiliterate/mkdocs_semiliterate/plugin/
+  #- pagenav-generator #https://github.com/Andre601/mkdocs-pagenav-generator
 
 
 
