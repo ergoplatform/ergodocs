@@ -61,6 +61,14 @@ For more information about the scope of the Foundation's work, please refer to t
 
 - **Role & Responsibilities:** No EF duties other than voting. Salaried as a Core Developer (Sigma) but unpaid for EF participation.
 
+**Alison Robson (anon_br)**, serving in Developer Relations, is a software engineer passionate about facilitating crypto adoption through enhanced user experience.
+
+- **Role & Responsibilities:** Director of Engineering/ Developer Adoption: work with community developers to support new frameworks, integration, and tooling needed by the development community. (Fleet, Nautilus, Ledger)
+
+- **Mgpai:**
+
+### Ergo Foundation Honorary Members
+
 **Mohammad Hasan Samadani (mhs_sam)** holds a PhD in computer science and has over 12 years of experience in security and software development as a product owner, researcher, and team leader. He became a board member of the Ergo Foundation in 2020 after making significant contributions to the development of the Ergo mining infrastructure, Stratum server, and ergopool (a smart contract-based pool to bypass pool resistance of Autolykos v1).
 
 - **Role & Responsibilities:** In addition to his voting duties within the EF, he fosters innovation by incubating projects. His notable contributions include the development of [Ergo Raffle](ergoraffle.md), [ErgoWell](ergowell.md), [Minotaur-wallet](wallets.md), and the [Rosen Bridge](rosen.md).
@@ -72,10 +80,6 @@ For more information about the scope of the Foundation's work, please refer to t
 ### Ergo Foundation Officers
 
 *While Officers don’t have voting rights, they work closely with the foundation members, help with discussions, and share insights and critiques to aid them in making better decisions.*
-
-**Alison Robson (anon_br)**, serving in Developer Relations, is a software engineer passionate about facilitating crypto adoption through enhanced user experience.
-
-- **Role & Responsibilities:** Director of Engineering/ Developer Adoption: work with community developers to support new frameworks, integration, and tooling needed by the development community. (Fleet, Nautilus, Ledger)
 
 **Anastasiia Sidorova** serves as the Treasurer of the Ergo Foundation. She holds a degree in "Mathematical methods in Economics" and worked as a banking analyst for four years before transitioning into hospitality. However, her passion for Analytics and Accounting has always remained.
 
@@ -92,16 +96,6 @@ For more information about the scope of the Foundation's work, please refer to t
 - **Role & Responsibilities:**  Supports the EF Business Development with advice. Acts as an ambassador for Ergo, and engages with the community on weekly AMAs and elsewhere.
 
 
-### Other Personnel
-
-**Alexander Chepurnoy (kushti)** has been active in the blockchain field since 2011. He has authored over twenty academic papers and has more than fifteen years of experience in software development. Prior to co-founding Ergo, he co-founded smartcontract.com (now Chainlink), served as a core developer at NXT, and was one of the first employees at IOHK, where he held the positions of Research Fellow and Team Scorex Manager. He manages any bounties relating to the eference client repository and keeps a watch over [sigma-rust](sigma-rust.md) development and any other high-level development and research not covered otherwise.
-
-- **Role & Responsibilities:** Alex stepped back from the Foundation January 2024 to focus solely on development, you can see his announcement post [here](https://www.ergoforum.org/t/core-developer-kushti-is-leaving-ergo-foundation/4648). He plans to launch a DevelopmentDAO and is currently speaking to interested parties. He will continue to manage communications between developers and EF going forward. 
-
-The Ergo Foundation is made up of a diverse group of individuals, including salaried employees, volunteers, bounty collectors, and independent project developers within the Ergo ecosystem. It's important to note that there is no designated 'core' development team. The Core Marketing team, for instance, is a mix of dedicated community members and salaried professionals. Similarly, contributors who have made significant additions to core repositories may be invited to participate in Core Development discussions, regardless of their employment status.
-
-The current composition of our full-time personnel is as follows:
-
 #### Editorial/Marketing
 
 - **Andy Lowe**: Video Editor
@@ -109,15 +103,19 @@ The current composition of our full-time personnel is as follows:
 - **Eva Qing**: Chinese Community Management
 - **Marcelo Roncatti (Marcello)** is a Brazilian multifaceted designer and art director working over 20 years in the graphics and visual arts Co-Founder and Partner of the graphic design studio called Estudio Colletivo, a multidisciplinary design office that works on branding projects, graphic design and interface design.
 
-#### Development
 
-In addition to the developers within the foundation members and officers,
+## 
+The Ergo Foundation is made up of a diverse group of individuals, including salaried employees, volunteers, bounty collectors, and independent project developers within the Ergo ecosystem. It's important to note that there is no designated 'core' development team. The Core Marketing team, for instance, is a mix of dedicated community members and salaried professionals. Similarly, contributors who have made significant additions to core repositories may be invited to participate in Core Development discussions, regardless of their employment status.
 
-- soysor (ross-weir): sigma-rust
-- Benjamin Schulte: Wallet Developer (part-time)
-- Dmitry Usov: Front-end Developer
 
-However, most development is done through [bounties](bounties.md) and publicly logged [here](https://github.com/kushti/bounties/tree/master/data)
+### DevDao
+
+**Alexander Chepurnoy (kushti)** has been active in the blockchain field since 2011. He has authored over twenty academic papers and has more than fifteen years of experience in software development. Prior to co-founding Ergo, he co-founded smartcontract.com (now Chainlink), served as a core developer at NXT, and was one of the first employees at IOHK, where he held the positions of Research Fellow and Team Scorex Manager. He manages any bounties relating to the eference client repository and keeps a watch over [sigma-rust](sigma-rust.md) development and any other high-level development and research not covered otherwise.
+
+- **Role & Responsibilities:** Alex stepped back from the Foundation January 2024 to focus solely on development, you can see his announcement post [here](https://www.ergoforum.org/t/core-developer-kushti-is-leaving-ergo-foundation/4648). He plans to launch a DevelopmentDAO and is currently speaking to interested parties. He will continue to manage communications between developers and EF going forward. 
+
+
+#### Outgoings
 
 
 - **Ergo Foundation**: Two members receive a salary for their contributions to the ecosystem, while two others are rewarded with a small amount of ERG. Both kushti and Justin choose not to receive any compensation.

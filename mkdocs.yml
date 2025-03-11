@@ -157,7 +157,9 @@ nav:
         - dev/protocol/scaling.md
         - Layer 0:
           - dev/protocol/scaling/layer0.md
-          - Sub Blocks: uses/sidechains/subblocks.md
+          - Sub Blocks: 
+            - uses/sidechains/subblocks.md
+            - Technical Details: uses/sidechains/input-blocks.md
         - Layer 1: dev/protocol/scaling/layer1.md
         - Layer 2: dev/protocol/scaling/layer2.md
         - Discussions:

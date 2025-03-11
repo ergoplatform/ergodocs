@@ -7,17 +7,21 @@ With the release of Ergo 6.0.0-alpha0, developers have the opportunity to explor
 Ergo 6.0 introduces several new features and enhancements to the ErgoScript language and the broader protocol. Below is a summary of these new features:
 
 1. **Enhanced Cryptographic Operations**:
+
    - New opcodes for advanced cryptographic functions, such as multi-signatures and hash-based operations.
    - Example: A new opcode for verifying BLS signatures.
 
 2. **Improved Serialization Mechanisms**:
+
    - More efficient serialization formats for ErgoTree, reducing the size and improving the speed of transactions.
 
 3. **Expanded Opcodes and Script Constructs**:
+
    - Introduction of new opcodes to support complex smart contract logic.
    - Example: New operations for handling complex data structures like AVL trees.
 
 4. **New Script Validation Rules**:
+
    - Enhanced validation rules to support the new features while maintaining backward compatibility with 5.x scripts.
 
 ### ErgoScript Code Examples
