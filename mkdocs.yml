@@ -63,9 +63,9 @@ extra:
 
 plugins:
   - search
-  - rss
-  - git-revision-date-localized
-  - glightbox
+  #- rss
+  #- git-revision-date-localized
+  #- glightbox
   - render_swagger:
       allow_arbitrary_locations: true
   - neoteroi.mkdocsoad

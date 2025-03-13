@@ -97,9 +97,3 @@ The Transaction Merkle Tree in Ergo is designed with efficiency in mind, allowin
 To address these performance considerations, the Ergo codebase employs various optimization techniques and data structures. Here's a practical example of constructing a Transaction Merkle Tree using the Ergo codebase:
 
 - **Example Code Reference**: Detailed examples of constructing and verifying Transaction Merkle Trees can be found in the Ergo codebase within the [`BlockTransactions.scala`](https://github.com/ergoplatform/ergo/blob/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/history/BlockTransactions.scala) file.
-
-## Conclusion
-
-The Transaction Merkle Tree is a cornerstone of the Ergo blockchain, providing the necessary security and efficiency for transaction verification. By understanding and utilizing this data structure, developers can build robust applications that take full advantage of Ergo's cryptographic guarantees.
-
-For further technical details and implementation examples, developers are encouraged to explore the Ergo codebase and related documentation.
