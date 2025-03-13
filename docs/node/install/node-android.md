@@ -1,5 +1,14 @@
 # Running an Ergo Node on Android
 
+/// details | One click setup 
+    {type: tip, open: true}
+
+[ErgoNodeAndroid](https://github.com/rustinmyeye/ErgoNodeAndroid) is an attempt at a one-click Ergo node app for Android. This app is based on NeoTerm, and runs automated install scripts to set up and run an Ergo node on Android.
+
+The current version of this app sets up a stateless light node.
+
+///
+
 ## Getting Started
 
 Operating an Ergo full node on an Android device offers several intriguing benefits. For instance, it allows individuals without access to a desktop or laptop to sync the entire Ergo blockchain on their mobile device. This process also enables the use of personal nodes for applications such as the Ergo mobile wallet or the Ergo Mixer on mobile devices.
