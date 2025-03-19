@@ -29,16 +29,34 @@ jobs:
           echo "🔍 Testing SSH access..."
           ssh -v root@88.198.50.217 'echo "✅ SSH connection successful!"'
 
+      - name: Debug MkDocs Build Path
+        run: |
+          echo "🔍 Checking where MkDocs will build the site..."
+          find . -type d -name "site"
+
+      - name: Build MkDocs Site & Log Details
+        run: |
+          echo "🚀 Running MkDocs build..."
+          mkdocs build --clean
+          echo "✅ MkDocs build complete!"
+          echo "🔍 Verifying generated files..."
+          ls -la ./site
+          echo "🕒 Timestamps of generated files:"
+          find ./site -type f -exec stat {} \;
+
       - name: Debug Deploy Script Output
         run: |
           echo "🚀 Running deploy.sh in debug mode..."
           ssh root@88.198.50.217 'bash -x /var/www/html/ergodocs/tools/deploy.sh'
 
-      - name: Run Deploy Script as Root
+      - name: Verify Deployment on Remote Server
         run: |
-          echo "🚀 Running deploy.sh as root..."
-          ssh root@88.198.50.217 'sudo bash /var/www/html/ergodocs/tools/deploy.sh'
+          echo "🔍 Checking deployed files on remote server..."
+          ssh root@88.198.50.217 'ls -la /var/www/html/ergodocs/site || echo "❌ Site deployment failed!"'
+          echo "🕒 Checking timestamps of deployed files..."
+          ssh root@88.198.50.217 'find /var/www/html/ergodocs/site -type f -exec stat {} \;'
 
-      - name: Verify Deployed Site on Remote Server
+      - name: Check Web Server Served Files
         run: |
-       
+          echo "🔍 Checking what the web server is serving..."
+          curl -s -I http://yourwebsite.com | grep "Last-Modified"
