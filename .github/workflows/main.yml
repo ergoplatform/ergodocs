@@ -29,6 +29,12 @@ jobs:
         with:
           python-version: 3.11
 
+      - name: Identify Docker Container on Port 443
+        run: |
+          echo "🔍 Checking which Docker container is using port 443..."
+          ssh root@88.198.50.217 'docker ps --format "{{.ID}} {{.Image}} {{.Ports}}" | grep ":443" || echo "❌ No Docker container is using port 443!"'
+
+
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
