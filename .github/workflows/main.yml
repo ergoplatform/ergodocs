@@ -1,12 +1,8 @@
 name: CI
 
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [ main ]
-
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 defaults:
@@ -14,13 +10,10 @@ defaults:
     shell: bash
     working-directory: .
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   deploy:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
@@ -34,18 +27,25 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: 3.11  # Match Python version with your local environment
+          python-version: 3.11  # Ensures Python 3.11 is used
 
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install mkdocs-bibtex  # Ensure bibtex plugin is installed
+          pip install --no-cache-dir mkdocs mkdocs-bibtex
           pip install -r requirements.txt
 
-      - name: Verify MkDocs Plugins
+      - name: Debug Python & MkDocs Before Deployment
         run: |
-          mkdocs --version  # Debugging step
-          pip list | grep mkdocs  # Ensure mkdocs-bibtex is installed
+          echo "🔍 Python Version:"
+          python --version
+          echo "🔍 Installed MkDocs Plugins:"
+          pip list | grep mkdocs
+          echo "🔍 MkDocs Version:"
+          mkdocs --version
 
-      - name: Deploy the app
-        run: bash ./tools/deploy.sh
+      - name: Run Deploy Script with Python 3.11
+        run: |
+          echo "🚀 Running Deploy Script..."
+          python3.11 -m mkdocs build || python -m mkdocs build
+          bash ./tools/deploy.sh
