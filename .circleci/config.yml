@@ -7,8 +7,14 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Install Dependencies
+          command: |
+            sudo apt-get update && sudo apt-get install -y python3-pip
+            pip3 install -r requirements.txt
+      - run:
           name: Deploy
           command: bash ./tools/deploy.sh
+
 workflows:
   version: 2
   build-and-deploy:
@@ -16,4 +22,4 @@ workflows:
       - deploy:
           filters:
             branches:
-              only:  main
+              only: main
