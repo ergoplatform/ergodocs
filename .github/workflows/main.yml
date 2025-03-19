@@ -49,26 +49,14 @@ jobs:
           python -m mkdocs build --clean
           echo "✅ MkDocs build complete!"
           echo "🔍 Verifying generated files..."
-          ssh root@88.198.50.217 'find /var/www/html/ergodocs/site -type f -printf "🕒 %TY-%Tm-%Td %TH:%TM:%TS %p\n" | sort -r | head -n 10'
+          ssh root@213.239.193.208 'find /var/www/html/ergodocs/site -type f -printf "🕒 %TY-%Tm-%Td %TH:%TM:%TS %p\n" | sort -r | head -n 10'
 
-      - name: Check Nginx Root Directory
+      - name: Debug Deploy Script Output
         run: |
-          echo "🔍 Checking Nginx document root..."
-          ssh root@88.198.50.217 'docker exec $(docker ps --filter "ancestor=nginx" --format "{{.ID}}") sh -c "cat /etc/nginx/nginx.conf | grep root"'
-
-      - name: Check Nginx Container Site Path
-        run: |
-          echo "🔍 Checking if Nginx inside Docker is using the latest site directory..."
-          ssh root@88.198.50.217 'docker exec $(docker ps --filter "ancestor=nginx" --format "{{.ID}}") ls -la /usr/share/nginx/html | tail -n 10'
-
-      - name: Force Reload Nginx Content
-        run: |
-          echo "🔧 Forcing Nginx inside Docker to refresh content..."
-          ssh root@88.198.50.217 'docker exec $(docker ps --filter "ancestor=nginx" --format "{{.ID}}") sh -c "rm -rf /usr/share/nginx/html/*"'
-          ssh root@88.198.50.217 'docker exec $(docker ps --filter "ancestor=nginx" --format "{{.ID}}") sh -c "cp -r /var/www/html/ergodocs/site/* /usr/share/nginx/html/"'
-          ssh root@88.198.50.217 'docker restart $(docker ps --filter "ancestor=nginx" --format "{{.ID}}")'
+          echo "🚀 Running deploy.sh in debug mode..."
+          ssh root@213.239.193.208 'bash -x /var/www/html/ergodocs/tools/deploy.sh'
 
       - name: Check Web Server Served Files
         run: |
           echo "🔍 Checking what the web server is serving..."
-          curl -s -I https://docs.ergoplatform.com/mining/rent/rent-spending/ | grep "Last-Modified" || echo "❌ Web server is serving outdated content or request failed!"
+          curl -s -I https://docs.ergoplatform.com/ | grep "Last-Modified" || echo "❌ Web server is serving outdated content or request failed!"
