@@ -24,20 +24,29 @@ jobs:
           key: ${{ secrets.DEPLOY_KEY }}
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
 
-      - name: Test SSH Connection
-        run: |
-          echo "🔍 Testing SSH access..."
-          ssh -v root@88.198.50.217 'echo "✅ SSH connection successful!"'
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
 
-      - name: Debug MkDocs Build Path
+      - name: Install Dependencies
         run: |
-          echo "🔍 Checking where MkDocs will build the site..."
-          find . -type d -name "site"
+          python -m pip install --upgrade pip
+          pip install --no-cache-dir mkdocs mkdocs-bibtex
+          pip install -r requirements.txt
+          echo "✅ Dependencies installed!"
+
+      - name: Verify MkDocs Installation
+        run: |
+          echo "🔍 Checking MkDocs installation..."
+          python -m mkdocs --version || (echo "❌ MkDocs not found, reinstalling..." && pip install mkdocs)
+          which mkdocs || echo "❌ MkDocs not in PATH!"
+          python -m mkdocs --version
 
       - name: Build MkDocs Site & Log Details
         run: |
           echo "🚀 Running MkDocs build..."
-          mkdocs build --clean
+          python -m mkdocs build --clean
           echo "✅ MkDocs build complete!"
           echo "🔍 Verifying generated files..."
           ls -la ./site
