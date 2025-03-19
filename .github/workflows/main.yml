@@ -62,8 +62,7 @@ jobs:
           ls -la ./site
       
       - name: Debug Deploy Script
-        run: cat ./tools/deploy.sh
-
+        run: cat ./tools/deploy.sh || echo "❌ Could not read deploy.sh"
 
       - name: Run Deploy Script with Python 3.11
         run: |
