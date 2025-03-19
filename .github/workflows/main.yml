@@ -28,6 +28,12 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: 3.11
+      
+      - name: Check Port Usage
+        run: |
+          echo "🔍 Checking what is using port 443..."
+          ssh root@88.198.50.217 'netstat -tulnp | grep ":443 " || lsof -i :443 || echo "❌ No process found on port 443!"'
+
 
       - name: Install Dependencies
         run: |
