@@ -69,7 +69,7 @@ plugins:
   - render_swagger:
       allow_arbitrary_locations: true
   - neoteroi.mkdocsoad
-  - mkdocs-jupyter #https://github.com/danielfrg/mkdocs-jupyter
+  #- mkdocs-jupyter #https://github.com/danielfrg/mkdocs-jupyter
   - section-index #https://github.com/oprypin/mkdocs-section-index
   #- awesome-nav #https://github.com/lukasgeiter/mkdocs-awesome-pages-plugin
   - autolinks 

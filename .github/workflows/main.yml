@@ -44,4 +44,6 @@ jobs:
           pip install -r requirements.txt
 
       - name: Deploy the app
-        run: bash ./tools/deploy.sh
+        run: |
+          pip install mkdocs-bibtex
+          bash ./tools/deploy.sh
