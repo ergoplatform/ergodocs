@@ -28,12 +28,6 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: 3.11
-      
-      - name: Check Port Usage
-        run: |
-          echo "🔍 Checking what is using port 443..."
-          ssh root@88.198.50.217 'netstat -tulnp | grep ":443 " || lsof -i :443 || echo "❌ No process found on port 443!"'
-
 
       - name: Install Dependencies
         run: |
@@ -70,20 +64,26 @@ jobs:
           ssh root@88.198.50.217 'chown -R www-data:www-data /var/www/html/ergodocs/site'
           ssh root@88.198.50.217 'ls -la /var/www/html/ergodocs/site'
 
-      - name: Test Nginx Configuration
+      - name: Check Port Usage
         run: |
-          echo "🔍 Testing Nginx configuration..."
-          ssh root@88.198.50.217 'nginx -t' || echo "❌ Nginx configuration test failed!"
+          echo "🔍 Checking what is using port 443..."
+          ssh root@88.198.50.217 'netstat -tulnp | grep ":443 " || lsof -i :443 || echo "❌ No process found on port 443!"'
 
-      - name: Debug Nginx Logs
+      - name: Stop Nginx Forcefully
         run: |
-          echo "🔍 Checking Nginx logs..."
-          ssh root@88.198.50.217 'journalctl -u nginx --no-pager -n 50 || echo "❌ No logs found!"'
+          echo "🔧 Stopping all running Nginx processes..."
+          ssh root@88.198.50.217 'pkill -9 nginx || echo "❌ No running Nginx processes found!"'
+          ssh root@88.198.50.217 'sleep 2'
+
+      - name: Verify Port 443 is Free
+        run: |
+          echo "🔍 Checking if port 443 is still in use..."
+          ssh root@88.198.50.217 'netstat -tulnp | grep ":443 " && echo "❗ Port 443 is STILL in use!" || echo "✅ Port 443 is now free!"'
 
       - name: Restart Web Server
         run: |
           echo "🔄 Restarting web server..."
-          ssh root@88.198.50.217 'systemctl reload nginx || systemctl restart nginx || (echo "❌ Nginx restart failed!" && systemctl status nginx --no-pager)'
+          ssh root@88.198.50.217 'systemctl restart nginx || (echo "❌ Nginx restart failed!" && systemctl status nginx --no-pager)'
 
       - name: Check Web Server Served Files
         run: |
