@@ -74,8 +74,8 @@ plugins:
   #- awesome-nav #https://github.com/lukasgeiter/mkdocs-awesome-pages-plugin
   - autolinks 
   - tags: # https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/#
-  #- bibtex:
-  #    bib_file: refs.bib
+  - bibtex:
+      bib_file: refs.bib
   #- categories
   #- exclude-search # https://github.com/chrieke/mkdocs-exclude-search
   #- semiliterate # http://studioinfinity.org/semiliterate/mkdocs_semiliterate/plugin/
