@@ -40,8 +40,3 @@ The [Extension Block Merkle Tree](merkle-extension.md) secures key-value data li
 
 Merkle Trees are also used to create compact proofs of state transitions. These proofs allow for efficient verification of the blockchain state without requiring a full node, which is crucial for lightweight clients to securely participate in the network. An example of how a lite client can check a Merkle-tree-based membership proof is detailed in the [Lite Client Checking Merkle Proof](merkle-light-proof.md) documentation.
 
-## Conclusion
-
-Merkle Trees are a cornerstone of the Ergo blockchain, providing the necessary security and efficiency for various critical operations, from transaction verification to securing additional block metadata. As the Ergo ecosystem continues to evolve, these data structures will likely see further innovation, offering more robust and scalable solutions for blockchain-based applications.
-
-Developers working with Ergo should familiarize themselves with these concepts and the associated code implementations to effectively leverage Merkle Trees in their projects. For further technical details and implementation examples, please refer to the [Ergo GitHub repository](https://github.com/ergoplatform/ergo).

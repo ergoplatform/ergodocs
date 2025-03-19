@@ -411,6 +411,7 @@ nav:
   - Developers: 
     - dev/get-started.md
     - Students: students/index.md
+    - Bounties!: contribute/bounties.md
     - Data Model:
       - dev/data-model/data-model.md
       - Box: 
