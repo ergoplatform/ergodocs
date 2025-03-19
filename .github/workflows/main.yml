@@ -49,19 +49,25 @@ jobs:
           python -m mkdocs build --clean
           echo "✅ MkDocs build complete!"
           echo "🔍 Verifying generated files (filenames and modification times only)..."
-          find ./site -type f -printf "🕒 %TY-%Tm-%Td %TH:%TM:%TS %p\n" | sort -r | head -n 20 || true
+          find ./site -type f -printf "🕒 %TY-%Tm-%Td %TH:%TM:%TS %p\n" > temp_files.txt
+          sort -r temp_files.txt | head -n 20 || true
+          rm temp_files.txt
 
       - name: Debug Deploy Script Output
         run: |
           echo "🚀 Running deploy.sh in debug mode..."
           ssh root@88.198.50.217 'bash -x /var/www/html/ergodocs/tools/deploy.sh'
 
-      - name: Verify Deployment on Remote Server
+      - name: Fix File Ownership
         run: |
-          echo "🔍 Checking deployed files on remote server..."
-          ssh root@88.198.50.217 'find /var/www/html/ergodocs/site -type f -printf "🕒 %TY-%Tm-%Td %TH:%TM:%TS %p\n" | sort -r | head -n 20 || true'
-          echo "🔍 Checking file ownership (should NOT be root)..."
-          ssh root@88.198.50.217 'ls -la /var/www/html/ergodocs/site | grep " root " && echo "❗ WARNING: Files are owned by root. deploy.sh might be running as root!" || echo "✅ Ownership looks good!"'
+          echo "🔧 Fixing file ownership..."
+          ssh root@88.198.50.217 'chown -R www-data:www-data /var/www/html/ergodocs/site'
+          ssh root@88.198.50.217 'ls -la /var/www/html/ergodocs/site'
+
+      - name: Restart Web Server
+        run: |
+          echo "🔄 Restarting web server..."
+          ssh root@88.198.50.217 'systemctl restart nginx || systemctl restart apache2'
 
       - name: Check Web Server Served Files
         run: |
