@@ -7,8 +7,23 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Debug Environment
+          command: |
+            echo "🔍 Python Version:"
+            python --version
+            echo "🔍 Installed MkDocs Plugins:"
+            pip list | grep mkdocs
+            echo "🔍 MkDocs Version:"
+            mkdocs --version
+      - run:
+          name: Force Full Rebuild
+          command: |
+            rm -rf site
+            mkdocs build --clean
+      - run:
           name: Deploy
           command: bash ./tools/deploy.sh
+
 workflows:
   version: 2
   build-and-deploy:
@@ -16,4 +31,4 @@ workflows:
       - deploy:
           filters:
             branches:
-              only:  main
+              only: main

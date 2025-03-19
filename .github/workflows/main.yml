@@ -44,8 +44,23 @@ jobs:
           echo "🔍 MkDocs Version:"
           mkdocs --version
 
+      - name: Force Full Rebuild
+        run: |
+          rm -rf site
+          mkdocs build --clean
+
+      - name: Check Built Files Before Deployment
+        run: |
+          echo "🔍 Checking built site files..."
+          ls -la ./site
+
       - name: Run Deploy Script with Python 3.11
         run: |
           echo "🚀 Running Deploy Script..."
           python3.11 -m mkdocs build || python -m mkdocs build
           bash ./tools/deploy.sh
+
+      - name: Debug Deployed Files
+        run: |
+          echo "🔍 Checking deployed site files..."
+          ls -la /var/www/html/ergodocs/site || echo "❌ Site directory not found!"
