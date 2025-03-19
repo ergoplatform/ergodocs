@@ -48,6 +48,13 @@ jobs:
         run: |
           rm -rf site
           mkdocs build --clean
+      
+      - name: Debug MkDocs Build Path
+        run: |
+          echo "🔍 Checking where MkDocs built the site..."
+          find . -type d -name "site"
+          ls -la ./site || echo "❌ MkDocs site directory not found!"
+
 
       - name: Check Built Files Before Deployment
         run: |
