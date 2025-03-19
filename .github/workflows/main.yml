@@ -64,10 +64,20 @@ jobs:
           ssh root@88.198.50.217 'chown -R www-data:www-data /var/www/html/ergodocs/site'
           ssh root@88.198.50.217 'ls -la /var/www/html/ergodocs/site'
 
+      - name: Test Nginx Configuration
+        run: |
+          echo "🔍 Testing Nginx configuration..."
+          ssh root@88.198.50.217 'nginx -t' || echo "❌ Nginx configuration test failed!"
+
+      - name: Debug Nginx Logs
+        run: |
+          echo "🔍 Checking Nginx logs..."
+          ssh root@88.198.50.217 'journalctl -u nginx --no-pager -n 50 || echo "❌ No logs found!"'
+
       - name: Restart Web Server
         run: |
           echo "🔄 Restarting web server..."
-          ssh root@88.198.50.217 'systemctl restart nginx'
+          ssh root@88.198.50.217 'systemctl reload nginx || systemctl restart nginx || (echo "❌ Nginx restart failed!" && systemctl status nginx --no-pager)'
 
       - name: Check Web Server Served Files
         run: |
