@@ -27,7 +27,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: 3.11  # Ensures Python 3.11 is used
+          python-version: 3.11
 
       - name: Install Dependencies
         run: |
@@ -35,42 +35,30 @@ jobs:
           pip install --no-cache-dir mkdocs mkdocs-bibtex
           pip install -r requirements.txt
 
-      - name: Debug Python & MkDocs Before Deployment
-        run: |
-          echo "🔍 Python Version:"
-          python --version
-          echo "🔍 Installed MkDocs Plugins:"
-          pip list | grep mkdocs
-          echo "🔍 MkDocs Version:"
-          mkdocs --version
-
-      - name: Force Full Rebuild
-        run: |
-          rm -rf site
-          mkdocs build --clean
-      
       - name: Debug MkDocs Build Path
         run: |
-          echo "🔍 Checking where MkDocs built the site..."
+          echo "🔍 Checking where MkDocs will build the site..."
           find . -type d -name "site"
-          ls -la ./site || echo "❌ MkDocs site directory not found!"
 
-
-      - name: Check Built Files Before Deployment
+      - name: Force MkDocs to Output to Correct Directory
         run: |
-          echo "🔍 Checking built site files..."
-          ls -la ./site
-      
+          echo "🚀 Forcing MkDocs to build in the correct directory..."
+          mkdocs build --site-dir /var/www/html/ergodocs/site --clean
+
+      - name: Verify Built Files Before SSH Deployment
+        run: |
+          echo "🔍 Checking built site files before SSH..."
+          ls -la /var/www/html/ergodocs/site || echo "❌ MkDocs site directory not found!"
+
       - name: Debug Deploy Script
         run: cat ./tools/deploy.sh || echo "❌ Could not read deploy.sh"
 
-      - name: Run Deploy Script with Python 3.11
+      - name: Run Deploy Script via SSH
         run: |
-          echo "🚀 Running Deploy Script..."
-          python3.11 -m mkdocs build || python -m mkdocs build
-          bash ./tools/deploy.sh
+          echo "🚀 Running deploy.sh via SSH..."
+          ssh -tq root@88.198.50.217 '/bin/bash -l -c "source ~/.nvm/nvm.sh; cd /var/www/html/ergodocs; git pull; rm -rf /var/www/html/ergodocs/site;  mkdocs build --site-dir /var/www/html/ergodocs/site; cd /data/explorer;  docker-compose restart nginx"'
 
-      - name: Debug Deployed Files
+      - name: Verify Deployment on Remote Server
         run: |
-          echo "🔍 Checking deployed site files..."
-          ls -la /var/www/html/ergodocs/site || echo "❌ Site directory not found!"
+          echo "🔍 Checking deployed files on remote server..."
+          ssh root@88.198.50.217 'ls -la /var/www/html/ergodocs/site || echo "❌ Site deployment failed!"'
