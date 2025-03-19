@@ -29,7 +29,7 @@ httpcore==1.0.7
 httpx==0.28.1
 idna==3.10
 ipykernel==6.29.5
-ipython==8.34.0
+ipython==8.0,<9.0
 ipython_pygments_lexers==1.1.1
 jedi==0.19.2
 Jinja2==3.1.5
