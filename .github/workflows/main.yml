@@ -29,12 +29,6 @@ jobs:
         with:
           python-version: 3.11
 
-      - name: Identify Docker Container on Port 443
-        run: |
-          echo "🔍 Checking which Docker container is using port 443..."
-          ssh root@88.198.50.217 'docker ps --format "{{.ID}} {{.Image}} {{.Ports}}" | grep ":443" || echo "❌ No Docker container is using port 443!"'
-
-
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
@@ -70,26 +64,20 @@ jobs:
           ssh root@88.198.50.217 'chown -R www-data:www-data /var/www/html/ergodocs/site'
           ssh root@88.198.50.217 'ls -la /var/www/html/ergodocs/site'
 
-      - name: Check Port Usage
+      - name: Check Running Nginx Processes
         run: |
-          echo "🔍 Checking what is using port 443..."
-          ssh root@88.198.50.217 'netstat -tulnp | grep ":443 " || lsof -i :443 || echo "❌ No process found on port 443!"'
+          echo "🔍 Checking for running Nginx processes..."
+          ssh root@88.198.50.217 'ps aux | grep nginx || echo "❌ No running Nginx processes found!"'
 
-      - name: Stop Nginx Forcefully
+      - name: Check If Nginx is Running in Docker
         run: |
-          echo "🔧 Stopping all running Nginx processes..."
-          ssh root@88.198.50.217 'pkill -9 nginx || echo "❌ No running Nginx processes found!"'
-          ssh root@88.198.50.217 'sleep 2'
+          echo "🔍 Checking for an Nginx container..."
+          ssh root@88.198.50.217 'docker ps --format "{{.ID}} {{.Image}} {{.Ports}}" | grep nginx || echo "❌ No Nginx container found!"'
 
-      - name: Verify Port 443 is Free
+      - name: Restart Dockerized Nginx
         run: |
-          echo "🔍 Checking if port 443 is still in use..."
-          ssh root@88.198.50.217 'netstat -tulnp | grep ":443 " && echo "❗ Port 443 is STILL in use!" || echo "✅ Port 443 is now free!"'
-
-      - name: Restart Web Server
-        run: |
-          echo "🔄 Restarting web server..."
-          ssh root@88.198.50.217 'systemctl restart nginx || (echo "❌ Nginx restart failed!" && systemctl status nginx --no-pager)'
+          echo "🔄 Restarting Nginx inside Docker..."
+          ssh root@88.198.50.217 'docker ps --filter "ancestor=nginx" --format "{{.ID}}" | xargs -r docker restart'
 
       - name: Check Web Server Served Files
         run: |
