@@ -24,41 +24,21 @@ jobs:
           key: ${{ secrets.DEPLOY_KEY }}
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: 3.11
-
-      - name: Install Dependencies
+      - name: Test SSH Connection
         run: |
-          python -m pip install --upgrade pip
-          pip install --no-cache-dir mkdocs mkdocs-bibtex
-          pip install -r requirements.txt
+          echo "🔍 Testing SSH access..."
+          ssh -v root@88.198.50.217 'echo "✅ SSH connection successful!"'
 
-      - name: Debug MkDocs Build Path
+      - name: Debug Deploy Script Output
         run: |
-          echo "🔍 Checking where MkDocs will build the site..."
-          find . -type d -name "site"
+          echo "🚀 Running deploy.sh in debug mode..."
+          ssh root@88.198.50.217 'bash -x /var/www/html/ergodocs/tools/deploy.sh'
 
-      - name: Force MkDocs to Output to Correct Directory
+      - name: Run Deploy Script as Root
         run: |
-          echo "🚀 Forcing MkDocs to build in the correct directory..."
-          mkdocs build --site-dir /var/www/html/ergodocs/site --clean
+          echo "🚀 Running deploy.sh as root..."
+          ssh root@88.198.50.217 'sudo bash /var/www/html/ergodocs/tools/deploy.sh'
 
-      - name: Verify Built Files Before SSH Deployment
+      - name: Verify Deployed Site on Remote Server
         run: |
-          echo "🔍 Checking built site files before SSH..."
-          ls -la /var/www/html/ergodocs/site || echo "❌ MkDocs site directory not found!"
-
-      - name: Debug Deploy Script
-        run: cat ./tools/deploy.sh || echo "❌ Could not read deploy.sh"
-
-      - name: Run Deploy Script via SSH
-        run: |
-          echo "🚀 Running deploy.sh via SSH..."
-          ssh -tq root@88.198.50.217 '/bin/bash -l -c "source ~/.nvm/nvm.sh; cd /var/www/html/ergodocs; git pull; rm -rf ~/mkdocs_build; mkdocs build --site-dir ~/mkdocs_build; sudo cp -r ~/mkdocs_build/* /var/www/html/ergodocs/site; cd /data/explorer;  docker-compose restart nginx"'
-
-      - name: Verify Deployment on Remote Server
-        run: |
-          echo "🔍 Checking deployed files on remote server..."
-          ssh root@88.198.50.217 'ls -la /var/www/html/ergodocs/site || echo "❌ Site deployment failed!"'
+       
