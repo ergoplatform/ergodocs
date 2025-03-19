@@ -68,4 +68,4 @@ jobs:
       - name: Check Web Server Served Files
         run: |
           echo "🔍 Checking what the web server is serving..."
-          curl -s -I http://yourwebsite.com | grep "Last-Modified"
+          curl -s -I https://docs.ergoplatform.com/mining/rent/rent-spending/ | grep "Last-Modified"
