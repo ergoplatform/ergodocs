@@ -48,36 +48,25 @@ jobs:
           echo "🚀 Running MkDocs build..."
           python -m mkdocs build --clean
           echo "✅ MkDocs build complete!"
-          echo "🔍 Verifying generated files (filenames and modification times only)..."
-          find ./site -type f -printf "🕒 %TY-%Tm-%Td %TH:%TM:%TS %p\n" > temp_files.txt
-          sort -r temp_files.txt | head -n 20 || true
-          rm temp_files.txt
+          echo "🔍 Verifying generated files..."
+          ssh root@88.198.50.217 'find /var/www/html/ergodocs/site -type f -printf "🕒 %TY-%Tm-%Td %TH:%TM:%TS %p\n" | sort -r | head -n 10'
 
-      - name: Debug Deploy Script Output
+      - name: Check Nginx Root Directory
         run: |
-          echo "🚀 Running deploy.sh in debug mode..."
-          ssh root@88.198.50.217 'bash -x /var/www/html/ergodocs/tools/deploy.sh'
+          echo "🔍 Checking Nginx document root..."
+          ssh root@88.198.50.217 'docker exec $(docker ps --filter "ancestor=nginx" --format "{{.ID}}") sh -c "cat /etc/nginx/nginx.conf | grep root"'
 
-      - name: Fix File Ownership
+      - name: Check Nginx Container Site Path
         run: |
-          echo "🔧 Fixing file ownership..."
-          ssh root@88.198.50.217 'chown -R www-data:www-data /var/www/html/ergodocs/site'
-          ssh root@88.198.50.217 'ls -la /var/www/html/ergodocs/site'
+          echo "🔍 Checking if Nginx inside Docker is using the latest site directory..."
+          ssh root@88.198.50.217 'docker exec $(docker ps --filter "ancestor=nginx" --format "{{.ID}}") ls -la /usr/share/nginx/html | tail -n 10'
 
-      - name: Check Running Nginx Processes
+      - name: Force Reload Nginx Content
         run: |
-          echo "🔍 Checking for running Nginx processes..."
-          ssh root@88.198.50.217 'ps aux | grep nginx || echo "❌ No running Nginx processes found!"'
-
-      - name: Check If Nginx is Running in Docker
-        run: |
-          echo "🔍 Checking for an Nginx container..."
-          ssh root@88.198.50.217 'docker ps --format "{{.ID}} {{.Image}} {{.Ports}}" | grep nginx || echo "❌ No Nginx container found!"'
-
-      - name: Restart Dockerized Nginx
-        run: |
-          echo "🔄 Restarting Nginx inside Docker..."
-          ssh root@88.198.50.217 'docker ps --filter "ancestor=nginx" --format "{{.ID}}" | xargs -r docker restart'
+          echo "🔧 Forcing Nginx inside Docker to refresh content..."
+          ssh root@88.198.50.217 'docker exec $(docker ps --filter "ancestor=nginx" --format "{{.ID}}") sh -c "rm -rf /usr/share/nginx/html/*"'
+          ssh root@88.198.50.217 'docker exec $(docker ps --filter "ancestor=nginx" --format "{{.ID}}") sh -c "cp -r /var/www/html/ergodocs/site/* /usr/share/nginx/html/"'
+          ssh root@88.198.50.217 'docker restart $(docker ps --filter "ancestor=nginx" --format "{{.ID}}")'
 
       - name: Check Web Server Served Files
         run: |
