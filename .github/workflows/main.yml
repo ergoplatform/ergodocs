@@ -49,12 +49,12 @@ jobs:
           python -m mkdocs build --clean
           echo "✅ MkDocs build complete!"
           echo "🔍 Verifying generated files..."
-          ssh root@213.239.193.208 'find /var/www/html/ergodocs/site -type f -printf "🕒 %TY-%Tm-%Td %TH:%TM:%TS %p\n" | sort -r | head -n 10'
+          ssh root@213.239.193.208 'find /var/www/ergodocs/tools/site -type f -printf "🕒 %TY-%Tm-%Td %TH:%TM:%TS %p\n" | sort -r | head -n 10'
 
       - name: Debug Deploy Script Output
         run: |
           echo "🚀 Running deploy.sh in debug mode..."
-          ssh root@213.239.193.208 'bash -x /var/www/html/ergodocs/tools/deploy.sh'
+          ssh root@213.239.193.208 'bash -x /var/www/ergodocs/tools/tools/deploy.sh'
 
       - name: Check Web Server Served Files
         run: |
