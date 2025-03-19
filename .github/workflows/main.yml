@@ -67,7 +67,7 @@ jobs:
       - name: Restart Web Server
         run: |
           echo "🔄 Restarting web server..."
-          ssh root@88.198.50.217 'systemctl restart nginx || systemctl restart apache2'
+          ssh root@88.198.50.217 'systemctl restart nginx'
 
       - name: Check Web Server Served Files
         run: |
