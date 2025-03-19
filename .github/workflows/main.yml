@@ -56,9 +56,8 @@ jobs:
       - name: Run Deploy Script via SSH
         run: |
           echo "🚀 Running deploy.sh via SSH..."
-          ssh -tq root@88.198.50.217 '/bin/bash -l -c "source ~/.nvm/nvm.sh; cd /var/www/html/ergodocs; git pull; rm -rf /var/www/html/ergodocs/site; sudo mkdocs build --site-dir /var/www/html/ergodocs/site; cd /data/explorer;  docker-compose restart nginx"'
-          echo "✅ Deployment complete!"
-          
+          ssh -tq root@88.198.50.217 '/bin/bash -l -c "source ~/.nvm/nvm.sh; cd /var/www/html/ergodocs; git pull; rm -rf ~/mkdocs_build; mkdocs build --site-dir ~/mkdocs_build; sudo cp -r ~/mkdocs_build/* /var/www/html/ergodocs/site; cd /data/explorer;  docker-compose restart nginx"'
+
       - name: Verify Deployment on Remote Server
         run: |
           echo "🔍 Checking deployed files on remote server..."
