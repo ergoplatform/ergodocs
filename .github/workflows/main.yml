@@ -48,10 +48,8 @@ jobs:
           echo "🚀 Running MkDocs build..."
           python -m mkdocs build --clean
           echo "✅ MkDocs build complete!"
-          echo "🔍 Verifying generated files..."
-          ls -la ./site
-          echo "🕒 Timestamps of generated files:"
-          find ./site -type f -exec stat {} \;
+          echo "🔍 Verifying generated files (filenames and modification times only)..."
+          find ./site -type f -printf "🕒 %TY-%Tm-%Td %TH:%TM:%TS %p\n" | sort -r | head -20
 
       - name: Debug Deploy Script Output
         run: |
@@ -61,11 +59,11 @@ jobs:
       - name: Verify Deployment on Remote Server
         run: |
           echo "🔍 Checking deployed files on remote server..."
-          ssh root@88.198.50.217 'ls -la /var/www/html/ergodocs/site || echo "❌ Site deployment failed!"'
-          echo "🕒 Checking timestamps of deployed files..."
-          ssh root@88.198.50.217 'find /var/www/html/ergodocs/site -type f -exec stat {} \;'
+          ssh root@88.198.50.217 'find /var/www/html/ergodocs/site -type f -printf "🕒 %TY-%Tm-%Td %TH:%TM:%TS %p\n" | sort -r | head -20 || echo "❌ Site deployment failed!"'
+          echo "🔍 Checking file ownership (should NOT be root)..."
+          ssh root@88.198.50.217 'ls -la /var/www/html/ergodocs/site | grep " root " && echo "❗ WARNING: Files are owned by root. deploy.sh might be running as root!" || echo "✅ Ownership looks good!"'
 
       - name: Check Web Server Served Files
         run: |
           echo "🔍 Checking what the web server is serving..."
-          curl -s -I https://docs.ergoplatform.com/mining/rent/rent-spending/ | grep "Last-Modified"
+          curl -s -I https://docs.ergoplatform.com/mining/rent/rent-spending/ | grep "Last-Modified" || echo "❌ Web server is serving outdated content or request failed!"
