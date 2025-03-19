@@ -60,6 +60,10 @@ jobs:
         run: |
           echo "🔍 Checking built site files..."
           ls -la ./site
+      
+      - name: Debug Deploy Script
+        run: cat ./tools/deploy.sh
+
 
       - name: Run Deploy Script with Python 3.11
         run: |
