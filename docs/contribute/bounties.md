@@ -2,7 +2,6 @@
 
 Welcome to the Ergo Bounties page! This is your gateway to contributing to the Ergo community and being rewarded for your valuable efforts. We offer a variety of bounties across different programs, including educational and development initiatives, all aimed at fostering growth and innovation within the Ergo ecosystem.
 
-
 ## How to Claim a Bounty
 
 Have you completed a task or achieved a goal that aligns with our bounties? If so, you are eligible to claim your reward. Here's how you can do it:
