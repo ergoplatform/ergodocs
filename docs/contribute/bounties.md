@@ -15,6 +15,7 @@ To streamline the processing of your bounty claim, we encourage you to include t
 
 ## Active Bounties
 
+
 ### Educational Reward Program
 
 The Educational Reward Program is designed to stimulate the creation of educational content that benefits the Ergo community. We believe in the power of knowledge-sharing and empowerment as key drivers of growth. If you have educational content, even if it's not explicitly mentioned here, it could still be eligible for a reward. We invite you to contribute any educational materials that can enrich learning experiences.
