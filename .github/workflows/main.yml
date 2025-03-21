@@ -54,7 +54,7 @@ jobs:
       - name: Debug Deploy Script Output
         run: |
           echo "🚀 Running deploy.sh in debug mode..."
-          ssh root@213.239.193.208 'bash -x /var/www/ergodocs/tools/tools/deploy.sh'
+          ssh root@213.239.193.208 'bash -x /var/www/ergodocs/tools/deploy.sh'
 
       - name: Check Web Server Served Files
         run: |
