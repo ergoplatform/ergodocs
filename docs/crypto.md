@@ -28,6 +28,7 @@ This document provides an in-depth look at the cryptographic schemes, protocols,
 
 ## Overview
 
+
 Ergo’s cryptographic toolkit is built around **composable Sigma protocols**, which allow for flexible, secure, and efficient proofs of knowledge and cryptographic operations within its smart contract framework. These Sigma protocols are the foundation of Ergo’s cryptographic security, and they enable privacy-preserving applications like multi-signature wallets, ring signatures, and threshold signatures.
 
 ### Cryptographic Toolkit
