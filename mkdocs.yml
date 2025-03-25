@@ -172,7 +172,7 @@ nav:
         - ef/ergo-foundation.md
         - Scope: ef/ef-scope.md
         - Treasury: ef/ef-treasury.md
-
+        - Votes: /ef/ef-votes.md
         - Future: ef/ef-future.md
       - DevDao: devdao.md
       - Sigmanauts: contribute/sigmanauts.md
