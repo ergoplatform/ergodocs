@@ -21,26 +21,29 @@ jobs:
 
       - name: Remote Deploy via SSH
         run: |
-          echo "🚀 Connecting and deploying remotely..."
+          echo "🚀 Connecting and scanning remote server..."
           ssh root@213.239.193.208 <<'EOF'
             set -e
 
-            echo "🔧 Sourcing NVM..."
-            source ~/.nvm/nvm.sh || echo "⚠️ Failed to source NVM"
+            echo "🔍 Searching for nvm.sh..."
+            find / -type f -name "nvm.sh" 2>/dev/null | tee /tmp/found_nvm.txt
+            if [ -s /tmp/found_nvm.txt ]; then
+              echo "✅ Found nvm.sh:"
+              cat /tmp/found_nvm.txt
+            else
+              echo "❌ nvm.sh not found"
+            fi
 
-            echo "📂 Changing to project directory..."
-            cd /var/www/html/ergodocs/tools || { echo "❌ Failed to cd to project dir"; exit 1; }
-
-            echo "🔄 Pulling latest changes from Git..."
-            git pull || { echo "❌ Git pull failed"; exit 1; }
-
-            echo "🧹 Cleaning old MkDocs site..."
-            rm -rf site || echo "⚠️ Failed to remove site dir"
-
-            echo "🏗 Building MkDocs site..."
-            mkdocs build || { echo "❌ MkDocs build failed"; exit 1; }
-
+            echo "🔍 Searching for 'ergodocs' directory..."
+            find / -type d -name "*ergodocs*" 2>/dev/null | tee /tmp/found_dirs.txt
+            if [ -s /tmp/found_dirs.txt ]; then
+              echo "✅ Found ergodocs directories:"
+              cat /tmp/found_dirs.txt
+            else
+              echo "❌ ergodocs directory not found"
+            fi
           EOF
+
 
       - name: Verify Remote Site Files
         run: |
