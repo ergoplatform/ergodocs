@@ -28,9 +28,21 @@ jobs:
             echo "📂 Changing to project directory..."
             cd /var/www/ergodocs || { echo "❌ Failed to cd to project dir"; exit 1; }
 
-            git stash
+            
             echo "🔄 Pulling latest changes from Git..."
+            git stash
             git pull || { echo "❌ Git pull failed"; exit 1; }
+
+
+            echo "🐍 Setting up virtual environment..."
+            python3 -m venv .venv
+            source .venv/bin/activate
+
+
+            echo "📦 Installing dependencies..."
+            pip install --upgrade pip
+            pip install -r requirements.txt || { echo "❌ Pip install failed"; exit 1; }
+
 
             echo "🧹 Cleaning old MkDocs site..."
             rm -rf site || echo "⚠️ Failed to remove site dir"
@@ -38,7 +50,6 @@ jobs:
             echo "🏗 Building MkDocs site..."
             mkdocs build || { echo "❌ MkDocs build failed"; exit 1; }
           EOF
-
 
       - name: Verify Remote Site Files
         run: |
