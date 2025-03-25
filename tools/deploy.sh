@@ -1,26 +1,7 @@
 #!/bin/bash
 
-echo "🚀 Start deploy process..."
+echo "Start deploy"
+ssh -tq root@88.198.50.217 '/bin/bash -l -c "source ~/.nvm/nvm.sh; cd /var/www/html/ergodocs; git pull; rm -rf /site;  mkdocs build; cd /data/explorer;  docker-compose restart nginx"'
+echo "Deployed Successfully!"
 
-ssh -tq root@213.239.193.208 <<'EOF'
-  set -e
-
-  echo "🔧 Sourcing NVM..."
-  source ~/.nvm/nvm.sh || echo "⚠️ Failed to source NVM"
-
-  echo "📂 Changing to project directory..."
-  cd /var/www/html/ergodocs || { echo "❌ Failed to cd to project dir"; exit 1; }
-
-  echo "🔄 Pulling latest changes from Git..."
-  git pull || { echo "❌ Git pull failed"; exit 1; }
-
-  echo "🧹 Cleaning old MkDocs site..."
-  rm -rf site || echo "⚠️ Failed to remove site dir"
-
-  echo "🏗 Building MkDocs site..."
-  mkdocs build || { echo "❌ MkDocs build failed"; exit 1; }
-
-EOF
-
-echo "✅ Deployed Successfully!"
 exit 0

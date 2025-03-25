@@ -36,16 +36,13 @@ jobs:
 
             echo "🏗 Building MkDocs site..."
             mkdocs build || { echo "❌ MkDocs build failed"; exit 1; }
-
-          
           EOF
-
 
 
       - name: Verify Remote Site Files
         run: |
           echo "🔍 Checking recently updated files..."
-          ssh root@213.239.193.208 'find /var/www/html/ergodocs/site -type f -printf "🕒 %TY-%Tm-%Td %TH:%TM:%TS %p\n" | sort -r | head -n 10'
+          ssh root@213.239.193.208 'find /var/www/ergodocs/site -type f -printf "🕒 %TY-%Tm-%Td %TH:%TM:%TS %p\n" | sort -r | head -n 10'
 
       - name: Check Web Server Served Files
         run: |
