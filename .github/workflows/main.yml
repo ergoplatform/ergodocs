@@ -5,11 +5,6 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
-defaults:
-  run:
-    shell: bash
-    working-directory: .
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -24,39 +19,35 @@ jobs:
           key: ${{ secrets.DEPLOY_KEY }}
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: 3.11
-
-      - name: Install Dependencies
+      - name: Remote Deploy via SSH
         run: |
-          python -m pip install --upgrade pip
-          pip install --no-cache-dir mkdocs mkdocs-bibtex
-          pip install -r requirements.txt
-          echo "✅ Dependencies installed!"
+          echo "🚀 Connecting and deploying remotely..."
+          ssh root@213.239.193.208 <<'EOF'
+            set -e
 
-      - name: Verify MkDocs Installation
-        run: |
-          echo "🔍 Checking MkDocs installation..."
-          python -m mkdocs --version || (echo "❌ MkDocs not found, reinstalling..." && pip install mkdocs)
-          which mkdocs || echo "❌ MkDocs not in PATH!"
-          python -m mkdocs --version
+            echo "🔧 Sourcing NVM..."
+            source ~/.nvm/nvm.sh || echo "⚠️ Failed to source NVM"
 
-      - name: Build MkDocs Site & Log Details
-        run: |
-          echo "🚀 Running MkDocs build..."
-          python -m mkdocs build --clean
-          echo "✅ MkDocs build complete!"
-          echo "🔍 Verifying generated files..."
-          ssh root@213.239.193.208 'find /var/www/ergodocs/tools/site -type f -printf "🕒 %TY-%Tm-%Td %TH:%TM:%TS %p\n" | sort -r | head -n 10'
+            echo "📂 Changing to project directory..."
+            cd /var/www/html/ergodocs || { echo "❌ Failed to cd to project dir"; exit 1; }
 
-      - name: Debug Deploy Script Output
+            echo "🔄 Pulling latest changes from Git..."
+            git pull || { echo "❌ Git pull failed"; exit 1; }
+
+            echo "🧹 Cleaning old MkDocs site..."
+            rm -rf site || echo "⚠️ Failed to remove site dir"
+
+            echo "🏗 Building MkDocs site..."
+            mkdocs build || { echo "❌ MkDocs build failed"; exit 1; }
+
+          EOF
+
+      - name: Verify Remote Site Files
         run: |
-          echo "🚀 Running deploy.sh in debug mode..."
-          ssh root@213.239.193.208 'bash -x /var/www/ergodocs/tools/deploy.sh'
+          echo "🔍 Checking recently updated files..."
+          ssh root@213.239.193.208 'find /var/www/html/ergodocs/site -type f -printf "🕒 %TY-%Tm-%Td %TH:%TM:%TS %p\n" | sort -r | head -n 10'
 
       - name: Check Web Server Served Files
         run: |
-          echo "🔍 Checking what the web server is serving..."
+          echo "🔍 Verifying web server output..."
           curl -s -I https://docs.ergoplatform.com/ | grep "Last-Modified" || echo "❌ Web server is serving outdated content or request failed!"
