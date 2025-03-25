@@ -31,26 +31,26 @@ For more information on Ergo's emission schedule, tokenomics and allocation, vis
 
 ## Holdings
 
-As of January 2025, the complete treasury of the foundation is as follows:
+As of March 2025, the complete treasury of the foundation is as follows:
 
 | Asset | Indicator Amount | Indicative US$ Price | Indicative Total US$ Value |
 |-------|------------------|----------------------|----------------------------|
 | **Liquid Assets in Self-Hosted Wallets** |
-| ERG | 156,160 | 1.7 | 265,475 |
-| BTC | 2.230499 | 108,059 | 241,025 |
-| **Subtotal - Liquid Assets** | | | $506,500 | 506500
+| ERG | 147,067 | 0.841 | 123,783 |
+| BTC | 1.334264 | 87,125 | 116,248 |
+| **Subtotal - Liquid Assets** | | | $240,031 | 240,031
 | **Illiquid Assets in Self-Hosted Wallets** |
 | Gluon | 335,000 | 1.00 | 335,000.00 |
-| SPF | 26,600,000 | 0.01292 | 277,970 |
-| RSN | 30,000,000 | 0.06639 | 2,805,900 |
-| **Subtotal - Illiquid Assets** | | | $3,418,870 |
+| SPF | 25,910,000 | 0.005911 | 153,154 |
+| RSN | 30,000,000 | 0.047314 | 1,419,420 |
+| **Subtotal - Illiquid Assets** | | | $1,572,574 |
 | **Assets in MM Accounts (Illiquid)** |
-| ERG | 58,715 | 1.7 | 99,815.5 |
-| USDT | 35,746 | 1.00 | 35,746 |
-| **Subtotal - Assets in MM Accounts** | | | $135,561 |
-| **Total Liquid Assets** | | | $506,500 |
-| **Total Illiquid Assets** | | | $3,554,431 |
-| **Total Assets** | | | $4,060,931 |
+| ERG | 56,209 | 0.841 | 47,356 |
+| USDT | 43,631 | 1.00 | 43,631 |
+| **Subtotal - Assets in MM Accounts** | | | $89,300 |
+| **Total Liquid Assets** | | | $240,031 |
+| **Total Illiquid Assets** | | | $1,572,574 |
+| **Total Assets** | | | $1,812,605 |
 
 /// details | Liquid vs Illiquid Funds
      {type: warning, open: true}
@@ -105,14 +105,15 @@ The Ergo Foundation has spent the majority of the Treasury for the benefit of th
 
 
 
-
+<!--
+Outdated, included in table above
 In addition to the direct ERG spending above in 2023, 
 
 - 972,000 SPF was liquidated for 43,020 ERG 
 - 650,000 SPF was paid as compensation ($21,000)
 - 160,000 SPF was donated to the [Sigmanauts](sigmanauts.md) Treasury
 - Totaling 1,622,000 SPF 
-
+-->
 /// details | The Ergo Foundations Future
      {type: info, open: true}
 Please see [this page](ef-future.md) for more information on the long-term goals of The Foundation.
