@@ -1,3 +1,8 @@
+---
+tags:
+  - Storage Rent 
+  - Demurrage
+---
 # How to Spend an Expired Ergo Box
 
 Spending an expired Ergo box involves satisfying specific conditions that differ from spending a regular box. The following criteria must be met:

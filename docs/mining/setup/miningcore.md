@@ -1,69 +1,105 @@
-# Miningcore
+---
+tags:
+- Mining Core
+- miningcore
+---
 
-The following tutorial is written for Linux; see [this page if you're using Windows 10](pool_win.md)
+# 🧱 MiningCore Setup Tutorial for Linux
 
-### Download [miningcore](https://github.com/oliverw/miningcore)  
+> 💡 If you're using **Windows 10**, see the [Windows Tutorial](pool_win.md)
 
-- You must deploy a working [**PostgreSQL** database](https://www.postgresql.org/download/)
+---
 
-### Install and configure PostgreSQL
+## Step 1: Download MiningCore
 
-If you are deploying in production, you need to be careful on I/O and disk/CPU/memory as a public Miningcore API will pound on your database. Keep all things default for now; here's a [good simple article](https://www.postgresqltutorial.com/install-postgresql/)
+- Clone Mining Core from [GitHub](https://github.com/oliverw/miningcore)
 
-Installing Miningcore will depend if you are on Windows or Linux. Pay close attention to the dependencies needed as depicted in the [README](https://github.com/oliverw/miningcore/blob/master/README.md). Stay away from docker unless you're sure. 
+Requirements:
 
-### Load the schema  
+- You must have a working [**PostgreSQL** database](https://www.postgresql.org/download/)
+- Ensure you meet all dependencies from the [README](https://github.com/oliverw/miningcore/blob/master/README.md)
+- Avoid Docker unless you are confident managing containers
 
-Miningcore operates under the schema `miningcore` by default.  
+---
 
-**Login to Postgres** 
+## Step 2: Install and Configure PostgreSQL
+
+- For production environments:
+      - Monitor I/O, disk, CPU, and memory — MiningCore's API can put heavy load on your DB
+      - Keep all PostgreSQL settings default for now
+- [Reference setup guide](https://www.postgresqltutorial.com/install-postgresql/)
+
+---
+
+##  Step 3: Create the Database Schema
+
+### Login to PostgreSQL
 
 ```bash
 sudo -u postgres psql
 ```
 
-**Create schema**
+### Create Role and Database
 
-```SQL
+Replace `'your-secure-password'` with a strong password:
+
+```sql
 CREATE ROLE miningcore WITH LOGIN ENCRYPTED PASSWORD 'your-secure-password';
 CREATE DATABASE miningcore OWNER miningcore;
 ```
 
-**Load the schema.** 
+---
 
-> You MUST be able to connect to your database with the `psql` command before trying this.  
+## Step 4: Load Schema SQL Files
 
-As the Postgres operating system user, run:
+> ✅ Make sure you can connect using `psql` before proceeding.
 
-```SQL
+- As the `postgres` user, run:
+
+```bash
 psql -d miningcore -f miningcore/src/Miningcore/Persistence/Postgres/Scripts/createdb.sql
 ```
 
-**Apply partitions for the shares table. **
+- Then apply the partitioning script:
 
-Do this upfront even if you don't think you will need it:
-
-```SQL
+```bash
 psql -d miningcore -f miningcore/src/Miningcore/Persistence/Postgres/Scripts/createdb_postgresql_11_appendix.sql
 ```
 
-**Create your new pool. **
+---
 
-You do this ONCE for each new pool you create. 
+##  Step 5: Create a Pool Table
 
-```SQL
+- Run the following command **once per pool** you set up:
+
+```sql
 CREATE TABLE shares_mypool1 PARTITION OF shares FOR VALUES IN ('mypool1');
 ```
 
-`mypool1` becomes the unique identifier for your pool. Name it wisely 
+- Replace `mypool1` with your pool's unique identifier
+- This name is used in the configuration files as well
 
-Configure a pool config named <something>.json, and place it in the build directory of miningcore. 
+---
 
-Miningcore config.json example: https://github.com/oliverw/miningcore/wiki/Configuration
+## Step 6: Configure the Pool
 
-Example Ergo config.json:
+- Go to the `build/` directory inside your MiningCore folder
+- Create a `<coin>.json` configuration file (e.g. `ergo.json`)
+- Refer to: [MiningCore Config Example](https://github.com/oliverw/miningcore/wiki/Configuration) and the example given below. 
 
-(NOTE: You MUST update the YOURPOSTGRESQL_PASSWORD_GOES_HERE and YOUR_REWARD_ADDR_GOES_HERE variables if copy and pasting this config as well modify the rewardRecipients percentage to fit your pool's scheme and enable the paymentProcessing section if you plan to utilize share payouts for your pool)
+/// details | Example Ergo config.json:
+     {type: tip, open: false}
+
+### Required Fields in Config
+
+- Replace placeholders:
+    - `YOURPOSTGRESQL_PASSWORD_GOES_HERE`
+    - `YOUR_REWARD_ADDR_GOES_HERE`
+- Adjust:
+    - `rewardRecipients` percentage to fit your payout model
+    - Enable `paymentProcessing` if you will use automatic share payouts
+
+
 ```
 {
     "logging": {
@@ -270,33 +306,46 @@ Example Ergo config.json:
     ]
 }
 ```
+///
 
 
+## Step 7: Start the Pool
 
+You should configure your pool to auto-start using a startup script.
 
-### Start the pool 
-
-You should configure it to auto-start via a startup script. 
-
-```
+```bash
 cd build
-Miningcore -c <your config>.json
+Miningcore -c <your-config>.json
 ```
 
-We use a different pool-specific startup configuration, so you may have to play around with it. The JSON config specifies the log files you should look at for startup errors/issues/etc. If you got this far, below is the startup log message you should get indicating you are running a healthy miningcore ergo pool:
+- The JSON config defines the **log files** you should monitor for:
+    - Startup errors
+    - Daemon issues
+    - Pool activity
 
-**Indicates your Node is online and synced**
+- You may need to adjust the config to fit your specific pool setup.
+
+---
+
+### ✅ Expected Log Output (Success)
+
+When everything is working properly, your logs should show the following messages:
+
+#### 🟢 Node Online and Synced
 
 ```
 [2022-03-16 14:26:12.9080] [I] [ergo1] All daemons online
 [2022-03-16 14:26:12.9345] [I] [ergo1] Daemon is synced with blockchain
 ```
 
-**Indicates Pool is online**
+#### 🟢 Pool Online
+
 ```
 [2022-03-16 14:26:14.4346] [I] [ergo1] Pool Online
 ```
-Indicates the diff setting, your fee, and that its a go:
+
+#### 📊 Pool Info Summary
+
 ```
 Mining Pool:            <YOUR POOL NAME>
 Coin Type:              ERG [ERG]
@@ -306,24 +355,43 @@ Current Block Height:   <BLOCKHEIGHT>
 Current Connect Peers:  5
 Network Difficulty:     <NETWORK DIFF>
 Network Hash Rate:      <NETWORK HASHRATE>
-Stratum Port(s):        3056, 4056, 3156, 4156  <THIS SHOULD BE THE PORTS YOU HAVE CONFIGURED>
+Stratum Port(s):        3056, 4056, 3156, 4156
 Pool Fee:               <YOUR FEE>
 ```
 
-Pay close attention to the stats above in regards to the network. If your diff setting is wrong, the network difficulty won't be right.
+> ⚠️ If the **network difficulty** or other values look off, double-check your diff setting in the config.
 
-> If you host your miner, pool, or node on separate machines, you'll need to open ports to allow that traffic.
+---
 
-**Illustration of initial mining traffic:**
+## Step 8: Network Setup Notes
 
-- Miner -> 
-    - (connects on your defined Stratum port i.e. `3746`) -> 
-- pool server -> 
-    - connects to node RPC (`9053`, mainnet or `9052`, testnet) -> 
-- node
-  
-Once connections are established, traffic becomes bi-directional.
+> If your **miner**, **pool**, or **node** are on different machines, you will need to **open ports** to allow communication between them.
 
-**You will not need to open ports if any of the above layers are on the same machine.**  Internal traffic runs via the internal loop (localhost). 
+### Initial Mining Traffic Flow
 
-Typically, machines block incoming traffic (but allow outgoing) by default. If you're testing on LAN, you'll need to open these ports on your OS's firewall. But when you get to WAN, you'll additionally need to set up port forwarding on your network router.
+- **Miner**  
+  → connects to Stratum port (e.g. `3746`)  
+- **Pool Server**  
+  → connects to Node RPC (mainnet: `9053`, testnet: `9052`)  
+- **Node**
+
+Once all components connect, traffic becomes **bi-directional**.
+
+---
+
+### Port Opening Guidelines
+
+- If **all components are on the same machine**:
+    - ✅ No need to open ports — uses `localhost`
+
+- If using **LAN or WAN**:
+    - 🖥️ Open required ports on your OS firewall
+    - 🌐 On WAN, configure **port forwarding** on your router
+
+---
+
+## You're Good to Go!
+
+You now have a fully operational MiningCore pool on Linux.
+
+> Make sure everything is synced, ports are configured, and logs show green — then start mining! ⛏️

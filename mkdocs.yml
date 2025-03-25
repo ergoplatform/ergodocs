@@ -834,7 +834,9 @@ nav:
       - Host a Pool: 
         - mining/setup/pool.md
         - Stratum: mining/setup/stratum.md
-        - MiningCore: mining/setup/miningcore.md
+        - MiningCore: 
+          - mining/setup/miningcore.md
+          - Windows: mining/setup/pool_win.md
        
     - Governance:
       - mining/governance.md

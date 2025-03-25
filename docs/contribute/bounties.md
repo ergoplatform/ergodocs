@@ -1,3 +1,9 @@
+---
+tags:
+  - Bounties
+  - Grants
+  - Funding
+---
 # Bounties
 
 Welcome to the Ergo Bounties page! This is your gateway to contributing to the Ergo community and being rewarded for your valuable efforts. We offer a variety of bounties across different programs, including educational and development initiatives, all aimed at fostering growth and innovation within the Ergo ecosystem.

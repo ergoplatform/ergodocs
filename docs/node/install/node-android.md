@@ -1,3 +1,8 @@
+---
+tags:
+  - Android
+  - Node
+---
 # Running an Ergo Node on Android
 
 /// details | One click setup 
