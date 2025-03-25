@@ -28,6 +28,7 @@ jobs:
             echo "📂 Changing to project directory..."
             cd /var/www/ergodocs || { echo "❌ Failed to cd to project dir"; exit 1; }
 
+            git stash
             echo "🔄 Pulling latest changes from Git..."
             git pull || { echo "❌ Git pull failed"; exit 1; }
 
