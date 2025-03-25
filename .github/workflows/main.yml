@@ -29,7 +29,7 @@ jobs:
             source ~/.nvm/nvm.sh || echo "⚠️ Failed to source NVM"
 
             echo "📂 Changing to project directory..."
-            cd /var/www/html/ergodocs || { echo "❌ Failed to cd to project dir"; exit 1; }
+            cd /var/www/html/ergodocs/tools || { echo "❌ Failed to cd to project dir"; exit 1; }
 
             echo "🔄 Pulling latest changes from Git..."
             git pull || { echo "❌ Git pull failed"; exit 1; }
