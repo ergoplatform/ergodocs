@@ -1,768 +1,370 @@
-# ERGOHACK
+# ERGOHACK: Building the Ergo Ecosystem
 
-We host regular ERGOHACK events where developers come together on the [Ergo Discord](https://discord.gg/qxdrHM2eHv) for a few days (or weeks!) to hack solutions to problems. These events usually centre around a theme, although not strictly enforced.
+ERGOHACK events are pillars of innovation within the Ergo community. These regular online hackathons bring together developers, designers, students, and enthusiasts from around globe onto the [Ergo Discord](https://discord.gg/qxdrHM2eHv). Participants collaborate intensively, often over several days or weeks, to build solutions, tools, and dApps that address specific themes or contribute broadly to the Ergo ecosystem.
 
-There are no entry requirements, and all are welcome! Even if you have an idea sharing it in the #icubator-form on Discord may pique some interest.
+Originally conceived as competitions, ERGOHACKs have evolved into powerful incubators for talent and technology. They offer invaluable opportunities to work with experienced mentors, showcase skills, and contribute directly to the core infrastructure and user experience of the Ergo blockchain.
 
-## Directory
+## ERGOHACKs by the Numbers (I - IX)
 
-You can also check out the [Hall of Fame](https://ergohack.io/hall-of-fame/)
-
-Click any of the event names below to jump directly to an overview and related resources or browse by project directly below.
-
-- (Jun 21) [ERGOHACK I: _Hack For Change_](#ergohack-i)
-- (Oct 21) [ERGOHACK II: _Social Transformation_](#ergohack-ii)
-- (Feb 22) [ERGOHACK III: _Privacy and Security_](#ergohack-iii-privacy--security)
-- (Jun 22) [ERGOHACKFEST:](#ergohackfest) was a three-week event in conjunction with ErgoPad
-- (Oct 22) [ERGOHACK V: _Mining & Minting_](#ergohackv)
-- (Feb 23) [ERGOHACK VI: Cypherpunk Finance](#ergohackvi)
-- (Oct 23) [ERGOHACK VII: Future of Finance: Ways of Adoption](#ergohackvii)
-- (May 24) [ERGOHACK VIII: Ergo as a Smart Layer](#ergohackviii)
-- (Oct 24) [ERGOHACK IX: Advancing UI/UX Design and Mining Solutions on Ergo](#ergohackix)
-
-### ERGOHACK IX
-
-ErgoHack IX [ran from October 25-31](https://ergoplatform.org/en/blog/ErgoHack-9-Advancing-Design-and-Mining-Solutions-on-Ergo/), bringing together developers, designers, blockchain enthusiasts, and students on Ergo’s Discord for a UI/UX-focused hackathon. Here’s a recap of the standout projects:
-
-#### 1. **Bene: Fundraising Platform**
-
-- **Overview**: A decentralized app for projects to raise funds in ERG, using participation tokens to create a transparent community-driven support mechanism.
-- [**Documentation**](bene.md) | [**Demo Video**](https://drive.google.com/file/d/1LPFa34CLwML5Y7ktFkmCrwgYTAQdl9W9/view?usp=sharing) | [**Presentation**](https://drive.google.com/file/d/1b0LvLwME64-e-8Hie_O46HDb32nHv9p8/view?usp=sharing)
-
-#### 2. **Last Byte Bar**
-
-- **Overview**: Mints NFTs and tokens upon block discovery, rewarding miners with digital assets based on block data and mining contributions.
-- **Features**: Algorithmic NFTs, fungible tokens influenced by block data, miner rewards.
-- [**Documentation**](miners-rights.md) | [**Final Report**](pdf/ergohackix/mrp.pdf) | [**Presentation**](https://drive.google.com/file/d/1rUoahftGSvxDDI_U5RjSywLqS59QCu2i/view?usp=sharing)
-
-#### 3. **OnErgo**
-
-- **Overview**: Central hub for Ergo community engagement, offering a dynamic event calendar and reward-based learning platform.
-- [**Documentation**](onergo.md) | [**Presentation**](https://drive.google.com/file/d/1LiHsOrNhi8fXCbeNbk3UEMLEuPvRl69o/view?usp=sharing)
-
-#### 4. **Satergo Offline Vault**
-
-- **Overview**: An Android app for secure offline seed storage, connecting to desktops via Bluetooth for transaction security.
-- [**Documentation**](satergo-vault.md) | [**Final Video Presentation**](pdf/ergohackix/SatergoOfflineVault.mp4)
-
-#### 5. **Minotaur**
-
-- **Overview**: Enhances multi-sig wallet transactions by improving communication among wallet signers, making collaborative signing faster and more reliable.
-- [**Documentation**](minotaur-multisig.md#signing-server-for-multi-sig-communication-ergohack-ix) | [**Signing Demo**](https://drive.google.com/file/d/17ygkTGbkMyxQgs-jkl-5RZNBBd3jnoji/view?usp=sharing) | [**Registration Demo**](https://drive.google.com/file/d/1lZhlwJIOsnM1bIX5Ts-iSsjhpxRHxLKY/view?usp=sharing)
-
-#### 6. **OneStopShop**
-
-- **Overview**: An onboarding guide for newcomers to the Ergo ecosystem, covering essential resources from wallets and DApps to transactions.
-- [**Documentation**](one-stop-shop.md)
-
-#### 7. **Cup of Sugar**
-
-- **Overview**: A community-centric micro grocer and café promoting local sourcing, blockchain use for local economies, and exploring LETS and decentralized incentives.
-- [**Documentation**](cup-of-sugar.md) |[**Website**](https://cupofsugar.io/)
-
-#### 8. **3D Explorer**
-
-- **Overview**: A 3D visualization tool that brings Ergo’s blockchain data to life, helping users understand the UTXO model and blockchain dynamics.
-- [**Final Report**](pdf/ergohackix/ergohack-#9-3d-explorer.pdf) | [**Demo Video**](https://youtu.be/uspsmPDSqgw) | [**Try it**](https://www.3rgo.xyz/)
-
-#### 9. **Community Liquidity Bootstrap (CLB)**
-
-- **Overview**: A nonprofit initiative to address liquidity in Ergo without venture capital, engaging the community with accessible returns.
-- [**Follow on Twitter**](https://x.com/CLBDeFi) | [**GitHub**](https://github.com/AcoSmrkas/community-liquidity-bootstrap) | [**Presentation**](https://drive.google.com/file/d/1Qomxp3UpHaKd8SFuCjw26cte4NEjxuvF/view?usp=drive_link)
-
-### ERGOHACKVIII
-
-1. **optionPools**: Creating highly liquid option markets leveraging Ergo's unique blockchain capabilities. Leveraging Ergo's unique L1 tech and Rosen Bridge to become the hub of crypto options. From the [duckpools](duckpools.md) team
-2. **Moria Finance**: Offering advanced custody solutions with key storage contracts and multi-party payment simplification.
-3. **Trustless Relays**: Superseding BTC custody solutions with Ergo smart-contracts
-4. **Cup of Sugar**: Promoting local farm-fresh, traceable products using blockchain to drive community-driven, sociable commerce.
-5. **Random Number Generator**: Developing robust, time-dependent RNG mechanisms powered by blockchain for unbiassed outcomes in games and lotteries.
-6. **Crystal Pool**: Self-custodial exchange that offers real time user experience comparable to a CEX.
-7. **Lightning Swaps**: Integration for Bitcoin Lightning Network to Ergo atomic cross chain swaps.
-8. **Mining BTC Swap**: The Sigmanaut Core Mining Pool Team is working on Permissionless Pool Parameters and Reward Swapping
-9. **Space Wallet**: A cross-platform wallet which uses nipopows to sync against the chain (SPV workflow) and provides basic in app dApp/dApp connector functionalities.
-10. **Wallet Wonderland**: Creating visual guides and tutorials for various wallets, aiming to provide detailed and easily updatable documentation.
-11. **Huangians**: Project details to be confirmed. (late entry from a group of CS students @ Cornell)
-12. **Rosen Port**: Batching smaller orders to bypass the $10 minimum fee.
-13. **ReputationSystem**: (Withdrawn) Incorporating Bitcoin Runes into the Reputation System and utilising reputation proofs on the Bitcoin blockchain.
-14. **Empheral Messaging**: (Withdrawn) Desktop application to read and timestamp messages fast from the mempool, focusing on token-burning mechanisms for mining bonuses.
-15. **Sigma Wallet**: (Withdrawn) UX-focused wallet, inspired by known wallets but emphasizing privacy and non-reusable addresses.
-
-### ERGOHACKVII
-
-1. [**Satergo**](#light-node-with-satergo): Light nodes with Satergo.
-2. [**SideChainProto**](#sidechainproto): Exploring the implementation of sidechains on Ergo.
-3. [**Lilium**](#lilium-event-ticketing): Event Ticketing.
-4. [**Atomic Swap**](#atomic-swap-web-interface): Web Interface.
-5. [**Ergsnap**](#ergsnap-metamask-integration): Metamask Integration.
-6. [**Hodlbox**](#hodlbox): Gamified time-based non-custodial vault.
-7. [**ReputationSystemTeam**](#reputationsystemteam): A reputation system on Ergo.
-8. [**Ergo Poor Man's Wallet**](#ergo-poor-mans-wallet): A cheap hardware wallet solution.
-9. [**Auction Coin**](#auctioncoin): Issues and auctions tokens with a game-theoretic mechanism for speculative buybacks.
-
-### ERGOHACKVI
-
-1. [**Analog-Ergo**](#analog-ergo): Cross-chain P2P atomic marketplace
-2. [**Ergo Stats**](#ergo-stats): Mobile app for ergo.watch/tokenJay
-3. [**ChainCash**](#chaincash): Elastic P2P money creation via trust & blockchain assets
-4. [**Lilium**](#lilium): Decentralised NFT Platform
-5. [**Riadne Hlady2**](#riadne-hlady2): MultiSig token swapping
-6. [**Privacy Guide**](#privacy-guide): Privacy Fundamentals Course
-7. [**Perma Ergo**](#perma-ergo): Real World Food Production Decentralisation
-8. [**Net Notes**](#net-notes): Node browser
-9. [**Sigma Subscriptions**](#sigma-subscriptions): Easily run a subscription service on Ergo.
-10. [**Quantum Swap**](#quantum-swap): P2P NFT & Native Asset Exchange Service.
-11. [**SIPS**](#sips): Sigma Improvement Proposals.
-12. [**Explorer UI**](#explorer-ui): Improving the ergo explorer experience.
-13. [**SigmaStamp**](#sigmastamp): A timestamping service.
-
-#### Winning Projects
-
-1. [**Ergode**](#ergode): Ergo Node on smart devices
-2. [**SigmaO**](#sigmao): Options on Ergo
-3. [**Lithos**](#lithos): Decentralised block production
-
-### ERGOHACKV
-
-1. [**DumDumDum:**](#dumdumdum) A decentralised **on-chain** Twitter alternative.
-2. [**Cyti:**](#cyti) A _mineable_ smart contract that allows you to Choose Your Token ID.
-3. [**EIP38**](#eip38-partial-voting) aims to empower miners with a 'partial' vote option.
-4. [**Succinct, Non-Interactive Share Proofs**](#snisp) allow for efficient on-chain calculations of PoW.
-5. [**Paizo:**](#paizo) on-chain governance education for miners.
-6. [**Ergo-Payroll:**](#ergo-payroll) Automated payroll distribution tool.
-7. [**Obolflip:**](#obolflip) A decentralised CoinFlip game.
-8. [**ergo-audit**](#ergo-audit) is _code-auditing_ DAO.
-9. [**ErgoNames:**](#ergonames) bringing easy to remember names to Ergo.
-10. [**SigmaBalls:**](#sigmaballs) An options trading solution.
-11. [**MineErgo:**](#mineergo) Rewarding miners with NFTs.
-12. [**Sigma-Rust-Jit**](#sigma-rust-jit) is enhancing [sigma-rust](rust.md) with JIT Costing.
-13. [**Satergo**](https://satergo.com/) is adding a stratum mining server module to their wallet.
-14. [**Dlop**](#dlop-art-generator) is creating a art generator for the community.
-
-### ERGOHACKFEST
-
-1. [**Azorus**](#Azorus): An intelligence platform for UTXO Blockchains.
-2. [**ergo-graphql**](#ergo-graphql): Interactive JavaScript tutorials for dApp developers.
-3. [**dAppStep**](#dAppstep): JavaScript Tutorial for devs.
-4. [**ErgoSock & Ergonode**](#ergosock): See [ergonodes.net](http://ergonodes.net/).
-5. [**ErgoNation**](#ergonation): A decentralised ID and governance project.
-6. [**ErgoSphere**](#ergosphere): An _Umbrel-like_ solution for Ergo, see [ergosphere.cloud](https://ergosphere.cloud/).
-7. [**LETS**](#lets): Local Exchange Trading System.
-8. [**Multisig**](#multisig): Multi-Signature Wallet.
-9. [**NightOwl**](#nightowl): Decentralised casino.
-10. [**Oracle-Pools2**](#oracle-pools2): MVP of EIP-23.
-11. [**SwampAudio**](#swampaudio): A Layer-2 Music Launchpad.
-12. [**Tensile**](#tensile): A decentralised, open source, and non-custodial derivatives platform.
-13. [**ColivingDAO**](#ColivingDAO): Aims to facilitate a global ecosystem of coliving projects.
-14. [**RubyNFTs**](#rubynfts): Minting library.
-15. [**SentientChain**](#sentientswap): Gaming sidechain.
-16. [**InERGitance**](#inergitance): A decentralised inheritance solution for the Ergo blockchain.
-17. [**Platform137**](#platform137): Mining GUI interface.
-18. [**Ergrow**](#ergrow): A fun project involving Ergo and a love for gardening.
-
-### ERGOHACKIII
-
-1. [**The Delphi Project**](#the-delphi-project)
-2. [**Ergo-Castanet**](#ergo-castanet)
-3. [**SkyHarbor**](#skyharbor)
-4. [**GuapSwap**](pdf/GuapSwap_-_ErgoHack3_Project_Report.pdf)
-5. [**anetaBTC**](https://medium.com/@anetaBTC/ergohack-summary-and-development-update-dad3224227b7)
-6. [**Hypo10use**](#hypo10use)
-7. [**NightOwl**](#nightowl)
-8. [**ErgoDNS**](https://www.youtube.com/watch?v=G7glbtnAnMY)
-9. [**Stealth Addresses #1**](https://github.com/aragogi/Stealth-doc)
-10. [**Stealth Addresses #2**](https://github.com/ergoplatform/ergo-playgrounds/pull/24)
-11. [**Nautilus**](https://github.com/capt-nemo429/nautilus-wallet/pull/6)
-12. [**SAFEW**](pdf/SAFEW_ergohack3_report.pdf)
-13. [**Satergo**](https://drive.google.com/drive/folders/1ERas6ZyJpkY_7W1az5q0X88OfYu5OipC?usp=sharing)
-
-### ERGOHACKII
-
-1. [**ErgoLend**](https://github.com/Ergo-Lend/) _(now live @ [ergolend.org](https://ergolend.org))_
-2. [**Minotaur**](https://github.com/minotaur-ergo/minotaur-wallet) wallet
-3. [**Ergopad**](https://github.com/Ergohack-Dashboard-Project) _(now live @ [ergopad.io](https://ergopad.io))_
-4. [**Subpooling**](https://github.com/K-Singh/ergo-subpooling) _(now live @ [GetBlok.io](https://getblok.io))_
-5. [**HYPO10USE**](https://github.com/hypo10use/quid-games) developed _QUIDGAMES_
-6. **Ergo Audio**
-
-### ERGOHACKI
-
-1. [ErgoRaffle](https://github.com/ErgoRaffle) _(now live @ [ergoraffle.com](https://ergoraffle.com))_
-2. [Smart Pools](https://github.com/WilfordGrimley/ErgoSmartPools) _(Inspired [GetBlok.io](https://getblok.io))_
-3. [Sigma Stamp](https://github.com/sigmastamp)
-4. [Simpler Joint Spending Tool](https://www.ergoforum.org/t/a-simpler-collective-spending-approach-for-everyone)
-5. Ergo Index Fund
-6. Ergo Charts
-
-## Events
-
-### ERGOHACKVII
-
-#### Light node with Satergo
-
-Satergo wallet now facilitates the configuration of light nodes. These nodes can leverage NiPoPoWs, UTXO set snapshots, or both. Light nodes provide a more user-friendly entry point for potential node hosters due to their faster sync times and lower disk space requirements. The final report is accessible [here](../events/pdf/ergohackvii/light_node_with_satergo.pdf).
-
-#### SidechainProto
-
-The [ergohack-sidechain](https://github.com/ross-weir/ergohack-sidechain) project, initiated during ErgoHack VII, investigates the implementation of sidechains on Ergo. The project's whitepaper can be found [here](https://github.com/ross-weir/ergohack-sidechain/blob/main/docs/whitepaper/sidechain.pdf).
-
-#### Lilium: Event Ticketing
-
-[Lilium](lilium.md) is a decentralized platform for minting and distributing NFTs on the Ergo blockchain. Initially aimed at artists for large-scale NFT sales, Lilium has expanded its functionality to include event ticketing. The final report is available [here](../events/pdf/ergohackvii/ErgoHack%207%20Final%20Report%20-%20Lilium.pdf).
-
-There is a [shortened version of an interview by chief sigmanaut qx() with MGpai and LGD](https://www.youtube.com/watch?v=kpo415IOHro). The topic of this part of the conversation was their ErgoHack VII entry, Lilium Ticketing, a system that utilises the power of the Ergo blockchain for NFT ticket verification.
-
-#### Atomic Swap: Web Interface
-
-[Analog Ergo](analog-ergo.md) is nearing its test-net launch. The project's main objective is to integrate Atomic Swap smart contracts into user-friendly peer-to-peer GUIs. During ErgoHack VII, a [web UI](https://github.com/dzyphr/AtomicAnalogSwapWebsite) was added. The final report can be found [here](../events/pdf/ergohackvii/AnalogErgoErgoHackTextPresentation2023.pdf).
-
-#### ergsnap (Metamask Integration)
-
-[ergsnap](https://github.com/nautls/ergsnap) has successfully integrated Metamask Snap, enabling Ergo to be loaded directly onto Metamask. This integration can enhance the user experience for cross-chain activities such as atomic swaps and bridging. The final report is available [here](../events/pdf/ergohackvii/Metamask%20Integration.pdf).
-
-#### Hodlbox
-
-Hodlbox is a unique platform that encourages long-term holding of Ergo (ERG) by offering users the opportunity to purchase "treasure chests" with varying locking options. The locked amount can range from 10 to 10,000 ERG. These funds remain locked for a specified duration, either two years or until the value of ERG reaches $20. This mechanism provides an incentive for users to resist impulsive selling and promotes the practice of long-term holding in the Ergo ecosystem.
-
-As an added bonus, users receive NFTs corresponding to the amount they lock, allowing them to showcase their commitment on their profile pictures.
-
-Here's a simple breakdown of potential returns on investment (ROI) when ERG reaches an all-time high (ATH) of $20:
-
-- 100 ERG locked could yield $2,000.00
-- 1,000 ERG locked could yield $20,000.00
-- 10,000 ERG locked could yield $200,000.00
-
-Tim Ur, one of the project's contributors, encourages active community engagement and collaboration within the Ergo ecosystem, highlighting the educational value and potential advantages that such initiatives can offer to the community.
-
-For more information, check out the following resources:
-
-- [Hodlbox Website](https://hodlbox.xyz/)
-- [Project Demo](https://twitter.com/c8e4d2/status/1713597673763217766)
-- [Interview on YouTube](https://www.youtube.com/watch?v=U5-zIxg4M6k)
-- [GitHub Repository](https://github.com/SavonarolaLabs/hodlbox-xyz)
-
-#### ReputationSystemTeam
-
-[ReputationSystemTeam](https://github.com/jossemii/ergohack-vii) has initiated the development of a comprehensive reputation system for the Ergo blockchain. This system is designed to assign reputation scores to various entities, which can include UTXOs within Ergo, as well as external objects such as addresses, URLs, and Git repositories. The reputation system is built upon the concept of reputation trees, which are sets of UTXOs, with the root UTXO holding 100% reputation. The team is committed to further development and refinement of this system.
-
-You can access the final report [here](../events/pdf/ergohackvii/REPUTATION_SYSTEM.md)
-
-#### Ergo Poor Man's Wallet
-
-The Ergo Poor Man's Wallet, also known as [EPMW](https://github.com/epmw/epmw/), is a project that aims to provide a simple, DIY, and cost-effective hardware wallet solution for Ergo cryptocurrency. The wallet is designed with affordability in mind, with the total cost of components and shipping to Europe estimated to be around $10.
-
-#### Auction Coin
-
-[Auction Coin](auction-coin.md) is an example of 'Degen Finance' ([DegFi](degfi.md)) operating on the Ergo blockchain. It uses a smart contract to automatically issue and auction tokens, with a game-theoretic mechanism that allows for speculative plays around token buybacks. It exemplifies how transparent, yet high-risk, DegFi can be.
-
-### ERGOHACKVI
-
-> **See the Final Reports [here](https://drive.google.com/drive/folders/14Mgh5G1IFukXgnbG6APzHoDa7ynV7T27)**
-
-#### Analog-Ergo
-
-Cross-chain P2P atomic marketplace
-
-> The basic idea is to use the cryptographic primitives available in atomic swaps as a basis for creating a cross-chain peer to peer marketplace, where Ergo users can list their own price for their own coins. Not only will this enable users to potentially earn arbitrage as a reward for liquidity on different blockchains, but they will also be able to set and agree to the value parameters for this at their own discretion in a highly private and fungible way. That means no intermediaries are involved in the transfer which also reduces any potential fees on both sides.
-
-- [Submission paper](pdf/ergohackvi/AnalogErgoProposalSimplified.pdf)
-- [Final Report](https://drive.google.com/drive/folders/1NWvKsauGL0tA_7DRo9p76aOpjopcjKhp)
-- [GitHub](https://github.com/dzyphr/2pAtomicSwapExample)
-
-#### Ergo Stats
-
-> The goal of this project is to support DeFi on Ergo with providing useful information such as blockchain statistics – currently found on ergo.watch and tokenJay - in a compact form on a mobile device
-
-- [Submission paper](pdf/ergohackvi/ErgoStats-iOS-app.pdf)
-- [GitHub](https://github.com/ach2swift/ErgoStats)
-
-#### Ergode
-
-> Create an Ergo node that runs natively on smart devices such as TVs, fridges, mobile phones, watches, etc. This will be achieved by targeting Tizen OS, Samsungs open source mobile operating system and done in a way where it should be easily portable to other platforms such as WebOS (LG smart TVs).
-
-> Currently there isn't a lot of light client based messages on the P2P layer of Ergo so this project aims to test viability of running nodes on smart devices without much functionality. At least connecting to a few peers and performing handshakes/probing for peers, etc.
-
-> At the end of ErgoHack VI the goal is to have a node running natively on a real Samsung TV and displaying basic network information.
-
-- [GitHub](https://github.com/ross-weir/ergode)
-
-#### Lithos
-
-> The Lithos team will use ErgoHack VI to show off work done on the collateralization
-> side of the Lithos Protocol. Given that the topic of this Hackathon is CypherPunk Finance, we hope to showcase a safe, effective way to gain yield on ERG while also helping to decentralize the Ergo blockchain.
-
-> Our goal is to create the contracts necessary to allow for collateralized mining pools which interface with the rest of the Lithos protocol. In addition, we plan to show a mockup UI which will allow for lenders to collateralize their ERG. Collateralized mining pools serve as the first half of the Lithos protocol, and are essential in allowing for completely decentralized block production on the Ergo blockchain.
-
-> Moreover, collateralization is a safe way to gain yield on ERG with minimal risk involved. We hope that our work on collateralized mining pools will allow for greater participation in Ergo’s DeFi ecosystem, while also helping the blockchain itself.
-
-- [Submission paper](pdf/ergohackvi/Lithos-Paper.pdf)
-- [Final Report](https://github.com/Lithos-Protocol/Lithos/blob/ErgoHack/documents/ErgoHack.MD)
-- [GitHub](https://github.com/Lithos-Protocol)
-
-#### ChainCash
-
-Elastic P2P money creation via trust & blockchain assets
-
-- [Submission paper](pdf/ergohackvi/chaincash.pdf)
-- [GitHub](https://github.com/kushti/chaincash)
-
-#### Lilium
-
-> Lilium is a decentralized NFT sale platform for Ergo blockchain. We aim to be an infrastructure service for any business seeking an easy way to mint and distribute tokens, integrating seamlessly within their products and applications
-> Attachment file type: acrobat
-
-- [Submission paper](pdf/ergohackvi/Lilium---ErgoHack-6-Proposoal-1.pdf)
-- [Final Report](https://drive.google.com/drive/folders/1J-UUaV7HLhVSNkrk2_zIH8dzqRq6tqs4)
-
-#### SigmaO
-
-> SigmaO intends to provide Ergo users the ability to create Call or Put options on EIP-4 tokens, materialized by a standard EIP-4 token.
-
-> Reminder: An option contract offers the buyer the possibility but not the obligation to buy (Call) or sell (Put) the underlying asset at a fixed exercise price.
-
-- [Submission paper](pdf/ergohackvi/SigmaO_ergohack_plan.pdf)
-- [sigmao.cc](https://www.sigmao.cc/)
-- [Github](https://github.com/ThierryM1212/SigmaO)
-
-#### Riadne Hlady2
-
-> We are building a multisig token swapping service. It is mainly meant for users who want to swap their NFTs on Discord and want a trustless escrow service to perform the swap. Everything should happen in a single transaction, so no sending to a smart contract that the user does not understand is needed.
-
-- [single-tx-swap.com](https://www.single-tx-swap.com/)
-- [GitHub](https://github.com/danieloravec/ergo-token-swap)
-
-#### Privacy Guide
-
-Privacy Fundamentals Course
-
-> My proposal is to create an online module that teaches users about the importance of privacy and how to maintain a safe, private online experience. The module will include written materials, video demonstrations, and a step by step guide that users can follow to create and use the Ergo blockchain privately. After completing the module, users will have an anonymous wallet and know how to use it without compromising their privacy. The course may end up on YouTube or a free learning management software like Coursera. This course will be 100% free for users.
-
-- [Submission paper](pdf/ergohackvi/Maintaining-Privacy-Online-1.pdf)
-- [The Ergonaut’s Guide to Privacy](https://drive.google.com/drive/folders/1hzFUJHDfQSQYapRZ-Msw0Uvo5QmqQm1i)
-
-#### Perma Ergo
-
-> Perma-Ergo is a realfi project that seeks to employ Ergo blockchain technology in holistic natural systems known as: Permaculture or Agroecology, through means of giving micro loans to farmers who neither have access to either farmlands nor the financial means to give them accessibility to land to cultivate, forming a vicious cycle spiraling to exclusion and poverty. Eventually the end goal of Perma-Ergo is to encourage: Real World Food Production Decentralisation
-
-- [Submission paper](pdf/ergohackvi/micro-finance-PERMERGO.pdf)
-- [GitHub](https://github.com/firashebili/permergo-microfinancing-dao)
-
-#### Net Notes
-
-> An Ergo Node In a web browser
-
-> An application which consumes the node ont he native level, and then communicates with the wbe browser using file notes which are both symmetrtically and assymetrically encrypted in order to maximize their security, both wiuthin the session which they are created, and forensically in the future.
-
-- [Submission Paper](https://github.com/networkspore/Netnotes/blob/main/Netnotes%20-%20ergohack%20VI.pdf)
-- [Final Report](https://drive.google.com/drive/folders/1DFYp_arTeOMH8Rqyop8tB_k2DvQSF_ca)
-
-#### Sigma Subscriptions
-
-> A framework for anyone to easily run a subscription service on Ergo.
-
-- [Submission paper](pdf/ergohackvi/ErgoHack-VI-Project-Proposal-1.pdf)
-- [GitHub](https://github.com/cornbelt-dev/sigma-subscriptions)
-
-#### Quantum Swap
-
-P2P NFT & Native Asset Exchange Service.
-
-- [Submission paper](<pdf/ergohackvi/Quantum-Swap-White-Paper2(2)%202.pdf>)
-
-#### SigmaStamp
-
-- [GitHub](https://github.com/sigmastamp)
-- [sigmastamp.ml](https://www.sigmastamp.ml)
-
-#### SIPS
-
-SigmaUSD Improvement Proposals.
-
-- [SigmaUSD Hack SIP Google Doc DRAFT](https://docs.google.com/document/d/1btfEVhPlJLK2OweAK2c1vY67cYE8hHULvxOA12G_5dk/edit#)
-- [SIP Strategy: GitHub Discussions](https://github.com/ergoplatform/sips/discussions/17)
-
-#### Explorer UI
-
-Improving the ergo explorer experience.
-
-- [Submission paper](pdf/ergohackvi/Improved_Ergo_explorer_UXUI.pdf)
-
-#### Open Board
-
-(Withdrawn) Pin-board concept
-
-> OpenBoard's core idea is letting authors pin a few boxes of text, publicly available on the blockchain, and uncensorable unless all Ergo node's IP addresses are blacklisted. It would consist of an app fetching available pins from an Ergo node to display locally, and an easy
-> way to update one's own pins with a transaction.
-
-> So life got in the way and I'll be travelling during most of the ErgoHack. I'll definitely keep working on OpenBoard, but as a regular small project and not within this Ergohack's timeline.
-
-- [Submission paper](pdf/ergohackvi/OpenBoard-an-ErgoHack-VI-proposal.pdf)
-
-### ERGOHACKV
-
-> [In collaboration with The Djed Alliance, Alephium and Flux](https://ergoplatform.org/en/blog/Ergo-Foundation-Announces-ErgoHack-5-Mining-and-Minting/)
-
-#### [DumDumDum](https://github.com/kii-dot/dumdumdum)
-
-**DumDumDum** is a decentralised Twitter alternative stored **on-chain** using NFTs.
-
-- [Documentation](https://kii-dot.notion.site/kii-dot/Ergo-Twitter-063eb242ab034fa7bb17d4e0088226b8)
-
-#### [Cyti](https://github.com/ThierryM1212/cyti)
-
-> LIVE @ [thierrym1212.github.io](https://thierrym1212.github.io/cyti/index.html)
-
-CYTI stands for Choose Your Token ID. A 'minable' smart contract that allows an entity to mint tokens with a given character sequence at the beginning of the token ID. A token minter creates a CYTI request, and miners generate the proper token ID using the CYTI miner software.
-
-- [A demo video of CYTI minting a NFT collection in one transaction](https://youtu.be/xjAHZoT0L7A)
-
-#### [EIP38-Partial-Voting](https://github.com/WilfordGrimley/eip38PartialVoting)
-
-This EIP proposes modifying how parameter identifiers are communicated in the extension section of block headers, such that in addition to miners being able to vote for or against a change, they can vote partially in support of a change (for indicative voting). This will enable mining pools to pass along true governance power to their miners when combined with a method for miner voting within a pool (such as GetBlok's proof-of-vote)."
-
-- [video presentation](https://dalek.zone/w/quqExPoNiabYLKFx1FqUsf)
-- [Draft PR](https://github.com/WilfordGrimley/ergo/blob/EIP-0038/src/main/scala/org/ergoplatform/nodeView/state/VotingData.scala)
-
-#### SNISP
-
-**SNISPs** are _Succinct, Non-Interactive Share Proofs_ which will allow for **accurate and efficient calculations of performed work on the blockchain**.
-
-These proofs can be applied to any PoW blockchain. They should allow for the creation of decentralised mining pools with better security assumptions than alternatives like P2Pool, and better scalability than ETH-based SmartPools. They may also be used for other applications which involve measuring performed work (such as direct work-based governance, work-backed assets, etc)
-
-> [Draft paper](/../events/pdf/SNISP_FINAL_NO_CITATIONS.pdf)
-
-#### dlop-art-generator
-
-> Live @ [twotens.art/build.html](https://twotens.art/build.html)
-
-A UI and website for generating 1010s art pieces so the community will be able to make their own. [Time willing, this entry] will also experiment with SVG format (versus PNG) and enable minting the piece in a connected wallet. [Final Report](https://twotens.art/ergohack_v.html)
-
-#### [Paizo](https://github.com/deadit/paizo)
-
-> Live @ [deadit.github.io/paizo/](https://deadit.github.io/paizo/)
->
-> Paizo will be an on-chain mining governance simulation tool to help educate miners on how chain governance works. Currently, this information is highly technical and not intuitive to learn for the average user, so we want to make this information simple to understand so miners are empowered to make their voices heard on chain.
-
-#### Ergo-payroll
-
-Ergo-payroll will be an automated payroll distribution tool for ERGO. Enter your employees, enter the amount (count) in token or the amount of USD in token, enter frequency, and their wallets. Users only need to keep filling up the bank, and the system will take care of the rest.
-
-- [GitHub](https://github.com/andrehafner/ergo-payroll)
-
-#### [Obolflip](https://github.com/obolflip)
-
-- [Documentation](https://github.com/obolflip/obolflip-client)
-
-**A decentralised CoinFlip application on Ergo where users can bet on head or tail.**
-
-- Obolflip Client, smart contracts and documentation are now published [here](https://github.com/obolflip/obolflip-client)
-- Contracts can be reviewed [here](https://github.com/ObolFlip/obolflip-client/tree/main/src/test/resources)
-- Client jar can be downloaded [here](https://github.com/ObolFlip/obolflip-client/releases/download/0.5.0/obolflip.zip) or build it yourself
-- Usage instructions are [here](https://github.com/obolflip/obolflip-client#running-obol-flip-client)
-
-> Disclaimer: We did our best, but the contracts are not reviewed yet, so do not bet more than you are willing to lose... well, you might lose it anyway; that's the fun, isn't it?
-
-#### Ergo-audit
-
-The DAO-based Ergo Audit Project allows Ergo-community members to audit ecosystem projects or smart contracts for certain rewards. 'Ergo Audit' DAO provides a set of frameworks/templates that helps auditors to make standardised detailed research of a selected project in various categories. The audits will be approved/declined by experienced auditors from DAO members. All accepted audits will visualise the overall statistics of the projects or smart contracts in the ecosystem.
-
-#### [ErgoNames](https://github.com/ergonames)
-
-Easy to remember Ergo Names, tackling Multi-Contract Approach, Orphan Request Management, NSFW Engine, Explorer Decouple and Temporary Block. Read more details in the [Proposal](pdf/ergonames5.pdf)
-
-#### SigmaBalls
-
-SigmaBalls (working name) is an options trading solution for Ergo.
-
-#### MineErgo
-
-Working on a project that rewards miners with NFTs alongside their Ergo
-
-#### Sigma-rust-jit
-
-Enhancing [sigma-rust](rust.md) with [JIT 5.0 costing](jitc.md).
-
-### ERGOHACKFEST
-
-ERGOHACKFEST (or ERGOHACK IV) was a three-week-long event. To see all the Final Reports, head to the [presentations drive](https://drive.google.com/drive/folders/12yBnyMjq0hdVhXGOlpp8X0bwcj_Wvbgh).
-
-Below you'll find some additional links and more information for each project.
-
-#### Azorus
-
-An intelligence platform for UTXO Blockchains
-
-- [Project Demo](https://www.youtube.com/watch?v=SD8bDf-nxTQ)
-- [Whitepaper](https://github.com/gsblabsio/azorus)
-- [IDO on ergopad](https://ergopad.io/projects/azorus)
-
-#### ColivingDAO
-
-ColivingDAO aims to facilitate the creation, development, and operations of a global ecosystem of coliving projects.
-
-- [Website](https://colivingdao.io/)
-
-#### dAppStep
-
-Working on interactive tutorials for dapp developers with nodejs/javascript stack exclusively
-
-- Two examples live @ [play.dappstep.com](https://play.dappstep.com/)
-- [Final Report](https://drive.google.com/drive/folders/1s1iiJwybYkX4FrNBM-OpcjvLKItUbmVB)
-
-#### ergo-graphql
-
-- [GitHub](https://github.com/capt-nemo429/ergo-graphql)
-- [Final Report](pdf/ergo-graphql_-_Final_Report.pdf)
-
-#### ErgoNation
-
-A decentralised ID and governance project. Non-profit with full commitment to Ergo ideals.
-
-- [Final Report](<pdf/Ergo_Nation_final_report%20(1).pdf>)
-
-#### ErgoSphere
-
-- [ergosphere.cloud/](https://ergosphere.cloud/)
-- [Final Presentation](https://docs.google.com/document/d/1jdYS4Mt4Zkk3Hwl0CeA3ietaaIdAkETT/edit)
-
-#### Ergrow
-
-A fun project involving ergo and a love for gardening.
-
-- [Website](http://ergrow.io/)
-- [Final Presentation](https://drive.google.com/drive/folders/1HkLHj9xu_tawjGnfVzL02Lkrm8XZtCIS)
-
-#### LETS
-
-- [GitHub - LETS Backend](https://github.com/arkan294/LETS-backend)
-
-#### Multisig
-
-- [Documentation](https://github.com/lazypinkpatrick/minotaur-wallet/blob/main/doc/MultiSig.md)
-- [Documentation](https://drive.google.com/file/d/1lDOKaz55N3POy2H7Rz5SGWCgAAWJtiqB/view?usp=sharing)
-- [Usage Example](https://drive.google.com/file/d/1J4IdlvpqWIo1eV1wtiT2DsfPPmgmVNQb/view?usp=sharing)
-
-#### NightOwl
-
-- [Final Presentation](https://docs.google.com/presentation/d/1LBezFjHTNC2JJdL4OFNWIbZMiyCJ5szsr-h95i1PKp8/edit)
-- [Night Owl’s Weekly Update (ErgoHack Edition)](https://medium.com/@NightOwlCasino/night-owls-weekly-update-ergohack-edition-25-05-2022-aba01f8ee9f3)
-- [dApp connector](https://github.com/nightowlcasino/dApp-connector-react-package)
-
-#### Oracle-Pools2
-
-This single-member team sought to build a minimum viable product (MVP) of version 2 of the oracle pools as described in EIP-23 and was able to implement three core operations for the pools. They will continue implementing more operations for the pool and get a working pool on testnet.
-
-- [Final Report](https://docs.google.com/document/d/1YxSc0tKi86tDRU-2RRemwefZTRYBTFBwxnYuYbaOgBk/edit)
-
-#### SwampAudio
-
-A Layer-2 Music Launchpad
-
-- [Final Report & Summary](https://docs.google.com/document/d/1ARevOdDiUkqYLzJ3WjjsRNNkgChJebbhcxh8SSANzio/)
-- [IDO Details (ergopad)](https://ergopad.io/projects/swampaudio)
-
-#### [Tensile](https://github.com/DeCo-Education/DeCo-Homeworks/blob/main/ErgoScript-Developer-Course/batch-0/team-tensile/future%20contract/)
-
-A decentralised, open source and non-custodial trading platform that offers derivative contracts, trading with leverage and market hedging
-regarding assets offered on the Ergo blockchain.
-
-- [Final Report](pdf/Tensile_Ergoscript_Course_Final_Presentation.pdf)
-
-#### RubyNFTs
-
-- [Presentation submission](https://twotens.art/ergohack_iv.html)
-- [open-sourced a small lib that uses sigma_rb](https://github.com/thedlop/sigma_mint)
-
-#### SentientSWAP
-
-- [Final Presentation](https://drive.google.com/drive/folders/1Xprwfz-MrgS4PFQ3cETE7JbTenPRtQRw)
-
-#### MultiSig
-
-The team behind Multisig submitted a proposal to develop a new multi-signature wallet. During ErgoHack Fest, they worked on designing the wallet and completed the ability to sign a multi-sig transaction using a QR code. They then developed a server for communicating data between wallets. Once completed, the team was able to generate a multi-sig transaction successfully.
-
-#### InERGitance
-
-> a decentralised inheritance solution for the Ergo blockchain
-
-- [GitHub](https://github.com/inergitance)
-- [Documentation (contains EIP like overview of proposed solution including smartcontracts)](https://github.com/inergitance/doc)
-- [FrontEnd code (React + TypeScript + SigmaRust)](https://github.com/inergitance/frontend)
-
-#### Platform137
-
-- [Final Presentation](https://drive.google.com/drive/folders/1wJrQGh0PaPgXZCX-QnITEVZPa3WPkGZX)
-
-#### ErgoSock/Ergonodes
-
-Ergonodes uses ErgoSock to crawl the entire Ergo network and map out all the important details about its current state. With the help of Ergonodes, it is easy to find information about the state over time, the state and information of specific nodes and the growth rate. It is an important metric to measure the robustness of the network.
-
-- [ErgoSock](pdf/ergosock.pdf)
-- [Ergonodes](pdf/ergonodes.pdf)
-- [Ergoconnection GitHub](https://github.com/Satergo/Ergonnection)
-
-### [ErgoHack III: Privacy & Security](https://ergoplatform.org/en/blog/2021-12-21-ergohack-iii-privacy-security/)
-
-ERGOHACK III was our biggest Hackathon yet, with thirteen teams in total participating.
-
-**Tooling**
-
-- [The Delphi Project](https://hackmd.io/@abchris/S1dHZcwyc)
-- [Ergo-Castanet](https://github.com/iandebeer/ergo-castanet/blob/main/docs/Conclusion.md)
-
-**Exchange**
-
-- [SkyHarbor](https://www.youtube.com/watch?v=nnLmTG-43m8)
-- [GuapSwap](pdf/GuapSwap_-_ErgoHack3_Project_Report.pdf)
-- [anetaBTC](https://medium.com/@anetaBTC/ergohack-summary-and-development-update-dad3224227b7)
-
-**Gaming**
-
-- [Hypo10use](https://github.com/hypo10use/quid-games)
-- [NightOwl](pdf/Night_Owl_-_Ergo_Hack_lll_Presentation_Final.pdf)
-
-**Identity**
-
-- [ErgoDNS](https://www.youtube.com/watch?v=G7glbtnAnMY)
-- [Stealth Addresses #1](https://github.com/aragogi/Stealth-doc)
-- [Stealth Addresses #2](https://github.com/ergoplatform/ergo-playgrounds/pull/24)
-
-**Wallets**
-
-- [Nautilus](https://github.com/capt-nemo429/nautilus-wallet/pull/6)
-- [SAFEW](pdf/SAFEW_ergohack3_report.pdf)
-- [Satergo](https://drive.google.com/drive/folders/1ERas6ZyJpkY_7W1az5q0X88OfYu5OipC?usp=sharing)
+*   **Total Events:** 9 Hackathons
+*   **Projects Submitted:** Over 100 unique projects explored
+*   **Themes Covered:** Ranging from Social Transformation, Privacy & Security, Mining & Minting, Cypherpunk Finance, DeFi Adoption, Bitcoin Interoperability, to UI/UX & Mining Innovation.
+*   **Notable Outcomes:** Many essential ecosystem tools and dApps originated or were significantly developed during ERGOHACKs, including wallets (Minotaur, SAFEW, Satergo enhancements), DeFi platforms (ErgoLend, SigmaO, Oracle Pools v2, Duckpools), infrastructure components (Subpooling/GetBlok.io, ErgoNames, Rosen Port), privacy features (Stealth Addresses), and innovative concepts (CYTI, SNISPs, ChainCash, Lithos).
 
 ---
 
-#### The Delphi Project
+## Hackathon Directory & History
 
-The Delphi Project aims to help anyone explore, run, and launch decentralised oracles on the Ergo blockchain.
+Explore the history of innovation. Click any event name to jump to its details or browse chronologically. You can also visit the original [Hall of Fame](https://ergohack.io/hall-of-fame/).
 
-- [Website](https://delphiproject.org/#)
-- [Final Report](https://hackmd.io/@abchris/S1dHZcwyc)
+*   (Oct 24) [ERGOHACK IX: Mining & UI/UX Innovation](#ergohack-ix-mining--uiux-innovation)
+*   (May 24) [ERGOHACK VIII: Ergo as a Smart Layer](#ergohack-viii-ergo-as-a-smart-layer)
+*   (Oct 23) [ERGOHACK VII: Future of Finance: Ways of Adoption](#ergohack-vii-future-of-finance-ways-of-adoption)
+*   (Feb 23) [ERGOHACK VI: Cypherpunk Finance](#ergohack-vi-cypherpunk-finance)
+*   (Oct 22) [ERGOHACK V: Mining & Minting](#ergohack-v-mining--minting)
+*   (Jun 22) [ERGOHACKFEST (IV)](#ergohackfest-iv)
+*   (Feb 22) [ERGOHACK III: Privacy & Security](#ergohack-iii-privacy--security)
+*   (Oct 21) [ERGOHACK II: Social Transformation](#ergohack-ii-social-transformation)
+*   (Jun 21) [ERGOHACK I: Hack For Change](#ergohack-i-hack-for-change)
 
-#### NightOwl
+---
 
-A Decentralised Casino on top Ergo.
+### ERGOHACK IX: Mining & UI/UX Innovation
 
-- [Website](https://nightowlcasino.io/)
-- [GitHub](https://github.com/nightowlcasino)
-- [Slides](pdf/Night_Owl_-_Ergo_Hack_lll_Presentation_Final.pdf)
+**(October 25-31, 2024)**
 
-#### ErgoDNS
+**Summary:** ErgoHack IX focused on "Building for Everyone: Mining & UI/UX Innovation". Building upon the successful deployment of numerous dApps, lending protocols, and the foundational Rosen Bridge, Ergo was strategically positioned to enhance ecosystem accessibility and efficiency. This hackathon aimed to catalyze the creation of novel mining solutions and intuitive user interfaces, reinforcing Ergo's drive to deliver a powerful and user-centric blockchain experience for a broader audience.
 
-An MVP for ergo-DNS service to resolve Ergo Names to the wallet addresses.
+**Projects:**
 
-Features;
+1.  **Bene: Fundraising Platform**
+    *   **Overview**: A decentralized app for projects to raise funds in ERG, using participation tokens to create a transparent community-driven support mechanism.
+    *   [**Documentation**](bene.md) | [**Demo Video**](https://drive.google.com/file/d/1LPFa34CLwML5Y7ktFkmCrwgYTAQdl9W9/view?usp=sharing) | [**Presentation**](https://drive.google.com/file/d/1b0LvLwME64-e-8Hie_O46HDb32nHv9p8/view?usp=sharing)
 
-- Registration - Ownership of Ergo Names can be established by minting an _Ergo Name NFT_.
-- Resolution - ergo-DNS service can be used to resolve Ergo Name to Wallet Address where the Ergo Name NFT currently resides.
-- Transfer - When ownership of Ergo Name NFT changes, the resolution changes automatically.
+2.  **Last Byte Bar**
+    *   **Overview**: Mints NFTs and tokens upon block discovery, rewarding miners with digital assets based on block data and mining contributions.
+    *   **Features**: Algorithmic NFTs, fungible tokens influenced by block data, miner rewards.
+    *   [**Documentation**](miners-rights.md) | [**Final Report**](pdf/ergohackix/mrp.pdf) | [**Presentation**](https://drive.google.com/file/d/1rUoahftGSvxDDI_U5RjSywLqS59QCu2i/view?usp=sharing)
 
-The service is fully decentralised, and all the ownership data is maintained on-chain.
+3.  **OnErgo**
+    *   **Overview**: Central hub for Ergo community engagement, offering a dynamic event calendar and reward-based learning platform.
+    *   [**Documentation**](onergo.md) | [**Presentation**](https://drive.google.com/file/d/1LiHsOrNhi8fXCbeNbk3UEMLEuPvRl69o/view?usp=sharing)
 
-- [Video](https://www.youtube.com/watch?v=G7glbtnAnMY)
-- [Demo Website](https://ergo-names.firebaseapp.com/home)
-- [Current front end code](https://github.com/jaythiya/ergodns-frontend/)
-- [Back end](https://github.com/ergonames/ergo-names-backend)
-- [Resolver API](https://github.com/ergonames/ErgoNames.Api)
-- [contracts](https://github.com/ergonames/ergo-names-contracts)
+4.  **Satergo Offline Vault**
+    *   **Overview**: An Android app for secure offline seed storage, connecting to desktops via Bluetooth for transaction security.
+    *   [**Documentation**](satergo-vault.md) | [**Final Video Presentation**](pdf/ergohackix/SatergoOfflineVault.mp4)
 
-#### SkyHarbor
+5.  **Minotaur Multisig Enhancements**
+    *   **Overview**: Enhances multi-sig wallet transactions by improving communication among wallet signers, making collaborative signing faster and more reliable. (Builds on previous Minotaur work).
+    *   [**Documentation**](minotaur-multisig.md#signing-server-for-multi-sig-communication-ergohack-ix) | [**Signing Demo**](https://drive.google.com/file/d/17ygkTGbkMyxQgs-jkl-5RZNBBd3jnoji/view?usp=sharing) | [**Registration Demo**](https://drive.google.com/file/d/1lZhlwJIOsnM1bIX5Ts-iSsjhpxRHxLKY/view?usp=sharing)
 
-> Sky Harbor will be the primary place to quickly buy and sell NFTs on the Ergo blockchain using Ergo Smart Contracts. Connect your wallet and immediately put your NFT up for sale for the price you're looking for, or buy an NFT from our verified collections. It will also be fast and efficient, making it super easy and simple to interact with the blockchain, using databases and the latest infrastructure to make the website blazing fast.
+6.  **OneStopShop**
+    *   **Overview**: An onboarding guide for newcomers to the Ergo ecosystem, covering essential resources from wallets and DApps to transactions.
+    *   [**Documentation**](one-stop-shop.md)
 
-- [Video](https://www.youtube.com/watch?v=nnLmTG-43m8)
+7.  **Cup of Sugar**
+    *   **Overview**: A community-centric micro grocer and café promoting local sourcing, blockchain use for local economies, and exploring LETS and decentralized incentives. (Continued development from EH VIII).
+    *   [**Documentation**](cup-of-sugar.md) |[**Website**](https://cupofsugar.io/)
 
-#### GuapSwap
+8.  **3D Explorer**
+    *   **Overview**: A 3D visualization tool that brings Ergo’s blockchain data to life, helping users understand the UTXO model and blockchain dynamics.
+    *   [**Final Report**](pdf/ergohackix/ergohack-#9-3d-explorer.pdf) | [**Demo Video**](https://youtu.be/uspsmPDSqgw) | [**Try it**](https://www.3rgo.xyz/)
 
-Guapswap is a fully decentralised smart contract profit-swapping service on the Ergo Blockchain.
+9.  **Community Liquidity Bootstrap (CLB)**
+    *   **Overview**: A nonprofit initiative to address liquidity in Ergo without venture capital, engaging the community with accessible returns.
+    *   [**Follow on Twitter**](https://x.com/CLBDeFi) | [**GitHub**](https://github.com/AcoSmrkas/community-liquidity-bootstrap) | [**Presentation**](https://drive.google.com/file/d/1Qomxp3UpHaKd8SFuCjw26cte4NEjxuvF/view?usp=drive_link)
 
-- [GitHub](https://github.com/GuapSwap)
-- [Project Report](pdf/GuapSwap_-_ErgoHack3_Project_Report.pdf)
+**Winners:**
 
-#### HYPO10USE
+*   1st Place: Satergo Offline Vault
+*   2nd Place: Bene: Fundraising Platform (Stable Benefaction Platform)
+*   3rd Place: Last Byte Bar
 
-HYPO10USE joins us again after getting their POC live in ERGOHACKII.
+[**Read the Announcement & Results**](https://ergoplatform.org/en/blog/ErgoHack-9-Advancing-Design-and-Mining-Solutions-on-Ergo/)
 
-> Our Dapp, a game platform to feature various multiplayer games, is still early work in progress. The last Hackathon focused on breaking down game mechanics into the eUTXO model. We found good examples of elaborate use cases, such as the ErgoRaffle example and worked on them. This time we focused mainly on compiling the contracts, building the transactions, and submitting them to the blockchain, which we managed to do after long debugging and troubleshooting sessions.
+---
 
-- [Website](https://quid-game.netlify.app/)
-- [Github](https://github.com/hypo10use/quid-games)
+### ERGOHACK VIII: Ergo as a Smart Layer
 
-#### ergo-castanet
+**(May 25 - June 2, 2024)**
 
-Ergo-castanet uses Petri Nets to define and validate Smart Contract Protocol specifications (EIP-0006) for creating headless dApps using a Colored Petri Net for Smart Contract orchestration and testing.
+**Summary:** ErgoHack VIII centered on the theme "Ergo As A Smart Layer For Bitcoin". It aimed to leverage Ergo’s unique features (extended UTXO, Sigma protocols) to build DeFi applications extending Bitcoin’s functionality, continuing the tradition of ErgoHacks contributing essential tools and dApps.
 
-- [Project Report](https://github.com/iandebeer/ergo-castanet/blob/main/docs/Conclusion.md)
+**Projects:**
 
-#### anetaBTC
+1.  **optionPools (Duckpools Team)**: Creating highly liquid option markets leveraging Ergo's L1 tech and Rosen Bridge to become a crypto options hub. ([duckpools.md](duckpools.md))
+2.  **Moria Finance**: Advanced custody solutions with key storage contracts and multi-party payment simplification.
+3.  **Trustless Relays**: Superseding BTC custody solutions with Ergo smart-contracts.
+4.  **Cup of Sugar**: Promoting local farm-fresh, traceable products using blockchain for community-driven commerce. (Continued in EH IX).
+5.  **Random Number Generator (Rng Dev)**: Developing robust, time-dependent RNG mechanisms powered by blockchain for games/lotteries.
+6.  **Crystal Pool**: Self-custodial exchange offering a CEX-like real-time user experience.
+7.  **Lightning Swaps**: Integration for Bitcoin Lightning Network to Ergo atomic cross-chain swaps.
+8.  **Mining BTC Swap (Sigmanaut Core Mining Pool Team)**: Worked on Permissionless Pool Parameters and Reward Swapping.
+9.  **Space Wallet**: Cross-platform wallet using NiPoPoWs (SPV workflow) with basic dApp connector functionalities.
+10. **Wallet Wonderland**: Creating visual guides and tutorials for various wallets for detailed, updatable documentation.
+11. **Huangians**: Late entry project from Cornell CS students.
+12. **Rosen Port**: Batching smaller Rosen Bridge orders to bypass the minimum fee.
+13. **Analog Ergo**: Focused on atomic cross-chain swaps (related to Lightning Swaps/Atomic Swap Interface from EH VII).
 
-> This weekend, we released a sneak peek of our front end. Over the weekend, we integrated Yoroi and Nautilus Wallet into the anetaBTC app.
-> Users can connect their Yoroi or Nautilus Wallet and sign transactions. The next step is writing the ErgoScript smart contracts.
-> We were also able to integrate our analytics dashboard into the bridge app, and our developers will soon release our updated analytics page to track the stats of the protocol.
+*(Note: ReputationSystem, Empheral Messaging, and Sigma Wallet were withdrawn entries.)*
 
-- [Website](http://anetabtc.io/)
-- [Project Report](https://medium.com/@anetaBTC/ergohack-summary-and-development-update-dad3224227b7)
+**Winners:**
 
-#### Stealth Addresses
+*   1st Place: Crystal Pool
+*   2nd Place: Duckpools (optionPools)
+*   3rd Place: Analog Ergo
 
-This Hackathon saw two separate teams working on the stealth address concept first introduced in [this forum post](https://www.ergoforum.org/t/stealth-address-contract/255)
+[**See the Hall of Fame Entry**](https://ergohack.io/hall-of-fame/#ergohack-viii)
 
-`@aragogi` - [Stealth Scanner project + customised version of mixer in this repo](https://github.com/aragogi/Stealth-doc)
+---
 
-`@_jd_` - [adds addSignWithDhtData so user can sign a transaction w/ single dht tuple](https://github.com/ergoplatform/ergo-playgrounds/pull/24)
+### ERGOHACK VII: Future of Finance: Ways of Adoption
 
-#### Wallets
+**(October 2023)**
 
-With Nautilus nearing the finish line with Ledger, they extended an invitation to help any other projects integrate either Ledger or the dApp connector.
+**Summary:** ErgoHack VII explored "The Future of Finance and the Path to Adoption". Following key releases like Captain Nemo’s SDK, Spectrum Finance’s Cardano AMM, Rosen Bridge, and Paideia, Ergo was positioned to lead with innovative financial products.
 
-> **Nautilus**
+**Projects:**
 
-Ledger support was added using the ledgerjs-hw-app-ergo binding library and helped other teams with dApp connector integration
+1.  **Light Node with Satergo**: Integrated light node configuration (NiPoPoWs/UTXO snapshots) into Satergo wallet for faster sync and lower disk usage. ([Final report](../events/pdf/ergohackvii/light_node_with_satergo.pdf))
+2.  **SidechainProto**: Investigated the implementation of sidechains on Ergo. ([GitHub](https://github.com/ross-weir/ergohack-sidechain), [Whitepaper](https://github.com/ross-weir/ergohack-sidechain/blob/main/docs/whitepaper/sidechain.pdf))
+3.  **Lilium Event Ticketing**: Expanded the [Lilium](lilium.md) decentralized NFT platform to include event ticketing functionality. ([Final report](../events/pdf/ergohackvii/ErgoHack%207%20Final%20Report%20-%20Lilium.pdf), [Interview Clip](https://www.youtube.com/watch?v=kpo415IOHro))
+4.  **Atomic Swap Web Interface (Analog Ergo)**: Added a [web UI](https://github.com/dzyphr/AtomicAnalogSwapWebsite) to the [Analog Ergo](analog-ergo.md) P2P atomic swap marketplace for user-friendly cross-chain swaps. ([Final report](../events/pdf/ergohackvii/AnalogErgoErgoHackTextPresentation2023.pdf))
+5.  **Ergsnap Metamask Integration**: Integrated Ergo support directly into Metamask via Metamask Snap, improving cross-chain UX. ([GitHub](https://github.com/nautls/ergsnap), [Final report](../events/pdf/ergohackvii/Metamask%20Integration.pdf))
+6.  **Hodlbox**: A gamified, non-custodial vault encouraging long-term ERG holding with NFTs based on locked amount/duration (2 years or $20 ERG). ([Website](https://hodlbox.xyz/), [Demo](https://twitter.com/c8e4d2/status/1713597673763217766), [Interview](https://www.youtube.com/watch?v=U5-zIxg4M6k), [GitHub](https://github.com/SavonarolaLabs/hodlbox-xyz))
+7.  **ReputationSystemTeam**: Developed a comprehensive on-chain reputation system using reputation trees to assign scores to UTXOs and external entities (addresses, URLs, etc.). ([GitHub](https://github.com/jossemii/ergohack-vii), [Final report](../events/pdf/ergohackvii/REPUTATION_SYSTEM.md))
+8.  **Ergo Poor Man's Wallet (EPMW)**: A simple, DIY, ultra-low-cost (~$10) hardware wallet solution. ([GitHub](https://github.com/epmw/epmw/))
+9.  **Auction Coin**: An example of 'Degen Finance' ([DegFi](degfi.md)) on Ergo using a smart contract for automated token issuance/auctioning with game-theoretic buyback mechanisms. ([Docs](auction-coin.md))
 
-_Special thanks to `@zuozas` for the amazing Ledger illustrations._
+**Winners:**
 
-- [Implementation](https://github.com/capt-nemo429/nautilus-wallet/pull/6)
-- [Video Report](https://twitter.com/NautilusWallet/status/1493064272028393473)
+*   1st Place: Analog Atomic Swap Market
+*   2nd Place: Hodlbox
+*   3rd Place: Ergo Poor Mans Wallet
 
-> **Satergo**
+[**See the Hall of Fame Entry**](https://ergohack.io/hall-of-fame/#ergohack-vii)
 
-Project: Implement Ledger support into Satergo
+---
 
-- Implemented HID for Nano S and Nano X
-- Implemented Speculos Ledger emulator interface
-- Implemented the Ergo Ledger app protocol in Java
-- Created utils to attest and sign transactions
-- Integrated Ledger support into the program
+### ERGOHACK VI: Cypherpunk Finance
 
-The Ledger interface library and the Ergo Ledger app protocol are reusable and can easily be integrated into other Java Ergo applications.
+**(February 2023)**
 
-> **SAFEW**
+**Summary:** ErgoHack VI, themed "Cypherpunk Finance", focused on developing privacy tools using Ergo's protocols (mixers, etc.) and promoting decentralized finance while considering regulations.
 
-SAFEW implemented Ledger support and the beginnings of ErgoMixer support.
+**Projects:**
 
-- [Project report](pdf/SAFEW_ergohack3_report.pdf)
+1.  [**Analog-Ergo**](analog-ergo.md): Cross-chain P2P atomic marketplace enabling users to set their own prices. ([Submission](pdf/ergohackvi/AnalogErgoProposalSimplified.pdf), [Final Report](https://drive.google.com/drive/folders/1NWvKsauGL0tA_7DRo9p76aOpjopcjKhp), [GitHub](https://github.com/dzyphr/2pAtomicSwapExample))
+2.  **Ergo Stats**: Mobile app providing compact blockchain statistics from ergo.watch/tokenJay. ([Submission](pdf/ergohackvi/ErgoStats-iOS-app.pdf), [GitHub](https://github.com/ach2swift/ErgoStats))
+3.  [**Ergode**](ergode.md): Ergo Node running natively on smart devices (TVs, phones, etc.), targeting Tizen OS initially. ([GitHub](https://github.com/ross-weir/ergode))
+4.  [**Lithos**](lithos.md): Decentralised block production via collateralized mining pools, offering yield on ERG while decentralizing the chain. ([Submission](pdf/ergohackvi/Lithos-Paper.pdf), [Final Report](https://github.com/Lithos-Protocol/Lithos/blob/ErgoHack/documents/ErgoHack.MD), [GitHub](https://github.com/Lithos-Protocol))
+5.  **ChainCash**: Elastic P2P money creation system using trust and blockchain assets. ([Submission](pdf/ergohackvi/chaincash.pdf), [GitHub](https://github.com/kushti/chaincash))
+6.  [**Lilium**](lilium.md): Decentralised NFT sale platform infrastructure for easy minting/distribution. ([Submission](pdf/ergohackvi/Lilium---ErgoHack-6-Proposoal-1.pdf), [Final Report](https://drive.google.com/drive/folders/1J-UUaV7HLhVSNkrk2_zIH8dzqRq6tqs4))
+7.  [**SigmaO**](sigmao.md): Creation of Call/Put options on EIP-4 tokens, represented by standard EIP-4 tokens. ([Submission](pdf/ergohackvi/SigmaO_ergohack_plan.pdf), [sigmao.cc](https://www.sigmao.cc/), [GitHub](https://github.com/ThierryM1212/SigmaO))
+8.  **Riadne Hlady2**: MultiSig token swapping service for trustless P2P NFT/token swaps in a single transaction. ([single-tx-swap.com](https://www.single-tx-swap.com/), [GitHub](https://github.com/danieloravec/ergo-token-swap))
+9.  **Privacy Guide**: Online module teaching privacy fundamentals and private Ergo usage. ([Submission](pdf/ergohackvi/Maintaining-Privacy-Online-1.pdf), [Course Link](https://drive.google.com/drive/folders/1hzFUJHDfQSQYapRZ-Msw0Uvo5QmqQm1i))
+10. **Perma Ergo**: RealFi project using micro-loans for farmers via Permaculture/Agroecology principles to decentralize food production. ([Submission](pdf/ergohackvi/micro-finance-PERMERGO.pdf), [GitHub](https://github.com/firashebili/permergo-microfinancing-dao))
+11. **Net Notes**: Ergo Node running in a web browser using encrypted file notes for communication. ([Submission](https://github.com/networkspore/Netnotes/blob/main/Netnotes%20-%20ergohack%20VI.pdf), [Final Report](https://drive.google.com/drive/folders/1DFYp_arTeOMH8Rqyop8tB_k2DvQSF_ca))
+12. **Sigma Subscriptions**: Framework for easily running subscription services on Ergo. ([Submission](pdf/ergohackvi/ErgoHack-VI-Project-Proposal-1.pdf), [GitHub](https://github.com/cornbelt-dev/sigma-subscriptions))
+13. **Quantum Swap**: P2P NFT & Native Asset Exchange Service. ([Submission](<pdf/ergohackvi/Quantum-Swap-White-Paper2(2)%202.pdf>))
+14. [**SigmaStamp**](sigmastamp.md): A timestamping service. ([GitHub](https://github.com/sigmastamp), [sigmastamp.ml](https://www.sigmastamp.ml))
+15. **SIPS**: SigmaUSD Improvement Proposals development and discussion. ([Draft Doc](https://docs.google.com/document/d/1btfEVhPlJLK2OweAK2c1vY67cYE8hHULvxOA12G_5dk/edit#), [Discussion](https://github.com/ergoplatform/sips/discussions/17))
+16. **Explorer UI**: Improving the user experience of the Ergo explorer. ([Submission](pdf/ergohackvi/Improved_Ergo_explorer_UXUI.pdf))
 
-### [ERGOHACK II _Social Transformation_](https://ergoplatform.org/en/blog/2021-09-07-ergohack-ii/)
+*(Note: Open Board was a withdrawn entry.)*
 
-**Participants**
+**Winners:**
 
-- [ErgoLend](https://github.com/Ergo-Lend/) _(now live @ [ergolend.org](https://ergolend.org))_
-- [Minotaur Wallet](https://github.com/minotaur-ergo/minotaur-wallet)
-- [Ergopad](https://github.com/Ergohack-Dashboard-Project) _(now live @ [ergopad.io](https://ergopad.io))_
-- [Ergo Subpooling](https://github.com/K-Singh/ergo-subpooling) _(now live @ [GetBlok.io](https://getblok.io))_
-- [HYPO10USE: QUIDGAMES](https://github.com/hypo10use/quid-games)
-- Ergo Audio
+*   1st Prize: Ergode (Ergo Tizen)
+*   2nd Prize: SigmaO
+*   3rd Prize: Lithos
+*   Community Vote 1st: Ergode
+*   Community Vote 2nd: SigmaO
+*   Community Vote 3rd: Lithos
 
-### [ERGOHACK I](https://ergoplatform.org/en/blog/2021-06-04-ergo-community-launches-its-first-hackathon-ergohack/)
+[**See the Hall of Fame Entry**](https://ergohack.io/hall-of-fame/#ergohack-vi) | [**Final Reports Drive**](https://drive.google.com/drive/folders/14Mgh5G1IFukXgnbG6APzHoDa7ynV7T27)
 
-**Participants**
+---
 
-- [ErgoRaffle](https://github.com/ErgoRaffle) _(now live @ [ergoraffle.com](https://ergoraffle.com))_
-- [Smart Pools](https://github.com/WilfordGrimley/ErgoSmartPools) _(Inspired [GetBlok.io](https://getblok.io))_
-- [Sigma Stamp](https://github.com/sigmastamp)
-- [Simpler Joint Spending Tool](https://www.ergoforum.org/t/a-simpler-collective-spending-approach-for-everyone)
-- Ergo Index Fund
-- Ergo Charts
+### ERGOHACK V: Mining & Minting
+
+**(October 3-20, 2022)**
+
+**Summary:** Co-presented with Flux, Alephium, and the Djed Alliance, ErgoHack V focused on "Mining and Minting", particularly relevant due to the anticipated Ethereum Merge. It aimed to attract miners and developers by stimulating dApps, tools, and infrastructure leveraging Ergo's unique PoW features and exploring cross-chain potential.
+
+**Projects:**
+
+1.  [**DumDumDum**](https://github.com/kii-dot/dumdumdum): Decentralised, **on-chain** Twitter alternative using NFTs. ([Docs](https://kii-dot.notion.site/kii-dot/Ergo-Twitter-063eb242ab034fa7bb17d4e0088226b8))
+2.  [**Cyti**](https://github.com/ThierryM1212/cyti): "Choose Your Token ID" - a _mineable_ smart contract allowing minting tokens with a specific ID prefix. ([Live Demo](https://thierrym1212.github.io/cyti/index.html), [Video](https://youtu.be/xjAHZoT0L7A))
+3.  [**EIP38-Partial-Voting**](https://github.com/WilfordGrimley/eip38PartialVoting): EIP draft empowering miners with a 'partial' vote option for indicative voting, enabling pools to pass governance power to miners. ([Video](https://dalek.zone/w/quqExPoNiabYLKFx1FqUsf), [Draft PR](https://github.com/WilfordGrimley/ergo/blob/EIP-0038/src/main/scala/org/ergoplatform/nodeView/state/VotingData.scala))
+4.  **SNISP** (Succinct, Non-Interactive Share Proofs): Proofs allowing accurate/efficient on-chain PoW calculation, useful for decentralized pools, governance, work-backed assets. ([Draft Paper](/../events/pdf/SNISP_FINAL_NO_CITATIONS.pdf))
+5.  [**Paizo**](https://github.com/deadit/paizo): On-chain mining governance simulation tool for educating miners. ([Live Demo](https://deadit.github.io/paizo/))
+6.  **Ergo-Payroll**: Automated payroll distribution tool for ERG/tokens based on amount or USD value. ([GitHub](https://github.com/andrehafner/ergo-payroll))
+7.  [**Obolflip**](https://github.com/obolflip): A decentralised CoinFlip betting application. ([Docs & Client](https://github.com/obolflip/obolflip-client))
+8.  **ergo-audit**: DAO-based project for community auditing of ecosystem projects/contracts with standardized frameworks.
+9.  [**ErgoNames**](https://github.com/ergonames): Easy-to-remember names for Ergo addresses, tackling multi-contract approach, orphan requests, NSFW engine, etc. ([Proposal](pdf/ergonames5.pdf))
+10. **SigmaBalls**: An options trading solution concept.
+11. **MineErgo**: Project rewarding miners with NFTs alongside their ERG rewards.
+12. **Sigma-Rust-Jit**: Enhancing the [sigma-rust](rust.md) library with [JIT 5.0 Costing](jitc.md).
+13. **Satergo Wallet Enhancement**: Added a stratum mining server module to the Satergo wallet.
+14. **Dlop-art-generator**: UI/website for generating 1010s art pieces, potentially with SVG/minting features. ([Live Demo](https://twotens.art/build.html), [Final Report](https://twotens.art/ergohack_v.html))
+
+**Winners:**
+
+*   1st Prize (Ergo Foundation and Flux, 10k SigUSD + Flux): CYTI
+*   2nd Prize (Ergo Foundation and Flux, 6k SigUSD + Flux): ergonames
+*   3rd Prize (Ergo Foundation, 2k SigUSD): Paizo
+*   3rd Prize (Flux): Obolflip
+*   Special Prize (Ergo Foundation, 1000 SigUSD): snisp
+*   (Additional prizes from Djed Alliance [DACAU] and Alephium [20k ALPH] were also part of the pool).
+
+[**Read the Announcement**](https://ergoplatform.org/en/blog/Ergo-Foundation-Announces-ErgoHack-5-Mining-and-Minting/) | [**See the Hall of Fame Entry**](https://ergohack.io/hall-of-fame/#ergohack-v)
+
+---
+
+### ERGOHACKFEST (IV)
+
+**(May 2022 - Three Weeks)**
+
+**Summary:** The fourth hackathon, dubbed ERGOHACKFEST, spanned several weeks in collaboration with ErgoPad. It was the largest event to date, attracting familiar faces and new participants who leveraged the extended duration for ambitious projects like ERG-EVM bridges and GraphQL APIs.
+
+**Projects:**
+
+1.  **Azorus**: An intelligence platform for UTXO Blockchains. ([Demo](https://www.youtube.com/watch?v=SD8bDf-nxTQ), [Whitepaper](https://github.com/gsblabsio/azorus), [IDO](https://ergopad.io/projects/azorus))
+2.  **ergo-graphql**: GraphQL API for Ergo data access. ([GitHub](https://github.com/capt-nemo429/ergo-graphql), [Report](pdf/ergo-graphql_-_Final_Report.pdf))
+3.  **dAppStep**: Interactive JavaScript tutorials for dApp developers (nodejs/javascript stack). ([Live Examples](https://play.dappstep.com/), [Report](https://drive.google.com/drive/folders/1s1iiJwybYkX4FrNBM-OpcjvLKItUbmVB))
+4.  **ErgoSock & Ergonode (Satergo Team)**: Network crawler (ErgoSock) and mapper (Ergonodes) visualizing node state and network health. ([ergonodes.net](http://ergonodes.net/), [ErgoSock Report](pdf/ergosock.pdf), [Ergonodes Report](pdf/ergonodes.pdf), [GitHub](https://github.com/Satergo/Ergonnection))
+5.  **ErgoNation**: A decentralised ID and governance project committed to Ergo ideals. ([Report](<pdf/Ergo_Nation_final_report%20(1).pdf>))
+6.  **ErgoSphere**: An _Umbrel-like_ easy node hosting solution for Ergo. ([ergosphere.cloud](https://ergosphere.cloud/), [Presentation](https://docs.google.com/document/d/1jdYS4Mt4Zkk3Hwl0CeA3ietaaIdAkETT/edit))
+7.  **LETS**: Local Exchange Trading System implementation. ([Backend GitHub](https://github.com/arkan294/LETS-backend))
+8.  **Multisig (Minotaur Team)**: Developed a new multi-signature wallet with QR code signing and a communication server. ([Docs](https://github.com/lazypinkpatrick/minotaur-wallet/blob/main/doc/MultiSig.md), [Usage Example](https://drive.google.com/file/d/1J4IdlvpqWIo1eV1wtiT2DsfPPmgmVNQb/view?usp=sharing))
+9.  **NightOwl**: Decentralised casino platform. ([Presentation](https://docs.google.com/presentation/d/1LBezFjHTNC2JJdL4OFNWIbZMiyCJ5szsr-h95i1PKp8/edit), [Update](https://medium.com/@NightOwlCasino/night-owls-weekly-update-ergohack-edition-25-05-2022-aba01f8ee9f3), [dApp Connector](https://github.com/nightowlcasino/dApp-connector-react-package))
+10. **Oracle-Pools2**: MVP implementation of EIP-23 oracle pools v2, implementing three core operations. ([Report](https://docs.google.com/document/d/1YxSc0tKi86tDRU-2RRemwefZTRYBTFBwxnYuYbaOgBk/edit))
+11. **SwampAudio**: A Layer-2 Music Launchpad concept. ([Report](https://docs.google.com/document/d/1ARevOdDiUkqYLzJ3WjjsRNNkgChJebbhcxh8SSANzio/), [IDO Details](https://ergopad.io/projects/swampaudio))
+12. **Tensile**: Decentralised, open-source, non-custodial derivatives trading platform (leverage, hedging). ([GitHub](https://github.com/DeCo-Education/DeCo-Homeworks/blob/main/ErgoScript-Developer-Course/batch-0/team-tensile/future%20contract/), [Report](pdf/Tensile_Ergoscript_Course_Final_Presentation.pdf))
+13. **ColivingDAO**: Aims to facilitate a global ecosystem of coliving projects using DAO principles. ([Website](https://colivingdao.io/))
+14. **RubyNFTs**: NFT Minting library using `sigma_rb`. ([Presentation](https://twotens.art/ergohack_iv.html), [Lib GitHub](https://github.com/thedlop/sigma_mint))
+15. **SentientChain/SentientSWAP**: Gaming sidechain concept. ([Presentation](https://drive.google.com/drive/folders/1Xprwfz-MrgS4PFQ3cETE7JbTenPRtQRw))
+16. **InERGitance**: A decentralised inheritance solution for the Ergo blockchain. ([GitHub](https://github.com/inergitance), [Docs](https://github.com/inergitance/doc), [Frontend](https://github.com/inergitance/frontend))
+17. **Platform137**: Mining GUI interface development. ([Presentation](https://drive.google.com/drive/folders/1wJrQGh0PaPgXZCX-QnITEVZPa3WPkGZX))
+18. **Ergrow**: A fun project integrating Ergo with gardening. ([Website](http://ergrow.io/), [Presentation](https://drive.google.com/drive/folders/1HkLHj9xu_tawjGnfVzL02Lkrm8XZtCIS))
+
+**Winners:**
+
+*   1st Place: Multisig (Minotaur)
+*   2nd Place: Oracle-Pools2
+*   3rd Place: ErgoSock/ErgoNodes (Satergo)
+*   Special Prize (1000 SigUSD each from Ergo whale): ergo-graphql, NightOwl
+*   Community Favourites: NightOwl, Azorus, ergo-graphql, ErgoNation, dappStep
+
+[**See the Hall of Fame Entry**](https://ergohack.io/hall-of-fame/#ergohack-iv) | [**Presentations Drive**](https://drive.google.com/drive/folders/12yBnyMjq0hdVhXGOlpp8X0bwcj_Wvbgh)
+
+---
+
+### ERGOHACK III: Privacy & Security
+
+**(February 2022)**
+
+**Summary:** ErgoHack III emphasized creativity in "Privacy & Security". Participation grew significantly, with projects tackling NFTs, wallet DNS (ErgoDNS), Stealth Addresses, and more, pushing DLT boundaries.
+
+**Projects:**
+
+*   **Tooling**
+    *   **The Delphi Project**: Platform to explore, run, launch decentralized oracles. ([Website](https://delphiproject.org/#), [Report](https://hackmd.io/@abchris/S1dHZcwyc))
+    *   **Ergo-Castanet**: Petri Nets for Smart Contract protocol specification/validation (EIP-0006) for headless dApps orchestration/testing. ([Report](https://github.com/iandebeer/ergo-castanet/blob/main/docs/Conclusion.md))
+*   **Exchange (EX)**
+    *   **SkyHarbor**: Fast, efficient primary Ergo NFT marketplace using Smart Contracts. ([Video](https://www.youtube.com/watch?v=nnLmTG-43m8))
+    *   **GuapSwap**: Fully decentralised smart contract profit-swapping service. ([GitHub](https://github.com/GuapSwap), [Report](pdf/GuapSwap_-_ErgoHack3_Project_Report.pdf))
+    *   **anetaBTC**: BTC wrapping protocol; integrated Yoroi/Nautilus wallets, worked on analytics dashboard. ([Website](http://anetabtc.io/), [Report](https://medium.com/@anetaBTC/ergohack-summary-and-development-update-dad3224227b7))
+*   **Gaming**
+    *   **Hypo10use (QuidGames)**: Continued work on multiplayer game platform, focused on contract compilation and transaction building/submission. ([Website](https://quid-game.netlify.app/), [Github](https://github.com/hypo10use/quid-games))
+    *   **NightOwl**: Decentralised Casino on Ergo. ([Website](https://nightowlcasino.io/), [GitHub](https://github.com/nightowlcasino), [Slides](pdf/Night_Owl_-_Ergo_Hack_lll_Presentation_Final.pdf))
+*   **Identity**
+    *   **ErgoDNS**: MVP for resolving Ergo Names (NFTs) to wallet addresses; fully decentralised, on-chain ownership. ([Video](https://www.youtube.com/watch?v=G7glbtnAnMY), [Demo](https://ergo-names.firebaseapp.com/home), [GitHub Repos](https://github.com/ergonames))
+    *   **Stealth Addresses #1 (@aragogi)**: Stealth Scanner project + customised mixer version based on forum concept. ([GitHub](https://github.com/aragogi/Stealth-doc))
+    *   **Stealth Addresses #2 (@\_jd\_)**: Added `addSignWithDhtData` function for signing with single DHT tuple (related to stealth addresses). ([GitHub PR](https://github.com/ergoplatform/ergo-playgrounds/pull/24))
+*   **Wallets**
+    *   **Nautilus**: Added Ledger hardware wallet support using `ledgerjs-hw-app-ergo`, assisted other teams. ([Implementation](https://github.com/capt-nemo429/nautilus-wallet/pull/6), [Video](https://twitter.com/NautilusWallet/status/1493064272028393473))
+    *   **SAFEW**: Implemented Ledger support and initial ErgoMixer integration. ([Report](pdf/SAFEW_ergohack3_report.pdf))
+    *   **Satergo**: Implemented Ledger support (HID, Speculos emulator, Ergo Ledger app protocol in Java, signing utils). ([Drive Folder](https://drive.google.com/drive/folders/1ERas6ZyJpkY_7W1az5q0X88OfYu5OipC?usp=sharing))
+
+**Winners:**
+
+*   1st Place: Stealth Addresses #1
+*   2nd Place: SAFEW
+*   3rd Place: Nautilus
+
+[**Read the Announcement**](https://ergoplatform.org/en/blog/2021-12-21-ergohack-iii-privacy-security/) | [**See the Hall of Fame Entry**](https://ergohack.io/hall-of-fame/#ergohack-iii)
+
+---
+
+### ERGOHACK II: Social Transformation
+
+**(October 2021)**
+
+**Summary:** Following the "hack to change" theme, ErgoHack II focused on "Social Transformation". Projects tackled this from technical angles (Ergo Subpooling) and enterprise domains (Ergo Audio), producing high-quality ventures.
+
+**Projects:**
+
+1.  **ErgoLend**: Lending platform. _(Now live @ [ergolend.org](https://ergolend.org))_ ([GitHub](https://github.com/Ergo-Lend/))
+2.  **Minotaur Wallet**: Wallet development. ([GitHub](https://github.com/minotaur-ergo/minotaur-wallet))
+3.  **Ergopad**: Launchpad / Dashboard project. _(Now live @ [ergopad.io](https://ergopad.io))_ ([GitHub](https://github.com/Ergohack-Dashboard-Project))
+4.  **Ergo Subpooling**: Subpooling solution allowing miners to share block rewards. _(Concept evolved into [GetBlok.io](https://getblok.io))_ ([GitHub](https://github.com/K-Singh/ergo-subpooling))
+5.  **HYPO10USE (QuidGames)**: Game platform focusing on translating game mechanics to the eUTXO model. ([Github](https://github.com/hypo10use/quid-games))
+6.  **Ergo Audio**: Project exploring blockchain application in the audio/music enterprise domain.
+
+**Winners:**
+
+*   1st Place: ErgoLend
+*   2nd Place: Ergo-Subpooling
+*   3rd Place: Quid Games (HYPO10USE)
+
+[**Read the Announcement**](https://ergoplatform.org/en/blog/2021-09-07-ergohack-ii/) | [**See the Hall of Fame Entry**](https://ergohack.io/hall-of-fame/#ergohack-ii)
+
+---
+
+### ERGOHACK I: Hack For Change
+
+**(June 2021)**
+
+**Summary:** Ergo's inaugural hackathon, ERGOHACK I, was themed "Hack to Change". It marked the beginning of Ergo's developer-focused virtual events, with submissions ranging from lotteries to collaborative spending tools.
+
+**Projects:**
+
+1.  **ErgoRaffle**: Raffle/Lottery dApp. _(Now live @ [ergoraffle.com](https://ergoraffle.com))_ ([GitHub](https://github.com/ErgoRaffle))
+2.  **Smart Pools**: Concept for smart contract based mining pools. _(Inspired [GetBlok.io](https://getblok.io))_ ([GitHub](https://github.com/WilfordGrimley/ErgoSmartPools))
+3.  **Sigma Stamp**: Timestamping service utilizing Ergo's features. ([GitHub](https://github.com/sigmastamp))
+4.  **Simpler Joint Spending Tool (ErgoTeam?)**: A user-friendly approach for collective spending on-chain. ([Forum Post](https://www.ergoforum.org/t/a-simpler-collective-spending-approach-for-everyone))
+5.  **Ergo Index Fund**: Concept for an index fund built on Ergo.
+6.  **Ergo Charts**: Charting tool for visualizing Ergo blockchain data.
+
+**Winners:**
+
+*   1st Place: ErgoRaffle
+*   2nd Place: SigmaStamp
+*   3rd Place: ErgoTeam (presumably the Simpler Joint Spending Tool)
+
+[**Read the Announcement**](https://ergoplatform.org/en/blog/2021-06-04-ergo-community-launches-its-first-hackathon-ergohack/) | [**See the Hall of Fame Entry**](https://ergohack.io/hall-of-fame/#ergohack-i)
+
+---
+
+## Esteemed Judges Panel
+
+ERGOHACK events have consistently benefited from the insight and expertise of a diverse panel of judges drawn from the core Ergo team, prominent ecosystem projects, and valued partners. Their contributions are vital in recognizing innovation and guiding development. Past judges have included:
+
+*   **Alexander Chepurnoy (kushti)**: Ergo Core Developer; extensive blockchain background (NXT, Chainlink, Waves, IOHK).
+*   **Robert Kornacki**: Ergo Foundation Board Member, Co-founder dcSpark; deep involvement in Ergo & Cardano.
+*   **Bruno Woltzenlogel Paleo**: Technical Director at Input Output; designed SigmaUSD, contributed to Scorex.
+*   **Ilya Oskin**: Ergo Core Developer; experienced software engineer.
+*   **Alexander Slesarenko**: Ergo Foundation Board Member, Lead ErgoScript Developer; software architect background.
+*   **Aleksei Pupyshev (MrStahlfelge)**: Founder Graviton, Co-Founder Neutrino/Gravity protocols; background in HFT & pool analytics.
+*   **Marty (ErgoPad)**: Co-founder of Ergopad; focused on ecosystem growth and DeFi tools.
+*   **Anon\_real (Darkfund0)**: Anonymous core contributor; developer of ZK Treasury, Ergo Auction House, EIP contributor.
+*   **Joseph Armeanio**: Ergo Foundation Business Developer; focus on partnerships, adoption, and counter-economic tools.
+*   **Mark Glasgow**: Ergo Foundation Member; Computing Science background, focus on inclusive systems.
+*   **Luivatra (ErgoPad)**: Ergoscript Developer at ErgoPad/Paideia; background in CS (AI/Games) & Finance.
+*   **Representatives from Partner Projects**: Including Flux, Alephium, and the Djed Alliance during co-hosted events.
+
+*(Note: Judge panels vary for each event. This list highlights some of the key contributors over time.)*
+
+The rigorous evaluation provided by these experts helps ensure that ERGOHACK continues to foster high-quality development within the Ergo ecosystem.
