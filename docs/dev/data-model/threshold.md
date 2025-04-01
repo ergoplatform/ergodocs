@@ -1,3 +1,10 @@
+---
+tags:
+  - Threshold Signatures
+  - Cryptography
+  - Ergo
+---
+
 # Threshold Signatures in Ergo
 
 ## Overview

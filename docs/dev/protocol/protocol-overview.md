@@ -1,3 +1,9 @@
+---
+tags:
+  - Protocol
+  - Overview
+---
+
 # Powering the future of finance
 
 Ergo is a [next-generation](scaling.md) smart contract platform that enables anyone to participate in the digital DeFi revolution *now*.

@@ -1,3 +1,8 @@
+---
+tags:
+  - ErgoScript
+  - ErgoTree
+---
 
 ## ErgoScript vs ErgoTree
 

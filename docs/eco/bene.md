@@ -1,3 +1,11 @@
+---
+tags:
+  - Bene
+  - Fundraising
+  - Platform
+  - dApp
+---
+
 # Bene: Fundraising Platform
 
 ## Overview

@@ -1,3 +1,10 @@
+---
+tags:
+  - Developer Guide
+  - Getting Started
+  - Overview
+---
+
 # Developer's Guide
 
 /// admonition | Welcome to the Ergo Developer's Guide

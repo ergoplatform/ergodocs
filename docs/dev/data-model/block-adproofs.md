@@ -1,3 +1,11 @@
+---
+tags:
+  - ADProofs
+  - Authenticated Data Proofs
+  - Block
+  - Data Model
+---
+
 # ADProofs (Authenticated Data Proofs)
 
 *(Back to: [Block Overview](block.md))*

@@ -1,3 +1,9 @@
+---
+tags:
+  - Libraries
+  - Development
+---
+
 # Libraries
 
 ::cards::
@@ -23,4 +29,3 @@
 ]
 
 ::/cards::
-

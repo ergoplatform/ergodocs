@@ -1,3 +1,9 @@
+---
+tags:
+  - Debugging
+  - ErgoScript
+---
+
 # Debugging ErgoScript
 
 Since ErgoScript is usually encapsulated within string literals, it is not feasible to directly set breakpoints within the script text itself for debugging purposes. 

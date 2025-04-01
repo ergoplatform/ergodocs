@@ -1,5 +1,8 @@
 ---
 tags:
+  - Blobstopia
+  - Gaming
+  - dApp
   - dApp-Live
 ---
 

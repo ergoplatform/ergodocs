@@ -1,3 +1,10 @@
+---
+tags:
+  - Data Model
+  - Overview
+  - Ergo
+---
+
 # The Ergo Data Model
 
 This document provides a comprehensive and in-depth exploration of Ergo's unique data model, based on the [UTXO (Unspent Transaction Output)](eutxo.md) model, enhanced with powerful [smart contract](ergoscript.md) capabilities ([eUTXO](eutxo.md)).

@@ -1,5 +1,9 @@
 ---
 tags:
+  - Cyberverse
+  - Gaming
+  - Metaverse
+  - dApp
   - dApp-Live
 ---
 

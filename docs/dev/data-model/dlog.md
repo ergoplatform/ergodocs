@@ -1,3 +1,10 @@
+---
+tags:
+  - Discrete Logarithm Proofs
+  - DLog
+  - Cryptography
+---
+
 # Discrete Logarithm Proofs in Ergo
 
 ## Overview

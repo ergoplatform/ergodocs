@@ -1,3 +1,11 @@
+---
+tags:
+  - P2S
+  - Pay-to-Script
+  - ErgoScript
+  - Applications
+---
+
 # Developing Simple Pay-to-Script Applications with ErgoScript
 
 With ErgoScript, you can create basic applications using the pay-to-script (P2S) address compiler available at [wallet.plutomonkey.com/p2s](https://wallet.plutomonkey.com/p2s/). Check out [this video tutorial](https://www.youtube.com/watch?v=d6Mf-oxaLIc) for more details. When you transmit a transaction to this P2S address, the output is locked with the script you input.

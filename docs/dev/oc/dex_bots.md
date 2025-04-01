@@ -1,3 +1,11 @@
+---
+tags:
+  - DEX
+  - Bots
+  - Off-chain
+  - Spectrum
+---
+
 # Spectrum.DEX off-chain services
 
 > Taken from [ergo-dex-backend](https://github.com/spectrum-finance/ergo-dex-backend)

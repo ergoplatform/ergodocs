@@ -1,7 +1,10 @@
 ---
 tags:
+  - Interaction
   - RPC
   - Node
+  - Explorer
+  - API
 ---
 
 # Interacting with Ergo
@@ -32,7 +35,3 @@ For mirrors, dev tooling and more information please see [this page](explorer.md
 Ergo provides several APIs that offer different functionalities and services for developers and users. These APIs allow interaction with the Ergo blockchain, access to network data, and integration of Ergo into various applications.
 
 For mirrors, dev tooling and more information please see [this page](api.md)
-
-
-
-

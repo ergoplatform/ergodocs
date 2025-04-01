@@ -1,5 +1,9 @@
 ---
 tags:
+  - Azorus
+  - Intelligence Platform
+  - Analytics
+  - dApp
   - dApp-InDev
 ---
 

@@ -1,3 +1,10 @@
+---
+tags:
+  - Autolykos
+  - Proof of Work
+  - Mining
+---
+
 # Autolykos
 
 *(Back to: [Protocol Overview](protocol-overview.md))*

@@ -1,3 +1,10 @@
+---
+tags:
+  - Oracle Core
+  - Oracles
+  - Off-chain
+---
+
 # Oracle Core
 
 [Oracle Core](https://github.com/ergoplatform/oracle-core#roadmap) is a crucial off-chain component run by oracles, who form an integral part of an oracle pool. This core component provides a user-friendly HTTP API interface that allows for reading the current protocol state and submitting data points. Once a data point is submitted, the Oracle Core takes over the heavy lifting. It automatically generates the required transaction, posts it, and performs any other necessary actions for the protocol to run smoothly. This automation significantly reduces the workload for the oracle operator, allowing them to participate in the oracle pool protocol without any additional effort.

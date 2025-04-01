@@ -1,3 +1,11 @@
+---
+tags:
+  - ErgoNames
+  - Naming System
+  - ENS
+  - dApp
+---
+
 # ErgoNames: Decentralized Naming System for Ergo
 
 ErgoNames is a decentralized naming system for the Ergo blockchain, allowing users to register human-readable names that can be associated with their Ergo addresses. This improves the user experience by making it easier to send and receive transactions using memorable names instead of long, complex addresses.

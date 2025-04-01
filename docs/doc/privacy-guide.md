@@ -1,3 +1,11 @@
+---
+tags:
+  - Privacy
+  - Security
+  - Guide
+  - ErgoMixer
+---
+
 # Privacy and Security in Bitcoin: Dispelling Myths and Enhancing User Protection
 
 Bitcoin is often thought of as an anonymous currency used by criminals and hackers. While this [myth has been dispelled many times](https://www.thewealthmosaic.com/vendors/chainalysis/insights/the-chainalysis-2020-crypto-crime-report/), it still lingers on. The truth is that Bitcoin is a pseudonymous cryptocurrency. While no names or real identities are tied to addresses and transactions, these can all be seen through the public ledger that is the blockchain.
@@ -211,5 +219,3 @@ The following infographic is meant to serve as a brief guide for maintaining pri
 - Use or download untrusted applications
 - Public Wi-Fi use without a VPN
 - Ad Personalization
-
-

@@ -1,3 +1,11 @@
+---
+tags:
+  - Crystal Pool
+  - DEX
+  - Order Book
+  - dApp
+---
+
 # Crystal Pool
 
 Crystal Pool is a decentralized exchange (DEX) built on the Ergo blockchain, enabling real-time order-based trading directly on Layer 1. It is designed to provide a user experience comparable to centralized exchanges (CEXs) while maintaining the security and self-custody benefits of a DEX.

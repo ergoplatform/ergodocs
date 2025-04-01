@@ -1,3 +1,10 @@
+---
+tags:
+  - Contracts
+  - Security
+  - ErgoScript
+---
+
 ## Powerful But Safe Contracts
 
 Ethereum is an exceptional platform, but there are things it does not do well. Its Turing-complete smart contracts are powerful but dangerous – as incidents from The DAO to the Parity wallet exploits have proven, with tens of millions of dollars in collateral damage. With complexity comes uncertainty and potentially catastrophic vulnerabilities. Contracts can be expensive to run, and depending on network conditions, may execute unpredictably – or not. 

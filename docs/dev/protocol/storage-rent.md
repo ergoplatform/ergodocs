@@ -1,3 +1,8 @@
+---
+tags:
+  - Storage Rent
+---
+
 # Ergo's Storage Rent System
 
 *(Back to: [Protocol Overview](protocol-overview.md))*

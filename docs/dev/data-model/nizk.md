@@ -1,3 +1,11 @@
+---
+tags:
+  - NIZK
+  - Zero-Knowledge Proofs
+  - Cryptography
+  - Privacy
+---
+
 # Non-Interactive Zero-Knowledge Proofs in Ergo
 
 ## Overview

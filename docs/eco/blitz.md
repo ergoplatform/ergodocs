@@ -1,5 +1,9 @@
 ---
 tags:
+  - Blitz TCG
+  - Gaming
+  - TCG
+  - dApp
   - dApp-Live
 ---
 

@@ -3,6 +3,7 @@ tags:
   - NIPoPoWs
   - Plasma
   - Sigma Protocols
+  - Scaling
 ---
 
 # Scaling Ergo

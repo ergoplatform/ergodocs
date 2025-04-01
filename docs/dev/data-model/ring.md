@@ -1,3 +1,10 @@
+---
+tags:
+  - Ring Signatures
+  - Cryptography
+  - Privacy
+---
+
 # Ring Signatures in Ergo
 
 ## Overview
@@ -64,4 +71,3 @@ val ringSignature = prove {
 - Computational complexity makes tracing the original signer computationally infeasible
 - Relies on the hardness of the discrete logarithm problem
 - Provides strong privacy guarantees without compromising blockchain security
-

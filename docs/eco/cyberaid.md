@@ -1,5 +1,9 @@
 ---
 tags:
+  - Cyberaid
+  - Metaverse
+  - Infrastructure
+  - dApp
   - dApp-InDev
 ---
 

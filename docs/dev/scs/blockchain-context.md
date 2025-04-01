@@ -1,3 +1,9 @@
+---
+tags:
+  - Blockchain
+  - Context
+---
+
 # The Blockchain Context
 
 The Blockchain Context represents data taken from the transaction and the state of the blockchain. The data for the blockchain context is stored in the global object `CONTEXT`. `CONTEXT`, therefore, contains the main entities that you will interact with to manipulate your contract’s spending conditions.

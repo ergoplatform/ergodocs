@@ -1,6 +1,7 @@
 ---
 tags:
   - Syntax
+  - ErgoScript
 ---
 # ErgoScript Syntax
 
@@ -126,4 +127,3 @@ For further learning and a deeper dive into ErgoScript, explore the following re
 - [ErgoScript Specification](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/sigma-dsl.md): Detailed reference for Sigma Protocols and ErgoScript.
 - [LangSpec.md](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/LangSpec.md): Comprehensive language specification for ErgoScript.
 - [ErgoScript Reference Guide](https://ergoplatform.org/en/blog/2021_07_26_ergo_script_guide/): A detailed guide on writing ErgoScript.
-

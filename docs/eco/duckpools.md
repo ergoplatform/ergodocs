@@ -1,5 +1,9 @@
 ---
 tags:
+  - DuckPools
+  - Lending
+  - DeFi
+  - dApp
   - dApp-Live
 ---
 
@@ -24,4 +28,3 @@ DuckPools aims to be a catalyst for an explosive DeFi ecosystem on Ergo. The pla
 - [Website](https://duckpools.io)
 - [Discord](https://discord.gg/znRMge8kQm)
 - [Github](https://github.com/duckpools)
-

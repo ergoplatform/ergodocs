@@ -1,3 +1,12 @@
+---
+tags:
+  - Plasma
+  - AVL Trees
+  - Layer 2
+  - Library
+  - GetBlok
+---
+
 # Plasma
 
 [GetBlok Plasma](https://github.com/GetBlok-io/GetBlok-Plasma) is a library on top of Ergo [Appkit](appkit.md) that provides an abstraction layer to simplify the process of integrating AVL Trees (AKA Plasma) into off-chain code. The goal is to give developers an easy way to use this Layer-2 scaling solution in contracts, off-chain code, and distributed systems managing the Plasma itself. GetBlok Plasma uses the default versioned storage implementation powered by LevelDB, with another SwayDB implementation in the works. **This allows for distributed systems to keep track of the key-value pairs held in digests stored on-chain.**
@@ -213,4 +222,3 @@ proxyMap.dropChanges()
 - [GetBlok Plasma](https://github.com/GetBlok-io/GetBlok-Plasma)
 - [GetBlok: SmartPool Plasma](https://github.com/GetBlok-io/GetBlok-Plasma/blob/master/documents/SmartPool_Plasma.MD)
 - [Paideia - Plasma Staking](https://github.com/ergo-pad/paideia-contracts/blob/main/paideia_contracts/contracts/plasma_staking/ergoscript/latest/plasmaStaking.es)
-  

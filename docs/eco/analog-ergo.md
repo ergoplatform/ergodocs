@@ -1,5 +1,9 @@
 ---
 tags:
+  - Analog Ergo
+  - Marketplace
+  - Atomic Swaps
+  - dApp
   - dApp-InDev
 ---
 
@@ -43,4 +47,3 @@ ErgoScript makes this quite easy (Once the constants and [registers](registers.m
 ## 2-Party Atomic Swap
 
 A working python example of a 2-party atomic swap that you can simulate from 2 shell/terminal windows is available at [2pAtomicSwapExample](https://github.com/dzyphr/2pAtomicSwapExample). This might help people reason about the way in which secrets are shared through this protocol and at what steps what data transfer or blockchain interaction is supposed to occur.
-

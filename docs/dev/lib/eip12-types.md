@@ -1,3 +1,12 @@
+---
+tags:
+  - EIP-12
+  - Types
+  - dApp Connector
+  - Static Typing
+  - Library
+---
+
 # EIP12-Types: Enhancing Ergo Blockchain's dApp Connector Protocol with Static Typing
 
 [EIP12-Types](https://github.com/capt-nemo429/eip12-types) is a specialized library designed to introduce static typing to the dApp Connector Protocol on the Ergo Blockchain.

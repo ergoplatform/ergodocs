@@ -1,3 +1,10 @@
+---
+tags:
+  - Ergo Puppet
+  - Tooling
+  - Testing
+---
+
 # Ergo Puppet
 
 [Ergo Puppet](https://github.com/dav009/ergo-puppet) is an advanced tool, building upon the foundational capabilities of the [Ergo Playground](https://github.com/ergoplatform/ergo-playgrounds). It is designed to facilitate experimentation with and unit testing of Ergo contracts in an offchain setting. 

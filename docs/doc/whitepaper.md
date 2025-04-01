@@ -3,6 +3,8 @@ tags:
   - Ergo
   - Blockchain
   - Cryptography
+  - Whitepaper
+  - Contractual Money
 ---
 
 $$

@@ -1,3 +1,10 @@
+---
+tags:
+  - Contractual Money
+  - Economics
+  - Paper
+---
+
 # On Contractual Money
 
 **Authors:** Alexander Chepurnoy, Amitabh Saxena  

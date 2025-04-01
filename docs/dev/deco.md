@@ -1,3 +1,11 @@
+---
+tags:
+  - DeCo
+  - Decentralised Collaboration
+  - Education
+  - Community
+---
+
 # **DeCo (Decentralised Collaboration)**
 
 DeCo, or 'Decentralised Collaboration', is an organic grassroots initiative that arose to fill the gap in developer resources and education for the Ergo ecosystem. It aims to provide a comprehensive learning experience for newcomers to immerse themselves in the technical aspects of Ergo through a structured curriculum and community engagement.

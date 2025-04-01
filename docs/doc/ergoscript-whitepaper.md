@@ -1,3 +1,12 @@
+---
+tags:
+  - ErgoScript
+  - Whitepaper
+  - Scripting Language
+  - NIZK
+  - Sigma Protocols
+---
+
 $$
 \newcommand{\ret}{\mathsf{ret}}
 \newcommand{\new}{\mathsf{new}}

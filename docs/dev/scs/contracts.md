@@ -1,3 +1,9 @@
+---
+tags:
+  - ErgoScript
+  - Contracts
+---
+
 # ErgoScript Contracts
 
 ### Ergo Contracts

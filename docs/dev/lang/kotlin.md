@@ -1,3 +1,11 @@
+---
+tags:
+  - Kotlin
+  - JVM
+  - AppKit
+  - Mosaik
+---
+
 # Kotlin
 
 Given that Kotlin is predominantly used as a JVM language, please refer to our [AppKit Guide](appkit.md) for additional resources.

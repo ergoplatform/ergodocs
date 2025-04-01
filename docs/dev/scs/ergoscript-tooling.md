@@ -1,3 +1,9 @@
+---
+tags:
+  - ErgoScript
+  - Tooling
+---
+
 # ErgoScript Tooling
 
 ErgoScript is a powerful and flexible language for creating smart contracts on the Ergo blockchain. As with any programming language, having the right tools can greatly enhance the development experience and productivity. This page provides an overview of various tools, resources, and examples to help you get started with ErgoScript development.

@@ -1,6 +1,7 @@
 ---
 tags:
   - Go
+  - Ergo
 ---
 
 # Ergo Platform and Go 
@@ -18,4 +19,3 @@ Please note that if you come across any issues or require more detailed instruct
 ### Ergo-lib-go
 
 [*ergo-lib-go*](https://github.com/sigmaspace-io/ergo-lib-go/tree/main) is a Go wrapper around C bindings for ErgoLib from sigma-rust. This library provides Go developers with the ability to interact with the Ergo blockchain using the robust functionalities of ErgoLib, which is originally written in Rust.
-

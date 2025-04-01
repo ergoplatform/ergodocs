@@ -3,6 +3,7 @@ tags:
   - Data Structures
   - Cryptography
   - Security
+  - Ergo
 ---
 
 # Data Structures in Ergo

@@ -1,6 +1,8 @@
 ---
 tags:
   - Scala
+  - Development
+  - Ergo
 ---
 
 # Scala Development with Ergo

@@ -1,3 +1,10 @@
+---
+tags:
+  - Smart Contracts
+  - Overview
+  - ErgoScript
+---
+
 # Smart Contracts
 
 [ErgoScript](https://ergoplatform.org/docs/ErgoScript.pdf) is the smart contract language used by the Ergo blockchain. While it has concise syntax adopted from Scala/Kotlin, it may seem not very clear at first because, conceptually, ErgoScript is quite different from conventional languages, which we all know and love. Ergo is a UTXO-based blockchain, whereas smart contracts are traditionally associated with account-based systems like Ethereum. However, Ergo's transaction model has many advantages over the account-based model. With the right approach, developing Ergo contracts can be significantly easier than writing and debugging Solidity code.

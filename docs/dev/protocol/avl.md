@@ -1,3 +1,10 @@
+---
+tags:
+  - AVL Trees
+  - Data Structures
+  - Ergo
+---
+
 # AVL Trees in Ergo: An Overview
 
 AVL trees, a type of highly efficient authenticated [data structure](data-structures.md), are natively supported in Ergo. They offer numerous advantages, such as the ability to authenticate data properties without the need to access the entire dataset. This document provides a comprehensive overview of AVL trees, their integration with Ergo, and their performance metrics.

@@ -1,3 +1,10 @@
+---
+tags:
+  - Extension Section
+  - Block
+  - Data Model
+---
+
 # Ergo Block Structure: The Extension Section
 
 *(Back to: [Block Overview](block.md))*

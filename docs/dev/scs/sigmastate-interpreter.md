@@ -1,3 +1,12 @@
+---
+tags:
+  - Sigmastate Interpreter
+  - ErgoTree
+  - ErgoScript
+  - Compiler
+  - Interpreter
+---
+
 # Sigmastate Interpreter
 
 The [sigmastate-interpreter](https://github.com/ScorexFoundation/sigmastate-interpreter) repository contains the core implementations of the ErgoScript compiler and ErgoTree Interpreter. These tools are part of a broader framework that supports a family of Sigma-protocol based authentication languages, collectively known as the [*Sigma Language*](sigma-lang.md).
@@ -42,4 +51,3 @@ libraryDependencies += "org.scorexfoundation" %% "sigma-state" % "5.0.14"
 ```
 
 For more advanced usage and direct interaction with the ErgoTree and Sigma protocols, refer to the detailed [Sigma Language documentation](sigma-lang.md).
-

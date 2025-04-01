@@ -1,5 +1,9 @@
 ---
 tags:
+  - Ergo Auction House
+  - NFT
+  - Marketplace
+  - dApp
   - dApp-Live
 ---
 

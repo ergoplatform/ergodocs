@@ -1,6 +1,11 @@
 ---
 tags:
+  - Auction Coin
+  - Token Issuance
+  - Auctions
+  - DeFi
   - Degen Finance
+  - dApp
 ---
 
 # Auction Coin: A Decentralized Token Issuance Model on Ergo Blockchain

@@ -1,3 +1,11 @@
+---
+tags:
+  - Scrypto
+  - Cryptography
+  - Toolkit
+  - Library
+---
+
 # Scrypto: A Comprehensive Cryptographic Toolkit
 
 [Scrypto](https://github.com/input-output-hk/scrypto) is a comprehensive open-source cryptographic toolkit, designed to streamline and bolster the integration of cryptography into your applications. It offers a plethora of features to aid in secure data management and verification.

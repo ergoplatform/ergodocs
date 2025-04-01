@@ -1,3 +1,9 @@
+---
+tags:
+  - Block
+  - Data Model
+---
+
 # Understanding Blocks in Ergo
 
 *(Back to: [Data Model Overview](data-model.md))*

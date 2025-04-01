@@ -1,3 +1,10 @@
+---
+tags:
+  - Sigma JS
+  - JavaScript
+  - Library
+---
+
 # Sigma JS
 
 > **Sigma JS is currently under development and not yet ready for production use.**

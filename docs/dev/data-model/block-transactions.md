@@ -1,3 +1,10 @@
+---
+tags:
+  - Block
+  - Transactions
+  - Data Model
+---
+
 # Block Transactions
 
 *(Back to: [Block Overview](block.md))*

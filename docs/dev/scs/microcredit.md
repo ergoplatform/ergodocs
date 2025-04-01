@@ -1,4 +1,11 @@
 
+---
+tags:
+  - Microcredit
+  - ErgoScript
+  - Example
+---
+
 A lot of blockchain-related news these days are telling us that a bank _X_ or a corporation _Y_
 is going to use a "blockchain" to "reduce costs". Basically, it means that just another buzzword is 
 considered by big banksters as just another tool to extract value from everywhere in a more efficient way
@@ -90,4 +97,4 @@ Now assume that the cooperative federation has created a coin protected by the v
 
 The entrepreneur can easily run away without doing any business, but with no more than _3,000_ Ergs. This can be fixed, e.g. this money could be made spendable only after block number _5,000_, and before that money could be withdrawn by the cooperatives. For equipment and construction spendings, the entrepreneur is working along with some, presumably already reputable, business. Thus the investor is reducing its risks.
 
-You can find [code and example transactions online](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/sc/src/test/scala/sigmastate/utxo/examples/CoopExampleSpecification.scala). Please note that we have more examples of complex signature schemes, multi-step contracts (with on-the-go execution paths revealing, like MAST in Bitcoin, but with cycles allowed), oracles, crowdfunding and so on. Please check our [examples repository](https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/sc/src/test/scala/sigmastate/utxo/examples). 
+You can find [code and example transactions online](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/sc/src/test/scala/sigmastate/utxo/examples/CoopExampleSpecification.scala). Please note that we have more examples of complex signature schemes, multi-step contracts (with on-the-go execution paths revealing, like MAST in Bitcoin, but with cycles allowed), oracles, crowdfunding and so on. Please check our [examples repository](https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/sc/src/test/scala/sigmastate/utxo/examples).

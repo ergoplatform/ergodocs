@@ -1,3 +1,8 @@
+---
+tags:
+  - Global Functions
+  - ErgoScript
+---
 
 # Global Functions
 

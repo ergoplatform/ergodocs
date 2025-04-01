@@ -1,5 +1,9 @@
 ---
 tags:
+  - DigiGoats
+  - Gaming
+  - NFT
+  - dApp
   - dApp-Live
 ---
 

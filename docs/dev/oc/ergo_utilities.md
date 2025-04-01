@@ -1,3 +1,11 @@
+---
+tags:
+  - Ergo Utilities
+  - Rust
+  - Off-chain
+  - Library
+---
+
 # Ergo Utilities in Rust
 
 The [ergo-utilities-rust](https://github.com/ergoplatform/ergo-utilities-rust) repository contains a collection of experimental libraries designed for writing off-chain Ergo code in Rust. These utilities provide a robust and efficient way to interact with the Ergo blockchain, enabling developers to build powerful and secure applications.

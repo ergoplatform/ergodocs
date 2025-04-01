@@ -1,3 +1,9 @@
+---
+tags:
+  - Why Ergo
+  - Overview
+---
+
 # Why Ergo?
 
 Ergo is a next-generation smart contract platform that ensures the economic freedom of ordinary people through secure, accessible, and decentralized financial tools. Backed by a powerful scripting language, advanced cryptographic features, and a foundation rooted in the best principles of blockchain technology, Ergo is poised to revolutionize the concept of Contractual Money.

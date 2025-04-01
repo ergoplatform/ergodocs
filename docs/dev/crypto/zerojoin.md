@@ -1,7 +1,9 @@
 ---
 tags:
+  - ZeroJoin
   - Privacy
   - Decision Diffie-Hellman
+  - Cryptography
 ---
 
 

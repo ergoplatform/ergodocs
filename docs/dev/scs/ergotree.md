@@ -1,3 +1,9 @@
+---
+tags:
+  - ErgoTree
+  - Reference Manual
+---
+
 # ErgoTree: Reference Manual
 
 ErgoTree forms the backbone of Ergo's [smart contracts](contracts.md). It is the typed abstract syntax of the ErgoTree language used for defining logical propositions that protect [boxes](box.md) (coin abstractions) in Ergo. While ErgoTree is fundamental, most users interact with it indirectly, primarily developing contracts using a higher-level language called [ErgoScript](ergoscript.md), which later compiles into ErgoTree. 

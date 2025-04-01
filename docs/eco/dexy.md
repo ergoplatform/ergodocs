@@ -1,5 +1,9 @@
 ---
 tags:
+  - Dexy
+  - Seigniorage
+  - Stablecoin
+  - dApp
   - dApp-InDev
 ---
 
