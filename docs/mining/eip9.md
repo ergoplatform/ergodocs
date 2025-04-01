@@ -6,16 +6,7 @@
 - **License:** CC0
 - **Forking:** Hard-fork needed 
 
-### Contents
 
-- [Description](#description)
-- [Background And Motivation](#background-and-motivation)
-- [Changes in EP2](#changes-in-ep2)
-- [Activation of the Hard-Fork on Ergo network](#implementation-of-the-hard-fork-on-ergo-network)
-  - [Phase 1: Release v4.0.0](#phase-1-release-v400)
-  - [Phase 2: Release v4.0.1 (removing AOTC)](#phase-2-release-v401-removing-aotc)
-
----
 
 ### Description 
 

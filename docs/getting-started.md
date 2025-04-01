@@ -24,7 +24,7 @@ Maximize your financial engagement with in-depth information on:
 - **[Yield Farming & Staking](yield.md)**: Earn passive income through staking and liquidity pools.
 - **[Arbitrage Opportunities](arb.md)**: Leverage price differentials across platforms.
 - **[Using Financial Instruments](sigmausd.md)**: Stabilize your investments with instruments like SigmaUSD.
-- **[Options Trading](/tutorials/options.md)**: Dive deep into options trading on Ergo.
+- **[Options Trading](tutorials/trading-options.md)**: Dive deep into options trading on Ergo.
 - **[High-Risk Rewards](degfi.md)**: Navigate the rewards and risks with DegFi on Ergo.
 
 ### For Developers
@@ -45,7 +45,7 @@ Developers can explore robust tools and resources to build on Ergo's flexible ar
 If you're new to cryptocurrencies or looking to understand Ergo's basics:
 
 - **[Securing Your Investments](https://ergonaut.space/en/Guides/yield/getting-started)**: Learn how to purchase and securely store ERG.
-- **[Exploring the Ecosystem](uses/index.md)**: Discover how you can engage with various activities like NFTs, gaming, and charitable contributions.
+- **[Exploring the Ecosystem](uses/use-cases-overview.md)**: Discover how you can engage with various activities like NFTs, gaming, and charitable contributions.
 - **[Airdrops, Token Sales, and IDOs](airdrops.md)**: Capitalize on airdrops, token sales, and initial DEX offerings.
 - **[Gaming on Ergo](gaming-tutorial.md)**: Master gaming within the Ergo ecosystem.
 - **[Peer to Peer Trading](p2p-trading.md)**: Engage in direct trading activities with other users on the Ergo platform without the need for intermediaries, providing a decentralized and secure way to exchange assets.

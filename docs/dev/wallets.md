@@ -1,68 +1,90 @@
-# Wallets
+# Choosing an Ergo Wallet
 
-Ergo offers a diverse array of wallets, with the [primary wallets](#primary-wallets) listed below being the most popular, representing 95% of all installations within the ecosystem.
+A wallet is your gateway to the Ergo ecosystem – it lets you securely store, send, and receive ERG and other tokens built on Ergo. Choosing the right wallet depends on your needs and how you plan to interact with Ergo.
+
+<!-- Developer Note: This page currently resides under /dev/. Consider moving or creating a dedicated user-facing wallet page under a more accessible navigation path like /wallets/ or /introduction/wallets/. -->
+
+**How to Choose?**
+
+*   **For Mobile Users:** If you primarily use your phone, look at the **Mobile Wallets**.
+*   **For Desktop Users:** If you prefer managing funds on your computer, check out **Desktop Wallets**.
+*   **For Browser Interaction (dApps):** If you want to easily connect to Ergo applications (dApps) directly from your browser, consider a **Browser Extension Wallet**.
+*   **For Maximum Security (Offline Storage):** For storing larger amounts long-term, a **Paper Wallet** or using the cold wallet features of mobile/desktop wallets is recommended.
 
 /// details | Disclaimer
     {type: warning, open: true}
-Please note that the wallets mentioned are maintained by external parties. The information provided here is for reference purposes only.
+Please note that these wallets are developed and maintained by independent teams within the Ergo community. Always download from official sources and practice safe security habits. The information provided here is for guidance only.
 ///
 
-## Primary Wallets
+## Recommended Wallets
 
-1. [**Nautilus:**](nautilus.md) Nautilus is celebrated within the Ergo community for its widespread use and intuitive interface. Operating as a web-based browser extension, it facilitates seamless interaction with the Ergo ecosystem via a dApp connector, ensuring compatibility with a wide range of decentralized applications. Its extensive feature set includes asset management, NFT functionality, and transaction capabilities. A dedicated dApps section features a wallet optimization tool for UTXO consolidation, which helps reduce storage rent costs. Nautilus also provides a privacy mode and efficient management of connections to various Ergo ecosystem dApps.
+Here are some popular and well-regarded wallets used by the Ergo community, grouped by type:
 
-2. [**Ergo Mobile Wallet (Terminus on iOS):**](https://ergoplatform.org/en/ergo-wallet-app/) This mobile wallet is a community favorite for its user-friendly interface on smartphones, allowing for smooth token and NFT exchanges. It supports the receipt, transfer, and storage of $ERG and NFTs. It also enables the creation of secure offline cold wallets in flight mode and the recovery of funds through any EIP3 compliant wallet. The Ergo Mobile Wallet includes read-only watch wallets with fiat value comparison and the ability to scan QR codes for easy payments.
+### Mobile Wallets (iOS & Android)
 
-3. [**Satergo:**](satergo.md) Satergo is a desktop node wallet tailored for the Ergo platform, offering an accessible solution for users who prefer to run a full node. It supports the Ergo network and provides comprehensive wallet features, making it a suitable option for those looking for both ease of use and advanced wallet functionalities.
+*   [**Ergo Mobile Wallet (Terminus on iOS):**](https://ergoplatform.org/en/ergo-wallet-app/) A user-friendly option for managing ERG and tokens on your smartphone. Supports NFTs, creating offline ("cold") wallets for extra security, and easy payment scanning (QR codes). A community favorite for mobile use.
 
-For a detailed comparison of wallet features, refer to the [feature overview](#feature-overview) section further down this page.
+*   [**Minotaur Wallet:**](minotaur.md) Offers multi-signature capabilities (requiring multiple approvals for transactions), which is useful for shared funds but might be more complex for beginners. *(Note: Installation might be more involved as it's under active development).*
 
+### Browser Extension Wallets
 
-## Secondary Wallets
+*   [**Nautilus Wallet:**](nautilus.md) Very popular and widely used. Works as a browser extension (like MetaMask for Ethereum) allowing easy connection to Ergo dApps. Manages ERG, tokens, and NFTs. Includes features for privacy and optimizing transaction costs. Ideal for users frequently interacting with Ergo applications online.
 
-1. [**Node Wallet:**](https://docs.ergoplatform.com/node/install/) This desktop wallet interfaces directly with the Ergo blockchain. For those not involved in development, Satergo is generally recommended as a more user-friendly alternative.
-2. [**SAFEW Wallet:**](safew.md) SAFEW is a web-based wallet with integrated dApp and ErgoPay connectors, offering a robust set of tools for developers. It provides access to ErgoMixer, features an advanced transaction builder in Expert mode, and includes a range of sophisticated features.
-3. [**Minotaur Wallet:**](minotaur.md) The Minotaur Wallet stands out for its multi-signature security feature, requiring multiple approvals for transaction execution, which increases security for shared wallet management and reduces the risk of centralized control. As it is still under development, installation on mobile devices may present some challenges.
-4. [**Ergo Paper Wallet:**](paper-wallet.md) This paper wallet is designed for simplicity and ease of use, facilitating straightforward token transactions within the Ergo ecosystem. It is a self-custodial option that prioritizes security, allowing users to generate their wallet completely offline. The standalone file can be downloaded from GitHub, and users can generate their wallet by opening the file in a web browser without an internet connection, ensuring enhanced security. It is an excellent choice for gifting.
+### Desktop Wallets
 
-## Feature overview
+*   [**Satergo Wallet:**](satergo.md) A desktop wallet designed to work with a full Ergo node (a copy of the blockchain running on your computer). Offers comprehensive features and is a good choice if you want to run your own node without complex configurations.
 
-| Features                     | Satergo   | Nautilus |   Terminus   | Minotaur |  SafeW  |
-|------------------------------|-----------|----------|--------------|----------|---------|
-| TX history                   | ✅        | ✅       | ✅           | ✅       | ✅      |
-| Configure node               | ✅        | ✅       | ✅           | ❌       | ✅      |
-| Configure explorer           | ✅        | ✅       | ✅           | ❌       | ✅      |
-| View-only wallet             | ❌        | ✅       | ✅           | ✅       | ✅      |
-| [ErgoPay](eip20.md)          | ✅        | ❌       | ✅           | ✅       | ✅      |
-| Input address selection      | ✅        | ❌       | ✅           | ✅       | *TBC*   |
-| Address management           | ✅        | ❌       | ✅           | ✅       | ❌      |
-| Chained TXs                  | ❌        | ✅       | ✅           | ❌       | ✅      |
-| Many price currencies        | ✅        | ✅       | ✅           | ❌       | ❌      |
-| NFT viewing                  | ❌        | ✅       | ✅           | ❌       | *TBC*   |
-| Token prices                 | ❌        | ✅       | ✅           | ❌       | ✅      |
-| Babel fees                   | ❌        | ✅       | ✅           | ❌       | *TBC*   |
-| Independent software         | ✅        | ❌       | ✅           | ✅       | ❌      |
-| Website dApps                | ❌        | ✅       | ❌           | ❌       | ✅      |
-| Ledger                       | ❌        | ✅       | ❌           | ❌       | ✅      |
-| Many price sources           | ✅        | ❌       | ❌           | ❌       | ❌      |
-| Mixer integration            | ❌        | ❌       | ❌           | ❌       | ✅      |
-| TX history export            | ❌        | ❌       | ❌           | ❌       | ✅      |
-| Multi-sig                    | ❌        | ❌       | ❌           | ✅       | ❌      |
-| Mnemonic password            | ✅        | ❌       | ❌           | ✅       | ❌      |
-| Full node                    | ✅        | ❌       | ❌           | ❌       | ❌      |
-| Add address at index         | ✅        | ❌       | ❌           | ❌       | ❌      |
-| Anti address reuse           | ❌        | ✅       | ❌           | ❌       | *TBC*   |
-| Sending to stealth addresses | ✅        | *TBC*    | *TBC*        | *TBC*    | *TBC*   |
-| **Total features**           | **12/24** | **12/24** | **13/24** | **8/24** | **11/24** |
+*   **Node Wallet:** The wallet built into the core Ergo node software. Generally recommended only for developers or advanced users running a node via command line. [Satergo](satergo.md) provides a more user-friendly interface for running a node wallet. *(Link points to node installation: [Node Install](https://docs.ergoplatform.com/node/install/))*
 
-## Other Wallets
+### Other Wallet Types
 
-These wallets are generally not recommended, but are left here for archival purposes.
+*   [**SAFEW Wallet:**](safew.md) A web-based wallet (accessed via a website) with advanced features, including integration with ErgoMixer (for privacy) and tools for developers. Suitable for more experienced users.
 
-1. [**Viawallet**](https://apps.apple.com/us/app/viawallet-multi-chain-wallet/id1462031389): A multi-chain wallet offering by CoinEx.
-2. [**Zelcore**](https://erg.urlwallet.org/): A wallet provided by Flux, with third-party services.
-3. [**URL Wallet**](https://erg.urlwallet.org/): A temporary wallet solution where your key is in the URL. Recommended for temporary use cases only due to security concerns.
+*   [**Ergo Paper Wallet:**](paper-wallet.md) A simple way to create a wallet offline for maximum security. You generate a key on paper (or save a file securely offline). Good for long-term storage ("cold storage") or gifting ERG, but less convenient for frequent transactions.
 
+## Quick Comparison
+
+| Wallet Type             | Platform(s)        | Ease of Use (Beginner) | Connects to dApps? | Good for Offline/Cold Storage? | Key Feature                                    |
+|-------------------------|--------------------|------------------------|--------------------|--------------------------------|------------------------------------------------|
+| Ergo Mobile / Terminus  | iOS, Android       | High                   | Limited (ErgoPay)  | Yes (via offline mode)         | Convenient mobile use, NFT support             |
+| Nautilus                | Browser Extension  | Medium                 | Yes (Directly)     | No                             | Seamless dApp interaction, popular             |
+| Satergo                 | Desktop (Win/Mac/Lin)| Medium                 | No                 | Yes (if PC is offline)         | User-friendly full node wallet                 |
+| SAFEW                   | Web                | Medium-Low             | Yes (Directly)     | No                             | Advanced features, Mixer access                |
+| Minotaur                | Mobile             | Medium-Low             | Limited (ErgoPay)  | Yes (via offline mode)         | Multi-signature security                       |
+| Paper Wallet            | Offline Generation | N/A (Setup is simple)  | No                 | Yes (Primary purpose)          | Maximum security for long-term holding         |
+| Node Wallet (Core)      | Desktop (Win/Mac/Lin)| Low                    | No                 | Yes (if PC is offline)         | Integrated with core node (Advanced users)     |
+
+/// details | Advanced Feature Comparison
+    {type: info, open: false}
+    The table below provides a more detailed technical comparison. Note: *TBC* means the feature status needs confirmation.
+
+    | Features                     | Satergo   | Nautilus |   Terminus   | Minotaur |  SafeW  | Node Wallet | Paper Wallet |
+    |------------------------------|-----------|----------|--------------|----------|---------|-------------|--------------|
+    | TX history                   | ✅        | ✅       | ✅           | ✅       | ✅      | ✅          | ❌           |
+    | Configure node               | ✅        | ✅       | ✅           | ❌       | ✅      | ✅          | ❌           |
+    | Configure explorer           | ✅        | ✅       | ✅           | ❌       | ✅      | ✅          | ❌           |
+    | View-only wallet             | ❌        | ✅       | ✅           | ✅       | ✅      | ✅          | ❌           |
+    | [ErgoPay](eip20.md)          | ✅        | ❌       | ✅           | ✅       | ✅      | ✅          | ❌           |
+    | Input address selection      | ✅        | ❌       | ✅           | ✅       | *TBC*   | ✅          | ❌           |
+    | Address management           | ✅        | ❌       | ✅           | ✅       | ❌      | ✅          | ❌           |
+    | Chained TXs                  | ❌        | ✅       | ✅           | ❌       | ✅      | ✅          | ❌           |
+    | Many price currencies        | ✅        | ✅       | ✅           | ❌       | ❌      | ❌          | ❌           |
+    | NFT viewing                  | ❌        | ✅       | ✅           | ❌       | *TBC*   | ❌          | ❌           |
+    | Token prices                 | ❌        | ✅       | ✅           | ❌       | ✅      | ❌          | ❌           |
+    | Babel fees                   | ❌        | ✅       | ✅           | ❌       | *TBC*   | ✅          | ❌           |
+    | Independent software         | ✅        | ❌       | ✅           | ✅       | ❌      | ✅          | ✅           |
+    | Website dApps                | ❌        | ✅       | ❌           | ❌       | ✅      | ❌          | ❌           |
+    | Ledger                       | ❌        | ✅       | ❌           | ❌       | ✅      | ❌          | ❌           |
+    | Many price sources           | ✅        | ❌       | ❌           | ❌       | ❌      | ❌          | ❌           |
+    | Mixer integration            | ❌        | ❌       | ❌           | ❌       | ✅      | ❌          | ❌           |
+    | TX history export            | ❌        | ❌       | ❌           | ❌       | ✅      | ❌          | ❌           |
+    | Multi-sig                    | ❌        | ❌       | ❌           | ✅       | ❌      | ✅          | ❌           |
+    | Mnemonic password            | ✅        | ❌       | ❌           | ✅       | ❌      | ✅          | ❌           |
+    | Full node                    | ✅        | ❌       | ❌           | ❌       | ❌      | ✅          | ❌           |
+    | Add address at index         | ✅        | ❌       | ❌           | ❌       | ❌      | ✅          | ❌           |
+    | Anti address reuse           | ❌        | ✅       | ❌           | ❌       | *TBC*   | ❌          | ❌           |
+    | Sending to stealth addresses | ✅        | *TBC*    | *TBC*        | *TBC*    | *TBC*   | ✅          | ❌           |
+///
 
 /// details | Funds stuck in Yoroi?
     {type: warning, open: false}

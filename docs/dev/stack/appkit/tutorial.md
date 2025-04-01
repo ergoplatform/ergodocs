@@ -535,8 +535,6 @@ To start debugging, open the following URL in Chrome:
 ```
 
 From here, we can set breakpoints and continue execution. When it breaks, we’ll see values of the variables, can continue again until the next breakpoint, and do everything we've come to expect from debuggers.
-
-![Debugger](/img/blog/debugger.png) <!-- TODO -->  
     
 ### Conclusions
 

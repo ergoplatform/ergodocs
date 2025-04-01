@@ -12,15 +12,15 @@ The [**Full Node**](install.md) is a critical component of the Ergo network. It 
 
 ## Handshake Process
 
-In the Ergo network, a connection between peers is established through an exchange of [handshake messages](/dev/p2p/p2p-handshake). These messages share various features that describe peer properties and remain unchanged during the connection. Each message may include details such as handshake time, agent name, network protocol version, and public address. Additional information is provided by specific features such as client capabilities or a session peer feature introduced in version 3.3.7. If there's no handshake received within a predefined handshakeTimeout, the connection is dropped.
+In the Ergo network, a connection between peers is established through an exchange of [handshake messages](p2p-handshake.md). These messages share various features that describe peer properties and remain unchanged during the connection. Each message may include details such as handshake time, agent name, network protocol version, and public address. Additional information is provided by specific features such as client capabilities or a session peer feature introduced in version 3.3.7. If there's no handshake received within a predefined handshakeTimeout, the connection is dropped.
 
 ## Network Messages
 
-The Ergo P2P protocol includes a suite of [network messages](/dev/p2p/network) such as Get Peers, Peers, Sync Info, Inv, Request Modifier, and Modifier. These messages, each identified by a specific code, facilitate operations like node discovery, synchronization, object inventory transmission, and modifier requests. The protocol also defines various record types including Peer, Feature, Modifier, and Header, providing structure for the message content. Various resources and demo applications are available for implementing this protocol.
+The Ergo P2P protocol includes a suite of [network messages](network.md) such as Get Peers, Peers, Sync Info, Inv, Request Modifier, and Modifier. These messages, each identified by a specific code, facilitate operations like node discovery, synchronization, object inventory transmission, and modifier requests. The protocol also defines various record types including Peer, Feature, Modifier, and Header, providing structure for the message content. Various resources and demo applications are available for implementing this protocol.
 
 ## Modifier Exchange
 
-In Ergo's P2P protocol, blocks and transactions are referred to as "modifiers". Modifiers are transmitted between nodes as part of the network synchronization process. The [Modifier Exchange](/dev/p2p/modifiers) process encompasses the protocols and systems in place to exchange this information efficiently and securely across the network.
+In Ergo's P2P protocol, blocks and transactions are referred to as "modifiers". Modifiers are transmitted between nodes as part of the network synchronization process. The [Modifier Exchange](modifiers-exchange.md) process encompasses the protocols and systems in place to exchange this information efficiently and securely across the network.
 
 ## Synchronization Process
 

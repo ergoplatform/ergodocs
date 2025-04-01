@@ -1,12 +1,16 @@
 ---
 tags:
   - UTXO
+  - Box Modeling
+  - Data Model
 ---
 # Ergo Box Design: A Comprehensive Guide
 
-The UTXO (Unspent Transaction Output) system is the backbone of many blockchain networks, and at its core are boxes. These boxes are not just containers for the value of a currency within a blockchain; they are also equipped with [registers](registers.md) that are protected by a contract, enhancing their functionality on the Ergo blockchain.
+*(Back to: [Box Overview](../box.md) | [Registers](registers.md))*
 
-Registers are essentially storage units for data and information at specific addresses in the blockchain. To visualize this, think of these boxes as advanced storage units or containers. For instance, consider a cup:
+The [UTXO (Unspent Transaction Output)](eutxo.md) system is the backbone of many blockchain networks, and at its core are [**boxes**](box.md). These boxes are not just containers for the value of a currency within a blockchain; they are also equipped with [**registers**](registers.md) that are protected by a [contract](ergoscript.md), enhancing their functionality on the Ergo blockchain.
+
+Registers are essentially storage units for data and information at specific [addresses](address.md) in the blockchain. To visualize this, think of these boxes as advanced storage units or containers. For instance, consider a cup:
 
 **A Cup:**
 
@@ -17,10 +21,10 @@ Now, let's translate this into a blockchain context:
 
 **A Cup Box:**
 
-- Stores only Ergs or a specific token
-- Has a storage limit enforced by a guard script
+- Stores only Ergs or a specific [token](tokens.md)
+- Has a storage limit enforced by a guard [script](ergoscript.md)
 
-A guard script or contract sets restrictions on the box. Without it, a box is just a storage unit for information or a certain amount of currency. The introduction of guard scripts, which establish specific rules for the boxes, adds a level of control and functionality to the boxes, much like a remote control. The focus here is not on the internal workings of a remote control (guard script) or the data it transmits (registers and storage), but on its functionality - pressing a button changes the TV channel.
+A guard script or [smart contract](ergoscript.md) sets restrictions on the box. Without it, a box is just a storage unit for information or a certain amount of currency. The introduction of guard scripts, which establish specific rules for the boxes, adds a level of control and functionality to the boxes, much like a remote control. The focus here is not on the internal workings of a remote control (guard script) or the data it transmits (registers and storage), but on its functionality - pressing a button changes the TV channel.
 
 ## Understanding Box Modeling
 
@@ -28,21 +32,21 @@ Box modeling is a framework that aids developers or box designers in creating a 
 
 ## Key Principles in Box Design
 
-A blockchain serves as a financial canvas, allowing developers, engineers, and designers to build financial systems on top of it. However, design flaws can lead to security vulnerabilities, unscalable designs, and inefficient processes. Therefore, it's crucial to prioritize security, scalability, and efficiency in design.
+A blockchain serves as a financial canvas, allowing developers, engineers, and designers to build financial systems on top of it. However, design flaws can lead to [security](security.md) vulnerabilities, unscalable designs, and inefficient processes. Therefore, it's crucial to prioritize security, [scalability](scaling.md), and efficiency in design.
 
 The three pillars of box design are:
 
 ### Security
 
-The box should be designed to prevent exploitation by unauthorized users.
+The box should be designed to prevent exploitation by unauthorized users. Its protection script must be robust.
 
 ### Scalability
 
-The system should be designed to handle multiple concurrent requests smoothly.
+The system (involving potentially many boxes and transactions) should be designed to handle multiple concurrent requests smoothly without causing congestion or excessive fees.
 
 ### Efficiency
 
-A straightforward design makes it easier for engineers to understand and improve the design.
+A straightforward design makes it easier for engineers to understand, audit, and improve the design, reducing the chance of errors.
 
 ## Box Modeling: A Step-by-Step Guide
 
@@ -52,33 +56,21 @@ When modeling a box, consider the following:
 
 ### What is the box's purpose?
 
-For instance, a lending box is designed to simplify the loan process.
+For instance, a lending box is designed to simplify the loan process within a DeFi application.
 
 ### What data should the box store?
 
-The box's function determines the data stored in it. A lending box, for example, would store lending-related information in its registers.
+The box's function determines the data stored in its [registers](registers.md). A lending box, for example, would store lending-related information (like loan amount, interest rate, collateral details, borrower/lender addresses) in its registers (R4-R9).
 
 ### How will the box perform its function?
 
-This step involves thinking about the overall transaction, not just the box. It requires scripting the guard script (or smart contract) to perform its intended function using the data stored in the registers.
+This step involves thinking about the overall [transaction](transactions.md) flow, not just the individual box. It requires scripting the guard script (using [ErgoScript](ergoscript.md)) to enforce the rules and perform its intended function using the data stored in the registers and potentially data from other input boxes or [data inputs](read-only-inputs.md).
 
 ### Register Data Types
 
-Registers can store data in various formats, which can be single or multiple entries.
-
-**Single data entries include:**
-
-- `Long`
-- `Coll[Byte]` (also known as *String*)
-- `Bool`
-
-**Multiple data entries include:**
-
-- `Coll[Long]`
-- `Coll[Coll[Byte]]`
-- `Coll[Bool]`
+[Registers](registers.md) can store data in various formats, which can be single or multiple entries. See the [Registers page](registers.md#optional-registers-r4-r9) for a list of supported types like `Long`, `Coll[Byte]`, `GroupElement`, etc.
 
 ## Resources
 
 - This guide is based on the [article by Keith Lim](https://keitodot.medium.com/ergo-box-m-f58f444e00d5)
-- For more technical details on the format of a box, please see [this page](format.md)
+- For more technical details on how boxes are represented in transactions, see the [Transaction Format](format.md) page.

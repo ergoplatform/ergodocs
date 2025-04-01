@@ -93,8 +93,8 @@
 ### ToDo
 
 - [single-tx-swap](https://github.com/danieloravec/ergo-token-swap)
-- [Gluon](#private)
-- [Palmyra](#private)
+- [Gluon](gluon.md)
+- [Palmyra](palmyra.md)
 - [on-chain swaps contracts](https://github.com/ergoplatform/sigma-rust/pull/209)
 
 
@@ -110,6 +110,3 @@
 - [Decentralised Grid Contract](https://www.ergoforum.org/t/decentralized-grid-trading-on-ergo/3750/5)
 - [Market-driven emission contracts](https://www.ergoforum.org/t/market-driven-emission-contracts/3749)
 - [Interest-Free Loan Contract ](https://www.ergoforum.org/t/interest-free-loan-contract/67)
-
-
-

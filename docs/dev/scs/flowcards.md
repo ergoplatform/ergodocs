@@ -52,8 +52,7 @@ Unlike Ethereum, a transaction in Ergo is a data structure holding a list of inp
 
 Turning back to the example above, since Ergo natively supports tokens, therefore for this specific example of sending tokens, we don't need to write any code in ErgoScript. Instead, we need to create the 'send' transaction shown in the following figure, which describes the same token transfer but declaratively.
 
-![Send](/img/blog/send-tx.png)
-
+![Send](../../assets/img/blog/send-tx.png)
 The picture visually describes the following steps, which the network user needs to
 perform:
 1) Select unspent sender's boxes, containing in total `tB >= amount` of tokens and `B >=
@@ -125,7 +124,7 @@ preserving the balances of ERGs and tokens involved.
 The following figure shows the main elements of the Ergo transaction we've already seen
 previously (now under the name of FlowCard Diagram).
 
-![Anatomy](/img/blog/tx-anatomy.png)
+![Anatomy](../../assets/img/blog/tx-anatomy.png)
 
 There is a strictly defined meaning (semantics) behind every element of _the diagram_,
 so that the diagram is a visual representation (or a view) of the underlying executable
@@ -268,7 +267,7 @@ The following diagram fully (and formally) specifies all of the five transaction
 be created _off-chain_ by the DEX dApp. It also specifies all of the spending conditions that
 should be verified _on-chain_.
 
-![DEX](/img/blog/dex-flowcard.png)
+![DEX](../../assets/img/blog/dex-flowcard.png)
 
 Let's discuss the FlowCard diagram and the logic of each transaction in detail:
 

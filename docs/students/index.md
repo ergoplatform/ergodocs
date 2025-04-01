@@ -8,7 +8,7 @@ As a student, you have the opportunity to leverage your academic knowledge in co
 
 - **Databases**: Utilize your skills in relational and non-relational database systems to build blockchain indexers and manage transactional data on the Ergo platform. The UTXO model in Ergo provides a unique perspective on data management and state representation.
 - **Programming Languages**: Develop smart contracts using [ErgoScript](ergoscript.md), a powerful language designed for the Ergo blockchain. Leverage your knowledge of functional programming, domain-specific languages, and language design principles to contribute to the evolution of ErgoScript and its compilers.
-- **Networks**: Engage with the [peer-to-peer (P2P)](../dev/p2p/index.md) layer of Ergo, drawing upon your expertise in distributed systems and network architecture. Understanding Ergo's consensus mechanism and network protocols will enhance your ability to optimize and secure the network.
+- **Networks**: Engage with the [peer-to-peer (P2P)](p2p-protocol-overview.md) layer of Ergo, drawing upon your expertise in distributed systems and network architecture. Understanding Ergo's consensus mechanism and network protocols will enhance your ability to optimize and secure the network.
 - **Systems Programming**: Explore the low-level operations of the Ergo platform, focusing on how ErgoTree scripts are executed and how the sigmastate-interpreter functions. This will deepen your understanding of blockchain systems programming.
 - **Compiler Design**: Apply principles of language design and compiler development to create or enhance smart contract tooling for ErgoScript. This involves understanding the compilation process from high-level ErgoScript to low-level ErgoTree.
 - **Backend Systems**: Develop API endpoints for Ergo nodes, utilizing your skills in server-side programming and database integration. This will support the interaction between decentralized applications and the Ergo blockchain.
@@ -47,5 +47,3 @@ ErgoScript is a powerful scripting language that enables the creation of flexibl
 - **[Experimenting with ErgoScript](get-started.md#experimenting)**: Explore various tools and platforms for experimenting with ErgoScript, such as escript.online, PlutoMonkey, Scastie, Kiosk, and Ergo-Puppet.
 - **[ErgoScript Tooling](get-started.md#tooling)**: Discover various tools and libraries for working with ErgoScript, including compilers, language support, and frameworks.
 - **[ErgoScript Courses](get-started.md#courses)**: Consider taking one of the recommended courses to deepen your understanding of ErgoScript and the Ergo ecosystem.
-
-

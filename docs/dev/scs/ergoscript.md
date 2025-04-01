@@ -1,105 +1,104 @@
 ---
 tags:
   - ErgoScript
+  - Smart Contracts
+  - Sigma Protocols
 ---
 
 # ErgoScript
 
-## Quick Navigation
-- [Overview](#overview)
-- [Sigma Protocols](#sigma-protocols)
-- [Contract Model](#contract-model)
-- [Key Aspects](#key-aspects)
-- [Examples](#examples)
-
 ## Overview
 
-**ErgoScript is a super-simple subset of Scala.** It is a top-level language translated into a low-level language called [ErgoTree](ergotree.md), which is translated during execution into cryptographic protocol. That's how Ergo supports ring and threshold signatures and much more crypto protocols with no special cases made in the core!
+**ErgoScript** is a simple yet powerful scripting language for [smart contracts](contracts.md) on the Ergo blockchain, designed as a subset of Scala. It allows developers to define complex conditions for spending funds. ErgoScript code is translated into a lower-level representation called [**ErgoTree**](ergotree.md) before being stored on the blockchain. During transaction validation, ErgoTree is interpreted using cryptographic protocols based on [Sigma Protocols](sigma.md). This unique architecture enables Ergo to support advanced cryptographic functionalities like [ring signatures](ring.md) and [threshold signatures](threshold.md) directly within the scripting language, without needing special core protocol changes.
 
 /// admonition | Sigma Protocols
     type: tip
 
-Ergo's support for [sigma-protocols](sigma.md) (aka generalized Schnorr proofs) are truly unique as building blocks for composable statements. [Schnorr protocols](schnorr.md) and [proof-of-Diffie-Hellman-tuples](diffie.md) are supported by default, with more options available that the community can add via soft forks.
+Ergo's support for [**Sigma Protocols**](sigma.md) (aka generalized Schnorr proofs) is a key feature, providing efficient and composable building blocks for zero-knowledge proofs. [Schnorr proofs](sigma/schnorr.md) and [proofs of Diffie-Hellman tuples](sigma/diffie.md) are supported by default, with the potential for the community to add more via [soft forks](soft-fork.md).
 ///
 
-ErgoScript is built considering Bitcoin's security and privacy to make all kinds of complex financial contracts accessible. In comparison, Bitcoin's design doesn't allow loops or building any complex smart contracts on top of it. ErgoScript allows for self-replication; therefore, we can use it to create Turing-Complete processes in a blockchain.
+ErgoScript builds upon the security principles of Bitcoin while enabling much more complex financial contracts. Unlike Bitcoin Script, ErgoScript supports features necessary for advanced applications, including the ability to reference blockchain state and implement complex logic, effectively enabling Turing-Complete computations through [multi-stage contract interactions](multi.md).
 
 //// details | Background Reading
     {type: info, open: false}
-/// details | **What are the key aspects of the Ergo contract model that make it different?**
+/// details | Contract Model Comparison: Ergo (eUTXO) vs. Ethereum (Account)
     {type: info, open: false}
 
 ### Paradigm
 
-The account model of Ethereum is imperative. This means that the typical task of sending coins from Alice to Bob requires changing the balances in storage as a series of operations. Ergo's UTXO-based programming model, on the other hand, is declarative. ErgoScript contracts specify conditions for a transaction to be accepted by the blockchain (not changes to be made in the storage state due to the contract execution).
+The account model (used by Ethereum) is imperative: sending coins involves changing balances in a global storage state. Ergo's [eUTXO-based](eutxo.md) programming model is declarative: ErgoScript contracts specify *conditions* under which funds ([UTXOs](eutxo.md)) can be spent, rather than dictating state changes.
 
 ### Scalability
 
-In the account model of Ethereum, both storage changes and validity checks are performed _on-chain_ during code execution. In contrast, Ergo transactions are created _off-chain_, and only validation checks are performed on-chain, thus reducing the number of operations performed by every node on the network. In addition, due to the immutability of the transaction graph, various optimization strategies can improve the throughput of transactions per second in the network. [Light verifying nodes](nipopow_nodes.md) are also possible, thus further facilitating scalability and accessibility of the network.
+In the account model, both storage changes and validity checks happen **on-chain** during contract execution. In Ergo, [transactions](transactions.md) are typically created **off-chain**, and only the validation checks occur on-chain. This significantly reduces the computational load on validating [nodes](modes.md). The immutable nature of the transaction graph also allows for various optimizations to improve throughput. Furthermore, Ergo's design facilitates [**light verifying nodes**](nipopow_nodes.md) (via [NIPoPoWs](nipopows.md)), enhancing network [scalability](scaling.md) and accessibility.
 
-### Shared state
+### Shared State
 
-The account-based model relies on the shared mutable state, which is known to lead to complex semantics (and subtle million-dollar bugs) in the context of concurrent/ distributed computation. Ergo's model is based on an immutable graph of transactions. This approach, inherited from Bitcoin, plays well with blockchains' concurrent and distributed nature and facilitates light trustless clients.
+The account-based model relies on a shared mutable state, which can lead to complex interactions and subtle bugs in concurrent systems. Ergo's model, based on Bitcoin's UTXO concept, uses an immutable graph of transactions, which is inherently more suitable for distributed environments and simplifies the development of [light clients](light-spv-node.md).
 
 ### Expressive Power
 
-Ethereum advocated the execution of a Turing-complete language on the blockchain. It theoretically promised unlimited potential; however, severe limitations came to light from excessive blockchain bloat, subtle multi-million dollar bugs, gas costs that limit contract complexity, and other such problems. Ergo on the flip side, extends UTXO to enable Turing completeness while limiting the complexity of the ErgoScript language itself. The same expressive power is achieved differently and more semantically soundly.
+While Ethereum's Turing-complete language offers theoretical flexibility, it has practical limitations like blockchain bloat, complex bugs, unpredictable gas costs, and limits on contract complexity. Ergo achieves similar expressive power through its [eUTXO model](eutxo.md) and [multi-stage contracts](multi.md), but intentionally keeps the core ErgoScript language non-Turing-complete to enhance security and predictability.
 
 ///
 /// admonition | Simple Example
     type: info
 
 ```scala
-if (HEIGHT < 100000) alicePubKey else bobPubKey
+// This script locks funds in a box.
+// It allows Alice to spend the funds before block 100,000,
+// OR Bob to spend them at or after block 100,000.
+{
+  (HEIGHT < 100000 && alicePubKey) ||
+  (HEIGHT >= 100000 && bobPubKey)
+}
 ```
-
-1. Allows Only Alice to spend a box before a certain height 
-2. Allows Only Bob to spend the box after that.
+*(`HEIGHT` is a context variable representing the current block height. `alicePubKey` and `bobPubKey` represent proof of knowledge of their respective secret keys, typically via a signature check).*
 
 ///
 /// admonition | Key Concepts
     type: info
 
-Explore the [Core Concepts of ErgoScript](ergoscript-key-concepts.md).
+Explore the [Core Concepts of ErgoScript](ergoscript/ergoscript-key-concepts.md).
 ///
 
-/// admonition | Context Claims
+/// admonition | Data Inputs
     type: note
 
-Ergo offers a unique approach to smart contract-enabled blockchains, providing efficient global context claims through the concept of data inputs.
+Ergo offers a unique approach to smart contracts by allowing them to access data from other [boxes](box.md) on the blockchain without spending them, using **[data inputs](read-only-inputs.md)**. This enables efficient access to shared information like [oracle price feeds](oracles.md) or [DAO](dao.md) parameters.
 
 ///
 /// admonition | ErgoScript vs ErgoTree
     type: note
 
-ErgoScript is a high-level developer-friendly language for writing smart contracts that are then compiled to ErgoTree before being written to the blockchain. Explore the distinction [here](ergoscriptvergotree.md)
+ErgoScript is the high-level, developer-friendly language. It gets compiled into **[ErgoTree](ergotree.md)**, a lower-level, serialized representation stored on the blockchain and interpreted by nodes. Explore the distinction [here](ergotree.md).
 ///
 ////
 
 /// admonition | Getting Started
     type: note
 
-Please see this [Quick Primer on ErgoScript](/dev/scs/ergoscript-primer) for an overview of key concepts and some basic examples.
+Please see this [Quick Primer on ErgoScript](ergoscript-primer.md) for an overview of key concepts and some basic examples.
 ///
 
 ## Related Technical Resources
 - [ErgoTree Documentation](ergotree.md)
 - [Sigma Protocols Overview](sigma.md)
-- [Schnorr Signatures](schnorr.md)
+- [Schnorr Signatures](sigma/schnorr.md)
 - [Light Verifying Nodes](nipopow_nodes.md)
-- [UTXO Model Explanation](/dev/protocol/eutxo)
+- [eUTXO Model Explanation](eutxo.md)
 
 ## Comparative Analysis
 ErgoScript stands out by:
 
-- Providing Turing-completeness without compromising blockchain efficiency
-- Supporting advanced cryptographic protocols
-- Enabling complex financial contracts with minimal overhead
-- Maintaining a declarative, secure programming model
+- Enabling complex logic via the [eUTXO model](eutxo.md) without full on-chain Turing-completeness risks.
+- Natively supporting advanced cryptographic protocols ([Sigma Protocols](sigma.md)).
+- Allowing complex financial contracts with predictable execution costs.
+- Maintaining a declarative, secure programming model based on UTXOs.
 
 ## Performance Considerations
-- Off-chain transaction creation
-- On-chain validation only
-- Immutable transaction graph
-- Supports light verifying nodes
-- Controlled Turing-completeness
+- Off-chain transaction creation minimizes on-chain computation.
+- On-chain validation focuses only on script conditions.
+- Immutable transaction graph allows for optimizations.
+- Native support for light verifying nodes enhances accessibility.
+- Non-Turing complete base language prevents infinite loops and simplifies cost analysis.

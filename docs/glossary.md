@@ -139,7 +139,7 @@
 * **Mempool (Memory Pool)**: it is a data structure that holds pending transactions in a blockchain network before they are confirmed.
 * **[Miner-Adjustable Parameters](governance.md)**: Parameters that miners can modify to influence the network's scalability, including block size and transaction size, affecting throughput and computational load.
 * **Minor Changes**: Refers to small edits or updates that can be made directly through the GitHub interface, typically for minor corrections or improvements.
-* **[Mining](mining/index.md)**: The process of obtaining ERG tokens by solving computational problems using hardware and electricity.
+* **[Mining](mining/mining-overview.md)**: The process of obtaining ERG tokens by solving computational problems using hardware and electricity.
 * **[Mining Pool](pools.md)**: A collective group of miners who combine their computational resources to increase the chances of earning cryptocurrency rewards.
 * **Miners**: Individuals or entities who validate transactions and add new blocks to the Ergo blockchain.
 * **Miner Extracted Value (MEV)**: The total value miners can extract from a block using tactics like reordering and front-running.
@@ -195,7 +195,7 @@
 * **Scripting Language**: A programming language used to specify the rules for spending cryptocurrency. ErgoScript is designed to support various features like ring signatures, atomic swaps, and more.
 * **[Security Audit](audit.md)**: A comprehensive assessment conducted to evaluate the security of certain components or aspects of Ergo. The goal is to identify vulnerabilities, weaknesses, and potential risks in the system.
 * **Seed Phrase**: A set of words used to back up and restore a cryptocurrency wallet; it is crucial for wallet recovery.
-* **[Sharding](tags.md#sharding)**: A scaling technique that divides the blockchain into smaller, parallel chains to increase throughput while maintaining security.
+* **[Sharding](tags.md)**: A scaling technique that divides the blockchain into smaller, parallel chains to increase throughput while maintaining security.
 * **Shared Figma Graphic Space**: A collaborative platform where community members can work together on visual content and design projects related to Ergo.
 * **[Sidechain](sidechains.md)**: A separate blockchain connected to the main blockchain, allowing for different features and scalability.
 * **[Sigma Protocols](sigma.md)**: A set of cryptographic protocols forming the backbone of Ergo's smart contracts. They enable efficient zero-knowledge proofs, enhancing privacy and trustlessness.
@@ -260,7 +260,3 @@
 
 * **[Zero-Knowledge Proofs](zkp.md)**: Cryptographic methods that allow one party to prove the truth of a statement to another party without revealing any additional information. Ergo uses zero-knowledge proofs for privacy and security.
 * **ZK-rollup**: A layer 2 scaling solution that aggregates multiple transactions into a single proof, enabling faster and more scalable blockchain transactions while maintaining security and decentralization.
-
-
-
-

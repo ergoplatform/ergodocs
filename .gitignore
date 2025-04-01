@@ -167,3 +167,5 @@ prompt.md
 docs_env/*
 
 .codegpt
+.clinerules
+memory-bank/*

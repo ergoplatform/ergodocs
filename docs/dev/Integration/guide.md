@@ -9,10 +9,10 @@ This guide provides developers with the necessary information to integrate with 
 
 ## Key Features
 
-- Ergo's transactions consist of multiple *inputs* and *outputs*, similar to Bitcoin. Unspent outputs, known as **single-use entities**, are used once. Although built from the ground up, Ergo's scripts and transaction formats differ from Bitcoin's. For an in-depth understanding, refer to the [Ergo 'Box' model](../data-model/box.md).
-- Ergo incorporates standard scripts, associated with `P2PK` addresses, much like Bitcoin. [Explore more about the address scheme here](/dev/wallet/address).
+- Ergo's transactions consist of multiple *inputs* and *outputs*, similar to Bitcoin. Unspent outputs, known as **single-use entities**, are used once. Although built from the ground up, Ergo's scripts and transaction formats differ from Bitcoin's. For an in-depth understanding, refer to the [Ergo 'Box' model](box.md).
+- Ergo incorporates standard scripts, associated with `P2PK` addresses, much like Bitcoin. [Explore more about the address scheme here](address.md).
 - An Ergo UTXO box utilizes [registers](registers.md) to store arbitrary values, such as native tokens, rather than a single amount (like BTC). Each box holds an ERG amount and may include {tokenid, token amount} pairs, adhering to the UTXO model.
-- Ergo's built-in wallet API caters to most use cases. The API employs a Swagger interface and operates on `127.0.0.1:9053` by default in the mainnet (`9052` on the testnet).
+- Ergo's built-in wallet API caters to most use cases. The API employs a Swagger interface and operates on `127.0.0.1:9053` by default in the mainnet (`9052` on the [testnet](testnet.md)).
 - The precision of each transaction on the Ergo platform is up to $10^{-9}$ ERG. This means that transactions can be made with a precision of up to 0.000000001 ERG.
 - The average interval time of each block on the Ergo blockchain is approximately 2 minutes.
 
@@ -20,9 +20,9 @@ This guide provides developers with the necessary information to integrate with 
 
 ### Node
 
-For the best performance, we advise you to run your own node. If that's not feasible, you can use a public node available at [213.239.193.208:9053](http://213.239.193.208:9053). For backup options, feel free to reach out to us at team@ergoplatform.org or join our group chat. You can also find a dynamic list of public nodes at [api.tokenjay.app/peers/list](https://api.tokenjay.app/peers/list).
+For the best performance, we advise you to run your own [node](install.md). If that's not feasible, you can use a public node available at [213.239.193.208:9053](http://213.239.193.208:9053). For backup options, feel free to reach out to us at team@ergoplatform.org or join our group chat. You can also find a dynamic list of public nodes at [api.tokenjay.app/peers/list](https://api.tokenjay.app/peers/list).
 
-If you choose to run a public node, you can access the web interface at [127.0.0.1:9053/panel](https://127.0.0.1:9053/panel). Please note that the port switches to `9052` on the testnet. For guidance on getting started with the testnet, please refer to [this page](/node/testnet).
+If you choose to run a public node, you can access the web interface at `127.0.0.1:9053/panel`. Please note that the port switches to `9052` on the testnet. For guidance on getting started with the testnet, please refer to [this page](testnet.md).
 
 Running an Ergo node requires a certain amount of disk space, which depends on factors like the size of the blockchain and the number of transactions. We recommend having at least 100 GB of disk space to ensure seamless operation.
 
@@ -75,7 +75,7 @@ Combine these settings in your configuration:
 
 /// admonition | Swagger
     type: tip
-Ergo node offers a REST API accessible via HTTP. The complete API specification, in OpenAPI format, can be found [here](openapi.md). When the node is operational, access the user-friendly Swagger UI at [127.0.0.1:9053/swagger](https://127.0.0.1:9053/panel) or experiment with it [here](swagger_api.md). An optional [indexed node API](indexed-node.md) is also available. 
+Ergo node offers a REST API accessible via HTTP. The complete API specification, in OpenAPI format, can be found [here](openapi.md). When the node is operational, access the user-friendly Swagger UI at `127.0.0.1:9053/swagger` or experiment with it [here](swagger_api.md). An optional [indexed node API](indexed-node.md) is also available.
 ///
 
 Major wallet functionalities include:
@@ -86,23 +86,23 @@ Major wallet functionalities include:
 - Wallet lock (`/wallet/lock`)
 - Sending a simple payment (`/wallet/payment/send`)
 - Checking wallet status (`/wallet/status`)
-- Deriving a new key according to EIP-3 (BIP 44 implementation for Ergo) (`/wallet/deriveNextKey`)
+- Deriving a new key according to [EIP-3](../wallet/standards/eip3.md) (BIP 44 implementation for Ergo) (`/wallet/deriveNextKey`)
 - Checking wallet balance (`/wallet/balances`) for all addresses
 - Retrieving wallet transactions (`/wallet/transactions`) for all addresses
 
 ##### RPC Documentation
 
-- [Overview](https://docs.ergoplatform.com/node/swagger/)
-- [API Spec](https://docs.ergoplatform.com/node/swagger/openapi/)
-- [Indexed Node](https://docs.ergoplatform.com/node/indexed-node/)
+- [Overview](swagger.md)
+- [API Spec](openapi.md)
+- [Indexed Node](indexed-node.md)
 
 ### Explorer
 
 The public explorer is available at [explorer.ergoplatform.com](https://explorer.ergoplatform.com/). Community-hosted alternatives include [ergexplorer.com](https://ergexplorer.com/) and [sigmaspace.io](https://sigmaspace.io/).
 
-For more information, including additional details, toolkits, mirrors, and more, please visit the dedicated [Explorer](explorer.md) section.
+For more information, including additional details, toolkits, mirrors, and more, please visit the dedicated [Explorer](../stack/explorer.md) section.
 
-### GQL 
+### GQL
 
 GraphQL queries provide flexible data fetching, minimizing over-fetching and under-fetching. The GraphQL server, built on the Ergo Platform's explorer database schema, is accessible at [gql.ergoplatform.com](https://gql.ergoplatform.com).
 
@@ -122,7 +122,7 @@ Available libraries:
 - [*ergo-golang*](https://github.com/azhiganov/ergo-golang): An early-stage Go library.
 - [*ergo-lib-go*](https://github.com/sigmaspace-io/ergo-lib-go/tree/main): A Go library for Ergo.
 
-Ergo's transactions, akin to Bitcoin, consist of multiple inputs and outputs. Unspent outputs, known as single-use entities, are used once. Although Ergo is built from the ground up, its scripts and transaction formats are distinct from Bitcoin's. For an in-depth understanding, refer to the [Ergo 'Box' model](../data-model/box.md).
+Ergo's transactions, akin to Bitcoin, consist of multiple inputs and outputs. Unspent outputs, known as single-use entities, are used once. Although Ergo is built from the ground up, its scripts and transaction formats are distinct from Bitcoin's. For an in-depth understanding, refer to the [Ergo 'Box' model](box.md).
 
 Ergo incorporates standard scripts, associated with P2PK addresses, much like Bitcoin. An Ergo UTXO box utilizes [registers](registers.md) to store arbitrary values, such as its native tokens, rather than a single amount (like BTC). Consequently, each box holds an ERG amount and may also include {tokenid, token amount} pairs, adhering to the UTXO model.
 
@@ -155,7 +155,7 @@ Derivation is done according to BIP-32.
 
 ### Address Validation
 
-For exchanges, restrict withdrawals to P2PK addresses and invalidate other types. Supporting other types is not recommended. See [address](address.md) for more information on address types.
+For exchanges, restrict withdrawals to P2PK addresses and invalidate other types. Supporting other types is not recommended. See [address types](../wallet/address/address_types.md) for more information.
 
 [ergo-simple-addresses](https://github.com/kushti/ergo-simple-addresses) contains Java-friendly utils for working with addresses.
 
@@ -391,7 +391,7 @@ Miners prioritize transactions based on either the fee per byte or the validatio
 
 To determine the appropriate transaction fee, consider the protocol's minimum requirements based on the box size and the network's current hashrate. Higher hashrates reduce the risk of double-spend attacks, thus requiring fewer confirmations.
 
-For more detailed information on transaction fees, including minimum values, miner prioritization, fee collection, and related topics, please refer to the dedicated [Transaction Fees](min-fee.md) page.
+For more detailed information on transaction fees, including minimum values, miner prioritization, fee collection, and related topics, please refer to the dedicated [Transaction Fees](../protocol/tx/min-fee.md) page.
 
 **What algorithm generates a boxid?**
 
@@ -410,7 +410,7 @@ A box's bytes are unique because they contain:
 - address = prefix byte || content bytes || checksum
 - Prefix byte = network type + address type
 - checksum = leftmost_4_bytes (blake2b256 (prefix byte || content bytes))
-- For more information, refer to the [Address Types](https://docs.ergoplatform.com/dev/wallet/address/address_types/) page.
+- For more information, refer to the [Address Types](../wallet/address/address_types.md) page.
 
 **Preventive Measures to Avoid Chain Forking:**
 
@@ -418,20 +418,20 @@ Ergo's view is that disruptive hard forks should be avoided in Ergo unless absol
 
 If a supermajority (90%+) of the network accepts a new feature, it is activated; however, old nodes that do not upgrade continue to operate normally and skip over this feature validation.
 
-- **Velvet-Fork**: Only requires a minority of nodes to upgrade. Introduced by the NiPoPoW paper, the key idea is that you can use the scheme even if only some blocks in the chain include the interlink structure and allows for "gradual deployment" without harming the miners that haven't upgraded to the new rules. In this way, it acts similar to a soft fork in that clients that upgrade to new rules are still compatible with those that don't.
-- **Soft-fork:** Requires some nodes to upgrade. The recent re-emission Soft-Fork EIP37 was possible as it's enforced on miner nodes only via protocol rules. These can be approved with 90% support from miners.
-- **Hard-Fork:** Requires all nodes to upgrade.
+- **[Velvet-Fork](velvet-fork.md)**: Only requires a minority of nodes to upgrade. Introduced by the NiPoPoW paper, the key idea is that you can use the scheme even if only some blocks in the chain include the interlink structure and allows for "gradual deployment" without harming the miners that haven't upgraded to the new rules. In this way, it acts similar to a soft fork in that clients that upgrade to new rules are still compatible with those that don't.
+- **[Soft-fork](soft-fork.md):** Requires some nodes to upgrade. The recent re-emission Soft-Fork EIP37 was possible as it's enforced on miner nodes only via protocol rules. These can be approved with 90% support from miners.
+- **[Hard-Fork](hard-fork.md):** Requires all nodes to upgrade.
 
-For more information, refer to the [Ergo Improvement Proposals (EIPs)](https://github.com/ergoplatform/eips).
+For more information, refer to the [Ergo Improvement Proposals (EIPs)](eip.md).
 
 **51% Attack Prevention:**
 
-- Ergo utilizes the Autolykos algorithm, a fairly launched efficient ASIC-resistant Proof of Work algorithm to mitigate the risk of a 51% attack. Mining pools offer a buffer against network attacks as the hash rate is distributed across thousands of individual miners. The memory-hardened aspect of Ergo also makes this attack vector more expensive as there is no ASIC support to rent.
+- Ergo utilizes the [Autolykos](autolykos.md) algorithm, a fairly launched efficient [ASIC-resistant](asic.md) Proof of Work algorithm to mitigate the risk of a 51% attack. [Mining pools](pools.md) offer a buffer against network attacks as the hash rate is distributed across thousands of individual miners. The memory-hardened aspect of Ergo also makes this attack vector more expensive as there is no ASIC support to rent.
 
 **Storage Rent:**
 
-- Ergo's design emphasizes long-term economic sustainability. One of the key strategies to ensure this is the implementation of storage rent or 'demurrage'. Storage rent is a nominal fee levied on unspent outputs after four years. The fee per byte is determined by the storage rent subprotocol. For a box without tokens and complex scripts, this amounts to approximately 0.14 ERG every four years.
-- For more information, refer to the [Storage Rent documentation](https://docs.ergoplatform.com/mining/rent/).
+- Ergo's design emphasizes long-term economic sustainability. One of the key strategies to ensure this is the implementation of [storage rent](../protocol/storage-rent.md) or 'demurrage'. Storage rent is a nominal fee levied on unspent outputs after four years. The fee per byte is determined by the storage rent subprotocol. For a box without tokens and complex scripts, this amounts to approximately 0.14 ERG every four years.
+- For more information, refer to the [Storage Rent documentation](rent.md).
 
 **Does the node wallet need to expose its port? If so, is a machine with NAT IP okay?**
 
@@ -463,3 +463,25 @@ A common practice is to use 10 confirmations for deposits, which takes about 20 
 
 **Which endpoint should be used to get the balance before sending a transaction?**
 When working with chained transactions, it's better to use /balances/withUnconfirmed to get the balance before sending a transaction, as it reflects the "new wallet balance" after sending the previous transaction.
+
+</final_file_content>
+
+IMPORTANT: For any future changes to this file, use the final_file_content shown above as your reference. This content reflects the current state of the file, including any auto-formatting (e.g., if you used single quotes but the formatter converted them to double quotes). Always base your SEARCH/REPLACE operations on this final version to ensure accuracy.
+
+<environment_details>
+# VSCode Visible Files
+docs/dev/Integration/guide.md
+
+# VSCode Open Tabs
+docs/dev/data-model/structures/merkle/merkle-tree.md
+docs/node/modes.md
+docs/dev/Integration/guide.md
+docs/dev/get-started.md
+docs/node/install.md
+
+# Current Time
+4/1/2025, 2:28:41 PM (Europe/London, UTC+1:00)
+
+# Current Mode
+ACT MODE
+</environment_details>

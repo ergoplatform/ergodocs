@@ -7,7 +7,7 @@ This page outlines the resources available on Ergo. Also check out the [dev-tool
 
 ### SDKs
 
-- [Appkit](/docs/dev/stack/appkit) (Java)
+- [Appkit](appkit.md) (Java)
 - [Sigma-Rust](rust.md)
 
 
@@ -81,6 +81,3 @@ This page outlines the resources available on Ergo. Also check out the [dev-tool
 - [ergosites.github](https://ergosites.github.io/)
 - [ErgoWiki](https://github.com/ergoplatform/ergo/wiki) | The official ergoplatform GitHub wiki
 - [ergotutorials.com](https://ergotutorials.com/)
-
-
-

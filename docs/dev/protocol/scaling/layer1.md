@@ -71,7 +71,7 @@ Ergo is actively developing sub-block confirmation protocols that will:
 - Increase overall throughput
 - Improve transaction processing efficiency
 
-This development is guided by [EIP-15](link-to-eip-15) and builds upon established research from platforms like:
+This development is guided by EIP-15 and builds upon established research from platforms like:
 
 - [Bitcoin-NG](https://www.usenix.org/system/files/conference/nsdi16/nsdi16-paper-eyal.pdf)
 - [Flux](https://www.usenix.org/system/files/atc20-li-chenxing.pdf)
@@ -89,7 +89,7 @@ Sharding represents a promising avenue for future scalability improvements by:
 For detailed information, refer to:
 
 - [On the Security and Performance of Blockchain Sharding](https://eprint.iacr.org/2021/1276)
-- [Sharding and Atomic Composability on Ergo](../atomic-composability/#sharding-and-atomic-composability)
+- [Sharding and Atomic Composability on Ergo](atomic-composability.md#sharding-and-its-impact-on-atomic-composability)
 
 ## Community-Driven Development
 

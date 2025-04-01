@@ -18,7 +18,7 @@ Discrete logarithm proofs are a fundamental cryptographic primitive in Ergo's si
 
 ## Related Cryptographic Concepts
 
-- [Sigma Protocols](scs/sigma.md)
+- [Sigma Protocols](sigma.md)
 - [Threshold Signatures](threshold.md)
 - [Ring Signatures](ring.md)
 
@@ -35,8 +35,8 @@ proveDlog(pubKey)
 
 ## Practical Examples
 
-- [Schnorr Signature Verification](scs/sigma/verifying.md)
-- [Public Key Cryptography](scs/ergoscript/public-keys.md)
+- [Schnorr Signature Verification](verifying.md)
+- [Public Key Cryptography](public-keys.md)
 
 ## Security Considerations
 
@@ -47,10 +47,10 @@ proveDlog(pubKey)
 ## Advanced Applications
 
 - [Cryptographic Foundations](crypto.md)
-- [ZeroJoin Privacy Protocol](uses/mixer.md)
-- [Sidechains Interoperability](uses/sidechains/sigma-chains.md)
+- [ZeroJoin Privacy Protocol](mixer.md)
+- [Sidechains Interoperability](sigma-chains.md)
 
 ## References
 
 - [Cryptographic Primitives](crypto.md)
-- [ErgoScript Capabilities](scs/ergoscript.md)
+- [ErgoScript Capabilities](ergoscript.md)

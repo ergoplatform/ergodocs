@@ -43,7 +43,7 @@ $$ c = H(t_0 \parallel t_1 \parallel m) $$
 
 Here, **m** is the message to be signed or validated. This makes the protocol non-interactive, as the prover can generate the challenge independently, creating a self-contained proof.
 
-In ErgoScript, this transformation is implemented as **[proveDHTuple](../../global-functions/#provedhtuple)(g, h, u, v)**, allowing users to generate non-interactive proofs of Diffie-Hellman tuples.
+In ErgoScript, this transformation is implemented as **[proveDHTuple](global-functions.md#provedhtuple)(g, h, u, v)**, allowing users to generate non-interactive proofs of Diffie-Hellman tuples.
 
 ---
 

@@ -226,7 +226,7 @@ $$
 
 Access to the context allows us to create a script for the following crowdfunding situation: a project backer (with key  $\texttt{backerPubKey}$) wishes to give money to a project (with key $\texttt{projectPubKey}$), but only if the project raises enough money (at least $\texttt{minToRaise}$) from other sources by a deadline (expressed in terms of $\texttt{HEIGHT}$).
 
-To give money to the project, the backer will create an output box protected by the following script. The script contains two conditions: one for the case the deadline has passed (enabling the backer to get the money back) and one for the case it succeeded (enabling the project to spend the money if the amount is at least $\texttt{minToRaise}$ before the deadline).  In order to ensure enough money has been raised, the script will search the output collection for a box with a sufficient value going to the $\texttt{projectPubKey}$. To check where the value of the output box is going, the script will read the script protecting the output box and compare it to the script $\texttt{"projectPubKey"}$ (that is the simple script described in [Section 4.2](#-statements)); bytes of this script can be obtained by $\texttt{projectPubKey.propBytes}$.
+To give money to the project, the backer will create an output box protected by the following script. The script contains two conditions: one for the case the deadline has passed (enabling the backer to get the money back) and one for the case it succeeded (enabling the project to spend the money if the amount is at least $\texttt{minToRaise}$ before the deadline).  In order to ensure enough money has been raised, the script will search the output collection for a box with a sufficient value going to the $\texttt{projectPubKey}$. To check where the value of the output box is going, the script will read the script protecting the output box and compare it to the script $\texttt{"projectPubKey"}$ (that is the simple script described in [Section 4.2](#sigma-statements)); bytes of this script can be obtained by $\texttt{projectPubKey.propBytes}$.
 
 ```scala
         {
@@ -745,3 +745,27 @@ $$
 
 -->
 \bibliography
+</final_file_content>
+
+Try again with fewer/more precise SEARCH blocks.
+(If you run into this error two times in a row, you may use the write_to_file tool as a fallback.)
+</error><environment_details>
+# VSCode Visible Files
+docs/dev/scs/ergotree/serialization.md
+
+# VSCode Open Tabs
+docs/dev/protocol/nipopows.md
+docs/dev/protocol/zkp.md
+docs/dev/protocol/scaling/layer1.md
+docs/dev/protocol/tx/min-fee.md
+docs/dev/scs/contracts.md
+docs/dev/scs/ergoscript.md
+docs/dev/scs/sigma.md
+docs/dev/scs/ergotree/serialization.md
+
+# Current Time
+4/1/2025, 1:23:50 PM (Europe/London, UTC+1:00)
+
+# Current Mode
+ACT MODE
+</environment_details>

@@ -6,7 +6,7 @@ The "Digest State" feature in the Ergo protocol allows nodes to optimize the sto
 
 In a traditional blockchain, each node stores the complete history of transactions, blocks, and headers, which can lead to significant storage requirements as the blockchain grows. However, with the Digest State feature, Ergo nodes can selectively retain only the essential data.
 
-To enable the Digest State feature, set the [`ergo.node.stateType = "digest"`](conf-node.md#statetype) configuration parameter to "digest". Once enabled, the node supports UTXO set pruning, allowing it to reduce the storage footprint while still maintaining full-node security guarantees.
+To enable the Digest State feature, set the [`ergo.node.stateType = "digest"`](conf-node.md#state-type) configuration parameter to "digest". Once enabled, the node supports UTXO set pruning, allowing it to reduce the storage footprint while still maintaining full-node security guarantees.
 
 ## Benefits of Digest State
 
@@ -19,4 +19,3 @@ To enable the Digest State feature, set the [`ergo.node.stateType = "digest"`](c
 ## Considerations
 
 While Digest State provides storage and performance benefits, it's important to note that a healthy network requires a sufficient number of full (non-pruning) nodes. Full nodes maintain the complete history and state of the blockchain, serving as a reference for new nodes and ensuring the integrity of the entire blockchain's history.
-

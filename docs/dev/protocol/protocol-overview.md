@@ -42,7 +42,7 @@ Ensuring economic freedom for ordinary people through decentralized, private and
   },
   {
     "title": "eUTXO",
-    "content": "Ergo uses a so-called *extended-UTXO model*, which implies UTXOs with the ability to contain **arbitrary data and sophisticated scripts**. ",
+    "content": "Ergo uses the **Extended UTXO (eUTXO) Model**, which implies UTXOs with the ability to contain **arbitrary data and sophisticated scripts**. ",
     "url": "eutxo.md"
   },
   {
@@ -68,17 +68,15 @@ Ensuring economic freedom for ordinary people through decentralized, private and
   {
     "title": "ErgoScript",
     "content": "A simple high-level language enabling clear descriptions of contractual logic.",
-    "url": "../../dev/scs/ergoscript.md"
+    "url": "../scs/ergoscript.md"
   },
   {
     "title": "Uses Cases",
     "content": "From oracles to alternative economic systems.",
-    "url": "../../uses/index.md"
+    "url": "../../uses/use-cases-overview.md"
   }
 
 
 ]
 
 ::/cards::
-
-

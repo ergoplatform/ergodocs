@@ -65,7 +65,7 @@ During this execution, the debugger should halt at the pre-set breakpoint, enabl
 ## Recommended Resources
 
 - [SigmaState Interpreter Repository](https://github.com/ScorexFoundation/sigmastate-interpreter)
-- [ErgoScript Documentation](/dev/scs/ergoscript.md)
+- [ErgoScript Documentation](ergoscript.md)
 - [Ergo Developer Forum](https://www.ergoforum.org/)
 
 ## Best Practices

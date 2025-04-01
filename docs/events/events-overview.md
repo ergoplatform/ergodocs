@@ -4,7 +4,7 @@ Ergo hosts a variety of events to engage with the community, share updates, and 
 
 ## ERGOHACK and ERGOSUMMIT
 
-Our flagship events, [ERGOHACK](/events/ergohack) and [ERGOSUMMIT](/events/ergosummit), are held regularly. These events bring together developers, enthusiasts, and thought leaders from the Ergo community. Visit the respective pages to learn more about past events and stay updated on upcoming ones.
+Our flagship events, [ERGOHACK](ergohack.md) and [ERGOSUMMIT](ergosummit.md), are held regularly. These events bring together developers, enthusiasts, and thought leaders from the Ergo community. Visit the respective pages to learn more about past events and stay updated on upcoming ones.
 
 ## AMAs and Dev Updates
 

@@ -20,17 +20,17 @@ Understanding the UTXO transactional model is crucial when developing off-chain 
   {
     "title": "sigma-rust",
     "content": "Rust port of the sigmastate-interpreter",
-    "url": "../../stack/sigma-rust"
+    "url": "../stack/sigma-rust.md"
   },
   {
     "title": "HDF",
     "content": "Headless dApp Framework",
-    "url": "../../stack/headless/"
+    "url": "../stack/headless.md"
   },
   {
     "title": "RustKit",
     "content": "(WIP), A SDK for building applications on the Ergo blockchain",
-    "url": "../../stack/rustkit"
+    "url": "../stack/rustkit.md"
   },
 
 ]
@@ -62,4 +62,3 @@ Understanding the UTXO transactional model is crucial when developing off-chain 
 ]
 
 ::/cards::
-

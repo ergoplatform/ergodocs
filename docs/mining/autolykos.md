@@ -1,6 +1,7 @@
 # Autolykos
 
-Ergo mining is based on Autolykos, a fairly launched efficient ASIC-resistant Proof of Work algorithm. 
+
+Ergo mining is based on **Autolykos**, a fairly launched efficient [ASIC-resistant](asic.md) Proof of Work algorithm.
 
 ::cards::
 
@@ -12,8 +13,8 @@ Ergo mining is based on Autolykos, a fairly launched efficient ASIC-resistant Pr
   },
   {
     "title": "Algorithm",
-    "url": "algorithm.md",
-    "content": "Dive into the Autolykos Algorithm."    
+    "url": "algo-technical.md",
+    "content": "Dive into the Autolykos Algorithm technical details."
   },
   {
     "title": "Governance",

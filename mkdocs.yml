@@ -133,7 +133,7 @@ nav:
     - Getting Started: index.md
     - Why Ergo: dev/protocol/why.md
     - Key Features: 
-      - dev/protocol/index.md
+      - dev/protocol/protocol-overview.md
       - eUTxO:
         - dev/protocol/eutxo.md
         - UTxO vs Account: dev/protocol/eutxo/accountveutxo.md
@@ -177,7 +177,7 @@ nav:
       - DevDao: devdao.md
       - Sigmanauts: contribute/sigmanauts.md
     - Events: 
-      - Events: events/index.md
+      - Events: events/events-overview.md
       - ERGOHACK: events/ergohack.md
       - ErgoSummit: events/ergosummit.md
     - Contribute:
@@ -205,7 +205,7 @@ nav:
 
 
   - Ecosystem: 
-    - uses/index.md
+    - uses/use-cases-overview.md
     - Infrastructure: 
       - Rosen Bridge:
         - eco/rosen.md
@@ -423,7 +423,7 @@ nav:
             - Creating a perpetual token: dev/tokens/perpetual.md
             - Burning a token: dev/tokens/burn.md
           - Non-Fungible Tokens:
-            - NFTs: dev/tokens/nfts/index.md
+            - NFTs: dev/tokens/nfts/nfts-overview.md
             - Minting a NFT: 
               - dev/tokens/nfts/create.md
               - V1 v V2: dev/tokens/nfts/v1v2.md
@@ -504,7 +504,7 @@ nav:
         - Protocol: 
           - node/protocol.md
           - P2P:
-            - dev/p2p/index.md
+            - dev/p2p/p2p-protocol-overview.md
             - Handshaking: dev/p2p/p2p-handshake.md
             - Network Messages: dev/p2p/network.md
             - Peer Management: node/peer-management.md
@@ -819,7 +819,7 @@ nav:
         - EIPs:
           - Emission Retargeting Soft-Fork: mining/standards/eip27.md
           - Tweaking Difficulty Adjustment Algorithm: mining/standards/eip37.md
-    - Mining: mining/index.md
+    - Mining: mining/mining-overview.md
     - Start Mining: 
       - mining/setup/join.md
       - Software: mining/software.md
@@ -857,5 +857,3 @@ nav:
       - Smartpools: 
         - mining/smartpools.md
         - Subpooling: mining/setup/subpool.md
-
-

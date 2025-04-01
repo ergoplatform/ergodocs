@@ -1,7 +1,7 @@
 # Mining
 
 
-Ergo mining is based on [Autolykos](autolykos.md), an ASIC-resistant Proof of Work algorithm written in Scala. 
+Ergo mining is based on [**Autolykos**](autolykos.md), an [ASIC-resistant](asic.md) Proof of Work algorithm written in Scala.
 
 
 ## Start Mining
@@ -11,12 +11,12 @@ Ergo mining is based on [Autolykos](autolykos.md), an ASIC-resistant Proof of Wo
 [
   {
     "title": "Join a pool",
-    "content": "Join a pool and start mining today.",
+    "content": "Join a mining pool and start mining today.",
     "url": "setup/join.md"
   },
   {
     "title": "Solo Mining",
-    "content": "Only recommended if you have 1%+ net hash",
+    "content": "Only recommended if you have 1%+ of the network hash rate.",
     "url": "setup/solo.md"
   },
 
@@ -31,21 +31,21 @@ Ergo mining is based on [Autolykos](autolykos.md), an ASIC-resistant Proof of Wo
 [
   {
     "title": "Wallets",
-    "content": "Get your wallet setup",
+    "content": "Get your wallet setup.",
     "url": "../dev/wallets.md"
   },
   {
     "title": "Autolykos",
-    "content": "Read about the *Autolykos* Algorithm, Governance, Storage Rent and more.",
+    "content": "Read about the Autolykos Algorithm, Governance, Storage Rent and more.",
     "url": "autolykos.md"
   },
-  
+
   {
     "title": "SmartPools and *Subpooling*",
-    "content": "Mine in localised subpools.",
+    "content": "Mine in localised subpools using SmartPools.",
     "url": "smartpools.md"
   },
-  
+
 ]
 
 ::/cards::
@@ -103,4 +103,3 @@ Ergo mining is based on [Autolykos](autolykos.md), an ASIC-resistant Proof of Wo
 ]
 
 ::/cards::
-

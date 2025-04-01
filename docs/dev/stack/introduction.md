@@ -8,7 +8,7 @@
     "title": "Key Features",
     "content": "Discover Ergo's key features",
     "image": "../../assets/img/dev-grid/key.png",
-    "url": "/../../protocol.md"
+    "url": "../../node/protocol.md"
   },
   {
     "title": "Anatomy",

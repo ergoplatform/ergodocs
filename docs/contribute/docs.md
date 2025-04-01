@@ -78,7 +78,7 @@ Make your changes locally and submit a pull request when you're done.
 
 ### Navigation
 
-The mkdocs navigation is built using [mkdocs.yml](../../mkdocs.yml). To add, remove or modify pages in the navigation, edit the `nav` section in the `mkdocs.yml` file.
+The mkdocs navigation is built using `mkdocs.yml`. To add, remove or modify pages in the navigation, edit the `nav` section in the `mkdocs.yml` file.
 
 ### Directory Structure
 

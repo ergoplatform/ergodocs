@@ -1,6 +1,6 @@
 # Sigma Rust
 
-Rust implementation of [ErgoScript (sigmastate-interpreter)](sigmastate-interpreter) cryptocurrency scripting language.
+Rust implementation of [ErgoScript (sigmastate-interpreter)](sigmastate-interpreter.md) cryptocurrency scripting language.
 
 
 ## Crates

@@ -39,7 +39,7 @@ Here are some tutorials, guides, and explanations to help you get started with S
 
 Here are some resources that can assist you in your Scala development journey with Ergo:
 
-- [Sigmastate-Interpreter](https://github.com/ScorexFoundation/sigmastate-interpreter): This is an ErgoScript compiler and ErgoTree Interpreter implementation for Ergo blockchain's *Sigma Language*. For the development of Ergo applications using JVM languages, consider using [Appkit](#appkit).
+- [Sigmastate-Interpreter](https://github.com/ScorexFoundation/sigmastate-interpreter): This is an ErgoScript compiler and ErgoTree Interpreter implementation for Ergo blockchain's *Sigma Language*. For the development of Ergo applications using JVM languages, consider using [Appkit](appkit.md).
 - [ScoreX](https://github.com/scorexfoundation/scorex): An open-source, modular blockchain & cryptocurrency framework.
 - [Scrypto](https://github.com/input-output-hk/scrypto): An open-source cryptographic toolkit designed to make it easier and safer for developers to use cryptography in their applications. It's based on Scorex and used internally in [Ergo Node](https://github.com/ergoplatform/ergo) and [ergo-wallet](https://github.com/ergoplatform/ergo/tree/master/ergo-wallet).
 - [Ergo Scala Style Guide](https://github.com/ergoplatform/ergo-scala-style-guide): Follow this guide to maintain consistency and readability in your Scala code.

@@ -17,7 +17,7 @@ For example, if you want to propose the deactivation of the storage fee factor, 
 
 ## Voting on Soft-Fork
 
-To propose or vote on a soft-fork, the [protocolVersion](#protocolversion) must be increased by one in a block header. Once this is done, the node will automatically propose a soft-fork (at the beginning of an epoch) or vote for it.
+To propose or vote on a soft-fork, the `protocolVersion` must be increased by one in a block header. Once this is done, the node will automatically propose a soft-fork (at the beginning of an epoch) or vote for it.
 
 As an example, suppose you want to vote on changing the target value for storage fee factor (ID: 1) to 1000000, you would use the following configuration:
 

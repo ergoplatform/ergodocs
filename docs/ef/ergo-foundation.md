@@ -119,8 +119,8 @@ The Ergo Foundation is made up of a diverse group of individuals, including sala
 
 
 - **Ergo Foundation**: Two members receive a salary for their contributions to the ecosystem, while two others are rewarded with a small amount of ERG. Both kushti and Justin choose not to receive any compensation.
-- **Marketing**: Four individuals are compensated for their efforts. Further details can be found in the [relationship to marketing](#relationship-to-marketing) section.
-- **Development**: Three individuals are salaried, with additional contributions being covered by [bounties](bounties.md). For more information on this structure see the [relationship to development](#relationship-to-development) section.
+- **Marketing**: Four individuals are compensated for their efforts. Further details can be found in the [relationship to marketing](#editorialmarketing) section.
+- **Development**: Three individuals are salaried, with additional contributions being covered by [bounties](bounties.md). For more information on this structure see the [relationship to development](#devdao) section.
 
 /// details | Spendings
      {type: info, open: true}

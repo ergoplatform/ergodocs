@@ -60,11 +60,10 @@ Developers can use tools to read data from the blockchain, compute using that da
     "title": "JSON dApp Environment",
     "content": "",
     "image": "../../assets/img/dev-grid/json.png",
-    "url": "../lang/json"
+    "url": "jde.md"
   }
 
 
 ]
 
 ::/cards::
-

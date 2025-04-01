@@ -15,16 +15,16 @@ Threshold signatures are a cryptographic mechanism that allows a subset of a gro
 ### 3-out-of-5 Threshold Signature
 
 For a comprehensive example, refer to the dedicated tutorial:
-- [3-out-of-5 Threshold Signature](scs/sigma/3-out-of-5.md)
+- [3-out-of-5 Threshold Signature](3-out-of-5.md)
 
 ### Practical Use Cases
 
 1. **Corporate Governance**: 
    - Multi-signature wallets requiring collective approval
-   - [Microcredit Scenario](scs/microcredit.md)
+   - [Microcredit Scenario](microcredit.md)
 
 2. **Cross-Chain Interoperability**:
-   - [Rosen Bridge Mechanisms](eco/rosen.md)
+   - [Rosen Bridge Mechanisms](rosen.md)
 
 ## Implementation Techniques
 
@@ -49,7 +49,7 @@ val thresholdSignature = prove {
 
 ## Related Cryptographic Concepts
 
-- [Sigma Protocols](scs/sigma.md)
+- [Sigma Protocols](sigma.md)
 - [Discrete Logarithm Proofs](dlog.md)
 - [Ring Signatures](ring.md)
 
@@ -62,4 +62,4 @@ val thresholdSignature = prove {
 ## References
 
 - [Cryptographic Foundations](crypto.md)
-- [ErgoScript Capabilities](scs/ergoscript.md)
+- [ErgoScript Capabilities](ergoscript.md)

@@ -110,7 +110,7 @@ The Account model of Ethereum is imperative, meaning that sending coins from Ali
 
 - **[Scastie](scastie.md)**: An online compiler tailored for Scala, perfect for developers eager to experiment, share, or learn Scala.
 
-- **[Kiosk](/dev/stack/kiosk)**: A web-based UI to explore ErgoScript.
+- **[Kiosk](stack/kiosk.md)**: A web-based UI to explore ErgoScript. *(Corrected path)*
 
 - **[Ergo-Puppet](puppet.md)**: An advanced tool built on the Ergo Playground, designed for off-chain experimentation and unit testing of Ergo contracts.
 
@@ -205,7 +205,7 @@ Sigma Protocols (Σ-Protocols) are the foundation of Ergo’s smart contracts. T
 - **Additional Cryptographic Standards**:
     - **[EIP-0003: Deterministic Wallet Standard](eip3.md)**: A standard defining the structure and operation of deterministic wallets in the Ergo platform.
 
-See [this page](/dev/scs/global-functions/#cryptographic-functions) for a description of the global cryptographic functions available in ErgoScript.
+See [this page](scs/global-functions.md#cryptographic-functions) for a description of the global cryptographic functions available in ErgoScript. *(Corrected path and anchor)*
 
 ### Tutorials
 
@@ -338,7 +338,7 @@ Most repositories are also categories on [Grist](https://ergo.getgrist.com/jf9KP
 
 - Delve deeper into blockchain data with **[GraphQL](graphql.md)**.
 
-- **[Explorer & Node Bundles](install.md#Toolkits)**: Install both locally for a comprehensive blockchain experience.
+- **[Explorer & Node Bundles](explorer.md#toolkits)**: Install both locally for a comprehensive blockchain experience.
     - **[uExplorer](explorer.md)**: A lightweight Ergo explorer backed by CassandraDB.
     - **[Blockchain Explorer with Raspberry Pi](rpi-blockchain-explorer.md)**: Learn how to set up an explorer using Raspberry Pi.
 
@@ -381,10 +381,6 @@ Most repositories are also categories on [Grist](https://ergo.getgrist.com/jf9KP
     "title": "📹 Ergo Blockchain Crash Course",
     "content": "Ergo crash course presented by developer Luca (lgd), covering the eUTXO model, anatomy of Ergo, and more.",
     "url": "https://www.youtube.com/playlist?list=PL8-KVrs6vXLTVXGwmYXjOBRx3VymB4Vm2"
-  },
-  {
-    "title": "📹 More Introductory Videos",
-    "url": "tutorials/introductory-video"
   }
 ]
 
@@ -400,20 +396,20 @@ If you encounter any issues or have questions, feel free to connect with us on a
   {
     "title": "Come Chat!",
     "content": "Join the action on Discord",
-    "image": "../../assets/img/dev-grid/discord.png",
+    "image": "../assets/img/dev-grid/discord.png", # Corrected image path
     "url": "https://discord.gg/ergo-platform-668903786361651200"
   },
   {
     "title": "ERGOHACK",
     "content": "We host regular hackathons which are a great opportunity to get involved.",
-    "image": "../../assets/img/grid/05.png",
-    "url": "/../../ergohack.md"
+    "image": "../assets/img/grid/05.png", # Corrected image path
+    "url": "../events/ergohack.md" # Corrected link path
   },
   {
     "title": "Contribute",
     "content": "See the Contributing Guidelines for information on bounties and grants.",
-    "image": "../../assets/img/grid/05.png",
-    "url": "../data-model/guidelines.md"
+    "image": "../assets/img/grid/05.png", # Corrected image path
+    "url": "../contribute/standards/guidelines.md" # Corrected link path to likely target
   }
 ]
 
@@ -446,4 +442,4 @@ To further explore and understand Ergo's concepts, you can interact with the fol
 
 - **[ErgCube](https://ergcube.com/)**: Another platform to discover and interact with Ergo dApps.
 
-- The [**Ecosystem**](../uses/index.md) section on this site acts as a directory for projects building on Ergo and potential future ideas.
+- The [**Ecosystem**](../uses/use-cases-overview.md) section on this site acts as a directory for projects building on Ergo and potential future ideas.

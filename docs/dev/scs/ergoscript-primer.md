@@ -69,16 +69,16 @@ sigmaProp(pubKey1 && pubKey2 || pubKey1 && pubKey3 || pubKey2 && pubKey3)
 ## Learning Paths
 
 ### Beginner
-- [ErgoScript Overview](/dev/scs/ergoscript.md)
-- [UTXO Model Explained](/dev/protocol/eutxo)
+- [ErgoScript Overview](ergoscript.md)
+- [UTXO Model Explained](eutxo.md)
 
 ### Intermediate
-- [Sigma Protocols](/dev/scs/sigma.md)
-- [Advanced Contract Patterns](/dev/scs/contracts.md)
+- [Sigma Protocols](sigma.md)
+- [Advanced Contract Patterns](contracts.md)
 
 ### Advanced
-- [ErgoTree Compilation](/dev/scs/ergoscriptvergotree.md)
-- [Cryptographic Protocols](/dev/crypto/)
+- [ErgoTree Compilation](ergoscriptvergotree.md)
+- [Cryptographic Protocols](crypto.md)
 
 ## Best Practices
 
@@ -110,4 +110,4 @@ sigmaProp(pubKey1 && pubKey2 || pubKey1 && pubKey3 || pubKey2 && pubKey3)
 ## Recommended Reading
 
 - [Ergo Whitepaper](https://ergoplatform.org/en/whitepaper/)
-- [ErgoScript Technical Documentation](/dev/scs/)
+- [ErgoScript Technical Documentation](ergoscript.md)

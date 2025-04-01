@@ -24,7 +24,7 @@ To clarify, the Dust-prevention Fee is not an actual fee that users must pay to 
 
 ## Miner Transaction Prioritization
 
-Miners prioritize transactions based on either the fee per byte or the validation cost unit. These criteria are adjustable via a [voting mechanism among miners](governance.md). Nodes can sort transactions based on these metrics, settable in the [node configuration](conf-node.md#mempool).
+Miners prioritize transactions based on either the fee per byte or the validation cost unit. These criteria are adjustable via a [voting mechanism among miners](governance.md). Nodes can sort transactions based on these metrics, settable in the [node configuration](../../../node/conf/conf-node.md#memory-pool-configuration).
 
 ```conf
 # Mempool transaction sorting scheme ("random", "bySize", or "byExecutionCost")

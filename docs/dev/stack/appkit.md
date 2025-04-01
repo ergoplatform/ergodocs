@@ -32,7 +32,7 @@ Using Appkit, Ergo applications can be written in one of the languages supported
   {
     "title": "General Example",
     "content": "",
-    "url": "../../stack/appkit/tutorial"
+    "url": "appkit/tutorial.md"
   },
   {
     "title": "🔗 AppKit By Example",
@@ -41,11 +41,11 @@ Using Appkit, Ergo applications can be written in one of the languages supported
   },
   {
     "title": "ErgoPay Example",
-    "url": "../../wallet/payments/ergopay/ergo-pay/"
+    "url": "../wallet/payments/ergopay/ergo-pay.md"
   },
   {
     "title": "Gradle",
-    "url": "../../stack/appkit/gradle"
+    "url": "appkit/gradle.md"
   },
   
 
@@ -72,5 +72,3 @@ Using Appkit, Ergo applications can be written in one of the languages supported
 ## References
 
 - [ErgoTool](https://github.com/aslesarenko/ergo-tool) | A Command Line Interface for Ergo based on Appkit and [GraalVM](https://www.graalvm.org/) native-image. Read the [introduction and overview](https://ergoplatform.org/en/blog/2019_12_31_ergo_tool/).
-
-

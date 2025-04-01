@@ -46,7 +46,7 @@ The terms of the [language](ergotree-lang.md) can be serialized into an array of
 
 When the guarding script of an input box of a transaction is validated, the **propositionBytes** array is deserialized to an **ErgoTree IR** (represented by the **ErgoTree** class), which can be [evaluated](evaluation.md).
 
-The serialization procedure is specified in general terms. The serialization format of ErgoTree types (specified in the **SType** class) and nodes (specified in the **Value** class) is correspondingly defined in [section 5.1](#serialization-limits) and [Appendix C](#serialization-formats).
+The serialization procedure is specified in general terms. The serialization format of ErgoTree types (specified in the **SType** class) and nodes (specified in the **Value** class) is correspondingly defined in [section 5.1](#table-1-serialization-limits) and [Appendix C](#table-2-serialization-formats).
 
 Table 1 shows size limits checked during contract deserialization, which is important to resist malicious script attacks.
 
@@ -442,5 +442,3 @@ We only perform this descent for those children whose code cannot be embedded in
 | `(Int,Int) => Int`       | 0   | 3   | 115 = 0 * 12 + 3 + 112, 87 | 2      | fold         |
 | `(Int,Boolean)`          |     |     | 60 + 3, 2             | 2      |              |
 | `(Int,Box) => Boolean`   | 0   | 2   | 0 * 12 + 2 + 112, 60 + 3, 7 | 3      |              |
-
-

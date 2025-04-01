@@ -40,15 +40,14 @@ There are a couple of options developers can pick from to interact with the user
   {
     "title": "ErgoPay",
     "content": "Ergo's dApp connector for non-web wallet applications",
-    "url": "../../wallet/payments/ergopay/ergo-pay/"
+    "url": "../wallet/payments/ergopay/ergo-pay.md"
   },
   {
     "title": "dApp Connector",
     "content": "For web-based wallets (Nautilus/SAFEW)",
-    "url": "../../wallet/payments/dApp/"
+    "url": "../wallet/payments/dApp.md"
 
   }
 ]
 
 ::/cards::
-

@@ -63,7 +63,7 @@ following text. This does not mean any restriction of the transportation method.
 - Then user scans the QR code of the signed transaction and sends it to blockchain.
 
 The design of Ergo contracts allows for a simple and universal implementation
-which we describe in [Reference Implementation](#reference-implementation)
+which we describe in [Reference Implementation](#reference-implementation-of-hot-wallet)
 section.
 
 In the following sections we:
@@ -245,4 +245,3 @@ role in addition to basic wallet features.
 Any Hot wallet implementation can interact with any Cold wallet implementation.
 Users have an alternative to specialized hardware wallets and can gain more security 
 for their funds stored on the Ergo Blockchain.
-

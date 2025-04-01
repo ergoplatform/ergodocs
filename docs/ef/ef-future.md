@@ -12,7 +12,7 @@ The Ergo Foundation's initial role was to bootstrap the Ergo ecosystem in the ea
 
 - Over 300 community developers
 - More than 100 active contributors in the weekly developer chat on Discord
-- Hosting multiple [events](../events/index.md) annually
+- Hosting multiple [events](events-overview.md) annually
 - Over 140 projects developing on Ergo (see [sigmaverse.io](https://sigmaverse.io) for an overview)
 - Consistently ranked among the top 100 for development activity on [artemis.xyz](https://app.artemis.xyz/developer-activity?ecosystemValue=Ergo)
 

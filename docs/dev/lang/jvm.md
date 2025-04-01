@@ -8,7 +8,7 @@ Where you want to develop using Java, Scala or Kotlin - you'll likely want to be
   {
     "title": "AppKit",
     "content": "A library for polyglot development of Ergo Applications ",
-    "url": "../../../dev/stack/appkit"
+    "url": "../stack/appkit.md"
   }
 
 ]
@@ -34,8 +34,3 @@ Where you want to develop using Java, Scala or Kotlin - you'll likely want to be
 ]
 
 ::/cards::
-
-
-
-
-

@@ -9,7 +9,7 @@ ErgoMixer is the **first *non-custodial, programmable, non-interactive* mixer in
 
 Download the latest release [here](https://github.com/ergoMixer/ergoMixBack/releases)
 
-ErgoMixer utilises Ergo's [**Sigma protocols**](/dev/scs/sigma) to enable efficient, trustless mixing of funds, enabling a high degree of privacy and security.
+ErgoMixer utilises Ergo's [**Sigma protocols**](sigma.md) to enable efficient, trustless mixing of funds, enabling a high degree of privacy and security.
 
 ## Features
 

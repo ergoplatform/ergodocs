@@ -76,7 +76,7 @@ Join us in building the future of decentralized finance and beyond.
   {
     "title": "ErgoScript",
     "content": "A simple high-level language enabling clear descriptions of contractual logic.",
-    "url": "../dev/scs/index.md"
+    "url": "../dev/scs/smart-contracts-overview.md"
   },
   {
     "title": "Oracles",
