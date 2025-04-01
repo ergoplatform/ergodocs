@@ -745,27 +745,3 @@ $$
 
 -->
 \bibliography
-</final_file_content>
-
-Try again with fewer/more precise SEARCH blocks.
-(If you run into this error two times in a row, you may use the write_to_file tool as a fallback.)
-</error><environment_details>
-# VSCode Visible Files
-docs/dev/scs/ergotree/serialization.md
-
-# VSCode Open Tabs
-docs/dev/protocol/nipopows.md
-docs/dev/protocol/zkp.md
-docs/dev/protocol/scaling/layer1.md
-docs/dev/protocol/tx/min-fee.md
-docs/dev/scs/contracts.md
-docs/dev/scs/ergoscript.md
-docs/dev/scs/sigma.md
-docs/dev/scs/ergotree/serialization.md
-
-# Current Time
-4/1/2025, 1:23:50 PM (Europe/London, UTC+1:00)
-
-# Current Mode
-ACT MODE
-</environment_details>

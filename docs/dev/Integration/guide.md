@@ -463,25 +463,3 @@ A common practice is to use 10 confirmations for deposits, which takes about 20 
 
 **Which endpoint should be used to get the balance before sending a transaction?**
 When working with chained transactions, it's better to use /balances/withUnconfirmed to get the balance before sending a transaction, as it reflects the "new wallet balance" after sending the previous transaction.
-
-</final_file_content>
-
-IMPORTANT: For any future changes to this file, use the final_file_content shown above as your reference. This content reflects the current state of the file, including any auto-formatting (e.g., if you used single quotes but the formatter converted them to double quotes). Always base your SEARCH/REPLACE operations on this final version to ensure accuracy.
-
-<environment_details>
-# VSCode Visible Files
-docs/dev/Integration/guide.md
-
-# VSCode Open Tabs
-docs/dev/data-model/structures/merkle/merkle-tree.md
-docs/node/modes.md
-docs/dev/Integration/guide.md
-docs/dev/get-started.md
-docs/node/install.md
-
-# Current Time
-4/1/2025, 2:28:41 PM (Europe/London, UTC+1:00)
-
-# Current Mode
-ACT MODE
-</environment_details>
