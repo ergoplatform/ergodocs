@@ -16,9 +16,8 @@ In the account model of Ethereum, both storage changes and validity checks are p
 
 ##### Shared state
 
-The account-based model relies on the shared mutable state, which is known to lead to complex semantics (and subtle million-dollar bugs) in the context of concurrent/ distributed computation. Ergo's model is based on an immutable graph of transactions. This approach, inherited from Bitcoin, plays well with blockchains' concurrent and distributed nature and facilitates light trustless clients.
+The [account-based model](accountveutxo.md) relies on the shared mutable state, which is known to lead to complex semantics (and subtle million-dollar bugs) in the context of concurrent/ distributed computation. [Ergo's model](eutxo.md) is based on an immutable [graph of transactions](transactions.md). This approach, inherited from Bitcoin, plays well with [blockchains' concurrent and distributed nature](protocol-overview.md) and facilitates [light trustless clients](light-spv-node.md).
 
 ##### Expressive Power
 
-Ethereum advocated the execution of a Turing-complete language on the blockchain. It theoretically promised unlimited potential; however, severe limitations came to light from excessive blockchain bloat, subtle multi-million dollar bugs, gas costs that limit contract complexity, and other such problems. Ergo on the flip side, extends UTXO to enable Turing completeness while limiting the complexity of the ErgoScript language itself. The same expressive power is achieved differently and more semantically soundly.
-
+[Ethereum](accountveutxo.md) advocated the execution of a [Turing-complete language](multi-stage-txs.md) on the [blockchain](protocol-overview.md). It theoretically promised unlimited potential; however, severe limitations came to light from excessive [blockchain bloat](storage-rent.md), subtle multi-million dollar bugs, [gas costs](min-fee.md) that limit contract complexity, and other such problems. [Ergo](protocol-overview.md) on the flip side, extends [UTXO](eutxo.md) to enable [Turing completeness](multi-stage-txs.md) while limiting the complexity of the [ErgoScript language](ergoscript.md) itself. The same expressive power is achieved differently and more semantically soundly.

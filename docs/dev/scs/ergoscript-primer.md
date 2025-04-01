@@ -8,16 +8,16 @@ tags:
 
 ## What is ErgoScript?
 
-ErgoScript is a powerful, developer-friendly programming language designed specifically for writing smart contracts on the Ergo blockchain. Think of it as a specialized language that allows you to create complex financial contracts and applications with unprecedented flexibility and security.
+ErgoScript is a powerful, developer-friendly programming language designed specifically for writing [smart contracts](contracts.md) on the [Ergo blockchain](protocol-overview.md). Think of it as a specialized language that allows you to create complex [financial contracts](contracts.md) and applications with unprecedented flexibility and [security](security.md).
 
 ## Key Characteristics
 
 ### 1. UTXO-Based Model
-Unlike account-based blockchains, ErgoScript uses the UTXO (Unspent Transaction Output) model. This means:
+Unlike [account-based blockchains](accountveutxo.md), ErgoScript uses the [UTXO (Unspent Transaction Output) model](eutxo.md). This means:
 
 - Contracts define conditions for spending coins
-- Transactions are immutable and more secure
-- Improved scalability and parallel processing
+- [Transactions](transactions.md) are immutable and more secure
+- Improved [scalability](scaling.md) and parallel processing
 
 ### 2. Declarative Programming
 ErgoScript is declarative, which means you specify **what** should happen, not **how** it happens. For example:
@@ -27,15 +27,15 @@ ErgoScript is declarative, which means you specify **what** should happen, not *
 if (HEIGHT > 100000) signerPubKey else fail()
 ```
 
-This contract says: "Allow spending only if the current blockchain height is greater than 100,000, otherwise fail."
+This contract says: "Allow spending only if the current [blockchain height](block-header.md) is greater than 100,000, otherwise fail."
 
 ### 3. Sigma Protocols
-ErgoScript leverages advanced cryptographic techniques called Sigma Protocols, enabling:
+ErgoScript leverages advanced cryptographic techniques called [Sigma Protocols](sigma.md), enabling:
 
 - Complex signature schemes
-- Ring signatures
-- Threshold signatures
-- Advanced privacy features
+- [Ring signatures](ring.md)
+- [Threshold signatures](threshold.md)
+- Advanced [privacy features](privacy-guide.md)
 
 ## Getting Started
 
@@ -52,16 +52,16 @@ sigmaProp(pubKey1 && pubKey2 || pubKey1 && pubKey3 || pubKey2 && pubKey3)
 ```
 
 ### Development Tools
-- [ErgoScript P2S Playground](https://wallet.plutomonkey.com/p2s/): Experiment and generate Ergo addresses
-- [Ergo AppKit](https://github.com/ergoplatform/ergo-appkit): Development framework for building Ergo applications
+- [ErgoScript P2S Playground](https://wallet.plutomonkey.com/p2s/): Experiment and generate [Ergo addresses](address.md)
+- [Ergo AppKit](appkit.md): Development framework for building Ergo applications
 
 ## Common Use Cases
 
-1. **Multi-Signature Wallets**
-   Create wallets requiring multiple parties to approve transactions
+1. **[Multi-Signature Wallets](threshold.md)**
+   Create wallets requiring multiple parties to approve [transactions](transactions.md)
 
 2. **Time-Locked Contracts**
-   Define contracts that can only be executed after a specific time or block height
+   Define contracts that can only be executed after a specific time or [block height](block-header.md)
 
 3. **Conditional Spending**
    Set complex conditions for spending funds based on various parameters
@@ -83,8 +83,8 @@ sigmaProp(pubKey1 && pubKey2 || pubKey1 && pubKey3 || pubKey2 && pubKey3)
 ## Best Practices
 
 1. Keep contracts simple and readable
-2. Use built-in cryptographic primitives
-3. Always consider transaction validation overhead
+2. Use built-in [cryptographic primitives](crypto.md)
+3. Always consider [transaction validation](validation.md) overhead
 4. Test contracts thoroughly in the playground
 
 ## Common Pitfalls to Avoid
@@ -92,7 +92,7 @@ sigmaProp(pubKey1 && pubKey2 || pubKey1 && pubKey3 || pubKey2 && pubKey3)
 - Overcomplicating contract logic
 - Ignoring performance implications
 - Neglecting error handling
-- Not understanding UTXO model nuances
+- Not understanding [UTXO model](eutxo.md) nuances
 
 ## Community and Support
 

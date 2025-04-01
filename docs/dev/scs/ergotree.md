@@ -1,12 +1,12 @@
 # ErgoTree: Reference Manual
 
-ErgoTree forms the backbone of Ergo's smart contracts. It is the typed abstract syntax of the ErgoTree language used for defining logical propositions that protect boxes (coin abstractions) in Ergo. While ErgoTree is fundamental, most users interact with it indirectly, primarily developing contracts using a higher-level language called [ErgoScript](ergoscript.md), which later compiles into ErgoTree. 
+ErgoTree forms the backbone of Ergo's [smart contracts](contracts.md). It is the typed abstract syntax of the ErgoTree language used for defining logical propositions that protect [boxes](box.md) (coin abstractions) in Ergo. While ErgoTree is fundamental, most users interact with it indirectly, primarily developing contracts using a higher-level language called [ErgoScript](ergoscript.md), which later compiles into ErgoTree. 
 
 ## Understanding ErgoTree
 
-ErgoTree serves as a specialized language, encapsulating the [*universal language*](https://www.martinfowler.com/bliki/UbiquitousLanguage.html) of the Ergo blockchain. It directly interacts with key components such as Boxes, Tokens, and Zero-Knowledge Sigma-Propositions. ErgoTree is optimized for efficient storage and rapid execution.
+ErgoTree serves as a specialized language, encapsulating the [*universal language*](https://www.martinfowler.com/bliki/UbiquitousLanguage.html) of the [Ergo blockchain](protocol-overview.md). It directly interacts with key components such as [Boxes](box.md), [Tokens](eip4.md), and [Zero-Knowledge Sigma-Propositions](sigma.md). ErgoTree is optimized for efficient storage and rapid execution.
 
-A language intended for writing blockchain contracts must be deterministic to ensure spam-resistance. It also needs to be simple yet expressive enough to function as a solid platform for contractual money. ErgoTree meets these requirements, making it an essential tool for creating, securing, and managing boxes on the Ergo blockchain.
+A language intended for writing [blockchain contracts](contracts.md) must be deterministic to ensure spam-resistance. It also needs to be simple yet expressive enough to function as a solid platform for [contractual money](on-contractual-money.md). ErgoTree meets these requirements, making it an essential tool for creating, securing, and managing boxes on the [Ergo blockchain](protocol-overview.md).
 
 Complementing ErgoTree is a frontend language named [ErgoScript](ergoscript.md). Drawing inspiration from Scala/Kotlin, ErgoScript shares common subsets with Java and C#, making it user-friendly for programmers acquainted with these languages. ErgoScript is designed to attract a broad spectrum of programmers with its intuitive approach.
 
@@ -16,10 +16,10 @@ ErgoTree, distinct from low-level languages like stack-based EVM assembly, is st
 
 ErgoTree achieves this by combining:
 
-- **Secret Data Predicates**: Conditions verifying confidential information such as digital signatures or secret keys.
-- **Blockchain Context Predicates**: Conditions dependent on the transaction's specific context within the blockchain.
+- **Secret Data Predicates**: Conditions verifying confidential information such as [digital signatures](signing.md) or [secret keys](wallets.md).
+- **[Blockchain Context](blockchain-context.md) Predicates**: Conditions dependent on the [transaction's specific context](blockchain-context.md) within the [blockchain](protocol-overview.md).
 
-By evaluating these predicates, ErgoTree authenticates transactions, ensuring their legitimacy and adherence to set rules. Its ability to validate and secure transactions while adapting to the transaction context makes ErgoTree a versatile tool, extending its applicability to various digital platforms, including other cryptocurrencies and Central Bank Digital Currencies (CBDCs), or even non-monetary digital objects where smart access could be needed.
+By evaluating these predicates, ErgoTree authenticates [transactions](transactions.md), ensuring their legitimacy and adherence to set rules. Its ability to validate and secure transactions while adapting to the transaction context makes ErgoTree a versatile tool, extending its applicability to various digital platforms, including other [cryptocurrencies](protocol-overview.md) and [Central Bank Digital Currencies (CBDCs)](cbdc.md), or even non-monetary digital objects where smart access could be needed.
 
 - Additional parties can be authorized
 - Parties can delegate authorization
@@ -28,8 +28,8 @@ By evaluating these predicates, ErgoTree authenticates transactions, ensuring th
 
 ## Key ErgoTree Concepts
 
-- ErgoTree is written into UTXO boxes and is subsequently evaluated by the transaction verifier.
-- The propositions are stored in the blockchain in the ErgoTree serialization format. This format optimizes for compact storage, swift script execution, and efficient transaction validation.
+- ErgoTree is written into [UTXO boxes](box.md) and is subsequently evaluated by the [transaction verifier](validation.md).
+- The propositions are stored in the [blockchain](protocol-overview.md) in the [ErgoTree serialization format](https://ergoplatform.org/docs/ErgoTree.pdf). This format optimizes for compact storage, swift [script execution](sigmastate-interpreter.md), and efficient [transaction validation](validation.md).
 - The reference implementation of ErgoTree is in Scala, but alternative implementations can utilize other languages.
 - ErgoTree's binary format intentionally omits metadata, which might be necessary for various Ergo applications.
 

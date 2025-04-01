@@ -13,16 +13,16 @@ tags:
 
 **Sigma protocols** (Σ-protocols) are a class of cryptographic proof systems that play a central role in the Ergo blockchain. These protocols allow a **prover** to convince a **verifier** that they know a value, such as a secret key, without revealing the value itself (a property related to [zero-knowledge proofs](zkp.md)). Σ-protocols are the foundation for many [privacy](zkp.md)-preserving and [multi-signature](threshold.md) functionalities in Ergo.
 
-In **[ErgoScript](ergoscript.md)**, proving and verifying cryptographic statements are first-class primitives, giving developers access to powerful Σ-protocols. Scripts protecting [transaction outputs](transactions.md#anatomy) can contain **Σ-statements**, which must be proven (by generating **Σ-proofs**) before the outputs can be spent.
+In **[ErgoScript](ergoscript.md)**, proving and verifying cryptographic statements are first-class primitives, giving developers access to powerful Σ-protocols. Scripts protecting [transaction outputs](transactions.md) can contain **Σ-statements**, which must be proven (by generating **Σ-proofs**) before the outputs can be spent.
 
-Conceptually, Σ-proofs are generalizations of [digital signatures](crypto.md#sigma-protocols). The **[Schnorr signature scheme](sigma/schnorr.md)** is the canonical example of a Σ-proof: it allows the recipient to prove knowledge of a secret (discrete logarithm) without revealing it. Σ-proofs in Ergo extend this concept, allowing the creation of more complex cryptographic protocols like **[multi-signature](threshold.md)**, **[ring signatures](ring.md)**, and **[threshold signatures](threshold.md)**.
+Conceptually, Σ-proofs are generalizations of [digital signatures](signing.md). The **[Schnorr signature scheme](schnorr.md)** is the canonical example of a Σ-proof: it allows the recipient to prove knowledge of a secret ([discrete logarithm](dlog.md)) without revealing it. Σ-proofs in Ergo extend this concept, allowing the creation of more complex cryptographic protocols like **[multi-signature](threshold.md)**, **[ring signatures](ring.md)**, and **[threshold signatures](threshold.md)**.
 
 ### Elementary Σ-Protocols in ErgoScript
 
 ErgoScript offers two elementary Σ-protocols over a group of prime order, such as an elliptic curve group:
 
-1. **Proof of Knowledge of Discrete Logarithm ([Schnorr Signature](sigma/schnorr.md))**: This protocol proves knowledge of the discrete logarithm of a given public key with respect to a fixed generator. Essentially, this is the Schnorr signature scheme.
-2. **Proof of Equality of Discrete Logarithms ([Diffie-Hellman Tuple](sigma/diffie.md))**: This protocol proves that two values share the same discrete logarithm across two different generators.
+1. **Proof of Knowledge of Discrete Logarithm ([Schnorr Signature](schnorr.md))**: This protocol proves knowledge of the discrete logarithm of a given public key with respect to a fixed generator. Essentially, this is the Schnorr signature scheme.
+2. **Proof of Equality of Discrete Logarithms ([Diffie-Hellman Tuple](diffie.md))**: This protocol proves that two values share the same discrete logarithm across two different generators.
 
 These basic protocols can be composed to create more advanced proofs using logical connectives like **AND**, **OR**, and **THRESHOLD**. This **composability** is what enables the creation of sophisticated [smart contracts](ergoscript.md) and multi-signature schemes.
 
@@ -80,7 +80,7 @@ This contract is an example of a **3-out-of-5** threshold signature scheme. It c
 [Threshold signatures](threshold.md) are critical for decentralized control. For example, a corporate [wallet](wallets.md) could be protected by a 3-out-of-5 signature scheme, ensuring that no single party can unilaterally control the funds.
 
 ### 4. **Time-Locked Conditions**
-Σ-protocols can be combined with time-locked conditions. For instance, you can construct a contract that allows a transaction to be spent if either a ring signature is provided by a set of participants **before** a certain block height, or the funds can be refunded by a single party **after** the block height has passed.
+Σ-protocols can be combined with time-locked conditions. For instance, you can construct a contract that allows a transaction to be spent if either a ring signature is provided by a set of participants **before** a certain [block height](block-header.md), or the funds can be refunded by a single party **after** the block height has passed.
 
 ### 5. **Decentralized Mixers**
 **[ErgoMixer](ergomixer.md)** is an advanced, non-custodial token [mixer](mixer.md) based on Σ-protocols. It leverages ring signatures and [zero-knowledge proofs](zkp.md) to provide enhanced privacy while ensuring that no third party is needed to manage or approve the mixing process. [SigmaJoin](sigmajoin.md), an [off-chain](off-chain.md) implementation concept related to ErgoMixer, further extends the idea of trustless and decentralized privacy mechanisms.
