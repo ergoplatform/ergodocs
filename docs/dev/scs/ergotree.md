@@ -25,7 +25,7 @@ ErgoTree achieves this by combining:
 - **Secret Data Predicates**: Conditions verifying confidential information such as [digital signatures](signing.md) or [secret keys](wallets.md).
 - **[Blockchain Context](blockchain-context.md) Predicates**: Conditions dependent on the [transaction's specific context](blockchain-context.md) within the [blockchain](protocol-overview.md).
 
-By evaluating these predicates, ErgoTree authenticates [transactions](transactions.md), ensuring their legitimacy and adherence to set rules. Its ability to validate and secure transactions while adapting to the transaction context makes ErgoTree a versatile tool, extending its applicability to various digital platforms, including other [cryptocurrencies](protocol-overview.md) and [Central Bank Digital Currencies (CBDCs)](cbdc.md), or even non-monetary digital objects where smart access could be needed.
+By evaluating these predicates, ErgoTree authenticates [transactions](transactions.md), ensuring their legitimacy and adherence to set rules. Its ability to validate and secure transactions while adapting to the transaction context makes ErgoTree a versatile tool, extending its applicability to various digital platforms, including other [cryptocurrencies](protocol-overview.md) and [Central Bank Digital Currencies (CBDCs)](cbdc.md), or even non-monetary digital objects where smart access could be needed. Off-chain applications often need to perform similar validations; see [Fleet SDK Recipes](../tutorials/fleet-sdk-recipes.md) for examples using JavaScript/TypeScript.
 
 - Additional parties can be authorized
 - Parties can delegate authorization

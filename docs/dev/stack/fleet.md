@@ -13,3 +13,4 @@ tags:
 - 🧪 100% code coverage
 - 🌲 Tree-shakeable
 
+For common usage patterns and examples, see the [Fleet SDK Recipes](fleet-sdk-recipes.md).

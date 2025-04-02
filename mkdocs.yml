@@ -412,6 +412,9 @@ nav:
     - dev/get-started.md
     - Students: students/index.md
     - Bounties!: contribute/bounties.md
+    - Tutorials:
+      - Overview: dev/tutorials.md
+      - Fleet SDK Recipes: dev/tutorials/fleet-sdk-recipes.md
     - Data Model:
       - dev/data-model/data-model.md
       - Box: 
