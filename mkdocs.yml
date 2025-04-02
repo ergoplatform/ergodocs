@@ -184,6 +184,7 @@ nav:
           - contribute.md
           - Developers:
             - contribute/devs.md
+            - Technical Guidelines: contribute/technical-guidelines.md
             - Bounties: contribute/bounties.md
             - Grants: contribute/grants.md
             - Roles: contribute/roles.md

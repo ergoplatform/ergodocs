@@ -21,6 +21,10 @@ Nautilus can be easily installed as a browser extension. Select the version comp
 For a step-by-step guide on setting up and using Nautilus, watch the [comprehensive video tutorial](https://www.youtube.com/watch?v=hMwtwlUpnRQ).
 ///
 
+## Internationalization (i18n)
+
+There is community interest in providing Nautilus Wallet translations for different languages to improve accessibility. While multi-language support may be planned, the specific process for contributing translations might vary. If you are interested in contributing translations, please inquire in the Nautilus community channels linked below for the current status and contribution guidelines.
+
 ## Community Support
 
 Connect with the Nautilus community for support, updates, and discussions:
