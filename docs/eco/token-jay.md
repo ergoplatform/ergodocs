@@ -1,3 +1,14 @@
+---
+tags:
+  - Token Jay
+  - P2P Trading
+  - Escrow
+  - SigmaUSD
+  - SigmaRSV
+  - Token Burner
+  - dApp
+---
+
 # Token Jay
 
 ## Overview
@@ -41,4 +52,3 @@ With TokenJay, you can convert ERG into SigUSD and SigRSV directly with the bank
 #### Utilities
 
 TokenJay also offers a Token Burner utility that allows you to burn unwanted NFTs and tokens. Visit [https://tokenjay.app/app/#burntoken](https://tokenjay.app/app/#burntoken) to use this utility.
-

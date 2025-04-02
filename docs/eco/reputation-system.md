@@ -1,3 +1,11 @@
+---
+tags:
+  - Reputation System
+  - Trust
+  - Decentralized
+  - dApp
+---
+
 # Reputation System
 
 ## Introduction

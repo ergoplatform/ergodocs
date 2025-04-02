@@ -1,5 +1,10 @@
 ---
 tags:
+  - Rosen Bridge
+  - Bridge
+  - Cross-Chain
+  - Interoperability
+  - dApp
   - dApp-Beta
 ---
 # Rosen Bridge: The Future of Cross-Chain Asset Transfers
@@ -61,4 +66,3 @@ The team includes 8 developers, with some frontend and UI tasks outsourced. Addi
 
 For more information, please see the [Team](rosen-team.md) section.
 ///
-

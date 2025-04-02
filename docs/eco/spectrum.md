@@ -1,8 +1,12 @@
 ---
-
 tags:
+  - Spectrum Finance
+  - DEX
+  - Cross-Chain
+  - Yield Farming
+  - Babel Fees
+  - dApp
   - dApp-Live
-
 ---
 
 # Spectrum Finance
@@ -43,4 +47,3 @@ Spectrum Bloom is an upcoming eUTxO-native framework for decentralized finance (
 ### Dev-Resources
 
 - [EIP-0014: Decentralized Exchange Contracts](https://github.com/ergoplatform/eips/pull/27)
-

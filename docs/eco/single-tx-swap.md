@@ -1,5 +1,9 @@
 ---
 tags:
+  - Single Transaction Swap
+  - Escrow
+  - P2P Trading
+  - dApp
   - dApp-Live
 ---
 

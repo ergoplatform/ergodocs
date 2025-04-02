@@ -1,3 +1,11 @@
+---
+tags:
+  - The Field
+  - Pledging
+  - DAO
+  - dApp
+---
+
 # The Field
 
 "The Field" is a peer-to-pool pledging protocol where individuals can pledge assets (coins or tokens) to support participants in competitions. The project is designed to be DAO-driven and open-source.

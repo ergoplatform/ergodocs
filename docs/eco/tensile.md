@@ -1,3 +1,12 @@
+---
+tags:
+  - Tensile
+  - Derivatives
+  - DeFi
+  - dApp
+  - dApp-Inactive
+---
+
 # Tensile
 
 /// admonition | Status

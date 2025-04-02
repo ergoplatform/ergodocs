@@ -1,5 +1,9 @@
 ---
 tags:
+  - SigmaO
+  - Options Trading
+  - DeFi
+  - dApp
   - dApp-MVP
 ---
 

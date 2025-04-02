@@ -1,3 +1,12 @@
+---
+tags:
+  - Ergo Foundation
+  - Scope
+  - Mission
+  - Principles
+  - Governance
+---
+
 # The Scope of the Ergo Foundation
 
 The Ergo Foundation is a non-profit organization dedicated to advancing the adoption and development of the Ergo Platform. Its primary focus is to support the Ergo Platform in providing an efficient and secure way to implement financial contracts, the most widely used application of blockchain technology.

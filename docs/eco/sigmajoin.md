@@ -1,5 +1,10 @@
 ---
 tags:
+  - Sigmajoin
+  - Mixer
+  - Privacy
+  - Zerojoin
+  - dApp
   - dApp-Research
 ---
 # Sigmajoin 

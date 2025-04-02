@@ -1,5 +1,11 @@
 ---
 tags:
+  - SigmaFi
+  - DeFi
+  - Bonds
+  - Lending
+  - P2P
+  - dApp
   - dApp-Live
 ---
 

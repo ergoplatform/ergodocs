@@ -1,6 +1,9 @@
 ---
 tags:
-  - Metaverse-Live
+  - SigmaValley
+  - Metaverse
+  - dApp
+  - dApp-Live
 ---
 
 # SigmaValley

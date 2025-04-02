@@ -1,3 +1,11 @@
+---
+tags:
+  - Ergo Foundation
+  - Treasury
+  - Funding
+  - Transparency
+---
+
 # Ergo Foundation Treasury
 
 The Ergo Foundation initially received an allocation of 4,330,776 ERG, which is equivalent to 4.43% of the total supply.

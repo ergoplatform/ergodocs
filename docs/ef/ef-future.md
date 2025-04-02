@@ -1,3 +1,11 @@
+---
+tags:
+  - Ergo Foundation
+  - Future
+  - Roadmap
+  - Community
+---
+
 # The Ergo Foundation's Future
 
 /// details | What's been done so far?

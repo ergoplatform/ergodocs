@@ -1,6 +1,10 @@
 ---
 tags:
   - Ergo Foundation
+  - Overview
+  - Mission
+  - Structure
+  - Governance
   - Transparency Report
   - Treasury
 ---

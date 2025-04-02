@@ -1,3 +1,10 @@
+---
+tags:
+  - Ergo Foundation
+  - Votes
+  - Governance
+  - Transparency
+---
 
 ## Votings
 
@@ -201,4 +208,3 @@ Foundation votes this year are usually related to our internal structures, excha
 | (Nov 2019)  | Catena's debt to be paid in Ergs                              | Treasury Control  | Passed     |                                          |
 | (Nov 2019)  | Development Fund debts                                        | Treasury Control  | Passed     |                                          |
 | (Nov 2019)  | Development Fund Board                                        | Treasury Control  | Passed     |                                          |
-

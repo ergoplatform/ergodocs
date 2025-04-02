@@ -1,3 +1,10 @@
+---
+tags:
+  - SigmaStamp
+  - Timestamping
+  - dApp
+---
+
 # Sigma Stamp
 
 [sigmastamp.ml](https://sigmastamp.ml) is a timestamping service on Ergo. 

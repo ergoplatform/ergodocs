@@ -1,3 +1,12 @@
+---
+tags:
+  - SigmaRand
+  - Random Number Generation
+  - RNG
+  - Commit-Reveal
+  - dApp
+---
+
 # SigmaRand: Secure Random Number Generation for Ergo
 
 ## Background
