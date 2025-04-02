@@ -1,3 +1,15 @@
+---
+tags:
+  - Rosen Bridge
+  - Watcher
+  - Setup
+  - Guide
+  - FAQ
+  - Troubleshooting
+  - Cross-chain
+  - Oracle
+---
+
 # Ergo Rosen Bridge Watcher Setup
 
 Watchers are integral to Rosen Bridge, serving as cross-chain oracles. They observe and report deposit events on their network to Ergo, contributing to the network's security and expansion.
@@ -382,5 +394,3 @@ docker rm CONTAINERID1 CONTAINERID2 CONTAINERID3
 ```
 then delete the folder and start fresh
 ///
-
-

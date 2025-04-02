@@ -1,7 +1,11 @@
 ---
 tags:
-- Mining Core
-- miningcore
+  - Mining Core
+  - miningcore
+  - Pool Setup
+  - Linux
+  - PostgreSQL
+  - Guide
 ---
 
 # 🧱 MiningCore Setup Tutorial for Linux

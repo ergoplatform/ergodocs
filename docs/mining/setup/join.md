@@ -1,6 +1,15 @@
+---
+tags:
+  - Mining
+  - Getting Started
+  - Pool Mining
+  - Setup
+  - Guide
+---
+
 # Start Mining
 
-This guide will walk you through the process of starting to mine Ergo using [Autolykos2](autolykos.md). 
+This guide will walk you through the process of starting to mine Ergo using [Autolykos2](autolykos.md).
 
 ## Prerequisites
 

@@ -1,3 +1,12 @@
+---
+tags:
+  - Node
+  - Installation
+  - Manual Setup
+  - Full Node
+  - Guide
+---
+
 # Ergo Full Node Installation Guide
 
 ## Getting Started
