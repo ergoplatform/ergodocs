@@ -80,11 +80,12 @@ In ErgoScript, verifying a Schnorr signature involves reconstructing **U** on-ch
 
 ### Script Explanation:
 
-- The generator of the elliptic curve is retrieved using **groupGenerator**.
-- The public key **Y** is stored in the register **R4** of the transaction box.
-- The message **M** (hash of the original message) is stored in register **R5**.
-- The challenge **c** and response **s** (signature components) are retrieved from context variables.
-- The script verifies the Schnorr signature by checking that the reconstructed **U** matches the hash used to generate **c**.
+- The generator of the elliptic curve group (`g`) is retrieved using the global value `groupGenerator`.
+- The public key (`Y`) is retrieved from register R4 of the box being spent (`SELF`).
+- The message hash (`M`) is retrieved from register R5 of the box being spent.
+- The signature components, challenge (`cBytes`) and response (`s`), are provided as context variables by the prover during transaction creation.
+- The script reconstructs the commitment `U` using the formula `g^s * Y^c`.
+- Finally, it verifies the signature by hashing the reconstructed `U` concatenated with the message `M` (`sha256(U ++ M)`) and comparing the result with the original challenge `cBytes`. If they match, the signature is valid, and the `sigmaProp` evaluates to true.
 
 ### Reference Test:
 The complete off-chain and on-chain interaction, including signature generation and verification, can be seen in [this test case](https://github.com/ergoplatform/ergo-jde/blob/main/kiosk/src/test/scala/kiosk/schnorr/SchnorrSpec.scala).
@@ -93,8 +94,10 @@ The complete off-chain and on-chain interaction, including signature generation 
 
 ## Advanced Schnorr Validation Off-Chain
 
-### Efficient Off-Chain Code:
-In off-chain code, you can reduce complexity by using a simpler form of Schnorr validation. The problem arises from the fact that ErgoScript only supports 256-bit integers, so it's crucial to ensure that the signature integers fit within this constraint.
+### Alternative On-Chain Verification (Using Identification Scheme Logic):
+While the above method directly verifies the Schnorr signature `(c, s)`, an alternative approach based on the Schnorr *identification* scheme logic can sometimes be simpler, though it requires providing `U` (or `a` in the code below) instead of `c` as part of the proof.
+
+*Note: The primary challenge with on-chain verification is that ErgoScript's `BigInt` is limited to 256 bits. Off-chain signature generation must ensure the response `s` (or `z` below) fits within this limit.*
 
 ```scala
 {
@@ -118,9 +121,9 @@ In off-chain code, you can reduce complexity by using a simpler form of Schnorr 
 }
 ```
 
-### Off-Chain Signature Generation:
+### Off-Chain Signature Generation (Ensuring Size Limit):
 
-To ensure **z** (part of the signature) fits within 255 bits, the following code iterates over possible random values until a valid **z** is found:
+To ensure the response **z** fits within 255 bits (required for ErgoScript's `BigInt`), the off-chain signing code might need to iterate until a suitable random nonce `r` is found:
 
 ```scala
   def randBigInt: BigInt = {
@@ -130,17 +133,21 @@ To ensure **z** (part of the signature) fits within 255 bits, the following code
     BigInt(values).mod(SecP256K1.q)
   }
 
-  @tailrec
+  @tailrec // Scala annotation for tail recursion optimization
   def sign(msg: Array[Byte], secretKey: BigInt): (GroupElement, BigInt) = {
-    val r = randBigInt
+    val r = randBigInt // Generate random nonce
     val g: GroupElement = CryptoConstants.dlogGroup.generator
-    val a: GroupElement = g.exp(r.bigInteger)
-    val z = (r + secretKey * BigInt(scorex.crypto.hash.Blake2b256(msg))) % CryptoConstants.groupOrder
+    val a: GroupElement = g.exp(r.bigInteger) // Calculate U = g^r
+    // Calculate challenge e = H(a || msg) - using Blake2b256 here
+    val e = BigInt(scorex.crypto.hash.Blake2b256(a.getEncoded ++ msg)) 
+    // Calculate response z = r + x*e (mod q) - Note: Schnorr formula is typically r - x*e or r + x*e depending on convention
+    val z = (r + secretKey * e) % CryptoConstants.groupOrder 
 
-    if(z.bitLength <= 255) {
-      (a, z)
+    // Check if z fits within 255 bits for ErgoScript compatibility
+    if(z.bigInteger.bitLength <= 255) { 
+      (a, z) // Return signature (a, z)
     } else {
-      sign(msg, secretKey)
+      sign(msg, secretKey) // Retry with a new random nonce r
     }
   }
 ```
@@ -151,7 +158,7 @@ For further examples of constructing off-chain transactions and verifying them o
 
 ## Considerations and Limitations
 
-- **Weak Fiat-Shamir Transformation**: In this setup, the Schnorr scheme uses a weak Fiat-Shamir transformation. This is acceptable for many use cases because the public key remains fixed. However, for certain advanced applications, it may be necessary to apply a stronger transformation.
+- **Weak Fiat-Shamir Transformation**: The standard Schnorr signature verification shown (`c = H(U || M)`) uses a basic form of the Fiat-Shamir transformation. This is generally secure when the public key `Y` is fixed and known. However, be aware of potential security implications in more complex protocols where public keys might be dynamic or interact in unexpected ways. Stronger transformations might be needed in such advanced scenarios.
   
 ---
 

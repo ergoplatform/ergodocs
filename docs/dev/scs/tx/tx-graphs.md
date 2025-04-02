@@ -1,14 +1,14 @@
 # Transaction Graphs
 
-A transaction graph is a structure that represents a set of related transactions in a more flexible and dynamic manner than a transaction tree. While a transaction tree is a hierarchical structure representing a sequence of transactions with specific dependencies between them, a transaction graph is a more general representation of the relationships between transactions with more complex and flexible dependencies.
+A transaction graph represents a set of related transactions more flexibly and dynamically than a [transaction tree](tx-tree.md). While a transaction tree is a hierarchical structure depicting a sequence of transactions with specific linear dependencies, a transaction graph is a more general representation allowing for complex and flexible dependencies between transactions.
 
-In a transaction graph, each transaction is represented as a node, with edges connecting the nodes to represent dependencies between transactions. Unlike a transaction tree, which has a defined hierarchy and fixed relationships between transactions, a transaction graph allows for more complex and flexible relationships between transactions, including multiple dependencies and more complex branching.
+In a transaction graph, each transaction can be visualized as a node, with directed edges connecting nodes to represent dependencies (i.e., an edge from Tx A to Tx B means Tx B spends an output created by Tx A). Unlike a transaction tree's fixed hierarchy, a transaction graph permits more intricate relationships, such as multiple dependencies (a transaction spending outputs from several previous transactions) and complex branching (a transaction creating outputs spent by multiple subsequent transactions).
 
-Transaction graphs can be useful for representing complex transactions and dependencies, particularly in the context of smart contracts and other advanced blockchain applications. They allow for a more flexible and nuanced view of the transaction sequence, with the ability to represent more complex relationships and dependencies between transactions.
+Transaction graphs are useful for modeling complex transaction flows and dependencies, particularly in the context of smart contracts and advanced blockchain applications. They provide a more flexible and nuanced view of transaction sequences, enabling the representation of sophisticated relationships and dependencies.
 
-Transaction graphs are a powerful tool for representing complex blockchain transactions. They can help to improve the efficiency, scalability, and security of blockchain-based systems and applications, particularly in the context of advanced smart contracts and other decentralised applications.
+Transaction graphs are a powerful conceptual tool for understanding complex blockchain interactions. They can help analyze the efficiency, scalability, and security of blockchain-based systems, especially in the context of advanced smart contracts and decentralized applications (dApps).
 
-As shown below, Ergo supports a more advanced technique called transaction graphs, where cycles are allowed in contract references.
+Ergo's eUTXO model inherently supports the formation of transaction graphs. Furthermore, ErgoScript allows contracts to reference each other (e.g., by checking the script hash of an output), enabling the construction of protocols where the graph structure can even involve cycles in these contract references, as illustrated below.
 
 ![](../../../assets/img/scs/tx-graph.png)
 

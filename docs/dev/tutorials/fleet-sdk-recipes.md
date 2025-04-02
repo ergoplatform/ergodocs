@@ -398,12 +398,12 @@ if (r4Value) {
 
 ```mermaid
 graph TD
-    A[Ergo Address String] -->|ErgoAddress.decode()| B(Public Key Bytes)
-    B -->|ErgoAddress.fromPublicKey()| C[ErgoAddress Object]
-    B -->|SGroupElement()| D[SGroupElement Object]
-    D -->|SSigmaProp()| E[SSigmaProp Object]
-    C -->|address.ergoTree| F[ErgoTree Hex (P2PK Script)]
-    E -->|ErgoAddress(sigmaProp).ergoTree| F
+    A[Ergo Address String] -->|"ErgoAddress decode"| B[Public Key Bytes]
+    B -->|"ErgoAddress fromPublicKey"| C[ErgoAddress Object]
+    B -->|"SGroupElement"| D[SGroupElement Object]
+    D -->|"SSigmaProp"| E[SSigmaProp Object]
+    C -->|"address ergoTree"| F[ErgoTree Hex - P2PK Script]
+    E -->|"ErgoAddress sigmaProp ergoTree"| F
 
     style F fill:#f9f,stroke:#333,stroke-width:2px
     style B fill:#ccf,stroke:#333,stroke-width:2px

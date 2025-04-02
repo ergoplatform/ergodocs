@@ -76,9 +76,9 @@ This operation involves updating the headers chain to the best in the network. T
 
 During bootstrapping, headers are downloaded. If `PoPoW` is true, `GetPoPoWProof` is sent for all connections, and upon receipt, the PoPoWProof is applied to the History. Otherwise, the headers chain is updated to the best in the network.
 
-Additionally, the initial state is downloaded to start processing transactions. If `ADState` is true, the state is initialized with the state roothash from the block header `BlocksToKeep` ago. If `BlocksToKeep` is less than 0 or greater than `History.headersHeight`, the state is initialized with the genesis state. Otherwise, a full state `BlocksToKeep` back in history is downloaded.
+Additionally, the initial state is downloaded to start processing transactions. If `ADState` is true, the state is initialized with the state root hash from the header of the block `BlocksToKeep` blocks ago. If `BlocksToKeep` is less than 0 or greater than `History.headersHeight`, the state is initialized with the genesis state. Otherwise, the full state from `BlocksToKeep` blocks back in history is downloaded.
 
-The state is then updated to the best headers height. If `State.bestHeader` equals `History.bestHeader`, no action is taken as the state is already updated. If `VerifyTransactions` is false, the state root hash is simply updated to the best header in history. If `VerifyTransactions` is true, transaction ids are requested from all headers without transactions and transaction processing continues as described in the original text.
+The state is then updated to the best headers height. If `State.bestHeader` equals `History.bestHeader`, no action is taken as the state is already updated. If `VerifyTransactions` is false, the state root hash is simply updated to the best header in history. If `VerifyTransactions` is true, transaction ids are requested from all headers without transactions, and transaction processing continues as described in the original text.
 
 In regular mode, two infinite loops run in different threads, each executing the following functions:
 
@@ -104,17 +104,18 @@ def updateHeadersChainToBestInNetwork() = {
 }
 ```
 
-## Bootstraping
-
 ## Bootstrapping
 
 Bootstrapping is the initial setup process that prepares the node for transaction processing. It involves two main steps: 
 
-1. **Downloading Headers**: The process of downloading headers depends on the value of the **PoPoW** parameter. If **PoPoW** is *true*, the node sends a `GetPoPoWProof` request to all connections. Upon receiving the `PoPoWProof`, it applies it to the History. If **PoPoW** is *false*, the node updates the headers chain to the best in the network.
+1. **Downloading Headers**: The process depends on the `PoPoWBootstrap` parameter. If *true*, the node sends a `GetPoPoWProof` request to peers. Upon receiving the `PoPoWProof`, it applies it to the History component. If *false*, the node updates the headers chain to the best known chain in the network using the standard synchronization process.
 
-2. **Downloading Initial State**: The system checks the `ADState` and `BlocksToKeep` values to decide how to initialize the state. If `ADState` is *true*, the state is initialized with the state root hash from the block header `BlocksToKeep` ago. If `BlocksToKeep` is less than 0 or greater than `History.headersHeight`, the state is initialized with the genesis state. Otherwise, the system requests a historical `UTXOSnapshotManifest` for at least `BlocksToKeep` back, and upon receiving the `UTXOSnapshotManifest`, it requests each chunk from the sender. The received `UTXOSnapshotChunk` is then applied to the State.
+2. **Downloading Initial State**: The system checks the `ADState` and `BlocksToKeep` settings to determine how to initialize the state. 
+    - If `ADState` is *true*, the state is initialized with the state root hash from the header of the block `BlocksToKeep` blocks ago. 
+    - If `BlocksToKeep` is less than 0 (meaning keep all blocks) or greater than the current known header height (`History.headersHeight`), the state is initialized with the genesis state. 
+    - Otherwise (for pruned modes with `ADState = false`), the system requests a historical `UTXOSnapshotManifest` corresponding to the state `BlocksToKeep` blocks back. Upon receiving the manifest, it requests each required `UTXOSnapshotChunk` from peers. Received chunks are applied to the State component until the full state snapshot is reconstructed.
 
-After the initial state is downloaded, the state is updated to the best headers height. Depending on the values of `State.bestHeader`, `History.bestHeader`, and `VerifyTransactions`, the state is updated accordingly. If `State.bestHeader` equals `History.bestHeader`, no action is taken as the state is already updated. If `VerifyTransactions` is *false*, the state root hash is simply updated to the best header in history. If `VerifyTransactions` is *true*, transaction ids are requested from all headers without transactions, and transaction processing continues as described in the original text.
+After the initial state is downloaded or initialized, it is updated to match the best known header height. Depending on whether `VerifyTransactions` is enabled, this involves either just updating the state root hash or requesting and processing the necessary block transactions and AD proofs to reach the target height, as described previously.
 
 Once the bootstrapping process is complete, the system transitions to regular mode.
 

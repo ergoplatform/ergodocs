@@ -1,19 +1,18 @@
 # Sigma Propositions
 
-Sigma Propositions are the core of every single ErgoScript contract.
+Sigma Propositions (`SigmaProp`) are the core return type of every ErgoScript contract.
 
-- `SigmaProps` represent some conditions about the transaction that must be met in order to spend a certain box.
-They are quite similar to booleans, in that they may be reduced into two values, `true` or `false`.
-- SigmaProps enable the usage of Zero-Knowledge Proofs, an important part of modern-day cryptography and one of the defining features of Ergo in terms of its privacy
-- **All contracts in ErgoScript return a Sigma Proposition at the very end**. 
-    - This SigmaProp represents the conditions needed to spend the box protected by your contract. For this reason, all the code you make within an ErgoScript contract should affect the outcome of your Sigma Proposition in some way.
+- `SigmaProp` values represent conditions related to the transaction that must be met to spend a specific box.
+- They are similar to booleans in that they ultimately reduce to either `true` or `false` during verification.
+- `SigmaProp` enables the use of Zero-Knowledge Proofs, a crucial aspect of modern cryptography and a defining privacy feature of Ergo.
+- **All contracts in ErgoScript must return a `SigmaProp` value at the very end.** 
+    - This final `SigmaProp` represents the complete set of conditions required to spend the box protected by the contract. Therefore, all logic within an ErgoScript contract should contribute to the outcome of this final `SigmaProp`.
 
-SigmaProps come in a few different forms, but there are two main ways you will see them in ErgoScript contracts.
+`SigmaProp` values can be constructed in several ways, but two common methods are used frequently in ErgoScript contracts.
 
 ## SigmaProps From Booleans
 
-You may create SigmaProps from booleans using the `sigmaProp` function. This
-allows you to define arbitrary spending conditions for any contract.
+You can create `SigmaProp` values from standard boolean expressions using the `sigmaProp` function. This allows you to define arbitrary spending conditions based on context variables, register values, etc.
 
 ```scala
 {
@@ -26,10 +25,7 @@ allows you to define arbitrary spending conditions for any contract.
 
 ## SigmaProps From Public Keys
 
-Public Keys (Essentially, the part of your address that makes it different from everyone else's)
-are also SigmaProps. When a public key is passed as a SigmaProp, your contract checks whether or not the given PK is the one that signed the transaction
-You may think of signing a transaction, as quite literally signing it with your signature to prove
-that the transaction was authorized by you.
+Public Keys (represented as `GroupElement` in ErgoScript, essentially the part of your address that makes it unique) can be directly converted into `SigmaProp` values using functions like `proveDlog`. When such a `SigmaProp` is used, the contract checks if the transaction was signed by the corresponding private key. You can think of this as literally signing the transaction with your digital signature to prove authorization.
 
 ```scala
 {
@@ -44,7 +40,7 @@ that the transaction was authorized by you.
 
 ## SigmaProp Operations
 
-Much like booleans, you may use logical operations on SigmaProps in order to build more complex spending logic for your contract
+Much like booleans, you can use logical operations (`&&` for AND, `||` for OR) on `SigmaProp` values to build more complex spending logic for your contract.
 
 ```scala
 {
@@ -57,9 +53,9 @@ Much like booleans, you may use logical operations on SigmaProps in order to bui
 
 
 
-You can see in the above contract that usage of `||` creates two spending paths for the given contract.
+You can see in the contract above that using `||` creates two distinct spending paths (conditions under which the box can be spent).
 
-Now you've seen the basics, for the end of this section, lets look at a simple ErgoScript contract, the pin-lock we mentioned earlier
+Now that you've seen the basics, let's look at a simple ErgoScript contract example: the pin-lock contract mentioned earlier.
 
 ## Pin-lock Contract
 
@@ -70,12 +66,11 @@ Now you've seen the basics, for the end of this section, lets look at a simple E
 
 ```
 
-Don't worry if you don't understand the functions used here, these are global functions that we will get into the next section.
-What's happening here is this:
+Don't worry if you don't understand all the functions used here (`blake2b256`, `.get`); these are global functions covered elsewhere. What's happening here is:
 
-We may spend Input 0 of this transaction if and only if there exists an output whose `R4` (register 4)
-contains the hash of the collection of bytes found in R4 of the Input.
-This contract refers to itself as `INPUTS(0)`, for a more clear example, look at the following, where the box being spent refers to itself within its own contract:
+We can spend `INPUTS(0)` (the first input box of the transaction) if and only if there exists an output box (specifically `OUTPUTS(0)`, the first output) whose register `R4` contains the Blake2b256 hash of the byte collection found in register `R4` of `INPUTS(0)`.
+
+This contract implicitly assumes the box being spent *is* `INPUTS(0)`. For a clearer example where the box explicitly refers to itself within its own contract, consider the version below using the `SELF` context variable:
 
 ## Pin-lock Contract (with SELF)
 
@@ -86,8 +81,7 @@ This contract refers to itself as `INPUTS(0)`, for a more clear example, look at
 
 ```
 
-Are these two contracts equivalent?
-That is, are there any spending conditions that exist in which one contract could evaluate to true, and one could evaluate to false?
+Are these two pin-lock contracts equivalent? That is, under what spending conditions might one contract evaluate to true while the other evaluates to false? (Hint: Consider what `INPUTS(0)` refers to versus what `SELF` refers to).
 
 
 

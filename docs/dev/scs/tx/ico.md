@@ -1,18 +1,18 @@
-Another popular use-case of Ethereum is an Initial Coin Offering (ICO) contract. An ICO mirrors an Initial Public Offering (IPO) and provides a mechanism for a project to collect funding in some tokens and then issue “shares” (in the form of some other tokens) to investors.
+Another popular use case on Ethereum is an Initial Coin Offering (ICO) contract. An ICO mirrors an Initial Public Offering (IPO), providing a mechanism for a project to collect funding (often in stablecoins or the platform's native token) and then issue project "shares" (in the form of new tokens) to investors.
 
-Generally, an ICO comprises of 3 stages:
+Generally, an ICO comprises 3 stages:
 
 - [**Funding**](#funding): During this period, investors are allowed to fund the project.
 - [**Issuance**](#issuance): A new asset token is created and issued to investors.
 - [**Withdrawal**](#withdrawal): Investors can withdraw their newly issued tokens.
 
-Our ICO contract is quite complex compared to the previous examples since it involves multiple stages and parties. The number of investors may run into thousands, and the naive solution would store this data in the contract, as in the [ERC-20 standard](https://theethereum.wiki/w/index.php/ERC20_Token_Standard).
+This example ICO contract is quite complex compared to previous examples as it involves multiple stages and parties. The number of investors might run into the thousands. A naive solution, similar to some approaches on account-based models like the [ERC-20 standard](https://theethereum.wiki/w/index.php/ERC20_Token_Standard) on Ethereum, might attempt to store all investor data directly within the contract state.
 
-Unlike Ethereum, Ergo does not permit storing large datasets in a contract. Rather, we store only a 40-bytes header of (a key, value) dictionary authenticated like a Merkle tree [13](https://eprint.iacr.org/2016/994). To access some elements in the dictionary or to modify it, a spending transaction should provide lookup or modification proofs. This allows a contract to authenticate large datasets using very little storage and memory.
+Unlike Ethereum, Ergo contracts cannot store arbitrarily large datasets directly. Instead, Ergo utilizes authenticated data structures like AVL trees. We store only a compact digest (e.g., ~33 bytes for an AvlTree) representing the root hash and state of a potentially vast (key, value) dictionary. To access or modify elements in the dictionary, a spending transaction must provide cryptographic proofs (lookup or modification proofs). This allows a contract to authenticate large datasets using very little on-chain storage.
 
 ## Funding
 
-The project initiates the ICO by creating a box with the guard script given below. The box also contains an authenticating value for an empty dictionary of (investor, balance) pairs in R5, where an investor is the hash of a script that will guard the box with the withdrawn tokens (once the funding period ends).
+The project initiates the ICO by creating a box guarded by the script shown below. This initial box also contains, in its R5 register, the authenticated digest of an empty dictionary intended to store (investor PK hash, invested amount) pairs. Here, an "investor PK hash" refers to the hash of the script (typically a standard P2PK script) that will guard the box containing the investor's withdrawn ICO tokens after the funding period ends.
 
 ```scala
 // check if the index of the current input is 0
@@ -49,13 +49,19 @@ selfIndexIsZero && outputsCorrect && modifiedTree == expectedTree
 
 ```
 
-The first funding transaction spends this box and creates a box with the same script and updated data. Further funding transactions spend the box created from the previous funding transaction. The box checks that it is the first input of each funding transaction, which must have other input from investors. The investor inputs contain a hash of the withdrawal script in register R4. The script also checks (via proofs) that hashes and monetary values of the investing inputs are correctly added to the dictionary of the new box, which must be the only output with the correct amount of ergs (we ignore fee in this example).
+The first funding transaction spends this initial box and creates a new box containing the same script but with an updated dictionary digest in R5 reflecting the first investment. Subsequent funding transactions spend the box created by the *previous* funding transaction. The script ensures that the ICO contract box is always the first input (`INPUTS(0)`). Additional inputs in the transaction represent contributions from investors. Each investor input must contain the hash of their withdrawal script (their public key hash) in register R4. The ICO script verifies (using the provided AVL tree proof) that the investor PK hashes and their corresponding investment amounts (box values) are correctly inserted into the dictionary. The script also ensures that only one output box is created, carrying forward the updated dictionary digest and the accumulated Ergs (fees are ignored in this simplified example).
 
-In this stage, which lasts until height 2,000, withdrawals are not permitted, and ergs can only be put into the project. The first transaction with a height of 2,000 or more should keep the same data but change the output's script, called issuanceScript, described next.
+During this funding stage, which lasts until block height 2,000, withdrawals are not permitted; Ergs can only be added to the ICO box. The first transaction occurring at or after height 2,000 must transition the contract to the next stage by changing the output box's script to `issuanceScript` (described next), while keeping the dictionary data (digest) the same.
 
 ## Issuance
 
-This stage requires only one transaction to get to the next stage (the withdrawal stage). The spending transaction makes the following modifications. Firstly, it changes the list of allowed operations on the dictionary from "inserts only" to "removals only". Secondly, the contract checks that the proper amount of ICO tokens are issued. In Ergo, each transaction can issue at most one new kind of token, with the (unique) identifier of the first input box. The issuance contract checks that a new token is issued with an amount equal to the nano-ergs collected till now. Thirdly, the contract checks that a spending transaction is indeed re-creating the box with the guard script corresponding to the next stage, the withdrawal stage. Finally, the contract checks that the spending transaction has two outputs (one for the project tokens and one for the ergs withdrawn by the project). The complete script is given below.
+This stage involves a single transaction to transition to the withdrawal stage. The spending transaction performs the following actions, verified by the `issuanceScript`:
+1.  **Updates AVL Tree Flags**: It changes the allowed operations on the dictionary from "inserts only" to "removals only" by updating the `enabledOperations` flag in the `AvlTreeData`.
+2.  **Verifies Token Issuance**: It checks that the correct amount of ICO tokens are issued. In Ergo, a transaction can issue a new token, whose ID is determined by the ID of the first input box. The `issuanceScript` verifies that a new token (with this ID) is created in the first output box (`OUTPUTS(0)`) with a total supply equal to the total nanoErgs collected during the funding stage (`SELF.value`).
+3.  **Transitions to Withdrawal Script**: It ensures the output box (`OUTPUTS(0)`) containing the tokens and the dictionary digest is protected by the `withdrawScript` for the next stage.
+4.  **Checks Outputs**: It verifies that the transaction has exactly two outputs: `OUTPUTS(0)` (the main contract box for the withdrawal stage) and `OUTPUTS(1)` (a box sending the collected Ergs to the project's designated address, identified by `projectPubKeyHash`).
+
+The complete `issuanceScript` is shown below.
 
 ```scala
 // Get the open and closed trees
@@ -90,9 +96,15 @@ val stateIsCorrect = projectPubKey && treeIsCorrect && valuePreserved && stateCh
 
 ## Withdrawal
 
-Investors can now withdraw ICO tokens under a guard script whose hash is stored in the dictionary. Withdrawals are made in batches of N. A withdrawing transaction, thus, has N + 1 outputs; the first output carries over the withdrawal sub-contract and balance tokens, and the remaining N outputs have guard scripts and token values as per the dictionary. The contract requires two proofs for the dictionary elements: one proving that values to be withdrawn are indeed in the dictionary, and the second proving that the resulting dictionary does not have the withdrawn values.
+Investors can now withdraw their allocated ICO tokens. The withdrawal process typically happens in batches. A withdrawal transaction spends the current ICO box (`SELF`) and creates `N + 1` outputs:
+*   `OUTPUTS(0)`: The new ICO box, containing the remaining tokens and the updated dictionary digest (with withdrawn entries removed). It is protected by the same `withdrawScript`.
+*   `OUTPUTS(1)` to `OUTPUTS(N)`: Boxes sent to the withdrawing investors. Each box is protected by the investor's script (whose hash was stored as the key in the dictionary) and contains the corresponding amount of ICO tokens.
 
-The complete script called `withdrawScript` is given below:
+The `withdrawScript` requires two AVL tree proofs provided in context variables:
+1.  `lookupProof`: Proves the existence and amounts associated with the investor keys being withdrawn.
+2.  `removeProof`: Proves that these investor entries have been correctly removed from the dictionary, resulting in the updated dictionary digest found in `OUTPUTS(0)`.
+
+The complete `withdrawScript` is shown below:
 
 ```scala
 // Get removeProof and lookupProof
@@ -144,9 +156,9 @@ val outTreeCorrect = OUTPUTS(0).R5[AvlTree].get == modifiedTree
 valuesCorrect && outTreeCorrect && selfOutputCorrect && tokenPreserved
 ```
 
-Note that the above ICO example contains many simplifications. For instance, we don’t consider fees when spending the project box.
+Note that the ICO example presented here includes several simplifications. For instance, transaction fees are not explicitly handled in the scripts (though they would be required in a real transaction).
 
-Additionally, the project does not self-destruct after the withdrawal stage.
+Additionally, the contract does not include logic for self-destruction or final cleanup after the withdrawal stage is complete.
 
 ## Comet Refundable ICO
 

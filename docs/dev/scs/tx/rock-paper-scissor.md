@@ -1,17 +1,21 @@
-Our next example of a multi-stage contract is the Rock-Paper-Scissors game, often used to introduce Ethereum. The game is played between two players, Alice and Bob. Each player chooses a secret independently, and the game is decided after the secrets are revealed.
+Our next example of a multi-stage contract is the Rock-Paper-Scissors game, often used as an introductory example for smart contracts. The game is played between two players, Alice and Bob. Each player chooses a secret move independently, and the game outcome is decided after both secrets are revealed.
 
-Let a, b ∈ Z3 be the secrets of Alice and Bob, respectively, with the understanding that (0, 1, 2) represent (rock, paper, scissors). If a = b, then the game is a draw; otherwise, if a − b ∈ {1, −2}, then Alice wins, else Bob wins. The first party to reveal the secret is disadvantaged since the other party can adaptively choose and win. In the real world, both parties reveal their secrets simultaneously to prevent this. In the virtual world, however, this cannot be enforced. Hence this attack must be handled using cryptographic commitments, where the first party, Alice, does not initially reveal her secret but rather only a commitment to that secret.
+Let `a`, `b` ∈ Z<sub>3</sub> be the secret choices of Alice and Bob, respectively, where (0, 1, 2) represent (rock, paper, scissors). If `a = b`, the game is a draw. Otherwise, if `a - b mod 3 = 1`, Alice wins; if `a - b mod 3 = 2`, Bob wins. A key challenge is that the first party to reveal their secret is disadvantaged, as the other party could then adaptively choose their move to guarantee a win. In the physical world, simultaneous revelation prevents this. In the virtual world of blockchains, however, simultaneity cannot be strictly enforced. This potential attack must be handled using cryptographic commitments. The first party (Alice) initially reveals only a commitment to her secret, not the secret itself.
 
-The modified game using commitments is as follows:
+The modified game using commitments proceeds as follows:
 
-- Alice commits to her secret a by inputting her commitment c = Comm(a).
-- Bob inputs his public value b. At this stage, Alice knows if she won or lost.
-- Alice opens her commitment and reveals a, after which the winner is decided.
+1.  **Commitment Phase**: Alice chooses her secret move `a` and a secret random value `s`. She computes a commitment `c = H(a || s)` (where `H` is a hash function like Blake2b256) and publishes `c` (e.g., by locking funds in a contract containing `c`).
+2.  **Reveal Phase (Bob)**: Bob chooses and reveals his move `b`. At this point, Alice knows the outcome based on `a` and `b`, but Bob doesn't know `a`.
+3.  **Reveal Phase (Alice)**: Alice reveals her original move `a` and the secret `s`. Anyone can now verify that `c = H(a || s)`, confirming Alice didn't change her move after seeing Bob's. The winner is then determined based on `a` and `b`.
 
-This works fine, assuming that Alice is well-behaved, i.e., she always opens her commitment irrespective of whether she won or lost. In the real world, however, we must also consider the possibility that Alice never opens her commitment. Border cases such as these make smart contracts quite tricky because adding “bug fixes” to them is impossible once deployed. In this example, we must penalize Alice (with a loss) if she does not open her commitment within some stipulated time.
+This protocol works assuming Alice behaves honestly and reveals `a` and `s` regardless of the outcome. However, a malicious Alice might refuse to reveal her commitment if she knows she lost. Smart contracts must handle such edge cases, as they cannot be easily fixed after deployment. In this example, we must penalize Alice (e.g., by forfeiting her stake) if she fails to reveal her commitment within a specified timeframe (deadline).
 
-The complete game is coded in ErgoScript in two stages. In the first stage, Alice creates a start-game box that encodes her game rules. In the second stage, Bob spends the start-game box and creates two end-game boxes spendable by the winner. These new boxes indicate that the game has ended.
-To start the game, Alice decides a game amount x (of Ergo’s primary token), which each player must contribute. She then selects a secret s and computes a commitment c = H(a||s) to a. Finally, she locks up x tokens and her commitment c inside the start-game box protected by the following script:"
+The complete game is implemented in ErgoScript using a two-stage protocol:
+
+1.  **Stage 1 (Start Game)**: Alice creates a "start-game" box. This box locks her stake and contains her commitment `c`. The script guarding this box defines the rules for the next stage.
+2.  **Stage 2 (End Game)**: Bob spends the start-game box by revealing his move `b` and contributing his stake. This transaction creates one or two "end-game" boxes. These boxes contain the combined stake and are spendable only according to the game's outcome rules (including Alice revealing `a` and `s`, handling draws, wins, losses, and timeouts).
+
+To initiate the game, Alice decides on the stake amount `x` (in nanoErgs), chooses her move `a` and secret `s`, computes the commitment `c = H(a || s)`, and locks `x` nanoErgs along with `c` in the start-game box, protected by the following script (`startGameScript`):
 
 ```scala
 OUTPUTS.forall(

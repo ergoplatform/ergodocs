@@ -8,35 +8,35 @@ tags:
 ---
 # Ergo Modifiers
 
-In Ergo's P2P protocol, blocks and transactions are called "modifiers". Modifiers are transmitted between nodes as part of the network synchronization process. The Modifier Exchange process encompasses the protocols and systems in place to exchange this information efficiently and securely across the network.
+In Ergo's P2P protocol, the fundamental units of data exchanged between nodes, such as blocks and transactions, are referred to as "modifiers." Modifiers are transmitted as part of the network synchronization process. The Modifier Exchange process encompasses the protocols and systems designed to exchange this information efficiently and securely across the network.
 
 
 ## Ergo Block Structure
 
-The [Ergo block](block.md), a critical structure in the Ergo blockchain, differentiates from most blockchain systems by comprising four distinct sections:
+The [Ergo block](block.md), a critical structure in the Ergo blockchain, differs from many other blockchain systems by comprising four distinct sections (modifiers):
 
-* **Header**: This contains the bare minimum information necessary to synchronize the chain and validate Proof-of-Work (PoW) accuracy. It includes the hashes of other sections.
-* **Block Transactions**: This section consists of a series of transactions included within the block.
-* **ADProofs**: These proofs are associated with transactions in the corresponding Block Transactions section, allowing light clients to authenticate all transactions and compute a new root hash.
-* **Extension**: This section holds additional information that doesn't fit into the previous sections. It includes interlinks and the chain's current parameters when the extension belongs to a block at the end of a voting epoch.
+* **Header**: Contains the minimal information necessary to synchronize the chain and validate Proof-of-Work (PoW) correctness. It includes cryptographic hashes (roots) of the other sections.
+* **Block Transactions**: Consists of the ordered sequence of transactions included within the block.
+* **ADProofs**: Contains Authenticated Dictionary proofs associated with the transactions in the `BlockTransactions` section. These proofs allow light clients to validate transactions against the UTXO set state root hash found in the header.
+* **Extension**: Holds supplementary information. This includes [interlinks](nipopows.md) (for NiPoPoWs) and, for blocks at the end of a voting epoch, the blockchain parameters resulting from miner voting.
 
 ## Header Section
 
-The table below details the fields contained in the Header section:
+The table below details the fields contained within the Header modifier:
 
 | Field              | Size (Bytes) | Description                                                                                           |
 |--------------------|--------------|-------------------------------------------------------------------------------------------------------|
 | version            | 1            | Block version number, incremented with each soft or hard fork                                         |
 | parentId           | 32           | Identifier of the parent block                                                                        |
 | ADProofsRoot       | 32           | Hash of ADProofs for transactions in the block                                                        |
-| stateRoot          | 32           | Root hash of the state (for an AVL+ tree) after the block's application                              |
-| transactionsRoot   | 32           | Root hash of transactions in the block (for a Merkle tree)                                            |
-| timestamp          | 8            | Block timestamp (expressed in milliseconds since the beginning of Unix Epoch)                         |
-| nBits              | 8            | Current difficulty level, presented in a compressed form                                              |
-| height             | 4            | Block height                                                                                          |
-| extensionRoot      | 32           | Root hash of the extension section                                                                    |
-| powSolution        | 75-107       | Solution of the Autolykos PoW puzzle                                                                  |
-| votes              | 3            | Votes for changes in system parameters, one byte allocated for each vote                               |
+| stateRoot          | 32           | Root hash of the authenticated UTXO set state (an AVL+ tree) after applying the block's transactions. |
+| transactionsRoot   | 32           | Root hash of the Merkle tree of transactions included in the block.                                   |
+| timestamp          | 8            | Block timestamp (in milliseconds since the beginning of the Unix Epoch).                              |
+| nBits              | 8            | Current difficulty target (encoded in a compressed format).                                           |
+| height             | 4            | Block height (distance from the genesis block).                                                       |
+| extensionRoot      | 32           | Root hash of the block's extension section.                                                           |
+| powSolution        | 75-107       | Solution to the Autolykos v2 Proof-of-Work puzzle.                                                    |
+| votes              | 3            | Bytes representing miner votes for changes in system parameters.                                      |
 
 In specific modes, nodes can calculate certain fields independently:
 
@@ -46,10 +46,12 @@ In specific modes, nodes can calculate certain fields independently:
 
 ## Extension Section
 
-The Extension section serves as a key-value storage accommodating a diverse range of data. 
+The Extension section functions as a key-value store capable of holding various data relevant to the block or protocol state.
 
-The key is consistently 2 bytes long, and the maximum size of a value is 64 bytes. The overall Extension size should not exceed 16,384 bytes. 
+Keys are consistently 2 bytes long, and the maximum size for a value is 64 bytes. The total size of the Extension section must not exceed 32,768 bytes (previously 16,384, updated post-EIP-38).
 
-Certain keys have predefined meanings. For instance, if the first byte of a key equals to `0x00`, the second byte identifies the parameter, and the value determines the parameter's value. <!--TODO: Find this param table and link it.-->
+Certain key prefixes have predefined meanings:
+*   **Parameters (`0x00` prefix)**: If the first byte of the key is `0x00`, the second byte identifies a specific blockchain parameter (e.g., block size limit, cost per byte). The value associated with this key represents the parameter's value. These are typically included only in blocks at the end of a voting epoch.
+*   **Interlinks (`0x01` prefix)**: Keys starting with `0x01` are used for storing the [NiPoPoW interlinks vector](nipopows.md). The second byte indicates the level `k` of the link. The value contains the actual block ID (32 bytes) representing the link at that level.
 
-Another predefined key is used for storing the interlinks vector. In this case, the first byte of the key is `0x01`, the second one matches the index of the link in the vector, and the value contains the actual link (32 bytes) prefixed with the frequency it appears in the vector (1 byte). Other prefixes are free for use as required.
+Other key prefixes are available for future protocol extensions or application-specific data.

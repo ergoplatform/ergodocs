@@ -34,31 +34,31 @@ $$
 
 #### Byte.toByte (106.1)
 
-- *Description*: Converts this numeric value to **Byte**, throwing exception if overflow.
+- *Description*: Converts this numeric value to **Byte**, throwing an exception on overflow.
 - *Signature*: **`def toByte: Byte`**
 - *Serialized as:* Downcast
 
 #### Byte.toShort (106.2)
 
-- *Description*: Converts this numeric value to Short, throwing exception if overflow.
+- *Description*: Converts this numeric value to **Short**, throwing an exception on overflow.
 - *Signature*: **`def toShort: Short`**
 - *Serialized as:* Upcast
 
 #### Byte.toInt (106.3)
 
-- *Description*: Converts this numeric value to Int, throwing exception if overflow.
+- *Description*: Converts this numeric value to **Int**, throwing an exception on overflow.
 - *Signature*: **`def toInt: Int`**
 - *Serialized as:* Upcast
 
 #### Byte.toLong (106.4)
 
-- *Description*: Converts this numeric value to Long, throwing exception if overflow.
+- *Description*: Converts this numeric value to **Long**, throwing an exception on overflow.
 - *Signature*: **`def toLong: Long`**
 - *Serialized as:* Upcast
 
 #### Byte.toBigInt (106.5)
 
-- *Description*: Converts this numeric value to BigInt
+- *Description*: Converts this numeric value to **BigInt**.
 - *Signature*: **`def toBigInt: BigInt`**
 - *Serialized as:* Upcast
 
@@ -67,32 +67,32 @@ $$
 
 #### Short.toByte (106.1)
 
-- *Description*: Converts this numeric value to Byte, throwing exception if overflow.
+- *Description*: Converts this numeric value to **Byte**, throwing an exception on overflow.
 - *Signature*: **`def toByte: Byte`**
 - *Serialized as:* Downcast
 
 #### Short.toShort (106.2)
 
-- *Description*: Converts this numeric value to Short, throwing exception if overflow.
+- *Description*: Converts this numeric value to **Short**, throwing an exception on overflow.
 - *Signature*: **`def toShort: Short`**
 - *Serialized as:* Downcast
 
 #### Short.toInt (106.3)
 
-- *Description*: Converts this numeric value to Int, throwing exception if overflow.
+- *Description*: Converts this numeric value to **Int**, throwing an exception on overflow.
 - *Signature*: **`def toInt: Int`**
 - *Serialized as:* Downcast
 
 #### Short.toLong (106.4)
 
-- *Description*: Converts this numeric value to Long, throwing exception if overflow.
+- *Description*: Converts this numeric value to **Long**, throwing an exception on overflow.
 - *Signature*: **`def toLong: Long`**
 - *Serialized as:* Upcast
 
 
 #### Short.toBigInt (106.5)
 
-- *Description*: Converts this numeric value to BigInt
+- *Description*: Converts this numeric value to **BigInt**.
 - *Signature*: **`def toBigInt: BigInt`**
 - *Serialized as:* Upcast
 
@@ -100,32 +100,32 @@ $$
 
 #### Int.toByte (106.1)
 
-- *Description*: Converts this numeric value to Byte, throwing exception if overflow.
+- *Description*: Converts this numeric value to **Byte**, throwing an exception on overflow.
 - *Signature*: **`def toByte: Byte`**
 - *Serialized as:* Downcast
 
 
 #### Int.toShort (106.2)
 
-- *Description*: Converts this numeric value to Short, throwing exception if overflow.
+- *Description*: Converts this numeric value to **Short**, throwing an exception on overflow.
 - *Signature*: **`def toShort: Short`**
 - *Serialized as:* Downcast
 
 #### Int.toInt (106.3)
 
-- *Description*: Converts this numeric value to Int, throwing exception if overflow.
+- *Description*: Converts this numeric value to **Int**, throwing an exception on overflow.
 - *Signature*: **`def toInt: Int`**
 - *Serialized as:* Downcast
 
 #### Int.toLong (106.4)
 
-- *Description*: Converts this numeric value to Long, throwing exception if overflow.
+- *Description*: Converts this numeric value to **Long**, throwing an exception on overflow.
 - *Signature*: **`def toLong: Long`**
 - *Serialized as:* Upcast
 
 #### Int.toBigInt (106.5)
 
-- *Description*: Converts this numeric value to BigInt.
+- *Description*: Converts this numeric value to **BigInt**.
 - *Signature*: **`def toBigInt: BigInt`**
 - *Serialized as:* Upcast
 
@@ -133,31 +133,31 @@ $$
 
 #### Long.toByte (106.1)
 
-- *Description*: Converts this numeric value to Byte, throwing exception if overflow.
+- *Description*: Converts this numeric value to **Byte**, throwing an exception on overflow.
 - *Signature*: **`def toByte: Byte`**
 - *Serialized as:* Downcast
 
 #### Long.toShort (106.2)
 
-- *Description*: Converts this numeric value to Short, throwing exception if overflow.
+- *Description*: Converts this numeric value to **Short**, throwing an exception on overflow.
 - *Signature*: **`def toShort: Short`**
 - *Serialized as:* Downcast
 
 #### Long.toInt (106.3)
 
-- *Description*: Converts this numeric value to Int, throwing exception if overflow.
+- *Description*: Converts this numeric value to **Int**, throwing an exception on overflow.
 - *Signature*: **`def toInt: Int`**
 - *Serialized as:* Downcast
 
 #### Long.toLong (106.4)
 
-- *Description*: Converts this numeric value to Long, throwing exception if overflow.
+- *Description*: Converts this numeric value to **Long**, throwing an exception on overflow.
 - *Signature*: **`def toLong: Long`**
 - *Serialized as:* Downcast
 
 #### Long.toBigInt (106.5)
 
-- *Description*: Converts this numeric value to BigInt
+- *Description*: Converts this numeric value to **BigInt**.
 - *Signature*: **`def toBigInt: BigInt`**
 - *Serialized as:* Upcast
 
@@ -166,7 +166,7 @@ $$
 
 #### BigInt.toBigInt (106.5)
 
-- *Description*: Converts this numeric value to BigInt
+- *Description*: Converts this numeric value to **BigInt**.
 - *Signature*: **`def toBigInt: BigInt`**
 - *Serialized as:* Downcast
 
@@ -175,36 +175,36 @@ $$
 
 #### GroupElement.getEncoded (7.2)
 
-- *Description*: Get an encoding of the point value.
+- *Description*: Returns an encoding of the point value.
 - *Signature*: **`def getEncoded: Coll[Byte]`**
 - *Serialized as:* PropertyCall
 
 #### GroupElement.exp (7.3)
 
-- *Description*: Exponentiate this GroupElement to the given number. Returns this to the power of k
+- *Description*: Exponentiates this GroupElement to the given number. Returns this group element raised to the power of k.
 - *Signature*: **`def exp(k: BigInt): GroupElement`**
-- - *Parameters*: `k` The power
+- *Parameters*: `k` The power
 - *Serialized as:* Exponentiate
 
 #### GroupElement.multiply (7.4)
 
-- *Description*: Group operation.
+- *Description*: Performs the group operation (multiplication) with another element.
 - *Signature*: **`def multiply(other: GroupElement): GroupElement`**
-- *Parameters*: `other` other element of the group
+- *Parameters*: `other` The other element of the group.
 - *Serialized as:* MultiplyGroup
 
-#### GroupElement.negate (76.5)
+#### GroupElement.negate (7.5)
 
-- *Description*: Inverse element of the group.
+- *Description*: Returns the inverse element in the group.
 - *Signature*: **`def negate: GroupElement`**
 - *Serialized as:* PropertyCall
 
 
 ### SigmaProp 
 
-Values of **SigmaProp** type hold sigma propositions, which can be proved and verified using Sigma protocols. Each sigma proposition is represented as an expression where sigma protocol primitives such as **ProveDlog**, and **ProveDHTuple** are used as constants and special sigma protocol connectives like **&&**,**||** and **THRESHOLD** are used as operation.
+Values of **SigmaProp** type hold sigma propositions, which can be proved and verified using Sigma protocols. Each sigma proposition is represented as an expression where sigma protocol primitives such as **ProveDlog** and **ProveDHTuple** are used as constants, and special sigma protocol connectives like **AND**, **OR**, and **THRESHOLD** are used as operations.
 
-The abstract syntax of sigma propositions is shown below. 
+The abstract syntax of sigma propositions is shown below.
 
 
 | Set | | Syntax | Mnemonic | Description |
@@ -226,14 +226,14 @@ The following methods can be called on all instances of $\lst{SigmaProp}$ type.
 
 #### SigmaProp.propBytes (8.1)
 
-- *Description*: Serialized bytes of this sigma proposition taken as ErgoTree.
+- *Description*: Returns the serialized bytes of this sigma proposition represented as ErgoTree.
 - *Parameters*: 
 - *Result*: `Coll[Byte]`
 - *Serialized as:* SigmaPropBytes
 
 #### SigmaProp.isProven (8.2)
 
-- *Description*: Verify that sigma proposition is proven. (FRONTEND ONLY)
+- *Description*: Verifies that the sigma proposition is proven. (FRONTEND ONLY)
 - *Parameters*: 
 - *Result*: `Boolean`
 
@@ -244,144 +244,142 @@ For a full list of primitive operations on  $\lst{SigmaProp}$ type, see [Appendi
 
 #### Box.value (99.1)
 
-- *Description*: Mandatory: Monetary value, in Ergo tokens (NanoErg unit of measure
+- *Description*: Monetary value in nanoErgs.
 - *Parameters*: 
 - *Result*: $\lst{Long}$
 - *Serialized as:* ExtractAmount
 
 #### Box.propositionBytes (99.2)
 
-- *Description*: Serialized bytes of guarding script, which should be evaluated to true in order
-to open this box. (aka spend it in a transaction)
+- *Description*: Serialized bytes of the guarding script. This script must evaluate to true to spend the box.
 - *Parameters*: 
 - *Result*: $\lst{Coll[Byte]}$
 - *Serialized as:* ExtractScriptBytes
 
 #### Box.bytes (99.3)
 
-- *Description*: Serialized bytes of this box’s content, including proposition bytes.
+- *Description*: Returns the serialized bytes of this box's content, including proposition bytes.
 - *Parameters*: 
 - *Result*: $\lst{Coll[Byte]}$
 - *Serialized as:* ExtractBytes
 
 #### Box.bytesWithoutRef (99.4)
 
-- *Description*: Serialized bytes of this box’s content, excluding transactionId and index of
-output.
+- *Description*: Returns the serialized bytes of this box's content, excluding the transactionId and output index.
 - *Parameters*: 
 - *Result*: $\lst{Coll[Byte]}$
 - *Serialized as:* ExtractBytesWithNoRef
 
-#### Box.value (99.5)
+#### Box.id (99.5)
 
-- *Description*: Blake2b256 hash of this box’s content, basically equals to blake2b256(bytes).
+- *Description*: Returns the Blake2b256 hash of this box's content (`blake2b256(bytes)`).
 - *Parameters*: 
 - *Result*: $\lst{Coll[Byte]}$
 - *Serialized as:* ExtractId
 
 #### Box.creationInfo (99.6)
 
-- *Description*: If tx is a transaction which generated this box, then $\lst{creationInfo._1}$ is a height of the tx’s block. The $\lst{creationInfo._2}$ is a serialized transaction identifier followed by box index in the transaction outputs.
+- *Description*: Returns the height and transaction/output index where the box was created. `creationInfo._1` is the block height, and `creationInfo._2` is the transaction identifier concatenated with the box index.
 - *Parameters*: 
 - *Result*: $\lst{(Int,Coll[Byte])}$
 - *Serialized as:* ExtractCreationInfo
 
 #### Box.getReg (99.7)
 
-- *Description*: Extracts register by id and type. Type param T expected type of the register. Returns Some(value) if the register is defined and has given type and None otherwise
+- *Description*: Extracts register `regId` by ID and expected type `T`. Returns `Some(value)` if the register exists and has the specified type, `None` otherwise.
 - *Parameters*: $\lst{regId : Int}$ // zero-based identifier of the register.
 - *Result*: $\lst{Option[T]}$
 - *Serialized as:* ExtractRegisterAs
 
 #### Box.tokens (99.8)
 
-- *Description*: Secondary tokens.
+- *Description*: Returns the collection of secondary tokens held in the box.
 - *Parameters*: 
 - *Result*: $\lst{Coll[(Coll[Byte],Long)]}$
 - *Serialized as:* PropertyCall
 
 #### Box.R0 (99.9)
 
-- *Description*: Monetary value, in Ergo tokens. 
+- *Description*: Register R0: Monetary value in nanoErgs. Use `ExtractAmount` (value property).
 - *Parameters*: 
 - *Result*: $\lst{Option[T]}$
 - *Serialized as:* ExtractRegisterAs
 
-#### Box.value (99.10)
+#### Box.R1 (99.10)
 
-- *Description*: Guarding script
+- *Description*: Register R1: Guarding script bytes. Use `ExtractScriptBytes` (propositionBytes property).
 - *Parameters*: 
 - *Result*: $\lst{Option[T]}$
 - *Serialized as:* ExtractRegisterAs
 
-#### Box.value (99.11)
+#### Box.R2 (99.11)
 
-- *Description*: Secondary tokens.
+- *Description*: Register R2: Secondary tokens [(TokenId, Amount)]. Use `ExtractTokens` (tokens property).
 - *Parameters*: 
 - *Result*: $\lst{Option[T]}$
 - *Serialized as:* ExtractRegisterAs
 
 #### Box.R3 (99.12)
 
-- *Description*: Reference to transaction and output id where the box was created
+- *Description*: Register R3: Box creation information (height, txId, index). Use `ExtractCreationInfo` (creationInfo property).
 - *Parameters*: 
 - *Result*: $\lst{Option[T]}$
 - *Serialized as:* ExtractRegisterAs
 
 #### Box.R4 (99.13)
 
-- *Description*: Non-mandatory register.
+- *Description*: Optional register R4 for arbitrary data storage. Use `ExtractRegisterAs`.
 - *Parameters*: 
 - *Result*: $\lst{Option[T]}$
 - *Serialized as:* ExtractRegisterAs
 
 #### Box.R5 (99.14)
 
-- *Description*: Non-mandatory register.
+- *Description*: Optional register R5 for arbitrary data storage. Use `ExtractRegisterAs`.
 - *Parameters*: 
 - *Result*: $\lst{Option[T]}$
 - *Serialized as:* ExtractRegisterAs
 
 #### Box.R6 (99.15)
 
-- *Description*: Mandatory: Monetary value, in Ergo tokens (NanoErg unit of measure
+- *Description*: Optional register R6 for arbitrary data storage. Use `ExtractRegisterAs`.
 - *Parameters*: 
-- *Result*: $\lst{Long}$
+- *Result*: $\lst{Option[T]}$
 - *Serialized as:* ExtractRegisterAs
 
 #### Box.R7 (99.16)
 
-- *Description*: Mandatory: Monetary value, in Ergo tokens (NanoErg unit of measure
+- *Description*: Optional register R7 for arbitrary data storage. Use `ExtractRegisterAs`.
 - *Parameters*: 
-- *Result*: $\lst{Long}$
+- *Result*: $\lst{Option[T]}$
 - *Serialized as:* ExtractRegisterAs
 
 #### Box.R8 (99.17)
 
-- *Description*: Mandatory: Monetary value, in Ergo tokens (NanoErg unit of measure
+- *Description*: Optional register R8 for arbitrary data storage. Use `ExtractRegisterAs`.
 - *Parameters*: 
-- *Result*: $\lst{Long}$
+- *Result*: $\lst{Option[T]}$
 - *Serialized as:* ExtractRegisterAs
 
 #### Box.R9 (99.18)
 
-- *Description*: Mandatory: Monetary value, in Ergo tokens (NanoErg unit of measure
+- *Description*: Optional register R9 for arbitrary data storage. Use `ExtractRegisterAs`.
 - *Parameters*: 
-- *Result*: $\lst{Long}$
+- *Result*: $\lst{Option[T]}$
 - *Serialized as:* ExtractRegisterAs
 
 ### AvlTree 
 
 #### AvlTree.digest (100.1)
 
-- *Description*: Returns digest of the state represented by this tree. Authenticated tree $\lst{digest = root hash bytes ++ tree height}$
+- *Description*: Returns the digest of the state represented by this tree (root hash bytes ++ tree height).
 - *Parameters*: 
 - *Result*: $\lst{Coll[Byte]}$
 - *Serialized as:* PropertyCall
 
 #### AvlTree.enabledOperations (100.2)
 
-- *Description*: Flags of enabled operations packed in single byte.
+- *Description*: Returns the flags of enabled operations packed into a single byte.
 - *Parameters*: 
 - *Result*: $\lst{Byte}$
 - *Serialized as:* PropertyCall
@@ -493,4 +491,4 @@ isRemoveAllowed == (enabledOperations & 0x04) != 0
 
 ### Coll 
 
-### Option 
+### Option
