@@ -4,46 +4,45 @@
 ## ErgoScript and the UTXO Model
 - Ergo is a blockchain platform that operates on the UTXO (Unspent Transaction Output) model and employs a Proof-of-Work consensus mechanism.
 - Ergo introduces an *extended-UTXO model* that enables the execution of intricate financial contracts, akin to those supported by Ethereum's account-based model.
-- ErgoScript, being aligned with Ergo's UTXO model, incorporates numerous UTXO-specific constructs such as `Box`, `INPUTS`, and `OUTPUTS`. A comprehensive list of these constructs can be found [here](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/LangSpec.md).
+- ErgoScript, being aligned with Ergo's UTXO model, incorporates numerous UTXO-specific constructs such as `Box`, `INPUTS`, and `OUTPUTS`. A comprehensive list of these constructs can be found in the [LangSpec](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/LangSpec.md).
 - A [Box](box.md), essentially a UTXO, can accommodate up to ten [registers](registers.md) for data storage. Analogous to Bitcoin, an Ergo transaction consumes one or more existing boxes (represented by the `INPUTS` array) and produces one or more new boxes (represented by the `OUTPUTS` array).
-- ErgoScript is not Turing complete, but it is possible to build Turing complete applications, as demonstrated in [this peer-reviewed paper](https://arxiv.org/pdf/1806.10116v1.pdf).
+- ErgoScript is not Turing complete, but it is possible to build Turing-complete applications, as demonstrated in [this peer-reviewed paper](https://arxiv.org/pdf/1806.10116v1.pdf).
 
 ## ErgoScript Syntax
-- ErgoScript's syntax is a subset of Scala's. However, proficiency in Scala is not a prerequisite for learning ErgoScript. The Scala elements used in ErgoScript are minimal and straightforward, such as `val`. Unlike Java or Python, both Scala and ErgoScript access arrays using round parentheses. Hence, `OUTPUTS(0)` denotes the first element of the `OUTPUTS` array. In contrast to Scala, ErgoScript does not support the `var` keyword; all elements are immutable. ErgoScript, like Scala, supports functional programming, which simplifies interactions with collections using concepts such as `foreach`, `exists`, `fold`, etc.
-- An ErgoScript program, akin to ErgoTree, consists of a sequence of boolean predicates connected using `&&` and `||`.
-- ErgoScript provides cryptographic operations via `BigInt` and `GroupElement` (Elliptic curve point) types, along with associated operations like addition, multiplication, and exponentiation. It's important to note that `BigInt` operations in ErgoScript are performed modulo `2^256`, unlike Scala, hence overflow needs to be carefully managed.
+- ErgoScript's syntax is a subset of Scala's. However, proficiency in Scala is not a prerequisite for learning ErgoScript. The Scala elements used in ErgoScript are minimal and straightforward, such as `val`. Unlike Java or Python, both Scala and ErgoScript access arrays using round parentheses. Hence, `OUTPUTS(0)` denotes the first element of the `OUTPUTS` array. In contrast to Scala, ErgoScript does not support the `var` keyword; all defined elements are immutable. ErgoScript, like Scala, supports functional programming, which simplifies interactions with collections using concepts such as `foreach`, `exists`, `fold`, etc.
+- An ErgoScript program, akin to ErgoTree, consists of a sequence of boolean predicates connected using `&&` (AND) and `||` (OR).
+- ErgoScript provides cryptographic operations via `BigInt` and `GroupElement` (Elliptic curve point) types, along with associated operations like addition, multiplication, and exponentiation. It's important to note that `BigInt` operations in ErgoScript are performed modulo `2^256`, unlike in Scala, hence overflow needs to be carefully managed.
 
 ## Spending 
 
-An interacting party willing to spend the coin first constructs a [prover](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/sigmastate/interpreter/ProverInterpreter.scala) with a set of secrets, it knows and then the prover is executed in two steps:
+An interacting party willing to spend the coin first constructs a [prover](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/sigmastate/interpreter/ProverInterpreter.scala) with a set of secrets it knows, and then the prover is executed in two steps:
 
-- **Reduction** - the prover uses the ErgoTree interpreter which deterministically reduces the ErgoTree proposition to a compound _cryptographic statement_ (aka sigma proposition, Σ-protocol) by evaluating ErgoTree over known shared context (state of the blockchain system and a spending transaction). This step produces a value of the [SigmaBoolean](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/sigmastate/Values.scala) type.
-- **Signing** - the prover is turning the obtained (and possibly complex) Σ-proposition into a signature with the help of a [Fiat-Shamir transformation](https://en.wikipedia.org/wiki/Fiat-Shamir_heuristic). This step produces a _proof_ that the party knows the secrets such that the knowledge can be verified before the spending transaction is added to the blockchain.
+- **Reduction**: The prover uses the ErgoTree interpreter, which deterministically reduces the ErgoTree proposition to a compound _cryptographic statement_ (aka sigma proposition, Σ-protocol) by evaluating ErgoTree over the known shared context (state of the blockchain system and a spending transaction). This step produces a value of the [SigmaBoolean](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/sigmastate/Values.scala) type.
+- **Signing**: The prover turns the obtained (and possibly complex) Σ-proposition into a signature with the help of a [Fiat-Shamir transformation](https://en.wikipedia.org/wiki/Fiat-Shamir_heuristic). This step produces a _proof_ that the party knows the secrets, such that the knowledge can be verified before the spending transaction is added to the blockchain.
 
-To allow valid coin spending a [verifier](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/sigmastate/interpreter/Interpreter.scala) is running the ErgoTree interpreter with the following three inputs:
+To allow valid coin spending, a [verifier](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/sigmastate/interpreter/Interpreter.scala) runs the ErgoTree interpreter with the following three inputs:
 
-- A guarding proposition given by an ErgoTree 
-- A blockchain **_context_** of the transaction being verified
-- A **_proof_** (aka transaction signature) generated by a **_prover_** 
- 
-The verifier is executed as part of transaction validation for each input and is executed in three steps:
+- A guarding proposition given by an ErgoTree
+- The blockchain **_context_** of the transaction being verified
+- A **_proof_** (aka transaction signature) generated by a **_prover_**
+
+The verifier is executed as part of transaction validation for each input and proceeds in three steps:
 
 ### Reduction 
 
-Same as prover, the verifier uses the ErgoTree interpreter and deterministically produces a value of the [SigmaBoolean](sigmaboolean.md) type.  However, this step must finish the evaluation for any possible inputs within concrete fixed time limit (aka maximum cost), which the interpreter checks.
+Same as the prover, the verifier uses the ErgoTree interpreter and deterministically produces a value of the [SigmaBoolean](sigmaboolean.md) type. However, this step must finish the evaluation for any possible inputs within a concrete fixed time limit (aka maximum cost), which the interpreter checks.
 
 ### Cost estimation 
 
-The verifier estimates the complexity of the cryptographic Sigma proposition (based on the size and the concrete nodes of the SigmaBoolean tree). The spending fails if the estimated cost exceeds the maximum limit. 
+The verifier estimates the complexity of the cryptographic Sigma proposition (based on the size and the concrete nodes of the SigmaBoolean tree). The spending fails if the estimated cost exceeds the maximum limit.
 
 
 ### Signature verification 
 
-The signature checker, takes;
+The signature checker takes:
 
 1. The *proof*
-2. The *SigmaBoolean* (aka [sigma protocol](https://en.wikipedia.org/wiki/Proof_of_knowledge#Sigma_protocols) proposition) 
-3. The *signed message* (e.g. transaction bytes). 
+2. The *SigmaBoolean* (aka [sigma protocol](https://en.wikipedia.org/wiki/Proof_of_knowledge#Sigma_protocols) proposition)
+3. The *signed message* (e.g., transaction bytes).
 
-The checker then verifies the proof, which means it verifies that all the necessary secrets have been known and used to construct the proof (i.e. sign the transaction). 
-
+The checker then verifies the proof, which means it verifies that all the necessary secrets were known and used to construct the proof (i.e., sign the transaction).

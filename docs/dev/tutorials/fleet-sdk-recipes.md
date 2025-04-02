@@ -44,6 +44,7 @@ This page contains useful code snippets, patterns, and troubleshooting tips for 
 A common requirement when building off-chain logic is to validate conditions that mirror on-chain checks. One such check is verifying that an input box belongs to a specific owner whose public key (as a [SigmaProp](../scs/sigma.md)) is stored in another box's [register](../scs/boxes-and-registers.md). This is often needed for refund scenarios or proving ownership before allowing an action.
 
 The core task involves:
+
 1. Extracting the owner's SigmaProp bytes from a register (e.g., R4).
 2. Deserializing these bytes correctly.
 3. Converting the public key bytes into the owner's P2PK [ErgoTree](../scs/ergotree.md).
@@ -397,16 +398,17 @@ if (r4Value) {
 
 ```mermaid
 graph TD
-    A[Ergo Address String] -->|ErgoAddress.decode()| B(Public Key Bytes);
-    B -->|ErgoAddress.fromPublicKey()| C[ErgoAddress Object];
-    B -->|SGroupElement()| D[SGroupElement Object];
-    D -->|SSigmaProp()| E[SSigmaProp Object];
-    C -->|address.ergoTree| F[ErgoTree Hex (P2PK Script)];
-    E -->|ErgoAddress(sigmaProp).ergoTree| F;
+    A[Ergo Address String] -->|ErgoAddress.decode()| B(Public Key Bytes)
+    B -->|ErgoAddress.fromPublicKey()| C[ErgoAddress Object]
+    B -->|SGroupElement()| D[SGroupElement Object]
+    D -->|SSigmaProp()| E[SSigmaProp Object]
+    C -->|address.ergoTree| F[ErgoTree Hex (P2PK Script)]
+    E -->|ErgoAddress(sigmaProp).ergoTree| F
 
-    style F fill:#f9f,stroke:#333,stroke-width:2px;
-    style B fill:#ccf,stroke:#333,stroke-width:2px;
+    style F fill:#f9f,stroke:#333,stroke-width:2px
+    style B fill:#ccf,stroke:#333,stroke-width:2px
 ```
+
 *This diagram shows the typical conversion paths for P2PK addresses.*
 
 ---

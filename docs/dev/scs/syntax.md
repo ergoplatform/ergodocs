@@ -19,16 +19,16 @@ Key concepts of ErgoScript related to the UTXO model include:
 
 - **Box**: A `Box` is essentially a UTXO in Ergo and can store data across up to ten registers. Like Bitcoin, Ergo transactions consume one or more existing boxes (represented by the `INPUTS` array) and produce one or more new boxes (represented by the `OUTPUTS` array).
 - **UTXO-Specific Constructs**: ErgoScript incorporates constructs like `Box`, `INPUTS`, and `OUTPUTS` that are specific to the UTXO model. The [LangSpec.md](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/LangSpec.md) document provides a comprehensive list of these constructs.
-- **Turing Completeness**: Although ErgoScript is not Turing complete, you can still build Turing complete applications, as detailed in [this peer-reviewed paper](https://arxiv.org/pdf/1806.10116v1.pdf).
+- **Turing Completeness**: Although ErgoScript itself is not Turing complete, you can still build Turing-complete applications, as detailed in [this peer-reviewed paper](https://arxiv.org/pdf/1806.10116v1.pdf).
 
 ### ErgoScript Syntax Overview
 
 ErgoScript’s syntax is derived from Scala, but you don’t need to be a Scala expert to write ErgoScript. The language uses a minimal subset of Scala’s features, focusing on simplicity and functionality:
 
-- **Immutable Values**: In ErgoScript, you define values using `val`, ensuring immutability (similar to constants in other languages). Unlike Scala, ErgoScript does not support the `var` keyword, meaning all values are immutable.
+- **Immutable Values**: In ErgoScript, you define values using `val`, ensuring immutability (similar to constants in other languages). Unlike Scala, ErgoScript does not support the `var` keyword, meaning all defined values are immutable.
 - **Array Access**: Both Scala and ErgoScript use round parentheses for array access. For example, `OUTPUTS(0)` refers to the first element of the `OUTPUTS` array.
 - **Functional Programming**: ErgoScript supports functional programming constructs such as `foreach`, `exists`, and `fold`, making it easier to work with collections. More details on these can be found in the [ErgoScript Compiler Documentation](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/ergoscript-compiler.md).
-- **Boolean Predicates**: ErgoScript programs, like ErgoTree, consist of sequences of boolean predicates connected using `&&` (and) and `||` (or).
+- **Boolean Predicates**: ErgoScript programs, like ErgoTree, consist of sequences of boolean predicates connected using `&&` (AND) and `||` (OR).
 - **Cryptographic Operations**: ErgoScript supports cryptographic operations with `BigInt` and `GroupElement` types, allowing for addition, multiplication, and exponentiation. Note that `BigInt` operations in ErgoScript are performed modulo `2^256`, so overflow management is crucial.
 
 ### Example: Basic ErgoScript Syntax
@@ -95,8 +95,8 @@ val computeAsVal: Int = {
 
 Both functions accomplish the same task but differ in when the computation occurs:
 
-- **`computeAsDef`**: Defined using `def`, this function is evaluated each time it’s called, allowing for dynamic computation.
-- **`computeAsVal`**: Defined using `val`, this is a function literal (lambda). The computation is set at script initialization and only executed when the function is invoked.
+- **`computeAsDef`**: Defined using `def`, this function is evaluated each time it is called, allowing for dynamic computation.
+- **`computeAsVal`**: Defined using `val`, this is a function literal (lambda). The computation is defined at script initialization and only executed when the function is invoked.
 
 ### Advanced Functional Programming in ErgoScript
 

@@ -18,9 +18,9 @@ $$
 
 # ErgoTree as a Language
 
-This section provides an improved and clearer documentation for the ErgoTree language. ErgoTree is a typed, call-by-value, higher-order functional language without recursion. It supports various features such as single-assignment blocks, tuples, optional values, indexed collections with higher-order operations, short-cutting logical operations, and ternary if-else expressions with lazy branches. It is important to note that all operations in ErgoTree are deterministic, without side effects, and all values are immutable.
+This section provides improved and clearer documentation for the ErgoTree language. ErgoTree is a typed, call-by-value, higher-order functional language without recursion. It supports various features such as single-assignment blocks, tuples, optional values, indexed collections with higher-order operations, short-circuiting logical operations, and ternary if-else expressions with lazy branches. It is important to note that all operations in ErgoTree are deterministic, without side effects, and all values are immutable.
 
-The semantics of ErgoTree are specified by first translating it to a lower-level language called Core-λ and then providing its denotational evaluation semantics. The abstract syntax of ErgoTree is defined in Table 1, which represents the **Value** class of the reference implementation. The values in the "Mnemonic" column correspond to specific classes in the reference implementation.
+The semantics of ErgoTree are specified by first translating it to a lower-level language called Core-λ and then providing its denotational evaluation semantics. The abstract syntax of ErgoTree is defined in Table 1, which represents the `Value` class hierarchy in the reference implementation. The values in the "Mnemonic" column correspond to specific classes in the reference implementation.
 
 ### Table 1: Abstract syntax of ErgoTree language
 
@@ -48,13 +48,13 @@ The terms in ErgoTree are assigned types according to the typing rules specified
 
 - **Constants** contain both the type and the data value of that type. The type of a constant must correspond to its value for it to be well-formed.
 - **Variables** are always typed and identified by a unique ID, which refers to either a lambda-bound variable or a val-bound variable.
-- **Lambda expressions** can take a list of lambda-bound variables, which can be used in the body expression. The body expression can also be a **block expression**.
-- **Function application** takes an expression of functional type (e.g., $T_1 \to T_n$) and a list of arguments. The notation $e_f(\Ov{e})$ is not used to represent function application because it suggests that $(\Ov{e})$ is a subterm, which it is not.
-- **Method invocation** allows the application of functions defined as methods of types. If an expression $e$ has type $T$, and a method $m$ is declared in type $T$, the method invocation $e.m(args)$ is valid. For more information on types and their methods, refer to section A.
+- **Lambda expressions** can take a list of lambda-bound variables, which can be used in the body expression. The body expression itself can also be a **block expression**.
+- **Function application** takes an expression of functional type (e.g., $(T_1, \ldots, T_n) \to T$) and a list of arguments. The notation $e_f(\Ov{e})$ is not used to represent function application because it suggests that $(\Ov{e})$ is a subterm, which it is not.
+- **Method invocation** allows the application of functions defined as methods of types. If an expression $e$ has type $T$, and a method $m$ is declared in type $T$, the method invocation $e.m(args)$ is valid. For more information on types and their methods, refer to [Types](types.md).
 - **Conditional expressions** in ErgoTree evaluate the condition strictly and the branches lazily. Each branch is an expression executed based on the result of the condition. This laziness is specified by lowering the expressions to Core-λ (see Figure 2).
-- **Block expressions** contain a list of **val** definitions of variables. Each subsequent definition in the block can only refer to previously defined variables. The result of block execution is the result of the expression $e$, which can refer to any block variable.
+- **Block expressions** contain a list of **val** definitions (bindings) of variables. Each subsequent definition in the block can only refer to previously defined variables. The result of the block's execution is the result of the final expression $e$, which can refer to any variable defined within the block.
 
-Each **type** in ErgoTree can be associated with a list of method declarations, indicating that the type has methods. The semantics of these methods follow the same principles as in Java. When an instance of a type with methods exists, it is possible to call methods on the instance with additional arguments.
+Each **type** in ErgoTree can be associated with a list of method declarations, indicating that the type has methods. The semantics of these methods follow similar principles to those in object-oriented languages like Java or Scala. When an instance of a type with methods exists, it is possible to call methods on the instance with additional arguments.
 
 Each **method** in ErgoTree can be parameterized by type variables, which are used in the method signature. Since ErgoTree only supports monomorphic values, each method call is monomorphic, and all type variables are assigned concrete types (see the MethodCall typing rule in [typing](typing.md)).
 
@@ -79,7 +79,7 @@ All $n$-ary lambdas where $n > 1$ are transformed into single-argument lambdas u
 
 It should be noted that the $\IfThenElse{e_{\text{cond}}}{e_1}{e_2}$ term in ErgoTree has lazy evaluation of its branches, while the right-hand-side $\lst{if}$ is a primitive operation with strict evaluation of the arguments. Laziness is achieved using lambda expressions of type $\lst{Unit} \to \lst{Boolean}$.
 
-Logical operations ($\lst{||}$, &&) in ErgoTree, which are lazy on the second argument, are translated to $\lst{if}$ terms in ErgoTree, which are recursively translated to the corresponding Core-λ terms.
+Logical operations ($\lst{||}$, `&&`) in ErgoTree, which are lazy (short-circuiting) on the second argument, are translated to $\lst{if}$ terms in ErgoTree, which are then recursively translated to the corresponding Core-λ terms.
 
 Syntactic blocks in ErgoTree are eliminated and translated into nested lambda expressions, which unambiguously specify the evaluation semantics of blocks. The evaluation semantics of Core-λ are specified in [evaluation](evaluation.md).
 

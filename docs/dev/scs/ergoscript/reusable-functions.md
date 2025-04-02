@@ -1,108 +1,126 @@
 ## Debugging Techniques
 
-- Check the versions of dependencies like `ergo-lib-wasm-nodejs` and `ergo-lib-wasm-browser` to ensure you have the latest fixes
-- If an issue is suspected to be with the Nautilus wallet, try manually replacing the `.wasm` file in the extension directory with an updated version of `sigma-rust` wasm
-- Building Nautilus from source with updated dependencies can help identify issues
-- When encountering issues with on-chain boxes, you can try:
-  1. Make contract edits (e.g., set a condition to always true)
-  2. Compile the modified contract and get the new ErgoTree hex
-  3. Replace the ErgoTree of the problematic box with the new hex
-  4. Try signing the transaction (it should work even if the modified tree wouldn't validate on-chain)
-- For mocking boxes in unit tests, use the `mockUTxO` function from `@fleet-sdk/mock-chain` instead of manually editing box contents
+- Check the versions of dependencies like `ergo-lib-wasm-nodejs` and `ergo-lib-wasm-browser` to ensure you have the latest fixes.
+- If an issue is suspected to originate from the Nautilus wallet, try manually replacing the `.wasm` file in the extension directory with an updated version from `sigma-rust`.
+- Building Nautilus from source with updated dependencies can help identify issues.
+- When encountering issues with on-chain boxes, you can try the following:
+  1. Make temporary contract edits (e.g., set a condition to always evaluate to `true`).
+  2. Compile the modified contract and obtain the new ErgoTree hex.
+  3. Replace the ErgoTree of the problematic box with the new hex (off-chain).
+  4. Attempt to sign the transaction (this should work locally even if the modified tree wouldn't validate on-chain, helping isolate signing issues).
+- For mocking boxes in unit tests, use the `mockUTxO` function from `@fleet-sdk/mock-chain` instead of manually editing box contents.
 
 ## FAQs
 
-### Is the EIP3 Secret similar to an account index for derived public keys?
+### Is the EIP-3 Secret similar to an account index for derived public keys?
 
-Yes, the EIP3 secret is similar to an account index for derived public keys, as confirmed by user 'Aberg (Satergo dev)'. In Satergo wallet it is called the "address index" and custom indices can be used.
+Yes, the EIP-3 secret functions similarly to an account index for deriving public keys. As confirmed by user 'Aberg (Satergo dev)', the Satergo wallet refers to this as the "address index," and custom indices can be utilized.
 
-### How do I convert a Coll[Byte] of proposition bytes to SigmaProp type? 
+### How do I convert a Coll[Byte] of proposition bytes to the SigmaProp type? 
 
-Look for the `decodePoint` method, this is probably what you need to convert bytes to a SigmaProp.
+The `decodePoint` method is likely what you need to convert proposition bytes (`Coll[Byte]`) into a `SigmaProp`.
 
-### Can I insert two tokens with the same ID but different amounts in a box? 
+### Can I insert two tokens with the same ID but different amounts into a box? 
 
-You can, but some offchain code may get confused. The amounts would get merged into one entry in the box's tokens array.
+Yes, you can, but be aware that some off-chain code might become confused. The amounts will be merged into a single entry in the box's tokens array.
 
-### How do I fix "Tree root should be real but was UnprovenSchnorr(ProveDlog(Ecp(..." error?
+### How do I fix the "Tree root should be real but was UnprovenSchnorr(ProveDlog(Ecp(..." error?
 
-This usually means the transaction was signed by an incorrect public key.
+This error usually indicates that the transaction was signed using an incorrect private key (i.e., one that doesn't correspond to the public key expected by the script).
 
 ### As a complete coding beginner, should I learn Java then Scala before ErgoScript?
 
-It's recommended to focus on learning UTXO model concepts first. The courses at https://docs.ergoplatform.com/dev/get-started/ are a good starting point without needing Java or Scala.
+It's generally recommended to focus on understanding UTXO model concepts first, rather than diving deep into Java or Scala initially. The courses available at https://docs.ergoplatform.com/dev/get-started/ provide a good starting point without requiring prior Java or Scala knowledge.
 
 ### How are dApp fees handled in ErgoScript contracts?
 
-In ErgoScript, fees are handled explicitly as part of the transaction building process. See the Token Sale Service contract example: 
+In ErgoScript, fees are handled explicitly during the transaction building process, not directly within the script logic itself. The script verifies conditions based on the transaction outputs. See the Token Sale Service contract example for illustration: 
 https://github.com/ergoplatform/ergoscript-by-example/blob/main/tokenSalesService.md
 
 Key aspects:  
 
-- Tx fee (`MinTxFee`) must be set 
-- Box outputs handle the distribution of payment and token amounts
-- Fee is paid from input boxes controlled by the dApp/contract
+- The transaction fee (`MinTxFee`) must be included in one of the output boxes (typically the last one, designated for the miner).
+- Other output boxes handle the distribution of payment and token amounts according to the contract's logic.
+- The fee is paid from the value contained within the input boxes being spent.
 
-### How can options/Some(...) be used in ErgoScript outside of registers and context variables?
+### How can Option/Some(...) be used in ErgoScript outside of registers and context variables?
 
-The use of options is de-facto limited to registers and context vars as the source of `Some(...)` values. A workaround is to use a "fake" register and then `box.R4[Boolean].map(r => <some expression which doesn't depend on r>)`.
+The use of `Option` types (like `Some(...)`) is effectively limited to values originating from registers (`box.R<N>[Type]`) and context variables (`getVar[T](...)`). A potential workaround for other scenarios involves using a "dummy" optional register value and applying a map operation: `box.R4[Boolean].map(r => <some expression which doesn't depend on r>)`.
 
 ### What's the proper syntax for fold/map/reduce operations in ErgoScript?
 
-Some examples:
+Here are some examples demonstrating common collection operations:
 ```scala
-// Simple sum with fold
-def sum(a: Long, b: Box) = a + b.value
-val total = INPUTS.fold(0L, sum)
+// Simple sum using fold with an explicitly defined function
+def sumFunc(a: Long, b: Box): Long = a + b.value
+val totalValue = INPUTS.fold(0L, sumFunc)
 
-// Declare function separately, use name in fold 
-def sum[Long](a:Long, b:Box) = a + b.value
-val total = INPUTS.fold(0L, sum)  // Type parameter [Long] not needed
+// Using fold with an inline lambda function
+val totalValueLambda = INPUTS.fold(0L, { (accum: Long, box: Box) => accum + box.value })
 
-// Upcoming Sigma 6.0 may allow methods like
-val total = INPUTS.sumBy(b => b.value)
+// Declaring a generic function (though type parameter often inferred)
+// def sumGeneric[T](a: T, b: Box): T = ??? // Example structure
+// val totalGeneric = INPUTS.fold(0L, sumGeneric) // Type parameter usually not needed here
+
+// Note: Upcoming Sigma 6.0 might introduce more direct methods like:
+// val total = INPUTS.sumBy(b => b.value) 
 ```
 
-### How to store a script hash in a register using Fleet?
+### How can I store a script hash in a register using Fleet for later comparison?
 
-To store script bytes in a register for comparison to a box's `propositionBytes`:
+To store the bytes of a script (ErgoTree) in a register, allowing an ErgoScript contract to later verify that an output box is protected by that specific script:
 ```js
-// Create output with register
-new OutputBuilder(SAFE_MIN_BOX_VALUE, SELL_ORDER_ADDRESS)  
-  // ... 
+// In your off-chain Fleet code (JavaScript/TypeScript):
+// Create an output box and set register R8 to the hex representation 
+// of the target script's ErgoTree bytes.
+new OutputBuilder(SAFE_MIN_BOX_VALUE, /* Some Address */)  
+  // ... other builder methods
   .setAdditionalRegisters({
-    R8: SColl(SByte, ErgoAddress.fromBase58(DEPOSIT_ADDRESS).ergoTree).toHex()
-  })
+    R8: SConstant(SColl(SByte, ErgoAddress.fromBase58(TARGET_SCRIPT_ADDRESS).ergoTree)).toHex() 
+  });
 ```
 
-And in the contract:
 ```scala
+// In your ErgoScript contract:
 {
-  // Validate the box is going to the expected script
-  someBox.R8[Coll[Byte]].get == someBox.propositionBytes
+  // Retrieve the expected script bytes from the register
+  val expectedScriptBytes = SELF.R8[Coll[Byte]].get 
+  
+  // Get the actual script bytes of an output box
+  val outputBoxScriptBytes = OUTPUTS(0).propositionBytes 
+
+  // Verify that the output box uses the expected script
+  expectedScriptBytes == outputBoxScriptBytes
+  // ... other conditions
 }
 ```
 
 ## Noted Issues
 
-- There was a bug in `sigma-rust` related to `coll.slice` not gracefully handling empty collections, in contrast to the Scala version used in nodes. This caused issues for around 3 weeks until it was fixed by user 'greenhat'. The fix was merged into the develop branch of `sigma-rust`.
-- The fix needs to propagate through the dependency tree, including an update to the Nautilus wallet, before it fully resolves the issues for end users.
-- Some unexpected exceptions can arise with ErgoScript when using `.toBigInt` on `Long` register values. Investigation pending.
-- Using ErgoNames, if a token containing a registered name is burned, that name would be lost forever. Potential solutions being researched.
+- A bug existed in `sigma-rust` where `coll.slice` did not gracefully handle empty collections, differing from the Scala version used in nodes. This caused issues for approximately 3 weeks until fixed by user 'greenhat'. The fix has been merged into the `develop` branch of `sigma-rust`.
+- This fix needs to propagate through the dependency tree (including updates to libraries like `ergo-lib-wasm` and wallets like Nautilus) before fully resolving issues for all end users.
+- Some unexpected exceptions have been reported when using `.toBigInt` on `Long` register values in ErgoScript. Further investigation is needed.
+- With ErgoNames, if a token representing a registered name is burned, that name registration is permanently lost. Potential solutions are being researched.
 
 ## Tutorial Code Snippets
 
-Summing nanoErgs of all inputs:
+**Summing nanoErgs of all inputs:**
 ```scala 
-def sum(a: Long, b: Box) = a + b.value
-val total = INPUTS.fold(0L, sum)
+// Define a function to add a box's value to an accumulator
+def sumValues(accum: Long, box: Box): Long = accum + box.value
+// Use fold to apply the sum function across all INPUTS, starting with 0L
+val totalNanoErgs = INPUTS.fold(0L, sumValues) 
 ```
 
-Storing a script hash in a register with Fleet:
+**Storing a script hash in a register using Fleet:**
 ```js
-new OutputBuilder(SAFE_MIN_BOX_VALUE, SELL_ORDER_ADDRESS)
+// Off-chain code to create an output box storing the target script's hash in R8
+const targetAddress = "TARGET_SCRIPT_ADDRESS"; // Replace with the actual address
+const targetErgoTreeBytes = ErgoAddress.fromBase58(targetAddress).ergoTree;
+
+new OutputBuilder(SAFE_MIN_BOX_VALUE, /* Some Address */)
   .setAdditionalRegisters({ 
-    R8: SColl(SByte, ErgoAddress.fromBase58(DEPOSIT_ADDRESS).ergoTree).toHex() 
+    R8: SConstant(SColl(SByte, targetErgoTreeBytes)).toHex() 
   });
 ```
 
