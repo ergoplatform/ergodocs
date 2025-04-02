@@ -16,8 +16,17 @@ tags:
 1. **Create a Folder**: Start by creating a folder where you will keep all files related to your Ergo node. A good example is creating a folder named `ergo` in your home directory.
 
 2. **Download or Build the Ergo Client**:
-   - **Download**: Visit the [Ergo GitHub releases page](https://github.com/ergoplatform/ergo/releases/) and download the latest `.jar` file.
-   - **Build from Source**: If you prefer, you can clone the Ergo repository and compile the `.jar` file yourself using [SBT](https://www.scala-sbt.org/) by running `sbt assembly`. Alternatively, you can set up using Docker by following the guide in [Docker setup](docker.md).
+   - **Download**: Visit the [Ergo GitHub releases page](https://github.com/ergoplatform/ergo/releases/) and download the latest stable `.jar` file. This is the recommended method for most users.
+   - **Build from Source**: If you need a specific version (e.g., a release candidate) or want to contribute to development, you can build the node from source:
+      1. **Prerequisites**: Ensure you have [Git](https://git-scm.com/downloads) and a compatible Java Development Kit (JDK >= 9, check Ergo repository README for specific version recommendations) and [SBT](https://www.scala-sbt.org/download.html) installed.
+      2. **Clone Repository**: `git clone https://github.com/ergoplatform/ergo.git`
+      3. **Navigate to Directory**: `cd ergo`
+      4. **Checkout Specific Version (Optional)**:
+         * To build the latest development code, stay on the default branch (`master`).
+         * To build a specific release or release candidate (RC), check out the corresponding tag: `git checkout v5.0.10` or `git checkout v6.0.0-RC2` (Replace tag name as needed. Find tags on the [releases page](https://github.com/ergoplatform/ergo/releases/)).
+      5. **Handle SNAPSHOT Dependencies (If Applicable)**: Some development versions or RCs might depend on unreleased SNAPSHOT versions of libraries (like `scorex-util` or `sigmastate-interpreter`). If the build fails due to missing SNAPSHOT dependencies, you may need to clone those respective repositories, check out the correct branches/tags, and publish them locally first using `sbt publishLocal`. Consult the Ergo repository's README or developer channels for specific instructions if you encounter this.
+      6. **Compile the JAR**: Run `sbt assembly`. This command compiles the code and packages it into a single executable `.jar` file located in the `target/scala-*/` directory (e.g., `target/scala-2.13/ergo-*.jar`).
+      7. **Alternative (Docker)**: You can also build and run using Docker, see the [Docker setup guide](docker.md).
 
 ### Setting Up Your Node
 

@@ -81,12 +81,25 @@ ErgoScript is the high-level, developer-friendly language. It gets compiled into
 Please see this [Quick Primer on ErgoScript](ergoscript-primer.md) for an overview of key concepts and some basic examples.
 ///
 
+## Debugging and Tooling
+
+While ErgoScript aims for simplicity and security, debugging complex contracts can still be challenging. Currently, developers often rely on manual inspection and testing. Tools are emerging to improve this process:
+
+*   **[Ergoscript Simulator](https://github.com/spectrum-finance/ergoscript-simulator):** A community-developed tool that allows simulating ErgoScript execution, which can be helpful for debugging logic. (Note: The core protocol itself does not yet have built-in `debug()` or extensive tracing capabilities, as discussed in developer channels).
+
+## Advanced Cryptography in ErgoScript
+
+ErgoScript's foundation on Sigma Protocols allows for powerful cryptographic primitives. However, some advanced structures commonly used in blockchain contexts have specific considerations:
+
+*   **Merkle Trees:** While [Merkle Trees](data-model/structures/merkle/merkle-tree.md) are fundamental to Ergo's data integrity (e.g., for transactions and extension data), direct verification of Merkle proofs *within* an ErgoScript contract is not natively supported by the interpreter at this time. Verification typically happens off-chain or relies on specific protocol designs where roots are checked, rather than individual proofs being processed by the script itself. Developers interested in the concept and off-chain usage should consult the [Merkle Tree documentation](data-model/structures/merkle/merkle-tree.md).
+
 ## Related Technical Resources
 - [ErgoTree Documentation](ergotree.md)
 - [Sigma Protocols Overview](sigma.md)
 - [Schnorr Signatures](schnorr.md)
 - [Light Verifying Nodes](nipopow_nodes.md)
 - [eUTXO Model Explanation](eutxo.md)
+- [ErgoScript Language Specification](lang-spec.md) (Detailed reference)
 
 ## Comparative Analysis
 ErgoScript stands out by:
@@ -102,3 +115,4 @@ ErgoScript stands out by:
 - Immutable [transaction graph](transactions.md) allows for optimizations.
 - Native support for [light verifying nodes](light-spv-node.md) enhances accessibility.
 - [Non-Turing complete](multi-stage-txs.md) base language prevents infinite loops and simplifies cost analysis.
+- See the [Interpreter Performance Style Guide](https://github.com/ergoplatform/sigmastate-interpreter/blob/develop/docs/perf-style-guide.md) for tips on writing efficient scripts.

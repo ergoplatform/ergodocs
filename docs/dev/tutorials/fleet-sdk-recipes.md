@@ -30,6 +30,7 @@ This page contains useful code snippets, patterns, and troubleshooting tips for 
     - [Complete Example:](#complete-example)
   - [Working with Numeric Registers](#working-with-numeric-registers)
   - [Extracting Token IDs from Registers](#extracting-token-ids-from-registers)
+  - [Decoding Complex/Tuple Types from Registers](#decoding-complextuple-types-from-registers)
   - [Compiling ErgoScript to ErgoTree](#compiling-ergoscript-to-ergotree)
   - [Troubleshooting Common Issues](#troubleshooting-common-issues)
     - [1. ErgoTree Comparison Failures](#1-ergotree-comparison-failures)
@@ -254,6 +255,97 @@ if (requiredTokenId) {
 
 ---
 
+## Decoding Complex/Tuple Types from Registers
+
+Contracts might store more complex data structures in registers, such as tuples `(TypeA, TypeB)` or nested collections. Fleet's `deserialize` function handles these, returning a nested object structure that mirrors the on-chain type. You need to inspect this structure to extract the individual components.
+
+**Example: Decoding a Tuple `(SigmaProp, Long)` from R5**
+
+Assume R5 contains a serialized tuple where the first element is a `SigmaProp` (owner's public key) and the second is a `Long` (deadline).
+
+```typescript
+import { Box } from "@fleet-sdk/core";
+import { deserialize } from "@fleet-sdk/serializer";
+import { Buffer } from 'buffer'; 
+
+/**
+ * Extracts data from a register assumed to contain a serialized (SigmaProp, Long) tuple.
+ * @param box The box containing the register.
+ * @param register The register name (R4-R9).
+ * @returns An object { ownerPubKeyHex: string, deadline: bigint } or null if format is wrong.
+ */
+function decodeSigmaPropLongTuple(box: Box, register: "R4" | "R5" | "R6" | "R7" | "R8" | "R9"): { ownerPubKeyHex: string; deadline: bigint } | null {
+  try {
+    const registerValueHex = box.additionalRegisters[register];
+    if (!registerValueHex) return null;
+
+    const deserialized = deserialize(registerValueHex);
+
+    // Expecting STuple with two items
+    if (deserialized.type !== "STuple" || !Array.isArray(deserialized.value) || deserialized.value.length !== 2) {
+      console.warn(`Register ${register} is not the expected STuple format.`);
+      return null;
+    }
+
+    const [item1, item2] = deserialized.value;
+
+    // Extract SigmaProp (assuming SSigmaProp(SGroupElement(bytes)))
+    let ownerPubKeyBytes: Uint8Array | null = null;
+    if (item1?.type === "SSigmaProp" && item1.value?.type === "SGroupElement" && item1.value.value) {
+       ownerPubKeyBytes = new Uint8Array(item1.value.value);
+    } else {
+       console.warn(`First tuple item in ${register} is not the expected SSigmaProp(SGroupElement(...)) format.`);
+       return null;
+    }
+    
+    if (!ownerPubKeyBytes || ownerPubKeyBytes.length !== 33) {
+        console.warn(`Extracted public key bytes from tuple in ${register} are invalid.`);
+        return null;
+    }
+    const ownerPubKeyHex = Buffer.from(ownerPubKeyBytes).toString('hex');
+
+
+    // Extract Long
+    let deadline: bigint | null = null;
+    if (item2?.type === "SLong" && typeof item2.value === 'string') {
+        deadline = BigInt(item2.value);
+    } else {
+        console.warn(`Second tuple item in ${register} is not the expected SLong format.`);
+        return null;
+    }
+
+    return { ownerPubKeyHex, deadline };
+
+  } catch (error) {
+    console.error(`Error decoding tuple from ${register} in box ${box.boxId}:`, error);
+    return null;
+  }
+}
+
+// --- Usage Example ---
+/*
+const contractBox: Box = { ... }; // Populate with actual box data
+const tupleData = decodeSigmaPropLongTuple(contractBox, "R5");
+
+if (tupleData) {
+  console.log(`Owner PubKey Hex: ${tupleData.ownerPubKeyHex}`);
+  console.log(`Deadline: ${tupleData.deadline}`);
+  // You can now use ErgoAddress.fromPublicKey(Buffer.from(tupleData.ownerPubKeyHex, 'hex'))
+} else {
+  console.log("Could not decode (SigmaProp, Long) tuple from R5.");
+}
+*/
+```
+
+**General Approach:**
+
+1.  Call `deserialize(registerValueHex)`.
+2.  Check the `type` property of the result (e.g., `"STuple"`, `"SColl"`).
+3.  If it's a collection or tuple, access the `value` property (which will be an array).
+4.  Recursively inspect the `type` and `value` of each element within the `value` array to extract the nested data according to the expected structure.
+
+---
+
 ## Compiling ErgoScript to ErgoTree
 
 The Fleet SDK includes a compiler module to convert [ErgoScript](../scs/ergoscript.md) source code into its corresponding ErgoTree hex string, which is needed when creating contract boxes.
@@ -420,4 +512,3 @@ graph TD
 - [Fleet SDK GitHub Examples](https://github.com/fleet-sdk/fleet-by-example)
 - [Fleet SDK Compiler](https://fleet-sdk.github.io/docs/compiler)
 - [Fleet SDK Serializer](https://fleet-sdk.github.io/docs/serializer-overview)
-

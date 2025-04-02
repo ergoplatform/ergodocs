@@ -89,12 +89,47 @@ For more details regarding node configuration, please refer to the [manual insta
   
 - If you wish for your node to be accessible, you will need to set up port forwarding on port 9030 for your Android device in your router settings.
   
-- You might need to specify the Java heap space with the -Xmx flag depending on your device. On the Samsung S8+, a heap size of -Xmx1536M was optimal. The node start command with a heap size of 2Gb looks like this: 
+- **Memory Allocation**: You will likely need to specify the Java heap space using the `-Xmx` flag, especially on devices with limited RAM. Start with `-Xmx1G` or `-Xmx1536M` and adjust based on your device's performance. The node start command with a heap size of 2Gb looks like this: 
 
 ```bash
 java -Xmx2G  -jar ergo.jar --mainnet -c ergo.conf
 ```  
-
-- If you use the Ergo Wallet App, you can replace the default node with ``http://127.0.0.1:9053``, allowing you to use the node running on your Android device. 
   
-- The package 'tmux' is useful, and recommended if you'd like to run the node in the background. 
+- If you use the Ergo Wallet App, you can replace the default node with `http://127.0.0.1:9053`, allowing you to use the node running on your Android device. 
+  
+- The package `tmux` is useful and recommended if you'd like to run the node in the background. 
+
+## Advanced Setup for RocksDB Compatibility (glibc vs musl libc)
+
+**Issue:** Some Ergo node versions or configurations rely on the RocksDB database engine. RocksDB's pre-compiled Java bindings (JARs) often expect the standard GNU C Library (`glibc`). However, Android and environments like Termux typically use a different C library, `musl libc` (via `Bionic`). This incompatibility can prevent the node from starting if it requires RocksDB (e.g., for certain state types or potentially older versions).
+
+**Workaround (Termux + proot + Arch Linux):** A community-discovered workaround involves using `proot` within Termux to run an Arch Linux environment, which *does* use `glibc`. This allows the RocksDB bindings to function correctly.
+
+**Disclaimer:** This is an advanced procedure and may introduce its own complexities or stability issues. Proceed with caution.
+
+**Steps (High-Level Overview):**
+
+1.  **Install `proot-distro` in Termux:**
+    ```bash
+    pkg install proot-distro
+    ```
+2.  **Install Arch Linux:**
+    ```bash
+    proot-distro install archlinux
+    ```
+3.  **Login to Arch Linux Environment:**
+    ```bash
+    proot-distro login archlinux
+    ```
+4.  **Inside Arch Linux:**
+    *   Update package lists: `pacman -Syu`
+    *   Install necessary dependencies (Java JDK, wget, etc.): `pacman -S jdk-openjdk wget ...` (Ensure you install a compatible JDK version).
+    *   Download/copy the Ergo node `.jar` file and your `ergo.conf` into this Arch Linux environment (e.g., using shared storage access or `wget`).
+    *   Run the Ergo node using the `java -jar ...` command as described earlier, but *within* the Arch Linux `proot` environment.
+
+**Considerations:**
+
+*   This adds overhead compared to running directly in Termux.
+*   File system access between Termux and the `proot` environment needs careful handling.
+*   Ensure the node configuration within the Arch environment points to the correct data directories.
+*   This workaround is primarily needed if your specific node configuration requires RocksDB and encounters libc conflicts. Simpler configurations (like digest state without RocksDB) might run directly in Termux as described in the main guide.

@@ -148,3 +148,17 @@ sudo netstat -tulpn
 ### 'Tree Root Should Be Real'
 
 This error typically means you're trying to sign a box that you don't own (i.e., you don't have the private key needed to sign).
+
+## Issues with Public Nodes
+
+While running your own node provides the most control and trust, many users rely on public nodes (like those listed on [ergonodes.net](https://ergonodes.net/list) or public API instances mentioned elsewhere in the docs) for convenience. If you encounter issues with a public node (e.g., incorrect data from indexed endpoints, API timeouts, connectivity problems):
+
+1.  **Try a Different Public Node:** The simplest first step is to switch your wallet or application to use a different public node from the available lists. The issue might be specific to the node you were initially using.
+2.  **Check Node Status:** Websites like [ergonodes.net](https://ergonodes.net/list) often show basic status information (height, sync status) for listed nodes. Check if the node you're having trouble with is reported as being out of sync or offline.
+3.  **Identify the Operator (If Possible):** Some public nodes might be run by known community projects or individuals. If you can identify the operator, you might find specific support channels (Discord, Telegram) where you can report the issue directly.
+4.  **Report in Community Channels:** If the operator is unknown or the issue seems widespread, report the problem in general Ergo community support channels (like the [#node](https://discord.gg/jjRP2uNAv5) channel on Discord). Provide details:
+    *   The IP address or URL of the public node.
+    *   The specific issue encountered (e.g., "API endpoint /blockchain/indexed/transaction/{txIndex} returning 404 for known index", "Node not responding", "Incorrect balance reported").
+    *   The time the issue occurred.
+    *   Any relevant transaction IDs or addresses if applicable.
+5.  **Understand Limitations:** Public nodes are shared resources and may have unannounced downtime, performance limitations (unofficial rate limits), or occasional indexing issues (especially if using the `extraIndex` feature). For critical applications, running your own node is always recommended.

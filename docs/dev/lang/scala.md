@@ -27,6 +27,12 @@ Scala has several features that set it apart from other JVM languages.
 - Furthermore, Scala is multi-paradigm, allowing for the combination of OOP, FP, and LP, making it suitable for a wide range of domains. 
 - Lastly, Scala3 brings even more powerful features such as metaprogramming and tools for zero-cost abstractions.
 
+### Scala Versioning (Scala 3)
+
+Ergo's core components, including the reference node and `sigmastate-interpreter`, have undergone migration to **Scala 3**. This migration leverages the newer language features, improved type system, and tooling enhancements offered by Scala 3.
+
+*   **Rationale & Implications:** For a detailed understanding of the motivations behind the Scala 3 migration and its potential impact on the ecosystem (including Long-Term Support plans), refer to the official Scala blog post: [Next Steps for Scala 3 and Scala 2 Long-Term Support](https://www.scala-lang.org/blog/next-scala-lts.html).
+*   **Developer Impact:** Developers contributing to or building upon these core libraries need to ensure their development environment and build tools (like SBT) are compatible with Scala 3. While Scala 3 offers significant improvements, developers should be aware of potential syntax changes or library compatibility adjustments compared to Scala 2.
 
 ## Learning Resources
 

@@ -40,6 +40,7 @@ scorex {
 }
 ```
 
+**Note on Progress Reporting:** Currently, the node may not provide detailed progress updates specifically during the *download phase* of the UTXO snapshot itself when `utxoBootstrap = true`. Synchronization progress for headers and subsequent blocks is typically visible via the node panel (`/panel`) or logs, but the snapshot download phase might appear as a period of inactivity before regular block processing resumes.
 
 ## Technical Details
 

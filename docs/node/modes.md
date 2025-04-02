@@ -22,7 +22,27 @@ The available modes include:
 
 - [**Light-Fullnode Mode**](light-full-node.md): This mode only holds the root digest of the state dictionary (authenticated state) and checks full blocks or a suffix of the blockchain, depending on the `blocksToKeep` setting ([History Pruning](history-pruning.md)).
 
-- [**Light-SPV Mode**](light-spv-node.md): A lightweight mode that enables users (typically [light clients](nipopow_nodes.md)) to verify [transactions](transactions.md) with a small sample of [block headers](block-header.md) using [NIPoPoWs](nipopows.md).
+- [**Light-SPV Mode**](light-spv-node.md): A lightweight mode that enables users (typically [light clients](nipopow_nodes.md)) to verify [transactions](transactions.md) with a small sample of [block headers](block-header.md) using [NIPoPoWs](nipopows.md). This mode is primarily for verification and typically relies on trusted third-party nodes for submitting transactions and querying balances.
+
+## Mode Comparison Summary
+
+Choosing the right node mode depends on your specific needs regarding security, resource usage, and required functionality (especially wallet support). Here's a summary comparison:
+
+| Feature / Mode        | Archival Full Node | Pruned Full Node | Light Full Node (Digest State) | Light SPV Client |
+| :-------------------- | :----------------- | :--------------- | :----------------------------- | :--------------- |
+| **Primary Goal**      | Max Security, History | Full Security, Reduced Storage | Full Security, Minimal Storage | Verification, Minimal Resources |
+| **Storage Req.**      | Very High (Full Chain) | Medium (Snapshot + Recent Blocks) | Low (Headers + Recent Blocks + State Digest) | Very Low (Headers Sample) |
+| **Sync Time**         | Very Long          | Fast (Snapshot/NIPoPoW Bootstrap) | Fast (NIPoPoW/Snapshot Bootstrap) | Very Fast |
+| **Full Tx Validation**| Yes                | Yes (for recent blocks) | Yes (via ADProofs/Recent Blocks) | No (Header validation only) |
+| **Wallet Support**    | Full               | Limited¹         | Limited²                       | Limited³ (Verification) |
+| **Wallet Restoration**| Yes                | **No**¹          | **No**¹                        | **No** |
+| **Key Config**        | `stateType="utxo"`<br>`blocksToKeep=-1` | `stateType="utxo"`<br>`blocksToKeep > 0`<br>`utxoBootstrap=true` | `stateType="digest"`<br>`blocksToKeep > 0`<br>`nipopowBootstrap=true` | N/A (Client-side logic) |
+
+**Notes:**
+
+1.  **Pruned/Light-Full Wallet Restoration:** These modes do not store the full blockchain history required to scan for and restore old wallets. You typically need to create a new wallet and transfer funds.
+2.  **Light-Full Wallet Compatibility:** While supporting basic wallet functions (new wallets, sending/receiving), digest mode might have issues with wallets requiring full UTXO set scans or complex balance queries. Verify compatibility. Cannot relay transactions from peers.
+3.  **SPV Wallet Functionality:** SPV clients primarily verify transaction inclusion. They usually rely on connecting to a full node (either your own or a trusted public one) to get balance information and submit new transactions.
 
 <!--TODO: ## Mode-Related Settings
 

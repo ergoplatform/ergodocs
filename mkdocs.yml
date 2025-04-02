@@ -415,9 +415,11 @@ nav:
     - Tutorials:
       - Overview: dev/tutorials.md
       - Fleet SDK Recipes: dev/tutorials/fleet-sdk-recipes.md
+      - Blockchain Indexing: dev/tutorials/blockchain-indexing.md
+      - Hardware Wallet Integration: dev/tutorials/hardware-wallet-integration.md
     - Data Model:
       - dev/data-model/data-model.md
-      - Box: 
+      - Box:
         - dev/data-model/box.md
         - Registers: dev/data-model/box/registers.md
         - Assets: 
@@ -572,8 +574,8 @@ nav:
         - GraphQL: dev/stack/explorer/graphql.md
       - APIs: dev/stack/api.md
       - Off-Chain:
-        - off-chain.md
-        - Oracle-Core: 
+        - Overview: dev/oc/off-chain-overview.md
+        - Oracle-Core:
           - dev/oc/oracle.md
           - Bootstrap an Oracle Pool: tutorials/oracle-bootstrap.md
         - Off-Chain Bots: dev/oc/dex_bots.md

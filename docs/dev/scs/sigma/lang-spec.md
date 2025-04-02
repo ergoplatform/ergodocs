@@ -414,6 +414,36 @@ class Box {
     *                                   different from T.
     */
   def Ri[T]: Option[T]
+
+  /** Executes the script stored in the register `regId` of the `SELF` box.
+    * Similar to `executeFromVar`, this performs a macro-like substitution and
+    * execution of the script (stored as `Coll[Byte]` representing serialized ErgoTree)
+    * found in the specified register.
+    *
+    * **Important Behavior Notes (based on interpreter implementation):**
+    * - **Missing Register:** If register `regId` does not exist in `SELF`, this
+    *   operation fails. Unlike `getVar` or `Ri`, it does **not** return an `Option`
+    *   or handle default values automatically in this case. The script author must
+    *   explicitly check for the register's existence first (e.g., using `SELF.Ri[Coll[Byte]](regId).isDefined`).
+    * - **Type Mismatch:** If the register exists but does not contain valid
+    *   serialized `ErgoTree` (`Coll[Byte]`), or if the executed script's result
+    *   type does not match the expected type `T`, the operation fails.
+    * - **No Automatic Option Wrapping:** The result type `T` is the direct result
+    *   of the executed script. If the executed script itself returns an `Option[X]`,
+    *   then `T` must be `Option[X]`. `executeFromSelfReg` does not automatically
+    *   wrap the result in an `Option`.
+    *
+    * This function is powerful for implementing complex state transitions and
+    * contract patterns where parts of the execution logic are stored within the box itself.
+    *
+    * @param regId zero-based identifier of the register (R4-R9) in the `SELF` box containing the script bytes.
+    * @tparam T expected type of the script's result after execution.
+    * @return The result of executing the script stored in the register.
+    * @throws InterpreterException if the register is not found, does not contain
+    *         valid serialized ErgoTree, or if the script execution fails or results
+    *         in a type different from T.
+    */
+  def executeFromSelfReg[T](regId: Int): T
 }
 ```
 
@@ -899,6 +929,24 @@ def decodePoint(bytes: Coll[Byte]): GroupElement
   *                                   different from cT.
   */
 def getVar[T](tag: Int): Option[T]
+
+/** Executes the script stored in the Context variable with the given tag.
+  * This is distinct from `getVar`, which simply retrieves the evaluated value stored
+  * in the variable. `executeFromVar` performs a macro-like substitution: it takes
+  * the script (typically stored as `Coll[Byte]` representing serialized ErgoTree)
+  * from the variable and executes it in the current context.
+  *
+  * This is particularly useful for advanced contract patterns like MAST (Merkleized
+  * Abstract Syntax Trees) where script fragments are stored and executed dynamically.
+  *
+  * @param tag zero-based identifier of the context variable containing the script bytes.
+  * @tparam T expected type of the script's result after execution.
+  * @return The result of executing the script stored in the variable.
+  * @throws InterpreterException if the variable is not found, does not contain
+  *         valid serialized ErgoTree, or if the script execution fails or results
+  *         in a type different from T.
+  */
+def executeFromVar[T](tag: Int): T
 
 /** Construct a new SigmaProp value representing public key of Diffie Hellman
   * signature protocol. When executed as part of Sigma protocol allow to provide
