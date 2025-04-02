@@ -2,134 +2,68 @@
 tags:
   - Android
   - Node
+  - Mobile
+  - Termux
+  - Installation
+  - Guide
+  - RocksDB
+  - Digest Mode
+  - proot
 ---
 # Running an Ergo Node on Android
 
-/// details | One click setup 
-    {type: tip, open: true}
+Running an Ergo node directly on an Android device is possible and allows users without desktop access to participate more fully in the network, potentially using their own node for mobile wallets or dApps.
 
-[ErgoNodeAndroid](https://github.com/rustinmyeye/ErgoNodeAndroid) is an attempt at a one-click Ergo node app for Android. This app is based on NeoTerm, and runs automated install scripts to set up and run an Ergo node on Android.
+This guide provides an overview of the methods available using the [Termux](https://termux.dev/) terminal emulator.
 
-The current version of this app sets up a stateless light node.
+## Overview of Methods
 
+There are two primary approaches, depending on your needs and technical comfort level:
+
+1.  **[Direct Termux Setup (Digest Mode)](./node-android/termux-digest.md):**
+    *   **Recommended for most users.**
+    *   Runs the node directly within Termux.
+    *   Best suited for the resource-efficient `stateType="digest"` mode.
+    *   Simpler setup process.
+
+2.  **[Arch Linux via proot (RocksDB/UTXO Mode)](./node-android/proot-rocksdb.md):**
+    *   **Advanced method.**
+    *   Required if you need to run `stateType="utxo"` (which uses RocksDB) or encounter specific database compatibility issues (e.g., LevelDB failures on `aarch64`).
+    *   Involves running an Arch Linux environment within Termux to provide `glibc` compatibility for RocksDB.
+    *   More complex setup and higher resource usage.
+
+/// details | One-Click App Attempt
+    {type: tip, open: false}
+[ErgoNodeAndroid](https://github.com/rustinmyeye/ErgoNodeAndroid) is a community project attempting a one-click Ergo node app for Android, based on Termux scripts. It typically sets up a stateless/digest node. You may explore this as an alternative to manual setup.
 ///
-
-## Getting Started
-
-Operating an Ergo full node on an Android device offers several intriguing benefits. For instance, it allows individuals without access to a desktop or laptop to sync the entire Ergo blockchain on their mobile device. This process also enables the use of personal nodes for applications such as the Ergo mobile wallet or the Ergo Mixer on mobile devices.
 
 ## Device Requirements
 
-To run an Ergo node on an Android device, your device must meet the following minimum system requirements:
+Meeting these requirements is crucial for a stable experience:
 
-- Android OS version 7.0 or higher
-- At least 25 GB of fast storage
-- A minimum of 1GB of RAM available for apps (1GB is untested, but should work with some patience)
+*   **OS:** Android version 7.0 or higher.
+*   **Storage:**
+    *   **Digest Mode:** ~5-10GB free space recommended initially. Actual usage after sync might settle around ~3GB, but bootstrapping can require more temporarily.
+    *   **UTXO Mode (via proot):** Significantly more, potentially 30GB+ depending on pruning (`blocksToKeep`). Archival mode (`blocksToKeep=-1`) is likely impractical on mobile storage.
+*   **RAM:** Minimum 1-2GB available *specifically for Termux/Java*. More RAM (e.g., 4GB+) provides a smoother experience, especially during sync. You will need to use the `-Xmx` Java flag to allocate memory appropriately.
 
-These requirements have been successfully tested on a Samsung Galaxy S8+.
+## General Tips and Tricks (Apply to Both Methods)
 
-## Preparation
+*   **Keyboard:** Consider installing a different keyboard app (like Hacker's Keyboard from F-Droid) if your default keyboard doesn't work well in Termux.
+*   **Background Operation:** Install `tmux` (`pkg install tmux` in Termux, or `pacman -S tmux` in the Arch environment) to run the node in a background session that persists even if you close the Termux app window.
+*   **Port Forwarding:** If you want your node to be reachable by external peers, configure port forwarding for TCP port 9030 on your home router to your Android device's local IP address.
+*   **Wallet Connection:** If using the Ergo Wallet App on the same device, you can often change its node setting to `http://127.0.0.1:9053` to connect to your local node.
+*   **Troubleshooting:** If the node fails to start, check common issues:
+    *   Correct Java version installed and selected (`java --version`).
+    *   Sufficient memory allocated via `-Xmx`. Try adjusting the value.
+    *   Correct Ergo node JAR file used (Standard vs. RocksDB variant, depending on the method and `stateType`).
+    *   Syntax errors in your `ergo.conf` file.
+    *   Insufficient free storage space on the device.
+    *   Permissions issues within Termux or the proot environment.
 
-To run an Ergo node on an Android device, you'll need a terminal emulator app. We've tested the Termux emulator app and found it suitable for this task. You'll first need to download and install [F-Droid](https://f-droid.org), a catalog of FOSS (Free and Open Source Software) applications for Android. Then, within F-Droid, search for `Termux - Terminal emulator with packages`, download and install it.
+## Disk Space Clarification
 
-## Installing Packages in Termux
+*   **Digest Mode:** Typically settles around **~3GB** after sync with bootstrapping and moderate `blocksToKeep`.
+*   **UTXO Mode:** Requires significantly more storage (tens of GBs) due to storing the UTXO set state.
 
-Launch Termux and update and upgrade all packages. Use the default responses for all prompts during the upgrade.
-
-```
-pkg upgrade
-```
-
-Next, install the packages `wget` and `OpenJDK-17`. These are essential to download the .jar file from GitHub and run it.
-
-```
-pkg install wget openjdk-17
-```
-
-## Downloading the Ergo Client Release & Setting Up the Config File
-
-Download the latest Ergo client release from Github using wget. You can find it [here](https://github.com/ergoplatform/ergo/releases), or use the following command to grab the latest release.
-
-```
-wget -qO- "https://api.github.com/repos/ergoplatform/ergo/releases/latest" | grep -o 'https://github.com/ergoplatform/ergo/releases/download/.*ergo-[0-9.]*\.jar' | wget -q --show-progress -i- -O ergo.jar
-
-```
-
-Create a config file named `ergo.conf` using nano.
-
-```
-nano ergo.conf
-```
-
-Paste the following text into nano, then press CTRL + O, ENTER to save, and CTRL + X to exit.
-
-```
-ergo {
-   node {
-       mining = false
-   }
-}
-```
-
-## Launching the Node For the First Time
-
-Use the following command to run the node for the first time.
-
-```
-java -jar ergo.jar --mainnet -c ergo.conf
-```
-  
-The node will now start synchronizing. To track progress, open a browser on your device and navigate to the Ergo Node panel at [http://127.0.0.1:9053/panel](http://127.0.0.1:9053/panel).
-
-For more details regarding node configuration, please refer to the [manual install](manual.md) guide. Note that setting up the API key and wallet is not required.
-
-## Tips and Tricks
-
-- Consider downloading a different keyboard for use in Termux. The stock Samsung keyboard might not work optimally. The Hacker's Keyboard, available in F-Droid, proved to be a solid alternative.
-  
-- If you wish for your node to be accessible, you will need to set up port forwarding on port 9030 for your Android device in your router settings.
-  
-- **Memory Allocation**: You will likely need to specify the Java heap space using the `-Xmx` flag, especially on devices with limited RAM. Start with `-Xmx1G` or `-Xmx1536M` and adjust based on your device's performance. The node start command with a heap size of 2Gb looks like this: 
-
-```bash
-java -Xmx2G  -jar ergo.jar --mainnet -c ergo.conf
-```  
-  
-- If you use the Ergo Wallet App, you can replace the default node with `http://127.0.0.1:9053`, allowing you to use the node running on your Android device. 
-  
-- The package `tmux` is useful and recommended if you'd like to run the node in the background. 
-
-## Advanced Setup for RocksDB Compatibility (glibc vs musl libc)
-
-**Issue:** Some Ergo node versions or configurations rely on the RocksDB database engine. RocksDB's pre-compiled Java bindings (JARs) often expect the standard GNU C Library (`glibc`). However, Android and environments like Termux typically use a different C library, `musl libc` (via `Bionic`). This incompatibility can prevent the node from starting if it requires RocksDB (e.g., for certain state types or potentially older versions).
-
-**Workaround (Termux + proot + Arch Linux):** A community-discovered workaround involves using `proot` within Termux to run an Arch Linux environment, which *does* use `glibc`. This allows the RocksDB bindings to function correctly.
-
-**Disclaimer:** This is an advanced procedure and may introduce its own complexities or stability issues. Proceed with caution.
-
-**Steps (High-Level Overview):**
-
-1.  **Install `proot-distro` in Termux:**
-    ```bash
-    pkg install proot-distro
-    ```
-2.  **Install Arch Linux:**
-    ```bash
-    proot-distro install archlinux
-    ```
-3.  **Login to Arch Linux Environment:**
-    ```bash
-    proot-distro login archlinux
-    ```
-4.  **Inside Arch Linux:**
-    *   Update package lists: `pacman -Syu`
-    *   Install necessary dependencies (Java JDK, wget, etc.): `pacman -S jdk-openjdk wget ...` (Ensure you install a compatible JDK version).
-    *   Download/copy the Ergo node `.jar` file and your `ergo.conf` into this Arch Linux environment (e.g., using shared storage access or `wget`).
-    *   Run the Ergo node using the `java -jar ...` command as described earlier, but *within* the Arch Linux `proot` environment.
-
-**Considerations:**
-
-*   This adds overhead compared to running directly in Termux.
-*   File system access between Termux and the `proot` environment needs careful handling.
-*   Ensure the node configuration within the Arch environment points to the correct data directories.
-*   This workaround is primarily needed if your specific node configuration requires RocksDB and encounters libc conflicts. Simpler configurations (like digest state without RocksDB) might run directly in Termux as described in the main guide.
+Choose the method that best suits your needs and technical capabilities by following the links above for detailed steps.

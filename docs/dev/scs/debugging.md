@@ -2,81 +2,56 @@
 tags:
   - Debugging
   - ErgoScript
+  - Smart Contracts
+  - Testing
+  - Tools
+  - Guide
+  - Scala
 ---
 
 # Debugging ErgoScript
 
-Since ErgoScript is usually encapsulated within string literals, it is not feasible to directly set breakpoints within the script text itself for debugging purposes. 
+Debugging smart contracts written in ErgoScript presents unique challenges compared to traditional software development. Since the code executes within the constrained and deterministic environment of the blockchain, standard interactive debuggers or extensive logging are often not available during on-chain execution.
 
-## Scala-Based Debugging Approach
+This guide provides an overview of debugging strategies, linking to more detailed explanations of specific techniques.
 
-ErgoScript is a deliberate subset of Scala, and a robust test suite, SigmaDslSpecification, exists to verify the equivalence between ErgoScript and Scala. As such, you can utilize Scala's debugging capabilities to debug ErgoScript.
+## Core Principles & Best Practices
 
-### Practical Debugging Example
+Given the limitations of on-chain debugging, a strong emphasis must be placed on **off-chain testing and careful design**:
 
-An example of a debugging scenario is provided in the sigmastate-interpreter repository, specifically within [AssetsAtomicExchange.scala#L29](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/83dc78b5c80b11dcab41ba8aa75a0a8a650e6473/sigmastate/src/test/scala/sigmastate/utxo/examples/AssetsAtomicExchange.scala#L29).
+1.  **Thorough Unit & Integration Testing:** This is the most crucial aspect. Use testing frameworks provided by SDKs like [Appkit (Scala)](../lang/scala.md), [Fleet SDK (JS/TS)](fleet-sdk-recipes.md), or [Sigma-Rust](../lang/rust.md) to simulate transaction scenarios off-chain.
+    *   Cover expected behavior (happy paths).
+    *   Test edge cases and potential failure conditions.
+    *   Verify expected outputs, register values, and created boxes.
+    *   Test logic under various simulated context states.
+    *   Use property-based testing where applicable.
 
-```scala
-// Debugging example from AssetsAtomicExchange
-lazy val buyerProp = proposition("buyer", { ctx: Context =>
-  import ctx._
-  (HEIGHT > deadline && pkA) || {
-    val tokenData = OUTPUTS(0).R2[Coll[(Coll[Byte], Long)]].get(0)
-    val knownId = OUTPUTS(0).R4[Coll[Byte]].get == SELF.id
-    allOf(Coll(
-      tokenData._1 == tokenId,
-      tokenData._2 >= 60L,
-      OUTPUTS(0).propositionBytes == pkA.propBytes,
-      knownId
-    ))
-  }
-},
-```
+2.  **Careful Logic Design:**
+    *   Prioritize simplicity.
+    *   Break down complex logic.
+    *   Reason carefully about execution paths and state transitions.
+    *   Consider economic exploits.
 
-## Debugging Process
+3.  **Code Reviews:** Have peers review your contract logic.
 
-In this instance, a breakpoint can be set at the specified line above. Following this, a debug run can be executed for the [corresponding test](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/401d40a22430661ed5a397098633465b1e39e3bc/sigmastate/src/test/scala/sigmastate/utxo/examples/AssetsAtomicExchangeTests.scala#L46):
+4.  **Formal Verification (Advanced):** Consider for highly critical contracts (tooling is evolving).
 
-```scala
-// Test method for atomic exchange
-property("atomic exchange spec") {
-  // Test implementation details
-}
-```
+## Debugging Techniques Overview
 
-## Debugging Technique
+Explore the following pages for details on specific techniques:
 
-During this execution, the debugger should halt at the pre-set breakpoint, enabling you to:
-- Inspect variable states
-- Understand code behavior step-by-step
-- Validate contract logic in a controlled environment
+*   **[Scala-Based Debugging](scala-debugging.md):** Leverage Scala's debugging tools by testing your contract logic within the JVM environment (e.g., using Appkit or `sigmastate-interpreter` tests). This is often the most effective way to step through logic off-chain.
+*   **[On-Chain Mechanisms (Limited)](on-chain-mechanisms.md):** Understand the limited tools available for insights during on-chain execution, such as the experimental `debug()` function and analyzing transaction failure logs.
+*   **[External Tools & Simulators](external-tools.md):** Utilize off-chain simulators (like the Spectrum Finance simulator) and other tools (SDK playgrounds, online editors) to test and analyze script behavior in controlled environments.
 
-## Key Debugging Strategies
+## Future Directions
 
-1. **Use Scala Debugging Tools**
-   - Leverage IntelliJ IDEA or other Scala IDEs
-   - Set breakpoints in test cases
-   - Step through contract logic
+The community desires more advanced debugging tools, potentially including execution traces and enhanced simulators. As the ecosystem evolves, improved tools may emerge.
 
-2. **Comprehensive Testing**
-   - Create detailed test scenarios
-   - Cover multiple execution paths
-   - Simulate different blockchain states
-
-3. **Context Validation**
-   - Carefully examine context variables
-   - Verify box selection and properties
-   - Check sigma proposition construction
+Rigorous off-chain testing remains the cornerstone of developing reliable ErgoScript contracts.
 
 ## Recommended Resources
 
 - [SigmaState Interpreter Repository](https://github.com/ScorexFoundation/sigmastate-interpreter)
-- [ErgoScript Documentation](ergoscript.md)
+- [ErgoScript Language Overview](ergoscript.md)
 - [Ergo Developer Forum](https://www.ergoforum.org/)
-
-## Best Practices
-
-- Break complex contracts into smaller, testable components
-- Use property-based testing
-- Understand the nuances of the UTXO model
-- Leverage Scala's type system for compile-time checks

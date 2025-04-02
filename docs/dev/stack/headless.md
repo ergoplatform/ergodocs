@@ -12,7 +12,7 @@ tags:
 
 # Ergo Headless dApp Framework (HDF)
 
-The [Ergo Headless dApp Framework (HDF)](https://github.com/ergoplatform/ergo-headless-dapp-framework) is a powerful **Rust framework** designed for developing portable and reusable off-chain logic for Ergo dApps, often referred to as "Headless dApps". It provides developers with the first portable [UTXO](../protocol/eutxo.md)-based headless dApp development framework on any blockchain.
+The [Ergo Headless dApp Framework (HDF)](https://github.com/ergoplatform/ergo-headless-dapp-framework) is a powerful **Rust framework** designed for developing portable and reusable off-chain logic for Ergo dApps, often referred to as "Headless dApps". It provides developers with the first portable [UTXO](eutxo.md)-based headless dApp development framework on any blockchain.
 
 !!! warning "Testnet Address Limitation"
     Please be aware that the current version of the Headless dApp Framework [does not support testnet addresses](https://github.com/ergoplatform/ergo-headless-dapp-framework/blob/main/src/encoding.rs#L104). Development and testing should target mainnet address formats.
@@ -58,7 +58,7 @@ The HDF provides Rust structs, traits, and utilities to define these stages, act
 1.  **Prerequisites:**
     *   Install the [Rust toolchain](https://www.rust-lang.org/tools/install).
     *   Basic understanding of Rust programming.
-    *   Familiarity with Ergo's [eUTXO model](../protocol/eutxo.md) and [ErgoScript](../scs/ergoscript.md) concepts.
+    *   Familiarity with Ergo's [eUTXO model](eutxo.md) and [ErgoScript](../scs/ergoscript.md) concepts.
 2.  **Clone the Repository:**
     ```bash
     git clone https://github.com/ergoplatform/ergo-headless-dapp-framework.git

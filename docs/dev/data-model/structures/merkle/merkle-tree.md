@@ -7,7 +7,7 @@ tags:
 
 # Merkle Trees in Ergo
 
-*(Back to: [Data Model Overview](../../data-model.md))*
+*(Back to: [Data Model Overview](../data-model.md))*
 
 ## Overview
 
@@ -42,4 +42,4 @@ The [Extension Block Merkle Tree](merkle-extension.md) secures key-value data li
 
 ### State Proofs
 
-Merkle Trees are also used to create compact proofs of state transitions (related to [AD Proofs](block-adproofs.md)). These proofs allow for efficient verification of the blockchain state without requiring a [full node](../../../../node/modes/archival-node.md), which is crucial for [lightweight clients](../../../../node/modes/light-spv-node.md) to securely participate in the network. An example of how a lite client can check a Merkle-tree-based membership proof is detailed in the [Lite Client Checking Merkle Proof](merkle-light-proof.md) documentation.
+Merkle Trees are also used to create compact proofs of state transitions (related to [AD Proofs](block-adproofs.md)). These proofs allow for efficient verification of the blockchain state without requiring a [full node](archival-node.md), which is crucial for [lightweight clients](light-spv-node.md) to securely participate in the network. An example of how a lite client can check a Merkle-tree-based membership proof is detailed in the [Lite Client Checking Merkle Proof](merkle-light-proof.md) documentation.

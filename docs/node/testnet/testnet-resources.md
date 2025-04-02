@@ -1,29 +1,88 @@
+# Testnet Resources
 
-# Resources
+This page provides resources for interacting with the Ergo Testnet.
 
-## Finding Testnet Peers
+## Finding & Connecting to Testnet Peers
 
-Connecting to reliable peers is essential for synchronizing your testnet node. Here are some resources and tips:
+Synchronizing a testnet node requires connecting to active testnet peers. Finding reliable peers can sometimes be challenging.
 
-*   **Peer Lists:**
-    *   [api.tokenjay.app/peers/list](https://api.tokenjay.app/peers/list): This API endpoint lists known peers. **Important:** This list may contain both mainnet and testnet nodes. You will need to check if a listed peer is connectable on the testnet P2P port (default: 9022).
-*   **Community Channels:** Finding reliable, up-to-date testnet peers can sometimes be challenging. Check Ergo community channels (e.g., Discord servers, Telegram groups, Ergo Forum) for pinned messages or recent discussions mentioning active testnet nodes. Asking in support channels is often helpful.
-*   **Configuration:** Ensure your node configuration (`testnet.conf` or main config with `--testnet` flag) specifies the correct testnet P2P port (`scorex.network.bindAddress` and potentially `scorex.network.declaredAddress` if needed) - default is `9022`. You can also add known reliable peer addresses to the `scorex.network.knownPeers` list in your configuration.
+### Peer Lists
 
-## Other Resources
+* **Public Peer Lists:**
+  * For mainnet peers: `https://api.tokenjay.app/peers/list?unreachable=false&closedApi=false&limit=50`
+  * For testnet peers: Use the same list but swap the port numbers (mainnet uses 9053, testnet uses 9052)
 
-*   [Testnet Explorer](https://testnet.ergoplatform.com/)
-*   [ergo-synced-node](https://github.com/mgpai22/ergo-synced-node#ergo-testnet-node-setup): A pre-synchronized testnet node setup provided by a community member (check repository for current status).
+### Node Configuration
 
-## Ports
+Below is an example configuration for a testnet node:
 
-|                | mainnet  | testnet   |
-|----------------|----------|-----------|
-| API Port       | 9053     | 9052      | 
-| P2P Port       | 9030     | 9022      |
-| address prefix | (0) 0x00 | (16) 0x10 |
+```
+ergo {
+  networkType = "testnet"
+  directory = "/ergo/.ergo"
+  node {
+    useExternalMiner = true
+    offlineGeneration = true
+    mining = true
+    mempoolCapacity = 10000
+    extraIndex = true
+    maxTransactionSize = 1000000
+    maxTransactionCost = 2000000
+  }
+  wallet.secretStorage.secretDir = ${ergo.directory}"/wallet/keystore"
+  chain {
+    genesisStateDigestHex = "cb63aa99a3060f341781d8662b58bf18b9ad258db4fe88d09f8f71cb668cad4502"
+    reemission {
+      checkReemissionRules = true
+    }
+  }
+}
 
+scorex {
+  restApi {
+    apiKeyHash = ""
+    bindAddress = "0.0.0.0:9052"
+  }
+  network {
+    bindAddress = "0.0.0.0:9022"
+    knownPeers = [
+      "213.239.193.208:9022",
+      "51.158.54.129:9022",
+      "51.89.40.122:9022"
+    ]
+    maxConnections = 100
+  }
+}
+```
 
-## Development 
+### Important Configuration Options
 
-- [Nautilus Testnet build](https://github.com/capt-nemo429/nautilus-wallet#testnet)
+* **`knownPeers`**: Manually specify testnet peers to connect to
+* **`maxConnections`**: Default is around 30, can be increased for better network connectivity (may require more resources)
+* **`bindAddress`**: For REST API, use port 9052 for testnet (compared to 9053 for mainnet)
+* **`networkType`**: Must be set to "testnet"
+
+## Port Reference
+
+| Service | Mainnet | Testnet |
+|---------|---------|---------|
+| REST API | 9053 | 9052 |
+| P2P Network | 9030 | 9022 |
+| Address Prefix | (0) 0x00 | (16) 0x10 |
+
+## Testnet Resources
+
+* [Testnet Explorer](https://testnet.ergoplatform.com/)
+* [Testnet Faucet](https://testnet.ergofaucet.org/) - Get test ERG for development
+* [Nautilus Testnet Build](https://github.com/capt-nemo429/nautilus-wallet#testnet)
+
+## Development Tools
+
+When configuring dApps for testnet, update these settings:
+```
+node.url = "http://213.239.193.208:9052/"
+node.networkType = "TESTNET"
+explorer.url = "https://testnet.ergoplatform.com/"
+```
+
+For detailed documentation on node setup and development, refer to the [official Ergo documentation](https://docs.ergoplatform.com/documents/).

@@ -16,7 +16,7 @@ tags:
 
 ## Introduction
 
-Integrating Ergo support into hardware wallets (like Ledger, Trezor, Keystone, etc.) presents unique challenges due to the resource-constrained nature of these devices (limited memory, processing power, and no standard library/OS). The standard [`sigma-rust`](../stack/sigma-rust.md) library, while comprehensive, relies on Rust's standard library (`std`) and certain dependencies that might be too heavy or unsuitable for embedded environments.
+Integrating Ergo support into hardware wallets (like Ledger, Trezor, Keystone, etc.) presents unique challenges due to the resource-constrained nature of these devices (limited memory, processing power, and no standard library/OS). The standard [`sigma-rust`](sigma-rust.md) library, while comprehensive, relies on Rust's standard library (`std`) and certain dependencies that might be too heavy or unsuitable for embedded environments.
 
 This guide provides developers with pointers and strategies for adapting `sigma-rust` functionality for hardware wallet integration, based on community discussions and efforts.
 
@@ -63,7 +63,7 @@ Carefully review the dependency tree of the `sigma-rust` components you intend t
 
 The essential functions needed for basic hardware wallet support typically include:
 
-*   **Key Derivation:** Deriving child keys from a master seed according to [EIP-3](../wallet/standards/eip3.md).
+*   **Key Derivation:** Deriving child keys from a master seed according to [EIP-3](eip3.md).
 *   **Address Generation:** Generating Ergo addresses from public keys.
 *   **Transaction Parsing:** Securely parsing transaction details for display and user confirmation.
 *   **Transaction Signing:** Signing the transaction digest using the derived private key. This is the most critical part and must use the hardware wallet's secure key storage and signing mechanism.

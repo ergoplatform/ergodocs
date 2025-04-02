@@ -416,8 +416,14 @@ nav:
     - Tutorials:
       - Overview: dev/tutorials.md
       - Fleet SDK Recipes: dev/tutorials/fleet-sdk-recipes.md
-      - Blockchain Indexing: dev/tutorials/blockchain-indexing.md
+      - Blockchain Indexing: # UPDATED
+        - Overview: dev/tutorials/blockchain-indexing.md 
+        - Explorer APIs: dev/tutorials/blockchain-indexing/explorer-apis.md 
+        - Node API Direct: dev/tutorials/blockchain-indexing/node-api-direct.md 
+        - Custom Indexer: dev/tutorials/blockchain-indexing/custom-indexer.md 
       - Hardware Wallet Integration: dev/tutorials/hardware-wallet-integration.md
+      # - MAST Example: dev/scs/tutorials/mast-example.md # MOVED
+      # - FSM Example: dev/scs/tutorials/fsm-example.md # MOVED
     - Data Model:
       - dev/data-model/data-model.md
       - Box:
@@ -491,11 +497,16 @@ nav:
       - Node:
         - node/install.md
         - Setup: 
-          - node/install/manual.md
+          - Manual: node/install/manual.md # UPDATED
+          - Build from Source: node/install/build-from-source.md # NEW
+          - SNAPSHOT Dependencies: node/install/snapshot-dependencies.md # NEW
           - Troubleshooting: node/install/troubleshooting.md
           - FAQ: node/install/node-faq.md
           - Pi: node/install/pi.md
-          - Android: node/install/node-android.md
+          - Android: # UPDATED
+            - Overview: node/install/node-android.md 
+            - Termux (Digest): node/install/node-android/termux-digest.md 
+            - Proot (RocksDB): node/install/node-android/proot-rocksdb.md 
           - Docker: node/install/docker.md          
         - Testnet: 
           - node/testnet.md
@@ -575,7 +586,7 @@ nav:
         - GraphQL: dev/stack/explorer/graphql.md
       - APIs: dev/stack/api.md
       - Off-Chain:
-        - Overview: dev/oc/off-chain-overview.md
+        - Overview: dev/oc/off-chain-overview.md 
         - Oracle-Core:
           - dev/oc/oracle.md
           - Bootstrap an Oracle Pool: tutorials/oracle-bootstrap.md
@@ -599,6 +610,7 @@ nav:
             - UTXO-Set Scanning Wallet API: dev/wallet/standards/eip1.md
             - Deterministic Wallet Standard: dev/wallet/standards/eip3.md
             - Cold Wallet: dev/wallet/standards/eip19.md
+            - EIP Standards Overview: dev/wallet/eip-standards.md 
       - Integration Guide: dev/Integration/guide.md
 
     - Tooling:
@@ -633,7 +645,9 @@ nav:
           - Interacting with a local Node: dev/stack/appkit/appkit-node.md
           - Gradle: dev/stack/appkit/gradle.md
           - Using Appkit from Python: dev/stack/appkit/appkit_py.md
-        - SigmaRust: dev/stack/sigma-rust.md
+        - SigmaRust: 
+          - dev/stack/sigma-rust.md
+          - Constrained Environments: dev/stack/sigma-rust-constrained.md 
         - Fleet (JS): dev/stack/fleet.md
         - FleetSharp: dev/stack/fleetsharp.md
         - Others:
@@ -723,7 +737,11 @@ nav:
             - P2S Playground: dev/stack/utilities/plutomonkey.md
             - Kiosk: dev/stack/kiosk.md
             - ErgoPuppet: dev/scs/puppet.md
-          - Debugging: dev/scs/debugging.md
+          - Debugging: # UPDATED
+            - Overview: dev/scs/debugging.md 
+            - Scala-Based: dev/scs/debugging/scala-debugging.md 
+            - On-Chain Mechanisms: dev/scs/debugging/on-chain-mechanisms.md 
+            - External Tools: dev/scs/debugging/external-tools.md 
           - FlowCards: dev/scs/flowcards.md     
         - ErgoTree: 
           - dev/scs/ergotree.md
@@ -751,6 +769,8 @@ nav:
               - Reversible Address: dev/scs/tx/reversible-address.md
               - Rock/Paper/Scissors: dev/scs/tx/rock-paper-scissor.md
               - ICO: dev/scs/tx/ico.md
+              - MAST Example: dev/scs/tx/mast-example.md # NEW LOCATION
+              - FSM Example: dev/scs/tx/fsm-example.md # NEW LOCATION
         
     - Cryptographic:
       - crypto.md

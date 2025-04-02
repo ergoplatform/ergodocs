@@ -13,7 +13,7 @@ tags:
 
 # Choosing an Ergo Wallet
 
-A wallet is your essential gateway to the Ergo ecosystem. It allows you to securely store, send, and receive ERG and other [tokens](../tokens/token-intro.md) built on Ergo, as well as interact with [decentralized applications (dApps)](../dev/get-started.md). Choosing the right wallet depends on your technical comfort, security needs, and how you plan to use Ergo.
+A wallet is your essential gateway to the Ergo ecosystem. It allows you to securely store, send, and receive ERG and other [tokens](../data-model/box/tokens.md) built on Ergo, as well as interact with [decentralized applications (dApps)](get-started.md). Choosing the right wallet depends on your technical comfort, security needs, and how you plan to use Ergo.
 
 <!-- Developer Note: This page provides a general overview suitable for all users, despite its location under /dev/. -->
 
@@ -40,7 +40,7 @@ Here are popular and well-regarded wallets used by the Ergo community:
     *   **Best For:** Everyday mobile use, managing diverse assets, easy payments.
 
 *   **[Minotaur Wallet](wallet/minotaur.md)**
-    *   **Description:** Offers advanced features like [multi-signature](../dev/scs/multi.md) capabilities (requiring multiple approvals for transactions).
+    *   **Description:** Offers advanced features like [multi-signature](multi.md) capabilities (requiring multiple approvals for transactions).
     *   **Best For:** Users needing shared fund control or enhanced security via multi-sig. May be more complex for beginners. *(Note: Check development status for latest features/stability).*
 
 ### Browser Extension Wallets
@@ -52,7 +52,7 @@ Here are popular and well-regarded wallets used by the Ergo community:
 ### Desktop Wallets
 
 *   **[Satergo Wallet](wallet/satergo.md)**
-    *   **Description:** A desktop wallet specifically designed to run alongside a full [Ergo Node](../../node/install.md). Provides a user-friendly interface for managing funds while contributing to network decentralization.
+    *   **Description:** A desktop wallet specifically designed to run alongside a full [Ergo Node](../node/install.md). Provides a user-friendly interface for managing funds while contributing to network decentralization.
     *   **Best For:** Users who want to run their own full node for maximum trust and verification, without needing complex command-line interaction.
 
 *   **Node Wallet (Core)**
@@ -114,7 +114,7 @@ This table provides a simplified overview to help you compare options:
     | Sending to stealth addresses | ✅        | *TBC*    | *TBC*        | *TBC*    | *TBC*   | ✅          | ❌           |
 
 !!! warning "Funds stuck in Yoroi?"
-    Yoroi wallet no longer supports Ergo. If you have funds in an old Yoroi Ergo wallet and know the password, you might be able to use [this community recovery tool](https://github.com/satsen/yoroi-ergo-wallet-recover) to send funds to a new Ergo wallet. Alternatively, check the [access issues guide](../../tutorials/access-issues.md) for other troubleshooting tips.
+    Yoroi wallet no longer supports Ergo. If you have funds in an old Yoroi Ergo wallet and know the password, you might be able to use [this community recovery tool](https://github.com/satsen/yoroi-ergo-wallet-recover) to send funds to a new Ergo wallet. Alternatively, check the [access issues guide](access-issues.md) for other troubleshooting tips.
 
 ## Additional Resources
 

@@ -85,13 +85,21 @@ Please see this [Quick Primer on ErgoScript](ergoscript-primer.md) for an overvi
 
 While ErgoScript aims for simplicity and security, debugging complex contracts can still be challenging. Currently, developers often rely on manual inspection and testing. Tools are emerging to improve this process:
 
-*   **[Ergoscript Simulator](https://github.com/spectrum-finance/ergoscript-simulator):** A community-developed tool that allows simulating ErgoScript execution, which can be helpful for debugging logic. (Note: The core protocol itself does not yet have built-in `debug()` or extensive tracing capabilities, as discussed in developer channels).
+*   **[Debugging Guide](ergoscript-debugging.md):** Covers current best practices, tools, and techniques for debugging ErgoScript.
+*   **[Ergoscript Simulator](https://github.com/spectrum-finance/ergoscript-simulator):** A community-developed tool that allows simulating ErgoScript execution.
 
-## Advanced Cryptography in ErgoScript
+## Advanced Patterns & Tutorials
 
-ErgoScript's foundation on Sigma Protocols allows for powerful cryptographic primitives. However, some advanced structures commonly used in blockchain contexts have specific considerations:
+ErgoScript's features enable the implementation of complex contract patterns:
 
-*   **Merkle Trees:** While [Merkle Trees](data-model/structures/merkle/merkle-tree.md) are fundamental to Ergo's data integrity (e.g., for transactions and extension data), direct verification of Merkle proofs *within* an ErgoScript contract is not natively supported by the interpreter at this time. Verification typically happens off-chain or relies on specific protocol designs where roots are checked, rather than individual proofs being processed by the script itself. Developers interested in the concept and off-chain usage should consult the [Merkle Tree documentation](data-model/structures/merkle/merkle-tree.md).
+*   **[Finite State Machines (FSMs)](tx/fsm-example.md):** Learn how to model multi-stage contracts where behavior depends on the current state encoded within a box.
+*   **[Merkleized Abstract Syntax Trees (MAST)](tx/mast-example.md):** Explore techniques to improve privacy and efficiency for contracts with many spending conditions by revealing only the executed script branch.
+
+## Advanced Cryptography & Structures
+
+ErgoScript's foundation on Sigma Protocols allows for powerful cryptographic primitives. However, some advanced structures have specific considerations:
+
+*   **Merkle Trees:** While [Merkle Trees](../data-model/structures/merkle/merkle-tree.md) are fundamental to Ergo's data integrity (e.g., for transactions and extension data), direct verification of arbitrary Merkle proofs *within* an ErgoScript contract is not natively supported by a single built-in function. Verification typically happens off-chain or relies on specific protocol designs where roots are checked. The [MAST pattern](tx/mast-example.md) leverages Merkle trees conceptually, often using `executeFromVar` for on-chain execution of proven branches rather than full proof verification within the script. Developers interested in the general concept and off-chain usage should consult the main [Merkle Tree documentation](../data-model/structures/merkle/merkle-tree.md).
 
 ## Related Technical Resources
 - [ErgoTree Documentation](ergotree.md)

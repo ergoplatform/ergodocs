@@ -30,7 +30,7 @@ This page contains useful code snippets, patterns, and troubleshooting tips for 
     - [Complete Example:](#complete-example)
   - [Working with Numeric Registers](#working-with-numeric-registers)
   - [Extracting Token IDs from Registers](#extracting-token-ids-from-registers)
-  - [Decoding Complex/Tuple Types from Registers](#decoding-complextuple-types-from-registers)
+  - [Decoding Complex Types (Tuples, Options, Collections)](#decoding-complex-types-tuples-options-collections)
   - [Compiling ErgoScript to ErgoTree](#compiling-ergoscript-to-ergotree)
   - [Troubleshooting Common Issues](#troubleshooting-common-issues)
     - [1. ErgoTree Comparison Failures](#1-ergotree-comparison-failures)
@@ -255,11 +255,21 @@ if (requiredTokenId) {
 
 ---
 
-## Decoding Complex/Tuple Types from Registers
+## Decoding Complex Types (Tuples, Options, Collections)
 
-Contracts might store more complex data structures in registers, such as tuples `(TypeA, TypeB)` or nested collections. Fleet's `deserialize` function handles these, returning a nested object structure that mirrors the on-chain type. You need to inspect this structure to extract the individual components.
+Contracts might store more complex data structures in registers, such as tuples `(TypeA, TypeB)`, optional values `Option[TypeA]`, or collections `Coll[TypeA]`. Fleet's `deserialize` function handles these, returning a nested object structure that mirrors the on-chain type. You need to inspect this structure to extract the individual components.
 
-**Example: Decoding a Tuple `(SigmaProp, Long)` from R5**
+**General Approach:**
+
+1.  Call `deserialize(registerValueHex)`.
+2.  Check the `type` property of the result (e.g., `"STuple"`, `"SColl"`, `"SOption"`).
+3.  Access the `value` property.
+    *   For `STuple` and `SColl`, `value` is typically an array. Iterate through it, inspecting the `type` and `value` of each element.
+    *   For `SOption`, `value` is either `null` (representing `None`) or an object representing the `Some(value)` content. Check if `value` is `null` before accessing its properties.
+4.  Recursively apply this process for nested structures.
+
+---
+**Example 1: Decoding a Tuple `(SigmaProp, Long)` from R5**
 
 Assume R5 contains a serialized tuple where the first element is a `SigmaProp` (owner's public key) and the second is a `Long` (deadline).
 
@@ -337,12 +347,123 @@ if (tupleData) {
 */
 ```
 
-**General Approach:**
+---
+**Example 2: Decoding an `Option[Int]` from R6**
 
-1.  Call `deserialize(registerValueHex)`.
-2.  Check the `type` property of the result (e.g., `"STuple"`, `"SColl"`).
-3.  If it's a collection or tuple, access the `value` property (which will be an array).
-4.  Recursively inspect the `type` and `value` of each element within the `value` array to extract the nested data according to the expected structure.
+Assume R6 might contain an optional integer value.
+
+```typescript
+import { Box } from "@fleet-sdk/core";
+import { deserialize } from "@fleet-sdk/serializer";
+
+/**
+ * Extracts an optional integer value from a register assumed to contain Option[Int].
+ * @param box The box containing the register.
+ * @param register The register name (R4-R9).
+ * @returns The integer value if Some(Int), or null if None or wrong format.
+ */
+function decodeOptionInt(box: Box, register: "R4" | "R5" | "R6" | "R7" | "R8" | "R9"): number | null {
+  try {
+    const registerValueHex = box.additionalRegisters[register];
+    if (!registerValueHex) return null;
+
+    const deserialized = deserialize(registerValueHex);
+
+    // Expecting SOption
+    if (deserialized.type !== "SOption") {
+      console.warn(`Register ${register} is not the expected SOption format.`);
+      return null;
+    }
+
+    // Check if value is null (representing None)
+    if (deserialized.value === null) {
+      return null; // It's None
+    }
+
+    // If not null, it should be Some(value). Check the inner type.
+    const innerValue = deserialized.value;
+    if (innerValue?.type === "SInt" && typeof innerValue.value === 'number') {
+      return innerValue.value;
+    } else {
+      console.warn(`Inner value of Option in ${register} is not the expected SInt format.`);
+      return null;
+    }
+
+  } catch (error) {
+    console.error(`Error decoding Option[Int] from ${register} in box ${box.boxId}:`, error);
+    return null;
+  }
+}
+
+// --- Usage Example ---
+/*
+const contractBox: Box = { ... }; // Populate with actual box data
+const optionalValue = decodeOptionInt(contractBox, "R6");
+
+if (optionalValue !== null) {
+  console.log(`R6 contains the value: ${optionalValue}`);
+} else {
+  console.log("R6 is empty (None) or has an unexpected format.");
+}
+*/
+```
+
+---
+**Example 3: Decoding a `Coll[Int]` from R7**
+
+Assume R7 contains a collection (array) of integers.
+
+```typescript
+import { Box } from "@fleet-sdk/core";
+import { deserialize } from "@fleet-sdk/serializer";
+
+/**
+ * Extracts an array of integers from a register assumed to contain Coll[Int].
+ * @param box The box containing the register.
+ * @param register The register name (R4-R9).
+ * @returns An array of numbers, or null if wrong format.
+ */
+function decodeCollInt(box: Box, register: "R4" | "R5" | "R6" | "R7" | "R8" | "R9"): number[] | null {
+  try {
+    const registerValueHex = box.additionalRegisters[register];
+    if (!registerValueHex) return null;
+
+    const deserialized = deserialize(registerValueHex);
+
+    // Expecting SColl with SInt elements
+    if (deserialized.type !== "SColl" || deserialized.elemType !== "SInt" || !Array.isArray(deserialized.value)) {
+      console.warn(`Register ${register} is not the expected SColl[SInt] format.`);
+      return null;
+    }
+
+    // The value is already an array of numbers for SColl[SInt]
+    return deserialized.value as number[];
+
+  } catch (error) {
+    console.error(`Error decoding Coll[Int] from ${register} in box ${box.boxId}:`, error);
+    return null;
+  }
+}
+
+// --- Usage Example ---
+/*
+const contractBox: Box = { ... }; // Populate with actual box data
+const integerArray = decodeCollInt(contractBox, "R7");
+
+if (integerArray) {
+  console.log(`R7 contains integers: ${integerArray.join(", ")}`);
+  // integerArray.forEach(num => console.log(num));
+} else {
+  console.log("Could not decode Coll[Int] from R7.");
+}
+*/
+```
+
+---
+**Note on `SigmaProp` and `Coll[Byte]`:**
+
+*   Decoding a `SigmaProp` (typically to get the underlying public key bytes) is shown in the [Validating Box Ownership](#validating-box-ownership-sigmaprop-from-register) example.
+*   Decoding a simple `Coll[Byte]` (often used for Token IDs, Box IDs, Tx IDs, or sometimes raw public keys) is shown in the [Extracting Token IDs](#extracting-token-ids-from-registers) example.
 
 ---
 

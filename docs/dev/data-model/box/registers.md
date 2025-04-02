@@ -7,9 +7,9 @@ tags:
 
 # Ergo Box Registers
 
-*(Back to: [Box Overview](../box.md))*
+*(Back to: [Box Overview](box.md))*
 
-In Ergo's blockchain model, a [**box**](../box.md) is a versatile entity that not only holds the value of cryptocurrency but also contains additional data in the form of **registers**. This makes it a more functional and flexible version of the [Unspent Transaction Output (UTXO)](eutxo.md) found in Bitcoin and many other cryptocurrencies.
+In Ergo's blockchain model, a [**box**](box.md) is a versatile entity that not only holds the value of cryptocurrency but also contains additional data in the form of **registers**. This makes it a more functional and flexible version of the [Unspent Transaction Output (UTXO)](eutxo.md) found in Bitcoin and many other cryptocurrencies.
 
 **Each box contains at least four essential pieces of information:**
 
@@ -50,11 +50,11 @@ Register R2 contains a collection of [tokens](eip4.md) stored in the box. Each t
 
 ### Register R3
 
-Register R3 holds information about the box’s creation: `(txId: Coll[Byte], index: Short)`. Use `Box.creationInfo` to access this register. The creation height (the block height when the box was created) is accessible via `Box.creationInfo._2` and is part of Ergo's unique [storage rent](../../protocol/storage-rent.md) feature, where boxes can be spent after four years, allowing [miners](mining-overview.md) to charge a small fee and recycle ERGs back into the blockchain.
+Register R3 holds information about the box’s creation: `(txId: Coll[Byte], index: Short)`. Use `Box.creationInfo` to access this register. The creation height (the block height when the box was created) is accessible via `Box.creationInfo._2` and is part of Ergo's unique [storage rent](protocol/storage-rent.md) feature, where boxes can be spent after four years, allowing [miners](mining-overview.md) to charge a small fee and recycle ERGs back into the blockchain.
 
 ### Optional Registers R4-R9
 
-These registers can contain any data defined when the box first originates from a transaction. The data could be of any common type found in [ErgoScript](ergoscript.md), along with more complex types built from Pairs and Collections. These registers may also contain complex types such as `Box`, [`SigmaProp`](sigma.md), `GroupElement`, and [`AVLTree`](../../protocol/avl.md).
+These registers can contain any data defined when the box first originates from a transaction. The data could be of any common type found in [ErgoScript](ergoscript.md), along with more complex types built from Pairs and Collections. These registers may also contain complex types such as `Box`, [`SigmaProp`](sigma.md), `GroupElement`, and [`AVLTree`](avl.md).
 
 The optional registers can hold any of the following data types:
 
@@ -67,7 +67,7 @@ The optional registers can hold any of the following data types:
 A `boxId` is calculated based on the contents of all the registers, uniquely defining a box. This can be compared to Bitcoin's (`txId`, `vOut`) pairs.
 
 /// admonition | Note
-Ergo `txId` is dependent solely on the message and not on [signatures](../../protocol/tx/signing.md) (similar to Bitcoin [SegWit](https://en.bitcoin.it/wiki/Segregated_Witness) transactions). Hence, a `txId` is accessible even before signing. Like Bitcoin, Ergo supports [chained transactions](chained.md), meaning boxes with 0 confirmations can be spent.
+Ergo `txId` is dependent solely on the message and not on [signatures](tx/signing.md) (similar to Bitcoin [SegWit](https://en.bitcoin.it/wiki/Segregated_Witness) transactions). Hence, a `txId` is accessible even before signing. Like Bitcoin, Ergo supports [chained transactions](chained.md), meaning boxes with 0 confirmations can be spent.
 ///
 
 
