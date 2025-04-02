@@ -1,3 +1,12 @@
+---
+tags:
+  - Digest State
+  - Node
+  - Pruning
+  - UTXO
+  - Storage
+---
+
 # Digest State
 
 The "Digest State" feature in the Ergo protocol allows nodes to optimize the storage of blockchain data without compromising security and performance. By enabling the Digest State feature, nodes can prune or reduce the size of the UTXO (Unspent Transaction Output) set, blocks, and headers, resulting in more efficient storage utilization.

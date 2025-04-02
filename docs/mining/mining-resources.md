@@ -1,3 +1,13 @@
+---
+tags:
+  - Mining
+  - Resources
+  - Papers
+  - Code
+  - EIP
+  - Test Vectors
+---
+
 # Mining Resources
 
 This page provides a collection of resources related to Ergo mining. It includes academic papers, code repositories, test vectors, and discussion threads.
@@ -22,4 +32,3 @@ The [Ergo GitHub repository](https://github.com/ergoplatform/ergo/tree/master/sr
 
 - [EIP27](eip27.md)
 - [EIP37](eip37.md)
-

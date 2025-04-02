@@ -1,3 +1,14 @@
+---
+tags:
+  - Withdraw
+  - Mining Rewards
+  - Wallet
+  - Node API
+  - Transactions
+  - P2PK
+  - Seed Phrase
+---
+
 # Spending Mining Rewards
 
 /// admonition | Keep in mind

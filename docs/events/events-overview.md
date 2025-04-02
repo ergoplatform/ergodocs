@@ -1,3 +1,12 @@
+---
+tags:
+  - Events
+  - Overview
+  - ErgoHack
+  - ErgoSummit
+  - Community
+---
+
 # Ergo Events
 
 Ergo hosts a variety of events to engage with the community, share updates, and foster innovation. These events provide an excellent opportunity to learn more about Ergo, interact with the team, and contribute to the ecosystem.

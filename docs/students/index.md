@@ -1,3 +1,13 @@
+---
+tags:
+  - Students
+  - Education
+  - Learning
+  - Resources
+  - Getting Started
+  - Community
+---
+
 # Students
 
 If you're a student interested in learning about the Ergo blockchain and its ecosystem, this guide is designed to provide you with a comprehensive introduction and valuable resources to kickstart your journey.

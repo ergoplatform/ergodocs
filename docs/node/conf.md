@@ -1,3 +1,12 @@
+---
+tags:
+  - Node
+  - Configuration
+  - Overview
+  - application.conf
+  - testnet.conf
+---
+
 # Overview of Node Configuration Files 
 
 Welcome to the node configuration files documentation. This section provides a comprehensive guide to various configuration files crucial for setting up and managing an Ergo node. These files include essential parameters for controlling and fine tuning different aspects of the Ergo protocol, ranging from node operation and blockchain management to wallet functionality and voting mechanisms. 

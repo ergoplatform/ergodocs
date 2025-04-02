@@ -1,3 +1,11 @@
+---
+tags:
+  - Mining
+  - Overview
+  - Autolykos
+  - Proof of Work
+---
+
 # Mining
 
 

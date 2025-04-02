@@ -1,3 +1,13 @@
+---
+tags:
+  - Access Issues
+  - Wallet
+  - Troubleshooting
+  - Seed Phrase
+  - Recovery
+  - Guide
+---
+
 # Access Issues
 
 This page provides solutions to common access issues that users may encounter with their Ergo wallets. It covers scenarios where you have your seed phrase but the restored wallet doesn't contain any ERG or shows a different address, and situations where you do not have your seed phrase. It also provides instructions on deriving additional addresses and best practices for storing your seed securely.
@@ -68,4 +78,3 @@ If you've followed the steps above and managed to recover your funds, please sto
 9. **Use Reputable Services**: If using third-party storage, ensure they are trustworthy.
 10. **Stay Informed**: Keep up-to-date with security practices and threats.
 11. **Plan for Emergencies**: Arrange for the safe transfer of your seed phrase in case of death or incapacitation.
-

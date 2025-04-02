@@ -1,3 +1,18 @@
+---
+tags:
+  - Wallet
+  - Node
+  - API
+  - Setup
+  - Initialize
+  - Restore
+  - Unlock
+  - Lock
+  - Keys
+  - BIP39
+  - BIP32
+---
+
 ## Initialize Wallet
 
 To initialize the wallet, restart the node and navigate to the [panel](http://127.0.0.1:9053/panel). Set the API key secret from the previous step. Remember to use the **secret**, not the hash from the config file. In our example, this is the string `hello`. 

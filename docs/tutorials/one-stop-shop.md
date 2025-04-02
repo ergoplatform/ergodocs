@@ -1,4 +1,15 @@
 
+---
+tags:
+  - Getting Started
+  - Newcomer
+  - Guide
+  - Tutorial
+  - Wallets
+  - dApps
+  - Ecosystem
+---
+
 # Ergo Newcomer Document - One Stop Shop
 
 *Hello New Ergonaut! This document's aim is to help you navigate the Ergo ecosystem with ease. This information will be concise and to the point.*

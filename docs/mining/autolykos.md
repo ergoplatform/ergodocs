@@ -1,3 +1,11 @@
+---
+tags:
+  - Autolykos
+  - Mining
+  - Algorithm
+  - Proof of Work
+---
+
 # Autolykos
 
 

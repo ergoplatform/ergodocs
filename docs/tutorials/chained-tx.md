@@ -1,3 +1,13 @@
+---
+tags:
+  - Chained Transactions
+  - Transactions
+  - ergpy
+  - Python
+  - Tutorial
+  - Guide
+---
+
 # Sending Chained Transactions
 
 Chained transactions allow you to spend outputs of off-chain transactions in a sequence.

@@ -1,3 +1,12 @@
+---
+tags:
+  - Options Trading
+  - SigmaO
+  - DeFi
+  - Tutorial
+  - Guide
+---
+
 **Ergo's decentralized finance (DeFi) landscape is about to expand with the introduction of SigmaO, a pioneering platform designed to facilitate options trading on the Ergo blockchain. SigmaO aims to leverage Ergo's unique capabilities to offer a versatile and secure environment for trading options, enhancing the financial instruments available within the Ergo ecosystem.**
 
 ## **What are Options?**

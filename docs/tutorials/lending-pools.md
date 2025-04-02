@@ -1,3 +1,15 @@
+---
+tags:
+  - Lending Pools
+  - DeFi
+  - Passive Income
+  - Duckpools
+  - SigmaFi
+  - EXLE
+  - Tutorial
+  - Guide
+---
+
 Ergo's ecosystem offers a diverse array of DeFi (Decentralized Finance) opportunities, with lending pools standing out as a particularly accessible way for beginners to start earning passive income. This guide will walk you through what lending pools are, how they operate within the Ergo ecosystem, and how you can leverage them to generate returns on your cryptocurrency holdings.
 
 ## Understanding Lending Pools

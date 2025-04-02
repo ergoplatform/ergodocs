@@ -1,3 +1,12 @@
+---
+tags:
+  - EIP-9
+  - Hard Fork
+  - Protocol
+  - Activation
+  - Governance
+---
+
 # EIP-0009 Hard-fork Activation Protocol
 
 - **Author:** aslesarenko 

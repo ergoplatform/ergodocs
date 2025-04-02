@@ -1,3 +1,12 @@
+---
+tags:
+  - Peer Management
+  - Node
+  - P2P
+  - Protocol
+  - Networking
+---
+
 $$
 \newcommand{\peers}{\mathcal{P}}
 $$

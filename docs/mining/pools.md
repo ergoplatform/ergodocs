@@ -3,6 +3,9 @@ tags:
   - Mining
   - Mining Pools
   - Pools
+  - Dual Mining
+  - Solo Mining
+  - SmartPools
 ---
 
 # Mining Pools

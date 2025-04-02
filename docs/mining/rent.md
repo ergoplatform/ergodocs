@@ -1,3 +1,11 @@
+---
+tags:
+  - Storage Rent
+  - Demurrage
+  - Mining
+  - Economics
+---
+
 # Ergo's Demurrage (aka Storage Rent)
 
 Ergo's design emphasizes long-term economic sustainability. One of the key strategies to ensure this is the implementation of *'demurrage'* or storage rent. This mechanism, akin to 'on-chain garbage collection', not only mitigates the issue of blockchain bloat but also turns it into a profitable venture.

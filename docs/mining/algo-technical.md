@@ -1,3 +1,10 @@
+---
+tags:
+  - Autolykos
+  - Mining
+  - Algorithm
+  - Technical
+---
 
 # Autolykos Line-by-line
 
@@ -167,5 +174,4 @@ Once the 32 **r** values are looked up, they are summed.
  
 The sum of the 32 **r** values is hashed using Algorithm 3, and if the output is below target **b**, the PoW is successful, **m** and **nonce** are returned to network nodes, and the miner is rewarded in ERG. If the sum hash is above the target, _Lines 4 – 11_ are repeated with a new nonce.
  
-If you have made it this far, congratulations! After reading all of this information, you should have a good understanding of Autolykos v2! If you want a visual demonstration of Autolykos, please see the graphic at the end of this document. If you would like a video explanation, you can find it [here](https://youtu.be/pPYcfLQGIHg). 
-
+If you have made it this far, congratulations! After reading all of this information, you should have a good understanding of Autolykos v2! If you want a visual demonstration of Autolykos, please see the graphic at the end of this document. If you would like a video explanation, you can find it [here](https://youtu.be/pPYcfLQGIHg).

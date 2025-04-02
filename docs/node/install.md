@@ -3,6 +3,8 @@ tags:
   - Node
   - Reference Client
   - Installation
+  - Setup
+  - Guide
 ---
 
 # The Ergo Reference Client (Node)

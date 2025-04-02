@@ -1,3 +1,12 @@
+---
+tags:
+  - ASIC Resistance
+  - Autolykos
+  - Mining
+  - Algorithm
+  - Technical
+---
+
 # The Mechanics of ASIC Resistance in Autolykos v2
 
 Ergo's Autolykos v2 employs a dynamic strategy to resist Application-Specific Integrated Circuits (ASICs). The system achieves this through scheduled memory table adjustments, effectively increasing the minimum GPU vRAM requirements for mining over time. This ensures that any ASIC built to mine Ergo today will find itself inefficient following future updates.

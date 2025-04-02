@@ -1,6 +1,9 @@
 ---
 tags:
   - Emission
+  - Tokenomics
+  - Mining
+  - Ergo Foundation
 ---
 
 # Ergo Emission Schedule
@@ -52,4 +55,3 @@ Ergo's emission logic underwent rigorous verification using the Stainless formal
 ### No Out-of-Thin-Air Emission
 
 Ergo's "coinbase" transaction, the first transaction in each block, does not create new tokens out of thin air. This policy ensures traceability of every coin or token from a legitimate source, enhancing the integrity and scarcity of Ergo's native currency, and contributing to economic stability.
-

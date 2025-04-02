@@ -1,3 +1,13 @@
+---
+tags:
+  - Node
+  - Protocol
+  - P2P
+  - Validation
+  - Processing
+  - Modifiers
+---
+
 # Ergo Node Protocol
 
 *(Back to: [Node Overview](install.md))*

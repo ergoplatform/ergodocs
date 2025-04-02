@@ -1,3 +1,14 @@
+---
+tags:
+  - Synchronization
+  - Node
+  - P2P
+  - Protocol
+  - Modifiers
+  - Networking
+  - Technical
+---
+
 # Blockchain Synchronization
 
 In Ergo, modifiers can exist in one of the following states:

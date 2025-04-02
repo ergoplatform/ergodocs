@@ -1,3 +1,11 @@
+---
+tags:
+  - Overclocking
+  - Mining
+  - GPU
+  - Performance
+---
+
 # Overclocking for Ergo Mining
 
 Overclocking your GPU can help maximize your mining performance. However, it's important to proceed with caution as overclocking can increase power consumption and potentially shorten the lifespan of your hardware.

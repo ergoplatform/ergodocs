@@ -1,3 +1,13 @@
+---
+tags:
+  - Operating System
+  - Mining
+  - HiveOS
+  - Minerstat
+  - RaveOS
+  - Simple Mining OS
+---
+
 # Operating Systems for Mining
 
 Different operating systems can be used for mining Ergo. Here are some popular options along with guides on how to set up Ergo mining on them:

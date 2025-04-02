@@ -1,3 +1,13 @@
+---
+tags:
+  - Node
+  - Modes
+  - Full Node
+  - Pruned Node
+  - Light Node
+  - SPV
+---
+
 # Modes of Operation
 
 *(Back to: [Node Installation](install.md))*

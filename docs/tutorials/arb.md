@@ -1,3 +1,14 @@
+---
+tags:
+  - Arbitrage
+  - Trading
+  - DeFi
+  - CEX
+  - DEX
+  - Guide
+  - Tutorial
+---
+
 Unlock the potential of arbitrage within the Ergo ecosystem, tapping into both decentralized finance (DeFi) and centralized exchange (CEX) offerings. This beginner's guide reveals how to exploit price discrepancies across various platforms, focusing on Ergo's unique assets and the broader opportunities presented by CEXs. By balancing strategies between decentralised and centralized exchanges, traders can optimize their arbitrage potential for significant gains.
 
 ## Key Arbitrage Strategies on Ergo
@@ -71,4 +82,3 @@ Arbitrage in the Ergo ecosystem, complemented by strategies involving centralize
 Engage with both the Ergo community and communities surrounding centralized exchanges. Insider tips and timely information can lead to lucrative arbitrage opportunities.
 
 Join the [Ergo Yield Telegram](https://t.me/ErgoYield)
-

@@ -1,3 +1,12 @@
+---
+tags:
+  - Indexed Node
+  - Node
+  - API
+  - Blockchain
+  - Explorer
+---
+
 # Indexed Node API
 
 The Ergo Blockchain API provides a set of endpoints to interact with the Ergo blockchain and retrieve various information about transactions, boxes, tokens, and balances. This documentation will guide you through the usage of each API method, including example requests and responses.

@@ -1,3 +1,10 @@
+---
+tags:
+  - ErgoSummit
+  - Events
+  - Conference
+---
+
 # ErgoSummit
 
 ## **ErgoVersary 2023** (July 1-3rd)
@@ -45,4 +52,3 @@ This event will featured presentations and discussions by developers and blockch
 - [07:07:00](https://www.youtube.com/watch?v=zG-rxMCDIa0&amp;t=25620s) - Understanding dApp Developer Tooling: An Introduction To Json dApp Environment
 - [07:45:30](https://www.youtube.com/watch?v=zG-rxMCDIa0&amp;t=27930s) - The Ergo Foundation’s Grant-Based Approach To Developing The UTXO-Based dApp Ecosystem
 - [08:05:30](https://www.youtube.com/watch?v=zG-rxMCDIa0&amp;t=29130s) - 2021 Ergo Roadmap reveal
-

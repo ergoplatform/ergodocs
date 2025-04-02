@@ -1,3 +1,12 @@
+---
+tags:
+  - Tor
+  - Node
+  - Privacy
+  - Anonymity
+  - Configuration
+---
+
 # Running your Node over Tor
 
 [Tor](https://www.torproject.org/download/tor/) is a network that helps you anonymize your internet traffic by routing it through a series of volunteer-operated servers. We'll guide you through the process of setting up Tor on your node.

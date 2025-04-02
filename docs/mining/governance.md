@@ -1,5 +1,7 @@
 ---
 tags:
+  - Governance
+  - Mining
   - Voting
   - Soft Fork
   - Forking

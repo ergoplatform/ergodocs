@@ -1,3 +1,14 @@
+---
+tags:
+  - Signing Transactions
+  - Backend
+  - Wallet
+  - sigma-rust
+  - NodeJS
+  - Tutorial
+  - Guide
+---
+
 # Signing Transactions Using a Backend Wallet
 
 There are various scenarios where signing a transaction on the backend is necessary. This documentation provides instructions on how to accomplish this task using Ergo. We will outline two common use cases: NFT vending machine and off-chain bots that withdraw funds from contracts.

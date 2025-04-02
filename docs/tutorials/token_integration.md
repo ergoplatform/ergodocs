@@ -1,3 +1,18 @@
+---
+tags:
+  - Token Integration
+  - Cross-Chain
+  - Rosen Bridge
+  - Guide
+  - Tutorial
+  - Ethereum
+  - Cardano
+  - DeFi
+  - DEX
+  - Analytics
+  - Security
+---
+
 # Cross-Chain Token Integration Guide for Rosen Bridge Tokens
 
 This guide outlines the process for integrating and listing tokens that have been bridged between networks using Rosen Bridge. Whether you're bridging from Ergo to Cardano, Cardano to Ethereum, or any other supported network combination, these steps will help ensure your token is properly integrated across ecosystems.

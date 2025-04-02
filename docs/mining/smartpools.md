@@ -1,3 +1,12 @@
+---
+tags:
+  - SmartPools
+  - Mining
+  - Mining Pools
+  - Decentralized
+  - Lithos
+---
+
 # SmartPools: A Decentralized Mining Solution
 
 SmartPools are a decentralized alternative to traditional mining pools. They replace centralized mining pools with autonomous on-chain smart contracts. The latest development in this area is the [Lithos Protocol](lithos.md), which represents the next generation of SmartPools.

@@ -1,3 +1,13 @@
+---
+tags:
+  - Cup of Sugar
+  - Community
+  - Local Economy
+  - LETS
+  - dApp
+  - ErgoHack
+---
+
 ## Welcome to Cup of Sugar
 
 [Visit the website](https://cupofsugar.io)

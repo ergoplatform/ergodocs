@@ -1,3 +1,11 @@
+---
+tags:
+  - History Pruning
+  - Node
+  - Storage
+  - Configuration
+---
+
 # History Pruning
 
 

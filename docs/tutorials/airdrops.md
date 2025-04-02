@@ -1,3 +1,13 @@
+---
+tags:
+  - Airdrops
+  - Token Sales
+  - IDO
+  - Ecosystem
+  - Community
+  - Guide
+---
+
 Within the dynamic Ergo ecosystem, a wealth of opportunities awaits those who actively engage. From airdrops to token sales and initial decentralized token offerings (IDOs), the landscape is ripe for exploration. 
 
 
@@ -36,4 +46,4 @@ Airdrops represent a common practice in this space, presenting investors with th
 
 Staying informed about the Ergo ecosystem is paramount for navigating its intricacies effectively. [ErgCube](https://ergcube.com/) offers a comprehensive ecosystem overview, while [Sigmaverse](https://sigmaverse.io/) showcases the diverse array of dApps and projects building on Ergo. Active involvement in [community chats](#), developer discussions, and participation in [weekly dev chats](#) further enhance your understanding and ability to capitalize on emerging trends.
 
-The Ergo ecosystem offers myriad avenues for investors to participate in its dynamic growth and innovation. By embracing proactive engagement, conducting thorough research, and fostering a culture of collaboration, individuals can unlock the full potential of these opportunities. 
+The Ergo ecosystem offers myriad avenues for investors to participate in its dynamic growth and innovation. By embracing proactive engagement, conducting thorough research, and fostering a culture of collaboration, individuals can unlock the full potential of these opportunities.

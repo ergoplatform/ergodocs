@@ -1,3 +1,13 @@
+---
+tags:
+  - Mining Software
+  - Mining
+  - GPU
+  - AMD
+  - Nvidia
+  - Intel
+---
+
 # Software
 
 
@@ -24,4 +34,4 @@
 ### Other Miners
 
 - [CUDA-based GPU miner for Ergo](https://github.com/ergoplatform/Autolykos-GPU-miner) for NVidia cards
-- [OpenCL miner for ERGO](https://github.com/mhssamadani/ergoAMDminer) for AMD cards 
+- [OpenCL miner for ERGO](https://github.com/mhssamadani/ergoAMDminer) for AMD cards

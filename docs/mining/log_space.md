@@ -1,6 +1,9 @@
 ---
 tags:
+  - Logarithmic Space Mining
+  - Mining
   - NIPoPoWs
+  - Light Clients
 ---
 # Mining in Logarithmic Space
 

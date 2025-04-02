@@ -1,3 +1,12 @@
+---
+tags:
+  - Modifiers
+  - Validation
+  - Node
+  - Technical
+  - Consensus
+---
+
 # Ergo Modifiers Validation
 
 This section contains a list of all consensus-critical validation rules that every node in the network should perform; rules that are not listed in this table should not be considered consensus-critical and enforced by the network.
@@ -101,5 +110,4 @@ voting via soft forks, while new rules may also be added at the same time.
  **Id** | **Validation rule**                                                        | **Soft-forkable** | **Active** | **Modifiers** 
 --------|----------------------------------------------------------------------------|-------------------|------------|---------------
  500    | Operations against the state AVL+ tree should be successful.               | x            | √     | ErgoFullBlock 
- 501    | Calculated AVL+ digest should be equal to one written in the block header. | x            | √     | ErgoFullBlock 
-
+ 501    | Calculated AVL+ digest should be equal to one written in the block header. | x            | √     | ErgoFullBlock

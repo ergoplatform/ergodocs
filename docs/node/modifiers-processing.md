@@ -1,3 +1,12 @@
+---
+tags:
+  - Modifiers
+  - Processing
+  - Node
+  - Technical
+  - Architecture
+---
+
 # Ergo Modifiers Processing
 
 Ergo's modifiers processing algorithm is a universal mechanism that operates consistently across all security modes. Unlike many blockchain systems, Ergo introduces several types of modifiers, which can be broadly classified into two categories: In-memory and Persistent.

@@ -1,3 +1,19 @@
+---
+tags:
+  - rsERG
+  - Liquidity Pool
+  - LP
+  - Uniswap
+  - Ethereum
+  - ETH
+  - Rosen Bridge
+  - Bridging
+  - DeFi
+  - Yield Farming
+  - Tutorial
+  - Guide
+---
+
 # Comprehensive Guide: Participating in rsERG Liquidity Pools
 
 This guide walks you through the process of participating in rsERG/ETH liquidity pools. It covers essential precautions, the bridging process, and how to provide liquidity on Uniswap step by step. 

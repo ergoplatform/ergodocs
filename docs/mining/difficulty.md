@@ -1,3 +1,12 @@
+---
+tags:
+  - Difficulty Adjustment
+  - Mining
+  - Autolykos
+  - EIP-37
+  - Technical
+---
+
 # Understanding Difficulty Adjustment in Ergo
 
 /// admonition | Tooling

@@ -1,3 +1,12 @@
+---
+tags:
+  - Autolykos
+  - Mining
+  - Algorithm
+  - Proof of Work
+  - EIP
+---
+
 # Autolykos Algorithm
 
 This page provides a comprehensive overview of the [Autolykos](https://www.docdroid.net/mcoitvK/ergopow-pdf) algorithm, including a detailed, technical breakdown.

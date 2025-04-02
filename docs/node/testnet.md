@@ -1,3 +1,11 @@
+---
+tags:
+  - Testnet
+  - Node
+  - Setup
+  - Development
+---
+
 # Testnet
 
 /// details | Testnet
@@ -41,10 +49,3 @@ The testnet runs on different ports than the mainnet and can be accessed by chan
 ]
 
 ::/cards::
-
-
-
-
-
-
-

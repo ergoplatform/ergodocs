@@ -1,3 +1,14 @@
+---
+tags:
+  - JITC
+  - Just-In-Time Costing
+  - AOTC
+  - Node
+  - Performance
+  - Scalability
+  - EIP-39
+---
+
 # Just-In-Time Costing
 
 Whether you are an investor or developer, if you have been involved in the world of cryptocurrencies, you have probably encountered discussions about transaction efficiency, scalability, and costing on forums or Twitter threads. For a blockchain technology to achieve long-term viability and widespread adoption, it needs to be adaptable and scalable. With Ergo's latest Protocol Reference Client 5.0.0, the network takes significant leaps forward, introducing new features that offer substantial benefits to miners, developers, and users at all levels of the ecosystem.

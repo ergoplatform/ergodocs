@@ -1,3 +1,13 @@
+---
+tags:
+  - Threshold Signature
+  - Multisig
+  - ErgoScript
+  - P2S
+  - Tutorial
+  - Guide
+---
+
 # 3-out-of-5 Threshold Signature
 
 Let's say you want to create a ***ring spending contract***, where either of us can make a transaction from the same address, but we do not want anyone else to know which one of us is spending the funds. That is not possible with Bitcoin, and while Ethereum can, it would be expensive and complicated – especially with a ring size of 10 or 20 members, required for robust privacy.

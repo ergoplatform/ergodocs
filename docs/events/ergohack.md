@@ -1,3 +1,11 @@
+---
+tags:
+  - ErgoHack
+  - Hackathon
+  - Events
+  - Community
+---
+
 # ERGOHACK: Building the Ergo Ecosystem
 
 ERGOHACK events are pillars of innovation within the Ergo community. These regular online hackathons bring together developers, designers, students, and enthusiasts from around globe onto the [Ergo Discord](https://discord.gg/qxdrHM2eHv). Participants collaborate intensively, often over several days or weeks, to build solutions, tools, and dApps that address specific themes or contribute broadly to the Ergo ecosystem.

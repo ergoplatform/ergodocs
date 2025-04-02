@@ -1,3 +1,14 @@
+---
+tags:
+  - Oracle Pool
+  - Bootstrap
+  - Setup
+  - Tutorial
+  - Guide
+  - oracle-core
+  - Testnet
+---
+
 # Bootstrap an Oracle Pool
 
 ## Before you start

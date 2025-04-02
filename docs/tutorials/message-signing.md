@@ -1,4 +1,16 @@
 
+---
+tags:
+  - Message Signing
+  - Authentication
+  - Nautilus
+  - sigma-rust
+  - Wallet
+  - Security
+  - Tutorial
+  - Guide
+---
+
 # Message signing and user authentication with Nautilus wallet and sigma-rust
 
 Did you know that besides transactions you can sign any piece of data?
@@ -42,4 +54,3 @@ References:
 
 1. **Sigma-rust** https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-wasm
 2. **Sigma-rust discord** https://discord.com/channels/668903786361651200/729692906209673257
-

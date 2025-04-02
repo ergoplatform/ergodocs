@@ -1,3 +1,14 @@
+---
+tags:
+  - Wallet
+  - Setup
+  - Security
+  - Node
+  - API
+  - BIP32
+  - BIP39
+---
+
 # Ergo Wallet Setup and Security
 
 To securely store your private keys and sign transactions, an Ergo node provides a built-in wallet. This section provides instructions on setting up and protecting your Ergo wallet.

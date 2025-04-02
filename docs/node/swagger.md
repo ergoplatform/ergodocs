@@ -1,5 +1,10 @@
 ---
 tags:
+  - Swagger
+  - Node
+  - API
+  - REST API
+  - UI
   - RPC Endpoints
 ---
 
@@ -53,8 +58,3 @@ To derive addresses, navigate to `localhost:9053/swagger#/wallet/walletDeriveKey
 ```bash
 "derivationPath": "m/44'/429'/0'/0/0" 
 ```
-
-
-
-
-

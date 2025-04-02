@@ -1,3 +1,14 @@
+---
+tags:
+  - Mining
+  - Revenue
+  - Emission
+  - Fees
+  - Storage Rent
+  - Layer 2
+  - Sidechains
+---
+
 # Sustaining Ergo Mining: Revenue Streams Beyond Emissions
 
 As Ergo's emission schedule is set to conclude around the year 2045, ensuring the continued incentivization of miners to secure the network is of paramount importance. Ergo's architecture is designed to support a diverse range of revenue streams, promoting both network growth and long-term sustainability.
