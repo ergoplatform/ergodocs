@@ -22,7 +22,7 @@ This library is integral to the operation of the [Ergo Node](https://github.com/
 
 ### Sigma Language Background
 
-In Bitcoin, each coin is secured by a script written in a stack-based language, which is evaluated by the Bitcoin Script interpreter. The ErgoScript and ErgoTree interpreter generalize this concept into an "authentication language" that can express complex spending conditions using Sigma protocols. These protocols allow for sophisticated cryptographic proofs, enabling the creation of contracts that can require multiple signatures, threshold signatures, or even conditions based on external data.
+In Bitcoin, each coin is secured by a script written in a stack-based language, which is evaluated by the Bitcoin Script interpreter. ErgoScript and the ErgoTree interpreter generalize this concept into an "authentication language" that can express complex spending conditions using Sigma protocols. These protocols allow for sophisticated cryptographic proofs, enabling the creation of contracts that can require multiple signatures, threshold signatures, or even conditions based on external data.
 
 ### Prover and Verifier Workflow
 
