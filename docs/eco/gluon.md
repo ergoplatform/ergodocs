@@ -1,9 +1,13 @@
 ---
 tags:
+  - Gluon
+  - Stablecoin
+  - Djed
   - SigmaGold
   - SigGold
   - Oracles
-  - dApp-InDev
+  - dApp
+  - dApp-Live
 ---
 
 # Gluon

@@ -1,3 +1,11 @@
+---
+tags:
+  - Miner Tooling
+  - Mining
+  - dApp
+  - Infrastructure
+---
+
 # Miner Tooling
 
 There are several ecosystem projects focused on building miner tooling. Here are some of them:
@@ -28,7 +36,4 @@ There are several ecosystem projects focused on building miner tooling. Here are
 
 ### Subpooling
 
-[Subpooling](subpool.md) is a strategy that miners can use to increase their chances of earning rewards. It is a smart contract-based mining pool that allows groups of friends to pool together their hash rates in order to get mining pool rewards quicker than they would alone. Subpooling allows members to mine to the same address without worrying about one person controlling the funds. The goal of this dApp is to help encourage the decentralisation of mining pools while also promoting small-time miners who may not be able to get block rewards fast enough on normal mining pools. 
-
-
-
+[Subpooling](subpool.md) is a strategy that miners can use to increase their chances of earning rewards. It is a smart contract-based mining pool that allows groups of friends to pool together their hash rates in order to get mining pool rewards quicker than they would alone. Subpooling allows members to mine to the same address without worrying about one person controlling the funds. The goal of this dApp is to help encourage the decentralisation of mining pools while also promoting small-time miners who may not be able to get block rewards fast enough on normal mining pools.

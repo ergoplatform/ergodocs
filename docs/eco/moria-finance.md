@@ -1,3 +1,12 @@
+---
+tags:
+  - Moria Finance
+  - Fund Management
+  - DeFi
+  - Multisig
+  - dApp
+---
+
 # Moria Finance: Decentralized Fund Management on Ergo
 
 ## Introduction

@@ -1,3 +1,11 @@
+---
+tags:
+  - ONERGO
+  - Community
+  - Education
+  - Platform
+---
+
 # ONERGO
 
 **ONERGO** aims to be the central hub for community engagement and education within the Ergo blockchain ecosystem. 

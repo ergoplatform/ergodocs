@@ -1,5 +1,12 @@
 ---
 tags:
+  - EXLE
+  - Ergo-Lend
+  - Lending
+  - DeFi
+  - Microfinance
+  - DAO
+  - dApp
   - dApp-Beta
 ---
 

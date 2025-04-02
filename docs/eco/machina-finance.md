@@ -1,5 +1,9 @@
 ---
 tags:
+  - Machina Finance
+  - DEX
+  - Grid Trading
+  - dApp
   - dApp-InDev
 ---
 

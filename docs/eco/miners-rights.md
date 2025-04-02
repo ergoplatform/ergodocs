@@ -1,3 +1,12 @@
+---
+tags:
+  - Mining Rights Protocol
+  - Mining
+  - NFT
+  - Token Distribution
+  - dApp
+---
+
 # Mining Rights Protocol: A Technical Analysis of Blockchain-Based Mining Rights Management
 
 Revolutionizing Mining Incentives Through Smart Contract Architecture

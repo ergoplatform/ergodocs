@@ -1,5 +1,10 @@
 ---
 tags:
+  - Lithos
+  - Mining Pool
+  - Decentralized
+  - Infrastructure
+  - dApp
   - dApp-InDev
 ---
 

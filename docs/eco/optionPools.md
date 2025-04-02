@@ -1,4 +1,13 @@
 
+---
+tags:
+  - OptionPools
+  - Options Trading
+  - DeFi
+  - AMM
+  - dApp
+---
+
 # OptionPools: Unleashing the Power of Ergo for Decentralized Options Trading
 
 ## Introduction

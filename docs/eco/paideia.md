@@ -1,6 +1,11 @@
 ---
 tags:
-  - dApp-Beta
+  - Paideia
+  - DAO
+  - Staking
+  - Governance
+  - dApp
+  - dApp-Live
 ---
 
 /// details | Status: Mainnet

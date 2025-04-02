@@ -1,6 +1,9 @@
 ---
 tags:
+  - Hodlcoin
   - Degen Finance
+  - Gaming
+  - dApp
 ---
 # Hodlcoin: A High-Risk, High-Reward Game
 
@@ -22,5 +25,4 @@ In response to this, a second version of Hodlcoin has been developed and launche
 
 ## Risk Management
 
-It's important to reiterate the significance of [knowing your assumptions](kya.md) when participating in experimental decentralized finance. There are no guarantees, and the reliability of a protocol is best measured over time. Always manage your risks and trade wisely. 
-
+It's important to reiterate the significance of [knowing your assumptions](kya.md) when participating in experimental decentralized finance. There are no guarantees, and the reliability of a protocol is best measured over time. Always manage your risks and trade wisely.

@@ -1,3 +1,11 @@
+---
+tags:
+  - Mew Finance
+  - DEX
+  - Asset Trading
+  - dApp
+---
+
 # Mew Finance: A User-Friendly Decentralized Exchange and Asset Trading Platform
 
 

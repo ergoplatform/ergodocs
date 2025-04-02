@@ -1,3 +1,11 @@
+---
+tags:
+  - Oracle Pools
+  - Oracles
+  - EIP-23
+  - DeFi
+---
+
 # Oracle Pools Version 2
 
 

@@ -1,5 +1,9 @@
 ---
 tags:
+  - NightOwl
+  - Casino
+  - Gaming
+  - dApp
   - dApp-InDev
 ---
 

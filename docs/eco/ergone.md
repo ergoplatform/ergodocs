@@ -1,3 +1,12 @@
+---
+tags:
+  - ErgOne
+  - Token
+  - Proof of Commitment
+  - Community
+  - dApp
+---
+
 # ErgOne
 
 ErgOne ($Erg0ne) is an innovative token built on the Ergo blockchain that implements the Proof-of-Commitment Protocol (PoCoP) - a unique approach to incentivizing community engagement and ecosystem growth.

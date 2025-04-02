@@ -1,3 +1,13 @@
+---
+tags:
+  - Project Tesseract
+  - ErgoGames.io
+  - Gaming
+  - NFT
+  - dApp
+  - dApp-InDev
+---
+
 # Project Tesseract: An Inside Look at ErgoGames.io's Upcoming Release
 
 ## Overview
@@ -22,4 +32,4 @@ The game will also feature Discord integration, allowing real-time communication
 While specific release dates and more in-depth features are yet to be announced, the game is expected to follow after the release of Digigoats. It is highly anticipated within the community, given the success and innovation demonstrated in previous projects by ErgoGames.io.
 
 
-For more information and updates, you can follow [ErgoGames.io](https://ergogames.io) on their official website and social media channels. 
+For more information and updates, you can follow [ErgoGames.io](https://ergogames.io) on their official website and social media channels.

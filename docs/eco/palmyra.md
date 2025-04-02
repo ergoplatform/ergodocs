@@ -1,5 +1,11 @@
 ---
 tags:
+  - Palmyra
+  - ComDEX
+  - Commodities
+  - Trading
+  - Marketplace
+  - dApp
   - dApp-MVP
 ---
 

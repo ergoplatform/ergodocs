@@ -1,3 +1,11 @@
+---
+tags:
+  - Hodlbox
+  - HODL
+  - NFT
+  - dApp
+---
+
 # Hodlbox: Incentivizing Long-Term Holding in the Ergo Ecosystem
 
 ## Overview

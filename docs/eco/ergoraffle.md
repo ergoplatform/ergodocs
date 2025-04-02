@@ -1,5 +1,9 @@
 ---
 tags:
+  - ErgoRaffle
+  - Crowdfunding
+  - Raffle
+  - dApp
   - dApp-Live
 ---
 

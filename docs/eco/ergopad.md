@@ -1,3 +1,13 @@
+---
+tags:
+  - Ergopad
+  - Launchpad
+  - IDO
+  - Staking
+  - DAO
+  - dApp
+---
+
 # Ergopad
 
 [ErgoPad](https://www.ergopad.io/whitepaper) is a platform within the Ergo ecosystem that facilitates the incubation and launch of new projects. It provides a mechanism for token IDOs (Initial Dex Offerings), which serve as a source of funding for these projects. Ergopad has its own native token, which was introduced through an IDO and can be staked by users via on-chain smart contracts.
@@ -9,4 +19,3 @@ The Ergopad team aims to support grassroots projects in shaping the future of gl
 The Ergopad website provides a variety of information including announcements, upcoming projects, and a dashboard. Ergopad also has its own token which users can acquire with $Erg and stake. 
 
 For a more detailed understanding of Ergopad, you can visit their website at [ergopad.io](https://ergopad.io/).
-

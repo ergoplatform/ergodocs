@@ -1,6 +1,11 @@
 ---
 tags:
+  - OptionCoin
+  - Options Trading
+  - Token Emission
+  - DeFi
   - Degen Finance
+  - dApp
 ---
 
 # OptionCoin: Decentralized Options Trading for Token Emission

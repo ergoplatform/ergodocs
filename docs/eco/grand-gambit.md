@@ -1,3 +1,11 @@
+---
+tags:
+  - Grand Gambit
+  - Casino
+  - Gaming
+  - dApp
+---
+
 # Grand Gambit
 
 Grand Gambit, accessible at [grandgambit.io](https://grandgambit.io/), is the pioneering casino on Ergo. It offers a variety of games that can be played using ERG and several other tokens. The platform is compatible with both desktop and mobile devices, although currently only Android is supported.
