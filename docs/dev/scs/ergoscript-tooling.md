@@ -70,6 +70,6 @@ The ErgoScript ecosystem offers a wide range of tools and resources to help deve
 
 ##### Box
 
-Here is a box to experiment with 
+Here is a box you can experiment with:
 
-This [address](https://wallet.plutomonkey.com/p2s/?source=c2lnbWFQcm9wKFNFTEYuaWQgPT0gSU5QVVRTKDApLmlkKQ==) will create an output at this [box](https://api.ergoplatform.com/api/v0/transactions/boxes/byAddress/unspent/ZX44DGQZJ4SoDVh58XRuNZjAq).
+This P2S [address](https://wallet.plutomonkey.com/p2s/?source=c2lnbWFQcm9wKFNFTEYuaWQgPT0gSU5QVVRTKDApLmlkKQ==) corresponds to this unspent [box](https://api.ergoplatform.com/api/v0/transactions/boxes/byAddress/unspent/ZX44DGQZJ4SoDVh58XRuNZjAq).

@@ -10,17 +10,21 @@ The Blockchain Context represents data taken from the transaction and the state 
 
 ### HEIGHT
 
-An integer representing the height of the current block is to be validated by miners. The number can be accessed using `HEIGHT`.
+An integer representing the height of the block currently being validated by miners. This value can be accessed using `HEIGHT`.
 
 ### SELF
 
-`SELF` represents the current eUTxO input box which holds the ErgoScript contract. The SELF box is of type `Box`, which contains information relevant to the specified eUTXO such as:
+`SELF` represents the current eUTXO input box which holds the ErgoScript contract. The `SELF` box is of type `Box`, containing information relevant to the specified eUTXO, such as:
 
-the value in nanoERGs; the box id; the proposition bytes of the guarding script for this eUTXO, the tokens stored in the box; and the box registers.
+*   The value in nanoERGs
+*   The box ID
+*   The proposition bytes of the guarding script for this eUTXO
+*   The tokens stored in the box
+*   The box registers
 
 ### INPUTS
 
-The eUTxOs are used as input boxes to be spent in the transaction. The boxes are stored in a collection and can be accessed using the object called `INPUTS`. The `SELF` box is part of this input box collection.
+The eUTXOs used as input boxes to be spent in the transaction. These boxes are stored in a collection and can be accessed using the object called `INPUTS`. The `SELF` box is part of this input box collection.
 
 ### Data Inputs
 
@@ -28,15 +32,15 @@ Data inputs are input eUTXOs that are not spent in the transaction. They serve a
 
 ### OUTPUTS
 
-The output box eUTXOs will be created from the transaction. The collection can be accessed using the `OUTPUTS` object.
+The output box eUTXOs that will be created by the transaction. This collection can be accessed using the `OUTPUTS` object.
 
 ### Headers
 
-Block headers (Parts of each block that hold information representing the block) are available through the `CONTEXT.headers` function. The `headers` function returns a collection holding the last 10 block headers present before the current `HEIGHT`. Using this function allows your contract to gain insight into the most recent blocks that occurred before the transaction that your contract is being executed in. Each `Header` object in the collection returned by `headers` holds a variety of different information, much of this information pertains to the block miner, such as the miner’s PK, the nonce used to find the block, and the votes the miner submitted when the block was mined.
+Block headers are available through the `CONTEXT.headers` function. The `headers` function returns a collection holding the last 10 block headers preceding the current `HEIGHT`. Using this function allows your contract to gain insight into the most recent blocks before the current transaction's execution context. Each `Header` object in the collection returned by `headers` holds various information, much of which pertains to the block miner, such as the miner’s public key (PK), the nonce used to find the block, and the votes the miner submitted when the block was mined.
 
 ### Pre-Headers
 
-The `CONTEXT.preHeader` function gives your contract access to the `PreHeader`. The `PreHeader` object represents all of the information available to miners who are working to find the next block. Because each block miner must insert their own information to properly mine a block, the data contained within each `PreHeader` object is completely different depending on who mines the block. This means that your contract could execute differently depending on who ends up mining the block that spends your contract’s box.
+The `CONTEXT.preHeader` function gives your contract access to the `PreHeader`. The `PreHeader` object represents all the information available to miners attempting to find the next block. Because each block miner must insert their own information to properly mine a block, the data contained within each `PreHeader` object varies depending on who mines the block. This means your contract could execute differently depending on who mines the block containing the transaction that spends your contract’s box.
 
 ## Example
 
@@ -62,4 +66,4 @@ The `CONTEXT.preHeader` function gives your contract access to the `PreHeader`. 
 
 ```
 
-The code uses various fields of the CONTEXT object to check certain conditions and produce a SigmaProp output. The code then combines these conditions in a true SigmaProp output if either `amountAddedInOutputs && selfAtZero` or `heightIsValid && randomValueIsEven` is true.
+The code uses various fields of the `CONTEXT` object to check certain conditions. It then combines these conditions into a final `SigmaProp` result that evaluates to true if either (`amountAddedInOutputs && selfAtZero`) or (`heightIsValid && randomValueIsEven`) is true.

@@ -18,7 +18,7 @@ Complementing ErgoTree is a frontend language named [ErgoScript](ergoscript.md).
 
 ## Structure, Authentication, and Application
 
-ErgoTree, distinct from low-level languages like stack-based EVM assembly, is structured as a *typed abstract syntax tree*. In this regards ErgoTree is a kind of authentication language aka *“smart signature* used to validate transactions or actions by verifying specific conditions.
+ErgoTree, distinct from low-level languages like stack-based EVM assembly, is structured as a *typed abstract syntax tree*. In this regard, ErgoTree is a kind of authentication language aka *"smart signature"* used to validate transactions or actions by verifying specific conditions.
 
 ErgoTree achieves this by combining:
 
@@ -30,7 +30,7 @@ By evaluating these predicates, ErgoTree authenticates [transactions](transactio
 - Additional parties can be authorized
 - Parties can delegate authorization
 - AND/OR expressions
-- Conditions can be more than who signed. 
+- Conditions can extend beyond signer identity.
 
 ## Key ErgoTree Concepts
 
@@ -46,4 +46,4 @@ By evaluating these predicates, ErgoTree authenticates [transactions](transactio
 - [Constant-less lambdas](https://github.com/ScorexFoundation/sigmastate-interpreter/issues/264).
 - [ErgoTree as an Authentication Language](https://www.ergoforum.org/t/ergotree-as-an-authentication-language/).
 - [Human representation for ergo tree #812](https://github.com/ScorexFoundation/sigmastate-interpreter/pull/812).
-- [ErgoTree pseudo-code](https://github.com/ross-weir/ergo-script-re/tree/main/ergotree-pseudo-code): Generates pseudo code for compiled ergo trees on a best effort basis.
+- [ErgoTree pseudo-code](https://github.com/ross-weir/ergo-script-re/tree/main/ergotree-pseudo-code): Generates pseudo code for compiled ErgoTrees on a best effort basis.

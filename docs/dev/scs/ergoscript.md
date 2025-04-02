@@ -9,12 +9,12 @@ tags:
 
 ## Overview
 
-**ErgoScript** is a simple yet powerful scripting language for [smart contracts](contracts.md) on the [Ergo blockchain](protocol-overview.md), designed as a subset of Scala. It allows developers to define complex conditions for spending funds. ErgoScript code is translated into a lower-level representation called [**ErgoTree**](ergotree.md) before being stored on the [blockchain](protocol-overview.md). During [transaction validation](validation.md), ErgoTree is interpreted using cryptographic protocols based on [Sigma Protocols](sigma.md). This unique architecture enables Ergo to support advanced cryptographic functionalities like [ring signatures](ring.md) and [threshold signatures](threshold.md) directly within the scripting language, without needing special core protocol changes.
+**ErgoScript** is a simple yet powerful scripting language for [smart contracts](contracts.md) on the [Ergo blockchain](protocol-overview.md), designed as a subset of Scala. It allows developers to define complex conditions for spending funds. ErgoScript code is translated into a lower-level representation called [**ErgoTree**](ergotree.md) before being stored on the [blockchain](protocol-overview.md). During [transaction validation](validation.md), ErgoTree is interpreted using cryptographic protocols based on [Sigma Protocols](sigma.md). This unique architecture enables Ergo to support advanced cryptographic functionalities like [ring signatures](ring.md) and [threshold signatures](threshold.md) directly within the scripting language, without requiring special core protocol changes.
 
 /// admonition | Sigma Protocols
     type: tip
 
-Ergo's support for [**Sigma Protocols**](sigma.md) (aka generalized Schnorr proofs) is a key feature, providing efficient and composable building blocks for [zero-knowledge proofs](zkp.md). [Schnorr proofs](schnorr.md) and [proofs of Diffie-Hellman tuples](diffie.md) are supported by default, with the potential for the community to add more via [soft forks](soft-fork.md).
+Ergo's support for [**Sigma Protocols**](sigma.md) (aka generalized Schnorr proofs) is a key feature, providing efficient and composable building blocks for [zero-knowledge proofs](zkp.md). [Schnorr proofs](schnorr.md) and [proofs of Diffie-Hellman tuples](diffie.md) are supported by default, with the potential for the community to add more through [soft forks](soft-fork.md).
 ///
 
 ErgoScript builds upon the security principles of Bitcoin while enabling much more complex financial contracts. Unlike Bitcoin Script, ErgoScript supports features necessary for advanced applications, including the ability to reference blockchain state and implement complex logic, effectively enabling Turing-Complete computations through [multi-stage contract interactions](multi.md).
@@ -38,7 +38,7 @@ The account-based model relies on a shared mutable state, which can lead to comp
 
 ### Expressive Power
 
-While Ethereum's Turing-complete language offers theoretical flexibility, it has practical limitations like blockchain bloat, complex bugs, unpredictable gas costs, and limits on contract complexity. Ergo achieves similar expressive power through its [eUTXO model](eutxo.md) and [multi-stage contracts](multi-stage-txs.md), but intentionally keeps the core ErgoScript language non-Turing-complete to enhance security and predictability.
+While Ethereum's Turing-complete language offers theoretical flexibility, it has practical limitations like blockchain bloat, complex bugs, unpredictable gas costs, and limits on contract complexity. Ergo achieves similar expressive power through its [eUTXO model](eutxo.md) and [multi-stage contracts](multi-stage-txs.md), but intentionally keeps the core ErgoScript language itself non-Turing-complete to enhance security and predictability.
 
 ///
 /// admonition | Simple Example

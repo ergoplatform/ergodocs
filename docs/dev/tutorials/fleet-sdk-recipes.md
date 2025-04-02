@@ -1,3 +1,24 @@
+---
+tags:
+  - fleet-sdk
+  - typescript
+  - javascript
+  - sigmaprop
+  - ergotree
+  - registers
+  - p2pk
+  - validation
+  - tutorial
+  - off-chain
+  - sdk
+  - serialization
+  - deserialization
+  - token-id
+  - numeric-registers
+  - compiler
+  - troubleshooting
+---
+
 # Fleet SDK Recipes
 
 This page contains useful code snippets, patterns, and troubleshooting tips for common tasks when using the [Fleet SDK](../libraries.md#fleet-sdk-typescript--javascript) in TypeScript/JavaScript.
@@ -370,8 +391,9 @@ if (r4Value) {
 ---
 
 ## Relationship Diagram
-
+<!--
 *(Placeholder for a visual diagram illustrating how ErgoAddress, Public Key (GroupElement), SigmaProp, and ErgoTree (P2PK Script) relate to each other)*
+-->
 
 ```mermaid
 graph TD
@@ -397,22 +419,3 @@ graph TD
 - [Fleet SDK Compiler](https://fleet-sdk.github.io/docs/compiler)
 - [Fleet SDK Serializer](https://fleet-sdk.github.io/docs/serializer-overview)
 
----
-tags:
-  - fleet-sdk
-  - typescript
-  - javascript
-  - sigmaprop
-  - ergotree
-  - registers
-  - p2pk
-  - validation
-  - tutorial
-  - off-chain
-  - sdk
-  - serialization
-  - deserialization
-  - token-id
-  - numeric-registers
-  - compiler
-  - troubleshooting

@@ -8,7 +8,7 @@ tags:
 
 ### Ergo Contracts
 
-[ergo-contracts](https://github.com/ergoplatform/ergo-contracts) contains Source code of the Ergo smart contracts with compilation, testing, and formal verification tooling
+The [ergo-contracts](https://github.com/ergoplatform/ergo-contracts) repository contains source code for Ergo smart contracts, along with compilation, testing, and formal verification tooling.
 
 - [AssetsAtomicExchange.scala](https://github.com/ergoplatform/ergo-contracts/blob/42719326656e4764f214f57fa8f45205ee20d58d/verified-contracts/src/main/scala/org/ergoplatform/contracts/AssetsAtomicExchange.scala)
 - [CrowdFundingContractVerification.scala](https://github.com/ergoplatform/ergo-contracts/blob/42719326656e4764f214f57fa8f45205ee20d58d/verified-contracts/src/main/scala/org/ergoplatform/contracts/CrowdFundingContractVerification.scala)
@@ -106,7 +106,7 @@ tags:
 
 ## Resources
 
-- [contract-testing](https://github.com/anon-real/contract-testing) provides a quick tutorial may be useful for testing your contracts off-chain
+- [contract-testing](https://github.com/anon-real/contract-testing) provides a quick tutorial that may be useful for testing your contracts off-chain.
 
 
 
