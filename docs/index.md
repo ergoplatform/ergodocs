@@ -61,27 +61,30 @@ Ergo offers several unique advantages:
 *   **Powerful Tools:** Supports advanced features like smart contracts for building useful applications (dApps).
 *   **Sustainable:** Features like Storage Rent help keep the network efficient and long-lasting.
 
-[**Learn more about Ergo’s Vision and Features**](dev/protocol/protocol-overview.md)
+[**Learn more about Ergo’s Vision**](dev/protocol/why.md) and [**Key Features**](dev/protocol/protocol-overview.md)
 
 ## Getting Started with Ergo
 
 If you're new to cryptocurrencies or just starting with Ergo, here are some key steps:
 
 *   **Understand the Basics:** What is blockchain? What is ERG? Check out the [**Glossary**](glossary.md) for simple explanations of common terms.
-*   **Get a Wallet:** A digital wallet is needed to store your ERG securely. Learn about different [**Wallet Options**](dev/wallets.md) and how to set one up safely. *(Note: This links to the existing wallet page, which also needs review)*.
-*   **Get ERG:** Find out where you can acquire ERG. *(Placeholder - needs link to an appropriate guide/page)*
-*   **Stay Safe:** Learn basic security practices to protect your funds. *(Placeholder - needs link to a security guide)*
+*   **Get a Wallet:** A digital wallet is needed to store your ERG securely. Learn about different [**Wallet Options**](dev/wallets.md) and how to set one up safely.
+*   **Get ERG & Stay Safe:** Learn how to acquire and securely store ERG with this [**Security Guide**](https://ergonaut.space/en/Guides/yield/getting-started).
 *   **Explore What You Can Do:** Discover simple ways to use Ergo, like sending ERG or exploring applications built on Ergo (dApps). See the [**Ecosystem Overview**](uses/use-cases-overview.md).
 *   **Common Questions:** Find answers to frequently asked questions in the [**FAQ**](faq.md) and [**Common Misconceptions**](fud-faq.md).
-*   **Join the Community:** Connect with other users! See the community links below.
+*   **Join the Community:** Connect with other users! See the community links below, or learn how to [**Contribute to Marketing**](contribute/marketing.md) or join the [**Sigmanauts Program**](contribute/sigmanauts.md).
 
 ### Using Ergo (Intermediate)
 
 Ready to explore more?
 
-*   **Explore Decentralized Exchanges (DEXs):** Learn how to trade tokens directly on Ergo. See [**Decentralized Exchanges**](uses/dex.md).
-*   **Understand Stablecoins:** Discover SigmaUSD, Ergo's native stablecoin. See [**SigmaUSD**](uses/sigmausd.md).
-*   **Run Your Own Node:** Contribute to the network's decentralization. See [**Running a Node**](node/install.md).
+*   **Explore Decentralized Exchanges (DEXs):** Learn how to trade tokens directly on Ergo ([**DEX Overview**](uses/dex.md)), engage in [**Peer-to-Peer Trading**](eco/p2p-trading.md), explore [**Arbitrage Opportunities**](tutorials/arb.md), or dive into [**Options Trading**](tutorials/trading-options.md).
+*   **Earn Yield:** Discover ways to earn passive income through [**Yield Farming & Staking**](tutorials/yield.md).
+*   **Understand Stablecoins:** Discover SigmaUSD, Ergo's native stablecoin ([**SigmaUSD**](uses/sigmausd.md)).
+*   **Explore DegFi:** Navigate high-risk, high-reward opportunities with [**Degenerate Finance**](uses/degfi.md).
+*   **Engage with the Ecosystem:** Learn about [**Airdrops & Token Sales**](tutorials/airdrops.md) or explore [**Gaming on Ergo**](tutorials/gaming-tutorial.md).
+*   **Run Your Own Node:** Contribute to the network's decentralization ([**Running a Node**](node/install.md)).
+*   **Use Off-Chain Services:** Understand and utilize off-chain bots and services ([**Off-Chain Overview**](dev/oc/off-chain-overview.md)).
 
 ### Building on Ergo (Developers)
 

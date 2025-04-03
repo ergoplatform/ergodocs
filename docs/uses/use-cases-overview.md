@@ -38,6 +38,30 @@ Use the navigation on the left to explore each of these sections in detail. Whet
 
 Join us in building the future of decentralized finance and beyond.
 
+## Conceptual Example: Programmable Contracts
+
+Even the most complex use case is simpler than general-purpose software that can be used to program any contract. After all, generalized logic must be both far-reaching and secure. Moreover, even a specialized contract comprises many steps, each of which is fairly simple. Thus, another requirement for a general-purpose platform is that it should simplify the process of writing contracts, making them as accessible (and safe) as possible. This can be achieved using template agreements with customizable parameters.
+
+Consider the following example illustrating how programmable contracts on Ergo can handle complex financial interactions:
+
+### Gold-backed Tokens Example
+
+Alice uses ERGs to purchase gold-backed tokens from Bob. Bob stores the gold in a secure vault and uses the blockchain to issue one token for every Troy ounce of gold he holds. Alice can then use these tokens freely in different contracts, transferring and trading them under whatever conditions she specifies in the smart contract code. When Alice wants to sell the tokens for physical gold, she can conduct another transaction with Bob, receiving ERG in return at the market price.
+
+The point of blockchain contracts is to eliminate the need for trust. While the purchase transaction is now trustless, in this instance, Alice still needs to trust Bob about two things:
+1.  Bob may refuse to swap the gold tokens back to ERG at the correct price when Alice wants to sell.
+2.  Bob may default on his obligations – running away with the gold or misusing the funds he receives and operating a fractional reserve.
+
+### Extending the Contracts with Oracles and Insurance
+
+We can create an [Oracle](oracles.md) or decentralized price feed to address these issues. This uses multiple external data sources to record the price of gold on the blockchain at regular intervals. This price feed will be the reference point for the redemption contract that manages the sale of Alice's gold with Bob (or any other participant). Thus, the system automatically enforces the right price when a swap takes place.
+
+The second situation requires a third-party insurer, Charlie, whose service is also hosted on the blockchain with a smart contract (perhaps an [Insurance dApp](insurance.md)). When Alice purchases gold from Bob, she additionally buys an insurance contract from Charlie. The payment can depend on factors like the amount of insurance required and Bob's reputation, managed by a decentralized feedback mechanism. Now, if Bob defaults, Alice will automatically receive the value of her gold tokens, with Charlie effectively acting as a buyer of last resort.
+
+Charlie may even sell shares in his insurance business to Dave and other participants, providing them with a proportion of revenues to ensure he has the capital he needs to cover any liabilities from the outset.
+
+This example demonstrates how Ergo's programmable contracts can model complex, multi-party financial agreements in a secure and trust-minimized way.
+
 ## Core Components
 
 ::cards::

@@ -168,6 +168,7 @@ If you're interested in deepening your understanding of ErgoScript and the Ergo 
 - [The Ergo Web Template](https://github.com/SavonarolaLabs/ergo-web-template): An introductory guide for individuals new to Ergo, offering a hands-on experience with essential Ergo functionalities.
 
 - [Ergo-play-boilerplate](https://github.com/kii-dot/ergo-play-boilerplate)
+- **[ergo-play-boilerplate](https://github.com/kii-dot/ergo-play-boilerplate)**: Barebone code to jump into Ergo development quickly.
 
 ### Advanced Tutorials
 
@@ -366,8 +367,11 @@ Most repositories are also categories on [Grist](https://ergo.getgrist.com/jf9KP
 - **[EF Transparency Report](ergo-foundation.md)**: Gain insights into the Ergo Foundation's operations and transparency initiatives.
 
 - **[Ergo's Social Contract](social_contract.md)**: Delve into the principles and commitments that guide Ergo's community and development.
-
 - **[Howey Test Analysis](security.md)**: Understand how Ergo measures up against the Howey Test for securities.
+
+### Further Resources
+
+- **[Completeness of Ergo | Kushti | Ergoversary Summit 2023](https://www.youtube.com/watch?v=49UmOkx6pj0&list=PL8-KVrs6vXLRxmOmprVdXkHDcO4IaQZOY&index=2)**: Video discussing the completeness aspects of the Ergo platform.
 
 ## Introductory Resources
 

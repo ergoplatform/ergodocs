@@ -127,6 +127,84 @@ To fund development, promotion, events, and any other activities which may advan
 
 Ergo has a maximum supply of **97,739,925** Ergs, to be completed by 2045. The block reward lowers to 3ERG in 2026. You can see this emission schedule on [ergo.watch](https://ergo.watch/emission)
 
+## Future Plans & Ecosystem Growth
+
+### What are Ergo's future plans, especially in terms of how you grow your ecosystem?
+
+Position Ergo as a basis for unstoppable, grassroots economies, serving as a decentralized central bank digital currency (CBDC) for the people. See 'General Overarching Ergo Design and Implementation Roadmap' amongst other roadmaps here: [Roadmap](roadmap.md#resources)
+
+Continue to solve pain points in development. UX is a big one which will be helped hugely by sub-blocks. We have two hardware wallets just about ready (Ledger, Keystone), more courses, tutorials, guides, resources, etc appearing daily making it easier to onboard developers.
+
+[Developer Getting Started Guide](dev/get-started.md)
+
+Bulk of our issue is lack of T1 exchanges and professional marketing. Rosen is helping here by connecting extensive liquidity to our DeFi stack (for example, DOGE could launch HodlDOGE on-chain, rsBTC can go in the mixer, etc)
+
+Will continue to push with Kraken and other OnRamps
+
+You can mint new tokens, nfts, and transact them for next to nothing. Everything is open source. It's a fun ecosystem to play in and could have mass appeal once the above is solved.
+
+[Project Management Board 1](https://ergo.getgrist.com/jf9KPR1HUDJH/Project-Management/p/24)
+[Project Management Board 2](https://ergo.getgrist.com/jf9KPR1HUDJH/Project-Management/p/16)
+
+DAOs are now live and the community can help to grow the ecosystem in a more structured and decentralised way.
+
+[Sigmanauts Program](contribute/sigmanauts.md)
+
+We have dozens of volunteers who drive ergo forward already. We're not reliant on a centralised entity or group pushing things forward. This kind of growth is a slow-burn but cummulative. I've been applying Start up Growth Engineering to Ergo, optimising for agency, pushing decision ownership to the front line, appropriate alignment, removing barriers to necessary, creating linear resources so that we're best positioned to drive compounding growth via network effects.
+
+## Artificial Intelligence (AI)
+
+### What is Ergo's view on the current AI agent space, as many ecosystems are trying to attract developers to build agents on top of their platforms?
+
+Ergo blockchain is well-suited for Artificial Economic Intelligence (AEI) due to its simplicity in handling contracts, enabling easy issuance of peer-to-peer financial instruments like bonds. Its flexible contract templates allow for seamless modifications, supporting the evolutionary development of AEI-to-AEI agreements.
+
+[Artificial Economic Intelligence On (Ergo) Blockchain - Ergo Forum](https://www.ergoforum.org/t/artifical-economic-intelligence-on-ergo-blockchain/4429)
+
+Community has recently started building SharkNet - a curated dataset of ErgoScript examples to train better dev tools.
+[SharkNet GitHub](https://github.com/The-Last-Byte-Bar/SharkNet/tree/main)
+
+And there is an AI bot trained on all our docs, whitepapers and chats, available on our website or directly here:
+[Ergo Documentation AI Chatbot](https://www.chatbase.co/chatbot-iframe/zxB2uzZfYoHIpA98eTzgM)
+
+## Privacy
+
+### How important is privacy for Ergo currently, and how do you plan to avoid the issues that some privacy-focused projects have faced, like legal challenges?
+
+Privacy is a core principle for Ergo, considered a fundamental human right, and is implemented through opt-in protocols and robust cryptographic methods within its eUTXO model, ensuring strong protection while maintaining necessary transparency. To sidestep legal challenges, Ergo operates as a fully open-source platform with clear documentation and transparent development practices.
+
+Innovations like ErgoMixer—the first non-custodial, programmable, non-interactive mixer offering features such as token mixing, covert addresses, [stealth addresses](uses/stealth-address.md), SigmaUSD minting, and Tor support—demonstrate this commitment. More advanced ideas like [SigmaJoin](eco/sigmajoin.md#key-advantages) and [Mixicles](uses/mixicles.md) are also proposed.
+
+Contracts can't be shut down. We avoid legal challenges by pushing for completely unstoppable designs, educating the community on Knowing Their Assumptions and best practices.
+
+[Know Your Assumptions (KYA)](contribute/standards/kya.md)
+
+## Competitiveness & Differentiation
+
+### How do you see this space in terms of its competitiveness and how are you going to really differentiate yourself?
+
+There are very few smart contract platforms that align with the original vision for Bitcoin: Grassroots distribution (95% of tokens to the community), UTXO-based, Proof-of-Work, simple assumptions, avoiding exotic protocols or overcomplicating things. For building protocols that support real value, Ergo ticks all the boxes apart from market-share.
+
+[Ergo as the Endgame for Crypto? - Ergo Forum](https://www.ergoforum.org/t/ergo-as-the-endgame-for-crypto/5076)
+
+Ergo differentiates itself in a competitive landscape by using a UTXO-based model rather than the account-based systems common in platforms like Ethereum. This simplifies contract development and reduces complexity compared to coding in Solidity. This approach resonates with Bitcoin enthusiasts who favor smart contracts aligned with Bitcoin’s principles.
+
+This page covers key aspects of the Ergo contract model which makes it different:
+[ErgoScript Paradigm](dev/scs/index.md#paradigm)
+
+Design patterns will continue to mature, and we'll keep developing innovative protocols and designs that re-capture the cypherpunk spirit:
+
+- [ChainCash: A Practical Approach to Elastic Money Creation](uses/chaincash.md)
+- [Dexy: A Seigniorage-Based Stablecoin](eco/dexy.md)
+- [Blockchain-based trustless derivatives: HashrateCoin and RandomCoin - Ergo Forum](https://www.ergoforum.org/t/blockchain-based-trustless-derivatives-hashratecoin-and-randomcoin/4999)
+
+While the bulk of the market may not prioritize these aspects, builders do, and their dApps attract a wider audience.
+
+For the everyday user, the Pure Degenerate Finance (DegFi) dApps on Ergo enable high-risk, high-reward opportunities through transparent game-theoretic interactions.
+
+[Degenerate Finance (DegFi)](uses/degfi.md)
+
+These are launching at an accelerated rate as the base layer maturity now allows it, and could bring in a huge amount of people with the right design, incentives and hype.
+
 ## Discussions
 
 ### Why Scala? 
@@ -350,4 +428,3 @@ A: Ergo advocates for transparency and open-source development, considering the 
 **Q: Are there signs of collaboration and synergy within the Ergo ecosystem?**
 
 A: Ergo was built to support smart financial contracts, and as the extended UTXO model and ErgoScript develop, new innovative frameworks are expected to emerge. The ecosystem benefits from the collaboration and specialization of developers and projects built on top of Ergo, fostering synergy within specific niches and industries.
-

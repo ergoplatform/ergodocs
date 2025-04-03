@@ -207,6 +207,7 @@ nav:
 
   - Ecosystem: 
     - uses/use-cases-overview.md
+    - Artificial Intelligence: ai.md
     - Infrastructure: 
       - Rosen Bridge:
         - eco/rosen.md

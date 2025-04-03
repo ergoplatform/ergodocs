@@ -99,6 +99,8 @@ watchForBoxes(); // Start the watcher loop (initial height might need setting)
 ```
 *(Note: Production watchers need robust error handling, reorg detection (frameworks like `ergoplatform/scanner` help here), and often use an indexer for efficiency).*
 
+**Real-world example (Cross-Chain):** [Rosen Bridge Watchers](../../eco/rosen/watcher.md) monitor deposit events on connected blockchains (like Cardano or Bitcoin) and relay them securely to Ergo, enabling cross-chain asset transfers. Becoming a watcher involves technical setup, providing collateral (ERG and RSN), monitoring transactions, and earning rewards.
+
 ### 2. Bots / Agents
 
 Automated services that construct and submit transactions based on logic or events.
@@ -178,6 +180,8 @@ async function updateOraclePrice() {
 updateOraclePrice(); // Start the bot
 ```
 *(Note: Real bots need sophisticated error handling, state management, fee calculation, input selection, and extremely secure key management).*
+
+**Real-world example (Oracle Providers):** Oracle providers integrate dependable external data sources (e.g., price feeds) with the Ergo blockchain. They deploy oracle contracts and maintain reliability to earn compensation, often through transaction fees or subscriptions. See [Oracle Pools V2](../../eco/oracles-v2.md) for details.
 
 ### 3. Backend APIs for dApps
 
@@ -358,6 +362,16 @@ Study open-source Ergo projects to see how they handle off-chain logic:
 *   **Oracle Core:** ([github.com/ergoplatform/oracle-core](https://github.com/ergoplatform/oracle-core)) - The reference implementation for oracle pool operation, including off-chain bots for posting data.
 *   **Auction House / Raffle Contracts:** Often require off-chain monitoring to detect bids/entries and trigger finalization transactions. (Search GitHub for `Ergo Auction` or `ErgoRaffle`).
 *   **Ergo Explorer Backend:** ([github.com/ergoplatform/explorer-backend](https://github.com/ergoplatform/explorer-backend)) - A complex example of a full-chain indexer.
+*   **DEX Bots (Grid Trading):** Projects like [Off the Grid](https://github.com/Telefragged/off-the-grid/) and [Machina Finance](../../eco/machina-finance.md) use off-chain bots to match grid trading orders with other liquidity sources.
+*   **Transaction Bots:** Systems like the [Exle Tx Bot](https://exlebot.com/docs) automate transaction composition and processing for specific dApp workflows.
+*   **External Trading Bots:** Tools like [HummingBot](https://hummingbot.org/) or [KuPyBot](https://github.com/FlyingPig69/KuPyBot) can potentially be adapted to interact with Ergo DEXs via their APIs (if available).
+
+## Best Practices for Off-Chain Operations
+
+*   **Stay Informed**: Remain abreast of the latest Ergo ecosystem developments, including protocol updates and emerging off-chain earning opportunities.
+*   **Security**: Prioritize the security of your setup, particularly when managing private keys or substantial ERG quantities.
+*   **Community Engagement**: Engage with Ergo's community forums and channels to share insights and collaborate, thereby enhancing your strategies and influence.
+*   **Compliance**: Adhere to all relevant legal and regulatory requirements associated with your financial data or asset-related activities.
 
 ## Resources
 
