@@ -59,7 +59,7 @@ While Ethereum's Turing-complete language offers theoretical flexibility, it has
 /// admonition | Key Concepts
     type: info
 
-Explore the [Core Concepts of ErgoScript](ergoscript/ergoscript-key-concepts.md).
+Explore the [Core Concepts of ErgoScript](ergoscript-key-concepts.md).
 ///
 
 /// admonition | Data Inputs
@@ -92,8 +92,8 @@ While ErgoScript aims for simplicity and security, debugging complex contracts c
 
 ErgoScript's features enable the implementation of complex contract patterns:
 
-*   **[Finite State Machines (FSMs)](tx/fsm-example.md):** Learn how to model multi-stage contracts where behavior depends on the current state encoded within a box.
-*   **[Merkleized Abstract Syntax Trees (MAST)](tx/mast-example.md):** Explore techniques to improve privacy and efficiency for contracts with many spending conditions by revealing only the executed script branch.
+*   **[Finite State Machines (FSMs)](fsm-example.md):** Learn how to model multi-stage contracts where behavior depends on the current state encoded within a box.
+*   **[Merkleized Abstract Syntax Trees (MAST)](mast-example.md):** Explore techniques to improve privacy and efficiency for contracts with many spending conditions by revealing only the executed script branch.
 
 ## Advanced Cryptography & Structures
 

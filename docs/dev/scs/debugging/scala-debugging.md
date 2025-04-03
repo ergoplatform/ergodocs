@@ -14,7 +14,7 @@ Since ErgoScript is a subset of Scala and rigorously tested for equivalence with
 
 ## Concept
 
-The core idea is to represent your ErgoScript contract logic as Scala code, typically within a testing environment like ScalaTest or JUnit, often using frameworks like [Appkit](../lang/scala.md) or the testing utilities within `sigmastate-interpreter` itself. This allows you to simulate the blockchain context (`Context`, `Box`, `Transaction`, etc.) and execute your contract logic within a standard JVM debugging environment.
+The core idea is to represent your ErgoScript contract logic as Scala code, typically within a testing environment like ScalaTest or JUnit, often using frameworks like [Appkit](scala.md) or the testing utilities within `sigmastate-interpreter` itself. This allows you to simulate the blockchain context (`Context`, `Box`, `Transaction`, etc.) and execute your contract logic within a standard JVM debugging environment.
 
 ## Process
 

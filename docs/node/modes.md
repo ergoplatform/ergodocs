@@ -49,7 +49,7 @@ Here's a comparison of the main operational modes:
     *   **Progress Indication:** Be aware that the initial download phase when using bootstrapping (especially `utxoBootstrap`) can take a significant amount of time depending on network speed and peer availability. The node logs may not show detailed progress during large snapshot downloads. It's often helpful to monitor your system's network activity or the increasing size of the node's data directory (`.ergo/snapshots` or similar) to gauge progress during this phase.
 
 2.  **Digest Mode (`stateType="digest"`) Limitations:**
-    *   This mode keeps only an authenticated digest (root hash) of the UTXO set, verifying state transitions using [ADProofs](authenticated-dictionary.md) contained in blocks.
+    *   This mode keeps only an authenticated digest (root hash) of the UTXO set, verifying state transitions using [ADProofs](block-adproofs.md) contained in blocks.
     *   **Wallet Compatibility:** While functional for creating new wallets and basic operations, users have reported issues submitting standard P2P transactions from wallets connected *only* to a digest-mode node. Compatibility with specific wallets or dApps requiring full UTXO set access may vary. **Verification is recommended.**
     *   **API Limitations:** Some API endpoints that rely on scanning the full UTXO set might not be available or may return limited data.
     *   **Peer Relaying:** Digest nodes typically cannot relay transactions received from peers, as they don't validate them against the full UTXO set.

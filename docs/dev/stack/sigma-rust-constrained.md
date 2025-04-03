@@ -14,7 +14,7 @@ tags:
 
 # Using Sigma-Rust in Resource-Constrained Environments
 
-The standard [`sigma-rust`](../libraries.md#sigma-rust) library provides comprehensive tools for working with Ergo protocols and data structures in Rust. However, environments like hardware wallets or embedded systems often have strict limitations on code size, memory usage, and available libraries (especially the standard library, `std`).
+The standard [`sigma-rust`](sigma-rust.md) library provides comprehensive tools for working with Ergo protocols and data structures in Rust. However, environments like hardware wallets or embedded systems often have strict limitations on code size, memory usage, and available libraries (especially the standard library, `std`).
 
 This guide outlines strategies and considerations for adapting `sigma-rust` for such resource-constrained environments.
 

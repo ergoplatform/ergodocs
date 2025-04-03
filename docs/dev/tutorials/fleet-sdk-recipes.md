@@ -19,7 +19,7 @@ tags:
 
 # Fleet SDK Recipes
 
-This page contains useful code snippets, patterns, and troubleshooting tips for common tasks when using the [Fleet SDK](../libraries.md#fleet-sdk-typescript--javascript) in TypeScript/JavaScript.
+This page contains useful code snippets, patterns, and troubleshooting tips for common tasks when using the [Fleet SDK](fleet.md) in TypeScript/JavaScript.
 
 ## Table of Contents
 - [Fleet SDK Recipes](#fleet-sdk-recipes)

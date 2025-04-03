@@ -297,7 +297,7 @@ async fn get_node_height() {
     }
 }
 ```
-*(See also: Node [REST API](../node/swagger.md))*
+*(See also: Node [REST API](swagger.md))*
 
 ### 2. Monitoring for New Boxes (Watcher Pattern)
 
@@ -364,7 +364,7 @@ Study open-source Ergo projects to see how they handle off-chain logic:
 *   **SDKs:** [Fleet SDK](fleet.md), [Sigma-Rust](sigma-rust.md), [Appkit](appkit.md)
 *   **EIPs:** [EIP-0012 (dApp Connector)](../wallet/eip-standards.md), [EIP-0020 (ErgoPay)](../wallet/payments/ergopay/ergo-pay.md), [Official EIP Repo](https://github.com/ergoplatform/eips)
 *   **Indexing:** [Indexing Guide](../tutorials/blockchain-indexing.md), [Ergo Scanner](https://github.com/ergoplatform/scanner)
-*   **Node API:** [Swagger UI](../node/swagger.md)
+*   **Node API:** [Swagger UI](swagger.md)
 *   **Community:** [Ergo Discord](https://discord.gg/ergo-platform-668903786361651200) (`#development`, `#sigmastate`, `#appkit`, `#fleet` channels), [Ergo Forum](https://www.ergoforum.org/)
 
 ## Updated Architecture Diagram (Conceptual)

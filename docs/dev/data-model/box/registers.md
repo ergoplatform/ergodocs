@@ -50,7 +50,7 @@ Register R2 contains a collection of [tokens](eip4.md) stored in the box. Each t
 
 ### Register R3
 
-Register R3 holds information about the box’s creation: `(txId: Coll[Byte], index: Short)`. Use `Box.creationInfo` to access this register. The creation height (the block height when the box was created) is accessible via `Box.creationInfo._2` and is part of Ergo's unique [storage rent](protocol/storage-rent.md) feature, where boxes can be spent after four years, allowing [miners](mining-overview.md) to charge a small fee and recycle ERGs back into the blockchain.
+Register R3 holds information about the box’s creation: `(txId: Coll[Byte], index: Short)`. Use `Box.creationInfo` to access this register. The creation height (the block height when the box was created) is accessible via `Box.creationInfo._2` and is part of Ergo's unique [storage rent](storage-rent.md) feature, where boxes can be spent after four years, allowing [miners](mining-overview.md) to charge a small fee and recycle ERGs back into the blockchain.
 
 ### Optional Registers R4-R9
 
@@ -67,7 +67,7 @@ The optional registers can hold any of the following data types:
 A `boxId` is calculated based on the contents of all the registers, uniquely defining a box. This can be compared to Bitcoin's (`txId`, `vOut`) pairs.
 
 /// admonition | Note
-Ergo `txId` is dependent solely on the message and not on [signatures](tx/signing.md) (similar to Bitcoin [SegWit](https://en.bitcoin.it/wiki/Segregated_Witness) transactions). Hence, a `txId` is accessible even before signing. Like Bitcoin, Ergo supports [chained transactions](chained.md), meaning boxes with 0 confirmations can be spent.
+Ergo `txId` is dependent solely on the message and not on [signatures](signing.md) (similar to Bitcoin [SegWit](https://en.bitcoin.it/wiki/Segregated_Witness) transactions). Hence, a `txId` is accessible even before signing. Like Bitcoin, Ergo supports [chained transactions](chained.md), meaning boxes with 0 confirmations can be spent.
 ///
 
 

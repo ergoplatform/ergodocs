@@ -275,7 +275,7 @@ The MAST concept can be combined with [Finite State Machines (FSMs)](fsm-example
 *   **Specifications in `sigmastate-interpreter`:**
     *   [`MASTExampleSpecification.scala`](https://github.com/ergoplatform/sigmastate-interpreter/blob/develop/sigmastate/src/test/scala/sigmastate/utxo/examples/MASTExampleSpecification.scala): Provides Scala code demonstrating MAST concepts in a testing context.
 *   **Related Primitives:**
-    *   [Context Extension (`getVar`, `executeFromVar`)](lang-spec.md#predefinedfunctions)
+    *   [Context Extension (`getVar`, `executeFromVar`)](lang-spec.md#PredefinedFunctions)
     *   [Register Execution (`executeFromSelfReg`)](lang-spec.md#box-type)
 *   **Conceptual Docs:**
     *   [Merkle Trees](../../data-model/structures/merkle/merkle-tree.md)

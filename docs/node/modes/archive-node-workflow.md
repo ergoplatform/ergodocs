@@ -67,4 +67,4 @@ if(History.apply(BlockTransactions) == Success(ProgressInfo)) {
 blacklist peer who sent Header
 }
 ```
-For more information, please refer to the [Bootstrapping section of modifiers processing](modifiers-processing.md#bootstraping).
+For more information, please refer to the [Bootstrapping section of modifiers processing](modifiers-processing.md#bootstrapping).

@@ -53,7 +53,6 @@ Unlike Ethereum, a transaction in Ergo is a data structure holding a list of inp
 
 Turning back to the example above, since Ergo natively supports tokens, therefore for this specific example of sending tokens, we don't need to write any code in ErgoScript. Instead, we need to create the 'send' transaction shown in the following figure, which describes the same token transfer but declaratively.
 
-![Send](../../assets/img/blog/send-tx.png)
 The picture visually describes the following steps, which the network user needs to
 perform:
 1) Select the sender's unspent boxes, containing a total of `tB >= amount` tokens and `B >= txFee + minErg` ERGs.
@@ -94,8 +93,6 @@ The idea behind FlowCard diagrams is based on the following observations: 1) An 
 
 The following figure shows the main elements of the Ergo transaction we've already seen
 previously (now under the name of FlowCard Diagram).
-
-![Anatomy](../../assets/img/blog/tx-anatomy.png)
 
 There is a strictly defined meaning (semantics) behind every element of _the diagram_,
 so that the diagram is a visual representation (or a view) of the underlying executable
@@ -167,8 +164,6 @@ The dApp scenario is shown in the figure below:
 There are three participants (buyer, seller, and DEX) of the DEX dApp and five different transaction types that are created by participants. The buyer wants to swap `ergAmt` of ERGs for `tAmt` of `TID` tokens (or vice versa, the seller wants to sell `TID` tokens for ERGs; who sends the order first doesn't matter). Both the buyer and the seller can cancel their orders at any time. The DEX off-chain matching service can find matching orders and create the `Swap` transaction to complete the exchange.
 
 The following diagram fully (and formally) specifies all five transactions that must be created _off-chain_ by the DEX dApp. It also specifies all the spending conditions that must be verified _on-chain_.
-
-![DEX](../../assets/img/blog/dex-flowcard.png)
 
 Let's discuss the FlowCard diagram and the logic of each transaction in detail:
 

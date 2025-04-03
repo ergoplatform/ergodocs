@@ -13,7 +13,7 @@ tags:
 
 # Choosing an Ergo Wallet
 
-A wallet is your essential gateway to the Ergo ecosystem. It allows you to securely store, send, and receive ERG and other [tokens](../data-model/box/tokens.md) built on Ergo, as well as interact with [decentralized applications (dApps)](get-started.md). Choosing the right wallet depends on your technical comfort, security needs, and how you plan to use Ergo.
+A wallet is your essential gateway to the Ergo ecosystem. It allows you to securely store, send, and receive ERG and other [tokens](tokens.md) built on Ergo, as well as interact with [decentralized applications (dApps)](get-started.md). Choosing the right wallet depends on your technical comfort, security needs, and how you plan to use Ergo.
 
 <!-- Developer Note: This page provides a general overview suitable for all users, despite its location under /dev/. -->
 

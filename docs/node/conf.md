@@ -111,7 +111,7 @@ A node with `offlineGeneration = false` (default) will only attempt mining once 
 
 You can adjust your node's mining delay after discovering a new block using the `miningDelay` parameter (in milliseconds).
 
-**REST API Settings**
+### REST API Settings
 
 In the `scorex.rest-api` section, you can configure the node's REST API parameters.
 

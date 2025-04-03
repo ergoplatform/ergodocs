@@ -14,7 +14,7 @@ Finite State Machines (FSMs) are a computational model used to design systems th
 
 ## Concept
 
-In the context of Ergo's [eUTXO model](../eutxo.md), an FSM contract is implemented as a sequence of transactions, where each transaction consumes a box representing the *current state* and creates a new box representing the *next state*.
+In the context of Ergo's [eUTXO model](eutxo.md), an FSM contract is implemented as a sequence of transactions, where each transaction consumes a box representing the *current state* and creates a new box representing the *next state*.
 
 *   **State Representation:** The current state of the FSM is encoded within an Ergo box, typically using its [registers](../boxes-and-registers.md) (e.g., R4 might hold a state identifier like an `Int` or `Byte`). Other registers hold data associated with that state.
 *   **Transitions:** The [ErgoScript](../ergoscript.md) guarding the state box defines the valid transitions. It checks:
@@ -107,7 +107,7 @@ Let's model a simple vending machine:
     *   **ChainCash:** Contracts like [`note.es`](https://github.com/ChainCashLabs/chaincash/blob/master/contracts/onchain/note.es) implement FSM patterns for managing promissory notes and reserves.
 *   **Related Concepts:**
     *   [Multi-Stage Contracts](../multi.md)
-    *   [eUTXO Model](../eutxo.md)
+    *   [eUTXO Model](eutxo.md)
     *   [Box Registers](../boxes-and-registers.md)
 
 ## Advanced Concepts

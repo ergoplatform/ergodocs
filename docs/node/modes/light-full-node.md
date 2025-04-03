@@ -13,8 +13,8 @@ To run the node in light mode, you need to adjust specific settings in your `erg
 
 **Core Settings:**
 
-*   **`ergo.node.stateType = "digest"`**: This is the key setting that enables light-fullnode mode. Instead of storing the full UTXO set, the node only maintains the authenticated root hash of the state and validates state transitions using ADProofs contained in the blocks. See [`stateType`](../conf/conf-node.md#state-type) for details.
-*   **`ergo.node.blocksToKeep = 1440`** (Example): This setting controls how many of the most recent blocks are stored with full transaction data. Older blocks will only have their headers stored. Setting it to `-1` keeps all blocks (similar to an archive node but still in digest state). A common value is `1440` (roughly one day). See [`blocksToKeep`](../conf/conf-node.md#blocks-to-keep) for details.
+*   **`ergo.node.stateType = "digest"`**: This is the key setting that enables light-fullnode mode. Instead of storing the full UTXO set, the node only maintains the authenticated root hash of the state and validates state transitions using ADProofs contained in the blocks. See [`stateType`](conf-node.md#state-type) for details.
+*   **`ergo.node.blocksToKeep = 1440`** (Example): This setting controls how many of the most recent blocks are stored with full transaction data. Older blocks will only have their headers stored. Setting it to `-1` keeps all blocks (similar to an archive node but still in digest state). A common value is `1440` (roughly one day). See [`blocksToKeep`](conf-node.md#blocks-to-keep) for details.
 
 **Bootstrapping Options:**
 

@@ -16,7 +16,7 @@ This guide details the recommended method for running an Ergo node on Android us
 **Prerequisites:**
 
 *   Android device meeting the [requirements](node-android.md#device-requirements).
-*   Termux installed from F-Droid (see [main Android guide](node-android.md#method-1-direct-termux-setup-recommended-for-digest-mode)).
+*   Termux installed from F-Droid (see [main Android guide](node-android.md#direct-termux-setup-digest-mode)).
 
 **Steps:**
 
@@ -93,4 +93,4 @@ This guide details the recommended method for running an Ergo node on Android us
     *   Open a web browser on your Android device and go to `http://127.0.0.1:9053/panel`.
     *   Initial sync (especially the UTXO snapshot download if `utxoBootstrap` is used) can take time and may not show detailed progress in logs. Monitor network activity or storage usage. Once synced, the panel will update.
 
-Refer back to the [main Android guide](node-android.md) for general tips, disk space clarification, and troubleshooting.
+Refer back to the [main Android guide](node-android.md#direct-termux-setup-digest-mode) for general tips, disk space clarification, and troubleshooting.

@@ -391,7 +391,7 @@ Miners prioritize transactions based on either the fee per byte or the validatio
 
 To determine the appropriate transaction fee, consider the protocol's minimum requirements based on the box size and the network's current hashrate. Higher hashrates reduce the risk of double-spend attacks, thus requiring fewer confirmations.
 
-For more detailed information on transaction fees, including minimum values, miner prioritization, fee collection, and related topics, please refer to the dedicated [Transaction Fees](tx/min-fee.md) page.
+For more detailed information on transaction fees, including minimum values, miner prioritization, fee collection, and related topics, please refer to the dedicated [Transaction Fees](min-fee.md) page.
 
 **What algorithm generates a boxid?**
 

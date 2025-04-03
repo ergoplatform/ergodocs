@@ -7,7 +7,7 @@ tags:
 
 # Merkle Trees in Ergo
 
-*(Back to: [Data Model Overview](../data-model.md))*
+*(Back to: [Data Model Overview](data-model.md))*
 
 ## Overview
 
