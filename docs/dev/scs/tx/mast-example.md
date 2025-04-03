@@ -28,7 +28,7 @@ With MAST:
 1.  Each condition (A, B, C) is treated as a separate script fragment.
 2.  These fragments are serialized to their [ErgoTree](../ergotree.md) byte representation (`Coll[Byte]`).
 3.  Each byte representation is hashed (e.g., using `blake2b256`).
-4.  These hashes are arranged as leaves in a [Merkle Tree](../../data-model/structures/merkle/merkle-tree.md).
+4.  These hashes are arranged as leaves in a [Merkle Tree](merkle-tree.md).
 5.  The **Merkle root** of this tree is calculated and stored in the main locking script of the box (often as a constant).
 
 The locking script essentially says: "This box can be spent if you provide:
@@ -275,8 +275,8 @@ The MAST concept can be combined with [Finite State Machines (FSMs)](fsm-example
 *   **Specifications in `sigmastate-interpreter`:**
     *   [`MASTExampleSpecification.scala`](https://github.com/ergoplatform/sigmastate-interpreter/blob/develop/sigmastate/src/test/scala/sigmastate/utxo/examples/MASTExampleSpecification.scala): Provides Scala code demonstrating MAST concepts in a testing context.
 *   **Related Primitives:**
-    *   [Context Extension (`getVar`, `executeFromVar`)](../sigma/lang-spec.md#PredefinedFunctions)
-    *   [Register Execution (`executeFromSelfReg`)](../sigma/lang-spec.md#Box type)
+    *   [Context Extension (`getVar`, `executeFromVar`)](lang-spec.md#predefinedfunctions)
+    *   [Register Execution (`executeFromSelfReg`)](lang-spec.md#box-type)
 *   **Conceptual Docs:**
     *   [Merkle Trees](../../data-model/structures/merkle/merkle-tree.md)
 

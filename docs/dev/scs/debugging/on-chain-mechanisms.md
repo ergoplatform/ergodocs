@@ -35,4 +35,4 @@ When a transaction attempting to spend a contract-protected box fails validation
     *   Type mismatches or other interpreter errors.
 *   **Limitations:** While helpful, these logs often don't pinpoint the exact line number within the ErgoScript source. They indicate *that* the script failed, but debugging *why* usually requires correlating the error with off-chain testing and logic review.
 
-These on-chain mechanisms offer limited visibility compared to traditional debugging but can provide valuable clues when troubleshooting transaction failures. They should be used in conjunction with robust [off-chain testing and simulation](./debugging.md#core-principles-best-practices).
+These on-chain mechanisms offer limited visibility compared to traditional debugging but can provide valuable clues when troubleshooting transaction failures. They should be used in conjunction with robust [off-chain testing and simulation](debugging.md#core-principles-best-practices).

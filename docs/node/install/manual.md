@@ -9,7 +9,7 @@ tags:
 
 # Ergo Full Node Installation Guide
 
-This guide covers the manual setup process for running an Ergo full node. For alternative methods, see [Docker Setup](./docker.md) or [Running on Android](./node-android.md).
+This guide covers the manual setup process for running an Ergo full node. For alternative methods, see [Docker Setup](docker.md) or [Running on Android](node-android.md).
 
 ## Getting Started
 
@@ -19,8 +19,8 @@ This guide covers the manual setup process for running an Ergo full node. For al
 2.  **Obtain the Ergo Client JAR:** You have two main options:
     *   **Download (Recommended):** Visit the [Ergo GitHub releases page](https://github.com/ergoplatform/ergo/releases/) and download the latest stable `ergo-<version>.jar` file. This is the simplest method for most users. Place the downloaded JAR file in your `ergo` folder.
     *   **Build from Source:** If you need a specific version (like a Release Candidate) or want to contribute to development, you can compile the JAR yourself. This requires Git, JDK, and SBT.
-        *   **See the detailed guide: [Building the Ergo Node from Source](./build-from-source.md)**
-        *   *Note:* Building development versions might require handling SNAPSHOT dependencies. Refer to the build guide and the specific [SNAPSHOT Dependencies guide](./snapshot-dependencies.md) if you encounter issues.
+        *   **See the detailed guide: [Building the Ergo Node from Source](build-from-source.md)**
+        *   *Note:* Building development versions might require handling SNAPSHOT dependencies. Refer to the build guide and the specific [SNAPSHOT Dependencies guide](snapshot-dependencies.md) if you encounter issues.
 
 ### Setting Up Your Node
 
@@ -42,7 +42,7 @@ This guide covers the manual setup process for running an Ergo full node. For al
             }
         }
         ```
-    *   For more configuration options, see the [Configuration Files documentation](../conf.md).
+    *   For more configuration options, see the [Configuration Files documentation](conf.md).
 
 2.  **Launch Your Node:**
     *   Open a terminal or command prompt in your `ergo` folder.
@@ -56,7 +56,7 @@ This guide covers the manual setup process for running an Ergo full node. For al
 
 3.  **Wait for Initialization & Synchronization:**
     *   The node will start up and begin synchronizing with the Ergo network. This process downloads and validates the blockchain history.
-    *   **Synchronization can take a significant amount of time** (hours to days) depending on your hardware, network speed, and the chosen [Node Mode](../modes.md). Be patient.
+    *   **Synchronization can take a significant amount of time** (hours to days) depending on your hardware, network speed, and the chosen [Node Mode](modes.md). Be patient.
 
 ## Verifying Node Synchronization
 
@@ -65,9 +65,9 @@ This guide covers the manual setup process for running an Ergo full node. For al
 
 ## Additional Resources
 
-*   [Troubleshooting Guide](./troubleshooting.md)
-*   [Node Configuration Files](../conf.md)
-*   [Node Modes](../modes.md)
-*   [Node API (Swagger)](../swagger.md)
-*   [Testnet Guide](../testnet.md)
-*   [Node FAQ](./node-faq.md)
+*   [Troubleshooting Guide](troubleshooting.md)
+*   [Node Configuration Files](conf.md)
+*   [Node Modes](modes.md)
+*   [Node API (Swagger)](swagger.md)
+*   [Testnet Guide](testnet.md)
+*   [Node FAQ](node-faq.md)

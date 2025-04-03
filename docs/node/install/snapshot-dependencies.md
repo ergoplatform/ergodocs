@@ -14,7 +14,7 @@ tags:
 
 # Handling SNAPSHOT Dependencies When Building Ergo Node
 
-When [building the Ergo node from source](./build-from-source.md), especially when working with development branches or Release Candidates (RCs), you might encounter build failures related to `SNAPSHOT` dependencies.
+When [building the Ergo node from source](build-from-source.md), especially when working with development branches or Release Candidates (RCs), you might encounter build failures related to `SNAPSHOT` dependencies.
 
 ## The Problem
 

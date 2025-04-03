@@ -252,19 +252,19 @@ app.listen(3000, () => {
 
 ### 4. Indexer Services
 
-Dedicated services for processing and storing blockchain data efficiently. (See [Indexing Guide](../tutorials/blockchain-indexing.md) and its sub-pages for details and examples).
+Dedicated services for processing and storing blockchain data efficiently. (See [Indexing Guide](blockchain-indexing.md) and its sub-pages for details and examples).
 
 ## Choosing Your Tools: SDK Comparison
 
 Selecting the right Software Development Kit (SDK) is crucial:
 
-| Feature / SDK        | [Fleet SDK (JS/TS)](../libraries.md#fleet-sdk-typescript--javascript) | [Sigma-Rust](../libraries.md#sigma-rust) | [Appkit (Scala)](../libraries.md#appkit-scala) |
-| :------------------- | :-------------------------------------------------------------------- | :--------------------------------------- | :--------------------------------------------- |
-| **Primary Language** | JavaScript / TypeScript                                               | Rust                                     | Scala (JVM)                                    |
-| **Environment**      | Node.js, Web Browsers                                                 | Native, WASM                             | JVM                                            |
-| **Strengths**        | Web ecosystem integration, Ease of use, Good for UI/Backend APIs      | Performance, Safety, WASM support, Low-level control | Strong typing, JVM ecosystem, Node integration |
-| **Weaknesses**       | Performance (vs Rust), Less mature type safety (vs Scala/Rust)        | Steeper learning curve, Smaller web ecosystem | Less common for web frontends, JVM overhead    |
-| **Ideal Use Cases**  | Web dApp Backends, Frontend Libraries, Simple Bots/Scripts            | High-performance Indexers, Bots, Core Libraries, WASM modules | JVM Backends, Complex Protocol Logic, Android Apps |
+| Feature / SDK        | [Fleet SDK (JS/TS)](fleet.md) | [Sigma-Rust](sigma-rust.md) | [Appkit (Scala)](appkit.md) |
+| :------------------- | :----------------------------------- | :---------------------------- | :-------------------------------- |
+| **Primary Language** | JavaScript / TypeScript              | Rust                          | Scala (JVM)                       |
+| **Environment**      | Node.js, Web Browsers                | Native, WASM                  | JVM                               |
+| **Strengths**        | Web ecosystem integration, Ease of use, Good for UI/Backend APIs | Performance, Safety, WASM support, Low-level control | Strong typing, JVM ecosystem, Node integration |
+| **Weaknesses**       | Performance (vs Rust), Less mature type safety (vs Scala/Rust) | Steeper learning curve, Smaller web ecosystem | Less common for web frontends, JVM overhead |
+| **Ideal Use Cases**  | Web dApp Backends, Frontend Libraries, Simple Bots/Scripts | High-performance Indexers, Bots, Core Libraries, WASM modules | JVM Backends, Complex Protocol Logic, Android Apps |
 
 ## Core Tasks & Conceptual Code Snippets
 
@@ -361,7 +361,7 @@ Study open-source Ergo projects to see how they handle off-chain logic:
 
 ## Resources
 
-*   **SDKs:** [Fleet SDK](../libraries.md#fleet-sdk-typescript--javascript), [Sigma-Rust](../libraries.md#sigma-rust), [Appkit](../libraries.md#appkit-scala)
+*   **SDKs:** [Fleet SDK](fleet.md), [Sigma-Rust](sigma-rust.md), [Appkit](appkit.md)
 *   **EIPs:** [EIP-0012 (dApp Connector)](../wallet/eip-standards.md), [EIP-0020 (ErgoPay)](../wallet/payments/ergopay/ergo-pay.md), [Official EIP Repo](https://github.com/ergoplatform/eips)
 *   **Indexing:** [Indexing Guide](../tutorials/blockchain-indexing.md), [Ergo Scanner](https://github.com/ergoplatform/scanner)
 *   **Node API:** [Swagger UI](../node/swagger.md)

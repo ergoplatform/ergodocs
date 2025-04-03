@@ -27,7 +27,7 @@ Simulators allow you to execute ErgoScript code off-chain, mimicking the on-chai
 Some Software Development Kits (SDKs) offer interactive environments for experimenting with script snippets and context building.
 
 *   **Fleet SDK Playground / REPL:**
-    *   **SDK:** [Fleet SDK (JS/TS)](../../libraries.md#fleet-sdk-typescript--javascript)
+    *   **SDK:** [Fleet SDK (JS/TS)](libraries.md#fleet-sdk-typescript--javascript)
     *   **Potential Features:** The Fleet SDK ecosystem may include online playgrounds or command-line REPL (Read-Eval-Print Loop) tools that allow developers to quickly test small ErgoScript fragments, context construction, or serialization/deserialization logic. *(Check the official Fleet SDK documentation and website for available tools).*
 
 ## Online Editors & Compilers
@@ -42,4 +42,4 @@ Web-based tools can help with writing scripts and catching syntax errors.
 
 The Ergo developer community actively discusses and desires more sophisticated debugging tools, potentially including enhanced simulators with features like breakpoints, step-through execution tracing, and detailed state inspection capabilities. As the ecosystem matures, more advanced external debugging tools are likely to emerge.
 
-Using these external tools effectively complements the core practices of [thorough testing and careful design](./debugging.md#core-principles-best-practices).
+Using these external tools effectively complements the core practices of [thorough testing and careful design](debugging.md#core-principles-best-practices).

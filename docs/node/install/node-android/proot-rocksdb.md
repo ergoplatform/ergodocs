@@ -25,11 +25,11 @@ This guide details the more advanced method for running an Ergo node on Android 
 *   Running the RocksDB-enabled node JAR directly in Termux can lead to incompatibility errors.
 *   `proot-distro` allows running a Linux distribution (like Arch Linux, which uses `glibc`) within Termux, providing the necessary environment for RocksDB.
 
-**Disclaimer:** This is a more complex setup than the [direct Termux method](./termux-digest.md) and adds overhead. It's primarily required for specific use cases needing RocksDB/UTXO mode. For most mobile users, the direct Termux setup with `stateType="digest"` is recommended.
+**Disclaimer:** This is a more complex setup than the [direct Termux method](termux-digest.md) and adds overhead. It's primarily required for specific use cases needing RocksDB/UTXO mode. For most mobile users, the direct Termux setup with `stateType="digest"` is recommended.
 
 **Prerequisites:**
 
-*   Android device meeting the [requirements](../node-android.md#device-requirements) (Note: UTXO mode requires significantly more storage than digest mode).
+*   Android device meeting the [requirements](node-android.md#device-requirements) (Note: UTXO mode requires significantly more storage than digest mode).
 *   Termux installed from F-Droid.
 
 **Steps:**
@@ -114,4 +114,4 @@ This guide details the more advanced method for running an Ergo node on Android 
 
 **Exiting:** To stop the node, press `CTRL + C` in the Arch Linux terminal. To exit the Arch Linux environment back to the main Termux shell, type `exit`.
 
-Refer back to the [main Android guide](../node-android.md) for general tips, disk space clarification, and troubleshooting. Remember this method adds complexity and resource overhead compared to the direct Termux approach.
+Refer back to the [main Android guide](node-android.md) for general tips, disk space clarification, and troubleshooting. Remember this method adds complexity and resource overhead compared to the direct Termux approach.

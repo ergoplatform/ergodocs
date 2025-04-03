@@ -20,13 +20,13 @@ This guide provides an overview of the methods available using the [Termux](http
 
 There are two primary approaches, depending on your needs and technical comfort level:
 
-1.  **[Direct Termux Setup (Digest Mode)](./node-android/termux-digest.md):**
+1.  **[Direct Termux Setup (Digest Mode)](termux-digest.md):**
     *   **Recommended for most users.**
     *   Runs the node directly within Termux.
     *   Best suited for the resource-efficient `stateType="digest"` mode.
     *   Simpler setup process.
 
-2.  **[Arch Linux via proot (RocksDB/UTXO Mode)](./node-android/proot-rocksdb.md):**
+2.  **[Arch Linux via proot (RocksDB/UTXO Mode)](proot-rocksdb.md):**
     *   **Advanced method.**
     *   Required if you need to run `stateType="utxo"` (which uses RocksDB) or encounter specific database compatibility issues (e.g., LevelDB failures on `aarch64`).
     *   Involves running an Arch Linux environment within Termux to provide `glibc` compatibility for RocksDB.

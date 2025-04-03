@@ -9,8 +9,6 @@ tags:
   - p2pk
   - validation
   - tutorial
-  - off-chain
-  - sdk
   - serialization
   - deserialization
   - token-id

@@ -64,9 +64,9 @@ Building an indexer from scratch involves solving several complex problems (like
 
 Even when using a framework, you'll likely use SDKs for parsing specific data or implementing custom extraction logic:
 
-*   **[Sigma-Rust](../../libraries.md#sigma-rust):** (Rust) Ideal for high-performance parsing and data manipulation within your indexer logic.
-*   **[Fleet SDK (JS/TS)](../../libraries.md#fleet-sdk-typescript--javascript):** (Node.js) Useful if building the indexer service in JavaScript/TypeScript, particularly for interacting with node APIs and deserializing data.
-*   **[Appkit (Scala)](../../libraries.md#appkit-scala):** (JVM) Suitable for JVM-based indexers, allowing interaction with node APIs and data processing.
+*   **[Sigma-Rust](sigma-rust.md):** (Rust) Ideal for high-performance parsing and data manipulation within your indexer logic.
+*   **[Fleet SDK (JS/TS)](fleet.md):** (Node.js) Useful if building the indexer service in JavaScript/TypeScript, particularly for interacting with node APIs and deserializing data.
+*   **[Appkit (Scala)](appkit.md):** (JVM) Suitable for JVM-based indexers, allowing interaction with node APIs and data processing.
 
 ## Database Choices
 
@@ -98,14 +98,19 @@ Choose the database that best matches your indexer's data structure and query pa
 
 ## Existing Solutions & Examples
 
-*   **ErgoWatch:**
-    *   **Repository:** [github.com/abchrisxyz/ergowatch](https://github.com/abchrisxyz/ergowatch)
-    *   **Description:** Open-source Rust indexer using `sigma-rust` and PostgreSQL. Good reference for custom indexing patterns.
-*   **Pragmaxim's Chain Indexer:**
-    *   **Repository:** [github.com/pragmaxim-com/chain-indexer/tree/ergo-boxes](https://github.com/pragmaxim-com/chain-indexer/tree/ergo-boxes)
-    *   **Description:** An emerging, high-performance Rust-based indexer using RocksDB, known for speed even on low-power devices like Raspberry Pis. Demonstrates an alternative database approach.
-*   **Explorer Backends:** Source code for public explorers (e.g., `ergoplatform/explorer-backend`) contains complex indexing logic.
-*   **SigmaSpace:** The [SigmaSpace.io](https://sigmaspace.io/) explorer project has developed its own indexing services, potentially with optimizations worth investigating if their code is available or described elsewhere.
+### ErgoWatch
+*   **Repository:** [github.com/abchrisxyz/ergowatch](https://github.com/abchrisxyz/ergowatch)
+*   **Description:** Open-source Rust indexer using `sigma-rust` and PostgreSQL. Good reference for custom indexing patterns.
+
+### Pragmaxim's Chain Indexer
+*   **Repository:** [github.com/pragmaxim-com/chain-indexer/tree/ergo-boxes](https://github.com/pragmaxim-com/chain-indexer/tree/ergo-boxes)
+*   **Description:** An emerging, high-performance Rust-based indexer using RocksDB, known for speed even on low-power devices like Raspberry Pis. Demonstrates an alternative database approach.
+
+### Explorer Backends
+*   Source code for public explorers (e.g., `ergoplatform/explorer-backend`) contains complex indexing logic.
+
+### SigmaSpace
+*   The [SigmaSpace.io](https://sigmaspace.io/) explorer project has developed its own indexing services, potentially with optimizations worth investigating if their code is available or described elsewhere.
 
 ## Alternative: Node API Scanning
 
