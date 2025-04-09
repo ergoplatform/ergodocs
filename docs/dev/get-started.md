@@ -166,8 +166,6 @@ If you're interested in deepening your understanding of ErgoScript and the Ergo 
 - [ergo-scala-skeleton-app](https://github.com/dav009/ergo-scala-skeleton-app)
 
 - [The Ergo Web Template](https://github.com/SavonarolaLabs/ergo-web-template): An introductory guide for individuals new to Ergo, offering a hands-on experience with essential Ergo functionalities.
-
-- [Ergo-play-boilerplate](https://github.com/kii-dot/ergo-play-boilerplate)
 - **[ergo-play-boilerplate](https://github.com/kii-dot/ergo-play-boilerplate)**: Barebone code to jump into Ergo development quickly.
 
 ### Advanced Tutorials
