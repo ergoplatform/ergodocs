@@ -13,7 +13,18 @@ There are existing examples like [Rarible](https://rarible.com/) and [Opensea](h
      {type: success, open: true}
 [SkyHarbor](skyharbor.md) is a trusted marketplace that specializes in set price transactions. 
 ///
+/// details | Mew Finance
+     {type: success, open: true}
+[Mew Finance](mew-finance.md) offers NFT marketplace capabilities through their platform:
+
+*   **Mew Mart:** Specifically designed as a marketplace for trading various tokens and NFTs within the Ergo ecosystem.
+*   **Mew Store:** Primarily focused on physical assets, but can also be an option depending on your NFT type.
+
+**Platform Benefits:**
+Higher tiers (4-6) share in platform revenue, and Tier 6 members enjoy zero fees on DEX transactions. Mew Finance has partnerships with Sigmanauts and ErgOne, potentially increasing visibility for listed NFTs.
+
+Access Mew Finance at [https://mewfinance.com/](https://mewfinance.com/).
+///
 ////
 
 For instructions on how to mint your own NFTs, refer to the [developer section](create.md).
-
