@@ -6,6 +6,8 @@ tags:
 
 # Python
 
+Python developers can interact with the [Ergo blockchain](why.md) using various libraries and bindings. Notably, [Python bindings for sigma-rust](sigma-rust.md#bindings) are available, providing core blockchain interaction capabilities.
+
 ## Frameworks
 
 ::cards::
@@ -18,10 +20,9 @@ tags:
   },
   {
     "title": "🔗 AppKit",
-    "content": "Using Appkit from Python",
+    "content": "Using [Appkit](appkit.md) from Python",
     "url": "https://github.com/ergoplatform/ergo-appkit/wiki/Using-Appkit-from-Python"
-  },
-
+  }
 ]
 
 ::/cards::

@@ -4,9 +4,11 @@ tags:
   - Ergo
 ---
 
-# Ergo Platform and Go 
+# Ergo Platform and Go
 
-The resources for integrating Ergo using the Go programming language are currently limited. However, there is a significant project available that serves as a valuable resource for developers working with Go.
+Go developers can interact with the [Ergo blockchain](why.md) primarily through bindings to the core `sigma-rust` library. See the main [sigma-rust bindings list](sigma-rust.md#bindings) for details.
+
+The resources for integrating Ergo using the Go programming language are currently limited compared to some other languages. However, there are key projects available:
 
 ## Ergo-Golang
 

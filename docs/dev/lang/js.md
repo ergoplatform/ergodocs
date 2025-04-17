@@ -6,9 +6,11 @@ tags:
 
 # JavaScript & TypeScript
 
-[Appkit](appkit.md) was designed as an abstraction layer on top of Sigma. This gives a lot of freedom on the core level in [Sigma](sigmastate-interpreter.md), while keeping dApp-facing APIs stable.
+JavaScript and TypeScript developers can interact with the [Ergo blockchain](why.md) using various libraries and frameworks. Notably, [JS/TS bindings for sigma-rust](sigma-rust.md#bindings) (via WebAssembly) provide core blockchain interaction capabilities.
 
-With the availability of Sigma.js, Fleet can play the same role for JS/TS.
+[Appkit](appkit.md) was designed as an abstraction layer on top of [Sigma](sigmastate-interpreter.md). This gives a lot of freedom on the core level in Sigma, while keeping dApp-facing APIs stable.
+
+With the availability of [Sigma.js](sigmajs.md), [Fleet](fleet.md) can play the same role for JS/TS.
 
 
 
@@ -25,7 +27,7 @@ With the availability of Sigma.js, Fleet can play the same role for JS/TS.
   {
     "title": "Sigma.JS",
     "content": "JavaScript port of the sigmastate-interpreter",
-    "url": ""
+    "url": "../lib/sigmajs.md"
   },
   {
     "title": "AppKit",
@@ -33,31 +35,10 @@ With the availability of Sigma.js, Fleet can play the same role for JS/TS.
     "url": "../stack/appkit.md"
   },
   {
-    "title": "sigma-rust",
-    "content": "Interact with a WebAssembly library using JS/TS bindings",
-    "url": "../stack/sigma-rust.md"
-  },
-
-]
-
-::/cards::
-
-## Bindings
-
-::cards::
-
-[
-  {
-    "title": "ergo-lib-wasm-browser",
-    "content": "",
-    "url": "../stack/fleet.md"
-  },
-  {
-    "title": "ergo-lib-wasm-nodejs",
-    "content": "",
-    "url": ""
+    "title": "sigma-rust (via WASM)",
+    "content": "Core Rust library with JS/TS bindings available via WebAssembly.",
+    "url": "../stack/sigma-rust.md#bindings"
   }
-
 ]
 
 ::/cards::

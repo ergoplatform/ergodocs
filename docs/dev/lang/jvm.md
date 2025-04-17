@@ -9,7 +9,7 @@ tags:
 
 # JVM
 
-Where you want to develop using Java, Scala or Kotlin - you'll likely want to be using AppKit.
+Whether you want to develop using [Java](java.md), [Scala](scala.md), or [Kotlin](kotlin.md), you'll likely want to be using [AppKit](appkit.md).
 
 ::cards::
 
