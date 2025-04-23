@@ -6,7 +6,7 @@ tags:
 
 # Python
 
-Python developers can interact with the [Ergo blockchain](why.md) using various [libraries](libraries.md) and [bindings](sigma-rust.md#bindings). Notably, [Python bindings for sigma-rust](sigma-rust.md#bindings) are available, providing core [blockchain interaction](interact.md) capabilities.
+Python developers can interact with the Ergo blockchain using various [libraries](libraries.md) and [bindings](sigma-rust.md#bindings). Notably, [Python bindings for sigma-rust](sigma-rust.md#bindings) are available, providing core [blockchain interaction](interact.md) capabilities.
 
 ## Frameworks
 

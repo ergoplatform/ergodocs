@@ -4,7 +4,7 @@ tags:
 ---
 # Rust
 
-On-chain [contracts](ergoscript.md) are developed in [ErgoScript](ergoscript.md), a simple language designed for writing [smart contracts](ergoscript.md) on the [Ergo blockchain](why.md). ErgoScript is a Turing-complete language that prioritizes [security](security.md) and is well-suited for the [UTXO transactional model](eutxo.md) used by Ergo.
+On-chain contracts are developed in ErgoScript, a simple language designed for writing [smart contracts](ergoscript.md) on the Ergo blockchain. ErgoScript is a Turing-complete language that prioritizes [security](security.md) and is well-suited for the [UTXO transactional model](eutxo.md) used by Ergo.
 
 For [off-chain components](off-chain-overview.md), such as interacting with the blockchain, creating [transactions](transactions.md), and building [applications](use-cases-overview.md), developers can use Rust along with frameworks like [sigma-rust](sigma-rust.md). Rust provides a powerful and efficient language for building off-chain components, while sigma-rust provides a Rust port of the [sigmastate-interpreter](sigmastate-interpreter.md), allowing developers to interact with the Ergo blockchain from their Rust applications. Various [language bindings for sigma-rust](sigma-rust.md#bindings) are available for other languages.
 
