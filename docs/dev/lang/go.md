@@ -6,7 +6,7 @@ tags:
 
 # Ergo Platform and Go
 
-Go developers can interact with the [Ergo blockchain](why.md) primarily through bindings to the core `sigma-rust` library. See the main [sigma-rust bindings list](sigma-rust.md#bindings) for details.
+Go developers can interact with the Ergo blockchain primarily through bindings to the core `sigma-rust` library. See the main [sigma-rust bindings list](sigma-rust.md#bindings) for details.
 
 The resources for integrating Ergo using the Go programming language are currently limited compared to some other languages. However, there are key projects available:
 

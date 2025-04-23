@@ -7,7 +7,7 @@ tags:
 
 # Scala Development with Ergo
 
-Ergo's primary language is Scala. Similarly, the [scripting language](ergoscript.md) used by Ergo, [*ErgoScript*](ergoscript.md), is also based on Scala.
+Ergo's primary language is Scala. Similarly, the scripting language used by Ergo, [*ErgoScript*](ergoscript.md), is also based on Scala.
 
 If you're new to Scala development with Ergo, the [Ergo Scala Skeleton App](https://github.com/dav009/ergo-scala-skeleton-app) is a great place to start.
 

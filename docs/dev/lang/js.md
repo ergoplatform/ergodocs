@@ -6,7 +6,7 @@ tags:
 
 # JavaScript & TypeScript
 
-JavaScript and TypeScript developers can interact with the [Ergo blockchain](why.md) using various libraries and frameworks. Notably, [JS/TS bindings for sigma-rust](sigma-rust.md#bindings) (via WebAssembly) provide core blockchain interaction capabilities.
+JavaScript and TypeScript developers can interact with the Ergo blockchain using various libraries and frameworks. Notably, [JS/TS bindings for sigma-rust](sigma-rust.md#bindings) (via WebAssembly) provide core blockchain interaction capabilities.
 
 [Appkit](appkit.md) was designed as an abstraction layer on top of [Sigma](sigmastate-interpreter.md). This gives a lot of freedom on the core level in Sigma, while keeping [dApp-facing APIs](api.md) stable.
 
