@@ -6,7 +6,7 @@ tags:
 
 # Python
 
-Python developers can interact with the [Ergo blockchain](why.md) using various libraries and bindings. Notably, [Python bindings for sigma-rust](sigma-rust.md#bindings) are available, providing core blockchain interaction capabilities.
+Python developers can interact with the [Ergo blockchain](why.md) using various [libraries](libraries.md) and [bindings](sigma-rust.md#bindings). Notably, [Python bindings for sigma-rust](sigma-rust.md#bindings) are available, providing core [blockchain interaction](interact.md) capabilities.
 
 ## Frameworks
 
@@ -32,7 +32,7 @@ Python developers can interact with the [Ergo blockchain](why.md) using various 
 
 ## ErgoPad
 
-ErgoPad has [released a set of docker containers](https://github.com/ergopad) combined to create a React/MaterialUI frontend, REST API backend, assembler to interact with smart contracts and supporting services like ergonode, redis and postgres.
+[ErgoPad](ergopad.md) has [released a set of docker containers](https://github.com/ergopad) combined to create a React/MaterialUI [frontend](get-started.md), [REST API](api.md) [backend](get-started.md), [assembler](assembler.md) to interact with [smart contracts](ergoscript.md) and supporting services like [ergonode](install.md), redis and postgres.
 
 
 - [NFT-Locked Vesting](https://github.com/ergopad/ergopad-api/blob/dev/app/contracts/NFTLockedVesting.md)

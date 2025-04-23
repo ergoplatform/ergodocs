@@ -8,7 +8,7 @@ tags:
 
 JavaScript and TypeScript developers can interact with the [Ergo blockchain](why.md) using various libraries and frameworks. Notably, [JS/TS bindings for sigma-rust](sigma-rust.md#bindings) (via WebAssembly) provide core blockchain interaction capabilities.
 
-[Appkit](appkit.md) was designed as an abstraction layer on top of [Sigma](sigmastate-interpreter.md). This gives a lot of freedom on the core level in Sigma, while keeping dApp-facing APIs stable.
+[Appkit](appkit.md) was designed as an abstraction layer on top of [Sigma](sigmastate-interpreter.md). This gives a lot of freedom on the core level in Sigma, while keeping [dApp-facing APIs](api.md) stable.
 
 With the availability of [Sigma.js](sigmajs.md), [Fleet](fleet.md) can play the same role for JS/TS.
 
@@ -21,7 +21,7 @@ With the availability of [Sigma.js](sigmajs.md), [Fleet](fleet.md) can play the 
 [
   {
     "title": "Fleet",
-    "content": "Lets you easily create Ergo transactions with a pure JS library.",
+    "content": "Lets you easily create [Ergo transactions](transactions.md) with a pure JS library.",
     "url": "../stack/fleet.md"
   },
   {
@@ -50,7 +50,7 @@ With the availability of [Sigma.js](sigmajs.md), [Fleet](fleet.md) can play the 
 [
   {
     "title": "🔗 dAppStep Docs",
-    "content": "include many practical examples with Javascript and Nodejs that will help you to understand to implement different aspects of dapp functionality on Ergo",
+    "content": "include many practical examples with Javascript and Nodejs that will help you to understand to implement different aspects of [dapp functionality](get-started.md) on Ergo",
     "url": "https://www.dappstep.com/"
   },
   {
