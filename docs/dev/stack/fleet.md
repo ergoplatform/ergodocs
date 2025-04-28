@@ -14,3 +14,10 @@ tags:
 - 🌲 Tree-shakeable
 
 For common usage patterns and examples, see the [Fleet SDK Recipes](fleet-sdk-recipes.md).
+
+
+
+/// details | DeepWiki Documentation
+    {type: info, open: true}
+For an alternative and potentially more detailed documentation source generated from the repository, explore the [Fleet SDK on DeepWiki](https://deepwiki.com/fleet-sdk/fleet/1-overview)
+///

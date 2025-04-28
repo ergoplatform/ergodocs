@@ -8,9 +8,9 @@ tags:
   - dApp-Live
 ---
 
-/// details | Status: Mainnet
-     {type: success, open: true}
-Paideia has moved out of beta, mainnet is now live!
+/// details | DeepWiki Documentation
+    {type: info, open: true}
+For an alternative and potentially more detailed documentation source generated from the repository, explore the [paideiadao/paideia-app on DeepWiki](https://deepwiki.com/paideiadao/paideia-app)
 ///
 
 

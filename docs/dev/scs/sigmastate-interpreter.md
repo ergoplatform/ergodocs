@@ -13,6 +13,13 @@ The [sigmastate-interpreter](https://github.com/ScorexFoundation/sigmastate-inte
 
 This library is integral to the operation of the [Ergo Node](https://github.com/ergoplatform/ergo) and the [ergo-wallet](https://github.com/ergoplatform/ergo/tree/master/ergo-wallet). It serves as the backbone for processing and validating ErgoScript contracts, ensuring that transactions comply with the defined cryptographic conditions.
 
+/// details | DeepWiki Documentation
+    {type: info, open: true}
+For an alternative and potentially more detailed documentation source generated from the repository, explore the [Sigmastate Interpreter on DeepWiki](https://deepwiki.com/ergoplatform/sigmastate-interpreter/1-overview)
+///
+
+
+
 ### Key Components
 
 - **ErgoScript Compiler**:

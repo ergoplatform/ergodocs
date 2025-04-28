@@ -67,6 +67,12 @@ Run a node on a [Raspberry Pi](pi.md)!
 //// details | Developer Resources
     {type: notes, open: false}
 
+/// details | DeepWiki Documentation
+    {type: info, open: true}
+For an alternative and potentially more detailed documentation source generated from the repository, explore the [Ergo Node on DeepWiki](https://deepwiki.com/ergoplatform/ergo/1-ergo-node-overview)
+///
+
+
 /// details | Get setup on Testnet
     {type: tip, open: false}
 Alternatively, if you want to get started on the [testnet](testnet.md), there is a dedicated [testnet setup guide](testnet.md) available.
