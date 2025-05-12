@@ -15,89 +15,103 @@ tags:
 
 NetNotes is a cross-platform cryptocurrency management suite and **reactive application framework**. It simplifies how you manage wallets, explore blockchain data, track market prices, and interact with decentralized and centralized financial systems like **Ergo** and **KuCoin**.  
 
-Unlike traditional wallet apps, NetNotes wraps everything in a **messaging-driven architecture**. Every blockchain operation, API request, or transaction is processed as a message you can review and approve before it executes—providing a critical layer of transparency, auditability, and security.  
+Unlike traditional wallets, NetNotes is built around a **messaging-driven architecture**. Every blockchain operation, API request, or transaction is processed as a message you can review and approve before it executes—offering total transparency and control.  
+
+---
+
+## 📢 Latest Updates  
+
+- Major refactoring is in progress to enable **P2P networking capabilities** and support **distributed applications** across networked devices.  
+- Communication paths are being cleaned up and migrated to **asynchronous processing** for improved scalability and modular architecture.  
+- Security audits and UI component updates are underway to enforce best practices and make features easier to propagate across apps.  
+- Experimental **atomic exchange contracts** are being developed for decentralized trading directly through NetNotes.  
+- Final steps are being taken to integrate working **ErgoDex smart contracts** for decentralized swaps.  
+
+> [Explore the Draft Atomic Exchange Contracts →](https://github.com/networkspore/netnotes-engine/tree/main/src/main/resources/contracts/dex)  
 
 ---
 
 ## Why Is This Important?  
 
 - **Break Free from Closed Wallet Ecosystems**  
-  Most wallets are closed, single-purpose tools that don’t talk to each other. NetNotes uses a modular, reactive architecture that allows different crypto services, APIs, and even other blockchains (via future extensions) to **seamlessly interoperate** through a unified messaging system.
+  Traditional wallets are isolated, purpose-limited, and closed systems. NetNotes uses a modular, reactive architecture that allows apps, crypto services, and external APIs to **seamlessly interoperate** through a unified messaging layer.
 
 - **Total Transparency and Control**  
-  In conventional wallets or DeFi apps, you click buttons and assume it’s doing what you expect. With NetNotes, every action—whether sending funds, querying an API, or interacting with a smart contract—is a message you can **inspect, verify, and explicitly approve before it happens**.  
+  In most crypto tools, you click buttons and assume it’s doing what you expect. With NetNotes, every action—sending funds, querying APIs, or using smart contracts—is a message you can **see, verify, and explicitly approve before it happens**.
 
 - **Enables Personal Financial Automation Agents**  
-  Because the system is message- and event-driven, you can build **automation agents** directly into the platform:
-  - Automatically move funds when market conditions meet custom triggers.  
-  - Automate participation in DeFi protocols or staking operations.  
-  - Use reputation scores to avoid risky smart contracts and filter out low-trust services.  
+  NetNotes' message- and event-driven design lets you build **automation agents** directly into the platform:
+    - Automate asset management based on market triggers.  
+    - Interact with DeFi protocols and atomic swaps without centralized platforms.  
+    - Use on-chain reputation data to filter risky contracts and services.  
 
-- **Foundational for Decentralized, User-Controlled Finance**  
-  This architecture makes it possible to build **composable financial services** without intermediaries:
-    - Run your own DeFi dashboards, trading bots, and financial monitoring tools directly on your local machine.  
-    - Extend NetNotes to interact with decentralized identity systems, marketplaces, or cross-chain bridges.  
-    - Control your digital assets across multiple platforms through a single transparent interface.
+- **Foundation for a Decentralized Financial Agent Framework**  
+  With planned **P2P networking** and **atomic exchange contracts**, NetNotes is becoming a foundational tool for decentralized finance:
+    - Compose financial services without intermediaries.  
+    - Build P2P marketplaces, financial bots, and custom trading platforms running entirely on your local infrastructure.  
+    - Manage assets across multiple blockchains (future extension) through one transparent system.
 
 - **Future-Proof and Extensible**  
-  NetNotes isn’t locked to a single blockchain or financial system. Its modular, message-based design allows it to integrate new blockchains, financial tools, and reputation systems as they emerge. This makes it a foundation for **long-term, open financial sovereignty**.
+  NetNotes is being refactored to support distributed apps, networked financial services, and asynchronous communication. Its modular design ensures it will grow alongside the crypto ecosystem rather than become outdated.
 
 ---
 
 ## About NetNotes  
 
 - **Reactive Messaging System**  
-  Every interaction is a structured message flowing through the system—wallet management, blockchain queries, transaction signing, and market data access all happen through this transparent and reviewable process.  
+  Every action is processed as a structured message. Wallet operations, blockchain queries, transaction signing, and API interactions all flow through this transparent, inspectable system.  
 
 - **Encrypted Local Database**  
-  NetNotes securely stores wallets, transaction histories, contact lists, and other sensitive data using a built-in, encrypted database. No external storage services or cloud providers are required.
+  NetNotes stores sensitive data—wallets, transactions, contacts—locally in an encrypted database. No external storage or cloud services required.
 
-- **Built-In Applications for Data and API Integration**  
-  NetNotes includes modular apps for interacting with external services:
-    - ErgoDex API for live DeFi market data on Ergo.  
-    - KuCoin API for centralized exchange market prices.  
-    - Planned integrations for Rosen Bridge and Ergo Mixer APIs.  
+- **Built-In Applications and API Integration**  
+  - Spectrum Finance API for live DeFi data.  
+  - KuCoin API for centralized market data.  
+  - Planned: Rosen Bridge and Ergo Mixer integrations.  
 
 - **Direct Message Review Before Signing**  
-  When a transaction or blockchain interaction is prepared, you can inspect the raw message before signing. This prevents hidden operations and accidental approvals.
+  Inspect and approve every blockchain interaction before it’s executed, ensuring full security and transparency.
 
 - **Cross-Platform Support with Launcher**  
-  Run NetNotes on Linux and Windows. The included launcher handles updates, version management, and integrity verification.
+  Native Linux and Windows support with an integrated launcher for updates and version management.
 
 ---
 
 ## Features  
 
 - Unified platform for wallet management, blockchain exploration, and market monitoring  
-- Native support for the **Ergo blockchain** and KuCoin exchange APIs  
+- Native Ergo blockchain and KuCoin exchange API integrations  
+- Transparent transaction workflows with full message inspection  
 - Encrypted local storage for wallets, contacts, and transaction data  
-- Transparent transaction signing workflows  
-- Reactive, message-driven application architecture  
-- Future support for containerized services and automation agents  
-- Built-in terminal UI and command-line management tools  
-- Upcoming ErgoPay integration for mobile-friendly QR code signing  
+- Draft support for atomic swaps and decentralized trading  
+- Future support for distributed apps and P2P financial agents  
+- Built-in CLI tools and terminal UI  
+- Upcoming ErgoPay integration for mobile signing  
 
 ---
 
 ## Developer Integration  
 
-Developers can extend NetNotes by building modular apps and services that integrate with its reactive messaging system and encrypted storage layer.
+Developers can build modular apps and financial automation agents directly on top of NetNotes.
 
 ### Key Concepts  
 
-- **Messaging System**: All interactions—blockchain actions, API queries, and smart contract calls—are handled through structured, inspectable messages.  
-- **Wallet Control**: Create and manage Ergo wallets directly, with secure local storage and transaction signing.  
-- **API Gateways**: Integrate external APIs for market data, financial protocols, and identity systems.  
-- **Automation Agents**: Build bots and automation scripts that operate directly through NetNotes’ event system.  
+- **Messaging System**: Blockchain actions, smart contracts, and API calls operate through structured, inspectable messages.  
+- **Wallet Management**: Secure Ergo wallets with advanced transaction signing workflows.  
+- **API Gateways**: Integrate external financial APIs, reputation systems, and cross-chain tools.  
+- **Automation Agents**: Create bots and scripts that automate financial strategies directly within NetNotes.  
+- **P2P Support (Upcoming)**: Build decentralized services that interact directly across distributed networks.
 
 ### Example Use Cases  
 
-- Create a multi-wallet manager for Ergo and future supported blockchains.  
-- Develop a custom trading dashboard combining KuCoin and ErgoDex data.  
-- Automate liquidity provisioning on DeFi platforms based on price triggers.  
-- Build personal financial bots that interact with smart contracts securely and automatically.  
+- Build a custom portfolio management app using Ergo and KuCoin data.  
+- Develop automation agents that manage DeFi positions based on market events.  
+- Launch a P2P decentralized exchange platform using atomic swap contracts.  
+- Create bots that interact with smart contracts, evaluate reputation scores, and avoid risky services.
 
 ---
+
+
 
 ## Repositories  
 
