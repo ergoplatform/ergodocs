@@ -65,9 +65,9 @@ Unlike traditional wallets, NetNotes is built around a **messaging-driven archit
   NetNotes stores sensitive data—wallets, transactions, contacts—locally in an encrypted database. No external storage or cloud services required.
 
 - **Built-In Applications and API Integration**  
-  - Spectrum Finance API for live DeFi data.  
-  - KuCoin API for centralized market data.  
-  - Planned: Rosen Bridge and Ergo Mixer integrations.  
+    - Spectrum Finance API for live DeFi data.  
+    - KuCoin API for centralized market data.  
+    - Planned: Rosen Bridge and Ergo Mixer integrations.  
 
 - **Direct Message Review Before Signing**  
   Inspect and approve every blockchain interaction before it’s executed, ensuring full security and transparency.
@@ -118,4 +118,5 @@ Developers can build modular apps and financial automation agents directly on to
 - [NetNotes Engine (Core Logic)](https://github.com/networkspore/netnotes-engine)  
 - [NetNotes Linux Client](https://github.com/networkspore/Netnotes-Linux)  
 - [NetNotes Cross-Platform Client + Launcher](https://github.com/networkspore/Netnotes)  
+- [Celaut vs/+ NetNotes](celaut_v_netnotes.md) 
 
