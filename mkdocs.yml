@@ -721,6 +721,7 @@ nav:
           - Accessing boxes and registers: dev/scs/boxes-and-registers.md
           - Global Functions: dev/scs/global-functions.md
           - Language Operations: dev/scs/sigma/lang-ops.md
+          - Sigma 6.0: dev/protocol/sigma-6.md
           - Interacting with an Ergo Wallet:
               # - dev/anatomy/transactions/payments.md
               - Format: dev/protocol/tx/format.md
