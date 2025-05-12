@@ -1,6 +1,6 @@
 ---
 tags:  
-  - NetNotes  
+  - Netnotes  
   - Crypto Wallet  
   - Ergo  
   - KuCoin  
@@ -9,13 +9,13 @@ tags:
   - Cross-Platform  
 ---
 
-# NetNotes  
+# Netnotes  
 
-[View on GitHub → NetNotes Project](https://github.com/networkspore)  
+[View on GitHub → Netnotes Project](https://github.com/networkspore)  
 
-NetNotes is a cross-platform cryptocurrency management suite and **reactive application framework**. It simplifies how you manage wallets, explore blockchain data, track market prices, and interact with decentralized and centralized financial systems like **Ergo** and **KuCoin**.  
+Netnotes is a cross-platform cryptocurrency management suite and **reactive application framework**. It simplifies how you manage wallets, explore blockchain data, track market prices, and interact with decentralized and centralized financial systems like **Ergo** and **KuCoin**.  
 
-Unlike traditional wallets, NetNotes is built around a **messaging-driven architecture**. Every blockchain operation, API request, or transaction is processed as a message you can review and approve before it executes—offering total transparency and control.  
+Unlike traditional wallets, Netnotes is built around a **messaging-driven architecture**. Every blockchain operation, API request, or transaction is processed as a message you can review and approve before it executes—offering total transparency and control.  
 
 ---
 
@@ -24,7 +24,7 @@ Unlike traditional wallets, NetNotes is built around a **messaging-driven archit
 - Major refactoring is in progress to enable **P2P networking capabilities** and support **distributed applications** across networked devices.  
 - Communication paths are being cleaned up and migrated to **asynchronous processing** for improved scalability and modular architecture.  
 - Security audits and UI component updates are underway to enforce best practices and make features easier to propagate across apps.  
-- Experimental **atomic exchange contracts** are being developed for decentralized trading directly through NetNotes.  
+- Experimental **atomic exchange contracts** are being developed for decentralized trading directly through Netnotes.  
 - Final steps are being taken to integrate working **ErgoDex smart contracts** for decentralized swaps.  
 
 > [Explore the Draft Atomic Exchange Contracts →](https://github.com/networkspore/netnotes-engine/tree/main/src/main/resources/contracts/dex)  
@@ -34,35 +34,35 @@ Unlike traditional wallets, NetNotes is built around a **messaging-driven archit
 ## Why Is This Important?  
 
 - **Break Free from Closed Wallet Ecosystems**  
-  Traditional wallets are isolated, purpose-limited, and closed systems. NetNotes uses a modular, reactive architecture that allows apps, crypto services, and external APIs to **seamlessly interoperate** through a unified messaging layer.
+  Traditional wallets are isolated, purpose-limited, and closed systems. Netnotes uses a modular, reactive architecture that allows apps, crypto services, and external APIs to **seamlessly interoperate** through a unified messaging layer.
 
 - **Total Transparency and Control**  
-  In most crypto tools, you click buttons and assume it’s doing what you expect. With NetNotes, every action—sending funds, querying APIs, or using smart contracts—is a message you can **see, verify, and explicitly approve before it happens**.
+  In most crypto tools, you click buttons and assume it’s doing what you expect. With Netnotes, every action—sending funds, querying APIs, or using smart contracts—is a message you can **see, verify, and explicitly approve before it happens**.
 
 - **Enables Personal Financial Automation Agents**  
-  NetNotes' message- and event-driven design lets you build **automation agents** directly into the platform:
+  Netnotes' message- and event-driven design lets you build **automation agents** directly into the platform:
     - Automate asset management based on market triggers.  
     - Interact with DeFi protocols and atomic swaps without centralized platforms.  
     - Use on-chain reputation data to filter risky contracts and services.  
 
 - **Foundation for a Decentralized Financial Agent Framework**  
-  With planned **P2P networking** and **atomic exchange contracts**, NetNotes is becoming a foundational tool for decentralized finance:
+  With planned **P2P networking** and **atomic exchange contracts**, Netnotes is becoming a foundational tool for decentralized finance:
     - Compose financial services without intermediaries.  
     - Build P2P marketplaces, financial bots, and custom trading platforms running entirely on your local infrastructure.  
     - Manage assets across multiple blockchains (future extension) through one transparent system.
 
 - **Future-Proof and Extensible**  
-  NetNotes is being refactored to support distributed apps, networked financial services, and asynchronous communication. Its modular design ensures it will grow alongside the crypto ecosystem rather than become outdated.
+  Netnotes is being refactored to support distributed apps, networked financial services, and asynchronous communication. Its modular design ensures it will grow alongside the crypto ecosystem rather than become outdated.
 
 ---
 
-## About NetNotes  
+## About Netnotes  
 
 - **Reactive Messaging System**  
   Every action is processed as a structured message. Wallet operations, blockchain queries, transaction signing, and API interactions all flow through this transparent, inspectable system.  
 
 - **Encrypted Local Database**  
-  NetNotes stores sensitive data—wallets, transactions, contacts—locally in an encrypted database. No external storage or cloud services required.
+  Netnotes stores sensitive data—wallets, transactions, contacts—locally in an encrypted database. No external storage or cloud services required.
 
 - **Built-In Applications and API Integration**  
     - Spectrum Finance API for live DeFi data.  
@@ -92,14 +92,14 @@ Unlike traditional wallets, NetNotes is built around a **messaging-driven archit
 
 ## Developer Integration  
 
-Developers can build modular apps and financial automation agents directly on top of NetNotes.
+Developers can build modular apps and financial automation agents directly on top of Netnotes.
 
 ### Key Concepts  
 
 - **Messaging System**: Blockchain actions, smart contracts, and API calls operate through structured, inspectable messages.  
 - **Wallet Management**: Secure Ergo wallets with advanced transaction signing workflows.  
 - **API Gateways**: Integrate external financial APIs, reputation systems, and cross-chain tools.  
-- **Automation Agents**: Create bots and scripts that automate financial strategies directly within NetNotes.  
+- **Automation Agents**: Create bots and scripts that automate financial strategies directly within Netnotes.  
 - **P2P Support (Upcoming)**: Build decentralized services that interact directly across distributed networks.
 
 ### Example Use Cases  
@@ -115,8 +115,8 @@ Developers can build modular apps and financial automation agents directly on to
 
 ## Repositories  
 
-- [NetNotes Engine (Core Logic)](https://github.com/networkspore/netnotes-engine)  
-- [NetNotes Linux Client](https://github.com/networkspore/Netnotes-Linux)  
-- [NetNotes Cross-Platform Client + Launcher](https://github.com/networkspore/Netnotes)  
-- [Celaut vs/+ NetNotes](celaut_v_netnotes.md) 
+- [Netnotes Engine (Core Logic)](https://github.com/networkspore/netnotes-engine)  
+- [Netnotes Linux Client](https://github.com/networkspore/Netnotes-Linux)  
+- [Netnotes Cross-Platform Client + Launcher](https://github.com/networkspore/Netnotes)  
+- [Celaut vs/+ Netnotes](celaut_v_netnotes.md) 
 

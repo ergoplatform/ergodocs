@@ -32,16 +32,17 @@ Celaut applies these principles to software design, creating a decentralized dig
 Modern services typically force you to choose between:
 
 1. **Centralized Web Services**  
-   - Easy to access  
-   - No transparency or control over your data or the underlying code  
-   - Providers can degrade service performance or misuse data  
+      - Easy to access  
+      - No transparency or control over your data or the underlying code  
+      - Providers can degrade service performance or misuse data  
 
 2. **Running Open-Source Code Yourself**  
-   - Full transparency and control  
-   - Requires expensive infrastructure and technical expertise  
-   - Not practical for everyday users  
+      - Full transparency and control  
+      - Requires expensive infrastructure and technical expertise  
+      - Not practical for everyday users  
 
 Celaut offers a third path:  
+
 - Infrastructure is provided by independent, decentralized nodes.  
 - Services are deterministic, isolated, and tamper-proof after deployment.  
 - Reputation and payments are managed transparently via Ergo smart contracts.  
@@ -54,6 +55,7 @@ Celaut offers a third path:
 Today, using a trading bot requires either trusting a centralized platform or running complex software locally.  
 
 With Celaut:  
+
 - Trading bots are distributed services with verifiable on-chain reputations.  
 - Users select bots based on transparent performance history recorded on Ergo.  
 - Payments for bot usage happen automatically via Ergo smart contracts.  
@@ -168,6 +170,5 @@ Ergo handles financial accountability and reputation anchoring, while Celaut nod
   - [Nodo Execution Engine](https://github.com/celaut-project/nodo)  
   - [Paradigm (Theoretical Framework)](https://github.com/celaut-project/paradigm)  
   - [Celaut Documentation](https://github.com/celaut-project/docs)  
-- [Learn More About the Reputation System](eco/reputation-system.md)  
-- [Celaut vs / + NetNotes](celaut_v_netnotes.md)  
+- [Celaut vs / + Netnotes](celaut_v_netnotes.md)  
 
