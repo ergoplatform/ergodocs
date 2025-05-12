@@ -19,22 +19,6 @@ This enables a new class of digital economy where services and AI agents compete
 
 ---
 
-## What Runs on Ergo and What Doesn’t?  
-
-| Component               | On Ergo (On-Chain) | On Celaut (Off-Chain) |
-|-------------------------|-------------------|----------------------|
-| Service Execution       | ❌                | ✅                   |
-| Node Management         | ❌                | ✅                   |
-| Gas Metering & Tracking | ✅ (via smart contracts) | ✅ (local node registries) |
-| Payments & Licensing    | ✅ (Ergo smart contracts) | ❌                  |
-| Reputation System       | ✅ (Reputation proofs stored on-chain) | ✅ (Used to inform decisions) |
-| Service Metadata        | ✅ (Optional for auditability) | ✅ (Operational metadata) |
-| Load Balancing & Delegation | ❌           | ✅                   |
-
-Ergo handles financial accountability and reputation anchoring, while Celaut nodes handle the heavy computational work and service orchestration.
-
----
-
 ## Background  
 
 In the 1940s, John von Neumann and Stanislaw Ulam introduced **cellular automata**, systems where complex behaviors emerge from simple rules. Conway’s *Game of Life* later demonstrated how small, independent agents can create highly adaptive patterns through local interactions.  
@@ -159,6 +143,22 @@ Reputation is essential to establishing trust in a decentralized system without 
 - Celaut is not a consensus mechanism or Layer 1 protocol.  
 - It is an off-chain execution and orchestration layer that complements blockchains like Ergo.  
 - Ergo provides the financial and reputation layer; Celaut provides the scalable, decentralized execution layer.
+
+### What Runs on Ergo and What Doesn’t?  
+
+| Component               | On Ergo (On-Chain) | On Celaut (Off-Chain) |
+|-------------------------|-------------------|----------------------|
+| Service Execution       | ❌                | ✅                   |
+| Node Management         | ❌                | ✅                   |
+| Gas Metering & Tracking | ✅ (via smart contracts) | ✅ (local node registries) |
+| Payments & Licensing    | ✅ (Ergo smart contracts) | ❌                  |
+| Reputation System       | ✅ (Reputation proofs stored on-chain) | ✅ (Used to inform decisions) |
+| Service Metadata        | ✅ (Optional for auditability) | ✅ (Operational metadata) |
+| Load Balancing & Delegation | ❌           | ✅                   |
+
+Ergo handles financial accountability and reputation anchoring, while Celaut nodes handle the heavy computational work and service orchestration.
+
+
 
 ---
 
