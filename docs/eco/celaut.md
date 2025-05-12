@@ -68,22 +68,22 @@ This creates a true open marketplace for financial automation tools where the be
 ## Celaut Architecture  
 
 - **Nodes** ([Nodo Implementation](https://github.com/celaut-project/nodo))  
-  - Manage execution, communication, and local gas metering.  
-  - Provide Docker-like virtualized environments for isolated service execution.  
-  - Operate independently in a decentralized network, supporting load balancing and peer-to-peer delegation.
+    - Manage execution, communication, and local gas metering.  
+    - Provide Docker-like virtualized environments for isolated service execution.  
+    - Operate independently in a decentralized network, supporting load balancing and peer-to-peer delegation.
 
 - **Services**  
-  - Deterministic, portable, and self-contained containers.  
-  - Can request child services, enabling complex workflows.  
-  - Fully abstracted from underlying infrastructure for maximum portability and security.
+    - Deterministic, portable, and self-contained containers.  
+    - Can request child services, enabling complex workflows.  
+    - Fully abstracted from underlying infrastructure for maximum portability and security.
 
 - **Economic Layer (On Ergo)**  
-  - **Reputation System** ([Read More](eco/reputation-system.md)):  
-    - Tracks node and service reliability through reputation proofs stored on-chain.  
-    - Reputation influences service selection and pricing models.  
-  - **Payment System**:  
-    - Uses Ergo smart contracts for automatic licensing and value transfers.  
-    - Supports pay-per-use and subscription models.
+    - **Reputation System**:  
+        - Tracks node and service reliability through reputation proofs stored on-chain.  
+        - Reputation influences service selection and pricing models.  
+    - **Payment System**:  
+        - Uses Ergo smart contracts for automatic licensing and value transfers.  
+        - Supports pay-per-use and subscription models.
 
 ---
 
@@ -94,6 +94,8 @@ This creates a true open marketplace for financial automation tools where the be
 - Nodes assign gas based on payment and deduct gas proportionally as services consume resources.  
 
 **Load Balancing:**  
+
+
 - Nodes choose whether to execute services locally or delegate to peer nodes based on gas costs and availability.  
 - Clients remain unaware of internal delegations, maintaining seamless service access.
 
