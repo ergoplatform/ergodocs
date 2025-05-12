@@ -9,168 +9,145 @@ tags:
   - Service Virtualization  
 ---
 
-# Celaut  
+# Celaut
 
-[View on GitHub → Celaut Project](https://github.com/celaut-project)  
+[View on GitHub → Celaut Project](https://github.com/celaut-project)
 
-Celaut is a decentralized, peer-to-peer network for deploying, managing, and monetizing **autonomous services** and **AI agents**. Inspired by the principles of **cellular automata**, Celaut separates **how a service solves a problem** from **where and who runs it**.  
-
-This enables a new class of digital economy where services and AI agents compete for usage based on reputation and performance rather than centralized control or advertising.
+Celaut is a decentralized, peer-to-peer runtime for deploying and coordinating **autonomous services** and **AI agents**. Inspired by **cellular automata**, Celaut decouples *what* a service does from *who* runs it and *where* it executes. This enables a permissionless digital economy where services compete based on verifiable reputation and performance, rather than central control or advertising.
 
 ---
 
-## Background  
+## Background
 
-In the 1940s, John von Neumann and Stanislaw Ulam introduced **cellular automata**, systems where complex behaviors emerge from simple rules. Conway’s *Game of Life* later demonstrated how small, independent agents can create highly adaptive patterns through local interactions.  
-
-Celaut applies these principles to software design, creating a decentralized digital ecosystem where simple, auditable services interact freely and evolve based on demand, trust, and performance.
+Celaut draws from the legacy of **cellular automata** developed by John von Neumann and popularized by Conway’s *Game of Life*. It applies this model to software design: services operate as independent, auditable containers that evolve and interact within a distributed network based on demand, trust, and execution history.
 
 ---
 
-## Why Is This Necessary?  
+## The Need for Celaut
 
-Modern services typically force you to choose between:
+Today's options for using intelligent or cloud services are limited:
 
-1. **Centralized Web Services**  
-      - Easy to access  
-      - No transparency or control over your data or the underlying code  
-      - Providers can degrade service performance or misuse data  
+1. **Centralized Platforms**
+      - Convenient but opaque and censorable
+      - No guarantees on behavior, security, or long-term integrity
 
-2. **Running Open-Source Code Yourself**  
-      - Full transparency and control  
-      - Requires expensive infrastructure and technical expertise  
-      - Not practical for everyday users  
+2. **Self-Hosting Open Source**
+      - Transparent but resource-intensive and impractical for most users
 
-Celaut offers a third path:  
+Celaut introduces a third path:
 
-- Infrastructure is provided by independent, decentralized nodes.  
-- Services are deterministic, isolated, and tamper-proof after deployment.  
-- Reputation and payments are managed transparently via Ergo smart contracts.  
-- Users remain in control of how they interact with services and allocate value.
+- Nodes are decentralized and can dynamically allocate tasks.
+- Services are deterministic and isolated inside virtual containers.
+- Trust and payment are handled via Ergo smart contracts and the [Reputation System](reputation-system.md).
+- No central service registry, no vendor lock-in.
 
 ---
 
-## Practical Example: Decentralized Trading Bots  
+## Example: Decentralized Trading Bots
 
-Today, using a trading bot requires either trusting a centralized platform or running complex software locally.  
+With Celaut:
 
-With Celaut:  
+- Trading bots run as portable services with on-chain reputation.
+- Users select them based on past performance and trustworthiness.
+- Payments and gas usage are settled on Ergo automatically.
+- Developers cannot modify deployed bots post-factum, ensuring integrity.
 
-- Trading bots are distributed services with verifiable on-chain reputations.  
-- Users select bots based on transparent performance history recorded on Ergo.  
-- Payments for bot usage happen automatically via Ergo smart contracts.  
-- Developers cannot secretly alter or degrade their services after deployment.  
-
-This creates a true open marketplace for financial automation tools where the best solutions succeed based on transparent reputation and real-world results.
+This creates a transparent ecosystem where bot performance and trust are the sole indicators of value.
 
 ---
 
-## Celaut Architecture  
+## System Architecture
 
-- **Nodes** ([Nodo Implementation](https://github.com/celaut-project/nodo))  
-    - Manage execution, communication, and local gas metering.  
-    - Provide Docker-like virtualized environments for isolated service execution.  
-    - Operate independently in a decentralized network, supporting load balancing and peer-to-peer delegation.
+### Nodes ([Nodo Implementation](https://github.com/celaut-project/nodo))
 
-- **Services**  
-    - Deterministic, portable, and self-contained containers.  
-    - Can request child services, enabling complex workflows.  
-    - Fully abstracted from underlying infrastructure for maximum portability and security.
+- Execute services in containerized sandboxes
+- Handle communication, scheduling, and gas metering
+- Publish metadata such as compute cost, architecture support, and uptime
 
-- **Economic Layer (On Ergo)**  
-    - **Reputation System**:  
-        - Tracks node and service reliability through reputation proofs stored on-chain.  
-        - Reputation influences service selection and pricing models.  
-    - **Payment System**:  
-        - Uses Ergo smart contracts for automatic licensing and value transfers.  
-        - Supports pay-per-use and subscription models.
+### Services
 
----
+- Stateless and deterministic containers
+- May spawn sub-services, forming dynamic, reactive graphs
+- Can be hosted, delegated, or migrated across trusted nodes
 
-## Gas Metering and Economic Incentives  
+### Economic Layer on Ergo
 
-- Nodes publish their Ergo wallet address, gas prices, supported architectures, and compute capabilities.  
-- Clients acquire gas by performing on-chain transactions with deposit tokens linked to a node.  
-- Nodes assign gas based on payment and deduct gas proportionally as services consume resources.  
+- **[Reputation System](reputation-system.md)**  
+    - Tracks the historical performance and endorsements of nodes and services
+    - Stored on-chain using immutable reputation tokens
+    - Used by clients to decide service selection and delegation paths
 
-**Load Balancing:**  
-
-
-- Nodes choose whether to execute services locally or delegate to peer nodes based on gas costs and availability.  
-- Clients remain unaware of internal delegations, maintaining seamless service access.
+- **Payments**
+    - Handled via Ergo smart contracts
+    - Pay-per-use or subscription models
+    - Payments correlate to gas usage and may involve dynamic bidding
 
 ---
 
-## Reputation System Overview  
+## Gas Metering and Incentives
 
-Reputation is essential to establishing trust in a decentralized system without central authorities.
-
-- **Proof Structure:**
-    - R5: Type of entity (e.g., service, node, contract)
-    - R6: Entity identifier (e.g., Box ID, Git repo, URL)
-    - R7: Owner public key
-    - R8: Opinion (positive or negative)
-
-- **On-Chain Implementation:**
-    - Reputation tokens function as trust proofs and can be audited on-chain.
-    - Higher reputation leads to better market positioning and higher earnings.
-
-- **Example:**
-    - A service with a long, positive reputation history will be preferred over a newer, unproven one.
-    - Nodes with better reputations offer more trusted execution environments.
+- Nodes advertise their price-per-gas and capacity
+- Clients buy gas via Ergo transactions to obtain deposit tokens
+- Gas is consumed during execution and may be delegated to peer nodes
+- Load balancing is guided by gas efficiency, uptime, and reputation
 
 ---
 
-## Real-World Use Cases  
+## [Reputation System](reputation-system.md) Integration
 
-- Peer-to-peer trading bots with verifiable historical performance  
-- Decentralized AI agents for analytics, automation, and decision-making  
-- Censorship-resistant infrastructure for critical APIs and web services  
-- Autonomous investment platforms using reputation-driven agent selection  
-- Decentralized marketplaces for AI models and computational services  
+Reputation is foundational in Celaut. It enables trust in service orchestration without requiring a consensus layer.
 
----
+- Each node and service accumulates on-chain reputation proofs
+- Reputation reflects peer endorsements and operational history
+- Smart contracts enforce immutability of trust data
+- Reputation influences pricing, visibility, and delegation priority
 
-## How It Works in Practice  
-
-1. A user wants to execute an advanced trading strategy but lacks the infrastructure to run it.  
-2. They choose a bot with a high on-chain reputation, verified through Ergo.  
-3. The bot is executed on a Celaut node, and payment is made through a smart contract on Ergo.  
-4. The node meters the execution with its gas system and deducts resources accordingly.  
-5. If the node finds it more efficient to delegate the workload, it transparently does so by paying gas to a peer node.  
-6. The user gets the result, and the service reputation is updated based on the outcome.
+The system is described in detail in the [Reputation System](reputation-system.md) documentation.
 
 ---
 
-## Celaut is NOT a Blockchain  
+## Real-World Use Cases
 
-- Celaut is not a consensus mechanism or Layer 1 protocol.  
-- It is an off-chain execution and orchestration layer that complements blockchains like Ergo.  
-- Ergo provides the financial and reputation layer; Celaut provides the scalable, decentralized execution layer.
-
-### What Runs on Ergo and What Doesn’t?  
-
-| Component               | On Ergo (On-Chain) | On Celaut (Off-Chain) |
-|-------------------------|-------------------|----------------------|
-| Service Execution       | ❌                | ✅                   |
-| Node Management         | ❌                | ✅                   |
-| Gas Metering & Tracking | ✅ (via smart contracts) | ✅ (local node registries) |
-| Payments & Licensing    | ✅ (Ergo smart contracts) | ❌                  |
-| Reputation System       | ✅ (Reputation proofs stored on-chain) | ✅ (Used to inform decisions) |
-| Service Metadata        | ✅ (Optional for auditability) | ✅ (Operational metadata) |
-| Load Balancing & Delegation | ❌           | ✅                   |
-
-Ergo handles financial accountability and reputation anchoring, while Celaut nodes handle the heavy computational work and service orchestration.
-
-
+- Distributed analytics bots for on-chain/off-chain data
+- Autonomous trading agents with verifiable records
+- Serverless hosting of decentralized APIs
+- Economic simulation engines for DAOs
+- AI model marketplaces that reward trust and performance
 
 ---
 
-## Further Resources  
+## How Celaut Works in Practice
 
-- [Celaut Core Repositories](https://github.com/celaut-project)  
-  - [Nodo Execution Engine](https://github.com/celaut-project/nodo)  
-  - [Paradigm (Theoretical Framework)](https://github.com/celaut-project/paradigm)  
-  - [Celaut Documentation](https://github.com/celaut-project/docs)  
-- [Celaut vs / + Netnotes](celaut_v_netnotes.md)  
+1. A user needs a specific automated task, such as running a DeFi strategy.
+2. They select a service with strong [Reputation System](reputation-system.md) proofs.
+3. The task is deployed to a Celaut node, which consumes gas.
+4. If optimal, the node delegates execution to a lower-cost peer.
+5. The user receives results and optionally updates their trust evaluation.
 
+---
+
+## Celaut is Not a Blockchain
+
+Celaut is an orchestration layer that runs **on top of** blockchains like Ergo. It does not compete with consensus platforms but extends their functionality.
+
+| Component               | On Ergo (On-Chain)                  | On Celaut (Off-Chain)               |
+|-------------------------|-------------------------------------|-------------------------------------|
+| Service Execution       | ❌                                  | ✅                                   |
+| Node Management         | ❌                                  | ✅                                   |
+| Gas Metering & Tracking | ✅ (via smart contracts)             | ✅ (within nodes)                    |
+| Payments & Licensing    | ✅ (settled on Ergo)                 | ❌                                   |
+| Reputation System       | ✅ (reputation tokens and contracts) | ✅ (used in service orchestration)   |
+| Service Metadata        | ✅ (optional, for transparency)      | ✅ (mandatory for operations)        |
+| Delegation Decisions    | ❌                                  | ✅ (based on cost and reputation)    |
+
+---
+
+## Further Resources
+
+- [Celaut GitHub Repositories](https://github.com/celaut-project)
+  - [Nodo: Execution Engine](https://github.com/celaut-project/nodo)
+  - [Paradigm: Theoretical Layer](https://github.com/celaut-project/paradigm)
+  - [Celaut Docs](https://github.com/celaut-project/docs)
+- [Celaut vs / + Netnotes](celaut_v_netnotes.md)
+- [Reputation System](reputation-system.md): Architecture, smart contracts, and usage
+- [Sigma Reputation Panel UI](https://reputation-systems.github.io/sigma-reputation-panel/)
