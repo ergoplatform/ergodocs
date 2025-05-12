@@ -35,9 +35,9 @@ Unlike traditional wallet apps, NetNotes wraps everything in a **messaging-drive
 
 - **Foundational for Decentralized, User-Controlled Finance**  
   This architecture makes it possible to build **composable financial services** without intermediaries:
-  - Run your own DeFi dashboards, trading bots, and financial monitoring tools directly on your local machine.  
-  - Extend NetNotes to interact with decentralized identity systems, marketplaces, or cross-chain bridges.  
-  - Control your digital assets across multiple platforms through a single transparent interface.
+    - Run your own DeFi dashboards, trading bots, and financial monitoring tools directly on your local machine.  
+    - Extend NetNotes to interact with decentralized identity systems, marketplaces, or cross-chain bridges.  
+    - Control your digital assets across multiple platforms through a single transparent interface.
 
 - **Future-Proof and Extensible**  
   NetNotes isn’t locked to a single blockchain or financial system. Its modular, message-based design allows it to integrate new blockchains, financial tools, and reputation systems as they emerge. This makes it a foundation for **long-term, open financial sovereignty**.
@@ -54,9 +54,9 @@ Unlike traditional wallet apps, NetNotes wraps everything in a **messaging-drive
 
 - **Built-In Applications for Data and API Integration**  
   NetNotes includes modular apps for interacting with external services:
-  - Spectrum Finance API for live DeFi market data on Ergo.  
-  - KuCoin API for centralized exchange market prices.  
-  - Planned integrations for Rosen Bridge and Ergo Mixer APIs.  
+    - ErgoDex API for live DeFi market data on Ergo.  
+    - KuCoin API for centralized exchange market prices.  
+    - Planned integrations for Rosen Bridge and Ergo Mixer APIs.  
 
 - **Direct Message Review Before Signing**  
   When a transaction or blockchain interaction is prepared, you can inspect the raw message before signing. This prevents hidden operations and accidental approvals.
@@ -93,7 +93,7 @@ Developers can extend NetNotes by building modular apps and services that integr
 ### Example Use Cases  
 
 - Create a multi-wallet manager for Ergo and future supported blockchains.  
-- Develop a custom trading dashboard combining KuCoin and Spectrum Finance data.  
+- Develop a custom trading dashboard combining KuCoin and ErgoDex data.  
 - Automate liquidity provisioning on DeFi platforms based on price triggers.  
 - Build personal financial bots that interact with smart contracts securely and automatically.  
 
