@@ -80,15 +80,29 @@ ErgoScript is the high-level, developer-friendly language. It gets compiled into
 
 ## Experimenting & Tooling
 
-While ErgoScript aims for simplicity and security, debugging complex contracts can still be challenging. Currently, developers often rely on manual inspection and testing using the tools below. Tools are emerging to improve this process:
+While ErgoScript aims for simplicity and security, debugging complex contracts can still be challenging. Developers often rely on manual inspection and testing using the tools below. Tools are emerging to improve this process:
 
-*   **[Debugging Guide](debugging.md):** Covers current best practices, tools, and techniques for debugging ErgoScript.
-*   **[Ergoscript Simulator](https://github.com/spectrum-finance/ergoscript-simulator):** A community-developed tool that allows simulating ErgoScript execution.
-*   **[ErgoScript P2S Playground](https://wallet.plutomonkey.com/p2s/):** Experiment and generate [Ergo addresses](address.md).
-*   **[escript.online](https://escript.online/):** Online editor and compiler.
-*   **[Scastie](scastie.md):** Online Scala compiler suitable for ErgoScript snippets.
-*   **[Kiosk](stack/kiosk.md):** Web-based UI to explore ErgoScript.
-*   **[Ergo-Puppet](puppet.md):** Advanced tool for off-chain experimentation and testing.
+**Core Interpreters & Playgrounds:**
+*   🥇 **[Sigmastate Interpreter](https://github.com/ScorexFoundation/sigmastate-interpreter)**: The reference implementation used by nodes.
+*   🥇 **[Ergo Playgrounds](https://github.com/ergoplatform/ergo-playgrounds)**: Scala-based environment for contract and off-chain code testing.
+*   **[Ergo-Puppet](puppet.md):** Advanced tool built on Ergo Playgrounds for off-chain experimentation and unit testing.
+
+**Online Editors & Compilers:**
+*   🥇 **[escript.online](https://escript.online/)**: Online editor, compiler, and playground.
+*   **[ErgoScript P2S Playground (Plutomonkey)](https://wallet.plutomonkey.com/p2s/)**: Compile ErgoScript to P2S addresses.
+*   **[Scastie](scastie.md)**: Online Scala compiler suitable for ErgoScript snippets.
+*   **[KioskWeb](https://github.com/scalahub/KioskWeb)**: Web interface for the Kiosk framework (useful for exploring Kiosk-based contracts).
+
+**Compilers & Language Support:**
+*   [Ergoscript Compiler (Rust)](https://github.com/ergoplatform/sigma-rust/tree/develop/ergoscript-compiler): Rust implementation.
+*   [Ergoscript Compiler (Scala)](https://github.com/ergoplatform/ergoscript-compiler): Scala CLI tool.
+*   [ErgoScala Compiler](https://github.com/ergoplatform/ergoscala-compiler): Compile a subset of Scala to ErgoScript. *(Needs link update if available)*
+*   [ErgoScript CLI Compiler](https://github.com/ergoplatform/ergoscript-compiler): CLI tool to compile ErgoScript to address. *(Duplicate link? Check source)*
+*   [VSCode ErgoScript Language Support](https://marketplace.visualstudio.com/items?itemName=ergoscript.ergoscript-language-support): Syntax highlighting for VSCode.
+
+**Debugging & Simulation:**
+*   **[Debugging Guide](debugging.md):** Covers current best practices, tools, and techniques.
+*   **[Ergoscript Simulator](https://github.com/spectrum-finance/ergoscript-simulator):** A community-developed tool for simulating ErgoScript execution.
 
 ## Advanced Patterns & Tutorials
 

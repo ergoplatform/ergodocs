@@ -328,7 +328,10 @@ nav:
       - Crux Finance: eco/crux.md
       # - Azorus: eco/azorus.md
       - ErgoNames: eco/ergonames.md
-      - Reputation System: eco/reputation-system.md
+      - Celaut: 
+        - eco/celaut.md
+        - Reputation System: eco/reputation-system.md
+      - NetNotes: eco/netnotes.md
       - SigmaRand: eco/sigmarand.md
       - Moria Finance: eco/moria-finance.md
       - Trading:

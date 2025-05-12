@@ -2,6 +2,13 @@
 
 SigmaUSD is the first eUTxO-based stablecoin, implementing the [AgeUSD protocol](https://github.com/Emurgo/age-usd). It was co-designed by IOHK, Ergo, and Emurgo, focusing on conservative collateral reserve settings, thus eliminating the need for liquidations. SigmaUSD supports a fully decentralized stablecoin emission setup, offering a stable, simple, and decentralized stablecoin.
 
+## Key Resources
+
+- 🥇 **[SigmaUSD Website](https://sigmausd.io/)**: Main interface for minting/redeeming SigUSD and SigRSV.
+- 🥇 **[EIP-15: SigmaUSD Protocol](https://github.com/ergoplatform/eips/blob/master/eip-0015.md)**: The official Ergo Improvement Proposal detailing the protocol.
+- **[AgeUSD Specification](https://github.com/Emurgo/age-usd)**: The underlying protocol specification developed by Emurgo, IOHK, and Ergo.
+- **[SigmaUSD Bot](https://github.com/anon-real/sigma-usd)**: Off-chain bot implementation for interacting with the protocol.
+
 ## How does SigmaUSD work?
 
 **Reserve providers** submit ERGs to the dApp's reserves to mint *reserve coins* (**SigmaRSV**), each representing a portion of the underlying ERG reserves. **SigmaUSD** users also submit ERGs to the dApp reserves to mint SigmaUSD, provided there are sufficient reserves within the dApp. Users can redeem their SigmaUSD for an equivalent amount of ERGs from the reserves at the current exchange rate as provided by the ERG-USD [oracle pool](https://explorer.ergoplatform.com/en/oracle-pool-state/ergusd).

@@ -7,7 +7,7 @@ Their benefits are for people who don’t want to give up the custody of their f
 //// note | Decentralised Exchanges on Ergo
 /// details | Spectrum Finance (Live)
      {type: success, open: true}
-[Spectrum Finance](spectrum.md) is a pioneering open-source, cross-chain decentralized exchange (DEX) platform, currently offering liquidity provision (LP), yield farming, and babel fees on the Cardano (ADA) and Ergo (ERG) networks.
+[Spectrum Finance](../eco/spectrum.md) is a pioneering open-source, cross-chain decentralized exchange (DEX) platform, currently offering liquidity provision (LP), yield farming, and babel fees on the Cardano (ADA) and Ergo (ERG) networks.
 ///
 /// details | GuapSwap (V2 in Development)
      {type: success, open: true}

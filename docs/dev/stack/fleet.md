@@ -15,7 +15,9 @@ tags:
 
 For common usage patterns and examples, see the [Fleet SDK Recipes](fleet-sdk-recipes.md).
 
+## Examples
 
+- 🥇 **[Fleet Examples](https://github.com/fleet-sdk/fleet-by-example)**: Repository showcasing various Fleet SDK usage patterns. [`TS`]
 
 /// details | DeepWiki Documentation
     {type: info, open: true}

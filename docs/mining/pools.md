@@ -41,7 +41,7 @@ Several mining pools offer a solo port for those who prefer this method. A compr
 
 - [Kryptex](https://pool.kryptex.com/erg)
     - [How to start mining on Kryptex](https://pool.kryptex.com/articles/how-to-mine-ergo-en)
-- [Sigmanauts Mining DAO](https://sigmanauts.com/mining/)
+- 🥇 **[Sigmanauts Mining Pool](https://sigmanauts.com/mining/)**
     - [How to start mining on Sigmanaut Pool & Earn Bonus Tokens](https://sigmanauts.com/mining/)
     - [How to view review current and past votes on Paideia](https://app.paideia.im/sigmanautsminingdao)
     - [Sigmanauts Mining Pool DAO Discord](https://discord.gg/cZMwX347Dx)

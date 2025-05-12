@@ -10,9 +10,11 @@ tags:
 
 # ErgoMixer
 
-ErgoMixer is the **first *non-custodial, programmable, non-interactive* mixer in the space** (and the only **token mixer** to our knowledge). 
+🥇 **[ErgoMixer Website](https://ergomixer.com/)**
 
-Download the latest release [here](https://github.com/ergoMixer/ergoMixBack/releases)
+ErgoMixer is the **first *non-custodial, programmable, non-interactive* mixer in the space** (and the only **token mixer** to our knowledge).
+
+Download the latest release [here](https://github.com/ergoMixer/ergoMixBack/releases). The main code repositories are hosted under the [ergoMixer GitHub Organization](https://github.com/ergoMixer/).
 
 ErgoMixer utilises Ergo's [**Sigma protocols**](sigma.md) to enable efficient, trustless mixing of funds, enabling a high degree of privacy and security.
 

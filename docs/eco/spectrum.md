@@ -46,4 +46,6 @@ Spectrum Bloom is an upcoming eUTxO-native framework for decentralized finance (
 
 ### Dev-Resources
 
+- 🥇 **[Contracts Repository](https://github.com/spectrum-finance/ergo-dex/tree/master/contracts)**: ErgoScript contracts for the DEX.
+- 🥇 **[Backend Repository](https://github.com/spectrum-finance/spectrum-offchain-ergo)**: Off-chain services (bots) for matching and execution.
 - [EIP-0014: Decentralized Exchange Contracts](https://github.com/ergoplatform/eips/pull/27)

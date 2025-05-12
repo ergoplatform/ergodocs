@@ -8,6 +8,8 @@ tags:
 
 # Oracle Pools Version 2
 
+The core implementation for Oracle Pools V2 can be found in the 🥇 **[Oracle Core](https://github.com/ergoplatform/oracle-core)** repository. [`Rust`]
+
 
 /// details | Latest Developments
      {type: tip, open: true}
