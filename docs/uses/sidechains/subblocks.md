@@ -21,7 +21,7 @@ With the renaming and introduction of sub-blocks, Ergo now distinguishes between
 
   
 - **Rapid Onchain Confirmations:**  
-  Everyday transactions—like receiving tokens from decentralized exchange (DEX) swaps or wallet-to-wallet transfers—are now confirmed in approximately 2 seconds.
+  Everyday transactions—such as receiving tokens from DEX swaps or wallet-to-wallet transfers—can now be confirmed in approximately 2 seconds thanks to sub-blocks. Sub-blocks carry transaction data and are produced every second, allowing dApps and wallets to detect transaction inclusion almost instantly. However, final settlement still depends on ordering blocks, which are mined every 2 minutes and provide the full proof-of-work security guarantee. Tools that trust sub-block inclusion can display fast confirmations, but more security-sensitive systems—such as centralized exchanges—will continue to wait for a fixed number of ordering blocks before crediting deposits, as this reduces the risk from chain reorganizations or 51% attacks.
   
 - **Faster Failure Detection:**  
   Instead of waiting up to 6 minutes to detect a transaction failure, the new system detects failures in about 2 seconds—a 17× improvement in responsiveness.

@@ -19,7 +19,7 @@ Celaut is a decentralized, peer-to-peer runtime for deploying and coordinating *
 
 ## Background
 
-Celaut draws from the legacy of **cellular automata** developed by John von Neumann and popularized by Conway’s *Game of Life*. It applies this model to software design: services operate as independent, auditable containers that evolve and interact within a distributed network based on demand, trust, and execution history (note that there is no 'execution history directory' or anything similar — anyone is free to submit any opinion they want about any service, putting their own reputation on the line by doing so).
+Celaut draws from the legacy of **cellular automata** developed by John von Neumann and popularized by Conway’s *Game of Life*. It applies this model to software design: services operate as independent, auditable containers that evolve and interact within a distributed network based on demand, trust, and reputational feedback. There is no execution history directory; anyone is free to submit opinions about any service, putting their own reputation on the line by doing so.
 
 ---
 
@@ -72,10 +72,11 @@ This creates a transparent ecosystem where bot performance and trust are the sol
 
 ### Economic Layer on Ergo
 
-- **[Reputation System](reputation-system.md)**  
-    - Tracks the historical performance and endorsements of nodes and services (note that there is no 'execution history directory' or anything similar — anyone is free to submit any opinion they want about any service, putting their own reputation on the line by doing so)
-    - Stored on-chain using immutable reputation tokens
-    - Used by clients to decide service selection and delegation paths
+* **[Reputation System](reputation-system.md)**
+  * Tracks the performance and endorsements of nodes and services based on freely submitted opinions; there is no execution history directory, and anyone may provide feedback at the cost of their own reputation
+  * Stored on-chain using immutable reputation tokens
+  * Used by clients to decide service selection and delegation paths
+
 
 - **Payments**
     - Handled via Ergo smart contracts
@@ -86,23 +87,24 @@ This creates a transparent ecosystem where bot performance and trust are the sol
 
 ## Gas Metering and Incentives
 
-- Nodes advertise their price-per-gas and capacity
-- Clients buy gas via Ergo transactions ~~to obtain deposit tokens~~ (deposit tokens are not Ergo tokens, only uuids to identify the payment request inside the node)
-- Gas is consumed during execution ~~and may be delegated to peer nodes~~ (the gas is not delegated, it's more like each node has it's own gas currency, but the gas it's only a node internal mecanism to quantify resources, not a chain token)
-- The nodes pay Ergo in exchange for gas for each of their peers, so they can delegate the execution of services to them if it suits them.
-- Load balancing is guided by gas efficiency, uptime, and reputation
-- Each node has its own balance, service delegation, and pricing policies
+* Nodes advertise their price-per-gas and capacity
+* Clients buy gas via Ergo transactions; deposit tokens are not Ergo tokens but UUIDs used to identify the payment request inside the node
+* Gas is consumed during execution; each node has its own internal gas currency to quantify resource use, which is not a chain token
+* Nodes pay Ergo in exchange for gas for each of their peers, allowing them to delegate the execution of services to others if beneficial
+* Load balancing is guided by gas efficiency, uptime, and reputation
+* Each node has its own balance, service delegation, and pricing policies
+
 
 ---
 
-## [Reputation System](reputation-system.md) Integration
+## Reputation System Integration
 
 Reputation is foundational in Celaut. It enables trust in service orchestration without requiring a consensus layer.
 
-- Each node and service accumulates on-chain reputation proofs
-- Reputation reflects peer endorsements ~~and operational history~~ (like previously comments, there is no any registry for each operation, could be "clients opinion about services" or similar)
-- Smart contracts enforce immutability of trust data
-- Reputation influences pricing, visibility, and delegation priority
+* Each node and service accumulates on-chain reputation proofs
+* Reputation reflects peer endorsements and client opinions about services
+* Smart contracts enforce immutability of trust data
+* Reputation influences pricing, visibility, and delegation priority
 
 The system is described in detail in the [Reputation System](reputation-system.md) documentation.
 

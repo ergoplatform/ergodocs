@@ -116,11 +116,9 @@ This reputation system directly powers Celaut’s trust layer:
 
 ## User Interaction
 
-* **Browser Interface**:
-  [Sigma Reputation Panel](https://reputation-systems.github.io/sigma-reputation-panel/) provides a user-friendly interface to browse, assign, and verify reputation records.
+* **Browser Interface**: [Sigma Reputation Panel](https://reputation-systems.github.io/sigma-reputation-panel/) provides a user-friendly interface to browse, assign, and verify reputation records.
 
-* **Library Integration**:
-  Developers can use the [Sigma Reputation Panel Library](https://github.com/reputation-systems/sigma-reputation-panel) to build bots and services that interact directly with the reputation system. This supports automated evaluation, staking, and advanced analytics.
+* **Library Integration**: Developers can use the [Sigma Reputation Panel Library](https://github.com/reputation-systems/sigma-reputation-panel) to build bots and services that interact directly with the reputation system. This supports automated evaluation, staking, and advanced analytics.
 
 ---
 
