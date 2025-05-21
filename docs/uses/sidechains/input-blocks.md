@@ -1,163 +1,150 @@
-#  Input Blocks and Ordering Blocks – Technical Details**
+## Input Blocks and Ordering Blocks – Technical Details
 
-## Background on the Current System
+### Background on the Legacy System
 
-  
-- **Current Process:**  
-  Transactions from wallets enter a common mempool. Miners include these transactions in blocks that are produced roughly every 2 minutes.
-  
-- **Replace-By-Fee (RBF):**  
-  RBF allows users to increase transaction fees for faster inclusion or even cancel a transaction by refunding the sender’s wallet. This system can sometimes lead to issues, such as with SigmaUSD mint transactions during fee competitions.
+* **Previous Process:**
+  Transactions from wallets enter a common mempool. Miners select and include them in blocks produced approximately every 2 minutes. These blocks contain full proof-of-work (PoW), enforce consensus, and settle transactions.
+
+* **Replace-By-Fee (RBF):**
+  RBF allows a user to rebroadcast a transaction with a higher fee to increase inclusion chances or refund the sender if it fails. Under high network congestion, RBF can cause delays or confusion, particularly for dApps like SigmaUSD which rely on timely confirmations.
 
 ### Limitations
 
-  
-- **Variable Confirmation Times:**  
-  Due to variance in block production, some transactions might take as long as 10 minutes to confirm.
-  
-- **User Friction:**  
-  The current system involves repeated manual steps (like multiple password prompts) that slow down the overall process.
+* **Unpredictable Confirmation Times:**
+  Due to natural PoW variance, a transaction might take anywhere from 2 to 10 minutes to confirm, even under normal conditions.
 
-### 2. Introducing Input Blocks and Ordering Blocks
+* **Poor UX in Wallets and dApps:**
+  Users face friction from waiting, multiple signing attempts, and retries, which degrades trust and usability.
 
-Following ideas in PRISM [3], Parallel Proof-of-Work [4], and Tailstorm [5], Ergo introduces two kinds of blocks via a non-breaking consensus protocol update.
+---
 
-### Revisiting the Current Block Concept
+### Introducing Input Blocks and Ordering Blocks
 
-A valid block in the current Ergo protocol is formed by semantically valid header fields and corresponding block sections (including transactions). Miners search for a nonce such that:
+Following ideas in PRISM, Bitcoin-NG, Tailstorm, and Parallel Proof-of-Work, Ergo introduces a dual-block architecture via a soft fork that maintains backward compatibility.
+
+### Redefining the Block Structure
+
+In traditional Ergo:
 
 ```
 H(b) < T
 ```
 
-where:
+* `H(b)` is the hash of the block header under Autolykos
+* `T` is the target value for PoW
+* Difficulty `D = 2^256 / T`, adjusted to maintain \~2-minute block intervals
 
-- **H(b):** is the Autolykos Proof-of-Work function applied to the block header bytes (including nonce),
-- **T:** is the Proof-of-Work target, and
-- **Difficulty (D):** is defined as D = 2^256 / T (with adjustments for the secp256k1 curve order).
+This rule continues to define **ordering blocks**, but Ergo now introduces **input blocks** with a lower difficulty threshold:
 
-Difficulty is readjusted to maintain an average block production time of 2 minutes.
+```
+H(ib) < t   where   t = T / 64
+```
+
+This allows miners to produce approximately one input block every second, on average, for each ordering block cycle.
+
+---
 
 ### The Role of Superblocks
 
-  
-- **Superblocks:**  
-  Used for building NiPoPoWs, a superblock (e.g., a level-1 superblock *S*) must satisfy:
-  ```
-  H(S) < T/2
-  ```
-  In general, an n-level superblock must satisfy:
-  ```
-  H(S) < T/2^n
-  ```
-  Every superblock is also a valid block under the standard PoW test.
+While input blocks and ordering blocks focus on real-time transaction propagation and consensus anchoring, **superblocks** enable efficient long-range proofs and light client support via NiPoPoWs.
 
-### Transition to Input Blocks and Ordering Blocks
+A level-`n` superblock must satisfy:
 
-  
-- **Ordering Blocks:**  
-  These are the full blocks (with the original PoW requirements) and will continue to be produced every 2 minutes.
-  
-- **Input Blocks (Sub-blocks):**  
-  To enable faster transaction propagation, input blocks are introduced with a lower difficulty threshold. For example, by setting:
-  ```
-  t = T/64
-  ```
-  and defining the input block condition as:
-  ```
-  H(ib) < t
-  ```
-  a miner can generate, on average, 63 input blocks alongside 1 ordering block per ordering block generation period. Unlike superblocks, input blocks are not required to pass the ordering block PoW check, though every ordering block must pass the input block check.
-  
-- **Blockchain Structure:**  
-  The resulting blockchain may look like:
-  ```
-  (ordering block) - input block - input block - input block - (ordering block) - input block - input block - (ordering block) …
-  ```
-  This structure facilitates rapid transaction dissemination while preserving overall network security.
+```
+H(S) < T / 2^n
+```
 
-##. Transaction Handling and Data Structures
+* Every superblock is a valid ordering block
+* Higher-level superblocks are rarer and used in succinct chain proofs
+* Useful for mobile wallets and sidechains needing trust-minimized verification
+
+---
+
+### Input Blocks and Their Mechanics
+
+* **Ordering Blocks:**
+  Full PoW blocks that anchor consensus, produced every \~2 minutes. They finalize the inclusion of input blocks and distribute rewards.
+
+* **Input Blocks (Sub-blocks):**
+  Low-difficulty blocks generated approximately every second, used for fast transaction propagation. They are not consensus anchors but allow for near-instant detection of transaction inclusion.
+
+```
+ordering block → input block → input block → input block → ordering block → input block → ...
+```
+
+* Each ordering block is valid as an input block, but not vice versa
+
+---
 
 ### Transaction Classes
 
-  
-- **First-Class Transactions:**  
-  These transactions yield consistent validation results across all input blocks (approximately 99% of typical transactions) and are included solely in input blocks.
-  
-- **Second-Class Transactions:**  
-  Dependent on variables like block timestamps or miner public keys, these transactions might validate differently between input and ordering blocks, so they are included in both.
+* **First-Class Transactions:**
+  Deterministic and miner-independent, these transactions yield consistent validation across all miners and can safely be included in input blocks only.
 
-### Merkle Trees and Digest Fields
+* **Second-Class Transactions:**
+  May rely on miner-specific data (timestamps, pubkeys, etc.) and are included in both input and ordering blocks to ensure consistency.
 
-  
-- **Purpose:**  
-  Miners maintain Merkle tree roots for:
-  
-  - All first-class transactions since the last ordering block.
-  - Transactions included in the input blocks.
-  
-- **Implementation:**  
-  These digest fields are embedded in the block header extensions to ensure consistency and efficient verification, even as input blocks are rapidly generated.
+---
 
-## Block Propagation Mechanisms
+### Merkle Trees and Digest Extensions
 
-  
-- **Announcement:**  
-  When an input block is generated, its header and the identifier of its parent input block are announced.
-  
-- **Data Verification:**  
-  Peers request an introspection message containing proofs and Merkle tree digests (similar to weak IDs in Bitcoin’s Compact Blocks) to verify transaction data efficiently.
-  
-- **Efficient Protocols:**  
-  Cut-through propagation techniques are employed to ensure that transaction identifiers and confirmations are rapidly disseminated across the network.
+Miners maintain Merkle roots for:
 
-## Miner Incentives and Protocol Upgrades
+* All first-class transactions since the last ordering block
+* Transactions in each individual input block
 
-### Incentives
+These roots are embedded in block header extensions to enable efficient proof construction and light client validation.
 
-  
-- **Fee Collection:**  
-  Miners earn fees from first-class transactions included in input blocks.
-  
-- **Additional Rewards:**  
-  Ordering blocks yield rewards from second-class transactions, as well as storage rent and emission rewards.
+---
 
-### Soft Fork Upgrade
+### Block Propagation Protocol
 
-The new rules will be implemented via a soft fork. This ensures backward compatibility—older nodes will still receive standard block transaction messages until a supermajority (90+% of the hashrate) upgrades.
+* **Header Announcements:**
+  Each input block header is announced immediately, along with its parent input block ID.
 
-## Security Considerations
+* **Verification:**
+  Peers request introspection messages (similar to Compact Blocks in Bitcoin) to verify Merkle digests without downloading full block data.
 
-  
-- **Validation Checks:**  
-  Every ordering block must pass the input block validation check, which prevents invalid transactions from being confirmed.
-  
-- **Flexible Confirmation Models:**  
-  The protocol supports a “weaker” notion of confirmation for rapid user feedback while retaining full network security through ordering blocks.
+* **Cut-through Propagation:**
+  Redundant data across input blocks is eliminated to optimize bandwidth and speed.
 
-## Implementation Roadmap
+---
 
-1. **Deployment:**  
-   Introduce input blocks alongside existing ordering blocks.
-2. **Miner Software Upgrades:**  
-   Update mining nodes to support input block generation and propagation.
-3. **Transaction and Fee Script Revisions:**  
-   Adjust fee scripts (e.g., setting fee scripts to “true” as needed) and update transaction validation procedures.
-4. **User Interface Enhancements:**  
-   Improve wallet interfaces to streamline transaction signing.
-5. **Sidechain Integration:**  
-   Enable input blocks to carry sidechain commitments, further enhancing scalability and offloading processing from the main chain.
+### Incentives and Rewards
 
-## References
+* **Input Blocks:**
+  Miners collect transaction fees from first-class transactions included in input blocks.
 
-  
-1. [Ergoforum: A Scalability Plan for Ergo](https://www.ergoforum.org/t/a-scalability-plan-for-ergo/226/5)  
-2. [Weak Blocks WIP #1 #2055](https://github.com/ergoplatform/ergo/pull/2055)  
-3. [A Sidechain Prototype #2107](https://github.com/ergoplatform/ergo/pull/2107/)  
-4. Eyal, Ittay, et al. "Bitcoin-NG: A scalable blockchain protocol." *13th USENIX Symposium on Networked Systems Design and Implementation (NSDI 16), 2016.* [https://www.usenix.org/system/files/conference/nsdi16/nsdi16-paper-eyal.pdf](https://www.usenix.org/system/files/conference/nsdi16/nsdi16-paper-eyal.pdf)  
-5. Kiffer, Lucianna, et al. "Nakamoto Consensus under Bounded Processing Capacity." *Proceedings of the 2024 ACM SIGSAC Conference on Computer and Communications Security, 2024.* [https://iacr.steepath.eu/2023/381-NakamotoConsensusunderBoundedProcessingCapacity.pdf](https://iacr.steepath.eu/2023/381-NakamotoConsensusunderBoundedProcessingCapacity.pdf)  
-6. Bagaria, Vivek, et al. "Prism: Deconstructing the blockchain to approach physical limits." *Proceedings of the 2019 ACM SIGSAC Conference on Computer and Communications Security, 2019.* [https://dl.acm.org/doi/pdf/10.1145/3319535.3363213](https://dl.acm.org/doi/pdf/10.1145/3319535.3363213)  
-7. Garay, Juan, Aggelos Kiayias, and Yu Shen. "Proof-of-work-based consensus in expected-constant time." *Annual International Conference on the Theory and Applications of Cryptographic Techniques, 2024.* [https://eprint.iacr.org/2023/1663.pdf](https://eprint.iacr.org/2023/1663.pdf)  
-8. Keller, Patrik, et al. "Tailstorm: A secure and fair blockchain for cash transactions." *arXiv preprint arXiv:2306.12206 (2023).* [https://arxiv.org/pdf/2306.12206](https://arxiv.org/pdf/2306.12206)  
-9. Garay, Juan, Aggelos Kiayias, and Nikos Leonardos. "The Bitcoin Backbone Protocol: Analysis and Applications." *Journal of the ACM 71.4 (2024): 1-49.* [https://dl.acm.org/doi/pdf/10.1145/3653445](https://dl.acm.org/doi/pdf/10.1145/3653445)
+* **Ordering Blocks:**
+  Miners earn full block rewards, second-class transaction fees, and storage rent/emission rewards.
 
+---
+
+### Upgrade Process
+
+* **Soft Fork Activation:**
+  Backward-compatible upgrade. Legacy nodes continue to process ordering blocks. Input blocks are only utilized after 90% of hashpower adopts the upgrade.
+
+* **Steps:**
+
+  1. Introduce input blocks alongside ordering blocks
+  2. Upgrade mining software
+  3. Adjust transaction validation logic and fee scripts
+  4. Update dApp interfaces for faster feedback
+  5. Enable sidechain commitments within input blocks
+
+---
+
+### Security Considerations
+
+* **Input Block Validation:**
+  All ordering blocks must validate preceding input blocks. Invalid transactions are not finalized.
+
+* **Dual Confirmation Model:**
+  Input blocks offer fast, provisional feedback. Final settlement still relies on inclusion in an ordering block.
+
+---
+
+### TLDR
+
+Input blocks provide rapid, low-cost transaction propagation (\~1s), greatly improving user feedback without altering the security guarantees of Ergo’s existing PoW system. Ordering blocks retain finality and economic incentives, while superblocks support long-range verification. This architecture balances performance, security, and decentralization.
