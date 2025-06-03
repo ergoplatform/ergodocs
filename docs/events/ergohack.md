@@ -14,9 +14,9 @@ Originally conceived as competitions, ERGOHACKs have evolved into powerful incub
 
 ## ERGOHACKs by the Numbers (I - IX)
 
-*   **Total Events:** 9 Hackathons
+*   **Total Events:** 10 Hackathons
 *   **Projects Submitted:** Over 100 unique projects explored
-*   **Themes Covered:** Ranging from Social Transformation, Privacy & Security, Mining & Minting, Cypherpunk Finance, DeFi Adoption, Bitcoin Interoperability, to UI/UX & Mining Innovation.
+*   **Themes Covered:** Ranging from Social Transformation, Privacy & Security, Mining & Minting, AI, Cypherpunk Finance, DeFi Adoption, Bitcoin Interoperability, to UI/UX & Mining Innovation. 
 *   **Notable Outcomes:** Many essential ecosystem tools and dApps originated or were significantly developed during ERGOHACKs, including wallets (Minotaur, SAFEW, Satergo enhancements), DeFi platforms (ErgoLend, SigmaO, Oracle Pools v2, Duckpools), infrastructure components (Subpooling/GetBlok.io, ErgoNames, Rosen Port), privacy features (Stealth Addresses), and innovative concepts (CYTI, SNISPs, ChainCash, Lithos).
 
 ---
@@ -25,6 +25,7 @@ Originally conceived as competitions, ERGOHACKs have evolved into powerful incub
 
 Explore the history of innovation. Click any event name to jump to its details or browse chronologically. You can also visit the original [Hall of Fame](https://ergohack.io/hall-of-fame/).
 
+*   (May 25) [ERGOHACK X: AI on the Ergo Blockchain](#ergohack-10-ai-on-the-ergo-blockchain)
 *   (Oct 24) [ERGOHACK IX: Mining & UI/UX Innovation](#ergohack-9-mining-and-uiux-innovation)
 *   (May 24) [ERGOHACK VIII: Ergo as a Smart Layer](#ergohack-viii-ergo-as-a-smart-layer)
 *   (Oct 23) [ERGOHACK VII: Future of Finance: Ways of Adoption](#ergohack-vii-future-of-finance-ways-of-adoption)
@@ -34,6 +35,73 @@ Explore the history of innovation. Click any event name to jump to its details o
 *   (Feb 22) [ERGOHACK III: Privacy & Security](#ergohack-3-privacy-and-security)
 *   (Oct 21) [ERGOHACK II: Social Transformation](#ergohack-ii-social-transformation)
 *   (Jun 21) [ERGOHACK I: Hack For Change](#ergohack-i-hack-for-change)
+
+
+--- 
+### ERGOHACK 10: AI on the Ergo Blockchain
+
+**(May 25 - June 1, 2025)**
+
+**Summary:** ErgoHack 10, celebrating a decade of decentralized innovation, focused on "Artificial Intelligence (AI) on the Ergo Blockchain." Held from May 25 to June 1, 2025, the hackathon leveraged Ergo's unique eUTXO model for AI innovation. Projects were judged on innovation, technical execution, user experience, potential impact, and theme alignment, with a total prize pool of $9,000 in ERGs awarded to the top three winners.
+
+**Projects:**
+
+1.  [**CodeUtxo**](https://www.google.com/search?q=codeutxo.md)
+
+      * **Overview**: An AI-powered platform enabling natural conversational interactions with the Ergo blockchain for data querying, analysis, and intelligent workflow automation.
+      * [**Live Dashboards**](https://app.codeutxo.com/) | [**AI Dashboard**](https://webui.codeutxo.com/) | [**GitHub**](https://github.com/codeUTXO/ergo-price-mcp) | [**GitHub**](https://github.com/marctheshark3/ergo-mcp)
+
+2.  [**Cortex**](https://www.google.com/search?q=cortex.md)
+
+      * **Overview**: An advanced, open-source GPU miner for Ergo, utilizing AI for optimizing mining efficiency and hardware utilization.
+      * [**GitHub**](https://github.com/Cortex-Miner/Cortex)
+
+3.  [**SCypher**](https://www.google.com/search?q=scypher.md)
+
+      * **Overview**: A decentralized BIP39 seed phrase encryption tool that stores its application as encoded fragments across multiple Ergo tokens for immutable software distribution.
+      * [**Live Demo**](https://scypher.vercel.app/) | [**GitHub (Core)**](https://github.com/moon-miner/bash-BIP39-seed-cypher) | [**GitHub (Web)**](https://github.com/moon-miner/SCypher-web)
+
+4.  [**Game of Prompts (GoP)**](https://www.google.com/search?q=game-of-prompts.md)
+
+      * **Overview**: A competitive platform on Ergo and Celaut for creating and evaluating "game-services" (AI problems) using player-implemented "solver-bots," with transparent result management on the Ergo blockchain.
+      * [**GitHub**](https://github.com/game-of-prompts/ergo-hack-x)
+
+5.  [**Pulse**](pulse.md)
+
+      * **Overview**: A truly decentralized communication platform on the Ergo blockchain, offering end-to-end encrypted messaging, custom chatrooms, and an AI Chat Assistant.
+      * [**Github**](https://github.com/Hq3r/PULSE)
+
+6.  [**Ergomempool Visualizer**](https://www.google.com/search?q=mempool-vis.md)
+
+      * **Overview**: A real-time, open-source application visualizing the Ergo mempool, displaying live block and transaction data.
+      * [**Website**](https://ergomempool.com/) | [**GitHub**](https://github.com/2ndtlmining/Ergomempool) | [**Presentation**](https://ergomempool.com/static/ergohack10-presentation.html) | [**Video**](https://youtu.be/4wfHir5Steo)
+
+7.  [**SigmaQuest**](https://www.google.com/search?q=sigmaquest.md)
+
+      * **Overview**: An AI-powered quest game on Ergo where users interact with an AI to solve puzzles and unlock an ERG-filled prize wallet.
+      * [Launch: Saturday June 7th, 7AM PST (2PM UTC)](https://xcancel.com/tmr_erg/status/1929634877315350699)
+
+8.  [**RustChain**](https://www.google.com/search?q=rustchain.md)
+
+      * **Overview**: A Proof-of-Antiquity blockchain integrating a "conscience-bound" AI, aiming to reward legacy hardware.
+      * [**GitHub**](https://github.com/Scottcjn/sophia-rustchain-bridge)
+
+9.  [**Pattern**](https://www.google.com/search?q=pattern.md)
+
+      * **Overview**: An on-chain Model Context Registry (MCR) acting as an "explorer co-pilot" by transforming raw blockchain data into structured, real-time knowledge.
+      * [**MVP**](https://mvp.pattern.global/) | [**GitHub (Core)**](https://github.com/pattern-tech/pattern-core) | [**GitHub (App)**](https://github.com/pattern-tech/pattern-app)
+
+10. **Slipkit**
+
+      * **Overview**: An open-source toolkit for creating, distributing, and redeeming value slips (redeemable off-chain vouchers for on-chain assets) on the Ergo blockchain.
+
+11. **Web3lancer**
+
+      * **Overview**: A project envisioned as a decentralized version of LinkedIn.
+
+-----
+
+**Note:** As of the submission deadline (June 1, 2025), Web3lancer and Slipkit had not publicly submitted their project details or code repositories, indicating they may be no-shows for the hackathon.
 
 ---
 

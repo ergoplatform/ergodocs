@@ -1,117 +1,93 @@
-# Sigma 6.0 Documentation
+
+# Sigma 6.0 Documentation Summary
+
+
+Below is a summary of the key information from the **Sigma 6.0 EIP (Ergo Improvement Proposal)**, which details a significant upgrade to the Ergo protocol. The full technical proposal can be found here:
+[EIP-0050: Sigma 6.0 on GitHub](https://github.com/ergoplatform/eips/blob/6102112617fff96fe88013858c307c2cf363babf/eip-0050.md)
 
 ## Overview
 
-**Sigma 6.0** introduces a major upgrade to the **Ergo protocol** with several key features aimed at improving the expressiveness and flexibility of scripts. This release proposes a soft-fork and includes several backward-compatible changes to enhance functionality while ensuring seamless integration with previous versions.
+**Sigma 6.0** introduces a major upgrade to the **Ergo protocol** with several key features aimed at improving the expressiveness and flexibility of scripts. This release proposes a soft-fork (much like the SegWit update in Bitcoin, where existing nodes validate scripts with old features and skip scripts with new features) and includes several backward-compatible changes to enhance functionality while ensuring seamless integration with previous versions.
 
-### Key Information
+### Key Information from the EIP
 
 * **Author:** kushti
-* **Status:** [Proposed](https://github.com/ergoplatform/eips/blob/027e8cb92881b25a5842d6e0a0278093c39334dd/eip-0050.md)
-* **Created:** 25-Nov-2024
+* **Status:** Proposed
+* **Created (in EIP):** 25-Nov-2024
 * **Implemented in:** Ergo Protocol Reference Client 6.0.0
+* **Last edited (EIP):** 27-May-2024 (as per the version linked)
 * **License:** CC0
 * **Forking Type:** Soft-fork (requires all miners to update)
 
 ## Motivation
 
-Since the **mainnet launch** of Ergo in July 2019, the **ErgoTree** scripting language has remained largely unchanged. The only significant modification since the launch was the shift from **AOT** to **JIT costing** in the **5.0** soft-fork. Over the past five years, developers have identified numerous ways to improve the script language, addressing issues and introducing new features to increase efficiency.
+Since the **mainnet launch** of Ergo in July 2019, the **ErgoTree** scripting language has remained largely unchanged. The only significant modification since the launch was the shift from **AOT** to **JIT costing** in the **5.0** soft-fork, along with minimal changes. Over the past five years, developers have identified numerous ways to improve the expressiveness of scripts and efficiently implement things that currently require non-trivial workarounds. Some issues were also found (though none critical). Additionally, some features planned during the Ergo testnets (2018-19) were not included in the mainnet until now.
 
-Many of these improvements were initially planned during the testnets of 2018-2019 but were not included in the mainnet until now. The primary goal of this proposal is to address feedback from developers, fix known issues, and expand the protocol’s capabilities with new features such as **serialization**, **unsigned 256-bit integers**, and enhanced **context management**.
+The primary goal of this proposal is to address feedback from developers, fix known issues (including the now-resolved semantics of `AvlTree.insert`), and expand the protocol’s capabilities. This includes introducing new features such as **serialization**, **unsigned 256-bit integers**, enhanced **context management**, and relaxing voteable parameter validation for future updates. It also proposes a new voteable blockchain parameter: the **average number of sub-blocks per block**, to support upcoming sub-block implementations.
 
-## Main Changes
+## Main Changes Proposed
 
 ### 1. **UnsignedBigInt Type**
 
-* Introduces a new **UnsignedBigInt** type for cryptographic applications. It supports unsigned 256-bit integers, suitable for modular arithmetic and cryptographic operations.
+* Introduces a new **UnsignedBigInt** type, an unsigned 256-bit integer tailored for cryptographic applications, supporting modular arithmetic operations and more.
 
 ### 2. **Serialization and Deserialization Support**
 
-* Adds support for **serialization and deserialization** of existing types, including composite types such as collections (e.g., `Coll[Option[Header]]`).
-* Methods like `Global.some[T]()`, `Global.none[T]`, and serialization for higher-order functions (e.g., **SFunc**) are now supported.
+* Adds support for **serialization and deserialization** in scripts for all existing types, including composite types like `Coll[Option[Header]]`.
+* Supports serialization/deserialization for instances of `Option` and `Header` types, allowing them to be stored in registers or context extension variables (with usage notes below).
+* Introduces constructors for `Option` instances (`Global.some[T]()`, `Global.none[T]`) and serialization/deserialization for the `SFunc` type (supporting higher-order functions).
 
-### 3. **PoW Methods**
+### 3. **PoW and nBits Conversion**
 
-* New methods for **proof-of-work** (PoW) validation, including:
-
-  * `header.checkPow`: To check the validity of **Autolykos2** PoW.
-  * Methods for checking PoW on custom variants of Autolykos2.
+* New methods for **proof-of-work** (PoW) validation:
+    * `header.checkPow`: To check the validity of an Ergo header's Autolykos2 PoW.
+    * Methods for checking PoW for custom variants of the Autolykos2 algorithm on arbitrary messages.
+* Support for conversion from nBits-encoded numbers to BigInt and back, enabling efficient difficulty checking for Ergo (and Bitcoin) headers.
 
 ### 4. **Extended Numeric Methods**
 
-* New methods for **numeric types** (`Byte`, `Short`, `Int`, `Long`), such as:
-
-  * `.toBytes`, `.toBits`, `.shiftLeft`, `.shiftRight`, and bitwise operations (`bitwiseOr`, `bitwiseAnd`, `bitwiseXor`).
+* Enhanced methods for numeric types (`Byte`, `Short`, `Int`, `Long`), including:
+    * `.toBytes`, `.toBits`, `.shiftLeft`, `.shiftRight`, and bitwise operations (`bitwiseOr`, `bitwiseAnd`, `bitwiseXor`).
 
 ### 5. **Context Variable Access**
 
-* Support for reading context variables from another input, enhancing the ability to obtain **state transitions** from companion inputs.
+* Allows reading context variables from another input, useful for obtaining state transition information for a companion input.
 
-### 6. **Collection and Other Enhancements**
+### 6. **Collection Enhancements**
 
-* Enhanced **collection methods** including:
+* More collection methods, such as:
+    * `.get` (to optionally get an element if a collection contains it), `reverse`, `startsWith`, `endsWith`.
 
-  * `.get`, `reverse`, `distinct`, `startsWith`, `endsWith`.
-* Additional numeric and data-related improvements to the protocol.
+### 7. **Voteable Parameters and Forks**
 
-### 7. **Voteable Parameters**
-
-* New **voteable parameter** to allow for the number of sub-blocks per block. This enables future **sub-block implementation**.
-
-### 8. **Parameter Proposal and Soft-Forks**
-
-* This release proposes relaxed **voteable parameters** validation to support future **soft-forks** or even **velvet-forks** to introduce new parameters in the protocol.
+* Possibility to propose voting for parameters not known to the protocol client, allowing new voteable parameters to be introduced via soft-forks or even velvet-forks.
+* Introduction of a new voteable parameter: the **average number of sub-blocks per block**, for future sub-block implementation. This is achieved by disabling soft-forkable rule #215 via miner voting.
 
 ## Corresponding Issues and Pull Requests
 
-Several issues and pull requests have been linked to the changes proposed in **Sigma 6.0**:
+Sigma 6.0 incorporates numerous fixes and features detailed in specific issues and pull requests. Key changes highlighted in the EIP include:
 
-| **Feature**                                  | **Issue**                                                                     | **Pull Request**                                                                 |
-| -------------------------------------------- | ----------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| PoW Validation for Autolykos2                | [#958](https://github.com/ScorexFoundation/sigmastate-interpreter/issues/958) | [PR #965](https://github.com/ScorexFoundation/sigmastate-interpreter/pull/965)   |
-| Conversion from Long-encoded nBits to BigInt | [#675](https://github.com/ScorexFoundation/sigmastate-interpreter/issues/675) | [PR #962](https://github.com/ScorexFoundation/sigmastate-interpreter/pull/962)   |
-| UnsignedBigInt Type for cryptography         | [#554](https://github.com/ScorexFoundation/sigmastate-interpreter/issues/554) | [PR #997](https://github.com/ScorexFoundation/sigmastate-interpreter/pull/997)   |
-| Serialization of SFunc Type                  | [#847](https://github.com/ScorexFoundation/sigmastate-interpreter/issues/847) | [PR #1020](https://github.com/ScorexFoundation/sigmastate-interpreter/pull/1020) |
+| **Selected Feature/Fix** | **Issue(s)** | **Pull Request(s)** |
+| :--------------------------------------- | :---------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| PoW Validation for Autolykos2            | [#958](https://github.com/ScorexFoundation/sigmastate-interpreter/issues/958)  | [PR #965](https://github.com/ScorexFoundation/sigmastate-interpreter/pull/965) (custom message), [PR #968](https://github.com/ScorexFoundation/sigmastate-interpreter/pull/968) (Header.checkPow) |
+| nBits to BigInt Conversion               | [#675](https://github.com/ScorexFoundation/sigmastate-interpreter/issues/675)  | [PR #962](https://github.com/ScorexFoundation/sigmastate-interpreter/pull/962)                                                                                                  |
+| UnsignedBigInt Type                      | [#554](https://github.com/ScorexFoundation/sigmastate-interpreter/issues/554)  | [PR #997](https://github.com/ScorexFoundation/sigmastate-interpreter/pull/997)                                                                                                  |
+| Serialization of SFunc Type              | [#847](https://github.com/ScorexFoundation/sigmastate-interpreter/issues/847)  | [PR #1020](https://github.com/ScorexFoundation/sigmastate-interpreter/pull/1020)                                                                                                 |
+| Fix Semantics of AvlTree.insert          | [#908](https://github.com/ScorexFoundation/sigmastate-interpreter/issues/908)  | [PR #1038](https://github.com/ergoplatform/sigmastate-interpreter/pull/1038)                                                                                                    |
 
-For a full list of issues and pull requests, refer to the [SigmaState Issues](https://github.com/ScorexFoundation/sigmastate-interpreter/issues).
+This is a selection of the developments. For a comprehensive list of all addressed issues, features, fixes (such as for `BigInt` downcasting, `Option.getOrElse` laziness, `ErgoTree` size serialization, `Box.getReg` implementation, collection equality improvements, etc.), and their corresponding pull requests, please refer to the "Corresponding Issues and Pull Requests" section of the official Sigma 6.0 EIP linked above.
 
 ## Activation
 
-The changes introduced in **Sigma 6.0** are activated via a **soft-fork**. For compatibility, some **script deserialization validation rules** will be updated to new IDs. These changes ensure that existing clients can validate scripts with old features while skipping those utilizing new features.
+The changes introduced in **Sigma 6.0** are activated via a **soft-fork**. To ensure backward compatibility, some script deserialization validation rules (specifically #1007, #1008, and #1011) are replaced with identical ones under different IDs. These changes, implemented in [PR #1029](https://github.com/ergoplatform/sigmastate-interpreter/pull/1029), allow existing clients to validate scripts with old features while correctly skipping (or handling) those utilizing new Sigma 6.0 features post-activation.
 
-Notably, validation rule changes include **#1007**, **#1008**, and **#1011**, which were implemented in [PR #1029](https://github.com/ergoplatform/sigmastate-interpreter/pull/1029).
+## Notes on Usage (from EIP)
 
-## Appendix 1: Future Enhancements and Open Issues
-
-Some features and enhancements are still under investigation or planned for future versions:
-
-* **Boolean to Byte conversion** (issue: [#931](https://github.com/ScorexFoundation/sigmastate-interpreter/issues/931)).
-* **ErgoTree exponentiation** (issue: [#731](https://github.com/ScorexFoundation/sigmastate-interpreter/issues/731)).
-* **Revise semantics of AvlTree.insert** (issue: [#908](https://github.com/ScorexFoundation/sigmastate-interpreter/issues/908)).
-
-## Appendix 2: How to Add a New Method
-
-Sigma 6.0 adds many new methods to various types. Here’s how to add a new method to an existing type:
-
-### Implementation Steps
-
-1. Checkout a new branch based on the `v6.0.0` branch.
-2. Identify the appropriate type (e.g., `SBigInt`) to add the method (e.g., `nbits`).
-3. Add the method to the type and update the `getMethods()` function in the corresponding class (e.g., `SBigIntMethods`).
-4. Implement the method in **SigmaDsl.scala**.
-5. Add method evaluation to the **ErgoTreeEvaluator** interface and the **CErgoTreeEvaluator** instantiation.
-6. Update reflection-related descriptions in **ReflectionData**.
-7. Add pattern matching in **GraphBuilding.scala** to support the method in **ErgoScript**.
-8. Update **SigmaDslUnit.scala** / **SigmaDslImpl.scala** for compiler support.
-
-### Testing
-
-1. **Compilation Tests:** Add tests in `TestingInterpreterSpecification`.
-2. **Roundtrip Tests:** Add tests in `MethodCallSerializerSpecification`.
-3. **Evaluation Tests:** Add evaluation tests, e.g., for the `nbits` method.
-
-For detailed instructions on adding new methods, refer to the relevant code and documentation in the repository.
+* Methods added in Sigma 6.0 and the new `UnsignedBigInt` type can only be used within an ErgoTree with version >= 3.
+* Values of types `Option[]`, `Header`, and `UnsignedBigInt` cannot be directly put into registers or context extension variables. This is to avoid versioning issues with 5.0 clients. To work around this limitation, you can serialize the typed value to bytes and then call `Global.deserialize` within a script to obtain an instance of these types.
+* An example of higher-order lambdas supported since this EIP's implementation can be found [here](https://github.com/ergoplatform/sigmastate-interpreter/blob/b754e143cf38ed86d95698ede744a470dfa053d6/sigmastate/src/test/scala/special/sigma/SigmaDslSpecification.scala#L10040).
 
 ## Conclusion
 
-Sigma 6.0 is a significant step forward in the development of the **Ergo protocol**, adding numerous enhancements to the scripting language, improving cryptographic support, and enabling more flexible parameter voting. This upgrade provides developers with the tools to build more powerful and efficient applications on the Ergo platform while maintaining compatibility with existing systems through a soft-fork approach.
+Sigma 6.0 represents a significant evolution for the **Ergo protocol**. It enhances the ErgoTree scripting language with powerful new capabilities, improves cryptographic support, offers more flexible governance through voteable parameters, and addresses various issues. This upgrade equips developers with better tools to build sophisticated and efficient decentralized applications on the Ergo platform, all while maintaining network stability and compatibility through a soft-fork mechanism.
+
