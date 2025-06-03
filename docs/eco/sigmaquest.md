@@ -2,6 +2,8 @@
 
 **Project for [ErgoHack 10: AI on the Ergo Blockchain](https://www.google.com/search?q=ergohack.md)**
 
+* Check out the [Developer Overview & Documentation](https://drive.google.com/file/d/1mH5Q7T6SHXzQAlpP-tfwWfgkL4rn0wuJ/view?usp=sharing)
+
 ### 1\. Introduction
 
 SigmaQuest is a blockchain-integrated sci-fi puzzle game where players solve challenges to earn cryptocurrency seed phrases. The game immerses players in a sci-fi horror survival theme aboard a derelict spaceship. Players engage with AI-powered guardians, each offering unique gameplay mechanics and seed phrase rewards. The ultimate goal is to collect all 15 words (5 words from each of 3 guardians) to unlock the cosmic vault.

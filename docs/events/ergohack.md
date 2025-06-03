@@ -46,47 +46,47 @@ Explore the history of innovation. Click any event name to jump to its details o
 
 **Projects:**
 
-1.  [**CodeUtxo**](https://www.google.com/search?q=codeutxo.md)
+1.  [**CodeUtxo**](codeutxo.md)
 
       * **Overview**: An AI-powered platform enabling natural conversational interactions with the Ergo blockchain for data querying, analysis, and intelligent workflow automation.
-      * [**Live Dashboards**](https://app.codeutxo.com/) | [**AI Dashboard**](https://webui.codeutxo.com/) | [**GitHub**](https://github.com/codeUTXO/ergo-price-mcp) | [**GitHub**](https://github.com/marctheshark3/ergo-mcp)
+      * [**Live Dashboards**](https://app.codeutxo.com/) | [**AI Dashboard**](https://webui.codeutxo.com/) | [**GitHub (ergo-price-mcp)**](https://github.com/codeUTXO/ergo-price-mcp) | [**GitHub (ergo-mcp)**](https://github.com/marctheshark3/ergo-mcp)
 
-2.  [**Cortex**](https://www.google.com/search?q=cortex.md)
+2.  [**Cortex**](cortex.md)
 
       * **Overview**: An advanced, open-source GPU miner for Ergo, utilizing AI for optimizing mining efficiency and hardware utilization.
       * [**GitHub**](https://github.com/Cortex-Miner/Cortex)
 
-3.  [**SCypher**](https://www.google.com/search?q=scypher.md)
+3.  [**SCypher**](scypher.md)
 
       * **Overview**: A decentralized BIP39 seed phrase encryption tool that stores its application as encoded fragments across multiple Ergo tokens for immutable software distribution.
       * [**Live Demo**](https://scypher.vercel.app/) | [**GitHub (Core)**](https://github.com/moon-miner/bash-BIP39-seed-cypher) | [**GitHub (Web)**](https://github.com/moon-miner/SCypher-web)
 
-4.  [**Game of Prompts (GoP)**](https://www.google.com/search?q=game-of-prompts.md)
+4.  [**Game of Prompts (GoP)**](game-of-prompts.md)
 
       * **Overview**: A competitive platform on Ergo and Celaut for creating and evaluating "game-services" (AI problems) using player-implemented "solver-bots," with transparent result management on the Ergo blockchain.
-      * [**GitHub**](https://github.com/game-of-prompts/ergo-hack-x)
+      * [**GitHub**](https://github.com/game-of-prompts/ergo-hack-x) 
 
 5.  [**Pulse**](pulse.md)
 
       * **Overview**: A truly decentralized communication platform on the Ergo blockchain, offering end-to-end encrypted messaging, custom chatrooms, and an AI Chat Assistant.
-      * [**Github**](https://github.com/Hq3r/PULSE)
+      * [**Github**](https://github.com/Hq3r/PULSE) | [Website](https://ergochats.vercel.app/)
 
-6.  [**Ergomempool Visualizer**](https://www.google.com/search?q=mempool-vis.md)
+6.  [**Ergomempool Visualizer**](mempool-vis.md)
 
       * **Overview**: A real-time, open-source application visualizing the Ergo mempool, displaying live block and transaction data.
       * [**Website**](https://ergomempool.com/) | [**GitHub**](https://github.com/2ndtlmining/Ergomempool) | [**Presentation**](https://ergomempool.com/static/ergohack10-presentation.html) | [**Video**](https://youtu.be/4wfHir5Steo)
 
-7.  [**SigmaQuest**](https://www.google.com/search?q=sigmaquest.md)
+7.  [**SigmaQuest**](sigmaquest.md)
 
       * **Overview**: An AI-powered quest game on Ergo where users interact with an AI to solve puzzles and unlock an ERG-filled prize wallet.
-      * [Launch: Saturday June 7th, 7AM PST (2PM UTC)](https://xcancel.com/tmr_erg/status/1929634877315350699)
+      * [Developer Overview & Documentation](https://drive.google.com/file/d/1mH5Q7T6SHXzQAlpP-tfwWfgkL4rn0wuJ/view?usp=sharing) | [Launch: Saturday June 7th, 7AM PST (2PM UTC)](https://xcancel.com/tmr_erg/status/1929634877315350699)
 
-8.  [**RustChain**](https://www.google.com/search?q=rustchain.md)
+8.  [**RustChain**](rustchain.md)
 
       * **Overview**: A Proof-of-Antiquity blockchain integrating a "conscience-bound" AI, aiming to reward legacy hardware.
       * [**GitHub**](https://github.com/Scottcjn/sophia-rustchain-bridge)
 
-9.  [**Pattern**](https://www.google.com/search?q=pattern.md)
+9.  [**Pattern**](pattern.md)
 
       * **Overview**: An on-chain Model Context Registry (MCR) acting as an "explorer co-pilot" by transforming raw blockchain data into structured, real-time knowledge.
       * [**MVP**](https://mvp.pattern.global/) | [**GitHub (Core)**](https://github.com/pattern-tech/pattern-core) | [**GitHub (App)**](https://github.com/pattern-tech/pattern-app)
