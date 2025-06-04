@@ -55,7 +55,7 @@ During ErgoHack 10, RustChain achieved significant milestones:
 * Demonstrated resilience by recovering from a server crash and rebuilding components.
 
 ### 7. Links
-
+* [Github](https://github.com/Scottcjn/Rustchain)
 * **GitHub Repository:** [https://github.com/Scottcjn/sophia-rustchain-bridge](https://github.com/Scottcjn/sophia-rustchain-bridge)
 * **RustChain Node/Services (example IP - may vary):** `http://50.28.86.131/`
 * **API (example):** `http://50.28.86.131:8085/`

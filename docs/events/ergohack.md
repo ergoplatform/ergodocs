@@ -84,7 +84,7 @@ Explore the history of innovation. Click any event name to jump to its details o
 8.  [**RustChain**](rustchain.md)
 
       * **Overview**: A Proof-of-Antiquity blockchain integrating a "conscience-bound" AI, aiming to reward legacy hardware.
-      * [**GitHub**](https://github.com/Scottcjn/sophia-rustchain-bridge)
+      * [**GitHub**](https://github.com/Scottcjn/Rustchain)
 
 9.  [**Pattern**](pattern.md)
 
