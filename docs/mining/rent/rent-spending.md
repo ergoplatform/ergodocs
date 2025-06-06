@@ -33,23 +33,29 @@ If both the above conditions are met, the expired box can be spent by anyone. To
 
 ### Storage Rent-Specific Handling
 
-1. **Querying Storage Rent Endpoint**
-   - Expired boxes should be validated against the dedicated storage rent endpoint before spending.
-   - This ensures that the expired box has fulfilled the required storage rent conditions before it is spent.
+1. **Custom Block Candidate Endpoint**
+
+   * Miningcore introduces support for querying custom block candidates that include expired boxes.
+   * This is done via a configurable `SrUrl`, which must point to an external service exposing a `/blocks/query` endpoint.
+   * This service is not part of the official Ergo node and must be implemented separately.
 
 2. **Integration with Mining Pools**
-   - Mining pools using `Miningcore` can now query storage rent block candidates through `MiningRequestSRBlockCandidateAsync()` using [this fork](https://github.com/K-Singh/miningcore-SR)
-   - This ensures that block templates correctly account for expired boxes under storage rent rules.
+
+   * Mining pools using [this fork of Miningcore](https://github.com/K-Singh/miningcore-SR) can use `MiningRequestSRBlockCandidateAsync()` to fetch candidate blocks that account for expired boxes.
+   * This enables pools to mine transactions that reclaim storage rent from old, unspent boxes.
 
 3. **Implementation in ErgoClient**
-   - The `ErgoClient` class has been updated to include a `SrUrl` field, allowing seamless communication with the storage rent service.
-   - The `MiningRequestSRBlockCandidateAsync()` method fetches block templates that consider storage rent rules, ensuring compliance with Ergo’s state management policies.
+
+   * The `ErgoClient` class was updated to accept a separate `SrUrl` base address, which it uses only when calling `MiningRequestSRBlockCandidateAsync()`.
+   * This method builds a request to `GET {SrUrl}/blocks/query`, expecting a response in the same format as a regular Ergo mining candidate.
+   * The actual service must be custom-built to return valid `WorkMessage` objects with expired box logic included.
 
 4. **Spending an Expired Box Affected by Storage Rent**
-   - If an expired box lacks sufficient ERG to pay the required storage rent fee, a new valid box must be referenced in the transaction.
-   - This new box should either contain sufficient funds to cover storage rent or comply with mining pool policies for processing expired boxes.
-   - The storage rent logic ensures that old, unused boxes do not persist indefinitely in the blockchain state.
+
+   * If an expired box lacks sufficient ERG to cover the required storage rent fee, the transaction must reference an additional input box.
+   * This box must provide enough value to pay the rent or satisfy pool policy for transaction acceptance.
+   * This mechanism ensures that outdated UTXOs do not remain in the state indefinitely and that rent is either paid or reclaimed.
 
 ### Summary
-With these updates, expired Ergo boxes can be efficiently processed while adhering to storage rent policies. The mining pool and Ergo client implementations ensure that expired boxes are properly accounted for in block templates, maintaining blockchain sustainability and efficiency.
 
+With these changes, expired Ergo boxes can be properly mined and spent under storage rent conditions. While the Ergo node enforces storage rent rules during validation, external tooling (like custom candidate services) must be developed to support their inclusion in mining workflows.
