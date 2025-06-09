@@ -5,10 +5,17 @@ Until 2020 DeFi Summer, Value Locked in DeFi ([TVL](https://medium.com/coinmonks
 Their benefits are for people who don’t want to give up the custody of their funds. DEXes democratized the exchange experience for both blockchain developers and crypto investors. 
  
 //// note | Decentralised Exchanges on Ergo
+
+/// details | Mew Finance (Live)
+{type: success, open: true}
+[Mew Finance](../eco/mew-finance.md) is a sophisticated decentralized finance platform on the Ergo Blockchain, developed by HQ3rr and Aco Šmrkas, designed to deliver a secure, user-friendly, and innovative DeFi experience.
+///
+
 /// details | Spectrum Finance (Live)
      {type: success, open: true}
 [Spectrum Finance](../eco/spectrum.md) is a pioneering open-source, cross-chain decentralized exchange (DEX) platform, currently offering liquidity provision (LP), yield farming, and babel fees on the Cardano (ADA) and Ergo (ERG) networks.
 ///
+
 /// details | GuapSwap (V2 in Development)
      {type: success, open: true}
 [GuapSwap](guapswap.md) is a fully decentralized smart contract profit swapping service on the Ergo Blockchain.
@@ -18,8 +25,10 @@ Their benefits are for people who don’t want to give up the custody of their f
      {type: success, open: true}
 [Palmyra ComDEX](palmyra.md)  the flagship product of [zenGate](zengate.md), is an innovative ecosystem that enables the tokenization and listing of certified commodities for spot and futures trading on a global scale. 
 ///
+
 /// details | Machina Finance (In Development)
      {type: note, open: true}
 The primary objective of [Machina Finance](machina-finance.md) is to promote decentralization and facilitate P2P trade by leveraging the power of grid contracts.
 ///
+
 ////
