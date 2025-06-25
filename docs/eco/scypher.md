@@ -42,10 +42,17 @@ During ErgoHack 10, the SCypher project achieved significant milestones:
 
 ### 6. Links
 
-* **Live Web Demo:** [https://scypher.vercel.app/](https://scypher.vercel.app/)
-* **GitHub Repository (Core Logic):** [https://github.com/moon-miner/bash-BIP39-seed-cypher](https://github.com/moon-miner/bash-BIP39-seed-cypher)
-* **GitHub Repository (Web Interface):** [https://github.com/moon-miner/SCypher-web](https://github.com/moon-miner/SCypher-web)
-* **Nautilus Donation Guide (Technical Document):** [https://github.com/moon-miner/SCypher-web/blob/main/technical-documents/Donation%20Implementation%20with%20Nautilus%20Wallet%20on%20Ergo.md](https://github.com/moon-miner/SCypher-web/blob/main/technical-documents/Donation%20Implementation%20with%20Nautilus%20Wallet%20on%20Ergo.md)
+* [Live Web Demo](https://scypher.vercel.app/)
+* [GitHub Repository (Core Tool)](https://github.com/moon-miner/bash-BIP39-seed-cypher)
+* [GitHub Website](https://github.com/moon-miner/SCypher-web)
+* [Nautilus Donation Guide](https://github.com/moon-miner/SCypher-web/blob/main/technical-documents/Donation%20Implementation%20with%20Nautilus%20Wallet%20on%20Ergo.md)
+* [Presentation](https://drive.google.com/file/d/1mtDnXGLasJECc9DPBtHhXCKgIjvYXTSL/view?usp=drive_link)
+* [Presentation Video](https://www.youtube.com/watch?v=IUrFdGjVT44)
+* [My Adventure Slides](https://scypher.vercel.app/my_adventure.html)
+* [Usage Slides](https://scypher.vercel.app/scypher_presentation.html)
+* [Enterprise Use Slides](https://scypher.vercel.app/enterprise-use.html)
+
+### How to Use the Files above:
 
 ### 7. Contribution
 
