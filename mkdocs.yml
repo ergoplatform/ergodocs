@@ -629,7 +629,7 @@ nav:
             - EIP Standards Overview: dev/wallet/eip-standards.md
             - EIP-0005: dev/wallet/standards/eip5.md
       - Integration Guide: 
-        - dev/integration/guide.md
+        - dev/Integration/guide.md
         - Transaction Lifecycle: dev/integration/transaction-lifecycle.md
         - Dust Collection: dev/integration/dust-collection.md
 
