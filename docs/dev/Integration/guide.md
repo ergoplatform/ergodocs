@@ -36,13 +36,6 @@ Running an independent node maximises security and performance.
 * **Web panel** — open `127.0.0.1:9053/panel` on main‑net or `127.0.0.1:9052/panel` on [test‑net](testnet.md).
 * **Pruned mode** — accelerate sync with a [pruned node snapshot plus NiPoPoWs](pruned-full-node.md).
 
-### 2.2 Wallet Configuration (for exchanges & pools)
-
-/// admonition | Dust Collection
-    type: warning
-Wallets that receive continuous micro‑deposits must enable **dust collection**; otherwise transactions will time‑out or exceed the execution‑cost ceiling. The [dust‑collection guide](dust-collection.md) shows you how to automate sweeping, perform manual clean‑ups, and monitor UTXO counts.
-///
-
 
 /// admonition | Swagger
     type: tip
@@ -67,6 +60,14 @@ Major wallet functionalities include:
 - [API Spec](openapi.md)
 - [Indexed Node](indexed-node.md)
  
+
+
+### 2.2 Wallet Configuration (for exchanges & pools)
+
+/// admonition | Dust Collection
+    type: warning
+Wallets that receive continuous micro‑deposits must enable **dust collection**; otherwise transactions will time‑out or exceed the execution‑cost ceiling. The [dust‑collection guide](dust-collection.md) shows you how to automate sweeping, perform manual clean‑ups, and monitor UTXO counts.
+///
 
 
 

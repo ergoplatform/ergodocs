@@ -4,9 +4,8 @@
 
 A **dust set** is a large group of ERG outputs worth tiny amounts. A node signs a transaction by loading every input box from disk. When the wallet owns thousands of dust boxes the process slows down. The node may hit limits or time out. Exchange and mining‑pool wallets reach that state first.
 
----
 
-## 1 Automatic Collection in the Node
+## Automatic Collection in the Node
 
 Turn the wallet into “self‑cleaning” mode before dust appears. The node merges dust during every withdrawal when the wallet owns enough surplus inputs.
 
@@ -15,13 +14,25 @@ Add the block below to your **ergo.conf**. Full syntax is in [conf‑wallet.md](
 ```hocon
 ergo {
   wallet {
-    profile        = "exchange"       # larger Bloom filters and caches
-    maxInputs      = 300              # hard cap per transaction (default 50)
-    optimalInputs  = 100              # extra sweep when withdrawal needs <100 inputs
-    dustLimit      = 1000000          # ignore deposits ≤ 0.001 ERG
-    tokensWhitelist = [               # burn every token that is not on this list
-      "03faf2cb329f2e90d6d23b58d91bbb6c046aa143261cc21f52fbe2824bfcbf04", # SigUSD
-      "003bd19d0187117f130b62e1bcab0939929ff5c7709f843c5c4dd158949285d0"  # SigRSV
+    # larger Bloom filters and caches
+    profile        = "exchange"       
+
+    # hard cap per transaction (default 50)
+    maxInputs      = 300
+
+    # extra sweep when withdrawal needs <100 inputs             
+    optimalInputs  = 100
+
+    # ignore deposits ≤ 0.001 ERG              
+    dustLimit      = 1000000
+
+    # burn every token that is not on this list
+    tokensWhitelist = [         
+      
+      # SigUSD      
+      "03faf2cb329f2e90d6d23b58d91bbb6c046aa143261cc21f52fbe2824bfcbf04",
+      # SigRSV 
+      "003bd19d0187117f130b62e1bcab0939929ff5c7709f843c5c4dd158949285d0"  
     ]
   }
 }
@@ -45,9 +56,9 @@ Restart the node after saving the file. The wallet merges dust in the background
 
 Each self‑payment pulls about `optimalInputs` dust boxes into one output, so the backlog shrinks quickly.
 
----
 
-## 2 Manual Collection (fallback)
+
+## Manual Collection (fallback)
 
 Choose this path when every automatic sweep fails because the node exhausts limits before it can pay the fee.
 
@@ -87,9 +98,8 @@ Example request body:
 
 Make sure the fee plus the output value equals the sum of your inputs.
 
----
 
-## 3 Troubleshooting
+## Troubleshooting
 
 | Symptom or Log Entry                                 | Probable Cause                      | Fix                                                                                 |
 | ---------------------------------------------------- | ----------------------------------- | ----------------------------------------------------------------------------------- |
@@ -100,9 +110,9 @@ Make sure the fee plus the output value equals the sum of your inputs.
 | `NotEnoughErgsError`                                 | Output + fee exceeds input total    | Lower the output amount, add inputs, or choose higher‑value boxes.                  |
 | Wallet fills again right after clean‑up              | Constant tiny deposits              | Keep the self‑payment cron job running or raise the minimum deposit limit.          |
 
----
 
-## 4 Native Assets (tokens)
+
+## Native Assets (tokens)
 
 Users sometimes send random tokens to exchange addresses. A future node version will offer **auto‑burn** (see [Issue #1604](https://github.com/ergoplatform/ergo/issues/1604)). Until that release, destroy unwanted tokens with one step:
 
@@ -110,13 +120,5 @@ Users sometimes send random tokens to exchange addresses. A future node version 
 
 Community lists such as the [ergotipper token list](https://github.com/Luivatra/ergotipper-tokens) help you recognise unknown assets.
 
----
 
-## 5 Key Points Recap
 
-* Enable dust collection on day one.
-* Keep `maxInputs` high enough to fit large sweeps.
-* Keep `optimalInputs` near one hundred for best throughput.
-* Ignore deposits smaller than the withdrawal fee.
-* Burn unsolicited tokens to avoid clutter.
-* Run a cron job that sends 0.001 ERG to the change address while dust remains.
