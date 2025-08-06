@@ -17,6 +17,7 @@ While community members remain at the heart of the project, the Ergo Foundation 
 ## Partnerships
 
 Partnerships can include:
+
 - Technical collaborations
 - Developer resource sharing
 - dApp or infrastructure integrations
@@ -40,7 +41,9 @@ The Ergo Foundation can assist with due diligence, connect you with relevant con
 ## Exchange Listings
 
 We welcome discussions with centralized and decentralized exchanges interested in listing $ERG.  
+
 The Ergo Foundation can:
+
 - Provide technical integration support
 - Supply branding and marketing assets
 - Facilitate connections with the community for liquidity support
@@ -55,6 +58,7 @@ Listing fees are usually funded by the community, often coordinated via [Ergo Ra
 Ergo launched with no pre-mine. The Ergo Foundation Treasury operates as a DAO with a small allocation, which means there is no capacity for large over-the-counter (OTC) arrangements.  
 
 However, we welcome investors who want to contribute beyond capital, such as:
+
 - Developer resources  
 - Infrastructure and ecosystem support  
 - Awareness campaigns through association with leading brands and networks  
@@ -69,6 +73,7 @@ These contributions strengthen the ecosystem and help accelerate adoption.
 Development within Ergo is primarily coordinated and funded by the [Development DAO](https://app.paideia.im/devdao). The Ergo Foundation does not directly manage most development work.  
 
 **Ecosystem developer stats:**
+
 - 10 core protocol and wallet developers  
 - 300+ community developers  
 - 100+ active weekly dev chat contributors  
