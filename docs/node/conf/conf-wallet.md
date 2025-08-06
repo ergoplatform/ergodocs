@@ -72,8 +72,31 @@ For example, with `dustLimit = 1000000`, the node wallet will ignore boxes to se
 maxInputs = 100
 optimalInputs = 3
 ```
-The `maxInputs` setting determines the maximum number of inputs a transaction can have. The `optimalInputs` setting specifies the preferred number of inputs for a transaction.
 
+### Configuration Parameters Explained
+
+- **maxInputs**: Defines the hard upper limit on how many input boxes can be included in a single transaction. This prevents transactions from becoming excessively large, which could impact network performance.
+
+- **optimalInputs**: Controls the target number of inputs the wallet attempts to use when building transactions, playing a crucial role in UTXO management.
+
+### How Optimal Inputs Works
+
+The wallet's box selector uses the `optimalInputs` parameter as a threshold for dust collection. When creating a transaction:
+
+- If the transaction naturally requires fewer inputs than `optimalInputs`, the wallet will automatically add small-value UTXOs (dust) from your wallet to reach this target number.
+- If adding more inputs would exceed `maxInputs`, the wallet respects the maximum limit.
+
+### Benefits of This Approach
+
+1. **Automatic Dust Management**: Small UTXOs that would otherwise accumulate in your wallet are gradually consumed, preventing wallet bloat.
+
+2. **Efficient UTXO Set**: By consolidating multiple small UTXOs into fewer, larger ones, the wallet maintains an efficient UTXO set.
+
+3. **Improved Performance**: With fewer UTXOs to process, wallet operations become faster and more efficient.
+
+For example, if `optimalInputs = 3` and your payment only requires one input box, the wallet will automatically select two additional small-value UTXOs to include in the transaction, resulting in fewer total UTXOs after the transaction completes.
+
+This mechanism works alongside the `dustLimit` setting (if configured) to optimize wallet performance, which is especially valuable for high-transaction environments like exchanges.
 ## Test Mnemonic and Keys Quantity
 ```conf
 # testMnemonic = "ozone drill grab fiber curtain grace pudding thank cruise elder eight picnic"
