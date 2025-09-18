@@ -12,7 +12,7 @@ tags:
 [Rosen Bridge](https://rosen.tech), an open-source protocol, is pioneering the future of cross-chain asset transfers. It's currently in beta, testing its first bridge to Cardano. Rosen Bridge leverages Ergo's capabilities to facilitate secure and efficient coin and token transfers between Ergo and other blockchains.
 /// details | Latest Developments
      {type: tip, open: true}
-Rosen Bridge is expected to launch imminently, join the [Rosen Telegram chat](https://t.me/rosenbridge_erg) to keep up to date.
+Bridges live between: ADA, BSC, BTC, ETH, DOGE, join the [Rosen Telegram chat](https://t.me/rosenbridge_erg) to keep up to date.
 ///
 
 ## Key Features

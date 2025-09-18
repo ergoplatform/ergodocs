@@ -20,3 +20,13 @@ If you've completed a bounty, you can submit a payment request. Here's how:
 4. **Provide Your Ergo Address:** This is where we will send your bounty reward.
 
 We appreciate your contributions and look forward to working with you!
+
+### Development
+
+*   **Code Contributions:** Help build and improve Ergo's core protocol, node software, SDKs, tooling, and ecosystem projects.
+    *   **Getting Started:** Check out the [Developer Contribution Overview](devs.md) and the [Technical Contribution Guidelines](technical-guidelines.md).
+    *   **Finding Tasks:**
+        *   Look for issues tagged `good first issue` or `help wanted` in core repositories like [ergo](https://github.com/ergoplatform/ergo/issues), [sigmastate-interpreter](https://github.com/ergoplatform/sigmastate-interpreter/issues), [sigma-rust](https://github.com/ergoplatform/sigma-rust/issues?q=is%3Aissue+state%3Aopen+label%3A%22good+first+issue%22), [ergo-appkit](https://github.com/ergoplatform/ergo-appkit/issues).
+        *   Explore the official [Ergo Bounties Board](bounties.md) for funded tasks.
+        *   Consider applying for [Development Grants](grants.md) for larger projects.
+    *   **Community:** Join the development discussions on the [Ergo Discord Server](https://discord.gg/ergo-platform-668903786361651200) (check relevant `#dev` channels).

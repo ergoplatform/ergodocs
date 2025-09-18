@@ -243,7 +243,7 @@ nav:
     - Financial:
       - Decentralized Exchanges:
         - uses/dex.md
-        - Spectrum Finance: eco/spectrum.md
+        - ErgoDex: eco/spectrum.md
         - Trade House: eco/ergo-auctions.md
         - Palmyra: eco/palmyra.md
         - Crystal Pool: eco/crystal-pool.md
@@ -252,7 +252,7 @@ nav:
         - P2P:
           - eco/p2p-trading.md
           - Token Jay: eco/token-jay.md
-          - Analog Ergo: eco/analog-ergo.md
+       #   - Analog Ergo: eco/analog-ergo.md
           - Single Tx Swap: eco/single-tx-swap.md
 
 
@@ -343,7 +343,7 @@ nav:
             - uses/off_the_grid.md
             - Tutorial: uses/off_the_grid_tut.md
     - Applications:
-        - Thz.FM: eco/thz-fm.md
+    #    - Thz.FM: eco/thz-fm.md
         - TabbyPOS: eco/tabbypos.md
         - PandaV: eco/pandav.md
         - ZenGate Global:
@@ -362,17 +362,17 @@ nav:
           - Install on Android: eco/ergomixer/mixer-android.md
         - SigmaJoin: eco/sigmajoin.md
       - Stealth Addresses: uses/stealth-address.md
-      # - ZK Treasury: uses/zkt.md
-      # - Decentralised Anon ID:
-      #  - Ergo Nation: eco/ergonation.md
+      - ZK Treasury: uses/zkt.md
+      - Decentralised Anon ID:
+        - Ergo Nation: eco/ergonation.md
 
 
     - DAOs:
       - uses/dao.md
       - Paideia: eco/paideia.md
-      - ErgoPad: eco/ergopad.md
+      #- ErgoPad: eco/ergopad.md
       - The Field: eco/the-field.md
-      - Thz.FM: eco/thz-fm.md
+      #- Thz.FM: eco/thz-fm.md
 
     - Miners:
       - eco/miner-tooling.md

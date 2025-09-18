@@ -28,11 +28,13 @@ Partnerships can include:
 The Ergo Foundation can assist with due diligence, connect you with relevant contributors, and guide you toward funding or collaboration channels.  
 
 **Funding and collaboration channels:**
+
 - [Ergo Raffle](https://ergoraffle.com) – Community-driven funding  
 - [Development DAO](https://app.paideia.im/devdao) – Primary DAO managing development funding and priorities  
 - [Sigmanauts DAO](https://app.paideia.im/sigmanauts) – Grassroots initiatives
 
 **Marketing and community channels:**
+
 - Telegram: [@ErgoSocials](https://t.me/ErgoSocials)  
 - Discord: [Join Here](https://discord.gg/TBFXMzha7X)
 
@@ -81,6 +83,7 @@ Development within Ergo is primarily coordinated and funded by the [Development 
 - Top 100 project by developer activity ([Artemis](https://artemis.xyz))
 
 **How to engage:**
+
 - Discuss proposals in the [Ergo Discord](https://discord.gg/TBFXMzha7X) development channels  
 - Apply for grants via the Development DAO  
 - Use [Ergo Raffle](https://ergoraffle.com) to fund specific initiatives

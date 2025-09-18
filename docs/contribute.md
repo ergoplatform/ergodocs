@@ -11,6 +11,20 @@ tags:
   - getting started
 ---
 
+
+# Contributing to Ergo
+
+Read the context in [How Ergo Works](how-ergo-works.md), then pick one path.
+
+## Choose your path
+
+* **Developers**: start with the overview in [contribute/devs.md](contribute/devs.md), follow the rules in [contribute/technical-guidelines.md](contribute/technical-guidelines.md), check funding in [contribute/bounties.md](contribute/bounties.md) and [contribute/grants.md](contribute/grants.md), see team scopes in [contribute/roles.md](contribute/roles.md).
+
+* **Marketing and community**: plan campaigns and content in [contribute/marketing.md](contribute/marketing.md), join structured community work in [contribute/sigmanauts.md](contribute/sigmanauts.md).
+
+* **Other partnerships**: if you run an exchange, wallet, service, or community group, find contacts and process in [contribute/roles.md](contribute/roles.md), you can also propose work in [contribute/grants.md](contribute/grants.md) or [contribute/bounties.md](contribute/bounties.md).
+
+
 # Contributing to Ergo
 
 Ergo is an open-source project driven by its community. Contributions of all kinds are welcome and essential for the ecosystem's growth and success. Whether you're a developer, writer, designer, marketer, researcher, or simply an enthusiastic user, there are many ways to get involved!
