@@ -33,27 +33,10 @@ jobs:
         run: mkdocs build
 
       - name: Upload MkDocs artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
+          name: mkdocs-site
           path: site
-
-  deploy-preview:
-    name: Deploy preview to GitHub Pages
-    needs: build
-    if: github.event_name == 'pull_request'
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: preview
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy preview
-        id: deployment
-        uses: actions/deploy-pages@v4
-        with:
-          preview: true
 
   deploy-production:
     name: Deploy to production server
