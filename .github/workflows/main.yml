@@ -13,6 +13,8 @@ concurrency:
 
 permissions:
   contents: read
+  pages: write
+  id-token: write
 
 jobs:
   build:
@@ -36,6 +38,10 @@ jobs:
       - name: Build MkDocs site
         run: mkdocs build --strict
 
+      - name: Configure GitHub Pages
+        if: github.event_name == 'pull_request' || github.ref == 'refs/heads/main'
+        uses: actions/configure-pages@v5
+
       - name: Upload MkDocs artifact
         uses: actions/upload-artifact@v4
         with:
@@ -57,9 +63,11 @@ jobs:
       pages: write
       id-token: write
     environment:
-      name: github-pages
+      name: github-pages-preview
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy preview
+        id: deployment
         uses: actions/deploy-pages@v4
         with:
           preview: true
