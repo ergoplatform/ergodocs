@@ -14,7 +14,7 @@ tags:
 
 **Function:**
 
-* **Efficient Transaction Validation:** ADProofs enable light clients to verify the validity of transactions within a block by proving they are included in the [Merkle tree](merkle-tree.md) of the [UTXO set](eutxo.md). This eliminates the need to download and process the entire UTXO set or the full block.
+* **Efficient Transaction Validation:** ADProofs enable light clients to verify the validity of transactions within a block by proving they are included in the [Merkle tree](./merkle-tree.md) of the [UTXO set](eutxo.md). This eliminates the need to download and process the entire UTXO set or the full block.
 * **State Verification:** Light clients can use ADProofs to calculate the new [state root](block-header.md) (a cryptographic summary of the UTXO set) after applying the transactions in a block. This allows them to stay synchronized with the blockchain without storing the complete state.
 * **Security:** ADProofs are cryptographically secure, ensuring that any tampering with the transactions or the UTXO set will be detected during validation.
 
@@ -34,7 +34,7 @@ The `ADProofs` class in [ADProofs.scala](https://github.com/ergoplatform/ergo/bl
 
 **Key Concepts:**
 
-* **[Merkle Tree](merkle-tree.md):** A tree-like data structure where each leaf node represents a piece of data (in this case, a transaction or a [box](box.md)) and each non-leaf node is a hash of its child nodes. This structure allows for efficient verification of data inclusion.
+* **[Merkle Tree](./merkle-tree.md):** A tree-like data structure where each leaf node represents a piece of data (in this case, a transaction or a [box](box.md)) and each non-leaf node is a hash of its child nodes. This structure allows for efficient verification of data inclusion.
 * **[AVL+ Tree](avl.md):** A self-balancing binary search tree used in Ergo to represent the UTXO set. It enables efficient lookups and updates while maintaining a verifiable structure.
 * **Batch Verification:** The process of verifying multiple operations (transaction additions or removals) within the UTXO set simultaneously, optimizing efficiency.
 

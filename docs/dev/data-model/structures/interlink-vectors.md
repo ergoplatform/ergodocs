@@ -4,7 +4,7 @@
 
 Interlink vectors are a fundamental component of the [Proof-of-Proof-of-Work (PoPow) protocol](popow.md) in the Ergo blockchain. These vectors allow lightweight clients to verify the correctness of the blockchain without needing to download and validate the entire chain. By storing references to previous block headers at varying heights, interlink vectors create a hierarchical structure that supports efficient validation and compression of blockchain data, making them particularly useful for devices with limited resources such as mobile phones or IoT devices.
 
-Interlink vectors work in conjunction with [Merkle trees](merkle-tree.md) and PoPow proofs to ensure that the blockchain follows the longest chain rule, which is critical for maintaining the security and integrity of the network.
+Interlink vectors work in conjunction with [Merkle trees](merkle/merkle-tree.md) and PoPow proofs to ensure that the blockchain follows the longest chain rule, which is critical for maintaining the security and integrity of the network.
 
 ## Purpose of Interlink Vectors
 

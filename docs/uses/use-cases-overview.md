@@ -100,7 +100,7 @@ This example demonstrates how Ergo's programmable contracts can model complex, m
   {
     "title": "ErgoScript",
     "content": "A simple high-level language enabling clear descriptions of contractual logic.",
-    "url": "../dev/scs/smart-contracts-overview.md"
+    "url": "../dev/scs/contracts.md"
   },
   {
     "title": "Oracles",

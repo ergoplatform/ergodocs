@@ -19,7 +19,7 @@ The [Ergo Headless dApp Framework (HDF)](https://github.com/ergoplatform/ergo-he
 
 ## What Are Headless dApps?
 
-Headless dApps represent a novel approach to dApp development, focusing on creating pure, portable, self-contained logic for interacting with on-chain [smart contract protocols](../scs/smart-contracts-overview.md).
+Headless dApps represent a novel approach to dApp development, focusing on creating pure, portable, self-contained logic for interacting with on-chain [smart contract protocols](../scs/contracts.md).
 
 Key characteristics and benefits include:
 
