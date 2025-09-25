@@ -1,21 +1,69 @@
-name: CI
+name: Docs CI
 
 on:
   push:
     branches: [ main ]
+  pull_request:
+    branches: [ main ]
   workflow_dispatch:
 
 concurrency:
-  group: deploy-main
+  group: docs-ci-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  build:
+    name: Build documentation
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build MkDocs site
+        run: mkdocs build
+
+      - name: Upload MkDocs artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy-preview:
+    name: Deploy preview to GitHub Pages
+    needs: build
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: preview
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy preview
+        id: deployment
+        uses: actions/deploy-pages@v4
+        with:
+          preview: true
+
+  deploy-production:
+    name: Deploy to production server
+    needs: build
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Install SSH key
         uses: shimataro/ssh-key-action@v2
@@ -23,7 +71,7 @@ jobs:
           key: ${{ secrets.DEPLOY_KEY }}
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
 
-      - name: Remote Deploy via SSH
+      - name: Remote deploy via SSH
         run: |
           echo "🚀 Deploying to remote server..."
           ssh root@213.239.193.208 "export GITHUB_SHA=$GITHUB_SHA; bash -s" <<'EOF'
@@ -59,12 +107,12 @@ jobs:
             date -u +"%Y-%m-%dT%H:%M:%SZ" > site/deploy-timestamp.txt
           EOF
 
-      - name: Verify Remote Site Files
+      - name: Verify remote site files
         run: |
           echo "🔍 Checking recently updated files..."
           ssh root@213.239.193.208 'find /var/www/ergodocs/site -type f -printf "🕒 %TY-%Tm-%Td %TH:%TM:%TS %p\n" | sort -r | head -n 10'
 
-      - name: Check Web Server Served Files
+      - name: Check web server served files
         run: |
           echo "🔍 Verifying web server output..."
           DEPLOYED_SHA=$(curl -fsS https://docs.ergoplatform.com/deploy-sha.txt || true)
