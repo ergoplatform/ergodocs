@@ -22,7 +22,7 @@ The testnet runs on different ports than the mainnet and can be accessed by chan
 [
   {
     "title": "Synchronising from scratch",
-    "content": "Start sychronising with the testnet from genesis",
+    "content": "Start synchronising with the testnet from genesis",
     "url": "testnet/testnet-full.md"
   },
   {

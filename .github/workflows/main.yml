@@ -5,6 +5,10 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
+concurrency:
+  group: deploy-main
+  cancel-in-progress: true
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -22,35 +26,37 @@ jobs:
       - name: Remote Deploy via SSH
         run: |
           echo "🚀 Deploying to remote server..."
-          ssh root@213.239.193.208 <<'EOF'
-            set -e
+          ssh root@213.239.193.208 "export GITHUB_SHA=$GITHUB_SHA; bash -s" <<'EOF'
+            set -eo pipefail
 
             echo "📂 Changing to project directory..."
             cd /var/www/ergodocs || { echo "❌ Failed to cd to project dir"; exit 1; }
 
-            
-            echo "🔄 Pulling latest changes from Git..."
-            git stash
-            git pull || { echo "❌ Git pull failed"; exit 1; }
+            echo "🔄 Resetting repository to expected commit..."
+            git fetch origin main || { echo "❌ Git fetch failed"; exit 1; }
+            git reset --hard "${GITHUB_SHA}" || { echo "❌ Git reset failed"; exit 1; }
+            git clean -fd
 
             echo "🧰 Ensuring python3-venv is available..."
-            apt update -y && apt install -y python3-venv
-            
+            apt-get update -y && apt-get install -y python3-venv
+
             echo "🐍 Setting up virtual environment..."
             python3 -m venv .venv
             source .venv/bin/activate
 
-
             echo "📦 Installing dependencies..."
             pip install --upgrade pip
             pip install -r requirements.txt || { echo "❌ Pip install failed"; exit 1; }
-
 
             echo "🧹 Cleaning old MkDocs site..."
             rm -rf site || echo "⚠️ Failed to remove site dir"
 
             echo "🏗 Building MkDocs site..."
             mkdocs build || { echo "❌ MkDocs build failed"; exit 1; }
+
+            echo "🪪 Writing deploy metadata..."
+            echo "${GITHUB_SHA}" > site/deploy-sha.txt
+            date -u +"%Y-%m-%dT%H:%M:%SZ" > site/deploy-timestamp.txt
           EOF
 
       - name: Verify Remote Site Files
@@ -61,4 +67,14 @@ jobs:
       - name: Check Web Server Served Files
         run: |
           echo "🔍 Verifying web server output..."
-          curl -s -I https://docs.ergoplatform.com/ | grep "Last-Modified" || echo "❌ Web server is serving outdated content or request failed!"
+          DEPLOYED_SHA=$(curl -fsS https://docs.ergoplatform.com/deploy-sha.txt || true)
+          if [ -z "$DEPLOYED_SHA" ]; then
+            echo "❌ Unable to read deployed SHA from web server"
+            exit 1
+          fi
+          echo "🌐 Remote site reports commit: $DEPLOYED_SHA"
+          if [ "$DEPLOYED_SHA" != "$GITHUB_SHA" ]; then
+            echo "❌ Remote site commit does not match expected $GITHUB_SHA"
+            exit 1
+          fi
+          echo "✅ Remote site matches expected commit"
