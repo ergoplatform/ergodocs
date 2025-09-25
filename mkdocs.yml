@@ -133,6 +133,7 @@ nav:
   - Start Here:
       - Welcome: index.md
       - Why Ergo: dev/protocol/why.md
+      - Common Misconceptions: fud-faq.md
       - Community & Governance:
           - Ergo Foundation:
               - ef/ergo-foundation.md
@@ -143,10 +144,17 @@ nav:
           - DevDao: devdao.md
           - Sigmanauts: contribute/sigmanauts.md
           - Partnerships: partners.md
+          - Compliance & Legal:
+              - Social Contract: social_contract.md
+              - Audit: dev/protocol/audit.md
+              - The Howey Test: security.md
       - Events:
           - Events Overview: events/events-overview.md
           - ERGOHACK: events/ergohack.md
           - ErgoSummit: events/ergosummit.md
+      - Reference:
+          - Glossary: glossary.md
+          - FAQ: faq.md
   - Learn the Protocol:
       - Key Features:
           - dev/protocol/protocol-overview.md
@@ -162,6 +170,7 @@ nav:
               - Light Miners: dev/protocol/nipopow/logspace.md
               - Sidechains: dev/protocol/nipopow/nipopow-sidechains.md
           - Privacy: dev/protocol/zkp.md
+          - Privacy Guide: doc/privacy-guide.md
           - Storage Rent: dev/protocol/storage-rent.md
           - Autolykos: dev/protocol/autolykos-protocol.md
       - Research Library:
@@ -185,6 +194,7 @@ nav:
               - Atomic Composability: dev/protocol/scaling/atomic-composability.md
   - Explore the Ecosystem:
       - Overview: uses/use-cases-overview.md
+      - A CBDC for All: uses/cbdc.md
       - Bridges & Infrastructure:
           - Artificial Intelligence: ai.md
           - Rosen Bridge:
@@ -681,19 +691,6 @@ nav:
               - Integration Guide: dev/Integration/guide.md
               - Transaction Lifecycle: dev/integration/transaction-lifecycle.md
               - Dust Collection: dev/integration/dust-collection.md
-  - Guides & Resources:
-      - Wallet Overview: dev/wallets.md
-      - Compliance & Governance:
-          - Social Contract: social_contract.md
-          - Audit: dev/protocol/audit.md
-          - The Howey Test: security.md
-      - Guides & Primers:
-          - Privacy Guide: doc/privacy-guide.md
-          - Common Misconceptions: fud-faq.md
-          - A CBDC For All: uses/cbdc.md
-      - Reference:
-          - Glossary: glossary.md
-          - FAQ: faq.md
   - Participate & Contribute:
       - Get Involved:
           - Overview: contribute.md
