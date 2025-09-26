@@ -109,3 +109,16 @@ validators==0.34.0
 watchdog==6.0.0
 wcwidth==0.2.13
 webencodings==0.5.1
+
+# Local MkDocs plugins are bundled in-repo; the markers keep pip from looking on PyPI
+# while documenting the required versions for future releases.
+mkdocs-breadcrumbs-plugin>=0.2 ; python_version < '0'  # provided via bundled source
+mkdocs-pagetree-plugin>=0.3 ; python_version < '0'     # provided via bundled source
+mkdocs-redirects>=1.2 ; python_version < '0'           # provided via bundled source
+
+# Install the bundled MkDocs plugins in editable mode so entry points are registered
+# without committing build artifacts. These paths remain within the repository tree,
+# avoiding remote downloads while satisfying the required plugin names.
+-e ./tools/mkdocs-breadcrumbs-plugin
+-e ./tools/mkdocs-pagetree-plugin
+-e ./tools/mkdocs-redirects
