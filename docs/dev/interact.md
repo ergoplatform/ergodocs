@@ -7,6 +7,12 @@ tags:
   - API
 ---
 
+/// admonition | Running Ergo Nodes & Services
+
+Everything needed to run and operate Ergo infrastructure lives here: node installation, configuration, testnets, deployment options, and operational best practices. Ideal for node operators, integrators, and teams preparing production deployments.
+
+///
+
 # Interacting with Ergo
 
 ## Node

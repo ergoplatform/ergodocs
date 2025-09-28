@@ -132,43 +132,32 @@ markdown_extensions:
   - pymdownx.saneheaders
 
 nav:
-  - Learn Ergo:
+  - Start Here:
       - Welcome: index.md
       - Why Ergo: dev/protocol/why.md
-      - Common Misconceptions: fud-faq.md
-      - Compliance & Legal:
-          - Social Contract: social_contract.md
-          - Audit: dev/protocol/audit.md
-          - The Howey Test: security.md
       - Events:
           - Events: events/events-overview.md
           - ERGOHACK: events/ergohack.md
           - ErgoSummit: events/ergosummit.md
+      - Compliance & Legal:
+          - Social Contract: social_contract.md
+          - Audit: dev/protocol/audit.md
+          - The Howey Test: security.md
       - Reference:
           - Glossary: glossary.md
           - FAQ: faq.md
           - Sitemap: site-map.md
-      - Audience Hubs: hubs/index.md
+          - Common Misconceptions: fud-faq.md
+  
+     # - Audience Hubs: hubs/index.md
 
   - Build:
       - Get Started:
           - Quick Start: dev/get-started.md
           - Developer Resources: dev/start/resources.md
           - Students: students/index.md
-      - Tutorials & Recipes:
-          - Overview: dev/tutorials.md
-          - Fleet SDK Recipes: dev/tutorials/fleet-sdk-recipes.md
-          - Blockchain Indexing:
-              - Overview: dev/tutorials/blockchain-indexing.md
-              - Explorer API: dev/tutorials/blockchain-indexing/explorer-apis.md
-              - Node API (Direct): dev/tutorials/blockchain-indexing/node-api-direct.md
-              - Custom Indexer: dev/tutorials/blockchain-indexing/custom-indexer.md
-          - Hardware Wallets: dev/tutorials/hardware-wallet-integration.md
-          - Sign Transactions: tutorials/sign-tx.md
-          - Oracle Pool Bootstrap: tutorials/oracle-bootstrap.md
-          - Token Integration Guides: tutorials/token_integration.md
-          - rsERG-LP Tutorial: tutorials/rsERGLP.md
-          - Access Issues: tutorials/access-issues.md
+      
+        
       - Data Model & Transactions:
           - Data Model: dev/data-model/data-model.md
           - Box Model:
@@ -220,6 +209,20 @@ nav:
               - ADProofs: dev/data-model/block-adproofs.md
               - Extension Section: dev/data-model/extension-section.md
               - Discrete Logarithms: dev/data-model/dlog.md
+      - Tutorials & Recipes:
+          - Overview: dev/tutorials.md
+          - Fleet SDK Recipes: dev/tutorials/fleet-sdk-recipes.md
+          - DeCo: dev/deco.md
+          - Blockchain Indexing:
+              - Overview: dev/tutorials/blockchain-indexing.md
+              - Explorer API: dev/tutorials/blockchain-indexing/explorer-apis.md
+              - Node API (Direct): dev/tutorials/blockchain-indexing/node-api-direct.md
+              - Custom Indexer: dev/tutorials/blockchain-indexing/custom-indexer.md
+          - Hardware Wallets: dev/tutorials/hardware-wallet-integration.md
+          - Sign Transactions: tutorials/sign-tx.md
+          - Oracle Pool Bootstrap: tutorials/oracle-bootstrap.md
+          - Token Integration Guides: tutorials/token_integration.md
+          - rsERG-LP Tutorial: tutorials/rsERGLP.md
       - Tooling & Frameworks:
           - Development Paths:
               - Overview: dev/start.md
@@ -296,7 +299,29 @@ nav:
               - Scrypto: dev/lib/scrypto.md
               - EIP-12 Types: dev/lib/eip12-types.md
               - SigmaJS: dev/lib/sigmajs.md
-              - DeCo: dev/deco.md
+      - Wallets & Payments:
+          - Addresses & Keys:
+              - Addresses: dev/wallet/address.md
+              - Address Types: dev/wallet/address/address_types.md
+              - Address Validation: dev/wallet/address/address_validation.md
+              - Wallet Keys: dev/wallet/keys.md
+          - Payments & Auth:
+              - ErgoPay: dev/wallet/payments/ergopay/ergo-pay.md
+              - ErgoPay Tutorial: dev/wallet/payments/ergopay/ep-tutorial.md
+              - ErgoAuth: dev/wallet/payments/ergoauth.md
+              - dApp Connector: dev/wallet/payments/dApp.md
+              - Proxy Contracts: dev/wallet/payments/proxy.md
+              - Assembler: dev/stack/assembler.md
+          - Standards & Integration:
+              - MultiSig: dev/wallet/multisig.md
+              - UTXO-Set Scanning Wallet API: dev/wallet/standards/eip1.md
+              - EIP-3 Deterministic Wallets: dev/wallet/standards/eip3.md
+              - EIP-19 Cold Wallets: dev/wallet/standards/eip19.md
+              - EIP Standards: dev/wallet/eip-standards.md
+              - EIP-0005: dev/wallet/standards/eip5.md
+              - Integration Guide: dev/integration/guide.md
+              - Transaction Lifecycle: dev/integration/transaction-lifecycle.md
+              - Dust Collection: dev/integration/dust-collection.md
       - APIs & Services:
           - Explorer & Indexing:
               - Explorer Overview: dev/stack/explorer.md
@@ -410,10 +435,23 @@ nav:
           - Subpooling: mining/setup/subpool.md
 
   - Using Ergo:
+        - Overview: uses/use-cases-overview.md
+        - Get a Wallet: 
+           - dev/wallets.md
+           - Resources: 
+             - Access Issues: tutorials/access-issues.md
+             - Wallet Guides:
+                - Wallet Setup: node/wallet-setup.md
+                - Satergo: dev/wallet/satergo.md
+                - Nautilus: dev/wallet/nautilus.md
+                - Minotaur: dev/wallet/minotaur.md
+                - Minotaur Multi-Sig: dev/wallet/minotaur-multisig.md
+                - SAFEW: dev/wallet/safew.md
+                - Ledger: dev/wallet/payments/ledger.md
+                - Paper Wallet: dev/wallet/paper-wallet.md
+                - Satergo Vault: dev/wallet/satergo-vault.md
         - Ecosystem & Use Cases:
-          - Overview: uses/use-cases-overview.md
           - Bridges & Infrastructure:
-              - Artificial Intelligence: ai.md
               - Rosen Bridge:
                   - eco/rosen.md
                   - Watchers:
@@ -453,7 +491,9 @@ nav:
                   - SigmaUSD: uses/sigmausd.md
                   - ChainCash: uses/chaincash.md
                   - Gluon: eco/gluon.md
-                  - DexyGold: eco/dexy.md
+                  - Dexy: 
+                    - DexyGold: eco/dexy.md
+                    - USE: uses/use_stablecoin.md
                   - Local Exchange Trading Systems:
                       - uses/lets.md
                       - Basic Implementation: uses/lets/basic-imp.md
@@ -533,6 +573,7 @@ nav:
               - GuapSwap: eco/guapswap.md
               - CYTI: eco/cyti.md
           - Further Ideas & Research:
+              - Artificial Intelligence: ai.md
               - Profit Sharing: uses/profit.md
               - Email Client for Blocked Internet: uses/blocked_web.md
               - Flash Loans: uses/flash-loans.md
@@ -547,44 +588,10 @@ nav:
                   - PoW Tokens: uses/PoW_tokens.md
                   - Perpetual Tokens: dev/tokens/perpetual.md
                   - Buy Back Guarantees: uses/dex-buyback.md
-        - Wallets & Payments:
-          - Wallet Overview: dev/wallets.md
-          - Addresses & Keys:
-              - Addresses: dev/wallet/address.md
-              - Address Types: dev/wallet/address/address_types.md
-              - Address Validation: dev/wallet/address/address_validation.md
-              - Wallet Keys: dev/wallet/keys.md
-          - Wallet Guides:
-              - Wallet Setup: node/wallet-setup.md
-              - Satergo: dev/wallet/satergo.md
-              - Nautilus: dev/wallet/nautilus.md
-              - Minotaur: dev/wallet/minotaur.md
-              - Minotaur Multi-Sig: dev/wallet/minotaur-multisig.md
-              - SAFEW: dev/wallet/safew.md
-              - Ledger: dev/wallet/payments/ledger.md
-              - Paper Wallet: dev/wallet/paper-wallet.md
-              - Satergo Vault: dev/wallet/satergo-vault.md
-          - Payments & Auth:
-              - ErgoPay: dev/wallet/payments/ergopay/ergo-pay.md
-              - ErgoPay Tutorial: dev/wallet/payments/ergopay/ep-tutorial.md
-              - ErgoAuth: dev/wallet/payments/ergoauth.md
-              - dApp Connector: dev/wallet/payments/dApp.md
-              - Proxy Contracts: dev/wallet/payments/proxy.md
-              - Assembler: dev/stack/assembler.md
-          - Standards & Integration:
-              - MultiSig: dev/wallet/multisig.md
-              - UTXO-Set Scanning Wallet API: dev/wallet/standards/eip1.md
-              - EIP-3 Deterministic Wallets: dev/wallet/standards/eip3.md
-              - EIP-19 Cold Wallets: dev/wallet/standards/eip19.md
-              - EIP Standards: dev/wallet/eip-standards.md
-              - EIP-0005: dev/wallet/standards/eip5.md
-              - Integration Guide: dev/integration/guide.md
-              - Transaction Lifecycle: dev/integration/transaction-lifecycle.md
-              - Dust Collection: dev/integration/dust-collection.md
       
   - Join & Govern:
+      - Overview: contribute.md
       - Get Involved:
-          - Overview: contribute.md
           - Sigmanauts Program: contribute/sigmanauts.md
           - Marketing: contribute/marketing.md
       - Governance & Community:
@@ -624,7 +631,7 @@ nav:
           - Analytics: contribute/standards/analytics.md
 
   - Protocol & Research:
-      - Protocol Overview: dev/protocol/protocol-overview.md
+      - Overview: dev/protocol/protocol-overview.md
       - Core Concepts:
           - eUTxO:
               - dev/protocol/eutxo.md

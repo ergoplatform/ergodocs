@@ -12,7 +12,7 @@ tags:
 
 ## Introduction
 
-The Reputation System is a core component of [Celaut](Celaut.md), providing a decentralized, user-driven mechanism for managing trust. It leverages the immutability of the Ergo blockchain and a UTXO-based model to create auditable, tamper-proof reputation proofs. This system replaces centralized reputation platforms with a transparent and verifiable trust layer for Web3 services, agents, and smart contracts.
+The Reputation System is a core component of [Celaut](celaut.md), providing a decentralized, user-driven mechanism for managing trust. It leverages the immutability of the Ergo blockchain and a UTXO-based model to create auditable, tamper-proof reputation proofs. This system replaces centralized reputation platforms with a transparent and verifiable trust layer for Web3 services, agents, and smart contracts.
 
 * [Sigma Reputation System on GitHub](https://github.com/sigma-rps)
 * [Explainer Post on ErgoForum](https://www.ergoforum.org/t/reputation-system/4782)
@@ -97,7 +97,7 @@ This logic ensures:
 
 ---
 
-## Integration with [Celaut](Celaut.md)
+## Integration with [Celaut](celaut.md)
 
 This reputation system directly powers Celaut’s trust layer:
 
