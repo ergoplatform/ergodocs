@@ -233,7 +233,7 @@ See [this page](scs/global-functions.md#cryptographic-functions) for a descripti
 
 ### Merkle Trees
 
-**[Merkle Trees](data-model/merkle-tree.md)** are a fundamental data structure in the Ergo blockchain, ensuring the integrity and authenticity of data. They play a crucial role in various blockchain operations, from verifying transactions within blocks to securing additional metadata in the Extension Block. Ergo extends the concept of Merkle Trees by combining transactions and their corresponding spending proofs into a single Merkle Tree.
+**[Merkle Trees](merkle-tree.md)** are a fundamental data structure in the Ergo blockchain, ensuring the integrity and authenticity of data. They play a crucial role in various blockchain operations, from verifying transactions within blocks to securing additional metadata in the Extension Block. Ergo extends the concept of Merkle Trees by combining transactions and their corresponding spending proofs into a single Merkle Tree.
 
 Developers should familiarize themselves with Merkle Trees and their associated code implementations to effectively leverage them in their Ergo projects.
 

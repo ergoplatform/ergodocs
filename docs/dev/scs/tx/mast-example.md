@@ -28,7 +28,7 @@ With MAST:
 1.  Each condition (A, B, C) is treated as a separate script fragment.
 2.  These fragments are serialized to their [ErgoTree](../ergotree.md) byte representation (`Coll[Byte]`).
 3.  Each byte representation is hashed (e.g., using `blake2b256`).
-4.  These hashes are arranged as leaves in a [Merkle Tree](../../data-model/structures/merkle/merkle-tree.md).
+4.  These hashes are arranged as leaves in a [Merkle Tree](merkle-tree.md).
 5.  The **Merkle root** of this tree is calculated and stored in the main locking script of the box (often as a constant).
 
 The locking script essentially says: "This box can be spent if you provide:

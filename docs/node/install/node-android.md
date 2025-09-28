@@ -32,17 +32,6 @@ There are two primary approaches, depending on your needs and technical comfort 
     *   Involves running an Arch Linux environment within Termux to provide `glibc` compatibility for RocksDB.
     *   More complex setup and higher resource usage.
 
-## Direct Termux Setup (Digest Mode)
-
-The digest-mode walkthrough lives in the dedicated [Termux guide](termux-digest.md), but the high-level flow is:
-
-1. Install Termux from F-Droid and update its packages.
-2. Download the latest Ergo node release JAR and sample `ergo.conf` file.
-3. Configure `stateType="digest"` along with conservative `blocksToKeep` values to minimise storage usage.
-4. Launch the node inside a `tmux` session so it can continue syncing while the Termux app is in the background.
-
-Use the troubleshooting checklist below if you encounter errors during sync.
-
 /// details | One-Click App Attempt
     {type: tip, open: false}
 [ErgoNodeAndroid](https://github.com/rustinmyeye/ErgoNodeAndroid) is a community project attempting a one-click Ergo node app for Android, based on Termux scripts. It typically sets up a stateless/digest node. You may explore this as an alternative to manual setup.

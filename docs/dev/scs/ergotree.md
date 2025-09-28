@@ -39,9 +39,6 @@ By evaluating these predicates, ErgoTree authenticates [transactions](transactio
 - The reference implementation of ErgoTree is in Scala, but alternative implementations can utilize other languages.
 - ErgoTree's binary format intentionally omits metadata, which might be necessary for various Ergo applications.
 
-## Serialization
-
-ErgoTree expressions are serialized into a compact binary format that mirrors the abstract syntax tree. The official specification defines opcode layouts, operand ordering, and constant pools so that interpreters can deterministically recreate scripts from bytes. When implementing tooling such as [FleetSharp](../lang/csharp.md), refer to the [ErgoTree serialization format](https://ergoplatform.org/docs/ErgoTree.pdf) for guidance on encoding nodes, registering constants, and handling version headers.
 
 ## Additional Resources
 
