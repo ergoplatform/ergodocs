@@ -4,12 +4,6 @@ tags:
   - Overview
 ---
 
-/// admonition | Protocol & Research
-
-In-depth technical material for researchers and protocol engineers: whitepapers, cryptography, data structures, eUTXO semantics, and research notes. Use this section for formal specifications, academic resources, and advanced implementation details.
-
-///
-
 # Powering the future of finance
 
 Ergo is a [next-generation](scaling.md) smart contract platform that enables anyone to participate in the digital DeFi revolution *now*.

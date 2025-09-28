@@ -8,12 +8,6 @@ tags:
   - Test Vectors
 ---
 
-/// admonition | Mining on Ergo
-
-This section covers mining fundamentals, Autolykos, recommended software and hardware, pool operations, and miner tooling. Use it to find setup guides, benchmark resources, mining EIPs, and troubleshooting tips for running miners or pools on the Ergo network.
-
-///
-
 # Mining Resources
 
 This page provides a collection of resources related to Ergo mining. It includes academic papers, code repositories, test vectors, and discussion threads.

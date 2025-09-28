@@ -7,9 +7,9 @@ tags:
 
 # Developer's Guide
 
-/// admonition | Welcome to the Ergo Developer Guide
+/// admonition | Welcome to the Ergo Developer's Guide
 
-This section focuses on building with Ergo: SDKs, languages, tooling, tutorials, and practical recipes. Use this area to find quickstarts, developer resources, sample apps, and debugging guidance for producing and testing real dApps and integrations.
+Welcome to the comprehensive **Ergo Developer's Guide**! Whether you're a seasoned blockchain developer or just starting out, this guide is designed to provide you with an in-depth understanding of the Ergo platform and the resources available to you. Explore the unique features of Ergo, learn how to develop on our platform, and connect with our vibrant community.
 
 ///
 

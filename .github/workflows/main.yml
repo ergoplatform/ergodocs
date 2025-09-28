@@ -36,7 +36,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Build MkDocs site
-        run: mkdocs build # --strict
+        run: mkdocs build --strict
 
       - name: Configure GitHub Pages
         if: github.event_name == 'pull_request' || github.ref == 'refs/heads/main'
@@ -121,7 +121,7 @@ jobs:
             rm -rf site || echo "⚠️ Failed to remove site dir"
 
             echo "🏗 Building MkDocs site..."
-            mkdocs build || { echo "❌ MkDocs build failed"; exit 1; }
+            mkdocs build --strict || { echo "❌ MkDocs build failed"; exit 1; }
 
             echo "🪪 Writing deploy metadata..."
             echo "${GITHUB_SHA}" > site/deploy-sha.txt

@@ -1,9 +1,3 @@
-/// admonition | Using Ergo: Ecosystem & Applications
-
-Explore how Ergo is used in practice: wallets, dApps, token use-cases, DeFi primitives, and real-world applications. This section helps end-users and integrators find wallets, services, and guides for transacting, trading, and interacting with Ergo-based apps.
-
-///
-
 # Welcome to the Ergo Ecosystem
 
 /// details | Explore the Ergo Universe!
@@ -106,7 +100,7 @@ This example demonstrates how Ergo's programmable contracts can model complex, m
   {
     "title": "ErgoScript",
     "content": "A simple high-level language enabling clear descriptions of contractual logic.",
-    "url": "../dev/scs/ergoscript.md"
+    "url": "../dev/scs/contracts.md"
   },
   {
     "title": "Oracles",
