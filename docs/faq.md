@@ -189,7 +189,7 @@ There are very few smart contract platforms that align with the original vision 
 Ergo differentiates itself in a competitive landscape by using a UTXO-based model rather than the account-based systems common in platforms like Ethereum. This simplifies contract development and reduces complexity compared to coding in Solidity. This approach resonates with Bitcoin enthusiasts who favor smart contracts aligned with Bitcoin’s principles.
 
 This page covers key aspects of the Ergo contract model which makes it different:
-[ErgoScript Paradigm](dev/scs/ergoscript.md#paradigm)
+[ErgoScript Paradigm](dev/scs/index.md#paradigm)
 
 Design patterns will continue to mature, and we'll keep developing innovative protocols and designs that re-capture the cypherpunk spirit:
 
