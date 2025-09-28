@@ -52,7 +52,7 @@ Major wallet functionalities include:
 - Checking wallet status (`/wallet/status`)
 - Deriving a new key according to [EIP-3](eip3.md) (BIP 44 implementation for Ergo) (`/wallet/deriveNextKey`)
 - Checking wallet balance (`/wallet/balances`) for all addresses
-- Retrieving wallet transactions (`/wallet/transactions`) for all addresses
+- Retrieving wallet transactions (`/wallet/transactions`) for all addresses.
 
 ##### RPC Documentation
 
