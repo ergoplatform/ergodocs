@@ -159,7 +159,7 @@ Ergo uses **AVL+ trees** as part of its **Authenticated Dynamic Dictionary (ADD)
 
 **Merkle trees** are used in Ergo to ensure the integrity of large datasets, such as blocks of transactions, without requiring the entire dataset to be transmitted or verified. By storing only the root hash of a Merkle tree, nodes can quickly verify that individual transactions are part of the block, reducing the overhead of verification.
 
-Learn more about Merkle trees [here](merkle-tree.md).
+Learn more about Merkle trees [here](dev/data-model/merkle-tree.md).
 
 ---
 
