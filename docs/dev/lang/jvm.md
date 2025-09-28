@@ -36,7 +36,7 @@ Whether you want to develop using [Java](java.md), [Scala](scala.md), or [Kotlin
   },
   {
     "title": "🔗 Ergo Contracts",
-    "content": "Source code of the Ergo [smart contracts](ergoscript.md) with [compilation](compiler.md), [testing](../scs/ergoscript-debugging.md#current-best-practices), and formal verification tooling.",
+    "content": "Source code of the Ergo [smart contracts](ergoscript.md) with [compilation](compiler.md), testing, and formal verification tooling.",
     "url": "https://github.com/ergoplatform/ergo-contracts"
   },
 

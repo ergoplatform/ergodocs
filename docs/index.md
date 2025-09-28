@@ -1,3 +1,9 @@
+/// admonition | Welcome to Learn Ergo
+
+This section is your orientation to the Ergo ecosystem. It provides high-level explanations of core ideas, the overall vision, and curated entry points — glossaries, FAQs, and audience hubs — so you can quickly find material suited to beginners, educators, and non-developers.
+
+///
+
 # Welcome to Ergo!
 
 New to cryptocurrency or looking to understand what makes Ergo special? You're in the right place! Ergo is a secure and powerful platform designed to be a fair financial system for everyone. Think of it as a next-generation digital money system built with privacy and everyday people in mind.
