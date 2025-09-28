@@ -136,14 +136,74 @@ jobs:
       - name: Check web server served files
         run: |
           echo "🔍 Verifying web server output..."
-          DEPLOYED_SHA=$(curl -fsS https://docs.ergoplatform.com/deploy-sha.txt || true)
-          if [ -z "$DEPLOYED_SHA" ]; then
-            echo "❌ Unable to read deployed SHA from web server"
+          set -o pipefail
+
+          PUBLIC_URL="https://docs.ergoplatform.com/deploy-sha.txt"
+          IP_URL="http://213.239.193.208/deploy-sha.txt"
+
+          echo "GET $PUBLIC_URL"
+          PUB_CODE=$(curl -sS -o /tmp/pub_out -w "%{http_code}" --max-time 15 "$PUBLIC_URL" || true)
+          if [ "$PUB_CODE" = "200" ]; then
+            DEPLOYED_SHA=$(cat /tmp/pub_out)
+            echo "✅ Public URL OK (200). Body:"
+            echo "$DEPLOYED_SHA"
+          else
+            echo "❌ Public URL failed. HTTP $PUB_CODE"
+            echo "Headers:"
+            curl -sSI --max-time 10 "$PUBLIC_URL" || true
+          fi
+
+          echo "GET $IP_URL"
+          IP_CODE=$(curl -sS -o /tmp/ip_out -w "%{http_code}" --max-time 5 "$IP_URL" || true)
+          if [ "$IP_CODE" = "200" ]; then
+            IP_SHA=$(cat /tmp/ip_out)
+            echo "✅ Direct IP OK (200). Body:"
+            echo "$IP_SHA"
+          else
+            echo "❌ Direct IP failed. HTTP $IP_CODE"
+            curl -sSI --max-time 5 "$IP_URL" || true
+          fi
+
+          # If public fails with 52x but IP is OK, it's likely CDN/Cloudflare (e.g., 524 timeout to origin)
+          if [ "$PUB_CODE" != "200" ] && [ "$IP_CODE" = "200" ]; then
+            echo "⚠️ Public URL failed but origin is reachable directly. Likely CDN/Cloudflare issue (HTTP $PUB_CODE)."
+            DEPLOYED_SHA="$IP_SHA"
+          fi
+
+          # If both fail, gather SSH diagnostics from origin
+          if [ "$PUB_CODE" != "200" ] && [ "$IP_CODE" != "200" ]; then
+            echo "❌ Both public and direct IP failed. Gathering diagnostics from origin via SSH..."
+
+            ssh root@213.239.193.208 "bash -s" <<'EOF'
+              set -euo pipefail
+              echo "== remote: nginx config test =="
+              nginx -t || true
+              echo "== remote: systemctl status nginx =="
+              systemctl status nginx --no-pager || true
+              echo "== remote: tail nginx error log =="
+              tail -n 200 /var/log/nginx/error.log || true
+              echo "== remote: ls site root =="
+              ls -lah /var/www/ergodocs/site | sed -n '1,80p' || true
+              echo "== remote: show site/deploy-sha.txt =="
+              if [ -f /var/www/ergodocs/site/deploy-sha.txt ]; then cat /var/www/ergodocs/site/deploy-sha.txt; else echo "MISSING"; fi
+              echo "== remote: curl localhost/deploy-sha.txt =="
+              curl -v --max-time 5 http://127.0.0.1/deploy-sha.txt || true
+              echo "== remote: listening sockets =="
+              ss -ltnp || true
+EOF
+            echo "❌ Origin diagnostics printed above. Failing for visibility."
             exit 1
           fi
-          echo "🌐 Remote site reports commit: $DEPLOYED_SHA"
+
+          # Compare SHA if available
+          DEPLOYED_SHA=${DEPLOYED_SHA:-$IP_SHA}
+          if [ -z "$DEPLOYED_SHA" ]; then
+            echo "❌ Could not determine deployed SHA."
+            exit 1
+          fi
+          echo "🌐 Reported commit: $DEPLOYED_SHA"
           if [ "$DEPLOYED_SHA" != "$GITHUB_SHA" ]; then
-            echo "❌ Remote site commit does not match expected $GITHUB_SHA"
+            echo "❌ Mismatch: remote=$DEPLOYED_SHA expected=$GITHUB_SHA"
             exit 1
           fi
           echo "✅ Remote site matches expected commit"
