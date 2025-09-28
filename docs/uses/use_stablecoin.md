@@ -6,7 +6,7 @@ tags:
 ---
 # USE (USD stablecoin)
 
-Centralized USD-pegged stablecoins anchor most on-chain liquidity and activity. Their design brings censorship and regulatory risk. Refusing to interoperate isolates Ergo in a niche and reduces utility for regular users. This page lays out the case for a cost-efficient USD stablecoin for the Ergo ecosystem (USE), the core design, initial parameters, and a practical roadmap for launch and operations.
+Centralized USD-pegged stablecoins anchor most on-chain liquidity and activity. Their design brings censorship and regulatory risk. Refusing to interoperate isolates Ergo in a niche and reduces utility for regular users. This page lays out the case for a cost-efficient USD stablecoin for the Ergo ecosystem (USE), the core design, initial parameters and a practical roadmap for launch and operations.
 
 **Related docs:** [Use cases overview](use-cases-overview.md), [Dexy](dexy.md)
 

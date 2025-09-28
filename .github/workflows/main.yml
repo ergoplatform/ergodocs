@@ -2,9 +2,9 @@ name: Docs CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, master ]
   pull_request:
-    branches: [ main ]
+    branches: [ main, master ]
   workflow_dispatch:
 
 concurrency:
@@ -36,10 +36,10 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Build MkDocs site
-        run: mkdocs build # --strict
+        run: mkdocs build --strict
 
       - name: Configure GitHub Pages
-        if: github.event_name == 'pull_request' || github.ref == 'refs/heads/main'
+        if: github.event_name == 'pull_request' || github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
         uses: actions/configure-pages@v5
 
       - name: Upload MkDocs artifact
@@ -49,7 +49,7 @@ jobs:
           path: site
 
       - name: Upload GitHub Pages artifact
-        if: github.event_name == 'pull_request' || github.ref == 'refs/heads/main'
+        if: github.event_name == 'pull_request' || github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
         uses: actions/upload-pages-artifact@v3
         with:
           path: site
@@ -75,7 +75,7 @@ jobs:
   deploy-production:
     name: Deploy to production server
     needs: build
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
     runs-on: ubuntu-latest
 
     steps:
@@ -120,13 +120,34 @@ jobs:
             echo "🧹 Cleaning old MkDocs site..."
             rm -rf site || echo "⚠️ Failed to remove site dir"
 
-            echo "🏗 Building MkDocs site..."
-            mkdocs build || { echo "❌ MkDocs build failed"; exit 1; }
+            echo "🧰 Tool versions on remote:"
+            mkdocs --version || echo "mkdocs not found"
+            python3 --version || true
+            pip --version || true
+            echo "pip mkdocs-related packages:"
+            pip freeze | grep -E '^(mkdocs|mkdocs-|mkdocs_material|mkdocs-material|neoteroi|pymdownx)' || true
+
+            echo "🏗 Building MkDocs site (strict)..."
+            set +e
+            mkdocs build --strict 2>&1 | tee build.log
+            BUILD_EXIT=${PIPESTATUS[0]}
+            set -e
+            if [ "$BUILD_EXIT" -ne 0 ]; then
+              echo "❌ MkDocs build failed on remote (exit $BUILD_EXIT). Showing last 200 lines of build.log:"
+              tail -n 200 build.log || true
+              exit "$BUILD_EXIT"
+            fi
 
             echo "🪪 Writing deploy metadata..."
             echo "${GITHUB_SHA}" > site/deploy-sha.txt
             date -u +"%Y-%m-%dT%H:%M:%SZ" > site/deploy-timestamp.txt
           EOF
+
+      - name: Remote build log (last 200 lines)
+        if: always()
+        run: |
+          echo "🔎 Remote build log (if present):"
+          ssh root@213.239.193.208 'if [ -f /var/www/ergodocs/build.log ]; then tail -n 200 /var/www/ergodocs/build.log; else echo "No build.log"; fi'
 
       - name: Verify remote site files
         run: |
