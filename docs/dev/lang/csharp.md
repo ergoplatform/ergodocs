@@ -15,7 +15,7 @@ A comprehensive tutorial series, [Ergo with C# 101](https://www.youtube.com/watc
 
 ### FleetSharp
 
-[FleetSharp](fleetsharp.md) is an ongoing open-source project. It is a sigma-type ([ErgoTree](ergotree.md)) [serializer/deserializer](ergotree.md#serialization) based on [Fleet](fleet.md). This tool simplifies the process of converting [data](data-model.md) between compatible formats for [communication](p2p-protocol-overview.md) and [storage](storage-rent.md).
+[FleetSharp](fleetsharp.md) is an ongoing open-source project. It is a sigma-type ([ErgoTree](ergotree.md)) [serializer/deserializer](serialization.md) based on [Fleet](fleet.md). This tool simplifies the process of converting [data](data-model.md) between compatible formats for [communication](p2p-protocol-overview.md) and [storage](storage-rent.md).
 
 As an open-source project, FleetSharp thrives on community contributions. Developers with C# experience or those interested in learning more about Ergo integration are encouraged to contribute.
 

@@ -16,7 +16,7 @@ This guide details the recommended method for running an Ergo node on Android us
 **Prerequisites:**
 
 *   Android device meeting the [requirements](node-android.md#device-requirements).
-*   Termux installed from F-Droid (see [main Android guide](node-android.md#direct-termux-setup-digest-mode)).
+*   Termux installed from F-Droid (see [main Android guide](node-android.md)).
 
 **Steps:**
 
