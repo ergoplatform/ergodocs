@@ -492,9 +492,8 @@ nav:
         - Cheat Sheet: dev/get-started.md
         - Developer Resources: dev/start/resources.md
         - Students: students/index.md
-        - Resource Index: dev/resources/index.md
-        - Back-end Resources: dev/resources/stack/back-end.md
-        - Front-end Resources: dev/resources/stack/front-end.md
+       # - Back-end Resources: dev/resources/stack/back-end.md
+      #  - Front-end Resources: dev/resources/stack/front-end.md
       - ErgoScript & Smart Contracts:
           - Overview: dev/scs/ergoscript.md
           - Key Concepts: dev/scs/ergoscript/ergoscript-key-concepts.md
