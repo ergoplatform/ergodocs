@@ -4,11 +4,11 @@
 
 * Check out the [Developer Overview & Documentation](https://drive.google.com/file/d/1mH5Q7T6SHXzQAlpP-tfwWfgkL4rn0wuJ/view?usp=sharing)
 
-### 1\. Introduction
+### 1. Introduction
 
 SigmaQuest is a blockchain-integrated sci-fi puzzle game where players solve challenges to earn cryptocurrency seed phrases. The game immerses players in a sci-fi horror survival theme aboard a derelict spaceship. Players engage with AI-powered guardians, each offering unique gameplay mechanics and seed phrase rewards. The ultimate goal is to collect all 15 words (5 words from each of 3 guardians) to unlock the cosmic vault.
 
-### 2\. Core Gameplay Mechanics
+### 2. Core Gameplay Mechanics
 
 The game session and reward system are structured as follows:
 
@@ -18,7 +18,7 @@ The game session and reward system are structured as follows:
   * **Rewards**: Each completed guardian rewards players with a 5-word seed phrase.
   * **Ultimate Goal**: Collect all 15 words (3 guardians x 5 words) to unlock the cosmic vault and claim the accumulated ERG from the prize pot.
 
-### 3\. AI Integration & Dynamic Challenges
+### 3. AI Integration & Dynamic Challenges
 
 SigmaQuest's core design features varied and AI-driven gameplay experiences through three distinct guardian types:
 
@@ -46,7 +46,7 @@ SigmaQuest's core design features varied and AI-driven gameplay experiences thro
       * **Unique**: Characterized by complex multi-stage puzzles.
       * **API Endpoints**: `POST /api/sigmanaut/start`, `POST /api/sigmanaut/message`, `POST /api/sigmanaut/reset`.
 
-### 4\. Architecture
+### 4. Architecture
 
 SigmaQuest employs a client-server architecture with robust blockchain integration.
 
@@ -71,7 +71,7 @@ SigmaQuest employs a client-server architecture with robust blockchain integrati
       * **Process Manager**: PM2 (running in fork mode for session persistence)
       * **Reverse Proxy**: Nginx with SSL
 
-### 5\. Technical Details
+### 5. Technical Details
 
   * **Blockchain Integration**: The game integrates with the Ergo blockchain using the Nautilus browser extension wallet for payment processing.
   * **AI Integration (Anthropic)**
@@ -82,30 +82,30 @@ SigmaQuest employs a client-server architecture with robust blockchain integrati
   * **Critical Configuration**: PM2 must run in fork mode, CORS is configured for the Lovable app URL, Trust Proxy is enabled for Nginx, and SSL is managed via Let's Encrypt/Certbot.
   * **Environment Variables**: Key variables include `NODE_ENV`, `PORT`, `ANTHROPIC_API_KEY`, and `CORS_ORIGIN`.
 
-### 6\. Business Model
+### 6. Business Model
 
   * **Revenue Flow**: 10 ERG per game session, with 90% contributing to the community prize pot and 10% going to the project treasury. Players who collect all 15 words can claim the pot.
   * **Cost Structure**: Approximately $35-55/month, primarily covering server costs (\~$20/month for Hetzner) and AI API usage (\~$10-30/month for Anthropic).
 
-### 7\. Security Considerations
+### 7. Security Considerations
 
   * **Current Implementation**: Includes rate limiting on API endpoints, Helmet.js for security headers, SSL/HTTPS encryption, and input validation for seed phrases.
   * **Vulnerabilities to Address**: Identified areas for future enhancement include adding authentication on API endpoints, addressing potential session hijacking, and persisting in-memory sessions across restarts.
 
-### 8\. Current Status & Progress (ErgoHack 10)
+### 8. Current Status & Progress (ErgoHack 10)
 
 During ErgoHack 10, the SigmaQuest project has successfully implemented and demonstrated all three guardian game acts. The game is currently functional and playable, showcasing the seamless integration of AI-driven challenges with Ergo blockchain mechanics.
 
-### 9\. Future Enhancements
+### 9. Future Enhancements
 
   * **Technical Improvements**: Planned enhancements include adding Redis for session persistence, implementing JWT authentication, adding a database for game history, creating an admin dashboard, and implementing WebSockets for real-time updates.
   * **Gameplay Additions**: Future plans include more guardians with unique mechanics, multiplayer challenges, leaderboards, achievements, daily/weekly challenges, and NFT integration for rewards.
 
-### 10\. Links
+### 10. Links
 
   * **Backend API (Example - TO BE RELEASED):** `https://*************_api.duckdns.org`
   * **Server GIST:** `https://gist.github.com/tmr-erg/f83a6e19ed31b526e5de66865f32eccf`
 
-### 11\. Contribution
+### 11. Contribution
 
 The creator intends to open-source the entire project. However, to safeguard the "Honeypot" (the ERG prize pool), the project's code will not be made public until a winner has successfully completed the quest and claimed the prize.

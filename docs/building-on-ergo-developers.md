@@ -6,6 +6,17 @@ Start here:
 
 - [Start Developing](dev/start.md)
 
+## Start here if…
+
+| You want to… | Start with | Then see |
+| --- | --- | --- |
+| Build a browser dApp | [Browser pathway](dev/stack/browser.md) | Wallet connector: [EIP-12 dApp](dev/wallet/payments/dApp.md), Example flows: [Tutorials](dev/tutorials.md) |
+| Build a server/back-end | [Server pathway](dev/stack/server.md) | Libraries: [Libraries](dev/libraries.md), Indexing: [Blockchain Indexing](dev/tutorials/blockchain-indexing.md) |
+| Build a desktop app | [Desktop pathway](dev/stack/desktop.md) | Frameworks: [Frameworks](dev/stack/frameworks.md) |
+| Build a mobile app | [Mobile pathway](dev/stack/mobile.md) | Constraints: [Build constraints](dev/stack/mobile-build-constraints.md) |
+| Prototype smart contracts | [ErgoScript](dev/scs/ergoscript.md) | Playgrounds: [Scastie](dev/scs/ergoscript/scastie.md), [Kiosk](dev/stack/kiosk.md) |
+| Integrate wallets/payments | [dApp Connector](dev/wallet/payments/dApp.md) | [ErgoAuth](dev/wallet/payments/ergoauth.md), [ErgoPay](dev/wallet/payments/ergopay/ergo-pay.md) |
+
 Core docs:
 
 - Smart contracts: [ErgoScript](dev/scs/ergoscript.md)
@@ -13,13 +24,25 @@ Core docs:
 - Libraries: [Libraries](dev/libraries.md)
 - Frameworks overview: [Frameworks](dev/stack/frameworks.md)
 
+## Sample apps and examples
+
+- Mosaik example apps: [Examples](dev/stack/mosaik/examples.md)
+- AppKit examples and patterns: [AppKit](dev/stack/appkit.md)
+- Fleet SDK recipes: [Fleet SDK Recipes](dev/tutorials/fleet-sdk-recipes.md)
+- Indexing examples: [Blockchain Indexing](dev/tutorials/blockchain-indexing.md)
+
 Development pathways:
 
 - Server, browser, desktop, mobile: [Introduction](dev/stack/introduction.md), [Basics](dev/stack/basics.md), [Server](dev/stack/server.md), [Browser](dev/stack/browser.md), [Desktop](dev/stack/desktop.md), [Mobile](dev/stack/mobile.md)
 
-Languages:
+## Quickstarts by language
 
-- [JVM](dev/lang/jvm.md), [Scala](dev/lang/scala.md), [Java](dev/lang/java.md), [Kotlin](dev/lang/kotlin.md), [JavaScript](dev/lang/js.md), [Rust](dev/lang/rust.md), [Python](dev/lang/python.md), [C#](dev/lang/csharp.md), [Go](dev/lang/go.md)
+- JVM/Scala/Java/Kotlin: [JVM](dev/lang/jvm.md), [Scala](dev/lang/scala.md), [Java](dev/lang/java.md), [Kotlin](dev/lang/kotlin.md)
+- JavaScript/TypeScript: [JavaScript](dev/lang/js.md), Fleet (JS): [Fleet](dev/stack/fleet.md)
+- Rust: [Rust](dev/lang/rust.md), SigmaRust: [SigmaRust](dev/stack/sigma-rust.md)
+- Python: [Python](dev/lang/python.md), ergo-lib-python: [ergo-lib-python](dev/stack/ergo-lib-python.md)
+- C#/.NET: [C#](dev/lang/csharp.md)
+- Go: [Go](dev/lang/go.md)
 
 Wallet and payments APIs:
 

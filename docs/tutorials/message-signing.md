@@ -5,7 +5,7 @@ tags:
   - Authentication
   - Nautilus
   - sigma-rust
-  - Wallet
+  - Wallets
   - Security
   - Tutorial
   - Guide

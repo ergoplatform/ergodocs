@@ -71,6 +71,7 @@ plugins:
   - neoteroi.mkdocsoad
   #- mkdocs-jupyter #https://github.com/danielfrg/mkdocs-jupyter
   - section-index #https://github.com/oprypin/mkdocs-section-index
+  # - section-index #https://github.com/oprypin/mkdocs-section-index
   #- awesome-nav #https://github.com/lukasgeiter/mkdocs-awesome-pages-plugin
   - autolinks
   - tags: # https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/#
@@ -133,8 +134,15 @@ nav:
       - Getting Started: getting-started-with-ergo.md
       - FAQ: faq.md
       - Wallets: wallets-overview.md
-      - Using Ergo: using-ergo-intermediate.md
-      - Building on Ergo: building-on-ergo-developers.md
+      - Using Ergo:
+          - Overview: using-ergo-intermediate.md
+          - Run a Node: node/install.md
+          - Run Oracles: dev/oc/oracle.md
+          - Run Watchers (Rosen): eco/rosen/watcher.md
+          - Run Off-Chain Bots: dev/oc/dex_bots.md
+      - Building on Ergo:
+          - Overview: building-on-ergo-developers.md
+          - One-Pager (What it is): dev/get-started.md
       - Securing the Network: securing-the-network-miners.md
       - Learn: learn.md
       - Community: engage-with-the-ergo-community.md
@@ -153,7 +161,6 @@ nav:
           - General Guides:
             - Access Issues: tutorials/access-issues.md
             - Cold Wallet Guide: tutorials/cold-wallet.md
-            - Message Signing: tutorials/message-signing.md
           - Wallet Guides:
             - Node Wallet Setup: node/wallet-setup.md
             - Satergo: dev/wallet/satergo.md
@@ -164,6 +171,11 @@ nav:
             - Ledger: dev/wallet/payments/ledger.md
             - Paper Wallet: dev/wallet/paper-wallet.md
             - Satergo Vault: dev/wallet/satergo-vault.md
+      - How-To Guides:
+          - Mint an NFT: dev/tokens/nfts/create.md
+          - Yield Farming: tutorials/yield.md
+          - Lending Pools: tutorials/lending-pools.md
+          - Arbitrage: tutorials/arb.md
       - Ecosystem:
           - Bridges & Infrastructure:
               - Rosen Bridge:
@@ -361,6 +373,7 @@ nav:
                   - Buy Back Guarantees: uses/dex-buyback.md
   - Learn:
       - Overview: dev/protocol/protocol-overview.md
+      - Why Ergo: dev/protocol/why.md
       - Core Concepts:
           - eUTxO:
               - dev/protocol/eutxo.md
@@ -385,6 +398,7 @@ nav:
           - Whitepaper: doc/whitepaper.md
           - ErgoScript Whitepaper: doc/ergoscript-whitepaper.md
           - On Contractual Money: doc/on-contractual-money.md
+          - CBDC: uses/cbdc.md
       - Roadmap & Scaling:
           - Roadmap Overview: roadmap.md
           - Scaling Overview: dev/protocol/scaling.md
@@ -473,7 +487,13 @@ nav:
           - Roles: contribute/roles.md
           - Contribute to the Docs!: contribute/docs.md
       - DAOs:
-          - Ergo Foundation: ef/ergo-foundation.md
+          - Ergo Foundation:
+              - About: ef/ergo-foundation.md
+              - Future: ef/ef-future.md
+              - Scope: ef/ef-scope.md
+              - Treasury: ef/ef-treasury.md
+              - Votes: ef/ef-votes.md
+              - Timeline: ef/ergo-timeline.md
           - DevDAO: devdao.md
           - InfraDAO: infradao.md
       - Funding & Support:
@@ -564,6 +584,7 @@ nav:
           - ErgoPay:
               - dev/wallet/payments/ergopay/ergo-pay.md
               - Tutorial: dev/wallet/payments/ergopay/ep-tutorial.md
+          - Message Signing: tutorials/message-signing.md
           - EIP Standards:
               - dev/wallet/eip-standards.md
               - EIP-1 Master Key Derivation: dev/wallet/standards/eip1.md
@@ -745,9 +766,9 @@ nav:
               - Rust Utilities: dev/oc/ergo_utilities.md
               - Plasma Overview: dev/lib/plasma.md
   - Deploy:
-      - dev/interact.md
+      - Overview: dev/interact.md
       - The Ergo Node:
-          - node/install.md
+          - Install Overview: node/install.md
           - Architecture: node/architecture.md
           - Setup Guides:
               - Manual Setup: node/install/manual.md
@@ -765,65 +786,82 @@ nav:
                   - Termux (Digest): node/install/node-android/termux-digest.md
                   - Proot (RocksDB): node/install/node-android/proot-rocksdb.md
               - Docker Deployment: node/install/docker.md
-      - Testnet & Sandboxes:
-          - node/testnet.md
-          - Full Sync: node/testnet/testnet-full.md
-          - CPU Mining: node/testnet/cpu-mining.md
-          - Fork Your Own Chain: node/testnet/mine-your-own-chain.md
-          - Testnet Resources: node/testnet/testnet-resources.md
-          - 6tx Testing: node/6tx-testing.md
-      - Protocol & Networking:
-          - node/protocol.md
-          - P2P Overview: dev/p2p/p2p-protocol-overview.md
-          - Handshaking: dev/p2p/p2p-handshake.md
-          - Network Messages: dev/p2p/network.md
-          - Peer Management: node/peer-management.md
-          - BlockP2P: dev/p2p/BlockP2P.md
-          - Modifiers:
-              - node/modifiers.md
-              - Exchange: dev/p2p/modifiers-exchange.md
-              - Processing: node/modifiers-processing.md
-              - Validation: node/modifiers-validation.md
-          - Synchronisation: node/synchronisation.md
-          - EIPs: dev/protocol/eip.md
-      - Configuration & Wallets:
-          - Node Wallet Overview: node/wallet.md
-          - Wallet Setup: node/wallet-setup.md
-          - Configuration:
-              - node/conf.md
-              - Full Example: node/conf/applicationconf.md
-              - Ergo Settings: node/conf/conf-node.md
-              - Cache Settings: node/conf/conf-cache.md
-              - Chain Settings: node/conf/conf-chain.md
-              - Wallet Settings: node/conf/conf-wallet.md
-              - Voting Settings: node/conf/conf-voting.md
-              - Bounded Mailbox: node/conf/conf-bounded.md
-              - Akka: node/conf/conf-akka.md
-              - Scorex: node/conf/conf-scorex.md
-              - Critical Dispatcher: node/conf/conf-crit.md
-              - API Dispatcher: node/conf/conf-api.md
-          - testnet.conf: node/testnet/testnetconf.md
-          - devnet.conf: node/testnet/devnetconf.md
-          - Tor Configuration: node/tor.md
-      - Modes of Operation:
-          - node/modes.md
-          - Full Node: node/modes/full-node.md
-          - Archival Full Node: node/modes/archival-node.md
-          - Archival Workflow: node/modes/archive-node-workflow.md
-          - Pruned Full Node: node/modes/pruned-full-node.md
-          - Pruned Implementation: node/modes/pruned/pruned-impl.md
-          - Light Full Node: node/modes/light-full-node.md
-          - Digest State: node/digest-state.md
-          - blocksToKeep: node/history-pruning.md
-          - Light Node Workflow: node/modes/light-techworkflow.md
-          - Light SPV: node/modes/light-spv-node.md
-          - SPV Overview: node/modes/spv.md
-          - Light SPV Workflow: node/modes/light-spv-mode-workflow.md
-      - API Access:
-          - Swagger Overview: node/swagger.md
-          - OpenAPI Spec: node/swagger/openapi.md
-          - Try it out!: node/swagger/swagger_api.md
-          - Indexed Node API: node/indexed-node.md
+          - Protocol & Networking:
+              - node/protocol.md
+              - P2P Overview: dev/p2p/p2p-protocol-overview.md
+              - Handshaking: dev/p2p/p2p-handshake.md
+              - Network Messages: dev/p2p/network.md
+              - Peer Management: node/peer-management.md
+              - BlockP2P: dev/p2p/BlockP2P.md
+              - Modifiers:
+                  - node/modifiers.md
+                  - Exchange: dev/p2p/modifiers-exchange.md
+                  - Processing: node/modifiers-processing.md
+                  - Validation: node/modifiers-validation.md
+              - Synchronisation: node/synchronisation.md
+              - EIPs: dev/protocol/eip.md
+          - Modes of Operation:
+              - node/modes.md
+              - Full Node: node/modes/full-node.md
+              - Archival Full Node: node/modes/archival-node.md
+              - Archival Workflow: node/modes/archive-node-workflow.md
+              - Pruned Full Node: node/modes/pruned-full-node.md
+              - Pruned Implementation: node/modes/pruned/pruned-impl.md
+              - Light Full Node: node/modes/light-full-node.md
+              - Digest State: node/digest-state.md
+              - blocksToKeep: node/history-pruning.md
+              - Light Node Workflow: node/modes/light-techworkflow.md
+              - Light SPV: node/modes/light-spv-node.md
+              - SPV Overview: node/modes/spv.md
+              - Light SPV Workflow: node/modes/light-spv-mode-workflow.md
+          - Testnet & Sandboxes:
+              - node/testnet.md
+              - Full Sync: node/testnet/testnet-full.md
+              - CPU Mining: node/testnet/cpu-mining.md
+              - Fork Your Own Chain: node/testnet/mine-your-own-chain.md
+              - Testnet Resources: node/testnet/testnet-resources.md
+              - 6tx Testing: node/6tx-testing.md
+          - Configuration & Wallets:
+              - Node Wallet Overview: node/wallet.md
+              - Wallet Setup: node/wallet-setup.md
+              - Configuration:
+                  - node/conf.md
+                  - Full Example: node/conf/applicationconf.md
+                  - Ergo Settings: node/conf/conf-node.md
+                  - Cache Settings: node/conf/conf-cache.md
+                  - Chain Settings: node/conf/conf-chain.md
+                  - Wallet Settings: node/conf/conf-wallet.md
+                  - Voting Settings: node/conf/conf-voting.md
+                  - Bounded Mailbox: node/conf/conf-bounded.md
+                  - Akka: node/conf/conf-akka.md
+                  - Scorex: node/conf/conf-scorex.md
+                  - Critical Dispatcher: node/conf/conf-crit.md
+                  - API Dispatcher: node/conf/conf-api.md
+              - testnet.conf: node/testnet/testnetconf.md
+              - devnet.conf: node/testnet/devnetconf.md
+              - Tor Configuration: node/tor.md
+          - API Access:
+              - Swagger Overview: node/swagger.md
+              - OpenAPI Spec: node/swagger/openapi.md
+              - Try it out!: node/swagger/swagger_api.md
+              - Indexed Node API: node/indexed-node.md
+      - Oracles:
+          - Overview: uses/oracles.md
+          - Oracle Core: dev/oc/oracle.md
+          - Bootstrap an Oracle Pool: tutorials/oracle-bootstrap.md
+      - Watchers (Rosen):
+          - Overview: eco/rosen/watcher.md
+          - Prerequisites: eco/rosen/rosen-preq.md
+          - Ergo Watcher: eco/rosen/ergo-watcher.md
+          - Bitcoin Watcher: eco/rosen/bitcoin-watcher.md
+      - Off-Chain Bots:
+          - Overview: dev/oc/off-chain-overview.md
+          - DEX Bots: dev/oc/dex_bots.md
+      - Blockchain Indexing:
+          - Overview: dev/tutorials/blockchain-indexing.md
+          - Explorer API: dev/tutorials/blockchain-indexing/explorer-apis.md
+          - Node API (Direct): dev/tutorials/blockchain-indexing/node-api-direct.md
+          - Custom Indexer: dev/tutorials/blockchain-indexing/custom-indexer.md
   - Mine:
       - Getting Started:
           - mining/mining-overview.md

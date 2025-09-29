@@ -2,6 +2,47 @@
 
 This page aims to provide a background on Ergo and answers to some of the most frequently asked questions. 
 
+## Quick links
+
+- [FAQ](#faq)
+  - [Quick links](#quick-links)
+  - [Background](#background)
+    - [What is Ergo?](#what-is-ergo)
+    - [Why '*Ergo*'?](#why-ergo)
+    - [Where can I see analytics on use?](#where-can-i-see-analytics-on-use)
+    - [How does it differ from Bitcoin?](#how-does-it-differ-from-bitcoin)
+    - [What is contractual money?](#what-is-contractual-money)
+    - [When was Ergo launched?](#when-was-ergo-launched)
+    - [Why 97,739,924?](#why-97739924)
+    - [What is the *Ergo Foundation*?](#what-is-the-ergo-foundation)
+    - [What is the Emission Schedule?](#what-is-the-emission-schedule)
+  - [Future Plans \& Ecosystem Growth](#future-plans--ecosystem-growth)
+    - [What are Ergo's future plans, especially in terms of how you grow your ecosystem?](#what-are-ergos-future-plans-especially-in-terms-of-how-you-grow-your-ecosystem)
+  - [Artificial Intelligence (AI)](#artificial-intelligence-ai)
+    - [What is Ergo's view on the current AI agent space, as many ecosystems are trying to attract developers to build agents on top of their platforms?](#what-is-ergos-view-on-the-current-ai-agent-space-as-many-ecosystems-are-trying-to-attract-developers-to-build-agents-on-top-of-their-platforms)
+  - [Privacy](#privacy)
+    - [How important is privacy for Ergo currently, and how do you plan to avoid the issues that some privacy-focused projects have faced, like legal challenges?](#how-important-is-privacy-for-ergo-currently-and-how-do-you-plan-to-avoid-the-issues-that-some-privacy-focused-projects-have-faced-like-legal-challenges)
+  - [Competitiveness \& Differentiation](#competitiveness--differentiation)
+    - [How do you see this space in terms of its competitiveness and how are you going to really differentiate yourself?](#how-do-you-see-this-space-in-terms-of-its-competitiveness-and-how-are-you-going-to-really-differentiate-yourself)
+  - [Discussions](#discussions)
+    - [Why Scala?](#why-scala)
+    - [How fast is Ergo?](#how-fast-is-ergo)
+  - [Mining](#mining)
+    - [What about energy consumption?](#what-about-energy-consumption)
+    - [Why was non-outsourceability turned off?](#why-was-non-outsourceability-turned-off)
+    - [What about 51% Attacks?](#what-about-51-attacks)
+    - [How will miners be supported after emissions?](#how-will-miners-be-supported-after-emissions)
+    - [Is Proof of Useful Work being considered?](#is-proof-of-useful-work-being-considered)
+  - [How can I stake my Erg?](#how-can-i-stake-my-erg)
+  - [Quantum](#quantum)
+  - [Atomic Composability](#atomic-composability)
+  - [Sharding](#sharding)
+  - [EIPs](#eips)
+    - [What is Ergo's approach to Forking?](#what-is-ergos-approach-to-forking)
+    - [EIP-0027](#eip-0027)
+    - [EIP-0037](#eip-0037)
+  - [General FAQs](#general-faqs)
+
 ## Background
 
 - Ergo is currently available on the following [wallets](https://ergoplatform.org/en/wallets/) and [exchanges](https://ergoplatform.org/en/exchanges/). 
