@@ -133,29 +133,29 @@ nav:
       - Reference:
           - Glossary: glossary.md
           - FAQ: faq.md
-          - Sitemap: site-map.md
-          - Tags: tags.md
+       #   - Sitemap: site-map.md
+        #  - Tags: tags.md
           - Common Misconceptions: fud-faq.md
   - Use:
       - Overview: uses/use-cases-overview.md
       - Get a Wallet:
-          - Overview: dev/wallets.md
-          - Resources:
-              - General Guides:
-                  - Access Issues: tutorials/access-issues.md
-                  - Cold Wallet Guide: tutorials/cold-wallet.md
-                  - Message Signing: tutorials/message-signing.md
-              - Wallet Guides:
-                  - Node Wallet Setup: node/wallet-setup.md
-                  - Satergo: dev/wallet/satergo.md
-                  - Nautilus: dev/wallet/nautilus.md
-                  - Minotaur: dev/wallet/minotaur.md
-                  - Minotaur Multi-Sig: dev/wallet/minotaur-multisig.md
-                  - SAFEW: dev/wallet/safew.md
-                  - Ledger: dev/wallet/payments/ledger.md
-                  - Paper Wallet: dev/wallet/paper-wallet.md
-                  - Satergo Vault: dev/wallet/satergo-vault.md
-      - Ecosystem & Use Cases:
+          - dev/wallets.md
+         
+          - General Guides:
+            - Access Issues: tutorials/access-issues.md
+            - Cold Wallet Guide: tutorials/cold-wallet.md
+            - Message Signing: tutorials/message-signing.md
+          - Wallet Guides:
+            - Node Wallet Setup: node/wallet-setup.md
+            - Satergo: dev/wallet/satergo.md
+            - Nautilus: dev/wallet/nautilus.md
+            - Minotaur: dev/wallet/minotaur.md
+            - Minotaur Multi-Sig: dev/wallet/minotaur-multisig.md
+            - SAFEW: dev/wallet/safew.md
+            - Ledger: dev/wallet/payments/ledger.md
+            - Paper Wallet: dev/wallet/paper-wallet.md
+            - Satergo Vault: dev/wallet/satergo-vault.md
+      - Ecosystem:
           - Bridges & Infrastructure:
               - Rosen Bridge:
                   - Overview: eco/rosen.md
@@ -488,10 +488,11 @@ nav:
         - The Howey Test: security.md
    
   - Develop:
-      - Get Started:
-        - Cheat Sheet: dev/get-started.md
-        - Developer Resources: dev/start/resources.md
+      - Cheat Sheet:
+        - dev/get-started.md
         - Students: students/index.md
+
+      #  - Developer Resources: dev/start/resources.md
        # - Back-end Resources: dev/resources/stack/back-end.md
       #  - Front-end Resources: dev/resources/stack/front-end.md
       - ErgoScript & Smart Contracts:
@@ -546,7 +547,7 @@ nav:
               - Create a P2S Address: tutorials/create-a-p2s.md
               - Multi-Signature: dev/scs/multi.md
               - ErgoScript vs ErgoTree: dev/scs/ergoscriptvergotree.md
-      - Wallet Development:
+      - Addresses & Payments:
           - Addresses: dev/wallet/address.md
           - Address Types: dev/wallet/address/address_types.md
           - Address Validation: dev/wallet/address/address_validation.md
@@ -739,9 +740,9 @@ nav:
               - Rust Utilities: dev/oc/ergo_utilities.md
               - Plasma Overview: dev/lib/plasma.md
   - Deploy:
-      - Interaction Overview: dev/interact.md
-      - Node Operations:
-          - Node Overview: node/install.md
+      - dev/interact.md
+      - The Ergo Node:
+          - node/install.md
           - Architecture: node/architecture.md
           - Setup Guides:
               - Manual Setup: node/install/manual.md
