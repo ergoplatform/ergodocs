@@ -8,6 +8,16 @@ tags:
 
 Ergo is a next-generation smart contract platform that ensures the economic freedom of ordinary people through secure, accessible, and decentralized financial tools. Backed by a powerful scripting language, advanced cryptographic features, and a foundation rooted in the best principles of blockchain technology, Ergo is poised to revolutionize the concept of Contractual Money.
 
+## Key Advantages
+
+- Built for Everyone: Designed to be accessible and useful for regular people, not just tech experts.
+- Secure & Private: Uses advanced cryptography to keep your funds safe and transactions private.
+- Fair Launch: No pre-mine or initial coin offerings (ICOs) mean a fairer distribution from the start.
+- Powerful Tools: Supports advanced features like smart contracts for building useful applications (dApps).
+- Sustainable: Features like Storage Rent help keep the network efficient and long-lasting.
+
+Explore the [Key Features](protocol-overview.md) for a high-level overview.
+
 ## The Vision Behind Ergo
 
 ### A Fusion of Research and Practicality
