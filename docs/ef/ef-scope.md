@@ -74,7 +74,7 @@ Some Ergo Foundation members also hold developer positions, although their devel
 
 - Morphic manages JVM-related developers (Wallet devs, Scala devs, etc.) and the [sigmastate-interpreter](sigmastate-interpreter.md). (salaried)
 - Mark Glasgow manages this documentation and various other developer-adjacent tasks. (salaried)
-- Mohammad Hasan Samadani (mhs_sam) manages a team of graduates and PhD students who have produced [Ergo Raffle](ergoraffle.md), [ErgoWell](ergowell.md), [Minotaur-wallet](wallets.md), and [Rosen Bridge](rosen.md). (rewarded until April 2024 - now working on a volunteer basis)
+- Mohammad Hasan Samadani (mhs_sam) manages a team of graduates and PhD students who have produced [Ergo Raffle](ergoraffle.md), [ErgoWell](ergowell.md), [Minotaur Wallet](dev/wallet/minotaur.md), and [Rosen Bridge](rosen.md). (rewarded until April 2024 - now working on a volunteer basis)
 - [Fleet-sdk](https://github.com/fleet-sdk) is managed by Alison Robson (anon_br). (salaried)
 
 Additionally, outwith the EF members, we fund a few roles in development.  

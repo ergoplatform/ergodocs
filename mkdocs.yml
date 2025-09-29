@@ -131,17 +131,17 @@ nav:
       - Welcome: index.md
       - Why Ergo: dev/protocol/why.md
       - Getting Started: getting-started-with-ergo.md
+      - FAQ: faq.md
+      - Wallets: wallets-overview.md
       - Using Ergo: using-ergo-intermediate.md
       - Building on Ergo: building-on-ergo-developers.md
       - Securing the Network: securing-the-network-miners.md
-      - Wallets: wallets.md
-      - Learn: dev/protocol/protocol-overview.md
-      - Contribute: contribute.md
+      - Learn: learn.md
       - Community: engage-with-the-ergo-community.md
+      - Contribute: contribute.md
       - Roadmap: roadmap.md
       - Reference:
           - Glossary: glossary.md
-          - FAQ: faq.md
        #   - Sitemap: site-map.md
         #  - Tags: tags.md
           - Common Misconceptions: fud-faq.md
@@ -469,17 +469,13 @@ nav:
           - ErgoHack VII Reputation System: events/pdf/ergohackvii/REPUTATION_SYSTEM.md
       - Developer Contributions:
           - contribute/devs.md
-          - DevDAO: devdao.md
           - Technical Guidelines: contribute/technical-guidelines.md
           - Roles: contribute/roles.md
           - Contribute to the Docs!: contribute/docs.md
-      - Ergo Foundation:
-          - About: ef/ergo-foundation.md
-          - Future: ef/ef-future.md
-          - Scope: ef/ef-scope.md
-          - Treasury: ef/ef-treasury.md
-          - Votes: ef/ef-votes.md
-          - Timeline: ef/ergo-timeline.md
+      - DAOs:
+          - Ergo Foundation: ef/ergo-foundation.md
+          - DevDAO: devdao.md
+          - InfraDAO: infradao.md
       - Funding & Support:
           - Bounties: contribute/bounties.md
           - Grants: contribute/grants.md
@@ -497,7 +493,7 @@ nav:
         - The Howey Test: security.md
    
   - Develop:
-      - Cheat Sheet:
+      - One-Pager:
         - dev/get-started.md
         - Students: students/index.md
 
@@ -793,7 +789,7 @@ nav:
       - Configuration & Wallets:
           - Node Wallet Overview: node/wallet.md
           - Wallet Setup: node/wallet-setup.md
-          - application.conf:
+          - Configuration:
               - node/conf.md
               - Full Example: node/conf/applicationconf.md
               - Ergo Settings: node/conf/conf-node.md

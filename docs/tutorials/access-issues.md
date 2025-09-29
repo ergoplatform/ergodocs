@@ -14,7 +14,7 @@ This page provides solutions to common access issues that users may encounter wi
 
 /// details | Your seed phrase / mnemonic
      {type: info, open: true}
-A wallet is simply an *interface* for the blockchain, if you have your seed phrase, simply restore in one of our [wallets](wallets.md)
+A wallet is simply an *interface* for the blockchain, if you have your seed phrase, simply restore in one of our [wallets](wallets-overview.md)
 ///
 
 ## I have my seed phrase but the wallet restored doesn't contain any ERG and is a different address

@@ -14,7 +14,7 @@ The Ergo Node is the core software that connects to the Ergo [P2P network](p2p-p
 
 /// details | Alternatives
     {type: info, open: true}
-If you're simply looking for a secure place to store your ERG, see the [wallets](wallets.md) page. Some wallets like [Satergo](satergo.md) offer an integrated option to install and run a full node.
+If you're simply looking for a secure place to store your ERG, see the [Wallets](wallets-overview.md) page. Some wallets like [Satergo](satergo.md) offer an integrated option to install and run a full node.
 ///
 
 ///// details | Installing the Ergo Reference Client

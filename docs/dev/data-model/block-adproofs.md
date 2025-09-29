@@ -10,7 +10,7 @@ tags:
 
 *(Back to: [Block Overview](block.md))*
 
-**ADProofs**, short for Authenticated Data Proofs, are a crucial component of Ergo's [block structure](block.md) that allows for efficient and secure [validation](validation.md) of [transactions](transactions.md) without requiring full blockchain download. They are particularly beneficial for "[light clients](modes.md)" – [wallets](wallets.md) or [nodes](install.md) that don't store the entire blockchain.
+**ADProofs**, short for Authenticated Data Proofs, are a crucial component of Ergo's [block structure](block.md) that allows for efficient and secure [validation](validation.md) of [transactions](transactions.md) without requiring full blockchain download. They are particularly beneficial for "[light clients](modes.md)" – [wallets](wallets-overview.md) or [nodes](install.md) that don't store the entire blockchain.
 
 **Function:**
 

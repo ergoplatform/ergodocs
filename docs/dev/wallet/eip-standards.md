@@ -26,7 +26,7 @@ Currently, the primary wallets implementing the EIP-0012 dApp Connector standard
 *   **[Nautilus Wallet](nautilus.md)** (Browser Extension)
 *   **Ergo Mobile Wallet (Android/iOS)**
 
-**Note:** Yoroi Wallet's Ergo support is deprecated. Developers and users should utilize Nautilus or the official Ergo Mobile Wallet for dApp interactions. See the main [Wallets page](../wallets.md) for more options.
+**Note:** Yoroi Wallet's Ergo support is deprecated. Developers and users should utilize Nautilus or the official Ergo Mobile Wallet for dApp interactions. See the main [Wallets page](../../wallets-overview.md) for more options.
 
 ## EIP-0012: dApp Connector Overview
 

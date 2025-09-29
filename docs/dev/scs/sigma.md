@@ -77,7 +77,7 @@ This contract is an example of a **3-out-of-5** threshold signature scheme. It c
 [Ring signatures](ring.md) provide [privacy](zkp.md) by allowing a user to sign a transaction on behalf of a group without revealing which group member signed it. This is particularly useful for creating anonymous transactions and decentralized mixers, such as **[ErgoMixer](ergomixer.md)**. The privacy of ring signatures makes them ideal for applications where anonymity is crucial, such as anonymous donations or private payments.
 
 ### 3. **Threshold Signatures**
-[Threshold signatures](threshold.md) are critical for decentralized control. For example, a corporate [wallet](wallets.md) could be protected by a 3-out-of-5 signature scheme, ensuring that no single party can unilaterally control the funds.
+[Threshold signatures](threshold.md) are critical for decentralized control. For example, a corporate [wallet](../wallets.md) could be protected by a 3-out-of-5 signature scheme, ensuring that no single party can unilaterally control the funds.
 
 ### 4. **Time-Locked Conditions**
 Σ-protocols can be combined with time-locked conditions. For instance, you can construct a contract that allows a transaction to be spent if either a ring signature is provided by a set of participants **before** a certain [block height](block-header.md), or the funds can be refunded by a single party **after** the block height has passed.

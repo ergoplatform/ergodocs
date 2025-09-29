@@ -75,7 +75,7 @@ For more information about the scope of the Foundation's work, please refer to t
 
 **Mohammad Hasan Samadani (mhs_sam)** holds a PhD in computer science and has over 12 years of experience in security and software development as a product owner, researcher, and team leader. He became a board member of the Ergo Foundation in 2020 after making significant contributions to the development of the Ergo mining infrastructure, Stratum server, and ergopool (a smart contract-based pool to bypass pool resistance of Autolykos v1).
 
-- **Role & Responsibilities:** In addition to his voting duties within the EF, he fosters innovation by incubating projects. His notable contributions include the development of [Ergo Raffle](ergoraffle.md), [ErgoWell](ergowell.md), [Minotaur-wallet](wallets.md), and the [Rosen Bridge](rosen.md).
+- **Role & Responsibilities:** In addition to his voting duties within the EF, he fosters innovation by incubating projects. His notable contributions include the development of [Ergo Raffle](ergoraffle.md), [ErgoWell](ergowell.md), [Minotaur Wallet](dev/wallet/minotaur.md), and the [Rosen Bridge](rosen.md).
 
 **Joseph Armeanio** has been involved in crypto on the investment side since 2013 and was a partner CIO at Big Bear Investments. He has been on the board of the Universal Education Foundation, a 501(c)3 organization, since 2008. He is passionate about counter-economic frameworks and tools for societal benefit. His role as a business developer involves creating partnerships in the crypto industry, educational partnerships, and research opportunities while promoting the adoption of Ergo tooling in the public and non-profit sectors.
 

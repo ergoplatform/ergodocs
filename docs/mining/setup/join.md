@@ -22,7 +22,7 @@ Before you start mining, make sure you have the following:
 ## Steps to Start Mining
 
 1. Choose your preferred [mining software](software.md). If you're using a dedicated rig, select an appropriate [operating system](os.md).
-2. Set up a [wallet](wallets.md) where your mining payouts will be deposited.
+2. Set up a [wallet](../../wallets-overview.md) where your mining payouts will be deposited.
 3. Select a [mining pool](pools.md) to join or look into [solo mining](solo.md)
 4. Consider [overclocking](overclocking.md) your GPU to maximize your mining performance. Be aware that this can increase power consumption and potentially shorten the lifespan of your hardware.
 5. Check out the [Miner Tooling](miner-tooling.md) and keep an eye on ways to participate in [miner governance](governance.md) in future.

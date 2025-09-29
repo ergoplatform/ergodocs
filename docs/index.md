@@ -11,7 +11,7 @@ This guide helps you find what you need, whether you want to learn the basics, u
     "title": "🔬 Learn",
     "content": "Get a high-level overview of how Ergo works. ",
     "image": "./assets/img/grid/01.png",
-    "url": "dev/protocol/protocol-overview.md"
+    "url": "learn.md"
   },
   {
     "title": "🛠 Start Developing",
@@ -36,7 +36,7 @@ This guide helps you find what you need, whether you want to learn the basics, u
     "title": "💳 Wallets",
     "content": "Storing your ERG safely & securely.",
     "image": "./assets/img/grid/05.png",
-    "url": "dev/wallets.md"
+    "url": "wallets-overview.md"
   },
   {
     "title": "❓ FAQ",
@@ -53,15 +53,15 @@ This guide helps you find what you need, whether you want to learn the basics, u
 
 - [Why Ergo](dev/protocol/why.md)
 - [Getting Started](getting-started-with-ergo.md)
+- [FAQ](faq.md)
+- [Wallets](wallets-overview.md)
 - [Using Ergo](using-ergo-intermediate.md)
 - [Building on Ergo](building-on-ergo-developers.md)
 - [Securing the Network](securing-the-network-miners.md)
-- [Wallets](wallets.md)
+- [Learn](learn.md)
 - [Ecosystem Overview](uses/use-cases-overview.md)
-- [Learn](dev/protocol/protocol-overview.md)
-- [Contribute](contribute.md)
 - [Community](engage-with-the-ergo-community.md)
+- [Contribute](contribute.md)
 - [Roadmap](roadmap.md)
 - [Glossary](glossary.md)
-- [FAQ](faq.md)
 - [Common Misconceptions](fud-faq.md)

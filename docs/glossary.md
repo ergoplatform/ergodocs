@@ -95,7 +95,7 @@
 * **Hardware Wallet**: A physical device used to store cryptocurrency offline securely.
 * **Hash**: A mathematical function that takes an input and produces a fixed-size string of characters, used to ensure data integrity and secure transactions.
 * **Hash rate**: The computational power of a blockchain network, measuring the speed at which miners or validators can solve complex mathematical problems.
-* **[Hot Wallet](wallets.md)**: A cryptocurrency wallet that is connected to the internet and used for online transactions.
+* **[Hot Wallet](wallets-overview.md)**: A cryptocurrency wallet that is connected to the internet and used for online transactions.
 * **[Howey Test](security.md)**: A legal framework used to determine whether a financial instrument qualifies as an "investment contract" under US securities law.
 
 ## I

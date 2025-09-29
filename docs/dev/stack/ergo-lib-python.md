@@ -7,7 +7,7 @@
 This library equips developers with tools to:
 
 * Build and structure [Ergo transactions](transactions.md).
-* Generate cryptographic keys and [wallet addresses](wallets.md).
+* Generate cryptographic keys and [wallet addresses](../wallet/address.md).
 * Sign transactions securely.
 * Utilize various Ergo-specific data types and chain structures.
 
