@@ -133,16 +133,16 @@ nav:
       - Why Ergo: dev/protocol/why.md
       - Getting Started: getting-started-with-ergo.md
       - FAQ: faq.md
-      - Wallets: wallets-overview.md
       - Using Ergo:
           - Overview: using-ergo-intermediate.md
           - Run a Node: node/install.md
           - Run Oracles: dev/oc/oracle.md
           - Run Watchers (Rosen): eco/rosen/watcher.md
           - Run Off-Chain Bots: dev/oc/dex_bots.md
+      - Wallets: wallets-overview.md
       - Building on Ergo:
           - Overview: building-on-ergo-developers.md
-          - One-Pager (What it is): dev/get-started.md
+          - One-Pager: dev/get-started.md
       - Securing the Network: securing-the-network-miners.md
       - Learn: learn.md
       - Community: engage-with-the-ergo-community.md
@@ -845,10 +845,7 @@ nav:
               - OpenAPI Spec: node/swagger/openapi.md
               - Try it out!: node/swagger/swagger_api.md
               - Indexed Node API: node/indexed-node.md
-      - Oracles:
-          - Overview: uses/oracles.md
-          - Oracle Core: dev/oc/oracle.md
-          - Bootstrap an Oracle Pool: tutorials/oracle-bootstrap.md
+  
       - Watchers (Rosen):
           - Overview: eco/rosen/watcher.md
           - Prerequisites: eco/rosen/rosen-preq.md
@@ -857,6 +854,10 @@ nav:
       - Off-Chain Bots:
           - Overview: dev/oc/off-chain-overview.md
           - DEX Bots: dev/oc/dex_bots.md
+      - Oracles:
+          - Overview: uses/oracles.md
+          - Oracle Core: dev/oc/oracle.md
+          - Bootstrap an Oracle Pool: tutorials/oracle-bootstrap.md
       - Blockchain Indexing:
           - Overview: dev/tutorials/blockchain-indexing.md
           - Explorer API: dev/tutorials/blockchain-indexing/explorer-apis.md
