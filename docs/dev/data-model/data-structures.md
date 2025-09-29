@@ -26,7 +26,7 @@ Here's a list of the main data structures used within the Ergo ecosystem:
      - In the [Extension Block Merkle Tree](merkle-extension.md), securing key-value data like miner votes and protocol parameters.
      - In creating [Merkle Batch Proofs](merkle-batch-proof.md), allowing efficient validation of the integrity and authenticity of data transactions. It supports the serialization and deserialization of Merkle proofs in batches, significantly improving the speed and efficiency of data verification processes.
      - In generating compact proofs of state transitions, enabling lightweight clients to securely participate in the network. An example of how a lite client can check a Merkle-tree-based membership proof is detailed in the [Lite Client Checking Merkle Proof](merkle-light-proof.md) documentation.
-   - **Documentation Reference**: [Merkle Trees in Ergo](merkle-tree.md)
+   - **Documentation Reference**: [Merkle Trees in Ergo](merkle-tree-structures.md)
 
 ## 3. **Sigma Trees (ErgoTree)**
    - **Purpose**: Sigma Trees, also known as ErgoTrees, are specialized data structures that represent logical propositions and cryptographic conditions in the Ergo blockchain. These trees are used in the execution of smart contracts and scripts, encapsulating complex logic and cryptographic proofs.

@@ -9,7 +9,7 @@ tags:
 
 # Proxy Contracts
 
-Proxy contracts are a specific [smart contract pattern](smart-contracts-overview.md) used on Ergo. They act as intermediaries, allowing users to interact with decentralized applications (dApps) in a controlled and secure manner, especially in scenarios where direct wallet-dApp communication might be complex or limited.
+Proxy contracts are a specific [smart contract](ergoscript.md) pattern used on Ergo. They act as intermediaries, allowing users to interact with decentralized applications (dApps) in a controlled and secure manner, especially in scenarios where direct wallet-dApp communication might be complex or limited.
 
 ## Origins and Purpose
 

@@ -25,7 +25,7 @@ The term 'box' in Ergo's context captures the idea that these entities are like 
 - The box is not just a simple coin; it houses data, code, and [registers](registers.md), with all of its contents exclusively stored in the registers.
 - Four pre-defined registers contain the box's monetary value, its protection script (the [ErgoTree](ergotree.md)), and the ID of the transaction that created the box.
 - Each box has a unique ID, derived from the unique contents of the box, including the data of the transaction that created it.
-- Boxes are integral to the Ergo [protocol](protocol-overview.md). The active box set (UTXO set) is authenticated through a [hash-based data structure](structures/merkle/merkle-tree.md), facilitating the development of [lightweight full nodes](light-full-node.md), as detailed in [this paper](https://eprint.iacr.org/2016/994).
+- Boxes are integral to the Ergo [protocol](protocol-overview.md). The active box set (UTXO set) is authenticated through a [hash-based data structure](merkle-tree-structures.md), facilitating the development of [lightweight full nodes](light-full-node.md), as detailed in [this paper](https://eprint.iacr.org/2016/994).
 - A box can hold up to six additional [registers](registers.md) (R4-R9) with typed data, accessible by the script.
 - Transactions consist of both *input* and *output* boxes.
 

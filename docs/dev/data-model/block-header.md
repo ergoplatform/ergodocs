@@ -23,7 +23,7 @@ The `Header` class in [Header.scala](https://github.com/ergoplatform/ergo/blob/m
 * **version:** Indicates the protocol version used to create the block. This allows for future upgrades and changes to the blockchain while maintaining backward compatibility.
 * **parentId:** The ID of the previous block in the blockchain. This links blocks together, forming a chain.
 * **ADProofsRoot:** A cryptographic digest of the [ADProofs](block-adproofs.md) that validate changes to the [UTXO set](eutxo.md).
-* **stateRoot:** A digest representing the root of the [Merkle tree](structures/merkle/merkle-tree.md) that captures the state of the UTXO set after this block is applied.
+* **stateRoot:** A digest representing the root of the [Merkle tree](merkle-tree-structures.md) that captures the state of the UTXO set after this block is applied.
 * **transactionsRoot:** A digest of the Merkle root of all [transactions](block-transactions.md) included in the block.
 * **timestamp:** The time when the block was created, as reported by the miner.
 * **nBits:** Represents the [difficulty](difficulty.md) target for the block, determining how hard it was to mine.
@@ -37,6 +37,6 @@ The `Header` class in [Header.scala](https://github.com/ergoplatform/ergo/blob/m
 
 ## Key Concepts
 
-* **[Merkle Tree](structures/merkle/merkle-tree.md):** A data structure used extensively in blockchains to efficiently verify data integrity. It allows for quick verification that a particular piece of data is included in a larger set.
+* **[Merkle Tree](merkle-tree-structures.md):** A data structure used extensively in blockchains to efficiently verify data integrity. It allows for quick verification that a particular piece of data is included in a larger set.
 * **[UTXO (Unspent Transaction Output) Set](eutxo.md):** The record of all unspent transaction outputs on the blockchain, representing the current distribution of the cryptocurrency.
 * **[Proof-of-Work (PoW)](autolykos.md):** A consensus mechanism that requires miners to solve a computationally intensive puzzle to add blocks to the blockchain. This ensures the security and immutability of the chain.

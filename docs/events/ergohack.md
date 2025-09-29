@@ -81,7 +81,7 @@ Explore the history of innovation. Click any event name to jump to its details o
       * **Overview**: An AI-powered quest game on Ergo where users interact with an AI to solve puzzles and unlock an ERG-filled prize wallet.
       * [Developer Overview & Documentation](https://drive.google.com/file/d/1mH5Q7T6SHXzQAlpP-tfwWfgkL4rn0wuJ/view?usp=sharing) | [Launch: Saturday June 7th, 7AM PST (2PM UTC)](https://xcancel.com/tmr_erg/status/1929634877315350699)
 
-8.  [**RustChain**](rustchain.md)
+8.  [**RustChain**](rust-chain.md)
 
       * **Overview**: A Proof-of-Antiquity blockchain integrating a "conscience-bound" AI, aiming to reward legacy hardware.
       * [**GitHub**](https://github.com/Scottcjn/Rustchain)

@@ -24,7 +24,7 @@ Maximize your financial engagement with in-depth information on:
 - **[Yield Farming & Staking](yield.md)**: Earn passive income through staking and liquidity pools.
 - **[Arbitrage Opportunities](arb.md)**: Leverage price differentials across platforms.
 - **[Using Financial Instruments](sigmausd.md)**: Stabilize your investments with instruments like SigmaUSD.
-- **[Options Trading](tutorials/trading-options.md)**: Dive deep into options trading on Ergo.
+- **[Options Trading](trading-options.md)**: Dive deep into options trading on Ergo.
 - **[High-Risk Rewards](degfi.md)**: Navigate the rewards and risks with DegFi on Ergo.
 
 ### For Developers

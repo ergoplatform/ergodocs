@@ -8,9 +8,9 @@ tags:
   - Guide
 ---
 
-# 🧱 MiningCore Setup Tutorial for Linux
+# MiningCore Setup Tutorial for Linux
 
-> 💡 If you're using **Windows 10**, see the [Windows Tutorial](pool_win.md)
+> If you're using **Windows 10**, see the [Windows Tutorial](pool_win.md)
 
 ---
 
@@ -35,7 +35,7 @@ Requirements:
 
 ---
 
-##  Step 3: Create the Database Schema
+## Step 3: Create the Database Schema
 
 ### Login to PostgreSQL
 
@@ -56,7 +56,7 @@ CREATE DATABASE miningcore OWNER miningcore;
 
 ## Step 4: Load Schema SQL Files
 
-> ✅ Make sure you can connect using `psql` before proceeding.
+Make sure you can connect using `psql` before proceeding.
 
 - As the `postgres` user, run:
 
@@ -72,7 +72,7 @@ psql -d miningcore -f miningcore/src/Miningcore/Persistence/Postgres/Scripts/cre
 
 ---
 
-##  Step 5: Create a Pool Table
+## Step 5: Create a Pool Table
 
 - Run the following command **once per pool** you set up:
 
@@ -331,24 +331,24 @@ Miningcore -c <your-config>.json
 
 ---
 
-### ✅ Expected Log Output (Success)
+### Expected Log Output (Success)
 
 When everything is working properly, your logs should show the following messages:
 
-#### 🟢 Node Online and Synced
+#### Node Online and Synced
 
 ```
 [2022-03-16 14:26:12.9080] [I] [ergo1] All daemons online
 [2022-03-16 14:26:12.9345] [I] [ergo1] Daemon is synced with blockchain
 ```
 
-#### 🟢 Pool Online
+#### Pool Online
 
 ```
 [2022-03-16 14:26:14.4346] [I] [ergo1] Pool Online
 ```
 
-#### 📊 Pool Info Summary
+#### Pool Info Summary
 
 ```
 Mining Pool:            <YOUR POOL NAME>
@@ -363,13 +363,13 @@ Stratum Port(s):        3056, 4056, 3156, 4156
 Pool Fee:               <YOUR FEE>
 ```
 
-> ⚠️ If the **network difficulty** or other values look off, double-check your diff setting in the config.
+> If the **network difficulty** or other values look off, double-check your diff setting in the config.
 
 ---
 
 ## Step 8: Network Setup Notes
 
-> If your **miner**, **pool**, or **node** are on different machines, you will need to **open ports** to allow communication between them.
+If your **miner**, **pool**, or **node** are on different machines, you will need to **open ports** to allow communication between them.
 
 ### Initial Mining Traffic Flow
 
@@ -386,11 +386,11 @@ Once all components connect, traffic becomes **bi-directional**.
 ### Port Opening Guidelines
 
 - If **all components are on the same machine**:
-    - ✅ No need to open ports — uses `localhost`
+    - No need to open ports — uses `localhost`
 
 - If using **LAN or WAN**:
-    - 🖥️ Open required ports on your OS firewall
-    - 🌐 On WAN, configure **port forwarding** on your router
+    - Open required ports on your OS firewall
+    - On WAN, configure **port forwarding** on your router
 
 ---
 
@@ -398,4 +398,4 @@ Once all components connect, traffic becomes **bi-directional**.
 
 You now have a fully operational MiningCore pool on Linux.
 
-> Make sure everything is synced, ports are configured, and logs show green — then start mining! ⛏️
+> Make sure everything is synced, ports are configured, and logs show green — then start mining!

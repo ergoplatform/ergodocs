@@ -84,7 +84,7 @@ By transforming UTXOs from simple value trackers to programmable state container
 ### 4.2 Advanced Transaction Mechanisms
 
 * [Chained Transactions](chained.md): Explore how sequentially dependent transactions can be composed.
-* [Merkle Tree in Transactions](tx-merkle.md): Understanding how [Merkle trees](structures/merkle/merkle-tree.md) provide data integrity and facilitate efficient proofs.
+* [Merkle Tree in Transactions](tx-merkle.md): Understanding how [Merkle trees](merkle-tree-structures.md) provide data integrity and facilitate efficient proofs.
 * [Transaction Signing](signing.md) and [Backend Signing](sign-tx.md): Cryptographic principles and implementations for authenticating transactions.
 * [Transaction Validation](validation.md): Comprehensive overview of on-chain verification processes that ensure correctness and adherence to protocol rules.
 
@@ -188,7 +188,7 @@ Ergo employs a robust, stateless transaction validation approach:
 
 ### 10.1 Authenticated Data Structures
 
-* [Merkle Trees](structures/merkle/merkle-tree.md) for efficient state commitment.
+* [Merkle Trees](merkle-tree-structures.md) for efficient state commitment.
     * [Merkle Batch Proof](structures/merkle/merkle-batch-proof.md)
     * [Merkle Extension](structures/merkle/merkle-extension.md)
     * [Merkle Light Proof](structures/merkle/merkle-light-proof.md)

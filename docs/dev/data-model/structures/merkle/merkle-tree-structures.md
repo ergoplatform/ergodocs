@@ -7,7 +7,7 @@ tags:
 
 # Merkle Trees in Ergo
 
-*(Back to: [Data Structures](data-structures.md) | [Data Model](data-model.md))*
+*(Back to: [Data Model Overview](data-model.md))*
 
 ## Overview
 
@@ -26,13 +26,13 @@ The Merkle Tree format in Ergo follows a specific structure and encoding scheme 
 
 ### Transaction Merkle Tree
 
-The [Transaction Merkle Tree](tx-merkle.md) is a core component of Ergo, combining all transactions and their corresponding spending proofs into a single Merkle Tree. This structure provides a cryptographic guarantee that the transaction data has not been tampered with, playing a critical role in the [Proof-of-Work (PoW)](autolykos-protocol.md) mechanism. The Merkle Root, derived from this tree, is included in the [block header](block-header.md), ensuring that any change to a transaction within the block results in a different Merkle Root.
+The [Transaction Merkle Tree](tx-merkle.md) is a core component of Ergo, combining all transactions and their corresponding spending proofs into a single Merkle Tree. This structure provides a cryptographic guarantee that the transaction data has not been tampered with, playing a critical role in the [Proof-of-Work (PoW)](autolykos.md) mechanism. The Merkle Root, derived from this tree, is included in the [block header](block-header.md), ensuring that any change to a transaction within the block results in a different Merkle Root.
 
 **Code Reference**: The implementation can be found in the [BlockTransactions.scala](https://github.com/ergoplatform/ergo/blob/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/history/BlockTransactions.scala) file.
 
 ### Extension Block Merkle Tree
 
-The [Extension Block Merkle Tree](merkle-extension.md) secures key-value data like [miner votes](voting.md) and [protocol parameters](voting.md). It organizes this data into a binary Merkle Tree, with leaf nodes containing key-value pair hashes and non-leaf nodes containing child node hashes. The root hash is included in the block header, cryptographically committing to the [Extension Block](extension-section.md) data. Merkle proofs allow efficient verification of specific key-value pairs without downloading the entire block. This tree ensures data integrity and enables secure storage of auxiliary blockchain information.
+The [Extension Block Merkle Tree](merkle-extension.md) secures key-value data like [miner votes](governance.md) and [protocol parameters](governance.md). It organizes this data into a binary Merkle Tree, with leaf nodes containing key-value pair hashes and non-leaf nodes containing child node hashes. The root hash is included in the block header, cryptographically committing to the [Extension Block](extension-section.md) data. Merkle proofs allow efficient verification of specific key-value pairs without downloading the entire block. This tree ensures data integrity and enables secure storage of auxiliary blockchain information.
 
 **Code Reference**: The implementation can be found in the [Extension.scala](https://github.com/ergoplatform/ergo/blob/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/history/extension/Extension.scala) file.
 
