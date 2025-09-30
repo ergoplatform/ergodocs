@@ -29,8 +29,6 @@ For a step by step guide on setting up and using Nautilus, watch the [comprehens
 
 Aster is a decentralized exchange on BNB Chain that supports both regular token swaps and high-leverage perpetual futures trading. It aggregates liquidity across exchanges on BNB Chain to offer better trading rate
 
-(Ast*a*r is a completely separate Layer-1 blockchain (a Polkadot parachain) and is unrelated to Aster DEX.)
-
 
 ---
 
@@ -44,8 +42,8 @@ Aster is a decentralized exchange on BNB Chain that supports both regular token 
 
 ## Step 1: Prerequisites
 
-1.  **Install a BNB Chain-compatible wallet:** MetaMask or Rabby (browser wallets) work well.
-2.  **Add BNB Chain to your wallet:** Use [Chainlist](https://chainlist.org/) for a one-click network add, or add it manually (Chain ID `56`, RPC `https://bsc-dataseed.binance.org`, etc.).
+1.  **Install a BNB Chain-compatible wallet:** [MetaMask](https://metamask.io/en-GB) or Rabby (browser wallets) work well.
+2.  **Add BNB Chain to your wallet:** In Metamask you can go to Settings -> Networks -> BNB, or use [Chainlist](https://chainlist.org/) for a one-click network add, or add it manually (Chain ID `56`, RPC `https://bsc-dataseed.binance.org`, etc.). 
 3.  **Fund the wallet with a little BNB:** You'll need BNB for gas fees on BNB Smart Chain. A few dollars' worth of BNB is sufficient for several transactions.
 4.  **Prepare ERG in an Ergo wallet:** Use the Nautilus wallet (on Ergo) holding the ERG you want to bridge.
 5.  **Open the Rosen Bridge app:** Have the Rosen interface ready in a browser tab.
@@ -80,7 +78,7 @@ Once the bridge is done, you will receive rsERG tokens on BNB Chain. It's crucia
 
 ### Where to Look:
 
-* **GeckoTerminal:** Use the [GeckoTerminal search for "rsERG" on BSC](https://www.geckoterminal.com/bsc/search?q=rsERG). This can show existing pools and the token contract address.
+* **GeckoTerminal:** Use the GeckoTerminal search for "rsERG" on BSC. This can show existing pools and the token contract address.
 * **PancakeSwap Info:** The [PancakeSwap analytics site](https://pancakeswap.finance/info) (or the PancakeSwap interface itself) can show token details if you search for rsERG.
 * **BscScan Token Tracker:** Use the [BscScan Token Approval Checker](https://bscscan.com/tokenapprovalchecker) to see and manage token approvals later (more on this in Step 6).
 
@@ -117,7 +115,7 @@ At this stage, you have rsERG on BNB Chain and your wallet is connected to Aster
 
 Providing liquidity means you supply two tokens (rsERG and another token like BNB or USDT) to PancakeSwap's pool, earning a share of trading fees. **Ensure you understand impermanent loss and the volatility of ERG before providing liquidity**.
 
-1.  **Find the Pool on GeckoTerminal:** Using the rsERG search results on [GeckoTerminal](https://www.geckoterminal.com/bsc/search?q=rsERG), choose the pool you want (for example, `rsERG/WBNB` or `rsERG/USDT`). Click its "Trade" button, which will open PancakeSwap with that pair.
+1.  **Find the Pool on GeckoTerminal:** Using the rsERG search results on [GeckoTerminal](https://www.geckoterminal.com), choose the pool you want (for example, `rsERG/WBNB` or `rsERG/USDT`). Click its "Trade" button, which will open PancakeSwap with that pair.
 2.  **Connect Wallet on PancakeSwap:** Once PancakeSwap opens, connect your MetaMask/Rabby wallet (ensure it's on BNB Chain network).
 3.  **Approve Tokens:** If this is your first time using rsERG (or the paired token) on PancakeSwap, you must approve each token for the liquidity contract. When prompted, allow PancakeSwap to spend your rsERG tokens (and the other token, e.g. WBNB). It's recommended to set a low approval limit initially (perhaps just the amount you plan to add) rather than unlimited, as a safety measure. You can always approve more later.
 4.  **Enter Liquidity Amounts:** Specify how much rsERG and the other token to deposit. PancakeSwap V3 uses concentrated liquidity, so you'll also need to set a **price range** for your liquidity position. For example, you might provide liquidity only when ERG is between \$0.5 and \$1.0 (the interface will guide this with a slider or inputs). If you're unsure, you can use the default full range or a wide range, but note that a very wide range is similar to V2 liquidity and a narrow range is higher risk/reward.

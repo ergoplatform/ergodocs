@@ -513,13 +513,9 @@ nav:
         - The Howey Test: security.md
    
   - Develop:
-      - One-Pager:
-        - dev/get-started.md
+      - Start Here:
+        - One-Pager: dev/get-started.md
         - Students: students/index.md
-
-      #  - Developer Resources: dev/start/resources.md
-       # - Back-end Resources: dev/resources/stack/back-end.md
-      #  - Front-end Resources: dev/resources/stack/front-end.md
       - ErgoScript & Smart Contracts:
           - dev/scs/ergoscript.md
           - Key Concepts: dev/scs/ergoscript/ergoscript-key-concepts.md
