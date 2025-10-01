@@ -55,7 +55,7 @@ This section is designed to provide a comprehensive starting point for anyone ne
 
 ### The Essentials: Understanding Ergo's Vision
 
-*   **[Why Ergo?](dev/protocol/why.md):** A compelling narrative about the vision and philosophy behind Ergo.
+*   **[Why Ergo?](start-here/why-ergo.md):** A compelling narrative about the vision and philosophy behind Ergo.
 *   **[Protocol Overview](dev/protocol/protocol-overview.md):** A high-level introduction to the core components of the Ergo protocol.
 *   **[The Ergo Manifesto](social_contract.md):** A deeper understanding of the project's guiding principles.
 
@@ -69,7 +69,7 @@ This section is designed to provide a comprehensive starting point for anyone ne
 
 *   **[Ecosystem Overview](uses/use-cases-overview.md):** Showcasing the various applications and use cases on the Ergo platform.
 *   **[Roadmap & Future](roadmap.md):** Offering a glimpse into the future of Ergo.
-*   **[Community & Contributions](contribute.md):** For users who want to get involved.
+*   **[Community & Contributions](start-here/contribute.md):** For users who want to get involved.
 
 ## Quick Links
 
