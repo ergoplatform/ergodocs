@@ -5,8 +5,8 @@ Ergo’s community is vibrant and continuously evolving. Keep updated with the l
 Start here:
 
 - [Participate overview](contribute.md)
-- [Events](events-overview.md)
-- [Marketing](marketing.md)
+- [Events Overview](events-overview.md)
+- [Contribute to Marketing](marketing.md)
 - [Sigmanauts Program](sigmanauts.md)
 - [Partners](partners.md)
 
@@ -20,12 +20,13 @@ More ways to get involved:
   - [Discord](https://discord.gg/Q86PNMwRsu)
   - [Forum](https://www.ergoforum.org)
   - [Reddit](https://www.reddit.com/r/ergonauts)
+  - Check the [FAQ](faq.md) or [Glossary](glossary.md) for common questions.
 - Documentation issues:
   - [Open an issue on GitHub](https://github.com/ergoplatform/ergodocs/issues)
   - [Contribute to docs](contribute/docs.md)
 - Development help:
   - [Developer resources](dev/start.md)
-  - Ask in Dev channels on Discord
+  - Ask in Dev channels on [Discord](https://discord.gg/Q86PNMwRsu)
 
 ## Contribute routes
 

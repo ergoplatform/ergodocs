@@ -27,3 +27,9 @@ Do more with Ergo:
 | Earn yield | [Yield Farming](tutorials/yield.md) | Liquidity, staking, risks |
 | Options and derivatives | [Options Trading](tutorials/trading-options.md) | [Derivatives Overview](uses/deriv.md) |
 | Arbitrage | [Arbitrage Tutorial](tutorials/arb.md) | DEX routing and pricing |
+
+## Best Practices
+
+- **Security:** Always keep your private keys and seed phrases safe. Never share them with anyone.
+- **Verification:** Double-check all addresses before sending funds.
+- **Community:** Join the Ergo community channels to stay informed and get help when you need it.

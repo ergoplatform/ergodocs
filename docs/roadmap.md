@@ -545,7 +545,7 @@ Every new addition to our growing DeFi ecosystem contributes to the expansion of
 - [x] [SigmaUSD](sigmausd.md) stablecoin (Djed protocol)
     - [ ] [SigmaUSD v2](https://gist.github.com/kushti/3f34ed7d70cc6919c29f5bc65772b02e)
 - [x] [Gluon](gluon.md) (gold stablecoin)
-- [ ] [DexyGold](dexy.md) (seigniorage stablecoin)
+- [x] [DexyGold](dexy.md) (seigniorage stablecoin)
 
 ### Lending and Borrowing
 - [x] [SigmaFi](sigmafi.md) (peer-to-peer loans via bonds)
@@ -584,7 +584,7 @@ Every new addition to our growing DeFi ecosystem contributes to the expansion of
     - [ ] RosenFast Service
     - [ ] Bridge Expansion Kit
     - [ ] Bridge SDK
-    - [ ] DOGE Bridge
+    - [x] DOGE Bridge
     - [ ] BCH Bridge
     - [ ] Hummingbot Integration / Customisation
 - [ ] [Sigma Chains](sigma-chains.md) - Revitalizing Proof of Work

@@ -47,7 +47,7 @@ This page serves as a central hub for finding contribution opportunities.
 
 *   **Improve ErgoDocs:** Help enhance this documentation site by fixing errors, improving clarity, adding examples, translating content, or writing new guides.
     *   **Guide:** [Contributing to the Docs](docs.md)
-    *   **Repository:** [ergodocs on GitHub](https://github.com/glasgowm148/ergodocs) (Submit issues or pull requests here!)
+    *   **Repository:** [ergodocs on GitHub](https://github.com/ergoplatform/ergodocs) (Submit issues or pull requests here!)
 
 ### Marketing & Outreach
 
@@ -62,7 +62,7 @@ This page serves as a central hub for finding contribution opportunities.
 ***'Let's create grassroots finance!'***
 
 *   **Testing:** Help test new node releases, wallet updates, and dApps.
-*   **Design:** Contribute UI/UX improvements for wallets and applications.
+*   **Design:** Contribute UI/UX improvements for [wallets](wallets-overview.md) and applications.
 *   **Research:** Explore new cryptographic techniques, economic models, or protocol enhancements relevant to Ergo.
 
 ## Getting Started

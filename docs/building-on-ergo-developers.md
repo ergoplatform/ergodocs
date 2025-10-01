@@ -57,3 +57,9 @@ Tooling:
 - CLI tools: [ErgoTool](dev/stack/ergotool.md)
 - Debugging: [Debugging](dev/scs/debugging.md)
 - Playgrounds: [Scastie](dev/scs/ergoscript/scastie.md), [Kiosk](dev/stack/kiosk.md), [ErgoPuppet](dev/scs/puppet.md)
+
+## Best Practices
+
+- **Security:** Always prioritize security in your smart contracts. Use best practices to prevent common vulnerabilities.
+- **Testing:** Thoroughly test your smart contracts on the testnet before deploying them to the mainnet.
+- **Community:** Engage with the Ergo developer community to get feedback on your ideas and to collaborate with other developers.

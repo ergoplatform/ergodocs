@@ -1,7 +1,7 @@
-# Sigmanauts: Empowering the Ergo Community
+# Sigmanauts: empowering the Ergo community
 
 ## Introduction
-Ergo, as outlined in its manifesto, is a platform designed for the common person, standing against the centralization of banking and the misuse of money. The future of Ergo lies in the hands of its users and we encourage everyone to take as much control of the Ergo ecosystem as possible. The Sigmanauts Program is a grassroots initiative aimed at empowering individuals to take ownership of Ergo and help shape its future.
+Ergo, as outlined in its [manifesto](social_contract.md), is a platform designed for the common person, standing against the centralization of banking and the misuse of money. The future of Ergo lies in the hands of its users and we encourage everyone to take as much control of the Ergo ecosystem as possible. The Sigmanauts Program is a grassroots initiative aimed at empowering individuals to take ownership of Ergo and help shape its future.
 
 ## The power of community
 Ergo's blockchain has the potential to bring out the best in humanity and its rapidly growing community is one of its most significant assets. The Sigmanauts Program provides a platform for individuals to make a substantial impact on the future of finance by leveraging their unique skills and strengths.

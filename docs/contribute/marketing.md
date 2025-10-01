@@ -2,15 +2,15 @@
 
 Ergo has a lively and diverse community made up of various sub-ecosystems. Here’s how you can get involved and make a difference:
 
-### Join the Conversation
+### Join the conversation
 
 - **Telegram and Discord**: Dive into discussions on our [Telegram group](https://t.me/ErgoSocials) or the [#marketing channel on Discord](https://discord.gg/TBFXMzha7X). These are the main hubs for community marketing efforts, where you can collaborate, share ideas and help steer our grassroots initiatives.
 
-### Contribute to Our Wiki
+### Contribute to our wiki
 
 - **Ergonaut.space**: Help expand our comprehensive wiki at [ergonaut.space](https://ergonaut.space/en/home), available in over forty languages. Your contributions can make Ergo more accessible to a global audience.
 
-### Create and Share Content
+### Create and share content
 
 - **Shared Figma space**: Enhance your visual content or team up on design projects using our [shared Figma graphic space](https://www.figma.com/file/pd92vgB3xNFThaacIKodYs/Guide-ID?node-id=1%3A756).
 - **Graphics and logos**: Access a wide range of graphics via our [Dropbox](https://www.dropbox.com/sh/jionpgnj89eod2f/AAC5S1vnOwO3gm2vRYOmDBQ-a?dl=0), or get official Ergo logos from [awesome-ergo](https://github.com/ergoplatform/awesome-ergo/tree/master/graphics/Logo).
@@ -19,27 +19,27 @@ Ergo has a lively and diverse community made up of various sub-ecosystems. Here�
 - **Blog posts and articles**: Share your knowledge and insights by writing blog posts or articles about Ergo. Publish them on your own blog, Medium, or other platforms. Well-written content can help attract new users and investors.
 - **Paid contributors program**: We offer a paid contributors program for writers. Technical writers are in high demand and your contributions can be rewarded. Check out the [Ergo documentation](https://docs.ergoplatform.com/contribute/marketing/) for more information.
 
-### Engage in Community Outreach
+### Engage in community outreach
 
 - **Participate in the ErgOne initiative**: [ErgOne](https://app.ergone.io/voting-login) is a Proof-of-Commitment Protocol (PoCoP), a unique approach to blockchain engagement. PoCoP rewards active participation in promoting and supporting the Ergo ecosystem. By creating and sharing content, engaging with the community and contributing creatively, you earn $Erg0ne tokens. Your involvement is measured by a virality score, ensuring fair distribution of rewards. Simply tag your tweets with #PoCoP and submit them to the [ErgOne dashboard](https://app.ergone.io/voting-login)
 - **Local meet-ups and events**: Organize or participate in local meet-ups and events to promote Ergo. These can be informal gatherings, presentations at local blockchain events, or even booths at conferences.
 - **Webinars and live streams**: Host webinars or live streams to discuss Ergo’s latest developments, answer questions and engage with the community in real-time.
 
-### Collaborate and Spread the Word
+### Collaborate and spread the word
 
 - **Influencer partnerships**: Partner with influencers in the blockchain and cryptocurrency space to spread the word about Ergo. Influencers can provide valuable exposure and lend credibility to the project.
 - **Guest appearances**: Participate in podcasts, YouTube shows, or other media where you can talk about Ergo and its potential.
 - **Social media**: Promote Ergo on platforms like Nostr, Bsky, Instagram, TikTok, Facebook and subreddits. Wherever people gather online, there’s an opportunity to spread the word about Ergo.
 - **Ergo forum**: Check out various strategies and tips on the [Ergo forum](https://www.ergoforum.org/c/marketing/13) to enhance your marketing efforts.
 
-### Community Engagement and Support
+### Community engagement and support
 
 - **Help new users**: Be active on community forums, Discord, Telegram and social media to help new users with their questions. Providing a welcoming environment can help retain new community members.
 - **Feedback and suggestions**: Actively provide feedback and suggestions to the Ergo development team. Your insights can help improve the platform and ensure it meets the community’s needs.
 - **Proof of work**: Show your dedication by creating and executing marketing initiatives. If your work gains traction and community support, consider running a raffle to fund further promotion (e.g., local events, stickers, etc.).
 - **Regional managers**: If you're passionate about setting up a regional Ergo branch, managing local chats, organizing meet-ups and fostering a thriving community, we’d love to hear from you. Engage with the community, demonstrate your capabilities and your proactive involvement could lead to a more significant role.
 
-### Fundraising and Crowdfunding
+### Fundraising and crowdfunding
 
 - **Crowdfunding campaigns**: Organize crowdfunding campaigns to fund specific projects or initiatives within the Ergo ecosystem. If you have a great marketing idea, consider launching a crowdfunding campaign to gather support from the community.
 - **Create raffles**: Organize community raffles to raise funds for marketing initiatives. Engage the community by offering exciting prizes and using the proceeds to support various marketing efforts.
