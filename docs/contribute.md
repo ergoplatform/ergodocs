@@ -47,7 +47,7 @@ This page serves as a central hub for finding contribution opportunities.
 
 *   **Improve ErgoDocs:** Help enhance this documentation site by fixing errors, improving clarity, adding examples, translating content, or writing new guides.
     *   **Guide:** [Contributing to the Docs](docs.md)
-    *   **Repository:** [ergodocs on GitHub](https://github.com/glasgowm148/ergodocs) (Submit issues or Pull Requests here!)
+    *   **Repository:** [ergodocs on GitHub](https://github.com/glasgowm148/ergodocs) (Submit issues or pull requests here!)
 
 ### Marketing & Outreach
 

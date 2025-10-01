@@ -35,8 +35,8 @@ The Ergo Foundation can assist with due diligence, connect you with relevant con
 
 **Marketing and community channels:**
 
-- Telegram: [@ErgoSocials](https://t.me/ErgoSocials)  
-- Discord: [Join Here](https://discord.gg/TBFXMzha7X)
+- [Telegram](https://t.me/ErgoSocials)
+- [Discord](https://discord.gg/TBFXMzha7X)
 
 ---
 
@@ -92,14 +92,14 @@ Development within Ergo is primarily coordinated and funded by the [Development 
 
 ## Additional Resources
 
-- Website: [https://ergoplatform.org](https://ergoplatform.org)  
-- Documentation: [https://docs.ergoplatform.com](https://docs.ergoplatform.com)  
-- Pitch Deck: [View Here](https://docs.google.com/presentation/d/e/2PACX-1vRKsXBoOE7llTGjsh5c_FfU3cLw3DRtsPs4d4iS6OeoAJIbjTGS6uXpofPirRYvK58aKde5j1yqAiFV/pub?start=false&loop=false&delayms=3000)  
+- [Website](https://ergoplatform.org)
+- [Documentation](https://docs.ergoplatform.com)
+- [Pitch Deck](https://docs.google.com/presentation/d/e/2PACX-1vRKsXBoOE7llTGjsh5c_FfU3cLw3DRtsPs4d4iS6OeoAJIbjTGS6uXpofPirRYvK58aKde5j1yqAiFV/pub?start=false&loop=false&delayms=3000)
 
 ---
 
 ## Contact
 
 For direct inquiries:  
-- mark@efdao.org  
-- angie@efdao.org
+- [mark@efdao.org](mailto:mark@efdao.org)
+- [angie@efdao.org](mailto:angie@efdao.org)

@@ -3,33 +3,34 @@
 Ergo’s community is vibrant and continuously evolving. Keep updated with the latest developments, participate in community discussions, and find support through forums and social platforms.
 
 Start here:
-- Participate overview: [Contribute](contribute.md)
-- Events: [Events Overview](events-overview.md)
-- Marketing: [Contribute to Marketing](marketing.md)
-- Sigmanauts Program: [Sigmanauts](sigmanauts.md)
-- Partners: [Partners](partners.md)
+
+- [Participate overview](contribute.md)
+- [Events](events-overview.md)
+- [Marketing](marketing.md)
+- [Sigmanauts Program](sigmanauts.md)
+- [Partners](partners.md)
 
 More ways to get involved:
-- How Ergo Works (accessible overview): [How Ergo Works](how-ergo-works.md)
+- [How Ergo Works](how-ergo-works.md) (accessible overview)
 - Funding opportunities: [Grants](grants.md) • [Bounties](bounties.md)
 
 ## Where to get help
 
 - Questions and support:
-  - Discord: https://discord.gg/Q86PNMwRsu
-  - Forum: https://www.ergoforum.org
-  - Reddit: https://www.reddit.com/r/ergonauts
+  - [Discord](https://discord.gg/Q86PNMwRsu)
+  - [Forum](https://www.ergoforum.org)
+  - [Reddit](https://www.reddit.com/r/ergonauts)
 - Documentation issues:
-  - Open an issue on GitHub: https://github.com/ergoplatform/ergodocs/issues
-  - Contribute to docs: [Contribute to the Docs](contribute/docs.md)
+  - [Open an issue on GitHub](https://github.com/ergoplatform/ergodocs/issues)
+  - [Contribute to docs](contribute/docs.md)
 - Development help:
-  - Developer resources: [Start Developing](dev/start.md)
+  - [Developer resources](dev/start.md)
   - Ask in Dev channels on Discord
 
 ## Contribute routes
 
-- Report issues and requests: https://github.com/ergoplatform/ergodocs/issues
-- Suggest or fix docs: [Contribute to the Docs](contribute/docs.md)
+- [Report issues and requests](https://github.com/ergoplatform/ergodocs/issues)
+- [Suggest or fix docs](contribute/docs.md)
 - Funding and incentives: [Bounties](contribute/bounties.md) • [Grants](contribute/grants.md)
 - Join community programs: [Sigmanauts](contribute/sigmanauts.md) • [How Ergo Works](contribute/how-ergo-works.md)
 

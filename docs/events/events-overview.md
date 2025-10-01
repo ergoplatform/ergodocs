@@ -17,7 +17,7 @@ Our flagship events, [ERGOHACK](ergohack.md) and [ERGOSUMMIT](ergosummit.md), ar
 
 ## AMAs and Dev Updates
 
-We host weekly [Ask Me Anything (AMAs)](https://www.reddit.com/r/ergonauts/search?q=flair%3AAMA&restrict_sr=on&sort=relevance&t=all) sessions and regular [Developer Updates](https://www.reddit.com/r/ergonauts/search?sort=new&restrict_sr=on&q=flair%3AWEEKLY-DEV) on Reddit. These sessions provide insights into Ergo's development progress and offer a platform for the community to ask questions directly to the team.
+We host weekly [Ask Me Anything (AMAs)](https://www.reddit.com/r/ergonauts/search?q=flair%3AAMA&restrict_sr=on&sort=relevance&t=all) sessions and regular [developer updates](https://www.reddit.com/r/ergonauts/search?sort=new&restrict_sr=on&q=flair%3AWEEKLY-DEV) on Reddit. These sessions provide insights into Ergo's development progress and offer a platform for the community to ask questions directly to the team.
 
 ## Join the Community
 
