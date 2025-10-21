@@ -1,0 +1,12 @@
+version: 2.1
+jobs:
+  noop:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - run: echo "noop"
+workflows:
+  version: 2
+  only-noop:
+    jobs:
+      - noop
