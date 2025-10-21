@@ -57,9 +57,11 @@ title: Trustless Hashrate Oracle (Hashrate Coin)
 
 ## References
 
-- Forum threads: Add historical hashrate coin/Oracle research links here.
+- [Oracle overview](oracles.md)
+- [Oracle Core (operators)](oracle.md)
+- [Oracle Pools v2 (EIP-23)](oracles-v2.md)
 - Talks/ErgoHack: Add references when collected.
-- Related patterns: [Bulletproof Range Proof](pattern-bulletproof-range-proof.md)
+- Related patterns: [pattern-bulletproof-range-proof.md](pattern-bulletproof-range-proof.md)
 
 ## See also
 

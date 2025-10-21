@@ -3,117 +3,171 @@ tags:
   - Signature Schemes
 ---
 
-
 # Signature Scheme Internals on Ergo
 
-This document provides an in-depth look at the signature schemes used in the Ergo blockchain. The security and functionality of transactions on the Ergo platform heavily rely on cryptographic signatures, which ensure that only authorized parties can approve transactions and that the data integrity is maintained. This document outlines the internal workings of these signature schemes, focusing on the algorithms, protocols, and their implementation within the Ergo ecosystem, particularly within the [`sigmastate-interpreter`](https://github.com/ScorexFoundation/sigmastate-interpreter) and [`sigma-rust`](https://github.com/ergoplatform/sigma-rust) repositories.
+This document gives a clear view of the signature schemes in the Ergo blockchain. Transactions rely on cryptographic signatures that ensure only authorized parties approve spending and that data integrity stays intact. This page outlines the internal mechanics and the concrete form that scripts and libraries use in Ergo. References point to [`sigmastate-interpreter`](https://github.com/ScorexFoundation/sigmastate-interpreter) and [`sigma-rust`](https://github.com/ergoplatform/sigma-rust), and to the forum post “Verifying Schnorr Signatures in ErgoScript” at https://www.ergoforum.org/t/verifying-schnorr-signatures-in-ergoscript/3407.
 
 ## Overview
 
-In the Ergo blockchain, signature schemes are used to validate that a transaction was indeed created by the owner of the associated private key. This is crucial for preventing unauthorized spending of funds and ensuring the security of smart contracts. Ergo uses several cryptographic protocols to achieve this, including Schnorr signatures and Sigma protocols.
+In the Ergo blockchain, signature schemes prove that a transaction came from the owner of the relevant private key. This protects funds and supports secure smart contracts. Ergo uses Schnorr signatures and Sigma protocols.
 
-The implementation of these cryptographic protocols is spread across two main repositories:
+Two repositories provide the main code paths:
 
-- [`sigmastate-interpreter`](https://github.com/ScorexFoundation/sigmastate-interpreter): Focuses on Scala-based ErgoTree interpretation and verification.
-- [`sigma-rust`](https://github.com/ergoplatform/sigma-rust): Provides a Rust-based implementation of the cryptographic primitives, enabling WASM and other Rust-native applications.
+- [`sigmastate-interpreter`](https://github.com/ScorexFoundation/sigmastate-interpreter): Scala-based ErgoTree interpretation and verification.
+- [`sigma-rust`](https://github.com/ergoplatform/sigma-rust): Rust-based cryptographic primitives and APIs for native and WASM targets.
 
-### 1. **Schnorr Signatures**
+### 1. Schnorr Signatures
 
-**Schnorr Signatures** are a fundamental part of Ergo’s cryptographic toolkit. They are known for their simplicity, efficiency, and security, offering several advantages over other signature schemes such as ECDSA (Elliptic Curve Digital Signature Algorithm).
+Schnorr signatures form a core tool in Ergo. The scheme is simple, efficient, and secure under the discrete logarithm assumption. ErgoScript favors a signature pair `(a: GroupElement, z: BigInt)` for on-chain checks, as described in the forum post at https://www.ergoforum.org/t/verifying-schnorr-signatures-in-ergoscript/3407.
 
-#### How Schnorr Signatures Work:
+#### Concrete form for Ergo
 
-- **Key Generation**: 
-    - A user generates a private key \( x \) (a random number) and computes the corresponding public key \( P = xG \), where \( G \) is a generator point on the elliptic curve used by Ergo.
-    - In the Rust implementation, key generation is handled within the [`secret_key.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-lib/src/wallet/secret_key.rs) file, where cryptographic key management and generation take place.
-- **Signing**: 
-    - To sign a message \( m \), the user generates a random nonce \( k \) and computes \( R = kG \). The signature \( (s, e) \) is then computed as:
-      \[
-      e = H(R || P || m)
-      \]
-      \[
-      s = k + ex
-      \]
-    - The Schnorr signing process is implemented in [`signing.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-lib/src/wallet/signing.rs) within the `sigma-rust` repository, and in the Scala-based [`DLogProtocol`](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/sigmastate/crypto/DLogProtocol.scala) file within the `sigmastate-interpreter`.
-- **Verification**: 
-    - To verify the signature \( (s, e) \), the verifier computes:
-      \[
-      R' = sG - eP
-      \]
-      and checks if:
-      \[
-      e = H(R' || P || m)
-      \]
-    - The verification logic is implemented in the same files: [`signing.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-lib/src/wallet/signing.rs) for Rust and [`DLogProtocol.scala`](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/sigmastate/crypto/DLogProtocol.scala) for Scala.
+- Curve: secp256k1.  
+- Generator in ErgoScript: `groupGenerator`.  
+- Public key: `Y = g^x`, with secret scalar `x`.  
+- Challenge hash on-chain: `blake2b256`.
 
-#### Advantages of Schnorr Signatures:
+**Signing flow (off-chain):**
 
-- **Security**: Schnorr signatures are provably secure under the assumption of the hardness of the discrete logarithm problem.
-- **Efficiency**: They produce smaller signatures and require less computational overhead than many other signature schemes.
-- **Simplicity**: The signing and verification processes are straightforward, making them easy to implement and verify.
-- **Batch Verification**: Multiple signatures can be verified simultaneously, which is particularly useful in blockchain applications where numerous transactions need to be validated quickly.
+1. Pick a fresh nonce `r`.  
+2. Set `a = g^r`.  
+3. Set `eBytes = blake2b256(aBytes || message || YBytes)`.  
+4. Interpret `e = byteArrayToBigInt(eBytes)`.  
+5. Set `z = (r + x * e) mod q`.  
+6. Ensure `z.bitLength <= 255`. If not, pick a new `r` and retry.
 
-### 2. **Sigma Protocols**
+**Verification flow (on-chain in ErgoScript):**
 
-**Sigma Protocols** are a class of cryptographic protocols that allow a prover to convince a verifier that they know a value \( x \) such that a statement about \( x \) is true, without revealing \( x \) itself. Ergo heavily relies on Sigma protocols for its privacy-preserving features and complex smart contracts.
+- Layout:
+  - `R4`: `Y` as `GroupElement`.
+  - `R5`: `message` as `Coll[Byte]`.
+  - Context var `1`: `a` as `GroupElement`.
+  - Context var `2`: `z` as `Coll[Byte]` (encode `z` off-chain).
 
-#### Key Components of Sigma Protocols:
+- Check:
+  - `eBytes = blake2b256(aBytes || message || YBytes)`.
+  - `e = byteArrayToBigInt(eBytes)`.
+  - Accept if `g^z == a * Y^e`.
 
-- **Commitment**: The prover sends a commitment to the verifier without revealing the secret value.
-- **Challenge**: The verifier sends a random challenge to the prover.
-- **Response**: The prover responds in a way that proves the knowledge of the secret while maintaining its privacy.
+**Drop-in script (aligned with the forum post at https://www.ergoforum.org/t/verifying-schnorr-signatures-in-ergoscript/3407):**
+```scala
+{
+  val g: GroupElement = groupGenerator
 
-The Sigma protocol is implemented in both the `sigmastate-interpreter` and `sigma-rust` repositories:
+  val Y: GroupElement = SELF.R4[GroupElement].get
+  val message: Coll[Byte] = SELF.R5[Coll[Byte]].get
 
-- In Scala, the Sigma protocol's cryptographic functions are handled by the [`SigmaPropProver`](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/org/ergoplatform/SigmaPropProver.scala) class, which provides proof creation and validation mechanisms.
-- In Rust, the proof generation and verification can be found in [`prover_result.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-lib/src/chain/transaction/input/prover_result.rs), which handles proof construction during transactions.
+  val a: GroupElement = getVar.get
+  val zBytes: Coll.get
+  val z: BigInt = byteArrayToBigInt(zBytes)
 
-### 3. **ErgoTree and Signature Schemes**
+  val eBytes: Coll[Byte] = blake2b256(a.getEncoded ++ message ++ Y.getEncoded)
+  val e: BigInt = byteArrayToBigInt(eBytes)
 
-**ErgoTree** is the core of Ergo's smart contract framework. It is a versatile and expressive language that uses Sigma protocols and Schnorr signatures to create conditions for spending boxes (Ergo's version of UTXOs).
+  val ok = g.exp(z) == a.multiply(Y.exp(e))
+  sigmaProp(ok)
+}
+```
 
-#### Signature Scheme Integration in ErgoTree:
+**Notes:**
 
-- **Complex Spending Conditions**: ErgoTree allows users to define sophisticated spending conditions that can include multiple signatures, time-based locks, and other cryptographic conditions.
-- **Multi-Signature Support**: ErgoTree natively supports multi-signature schemes, allowing multiple parties to authorize a transaction.
-- **Script Validation**: During transaction validation, the ErgoTree interpreter evaluates the conditions defined in the script, ensuring that the signatures match the requirements before the transaction is considered valid.
+* Use `blake2b256` for `e` during signing and verification.
+* Keep `z` within 255 bits to satisfy the on-chain `BigInt` limit.
+* Keep byte layouts identical off-chain and on-chain.
 
-The Scala-based `sigmastate-interpreter` plays a crucial role in interpreting ErgoTree scripts:
+For background on the discrete log protocol and Schnorr logic in Scala, see [`DLogProtocol.scala`](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/sigmastate/crypto/DLogProtocol.scala). Rust-side helpers for wallets appear in [`signing.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-lib/src/wallet/signing.rs) and key management appears in [`secret_key.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-lib/src/wallet/secret_key.rs).
 
-- The [`ErgoLikeInterpreter`](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/org/ergoplatform/ErgoLikeInterpreter.scala) file in `sigmastate-interpreter` provides the main ErgoTree validation logic, where both Schnorr and Sigma signatures are verified.
-- In Rust, the validation and interpretation of ErgoTrees are found in the [`contract.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-lib/src/chain/contract.rs) file, which handles contract conditions and their associated proofs.
+### 2. Sigma Protocols
 
-### 4. **Implementation in Ergo**
+Sigma protocols allow a prover to convince a verifier that a statement about a secret holds, without disclosure of the secret. Each proof follows three steps: commitment, challenge, and response. The Fiat–Shamir transform replaces the verifier’s challenge with a hash.
 
-The signature schemes are implemented across different layers of the Ergo protocol, ensuring both security and flexibility in how transactions are constructed and validated.
+Core pieces in Ergo:
 
-- **sigmastate-interpreter**: Implements the core cryptographic primitives, including Schnorr signatures and Sigma protocols, within the Scala-based ErgoTree interpreter. This includes the construction, validation, and execution of ErgoTree scripts.
-  - The [`ErgoLikeInterpreter`](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/org/ergoplatform/ErgoLikeInterpreter.scala) provides the core verification logic for ErgoTrees.
-  - The [`SigSerializer`](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/sigmastate/SigSerializer.scala) manages serialization and deserialization of proofs.
-  - The [`DLogProtocol`](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/sigmastate/crypto/DLogProtocol.scala) handles Sigma protocol proof construction based on discrete logarithms.
-- **sigma-rust**: Provides a Rust-based implementation of the same cryptographic features, allowing for integration into Rust-based environments and cross-platform applications via WASM.
-  - [`signing.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-lib/src/wallet/signing.rs) handles Schnorr signature operations.
-  - [`prover_result.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-lib/src/chain/transaction/input/prover_result.rs) deals with Sigma proofs and transactions.
+* **DLog**: knowledge of `x` such that `Y = g^x`.
+* **AND / OR**: composition over multiple statements.
+* **Threshold**: proof that at least `k` out of `n` statements hold.
 
-### 5. **Security Considerations**
+Scala-side proof creation and checking live in the interpreter and related modules. See [`ErgoLikeInterpreter.scala`](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/org/ergoplatform/ErgoLikeInterpreter.scala) and proof serialization in [`SigSerializer.scala`](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/sigmastate/SigSerializer.scala). Rust-side proof data in transactions appears in [`prover_result.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-lib/src/chain/transaction/input/prover_result.rs).
 
-The security of Ergo’s signature schemes is rooted in well-established cryptographic assumptions, such as the hardness of the discrete logarithm problem for Schnorr signatures. However, the security of these schemes also depends on correct implementation and proper use in scripts. Developers and users must ensure that their ErgoTree scripts are designed to avoid common pitfalls, such as using weak randomness or failing to verify critical conditions.
+### 3. ErgoTree and Signature Schemes
 
-In particular, the `sigmastate-interpreter` ensures that security
+ErgoTree defines spending rules for boxes (UTXOs). Scripts may require one signature, several signatures, time checks, or mixed conditions.
 
- considerations are rigorously handled through comprehensive tests, such as those found in the [`SigningSpecification`](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/test/scala/sigmastate/crypto/SigningSpecification.scala).
+Examples:
 
-### 6. **Use Cases and Applications**
+* Single-key spending with a DLog proof for one `Y`.
+* Multi-signature with `AND` or threshold logic.
+* Policies that include height checks along with signatures.
 
-Ergo's signature schemes enable a wide range of applications within the blockchain ecosystem, including:
+The Scala interpreter verifies each node and enforces the script. See [`ErgoLikeInterpreter.scala`](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/org/ergoplatform/ErgoLikeInterpreter.scala). Rust-side contract helpers appear in [`contract.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-lib/src/chain/contract.rs).
 
-- **Confidential Transactions**: Leveraging Sigma protocols for privacy-preserving transactions that do not reveal sensitive information.
-- **Multi-Signature Wallets**: Creating wallets that require multiple signatures to authorize a transaction, increasing security.
-- **Decentralized Voting**: Implementing voting systems where the anonymity of voters is preserved while ensuring the integrity of the results.
-- **Smart Contracts**: Developing complex smart contracts that require advanced cryptographic conditions for execution.
+### 4. Implementation in Ergo
+
+Both repositories cover the same cryptographic ideas with language-specific APIs.
+
+* **sigmastate-interpreter**:
+
+  * Core verification logic: [`ErgoLikeInterpreter.scala`](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/org/ergoplatform/ErgoLikeInterpreter.scala)
+  * Discrete log protocol: [`DLogProtocol.scala`](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/sigmastate/crypto/DLogProtocol.scala)
+  * Proof serialization: [`SigSerializer.scala`](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/sigmastate/SigSerializer.scala)
+
+* **sigma-rust**:
+
+  * Signing helpers: [`signing.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-lib/src/wallet/signing.rs)
+  * Secret key management: [`secret_key.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-lib/src/wallet/secret_key.rs)
+  * Proofs in transactions: [`prover_result.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-lib/src/chain/transaction/input/prover_result.rs)
+  * Contract helpers: [`contract.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-lib/src/chain/contract.rs)
+
+### 5. Security Considerations
+
+* Strong nonce generation for `r`.
+* No nonce reuse across messages.
+* The `z ≤ 255 bits` rule in the signer.
+* Exact byte concatenation for `a`, `message`, and `Y` in the challenge.
+* Consistent `blake2b256` use in both directions.
+* Test coverage that includes valid and invalid paths.
+* Reference tests in Scala: [`SigningSpecification.scala`](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/test/scala/sigmastate/crypto/SigningSpecification.scala).
+
+### 6. Use Cases and Applications
+
+* Confidential flows that rely on Sigma conditions.
+* Multi-signature wallets with `AND` or threshold rules.
+* Access rules for dApps that combine signatures with height checks.
+* Voting or attestations that depend on key possession.
+
+### Off-chain helper: reference signer (Scala-style sketch)
+
+```scala
+import java.security.SecureRandom
+import org.ergoplatform.sdk.wallet.secp256k1.{CryptoConstants => CC}
+import special.sigma.GroupElement
+
+def randScalar(): BigInt = {
+  val bytes = new Array
+  new SecureRandom().nextBytes(bytes)
+  (BigInt(1, bytes) % CC.groupOrder)
+}
+
+@annotation.tailrec
+def sign(message: Array[Byte], x: BigInt): (GroupElement, Array[Byte]) = {
+  val g = CC.dlogGroup.generator
+  val Y = g.exp(x.bigInteger)
+
+  val r = randScalar()
+  val a = g.exp(r.bigInteger)
+
+  val aBytes = a.getEncoded.toArray
+  val YBytes = Y.getEncoded.toArray
+  val eBytes = scorex.crypto.hash.Blake2b256(aBytes ++ message ++ YBytes)
+  val e = BigInt(1, eBytes)
+
+  val z = (r + x * e) % CC.groupOrder
+
+  if (z.bitLength <= 255) (a, z.toByteArray)
+  else sign(message, x)
+}
+```
 
 ### Conclusion
 
-Ergo’s signature schemes, built on robust cryptographic foundations like Schnorr signatures and Sigma protocols, are central to the platform’s security and functionality. These schemes are implemented across both the `sigmastate-interpreter` and `sigma-rust` repositories, which handle the cryptographic primitives, serialization, verification, and execution of ErgoTree scripts. This allows for flexible, secure, and privacy-preserving transactions, making Ergo a powerful platform for decentralized applications and digital contracts.
-
-For more information and technical details, refer to the [ErgoScript documentation](https://github.com/ScorexFoundation/sigmastate-interpreter) and the [sigma-rust repository](https://github.com/ergoplatform/sigma-rust).
+Ergo uses Schnorr signatures and Sigma protocols in a form that scripts can verify on-chain without friction. The `(a, z)` signature form, the `blake2b256` challenge, the `g^z == a * Y^e` check, and the `z` ≤ 255-bit rule give a recipe that matches real scripts and tools. Detailed reasoning and examples appear in the forum post at [https://www.ergoforum.org/t/verifying-schnorr-signatures-in-ergoscript/3407](https://www.ergoforum.org/t/verifying-schnorr-signatures-in-ergoscript/3407) and in the repositories at [https://github.com/ScorexFoundation/sigmastate-interpreter](https://github.com/ScorexFoundation/sigmastate-interpreter) and [https://github.com/ergoplatform/sigma-rust](https://github.com/ergoplatform/sigma-rust).

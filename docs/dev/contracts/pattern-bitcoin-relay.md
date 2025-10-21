@@ -54,9 +54,13 @@ title: Trustless Bitcoin Relay
 
 ## References
 
-- Forum threads: Add links covering BTC relay designs, header chain maintenance, and Merkle verification patterns.
+- NIPoPoW overview: [nipopows.md](nipopows.md)
+- Light clients (NIPoPoW nodes): [nipopow_nodes.md](nipopow_nodes.md)
+- Block header structure: [block-header.md](block-header.md)
+- Transaction Merkle trees: [tx-merkle.md](tx-merkle.md)
+- Block overview: [block.md](block.md)
 - Talks/ErgoHack: Add materials when available.
-- Related patterns: [Trustless Peg](pattern-trustless-peg.md)
+- Related patterns: [pattern-trustless-peg.md](pattern-trustless-peg.md)
 
 ## See also
 

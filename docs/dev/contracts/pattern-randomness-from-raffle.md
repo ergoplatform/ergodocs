@@ -53,15 +53,18 @@ title: Randomness from ErgoRaffle
 
 ## References
 
-- Forum threads: Add links discussing ErgoRaffle randomness and related draw mechanisms.
+- ErgoRaffle overview: [ergoraffle.md](ergoraffle.md)
+- ErgoHack references: [ergohack.md](ergohack.md)
+- Raffle docs and examples: [js.md](js.md), [front-end.md](front-end.md)
+- Off-chain flows (auctions/raffles): [off-chain-overview.md](off-chain-overview.md)
 - Talks/ErgoHack: Add materials when available.
-- Related patterns: [Bulletproof Range Proof](pattern-bulletproof-range-proof.md), [Stealth Address](pattern-stealth-address.md)
+- Related patterns: [pattern-bulletproof-range-proof.md](pattern-bulletproof-range-proof.md), [pattern-stealth-address.md](pattern-stealth-address.md)
 
 ## See also
 
-- Category: [contracts-randomness.md](contracts-randomness.md)  
-  - Library index: [contracts-library.md](contracts-library.md)  
-  - Additional contracts index: [contracts.md](contracts.md)
+- Category: [contracts-randomness.md](contracts-randomness.md)
+- [Library index](contracts-library.md)
+- [Additional contracts index](contracts.md)
 
 ## Contributor Checklist
 

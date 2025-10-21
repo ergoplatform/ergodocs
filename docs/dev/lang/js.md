@@ -72,7 +72,7 @@ With the availability of [Sigma.js](sigmajs.md), [Fleet](fleet.md) can play the 
     "title": "Create Transaction Demo",
     "content": "using sigma-rust and TypeScript",
     "url": "https://github.com/ergoplatform/sigma-rust/blob/develop/bindings/ergo-lib-wasm/examples/create-transaction-demo/README.md"
-  },
+  }
 
 ]
 

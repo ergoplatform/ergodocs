@@ -40,3 +40,9 @@ We face a cyclic reference problem, as both scripts are referencing each other.
 To overcome this, we can store `script1Hash` in a register of the [box](box.md) that contains `script2`. We also need to modify `script1` to ensure that the corresponding register of any box containing `script2` equals `hash(SELF.propositionBytes)`.
 
 While the "vanilla" perpetual token is intriguing, the "max-once-per-block-use" perpetual token offers more flexibility and power, and should be considered as a distinct design pattern.
+
+## See also
+
+- Pattern: [pattern-perpetual-token.md](pattern-perpetual-token.md)
+- Library: [contracts-library.md](contracts-library.md)
+- Category: [contracts-tokens.md](contracts-tokens.md)

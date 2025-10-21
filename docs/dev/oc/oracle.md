@@ -14,3 +14,9 @@ To function correctly, the Oracle Core requires access to a full node wallet. Th
 The current Oracle Core is built to run the protocol specified in the [EIP-0023 PR](https://github.com/ergoplatform/eips/pull/41). This protocol outlines the proposed upgrade to Oracle Pool version 1.0, addressing several limitations and introducing new features for improved functionality. These enhancements include a single pool address, epoch counter, compact pool box, reward in tokens, and transferable oracle and ballot tokens, among others. For a detailed technical description and further understanding, refer to [EIP-0023 Oracle Pool 2.0](https://github.com/ergoplatform/eips/pull/41).
 
 For those interested in setting up an ERG/XAU oracle pool in a testnet environment, we have created a comprehensive guide to walk you through the process. The guide provides detailed instructions, making it easy even for those relatively new to the field. Follow the link to access our [Bootstrap an ERG/XAU pool on testnet guide](https://github.com/ergoplatform/oracle-core/blob/develop/docs/how_to_bootstrap.md).
+
+## See also
+
+- Pattern: [pattern-hashrate-oracle.md](pattern-hashrate-oracle.md)
+- Category: [contracts-oracles.md](contracts-oracles.md)
+- Library: [contracts-library.md](contracts-library.md)

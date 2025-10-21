@@ -53,9 +53,12 @@ title: Trustless Peg (Cross-Chain)
 
 ## References
 
-- Forum threads: Add links on trustless peg designs (e.g., NIPoPoW/light-client bridging).
+- [NIPoPoW overview](nipopows.md)
+- [Light clients (NIPoPoW nodes)](nipopow_nodes.md)
+- [Sidechains overview](sidechains.md)
+- [Sigma Chains](sigma-chains.md)
 - Talks/ErgoHack: Add materials when available.
-- Related patterns: [Trustless Bitcoin Relay](pattern-bitcoin-relay.md), [Import Off-chain Bank](pattern-import-offchain-bank.md)
+- Related patterns: [pattern-bitcoin-relay.md](pattern-bitcoin-relay.md), [pattern-import-offchain-bank.md](pattern-import-offchain-bank.md)
 
 ## See also
 

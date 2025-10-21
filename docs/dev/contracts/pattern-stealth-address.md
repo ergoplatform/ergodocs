@@ -59,14 +59,17 @@ title: Stealth Address
 
 ## References
 
-- Forum threads: Add historical discussions on stealth payments if available.
+- Stealth addresses (user-facing): [stealth-address.md](stealth-address.md)
+- Mixing/Privacy (related): [zerojoin.md](zerojoin.md)
+- Sigma protocols (foundation): [sigma.md](sigma.md), [schnorr.md](schnorr.md)
+- Zero-knowledge overview: [zkp.md](zkp.md)
 - Talks/ErgoHack: Add materials when collected.
-- Related patterns: [Bulletproof Range Proof](pattern-bulletproof-range-proof.md), [Whitelist-only Token](pattern-whitelist-token.md)
+- Related patterns: [pattern-bulletproof-range-proof.md](pattern-bulletproof-range-proof.md), [pattern-whitelist-token.md](pattern-whitelist-token.md)
 
 ## See also
 
-- Library index: contracts-library.md  
-- Additional contracts index: contracts.md
+- [Library index](contracts-library.md)
+- [Additional contracts index](contracts.md)
 
 ## Contributor Checklist
 

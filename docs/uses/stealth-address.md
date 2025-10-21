@@ -41,3 +41,8 @@ Stealth Addresses in Ergo are engineered to maintain transaction confidentiality
 
 This mechanism empowers Bob to pay Alice securely and privately by establishing a unique one-time payment address for each transaction, assuring that the payment details are veiled from everyone except Alice.
 
+## See also
+
+- Pattern: [pattern-stealth-address.md](pattern-stealth-address.md)
+- Category: [contracts-privacy.md](contracts-privacy.md)
+- Library: [contracts-library.md](contracts-library.md)

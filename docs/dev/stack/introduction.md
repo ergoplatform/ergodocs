@@ -197,7 +197,7 @@ Need help figuring out where to start developing? This [introduction to Mosaik](
     "content": "",
     "image": "../../assets/img/dev-grid/js.png",
     "url": "../lib/sigmajs.md"
-  },
+  }
 
 ]
 
@@ -302,9 +302,4 @@ Need help figuring out where to start developing? This [introduction to Mosaik](
 - [Tidy Ergo](https://github.com/Eeysirhc/tidyergo)
 - [Ergo Analytics](https://github.com/gsblabsio/ergo-analytics)
 
-> Make sure to check out the *dev-tools* tab on [sigmaverse.io](https://sigmaverse.io/). 
-
-
-
-
-
+> Make sure to check out the *dev-tools* tab on [sigmaverse.io](https://sigmaverse.io/).

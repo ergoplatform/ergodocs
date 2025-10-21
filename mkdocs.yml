@@ -566,7 +566,35 @@ nav:
               - Create a P2S Address: tutorials/create-a-p2s.md
               - Multi-Signature: dev/scs/multi.md
               - ErgoScript vs ErgoTree: dev/scs/ergoscriptvergotree.md
-      - Contracts & Patterns Library: dev/contracts/contracts-library.md
+      - Contracts & Patterns Library:
+          - Overview: dev/contracts/contracts-library.md
+          - Categories:
+              - Tokens: dev/contracts/contracts-tokens.md
+              - Access Control: dev/contracts/contracts-access-control.md
+              - Privacy: dev/contracts/contracts-privacy.md
+              - Oracles: dev/contracts/contracts-oracles.md
+              - Proofs: dev/contracts/contracts-proofs.md
+              - Interoperability: dev/contracts/contracts-interoperability.md
+              - Randomness: dev/contracts/contracts-randomness.md
+              - Insurance: dev/contracts/contracts-insurance.md
+          - Patterns:
+              - Perpetual Token: dev/contracts/pattern-perpetual-token.md
+              - Whitelist-only Token: dev/contracts/pattern-whitelist-token.md
+              - Daily Withdrawal Limit: dev/contracts/pattern-daily-withdrawal-limit.md
+              - Stealth Address: dev/contracts/pattern-stealth-address.md
+              - Trustless Hashrate Oracle: dev/contracts/pattern-hashrate-oracle.md
+              - Bulletproof Range Proof Verification: dev/contracts/pattern-bulletproof-range-proof.md
+              - Schnorr Signature Verification: dev/contracts/pattern-schnorr-verification.md
+              - Insurance — Physical Gold Non-Delivery: dev/contracts/pattern-insurance-gold-nondelivery.md
+              - Import Off-chain Bank (Amitabh): dev/contracts/pattern-import-offchain-bank.md
+              - Trustless Peg (Cross-Chain): dev/contracts/pattern-trustless-peg.md
+              - Trustless Bitcoin Relay: dev/contracts/pattern-bitcoin-relay.md
+              - Randomness from ErgoRaffle: dev/contracts/pattern-randomness-from-raffle.md
+          - References:
+              - Off-chain & UI References: dev/contracts/contracts-offchain-references.md
+              - MCP Examples: dev/contracts/contracts-mcp-examples.md
+              - Contributing: dev/contracts/contracts-contributing.md
+              - Template: dev/contracts/pattern-template.md
       - Addresses & Payments:
           - Addresses: dev/wallet/address.md
           - Address Types: dev/wallet/address/address_types.md

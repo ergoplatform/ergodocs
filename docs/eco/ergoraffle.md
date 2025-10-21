@@ -30,3 +30,9 @@ The Raffle is managed by smart contracts built on Ergo Platform. This means that
 - Enhance the user interface
 - Integrate dApp connectors and ErgoPay support
 - Introduce a refundable raffle creation fee to prevent scams and DoS attacks
+
+## See also
+
+- Pattern: [pattern-randomness-from-raffle.md](pattern-randomness-from-raffle.md)
+- Category: [contracts-randomness.md](contracts-randomness.md)
+- Library: [contracts-library.md](contracts-library.md)

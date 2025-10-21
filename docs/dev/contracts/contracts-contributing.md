@@ -32,7 +32,7 @@ Standardize how new contract patterns are added so developers can rely on consis
 2) Update category page
 
 - Add a bullet under the correct category, linking to your new page by filename only.
-  - Example: “- My Pattern: [pattern-my-pattern.md](pattern-my-pattern.md)”.
+  - Example: “- My Pattern: `pattern-my-pattern.md`” (use inline code; do not link to a non-existent page).
 
 3) Update the library index
 

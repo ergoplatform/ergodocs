@@ -55,9 +55,10 @@ title: Perpetual Token
 
 ## References
 
-- Forum threads: Add links if referenced historically.
-- Talks/ErgoHack: Add materials if available.
-- Related patterns: pattern-whitelist-token.md
+- Developer guide: [perpetual.md](perpetual.md)
+- Token model overview: [tokens.md](tokens.md)
+- Data model overview: [data-model.md](data-model.md)
+- Related patterns: [pattern-whitelist-token.md](pattern-whitelist-token.md)
 
 ## Contributor Checklist
 

@@ -56,9 +56,12 @@ title: Bulletproof Range Proof Verification
 
 ## References
 
-- Forum threads: Add relevant discussions on confidential constraints when collected.
+- Zero-knowledge proofs (overview): [zkp.md](zkp.md)
+- Non-interactive ZK (NIZK): [nizk.md](nizk.md)
+- Sigma protocols (foundation): [sigma.md](sigma.md)
+- Discrete logarithms (prereq): [dlog.md](dlog.md)
 - Talks/ErgoHack: Add references when available.
-- Related patterns: [Stealth Address](pattern-stealth-address.md)
+- Related patterns: [pattern-stealth-address.md](pattern-stealth-address.md), [pattern-whitelist-token.md](pattern-whitelist-token.md)
 
 ## See also
 

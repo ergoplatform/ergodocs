@@ -38,7 +38,7 @@ There are many tools, libraries, SDKs, frameworks and utilities developers can u
     "content": "Creating a bundled mobile app for Android or iOS.",
     "image": "../assets/img/dev-grid/mobile.png",
     "url": "stack/mobile.md"
-  },
+  }
 
 ]
 
@@ -66,7 +66,7 @@ There are many tools, libraries, SDKs, frameworks and utilities developers can u
     "content": "Jump straight to an overview of all frameworks",
     "image": "../assets/img/dev-grid/frameworks.jpg",
     "url": "stack/introduction.md#frameworks"
-  },
+  }
 
 ]
 

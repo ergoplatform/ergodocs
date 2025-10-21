@@ -18,11 +18,11 @@ Read the context in [How Ergo Works](how-ergo-works.md), then pick one path.
 
 ## Choose your path
 
-* **Developers**: start with the overview in [contribute/devs.md](contribute/devs.md), follow the rules in [contribute/technical-guidelines.md](contribute/technical-guidelines.md), check funding in [contribute/bounties.md](contribute/bounties.md) and [contribute/grants.md](contribute/grants.md), see team scopes in [contribute/roles.md](contribute/roles.md).
+* **Developers**: start with the overview in [devs.md](devs.md), follow the rules in [technical-guidelines.md](technical-guidelines.md), check funding in [bounties.md](bounties.md) and [grants.md](grants.md), see team scopes in [roles.md](roles.md).
 
-* **Marketing and community**: plan campaigns and content in [contribute/marketing.md](contribute/marketing.md), join structured community work in [contribute/sigmanauts.md](contribute/sigmanauts.md).
+* **Marketing and community**: plan campaigns and content in [marketing.md](marketing.md), join structured community work in [sigmanauts.md](sigmanauts.md).
 
-* **Other partnerships**: if you run an exchange, wallet, service, or community group, find contacts and process in [contribute/roles.md](contribute/roles.md), you can also propose work in [contribute/grants.md](contribute/grants.md) or [contribute/bounties.md](contribute/bounties.md).
+* **Other partnerships**: if you run an exchange, wallet, service, or community group, find contacts and process in [roles.md](roles.md), you can also propose work in [grants.md](grants.md) or [bounties.md](bounties.md).
 
 
 # Contributing to Ergo

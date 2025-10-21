@@ -37,8 +37,7 @@ Developers can use tools to read data from the blockchain, compute using that da
     "content": "UI system for dApps",
     "image": "../../assets/img/dev-grid/mosaik.png",
     "url": "mosaik/intro.md"
-  },
-
+  }
 
 ]
 
