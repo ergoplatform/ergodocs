@@ -16,7 +16,6 @@ The detailed report is below. Nothing critical is found. Comments on issues foun
 
 3. Currently, the Ergo node (as well as other blockchain protocol clients and wallets we're aware of and the cryptographic libraries we're using) does not protect from side-channel attacks running locally (e.g. timing attacks or memory inspection by malware or viruses). So please protect the machines you're running wallets on!  
 
-
 > Ergo security assessment by Jean-Philippe Aumasson on 07/Dec/19
 
 ## Summary
@@ -59,7 +58,7 @@ We reviewed these two aspects, based on the code in the repository [sigmastate-i
 * Inappropriate variable types
 * Integer overflows
 * Race conditions
-* Logic bugs 
+* Logic bugs
 
 ​Despite the extensive review, we did not identify any security issue.
 
@@ -95,6 +94,7 @@ To unlock a wallet already created, a user provides the password and the wallet 
 Another process or user sharing the same memory address space could potentially recover the secrets, and they could also appear in crash dumps. To the best of our knowledge, there is no effective mitigation in pure Scala.
 
 ​
+
 # PoW validation
 
 ​After previously reviewing the security of the Autolykos PoW, we performed another round of review focusing on its latest verification logic, and notably, the changes in the commit [eb0f85a](https://github.com/ergoplatform/ergo/commit/eb0f85ac48b0ee8194c12369faf4cc5f16954af9).
@@ -109,4 +109,4 @@ Another process or user sharing the same memory address space could potentially 
 * Stricter validation of `k` and `n`: although the class enforces `k<=32` (number of elements in the solution) and `n<31` (log2 of the total number of elements), weak could still be created from the authorised parameters. The `validate()` function may therefore have additional validation that `n` and `k` are equal to the intended
 values.
 
-* Assert that `k` and `n` are positive values, since currently negative ones (as `Int's) would pass the `assert` statements.
+* Assert that `k` and `n` are positive values, since currently negative ones (as `Int's) would pass the`assert` statements.

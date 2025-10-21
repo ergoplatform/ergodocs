@@ -16,7 +16,7 @@ Blockchain scalability is primarily influenced by three factors:
 - **Consensus model**: The chosen model can determine the feasibility of certain scalability solutions. For example, the Proof of Stake consensus model does not support Non-interactive Proofs of Proof-of-Work (NiPoPoWs).
 - **Accounting model**: This pertains to the management of transactions and operations within the blockchain. Bitcoin uses the UTXO Model, while Ethereum uses the Account Model.
 
-Ergo's innovative approach to scalability, underpinned by these aspects, sets it apart from other blockchain technologies. Unlike Ethereum's Account model, which manages storage changes and validity checks on-chain during code execution, Ergo's [eUTXO](eutxo.md) employs a unique strategy: transactions are created off-chain, and validation checks are conducted on-chain. 
+Ergo's innovative approach to scalability, underpinned by these aspects, sets it apart from other blockchain technologies. Unlike Ethereum's Account model, which manages storage changes and validity checks on-chain during code execution, Ergo's [eUTXO](eutxo.md) employs a unique strategy: transactions are created off-chain, and validation checks are conducted on-chain.
 
 This approach reduces the operational load on each network node, thereby enhancing overall efficiency. The immutability of the transaction graph allows for further optimization of this process, increasing the number of transactions processed per second. Additionally, the use of light-verifying nodes boosts both the scalability and accessibility of the network.
 

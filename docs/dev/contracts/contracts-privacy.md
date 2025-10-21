@@ -20,5 +20,5 @@ Privacy patterns reduce linkability and metadata leakage on-chain. They often re
 
 ## See also
 
-- Library index: [contracts-library.md](contracts-library.md)
-- Additional contracts index: [contracts.md](contracts.md)
+- [Library index](contracts-library.md)
+- [Additional contracts index](contracts.md)

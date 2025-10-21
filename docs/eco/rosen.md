@@ -35,7 +35,7 @@ Initially, it's the greater of $10 or 0.5% of the transaction value, plus networ
 
 /// details | Why is the fee so high?
      {type: info, open: false}
-Each event has to be reported on by 60%+1 of Watchers, and they need to be incentivised to do so. It also prevents all their permits being exhausted by low-value transactions. 
+Each event has to be reported on by 60%+1 of Watchers, and they need to be incentivised to do so. It also prevents all their permits being exhausted by low-value transactions.
 ///
 
 /// details | Is there a maximum amount for a single transaction on Rosen Bridge?

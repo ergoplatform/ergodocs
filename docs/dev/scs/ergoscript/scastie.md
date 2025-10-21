@@ -7,6 +7,7 @@ Scastie is an online compiler for the Scala programming language. It's an ideal 
 You can see an example [here](https://scastie.scala-lang.org/greenhat/T2jSEv11QcWpXX1XrcHUdw/31)
 
 ## Setup
+
 Before we begin, we need to import the necessary packages to interact with the Ergo Blockchain environment. To do this, enter the following lines at the top of your Scastie workspace:
 
 ```scala
@@ -35,6 +36,5 @@ val txBuilder = newTransactionBuilder(blockchainSim.ctx)
 ```
 
 The `newTransactionBuilder` method creates a new instance of a transaction builder using the current blockchain context. This allows us to create transactions in our simulation.
-
 
 The Ergo Scala Playground, combined with Scastie's online environment, is a powerful tool for developing and testing Ergo smart contracts. Remember to always test your contracts thoroughly before deploying them on the real Ergo network. Happy coding!

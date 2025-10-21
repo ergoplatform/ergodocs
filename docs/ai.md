@@ -238,6 +238,7 @@ This contract shows how an AEI agent might issue a simple bond using surplus fun
   sigmaProp(issuerPubKey && (HEIGHT >= maturityHeight))
 }
 ```
+
 *Note: In a real application, `bondNominalValue` would typically be represented by the nanoErg value stored in the box itself, and `maturityHeight` might be stored in a register (e.g., R4) for flexibility.*
 
 ### Example 3: Pseudocode for an AEI Agent's Operational Flow

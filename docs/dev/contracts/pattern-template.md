@@ -52,8 +52,8 @@ Use this template when adding a new contract pattern. Follow ErgoDocs linking ru
 ## See also
 
 - Category page: link the relevant category, e.g., [contracts-tokens.md](contracts-tokens.md)
-- Library index: [contracts-library.md](contracts-library.md)
-- Legacy index of contracts/examples: [contracts.md](contracts.md)
+- [Library index](contracts-library.md)
+- [Additional contracts index](contracts.md)
 
 ## Contributor Checklist
 

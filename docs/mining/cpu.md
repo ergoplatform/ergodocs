@@ -8,7 +8,7 @@ tags:
   - Comparison
 ---
 
-# GPU vs. CPU Mining: A Comparative Analysis of Autolykos and RandomX 
+# GPU vs. CPU Mining: A Comparative Analysis of Autolykos and RandomX
 
 The evolution of cryptocurrency mining has been marked by a constant tug-of-war between optimizing algorithms for general-purpose hardware like CPUs and GPUs, and the inevitable emergence of specialized hardware like ASICs (Application-Specific Integrated Circuits) and FPGAs (Field-Programmable Gate Arrays). As developers create new digital currencies, they must carefully consider the trade-offs between these approaches. The choice of mining algorithm can have profound impacts on key aspects of a cryptocurrency network, including decentralization, accessibility, security, and performance. In this comparative analysis, we will dive deep into the technical details and real-world implications of GPU and CPU mining, using the Autolykos and RandomX algorithms as illustrative examples.
 
@@ -82,7 +82,7 @@ In comparison, RandomX's CPU-centric approach simply can't keep up in terms of h
 
 ## Towards a Greener Future
 
-As cryptocurrencies continue to go mainstream, the massive energy footprint of mining is coming under increasing scrutiny. For any cryptocurrency to achieve long-term sustainability, the mining process must become more energy-efficient. Here too, GPUs have a distinct edge over CPUs. 
+As cryptocurrencies continue to go mainstream, the massive energy footprint of mining is coming under increasing scrutiny. For any cryptocurrency to achieve long-term sustainability, the mining process must become more energy-efficient. Here too, GPUs have a distinct edge over CPUs.
 
 Modern GPUs are marvels of electrical engineering, designed to deliver maximum performance per watt. When paired with an optimized algorithm like Autolykos, GPUs can crunch through mining problems while sipping power. In contrast, general-purpose CPUs are notoriously power-hungry when pushed to their limits. RandomX does little to rein in these inefficiencies, leading to significantly higher energy consumption per hash.
 
@@ -102,7 +102,7 @@ The choice between optimizing a mining algorithm for CPUs or GPUs is a complex o
 
 As the cryptocurrency landscape continues to evolve, developers must think holistically about the trade-offs involved in algorithm design. The success of a cryptocurrency depends not just on abstract notions of decentralization but on real-world behaviours and incentive structures. While the exact influence of botnets on Monero remains uncertain, their presence underscores the challenges of achieving true decentralization through a CPU-centric mining algorithm.
 
-Autolykos offers a pragmatic path forward. Optimizing for GPUs aligns the interests of everyday users, professional miners, and the broader Ergo community. It provides robust resistance against botnets and ensures a more equitable hashrate distribution, all while maintaining energy efficiency and broad accessibility. 
+Autolykos offers a pragmatic path forward. Optimizing for GPUs aligns the interests of everyday users, professional miners, and the broader Ergo community. It provides robust resistance against botnets and ensures a more equitable hashrate distribution, all while maintaining energy efficiency and broad accessibility.
 
 The rise of specialized hardware like ASICs and FPGAs may be inevitable, but Ergo's goal is not to completely prevent their existence. Instead, Autolykos aims to ensure that no single type of hardware gains a significant advantage over the others. This balanced approach helps to secure the network against the risks of hardware monoculture and centralization.
 

@@ -22,7 +22,7 @@ Explore the [Key Features](protocol-overview.md) for a high-level overview.
 
 ### A Fusion of Research and Practicality
 
-Ergo encapsulates over a decade of blockchain evolution, merging proven concepts with the latest in peer-reviewed academic research. This blend has empowered Ergo to embed [advanced cryptographic features](documents.md) directly into its core, crafting a resilient blockchain equipped for future innovations. 
+Ergo encapsulates over a decade of blockchain evolution, merging proven concepts with the latest in peer-reviewed academic research. This blend has empowered Ergo to embed [advanced cryptographic features](documents.md) directly into its core, crafting a resilient blockchain equipped for future innovations.
 
 ErgoScript, the platform's programming language, exemplifies this innovation by enabling a wide range of functionalities, including ring signatures, atomic swaps, and self-replicating scripts, designed to set sophisticated rules for currency spending.
 
@@ -54,7 +54,7 @@ Ergo transcends the traditional concept of a blockchain token, embodying **commo
 
 Ergo's recognition as the leading PoW cryptocurrency in DeFi supply demonstrates the practical application of its innovative features.
 
-/// details | Open Source 
+/// details | Open Source
     {type: info, open: true}
 **Open Source and Decentralized:** The majority of Ergo's ecosystem is open source, permissionless, and decentralized, fostering community involvement and allowing developers to build dApps quickly and efficiently.
 ///
@@ -65,7 +65,7 @@ Launched in 2019 by esteemed developers and cryptocurrency luminaries, including
 
 ### A Fair Start
 
-Ergo was dedicated to ensuring a fair and equitable launch, reflecting Bitcoin's foundational principles to prevent undue influence from large-scale investors. This strategy democratized access and established a sustainable economic model for the network's growth. 
+Ergo was dedicated to ensuring a fair and equitable launch, reflecting Bitcoin's foundational principles to prevent undue influence from large-scale investors. This strategy democratized access and established a sustainable economic model for the network's growth.
 
 The mining protocol allocated a portion of the rewards to a treasury, managed by the non-profit Ergo Foundation, to support ongoing development and adoption. In its first 2.5 years, the Foundation accumulated 4,330,791.5 ERGs (4.43% of the total supply). For more information, visit the [Ergo Foundation](ergo-foundation.md) and [emission](emission.md) sections.
 

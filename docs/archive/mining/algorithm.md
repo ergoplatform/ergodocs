@@ -40,9 +40,9 @@ Autolykos V1 was initially designed to resist pooling. However, it was observed 
 - The *indexes* (**k**) are pseudorandom values derived from the block candidate and nonce.
 - The *elements* (**N**) are derived from the block height and constants. Unlike Autolykos v1, miners can now recalculate block candidates quickly as only the indexes depend on them.
 - The calculation of indexes also involves the same table
-    - (where elements are the last 31 bytes of **H(i | | h | | M )**, with **i** in the range [**0, N**),
-        - **h** representing the block height,
-        - and **M** serving as padding to slow down hash calculation (8kb of constant data).
+  - (where elements are the last 31 bytes of **H(i | | h | | M )**, with **i** in the range [**0, N**),
+    - **h** representing the block height,
+    - and **M** serving as padding to slow down hash calculation (8kb of constant data).
 
 The algorithm is designed to be efficient for miners who store the table, which initially requires **2<sup>26</sup> * 31 = 2,080,374,784** bytes (about 2GB).
 
@@ -51,7 +51,7 @@ The algorithm is designed to be efficient for miners who store the table, which 
 The table size (**N** value) evolves over time as follows:
 
 - Until block `614,400`, **N** = 2^{26} = 67,108,864 elements (31 bytes each).
-    - From this block, and until block `4,198,400`, **N** increases by 5 percent every 51,200 blocks.
+  - From this block, and until block `4,198,400`, **N** increases by 5 percent every 51,200 blocks.
 - At block `4,198,400`, the value of **N** is fixed at `2,143,944,600`.
 
 ## Test Vectors

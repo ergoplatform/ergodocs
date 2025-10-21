@@ -3,10 +3,10 @@
 
 [FleetSharp](https://github.com/pulsarz/FleetSharp) is a C# library for building transactions on the Ergo blockchain, inspired by the excellent TypeScript [fleet-sdk](fleet.md).
 
-
 ## Usage
 
 #### Example that sends a simple ERG only transaction from the node's wallet
+
 ```cs
 var unspentWalletBoxes = await node.GetAllUnspentBoxesInWallet(false);
 var currentHeight = await node.GetCurrentHeight();
@@ -23,6 +23,7 @@ var transactionId = await node.SubmitSignedTransaction(signedTx);
 ```
 
 #### Example that sends a transaction with some tokens from the node's wallet
+
 ```cs
 var unspentWalletBoxes = await node.GetAllUnspentBoxesInWallet(false);
 var currentHeight = await node.GetCurrentHeight();
@@ -47,6 +48,7 @@ var transactionId = await node.SubmitSignedTransaction(signedTx);
 ```
 
 #### Example minting tokens
+
 ```cs
 var unspentWalletBoxes = await node.GetAllUnspentBoxesInWallet(false);
 var currentHeight = await node.GetCurrentHeight();
@@ -73,6 +75,7 @@ var transactionId = await node.SubmitSignedTransaction(signedTx);
 ```
 
 #### Interacting with a contract by ensuring input selection and setting registers (this is purely a fictional example to demonstrate what is possible)
+
 ```cs
 using static FleetSharp.Sigma.ConstantSerializer;
 using static FleetSharp.Sigma.ISigmaCollection;
@@ -103,6 +106,7 @@ var transactionId = await node.SubmitSignedTransaction(signedTx);
 ```
 
 #### Reading registers from a box
+
 ```cs
 using static FleetSharp.Sigma.ConstantSerializer;
 using static FleetSharp.Sigma.ISigmaCollection;

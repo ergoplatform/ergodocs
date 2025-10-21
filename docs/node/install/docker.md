@@ -2,16 +2,13 @@
 
 To run the latest Ergo version in mainnet as a console application with logs printed to console:
 
-
 ```bash
 sudo docker run --rm -p 9030:9030 -p 127.0.0.1:9053:9053 -v /path/on/host/to/ergo/data:/home/ergo/.ergo ergoplatform/ergo --mainnet
 ```
-This will connect to Ergo mainnet with default config and open port 9030 globally and 9053 locally on the host system. 
+
+This will connect to Ergo mainnet with default config and open port 9030 globally and 9053 locally on the host system.
 
 All data will be stored in your host directory `/path/on/host/to/ergo/data`.
-
-
-
 
 ## Docker Compose
 
@@ -52,7 +49,7 @@ Follow the logs with
 docker logs -f ergo-mainnet -n 200
 ```
 
-Note that the node's data will be saved in `.ergo` directory you must create beforehand and change its group : 
+Note that the node's data will be saved in `.ergo` directory you must create beforehand and change its group :
 
 ```bash
 chown -R 9052:9052 .ergo
@@ -61,7 +58,6 @@ chown -R 9052:9052 .ergo
 Your config file must be in the same directory with name `ergo.conf`
 
 This will also limit the memory usage of node to 1400MB and cpu to 40%.
-
 
 ## Running other versions
 
@@ -76,6 +72,7 @@ To run specific Ergo version `<VERSION>` as a service with custom config `/path/
         -e MAX_HEAP=4G \
         ergoplatform/ergo:<VERSION> --<networkId> -c /etc/myergo.conf
 ```
+
 Available versions can be found on [Ergo Docker image page](https://hub.docker.com/r/ergoplatform/ergo/tags), for example, `v4.0.23`.
 
 This will connect to the Ergo mainnet or testnet following your configuration passed in `myergo.conf` and network flag `--<networkId>`. Every default config value would be overwritten with corresponding value in `myergo.conf`. `MAX_HEAP` variable can be used to control how much memory can the node consume.

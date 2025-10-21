@@ -8,7 +8,6 @@ tags:
 
 See also: [Contracts & Patterns Library](contracts-library.md)
 
-
 ### Ergo Contracts
 
 The [ergo-contracts](https://github.com/ergoplatform/ergo-contracts) repository contains source code for Ergo smart contracts, along with compilation, testing, and formal verification tooling.
@@ -43,7 +42,6 @@ The [ergo-contracts](https://github.com/ergoplatform/ergo-contracts) repository 
 
 ## dApps and Tooling Contracts
 
-
 ### Deployed Contracts
 
 - [GuapSwap](https://github.com/GuapSwap/guapswap-ronin/tree/main/src/main/scala/contracts)
@@ -58,7 +56,7 @@ The [ergo-contracts](https://github.com/ergoplatform/ergo-contracts) repository 
 - [SkyHarbor](https://github.com/skyharbor-market/contracts)
 - [Hodlbox](https://github.com/SavonarolaLabs/hodlbox-xyz/tree/main/src/lib/contract)
 - [SigmaO](https://github.com/ThierryM1212/SigmaO/tree/main/contract)
-- [SigmaUSD](https://github.com/anon-real/sigma-usd/tree/master/ageusd) 
+- [SigmaUSD](https://github.com/anon-real/sigma-usd/tree/master/ageusd)
 - [Ergo Raffle](https://github.com/ErgoRaffle/raffle-backend/blob/master/app/raffle/RaffleContract.scala)
 - [Auction Coin](https://github.com/Auction-Coin/contracts)
 - [Sigma Finance](https://github.com/K-Singh/Sigma-Finance/tree/master/contracts)
@@ -75,8 +73,8 @@ The [ergo-contracts](https://github.com/ergoplatform/ergo-contracts) repository 
 - [SigmaUSD Bank](https://github.com/ergoplatform/eips/blob/master/eip-0015.md)
 - [ErgoFund](https://github.com/ergoplatform/eips/pull/33)
 
-
 ### In Development
+
 - [Dexy](https://github.com/ergoplatform/ergo-jde/blob/main/kiosk/src/test/scala/kiosk/dexy/DexySpec.scala)
 - [Bitdomains](https://github.com/bitdomains/contracts)
 - [ErgoNames](https://github.com/ergonames/ergonames/blob/master/src/main/scala/)
@@ -106,16 +104,13 @@ The [ergo-contracts](https://github.com/ergoplatform/ergo-contracts) repository 
 - [Palmyra](palmyra.md)
 - [on-chain swaps contracts](https://github.com/ergoplatform/sigma-rust/pull/209)
 
-
 ## Resources
 
 - [contract-testing](https://github.com/anon-real/contract-testing) provides a quick tutorial that may be useful for testing your contracts off-chain.
-
-
 
 ### Ergoforum
 
 - [Offchain Bank operating at Layer 2](https://www.ergoforum.org/t/offchain-bank-operating-at-layer-2/3367)
 - [Decentralised Grid Contract](https://www.ergoforum.org/t/decentralized-grid-trading-on-ergo/3750/5)
 - [Market-driven emission contracts](https://www.ergoforum.org/t/market-driven-emission-contracts/3749)
-- [Interest-Free Loan Contract ](https://www.ergoforum.org/t/interest-free-loan-contract/67)
+- [Interest-Free Loan Contract](https://www.ergoforum.org/t/interest-free-loan-contract/67)

@@ -6,7 +6,7 @@ tags:
 
 # ErgoTree: Reference Manual
 
-ErgoTree forms the backbone of Ergo's [smart contracts](contracts.md). It is the typed abstract syntax of the ErgoTree language used for defining logical propositions that protect [boxes](box.md) (coin abstractions) in Ergo. While ErgoTree is fundamental, most users interact with it indirectly, primarily developing contracts using a higher-level language called [ErgoScript](ergoscript.md), which later compiles into ErgoTree. 
+ErgoTree forms the backbone of Ergo's [smart contracts](contracts.md). It is the typed abstract syntax of the ErgoTree language used for defining logical propositions that protect [boxes](box.md) (coin abstractions) in Ergo. While ErgoTree is fundamental, most users interact with it indirectly, primarily developing contracts using a higher-level language called [ErgoScript](ergoscript.md), which later compiles into ErgoTree.
 
 ## Understanding ErgoTree
 
@@ -38,7 +38,6 @@ By evaluating these predicates, ErgoTree authenticates [transactions](transactio
 - The propositions are stored in the [blockchain](protocol-overview.md) in the [ErgoTree serialization format](https://ergoplatform.org/docs/ErgoTree.pdf). This format optimizes for compact storage, swift [script execution](sigmastate-interpreter.md), and efficient [transaction validation](validation.md).
 - The reference implementation of ErgoTree is in Scala, but alternative implementations can utilize other languages.
 - ErgoTree's binary format intentionally omits metadata, which might be necessary for various Ergo applications.
-
 
 ## Additional Resources
 

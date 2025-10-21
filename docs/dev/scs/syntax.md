@@ -46,7 +46,6 @@ In this example:
 - **`: Boolean`**: The type of the variable (Boolean in this case). Specifying the type is optional but recommended for clarity.
 - **`= true`**: Assigns the value `true` to `bool`.
 
-
 ### More ErgoScript Syntax Examples
 
 Let's explore a more complex example that demonstrates control structures, data types, and basic operations:

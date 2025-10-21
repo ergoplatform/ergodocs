@@ -21,6 +21,7 @@ Yes, they complement each other perfectly.
 - **Celaut** provides access to powerful decentralized services that can be called directly from Netnotes agents.  
 
 For example:  
+
 - A Netnotes automation agent can monitor portfolio conditions locally.  
 - When specific market conditions are met, the agent can trigger advanced trading strategies hosted on Celaut’s decentralized network.  
 - This combines local asset control with access to scalable, high-performance services that would be too resource-intensive to run on a personal device.

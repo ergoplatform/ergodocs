@@ -66,7 +66,7 @@ Make your changes locally and submit a pull request when you're done.
 
 - Follow the code style conventions used throughout the project.
 - Include comments and explanations to make the code easy to understand.
-- Use code-blocks with syntax highlighting. 
+- Use code-blocks with syntax highlighting.
 
 ### Commit Messages
 
@@ -128,11 +128,9 @@ Please include a descriptive title and a detailed description of your changes.
 
 Once your pull request is submitted, our team will review your changes. We may request additional changes or clarification before merging your pull request. Please be patient, as we want to ensure that the documentation remains high-quality and consistent.
 
-
 ## MkDocs formatting
 
 rST suggests the following “types”: attention, caution, danger, error, hint, important, note, tip, and warning; however, you’re free to use whatever you want.
-
 
 ```
 /// admonition | Some title
@@ -184,14 +182,11 @@ Some danger
 Some error
 ///
 
-
 /// admonition | tip
     type: tip
 
 Some tip
 ///
-
-
 
 /// admonition | hint
     type: hint

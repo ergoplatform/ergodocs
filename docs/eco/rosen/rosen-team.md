@@ -31,4 +31,3 @@ The Rosen Bridge team was initially assembled during [ERGOHACK I](https://docs.e
 ## Is Rosen Bridge Affiliated with Ergo or The Ergo Foundation?
 
 Rosen Bridge, although initiated by members of the Ergo Foundation, operates independently. The Ergo Foundation does not exercise any managerial or controlling influence over Rosen Bridge. However, the Foundation has provided support to Rosen Bridge in the form of grants, a common practice for projects within the ecosystem. The Foundation is also set to receive 3% of the total supply of RSN. For more details, refer to the [Tokenomics](rosen-tokenomics.md) section.
-

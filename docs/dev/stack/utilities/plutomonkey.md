@@ -22,6 +22,7 @@ After compiling, the resulting P2S address can be utilized within Rust, as demon
     }
 
 ```
+
 See [this link](https://github.com/ergoplatform/sigma-rust/blob/fd197d0c0892cd24bbcb475e0a83243784700e32/ergotree-interpreter/src/contracts.rs#L159-L167) for full context
 
 This approach should also be applicable with JavaScript or TypeScript WASM (WebAssembly) bindings.

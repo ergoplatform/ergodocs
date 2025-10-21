@@ -26,6 +26,7 @@ Tokens can be bridged between any networks connected via Rosen Bridge. This mean
 - Future networks will be supported as they're added to Rosen Bridge (BSC, DOGE)
 
 ### Key Considerations for Multi-Chain Presence
+
 - Each bridged version represents the same token on different networks
 - Liquidity needs to be managed across all chains
 - Analytics and trading platforms should be integrated per network
@@ -36,6 +37,7 @@ Tokens can be bridged between any networks connected via Rosen Bridge. This mean
 ### Market Data Platforms Overview
 
 #### CoinGecko
+
 The world's largest independent crypto data aggregator. Generally easier to get listed compared to CoinMarketCap but still requires significant volume and legitimate activity.
 
 - Submit via [CoinGecko Token Request Form](https://www.coingecko.com/request-form/tokens/new?locale=en)
@@ -47,12 +49,15 @@ Options:
 - Alternative: $400 for fast-track listing
 
 #### CoinMarketCap
+
 The most recognized crypto data platform globally. Getting listed here provides significant legitimacy but has stringent requirements. Typically requires higher volume and more established presence than CoinGecko. Essential for serious projects but should be attempted after CoinGecko listing.
 
 #### LiveCoinWatch
+
 A growing alternative to CMC and CoinGecko. Generally has lower barriers to entry and faster listing times. Good for building initial market presence and tracking metrics while working toward larger platform listings.
 
 #### GeckoTerminal
+
 Modern DEX analytics platform focusing on real-time trading data and charts. Particularly strong for tracking DEX pairs and providing detailed trading analytics.
 
 ## Phase 2: Analytics Integration
@@ -1043,7 +1048,9 @@ contract rsVYFI is ERC20 {
     }
 }
 ```
+
 ///
+
 ## Phase 3: Network-Specific Integrations
 
 ### Ethereum Network
@@ -1051,12 +1058,14 @@ contract rsVYFI is ERC20 {
 This section covers the main priorities for Ethereum integration which are those [Trading Analytics Platforms](#trading-analytics-platforms) mentioned above and Uniswap. Due to Ethereum's massive DeFi ecosystem, there are hundreds of additional DEXes, lending protocols, yield farms, and other DeFi platforms that tokens could potentially integrate with. Track key platforms via [DeFiLlama's Ethereum section](https://defillama.com/chain/Ethereum).
 
 #### Uniswap
+
 The largest DEX on Ethereum. Essential for any ETH-based token.
 
 - Submit to [Uniswap Default Token List](https://github.com/Uniswap/default-token-list/issues/new?assignees=&labels=token+request&template=token-request.md&title=Add+%7BTOKEN_SYMBOL%7D%3A+%7BTOKEN_NAME%7D)
 - Monitor gas fees via [ETH Gas Station](https://ethgasstation.info/)
 
 #### Coinbase Wallet
+
 Most popular non-custodial wallet in the US. Listing here provides significant mainstream exposure.
 
 ### Cardano Network
@@ -1064,15 +1073,19 @@ Most popular non-custodial wallet in the US. Listing here provides significant m
 Track platforms via [DeFiLlama's Cardano section](https://defillama.com/chain/Cardano)
 
 #### Taptools.io
+
 Premier analytics platform for Cardano assets. Essential for Cardano token visibility.
 
 #### Cardanoscan
+
 Main block explorer for Cardano. View transactions at [Cardanoscan](https://cardanoscan.io/). Crucial for transaction verification and tracking.
 
 #### AdaPulse
+
 News and analytics platform focusing on Cardano ecosystem projects.
 
 #### DEX Platforms
+
 - Splash: Our recommended DEX for initial liquidity and trading
 - View all Cardano DEXes ranked by TVL at [DeFiLlama's Cardano DEX Rankings](https://defillama.com/chain/Cardano)
 
@@ -1086,21 +1099,23 @@ News and analytics platform focusing on Cardano ecosystem projects.
 
 - Decentralised exchange: [ErgoDEX](https://dex.ergo.io/) and [MewMart](https://mart.mewfinance.com/)
 - ErgoTipperBot: Social tipping service, helps with community engagement. Tip your rsToken in Telegram, Discord, bsky, Reddit, and more.
-    - To add a token to the list, [simply create a PR that adds your token to the list](https://github.com/Luivatra/ergotipper-tokens#supported-tokens-in-the-ergotipper-bot).
+  - To add a token to the list, [simply create a PR that adds your token to the list](https://github.com/Luivatra/ergotipper-tokens#supported-tokens-in-the-ergotipper-bot).
 - SigmaFi PR: Decentralised bonds
-    - [Add as a verified token](https://github.com/capt-nemo429/sigmafi-ui/pull/14)
-- DuckPools: DAO-governed liquidity platform 
-    - Requires DAO vote
+  - [Add as a verified token](https://github.com/capt-nemo429/sigmafi-ui/pull/14)
+- DuckPools: DAO-governed liquidity platform
+  - Requires DAO vote
 - ErgoMixer: Can mix any rsToken by default, but requires a custom PR to have the name of your rsToken in the UI. (TBC)
-- TradeHouse: Decentralised orderbook for Ergo assets, 
+- TradeHouse: Decentralised orderbook for Ergo assets,
 
 ## Best Practices
 
 ### Monitoring
+
 - Use ETH Gas Station for optimizing Ethereum transactions
 - Monitor platform performance via DeFiLlama (most comprehensive DeFi TVL tracker)
 
 ### Gas Fee Management
+
 Track real-time gas prices on [ETH Gas Station](https://ethgasstation.info/) to:
 
 - Optimize transaction timing

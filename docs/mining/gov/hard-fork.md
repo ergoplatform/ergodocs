@@ -24,9 +24,9 @@ Hard forks are necessary for several reasons:
 
 The implementation of a hard fork in Ergo follows these general steps:
 
-1. **Development and Testing:** 
+1. **Development and Testing:**
     - New protocol rules are developed and rigorously tested in a controlled environment, typically a testnet or developer network. This is crucial to ensure that all changes work as intended and do not introduce new issues.
-    
+
     - The [`ForkResolutionSpec`](https://github.com/ergoplatform/ergo/blob/master/src/it/scala/org/ergoplatform/it/ForkResolutionSpec.scala) file, found in the [Ergo GitHub repository](https://github.com/ergoplatform/ergo), is an example of how forks are tested. This file contains integration tests designed to validate the behavior of the network during and after the fork, ensuring that the nodes correctly resolve different chain forks and eventually converge on a single valid chain.
 
    ```scala
@@ -78,4 +78,4 @@ The implementation of a hard fork in Ergo follows these general steps:
 
 Hard forks are a powerful tool in the evolution of the Ergo blockchain, allowing for significant changes and improvements. However, they require careful planning, coordination, and communication to ensure the network remains secure and functional during and after the transition. As with any major change, thorough testing and validation are essential to avoid disruptions.
 
-For further details on how these processes are implemented and tested within the Ergo blockchain, you can explore the relevant code and configuration files available in the [Ergo GitHub repository](https://github.com/ergoplatform/ergo). 
+For further details on how these processes are implemented and tested within the Ergo blockchain, you can explore the relevant code and configuration files available in the [Ergo GitHub repository](https://github.com/ergoplatform/ergo).

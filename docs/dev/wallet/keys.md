@@ -12,7 +12,6 @@ m / 44' / coin_type' / account' / change / address_index
 
 [EIP-0003: Deterministic Wallet Standard](https://github.com/ergoplatform/eips/blob/ad0730daaebd9783f8db3c3095187a62851ee132/eip-0003.md) attempts to define a specific `coin_type` for the Ergo ecosystem, as well as a policy for how wallets use the `change` level.
 
-
 ## Coin Type
 
 Registered **coin_type**s can be found in [SLIP-0044](https://github.com/satoshilabs/slips/blob/master/slip-0044.md)
@@ -47,7 +46,6 @@ This decision was made to simplify the experience for end-users and solidify a c
 
 That said, in the future new wallets are more than welcome to create a new EIP for wallets that may wish to support internal addresses as well as an alternate standard (if valuable use cases arise).
 
-
 ## Derived Addresses
 
 Ergo node uses a secret root key (derived from seed) for the *change* address. After switching to EIP-3, supported by CoinBarn and Yoroi around that time, the node switched to the same change address as in the wallets, thus deriving an address corresponding to `m/44’/429’/0’/0/0`. (originally `m/1/2`)
@@ -56,7 +54,7 @@ Ergo node uses a secret root key (derived from seed) for the *change* address. A
 
 ## Deriving Addresses
 
-Navigate to `localhost:9053/swagger#/wallet/walletDeriveKey` 
+Navigate to `localhost:9053/swagger#/wallet/walletDeriveKey`
 
 Click ***"Try it out"***
 

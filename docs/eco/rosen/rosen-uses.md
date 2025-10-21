@@ -14,8 +14,8 @@ This functionality opens up new possibilities for token holders across these eco
 
 You can see a full list of locked assets [here](https://app.rosen.tech/assets).
 
-
 ### Ergo Network
+
 | Token | Description |
 |-------|-------------|
 | ERG   | Native Ergo token |
@@ -39,6 +39,7 @@ You can see a full list of locked assets [here](https://app.rosen.tech/assets).
 | CYPX  | [Cyberverse](cyberverse.md) |
 
 ### Cardano Network
+
 | Token | Description |
 |-------|-------------|
 | ADA   | Native Cardano token |
@@ -52,30 +53,30 @@ You can see a full list of locked assets [here](https://app.rosen.tech/assets).
 | OADA  | New supported token |
 | MNT   | New supported token |
 
-
 ### Bitcoin Network
+
 | Token | Description |
 |-------|-------------|
 | BTC   | Native Bitcoin token |
 
 ### Ethereum Network
+
 | Token | Description |
 |-------|-------------|
 | ETH   | Native Ethereum token |
 
 ### Binance Smart Chain Network
+
 | Token | Description |
 |-------|-------------|
 | BNB   | Native Binance Smart Chain token |
 
-
-
 ## Ergo Ecosystem Opportunities
 
-1. **Token Swaps**: 
+1. **Token Swaps**:
    Use [Ergodex](spectrum.md) to acquire native tokens like rsADA, rsBTC, rsETH, rsBNB, or rsHOSKY.
 
-2. **[Auction House](ergo-auctions.md)**: 
+2. **[Auction House](ergo-auctions.md)**:
    A decentralized marketplace for NFTs and tokens that now accepts rsADA, rsBTC, rsETH, and rsBNB. List tokens in bulk or make offers.
 
 3. **[SigmaFi](https://sigmafi.app/#/)**:

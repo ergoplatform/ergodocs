@@ -4,16 +4,16 @@ Let `a`, `b` ∈ Z<sub>3</sub> be the secret choices of Alice and Bob, respectiv
 
 The modified game using commitments proceeds as follows:
 
-1.  **Commitment Phase**: Alice chooses her secret move `a` and a secret random value `s`. She computes a commitment `c = H(a || s)` (where `H` is a hash function like Blake2b256) and publishes `c` (e.g., by locking funds in a contract containing `c`).
-2.  **Reveal Phase (Bob)**: Bob chooses and reveals his move `b`. At this point, Alice knows the outcome based on `a` and `b`, but Bob doesn't know `a`.
-3.  **Reveal Phase (Alice)**: Alice reveals her original move `a` and the secret `s`. Anyone can now verify that `c = H(a || s)`, confirming Alice didn't change her move after seeing Bob's. The winner is then determined based on `a` and `b`.
+1. **Commitment Phase**: Alice chooses her secret move `a` and a secret random value `s`. She computes a commitment `c = H(a || s)` (where `H` is a hash function like Blake2b256) and publishes `c` (e.g., by locking funds in a contract containing `c`).
+2. **Reveal Phase (Bob)**: Bob chooses and reveals his move `b`. At this point, Alice knows the outcome based on `a` and `b`, but Bob doesn't know `a`.
+3. **Reveal Phase (Alice)**: Alice reveals her original move `a` and the secret `s`. Anyone can now verify that `c = H(a || s)`, confirming Alice didn't change her move after seeing Bob's. The winner is then determined based on `a` and `b`.
 
 This protocol works assuming Alice behaves honestly and reveals `a` and `s` regardless of the outcome. However, a malicious Alice might refuse to reveal her commitment if she knows she lost. Smart contracts must handle such edge cases, as they cannot be easily fixed after deployment. In this example, we must penalize Alice (e.g., by forfeiting her stake) if she fails to reveal her commitment within a specified timeframe (deadline).
 
 The complete game is implemented in ErgoScript using a two-stage protocol:
 
-1.  **Stage 1 (Start Game)**: Alice creates a "start-game" box. This box locks her stake and contains her commitment `c`. The script guarding this box defines the rules for the next stage.
-2.  **Stage 2 (End Game)**: Bob spends the start-game box by revealing his move `b` and contributing his stake. This transaction creates one or two "end-game" boxes. These boxes contain the combined stake and are spendable only according to the game's outcome rules (including Alice revealing `a` and `s`, handling draws, wins, losses, and timeouts).
+1. **Stage 1 (Start Game)**: Alice creates a "start-game" box. This box locks her stake and contains her commitment `c`. The script guarding this box defines the rules for the next stage.
+2. **Stage 2 (End Game)**: Bob spends the start-game box by revealing his move `b` and contributing his stake. This transaction creates one or two "end-game" boxes. These boxes contain the combined stake and are spendable only according to the game's outcome rules (including Alice revealing `a` and `s`, handling draws, wins, losses, and timeouts).
 
 To initiate the game, Alice decides on the stake amount `x` (in nanoErgs), chooses her move `a` and secret `s`, computes the commitment `c = H(a || s)`, and locks `x` nanoErgs along with `c` in the start-game box, protected by the following script (`startGameScript`):
 

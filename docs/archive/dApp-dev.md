@@ -49,9 +49,6 @@ Ethereum's developers are working on a plan for scaling, but even if this is suc
 
 Interoperability does more than enable cross-chain liquidity. It decentralises the decentralised infrastructure for DeFi, adding layers of redundancy and security. In the process, it strengthens every blockchain that is a part of that ecosystem, creating a whole that is more than the sum of its parts. At a time when relatively large blockchains still suffer double-spend attacks and [serious reorgs](https://hackmd.io/@cUBb4hAvQciAEPoU2yfrzQ/Skd4X6MZw), and catastrophic vulnerabilities are found in smart contracts holding tens of millions of dollars of value, we cannot assume that one single blockchain will or should rule them all.
 
-
-
-
 *As blockchain technology gains traction, central bank digital currencies are among the most significant applications being developed. But these will inevitably fall far short of the ideal for one simple reason: control. In particular, that has implications for composability and privacy, and much else besides.*
 
 Central bank digital currencies are no longer a theoretical application of blockchain technology. The list of countries developing CBDCs is growing rapidly, with several now trialling state-backed digital cash.
@@ -83,7 +80,6 @@ That giant eye on the dollar bill? You ain't seen nothing yet.
 Ergo has a very different vision for blockchain-based cash and financial services. In the new paradigm of blockchain, value is not retained by constraining it. It is only maximised through open systems that make it as accessible as people want it to be. Money without borders, in both senses: cash that can be programmed, sent and received freely but privately, between any two individuals or organisations – and even blockchains – anywhere in the world.
 
 This is what money needs to be and what Ergo is building.
-
 
 *This is the first in a series of articles speculating on how the fast-emerging DeFi sector might evolve in the coming years.*
 
@@ -126,4 +122,3 @@ Regular users will then use the 'native stablecoin' in all their businesses as a
 The miners who receive this native stablecoin can hold it as it is to pay for electricity and hardware costs, or they can convert it back to the platform token or other assets – that is up to them.
 
 These are just some of the themes we are starting to see emerging in the DeFi world and how they might develop over time. In the coming weeks, we'll explore various other ideas as the space continues to evolve and Ergo launches new technology.
-

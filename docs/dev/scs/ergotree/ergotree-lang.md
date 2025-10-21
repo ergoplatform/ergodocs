@@ -62,17 +62,17 @@ To specify the semantics of ErgoTree, its terms are translated to a lower-level 
 
 ## Figure 2: Lowering to Core-λ
 
-| $Term_{ErgoTree}$ | | $Term_{Core}$  | 
+| $Term_{ErgoTree}$ | | $Term_{Core}$  |
 |---||---|
-$\Low{ \TyLam{x_i}{T_i}{e}      }$ | $\To$ | $\Lam{   x:(T_0,\dots,T_n)}{ \Low{ \{ \Ov{\lst{val}~x_i: T_i = x.\_i;}~e\} } }$    
+$\Low{ \TyLam{x_i}{T_i}{e}      }$ | $\To$ | $\Lam{   x:(T_0,\dots,T_n)}{ \Low{ \{ \Ov{\lst{val}~x_i: T_i = x.\_i;}~e\} } }$
 $\Low{ \Apply{e_f}{\Ov{e_i}}    }$ | $\To$ | $\Apply{ \Low{e_f} }{ \Low{(\Ov{e_i})} }$  
-$\Low{ \Apply{e.m}{\Ov{e_i}}    }$ | $\To$ | $\Apply{ \Low{e}.m}{\Ov{ \Low{e_i} }}$ 
-$\Low{ \Tup{e_1, \dots ,e_n}    }$ | $\To$ | $\Tup{   \Low{e_1}, \dots ,\Low{e_n}}$ 
-$\Low{ e_1~\text{\|\|}~e_2        }$ | $\To$ | $\Low{   \IfThenElse{ e_1 }{ \True }{ e_2 }}$    
+$\Low{ \Apply{e.m}{\Ov{e_i}}    }$ | $\To$ | $\Apply{ \Low{e}.m}{\Ov{ \Low{e_i} }}$
+$\Low{ \Tup{e_1, \dots ,e_n}    }$ | $\To$ | $\Tup{   \Low{e_1}, \dots ,\Low{e_n}}$
+$\Low{ e_1~\text{\|\|}~e_2        }$ | $\To$ | $\Low{   \IfThenElse{ e_1 }{ \True }{ e_2 }}$
 $\Low{ e_1~\text{&&}~e_2      }$ | $\To$ | $\Low{   \IfThenElse{ e_1 }{ e_2 }{ \False } }$  
-$\Low{ \IfThenElse{e_{cond}}{e_1}{e_2} }$ | $\To$ | $\Apply{(if(\Low{e_{cond}} ,~\Lam{(\_:Unit)}{\Low{e_1}} ,~\Lam{(\_:Unit)}{\Low{e_2}} ))}{}$ 
+$\Low{ \IfThenElse{e_{cond}}{e_1}{e_2} }$ | $\To$ | $\Apply{(if(\Low{e_{cond}} ,~\Lam{(\_:Unit)}{\Low{e_1}} ,~\Lam{(\_:Unit)}{\Low{e_2}} ))}{}$
 $\Low{ \{ \Ov{\text{val}~x_i: T_i = e_i;}~e\} }$ | $\To$ | $\Apply{ (\Lam{(x_1:T_1)}{( \dots \Apply{(\Lam{(x_n:T_n)}{\Low{e}})}{\Low{e_n}} \dots )}) }{\Low{e_1}}$\\
-$\Low{ \Apply{\delta}{\Ov{e_i}} }$ | $\To$ | $\Apply{\delta}{\Ov{ \Low{e_i} }}$ 
+$\Low{ \Apply{\delta}{\Ov{e_i}} }$ | $\To$ | $\Apply{\delta}{\Ov{ \Low{e_i} }}$
 $\Low{ e }$     | $\To$ |  $e$  
 
 All $n$-ary lambdas where $n > 1$ are transformed into single-argument lambdas using tupled arguments.

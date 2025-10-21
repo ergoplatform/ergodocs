@@ -1,8 +1,8 @@
-# Assembler 
+# Assembler
 
 > More likely you'll want to use [dApp-dev](dApp.md)
 
-The transaction assembler service allows you to bypass the node requirements for dApps. 
+The transaction assembler service allows you to bypass the node requirements for dApps.
 
 ### The Problem
 
@@ -20,6 +20,7 @@ In this situation, dApps have no workarounds other than requiring users to have 
 Specifically, the problem that this topic is going to address is to bypass the node requirements by having an off-chain service to assemble arbitrary transactions for dApps.
 
 ### A Solution
+
 The off-chain service will allow dApps to register some requests by providing an address (which the user will deposit her assets) and some other specifications.
 This topic is just for getting feedback, and I still haven't designed the APIs to provide concrete examples, however:
 
@@ -66,6 +67,7 @@ This topic is just for getting feedback, and I still haven't designed the APIs t
   }
 }
 ```
+
 The above is a potential request that Ergo Auction House can register to the service, which will start a new auction! So the Ergo Auction House app will ask the user to deposit the required assets to the _address_ (will discuss what this _address_ is in the next sections) using their favourite wallet and registers the request to the service.
 
 After such a request, the service will follow the _address_ and, when the conditions are met, assembles the transaction and makes sure it will be mined. In case of failures, assets will be returned to the user; for example, if the transaction is for placing a bid and someone else places a bid before us!
@@ -78,10 +80,10 @@ Furthermore, the _txSpec_ is pretty raw, can be improved so that the service enc
 
 With some improvements on the node's side, the service can be very fast and effective by using chained transactions to avoid wasting time for the deposits to be mined! So basically, it will be like the user is running a node and is generating the transaction directly without intermediate operations.
 
-
 Last but not least, the service will, of course, provide some other APIs for dApps to see the result of their registered requests.
 
 ### Trusting Issues
+
 How dApps and users should trust such a service is still a big problem. Several solutions:  
 
 - With the service being open-sourced and maybe being provided by a trusted party
@@ -92,6 +94,7 @@ Although one can argue that the first two options can work under some circumstan
 For example, the Ergo Auction House can use p2s addresses, which will allow the assets to be spent only for placing a specific bid, and the user's address is specified as auction's bidder in the auction box and register; it to the service!
 
 ### Service Provider Incentives
+
 Although there are no plans to make profits out of the service, one can have multiple options and plans to make some profits with the service. For example, the service can follow the registered request for some minutes for free, and after that remove the request if the conditions are not met to assemble the transaction, then dApps can pay the service to follow the request longer!
 
 Until the dApp bridge in wallets is built, I think such a service will help a lot for the growth of dApps. Even after some wallets provide APIs for dApps, users still can benefit from such a service by using any wallet they wish!
@@ -99,14 +102,14 @@ Please let me know if something is overlooked.
 
 ### Motivation
 
-Currently, to craft a transaction, we need to use Kiosk, sigma-rust, Appkit or some other tool, which makes the entry barrier quite high. 
+Currently, to craft a transaction, we need to use Kiosk, sigma-rust, Appkit or some other tool, which makes the entry barrier quite high.
 Motivated from @anon_real's Tx Assembler and other proposals, I had been working on a tool to automate tx building for the off-chain components of an Ergo dApp.
 
 The tool called simply "Tx Builder" can be used to create transactions for participating in several Ergo application protocols. The goal of Tx Builder is to allow people with just knowledge of Json to craft a transaction following certain rules.
 
 ### Documentation
 
-There is a very short introduction [here](https://github.com/scalahub/Kiosk/blob/master/src/main/scala/kiosk/offchain/readme.md). 
+There is a very short introduction [here](https://github.com/scalahub/Kiosk/blob/master/src/main/scala/kiosk/offchain/readme.md).
 For further details, please refer to the source code [here](https://github.com/scalahub/Kiosk/tree/master/src/main/scala/kiosk/offchain) and the examples [here](https://github.com/scalahub/Kiosk/tree/master/src/test/scala/kiosk/offchain).
 
 More details will follow soon.
@@ -115,7 +118,6 @@ More details will follow soon.
 
 As an example, the [following Json](https://github.com/scalahub/Kiosk/blob/master/src/test/scala/kiosk/offchain/timestamp.json) can be used for creating a timestamp using the service described [here](https://www.ergoforum.org/t/a-trustless-timestamping-service-for-boxes/432/9)
 
-    
 ```JSON
 {
   "constants": [
@@ -247,6 +249,7 @@ As an example, the [following Json](https://github.com/scalahub/Kiosk/blob/maste
   ]
 }
 ```
-### Using with KioskWallet
-The above script was used to automatically generate [this transaction](https://explorer.ergoplatform.com/en/transactions/da441606b7933de8e87bbd439b4fbe1888c1403f58682c5bcddcbc488ee99773) using [KioskWallet](https://kioskweb.org/session/#kiosk.Wallet).
 
+### Using with KioskWallet
+
+The above script was used to automatically generate [this transaction](https://explorer.ergoplatform.com/en/transactions/da441606b7933de8e87bbd439b4fbe1888c1403f58682c5bcddcbc488ee99773) using [KioskWallet](https://kioskweb.org/session/#kiosk.Wallet).

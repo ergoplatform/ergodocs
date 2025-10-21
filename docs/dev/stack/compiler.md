@@ -17,7 +17,7 @@ The [ErgoScript Compiler](https://github.com/ergoplatform/ergoscript-compiler) i
 
 2. Compiling ErgoScript code involves the following steps:
     - Save your ErgoScript code in a text file, for example, `myScript.es`. You can choose any file extension.
-    - If your code references any symbols (constants), save them in a separate file, for instance, `mySymbols.json`. Refer to the section below on how to write this file. 
+    - If your code references any symbols (constants), save them in a separate file, for instance, `mySymbols.json`. Refer to the section below on how to write this file.
     - This symbols file is optional and is only required if your code references any symbols.
     - Use the command `java -cp <jarFile> Compile <ergoScriptFile> <optionalSymbolsFile>` to compile the file. For example:
         - `java -cp ErgoScriptCompiler.jar Compile myScript.es mySymbols.json`
@@ -48,6 +48,7 @@ java -cp \
 ```
 
 The output includes:
+
 1. The ErgoTree corresponding to the Script, serialized and hex-encoded.
 2. The Blake2b256 hash of the ErgoTree, hex-encoded.
 3. The address corresponding to the ErgoTree.
@@ -82,7 +83,6 @@ If your ErgoScript code references token IDs or script hashes, encode such value
 
 ## Generating Payment Requests
 
-Apart from compiling ErgoScript, this tool can generate a "payment request". It replaces register values from human-understandable forms to serialized-hex needed by the Ergo client's REST API. For instance, to store the integer 1, you would provide the register value as `0402`. 
+Apart from compiling ErgoScript, this tool can generate a "payment request". It replaces register values from human-understandable forms to serialized-hex needed by the Ergo client's REST API. For instance, to store the integer 1, you would provide the register value as `0402`.
 
 The command to generate payment requests is: `java -cp <jarFile> Payment <humanRequest.json> <symbolsFile.json>`
-

@@ -234,4 +234,3 @@ This fetches token details from Spectrum's API and saves them locally.
 - **Stay Updated:** Keep the bot, tokens, and configs up-to-date with regular updates.
 
 For additional assistance, consult the repository's documentation or contact the community.
-

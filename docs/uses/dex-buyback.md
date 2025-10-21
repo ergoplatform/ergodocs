@@ -36,9 +36,9 @@ The sell contract is then defined as follows:
                  )
       }
 ```
+
 In this case, `bbh` represents the buyback script hash.
 
 You can experiment with a playground version of this code [on scastie](https://scastie.scala-lang.org/oVlOW1GpTkWGLPLzDmJTxA)
-
 
 Just like the buyback, we can enhance orders with various conditions, thereby achieving DEX functionality. This makes simple DEX orders composable with complex logic such as token-sale, liquidity providing, etc. This concept is referred to as *smart orders*. However, the challenge lies in developing front-end apps and user interfaces for smart order-based DEXes.

@@ -13,10 +13,10 @@ Every message in the P2P protocol has the following format:
 
 | Data type         | Field name              | Details                                                                                                                      |  
 |:------------------|:------------------------|:-----------------------------------------------------------------------------------------------------------------------------|
-| byte\[4\]         | Magic bytes             | For the mainnet, the magic bytes are `{1, 0, 2, 4}`. For testnet, `{2, 0, 0, 1}`.                                            |              
+| byte\[4\]         | Magic bytes             | For the mainnet, the magic bytes are `{1, 0, 2, 4}`. For testnet, `{2, 0, 0, 1}`.                                            |
 | unsigned byte     | Message code            | One byte describing message type                                                                                             |
 | int               | Message body length     | No `VLQ` or `ZigZag` encoding is used for the message length (for historical reasons); bytes are coming in big-endian order. |
-| byte\[4\]         | Handshake body checksum | First four bytes of blake2b256(message body)                                                                                 |                                        
+| byte\[4\]         | Handshake body checksum | First four bytes of blake2b256(message body)                                                                                 |
 | byte\[bodyLength] | Message body            | Message body                                                                                                                 |
 
 For more detailed implementation, you can check out the [Ergo Node View Synchronizer](https://github.com/ergoplatform/ergo/blob/master/src/main/scala/org/ergoplatform/network/ErgoNodeViewSynchronizer.scala) in the Ergo repository.
@@ -163,7 +163,7 @@ Sent in response to Request Modifier.
 
 ## Pull Requests (PRs) & Tests
 
-The [NiPoPoW powered bootstrapping PR #1365](https://github.com/ergoplatform/ergo/issues/1365) is a relevant enhancement that introduces a method to bootstrap nodes using Non-Interactive Proofs of Proof-of-Work (NiPoPoWs). 
+The [NiPoPoW powered bootstrapping PR #1365](https://github.com/ergoplatform/ergo/issues/1365) is a relevant enhancement that introduces a method to bootstrap nodes using Non-Interactive Proofs of Proof-of-Work (NiPoPoWs).
 
 Tests for parsing networking messages against test vectors are discussed in PR [#1264](https://github.com/ergoplatform/ergo/pull/1264), which includes:
 
@@ -186,4 +186,3 @@ These demos provide examples of how to generate addresses and print transactions
 
 - A simple implementation of VLQ and ZigZag encoding can be found [here](https://gist.github.com/satsen/5e7bcc38565ad193cf7d906a856f804e).
 - A complete implementation of the P2P protocol written in Java can be found in [Ergonnection](https://github.com/Satergo/Ergonnection).
-

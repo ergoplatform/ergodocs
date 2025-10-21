@@ -14,7 +14,7 @@ title: Bulletproof Range Proof Verification
 ## Canonical Code & Tests
 
 - Upstream  
-  - PR: https://github.com/ergoplatform/sigmastate-interpreter/pull/1079 — Adds Bulletproof range proof verification example and tests (work in progress).
+  - PR: <https://github.com/ergoplatform/sigmastate-interpreter/pull/1079> — Adds Bulletproof range proof verification example and tests (work in progress).
 - Commit(s)  
   - Add pinned SHAs once merged/stable.
 
@@ -66,8 +66,8 @@ title: Bulletproof Range Proof Verification
 ## See also
 
 - Category: [contracts-proofs.md](contracts-proofs.md)  
-- Library index: [contracts-library.md](contracts-library.md)  
-- Additional contracts index: [contracts.md](contracts.md)
+- [Library index](contracts-library.md)
+- [Additional contracts index](contracts.md)
 
 ## Contributor Checklist
 

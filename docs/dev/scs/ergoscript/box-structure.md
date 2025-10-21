@@ -14,7 +14,7 @@ The `INPUTS` and `OUTPUTS` in ErgoScript are arrays, each consisting of `Box` ty
 3. `tokens`: An optional field that holds an array of tokens or assets.
 4. `R4..R9`: These are the [registers](registers.md) of a box, capable of storing any type of data.
 
-Each element in the `tokens` array is a pair, structured as `(tokenId, amount)`. Here, `tokenId` is a 32-byte array, and `amount` is a `Long` value. 
+Each element in the `tokens` array is a pair, structured as `(tokenId, amount)`. Here, `tokenId` is a 32-byte array, and `amount` is a `Long` value.
 
 ```scala
 {

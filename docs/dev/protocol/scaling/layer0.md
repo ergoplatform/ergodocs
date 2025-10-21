@@ -2,7 +2,7 @@
 
 Layer 0, also known as the *Network* or *Peer-to-Peer* (P2P) layer, forms the bedrock of decentralized communication within a blockchain network. It plays a pivotal role in facilitating the exchange of data and information across the network, allowing nodes to distribute and validate transactions, blocks, and other data types without the need for a centralized authority.
 
-## Client Types 
+## Client Types
 
 In the context of scaling, the type of client used can significantly impact the performance and efficiency of a blockchain network. Ergo supports multiple types of clients, each offering different levels of security and resource requirements. These client types are designed to cater to various use cases and network conditions, thereby contributing to the overall scalability of the Ergo network. Here are the available client types:
 
@@ -14,7 +14,7 @@ In the context of scaling, the type of client used can significantly impact the 
 
 - [**Light-SPV Mode**](light-spv-node.md): A lightweight mode that enables users to verify transactions with a small sample of block headers. This mode requires the least resources, making it highly scalable for devices with limited storage and computational capabilities.
 
-In addition to these, Ergo also supports **[Logarithmic space mining](logspace.md)**, which enables the existence of *light miners*. Similar to light clients, light miners can bootstrap using block headers without downloading the entire blockchain. This feature can be integrated into Ergo through a velvet (soft) fork, further enhancing the scalability of the network. 
+In addition to these, Ergo also supports **[Logarithmic space mining](logspace.md)**, which enables the existence of *light miners*. Similar to light clients, light miners can bootstrap using block headers without downloading the entire blockchain. This feature can be integrated into Ergo through a velvet (soft) fork, further enhancing the scalability of the network.
 
 ## Sub Blocks
 
@@ -35,5 +35,3 @@ In the context of scaling, Ergo provides miners with the flexibility to modify c
 - **Transaction size:** As of node `4.0.23`, the transaction size limit for the mempool is `96kb`. Transactions exceeding this size can only be included manually by miners. This limit can be adjusted to balance the network's capacity to process transactions and the computational load on nodes.
 
 For more details on how these parameters can be adjusted and their impact on the network's scalability, please refer to the [Governance](governance.md) section.
-
-

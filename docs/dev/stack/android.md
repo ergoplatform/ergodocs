@@ -2,7 +2,7 @@
 
 To develop an android application you can develop with the JVM suite (Java/Kotlin/Scala).  
 
-## Platforms 
+## Platforms
 
 ::cards::
 
@@ -30,13 +30,11 @@ To develop an android application you can develop with the JVM suite (Java/Kotli
 
 ::/cards::
 
-
 ## Getting Started
 
 ::cards::
 
 [
-
 
   {
     "title": "Gradle",
@@ -51,8 +49,6 @@ To develop an android application you can develop with the JVM suite (Java/Kotli
 ]
 
 ::/cards::
-
-
 
 ## Tools
 
@@ -69,4 +65,3 @@ To develop an android application you can develop with the JVM suite (Java/Kotli
 ]
 
 ::/cards::
-

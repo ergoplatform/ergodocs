@@ -49,6 +49,7 @@ Ergo's ability to execute complex and composable smart contracts could be furthe
 Sharding is a technique that divides a blockchain network into smaller sections, or shards, to enhance scalability. Each shard processes a subset of transactions independently. However, maintaining atomic composability, where all components of a multi-step transaction are executed in full or not at all, can be challenging in a sharded environment.
 
 #### Example: Cross-Shard Transaction
+
 Consider a scenario where a user wants to execute a transaction that involves assets and operations spanning multiple shards. If the transaction fails to execute atomically across all shards, it could lead to inconsistencies, such as assets being locked or lost, or operations being partially executed.
 
 ### Strategies for Preserving Atomic Composability in Sharding
@@ -58,7 +59,6 @@ Several strategies can help preserve atomic composability when implementing shar
 #### Cross-shard Transactions
 
 Establish a mechanism for secure and efficient communication between shards to enable cross-shard transactions. This mechanism ensures that all components of a multi-step transaction are either fully committed or rolled back, even when the transaction spans multiple shards.
-
 
 #### Locking Mechanisms
 

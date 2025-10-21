@@ -17,4 +17,4 @@ tags:
   - Pledging to the market has been successful (see below).
   - Once the Market closes and the guards post the results, testing of "pledge winnings and calculations" will occur.
 - There is an ambitious goal to have an Olympic event next week for Live Beta testing from the community using small amounts (see below).
-- Join the project's Discord server at https://discord.gg/wa38bX57tY to learn more and/or volunteer to help move the project and DAO forward.
+- Join the project's Discord server at <https://discord.gg/wa38bX57tY> to learn more and/or volunteer to help move the project and DAO forward.

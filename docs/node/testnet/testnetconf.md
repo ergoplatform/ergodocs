@@ -5,10 +5,12 @@ This document describes the main sections and fields of the [Ergo node configura
 ## Ergo Configuration Section
 
 ### Network Type
+
 `ergo.networkType = "testnet"`
 This setting defines the network type. For testing purposes, it's set to "testnet".
 
 ### Node Configuration
+
 `ergo.node`
 This section contains parameters related to the node settings.
 
@@ -20,6 +22,7 @@ This section contains parameters related to the node settings.
 - `checkpoint` is a mandatory checkpoint introduced due to some violations in the PaiNet.
 
 ### Chain Configuration
+
 `ergo.chain`
 This section includes parameters related to the blockchain.
 
@@ -30,29 +33,33 @@ This section includes parameters related to the blockchain.
 - `blockInterval` is the desired time interval between blocks.
 - `monetary.minerRewardDelay` sets the delay between when a block is mined and when the reward can be spent.
 - `voting` contains parameters related to the voting mechanism, such as the length of a voting epoch, the number of epochs for soft-fork voting, and activation epochs for a soft-fork after acceptance.
-- `reemission` includes parameters related to the emission process. 
+- `reemission` includes parameters related to the emission process.
 - `genesisStateDigestHex` is the Base16 representation of the genesis state roothash.
 
 ### Voting Configuration
+
 `ergo.voting`
 This section allows configuration of voting parameters.
 
 ### Wallet Configuration
+
 `ergo.wallet.secretStorage.secretDir`
 Sets the directory for the wallet's secret storage.
 
 ## Scorex Configuration Section
 
 ### Network Configuration
+
 `scorex.network`
 This section includes parameters related to the network settings.
 
-- `magicBytes` is a unique identifier for the network protocol. 
+- `magicBytes` is a unique identifier for the network protocol.
 - `bindAddress` sets the IP address and port number where the node will accept incoming connections. By default, it listens on all available network adapters.
 - `nodeName` assigns a visible name to your node for other participants in the P2P network.
 - `knownPeers` is a list of bootstrap nodes that your node will connect to upon initialization.
 
 ### REST API Configuration
+
 `scorex.restApi`
 This section allows the setting of the node's REST API parameters.
 

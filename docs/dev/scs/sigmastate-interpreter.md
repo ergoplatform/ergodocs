@@ -18,14 +18,12 @@ This library is integral to the operation of the [Ergo Node](https://github.com/
 For an alternative and potentially more detailed documentation source generated from the repository, explore the [Sigmastate Interpreter on DeepWiki](https://deepwiki.com/ergoplatform/sigmastate-interpreter/1-overview)
 ///
 
-
-
 ### Key Components
 
 - **ErgoScript Compiler**:
-    - The [ErgoScript Compiler](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/sigmastate/src/main/scala/sigmastate/lang/SigmaCompiler.scala) translates high-level ErgoScript code into low-level ErgoTree bytecode. This bytecode can then be stored in UTXO coins to define spending conditions, akin to how scripts function in Bitcoin but with enhanced flexibility and capabilities.
+  - The [ErgoScript Compiler](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/sigmastate/src/main/scala/sigmastate/lang/SigmaCompiler.scala) translates high-level ErgoScript code into low-level ErgoTree bytecode. This bytecode can then be stored in UTXO coins to define spending conditions, akin to how scripts function in Bitcoin but with enhanced flexibility and capabilities.
 - **ErgoTree Interpreter**:
-    - The [ErgoTree Interpreter](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/sigmastate/src/main/scala/sigmastate/interpreter/Interpreter.scala) executes the ErgoTree bytecode within a specific blockchain context. It evaluates the scripts against the current state of the blockchain and the spending transaction, ultimately producing a boolean outcome that determines the validity of the transaction.
+  - The [ErgoTree Interpreter](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/sigmastate/src/main/scala/sigmastate/interpreter/Interpreter.scala) executes the ErgoTree bytecode within a specific blockchain context. It evaluates the scripts against the current state of the blockchain and the spending transaction, ultimately producing a boolean outcome that determines the validity of the transaction.
 
 ### Sigma Language Background
 
@@ -42,12 +40,12 @@ The Sigmastate Interpreter involves two primary components in transaction proces
 
 ### Integration and Usage
 
-While the sigmastate-interpreter library provides the low-level primitives necessary for processing ErgoScript contracts, developers typically interact with these components through higher-level tools. 
+While the sigmastate-interpreter library provides the low-level primitives necessary for processing ErgoScript contracts, developers typically interact with these components through higher-level tools.
 
 - **AppKit**:
-    - A more accessible alternative for JVM-based development (Java/Scala/Kotlin) is [AppKit](appkit.md), a thin wrapper around the core components provided by the ErgoScript interpreter and Ergo protocol implementations.
+  - A more accessible alternative for JVM-based development (Java/Scala/Kotlin) is [AppKit](appkit.md), a thin wrapper around the core components provided by the ErgoScript interpreter and Ergo protocol implementations.
 - **SigmaJS**:
-    - The library is cross-compiled to JavaScript using Scala.js, allowing developers to use these components directly in web applications via the [SigmaJS NPM package](https://www.npmjs.com/package/sigmastate-js).
+  - The library is cross-compiled to JavaScript using Scala.js, allowing developers to use these components directly in web applications via the [SigmaJS NPM package](https://www.npmjs.com/package/sigmastate-js).
 
 ### Getting Started
 

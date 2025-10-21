@@ -25,17 +25,21 @@ In the Transaction Merkle Tree, each leaf node represents a transaction and its 
   - **Transaction Identifier (txId)**: A 256-bit hash (32 bytes) of the transaction's contents, excluding spending proofs.
   - **Spending Proofs Digest**: A 256-bit hash (32 bytes) representing the combined spending proofs for the transaction.
 - **Leaf Construction**: The leaf for the `i`-th transaction in the block is constructed as:
+
   ```
   hash(0 || pos || data)
   ```
+
   where `pos` is the position of the transaction in the block, and `data` is the 64-byte data block. A prefix of `0` is used for domain separation.
 
 ### **Internal Node Structure**
 
 - **Node Construction**: Internal nodes in the Merkle Tree are constructed by hashing the concatenation of their child nodes:
+
   ```
   hash(1 || left_child || right_child)
   ```
+
   where `1` is a prefix added for domain separation. If both children are empty, the node is considered empty (`null`).
 
 ### **Merkle Root**

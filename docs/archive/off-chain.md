@@ -33,7 +33,7 @@ For a comprehensive understanding of the off-chain services that support the fun
 
 Watchers, functioning as cross-chain oracles, are vital to the Rosen Bridge's operations. They diligently monitor and relay deposit events from their respective networks to Ergo, bolstering the network's security and reach.
 
-### How to Become a Watcher:
+### How to Become a Watcher
 
 1. **Technical Setup**: To operate a watcher node, ensure a stable internet connection and a system that aligns with the technical requirements outlined in [Ergo's documentation](https://docs.ergoplatform.com/eco/rosen/rosen-watcher/).
 2. **Provide Collateral**: A collateral of 800 ERG and 30,000 RSN is mandated for each instance, with the flexibility of redemption and adjustment.
@@ -41,6 +41,7 @@ Watchers, functioning as cross-chain oracles, are vital to the Rosen Bridge's op
 4. **Earn Rewards**: Watchers are remunerated in ERG for their pivotal role, with the distribution reflecting their contribution to network security and functionality.
 
 ### Estimated Rewards
+
 The reward distribution for a watcher on the Rosen network from January 22, 2024, to February 3, 2024, is exemplified below. Note that rewards are contingent on bridge traffic and may fluctuate.
 
 - ERG Watcher Rewards:  100.217 ERG
@@ -56,7 +57,7 @@ Oracles are the linchpin in DeFi, supplying smart contracts with indispensable e
 > To participate in the Gold oracle pool, acquire a *Gold Pool Oracle Token* through [auctions](https://ergoauctions.org/artwork/78263e5613557e129f075f0a241287e09c4204be76ad53d77d6e7feebcccb001), ensuring a transparent entry process for aspirants.
 {.is-warning}
 
-#### Becoming an Oracle Provider:
+#### Becoming an Oracle Provider
 
 1. **Data Source Integration**: Oracle providers must integrate dependable data sources with the Ergo blockchain to deliver precise and current information.
 2. **Deploy Oracle Contracts**: Implement smart contracts on Ergo to act as conduits for your data streams.
@@ -109,4 +110,3 @@ Explore the project [here](machina-finance.md)
 ## Conclusion
 
 Ergo's ecosystem presents a plethora of off-chain earning prospects through roles such as watchers, oracles, and automated bots. These roles not only offer passive income streams but also significantly contribute to the Ergo blockchain's functionality and security. By participating in these opportunities, users can bolster the decentralized ecosystem and reap the benefits of its progression and success.
-

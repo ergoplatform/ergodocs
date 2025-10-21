@@ -21,6 +21,7 @@ The `knownPeers` parameter stores a list of bootstrap nodes that your node will 
 **About Time Settings**
 
 All time span parameters are set in milliseconds. However, you can use duration units to shorten their values. The supported units include:
+
 * s, second, seconds
 * m, minute, minutes
 * h, hour, hours
@@ -35,7 +36,6 @@ The `connectionTimeout` parameter allows you to adjust the network communication
 The `handshakeTimeout` parameter can be used to set the time period to wait for a response during a handshake. If no response is received, the peer will be blacklisted.
 
 You can configure the UPnP settings using parameters that begin with `upnp`. These settings are typically useful only if you're running your Ergo node on a home network where the node can request your router to establish a tunnel. By default, this functionality is disabled. Use the `upnpEnabled` parameter to enable it.
-
 
 Taken from [application.conf#L354](https://github.com/ergoplatform/ergo/blob/49b9f0fe7d0eba1a5ff81e524353acdd9a3cc6dd/src/main/resources/application.conf#L354)
 
@@ -62,6 +62,7 @@ The `type` is set to "Dispatcher", and the `executor` to "thread-pool-executor".
 dataDir = ${user.home}"/scorex"
 logDir = ${scorex.dataDir}"/log"
 ```
+
 The `dataDir` setting determines the directory where the Scorex data will be stored, in this case, it is set to a "scorex" directory in the user's home directory. The `logDir` setting sets the location of the log files, which is a "log" directory within the Scorex data directory.
 
 ## REST API

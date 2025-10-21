@@ -14,4 +14,4 @@ HDF is based on Rust
 
 Appkit, on the other hand, reflects the Ergo programming model and provides Java friendly interfaces to interact with Ergo.
 
-There is also [JS SDK](https://github.com/ergolabs/ergo-dex-sdk-js) from Ergo Labs 
+There is also [JS SDK](https://github.com/ergolabs/ergo-dex-sdk-js) from Ergo Labs

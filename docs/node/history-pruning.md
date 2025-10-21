@@ -8,13 +8,11 @@ tags:
 
 # History Pruning
 
-
 "History Pruning" is a feature in Ergo's blockchain that allows nodes to reduce the amount of stored historical block data, which can lead to a significant decrease in storage requirements. It's particularly useful for nodes running on devices with limited storage capacity.
 
 ## What is History Pruning?
 
 The concept of pruning in blockchain technology involves the removal of some of the less relevant data on a node while keeping the information necessary for maintaining the network's security and functionality. In Ergo's case, this means removing certain block data but keeping all block headers.
-
 
 ## How does it work?
 

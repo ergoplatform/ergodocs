@@ -7,14 +7,13 @@ tags:
   - dApp
   - dApp-Research
 ---
-# Sigmajoin 
+# Sigmajoin
 
 ## What is Sigmajoin?
 
 Sigmajoin is a privacy protocol designed for use with UTXO-based blockchains, aiming to enhance user anonymity. It builds on the principles of a previous protocol called [Zerojoin](zerojoin.md) but introduces features to make it more practical and efficient.
 
 ### Key Advantages
-
 
 |                        | ZeroJoin (ErgoMixer)                                                | Sigmajoin                                                    |
 |------------------------|--------------------------------------------------------------------|--------------------------------------------------------------|
@@ -24,7 +23,6 @@ Sigmajoin is a privacy protocol designed for use with UTXO-based blockchains, ai
 | **Types of Boxes**    | 2 (Half-Mix and Full-Mix): Limited to two boxes, constraining scalability and flexibility | More than 2: Offers better scalability and flexibility. Half-mix boxes eliminated as bloat       |
 | **Stealth Withdraw**   | Supported                                                           | Supported                                                    |
 | **Fee Handling**       | Embedded Fee: Includes fees within mix boxes, requiring meticulous calculation  | Outsourced Fee: Fees paid by third-party "mixer," simplifying the process and adding flexibility  |
-
 
 ## Special Features
 
@@ -45,7 +43,7 @@ In many privacy protocols, how to pay the mining fee is a challenge. Sigmajoin a
 ### Basics
 
 - **Mix-box**: A special kind of coin (or UTXO) used in Sigmajoin. Each mix-box has two registers `a` and `b` which are elements of a mathematical group `G`.
-- **Alice**: The generic term for a participant in the protocol. 
+- **Alice**: The generic term for a participant in the protocol.
 
 ### Core Operations
 
@@ -63,11 +61,8 @@ In many privacy protocols, how to pay the mining fee is a challenge. Sigmajoin a
 
 ---
 
-
-
-
 *Note: This is a simplified document. For technical details and mathematical proofs, consult the whitepaper.*
 
-- [Documentation](https://github.com/ergoplatform/ergo-jde/blob/main/kiosk/src/test/scala/kiosk/mixer/doc/main.pdf) 
+- [Documentation](https://github.com/ergoplatform/ergo-jde/blob/main/kiosk/src/test/scala/kiosk/mixer/doc/main.pdf)
 - Original forum posts for [Outsourceable mix](https://www.ergoforum.org/t/yet-another-mixing-protocol/3359/2?u=scalahub)
 - [Stealth transfer](https://www.ergoforum.org/t/yet-another-mixing-protocol/3359/3?u=scalahub)

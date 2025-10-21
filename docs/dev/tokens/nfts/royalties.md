@@ -8,7 +8,6 @@ Ergo's royalty system is integrated into the minting `metadata` and can be acces
 However, it's important to note that NFTs can be transferred directly from one party to another, similar to transferring across addresses. In these cases, or in private sales, the decision to honor the royalties lies with the involved parties.
 ///
 
-
 The upcoming AuctionHouse V3 will introduce the ability to support multiple recipients for royalties. This feature will facilitate collaborations among artists.
 
 ## Resources

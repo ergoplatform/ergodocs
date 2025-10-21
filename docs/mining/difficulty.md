@@ -39,7 +39,6 @@ It's important to note that backtesting only shows how the DAA will perform agai
 
 Finally, the question of whether any other DAA with the same epoch length would perform better has been raised. If not, studying the effects of a shorter epoch length could be a worthwhile topic of investigation.
 
-
 ## The Rationale Behind a 2-Minute Block Interval
 
 Ergo's 2-minute target block interval is a carefully chosen parameter that offers a security cushion against a variety of potential issues and threats that could affect a peer-to-peer cryptocurrency network, especially one that supports complex smart contracts. This article elaborates on the reasons behind this design choice and its benefits.

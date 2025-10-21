@@ -64,8 +64,8 @@ title: Insurance — Physical Gold Non-Delivery (Digital Twin)
 ## See also
 
 - Category: [contracts-insurance.md](contracts-insurance.md)  
-- Library index: [contracts-library.md](contracts-library.md)  
-- Additional contracts index: [contracts.md](contracts.md)
+- [Library index](contracts-library.md)
+- [Additional contracts index](contracts.md)
 
 ## Contributor Checklist
 

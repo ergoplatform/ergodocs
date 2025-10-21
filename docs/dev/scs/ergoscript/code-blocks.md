@@ -23,7 +23,7 @@ out = OUTPUTS(1)            // reassignment of a val will cause an error
 ...
 ```
 
-Unlike Scala, ErgoScript does not support the `var` keyword, meaning all variables are immutable. 
+Unlike Scala, ErgoScript does not support the `var` keyword, meaning all variables are immutable.
 
 However, mutable variables can be emulated using lambda syntax, which will be covered separately.
 

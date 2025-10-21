@@ -25,7 +25,6 @@ EXLE 2.0 is currently in private beta. Key developments include:
 For more details, view the [EXLE 2.0 Project Proposal](https://t.me/ErgoLend/7785).
 ///
 
-
 ## Streamlining Microfinance in Kenya
 
 EXLE is committed to using blockchain for social impact, as seen in its work in Kenya. Through peer-to-peer, uncollateralized loan projects, EXLE bridges the gap between lenders and borrowers in underserved areas. The shift from informal to structured, zero-interest loans under EXLE contracts, funded through raffles ([Exle P2P Microfinance Initiative](https://ergoraffle.com/raffle/show/dfe947631c9b669a8aaeea1fcc25c175104891e5e6dad8279a9daa1ab548f77d) and [Interest-Free Loans to a Kenyan Cooperative](https://ergoraffle.com/raffle/show/f3d8d94c2af7a9bc7ea8615cc4bacb827960a60392d0264944b3638bce1c8ff9)), showcases the potential of blockchain in microfinance.

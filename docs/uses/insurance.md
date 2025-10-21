@@ -1,4 +1,3 @@
 # Insurance
 
-
 The insurance sector is a significant part of the finance industry. It helps manage the risk of losing assets due to unexpected events like theft or expected ones like fraudulent activities. New protocols, like [Nexus Mutual](https://nexusmutual.io/), have been developed to address the challenge of insurance in decentralised systems. Insurance works by paying a premium to those who bear risk in case of an unfortunate event, in exchange for financial protection. In a decentralised insurance platform built on Ergo, the participation of individuals, validation of trades by oracles, and management of risks can all be controlled through smart contracts to create a seamless decentralised finance ecosystem.

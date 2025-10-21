@@ -7,6 +7,7 @@ tags:
 See [Getting Started](get-started.md)
 
 See also:
+
 - Contracts & Patterns Library: contracts-library.md
 - Browse by category:
   - Tokens: contracts-tokens.md

@@ -32,10 +32,10 @@ To access protected API routes (like wallet operations), you must provide your A
 
 ## Authorization Process via Swagger UI
 
-1.  Navigate to the Swagger UI page (e.g., `127.0.0.1:9053/swagger`).
-2.  Click the green `"Authorize"` button located near the top right.
-3.  A dialog box will appear. Enter your plain text API key (the secret phrase you configured) into the `Value` field.
-4.  Click `"Authorize"` within the dialog, then `"Close"`.
+1. Navigate to the Swagger UI page (e.g., `127.0.0.1:9053/swagger`).
+2. Click the green `"Authorize"` button located near the top right.
+3. A dialog box will appear. Enter your plain text API key (the secret phrase you configured) into the `Value` field.
+4. Click `"Authorize"` within the dialog, then `"Close"`.
 
 Your browser session is now authorized to access protected endpoints.
 

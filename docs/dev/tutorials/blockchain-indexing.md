@@ -22,18 +22,18 @@ This guide provides an overview and comparison of different strategies for index
 
 ## Why Index?
 
-*   **Performance:** Querying a pre-built index (e.g., a database) is typically much faster than repeatedly querying the node's API, especially for complex lookups.
-*   **Data Aggregation:** Indexers can aggregate data across multiple blocks or transactions (e.g., calculate total volume for a token, track historical balances).
-*   **Custom Data Structures:** You can structure the indexed data precisely how your application needs it, simplifying application logic.
-*   **Reduced Node Load:** Offloads complex queries from the Ergo node.
+* **Performance:** Querying a pre-built index (e.g., a database) is typically much faster than repeatedly querying the node's API, especially for complex lookups.
+* **Data Aggregation:** Indexers can aggregate data across multiple blocks or transactions (e.g., calculate total volume for a token, track historical balances).
+* **Custom Data Structures:** You can structure the indexed data precisely how your application needs it, simplifying application logic.
+* **Reduced Node Load:** Offloads complex queries from the Ergo node.
 
 ## Indexing Strategies Overview
 
 There are three primary approaches to accessing indexed blockchain data:
 
-1.  **[Using Public Explorer APIs](explorer-apis.md):** Leverage the APIs provided by public blockchain explorers. Easiest to start, but relies on third parties and has limitations.
-2.  **[Querying Your Own Node's API Directly](node-api-direct.md):** Run your own node and query its REST API. Offers control but node APIs aren't optimized for complex queries.
-3.  **[Building a Custom Indexer with SDKs](custom-indexer.md):** Develop a dedicated service to process blocks from your node and store relevant data in an optimized database. Most flexible and performant, but requires significant development effort.
+1. **[Using Public Explorer APIs](explorer-apis.md):** Leverage the APIs provided by public blockchain explorers. Easiest to start, but relies on third parties and has limitations.
+2. **[Querying Your Own Node's API Directly](node-api-direct.md):** Run your own node and query its REST API. Offers control but node APIs aren't optimized for complex queries.
+3. **[Building a Custom Indexer with SDKs](custom-indexer.md):** Develop a dedicated service to process blocks from your node and store relevant data in an optimized database. Most flexible and performant, but requires significant development effort.
 
 ## Choosing the Right Strategy
 

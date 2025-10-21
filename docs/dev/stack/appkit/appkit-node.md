@@ -1,15 +1,15 @@
-# Interacting with a local node.
+# Interacting with a local node
 
-Among other things, the Appkit library allows us to communicate with Ergo nodes via the [REST API](https://github.com/ergoplatform/ergo/blob/master/src/main/resources/api/openapi.yaml). 
+Among other things, the Appkit library allows us to communicate with Ergo nodes via the [REST API](https://github.com/ergoplatform/ergo/blob/master/src/main/resources/api/openapi.yaml).
 
-Let's see how we can write ErgoTool - a simple Java console application (similar to [ergo-tool](https://github.com/ergoplatform/ergo-tool) utility) which uses Appkit library. 
+Let's see how we can write ErgoTool - a simple Java console application (similar to [ergo-tool](https://github.com/ergoplatform/ergo-tool) utility) which uses Appkit library.
 
-ErgoTool allows to create and send a new transaction to any existing Ergo node on the network which. A new node can also be started locally and thus available at `http://localhost:9052/`. 
+ErgoTool allows to create and send a new transaction to any existing Ergo node on the network which. A new node can also be started locally and thus available at `http://localhost:9052/`.
 
 Suppose we [set up a full node](https://github.com/ergoplatform/ergo/wiki/Set-up-a-full-node) and started it using the following command.
 
 ```shell
-$ java -jar -Xmx4G target/scala-2.12/ergo-4.0.8.jar --testnet -c ergo-testnet.conf
+java -jar -Xmx4G target/scala-2.12/ergo-4.0.8.jar --testnet -c ergo-testnet.conf
 ```
 
 We will need some configuration parameters which can be loaded from `ergotool.json` file
@@ -110,12 +110,12 @@ OutBox newBox = txB.outBoxBuilder()
                 "{ sigmaProp(HEIGHT > freezeDeadline) && pkOwner }"))
         .build();
 ```
+
 Note, in order to compile `ErgoContract` from source, the `compileContract` method requires us to provide values for named constants which are used in the script.
 
 If no such constants are used, then `ConstantsBuilder.empty()` can be passed.
 
 In this specific case, we pass the public key of the `prover` for `pkOwner` placeholder of the script meaning the box can be spent only by the owner of the public key from the `wallet` section of `ergotool.json`.
-
 
 Next, we create an unsigned transaction using all the data collected so far.
 
@@ -129,7 +129,7 @@ UnsignedTransaction tx = txB.boxesToSpend(boxes.get())
         .build();
 ```
 
-And finally, we use `prover` to sign the transaction, obtain a new `SignedTransaction` instance and use context to send it to the Ergo node. 
+And finally, we use `prover` to sign the transaction, obtain a new `SignedTransaction` instance and use context to send it to the Ergo node.
 
 The resulting `txId` can be used to refer to this transaction later and is not used here.
 
@@ -139,6 +139,6 @@ String txId = ctx.sendTransaction(signed);
 return signed.toJson(/*prettyPrint=*/true, /*formatJson=*/true);
 ```
 
-As the last step, we serialize signed transactions into Json with pretty printing turned-on. 
+As the last step, we serialize signed transactions into Json with pretty printing turned-on.
 
 Please see the [full source code](https://github.com/aslesarenko/ergo-appkit-examples/blob/master/java-examples/src/main/java/org/ergoplatform/appkit/examples/FreezeCoin.java) of the example.

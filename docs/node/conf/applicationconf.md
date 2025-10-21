@@ -1,4 +1,5 @@
 # application.conf
+
 Please refer to [conf](conf.md)
 
 <!--[View code on GitHub](https://raw.githubusercontent.com/ergoplatform/ergo/master/src/main/resources/application.conf)
@@ -15,7 +16,6 @@ In the cache settings, various cache sizes are defined for different components,
 
 These configurations allow the Ergo project to be fine-tuned for different use cases and environments, ensuring optimal performance and resource usage.
 
-
 ## ergo
 
 ### node 
@@ -31,7 +31,6 @@ State type.  Possible options are:
 
 - "utxo" - keep full utxo set, that allows to validate arbitrary block and generate ADProofs
 - "digest" - keep state root hash only and validate transactions via ADProofs
-
 
 #### verifyTransactions
 ```conf
@@ -50,7 +49,6 @@ Number of last blocks to keep with transactions and ADproofs, for all other bloc
 
 Keep all blocks from genesis if negative
 Please do not set it more than 114,688 (default adProofsSuffixLength), otherwise, it could be hard to find proofs around the peers
-
 
 ### utxoBootstrap
 
@@ -79,7 +77,6 @@ mining = false
 ```
 
 Is the node is doing mining
-
 
 #### maxTransactionCost
 ```conf
@@ -119,8 +116,6 @@ miningPubKeyHex = null
 ```
 
 Public key mining rewards will be dedicated to (P2PK address is also accepted)
-
-
 
 #### offlineGeneration
 ```conf
@@ -185,7 +180,6 @@ blacklistedTransactions = []
 
 List with hex-encoded identifiers of transactions banned from getting into memory pool
 
-
 #### headerChainDiff
 
 ```conf
@@ -196,9 +190,7 @@ The node is downloading headers first and only then full blocks. Depending on se
 
 The node is considering that the headers-chain is synced if it sees a header of a block generated closely to the current moment. The node considers that a header is close if its timestamp is no more than "headerChainDiff" blocks on average than node's clocks.
 
-
 #### checkpoint
-
 
 ```conf
 checkpoint = null
@@ -223,11 +215,9 @@ checkpoint = {
 
 Dump `ADProofs` only for the suffix given during bootstrapping
 
-
 ```conf
 adProofsSuffixLength = 114688 // 112k
 ```
-
 
 ### cache 
 
@@ -341,7 +331,6 @@ foundersInitialReward = 7500000000
 
 Part of coins issued, that is going to the foundation during fixedRatePeriod (7.5 Ergo)
 
-
 ##### epochLength
 
 ```
@@ -356,7 +345,6 @@ oneEpochReduction = 3000000000
 ```
 
 The number of coins reward decreases every epochs (3 Ergo)
-
 
 ##### minerRewardDelay
 ```
@@ -409,7 +397,6 @@ noPremineProof = [
 
 Latest news from media (the Guardian, Xinhua, Vedomosti), existing cryptocurrency block ids (Bitcoin, Ethereum)
 
-
 ####  foundersPubkeys 
 ```
  foundersPubkeys = [
@@ -455,7 +442,6 @@ seedStrengthBits = 160
 Generating seed length in bits
 Options: 128, 160, 192, 224, 256
 
-
 #### mnemonicPhraseLanguage
 ```
 mnemonicPhraseLanguage = "english"
@@ -464,7 +450,6 @@ mnemonicPhraseLanguage = "english"
 Language to be used in mnemonic seed
 
 Options: "chinese_simplified", "chinese_traditional", "english", "french", "italian", "japanese", "korean", "spanish"
-
 
 #### keepSpentBoxes
 ```
@@ -550,7 +535,6 @@ AppServer is in between
 Example: storage fee factor id = 1, target value = 1000000
 `1 = 1000000`
 
-
 A vote for soft-fork. [protocolVersion](#protocolversion) must be one announced in a block header increased by one also, and then the node will automatically propose a soft-fork (in the beginning of an epoch),  or vote for it.
 
 Put any non-zero value here to vote for soft-fork, or zero to vote against.
@@ -599,8 +583,6 @@ max-connections = 128
 ```
 max-uri-length = 8192
 ```
-
-
 
 ## dataDir & logDir
 
@@ -678,7 +660,6 @@ P2P Network settings
 ##### declaredAddress
 ##### upnpEnabled
 ##### localOnly
-
 
 ##### upnp-gateway-timeout
 ```
@@ -919,7 +900,5 @@ critical-dispatcher {
 }
 ```
 The dispatcher which is used for block candidate generator and `NodeViewHolder` actors only
-
-
 
 -->

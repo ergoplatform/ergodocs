@@ -6,8 +6,6 @@ Rosen Bridge is designed to bootstrap liquidity across multiple ecosystems. The 
 
 Any user can join as a Watcher given they meet the collateral requirements needed to participate, and earn rewards for their services.
 
-
-
 ## Overview
 
 - **Token Name**: Rosen Bridge Token

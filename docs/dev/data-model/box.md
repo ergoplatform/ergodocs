@@ -18,7 +18,6 @@ This makes Ergo's box different from a traditional UTXO, which only represents a
 
 The term 'box' in Ergo's context captures the idea that these entities are like containers holding various types of information (value, [tokens](eip4.md), custom data, etc.), beyond just the unspent transaction output balance. This makes the boxes in Ergo significantly more flexible and functional, enabling more complex operations, such as running [scripts](ergoscript.md) or smart contracts, directly on the blockchain.
 
-
 ## Key Points
 
 - A box is an immutable unit, which can be created or removed, but never altered.
@@ -28,7 +27,6 @@ The term 'box' in Ergo's context captures the idea that these entities are like 
 - Boxes are integral to the Ergo [protocol](protocol-overview.md). The active box set (UTXO set) is authenticated through a [hash-based data structure](merkle-tree-structures.md), facilitating the development of [lightweight full nodes](light-full-node.md), as detailed in [this paper](https://eprint.iacr.org/2016/994).
 - A box can hold up to six additional [registers](registers.md) (R4-R9) with typed data, accessible by the script.
 - Transactions consist of both *input* and *output* boxes.
-
 
 ## An example box
 
@@ -59,27 +57,27 @@ Besides the [registers](registers.md), each box features a unique identification
 
 ```scala
 { // Example ErgoScript using box properties
-	// Retrieve the value and token multipliers from the registers of the current box (SELF)
-	val valueMultiplier = SELF.R4[Int].get
-	val tokenMultiplier = INPUTS(1).R4[Int].get // Accessing register of another input box
+ // Retrieve the value and token multipliers from the registers of the current box (SELF)
+ val valueMultiplier = SELF.R4[Int].get
+ val tokenMultiplier = INPUTS(1).R4[Int].get // Accessing register of another input box
 
-	// Check if the current box being spent (SELF) is the same as the first input box
-	if(SELF.id == INPUTS(0).id){
-		// If it is, check if the first output box has the correct value and token amounts
-		val outputValue = OUTPUTS(0).value == SELF.value * valueMultiplier
-		val outputTokens = OUTPUTS(0).tokens(0)._2 == SELF.value * tokenMultiplier
-		// Return a Sigma proposition that is true only if both outputValue and outputTokens are true
-		sigmaProp(outputValue && outputTokens)
-	}else{
-		// If the current box is not the same as the first input box, check if the output goes to a specified address
-		val outputGoesToCheese = {
-			// Create a public key that corresponds to a specific address
-			PK("9etXmP7D3ZkWssDopWcWkCPpjn22RVuEyXoFSbVPWAvvzDbcDXE").propBytes
-				== OUTPUTS(0).propositionBytes // propositionBytes holds the script (ErgoTree)
-		}
-		// Return a Sigma proposition that is true only if outputGoesToCheese is true
-		sigmaProp(outputGoesToCheese)
-	}
+ // Check if the current box being spent (SELF) is the same as the first input box
+ if(SELF.id == INPUTS(0).id){
+  // If it is, check if the first output box has the correct value and token amounts
+  val outputValue = OUTPUTS(0).value == SELF.value * valueMultiplier
+  val outputTokens = OUTPUTS(0).tokens(0)._2 == SELF.value * tokenMultiplier
+  // Return a Sigma proposition that is true only if both outputValue and outputTokens are true
+  sigmaProp(outputValue && outputTokens)
+ }else{
+  // If the current box is not the same as the first input box, check if the output goes to a specified address
+  val outputGoesToCheese = {
+   // Create a public key that corresponds to a specific address
+   PK("9etXmP7D3ZkWssDopWcWkCPpjn22RVuEyXoFSbVPWAvvzDbcDXE").propBytes
+    == OUTPUTS(0).propositionBytes // propositionBytes holds the script (ErgoTree)
+  }
+  // Return a Sigma proposition that is true only if outputGoesToCheese is true
+  sigmaProp(outputGoesToCheese)
+ }
 }
 // Context Variables used: SELF, INPUTS, OUTPUTS (See ../scs/blockchain-context.md)
 // Functions used: sigmaProp, PK (See ../scs/sigma.md)

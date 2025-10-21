@@ -10,7 +10,6 @@ tags:
 
 The core implementation for Oracle Pools V2 can be found in the 🥇 **[Oracle Core](https://github.com/ergoplatform/oracle-core)** repository. [`Rust`]
 
-
 /// details | Latest Developments
      {type: tip, open: true}
 See the latest overview video from the summit here: [Oracle Pool v2 | greenhat | Ergoversary Summit 2023](https://youtube.com/watch?v=WeQcUmVUhoI)
@@ -30,14 +29,14 @@ Version 2.0 of Oracle Pool aims to mitigate these issues. The main features and 
 - **Compact Pool Box**: The pool box is dissociated from pool management logic, which is now encapsulated within a **refresh** box. This results in a considerably smaller pool box, conducive for use in other dApps.
 - **Refresh Box**: This box functions for the collection of data-points.
 - **Reward in Tokens**: Instead of Ergs, rewards for posting will be issued in tokens. These tokens can be redeemed separately, outside of the protocol.
-    - The pool box will emit these reward tokens.
+  - The pool box will emit these reward tokens.
 - **No Separate Funding Process**: The pool box will only emit reward tokens and will not distribute Ergs. Consequently, a separate funding process is not required.
 - **Reward Accumulation**: To avoid dust, a new box for each reward posting will not be created. Instead, rewards will be directly accumulated within the oracle boxes.
 - **Oracle Boxes Used in Collection**: As rewards must be accumulated, the oracle boxes will function as inputs instead of data-inputs when collating individual rates for averaging.
-    - These inputs will be spent, creating a copy of the box with the reward.
-    - This system enables reward accumulation while maintaining a transaction size akin to the usage of them as data-inputs in v1.0.
-    - Additionally, it allows us to delegate part of the reward logic to the oracle boxes.
-    - **Note:** The pool box will continue to serve as a data input in other dApps.
+  - These inputs will be spent, creating a copy of the box with the reward.
+  - This system enables reward accumulation while maintaining a transaction size akin to the usage of them as data-inputs in v1.0.
+  - Additionally, it allows us to delegate part of the reward logic to the oracle boxes.
+  - **Note:** The pool box will continue to serve as a data input in other dApps.
 - **Transferable Oracle Tokens**: Oracle tokens can be freely transferred among public keys.
 - **Updated Mechanism**: The update mechanism in v2.0 will remain similar to v1.0, requiring a threshold number of ballot token holders to vote for an update.
 - **Transferable Ballot Tokens**: Analogous to oracle tokens, ballot tokens can be freely transferred between public keys.

@@ -32,11 +32,10 @@ Automod is a powerful moderation tool for Discord servers. It enables server adm
 
 To configure Automod, navigate to the server settings and select the "Safety Setup" tab, then select 'Edit' on "AutoMod". From there, you can create new rules, define triggers (words, phrases, links, etc.), and specify the desired actions (delete message, warn user, kick/ban, etc.). Automod rules can be as simple or complex as needed, allowing for granular control over server moderation.
 
-
 /// admonition | Exclude members based on activity
     type: warning
 
-The spam rules are designed to be strict to catch potential abuse. However, this can sometimes lead to false positives for legitimate messages. To mitigate this issue, certain roles are excluded from the spam filters on the Ergo Discord server. 
+The spam rules are designed to be strict to catch potential abuse. However, this can sometimes lead to false positives for legitimate messages. To mitigate this issue, certain roles are excluded from the spam filters on the Ergo Discord server.
 
 One approach is to use a service like [engau.ge](https://engau.ge/) to assign new users a specific role once they reach a threshold number of messages. This role can then be excluded from the spam rules, allowing more active and engaged members to participate freely without triggering false positives.
 ///
@@ -66,14 +65,11 @@ In addition to blocking specific words and phrases, Automod can be configured to
 - Suspicious links or URLs
 - Excessive use of emojis or special characters
 
-
 #### Custom Rules
 
 Moderators can also create custom rules to target specific types of content or behavior. These rules can be based on keywords, regular expressions, or other criteria. Some examples of custom rules currently in place include:
 
 Regular Expressions:
-
-
 
 Support Scams
 > (?i)(send\s+(a\s+)?dm|direct\s+message|dm\s+regarding\s+your\s+query|ask\s+for\s+help|open\s+a\s+ticket|service\s+request|chat\s+live)
@@ -92,8 +88,6 @@ Misc Spam
 > (?i)(earn\s+\$\d+k|WhatsApp)
 
 > \b(working\s+as|full\s*stack\s*web3\s*developer|smart\s*contract|token\s*creation|presale|nft\s*staking|web3\s*game|bot\s*development|inform\s+myself\s+to\s+you)\b
-
-
 
 Emojis:
 > 🟠,🟡,🟢,🔵,🟣,🟤,⚫,⚪,⬛️,🪩,💔,💖,💗,💓,💞,💝,💘,💟,🥜,🐵,️⃣,🔺,💵,💶,💷,💴,🐕‍🦺,⚠️,🈶,🫰,📡,🎯,👈,➡️,🪟,🎦,🏛,🌰,🐂,🔰,👋👋,🥇,🥈,🥉,⭐,🌟,💎,⏰,⏱,⏲,⏳,💣,💉,💊,🎁,🔑,🗝,✅,☑️,🤟,🔗,🔄,📈,🔍,🍉,⛽️,⬛️

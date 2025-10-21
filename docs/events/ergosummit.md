@@ -11,7 +11,7 @@ tags:
 
 For our fourth anniversary we hosted a jam-packed summit with two dozen videos. Check out [the full playlist on YouTube](https://www.youtube.com/playlist?list=PL8-KVrs6vXLRxmOmprVdXkHDcO4IaQZOY)
 
-##  **Ergo Summit 2022:** *Privacy & Security*
+## **Ergo Summit 2022:** *Privacy & Security*
 
 This event will featured presentations and discussions by developers and blockchain experts on the state of DeFi, where it needs to go, and the DeFi solutions that are being built on Ergo.
 
@@ -26,8 +26,7 @@ This event will featured presentations and discussions by developers and blockch
 - [The Deep Ocean Dark Pool Protocol | Oliver Cracknell](https://www.youtube.com/watch?v=SaBmvAxah0E)
 - [Ergo: A Platform for Cryptographic Applications | Kushti](https://www.youtube.com/watch?v=h6g5WahEUSk)
 
-
-##  ErgoSummit I
+## ErgoSummit I
 
 - [00:00:00](https://www.youtube.com/watch?v=zG-rxMCDIa0&amp;t=0s) - The Summit
 - [00:01:00](https://www.youtube.com/watch?v=zG-rxMCDIa0&amp;t=60s) - Ergo 101: The Basics
@@ -35,7 +34,7 @@ This event will featured presentations and discussions by developers and blockch
 - [01:11:30](https://www.youtube.com/watch?v=zG-rxMCDIa0&amp;t=4290s) - DeFi Services: How Yoroi Wallet will be the gateway to Ergo dApps and what’s to come
 - [01:32:30](https://www.youtube.com/watch?v=zG-rxMCDIa0&amp;t=5550s) - Auction House
 - [01:49:30](https://www.youtube.com/watch?v=zG-rxMCDIa0&amp;t=6570s) - Announcing The Release Of The AgeUSD Stablecoin Protocol
-- [02:18:00](https://www.youtube.com/watch?v=zG-rxMCDIa0&amp;t=8280s) - An IOHK Perspective: Designing The AgeUSD Stablecoin Protocol - An Economic Analysis 
+- [02:18:00](https://www.youtube.com/watch?v=zG-rxMCDIa0&amp;t=8280s) - An IOHK Perspective: Designing The AgeUSD Stablecoin Protocol - An Economic Analysis
 (with Special Guest IOHK’s Bruno)
 - [03:02:00](https://www.youtube.com/watch?v=zG-rxMCDIa0&amp;t=10920s) - AgeUSD Smart Contracts: A Technical Perspective
 - [03:41:00](https://www.youtube.com/watch?v=zG-rxMCDIa0&amp;t=13260s) - Enter Into The Sigmaverse - Uncovering What Lays Within Ergo’s dApp Ecosystem

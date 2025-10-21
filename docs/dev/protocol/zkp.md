@@ -7,8 +7,6 @@ tags:
 
 # Understanding Zero-Knowledge Proofs and Sigma Protocols
 
-
-
 Ergo provides superior access to ***discrete log-based* zero-knowledge proofs**, but what exactly is a zero-knowledge proof?
 
 Imagine you find a phone in a bar and someone claims it's theirs. They can prove it by hiding the screen, entering the unlock code, and then showing the unlocked screen. They've proven ownership without revealing any sensitive information, such as the unlock code. This is the essence of a zero-knowledge proof.
@@ -16,7 +14,6 @@ Imagine you find a phone in a bar and someone claims it's theirs. They can prove
 In the realm of [cryptography](crypto.md), zero-knowledge proofs are crucial for maintaining secrets. They're widely used in [digital signatures](crypto.md#sigma-protocols), a tool used by millions daily. In essence, a digital signature says:
 
 > *' This message proves I know the private key associated with this public key – but I'm not revealing the private key itself'.*
-
 
 ## Sigma Protocols: Efficient and Composable Proofs
 
@@ -26,11 +23,9 @@ Among the myriad of zero-knowledge protocols, a sub-class known as [**Sigma Prot
 
 Currently, the two Sigma Protocols in use are [proof of discrete log](schnorr.md) and proof of [Diffie-Hellman tuple](diffie.md).
 
-
 These composable proofs, when combined with a blockchain, enable powerful use cases. The logic for proofs can include conditions based on the blockchain state. For example, 'If the deadline block height has been reached, Alice can provide knowledge of a secret key for a refund. OR a ring signature from Alice and Bob is required to spend coins.' Or 'If this account holds a minimum of 100 ERG, Alice OR Bob can remove funds above that amount.'
 
 Ergo not only allows for trustless coin or custom token swaps across any Bitcoin-like blockchain, but it also enables partial swaps. This feature facilitates the creation of a fully-fledged [decentralised exchange (DEX)](dex.md) that enables cross-chain trading: a trustless version of existing crypto exchanges. There's no need for gateways, token wrapping or other potential bottlenecks or points of failure.
-
 
 ## The Importance of 'Optional' Privacy
 

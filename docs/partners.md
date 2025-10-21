@@ -101,5 +101,6 @@ Development within Ergo is primarily coordinated and funded by the [Development 
 ## Contact
 
 For direct inquiries:  
+
 - [mark@efdao.org](mailto:mark@efdao.org)
 - [angie@efdao.org](mailto:angie@efdao.org)

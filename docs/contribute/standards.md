@@ -4,16 +4,18 @@
 This page serves as a guide for contributing as a project on Ergo. It outlines the standards for identity, development, and community administration. Adhering to these standards ensures a secure and efficient ecosystem.
 ///
 
-## V1 Identity 
+## V1 Identity
 
- #       | Description                                                  | [NIST §](https://pages.nist.gov/800-63-3/sp800-63b.html) |
+# | Description                                                  | [NIST §](https://pages.nist.gov/800-63-3/sp800-63b.html) |
+
  ------- | ------------------------------------------------------------ | -------------------------------------------------------- |
  **1.1** | Ensure all associated account passwords are at least 12 characters long ([C6](https://owasp.org/www-project-proactive-controls/#div-numbering)) | 5.1.1.2                                                  |
  **1.2** | Ensure all accounts such as Telegram admins, GitHub, and any associated Email accounts use appropriate multi-factor authentication | 6.1.1                                                    |
 
 ## V2 Development
 
- #       | Description                                                  | [CWE](https://cwe.mitre.org/) |
+# | Description                                                  | [CWE](https://cwe.mitre.org/) |
+
  ------- | ------------------------------------------------------------ | ----------------------------- |
  **2.1** | Ensure server configuration is hardened according to the recommendations of the application server and frameworks in use | 16                            |
  **2.2** | Ensure all components are up to date, preferably using a dependency checker during build or compile time ([C2](https://owasp.org/www-project-proactive-controls/#div-numbering)) | 1026                          |
@@ -23,7 +25,8 @@ This page serves as a guide for contributing as a project on Ergo. It outlines t
 
 ### Recommendations
 
- #       | Description                                                  |
+# | Description                                                  |
+
  ------- | ------------------------------------------------------------ |
  **2.2** | Use [Snyk](https://snyk.io/) or [DependencyCheck](https://github.com/jeremylong/DependencyCheck) |
  **2.3** | Use [Semgrep](https://github.com/marketplace/actions/semgrep-action) with [Secrets Policy](https://semgrep.dev/p/secrets) |
@@ -31,7 +34,8 @@ This page serves as a guide for contributing as a project on Ergo. It outlines t
 
 ## V3 Community Administration
 
- #       | Description                                               |
+# | Description                                               |
+
  ------- | --------------------------------------------------------- |
  **3.1** | Ensure Telegram groups have anti-spam/scam protection in place |
  **3.2** | Ensure Discord groups have anti-spam/scam protection in place  |
@@ -41,7 +45,8 @@ This page serves as a guide for contributing as a project on Ergo. It outlines t
 
 ### Recommendations
 
- #       | Description                                                  |
+# | Description                                                  |
+
  ------- | ------------------------------------------------------------ |
  **3.1** | Enable [OrgRobot](https://tgdev.io/bot/orgrobot) with custom questions which has a few handy free bots like [daysandbox_bot](https://tgdev.io/bot/daysandbox_bot), [grep_robot](https://tgdev.io/bot/grep_robot) and @WikiRobot, which can be used to reiterate a message at a set interval. |
  **3.2** | The built-in spam protection should be sufficient if properly configured in `Server Settings -> Moderation -> Saftey Setup` make sure all protections are enabled. Under `Automod` you can define custom words to filter an example would be `.gd, .gg, @everyone, #Support, ✉️, ➡️, ➡, 🎟️, 👇, 👉, 🎁, 💌, 📨, 📩, 📪, 📭, 🆘, adminsupports, bch.gg, Create Ticket, dsc.gg, earn $, https://t.me, Open-Ticket, Raise a ticket, shrtm.nu, Support Ticket, supportservice`. Alternatively you can enable [Wickbot](https://wickbot.com/). |
@@ -54,5 +59,3 @@ This page serves as a guide for contributing as a project on Ergo. It outlines t
  **3.4** | Participate in [ergoforum.org/c/marketing](https://www.ergoforum.org/c/marketing/13) |
  **3.5** | Teach good principles like [KYA](kya.md) |
  **3.5** | Warn users of scams being executed on the platform, particularly in response to support requests |
-
- 

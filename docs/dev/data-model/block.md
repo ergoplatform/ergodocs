@@ -16,7 +16,6 @@ Ergo, like other Proof-of-Work (PoW) blockchains such as Bitcoin, uses blocks to
 
 In Ergo, a new block is created approximately every **two minutes**. Initially, each block rewarded miners with 75 ERG, which were distributed among them and the [Ergo Foundation Treasury](ef-treasury.md). This [emission schedule](emission.md) applied for the first two years of the network's operation. You can find more details in the [emission section](emission.md).
 
-
 ## Ergo Block Structure
 
 Ergo's blocks are divided into distinct sections to optimize organization and functionality:

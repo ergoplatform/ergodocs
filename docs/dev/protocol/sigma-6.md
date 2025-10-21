@@ -1,7 +1,6 @@
 
 # Sigma 6.0 Documentation Summary
 
-
 Below is a summary of the key information from the **Sigma 6.0 EIP (Ergo Improvement Proposal)**, which details a significant upgrade to the Ergo protocol. The full technical proposal can be found here:
 [EIP-0050: Sigma 6.0 on GitHub](https://github.com/ergoplatform/eips/blob/6102112617fff96fe88013858c307c2cf363babf/eip-0050.md)
 
@@ -40,14 +39,14 @@ The primary goal of this proposal is to address feedback from developers, fix kn
 ### 3. **PoW and nBits Conversion**
 
 * New methods for **proof-of-work** (PoW) validation:
-    * `header.checkPow`: To check the validity of an Ergo header's Autolykos2 PoW.
-    * Methods for checking PoW for custom variants of the Autolykos2 algorithm on arbitrary messages.
+  * `header.checkPow`: To check the validity of an Ergo header's Autolykos2 PoW.
+  * Methods for checking PoW for custom variants of the Autolykos2 algorithm on arbitrary messages.
 * Support for conversion from nBits-encoded numbers to BigInt and back, enabling efficient difficulty checking for Ergo (and Bitcoin) headers.
 
 ### 4. **Extended Numeric Methods**
 
 * Enhanced methods for numeric types (`Byte`, `Short`, `Int`, `Long`), including:
-    * `.toBytes`, `.toBits`, `.shiftLeft`, `.shiftRight`, and bitwise operations (`bitwiseOr`, `bitwiseAnd`, `bitwiseXor`).
+  * `.toBytes`, `.toBits`, `.shiftLeft`, `.shiftRight`, and bitwise operations (`bitwiseOr`, `bitwiseAnd`, `bitwiseXor`).
 
 ### 5. **Context Variable Access**
 
@@ -56,7 +55,7 @@ The primary goal of this proposal is to address feedback from developers, fix kn
 ### 6. **Collection Enhancements**
 
 * More collection methods, such as:
-    * `.get` (to optionally get an element if a collection contains it), `reverse`, `startsWith`, `endsWith`.
+  * `.get` (to optionally get an element if a collection contains it), `reverse`, `startsWith`, `endsWith`.
 
 ### 7. **Voteable Parameters and Forks**
 
@@ -90,4 +89,3 @@ The changes introduced in **Sigma 6.0** are activated via a **soft-fork**. To en
 ## Conclusion
 
 Sigma 6.0 represents a significant evolution for the **Ergo protocol**. It enhances the ErgoTree scripting language with powerful new capabilities, improves cryptographic support, offers more flexible governance through voteable parameters, and addresses various issues. This upgrade equips developers with better tools to build sophisticated and efficient decentralized applications on the Ergo platform, all while maintaining network stability and compatibility through a soft-fork mechanism.
-

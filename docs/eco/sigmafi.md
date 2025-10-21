@@ -9,9 +9,9 @@ tags:
   - dApp-Live
 ---
 
-# SigmaFi 
+# SigmaFi
 
-[SigmaFi](https://sigmafi.app/) is a P2P DeFi bond market that is currently live and open-source. 
+[SigmaFi](https://sigmafi.app/) is a P2P DeFi bond market that is currently live and open-source.
 
 SigmaFi enables any Ergo wallet holder to request a loan, specifying the loan amount, term, and interest. The loans are guaranteed by collateral, which the lender can claim if the loan is not repaid by the end of the term. Due to the volatility of cryptocurrencies, loans need to be over-collateralized to get funded. For instance, a loan of 100 SigUSD might require ERG worth 150 SigUSD as collateral.
 

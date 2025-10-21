@@ -5,9 +5,7 @@ tags:
 
 # EIP-0025: URI scheme for payment requests
 
-
 > 🔗 From [EIP-0025](https://raw.githubusercontent.com/ergoplatform/eips/master/eip-0025.md)
-
 
 * Author: MrStahlfelge
 * Created: 14-Dec-2021
@@ -21,10 +19,9 @@ Like [BIP-0021](https://github.com/bitcoin/bips/blob/master/bip-0021.mediawiki) 
 
 The purpose of this URI scheme is to enable users to easily make payments by simply clicking links on webpages or in e-mails.
 
-In difference to Ergo Pay (EIP-0020), this URI scheme does not contain a prepared transaction that the wallet should sign or discard. Instead, it contains 
-the data that the wallet application should use to fill its payment form. The user can change the details when needed. The wallet will build the transaction, 
+In difference to Ergo Pay (EIP-0020), this URI scheme does not contain a prepared transaction that the wallet should sign or discard. Instead, it contains
+the data that the wallet application should use to fill its payment form. The user can change the details when needed. The wallet will build the transaction,
 so this scheme is easier to handle on static websites or in e-mails.
-
 
 Format
 ------
@@ -38,21 +35,19 @@ Format
     messageparam   = "description=" *qchar
     tokenparam     = "token-" qchar *qchar "=" *digit [ "." *digit ]
 
-
 * label: Label for that address (e.g. name of receiver)
 * address: ergo P2PK or P2S address
 * description: message that describes the transaction to the user
- 
+
 ### Amount
 
-If an amount is provided, it MUST be specified in decimal ERG. All amounts MUST contain no commas and use a period (.) as the separating character to separate 
+If an amount is provided, it MUST be specified in decimal ERG. All amounts MUST contain no commas and use a period (.) as the separating character to separate
 whole numbers and decimal fractions. I.e. amount=50.00 or amount=50 is treated as 50 ERG, and amount=50,000.00 is invalid.
 
 ### Tokens
 
-If a token parameter is provided, it specifies the token id and the desired amount separated by an equals sign. The amount must be specified in decimal token 
+If a token parameter is provided, it specifies the token id and the desired amount separated by an equals sign. The amount must be specified in decimal token
 value, for example "3.45" for 3.45 SigUSD. The amount MUST contain no commas and use a period (.) as the separating character to separate whole numbers and decimal fractions.
-
 
 Examples
 --------

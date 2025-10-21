@@ -1,6 +1,5 @@
 # Resources
 
-
 ::cards::
 
 [
@@ -47,8 +46,7 @@
 
 Join our [Discord server](https://discord.gg/7kWWQeMCwe) dev-support (and regular [Hackathons](ergohack.md)). Alternatively you can search the chats without logging in via [linen.../d/ergo](https://www.linen.../d/ergo).
 
-
-## Introductory 
+## Introductory
 
 General materials not specific to ErgoScript or a particular section of development are categorised below.
 
@@ -76,7 +74,7 @@ General materials not specific to ErgoScript or a particular section of developm
 
 ### Dev-Articles
 
-Need help figuring out where to start developing? This [introduction to Mosaik](intro.md) provides a brief overview of some of the design decisions you'll need to make when creating your application. 
+Need help figuring out where to start developing? This [introduction to Mosaik](intro.md) provides a brief overview of some of the design decisions you'll need to make when creating your application.
 
 ::cards::
 
@@ -98,9 +96,7 @@ Need help figuring out where to start developing? This [introduction to Mosaik](
 
 ::/cards::
 
-
 ### Courses
-
 
 ::cards::
 
@@ -124,8 +120,6 @@ Need help figuring out where to start developing? This [introduction to Mosaik](
 ]
 
 ::/cards::
-
-
 
 ## Frameworks
 
@@ -175,7 +169,6 @@ Need help figuring out where to start developing? This [introduction to Mosaik](
 
 ## ErgoScript Interpreter/Compilers
 
-
 ::cards::
 
 [
@@ -203,7 +196,6 @@ Need help figuring out where to start developing? This [introduction to Mosaik](
 
 ::/cards::
 
-
 ## Libraries
 
 ::cards::
@@ -229,9 +221,7 @@ Need help figuring out where to start developing? This [introduction to Mosaik](
 
 ::/cards::
 
-
-
-## Utilities 
+## Utilities
 
 ::cards::
 
@@ -251,7 +241,7 @@ Need help figuring out where to start developing? This [introduction to Mosaik](
 
 ::/cards::
 
-## Simple Examples 
+## Simple Examples
 
 ::cards::
 
@@ -275,7 +265,6 @@ Need help figuring out where to start developing? This [introduction to Mosaik](
 ]
 
 ::/cards::
-
 
 ## Utilities
 

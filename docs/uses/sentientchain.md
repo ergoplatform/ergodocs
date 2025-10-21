@@ -32,6 +32,4 @@ This documentation can be a valuable resource for developers looking to explore 
 
 To get the latest information on Sentient Chain's development status or any potential future developments, be sure to follow their official channels, especially their Twitter account, for updates and announcements.
 
-
 - [Final Presentation](https://drive.google.com/drive/folders/1Xprwfz-MrgS4PFQ3cETE7JbTenPRtQRw)
-

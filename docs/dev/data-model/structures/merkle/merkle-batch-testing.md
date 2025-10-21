@@ -93,7 +93,6 @@ mod tests {
 - **BatchMerkleProof**: [`batchmerkleproof.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-merkle-tree/src/batchmerkleproof.rs)
 - **Serialization Methods**: [`scorex_serializable.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/sigma-ser/src/scorex_serializable.rs)
 
-
 ### Scala (`scrypto`) Testing
 
 For Scala, the `scrypto` library is used to test Merkle Batch Proofs. Below are the test cases using ScalaTest, covering tree creation, proof generation, verification, and serialization.
@@ -153,7 +152,7 @@ class MerkleBatchProofSpec extends AnyFlatSpec with Matchers {
 - **BatchMerkleProof**: [`BatchMerkleProof.scala`](https://github.com/input-output-hk/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/merkle/BatchMerkleProof.scala)
 - **BatchMerkleProofSerializer**: [`BatchMerkleProofSerializer.scala`](https://github.com/input-output-hk/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/merkle/serialization/BatchMerkleProofSerializer.scala)
 
-### Explanation:  
+### Explanation  
 
 - **Merkle Tree Creation**: The test generates random leaf data and creates a `MerkleTree`. This ensures that the tree is correctly constructed and the root hash is generated.
 - **Batch Merkle Proof Generation**: The test creates a batch proof for selected elements (indices 0 and 2) of the Merkle Tree.

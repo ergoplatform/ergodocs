@@ -1,21 +1,17 @@
 # Ergo Node API v5.0.15
 
-
 /// admonition | Getting Started!
 API docs for Ergo Node. Scroll down for code samples, example requests and responses
 ///
 
-
-
 Base URLs:
-
 
 * <a href="http://213.239.193.208:9053">http://213.239.193.208:9053</a>
 
 ## Authentication
 
 * API Key (ApiKeyAuth)
-    - Parameter Name: **api_key**, in: header. 
+  * Parameter Name: **api_key**, in: header.
 
 ## UTXO
 
@@ -30531,7 +30527,7 @@ Status of the node wallet
 |pass|string|true|none|Password to encrypt wallet file with|
 |mnemonic|string|true|none|Mnemonic seed|
 |mnemonicPass|string|false|none|Optional pass to password-protect mnemonic seed|
-|usePre1627KeyDerivation|boolean|true|none|use incorrect(previous) BIP32 key derivation (see https://github.com/ergoplatform/ergo/issues/1627 for details). It's recommended to set to 'true' if the original wallet was created by ergo node before v4.0.105.|
+|usePre1627KeyDerivation|boolean|true|none|use incorrect(previous) BIP32 key derivation (see <https://github.com/ergoplatform/ergo/issues/1627> for details). It's recommended to set to 'true' if the original wallet was created by ergo node before v4.0.105.|
 
 ### CheckWallet
 <!-- backwards compatibility -->
@@ -31830,4 +31826,3 @@ Error response from API
 |error|integer|true|none|Error code|
 |reason|string|true|none|Error message explaining the reason of the error|
 |detail|string¦null|true|none|Detailed error description|
-

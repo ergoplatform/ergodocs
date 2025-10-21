@@ -8,7 +8,6 @@ A transaction tree can be seen as a more complex version of a [transaction chain
 
 Transaction trees are useful for representing complex transaction sequences and dependencies, especially within smart contracts and advanced blockchain applications. They help ensure transactions execute in the correct order with appropriate dependencies while offering a detailed and flexible view of the overall transaction flow, including conditional branching.
 
-
 ## Process
 
 A transaction tree extends the concept of transaction chains, allowing for conditional logic (`if` statements) within the scripts that determine which branch of the tree is followed. Simple loops can also be implemented where a transaction recreates a box protected by the same script (effectively transitioning back to the same state node). The following figure illustrates a transaction tree structure with branching:

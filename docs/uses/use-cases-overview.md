@@ -12,24 +12,31 @@ The Ergo Ecosystem is a thriving hub of decentralized applications, tools, and p
 Ergo’s ecosystem is built on a solid foundation of key technologies and applications that cater to diverse use cases:
 
 ### Infrastructure
+
 Explore the underlying technologies that power the Ergo blockchain, including our robust Proof of Work consensus algorithm, sidechains, bridges, and oracle systems. These components ensure the scalability, security, and interoperability of the Ergo network.
 
 ### Financial Tools
+
 Dive into the financial applications and services within the Ergo ecosystem, including decentralized exchanges, stablecoins, lending platforms, and derivatives. These tools offer users new ways to manage, trade, and grow their assets in a trustless, decentralized environment.
 
 ### Privacy Solutions
+
 Ergo is at the forefront of privacy innovation with solutions like non-custodial mixers and stealth addresses. These tools ensure that users can conduct transactions with enhanced privacy while maintaining the security and transparency of the blockchain.
 
 ### Decentralized Governance
+
 Discover the tools and platforms that enable decentralized governance within the Ergo ecosystem, including DAOs and community-driven initiatives. These components allow users to participate in decision-making processes and contribute to the future development of the network.
 
 ### Gaming and Metaverse
+
 Ergo supports a growing number of gaming and metaverse projects, offering developers the tools they need to create immersive, blockchain-based experiences. From trading card games to expansive virtual worlds, the Ergo ecosystem is home to innovative entertainment platforms.
 
 ### Tooling and Developer Resources
+
 Get access to a suite of developer tools and resources designed to facilitate the creation and deployment of decentralized applications on the Ergo blockchain. From smart contract scripting to name services, these tools are essential for building on Ergo.
 
 ### Further Ideas and Innovation
+
 Explore new and experimental ideas within the Ergo ecosystem that push the boundaries of what's possible with blockchain technology. This section highlights ongoing research and development efforts aimed at expanding the capabilities of the network.
 
 ## Explore the Ecosystem
@@ -49,8 +56,9 @@ Consider the following example illustrating how programmable contracts on Ergo c
 Alice uses ERGs to purchase gold-backed tokens from Bob. Bob stores the gold in a secure vault and uses the blockchain to issue one token for every Troy ounce of gold he holds. Alice can then use these tokens freely in different contracts, transferring and trading them under whatever conditions she specifies in the smart contract code. When Alice wants to sell the tokens for physical gold, she can conduct another transaction with Bob, receiving ERG in return at the market price.
 
 The point of blockchain contracts is to eliminate the need for trust. While the purchase transaction is now trustless, in this instance, Alice still needs to trust Bob about two things:
-1.  Bob may refuse to swap the gold tokens back to ERG at the correct price when Alice wants to sell.
-2.  Bob may default on his obligations – running away with the gold or misusing the funds he receives and operating a fractional reserve.
+
+1. Bob may refuse to swap the gold tokens back to ERG at the correct price when Alice wants to sell.
+2. Bob may default on his obligations – running away with the gold or misusing the funds he receives and operating a fractional reserve.
 
 ### Extending the Contracts with Oracles and Insurance
 
@@ -111,10 +119,7 @@ This example demonstrates how Ergo's programmable contracts can model complex, m
     "title": "Parachains/Sidechains",
     "content": "",
     "url": "../dev/protocol/nipopow/nipopow-sidechains.md"
-
-  },
-
-
+  }
 ]
 
 ::/cards::

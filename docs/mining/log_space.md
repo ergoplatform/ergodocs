@@ -27,12 +27,13 @@ Miners should be able to efficiently access key blocks in the blockchain from th
 
 Instead of accessing all of the blocks, superblocks (or light-clients) are enough to verify all of the blocks. This is accomplished by maintaining the historical data of the blockchain through smart contracts. The introduction of these superblock clients on NIPoPoWs can be done via 'velvet' or soft forks, and after that "light" miners can bootstrap through "online" mining.
 
-## Resources 
+## Resources
 
 ##### Articles
 
 - [Mining in Logarithmic Space - IOHK](https://eprint.iacr.org/2021/623.pdf)
 
 ##### Videos
+
 - [Ergoversary 20201 - Logarithmic Mining Update from Dionysis](https://www.youtube.com/watch?v=s05ypkSC7gk)
 - [NIPoPoWs & Log-Space Mining – Ergo Cast Episode #5](https://ergocast.io/episode/NIPoPoWs-ergo-cast-episode-5/)

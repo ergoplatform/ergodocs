@@ -5,16 +5,18 @@ A reversible address is an example of a multi-stage contract designed with anti-
 The reversible address uses a two-stage protocol. The first stage ensures that withdrawals from the hot wallet adhere to specific rules, creating outputs protected by a second-stage script. The second stage allows either the intended recipient (after a delay) or the trusted party (before the delay) to spend the funds. If an unauthorized transaction is detected originating from the hot wallet (first stage), the trusted party can use their private key to trigger an abort procedure on the second-stage boxes, diverting the funds to a secure address. Besides securing hot wallets, these addresses can be used for automated-release escrow payments in online shopping.
 
 Let's assume:
-*   `alice` represents the `SigmaProp` (public key) of the hot wallet.
-*   `carol` represents the `SigmaProp` of the trusted party (whose private key is stored offline and used for reversals).
-*   `blocksIn24h` is a constant representing the estimated number of blocks in 24 hours (the reversal period).
-*   `bob` represents the `SigmaProp` of a customer wishing to withdraw funds.
+
+* `alice` represents the `SigmaProp` (public key) of the hot wallet.
+* `carol` represents the `SigmaProp` of the trusted party (whose private key is stored offline and used for reversals).
+* `blocksIn24h` is a constant representing the estimated number of blocks in 24 hours (the reversal period).
+* `bob` represents the `SigmaProp` of a customer wishing to withdraw funds.
 
 In Ethereum, a similar outcome might be achieved by sending funds to an account with a contract (let's call it C<sub>b</sub>) that allows `carol` to withdraw funds for `blocksIn24h` blocks, after which only `bob` can withdraw. While the same contract instance could handle multiple withdrawals, creating a new instance for each withdrawal (emulating the UTXO model) might be preferable. The funds for these withdrawals would need to originate from another contract (C<sub>a</sub>) ensuring outputs are only created according to the structure of C<sub>b</sub>.
 
 In Ergo, this is implemented as a two-stage protocol:
-1.  **Stage 1 (Hot Wallet Script - C<sub>a</sub>):** This script guards the main hot wallet funds. It ensures that any spending transaction creates outputs protected by the Stage 2 script (`withdrawScript`).
-2.  **Stage 2 (Withdrawal Script - C<sub>b</sub>):** This script guards the individual withdrawal boxes paid out to customers like Bob. It allows either Bob (after the delay) or Carol (before the delay) to spend the box.
+
+1. **Stage 1 (Hot Wallet Script - C<sub>a</sub>):** This script guards the main hot wallet funds. It ensures that any spending transaction creates outputs protected by the Stage 2 script (`withdrawScript`).
+2. **Stage 2 (Withdrawal Script - C<sub>b</sub>):** This script guards the individual withdrawal boxes paid out to customers like Bob. It allows either Bob (after the delay) or Carol (before the delay) to spend the box.
 
 The following script, named `withdrawScript`, implements the second stage (C<sub>b</sub>). This script protects the output box created when the hot wallet pays Bob.
 

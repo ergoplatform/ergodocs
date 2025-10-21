@@ -56,7 +56,7 @@ Diffie-Hellman tuples are essential for maintaining privacy in Ergo’s **ZeroJo
 - **ZeroJoin** utilizes **ring signatures** and Diffie-Hellman tuples to restore fungibility to digital notes, ensuring that coins become indistinguishable from one another after mixing.
 - Ergo's mixers avoid the need for trusted setups or intermediaries, ensuring minimal trust assumptions.
 
-#### Comparison with Other Platforms:
+#### Comparison with Other Platforms
 
 | Bitcoin           | Ethereum                           | Ergo                                 |
 |-------------------|------------------------------------|--------------------------------------|

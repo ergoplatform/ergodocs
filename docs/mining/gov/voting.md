@@ -6,9 +6,11 @@ Votes on foundational changes, such as block version, span **32 epochs** and dem
 ### Voting Mechanics
 
 #### Affirmative Votes
+
 To vote "Yes" for a change at the beginning of an epoch, a miner places the change's identifier directly into the block header.
 
 #### Negative or Neutral Votes
+
 To vote "No" or abstain, a miner enters a zero value in place of the identifier byte in the block header.
 
 ### System Constants
@@ -25,10 +27,10 @@ To vote "No" or abstain, a miner enters a zero value in place of the identifier 
 
 ## Parameters Table
 
-The following table describes vote identifiers, default values (during launch), possible steps, and minimum and maximum values. 
+The following table describes vote identifiers, default values (during launch), possible steps, and minimum and maximum values.
 
-- If the step is not defined in the table, its value is defined as $\max(\lfloor current\_value / 100 \rfloor, 1)$. 
-- If the minimum value for a parameter is not defined, it equals zero. 
+- If the step is not defined in the table, its value is defined as $\max(\lfloor current\_value / 100 \rfloor, 1)$.
+- If the minimum value for a parameter is not defined, it equals zero.
 - If the maximum value is not defined, it equals `1,073,741,823`.
 
 A miner includes a parameter identifier ($id$) into the block header to propose or vote for increasing a parameter.
@@ -48,7 +50,6 @@ If the miner supports decreasing the parameter, they would include ($-id$) into 
 | 7 | Cost per one data input | 100 |  |  |  |
 | 8 | Cost per one transaction output | 100 |  |  |  |
 | 120 | Soft-fork (increasing version of a block) |  |  |  |  |
-
 
 Parameter values are to be written into the extension section on the first block of a voting epoch, that is, in the extension of a block when its $height\,mod\,1024 = 0$.
 

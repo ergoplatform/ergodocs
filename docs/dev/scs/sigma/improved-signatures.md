@@ -1,8 +1,8 @@
 
 The initial implementation of distributed signatures support in the Ergo node worked well in simple cases, and ZK Treasury was built on top of it. However, in complex scenarios, it exhibited some problems:
 
-*   Hints generated (such as commitments) were not tied to the position of a sub-expression within the overall sigma-expression. For example, for a statement like `atLeast(2, Coll(pkAlice, pkBob, pkCharlie)) && (pkBob || pkDiana)`, the same commitment would be generated for Bob's public key (`pkBob`) in both parts of the expression. This is improper and insecure, as a signature could potentially reveal Bob's secret key because the same randomness would be used twice for different challenges in the Schnorr protocol.
-*   Similarly, generated hints were not tied to specific transaction inputs.
+* Hints generated (such as commitments) were not tied to the position of a sub-expression within the overall sigma-expression. For example, for a statement like `atLeast(2, Coll(pkAlice, pkBob, pkCharlie)) && (pkBob || pkDiana)`, the same commitment would be generated for Bob's public key (`pkBob`) in both parts of the expression. This is improper and insecure, as a signature could potentially reveal Bob's secret key because the same randomness would be used twice for different challenges in the Schnorr protocol.
+* Similarly, generated hints were not tied to specific transaction inputs.
 
 These issues have been fixed with a new API introduced in the `distributed-sigs` branch. Now, all hints are tied to both input indexes and positions within the sigma tree after the script reduction phase (which considers the current context). Additionally, the API is now simpler to use.
 
@@ -24,7 +24,7 @@ Let's walk through a new tutorial on collective signing using this improved API.
 This code defines a script requiring signatures corresponding to at least two out of the three specified public keys (`pkA`, `pkB`, `pkC`) to spend the box. The public keys (as `GroupElement` values) are retrieved from registers R4, R5, and R6 of the box being spent (`SELF`). These are then converted into `SigmaProp` objects using `proveDlog`. Finally, the `atLeast` function enforces the 2-out-of-3 condition.
 
 After funding a box with this script (e.g., transaction [71aa67...](https://explorer.ergoplatform.com/en/transactions/71aa67f95e96827193bdf711f6ccf41b30ef8bbbdaef63ed672dfb7420a4c314)), we can retrieve its details using the explorer or node API (e.g., `/utxo/byIdBinary/{boxId}`). To spend this box, we first generate an unsigned transaction. In this example, we provide the input box directly using the `inputsRaw` field in a request to the `/wallet/transaction/generateUnsigned` endpoint:
- 
+
 ```json
 {
   "requests": [

@@ -24,7 +24,6 @@ This page contains links to documents with a general overview of Ergo platform, 
 - [ZeroJoin: Combining ZeroCoin and CoinJoin](https://eprint.iacr.org/2020/560.pdf)
 - [Soft Power: Upgrading Chain Macroeconomic Policy Through Soft Forks](https://eprint.iacr.org/2021/577.pdf)
 
-
 ## Post-Mainnet
 
 - [Bypassing Non-Outsourceable Proof-of-Work Schemes Using Collateralized Smart Contracts](https://eprint.iacr.org/2020/044.pdf)
@@ -39,22 +38,21 @@ This page contains links to documents with a general overview of Ergo platform, 
 
 ### Notable Youtube Appearances
 
-* [Blockchain at Berkeley CESC2017 - Dmitry Meshkov - On Space-Scare Economy](https://youtu.be/gBy-pu1kzdQ) - October 17, 2017.
-* [Master Workshop at Amsterdam - Vasily Kharin - Autolykos: Practical Non-Outsourceable Proof-of-Work Protocol](https://youtu.be/rApDlDbXy84) - November 17, 2018.
-* [Binary District Journal - Alexander Chepurnoy - Blockchain Research and Adoption – Interview](https://youtu.be/fY2yTItDgsU) - November 10, 2017.
-* [IOHK Research - Alexander Chepurnoy - Future technology](https://youtu.be/Pxu4gpuVnQE) - July 22, 2016.
-* [IOHK & Shanghai Jiao Tong University – Alexander Chepurnoy - Interview](https://youtu.be/B7BdOfzURiI) - March 6, 2017.
-* [IOHK Interview on Scorex – Charles Hoskinson, Alexander Chepurnoy - A Modular Toolbox for Cryptocurrency Research & Blockchain Technologies](https://youtu.be/YqvMUY4XAKs) - August 15, 2016.
-* [CTCrypt 2017 – Alexander Chepurnoy - Challenges in Blockchain Research](https://youtu.be/w6K3k-s7Oow) - August 15, 2016.
-* [SF Scala – Dmitry Meshkov, Interview](https://youtu.be/GehIWZrulKo) - October 4, 2017.
-* [NXT Cryptocurrency Explained - By Alexander Chepurnoy & Bas Wisselink at Bitcoin Wednesday Amsterdam](https://youtu.be/QMSA5W7jx1E?t=610) - January 7, 2015.
+- [Blockchain at Berkeley CESC2017 - Dmitry Meshkov - On Space-Scare Economy](https://youtu.be/gBy-pu1kzdQ) - October 17, 2017.
+- [Master Workshop at Amsterdam - Vasily Kharin - Autolykos: Practical Non-Outsourceable Proof-of-Work Protocol](https://youtu.be/rApDlDbXy84) - November 17, 2018.
+- [Binary District Journal - Alexander Chepurnoy - Blockchain Research and Adoption – Interview](https://youtu.be/fY2yTItDgsU) - November 10, 2017.
+- [IOHK Research - Alexander Chepurnoy - Future technology](https://youtu.be/Pxu4gpuVnQE) - July 22, 2016.
+- [IOHK & Shanghai Jiao Tong University – Alexander Chepurnoy - Interview](https://youtu.be/B7BdOfzURiI) - March 6, 2017.
+- [IOHK Interview on Scorex – Charles Hoskinson, Alexander Chepurnoy - A Modular Toolbox for Cryptocurrency Research & Blockchain Technologies](https://youtu.be/YqvMUY4XAKs) - August 15, 2016.
+- [CTCrypt 2017 – Alexander Chepurnoy - Challenges in Blockchain Research](https://youtu.be/w6K3k-s7Oow) - August 15, 2016.
+- [SF Scala – Dmitry Meshkov, Interview](https://youtu.be/GehIWZrulKo) - October 4, 2017.
+- [NXT Cryptocurrency Explained - By Alexander Chepurnoy & Bas Wisselink at Bitcoin Wednesday Amsterdam](https://youtu.be/QMSA5W7jx1E?t=610) - January 7, 2015.
 
 ### Meetups and Presentations
 
-* [Ergo Platform Presentation, Seoul](https://www.youtube.com/watch?v=R4ieaI6pn7M) - September 2019.
-* [Ergo Platform Presentation, Hong Kong (at Genesis Block)](https://www.youtube.com/watch?v=nK2ZBsLCGIU&t) - September 2019.
-* [Ergo Platform Presentation, Ho Chi Minh](https://www.youtube.com/watch?v=1SrzybpblMM&t) - September 2019.
-* [Ergo Platform Presentation, Shanghai](https://www.yizhibo.com/l/gvz0R4fXK6aOgMOy.html) - September 2019.
-* [Ergo Platform Presentation, Hong Kong (at Genesis Block)](https://www.youtube.com/watch?v=nrF-r_sylsU&t) - January 2019.
-* [Ergo Platform Presentation, Sanya, Hainan](https://www.youtube.com/watch?v=Ae8VDOo1YfM) - January 2019. 2019年区块链技术大会 / 2019 International Blockchain Technology Conference (IBTC2019).
-
+- [Ergo Platform Presentation, Seoul](https://www.youtube.com/watch?v=R4ieaI6pn7M) - September 2019.
+- [Ergo Platform Presentation, Hong Kong (at Genesis Block)](https://www.youtube.com/watch?v=nK2ZBsLCGIU&t) - September 2019.
+- [Ergo Platform Presentation, Ho Chi Minh](https://www.youtube.com/watch?v=1SrzybpblMM&t) - September 2019.
+- [Ergo Platform Presentation, Shanghai](https://www.yizhibo.com/l/gvz0R4fXK6aOgMOy.html) - September 2019.
+- [Ergo Platform Presentation, Hong Kong (at Genesis Block)](https://www.youtube.com/watch?v=nrF-r_sylsU&t) - January 2019.
+- [Ergo Platform Presentation, Sanya, Hainan](https://www.youtube.com/watch?v=Ae8VDOo1YfM) - January 2019. 2019年区块链技术大会 / 2019 International Blockchain Technology Conference (IBTC2019).

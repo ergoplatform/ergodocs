@@ -10,11 +10,10 @@ DAO stands for [Decentral Autonomous Organizations](https://www.investopedia.com
 
 ErgoTeam will not only be for simple joint-spendings like it was initially intended where special tokens needed to be issued. The developer plans for it to be much more general where any already issued token would work. This will help dApps to build an ecosystem around their product easily.
 
-To achieve that, certain procedures must be improved. Here is one aspect of it: 
+To achieve that, certain procedures must be improved. Here is one aspect of it:
 
 - [A more efficient UTXO voting](https://www.ergoforum.org/t/a-more-efficient-utxo-voting/3144)
 - [GitHub: ErgoTeam](https://github.com/anon-real/ergo-team)
-
 
 ## Resources
 

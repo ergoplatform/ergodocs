@@ -17,9 +17,9 @@ Ergo's design emphasizes long-term economic sustainability. One of the key strat
 - By reducing the storage load, storage fees eliminate potential extra costs that could arise from excessive state growth.
 - Storage fees stimulate coin circulation and deter deflation, thereby preventing illiquidity and congestion in the currency system.
 
-## Understanding *'Demurrage'* 
+## Understanding *'Demurrage'*
 
-Demurrage is a nominal fee levied on unspent output after four years. The fee per byte is determined by the _storage rent_ subprotocol. For a box without tokens and complex scripts, this amounts to approximately 0.14 ERG every four years. 
+Demurrage is a nominal fee levied on unspent output after four years. The fee per byte is determined by the *storage rent* subprotocol. For a box without tokens and complex scripts, this amounts to approximately 0.14 ERG every four years.
 
 For a comprehensive understanding of the storage rent fees within the Ergo blockchain, including how these fees are calculated, applied, and adjusted over time, visit [this page](rent-fees.md).
 
@@ -27,9 +27,9 @@ For a comprehensive understanding of the storage rent fees within the Ergo block
 
 Ergo's demurrage mechanism rewards miners uniquely by allowing them to claim valuable assets within a UTXO if the ERGs available are insufficient to cover the rent. This principle applies to various assets, including NFTs and stablecoins like SigUSD, and promotes increased participation and active asset management. While it enhances network security and reduces blockchain bloat, it could lead to uninformed users inadvertently losing valuable assets if they fail to maintain enough ERGs. **Users are strongly advised to thoroughly understand Ergo's demurrage mechanism and ensure they possess enough ERGs to protect their valuable assets.** For more information, [click here](rent-tokens.md).
 
-## How to Check the Age of Your Boxes? 
+## How to Check the Age of Your Boxes?
 
-[TokenJay](token-jay.md) offers a convenient [Box consolidation tool](https://tokenjay.app/app/#boxconsolidation) that checks the number and age of boxes in your wallet and consolidates them when necessary. [Nautilus](nautilus.md) also features a built-in box consolidation tool that alerts you if your UTxO set requires consolidation. Alternatively, you can message [@ergoportbot](https://t.me/ergoportbot) on Telegram and use the command `/ep boxage ADDRESS` to check. 
+[TokenJay](token-jay.md) offers a convenient [Box consolidation tool](https://tokenjay.app/app/#boxconsolidation) that checks the number and age of boxes in your wallet and consolidates them when necessary. [Nautilus](nautilus.md) also features a built-in box consolidation tool that alerts you if your UTxO set requires consolidation. Alternatively, you can message [@ergoportbot](https://t.me/ergoportbot) on Telegram and use the command `/ep boxage ADDRESS` to check.
 
 ## Additional Resources
 

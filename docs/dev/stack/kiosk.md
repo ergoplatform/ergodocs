@@ -6,7 +6,6 @@
 The Kiosk repository has been archived by the owner on May 26, 2022. It is now read-only.
 ///
 
-
 # ErgoScript Playground with KioskWeb
 
 [KioskWeb](https://github.com/scalahub/KioskWeb), built on top of the [Kiosk](https://github.com/scalahub/Kiosk) project, offers a user-friendly web interface to interact with ErgoScript. It allows you to perform the following actions:
@@ -16,13 +15,13 @@ The Kiosk repository has been archived by the owner on May 26, 2022. It is now r
 
 ## Getting Started
 
-KioskWeb requires a fully configured Ergo node to be running. By default, it assumes the node's REST API is accessible at http://localhost:9052. You can modify this by invoking the method `org.sh. Kiosk.ergo.ErgoAPI.setUrl` from the web-UI.
+KioskWeb requires a fully configured Ergo node to be running. By default, it assumes the node's REST API is accessible at <http://localhost:9052>. You can modify this by invoking the method `org.sh. Kiosk.ergo.ErgoAPI.setUrl` from the web-UI.
 
 A precompiled jar is available [here](https://github.com/scalahub/Kiosk/releases/tag/0.1). You can run it using the command `java -jar <jarfile>`. If you wish to generate the jar from sources, issue the command `sbt assembly`.
 
 To operate a local copy (the recommended approach), clone the project and follow one of these steps:
 
-1. Run sbt using the command `sbt`. Inside the sbt prompt, type `jetty:start`. This command initiates the built-in Jetty web server on port 8080, which can be accessed at http://localhost:8080.
+1. Run sbt using the command `sbt`. Inside the sbt prompt, type `jetty:start`. This command initiates the built-in Jetty web server on port 8080, which can be accessed at <http://localhost:8080>.
 
 2. Compile the war file using `sbt package`. Then, run the war file as you would with any other J2EE application.
 

@@ -1,6 +1,6 @@
 ## How to set up and configure a full Ergo node
 
-This page explains how to install and run a full Ergo node. It does not cover mining. 
+This page explains how to install and run a full Ergo node. It does not cover mining.
 
 Linux Systems can run [ergo-installer.sh](https://github.com/ergoplatform/ergo/blob/master/ergo-installer.sh)
 

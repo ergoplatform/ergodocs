@@ -36,7 +36,6 @@ Running an independent node maximises security and performance.
 * **Web panel** — open `127.0.0.1:9053/panel` on main‑net or `127.0.0.1:9052/panel` on [test‑net](testnet.md).
 * **Pruned mode** — accelerate sync with a [pruned node snapshot plus NiPoPoWs](pruned-full-node.md).
 
-
 /// admonition | Swagger
     type: tip
 Ergo node offers a REST API accessible via HTTP. The complete API specification, in OpenAPI format, can be found [here](openapi.md). When the node is operational, access the user-friendly Swagger UI at `127.0.0.1:9053/swagger` or experiment with it [here](swagger_api.md). An optional [indexed node API](indexed-node.md) is also available.
@@ -44,23 +43,21 @@ Ergo node offers a REST API accessible via HTTP. The complete API specification,
 
 Major wallet functionalities include:
 
-- Wallet creation (`/wallet/init`) and mnemonic generation
-- Wallet restoration (`/wallet/restore`) from mnemonic
-- Wallet unlock (`/wallet/unlock`) for transaction signing
-- Wallet lock (`/wallet/lock`)
-- Sending a simple payment (`/wallet/payment/send`)
-- Checking wallet status (`/wallet/status`)
-- Deriving a new key according to [EIP-3](eip3.md) (BIP 44 implementation for Ergo) (`/wallet/deriveNextKey`)
-- Checking wallet balance (`/wallet/balances`) for all addresses
-- Retrieving wallet transactions (`/wallet/transactions`) for all addresses.
+* Wallet creation (`/wallet/init`) and mnemonic generation
+* Wallet restoration (`/wallet/restore`) from mnemonic
+* Wallet unlock (`/wallet/unlock`) for transaction signing
+* Wallet lock (`/wallet/lock`)
+* Sending a simple payment (`/wallet/payment/send`)
+* Checking wallet status (`/wallet/status`)
+* Deriving a new key according to [EIP-3](eip3.md) (BIP 44 implementation for Ergo) (`/wallet/deriveNextKey`)
+* Checking wallet balance (`/wallet/balances`) for all addresses
+* Retrieving wallet transactions (`/wallet/transactions`) for all addresses.
 
 ##### RPC Documentation
 
-- [Overview](swagger.md)
-- [API Spec](openapi.md)
-- [Indexed Node](indexed-node.md)
- 
-
+* [Overview](swagger.md)
+* [API Spec](openapi.md)
+* [Indexed Node](indexed-node.md)
 
 ### 2.2 Wallet Configuration (for exchanges & pools)
 
@@ -68,8 +65,6 @@ Major wallet functionalities include:
     type: warning
 Wallets that receive continuous micro‑deposits must enable **dust collection**; otherwise transactions will time‑out or exceed the execution‑cost ceiling. The [dust‑collection guide](dust-collection.md) shows you how to automate sweeping, perform manual clean‑ups, and monitor UTXO counts.
 ///
-
-
 
 ### 2.3 Explorers & GraphQL Endpoints
 
@@ -81,11 +76,11 @@ Ergo data can be accessed through several public services or directly from an in
 * **Public GraphQL API** — `https://explore.sigmaspace.io/api/graphql`
 * **Self‑hosted Indexed Node** — enable indexing via [Indexed Node Setup](indexed-node.md) to expose explorer‑style REST **and** GraphQL endpoints directly from your own node—no separate explorer UI needed (recommended for exchanges & other high‑volume backends).
 
-High‑volume operators should run a private indexed node so queries never depend on external rate limits or third‑party uptime. 
+High‑volume operators should run a private indexed node so queries never depend on external rate limits or third‑party uptime.
 
 ---
 
-## 3. Transactions & Wallet Operations 
+## 3. Transactions & Wallet Operations
 
 Before accepting or returning funds, you’ll need addresses.
 
@@ -117,4 +112,3 @@ Ergo’s ASIC‑resistant **Autolykos** PoW requires large memory and favours of
 ### 4.3 Storage Rent
 
 Unspent boxes older than ≈ 4 years pay **storage rent** (\~0.14 ERG for a simple box). This recycles lost coins and keeps the UTXO set bounded. Rent rules live in [storage‑rent.md](rent.md).
-

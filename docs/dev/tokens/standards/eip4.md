@@ -7,20 +7,18 @@ tags:
 
 > 🔗 From [EIP-0004:](https://github.com/ergoplatform/eips/blob/master/eip-0004.md)
 
-
 This standard provides a uniform way to issue Ergo tokens.
 
 A standard interface allows any tokens on Ergo to be re-used by other applications: from wallets to decentralized exchanges.
-
 
 ## Ergo tokens background
 
 Ergo supports **custom tokens as first-class citizens.**
 
 - Namely, a special register (R2) of a box contains (tokenId -> amount) pairs.
-- A box can contain at most 255 secondary tokens. 
+- A box can contain at most 255 secondary tokens.
 
-There are also indirect limits: 
+There are also indirect limits:
 
 - A box can be no larger than 4 kilobytes
 - Tokens add to the computational cost of the transaction.
@@ -30,8 +28,6 @@ A transaction can create *out-of-thin-air* tokens in its outputs if the token id
 /// admonition | Info
 [Why does the limitation of 1 new token per transaction exist?](https://github.com/ergoplatform/ergo/issues/2013)
 ///
-
-
 
 - As the box identifier is cryptographically unique, there is no chance of having the second token with the same identifier while the hash function is collision-resistant.
 - This rule also means that only one new token per transaction can be created.
@@ -58,7 +54,7 @@ The transaction that issues such a token was included in block 98288 and may be 
 
 This standard is an extension of [token standard](#ergo-tokens-standard):
 
-In the asset type standard, R7 is a required two-byte value encoded as Coll[Byte]. The first byte represents the asset category, for example, _NFT_ or _Share Tokens_. The second byte specifies the exact subcategory, for example, _Picture Artwork NFT_ or _ErgoMixer's Share Tokens_. The second byte can be omited so that the issuance only specifies the catagory and not the subcatagory, for example, _Share Tokens_.
+In the asset type standard, R7 is a required two-byte value encoded as Coll[Byte]. The first byte represents the asset category, for example, *NFT* or *Share Tokens*. The second byte specifies the exact subcategory, for example, *Picture Artwork NFT* or *ErgoMixer's Share Tokens*. The second byte can be omited so that the issuance only specifies the catagory and not the subcatagory, for example, *Share Tokens*.
 Also, the remaining R8 and R9 registers can be used by each individual asset types based on their needs.
 
 The standardization of various asset types can be found below:

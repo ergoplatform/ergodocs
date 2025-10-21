@@ -23,8 +23,8 @@ As mentioned, Ergo previously relied mainly on AOT costing. Reference Client 5.0
 
 The hybrid costing model operates in two stages during transaction validation:
 
-1.  **Reduction Stage (JIT Costing)**: Each input's guarding script (ErgoTree) is reduced to its final sigma proposition (a cryptographic condition like `proveDlog(pk)` or `atLeast(2, Coll(pk1, pk2, pk3))`). The cost of this reduction phase is calculated using **Just-In-Time (JIT)** costing, meaning the cost is determined based on the actual operations performed during reduction.
-2.  **Cryptographic Verification Stage (AOT Costing)**: Once all input scripts are reduced to sigma propositions, the cost of verifying the required cryptographic proofs (e.g., signature checks) is calculated using **Ahead-of-Time (AOT)** costing. AOT costing for crypto operations is simple, fast, and predictable.
+1. **Reduction Stage (JIT Costing)**: Each input's guarding script (ErgoTree) is reduced to its final sigma proposition (a cryptographic condition like `proveDlog(pk)` or `atLeast(2, Coll(pk1, pk2, pk3))`). The cost of this reduction phase is calculated using **Just-In-Time (JIT)** costing, meaning the cost is determined based on the actual operations performed during reduction.
+2. **Cryptographic Verification Stage (AOT Costing)**: Once all input scripts are reduced to sigma propositions, the cost of verifying the required cryptographic proofs (e.g., signature checks) is calculated using **Ahead-of-Time (AOT)** costing. AOT costing for crypto operations is simple, fast, and predictable.
 
 The costs from both stages are aggregated to determine the final cost of the transaction. This transaction cost is then added to the cumulative cost of the block being validated. A block is only valid if its total accumulated cost remains within the maximum allowed block budget.
 

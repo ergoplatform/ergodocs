@@ -22,8 +22,6 @@ These proofs are applicable to any Proof of Work blockchain and enable trustless
 | Decentralization | Centralized processing of share sets. | Decentralized processing of share sets. |
 | Reward Distribution | Rewards are distributed based on the amount of work contributed by each miner. | Rewards are distributed based on the goodness of each miner's share set. |
 
-Please see the [LITHOS Protocol](lithos.md) for a continuation of this work. 
-
-
+Please see the [LITHOS Protocol](lithos.md) for a continuation of this work.
 
 - [SNISP (Succint Non-Interactive Share Proofs) | Ergo Summit - Mining & Minting](https://www.youtube.com/watch?v=x-9x_PveRog)

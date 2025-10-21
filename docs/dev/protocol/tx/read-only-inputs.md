@@ -68,4 +68,3 @@ For further reading and deeper understanding of the UTXO model and its implement
 ### Conclusion
 
 Data inputs are a powerful feature in ErgoScript that significantly enhance the flexibility, efficiency, and scalability of smart contracts. By allowing read-only access to UTXOs, data inputs enable more sophisticated interactions within the Ergo blockchain, making them an essential tool for developers building complex dApps and DeFi solutions.
-

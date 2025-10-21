@@ -7,8 +7,7 @@ tags:
 
 # Developers
 
-
-There are many tools, libraries, SDKs, frameworks and utilities developers can use to interact with the blockchain, build their applications, and display them to users. 
+There are many tools, libraries, SDKs, frameworks and utilities developers can use to interact with the blockchain, build their applications, and display them to users.
 
 ## Stack
 

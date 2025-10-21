@@ -9,13 +9,14 @@ tags:
 FlowCards aim to radically simplify dApp development on Ergo by providing a high-level declarative language, execution runtime, storage format and a graphical notation.
 
 See also, [flowcardLib: Ergo FlowCard library for diagrams.net](https://github.com/lucagdangelo/flowcardLib)
-## Introduction 
+
+## Introduction
 
 [ErgoScript](https://ergoplatform.org/docs/ErgoScript.pdf) is the smart contract language used by the Ergo blockchain. While it has concise syntax adopted from Scala/Kotlin, it may still seem confusing at first because conceptually, ErgoScript is quite different from conventional languages. This is because Ergo is a UTXO-based blockchain, whereas smart contracts are traditionally associated with account-based systems like Ethereum. However, Ergo's transaction model has many advantages over the account-based model, and with the right approach, developing Ergo contracts can even be significantly easier than writing and debugging Solidity code.
 
 Below, we cover the key aspects of the Ergo contract model that make it different:
 
-##### Paradigm   
+##### Paradigm
 
 The account model of Ethereum is imperative. This means that the typical task of sending coins from Alice to Bob requires changing the balances in storage as a series of operations. Ergo's UTXO-based programming model, on the other hand, is declarative. ErgoScript contracts specify conditions for a transaction to be accepted by the blockchain (not changes to be made in the storage state resulting from the contract execution).
 
@@ -55,6 +56,7 @@ Turning back to the example above, since Ergo natively supports tokens, therefor
 
 The picture visually describes the following steps, which the network user needs to
 perform:
+
 1) Select the sender's unspent boxes, containing a total of `tB >= amount` tokens and `B >= txFee + minErg` ERGs.
 2) Create an output `target` box protected by the `receiver` public key with `minErg` ERGs and `amount` of `T` tokens.
 3) Create one _fee_ output protected by the `minerFee` contract with `txFee` ERGs.
@@ -69,7 +71,7 @@ In Ergo (as in Bitcoin), transactions are created _off-chain_, and the network n
 
 In the example above, we don't use an ErgoScript contract but instead, assume a signature check is used as the spending precondition. However, in more complex application scenarios, we, of course, need to use ErgoScript, which is what we are going to discuss next.
 
-## From Changing State to Checking Context 
+## From Changing State to Checking Context
 
 In the `send` function example, we first checked the precondition (`require(amount <= balances[msg.sender],...)`) and then changed the state (i.e., updated balances `balances[msg.sender] -= amount`). This is typical of Ethereum transactions. Before we change anything, we need to check if it is valid to do so.
 
@@ -79,9 +81,9 @@ It is not possible to "change the state" in ErgoScript because it is a language 
 
 If we are being pedantic, it is therefore incorrect (strictly speaking) to think of ErgoScript as the language of Ergo contracts because it is the language of propositions (logical predicates, formulas, etc.) that protect boxes from "illegal" spending. Unlike Bitcoin, in Ergo, the whole transaction and a part of the current blockchain context are available to every script. Therefore, each script may check which outputs are created by the transaction, their ERG and token amounts (we will use this capability in our example DEX contracts), the current block number, etc.
 
-*In ErgoScript, you define whether the conditions of changes (i.e., coin spending) are allowed to happen in a given context. This is in contrast to programming the changes imperatively in the code of a contract.*
- 
-While Ergo's transaction model unlocks a whole range of applications (like DEX, DeFi Apps, LETS, etc.), designing contracts as preconditions for coin spending (or guarding scripts) directly is not intuitive. In the next sections, we will consider a useful graphical notation to design contracts declaratively using _FlowCard Diagrams_, which are a visual representation of executable components (FlowCards). 
+_In ErgoScript, you define whether the conditions of changes (i.e., coin spending) are allowed to happen in a given context. This is in contrast to programming the changes imperatively in the code of a contract._
+
+While Ergo's transaction model unlocks a whole range of applications (like DEX, DeFi Apps, LETS, etc.), designing contracts as preconditions for coin spending (or guarding scripts) directly is not intuitive. In the next sections, we will consider a useful graphical notation to design contracts declaratively using _FlowCard Diagrams_, which are a visual representation of executable components (FlowCards).
 
 _FlowCards aim to radically simplify dApp development on Ergo by providing a high-level declarative language, execution runtime, storage format, and a graphical notation_.
 
@@ -103,11 +105,11 @@ transaction on the Ergo blockchain. We will discuss this in the coming sections.
 
 Now let's look at the individual pieces of the FlowCard diagram one by one.
 
-##### 1. Name and Parameters 
+##### 1. Name and Parameters
 
 Each flow card is given a name and a list of typed parameters. This is similar to a template with parameters. In the above figure, we can see the `Send` flow card, which has five parameters. The parameters are used in the specification.
 
-##### 2. Contract Wallet 
+##### 2. Contract Wallet
 
 This is a key element of the flow card. Every box has a guarding script. Often, it is the script that checks a signature against a public key. This script is trivial in ErgoScript and is defined like the `def pk(pubkey: Address) = { pubkey }` template, where `pubkey` is a parameter of the type `Address`. In the figure, the script template is applied to the parameter `pk(sender)`, and thus a concrete wallet contract is obtained. Therefore, `pk(sender)` and `pk(receiver)` yield different scripts and represent _different_ wallets on the diagram, even though they use the same template.
 
@@ -124,6 +126,7 @@ In the diagram, we can give each box a name. Besides the readability of the diag
 ##### 5. Boxes in the wallet
 
 In the diagram, we show boxes (darker rectangles) as belonging to the contract wallets (lighter rectangles). Each such _box rectangle_ is connected to a grey _transaction rectangle_ by either **orange** or **green** arrows or both. An output box (with an incoming green arrow) may include many lines of text where each line specifies a condition that should be checked as part of the transaction. The first line specifies the condition on the amount of ERG that should be placed in the box. Other lines may take one of the following forms:
+
 1) `amount: TOKEN` - the box should contain the given `amount` of the given `TOKEN`.
 2) `R == value` - the box should contain the given `value` in the given register `R`.
 3) `boxName ? condition` - the box named `boxName` should check `condition` in its script.
@@ -136,13 +139,14 @@ Each box must store a minimum amount of ERGs. This is checked when the creating 
 
 It is important to understand that variables like `amount` and `txFee` are not named properties of the boxes. They are parameters of the whole diagram and represent specific amounts. Put another way, they are shared parameters between transactions (e.g., Sell Order and Swap transactions from the DEX example below share the `tAmt` parameter). So, the same name is tied to the same value throughout the diagram (this is where tooling would help significantly). However, when it comes to _on-chain_ validation of those values, only explicit conditions marked with `?` are transformed into ErgoScript. At the same time, all other conditions are ensured _off-chain_ during transaction building (for example, in an application using the Appkit API) and during transaction validation when it is added to the blockchain.
 
-##### 7. Amount of T token 
+##### 7. Amount of T token
 
 A box can store the values of many tokens. The tokens on the diagram are named, and a `value` variable may be associated with the token `T` using the `value: T` expression. The `value` may be given as a formula. If the formula is prefixed with a box name like `boxName ? formula`, then it should also be checked in the guarding script of the `boxName` box. This additional specification is very convenient because 1) it allows the visual design to be validated automatically, and 2) the conditions specified in the boxes of a diagram are enough to synthesize the necessary guarding scripts (more about this below at **"From Diagrams To ErgoScript Contracts"**).
 
 ##### 8. Tx Inputs
 
 Inputs are connected to the corresponding transaction by **orange** arrows. An input arrow may have a label of the following forms:
+
 1) `name@index` - optional name with an index, e.g., `fee@0` or `@2`. This is a property of the target endpoint of the arrow. The name is used in conditions of related boxes, and the `index` is the position of the corresponding box in the `INPUTS` collection of the transaction.
 2) `!action` - is a property of the source of the arrow and gives a name for an alternative spending path of the box (we will see this in the DEX example).
 
@@ -187,7 +191,7 @@ The `Sell Order` transaction is similar to the `BuyOrder` in that it deals with 
 
 This is a key transaction in the DEX dApp scenario. The transaction has several spending conditions on the input boxes, and those conditions are included in the `buyOrder` and `sellOrder` scripts, which are verified when the transaction is added to the blockchain. However, on the diagram, those conditions are not specified in the `bid` and `ask` boxes; they are instead defined in the output boxes of the transaction.
 
-This is a convention for improved usability because most conditions relate to the properties of the output boxes. We could specify those properties in the `bid` box, but then we would have to use more complex expressions. 
+This is a convention for improved usability because most conditions relate to the properties of the output boxes. We could specify those properties in the `bid` box, but then we would have to use more complex expressions.
 
 Let's consider the output created by the arrow labeled with `buyerOut@0`. This label tells us that the output is at index `0` in the `OUTPUTS` collection of the transaction and that in the diagram, we can refer to this box by the `buyerOut` name. Thus, we can label both the box itself and the arrow to give the box a name.
 
@@ -199,15 +203,15 @@ The conditions shown in the `buyerOut` box have the form `bid ? condition`, whic
 
 Similar properties are added to the `sellerOut` box, which is specified to be at index `1`, and the name is given to it using the label on the box itself rather than on the arrow.
 
-The `Swap` transaction spends two boxes, `bid` and `ask`, using the `!swap` spending path on both; however, unlike `!cancel`, the conditions on the path are not specified. This is where the `bid ?` and `ask ?` prefixes come into play. They are used so that the conditions listed in the `buyerOut` and `sellerOut` boxes are moved to the `!swap` spending path of the `bid` and `ask` boxes, respectively. 
+The `Swap` transaction spends two boxes, `bid` and `ask`, using the `!swap` spending path on both; however, unlike `!cancel`, the conditions on the path are not specified. This is where the `bid ?` and `ask ?` prefixes come into play. They are used so that the conditions listed in the `buyerOut` and `sellerOut` boxes are moved to the `!swap` spending path of the `bid` and `ask` boxes, respectively.
 
 If you look at the conditions of the output boxes, you will see that they exactly specify the swap of values between the seller's and buyer's wallets. The buyer gets the necessary amount of the `TID` token, and the seller gets the corresponding amount of ERGs. The `Swap` transaction is created when there are two matching boxes with `buyOrder` and `sellOrder` contracts.
 
 ## From Diagrams To ErgoScript Contracts
 
-What is interesting about FlowCard specifications is that we can use them to automatically generate the necessary [ErgoTree](https://ergoplatform.org/docs/ErgoTree.pdf) scripts. With appropriate tooling support, this can be done automatically, but lacking that, it can be done manually. Thus, the FlowCard allows us to capture and visually represent all design choices and semantic details of an Ergo dApp. 
+What is interesting about FlowCard specifications is that we can use them to automatically generate the necessary [ErgoTree](https://ergoplatform.org/docs/ErgoTree.pdf) scripts. With appropriate tooling support, this can be done automatically, but lacking that, it can be done manually. Thus, the FlowCard allows us to capture and visually represent all design choices and semantic details of an Ergo dApp.
 
-What we are going to do next is mechanically create the `buyOrder` contract from the information given in the `DEX` flow card. Recall that each script is a proposition (boolean-valued expression) that must evaluate to `true` to allow spending of the box. When we have many conditions to be met simultaneously, we can combine them in a logical formula using the AND binary operation, and if we have alternatives (not necessarily exclusive), we can put them into the OR operation. The `buyOrder` box has the alternative spending paths `!cancel` and `!swap`. 
+What we are going to do next is mechanically create the `buyOrder` contract from the information given in the `DEX` flow card. Recall that each script is a proposition (boolean-valued expression) that must evaluate to `true` to allow spending of the box. When we have many conditions to be met simultaneously, we can combine them in a logical formula using the AND binary operation, and if we have alternatives (not necessarily exclusive), we can put them into the OR operation. The `buyOrder` box has the alternative spending paths `!cancel` and `!swap`.
 
 Thus, the ErgoScript code should have an OR operation with two arguments - one for each spending path.
 
@@ -219,6 +223,7 @@ Thus, the ErgoScript code should have an OR operation with two arguments - one f
   cancelCondition || swapCondition
 }
 ```
+
 The formula for the `cancelCondition` expression is given in the `!cancel` spending path
 of the `buyOrder` box. We can directly include it in the script.
 
@@ -247,15 +252,18 @@ For the `!swap` spending path of the `buyOrder` box, the conditions are specifie
   cancelCondition || swapCondition
 }
 ```
+
 We can, however, translate the conditions from the diagram syntax to ErgoScript expressions using the following simple rules:
+
 1) `buyerOut@0` ==> `val buyerOut = OUTPUTS(0)`
 2) `tAmt: TID`  ==> `tid._2 == tAmt` where `tid = buyerOut.tokens(TID)`
 3) `R4 == bid.id`  ==> `R4 == SELF.id` where `R4 = buyerOut.R4[Coll[Byte]].get`
-4) `script == buyer`  ==> `buyerOut.propositionBytes == buyer.propBytes` 
+4) `script == buyer`  ==> `buyerOut.propositionBytes == buyer.propBytes`
 
 Note, in the diagram, `TID` represents a token ID, but ErgoScript doesn't have access to tokens by their IDs, so we cannot write `tokens.getByKey(TID)`. For this reason, when the diagram is translated into ErgoScript, `TID` becomes a named constant representing the index in the `tokens` collection of the box. The concrete value of the constant is assigned when the `BuyOrder` transaction with the `buyOrder` box is created. The correspondence and consistency between the actual token ID, the `TID` constant, and the actual tokens of the `buyerOut` box is ensured by the _off-chain_ application code; this is completely possible since all transactions are created by the application using the FlowCard as a guiding specification. This may sound complicated, but it is part of the translation from diagram specification to actual executable application code, most of which can be automated.
 
 After the transformation, we can obtain a correct script that checks all the required preconditions for spending the `buyOrder` box.
+
 ```java
 /** buyOrder contract */
 def DEX(buyer: Addrss, seller: Address, TID: Int, ergAmt: Long, tAmt: Long)
@@ -277,6 +285,7 @@ def DEX(buyer: Addrss, seller: Address, TID: Int, ergAmt: Long, tAmt: Long)
   cancelCondition || swapCondition
 }
 ```
+
 A similar script for the `sellOrder` box can be obtained using the same translation rules.
 With the help of the tooling, the code of contracts can be mechanically generated from the
 diagram specification.

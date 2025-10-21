@@ -19,11 +19,11 @@ Public explorers like [explorer.ergoplatform.com](https://explorer.ergoplatform.
 
 ## How It Works
 
-1.  **Identify Explorer & API Docs:** Choose an explorer whose API provides the endpoints you need. Review their API documentation carefully to understand available queries, request/response formats, authentication (if any), and usage limitations (especially rate limits).
-    *   Ergo Explorer API Docs: [api.ergoplatform.com/api/v1/docs/](https://api.ergoplatform.com/api/v1/docs/)
-    *   ErgExplorer API Docs: [ergexplorer.com/api/v1/docs/](https://ergexplorer.com/api/v1/docs/)
-2.  **Make API Requests:** Your application makes standard HTTP requests (GET, POST, etc.) to the explorer's API endpoints using libraries like `axios` (JS/TS), `requests` (Python), or built-in fetch functions.
-3.  **Process Response:** Your application parses the JSON (or other format) response from the API and uses the data. Implement robust error handling for network issues, API errors (like 404 Not Found or 429 Too Many Requests), and unexpected response formats.
+1. **Identify Explorer & API Docs:** Choose an explorer whose API provides the endpoints you need. Review their API documentation carefully to understand available queries, request/response formats, authentication (if any), and usage limitations (especially rate limits).
+    * Ergo Explorer API Docs: [api.ergoplatform.com/api/v1/docs/](https://api.ergoplatform.com/api/v1/docs/)
+    * ErgExplorer API Docs: [ergexplorer.com/api/v1/docs/](https://ergexplorer.com/api/v1/docs/)
+2. **Make API Requests:** Your application makes standard HTTP requests (GET, POST, etc.) to the explorer's API endpoints using libraries like `axios` (JS/TS), `requests` (Python), or built-in fetch functions.
+3. **Process Response:** Your application parses the JSON (or other format) response from the API and uses the data. Implement robust error handling for network issues, API errors (like 404 Not Found or 429 Too Many Requests), and unexpected response formats.
 
 ## Common API Endpoints
 
@@ -257,8 +257,9 @@ if __name__ == "__main__":
 
 Public APIs are shared resources. To ensure reliable operation and avoid being blocked, follow these best practices:
 
-*   **Understand Rate Limits:** Check the API documentation or community resources for stated rate limits (e.g., requests per second per IP). The main Ergo Explorer API often has limits around 10-20 req/sec. Exceeding limits can lead to `429 Too Many Requests` errors or temporary IP bans.
-*   **Implement Caching:** Avoid fetching the same data repeatedly. Cache responses locally (in memory for short durations, or using persistent stores like Redis for longer) with appropriate Time-To-Live (TTL) values. Re-fetch only when the cache expires or specific events indicate data might have changed.
+* **Understand Rate Limits:** Check the API documentation or community resources for stated rate limits (e.g., requests per second per IP). The main Ergo Explorer API often has limits around 10-20 req/sec. Exceeding limits can lead to `429 Too Many Requests` errors or temporary IP bans.
+* **Implement Caching:** Avoid fetching the same data repeatedly. Cache responses locally (in memory for short durations, or using persistent stores like Redis for longer) with appropriate Time-To-Live (TTL) values. Re-fetch only when the cache expires or specific events indicate data might have changed.
+
     ```javascript
     // Simple in-memory cache concept (JS)
     const cache = new Map();
@@ -277,24 +278,27 @@ Public APIs are shared resources. To ensure reliable operation and avoid being b
       return data;
     }
     ```
-*   **Use Retry Logic with Exponential Backoff:** If a request fails (especially due to rate limiting or transient network issues), don't immediately retry. Wait for a short period and increase the delay exponentially for subsequent retries. Respect the `Retry-After` header if provided in a `429` response.
+
+* **Use Retry Logic with Exponential Backoff:** If a request fails (especially due to rate limiting or transient network issues), don't immediately retry. Wait for a short period and increase the delay exponentially for subsequent retries. Respect the `Retry-After` header if provided in a `429` response.
+
     ```python
     # Conceptual retry logic within the Python client's _request method (see above)
     # Handles retries with increasing delay for transient errors and respects Retry-After
     ```
-*   **Be Specific:** Request only the data you need. Use API parameters (`limit`, `offset`, specific endpoints) to narrow down results instead of fetching large datasets and filtering client-side.
-*   **Identify Your Client:** Use a descriptive `User-Agent` header in your requests so API providers can identify your application's traffic if issues arise.
-*   **Consider Alternatives:** If your application requires high volume, low latency, or complex queries, relying solely on public APIs might not be sustainable. Explore [querying your own node](./node-api-direct.md) or building a [custom indexer](./custom-indexer.md).
+
+* **Be Specific:** Request only the data you need. Use API parameters (`limit`, `offset`, specific endpoints) to narrow down results instead of fetching large datasets and filtering client-side.
+* **Identify Your Client:** Use a descriptive `User-Agent` header in your requests so API providers can identify your application's traffic if issues arise.
+* **Consider Alternatives:** If your application requires high volume, low latency, or complex queries, relying solely on public APIs might not be sustainable. Explore [querying your own node](./node-api-direct.md) or building a [custom indexer](./custom-indexer.md).
 
 ## Pros & Cons Summary
 
-*   **Pros:** Simple to start, convenient endpoints.
-*   **Cons:** Third-party reliance, rate limits, limited query flexibility, potential latency, centralization risk.
+* **Pros:** Simple to start, convenient endpoints.
+* **Cons:** Third-party reliance, rate limits, limited query flexibility, potential latency, centralization risk.
 
 ## When to Use
 
-*   Simple applications, prototypes, low-volume tools.
-*   When reliance on a third party is acceptable.
-*   When required data fits well with available API endpoints.
+* Simple applications, prototypes, low-volume tools.
+* When reliance on a third party is acceptable.
+* When required data fits well with available API endpoints.
 
 While convenient, the limitations often lead developers towards more robust solutions for production applications.

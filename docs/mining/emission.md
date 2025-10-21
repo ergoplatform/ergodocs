@@ -8,13 +8,11 @@ tags:
 
 # Ergo Emission Schedule
 
-Ergo's journey, which began in 2017, saw the successful launch of its mainnet in July 2019. 
-
+Ergo's journey, which began in 2017, saw the successful launch of its mainnet in July 2019.
 
 /// admonition | Ergo-First-Year-Token
 Prior to the mainnet,  '*Ergo-First-Year-Token*' (EFYT) was in circulation and swapped with the treasury on launch. For comprehensive insights into EFYT, including its tokenomics and distribution strategy, please visit [this page](efyt.md).
 ///
-
 
 ## Total Supply and Allocation
 
@@ -25,12 +23,9 @@ Ergo's total supply is capped at **97,739,925 ERGs** and distributed as follows:
 
 The Treasury's funds were governed by a smart contract that released ERGs gradually over the first 2.5 years, without exceeding 10% of the circulating supply.
 
-
 ## Ergo Foundation
 
 The Ergo Foundation is dedicated to protocol development, ecosystem growth, promoting the use of Ergo for social good, supporting decentralized infrastructure, and upholding privacy rights. The Foundation's Treasury, which received 4.43% of the total ERG emission, is utilized to support a wide range of initiatives. For more detailed information, refer to the [transparency report](ergo-foundation-2022.md).
-
-
 
 ## Mining and Emission Duration
 
@@ -40,13 +35,11 @@ Ergo's block reward decreases by 3 ERG per block every quarter until 2026 and st
 As Ergo's emission schedule is set to conclude around the year 2045, questions naturally arise about the mechanisms that will incentivize miners to continue securing the network. Fortunately, Ergo's architecture includes support for a variety of revenue streams designed to promote both network growth and long-term sustainability. See [this page](revenue.md) for more information.
 ///
 
-
 ## Unique Aspects of Ergo's Emission
 
 ### Proof of No Premine
 
 Ergo includes Bitcoin and Ethereum block hashes and headlines from The Guardian, Vedomosti, and Xinhua in its pre-genesis state for verification purposes. This is detailed in the [mainnet.conf](https://github.com/ergoplatform/ergo/blob/1935c95560a30b19cdb52c1a291e8a389ba63c97/src/main/resources/mainnet.conf#L11) file.
-
 
 ### Verification Process
 

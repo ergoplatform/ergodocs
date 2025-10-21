@@ -14,15 +14,12 @@ A significant portion of this Treasury has been expended for the benefit of the 
 
 For more information on Ergo's emission schedule, tokenomics and allocation, visit the [emission](emission.md) section.
 
-
 /// details | Ergo First-Year Token
      {type: info, open: false}
 Additionally, the Treasury exchanged 1,782,615 ERG for [EFYT](efyt.md), a token issued on the Waves Platform in 2017 to build an early community through airdrops and raise funds before the Ergo mainnet launch.
 
 After subtracting the 1,782,615 ERG exchanged for EFYT, the Ergo Foundation was left with 2,548,161 ERG, which is approximately 2.6% of the total supply.
 ///
-
-
 
 ## Current Holdings
 
@@ -59,17 +56,14 @@ As these projects mature and their tokens become more liquid, the Ergo Foundatio
 You can find the Ergo Foundation treasury and current balance on-chain at the following locations:
 
 - [EF Multi-sig for ERG + Tokens](https://ergexplorer.com/addresses#2BggBDgr9n9geTKjCJBCEWMReb2i7wcocw7fjVd3QyM7qFMtmVHyoFr78kChAxGekJxUTZru2aMjyZKcVoPfHX5d12RqNrnEAgzGqUCoJ2v9xCqmT75V5xdhT1JBqQbeRKJZT4XGMg7hZAqVvbMsQF26nkWRPqiCqPoKfy7GZw9zuvr15qaqbB2ZcZXaGTrvqDN2o15SRTJwvVADDx2inzrk3U25cdjFWYBc6ECKSjmYpPWL8fn4msxsBZKNiGbP8vDrYWqQuPtMwJ5Ag)
-     - [Hot Wallet](https://ergexplorer.com/addresses#9g1ReLmsbGevkTjfPGMdRMoFRdrAVskZVmSBpaEdVW2DfG4HDWm) managed by the Treasurer when sending payments.
+  - [Hot Wallet](https://ergexplorer.com/addresses#9g1ReLmsbGevkTjfPGMdRMoFRdrAVskZVmSBpaEdVW2DfG4HDWm) managed by the Treasurer when sending payments.
 - [EF BTC Multi-sig](https://www.blockchain.com/explorer/addresses/BTC/bc1qhps44rcl0rln47te839wr5rx25z624gawsgdye0cs4m0pq2mkhnq8dmkkc)
-
-
 
 ## Historic Spending
 
 The Ergo Foundation has spent the majority of the Treasury for the benefit of the protocol and community. Funds were even spent when the ERG price was low, as it was necessary to bootstrap the thriving community Ergo now boasts.
 
 <!--TODO: Yearly figures don't add up to total difference between total allocation & spending, 90k difference, probably missed a tx -->
-
 
 | **Spent** | **ERG**      | **SPF**       | **BTC**     | **TOTAL VALUE**   |
 |-----------|--------------|---------------|-------------|-------------------|
@@ -130,7 +124,6 @@ pie title 2023 Salary Averages
      {type: info, open: true}
 More information on each of these roles can be seen on [this page](ef-scope.md#key-areas-of-focus).
 ///
-
 
 /// details | The Ergo Foundations Future
      {type: info, open: true}

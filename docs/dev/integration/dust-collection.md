@@ -4,7 +4,6 @@
 
 A **dust set** is a large group of ERG outputs worth tiny amounts. A node signs a transaction by loading every input box from disk. When the wallet owns thousands of dust boxes the process slows down. The node may hit limits or time out. Exchange and mining‑pool wallets reach that state first.
 
-
 ## Automatic Collection in the Node
 
 Turn the wallet into “self‑cleaning” mode before dust appears. The node merges dust during every withdrawal when the wallet owns enough surplus inputs.
@@ -56,9 +55,7 @@ Restart the node after saving the file. The wallet merges dust in the background
 
 Each self‑payment pulls about `optimalInputs` dust boxes into one output, so the backlog shrinks quickly.
 
-
-
-## Manual Collection (fallback)
+##  Manual Collection (fallback)
 
 Choose this path when every automatic sweep fails because the node exhausts limits before it can pay the fee.
 
@@ -98,8 +95,7 @@ Example request body:
 
 Make sure the fee plus the output value equals the sum of your inputs.
 
-
-## Troubleshooting
+##  Troubleshooting
 
 | Symptom or Log Entry                                 | Probable Cause                      | Fix                                                                                 |
 | ---------------------------------------------------- | ----------------------------------- | ----------------------------------------------------------------------------------- |
@@ -110,15 +106,10 @@ Make sure the fee plus the output value equals the sum of your inputs.
 | `NotEnoughErgsError`                                 | Output + fee exceeds input total    | Lower the output amount, add inputs, or choose higher‑value boxes.                  |
 | Wallet fills again right after clean‑up              | Constant tiny deposits              | Keep the self‑payment cron job running or raise the minimum deposit limit.          |
 
-
-
-## Native Assets (tokens)
+##  Native Assets (tokens)
 
 Users sometimes send random tokens to exchange addresses. A future node version will offer **auto‑burn** (see [Issue #1604](https://github.com/ergoplatform/ergo/issues/1604)). Until that release, destroy unwanted tokens with one step:
 
 * Send them to the burn address `4MQyMKvMbnCJG3aJ` in a zero‑ERG transaction.
 
 Community lists such as the [ergotipper token list](https://github.com/Luivatra/ergotipper-tokens) help you recognise unknown assets.
-
-
-

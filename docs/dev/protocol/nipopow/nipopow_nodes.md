@@ -17,13 +17,13 @@ A pruned full node retains critical block information and selectively prunes awa
 
 Ergo’s implementation of [Simplified Payment Verification (SPV) Clients](light-spv-node.md) leverages the NIPoPoW protocol to achieve significant reductions in data requirements for transaction verification. NIPoPoWs allow Ergo to create mobile SPV clients that need to download only about 100KB of block headers, substantially less than traditional full-node clients.
 
-### Key Advantages of NIPoPoW-based SPV Clients:  
+### Key Advantages of NIPoPoW-based SPV Clients  
 
 - **Efficient Data Use**: NIPoPoWs compress the proof-of-work of a blockchain into a small, succinct string that can be quickly verified by the SPV client, making the synchronization process faster and more data-efficient.
 - **Lower Bandwidth Consumption**: By reducing the amount of data needed for block verification, NIPoPoWs minimize bandwidth usage, which is ideal for users with limited internet connectivity or those using mobile networks.
 - **Enhanced Security**: Leveraging the security properties of proof-of-work, NIPoPoWs ensure that the SPV clients can trust the blockchain's integrity without the need for a full copy of the blockchain.
 
-### Applications:  
+### Applications  
 
 - **Mobile Wallets**: NIPoPoWs enable the development of lightweight mobile wallets that provide secure, real-time transaction verification without compromising on user experience.
 - **Cross-Chain Transactions**: With NIPoPoWs, Ergo SPV clients can safely participate in cross-chain transactions, allowing users to interact with multiple blockchains efficiently.

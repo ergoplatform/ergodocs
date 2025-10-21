@@ -20,7 +20,7 @@ tags:
 
 ## Spectrum Bloom: Next-Generation DeFi Framework
 
-Spectrum Bloom is an upcoming eUTxO-native framework for decentralized finance (DeFi), designed to address and improve upon the limitations of early decentralized exchanges (DEXes). 
+Spectrum Bloom is an upcoming eUTxO-native framework for decentralized finance (DeFi), designed to address and improve upon the limitations of early decentralized exchanges (DEXes).
 
 ### Highlights from the Spectrum Bloom White Paper
 

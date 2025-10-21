@@ -25,11 +25,11 @@ Over time, the design of proxy contracts has evolved to address potential vulner
 
 When designing or interacting with proxy contracts, developers and users should prioritize security:
 
-*   **Fund Safety:** The contract logic must rigorously prevent the dApp developer, the proxy contract creator, or any third party from misappropriating the user's funds. The contract should only allow spending according to the dApp's intended logic and the user's explicit action.
-*   **dApp Integrity:** The proxy contract should not introduce new attack vectors. It must protect against manipulation that could compromise the underlying dApp's state or logic (e.g., preventing replay attacks or unexpected state changes).
+* **Fund Safety:** The contract logic must rigorously prevent the dApp developer, the proxy contract creator, or any third party from misappropriating the user's funds. The contract should only allow spending according to the dApp's intended logic and the user's explicit action.
+* **dApp Integrity:** The proxy contract should not introduce new attack vectors. It must protect against manipulation that could compromise the underlying dApp's state or logic (e.g., preventing replay attacks or unexpected state changes).
 
 ## Further Information
 
 For a detailed technical specification and discussion on proxy contracts, refer to the official Ergo Improvement Proposal:
 
-*   [EIP-0017: Proxy Contracts](https://github.com/ergoplatform/eips/blob/master/eip-0017.md)
+* [EIP-0017: Proxy Contracts](https://github.com/ergoplatform/eips/blob/master/eip-0017.md)

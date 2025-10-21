@@ -16,8 +16,7 @@ tags:
 
 # Comprehensive Guide: Participating in rsERG Liquidity Pools
 
-This guide walks you through the process of participating in rsERG/ETH liquidity pools. It covers essential precautions, the bridging process, and how to provide liquidity on Uniswap step by step. 
-
+This guide walks you through the process of participating in rsERG/ETH liquidity pools. It covers essential precautions, the bridging process, and how to provide liquidity on Uniswap step by step.
 
 ## Important Notes
 
@@ -26,8 +25,8 @@ This guide walks you through the process of participating in rsERG/ETH liquidity
 - **ERGO Token Contract**: `0x6C060Ba738af39A09F3b45ac6487dFC9Ebb885f6`
 - Always verify the token contract address on the [Rosen asset list](https://app.rosen.tech/assets) or on [Etherscan](https://etherscan.io/address/0x6C060Ba738af39A09F3b45ac6487dFC9Ebb885f6). Avoid using addresses shared via DMs or chats, as there are scams, especially on EVM chains.
 
-
 ### Liquidity Pools (LPs)
+
 Liquidity pools are versatile financial tools used by both small investors and large entities. By providing liquidity, you can:
 
 - **Earn Swap Fees**: LP providers share the swap fees paid by traders.
@@ -56,7 +55,7 @@ To bridge ERG through Rosen, follow these steps:
 By following these steps, you can efficiently bridge your assets using Rosen Bridge.
 
 - **Consolidate Your Wallet**: If you encounter an "insufficient ERG" message but have funds, consolidate your wallet using Nautilus > Wallet Optimization.
--  **Transaction Timing**: Transfers typically take around 2 hours, but delays can occur.
+- **Transaction Timing**: Transfers typically take around 2 hours, but delays can occur.
 - **Monitor Transaction Status**: Track your transaction progress on the [Rosen events page](https://app.rosen.tech/events).
 
 ---
@@ -66,9 +65,11 @@ By following these steps, you can efficiently bridge your assets using Rosen Bri
 Follow these steps to provide liquidity in the rsERG/ETH pool on Uniswap:
 
 ### Step 0: Enable Smart Transactions in MetaMask
+
 1. **MetaMask Advanced Settings**: Enable the "Smart Transactions" feature to ensure that if a transaction fails or gas fees exceed the market rate, the transaction will be reverted at no cost. This may take about 2 minutes to process.
 
 ### Step 1: Open Uniswap
+
 - Access Uniswap via [this link](https://app.uniswap.org/) or by visiting it through a reliable source like DefiLlama (navigate to Chains > Ethereum > Uniswap).
 
 ### Step 2: Connect Your Wallet
@@ -82,45 +83,53 @@ Follow these steps to provide liquidity in the rsERG/ETH pool on Uniswap:
 ![Connecting Wallet](3.jpg)
 
 ### Step 3: Confirm Permission
+
 - Once connected, confirm that Uniswap has permission to access your wallet.
 
 ![Confirming Permission](4.jpg)
 
 ### Step 4: Access the Pool Section
+
 - Navigate to the “Pool” tab and click on “+ New Position.”
 
 ![Access Pool](5.jpg)
 
 ### Step 5: Choose Pair
+
 - Enter ETH in the left field and rsERG from the dropdown list next to it.
 
 You can also [add to the rsBTC pool](https://app.uniswap.org/pools/840081), which may give BTC holders some incentive to use the bridge.
 
 ### Step 6: Select the Fee Tier
+
 - The rsERG/ETH pair has a 1% fee pool, which is usually selected by default.
 
 ![Selecting Fee Tier](8.jpg)
 
 ### Step 7: Enter the Deposit Amount
+
 - Input the amount of ETH or rsERG you want to provide. The system will automatically calculate the corresponding amount of the other asset (50/50 ratio).
 
 ![Entering Deposit Amount](9.jpg)
 
 ### Step 8: Preview and Confirm the Transaction
+
 - If you have enough assets, click “Preview” to review the transaction details. Then click “Add” to initiate the liquidity transaction.
 
 ![Previewing Transaction](10.jpg)
 
 ### Step 9: Approving rsERG Interaction with Uniswap
+
 - Uniswap will require your approval to interact with your rsERG tokens.
-    - **Infinite Approval Option**: You can set this approval to an infinite amount, meaning you won’t need to approve every time you interact with the contract. This can be revoked later via Etherscan if necessary.
-    - **Exact Amount Option**: Alternatively, you can set the approval to the exact amount of rsERG you plan to use, but this may become inconvenient in the future as you would need to sign the interaction transaction every time.
+  - **Infinite Approval Option**: You can set this approval to an infinite amount, meaning you won’t need to approve every time you interact with the contract. This can be revoked later via Etherscan if necessary.
+  - **Exact Amount Option**: Alternatively, you can set the approval to the exact amount of rsERG you plan to use, but this may become inconvenient in the future as you would need to sign the interaction transaction every time.
 
 ### Step 10: Confirm the Transaction in MetaMask
 
 - MetaMask will open, showing the gas fees and transaction details. Double-check everything, then confirm the transaction if everything looks correct.
 
 ### Step 11: Sign Two Transactions
+
 - **Transaction 1**: Approve Uniswap to interact with your rsERG tokens.
 - **Transaction 2**: Send the assets to the liquidity pool.
 

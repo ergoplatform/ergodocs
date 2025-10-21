@@ -5,7 +5,6 @@ tags:
 
 # Handshaking in P2P Protocol
 
-
 This document outlines the procedure and format of handshake messages, which are essential for establishing a connection with another peer.
 
 For implementation examples, refer to:
@@ -35,7 +34,7 @@ The table below outlines the format of a handshake message:
 | 3      | Network protocol version| Protocol version (e.g., [0, 1, 1])                                                        |
 | 1      | Peer name length        | Length of peer name string                                                                |
 
-### For Client Capabilities (Mode Feature):
+### For Client Capabilities (Mode Feature)
 
 | Length | Field Name                                  | Details                                                           |
 |--------|---------------------------------------------|-------------------------------------------------------------------|
@@ -51,7 +50,7 @@ The table below outlines the format of a handshake message:
 
 - The [Peer class](https://github.com/Satergo/Ergonnection/blob/master/src/main/java/com/satergo/ergonnection/records/Peer.java) in the Ergonnection library represents a peer in the network, including features such as agent name, peer name, version, and a list of features. This class handles serialization and deserialization of peer data during the handshake process.
 
-### For Session Peer Feature Introduced in 3.3.7:
+### For Session Peer Feature Introduced in 3.3.7
 
 | Length | Field Name                                  | Details                                                           |
 |--------|---------------------------------------------|-------------------------------------------------------------------|
@@ -60,7 +59,7 @@ The table below outlines the format of a handshake message:
 | 4      | Network magic                               | Network magic bytes, see notes                                    |
 | 8      | Session id                                  | 64 bits long random session ID                                    |
 
-### Notes:
+### Notes
 
 1. For the testnet, magic bytes are `[2, 0, 0, 1]` (in decimal). For mainnet, `[1, 0, 2, 4]` (in decimal).
 2. For IPv4 or IPv6 address bytes, "The result is in network byte order: the highest order byte of the address is in `getAddress()[0]`." Please check `Inet4Address.getAddress()` or `Inet6Address.getAddress()` in Java's JDK for details.

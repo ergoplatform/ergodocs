@@ -19,7 +19,7 @@
     "content": "",
     "image": "../../assets/img/dev-grid/bundled.png",
     "url": "mobile.md"
-  },
+  }
 
 ]
 

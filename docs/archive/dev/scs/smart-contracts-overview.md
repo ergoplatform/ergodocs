@@ -13,7 +13,7 @@ The [ErgoScript](ergoscript.md) page provides an overview of all resources relat
 
 **Below, we cover the key aspects of the Ergo contract model that make it different:**
 
-##### Paradigm   
+##### Paradigm
 
 The account model of Ethereum is imperative. This means that the typical task of sending coins from Alice to Bob requires changing the balances in storage as a series of operations. Ergo's UTXO-based programming model, on the other hand, is declarative. ErgoScript contracts specify conditions for a transaction to be accepted by the blockchain (not changes to be made in the storage state due to the contract execution).
 

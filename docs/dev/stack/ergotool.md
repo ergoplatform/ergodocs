@@ -1,9 +1,8 @@
 # ErgoTool
 
-
 ## Introduction
 
-[ErgoTool](https://github.com/aslesarenko/ergo-tool) is a command-line interface (CLI) for [Ergo blockchain](https://ergoplatform.org/). You can use ErgoTool without running your own Ergo node. However, running a node is the most secure way to communicate with the blockchain. 
+[ErgoTool](https://github.com/aslesarenko/ergo-tool) is a command-line interface (CLI) for [Ergo blockchain](https://ergoplatform.org/). You can use ErgoTool without running your own Ergo node. However, running a node is the most secure way to communicate with the blockchain.
 
 In this post, we will walk through simple steps to generate a mnemonic phrase, create a local secret storage and use it to send ERGs between addresses, all with the help of ErgoTool commands.
 
@@ -60,7 +59,7 @@ Storage File: storage/secret.json
 ```
 
 A master secret key is generated from the (mnemonic phrase, mnemonic password) pair and saved encrypted in the `storage/secret.json` file. The Mnemonic itself is not stored in the file, and there is no way to restore it from the file, even if you know the passwords.
- 
+
 Please enter the correct mnemonic password, the one you chose and saved before.
 
 Since a mnemonic password is optional, you can leave it empty by pressing enter.
@@ -132,6 +131,7 @@ Description:  send the given <amountToSend> to the given <recipientAddr> using
  the given <storageFile> to sign transaction (requests storage password)
 Doc page: https://aslesarenko.github.io/ergo-tool/api/org/ergoplatform/appkit/ergotool/SendCmd.html
 ```
+
 The storage file is necessary to access the secret key and generate a signature. The ErgoTool will request a storage password to unlock and decipher the file content. The command `send` supports the `--dry-run` option, which forces ErgoTool to create the signed transaction, but instead of sending it to the blockchain, ErgoTool prints the transaction on the console.
 
 ```bash
@@ -200,6 +200,7 @@ Signing the transaction... Ok
 Sending the transaction... Ok
 Server returned tx id: "c5710af17f5124a232a5ef731fdf94a493025334c2a7d5a79e9923210972b962"
 ```
+
 The newly created transaction will be broadcast all over the blockchain, and miners will start
 to include it in a new block. Once the new block with our transaction is mined and
 accepted by the network, our transfer is confirmed, and we can [see it in Explorer](https://explorer.ergoplatform.com/en/transactions/c5710af17f5124a232a5ef731fdf94a493025334c2a7d5a79e9923210972b962).
@@ -221,7 +222,7 @@ b50ed8c2953fd33b52af816c4caa63ec5b6d236a262a5a192534695c3478da78  1000000
 ## Security Notes
 
 ErgoTool is created with security in mind and tries its best to safeguard the usage of
-sensitive information like mnemonic phrases (which are never stored persistently), 
+sensitive information like mnemonic phrases (which are never stored persistently),
 passwords (which are never shown on the screen) etc. In addition, secret keys are never
 stored on a local disk unencrypted and surely never sent anywhere.
 
@@ -231,7 +232,7 @@ ErgoTool is designed to look and feel like a typical CLI utility:
 
 - which is easy to use and fast to run from the command line
 - can be scriptable via shell scripts
-- has built-in usage help 
+- has built-in usage help
 
 At the same time, ErgoTool is designed to be easily extensible:
 
@@ -240,7 +241,6 @@ At the same time, ErgoTool is designed to be easily extensible:
 - open-sourced and fully documented
 
 This last point is especially important as many new commands can be easily added to ErgoTool, thanks to its architecture. If you need a specific feature or a command,  please file an issue or maybe even a PR.
-
 
 ## References
 

@@ -9,7 +9,6 @@ Regardless, individuals should have the ability to secure their assets, especial
 
 The combination of digital communication and digital currency can provide a solution to this issue.
 
-
 For Bitcoin, one potential solution could be the [Blockstream satellite network](https://blockstream.com/satellite/). However, the satellite signal is susceptible to jamming. Alternatives include email (typically the last to be blocked) or other low-bandwidth, non-interactive communication methods (fax, modem call over a landline to a bulletin board system, mail).
 
 Let's consider a scenario where Alice wants to purchase *X* ERGs from Bob (paying with cash), but their area has limited or no Internet access. Bob owns a box protected by a public key (stored locally). The protocol could proceed as follows.
@@ -27,5 +26,3 @@ Let's consider a scenario where Alice wants to purchase *X* ERGs from Bob (payin
 Given the small size of these proofs (tens of kilobytes), communication methods like email, fax, ADSL modem, or even paperwork are viable for communication between the users and gateways.
 
 For more information, refer to [(E)mail Client for Limited or Blocked Internet](https://www.ergoforum.org/t/e-mail-client-for-limited-or-blocked-internet/134)
-
-

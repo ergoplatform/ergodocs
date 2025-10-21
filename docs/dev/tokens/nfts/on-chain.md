@@ -32,19 +32,15 @@ On-chain NFTs on Ergo differ from [regular NFTs](#the-technical-aspects-of-regul
 If the data is textual, you can embed the text (using the appropriate entities or **escapes** based on the enclosing document's type). Otherwise, you can specify **base64** to embed base64-encoded binary data.
 ///
 
-
-  
 ### Examples of On-chain Collections
- 
 
 **Vector Minimalism** collection:
 
 - [Landscape #06. View from the train window](https://ergotokens.org/#/?token=62e9e8fc25e148a35e4bb99d70b810a897e78a7fd26adda0e8335a2ad17ef58c)
 - [Landscape #08. Flight over the desert](https://ergotokens.org/#/?token=cf3f157c32c22749742fb0acc85aa07e6640b61290b26a89efd9e40f5070a938)
 - [Monument #11. Moai](https://ergotokens.org/#/?token=1d7430bacd2a0b1d83366cfad766a8dfb221c2de80ee95ab271a29bfdf7fc0a0)
-- [Monument #02. Spring Temple Buddha](https://ergotokens.org/#/?token=d935e4fa226bbd89dfc37e45f5a6bbcdee259f1368210aca61f1b6183e01c408) 
+- [Monument #02. Spring Temple Buddha](https://ergotokens.org/#/?token=d935e4fa226bbd89dfc37e45f5a6bbcdee259f1368210aca61f1b6183e01c408)
 - ![VectorMinimalism](https://github.com/ergoplatform/ergodocs/assets/99899807/10efaf86-a7ba-46ec-a620-db9a4f59a29a)
-
 
 **Tokenart** collection uses SVG as a container for **ASСII art**:
 
@@ -52,7 +48,6 @@ If the data is textual, you can embed the text (using the appropriate entities o
 - [Tokenart Shark #2](https://ergotokens.org/#/?token=723f7eb846895bd0294619300488eb1974e6827e27d1624289019b42ec7252a3)
 - The SVG contains pure text:
 - ![svgASCII](https://github.com/ergoplatform/ergodocs/assets/99899807/02b1142b-a25d-4cc4-8092-c6026baa046c)
-
 
 ## A Brief History
 
@@ -68,7 +63,6 @@ The first Ergo [on-chain NFT](https://ergotokens.org/#/?token=2994d36afcfaf29bb2
 There are no size restrictions for a register, only for the entire box itself, which is limited to **4 Kb**.
 ///
 
-
 ## The Technical Aspects of Regular Ergo NFTs
 
 **What should we know about Ergo NFTs?**
@@ -79,15 +73,15 @@ Let's consider an NFT with the ID
 
 Here's how the NFT's name, description, and URL are stored on each Ergo node, among the [40 GB+](https://explorer.ergoplatform.com/en/charts/blockchain-size) of all blockchain data.
 
-+ **NFT minting transaction** on Ergo explorer: [Tx](https://explorer.ergoplatform.com/en/transactions/153051163bdaeae8ff31dab0ea15e48bfe97b2f60e57fe30de08d9e102389df9)
+- **NFT minting transaction** on Ergo explorer: [Tx](https://explorer.ergoplatform.com/en/transactions/153051163bdaeae8ff31dab0ea15e48bfe97b2f60e57fe30de08d9e102389df9)
 
-+ **NFT name** stored in register `R4`:
+- **NFT name** stored in register `R4`:
 ![NFT_R4](https://github.com/ergoplatform/ergodocs/assets/99899807/ad99a442-6569-4f66-b3e2-3c0279bc28ec)
 
-+ **NFT description** stored in register `R5`:
+- **NFT description** stored in register `R5`:
 ![NFT_R5](https://github.com/ergoplatform/ergodocs/assets/99899807/59e3428b-2ed5-45dc-aca3-29c77dbd3a05)
 
-+ **NFT image URL** stored in register `R9`:
+- **NFT image URL** stored in register `R9`:
 ![NFT_R9](https://github.com/ergoplatform/ergodocs/assets/99899807/5f5838ca-ae99-43eb-aab4-d2d774c3ff83)
 
 >You can convert hex to string [online](https://string-functions.com/hex-string.aspx)

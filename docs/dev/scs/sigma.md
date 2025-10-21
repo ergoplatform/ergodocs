@@ -71,18 +71,23 @@ This contract is an example of a **3-out-of-5** threshold signature scheme. It c
 ## Use Cases of Σ-Protocols
 
 ### 1. **Multi-Signature Wallets**
+
 [Multi-signature wallets](multisig.md) are a natural use case for Σ-protocols, where multiple parties are required to authorize a transaction. Σ-protocols allow you to set up flexible conditions such as requiring two out of three signatures, or even more complex schemes involving multiple participants.
 
 ### 2. **Ring Signatures for Privacy**
+
 [Ring signatures](ring.md) provide [privacy](zkp.md) by allowing a user to sign a transaction on behalf of a group without revealing which group member signed it. This is particularly useful for creating anonymous transactions and decentralized mixers, such as **[ErgoMixer](ergomixer.md)**. The privacy of ring signatures makes them ideal for applications where anonymity is crucial, such as anonymous donations or private payments.
 
 ### 3. **Threshold Signatures**
+
 [Threshold signatures](threshold.md) are critical for decentralized control. For example, a corporate [wallet](../wallets.md) could be protected by a 3-out-of-5 signature scheme, ensuring that no single party can unilaterally control the funds.
 
 ### 4. **Time-Locked Conditions**
+
 Σ-protocols can be combined with time-locked conditions. For instance, you can construct a contract that allows a transaction to be spent if either a ring signature is provided by a set of participants **before** a certain [block height](block-header.md), or the funds can be refunded by a single party **after** the block height has passed.
 
 ### 5. **Decentralized Mixers**
+
 **[ErgoMixer](ergomixer.md)** is an advanced, non-custodial token [mixer](mixer.md) based on Σ-protocols. It leverages ring signatures and [zero-knowledge proofs](zkp.md) to provide enhanced privacy while ensuring that no third party is needed to manage or approve the mixing process. [SigmaJoin](sigmajoin.md), an [off-chain](off-chain.md) implementation concept related to ErgoMixer, further extends the idea of trustless and decentralized privacy mechanisms.
 
 ---

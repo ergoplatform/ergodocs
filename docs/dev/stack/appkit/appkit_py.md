@@ -1,4 +1,5 @@
 # Using AppKit from Python
+
 To use Appkit from Python, you need to bridge to a JVM instance running the Appkit code. To do so, we use [JPype](https://github.com/jpype-project/jpype) for this guide. It is presumed that you've already set up a proper Python environment.
 
 ### General setup
@@ -32,7 +33,7 @@ import java.lang
 jpype.shutdownJVM()
 ```
 
-You have two options to implement your ergo related code: You can do everything in your Python code 
+You have two options to implement your ergo related code: You can do everything in your Python code
 and call all necessary Appkit methods from Python, or you create an own Java/Kotlin/Scala project and
 implement your necessary logic in these languages providing some methods for simpler use from Python.
 
@@ -202,6 +203,6 @@ The `MintTokenExecutor` class has an `__init__` function to set the provided add
 
 The reduced unsigned transaction is then printed using `get_base64_reduced_tx`.
 
-
 ### Please note
-You can find published Python artefacts here https://github.com/ergo-pad/ergo-python-appkit
+
+You can find published Python artefacts here <https://github.com/ergo-pad/ergo-python-appkit>

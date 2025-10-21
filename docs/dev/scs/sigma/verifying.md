@@ -6,7 +6,8 @@ The **Schnorr signature** scheme is a key cryptographic primitive in Ergo, allow
 
 Ergo uses the **Secp256k1** elliptic curve (the same curve used in Bitcoin), denoted as **G**, for its Schnorr signature scheme. The Schnorr signature allows a user to prove knowledge of a private key without revealing the key itself.
 
-### Key Setup:
+### Key Setup
+
 1. The **secret key** is an integer **x**.
 2. The corresponding **public key** is **Y = g^x**, where **g** is the generator of the elliptic curve group **G**.
 
@@ -50,7 +51,7 @@ This process ensures that the signature is valid and was produced by the holder 
 
 In ErgoScript, verifying a Schnorr signature involves reconstructing **U** on-chain and checking the challenge.
 
-### ErgoScript Example:
+### ErgoScript Example
 
 ```scala
 { 
@@ -78,7 +79,7 @@ In ErgoScript, verifying a Schnorr signature involves reconstructing **U** on-ch
 }
 ```
 
-### Script Explanation:
+### Script Explanation
 
 - The generator of the elliptic curve group (`g`) is retrieved using the global value `groupGenerator`.
 - The public key (`Y`) is retrieved from register R4 of the box being spent (`SELF`).
@@ -87,14 +88,16 @@ In ErgoScript, verifying a Schnorr signature involves reconstructing **U** on-ch
 - The script reconstructs the commitment `U` using the formula `g^s * Y^c`.
 - Finally, it verifies the signature by hashing the reconstructed `U` concatenated with the message `M` (`sha256(U ++ M)`) and comparing the result with the original challenge `cBytes`. If they match, the signature is valid, and the `sigmaProp` evaluates to true.
 
-### Reference Test:
+### Reference Test
+
 The complete off-chain and on-chain interaction, including signature generation and verification, can be seen in [this test case](https://github.com/ergoplatform/ergo-jde/blob/main/kiosk/src/test/scala/kiosk/schnorr/SchnorrSpec.scala).
 
 ---
 
 ## Advanced Schnorr Validation Off-Chain
 
-### Alternative On-Chain Verification (Using Identification Scheme Logic):
+### Alternative On-Chain Verification (Using Identification Scheme Logic)
+
 While the above method directly verifies the Schnorr signature `(c, s)`, an alternative approach based on the Schnorr *identification* scheme logic can sometimes be simpler, though it requires providing `U` (or `a` in the code below) instead of `c` as part of the proof.
 
 *Note: The primary challenge with on-chain verification is that ErgoScript's `BigInt` is limited to 256 bits. Off-chain signature generation must ensure the response `s` (or `z` below) fits within this limit.*
@@ -121,7 +124,7 @@ While the above method directly verifies the Schnorr signature `(c, s)`, an alte
 }
 ```
 
-### Off-Chain Signature Generation (Ensuring Size Limit):
+### Off-Chain Signature Generation (Ensuring Size Limit)
 
 To ensure the response **z** fits within 255 bits (required for ErgoScript's `BigInt`), the off-chain signing code might need to iterate until a suitable random nonce `r` is found:
 

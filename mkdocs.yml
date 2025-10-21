@@ -5,49 +5,56 @@ edit_uri: edit/main/docs/
 site_description: Ergo Platform Documentation
 
 theme:
-    name: material
-    custom_dir: overrides
-    #favicon: assets/favicon.png
-    palette: # dark scheme toggle on material + dark orange
-      - scheme: default
-        primary: red
-        toggle:
-          icon: material/toggle-switch-off-outline
-          name: Switch to dark mode
-      - scheme: slate
-        primary: red
-        toggle:
-          icon: material/toggle-switch
-          name: Switch to light mode
-    features:
-        - content.action.edit
-        - content.action.view
-        - content.code.copy
-        - navigation.tabs
-        # - navigation.instant
-        # - navigation.sections # The bold sections in navigation
-        - navigation.tracking
-        - navigation.indexes
-        - content.tabs.link
-        - toc.follow
+  name: material
+  custom_dir: overrides
+  #favicon: assets/favicon.png
+  palette:
+    - scheme: default
+      primary: red
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      primary: red
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  features:
+    - content.action.edit
+    - content.action.view
+    - content.code.copy
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.prune
+    - navigation.path
+    #- navigation.sections
+    #- navigation.tracking
+    - navigation.indexes
+    - content.tabs.link
+    - toc.follow
+    - search.highlight
+    - search.suggest
+    - search.share
+    - header.autohide
+    - toc.follow
+  logo: assets/logo.png
+  font:
+    text: Roboto
 
-      #  - toc.integrate
-    logo: assets/logo.png
-    font:
-      text: Roboto
 extra_css:
   - assets/extra.css
   - assets/neoteroi-mkdocs.css
-  # - https://unpkg.com/mermaid@8.5.1/dist/mermaid.css #404 ?
+  # - https://unpkg.com/mermaid@8.5.1/dist/mermaid.css
+
 extra_javascript:
   - assets/extra.js
   # - assets/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - https://unpkg.com/mermaid@8.5.1/dist/mermaid.min.js
- # - https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML
-
-
+  # - https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML
 
 extra:
   version:
@@ -55,11 +62,7 @@ extra:
   analytics:
     provider: google
     property: G-5XM6BXT041
-
-
-#extra:
-#  generator: false
-
+  # generator: false
 
 plugins:
   - search
@@ -69,63 +72,66 @@ plugins:
   - render_swagger:
       allow_arbitrary_locations: true
   - neoteroi.mkdocsoad
-  #- mkdocs-jupyter #https://github.com/danielfrg/mkdocs-jupyter
-  #- section-index #https://github.com/oprypin/mkdocs-section-index
-  # - section-index #https://github.com/oprypin/mkdocs-section-index
-  #- awesome-nav #https://github.com/lukasgeiter/mkdocs-awesome-pages-plugin
+  - mkdocs-jupyter
+  #- section-index
+  # Removed section-index to avoid nav assertion; Material's navigation.indexes covers the behavior
+  #- awesome-pages
   - autolinks
-  - tags: # https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/#
-  #- bibtex:
-  #    bib_file: refs.bib
+  - tags
+  # - bibtex:
+  #     bib_file: refs.bib
   #- categories
-  #- exclude-search # https://github.com/chrieke/mkdocs-exclude-search
-  #- semiliterate # http://studioinfinity.org/semiliterate/mkdocs_semiliterate/plugin/
-  #- pagenav-generator #https://github.com/Andre601/mkdocs-pagenav-generator
-
-
+  - exclude-search
+  #- semiliterate
+  #- pagenav-generator
+  - mkdocs-simple-hooks:
+      hooks:
+        on_page_markdown: "hooks:fix_lists"
 
 markdown_extensions:
   - footnotes
-  - pymdownx.details  # Adds collapsible content sections with a "details" block.
-  - pymdownx.tasklist:  # Enables task lists with checkboxes.
-        custom_checkbox: true  # Allows custom checkboxes for task lists.
-  - codehilite  # Enables syntax highlighting for code blocks.
-  - extra  # Adds extra Markdown features (e.g., tables, definition lists).
-  - tables  # Enables support for tables in Markdown.
-  - neoteroi.cards  # Adds card-like components for visually structured content.
-  - meta  # Allows the use of metadata blocks at the top of Markdown files.
-  - fenced_code  # Adds support for fenced code blocks (e.g., triple backticks).
-  - toc:  # Generates a Table of Contents (TOC) for the document.
-        permalink: "#"  # Adds permalinks to each TOC entry.
-        baselevel: 1  # Sets the starting heading level for TOC generation.
-        toc_depth: 3  # Limits TOC to include headings up to level 3.
-  - admonition  # Adds support for note, warning, and other admonition blocks.
-  - pymdownx.inlinehilite  # Enables inline syntax highlighting for code snippets.
-  - pymdownx.superfences:  # Extends fenced code blocks with custom fences.
+  - admonition
+  - attr_list
+  - codehilite
+  - fenced_code
+  - md_in_html
+  - meta
+  - tables
+  - toc:
+      permalink: "#"
+      baselevel: 1
+      toc_depth: 3
+  - extra
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.superfences:
       custom_fences:
-        - name: mermaid  # Adds support for Mermaid diagrams.
-          class: mermaid  # Specifies the class to apply for Mermaid diagrams.
-          format: !!python/name:pymdownx.superfences.fence_div_format  # Specifies formatting.
-  - pymdownx.arithmatex:  # Adds support for LaTeX math equations.
-      generic: true  # Uses a generic format for better compatibility.
-  - pymdownx.tabbed:  # Enables tabbed content blocks.
-      alternate_style: true  # Applies an alternate visual style for tabs.
-  - pymdownx.blocks.admonition  # Adds block-level admonitions with enhanced features.
-  - pymdownx.blocks.details  # Enhances collapsible "details" blocks.
-  - attr_list  # Allows adding HTML attributes to Markdown elements.
-  - md_in_html  # Enables using Markdown syntax inside HTML tags.
-  - pymdownx.tasklist  # Re-enables task lists (optional duplicate entry).
-  - pymdownx.betterem  # Enhances emphasis and strong emphasis detection.
-  - pymdownx.tilde  # Adds support for strikethrough and subscript text.
-  - pymdownx.highlight  # Enables advanced syntax highlighting for code blocks.
-  - pymdownx.snippets  # Include external content or reusable snippets
-  - pymdownx.emoji  # Adds emoji support
-  - pymdownx.magiclink  # Auto-detects URLs and emails
-  - pymdownx.caret  # Enables superscript syntax
-  - pymdownx.mark  # Highlights text with ==
-  - pymdownx.smartsymbols  # Replaces common symbols (e.g., (c) → ©)
-  - pymdownx.keys  # Keyboard key representation
-  - pymdownx.saneheaders  # Enforces stricter header syntax
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.blocks.admonition
+  - pymdownx.blocks.details
+  - pymdownx.betterem
+  - pymdownx.tilde
+  - pymdownx.highlight
+  - pymdownx.snippets
+  - pymdownx.emoji
+  - pymdownx.magiclink
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.keys
+  - pymdownx.saneheaders
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - mdx_truly_sane_lists
+  - neoteroi.cards
+  - neoteroi.timeline
+
 
 nav:
   - Start Here:
@@ -150,27 +156,26 @@ nav:
       - Roadmap: roadmap.md
       - Reference:
           - Glossary: glossary.md
-       #   - Sitemap: site-map.md
-        #  - Tags: tags.md
+          # - Sitemap: site-map.md
+          # - Tags: tags.md
           - Common Misconceptions: fud-faq.md
   - Use:
       - Overview: uses/use-cases-overview.md
       - Get a Wallet:
           - dev/wallets.md
-         
           - General Guides:
-            - Access Issues: tutorials/access-issues.md
-            - Cold Wallet Guide: tutorials/cold-wallet.md
+              - Access Issues: tutorials/access-issues.md
+              - Cold Wallet Guide: tutorials/cold-wallet.md
           - Wallet Guides:
-            - Node Wallet Setup: node/wallet-setup.md
-            - Satergo: dev/wallet/satergo.md
-            - Nautilus: dev/wallet/nautilus.md
-            - Minotaur: dev/wallet/minotaur.md
-            - Minotaur Multi-Sig: dev/wallet/minotaur-multisig.md
-            - SAFEW: dev/wallet/safew.md
-            - Ledger: dev/wallet/payments/ledger.md
-            - Paper Wallet: dev/wallet/paper-wallet.md
-            - Satergo Vault: dev/wallet/satergo-vault.md
+              - Node Wallet Setup: node/wallet-setup.md
+              - Satergo: dev/wallet/satergo.md
+              - Nautilus: dev/wallet/nautilus.md
+              - Minotaur: dev/wallet/minotaur.md
+              - Minotaur Multi-Sig: dev/wallet/minotaur-multisig.md
+              - SAFEW: dev/wallet/safew.md
+              - Ledger: dev/wallet/payments/ledger.md
+              - Paper Wallet: dev/wallet/paper-wallet.md
+              - Satergo Vault: dev/wallet/satergo-vault.md
       - How-To Guides:
           - Mint an NFT: dev/tokens/nfts/create.md
           - Yield Farming: tutorials/yield.md
@@ -231,8 +236,8 @@ nav:
                   - ChainCash: uses/chaincash.md
                   - Gluon: eco/gluon.md
                   - Dexy:
-                    - DexyGold: eco/dexy.md
-                    - USE Stablecoin: uses/use_stablecoin.md
+                      - DexyGold: eco/dexy.md
+                      - USE Stablecoin: uses/use_stablecoin.md
                   - Local Exchange Trading Systems:
                       - uses/lets.md
                       - Basic Implementation: uses/lets/basic-imp.md
@@ -336,11 +341,6 @@ nav:
                   - Rust Chain: eco/rust-chain.md
                   - Scypher: eco/scypher.md
                   - SigmaStamp: eco/sigma-stamp.md
-            #  - SigmaQuest: eco/sigmaquest.md
-            #  - SigmaValley: eco/sigmavalley.md
-            #  - Swamp Audio: eco/swamp-audio.md
-            #  - Tensile: eco/tensile.md
-            # - THZ FM: eco/thz-fm.md
           - Privacy Solutions:
               - ErgoMixer:
                   - eco/ergomixer.md
@@ -506,191 +506,13 @@ nav:
           - Moderation Guide: contribute/standards/moderation.md
           - Analytics: contribute/standards/analytics.md
       - Compliance & Legal:
-        - Social Contract: social_contract.md
-        - Audit: dev/protocol/audit.md
-        - The Howey Test: security.md
-   
+          - Social Contract: social_contract.md
+          - Audit: dev/protocol/audit.md
+          - The Howey Test: security.md
   - Develop:
       - Start Here:
-        - One-Pager: dev/get-started.md
-        - Students: students/index.md
-      - ErgoScript & Smart Contracts:
-          - dev/scs/ergoscript.md
-          - Key Concepts: dev/scs/ergoscript/ergoscript-key-concepts.md
-          - FAQ: dev/scs/ergoscript/ergoscript-faq.md
-          - Sigma Language:
-              - dev/scs/sigma-lang.md
-              - Specification: dev/scs/sigma/lang-spec.md
-              - Operations: dev/scs/sigma/lang-ops.md
-              - Propositions: dev/scs/sigma/sigma-prop.md
-          - ErgoTree:
-              - dev/scs/ergotree.md
-              - Intro: dev/scs/ergotree/ergotree-intro.md
-              - Language: dev/scs/ergotree/ergotree-lang.md
-              - Types: dev/scs/ergotree/types.md
-              - Typing: dev/scs/ergotree/typing.md
-              - Functions: dev/scs/ergotree/functions.md
-              - Evaluation: dev/scs/ergotree/evaluation.md
-              - Serialization: dev/scs/ergotree/serialization.md
-              - Encoding: dev/scs/ergotree/encoding.md
-              - Validation: dev/scs/ergotree/script-validation.md
-              - Optimisation: dev/scs/ergotree/script-optimisation.md
-          - Core Concepts:
-              - P2S Addresses: dev/scs/p2s.md
-              - Contracts: dev/scs/contracts.md
-              - Syntax: dev/scs/syntax.md
-              - SigmaBoolean Type: dev/scs/types/sigmaboolean.md
-              - Blockchain Context: dev/scs/blockchain-context.md
-              - Context Variables: dev/scs/ergoscript/context-variables.md
-              - Boxes and Registers: dev/scs/boxes-and-registers.md
-              - Box Structure: dev/scs/ergoscript/box-structure.md
-              - Storing Data: dev/scs/ergoscript/storing-data.md
-              - Code Blocks: dev/scs/ergoscript/code-blocks.md
-              - Global Functions: dev/scs/global-functions.md
-              - Reusable Functions: dev/scs/ergoscript/reusable-functions.md
-              - Functional Programming: dev/scs/ergoscript/functional-programming.md
-          - Debugging: dev/scs/ergoscript-debugging.md
-          - Examples & Use Cases:
-              - Anyone-Can-Spend: dev/scs/ergoscript/anyone-can-spend.md
-              - No-One-Can-Spend: dev/scs/ergoscript/no-one-can-spend.md
-              - Public Keys: dev/scs/ergoscript/public-keys.md
-              - Context Enrichment: dev/scs/tx/context-enrichment.md
-              - FSM Example: dev/scs/tx/fsm-example.md
-              - ICO Contract: dev/scs/tx/ico.md
-              - MAST Example: dev/scs/tx/mast-example.md
-              - Reversible Address: dev/scs/tx/reversible-address.md
-              - Rock-Paper-Scissor: dev/scs/tx/rock-paper-scissor.md
-              - Transaction Chains: dev/scs/tx/tx-chains.md
-              - Transaction Graphs: dev/scs/tx/tx-graphs.md
-              - Transaction Trees: dev/scs/tx/tx-tree.md
-              - Create a P2S Address: tutorials/create-a-p2s.md
-              - Multi-Signature: dev/scs/multi.md
-              - ErgoScript vs ErgoTree: dev/scs/ergoscriptvergotree.md
-      - Contracts & Patterns Library:
-          - Overview: dev/contracts/contracts-library.md
-          - Categories:
-              - Tokens: dev/contracts/contracts-tokens.md
-              - Access Control: dev/contracts/contracts-access-control.md
-              - Privacy: dev/contracts/contracts-privacy.md
-              - Oracles: dev/contracts/contracts-oracles.md
-              - Proofs: dev/contracts/contracts-proofs.md
-              - Interoperability: dev/contracts/contracts-interoperability.md
-              - Randomness: dev/contracts/contracts-randomness.md
-              - Insurance: dev/contracts/contracts-insurance.md
-          - Patterns:
-              - Perpetual Token: dev/contracts/pattern-perpetual-token.md
-              - Whitelist-only Token: dev/contracts/pattern-whitelist-token.md
-              - Daily Withdrawal Limit: dev/contracts/pattern-daily-withdrawal-limit.md
-              - Stealth Address: dev/contracts/pattern-stealth-address.md
-              - Trustless Hashrate Oracle: dev/contracts/pattern-hashrate-oracle.md
-              - Bulletproof Range Proof Verification: dev/contracts/pattern-bulletproof-range-proof.md
-              - Schnorr Signature Verification: dev/contracts/pattern-schnorr-verification.md
-              - Insurance — Physical Gold Non-Delivery: dev/contracts/pattern-insurance-gold-nondelivery.md
-              - Import Off-chain Bank (Amitabh): dev/contracts/pattern-import-offchain-bank.md
-              - Trustless Peg (Cross-Chain): dev/contracts/pattern-trustless-peg.md
-              - Trustless Bitcoin Relay: dev/contracts/pattern-bitcoin-relay.md
-              - Randomness from ErgoRaffle: dev/contracts/pattern-randomness-from-raffle.md
-          - References:
-              - Off-chain & UI References: dev/contracts/contracts-offchain-references.md
-              - MCP Examples: dev/contracts/contracts-mcp-examples.md
-              - Contributing: dev/contracts/contracts-contributing.md
-              - Template: dev/contracts/pattern-template.md
-      - Addresses & Payments:
-          - Addresses: dev/wallet/address.md
-          - Address Types: dev/wallet/address/address_types.md
-          - Address Validation: dev/wallet/address/address_validation.md
-          - Keys: dev/wallet/keys.md
-          - Multisig: dev/wallet/multisig.md
-          - dApp Connector: dev/wallet/payments/dApp.md
-          - ErgoAuth: dev/wallet/payments/ergoauth.md
-          - Proxy Contracts: dev/wallet/payments/proxy.md
-          - ErgoPay:
-              - dev/wallet/payments/ergopay/ergo-pay.md
-              - Tutorial: dev/wallet/payments/ergopay/ep-tutorial.md
-          - Message Signing: tutorials/message-signing.md
-          - EIP Standards:
-              - dev/wallet/eip-standards.md
-              - EIP-1 Master Key Derivation: dev/wallet/standards/eip1.md
-              - EIP-3 HD Wallets: dev/wallet/standards/eip3.md
-              - EIP-5 Cold Wallet Metadata: dev/wallet/standards/eip5.md
-              - EIP-17 Asset Issuance: dev/wallet/payments/standards/eip17.md
-              - EIP-19 Address Resolution: dev/wallet/standards/eip19.md
-              - EIP-20 dApp Connector: dev/wallet/payments/standards/eip20.md
-              - EIP-25 ErgoAuth: dev/wallet/payments/standards/eip25.md
-      - Data Model & Transactions:
-          - Data Model Overview: dev/data-model/data-model.md
-          - Box Model:
-              - dev/data-model/box.md
-              - Registers: dev/data-model/box/registers.md
-              - Lifecycle: dev/data-model/box/lifecycle.md
-              - Modelling: dev/data-model/box/box_modeling.md
-          - Assets:
-              - Token Overview: dev/data-model/box/tokens.md
-              - Creating a Perpetual Token: dev/tokens/perpetual.md
-              - Burning a Token: dev/tokens/burn.md
-              - NFTs:
-                  - dev/tokens/nfts/nfts-overview.md
-                  - Minting a NFT: dev/tokens/nfts/create.md
-                  - V1 vs V2: dev/tokens/nfts/v1v2.md
-                  - Simple Example: dev/tokens/nfts/nft-examples.md
-                  - On-chain NFTs: dev/tokens/nfts/on-chain.md
-                  - Royalties: dev/tokens/nfts/royalties.md
-              - Singletons: dev/tokens/singletons.md
-              - Standards:
-                  - Asset Standard (EIP-4): dev/tokens/standards/eip4.md
-                  - Genuine Token Verification (EIP-21): dev/tokens/standards/eip21.md
-                  - Auction Contract (EIP-22): dev/tokens/standards/eip22.md
-                  - Artwork Contract (EIP-24): dev/tokens/standards/eip24.md
-          - Transactions & Fees:
-              - Transaction Overview: dev/protocol/transactions.md
-              - Transaction Lifecycle: dev/integration/transaction-lifecycle.md
-              - Composing Transactions: dev/protocol/tx/composing.md
-              - Chained Transactions: dev/anatomy/transactions/chained.md
-              - Multi-stage Transactions: dev/protocol/tx/multi-stage-txs.md
-              - Format: dev/protocol/tx/format.md
-              - Merkle Tree: dev/protocol/tx/tx-merkle.md
-              - Signing: dev/protocol/tx/signing.md
-              - Validation: dev/protocol/tx/validation.md
-              - Data Inputs: dev/protocol/tx/read-only-inputs.md
-              - Fees: dev/protocol/tx/min-fee.md
-              - Unified Transactions: dev/protocol/tx/unified.md
-              - Model Transaction: dev/protocol/tx/model-tx.md
-              - Payments Overview: dev/anatomy/transactions/payments.md
-          - Babel Fees:
-              - dev/protocol/tx/babel-fees.md
-              - Plugin: dev/protocol/tx/babel-fleet.md
-              - How-To: dev/protocol/tx/babel-howto.md
-              - Implementation: dev/protocol/tx/babel-impl.md
-              - Standards: dev/protocol/tx/standards.md
-              - Just-In-Time Costing: node/jitc.md
-          - Blocks & Proofs:
-              - Block Overview: dev/data-model/block.md
-              - Block Header: dev/data-model/block-header.md
-              - Block Transactions: dev/data-model/block-transactions.md
-              - ADProofs: dev/data-model/block-adproofs.md
-              - Extension Section: dev/data-model/extension-section.md
-              - Discrete Logarithms: dev/data-model/dlog.md
-      - Tutorials & Recipes:
-          - dev/tutorials.md
-          - Fleet SDK Recipes: dev/tutorials/fleet-sdk-recipes.md
-          - Chained Transactions: tutorials/chained-tx.md
-          - DeCo: dev/deco.md
-          - Blockchain Indexing:
-              - dev/tutorials/blockchain-indexing.md
-              - Explorer API: dev/tutorials/blockchain-indexing/explorer-apis.md
-              - Node API (Direct): dev/tutorials/blockchain-indexing/node-api-direct.md
-              - Custom Indexer: dev/tutorials/blockchain-indexing/custom-indexer.md
-          - Hardware Wallets: dev/tutorials/hardware-wallet-integration.md
-          - Sign Transactions:
-              - tutorials/sign-tx.md
-              - Signature Guide: tutorials/sig.md
-          - Oracle Pool Bootstrap: tutorials/oracle-bootstrap.md
-          - Token Integration Guides: tutorials/token_integration.md
-          - rsERG-LP Tutorial: tutorials/rsERGLP.md
-          - Exchange Integration:
-              - Guide: dev/integration/guide.md
-              - Dust Collection: dev/integration/dust-collection.md
-          - Cup of Sugar Pattern: tutorials/cup-of-sugar.md
+          #- students/index.md
+          - Overview: dev/get-started.md
       - Tooling & Frameworks:
           - Development Pathways:
               - dev/start.md
@@ -773,6 +595,166 @@ nav:
               - EIP12 Types: dev/lib/eip12-types.md
               - SigmaJS: dev/lib/sigmajs.md
               - DeCo: dev/deco.md
+
+      - Addresses & Payments:
+          - Addresses: dev/wallet/address.md
+          - Address Types: dev/wallet/address/address_types.md
+          - Address Validation: dev/wallet/address/address_validation.md
+          - Keys: dev/wallet/keys.md
+          - Multisig: dev/wallet/multisig.md
+          - dApp Connector: dev/wallet/payments/dApp.md
+          - ErgoAuth: dev/wallet/payments/ergoauth.md
+          - Proxy Contracts: dev/wallet/payments/proxy.md
+          - ErgoPay:
+              - dev/wallet/payments/ergopay/ergo-pay.md
+              - Tutorial: dev/wallet/payments/ergopay/ep-tutorial.md
+          - Message Signing: tutorials/message-signing.md
+          - EIP Standards:
+              - dev/wallet/eip-standards.md
+              - EIP-1 Master Key Derivation: dev/wallet/standards/eip1.md
+              - EIP-3 HD Wallets: dev/wallet/standards/eip3.md
+              - EIP-5 Cold Wallet Metadata: dev/wallet/standards/eip5.md
+              - EIP-17 Asset Issuance: dev/wallet/payments/standards/eip17.md
+              - EIP-19 Address Resolution: dev/wallet/standards/eip19.md
+              - EIP-20 dApp Connector: dev/wallet/payments/standards/eip20.md
+              - EIP-25 ErgoAuth: dev/wallet/payments/standards/eip25.md
+
+      - Data Model & Transactions:
+          - Data Model Overview: dev/data-model/data-model.md
+          - Box Model:
+              - dev/data-model/box.md
+              - Registers: dev/data-model/box/registers.md
+              - Lifecycle: dev/data-model/box/lifecycle.md
+              - Modelling: dev/data-model/box/box_modeling.md
+          - Assets:
+              - Token Overview: dev/data-model/box/tokens.md
+              - Creating a Perpetual Token: dev/tokens/perpetual.md
+              - Burning a Token: dev/tokens/burn.md
+              - NFTs:
+                  - dev/tokens/nfts/nfts-overview.md
+                  - Minting a NFT: dev/tokens/nfts/create.md
+                  - V1 vs V2: dev/tokens/nfts/v1v2.md
+                  - Simple Example: dev/tokens/nfts/nft-examples.md
+                  - On-chain NFTs: dev/tokens/nfts/on-chain.md
+                  - Royalties: dev/tokens/nfts/royalties.md
+              - Singletons: dev/tokens/singletons.md
+              - Standards:
+                  - Asset Standard (EIP-4): dev/tokens/standards/eip4.md
+                  - Genuine Token Verification (EIP-21): dev/tokens/standards/eip21.md
+                  - Auction Contract (EIP-22): dev/tokens/standards/eip22.md
+                  - Artwork Contract (EIP-24): dev/tokens/standards/eip24.md
+          - Transactions & Fees:
+              - Transaction Overview: dev/protocol/transactions.md
+              - Transaction Lifecycle: dev/integration/transaction-lifecycle.md
+              - Composing Transactions: dev/protocol/tx/composing.md
+              - Chained Transactions: dev/anatomy/transactions/chained.md
+              - Multi-stage Transactions: dev/protocol/tx/multi-stage-txs.md
+              - Format: dev/protocol/tx/format.md
+              - Merkle Tree: dev/protocol/tx/tx-merkle.md
+              - Signing: dev/protocol/tx/signing.md
+              - Validation: dev/protocol/tx/validation.md
+              - Data Inputs: dev/protocol/tx/read-only-inputs.md
+              - Fees: dev/protocol/tx/min-fee.md
+              - Unified Transactions: dev/protocol/tx/unified.md
+              - Model Transaction: dev/protocol/tx/model-tx.md
+              - Payments Overview: dev/anatomy/transactions/payments.md
+          - Babel Fees:
+              - dev/protocol/tx/babel-fees.md
+              - Plugin: dev/protocol/tx/babel-fleet.md
+              - How-To: dev/protocol/tx/babel-howto.md
+              - Implementation: dev/protocol/tx/babel-impl.md
+              - Standards: dev/protocol/tx/standards.md
+              - Just-In-Time Costing: node/jitc.md
+          - Blocks & Proofs:
+              - Block Overview: dev/data-model/block.md
+              - Block Header: dev/data-model/block-header.md
+              - Block Transactions: dev/data-model/block-transactions.md
+              - ADProofs: dev/data-model/block-adproofs.md
+              - Extension Section: dev/data-model/extension-section.md
+              - Discrete Logarithms: dev/data-model/dlog.md
+
+      - ErgoScript & Smart Contracts:
+          - dev/scs/ergoscript.md
+          - Key Concepts: dev/scs/ergoscript/ergoscript-key-concepts.md
+          - FAQ: dev/scs/ergoscript/ergoscript-faq.md
+          - Sigma Language:
+              - dev/scs/sigma-lang.md
+              - Specification: dev/scs/sigma/lang-spec.md
+              - Operations: dev/scs/sigma/lang-ops.md
+              - Propositions: dev/scs/sigma/sigma-prop.md
+          - ErgoTree:
+              - dev/scs/ergotree.md
+              - Intro: dev/scs/ergotree/ergotree-intro.md
+              - Language: dev/scs/ergotree/ergotree-lang.md
+              - Types: dev/scs/ergotree/types.md
+              - Typing: dev/scs/ergotree/typing.md
+              - Functions: dev/scs/ergotree/functions.md
+              - Evaluation: dev/scs/ergotree/evaluation.md
+              - Serialization: dev/scs/ergotree/serialization.md
+              - Encoding: dev/scs/ergotree/encoding.md
+              - Validation: dev/scs/ergotree/script-validation.md
+              - Optimisation: dev/scs/ergotree/script-optimisation.md
+          - Core Concepts:
+              - P2S Addresses: dev/scs/p2s.md
+              - Contracts: dev/scs/contracts.md
+              - Syntax: dev/scs/syntax.md
+              - SigmaBoolean Type: dev/scs/types/sigmaboolean.md
+              - Blockchain Context: dev/scs/blockchain-context.md
+              - Context Variables: dev/scs/ergoscript/context-variables.md
+              - Boxes and Registers: dev/scs/boxes-and-registers.md
+              - Box Structure: dev/scs/ergoscript/box-structure.md
+              - Storing Data: dev/scs/ergoscript/storing-data.md
+              - Code Blocks: dev/scs/ergoscript/code-blocks.md
+              - Global Functions: dev/scs/global-functions.md
+              - Reusable Functions: dev/scs/ergoscript/reusable-functions.md
+              - Functional Programming: dev/scs/ergoscript/functional-programming.md
+          - Debugging: dev/scs/ergoscript-debugging.md
+          - Examples & Use Cases:
+              - Anyone-Can-Spend: dev/scs/ergoscript/anyone-can-spend.md
+              - No-One-Can-Spend: dev/scs/ergoscript/no-one-can-spend.md
+              - Public Keys: dev/scs/ergoscript/public-keys.md
+              - Context Enrichment: dev/scs/tx/context-enrichment.md
+              - FSM Example: dev/scs/tx/fsm-example.md
+              - ICO Contract: dev/scs/tx/ico.md
+              - MAST Example: dev/scs/tx/mast-example.md
+              - Reversible Address: dev/scs/tx/reversible-address.md
+              - Rock-Paper-Scissor: dev/scs/tx/rock-paper-scissor.md
+              - Transaction Chains: dev/scs/tx/tx-chains.md
+              - Transaction Graphs: dev/scs/tx/tx-graphs.md
+              - Transaction Trees: dev/scs/tx/tx-tree.md
+              - Create a P2S Address: tutorials/create-a-p2s.md
+              - Multi-Signature: dev/scs/multi.md
+              - ErgoScript vs ErgoTree: dev/scs/ergoscriptvergotree.md
+          - Contracts & Patterns Library:
+              - dev/contracts/contracts-library.md
+              - Categories:
+                  - Tokens: dev/contracts/contracts-tokens.md
+                  - Access Control: dev/contracts/contracts-access-control.md
+                  - Privacy: dev/contracts/contracts-privacy.md
+                  - Oracles: dev/contracts/contracts-oracles.md
+                  - Proofs: dev/contracts/contracts-proofs.md
+                  - Interoperability: dev/contracts/contracts-interoperability.md
+                  - Randomness: dev/contracts/contracts-randomness.md
+                  - Insurance: dev/contracts/contracts-insurance.md
+              - Patterns:
+                  - Perpetual Token: dev/contracts/pattern-perpetual-token.md
+                  - Whitelist-only Token: dev/contracts/pattern-whitelist-token.md
+                  - Daily Withdrawal Limit: dev/contracts/pattern-daily-withdrawal-limit.md
+                  - Stealth Address: dev/contracts/pattern-stealth-address.md
+                  - Trustless Hashrate Oracle: dev/contracts/pattern-hashrate-oracle.md
+                  - Bulletproof Range Proof Verification: dev/contracts/pattern-bulletproof-range-proof.md
+                  - Schnorr Signature Verification: dev/contracts/pattern-schnorr-verification.md
+                  - Insurance — Physical Gold Non-Delivery: dev/contracts/pattern-insurance-gold-nondelivery.md
+                  - Import Off-chain Bank (Amitabh): dev/contracts/pattern-import-offchain-bank.md
+                  - Trustless Peg (Cross-Chain): dev/contracts/pattern-trustless-peg.md
+                  - Trustless Bitcoin Relay: dev/contracts/pattern-bitcoin-relay.md
+                  - Randomness from ErgoRaffle: dev/contracts/pattern-randomness-from-raffle.md
+              - References:
+                  - Off-chain & UI References: dev/contracts/contracts-offchain-references.md
+                  - MCP Examples: dev/contracts/contracts-mcp-examples.md
+                  - Contributing: dev/contracts/contracts-contributing.md
+                  - Template: dev/contracts/pattern-template.md
+
       - APIs & Services:
           - Explorer & Indexing:
               - Explorer Overview: dev/stack/explorer.md
@@ -788,6 +770,29 @@ nav:
               - Off-Chain Bots: dev/oc/dex_bots.md
               - Rust Utilities: dev/oc/ergo_utilities.md
               - Plasma Overview: dev/lib/plasma.md
+
+      - Tutorials & Recipes:
+          - dev/tutorials.md
+          - Fleet SDK Recipes: dev/tutorials/fleet-sdk-recipes.md
+          - Chained Transactions: tutorials/chained-tx.md
+          - DeCo: dev/deco.md
+          - Blockchain Indexing:
+              - dev/tutorials/blockchain-indexing.md
+              - Explorer API: dev/tutorials/blockchain-indexing/explorer-apis.md
+              - Node API (Direct): dev/tutorials/blockchain-indexing/node-api-direct.md
+              - Custom Indexer: dev/tutorials/blockchain-indexing/custom-indexer.md
+          - Hardware Wallets: dev/tutorials/hardware-wallet-integration.md
+          - Sign Transactions:
+              - tutorials/sign-tx.md
+              - Signature Guide: tutorials/sig.md
+          - Oracle Pool Bootstrap: tutorials/oracle-bootstrap.md
+          - Token Integration Guides: tutorials/token_integration.md
+          - rsERG-LP Tutorial: tutorials/rsERGLP.md
+          - Exchange Integration:
+              - Guide: dev/integration/guide.md
+              - Dust Collection: dev/integration/dust-collection.md
+          - Cup of Sugar Pattern: tutorials/cup-of-sugar.md
+
   - Deploy:
       - Overview: dev/interact.md
       - The Ergo Node:
@@ -868,7 +873,6 @@ nav:
               - OpenAPI Spec: node/swagger/openapi.md
               - Try it out!: node/swagger/swagger_api.md
               - Indexed Node API: node/indexed-node.md
-  
       - Watchers (Rosen):
           - Overview: eco/rosen/watcher.md
           - Prerequisites: eco/rosen/rosen-preq.md

@@ -88,7 +88,7 @@ def getPaid(byte: Byte): Boolean = {
 Once a Plasma Map is created, operations may be performed on it. All operations done on a Plasma Map
 return some `OpResult` that wraps the Plasma Map's *value* field. The set of these `OpResult`s
 are returned in a `ProvenResult`, which holds the returned values along with a `Proof` object that holds
-the corresponding proof for the batched set of operations. `OpResult`s are all returned in the order in 
+the corresponding proof for the batched set of operations. `OpResult`s are all returned in the order in
 which they were entered.
 
 ```scala
@@ -131,9 +131,12 @@ ergoClient.execute {
             .build()
 }
 ```
+
 ## LocalPlasmaMap
+
 Interacting with a locally stored Plasma Map is done in a similar way, except that you must use the
 `LocalPlasmaMap` class instead.
+
 ```scala
 import io.getblok.getblok_plasma.PlasmaParameters
 import io.getblok.getblok_plasma.collections.LocalPlasmaMap
@@ -214,7 +217,6 @@ proxyMap.commitNextOperation()
 
 proxyMap.dropChanges()
 ```
-
 
 ## Resources
 

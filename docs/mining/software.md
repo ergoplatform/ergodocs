@@ -10,7 +10,6 @@ tags:
 
 # Software
 
-
 | Coins | Miners | nvidia | AMD | Intel | Dev Fee |
 |-------|--------|--------|-----|-------|---------|
 | ERG   | [lolminer](https://github.com/Lolliedieb/lolMiner-releases) | ✓ | ✓ | ✓ | 1.5 % |
@@ -22,9 +21,6 @@ tags:
 | ERG+KAS | BzMiner | ✓ |  |  |  |
 | ERG+KAS | Gminer | ✓ |  |  |  |
 | ERG+KAS | [SRB Miner](https://github.com/doktor83/SRBMiner-Multi/releases) |  | ✓ |  | 2 % |
-
-
-
 
 ### Source Code Miners
 

@@ -11,6 +11,7 @@ Layer 1, the foundational protocol layer of a blockchain system, is responsible 
 ## Current Scalability Features
 
 ### Extended UTXO Model (EUTXO)
+
 Ergo utilizes an enhanced version of Bitcoin's UTXO model, known as EUTXO, which enables:
 
 - Turing Complete smart contracts
@@ -19,6 +20,7 @@ Ergo utilizes an enhanced version of Bitcoin's UTXO model, known as EUTXO, which
 - Efficient state management
 
 ### Protocol Optimizations
+
 Recent developments have improved the protocol's efficiency through:
 
 - Removal of unused complexity from the Sigma protocol
@@ -29,6 +31,7 @@ Recent developments have improved the protocol's efficiency through:
 ## Mainnet 5.0 and Beyond
 
 ### Just-in-Time Costing
+
 The introduction of [Just in time costing](jitc.md) in Node V5 has led to:
 
 - 5-10x increase in block capacity
@@ -36,6 +39,7 @@ The introduction of [Just in time costing](jitc.md) in Node V5 has led to:
 - More efficient resource utilization
 
 ### Miner Parameter Adjustments
+
 Developers are actively exploring:
 
 - Increased block size parameters
@@ -61,7 +65,6 @@ These features enable:
 - Support for velvet or soft forks
 - Creation of Aspen-style service chains
 
-
 ### Sub-Block Confirmation Protocols
 
 Ergo is actively developing sub-block confirmation protocols that will:
@@ -76,10 +79,8 @@ This development is guided by EIP-15 and builds upon established research from p
 - [Bitcoin-NG](https://www.usenix.org/system/files/conference/nsdi16/nsdi16-paper-eyal.pdf)
 - [Flux](https://www.usenix.org/system/files/atc20-li-chenxing.pdf)
 
-
-
-
 ### Sharding
+
 Sharding represents a promising avenue for future scalability improvements by:
 
 - Partitioning the blockchain database into smaller segments
@@ -94,6 +95,7 @@ For detailed information, refer to:
 ## Community-Driven Development
 
 ### Ergo Improvement Proposals (EIPs)
+
 EIPs serve as the primary mechanism for protocol enhancement through:
 
 - Community-driven proposals
@@ -102,6 +104,7 @@ EIPs serve as the primary mechanism for protocol enhancement through:
 - Regular protocol updates
 
 ### Node Version Updates
+
 Regular updates to the Ergo node software provide:
 
 - Bug fixes and performance enhancements

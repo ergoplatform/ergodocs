@@ -1,20 +1,23 @@
 
 ---
 tags:
-  - Message Signing
-  - Authentication
-  - Nautilus
-  - sigma-rust
-  - Wallets
-  - Security
-  - Tutorial
-  - Guide
+
+- Message Signing
+- Authentication
+- Nautilus
+- sigma-rust
+- Wallets
+- Security
+- Tutorial
+- Guide
+
 ---
 
 # Message signing and user authentication with Nautilus wallet and sigma-rust
 
 Did you know that besides transactions you can sign any piece of data?
 Here is how you do it using Nautilus wallet
+
 ```javascript
 const message = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8]);
 const signature = ergo.sign_data('<your_addr>', message);
@@ -42,15 +45,14 @@ if (balance.tokens.find(token => token.tokenId === '<valid token>') {
 }
 ```
 
-You can use the same method to allow your users to upload their NFT as a character in your game or build an NFT-based ticketing system, the uses are limitless. 
+You can use the same method to allow your users to upload their NFT as a character in your game or build an NFT-based ticketing system, the uses are limitless.
 
 ## Next steps/security tips
 
 1. **User expiration mechanism** - The example above is very simplified, you can use it right away, but for more secure applications you may consider implementing some message expiration mechanism. Instead of signing a random message, you can include an expiration date to it and force users to sign a new message once in a while. You can also switch to a more popular JTW token authentication once the user is verified.
 2. **Check the token balance on every request** - it's not enough to check whether the user holds the NFT only once. The user can get access and sell his NFT to someone else. It's a good idea to move the balance check and the verification to authentication middleware to be executed on every request to your protected routes.
 
-
 References:
 
-1. **Sigma-rust** https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-wasm
-2. **Sigma-rust discord** https://discord.com/channels/668903786361651200/729692906209673257
+1. **Sigma-rust** <https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-wasm>
+2. **Sigma-rust discord** <https://discord.com/channels/668903786361651200/729692906209673257>

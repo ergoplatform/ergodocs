@@ -18,23 +18,25 @@ Merkleized Abstract Syntax Trees (MAST) are a technique used in blockchain proto
 
 Imagine a contract with several possible ways it can be spent:
 
-*   Condition A: Alice can spend after time T1.
-*   Condition B: Bob can spend if he provides a secret value X.
-*   Condition C: Alice and Bob can spend together anytime.
+* Condition A: Alice can spend after time T1.
+* Condition B: Bob can spend if he provides a secret value X.
+* Condition C: Alice and Bob can spend together anytime.
 
 Traditionally, the entire script containing all these conditions would be stored in the box's `propositionBytes`. When spending, the whole script is evaluated, revealing all possible spending paths.
 
 With MAST:
-1.  Each condition (A, B, C) is treated as a separate script fragment.
-2.  These fragments are serialized to their [ErgoTree](../ergotree.md) byte representation (`Coll[Byte]`).
-3.  Each byte representation is hashed (e.g., using `blake2b256`).
-4.  These hashes are arranged as leaves in a [Merkle Tree](merkle-tree-structures.md).
-5.  The **Merkle root** of this tree is calculated and stored in the main locking script of the box (often as a constant).
+
+1. Each condition (A, B, C) is treated as a separate script fragment.
+2. These fragments are serialized to their [ErgoTree](../ergotree.md) byte representation (`Coll[Byte]`).
+3. Each byte representation is hashed (e.g., using `blake2b256`).
+4. These hashes are arranged as leaves in a [Merkle Tree](merkle-tree-structures.md).
+5. The **Merkle root** of this tree is calculated and stored in the main locking script of the box (often as a constant).
 
 The locking script essentially says: "This box can be spent if you provide:
-1.  A specific script fragment (`scriptBytes`).
-2.  A Merkle proof (`merkleProof`) demonstrating that `blake2b256(scriptBytes)` is a valid leaf within the Merkle tree whose root is `expectedMerkleRoot`.
-3.  Data (context variables, signatures, etc.) that satisfies the execution of the provided `scriptBytes`."
+
+1. A specific script fragment (`scriptBytes`).
+2. A Merkle proof (`merkleProof`) demonstrating that `blake2b256(scriptBytes)` is a valid leaf within the Merkle tree whose root is `expectedMerkleRoot`.
+3. Data (context variables, signatures, etc.) that satisfies the execution of the provided `scriptBytes`."
 
 ## Visual Representation
 
@@ -52,6 +54,7 @@ graph TD
     style F1 fill:#bfb,stroke:#333,stroke-width:2px
     style G1 fill:#fbf,stroke:#333,stroke-width:2px
 ```
+
 *The Merkle Root (A) commits to all possible spending conditions (leaves).*
 
 When spending using Alice's condition (Hash A), only the necessary path needs to be revealed:
@@ -83,13 +86,14 @@ graph TD
 
     AliceScriptBytes -->|blake2b256| D1
 ```
+
 *Only Alice's script bytes and the sibling hashes (E1, C) needed to reconstruct the root are revealed.*
 
 ## Benefits
 
-*   **Privacy:** Only the executed spending condition is revealed on-chain. Unused conditions remain hidden.
-*   **Efficiency:** Smaller on-chain footprint for the main locking script (just the root hash). Validation cost can be lower if the executed branch is simple, though Merkle proof verification adds overhead.
-*   **Scalability:** Allows for contracts with a very large number of potential conditions without making the base script excessively large or complex.
+* **Privacy:** Only the executed spending condition is revealed on-chain. Unused conditions remain hidden.
+* **Efficiency:** Smaller on-chain footprint for the main locking script (just the root hash). Validation cost can be lower if the executed branch is simple, though Merkle proof verification adds overhead.
+* **Scalability:** Allows for contracts with a very large number of potential conditions without making the base script excessively large or complex.
 
 ## Comparison: Traditional vs. MAST Execution
 
@@ -166,13 +170,15 @@ def verifyMerkleProof(root: Coll[Byte], leaf: Coll[Byte], proof: Coll[Coll[Byte]
   }
 }
 ```
+
 *(Note: The `verifyMerkleProof` function shown is conceptual and simplified. Real-world implementations require careful handling of edge cases and potential optimizations. Currently, complex proof verification directly in ErgoScript can be costly.)*
 
 ## Practical Implementation Steps (Off-Chain)
 
 The setup for MAST happens off-chain before creating the box locked by the MAST script.
 
-1.  **Define & Compile Conditions:**
+1. **Define & Compile Conditions:**
+
     ```scala
     // Using Ergo's AppKit (Scala Example)
     import org.ergoplatform.appkit._
@@ -193,7 +199,8 @@ The setup for MAST happens off-chain before creating the box locked by the MAST 
     val timelockBytes = ctx.compileContract(ConstantsBuilder.empty(), timelockScript).getErgoTree.bytes
     ```
 
-2.  **Build Merkle Tree:**
+2. **Build Merkle Tree:**
+
     ```scala
     // Hash each condition's ErgoTree bytes
     val hashAlice = Blake2b256.hash(aliceBytes)
@@ -206,7 +213,8 @@ The setup for MAST happens off-chain before creating the box locked by the MAST 
     val merkleRoot: Array[Byte] = ??? // Calculate the root hash
     ```
 
-3.  **Create MAST Box:**
+3. **Create MAST Box:**
+
     ```scala
     // Embed the Merkle Root, e.g., in R4
     val mastContract = ctx.compileContract(ConstantsBuilder.empty(), """
@@ -226,7 +234,8 @@ The setup for MAST happens off-chain before creating the box locked by the MAST 
       .build()
     ```
 
-4.  **Spending Transaction (Off-Chain Prep):**
+4. **Spending Transaction (Off-Chain Prep):**
+
     ```scala
     // When spending using Alice's condition:
     val chosenConditionBytes = aliceBytes
@@ -256,28 +265,28 @@ The setup for MAST happens off-chain before creating the box locked by the MAST 
 
 ## Security Considerations
 
-1.  **Merkle Proof Verification:** The on-chain script **must** correctly and completely verify the provided Merkle proof against the expected root hash. The `verifyMerkleProof` example above is simplified; a robust implementation is crucial. Without proper verification, an attacker could provide arbitrary script bytes and bypass the intended logic.
-2.  **Script Execution:** Ensure `executeFromVar` is only called *after* the Merkle proof is successfully verified.
-3.  **Context Variable Indices:** Use distinct and well-defined indices for context variables (`getVar`, `executeFromVar`) to avoid collisions or unintended data access.
-4.  **Gas Costs:** Verifying Merkle proofs on-chain consumes computational resources and increases transaction fees. Optimize proof verification logic or consider patterns where verification is minimized.
-5.  **Off-Chain Security:** The process of generating the Merkle tree, calculating the root, and generating proofs for spending must be secure and correct off-chain.
+1. **Merkle Proof Verification:** The on-chain script **must** correctly and completely verify the provided Merkle proof against the expected root hash. The `verifyMerkleProof` example above is simplified; a robust implementation is crucial. Without proper verification, an attacker could provide arbitrary script bytes and bypass the intended logic.
+2. **Script Execution:** Ensure `executeFromVar` is only called *after* the Merkle proof is successfully verified.
+3. **Context Variable Indices:** Use distinct and well-defined indices for context variables (`getVar`, `executeFromVar`) to avoid collisions or unintended data access.
+4. **Gas Costs:** Verifying Merkle proofs on-chain consumes computational resources and increases transaction fees. Optimize proof verification logic or consider patterns where verification is minimized.
+5. **Off-Chain Security:** The process of generating the Merkle tree, calculating the root, and generating proofs for spending must be secure and correct off-chain.
 
 ## Merkleized Finite State Machines (MFSMs)
 
 The MAST concept can be combined with [Finite State Machines (FSMs)](fsm-example.md) for complex multi-stage contracts:
 
-1.  **State Transitions as Branches:** Each possible state transition logic in an FSM can be represented as a separate script branch in a Merkle tree.
-2.  **Implementation Pattern:** The main contract box stores the current FSM state identifier (e.g., in R4) and the Merkle root of all possible state *transition scripts*. To transition, the spender provides the specific transition script bytes and its Merkle proof via context variables. The main script verifies the proof and then uses `executeFromVar` to run the transition script, which validates the state change (e.g., checks `INPUTS(0).R4` vs `OUTPUTS(0).R4`).
-3.  **Benefits:** Allows complex FSMs without revealing all possible states and transitions on-chain, enhancing privacy and potentially reducing on-chain script size.
+1. **State Transitions as Branches:** Each possible state transition logic in an FSM can be represented as a separate script branch in a Merkle tree.
+2. **Implementation Pattern:** The main contract box stores the current FSM state identifier (e.g., in R4) and the Merkle root of all possible state *transition scripts*. To transition, the spender provides the specific transition script bytes and its Merkle proof via context variables. The main script verifies the proof and then uses `executeFromVar` to run the transition script, which validates the state change (e.g., checks `INPUTS(0).R4` vs `OUTPUTS(0).R4`).
+3. **Benefits:** Allows complex FSMs without revealing all possible states and transitions on-chain, enhancing privacy and potentially reducing on-chain script size.
 
 ## Resources & Examples
 
-*   **Specifications in `sigmastate-interpreter`:**
-    *   [`MASTExampleSpecification.scala`](https://github.com/ergoplatform/sigmastate-interpreter/blob/develop/sigmastate/src/test/scala/sigmastate/utxo/examples/MASTExampleSpecification.scala): Provides Scala code demonstrating MAST concepts in a testing context.
-*   **Related Primitives:**
-    *   [Context Extension (`getVar`, `executeFromVar`)](lang-spec.md#PredefinedFunctions)
-    *   [Register Execution (`executeFromSelfReg`)](lang-spec.md#box-type)
-*   **Conceptual Docs:**
-    *   [Merkle Trees](../../data-model/structures/merkle/merkle-tree-structures.md)
+* **Specifications in `sigmastate-interpreter`:**
+  * [`MASTExampleSpecification.scala`](https://github.com/ergoplatform/sigmastate-interpreter/blob/develop/sigmastate/src/test/scala/sigmastate/utxo/examples/MASTExampleSpecification.scala): Provides Scala code demonstrating MAST concepts in a testing context.
+* **Related Primitives:**
+  * [Context Extension (`getVar`, `executeFromVar`)](lang-spec.md#PredefinedFunctions)
+  * [Register Execution (`executeFromSelfReg`)](lang-spec.md#box-type)
+* **Conceptual Docs:**
+  * [Merkle Trees](../../data-model/structures/merkle/merkle-tree-structures.md)
 
 Implementing MAST securely requires careful design of both the on-chain verification script and the off-chain preparation steps (tree generation, proof creation).

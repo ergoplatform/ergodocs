@@ -12,6 +12,7 @@ Of course, you are free to use any other programming language and framework you 
 We won’t cover the implementation of the UI side of your dApp here, but the code of the ErgoPay showcase dApp is [open-sourced](https://github.com/MrStahlfelge/ergopay-frontend-example) and of course, you can use it as you wish.
 
 ### Starting your Spring Boot project
+
 Spring provides an IDE, but it is not needed so you can work with the IDE of your choice. You’ll also need to have a Java Development Kit installed. If you don’t have one installed yet, use OpenJDK on Linux or install [Adoptium](https://adoptium.net/) on Windows. Head over and [generate a fresh Spring Boot project with the initializr](https://start.spring.io/). Change the information in the form as you like, for this tutorial you only need to add the “Spring web” dependency. If you don’t use Eclipse I would also recommend switching to “Gradle project”. Download and extract the generated project and open it with your IDE.
 
 You can start your application with Gradle by typing
@@ -21,14 +22,14 @@ You can start your application with Gradle by typing
 gradlew bootRun   // Windows
 ```
 
-This prints out that the server is running on http://localhost:8080/ now. But as we didn’t do something, it’s not of much use, so you can stop it with Ctrl-C.
+This prints out that the server is running on <http://localhost:8080/> now. But as we didn’t do something, it’s not of much use, so you can stop it with Ctrl-C.
 To get more familiar with how a REST API is implemented using Spring, you should now follow the [Spring Quick Start](https://spring.io/quickstart) and implement the Hello World endpoint before proceeding here.
 
 ### Adding an ErgoPay request endpoint
 
 Now it is time to build your first ErgoPay request endpoint. Such an endpoint is a GET REST API method that returns an “ErgoPayResponse” in its response body. ErgoPayResponse is a JSON-based data interchange format between a dApp and a wallet app and is described in [Ergo Improvement Proposal](https://github.com/ergoplatform/eips/) 0020.
 
-At first, we need to declare this response data type as a Java Object. 
+At first, we need to declare this response data type as a Java Object.
 
 Add the following file to your Spring Boot project:
 
@@ -66,15 +67,16 @@ public ErgoPayResponse ergoPayError() {
 ```
 
 This is already a valid ErgoPay response and endpoint. It does not serve a transaction, but will only present an error message to the users in their wallet apps.
-If you start your Spring Boot application now and open http://localhost:8080/ergopay in your local web browser, you’ll see the JSON response in your browser.
+If you start your Spring Boot application now and open <http://localhost:8080/ergopay> in your local web browser, you’ll see the JSON response in your browser.
 Use the endpoint from the wallet application
 
 It’s all good to see the response in your browser, but of course you want to see this in a wallet app. If you have a mobile device with the Ergo wallet app 1.6 or higher installed and it is connected to the same network than the machine running the Spring Boot application, you can test this. Generally, you just need to replace the “http(s)” prefix with “ergopay” and wrap the URL into a QR code to scan it with the wallet app. In this specific case, you must also replace “localhost” (which is only correct on the same machine) with the IP address of your computer within the network. So the URL wrapped into the QR code should look something like this:
+
 ```bash
 ergopay://192.168.0.1:8080/ergopay
 ```
 
-Now generate a QR code from this URL, for example on www.qrstuff.com. Make sure to generate a static URL. Scan it; when everything worked well, you’ll see the error message we defined above in the wallet app.
+Now generate a QR code from this URL, for example on <www.qrstuff.com>. Make sure to generate a static URL. Scan it; when everything worked well, you’ll see the error message we defined above in the wallet app.
 
 ### Building and reducing a transaction
 
@@ -180,7 +182,7 @@ You’ll notice that this is enough and you can sign and send the transaction fr
 
 ### Going further
 
-Now it’s time to start experimenting with building other types of transactions. 
+Now it’s time to start experimenting with building other types of transactions.
 
 Also check out the ErgoPay example server project — its [ErgoPayController.java](https://github.com/MrStahlfelge/ergopay-server-example/blob/master/src/main/java/org/ergoplatform/ergopay/ErgoPaySampleController.java) file defines some more endpoints: minting tokens, burning tokens, and spending a specific box.
 
@@ -194,7 +196,7 @@ Connecting a wallet is not needed in general, as you’ve seen: for a payment or
 Indeed, we can obtain the address with all ErgoPay ingredients we already learned about. But we need to introduce some kind of session management on the dApp backend. Chances are high that you already have some kind of session running for the user. For example if your dApp is a web shop, you probably already store the items added to the cart.
 
 But if you don’t have any type of session management running, we’ll implement the simplest kind of it now: every user of your dApp has a unique ID (“uuid”) that is randomly chosen by your frontend UI. This uuid is used as a session id. On the backend, we store a user’s P2PK address mapped to this id.
-Our backend needs two API endpoints: one for the wallet app to send a user’s address to store it attached to the uuid, and one for the frontend UI to request if the user address is set. 
+Our backend needs two API endpoints: one for the wallet app to send a user’s address to store it attached to the uuid, and one for the frontend UI to request if the user address is set.
 
 The following two methods do this:
 
@@ -248,10 +250,3 @@ We assumed that the user visits your dApp on a desktop and uses the wallet appli
 ### Conclusion
 
 You’ve learned to build an ErgoPay capable backend in this tutorial. You’ll find this as a [full example on GitHub](https://github.com/MrStahlfelge/ergopay-server-example). It is also deployed on Heroku, a free hosting service for web apps that you can use to start off with your own projects.
-
-
-
-
-
-
-

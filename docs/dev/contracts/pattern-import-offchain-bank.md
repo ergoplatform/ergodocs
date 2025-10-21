@@ -65,8 +65,8 @@ title: Import Off-chain Bank (Amitabh)
 ## See also
 
 - Category: [contracts-interoperability.md](contracts-interoperability.md)  
-- Library index: [contracts-library.md](contracts-library.md)  
-- Additional contracts index: [contracts.md](contracts.md)
+- [Library index](contracts-library.md)
+- [Additional contracts index](contracts.md)
 
 ## Contributor Checklist
 

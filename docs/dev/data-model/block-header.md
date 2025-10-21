@@ -34,7 +34,6 @@ The `Header` class in [Header.scala](https://github.com/ergoplatform/ergo/blob/m
 * **unparsedBytes:** A field to accommodate future protocol upgrades, allowing for the inclusion of data not yet parsed by current versions.
 * **sizeOpt:** An optional field storing the size of the header to optimize performance.
 
-
 ## Key Concepts
 
 * **[Merkle Tree](merkle-tree-structures.md):** A data structure used extensively in blockchains to efficiently verify data integrity. It allows for quick verification that a particular piece of data is included in a larger set.

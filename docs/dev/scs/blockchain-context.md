@@ -16,11 +16,11 @@ An integer representing the height of the block currently being validated by min
 
 `SELF` represents the current eUTXO input box which holds the ErgoScript contract. The `SELF` box is of type `Box`, containing information relevant to the specified eUTXO, such as:
 
-*   The value in nanoERGs
-*   The box ID
-*   The proposition bytes of the guarding script for this eUTXO
-*   The tokens stored in the box
-*   The box registers
+* The value in nanoERGs
+* The box ID
+* The proposition bytes of the guarding script for this eUTXO
+* The tokens stored in the box
+* The box registers
 
 ### INPUTS
 
@@ -46,22 +46,22 @@ The `CONTEXT.preHeader` function gives your contract access to the `PreHeader`. 
 
 ```scala
 {
-	// Focus on how we are accessing this data and using it in our contract
+ // Focus on how we are accessing this data and using it in our contract
 
-	// Checking if the id of our first input box is the same as the id of our output box
-	val selfAtZero = SELF.id == INPUTS(0).id
-	// Retrieving a long value from R4 of the first data input and adding it to our output value
-	val boxAmountToAdd: Long = CONTEXT.dataInputs(0).R4[Long].get 
-	val amountAddedInOutputs = OUTPUTS(0).value == SELF.value + boxAmountToAdd
-	// Ensuring the height is greater than 700000
-	val heightIsValid: Boolean = HEIGHT > 700000
-	// Ensuring the nonce is even
-	val randomValueIsEven: Boolean = CONTEXT.headers(0).powNonce(0) % 2 == 0
+ // Checking if the id of our first input box is the same as the id of our output box
+ val selfAtZero = SELF.id == INPUTS(0).id
+ // Retrieving a long value from R4 of the first data input and adding it to our output value
+ val boxAmountToAdd: Long = CONTEXT.dataInputs(0).R4[Long].get 
+ val amountAddedInOutputs = OUTPUTS(0).value == SELF.value + boxAmountToAdd
+ // Ensuring the height is greater than 700000
+ val heightIsValid: Boolean = HEIGHT > 700000
+ // Ensuring the nonce is even
+ val randomValueIsEven: Boolean = CONTEXT.headers(0).powNonce(0) % 2 == 0
 
-	// If the first condition is true, then the second condition is not checked
-	// Checking if either our output box has the correct value added or the nonce is even and height is greater than 700000
-	sigmaProp(amountAddedInOutputs && selfAtZero) 
-			|| sigmaProp(heightIsValid && randomValueIsEven)
+ // If the first condition is true, then the second condition is not checked
+ // Checking if either our output box has the correct value added or the nonce is even and height is greater than 700000
+ sigmaProp(amountAddedInOutputs && selfAtZero) 
+   || sigmaProp(heightIsValid && randomValueIsEven)
 }
 
 ```

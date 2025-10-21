@@ -8,7 +8,7 @@ The **Schnorr signature** is a core cryptographic primitive in Ergo, used both i
 
 Ergo’s Schnorr signatures are implemented using the **SecP256K1 elliptic curve**, the same curve used in Bitcoin. The flexibility of Schnorr signatures enables Ergo to support a range of applications, from simple transactions to more advanced multi-signature schemes and privacy-enhancing protocols.
 
-### Key Properties:
+### Key Properties
 
 - **Elliptic Curve**: Ergo uses **SecP256K1**, ensuring compatibility with Bitcoin-based systems.
 - **Generalized Proofs**: In Ergo, Schnorr signatures can be generalized into complex Sigma protocol proofs that allow for privacy-preserving multi-party computations and other advanced cryptographic applications.

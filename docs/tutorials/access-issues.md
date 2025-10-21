@@ -20,25 +20,23 @@ A wallet is simply an *interface* for the blockchain, if you have your seed phra
 ## I have my seed phrase but the wallet restored doesn't contain any ERG and is a different address
 
 - **Were you using the Ergo mobile wallet or the Ergo Reference Client?**
-    - **Yes**: Try [deriving additional addresses](#deriving-additional-addresses).
-    - **Was the wallet created before October 18th, 2022?**
-        - **Yes**: There was a [BIP32 key derivation bug](https://github.com/ergoplatform/ergo-appkit/pull/139) impacting certain wallets. Verify if your wallet was affected using [satergo.com](https://satergo.com/) which [checks this for you](https://t.me/Satergo/9509) when you restore.
+  - **Yes**: Try [deriving additional addresses](#deriving-additional-addresses).
+  - **Was the wallet created before October 18th, 2022?**
+    - **Yes**: There was a [BIP32 key derivation bug](https://github.com/ergoplatform/ergo-appkit/pull/139) impacting certain wallets. Verify if your wallet was affected using [satergo.com](https://satergo.com/) which [checks this for you](https://t.me/Satergo/9509) when you restore.
 - **How did you record your seed phrase?**
-    - **Written down**: Are any characters hard to read or ambiguous? Refer to the [BIP-39 wordlist](https://www.blockplate.com/pages/bip-39-wordlist) for clarification.
-    - **Screenshot**: Are you sure this mnemonic represents the wallet you are trying to recover?
-
+  - **Written down**: Are any characters hard to read or ambiguous? Refer to the [BIP-39 wordlist](https://www.blockplate.com/pages/bip-39-wordlist) for clarification.
+  - **Screenshot**: Are you sure this mnemonic represents the wallet you are trying to recover?
 
 ## I do not have my seed phrase
 
-
-- **using Yoroi?**: 
-    - **Yes**: Decrypt the wallet using [yoroi-ergo-wallet-recover](https://github.com/satsen/yoroi-ergo-wallet-recover)
+- **using Yoroi?**:
+  - **Yes**: Decrypt the wallet using [yoroi-ergo-wallet-recover](https://github.com/satsen/yoroi-ergo-wallet-recover)
 - **iOS Terminus / Ergo Mobile Wallet**:
-    - **Do you still have access to the mobile wallet/Terminus but are facing a 'User not authenticated' error?**
-        - **Yes**: This error often indicates a change in device credentials, possibly due to biometric changes or system updates.
-        - **No**: Explore other recovery options
-    - **Were you using the iOS Beta version?**
-        - **Yes**: The developer may be able to reactivate the beta if asked nicely. Ensure to attempt resolving it yourself first.
+  - **Do you still have access to the mobile wallet/Terminus but are facing a 'User not authenticated' error?**
+    - **Yes**: This error often indicates a change in device credentials, possibly due to biometric changes or system updates.
+    - **No**: Explore other recovery options
+  - **Were you using the iOS Beta version?**
+    - **Yes**: The developer may be able to reactivate the beta if asked nicely. Ensure to attempt resolving it yourself first.
 
 ## Deriving Additional Addresses
 
@@ -49,9 +47,10 @@ Ergo node uses a secret root key (derived from seed) for the change address
 Does the address that's been generated belong to the wallet you've restored? Check the derivation index and derive up to that number in `wallet config -> addresses -> derive more`
 
 Simply select the wallet
+
 ### In the Reference Client/Node
 
-Navigate to `localhost:9053/swagger#/wallet/walletDeriveKey` 
+Navigate to `localhost:9053/swagger#/wallet/walletDeriveKey`
 
 Click ***"Try it out"***
 
@@ -65,7 +64,6 @@ Click ***"Try it out"***
 ## Best practices for storing your seed securely
 
 If you've followed the steps above and managed to recover your funds, please store your seed inline with these best practices below to avoid further issues.
-
 
 1. **Avoid Digital Storage**: Never store the seed phrase on digital devices prone to hacking.
 2. **Physical Writing**: Write the seed phrase on paper or durable materials like metal.

@@ -43,7 +43,6 @@ Additionally, Ergo's smart contracts provide an extra layer of security, ensurin
 
 Moria Finance is an open-source project, and the team welcomes contributions from the community. To get involved, you can:
 
-
 - Explore the project's [GitHub repositories](https://github.com/Moria-Finance)
 
 By embracing the power of Ergo's smart contracts and the security of the Rosen Bridge, Moria Finance aims to pave the way for a new era of decentralized fund management, empowering individuals and organizations to take control of their assets in a secure and trustless manner.

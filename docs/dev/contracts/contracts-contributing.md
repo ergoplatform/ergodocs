@@ -109,7 +109,7 @@ Standardize how new contract patterns are added so developers can rely on consis
 
 ## See also
 
-- Library index: [contracts-library.md](contracts-library.md)
+- [Library index](contracts-library.md)
 - Off-chain references: [contracts-offchain-references.md](contracts-offchain-references.md)
 - MCP examples: [contracts-mcp-examples.md](contracts-mcp-examples.md)
 - Legacy index of contracts/examples: [contracts.md](contracts.md)

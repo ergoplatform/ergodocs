@@ -68,6 +68,7 @@ To perform comprehensive tests, you should set up a private DevNet where 6.0 fea
 2. **Create a DevNet Configuration**: Use the provided sample configuration as a template to create your own `devnet.conf` file. Refer to the Gist [DevNet Config Example](https://gist.github.com/kushti/4f9c6b706ab16fcf2151cf1f3b531f7d).
 
 3. **Launch the Node with 6.0 Activation**: Start the Ergo node with the following command:
+
    ```bash
    java -jar -Xmx4G ergo-6.0.0-alpha0.jar --devnet -c devnet.conf
    ```

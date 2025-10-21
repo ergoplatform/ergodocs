@@ -49,7 +49,6 @@ In this example, the original ErgoScript contract has been adapted to work with 
 
 Minting, the process of creating new tokens on a blockchain network, is a critical feature that enables the creation of native assets, such as NFTs. Both Ergo and Cardano offer native asset support through their respective eUTXO models, but their approach to minting and issuing tokens varies.
 
-
 ## Native Tokens on Ergo
 
 Ergo's token issuance is standardized through [EIP4](eip4.md). In Ergo, tokens are stored in the `R2` [register](registers.md) of a [box](box.md).
@@ -83,7 +82,7 @@ Minting policies specify the rules for creating and burning tokens, and each ass
 
 ## Global State Management
 
-The management of global state in Ergo and Cardano is influenced by their respective scripting languages and transaction validation processes. Ergo utilizes ErgoScript, a call-by-value, higher-order functional language without recursion. ErgoScript defines a guarding proposition for a coin as a logical formula that combines predicates over a context and cryptographic statements provable via Σ-protocols with AND, OR, k-out-of-n connectives. 
+The management of global state in Ergo and Cardano is influenced by their respective scripting languages and transaction validation processes. Ergo utilizes ErgoScript, a call-by-value, higher-order functional language without recursion. ErgoScript defines a guarding proposition for a coin as a logical formula that combines predicates over a context and cryptographic statements provable via Σ-protocols with AND, OR, k-out-of-n connectives.
 
 Although ErgoScript is not inherently Turing complete, Turing completeness can be achieved in Ergo using transaction trees, as outlined in this [peer reviewed paper](https://arxiv.org/pdf/1806.10116v1.pdf). A transaction tree is a structure where transactions are organized into a tree, with each transaction referencing its parent transaction(s). This allows for complex, multi-step computations to be executed across multiple transactions, effectively making Ergo Turing complete.
 
@@ -145,17 +144,15 @@ Ergo's approach to minting policies allows for more complex NFTs and token attri
 
 Both Ergo and Cardano offer unique strengths and capabilities, making them appealing choices for developers, users, and investors alike. As these platforms continue to evolve and collaborate, they will undoubtedly contribute significantly to the advancement of blockchain technology and the adoption of the eUTXO model.
 
-
-
 ## Frequently Asked Questions
 
 ### What are the similarities and differences between Ergo and Cardano's native assets?
 
-Ergo and Cardano both support native assets within their respective blockchain ecosystems. They both utilize the eUTXO model, but they employ different scripting languages (Ergo uses ErgoScript, while Cardano uses Plutus) and have distinct approaches to data storage, global state management, and minting policies. 
+Ergo and Cardano both support native assets within their respective blockchain ecosystems. They both utilize the eUTXO model, but they employ different scripting languages (Ergo uses ErgoScript, while Cardano uses Plutus) and have distinct approaches to data storage, global state management, and minting policies.
 
 ### Can Ergo's multiasset ledger interact with Cardano's ledger?
 
-While Ergo and Cardano share similarities due to their use of the eUTXO model, their ledgers are not directly interoperable. This is primarily due to differences in their scripting languages, minting policies, and data handling mechanisms. 
+While Ergo and Cardano share similarities due to their use of the eUTXO model, their ledgers are not directly interoperable. This is primarily due to differences in their scripting languages, minting policies, and data handling mechanisms.
 
 ### Does Ergo have a feature similar to Cardano's CIP25?
 

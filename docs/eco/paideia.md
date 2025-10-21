@@ -13,12 +13,12 @@ tags:
 For an alternative and potentially more detailed documentation source generated from the repository, explore the [paideiadao/paideia-app on DeepWiki](https://deepwiki.com/paideiadao/paideia-app)
 ///
 
-
-
 # Paideia
+
 [Paideia](https://www.paideia.im) is a project from the [ergopad](ergopad.md) team whose purpose is to create a functional, secure, and well-documented DAO software suite that supports DAOs as they form and develop. It will make it easy for anyone to initiate a DAO, distribute tokens using various methods, create proposals, and collect votes. It will help various organizations share funds in a secure and fair way.
 
 ## Using Paideia
+
 This section will cover how to use Paideia. Alternatively, you can watch [Paideia, Joining Your DAO | One Take Series](https://youtu.be/YUGNLQ6n8BA).
 
 ## Prerequisites
@@ -40,6 +40,7 @@ This section will cover how to use Paideia. Alternatively, you can watch [Paidei
 3. Enter the necessary details about your proposal, including any outputs, as well as the duration, then submit. The dApp connector will ask you to sign the transaction to complete the proposal creation.
 
 ## Voting on Proposals
+
 DAO members can vote on active proposals. Check the DAO config for the ammount of Paideia required to vote on a proposal. The Sigmanauts DAO does not require any Paideia to vote. Be aware that there may be a delay before votes are reflected in the UI, and a page refresh may be necessary.
 
 ## Staking and Unstaking
@@ -71,6 +72,6 @@ The Paideia team continues to work hard on improving the platform. Recent update
 
 ## Support and Issue Reporting
 
-Please submit any issues directly to the Paideia Discord by opening a support ticket. The link to open a ticket can be found [here](https://discord.gg/jP25DeTC8U) 
+Please submit any issues directly to the Paideia Discord by opening a support ticket. The link to open a ticket can be found [here](https://discord.gg/jP25DeTC8U)
 
 If you encounter an error message or unexpected behavior, please capture the console logs (accessible by pressing F12 in most browsers) and share them with the Paideia team to aid in debugging.

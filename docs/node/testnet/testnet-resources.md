@@ -79,6 +79,7 @@ scorex {
 ## Development Tools
 
 When configuring dApps for testnet, update these settings:
+
 ```
 node.url = "http://213.239.193.208:9052/"
 node.networkType = "TESTNET"

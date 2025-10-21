@@ -27,13 +27,9 @@ Python developers can interact with the Ergo blockchain using various [libraries
 
 ::/cards::
 
-
-
-
 ## ErgoPad
 
 [ErgoPad](ergopad.md) has [released a set of docker containers](https://github.com/ergopad) combined to create a React/MaterialUI [frontend](get-started.md), [REST API](api.md) [backend](get-started.md), [assembler](assembler.md) to interact with [smart contracts](ergoscript.md) and supporting services like [ergonode](install.md), redis and postgres.
-
 
 - [NFT-Locked Vesting](https://github.com/ergopad/ergopad-api/blob/dev/app/contracts/NFTLockedVesting.md)
 - [ergo-python-appkit](https://github.com/ergo-pad/ergo-python-appkit)

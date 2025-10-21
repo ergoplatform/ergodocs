@@ -22,7 +22,6 @@ The ErgoScript ecosystem offers a wide range of tools and resources to help deve
 - [Kiosk](kiosk.md) lets anyone play with ErgoScript using a basic web-based UI
 - [ergoscript-compiler](https://github.com/ergoplatform/ergoscript-compiler)
 
-
 ##### Courses
 
 - [ErgoScript 101 Crash Course](https://docs.google.com/presentation/d/10gYO82z_7qloRrFOcCxTFuzpP40IImPyIKMV2ZFd9M4/edit#slide=id.p) (Slides)
@@ -30,18 +29,15 @@ The ErgoScript ecosystem offers a wide range of tools and resources to help deve
 - [The ErgoScript Developer Course from DeCo Education](https://github.com/DeCo-Education/ErgoScript-Developer-Course)
 - [Deco Education: 2022 Script Class](https://www.youtube.com/watch?v=qR0_k7VH6KI&list=PLopsKGshj0B4DfFnS-pvriZhba050eaXu)
 
-
-##### Tutorials 
+##### Tutorials
 
 - [ErgoScript by Example Repository](https://github.com/ergoplatform/ergoscript-by-example)
 - [Testing Ergo Contracts Off-chain](https://github.com/anon-real/contract-testing)
-
 
 ##### Advanced Tutorials
 
 - [Advanced ErgoScript Tutorial](https://ergoplatform.org/docs/AdvancedErgoScriptTutorial.pdf)
 - [ErgoScript tutorial](https://ergoplatform.org/docs/ErgoScript.pdf)
-
 
 ##### Explanations
 
@@ -51,7 +47,7 @@ The ErgoScript ecosystem offers a wide range of tools and resources to help deve
 ##### References
 
 - [ErgoScript Language Spec](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/LangSpec.md)
-- [ErgoScript](https://ergoplatform.org/docs/ErgoScript.pdf) 
+- [ErgoScript](https://ergoplatform.org/docs/ErgoScript.pdf)
 - [ErgoTree](https://ergoplatform.org/docs/ErgoTree.pdf)
 - [High-Level Design Patterns In Extended UTXO Systems](https://github.com/Emurgo/Emurgo-Research/blob/master/smart-contracts/High%20Level%20Design%20Patterns%20In%20Extended%20UTXO%20Systems.md)
 
@@ -60,13 +56,11 @@ The ErgoScript ecosystem offers a wide range of tools and resources to help deve
 - [ErgoPad Plasma Staking Contracts](https://github.com/paideiadao/paideia-contracts/blob/main/paideia_contracts/contracts/plasma_staking/ergoscript/latest/plasmaStaking.es)
 - [GetBlok.io Smart Pools](https://github.com/GetBlok-io/ergo-smartpooling-contracts)
 
-
 ##### Visual
 
-- [FlowCards](flowcards.md) is *A Declarative Framework for Development of Ergo dApps* 
+- [FlowCards](flowcards.md) is *A Declarative Framework for Development of Ergo dApps*
 - [flowcardLib: Ergo FlowCard library for diagrams.net](https://github.com/lucagdangelo/flowcardLib)
 - [ergo-castanet](https://github.com/iandebeer/ergo-castanet)
-
 
 ##### Box
 

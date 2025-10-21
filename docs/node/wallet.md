@@ -15,22 +15,22 @@ tags:
 
 ## Initialize Wallet
 
-To initialize the wallet, restart the node and navigate to the [panel](http://127.0.0.1:9053/panel) (Swagger UI). Set the API key using the secret phrase you configured previously. Remember to use the **plain text secret phrase**, not the hash stored in the configuration file. In our example, this is the string `hello`. 
+To initialize the wallet, restart the node and navigate to the [panel](http://127.0.0.1:9053/panel) (Swagger UI). Set the API key using the secret phrase you configured previously. Remember to use the **plain text secret phrase**, not the hash stored in the configuration file. In our example, this is the string `hello`.
 
 ![set API key](https://user-images.githubusercontent.com/23208922/69916579-b7ca1680-1482-11ea-880e-251c8139a613.png)
 
 Click on **Initialize wallet** (or execute the `/wallet/init` or `/wallet/restore` endpoint). A pop-up or response will appear depending on the method used. You have two main options:
 
 1. **Initialize a new wallet**: If this is your first time running the node, choose this option to generate a new mnemonic sentence.
-2. **Restore an existing wallet**: If you have an existing wallet (e.g., from a previous installation or another wallet software) and want to access its funds, choose this option and provide your previously saved mnemonic sentence. 
+2. **Restore an existing wallet**: If you have an existing wallet (e.g., from a previous installation or another wallet software) and want to access its funds, choose this option and provide your previously saved mnemonic sentence.
 
-Choose the option that suits your situation. 
+Choose the option that suits your situation.
 
 ### Initialize Wallet from Scratch
 
 ![Initialize wallet](https://user-images.githubusercontent.com/23208922/69916584-d4fee500-1482-11ea-838c-e8aba9f41c76.png)
 
-In the pop-up form (or API request body for `/wallet/init`), enter a secure password for encrypting your wallet file. The 'Mnemonic password' (BIP-39 passphrase) field is optional but adds extra security. After clicking 'Send' (or executing the request), the API response will contain the generated mnemonic sentence. 
+In the pop-up form (or API request body for `/wallet/init`), enter a secure password for encrypting your wallet file. The 'Mnemonic password' (BIP-39 passphrase) field is optional but adds extra security. After clicking 'Send' (or executing the request), the API response will contain the generated mnemonic sentence.
 
 ![mnemonic sentence](https://user-images.githubusercontent.com/23208922/69916693-2360b380-1484-11ea-9366-1bf9eb0f8b30.png)
 
@@ -38,7 +38,7 @@ Make sure to copy this sentence accurately and store it securely offline. You wi
 
 ### Restore Wallet from Earlier
 
-To restore an existing wallet, paste your previously saved mnemonic sentence into the 'Mnemonic' field in the Restore-wallet form (or the `mnemonic` field in the `/wallet/restore` API request). Enter a secure password to encrypt the restored wallet file. Leave the 'Mnemonic password' field empty unless your original mnemonic was created with a BIP-39 passphrase; in that case, enter the passphrase here. 
+To restore an existing wallet, paste your previously saved mnemonic sentence into the 'Mnemonic' field in the Restore-wallet form (or the `mnemonic` field in the `/wallet/restore` API request). Enter a secure password to encrypt the restored wallet file. Leave the 'Mnemonic password' field empty unless your original mnemonic was created with a BIP-39 passphrase; in that case, enter the passphrase here.
 
 ![restore wallet](https://user-images.githubusercontent.com/23208922/71127599-66a37c00-2211-11ea-9b9e-9a69ac80c306.png)
 

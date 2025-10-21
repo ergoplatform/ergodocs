@@ -89,7 +89,7 @@ CREATE TABLE shares_mypool1 PARTITION OF shares FOR VALUES IN ('mypool1');
 
 - Go to the `build/` directory inside your MiningCore folder
 - Create a `<coin>.json` configuration file (e.g. `ergo.json`)
-- Refer to: [MiningCore Config Example](https://github.com/oliverw/miningcore/wiki/Configuration) and the example given below. 
+- Refer to: [MiningCore Config Example](https://github.com/oliverw/miningcore/wiki/Configuration) and the example given below.
 
 /// details | Example Ergo config.json:
      {type: tip, open: false}
@@ -97,12 +97,11 @@ CREATE TABLE shares_mypool1 PARTITION OF shares FOR VALUES IN ('mypool1');
 ### Required Fields in Config
 
 - Replace placeholders:
-    - `YOURPOSTGRESQL_PASSWORD_GOES_HERE`
-    - `YOUR_REWARD_ADDR_GOES_HERE`
+  - `YOURPOSTGRESQL_PASSWORD_GOES_HERE`
+  - `YOUR_REWARD_ADDR_GOES_HERE`
 - Adjust:
-    - `rewardRecipients` percentage to fit your payout model
-    - Enable `paymentProcessing` if you will use automatic share payouts
-
+  - `rewardRecipients` percentage to fit your payout model
+  - Enable `paymentProcessing` if you will use automatic share payouts
 
 ```
 {
@@ -310,8 +309,8 @@ CREATE TABLE shares_mypool1 PARTITION OF shares FOR VALUES IN ('mypool1');
     ]
 }
 ```
-///
 
+///
 
 ## Step 7: Start the Pool
 
@@ -323,9 +322,9 @@ Miningcore -c <your-config>.json
 ```
 
 - The JSON config defines the **log files** you should monitor for:
-    - Startup errors
-    - Daemon issues
-    - Pool activity
+  - Startup errors
+  - Daemon issues
+  - Pool activity
 
 - You may need to adjust the config to fit your specific pool setup.
 
@@ -386,15 +385,15 @@ Once all components connect, traffic becomes **bi-directional**.
 ### Port Opening Guidelines
 
 - If **all components are on the same machine**:
-    - No need to open ports — uses `localhost`
+  - No need to open ports — uses `localhost`
 
 - If using **LAN or WAN**:
-    - Open required ports on your OS firewall
-    - On WAN, configure **port forwarding** on your router
+  - Open required ports on your OS firewall
+  - On WAN, configure **port forwarding** on your router
 
 ---
 
-## You're Good to Go!
+## You're Good to Go
 
 You now have a fully operational MiningCore pool on Linux.
 

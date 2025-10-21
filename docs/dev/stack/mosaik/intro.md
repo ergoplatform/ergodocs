@@ -8,8 +8,6 @@ tags:
 
 > At its core, Mosaik is a JSON-based markup language served via a REST API intended to be used by Ergo platform dApps. Therefore, it provides elements and interactions typically needed for these.
 
-
-
 ### On-chain and off-chain code
 
 Ergo is a smart contract platform for decentralized applications to build on, working with bitcoin’s UTXO model. Smart contracts are guard scripts that define when an unspent box can be spent. It is written in ErgoScript, a subset of Scala.
@@ -20,7 +18,6 @@ Typically, the off-chain code is run in a centralized manner for user convenienc
 
 While on the one hand, Ergo’s off-chain code is very flexible as we can use it with any programming language, with existing SDKs already covering at least four programming languages. On the other hand, this complicates things for aspiring dApp developers: Which programming language should they use?
 
-
 ### UI code
 
 Another big challenge awaits the developer when that decision is made: A user interface is needed. Many user interface frameworks long to be used, but how should the user interface interact with the off-chain code?
@@ -28,7 +25,6 @@ Another big challenge awaits the developer when that decision is made: A user in
 In many cases, the decision is made to write everything in JavaScript. Many capable user interface frameworks are available and run on every platform. Often, the UI code and the off-chain code are done within the user's browser. Doing this is legitimate but restricts the dApp's capabilities as we are then limited to the web dapp connector, and ErgoPay users are excluded. Additionally, this can lead to a poor user experience (an example is Ergo auction house that fetches the blockchain state on every website visit from the user's client).
 
 It is favorable to separate the off-chain and user interface code but creates another problem for aspiring dApp developers as it introduces the need for an actual client/server architecture and perhaps even different programming languages to be used, not to mention the problem of getting transactions signed by the user, which needs some more knowledge by the dApp developers to interact with wallet applications.
-
 
 ### Ergo Mosaik UI system
 
@@ -44,7 +40,6 @@ At the time of this writing, two Mosaik executors are available: A desktop appli
 
 While now it is still too early to build a dApp solely on Mosaik, we recommend taking a look at the system and using it as an extension for your existing dApp, as it will give you a lot of visibility once the feature is rolling out to wallet users.
 
-
 ### Mosaik first hands-on
 
 Let’s take a real look at Mosaik to get a feeling for the system. Clone the repository from [https://github.com/MrStahlfelge/mosaik](https://github.com/MrStahlfelge/mosaik) to your local system. You’ll need Java 11 or newer installed for the next steps. Start the Mosaik Desktop Executor (which also serves as a debugging tool) by invoking the following command.
@@ -55,20 +50,17 @@ Let’s take a real look at Mosaik to get a feeling for the system. Clone the re
 
 The column on the right gives you info on the input values that the current view holds, as well as the JSON model that is currently shown. Most space is reserved for the actual Mosaik app that is running. The debugger shows a simple built-in app demonstrating a few view elements and actions. Let’s take a closer look at the JSON on the right-hand side. If you copy it in a better-suited editor, you’ll see that its outermost object contains two properties:
 
-
 ```JSON
     {
       "actions": [...],
       "view": {
-    	"type": "Column",
-    	"children": [...]
+     "type": "Column",
+     "children": [...]
       }
     }
 ```
 
-
 The Mosaik app consists of actions and view elements. Here, the root view element is a column. One of the child view elements is the label that shows the text “Label (alignment end, click it)
-
 
 ```JSON
     {
@@ -81,13 +73,11 @@ The Mosaik app consists of actions and view elements. Here, the root view elemen
     }
 ```
 
-
 If you click this label in the desktop application, you will see that the view changes:
 
 ![Mosaik 2](../../../assets/img/mosaik/tutorial1-2.png)
 
 This was caused by the onClick attribute defined on the JSON above. It references “replaceLabel”. When you look at the list of defined actions, you’ll find this action declared as follows:
-
 
 ```JSON
     {
@@ -106,22 +96,19 @@ This was caused by the onClick attribute defined on the JSON above. It reference
     }
 ```
 
-
 Clicking on the label that was first shown caused a “ChangeSiteAction” to be launched, replacing the label with a new one with a different text and color. It is essential to understand that the original label was replaced, not changed, to have a new text and color. All Mosaik elements are immutable.
 
 Before we look at a more interesting example, let’s try a simple feature the desktop executor provides that might come in handy when designing your own apps.
 
 Locate the definition for the headline label defined as follows in the right-hand pane:
 
-
 ```JSON
     {
-        	"type": "Label",
-        	"style": "HEADLINE2",
-        	"text": "Welcome to Mosaik demo app"
+         "type": "Label",
+         "style": "HEADLINE2",
+         "text": "Welcome to Mosaik demo app"
     }
 ```
-
 
 Now change the style to `HEADLINE1`. You’ll see the view immediately changing. (You can edit directly from within this view!)
 
@@ -133,16 +120,13 @@ You can fire up the view elements and actions demo by calling the following comm
 
 After some compiling, the app is waiting to get fetched on port 8080:
 
-
 ```bash
 Tomcat started on port(s): 8080 (http) with context path ''
 ```
 
-
 Navigate to localhost:8080 by entering this into the navigation bar and hit enter:
 
 ![Mosaik 3](../../../assets/img/mosaik/tutorial1-3.png)
-
 
 Mosaik automatically determines that the actual Mosaik app is served from the path /appselect/ and presents a chooser. Let’s ignore the “typical errors” demo for now (it is meant to be checked by Mosaik executor developers) and make your choice!
 
@@ -151,7 +135,6 @@ As this demo is not a built-in into the desktop debugger, it can be launched fro
 ![Mosaik 4](../../../assets/img/mosaik/tutorial1-4.png)
 
 ![Mosaik 5](../../../assets/img/mosaik/tutorial1-5.png)
-
 
 Other existing Mosaik executors are Ergo Wallet App for Desktop and the [Mosaik web executor](https://github.com/MrStahlfelge/mosaik-kt-js) to run Mosaik apps in browser.
 

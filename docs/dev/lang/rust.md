@@ -31,14 +31,13 @@ Understanding the [UTXO transactional model](eutxo.md) is crucial when developin
     "title": "RustKit",
     "content": "(WIP), A SDK for building applications on the Ergo blockchain",
     "url": "../stack/rustkit.md"
-  },
+  }
 
 ]
 
 ::/cards::
 
 ## Utilities
-
 
 ::cards::
 

@@ -7,19 +7,19 @@ tags:
   - testnet.conf
 ---
 
-# Overview of Node Configuration Files 
+# Overview of Node Configuration Files
 
-Welcome to the node configuration files documentation. This section provides a comprehensive guide to the various configuration files crucial for setting up and managing an Ergo node. These files contain essential parameters for controlling and fine-tuning different aspects of the Ergo protocol, ranging from node operation and blockchain management to wallet functionality and voting mechanisms. 
+Welcome to the node configuration files documentation. This section provides a comprehensive guide to the various configuration files crucial for setting up and managing an Ergo node. These files contain essential parameters for controlling and fine-tuning different aspects of the Ergo protocol, ranging from node operation and blockchain management to wallet functionality and voting mechanisms.
 
 Included in this section is the main configuration file, [application.conf](https://github.com/ergoplatform/ergo/blob/master/src/main/resources/application.conf), along with several others that each serve specific purposes in the node's overall functioning.
 
-- [application.conf](https://github.com/ergoplatform/ergo/blob/master/src/main/resources/application.conf): The principal configuration file containing the primary settings for the Ergo protocol. 
+- [application.conf](https://github.com/ergoplatform/ergo/blob/master/src/main/resources/application.conf): The principal configuration file containing the primary settings for the Ergo protocol.
 
-    - [node](conf-node.md): Configures node-specific parameters.
-    - [cache](conf-cache.md): Handles cache-related settings.
-    - [chain](conf-chain.md): Manages blockchain-related settings.
-    - [wallet](conf-wallet.md): Sets up wallet parameters.
-    - [voting](conf-voting.md): Oversees voting-related configurations.
+  - [node](conf-node.md): Configures node-specific parameters.
+  - [cache](conf-cache.md): Handles cache-related settings.
+  - [chain](conf-chain.md): Manages blockchain-related settings.
+  - [wallet](conf-wallet.md): Sets up wallet parameters.
+  - [voting](conf-voting.md): Oversees voting-related configurations.
 
 - [bounded-mailbox](conf-bounded.md): Controls mailbox settings.
 - [akka](conf-akka.md): Manages Akka settings for the actor system.
@@ -58,10 +58,10 @@ The `knownPeers` parameter stores a list of bootstrap node addresses that your n
 **About Time Settings**
 
 All time span parameters are specified in milliseconds by default. However, you can use duration units for convenience. Supported units include:
-* s, second, seconds
-* m, minute, minutes
-* h, hour, hours
-* d, day, days
+- s, second, seconds
+- m, minute, minutes
+- h, hour, hours
+- d, day, days
 
 For usage examples, refer to the default configuration file linked above.
 
@@ -85,7 +85,7 @@ You can use the `seed` parameter (a Base64 encoded string) to restore an existin
 
 **Warning!**
 
-The wallet file (`wallet.dat` by default) is crucial. Ensure you store it in a safe, protected location and back it up regularly. 
+The wallet file (`wallet.dat` by default) is crucial. Ensure you store it in a safe, protected location and back it up regularly.
 
 It is strongly advised to remove the `seed` parameter from the configuration file after the wallet has been successfully initialized or restored. If an attacker gains access to your seed phrase, they can access all funds associated with that wallet across all derived addresses!
 
@@ -129,7 +129,7 @@ The `corsAllowedOrigin` parameter configures Cross-Origin Resource Sharing (CORS
 
 Several configuration parameters can influence the performance and behavior of the node's REST API, especially under heavy load:
 
-*   **Request Timeout:** The `scorex.restApi.timeout` setting (see [Scorex Config](conf-scorex.md)) defines the maximum time the node will spend processing a single API request before timing out (default is often 5 seconds). If you experience timeouts during complex queries or high load, you might consider increasing this value, but be aware of the potential resource implications.
-*   **Concurrency Handling:** The processing of API requests is managed by Akka dispatchers. The `api-dispatcher` settings (see [API Dispatcher Config](conf-api.md)) control the number of threads (`parallelism-min`, `parallelism-factor`, `parallelism-max`) and the processing throughput (`throughput`) for handling concurrent API requests. Tuning these values might improve responsiveness under load but requires understanding Akka dispatcher configuration.
-*   **Rate Limiting:** The Ergo node software does **not** include built-in application-level rate limiting for its API endpoints. If you need to protect your node from excessive API requests, you should implement rate limiting externally, for example, using a reverse proxy server like Nginx or HAProxy placed in front of the node.
-*   **JVM Memory:** Overall node performance, including API responsiveness, can be affected by the allocated Java Virtual Machine (JVM) memory. Ensure the node has sufficient heap space allocated via the `-Xmx` flag (e.g., `-Xmx4G`) when starting the node, as described in the [Manual Installation Guide](install/manual.md). Insufficient memory can lead to increased garbage collection pauses and slower response times, potentially contributing to timeouts under load.
+- **Request Timeout:** The `scorex.restApi.timeout` setting (see [Scorex Config](conf-scorex.md)) defines the maximum time the node will spend processing a single API request before timing out (default is often 5 seconds). If you experience timeouts during complex queries or high load, you might consider increasing this value, but be aware of the potential resource implications.
+- **Concurrency Handling:** The processing of API requests is managed by Akka dispatchers. The `api-dispatcher` settings (see [API Dispatcher Config](conf-api.md)) control the number of threads (`parallelism-min`, `parallelism-factor`, `parallelism-max`) and the processing throughput (`throughput`) for handling concurrent API requests. Tuning these values might improve responsiveness under load but requires understanding Akka dispatcher configuration.
+- **Rate Limiting:** The Ergo node software does **not** include built-in application-level rate limiting for its API endpoints. If you need to protect your node from excessive API requests, you should implement rate limiting externally, for example, using a reverse proxy server like Nginx or HAProxy placed in front of the node.
+- **JVM Memory:** Overall node performance, including API responsiveness, can be affected by the allocated Java Virtual Machine (JVM) memory. Ensure the node has sufficient heap space allocated via the `-Xmx` flag (e.g., `-Xmx4G`) when starting the node, as described in the [Manual Installation Guide](install/manual.md). Insufficient memory can lead to increased garbage collection pauses and slower response times, potentially contributing to timeouts under load.

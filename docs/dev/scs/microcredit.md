@@ -1,9 +1,11 @@
 
 ---
 tags:
-  - Microcredit
-  - ErgoScript
-  - Example
+
+- Microcredit
+- ErgoScript
+- Example
+
 ---
 
 A lot of blockchain-related news these days **is** telling us that a bank _X_ or a corporation _Y_ is going to use a "blockchain" to "reduce costs". Basically, it means that just another buzzword is considered by large financial institutions as just another tool to extract value more efficiently and to save costs by cutting jobs.
@@ -47,7 +49,6 @@ Let's start with the main contract defined in points (1-3) above:
 
 This **ErgoScript** script is to be compiled into a syntax tree (which is written into the blockchain in a serialized form) by binding it with concrete values for variables (_pubkeyA_, _pubkeyB_, _pubkeyC_, _pubkeyD_, _spendingContract1Hash_, _spendingContract2Hash_). _spendingContract1Hash_ is a hash of the (serialized) equipment spending script, which will be provided below; _spendingContract2Hash_ is a hash of the construction spending script.
 
-
 The equipment spending script is below:
 
 ```scala
@@ -64,7 +65,7 @@ The equipment spending script is below:
 }
 ```
 
-And the construction script is: 
+And the construction script is:
 
 ```scala
 {
@@ -86,7 +87,6 @@ Now assume that the cooperative federation has created a coin protected by the v
 2. Send the transaction to the cooperatives; wait for the transaction with the threshold-signed input to be published on the blockchain.
 3. Enter into a contract with an equipment seller; co-sign a spending transaction.
 4. Enter into a contract with a builder; co-sign a spending transaction.
-
 
 The entrepreneur can easily run away without doing any business, but with no more than _3,000_ Ergs. This can be fixed; e.g., this money could be made spendable only after block number _5,000_; before that, **the** money could be withdrawn by the cooperatives. For equipment and construction spending, the entrepreneur works alongside some presumably already reputable businesses. Thus, the investor reduces their risks.
 

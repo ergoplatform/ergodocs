@@ -7,7 +7,7 @@ To obtain a new digest from an old one, the light full node utilizes AD-transfor
 
 For more detailed information, refer to [this paper](https://eprint.iacr.org/2016/994).
 
-**Additional settings:** 
+**Additional settings:**
 
 The light full node supports the following additional settings:
 
@@ -17,10 +17,10 @@ The light full node supports the following additional settings:
 
 ## Workflow Steps
 
-1.  Send **ErgoSyncInfo** message to connected peers.
-2.  Get a response with an **INV** message containing the IDs of blocks that are better than the current best block.
-3.  Request headers for all the IDs received in step 2.
-4.  Upon receiving a header, perform the following checks:
+1. Send **ErgoSyncInfo** message to connected peers.
+2. Get a response with an **INV** message containing the IDs of blocks that are better than the current best block.
+3. Request headers for all the IDs received in step 2.
+4. Upon receiving a header, perform the following checks:
 
 ```java
 if (History.apply(header).isSuccess) {
@@ -34,7 +34,7 @@ if (History.apply(header).isSuccess) {
 }
 ```
 
-5.  Request BlockTransactions and ADProofs starting from the specified BlocksToKeep value in the history. This is done after the node bootstrapping process and involves requesting the last header:
+5. Request BlockTransactions and ADProofs starting from the specified BlocksToKeep value in the history. This is done after the node bootstrapping process and involves requesting the last header:
 
 ```java
 History.lastBestHeaders(BlocksToKeep).foreach { header =>
@@ -43,7 +43,7 @@ History.lastBestHeaders(BlocksToKeep).foreach { header =>
 }
 ```
 
-6.  Upon receiving a modifier (BlockTransactions or ADProofs), perform the following checks:
+6. Upon receiving a modifier (BlockTransactions or ADProofs), perform the following checks:
 
 ```java
 if (History.apply(modifier) == Success(ProgressInfo)) {

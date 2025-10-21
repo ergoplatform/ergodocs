@@ -1,5 +1,4 @@
-# Address Types 
-
+# Address Types
 
 Possible network types are:
 
@@ -12,20 +11,19 @@ Address types are (semantics described below):
 * `0x02` - Pay-to-Script-Hash(P2SH)
 * `0x03` - Pay-to-Script(P2S)
 
-
 For an address type, we form content bytes as follows:
 
 * **P2PK** - serialized (compressed) public key
 * **P2SH** - first 192 bits of the Blake2b256 hash of serialized script bytes
 * **P2S**  - serialized script (this is where mining rewards go!)
 
-For example, 
+For example,
 
-- Sending 10 ERG to a **P2PK** address usually means that a corresponding transaction will contain a box in which 10 Ergs are locked by a public key encoded in the **P2PK** Address. 
-- Similarly, in the case of a **P2S** address, the box will be locked by a script encoded in the Address. 
-- In the most complicated case of a **P2SH** script, the box will be protected by a special predefined script that takes the first 192 bits of *Blake2b256* hash value for a script shown by an input spending the box. 
+* Sending 10 ERG to a **P2PK** address usually means that a corresponding transaction will contain a box in which 10 Ergs are locked by a public key encoded in the **P2PK** Address.
+* Similarly, in the case of a **P2S** address, the box will be locked by a script encoded in the Address.
+* In the most complicated case of a **P2SH** script, the box will be protected by a special predefined script that takes the first 192 bits of *Blake2b256* hash value for a script shown by an input spending the box.
 
-Here are some examples of the various types of addresses you'll see on the testnet: 
+Here are some examples of the various types of addresses you'll see on the testnet:
 
 * **P2PK** (`3WvsT2Gm4EpsM9Pg18PdY6XyhNNMqXDsvJTbbf6ihLvAmSb7u5RN`)
 * **P2SH** (`rbcrmKEYduUvADj9Ts3dSVSG27h54pgrq5fPuwB`)
@@ -41,12 +39,10 @@ And here is how what they look like on the mainnet:
 
 ## Summary
 
-* **Prefix byte** = `network type + address type` 
-    * (for example, P2S script on the testnet starts with `0x13` before Base58)
+* **Prefix byte** = `network type + address type`
+  * (for example, P2S script on the testnet starts with `0x13` before Base58)
 * **checksum** = `leftmost_4_bytes (blake2b256 (prefix byte || content bytes))`
 * **address** = `prefix byte || content bytes || checksum`
-
-
 
 ## P2S vs P2SH
 

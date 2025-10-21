@@ -24,7 +24,6 @@ Options are like contracts that give you the choice to buy or sell something (li
   
 - **Generating Income:** Alternatively, you could sell a call option if you don't think Ergo's price will rise significantly. You'll receive money upfront for selling the option, and if the price stays below the agreed price, you keep the money without having to sell any tokens.
 
-
 **Learning More:**
 
 - [Beginner's Options Course](https://learn.tastylive.com/courses/beginner-options-course)
@@ -40,13 +39,13 @@ SigmaO is an innovative platform that brings the complex world of options tradin
 **Explainer Article:** [SigmaO Options on Ergo Tokens](https://medium.com/@Haileypdll/sigmao-options-on-ergo-tokens-18adaa098416)
 **GitHub:** [ThierryM1212/sigmao](https://github.com/ThierryM1212/sigmao)
 **SigmaO Telegram chat:** [t.me/SigmaOpts](https://t.me/SigmaOpts)
+
 ## How Does SigmaO Work?
 
 SigmaO plans to make options trading accessible by providing a platform where users can easily create and trade options. The platform utilizes Ergo's smart contracts to ensure transactions are secure and efficient. Pricing mechanisms for these options are derived from Spectrum Liquidity Pools, providing transparent and fair valuation.
 
-> Join qx() as he takes you through a [one shot no edits no nonsense take on how to do options trading on Ergo!](https://youtube.com/watch?v=XoJT7aR7o4w) This is only for buying call options, more videos to come with how to execute the call, and create calls and puts. 
+> Join qx() as he takes you through a [one shot no edits no nonsense take on how to do options trading on Ergo!](https://youtube.com/watch?v=XoJT7aR7o4w) This is only for buying call options, more videos to come with how to execute the call, and create calls and puts.
 {.is-success}
-
 
 ## The Benefits of Trading Options on SigmaO
 
@@ -73,8 +72,6 @@ Sigma'O is a decentralized application (dApp) built on the Ergo blockchain. It w
 - **Strike Price**: The price of the underlying asset when exercising the option.
 - **Maturity Date**: The end of the grant of the option.
 
-
-
 **Minting Option Tokens:**
 
 When Sigma'O options are created, a reserve is ensured to allow for the option's exercise.
@@ -94,11 +91,10 @@ Sigma'O also supports priced sell options for options on an underlying token wit
 
 - **Exact Formula:** The exact computation implemented in Ergoscript and JS can be found [here](https://github.com/ThierryM1212/SigmaO/blob/main/front-end/src/utils/utils.js#L98) and [here](https://github.com/ThierryM1212/SigmaO/blob/main/contract/Option_Sell.es#L107).
 
-
 **Future Developments:**
 
 The SigmaO team is dedicated to enhancing the platform with user-friendly interfaces and off-chain bots for efficient transaction processing. This will not only improve the trading experience but also contribute to the overall liquidity and dynamism of Ergo's DeFi ecosystem.
- 
+
 ## Examples
 
 - **Gold Oracle Token Option:**
@@ -108,4 +104,4 @@ The SigmaO team is dedicated to enhancing the platform with user-friendly interf
   - Options were introduced for GORT tokens, providing users with the ability to speculate on its price dynamics. Participants could purchase a predetermined amount of GORT at the current price within a specified time frame by investing a set amount of ERG. If the price of GORT increased during this period, users could exercise the option, acquiring GORT at the initial price and potentially profiting from the price difference. Conversely, if the price remained stagnant or decreased, users could choose not to exercise the option, limiting their loss to the initial investment. This mechanism served as a tool for hedging against market volatility and exploring potential profit opportunities. [View Option Details](https://www.sigmao.cc/option-details/3ebf26d359b339fcbd04de777cc712d1f451afcbd8b5b79d97b5b5ff71aa017f)
   
 - **Innovative Options Experiment:**
-	- A creative exploration within the SigmaO ecosystem showcased the creation of four option packages, each displaying the price and expiration date prominently. These options were designed to degrade in price over time, reflecting market conditions and providing an incentive for timely decision-making. Purchasing the option offered the right to buy the underlying asset (Ada) at a predetermined price within a specified timeframe, enabling speculation on potential price movements without immediate commitment. This experiment highlighted the versatility and potential of SigmaO on the Ergo blockchain, leveraging real-time pricing data to create attractive option packages for potential buyers.
+ 	- A creative exploration within the SigmaO ecosystem showcased the creation of four option packages, each displaying the price and expiration date prominently. These options were designed to degrade in price over time, reflecting market conditions and providing an incentive for timely decision-making. Purchasing the option offered the right to buy the underlying asset (Ada) at a predetermined price within a specified timeframe, enabling speculation on potential price movements without immediate commitment. This experiment highlighted the versatility and potential of SigmaO on the Ergo blockchain, leveraging real-time pricing data to create attractive option packages for potential buyers.

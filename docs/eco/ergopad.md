@@ -16,6 +16,6 @@ Staking ErgoPad tokens enables users to achieve various staking tiers. Upon reac
 
 The Ergopad team aims to support grassroots projects in shaping the future of global finance by creating products that democratize participation in commerce. They advocate for private money and provide services like funding, marketing, and blockchain development, which are crucial for the success of any new project.
 
-The Ergopad website provides a variety of information including announcements, upcoming projects, and a dashboard. Ergopad also has its own token which users can acquire with $Erg and stake. 
+The Ergopad website provides a variety of information including announcements, upcoming projects, and a dashboard. Ergopad also has its own token which users can acquire with $Erg and stake.
 
 For a more detailed understanding of Ergopad, you can visit their website at [ergopad.io](https://ergopad.io/).

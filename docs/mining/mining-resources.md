@@ -24,7 +24,7 @@ This page provides a collection of resources related to Ergo mining. It includes
 
 The [Ergo GitHub repository](https://github.com/ergoplatform/ergo/tree/master/src/main/scala/org/ergoplatform/mining) contains the Scala files related to Ergo's mining algorithm. This is a great resource if you're interested in understanding the technical details of Ergo mining.
 
-## Test Vectors 
+## Test Vectors
 
 - [Test vectors for increased N values](https://www.ergoforum.org/t/test-vectors-for-increased-n-values/2887/2): This forum post provides test vectors for Ergo's proof-of-work algorithm with increased N values.
 

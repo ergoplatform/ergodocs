@@ -16,6 +16,7 @@ Compilation results in producing `ErgoContract` that provides:
 ## Example
 
 ### Contract code in  `contract` call
+
 Ergo contract code can be compiled with `ErgoScalaCompiler.contract` call:
 
 ```scala
@@ -49,6 +50,7 @@ def buyerContract(
 ```
 
 ### Verified contract code in a separate method call
+
 For verified contracts, the compilation is done differently. Formal verification is done using Stainless in [ergo-contracts](https://github.com/ergoplatform/ergo-contracts). Verified contract code can be compiled by providing the method call where contract code resides.
 
 ```scala
@@ -69,6 +71,7 @@ def buyerContractInstance(tokenId: Coll[Byte], tokenAmount: Long, pkA: SigmaProp
 see [sources](https://github.com/ergoplatform/ergo-contracts/blob/63e494c9d33af25e23efea88d27f31742ad31f64/verified-contracts/src/main/scala/org/ergoplatform/contracts/AssetsAtomicExchange.scala#L150-L157)
 
 where `buyer` method holds verified smart contract:
+
 ```scala
 /**
   * Function that returns a SigmaProp indicating whether a buyer can spend the funds locked in a box.

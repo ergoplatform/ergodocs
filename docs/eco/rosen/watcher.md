@@ -16,8 +16,6 @@ Watchers are integral to Rosen Bridge, serving as cross-chain oracles. They obse
 
 ## Watcher Setup Guides
 
-
-
 //// details | Tutorials
      {type: info, open: true}
 /// details | Pre-requisites
@@ -28,6 +26,7 @@ There is a [General Watchers app Tutorials Playlist](https://youtube.com/playlis
 
 /// details | Windows
      {type: info, open: false}
+
 - Follow along as QX guides you through a [Windows Watcher installation](https://www.youtube.com/watch?time_continue=2&v=bQ2sviHtOQA&embeds_referring_euri=https%3A%2F%2Fwww.therefour.org%2F&embeds_referring_origin=https%3A%2F%2Fwww.therefour.org&source_ve_path=Mjg2NjY&feature=emb_logo)
 - [Rosen Bridge Watcher — Windows Setup Guide](https://medium.com/@goatspark/rosen-bridge-watcher-windows-setup-guide-4040815e0a74)
 ///
@@ -40,15 +39,8 @@ There is a [General Watchers app Tutorials Playlist](https://youtube.com/playlis
 mgpai walks through a Watcher instance in [Linux and Cloud](https://www.youtube.com/watch?time_continue=1&v=1dpfLWdWMLs&embeds_referring_euri=https%3A%2F%2Fwww.therefour.org%2F&embeds_referring_origin=https%3A%2F%2Fwww.therefour.org&source_ve_path=MjM4NTE&feature=emb_title)
 ///
 
-    
-
-
 Below you'll find some frequently asked questions as well as common issues and troubleshooting tips.
 ////
-
-
-
-
 
 ## Watcher FAQs
 
@@ -100,6 +92,7 @@ To report, watchers must acquire permits, costing an additional 3,000 RSN. Multi
 
 /// details | Reporting Process
      {type: question, open: false}
+
 - Watchers report deposit events as part of a collective effort.
 - A consensus among watchers on an event triggers a final report and guard intervention.
 - Guards take necessary actions based on these reports.
@@ -136,13 +129,10 @@ Yes, you can increase or decrease your permits at any time and redeem them when 
 The number depends on bridge activity, with about 160 needed to report one transaction per minute.
 ///
 
-
-
 /// details | Do I still need RSN on Ergo to be a watcher on another chain?
      {type: question, open: false}
 Yes, all permit operations are conducted on the Ergo platform, and Rosen's logic is Ergo-based.
 ///
-
 
 ## Operational
 
@@ -156,9 +146,6 @@ You don't need to manually watch and approve transactions, the software will han
 4. Wait for guards stuff, especially target chain tx and reward tx submission.
 5. Get rewards.
 ///
-
-
-
 
 /// details | Interacting with a headless server
      {type: info, open: false}
@@ -224,8 +211,6 @@ services:
 Docker Compose will automatically load the variables from the `.env` file.
 ///
 
-
-
 ## Troubleshooting
 
 ### UI Errors
@@ -253,7 +238,6 @@ Then rerun the watcher
 
 By default, the permit health warning parameter is set to 100. This is adjustable locally by adding the following into your local.yaml and adjusting as neccessary
 
-
 ```yaml
 healthCheck:
   permit:
@@ -274,27 +258,23 @@ Adjust the numbers as you wish.
 - Your .env file might be missing? turn on view file extensions like in the video, are you sure it's .env and not .env.txt?
 - update your local.yaml with the current ergo blockheight
 
-As a last resort, some ssers are reporting that this issue can be fixed by pruning existing images and rebuilding 
+As a last resort, some ssers are reporting that this issue can be fixed by pruning existing images and rebuilding
 
 ```
 docker system prune -a
-``` 
+```
 
 **As long as you don't have other docker images to worry about.**
 
 ///
-
-
-
-
-
 
 /// details | Lock, Unlock 500 Error
      {type: danger, open: false}
 
 If you're receiving a 500 Error while trying to lock or unlock your ERG and/or RSN, it could possibly be from having an insufficient box value on chain. **This is fixed in the latest release, please update if you have not done so already.**
 
-Update with 
+Update with
+
 ```
 docker-compose pull
 docker-compose down
@@ -308,6 +288,7 @@ To rectify, add the following to your local.yaml in the "ergo:" section with one
 ```yaml
   minBoxValue: '2000000'
 ```
+
 ///
 
 /// details | UnhandeledPromiseRejection
@@ -322,26 +303,26 @@ There is a issue in ogmios roll backward after a fork. Fix is a work in progress
 Incompatiblility with certain ARM chips in Rasberry Pi's and (ARM mac mini m1 Asahi linux: see [this PR](https://github.com/rosen-bridge/operation/issues/6))
 ///
 
-
-
 ### Working with docker
 
 /// details | Checking logs
      {type: info, open: false}
+
 ```bash
 docker compose logs
 ```
 
 ///
 
-
 /// details | Updating your watcher
      {type: info, open: false}
+
 ```bash
 docker-compose pull
 docker-compose down
 docker-compose up -d
 ```
+
 ///
 
 /// details | Restarting your watcher
@@ -362,12 +343,14 @@ Check you're in the correct directory. You should be executing `docker compose` 
 
 /// details | Dumping databases
      {type: info, open: false}
+
 ```bash
 docker compose down
 docker volume remove watcher_postgres-data
 #---edit block height in YAML after this step
 docker compose up -d
 ```
+
 ///
 
 /// details | Clearing Volumes
@@ -377,10 +360,13 @@ You may wish to clear Docker volumes for a number of reasons, e.g. changing Init
 ```bash
 docker compose down --volumes
 ```
+
 Re-initiate the Watcher with
+
 ```bash
 docker compose up -d
 ```
+
 ///
 
 /// details | Clean Slate
@@ -392,5 +378,6 @@ docker ps -a
 docker compose down
 docker rm CONTAINERID1 CONTAINERID2 CONTAINERID3
 ```
+
 then delete the folder and start fresh
 ///

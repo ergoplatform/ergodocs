@@ -6,8 +6,8 @@ Watchers are integral to Rosen Bridge, serving as cross-chain oracles. They obse
     type: info
 ///
 
-
 ## Clone the Repository and Prepare the Environment
+
 First, clone the operational repository and navigate to the appropriate directory:
 
 ```shell
@@ -23,6 +23,7 @@ cp env.template .env
 ```
 
 ## Configure Environment Variables and Permissions
+
 Set up necessary environment variables in the `.env` file and adjust file permissions:
 
 ```shell
@@ -44,7 +45,7 @@ sudo chmod -R 707 logs
 
 ## Configure Docker for ARM Devices (if applicable)
 
-/// details | Raspberry Pi ARM 
+/// details | Raspberry Pi ARM
      {type: info, open: false}
 
 If you're running on a Raspberry Pi ARM device, specify an ARM-compatible Docker image and adjust the volume mapping in the docker-compose file:
@@ -66,9 +67,11 @@ db:
     timeout: 5s
     retries: 3
 ```
+
 ///
 
 ## Pull Docker Images and Start the Watcher
+
 Before starting the watcher, pull the necessary Docker images and run the service:
 
 ```shell
@@ -76,8 +79,8 @@ docker compose pull
 docker compose up -d
 ```
 
-
 ### Configure the `local.yaml` File for Ergo
+
 Set up the `local.yaml` configuration file specifically for the Ergo network:
 
 ```yaml
@@ -98,6 +101,7 @@ observation:
 Make sure to use the actual values and URLs as per your setup requirements.
 
 ## Start the Watcher and Monitor
+
 After configuring all files and setting up the environment, start the watcher:
 
 ```shell
@@ -107,10 +111,10 @@ docker compose up -d
 Access the watcher UI by visiting `http://localhost:3030` to monitor network information and health status.
 
 ## Note
+
 - Adjust the `apiKeyHash` and `mnemonic` in the `local.yaml` or through the `.env` file for added security.
 - Ensure your Docker environment is properly configured, especially when deploying on different architectures like ARM.
 - Regularly update your configuration files and Docker images to keep up with network changes and software updates.
-
 
 /// admonition | For tips, troubleshooting, FAQs, and other information, please refer to the main [watcher documentation](watcher.md).
     type: info

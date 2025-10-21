@@ -1,12 +1,15 @@
 # Sigmanauts: empowering the Ergo community
 
 ## Introduction
+
 Ergo, as outlined in its [manifesto](social_contract.md), is a platform designed for the common person, standing against the centralization of banking and the misuse of money. The future of Ergo lies in the hands of its users and we encourage everyone to take as much control of the Ergo ecosystem as possible. The Sigmanauts Program is a grassroots initiative aimed at empowering individuals to take ownership of Ergo and help shape its future.
 
 ## The power of community
+
 Ergo's blockchain has the potential to bring out the best in humanity and its rapidly growing community is one of its most significant assets. The Sigmanauts Program provides a platform for individuals to make a substantial impact on the future of finance by leveraging their unique skills and strengths.
 
 ## Categories of participation
+
 The Sigmanauts Program offers three categories of participation:
 
 1. **Growth**: Ideal for those with marketing expertise, connections to other projects, or skills that can help expand the community and attract diverse individuals.
@@ -14,23 +17,29 @@ The Sigmanauts Program offers three categories of participation:
 3. **Creative**: Suited for graphic designers, videographers, writers, or social media experts who want to showcase their talents and contribute to the visual and narrative aspects of the Ergo ecosystem.
 
 ## Becoming a Sigmanaut
+
 To become a Sigmanaut, interested individuals must go through a [formal application process](https://sigmanauts.com/application/). Once accepted into the Sigmanauts Program as a SigCAN (Sigmanaut candidate), participants will have the opportunity to work with a team of like-minded individuals, showcase their skills and make a significant impact on the Ergo ecosystem.
 
 ## Progression and responsibility
+
 As SigCANs contribute to the Ergo ecosystem and demonstrate their commitment and abilities, they will have the opportunity to become full-fledged Sigmanauts. This progression brings greater responsibility within the community, allowing individuals to take on leadership roles and guide the future direction of the Ergo platform.
 
 ## Training and support
+
 The Sigmanauts Program offers comprehensive training designed to equip participants with the necessary skills and knowledge to contribute effectively to the development of the Ergo ecosystem. This training covers various aspects of decentralized finance, blockchain technology and community building, ensuring that Sigmanauts are well-prepared to tackle challenges and seize opportunities within the Ergo community.
 
 ## Collaboration and networking
+
 As a Sigmanaut, individuals will have the chance to interact with others who share their passion for financial privacy and decentralization. The program fosters a collaborative environment where Sigmanauts can learn from one another, share ideas and work together towards common goals. This networking opportunity is invaluable for personal growth and professional development within the blockchain and cryptocurrency space.
 
 ## Sigmanauts mining pool
+
 The Sigmanauts mining pool is a DAO-driven, community-run mining pool dedicated to supporting the Ergo ecosystem. Joining the pool contributes to the Ergo community (fees go to the Sigmanauts treasury) and offers hourly bonus token payments. The pool boasts a minimal 0.9% fee, a payout threshold of 0.5 ERG and operates on the PPLNS payment method (Pay Per Last N Shares, with N set to 0.5).
 
 To get started with mining Ergo, you need an Ergo wallet and mining software compatible with your GPU. Detailed instructions on wallet setup, mining software and example miner configurations for both Windows and Linux can be found on the [Sigmanauts mining pool page](https://sigmanauts.com/mining).
 
 ## Sigmanauts achievements
+
 Since its launch, the Sigmanauts Program has made significant strides in building the required structures to pass the baton to the community. Some notable achievements include:
 
 - **01/22**: The [Sigmanauts Program](sigmanauts.md) is launched.

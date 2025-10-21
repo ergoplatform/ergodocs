@@ -12,8 +12,6 @@ JavaScript and TypeScript developers can interact with the Ergo blockchain using
 
 With the availability of [Sigma.js](sigmajs.md), [Fleet](fleet.md) can play the same role for JS/TS.
 
-
-
 ## Frameworks
 
 ::cards::
@@ -78,15 +76,13 @@ With the availability of [Sigma.js](sigmajs.md), [Fleet](fleet.md) can play the 
 
 ::/cards::
 
-
-
 ## Resources
-
 
 - [Ergo-Raffle-Bot](https://github.com/zkastn/ergo-raffle-bot) Github
 - [ErgoScript.js](https://www.youtube.com/watch?v=_jwMI8M_vrs)
-- The Ergo Raffle [documentation](https://github.com/ErgoRaffle/raffle-documentation) provides a detailed description of their implementation. 
+- The Ergo Raffle [documentation](https://github.com/ErgoRaffle/raffle-documentation) provides a detailed description of their implementation.
 - [hypo10use/quid-games](https://github.com/hypo10use/quid-games) (Angular)
 
 See also
+
 - Contracts & Patterns Library: contracts-library.md

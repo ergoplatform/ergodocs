@@ -6,7 +6,6 @@ tags:
 
 # Extending the Power of the UTXO Model
 
-
 Ergo utilizes the **Extended UTXO (eUTXO) model**, based on Bitcoin's original UTXO model but with enhanced capabilities that enable more expressive [smart contracts](ergoscript.md). This section explores the advantages and features of eUTXO.
 
 ## The Benefits of UTXO
@@ -30,13 +29,11 @@ Furthermore, Ergo's [Multi-Stage UTXO model](multi.md), as detailed in [this pee
 
 You can see a comparison between Ergo's eUTXO model and the Account-Based model [here](accountveutxo.md).
 
-
-
 ## Resources
 
 ### Articles
 
-- [Learning Ergo 101 : eUTXO explained for human beings](https://dav009.medium.com/learning-ergo-101-blockchain-paradigm-eutxo-c90b0274cf5e) 
+- [Learning Ergo 101 : eUTXO explained for human beings](https://dav009.medium.com/learning-ergo-101-blockchain-paradigm-eutxo-c90b0274cf5e)
 - [Off-chain logic & eUTXO](https://ergoplatform.org/en/blog/2021-10-04-off-chain-logic-and-eutxo/)
 - [The UTXO Alliance Announcement](https://ergoplatform.org/en/blog/2021-09-26-the-utxo-alliance/)
 
@@ -44,7 +41,6 @@ You can see a comparison between Ergo's eUTXO model and the Account-Based model 
 
 - [The Extended UTXO Model - IOHK Research](https://iohk.io/en/research/library/papers/the-extended-utxo-model/)
 - [Understanding the Extended UTXO model - docs.cardano](https://docs.cardano.org/learn/eutxo-explainer)
-
 
 ### Video
 

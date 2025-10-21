@@ -23,9 +23,8 @@ This enables miners to consistently earn rewards from a fixed-size UTXO set over
 
 Given that Ergo's UTXO set size is in the same ballpark as Bitcoin's (~60 million), the potential block reward could look like this:
 
-
 - `perOutputFee * (numberOfBoxes / (4 * BlocksPerYear))`
-- 0.001 * (60,000,000 / (4 * ))
+- 0.001 *(60,000,000 / (4* ))
 - **Estimated Block Reward** =  7.49 Ergs plus transaction fees
 
 For an academic perspective on this topic, consult the research paper ["A Systematic Approach To Cryptocurrency Fees"](https://fc18.ifca.ai/bitcoin/papers/bitcoin18-final18.pdf).

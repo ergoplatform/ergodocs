@@ -1,13 +1,15 @@
 
 ---
 tags:
-  - Getting Started
-  - Newcomer
-  - Guide
-  - Tutorial
-  - Wallets
-  - dApps
-  - Ecosystem
+
+- Getting Started
+- Newcomer
+- Guide
+- Tutorial
+- Wallets
+- dApps
+- Ecosystem
+
 ---
 
 # Ergo Newcomer Document - One Stop Shop

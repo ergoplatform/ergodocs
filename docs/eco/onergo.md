@@ -8,9 +8,9 @@ tags:
 
 # ONERGO
 
-**ONERGO** aims to be the central hub for community engagement and education within the Ergo blockchain ecosystem. 
+**ONERGO** aims to be the central hub for community engagement and education within the Ergo blockchain ecosystem.
 
-As the Ergo ecosystem expands, so does the need for a unified platform to track events, participate in community-driven activities, and learn through practical engagement. ONERGO provides a dynamic event calendar, available on a website and a Discord bot, as well as a reward-based educational platform to foster growth and interaction within the community. 
+As the Ergo ecosystem expands, so does the need for a unified platform to track events, participate in community-driven activities, and learn through practical engagement. ONERGO provides a dynamic event calendar, available on a website and a Discord bot, as well as a reward-based educational platform to foster growth and interaction within the community.
 
 By combining comprehensive event tracking with educational quests and incentives, ONERGO seeks to make it easier for both new and experienced community members to stay informed, actively contribute, and deepen their understanding of the Ergo network.
 

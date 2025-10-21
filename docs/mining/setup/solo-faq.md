@@ -21,6 +21,7 @@ You can obtain your mining rewards address with the `/mining/rewardAddress` API 
 “rewardAddress”: “mPdcmQkPPvyMGoCDNg9oiasLyPpKJhHjgjpt89uJZE1oN9PJ9fKbdKDcfomtWoy3d1E7RFLTUbXbt1AS”
 }
 ```
+
 You can then verify your rewards on the [Ergo Explorer](https://explorer.ergoplatform.com/).
 
 You can also obtain your "raw" public key via the `/mining/rewardPublicKey` endpoint:
@@ -33,9 +34,7 @@ You can also obtain your "raw" public key via the `/mining/rewardPublicKey` endp
 
 Then, you can check block headers (`pk` field) for this public key.
 
-
-
-##  ​/mining​/solution API Endpoint
+## ​/mining​/solution API Endpoint
 
 ```json
 {
@@ -49,4 +48,3 @@ Then, you can check block headers (`pk` field) for this public key.
 - **pk** is the public key *in binary format*
 - **n** is the nonce
 - **w** and **d** are no longer used in Autolykos2 and are **constant**.
-

@@ -9,7 +9,7 @@ The reality is quite different, as 2020 should have proven beyond doubt. New DeF
 
 To date, different blockchains are still relatively siloed. It’s possible to plug different blockchains into each other, but it’s not nearly as easy as it is to do with dApps on the same platform. But what if that was different? What if true cross-blockchain composability was possible?
 
-That would truly be a game-changer since it would no longer matter which platform developers launched their dApps on. 
+That would truly be a game-changer since it would no longer matter which platform developers launched their dApps on.
 
 At present, the majority of developers choose Ethereum because that’s where the users and volume are. Opting for a different blockchain might make sense on technical grounds, but you then risk having a well-functioning dApp with a fraction of the potential user base.
 
@@ -36,4 +36,3 @@ This allows the developers to add Ergo’s benefits of Sigma Protocols and custo
 In another version of this use case, an address might be created using multi-party computation using Ergo, such that no private key actually exists at all. A signature can be created using Ergo and then used to push a transaction to a separate blockchain (e.g. Ethereum). This allows Ergo to be used as a layer for highly secure account creation and transaction management on other networks.
 
 This is just one possibility that seamless interoperability raises. There will be many more that we look forward to exploring as Gravity and additional protocols come online.
-

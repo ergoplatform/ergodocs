@@ -9,11 +9,12 @@ tags:
 
 Ergo's native tokens are incredibly versatile and can represent a wide range of assets, including shares, complementary currency units, and various tangible or intangible items. The infrastructure of Ergo is designed to seamlessly handle the representation and transfer of these diverse assets, integrating them into the blockchain as *first-class citizens*.
 
-//// details | What are  **first-class citizens**? 
+//// details | What are  **first-class citizens**?
     {type: info, open: false}
 This means that tokens in Ergo are not just metadata attached to transactions, but they are deeply integrated into the Ergo protocol. They can be manipulated and managed with the same level of support and functionality as the native Ergo token (see [EIP-0004](eip4.md)).
 /// details | It is crucial to understand that ERG, the native token of Ergo, possesses two unique characteristics:
     {type: warning, open: false}
+
 - ERGs **cannot be burned**; the total input and output amounts in any transaction must be equal.
 - [Storage rent](rent.md) can only be paid in ERGs.
 ///
@@ -21,11 +22,11 @@ This means that tokens in Ergo are not just metadata attached to transactions, b
 
 /// details | How do I mint a token?
     {type: info, open: false}
+
 - Use [ergoutils](https://ergoutils.org/#/token) to mint a token directly from your web browser. ([Video Tutorial](https://www.youtube.com/watch?v=I3R6_PceM1k)
 ))
 - For programmatic token minting, refer to this guide: [Minting a Token with Fleet SDK](https://fleet-sdk.github.io/docs/transaction-building#step-4-2-mint-a-token)
 ///
-
 
 There is no central database where tokens are registered currently, your best bet is to use community resources like [supported tokens in the ergotipper bot](https://github.com/Luivatra/ergotipper-tokens) and [spectrum-finance/ergo-token-list](https://github.com/spectrum-finance/ergo-token-list).
 
@@ -34,16 +35,14 @@ There is no central database where tokens are registered currently, your best be
 - Tokens are stored in a special [register](registers.md) `R2` of a [box](box.md) in the form of (tokenId -> amount) pairs.
 - A single box can hold **up to 255 secondary tokens**.
 
-
 ## Register Usage
 
 The Ergo reference implementation wallet uses specific [registers](registers.md) in a unique way, although the protocol doesn't enforce this:
 
-* `R4` - verbose name
-* `R5` - description
-* `R6` - number of decimal places
-* Additional registers (`R7`, `R8`, `R9`) can store asset-specific information
-
+- `R4` - verbose name
+- `R5` - description
+- `R6` - number of decimal places
+- Additional registers (`R7`, `R8`, `R9`) can store asset-specific information
 
 ## Limitations
 
@@ -68,5 +67,3 @@ An exception to the rule of weak preservation *(the total amount in inputs shoul
 - [ergoutils.org](https://ergoutils.org/#/token)
 - [Video Tutorial](https://www.youtube.com/watch?v=I3R6_PceM1k)
 - [Why does the limitation of 1 new token per transaction exist?](https://github.com/ergoplatform/ergo/issues/2013)
-
-

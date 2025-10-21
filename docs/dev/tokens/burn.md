@@ -1,9 +1,9 @@
 # Burning a token
 
-There are sometimes occasions when you want to delete a token from your wallet. 
+There are sometimes occasions when you want to delete a token from your wallet.
 
 - Your address was airdropped a token you no longer want
-- You created an NFT but something about it is not right. 
+- You created an NFT but something about it is not right.
 - A project sent you voting or other tokens that you no longer need
 
 To get rid of those tokens, you have a few options.
@@ -12,7 +12,6 @@ To get rid of those tokens, you have a few options.
 - **Nautilus:** [Ergo Token Minter / Burner](https://github.com/ThierryM1212/ergo-token-minter)
 - **[SAFEW](https://github.com/ThierryM1212/SAFEW)** supports token burning natively.
 - Send to `4MQyMKvMbnCJG3aJ`, a **[P2S (Pay-to-Script)](p2s.md)** representation of a “false” condition, i.e. the box is unspendable. <!--TODO: What? Hash is written into `R4` register of the box, in the explorer It looks like `0e2047ee2cbd52be01e0876c3e0b989a0d4d5f8955200b1fab0e6eeb2b182555c2fb`, where `0e` is type descriptor (byte array), `20` is bytestring length (0x20 in hex = 32), `47ee2cbd52be01e0876c3e0b989a0d4d5f8955200b1fab0e6eeb2b182555c2fb` is the hash of the file. --->
-
 
 ## Programmatically
 

@@ -25,7 +25,7 @@ Blitz TCG is designed with competitive players in mind. It provides a consistent
 
 For more information about Blitz TCG, please refer to the following resources:
 
-- [General Information](http://linktr.ee/blitztcg) 
+- [General Information](http://linktr.ee/blitztcg)
 - [Roadmap](https://www.blitz-tcg.com/roadmap)
 - [Whitepaper](https://www.blitz-tcg.com/_files/ugd/1938de_84e5fc9f92a54e0a99f19649dd946871.pdf)
 - [Twitter](https://twitter.com/Blitz_TCG)

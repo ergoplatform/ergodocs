@@ -5,10 +5,12 @@ This document describes the main sections and fields of the [Ergo node configura
 ## Ergo Configuration Section
 
 ### Network Type
+
 `ergo.networkType = "devnet"`
 This setting defines the network type. For development purposes, it's set to "devnet".
 
 ### Chain Configuration
+
 `ergo.chain`
 This section includes parameters related to the blockchain.
 
@@ -22,21 +24,24 @@ This section includes parameters related to the blockchain.
 - `genesisStateDigestHex` is the Base16 representation of the genesis state roothash.
 
 ### Wallet Configuration
+
 `ergo.wallet.secretStorage.secretDir`
 Sets the directory for the wallet's secret storage.
 
 ## Scorex Configuration Section
 
 ### Network Configuration
+
 `scorex.network`
 This section includes parameters related to the network settings.
 
-- `magicBytes` is a unique identifier for the network protocol. 
+- `magicBytes` is a unique identifier for the network protocol.
 - `bindAddress` sets the IP address and port number where the node will accept incoming connections. By default, it listens on all available network adapters.
 - `nodeName` assigns a visible name to your node for other participants in the P2P network.
 - `knownPeers` is a list of bootstrap nodes that your node will connect to upon initialization.
 
 ### REST API Configuration
+
 `scorex.restApi.apiKeyHash`
 This parameter represents the hash of your API key. In the devnet configuration, it is set to `null`. The API key protects the invocation of critical API methods.
 

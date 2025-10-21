@@ -82,7 +82,7 @@ Reward = `Scope × Complexity Factor`
 * **Scope**: Lines changed × file importance
 * **Complexity Factor**: Owner-defined weight (e.g., backend logic = 2x docs)
 
-### Example:
+### Example
 
 Emily submits a PR:
 
@@ -121,7 +121,7 @@ To receive tokens:
 
 All this automation is powered by adapters — with **[GitCircles-Github](https://github.com/GitCircles/GitCircles-Github)** serving as the GitHub data bridge.
 
-### What It Does:
+### What It Does
 
 * Interfaces with GitHub API to fetch contribution metadata
 * Normalizes “Change Requests” across platforms

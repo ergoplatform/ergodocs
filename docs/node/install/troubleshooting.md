@@ -1,4 +1,4 @@
-#  Node Troubleshooting Guide
+# Node Troubleshooting Guide
 
 This document aims to help you troubleshoot common issues with the Ergo reference client. If you encounter a problem not covered here, please create a [new issue on GitHub](https://github.com/ergoplatform/ergo/issues/new/choose) and provide the following details:
 
@@ -54,7 +54,7 @@ If your node appears synchronised even though the height doesn't match the lates
 
 You might also be experiencing a [header downloading problem during synchronization](https://github.com/ergoplatform/ergo/issues/1657).
 
-### Lowering `maxConnections` 
+### Lowering `maxConnections`
 
 To alleviate some performance issues on later blocks, you can lower the default `maxConnections` from 30 to 10 in your `ergo.conf`:
 
@@ -85,28 +85,30 @@ rm -rf .ergo/history
 
 **Symptoms:**
 
-*   API requests (e.g., from your wallet, dApp backend, or scripts) take a very long time to respond or fail with timeout errors.
-*   The node's web panel (`/panel`) might become slow or unresponsive.
-*   This often occurs when the node is handling multiple concurrent API requests or processing large amounts of data.
+- API requests (e.g., from your wallet, dApp backend, or scripts) take a very long time to respond or fail with timeout errors.
+- The node's web panel (`/panel`) might become slow or unresponsive.
+- This often occurs when the node is handling multiple concurrent API requests or processing large amounts of data.
 
 **Potential Causes & Solutions:**
 
-1.  **Insufficient JVM Memory:** The Java Virtual Machine (JVM) running the node might not have enough allocated memory (heap space) to handle the load efficiently, leading to excessive garbage collection pauses or out-of-memory situations.
-    *   **Check:** Monitor the node's memory usage using system tools (like `htop`, Task Manager) or JVM monitoring tools if available. Look for high memory usage approaching the allocated limit.
-    *   **Solution:** Increase the maximum heap size allocated to the JVM using the `-Xmx` flag in your node startup command. For example, if you are running with `-Xmx4G`, try increasing it to `-Xmx6G` or `-Xmx8G` (ensure your system has enough physical RAM).
+1. **Insufficient JVM Memory:** The Java Virtual Machine (JVM) running the node might not have enough allocated memory (heap space) to handle the load efficiently, leading to excessive garbage collection pauses or out-of-memory situations.
+    - **Check:** Monitor the node's memory usage using system tools (like `htop`, Task Manager) or JVM monitoring tools if available. Look for high memory usage approaching the allocated limit.
+    - **Solution:** Increase the maximum heap size allocated to the JVM using the `-Xmx` flag in your node startup command. For example, if you are running with `-Xmx4G`, try increasing it to `-Xmx6G` or `-Xmx8G` (ensure your system has enough physical RAM).
+
         ```bash
         # Example startup command with increased memory:
         java -jar -Xmx6G ergo-*.jar --mainnet -c ergo.conf
         ```
-    *   Restart the node after changing the `-Xmx` value.
 
-2.  **High System Load:** The server running the node might be overloaded due to other processes consuming CPU, RAM, or disk I/O. Check overall system resource usage.
+    - Restart the node after changing the `-Xmx` value.
 
-3.  **Node Mode Limitations:** Certain node modes (like Digest mode) might have inherent limitations in handling specific API queries that require scanning the full UTXO set, potentially leading to slower responses for those queries. Refer to the [Node Modes](modes.md) documentation.
+2. **High System Load:** The server running the node might be overloaded due to other processes consuming CPU, RAM, or disk I/O. Check overall system resource usage.
 
-4.  **Network Latency:** Slow network connections between your client application and the node can also contribute to perceived timeouts.
+3. **Node Mode Limitations:** Certain node modes (like Digest mode) might have inherent limitations in handling specific API queries that require scanning the full UTXO set, potentially leading to slower responses for those queries. Refer to the [Node Modes](modes.md) documentation.
 
-5.  **Specific API Endpoint Issues:** Occasionally, a specific API endpoint might have a bug or inefficiency causing performance problems. Check the [Ergo Node GitHub Issues](https://github.com/ergoplatform/ergo/issues) for reports related to the endpoint you're using.
+4. **Network Latency:** Slow network connections between your client application and the node can also contribute to perceived timeouts.
+
+5. **Specific API Endpoint Issues:** Occasionally, a specific API endpoint might have a bug or inefficiency causing performance problems. Check the [Ergo Node GitHub Issues](https://github.com/ergoplatform/ergo/issues) for reports related to the endpoint you're using.
 
 ## Wallet Issues
 
@@ -184,30 +186,30 @@ While running your own node provides the most control and trust, many users rely
 
 **Known Public Resources (Community-Run, Status May Vary):**
 
-*   **Node Lists:**
-    *   [ergonodes.net](https://ergonodes.net/list): Provides a list of public nodes with basic status monitoring.
-*   **Explorers (Often provide public API access):**
-    *   [explorer.ergoplatform.com](https://explorer.ergoplatform.com/en/) (Official)
-    *   [ergexplorer.com](https://ergexplorer.com/)
-    *   [sigmaspace.io](https://sigmaspace.io/)
-    *   [ergobackup.aap.cornell.edu](https://ergobackup.aap.cornell.edu/) (May primarily be a backup service, check API availability)
-*   *(Note: This list is not exhaustive and uptime/reliability are not guaranteed. Always verify the trustworthiness and status of a public service before relying on it for critical operations.)*
+- **Node Lists:**
+  - [ergonodes.net](https://ergonodes.net/list): Provides a list of public nodes with basic status monitoring.
+- **Explorers (Often provide public API access):**
+  - [explorer.ergoplatform.com](https://explorer.ergoplatform.com/en/) (Official)
+  - [ergexplorer.com](https://ergexplorer.com/)
+  - [sigmaspace.io](https://sigmaspace.io/)
+  - [ergobackup.aap.cornell.edu](https://ergobackup.aap.cornell.edu/) (May primarily be a backup service, check API availability)
+- *(Note: This list is not exhaustive and uptime/reliability are not guaranteed. Always verify the trustworthiness and status of a public service before relying on it for critical operations.)*
 
 **Troubleshooting Public Infrastructure Issues:**
 
 If you encounter problems with a public node or explorer (e.g., incorrect data, API timeouts, connectivity problems, website errors):
 
-1.  **Try Alternatives:** The simplest first step is to switch your wallet or application to use a different public node/explorer from the lists above or other known community resources. The issue might be specific to the service you were initially using.
-2.  **Check Service Status:**
-    *   For nodes listed on [ergonodes.net](https://ergonodes.net/list), check their reported status (height, sync status).
-    *   Check the explorer website itself for any status banners or announcements.
-    *   Look in community channels (Discord, Telegram) for recent reports about the specific service.
-3.  **Identify the Operator (If Possible):** Some public services are run by known community projects or individuals. If you can identify the operator, check their specific project channels (Discord, Telegram, GitHub) for status updates or to report issues.
-4.  **Report in General Community Channels:** If the operator is unknown or the issue seems widespread, report the problem in general Ergo community support channels (like the [#node](https://discord.gg/jjRP2uNAv5) or relevant dApp/wallet channels on Discord). Provide clear details:
-    *   The IP address or URL of the public node/explorer.
-    *   The specific issue encountered (e.g., "API endpoint X returning 500 error", "Explorer website not loading", "Node Y on ergonodes.net stuck at height Z", "Incorrect balance reported via API").
-    *   The time the issue occurred.
-    *   Any relevant transaction IDs, addresses, or API queries if applicable.
-    *   Screenshots if helpful.
-5.  **Check GitHub Repositories:** If the public node is part of a known open-source project (e.g., an explorer), check that project's GitHub repository issues section to see if the problem has already been reported or to file a new issue.
-6.  **Understand Limitations:** Public infrastructure consists of shared resources. Operators may perform maintenance, experience downtime, have performance limits (e.g., unofficial API rate limits), or encounter occasional indexing issues (especially nodes using the `extraIndex` feature). For time-sensitive or critical applications, running your own node remains the most reliable option.
+1. **Try Alternatives:** The simplest first step is to switch your wallet or application to use a different public node/explorer from the lists above or other known community resources. The issue might be specific to the service you were initially using.
+2. **Check Service Status:**
+    - For nodes listed on [ergonodes.net](https://ergonodes.net/list), check their reported status (height, sync status).
+    - Check the explorer website itself for any status banners or announcements.
+    - Look in community channels (Discord, Telegram) for recent reports about the specific service.
+3. **Identify the Operator (If Possible):** Some public services are run by known community projects or individuals. If you can identify the operator, check their specific project channels (Discord, Telegram, GitHub) for status updates or to report issues.
+4. **Report in General Community Channels:** If the operator is unknown or the issue seems widespread, report the problem in general Ergo community support channels (like the [#node](https://discord.gg/jjRP2uNAv5) or relevant dApp/wallet channels on Discord). Provide clear details:
+    - The IP address or URL of the public node/explorer.
+    - The specific issue encountered (e.g., "API endpoint X returning 500 error", "Explorer website not loading", "Node Y on ergonodes.net stuck at height Z", "Incorrect balance reported via API").
+    - The time the issue occurred.
+    - Any relevant transaction IDs, addresses, or API queries if applicable.
+    - Screenshots if helpful.
+5. **Check GitHub Repositories:** If the public node is part of a known open-source project (e.g., an explorer), check that project's GitHub repository issues section to see if the problem has already been reported or to file a new issue.
+6. **Understand Limitations:** Public infrastructure consists of shared resources. Operators may perform maintenance, experience downtime, have performance limits (e.g., unofficial API rate limits), or encounter occasional indexing issues (especially nodes using the `extraIndex` feature). For time-sensitive or critical applications, running your own node remains the most reliable option.

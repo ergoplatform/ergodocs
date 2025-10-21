@@ -17,13 +17,13 @@ Token Jay is your one-stop solution for dealing with tokens on Ergo. It offers o
 
 You can trade tokens in a trustless and decentralized manner using TokenJay's open P2P Escrow service. Visit [tokenjay.app](https://tokenjay.app/) to get started. Please note that you will need an ErgoPay compatible Wallet Application.
 
-### Tools Available on TokenJay:
+### Tools Available on TokenJay
 
 #### P2P Escrow
 
-The open P2P Escrow service is a smart contract that facilitates trustless, private sales on the Ergo blockchain for a nominal fee. The contract accepts Ergo tokens, such as a non-fungible token (NFT), 100 SigUSD, or other token(s) from the seller. Once the tokens are in the contract, only a defined buyer sending a defined amount of ERG can access them. If the exchange is successful, the contract sends the tokens to the buyer and the ERG to the seller. The seller can cancel the contract at any time before the exchange is made. 
+The open P2P Escrow service is a smart contract that facilitates trustless, private sales on the Ergo blockchain for a nominal fee. The contract accepts Ergo tokens, such as a non-fungible token (NFT), 100 SigUSD, or other token(s) from the seller. Once the tokens are in the contract, only a defined buyer sending a defined amount of ERG can access them. If the exchange is successful, the contract sends the tokens to the buyer and the ERG to the seller. The seller can cancel the contract at any time before the exchange is made.
 
-##### How to use P2P Escrow:
+##### How to use P2P Escrow
 
 1. Visit [TokenJay](http://tokenjay.app)
 2. Connect your wallet by scanning the QR code

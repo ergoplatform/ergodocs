@@ -29,7 +29,6 @@ The Ergo Foundation is a community-led organization with a focus on the followin
 - Supporting truly decentralized infrastructure;
 - Upholding privacy as a fundamental human right.
 
-
 ## Structure
 
 The Ergo Foundation is composed of dedicated members who primarily function as multi-signature custodians. They vote on proposals to allocate treasury funds in alignment with the Foundation's mission. The Foundation also directly employs several Officers and Advisors which is outlined below.
@@ -99,7 +98,6 @@ For more information about the scope of the Foundation's work, please refer to t
 
 - **Role & Responsibilities:**  Supports the EF Business Development with advice. Acts as an ambassador for Ergo, and engages with the community on weekly AMAs and elsewhere.
 
-
 #### Editorial/Marketing
 
 - **Andy Lowe**: Video Editor
@@ -107,20 +105,17 @@ For more information about the scope of the Foundation's work, please refer to t
 - **Eva Qing**: Chinese Community Management
 - **Marcelo Roncatti (Marcello)** is a Brazilian multifaceted designer and art director working over 20 years in the graphics and visual arts Co-Founder and Partner of the graphic design studio called Estudio Colletivo, a multidisciplinary design office that works on branding projects, graphic design and interface design.
 
+##
 
-## 
 The Ergo Foundation is made up of a diverse group of individuals, including salaried employees, volunteers, bounty collectors, and independent project developers within the Ergo ecosystem. It's important to note that there is no designated 'core' development team. The Core Marketing team, for instance, is a mix of dedicated community members and salaried professionals. Similarly, contributors who have made significant additions to core repositories may be invited to participate in Core Development discussions, regardless of their employment status.
-
 
 ### DevDao
 
 **Alexander Chepurnoy (kushti)** has been active in the blockchain field since 2011. He has authored over twenty academic papers and has more than fifteen years of experience in software development. Prior to co-founding Ergo, he co-founded smartcontract.com (now Chainlink), served as a core developer at NXT, and was one of the first employees at IOHK, where he held the positions of Research Fellow and Team Scorex Manager. He manages any bounties relating to the eference client repository and keeps a watch over [sigma-rust](sigma-rust.md) development and any other high-level development and research not covered otherwise.
 
-- **Role & Responsibilities:** Alex stepped back from the Foundation January 2024 to focus solely on development, you can see his announcement post [here](https://www.ergoforum.org/t/core-developer-kushti-is-leaving-ergo-foundation/4648). He plans to launch a DevelopmentDAO and is currently speaking to interested parties. He will continue to manage communications between developers and EF going forward. 
-
+- **Role & Responsibilities:** Alex stepped back from the Foundation January 2024 to focus solely on development, you can see his announcement post [here](https://www.ergoforum.org/t/core-developer-kushti-is-leaving-ergo-foundation/4648). He plans to launch a DevelopmentDAO and is currently speaking to interested parties. He will continue to manage communications between developers and EF going forward.
 
 #### Outgoings
-
 
 - **Ergo Foundation**: Two members receive a salary for their contributions to the ecosystem, while two others are rewarded with a small amount of ERG. Both kushti and Justin choose not to receive any compensation.
 - **Marketing**: Four individuals are compensated for their efforts. Further details can be found in the [relationship to marketing](#editorialmarketing) section.

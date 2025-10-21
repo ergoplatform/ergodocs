@@ -31,18 +31,18 @@ Mew Finance utilizes a tiered system to reward user engagement and investment in
 
 * **Tiers:** The system consists of Tiers 1 through 6.
 * **Benefits:**
-    * **Revenue Sharing:** Tier 4, 5, and 6 members share 5% of the service fee revenue (from Mart, Store, Tools, Fund).
-    * **DEX Fee Revenue Sharing:** Tier 6 members exclusively share 5% of the DEX fee revenue.
-    * **Zero DEX Fees:** Tier 6 members enjoy zero fees on transactions made through Mew DEX.
+  * **Revenue Sharing:** Tier 4, 5, and 6 members share 5% of the service fee revenue (from Mart, Store, Tools, Fund).
+  * **DEX Fee Revenue Sharing:** Tier 6 members exclusively share 5% of the DEX fee revenue.
+  * **Zero DEX Fees:** Tier 6 members enjoy zero fees on transactions made through Mew DEX.
 * **MEW Kitty NFTs:** Associated with the tier system, these NFTs provide additional benefits or recognition. As of Q4 2024, 25 out of 50 had been claimed.
 * **Q4 2024 Snapshot:**
-    * Tier 6: 20 members
-    * Tier 5: 3 members
-    * Tier 4: 0 members
-    * Tier 3: 1 member
-    * Tier 2: 3 members
-    * Tier 1: 4 members
-    * Revenue Share Distributed (Q4 2024): 93.48 ERG (equivalent to 8,113.08 MEW) was distributed to eligible Tier 4/5/6 members.
+  * Tier 6: 20 members
+  * Tier 5: 3 members
+  * Tier 4: 0 members
+  * Tier 3: 1 member
+  * Tier 2: 3 members
+  * Tier 1: 4 members
+  * Revenue Share Distributed (Q4 2024): 93.48 ERG (equivalent to 8,113.08 MEW) was distributed to eligible Tier 4/5/6 members.
 
 ## Liquidity
 

@@ -45,6 +45,7 @@ Auction House, the first open-source NFT marketplace on the Ergo blockchain, fea
 
 **Description**
 --------
+
 **About Auction House**
 
 Since October 2020, Auction House has served as Ergo’s first NFT marketplace. About two years of testing and service have been put into it, there have been two big platform updates so far known as V1 and V2, including numerous bug fixes, adjustments and additions. The current Auction House platform (V2) is being used by many Ergonauts, and is still reliable. It has handled more than 10k on-chain operations such as placing bids. Highlighting the V2 is the fact that it's fully decentralized and built upon smart contracts.
@@ -75,9 +76,7 @@ Thanks to this facet of tokenomics, AHT will be distributed as bonuses to both b
 
 30% of the Auction House’s profit will be distributed among stakers periodically.. The distribution period and specifics have yet to be determined. The distribution of this 30% will be made in an automatic but centralized manner because there is no working solution on Ergo blockchain as of yet. Later, when ErgoPad releases Paideia, the Auction house will use it to decentralize this process.
 
-**In addition to above,  AHT token IDO Roadmap, AHT Tokenomics and Distribution, and other info can also be found on [the ergpad.io Auction House page](https://www.ergopad.io/projects/auctionhouse)** 
-
-
+**In addition to above,  AHT token IDO Roadmap, AHT Tokenomics and Distribution, and other info can also be found on [the ergpad.io Auction House page](https://www.ergopad.io/projects/auctionhouse)**
 
 - [Source code](https://github.com/anon-real/ErgoAuctionHouse)
 - [v2 contracts](https://github.com/ergoplatform/eips/pull/39/files)

@@ -27,14 +27,13 @@ Ensuring economic freedom for ordinary people through decentralized, private and
     "title": "FAQ",
     "content": "Check out the Frequently Asked Questions",
     "url": "../../faq.md"
-  },
-
+  }
 
 ]
 
 ::/cards::
 
-> *"Creating financial contracts on the blockchain isn't just about the functionality; it's about making that functionality safe, accessible, and powerful."* 
+> *"Creating financial contracts on the blockchain isn't just about the functionality; it's about making that functionality safe, accessible, and powerful."*
 
 ## Core Components
 
@@ -81,7 +80,6 @@ Ensuring economic freedom for ordinary people through decentralized, private and
     "content": "From oracles to alternative economic systems.",
     "url": "../../uses/use-cases-overview.md"
   }
-
 
 ]
 

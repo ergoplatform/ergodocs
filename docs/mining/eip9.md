@@ -9,15 +9,13 @@ tags:
 
 # EIP-0009 Hard-fork Activation Protocol
 
-- **Author:** aslesarenko 
+- **Author:** aslesarenko
 - **Status:** Proposed
 - **Created:** 04-Jun-2020
 - **License:** CC0
-- **Forking:** Hard-fork needed 
+- **Forking:** Hard-fork needed
 
-
-
-### Description 
+### Description
 
 This EIP specifies a hard-fork activation protocol and the necessary implementation details. For the sake of presentation, the description is formulated in terms of switching from Ergo Protocol v1 (v3.x releases) to Ergo Protocol v2 (v4.x releases), hereinafter called EP1 to EP2. However, the protocol and activation process are general enough to be repeated in the future if the need arises.
 

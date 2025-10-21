@@ -28,13 +28,11 @@ These pieces of information are stored in the first four registers (R0-R3) of th
 | R3       | Creation details (`(txId, outputIndex)`) | `creationInfo`                        |
 | R4-R9    | Available for custom use                   | `R4[T]`, `R5[T]`, ... `R9[T]`         |
 
-
 /// admonition | Keep in mind!
     type: warning
 
 Registers must be densely packed; you cannot place an empty register between non-empty ones (e.g., you cannot define R5 if R4 is empty).
 ///
-
 
 ### Register R0
 
@@ -70,11 +68,9 @@ A `boxId` is calculated based on the contents of all the registers, uniquely def
 Ergo `txId` is dependent solely on the message and not on [signatures](signing.md) (similar to Bitcoin [SegWit](https://en.bitcoin.it/wiki/Segregated_Witness) transactions). Hence, a `txId` is accessible even before signing. Like Bitcoin, Ergo supports [chained transactions](chained.md), meaning boxes with 0 confirmations can be spent.
 ///
 
-
 ## Typed Registers
 
 Both [ErgoScript](ergoscript.md) and [ErgoTree](ergotree.md) are **typed**, meaning that when a script accesses a register, it expects a specific type which is denoted in brackets.
-
 
 For instance,
 

@@ -24,4 +24,3 @@ To have your contributions recognized in the yearly report by [developerreport.c
 - Sub-ecosystems: ~40+
 - Tradable tokens: Information can be found [here](https://sigmaverse.io/all-projects)
 - dApps in development: A dozen. A community roadmap is available [here](https://docs.google.com/spreadsheets/d/1d8bzPkZ__Ta5aFc388C7xkLiEaI-95IQcbgSRg8_wkw/edit?usp=sharing).
-

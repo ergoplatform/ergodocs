@@ -22,11 +22,12 @@ Threshold signatures are a cryptographic mechanism that allows a subset of a gro
 ### 3-out-of-5 Threshold Signature
 
 For a comprehensive example, refer to the dedicated tutorial:
+
 - [3-out-of-5 Threshold Signature](3-out-of-5.md)
 
 ### Practical Use Cases
 
-1. **Corporate Governance**: 
+1. **Corporate Governance**:
    - Multi-signature wallets requiring collective approval
    - [Microcredit Scenario](microcredit.md)
 
@@ -36,6 +37,7 @@ For a comprehensive example, refer to the dedicated tutorial:
 ## Implementation Techniques
 
 Ergo supports threshold signatures through its Sigma protocol framework, allowing:
+
 - Proving knowledge of at least k secrets out of n total secrets
 - Creating multi-party computational scenarios with robust security guarantees
 

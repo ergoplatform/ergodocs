@@ -106,8 +106,6 @@ else:
     print ("Failure!")
 ```
 
-
-
 Once all the conditions are met, Alice can spend her value locked in the contract, thus finalizing the atomic swap:
 
 ```python
@@ -117,4 +115,3 @@ print("Alice can now spend value locked to hash/public pair xG with x and their 
 It's important to note that this is a simplified illustration. In a real-world scenario, multiple additional layers of complexity and security would be required, including secure communication channels for the participants, comprehensive error handling, and transaction fees considerations.
 
 For a more comprehensive understanding of Ergo’s atomic swaps and the possibilities they offer for intra-chain and cross-chain token swaps, refer to the [ErgoScript white paper](https://ergoplatform.org/docs/ErgoScript.pdf).
-

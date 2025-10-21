@@ -15,7 +15,6 @@ In this example, each transaction depends on the successful completion of the pr
 
 Transaction chains are a fundamental concept in Ergo's multi-stage protocols. They offer a structured way to achieve specific goals by ensuring transactions execute in the correct order with the necessary dependencies between stages.
 
-
 ## Process
 
 A **transaction chain** is used to create multi-stage protocols where the logic progresses sequentially through different states, represented by UTXOs (boxes). Each stage's script enforces the rules for transitioning to the next stage.
@@ -23,6 +22,7 @@ A **transaction chain** is used to create multi-stage protocols where the logic 
 A transaction chain representing a multi-stage protocol can be conceptualized as follows:
 
 ### 1: Represent Stages as Nodes
+
 Represent the execution flow as a sequence of `n` states (S<sub>0</sub>, S<sub>1</sub>, ..., S<sub>n</sub>). Each state corresponds to a UTXO protected by a specific script and containing relevant data. A transaction (Tx<sub>i</sub>) acts as the transition between state S<sub>i-1</sub> and state S<sub>i</sub>, consuming the box representing S<sub>i-1</sub> and creating the box representing S<sub>i</sub>. This forms a directed graph where states are nodes and transactions are edges. For example, a 3-stage contract (like the ICO example) can be visualized as:
 
 ![](../../../assets/img/scs/tx-chain.png)
@@ -45,7 +45,6 @@ The code above uses the `propositionBytes` field of a box, which contains the se
 ### 3: Chain the Stages
 
 Repeat Step 2 for all transitions in the chain: the script for S<sub>n-2</sub> enforces the creation of S<sub>n-1</sub>, the script for S<sub>n-3</sub> enforces the creation of S<sub>n-2</sub>, and so on, back to the initial state S<sub>0</sub>.
-
 
 To avoid embedding potentially large script code within the previous stage's script, it's common practice to work with hashes. Instead of checking `out.propositionBytes == state_n_code`, the script checks `blake2b256(out.propositionBytes) == state_n_code_hash`, where `state_n_code_hash` is a known constant hash of the expected script for the next stage. This optimization significantly reduces script size.
 

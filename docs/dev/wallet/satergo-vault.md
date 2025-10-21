@@ -54,5 +54,3 @@ Root exploits are rare and are very serious as they give full control of the dev
 - The user entering the password while still being near the attacker or connected to the internet
 
 This is in my opinion very far-fetched.
-
-

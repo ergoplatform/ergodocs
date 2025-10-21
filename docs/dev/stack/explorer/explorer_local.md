@@ -1,8 +1,8 @@
 # Explorer
 
-## Intro 
+## Intro
 
-The Ergo Blockchain Explorer is your interface with the blockchain and provides four services. 
+The Ergo Blockchain Explorer is your interface with the blockchain and provides four services.
 
 1. `modules/chain-grabber`: Dumps aggregated data blockchain -> database
 2. `modules/explorer-api`: Provides a set of HTTP API methods for querying on/off-chain data.
@@ -14,7 +14,6 @@ The Ergo Blockchain Explorer is your interface with the blockchain and provides 
 - [explorer-backend](https://github.com/ergoplatform/explorer-backend)
 - [explorer-frontend](https://github.com/ergoplatform/explorer-frontend)
 
-
 ## Resources
 
 - [Deploying Explorer services with Docker Compose](https://github.com/ergoplatform/explorer-backend/wiki/Deploying-explorer-services-with-docker-compose)
@@ -23,10 +22,9 @@ The Ergo Blockchain Explorer is your interface with the blockchain and provides 
 - [Ergo Bootstrap](https://github.com/ergoplatform/ergo-bootstrap)
 - [ergo-setup](https://github.com/abchrisxyz/ergo-setup) is a Docker based Ergo setup (Node, Explorer & GraphQL). Somewhat similar to Ergo Bootstrap except it offers much less options and is not NixOS-based.
 
+## Running your own instance of Explorer
 
-## Running your own instance of Explorer 
-
-First we'll create a working directory and `cd` into it. 
+First we'll create a working directory and `cd` into it.
 
 ```bash
 mkdir explorer && cd "$_"
@@ -34,8 +32,7 @@ mkdir explorer && cd "$_"
 
 ### Creating env files
 
-
-> `.db_env` 
+> `.db_env`
 
 ```bash
 echo "DB_URL=jdbc:postgresql://postgres:5432/explorer
@@ -43,15 +40,13 @@ DB_USER=postgres
 DB_PASS=1234" > .db_env
 ```
 
-> `.redis_env` 
+> `.redis_env`
 
 ```bash
 echo "REDIS_URL=redis://localhost:6379" > .redis_env
 ```
 
 Additional configurations are made by adding entries to the `env_file` field in `docker-compose.yaml`. ie, `.http_env`
-
-
 
 ### explorer-frontend
 
@@ -93,11 +88,11 @@ docker-compose up -d
 docker ps -a
 ```
 
-
 ### Files
+>
 > paste the following into `app.config.js`
 
-- `apiUrl` points to your to backend API. 
+- `apiUrl` points to your to backend API.
 - `environments.url` points to your frontend
 
 ```bash
@@ -204,7 +199,6 @@ networks:
     external: true
 ```
 
-
 ## Manual Instance
 
 ### Prerequsites
@@ -225,6 +219,7 @@ createuser ergo -P --interactive
 ```
 
 Load database schema
+
 ```
 psql
 create database explorer;
@@ -232,13 +227,9 @@ create database explorer;
 \i /explorer-backend/modules/explorer-core/src/main/resources/db/V9__Schema.sql
 ```
 
-
-
-
 ```
 docker build explorer-backend/modules/chain-grabber/
 docker build explorer-backend/modules/chain-grabber/
 docker build explorer-backend/modules/chain-grabber/
 docker build explorer-backend/modules/chain-grabber/
 ```
-

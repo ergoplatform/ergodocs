@@ -7,12 +7,11 @@
 
 ## Address Types
 
-Learn about the different types of addresses used in Ergo and their corresponding address types by visiting the [Address Types](address_types.md) page. 
+Learn about the different types of addresses used in Ergo and their corresponding address types by visiting the [Address Types](address_types.md) page.
 
 ## Address Validation
 
 Learn how to validate Ergo addresses by visiting the [Address Validation](address_validation.md) page, which provides essential insights and methods for verifying P2S, P2SH, and P2PK addresses.
-
 
 ## Resources
 

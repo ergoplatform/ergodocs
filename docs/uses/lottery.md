@@ -27,7 +27,7 @@ The lottery owner creates a "lottery box" that contains tokens and the current a
 
 After the lottery concludes, the last serial number ***n*** is stored in **R4** of the lottery box. Using this, the winner is determined by, for example, using randomness from the previous block header to generate a number uniformly between 0 and ***n***. The winner can then use their purchase box to claim the rewards.
 
-The rewards can be stored in the lottery box itself, and each ticket purchased contributes to the reward. 
+The rewards can be stored in the lottery box itself, and each ticket purchased contributes to the reward.
 
 While this system operates fairly, it is not deterministic as it depends on the last block header.
 

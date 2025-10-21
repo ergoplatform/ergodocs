@@ -6,10 +6,6 @@ Any funds sent to this address can be spent by anyone, as the script always eval
 
 Scripts that consistently evaluate to `true`, and their corresponding boxes, are referred to as **anyone-can-spend** scripts.
 
-
-
 ```
 true && (false || true)     // address NwAyzZpF2KcXAGBJvPrAH
 ```
-
-

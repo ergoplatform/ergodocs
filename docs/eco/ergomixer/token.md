@@ -9,4 +9,4 @@ Holders of this token are eligible to be airdropped ErgoMixer's token when it is
 The tokenomics of the final token is not clear yet. Still, whatever it comes to be, they will airdrop some percentage of the tokens to community members, privacy and mixer related dapps, related tutorials, dapps and wallets integrating with the mixer, appkit development, ergo DAO, etc.
 
 - [ErgoProfitSharingDapp](https://github.com/mhssamadani/ErgoProfitSharingDapp)
-- [2021: ErgoMixer Tokenization ](https://www.ergoforum.org/t/ergomixer-tokenization/648)
+- [2021: ErgoMixer Tokenization](https://www.ergoforum.org/t/ergomixer-tokenization/648)

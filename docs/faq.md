@@ -1,6 +1,6 @@
 # FAQ
 
-This page aims to provide a background on Ergo and answers to some of the most frequently asked questions. 
+This page aims to provide a background on Ergo and answers to some of the most frequently asked questions.
 
 ## Quick links
 
@@ -46,7 +46,7 @@ Finally, Ergo is a self‐amendable protocol, that allows it to absorb new ideas
 
 In Greek, the related word "ἔργον" (ergon) translates to "work" or "task," which subtly nods to the work or effort that goes into mining and maintaining the blockchain—key aspects of cryptocurrency functioning. The choice of the name "Ergo" cleverly plays on these themes, emphasizing the coin's user-friendly and work-efficient ethos, hence the description of its design as ergonomic. This aligns with the overall philosophy of reducing effort and increasing effectiveness in its applications and transactions.
 
-Additionally, "ERG" is the ticker symbol for the Ergo cryptocurrency, further tying back to the term's roots in work and energy (erg being a small unit of energy in physics), which metaphorically could be seen as the "energy" users invest in the network. 
+Additionally, "ERG" is the ticker symbol for the Ergo cryptocurrency, further tying back to the term's roots in work and energy (erg being a small unit of energy in physics), which metaphorically could be seen as the "energy" users invest in the network.
 
 The name "Ergo" encapsulates both a philosophical approach and a practical application, making it a fitting choice for a digital currency designed to be efficient and logical.
 
@@ -58,7 +58,6 @@ The name "Ergo" encapsulates both a philosophical approach and a practical appli
 [analytics](analytics.md) provides an overview of various metrics available.
 
 </details>
-
 
 <details>
 <summary>How does it differ from Bitcoin?</summary>
@@ -73,7 +72,6 @@ Ergo is a cryptocurrency that builds upon the same [eUTXO model](dev/protocol/eu
 Contractual money is digital money that is bound to a contract in the form of executable code, which enforces specific rules and conditions for its usage. This is in contrast to traditional money, where contracts are external to the money itself and may be in the form of laws, corporate terms, or informal agreements. Contractual money allows for more precise control over how the money is spent and can be used to implement various use cases, such as [microcredit systems](dev/scs/microcredit.md) or local exchange trading systems.
 
 </details>
-
 
 <details>
 <summary>When was Ergo launched?</summary>
@@ -93,11 +91,11 @@ The max supply of EFYT is 1,970,945.0. This is 10% of the first year of Ergo tok
 
 > A pre-agreed smart contract controls emission in Ergo, so we tried to have a simple enough emission curve with the total limited supply being close to 100M (and emission to be done in 8-10 years).
 
-The max supply is simply the amount needed to create the initial genesis state: 
+The max supply is simply the amount needed to create the initial genesis state:
 
 - A box with proof-of-no-premine (1 ERG)
 - [Foundation treasury](https://explorer.ergoplatform.com/en/addresses/4L1ktFSzm3SH1UioDuUf5hyaraHird4D2dEACwQ1qHGjSKtA6KaNvSzRCZXZGf9jkfNAEC1SrYaZmCuvb2BKiXk5zW9xuvrXFT7FdNe2KqbymiZvo5UQLAm5jQY8ZBRhTZ4AFtZa1UF5nd4aofwPiL7YkJuyiL5hDHMZL1ZnyL746tHmRYMjAhCgE7d698dRhkdSeVy) (4,330,791.5 ERG)
-- [Miner Reward Box](https://explorer.ergoplatform.com/en/addresses/2Z4YBkDsDvQj8BX7xiySFewjitqp2ge9c99jfes2whbtKitZTxdBYqbrVZUvZvKv6aqn9by4kp3LE1c26LCyosFnVnm6b6U1JYvWpYmL2ZnixJbXLjWAWuBThV1D6dLpqZJYQHYDznJCk49g5TUiS4q8khpag2aNmHwREV7JSsypHdHLgJT7MGaw51aJfNubyzSKxZ4AJXFS27EfXwyCLzW1K6GVqwkJtCoPvrcLqmqwacAWJPkmh78nke9H4oT88XmSbRt2n9aWZjosiZCafZ4osUDxmZcc5QVEeTWn8drSraY3eFKe8Mu9MSCcVU) with the required ERG for 2,080,800 Blocks according to the emission schedule until rewards equal 0 and storage rent and EIP-27-reemission-box takes over (93,409,132 ERG). 
+- [Miner Reward Box](https://explorer.ergoplatform.com/en/addresses/2Z4YBkDsDvQj8BX7xiySFewjitqp2ge9c99jfes2whbtKitZTxdBYqbrVZUvZvKv6aqn9by4kp3LE1c26LCyosFnVnm6b6U1JYvWpYmL2ZnixJbXLjWAWuBThV1D6dLpqZJYQHYDznJCk49g5TUiS4q8khpag2aNmHwREV7JSsypHdHLgJT7MGaw51aJfNubyzSKxZ4AJXFS27EfXwyCLzW1K6GVqwkJtCoPvrcLqmqwacAWJPkmh78nke9H4oT88XmSbRt2n9aWZjosiZCafZ4osUDxmZcc5QVEeTWn8drSraY3eFKe8Mu9MSCcVU) with the required ERG for 2,080,800 Blocks according to the emission schedule until rewards equal 0 and storage rent and EIP-27-reemission-box takes over (93,409,132 ERG).
 
 The treasury box is protected by a vesting smart contract that ensures an initial unlocked amount and then only releases an amount of ERG that provides funds for 2.5 years (never exceeding 10% of the circulating supply). All of this results in these specific amounts.
 
@@ -137,26 +135,22 @@ For proof-of-no-premine, the pre-genesis state in Ergo contains block hashes fro
   "R4": "0e4030303030303030303030303030303030303031346332653265376533336435316165376536366636636362363934326333343337313237623336633333373437"
 }
 ```
+
 The code for the emission schedule can be found [here](https://github.com/ergoplatform/ergo/blob/e6086e23ecd45f1e01a3e4c0344f003cec1a5b11/src/test/scala/org/ergoplatform/mining/ErgoMinerPropSpec.scala#L24)
 
 </details>
-
-
-
-
 
 <details>
 <summary>What is the *Ergo Foundation*?</summary>
 
 The [Ergo Foundation](ef/ergo-foundation.md) is a community-driven entity focused on:
 
-  - Promoting non-breaking development of Ergo Platform protocol;
-  - Promoting the widespread adoption and use of Ergo Platform and its native token (ERG);
-  - Developing the ecosystem around Ergo;
-  - Promoting the use of Ergo Platform and blockchain technology for social good;
-  - Supporting truly decentralised infrastructure and;
-  - Supporting privacy as a basic human right.
-
+- Promoting non-breaking development of Ergo Platform protocol;
+- Promoting the widespread adoption and use of Ergo Platform and its native token (ERG);
+- Developing the ecosystem around Ergo;
+- Promoting the use of Ergo Platform and blockchain technology for social good;
+- Supporting truly decentralised infrastructure and;
+- Supporting privacy as a basic human right.
 
 To fund development, promotion, events, and any other activities which may advance the platform, Ergo has in place a Treasury, which will receive **4.43%** of the Ergs released during emission. During the first two years post‐mainnet launch, the Treasury received 7.5 Ergs per block.
 
@@ -266,14 +260,13 @@ These are launching at an accelerated rate as the base layer maturity now allows
 
 Ergo's primary language is Scala. Similarly, the scripting language used by Ergo, ErgoScript, is also based on Scala, but the off-chain code can be written in any language. Developers have access to a growing selection of tools and Software Development Kits (SDKs) for JVM, Rust and JS/TS.
 
+Scala has several features that set it apart from other JVM languages.
 
-Scala has several features that set it apart from other JVM languages. 
-
-- Firstly, it is truly cross-platform, as the same code can run on JVM and JavaScript natively. This is a feature that is not found in many other languages. 
-- Additionally, key ecosystem libraries for Scala support all platforms, and the popularity of Scala.js and Scala-native is increasing. 
-- Another advantage of Scala is its conciseness, both in terms of syntax and conceptual level. 
-- Despite its high-level nature, Scala can also be more efficient than similar Java code due to its ability to use primitive unboxed types, and the ability of the Scala compiler to perform code specialization. 
-- Furthermore, Scala is multi-paradigm, allowing for the combination of OOP, FP, and LP, making it suitable for a wide range of domains. 
+- Firstly, it is truly cross-platform, as the same code can run on JVM and JavaScript natively. This is a feature that is not found in many other languages.
+- Additionally, key ecosystem libraries for Scala support all platforms, and the popularity of Scala.js and Scala-native is increasing.
+- Another advantage of Scala is its conciseness, both in terms of syntax and conceptual level.
+- Despite its high-level nature, Scala can also be more efficient than similar Java code due to its ability to use primitive unboxed types, and the ability of the Scala compiler to perform code specialization.
+- Furthermore, Scala is multi-paradigm, allowing for the combination of OOP, FP, and LP, making it suitable for a wide range of domains.
 - Lastly, Scala3 brings even more powerful features such as metaprogramming and tools for zero-cost abstractions.
 
 </details>
@@ -306,12 +299,9 @@ See the [scaling](dev/protocol/scaling.md) page for more information.
 <details>
 <summary>Why was non-outsourceability turned off?</summary>
 
-Autolykos v1 originally had non-outsourceability built-in to prevent mining pools on Ergo. However, it became apparent that it's only possible to avoid pools with smart contracts. So, they  (the miners) turned it off so that not only larger players could take advantage of the loophole. Ergo is now focusing on memory hardness to keep mining as fair as possible, which should help prevent ASICs mining at least. There are also some improvements for pooling, e.g. Stratum 2 protocol. 
-
+Autolykos v1 originally had non-outsourceability built-in to prevent mining pools on Ergo. However, it became apparent that it's only possible to avoid pools with smart contracts. So, they  (the miners) turned it off so that not only larger players could take advantage of the loophole. Ergo is now focusing on memory hardness to keep mining as fair as possible, which should help prevent ASICs mining at least. There are also some improvements for pooling, e.g. Stratum 2 protocol.
 
 > ["Bypassing Non-Outsourceable Proof-of-Work Schemes Using Collateralized Smart Contracts"](https://ia.cr/2020/044) was presented by Alex Chepurnoy at the WTSC workshop associated with Financial Cryptography and Data Security 2020 in Malaysia
-
-
 
 - It's also discussed here on 'Unblocked with Robert Kornacki' [(14:45)](https://www.youtube.com/watch?v=2sbTMrQwWOw&feature=youtu.be)
 
@@ -326,9 +316,9 @@ Mining pools offer a buffer against network attacks as the hash rate is distribu
 
 The memory hardened aspect of ergo also makes this attack vector more expensive as there is no ASIC support to rent. With the collective rentable rigs, there are more viable paths to a 51% attack. In theory, someone could build a massive GPU farm to try to launch such an attack. If a bad actor can rent a warehouse of ASIC and mine on a small chain with 51% attacks is a viable option.
 
-Usually, this attack is made for profit, and massive dumping occurs on an exchange as it is occurring. The attacker will dump tokens on a business and then "double-spend" them back into their wallet. The current exchange situation doesn't provide the liquidity for a viable offramp, and the rentable ASIC support isn't an option. 
+Usually, this attack is made for profit, and massive dumping occurs on an exchange as it is occurring. The attacker will dump tokens on a business and then "double-spend" them back into their wallet. The current exchange situation doesn't provide the liquidity for a viable offramp, and the rentable ASIC support isn't an option.
 
-Other coins like Ethereum classic are a bad comparisons, as they shared the same mining algorithm as Eth. One could buy more than 100% of the hash rate of eth classic on NiceHash, and it's not the same case for Ergo. Ergo also believes in the 'Good Miner' principle; in the case of Bitcoin - it was a good thing 51% existed. 
+Other coins like Ethereum classic are a bad comparisons, as they shared the same mining algorithm as Eth. One could buy more than 100% of the hash rate of eth classic on NiceHash, and it's not the same case for Ergo. Ergo also believes in the 'Good Miner' principle; in the case of Bitcoin - it was a good thing 51% existed.
 
 </details>
 
@@ -336,7 +326,6 @@ Other coins like Ethereum classic are a bad comparisons, as they shared the same
 <summary>How will miners be supported after emissions?</summary>
 
 After the scheduled emissions conclude in 2045, miners on Ergo will continue to be incentivized through alternative methods. One such approach involves transaction fees and Miner Extracted Value (MEV). Transactions on Ergo generate fees (paid in Ergs), with a portion of these fees awarded to miners. MEV represents the total value miners can extract from a block using tactics like reordering, front-running, and other advanced techniques. Miners can increase their MEV earnings by efficiently executing transactions in high MEV blocks, which encourages them to contribute their hash power to the network.
-
 
 Another incentive for miners on Ergo is through [**Storage Rent**](dev/protocol/storage-rent.md). This mechanism requires users to pay for the storage their data occupies on the network. Consequently, miners receive a consistent income stream, as they earn Ergs from fees users pay for content storage. [This post](https://www.reddit.com/r/ergonauts/comments/xeke0b/discover_ergos_storage_rent_potential/) provides insight into future mining rewards from storage rent.
 
@@ -347,7 +336,6 @@ Moreover, miners can operate [off-chain execution bots](dev/oc/dex_bots.md) on t
 In summary, miners on Ergo are incentivized through transaction fees (including MEV), storage rent, custom emission contracts that reward non-native tokens as part of the FIMO (Fair Initial Mining Offering), and more.
 
 </details>
-
 
 <details>
 <summary>Is Proof of Useful Work being considered?</summary>
@@ -364,7 +352,6 @@ Therefore, during the bootstrapping phase, it seems necessary to have rewards de
 
 The most realistic option, it seems, would be to launch a PoUW [sidechain](uses/sidechains.md). However, what other possibilities could be explored? Furthermore, what options could benefit the Ergo main chain and its ecosystem?
 
-
 </details>
 
 <details>
@@ -372,14 +359,13 @@ The most realistic option, it seems, would be to launch a PoUW [sidechain](uses/
 
 Ergo is a [PoW (**Proof of Work**)](mining/autolykos.md) coin, not a PoS (**Proof of Stake**), which means that blocks are validated by miners, not by stakes; therefore, you can't stake Erg directly.
 
-However, it is possible to earn some yield from your ERG in combination with Ergo in liquidity pools, tokenisation of dApps, trading bots, lending platforms, and other mechanisms. 
+However, it is possible to earn some yield from your ERG in combination with Ergo in liquidity pools, tokenisation of dApps, trading bots, lending platforms, and other mechanisms.
 
 You can 'stake' native tokens on Ergo in some form (on ergopad.io *live*, Night Owl Casino *soon*, ErgoMixer *soon*,+ more)  
 
 For more info on earning off your Erg, look at the [Yield guide](tutorials/yield.md).
 
 </details>
-
 
 <details>
 <summary>Quantum</summary>
@@ -388,7 +374,7 @@ The development of practical quantum computers remains a subject of speculation,
 
 Ergo employs an efficient class of zero-knowledge proofs known as sigma-protocols, but the known post-quantum alternatives are still considered exotic and impractical for widespread use. As a result, it may be premature to implement any concrete changes to address the potential risks posed by quantum computing.
 
-In the event of a crypto-disaster—such as the development of an efficient quantum computer, number-theoretical attacks on elliptic curves, or other unforeseen vulnerabilities—transitioning to a blockchain with robust post-quantum security measures would be the best course of action. 
+In the event of a crypto-disaster—such as the development of an efficient quantum computer, number-theoretical attacks on elliptic curves, or other unforeseen vulnerabilities—transitioning to a blockchain with robust post-quantum security measures would be the best course of action.
 
 Until the threat of quantum computing becomes more imminent or tangible, it may be more productive to focus on monitoring developments in the field, exploring potential post-quantum solutions, and considering strategies for smoothly transitioning to a more secure blockchain in the event of a crypto-disaster.
 
@@ -412,19 +398,16 @@ Ergo is designed to support sharding with its unique architecture. Ergo blocks h
 
 </details>
 
-
-
-
 ## [EIPs](eip.md)
 
 <details>
 <summary>What is Ergo's approach to Forking?</summary>
 
-- **Velvet-Fork**: Only requires a minority of nodes to upgrade. Introduced by the NiPoPoW paper, the key idea is that you can use the scheme even if only some blocks in the chain include the interlink structure and allows for "gradual deployment" without harming the miners that haven't upgraded to the new rules. In this way, it acts similar to a soft fork in that clients that upgrade to new rules are still compatible with those that don't. 
-- **Soft-fork**'s require some nodes to upgrade. Our recent re-emission Soft-Fork EIP37 was possible as it's enforced on miner nodes only via protocol rules. These can be approved with 90% support from miners. 
-- **Hard-Fork** Requires all nodes to upgrade. 
+- **Velvet-Fork**: Only requires a minority of nodes to upgrade. Introduced by the NiPoPoW paper, the key idea is that you can use the scheme even if only some blocks in the chain include the interlink structure and allows for "gradual deployment" without harming the miners that haven't upgraded to the new rules. In this way, it acts similar to a soft fork in that clients that upgrade to new rules are still compatible with those that don't.
+- **Soft-fork**'s require some nodes to upgrade. Our recent re-emission Soft-Fork EIP37 was possible as it's enforced on miner nodes only via protocol rules. These can be approved with 90% support from miners.
+- **Hard-Fork** Requires all nodes to upgrade.
 
-Ergo follows a soft-forkability approach --- if a supermajority (90%+) of the network accepts a new feature, it is activated; however, old nodes that do not upgrade continue to operate normally and skip over this feature validation. Disruptive hard forks should be avoided in Ergo unless critical. 
+Ergo follows a soft-forkability approach --- if a supermajority (90%+) of the network accepts a new feature, it is activated; however, old nodes that do not upgrade continue to operate normally and skip over this feature validation. Disruptive hard forks should be avoided in Ergo unless critical.
 
 </details>
 
@@ -440,13 +423,12 @@ With the updated emission schedule described in [EIP-0027](https://github.com/er
 
 The original Difficulty Adjustment Algorithm for Ergo worked well in most cases, including huge price drops, 100x initial difficulty misestimation during mainnet launch, and so on. However, the previous simplified and limitless version of the algorithm is bumpy. A big influx of mining hash rate over multiple epochs, especially with super-linear hash rate growth over time, may result in a huge difficulty spike. Similarly, a few slow epochs may cause a huge drop. Also, for dapps and other applications, it would be desirable to make difficulty readjustment more reactive (previously, readjustment takes place every 1024 blocks, and eight epochs, so about two weeks normally, are considered).
 
-This was resolved with the [EIP-37](https://github.com/ergoplatform/eips/pull/79). 
+This was resolved with the [EIP-37](https://github.com/ergoplatform/eips/pull/79).
 
-EIP37 is a hard fork which makes the difficulty adjustment more reactive by shortening epoch length, amplifying the weight of the last epoch and some limits on difficulty changes. 
-The 'epoch length' is to be set to 128 blocks. 
+EIP37 is a hard fork which makes the difficulty adjustment more reactive by shortening epoch length, amplifying the weight of the last epoch and some limits on difficulty changes.
+The 'epoch length' is to be set to 128 blocks.
 It calculates the difficulty in two ways according to the past eight epochs of 128 blocks each.
 Then it takes an average from classic and predictive difficulties and limits the change so that the test can never be changed by more than 50% per epoch.
-
 
 Broader conversations about [difficulty adjustments on ergoforum](https://www.ergoforum.org/t/diff-adjustment-potential-design-tradeoffs/3875)
 

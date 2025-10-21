@@ -29,11 +29,11 @@ val leafHash = Blake2b256(0.toByte +: leafData)
 The proof consists of multiple levels, each providing information about the position of the node within the Merkle tree and its sibling hash. For each level, the following steps are performed:
 
 - **Check the 1-Byte Prefix**:
-    - If the prefix is `0`, this indicates that the computed hash from the previous step should be on the left side.
-    - If the prefix is `1`, this indicates that the computed hash should be on the right side.
-    
+  - If the prefix is `0`, this indicates that the computed hash from the previous step should be on the left side.
+  - If the prefix is `1`, this indicates that the computed hash should be on the right side.
+
 - **Compute the Hash for the Next Level**:
-    - Depending on the prefix, concatenate the computed hash from the previous step with the sibling hash and the prefix. Then, hash the concatenated result using `Blake2b256`.
+  - Depending on the prefix, concatenate the computed hash from the previous step with the sibling hash and the prefix. Then, hash the concatenated result using `Blake2b256`.
 
 **Code Implementation**: The iteration process and validation logic are crucial for verifying the correctness of the Merkle proof. This is implemented in the [BatchMerkleProof.scala](https://github.com/input-output-hk/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/merkle/BatchMerkleProof.scala) file in the `scrypto` repository.
 
@@ -116,8 +116,7 @@ assert(merkleProof.valid(Digest32 @@ txsRoot))
 
 Validating Merkle proofs is a crucial process that ensures data integrity and enables efficient verification without the need to download the entire blockchain. By understanding and implementing this process in Ergo, you can enhance the security and efficiency of your blockchain applications.
 
-### Source References:
+### Source References
 
 - **[Scrypto: Merkle Proofs Implementation](https://github.com/input-output-hk/scrypto)**: This repository contains the core cryptographic components used in Ergo, including the implementation of Merkle proofs.
 - **[Ergo: BlockTransactions.scala](https://github.com/ergoplatform/ergo/blob/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/history/BlockTransactions.scala)**: Provides the logic for handling transactions within a block, including Merkle Tree construction and proof validation.
-

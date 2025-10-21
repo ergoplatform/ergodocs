@@ -13,13 +13,11 @@ Unlock the potential of arbitrage within the Ergo ecosystem, tapping into both d
 
 ## Key Arbitrage Strategies on Ergo
 
-
 - **Simple Arbitrage**: This involves directly buying and selling the same asset (e.g., ERG) across different exchanges to take advantage of price differentials.
-	- **SigmaUSD Bank Arbitrage:** Occasionally, the price of SigUSD on ErgoDEX may diverge from its peg, creating arbitrage opportunities directly with the SigmaUSD bank, where SigUSD is minted and redeemed.
+ 	- **SigmaUSD Bank Arbitrage:** Occasionally, the price of SigUSD on ErgoDEX may diverge from its peg, creating arbitrage opportunities directly with the SigmaUSD bank, where SigUSD is minted and redeemed.
   - **Low Liquidity Exchanges:** Platforms with low-liquidity like TradeOgre, Bitrue, and BitMart, often feature significant price variances for ERG and related tokens. These conditions are ideal for arbitrage, especially when large market movements prompt substantial price spikes. See a full list of all exchanges that support Ergo [here](https://ergoplatform.org/en/get-erg/#Exchanges).
 - **Triangular Arbitrage**: A more complex form, triangular arbitrage involves making three trades that exploit currency discrepancies on the same or multiple platforms. For example, you might start with ERG, exchange it for SigmaUSD, swap SigmaUSD for another token like SPF, and then convert SPF back to ERG at a profit.
 - **Cross-Chain Arbitrage**: Ergo's interoperability, notably through the Rosen bridge, opens opportunities for arbitrage across blockchains. You can exploit price differences for the same asset or related assets across different blockchain ecosystems. For example, you might start with ERG, exchange it for rsADA, unwrap rsADA using rosen.tech, and then convert rsADA back to ERG at a profit.
-
 
 ## Simple Arbitrage
 
@@ -29,8 +27,7 @@ Start by researching various cryptocurrency exchanges where Ergo (ERG) is listed
 
 **Look for "wicks" in the charts, indicating areas where buyers are market-buying significantly above the market value. These wicks suggest potential arbitrage opportunities. Consider depositing funds into the order book at various prices to capture these opportunities when prices spike.**
 
-> View all exchanges that list Ergo on [the ergo site](https://ergoplatform.org/en/get-erg/#Exchanges) or in the markets section on [CoinGecko](https://www.coingecko.com/en/coins/ergo#markets). You can also use [Crux Finance](https://cruxfinance.io/) and [TapTools.io](https://www.taptools.io/) to explore ecosystem system charts. 
-
+> View all exchanges that list Ergo on [the ergo site](https://ergoplatform.org/en/get-erg/#Exchanges) or in the markets section on [CoinGecko](https://www.coingecko.com/en/coins/ergo#markets). You can also use [Crux Finance](https://cruxfinance.io/) and [TapTools.io](https://www.taptools.io/) to explore ecosystem system charts.
 
 When visiting the Erg markets section on LiveCoinWatch, sorting by liquidity allows you to identify where trading opportunities lie based on the available volume with minimal price impact, typically within a 2% range. For instance, CoinEx displays a trading volume of approximately $3k, yet only $147 worth of Ergo is readily available within this liquidity threshold. Further examination of the market-depth graph reveals a mere $42 listed on the sell side.
 
@@ -45,8 +42,6 @@ This example highlights just one of many potential trading opportunities, includ
 
 You can also utilize monitoring bots such as [epbot](https://t.me/ergoportbot) to automate the process and receive timely alerts on price differentials across exchanges.
 
-
-
 ### Step 2: Analyze Price Differences and Calculate Potential Profits
 
 Compare buy and sell prices of ERG on different exchanges to identify arbitrage opportunities. Calculate potential profits by considering transaction fees, withdrawal fees, and transfer times. Ensure that potential profits outweigh the costs involved in executing arbitrage trades.
@@ -60,7 +55,7 @@ Compare buy and sell prices of ERG on different exchanges to identify arbitrage 
 When ready to execute an arbitrage trade, follow these steps:
 
 1. **Deposit Funds:** Deposit cryptocurrency from your wallet into the selected exchange or exchanges where you plan to execute the arbitrage trade.
-   
+
 2. **Buy ERG:** Use your deposited funds to buy ERG at a lower price, either on a centralized exchange or directly from your wallet.
 
 3. **Transfer ERG:** Withdraw the purchased ERG from the exchange or your wallet and transfer it to another exchange or your wallet where the price is higher.
@@ -69,11 +64,9 @@ When ready to execute an arbitrage trade, follow these steps:
 
 5. **Withdraw Profits:** Withdraw your profits from the second exchange back to your wallet.
 
-
 ### Step 4: Monitor and Repeat
 
 Continuously monitor prices on different exchanges for new arbitrage opportunities. Execute trades quickly to capitalize on price differentials before they normalize. Be prepared to adjust your strategy based on market conditions and changes in exchange prices.
-
 
 ## Stay Connected
 

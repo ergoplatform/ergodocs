@@ -1,7 +1,5 @@
 # Hosting a Pool on Ergo
 
-
-
 Hosting a pool on Ergo involves setting up a local instance of the Ergo node and configuring it to point to your pool software. This guide will walk you through the process step by step.
 
 ## Step 1: Set Up the Ergo Node

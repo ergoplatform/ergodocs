@@ -33,13 +33,16 @@ NiPoPoWs sidechains have a variety of applications, including:
 ## Resources
 
 ### Academic Papers
+
 - [Proof of Work Sidechains](https://eprint.iacr.org/2018/1048.pdf)
 
 ### Articles
+
 - [Sidechains: Why These Researchers Think They Solved a Key Piece of the Puzzle](https://bitcoinmagazine.com/technical/sidechains-why-these-researchers-think-they-solved-key-piece-puzzle)
 - [The Sidechains Breakthrough Almost Everyone in Bitcoin Missed](https://www.coindesk.com/markets/2018/01/17/the-sidechains-breakthrough-almost-everyone-in-bitcoin-missed/)
 
 ### Videos
+
 - [Thoughts on Cross Chain Communication, Sidechains, NiPoPoWs and Litecoin](https://www.youtube.com/watch?v=HvIAgDEUC4o)
 - [IOHK Research | Dionysis Zindros, Sidechains](https://www.youtube.com/watch?v=Y5QUGqFQnWg)
 - [NiPoPoW Lecture Series](https://www.youtube.com/watch?v=Bky_YlzToSA)

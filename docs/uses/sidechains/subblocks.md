@@ -1,4 +1,4 @@
-# Subblocks in Ergo 
+# Subblocks in Ergo
 
 /// details |TLDR
     {type: info, open: true}
@@ -8,7 +8,6 @@ With the renaming and introduction of sub-blocks, Ergo now distinguishes between
 
 ### What Are Sub-blocks and Ordering Blocks?
 
-  
 - **Sub-blocks (Input Blocks):**  
   These are block candidates generated with a lower difficulty threshold than full blocks. They are produced approximately once per second and carry most transaction data. This allows transactions to propagate and confirm much faster.
   
@@ -19,7 +18,6 @@ With the renaming and introduction of sub-blocks, Ergo now distinguishes between
 
 ### Enhanced User Experience
 
-  
 - **Rapid Onchain Confirmations:**  
   Everyday transactions—such as receiving tokens from DEX swaps or wallet-to-wallet transfers—can now be confirmed in approximately 2 seconds due to the introduction of sub-blocks. These input blocks are produced roughly every second and carry transaction data, allowing dApps and wallets to detect transaction inclusion almost instantly. However, this does not change the overall 2-minute block time for ordering blocks, which are still required for final settlement and consensus. As a result, existing dApps that rely on ordering blocks for confirmation will continue to behave as before. While some tools may treat sub-block inclusion as sufficient for faster user feedback, more security-sensitive applications—such as centralized exchanges or specific dApps handling large-value transactions—will still wait for a set number of ordering blocks to reduce the risk of chain reorganizations or 51% attacks.
   
@@ -34,4 +32,3 @@ With the renaming and introduction of sub-blocks, Ergo now distinguishes between
 Ergo’s renaming and introduction of sub-blocks (input blocks) paired with ordering blocks significantly improves transaction processing speed and reliability. These changes provide users with near-instant confirmations and faster failure detection, thereby offering a smoother and more efficient experience on the network.
 
 For a deep dive into the technical details behind these changes, see the [technical details](input-blocks.md).
-

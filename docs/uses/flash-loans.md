@@ -6,7 +6,6 @@ tags:
 
 Flash loans have emerged as a disruptive yet controversial innovation in the decentralized finance (DeFi) landscape, particularly within Ethereum's account-based blockchain. These loans offer a range of financial utilities but also come with inherent risks. The question at hand is: How compatible are flash loans with Ergo's eUTXO (Extended Unspent Transaction Output) blockchain model? The answer is nuanced and warrants a deep dive into the complexities involved.
 
-
 ## The Multifaceted Utility of Flash Loans
 
 Flash loans are not just arbitrage tools; they serve a broader financial function, including leverage, liquidity provision, self-refinancing, and portfolio rebalancing. However, the DeFi community remains divided over the broader applicability of these features.

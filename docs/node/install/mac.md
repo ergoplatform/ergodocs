@@ -1,9 +1,6 @@
 # Mac
 
-
-
 ## Getting Started
-
 
 ### Prerequisites
 
@@ -24,7 +21,6 @@ bash -c "$(curl -s https://node.phenotype.dev)"
 
 You can track the status of the sync by comparing the heights found in [127.0.0.1:9053/info](http://127.0.0.1:9053/info) to the ones on the [explorer](https://explorer.ergoplatform.com/en/).
 
-
 Please see the [troubleshooting page](troubleshooting.md) for more information.
 
 ## Run each startup
@@ -33,4 +29,3 @@ Please see the [troubleshooting page](troubleshooting.md) for more information.
 - Now select the Login items tab .
 
 To add the jar as a startup item, you'll need to create a wrapper shell script, set the permissions to allow execute, and then add it by pressing + and selecting the script.
-

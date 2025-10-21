@@ -2,8 +2,7 @@
 
 You want to develop with Java/Kotlin/Scala and run on iOS.
 
-
-## Platforms 
+## Platforms
 
 ::cards::
 
@@ -43,4 +42,3 @@ You want to develop with Java/Kotlin/Scala and run on iOS.
 ]
 
 ::/cards::
-

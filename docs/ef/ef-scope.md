@@ -85,7 +85,8 @@ Additionally, outwith the EF members, we fund a few roles in development.
 The Ergo Foundation also pays for the hosting and bandwidth costs for several pieces of infrastructure such as the website and explorer. This support ensures the availability and reliability of critical resources for the Ergo ecosystem.
 
 #### Code Repositories Supported by the Ergo Foundation
-/// admonition | This section is a draft and still open for discussion from the community. 
+
+/// admonition | This section is a draft and still open for discussion from the community.
     type: info
 ///
 
@@ -121,11 +122,10 @@ The repositories in this section are still part of the core ecosystem; however, 
 - [Explorer Backend](https://github.com/ergoplatform/explorer-backend)
 - [Sigma-rust](https://github.com/ergoplatform/sigma-rust)
 
-##### Hosting 
+##### Hosting
 
 - [ergoplatform.org](https://ergoplatform.org/)
 - [explorer.ergoplatform.com](https://explorer.ergoplatform.com/)
-
 
 ### Grants and Ecosystem Support
 
@@ -149,7 +149,6 @@ This approach reflects the Foundation's commitment to transparency and user educ
 /// admonition | For a detailed overview of current efforts, view the [public grist](https://ergo.getgrist.com/jf9KPR1HUDJH/Project-Management/p/28).
     type: info
 ///
-
 
 The Ergo Foundation, as a legal entity, is primarily responsible for liaising with centralized exchanges. Ergo has been listed on several exchanges, including three *Tier 1* exchanges (KuCoin, gate.io, Huobi). A *Tier 1* exchange is defined as an exchange that appears in the top 10 of exchange ranking sites such as [defillama.com/cexs](https://defillama.com/cexs).
 

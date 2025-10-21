@@ -43,13 +43,6 @@ Developers can use tools to read data from the blockchain, compute using that da
 
 ::/cards::
 
-
-
-
-
-
-
-
 ## Tools
 
 ::cards::
@@ -61,7 +54,6 @@ Developers can use tools to read data from the blockchain, compute using that da
     "image": "../../assets/img/dev-grid/json.png",
     "url": "jde.md"
   }
-
 
 ]
 

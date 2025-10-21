@@ -31,4 +31,3 @@ However, the UTXO model also presents unique challenges for developers, such as 
 ## Conclusion
 
 The UTXO model, despite its challenges, offers a robust and efficient method for transaction validation and execution of smart contracts. For more information on related topics, refer to [Ergo vs Cardano](ergo_vs_cardano.md) and [Sigma Protocols](sigma.md).
-

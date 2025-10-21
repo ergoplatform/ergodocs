@@ -32,14 +32,14 @@ Wallet-related settings are managed in the `ergo.wallet` section of the node con
 When running a node for the first time, you initialize its wallet via the REST API using one of two methods:
 
 1. **Initialize a New Wallet**: The node generates a new seed phrase for you.
-   - **Endpoint**: `POST /wallet/init`
-   - **Request Body**: `{"pass": "YOUR_WALLET_PASSWORD", "mnemonicPass": "OPTIONAL_PASSPHRASE"}`
-   - **Action**: Creates a new wallet file encrypted with `YOUR_WALLET_PASSWORD`. The response will contain the newly generated mnemonic phrase – **save this phrase securely and offline immediately!** The `mnemonicPass` (BIP-39 passphrase) is optional and adds an extra layer of security to the seed derivation. If used, it must be provided every time the seed is restored.
+   * **Endpoint**: `POST /wallet/init`
+   * **Request Body**: `{"pass": "YOUR_WALLET_PASSWORD", "mnemonicPass": "OPTIONAL_PASSPHRASE"}`
+   * **Action**: Creates a new wallet file encrypted with `YOUR_WALLET_PASSWORD`. The response will contain the newly generated mnemonic phrase – **save this phrase securely and offline immediately!** The `mnemonicPass` (BIP-39 passphrase) is optional and adds an extra layer of security to the seed derivation. If used, it must be provided every time the seed is restored.
 
 2. **Restore from Existing Mnemonic**: Use a previously generated mnemonic phrase.
-   - **Endpoint**: `POST /wallet/restore`
-   - **Request Body**: `{"pass": "YOUR_WALLET_PASSWORD", "mnemonic": "word1 word2 word3 ...", "mnemonicPass": "OPTIONAL_PASSPHRASE"}`
-   - **Action**: Recreates the wallet state from the provided `mnemonic`. Use the same `mnemonicPass` that was used when the mnemonic was originally generated or used, if any.
+   * **Endpoint**: `POST /wallet/restore`
+   * **Request Body**: `{"pass": "YOUR_WALLET_PASSWORD", "mnemonic": "word1 word2 word3 ...", "mnemonicPass": "OPTIONAL_PASSPHRASE"}`
+   * **Action**: Recreates the wallet state from the provided `mnemonic`. Use the same `mnemonicPass` that was used when the mnemonic was originally generated or used, if any.
 
 ## Unlocking the Wallet
 

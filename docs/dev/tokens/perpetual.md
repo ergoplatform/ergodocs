@@ -11,6 +11,7 @@ ErgoScript allows the creation of a '*perpetual token*', a token that is designe
       sigmaProp(OUTPUTS.exists(isPerpetual))
     }
 ```
+
 This code snippet ensures the persistence of a collection of perpetual tokens, even if the collection's size is zero. If you protect a single token using this script, it guarantees that the token will only be removed by garbage collection.
 
 For a comprehensive discussion, refer to [this thread](https://www.ergoforum.org/t/a-perpetual-token/205/3).

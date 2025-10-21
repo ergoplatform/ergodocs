@@ -10,6 +10,7 @@ tags:
 $$
 \newcommand{\peers}{\mathcal{P}}
 $$
+
 # Peer Management Protocol
 
 ## Definitions
@@ -34,10 +35,10 @@ A **penalty** is represented as a tuple (`descr`, `score`), where `descr` descri
 
 There are four categories of penalties:
 
-* **NonDeliveryPenalty**: Applied when a peer fails to deliver a requested modifier within the expected timeframe.
-* **MisbehaviorPenalty**: Applied when a peer delivers an invalid modifier (e.g., one failing validation rules).
-* **SpamPenalty**: Applied when a peer delivers an unsolicited modifier (one that was not requested).
-* **PermanentPenalty**: Applied for severe protocol deviations, resulting in an immediate and permanent ban.
+- **NonDeliveryPenalty**: Applied when a peer fails to deliver a requested modifier within the expected timeframe.
+- **MisbehaviorPenalty**: Applied when a peer delivers an invalid modifier (e.g., one failing validation rules).
+- **SpamPenalty**: Applied when a peer delivers an unsolicited modifier (one that was not requested).
+- **PermanentPenalty**: Applied for severe protocol deviations, resulting in an immediate and permanent ban.
 
 When a penalty is imposed, the penalized peer's information is updated in the **penalty book**. The penalty book maps an IP address (`ip`) to its current accumulated penalty `score` and the timestamp (`ts`) of the last penalty event: `ip` -> (`score`, `ts`).
 

@@ -19,15 +19,17 @@ The `sigma-rust` library provides comprehensive tools to create, manage, and ver
 Before you begin working with Merkle Batch Proofs in `sigma-rust`, ensure your environment is properly set up:
 
 1. **Clone the Sigma-Rust Repository**:
+
    ```bash
    git clone https://github.com/ergoplatform/sigma-rust.git
    cd sigma-rust
    ```
 
-2. **Install Rust**: 
+2. **Install Rust**:
    Follow the instructions on [rust-lang.org](https://www.rust-lang.org/tools/install) to install Rust if you haven't done so.
 
 3. **Build the Project**:
+
    ```bash
    cargo build
    ```
@@ -107,15 +109,17 @@ For JVM-based applications, `scrypto` provides similar functionalities to `sigma
 To work with `scrypto`, follow these steps:
 
 1. **Clone the Scrypto Repository**:
+
    ```bash
    git clone https://github.com/input-output-hk/scrypto.git
    cd scrypto
    ```
 
-2. **Ensure Scala and SBT Are Installed**: 
+2. **Ensure Scala and SBT Are Installed**:
    You can install Scala and SBT by following the instructions on [scala-lang.org](https://www.scala-lang.org/download/).
 
 3. **Build the Project**:
+
    ```bash
    sbt compile
    ```

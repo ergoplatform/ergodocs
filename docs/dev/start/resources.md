@@ -2,14 +2,12 @@
 
 This page outlines the resources available on Ergo. Also check out the [dev-tools section on sigmaverse](https://sigmaverse.io/)
 
-
 ## Libraries
 
 ### SDKs
 
 - [Appkit](appkit.md) (Java)
 - [Sigma-Rust](rust.md)
-
 
 ### Frameworks
 
@@ -35,8 +33,8 @@ This page outlines the resources available on Ergo. Also check out the [dev-tool
 ### Testnet
 
 - [Testnet explorer](https://testnet.ergoplatform.com/)
-    - [Using Ergo-Testnet](https://github.com/ergoplatform/ergo/wiki/Ergo-Testnet)
-    - [Testnet Faucet](https://testnet.ergofaucet.org/)
+  - [Using Ergo-Testnet](https://github.com/ergoplatform/ergo/wiki/Ergo-Testnet)
+  - [Testnet Faucet](https://testnet.ergofaucet.org/)
 
 ### API
 
@@ -44,7 +42,7 @@ This page outlines the resources available on Ergo. Also check out the [dev-tool
   - [Node API](https://git.io/fjqwb)
   - [Explorer API](https://git.io/fjqwN)
   - [Ergo.Watch API](https://api.ergo.watch/docs)
- - [TokenJay API](https://api.tokenjay.app/swagger-ui/index.html;jsessionid=59429AD4DF081E2E3450C2834095D427?attribute=redirectWithRedirectView)
+- [TokenJay API](https://api.tokenjay.app/swagger-ui/index.html;jsessionid=59429AD4DF081E2E3450C2834095D427?attribute=redirectWithRedirectView)
 
 ### Test vectors
 
@@ -69,12 +67,11 @@ This page outlines the resources available on Ergo. Also check out the [dev-tool
 
 ## Burning
 
-`4MQyMKvMbnCJG3aJ` is a P2S (Pay-to-Script) representation of “false” condition, i.e. the box is unspendable. Hash is written into R4 register of the box, in the explorer 
+`4MQyMKvMbnCJG3aJ` is a P2S (Pay-to-Script) representation of “false” condition, i.e. the box is unspendable. Hash is written into R4 register of the box, in the explorer
 
 > It looks like `0e2047ee2cbd52be01e0876c3e0b989a0d4d5f8955200b1fab0e6eeb2b182555c2fb`, where `0e` is type descriptor (byte array), `20` is bytestring length (0x20 in hex = 32), `47ee2cbd52be01e0876c3e0b989a0d4d5f8955200b1fab0e6eeb2b182555c2fb` is the hash of the file.
 
-
-## External 
+## External
 
 - [awesome-ergo](https://github.com/ergoplatform/awesome-ergo)
 - [ergonaut.space](https://ergonaut.space/)

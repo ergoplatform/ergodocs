@@ -56,4 +56,3 @@ In the Ergo blockchain, BlockP2P is implemented in the core node software, enabl
 ### Enhancements and Optimizations
 
 Ergo's BlockP2P protocol is continuously improved to enhance its performance and security. Recent updates include optimizations for faster block propagation and improved peer discovery mechanisms. These updates are crucial for maintaining the scalability of the Ergo network as it grows.
-

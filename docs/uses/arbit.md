@@ -7,7 +7,6 @@
 This project is a work in progress and is not yet ready for production use.
 ///
 
-
 ---
 
 ## Overview
@@ -20,9 +19,9 @@ Arbit streamlines the process of arbitrage trading by providing a clean and simp
 - **Supported Exchanges:** Ergo Dex and Splash.
 - **Core Features:**
 
-    - Predefined arbitrage strategies (called "Arbits").
-    - Focus on simplicity and usability.
-    - Execution of swaps with just a few clicks.
+  - Predefined arbitrage strategies (called "Arbits").
+  - Focus on simplicity and usability.
+  - Execution of swaps with just a few clicks.
 
 **What is an Arbit?**
 
@@ -46,8 +45,8 @@ An Arbit is a series of swaps that generate profit. For example:
 
 - Supports predefined arbitrage paths, such as:
 
-    - ERG ↔ ADA
-    - RSN ↔ ADA
+  - ERG ↔ ADA
+  - RSN ↔ ADA
 
 - Profit calculations are based on fixed USD values ($50 and $100).
 
@@ -138,8 +137,8 @@ The core logic for arbitrage is implemented in `src/arbitrategy.ts`. It defines 
 
 - **Ergo Dex (`src/providers/ergodex.ts`):**
 
-    - Interacts with the Ergo Dex SDK for swapping tokens.
-    - Supports `x2y` and `y2x` operations.
+  - Interacts with the Ergo Dex SDK for swapping tokens.
+  - Supports `x2y` and `y2x` operations.
 
 - **Splash (`src/providers/splash.ts`):**
 
@@ -175,4 +174,3 @@ The project is maintained by [ConnecMent](https://github.com/ConnecMent). Contri
 - Mentee: [@SeyedMojtaba1](https://github.com/SeyedMojtaba1)
 
 Special thanks to [@zargarzadehm](https://github.com/zargarzadehm) for Ergo Dex SDK insights.
-

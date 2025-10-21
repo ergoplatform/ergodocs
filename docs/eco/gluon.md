@@ -20,6 +20,7 @@ During the [Ergoversary Summit 2023](https://www.youtube.com/watch?v=tnvm1we6xts
     {type: info, open: true}
 Now live at [gluon.gold](https://gluon.gold/)
 ///
+
 ## Performance and Issues
 
 Gluon W± has demonstrated strong performance on Ergo, surviving market crashes since early 2021 while many other stablecoins have failed. However, Bruno acknowledges that there is always room for improvement. He highlights some of the concerns with the current protocol, such as sensitivity to the oracle and reserve drainage by whales, inconvenience for reserve coin holders unable to sell back reserve coins below the threshold, and the zero equity problem. These issues have been addressed in talks and proposals for a future extended Djed protocol.

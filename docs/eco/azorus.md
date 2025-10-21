@@ -9,8 +9,6 @@ tags:
 
 # Azorus
 
-
-
 An intelligence platform for UTXO Blockchains
 
 - [Project Demo](https://www.youtube.com/watch?v=SD8bDf-nxTQ)
@@ -21,5 +19,5 @@ An intelligence platform for UTXO Blockchains
 /// admonition | Status
     type: warning
 
-This project is currently in a dormant state as the developers have shifted their focus to other priorities. It will be resumed when there is sufficient demand. 
+This project is currently in a dormant state as the developers have shifted their focus to other priorities. It will be resumed when there is sufficient demand.
 ///

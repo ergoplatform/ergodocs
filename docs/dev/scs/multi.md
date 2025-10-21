@@ -5,7 +5,7 @@ tags:
 
 # Multi-Stage Protocols
 
-Unspent Transaction Outputs (UTXOs) are known for their scalability and reduced error rates. However, Ethereum's account model offers the advantages of persistent storage and a shared global context. *Multi-Stage Contracts* utilize a technique involving [*transaction trees*](tx-tree.md) to mimic persistent storage in UTXO-based systems. This is achieved by interlinking multiple UTXOs, each containing snippets of code, to create extensive multi-stage protocols. This approach introduces _on-chain computations_ and enables the **execution of parallel actions within smart contracts**.
+Unspent Transaction Outputs (UTXOs) are known for their scalability and reduced error rates. However, Ethereum's account model offers the advantages of persistent storage and a shared global context. *Multi-Stage Contracts* utilize a technique involving [*transaction trees*](tx-tree.md) to mimic persistent storage in UTXO-based systems. This is achieved by interlinking multiple UTXOs, each containing snippets of code, to create extensive multi-stage protocols. This approach introduces *on-chain computations* and enables the **execution of parallel actions within smart contracts**.
 
 This method offers functionality akin to Ethereum's accounts but without the associated overhead.
 

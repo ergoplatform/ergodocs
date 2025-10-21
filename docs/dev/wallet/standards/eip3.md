@@ -23,9 +23,7 @@ The standard has five levels part of its path:
 m / 44' / coin_type' / account' / change / address_index
 ```
 
-
 This EIP attempts to define a specific `coin_type` for the Ergo ecosystem and a policy for how wallets use the `change` level.
-
 
 Coin Type
 --------
@@ -52,6 +50,7 @@ m / 44' / 429' / 0' / 0 / 0
 
 Change
 ------
+
 In BIP-44 the constant 0 is used for the external addresses and constant 1 for internal addresses (aka change addresses).
 
 For EIP-3, we instead do not use constant 1 at all. Thus we do not support internal/change addresses, but only external addresses.
@@ -62,9 +61,9 @@ This decision was made to simplify the experience for end users and solidify a c
 
 That said, in the future new wallets are more than welcome to create a new EIP for wallets which may wish to support internal addresses as well as an alternate standard (if valuable use cases arise).
 
-
 Export and import of public keys
 --------------------------------
+
 For showing wallets in another wallet application as read-only wallets, it is possible to export the extended public key. This way, all addresses can be derived while signing is not possible. For this to work, the derived key on path m / 44' / 429' / 0' / 0 needs to be used for export and import.
 
 The [BIP-0032](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki#Serialization_format) defines a serialization format for keys that we can use here to export and import the xpubkey.

@@ -22,6 +22,7 @@ tags:
 This page contains useful code snippets, patterns, and troubleshooting tips for common tasks when using the [Fleet SDK](fleet.md) in TypeScript/JavaScript.
 
 ## Table of Contents
+
 - [Fleet SDK Recipes](#fleet-sdk-recipes)
   - [Table of Contents](#table-of-contents)
   - [Validating Box Ownership (SigmaProp from Register)](#validating-box-ownership-sigmaprop-from-register)
@@ -51,7 +52,7 @@ The core task involves:
 
 **Important:** Directly constructing `ErgoAddress` from `SSigmaProp` is not the correct approach in Fleet SDK. You need to extract the public key bytes first.
 
-### Complete Example:
+### Complete Example
 
 ```typescript
 import { 
@@ -259,12 +260,12 @@ Contracts might store more complex data structures in registers, such as tuples 
 
 **General Approach:**
 
-1.  Call `deserialize(registerValueHex)`.
-2.  Check the `type` property of the result (e.g., `"STuple"`, `"SColl"`, `"SOption"`).
-3.  Access the `value` property.
-    *   For `STuple` and `SColl`, `value` is typically an array. Iterate through it, inspecting the `type` and `value` of each element.
-    *   For `SOption`, `value` is either `null` (representing `None`) or an object representing the `Some(value)` content. Check if `value` is `null` before accessing its properties.
-4.  Recursively apply this process for nested structures.
+1. Call `deserialize(registerValueHex)`.
+2. Check the `type` property of the result (e.g., `"STuple"`, `"SColl"`, `"SOption"`).
+3. Access the `value` property.
+    - For `STuple` and `SColl`, `value` is typically an array. Iterate through it, inspecting the `type` and `value` of each element.
+    - For `SOption`, `value` is either `null` (representing `None`) or an object representing the `Some(value)` content. Check if `value` is `null` before accessing its properties.
+4. Recursively apply this process for nested structures.
 
 ---
 **Example 1: Decoding a Tuple `(SigmaProp, Long)` from R5**
@@ -460,8 +461,8 @@ if (integerArray) {
 ---
 **Note on `SigmaProp` and `Coll[Byte]`:**
 
-*   Decoding a `SigmaProp` (typically to get the underlying public key bytes) is shown in the [Validating Box Ownership](#validating-box-ownership-sigmaprop-from-register) example.
-*   Decoding a simple `Coll[Byte]` (often used for Token IDs, Box IDs, Tx IDs, or sometimes raw public keys) is shown in the [Extracting Token IDs](#extracting-token-ids-from-registers) example.
+- Decoding a `SigmaProp` (typically to get the underlying public key bytes) is shown in the [Validating Box Ownership](#validating-box-ownership-sigmaprop-from-register) example.
+- Decoding a simple `Coll[Byte]` (often used for Token IDs, Box IDs, Tx IDs, or sometimes raw public keys) is shown in the [Extracting Token IDs](#extracting-token-ids-from-registers) example.
 
 ---
 
@@ -525,9 +526,9 @@ Working with registers and ErgoTrees off-chain can sometimes lead to unexpected 
 
 **Possible Causes & Solutions:**
 
-*   **Serialization Mismatch:** The most likely cause is that the `deserialize` function didn't correctly interpret the register data into the raw public key bytes needed by `ErgoAddress.fromPublicKey`. Double-check how the SigmaProp was serialized *into* the register on-chain. Common formats include `SColl(SByte)` containing the 33 public key bytes, or `SSigmaProp(SGroupElement(...))` containing the same bytes nested deeper. Use `detectRegisterFormat` below or inspect the raw hex.
-*   **Incorrect Prefix:** ErgoTrees can have different hexadecimal prefixes depending on their structure (e.g., `00` for basic P2PK, `0e` for hashes, etc.). Ensure you are comparing apples to apples. If one tree starts with `0008cd` (standard P2PK) and the other doesn't, they represent different script types.
-*   **Address Type Mismatch:** Are you sure the register contains a standard P2PK SigmaProp? If the contract uses a more complex script (P2S), deriving the ErgoTree from just a public key won't work. You'd need to compile the corresponding ErgoScript.
+- **Serialization Mismatch:** The most likely cause is that the `deserialize` function didn't correctly interpret the register data into the raw public key bytes needed by `ErgoAddress.fromPublicKey`. Double-check how the SigmaProp was serialized *into* the register on-chain. Common formats include `SColl(SByte)` containing the 33 public key bytes, or `SSigmaProp(SGroupElement(...))` containing the same bytes nested deeper. Use `detectRegisterFormat` below or inspect the raw hex.
+- **Incorrect Prefix:** ErgoTrees can have different hexadecimal prefixes depending on their structure (e.g., `00` for basic P2PK, `0e` for hashes, etc.). Ensure you are comparing apples to apples. If one tree starts with `0008cd` (standard P2PK) and the other doesn't, they represent different script types.
+- **Address Type Mismatch:** Are you sure the register contains a standard P2PK SigmaProp? If the contract uses a more complex script (P2S), deriving the ErgoTree from just a public key won't work. You'd need to compile the corresponding ErgoScript.
 
 ```typescript
 function troubleshootErgoTreeComparison(ergoTree1: string, ergoTree2: string): string {
@@ -625,6 +626,7 @@ graph TD
 ---
 
 ## Related Documentation
+
 - [ErgoScript Sigma Propositions](../scs/sigma.md)
 - [Box Registers Specification](../scs/boxes-and-registers.md)
 - [ErgoTree Specification](../scs/ergotree.md)

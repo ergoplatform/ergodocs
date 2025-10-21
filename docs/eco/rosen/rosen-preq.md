@@ -42,5 +42,3 @@ Docker Compose is a tool used for defining and running multi-container Docker ap
 The recommended method for installing Docker Compose is to install Docker Desktop, which includes Docker Compose, Docker Engine, and Docker CLI. These are all necessary components for running multi-container Docker applications.
 
 You can download Docker Desktop for your specific Operating System from the following link: [Docker Desktop](https://docs.docker.com/desktop/)
-
-

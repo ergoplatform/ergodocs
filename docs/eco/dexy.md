@@ -19,6 +19,7 @@ The first implementation of Dexy will be **DexyGold**, which aims to maintain a 
 
 /// details | Beta
     {type: info, open: true}
+
 - [LP UI](https://dexy.interface-ggd.pages.dev/ergo/swap?base=0000000000000000000000000000000000000000000000000000000000000000&quote=0d69a552b30df9be519099ec07682039b0610267aaee48d2a1d3dad398287ef5&initialPoolId=0fa04f3851b18085f160d90bc3dba1c63f2fdc73f884c9fd94395dbfc9c293b6)
 - [Bank UI](https://dexy-test.dexygold.com/)
 - [Testnet Nautilus (required):](https://github.com/nautls/nautilus-wallet/releases/tag/v0.9.2)
@@ -29,7 +30,7 @@ The first implementation of Dexy will be **DexyGold**, which aims to maintain a 
 
 The Dexy design incorporates the following key components and mechanisms:
 
-1. **Emission (Minting) Contract**: 
+1. **Emission (Minting) Contract**:
     - Allows one-way minting of new Dexy tokens by selling ERG at the oracle pool rate.
     - Reverse swaps (selling Dexy for ERG) are not possible through this contract.
 

@@ -21,13 +21,11 @@ $$
 \newcommand{\corelang}{Core-\lambda}
 $$
 
-
-# Cryptographic 
+# Cryptographic
 
 This document provides an in-depth look at the cryptographic schemes, protocols, and data structures used in the Ergo blockchain. Ergo’s security model relies heavily on advanced cryptographic protocols that ensure the integrity of transactions, protect user privacy, and enforce complex spending conditions within smart contracts. This document outlines the internal workings of these cryptographic schemes, focusing on their implementation within Ergo, particularly through the [`sigmastate-interpreter`](https://github.com/ScorexFoundation/sigmastate-interpreter), [`sigma-rust`](https://github.com/ergoplatform/sigma-rust), and [`Scrypto`](https://github.com/input-output-hk/scrypto) repositories.
 
 ## Overview
-
 
 Ergo’s cryptographic toolkit is built around **composable Sigma protocols**, which allow for flexible, secure, and efficient proofs of knowledge and cryptographic operations within its smart contract framework. These Sigma protocols are the foundation of Ergo’s cryptographic security, and they enable privacy-preserving applications like multi-signature wallets, ring signatures, and threshold signatures.
 
@@ -52,7 +50,7 @@ For more details on cryptographic functions in ErgoScript, see [ErgoScript Crypt
 At their core, [Sigma protocols](sigma.md) provide a secure way to prove the following properties:
 
 1. **Proof of Knowledge of Discrete Logarithm**: Prove knowledge of the discrete logarithm of a given public key without revealing the secret key.
-   
+
 2. **Proof of Equality of Discrete Logarithms (Diffie-Hellman Tuple)**: Prove that two discrete logarithms (e.g., over different bases) are equal without revealing the logarithms.
 
 These basic Sigma protocols can be combined using logical operators, such as **AND**, **OR**, and **THRESHOLD (k-out-of-n)**, to form complex proofs.
@@ -100,7 +98,7 @@ This script enables three participants from a group of five to cooperatively sig
 The signing process in Schnorr signatures follows these steps:
 
 1. **Key Generation**: Generate a private key \(x\) and compute the corresponding public key \(P = xG\), where \(G\) is the generator of the elliptic curve (SecP256K1).
-   
+
 2. **Signing**: To sign a message \(m\), the user:
    - Picks a random nonce \(k\) and computes \(R = kG\),
    - Computes \(e = H(R || P || m)\),
@@ -110,7 +108,7 @@ The signing process in Schnorr signatures follows these steps:
    \[
    e = H(R' || P || m)
    \]
-   
+
 Schnorr signatures are widely used in Ergo for multi-signature schemes, privacy-enhancing protocols, and adaptor signatures.
 
 ### Use Cases of Schnorr Signatures
@@ -195,7 +193,6 @@ See [this page](dev/scs/global-functions.md#cryptographic-functions) for a descr
 - **Bitcoin Forks** Usually adding some cryptography to the protocol (e.g new instructions in ZCASH)
 - **Ethereum / EVM chains**: Instructions and precompiled contracts. Pairing operations to support 
 
-
 ## Use Cases
 
 ### Schnorr Signature
@@ -208,11 +205,9 @@ In the simplest case a signature in Ergo transaction is a Schnorr signature, in 
 - It's possible to create **adaptor signatures** which can be used for private swaps. 
 - There were private swap demos with Bitcoin Cash
 
-
 | Bitcoin           | Ethereum                           | Ergo                                 |
 |-------------------|------------------------------------|--------------------------------------|
 | Potentially, a lot of protocols | - | The same as Bitcoin |
-
 
 ### Mixers
 
@@ -224,17 +219,11 @@ In the simplest case a signature in Ergo transaction is a Schnorr signature, in 
 |-------------------|------------------------------------|--------------------------------------|
 | No onchain mixing | Trusted setup-based or inefficient | Efficient, minimal trust assumptions |
 
-
-
-
 ### Stealth Addresses
 
 A *Stealth Address* is a [DHT](diffie.md) contract that you can spend from without revealing your public key.
 
-
-
 This allows a customer to derive a one-time payment address for a store, without revealing the payment to anyone but the store owner. 
-
 
 | Bitcoin           | Ethereum                           | Ergo                                 |
 |-------------------|------------------------------------|--------------------------------------|
@@ -242,13 +231,10 @@ This allows a customer to derive a one-time payment address for a store, without
 
 See the [Stealth Addresses](stealth-address.md) page for more information.
 
-
 ### Ring and Threshold Signatures
 
 - Native support in Ergo, also, more complex schemes support (e.g ring AND threshold)
 - Implementations: node API, [Zero-Knowledge Treasury](zkt.md) on top of Ergo
-
-
 
 | Bitcoin           | Ethereum                           | Ergo                                 |
 |-------------------|------------------------------------|--------------------------------------|
@@ -261,8 +247,6 @@ You can do basic things in a contract like calculating the hash, but what if you
 | Bitcoin           | Ethereum                           | Ergo                                 |
 |-------------------|------------------------------------|--------------------------------------|
 | - | Efficient ECDSA | Efficient Schnorr |
-
-
 
 ## Scrypto
 

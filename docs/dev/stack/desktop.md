@@ -1,8 +1,6 @@
 # Desktop
 
-
-## Platforms 
-
+## Platforms
 
 ::cards::
 
@@ -43,8 +41,7 @@
 
 ::/cards::
 
-## Examples 
-
+## Examples
 
 ::cards::
 
@@ -63,7 +60,7 @@
     "title": "🔗 Satergo",
     "content": "",
     "url": "https://satergo.com/"
-  },
+  }
 
 ]
 

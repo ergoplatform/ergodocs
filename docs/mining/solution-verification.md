@@ -17,7 +17,6 @@ When miners solve a mining puzzle, they produce a solution that is essentially a
 
 Test vectors provide a consistent and reliable way to test the verification process and ensure it works correctly. Any errors or inconsistencies can be identified and corrected by comparing the expected output from the test vector with the actual output produced by the verification process. This helps to ensure the mining process's integrity and the blockchain's security.
 
-
 ```
 Test Vectors - Ergo:
 credit: Wolf9466#9466 on Discord

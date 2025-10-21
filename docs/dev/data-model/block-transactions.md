@@ -15,6 +15,7 @@ The Transactions section of an Ergo [block](block.md) is the heart of the blockc
     {type: info, open: true}
 This page covers the structure of the transactions section within an Ergo block. For more general information on transactions, see the [Transaction Overview](transactions.md) page.
 ///
+
 ## Function
 
 * **Value Transfer:** Ergo transactions enable users to transfer ERG (Ergo's native token) and other custom [tokens](eip4.md)/assets to other users on the network.
@@ -36,13 +37,13 @@ Here's a breakdown of its main components:
 Ergo transactions undergo rigorous [validation](validation.md) to ensure they are legitimate and maintain the integrity of the blockchain:
 
 * **Stateless Validation:** Checks that don't require accessing the blockchain state, including:
-    * Ensuring the transaction has inputs and outputs.
-    * Verifying basic rules (no negative values, unique inputs, etc.).
+  * Ensuring the transaction has inputs and outputs.
+  * Verifying basic rules (no negative values, unique inputs, etc.).
 * **Stateful Validation:** Requires accessing the blockchain state to check:
-    * Whether the inputs refer to valid and unspent boxes.
-    * Whether the spending proofs are correct.
-    * Whether the transaction adheres to rules related to assets, [fees](min-fee.md), and block size limits.
-    * Whether the scripts in the inputs are satisfied (using the `ErgoInterpreter` - see [ErgoTree Evaluation](evaluation.md)).
+  * Whether the inputs refer to valid and unspent boxes.
+  * Whether the spending proofs are correct.
+  * Whether the transaction adheres to rules related to assets, [fees](min-fee.md), and block size limits.
+  * Whether the scripts in the inputs are satisfied (using the `ErgoInterpreter` - see [ErgoTree Evaluation](evaluation.md)).
 
 ## Key Concepts
 

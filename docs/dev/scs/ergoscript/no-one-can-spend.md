@@ -1,6 +1,6 @@
 # Unspendable Scripts in ErgoScript
 
-In contrast to the [previous examples](anyone-can-spend.md), ErgoScript can also create programs at the opposite end of the flexibility spectrum that always evaluate to `false`. 
+In contrast to the [previous examples](anyone-can-spend.md), ErgoScript can also create programs at the opposite end of the flexibility spectrum that always evaluate to `false`.
 
 Here's an example of such a script:
 

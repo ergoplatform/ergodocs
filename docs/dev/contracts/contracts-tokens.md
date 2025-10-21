@@ -21,5 +21,5 @@ This category collects token-centric contract patterns. These patterns control t
 
 ## See also
 
-- Library index: [contracts-library.md](contracts-library.md)
-- Additional contracts index: [contracts.md](contracts.md)
+- [Library index](contracts-library.md)
+- [Additional contracts index](contracts.md)

@@ -5,4 +5,3 @@
 ## Resources
 
 - [SigmaParticle](https://github.com/dzyphr/SigmaParticle), A framework for interacting with ergo blockchain based on ergpy to be used in cross chain pipeline extensions
-

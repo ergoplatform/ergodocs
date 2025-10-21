@@ -7,4 +7,3 @@ The goal of Subpooling, and SmartPools in general, is to promote decentralizatio
 The latest development in this area is the [Lithos Protocol](lithos.md), which represents the next generation of SmartPools and further enhances the benefits of Subpooling.
 
 This project was developed for [ERGOHACK II](ergohack.md).
-

@@ -11,12 +11,11 @@ tags:
 
 ## Node
 
-- There is a public node available at [213.239.193.208:9053](http://213.239.193.208:9053). 
-- A redundancy can also be provided on request to team@ergoplatform.org. 
+- There is a public node available at [213.239.193.208:9053](http://213.239.193.208:9053).
+- A redundancy can also be provided on request to <team@ergoplatform.org>.
 - A dynamic list of available public nodes can be found at [api.tokenjay.app/peers/list](http://api.tokenjay.app/peers/list)
 
 To set up your own node please see [this page](install.md)
-
 
 ## Explorer
 

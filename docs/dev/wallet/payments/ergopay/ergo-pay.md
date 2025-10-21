@@ -9,7 +9,7 @@ ErgoPay is Ergo's dedicated dApp connector for non-web wallet applications. It h
 
 While many may associate a dApp connector with a bridge between a website-based dApp and a browser extension wallet, like Yoroi and Metamask, not all users prefer to use a web extension wallet, and not all dApps are websites. To cater to this diversity, ErgoPay was developed, a versatile connector that can link any wallet with any dApp. For a non-technical overview of ErgoPay, [click here](https://www.reddit.com/r/ergonauts/comments/sc9lbk/comment/hu9v6dk/?utm_source=share&utm_medium=web2x&context=3).
 
-ErgoPay was integrated into **Ergo Wallet App 1.6**, and a demonstration dApp for minting and burning tokens has been live for a while. 
+ErgoPay was integrated into **Ergo Wallet App 1.6**, and a demonstration dApp for minting and burning tokens has been live for a while.
 
 If you're interested in trying it out, follow these steps:
 

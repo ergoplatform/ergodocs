@@ -7,29 +7,27 @@ tags:
 
 > 🔗 Refer to [EIP-0020](https://raw.githubusercontent.com/ergoplatform/eips/master/eip-0020.md) for more details.
 
-
 * Author: @aslesarenko, @MrStahlfelge
 * Status: Proposed
 * Created: 18-August-2021
 
-
-
 ## Table of Contents
-- [ErgoPay: A Wallet and dApp Interaction Protocol](#ergopay-a-wallet-and-dapp-interaction-protocol)
-  - [Table of Contents](#table-of-contents)
-  - [Overview](#overview)
-  - [Background and Motivation](#background-and-motivation)
-  - [ErgoPay Interaction Protocol](#ergopay-interaction-protocol)
-  - [Data Formats](#data-formats)
-    - [Option 1: dApp Provides URL Request for ErgoPaySigningRequest Information](#option-1-dapp-provides-url-request-for-ergopaysigningrequest-information)
-      - [Response: ErgoPaySigningRequest](#response-ergopaysigningrequest)
-    - [Option 2: dApp Provides URI Scheme Containing ReducedTransaction](#option-2-dapp-provides-uri-scheme-containing-reducedtransaction)
-  - [Wallet App Implementation](#wallet-app-implementation)
-  - [dApp Implementation](#dapp-implementation)
-  - [Benefits for dApps](#benefits-for-dapps)
-  - [Benefits for Wallets](#benefits-for-wallets)
+* [ErgoPay: A Wallet and dApp Interaction Protocol](#ergopay-a-wallet-and-dapp-interaction-protocol)
+  * [Table of Contents](#table-of-contents)
+  * [Overview](#overview)
+  * [Background and Motivation](#background-and-motivation)
+  * [ErgoPay Interaction Protocol](#ergopay-interaction-protocol)
+  * [Data Formats](#data-formats)
+    * [Option 1: dApp Provides URL Request for ErgoPaySigningRequest Information](#option-1-dapp-provides-url-request-for-ergopaysigningrequest-information)
+      * [Response: ErgoPaySigningRequest](#response-ergopaysigningrequest)
+    * [Option 2: dApp Provides URI Scheme Containing ReducedTransaction](#option-2-dapp-provides-uri-scheme-containing-reducedtransaction)
+  * [Wallet App Implementation](#wallet-app-implementation)
+  * [dApp Implementation](#dapp-implementation)
+  * [Benefits for dApps](#benefits-for-dapps)
+  * [Benefits for Wallets](#benefits-for-wallets)
 
 ## Overview
+
 ErgoPay is a standard for cross-platform interaction between an online dApp and a wallet app. It facilitates the creation, signing, and sending of Ergo transactions.
 
 ## Background and Motivation
@@ -77,11 +75,11 @@ An ErgoPay interaction between a Wallet and a dApp is driven by the dApp's user 
 
 9. The dApp monitors the transaction by id and proceeds with its business logic upon receiving enough confirmations. This concludes the ErgoPay protocol.
 
-Additional requirements: 
+Additional requirements:
 
-- Multiple instances of the ErgoPay protocol MUST be able to run simultaneously within the dApp.
-- The Wallet MAY implement "one-at-a-time" signing. When the signing is interrupted for some reason, it can be started from step 3 (i.e., scanning the QR).
-- When the dApp receives the transaction id, but the `SignedTransaction` is not accepted to the blockchain, then the dApp SHOULD detect this situation and stop monitoring that transaction.
+* Multiple instances of the ErgoPay protocol MUST be able to run simultaneously within the dApp.
+* The Wallet MAY implement "one-at-a-time" signing. When the signing is interrupted for some reason, it can be started from step 3 (i.e., scanning the QR).
+* When the dApp receives the transaction id, but the `SignedTransaction` is not accepted to the blockchain, then the dApp SHOULD detect this situation and stop monitoring that transaction.
 
 ## Data Formats
 
@@ -137,7 +135,6 @@ dApps should not rely on this request to be made. It could happen that the trans
 
 In case no **transaction** was provided, the wallet app displays the **message** that should inform the user about further steps needed.
 
-
 ### Option 2: dApp Provides URI Scheme Containing ReducedTransaction
 
 When the dApp does not need to use an extra request, the `ReducedTransaction` could also be encoded in the QR code or link:
@@ -149,7 +146,6 @@ It is not possible to provide **description**, **address**, **message**, and **r
 dApp developers should keep in mind that there are length restrictions for URI schemes and QR codes. Both should be able to handle up to 2900 chars, but QR codes with a lot of content need to be shown bigger to be read without problems.
 
 We recommend using a URL request if the payload exceeds 400 chars.
-
 
 ## Wallet App Implementation
 
@@ -163,12 +159,12 @@ We recommend using a URL request if the payload exceeds 400 chars.
 
 ErgoPay provides a fast, easy, and secure way for users to buy goods and services in a dApp or on a website. When supported, ErgoPay can substantially increase checkout conversion rates, user loyalty and purchase frequency, and reduce checkout time.
 
-- dApp or website don’t need to handle user's secrets (mnemonic/private keys). Instead, once the user has signed the transaction to confirm purchase intent, your app or website receives a transaction id to monitor payment status on the blockchain.
-- dApp's users don't need to worry about the security of their private keys as the wallet app guarantees they never leave the device.
-- ErgoPay EIP is compatible with Cold Wallet EIP, thus users can use Cold Wallet devices to sign transactions within the ErgoPay signing process.
-- Adding ErgoPay to product detail pages, the cart, checkout page, in payment settings, or anywhere else a user can choose ErgoPay as the payment method or initiate a purchase.
-- The payment screen can be presented immediately after the user taps the Ergo Pay button, without any interim screens or pop-ups except to prompt for necessary product details, such as size or quantity.
-- ErgoPay is simple and universal. It supports all smart contracts and offers the flexibility to implement simple to complex dApps.
+* dApp or website don’t need to handle user's secrets (mnemonic/private keys). Instead, once the user has signed the transaction to confirm purchase intent, your app or website receives a transaction id to monitor payment status on the blockchain.
+* dApp's users don't need to worry about the security of their private keys as the wallet app guarantees they never leave the device.
+* ErgoPay EIP is compatible with Cold Wallet EIP, thus users can use Cold Wallet devices to sign transactions within the ErgoPay signing process.
+* Adding ErgoPay to product detail pages, the cart, checkout page, in payment settings, or anywhere else a user can choose ErgoPay as the payment method or initiate a purchase.
+* The payment screen can be presented immediately after the user taps the Ergo Pay button, without any interim screens or pop-ups except to prompt for necessary product details, such as size or quantity.
+* ErgoPay is simple and universal. It supports all smart contracts and offers the flexibility to implement simple to complex dApps.
 
 ## Benefits for Wallets
 

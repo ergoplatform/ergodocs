@@ -10,7 +10,6 @@ tags:
 
 In Ergo's P2P protocol, the fundamental units of data exchanged between nodes, such as blocks and transactions, are referred to as "modifiers." Modifiers are transmitted as part of the network synchronization process. The Modifier Exchange process encompasses the protocols and systems designed to exchange this information efficiently and securely across the network.
 
-
 ## Ergo Block Structure
 
 The [Ergo block](block.md), a critical structure in the Ergo blockchain, differs from many other blockchain systems by comprising four distinct sections (modifiers):
@@ -40,9 +39,9 @@ The table below details the fields contained within the Header modifier:
 
 In specific modes, nodes can calculate certain fields independently:
 
-- **parentId**: Calculated when `status==bootstrap` AND `PoPoWBootstrap == false`.
-- **ADProofsRoot**: Calculated when `status==regular` AND `ADState==false AND BlocksToKeep>0`.
-- **stateRoot**: Calculated when `status==regular` AND `ADState==false AND BlocksToKeep>0`.
+* **parentId**: Calculated when `status==bootstrap` AND `PoPoWBootstrap == false`.
+* **ADProofsRoot**: Calculated when `status==regular` AND `ADState==false AND BlocksToKeep>0`.
+* **stateRoot**: Calculated when `status==regular` AND `ADState==false AND BlocksToKeep>0`.
 
 ## Extension Section
 
@@ -51,7 +50,8 @@ The Extension section functions as a key-value store capable of holding various 
 Keys are consistently 2 bytes long, and the maximum size for a value is 64 bytes. The total size of the Extension section must not exceed 32,768 bytes (previously 16,384, updated post-EIP-38).
 
 Certain key prefixes have predefined meanings:
-*   **Parameters (`0x00` prefix)**: If the first byte of the key is `0x00`, the second byte identifies a specific blockchain parameter (e.g., block size limit, cost per byte). The value associated with this key represents the parameter's value. These are typically included only in blocks at the end of a voting epoch.
-*   **Interlinks (`0x01` prefix)**: Keys starting with `0x01` are used for storing the [NiPoPoW interlinks vector](nipopows.md). The second byte indicates the level `k` of the link. The value contains the actual block ID (32 bytes) representing the link at that level.
+
+* **Parameters (`0x00` prefix)**: If the first byte of the key is `0x00`, the second byte identifies a specific blockchain parameter (e.g., block size limit, cost per byte). The value associated with this key represents the parameter's value. These are typically included only in blocks at the end of a voting epoch.
+* **Interlinks (`0x01` prefix)**: Keys starting with `0x01` are used for storing the [NiPoPoW interlinks vector](nipopows.md). The second byte indicates the level `k` of the link. The value contains the actual block ID (32 bytes) representing the link at that level.
 
 Other key prefixes are available for future protocol extensions or application-specific data.

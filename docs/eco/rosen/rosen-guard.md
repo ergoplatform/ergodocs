@@ -16,7 +16,7 @@ Becoming a guard is effort-intensive and permission-based, starting with selecte
 The Guard Set can be seen on [rosen.tech](https://rosen.tech/)
 ///
 
-## How are transactions submitted to the target blockchain.
+## How are transactions submitted to the target blockchain
 
 The Rosen Bridge Guard Service facilitates transaction submissions across different blockchains. Here's how transactions are submitted to the target blockchain within this service:
 

@@ -10,7 +10,7 @@ There are some minimum system requirements to run ErgoMixer on Android. Android 
 
 ## Prerequisites
 
-A terminal emulator app is required to run an Ergo node on an Android device. The emulator app, Termux, has been tested and works well for running the node. To download Termux, you will need first to download and install [F-Droid](https://f-droid.org), an installable catalog of FOSS (Free and Open Source Software) applications for the Android platform. 
+A terminal emulator app is required to run an Ergo node on an Android device. The emulator app, Termux, has been tested and works well for running the node. To download Termux, you will need first to download and install [F-Droid](https://f-droid.org), an installable catalog of FOSS (Free and Open Source Software) applications for the Android platform.
 
 Within F-droid, search for `Termux - Terminal emulator with packages` and then download and install it.
 
@@ -34,7 +34,7 @@ The next step is to download Ubuntu with proot-distro.
 proot-distro install ubuntu
 ```
 
-Now we need to log in to Ubuntu. 
+Now we need to log in to Ubuntu.
 
 ```bash
 proot-distro login ubuntu
@@ -45,6 +45,7 @@ And now, we need to update Ubuntu; then, we can install wget and OpenJDK-8.
 ```bash
 apt-get update
 ```
+
 ```bash
 apt-get install wget openjdk-8-jdk
 ```
@@ -63,7 +64,7 @@ And now, you can run the mixer with the following command:
 java -jar ergoMixer-4.2.0.jar
 ```
 
-In the event of a restart of the phone or after terminating Termux, the mixer can be started again by logging back into Ubuntu with `proot` and re-issuing the java command to start the mixer. 
+In the event of a restart of the phone or after terminating Termux, the mixer can be started again by logging back into Ubuntu with `proot` and re-issuing the java command to start the mixer.
 
 ## Accessing ErgoMixer Dashboard
 
@@ -74,7 +75,3 @@ At this point, the mixer will begin running on the device. To view the ErgoMixer
 I recommend downloading a different keyboard to be used in Termux. The stock Samsung keyboard was not working well in my case. You can find a keyboard called Hacker's Keyboard in F-Droid that worked great for me.
 
 Installing a package called tmux will help if you want to run other programs alongside the Ergo Mixer within Termux. It is possible to run the Ergo node in one tmux pane and the mixer in another.
-
-
-
-

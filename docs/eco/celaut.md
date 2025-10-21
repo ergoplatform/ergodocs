@@ -72,28 +72,26 @@ This creates a transparent ecosystem where bot performance and trust are the sol
 
 ### Economic Layer on Ergo
 
-* **[Reputation System](reputation-system.md)**
-  * Tracks the performance and endorsements of nodes and services based on freely submitted opinions; there is no execution history directory, and anyone may provide feedback at the cost of their own reputation
-  * Stored on-chain using immutable reputation tokens
-  * Used by clients to decide service selection and delegation paths
-
+- **[Reputation System](reputation-system.md)**
+  - Tracks the performance and endorsements of nodes and services based on freely submitted opinions; there is no execution history directory, and anyone may provide feedback at the cost of their own reputation
+  - Stored on-chain using immutable reputation tokens
+  - Used by clients to decide service selection and delegation paths
 
 - **Payments**
-    - Handled via Ergo smart contracts
-    - Pay-per-use or subscription models
-    - Payments correlate to gas usage and may involve dynamic bidding
+  - Handled via Ergo smart contracts
+  - Pay-per-use or subscription models
+  - Payments correlate to gas usage and may involve dynamic bidding
 
 ---
 
 ## Gas Metering and Incentives
 
-* Nodes advertise their price-per-gas and capacity
-* Clients buy gas via Ergo transactions; deposit tokens are not Ergo tokens but UUIDs used to identify the payment request inside the node
-* Gas is consumed during execution; each node has its own internal gas currency to quantify resource use, which is not a chain token
-* Nodes pay Ergo in exchange for gas for each of their peers, allowing them to delegate the execution of services to others if beneficial
-* Load balancing is guided by gas efficiency, uptime, and reputation
-* Each node has its own balance, service delegation, and pricing policies
-
+- Nodes advertise their price-per-gas and capacity
+- Clients buy gas via Ergo transactions; deposit tokens are not Ergo tokens but UUIDs used to identify the payment request inside the node
+- Gas is consumed during execution; each node has its own internal gas currency to quantify resource use, which is not a chain token
+- Nodes pay Ergo in exchange for gas for each of their peers, allowing them to delegate the execution of services to others if beneficial
+- Load balancing is guided by gas efficiency, uptime, and reputation
+- Each node has its own balance, service delegation, and pricing policies
 
 ---
 
@@ -101,10 +99,10 @@ This creates a transparent ecosystem where bot performance and trust are the sol
 
 Reputation is foundational in Celaut. It enables trust in service orchestration without requiring a consensus layer.
 
-* Each node and service accumulates on-chain reputation proofs
-* Reputation reflects peer endorsements and client opinions about services
-* Smart contracts enforce immutability of trust data
-* Reputation influences pricing, visibility, and delegation priority
+- Each node and service accumulates on-chain reputation proofs
+- Reputation reflects peer endorsements and client opinions about services
+- Smart contracts enforce immutability of trust data
+- Reputation influences pricing, visibility, and delegation priority
 
 The system is described in detail in the [Reputation System](reputation-system.md) documentation.
 

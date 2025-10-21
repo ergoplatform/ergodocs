@@ -11,7 +11,6 @@ tags:
 
 The Ergo Node is the core software that connects to the Ergo [P2P network](p2p-protocol-overview.md), validates [transactions](transactions.md) and [blocks](block.md), and maintains a copy of the entire [blockchain](protocol.md). Running a node is crucial for the network's decentralization and security. This page outlines the installation options and resources for the Ergo reference client.
 
-
 /// details | Alternatives
     {type: info, open: true}
 If you're simply looking for a secure place to store your ERG, see the [Wallets](wallets-overview.md) page. Some wallets like [Satergo](satergo.md) offer an integrated option to install and run a full node.
@@ -63,7 +62,6 @@ Run a node on a [Raspberry Pi](pi.md)!
 ///
 ////
 
-
 //// details | Developer Resources
     {type: notes, open: false}
 
@@ -71,7 +69,6 @@ Run a node on a [Raspberry Pi](pi.md)!
     {type: info, open: true}
 For an alternative and potentially more detailed documentation source generated from the repository, explore the [Ergo Node on DeepWiki](https://deepwiki.com/ergoplatform/ergo/1-ergo-node-overview)
 ///
-
 
 /// details | Get setup on Testnet
     {type: tip, open: false}
@@ -83,6 +80,7 @@ For more convenience, Docker provides a streamlined way to install and run the E
 ///
 /// details | Toolkits
     {type: notes, open: false}
+
 - [Explorer & Node Bundles](explorer.md#toolkits): Access pre-packaged bundles that include an Ergo Node and an [explorer](explorer.md) for easy setup.
 - [Ergosphere](https://ergosphere.cloud/): Ergosphere is an Umbrel-like solution that simplifies the setup of self-hosted Ergo services. Please note that it is currently in the BETA stage.
 - [Ergode](https://github.com/ross-weir/ergode) (ergo-node) is an Ergo node implementation in TypeScript, targeting web and native runtimes.

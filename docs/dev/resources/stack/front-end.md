@@ -15,12 +15,13 @@ The following examples can be seen on the [Ergo JS Template](https://github.com/
 - Decoding fields (registers) of tokens
 
 ### References
+
 - [ergo-ts](https://github.com/coinbarn/ergo-ts) with support of tokens and complex transactions
 - [ergo-js](https://github.com/ergoplatform/ergo-js) with basic transaction operations
 
 ## Other Examples
 
-The Ergo Raffle [documentation](https://github.com/ErgoRaffle/raffle-documentation) provides a detailed description of their implmenetion. 
+The Ergo Raffle [documentation](https://github.com/ErgoRaffle/raffle-documentation) provides a detailed description of their implmenetion.
 
 - [hypo10use/quid-games](https://github.com/hypo10use/quid-games) (Angular)
 
@@ -28,5 +29,3 @@ The Ergo Raffle [documentation](https://github.com/ErgoRaffle/raffle-documentati
 
 - [ErgoPay](ergo-pay.md)
 - [dApp Connector](dApp-dev.md)
-
-

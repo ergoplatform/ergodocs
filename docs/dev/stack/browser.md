@@ -4,7 +4,6 @@ There are a couple of options developers can pick from to interact with the user
 
 ## Platform
 
-
 ::cards::
 
 [
@@ -25,14 +24,7 @@ There are a couple of options developers can pick from to interact with the user
 
 ::/cards::
 
-
-
-
-
-
-
 ## Payments
-
 
 ::cards::
 

@@ -154,9 +154,6 @@ It is also possible to use environment variables to override configuration param
 For example, by default the base directory is being constructed relatively to the user's `HOME` environment variable.
 Please do not enclose references to environment variables into quotation marks, otherwise they will be handled as strings and won't be resolved.
 
-
-
-
 ### Network settings
 
 In `scorex.network` section P2P network related settings could be set.
@@ -165,7 +162,6 @@ Using `declaredAddress` parameter you can set the external IP address and port n
 
 Using parameter `bindAddress` you can set the IP address of local network interface on which Ergo Node will accept incoming connections.
 By default, node binds to "0.0.0.0" that means that it will listen on all available network adapters.
-
 
 **Note about Internet Address settings**
 
@@ -236,7 +232,6 @@ Node with disabled `offlineGeneration` parameter will start mining as soon as it
 
 Using `miningDelay` parameter you can tune your node's mining delay after finding a new block.
 
-
 **REST API settings**
 
 In section `scorex.rest-api` you can set the node's REST API parameters.
@@ -244,17 +239,12 @@ In section `scorex.rest-api` you can set the node's REST API parameters.
 Parameter `bindAddress` could be used to select network interface on which REST API will accept incoming connections.
 The `:<port>` part could be used to change the port number, which REST API will listen for connections.
 
-
 > **Attention!** For the better security, do not change `bindAddress` from "127.0.0.1" if you do not know what you're doing!
 For the external access you should use [Nginx's proxy_pass module](http://nginx.org/ru/docs/http/ngx_http_proxy_module.html) or [SSH port-forwarding](http://blog.trackets.com/2014/05/17/ssh-tunnel-local-and-remote-port-forwarding-explained-with-examples.html) instead.
 
-
 Use `api-key-hash` parameter to set the hash of your API key. The API key is used to protect calls of critical API methods. Remember, that in this parameter you should provide the hash of API key, but during REST calls you should provide API key itself. You can use blake2b to produce the hash of your API key.
 
-
-
 > **Attention!** API key is transmitted in the HTTP header as unprotected plain text! An attacker could intercept it in network transit and use it to transfer your money to any address! So you have to protect the transmission using HTTPS or use SSH port forwarding.
-
 
 Parameter `corsAllowedOrigin` could be used to enable or disable CORS support in REST API.
 CORS allows to safely resolve queries to other domains outside the one running the node.

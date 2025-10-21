@@ -27,7 +27,7 @@ Ergo is a next-generation **Proof-of-Work (PoW)** blockchain platform designed f
 - **Extended UTXO Model (eUTXO)**: The [eUTXO](eutxo.md) model allows each UTXO to carry arbitrary data and be protected by an arbitrary predicate or spending condition. This flexibility enables the representation of various assets, tokens, and smart contract states within the blockchain.
 
 - **Mining with Autolykos**: Ergo utilizes [Autolykos](autolykos.md), an efficient, ASIC-resistant Proof-of-Work algorithm designed for a fair launch.
-    - Learn about Ergo's [Emission](emission.md) schedule.
+  - Learn about Ergo's [Emission](emission.md) schedule.
 
 - **[NiPoPoWs](nipopows.md)**: Short for Non-Interactive Proofs of Proof-of-Work, these are compact data structures that validate blockchain events without needing full network connectivity or downloading all block headers. They enable efficient light clients, log-space mining, and trustless sidechains.
 
@@ -191,25 +191,25 @@ Sigma Protocols (Σ-Protocols) are the foundation of Ergo’s smart contracts. T
 ### Crypto Primitives
 
 - **Hash Functions**:
-    - `Sha256`: Secure Hash Algorithm 256-bit.
-    - `Blake2b256`: A cryptographic hash function faster than MD5 and SHA-256, providing security similar to the strongest hash functions available.
+  - `Sha256`: Secure Hash Algorithm 256-bit.
+  - `Blake2b256`: A cryptographic hash function faster than MD5 and SHA-256, providing security similar to the strongest hash functions available.
 
 - **Encoding**:
-    - `Base58`: A binary-to-text encoding scheme used for encoding Bitcoin addresses and other text-based data.
+  - `Base58`: A binary-to-text encoding scheme used for encoding Bitcoin addresses and other text-based data.
 
 - **Signing Algorithms**:
-    - `ECDSA (secp256k1)`: Elliptic Curve Digital Signature Algorithm over the secp256k1 curve, widely used in Bitcoin and other cryptocurrencies.
-    - `Schnorr`: A digital signature scheme that is simple, provably secure in the random oracle model, and allows for the aggregation of multiple signatures into a single signature, enhancing efficiency and privacy.
+  - `ECDSA (secp256k1)`: Elliptic Curve Digital Signature Algorithm over the secp256k1 curve, widely used in Bitcoin and other cryptocurrencies.
+  - `Schnorr`: A digital signature scheme that is simple, provably secure in the random oracle model, and allows for the aggregation of multiple signatures into a single signature, enhancing efficiency and privacy.
 
 - **Primitive Secrets**:
-    - **[Schnorr Signature](schnorr.md)**: A proof of knowledge of a discrete logarithm with respect to a fixed group generator.
-    - **[Diffie-Hellman Tuple](diffie.md)**: A proof of equality of discrete logarithms, enabling secure exchange of cryptographic keys over a public channel.
+  - **[Schnorr Signature](schnorr.md)**: A proof of knowledge of a discrete logarithm with respect to a fixed group generator.
+  - **[Diffie-Hellman Tuple](diffie.md)**: A proof of equality of discrete logarithms, enabling secure exchange of cryptographic keys over a public channel.
 
 - **Non-Interactive Proofs**:
-    - The proofs of sigma-statements are made non-interactive with the [**Fiat-Shamir transformation**](diffie.md#fiat-shamir-transformation), which converts an interactive proof of knowledge into a non-interactive one by using a cryptographic hash function.
+  - The proofs of sigma-statements are made non-interactive with the [**Fiat-Shamir transformation**](diffie.md#fiat-shamir-transformation), which converts an interactive proof of knowledge into a non-interactive one by using a cryptographic hash function.
 
 - **Additional Cryptographic Standards**:
-    - **[EIP-0003: Deterministic Wallet Standard](eip3.md)**: A standard defining the structure and operation of deterministic wallets in the Ergo platform.
+  - **[EIP-0003: Deterministic Wallet Standard](eip3.md)**: A standard defining the structure and operation of deterministic wallets in the Ergo platform.
 
 See [this page](scs/global-functions.md#cryptographic-functions) for a description of the global cryptographic functions available in ErgoScript. *(Corrected path and anchor)*
 
@@ -261,17 +261,17 @@ Most repositories are also categories on [Grist](https://ergo.getgrist.com/jf9KP
 ### Primary SDKs
 
 - **[AppKit](appkit.md)**: The go-to SDK for JVM developers, supporting Java, Scala, Kotlin, and Mobile platforms.
-    - [General Example](tutorial.md)
-    - [Using AppKit with Python](https://github.com/ergoplatform/ergo-appkit/wiki/Using-Appkit-from-Python)
-    - [AppKit by Example](https://www.youtube.com/watch?v=Md5s-XV6-Hs)
+  - [General Example](tutorial.md)
+  - [Using AppKit with Python](https://github.com/ergoplatform/ergo-appkit/wiki/Using-Appkit-from-Python)
+  - [AppKit by Example](https://www.youtube.com/watch?v=Md5s-XV6-Hs)
 
 - **[Fleet SDK](fleet.md)**: A pure JS library designed for effortless Ergo transaction creation.
-    - [Getting Started with Fleet SDK](https://fleet-sdk.github.io/docs/getting-started)
-    - [The Ergo Web Template](https://github.com/SavonarolaLabs/ergo-web-template): An introductory guide for individuals new to Ergo, offering a hands-on experience with essential Ergo functionalities.
+  - [Getting Started with Fleet SDK](https://fleet-sdk.github.io/docs/getting-started)
+  - [The Ergo Web Template](https://github.com/SavonarolaLabs/ergo-web-template): An introductory guide for individuals new to Ergo, offering a hands-on experience with essential Ergo functionalities.
 
 - **[SigmaRust](sigma-rust.md)**: An ErgoTree interpreter with transaction tools and bindings for JS/TS/Swift/Java/C/Ruby.
-    - [Address Generation Demo](https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-wasm/examples/address-generation-demo)
-    - [Create Transaction Demo](https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-wasm/examples/create-transaction-demo)
+  - [Address Generation Demo](https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-wasm/examples/address-generation-demo)
+  - [Create Transaction Demo](https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-wasm/examples/create-transaction-demo)
 
 ### Alternative SDKs
 
@@ -330,8 +330,8 @@ Most repositories are also categories on [Grist](https://ergo.getgrist.com/jf9KP
 ### Ergo Node & Network
 
 - **[Ergo Node](install.md)**: The Ergo Node forms the core of Ergo's P2P network, maintaining and synchronizing the entire blockchain.
-   - **[Bootstrap from UTXO Snapshot](pruned-full-node.md)**: Expedite the setup of a pruned full node on the [testnet](testnet.md) by bootstrapping from a UTXO snapshot.
-   - **[Fork Your Own Chain](mine-your-own-chain.md)**: Learn how to customize and create your own chain with specific parameters.
+  - **[Bootstrap from UTXO Snapshot](pruned-full-node.md)**: Expedite the setup of a pruned full node on the [testnet](testnet.md) by bootstrapping from a UTXO snapshot.
+  - **[Fork Your Own Chain](mine-your-own-chain.md)**: Learn how to customize and create your own chain with specific parameters.
 
 ### API & Programmatic Access
 
@@ -345,8 +345,8 @@ Most repositories are also categories on [Grist](https://ergo.getgrist.com/jf9KP
 - Delve deeper into blockchain data with **[GraphQL](graphql.md)**.
 
 - **[Explorer & Node Bundles](explorer.md#toolkits)**: Install both locally for a comprehensive blockchain experience.
-    - **[uExplorer](explorer.md)**: A lightweight Ergo explorer backed by CassandraDB.
-    - **[Blockchain Explorer with Raspberry Pi](rpi-blockchain-explorer.md)**: Learn how to set up an explorer using Raspberry Pi.
+  - **[uExplorer](explorer.md)**: A lightweight Ergo explorer backed by CassandraDB.
+  - **[Blockchain Explorer with Raspberry Pi](rpi-blockchain-explorer.md)**: Learn how to set up an explorer using Raspberry Pi.
 
 ### Toolkits
 
@@ -405,20 +405,20 @@ If you encounter any issues or have questions, feel free to connect with us on a
   {
     "title": "Come Chat!",
     "content": "Join the action on Discord",
-    "image": "../assets/img/dev-grid/discord.png", # Corrected image path
+    "image": "../assets/img/dev-grid/discord.png",
     "url": "https://discord.gg/ergo-platform-668903786361651200"
   },
   {
     "title": "ERGOHACK",
     "content": "We host regular hackathons which are a great opportunity to get involved.",
-    "image": "../assets/img/grid/05.png", # Corrected image path
-    "url": "../events/ergohack.md" # Corrected link path
+    "image": "../assets/img/grid/05.png",
+    "url": "../events/ergohack.md"
   },
   {
     "title": "Contribute",
     "content": "See the Contributing Guidelines for information on bounties and grants.",
-    "image": "../assets/img/grid/05.png", # Corrected image path
-    "url": "../contribute/standards/guidelines.md" # Corrected link path to likely target
+    "image": "../assets/img/grid/05.png",
+    "url": "../contribute/standards/guidelines.md"
   }
 ]
 
@@ -445,7 +445,7 @@ To further explore and understand Ergo's concepts, you can interact with the fol
 
 - **[Ergonaut Space](https://ergonaut.space/)**: Discover Ergo's community-driven wiki, filled with insights and information.
 
-### Explore the Ecosystem!
+### Explore the Ecosystem
 
 - **[Sigmaverse.io](https://sigmaverse.io/)**: Explore a diverse range of dApps built on Ergo.
 

@@ -26,7 +26,6 @@ By strategically combining and arranging these node classes, developers can cons
 
 For the complete code, refer to [Values.scala](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/sigmastate/Values.scala#L745).
 
-
 ## Serializing SigmaBoolean from a P2PK Address
 
 You may want to serialize a SigmaBoolean from a [P2PK (Pay-to-Public-Key)](public-keys.md) address when you need to create a proof of knowledge for a specific public key. This process allows developers to create complex smart contracts. By encoding SigmaBoolean from a P2PK address, developers can define detailed contract conditions, improve privacy, ensure smooth interoperability, customize contract logic, enhance security audits, and support cross-platform compatibility.

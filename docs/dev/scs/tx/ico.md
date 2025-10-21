@@ -56,10 +56,11 @@ During this funding stage, which lasts until block height 2,000, withdrawals are
 ## Issuance
 
 This stage involves a single transaction to transition to the withdrawal stage. The spending transaction performs the following actions, verified by the `issuanceScript`:
-1.  **Updates AVL Tree Flags**: It changes the allowed operations on the dictionary from "inserts only" to "removals only" by updating the `enabledOperations` flag in the `AvlTreeData`.
-2.  **Verifies Token Issuance**: It checks that the correct amount of ICO tokens are issued. In Ergo, a transaction can issue a new token, whose ID is determined by the ID of the first input box. The `issuanceScript` verifies that a new token (with this ID) is created in the first output box (`OUTPUTS(0)`) with a total supply equal to the total nanoErgs collected during the funding stage (`SELF.value`).
-3.  **Transitions to Withdrawal Script**: It ensures the output box (`OUTPUTS(0)`) containing the tokens and the dictionary digest is protected by the `withdrawScript` for the next stage.
-4.  **Checks Outputs**: It verifies that the transaction has exactly two outputs: `OUTPUTS(0)` (the main contract box for the withdrawal stage) and `OUTPUTS(1)` (a box sending the collected Ergs to the project's designated address, identified by `projectPubKeyHash`).
+
+1. **Updates AVL Tree Flags**: It changes the allowed operations on the dictionary from "inserts only" to "removals only" by updating the `enabledOperations` flag in the `AvlTreeData`.
+2. **Verifies Token Issuance**: It checks that the correct amount of ICO tokens are issued. In Ergo, a transaction can issue a new token, whose ID is determined by the ID of the first input box. The `issuanceScript` verifies that a new token (with this ID) is created in the first output box (`OUTPUTS(0)`) with a total supply equal to the total nanoErgs collected during the funding stage (`SELF.value`).
+3. **Transitions to Withdrawal Script**: It ensures the output box (`OUTPUTS(0)`) containing the tokens and the dictionary digest is protected by the `withdrawScript` for the next stage.
+4. **Checks Outputs**: It verifies that the transaction has exactly two outputs: `OUTPUTS(0)` (the main contract box for the withdrawal stage) and `OUTPUTS(1)` (a box sending the collected Ergs to the project's designated address, identified by `projectPubKeyHash`).
 
 The complete `issuanceScript` is shown below.
 
@@ -97,12 +98,13 @@ val stateIsCorrect = projectPubKey && treeIsCorrect && valuePreserved && stateCh
 ## Withdrawal
 
 Investors can now withdraw their allocated ICO tokens. The withdrawal process typically happens in batches. A withdrawal transaction spends the current ICO box (`SELF`) and creates `N + 1` outputs:
-*   `OUTPUTS(0)`: The new ICO box, containing the remaining tokens and the updated dictionary digest (with withdrawn entries removed). It is protected by the same `withdrawScript`.
-*   `OUTPUTS(1)` to `OUTPUTS(N)`: Boxes sent to the withdrawing investors. Each box is protected by the investor's script (whose hash was stored as the key in the dictionary) and contains the corresponding amount of ICO tokens.
+- `OUTPUTS(0)`: The new ICO box, containing the remaining tokens and the updated dictionary digest (with withdrawn entries removed). It is protected by the same `withdrawScript`.
+- `OUTPUTS(1)` to `OUTPUTS(N)`: Boxes sent to the withdrawing investors. Each box is protected by the investor's script (whose hash was stored as the key in the dictionary) and contains the corresponding amount of ICO tokens.
 
 The `withdrawScript` requires two AVL tree proofs provided in context variables:
-1.  `lookupProof`: Proves the existence and amounts associated with the investor keys being withdrawn.
-2.  `removeProof`: Proves that these investor entries have been correctly removed from the dictionary, resulting in the updated dictionary digest found in `OUTPUTS(0)`.
+
+1. `lookupProof`: Proves the existence and amounts associated with the investor keys being withdrawn.
+2. `removeProof`: Proves that these investor entries have been correctly removed from the dictionary, resulting in the updated dictionary digest found in `OUTPUTS(0)`.
 
 The complete `withdrawScript` is shown below:
 

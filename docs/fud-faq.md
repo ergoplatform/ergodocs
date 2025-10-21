@@ -8,7 +8,7 @@ This page aims to provide some clarity around some common misconceptions that ha
 
 ## Emission
 
-###  Ergo developers can manipulate the emission
+### Ergo developers can manipulate the emission
 
 The emission process of Ergo is controlled by a transparent smart contract, which is accessible for public viewing in Ergo's source code. This contract restricts developers from arbitrarily extracting coins. Any modifications to the emission process, such as the [EIP-27](eip27.md) soft-fork, necessitate a consensus from the miners and are publicly visible on the blockchain. This capability, outlined in one of Ergo's [foundational papers](https://docs.ergoplatform.com/documents/#foundational-papers) [*'Soft Power: Upgrading Chain Macroeconomic Policy Through Soft Forks'*](https://eprint.iacr.org/2021/577.pdf), empowers miners to adjust the exact rate of emission reduction, facilitating a smooth transition to a self-sustaining network.  
 
@@ -22,7 +22,7 @@ The emission process is governed by a smart contract, which is publicly viewable
 
 Ergo prohibits out-of-thin-air emission in the "coinbase" transaction, the first transaction in each block that rewards the miner. This ensures that every Ergo coin or token originates from a legitimate source and is traceable in the transaction history, maintaining the integrity and scarcity of Ergo's native cryptocurrency.
 
-###  EFYT was an ICO
+### EFYT was an ICO
 
 The Ergo-First-Year-Token (EFYT) was not a traditional ICO. Instead, it was an airdrop distributed on the Waves DEX to foster an early community for Ergo and gather resources for the platform's pre-launch development. EFYT tokens, swapped from the treasury, constitute less than 1% of the total supply, marking a departure from the fundraising practices associated with many ICOs.
 
@@ -36,15 +36,15 @@ Another form of MEV we have on Ergo is through [**Storage Rent**](rent.md). This
 
 In future, Miners could also benefit from custom emission contracts as part of a Fair Initial Mining Offering (FIMO) process. These contracts reward miners with non-native tokens, ensuring new projects have equal opportunities to distribute tokens to the community while incentivizing miners to participate in mining.
 
-Miners can also operate [off-chain execution bots](dex_bots.md) on the same machine to earn additional ERG rewards. [Machina Finance](machina-finance.md) is also developing an *extensible* off-chain bot framework to make this process simpler, so you'll be able to run one program to provide liquidity to the entire Ergo defi ecosystem. 
+Miners can also operate [off-chain execution bots](dex_bots.md) on the same machine to earn additional ERG rewards. [Machina Finance](machina-finance.md) is also developing an *extensible* off-chain bot framework to make this process simpler, so you'll be able to run one program to provide liquidity to the entire Ergo defi ecosystem.
 
 ## Mining
 
-###  ASICs will take over Ergo
+### ASICs will take over Ergo
 
 While ASICs and FPGAs can pose centralization risks, there are currently no known serious efforts towards creating ASICs for Ergo. The Ergo algorithm is designed to neutralize any advantage ASICs might typically bring. If ASIC development becomes a threat to Ergo's decentralization, the community has the power to introduce protocol improvements via a hardfork.
 
-###  FPGAs are already taking over Ergo
+### FPGAs are already taking over Ergo
 
 While it's true that FPGAs can achieve up to 3Mh/W, double the efficiency of the best Nvidia cards, their current impact on Ergo is minimal. This is due to a chip shortage and lack of public miners making FPGAs currently non-competitive. Even if you could buy an E300 at retail prices today, the Return on Investment (ROI) would take approximately 52 years. Furthermore, SRAM, despite its faster read/write capabilities, is not a feasible long-term option for Ergo mining due to its lower density and the algorithm's increasing memory requirements. Therefore, the claim that FPGAs are already taking over Ergo is a misconception.
 
@@ -54,7 +54,7 @@ The current network status can be monitored using miningpoolstats. Even if a sin
 
 ### Ergo ignored miners who warned about the difficulty algorithm
 
-It's important to remember, that *Ergo* is a collective community, not a single entity, The centralised component, the Ergo Foundation (EF) is essentially a network of people committed to the platform's success via spending the treasury and does not vote on matters related to development and community consensus. 
+It's important to remember, that *Ergo* is a collective community, not a single entity, The centralised component, the Ergo Foundation (EF) is essentially a network of people committed to the platform's success via spending the treasury and does not vote on matters related to development and community consensus.
 
 The initial concerns from miners were indeed taken into account. However, these early warnings were primarily about potential difficulties during price fluctuations, not the 'death-spiral' scenario that eventually led to the hard fork. After extensive discussions with core developers and leading miners and pools, the consensus was that the current situation, while painful in the short-term, was less painful than implementing a hard fork. The community was hopeful that as Ergo gained more traction, a stable and increasing hashrate would naturally follow, mitigating these concerns.
 
@@ -64,7 +64,7 @@ Ergo empowers miners by returning control to them in the crypto-space, adhering 
 
 ### Ergo's current difficulty adjustment algorithm is being manipulated
 
-Post EIP-27 implementation, the more frequent difficulty adjustments have inadvertently made Ergo more appealing for profit hoppers. It's important to note that some degree of this activity is inevitable in any blockchain network. Presently, the algorithm effectively maintains an average block time of 120 seconds, as intended. 
+Post EIP-27 implementation, the more frequent difficulty adjustments have inadvertently made Ergo more appealing for profit hoppers. It's important to note that some degree of this activity is inevitable in any blockchain network. Presently, the algorithm effectively maintains an average block time of 120 seconds, as intended.
 
 While there's been a noted fluctuation in the hashrate of a particular solo pool, this variance accounts for only about 10% of the total hashrate. The actual influence this has on the profitability for the wider mining community is being closely examined.
 
@@ -72,7 +72,7 @@ We urge the Ergo community—both miners and developers—to actively participat
 
 ## Organisational
 
-### Ergo's marketing sucks.
+### Ergo's marketing sucks
 
 Ergo's marketing strategy is rooted in community engagement and organic growth, diverging from conventional marketing tactics often employed by other projects. This strategy prioritizes the cultivation of a well-informed and actively involved community. Ergo's unique features and capabilities serve as its primary selling points, and the team is committed to letting these attributes stand out on their own. Regular updates and developments are communicated through various channels, including social media, blog posts, and community meetings.
 
@@ -82,11 +82,11 @@ The marketing efforts are primarily aimed at increasing awareness, educating the
 
 Ergo's success is not dependent on venture capital (VC) investment. While VC funding can provide resources for growth, it can also lead to centralization and conflicts of interest. Ergo is designed to be a decentralized, community-driven project, and its development and growth are fueled by the community and the team's efforts. The project has made significant progress without VC funding, demonstrating that it can thrive and innovate without such investment. Ergo's robust technology, active community, and commitment to decentralization are its main drivers of success.
 
-###  The Foundation is centralized
+### The Foundation is centralized
 
 The Ergo Foundation provides guidance in the early stages of the network, but its influence is transitional. As the network matures, the Foundation's role diminishes, paving the way for a fully community-driven ecosystem. For more information please see the [Ergo Foundation Transparency Report](ergo-foundation-2022.md)
 
-###  Ergo could not operate without its foundation
+### Ergo could not operate without its foundation
 
 The Ergo Foundation undoubtedly plays a pivotal role in shaping the trajectory and fostering the development of Ergo. However, as the ERG token ecosystem evolves, it's steadily becoming more decentralized and less dependent on the Foundation or any singular centralized authority. Emblematic of its decentralized ethos, Ergo operates as an open-source, permissionless platform. This ensures that developers, innovators, and enthusiasts can introduce applications or tokens without seeking explicit endorsement or intervention from the Foundation.
 
@@ -96,12 +96,11 @@ The potential hesitancy of traditional exchanges to list Ergo without an oversee
 
 Although the Foundation serves as a vital community conduit, fostering discussions and spearheading initiatives, the continuity of Ergo isn't solely tied to its existence. Should the Foundation ever disband, the community and other contributors are well-equipped to carry the torch forward. The [Sigmanauts](sigmanauts.md) programme is the beginnings of this, who tries to create a community of users of the Ergo blockchain to explore how it can be of benefit, and they try to represent the interests of users in the larger Ergo ecosystem and indicates that the community can lead and maintain momentum even without the Foundation's direct involvement.
 
-
 ### Ergo is a 'Russian coin'
 
 Ergo is a global project and is not tied to any specific country or region. While some of the developers and contributors may be based in Russia, Ergo's community and user base are spread across the world. The project's decentralized nature ensures that it is not influenced by the policies or politics of any single country. Ergo's primary goal is to provide a robust, secure, and decentralized platform for all users, regardless of their geographical location.
 
-###  Ergo is an unregistered security
+### Ergo is an unregistered security
 
 Ergo's status under the SEC's regulations is a gray area, as is the case with many cryptocurrencies. However, based on the Howey Test, Ergo is not considered a security. Ergo has one of the most extensive public distributions among smart contract platforms, and the initial allocation by the Ergo Foundation was primarily to kickstart the ecosystem.
 
@@ -125,19 +124,19 @@ The introduction of a new stablecoin does not necessarily mean the end of SigmaU
 
 ## Technical
 
-###  eUTXO is too difficult for developers
+### eUTXO is too difficult for developers
 
 The extended UTXO (eUTXO) model, adopted by Ergo, might initially seem complex, especially for developers accustomed to the account-based model. However, it offers increased flexibility and security. Over time, as more resources and tutorials become available, the learning curve will flatten, making it more accessible for all developers.
 
 ### Ergo should've used an easier language than Scala
 
-Ergo utilizes Scala as its primary language due to its cross-platform capabilities, conciseness, efficiency, and multi-paradigm nature. ErgoScript, based on Scala, is used for scripting, but off-chain code can be written in any language. Developers have access to a variety of tools and Software Development Kits (SDKs) for JVM, Rust, and JS/TS. Scala's unique features, such as the ability to run the same code on JVM and JavaScript natively, its concise syntax, and its ability to use primitive unboxed types for efficiency, make it a suitable choice for Ergo. 
+Ergo utilizes Scala as its primary language due to its cross-platform capabilities, conciseness, efficiency, and multi-paradigm nature. ErgoScript, based on Scala, is used for scripting, but off-chain code can be written in any language. Developers have access to a variety of tools and Software Development Kits (SDKs) for JVM, Rust, and JS/TS. Scala's unique features, such as the ability to run the same code on JVM and JavaScript natively, its concise syntax, and its ability to use primitive unboxed types for efficiency, make it a suitable choice for Ergo.
 
 ### Ergo's lack of in-built Sharding means it won't scale with atomic composability
 
 This misconception arises from a misunderstanding of how Ergo handles scalability and atomic composability. While it's true that Ergo doesn't use in-built sharding, it employs other strategies to ensure scalability without compromising atomic composability. Ergo optimizes the use of resources within the constraints of existing blockchain platforms, rather than resorting to unproven technologies. It also uses the eUTXO model and ErgoScript to allow for the atomic execution of complex, multi-stage transactions within a single transaction. Layer 2 solutions like Hydra state channels also contribute to atomic composability. Furthermore, concepts like ACE could enhance the execution of complex and composable smart contracts. Therefore, Ergo's approach to scalability and atomic composability is not reliant on in-built sharding.
 
-###  Proof of Work is not sustainable
+### Proof of Work is not sustainable
 
 The sustainability of Proof of Work (PoW) is frequently debated. Critics argue that it's energy-intensive and thus environmentally unfriendly. While there's truth to the energy consumption, it's essential to put it into perspective. If the energy used in PoW is directly proportional to its value and security, then its consumption can be justified. Moreover, as technology advances, more efficient and environmentally-friendly mining solutions will emerge, further diminishing the environmental concerns.
 
@@ -149,12 +148,11 @@ While Proof of Work (PoW) has been subject to criticism in media outlets, it rem
 
 While Ergo does offer privacy features, it is not solely a privacy coin. Ergo's protocol allows for the creation of private transactions, but it also supports transparent transactions. This flexibility allows users to choose the level of privacy they want for their transactions. It's important to note that privacy features are not unique to Ergo. Other major cryptocurrencies like Bitcoin and Ethereum also have mixing and privacy features at the application layer, yet they are not classified as privacy coins. Ergo's privacy features are optional and are part of a broader set of capabilities aimed at creating a robust, flexible, and secure blockchain platform.
 
-
 ### Ergo transactions are too slow
 
-Ergo's 2-minute block interval, while seemingly slow, is a strategic choice to ensure network security and stability, especially for a system that supports complex smart contracts. This interval provides a buffer for various network activities, aids in decision-making processes, and adds a layer of security against potential threats. Additionally, Ergo can employ scaling methods like "weak blocks" to enhance transaction throughput and confirmation speed. 
+Ergo's 2-minute block interval, while seemingly slow, is a strategic choice to ensure network security and stability, especially for a system that supports complex smart contracts. This interval provides a buffer for various network activities, aids in decision-making processes, and adds a layer of security against potential threats. Additionally, Ergo can employ scaling methods like "weak blocks" to enhance transaction throughput and confirmation speed.
 
-In addition to the 2-minute block interval, Ergo can utilise scaling methods such as the recently proposed ["weak blocks"](weak-blocks.md) to improve both the transaction throughput (TPS) and the speed of transaction confirmations. Weak blocks are block candidates with lower difficulty levels than standard blocks. They are propagated through the network along with new transactions, effectively optimizing network bandwidth usage. 
+In addition to the 2-minute block interval, Ergo can utilise scaling methods such as the recently proposed ["weak blocks"](weak-blocks.md) to improve both the transaction throughput (TPS) and the speed of transaction confirmations. Weak blocks are block candidates with lower difficulty levels than standard blocks. They are propagated through the network along with new transactions, effectively optimizing network bandwidth usage.
 
 ### Ergo's development is too slow
 
@@ -181,5 +179,3 @@ Ergo also implements a feature known as Storage Rent, which helps manage blockch
 Finally, Ergo employs the eUTXO model, which enhances privacy, scalability, and interoperability. By extending Bitcoin's contract-writing method, Ergo attaches a guard script and additional custom data to each coin, positioning Ergo as a uniquely beneficial platform for Contractual Money.
 
 For more detailed information, please refer to the [Discover Ergo: The Blockchain of the Future](why.md) document.
-
-

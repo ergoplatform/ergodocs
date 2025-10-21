@@ -7,12 +7,12 @@ tags:
 
 > 🔗 From [EIP-0022:](https://github.com/ergoplatform/eips/blob/master/eip-0022.md)
 
+## Motivation
 
-## Motivation 
 Decentralized auctioning of any kind of tokens (artwork, share tokens, etc.) is an important part of any blockchain. This EIP is proposing the auction contract with various features listed in the [Design](#design) section
 
-
 ## Design
+
 This proposed contract allows any kind of tokens to be auctioned while supporting the following features:  
 
 - Any token as the auction's currency alongside ERG
@@ -23,6 +23,7 @@ This proposed contract allows any kind of tokens to be auctioned while supportin
 - Royalty - The original owner (whomever issued the token) gets a share of the auction every time his/her token is auctioned using a global config
 
 ## The contract
+
 ```scala
 {
   // R4: The seller's ergo tree

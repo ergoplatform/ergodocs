@@ -174,4 +174,3 @@ A verifier:
 ## Conclusion
 
 Ergo’s NiPoPoW implementation is a practical, production-grade use of succinct proofs for real-world blockchain scalability. It is actively used by wallets and services that need trustless syncing without storing the entire chain.
-

@@ -8,9 +8,7 @@ tags:
 
 # Mining
 
-
 Ergo mining is based on [**Autolykos**](autolykos.md), an [ASIC-resistant](asic.md) Proof of Work algorithm written in Scala.
-
 
 ## Start Mining
 
@@ -26,7 +24,7 @@ Ergo mining is based on [**Autolykos**](autolykos.md), an [ASIC-resistant](asic.
     "title": "Solo Mining",
     "content": "Only recommended if you have 1%+ of the network hash rate.",
     "url": "setup/solo.md"
-  },
+  }
 
 ]
 
@@ -52,7 +50,7 @@ Ergo mining is based on [**Autolykos**](autolykos.md), an [ASIC-resistant](asic.
     "title": "SmartPools and *Subpooling*",
     "content": "Mine in localised subpools using SmartPools.",
     "url": "smartpools.md"
-  },
+  }
 
 ]
 
@@ -82,11 +80,10 @@ Ergo mining is based on [**Autolykos**](autolykos.md), an [ASIC-resistant](asic.
     "title": "Mining Guide",
     "content": "Join us on Reddit.",
     "url": "https://ergonaut.space/en/Mining"
-  },
+  }
 ]
 
 ::/cards::
-
 
 ## Utilities
 
@@ -107,7 +104,7 @@ Ergo mining is based on [**Autolykos**](autolykos.md), an [ASIC-resistant](asic.
     "title": "Ergo Explorer",
     "content": "",
     "url": "https://explorer.ergoplatform.com"
-  },
+  }
 ]
 
 ::/cards::

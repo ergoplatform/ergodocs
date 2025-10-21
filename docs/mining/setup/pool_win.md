@@ -85,7 +85,7 @@ cd build
 
 ---
 
-## Step 8: All Done!
+## Step 8: All Done
 
 MiningCore is now set up and ready to go!
 

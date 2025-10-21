@@ -20,18 +20,18 @@ NIZKs in Ergo are primarily implemented through **Sigma Protocols** (Σ-protocol
 
 - **Non-Interactive**: Proofs can be verified without direct communication
 
-    - Unlike traditional interactive zero-knowledge proofs, NIZKs can be verified asynchronously
-    - Reduces computational overhead and network complexity
+  - Unlike traditional interactive zero-knowledge proofs, NIZKs can be verified asynchronously
+  - Reduces computational overhead and network complexity
 
 - **Zero-Knowledge**: No information about the secret is revealed
 
-    - Cryptographically guarantees that only the validity of a statement is proven
-    - Protects sensitive information while maintaining verifiability
+  - Cryptographically guarantees that only the validity of a statement is proven
+  - Protects sensitive information while maintaining verifiability
 
 - **Composable**: Can be combined using logical operators like AND, OR, and THRESHOLD
 
-    - Enables creation of complex cryptographic conditions
-    - Supports advanced smart contract logic and privacy-preserving protocols
+  - Enables creation of complex cryptographic conditions
+  - Supports advanced smart contract logic and privacy-preserving protocols
 
 ## Cryptographic Primitives
 
@@ -106,6 +106,7 @@ val thresholdProof = prove {
 ### Mixer Protocols
 
 **ZeroJoin** demonstrates a practical application:
+
 - Uses ring signatures and Diffie-Hellman tuples
 - Restores fungibility of digital tokens
 - Provides non-interactive, trustless mixing
@@ -135,6 +136,7 @@ val thresholdProof = prove {
 ## Performance and Scalability
 
 NIZKs in Ergo are designed with performance in mind:
+
 - Constant-time proof verification
 - Minimal computational overhead
 - Efficient serialization and deserialization
@@ -147,8 +149,8 @@ NIZKs in Ergo are designed with performance in mind:
 - [Zero-Knowledge Proofs in Ergo](zkp.md)
 - Academic Papers:
 
-    - [Sigma Protocols: A Survey](https://eprint.iacr.org/2021/1022)
-    - [Non-Interactive Zero-Knowledge Proofs](https://eprint.iacr.org/2016/263)
+  - [Sigma Protocols: A Survey](https://eprint.iacr.org/2021/1022)
+  - [Non-Interactive Zero-Knowledge Proofs](https://eprint.iacr.org/2016/263)
 
 ## Conclusion
 

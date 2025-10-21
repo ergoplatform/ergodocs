@@ -8,7 +8,6 @@ tags:
 
 # PandaV
 
-
 **PANDAV** is a blockchain-based NFT integration with an access control system. By leveraging the power of blockchain technology and NFTs, PANDAV provides a secure and decentralized way to manage access rights and ownership, presenting unprecedented opportunities to revolutionize access control mechanisms.
 
 ## Overview

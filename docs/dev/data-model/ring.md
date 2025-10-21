@@ -20,7 +20,7 @@ Ring signatures are an advanced privacy-preserving cryptographic technique that 
 ## Use Cases
 
 1. **Anonymous Transactions**: Enabling privacy in blockchain transactions
-2. **Decentralized Mixers**: 
+2. **Decentralized Mixers**:
   
       - [ErgoMixer Privacy Protocol](mixer.md)
       - [ZeroJoin Privacy Mechanism](zerojoin.md)

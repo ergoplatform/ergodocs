@@ -2,7 +2,7 @@
 
 The Developer DAO (DevDAO) is a decentralized autonomous organization focused on research, development, and maintenance of the Ergo protocol and its associated infrastructure. The DevDAO aims to promote transparency, scalability, and community involvement in the core development efforts of the Ergo ecosystem.
 
-/// admonition | This page is adapted from [ErgoDevs - R&D DAO for Ergo core on ergoforum](https://www.ergoforum.org/t/ergodevs-r-d-dao-for-ergo-core/4663) 
+/// admonition | This page is adapted from [ErgoDevs - R&D DAO for Ergo core on ergoforum](https://www.ergoforum.org/t/ergodevs-r-d-dao-for-ergo-core/4663)
     type: info
 ///
 

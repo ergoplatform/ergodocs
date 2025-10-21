@@ -14,7 +14,7 @@ title: Stealth Address
 ## Canonical Code & Tests
 
 - Upstream  
-  - PR: https://github.com/ergoplatform/sigmastate-interpreter/pull/1084 — Adds a stealth address contract example with tests.
+  - PR: <https://github.com/ergoplatform/sigmastate-interpreter/pull/1084> — Adds a stealth address contract example with tests.
 - Commit(s)  
   - Prefer pinned SHAs once available; add here once merged and stable.
 

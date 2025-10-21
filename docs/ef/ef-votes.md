@@ -47,6 +47,7 @@ Foundation votes this year are usually related to our internal structures, excha
 | (Jan 2024)  | Biconomy Marketing                                            | Treasury Control  | Failed     |                                          |
 
 ## 2023
+
 | Date        | Description                                                   | Category          | Status     | Amount                                   |
 |-------------|---------------------------------------------------------------|-------------------|------------|------------------------------------------|
 | (Dec 2023)  | Transfer of all or Part of Treasury to New Multi-sig          | Treasury Control  | Passed     |                                          |
@@ -82,6 +83,7 @@ Foundation votes this year are usually related to our internal structures, excha
 | (Apr 2023)  | EF entity set up in Dubai                                     | Treasury Control  | Passed     |                                          |
 
 ## 2022
+
 | Date        | Description                                                   | Category          | Status     | Amount                                   |
 |-------------|---------------------------------------------------------------|-------------------|------------|------------------------------------------|
 | (May 2022)  | Guap Swap Funding Grant Request                               | Treasury Control  | Failed     | $10,000 (Funded by Good Whale)                                         |
@@ -103,8 +105,8 @@ Foundation votes this year are usually related to our internal structures, excha
 | (Jan 2022)  | ErgoLearn Grant                                               | Treasury Control  | Passed     | 1,000 ERG                                         |
 | (Jan 2022)  | Apple Developer Program Account Funding                       | Treasury Control  | Failed     |                                          |
 
-
 ## 2021
+
 | Date        | Description                                                   | Category          | Status     | Amount                                   |
 |-------------|---------------------------------------------------------------|-------------------|------------|------------------------------------------|
 | (Dec 2021)  | Matthew Salary Proposal (From Angie)                          | Treasury Control  | Failed     |                                          |
@@ -169,7 +171,7 @@ Foundation votes this year are usually related to our internal structures, excha
 | (Jan 2021)  | India Marketing Proposal                                      | Treasury Control  | Passed     |                                          |
 | (Jan 2021)  | Out-Of-The-Box Ergo Node + Explorer Deployment With Metrics & Logs | Treasury Control | Passed   |                                          |
 
-## 2020 
+## 2020
 
 | Date        | Description                                                   | Category          | Status     | Amount                                   |
 |-------------|---------------------------------------------------------------|-------------------|------------|------------------------------------------|
@@ -195,7 +197,7 @@ Foundation votes this year are usually related to our internal structures, excha
 | (Jan 2020)  | Selling 5 BTC worth of Ergs @ $0.45/erg                       | Treasury Control  | Passed     | 5 BTC worth of ERG                       |
 | (Jan 2020)  | Ergo Faucet                                                   | Treasury Control  | Failed     |                                          |
 
-## 2019 
+## 2019
 
 | Date        | Description                                                   | Category          | Status     | Amount                                   |
 |-------------|---------------------------------------------------------------|-------------------|------------|------------------------------------------|

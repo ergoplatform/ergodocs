@@ -8,9 +8,6 @@ To participate as a watcher in the Rosen Bridge, you need to deploy a watcher ap
     type: info
 ///
 
-
-
-
 Clone the [Operation repository](https://github.com/rosen-bridge/operation.git) and navigate to the `operation/watcher` directory:
 
 ```shell
@@ -139,7 +136,6 @@ Then delete the folder and start fresh.
 /// details | Note for Raspberry Pi ARM Users
 {type: info, open: false}
 
-
 To run the watcher on an ARM-based Raspberry Pi, use an ARM-based DB image. Update the `docker-compose.yml` as follows:
 
 Change the DB image according to your architecture (e.g., `arm64v8`):
@@ -158,7 +154,9 @@ Update the volume of the DB:
 -     - postgres-data:/bitnami/postgresql
 +     - postgres-data:/var/lib/postgresql/data/
 ```
+
 ///
+
 ### Pull Docker Images and Run Service
 
 Pull the Docker image:
@@ -206,7 +204,7 @@ docker run -it --rm node:18.16 npx --yes @rosen-bridge/cli blake2b-hash YOUR_API
 
 ### Bitcoin Configuration
 
-Choose your information source for the Bitcoin network and specify its connection information. 
+Choose your information source for the Bitcoin network and specify its connection information.
 
 You can use either `rpc`
 
@@ -243,6 +241,7 @@ For optimal watcher performance and decentralization, running your own fully syn
 
    - Paste the `rpcauth` line you copied
    - Add the following lines to enable the RPC server:
+
      ```bash
      server=1
      rpcbind=0.0.0.0
@@ -250,6 +249,7 @@ For optimal watcher performance and decentralization, running your own fully syn
      txindex=1
      rest=1
      ```
+
    - To limit RPC access to only the watcher container, set `rpcallowip` to the Docker network range:
 
      ```bash
@@ -266,9 +266,11 @@ For optimal watcher performance and decentralization, running your own fully syn
    ```
 
 6. Verify the node is running and wait for it to sync:
+
    ```bash
    bitcoin-cli getblockchaininfo
    ```
+
    Look for `"initialblockdownload": false` to confirm the node is synced.
 
 /// details | Running a Pruned Bitcoin Node
@@ -360,7 +362,6 @@ observation:
     type: warning
 ///
 
-
 Create a new wallet and set the wallet mnemonic, you can also load this through an environmental variable so it's only stored in-memory.
 
 ```yaml
@@ -427,8 +428,6 @@ As a watcher, your primary responsibility is to monitor your network and report 
 1. **Collateral:** Provide one-time collateral in the form of ERG and RSN tokens to obtain initial report permits. This collateral serves as a security measure to mitigate Sybil attacks. When you return all your report permits, the collateral is refunded, and your watcher is unregistered.
 
 2. **RSN for Permits:** Lock RSN tokens to receive permit tokens. Use these tokens to create report permits for reporting events. The number of report permits determines how many concurrent reports you can create. In the event of a valid report, the permit is refunded along with your reward. If the report is invalid, the permit is seized as a penalty.
-
-
 
 /// admonition | For tips, troubleshooting, FAQs, and other information, please refer to the main [watcher documentation](watcher.md).
     type: info

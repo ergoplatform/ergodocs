@@ -13,11 +13,9 @@ Yes, public nodes can be viewed at [ergonodes](http://ergonodes.net/). However, 
 - To run a public node, refer to this [nginx.conf](https://github.com/glasgowm148/ergoscripts/blob/main/misc/nginx.config) example.
 - Be cautious when using a [remote node](https://github.com/ergoplatform/ergo/blob/master/src/main/resources/mainnet.conf) as it can be insecure.
 
-
-
 ## Minimum Requirements
 
-### Java 
+### Java
 
 An Ergo node requires a **JDK/JRE version >= 9** installed on your system. We recommend using [Oracle Java SE](https://www.oracle.com/technetwork/java/javase/overview/index.html) or SDKMAN for Unix-based systems:
 
@@ -28,13 +26,11 @@ sdk install java 11.0.13.8.1-amzn
 
 ### Hardware
 
-The only hardware requirements are ~20GB of storage for the blockchain and ~8GB of RAM for handling the sync. The node utilizes Java, so it should work across all operating systems. You can even run it on a [Raspberry Pi](pi.md). 
+The only hardware requirements are ~20GB of storage for the blockchain and ~8GB of RAM for handling the sync. The node utilizes Java, so it should work across all operating systems. You can even run it on a [Raspberry Pi](pi.md).
 
 > Note: Due to the intensive disk I/O, we recommend having 4-6GB of RAM with a fast SSD, running with the `-Xmx4G` flag on JVM9/11.
 
 ## Running the Node
-
-
 
 ### API Commands
 
@@ -52,7 +48,6 @@ If a safe shutdown is not possible, you can terminate the ports:
 kill -9 $(lsof -t -i:9053)
 kill -9 $(lsof -t -i:9030)
 ```
-
 
 Please refer to the section on [swagger](../swagger.md) for more information.
 

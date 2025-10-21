@@ -21,5 +21,5 @@ Access control patterns constrain who can spend and under what conditions, often
 
 ## See also
 
-- Library index: [contracts-library.md](contracts-library.md)
-- Additional contracts index: [contracts.md](contracts.md)
+- [Library index](contracts-library.md)
+- [Additional contracts index](contracts.md)

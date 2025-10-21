@@ -11,12 +11,11 @@ Ergo's primary language is Scala. Similarly, the scripting language used by Ergo
 
 If you're new to Scala development with Ergo, the [Ergo Scala Skeleton App](https://github.com/dav009/ergo-scala-skeleton-app) is a great place to start.
 
-## Why Scala? 
+## Why Scala?
 
 ### Why Scala?
 
 Ergo's primary language is Scala. Similarly, the scripting language used by Ergo, [ErgoScript](ergoscript.md), is also based on Scala, but the [off-chain code](off-chain-overview.md) can be written in any language. Developers have access to a growing selection of [tools](get-started.md) and [Software Development Kits (SDKs)](frameworks.md) for [JVM](jvm.md), [Rust](rust.md) and [JS/TS](js.md).
-
 
 Scala has several features that set it apart from other [JVM](jvm.md) languages.
 
@@ -31,8 +30,8 @@ Scala has several features that set it apart from other [JVM](jvm.md) languages.
 
 Ergo's core components, including the [reference node](install.md) and [`sigmastate-interpreter`](sigmastate-interpreter.md), have undergone migration to **Scala 3**. This migration leverages the newer language features, improved type system, and tooling enhancements offered by Scala 3.
 
-*   **Rationale & Implications:** For a detailed understanding of the motivations behind the Scala 3 migration and its potential impact on the ecosystem (including Long-Term Support plans), refer to the official Scala blog post: [Next Steps for Scala 3 and Scala 2 Long-Term Support](https://www.scala-lang.org/blog/next-scala-lts.html).
-*   **Developer Impact:** Developers contributing to or building upon these core libraries need to ensure their development environment and build tools (like SBT) are compatible with Scala 3. While Scala 3 offers significant improvements, developers should be aware of potential syntax changes or library compatibility adjustments compared to Scala 2.
+- **Rationale & Implications:** For a detailed understanding of the motivations behind the Scala 3 migration and its potential impact on the ecosystem (including Long-Term Support plans), refer to the official Scala blog post: [Next Steps for Scala 3 and Scala 2 Long-Term Support](https://www.scala-lang.org/blog/next-scala-lts.html).
+- **Developer Impact:** Developers contributing to or building upon these core libraries need to ensure their development environment and build tools (like SBT) are compatible with Scala 3. While Scala 3 offers significant improvements, developers should be aware of potential syntax changes or library compatibility adjustments compared to Scala 2.
 
 ## Learning Resources
 

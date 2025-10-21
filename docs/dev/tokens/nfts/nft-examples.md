@@ -1,12 +1,10 @@
 # NFT Examples
 
-
 ## Using Scala
 
-[minting-for-dummies](https://github.com/lucagdangelo/minting-for-dummies) is a basic tool for NFT minting quickly in Scala. 
+[minting-for-dummies](https://github.com/lucagdangelo/minting-for-dummies) is a basic tool for NFT minting quickly in Scala.
 
 You can see the [mint() logic here](https://github.com/lucagdangelo/minting-for-dummies/blob/cd99049f13eb6ab4489f0f880e8d36e33b27bdb2/src/main/scala/app/MintForDummiesCommands.scala#L11)
-
 
 ## Using Ergo Python Appkit
 
@@ -44,7 +42,7 @@ Reference links:
 - [ErgoAppKit](https://github.com/ergo-pad/ergo-python-appkit/ergo_python_appkit/appkit.py)
 - [ErgoTransaction](https://github.com/ergo-pad/ergo-python-appkit/ergo_python_appkit/ErgoTransaction.py)
 - [ergo-python-appkit module](https://github.com/ergo-pad/ergo-python-appkit/ergo_python_appkit/__init__.py)
-- [Building transaction and minting a token using AppKit from Python](appkit-node.md). 
+- [Building transaction and minting a token using AppKit from Python](appkit-node.md).
 
 ## More Examples
 
@@ -53,7 +51,5 @@ Reference links:
 
 ## References
 
-* [Eip4TokenBuilder on GitHub](https://github.com/ergoplatform/ergo-appkit/lib-impl/src/main/java/org/ergoplatform/appkit/impl/Eip4TokenBuilder.java)
-* [Eip4Token on GitHub](https://github.com/ergoplatform/ergo-appkit/common/src/main/java/org/ergoplatform/appkit/Eip4Token.java)
-
-
+- [Eip4TokenBuilder on GitHub](https://github.com/ergoplatform/ergo-appkit/lib-impl/src/main/java/org/ergoplatform/appkit/impl/Eip4TokenBuilder.java)
+- [Eip4Token on GitHub](https://github.com/ergoplatform/ergo-appkit/common/src/main/java/org/ergoplatform/appkit/Eip4Token.java)

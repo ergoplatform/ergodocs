@@ -1,9 +1,7 @@
 
 # FAQ
 
-### Why is this better than Tornado Cash? 
-
-
+### Why is this better than Tornado Cash?
 
 | Aspect          | TornadoCash                                  | ErgoMixer                                 |
 |-----------------|----------------------------------------------|-------------------------------------------|
@@ -16,8 +14,7 @@
 | Blacklisting/Tracking | Vulnerable to blacklisting/tracking due to Proof-of-Stake. | Implements measures to prevent blacklisting/tracking, encourages node decentralization. |
 | Hosting and Developer | Developed by a known team. | Self-hosted and created by an anonymous developer. Adds an additional layer of privacy and security. |
 
-
-Tornado.Cash uses `zk-SNARKs`, which requires a "ceremony" to generate parameters required by the zk-SNARKs algorithm itself. This  Multi-party-computation means if only one participant of the MPC setup was honest, all others could try to cheat, and it would be secure. 
+Tornado.Cash uses `zk-SNARKs`, which requires a "ceremony" to generate parameters required by the zk-SNARKs algorithm itself. This  Multi-party-computation means if only one participant of the MPC setup was honest, all others could try to cheat, and it would be secure.
 
 However, if all participants cheated and cooperated, they would have the ability to generate fake proofs later, and nobody will know about it.
 
@@ -27,7 +24,7 @@ However, if only one of them were honest, it would be secure for people to use.
 
 ErgoMixer doesn't require this "ceremony" setup.
 
-The computer where the MPC ceremony holds place should also be secure and destroyed after the ceremony. Otherwise, it could leak keys that a malicious attack can use to construct fake proofs. There's a really strong game theoric incentive to integrate some backdoor to the software or even hardware of MPC computer. 
+The computer where the MPC ceremony holds place should also be secure and destroyed after the ceremony. Otherwise, it could leak keys that a malicious attack can use to construct fake proofs. There's a really strong game theoric incentive to integrate some backdoor to the software or even hardware of MPC computer.
 
 ### Showing as 'corrupted' on Mac
 

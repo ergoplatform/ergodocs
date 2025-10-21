@@ -12,8 +12,8 @@ tags:
 
 If you're a student interested in learning about the Ergo blockchain and its ecosystem, this guide is designed to provide you with a comprehensive introduction and valuable resources to kickstart your journey.
 
-
 ## Intersections with Computer Science
+
 As a student, you have the opportunity to leverage your academic knowledge in computer science and apply it to the innovative field of blockchain development, particularly with the Ergo platform. This section explores the intersections between various computer science disciplines and the tasks involved in building and maintaining blockchain systems, enabling you to bridge the gap between theory and practice.
 
 - **Databases**: Utilize your skills in relational and non-relational database systems to build blockchain indexers and manage transactional data on the Ergo platform. The UTXO model in Ergo provides a unique perspective on data management and state representation.
@@ -45,7 +45,6 @@ Engaging with the Ergo community and collaborating with other students and devel
 - **[GitHub Repositories](https://github.com/ergoplatform)**: Explore the official Ergo repositories on GitHub and contribute to open-source projects.
 
 Remember, learning is a continuous journey, and the Ergo ecosystem is constantly evolving. Stay curious, engage with the community, and don't hesitate to ask questions or seek guidance from experienced developers and contributors.
-
 
 ## Learning ErgoScript
 

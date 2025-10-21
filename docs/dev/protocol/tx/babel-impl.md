@@ -18,6 +18,7 @@ This guide provides detailed instructions for implementing Babel fees in your Er
 ### 1. Token Preparation
 
 First, mint the token you wish to use for Babel Fees:
+
 1. Create your token (e.g., "lightning tokens" with 1,000,000 supply)
 2. Note the Asset ID (e.g., `272a4aeba6d1596ee0405b13fa223074077fd31f2d519fcd2f7b1656596db029`)
 3. Note the bank wallet address (e.g., `9hqbqkUfC4nmi1fVNcj8B3iEYh9HUnsLazcsRHwjoZJpZbmrCiq`)
@@ -25,6 +26,7 @@ First, mint the token you wish to use for Babel Fees:
 ### 2. Create Babel Fee Box
 
 Use TokenJay.app to create a Babel Box providing liquidity:
+
 1. Visit [Tokenjay](https://tokenjay.app/)
 2. Click "Open App"
 3. Navigate to "Purchase Tokens" → "Babel Fee Liquidity"
@@ -64,6 +66,7 @@ npm install @fleet-sdk/babel-fees-plugin
 ### 4. Configuration Files
 
 Create webpack configuration (`webpack.config.js`):
+
 ```javascript
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -97,6 +100,7 @@ module.exports = {
 ```
 
 Create TypeScript configuration (`tsconfig.json`):
+
 ```json
 {
     "compilerOptions": {
@@ -208,6 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
 ### 6. Create HTML Interface
 
 Create `babelfees.html`:
+
 ```html
 <html lang="en">
 <head>
@@ -229,6 +234,7 @@ Create `babelfees.html`:
 ### 7. Build and Deploy
 
 Compile the TypeScript code:
+
 ```bash
 cd /var/www/html/fleetsdk
 npx webpack
@@ -257,25 +263,26 @@ To test your implementation:
    - Handle concurrent spending attempts
 
 ## Reference Implementations
-* [Nautilus Wallet implementation](https://github.com/capt-nemo429/nautilus-wallet/pull/82)
-* [AppKit implementation](https://github.com/ergoplatform/ergo-appkit/pull/204)
-* [Fleet SDK Babel fees plugin](https://fleet-sdk.github.io/docs/plugins/babel-fees)
+- [Nautilus Wallet implementation](https://github.com/capt-nemo429/nautilus-wallet/pull/82)
+- [AppKit implementation](https://github.com/ergoplatform/ergo-appkit/pull/204)
+- [Fleet SDK Babel fees plugin](https://fleet-sdk.github.io/docs/plugins/babel-fees)
 
 ## Additional Resources
+
 - [EIP-0031 Specification](https://github.com/ergoplatform/eips/blob/master/eip-0031.md)
 - [Fleet SDK Documentation](https://fleet-sdk.github.io/docs/plugins/babel-fees)
 - [Ergo Platform API Documentation](https://api.ergoplatform.com/api/v1/docs/)
 
-
-
-
 ## Wallet Implementation Considerations
 
 ### Box Discovery and Identification
+
 The hexadecimal representation of the Babel Fees contract is:
+
 ```
 100604000e20{tokenId}0400040005000500d803d601e30004d602e4c6a70408d603e4c6a7050595e67201d804d604b2a5e4720100d605b2db63087204730000d606db6308a7d60799c1a7c17204d1968302019683050193c27204c2a7938c720501730193e4c672040408720293e4c672040505720393e4c67204060ec5a796830201929c998c7205029591b1720673028cb272067303000273047203720792720773057202
 ```
+
 Replace `{tokenId}` with the specific token ID and use this as a parameter in the API endpoint: `https://api.ergoplatform.com/api/v1/boxes/unspent/byErgoTree/{ErgoTree}`
 
 ### Implementation Requirements
@@ -300,9 +307,8 @@ Replace `{tokenId}` with the specific token ID and use this as a parameter in th
       - Implement proper change address handling
       - Consider potential liquidity draining attacks
 
-
 ### Development Tools
+
 - Fleet SDK plugin: `@fleet-sdk/babel-fees-plugin`
 - API integration endpoints
 - Smart contract templates
-

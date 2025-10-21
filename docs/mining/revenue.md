@@ -37,7 +37,6 @@ A recent post on the forum, [*'A Scalability Plan for Ergo'*](https://www.ergofo
 
 With the introduction of Sigma Chains, miners will have even more opportunities to secure and earn rewards from various sidechains. Sigma Chains offer different sidechain constructions, including [merged-mined sidechains](sigma-chains.md#sidechain-constructions), [double merged-mined sidechains](sigma-chains.md#sidechain-constructions), and [sidechains with dedicated mining algorithms](sigma-chains.md#sidechain-constructions). By participating in the mining and security of these sidechains, miners can diversify their revenue streams and benefit from the growth of the Sigma Chain ecosystem.
 
-
 ## Adjusting the Re-emission Schedule
 
 As outlined in the paper ["Soft Power: Upgrading Chain Macroeconomic Policy Through Soft Forks"](https://eprint.iacr.org/2021/577.pdf), Ergo's emission schedule can be adjusted through on-chain voting and soft forks. This flexibility allows the Ergo community to re-evaluate and potentially extend the emission schedule if deemed necessary to ensure a smooth transition from mining rewards to the alternative revenue streams mentioned above. By opting to re-adjust the re-emission schedule, the community can maintain an optimal balance between mining incentives and the adoption of these new revenue mechanisms, ensuring the long-term sustainability of the Ergo network.

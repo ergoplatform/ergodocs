@@ -1,14 +1,9 @@
 # Gaming on Ergo
 
-
-
 /// details | Tip
      {type: tip, open: true}
 Be sure to check out [ErgoGames.io](https://ergogames.io), a platform dedicated to showcasing games developed for the Ergo Blockchain.
 ///
-
-
-
 
 //// note | Metaverse Projects
 /// details | Cyberverse
@@ -20,7 +15,6 @@ Be sure to check out [ErgoGames.io](https://ergogames.io), a platform dedicated 
 [SigmaValley](sigmavalley.md) is the first metaverse on the Ergo blockchain; it aims to be a caricaturesque and up-to-date visualization of the Ergo ecosystem. It was inspired by the Silicon Valley TV series Intro.
 ///
 ////
-
 
 //// note | NFT-Based Games
 /// details | BlitzTCG
@@ -40,7 +34,6 @@ Be sure to check out [ErgoGames.io](https://ergogames.io), a platform dedicated 
 [Monster Pub Brawl](monsterpub.md), Alcohol is an exceptionally rare resource capable of enhancing the monsters who use them with untold power. The raw materials to produce it are found in extremely hostile territories, and only the most skilled of alchemists are able to distill these materials into a potable concoction.
 ///
 ////
-
 
 //// note | Monetary-based Games
 /// details | Grand Gambit

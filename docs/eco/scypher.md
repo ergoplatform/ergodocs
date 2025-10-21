@@ -12,8 +12,8 @@ SCypher introduces several novel approaches to software distribution and securit
 
 * **Blockchain-Native Software Hosting:** The complete SCypher application is hosted directly on the Ergo blockchain. It is fragmented and encoded across various Ergo tokens, eliminating reliance on centralized servers or repositories for distribution.
 * **Dual Access Methods:** Users can retrieve and reconstruct the SCypher application through two primary methods:
-    * A Command Line Interface (CLI) download via `curl`, offering a robust and simple access point.
-    * A web interface that automatically reconstructs the application in the browser for ease of use.
+  * A Command Line Interface (CLI) download via `curl`, offering a robust and simple access point.
+  * A web interface that automatically reconstructs the application in the browser for ease of use.
 * **XOR Encryption:** Utilizes a cryptographically sound XOR-based cipher for encrypting BIP39 seed phrases, ensuring their integrity and validity are maintained.
 * **Autonomous Distribution:** The system is self-contained and operates without requiring any central authority or servers for its distribution, embodying decentralized principles.
 
@@ -52,7 +52,7 @@ During ErgoHack 10, the SCypher project achieved significant milestones:
 * [Usage Slides](https://scypher.vercel.app/scypher_presentation.html)
 * [Enterprise Use Slides](https://scypher.vercel.app/enterprise-use.html)
 
-### How to Use the Files above:
+### How to Use the Files above
 
 ### 7. Contribution
 

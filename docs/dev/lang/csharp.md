@@ -5,7 +5,7 @@ tags:
   - Tutorial
 ---
 
-# Ergo Platform and C#
+# Ergo Platform and C #
 
 While C# resources for integrating with Ergo may be limited, there are several valuable resources that developers can utilize.
 

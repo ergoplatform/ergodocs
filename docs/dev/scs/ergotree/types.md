@@ -27,10 +27,9 @@ $$
 
 # Predefined types
 
-
 ### Boolean
 
-### Byte 
+### Byte
 
 #### Byte.toByte (106.1)
 
@@ -62,8 +61,7 @@ $$
 - *Signature*: **`def toBigInt: BigInt`**
 - *Serialized as:* Upcast
 
-
-### Short 
+### Short
 
 #### Short.toByte (106.1)
 
@@ -89,21 +87,19 @@ $$
 - *Signature*: **`def toLong: Long`**
 - *Serialized as:* Upcast
 
-
 #### Short.toBigInt (106.5)
 
 - *Description*: Converts this numeric value to **BigInt**.
 - *Signature*: **`def toBigInt: BigInt`**
 - *Serialized as:* Upcast
 
-### Int 
+### Int
 
 #### Int.toByte (106.1)
 
 - *Description*: Converts this numeric value to **Byte**, throwing an exception on overflow.
 - *Signature*: **`def toByte: Byte`**
 - *Serialized as:* Downcast
-
 
 #### Int.toShort (106.2)
 
@@ -129,7 +125,7 @@ $$
 - *Signature*: **`def toBigInt: BigInt`**
 - *Serialized as:* Upcast
 
-### Long 
+### Long
 
 #### Long.toByte (106.1)
 
@@ -161,8 +157,7 @@ $$
 - *Signature*: **`def toBigInt: BigInt`**
 - *Serialized as:* Upcast
 
-
-### BigInt 
+### BigInt
 
 #### BigInt.toBigInt (106.5)
 
@@ -170,8 +165,7 @@ $$
 - *Signature*: **`def toBigInt: BigInt`**
 - *Serialized as:* Downcast
 
-
-### GroupElement 
+### GroupElement
 
 #### GroupElement.getEncoded (7.2)
 
@@ -199,88 +193,83 @@ $$
 - *Signature*: **`def negate: GroupElement`**
 - *Serialized as:* PropertyCall
 
-
-### SigmaProp 
+### SigmaProp
 
 Values of **SigmaProp** type hold sigma propositions, which can be proved and verified using Sigma protocols. Each sigma proposition is represented as an expression where sigma protocol primitives such as **ProveDlog** and **ProveDHTuple** are used as constants, and special sigma protocol connectives like **AND**, **OR**, and **THRESHOLD** are used as operations.
 
 The abstract syntax of sigma propositions is shown below.
 
-
 | Set | | Syntax | Mnemonic | Description |
 |--||--|--|----|
-| $Tree \ni t$	| := 	| $\lst{Trivial(b)}$ 	| $\lst{TrivialProp}$	| boolean value $\lst{b}$ as sigma proposition  
-|   | $\mid$	| $\lst{Dlog(ge)}$ 	| $\lst{ProveDLog}$	| knowledge of discrete logarithm of $\lst{ge}$
-|   | $\mid$    | $\lst{DHTuple(g,h,u,v)}$ 	| $\lst{ProveDHTuple}$	| knowledge of Diffie-Hellman tuple 
-|   | $\mid$    | $\lst{THRESHOLD}(k,t_1,\dots,t_n)$ 	| $\lst{THRESHOLD}$	| knowledge of $k$ out of $n$ secrets
-|   | $\mid$    | $\lst{OR}(t_1,\dots,t_n)$	| $\lst{OR}$	| knowledge of any one of $n$ secrets
-|   | $\mid$    | $\lst{AND}(t_1,\dots,t_n)$	| $\lst{AND}$	| knowledge of all $n$ secrets
-
+| $Tree \ni t$ | :=  | $\lst{Trivial(b)}$  | $\lst{TrivialProp}$ | boolean value $\lst{b}$ as sigma proposition  
+|   | $\mid$ | $\lst{Dlog(ge)}$  | $\lst{ProveDLog}$ | knowledge of discrete logarithm of $\lst{ge}$
+|   | $\mid$    | $\lst{DHTuple(g,h,u,v)}$  | $\lst{ProveDHTuple}$ | knowledge of Diffie-Hellman tuple
+|   | $\mid$    | $\lst{THRESHOLD}(k,t_1,\dots,t_n)$  | $\lst{THRESHOLD}$ | knowledge of $k$ out of $n$ secrets
+|   | $\mid$    | $\lst{OR}(t_1,\dots,t_n)$ | $\lst{OR}$ | knowledge of any one of $n$ secrets
+|   | $\mid$    | $\lst{AND}(t_1,\dots,t_n)$ | $\lst{AND}$ | knowledge of all $n$ secrets
 
 Every well-formed tree of sigma proposition is a value of type $\lst{SigmaProp}$, thus following the notation of the [evaluation section](evaluation.md) we can define denotation of $\lst{SigmaProp}$
 
 $$\Denot{\lst{SigmaProp}} = \Set{t \in Tree}$$
-
 
 The following methods can be called on all instances of $\lst{SigmaProp}$ type.
 
 #### SigmaProp.propBytes (8.1)
 
 - *Description*: Returns the serialized bytes of this sigma proposition represented as ErgoTree.
-- *Parameters*: 
+- *Parameters*:
 - *Result*: `Coll[Byte]`
 - *Serialized as:* SigmaPropBytes
 
 #### SigmaProp.isProven (8.2)
 
 - *Description*: Verifies that the sigma proposition is proven. (FRONTEND ONLY)
-- *Parameters*: 
+- *Parameters*:
 - *Result*: `Boolean`
 
 For a full list of primitive operations on  $\lst{SigmaProp}$ type, see [Appendix B](https://raw.githubusercontent.com/ScorexFoundation/sigmastate-interpreter/fada073b82a16a928c457693b888da4c0310aca6/docs/spec/spec.pdf#appendix.B)
 
-### Box 
-
+### Box
 
 #### Box.value (99.1)
 
 - *Description*: Monetary value in nanoErgs.
-- *Parameters*: 
+- *Parameters*:
 - *Result*: $\lst{Long}$
 - *Serialized as:* ExtractAmount
 
 #### Box.propositionBytes (99.2)
 
 - *Description*: Serialized bytes of the guarding script. This script must evaluate to true to spend the box.
-- *Parameters*: 
+- *Parameters*:
 - *Result*: $\lst{Coll[Byte]}$
 - *Serialized as:* ExtractScriptBytes
 
 #### Box.bytes (99.3)
 
 - *Description*: Returns the serialized bytes of this box's content, including proposition bytes.
-- *Parameters*: 
+- *Parameters*:
 - *Result*: $\lst{Coll[Byte]}$
 - *Serialized as:* ExtractBytes
 
 #### Box.bytesWithoutRef (99.4)
 
 - *Description*: Returns the serialized bytes of this box's content, excluding the transactionId and output index.
-- *Parameters*: 
+- *Parameters*:
 - *Result*: $\lst{Coll[Byte]}$
 - *Serialized as:* ExtractBytesWithNoRef
 
 #### Box.id (99.5)
 
 - *Description*: Returns the Blake2b256 hash of this box's content (`blake2b256(bytes)`).
-- *Parameters*: 
+- *Parameters*:
 - *Result*: $\lst{Coll[Byte]}$
 - *Serialized as:* ExtractId
 
 #### Box.creationInfo (99.6)
 
 - *Description*: Returns the height and transaction/output index where the box was created. `creationInfo._1` is the block height, and `creationInfo._2` is the transaction identifier concatenated with the box index.
-- *Parameters*: 
+- *Parameters*:
 - *Result*: $\lst{(Int,Coll[Byte])}$
 - *Serialized as:* ExtractCreationInfo
 
@@ -294,93 +283,93 @@ For a full list of primitive operations on  $\lst{SigmaProp}$ type, see [Appendi
 #### Box.tokens (99.8)
 
 - *Description*: Returns the collection of secondary tokens held in the box.
-- *Parameters*: 
+- *Parameters*:
 - *Result*: $\lst{Coll[(Coll[Byte],Long)]}$
 - *Serialized as:* PropertyCall
 
 #### Box.R0 (99.9)
 
 - *Description*: Register R0: Monetary value in nanoErgs. Use `ExtractAmount` (value property).
-- *Parameters*: 
+- *Parameters*:
 - *Result*: $\lst{Option[T]}$
 - *Serialized as:* ExtractRegisterAs
 
 #### Box.R1 (99.10)
 
 - *Description*: Register R1: Guarding script bytes. Use `ExtractScriptBytes` (propositionBytes property).
-- *Parameters*: 
+- *Parameters*:
 - *Result*: $\lst{Option[T]}$
 - *Serialized as:* ExtractRegisterAs
 
 #### Box.R2 (99.11)
 
 - *Description*: Register R2: Secondary tokens [(TokenId, Amount)]. Use `ExtractTokens` (tokens property).
-- *Parameters*: 
+- *Parameters*:
 - *Result*: $\lst{Option[T]}$
 - *Serialized as:* ExtractRegisterAs
 
 #### Box.R3 (99.12)
 
 - *Description*: Register R3: Box creation information (height, txId, index). Use `ExtractCreationInfo` (creationInfo property).
-- *Parameters*: 
+- *Parameters*:
 - *Result*: $\lst{Option[T]}$
 - *Serialized as:* ExtractRegisterAs
 
 #### Box.R4 (99.13)
 
 - *Description*: Optional register R4 for arbitrary data storage. Use `ExtractRegisterAs`.
-- *Parameters*: 
+- *Parameters*:
 - *Result*: $\lst{Option[T]}$
 - *Serialized as:* ExtractRegisterAs
 
 #### Box.R5 (99.14)
 
 - *Description*: Optional register R5 for arbitrary data storage. Use `ExtractRegisterAs`.
-- *Parameters*: 
+- *Parameters*:
 - *Result*: $\lst{Option[T]}$
 - *Serialized as:* ExtractRegisterAs
 
 #### Box.R6 (99.15)
 
 - *Description*: Optional register R6 for arbitrary data storage. Use `ExtractRegisterAs`.
-- *Parameters*: 
+- *Parameters*:
 - *Result*: $\lst{Option[T]}$
 - *Serialized as:* ExtractRegisterAs
 
 #### Box.R7 (99.16)
 
 - *Description*: Optional register R7 for arbitrary data storage. Use `ExtractRegisterAs`.
-- *Parameters*: 
+- *Parameters*:
 - *Result*: $\lst{Option[T]}$
 - *Serialized as:* ExtractRegisterAs
 
 #### Box.R8 (99.17)
 
 - *Description*: Optional register R8 for arbitrary data storage. Use `ExtractRegisterAs`.
-- *Parameters*: 
+- *Parameters*:
 - *Result*: $\lst{Option[T]}$
 - *Serialized as:* ExtractRegisterAs
 
 #### Box.R9 (99.18)
 
 - *Description*: Optional register R9 for arbitrary data storage. Use `ExtractRegisterAs`.
-- *Parameters*: 
+- *Parameters*:
 - *Result*: $\lst{Option[T]}$
 - *Serialized as:* ExtractRegisterAs
 
-### AvlTree 
+### AvlTree
 
 #### AvlTree.digest (100.1)
 
 - *Description*: Returns the digest of the state represented by this tree (root hash bytes ++ tree height).
-- *Parameters*: 
+- *Parameters*:
 - *Result*: $\lst{Coll[Byte]}$
 - *Serialized as:* PropertyCall
 
 #### AvlTree.enabledOperations (100.2)
 
 - *Description*: Returns the flags of enabled operations packed into a single byte.
-- *Parameters*: 
+- *Parameters*:
 - *Result*: $\lst{Byte}$
 - *Serialized as:* PropertyCall
 
@@ -392,103 +381,103 @@ isRemoveAllowed == (enabledOperations & 0x04) != 0
 
 #### AvlTree.keyLength (100.3)
 
-- *Description*: 
-- *Parameters*: 
+- *Description*:
+- *Parameters*:
 - *Result*: $\lst{Int}$
 - *Serialized as:* PropertyCall
 
 #### AvlTree.valueLengthOpt (100.4)
 
-- *Description*: 
-- *Parameters*: 
+- *Description*:
+- *Parameters*:
 - *Result*: $\lst{Coll[Byte]}$
 - *Serialized as:* PropertyCall
 
 #### AvlTree.isInsertAllowed (100.5)
 
-- *Description*: 
-- *Parameters*: 
+- *Description*:
+- *Parameters*:
 - *Result*: $\lst{Coll[Byte]}$
 - *Serialized as:* PropertyCall
 
 #### AvlTree.isUpdateAllowed (100.6)
 
-- *Description*: 
-- *Parameters*: 
+- *Description*:
+- *Parameters*:
 - *Result*: $\lst{Boolean}$
 - *Serialized as:* PropertyCall
 
 #### AvlTree.isRemovedAllowed (100.7)
 
-- *Description*: 
-- *Parameters*: 
+- *Description*:
+- *Parameters*:
 - *Result*: $\lst{Boolean}$
 - *Serialized as:* PropertyCall
 
 #### AvlTree.updateOperations (100.8)
 
-- *Description*: 
-- *Parameters*: 
+- *Description*:
+- *Parameters*:
 - *Result*: $\lst{AvlTree}$
 - *Serialized as:* MethodCall
 
 #### AvlTree.contains (100.9)
 
-- *Description*: 
-- *Parameters*: 
+- *Description*:
+- *Parameters*:
 - *Result*: $\lst{Boolean}$
 - *Serialized as:* MethodCall
 
 #### AvlTree.get (100.10)
 
-- *Description*: 
-- *Parameters*: 
+- *Description*:
+- *Parameters*:
 - *Result*: $\lst{Option[Coll[Byte]]}$
 - *Serialized as:* MethodCall
 
 #### AvlTree.getMeny (100.11)
 
-- *Description*: 
-- *Parameters*: 
+- *Description*:
+- *Parameters*:
 - *Result*: $\lst{Coll[Option[Coll[Byte]]]}$
 - *Serialized as:* MethodCall
 
 #### AvlTree.insert (100.12)
 
-- *Description*: 
-- *Parameters*: 
+- *Description*:
+- *Parameters*:
 - *Result*: $\lst{Option[AvlTree]}$
 - *Serialized as:* MethodCall
 
 #### AvlTree.update (100.13)
 
-- *Description*: 
-- *Parameters*: 
+- *Description*:
+- *Parameters*:
 - *Result*: $\lst{Option[AvlTree]}$
 - *Serialized as:* MethodCall
 
 #### AvlTree.remove (100.14)
 
 - *Description*:
-- *Parameters*: 
+- *Parameters*:
 - *Result*: $\lst{Option[AvlTree]}$
 - *Serialized as:* MethodCall
 
 #### AvlTree.updateDigest (100.15)
 
-- *Description*: 
-- *Parameters*: 
+- *Description*:
+- *Parameters*:
 - *Result*: $\lst{AvlTree}$
 - *Serialized as:* MethodCall
 
-### Header 
+### Header
 
-### PreHeader 
+### PreHeader
 
-### Context 
+### Context
 
-### Global 
+### Global
 
-### Coll 
+### Coll
 
 ### Option

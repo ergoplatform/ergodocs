@@ -20,6 +20,6 @@ OptionPools is a groundbreaking pool-to-peer Automated Market Maker (AMM) tradin
 
 In addition to options trading, Ergo's Multi-Stage Contracts enable the development of various other derivative protocols, such as:
 
-*  [Mining power derivatives](https://www.ergoforum.org/t/mining-power-derivatives-two-tokens-approach/277)
+* [Mining power derivatives](https://www.ergoforum.org/t/mining-power-derivatives-two-tokens-approach/277)
 
 Ergo's decentralized finance ecosystem continues to evolve, offering traders and investors innovative ways to manage risk, speculate on asset prices, and generate yield in a trustless and decentralized manner.

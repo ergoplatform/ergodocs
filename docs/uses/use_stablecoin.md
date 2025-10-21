@@ -83,9 +83,9 @@ We aim for a stable peg and robust security under realistic adversarial conditio
 
 - **Fee structure:**
   
-    - Protocol/bridge configurable fee floor at **0.1%**, with operator flexibility for competitive rates.
-    - Target **0.05%** for dedicated stable-stable AMM pools.
-    - UI fee waiver after a defined cumulative-fees threshold for USE (threshold set by the UI operator).
+  - Protocol/bridge configurable fee floor at **0.1%**, with operator flexibility for competitive rates.
+  - Target **0.05%** for dedicated stable-stable AMM pools.
+  - UI fee waiver after a defined cumulative-fees threshold for USE (threshold set by the UI operator).
 
 - **Oracle cadence:** conservative configuration with minute-level updates plus aggregation and outlier rejection.
 
@@ -175,4 +175,3 @@ We aim for a stable peg and robust security under realistic adversarial conditio
 4. Assign owners for roadmap items and set timelines.
 
 ---
-

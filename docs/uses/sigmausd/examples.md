@@ -1,13 +1,13 @@
 ## SigmaRSV (Reservecoin) Simplified
+
 - SigmaRSV is a call option on a % of the ERG held in the reserve portion of the SigmaUSD contract
 - Fees are continually added to the ERG held in reserve as users interact with the contract. This mechanism ensures liquidity and offers a mechanism of return beyond trading. SigmaRSV represents a price/book (P/B Ratio) on the ERG held in reserve.
 
-> It is important to understand three mechanisms that influence the outcome of each user of SigmaRSV 
+> It is important to understand three mechanisms that influence the outcome of each user of SigmaRSV
 
-1. Fees accumulate as users interact with the contract. Nothing is Free. 
+1. Fees accumulate as users interact with the contract. Nothing is Free.
 2. The amount of ERG held in reserve floats (up/down) as users interact with the contract.
 3. The price ERG/USD floats (up/down) as users trade ERG.
-
 
 ### Overview
 
@@ -49,14 +49,11 @@
 - Let's imagine the price of ERG is still NOW 1$.
 - Alice has a call option 11.40$ in ERG (minus the exchange fee)
 
+## SigmaUSD (Stablecoin) Simplified
 
-##  SigmaUSD (Stablecoin) Simplified
-
-> SigmaUSD represents a call option on the dollar value of ERG held in reserve. 
-
+> SigmaUSD represents a call option on the dollar value of ERG held in reserve.
 
 SigmaUSD uses Ergo's oracle pools infrastructure to calculate and adjust the current ERG/USD exchange rate. Reserve always backs sigma USD. The price ERG/USD floats (up/down) as users trade ERG.
-
 
 **BASIC OVERVIEW**
 
@@ -80,11 +77,10 @@ SigmaUSD uses Ergo's oracle pools infrastructure to calculate and adjust the cur
 - (4x1)(80$ of ERG)(20 ERG @ $4)
 - Bob can call 5 ERG (minus the exchange fee)
 
+### Longterm framework of SigmaUSD
 
-
-### Longterm framework of SigmaUSD.
 - SigmaUSD is an essential building block for a functioning DeFi System.  
-- The focus for ERG now shifts to building on the foundation it has set. 
-- Gateways, Dex's, Liquidity Pools, LETS systems. It is time to build use and utility. 
-- The importance and significance of stable value cannot be overstated. 
-- This is critical to the long-term prosperity of the Ergo Network and is important to understand. 
+- The focus for ERG now shifts to building on the foundation it has set.
+- Gateways, Dex's, Liquidity Pools, LETS systems. It is time to build use and utility.
+- The importance and significance of stable value cannot be overstated.
+- This is critical to the long-term prosperity of the Ergo Network and is important to understand.

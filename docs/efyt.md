@@ -12,14 +12,11 @@ tags:
 
 EFYT was systematically airdropped and then listed on the Waves DEX in May 2017, with an initial supply of 100,000 tokens. This launch aimed to build an early community around the platform and raise capital for development and marketing before launching the mainnet.
 
-
 /// admonition | EFYT vs ERG
     type: warning
 
 EFYT, which was issued on the Waves Platform, is a separate entity from ERG, the native token of the Ergo blockchain. ERG became available after the launch of the Ergo mainnet and could only be obtained through mining. For more information on Ergo's emission see [this page](emission.md)
 ///
-
-
 
 ## Distribution and Allocation
 
@@ -32,7 +29,7 @@ The maximum supply of EFYT is capped at 1,970,945.0, mirroring 10% of Ergo's fir
 
 ### Redemption Process
 
-EFYT holders could exchange their tokens for ERG at a 1:1 rate via the Waves gateway. This option was available until July 1st, 2021, with unclaimed EFYT tokens totaling 188,330 by the end of the offer. Overall, the Treasury exchanged 1,782,615 ERG for EFYT. 
+EFYT holders could exchange their tokens for ERG at a 1:1 rate via the Waves gateway. This option was available until July 1st, 2021, with unclaimed EFYT tokens totaling 188,330 by the end of the offer. Overall, the Treasury exchanged 1,782,615 ERG for EFYT.
 
 ### Compensation and Expenses
 

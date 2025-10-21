@@ -4,7 +4,7 @@ As the blockchain revolution gains steam, one of its most promising opportunitie
 
 ## The Democratization of Programmable Money
 
-The emergence of Decentralized Finance (DeFi) has opened the gates to programmable money, allowing for sophisticated transactions without the traditional financial sector's limitations. In a similar vein, CBDCs have the potential to offer programmable assets that could easily integrate with a plethora of applications. However, most CBDCs are confined to permissioned ledgers and centralized control, hindering the democratization of programmable money. 
+The emergence of Decentralized Finance (DeFi) has opened the gates to programmable money, allowing for sophisticated transactions without the traditional financial sector's limitations. In a similar vein, CBDCs have the potential to offer programmable assets that could easily integrate with a plethora of applications. However, most CBDCs are confined to permissioned ledgers and centralized control, hindering the democratization of programmable money.
 
 Ergo offers a different approach, providing open systems that unleash the transformative potential of digital cash. Imagine sending or receiving money privately and securely between any two entities worldwide, all while enjoying the benefits of programmable features. Unlike systems like Ethereum, which struggle with scalability and high fees, Ergo is designed for efficiency and low-cost transactions. This makes it ideal for micro-transactions, complex financial products, and truly democratizes access to financial systems.
 

@@ -26,7 +26,7 @@ These two protocols allow for the anonymous mixing of tokens by ensuring that pa
 The ZeroJoin process operates as follows:
 
 1. **Commitment**: The prover generates a random value \( r \) and computes \( t_0 = g^r \) and \( t_1 = h^r \). These values are sent as the prover's commitment to the verifier.
-   
+
 2. **Challenge**: The verifier generates a random challenge \( c \) and sends it to the prover.
 
 3. **Response**: The prover calculates \( z = r + cx \) and sends \( z \) to the verifier.

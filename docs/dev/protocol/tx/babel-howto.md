@@ -7,13 +7,15 @@ For those who are active within a blockchain’s ecosystem, there is often a des
 Based on the above scenario, it would be more convenient to pay for transactions in native tokens rather than $ERG. This is now possible with the introduction of Babel fees.
 
 ## Babel Fees
-With Babel fees, you no longer need $ERG to pay for a transaction. You can pay for the transaction using fungible, native tokens that have liquidity. Let’s take a look at how this new feature works on Ergo. 
+
+With Babel fees, you no longer need $ERG to pay for a transaction. You can pay for the transaction using fungible, native tokens that have liquidity. Let’s take a look at how this new feature works on Ergo.
 
 ## Providing Babel Fee Liquidity
-Before using Babel fees, someone (or many people) must provide liquidity on the blockchain. They agree to buy the native asset for $ERG at some rate. To illustrate: 
+
+Before using Babel fees, someone (or many people) must provide liquidity on the blockchain. They agree to buy the native asset for $ERG at some rate. To illustrate:
 
 1. Go to the [Tokenjay](https://tokenjay.app/) site.
-2. Click “Open App”. 
+2. Click “Open App”.
 3. Click “Purchase Tokens”.
 4. Click “Babel Fee Liquidity”.
 5. Connect a compatible ErgoPay wallet.
@@ -34,9 +36,10 @@ This provides a Babel Fee bank box, which anyone can use to trade the digital as
 
 ## Using Babel Fee Bank Boxes
 
-Using Babel Fee Boxes is simple. Nautilus, for example, allows you to pick a token to pay a fee based on what is in your wallet, and it selects the best rate from the Babel Fee bank boxes available on the blockchain. In the case below, the token SigUSD is being used to swap for the necessary amount of $ERG to pay for the transaction. The process of choosing to pay with Babel fees is as simple as selecting the native asset from a pull-down list. 
+Using Babel Fee Boxes is simple. Nautilus, for example, allows you to pick a token to pay a fee based on what is in your wallet, and it selects the best rate from the Babel Fee bank boxes available on the blockchain. In the case below, the token SigUSD is being used to swap for the necessary amount of $ERG to pay for the transaction. The process of choosing to pay with Babel fees is as simple as selecting the native asset from a pull-down list.
 
 ![babel-nautilius (1).png](https://storage.googleapis.com/ergo-cms-media/babel_nautilius_1_0203d2c22a/babel_nautilius_1_0203d2c22a.png)
 
 #### Conclusion
+
 Babel Fees are an innovative solution that make blockchains easier to use. For users, they eliminate the need to keep the blockchain coin in each wallet they own. It basically helps to prevent assets from getting “stuck” because a wallet does not have the blockchain’s coin (or enough of that coin). The introduction of Babel fees on Ergo offers a significant boost to the versatility of the blockchain. With this newly implemented technology, Ergo becomes much more fluid and flexible by increasing the efficiency of transactions and interactions on the network.

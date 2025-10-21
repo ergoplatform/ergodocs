@@ -1,6 +1,7 @@
 ## Modules Of The Ergo Headless dApp Framework
 
 ### Box Spec
+
 This module exposes the `BoxSpec` struct, which allows you to create a specification of a UTXO. This is used for defining the boxes which are required for the actions of your protocol.
 
 ```rust
@@ -52,11 +53,12 @@ All `ExplorerFindable` structs are also `SpecifiedBox`es which are all `WrappedB
 
 `WrappedBox`es provide a simplified interface for interacting with `ErgoBox`es. `SpecifiedBox`es on the other hand specify that a given `WrappedBox` also implements a `BoxSpec` via the `box_spec()` method. And lastly `ExplorerFindable` provides an interface on top of the `SpecifiedBox` trait for finding boxes that match the `BoxSpec` from an Ergo Explorer API instance.
 
-
 ### Specified Boxes
+
 This module exposes generic "Specified Box" structs that implement the `SpecifiedBox`/`WrappedBox`/`ExplorerFindable` traits. These boxes can be used as inputs for Actions in your off-chain protocol code, while also enabling front-end devs to easily gain access to on-chain data, such as Oracle Pool data.
 
 Currently Implemented Specified Boxes:
+
 1. ErgsBox
 2. ErgUsdOraclePoolBox
 3. AdaUsdOraclePoolBox
@@ -78,23 +80,24 @@ println!(
 );
 ```
 
-
 ### Output Builders
+
 This module exposes structs which provide you with a basic interface
 for creating common output UTXOs within your Actions. These are often
 used for creating outputs that hold a user's change or pay a tx fee.
 
 Example Output Builders:
+
 1. ChangeBox
 2. TokensChangeBox
 3. TxFeeBox
 
-
 ### Tx Creation
+
 This module exposes a few basic functions for making your life easier when building `UnsignedTransaction`s inside of your Actions.
 
-
 ### Encoding
+
 This module exposes a number of helpful functions related to encoding/decoding/wrapping/unwrapping values from one form into another.
 
 Examples:
@@ -107,6 +110,7 @@ pub fn serialize_p2s_from_ergo_tree(ergo_tree: ErgoTree) -> P2SAddressString;
 ```
 
 ### Procedural Macros
+
 This crate exposes three procedural macros to make the life of devs much simpler:
 
 1. WrapBox
@@ -114,4 +118,3 @@ This crate exposes three procedural macros to make the life of devs much simpler
 3. WASMBox
 
 `WrapBox` simply implements the `WrappedBox` trait for you, `SpecBox` implements a customized `new()` method that uses your `BoxSpec` + implements the `ExplorerFindable` trait for you, and `WASMBox` implements the two basic required methods to enable WASM support for your struct (`w_new()` and `w_box_struct()`).
-

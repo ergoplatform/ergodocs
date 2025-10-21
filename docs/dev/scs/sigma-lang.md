@@ -13,7 +13,7 @@ Every coin in Bitcoin is protected by a program in the stack-based Script langua
 
 Generalizing the Bitcoin Script, ErgoScript compiler and ErgoTree interpreter implement an **authentication language** which allows developers to specify coin spending conditions. The [ErgoScript Compiler](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/sc/src/main/scala/sigmastate/lang/SigmaCompiler.scala#L48) compiles the source code into [ErgoTree](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/sigmastate/Values.scala#L990) byte code, which can be saved in UTXO coins to protect their spending (same as in Bitcoin).
 
-ErgoTree, in turn, is a bytecode language and memory representation that can be deterministically interpreted in the given _blockchain context_.
+ErgoTree, in turn, is a bytecode language and memory representation that can be deterministically interpreted in the given *blockchain context*.
 
 /// admonition | Please note
 ErgoTree defines guarding proposition for a coin as a logic formula which combines predicates over a context and cryptographic statements provable via [Σ-protocols](sigma.md) with AND, OR, k-out-of-n connectives.

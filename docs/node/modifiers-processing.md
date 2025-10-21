@@ -33,7 +33,7 @@ Persistent modifiers are data elements that are stored and persist across sessio
 
 5. **PoPoWProof**: This is a proof of Proof of Work (PoPoW) that provides evidence of the computational work done to add a new block to the blockchain.
 
-In addition to these modifiers, Ergo employs certain parameters that define a specific security regime. 
+In addition to these modifiers, Ergo employs certain parameters that define a specific security regime.
 
 These parameters include:
 
@@ -46,7 +46,6 @@ These parameters include:
 4. **BlocksToKeep**: An integer value specifying the number of the most recent blocks to retain with their transactions. For all other blocks, only the header is kept. If the value is negative, all blocks from genesis are retained. This parameter helps in managing the storage requirements by specifying the number of blocks to keep.
 
 5. **MinimalSuffix**: An integer value representing the minimal suffix size for the PoPoW proof. This could be a pre-defined constant. This parameter helps in managing the size of the PoPoW proof.
-
 
 The system enforces the following condition:
 
@@ -72,7 +71,7 @@ else //Other combinations are possible
 
 ## Modifiers Processing
 
-This operation involves updating the headers chain to the best in the network. The process includes sending ErgoSyncInfo messages to connected peers, receiving responses with INV messages containing ids of blocks better than the current best block, requesting headers for all ids, and reacting based on the received header. 
+This operation involves updating the headers chain to the best in the network. The process includes sending ErgoSyncInfo messages to connected peers, receiving responses with INV messages containing ids of blocks better than the current best block, requesting headers for all ids, and reacting based on the received header.
 
 During bootstrapping, headers are downloaded. If `PoPoW` is true, `GetPoPoWProof` is sent for all connections, and upon receipt, the PoPoWProof is applied to the History. Otherwise, the headers chain is updated to the best in the network.
 
@@ -86,7 +85,6 @@ In regular mode, two infinite loops run in different threads, each executing the
 2. Downloading and updating full blocks as needed.
 
 Transaction processing continues as described in the original text, with the system requesting transaction ids from all headers without transactions, receiving TransactionIdsForHeader, and performing actions based on whether transactions are successful or not.
-
 
 ```java
 def updateHeadersChainToBestInNetwork() = {
@@ -106,13 +104,13 @@ def updateHeadersChainToBestInNetwork() = {
 
 ## Bootstrapping
 
-Bootstrapping is the initial setup process that prepares the node for transaction processing. It involves two main steps: 
+Bootstrapping is the initial setup process that prepares the node for transaction processing. It involves two main steps:
 
 1. **Downloading Headers**: The process depends on the `PoPoWBootstrap` parameter. If *true*, the node sends a `GetPoPoWProof` request to peers. Upon receiving the `PoPoWProof`, it applies it to the History component. If *false*, the node updates the headers chain to the best known chain in the network using the standard synchronization process.
 
-2. **Downloading Initial State**: The system checks the `ADState` and `BlocksToKeep` settings to determine how to initialize the state. 
-    - If `ADState` is *true*, the state is initialized with the state root hash from the header of the block `BlocksToKeep` blocks ago. 
-    - If `BlocksToKeep` is less than 0 (meaning keep all blocks) or greater than the current known header height (`History.headersHeight`), the state is initialized with the genesis state. 
+2. **Downloading Initial State**: The system checks the `ADState` and `BlocksToKeep` settings to determine how to initialize the state.
+    - If `ADState` is *true*, the state is initialized with the state root hash from the header of the block `BlocksToKeep` blocks ago.
+    - If `BlocksToKeep` is less than 0 (meaning keep all blocks) or greater than the current known header height (`History.headersHeight`), the state is initialized with the genesis state.
     - Otherwise (for pruned modes with `ADState = false`), the system requests a historical `UTXOSnapshotManifest` corresponding to the state `BlocksToKeep` blocks back. Upon receiving the manifest, it requests each required `UTXOSnapshotChunk` from peers. Received chunks are applied to the State component until the full state snapshot is reconstructed.
 
 After the initial state is downloaded or initialized, it is updated to match the best known header height. Depending on whether `VerifyTransactions` is enabled, this involves either just updating the state root hash or requesting and processing the necessary block transactions and AD proofs to reach the target height, as described previously.
@@ -132,13 +130,9 @@ If **PoPoW** is *true*:
 
 If PoPoW is false, update the headers chain to the best in the network.
 
-
-
 ### Download initial State to start processing transactions
 
 The system checks for the ADState and BlocksToKeep values to decide how to initialize the state.
-
-
 
 ```java
 if(ADState == true) {
@@ -165,6 +159,7 @@ or "BlocksToKeep + N" blocks back?
   }
 }
 ```
+
 ### Update State to best headers height
 
 Depending on the values of State.bestHeader, History.bestHeader, and VerifyTransactions, the state is updated accordingly.
@@ -203,8 +198,8 @@ Depending on the values of State.bestHeader, History.bestHeader, and VerifyTrans
       GOTO 3
     }
 ```
-### GOTO regular mode.
 
+### GOTO regular mode
 
 ## Regular Mode
 

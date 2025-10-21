@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "markdownlint-cli2": "^0.18.1",
+    "markdownlint-rule-search-replace": "^1.2.0"
+  }
+}

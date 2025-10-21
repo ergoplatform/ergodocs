@@ -5,7 +5,7 @@ Ergo Platform documentation
 
 ## Contributing
 
-Please submit a pull request. 
+Please submit a pull request.
 
 ## Running locally
 
@@ -18,4 +18,3 @@ python -m pip install -r requirements.txt
 ```
 mkdocs serve
 ```
-

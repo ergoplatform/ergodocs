@@ -1,6 +1,6 @@
 # ErgoScript Language Description
 
-> 🔗 From [sigmastate-interpreter](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/LangSpec.md) 
+> 🔗 From [sigmastate-interpreter](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/LangSpec.md)
 
 ### Introduction
 
@@ -35,11 +35,11 @@ OutBox newBox = txB.outBoxBuilder()
 ```
 
 The contract is given as the string literal which contains the block of `val` declarations followed by the logical expression. The expression defines the all possible conditions to spend the box. The contract can also contain _**named
-constants**_ (which cannot be represented as literals in the source code). 
+constants**_ (which cannot be represented as literals in the source code).
 
 In the example `freezeDeadline` and `pkOwner` are named constants. The concrete values of named constants should be given to the compiler (see `compileContract` method)
 
-**The following sections describe ErgoScript and its operations. **
+**The following sections describe ErgoScript and its operations.**
 
 #### ErgoScript language features overview
 
@@ -48,31 +48,31 @@ In the example `freezeDeadline` and `pkOwner` are named constants. The concrete 
 - High-order language with first-class lambdas which are used in collection operations
 - Call-by-value (eager evaluation)
 - Statically typed with local type inference
-- Blocks are expressions 
+- Blocks are expressions
 - Semicolon inference in blocks
 - Type constructors: Pair, Coll, Option
 
 #### Operations and constructs overview
 
 - Binary operations: `>, <, >=, <=, +, -, &&, ||, ==, !=, |, &, *, /, %, ^, ++`
-- Predefined primitives: `blake2b256`, `byteArrayToBigInt`, `proveDlog` etc. 
+- Predefined primitives: `blake2b256`, `byteArrayToBigInt`, `proveDlog` etc.
 - Val declarations: `val h = blake2b256(pubkey)`
 - If-then-else clause: `if (x > 0) 1 else 0`
 - Collection literals: `Coll(1, 2, 3, 4)`
 - Generic high-order collection operations: `map`, `filter`, `fold`, `exists`, `forall`, etc.
 - Accessing fields of any predefined types: `box.value`
 - Method invocation for predefined types: `coll.map({ x => x + 1 })`
-- Function invocations (predefined and user defined): `proveDlog(pubkey)` 
+- Function invocations (predefined and user defined): `proveDlog(pubkey)`
 - User defined function declarations: `def isProven(pk: GroupElement) = proveDlog(pk).isProven`
 - Lambdas and high-order methods: `OUTPUTS.exists { (out: Box) => out.value >= minToRaise }`
 
-#### Data types 
+#### Data types
 
 In ErgoScript, everything is an object in the sense that we can call member functions and properties on any variable.
 Some of the types can have a special internal representation - for example, numbers and booleans can be
 represented as primitive values at runtime - but to the user they look like ordinary classes.
-NOTE: in ErgoScript we use *type*, *class* and *trait* as synonyms, we prefer *type* when talking about primitive values and
-*trait* or *class* when talking about methods.
+NOTE: in ErgoScript we use _type_, _class_ and _trait_ as synonyms, we prefer _type_ when talking about primitive values and
+_trait_ or _class_ when talking about methods.
 
 Type Name        |   Description
 -----------------|------------------------------
@@ -89,7 +89,7 @@ Type Name        |   Description
 `GroupElement`   | elliptic curve points
 `Box`            | a box containing a monetary value (in NanoErgs), tokens and registers along with a guarding proposition
 `Option[T]`      | a container which either have some value of type `T` or none.
-`Coll[T]`        | a collection of arbitrary length with all values of type `T` 
+`Coll[T]`        | a collection of arbitrary length with all values of type `T`
 `(T1,T2)`        | a pair of values where T1, T2 can be different types
 
 The type constructors `Coll`, `(_,_)` can be used to construct complex
@@ -114,16 +114,18 @@ val bool: Boolean = true  // logical literal
 val arr = Coll(1, 2, 3)   // constructs a collection with given items
 val str = "abc"           // string of characters 
 ```
-Note that many types don't have literal syntax and their values are introduced 
+
+Note that many types don't have literal syntax and their values are introduced
 by applying operations, for example `deserialize` function can be used to introduce
 a constant of any type by using Base64 encoded string (See [predefined function](#PredefinedFunctions)).
 
 ### Data Types
+
 <a name="DataTypes"></a>
 
 #### Primitive Types
 
-Below we specify methods of pre-defined types using Scala-like declaration of classes. 
+Below we specify methods of pre-defined types using Scala-like declaration of classes.
 
 Note, the `Boolean` type doesn't have pre-defined methods in addition to the standard operations.
 
@@ -163,7 +165,7 @@ All the predefined numeric types inherit Numeric class and its methods.
 
 They can be thought of as being pre-defined, like the following.
 
-```scala 
+```scala
 class Byte extends Numeric
 class Short extends Numeric
 class Int extends Numeric
@@ -171,11 +173,11 @@ class Long extends Numeric
 class BigInt extends Numeric
 ```
 
-#### Context Data 
+#### Context Data
 
 Every script is executed in a context, which is a collection of data available
 for operations in the script. The context data is available using the `CONTEXT`
-variable which is of pre-defined class `Context` which is shown below. 
+variable which is of pre-defined class `Context` which is shown below.
 
 There are also shortcut variables which are available in every script to
 simplify access to the most commonly used context data.
@@ -183,9 +185,9 @@ simplify access to the most commonly used context data.
 Variable          |  Type               | Shortcut for ...
 ------------------|---------------------|----------------------
 `HEIGHT`          | `Int`               | `CONTEXT.HEIGHT`
-`SELF`            | `Box`               | `CONTEXT.SELF` 
+`SELF`            | `Box`               | `CONTEXT.SELF`
 `INPUTS`          | `Coll[Box]`         | `CONTEXT.INPUTS`  
-`OUTPUTS`         | `Coll[Box]`         | `CONTEXT.OUTPUTS` 
+`OUTPUTS`         | `Coll[Box]`         | `CONTEXT.OUTPUTS`
 
 The following listing shows the methods of pre-defined `Context`, `Header`,
 `PreHeader` types.
@@ -457,6 +459,7 @@ box.R3[Int].getOrElse(d) //access R3 register, check that its value of type Int,
 ```
 
 #### GroupElement
+
 ```scala
 /** Base class for points on elliptic curves. */
 class GroupElement {
@@ -803,6 +806,7 @@ class Coll[A] {
 ```
 
 Each item can be accessed by constant index, for example:
+
 ```scala
 val myOutput = OUTPUTS(0)
 val myInput = INPUTS(0)
@@ -820,17 +824,18 @@ satisfying some predicate (condition)
 
 ```scala
 val ok = OUTPUTS.exists { (box: Box) => box.value > 1000 }
-``` 
+```
 
 ### Predefined global functions
+
 <a name="PredefinedFunctions"></a>
 
-ErgoScript standard library include predefined functions that can be called 
-without prior declaration. 
+ErgoScript standard library include predefined functions that can be called
+without prior declaration.
 
 The following function declarations are automatically imported into any script:
 
-```scala 
+```scala
 /** Returns true if all the elements in collection are true. */
 def allOf(conditions: Coll[Boolean]): Boolean
 

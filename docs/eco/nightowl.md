@@ -9,12 +9,11 @@ tags:
 
 # NightOwl
 
-[Night Owl](https://www.nightowlcasino.io/) is the world's first fully decentralized casino 
+[Night Owl](https://www.nightowlcasino.io/) is the world's first fully decentralized casino
 
-- 🏛️ Stablecoin-pegged bets 
-- 💵 Profit-sharing ⚖️ Full transparency 
+- 🏛️ Stablecoin-pegged bets
+- 💵 Profit-sharing ⚖️ Full transparency
 - 🔬 Open-source 👀
-
 
 - [Website](https://nightowlcasino.io/)
 - [GitHub](https://github.com/nightowlcasino)

@@ -5,8 +5,8 @@ Sigma Propositions (`SigmaProp`) are the core return type of every ErgoScript co
 - `SigmaProp` values represent conditions related to the transaction that must be met to spend a specific box.
 - They are similar to booleans in that they ultimately reduce to either `true` or `false` during verification.
 - `SigmaProp` enables the use of Zero-Knowledge Proofs, a crucial aspect of modern cryptography and a defining privacy feature of Ergo.
-- **All contracts in ErgoScript must return a `SigmaProp` value at the very end.** 
-    - This final `SigmaProp` represents the complete set of conditions required to spend the box protected by the contract. Therefore, all logic within an ErgoScript contract should contribute to the outcome of this final `SigmaProp`.
+- **All contracts in ErgoScript must return a `SigmaProp` value at the very end.**
+  - This final `SigmaProp` represents the complete set of conditions required to spend the box protected by the contract. Therefore, all logic within an ErgoScript contract should contribute to the outcome of this final `SigmaProp`.
 
 `SigmaProp` values can be constructed in several ways, but two common methods are used frequently in ErgoScript contracts.
 
@@ -51,8 +51,6 @@ Much like booleans, you can use logical operations (`&&` for AND, `||` for OR) o
 }
 ```
 
-
-
 You can see in the contract above that using `||` creates two distinct spending paths (conditions under which the box can be spent).
 
 Now that you've seen the basics, let's look at a simple ErgoScript contract example: the pin-lock contract mentioned earlier.
@@ -82,7 +80,5 @@ This contract implicitly assumes the box being spent *is* `INPUTS(0)`. For a cle
 ```
 
 Are these two pin-lock contracts equivalent? That is, under what spending conditions might one contract evaluate to true while the other evaluates to false? (Hint: Consider what `INPUTS(0)` refers to versus what `SELF` refers to).
-
-
 
 > 🔗 From [Deco Education - ErgoScript Developer Course](https://github.com/DeCo-Education/ErgoScript-Developer-Course/blob/main/Class-Documents/Class-1/Materials/Class1.MD)

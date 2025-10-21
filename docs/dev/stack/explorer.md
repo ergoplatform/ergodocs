@@ -18,13 +18,12 @@ There are several public explorer available:
 
 - [uExplorer](https://github.com/pragmaxim/ergo-uexplorer/) is a supplementary, lightweight Ergo explorer with CassandraDB backend :
 
-
 ## Mirrors
 
 Some popular mirrors for the [explorer](explorer.md) and [graphql](graphql.md)
 
 - [api.ergo.aap.cornell.edu](https://api.ergo.aap.cornell.edu/) provides an Explorer API and Web UI for the Ergo blockchain. It also hosts a node at this [address](http://128.253.41.49:9053/).
-    - [api.ergo.aap.cornell.edu (1.0)](https://api.ergo.aap.cornell.edu/api/v0/docs/)
-    - [api.ergo.aap.cornell.edu v1 (1.0)](https://api.ergo.aap.cornell.edu/api/v1/docs/)
-    - [graphql.ergo.aap.cornell.edu](https://graphql.ergo.aap.cornell.edu/)
+  - [api.ergo.aap.cornell.edu (1.0)](https://api.ergo.aap.cornell.edu/api/v0/docs/)
+  - [api.ergo.aap.cornell.edu v1 (1.0)](https://api.ergo.aap.cornell.edu/api/v1/docs/)
+  - [graphql.ergo.aap.cornell.edu](https://graphql.ergo.aap.cornell.edu/)
 - [sigmaexplorer](https://api.sigmaexplorer.org/swagger/index.html): sigmaexplorer hosts a copy of the explorer using a GraphQL backend.

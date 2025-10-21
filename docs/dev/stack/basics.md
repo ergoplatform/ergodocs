@@ -8,7 +8,7 @@ tags:
   - Tutorial
 ---
 
-# Ergo Platform Basic Starter Tutorial 
+# Ergo Platform Basic Starter Tutorial
 
 This tutorial will teach you the very basics of interacting with the ergo blockchain to receive
 and send funds for multiple programming languages. For more in-depth information on the different
@@ -26,18 +26,16 @@ Import the SDK for the build system you are using in your project.
 
 === "Maven"
 
-     
-		<dependency>
-			<groupId>org.ergoplatform</groupId>
-			<artifactId>ergo-appkit_2.12</artifactId>
-			<version>5.0.0</version>
-		</dependency>
+  <dependency>
+   <groupId>org.ergoplatform</groupId>
+   <artifactId>ergo-appkit_2.12</artifactId>
+   <version>5.0.0</version>
+  </dependency>
     
 
 === "SBT"
 
-     
-		tbd
+  tbd
     
 
 === "npm"
@@ -60,17 +58,17 @@ Import the SDK for the build system you are using in your project.
 
 ## Create keys and an address
 
-Ergo Platform uses public key cryptography to ensure that every transaction is secure: every personal wallet has a keypair consisting of a public key and a secret key. The public key is always safe to share — other people need it to verify that you authorized a transaction. It's like an email address. 
+Ergo Platform uses public key cryptography to ensure that every transaction is secure: every personal wallet has a keypair consisting of a public key and a secret key. The public key is always safe to share — other people need it to verify that you authorized a transaction. It's like an email address.
 The secret key, however, is private information that proves you own — and gives you access to — your private wallet. It's like a password, and you should never share it with anyone.
 
-On Ergo, the secret key is usually a 15 words mnemonic seed phrase that is used to derive the internally used binary master key. From this master key, an infinite number of private and public keys can be derived with an index. So for every mnemonic seed phrase, there are existing multiple key pairs and addresses defined by an index. The main address is always at index 0. 
+On Ergo, the secret key is usually a 15 words mnemonic seed phrase that is used to derive the internally used binary master key. From this master key, an infinite number of private and public keys can be derived with an index. So for every mnemonic seed phrase, there are existing multiple key pairs and addresses defined by an index. The main address is always at index 0.
 
 You can create this address from a mnemonic phrase the following way:
 
 === "Java"
 
     ```Java 
-		String ergoAddress = Address.createEip3Address(
+  String ergoAddress = Address.createEip3Address(
           index,
           NetworkType.MAINNET,
           SecretString.create(mnemonic),
@@ -83,7 +81,7 @@ You can create this address from a mnemonic phrase the following way:
 === "Kotlin"
 
     ```java 
-		val ergoAddress = Address.createEip3Address(
+  val ergoAddress = Address.createEip3Address(
           index,
           NetworkType.MAINNET,
           SecretString.create(mnemonic),
@@ -107,7 +105,6 @@ You can create this address from a mnemonic phrase the following way:
 
 === "JavaScript"
 
-     
       tbd
     
 
@@ -130,7 +127,7 @@ Having the string representation of the address for your mnemonic, you can alrea
 
 If you created an address like described above and sent some ERG to it, you can send payments from this address.
 
-Sending payments on Ergo is always done within a transaction. Ergo follows Bitcoin's model: A transaction is a set of input boxes and output boxes. The input boxes are spent within a transaction, and output boxes are created. For a transaction to be valid, it must be signed with 
+Sending payments on Ergo is always done within a transaction. Ergo follows Bitcoin's model: A transaction is a set of input boxes and output boxes. The input boxes are spent within a transaction, and output boxes are created. For a transaction to be valid, it must be signed with
 the private key of the address of the input boxes.
 
 So sending payments needs the following steps to be done:
@@ -203,7 +200,6 @@ Luckily, our SDKs help you by providing high-level methods for this common task.
 
 === "Python"
 
-
     ```py
     from jpype import java
     from ergpy import helper_functions, appkit
@@ -219,14 +215,13 @@ Luckily, our SDKs help you by providing high-level methods for this common task.
     ```
     
 
-
 ## Receiving payments
 
-You don’t actually need to do anything to receive payments: if a payer makes a successful 
+You don’t actually need to do anything to receive payments: if a payer makes a successful
 transaction to send assets to you, those assets will automatically be added to your wallet.
 
 However, you may want to keep an eye out for incoming payments. For this, you can make use of
-our [Ergo Explorer API](https://api.ergoplatform.com/api/v1/docs/). The API's interfaces are 
+our [Ergo Explorer API](https://api.ergoplatform.com/api/v1/docs/). The API's interfaces are
 shipping with some of our SDKs.
 
 === "Java"
@@ -244,12 +239,10 @@ shipping with some of our SDKs.
 
 === "JavaScript"
 
-     
       tbd    
     
 
 === "Python"
 
-     
       tbd
     

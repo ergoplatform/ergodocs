@@ -21,7 +21,6 @@ This fee is calculated based on the serialized size of the boxes being created, 
 To clarify, the Dust-prevention Fee is not an actual fee that users must pay to others (e.g., miners). Instead, it serves as a security measure for the box. If users avoid creating new boxes, the Dust-prevention Fee can be reused by transferring the same amount into a newly created single box. If the new box remains under your control, you can be assured that there will be no loss of funds.
 ///
 
-
 ## Miner Transaction Prioritization
 
 Miners prioritize transactions based on either the fee per byte or the validation cost unit. These criteria are adjustable via a [voting mechanism among miners](governance.md). Nodes can sort transactions based on these metrics, settable in the [node configuration](conf-node.md#memory-pool-configuration).
@@ -30,7 +29,6 @@ Miners prioritize transactions based on either the fee per byte or the validatio
 # Mempool transaction sorting scheme ("random", "bySize", or "byExecutionCost")
 mempoolSorting = "random"
 ```
-
 
 When calculating the fee per byte or the fee per validation cost unit, miners initially filter out the fee boxes by checking the `propositionBytes` in the R1 register using the **feeProposition** method. Subsequently, they sum up the ERG value of these boxes. This sum is then divided by either the transaction's size or the total validation cost to yield a result. This final result serves as the basis for sorting transactions in the mempool.
 
@@ -70,7 +68,6 @@ And the method to extract the transaction fee method is as follows:
       .sum
   }
 ```
-
 
 /// details | Why is it like this?
     {type: question, open: true}

@@ -1,6 +1,6 @@
 # Composing Transactions
 
-Each Ergo transaction represents an **atomic state transition operation**. This operation *destroys* an existing [box](box.md) from the state and generates new ones. 
+Each Ergo transaction represents an **atomic state transition operation**. This operation *destroys* an existing [box](box.md) from the state and generates new ones.
 
 ## Anatomy of a Transaction
 
@@ -26,6 +26,6 @@ Data inputs enable multiple transactions within a block or slot to read the data
 ## Tools for Composing Transactions
 
 - [Transaction builder](https://thierrym1212.github.io/txbuilder/): This application enables you to manipulate Ergo JSON transactions with a UI and to sign them with a wallet or to prepare the JSON for the Swagger API. It can also load the JSON of an unsigned transaction for editing. [GitHub](https://github.com/ThierryM1212/transaction-builder/) | [Video](https://youtu.be/0VhfY7osT2k)
-- Refer to this [basic tutorial for sending a transaction](basics.md#sending-payments) for an introduction. 
+- Refer to this [basic tutorial for sending a transaction](basics.md#sending-payments) for an introduction.
 
 Ergo also supports ['*Chained transactions*'](chained.md) (spending outputs of off-chain transactions).

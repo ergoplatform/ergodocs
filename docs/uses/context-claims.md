@@ -1,7 +1,6 @@
 
 # Efficient Global Context Claims on Ergo Platform Blockchain
 
-
 Ergo offers a unique approach to smart contract-enabled blockchains, providing efficient global context claims through the concept of data inputs. This documentation aims to explain the benefits and implications of global context claims and how they contribute to the trustless and decentralized nature of the Ergo blockchain.
 
 ## Understanding Global Context Claims

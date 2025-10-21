@@ -45,5 +45,4 @@ Ergo has a lively and diverse community made up of various sub-ecosystems. Hereâ
 - **Create raffles**: Organize community raffles to raise funds for marketing initiatives. Engage the community by offering exciting prizes and using the proceeds to support various marketing efforts.
 - **Sigmanauts treasury**: The Sigmanauts have a treasury that is available for community suggestions on how to best spend it. If you have an idea for a marketing campaign or initiative, propose it to the Sigmanauts for potential funding.
 
-
 By actively participating and demonstrating your commitment, you can help drive Ergo's growth and increase its visibility in the blockchain space. Your contributions, big or small, make a significant impact in building a stronger and more vibrant community.

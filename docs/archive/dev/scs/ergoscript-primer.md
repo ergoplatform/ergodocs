@@ -13,6 +13,7 @@ ErgoScript is a powerful, developer-friendly programming language designed speci
 ## Key Characteristics
 
 ### 1. UTXO-Based Model
+
 Unlike [account-based blockchains](accountveutxo.md), ErgoScript uses the [UTXO (Unspent Transaction Output) model](eutxo.md). This means:
 
 - Contracts define conditions for spending coins
@@ -20,6 +21,7 @@ Unlike [account-based blockchains](accountveutxo.md), ErgoScript uses the [UTXO 
 - Improved [scalability](scaling.md) and parallel processing
 
 ### 2. Declarative Programming
+
 ErgoScript is declarative, which means you specify **what** should happen, not **how** it happens. For example:
 
 ```scala
@@ -30,6 +32,7 @@ if (HEIGHT > 100000) signerPubKey else fail()
 This contract says: "Allow spending only if the current [blockchain height](block-header.md) is greater than 100,000, otherwise fail."
 
 ### 3. Sigma Protocols
+
 ErgoScript leverages advanced cryptographic techniques called [Sigma Protocols](sigma.md), enabling:
 
 - Complex signature schemes
@@ -40,6 +43,7 @@ ErgoScript leverages advanced cryptographic techniques called [Sigma Protocols](
 ## Getting Started
 
 ### Basic Syntax
+
 ErgoScript is a subset of Scala, so if you're familiar with functional programming, you'll feel right at home. Here's a simple example:
 
 ```scala
@@ -52,6 +56,7 @@ sigmaProp(pubKey1 && pubKey2 || pubKey1 && pubKey3 || pubKey2 && pubKey3)
 ```
 
 ### Development Tools
+
 - [ErgoScript P2S Playground](https://wallet.plutomonkey.com/p2s/): Experiment and generate [Ergo addresses](address.md)
 - [Ergo AppKit](appkit.md): Development framework for building Ergo applications
 
@@ -69,14 +74,17 @@ sigmaProp(pubKey1 && pubKey2 || pubKey1 && pubKey3 || pubKey2 && pubKey3)
 ## Learning Paths
 
 ### Beginner
+
 - [ErgoScript Overview](ergoscript.md)
 - [UTXO Model Explained](eutxo.md)
 
 ### Intermediate
+
 - [Sigma Protocols](sigma.md)
 - [Advanced Contract Patterns](contracts.md)
 
 ### Advanced
+
 - [ErgoTree Compilation](ergoscriptvergotree.md)
 - [Cryptographic Protocols](crypto.md)
 

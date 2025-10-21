@@ -86,7 +86,7 @@ Collect links to working off-chain code, SDK snippets, and UI implementations th
 
 ## See also
 
-- Library index: [contracts-library.md](contracts-library.md)
+- [Library index](contracts-library.md)
 - MCP examples: [contracts-mcp-examples.md](contracts-mcp-examples.md)
 
 ## Notes

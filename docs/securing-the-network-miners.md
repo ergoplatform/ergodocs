@@ -11,18 +11,18 @@ Ergo is secured by Proof-of-Work. If you want to help secure the network or mine
 - Pool List: [Pools](pools.md)
 - Solo Mining:
 
-    - [Solo Overview](solo.md)
-    - [Solo Node Configuration](solo-node.md)
-    - [Solo Mining FAQ](solo-faq.md)
+  - [Solo Overview](solo.md)
+  - [Solo Node Configuration](solo-node.md)
+  - [Solo Mining FAQ](solo-faq.md)
 - Rewards & Economics:
 
-    - [Emission Schedule](emission.md)
-    - [ASIC Resistance](asic.md)
-    - [Revenue Estimation](revenue.md)
+  - [Emission Schedule](emission.md)
+  - [ASIC Resistance](asic.md)
+  - [Revenue Estimation](revenue.md)
 - Governance & Rights:
 
-    - [Mining Governance](governance.md)
-    - [Miners' Rights](miners-rights.md)
+  - [Mining Governance](governance.md)
+  - [Miners' Rights](miners-rights.md)
 
 ## Choose Your Path
 
@@ -44,5 +44,6 @@ Ergo is secured by Proof-of-Work. If you want to help secure the network or mine
   Pools provide more consistent payouts. Solo mining is viable only with significant hashrate.
 
 Related:
+
 - Learn the algorithm: [Autolykos](autolykos.md)
 - Run a node (for mining or validation): [Node Install Guides](install.md)

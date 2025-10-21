@@ -10,7 +10,7 @@
 ## Canonical Code & Tests
 
 - Upstream  
-  - PR: https://github.com/ergoplatform/sigmastate-interpreter/pull/1083 — Adds a daily withdrawal limit contract example with tests.
+  - PR: <https://github.com/ergoplatform/sigmastate-interpreter/pull/1083> — Adds a daily withdrawal limit contract example with tests.
 - Commit(s)  
   - Prefer pinned SHAs when available; add here once merged and stable.
 

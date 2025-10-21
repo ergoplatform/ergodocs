@@ -24,46 +24,38 @@ Lending pools are a fundamental component of DeFi, allowing users to lend out th
 4. **Smart Contracts Manage the Pool**: All transactions, including deposits, withdrawals, and interest payments, are governed by smart contracts, ensuring transparency and security.
 
 ## Best Practices for Lending Pool Participation
+
 - **Understand the Terms**: Before depositing, make sure you fully understand the pool's terms, including how interest is calculated, payment frequency, and any applicable fees.
 - **Diversify**: Don't put all your crypto in one pool. Spread your investments across different assets and platforms to reduce risk.
 - **Stay Informed**: Keep up with developments in the Ergo ecosystem and the broader crypto market. Changes can affect interest rates and lending pool dynamics.
 
 > Each pool has their own settings, currently the pools are using a 30% liquidation penalty. So for example, if you borrow $100 of assets and your collateral drops below the 125% ratio (i.e. has a value < $125) then the collateral is liquidated. 100 + (30% * 25) of the collateral is directed to the pool = $107.50, and the borrower receives $17.50 of the liquidated assets.
 
-
-
-
 ## Duckpools: A Prime Example
 
 [Duckpools](https://www.youtube.com/@duckpools_io) is one of the leading platforms for lending pools within the Ergo ecosystem. It offers a straightforward way for users to earn interest on their ERG and other supported cryptocurrencies. Here's how to get started:
 
-1. **Create a Wallet** & **Acquire ERG**: 
+1. **Create a Wallet** & **Acquire ERG**:
 2. **Deposit into Duckpools**: Follow the instructions on Duckpools to deposit your ERG into one of the lending pools. Ensure you understand the terms, including the interest rate and any fees.
-	- [Step-by-Step Guide: How to Lend on duckpools.io](https://www.youtube.com/watch?v=xnzZEpcdCuA)
-	- [Step-by-Step Guide: How to Borrow on duckpools.io](https://www.youtube.com/watch?v=dN4VqQJAyuk)
+ - [Step-by-Step Guide: How to Lend on duckpools.io](https://www.youtube.com/watch?v=xnzZEpcdCuA)
+ - [Step-by-Step Guide: How to Borrow on duckpools.io](https://www.youtube.com/watch?v=dN4VqQJAyuk)
 3. **Earn Interest**: Once your ERG is in the pool, you'll start earning interest. The rate can vary based on demand for loans and the amount of ERG in the pool.
-	- Some early analytics pulled up by Luivatra shows a [8% return in ~5 months](https://twitter.com/Luivatra/status/1750497386856665115) on SigUSD deposited in duckpools. 
+ - Some early analytics pulled up by Luivatra shows a [8% return in ~5 months](https://twitter.com/Luivatra/status/1750497386856665115) on SigUSD deposited in duckpools.
     - [Interest Arbitrage Calculator](https://docs.google.com/spreadsheets/d/1SLvkZITgrqHnFthN0kBsw_BOvYzjk_xMwgEltcJ0waI/edit#gid=403724413)
     - [Long/Short Calculator](https://docs.google.com/spreadsheets/d/1SLvkZITgrqHnFthN0kBsw_BOvYzjk_xMwgEltcJ0waI/edit#gid=403724413)
 
-
-
 ### Cross-chain opportunities
-
 
 - Bridge your $ADA via Rosen Bridge and earn competitive yields
 - Lend ERG and use it as collateral to borrow $ADA now on [app.liqwid.finance](https://app.liqwid.finance)
-
-
 
 ### Risks and Considerations
 
 While lending pools on Ergo offer an attractive way to earn passive income, there are risks to be aware of:
 
-- **Smart Contract Vulnerabilities**: [Know Your Assumptions!](kya.md) Though rare, smart contracts can contain vulnerabilities that could be exploited, leading to losses. 
+- **Smart Contract Vulnerabilities**: [Know Your Assumptions!](kya.md) Though rare, smart contracts can contain vulnerabilities that could be exploited, leading to losses.
 - **Market Volatility**: The value of your deposited cryptocurrency can fluctuate. If the market drops significantly, the real-world value of your interest earnings might be lower than expected.
 - **Liquidity Risks**: In periods of high demand, you might face delays when withdrawing your assets from the pool.
-
 
 ## SigmaFi on Ergo: Streamlining Peer-to-Peer Lending
 
@@ -75,9 +67,7 @@ At its core, SigmaFi allows any Ergo wallet holder to initiate loan requests or 
 
 The process is streamlined through the creation of smart contracts for each loan, detailing terms and securely holding collateral until the loan is repaid or the term expires. This setup not only ensures the safety of the funds but also the clarity and enforceability of the loan terms.
 
-
 > [Join qx() on YouTube](https://www.youtube.com/watch?v=rvBrHq6lER8&t=13s) as he shows you step by step how to move from Coinbase - Kucoin - Spectrum Finance - Sigmafi!
-
 
 ### Practical Uses of SigmaFi
 
@@ -88,8 +78,6 @@ The process is streamlined through the creation of smart contracts for each loan
 ### Engaging with SigmaFi: How to Start
 
 > The [SigmaFi Quick Start Guide](https://sigmafi.gitbook.io/sigmafi-docs/) provides concise steps for wallet setup, loan creation, and fulfillment, facilitating a swift initiation into the platform.
-
-
 
 1. **Explore SigmaFi**: Visit [SigmaFi](https://sigmafi.app/) to review available loans and their terms.
 2. **Connect Your Wallet**: Use an Ergo-compatible wallet to interact with the SigmaFi platform.

@@ -54,20 +54,18 @@ A [Box](box.md) is essentially a "smart UTXO" - it serves the same role as a UTX
 * **Immutable State**: Each box represents an atomic, immutable state unit that cannot be modified after creation. *(Lifecycle details might be added later or linked if a dedicated page exists)*.
 
 * **Typed Registers**: Boxes contain 10 [registers](registers.md) (R0-R9) with specific purposes and rich computational potential:
-    * R0: Monetary Value (in nanoERGs)
-    * R1: Protection Script ([Smart Contract](ergoscript.md))
-    * R2: Assets/[Tokens](eip4.md)
-    * R3: Creation Details
-    * R4-R9: Flexible, Typed Custom Data Storage
-        - Supports multiple data types: `Int`, `Long`, `BigInt`, `GroupElement`, `Coll[Byte]`
-        - Can store complex structures and collections
-        - Densely packed with type-safe access
+  * R0: Monetary Value (in nanoERGs)
+  * R1: Protection Script ([Smart Contract](ergoscript.md))
+  * R2: Assets/[Tokens](eip4.md)
+  * R3: Creation Details
+  * R4-R9: Flexible, Typed Custom Data Storage
+    * Supports multiple data types: `Int`, `Long`, `BigInt`, `GroupElement`, `Coll[Byte]`
+    * Can store complex structures and collections
+    * Densely packed with type-safe access
 
 * **Programmable Spending Conditions**: Each box specifies precise conditions under which it can be spent, enabling complex logic through [ErgoScript](ergoscript.md). See [Box Modeling](box_modeling.md) and [Box Overview](box.md) for detailed exploration.
 
 By transforming UTXOs from simple value trackers to programmable state containers, Ergo enables more expressive and flexible blockchain interactions while maintaining cryptographic integrity and computational efficiency.
-
-
 
 ---
 
@@ -168,10 +166,10 @@ Ergo’s [cryptographic](crypto.md) design ensures robust security, privacy, and
 
 Ergo employs a robust, stateless transaction validation approach:
 
-- **Transaction Construction & Signing**: See [Transaction Composition](composing.md), [Transaction Format](format.md), and [Signing](signing.md).
-- **On-Chain Verification**: [Transaction Validation](validation.md) and [Merkle Proofs](tx-merkle.md).
-- **Script Validation**: Detailed in [ErgoTree Script Validation](script-validation.md) and the [ErgoScript Language Specification](lang-spec.md).
-- **Execution Environment**: Access blockchain state via [Context Variables](blockchain-context.md), ensure deterministic [evaluation](evaluation.md), and apply [cost constraints]](jitc.md).
+* **Transaction Construction & Signing**: See [Transaction Composition](composing.md), [Transaction Format](format.md), and [Signing](signing.md).
+* **On-Chain Verification**: [Transaction Validation](validation.md) and [Merkle Proofs](tx-merkle.md).
+* **Script Validation**: Detailed in [ErgoTree Script Validation](script-validation.md) and the [ErgoScript Language Specification](lang-spec.md).
+* **Execution Environment**: Access blockchain state via [Context Variables](blockchain-context.md), ensure deterministic [evaluation](evaluation.md), and apply [cost constraints]](jitc.md).
 
 ### 9.2 Consensus Algorithm & Storage Rent
 
@@ -185,19 +183,15 @@ Ergo employs a robust, stateless transaction validation approach:
 * [General Data Structures](data-structures.md)
 * [Proof of Proof-of-Work (PoPow)](structures/popow.md): Consensus mechanism enhancement for light clients, related to [NIPoPoWs](nipopows.md).
 
-
 ### 10.1 Authenticated Data Structures
 
 * [Merkle Trees](merkle-tree-structures.md) for efficient state commitment.
-    * [Merkle Batch Proof](structures/merkle/merkle-batch-proof.md)
-    * [Merkle Extension](structures/merkle/merkle-extension.md)
-    * [Merkle Light Proof](structures/merkle/merkle-light-proof.md)
+  * [Merkle Batch Proof](structures/merkle/merkle-batch-proof.md)
+  * [Merkle Extension](structures/merkle/merkle-extension.md)
+  * [Merkle Light Proof](structures/merkle/merkle-light-proof.md)
 * [AVL+ Trees](avl.md) for authenticated key-value storage.
 * [Interlink Vectors](structures/interlink-vectors.md): Lightweight blockchain verification.
 * [AD Proofs](block-adproofs.md): Supporting stateless clients.
-
-
-
 
 ### 10.2 Scalability and Efficiency
 

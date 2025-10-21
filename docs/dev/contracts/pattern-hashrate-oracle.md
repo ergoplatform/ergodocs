@@ -14,7 +14,7 @@ title: Trustless Hashrate Oracle (Hashrate Coin)
 ## Canonical Code & Tests
 
 - Upstream  
-  - PR: https://github.com/ergoplatform/sigmastate-interpreter/pull/1085 — Trustless Hashrate Oracle (Hashrate Coin) pattern and tests (work in progress).
+  - PR: <https://github.com/ergoplatform/sigmastate-interpreter/pull/1085> — Trustless Hashrate Oracle (Hashrate Coin) pattern and tests (work in progress).
 - Commit(s)  
   - Add pinned SHAs once merged and stabilized.
 
@@ -66,8 +66,8 @@ title: Trustless Hashrate Oracle (Hashrate Coin)
 ## See also
 
 - Category: [contracts-oracles.md](contracts-oracles.md)  
-- Library index: [contracts-library.md](contracts-library.md)  
-- Additional contracts index: [contracts.md](contracts.md)
+- [Library index](contracts-library.md)
+- [Additional contracts index](contracts.md)
 
 ## Contributor Checklist
 

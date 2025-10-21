@@ -33,11 +33,11 @@ ChainCash provides a modern implementation of historical free banking systems, w
 /// details | Watch the presentations
      {type: info, open: false}
 [ChainCash | Ergo Summit - Cypherpunk Finance](https://www.youtube.com/watch?v=NxIlIpO6ZVI)
-[ChainCash - part II - Alex Chepurnoy ](https://www.youtube.com/watch?v=fk8ZFvNFDYc)
+[ChainCash - part II - Alex Chepurnoy](https://www.youtube.com/watch?v=fk8ZFvNFDYc)
 ///
 
 /// details | Join the ChainCash Experiment! Calling All Monetary Hackers
-     {type: warning, open: false} 
+     {type: warning, open: false}
 
 ChainCash is now ready for real-world experimentation, and we invite monetary hackers and developers to dive into this groundbreaking system. With the recent success of the first ChainCash transactions via the server API and ongoing developments, including the testing of new note contract extensions, there's a unique opportunity for innovators to test, tweak, and expand the functionality of ChainCash.
 
@@ -53,18 +53,23 @@ These transactions mark the beginning of ChainCash's operational phase, and now 
 
 To start experimenting:
 
-1. **Set Up the ChainCash Server**: 
+1. **Set Up the ChainCash Server**:
 
    - Clone the ChainCash server repository from GitHub:
+
       ```bash
       git clone https://github.com/ChainCashLabs/chaincash-rs.git
       ```
+
    - Navigate to the project directory and build the server using Cargo, the Rust package manager:
+
       ```bash
       cd chaincash-rs
       cargo build --release
       ```
+
    - Start the server with:
+
       ```bash
       ./target/release/chaincash-server
       ```
@@ -108,7 +113,7 @@ ChainCash offers several advantages over traditional and cryptocurrency-based sy
 ### Real-World Applications
 
 /// details | Local Economies
-     {type: info, open: false} 
+     {type: info, open: false}
 
 - **Community Currencies**: Local communities can create their own currencies backed by collective assets, promoting local trade.
 - **SME Support**: Small and medium-sized enterprises can use ChainCash for flexible financing and trade.
@@ -118,7 +123,7 @@ ChainCash offers several advantages over traditional and cryptocurrency-based sy
 ///
 
 /// details | International Trade
-     {type: info, open: false} 
+     {type: info, open: false}
 
 - **Cross-Border Payments**: ChainCash enables efficient international transactions without reliance on traditional banking systems.
 - **Trade Settlements**: Businesses can use ChainCash for quick, secure settlement of trade invoices.
@@ -128,7 +133,7 @@ ChainCash offers several advantages over traditional and cryptocurrency-based sy
 ///
 
 /// details | Financial Inclusion
-     {type: info, open: false} 
+     {type: info, open: false}
 
 - **Banking for the Unbanked**: Individuals without access to traditional banking can participate in the financial system through ChainCash.
 - **Peer-to-Peer Lending**: ChainCash supports microfinance and peer lending, providing secure platforms for fund transfers and credit assessments.
@@ -138,7 +143,7 @@ ChainCash offers several advantages over traditional and cryptocurrency-based sy
 ///
 
 /// details | Supply Chains
-     {type: info, open: false} 
+     {type: info, open: false}
 
 - **Streamlined Payments**: Suppliers, manufacturers, and retailers use ChainCash for timely payments, reducing delays and disputes.
 - **Asset Tracking**: The blockchain records help in tracking goods and verifying transactions throughout the supply chain.
@@ -150,7 +155,7 @@ ChainCash offers several advantages over traditional and cryptocurrency-based sy
 ### Practical Examples
 
 /// details | International Trade: A Gold-Backed Currency in Ghana
-     {type: info, open: false} 
+     {type: info, open: false}
 
 **Scenario:**  
 
@@ -169,7 +174,7 @@ This use case demonstrates how ChainCash can facilitate international trade by c
 ///
 
 /// details | Decentralized Content Creation Platform
-     {type: info, open: false} 
+     {type: info, open: false}
 
 **Scenario:**  
 
@@ -189,7 +194,7 @@ This platform empowers creators to directly monetize their work while building a
 ///
 
 /// details | Crowdfunding an Indie Game with ChainCash
-     {type: info, open: false} 
+     {type: info, open: false}
 
 **Scenario:**
 A small indie game developer is building a much-anticipated game. They want to fund the development directly through their fanbase, avoiding traditional crowdfunding platforms that take significant fees and impose strict rules.
@@ -208,7 +213,7 @@ This approach allows the indie game developer to raise funds directly from their
 ///
 
 /// details | ChainCash-Powered Exclusive Experiences at a Tech/Cultural Festival
-     {type: info, open: false} 
+     {type: info, open: false}
 
 **Scenario:**  
 At a major international tech and cultural festival, organizers want to introduce a unique, crypto-driven experience. To create buzz and offer something exclusive to tech-savvy attendees, they partner with ChainCash to create a decentralized, pop-up experience that blends cutting-edge technology with exclusive festival perks.
@@ -258,7 +263,6 @@ At a major international tech and cultural festival, organizers want to introduc
       - This setup provides a real-world use case for blockchain technology that is both accessible and innovative. It introduces attendees to crypto in a way that is fun, tangible, and directly tied to an unforgettable experience.
 
 ///
-
 
 ## Security and Trust in ChainCash
 
@@ -349,15 +353,15 @@ This process is automated and managed by the smart contracts detailed in the [Ch
 
 **1. How does ChainCash ensure the value of its currency remains stable?**
 
-  - Stability is achieved through collective backing by multiple agents' reserves and trust. The money supply is elastic, adjusting to economic demand.
+- Stability is achieved through collective backing by multiple agents' reserves and trust. The money supply is elastic, adjusting to economic demand.
 
 **2. Can anyone participate in the ChainCash network?**
 
-  - Yes, ChainCash is designed to be inclusive, allowing anyone to participate by creating reserves, issuing, accepting, and redeeming notes.
+- Yes, ChainCash is designed to be inclusive, allowing anyone to participate by creating reserves, issuing, accepting, and redeeming notes.
 
 **3. What happens if an agent defaults?**
 
-  - If an agent who issued or signed a ChainCash note defaults (i.e., they are unable to fulfill their obligation to back the note), the note can still be redeemed against the reserves of any other previous signer. This means that the responsibility to redeem the note falls on those who have previously backed it by signing, not on the current holder. Simply accepting and using a ChainCash note does not put your reserves at risk unless you have issued or explicitly signed the note to provide backing.
+- If an agent who issued or signed a ChainCash note defaults (i.e., they are unable to fulfill their obligation to back the note), the note can still be redeemed against the reserves of any other previous signer. This means that the responsibility to redeem the note falls on those who have previously backed it by signing, not on the current holder. Simply accepting and using a ChainCash note does not put your reserves at risk unless you have issued or explicitly signed the note to provide backing.
 
 **4. How are disputes handled in ChainCash?**
 
@@ -369,7 +373,7 @@ This process is automated and managed by the smart contracts detailed in the [Ch
 
 **5. Is ChainCash compatible with existing financial systems?**
 
-  - Yes, ChainCash is designed to be flexible and interoperable, making it easy to integrate with existing financial systems and services.
+- Yes, ChainCash is designed to be flexible and interoperable, making it easy to integrate with existing financial systems and services.
 
 ## References
 

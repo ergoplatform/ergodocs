@@ -11,24 +11,25 @@ tags:
 * Status: Proposed
 * Created: 18-August-2021
 * License: CC0
-* Forking: not needed 
+* Forking: not needed
 
 ## Contents
-- [EIP-0019 Cold Wallet: an interaction protocol between Hot and Cold mobile wallets](#eip-0019-cold-wallet-an-interaction-protocol-between-hot-and-cold-mobile-wallets)
-  - [Contents](#contents)
-  - [Description](#description)
-  - [Background And Motivation](#background-and-motivation)
-  - [Cold Signing Problem](#cold-signing-problem)
-  - [Simplified Signing using ReducedTransaction](#simplified-signing-using-reducedtransaction)
-  - [Transaction Interchange](#transaction-interchange)
-    - [ColdSigningRequest](#coldsigningrequest)
-    - [ColdSigningResponse:](#coldsigningresponse)
-    - [Interchange format](#interchange-format)
-  - [Reference Implementation of Hot Wallet](#reference-implementation-of-hot-wallet)
-  - [Reference Implementation of Cold Wallet](#reference-implementation-of-cold-wallet)
-  - [Benefits](#benefits)
+* [EIP-0019 Cold Wallet: an interaction protocol between Hot and Cold mobile wallets](#eip-0019-cold-wallet-an-interaction-protocol-between-hot-and-cold-mobile-wallets)
+  * [Contents](#contents)
+  * [Description](#description)
+  * [Background And Motivation](#background-and-motivation)
+  * [Cold Signing Problem](#cold-signing-problem)
+  * [Simplified Signing using ReducedTransaction](#simplified-signing-using-reducedtransaction)
+  * [Transaction Interchange](#transaction-interchange)
+    * [ColdSigningRequest](#coldsigningrequest)
+    * [ColdSigningResponse:](#coldsigningresponse)
+    * [Interchange format](#interchange-format)
+  * [Reference Implementation of Hot Wallet](#reference-implementation-of-hot-wallet)
+  * [Reference Implementation of Cold Wallet](#reference-implementation-of-cold-wallet)
+  * [Benefits](#benefits)
 
-## Description 
+## Description
+
 This EIP defines a standard for cross-device interaction between "Hot" (online)
 and "Cold" (offline) wallets for signing Ergo transactions.
 
@@ -54,13 +55,13 @@ factory setup or a Raspberry Pi with a fresh Raspbian setup and only Cold Wallet
 As long as the device never connects to the internet, it is guaranteed that no secrets left the device.
 
 Interaction with the Cold Wallet device can be done via QR codes (in case of mobile devices)
-or by transferring files (in case of Raspberry Pi). For simplicity, only QR code is mentioned in the 
+or by transferring files (in case of Raspberry Pi). For simplicity, only QR code is mentioned in the
 following text. This does not mean any restriction of the transportation method.
 
-- A user creates a transaction in the Hot Wallet application and then presses a "Sign With Cold Wallet" button
-- The Hot Wallet application shows a QR code with serialized transaction bytes on the screen
-- User scans the QR code using the Cold Wallet device, signs the transaction after which QR code of the signed transaction is displayed.
-- Then user scans the QR code of the signed transaction and sends it to blockchain.
+* A user creates a transaction in the Hot Wallet application and then presses a "Sign With Cold Wallet" button
+* The Hot Wallet application shows a QR code with serialized transaction bytes on the screen
+* User scans the QR code using the Cold Wallet device, signs the transaction after which QR code of the signed transaction is displayed.
+* Then user scans the QR code of the signed transaction and sends it to blockchain.
 
 The design of Ergo contracts allows for a simple and universal implementation
 which we describe in [Reference Implementation](#reference-implementation-of-hot-wallet)
@@ -68,10 +69,10 @@ section.
 
 In the following sections we:
 
-- describe the main problem we need to solve; 
-- describe a solution;  
-- specify a protocol with two roles: HotWallet and ColdWallet which must be implemented by complying Wallet applications and 
-- describe a reference implementation of both Hot and Cold roles in [Ergo Wallet for Android](https://github.com/MrStahlfelge/ergo-wallet-android).
+* describe the main problem we need to solve;
+* describe a solution;  
+* specify a protocol with two roles: HotWallet and ColdWallet which must be implemented by complying Wallet applications and
+* describe a reference implementation of both Hot and Cold roles in [Ergo Wallet for Android](https://github.com/MrStahlfelge/ergo-wallet-android).
 
 ## Cold Signing Problem
 
@@ -95,7 +96,7 @@ keys, which are stored on the Cold Wallet device, and so the Prover must run on
 the Cold Wallet device.
 
 And finally, which is the problem, we cannot transfer unsigned transaction along
-with all the contexts for each input to the Cold Wallet via QR code. 
+with all the contexts for each input to the Cold Wallet via QR code.
 
 QR codes have limit of 4K bytes on the maximum size of serialized data. Most of
 the transactions with required Contexts will exceed this limit.
@@ -122,9 +123,10 @@ UnsignedInput:
 ```
 
 ReducedInputData:
-  - reductionResult: ReductionResult 
+
+* reductionResult: ReductionResult
 Thus, the `ReducedTransaction` instance contains unsigned transaction augmented with
-one `ReductionResult` for each `UnsignedInput`. 
+one `ReductionResult` for each `UnsignedInput`.
 
 ```
 ReductionResult:
@@ -187,16 +189,21 @@ and Cold wallets via QR codes. Hot Wallet passes data to the Cold Wallet using
 ColdSigningRequest data format and Cold Wallet replies back with ColdSigningResponse.
 
 ### ColdSigningRequest
+
 Json format, holding
+
 * reducedTx (mandatory): Base64-encoded `ReducedTransaction` as defined above
 * sender (optional): P2PK address sending the transaction, can be used by cold wallets to determine which secret to use for signing the transaction
 * inputs (mandatory): List of base64-encoded serialized input boxes, can be used by cold wallets to show the user which boxes are burnt
 
-### ColdSigningResponse:
+### ColdSigningResponse
+
 Json format, holding
+
 * signedTx (mandatory): Base64-encoded `SignedTransaction`
 
 ### Interchange format
+
 As QR codes are length-limited and it could be needed to transfer the data in chunks, it is needed to wrap the actual data sent by a small layer containing information about number of chunk pages and page index of a chunk. This is done by wrapping it in another JSON container with three properties:
 
 * The actual chunk data, named CSR for ColdSigningRequest or CSTX for ColdSigningResponse
@@ -212,7 +219,6 @@ The QR code for the first chunk of a ColdSigningResponse with 3 pages total look
 
      {"CSTX":"{\"signedTx\":\"... (actual data, no valid JSON on its own)","n":3,"p":1}
 
-
 In addition to using the above formats the following requirements are imposed on
 Hot Wallet and Cold Wallets:
 
@@ -224,11 +230,13 @@ the corresponding ColdSigningResponse.
 show transaction details on the screen and allow user to either sign or reject.
 If signed, the QR code of ColdSigningResponse should be shown.
 
-## Reference Implementation of Hot Wallet 
-* https://github.com/ergoplatform/ergo-wallet-android
+## Reference Implementation of Hot Wallet
+
+* <https://github.com/ergoplatform/ergo-wallet-android>
 
 ## Reference Implementation of Cold Wallet
-* https://github.com/ergoplatform/ergo-wallet-android
+
+* <https://github.com/ergoplatform/ergo-wallet-android>
 
 A special `ColdErgoClient` instance can be created to perform signing
 operations. `ColdErgoClient` don't have connections to Ergo nodes and explorer,
@@ -241,7 +249,7 @@ implementation of Cold Wallet application based on Appkit.
 ## Benefits
 
 Any wallet can become compatible with this EIP by implementing HotWallet
-role in addition to basic wallet features. 
+role in addition to basic wallet features.
 Any Hot wallet implementation can interact with any Cold wallet implementation.
-Users have an alternative to specialized hardware wallets and can gain more security 
+Users have an alternative to specialized hardware wallets and can gain more security
 for their funds stored on the Ergo Blockchain.

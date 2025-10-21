@@ -55,6 +55,7 @@ While Ethereum's Turing-complete language offers theoretical flexibility, it has
   (HEIGHT >= 100000 && bobPubKey)
 }
 ```
+
 *(`HEIGHT` is a context variable representing the current [block height](block-header.md). `alicePubKey` and `bobPubKey` represent proof of knowledge of their respective secret keys, typically via a [signature check](signing.md)).*
 
 ///
@@ -77,82 +78,85 @@ ErgoScript is the high-level, developer-friendly language. It gets compiled into
 ///
 ////
 
-
 ## Experimenting & Tooling
 
 While ErgoScript aims for simplicity and security, debugging complex contracts can still be challenging. Developers often rely on manual inspection and testing using the tools below. Tools are emerging to improve this process:
 
 **Core Interpreters & Playgrounds:**
-*   🥇 **[Sigmastate Interpreter](https://github.com/ScorexFoundation/sigmastate-interpreter)**: The reference implementation used by nodes.
-*   🥇 **[Ergo Playgrounds](https://github.com/ergoplatform/ergo-playgrounds)**: Scala-based environment for contract and off-chain code testing.
-*   **[Ergo-Puppet](puppet.md):** Advanced tool built on Ergo Playgrounds for off-chain experimentation and unit testing.
+
+* 🥇 **[Sigmastate Interpreter](https://github.com/ScorexFoundation/sigmastate-interpreter)**: The reference implementation used by nodes.
+* 🥇 **[Ergo Playgrounds](https://github.com/ergoplatform/ergo-playgrounds)**: Scala-based environment for contract and off-chain code testing.
+* **[Ergo-Puppet](puppet.md):** Advanced tool built on Ergo Playgrounds for off-chain experimentation and unit testing.
 
 **Online Editors & Compilers:**
-*   🥇 **[escript.online](https://escript.online/)**: Online editor, compiler, and playground.
-*   **[ErgoScript P2S Playground (Plutomonkey)](https://wallet.plutomonkey.com/p2s/)**: Compile ErgoScript to P2S addresses.
-*   **[Scastie](scastie.md)**: Online Scala compiler suitable for ErgoScript snippets.
-*   **[KioskWeb](https://github.com/scalahub/KioskWeb)**: Web interface for the Kiosk framework (useful for exploring Kiosk-based contracts).
+
+* 🥇 **[escript.online](https://escript.online/)**: Online editor, compiler, and playground.
+* **[ErgoScript P2S Playground (Plutomonkey)](https://wallet.plutomonkey.com/p2s/)**: Compile ErgoScript to P2S addresses.
+* **[Scastie](scastie.md)**: Online Scala compiler suitable for ErgoScript snippets.
+* **[KioskWeb](https://github.com/scalahub/KioskWeb)**: Web interface for the Kiosk framework (useful for exploring Kiosk-based contracts).
 
 **Compilers & Language Support:**
-*   [Ergoscript Compiler (Rust)](https://github.com/ergoplatform/sigma-rust/tree/develop/ergoscript-compiler): Rust implementation.
-*   [Ergoscript Compiler (Scala)](https://github.com/ergoplatform/ergoscript-compiler): Scala CLI tool.
-*   [ErgoScala Compiler](https://github.com/ergoplatform/ergoscala-compiler): Compile a subset of Scala to ErgoScript. *(Needs link update if available)*
-*   [ErgoScript CLI Compiler](https://github.com/ergoplatform/ergoscript-compiler): CLI tool to compile ErgoScript to address. *(Duplicate link? Check source)*
-*   [VSCode ErgoScript Language Support](https://marketplace.visualstudio.com/items?itemName=ergoscript.ergoscript-language-support): Syntax highlighting for VSCode.
+
+* [Ergoscript Compiler (Rust)](https://github.com/ergoplatform/sigma-rust/tree/develop/ergoscript-compiler): Rust implementation.
+* [Ergoscript Compiler (Scala)](https://github.com/ergoplatform/ergoscript-compiler): Scala CLI tool.
+* [ErgoScala Compiler](https://github.com/ergoplatform/ergoscala-compiler): Compile a subset of Scala to ErgoScript. *(Needs link update if available)*
+* [ErgoScript CLI Compiler](https://github.com/ergoplatform/ergoscript-compiler): CLI tool to compile ErgoScript to address. *(Duplicate link? Check source)*
+* [VSCode ErgoScript Language Support](https://marketplace.visualstudio.com/items?itemName=ergoscript.ergoscript-language-support): Syntax highlighting for VSCode.
 
 **Debugging & Simulation:**
-*   **[Debugging Guide](debugging.md):** Covers current best practices, tools, and techniques.
-*   **[Ergoscript Simulator](https://github.com/spectrum-finance/ergoscript-simulator):** A community-developed tool for simulating ErgoScript execution.
+
+* **[Debugging Guide](debugging.md):** Covers current best practices, tools, and techniques.
+* **[Ergoscript Simulator](https://github.com/spectrum-finance/ergoscript-simulator):** A community-developed tool for simulating ErgoScript execution.
 
 ## Advanced Patterns & Tutorials
 
 ErgoScript's features enable the implementation of complex contract patterns:
 
-*   **[Finite State Machines (FSMs)](fsm-example.md):** Learn how to model multi-stage contracts where behavior depends on the current state encoded within a box.
-*   **[Merkleized Abstract Syntax Trees (MAST)](mast-example.md):** Explore techniques to improve privacy and efficiency for contracts with many spending conditions by revealing only the executed script branch.
+* **[Finite State Machines (FSMs)](fsm-example.md):** Learn how to model multi-stage contracts where behavior depends on the current state encoded within a box.
+* **[Merkleized Abstract Syntax Trees (MAST)](mast-example.md):** Explore techniques to improve privacy and efficiency for contracts with many spending conditions by revealing only the executed script branch.
 
 ## Common Use Cases
 
 ErgoScript's flexibility enables various applications:
 
-*   **[Multi-Signature Wallets](threshold.md):** Create wallets requiring multiple parties to approve [transactions](transactions.md).
-*   **Time-Locked Contracts:** Define contracts that can only be executed after a specific time or [block height](block-header.md).
-*   **Conditional Spending:** Set complex conditions for spending funds based on various parameters (e.g., oracle data, specific inputs).
-*   **Atomic Swaps:** Facilitate trustless peer-to-peer exchange of different assets across blockchains or within Ergo.
-*   **Crowdfunding:** Implement secure and transparent crowdfunding campaigns.
-*   **Complex Financial Derivatives:** Build sophisticated financial instruments on the blockchain.
+* **[Multi-Signature Wallets](threshold.md):** Create wallets requiring multiple parties to approve [transactions](transactions.md).
+* **Time-Locked Contracts:** Define contracts that can only be executed after a specific time or [block height](block-header.md).
+* **Conditional Spending:** Set complex conditions for spending funds based on various parameters (e.g., oracle data, specific inputs).
+* **Atomic Swaps:** Facilitate trustless peer-to-peer exchange of different assets across blockchains or within Ergo.
+* **Crowdfunding:** Implement secure and transparent crowdfunding campaigns.
+* **Complex Financial Derivatives:** Build sophisticated financial instruments on the blockchain.
 
 ## Best Practices
 
-1.  Keep contracts simple and readable.
-2.  Use built-in [cryptographic primitives](crypto.md) where possible.
-3.  Always consider [transaction validation](validation.md) overhead and potential costs.
-4.  Test contracts thoroughly using playgrounds and SDK testing frameworks.
-5.  Reason carefully about all possible execution paths and potential economic exploits.
-6.  Leverage [data inputs](read-only-inputs.md) for accessing shared state efficiently.
+1. Keep contracts simple and readable.
+2. Use built-in [cryptographic primitives](crypto.md) where possible.
+3. Always consider [transaction validation](validation.md) overhead and potential costs.
+4. Test contracts thoroughly using playgrounds and SDK testing frameworks.
+5. Reason carefully about all possible execution paths and potential economic exploits.
+6. Leverage [data inputs](read-only-inputs.md) for accessing shared state efficiently.
 
 ## Common Pitfalls to Avoid
 
-*   Overcomplicating contract logic unnecessarily.
-*   Ignoring performance implications and transaction costs.
-*   Neglecting comprehensive error handling and edge cases in off-chain code interacting with contracts.
-*   Not fully understanding the nuances of the [eUTXO model](eutxo.md) (e.g., box lifecycle, state transitions).
-*   Insecure handling of secrets or assumptions about context in off-chain components.
+* Overcomplicating contract logic unnecessarily.
+* Ignoring performance implications and transaction costs.
+* Neglecting comprehensive error handling and edge cases in off-chain code interacting with contracts.
+* Not fully understanding the nuances of the [eUTXO model](eutxo.md) (e.g., box lifecycle, state transitions).
+* Insecure handling of secrets or assumptions about context in off-chain components.
 
 ## Learning Paths & Next Steps
 
-1.  **Beginner:**
-    *   Understand the [Core Concepts](ergoscript-key-concepts.md).
-    *   Experiment with the [P2S Playground](https://wallet.plutomonkey.com/p2s/).
-    *   Study simple [example contracts](contracts.md).
-2.  **Intermediate:**
-    *   Learn about [Sigma Protocols](sigma.md).
-    *   Explore [Multi-Stage Contract patterns](multi.md).
-    *   Work through SDK tutorials ([AppKit](appkit.md), [Fleet](fleet.md), [SigmaRust](sigma-rust.md)).
-3.  **Advanced:**
-    *   Understand [ErgoTree Compilation & Serialization](ergotree.md).
-    *   Explore advanced [cryptographic protocols](crypto.md).
-    *   Contribute to open-source projects or build your own dApp.
+1. **Beginner:**
+    * Understand the [Core Concepts](ergoscript-key-concepts.md).
+    * Experiment with the [P2S Playground](https://wallet.plutomonkey.com/p2s/).
+    * Study simple [example contracts](contracts.md).
+2. **Intermediate:**
+    * Learn about [Sigma Protocols](sigma.md).
+    * Explore [Multi-Stage Contract patterns](multi.md).
+    * Work through SDK tutorials ([AppKit](appkit.md), [Fleet](fleet.md), [SigmaRust](sigma-rust.md)).
+3. **Advanced:**
+    * Understand [ErgoTree Compilation & Serialization](ergotree.md).
+    * Explore advanced [cryptographic protocols](crypto.md).
+    * Contribute to open-source projects or build your own dApp.
 
 Join community discussions on [Discord](https://discord.gg/ergo-platform-668903786361651200) (`#ergoscript`, `#sigma-rust`, `#appkit`, `#fleet`), [Telegram](https://t.me/ergo_dev), or the [Ergo Forum](https://www.ergoforum.org/) to ask questions and collaborate.
 
@@ -160,30 +164,31 @@ Join community discussions on [Discord](https://discord.gg/ergo-platform-6689037
 
 ErgoScript's foundation on Sigma Protocols allows for powerful cryptographic primitives. However, some advanced structures have specific considerations:
 
-*   **Merkle Trees:** While [Merkle Trees](merkle-tree-structures.md) are fundamental to Ergo's data integrity (e.g., for transactions and extension data), direct verification of arbitrary Merkle proofs *within* an ErgoScript contract is not natively supported by a single built-in function. Verification typically happens off-chain or relies on specific protocol designs where roots are checked. The [MAST pattern](tx/mast-example.md) leverages Merkle trees conceptually, often using `executeFromVar` for on-chain execution of proven branches rather than full proof verification within the script. Developers interested in the general concept and off-chain usage should consult the main [Merkle Tree documentation](merkle-tree-structures.md).
+* **Merkle Trees:** While [Merkle Trees](merkle-tree-structures.md) are fundamental to Ergo's data integrity (e.g., for transactions and extension data), direct verification of arbitrary Merkle proofs *within* an ErgoScript contract is not natively supported by a single built-in function. Verification typically happens off-chain or relies on specific protocol designs where roots are checked. The [MAST pattern](tx/mast-example.md) leverages Merkle trees conceptually, often using `executeFromVar` for on-chain execution of proven branches rather than full proof verification within the script. Developers interested in the general concept and off-chain usage should consult the main [Merkle Tree documentation](merkle-tree-structures.md).
 
 ## Related Technical Resources
-- [ErgoTree Documentation](ergotree.md)
-- [Sigma Protocols Overview](sigma.md)
-- [Schnorr Signatures](schnorr.md)
-- [Light Verifying Nodes](nipopow_nodes.md)
-- [eUTXO Model Explanation](eutxo.md)
-- [Ergo Whitepaper](https://ergoplatform.org/en/whitepaper/)
-- [ErgoScript Language Specification](lang-spec.md) (Detailed reference)
-- [Advanced ErgoScript Tutorial](https://ergoplatform.org/docs/AdvancedErgoScriptTutorial.pdf)
+* [ErgoTree Documentation](ergotree.md)
+* [Sigma Protocols Overview](sigma.md)
+* [Schnorr Signatures](schnorr.md)
+* [Light Verifying Nodes](nipopow_nodes.md)
+* [eUTXO Model Explanation](eutxo.md)
+* [Ergo Whitepaper](https://ergoplatform.org/en/whitepaper/)
+* [ErgoScript Language Specification](lang-spec.md) (Detailed reference)
+* [Advanced ErgoScript Tutorial](https://ergoplatform.org/docs/AdvancedErgoScriptTutorial.pdf)
 
 ## Comparative Analysis
+
 ErgoScript stands out by:
 
-- Enabling complex logic via the [eUTXO model](eutxo.md) without full on-chain Turing-completeness risks.
-- Natively supporting advanced cryptographic protocols ([Sigma Protocols](sigma.md)).
-- Allowing complex [financial contracts](contracts.md) with predictable [execution costs](min-fee.md).
-- Maintaining a declarative, secure programming model based on [UTXOs](eutxo.md).
+* Enabling complex logic via the [eUTXO model](eutxo.md) without full on-chain Turing-completeness risks.
+* Natively supporting advanced cryptographic protocols ([Sigma Protocols](sigma.md)).
+* Allowing complex [financial contracts](contracts.md) with predictable [execution costs](min-fee.md).
+* Maintaining a declarative, secure programming model based on [UTXOs](eutxo.md).
 
 ## Performance Considerations
-- Off-chain [transaction creation](transactions.md) minimizes [on-chain computation](ergoscript.md).
-- [On-chain validation](validation.md) focuses only on script conditions.
-- Immutable [transaction graph](transactions.md) allows for optimizations.
-- Native support for [light verifying nodes](light-spv-node.md) enhances accessibility.
-- [Non-Turing complete](multi-stage-txs.md) base language prevents infinite loops and simplifies cost analysis.
-- See the [Interpreter Performance Style Guide](https://github.com/ergoplatform/sigmastate-interpreter/blob/develop/docs/perf-style-guide.md) for tips on writing efficient scripts.
+* Off-chain [transaction creation](transactions.md) minimizes [on-chain computation](ergoscript.md).
+* [On-chain validation](validation.md) focuses only on script conditions.
+* Immutable [transaction graph](transactions.md) allows for optimizations.
+* Native support for [light verifying nodes](light-spv-node.md) enhances accessibility.
+* [Non-Turing complete](multi-stage-txs.md) base language prevents infinite loops and simplifies cost analysis.
+* See the [Interpreter Performance Style Guide](https://github.com/ergoplatform/sigmastate-interpreter/blob/develop/docs/perf-style-guide.md) for tips on writing efficient scripts.

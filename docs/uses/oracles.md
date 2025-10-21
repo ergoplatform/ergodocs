@@ -8,7 +8,6 @@ Ergo has pioneered [Oracle Pools](https://ergoplatform.org/en/blog/2020-08-31-er
 
 External oracle data, when posted on-chain, must be precisely encoded within a transaction. Oracle pools, which consist of various interconnected components, require specific transactions to transition through the pool protocol's different stages. [Oracle Core](https://github.com/ergoplatform/oracle-core) handles these complex transactions, which include data posting and executing the on-chain oracle pool protocol (like data point averaging). It is packaged with the [Oracle Pool Bootstrap](https://github.com/ergoplatform/oracle-core/tree/master/oracle-pool-bootstrap) and a [Connector Library](https://github.com/ergoplatform/oracle-core/tree/master/connectors/connector-lib). You can refer to the [ada-usd-oracle](https://github.com/ergoplatform/oracle-core/blob/master/scripts/ada-usd-oracle/oracle-config.yaml) source for an illustration. For a comprehensive perspective, see this [overview](https://github.com/Emurgo/Emurgo-Research/blob/master/oracles/Oracle-Pools.md) by Robert Kornacki.
 
-
 ### Introduction to Oracle Pools V2
 
 The following section delves into the Oracle Pools V2, an innovative upgrade to the existing Oracle Pool v1.0, as documented in [EIP16](https://github.com/ergoplatform/eips/blob/eip16/eip-0016.md). This proposed update is designed to resolve various drawbacks associated with the first version such as the generation of extensive dust, low rewards, complexity due to two types of pool boxes, and issues related to the non-transferability of oracle and ballot tokens.
@@ -45,8 +44,7 @@ For an easy docker setup see [easy-ergo-oracle](https://github.com/reqlez/ergo-e
 
 ### The Delphi Project (Inactive)
 
-The Delphi Project aimed to facilitate exploration, operation, and launching of decentralized oracles on the Ergo blockchain. 
+The Delphi Project aimed to facilitate exploration, operation, and launching of decentralized oracles on the Ergo blockchain.
 
 - [Website](https://delphiproject.org/#)
 - [Final Report](https://hackmd.io/@abchris/S1dHZcwyc)
-

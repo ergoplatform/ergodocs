@@ -44,14 +44,17 @@ scorex {
 2. **Compile the Node:**
 
     - Use the following command to compile the Ergo node:
+
       ```shell
       sbt assembly
       ```
+
     - This will generate an `ergo.jar` file at `/target/scala*/ergo-*.jar`.
 
 3. **Run the Node:**
 
     - Start the node using the command:
+
       ```bash
       java -jar -Xmx4G ergo-*.jar --testnet -c testnet.conf
       ```

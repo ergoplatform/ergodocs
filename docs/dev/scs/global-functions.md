@@ -79,6 +79,7 @@ The `deserialize[T]` function takes a type parameter `T` and a base58 encoded st
 ## Other Functions
 
 ### GetVar
+
 `getVar[T]` takes a type parameter `T` and an integer `tag`, returning a Context Variable of the given type associated with that `tag`. Context Variables are specific off-chain variables that can be attached to any box at the time of transaction creation. Context variables allow for robust changes to certain parameters within your contract. It is especially useful for providing generic contracts that rely on off-chain information that may change between different spending transactions.
 
 ### SubstConstants
@@ -92,159 +93,158 @@ def substConstants[T](scriptBytes: Coll[Byte],
 
 It allows constructing another contract’s proposition bytes using the given parameters. Because a contract’s address is created using its contents, inputting different constants within a contract can change its address (and therefore, the contract itself). This function allows for a contract of the same “template” to be created using a new set of constants. To be used properly, one must provide a sample of the contract’s proposition bytes (parameter `scriptBytes`), along with the `positions` at which certain constants of type `T` must be replaced with the corresponding values in the `newValues` parameter.
 
-
 ## Example: Alcohol Sale Proxy Contract
 
 ```scala
 {
-	// ====== Alcohol Sale Proxy Contract Example ====== // 
+ // ====== Alcohol Sale Proxy Contract Example ====== // 
 
-	// Hard-coded constants expected at compile time are written in UpperCamelCase.
-	
-	// INPUTS:
-	// license          = INPUTS(0)
-	// buyerProxyInputs = INPUTS - INPUTS(0)
-	//
-	// OUTPUTS:
-	// storeBox              = OUTPUTS(0)
-	// provincialSalesTaxBox = OUTPUTS(1)
-	// federalSalesTaxBox    = OUTPUTS(2)
-	// buyerWalletBox        = OUTPUTS(3)
-	// minerFeeBox           = OUTPUTS(4)
-	//
-	// (*) Note: 
-	//           1. Mining fee box is always the last box in the set of OUTPUTS of a transaction,
-	//              I am just showing this for clarity, but it will not be accessed in this contract.
-    	//           2. If there is any that change remains in the proxy, 
-	//				it is sent back to the buyer wallet.
+ // Hard-coded constants expected at compile time are written in UpperCamelCase.
+ 
+ // INPUTS:
+ // license          = INPUTS(0)
+ // buyerProxyInputs = INPUTS - INPUTS(0)
+ //
+ // OUTPUTS:
+ // storeBox              = OUTPUTS(0)
+ // provincialSalesTaxBox = OUTPUTS(1)
+ // federalSalesTaxBox    = OUTPUTS(2)
+ // buyerWalletBox        = OUTPUTS(3)
+ // minerFeeBox           = OUTPUTS(4)
+ //
+ // (*) Note: 
+ //           1. Mining fee box is always the last box in the set of OUTPUTS of a transaction,
+ //              I am just showing this for clarity, but it will not be accessed in this contract.
+     //           2. If there is any that change remains in the proxy, 
+ //    it is sent back to the buyer wallet.
 
-	// Contract variables
-  	val buyerPK: SigmaProp          = PK(buyerPKString)
-	val buyerProxyInputs: Coll[Box] = INPUTS.filter({ (input: Box) => input.propositionBytes == SELF.propositionBytes })
-	val buyerAmount: Long           = buyerProxyInputs.fold(0L)({ (input: Box, acc: Long) => acc + input.value })
-	val provincialSalesTax: Long    = (AlcoholSaleAmount * ProvincialSalesTaxNum) / ProvincialSalesTaxDenom
-	val federalSalesTax: Long       = (AlcoholSaleAmount * FederalSalesTaxNum) / FederalSalesTaxDenom
-	val totalCost: Long             = AlcoholSaleAmount + provincialSalesTax + federalSalesTax + MinerFee
-	
-	// Variables associated with the buyer's license
-	val license = INPUTS(0)
-	val id      = license.R4[Coll[Byte]].get
-	val name    = license.R5[Coll[Byte]].get
-	val bDay    = license.R6[Coll[Byte]].get
-	val address = license.R7[Coll[Byte]].get
-	val expDate = license.R8[Coll[Byte]].get
+ // Contract variables
+   val buyerPK: SigmaProp          = PK(buyerPKString)
+ val buyerProxyInputs: Coll[Box] = INPUTS.filter({ (input: Box) => input.propositionBytes == SELF.propositionBytes })
+ val buyerAmount: Long           = buyerProxyInputs.fold(0L)({ (input: Box, acc: Long) => acc + input.value })
+ val provincialSalesTax: Long    = (AlcoholSaleAmount * ProvincialSalesTaxNum) / ProvincialSalesTaxDenom
+ val federalSalesTax: Long       = (AlcoholSaleAmount * FederalSalesTaxNum) / FederalSalesTaxDenom
+ val totalCost: Long             = AlcoholSaleAmount + provincialSalesTax + federalSalesTax + MinerFee
+ 
+ // Variables associated with the buyer's license
+ val license = INPUTS(0)
+ val id      = license.R4[Coll[Byte]].get
+ val name    = license.R5[Coll[Byte]].get
+ val bDay    = license.R6[Coll[Byte]].get
+ val address = license.R7[Coll[Byte]].get
+ val expDate = license.R8[Coll[Byte]].get
 
-	// Context variables needed for the proxy contract, assuming they are provided correctly
-	val licenseTemplateContractBytes = getVar[Coll[Byte]](0).get
+ // Context variables needed for the proxy contract, assuming they are provided correctly
+ val licenseTemplateContractBytes = getVar[Coll[Byte]](0).get
 
-	// Substitute the constants of the license template contract bytes
-	// and create the new contract bytes for the buyer's license
-	val newLicenseContractBytes = {
-		
-		// New positions
-		val newPositions_SigmaProp: Coll[Int] = Coll(0)
-		val newPositions_Coll_Byte: Coll[Int] = Coll(1, 2, 3, 4, 5)
-	
-		// New constants
-		val newConstants_SigmaProp: Coll[SigmaProp] = Coll(buyerPK)
-		val newConstants_Coll_Byte: Coll[Byte] = Coll(id, name, bDay, address, expDate)
+ // Substitute the constants of the license template contract bytes
+ // and create the new contract bytes for the buyer's license
+ val newLicenseContractBytes = {
+  
+  // New positions
+  val newPositions_SigmaProp: Coll[Int] = Coll(0)
+  val newPositions_Coll_Byte: Coll[Int] = Coll(1, 2, 3, 4, 5)
+ 
+  // New constants
+  val newConstants_SigmaProp: Coll[SigmaProp] = Coll(buyerPK)
+  val newConstants_Coll_Byte: Coll[Byte] = Coll(id, name, bDay, address, expDate)
 
-		// New contract bytes with substituted buyer PK
-		val newContractBytes_SigmaProp = substConstants(licenseTemplateContractBytes, newPositions_SigmaProp, newConstants_SigmaProp)
-		
-		// New contract bytes with substituted buyer license information
-		val newContractBytes_Coll_Byte = substConstants(newContractBytes_SigmaProp, newPositions_Coll_Byte, newConstants_Coll_Byte)
-		val newContractBytes = newContractBytes_Coll_Byte
-		
-		newContractBytes
-	}
+  // New contract bytes with substituted buyer PK
+  val newContractBytes_SigmaProp = substConstants(licenseTemplateContractBytes, newPositions_SigmaProp, newConstants_SigmaProp)
+  
+  // New contract bytes with substituted buyer license information
+  val newContractBytes_Coll_Byte = substConstants(newContractBytes_SigmaProp, newPositions_Coll_Byte, newConstants_Coll_Byte)
+  val newContractBytes = newContractBytes_Coll_Byte
+  
+  newContractBytes
+ }
 
-	// Check for a valid sale
-	val validSale = {
+ // Check for a valid sale
+ val validSale = {
 
-		// Check for a valid license 
-		val validLicense = {
-			allOf(Coll(
-				BuyerLicenseContractBytes == newLicenseContractBytes,
-				license.propositionBytes == newLicenseContractBytes
-			))
-		}
+  // Check for a valid license 
+  val validLicense = {
+   allOf(Coll(
+    BuyerLicenseContractBytes == newLicenseContractBytes,
+    license.propositionBytes == newLicenseContractBytes
+   ))
+  }
 
-		// Check for a valid proxy amount
-    		val validProxyAmount = {
-	    		buyerAmount >= totalAmount
-		}
+  // Check for a valid proxy amount
+      val validProxyAmount = {
+       buyerAmount >= totalAmount
+  }
 
-		// Check for a valid store
-		val validStore = {
-			val storeBox = OUTPUTS(0)
-			storeBox.propBytes == StoreBoxPropositionBytes
-		}
+  // Check for a valid store
+  val validStore = {
+   val storeBox = OUTPUTS(0)
+   storeBox.propBytes == StoreBoxPropositionBytes
+  }
 
-		// Check for valid sales taxes
-		val validSalesTaxes = {
-			
-			// Check for a valid provincial tax
-			val validProvincialSalesTax = {
-				val provincialSalesTaxBox = OUTPUTS(1)
-				allOf(Coll(
-					(provincialSalesTaxBox.propositionBytes == ProvincialSalesTaxPK),
-					(provincialSalesTaxBox.value >= provincialSalesTax)
-				))
-			}
+  // Check for valid sales taxes
+  val validSalesTaxes = {
+   
+   // Check for a valid provincial tax
+   val validProvincialSalesTax = {
+    val provincialSalesTaxBox = OUTPUTS(1)
+    allOf(Coll(
+     (provincialSalesTaxBox.propositionBytes == ProvincialSalesTaxPK),
+     (provincialSalesTaxBox.value >= provincialSalesTax)
+    ))
+   }
 
-			// Check for a valid federal tax
-			val validFederalSalesTax = {
-				val federalSalesTaxBox = OUTPUTS(2)
-				allOf(Coll(
-					(federalSalesTaxBox.propositionBytes == FederalSalesTaxPK),
-					(federalSalesTaxBox.value >= federalSalesTax)
-				))
-			}
+   // Check for a valid federal tax
+   val validFederalSalesTax = {
+    val federalSalesTaxBox = OUTPUTS(2)
+    allOf(Coll(
+     (federalSalesTaxBox.propositionBytes == FederalSalesTaxPK),
+     (federalSalesTaxBox.value >= federalSalesTax)
+    ))
+   }
       
-      			// Demand that both sales taxes are valid
-      			allOf(Coll(
-        			validProvincialSalesTax,
-        			validFederalSalesTax
-      			))
+         // Demand that both sales taxes are valid
+         allOf(Coll(
+           validProvincialSalesTax,
+           validFederalSalesTax
+         ))
 
-		}
+  }
 
-		// Check for a valid buyer wallet to return any change
-		val validBuyerWallet = {
-			if (buyerAmount > totalCost) {
-				val buyerWalletBox = OUTPUTS(3)
-				buyerWalletBox.propositionBytes == buyerPK.propBytes
-			} else {
-				true
-			}
-		}		
-	
-		// Demand that all the conditions are valid
-		allOf(Coll(
-			validLicense,
-			validProxyAmount,
-			validStore,
-			validSalesTaxes,
-			validBuyerWallet
-		))
+  // Check for a valid buyer wallet to return any change
+  val validBuyerWallet = {
+   if (buyerAmount > totalCost) {
+    val buyerWalletBox = OUTPUTS(3)
+    buyerWalletBox.propositionBytes == buyerPK.propBytes
+   } else {
+    true
+   }
+  }  
+ 
+  // Demand that all the conditions are valid
+  allOf(Coll(
+   validLicense,
+   validProxyAmount,
+   validStore,
+   validSalesTaxes,
+   validBuyerWallet
+  ))
 
-	}
+ }
 
-	// Check for a valid refund
-	val validRefund = {
-		val refundWalletBox = OUTPUTS(0)
-		allOf(Coll(
-			(refundWalletBox.propositionBytes == buyerPK.propBytes),
-			(refundWalletBox.value >= buyerAmount - MinerFee)
-		))
-	}
+ // Check for a valid refund
+ val validRefund = {
+  val refundWalletBox = OUTPUTS(0)
+  allOf(Coll(
+   (refundWalletBox.propositionBytes == buyerPK.propBytes),
+   (refundWalletBox.value >= buyerAmount - MinerFee)
+  ))
+ }
 
-	// Obtain the appropriate sigma proposition
-	sigmaProp(anyOf(Coll(
-		validSale,
-		validRefund
-	)))
+ // Obtain the appropriate sigma proposition
+ sigmaProp(anyOf(Coll(
+  validSale,
+  validRefund
+ )))
 
 }
 ```

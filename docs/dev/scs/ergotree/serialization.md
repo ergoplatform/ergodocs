@@ -61,7 +61,6 @@ Table 1 shows the size limits checked during contract deserialization, which are
 | Expr <sub> max </sub> | 4Kb | Maximum size of serialized ErgoTree term (see Expr format 5.4) |
 | ErgoTree <sub> max </sub> | 4Kb | Maximum size of serialized ErgoTree contract (see ErgoTree format 5.5) |
 
-
 All the serialization formats used and defined throughout this section are listed in Table 2, which introduces a name for each format and shows the number of bytes each format may occupy in the byte stream.
 
 ### Table 2: Serialization formats
@@ -89,18 +88,18 @@ All the serialization formats used and defined throughout this section are liste
 |$\lst{Constant}$ | $[1..\MaxConstSize]$ | Serialized $\langname$ constants (values with types). |
 |$\lst{Expr}$ | $[1..\MaxExprSize]$ | Serialized expression terms of $\langname$. |
 |$\lst{ErgoTree}$ | $[1..\MaxErgoTreeSize]$ | Serialized instances of $\langname$ contracts. |
-    
+
 We use the `[1..n]` notation when serialization may produce from **1 to n bytes** (depending on the actual data).
 
 The serialization format of ErgoTree is optimized for compact storage and rapid deserialization.
 
-In many cases, the serialization procedure is *data dependent* and thus has branching logic. 
+In many cases, the serialization procedure is *data dependent* and thus has branching logic.
 
-We use a pseudo-language with operators like `for`, `match`, `if`, and `optional` to express this complex serialization logic in the specification. 
+We use a pseudo-language with operators like `for`, `match`, `if`, and `optional` to express this complex serialization logic in the specification.
 
-The language allows us to specify a structure composed of simple *serialization slots*. 
+The language allows us to specify a structure composed of simple *serialization slots*.
 
-Each slot specifies a fragment of the serialized stream of bytes, while operators specify how the slots are combined to form the resulting stream of bytes. 
+Each slot specifies a fragment of the serialized stream of bytes, while operators specify how the slots are combined to form the resulting stream of bytes.
 
 The notation is summarized in Table 3.
 
@@ -115,11 +114,11 @@ $\lst{match}$ $(t, v)$ | Pattern match on pair $(t, v)$ where $t, v$ - values |
 $\lst{with}$ $(Unit, v \in \Denot{Unit})$ | Pattern case |
 $\lst{for}$ i=1 $\lst{to}$ len \ $~\lst{serialize(}$v_i$\lst{)}$ \\ $\lst{end for}$ | Call the given $\lst{serialize}$ function repeatedly. The output bytes of all invocations are concatenated and become the output of the $\lst{for}$ statement. |
 $$\lst{if}~$condition$~$\lst{then}$ | Serialize one of the branches depending on the *condition*. The output bytes of the executed branch become the output of the $\lst{if}$ statement. |
-$\lst{serialize1(}$v_1$\lst{)} |  \lst{else} | ~~\lst{serialize2(}$v_2$\lst{)} | \lst{end if}$$ | 
+$\lst{serialize1(}$v_1$\lst{)} |  \lst{else} | ~~\lst{serialize2(}$v_2$\lst{)} | \lst{end if}$$ |
 
 <!--TODO: broken lst-->
 
-In the next section, we describe how types (**Int**, **Coll[Byte]**, etc.) are serialized; then, we define the serialization of typed data. 
+In the next section, we describe how types (**Int**, **Coll[Byte]**, etc.) are serialized; then, we define the serialization of typed data.
 
 This will give us a basis to describe the serialization of Constant nodes of ErgoTree. After that, we will proceed to the serialization of arbitrary ErgoTree trees.
 
@@ -127,25 +126,21 @@ This will give us a basis to describe the serialization of Constant nodes of Erg
 
 For the motivation behind this type of encoding, please see [Appendix D.1](https://raw.githubusercontent.com/ScorexFoundation/sigmastate-interpreter/4daec63275fd4e1364cf7a1132f3e7be6157bb5c/docs/spec/ergotree.pdf).
 
-
 ### Distribution of type codes
 
 The whole space of 256 one-byte codes is divided, as shown in Table 4.
 
 #### Table 4: Distribution of type codes between Data and Function types
+
 |   Value/Interval   | Distribution |
 |---|---|
 $\lst{0x00}$ | special value to represent undefined type ($\lst{NoType}$ in $\ASDag$) |
 $\lst{0x01 - 0x6F(111)}$ | **data types** including primitive types, arrays, options aka nullable types, classes (in future), 111 = 255 - 144 different codes |
 $\lst{0x70(112) - 0xFF(255)}$ | **function types** $\lst{T1 => T2}$, 144 = 12 x 12 different codes~\footnote{Note that the function types are never serialized in version 1 of the Ergo protocol, this encoding is reserved for future development of the protocol.} |
 
-
-
 ### Encoding of Data Types
 
 There are eight different values for *embeddable* types, and three more are reserved for future extensions. Each embeddable type has a type code in the range `1,...,11` as shown in Table 5.
-
-
 
 #### Table 5: Embeddable Types
 
@@ -176,13 +171,13 @@ There are eight different values for *embeddable* types, and three more are rese
 | 0x25(37) - 0x2F(47) | Option[_] | Option of embeddable type (Option[Int]) |
 | 0x30(48) | Option[Coll[_]] | Option of Coll of non-embeddable type (Option[Coll[(Int, Boolean)]]) |
 | 0x31(49) - 0x3B(59) | Option[Coll[_]] | Option of Coll of embeddable type (Option[Coll[Int]]) |
-| 0x3C(60) | (_,_) | Pair of non-embeddable types (((Int, Byte), (Boolean,Box)), etc.) |
+| 0x3C(60) | (*,*) | Pair of non-embeddable types (((Int, Byte), (Boolean,Box)), etc.) |
 | 0x3D(61) - 0x47(71) | (_, Int) | Pair of types where first is embeddable ((_, Int)) |
-| 0x48(72) | (_,_,_) | Triple of types |
+| 0x48(72) | (*,*,_) | Triple of types |
 | 0x49(73) - 0x53(83) | (Int, _) | Pair of types where second is embeddable ((Int, _)) |
-| 0x54(84) | (_,_,_,_) | Quadruple of types |
-| 0x55(85) - 0x5F(95) | (_, _) | Symmetric pair of embeddable types ((Int, Int), (Byte,Byte), etc.) |
-| 0x60(96) | (_,...,_) | Tuple type with more than 4 items (Int, Byte, Box, Boolean, Int) |
+| 0x54(84) | (*,*,*,*) | Quadruple of types |
+| 0x55(85) - 0x5F(95) | (_,_) | Symmetric pair of embeddable types ((Int, Int), (Byte,Byte), etc.) |
+| 0x60(96) | (*,...,*) | Tuple type with more than 4 items (Int, Byte, Box, Boolean, Int) |
 | 0x61(97) |  Any | Any type |
 | 0x62(98) |  Unit | Unit type |
 | 0x63(99) |  Box | Box type |
@@ -198,12 +193,12 @@ There are eight different values for *embeddable* types, and three more are rese
 
 We use the encoding schema defined below for each type constructor, like **Coll** or **Option**.
 
-- A type constructor has an associated base code which is a multiple of 12 
-    - (e.g., 12 for **Coll[_]**, 24 for **Coll[Coll[_]]**, etc.). 
-- The base code can be added to the embeddable type code to produce the code of the constructed type. 
-    - For example, `12 + 1 = 13` is the code for **Coll[Byte]**. 
-    - The code of the type constructor (e.g., 12 in this example) is used when the type parameter is a non-embeddable type (e.g., **Coll[(Byte, Int)]**).
-    - In this case, the code of the type constructor is read first, and then recursive descent is performed to read the bytes of the parameter type (in this case, *(Byte, Int)*). 
+- A type constructor has an associated base code which is a multiple of 12
+  - (e.g., 12 for **Coll[_]**, 24 for **Coll[Coll[_]]**, etc.).
+- The base code can be added to the embeddable type code to produce the code of the constructed type.
+  - For example, `12 + 1 = 13` is the code for **Coll[Byte]**.
+  - The code of the type constructor (e.g., 12 in this example) is used when the type parameter is a non-embeddable type (e.g., **Coll[(Byte, Int)]**).
+  - In this case, the code of the type constructor is read first, and then recursive descent is performed to read the bytes of the parameter type (in this case, *(Byte, Int)*).
 
 This encoding allows very simple and fast decoding using **div** and **mod** operations.
 
@@ -211,7 +206,7 @@ Following the above encoding schema, the interval of codes for data types is div
 
 ### Encoding of Function Types
 
-We use 12 different values for both domain and range types of functions. 
+We use 12 different values for both domain and range types of functions.
 
 > **This gives us 144 (12∗12) function types in total and allows us to represent 121 (11∗11) functions over primitive types using just a single byte.**
 
@@ -219,7 +214,7 @@ Each code **F** in the range of function types (i.e., **F ∈ {112, . . . , 255}
 
 - If **D = 0**, the domain type is not embeddable, and recursive descent is necessary to write/read the domain type.
 - If **R = 0**, then the range type is not embeddable, and recursive descent is necessary to write/read the range type.
- 
+
 #### Recursive Descent
 
 When an argument of a type constructor is not a primitive type, we fall back to the simple encoding schema. In this case, we emit the separate code for the type constructor according to the table above and descend recursively to every child node of the type tree.
@@ -248,13 +243,12 @@ More examples of type serialization are shown in Table 7.
 | (Int,Int)=>Int | 0 |4|    115=0*12+4+112, 88 | 2 | embeddable range, then symmetric pair |
 | (Int,Boolean) | | |  60 + 4, 1 | 2 | Int embedded in pair, then Boolean |
 | (Int,Box)=>Boolean |0 |1 |    0*12+1+112, 60+4, 99 | 3 | func with embedded range, then Int embedded, then Box |
-    
 
 ### Data Serialization
 
-In ErgoTree, all runtime data values have an associated type also available at runtime (this is called [*type reification*](https://en.wikipedia.org/wiki/Reification_(computer_science))). 
+In ErgoTree, all runtime data values have an associated type also available at runtime (this is called [*type reification*](https://en.wikipedia.org/wiki/Reification_(computer_science))).
 
-However, the serialization format separates data values from their type descriptors. This saves space when, for example, a collection of items is serialized. This is done so that a type tree can fully describe the contents of a typed data structure. 
+However, the serialization format separates data values from their type descriptors. This saves space when, for example, a collection of items is serialized. This is done so that a type tree can fully describe the contents of a typed data structure.
 
 For example, having a typed data object **d: (Int, Coll[Byte], Boolean)**, we can tell, by examining the structure of the type, that **d** is a tuple with three items; the first item contains a *32-bit integer*, the second a collection of *bytes*, and the third a logical *true/false* value.
 
@@ -265,7 +259,7 @@ Figure 5: Data serialization format
 
 #### GroupElement serialization
 
-A value of the GroupElement type is represented in the reference implementation using the `SecP256K1Point` class of the `org.bouncycastle.math.ec.custom.sec` package and serialized using **ASN.1** encoding. 
+A value of the GroupElement type is represented in the reference implementation using the `SecP256K1Point` class of the `org.bouncycastle.math.ec.custom.sec` package and serialized using **ASN.1** encoding.
 
 Different encodings are considered during deserialization, including point compression for Fp (see X9.62 sec. 4.2.1 pg. 17).
 

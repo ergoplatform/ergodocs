@@ -11,7 +11,6 @@ tags:
 
 [Tor](https://www.torproject.org/download/tor/) is a network that helps anonymize your internet traffic by routing it through a series of volunteer-operated servers (relays). This guide explains how to configure your Ergo node to route its P2P network traffic through Tor.
 
-
 If you have Tor installed and running (typically listening on `127.0.0.1:9050` for SOCKS proxy connections), you first need to ensure your node's P2P and API interfaces are bound to localhost in your `ergo.conf` file:
 
 ```conf

@@ -6,9 +6,10 @@ Please do not GPU mine the testnet! It prevents CPU miners from winning any bloc
 ///
 
 ## Getting Set-up
+>
 > Please refer to [node](install.md) for basic node set-up up to this point.
 
-To CPU mine on the testnet, your `testnet.conf` should look like this. 
+To CPU mine on the testnet, your `testnet.conf` should look like this.
 
 ```conf
   ergo {
@@ -36,7 +37,7 @@ To CPU mine on the testnet, your `testnet.conf` should look like this.
   }
 ```
 
-Then run 
+Then run
 
 ```
 java -jar -Xmx4G ergo-*.jar --testnet -c testnet.conf
@@ -56,7 +57,7 @@ INFO  [tor.default-dispatcher-13] o.e.m.ErgoMiningThread - Trying nonce 4000
 INFO  [tor.default-dispatcher-13] o.e.m.ErgoMiningThread - Trying nonce 5000
 ```
 
-Your rewards will be sent to your `rewardPublicKey`, which is different from your wallet address. 
+Your rewards will be sent to your `rewardPublicKey`, which is different from your wallet address.
 
 ```
 curl -X GET "http://127.0.0.1:9052/mining/rewardPublicKey" -H  "accept: application/json"
@@ -66,7 +67,6 @@ curl -X GET "http://127.0.0.1:9052/mining/rewardPublicKey" -H  "accept: applicat
 Please note that blocks take 720 confirmations on Ergo.
 ///
 
-
 ## Resources
 
-[testnet.sigmaexplorer.org](https://testnet.sigmaexplorer.org/) is a handy alternative version of the ergo explorer that shows miner distribution, hashrate and difficulty. 
+[testnet.sigmaexplorer.org](https://testnet.sigmaexplorer.org/) is a handy alternative version of the ergo explorer that shows miner distribution, hashrate and difficulty.

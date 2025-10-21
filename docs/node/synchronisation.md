@@ -40,7 +40,6 @@ The Inv (inventory) protocol is a communication protocol used during the synchro
     - Requests these unknown modifiers from the peer that sent the Inv message.
     - Transitions the state of these requested modifiers to **Requested**.
 
-
 ## Headers Synchronization
 
 Headers synchronization is the initial step in the synchronization process. It ensures that a node's headers chain is in sync with the network. The process involves the following steps:

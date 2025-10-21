@@ -8,7 +8,6 @@ This document outlines the technical workflow for the full archival node mode in
 
 Upon receiving a header, the following operations are performed:
 
-
 ```java
 if(history.apply(header).isSuccess) {
     if(!isInitialBootstrapping) Broadcast INV for this Header
@@ -17,7 +16,6 @@ if(history.apply(header).isSuccess) {
     blacklist peer
     }
 ```
-
 
 When transaction IDs from the Header are received, the following operations are performed:
 
@@ -67,4 +65,5 @@ if(History.apply(BlockTransactions) == Success(ProgressInfo)) {
 blacklist peer who sent Header
 }
 ```
+
 For more information, please refer to the [Bootstrapping section of modifiers processing](modifiers-processing.md#bootstrapping).

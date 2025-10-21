@@ -16,22 +16,22 @@ Finite State Machines (FSMs) are a computational model used to design systems th
 
 In the context of Ergo's [eUTXO model](eutxo.md), an FSM contract is implemented as a sequence of transactions, where each transaction consumes a box representing the *current state* and creates a new box representing the *next state*.
 
-*   **State Representation:** The current state of the FSM is encoded within an Ergo box, typically using its [registers](../boxes-and-registers.md) (e.g., R4 might hold a state identifier like an `Int` or `Byte`). Other registers hold data associated with that state.
-*   **Transitions:** The [ErgoScript](../ergoscript.md) guarding the state box defines the valid transitions. It checks:
-    *   The conditions required to move from the current state (e.g., specific inputs provided, signatures, blockchain height).
-    *   That the output box correctly represents the *next* valid state (e.g., the state identifier in R4 is updated correctly, other registers are preserved or updated according to protocol rules).
-*   **Immutability:** Each transaction creates a *new* box for the next state, preserving the immutable nature of the blockchain. The previous state box is consumed (spent).
+* **State Representation:** The current state of the FSM is encoded within an Ergo box, typically using its [registers](../boxes-and-registers.md) (e.g., R4 might hold a state identifier like an `Int` or `Byte`). Other registers hold data associated with that state.
+* **Transitions:** The [ErgoScript](../ergoscript.md) guarding the state box defines the valid transitions. It checks:
+  * The conditions required to move from the current state (e.g., specific inputs provided, signatures, blockchain height).
+  * That the output box correctly represents the *next* valid state (e.g., the state identifier in R4 is updated correctly, other registers are preserved or updated according to protocol rules).
+* **Immutability:** Each transaction creates a *new* box for the next state, preserving the immutable nature of the blockchain. The previous state box is consumed (spent).
 
 ## Example: Simple Vending Machine FSM
 
 Let's model a simple vending machine:
 
-*   **States:**
-    *   `Locked` (State 0): Waiting for payment.
-    *   `Paid` (State 1): Payment received, waiting for item selection/dispensing.
-*   **Transitions:**
-    *   `Locked` -> `Paid`: Requires a transaction input providing the correct payment amount. The output box must be in the `Paid` state.
-    *   `Paid` -> `Locked`: Requires a transaction input signaling item dispensing (e.g., signed by the vendor). The output box must return to the `Locked` state, potentially with changed value (representing dispensed item cost).
+* **States:**
+  * `Locked` (State 0): Waiting for payment.
+  * `Paid` (State 1): Payment received, waiting for item selection/dispensing.
+* **Transitions:**
+  * `Locked` -> `Paid`: Requires a transaction input providing the correct payment amount. The output box must be in the `Paid` state.
+  * `Paid` -> `Locked`: Requires a transaction input signaling item dispensing (e.g., signed by the vendor). The output box must return to the `Locked` state, potentially with changed value (representing dispensed item cost).
 
 **Implementation Sketch (ErgoScript):**
 
@@ -94,21 +94,21 @@ Let's model a simple vending machine:
 
 ## Benefits in Ergo
 
-*   **Clear State Management:** Explicitly encodes state in boxes and transitions in scripts.
-*   **Composability:** FSM contracts can interact with other contracts and protocols.
-*   **Security:** Validation rules are enforced on-chain for each state transition.
-*   **Predictability:** Contract behavior is determined by the defined states and transitions.
+* **Clear State Management:** Explicitly encodes state in boxes and transitions in scripts.
+* **Composability:** FSM contracts can interact with other contracts and protocols.
+* **Security:** Validation rules are enforced on-chain for each state transition.
+* **Predictability:** Contract behavior is determined by the defined states and transitions.
 
 ## Resources & Examples
 
-*   **Specifications in `sigmastate-interpreter`:**
-    *   [`FsmExampleSpecification.scala`](https://github.com/ergoplatform/sigmastate-interpreter/blob/develop/sc/shared/src/test/scala/sigmastate/utxo/examples/FsmExampleSpecification.scala): Provides Scala code demonstrating FSM concepts in a testing context.
-*   **Real-World Examples:**
-    *   **ChainCash:** Contracts like [`note.es`](https://github.com/ChainCashLabs/chaincash/blob/master/contracts/onchain/note.es) implement FSM patterns for managing promissory notes and reserves.
-*   **Related Concepts:**
-    *   [Multi-Stage Contracts](../multi.md)
-    *   [eUTXO Model](eutxo.md)
-    *   [Box Registers](../boxes-and-registers.md)
+* **Specifications in `sigmastate-interpreter`:**
+  * [`FsmExampleSpecification.scala`](https://github.com/ergoplatform/sigmastate-interpreter/blob/develop/sc/shared/src/test/scala/sigmastate/utxo/examples/FsmExampleSpecification.scala): Provides Scala code demonstrating FSM concepts in a testing context.
+* **Real-World Examples:**
+  * **ChainCash:** Contracts like [`note.es`](https://github.com/ChainCashLabs/chaincash/blob/master/contracts/onchain/note.es) implement FSM patterns for managing promissory notes and reserves.
+* **Related Concepts:**
+  * [Multi-Stage Contracts](../multi.md)
+  * [eUTXO Model](eutxo.md)
+  * [Box Registers](../boxes-and-registers.md)
 
 ## Advanced Concepts
 

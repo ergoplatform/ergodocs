@@ -11,6 +11,7 @@ Start here:
 - [Partners](partners.md)
 
 More ways to get involved:
+
 - [How Ergo Works](how-ergo-works.md) (accessible overview)
 - Funding opportunities: [Grants](grants.md) • [Bounties](bounties.md)
 

@@ -40,7 +40,6 @@
 * **Counter to Centralization**: Ergo's stance against the centralization of banking and the misuse of money, aiming to provide individuals with more control over their financial interactions.
 * **Created for Regular People**: An ideology stating that Ergo is designed to serve ordinary individuals and protect their interests rather than favoring large entities. This includes preventing centralization in mining and enabling regular people to participate in the network through running full nodes and mining with a small probability.
 
-
 ## D
 
 * **[DAO (Decentralized Autonomous Organization)](dao.md)**: An organization represented by rules encoded as a computer program that is transparent, controlled by the organization members, and not influenced by a central government.
@@ -106,15 +105,14 @@
 * **[Interoperability](interoperability.md)**: UTXOs are well-suited for off-chain and sidechain protocols, enabling seamless integration with various solutions beyond the main blockchain, promoting interoperability.
 * **Internal Promotions**: The process of filling roles, such as paid community manager positions, from within the existing Ergo community based on demonstrated skills and contributions.
 
-
 ## J
+
 * **[Just in Time Costing (JITC)](jitc.md)**: A specific update introduced in Ergo's Node V5, designed to enhance block capacity and transaction processing speed.
 
-
 ## K
+
 * **KYA (Know Your Assumptions)**: It emphasizes the importance of understanding the underlying assumptions and principles in various contexts, such as cryptocurrencies, decentralized finance (DeFi), and decision-making processes, to make informed choices and decisions
 * **KYC (Know Your Customer)**: a process used by businesses and financial institutions to verify the identities of their customers.
-
 
 ## L
 
@@ -128,7 +126,6 @@
 * **Liquidity Pool**: A pool of funds locked in a smart contract that enables trading and liquidity for decentralized exchanges.
 * **[Logarithmic Space Mining](logspace.md)**: A feature allowing the existence of light miners who can bootstrap using block headers without downloading the entire blockchain, enhancing network scalability.
 * **Long-term Collaboration**: The potential for individuals who actively engage with the Ergo community to establish ongoing partnerships and collaborations with the Ergo Foundation.
-
 
 ## M
 
@@ -147,7 +144,6 @@
 * **[Mixing](mixer.md)**: A process that obscures the origin and destination of cryptocurrency transactions for increased privacy.
 * **[Multi-Stage UTXO Model](multi.md)**: Ergo's extended UTXO model, detailed in a peer-reviewed paper, enables the implementation of Turing-complete smart contracts, offering advanced scripting capabilities.
 
-
 ## N
 
 * **Nascent Project**: A project that is in its early stages of development and growth.
@@ -156,9 +152,6 @@
 * **Non-Custodial Wallet**: A cryptocurrency wallet where the user has full control (ownership) over their private keys and funds without relying on a third party.
 * **Non-Interactive Proofs of Proof-of-Work (NIPoPoWs)**: A technology that allows users to make and verify transactions confidently with minimal data, making it accessible to any device.
 
-
-
-
 ## O
 
 * **Open Model**: Ergo operates on an open model where contributions from the community are encouraged and highly regarded. This model emphasizes inclusivity and collaboration.
@@ -166,7 +159,6 @@
 * **Order**: A transaction a user submits to a DeFi protocol.
 * **Orderbook**: An order book system is similar to what you will see on traditional centralized exchanges. It shows buyers and sellers with amounts and the value of bids on one table.
 * **Output**: When performing a swap, this is the range of expected output you will receive depending on slippage.
-
 
 ## P
 
@@ -187,7 +179,6 @@
 * **Resource**: Additional reading materials, articles, documentation, and videos related to Ergo's eUTXO model and its advantages.
 * **Review**: The process in which the Ergo team evaluates the work submitted by a developer to ensure it meets the specified criteria and quality standards.
 * **Reward Allocation**: The process of assigning bounties or rewards to contributors based on the quality and impact of their contributions.
-
 
 ## S
 
@@ -210,7 +201,6 @@
 * **[Storage Rent](storage-rent.md)**: A mechanism that requires users to pay for the storage their data occupies on the Ergo network, providing miners with a consistent income stream.
 * **Submit a Pull Request**: The process of proposing and sharing your documentation changes with the maintainers by creating a pull request on GitHub.
 
-
 ## T
 
 * **Technical Infrastructure**: The underlying technology and architecture that supports Ergo's blockchain and ecosystem.
@@ -226,12 +216,10 @@
 * **TVL (Total Value Locked)**: a measure of the total funds (cryptocurrency) locked in a specific protocol or smart contract in the DeFi ecosystem.
 * **Two Categories of Participation**: The Growth and Creative categories within the Sigmanauts Program, each catering to different strengths and skills of community members.
 
-
 ## U
 
 * **UI Fee**: Fees that the UI provider is rewarded with.
 * **[UTXO (Unspent Transaction Output) Model](eutxo.md)**: A foundational concept in blockchain technology where transactions create outputs, which can later be used as inputs in new transactions. UTXOs represent ownership of cryptocurrency and are spent entirely in each transaction.
-
 
 ## V
 
@@ -239,22 +227,18 @@
 * **Venture Capitalist (VC)**: An investor or firm that provides capital to startups and small businesses, usually in exchange for an allocation of the project's tokens at a significantly lower price.
 * **VPN (Virtual Private Network)**: A service that masks your IP address and encrypts internet connections to enhance online privacy and security.
 
-
 ## W
 
 * **[Weak Blocks](subblocks.md)**: Block candidates with lower proof-of-work difficulty that serve as temporary placeholders, enabling faster transaction confirmations and optimizing network bandwidth, improving scalability.
 * **Web3**: The next generation of the internet, aiming to create a more decentralized and user-centric web experience using blockchain technology.
 * **[White paper](documents.md)**: A document that explains the concept, technology, and implementation details of a cryptocurrency or blockchain project.
 
-
 ## X
-
 
 ## Y
 
 * **Yield**: Earning returns on cryptocurrency holdings, often through staking, liquidity provision, or lending.
 * **Yield Farming**: A process in which cryptocurrency holders provide liquidity to DeFi protocols and receive rewards in return.
-
 
 ## Z
 

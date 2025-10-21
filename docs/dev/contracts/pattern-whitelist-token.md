@@ -14,7 +14,7 @@ title: Whitelist-only Token Transfers
 ## Canonical Code & Tests
 
 - Upstream  
-  - PR: https://github.com/ergoplatform/sigmastate-interpreter/pull/1080 — Token with whitelisted-only transfers, including tests.
+  - PR: <https://github.com/ergoplatform/sigmastate-interpreter/pull/1080> — Token with whitelisted-only transfers, including tests.
 - Commit(s)  
   - Prefer pinned SHAs once merged and stable.
 

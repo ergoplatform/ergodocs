@@ -26,14 +26,14 @@ While ErgoScript smart contracts define the on-chain logic and validation rules,
 
 Off-chain services bridge the gap between the user and the blockchain, enabling functionalities that are impractical or impossible to implement purely on-chain:
 
-*   **User Interfaces (UI/UX):** Web and mobile frontends.
-*   **Complex Transaction Construction:** Assembling inputs, outputs, data inputs, and context according to protocol rules.
-*   **State Management:** Tracking application-specific state (order books, user data).
-*   **Event Monitoring & Reaction:** Watching for specific on-chain events (box creation, token transfers) and triggering actions.
-*   **Data Indexing:** Efficiently querying blockchain data (See [Indexing Guide](../tutorials/blockchain-indexing.md)).
-*   **Wallet Interaction:** Connecting to user wallets for address fetching and transaction signing ([EIP-0012](../wallet/eip-standards.md), [ErgoPay](../wallet/payments/ergopay/ergo-pay.md)).
-*   **Automation:** Running bots for tasks like liquidations or arbitrage.
-*   **External Integrations:** Connecting to off-chain data sources or APIs.
+* **User Interfaces (UI/UX):** Web and mobile frontends.
+* **Complex Transaction Construction:** Assembling inputs, outputs, data inputs, and context according to protocol rules.
+* **State Management:** Tracking application-specific state (order books, user data).
+* **Event Monitoring & Reaction:** Watching for specific on-chain events (box creation, token transfers) and triggering actions.
+* **Data Indexing:** Efficiently querying blockchain data (See [Indexing Guide](../tutorials/blockchain-indexing.md)).
+* **Wallet Interaction:** Connecting to user wallets for address fetching and transaction signing ([EIP-0012](../wallet/eip-standards.md), [ErgoPay](../wallet/payments/ergopay/ergo-pay.md)).
+* **Automation:** Running bots for tasks like liquidations or arbitrage.
+* **External Integrations:** Connecting to off-chain data sources or APIs.
 
 ## Common Off-Chain Patterns
 
@@ -97,6 +97,7 @@ async function watchForBoxes() {
 // loadLastHeight().then(height => { lastHeight = height; watchForBoxes(); }); 
 watchForBoxes(); // Start the watcher loop (initial height might need setting)
 ```
+
 *(Note: Production watchers need robust error handling, reorg detection (frameworks like `ergoplatform/scanner` help here), and often use an indexer for efficiency).*
 
 **Real-world example (Cross-Chain):** [Rosen Bridge Watchers](../../eco/rosen/watcher.md) monitor deposit events on connected blockchains (like Cardano or Bitcoin) and relay them securely to Ergo, enabling cross-chain asset transfers. Becoming a watcher involves technical setup, providing collateral (ERG and RSN), monitoring transactions, and earning rewards.
@@ -179,6 +180,7 @@ async function updateOraclePrice() {
 
 updateOraclePrice(); // Start the bot
 ```
+
 *(Note: Real bots need sophisticated error handling, state management, fee calculation, input selection, and extremely secure key management).*
 
 **Real-world example (Oracle Providers):** Oracle providers integrate dependable external data sources (e.g., price feeds) with the Ergo blockchain. They deploy oracle contracts and maintain reliability to earn compensation, often through transaction fees or subscriptions. See [Oracle Pools V2](../../eco/oracles-v2.md) for details.
@@ -301,6 +303,7 @@ async fn get_node_height() {
     }
 }
 ```
+
 *(See also: Node [REST API](swagger.md))*
 
 ### 2. Monitoring for New Boxes (Watcher Pattern)
@@ -315,71 +318,71 @@ async fn get_node_height() {
 
 Interacting with user wallets securely is paramount.
 
-*   **[EIP-0012 (dApp Connector)](../wallet/eip-standards.md):** The standard for browser extension and mobile wallets to expose functionality (getting addresses, signing) to dApps via a JavaScript interface (`ergoConnector` / `ergo`). This is the primary method for dApps where the user initiates actions directly in their browser. See the [EIP Standards page](../wallet/eip-standards.md) for details and connection flow.
-*   **[ErgoPay (EIP-0020)](../wallet/payments/ergopay/ergo-pay.md):** A protocol using QR codes or deeplinks, allowing backends or other services to request transaction signing from compatible mobile wallets without a direct browser connection. Ideal for payment flows, minting initiated from external systems, or when the backend prepares the full transaction. See the [ErgoPay Tutorial](../wallet/payments/ergopay/ep-tutorial.md).
+* **[EIP-0012 (dApp Connector)](../wallet/eip-standards.md):** The standard for browser extension and mobile wallets to expose functionality (getting addresses, signing) to dApps via a JavaScript interface (`ergoConnector` / `ergo`). This is the primary method for dApps where the user initiates actions directly in their browser. See the [EIP Standards page](../wallet/eip-standards.md) for details and connection flow.
+* **[ErgoPay (EIP-0020)](../wallet/payments/ergopay/ergo-pay.md):** A protocol using QR codes or deeplinks, allowing backends or other services to request transaction signing from compatible mobile wallets without a direct browser connection. Ideal for payment flows, minting initiated from external systems, or when the backend prepares the full transaction. See the [ErgoPay Tutorial](../wallet/payments/ergopay/ep-tutorial.md).
 
 ## Development Workflow
 
 A typical workflow involves iterating between on-chain and off-chain development (inspired by [Dav009's Learning Ergo 101](https://dav009.medium.com/learning-ergo-101-development-workflow-aa17dd63ef6)):
 
-1.  **Design:** Define the protocol, on-chain contracts (ErgoScript), and required off-chain interactions/logic.
-2.  **On-Chain Dev:** Write and compile ErgoScript contracts. Test basic logic using playgrounds or Scastie.
-3.  **Off-Chain Dev:** Build the backend service, watcher, or bot using an appropriate SDK. Implement logic for monitoring, state management, and transaction construction.
-4.  **Testing (Off-Chain Simulation):** Use SDK testing frameworks (Appkit Mockchain, Fleet Mockchain, Sigma-Rust test utils) to simulate blockchain interactions. Unit test off-chain logic, transaction building, and contract interactions *without* needing a live node or wallet. Mock external API calls.
-5.  **Testing (Integrated - Testnet):** Deploy contracts and off-chain services to the Testnet. Perform end-to-end tests using real Testnet nodes and wallets (Nautilus Testnet mode, Ergo Mobile Wallet Testnet mode).
-6.  **Deployment (Mainnet):** Deploy rigorously tested off-chain services and final contracts to Mainnet. Implement monitoring and alerting.
+1. **Design:** Define the protocol, on-chain contracts (ErgoScript), and required off-chain interactions/logic.
+2. **On-Chain Dev:** Write and compile ErgoScript contracts. Test basic logic using playgrounds or Scastie.
+3. **Off-Chain Dev:** Build the backend service, watcher, or bot using an appropriate SDK. Implement logic for monitoring, state management, and transaction construction.
+4. **Testing (Off-Chain Simulation):** Use SDK testing frameworks (Appkit Mockchain, Fleet Mockchain, Sigma-Rust test utils) to simulate blockchain interactions. Unit test off-chain logic, transaction building, and contract interactions *without* needing a live node or wallet. Mock external API calls.
+5. **Testing (Integrated - Testnet):** Deploy contracts and off-chain services to the Testnet. Perform end-to-end tests using real Testnet nodes and wallets (Nautilus Testnet mode, Ergo Mobile Wallet Testnet mode).
+6. **Deployment (Mainnet):** Deploy rigorously tested off-chain services and final contracts to Mainnet. Implement monitoring and alerting.
 
 ## Testing Strategies for Off-Chain Services
 
-*   **Unit Testing:** Isolate and test individual functions (data parsing, state updates, API request formatting).
-*   **Mocking Blockchain Interactions:** Crucial for reliability. Use SDK features (e.g., Appkit `Mockchain`, Fleet `MockChain`) or standard mocking libraries (e.g., Jest mocks, `unittest.mock` in Python) to simulate responses from the node API, indexer API, or wallet connector *without* live connections. Test specific scenarios like reorgs, API errors, empty responses, or wallet rejection.
-*   **Integration Testing (Testnet):** Verify the entire system flow on the public Testnet. This includes deploying contracts, running the off-chain service(s), interacting via a frontend/API, and using real Testnet wallets.
-*   **Component Testing:** Test interactions between different parts of your off-chain system (e.g., does the watcher correctly trigger the backend API? Does the backend correctly query the indexer?).
-*   **Load Testing (Optional):** Simulate high traffic or concurrent requests against your backend API and indexer to identify performance bottlenecks.
+* **Unit Testing:** Isolate and test individual functions (data parsing, state updates, API request formatting).
+* **Mocking Blockchain Interactions:** Crucial for reliability. Use SDK features (e.g., Appkit `Mockchain`, Fleet `MockChain`) or standard mocking libraries (e.g., Jest mocks, `unittest.mock` in Python) to simulate responses from the node API, indexer API, or wallet connector *without* live connections. Test specific scenarios like reorgs, API errors, empty responses, or wallet rejection.
+* **Integration Testing (Testnet):** Verify the entire system flow on the public Testnet. This includes deploying contracts, running the off-chain service(s), interacting via a frontend/API, and using real Testnet wallets.
+* **Component Testing:** Test interactions between different parts of your off-chain system (e.g., does the watcher correctly trigger the backend API? Does the backend correctly query the indexer?).
+* **Load Testing (Optional):** Simulate high traffic or concurrent requests against your backend API and indexer to identify performance bottlenecks.
 
 ## Deployment & Scaling Considerations
 
-*   **Infrastructure:** Choose hosting (cloud providers like AWS/GCP/Azure, VPS, bare metal) for your node(s), indexer, database, and backend API. Consider redundancy (multiple nodes/servers), backups, and security configurations (firewalls).
-*   **Node Access:** Ensure reliable, low-latency access to a synced Ergo node API. Running your own node(s) offers the most control. Consider load balancing if querying multiple nodes.
-*   **Database Scaling:** Select a database that meets your query needs and can scale. Options include read replicas for SQL databases, sharding for NoSQL, or choosing inherently scalable architectures. Monitor query performance and disk usage.
-*   **Service Scaling:** Design backend APIs and indexers to be potentially stateless and horizontally scalable (running multiple instances behind a load balancer) if high throughput is anticipated. Use efficient background job queues for intensive tasks.
-*   **Monitoring & Alerting:** Implement robust monitoring (e.g., Prometheus/Grafana, Datadog) for your node sync status, indexer progress, database performance, API response times, and error rates. Set up alerts for critical failures.
+* **Infrastructure:** Choose hosting (cloud providers like AWS/GCP/Azure, VPS, bare metal) for your node(s), indexer, database, and backend API. Consider redundancy (multiple nodes/servers), backups, and security configurations (firewalls).
+* **Node Access:** Ensure reliable, low-latency access to a synced Ergo node API. Running your own node(s) offers the most control. Consider load balancing if querying multiple nodes.
+* **Database Scaling:** Select a database that meets your query needs and can scale. Options include read replicas for SQL databases, sharding for NoSQL, or choosing inherently scalable architectures. Monitor query performance and disk usage.
+* **Service Scaling:** Design backend APIs and indexers to be potentially stateless and horizontally scalable (running multiple instances behind a load balancer) if high throughput is anticipated. Use efficient background job queues for intensive tasks.
+* **Monitoring & Alerting:** Implement robust monitoring (e.g., Prometheus/Grafana, Datadog) for your node sync status, indexer progress, database performance, API response times, and error rates. Set up alerts for critical failures.
 
 ## Common Challenges & Solutions
 
-*   **Reorg Handling:** Blockchain reorganizations require indexers/watchers to invalidate data from dropped blocks and re-process the new canonical chain. *Solution:* Use frameworks like `ergoplatform/scanner` that handle this internally, or implement careful block header tracking and database rollback logic. This is non-trivial.
-*   **Node Issues:** Nodes can go offline, fall out of sync, return errors, or have performance issues. *Solution:* Implement resilient API clients with retry logic, timeouts, health checks, and potentially use multiple fallback nodes/APIs (including public ones as a last resort).
-*   **State Consistency:** Keeping off-chain indexed state perfectly consistent with on-chain reality, especially during reorgs or high network load. *Solution:* Use database transactions carefully, potentially mark data with block height/hash, and rely on robust reorg handling.
-*   **Key Management:** Securely handling private keys for bots or services that automatically submit transactions. *Solution:* **ABSOLUTELY NEVER store keys directly in code or unsecured config files.** Use hardware security modules (HSMs), cloud provider secret managers (AWS Secrets Manager, GCP Secret Manager), HashiCorp Vault, or encrypted environment variables with strict access controls. Limit the permissions and value held by automated keys.
-*   **Complex Transaction Building:** Ensuring correct input selection (coin selection), fee calculation, change output creation, and accurate encoding of registers/tokens. *Solution:* Rely heavily on the abstractions provided by SDK transaction builders (Fleet `TransactionBuilder`, Appkit `UnsignedTransactionBuilder`, Sigma-Rust builders) and test edge cases thoroughly (dust amounts, token limits, etc.).
-*   **Indexing Performance:** Slow initial sync or falling behind the chain tip. *Solution:* Optimize database writes (batching), use efficient data structures, consider selective indexing (only storing necessary data), potentially run multiple indexer instances in parallel (if logic permits).
+* **Reorg Handling:** Blockchain reorganizations require indexers/watchers to invalidate data from dropped blocks and re-process the new canonical chain. *Solution:* Use frameworks like `ergoplatform/scanner` that handle this internally, or implement careful block header tracking and database rollback logic. This is non-trivial.
+* **Node Issues:** Nodes can go offline, fall out of sync, return errors, or have performance issues. *Solution:* Implement resilient API clients with retry logic, timeouts, health checks, and potentially use multiple fallback nodes/APIs (including public ones as a last resort).
+* **State Consistency:** Keeping off-chain indexed state perfectly consistent with on-chain reality, especially during reorgs or high network load. *Solution:* Use database transactions carefully, potentially mark data with block height/hash, and rely on robust reorg handling.
+* **Key Management:** Securely handling private keys for bots or services that automatically submit transactions. *Solution:* **ABSOLUTELY NEVER store keys directly in code or unsecured config files.** Use hardware security modules (HSMs), cloud provider secret managers (AWS Secrets Manager, GCP Secret Manager), HashiCorp Vault, or encrypted environment variables with strict access controls. Limit the permissions and value held by automated keys.
+* **Complex Transaction Building:** Ensuring correct input selection (coin selection), fee calculation, change output creation, and accurate encoding of registers/tokens. *Solution:* Rely heavily on the abstractions provided by SDK transaction builders (Fleet `TransactionBuilder`, Appkit `UnsignedTransactionBuilder`, Sigma-Rust builders) and test edge cases thoroughly (dust amounts, token limits, etc.).
+* **Indexing Performance:** Slow initial sync or falling behind the chain tip. *Solution:* Optimize database writes (batching), use efficient data structures, consider selective indexing (only storing necessary data), potentially run multiple indexer instances in parallel (if logic permits).
 
 ## Real-World Examples (Inspiration)
 
 Study open-source Ergo projects to see how they handle off-chain logic:
 
-*   **SigmaUSD:** ([github.com/anon-real/sigma-usd](https://github.com/anon-real/sigma-usd)) - Interacts with oracle data and manages reserve dynamics.
-*   **Oracle Core:** ([github.com/ergoplatform/oracle-core](https://github.com/ergoplatform/oracle-core)) - The reference implementation for oracle pool operation, including off-chain bots for posting data.
-*   **Auction House / Raffle Contracts:** Often require off-chain monitoring to detect bids/entries and trigger finalization transactions. (Search GitHub for `Ergo Auction` or `ErgoRaffle`).
-*   **Ergo Explorer Backend:** ([github.com/ergoplatform/explorer-backend](https://github.com/ergoplatform/explorer-backend)) - A complex example of a full-chain indexer.
-*   **DEX Bots (Grid Trading):** Projects like [Off the Grid](https://github.com/Telefragged/off-the-grid/) and [Machina Finance](../../eco/machina-finance.md) use off-chain bots to match grid trading orders with other liquidity sources.
-*   **Transaction Bots:** Systems like the [Exle Tx Bot](https://exlebot.com/docs) automate transaction composition and processing for specific dApp workflows.
-*   **External Trading Bots:** Tools like [HummingBot](https://hummingbot.org/) or [KuPyBot](https://github.com/FlyingPig69/KuPyBot) can potentially be adapted to interact with Ergo DEXs via their APIs (if available).
+* **SigmaUSD:** ([github.com/anon-real/sigma-usd](https://github.com/anon-real/sigma-usd)) - Interacts with oracle data and manages reserve dynamics.
+* **Oracle Core:** ([github.com/ergoplatform/oracle-core](https://github.com/ergoplatform/oracle-core)) - The reference implementation for oracle pool operation, including off-chain bots for posting data.
+* **Auction House / Raffle Contracts:** Often require off-chain monitoring to detect bids/entries and trigger finalization transactions. (Search GitHub for `Ergo Auction` or `ErgoRaffle`).
+* **Ergo Explorer Backend:** ([github.com/ergoplatform/explorer-backend](https://github.com/ergoplatform/explorer-backend)) - A complex example of a full-chain indexer.
+* **DEX Bots (Grid Trading):** Projects like [Off the Grid](https://github.com/Telefragged/off-the-grid/) and [Machina Finance](../../eco/machina-finance.md) use off-chain bots to match grid trading orders with other liquidity sources.
+* **Transaction Bots:** Systems like the [Exle Tx Bot](https://exlebot.com/docs) automate transaction composition and processing for specific dApp workflows.
+* **External Trading Bots:** Tools like [HummingBot](https://hummingbot.org/) or [KuPyBot](https://github.com/FlyingPig69/KuPyBot) can potentially be adapted to interact with Ergo DEXs via their APIs (if available).
 
 ## Best Practices for Off-Chain Operations
 
-*   **Stay Informed**: Remain abreast of the latest Ergo ecosystem developments, including protocol updates and emerging off-chain earning opportunities.
-*   **Security**: Prioritize the security of your setup, particularly when managing private keys or substantial ERG quantities.
-*   **Community Engagement**: Engage with Ergo's community forums and channels to share insights and collaborate, thereby enhancing your strategies and influence.
-*   **Compliance**: Adhere to all relevant legal and regulatory requirements associated with your financial data or asset-related activities.
+* **Stay Informed**: Remain abreast of the latest Ergo ecosystem developments, including protocol updates and emerging off-chain earning opportunities.
+* **Security**: Prioritize the security of your setup, particularly when managing private keys or substantial ERG quantities.
+* **Community Engagement**: Engage with Ergo's community forums and channels to share insights and collaborate, thereby enhancing your strategies and influence.
+* **Compliance**: Adhere to all relevant legal and regulatory requirements associated with your financial data or asset-related activities.
 
 ## Resources
 
-*   **SDKs:** [Fleet SDK](fleet.md), [Sigma-Rust](sigma-rust.md), [Appkit](appkit.md)
-*   **EIPs:** [EIP-0012 (dApp Connector)](../wallet/eip-standards.md), [EIP-0020 (ErgoPay)](../wallet/payments/ergopay/ergo-pay.md), [Official EIP Repo](https://github.com/ergoplatform/eips)
-*   **Indexing:** [Indexing Guide](../tutorials/blockchain-indexing.md), [Ergo Scanner](https://github.com/ergoplatform/scanner)
-*   **Node API:** [Swagger UI](swagger.md)
-*   **Community:** [Ergo Discord](https://discord.gg/ergo-platform-668903786361651200) (`#development`, `#sigmastate`, `#appkit`, `#fleet` channels), [Ergo Forum](https://www.ergoforum.org/)
+* **SDKs:** [Fleet SDK](fleet.md), [Sigma-Rust](sigma-rust.md), [Appkit](appkit.md)
+* **EIPs:** [EIP-0012 (dApp Connector)](../wallet/eip-standards.md), [EIP-0020 (ErgoPay)](../wallet/payments/ergopay/ergo-pay.md), [Official EIP Repo](https://github.com/ergoplatform/eips)
+* **Indexing:** [Indexing Guide](../tutorials/blockchain-indexing.md), [Ergo Scanner](https://github.com/ergoplatform/scanner)
+* **Node API:** [Swagger UI](swagger.md)
+* **Community:** [Ergo Discord](https://discord.gg/ergo-platform-668903786361651200) (`#development`, `#sigmastate`, `#appkit`, `#fleet` channels), [Ergo Forum](https://www.ergoforum.org/)
 
 ## Updated Architecture Diagram (Conceptual)
 

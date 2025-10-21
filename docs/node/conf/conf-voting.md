@@ -8,9 +8,11 @@ tags:
 The `voting` configuration is an important part of the system, allowing a node to propose changes to the network or vote on existing proposals. This can include soft-forks or the deactivation of specific rules.
 
 ## Rules to Disable
+
 ```bash
 "rulesToDisable" = []
 ```
+
 This configuration allows specifying an array of rule identifiers that you would like to propose for deactivation with a soft-fork. If you are not proposing any rules for deactivation, this can be left as an empty array.
 
 For example, if you want to propose the deactivation of the storage fee factor, you would list its ID here.

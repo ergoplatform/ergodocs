@@ -5,8 +5,8 @@
 ## Direct Comparison
 
 ### Advantages over MakerDAO
+>
 > **No liquidations!**
-
 
 Unlike Ethereum-based crypto-backed stablecoins, such as DAI, Emurgo introduces a Staticoin protocol-inspired design that does not rely on CDPs (Collateralized Debt Positions). The reason for this is the vulnerability of CDP-based protocols in terms of high volatility and blockchain congestion. As Emurgo states, "Black Thursday," when MakerDAO CDPs were triggered for liquidation due to volatility and then sold for $0 due to blockchain congestion that prevented others from bidding, demonstrated that a new design is needed. For SigmaUSD, this scenario is not possible.
 
@@ -14,38 +14,35 @@ Unlike Ethereum-based crypto-backed stablecoins, such as DAI, Emurgo introduces 
 
 SigUSD is over-collateralised; every sigusd is backed by 3$ currently. Everyone can see that there is money in the bank, which stops a bank's run at its inception. The breaking point of the peg is explicit and open for anyone to see. With UST, you have no idea, which gives you an incentive to get out first.
 
+- Luna supply depends on terra usage; Ergo does not. Burning luna when the trend is up pumps its price. However, the luna price will dump harder when the trend is down because more luna is printed.
 
-- Luna supply depends on terra usage; Ergo does not. Burning luna when the trend is up pumps its price. However, the luna price will dump harder when the trend is down because more luna is printed. 
-
-- collateral ratio for sigusd is higher. This means that the capital efficiency (less collateral tied for each stablecoin) is better for terra, which is why luna/terra can offer a better yield. 
+- collateral ratio for sigusd is higher. This means that the capital efficiency (less collateral tied for each stablecoin) is better for terra, which is why luna/terra can offer a better yield.
 
 However, this means luna/terra needs an additional mechanism to ensure stability. When collateral (luna) value drops, someone needs to stabilise it. Those people are incentivised with promises of larger profits in the future. This assumes that people will always believe that the protocol survives the crash. No one knows at which price point luna the trust disappears. This creates a seed for a bank run. Everyone wants to take their stablecoin out faster than others if there is any doubt.
 
 In contrast, sigusd shows explicitly when the peg will be lost. No one needs to guess how long the protocol can last.
 
-
 ## Overview
 
 ### **Fiat-Collateralized**
 
-#### Tether 
+#### Tether
 
 Best for liquidity, accepted on almost all crypto exchanges.
 
 > A fiat-pegged stablecoin built on top of Bitcoin via the Omni Layer Protocol. Each Tether issued into circulation is said to be backed by a one-to-one ratio with the equivalent amount of fiat currency held in a custodial account by Hong Kong-based Tether Limited.
 
-#### US Dollar Coin ($USDC) 
+#### US Dollar Coin ($USDC)
 
 (Coinbase) Issued and managed by a trusted party, has a considerable market cap
 
->  Fully collateralized US dollar ERC20 tokens founded by CENTRE,  a joint venture founded by Circle and Coinbase. USDC is an open-source project which operates within US money transmission laws. The project uses established banks and auditors while leveraging Ethereum-based smart contracts.
-
+> Fully collateralized US dollar ERC20 tokens founded by CENTRE,  a joint venture founded by Circle and Coinbase. USDC is an open-source project which operates within US money transmission laws. The project uses established banks and auditors while leveraging Ethereum-based smart contracts.
 
 #### True USD
 
->  A USD-backed ERC20 stablecoin that is fully collateralized, legally protected, and transparently verified by third-party attestations. TrueUSD uses multiple escrow accounts to reduce counterparty risk and to provide token-holders with legal protections against misappropriation. TrueUSD is the first asset token built on the TrustToken platform.
+> A USD-backed ERC20 stablecoin that is fully collateralized, legally protected, and transparently verified by third-party attestations. TrueUSD uses multiple escrow accounts to reduce counterparty risk and to provide token-holders with legal protections against misappropriation. TrueUSD is the first asset token built on the TrustToken platform.
 
-#### Paxos Standard 
+#### Paxos Standard
 
 > Backed one-to-one by USD deposits and available through Paxos. PAX is available one-to-one in exchange for USD and redeemable one-to-one for USD. Upon redemption, PAX tokens are immediately removed from the supply; PAX are only in existence when the corresponding dollars are in custody.
 
@@ -71,7 +68,6 @@ Best for liquidity, accepted on almost all crypto exchanges.
 
 - [Warning on Reddit](https://www.reddit.com/r/CryptoMoonShots/comments/knzgct/warning_about_reserve_protocol_stay_away_from_rsr/)
 
-
 #### **FRAX** (USDC)
 
 [Backed by USDC](https://support.usdc.circle.com/hc/en-us/articles/360016060352-Can-a-customer-send-USDC-tokens-to-any-address-Can-addresses-be-blacklisted-)
@@ -88,7 +84,7 @@ Best for liquidity, accepted on almost all crypto exchanges.
 
 Generally regarded as the '*best*' algorithmic stablecoin
 
-Advantage SigmaUSD has over **MakerDAO** : 
+Advantage SigmaUSD has over **MakerDAO** :
 
 - No liquidation on price-spike
 - Unlike Ethereum-based crypto-backed stablecoins, such as DAI, Emurgo introduces a Staticoin protocol-inspired design that does not rely on CDPs (Collateralized Debt Positions). The reason for this is the vulnerability of CDP-based protocols in terms of high volatility and blockchain congestion.As Emurgo states, “Black Thursday,” when MakerDAO CDPs were triggered for liquidation due to volatility and then sold for $0 due to blockchain congestion that prevented others from bidding, demonstrated that a new design is needed. For AgeUSD, this scenario is not possible.
@@ -107,10 +103,9 @@ Advantage SigmaUSD has over **MakerDAO** :
 
 > PCV helps in maintaining the peg by managing liquidity on exchanges like Uniswap. With the limitations on sell-side liquidity, FEI is one of the best algorithmic stablecoins for avoiding the ‘death spiral’ scenario. The FEI protocol leverages its TRIBE token for enabling holders to determine the following aspects of governance,
 
-
 #### **Equilibrium ($EOSDT)**
 
-Decentralized stablecoin on the EOS blockchain (PoS). 
+Decentralized stablecoin on the EOS blockchain (PoS).
 
 #### **Synthetix ($sUSD)**
 
@@ -131,14 +126,14 @@ TerraUSD (UST) is a stablecoin built on the Terra blockchain. Following a succes
 
 #### xUSD (Haven/XHR)
 
-- https://havenprotocol.org/2021/01/25/spotlight-on-xusd/
-- https://havenprotocol.medium.com/why-haven-protocols-xhv-offshore-storage-is-the-best-crypto-stable-coin-storage-solution-61f118129784
+- <https://havenprotocol.org/2021/01/25/spotlight-on-xusd/>
+- <https://havenprotocol.medium.com/why-haven-protocols-xhv-offshore-storage-is-the-best-crypto-stable-coin-storage-solution-61f118129784>
 
 #### DexyUSD
 
 ### Gold-Backed
 
-https://www.stablecoinswar.com/gold-stable-coins.php
+<https://www.stablecoinswar.com/gold-stable-coins.php>
 
 #### Digital Gold (GOLD)
 
@@ -157,12 +152,12 @@ https://www.stablecoinswar.com/gold-stable-coins.php
 #### algorithmic
 
 - non-custodial
-   - Implicit Collateral
-   - Endogenous Collateral
-   - Exogenous Collaterol
+  - Implicit Collateral
+  - Endogenous Collateral
+  - Exogenous Collaterol
 - custodial
-   - Reserve Fund
-   - Fractional Reserve Fund
-      - Money Market Fund
-      - Bank Fund
-   - Central Bank
+  - Reserve Fund
+  - Fractional Reserve Fund
+    - Money Market Fund
+    - Bank Fund
+  - Central Bank

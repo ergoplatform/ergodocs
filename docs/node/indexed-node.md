@@ -13,21 +13,15 @@ An indexed Ergo node provides an enhanced set of API endpoints (beyond the stand
 
 A public instance of an indexed node's API explorer (Swagger UI) is available [here](http://128.253.41.49:9053/swagger). The base path for all indexed API endpoints described below is `/blockchain`.
 
-
 /// admonition | Disclaimer
 Please note that this is a public instance intended for exploration and testing. For production use or heavy querying, you should host your own instance of an [Ergo node](install.md) and enable indexing by setting `ergo.node.extraIndex = true` in the node's configuration file.
 ///
-
-
-
-
 
 ## Methods
 
 ### GET /blockchain/indexedHeight
 
 Retrieves the current block height up to which the node's indexer has processed the blockchain.
-
 
 **Request:**
 
@@ -46,7 +40,6 @@ GET /indexedHeight
 ### GET /blockchain/transaction/byId/{txId}
 
 Retrieves details of a specific transaction by its ID.
-
 
 **Request:**
 
@@ -83,8 +76,6 @@ GET /transaction/byId/123abc
 
 Retrieves details of a specific transaction by its global index number (sequential order in the blockchain).
 
-
-
 **Request:**
 
 ```
@@ -119,8 +110,6 @@ GET /transaction/byIndex/1234
 ### POST /blockchain/transaction/byAddress
 
 Retrieves a list of transactions associated with a given address (either as input or output). Requires the address in the request body.
-
-
 
 **Request:**
 
@@ -186,8 +175,6 @@ Content-Type: application/json
 
 Retrieves a list of transaction IDs within a specified global index range (`start` and `end` query parameters).
 
-
-
 **Request:**
 
 ```
@@ -195,8 +182,6 @@ GET /transaction/range?start=0&end=100
 ```
 
 **Response:**
-
-
 
 ```json
 {
@@ -207,8 +192,6 @@ GET /transaction/range?start=0&end=100
 ### GET /blockchain/box/byId/{boxId}
 
 Retrieves details of a specific box by its ID.
-
-
 
 **Request:**
 
@@ -231,8 +214,6 @@ GET /box/byId/abc123
 
 Retrieves details of a specific box by its global index number.
 
-
-
 **Request:**
 
 ```
@@ -253,8 +234,6 @@ GET /box/byIndex/1234
 ### POST /blockchain/box/byAddress
 
 Retrieves a list of boxes associated with a given address. Requires the address in the request body.
-
-
 
 **Request:**
 
@@ -292,8 +271,6 @@ Content-Type: application/json
 
 Retrieves a list of *unspent* boxes associated with a given address. Requires the address in the request body.
 
-
-
 **Request:**
 
 ```
@@ -330,8 +307,6 @@ Content-Type: application/json
 
 Retrieves a list of box IDs within a specified global index range (`start` and `end` query parameters).
 
-
-
 **Request:**
 
 ```
@@ -349,8 +324,6 @@ GET /box/range?start=0&end=100
 ### POST /blockchain/box/byErgoTree
 
 Retrieves a list of boxes protected by a specific ErgoTree script (provided in hex format in the request body).
-
-
 
 **Request:**
 
@@ -390,8 +363,6 @@ Content-Type: application/json
 
 Retrieves a list of *unspent* boxes protected by a specific ErgoTree script (provided in hex format in the request body).
 
-
-
 **Request:**
 
 ```
@@ -428,8 +399,6 @@ Content-Type: application/json
 
 Retrieves information about a specific token (name, description, decimals, etc.) by its ID. Note that the token ID is the ID of the first input box in the token issuance transaction.
 
-
-
 **Request:**
 
 ```
@@ -453,8 +422,6 @@ GET /token/byId/123abc
 
 Retrieves the confirmed and unconfirmed ERG and token balances for a given address (provided in the request body).
 
-
-
 **Request:**
 
 ```
@@ -477,5 +444,4 @@ Content-Type: application/json
 
 This documentation covers the indexed API methods provided by an Ergo node with `extraIndex = true`. You can use these endpoints to efficiently query blockchain data and build applications on top of Ergo.
 
-
-An example explorer utilizing these indexed endpoints can be found here: https://github.com/Luivatra/indexed-node-explorer
+An example explorer utilizing these indexed endpoints can be found here: <https://github.com/Luivatra/indexed-node-explorer>
