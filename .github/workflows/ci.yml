@@ -14,7 +14,6 @@ env:
 
 jobs:
   deploy:
-    name: Deploy and verify live site
     runs-on: ubuntu-latest
 
     steps:
@@ -27,130 +26,159 @@ jobs:
           key: ${{ secrets.DEPLOY_KEY }}
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
 
-      - name: 🚀 Deploy to ${{ env.SSH_USER }}@${{ env.SSH_HOST }}
+      - name: 🚀 Remote build & atomic deploy
         shell: bash
         run: |
-          set -Eeuo pipefail
-          echo "📂 Confirm project dir"
-          ssh "$SSH_USER@$SSH_HOST" 'test -d "'"$PROJECT_DIR"'" && echo "OK: $PROJECT_DIR exists" || { echo "❌ $PROJECT_DIR missing"; exit 1; }'
-
-          echo "🔧 Toolchain"
-          ssh "$SSH_USER@$SSH_HOST" <<'EOF'
+          # Pass env into remote, keep heredoc literal for safety
+          ssh "$SSH_USER@$SSH_HOST" \
+            "PROJECT_DIR='${PROJECT_DIR}' DOMAIN='${DOMAIN}' JUPYTER_PLATFORM_DIRS='${JUPYTER_PLATFORM_DIRS}' bash -s" <<'EOF'
             set -Eeuo pipefail
+
+            echo "📂 cd to project dir"
+            : "${PROJECT_DIR:?PROJECT_DIR is required}"
             cd "$PROJECT_DIR"
 
-            echo "🔄 Git pull"
-            git stash --include-untracked || true
+            echo "🔧 Toolchain"
+            command -v mkdocs || true
+            mkdocs --version || true
+
+            echo "🔄 Git pull (stash if needed)"
+            git stash || true
             git pull --ff-only
 
-            echo "🐍 venv"
-            if [ -x .venv/bin/python ]; then
-              . .venv/bin/activate
+            echo "🐍 Choose Python & create venv"
+            PYBIN="$(command -v python3.11 || command -v python3.10 || command -v python3)"
+            echo "Using Python at: $PYBIN"
+            "$PYBIN" -m venv .venv
+            source .venv/bin/activate
+
+            echo "📦 Install deps (no fail on warnings later)"
+            python -m pip install -U pip
+            # If requirements.txt present, use it; otherwise install a safe minimal set
+            if [ -f requirements.txt ]; then
+              python -m pip install -r requirements.txt
             else
-              apt update -y && apt install -y python3-venv
-              python3 -m venv .venv
-              . .venv/bin/activate
+              python -m pip install mkdocs mkdocs-material
             fi
 
-            echo "📦 deps (no strict pins)"
-            python -m pip install -U pip
-            python -m pip install -r requirements.txt || true
-            # Ensure critical plugins exist even if requirements missed them
-            python -m pip install -U mkdocs mkdocs-material neoteroi-mkdocs mkdocs-section-index mkdocs-autolinks-plugin mkdocs-rss-plugin mkdocs-glightbox mkdocs-render-swagger-plugin mkdocs-jupyter mkdocs-git-revision-date-localized-plugin
+            # Silence the Jupyter path deprecation
+            export JUPYTER_PLATFORM_DIRS="${JUPYTER_PLATFORM_DIRS}"
 
-            echo "🧹 Clean old build"
+            echo "🧹 Clean old build dir"
             rm -rf site || true
 
-            echo "🏗 mkdocs build (warnings allowed)"
-            # DO NOT use --strict; warnings must not fail deploy
-            mkdocs build
+            echo "🏗 mkdocs build (no strict, so warnings won't fail)"
+            mkdocs build --no-strict
 
-            echo "🔁 Atomic symlink swap to site_live"
-            # Build output is ./site; swap symlink atomically to avoid half-deployed state
-            TS="$(date +%Y%m%d%H%M%S)"
-            rm -rf "site_prev" || true
-            if [ -L site_live ]; then
-              mv -T site_live "site_prev" || true
+            echo "🔁 Atomic deploy to site_live"
+            # Prepare a new staged dir
+            rm -rf site_new
+            mkdir -p site_new
+            rsync -a --delete site/ site_new/
+
+            # Flip the live directory atomically
+            rm -rf site_live_prev || true
+            if [ -d site_live ]; then
+              mv site_live site_live_prev
             fi
-            ln -sfn "$PWD/site" site_live
-            chown -h caddy:caddy site_live || true
-            chown -R caddy:caddy site/ || true
+            mv site_new site_live
 
-            echo "👀 List some paths"
-            ls -lah | sed -n '1,80p'
-            echo "—— site_live head ——"
-            find site_live -maxdepth 2 -type f -name index.html | head -n 5 | xargs -I{} sh -c 'echo ">>> {}" ; stat -c "%y %n" "{}" 2>/dev/null || stat "{}" ; head -n 20 "{}" | sed "s/^/    /" ; echo'
+            # Fix ownership for either www-data or caddy, ignore failures
+            chown -R www-data:www-data site_live || true
+            chown -R caddy:caddy site_live || true
 
-            echo "🧪 Local origin curl (bypass Cloudflare)"
-            # HTTP direct
-            curl -sS -D - -o /tmp/home_http.html -H "Host: ${DOMAIN}" http://127.0.0.1/ | sed -n '1,15p' || true
-            echo "--- http size ---"
-            wc -c /tmp/home_http.html || true
-            # HTTPS direct (SNI/resolve to loopback; -k in case of origin cert)
-            curl -sS -k -D - -o /tmp/home_https.html --resolve "${DOMAIN}:443:127.0.0.1" "https://${DOMAIN}/" | sed -n '1,20p' || true
-            echo "--- https size ---"
-            wc -c /tmp/home_https.html || true
-          EOF
+            # Keep a simple deploy marker
+            date -u +"%Y-%m-%dT%H:%M:%SZ" > site_live/.deployed-at
+
+            echo "🧪 Nginx config test & reload (if present)"
+            if command -v nginx >/dev/null 2>&1; then
+              nginx -t
+              systemctl reload nginx || systemctl restart nginx || true
+            fi
+
+            echo "🗒 Tail last error/access logs if they exist"
+            if [ -f /var/log/nginx/error.log ]; then
+              echo "--- /var/log/nginx/error.log (tail -n 80) ---"
+              tail -n 80 /var/log/nginx/error.log || true
+            fi
+            if [ -f /var/log/nginx/access.log ]; then
+              echo "--- /var/log/nginx/access.log (tail -n 20) ---"
+              tail -n 20 /var/log/nginx/access.log || true
+            fi
+
+            echo "👀 Sanity list a few live paths"
+            find "$PROJECT_DIR/site_live" -maxdepth 2 -type d | head -n 20 || true
+
+            echo "✅ Remote deploy finished"
+
 
       - name: 🔍 Recently updated files on server
         shell: bash
         run: |
-          ssh "$SSH_USER@$SSH_HOST" "find '$PROJECT_DIR/site' -type f -printf '🕒 %TY-%Tm-%Td %TH:%TM:%TS %p\n' | sort -r | head -n 12 || true"
+          ssh "$SSH_USER@$SSH_HOST" "find '$PROJECT_DIR/site_live' -type f -printf '🕒 %TY-%Tm-%Td %TH:%TM:%TS %p\n' | sort -r | head -n 12 || true"
 
-      - name: 🌐 External smoke tests (through Cloudflare)
+      - name: 🌐 Live HTTP smoke tests (no cache)
         shell: bash
-        continue-on-error: true
         run: |
           set -Eeuo pipefail
           BASE="https://${DOMAIN}"
+
           echo "🔎 Fetch live homepage HTML"
-          # Smaller timeouts to fail fast if origin is stalling behind CF
-          curl -fsS --max-time 20 --connect-timeout 5 -H 'Cache-Control: no-cache' "$BASE/" > /tmp/home.html || { echo "❌ curl failed (likely 52x from CF)"; exit 1; }
-          grep -q "</html>" /tmp/home.html || { echo "❌ Live HTML incomplete"; exit 1; }
+          curl -fsS -H 'Cache-Control: no-cache' "$BASE/" > /tmp/home.html || {
+            echo "❌ Failed to fetch home page (origin/Cloudflare issue?)"
+            exit 1
+          }
+
+          # Check HTML closed properly
+          if ! grep -q "</html>" /tmp/home.html; then
+            echo "❌ Live HTML incomplete"
+            echo "---- First 50 lines of homepage ----"
+            head -n 50 /tmp/home.html || true
+            exit 1
+          fi
 
           echo "🔎 Extract asset URLs from live HTML"
-          LIVE_JS=$(grep -o 'assets/javascripts/[^"]*' /tmp/home.html | sort -u)
-          LIVE_CSS=$(grep -o 'assets/stylesheets/[^"]*' /tmp/home.html | sort -u)
+          LIVE_JS=$(grep -o 'assets/javascripts/[^"]*' /tmp/home.html | sort -u || true)
+          LIVE_CSS=$(grep -o 'assets/stylesheets/[^"]*' /tmp/home.html | sort -u || true)
 
           echo "✅ Check each asset returns 200"
           FAIL=0
           for f in $LIVE_JS $LIVE_CSS; do
             url="$BASE/$f"
-            code=$(curl -s -m 15 --connect-timeout 5 -o /dev/null -w "%{http_code}" "$url" || echo "000")
+            code=$(curl -s -o /dev/null -w "%{http_code}" "$url")
             echo "$code $url"
             [ "$code" = "200" ] || FAIL=1
           done
           if [ "$FAIL" -ne 0 ]; then
-            echo "❌ One or more assets failed to serve 200 (possible blank page)"
+            echo "❌ One or more assets failed (blank page symptom)."
+            echo "Response headers for /:"
+            curl -I "$BASE/" || true
             exit 1
           fi
 
           echo "🧪 Smoke-check a content page"
-          curl -fsS --max-time 20 --connect-timeout 5 -H 'Cache-Control: no-cache' "$BASE/faq/" | grep -q "</html>" || { echo "❌ FAQ page did not return valid HTML"; exit 1; }
+          curl -fsS -H 'Cache-Control: no-cache' "$BASE/faq/" | grep -q "</html>" || {
+            echo "❌ FAQ page did not return valid HTML"
+            curl -I "$BASE/faq/" || true
+            exit 1
+          }
 
-      - name: 🧾 Dump origin logs if checks failed (nginx & systemd)
-        if: always()
+      - name: 🧾 Pull last Nginx logs (remote) when HTTP checks fail
+        if: failure()
         shell: bash
         run: |
-          echo "📜 Tail nginx logs (access & error)"
-          ssh "$SSH_USER@$SSH_HOST" "sudo tail -n 200 /var/log/nginx/access.log || true"
-          ssh "$SSH_USER@$SSH_HOST" "sudo tail -n 200 /var/log/nginx/error.log || true"
+          ssh "$SSH_USER@$SSH_HOST" '
+            echo "--- /var/log/nginx/error.log (tail -n 120) ---"
+            tail -n 120 /var/log/nginx/error.log || true
+            echo "--- /var/log/nginx/access.log (tail -n 40) ---"
+            tail -n 40 /var/log/nginx/access.log || true
 
-          echo "🧾 journalctl nginx"
-          ssh "$SSH_USER@$SSH_HOST" "sudo journalctl -u nginx -n 200 --no-pager || true"
+            echo "🔎 Active server blocks mentioning ${DOMAIN}"
+            if command -v nginx >/dev/null 2>&1; then
+              nginx -T 2>/dev/null | grep -n "${DOMAIN}" -n -C2 || true
+            fi
 
-          echo "🧪 sockets"
-          ssh "$SSH_USER@$SSH_HOST" "sudo ss -ltnp | egrep ':80|:443' || true"
-
-          echo "📄 active server blocks mentioning ${DOMAIN}"
-          ssh "$SSH_USER@$SSH_HOST" "sudo nginx -T 2>&1 | awk '/server_name/{print NR\":\"\$0} /root|alias|location|listen|return 301|proxy_pass/{print NR\":\"\$0}' | grep -C2 '${DOMAIN}' || true"
-
-          echo "🧪 direct origin (again) with headers"
-          ssh "$SSH_USER@$SSH_HOST" "curl -sS -D - -o /dev/null -H 'Host: ${DOMAIN}' http://127.0.0.1/ || true"
-          ssh "$SSH_USER@$SSH_HOST" "curl -sS -k -D - -o /dev/null --resolve '${DOMAIN}:443:127.0.0.1' https://${DOMAIN}/ || true"
-
-      - name: ❌ Fail if external smoke tests failed
-        if: steps['External smoke tests (through Cloudflare)'].outcome == 'failure'
-        run: |
-          echo "External smoke tests failed (likely Cloudflare 524). See logs above."
-          exit 1
+            echo "🔎 Free -m / top summary"
+            free -m || true
+            ps axo stat,ppid,pid,cmd | awk '"'"'$1 ~ /Z/ {print $0}'"'"' | head -n 20 || true
+          '
