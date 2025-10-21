@@ -11,8 +11,7 @@ env:
   SSH_HOST: 213.239.193.208
   DOMAIN: docs.ergoplatform.com
   PROJECT_DIR: /var/www/ergodocs
-  PYTHON: python3.11
-  JUPYTER_PLATFORM_DIRS: "1"
+  JUPYTER_PLATFORM_DIRS: "1"   # silence jupyter notice in logs
 
 jobs:
   build:
@@ -109,20 +108,18 @@ jobs:
           SSH_USER: ${{ env.SSH_USER }}
           SSH_HOST: ${{ env.SSH_HOST }}
           PROJECT_DIR: ${{ env.PROJECT_DIR }}
-          PYTHON: ${{ env.PYTHON }}
           DOMAIN: ${{ env.DOMAIN }}
           JUPYTER_PLATFORM_DIRS: ${{ env.JUPYTER_PLATFORM_DIRS }}
         run: |
           set -Eeuo pipefail
           echo "🚀 Deploy to $SSH_USER@$SSH_HOST ..."
-          # Inject env into the remote process so set -u never sees undefined vars
+          # Pass env into remote shell so set -u does not fail
           ssh "$SSH_USER@$SSH_HOST" \
-            "PROJECT_DIR='$PROJECT_DIR' PYTHON='$PYTHON' DOMAIN='$DOMAIN' JUPYTER_PLATFORM_DIRS='${JUPYTER_PLATFORM_DIRS:-1}' bash -s" <<'REMOTE'
+            "PROJECT_DIR='$PROJECT_DIR' DOMAIN='$DOMAIN' JUPYTER_PLATFORM_DIRS='${JUPYTER_PLATFORM_DIRS:-1}' bash -s" <<'REMOTE'
             set -Eeuo pipefail
 
             echo "🔎 Effective env"
             echo "PROJECT_DIR=$PROJECT_DIR"
-            echo "PYTHON=$PYTHON"
             echo "DOMAIN=$DOMAIN"
             echo "JUPYTER_PLATFORM_DIRS=$JUPYTER_PLATFORM_DIRS"
 
@@ -132,18 +129,29 @@ jobs:
             echo "🗂 ls -la"
             ls -la
 
-            echo "🔧 Toolchain"
-            which mkdocs || true
-            mkdocs --version || true
-            which "$PYTHON" || true
-            "$PYTHON" --version || true
+            echo "🔧 Pick Python"
+            PY_CMD=""
+            for c in python3.12 python3.11 python3.10 python3; do
+              if command -v "$c" >/dev/null 2>&1; then PY_CMD="$c"; break; fi
+            done
+            if [ -z "$PY_CMD" ]; then
+              echo "❌ No python3 found"; exit 1
+            fi
+            echo "Using \$PY_CMD=$PY_CMD"
+            "$PY_CMD" --version || true
+
+            echo "🧰 Ensure venv support"
+            if ! "$PY_CMD" -m venv --help >/dev/null 2>&1; then
+              apt update -y
+              apt install -y python3-venv
+            fi
 
             echo "🔄 Git pull"
             git stash --include-untracked || true
             git pull --rebase
 
-            echo "🐍 venv"
-            "$PYTHON" -m venv .venv
+            echo "🐍 venv under project"
+            "$PY_CMD" -m venv .venv
             source .venv/bin/activate
             python -m pip install -U pip
             python -m pip install -r requirements.txt
@@ -151,7 +159,12 @@ jobs:
             echo "🧼 Clean old build dir"
             rm -rf site || true
 
-            echo "🏗 mkdocs build -v"
+            echo "🔧 Use venv mkdocs"
+            export PATH="$PROJECT_DIR/.venv/bin:$PATH"
+            which mkdocs || true
+            mkdocs --version || true
+
+            echo "🏗 mkdocs build -v (from venv)"
             mkdocs build -v
 
             echo "🔁 Atomic swap to site_live"
@@ -202,6 +215,7 @@ jobs:
             curl -s -I http://127.0.0.1/ | sed -n '1,20p' || true
             echo "🔍 Top of built /index.html"
             test -f site_live/index.html && head -n 5 site_live/index.html || true
+
 
       - name: Verify Remote Site Files
         shell: bash
