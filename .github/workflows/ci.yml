@@ -11,7 +11,7 @@ env:
   SSH_HOST: 213.239.193.208
   DOMAIN: docs.ergoplatform.com
   PROJECT_DIR: /var/www/ergodocs
-  JUPYTER_PLATFORM_DIRS: "1"   # silence jupyter notice in logs
+  JUPYTER_PLATFORM_DIRS: "1"
 
 jobs:
   build:
@@ -113,7 +113,6 @@ jobs:
         run: |
           set -Eeuo pipefail
           echo "🚀 Deploy to $SSH_USER@$SSH_HOST ..."
-          # Pass env into remote shell so set -u does not fail
           ssh "$SSH_USER@$SSH_HOST" \
             "PROJECT_DIR='$PROJECT_DIR' DOMAIN='$DOMAIN' JUPYTER_PLATFORM_DIRS='${JUPYTER_PLATFORM_DIRS:-1}' bash -s" <<'REMOTE'
             set -Eeuo pipefail
@@ -176,13 +175,14 @@ jobs:
 
             echo "👀 Path sanity"
             echo "site symlink -> $(readlink -f site || true)"
-            find site_live -maxdepth 2 -type d -printf "%p\n" | head -n 20
+            # Avoid SIGPIPE on head (exit 141) under 'set -o pipefail'
+            { find site_live -maxdepth 2 -type d -printf "%p\n" | head -n 20; } || true
 
             echo "🔑 Ownership and perms"
             id || true
             if id www-data >/dev/null 2>&1; then chown -R www-data:www-data site_live || true; fi
             if id caddy >/dev/null 2>&1; then chown -R caddy:caddy site_live || true; fi
-            find site_live -maxdepth 2 -type d -printf "%M %u:%g %p\n" | head -n 10
+            { find site_live -maxdepth 2 -type d -printf "%M %u:%g %p\n" | head -n 10; } || true
 
             echo "🧩 Web server detection"
             if command -v nginx >/dev/null 2>&1; then
@@ -191,7 +191,7 @@ jobs:
               echo "🧪 nginx -t"
               nginx -t || { echo "❌ nginx -t failed"; exit 1; }
               echo "📄 nginx -T (first 200 lines)"
-              nginx -T | sed -n '1,200p'
+              nginx -T | sed -n '1,200p' || true
               echo "🔎 server block grep for $DOMAIN"
               nginx -T | grep -A3 -B3 -n "server_name.*$DOMAIN" || true
               echo "🔁 Reload Nginx"
@@ -202,7 +202,7 @@ jobs:
               echo "🌐 Caddy present"
               caddy version || true
               echo "📄 Caddyfile (first 200 lines)"
-              if [ -f /etc/caddy/Caddyfile ]; then sed -n '1,200p' /etc/caddy/Caddyfile; fi
+              if [ -f /etc/caddy/Caddyfile ]; then sed -n '1,200p' /etc/caddy/Caddyfile || true; fi
               echo "🔁 Reload Caddy"
               systemctl reload caddy || true
               echo "🗒 caddy status (tail)"
