@@ -176,6 +176,9 @@ nav:
           - Yield Farming: tutorials/yield.md
           - Lending Pools: tutorials/lending-pools.md
           - Arbitrage: tutorials/arb.md
+          - Airdrops Tutorial: tutorials/airdrops.md
+          - One Stop Shop Tutorial: tutorials/one-stop-shop.md
+          - Trading Options Tutorial: tutorials/trading-options.md
       - Ecosystem:
           - Bridges & Infrastructure:
               - Rosen Bridge:
@@ -235,12 +238,19 @@ nav:
                       - Basic Implementation: uses/lets/basic-imp.md
                       - Trustless LETS: uses/lets/trustless-lets.md
                       - Trustless LETS (Draft): uses/trustless-lets_d.md
+                  - CBDC: uses/cbdc.md
               - Decentralized Finance:
                   - Lending Overview: uses/lending.md
                   - Lending Pools Tutorial: tutorials/lending-pools.md
                   - duckpools: eco/duckpools.md
                   - EXLE: eco/exle.md
                   - SigmaFi: eco/sigmafi.md
+                  - Profit Sharing: uses/profit.md
+                  - Flash Loans: uses/flash-loans.md
+                  - Prediction Markets: uses/prediction_markets.md
+                  - Insurance: uses/insurance.md
+                  - Micro Credit: dev/scs/microcredit.md
+                  - Mutual Credit: uses/mutual_credit.md
                   - Derivatives and Synthetics:
                       - uses/deriv.md
                       - Financial Options: uses/financial-options.md
@@ -250,6 +260,7 @@ nav:
                       - OptionCoin: eco/optioncoin.md
                       - OptionPools: eco/optionPools.md
                       - SigmaO: eco/sigmao.md
+                      - Bonding Curve: uses/bonding.md
                   - Crowdfunding:
                       - uses/crowdfunding.md
                       - ErgoRaffle: eco/ergoraffle.md
@@ -261,6 +272,12 @@ nav:
                   - Obolflip: eco/obolflip.md
                   - Lotteries: uses/lottery.md
                   - The Field: eco/the-field.md
+              - Token Concepts:
+                  - ICOs: uses/ergo-ico.md
+                  - Index Coins: uses/index_coins.md
+                  - PoW Tokens: uses/PoW_tokens.md
+                  - Perpetual Tokens: dev/tokens/perpetual.md
+                  - Buy Back Guarantees: uses/dex-buyback.md
           - NFTs & Gaming:
               - NFTs Overview: uses/nft.md
               - ErgoAuctionHouse: eco/ergo-auctions.md
@@ -271,6 +288,7 @@ nav:
                   - BlitzTCG: eco/blitz.md
                   - Cyberverse: eco/cyberverse.md
                   - Gaming Tutorial: tutorials/gaming-tutorial.md
+                  - Metaverse: uses/metaverse.md
           - Applications & Utilities:
               - Crux Finance: eco/crux.md
               - ErgoNames: eco/ergonames.md
@@ -306,7 +324,9 @@ nav:
                   - ErgoWell: eco/ergowell.md
                   - Game of Prompts: eco/game-of-prompts.md
                   - Mempool Visualizer: eco/mempool-vis.md
-
+                  - GitCircles: gitcircles.md
+                  - Email Client for Blocked Internet: uses/blocked_web.md
+                  - ErgoData: uses/ErgoData.md
                   - MonsterPub: eco/monsterpub.md
                   - NightOwl: eco/nightowl.md
                   - OnErgo: eco/onergo.md
@@ -344,33 +364,11 @@ nav:
               - Lithos: eco/lithos.md
               - GuapSwap: eco/guapswap.md
               - CYTI: eco/cyti.md
+              - Collateral Mining: uses/collateral-mining.md
           - Further Ideas & Research:
               - Artificial Intelligence: ai.md
-              - Airdrops Tutorial: tutorials/airdrops.md
-              - Profit Sharing: uses/profit.md
-              - Email Client for Blocked Internet: uses/blocked_web.md
-              - Flash Loans: uses/flash-loans.md
-              - Prediction Markets: uses/prediction_markets.md
-              - Insurance: uses/insurance.md
-              - Micro Credit: dev/scs/microcredit.md
-              - Mutual Credit: uses/mutual_credit.md
-              - Bonding Curve: uses/bonding.md
-              - CBDC: uses/cbdc.md
-              - Collateral Mining: uses/collateral-mining.md
               - Context Claims: uses/context-claims.md
-              - ErgoData: uses/ErgoData.md
-              - Metaverse: uses/metaverse.md
               - Sentient Chain: uses/sentientchain.md
-              - One Stop Shop Tutorial: tutorials/one-stop-shop.md
-              - Trading Options Tutorial: tutorials/trading-options.md
-              - Yield Farming Tutorial: tutorials/yield.md
-              - Arbitrage Tutorial: tutorials/arb.md
-              - Token Concepts:
-                  - ICOs: uses/ergo-ico.md
-                  - Index Coins: uses/index_coins.md
-                  - PoW Tokens: uses/PoW_tokens.md
-                  - Perpetual Tokens: dev/tokens/perpetual.md
-                  - Buy Back Guarantees: uses/dex-buyback.md
   - Learn:
       - Overview: dev/protocol/protocol-overview.md
       - Why Ergo: dev/protocol/why.md
@@ -568,6 +566,7 @@ nav:
               - Create a P2S Address: tutorials/create-a-p2s.md
               - Multi-Signature: dev/scs/multi.md
               - ErgoScript vs ErgoTree: dev/scs/ergoscriptvergotree.md
+      - Contracts & Patterns Library: dev/contracts/contracts-library.md
       - Addresses & Payments:
           - Addresses: dev/wallet/address.md
           - Address Types: dev/wallet/address/address_types.md

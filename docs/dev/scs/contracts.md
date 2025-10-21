@@ -6,6 +6,9 @@ tags:
 
 # ErgoScript Contracts
 
+See also: [Contracts & Patterns Library](contracts-library.md)
+
+
 ### Ergo Contracts
 
 The [ergo-contracts](https://github.com/ergoplatform/ergo-contracts) repository contains source code for Ergo smart contracts, along with compilation, testing, and formal verification tooling.

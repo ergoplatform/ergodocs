@@ -87,3 +87,6 @@ With the availability of [Sigma.js](sigmajs.md), [Fleet](fleet.md) can play the 
 - [ErgoScript.js](https://www.youtube.com/watch?v=_jwMI8M_vrs)
 - The Ergo Raffle [documentation](https://github.com/ErgoRaffle/raffle-documentation) provides a detailed description of their implementation. 
 - [hypo10use/quid-games](https://github.com/hypo10use/quid-games) (Angular)
+
+See also
+- Contracts & Patterns Library: contracts-library.md
