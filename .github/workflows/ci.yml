@@ -9,15 +9,15 @@ env:
   SSH_USER: root
   SSH_HOST: 213.239.193.208
   DOMAIN: docs.ergoplatform.com
-  JUPYTER_PLATFORM_DIRS: "1"
+  PROJECT_DIR: /var/www/ergodocs
 
 jobs:
   deploy:
-    name: Deploy and verify live site
     runs-on: ubuntu-latest
-
+    name: Deploy and verify live site
     steps:
       - name: Checkout
+      # Even though we build on the server, keeping checkout helps for future steps if needed
         uses: actions/checkout@v4
 
       - name: Install SSH key
@@ -26,118 +26,134 @@ jobs:
           key: ${{ secrets.DEPLOY_KEY }}
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
 
-      # --- Build ON the server (no --strict; warnings won't fail) ---
-      - name: Remote build (mkdocs)
+      - name: Remote deploy (build on server and sync to site_live)
         run: |
           ssh "$SSH_USER@$SSH_HOST" 'bash -s' <<'EOSSH'
-          set -e
-          PROJECT_DIR="/var/www/ergodocs"
+          set -eE -o pipefail
 
-          echo "📂 cd $PROJECT_DIR"
+          echo "📂 Ensure project directory exists"
+          mkdir -p "$PROJECT_DIR"
           cd "$PROJECT_DIR"
 
-          echo "🔄 git pull"
-          git stash || true
-          git pull --ff-only
+          echo "🔧 Toolchain"
+          command -v mkdocs || true
+          mkdocs --version || true
 
-          echo "🧰 ensure python3-venv"
-          apt-get update -y && apt-get install -y python3-venv
+          echo "🔄 Git pull (if repo)"
+          if [ -d ".git" ]; then
+            git config --global --add safe.directory "$PROJECT_DIR" || true
+            git stash --all || true
+            git pull --rebase
+          else
+            echo "ℹ️ Not a git repo here; skipping pull"
+          fi
+
+          echo "🧰 Ensure python3-venv"
+          apt-get update -y
+          apt-get install -y python3-venv python3-pip
 
           echo "🐍 venv"
           python3 -m venv .venv
           . .venv/bin/activate
 
-          echo "📦 pip install"
-          pip install --upgrade pip
-          pip install -r requirements.txt
-
-          echo "🧹 clean previous build dir"
-          rm -rf site
-
-          echo "🏗 mkdocs build (no strict)"
-          export JUPYTER_PLATFORM_DIRS=1
-          mkdocs build
-
-          echo "✅ build complete"
-          EOSSH
-
-      # --- Promote: remove site_live then move site → site_live ---
-      - name: Promote site (site → site_live)
-        run: |
-          ssh "$SSH_USER@$SSH_HOST" 'bash -s' <<'EOSSH'
-          set -e
-          PROJECT_DIR="/var/www/ergodocs"
-          cd "$PROJECT_DIR"
-
-          if [ -d site ]; then
-            echo "🗑 removing old site_live"
-            rm -rf site_live
-
-            echo "🔁 moving site → site_live"
-            mv site site_live
-
-            date -u +"%FT%TZ" > site_live/.deployed-at
-
-            echo "🔑 perms (best effort)"
-            chown -R www-data:www-data site_live || true
-            chmod -R a+rX site_live || true
+          echo "📦 Dependencies"
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then
+            pip install -r requirements.txt
           else
-            echo "⚠️ no 'site' dir to promote"
+            pip install mkdocs mkdocs-material
           fi
+
+          echo "🏗 mkdocs build (no --strict)"
+          rm -rf site_next
+          mkdocs build -d site_next
+
+          echo "🧹 prepare live dir"
+          mkdir -p site_live
+
+          echo "🔁 rsync site_next -> site_live (atomic-ish)"
+          rsync -a --delete site_next/ site_live/
+
+          echo "🔑 ownership (match web user if needed)"
+          if id caddy >/dev/null 2>&1; then
+            chown -R caddy:caddy site_live
+          else
+            chown -R www-data:www-data site_live || true
+          fi
+
+          date -u +"%Y-%m-%dT%H:%M:%SZ" > site_live/.deployed-at
+
+          echo "✅ Remote deploy finished"
           EOSSH
 
-      # --- Disable stray proxy vhost (rename only; reversible) ---
-      - name: Disable proxying vhost (kept, just renamed)
+      - name: Disable conflicting nginx vhosts (reversible)
         run: |
           ssh "$SSH_USER@$SSH_HOST" 'bash -s' <<'EOSSH'
-          set -e
+          set -eE -o pipefail
           changed=0
+
+          # Disable Debian default and any vhost that proxies to :8000 or reuses docs.ergoplatform.com
           for f in /etc/nginx/sites-enabled/*; do
             [ -f "$f" ] || continue
-            if grep -qE 'server_name\s+docs\.ergoplatform\.com' "$f" && grep -q 'proxy_pass.*127\.0\.0\.1:8000' "$f"; then
+            base="$(basename "$f")"
+            # Keep the intended static site vhost
+            if [ "$base" = "ergo-docs.conf" ]; then
+              continue
+            fi
+            if [ "$base" = "default" ] \
+               || grep -qE 'server_name\s+docs\.ergoplatform\.com' "$f" \
+               || grep -qE 'proxy_pass\s+http://(127\.0\.0\.1|localhost):8000' "$f"; then
               new="${f}.disabled.$(date +%s)"
-              echo "🚫 disabling proxy vhost: $f → $new"
+              echo "🚫 Disabling $f -> $new"
               mv "$f" "$new"
               changed=1
             fi
           done
 
           if [ "$changed" -eq 1 ]; then
-            echo "🧪 nginx -t && reload"
-            nginx -t && systemctl reload nginx
+            echo "🧪 nginx -t"
+            nginx -t
+            echo "🔁 Reload nginx"
+            systemctl reload nginx
           else
-            echo "ℹ️ no proxy vhost for docs.ergoplatform.com found (nothing to do)"
+            echo "ℹ️ No conflicting vhosts found"
           fi
           EOSSH
 
-      - name: Recently updated files on server
+      - name: Quick nginx sanity (remote, non-blocking)
         run: |
-          ssh "$SSH_USER@$SSH_HOST" "find '/var/www/ergodocs/site_live' -type f -printf '🕒 %TY-%Tm-%Td %TH:%TM:%TS %p\n' | sort -r | head -n 12 || true"
-
-      # Non-blocking origin sanity; prints diagnostics only
-      - name: Origin sanity (no fail; print diagnostics)
-        run: |
+          ssh "$SSH_USER@$SSH_HOST" 'bash -s' <<'EOSSH'
           set +e
-          DOMAIN="${DOMAIN}"
+          DOMAIN="${DOMAIN:-docs.ergoplatform.com}"
 
-          echo "🔎 GET https://$DOMAIN/ via local nginx (bypass CF with --resolve, ignore cert with -k)"
-          curl -ksS --resolve "$DOMAIN:443:127.0.0.1" "https://$DOMAIN/" | head -n 1 | sed 's/^/HTML: /'
+          echo "🔎 Nginx ports"
+          ss -ltnp | awk "/nginx/ || NR==1"
 
-          echo "🔎 GET http://127.0.0.1/ with Host: $DOMAIN"
-          curl -sS -H "Host: $DOMAIN" "http://127.0.0.1/" | head -n 1 | sed 's/^/HTML: /'
+          echo "🔎 HTTP vhost response"
+          curl -sI -H "Host: $DOMAIN" http://127.0.0.1/ | sed -n '1,12p'
 
-          echo "🔎 Sample asset 200? (best effort)"
-          curl -sS -o /dev/null -w "assets.css http %{:http_code}\n" -H "Host: $DOMAIN" "http://127.0.0.1/assets/stylesheets/main.css" || true
-          curl -sS -o /dev/null -w "assets.css https %{:http_code}\n" --resolve "$DOMAIN:443:127.0.0.1" -k "https://$DOMAIN/assets/stylesheets/main.css" || true
+          echo "🔎 HTTPS vhost response (origin cert, ignore verify)"
+          curl -skI --resolve "$DOMAIN:443:127.0.0.1" "https://$DOMAIN/" | sed -n '1,12p'
 
-          echo "🗒 nginx error.log (tail 60)"
-          ssh "$SSH_USER@$SSH_HOST" "tail -n 60 /var/log/nginx/error.log || true"
+          echo "🔎 Sample asset status (HTTP)"
+          curl -s -o /dev/null -w "assets.css http %{http_code}\n" -H "Host: $DOMAIN" "http://127.0.0.1/assets/stylesheets/main.css"
 
-          echo "🗒 nginx access.log (tail 40)"
-          ssh "$SSH_USER@$SSH_HOST" "tail -n 40 /var/log/nginx/access.log || true"
+          echo "🔎 Sample asset status (HTTPS)"
+          curl -sk -o /dev/null -w "assets.css https %{http_code}\n" --resolve "$DOMAIN:443:127.0.0.1" "https://$DOMAIN/assets/stylesheets/main.css"
 
-          echo "✅ sanity step finished (non-blocking)"
+          echo "🗒 error.log (tail 40)"
+          tail -n 40 /var/log/nginx/error.log || true
 
-      - name: Sanity list a few paths
+          echo "🗒 access.log (tail 20)"
+          tail -n 20 /var/log/nginx/access.log || true
+
+          echo "✅ remote sanity complete"
+          EOSSH
+
+      - name: Show last modified files in live site
         run: |
-          ssh "$SSH_USER@$SSH_HOST" "ls -1 '/var/www/ergodocs/site_live' | head -n 20 || true"
+          ssh "$SSH_USER@$SSH_HOST" "find '$PROJECT_DIR/site_live' -type f -printf '🕒 %TY-%Tm-%Td %TH:%TM:%TS %p\n' | sort -r | head -n 12 || true"
+
+      - name: List site_live top-level (non-blocking)
+        run: |
+          ssh "$SSH_USER@$SSH_HOST" "ls -1 '$PROJECT_DIR/site_live' | head -n 20 || true"
