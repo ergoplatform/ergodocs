@@ -138,7 +138,6 @@ markdown_extensions:
 nav:
   - Start Here:
       - Welcome: index.md
-      - Why Ergo: dev/protocol/why.md
       - Getting Started: getting-started-with-ergo.md
       - FAQ: faq.md
       - Using Ergo:
@@ -146,7 +145,7 @@ nav:
           - Run a Node: node/install.md
           - Run Oracles: dev/oc/oracle.md
           - Run Watchers (Rosen): eco/rosen/watcher.md
-          - Run Off-Chain Bots: dev/oc/dex_bots.md
+          - Dex Bots: dev/oc/dex_bots.md
       - Wallets: wallets-overview.md
       - Building on Ergo:
           - Overview: building-on-ergo-developers.md
@@ -154,13 +153,14 @@ nav:
       - Securing the Network: securing-the-network-miners.md
       - Learn: learn.md
       - Community: engage-with-the-ergo-community.md
-      - Contribute: contribute.md
-      - Roadmap: roadmap.md
       - Reference:
           - Glossary: glossary.md
           # - Sitemap: site-map.md
           # - Tags: tags.md
           - Common Misconceptions: fud-faq.md
+      - Why Ergo: dev/protocol/why.md
+      - Contribute: contribute.md
+      - Roadmap: roadmap.md
   - Use:
       - Overview: uses/use-cases-overview.md
       - Get a Wallet:
@@ -795,6 +795,7 @@ nav:
               - Dust Collection: dev/integration/dust-collection.md
           - Cup of Sugar Pattern: tutorials/cup-of-sugar.md
 
+      - Cryptography & Data Structures: dev/cryptography-and-data-structures-hub.md
   - Deploy:
       - Overview: dev/interact.md
       - The Ergo Node:
@@ -931,3 +932,4 @@ nav:
           - mining/mining-resources.md
           - Revenue: mining/revenue.md
           - CPU vs GPU: mining/cpu.md
+      - Proof-of-Work & Mining Theory: mining/pow-and-mining-theory-hub.md

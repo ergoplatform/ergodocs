@@ -9,13 +9,13 @@ tags:
 
 # Understanding Difficulty Adjustment in Ergo
 
+Difficulty adjustment is a core mechanism in proof-of-work cryptocurrencies like Ergo. It ensures that blocks are added to the blockchain at a stable rate, aiming for a 120-second block interval in Ergo. This feature is critical for maintaining network security and fairness. Here we explore how Ergo's Autolykos protocol has been adapted over time to offer a robust difficulty adjustment mechanism.
+
 /// admonition | Tooling
     type: tip
 
 Utilize the [Difficulty & Epoch Monitor](https://cds.oette.info/ergo_diff.htm) to predict upcoming difficulty adjustments.
 ///
-
-Difficulty adjustment is a core mechanism in proof-of-work cryptocurrencies like Ergo. It ensures that blocks are added to the blockchain at a stable rate, aiming for a 120-second block interval in Ergo. This feature is critical for maintaining network security and fairness. Here we explore how Ergo's Autolykos protocol has been adapted over time to offer a robust difficulty adjustment mechanism.
 
 ## Autolykos Protocol: The Foundation for Difficulty Adjustment
 
