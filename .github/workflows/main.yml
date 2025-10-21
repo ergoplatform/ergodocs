@@ -6,12 +6,55 @@ on:
   workflow_dispatch:
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
+    env:
+      JUPYTER_PLATFORM_DIRS: "1"
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: |
+          python -m pip install -U pip
+          python -m pip install -r requirements.txt
+
+      - name: Build site (strict) and list asset hashes
+        run: |
+          set -euo pipefail
+          mkdocs build --strict -v
+          # capture the exact asset files referenced by the built homepage
+          HOME_HTML=site/index.html
+          echo "📄 Parsing assets from $HOME_HTML"
+          JS=$(grep -o 'assets/javascripts/[^"]*' "$HOME_HTML" | sort -u)
+          CSS=$(grep -o 'assets/stylesheets/[^"]*' "$HOME_HTML" | sort -u)
+          printf "%s\n" $JS > artifact_js.txt
+          printf "%s\n" $CSS > artifact_css.txt
+          echo "JS:"; cat artifact_js.txt
+          echo "CSS:"; cat artifact_css.txt
+
+      - name: Upload built site and asset lists
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-artifacts
+          path: |
+            site
+            artifact_js.txt
+            artifact_css.txt
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: site-artifacts
+          path: site
 
       - name: Install SSH key
         uses: shimataro/ssh-key-action@v2
@@ -19,46 +62,51 @@ jobs:
           key: ${{ secrets.DEPLOY_KEY }}
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
 
-      - name: Remote Deploy via SSH
+      - name: Remote build & atomic publish
         run: |
-          echo "🚀 Deploying to remote server..."
           ssh root@213.239.193.208 <<'EOF'
-            set -e
-
-            echo "📂 Changing to project directory..."
-            cd /var/www/ergodocs || { echo "❌ Failed to cd to project dir"; exit 1; }
-
-            
-            echo "🔄 Pulling latest changes from Git..."
-            git stash
-            git pull || { echo "❌ Git pull failed"; exit 1; }
-
-            echo "🧰 Ensuring python3-venv is available..."
-            apt update -y && apt install -y python3-venv
-            
-            echo "🐍 Setting up virtual environment..."
+            set -euo pipefail
+            export JUPYTER_PLATFORM_DIRS=1
+            cd /var/www/ergodocs
+            git stash --include-untracked || true
+            git pull --rebase
             python3 -m venv .venv
             source .venv/bin/activate
-
-
-            echo "📦 Installing dependencies..."
-            pip install --upgrade pip
-            pip install -r requirements.txt || { echo "❌ Pip install failed"; exit 1; }
-
-
-            echo "🧹 Cleaning old MkDocs site..."
-            rm -rf site || echo "⚠️ Failed to remove site dir"
-
-            echo "🏗 Building MkDocs site..."
-            mkdocs build || { echo "❌ MkDocs build failed"; exit 1; }
+            python -m pip install -U pip
+            python -m pip install -r requirements.txt
+            rm -rf site || true
+            mkdocs build --strict -v
+            # atomic publish: build to tmp then swap
+            ts=$(date +%s)
+            rm -rf site_next && mv site site_next
+            rm -rf site_prev || true
+            if [ -d site_live ]; then mv site_live site_prev; fi
+            mv site_next site_live
+            ln -sfn site_live site
           EOF
 
-      - name: Verify Remote Site Files
+      - name: Verify HTML and assets served (fail if any 404)
         run: |
-          echo "🔍 Checking recently updated files..."
-          ssh root@213.239.193.208 'find /var/www/ergodocs/site -type f -printf "🕒 %TY-%Tm-%Td %TH:%TM:%TS %p\n" | sort -r | head -n 10'
+          set -euo pipefail
+          BASE="https://docs.ergoplatform.com"
+          # cache-bust HTML
+          echo "🔎 Fetching homepage HTML"
+          curl -fsS -H 'Cache-Control: no-cache' "$BASE/" > /tmp/home.html
+          # extract the JS/CSS actually referenced by the live HTML
+          LIVE_JS=$(grep -o 'assets/javascripts/[^"]*' /tmp/home.html | sort -u)
+          LIVE_CSS=$(grep -o 'assets/stylesheets/[^"]*' /tmp/home.html | sort -u)
+          echo "JS from live HTML:"; printf "%s\n" $LIVE_JS
+          echo "CSS from live HTML:"; printf "%s\n" $LIVE_CSS
 
-      - name: Check Web Server Served Files
-        run: |
-          echo "🔍 Verifying web server output..."
-          curl -s -I https://docs.ergoplatform.com/ | grep "Last-Modified" || echo "❌ Web server is serving outdated content or request failed!"
+          echo "✅ Checking each asset returns 200"
+          FAIL=0
+          for f in $LIVE_JS $LIVE_CSS; do
+            url="$BASE/$f"
+            code=$(curl -s -o /dev/null -w "%{http_code}" "$url")
+            echo "$code $url"
+            [ "$code" = "200" ] || FAIL=1
+          done
+          [ "$FAIL" -eq 0 ] || { echo "❌ One or more assets failed to serve 200"; exit 1; }
+
+          echo "🧪 Smoke-check a content page"
+          curl -fsS -H 'Cache-Control: no-cache' "$BASE/faq/" | grep -q "</html>" || { echo "❌ FAQ page did not return valid HTML"; exit 1; }
