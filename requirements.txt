@@ -95,6 +95,7 @@ Pygments==2.19.1
 pymdown-extensions==10.14.3
 pypandoc==1.14
 python-dateutil==2.9.0.post0
+python-markdown-math==0.9
 pytokens==0.2.0
 pytz==2025.1
 PyYAML==6.0.2
