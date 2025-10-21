@@ -25,38 +25,26 @@ jobs:
           key: ${{ secrets.DEPLOY_KEY }}
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
 
-      - name: Remote deploy (build on server and sync to site_live)
+      # ---- BUILD STATIC SITE ON REMOTE AND PUBLISH TO site_live ----
+      - name: Remote build & publish (rsync to site_live)
         run: |
           ssh "$SSH_USER@$SSH_HOST" "PROJECT_DIR='$PROJECT_DIR' DOMAIN='$DOMAIN' bash -s" <<'EOSSH'
           set -eE -o pipefail
 
-          echo "📂 Ensure project directory exists"
+          echo "📂 Ensure project directory"
           mkdir -p "$PROJECT_DIR"
           cd "$PROJECT_DIR"
 
-          echo "🔧 Toolchain"
-          command -v mkdocs || true
-          mkdocs --version || true
-
-          echo "🔄 Git pull (if repo)"
-          if [ -d ".git" ]; then
-            git config --global --add safe.directory "$PROJECT_DIR" || true
-            git stash --all || true
-            git pull --rebase
-          else
-            echo "ℹ️ Not a git repo here; skipping pull"
-          fi
-
-          echo "🧰 Ensure python3-venv"
+          echo "🔧 Ensure Python toolchain"
           export DEBIAN_FRONTEND=noninteractive
           apt-get update -y
-          apt-get install -y python3-venv python3-pip
+          apt-get install -y python3-venv python3-pip rsync
 
           echo "🐍 venv"
           python3 -m venv .venv
           . .venv/bin/activate
 
-          echo "📦 Dependencies"
+          echo "📦 Install deps"
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then
             pip install -r requirements.txt
@@ -68,13 +56,11 @@ jobs:
           rm -rf site_next
           mkdocs build -d site_next
 
-          echo "🧹 prepare live dir"
+          echo "🧹 Prepare live dir and sync"
           mkdir -p site_live
-
-          echo "🔁 rsync site_next -> site_live (atomic-ish)"
           rsync -a --delete site_next/ site_live/
 
-          echo "🔑 ownership (match web user if needed)"
+          # Ownership (prefer caddy if present, otherwise www-data)
           if id caddy >/dev/null 2>&1; then
             chown -R caddy:caddy site_live
           else
@@ -82,70 +68,109 @@ jobs:
           fi
 
           date -u +"%Y-%m-%dT%H:%M:%SZ" > site_live/.deployed-at
-
-          echo "✅ Remote deploy finished"
+          echo "✅ Site published to $PROJECT_DIR/site_live"
           EOSSH
 
-      - name: Disable conflicting nginx vhosts (reversible)
+      # ---- NGINX: REVERT ANY PRIOR DISABLE OF 'default', ONLY FIX docs vhost ----
+      - name: Nginx vhost (revert default; only adjust docs vhost)
         run: |
-          ssh "$SSH_USER@$SSH_HOST" "DOMAIN='$DOMAIN' bash -s" <<'EOSSH'
+          ssh "$SSH_USER@$SSH_HOST" "PROJECT_DIR='$PROJECT_DIR' DOMAIN='$DOMAIN' bash -s" <<'EOSSH'
           set -eE -o pipefail
-          changed=0
 
-          # Disable Debian default and any vhost that proxies to :8000 or duplicates docs.ergoplatform.com
-          for f in /etc/nginx/sites-enabled/*; do
-            [ -f "$f" ] || continue
-            base="$(basename "$f")"
-            # Keep the intended static site vhost
-            if [ "$base" = "ergo-docs.conf" ]; then
-              continue
+          STASH_DIR=/etc/nginx/sites-stashed
+          ENABLED_DIR=/etc/nginx/sites-enabled
+          mkdir -p "$STASH_DIR"
+
+          echo "🟡 Ensure /etc/nginx/sites-enabled/default is PRESENT"
+          if [ ! -e "$ENABLED_DIR/default" ]; then
+            # Find any obvious disabled variants and restore the most recent
+            CAND=$(ls -1t "$ENABLED_DIR"/default.disabled.* "$STASH_DIR"/default.disabled.* 2>/dev/null | head -n1 || true)
+            if [ -n "$CAND" ]; then
+              mv -f "$CAND" "$ENABLED_DIR/default"
+              echo "↩️  Restored default from: $CAND"
+            else
+              echo "ℹ️  default server not found anywhere; leaving as-is."
             fi
-            if [ "$base" = "default" ] \
-               || grep -qE 'server_name\s+docs\.ergoplatform\.com' "$f" \
-               || grep -qE 'proxy_pass\s+http://(127\.0\.0\.1|localhost):8000' "$f"; then
-              new="${f}.disabled.$(date +%s)"
-              echo "🚫 Disabling $f -> $new"
-              mv "$f" "$new"
-              changed=1
+          else
+            echo "✅ default vhost already present"
+          fi
+
+          echo "🧹 Remove ONLY extra/legacy vhosts for docs.ergoplatform.com (avoid touching others)"
+          for f in "$ENABLED_DIR"/*; do
+            [ -f "$f" ] || continue
+            # If a file mentions docs.ergoplatform.com and is NOT our canonical filename, move it out
+            if grep -qE 'server_name\s+docs\.ergoplatform\.com' "$f"; then
+              base="$(basename "$f")"
+              if [ "$base" != "ergo-docs.conf" ]; then
+                ts=$(date +%s)
+                mv -f "$f" "$STASH_DIR/$base.$ts"
+                echo "↪️  Stashed conflicting docs vhost: $base -> $STASH_DIR/$base.$ts"
+              fi
             fi
           done
 
-          if [ "$changed" -eq 1 ]; then
-            echo "🧪 nginx -t"
-            nginx -t
-            echo "🔁 Reload nginx"
-            systemctl reload nginx
-          else
-            echo "ℹ️ No conflicting vhosts found"
-          fi
+          echo "📝 Write canonical static vhost: $ENABLED_DIR/ergo-docs.conf"
+          cat >"$ENABLED_DIR/ergo-docs.conf" <<EOF
+          ####################################################
+          # docs.ergoplatform.com - STATIC mkdocs site
+          ####################################################
+          server {
+              listen 80;
+              listen [::]:80;
+              server_name ${DOMAIN};
+              root ${PROJECT_DIR}/site_live;
+              index index.html;
+              location / {
+                  try_files \$uri \$uri/ /index.html;
+              }
+          }
+
+          server {
+              listen 443 ssl;
+              listen [::]:443 ssl;
+              server_name ${DOMAIN};
+
+              ssl_certificate     /etc/ssl/certs/docs.ergoplatform.com.pem;
+              ssl_certificate_key /etc/ssl/private/docs.ergoplatform.com.key;
+
+              root ${PROJECT_DIR}/site_live;
+              index index.html;
+
+              location / {
+                  try_files \$uri \$uri/ /index.html;
+              }
+
+              # Conservative timeouts
+              keepalive_timeout 65;
+          }
+          EOF
+
+          echo "🧪 nginx -t"
+          nginx -t
+
+          echo "🔁 Reload nginx"
+          systemctl reload nginx
+
+          echo "✅ Nginx vhosts updated (default preserved)"
           EOSSH
 
-      - name: Quick nginx sanity (remote, non-blocking)
+      # ---- LIGHT SANITY (non-fatal) ----
+      - name: Sanity (non-blocking)
+        continue-on-error: true
         run: |
           ssh "$SSH_USER@$SSH_HOST" "PROJECT_DIR='$PROJECT_DIR' DOMAIN='$DOMAIN' bash -s" <<'EOSSH'
           set +e
-          echo "🔎 Nginx ports"
-          ss -ltnp | awk "/nginx/ || NR==1"
+          echo "🔎 Ports:"
+          ss -ltnp | awk 'NR==1 || /nginx/'
 
-          echo "🔎 HTTP vhost response"
+          echo "🔎 HEAD via local HTTP (Host header):"
           curl -sI -H "Host: $DOMAIN" http://127.0.0.1/ | sed -n '1,12p'
 
-          echo "🔎 HTTPS vhost response (origin cert, ignore verify)"
+          echo "🔎 HEAD via local HTTPS (ignore verify, resolve to 127.0.0.1):"
           curl -skI --resolve "$DOMAIN:443:127.0.0.1" "https://$DOMAIN/" | sed -n '1,12p'
 
-          echo "🔎 Sample asset status (HTTP)"
-          curl -s -o /dev/null -w "assets.css http %{http_code}\n" -H "Host: $DOMAIN" "http://127.0.0.1/assets/stylesheets/main.css"
-
-          echo "🔎 Sample asset status (HTTPS)"
-          curl -sk -o /dev/null -w "assets.css https %{http_code}\n" --resolve "$DOMAIN:443:127.0.0.1" "https://$DOMAIN/assets/stylesheets/main.css"
-
-          echo "🗒 error.log (tail 40)"
+          echo "🗒 error.log tail (40):"
           tail -n 40 /var/log/nginx/error.log || true
-
-          echo "🗒 access.log (tail 20)"
-          tail -n 20 /var/log/nginx/access.log || true
-
-          echo "✅ remote sanity complete"
           EOSSH
 
       - name: Show last modified files in live site
