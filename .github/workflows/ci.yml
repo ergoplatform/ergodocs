@@ -8,7 +8,6 @@ on:
 env:
   SSH_USER: root
   SSH_HOST: 213.239.193.208
-  PROJECT_DIR: /var/www/ergodocs
   DOMAIN: docs.ergoplatform.com
   JUPYTER_PLATFORM_DIRS: "1"
 
@@ -32,6 +31,8 @@ jobs:
         run: |
           ssh "$SSH_USER@$SSH_HOST" 'bash -s' <<'EOSSH'
           set -e
+          PROJECT_DIR="/var/www/ergodocs"
+
           echo "📂 cd $PROJECT_DIR"
           cd "$PROJECT_DIR"
 
@@ -60,11 +61,12 @@ jobs:
           echo "✅ build complete"
           EOSSH
 
-      # --- Promote: remove site_live then move site → site_live (atomic enough for static) ---
+      # --- Promote: remove site_live then move site → site_live ---
       - name: Promote site (site → site_live)
         run: |
           ssh "$SSH_USER@$SSH_HOST" 'bash -s' <<'EOSSH'
           set -e
+          PROJECT_DIR="/var/www/ergodocs"
           cd "$PROJECT_DIR"
 
           if [ -d site ]; then
@@ -84,7 +86,7 @@ jobs:
           fi
           EOSSH
 
-      # --- One-time / idempotent: disable any active vhost that proxies docs to 127.0.0.1:8000 ---
+      # --- Disable stray proxy vhost (rename only; reversible) ---
       - name: Disable proxying vhost (kept, just renamed)
         run: |
           ssh "$SSH_USER@$SSH_HOST" 'bash -s' <<'EOSSH'
@@ -108,16 +110,15 @@ jobs:
           fi
           EOSSH
 
-      # --- Quick visibility into what changed on server ---
       - name: Recently updated files on server
         run: |
-          ssh "$SSH_USER@$SSH_HOST" "find '$PROJECT_DIR/site_live' -type f -printf '🕒 %TY-%Tm-%Td %TH:%TM:%TS %p\n' | sort -r | head -n 12 || true"
+          ssh "$SSH_USER@$SSH_HOST" "find '/var/www/ergodocs/site_live' -type f -printf '🕒 %TY-%Tm-%Td %TH:%TM:%TS %p\n' | sort -r | head -n 12 || true"
 
-      # --- Sanity checks DIRECTLY against origin nginx (bypass Cloudflare) ---
-      # Do NOT fail the job on these checks; print diagnostics instead.
+      # Non-blocking origin sanity; prints diagnostics only
       - name: Origin sanity (no fail; print diagnostics)
         run: |
           set +e
+          DOMAIN="${DOMAIN}"
 
           echo "🔎 GET https://$DOMAIN/ via local nginx (bypass CF with --resolve, ignore cert with -k)"
           curl -ksS --resolve "$DOMAIN:443:127.0.0.1" "https://$DOMAIN/" | head -n 1 | sed 's/^/HTML: /'
@@ -126,8 +127,8 @@ jobs:
           curl -sS -H "Host: $DOMAIN" "http://127.0.0.1/" | head -n 1 | sed 's/^/HTML: /'
 
           echo "🔎 Sample asset 200? (best effort)"
-          curl -sS -o /dev/null -w "assets.css http %{:http_code}\n" -H "Host: $DOMAIN" "http://127.0.0.1/assets/stylesheets/main.css"
-          curl -sS -o /dev/null -w "assets.css https %{:http_code}\n" --resolve "$DOMAIN:443:127.0.0.1" -k "https://$DOMAIN/assets/stylesheets/main.css"
+          curl -sS -o /dev/null -w "assets.css http %{:http_code}\n" -H "Host: $DOMAIN" "http://127.0.0.1/assets/stylesheets/main.css" || true
+          curl -sS -o /dev/null -w "assets.css https %{:http_code}\n" --resolve "$DOMAIN:443:127.0.0.1" -k "https://$DOMAIN/assets/stylesheets/main.css" || true
 
           echo "🗒 nginx error.log (tail 60)"
           ssh "$SSH_USER@$SSH_HOST" "tail -n 60 /var/log/nginx/error.log || true"
@@ -137,7 +138,6 @@ jobs:
 
           echo "✅ sanity step finished (non-blocking)"
 
-      # --- (Optional) Show a few paths exist — just visibility ---
       - name: Sanity list a few paths
         run: |
-          ssh "$SSH_USER@$SSH_HOST" "ls -1 '$PROJECT_DIR'/site_live | head -n 20 || true"
+          ssh "$SSH_USER@$SSH_HOST" "ls -1 '/var/www/ergodocs/site_live' | head -n 20 || true"
