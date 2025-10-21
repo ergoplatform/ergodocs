@@ -22,19 +22,19 @@ jobs:
           python -m pip install -U pip
           python -m pip install -r requirements.txt
 
-      - name: Build site (strict) and list asset hashes
+      - name: MkDocs build (strict; show real failures)
+        shell: bash
         run: |
-          set -euo pipefail
-          mkdocs build --strict -v
-          # capture the exact asset files referenced by the built homepage
-          HOME_HTML=site/index.html
-          echo "📄 Parsing assets from $HOME_HTML"
-          JS=$(grep -o 'assets/javascripts/[^"]*' "$HOME_HTML" | sort -u)
-          CSS=$(grep -o 'assets/stylesheets/[^"]*' "$HOME_HTML" | sort -u)
-          printf "%s\n" $JS > artifact_js.txt
-          printf "%s\n" $CSS > artifact_css.txt
-          echo "JS:"; cat artifact_js.txt
-          echo "CSS:"; cat artifact_css.txt
+          set -Eeuo pipefail
+          trap 'echo "❌ Build failed; last 200 lines:"; tail -n 200 build.log || true' ERR
+
+          echo "🏗 mkdocs build --strict -v"
+          mkdocs build --strict -v |& tee build.log
+          code=${PIPESTATUS[0]}
+          echo "mkdocs exit=$code"
+          if [ "$code" -ne 0 ]; then
+            exit "$code"
+          fi
 
       - name: Upload built site and asset lists
         uses: actions/upload-artifact@v4

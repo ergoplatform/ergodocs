@@ -25,8 +25,8 @@ theme:
     - content.code.copy
     - navigation.tabs
     - navigation.tabs.sticky
-    - navigation.instant
-    - navigation.instant.progress
+    #- navigation.instant
+    #- navigation.instant.progress
     - navigation.prune
     - navigation.path
     #- navigation.sections
