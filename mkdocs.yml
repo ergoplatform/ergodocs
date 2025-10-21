@@ -82,12 +82,12 @@ plugins:
   # - bibtex:
   #     bib_file: refs.bib
   #- categories
-  - exclude-search
+  #- exclude-search
   #- semiliterate
   #- pagenav-generator
-  - mkdocs-simple-hooks:
-      hooks:
-        on_page_markdown: "hooks:fix_lists"
+  #- mkdocs-simple-hooks:
+  #    hooks:
+  #      on_page_markdown: "hooks:fix_lists"
 
 markdown_extensions:
   - footnotes

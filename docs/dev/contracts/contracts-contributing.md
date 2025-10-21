@@ -63,12 +63,6 @@ Standardize how new contract patterns are added so developers can rely on consis
 - If your pattern has a clear MCP composition path, add a stub section describing inputs/outputs.
 - If not ready, mark MCP section as N/A with a short note.
 
-## Linking rules (ErgoDocs)
-
-- Use direct filenames for internal links outside of ::cards:: blocks (e.g., [pattern-whitelist-token.md](pattern-whitelist-token.md)).
-- Do not use relative paths like ../folder/file.md outside ::cards:: blocks.
-- Ensure filenames are globally unique.
-- Always include a blank line before bullet lists for proper mkdocs rendering.
 
 ## Acceptance checklist (include in your PR description)
 

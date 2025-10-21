@@ -4,7 +4,7 @@ title: Pattern Template
 
 # Pattern Name (concise, capability-focused)
 
-Use this template when adding a new contract pattern. Follow ErgoDocs linking rules: use direct filenames for internal links outside of ::cards:: blocks, and always include a blank line before bullet lists for proper mkdocs rendering.
+Use this template when adding a new contract pattern.
 
 ## Summary
 

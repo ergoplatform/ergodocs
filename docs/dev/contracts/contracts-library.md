@@ -57,11 +57,7 @@ Many contract ideas and implementations are scattered across forums, hackathon r
 - Off-chain/UI reference collection: contracts-offchain-references.md
 - MCP usage examples: contracts-mcp-examples.md
 
-## Linking rules (ErgoDocs)
 
-- Use direct filenames for internal links outside of ::cards:: blocks (e.g., contracts-tokens.md).
-- Ensure globally unique filenames to avoid ambiguity.
-- Within ::cards:: blocks, use relative paths.
 
 ## Roadmap (docs sync)
 
