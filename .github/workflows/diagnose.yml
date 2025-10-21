@@ -1,14 +1,15 @@
-name: Diagnose web serving
+name: Diagnose docs + sigma routing
 
 on:
+  push:
+    branches: [ main ]
   workflow_dispatch:
 
 jobs:
   diagnose:
-    name: SSH diagnostics (no changes)
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     env:
-      # You can override these in the workflow_dispatch UI or repo/environment secrets
       SSH_USER: ${{ secrets.SSH_USER || 'root' }}
       SSH_HOST: ${{ secrets.SSH_HOST || '213.239.193.208' }}
       DOMAIN_DOCS: ${{ secrets.DOMAIN_DOCS || 'docs.ergoplatform.com' }}
@@ -16,7 +17,7 @@ jobs:
       PROJECT_DIR: ${{ secrets.PROJECT_DIR || '/var/www/ergodocs' }}
 
     steps:
-      - name: Checkout (just to have a workspace)
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Install SSH key
@@ -25,112 +26,61 @@ jobs:
           key: ${{ secrets.DEPLOY_KEY }}
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
 
-      - name: Run diagnostics on server (read-only)
+      - name: Server diagnostics (read-only)
         shell: bash
         run: |
-          set +e  # NEVER fail this step; we want logs even if something is broken.
+          set +e  # never fail; this is for visibility
 
-          echo "🔎 Targets:"
-          echo "  - SSH: ${SSH_USER:-root}@${SSH_HOST}"
-          echo "  - DOCS domain: ${DOMAIN_DOCS:-docs.ergoplatform.com}"
-          echo "  - SIGMA domain: ${DOMAIN_SIGMA:-sigmaverse.io}"
-          echo "  - Project dir: ${PROJECT_DIR:-/var/www/ergodocs}"
-          echo
-
+          echo "🔐 SSH to ${SSH_USER:-root}@${SSH_HOST}"
           ssh -o LogLevel=ERROR "${SSH_USER:-root}@${SSH_HOST}" bash <<'EOSSH'
             set +e
+            d_docs="${DOMAIN_DOCS:-docs.ergoplatform.com}"
+            d_sigma="${DOMAIN_SIGMA:-sigmaverse.io}"
+            proj="${PROJECT_DIR:-/var/www/ergodocs}"
 
-            # ---------- System / process quick look ----------
-            echo "🖥  System:"
-            uname -a || true
-            uptime || true
-            echo
+            echo "🖥 uname/uptime:"; uname -a; uptime; echo
+            echo "🌐 nginx -v/-t:"; nginx -v 2>&1; nginx -t 2>&1; echo
 
-            echo "🧠 Memory:"
-            free -m || true
-            echo
-
-            # ---------- Nginx basics ----------
-            echo "🌐 Nginx version / test:"
-            nginx -v 2>&1 || true
-            nginx -t 2>&1 || true
-            echo
-
-            echo "🪵 Nginx ports listening:"
-            ss -ltnp 2>/dev/null | grep -E ':(80|443)\s' || netstat -ltnp 2>/dev/null | grep -E ':(80|443)\s' || true
-            echo
-
-            echo "📁 sites-enabled list:"
+            echo "📁 /etc/nginx/sites-enabled:"
             ls -lah /etc/nginx/sites-enabled/ 2>/dev/null || true
             echo
 
-            echo "🧭 Which files mention our domains?"
-            grep -RinE 'server_name\s+.*(docs\.ergoplatform\.com|sigmaverse\.io)' /etc/nginx/sites-enabled /etc/nginx/sites-available 2>/dev/null || true
+            echo "🔎 grep server_name for our domains:"
+            grep -RinE 'server_name\s+.*(docs\.ergoplatform\.com|sigmaverse\.io)' \
+              /etc/nginx/sites-enabled /etc/nginx/sites-available 2>/dev/null || true
             echo
 
-            echo "🔎 Compact view of active vhosts (listen/server_name/root/proxy_pass):"
-            nginx -T 2>/dev/null | awk '
-              /server\s*\{/ {inserver=1; block=""}
-              inserver {block=block $0 "\n"}
-              /\}/ && inserver {inserver=0;
-                # print only blocks that mention listen or our domains
-                if (block ~ /listen/ && (block ~ /server_name/)) {
-                  split(block, lines, "\n")
-                  printf "----- vhost block -----\n"
-                  for (i in lines) {
-                    if (lines[i] ~ /(server_name|listen|root|proxy_pass)/) print lines[i]
-                  }
-                }
-              }' || true
+            echo "🪵 Ports listening (80/443):"
+            ss -ltnp 2>/dev/null | grep -E ':(80|443)\s' || netstat -ltnp 2>/dev/null | grep -E ':(80|443)\s' || true
             echo
 
-            # ---------- Local HTTP/HTTPS routing checks ----------
-            d_docs="${DOMAIN_DOCS:-docs.ergoplatform.com}"
-            d_sigma="${DOMAIN_SIGMA:-sigmaverse.io}"
-
-            echo "🧪 curl http://127.0.0.1/ with Host: \$d_docs"
-            curl -sS -I -H "Host: \$d_docs" http://127.0.0.1/ | sed -n '1,12p' || echo "curl failed"
+            echo "🧪 curl local HTTP with Host: \$d_docs"
+            curl -sSI -H "Host: \$d_docs" http://127.0.0.1/ | sed -n '1,12p' || echo "curl failed"
             echo
 
-            echo "🧪 curl http://127.0.0.1/ with Host: \$d_sigma"
-            curl -sS -I -H "Host: \$d_sigma" http://127.0.0.1/ | sed -n '1,12p' || echo "curl failed"
+            echo "🧪 curl local HTTP with Host: \$d_sigma"
+            curl -sSI -H "Host: \$d_sigma" http://127.0.0.1/ | sed -n '1,12p' || echo "curl failed"
             echo
 
-            echo "🧪 curl https://\$d_docs (resolve to localhost, ignore cert)"
+            echo "🧪 curl local HTTPS (ignore verify) with Host: \$d_docs"
             curl -skI --resolve "\$d_docs:443:127.0.0.1" "https://\$d_docs/" | sed -n '1,14p' || echo "curl failed"
             echo
 
-            echo "🧪 curl https://\$d_sigma (resolve to localhost, ignore cert)"
+            echo "🧪 curl local HTTPS (ignore verify) with Host: \$d_sigma"
             curl -skI --resolve "\$d_sigma:443:127.0.0.1" "https://\$d_sigma/" | sed -n '1,14p' || echo "curl failed"
             echo
 
-            # ---------- Static site on disk ----------
-            proj="${PROJECT_DIR:-/var/www/ergodocs}"
-
-            echo "📂 Live dir listing (top-level):"
-            ls -1 "\$proj/site_live" 2>/dev/null | head -n 30 || echo "site_live missing"
+            echo "📂 site_live exists? \$proj/site_live"
+            test -d "\$proj/site_live" && ls -1 "\$proj/site_live" | head -n 20 || echo "missing"
             echo
 
-            echo "🕒 Recent files in live dir:"
-            find "\$proj/site_live" -type f -printf '  %TY-%Tm-%Td %TH:%TM:%TS %p\n' 2>/dev/null | sort -r | head -n 15 || true
+            echo "🗒 /var/log/nginx/error.log (tail 50):"
+            tail -n 50 /var/log/nginx/error.log 2>/dev/null || true
             echo
 
-            echo "📄 HEAD of live index via filesystem:"
-            if [ -f "\$proj/site_live/index.html" ]; then
-              head -n 20 "\$proj/site_live/index.html" || true
-            else
-              echo "index.html not found in \$proj/site_live"
-            fi
+            echo "🗒 /var/log/nginx/access.log (tail 30):"
+            tail -n 30 /var/log/nginx/access.log 2>/dev/null || true
             echo
 
-            # ---------- Logs ----------
-            echo "🗒 error.log (tail 60):"
-            tail -n 60 /var/log/nginx/error.log 2>/dev/null || true
-            echo
-
-            echo "🗒 access.log (tail 40):"
-            tail -n 40 /var/log/nginx/access.log 2>/dev/null || true
-            echo
-
-            echo "✅ Diagnostics complete (no changes were made)."
+            echo "✅ diagnostics done (no changes made)."
           EOSSH
