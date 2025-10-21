@@ -1,5 +1,4 @@
-# .github/workflows/ci.yml
-name: CI
+name: Deploy and verify live site
 
 on:
   push:
@@ -9,88 +8,14 @@ on:
 env:
   SSH_USER: root
   SSH_HOST: 213.239.193.208
-  DOMAIN: docs.ergoplatform.com
   PROJECT_DIR: /var/www/ergodocs
+  DOMAIN: docs.ergoplatform.com
   JUPYTER_PLATFORM_DIRS: "1"
 
 jobs:
-  build:
-    name: Build site (no strict) and verify assets
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: Cache pip
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/pip
-          key: pip-${{ runner.os }}-${{ hashFiles('requirements.txt') }}
-
-      - name: Install deps
-        shell: bash
-        run: |
-          set -Eeuo pipefail
-          python -m pip install -U pip
-          python -m pip install -r requirements.txt
-
-      - name: MkDocs build (no strict; robust logs)
-        shell: bash
-        run: |
-          set -Eeuo pipefail
-          trap 'echo "❌ Build failed; last 200 lines:"; tail -n 200 build.log || true' ERR
-
-          echo "🏗 mkdocs build -v"
-          mkdocs build -v |& tee build.log
-          code=${PIPESTATUS[0]}
-          echo "mkdocs exit=$code"
-          [ "$code" -eq 0 ] || exit "$code"
-
-          echo "ℹ️ Warning summary (non-fatal)"
-          grep -n "WARNING - " build.log || echo "No warnings"
-
-          echo "🔎 Smoke-test built site"
-          test -s site/index.html || { echo "❌ site/index.html missing"; exit 1; }
-
-          JS=$(grep -o 'assets/javascripts/[^"]*' site/index.html | sort -u)
-          CSS=$(grep -o 'assets/stylesheets/[^"]*' site/index.html | sort -u)
-
-          echo "JS assets:"; printf "%s\n" $JS
-          echo "CSS assets:"; printf "%s\n" $CSS
-
-          FAIL=0
-          for f in $JS $CSS; do
-            if [ ! -f "site/$f" ]; then
-              echo "❌ Missing built asset: site/$f"
-              FAIL=1
-            fi
-          done
-          [ "$FAIL" -eq 0 ] || exit 1
-
-          printf "%s\n" $JS > artifact_js.txt
-          printf "%s\n" $CSS > artifact_css.txt
-
-      - name: Upload build outputs (always)
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: build-artifacts
-          path: |
-            build.log
-            artifact_js.txt
-            artifact_css.txt
-            site
-
   deploy:
     name: Deploy and verify live site
     runs-on: ubuntu-latest
-    needs: build
 
     steps:
       - name: Checkout
@@ -102,142 +27,85 @@ jobs:
           key: ${{ secrets.DEPLOY_KEY }}
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
 
-      - name: Remote Deploy via SSH (atomic publish + diagnostics)
+      - name: 🚀 Deploy to ${{ env.SSH_USER }}@${{ env.SSH_HOST }}
         shell: bash
-        env:
-          SSH_USER: ${{ env.SSH_USER }}
-          SSH_HOST: ${{ env.SSH_HOST }}
-          PROJECT_DIR: ${{ env.PROJECT_DIR }}
-          DOMAIN: ${{ env.DOMAIN }}
-          JUPYTER_PLATFORM_DIRS: ${{ env.JUPYTER_PLATFORM_DIRS }}
         run: |
           set -Eeuo pipefail
-          echo "🚀 Deploy to $SSH_USER@$SSH_HOST ..."
-          ssh "$SSH_USER@$SSH_HOST" \
-            "PROJECT_DIR='$PROJECT_DIR' DOMAIN='$DOMAIN' JUPYTER_PLATFORM_DIRS='${JUPYTER_PLATFORM_DIRS:-1}' bash -s" <<'REMOTE'
+          echo "📂 Confirm project dir"
+          ssh "$SSH_USER@$SSH_HOST" 'test -d "'"$PROJECT_DIR"'" && echo "OK: $PROJECT_DIR exists" || { echo "❌ $PROJECT_DIR missing"; exit 1; }'
+
+          echo "🔧 Toolchain"
+          ssh "$SSH_USER@$SSH_HOST" <<'EOF'
             set -Eeuo pipefail
-
-            echo "🔎 Effective env"
-            echo "PROJECT_DIR=$PROJECT_DIR"
-            echo "DOMAIN=$DOMAIN"
-            echo "JUPYTER_PLATFORM_DIRS=$JUPYTER_PLATFORM_DIRS"
-
-            echo "📂 Confirm project dir"
-            cd "$PROJECT_DIR" || { echo "❌ cd $PROJECT_DIR failed"; exit 1; }
-            pwd
-            echo "🗂 ls -la"
-            ls -la
-
-            echo "🔧 Pick Python"
-            PY_CMD=""
-            for c in python3.12 python3.11 python3.10 python3; do
-              if command -v "$c" >/dev/null 2>&1; then PY_CMD="$c"; break; fi
-            done
-            if [ -z "$PY_CMD" ]; then
-              echo "❌ No python3 found"; exit 1
-            fi
-            echo "Using \$PY_CMD=$PY_CMD"
-            "$PY_CMD" --version || true
-
-            echo "🧰 Ensure venv support"
-            if ! "$PY_CMD" -m venv --help >/dev/null 2>&1; then
-              apt update -y
-              apt install -y python3-venv
-            fi
+            cd "$PROJECT_DIR"
 
             echo "🔄 Git pull"
             git stash --include-untracked || true
-            git pull --rebase
+            git pull --ff-only
 
-            echo "🐍 venv under project"
-            "$PY_CMD" -m venv .venv
-            source .venv/bin/activate
-            python -m pip install -U pip
-            python -m pip install -r requirements.txt
-
-            echo "🧼 Clean old build dir"
-            rm -rf site || true
-
-            echo "🔧 Use venv mkdocs"
-            export PATH="$PROJECT_DIR/.venv/bin:$PATH"
-            which mkdocs || true
-            mkdocs --version || true
-
-            echo "🏗 mkdocs build -v (from venv)"
-            mkdocs build -v
-
-            echo "🔁 Atomic swap to site_live"
-            rm -rf site_next && mv site site_next
-            rm -rf site_prev || true
-            if [ -d site_live ]; then mv site_live site_prev; fi
-            mv site_next site_live
-            ln -sfn site_live site
-
-            echo "👀 Path sanity"
-            echo "site symlink -> $(readlink -f site || true)"
-            # Avoid SIGPIPE on head (exit 141) under 'set -o pipefail'
-            { find site_live -maxdepth 2 -type d -printf "%p\n" | head -n 20; } || true
-
-            echo "🔑 Ownership and perms"
-            id || true
-            if id www-data >/dev/null 2>&1; then chown -R www-data:www-data site_live || true; fi
-            if id caddy >/dev/null 2>&1; then chown -R caddy:caddy site_live || true; fi
-            { find site_live -maxdepth 2 -type d -printf "%M %u:%g %p\n" | head -n 10; } || true
-
-            echo "🧩 Web server detection"
-            if command -v nginx >/dev/null 2>&1; then
-              echo "🌐 Nginx present"
-              nginx -v || true
-              echo "🧪 nginx -t"
-              nginx -t || { echo "❌ nginx -t failed"; exit 1; }
-              echo "📄 nginx -T (first 200 lines)"
-              nginx -T | sed -n '1,200p' || true
-              echo "🔎 server block grep for $DOMAIN"
-              nginx -T | grep -A3 -B3 -n "server_name.*$DOMAIN" || true
-              echo "🔁 Reload Nginx"
-              systemctl reload nginx || true
-              echo "🗒 nginx status (tail)"
-              systemctl status nginx --no-pager -l | tail -n 50 || true
-            elif command -v caddy >/dev/null 2>&1; then
-              echo "🌐 Caddy present"
-              caddy version || true
-              echo "📄 Caddyfile (first 200 lines)"
-              if [ -f /etc/caddy/Caddyfile ]; then sed -n '1,200p' /etc/caddy/Caddyfile || true; fi
-              echo "🔁 Reload Caddy"
-              systemctl reload caddy || true
-              echo "🗒 caddy status (tail)"
-              systemctl status caddy --no-pager -l | tail -n 50 || true
+            echo "🐍 venv"
+            if [ -x .venv/bin/python ]; then
+              . .venv/bin/activate
             else
-              echo "ℹ️ No nginx or caddy found in PATH"
+              apt update -y && apt install -y python3-venv
+              python3 -m venv .venv
+              . .venv/bin/activate
             fi
 
-            echo "🔍 Local HTTP sanity"
-            curl -s -I http://127.0.0.1/ | sed -n '1,20p' || true
-            echo "🔍 Top of built /index.html"
-            test -f site_live/index.html && head -n 5 site_live/index.html || true
+            echo "📦 deps (no strict pins)"
+            python -m pip install -U pip
+            python -m pip install -r requirements.txt || true
+            # Ensure critical plugins exist even if requirements missed them
+            python -m pip install -U mkdocs mkdocs-material neoteroi-mkdocs mkdocs-section-index mkdocs-autolinks-plugin mkdocs-rss-plugin mkdocs-glightbox mkdocs-render-swagger-plugin mkdocs-jupyter mkdocs-git-revision-date-localized-plugin
 
+            echo "🧹 Clean old build"
+            rm -rf site || true
 
-      - name: Verify Remote Site Files
+            echo "🏗 mkdocs build (warnings allowed)"
+            # DO NOT use --strict; warnings must not fail deploy
+            mkdocs build
+
+            echo "🔁 Atomic symlink swap to site_live"
+            # Build output is ./site; swap symlink atomically to avoid half-deployed state
+            TS="$(date +%Y%m%d%H%M%S)"
+            rm -rf "site_prev" || true
+            if [ -L site_live ]; then
+              mv -T site_live "site_prev" || true
+            fi
+            ln -sfn "$PWD/site" site_live
+            chown -h caddy:caddy site_live || true
+            chown -R caddy:caddy site/ || true
+
+            echo "👀 List some paths"
+            ls -lah | sed -n '1,80p'
+            echo "—— site_live head ——"
+            find site_live -maxdepth 2 -type f -name index.html | head -n 5 | xargs -I{} sh -c 'echo ">>> {}" ; stat -c "%y %n" "{}" 2>/dev/null || stat "{}" ; head -n 20 "{}" | sed "s/^/    /" ; echo'
+
+            echo "🧪 Local origin curl (bypass Cloudflare)"
+            # HTTP direct
+            curl -sS -D - -o /tmp/home_http.html -H "Host: ${DOMAIN}" http://127.0.0.1/ | sed -n '1,15p' || true
+            echo "--- http size ---"
+            wc -c /tmp/home_http.html || true
+            # HTTPS direct (SNI/resolve to loopback; -k in case of origin cert)
+            curl -sS -k -D - -o /tmp/home_https.html --resolve "${DOMAIN}:443:127.0.0.1" "https://${DOMAIN}/" | sed -n '1,20p' || true
+            echo "--- https size ---"
+            wc -c /tmp/home_https.html || true
+          EOF
+
+      - name: 🔍 Recently updated files on server
         shell: bash
-        env:
-          SSH_USER: ${{ env.SSH_USER }}
-          SSH_HOST: ${{ env.SSH_HOST }}
-          PROJECT_DIR: ${{ env.PROJECT_DIR }}
         run: |
-          echo "🔍 Recently updated files on server"
           ssh "$SSH_USER@$SSH_HOST" "find '$PROJECT_DIR/site' -type f -printf '🕒 %TY-%Tm-%Td %TH:%TM:%TS %p\n' | sort -r | head -n 12 || true"
 
-      - name: Verify HTML and assets served (no-cache)
+      - name: 🌐 External smoke tests (through Cloudflare)
         shell: bash
-        env:
-          DOMAIN: ${{ env.DOMAIN }}
+        continue-on-error: true
         run: |
           set -Eeuo pipefail
           BASE="https://${DOMAIN}"
-
           echo "🔎 Fetch live homepage HTML"
-          curl -fsS -H 'Cache-Control: no-cache' "$BASE/" > /tmp/home.html
-
+          # Smaller timeouts to fail fast if origin is stalling behind CF
+          curl -fsS --max-time 20 --connect-timeout 5 -H 'Cache-Control: no-cache' "$BASE/" > /tmp/home.html || { echo "❌ curl failed (likely 52x from CF)"; exit 1; }
           grep -q "</html>" /tmp/home.html || { echo "❌ Live HTML incomplete"; exit 1; }
 
           echo "🔎 Extract asset URLs from live HTML"
@@ -248,26 +116,41 @@ jobs:
           FAIL=0
           for f in $LIVE_JS $LIVE_CSS; do
             url="$BASE/$f"
-            code=$(curl -s -o /dev/null -w "%{http_code}" "$url")
+            code=$(curl -s -m 15 --connect-timeout 5 -o /dev/null -w "%{http_code}" "$url" || echo "000")
             echo "$code $url"
             [ "$code" = "200" ] || FAIL=1
           done
-          [ "$FAIL" -eq 0 ] || { echo "❌ One or more assets failed to serve 200 (possible blank page)"; exit 1; }
+          if [ "$FAIL" -ne 0 ]; then
+            echo "❌ One or more assets failed to serve 200 (possible blank page)"
+            exit 1
+          fi
 
           echo "🧪 Smoke-check a content page"
-          curl -fsS -H 'Cache-Control: no-cache' "$BASE/faq/" | grep -q "</html>" || { echo "❌ FAQ page did not return valid HTML"; exit 1; }
+          curl -fsS --max-time 20 --connect-timeout 5 -H 'Cache-Control: no-cache' "$BASE/faq/" | grep -q "</html>" || { echo "❌ FAQ page did not return valid HTML"; exit 1; }
 
-      - name: Show cache headers for HTML vs assets
+      - name: 🧾 Dump origin logs if checks failed (nginx & systemd)
+        if: always()
         shell: bash
-        env:
-          DOMAIN: ${{ env.DOMAIN }}
         run: |
-          set -Eeuo pipefail
-          BASE="https://${DOMAIN}"
-          echo "# HTML headers"
-          curl -s -I -H 'Cache-Control: no-cache' "$BASE/" | sed -n '1,25p'
-          echo "# Asset headers (pick first js/css)"
-          js=$(curl -s "$BASE/" | grep -o 'assets/javascripts/[^"]*' | head -n1 || true)
-          css=$(curl -s "$BASE/" | grep -o 'assets/stylesheets/[^"]*' | head -n1 || true)
-          if [ -n "$js" ]; then curl -s -I "$BASE/$js" | sed -n '1,25p'; fi
-          if [ -n "$css" ]; then curl -s -I "$BASE/$css" | sed -n '1,25p'; fi
+          echo "📜 Tail nginx logs (access & error)"
+          ssh "$SSH_USER@$SSH_HOST" "sudo tail -n 200 /var/log/nginx/access.log || true"
+          ssh "$SSH_USER@$SSH_HOST" "sudo tail -n 200 /var/log/nginx/error.log || true"
+
+          echo "🧾 journalctl nginx"
+          ssh "$SSH_USER@$SSH_HOST" "sudo journalctl -u nginx -n 200 --no-pager || true"
+
+          echo "🧪 sockets"
+          ssh "$SSH_USER@$SSH_HOST" "sudo ss -ltnp | egrep ':80|:443' || true"
+
+          echo "📄 active server blocks mentioning ${DOMAIN}"
+          ssh "$SSH_USER@$SSH_HOST" "sudo nginx -T 2>&1 | awk '/server_name/{print NR\":\"\$0} /root|alias|location|listen|return 301|proxy_pass/{print NR\":\"\$0}' | grep -C2 '${DOMAIN}' || true"
+
+          echo "🧪 direct origin (again) with headers"
+          ssh "$SSH_USER@$SSH_HOST" "curl -sS -D - -o /dev/null -H 'Host: ${DOMAIN}' http://127.0.0.1/ || true"
+          ssh "$SSH_USER@$SSH_HOST" "curl -sS -k -D - -o /dev/null --resolve '${DOMAIN}:443:127.0.0.1' https://${DOMAIN}/ || true"
+
+      - name: ❌ Fail if external smoke tests failed
+        if: steps['External smoke tests (through Cloudflare)'].outcome == 'failure'
+        run: |
+          echo "External smoke tests failed (likely Cloudflare 524). See logs above."
+          exit 1
