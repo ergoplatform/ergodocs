@@ -94,6 +94,7 @@ markdown_extensions:
   - attr_list
   - codehilite
   - fenced_code
+  - mdx_math
   - md_in_html
   - meta
   - tables
