@@ -15,6 +15,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     name: Deploy and verify live site
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -25,158 +26,74 @@ jobs:
           key: ${{ secrets.DEPLOY_KEY }}
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
 
-      # ---- BUILD STATIC SITE ON REMOTE AND PUBLISH TO site_live ----
-      - name: Remote build & publish (rsync to site_live)
+      # Sync the current repo contents to the server so we don't rely on git there
+      - name: Sync sources to server
+        run: |
+          rsync -az --delete \
+            --exclude '.git' \
+            --exclude '.github' \
+            --exclude 'site*' \
+            ./ "$SSH_USER@$SSH_HOST:$PROJECT_DIR/src/"
+
+      # Build on the server from the just-synced sources and publish to site_live
+      - name: Remote mkdocs build & publish
         run: |
           ssh "$SSH_USER@$SSH_HOST" "PROJECT_DIR='$PROJECT_DIR' DOMAIN='$DOMAIN' bash -s" <<'EOSSH'
           set -eE -o pipefail
 
-          echo "📂 Ensure project directory"
-          mkdir -p "$PROJECT_DIR"
-          cd "$PROJECT_DIR"
+          SRC_DIR="$PROJECT_DIR/src"
+          LIVE_DIR="$PROJECT_DIR/site_live"
+          NEXT_DIR="$PROJECT_DIR/site_next"
 
-          echo "🔧 Ensure Python toolchain"
+          echo "🔧 Ensure toolchain"
           export DEBIAN_FRONTEND=noninteractive
           apt-get update -y
           apt-get install -y python3-venv python3-pip rsync
 
           echo "🐍 venv"
-          python3 -m venv .venv
-          . .venv/bin/activate
+          python3 -m venv "$PROJECT_DIR/.venv"
+          . "$PROJECT_DIR/.venv/bin/activate"
+          python -m pip install --upgrade pip
 
           echo "📦 Install deps"
-          python -m pip install --upgrade pip
-          if [ -f requirements.txt ]; then
-            pip install -r requirements.txt
+          if [ -f "$SRC_DIR/requirements.txt" ]; then
+            pip install -r "$SRC_DIR/requirements.txt"
           else
             pip install mkdocs mkdocs-material
           fi
 
           echo "🏗 mkdocs build (no --strict)"
-          rm -rf site_next
-          mkdocs build -d site_next
+          rm -rf "$NEXT_DIR"
+          mkdir -p "$NEXT_DIR" "$LIVE_DIR"
+          cd "$SRC_DIR"
+          mkdocs build -d "$NEXT_DIR"
 
-          echo "🧹 Prepare live dir and sync"
-          mkdir -p site_live
-          rsync -a --delete site_next/ site_live/
+          echo "🧹 Publish to live"
+          rsync -a --delete "$NEXT_DIR/" "$LIVE_DIR/"
 
-          # Ownership (prefer caddy if present, otherwise www-data)
+          # Ownership (best-effort)
           if id caddy >/dev/null 2>&1; then
-            chown -R caddy:caddy site_live
-          else
-            chown -R www-data:www-data site_live || true
+            chown -R caddy:caddy "$LIVE_DIR" || true
+          elif id www-data >/dev/null 2>&1; then
+            chown -R www-data:www-data "$LIVE_DIR" || true
           fi
 
-          date -u +"%Y-%m-%dT%H:%M:%SZ" > site_live/.deployed-at
-          echo "✅ Site published to $PROJECT_DIR/site_live"
+          date -u +"%Y-%m-%dT%H:%M:%SZ" > "$LIVE_DIR/.deployed-at"
+          echo "✅ Site published to $LIVE_DIR"
           EOSSH
 
-      # ---- NGINX: REVERT ANY PRIOR DISABLE OF 'default', ONLY FIX docs vhost ----
-      - name: Nginx vhost (revert default; only adjust docs vhost)
-        run: |
-          ssh "$SSH_USER@$SSH_HOST" "PROJECT_DIR='$PROJECT_DIR' DOMAIN='$DOMAIN' bash -s" <<'EOSSH'
-          set -eE -o pipefail
-
-          STASH_DIR=/etc/nginx/sites-stashed
-          ENABLED_DIR=/etc/nginx/sites-enabled
-          mkdir -p "$STASH_DIR"
-
-          echo "🟡 Ensure /etc/nginx/sites-enabled/default is PRESENT"
-          if [ ! -e "$ENABLED_DIR/default" ]; then
-            # Find any obvious disabled variants and restore the most recent
-            CAND=$(ls -1t "$ENABLED_DIR"/default.disabled.* "$STASH_DIR"/default.disabled.* 2>/dev/null | head -n1 || true)
-            if [ -n "$CAND" ]; then
-              mv -f "$CAND" "$ENABLED_DIR/default"
-              echo "↩️  Restored default from: $CAND"
-            else
-              echo "ℹ️  default server not found anywhere; leaving as-is."
-            fi
-          else
-            echo "✅ default vhost already present"
-          fi
-
-          echo "🧹 Remove ONLY extra/legacy vhosts for docs.ergoplatform.com (avoid touching others)"
-          for f in "$ENABLED_DIR"/*; do
-            [ -f "$f" ] || continue
-            # If a file mentions docs.ergoplatform.com and is NOT our canonical filename, move it out
-            if grep -qE 'server_name\s+docs\.ergoplatform\.com' "$f"; then
-              base="$(basename "$f")"
-              if [ "$base" != "ergo-docs.conf" ]; then
-                ts=$(date +%s)
-                mv -f "$f" "$STASH_DIR/$base.$ts"
-                echo "↪️  Stashed conflicting docs vhost: $base -> $STASH_DIR/$base.$ts"
-              fi
-            fi
-          done
-
-          echo "📝 Write canonical static vhost: $ENABLED_DIR/ergo-docs.conf"
-          cat >"$ENABLED_DIR/ergo-docs.conf" <<EOF
-          ####################################################
-          # docs.ergoplatform.com - STATIC mkdocs site
-          ####################################################
-          server {
-              listen 80;
-              listen [::]:80;
-              server_name ${DOMAIN};
-              root ${PROJECT_DIR}/site_live;
-              index index.html;
-              location / {
-                  try_files \$uri \$uri/ /index.html;
-              }
-          }
-
-          server {
-              listen 443 ssl;
-              listen [::]:443 ssl;
-              server_name ${DOMAIN};
-
-              ssl_certificate     /etc/ssl/certs/docs.ergoplatform.com.pem;
-              ssl_certificate_key /etc/ssl/private/docs.ergoplatform.com.key;
-
-              root ${PROJECT_DIR}/site_live;
-              index index.html;
-
-              location / {
-                  try_files \$uri \$uri/ /index.html;
-              }
-
-              # Conservative timeouts
-              keepalive_timeout 65;
-          }
-          EOF
-
-          echo "🧪 nginx -t"
-          nginx -t
-
-          echo "🔁 Reload nginx"
-          systemctl reload nginx
-
-          echo "✅ Nginx vhosts updated (default preserved)"
-          EOSSH
-
-      # ---- LIGHT SANITY (non-fatal) ----
+      # Quick, non-blocking sanity checks (no nginx edits)
       - name: Sanity (non-blocking)
         continue-on-error: true
         run: |
           ssh "$SSH_USER@$SSH_HOST" "PROJECT_DIR='$PROJECT_DIR' DOMAIN='$DOMAIN' bash -s" <<'EOSSH'
           set +e
-          echo "🔎 Ports:"
-          ss -ltnp | awk 'NR==1 || /nginx/'
-
-          echo "🔎 HEAD via local HTTP (Host header):"
-          curl -sI -H "Host: $DOMAIN" http://127.0.0.1/ | sed -n '1,12p'
-
-          echo "🔎 HEAD via local HTTPS (ignore verify, resolve to 127.0.0.1):"
-          curl -skI --resolve "$DOMAIN:443:127.0.0.1" "https://$DOMAIN/" | sed -n '1,12p'
-
-          echo "🗒 error.log tail (40):"
-          tail -n 40 /var/log/nginx/error.log || true
+          echo "🔎 HEAD via local HTTP (Host header)"
+          curl -sI -H "Host: $DOMAIN" http://127.0.0.1/ | sed -n '1,8p'
+          echo "🔎 HEAD via local HTTPS (ignore verify, resolve to 127.0.0.1)"
+          curl -skI --resolve "$DOMAIN:443:127.0.0.1" "https://$DOMAIN/" | sed -n '1,8p'
           EOSSH
 
-      - name: Show last modified files in live site
+      - name: Recently modified files in live site
         run: |
           ssh "$SSH_USER@$SSH_HOST" "find '$PROJECT_DIR/site_live' -type f -printf '🕒 %TY-%Tm-%Td %TH:%TM:%TS %p\n' | sort -r | head -n 12 || true"
-
-      - name: List site_live top-level (non-blocking)
-        run: |
-          ssh "$SSH_USER@$SSH_HOST" "ls -1 '$PROJECT_DIR/site_live' | head -n 20 || true"
