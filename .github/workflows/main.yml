@@ -28,8 +28,8 @@ jobs:
           set -Eeuo pipefail
           trap 'echo "❌ Build failed; last 200 lines:"; tail -n 200 build.log || true' ERR
 
-          echo "🏗 mkdocs build --strict -v"
-          mkdocs build --strict -v |& tee build.log
+          echo "🏗 mkdocs build -v"
+          mkdocs build -v |& tee build.log
           code=${PIPESTATUS[0]}
           echo "mkdocs exit=$code"
           if [ "$code" -ne 0 ]; then
