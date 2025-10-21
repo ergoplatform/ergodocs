@@ -10,9 +10,9 @@ env:
   SSH_USER: root
   SSH_HOST: 213.239.193.208
   DOMAIN: docs.ergoplatform.com
-  PROJECT_DIR: /var/www/ergodocs     # mkdocs project root on server
-  PYTHON: python3.11                 # pick the version you prefer (3.10/3.11)
-  JUPYTER_PLATFORM_DIRS: "1"         # silence jupyter notice
+  PROJECT_DIR: /var/www/ergodocs
+  PYTHON: python3.11
+  JUPYTER_PLATFORM_DIRS: "1"
 
 jobs:
   build:
@@ -46,6 +46,7 @@ jobs:
         run: |
           set -Eeuo pipefail
           trap 'echo "❌ Build failed; last 200 lines:"; tail -n 200 build.log || true' ERR
+
           echo "🏗 mkdocs build -v"
           mkdocs build -v |& tee build.log
           code=${PIPESTATUS[0]}
@@ -109,12 +110,21 @@ jobs:
           SSH_HOST: ${{ env.SSH_HOST }}
           PROJECT_DIR: ${{ env.PROJECT_DIR }}
           PYTHON: ${{ env.PYTHON }}
+          DOMAIN: ${{ env.DOMAIN }}
           JUPYTER_PLATFORM_DIRS: ${{ env.JUPYTER_PLATFORM_DIRS }}
         run: |
+          set -Eeuo pipefail
           echo "🚀 Deploy to $SSH_USER@$SSH_HOST ..."
-          ssh "$SSH_USER@$SSH_HOST" bash -s <<'EOF'
+          # Inject env into the remote process so set -u never sees undefined vars
+          ssh "$SSH_USER@$SSH_HOST" \
+            "PROJECT_DIR='$PROJECT_DIR' PYTHON='$PYTHON' DOMAIN='$DOMAIN' JUPYTER_PLATFORM_DIRS='${JUPYTER_PLATFORM_DIRS:-1}' bash -s" <<'REMOTE'
             set -Eeuo pipefail
-            export JUPYTER_PLATFORM_DIRS="${JUPYTER_PLATFORM_DIRS:-1}"
+
+            echo "🔎 Effective env"
+            echo "PROJECT_DIR=$PROJECT_DIR"
+            echo "PYTHON=$PYTHON"
+            echo "DOMAIN=$DOMAIN"
+            echo "JUPYTER_PLATFORM_DIRS=$JUPYTER_PLATFORM_DIRS"
 
             echo "📂 Confirm project dir"
             cd "$PROJECT_DIR" || { echo "❌ cd $PROJECT_DIR failed"; exit 1; }
@@ -122,18 +132,18 @@ jobs:
             echo "🗂 ls -la"
             ls -la
 
-            echo "🔧 Dev toolchain info"
+            echo "🔧 Toolchain"
             which mkdocs || true
             mkdocs --version || true
-            which ${PYTHON:-python3} || true
-            ${PYTHON:-python3} --version || true
+            which "$PYTHON" || true
+            "$PYTHON" --version || true
 
             echo "🔄 Git pull"
             git stash --include-untracked || true
             git pull --rebase
 
             echo "🐍 venv"
-            ${PYTHON:-python3} -m venv .venv
+            "$PYTHON" -m venv .venv
             source .venv/bin/activate
             python -m pip install -U pip
             python -m pip install -r requirements.txt
@@ -152,13 +162,11 @@ jobs:
             ln -sfn site_live site
 
             echo "👀 Path sanity"
-            echo "site symlink ->"; readlink -f site || true
-            echo "tree depth"
+            echo "site symlink -> $(readlink -f site || true)"
             find site_live -maxdepth 2 -type d -printf "%p\n" | head -n 20
 
             echo "🔑 Ownership and perms"
             id || true
-            # adjust if your web user differs (www-data for Nginx, caddy for Caddy)
             if id www-data >/dev/null 2>&1; then chown -R www-data:www-data site_live || true; fi
             if id caddy >/dev/null 2>&1; then chown -R caddy:caddy site_live || true; fi
             find site_live -maxdepth 2 -type d -printf "%M %u:%g %p\n" | head -n 10
@@ -169,10 +177,10 @@ jobs:
               nginx -v || true
               echo "🧪 nginx -t"
               nginx -t || { echo "❌ nginx -t failed"; exit 1; }
-              echo "📄 nginx -T (print config)"
+              echo "📄 nginx -T (first 200 lines)"
               nginx -T | sed -n '1,200p'
-              echo "🔎 Grep server block for domain"
-              nginx -T | grep -A3 -B3 -n "server_name.*${DOMAIN}" || true
+              echo "🔎 server block grep for $DOMAIN"
+              nginx -T | grep -A3 -B3 -n "server_name.*$DOMAIN" || true
               echo "🔁 Reload Nginx"
               systemctl reload nginx || true
               echo "🗒 nginx status (tail)"
@@ -180,7 +188,7 @@ jobs:
             elif command -v caddy >/dev/null 2>&1; then
               echo "🌐 Caddy present"
               caddy version || true
-              echo "📄 Caddyfile"
+              echo "📄 Caddyfile (first 200 lines)"
               if [ -f /etc/caddy/Caddyfile ]; then sed -n '1,200p' /etc/caddy/Caddyfile; fi
               echo "🔁 Reload Caddy"
               systemctl reload caddy || true
@@ -192,10 +200,8 @@ jobs:
 
             echo "🔍 Local HTTP sanity"
             curl -s -I http://127.0.0.1/ | sed -n '1,20p' || true
-            echo "🔍 Serve check for /index.html on loopback"
-            # adjust root path if your server block uses a different root
+            echo "🔍 Top of built /index.html"
             test -f site_live/index.html && head -n 5 site_live/index.html || true
-          EOF
 
       - name: Verify Remote Site Files
         shell: bash
@@ -247,7 +253,7 @@ jobs:
           echo "# HTML headers"
           curl -s -I -H 'Cache-Control: no-cache' "$BASE/" | sed -n '1,25p'
           echo "# Asset headers (pick first js/css)"
-          js=$(curl -s "$BASE/" | grep -o 'assets/javascripts/[^"]*' | head -n1)
-          css=$(curl -s "$BASE/" | grep -o 'assets/stylesheets/[^"]*' | head -n1)
+          js=$(curl -s "$BASE/" | grep -o 'assets/javascripts/[^"]*' | head -n1 || true)
+          css=$(curl -s "$BASE/" | grep -o 'assets/stylesheets/[^"]*' | head -n1 || true)
           if [ -n "$js" ]; then curl -s -I "$BASE/$js" | sed -n '1,25p'; fi
           if [ -n "$css" ]; then curl -s -I "$BASE/$css" | sed -n '1,25p'; fi
