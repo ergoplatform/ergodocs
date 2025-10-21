@@ -1,0 +1,80 @@
+name: Fix sigmaverse vhost (one-off)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - ".github/workflows/fix-sigmaverse-vhost.yml"
+
+jobs:
+  fix-sigmaverse:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      SSH_USER: ${{ secrets.SSH_USER || 'root' }}
+      SSH_HOST: ${{ secrets.SSH_HOST || '213.239.193.208' }}
+      DOMAIN_DOCS: ${{ secrets.DOMAIN_DOCS || 'docs.ergoplatform.com' }}
+      DOMAIN_SIGMA: ${{ secrets.DOMAIN_SIGMA || 'sigmaverse.io' }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install SSH key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.DEPLOY_KEY }}
+          known_hosts: ${{ secrets.KNOWN_HOSTS }}
+
+      - name: Enable proper vhost for sigmaverse.io and reload nginx
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          ssh "${SSH_USER:-root}@${SSH_HOST}" bash <<'EOSSH'
+            set -Eeuo pipefail
+            sigma_conf_av=/etc/nginx/sites-available/default
+            sigma_conf_en=/etc/nginx/sites-enabled/default
+
+            echo "📁 sites-enabled contents (before):"
+            ls -lah /etc/nginx/sites-enabled/ || true
+            echo
+
+            # If the default vhost (which contains server_name sigmaverse.io) is not enabled, enable it.
+            if [ -f "$sigma_conf_av" ] && [ ! -e "$sigma_conf_en" ]; then
+              echo "🔗 Enabling sigmaverse vhost: $sigma_conf_av -> $sigma_conf_en"
+              ln -s "$sigma_conf_av" "$sigma_conf_en"
+            else
+              echo "ℹ️ No change: either already enabled or missing $sigma_conf_av"
+            fi
+
+            echo "🧪 nginx -t"
+            nginx -t
+
+            echo "🔁 Reloading nginx"
+            systemctl reload nginx
+
+            echo
+            echo "📁 sites-enabled contents (after):"
+            ls -lah /etc/nginx/sites-enabled/ || true
+          EOSSH
+
+      - name: Quick verify routing (local HTTP/HTTPS)
+        shell: bash
+        run: |
+          set +e  # don't fail the workflow on verification; just print results
+          DOCS="${DOMAIN_DOCS:-docs.ergoplatform.com}"
+          SIGMA="${DOMAIN_SIGMA:-sigmaverse.io}"
+
+          echo "🔎 curl http://127.0.0.1/ Host:$DOCS"
+          ssh "${SSH_USER:-root}@${SSH_HOST}" "curl -sSI -H 'Host: $DOCS' http://127.0.0.1/ | sed -n '1,10p' || true"
+
+          echo
+          echo "🔎 curl http://127.0.0.1/ Host:$SIGMA"
+          ssh "${SSH_USER:-root}@${SSH_HOST}" "curl -sSI -H 'Host: $SIGMA' http://127.0.0.1/ | sed -n '1,10p' || true"
+
+          echo
+          echo "🔎 curl https:// (ignore verify, force 127.0.0.1)"
+          ssh "${SSH_USER:-root}@${SSH_HOST}" "curl -skI --resolve '$DOCS:443:127.0.0.1' https://$DOCS/ | sed -n '1,10p' || true"
+          echo
+          ssh "${SSH_USER:-root}@${SSH_HOST}" "curl -skI --resolve '$SIGMA:443:127.0.0.1' https://$SIGMA/ | sed -n '1,10p' || true"
