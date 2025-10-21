@@ -17,7 +17,6 @@ jobs:
     name: Deploy and verify live site
     steps:
       - name: Checkout
-      # Even though we build on the server, keeping checkout helps for future steps if needed
         uses: actions/checkout@v4
 
       - name: Install SSH key
@@ -28,7 +27,7 @@ jobs:
 
       - name: Remote deploy (build on server and sync to site_live)
         run: |
-          ssh "$SSH_USER@$SSH_HOST" 'bash -s' <<'EOSSH'
+          ssh "$SSH_USER@$SSH_HOST" "PROJECT_DIR='$PROJECT_DIR' DOMAIN='$DOMAIN' bash -s" <<'EOSSH'
           set -eE -o pipefail
 
           echo "📂 Ensure project directory exists"
@@ -49,6 +48,7 @@ jobs:
           fi
 
           echo "🧰 Ensure python3-venv"
+          export DEBIAN_FRONTEND=noninteractive
           apt-get update -y
           apt-get install -y python3-venv python3-pip
 
@@ -88,11 +88,11 @@ jobs:
 
       - name: Disable conflicting nginx vhosts (reversible)
         run: |
-          ssh "$SSH_USER@$SSH_HOST" 'bash -s' <<'EOSSH'
+          ssh "$SSH_USER@$SSH_HOST" "DOMAIN='$DOMAIN' bash -s" <<'EOSSH'
           set -eE -o pipefail
           changed=0
 
-          # Disable Debian default and any vhost that proxies to :8000 or reuses docs.ergoplatform.com
+          # Disable Debian default and any vhost that proxies to :8000 or duplicates docs.ergoplatform.com
           for f in /etc/nginx/sites-enabled/*; do
             [ -f "$f" ] || continue
             base="$(basename "$f")"
@@ -122,10 +122,8 @@ jobs:
 
       - name: Quick nginx sanity (remote, non-blocking)
         run: |
-          ssh "$SSH_USER@$SSH_HOST" 'bash -s' <<'EOSSH'
+          ssh "$SSH_USER@$SSH_HOST" "PROJECT_DIR='$PROJECT_DIR' DOMAIN='$DOMAIN' bash -s" <<'EOSSH'
           set +e
-          DOMAIN="${DOMAIN:-docs.ergoplatform.com}"
-
           echo "🔎 Nginx ports"
           ss -ltnp | awk "/nginx/ || NR==1"
 
