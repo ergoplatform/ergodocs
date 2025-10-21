@@ -26,119 +26,46 @@ jobs:
           key: ${{ secrets.DEPLOY_KEY }}
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
 
-      - name: Build & Deploy (rotate site_live; no sed)
+      - name: Remote Deploy via SSH (delete site_live then promote new build)
         run: |
           set -Eeuo pipefail
-          ssh "$SSH_USER@$SSH_HOST" bash -s <<EOF
+          ssh "$SSH_USER@$SSH_HOST" bash -s -- "$PROJECT_DIR" <<'REMOTE'
           set -Eeuo pipefail
-
-          TS=\$(date +%Y%m%d-%H%M%S)
-          PROJ="${PROJECT_DIR}"
-          DOM="${DOMAIN}"
+          PROJ="$1"
 
           echo "📂 cd \$PROJ"
-          cd "\$PROJ"
+          cd "$PROJ"
 
-          echo "🐍 venv + deps"
-          apt-get update -y
-          apt-get install -y python3-venv python3-pip
+          echo "🔄 Git pull"
+          git stash -u || true
+          git pull --rebase || git pull
+
+          echo "🐍 venv & deps"
           python3 -m venv .venv
           . .venv/bin/activate
-          python -m pip install --upgrade pip
+          python -m pip install -U pip
           pip install -r requirements.txt
 
-          echo "🏗 mkdocs build (non-strict)"
+          echo "🏗 mkdocs build"
           rm -rf site
           mkdocs build
 
-          echo "🔁 prepare site_next"
-          rm -rf site_next
-          cp -a site site_next
-
-          echo "🔁 rotate existing site_live (if any)"
-          if [ -e site_live ] || [ -L site_live ]; then
-            OLD="site_old_\$TS"
-            mv site_live "\$OLD"
-            echo "↪️  moved prior site to: \$OLD"
+          echo "🧹 remove old live dir"
+          if [ -d site_live ] || [ -L site_live ]; then
+            rm -rf site_live
           fi
 
-          echo "🔁 promote site_next -> site_live"
-          mv site_next site_live
-          # Make sure nginx (www-data) can read
-          if id -u www-data >/dev/null 2>&1; then
-            chown -R www-data:www-data site_live || true
-          fi
+          echo "🚀 promote new build"
+          mv site site_live
+
+          # make sure nginx can read it; no failure if user/group absent
+          chown -R www-data:www-data site_live || true
           find site_live -type d -exec chmod 755 {} \; || true
           find site_live -type f -exec chmod 644 {} \; || true
-          touch site_live/.deployed-at
 
-          echo "🚦 Nginx vhost housekeeping (no edits, just enable/disable files)"
-          mkdir -p /etc/nginx/sites-available /etc/nginx/sites-enabled /etc/nginx/sites-disabled
+          echo "✅ done"
+          
 
-          # 1) Create a clean STATIC vhost for docs (HTTP->HTTPS + HTTPS root)
-          STATIC_AVAIL="/etc/nginx/sites-available/ergo-docs-static.conf"
-          cat > "\$STATIC_AVAIL" <<'NGINX'
-          server {
-            listen 80;
-            listen [::]:80;
-            server_name docs.ergoplatform.com;
-            return 301 https://$host$request_uri;
-          }
-
-          server {
-            listen 443 ssl;
-            listen [::]:443 ssl;
-            server_name docs.ergoplatform.com;
-
-            ssl_certificate     /etc/ssl/certs/docs.ergoplatform.com.pem;
-            ssl_certificate_key /etc/ssl/private/docs.ergoplatform.com.key;
-
-            root /var/www/ergodocs/site_live;
-            index index.html;
-
-            add_header Strict-Transport-Security "max-age=31536000" always;
-
-            location / {
-              try_files $uri $uri/ =404;
-            }
-
-            # Long cache for assets
-            location ~* \.(css|js|png|jpg|jpeg|gif|svg|woff2?|ttf|eot)$ {
-              expires 30d;
-              access_log off;
-              try_files $uri =404;
-            }
-          }
-          NGINX
-
-          # Symlink it into sites-enabled (idempotent)
-          if [ ! -e /etc/nginx/sites-enabled/ergo-docs-static.conf ]; then
-            ln -s "\$STATIC_AVAIL" /etc/nginx/sites-enabled/ergo-docs-static.conf
-          fi
-
-          # 2) Disable any enabled vhost files that also claim the same server_name (proxy leftovers)
-          for f in /etc/nginx/sites-enabled/*; do
-            [ -e "\$f" ] || continue
-            base=\$(basename "\$f")
-            # Keep the static one we just wrote
-            if [ "\$base" = "ergo-docs-static.conf" ]; then
-              continue
-            fi
-            if grep -qE "server_name[[:space:]]+${DOMAIN};" "\$f"; then
-              mv "\$f" "/etc/nginx/sites-disabled/\${base}.\$TS"
-              echo "➡️  disabled conflicting vhost: \${base}"
-            fi
-          done
-
-          echo "🧪 nginx -t && reload"
-          nginx -t
-          systemctl reload nginx
-
-          echo "🧪 origin check via SNI to 127.0.0.1 (Cloudflare origin cert -> -k)"
-          curl -fsS -k --resolve "\${DOM}:443:127.0.0.1" "https://\${DOM}/" > /tmp/home.html
-          grep -q "</html>" /tmp/home.html || { echo "❌ origin HTML incomplete"; exit 1; }
-          echo "✅ origin OK"
-          EOF
 
       - name: List latest deployed files
         run: |
