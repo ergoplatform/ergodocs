@@ -139,17 +139,9 @@ nav:
   - Start Here:
       - Welcome: index.md
       - Getting Started: getting-started-with-ergo.md
-      - FAQ: faq.md
-      - Using Ergo:
-          - Overview: using-ergo-intermediate.md
-          - Run a Node: node/install.md
-          - Run Oracles: dev/oc/oracle.md
-          - Run Watchers (Rosen): eco/rosen/watcher.md
-          - Dex Bots: dev/oc/dex_bots.md
-      - Wallets: wallets-overview.md
-      - Building on Ergo:
-          - Overview: building-on-ergo-developers.md
-          - One-Pager: dev/get-started.md
+      - Get a Wallet: wallets-overview.md
+      - Using Ergo: using-ergo-intermediate.md
+      - Building on Ergo: building-on-ergo-developers.md
       - Securing the Network: securing-the-network-miners.md
       - Learn: learn.md
       - Community: engage-with-the-ergo-community.md
@@ -157,8 +149,9 @@ nav:
           - Glossary: glossary.md
           # - Sitemap: site-map.md
           # - Tags: tags.md
+          - FAQ: faq.md
           - Common Misconceptions: fud-faq.md
-      - Why Ergo: dev/protocol/why.md
+      #- Why Ergo: dev/protocol/why.md
       - Contribute: contribute.md
       - Roadmap: roadmap.md
   - Use:
@@ -190,6 +183,11 @@ nav:
           - Bridges & Infrastructure:
               - Rosen Bridge:
                   - eco/rosen.md
+                  - Concepts & Assumptions: eco/rosen/concepts-assumptions.md
+                  - Token Transfer Flows: eco/rosen/token-transfer-flows.md
+                  - Fees & Dust: eco/rosen/fees-and-dust.md
+                  - New Chain Integration: eco/rosen/new-chain-integration.md
+                  - Benefits: eco/rosen/benefits.md
                   - Watchers:
                       - eco/rosen/watcher.md
                       - Prerequisites: eco/rosen/rosen-preq.md
@@ -197,6 +195,7 @@ nav:
                       - Bitcoin Watcher: eco/rosen/bitcoin-watcher.md
                   - Guards: eco/rosen/rosen-guard.md
                   - Tokenomics: eco/rosen/rosen-tokenomics.md
+                  - Bringing Monero: eco/rosen/bringing-monero.md
                   - Team: eco/rosen/rosen-team.md
                   - FAQ: eco/rosen/rosen-faq.md
                   - Uses:

@@ -15,6 +15,43 @@ tags:
 Bridges live between: ADA, BSC, BTC, ETH, DOGE, join the [Rosen Telegram chat](https://t.me/rosenbridge_erg) to keep up to date.
 ///
 
+## Welcome to RosenBridge
+
+RosenBridge connects Cardano and Ergo with Ethereum, EVM chains, and beyond. The bridge enables secure, efficient, and user‑friendly cross‑chain transfers by keeping consensus and auditability on Ergo, while external chains rely only on multisig or threshold signatures controlled by Guards.
+
+/// details | Video introduction
+     {type: info, open: false}
+Please see [this video](https://www.youtube.com/watch?v=Xsiy-yPJQ6w) for a visual introduction.
+///
+
+## Why RosenBridge
+
+- Decentralized security: Guard‑based m‑of‑n/threshold signatures with independent validation by each Guard.
+- User‑friendly: Intuitive UI to initiate cross‑chain transfers with clear fee visibility.
+- Broad compatibility: Initially Cardano, Ergo, and Ethereum/EVMs; extensible to new chains supporting multisig/threshold signing.
+- Community‑driven: Open source with community feedback and contributions welcomed.
+
+## Explore RosenBridge
+
+- Concepts & security model: [concepts-assumptions.md](concepts-assumptions.md)
+- How transfers work end‑to‑end: [token-transfer-flows.md](token-transfer-flows.md)
+- Fees and dust collection on Ergo: [fees-and-dust.md](fees-and-dust.md)
+- Add a new chain: [new-chain-integration.md](new-chain-integration.md)
+- Benefits at a glance: [benefits.md](benefits.md)
+- Monero PoC design: [bringing-monero.md](bringing-monero.md)
+- Roles:
+  - Guards: [rosen-guard.md](rosen-guard.md)
+  - Watchers: [watcher.md](watcher.md)
+- Tokenomics (RSN): [rosen-tokenomics.md](rosen-tokenomics.md)
+
+/// details | References
+     {type: tip, open: false}
+- Contracts: https://docs.rosen.tech/rosen/readme-1/rosen/contracts/contract
+- Guard: Keygen (Docker): https://docs.rosen.tech/rosen/readme-1/guard/keygen-docker
+- Guard: Production Setup: https://docs.rosen.tech/rosen/readme-1/guard/setup
+- Watcher: Deploy (Docker): https://docs.rosen.tech/rosen/readme-1/watcher/deploy-docker
+///
+
 ## Key Features
 
 Rosen Bridge is an [open-source](https://github.com/rosen-bridge) protocol, primarily focused on Ergo, that allows users to seamlessly transfer coins and tokens between Ergo and any other compatible blockchain. The compatibility of the other blockchain, referred to as chainX, is determined by its support for multi-signature transactions or threshold signatures.

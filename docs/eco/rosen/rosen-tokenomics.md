@@ -41,3 +41,37 @@ We have successfully completed and received funds from milestone 3 and have subm
 - Creates incentives (event-based emission).
 
 See [this answer](https://youtu.be/5p-xmILkS2c?t=1455) from Armeanio in the Weekly Update & AMA - December 14th 2023.
+
+## Guard and Watcher Dynamics
+
+- Guard set is predefined and curated for diversity and resilience. See [Rosen Guards](rosen-guard.md).
+- Watchers are open to anyone who meets collateral requirements. See [Watcher](watcher.md).
+- Guards perform independent validation and final signing; Watchers propose and reach consensus on events recorded on Ergo.
+
+## RSN Staking and RosenEvent Tokens
+
+- Watchers stake RSN (and ERG collateral) to obtain reporting permits.
+- Staked RSN mints “RosenEvent” tokens used to create event boxes on Ergo.
+- Upon successful transfer finalization, RosenEvent tokens are returned; if a Watcher reports fraudulent events, the RosenEvent is forfeited, effectively slashing the underlying RSN stake.
+
+## Fee Distribution and Emission
+
+- Watchers and Guards earn a share of bridge fees for successful events.
+- Event-based RSN emissions additionally reward active participants during the bootstrapping phase.
+- After emission ends, fees are collected in RSN; holding RSN can grant fee discounts for projects.
+
+## Dynamic Watcher Allocation
+
+- High-value paths naturally attract more Watchers due to fee and emission rewards.
+- Incentives are tuned so less-utilized routes remain profitable, supporting balanced coverage and liveness across networks.
+
+## Ensuring Independent Monitoring
+
+- Watchers must act independently and are discouraged from replaying others’ reports.
+- Mechanisms such as commit–reveal and honeypots penalize copycats and dishonest behavior.
+- This preserves the integrity of the Watcher layer and the fairness of fee/emission distribution.
+
+For background on roles and assumptions, review:
+- [Concepts & Assumptions](concepts-assumptions.md)
+- [Watcher](watcher.md)
+- [Rosen Guards](rosen-guard.md)
