@@ -20,6 +20,7 @@ This guide provides an overview of the methods available using the [Termux](http
 
 There are two primary approaches, depending on your needs and technical comfort level:
 
+<a id="direct-termux-setup-digest-mode"></a>
 1.  **[Direct Termux Setup (Digest Mode)](termux-digest.md):**
     *   **Recommended for most users.**
     *   Runs the node directly within Termux.

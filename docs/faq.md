@@ -163,6 +163,7 @@ Ergo has a maximum supply of **97,739,925** Ergs, to be completed by 2045. The b
 
 </details>
 
+<a id="future-plans--ecosystem-growth"></a>
 ## Future Plans & Ecosystem Growth
 
 <details>
@@ -223,6 +224,7 @@ Contracts can't be shut down. We avoid legal challenges by pushing for completel
 
 </details>
 
+<a id="competitiveness--differentiation"></a>
 ## Competitiveness & Differentiation
 
 <details>
@@ -400,6 +402,7 @@ Ergo is designed to support sharding with its unique architecture. Ergo blocks h
 
 ## [EIPs](eip.md)
 
+<a id="what-is-ergos-approach-to-forking"></a>
 <details>
 <summary>What is Ergo's approach to Forking?</summary>
 

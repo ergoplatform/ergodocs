@@ -49,6 +49,8 @@ Tips:
 - If you see “insufficient ERG” but have funds, consolidate in Nautilus (Wallet Optimization).
 - Typical transfers take around ~2 hours; delays are possible.
 - Track status via Rosen Events: https://app.rosen.tech/events
+- Understand status stages: [events-and-status.md](events-and-status.md)
+- Troubleshoot common issues: [rosen-troubleshooting.md](rosen-troubleshooting.md)
 
 ## Supported Tokens and Live Status
 

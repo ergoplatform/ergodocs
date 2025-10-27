@@ -20,7 +20,7 @@ Cryptography & data structures:
 - Cryptography Overview: [Crypto](crypto.md)
 - Sigma Protocols: [Overview](dev/scs/sigma.md) • [Schnorr](dev/scs/sigma/schnorr.md) • [Verification](dev/scs/sigma/verifying.md) • [Diffie-Hellman](dev/scs/sigma/diffie.md)
 - Zero-Knowledge: [Non-Interactive ZK](dev/data-model/nizk.md) • [ZeroJoin](dev/crypto/zerojoin.md)
-- Data Structures: [Overview](dev/data-model/data-structures.md) • [Merkle Trees](dev/data-model/merkle-tree.md) • [AVL Trees](dev/protocol/avl.md) • [PoPoW](dev/data-model/structures/popow.md) • [Interlink Vectors](dev/data-model/structures/interlink-vectors.md)
+- Data Structures: [Overview](dev/data-model/data-structures.md) • [Merkle Trees](dev/data-model/merkle-tree-overview.md) • [AVL Trees](dev/protocol/avl.md) • [PoPoW](dev/data-model/structures/popow.md) • [Interlink Vectors](dev/data-model/structures/interlink-vectors.md)
 
 Roadmap & scaling:
 

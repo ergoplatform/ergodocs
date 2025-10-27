@@ -25,7 +25,7 @@ Developer-focused hub linking to the canonical Learn content.
 - [Overview](data-structures.md)
 
 ### Merkle Trees
-- [Main Doc](merkle-tree.md)
+- [Main Doc](merkle-tree-overview.md)
 - [Format](merkle-format.md)
 - [Validation](merkle-validation.md)
 - [Considerations](merkle-considerations.md)

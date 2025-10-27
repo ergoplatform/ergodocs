@@ -38,6 +38,10 @@ Please see [this video](https://www.youtube.com/watch?v=Xsiy-yPJQ6w) for a visua
 - Fees and dust collection on Ergo: [fees-and-dust.md](fees-and-dust.md)
 - Add a new chain: [new-chain-integration.md](new-chain-integration.md)
 - Benefits at a glance: [benefits.md](benefits.md)
+- Events & status: [events-and-status.md](events-and-status.md)
+- Security model details: [security-model.md](security-model.md)
+- Troubleshooting guide: [rosen-troubleshooting.md](rosen-troubleshooting.md)
+- Glossary: [rosen-glossary.md](rosen-glossary.md)
 - Monero PoC design: [bringing-monero.md](bringing-monero.md)
 - Roles:
   - Guards: [rosen-guard.md](rosen-guard.md)

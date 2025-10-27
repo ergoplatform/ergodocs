@@ -19,6 +19,23 @@ See also:
 - [Token Transfer Flows](token-transfer-flows.md)
 - [Rosen Guards](rosen-guard.md)
 
+### Flow Overview
+
+```mermaid
+sequenceDiagram
+    participant ChainX
+    participant Watcher as Watchers
+    participant Ergo
+    participant Guards
+
+    ChainX-->>Watcher: Confirmed deposit (observed via RPC/indexer)
+    Watcher->>Ergo: Create event box (per watcher)
+    Watcher->>Ergo: Approved event box (after consensus)
+    Guards->>ChainX: Independently verify source event
+    Guards->>Ergo: Sign resulting tx (mint/burn) after checks
+    Guards->>Ergo: Monitor confirmations to finality
+```
+
 ## Watcher Setup Guides
 
 //// details | Tutorials

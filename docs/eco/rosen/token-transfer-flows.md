@@ -2,7 +2,7 @@
 
 This guide explains the end-to-end flows for moving value through RosenBridge in both directions: from an external chain (ChainX) to Ergo, and from Ergo back to ChainX. It highlights the roles of Watchers and Guards, consensus checkpoints, and finality.
 
-See also: [Watcher](watcher.md), [Rosen Guards](rosen-guard.md), [Fees & Dust](fees-and-dust.md)
+See also: [Watcher](watcher.md), [Rosen Guards](rosen-guard.md), [Fees & Dust](fees-and-dust.md), [Events & Status](events-and-status.md), [Metadata Schema](metadata-schema.md)
 
 ## Token Transfer from ChainX to Ergo
 
@@ -38,6 +38,26 @@ Transferring tokens from ChainX to Ergo involves securely locking the native tok
 8) Ensuring Transaction Confirmation (Guard Oversight)
 - Guards monitor the Ergo chain to ensure the transaction is mined and reaches sufficient confirmations.
 
+### Sequence diagram: ChainX -> Ergo
+```mermaid
+sequenceDiagram
+    participant User
+    participant ChainX
+    participant Watchers
+    participant Ergo
+    participant Guards
+
+    User->>ChainX: Lock tokens (tx with metadata)
+    Watchers->>ChainX: Monitor multisig address
+    ChainX-->>Watchers: Confirmed payment
+    Watchers->>Ergo: Create event boxes
+    Watchers->>Ergo: Approved event box (consensus)
+    Guards->>ChainX: Independently verify event
+    Guards->>Ergo: Sign mint tx (collect m-of-n)
+    Ergo-->>User: Mint rTokens
+    Guards->>Ergo: Monitor confirmations (finality)
+```
+
 ## Transferring rTokens from Ergo to ChainX
 
 Returning rTokens from Ergo to ChainX burns the rTokens on Ergo and unlocks the original tokens on ChainX.
@@ -67,6 +87,39 @@ Returning rTokens from Ergo to ChainX burns the rTokens on Ergo and unlocks the 
 
 8) Ensuring Transaction Finality (Guard Oversight)
 - Guards monitor ChainX to confirm the transaction is mined and reaches sufficient confirmations.
+
+### Sequence diagram: Ergo -> ChainX
+```mermaid
+sequenceDiagram
+    participant User
+    participant Ergo
+    participant Watchers
+    participant Guards
+    participant ChainX
+
+    User->>Ergo: Send rTokens to Bank (with metadata)
+    Watchers->>Ergo: Monitor Bank boxes
+    Ergo-->>Watchers: Confirmed Bank tx
+    Watchers->>Ergo: Create event boxes
+    Watchers->>Ergo: Approved event box (consensus)
+    Guards->>Ergo: Verify event and burn rTokens
+    Guards->>ChainX: Sign unlock tx (collect m-of-n)
+    ChainX-->>User: Release native tokens
+    Guards->>ChainX: Monitor confirmations (finality)
+```
+
+### Event lifecycle (Ergo)
+```mermaid
+stateDiagram-v2
+    [*] --> Detected
+    Detected: Source tx detected (post-confirmations)
+    Detected --> EventBoxes: Watchers create event boxes
+    EventBoxes --> Approved: Threshold of watcher event boxes reached
+    Approved --> GuardSigned: Guards validate and sign
+    GuardSigned --> Broadcast: Tx submitted on target chain
+    Broadcast --> Confirmed: Sufficient confirmations observed
+    Confirmed --> [*]
+```
 
 ## Related
 

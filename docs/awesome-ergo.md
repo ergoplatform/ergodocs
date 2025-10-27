@@ -112,6 +112,10 @@
   - [Docker Deploy Guide](https://github.com/rosen-bridge/operation/blob/dev/docs/watcher/deploy-docker.md)
 
 ## 💼 Wallets <a id="wallets"></a>
+<!-- anchors for ToC subsections -->
+<a id="browser--desktop"></a>
+<a id="mobile"></a>
+<a id="utilities--recovery"></a>
 
 > See also: [Wallets Overview on ErgoDocs](https://docs.ergoplatform.com/dev/wallets/)
 
@@ -144,7 +148,7 @@
 - 🥇 **[Fleet SDK](https://fleet-sdk.github.io/docs/)** – JS/TS SDK for web dApps. [GitHub](https://github.com/fleet-sdk) [`JS/TS`] *(Active)*
 - 🥇 **[Sigma-Rust](https://github.com/ergoplatform/sigma-rust/)** – core primitives & serialization in Rust. [`Rust`] *(Active)*
 
-### 🔒 Core Libraries & Cryptography
+### 🔒 Core Libraries & Cryptography <a id="core-libraries--cryptography"></a>
 
 - 🥇 **[Sigmastate Interpreter](https://github.com/ScorexFoundation/sigmastate-interpreter)** – ErgoScript core interpreter & type system. [`Scala`, `ErgoScript`] *(Active)*
 - [Scrypto](https://github.com/input-output-hk/scrypto/) – crypto primitives library. [`Scala`]
@@ -156,7 +160,7 @@
 - [Scorex ProofOfStake Example](https://github.com/ScorexFoundation/ProofOfStake) – example PoS implementation using Scorex. [`Scala`]
 - [Scorex SimpleTransactions Example](https://github.com/ScorexFoundation/SimpleTransactions) – simple transaction example using Scorex. [`Scala`]
 
-### 🔗 Language Bindings & Wrappers
+### 🔗 Language Bindings & Wrappers <a id="language-bindings--wrappers"></a>
 
 - 🥇 **[ErgoLib (sigma-rust)](https://github.com/ergoplatform/sigma-rust/tree/develop/ergo-lib)** – high-level Rust abstractions. [Docs](https://docs.rs/ergo-lib/) [`Rust`]
 - 🥇 **[ergo-lib-wasm](https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-wasm)** – WASM bindings for JS/TS. [NPM (Browser)](https://www.npmjs.com/package/ergo-lib-wasm-browser) | [NPM (NodeJS)](https://www.npmjs.com/package/ergo-lib-wasm-nodejs) [`JS/TS`, `Rust`]
@@ -373,7 +377,7 @@
 - [Single Transaction Swap](https://www.single-tx-swap.com/) – UI for single TX atomic swaps *(Live)*. [GitHub](https://github.com/danieloravec/ergo-token-swap) *(Active)*
 - [Arbit](https://github.com/ConnecMent/arbit) – simple arbitrage platform. [`JS`] *(Active?)*
 - [Analog Ergo](https://github.com/dzyphr/ScalaSigmaParticle) – P2P atomic swap protocol. [Contract](https://github.com/dzyphr/ScalaSigmaParticle/blob/main/ScalarLock/src/main/scala/ScalarLock.scala) | [UI PoC](https://github.com/dzyphr/AtomicAnalogSwapWebsite)
-- [Mew Finance](https://mewfinance.com/) – DEX, NFT marketplace, and DeFi suite *(Live)*. [Docs](docs/eco/mew-finance.md) | [Telegram](https://t.me/MewFinance) *(Active)*
+- [Mew Finance](https://mewfinance.com/) – DEX, NFT marketplace, and DeFi suite *(Live)*. [Docs](eco/mew-finance.md) | [Telegram](https://t.me/MewFinance) *(Active)*
 
 ### 🏦 Stablecoins & Lending <a id="stablecoins--lending"></a>
 
@@ -555,7 +559,7 @@
 
 ---
 
-## 🔍 Explorers <a id="explorers"></a>
+## 🔍 Explorers <a id="explorers"></a> <a id="explorers--dashboards"></a>
 
 > See also: [Explorer Overview on ErgoDocs](https://docs.ergoplatform.com/dev/stack/explorer/)
 

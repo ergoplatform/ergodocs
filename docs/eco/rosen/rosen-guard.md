@@ -6,6 +6,9 @@ See also:
 - [Concepts & Assumptions](concepts-assumptions.md)
 - [Token Transfer Flows](token-transfer-flows.md)
 - [Watcher](watcher.md)
+- [Security Model](security-model.md)
+- [Troubleshooting](rosen-troubleshooting.md)
+- [Glossary](rosen-glossary.md)
 
 Guards are a federated group of entities managing the Rosen core. Their authority over Rosen is restricted through multisignature contracts and wallets. Failure or collusion of Guards will be tolerated while the majority of Guards are healthy. Each Guard has a reasonable amount of funds locked as collateral and will lose all their funds at once in case of malicious behaviour.
 
@@ -41,5 +44,23 @@ The Rosen Bridge Guard Service facilitates transaction submissions across differ
 4. **Confirmation and Finalization**:
       - After a transaction is submitted to the blockchain, it is monitored for confirmation. The system ensures that the transaction achieves a sufficient number of confirmations to be considered final and irreversible.
       - The Transaction Processor also checks for successful transaction execution and handles any necessary follow-up actions or notifications.
+
+### Processing flow
+
+```mermaid
+sequenceDiagram
+    participant Ergo as Ergo (Events)
+    participant Guards
+    participant ChainX
+    participant Reward as Reward Service
+
+    Ergo-->>Guards: Approved event box detected
+    Guards->>Guards: TxAgreement (multi-guard consensus)
+    Guards->>ChainX: Craft tx (Transaction Processor)
+    Guards->>ChainX: Collect m-of-n/threshold signatures
+    ChainX-->>Guards: Broadcast + confirmations
+    Guards->>Reward: Submit reward/settlement tx
+    Reward-->>Guards: Confirmation / receipt
+```
 
 In summary, the Guard Service from the Rosen Bridge project orchestrates the entire process from event detection on one blockchain through agreement and transaction crafting, to final submission and confirmation on another blockchain. This robust mechanism ensures that cross-chain transactions are executed securely and reliably, adhering to the consensus and operational rules of the involved blockchains.

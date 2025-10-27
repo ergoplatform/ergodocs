@@ -188,6 +188,11 @@ nav:
                   - Fees & Dust: eco/rosen/fees-and-dust.md
                   - New Chain Integration: eco/rosen/new-chain-integration.md
                   - Benefits: eco/rosen/benefits.md
+                  - Events & Status: eco/rosen/events-and-status.md
+                  - Security Model: eco/rosen/security-model.md
+                  - Metadata Schema: eco/rosen/metadata-schema.md
+                  - Troubleshooting: eco/rosen/rosen-troubleshooting.md
+                  - Glossary: eco/rosen/rosen-glossary.md
                   - Watchers:
                       - eco/rosen/watcher.md
                       - Prerequisites: eco/rosen/rosen-preq.md
@@ -433,7 +438,7 @@ nav:
           - Data Structures:
               - dev/data-model/data-structures.md
               - Merkle Trees:
-                  - dev/data-model/merkle-tree.md
+                  - dev/data-model/merkle-tree-overview.md
                   - Main Doc: dev/data-model/structures/merkle/merkle-tree.md
                   - Format: dev/data-model/structures/merkle/merkle-format.md
                   - Validation: dev/data-model/structures/merkle/merkle-validation.md

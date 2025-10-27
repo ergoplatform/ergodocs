@@ -58,6 +58,48 @@ See also:
 - Transparency: Operations are observable on Ergo, improving auditability.
 - Extensibility: New chains can be integrated with minimal coupling, provided they support multisig/threshold signing.
 
+### Architecture at a Glance
+
+```mermaid
+flowchart LR
+  subgraph ChainX [External Chain (e.g., BTC/ADA/EVM)]
+    U[User] -->|Lock tx + metadata| CXMS[Multisig/Threshold Wallet]
+  end
+
+  subgraph Ergo
+    W1[Watcher]:::watcher
+    W2[Watcher]:::watcher
+    W3[Watcher]:::watcher
+    EB[Event Boxes]
+    AEB[Approved Event Box]
+    G1[Guard]:::guard
+    G2[Guard]:::guard
+    G3[Guard]:::guard
+    MTX[Signed Tx (mint/burn)]
+  end
+
+  classDef watcher fill:#eef,stroke:#336,stroke-width:1px;
+  classDef guard fill:#efe,stroke:#363,stroke-width:1px;
+
+  CXMS -->|Confirmations| W1
+  CXMS -->|Confirmations| W2
+  CXMS -->|Confirmations| W3
+
+  W1 --> EB
+  W2 --> EB
+  W3 --> EB
+  EB -->|consensus| AEB
+
+  AEB --> G1
+  AEB --> G2
+  AEB --> G3
+
+  G1 --> MTX
+  G2 --> MTX
+  G3 --> MTX
+  MTX -->|Broadcast on Ergo or ChainX| U2[(User Destination)]
+```
+
 For an introductory walkthrough, see the overview and user-facing pages:
 - Landing: [rosen.md](rosen.md)
 - Operations: [Token Transfer Flows](token-transfer-flows.md)
