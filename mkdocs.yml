@@ -669,8 +669,8 @@ nav:
               - Plugin: dev/protocol/tx/babel-fleet.md
               - How-To: dev/protocol/tx/babel-howto.md
               - Implementation: dev/protocol/tx/babel-impl.md
-              - Standards: dev/protocol/tx/standards.md
-              - Just-In-Time Costing: node/jitc.md
+          - Standards: dev/protocol/tx/standards.md
+          - Just-In-Time Costing: node/jitc.md
           - Blocks & Proofs:
               - Block Overview: dev/data-model/block.md
               - Block Header: dev/data-model/block-header.md
