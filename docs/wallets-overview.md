@@ -11,7 +11,7 @@ Popular wallets:
 - Browser: [Nautilus](dev/wallet/nautilus.md)
 - Desktop: [Minotaur](dev/wallet/minotaur.md)
 - Desktop (full node optional): [Satergo](dev/wallet/satergo.md)
-- Mobile (Android): [SAFEW](dev/wallet/safew.md)
+- Mobile (Android or iOS): [Ergo Mobile Wallet (Terminus on iOS)](https://ergoplatform.org/en/ergo-wallet-app/)
 - Hardware: [Ledger](dev/wallet/payments/ledger.md)
 - Paper: [Paper Wallet](dev/wallet/paper-wallet.md)
 
@@ -24,6 +24,7 @@ Setup and operations:
 - Cold storage: [Cold Wallet Guide](tutorials/cold-wallet.md)
 - Message signing: [Message Signing](tutorials/message-signing.md)
 - Vaulting: [Satergo Vault](dev/wallet/satergo-vault.md)
+- Browser wallets on mobile: [Nautilus or Safew on Android](tutorials/browser-wallet-android.md)
 
 Payments and dApp interactions:
 
