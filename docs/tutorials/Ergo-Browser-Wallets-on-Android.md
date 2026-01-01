@@ -1,6 +1,8 @@
-## Using Chrome Extension Ergo Wallets (Nautilus or Safew) on Android
+## Overview
 
-To use the [Nautilus](dev/wallet/nautilus/) or [Safew](dev/wallet/safew) Ergo wallet browser extensions on Android, you need a mobile browser that supports **Chrome extensions**. Most mobile browsers do not support this, but a few do.
+To use the **[Nautilus](../dev/wallet/nautilus.md)** or **[Safew](../dev/wallet/safew.md)** Ergo wallet browser extensions on Android, you need a mobile browser that supports **Chrome extensions**. Most mobile browsers do not support this, but a few do.  
+
+This guide will walk you through installing **Nautilus** or **Safew** wallets on mobile, to be used as a **supplement to the official [Ergo wallet app](https://ergoplatform.org/en/ergo-wallet-app/)**, rather than a full replacement.
 
 ---
 
@@ -113,7 +115,7 @@ The steps below describe how to install and use the **Nautilus** or **Safew** Er
 
 - Extension popups may not render correctly on mobile.
 - Most Ergo dApps **will not successfully connect** to extension wallets on Android.
-- Built-in dApps inside Nautilus and Safew **do work** (Nautilus: wallet optimizations, SigmaUSD protocol; Safew: token minter, [mixer](eco/ergomixer/mixer-android.md) integration).
+- Built-in dApps inside Nautilus and Safew **do work** (Nautilus: wallet optimizations, SigmaUSD protocol; Safew: token minter, [mixer](../eco/ergomixer/mixer-android.md) integration).
 - Desktop site mode may be required for some pages but does not guarantee compatibility.
 - Background execution and notifications are unreliable.
 - This setup is **not recommended** for high-frequency or critical dApp usage.
