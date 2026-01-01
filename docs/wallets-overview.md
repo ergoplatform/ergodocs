@@ -24,7 +24,7 @@ Setup and operations:
 - Cold storage: [Cold Wallet Guide](tutorials/cold-wallet.md)
 - Message signing: [Message Signing](tutorials/message-signing.md)
 - Vaulting: [Satergo Vault](dev/wallet/satergo-vault.md)
-- Browser wallets on mobile: [Nautilus or Safew on Android](tutorials/browser-wallet-android.md)
+- Browser wallets on mobile: [Nautilus or Safew on Android](tutorials/Ergo-Browser-Wallets-on-Android.md)
 
 Payments and dApp interactions:
 
