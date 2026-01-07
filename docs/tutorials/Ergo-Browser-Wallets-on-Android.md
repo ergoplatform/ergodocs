@@ -1,55 +1,35 @@
 ## Overview
 
-To use the **[Nautilus](../dev/wallet/nautilus.md)** or **[Safew](../dev/wallet/safew.md)** Ergo wallet browser extensions on Android, you need a mobile browser that supports **Chrome extensions**. Most mobile browsers do not support this, but a few do.  
+There are three ways of using the **[Nautilus](../dev/wallet/nautilus.md)** or **[Safew](../dev/wallet/safew.md)** Ergo wallet browser extensions on Android.
+
+Two of the options require a mobile browser that supports **Chrome extensions**. Most mobile browsers do not support this, but a few do. These mobile browser methods involve trade-offs between ease of setup, wallet version, and dApp compatibility.
+
+The third option makes use of a full desktop browser, installed natively within Termux, and run via a minimal desktop environment, such as XFCE. This method brings full Ergo browser wallet functionality to Android using the most up to date version of Nautilus wallet. A guide for this setup can be found below under **Advanced Setup**.
 
 This guide will walk you through installing **Nautilus** or **Safew** wallets on mobile, to be used as a **supplement to the official [Ergo wallet app](https://ergoplatform.org/en/ergo-wallet-app/)**, rather than a full replacement.
 
-Alternatively, a full desktop browser can be installed natively within Termux, and run via a minimal desktop environment, such as XFCE. This method brings full Ergo browser wallet functionality to Android. A guide for this setup can be found below under **Advanced Setup**.
-
 ---
 
-## Expectations
+### Summary of Options (Easiest → Most Advanced)
 
-This method **does work** for installing and using Ergo wallet browser extensions on Android. 
-However, it is important to set realistic expectations:
+There are three ways to use Nautilus on Android, listed below from easiest to most advanced:
 
-- **Wallet functionality works** (view balances, manage addresses, sign transactions).
-- **dApp connectivity for external sites usually does *not* work reliably**.
-- Certain **built-in dApps inside the wallets do work**:
-  - **Nautilus:** wallet optimizations, SigmaUSD protocol
-  - **Safew:** token minter, mixer integration (requires local mixer running in termux)
-- The extension wallets on Android should be treated as:
-  - An **alternative wallet interface**, or
-  - A **supplement** to the official Ergo mobile wallet app
+- **Option 1:** Use the **latest release of Nautilus** in a mobile browser  
+  *Easy setup, but the dApp connector is currently broken.*
 
+- **Option 2:** Use **Nautilus release 0.9.4** in a mobile browser  
+  *Easy setup with a fully functional dApp connector, but uses an outdated wallet version.*
+
+- **Option 3:** Use **Termux with a desktop environment** on Android  
+  *More complex setup, but provides the latest Nautilus release with a fully functional dApp connector.*
+  
 ---
 
-## Supported Android Browsers
-
-The following Android browsers support installing Chrome extensions and can run Ergo wallet extensions:
-
-- **Quetta Browser** 
-  Download: https://www.quetta.net/
-
-- **Mises Browser** 
-  Download: https://www.mises.site/
-
-- **Lemur Browser** 
-  Download: https://lemurbrowser.com/app/en.html
-
-- **Kiwi Browser** *(discontinued — use with caution)* 
-  Source code and builds: 
-  https://github.com/kiwibrowser/src.next
-
----
-
-## Getting Started (Quetta Browser & Mises Browser)
+## Getting Started (Option 1 & 2)
 
 The steps below describe how to install and use the **Nautilus** or **Safew** Ergo wallet extensions on Android using browsers that support Chrome extensions.
 
----
-
-### Option 1: Quetta Browser
+### Option 1: Quetta Browser, Latest Release of Nautilus (broken dApp connector) and SAFEW
 
 1. **Install Quetta Browser**
    - Download Quetta Browser from: 
@@ -80,50 +60,46 @@ The steps below describe how to install and use the **Nautilus** or **Safew** Er
 
 ---
 
-### Option 2: Mises Browser
+### Option 2: Quetta Browser, Release 0.9.4 of Nautilus (working dApp connector)
 
-1. **Install Mises Browser**
-   - Download Mises Browser from: 
-     https://www.mises.site/
-   - Install and launch the browser.
-
-2. **Open the Extension Manager**
-   - Tap the **puzzle piece** icon at the bottom of the screen (just left of the tabs icon).
-   - Open the Extensions menu.
-   - Chrome extension support is enabled by default, and a link to the Chrome Web Store is available here.
+1. **Install Quetta Browser**
+   - Download Quetta Browser from: 
+     https://www.quetta.net/
+   - Install the APK and open the browser.
+  
+2. **Download Nautilus Release 0.9.4**
+   - The last version of Nautilus that fully supports mobile browsers is release 0.9.4. Download ``nautilus-mainnet-0.9.4.zip`` from the release page:
+     https://github.com/nautls/nautilus-wallet/releases/tag/v0.9.4
 
 3. **Install the Wallet Extension**
-   - Navigate to the Chrome Web Store:
-     - Nautilus: 
-       https://chromewebstore.google.com/detail/nautilus-wallet/gjlmehlldlphhljhpnlddaodbjjcchai
-     - Safew: 
-       https://chromewebstore.google.com/detail/safew-simple-and-fast-erg/fmpbldieijjehhalgjblbpgjmijencll
-   - Tap **Add to Chrome** and approve the requested permissions.
+   - Open the main browser menu (three dots in the bottom-right corner near the address bar).
+   - In the bottom row of icons, tap the **puzzle piece** icon to open the Extensions menu.
+   - Next, tap **Manage Extensions** to open the extensions options.
+   - At the bottom of the manage extensions page, tap **Developer options...** it is in red text.
+   - Install ``nautilus-mainnet-0.9.4.zip`` by tapping the button **(from .zip/.crx/.user.js)**
+   - This will open your file explorer, where you will need to select the downloaded release from your downloads directory.
+   - A successful install will result in a Nautilus wallet popping up in the extensions menu.
 
-4. **Access the Wallet**
-   - Open the Extensions menu.
-   - Launch Nautilus or Safew from the list.
+4. **Verify Installation**
+   - Go back to the browsers home page, then open the main browser menu again (three dots in the bottom-right corner near the address bar).
+   - In the bottom row of icons, tap the **puzzle piece** icon to open the Extensions menu.
+   - Confirm that the wallet extension appears in the list.
 
-5. **Open Nautilus Wallet Full-Screen**
-   - Click the **icon in the top-right corner** of the extension popup to open it as a full-screen tab.
+5. **Open Wallet Extension Full-Screen**
+   - To view Nautilus wallet in full screen as a new tab, click the **icon in the top-right corner** of the extension popup (an arrow pointing up out of a square).
 
-6. **Initialize the Wallet**
-   - Create a new wallet or restore an existing one using your seed phrase.
+6. **Set Up or Restore Wallet**
+   - Create a new wallet or restore an existing wallet using your seed phrase.
    - Set a strong password.
 
----
-
-## Notes & Limitations
-
-- Extension popups may not render correctly on mobile.
-- Most Ergo dApps **will not successfully connect** to extension wallets on Android browsers.
-- Built-in dApps inside Nautilus and Safew **do work** (Nautilus: wallet optimizations, SigmaUSD protocol; Safew: token minter, [mixer](../eco/ergomixer/mixer-android.md) integration).
-- Background execution and notifications are unreliable.
-- This setup is **not recommended** for high-frequency or critical dApp usage.
+7. **Use Ergo dApps**
+   - Release 0.9.4 does work with dApps
+   - Using dApps is exactly the same as on a desktop browser. Simply visit the dApp webpage, and connect Nautilus.
+   - Nautilus will launch, and prompt you to accept the connection.
 
 ---
 
-## Advanced Setup, Fully Functional dApp Connector
+## Advanced Setup (Option 3)
 
 This slightly more advanced method of using Nautilus or SAFEW wallets on Android requires two apps to function (Termux and Termux-X11). However, it will result in a desktop-like wallet experience, with all of the normal functionalities intact. This is a great option for users who want full access to Ergo dApps but only have an Android device (Android 8 or higher), without access to a desktop or laptop.
 
@@ -173,6 +149,25 @@ This slightly more advanced method of using Nautilus or SAFEW wallets on Android
 
 ---
 
+## Supported Android Browsers 
+
+The following Android browsers support installing Chrome extensions and can run Ergo wallet extensions:
+
+- **Quetta Browser** 
+  Download: https://www.quetta.net/
+
+- **Mises Browser** 
+  Download: https://www.mises.site/
+
+- **Lemur Browser** 
+  Download: https://lemurbrowser.com/app/en.html
+
+- **Kiwi Browser** *(discontinued — use with caution)* 
+  Source code and builds: 
+  https://github.com/kiwibrowser/src.next
+
+---
+
 ## Security Recommendations
 
 - Write down your seed phrase and store it offline.
@@ -180,3 +175,4 @@ This slightly more advanced method of using Nautilus or SAFEW wallets on Android
 - Lock your device and browser when not in use.
 - Avoid using extension wallets on shared, rooted, or compromised devices.
 - Consider using a dedicated mobile device for wallet usage.
+
