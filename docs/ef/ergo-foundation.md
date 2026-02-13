@@ -1,6 +1,7 @@
 ---
 tags:
   - Ergo Foundation
+  - EF
   - Overview
   - Mission
   - Structure

@@ -85,9 +85,9 @@ plugins:
   #- exclude-search
   #- semiliterate
   #- pagenav-generator
-  #- mkdocs-simple-hooks:
-  #    hooks:
-  #      on_page_markdown: "hooks:fix_lists"
+  - mkdocs-simple-hooks:
+      hooks:
+        on_page_markdown: "hooks:fix_lists"
 
 markdown_extensions:
   - footnotes
@@ -501,6 +501,7 @@ nav:
           - DevDAO: devdao.md
           - InfraDAO: infradao.md
       - Funding & Support:
+          - contribute/funding.md
           - Bounties: contribute/bounties.md
           - Grants: contribute/grants.md
       - Standards & Best Practices:

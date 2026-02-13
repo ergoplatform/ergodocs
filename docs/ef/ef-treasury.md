@@ -1,6 +1,7 @@
 ---
 tags:
   - Ergo Foundation
+  - EF
   - Treasury
   - Funding
   - Transparency
@@ -10,39 +11,44 @@ tags:
 
 The Ergo Foundation initially received an allocation of 4,330,776 ERG, which is equivalent to 4.43% of the total supply.
 
+Additionally, the Treasury exchanged 1,782,615 ERG for [EFYT](efyt.md), a token issued on the Waves Platform in 2017 to build an early community through airdrops and raise funds before the Ergo mainnet launch.
+
+After subtracting the 1,782,615 ERG exchanged for EFYT, the Ergo Foundation was left with **2,548,161 ERG**, which is approximately **2.6%** of the total supply.
+
 A significant portion of this Treasury has been expended for the benefit of the Ergo protocol and community. Even during periods of low ERG price, the Foundation continued to invest in order to foster and grow the Ergo ecosystem.
+
+```mermaid
+pie title Total Amount, ERG Spent by Team 
+    "EF" : 6.6
+    "Exchanges & MM" : 38.1
+    "Marketing & Editorial" : 12.6
+    "Development" : 42.7
+```
+
 
 For more information on Ergo's emission schedule, tokenomics and allocation, visit the [emission](emission.md) section.
 
-/// details | Ergo First-Year Token
-     {type: info, open: false}
-Additionally, the Treasury exchanged 1,782,615 ERG for [EFYT](efyt.md), a token issued on the Waves Platform in 2017 to build an early community through airdrops and raise funds before the Ergo mainnet launch.
-
-After subtracting the 1,782,615 ERG exchanged for EFYT, the Ergo Foundation was left with 2,548,161 ERG, which is approximately 2.6% of the total supply.
-///
-
 ## Current Holdings
 
-As of March 2025, the complete treasury of the foundation is as follows:
+As of November 2025, the complete treasury of the foundation is as follows:
 
 | Asset | Indicator Amount | Indicative US$ Price | Indicative Total US$ Value |
 |-------|------------------|----------------------|----------------------------|
 | **Liquid Assets in Self-Hosted Wallets** |
-| ERG | 147,067 | 0.841 | 123,783 |
-| BTC | 1.334264 | 87,125 | 116,248 |
-| **Subtotal - Liquid Assets** | | | $240,031 | 240,031
+| ERG | 39,225  | 0.639 | 25,065 |
+| BTC | 0.22086 | 103,426 | 22,842 |
+| **Liquid Assets in Centralised Exchange Wallets** |
+| ERG | 93,286 | 0.639 | 59,610 |
+| BTC | 0.21863 | 103,426 | 22,612 |
+| USDT | 34,205 | 1.00 | 34,205 |
+| **Subtotal - Liquid Assets** | | | $164,336 | 164,336
 | **Illiquid Assets in Self-Hosted Wallets** |
 | Gluon | 335,000 | 1.00 | 335,000.00 |
-| SPF | 25,910,000 | 0.005911 | 153,154 |
-| RSN | 30,000,000 | 0.047314 | 1,419,420 |
-| **Subtotal - Illiquid Assets** | | | $1,572,574 |
-| **Assets in MM Accounts (Illiquid)** |
-| ERG | 56,209 | 0.841 | 47,356 |
-| USDT | 43,631 | 1.00 | 43,631 |
-| **Subtotal - Assets in MM Accounts** | | | $89,300 |
-| **Total Liquid Assets** | | | $240,031 |
-| **Total Illiquid Assets** | | | $1,572,574 |
-| **Total Assets** | | | $1,812,605 |
+| RSN | 30,000,000 | 0.02431 | 729,300 |
+| **Subtotal - Illiquid Assets** | | | $1,064,300 |
+| **Total Liquid Assets** | | | $164,336 |
+| **Total Assets** | | | $1,228,636 |
+
 
 /// details | Liquid vs Illiquid Funds
      {type: warning, open: true}
@@ -63,10 +69,19 @@ You can find the Ergo Foundation treasury and current balance on-chain at the fo
 
 The Ergo Foundation has spent the majority of the Treasury for the benefit of the protocol and community. Funds were even spent when the ERG price was low, as it was necessary to bootstrap the thriving community Ergo now boasts.
 
+
 <!--TODO: Yearly figures don't add up to total difference between total allocation & spending, 90k difference, probably missed a tx -->
+
+/// admonition | Recalculated
+    type: warning
+
+This table is a rough guide that uses manual calculations of asset prices at the time of withdrawal from the treasury; we will consolidate and categorise the accounts to provide clearer summaries here. Work in progress.
+
+///
 
 | **Spent** | **ERG**      | **SPF**       | **BTC**     | **TOTAL VALUE**   |
 |-----------|--------------|---------------|-------------|-------------------|
+| 2025      |              |               |             | $243,531          |
 | 2024      | 209,646      | 1,627,500     | 1.95        | $372,217          |
 | 2023      | 424,150      | 1,622,000     | -           | $589,777          |
 | 2022      | 723,000      | -             | -           | $2,247,640        |
@@ -76,7 +91,6 @@ The Ergo Foundation has spent the majority of the Treasury for the benefit of th
 | **Total** | **4,082,848**| **3,249,500** | **1.95**    | **$8,093,650**    |
 
 <!--
-Here’s the updated table with the **December note added**:
 
 | Month      | ERG (USD)   | SPF (USD) | BTC (USD) | Total (USD) | Notes                            |
 |------------|-------------|-----------|-----------|-------------|-----------------------------------|
@@ -93,7 +107,6 @@ Here’s the updated table with the **December note added**:
 | December   | $4,706.80   | $2,066.40 | $21,797.59| $28,570.79  | $15k for Hackathon/MiningGrant    |
 | **Total**  | **$283,498.94** | **$9,407.60** | **$79,311.24** | **$372,217.78** |                                   |
 
-Let me know if you'd like to include projections, comparisons, or fund balance summaries next.
 -->
 
 <!--
