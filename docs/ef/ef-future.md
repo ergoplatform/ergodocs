@@ -84,7 +84,7 @@ The future sustainability, resilience, and growth of Ergo are now, by design, fu
 
 ### Innovation in the Community Era: Current Ecosystem Momentum
 
-The transition to a fully community-led ecosystem has not slowed development. Instead, active work continues on new applications and protocol refinements. As of late 2025, a primary focus of this new development is the creation of "bottom-up" financial tools and new models for monetary issuance.
+The transition to a fully community-led ecosystem has not slowed development. Instead, active work continues on new applications and protocol refinements. As of early 2026, a primary focus of this new development is the creation of "bottom-up" financial tools and new models for monetary issuance.
 
 Several key projects are advancing, demonstrating the continued activity from decentralized contributors.
 
@@ -93,26 +93,33 @@ Several key projects are advancing, demonstrating the continued activity from de
 Work continues on the foundational layer of the protocol to improve security, scalability, and decentralization.
 
 * **SigmaV6 Live:** The SigmaV6 update is live, hardening the network's foundational cryptographic security and efficiency.
-* **Sub-blocks in Testnet:** A scaling solution, **Sub-blocks**, is in the testnet phase. This is intended to increase network throughput (TPS) and processing efficiency.
+* **Node Releases 6.0.3 & 6.0.4:** Preparing PRs for upcoming node releases. The plan is to release 6.0.3 and 6.0.4 in the coming weeks, then extract sub-blocks related PRs for review one-by-one. See the [release plan on GitHub](https://github.com/ergoplatform/ergo/pull/2291).
+* **Sub-blocks in Devnet:** The sub-blocks scaling solution has progressed significantly in devnet testing. The devnet is now running with 3-4 mining peers, using 60s average ordering block delay with 60 input blocks per ordering. Occasional issues with candidate block generation and ordering block syncing are being addressed. A monitoring script for devnet stress testing has been created, tracking input block production rate, ordering block commits, TX inclusion rates, input chain reorganizations, and time since last ordering block.
 * **Lithos Testnet:** The **Lithos** project is approaching its testnet launch. It aims to provide a **blockchain-agnostic, decentralized mining pool infrastructure** to address centralization risks in Proof-of-Work mining.
-
+* **Ergo Book:** A new effort to conceptualize the ideological and philosophical foundation of the Ergo movement alongside technical documentation. Now built as an mdbook for simplified publishing and self-hosting. Contributors are welcome—see the [current structure draft](https://github.com/kushti/ergo-book/blob/master/src/SUMMARY.md).
 
 #### 2. New Monetary and Financial Primitives
 
 A significant area of focus is the development of new financial applications that leverage Ergo's eUTXO model.
 
-* **USE:** A Dexy-based, crypto-backed algorithmic stablecoin pegged to USD. It is based on the previously tested DexyGold design.
+* **USE (Ultimate Stable E-coin):** A Dexy-based, crypto-backed algorithmic stablecoin pegged to USD. It is based on the previously tested DexyGold design.
     * **Status:** The v2 USD pool is launched, and the DORT (USD oracle reward token) liquidity pool has been bootstrapped.
+    * **Recent Progress:** [UIP-001: Balancing the Interventions](https://github.com/kushti/dexy-stable/pull/7) is under review, addressing how to handle rapid ERG price drops on exchanges. Intervention bots (98% and 101%) and a DORT buy-back bot are now operational.
 * **GitCircles:** A **community currencies framework** designed for open-source developer communities.
     * **Status:** This project is being developed by a team new to the Ergo ecosystem. Manual testing is underway, and a testing liquidity pool is being established before onboarding the first communities.
 * **Basis (ChainCash):** This simplified version of Chaincash enables off-chain cash backed by on-chain reserves. The model allows notes to be backed by blockchain assets or by peer-to-peer trust, creating a framework for localized credit.
-    * **Status:** The intended application extends beyond simple wallets for human interaction; the goal is to use Basis for agent-to-agent payments and P2P network incentives, potentially serving as an alternative to many "DePIN" models. Off-chain tracker server tests are set to begin.
-
----
+    * **Status:** Fixed the missed R6 register in the offchain server and resolving various redemption issues. The intended application extends beyond simple wallets for human interaction; the goal is to use Basis for agent-to-agent payments and P2P network incentives, potentially serving as an alternative to many "DePIN" models.
 
 #### 3. Ecosystem and Interoperability Growth
 
 In parallel, other key ecosystem components are also advancing to improve user access and connectivity.
 
-* **Ongoing dApp Development:** Projects like **Machina Finance** continue to build new on-chain financial instruments. A community-led effort to build a **mobile version of the Nautilus wallet** is also in progress.
-* **Rosen Bridge Expansion:** The **Rosen Bridge** is preparing its next integrations: **Runes and Monero (XMR)**. This will connect the Ergo ecosystem to new assets and sources of liquidity.
+* **Rosen Bridge Expansion:** The **Rosen Bridge** is preparing its next integrations: **Runes and Monero (XMR)**. Additionally, teams from **Firo** and **Handshake** are working on integrations using the Bridge Expansion Kit, with Firo extractor, address codec, and scanner implementations already merged or under review.
+* **Citadel Desktop App:** A new desktop application for interacting with Ergo DeFi. [v0.2.0-alpha](https://github.com/arkadianet/citadel/releases/tag/v0.2.0-alpha) has been released, with swap functionality tested using both local and remote nodes. Borrowing on Duckpools is still in development.
+* **Ergo Mobile Wallet (Degens.World):** A fork of Ergo Wallet with a new UI, now in testing. Desktop mode is functional, Android testing is underway, in-wallet swap functionality is complete, and the dapp browser is being finalized. Published on Google Play for internal testing with beta release expected soon.
+* **ErgoMonitor:** A monitoring bot with significant updates—fixed ERG/USD pricing to fetch directly from on-chain oracle data, added charts for Spectrum and Dexy pools (`/dexchart` command), whale notifications for Dexy LP swaps, and automatic RosenBridge token map updates.
+* **CyberPets Racing:** An NFT racing game where players train and race their CyberPet NFTs from CyberVerse. Connect Nautilus to auto-discover NFTs on-chain, train them with diminishing returns, enter races, and earn UTXO-style rewards. Phase 1 is live in multi-user alpha with deterministic results seeded by Ergo block hashes; Phase 2 will move game state on-chain via ErgoScript contracts.
+* **Game of Prompts:** A platform for creating AI robot competitions through Ergo contracts. Contracts and UI are now finalized, with a Telegram community created for DePIN, trustless bots, and autonomous agents.
+* **Ergo Transcripts Archive:** Over 88 hours of developer call transcripts now available at [ergo-transcripts.vercel.app](https://ergo-transcripts.vercel.app/), with workflows being developed for Twitter Spaces and Reddit Community AMAs.
+* **Hardware Wallet Integration:** Keystone Hardware Wallet integration is in progress, with some delays due to the latest signature curve update on Ergo requiring additional testing.
+* **Sigmaverse Updates:** The ecosystem project directory is being updated with new projects and contributors, with plans for an archive section for inactive projects.
