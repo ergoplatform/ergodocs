@@ -46,7 +46,7 @@ docker-compose up -d
 Follow the logs with
 
 ```bash
-docker logs -f ergo-mainnet -n 200
+docker logs -f mn-ergo-node -n 200
 ```
 
 Note that the node's data will be saved in `.ergo` directory you must create beforehand and change its group :
