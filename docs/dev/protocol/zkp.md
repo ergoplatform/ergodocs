@@ -31,6 +31,18 @@ Currently, the two Sigma Protocols in use are [proof of discrete log](schnorr.md
 - PERMAFROST work produced an interface for ML-DSA threshold signing with a relayer, encrypted ceremony blobs, custom manifests, and minimal theming.
 - STARK verification was discussed as a possible future sigmastate-interpreter primitive. The open question is whether full verification fits within the JIT cost budget in one block or needs multi-transaction chunking.
 
+Curve Trees notes from the April log:
+
+- The prototype was deployed and verified on testnet before a Scala sigmastate-interpreter implementation existed.
+- Mainnet-like testing depends on testnet cost/size parameters. The log noted testnet still had a lower genesis `maxBlockCost` than mainnet and would need miner voting to align parameters.
+- The relevant mainnet block-cost value was confirmed from node data, and block cost includes signature verification as well as script reduction budget.
+
+STARK discussion notes:
+
+- A STARK verifier is structurally hash functions plus finite-field arithmetic: Merkle paths, FRI folding consistency, and DEEP-ALI constraint composition.
+- The discussion framed this as potentially implementable using existing hash functions plus `UnsignedBigInt` modular arithmetic, but cheaper if exposed as native verification.
+- No STARK implementation or EIP was completed in the log period.
+
 These composable proofs, when combined with a blockchain, enable powerful use cases. The logic for proofs can include conditions based on the blockchain state. For example, 'If the deadline block height has been reached, Alice can provide knowledge of a secret key for a refund. OR a ring signature from Alice and Bob is required to spend coins.' Or 'If this account holds a minimum of 100 ERG, Alice OR Bob can remove funds above that amount.'
 
 Ergo not only allows for trustless coin or custom token swaps across any Bitcoin-like blockchain, but it also enables partial swaps. This feature facilitates the creation of a fully-fledged [decentralised exchange (DEX)](dex.md) that enables cross-chain trading: a trustless version of existing crypto exchanges. There's no need for gateways, token wrapping or other potential bottlenecks or points of failure.

@@ -1,5 +1,7 @@
 # Wallets
 
+## Overview
+
 This page routes you to everything you need for wallets on Ergo. Pick a wallet, set it up safely, and learn how to use payment flows and standards.
 
 Start here:
@@ -27,10 +29,13 @@ Setup and operations:
 - Vaulting: [Satergo Vault](dev/wallet/satergo-vault.md)
 - Browser wallets on mobile: [Nautilus or Safew on Android](tutorials/Ergo-Browser-Wallets-on-Android.md)
 
-2026 notes:
+## Recent updates
 
 - [Degen Wallet](https://swap.degens.world/download) entered public APK testing with low-fee quick swap, webview/dApp support, USE mint merged with swap, and iOS TestFlight preparation.
 - The official Ergo Wallet Android prerelease [v2.4.2308](https://github.com/ergoplatform/ergo-wallet-app/releases/tag/v2.4.2308) was shared while Google Play organization account changes were pending.
+- Nautilus v1.3.2 added USE, CLB USE, and DORT support.
+- The Nautilus-on-Android guide noted that release `0.9.4` was the last release where the mobile dApp connector worked fully before connector issues.
+- Keystone hardware-wallet work carried a supply-chain caveat because the integration added more than 160 transient dependencies.
 
 Payments and dApp interactions:
 

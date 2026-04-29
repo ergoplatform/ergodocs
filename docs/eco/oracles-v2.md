@@ -53,4 +53,8 @@ For a detailed technical description and further understanding, refer to [EIP-00
 - `Feb-Apr`: [Oracle Stats](https://error1100.github.io/oracle-stats/) went live, with a self-hostable [oracle-stats repository](https://github.com/error1100/oracle-stats).
 - `Apr 1`: the [AVL Oracle Pool](http://github.com/cannonQ/AVL-Multi-Oracle-Ergo-Pool) went public on Ergo mainnet after 1,300+ testing epochs, with 20 feeds in one on-chain AVL tree. The related [AVL Oracle SDK](https://github.com/cannonQ/avl-oracle-sdk) and [multi-oracle dashboard](https://multi-oracle-dashboard.vercel.app/) support integrations and monitoring.
 
+Oracle Stats was described as a lightweight status page for v2 oracle pools. Its main purpose is visualising oracle activity per epoch, simple health status, and transaction monitoring. Active datapoints link to on-chain transactions, while inactive oracles are shown separately.
+
+The January robustness work was triggered by CoinCap API removal and CoinGecko requiring a user-agent header. Oracle operators should prefer the current Oracle Core release and configured data-source mix rather than relying on a single external price API.
+
 > For those interested in setting up an ERG/XAU oracle pool in a testnet environment, we have created a comprehensive guide to walk you through the process. The guide provides detailed instructions, making it easy even for those relatively new to the field. Follow the link to access our [Bootstrap an ERG/XAU pool on testnet guide](https://github.com/ergoplatform/oracle-core/blob/develop/docs/how_to_bootstrap.md).

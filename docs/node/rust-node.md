@@ -22,3 +22,11 @@ tags:
 - `Apr 26`: `v0.4.0` reduced at-tip steady-state RSS from about `7.3 GB` to `1.35 GB`; later testing reported `v0.4.2` at tip with about `0.70 GB` RSS.
 
 Current development areas include mining endpoint support, NiPoPoW bootstrapping, RequestModifiers serving, mempool/API work, peer penalties, and reducing accidental bans from malformed or repeated requests.
+
+## Implementation notes
+
+- Mainnet validation work exposed sigma-rust edge cases. The log records consensus/compatibility fixes around context-extension ordering, v6 opcode parsing, JIT costing, lazy constant resolution, and pre-JIT compatibility paths.
+- The peer-penalty system was designed to integrate with `fail2ban`, but repeated or malformed request behavior still needed tuning during April testing.
+- Memory work focused on reducing database cache pressure after the node reaches tip. The `v0.4.0` release reopened the runtime AVL state database with a smaller redb cache once chain sync completed.
+- NiPoPoW work included bootstrapping and proof-serving gaps. One noted difference was that the sigma-rust `NipopowProof` structure lacked a `continuous` field present in the JVM node.
+- The node remained experimental through the log period. Use it for testing, differential validation, and implementation research unless later release notes say otherwise.

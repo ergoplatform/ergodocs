@@ -34,3 +34,28 @@ tags:
 - Xergon: private repo work and early node/chat inference testing were reported; no public project URL was provided in the log.
 
 Some of these projects are experimental or in public testing. Treat project-specific UIs and repos as the source of truth for current availability.
+
+## Agent and tooling details
+
+The Degens.World agent work is aimed at giving LLM/agent tooling direct Ergo context rather than relying on generic blockchain knowledge. The MCP server exposes explorer functionality to agents inside development environments, while Ergo Skills is intended to collect project-specific recipes for AppKit, Fleet, wallet connector flows, and related Ergo patterns.
+
+The log also mentions an Ergo Q/A docs interface and a Rust Expert MCP. The Rust Expert MCP was described as a server with live access to Rust language references, compiler errors, RFCs, The Book, the Reference, the Nomicon, and crates.io. No public Ergo Docs integration was provided in the log.
+
+## Wallet and dApp flow
+
+Degen Wallet testing focused on Android first, then iOS TestFlight preparation. The wallet work included:
+
+- in-wallet swap flows;
+- WebView/dApp browser support;
+- ErgoPay-based dApp interactions;
+- USE mint merged with swap;
+- an active dApps view;
+- debugging around CORS, headers, and mobile wallet signing.
+
+## Experimental dApps
+
+- Sovereignty was described as a public-test agent platform where agents can create user-owned wallets, trade ErgoDEX pairs, create LP positions, mint tokens/NFTs, and interact with Degens.World apps.
+- Etcha started as P2P options, with pooled liquidity planned later. Contract updates focused on a cancel-anytime, full-refund UX.
+- WaddleSwap line-item swaps were functional by the April weekly update.
+- Silentium was announced as a private AI proxy.
+- Xergon remained private during the log period, with early inference and node/chat testing mentioned but no public URL.

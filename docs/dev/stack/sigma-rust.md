@@ -32,6 +32,19 @@ Rust implementation of [ErgoScript (sigmastate-interpreter)](sigmastate-interpre
 
 The compiler work keeps two modes: `compile()` is pure Rust and dependency-free, while `compile_canonical()` keeps the Scala-node fallback for untested contract patterns where byte mismatch would create a different P2S address.
 
+Additional compiler details from the log:
+
+- The work moved the `ergoscript-compiler` crate beyond arithmetic-only examples toward broader ErgoScript language coverage.
+- A later pass started adding remaining `SigmaPredef.scala` functions and `methods.scala` methods after testing key ecosystem dApp contracts exposed missing coverage.
+- Byte-identical output matters because a byte mismatch produces a different P2S address, which can make funds unreachable if a contract was compiled by the wrong implementation.
+- WASM/browser targets were mentioned as a roadmap item, not a completed feature.
+
+Compatibility notes:
+
+- Some historical mainnet trees use pre-v3 or pre-JIT behavior. The log records fixes for cases where the JVM interpreter is more permissive than sigma-rust.
+- The Rust node sync process was used as a differential test source for sigma-rust by comparing behavior against the Scala reference implementation.
+- Tooling using sigma-rust should still treat the Scala node as consensus authority unless a release explicitly states parity for the relevant path.
+
 ## Crates
 
 [ergo-lib](https://github.com/ergoplatform/sigma-rust/tree/develop/ergo-lib) [![Latest Version](https://img.shields.io/crates/v/ergo-lib.svg)](https://crates.io/crates/ergo-lib) [![Documentation](https://docs.rs/ergo-lib/badge.svg)](https://docs.rs/crate/ergo-lib)

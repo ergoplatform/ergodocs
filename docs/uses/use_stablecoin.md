@@ -31,6 +31,12 @@ Centralized USD-pegged stablecoins anchor most on-chain liquidity and activity. 
 - `Apr 5`: the USE buyback box moved to a new contract address and the self-output proposition check was fixed, so UIs need the updated buyback contract or NFT token ID lookup.
 - Caveat: some explorers assume a single mint output and can report the wrong emission amount when minting spans multiple output boxes.
 
+StableMiner was announced as an open-source, locally hosted platform for minting Dexy / USE stablecoins directly from an Ergo node wallet without using an exchange. The log also mentions planned auto-swap work after the initial launch.
+
+The Binance Chain deployment used a `USE/USDT` concentrated-liquidity pool for cross-chain stablecoin liquidity. The DefiLlama work added USE as a pegged asset, while DexyGold work was being prepared separately.
+
+The buyback-contract update matters for integrations: UIs should not hard-code only the old address. The log recommends updating to the new contract address or resolving the buyback box by NFT token ID lookup.
+
 ---
 
 ## Why USE on Ergo?

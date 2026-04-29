@@ -46,4 +46,16 @@ In 2026 the input-block / ordering-block work moved under the Matrix implementat
 - `Apr 22`: Matrix was merged with the 6.0.3 candidate line, the network difficulty check for input blocks was completed, and a new jar was deployed to devnet.
 - `Apr 28`: extra P2P checks were added to reduce DoS exposure and the external miner API was implemented. Stratum proxy tweaks remained before GPU mining tests.
 
+Testing notes from the log:
+
+- Early January testing used a couple of peers and showed the implementation was mostly complete but still needed broad testing, public testnet coverage, and PR splitting for review.
+- A 30-second ordering-block setup with 60 input blocks per ordering block produced fork/sync behavior that was hard to analyze. The devnet then moved to `blockInterval = 60s`, which reduced input-block-chain forking.
+- February testing ran with three to four mining peers. Operators were asked to reset databases after incompatible jars or serialization changes.
+- March testing added wallet and mempool checks, non-mining public-testnet peer sync, and public-testnet versioning around the `6.5.0` test line.
+- April testing found a P2P serialization incompatibility and requested latest jars plus database resets before continuing.
+
 Current caveats: the devnet/testnet stream was still finding serialization, sync, and peer-ban edge cases. Production users should treat subblocks as active protocol R&D until release notes state otherwise.
+
+### Miner and API work
+
+The April 2026 development stream added API support needed by external miners. GPU mining tests were not ready immediately because Stratum proxy changes were still required. This matters for rollout because Matrix changes affect miner-facing block-candidate flow, not just wallet-facing transaction feedback.

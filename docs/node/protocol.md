@@ -24,6 +24,13 @@ The Node Protocol section provides a comprehensive overview of the core operatio
 - Wallet-related fixes included duplicate-address restore work in [PR #2244](https://github.com/ergoplatform/ergo/pull/2244) and the USE node-wallet decimal display issue in [issue #2289](https://github.com/ergoplatform/ergo/issues/2289).
 - Token minting caveat: indexers or explorers that assume all minted supply is emitted into one output can display a wrong emission amount for non-standard multi-output mints.
 
+Release-stream details:
+
+- The log distinguishes the Scala reference client release line from Matrix test builds. Subblock/input-block work was merged with the 6.0.3 candidate line for testing, but production activation still depended on review, release notes, and later rollout steps.
+- `v6.0.2.1` was described as a 6.0.3-compatible pre-release jar for public testnet operators and miners needing the new Matrix/miner API work before the final release.
+- Additional post-6.0.3 work was expected for compiler, memory-exhaustion, and JIT-costing fixes.
+- Duplicate transaction IDs and mempool invalidation were under investigation after DEX transactions sat pending and were cleared slowly.
+
 - **Processing Algorithm**: This section explains the algorithm used for processing Ergo [modifiers](modifiers-processing.md). It is applicable across all [security modes](modes.md) within the Ergo network, ensuring consistent data processing.
 
 - **Validation Rules**: This part outlines the consensus-critical [validation rules](modifiers-validation.md). These rules are mandatory for every [node](install.md) in the Ergo network to maintain network integrity and security. They ensure that all [transactions](transactions.md) and [blocks](block.md) adhere to the established network standards.
