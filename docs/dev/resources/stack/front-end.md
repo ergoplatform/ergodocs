@@ -21,7 +21,7 @@ The following examples can be seen on the [Ergo JS Template](https://github.com/
 
 ## Other Examples
 
-The Ergo Raffle [documentation](https://github.com/ErgoRaffle/raffle-documentation) provides a detailed description of their implmenetion.
+The Ergo Raffle [documentation](https://github.com/ErgoRaffle/raffle-documentation) provides a detailed description of their implementation.
 
 - [hypo10use/quid-games](https://github.com/hypo10use/quid-games) (Angular)
 

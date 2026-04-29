@@ -80,6 +80,12 @@ Make your changes locally and submit a pull request when you're done.
 
 The mkdocs navigation is built using `mkdocs.yml`. To add, remove or modify pages in the navigation, edit the `nav` section in the `mkdocs.yml` file.
 
+After changing nav, run the nav audit to catch missing targets, duplicate entries, and orphan pages:
+
+```bash
+python tools/nav_audit.py
+```
+
 ### Directory Structure
 
 The directory structure should follow this pattern:

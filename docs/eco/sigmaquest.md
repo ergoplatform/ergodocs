@@ -1,6 +1,6 @@
 # SigmaQuest: A Blockchain-Integrated Sci-Fi Puzzle Game
 
-**Project for [ErgoHack 10: AI on the Ergo Blockchain](https://www.google.com/search?q=ergohack.md)**
+**Project for [ErgoHack 10: AI on the Ergo Blockchain](ergohack.md)**
 
 * Check out the [Developer Overview & Documentation](https://drive.google.com/file/d/1mH5Q7T6SHXzQAlpP-tfwWfgkL4rn0wuJ/view?usp=sharing)
 

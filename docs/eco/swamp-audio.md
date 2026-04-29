@@ -8,4 +8,4 @@ tags:
 
 # Swamp Audio
 
-See [thz.fm]
+See [THz.FM](thz-fm.md).
