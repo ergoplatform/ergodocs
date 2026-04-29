@@ -24,6 +24,11 @@ For a visual and detailed guide on how to use Minotaur, watch the comprehensive 
 - Wallet encryption via user-defined password.
 - ErgoPay integration for seamless transactions.
 
+## Recent updates
+
+- `Jan 21`: Minotaur `3.4.0` released with node backend support, backend selection between node and explorer, chart fixes, duplicate multisig wallet fix, and dependency updates.
+- Wallet restore and read-only sync scan derived addresses so balances and UTXOs can be rebuilt deterministically.
+
 ## Upcoming Features
 
 - Dynamic dApp integration protocol to add new dApps without requiring wallet updates.

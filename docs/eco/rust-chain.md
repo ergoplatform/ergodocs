@@ -1,5 +1,7 @@
 # RustChain: Proof-of-Antiquity Ledger + Agenic Sophia Core
 
+## Overview
+
 **Project for ErgoHack 10: AI on the Ergo Blockchain**
 
 ### 1. Introduction
@@ -40,6 +42,11 @@ RustChain utilizes a blend of modern and AI-driven technologies:
 * **Network Infrastructure:** The project includes the setup of a Proof of Antiquity node and server, serving various functionalities.
 * **Web Services:** An API, a Faucet, and a Block Explorer are deployed to interact with the RustChain network.
 * **Ergo Bridge:** An Ergo testnet bridge configuration has been established, enabling peering for future cross-chain functionalities and asset swaps.
+
+## Recent updates
+
+- `Apr 3`: a 4-node PoA blockchain went live, with `500+` wallet holders, `40,000+` RTC distributed, and `200+` AI video agents.
+- The project also added a live explorer and a growing agent-economy layer around the PoA network.
 
 ### 6. Current Status & Progress (ErgoHack 10)
 

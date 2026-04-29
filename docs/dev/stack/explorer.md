@@ -1,6 +1,14 @@
 # Explorers
 
+## Overview
+
 The Ergo Explorer is a tool that serves as an interface with the Ergo blockchain. It helps users explore and monitor the activities happening on the Ergo blockchain.
+
+## Recent updates
+
+- The explorer backend was updated to Sigma 6.0.x, with versioned serializers, DEX API removal, and a fallback path for unparsable ErgoTrees.
+- If Rust parsing fails, the indexer tries `sigmastate-js` before giving up, which keeps older or irregular trees readable.
+- Frontend i18n work also moved forward in [PR #198](https://github.com/ergoplatform/explorer-frontend/pull/198).
 
 There are several public explorer available:
 

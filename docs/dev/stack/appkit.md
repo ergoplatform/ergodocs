@@ -6,7 +6,14 @@ tags:
 ---
 # Appkit
 
+## Overview
+
 [Ergo Appkit](https://github.com/aslesarenko/ergo-appkit) is a library for polyglot development of Ergo Applications based on [GraalVM](https://www.graalvm.org/).
+
+## Recent updates
+
+- `Apr 15`: AppKit 6.0 / EIP-50 work landed in [PR #253](https://github.com/ergoplatform/ergo-appkit/pull/253), upgrading to Sigma 6.0 and adding prover-evaluated tests.
+- The update keeps AppKit aligned with the 6.0.3 node line so contract tests can exercise the newer Sigma features consistently.
 
 It is a thin wrapper around core components provided by the ErgoScript interpreter and Ergo protocol implementations which are written in Scala. It is published on [maven repository](https://mvnrepository.com/artifact/org.ergoplatform/ergo-appkit) and cross-compiled to both Java 7 and Java 8+ jars.
 

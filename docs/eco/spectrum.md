@@ -18,6 +18,11 @@ tags:
 - **Liquidity Provision & Yield Farming**: Users can engage in liquidity provision and yield farming.
 - **Babel Fees**: Babel fees allow transaction fees to be paid with various tokens.
 
+## Recent updates
+
+- `Mar-Apr`: ErgoDEX/CoinGecko integration work reactivated Ergo tokens on CoinGecko.
+- `Mar 4`: PiggyTrade was ported from Python to Kotlin with sigma-rust JNI bindings, faster loading/caching, and on-chain DEX pool data fetching.
+
 ## Spectrum Bloom: Next-Generation DeFi Framework
 
 Spectrum Bloom is an upcoming eUTxO-native framework for decentralized finance (DeFi), designed to address and improve upon the limitations of early decentralized exchanges (DEXes).

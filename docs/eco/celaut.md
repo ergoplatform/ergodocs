@@ -11,9 +11,17 @@ tags:
 
 # Celaut
 
+## Overview
+
 [View on GitHub → Celaut Project](https://github.com/celaut-project)
 
 Celaut is a decentralized, peer-to-peer runtime for deploying and coordinating **autonomous services** and **AI agents**. Inspired by **cellular automata**, Celaut decouples *what* a service does from *who* runs it and *where* it executes. This enables a permissionless digital economy where services compete based on verifiable reputation and performance, rather than central control or advertising.
+
+## Recent updates
+
+- `Feb 11` and `Feb 17`: Celaut Node was back in beta testing on Linux sudo and Windows WSL.
+- `Apr 1`: Docker was replaced with microVMs, install scripts were improved, and a `doctor` command was added.
+- `Apr 9`: Celaut Node was being tested with [Game of Prompts](game-of-prompts.md) before an open competition launch.
 
 ---
 

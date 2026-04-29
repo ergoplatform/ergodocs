@@ -8,6 +8,8 @@ tags:
 
 # Oracle Pools Version 2
 
+## Overview
+
 The core implementation for Oracle Pools V2 can be found in the 🥇 **[Oracle Core](https://github.com/ergoplatform/oracle-core)** repository. [`Rust`]
 
 /// details | Latest Developments
@@ -42,5 +44,13 @@ Version 2.0 of Oracle Pool aims to mitigate these issues. The main features and 
 - **Transferable Ballot Tokens**: Analogous to oracle tokens, ballot tokens can be freely transferred between public keys.
 
 For a detailed technical description and further understanding, refer to [EIP-0023 Oracle Pool 2.0](https://github.com/ergoplatform/eips/pull/41).
+
+## Recent updates
+
+- `Jan 9`: [Oracle Core v2.0.5](https://github.com/ergoplatform/oracle-core/releases/tag/v2.0.5) shipped with a Coingecko user-agent fix.
+- `Jan 10`: [Oracle Core v2.0.6](https://github.com/ergoplatform/oracle-core/releases/tag/v2.0.6) followed with datapoint robustness work and an overlapping datapoint-submit fix.
+- `Jan 9` onward: [robustness work](https://github.com/ergoplatform/oracle-core/pull/343) added Coinpaprika and Bitpanda sources and removed CoinCap.
+- `Feb-Apr`: [Oracle Stats](https://error1100.github.io/oracle-stats/) went live, with a self-hostable [oracle-stats repository](https://github.com/error1100/oracle-stats).
+- `Apr 1`: the [AVL Oracle Pool](http://github.com/cannonQ/AVL-Multi-Oracle-Ergo-Pool) went public on Ergo mainnet after 1,300+ testing epochs, with 20 feeds in one on-chain AVL tree. The related [AVL Oracle SDK](https://github.com/cannonQ/avl-oracle-sdk) and [multi-oracle dashboard](https://multi-oracle-dashboard.vercel.app/) support integrations and monitoring.
 
 > For those interested in setting up an ERG/XAU oracle pool in a testnet environment, we have created a comprehensive guide to walk you through the process. The guide provides detailed instructions, making it easy even for those relatively new to the field. Follow the link to access our [Bootstrap an ERG/XAU pool on testnet guide](https://github.com/ergoplatform/oracle-core/blob/develop/docs/how_to_bootstrap.md).

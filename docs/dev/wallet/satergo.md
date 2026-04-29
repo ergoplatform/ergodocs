@@ -1,6 +1,12 @@
 # Satergo Wallet
 
+## Overview
+
 Explore the robust capabilities of [Satergo](https://satergo.com/), a comprehensive desktop wallet designed for the Ergo ecosystem, featuring an integrated full node for those who wish to support network decentralization or prefer self-reliance.
+
+## Recent updates
+
+- `Feb 24`: Satergo `v1.9.3` shipped with improved transaction history, many small improvements, and token prices removed.
 
 /// details | Comprehensive Video Guide
     {type: info, open: true}

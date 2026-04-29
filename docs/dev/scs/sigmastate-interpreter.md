@@ -9,9 +9,18 @@ tags:
 
 # Sigmastate Interpreter
 
+## Overview
+
 The [sigmastate-interpreter](https://github.com/ScorexFoundation/sigmastate-interpreter) repository contains the core implementations of the ErgoScript compiler and ErgoTree Interpreter. These tools are part of a broader framework that supports a family of Sigma-protocol based authentication languages, collectively known as the [*Sigma Language*](sigma-lang.md).
 
 This library is integral to the operation of the [Ergo Node](https://github.com/ergoplatform/ergo) and the [ergo-wallet](https://github.com/ergoplatform/ergo/tree/master/ergo-wallet). It serves as the backbone for processing and validating ErgoScript contracts, ensuring that transactions comply with the defined cryptographic conditions.
+
+## Recent updates
+
+- `Apr 14`: [SigmaState interpreter v6.0.3](https://github.com/ergoplatform/sigmastate-interpreter/releases/tag/v6.0.3) and [sigmastate-js 0.6.1](https://www.npmjs.com/package/sigmastate-js) were released.
+- v6.0.3 included compiler support for `Global.serialize`, contract-template deserialization fixes for v6 methods, and broader language-spec coverage.
+- `Apr 28`: the Bulletproofs range-proof verification work was merged into the [6.0.4 candidate PR](https://github.com/ergoplatform/sigmastate-interpreter/pull/1115).
+- 6.0.4 composition also included JavaScript dependency updates and additional `BasicOpsSpecification` tests for language-spec coverage.
 
 /// details | DeepWiki Documentation
     {type: info, open: true}

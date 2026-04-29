@@ -7,6 +7,13 @@
 - **Privacy Enhanced:** Nautilus prioritizes user privacy, employing advanced security measures to protect your digital assets.
 - **Ledger Integration:** For those seeking an extra layer of security, Nautilus supports Ledger hardware wallets, currently available in developer mode for advanced users and developers.
 
+## Recent updates
+
+- `Mar 7`: [Nautilus v1.3.2](https://github.com/nautls/nautilus-wallet/releases/tag/v1.3.2) shipped with `USE`, `CLB USE`, and `DORT` additions.
+- `Jan 7`: the Android guide noted that Nautilus `0.9.4` is the last release with a working mobile dApp connector; later mobile connector support is broken.
+- `Apr 8`: Javanese translation work was submitted for the wallet app.
+- Keystone hardware-wallet integration was discussed as unfinished work; the log flagged a supply-chain review concern around 160+ transient dependencies before completing that path.
+
 ## Installation
 
 Nautilus can be easily installed as a browser extension. Select the version compatible with your browser:

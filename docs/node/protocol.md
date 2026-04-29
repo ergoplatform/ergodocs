@@ -10,9 +10,19 @@ tags:
 
 # Ergo Node Protocol
 
+## Overview
+
 *(Back to: [Node Overview](install.md))*
 
 The Node Protocol section provides a comprehensive overview of the core operational aspects of the Ergo network. It covers the following key areas:
+
+## Recent updates
+
+- `Jan 23`: Ergo reference client [v6.0.2](https://github.com/ergoplatform/ergo/releases/tag/v6.0.2) was released, and 6.1.2 was also published for the related line.
+- `Jan-Apr`: the release stream included P2P, fork, sync, cache-growth, DoS, miner-candidate, and memory-exhaustion fixes, alongside subblock/input-block work.
+- `Apr 20`: the 6.0.3 candidate was finalized in [PR #2291](https://github.com/ergoplatform/ergo/pull/2291), and [v6.0.2.1](https://github.com/ergoplatform/ergo/releases/tag/v6.0.2.1) was published as a pre-release jar identical to 6.0.3 for public testnet operators and miners needing the new API methods.
+- Wallet-related fixes included duplicate-address restore work in [PR #2244](https://github.com/ergoplatform/ergo/pull/2244) and the USE node-wallet decimal display issue in [issue #2289](https://github.com/ergoplatform/ergo/issues/2289).
+- Token minting caveat: indexers or explorers that assume all minted supply is emitted into one output can display a wrong emission amount for non-standard multi-output mints.
 
 - **Processing Algorithm**: This section explains the algorithm used for processing Ergo [modifiers](modifiers-processing.md). It is applicable across all [security modes](modes.md) within the Ergo network, ensuring consistent data processing.
 

@@ -9,9 +9,16 @@ tags:
 
 # ErgoRaffle
 
+## Overview
+
 We have live crowdfunding on the Ergo blockchain via [ergoraffle.com](https://ergoraffle.com); this allows projects to host *'Raffles'* with a percentage of the total allocated to one lucky donor as a prize.
 
 More information and the source code is available on [GitHub](https://github.com/ErgoRaffle).
+
+## Recent updates
+
+- `Mar 4` to `Apr 8`: Raffle v2 added direct BTC payments, a BTC watcher package, proxy-box extractors, refactored background jobs, and a BTC donation service.
+- The updated flow supports BTC and Runes alongside the existing Ergo raffle model.
 
 ## About Ergo Raffle
 

@@ -14,6 +14,10 @@ Mew Finance is a decentralized finance (DeFi) platform operating on the Ergo Blo
 
 **Visit the official platform:** [https://mewfinance.com/](https://mewfinance.com/)
 
+## Recent updates
+
+- `Jan 10`: Mew Mart's shopping cart went live with Nautilus and ErgoPay support.
+
 ## Products and Services
 
 Mew Finance launched with six core products in Q4 2024:

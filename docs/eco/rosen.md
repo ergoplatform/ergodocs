@@ -24,6 +24,13 @@ RosenBridge connects Cardano and Ergo with Ethereum, EVM chains, and beyond. The
 Please see [this video](https://www.youtube.com/watch?v=Xsiy-yPJQ6w) for a visual introduction.
 ///
 
+## Recent updates
+
+- `Feb 11` to `Apr 22`: Firo and Handshake integrations moved through watcher, guard-service, and rosen-service updates.
+- `Apr 15`: [watcher service v6.1.1](https://github.com/rosen-bridge/watcher/releases/tag/6.1.1) and [guard service v9.0.0](https://github.com/rosen-bridge/guard-service/releases/tag/9.0.0) were released.
+- `Apr 22`: Rosen stats work added TVL, volume, locked-assets, and user-count metrics, while the app also picked up React 19, Sentry, and live-data improvements.
+- The new rosen-service also added Bitcoin Runes support.
+
 ## Why RosenBridge
 
 - Decentralized security: Guard‑based m‑of‑n/threshold signatures with independent validation by each Guard.

@@ -302,6 +302,10 @@ nav:
                   - Metaverse: uses/metaverse.md
           - Applications & Utilities:
               - Crux Finance: eco/crux.md
+              - Degens.World: eco/degens-world.md
+              - On-chain Social & Messaging: eco/onchain-social.md
+              - Ergo Knowledge Base: eco/ergo-knowledge-base.md
+              - Sigmaverse: eco/sigmaverse.md
               - ErgoNames: eco/ergonames.md
               - Celaut:
                   - eco/celaut.md
@@ -876,6 +880,7 @@ nav:
               - testnet.conf: node/testnet/testnetconf.md
               - devnet.conf: node/testnet/devnetconf.md
               - Tor Configuration: node/tor.md
+          - Rust Node: node/rust-node.md
           - API Access:
               - Swagger Overview: node/swagger.md
               - OpenAPI Spec: node/swagger/openapi.md

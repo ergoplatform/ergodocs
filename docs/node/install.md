@@ -84,6 +84,7 @@ For more convenience, Docker provides a streamlined way to install and run the E
 - [Explorer & Node Bundles](explorer.md#toolkits): Access pre-packaged bundles that include an Ergo Node and an [explorer](explorer.md) for easy setup.
 - [Ergosphere](https://ergosphere.cloud/): Ergosphere is an Umbrel-like solution that simplifies the setup of self-hosted Ergo services. Please note that it is currently in the BETA stage.
 - [Ergode](https://github.com/ross-weir/ergode) (ergo-node) is an Ergo node implementation in TypeScript, targeting web and native runtimes.
+- [Ergo Rust Node](rust-node.md) is an experimental Rust implementation that reached mainnet validation to tip during 2026 testing.
 ///
 /// details | Resources
     {type: notes, open: false}

@@ -38,6 +38,12 @@ There are two primary approaches, depending on your needs and technical comfort 
 [ErgoNodeAndroid](https://github.com/rustinmyeye/ErgoNodeAndroid) is a community project attempting a one-click Ergo node app for Android, based on Termux scripts. It typically sets up a stateless/digest node. You may explore this as an alternative to manual setup.
 ///
 
+## Recent updates
+
+- [ErgoNodeAndroid](https://github.com/rustinmyeye/ErgoNodeAndroid) defaulted to a NiPoPoW node and could be used by pointing a mobile wallet at the local node.
+- The development log also noted that the README needed updates and latest Android support was broken at that time.
+- An Android version of the Sigmanauts mining dashboard was shared at [sigmanauts-mining-dashboard-android](https://github.com/rustinmyeye/sigmanauts-mining-dashboard-android).
+
 ## Device Requirements
 
 Meeting these requirements is crucial for a stable experience:

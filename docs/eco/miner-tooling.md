@@ -16,6 +16,10 @@ There are several ecosystem projects focused on building miner tooling. Here are
 
 [GuapSwap](guapswap.md) allows miners to swap mined erg for native tokens.
 
+### GPU vanity address generator
+
+A GPU-accelerated Ergo vanity address generator was shared in January 2026 using OpenCL. Benchmarks reported roughly `790k/sec` on `7x 3060 Ti`, roughly `1.3M/sec` across all GPUs, and later about `320k addresses/sec` on an RTX 3080 Ti. The build notes also called out nightly Rust requirements for the OpenCL path.
+
 ### Lithos
 
 [Lithos](lithos.md) is a project that aims to create a decentralized mining pool infrastructure. It provides a low-risk opportunity for lenders to earn yield on their ERG by providing collateral to mining pools while promoting increasingly decentralized block production. The project plans to enable miners to directly insert necessary transactions into blocks in a fully decentralized and trustless manner. This brings significant benefits to miners outside of just decentralization. Recently, Lithos has completed collateral contracts, and the ability of miners to directly insert necessary transactions into blocks has been successfully demonstrated during the ERGOHACK VI event.

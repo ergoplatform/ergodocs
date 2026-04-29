@@ -1,10 +1,19 @@
 # Game of Prompts (GoP): AI Problems, Blockchain Solutions
 
+## Overview
+
 **Project for [ErgoHack 10: AI on the Ergo Blockchain](ergohack.md)**
 
 ### 1. Introduction
 
 Game of Prompts (GoP) is a pioneering competitive platform that merges Artificial Intelligence challenges with blockchain solutions. Developed on the Ergo and Celaut technologies, GoP facilitates a unique ecosystem where "game-services" (representing AI problems) are created by designers and subsequently evaluated by "solver-bots" implemented by players. The platform leverages the Ergo blockchain to ensure that the management of results and the transparent allocation of prizes are conducted in a verifiable and trustless manner.
+
+## Recent updates
+
+- `Feb 11` to `Apr 4`: the on-chain and off-chain contracts plus the UI were finalized, then polished in dev mode with mock competitions.
+- `Mar 5`: the landing page and `Nodo` packaging/reporting flow were reworked.
+- `Apr 9`: [Celaut](celaut.md) Node and Game of Prompts were being tested together, with the first open competition planned once the remaining issues were closed.
+- A dev app is also live at [game-of-prompts.github.io/app/?env=dev](https://game-of-prompts.github.io/app/?env=dev).
 
 ### 2. Core Concept & Gameplay
 

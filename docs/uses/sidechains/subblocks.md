@@ -1,5 +1,7 @@
 # Subblocks in Ergo
 
+## Overview
+
 /// details |TLDR
     {type: info, open: true}
 
@@ -32,3 +34,16 @@ With the renaming and introduction of sub-blocks, Ergo now distinguishes between
 Ergo’s renaming and introduction of sub-blocks (input blocks) paired with ordering blocks significantly improves transaction processing speed and reliability. These changes provide users with near-instant confirmations and faster failure detection, thereby offering a smoother and more efficient experience on the network.
 
 For a deep dive into the technical details behind these changes, see the [technical details](input-blocks.md).
+
+## Recent updates
+
+In 2026 the input-block / ordering-block work moved under the Matrix implementation and devnet test stream.
+
+- `Jan 2`: the Matrix whitepaper, [Splitting Ergo Blocks Into Input and Ordering Blocks For Fast Transaction Propagation and Confirmation](https://github.com/ergoplatform/ergo/blob/weak-blocks/papers/inputblocks/main.pdf), was published.
+- `Jan 12` to `Jan 14`: the initial subblock and input-block API methods were described in `openapi.yaml` and deployed on a devnet seed node.
+- `Feb 1` to `Feb 4`: the devnet was relaunched with a `60s` ordering-block delay and 60 input blocks per ordering block, with several mining peers testing.
+- `Mar 4` to `Mar 25`: fixes landed for full-block propagation to out-of-sync peers, wallet and mempool support, public testnet syncing, P2P tasks, DoS prevention, and cache growth.
+- `Apr 22`: Matrix was merged with the 6.0.3 candidate line, the network difficulty check for input blocks was completed, and a new jar was deployed to devnet.
+- `Apr 28`: extra P2P checks were added to reduce DoS exposure and the external miner API was implemented. Stratum proxy tweaks remained before GPU mining tests.
+
+Current caveats: the devnet/testnet stream was still finding serialization, sync, and peer-ban edge cases. Production users should treat subblocks as active protocol R&D until release notes state otherwise.

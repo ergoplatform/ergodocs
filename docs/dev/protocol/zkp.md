@@ -23,6 +23,14 @@ Among the myriad of zero-knowledge protocols, a sub-class known as [**Sigma Prot
 
 Currently, the two Sigma Protocols in use are [proof of discrete log](schnorr.md) and proof of [Diffie-Hellman tuple](diffie.md).
 
+## Recent updates
+
+- Bulletproofs range-proof verification moved from issue/example work into the [sigmastate-interpreter 6.0.4 candidate](https://github.com/ergoplatform/sigmastate-interpreter/pull/1115).
+- [Curve Trees](https://github.com/a-shannon/ergo-research/tree/main/papers/curve-trees) research explored native Curve Trees verification on Ergo L1 using Sigma 6.0 `UnsignedBigInt` modular arithmetic. A [prototype](https://github.com/a-shannon/ergo-curve-trees) was deployed and verified on testnet.
+- Curve Trees caveats from the development log: a sigmastate-interpreter PR would need a TypeScript-to-Scala port; the prototype uses a static tree, has depth bounded by JIT cost, and does not yet support batch verification.
+- PERMAFROST work produced an interface for ML-DSA threshold signing with a relayer, encrypted ceremony blobs, custom manifests, and minimal theming.
+- STARK verification was discussed as a possible future sigmastate-interpreter primitive. The open question is whether full verification fits within the JIT cost budget in one block or needs multi-transaction chunking.
+
 These composable proofs, when combined with a blockchain, enable powerful use cases. The logic for proofs can include conditions based on the blockchain state. For example, 'If the deadline block height has been reached, Alice can provide knowledge of a secret key for a refund. OR a ring signature from Alice and Bob is required to spend coins.' Or 'If this account holds a minimum of 100 ERG, Alice OR Bob can remove funds above that amount.'
 
 Ergo not only allows for trustless coin or custom token swaps across any Bitcoin-like blockchain, but it also enables partial swaps. This feature facilitates the creation of a fully-fledged [decentralised exchange (DEX)](dex.md) that enables cross-chain trading: a trustless version of existing crypto exchanges. There's no need for gateways, token wrapping or other potential bottlenecks or points of failure.

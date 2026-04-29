@@ -8,6 +8,15 @@ Traditional financial systems often suffer from centralization, high costs, and 
 
 This article explains ChainCash's functionality, explores practical applications, and provides links to technical documentation for deeper insights. For more detailed information, refer to the [ChainCash whitepaper](https://github.com/ChainCashLabs/chaincash/blob/master/docs/whitepaper/chaincash.pdf) or the [ChainCash server documentation](https://github.com/ChainCashLabs/chaincash/blob/master/docs/server.md).
 
+## Recent updates
+
+- `Jan 21` to `Jan 28`: the node Schnorr-sign API was added, tracker signature verification moved into the core crate, and Basis switched to node-assisted signing during redemption.
+- `Feb 25`: the reserve contract rework finished and utilities landed for reserve creation, note creation, and note redemption.
+- `Mar 26`: the first offchain-note redemption transaction completed.
+- `Apr 3` and `Apr 22`: [Agent Credit](https://github.com/fitzss/agent-credit) was published on top of ChainCash / Basis and Ergo, and mesh-network trading demos and presentations were prepared.
+- Basis presentation slides are available in the ChainCash repository: [basis.pdf](https://github.com/BetterMoneyLabs/chaincash/blob/master/docs/presentation/basis.pdf).
+- Caveat: some transfer paths still depend on raw Schnorr signatures, so normal wallet support remains constrained.
+
 ## Motivation and Evolution of Money
 
 ### The Need for Elastic Money

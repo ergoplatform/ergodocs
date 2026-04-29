@@ -9,9 +9,19 @@ tags:
 
 # Dexy: A Seigniorage-Based Stablecoin
 
+## Overview
+
 Dexy is an innovative stablecoin design that leverages seigniorage and oracle price feeds to maintain a peg. It is currently under development.
 
 Read the [draft whitepaper](../assets/pdf/dexy.pdf) for more details.
+
+## Recent updates
+
+- `Jan 7`: StableMiner launched for locally minting Dexy / USE from an Ergo node wallet.
+- `Jan 10` and `Apr 5`: the USE buyback contract was updated, the buyback box moved to a new contract address, and the self-output proposition check was fixed.
+- `Jan 14` to `Apr 15`: USE and DexyGold analytics, DefiLlama work, and LP/offchain updates continued.
+- [Citadel](https://github.com/arkadianet/citadel/releases) shipped `v0.2.0-alpha` and `v0.2.2-alpha`; the latter added LP deposit and redeem support to the Dexy protocol.
+- Caveat: explorers that assume one mint output can misreport emission when a mint spans multiple output boxes.
 
 ## DexyGold
 

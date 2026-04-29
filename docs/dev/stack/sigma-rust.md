@@ -18,7 +18,19 @@ tags:
 
 # Sigma Rust
 
+## Overview
+
 Rust implementation of [ErgoScript (sigmastate-interpreter)](sigmastate-interpreter.md) cryptocurrency scripting language.
+
+## Recent updates
+
+- `Apr 20`: the ErgoScript Rust compiler in [sigma-rust PR #862](https://github.com/ergoplatform/sigma-rust/pull/862) reached byte-identical output for 12 of 15 production contracts, with `compile_canonical()` added as a safety fallback that verifies against a Scala node and uses node bytes if local output differs.
+- `Apr 22`: 15 of 15 production contracts and 20+ contracts tested byte-identical, with 185 tests green.
+- `Apr 23`: 31 test contracts matched the Scala node with 196 tests and no canonical fallbacks. Contracts tested included SigmaUSD, Rosen GuardSign, Spectrum DEX, DuckPools, Dexy, Oracle Pool v2, Off-the-grid, Crystal Pool, Phoenix HodlERG, governance, lending, AMM swaps, multisig, vesting, and BigInt arithmetic patterns.
+- `Apr 26`: coverage reached 45 of 46 tested contracts, with 203 tests and only DuckPools `InterestRate` skipped because its deeply nested BigInt polynomial overflowed recursive CSE.
+- Several consensus and compatibility PRs were opened while the Rust node was syncing mainnet, including fixes for context extension ordering, NiPoPoW proof serving, JIT costing parity, lazy constant resolution, and pre-JIT compatibility paths.
+
+The compiler work keeps two modes: `compile()` is pure Rust and dependency-free, while `compile_canonical()` keeps the Scala-node fallback for untested contract patterns where byte mismatch would create a different P2S address.
 
 ## Crates
 

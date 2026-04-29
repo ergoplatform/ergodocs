@@ -22,6 +22,17 @@ Centralized USD-pegged stablecoins anchor most on-chain liquidity and activity. 
 
 ---
 
+## Recent updates
+
+- `Jan 7`: StableMiner went live for locally minting USE from an Ergo node wallet.
+- `Jan 6`: a VoltPay example completed an `ADA -> ERG -> USE` buy order.
+- `Jan 7` to `Jan 14`: USE analytics went live at [Crux Finance](crux.md), Binance Chain `USE/USDT` liquidity was deployed, and the USE pegged-asset adapter landed in DefiLlama.
+- `Jan 6`: the node wallet had a USE decimal display bug open as [issue #2289](https://github.com/ergoplatform/ergo/issues/2289).
+- `Apr 5`: the USE buyback box moved to a new contract address and the self-output proposition check was fixed, so UIs need the updated buyback contract or NFT token ID lookup.
+- Caveat: some explorers assume a single mint output and can report the wrong emission amount when minting spans multiple output boxes.
+
+---
+
 ## Why USE on Ergo?
 
 - **Liquidity and onboarding:** USD stablecoins function as primary on-ramps and liquidity anchors. Support for them raises accessibility for users and traders.

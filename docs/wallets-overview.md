@@ -12,6 +12,7 @@ Popular wallets:
 - Desktop: [Minotaur](dev/wallet/minotaur.md)
 - Desktop (full node optional): [Satergo](dev/wallet/satergo.md)
 - Mobile (Android or iOS): [Ergo Mobile Wallet (Terminus on iOS)](https://ergoplatform.org/en/ergo-wallet-app/)
+- Public testing: [Degen Wallet](https://swap.degens.world/download)
 - Hardware: [Ledger](dev/wallet/payments/ledger.md)
 - Paper: [Paper Wallet](dev/wallet/paper-wallet.md)
 
@@ -25,6 +26,11 @@ Setup and operations:
 - Message signing: [Message Signing](tutorials/message-signing.md)
 - Vaulting: [Satergo Vault](dev/wallet/satergo-vault.md)
 - Browser wallets on mobile: [Nautilus or Safew on Android](tutorials/Ergo-Browser-Wallets-on-Android.md)
+
+2026 notes:
+
+- [Degen Wallet](https://swap.degens.world/download) entered public APK testing with low-fee quick swap, webview/dApp support, USE mint merged with swap, and iOS TestFlight preparation.
+- The official Ergo Wallet Android prerelease [v2.4.2308](https://github.com/ergoplatform/ergo-wallet-app/releases/tag/v2.4.2308) was shared while Google Play organization account changes were pending.
 
 Payments and dApp interactions:
 
