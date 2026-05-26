@@ -1,3 +1,15 @@
+---
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/eips
+    branch: master
+    paths:
+      - eip-0015.md
+source_of_truth:
+  - https://github.com/ergoplatform/eips/tree/master/eip-0015.md
+---
+
 # Accessing Sigmausd As A Developer
 
 SigmaUSD is the first eUTxO-based stablecoin, implementing the [AgeUSD protocol](https://github.com/Emurgo/age-usd). It was co-designed by IOHK, Ergo, and Emurgo, focusing on conservative collateral reserve settings, thus eliminating the need for liquidations. SigmaUSD supports a fully decentralized stablecoin emission setup, offering a stable, simple, and decentralized stablecoin.

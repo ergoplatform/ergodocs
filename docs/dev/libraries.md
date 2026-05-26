@@ -4,6 +4,21 @@ tags:
   - Development
   - SDKs
   - Bindings
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/sigma-rust
+    branch: develop
+    paths:
+      - bindings/ergo-lib-jni
+      - bindings/ergo-lib-python
+      - bindings/ergo-lib-wasm
+      - ergo-lib
+source_of_truth:
+  - https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-jni
+  - https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-python
+  - https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-wasm
+  - https://github.com/ergoplatform/sigma-rust/tree/develop/ergo-lib
 ---
 
 # Libraries & SDKs

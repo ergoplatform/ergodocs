@@ -1,0 +1,48 @@
+name: Documentation request
+description: Request new or updated documentation
+title: "[Docs]: "
+labels:
+  - documentation
+body:
+  - type: textarea
+    id: change
+    attributes:
+      label: What changed?
+      description: Link the source issue, PR, release note, EIP, or discussion.
+      placeholder: "Example: Node API behavior changed in ..."
+    validations:
+      required: true
+  - type: textarea
+    id: audience
+    attributes:
+      label: Who needs this?
+      description: Name the reader and what they are trying to do.
+      placeholder: "Example: Node operators upgrading from ..."
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Reader impact
+      description: What breaks, changes, or improves if docs are updated?
+    validations:
+      required: true
+  - type: textarea
+    id: pages
+    attributes:
+      label: Pages likely affected
+      placeholder: "docs/node/install.md, docs/dev/api.md, ..."
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification source
+      description: How can reviewers confirm the docs are correct?
+      placeholder: "Command output, API response, source file, maintainer review, testnet transaction, ..."
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: This request includes a source of truth.
+        - label: This request explains the reader goal.
+        - label: This request notes security, privacy, or funds-at-risk concerns if relevant.

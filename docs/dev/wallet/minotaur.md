@@ -1,3 +1,15 @@
+---
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/eips
+    branch: master
+    paths:
+      - eip-0004.md
+source_of_truth:
+  - https://github.com/ergoplatform/eips/tree/master/eip-0004.md
+---
+
 # Minotaur Wallet
 
 [Minotaur](https://github.com/minotaur-ergo/minotaur-wallet) stands as the inaugural multi-platform wallet tailored for the Ergo ecosystem, offering a suite of features designed to enhance user experience.

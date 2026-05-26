@@ -7,6 +7,15 @@ tags:
   - API
   - BIP32
   - BIP39
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/ergo-wallet
+    branch: master
+    paths:
+      - src/main/resources/wordlist
+source_of_truth:
+  - https://github.com/ergoplatform/ergo-wallet/tree/master/src/main/resources/wordlist
 ---
 
 # Ergo Wallet Setup and Security

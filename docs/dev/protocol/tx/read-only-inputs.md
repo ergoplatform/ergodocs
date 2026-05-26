@@ -1,6 +1,15 @@
 ---
 tags:
   - Data Inputs
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: Emurgo/Emurgo-Research
+    branch: master
+    paths:
+      - smart-contracts/Unlocking%20The%20Potential%20Of%20The%20UTXO%20Model.md
+source_of_truth:
+  - https://github.com/Emurgo/Emurgo-Research/tree/master/smart-contracts/Unlocking%20The%20Potential%20Of%20The%20UTXO%20Model.md
 ---
 
 # Data Inputs in ErgoScript

@@ -2,6 +2,15 @@
 tags:
   - JavaScript
   - dApp Development
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: Emurgo/yoroi-frontend
+    branch: develop
+    paths:
+      - packages/yoroi-connector/example-ergo
+source_of_truth:
+  - https://github.com/Emurgo/yoroi-frontend/tree/develop/packages/yoroi-connector/example-ergo
 ---
 
 # dApp Connector

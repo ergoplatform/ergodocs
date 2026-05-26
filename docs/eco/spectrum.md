@@ -7,6 +7,15 @@ tags:
   - Babel Fees
   - dApp
   - dApp-Live
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: spectrum-finance/ergo-dex
+    branch: master
+    paths:
+      - contracts
+source_of_truth:
+  - https://github.com/spectrum-finance/ergo-dex/tree/master/contracts
 ---
 
 # Spectrum Finance

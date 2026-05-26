@@ -7,6 +7,15 @@ tags:
   - P2P
   - dApp
   - dApp-Live
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: capt-nemo429/sigmafi-ui
+    branch: main
+    paths:
+      - src/offchain/plugins.ts
+source_of_truth:
+  - https://github.com/capt-nemo429/sigmafi-ui/tree/main/src/offchain/plugins.ts
 ---
 
 # SigmaFi

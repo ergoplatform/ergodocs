@@ -1,3 +1,15 @@
+---
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ScorexFoundation/sigmastate-interpreter
+    branch: develop
+    paths:
+      - interpreter/shared/src/main/scala/sigmastate/Values.scala
+source_of_truth:
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/interpreter/shared/src/main/scala/sigmastate/Values.scala
+---
+
 # SigmaBoolean
 
 SigmaBoolean is a crucial data type in ErgoScript that represents propositions proven using Sigma protocols. It is derived from the base type [`ProveDlog`](global-functions.md#provedlog), which is used for discrete logarithm proofs. What sets SigmaBoolean apart is its dual functionality - it is used by the prover to construct the proof and by the verifier to check the proof. This dual role makes SigmaBoolean a key player in creating and verifying proofs within [ErgoScript](ergoscript.md).

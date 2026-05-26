@@ -1,3 +1,15 @@
+---
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/sigma-rust
+    branch: develop
+    paths:
+      - bindings/ergo-lib-python
+source_of_truth:
+  - https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-python
+---
+
 # ergo-lib-python Documentation
 
 ## Overview

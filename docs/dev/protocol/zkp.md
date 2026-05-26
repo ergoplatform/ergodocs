@@ -3,6 +3,15 @@ tags:
   - Sigma Protocols
   - Zero-Knowledge Proofs
   - Privacy
+owner: docs
+last_reviewed: 2026-05-26
+source_repos:
+  - repo: a-shannon/ergo-research
+    branch: main
+    paths:
+      - papers/curve-trees
+source_of_truth:
+  - https://github.com/a-shannon/ergo-research/tree/main/papers/curve-trees
 ---
 
 # Understanding Zero-Knowledge Proofs and Sigma Protocols
@@ -27,6 +36,7 @@ Currently, the two Sigma Protocols in use are [proof of discrete log](schnorr.md
 
 - Bulletproofs range-proof verification moved from issue/example work into the [sigmastate-interpreter 6.0.4 candidate](https://github.com/ergoplatform/sigmastate-interpreter/pull/1115).
 - [Curve Trees](https://github.com/a-shannon/ergo-research/tree/main/papers/curve-trees) research explored native Curve Trees verification on Ergo L1 using Sigma 6.0 `UnsignedBigInt` modular arithmetic. A [prototype](https://github.com/a-shannon/ergo-curve-trees) was deployed and verified on testnet.
+- The Curve Trees research notes were reorganized in February 2026 and updated for a V6 approach that replaces an anti-griefing bond with deterministic off-chain simulation, with added empirical validation and Pippenger-optimization notes.
 - Curve Trees caveats from the development log: a sigmastate-interpreter PR would need a TypeScript-to-Scala port; the prototype uses a static tree, has depth bounded by JIT cost, and does not yet support batch verification.
 - PERMAFROST work produced an interface for ML-DSA threshold signing with a relayer, encrypted ceremony blobs, custom manifests, and minimal theming.
 - STARK verification was discussed as a possible future sigmastate-interpreter primitive. The open question is whether full verification fits within the JIT cost budget in one block or needs multi-transaction chunking.

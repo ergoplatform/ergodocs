@@ -2,6 +2,39 @@
 tags:
   - Security
   - Audit
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ScorexFoundation/Scorex
+    branch: master
+    paths:
+      - src/main/scala/scorex/core/validation/ModifierValidator.scala
+  - repo: ScorexFoundation/sigmastate-interpreter
+    branch: master
+    paths:
+      - sigmastate/src/main/scala/sigmastate/SigSerializer.scala
+      - sigmastate/src/main/scala/sigmastate/interpreter/Interpreter.scala
+      - sigmastate/src/main/scala/sigmastate/interpreter/ProverInterpreter.scala
+  - repo: ergoplatform/ergo
+    branch: master
+    paths:
+      - ergo-wallet/src/main/scala/org/ergoplatform/wallet/secrets/JsonSecretStorage.scala
+      - src/main/resources/application.conf
+      - src/main/scala/org/ergoplatform/mining/AutolykosPowScheme.scala
+      - src/main/scala/org/ergoplatform/nodeView/history/storage/modifierprocessors/HeadersProcessor.scala
+      - src/main/scala/org/ergoplatform/nodeView/wallet/ErgoWalletActor.scala
+      - src/test/resources/application.conf
+source_of_truth:
+  - https://github.com/ScorexFoundation/Scorex/tree/master/src/main/scala/scorex/core/validation/ModifierValidator.scala
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/master/sigmastate/src/main/scala/sigmastate/SigSerializer.scala
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/master/sigmastate/src/main/scala/sigmastate/interpreter/Interpreter.scala
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/master/sigmastate/src/main/scala/sigmastate/interpreter/ProverInterpreter.scala
+  - https://github.com/ergoplatform/ergo/tree/master/ergo-wallet/src/main/scala/org/ergoplatform/wallet/secrets/JsonSecretStorage.scala
+  - https://github.com/ergoplatform/ergo/tree/master/src/main/resources/application.conf
+  - https://github.com/ergoplatform/ergo/tree/master/src/main/scala/org/ergoplatform/mining/AutolykosPowScheme.scala
+  - https://github.com/ergoplatform/ergo/tree/master/src/main/scala/org/ergoplatform/nodeView/history/storage/modifierprocessors/HeadersProcessor.scala
+  - https://github.com/ergoplatform/ergo/tree/master/src/main/scala/org/ergoplatform/nodeView/wallet/ErgoWalletActor.scala
+  - https://github.com/ergoplatform/ergo/tree/master/src/test/resources/application.conf
 ---
 
 # Security Audit

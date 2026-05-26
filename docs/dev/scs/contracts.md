@@ -2,6 +2,165 @@
 tags:
   - ErgoScript
   - Contracts
+owner: docs
+last_reviewed: 2026-05-26
+source_repos:
+  - repo: ChainCashLabs/chaincash
+    branch: master
+    paths:
+      - contracts
+  - repo: Ergo-Lend/edge
+    branch: main
+    paths:
+      - src/main/scala/edge/contracts/Contract.scala
+  - repo: ErgoRaffle/raffle-backend
+    branch: master
+    paths:
+      - app/raffle/RaffleContract.scala
+  - repo: GetBlok-io/Subpooling
+    branch: mainnet_plasma
+    paths:
+      - conf/scripts
+  - repo: GetBlok-io/ergo-smartpooling-contracts
+    branch: master
+    paths:
+      - src/main/scala/contracts
+  - repo: GuapSwap/guapswap-ronin
+    branch: main
+    paths:
+      - src/main/scala/contracts
+  - repo: K-Singh/Sigma-Finance
+    branch: master
+    paths:
+      - contracts
+  - repo: LiliumErgo/scala-api
+    branch: main
+    paths:
+      - app/contracts/LiliumContracts.scala
+  - repo: Lithos-Protocol/Lithos
+    branch: master
+    paths:
+      - src/main/scala
+  - repo: SavonarolaLabs/hodlbox-xyz
+    branch: main
+    paths:
+      - src/lib/contract
+  - repo: ThierryM1212/SigmaO
+    branch: main
+    paths:
+      - contract
+  - repo: anon-real/sigma-usd
+    branch: master
+    paths:
+      - ageusd
+  - repo: duckpools/lend-protocol-contracts
+    branch: main
+    paths:
+      - contracts
+  - repo: ergoMixer/ergoMixBack
+    branch: master
+    paths:
+      - mixer/app/mixer
+  - repo: ergonames/ergonames
+    branch: master
+    paths:
+      - src/main/scala/
+  - repo: ergopad/ergopad-api
+    branch: dev
+    paths:
+      - app/contracts
+  - repo: ergoplatform/eips
+    branch: master
+    paths:
+      - eip-0015.md
+      - eip-0022.md
+      - eip-0031.md
+  - repo: ergoplatform/ergo-jde
+    branch: main
+    paths:
+      - kiosk/src/test/scala/kiosk/dexy/DexySpec.scala
+      - kiosk/src/test/scala/kiosk/mixer
+  - repo: ergoplatform/ergoscript-by-example
+    branch: main
+    paths:
+      - doubleChainSwap.md
+      - escrowDepositContract.md
+      - grantorBeneficiaryPinLock.md
+      - headsOrTails.md
+      - headsOrTailsParallel.md
+      - pinLockContract.md
+      - selfReplicatingTokenSale.md
+      - simpleSend.md
+      - singleChainSwap.md
+      - stealthAddress.md
+      - timedFund.md
+      - tokenSalesService.md
+  - repo: lucagdangelo/trade-in
+    branch: main
+    paths:
+      - src/main/scala/contracts
+  - repo: mgpai22/comet-lottery
+    branch: main
+    paths:
+      - comet-lottery-bot/src/main/scala/contracts/LotteryContracts.scala
+  - repo: mhssamadani/gravity-core
+    branch: dev
+    paths:
+      - contracts/ergo/gravity.scala
+      - contracts/ergo/nebula.scala
+  - repo: ross-weir/chain-name-service
+    branch: main
+    paths:
+      - contracts
+  - repo: scalahub/Kiosk
+    branch: master
+    paths:
+      - src/test/scala/kiosk/oraclepool/v4a
+  - repo: spectrum-finance/ergo-dex
+    branch: master
+    paths:
+      - contracts
+source_of_truth:
+  - https://github.com/ChainCashLabs/chaincash/tree/master/contracts
+  - https://github.com/Ergo-Lend/edge/tree/main/src/main/scala/edge/contracts/Contract.scala
+  - https://github.com/ErgoRaffle/raffle-backend/tree/master/app/raffle/RaffleContract.scala
+  - https://github.com/GetBlok-io/Subpooling/tree/mainnet_plasma/conf/scripts
+  - https://github.com/GetBlok-io/ergo-smartpooling-contracts/tree/master/src/main/scala/contracts
+  - https://github.com/GuapSwap/guapswap-ronin/tree/main/src/main/scala/contracts
+  - https://github.com/K-Singh/Sigma-Finance/tree/master/contracts
+  - https://github.com/LiliumErgo/scala-api/tree/main/app/contracts/LiliumContracts.scala
+  - https://github.com/Lithos-Protocol/Lithos/tree/master/src/main/scala
+  - https://github.com/SavonarolaLabs/hodlbox-xyz/tree/main/src/lib/contract
+  - https://github.com/ThierryM1212/SigmaO/tree/main/contract
+  - https://github.com/anon-real/sigma-usd/tree/master/ageusd
+  - https://github.com/duckpools/lend-protocol-contracts/tree/main/contracts
+  - https://github.com/ergoMixer/ergoMixBack/tree/master/mixer/app/mixer
+  - https://github.com/ergonames/ergonames/tree/master/src/main/scala/
+  - https://github.com/ergopad/ergopad-api/tree/dev/app/contracts
+  - https://github.com/ergoplatform/eips/tree/master/eip-0015.md
+  - https://github.com/ergoplatform/eips/tree/master/eip-0022.md
+  - https://github.com/ergoplatform/eips/tree/master/eip-0031.md
+  - https://github.com/ergoplatform/ergo-jde/tree/main/kiosk/src/test/scala/kiosk/dexy/DexySpec.scala
+  - https://github.com/ergoplatform/ergo-jde/tree/main/kiosk/src/test/scala/kiosk/mixer
+  - https://github.com/ergoplatform/ergoscript-by-example/tree/main/doubleChainSwap.md
+  - https://github.com/ergoplatform/ergoscript-by-example/tree/main/escrowDepositContract.md
+  - https://github.com/ergoplatform/ergoscript-by-example/tree/main/grantorBeneficiaryPinLock.md
+  - https://github.com/ergoplatform/ergoscript-by-example/tree/main/headsOrTails.md
+  - https://github.com/ergoplatform/ergoscript-by-example/tree/main/headsOrTailsParallel.md
+  - https://github.com/ergoplatform/ergoscript-by-example/tree/main/pinLockContract.md
+  - https://github.com/ergoplatform/ergoscript-by-example/tree/main/selfReplicatingTokenSale.md
+  - https://github.com/ergoplatform/ergoscript-by-example/tree/main/simpleSend.md
+  - https://github.com/ergoplatform/ergoscript-by-example/tree/main/singleChainSwap.md
+  - https://github.com/ergoplatform/ergoscript-by-example/tree/main/stealthAddress.md
+  - https://github.com/ergoplatform/ergoscript-by-example/tree/main/timedFund.md
+  - https://github.com/ergoplatform/ergoscript-by-example/tree/main/tokenSalesService.md
+  - https://github.com/lucagdangelo/trade-in/tree/main/src/main/scala/contracts
+  - https://github.com/mgpai22/comet-lottery/tree/main/comet-lottery-bot/src/main/scala/contracts/LotteryContracts.scala
+  - https://github.com/mhssamadani/gravity-core/tree/dev/contracts/ergo/gravity.scala
+  - https://github.com/mhssamadani/gravity-core/tree/dev/contracts/ergo/nebula.scala
+  - https://github.com/ross-weir/chain-name-service/tree/main/contracts
+  - https://github.com/scalahub/Kiosk/tree/master/src/test/scala/kiosk/oraclepool/v4a
+  - https://github.com/spectrum-finance/ergo-dex/tree/master/contracts
 ---
 
 # ErgoScript Contracts
@@ -75,6 +234,7 @@ The [ergo-contracts](https://github.com/ergoplatform/ergo-contracts) repository 
 
 ### In Development
 
+- ChainCash contract sources have active 2026 Basis, reserve/emergency-logic, and refund-handling changes. Verify the current contract files before treating examples as stable integration targets.
 - [Dexy](https://github.com/ergoplatform/ergo-jde/blob/main/kiosk/src/test/scala/kiosk/dexy/DexySpec.scala)
 - [Bitdomains](https://github.com/bitdomains/contracts)
 - [ErgoNames](https://github.com/ergonames/ergonames/blob/master/src/main/scala/)

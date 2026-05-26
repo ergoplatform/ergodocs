@@ -1,3 +1,15 @@
+---
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ThierryM1212/ergo-token-minter
+    branch: main
+    paths:
+      - src/index.js
+source_of_truth:
+  - https://github.com/ThierryM1212/ergo-token-minter/tree/main/src/index.js
+---
+
 # Burning a token
 
 There are sometimes occasions when you want to delete a token from your wallet.

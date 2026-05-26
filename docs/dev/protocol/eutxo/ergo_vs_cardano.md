@@ -1,3 +1,15 @@
+---
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ScorexFoundation/sigmastate-interpreter
+    branch: develop
+    paths:
+      - sdk/shared/src/main/scala/org/ergoplatform/sdk/wallet/protocol/context/ErgoLikeStateContext.scala
+source_of_truth:
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/sdk/shared/src/main/scala/org/ergoplatform/sdk/wallet/protocol/context/ErgoLikeStateContext.scala
+---
+
 
 /// details | DRAFT
      {type: warning, open: true}

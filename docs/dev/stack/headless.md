@@ -8,6 +8,26 @@ tags:
   - dApp Development
   - Off-chain Logic
   - EIP-6
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/eips
+    branch: master
+    paths:
+      - eip-0006.md
+  - repo: ergoplatform/ergo-headless-dapp-framework
+    branch: main
+    paths:
+      - src/encoding.rs
+      - tutorials/Math_Bounty/1-math-bounty-dApp-getting-started.md
+      - tutorials/Math_Bounty/2-math-bounty-dApp-finishing-the-headless-dapp.md
+      - tutorials/Math_Bounty/3-math-bounty-dApp-writing-a-cli-frontend-that-allows-creating-bounties.md
+source_of_truth:
+  - https://github.com/ergoplatform/eips/tree/master/eip-0006.md
+  - https://github.com/ergoplatform/ergo-headless-dapp-framework/tree/main/src/encoding.rs
+  - https://github.com/ergoplatform/ergo-headless-dapp-framework/tree/main/tutorials/Math_Bounty/1-math-bounty-dApp-getting-started.md
+  - https://github.com/ergoplatform/ergo-headless-dapp-framework/tree/main/tutorials/Math_Bounty/2-math-bounty-dApp-finishing-the-headless-dapp.md
+  - https://github.com/ergoplatform/ergo-headless-dapp-framework/tree/main/tutorials/Math_Bounty/3-math-bounty-dApp-writing-a-cli-frontend-that-allows-creating-bounties.md
 ---
 
 # Ergo Headless dApp Framework (HDF)

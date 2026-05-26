@@ -5,6 +5,15 @@ tags:
   - dApp Development
   - EIP
   - Smart Contracts
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/eips
+    branch: master
+    paths:
+      - eip-0017.md
+source_of_truth:
+  - https://github.com/ergoplatform/eips/tree/master/eip-0017.md
 ---
 
 # Proxy Contracts

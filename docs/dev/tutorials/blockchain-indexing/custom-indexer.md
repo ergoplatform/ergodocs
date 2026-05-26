@@ -13,6 +13,15 @@ tags:
   - Chain Grabber
   - RocksDB
   - PostgreSQL
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/explorer-backend
+    branch: master
+    paths:
+      - modules/chain-grabber
+source_of_truth:
+  - https://github.com/ergoplatform/explorer-backend/tree/master/modules/chain-grabber
 ---
 
 # Indexing Strategy: Building a Custom Indexer

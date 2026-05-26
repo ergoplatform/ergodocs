@@ -5,6 +5,24 @@ tags:
   - ErgoScript
   - Compiler
   - Interpreter
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ScorexFoundation/sigmastate-interpreter
+    branch: develop
+    paths:
+      - docs/sigma-dsl.md
+      - sigmastate/src/main/scala/sigmastate/interpreter/Interpreter.scala
+      - sigmastate/src/main/scala/sigmastate/lang/SigmaCompiler.scala
+  - repo: ergoplatform/ergo
+    branch: master
+    paths:
+      - ergo-wallet
+source_of_truth:
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/docs/sigma-dsl.md
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/sigmastate/src/main/scala/sigmastate/interpreter/Interpreter.scala
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/sigmastate/src/main/scala/sigmastate/lang/SigmaCompiler.scala
+  - https://github.com/ergoplatform/ergo/tree/master/ergo-wallet
 ---
 
 # Sigmastate Interpreter

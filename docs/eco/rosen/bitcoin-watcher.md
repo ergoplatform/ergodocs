@@ -1,3 +1,20 @@
+---
+owner: docs
+last_reviewed: 2026-05-26
+source_repos:
+  - repo: rosen-bridge/operation
+    branch: dev
+    paths:
+      - docs/watcher/deploy-docker.md
+  - repo: rosen-bridge/utils
+    branch: dev
+    paths:
+      - packages/cli
+source_of_truth:
+  - https://github.com/rosen-bridge/operation/tree/dev/docs/watcher/deploy-docker.md
+  - https://github.com/rosen-bridge/utils/tree/dev/packages/cli
+---
+
 # Bitcoin Rosen Bridge Watcher Setup
 
 To participate as a watcher in the Rosen Bridge, you need to deploy a watcher app that observes one of the supported networks. Each supported network has its own set of watchers responsible for reporting users' actions on that specific network.
@@ -348,12 +365,11 @@ initial:
   height: LATEST_BITCOIN_HEIGHT
 ```
 
-Customize observation confirmation and validity threshold:
+Customize observation confirmation:
 
 ```yaml
 observation:
   confirmation: 2
-  validThreshold: 72
 ```
 
 ### Ergo Configuration
@@ -386,12 +402,11 @@ Set the initial height of your watcher:
 initialHeight: LATEST_HEIGHT
 ```
 
-Customize observation confirmation and validity threshold:
+Customize observation confirmation:
 
 ```yaml
 observation:
   confirmation: 10
-  validThreshold: 720
 ```
 
 ### Example Configuration for Bitcoin Watcher
@@ -416,7 +431,6 @@ bitcoin:
     height: LATEST_BITCOIN_HEIGHT
 observation:
   confirmation: 2
-  validThreshold: 72
 ```
 
 ## Get Your Watcher Permit

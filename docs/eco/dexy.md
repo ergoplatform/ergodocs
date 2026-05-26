@@ -5,6 +5,19 @@ tags:
   - Stablecoin
   - dApp
   - dApp-InDev
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/ergo-jde
+    branch: main
+    paths:
+      - kiosk/src/test/scala/kiosk/dexy
+      - kiosk/src/test/scala/kiosk/dexy/Dexy.md
+      - kiosk/src/test/scala/kiosk/dexy/DexySpec.scala
+source_of_truth:
+  - https://github.com/ergoplatform/ergo-jde/tree/main/kiosk/src/test/scala/kiosk/dexy
+  - https://github.com/ergoplatform/ergo-jde/tree/main/kiosk/src/test/scala/kiosk/dexy/Dexy.md
+  - https://github.com/ergoplatform/ergo-jde/tree/main/kiosk/src/test/scala/kiosk/dexy/DexySpec.scala
 ---
 
 # Dexy: A Seigniorage-Based Stablecoin

@@ -1,3 +1,15 @@
+---
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/awesome-ergo
+    branch: master
+    paths:
+      - graphics/Logo
+source_of_truth:
+  - https://github.com/ergoplatform/awesome-ergo/tree/master/graphics/Logo
+---
+
 ## How to Get Involved in Community Marketing
 
 Ergo has a lively and diverse community made up of various sub-ecosystems. Here’s how you can get involved and make a difference:

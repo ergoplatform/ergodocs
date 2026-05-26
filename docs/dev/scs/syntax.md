@@ -2,6 +2,26 @@
 tags:
   - Syntax
   - ErgoScript
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: DeCo-Education/ErgoScript-Developer-Course
+    branch: main
+    paths:
+      - Class-Documents/Class-1/Materials/Class1.MD
+  - repo: ScorexFoundation/sigmastate-interpreter
+    branch: develop
+    paths:
+      - core/shared/src/main/scala/sigma/Colls.scala
+      - docs/LangSpec.md
+      - docs/ergoscript-compiler.md
+      - docs/sigma-dsl.md
+source_of_truth:
+  - https://github.com/DeCo-Education/ErgoScript-Developer-Course/tree/main/Class-Documents/Class-1/Materials/Class1.MD
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/core/shared/src/main/scala/sigma/Colls.scala
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/docs/LangSpec.md
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/docs/ergoscript-compiler.md
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/docs/sigma-dsl.md
 ---
 # ErgoScript Syntax
 

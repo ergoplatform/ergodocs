@@ -1,3 +1,22 @@
+---
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/ergo
+    branch: master
+    paths:
+      - ergo-core/src/main/scala/org/ergoplatform/modifiers/history/header/Header.scala
+      - ergo-core/src/main/scala/org/ergoplatform/nodeView/history/ErgoHistory.scala
+  - repo: ergoplatform/sigma-rust
+    branch: develop
+    paths:
+      - ergo-merkle-tree/src/batchmerkleproof.rs
+source_of_truth:
+  - https://github.com/ergoplatform/ergo/tree/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/history/header/Header.scala
+  - https://github.com/ergoplatform/ergo/tree/master/ergo-core/src/main/scala/org/ergoplatform/nodeView/history/ErgoHistory.scala
+  - https://github.com/ergoplatform/sigma-rust/tree/develop/ergo-merkle-tree/src/batchmerkleproof.rs
+---
+
 # Interlink Vectors in Ergo
 
 ## Overview

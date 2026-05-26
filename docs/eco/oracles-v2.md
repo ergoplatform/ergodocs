@@ -4,6 +4,20 @@ tags:
   - Oracles
   - EIP-23
   - DeFi
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/eips
+    branch: eip16
+    paths:
+      - eip-0016.md
+  - repo: ergoplatform/oracle-core
+    branch: develop
+    paths:
+      - docs/how_to_bootstrap.md
+source_of_truth:
+  - https://github.com/ergoplatform/eips/tree/eip16/eip-0016.md
+  - https://github.com/ergoplatform/oracle-core/tree/develop/docs/how_to_bootstrap.md
 ---
 
 # Oracle Pools Version 2

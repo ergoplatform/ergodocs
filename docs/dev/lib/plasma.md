@@ -5,6 +5,22 @@ tags:
   - Layer 2
   - Library
   - GetBlok
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: GetBlok-io/GetBlok-Plasma
+    branch: master
+    paths:
+      - documents/AVL_Trees.MD
+      - documents/SmartPool_Plasma.MD
+  - repo: ergo-pad/paideia-contracts
+    branch: main
+    paths:
+      - paideia_contracts/contracts/plasma_staking/ergoscript/latest/plasmaStaking.es
+source_of_truth:
+  - https://github.com/GetBlok-io/GetBlok-Plasma/tree/master/documents/AVL_Trees.MD
+  - https://github.com/GetBlok-io/GetBlok-Plasma/tree/master/documents/SmartPool_Plasma.MD
+  - https://github.com/ergo-pad/paideia-contracts/tree/main/paideia_contracts/contracts/plasma_staking/ergoscript/latest/plasmaStaking.es
 ---
 
 # Plasma

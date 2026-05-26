@@ -3,6 +3,20 @@ tags:
   - ErgoScript
   - Smart Contracts
   - Sigma Protocols
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/sigma-rust
+    branch: develop
+    paths:
+      - ergoscript-compiler
+  - repo: ergoplatform/sigmastate-interpreter
+    branch: develop
+    paths:
+      - docs/perf-style-guide.md
+source_of_truth:
+  - https://github.com/ergoplatform/sigma-rust/tree/develop/ergoscript-compiler
+  - https://github.com/ergoplatform/sigmastate-interpreter/tree/develop/docs/perf-style-guide.md
 ---
 
 # ErgoScript

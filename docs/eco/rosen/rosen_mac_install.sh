@@ -153,8 +153,7 @@ ergo:
     commitmentTimeoutConfirmation: 720
 
 observation:
-  confirmation: 10
-  validThreshold: 720" > config/local.yaml
+  confirmation: 10" > config/local.yaml
 
 # Update config/local.yaml with actual values
 sed -i '' "s/\$PEER_HEIGHT/$PEER_HEIGHT/; s/\$MNEMONIC/$MNEMONIC/" config/local.yaml

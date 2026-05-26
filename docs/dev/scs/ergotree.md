@@ -2,6 +2,15 @@
 tags:
   - ErgoTree
   - Reference Manual
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ross-weir/ergo-script-re
+    branch: main
+    paths:
+      - ergotree-pseudo-code
+source_of_truth:
+  - https://github.com/ross-weir/ergo-script-re/tree/main/ergotree-pseudo-code
 ---
 
 # ErgoTree: Reference Manual

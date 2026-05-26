@@ -1,3 +1,17 @@
+---
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: MrStahlfelge/mosaik
+    branch: develop
+    paths:
+      - backend-demo
+      - backend-demo-kotlin
+source_of_truth:
+  - https://github.com/MrStahlfelge/mosaik/tree/develop/backend-demo
+  - https://github.com/MrStahlfelge/mosaik/tree/develop/backend-demo-kotlin
+---
+
 # Ergo Mosaik: A UI system for Ergo dApps
 
 ## Example apps

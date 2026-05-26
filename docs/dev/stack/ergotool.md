@@ -1,3 +1,15 @@
+---
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: bitcoin/bips
+    branch: master
+    paths:
+      - bip-0032.mediawiki
+source_of_truth:
+  - https://github.com/bitcoin/bips/tree/master/bip-0032.mediawiki
+---
+
 # ErgoTool
 
 ## Introduction

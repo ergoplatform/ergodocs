@@ -1,6 +1,15 @@
 ---
 tags:
   - Merkle
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/ergo
+    branch: master
+    paths:
+      - ergo-core/src/main/scala/org/ergoplatform/modifiers/history/extension/Extension.scala
+source_of_truth:
+  - https://github.com/ergoplatform/ergo/tree/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/history/extension/Extension.scala
 ---
 
 # Extension Block Merkle Tree in Ergo

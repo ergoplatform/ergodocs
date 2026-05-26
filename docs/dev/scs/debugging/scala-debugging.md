@@ -6,6 +6,17 @@ tags:
   - Testing
   - sigmastate-interpreter
   - Appkit
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ScorexFoundation/sigmastate-interpreter
+    branch: develop
+    paths:
+      - sigmastate/src/test/scala/sigmastate/utxo/examples/AssetsAtomicExchange.scala
+      - sigmastate/src/test/scala/sigmastate/utxo/examples/AssetsAtomicExchangeTests.scala
+source_of_truth:
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/sigmastate/src/test/scala/sigmastate/utxo/examples/AssetsAtomicExchange.scala
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/sigmastate/src/test/scala/sigmastate/utxo/examples/AssetsAtomicExchangeTests.scala
 ---
 
 # Scala-Based ErgoScript Debugging

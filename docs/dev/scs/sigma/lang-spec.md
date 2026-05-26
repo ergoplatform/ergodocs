@@ -1,3 +1,20 @@
+---
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ScorexFoundation/sigmastate-interpreter
+    branch: develop
+    paths:
+      - docs/LangSpec.md
+  - repo: aslesarenko/ergo-appkit-examples
+    branch: master
+    paths:
+      - java-examples/src/main/java/org/ergoplatform/appkit/examples/FreezeCoin.java
+source_of_truth:
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/docs/LangSpec.md
+  - https://github.com/aslesarenko/ergo-appkit-examples/tree/master/java-examples/src/main/java/org/ergoplatform/appkit/examples/FreezeCoin.java
+---
+
 # ErgoScript Language Description
 
 > 🔗 From [sigmastate-interpreter](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/LangSpec.md)

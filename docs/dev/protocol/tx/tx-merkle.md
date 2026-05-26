@@ -1,6 +1,17 @@
 ---
 tags:
   - Merkle
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/ergo
+    branch: master
+    paths:
+      - ergo-core/src/main/scala/org/ergoplatform/modifiers/history/BlockTransactions.scala
+      - ergo-core/src/main/scala/org/ergoplatform/modifiers/history/header/Header.scala
+source_of_truth:
+  - https://github.com/ergoplatform/ergo/tree/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/history/BlockTransactions.scala
+  - https://github.com/ergoplatform/ergo/tree/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/history/header/Header.scala
 ---
 
 # Transaction Merkle Tree

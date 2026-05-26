@@ -14,6 +14,42 @@ tags:
   - Go
   - Ruby
   - Python
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergonames/sdk
+    branch: master
+    paths:
+      - rust
+  - repo: ergoplatform/sigma-rust
+    branch: develop
+    paths:
+      - bindings/ergo-lib-c
+      - bindings/ergo-lib-ios
+      - bindings/ergo-lib-jni
+      - bindings/ergo-lib-python
+      - bindings/ergo-lib-wasm
+      - bindings/ergo-lib-wasm/examples/address-generation-demo
+      - bindings/ergo-lib-wasm/examples/create-transaction-demo
+      - ergo-lib
+      - ergoscript-compiler
+      - ergotree-interpreter
+      - ergotree-ir
+      - sigma-ser
+source_of_truth:
+  - https://github.com/ergonames/sdk/tree/master/rust
+  - https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-c
+  - https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-ios
+  - https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-jni
+  - https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-python
+  - https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-wasm
+  - https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-wasm/examples/address-generation-demo
+  - https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-wasm/examples/create-transaction-demo
+  - https://github.com/ergoplatform/sigma-rust/tree/develop/ergo-lib
+  - https://github.com/ergoplatform/sigma-rust/tree/develop/ergoscript-compiler
+  - https://github.com/ergoplatform/sigma-rust/tree/develop/ergotree-interpreter
+  - https://github.com/ergoplatform/sigma-rust/tree/develop/ergotree-ir
+  - https://github.com/ergoplatform/sigma-rust/tree/develop/sigma-ser
 ---
 
 # Sigma Rust

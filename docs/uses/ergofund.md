@@ -1,3 +1,15 @@
+---
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/eips
+    branch: master
+    paths:
+      - eip-0001.md
+source_of_truth:
+  - https://github.com/ergoplatform/eips/tree/master/eip-0001.md
+---
+
 # ErgoFund
 
 ErgoFund will eventually provide a more sophisticated crowdfunding experience, with contracts for campaigns with thousands of pledges and enable [*'Self-Soverign DeFi'*](https://www.ergoforum.org/t/self-sovereign-defi/260)

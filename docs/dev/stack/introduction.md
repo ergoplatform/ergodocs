@@ -1,3 +1,15 @@
+---
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ScorexFoundation/sigmastate-interpreter
+    branch: develop
+    paths:
+      - interpreter/shared/src/test/scala/sigmastate/crypto/SigningSpecification.scala
+source_of_truth:
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/interpreter/shared/src/test/scala/sigmastate/crypto/SigningSpecification.scala
+---
+
 # Resources
 
 ::cards::

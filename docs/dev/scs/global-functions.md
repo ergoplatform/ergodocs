@@ -2,6 +2,15 @@
 tags:
   - Global Functions
   - ErgoScript
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ScorexFoundation/sigmastate-interpreter
+    branch: develop
+    paths:
+      - docs/LangSpec.md
+source_of_truth:
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/docs/LangSpec.md
 ---
 
 # Global Functions

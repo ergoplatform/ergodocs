@@ -1,3 +1,15 @@
+---
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/ergo
+    branch: master
+    paths:
+      - src/main/resources
+source_of_truth:
+  - https://github.com/ergoplatform/ergo/tree/master/src/main/resources
+---
+
 # ErgoPi
 
 ## Getting Started

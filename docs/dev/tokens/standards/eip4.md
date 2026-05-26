@@ -1,6 +1,15 @@
 ---
 tags:
   - EIP
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/eips
+    branch: master
+    paths:
+      - eip-0004.md
+source_of_truth:
+  - https://github.com/ergoplatform/eips/tree/master/eip-0004.md
 ---
 
 # EIP-0004: Asset Standard

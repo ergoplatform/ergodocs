@@ -5,6 +5,16 @@ tags:
   - Installation
   - Setup
   - Guide
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/ergo
+    branch: master
+    paths:
+      - src/main/resources/application.conf
+      - src/main/scala/org/ergoplatform/nodeView/
+source_of_truth:
+  - https://github.com/ergoplatform/ergo
 ---
 
 # The Ergo Reference Client (Node)

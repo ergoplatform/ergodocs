@@ -1,6 +1,15 @@
 ---
 tags:
   - Rust
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: knizhnik/scorex_crypto_avltree
+    branch: main
+    paths:
+      - crypto_avltree.md
+source_of_truth:
+  - https://github.com/knizhnik/scorex_crypto_avltree/tree/main/crypto_avltree.md
 ---
 # Rust
 

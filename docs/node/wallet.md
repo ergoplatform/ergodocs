@@ -11,6 +11,16 @@ tags:
   - Keys
   - BIP39
   - BIP32
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/ergo
+    branch: master
+    paths:
+      - src/main/scala/org/ergoplatform/wallet/
+      - src/main/scala/org/ergoplatform/http/api/
+source_of_truth:
+  - https://github.com/ergoplatform/ergo
 ---
 
 ## Initialize Wallet

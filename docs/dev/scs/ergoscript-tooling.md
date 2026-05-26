@@ -2,6 +2,25 @@
 tags:
   - ErgoScript
   - Tooling
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: Emurgo/Emurgo-Research
+    branch: master
+    paths:
+      - smart-contracts/High%20Level%20Design%20Patterns%20In%20Extended%20UTXO%20Systems.md
+  - repo: ScorexFoundation/sigmastate-interpreter
+    branch: develop
+    paths:
+      - docs/LangSpec.md
+  - repo: paideiadao/paideia-contracts
+    branch: main
+    paths:
+      - paideia_contracts/contracts/plasma_staking/ergoscript/latest/plasmaStaking.es
+source_of_truth:
+  - https://github.com/Emurgo/Emurgo-Research/tree/master/smart-contracts/High%20Level%20Design%20Patterns%20In%20Extended%20UTXO%20Systems.md
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/docs/LangSpec.md
+  - https://github.com/paideiadao/paideia-contracts/tree/main/paideia_contracts/contracts/plasma_staking/ergoscript/latest/plasmaStaking.es
 ---
 
 # ErgoScript Tooling

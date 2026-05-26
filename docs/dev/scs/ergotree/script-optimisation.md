@@ -1,3 +1,15 @@
+---
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/eips
+    branch: master
+    paths:
+      - eip-0005.md
+source_of_truth:
+  - https://github.com/ergoplatform/eips/tree/master/eip-0005.md
+---
+
 
 # Potential Script Processing Optimization
 

@@ -1,3 +1,17 @@
+---
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: duckpools/off-chain-bot
+    branch: optionPools
+    paths:
+      - optionPools
+      - optionPools/contracts
+source_of_truth:
+  - https://github.com/duckpools/off-chain-bot/tree/optionPools/optionPools
+  - https://github.com/duckpools/off-chain-bot/tree/optionPools/optionPools/contracts
+---
+
 
 ---
 tags:

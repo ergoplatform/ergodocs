@@ -1,3 +1,25 @@
+---
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ScorexFoundation/sigmastate-interpreter
+    branch: develop
+    paths:
+      - docs/sigma-dsl.md
+  - repo: ergoplatform/ergo-jde
+    branch: main
+    paths:
+      - kiosk/src/test/scala/kiosk/schnorr/SchnorrSpec.scala
+  - repo: kushti/chaincash
+    branch: master
+    paths:
+      - src/test/scala/kiosk/ChainCashSpec.scala
+source_of_truth:
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/docs/sigma-dsl.md
+  - https://github.com/ergoplatform/ergo-jde/tree/main/kiosk/src/test/scala/kiosk/schnorr/SchnorrSpec.scala
+  - https://github.com/kushti/chaincash/tree/master/src/test/scala/kiosk/ChainCashSpec.scala
+---
+
 # Schnorr Signatures
 
 The **Schnorr signature** scheme is a key cryptographic primitive in Ergo, allowing for efficient, simple, and secure signatures. Whether verifying a transaction or proving the ownership of a private key on-chain, Schnorr signatures play a central role. This page explains how to verify a Schnorr signature in **ErgoScript**, starting from basic signing and verification steps to advanced on-chain validation.

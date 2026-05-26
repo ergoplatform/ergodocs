@@ -2,6 +2,17 @@
 tags:
   - Tutorial
   - dApp Development
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: MrStahlfelge/ergopay-server-example
+    branch: master
+    paths:
+      - src/main/java/org/ergoplatform/ergopay/ErgoPaySampleController.java
+      - src/main/java/org/ergoplatform/ergopay/UserSessionService.java
+source_of_truth:
+  - https://github.com/MrStahlfelge/ergopay-server-example/tree/master/src/main/java/org/ergoplatform/ergopay/ErgoPaySampleController.java
+  - https://github.com/MrStahlfelge/ergopay-server-example/tree/master/src/main/java/org/ergoplatform/ergopay/UserSessionService.java
 ---
 
 ### What we’ll do in this tutorial

@@ -1,6 +1,21 @@
 ---
 tags:
 - P2P
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/ergo
+    branch: master
+    paths:
+      - ergo-core/src/main/scala/org/ergoplatform/modifiers
+      - ergo-core/src/main/scala/org/ergoplatform/network/message/InvSpec.scala
+      - ergo-core/src/main/scala/org/ergoplatform/network/message/ModifiersSpec.scala
+      - ergo-core/src/main/scala/org/ergoplatform/network/message/RequestModifierSpec.scala
+source_of_truth:
+  - https://github.com/ergoplatform/ergo/tree/master/ergo-core/src/main/scala/org/ergoplatform/modifiers
+  - https://github.com/ergoplatform/ergo/tree/master/ergo-core/src/main/scala/org/ergoplatform/network/message/InvSpec.scala
+  - https://github.com/ergoplatform/ergo/tree/master/ergo-core/src/main/scala/org/ergoplatform/network/message/ModifiersSpec.scala
+  - https://github.com/ergoplatform/ergo/tree/master/ergo-core/src/main/scala/org/ergoplatform/network/message/RequestModifierSpec.scala
 ---
 
 # Modifier Exchange

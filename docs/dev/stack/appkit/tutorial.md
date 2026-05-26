@@ -2,6 +2,32 @@
 tags:
   - Java
   - Tutorial
+owner: docs
+last_reviewed: 2026-05-26
+source_repos:
+  - repo: aslesarenko/ergo-appkit
+    branch: master
+    paths:
+      - lib-api/src/main/java/org/ergoplatform/appkit/ErgoClient.java
+  - repo: aslesarenko/ergo-appkit-examples
+    branch: master
+    paths:
+      - c-examples/freezecoin.c
+      - freeze_coin_config.json
+      - java-examples/build.gradle.kts
+      - java-examples/src/main/java/org/ergoplatform/appkit/examples/FreezeCoin.java
+      - js-examples/FreezeCoin.js
+      - python-examples/FreezeCoin.py
+      - ruby-examples/FreezeCoin.rb
+source_of_truth:
+  - https://github.com/aslesarenko/ergo-appkit-examples/tree/master/c-examples/freezecoin.c
+  - https://github.com/aslesarenko/ergo-appkit-examples/tree/master/freeze_coin_config.json
+  - https://github.com/aslesarenko/ergo-appkit-examples/tree/master/java-examples/build.gradle.kts
+  - https://github.com/aslesarenko/ergo-appkit-examples/tree/master/java-examples/src/main/java/org/ergoplatform/appkit/examples/FreezeCoin.java
+  - https://github.com/aslesarenko/ergo-appkit-examples/tree/master/js-examples/FreezeCoin.js
+  - https://github.com/aslesarenko/ergo-appkit-examples/tree/master/python-examples/FreezeCoin.py
+  - https://github.com/aslesarenko/ergo-appkit-examples/tree/master/ruby-examples/FreezeCoin.rb
+  - https://github.com/aslesarenko/ergo-appkit/tree/master/lib-api/src/main/java/org/ergoplatform/appkit/ErgoClient.java
 ---
 
 ## Features

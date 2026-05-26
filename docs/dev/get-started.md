@@ -3,6 +3,17 @@ tags:
   - Developer Guide
   - Getting Started
   - Overview
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/sigma-rust
+    branch: develop
+    paths:
+      - bindings/ergo-lib-wasm/examples/address-generation-demo
+      - bindings/ergo-lib-wasm/examples/create-transaction-demo
+source_of_truth:
+  - https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-wasm/examples/address-generation-demo
+  - https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-wasm/examples/create-transaction-demo
 ---
 
 # Developer's Guide

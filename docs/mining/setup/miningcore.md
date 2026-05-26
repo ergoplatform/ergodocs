@@ -6,6 +6,15 @@ tags:
   - Linux
   - PostgreSQL
   - Guide
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: oliverw/miningcore
+    branch: master
+    paths:
+      - README.md
+source_of_truth:
+  - https://github.com/oliverw/miningcore/tree/master/README.md
 ---
 
 # MiningCore Setup Tutorial for Linux

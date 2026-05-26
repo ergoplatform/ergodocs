@@ -11,6 +11,17 @@ tags:
   - dApp Development
   - Security
   - Testing
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/eips
+    branch: master
+    paths:
+      - eip-0001.md
+      - eip-0003.md
+source_of_truth:
+  - https://github.com/ergoplatform/eips/tree/master/eip-0001.md
+  - https://github.com/ergoplatform/eips/tree/master/eip-0003.md
 ---
 
 # Wallet Interaction Standards (EIPs) for dApp Developers

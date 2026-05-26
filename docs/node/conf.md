@@ -5,6 +5,15 @@ tags:
   - Overview
   - application.conf
   - testnet.conf
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/ergo
+    branch: master
+    paths:
+      - src/main/resources/application.conf
+source_of_truth:
+  - https://github.com/ergoplatform/ergo/tree/master/src/main/resources/application.conf
 ---
 
 # Overview of Node Configuration Files

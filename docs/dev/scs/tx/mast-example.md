@@ -9,6 +9,15 @@ tags:
   - Multi-Stage Contracts
   - executeFromVar
   - Merkle Proof
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/sigmastate-interpreter
+    branch: develop
+    paths:
+      - sigmastate/src/test/scala/sigmastate/utxo/examples/MASTExampleSpecification.scala
+source_of_truth:
+  - https://github.com/ergoplatform/sigmastate-interpreter/tree/develop/sigmastate/src/test/scala/sigmastate/utxo/examples/MASTExampleSpecification.scala
 ---
 # Tutorial: Merkleized Abstract Syntax Trees (MAST) in Ergo
 

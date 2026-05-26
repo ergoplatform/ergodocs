@@ -1,6 +1,15 @@
 ---
 tags:
   - Roadmap
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/eips
+    branch: master
+    paths:
+      - eip-0044.md
+source_of_truth:
+  - https://github.com/ergoplatform/eips/tree/master/eip-0044.md
 ---
 
 # Ergo Development Roadmap & History

@@ -6,6 +6,15 @@ tags:
   - Code
   - EIP
   - Test Vectors
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/ergo
+    branch: master
+    paths:
+      - src/main/scala/org/ergoplatform/mining
+source_of_truth:
+  - https://github.com/ergoplatform/ergo/tree/master/src/main/scala/org/ergoplatform/mining
 ---
 
 # Mining Resources

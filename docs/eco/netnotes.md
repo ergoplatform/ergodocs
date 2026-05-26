@@ -6,7 +6,16 @@ tags:
   - KuCoin  
   - dApp  
   - Reactive Framework  
-  - Cross-Platform  
+  - Cross-Platform
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: networkspore/netnotes-engine
+    branch: main
+    paths:
+      - src/main/resources/contracts/dex
+source_of_truth:
+  - https://github.com/networkspore/netnotes-engine/tree/main/src/main/resources/contracts/dex
 ---
 
 # Netnotes  

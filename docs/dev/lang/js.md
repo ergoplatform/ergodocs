@@ -2,6 +2,17 @@
 tags:
   - JavaScript
   - TypeScript
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/sigma-rust
+    branch: develop
+    paths:
+      - bindings/ergo-lib-wasm/examples/address-generation-demo/README.md
+      - bindings/ergo-lib-wasm/examples/create-transaction-demo/README.md
+source_of_truth:
+  - https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-wasm/examples/address-generation-demo/README.md
+  - https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-wasm/examples/create-transaction-demo/README.md
 ---
 
 # JavaScript & TypeScript

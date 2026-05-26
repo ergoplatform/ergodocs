@@ -2,6 +2,8 @@
 
 We appreciate your interest in contributing to our documentation. Your assistance is invaluable, and we aim to make the contribution process as straightforward as possible.
 
+Before you start a larger change, review the [Content Standards](content-standards.md) and [Documentation Lifecycle](docs-lifecycle.md). They define how we structure pages, verify technical accuracy, and keep docs in sync with product and protocol changes.
+
 ## Prerequisites for Contribution
 
 Before you start contributing, ensure you have the following set up on your system:
@@ -40,13 +42,19 @@ pip install -r requirements.txt
 mkdocs build
 ```
 
-4. Start the development server:
+4. Audit navigation if you add, rename, move, or remove pages:
+
+```bash
+python tools/nav_audit.py
+```
+
+5. Start the development server:
 
 ```bash
 mkdocs serve
 ```
 
-5. Open the documentation in your browser:
+6. Open the documentation in your browser:
 
 ```
 http://127.0.0.1:8000/
@@ -61,6 +69,8 @@ Make your changes locally and submit a pull request when you're done.
 - Write in clear, concise, and grammatically correct English.
 - Use appropriate formatting, such as bold or italics, to emphasize key points.
 - Keep paragraphs and sections short and focused on a single topic.
+- Structure task pages around goals, prerequisites, steps, verification, troubleshooting, and next steps.
+- Define technical terms on first use and link to deeper references where useful.
 
 ### Code Style
 
@@ -133,6 +143,8 @@ Please include a descriptive title and a detailed description of your changes.
 ## Review Process
 
 Once your pull request is submitted, our team will review your changes. We may request additional changes or clarification before merging your pull request. Please be patient, as we want to ensure that the documentation remains high-quality and consistent.
+
+For feature or protocol changes, request technical review from a maintainer or subject matter expert. For larger information architecture or content design changes, include before-and-after notes in the pull request so reviewers can evaluate reader impact.
 
 ## MkDocs formatting
 

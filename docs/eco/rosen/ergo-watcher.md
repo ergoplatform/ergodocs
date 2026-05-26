@@ -1,3 +1,15 @@
+---
+owner: docs
+last_reviewed: 2026-05-26
+source_repos:
+  - repo: rosen-bridge/operation
+    branch: dev
+    paths:
+      - docs/watcher/deploy-docker.md
+source_of_truth:
+  - https://github.com/rosen-bridge/operation/tree/dev/docs/watcher/deploy-docker.md
+---
+
 # Ergo Rosen Bridge Watcher Setup
 
 Watchers are integral to Rosen Bridge, serving as cross-chain oracles. They observe and report deposit events on their network to Ergo, contributing to the network's security and expansion.
@@ -95,7 +107,6 @@ ergo:
     url: 127.0.0.1:9053
 observation:
   confirmation: 10
-  validThreshold: 720
 ```
 
 Make sure to use the actual values and URLs as per your setup requirements.

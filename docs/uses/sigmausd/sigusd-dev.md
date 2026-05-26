@@ -1,3 +1,22 @@
+---
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: MrStahlfelge/mosaik-ageusddemo
+    branch: master
+    paths:
+      - src/main/kotlin/org/ergoplatform/mosaik/example/ageusd/AgeUsdController.kt
+      - src/main/kotlin/org/ergoplatform/mosaik/example/ageusd/AgeUsdService.kt
+  - repo: ergoMixer/ergoMixBack
+    branch: master
+    paths:
+      - app/services/ErgoMixService.scala
+source_of_truth:
+  - https://github.com/MrStahlfelge/mosaik-ageusddemo/tree/master/src/main/kotlin/org/ergoplatform/mosaik/example/ageusd/AgeUsdController.kt
+  - https://github.com/MrStahlfelge/mosaik-ageusddemo/tree/master/src/main/kotlin/org/ergoplatform/mosaik/example/ageusd/AgeUsdService.kt
+  - https://github.com/ergoMixer/ergoMixBack/tree/master/app/services/ErgoMixService.scala
+---
+
 ### Accessing SigmaUSD as a Developer
 
 SigmaUSD is a decentralized stablecoin protocol on the Ergo blockchain. Developers can interact with SigmaUSD through various frameworks and approaches, such as Mosaik, AppKit, and Sigma-Rust. This tutorial provides a detailed guide on how to build new dApps that interact with SigmaUSD using these tools, with special focus on the mechanisms demonstrated in ErgoMix for robust integration.

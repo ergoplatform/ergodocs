@@ -6,6 +6,15 @@ tags:
   - Python
   - Tutorial
   - Guide
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: mgpai22/ergpy
+    branch: main
+    paths:
+      - examples
+source_of_truth:
+  - https://github.com/mgpai22/ergpy/tree/main/examples
 ---
 
 # Sending Chained Transactions

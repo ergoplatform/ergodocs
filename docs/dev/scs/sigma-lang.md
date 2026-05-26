@@ -1,6 +1,17 @@
 ---
 tags:
   - Sigma Language
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ScorexFoundation/sigmastate-interpreter
+    branch: develop
+    paths:
+      - interpreter/shared/src/main/scala/sigmastate/Values.scala
+      - sc/src/main/scala/sigmastate/lang/SigmaCompiler.scala
+source_of_truth:
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/interpreter/shared/src/main/scala/sigmastate/Values.scala
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/sc/src/main/scala/sigmastate/lang/SigmaCompiler.scala
 ---
 
 # The ***'Sigma Language'***

@@ -1,6 +1,20 @@
 ---
 tags:
   - Java
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: MrStahlfelge/ergopay-server-example
+    branch: master
+    paths:
+      - src/main/java/org/ergoplatform/ergopay/ErgoPaySampleController.java
+  - repo: ergoplatform/ergo-appkit
+    branch: develop
+    paths:
+      - README.md
+source_of_truth:
+  - https://github.com/MrStahlfelge/ergopay-server-example/tree/master/src/main/java/org/ergoplatform/ergopay/ErgoPaySampleController.java
+  - https://github.com/ergoplatform/ergo-appkit/tree/develop/README.md
 ---
 
 # Gradle

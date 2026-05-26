@@ -1,3 +1,15 @@
+---
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/eips
+    branch: master
+    paths:
+      - eip-0020.md
+source_of_truth:
+  - https://github.com/ergoplatform/eips/tree/master/eip-0020.md
+---
+
 # Ergo Mosaik: A UI system for Ergo dApps
 
 ## Part 4: Implementing Sending Funds screen

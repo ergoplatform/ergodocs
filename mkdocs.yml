@@ -494,6 +494,9 @@ nav:
           - Technical Guidelines: contribute/technical-guidelines.md
           - Roles: contribute/roles.md
           - Contribute to the Docs!: contribute/docs.md
+          - Content Standards: contribute/content-standards.md
+          - Documentation Lifecycle: contribute/docs-lifecycle.md
+          - Source Watch: contribute/source-watch.md
       - DAOs:
           - Ergo Foundation:
               - About: ef/ergo-foundation.md

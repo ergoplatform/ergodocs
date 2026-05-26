@@ -1,3 +1,15 @@
+---
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/eips
+    branch: master
+    paths:
+      - eip-0027.md
+source_of_truth:
+  - https://github.com/ergoplatform/eips/tree/master/eip-0027.md
+---
+
 # FAQ
 
 This page aims to provide a background on Ergo and answers to some of the most frequently asked questions.

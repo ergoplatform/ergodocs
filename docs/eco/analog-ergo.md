@@ -5,6 +5,15 @@ tags:
   - Atomic Swaps
   - dApp
   - dApp-InDev
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: dzyphr/ScalaSigmaParticle
+    branch: main
+    paths:
+      - ScalarLock/src/main/scala/ScalarLock.scala
+source_of_truth:
+  - https://github.com/dzyphr/ScalaSigmaParticle/tree/main/ScalarLock/src/main/scala/ScalarLock.scala
 ---
 
 # Analog Ergo

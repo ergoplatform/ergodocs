@@ -4,6 +4,15 @@ tags:
   - Authenticated Data Proofs
   - Block
   - Data Model
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/ergo
+    branch: master
+    paths:
+      - ergo-core/src/main/scala/org/ergoplatform/modifiers/history/ADProofs.scala
+source_of_truth:
+  - https://github.com/ergoplatform/ergo/tree/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/history/ADProofs.scala
 ---
 
 # ADProofs (Authenticated Data Proofs)

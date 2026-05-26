@@ -1,6 +1,15 @@
 ---
 tags:
   - EIP
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/ergo
+    branch: master
+    paths:
+      - src/main/resources/api/openapi.yaml
+source_of_truth:
+  - https://github.com/ergoplatform/ergo/tree/master/src/main/resources/api/openapi.yaml
 ---
 
 # EIP-0001: UTXO-Set Scanning Wallet API

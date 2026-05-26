@@ -7,6 +7,17 @@ tags:
   - Guide
   - oracle-core
   - Testnet
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/oracle-core
+    branch: develop
+    paths:
+      - docs/how_to_bootstrap.md
+      - scripts/send_new_oracle.sh
+source_of_truth:
+  - https://github.com/ergoplatform/oracle-core/tree/develop/docs/how_to_bootstrap.md
+  - https://github.com/ergoplatform/oracle-core/tree/develop/scripts/send_new_oracle.sh
 ---
 
 # Bootstrap an Oracle Pool

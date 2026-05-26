@@ -1,3 +1,15 @@
+---
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: DeCo-Education/ErgoScript-Developer-Course
+    branch: main
+    paths:
+      - Class-Documents/Class-1/Materials/Class1.MD
+source_of_truth:
+  - https://github.com/DeCo-Education/ErgoScript-Developer-Course/tree/main/Class-Documents/Class-1/Materials/Class1.MD
+---
+
 # Sigma Propositions
 
 Sigma Propositions (`SigmaProp`) are the core return type of every ErgoScript contract.

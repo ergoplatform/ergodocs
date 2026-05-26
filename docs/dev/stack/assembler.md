@@ -1,3 +1,21 @@
+---
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: scalahub/Kiosk
+    branch: master
+    paths:
+      - src/main/scala/kiosk/offchain
+      - src/main/scala/kiosk/offchain/readme.md
+      - src/test/scala/kiosk/offchain
+      - src/test/scala/kiosk/offchain/timestamp.json
+source_of_truth:
+  - https://github.com/scalahub/Kiosk/tree/master/src/main/scala/kiosk/offchain
+  - https://github.com/scalahub/Kiosk/tree/master/src/main/scala/kiosk/offchain/readme.md
+  - https://github.com/scalahub/Kiosk/tree/master/src/test/scala/kiosk/offchain
+  - https://github.com/scalahub/Kiosk/tree/master/src/test/scala/kiosk/offchain/timestamp.json
+---
+
 # Assembler
 
 > More likely you'll want to use [dApp-dev](dApp.md)

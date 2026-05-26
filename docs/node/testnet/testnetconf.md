@@ -1,3 +1,15 @@
+---
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/ergo
+    branch: master
+    paths:
+      - src/main/resources/testnet.conf
+source_of_truth:
+  - https://github.com/ergoplatform/ergo/tree/master/src/main/resources/testnet.conf
+---
+
 # Testnet Configuration
 
 This document describes the main sections and fields of the [Ergo node configuration file for the Test Network](https://github.com/ergoplatform/ergo/blob/master/src/main/resources/testnet.conf). This configuration serves the need for non-breaking changes testing.

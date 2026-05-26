@@ -1,3 +1,15 @@
+---
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: anon-real/ErgoUtils
+    branch: master
+    paths:
+      - src/utils/mixerHop.js
+source_of_truth:
+  - https://github.com/anon-real/ErgoUtils/tree/master/src/utils/mixerHop.js
+---
+
 # Identifiability
 
 ErgoUtils now support obfuscating entry points for ErgoMixer.

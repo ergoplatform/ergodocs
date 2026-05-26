@@ -5,6 +5,17 @@ tags:
   - DeFi
   - dApp
   - dApp-MVP
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ThierryM1212/SigmaO
+    branch: main
+    paths:
+      - contract/Option_Sell.es
+      - front-end/src/utils/utils.js
+source_of_truth:
+  - https://github.com/ThierryM1212/SigmaO/tree/main/contract/Option_Sell.es
+  - https://github.com/ThierryM1212/SigmaO/tree/main/front-end/src/utils/utils.js
 ---
 
 # Sigma'O

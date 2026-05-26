@@ -1,6 +1,28 @@
 ---
 tags:
   - P2P
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: Satergo/Ergonnection
+    branch: master
+    paths:
+      - src/main/java/com/satergo/ergonnection/messages/GetPeers.java
+  - repo: ergoplatform/ergo
+    branch: master
+    paths:
+      - ergo-core/src/main/scala/org/ergoplatform/network/message/InvSpec.scala
+      - ergo-core/src/main/scala/org/ergoplatform/serialization/ErgoSerializer.scala
+      - ergo-wallet/src/test/java/org/ergoplatform/wallet/AddressGenerationDemo.java
+      - ergo-wallet/src/test/java/org/ergoplatform/wallet/CreateTransactionDemo.java
+      - src/main/scala/org/ergoplatform/network/ErgoNodeViewSynchronizer.scala
+source_of_truth:
+  - https://github.com/Satergo/Ergonnection/tree/master/src/main/java/com/satergo/ergonnection/messages/GetPeers.java
+  - https://github.com/ergoplatform/ergo/tree/master/ergo-core/src/main/scala/org/ergoplatform/network/message/InvSpec.scala
+  - https://github.com/ergoplatform/ergo/tree/master/ergo-core/src/main/scala/org/ergoplatform/serialization/ErgoSerializer.scala
+  - https://github.com/ergoplatform/ergo/tree/master/ergo-wallet/src/test/java/org/ergoplatform/wallet/AddressGenerationDemo.java
+  - https://github.com/ergoplatform/ergo/tree/master/ergo-wallet/src/test/java/org/ergoplatform/wallet/CreateTransactionDemo.java
+  - https://github.com/ergoplatform/ergo/tree/master/src/main/scala/org/ergoplatform/network/ErgoNodeViewSynchronizer.scala
 ---
 
 # Network Messages in Ergo's P2P Protocol

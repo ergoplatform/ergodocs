@@ -1,3 +1,20 @@
+---
+owner: docs
+last_reviewed: 2026-05-26
+source_repos:
+  - repo: bitcoin/bips
+    branch: master
+    paths:
+      - bip-0044.mediawiki
+  - repo: satoshilabs/slips
+    branch: master
+    paths:
+      - slip-0044.md
+source_of_truth:
+  - https://github.com/bitcoin/bips/tree/master/bip-0044.mediawiki
+  - https://github.com/satoshilabs/slips/tree/master/slip-0044.md
+---
+
 # Hierarchical keys
 
 [BIP-0044](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki) defines a logical hierarchy for deterministic wallets. This is a common standard that is used directly (or used as inspiration) by countless projects in the cryptocurrency sphere.
@@ -18,9 +35,9 @@ Registered **coin_type**s can be found in [SLIP-0044](https://github.com/satoshi
 
 We will be using the word **ergo** summed based on the numerical values of the ASCII characters for the **coin_type**. As shown below, this means that our **coin_type** is `429`.
 
-``
+```text
 101 + 114 + 103 + 111 = 429
-``
+```
 
 Thus our path will look as such:
 

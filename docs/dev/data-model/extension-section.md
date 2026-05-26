@@ -3,6 +3,21 @@ tags:
   - Extension Section
   - Block
   - Data Model
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/ergo
+    branch: master
+    paths:
+      - ergo-core/src/main/scala/org/ergoplatform/modifiers/history/extension/Extension.scala
+      - ergo-core/src/main/scala/org/ergoplatform/modifiers/history/extension/ExtensionCandidate.scala
+      - ergo-core/src/main/scala/org/ergoplatform/modifiers/history/extension/ExtensionSerializer.scala
+      - ergo-core/src/main/scala/org/ergoplatform/nodeView/history/storage/modifierprocessors/ExtensionValidator.scala
+source_of_truth:
+  - https://github.com/ergoplatform/ergo/tree/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/history/extension/Extension.scala
+  - https://github.com/ergoplatform/ergo/tree/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/history/extension/ExtensionCandidate.scala
+  - https://github.com/ergoplatform/ergo/tree/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/history/extension/ExtensionSerializer.scala
+  - https://github.com/ergoplatform/ergo/tree/master/ergo-core/src/main/scala/org/ergoplatform/nodeView/history/storage/modifierprocessors/ExtensionValidator.scala
 ---
 
 # Ergo Block Structure: The Extension Section

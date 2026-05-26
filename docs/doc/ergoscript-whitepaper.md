@@ -5,6 +5,15 @@ tags:
   - Scripting Language
   - NIZK
   - Sigma Protocols
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ScorexFoundation/sigmastate-interpreter
+    branch: master
+    paths:
+      - src/test/scala/sigmastate/utxo/examples/Rule110Specification.scala
+source_of_truth:
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/master/src/test/scala/sigmastate/utxo/examples/Rule110Specification.scala
 ---
 
 $$

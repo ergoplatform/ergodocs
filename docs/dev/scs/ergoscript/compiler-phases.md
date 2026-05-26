@@ -1,6 +1,54 @@
 ---
 tags:
   - Compiler
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ScorexFoundation/sigmastate-interpreter
+    branch: develop
+    paths:
+      - docs/ergoscript-compiler.md
+      - interpreter/shared/src/main/scala/org/ergoplatform/SigmaPropProver.scala
+      - parsers/shared/src/main/scala/sigmastate/lang/Lexer.scala
+      - parsers/shared/src/main/scala/sigmastate/lang/SigmaParser.scala
+      - sc/shared/src/main/scala/sigma/compiler/ir/ProgramGraphs.scala
+      - sc/shared/src/main/scala/sigma/compiler/ir/TypeDescs.scala
+      - sc/shared/src/main/scala/sigma/compiler/phases/SigmaBinder.scala
+      - sc/shared/src/main/scala/sigma/compiler/phases/SigmaTyper.scala
+  - repo: ergoplatform/sigma-rust
+    branch: develop
+    paths:
+      - docs/architecture.md
+      - ergoscript-compiler/src/ast.rs
+      - ergoscript-compiler/src/binder.rs
+      - ergoscript-compiler/src/hir.rs
+      - ergoscript-compiler/src/lexer.rs
+      - ergoscript-compiler/src/parser.rs
+      - ergoscript-compiler/src/type_infer.rs
+      - ergotree-interpreter/src/lib.rs
+      - ergotree-ir/src/mir.rs
+      - ergotree-ir/src/serialization.rs
+      - ergotree-ir/src/type_check.rs
+source_of_truth:
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/docs/ergoscript-compiler.md
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/interpreter/shared/src/main/scala/org/ergoplatform/SigmaPropProver.scala
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/parsers/shared/src/main/scala/sigmastate/lang/Lexer.scala
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/parsers/shared/src/main/scala/sigmastate/lang/SigmaParser.scala
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/sc/shared/src/main/scala/sigma/compiler/ir/ProgramGraphs.scala
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/sc/shared/src/main/scala/sigma/compiler/ir/TypeDescs.scala
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/sc/shared/src/main/scala/sigma/compiler/phases/SigmaBinder.scala
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/sc/shared/src/main/scala/sigma/compiler/phases/SigmaTyper.scala
+  - https://github.com/ergoplatform/sigma-rust/tree/develop/docs/architecture.md
+  - https://github.com/ergoplatform/sigma-rust/tree/develop/ergoscript-compiler/src/ast.rs
+  - https://github.com/ergoplatform/sigma-rust/tree/develop/ergoscript-compiler/src/binder.rs
+  - https://github.com/ergoplatform/sigma-rust/tree/develop/ergoscript-compiler/src/hir.rs
+  - https://github.com/ergoplatform/sigma-rust/tree/develop/ergoscript-compiler/src/lexer.rs
+  - https://github.com/ergoplatform/sigma-rust/tree/develop/ergoscript-compiler/src/parser.rs
+  - https://github.com/ergoplatform/sigma-rust/tree/develop/ergoscript-compiler/src/type_infer.rs
+  - https://github.com/ergoplatform/sigma-rust/tree/develop/ergotree-interpreter/src/lib.rs
+  - https://github.com/ergoplatform/sigma-rust/tree/develop/ergotree-ir/src/mir.rs
+  - https://github.com/ergoplatform/sigma-rust/tree/develop/ergotree-ir/src/serialization.rs
+  - https://github.com/ergoplatform/sigma-rust/tree/develop/ergotree-ir/src/type_check.rs
 ---
 # ErgoScript Compiler Phases
 

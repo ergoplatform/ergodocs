@@ -1,3 +1,27 @@
+---
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/ergo
+    branch: master
+    paths:
+      - ergo-core/src/main/scala/org/ergoplatform/modifiers/mempool/ErgoTransaction.scala
+      - ergo-core/src/main/scala/org/ergoplatform/network/ErgoNetwork.scala
+      - ergo-core/src/main/scala/org/ergoplatform/network/ErgoSync.scala
+      - ergo-core/src/main/scala/org/ergoplatform/network/message/InvSpec.scala
+      - ergo-core/src/main/scala/org/ergoplatform/network/message/SyncInfoSpec.scala
+      - ergo-core/src/main/scala/org/ergoplatform/network/message/TxSpec.scala
+      - ergo-core/src/main/scala/org/ergoplatform/nodeView/ErgoNodeViewHolder.scala
+source_of_truth:
+  - https://github.com/ergoplatform/ergo/tree/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/mempool/ErgoTransaction.scala
+  - https://github.com/ergoplatform/ergo/tree/master/ergo-core/src/main/scala/org/ergoplatform/network/ErgoNetwork.scala
+  - https://github.com/ergoplatform/ergo/tree/master/ergo-core/src/main/scala/org/ergoplatform/network/ErgoSync.scala
+  - https://github.com/ergoplatform/ergo/tree/master/ergo-core/src/main/scala/org/ergoplatform/network/message/InvSpec.scala
+  - https://github.com/ergoplatform/ergo/tree/master/ergo-core/src/main/scala/org/ergoplatform/network/message/SyncInfoSpec.scala
+  - https://github.com/ergoplatform/ergo/tree/master/ergo-core/src/main/scala/org/ergoplatform/network/message/TxSpec.scala
+  - https://github.com/ergoplatform/ergo/tree/master/ergo-core/src/main/scala/org/ergoplatform/nodeView/ErgoNodeViewHolder.scala
+---
+
 # BlockP2P: The Backbone of Ergo's Decentralized Communication
 
 In the world of blockchain, efficient and secure communication between nodes is crucial for maintaining the integrity and performance of the network. Ergo, a blockchain platform designed for the creation of secure and scalable decentralized applications, relies heavily on its peer-to-peer (P2P) network protocol known as BlockP2P. This protocol ensures that every node in the network can communicate effectively, sharing blocks, transactions, and other essential data to keep the blockchain synchronized and secure.

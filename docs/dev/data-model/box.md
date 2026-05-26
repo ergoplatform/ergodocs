@@ -4,6 +4,19 @@ tags:
   - Box
   - UTXO
   - eUTXO
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ScorexFoundation/sigmastate-interpreter
+    branch: develop
+    paths:
+      - docs/LangSpec.md
+      - interpreter/shared/src/main/scala/org/ergoplatform/ErgoBox.scala
+      - interpreter/shared/src/main/scala/org/ergoplatform/ErgoBoxCandidate.scala
+source_of_truth:
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/docs/LangSpec.md
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/interpreter/shared/src/main/scala/org/ergoplatform/ErgoBox.scala
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/interpreter/shared/src/main/scala/org/ergoplatform/ErgoBoxCandidate.scala
 ---
 
 # The Ergo 'Box' model

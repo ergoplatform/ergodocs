@@ -1,3 +1,15 @@
+---
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/ergo
+    branch: weak-blocks
+    paths:
+      - papers/inputblocks/main.pdf
+source_of_truth:
+  - https://github.com/ergoplatform/ergo/tree/weak-blocks/papers/inputblocks/main.pdf
+---
+
 # Subblocks in Ergo
 
 ## Overview

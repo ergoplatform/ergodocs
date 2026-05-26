@@ -1,6 +1,15 @@
 ---
 tags:
   - Python
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergopad/ergopad-api
+    branch: dev
+    paths:
+      - app/contracts/NFTLockedVesting.md
+source_of_truth:
+  - https://github.com/ergopad/ergopad-api/tree/dev/app/contracts/NFTLockedVesting.md
 ---
 
 

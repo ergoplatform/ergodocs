@@ -7,6 +7,20 @@ tags:
   - NodeJS
   - Tutorial
   - Guide
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/sigma-rust
+    branch: develop
+    paths:
+      - bindings/ergo-lib-wasm
+  - repo: nirvanush/dappstep-play
+    branch: main
+    paths:
+      - src/services/WalletFromMnemonics.ts
+source_of_truth:
+  - https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-wasm
+  - https://github.com/nirvanush/dappstep-play/tree/main/src/services/WalletFromMnemonics.ts
 ---
 
 # Signing Transactions Using a Backend Wallet

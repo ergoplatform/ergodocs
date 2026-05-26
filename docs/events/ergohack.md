@@ -4,6 +4,45 @@ tags:
   - Hackathon
   - Events
   - Community
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: DeCo-Education/DeCo-Homeworks
+    branch: main
+    paths:
+      - ErgoScript-Developer-Course/batch-0/team-tensile/future%20contract/
+  - repo: Lithos-Protocol/Lithos
+    branch: ErgoHack
+    paths:
+      - documents/ErgoHack.MD
+  - repo: WilfordGrimley/ergo
+    branch: EIP-0038
+    paths:
+      - src/main/scala/org/ergoplatform/nodeView/state/VotingData.scala
+  - repo: iandebeer/ergo-castanet
+    branch: main
+    paths:
+      - docs/Conclusion.md
+  - repo: lazypinkpatrick/minotaur-wallet
+    branch: main
+    paths:
+      - doc/MultiSig.md
+  - repo: networkspore/Netnotes
+    branch: main
+    paths:
+      - Netnotes%20-%20ergohack%20VI.pdf
+  - repo: ross-weir/ergohack-sidechain
+    branch: main
+    paths:
+      - docs/whitepaper/sidechain.pdf
+source_of_truth:
+  - https://github.com/DeCo-Education/DeCo-Homeworks/tree/main/ErgoScript-Developer-Course/batch-0/team-tensile/future%20contract/
+  - https://github.com/Lithos-Protocol/Lithos/tree/ErgoHack/documents/ErgoHack.MD
+  - https://github.com/WilfordGrimley/ergo/tree/EIP-0038/src/main/scala/org/ergoplatform/nodeView/state/VotingData.scala
+  - https://github.com/iandebeer/ergo-castanet/tree/main/docs/Conclusion.md
+  - https://github.com/lazypinkpatrick/minotaur-wallet/tree/main/doc/MultiSig.md
+  - https://github.com/networkspore/Netnotes/tree/main/Netnotes%20-%20ergohack%20VI.pdf
+  - https://github.com/ross-weir/ergohack-sidechain/tree/main/docs/whitepaper/sidechain.pdf
 ---
 
 # ERGOHACK: Building the Ergo Ecosystem

@@ -1,6 +1,21 @@
 ---
 tags:
   - P2P
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: Satergo/Ergonnection
+    branch: master
+    paths:
+      - src/main/java/com/satergo/ergonnection/ErgoSocket.java
+      - src/main/java/com/satergo/ergonnection/protocol/Protocol.java
+      - src/main/java/com/satergo/ergonnection/records/Feature.java
+      - src/main/java/com/satergo/ergonnection/records/Peer.java
+source_of_truth:
+  - https://github.com/Satergo/Ergonnection/tree/master/src/main/java/com/satergo/ergonnection/ErgoSocket.java
+  - https://github.com/Satergo/Ergonnection/tree/master/src/main/java/com/satergo/ergonnection/protocol/Protocol.java
+  - https://github.com/Satergo/Ergonnection/tree/master/src/main/java/com/satergo/ergonnection/records/Feature.java
+  - https://github.com/Satergo/Ergonnection/tree/master/src/main/java/com/satergo/ergonnection/records/Peer.java
 ---
 
 # Handshaking in P2P Protocol

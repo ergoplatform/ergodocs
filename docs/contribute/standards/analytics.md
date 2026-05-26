@@ -1,3 +1,15 @@
+---
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: electric-capital/crypto-ecosystems
+    branch: master
+    paths:
+      - data/ecosystems/e/ergo.toml
+source_of_truth:
+  - https://github.com/electric-capital/crypto-ecosystems/tree/master/data/ecosystems/e/ergo.toml
+---
+
 
 # Analytics
 

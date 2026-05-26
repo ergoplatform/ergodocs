@@ -1,3 +1,20 @@
+---
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: aslesarenko/ergo-appkit-examples
+    branch: master
+    paths:
+      - java-examples/src/main/java/org/ergoplatform/appkit/examples/FreezeCoin.java
+  - repo: ergoplatform/ergo
+    branch: master
+    paths:
+      - src/main/resources/api/openapi.yaml
+source_of_truth:
+  - https://github.com/aslesarenko/ergo-appkit-examples/tree/master/java-examples/src/main/java/org/ergoplatform/appkit/examples/FreezeCoin.java
+  - https://github.com/ergoplatform/ergo/tree/master/src/main/resources/api/openapi.yaml
+---
+
 # Interacting with a local node
 
 Among other things, the Appkit library allows us to communicate with Ergo nodes via the [REST API](https://github.com/ergoplatform/ergo/blob/master/src/main/resources/api/openapi.yaml).

@@ -1,3 +1,15 @@
+---
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/eips
+    branch: master
+    paths:
+      - eip-0031.md
+source_of_truth:
+  - https://github.com/ergoplatform/eips/tree/master/eip-0031.md
+---
+
 # Babel Fees Plugin Documentation
 
 The Babel Fees Plugin is a specialized extension for the Fleet SDK designed to simplify the process of using Babel Fees within Ergo transactions. Babel Fees is a mechanism that allows users to pay transaction fees with tokens instead of ERG, particularly beneficial for those with limited or no ERG balances. The plugin automates the complex process of token-to-ERG conversion necessary for utilizing Babel Fees. It integrates seamlessly into the Fleet SDK’s transaction framework, enabling developers to build sophisticated transactions that don't require users to have a native ERG balance for transaction fee payments.

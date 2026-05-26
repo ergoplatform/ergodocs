@@ -1,3 +1,15 @@
+---
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: CometCommunity/CometCommunity
+    branch: main
+    paths:
+      - RefundableIcoContract
+source_of_truth:
+  - https://github.com/CometCommunity/CometCommunity/tree/main/RefundableIcoContract
+---
+
 Another popular use case on Ethereum is an Initial Coin Offering (ICO) contract. An ICO mirrors an Initial Public Offering (IPO), providing a mechanism for a project to collect funding (often in stablecoins or the platform's native token) and then issue project "shares" (in the form of new tokens) to investors.
 
 Generally, an ICO comprises 3 stages:

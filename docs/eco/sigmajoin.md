@@ -6,6 +6,15 @@ tags:
   - Zerojoin
   - dApp
   - dApp-Research
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/ergo-jde
+    branch: main
+    paths:
+      - kiosk/src/test/scala/kiosk/mixer/doc/main.pdf
+source_of_truth:
+  - https://github.com/ergoplatform/ergo-jde/tree/main/kiosk/src/test/scala/kiosk/mixer/doc/main.pdf
 ---
 # Sigmajoin
 

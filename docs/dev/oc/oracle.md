@@ -3,6 +3,15 @@ tags:
   - Oracle Core
   - Oracles
   - Off-chain
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/oracle-core
+    branch: develop
+    paths:
+      - docs/how_to_bootstrap.md
+source_of_truth:
+  - https://github.com/ergoplatform/oracle-core/tree/develop/docs/how_to_bootstrap.md
 ---
 
 # Oracle Core

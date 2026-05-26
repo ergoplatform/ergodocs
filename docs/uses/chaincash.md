@@ -1,3 +1,33 @@
+---
+owner: docs
+last_reviewed: 2026-05-26
+source_repos:
+  - repo: BetterMoneyLabs/chaincash
+    branch: master
+    paths:
+      - docs/presentation/basis.pdf
+  - repo: ChainCashLabs/chaincash
+    branch: master
+    paths:
+      - contracts
+      - contracts/onchain/note.es
+      - contracts/onchain/reserve.es
+      - docs/server.md
+      - docs/whitepaper/chaincash.pdf
+  - repo: kushti/chaincash
+    branch: master
+    paths:
+      - src/main/scala/chaincash/offchain
+source_of_truth:
+  - https://github.com/BetterMoneyLabs/chaincash/tree/master/docs/presentation/basis.pdf
+  - https://github.com/ChainCashLabs/chaincash/tree/master/contracts
+  - https://github.com/ChainCashLabs/chaincash/tree/master/contracts/onchain/note.es
+  - https://github.com/ChainCashLabs/chaincash/tree/master/contracts/onchain/reserve.es
+  - https://github.com/ChainCashLabs/chaincash/tree/master/docs/server.md
+  - https://github.com/ChainCashLabs/chaincash/tree/master/docs/whitepaper/chaincash.pdf
+  - https://github.com/kushti/chaincash/tree/master/src/main/scala/chaincash/offchain
+---
+
 # ChainCash: A Practical Approach to Elastic Money Creation with Trust and Blockchain Assets
 
 ## Introduction
@@ -14,6 +44,7 @@ This article explains ChainCash's functionality, explores practical applications
 - `Feb 25`: the reserve contract rework finished and utilities landed for reserve creation, note creation, and note redemption.
 - `Mar 26`: the first offchain-note redemption transaction completed.
 - `Apr 3` and `Apr 22`: [Agent Credit](https://github.com/fitzss/agent-credit) was published on top of ChainCash / Basis and Ergo, and mesh-network trading demos and presentations were prepared.
+- `Apr` to `May`: ChainCash contract work continued around Basis, reserve/emergency logic, and refund handling. Treat examples on this page as a moving implementation reference and verify against the linked contract sources before building on them.
 - Basis presentation slides are available in the ChainCash repository: [basis.pdf](https://github.com/BetterMoneyLabs/chaincash/blob/master/docs/presentation/basis.pdf).
 - Caveat: some transfer paths still depend on raw Schnorr signatures, so normal wallet support remains constrained.
 

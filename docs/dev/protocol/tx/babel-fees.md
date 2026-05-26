@@ -1,3 +1,15 @@
+---
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/eips
+    branch: master
+    paths:
+      - eip-0031.md
+source_of_truth:
+  - https://github.com/ergoplatform/eips/tree/master/eip-0031.md
+---
+
 # Babel Fees
 
 Babel fees (introduced via [EIP-0031](https://github.com/ergoplatform/eips/blob/master/eip-0031.md)) allow users to pay transaction fees in tokens other than the platform's primary token (ERG). This system is particularly helpful for users primarily interested in transferring tokens without needing to obtain ERG.

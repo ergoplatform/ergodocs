@@ -1,3 +1,15 @@
+---
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: fleet-sdk/fleet
+    branch: master
+    paths:
+      - packages/core/src/models/ergoAddress.ts
+source_of_truth:
+  - https://github.com/fleet-sdk/fleet/tree/master/packages/core/src/models/ergoAddress.ts
+---
+
 # Address validation
 
 [ergo-simple-addresses](https://github.com/kushti/ergo-simple-addresses) contains few zero-dependencies Java-friendly utils for working with addresses. The [Integration Guide for Exchanges](guide.md) may also be relevant. There is also a simple method in [Fleet](https://github.com/fleet-sdk/fleet/blob/master/packages/core/src/models/ergoAddress.ts#L164).

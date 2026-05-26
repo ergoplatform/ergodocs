@@ -1,6 +1,27 @@
 ---
 tags:
   - EIP
+owner: docs
+last_reviewed: 2026-05-26
+source_repos:
+  - repo: bitcoin/bips
+    branch: master
+    paths:
+      - bip-0032.mediawiki
+      - bip-0044.mediawiki
+  - repo: ergoplatform/eips
+    branch: master
+    paths:
+      - eip-0003.md
+  - repo: satoshilabs/slips
+    branch: master
+    paths:
+      - slip-0044.md
+source_of_truth:
+  - https://github.com/bitcoin/bips/tree/master/bip-0032.mediawiki
+  - https://github.com/bitcoin/bips/tree/master/bip-0044.mediawiki
+  - https://github.com/ergoplatform/eips/tree/master/eip-0003.md
+  - https://github.com/satoshilabs/slips/tree/master/slip-0044.md
 ---
 
 # EIP-0003: Deterministic Wallet Standard
@@ -32,9 +53,9 @@ Registered **coin_type**s can be found in [SLIP-0044](https://github.com/satoshi
 
 We will be using the word **ergo** summed based on the numerical values of the ASCII characters for the **coin_type**. As shown below, this means that our **coin_type** is `429`.
 
-``
+```text
 101 + 114 + 103 + 111 = 429
-``
+```
 
 Thus our path will look as such:
 

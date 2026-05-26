@@ -1,3 +1,20 @@
+---
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ScorexFoundation/sigmastate-interpreter
+    branch: develop
+    paths:
+      - docs/LangSpec.md
+  - repo: ergoplatform/ergoscript-by-example
+    branch: main
+    paths:
+      - tokenSalesService.md
+source_of_truth:
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/docs/LangSpec.md
+  - https://github.com/ergoplatform/ergoscript-by-example/tree/main/tokenSalesService.md
+---
+
 ## Debugging Techniques
 
 - Check the versions of dependencies like `ergo-lib-wasm-nodejs` and `ergo-lib-wasm-browser` to ensure you have the latest fixes.

@@ -7,6 +7,20 @@ tags:
   - Tutorial
   - Advanced
   - Multi-Stage Contracts
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ChainCashLabs/chaincash
+    branch: master
+    paths:
+      - contracts/onchain/note.es
+  - repo: ergoplatform/sigmastate-interpreter
+    branch: develop
+    paths:
+      - sc/shared/src/test/scala/sigmastate/utxo/examples/FsmExampleSpecification.scala
+source_of_truth:
+  - https://github.com/ChainCashLabs/chaincash/tree/master/contracts/onchain/note.es
+  - https://github.com/ergoplatform/sigmastate-interpreter/tree/develop/sc/shared/src/test/scala/sigmastate/utxo/examples/FsmExampleSpecification.scala
 ---
 # Tutorial: Finite State Machines (FSM) in Ergo
 

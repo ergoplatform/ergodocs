@@ -1,6 +1,32 @@
 ---
 tags:
   - Signature Schemes
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ScorexFoundation/sigmastate-interpreter
+    branch: develop
+    paths:
+      - interpreter/shared/src/main/scala/org/ergoplatform/ErgoLikeInterpreter.scala
+      - interpreter/shared/src/main/scala/sigmastate/SigSerializer.scala
+      - interpreter/shared/src/main/scala/sigmastate/crypto/DLogProtocol.scala
+      - interpreter/shared/src/test/scala/sigmastate/crypto/SigningSpecification.scala
+  - repo: ergoplatform/sigma-rust
+    branch: develop
+    paths:
+      - ergo-lib/src/chain/contract.rs
+      - ergo-lib/src/chain/transaction/input/prover_result.rs
+      - ergo-lib/src/wallet/secret_key.rs
+      - ergo-lib/src/wallet/signing.rs
+source_of_truth:
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/interpreter/shared/src/main/scala/org/ergoplatform/ErgoLikeInterpreter.scala
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/interpreter/shared/src/main/scala/sigmastate/SigSerializer.scala
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/interpreter/shared/src/main/scala/sigmastate/crypto/DLogProtocol.scala
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/interpreter/shared/src/test/scala/sigmastate/crypto/SigningSpecification.scala
+  - https://github.com/ergoplatform/sigma-rust/tree/develop/ergo-lib/src/chain/contract.rs
+  - https://github.com/ergoplatform/sigma-rust/tree/develop/ergo-lib/src/chain/transaction/input/prover_result.rs
+  - https://github.com/ergoplatform/sigma-rust/tree/develop/ergo-lib/src/wallet/secret_key.rs
+  - https://github.com/ergoplatform/sigma-rust/tree/develop/ergo-lib/src/wallet/signing.rs
 ---
 
 # Signature Scheme Internals on Ergo

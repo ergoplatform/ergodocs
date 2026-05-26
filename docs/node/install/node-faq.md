@@ -1,3 +1,20 @@
+---
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/ergo
+    branch: master
+    paths:
+      - src/main/resources/mainnet.conf
+  - repo: glasgowm148/ergoscripts
+    branch: main
+    paths:
+      - misc/nginx.config
+source_of_truth:
+  - https://github.com/ergoplatform/ergo/tree/master/src/main/resources/mainnet.conf
+  - https://github.com/glasgowm148/ergoscripts/tree/main/misc/nginx.config
+---
+
 # Ergo Node FAQ & Guidelines
 
 ## General

@@ -1,6 +1,26 @@
 ---
 tags:
   - Sigma Protocols
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ScorexFoundation/sigmastate-interpreter
+    branch: develop
+    paths:
+      - interpreter/shared/src/test/scala/sigmastate/crypto/SigningSpecification.scala
+  - repo: input-output-hk/scrypto
+    branch: master
+    paths:
+      - shared/src/main/scala/scorex/crypto/authds/avltree/batch/BatchAVLProver.scala
+      - shared/src/main/scala/scorex/crypto/authds/avltree/batch/BatchAVLVerifier.scala
+      - shared/src/main/scala/scorex/crypto/hash/Blake2b.scala
+      - shared/src/main/scala/scorex/crypto/hash/Sha256.scala
+source_of_truth:
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/interpreter/shared/src/test/scala/sigmastate/crypto/SigningSpecification.scala
+  - https://github.com/input-output-hk/scrypto/tree/master/shared/src/main/scala/scorex/crypto/authds/avltree/batch/BatchAVLProver.scala
+  - https://github.com/input-output-hk/scrypto/tree/master/shared/src/main/scala/scorex/crypto/authds/avltree/batch/BatchAVLVerifier.scala
+  - https://github.com/input-output-hk/scrypto/tree/master/shared/src/main/scala/scorex/crypto/hash/Blake2b.scala
+  - https://github.com/input-output-hk/scrypto/tree/master/shared/src/main/scala/scorex/crypto/hash/Sha256.scala
 ---
 
 $$

@@ -1,3 +1,15 @@
+---
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: mgpai22/ergpy
+    branch: main
+    paths:
+      - examples/example_5_bulk_mint_with_royalty.py
+source_of_truth:
+  - https://github.com/mgpai22/ergpy/tree/main/examples/example_5_bulk_mint_with_royalty.py
+---
+
 # NFT Examples
 
 ## Using Scala

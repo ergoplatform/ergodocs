@@ -1,3 +1,15 @@
+---
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/ergo
+    branch: master
+    paths:
+      - src/test/scala/org/ergoplatform/tools/FeeSimulator.scala
+source_of_truth:
+  - https://github.com/ergoplatform/ergo/tree/master/src/test/scala/org/ergoplatform/tools/FeeSimulator.scala
+---
+
 # Ergo Storage Rent Fees
 
 The [FeeSimulator.scala tool](https://github.com/ergoplatform/ergo/blob/master/src/test/scala/org/ergoplatform/tools/FeeSimulator.scala) offers a comprehensive means of simulating Ergo's storage rent fees. This tool aids in calculating the average byte size of a standard box based on the dimensions of two types of Pay-to-Public-Key (P2PK)-protected boxes: one containing only ergs and another containing an additional asset. Here's what the simulations reveal:

@@ -1,3 +1,25 @@
+---
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/ergo-jde
+    branch: main
+    paths:
+      - kiosk/src/test/scala/kiosk/mixer/doc/main.pdf
+  - repo: kushti/chaincash
+    branch: master
+    paths:
+      - paper/chaincash.pdf
+  - repo: kushti/kya
+    branch: master
+    paths:
+      - kya.pdf
+source_of_truth:
+  - https://github.com/ergoplatform/ergo-jde/tree/main/kiosk/src/test/scala/kiosk/mixer/doc/main.pdf
+  - https://github.com/kushti/chaincash/tree/master/paper/chaincash.pdf
+  - https://github.com/kushti/kya/tree/master/kya.pdf
+---
+
 # Documents
 
 Ergo is following the fundamental approach and use stable well-tested solutions, even if that leads to slower short-term innovations. Most of Ergo solutions are formalized in papers presented at peer-reviewed conferences and have been widely discussed in the community.

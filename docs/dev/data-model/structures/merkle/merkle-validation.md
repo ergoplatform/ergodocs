@@ -1,6 +1,20 @@
 ---
 tags:
   - Merkle
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/ergo
+    branch: master
+    paths:
+      - ergo-core/src/main/scala/org/ergoplatform/modifiers/history/BlockTransactions.scala
+  - repo: input-output-hk/scrypto
+    branch: master
+    paths:
+      - shared/src/main/scala/scorex/crypto/authds/merkle/BatchMerkleProof.scala
+source_of_truth:
+  - https://github.com/ergoplatform/ergo/tree/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/history/BlockTransactions.scala
+  - https://github.com/input-output-hk/scrypto/tree/master/shared/src/main/scala/scorex/crypto/authds/merkle/BatchMerkleProof.scala
 ---
 
 # Validation of Merkle Proofs in Ergo

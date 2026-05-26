@@ -1,3 +1,15 @@
+---
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/ergo-jde
+    branch: main
+    paths:
+      - readme.md
+source_of_truth:
+  - https://github.com/ergoplatform/ergo-jde/tree/main/readme.md
+---
+
 # JSON dApp Environment (JDE)
 
 Ergo enables sophisticated dApps via smart contracts written in [ErgoScript](ergoscript.md).

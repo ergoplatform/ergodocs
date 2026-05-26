@@ -1,6 +1,15 @@
 ---
 tags:
   - KYA
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: kushti/kya
+    branch: master
+    paths:
+      - kya.pdf
+source_of_truth:
+  - https://github.com/kushti/kya/tree/master/kya.pdf
 ---
 
 # Know Your Assumptions (KYA) in Ergo

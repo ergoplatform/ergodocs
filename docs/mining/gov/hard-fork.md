@@ -2,6 +2,15 @@
 tags:
   - Forking
   - Fork
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ergoplatform/ergo
+    branch: master
+    paths:
+      - src/it/scala/org/ergoplatform/it/ForkResolutionSpec.scala
+source_of_truth:
+  - https://github.com/ergoplatform/ergo/tree/master/src/it/scala/org/ergoplatform/it/ForkResolutionSpec.scala
 ---
 
 # Hard Forks in Ergo

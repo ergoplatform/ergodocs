@@ -4,6 +4,15 @@ tags:
   - Future
   - Roadmap
   - Community
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: kushti/ergo-book
+    branch: master
+    paths:
+      - src/SUMMARY.md
+source_of_truth:
+  - https://github.com/kushti/ergo-book/tree/master/src/SUMMARY.md
 ---
 
 # The Ergo Foundation's Future

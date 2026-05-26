@@ -1,3 +1,34 @@
+---
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: Emurgo/Emurgo-Research
+    branch: master
+    paths:
+      - oracles/Oracle-Pools.md
+  - repo: ergoplatform/eips
+    branch: eip16
+    paths:
+      - eip-0016.md
+  - repo: ergoplatform/oracle-core
+    branch: develop
+    paths:
+      - docs/how_to_bootstrap.md
+  - repo: ergoplatform/oracle-core
+    branch: master
+    paths:
+      - connectors/connector-lib
+      - oracle-pool-bootstrap
+      - scripts/ada-usd-oracle/oracle-config.yaml
+source_of_truth:
+  - https://github.com/Emurgo/Emurgo-Research/tree/master/oracles/Oracle-Pools.md
+  - https://github.com/ergoplatform/eips/tree/eip16/eip-0016.md
+  - https://github.com/ergoplatform/oracle-core/tree/develop/docs/how_to_bootstrap.md
+  - https://github.com/ergoplatform/oracle-core/tree/master/connectors/connector-lib
+  - https://github.com/ergoplatform/oracle-core/tree/master/oracle-pool-bootstrap
+  - https://github.com/ergoplatform/oracle-core/tree/master/scripts/ada-usd-oracle/oracle-config.yaml
+---
+
 # Oracles on Ergo
 
 Oracles form the critical infrastructure in a decentralized financial system, connecting off-chain data with on-chain transactions. They provide essential data feeds for various operations, from atomic swaps to more complex interactions like lending/borrowing and dynamic market-making. Yet, DeFi ecosystems are vulnerable to Flash Loan attacks due to centralized price oracle misinformation.

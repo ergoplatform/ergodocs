@@ -5,6 +5,17 @@ tags:
   - DeFi
   - Tutorial
   - Guide
+owner: docs
+last_reviewed: never
+source_repos:
+  - repo: ThierryM1212/SigmaO
+    branch: main
+    paths:
+      - contract/Option_Sell.es
+      - front-end/src/utils/utils.js
+source_of_truth:
+  - https://github.com/ThierryM1212/SigmaO/tree/main/contract/Option_Sell.es
+  - https://github.com/ThierryM1212/SigmaO/tree/main/front-end/src/utils/utils.js
 ---
 
 **Ergo's decentralized finance (DeFi) landscape is about to expand with the introduction of SigmaO, a pioneering platform designed to facilitate options trading on the Ergo blockchain. SigmaO aims to leverage Ergo's unique capabilities to offer a versatile and secure environment for trading options, enhancing the financial instruments available within the Ergo ecosystem.**
