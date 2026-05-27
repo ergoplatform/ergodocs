@@ -42,6 +42,6 @@ This mechanism empowers Bob to pay Alice securely and privately by establishing 
 
 ## See also
 
-- Pattern: [pattern-stealth-address.md](pattern-stealth-address.md)
-- Category: [contracts-privacy.md](contracts-privacy.md)
-- Library: [contracts-library.md](contracts-library.md)
+- [Pattern](pattern-stealth-address.md)
+- [Category](contracts-privacy.md)
+- [Library](contracts-library.md)

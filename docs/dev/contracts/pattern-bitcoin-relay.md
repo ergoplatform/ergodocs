@@ -54,19 +54,19 @@ title: Trustless Bitcoin Relay
 
 ## References
 
-- NIPoPoW overview: [nipopows.md](nipopows.md)
-- Light clients (NIPoPoW nodes): [nipopow_nodes.md](nipopow_nodes.md)
-- Block header structure: [block-header.md](block-header.md)
-- Transaction Merkle trees: [tx-merkle.md](tx-merkle.md)
-- Block overview: [block.md](block.md)
+- [NIPoPoW overview](nipopows.md)
+- [Light clients (NIPoPoW nodes)](nipopow_nodes.md)
+- [Block header structure](block-header.md)
+- [Transaction Merkle trees](tx-merkle.md)
+- [Block overview](block.md)
 - Talks/ErgoHack: Add materials when available.
-- Related patterns: [pattern-trustless-peg.md](pattern-trustless-peg.md)
+- [Related patterns](pattern-trustless-peg.md)
 
 ## See also
 
-- Category: [contracts-interoperability.md](contracts-interoperability.md)  
-- [Library index](contracts-library.md)
-- [Additional contracts index](contracts.md)
+- [Category: Contract Interoperability](contracts-interoperability.md)
+- [Contracts Library](contracts-library.md)
+- [Additional Contracts Index](contracts.md)
 
 ## Contributor Checklist
 

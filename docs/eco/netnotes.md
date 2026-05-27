@@ -40,12 +40,14 @@ Unlike traditional wallets, Netnotes is built around a **messaging-driven archit
 
 - **Enables Personal Financial Automation Agents**  
   Netnotes' message- and event-driven design lets you build **automation agents** directly into the platform:
+
   - Automate asset management based on market triggers.  
   - Interact with DeFi protocols and atomic swaps without centralized platforms.  
   - Use on-chain reputation data to filter risky contracts and services.  
 
 - **Foundation for a Decentralized Financial Agent Framework**  
   With planned **P2P networking** and **atomic exchange contracts**, Netnotes is becoming a foundational tool for decentralized finance:
+
   - Compose financial services without intermediaries.  
   - Build P2P marketplaces, financial bots, and custom trading platforms running entirely on your local infrastructure.  
   - Manage assets across multiple blockchains (future extension) through one transparent system.

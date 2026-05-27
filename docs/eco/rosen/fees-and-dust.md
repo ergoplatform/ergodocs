@@ -36,4 +36,5 @@ Certain bridge operations on Ergo produce underutilized “event boxes” or sma
   - Intervals and thresholds may be tuned as operations evolve.
 
 For a practical walkthrough of when fees appear in the flow, see:
+
 - [Token Transfer Flows](token-transfer-flows.md)

@@ -3,6 +3,7 @@
 This page outlines a canonical, human‑readable schema for intent metadata used by Rosen flows. The Rosen dApp/tooling constructs and validates metadata; this document helps integrators and power users understand typical fields and structure.
 
 Notes:
+
 - Exact fields and encoding may evolve; rely on the Rosen UI/tooling for production transactions.
 - Metadata is recorded or bound to on‑Ergo event boxes and validated by Guards during verification.
 - For special chains like Monero (no reliable tx metadata), the metadata is bound to a spend proof message; see [bringing-monero.md](bringing-monero.md).
@@ -21,6 +22,7 @@ Notes:
 ## ChainX ➜ Ergo (Lock → Mint)
 
 Purpose:
+
 - Convey the user’s target Ergo address and fee parameters for minting the representative rToken on Ergo.
 
 Illustrative example:
@@ -38,6 +40,7 @@ Illustrative example:
 ```
 
 Field notes:
+
 - to: constant indicating the target platform (“ergo”).
 - toAddress: Ergo destination for the minted rTokens.
 - asset/amount: asset identifier/symbol and quantity (format depends on source chain conventions).
@@ -47,6 +50,7 @@ Field notes:
 ## Ergo ➜ ChainX (Burn → Release)
 
 Purpose:
+
 - Convey the user's target ChainX address and fee parameters for releasing the native asset on ChainX after burning the rToken on Ergo.
 
 Illustrative example:
@@ -64,6 +68,7 @@ Illustrative example:
 ```
 
 Field notes:
+
 - to: specifies the external target (e.g., “bitcoin”, “cardano”, “ethereum”, “bsc”).
 - toAddress: destination on the target chain (format must match chain).
 - asset: the rToken on Ergo corresponding to the native asset on ChainX.
@@ -71,6 +76,7 @@ Field notes:
 ## Monero: Metadata Bound to Spend Proof
 
 Monero wallets do not reliably carry arbitrary tx metadata. For ChainX ➜ Ergo with XMR:
+
 - Users generate a spend proof with the metadata JSON as the message.
 - The proof and the plaintext JSON are published/recorded on Ergo (by the user or Rosen tooling).
 - Only the locker can create a valid proof for the exact message, protecting integrity.
@@ -105,7 +111,7 @@ Reference example (from [bringing-monero.md](bringing-monero.md)):
 
 ## See Also
 
-- Flow details: [token-transfer-flows.md](token-transfer-flows.md)
-- Monero binding and verification: [bringing-monero.md](bringing-monero.md)
-- Fees and dust handling: [fees-and-dust.md](fees-and-dust.md)
-- Events lifecycle: [events-and-status.md](events-and-status.md)
+- [Flow details](token-transfer-flows.md)
+- [Monero binding and verification](bringing-monero.md)
+- [Fees and dust handling](fees-and-dust.md)
+- [Events lifecycle](events-and-status.md)

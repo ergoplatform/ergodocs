@@ -126,7 +126,6 @@ These roots are embedded in block header extensions to enable efficient proof co
   Backward-compatible upgrade. Legacy nodes continue to process ordering blocks. Input blocks are only utilized after 90% of hashpower adopts the upgrade.
 
 * **Steps:**
-
   1. Introduce input blocks alongside ordering blocks
   2. Upgrade mining software
   3. Adjust transaction validation logic and fee scripts

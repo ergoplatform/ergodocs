@@ -294,7 +294,6 @@ Ergo is developed a by a combination of the [Ergo Foundation](ergo-foundation.md
 **Wallet Developments**
 
 - [x] Nautilus Wallet improvements:
-
   - Version 0.15.0 release
   - Abyss v0.13.0-beta.1 with performance improvements
   - New frontend implementation
@@ -303,11 +302,9 @@ Ergo is developed a by a combination of the [Ergo Foundation](ergo-foundation.md
   - Comprehensive dApp documentation
 
 - [x] Minotaur Wallet:
-
   - Version 2.0.1 production release
 
 - [x] Satergo Wallet:
-
   - 3x faster transaction history loading
   - New Ergonnection library version
   - Simplified Windows installations
@@ -315,30 +312,25 @@ Ergo is developed a by a combination of the [Ergo Foundation](ergo-foundation.md
 **Infrastructure & Tools**
 
 - [x] Sigmaspace development:
-
   - Complete blockchain indexer (<24 hours full index)
   - Storage rent dashboard launch with tracking features
   - Explorer API compatibility with ergoplatform.org
 
 - [x] Lithos progress:
-
   - Initial client development completion
   - Fraud proofs contracts for NISPs (PoW verification, header validation)
 
 - [x] Rosen Bridge improvements:
-
   - Enhanced decimal handling logic for cross-chain transactions
   - API and UI revisions
 
 **DeFi Applications**
 
 - [x] SigmaUSD improvements:
-
   - Enhanced stability mechanisms
   - Oracle upgrade exploration
 
 - [x] Fleet SDK advancements:
-
   - AgeUSD integration completion
   - Enhanced development toolkit
 
@@ -350,7 +342,6 @@ Ergo is developed a by a combination of the [Ergo Foundation](ergo-foundation.md
 **Reference Client**
 
 - [ ] [Sub-blocks](subblocks.md) implementation:
-
   - Data types and update procedures
   - Candidate generation
   - Block template regeneration integration
@@ -364,9 +355,7 @@ Ergo is developed a by a combination of the [Ergo Foundation](ergo-foundation.md
 **Sigma**
 
 - [ ] [Sigma 6.0 implementation](https://github.com/ergoplatform/eips/blob/a24fc414abbc10e6ee59f878b280d9ecc725e10c/eip-0050.md) and validation context extension research
-
   - [x] Progress on Sigma 6.0 features:
-
     - SOption[] serialization
     - Header serialization/deserialization
     - Header.checkPoW implementation
@@ -391,7 +380,6 @@ Ergo is developed a by a combination of the [Ergo Foundation](ergo-foundation.md
 
 - [x] [AppKit](appkit.md)
 - [x] [FleetSDK](fleet.md)
-
   - [x] Integration with AgeUSD stablecoin
 - [x] [sigma-rust](sigma-rust.md)
   - [ ] JIT costing implementation in Sigma-Rust
@@ -415,11 +403,9 @@ Ergo is developed a by a combination of the [Ergo Foundation](ergo-foundation.md
 **Wallets**
 
 - [x] Nautilus
-
   - [x] Manifest v3 rework
 
 - [ ] Ledger
-
   - [x] Available in developer mode
 
 - [x] Keystone Integration progress
@@ -431,7 +417,6 @@ Ergo is developed a by a combination of the [Ergo Foundation](ergo-foundation.md
 **Ecosystem Growth**
 
 - [x] DeFi ecosystem expansion:
-
       - New protocols exploration
       - NFT platform improvements
 
@@ -441,7 +426,6 @@ Ergo is developed a by a combination of the [Ergo Foundation](ergo-foundation.md
 **Documentation & Education**
 
 - [x] New educational materials on:
-
       - Merkle trees
       - Extension blocks
       - Soft-fork rules
@@ -459,10 +443,8 @@ Ergo is developed a by a combination of the [Ergo Foundation](ergo-foundation.md
 **Ongoing Challenges**
 
 - [ ] **Scalability Improvements (Layer 1 and Layer 2)**
-
   - Sub-blocks implementation for enhanced transaction throughput
   - Layer 2 solutions exploration:
-
     - Weak consensus mechanisms for local payment networks
     - Digital bearer certificates
 
@@ -473,13 +455,11 @@ Ergo is developed a by a combination of the [Ergo Foundation](ergo-foundation.md
 - [ ] **Usability Enhancements**
   - Wallet and dApp user experience improvements
   - Development tools advancement:
-
     - Comprehensive ErgoScript debugger
     - Enhanced escript.online functionality
     - Structured output for debugging
 
   - Documentation and education:
-
     - Improved developer documentation
     - Enhanced tutorials and guides
     - Better onboarding resources
@@ -487,7 +467,6 @@ Ergo is developed a by a combination of the [Ergo Foundation](ergo-foundation.md
   - Streamlined development workflows
 
 - [ ] **Security Strengthening**
-
   - Ongoing vulnerability assessment and mitigation
   - Protocol security mechanism enhancements
   - Smart contract security improvements
@@ -495,7 +474,6 @@ Ergo is developed a by a combination of the [Ergo Foundation](ergo-foundation.md
   - Implementation of best practices for secure development
 
 - [ ] **Ecosystem Development**
-
   - Continuous discussions for improved accessibility
   - Potential listings on US markets
   - Balancing rapid development with thorough testing
@@ -503,7 +481,6 @@ Ergo is developed a by a combination of the [Ergo Foundation](ergo-foundation.md
   - Streamlined contribution processes
 
 - [ ] **Technical Debt and Optimization**
-
   - Code quality maintenance
   - Performance optimization
   - System architecture improvements
@@ -521,7 +498,6 @@ Every new addition to our growing DeFi ecosystem contributes to the expansion of
 - [x] [ErgoAuctionHouse](ergo-auctions.md) (peer-to-peer auctions)
   - [x] [Trade House](https://ergoauctions.org/trade?pair=ERG-SigUSD) (orderbook-based P2P DEX)
 - [x] [SkyHarbor](skyharbor.md) (NFT Market)
-
   - [x] [SkyHarbor Raffle for new UI](https://skyharbor.medium.com/enhancing-the-nft-experience-skyharbors-new-initiative-9679e94e3cd8)
 - [x] [single-tx-swap](https://www.single-tx-swap.com/) (trustless p2p swaps)
 - [x] [TokenJay](https://tokenjay.app/app/#purchases) (p2p escrow)
@@ -549,7 +525,6 @@ Every new addition to our growing DeFi ecosystem contributes to the expansion of
 
 - [x] [BlitzTCG](blitz.md) (trading card game)
 - [x] [CyberVerse](cyberverse.md) (metaverse gaming platform)
-
   - [x] Cyberverse Multiplayer
 
 ### Derivatives and Synthetics
@@ -582,7 +557,6 @@ Every new addition to our growing DeFi ecosystem contributes to the expansion of
   - [ ] BCH Bridge
   - [ ] Hummingbot Integration / Customisation
 - [ ] [Sigma Chains](sigma-chains.md) - Revitalizing Proof of Work
-
   - [ ] Trustless Relays (Superseding BTC custody solutions with Ergo smart-contracts)
   - [ ] Implementing sidechains with trustless transfers and various consensus mechanisms (merged mined with ERG, other blockchains, or double merged mined)
   - [ ] Expanding Ergo's contractual layer to sidechains, incorporating features like Bulletproofs-based sigma protocols and elevating certain contracts to first-class citizens

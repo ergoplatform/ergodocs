@@ -110,6 +110,7 @@ val stateIsCorrect = projectPubKey && treeIsCorrect && valuePreserved && stateCh
 ## Withdrawal
 
 Investors can now withdraw their allocated ICO tokens. The withdrawal process typically happens in batches. A withdrawal transaction spends the current ICO box (`SELF`) and creates `N + 1` outputs:
+
 - `OUTPUTS(0)`: The new ICO box, containing the remaining tokens and the updated dictionary digest (with withdrawn entries removed). It is protected by the same `withdrawScript`.
 - `OUTPUTS(1)` to `OUTPUTS(N)`: Boxes sent to the withdrawing investors. Each box is protected by the investor's script (whose hash was stored as the key in the dictionary) and contains the corresponding amount of ICO tokens.
 

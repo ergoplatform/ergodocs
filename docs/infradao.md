@@ -19,8 +19,8 @@ How it works:
 
 Related:
 
-- Ergo Foundation: ef/ergo-foundation.md
-- DevDAO: devdao.md
+- [Ergo Foundation](ef/ergo-foundation.md)
+- [DevDAO](devdao.md)
 
 Get involved:
 

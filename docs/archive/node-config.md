@@ -179,6 +179,7 @@ The `knownPeers` parameter stores the list of bootstrap nodes to which your node
 **Note about time settings**
 
 All time span parameters are set in milliseconds. You can also use duration units to shorten their values. Supported units are:
+
 * s, second, seconds
 * m, minute, minutes
 * h, hour, hours

@@ -7,7 +7,7 @@ tags:
   - UI
   - RPC Endpoints
 owner: docs
-last_reviewed: 2026-05-26
+last_reviewed: 2026-05-27
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -64,6 +64,23 @@ Here are some of the main methods you can use:
 - `/wallet/deriveNextKey`: Derive the next key/address according to the EIP-3 derivation path.
 - `/wallet/balances`: Get the wallet's overall ERG and token balances across all tracked addresses.
 - `/wallet/transactions`: Get a list of transactions relevant to the wallet's addresses.
+
+## Operator Route Groups
+
+Current OpenAPI groups are useful for different operator jobs:
+
+| Job | Routes |
+| --- | --- |
+| Health and sync checks | `/info`, `/peers/syncInfo`, `/peers/status`, `/blockchain/indexedHeight` |
+| Block and header inspection | `/blocks`, `/blocks/at/{blockHeight}`, `/blocks/{headerId}`, `/blocks/lastHeaders/{count}` |
+| Transaction submission and dry-runs | `/transactions`, `/transactions/bytes`, `/transactions/check`, `/transactions/checkBytes` |
+| Mempool visibility | `/transactions/unconfirmed`, `/transactions/unconfirmed/transactionIds`, `/transactions/poolHistogram`, `/transactions/waitTime` |
+| UTXO lookup | `/utxo/byId/{boxId}`, `/utxo/withPool/byId/{boxId}`, `/utxo/getBoxesBinaryProof` |
+| Wallet operations | `/wallet/status`, `/wallet/unlock`, `/wallet/boxes`, `/wallet/transaction/sign`, `/wallet/payment/send` |
+| External scans | `/scan/register`, `/scan/listAll`, `/scan/unspentBoxes/{scanId}`, `/scan/spentBoxes/{scanId}` |
+| Indexed history | `/blockchain/transaction/...`, `/blockchain/box/...`, `/blockchain/token/...`, `/blockchain/balance` |
+
+Indexed history routes require `ergo.node.extraIndex = true`. Wallet and node-control routes require the plain API key in the `api_key` header; the config stores only the Blake2b hash.
 
 ### Blockchain Box Queries
 

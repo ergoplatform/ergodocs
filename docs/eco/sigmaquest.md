@@ -23,7 +23,6 @@ The game session and reward system are structured as follows:
 SigmaQuest's core design features varied and AI-driven gameplay experiences through three distinct guardian types:
 
 1. **Yes/No Oracle (yes-no-oracle)**
-
       * **Concept**: A damaged AI that can only respond "Yes" or "No."
       * **Gameplay**: Players get 10 questions per session to discover 5 seed words.
       * **Challenge**: Deduce words through strategic yes/no questions.
@@ -31,7 +30,6 @@ SigmaQuest's core design features varied and AI-driven gameplay experiences thro
       * **API Endpoints**: `GET /api/guardian/yes-no-oracle/start?userId={userId}`, `POST /api/guardian/yes-no-oracle`, `POST /api/guardian/yes-no-oracle/reset`.
 
 2. **Narrative Escape (narrative-escape)**
-
       * **Concept**: A choose-your-own-adventure experience through a doomed spaceship.
       * **Gameplay**: Players make choices at critical points, where wrong choices lead to "death."
       * **Challenge**: Navigate branching storylines to reach victory.
@@ -39,7 +37,6 @@ SigmaQuest's core design features varied and AI-driven gameplay experiences thro
       * **API Endpoints**: `GET /api/narrative/start?userId={userId}`, `POST /api/narrative/choose`, `POST /api/narrative/message`, `POST /api/narrative/reset`.
 
 3. **Sigmanaut Guardian (sigmanaut-guardian)**
-
       * **Concept**: Cosmic consciousness trials that transcend reality.
       * **Gameplay**: Players solve escalating challenges and philosophical riddles.
       * **Challenge**: Features 5 acts, including survival, navigation, and cosmic riddles.
@@ -51,7 +48,6 @@ SigmaQuest's core design features varied and AI-driven gameplay experiences thro
 SigmaQuest employs a client-server architecture with robust blockchain integration.
 
 * **Frontend (Lovable.dev)**
-
   * **URL**: [TO BE RELEASED 6/7/25]
   * **Framework**: React + TypeScript + Vite
   * **Styling**: Tailwind CSS with a custom neon/cyberpunk theme
@@ -63,7 +59,6 @@ SigmaQuest employs a client-server architecture with robust blockchain integrati
     * 3D vault visualization (Three.js)
 
 * **Backend (Node.js)**
-
   * **URL**: `https://*************_api.duckdns.org`
   * **Server**: Hetzner CX32 (Ubuntu 24.04)
   * **Framework**: Express.js

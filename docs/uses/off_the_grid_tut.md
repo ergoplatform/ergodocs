@@ -14,17 +14,14 @@ Alternatively, a video walkthrough from MarcTheShark can be found here: [Ergo Gr
 Before proceeding, ensure the following:
 
 1. **Knowledge and Tools:**
-
     - Basic understanding of the Ergo blockchain and grid trading strategies.
     - Familiarity with Rust programming language and CLI tools.
 
 2. **Environment Setup:**
-
     - Installed [Rust](https://rustup.rs/) and Cargo (Rust's package manager).
     - Configured Ergo node and wallet. Follow [Ergo Node Setup](https://docs.ergoplatform.com/node/install/) and [Wallet Guide](https://docs.ergoplatform.com/node/wallet/).
 
 3. **Nix Installation (Optional):**
-
     - For easier building and execution, install [Nix](https://nixos.org/).
 
 ---
@@ -56,7 +53,6 @@ Before proceeding, ensure the following:
     ```
 
 2. **Build with Cargo or Nix:**
-
     - **With Nix:** (Recommended for simplicity)
 
         ```bash

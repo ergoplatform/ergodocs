@@ -53,16 +53,16 @@
 
 ## References
 
-- Blockchain context (height/timestamp): dev/scs/blockchain-context.md
-- Boxes and registers (state persistence): dev/scs/boxes-and-registers.md
-- Read-only inputs / data inputs (state reads): dev/protocol/tx/read-only-inputs.md
+- [Blockchain context (height/timestamp)](../scs/blockchain-context.md)
+- [Boxes and registers (state persistence)](../scs/boxes-and-registers.md)
+- [Read-only inputs / data inputs (state reads)](../protocol/tx/read-only-inputs.md)
 - Talks/ErgoHack: Add references when collected.
-- Related patterns: [pattern-stealth-address.md](pattern-stealth-address.md), [pattern-whitelist-token.md](pattern-whitelist-token.md)
+- Related patterns: [Stealth address](pattern-stealth-address.md), [Whitelist-only token](pattern-whitelist-token.md)
 
 ## See also
 
-- [Library index](contracts-library.md)
-- [Additional contracts index](contracts.md)
+- [Contracts Library](contracts-library.md)
+- [Additional Contracts Index](contracts.md)
 
 ## Contributor Checklist
 

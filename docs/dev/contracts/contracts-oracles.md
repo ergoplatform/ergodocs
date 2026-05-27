@@ -20,5 +20,5 @@ Oracle patterns verify and consume external data on-chain, covering commitment s
 
 ## See also
 
-- [Library index](contracts-library.md)
-- [Additional contracts index](contracts.md)
+- [Contracts Library](contracts-library.md)
+- [Additional Contracts Index](contracts.md)

@@ -19,7 +19,6 @@ To set up a bridge, follow these steps:
 ## Known Limitations
 
 1. Discord does not currently allow bots to reply to messages when spoofing someone.
-
       - [Allow webhooks to use reply messages#3282](https://github.com/discord/discord-api-docs/discussions/3282)
 
 2. The [Telegram API does not report deleted messages](https://github.com/42wim/matterbridge/wiki/FAQ#matterbridge-is-not-deleting-messages-from-telegram-to-other-bridges).

@@ -89,7 +89,6 @@ In this code:
 
 - **Control Structures**: The `if-else` statement directs the flow based on the `bool` value.
 - **Data Types**:
-
       - `x` and `y` are integers.
       - `z` is calculated based on arithmetic operations.
       - `y` in the `else` block is a collection of `Long` values (`Coll[Long]`).

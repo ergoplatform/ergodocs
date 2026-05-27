@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: 2026-05-26
+last_reviewed: 2026-05-27
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -36,6 +36,10 @@ extraCacheSize = 500
 The `extraIndex` setting, if set to true, allows the node to store all transactions, boxes, addresses, and contract-template indexes used by indexed API routes. `extraCacheSize` sets the number of recently used extra indexes kept in memory.
 
 Contract-template indexing hashes `ErgoTree.template` under the current version context. If an older or unversioned tree cannot expose a template, the node logs the failure and falls back to hashing the full ErgoTree bytes so indexing can continue instead of failing the extra indexer.
+
+Enable this for nodes serving dApps, explorers, Rosen watcher health checks, and any workload that needs `/blockchain/...` indexed routes. Leave it disabled for a simple validating node where lower disk and indexing overhead matter more than query features.
+
+After enabling it, monitor [indexed height](../indexed-node.md) separately from node sync height.
 
 ## Verify Transactions
 
@@ -102,6 +106,18 @@ The `acceptableChainUpdateDelay` setting is the acceptable difference between th
 ## Memory Pool Configuration
 
 The mempool settings define the maximum number of unconfirmed transactions the node will accept, the interval for re-checking a transaction in the memory pool, the mempool transaction sorting scheme, the number of transactions to rebroadcast at each epoch, and the minimum fee amount for transactions.
+
+Current defaults include:
+
+```conf
+mempoolCapacity = 1000
+mempoolCleanupDuration = 30s
+mempoolSorting = "random"
+rebroadcastCount = 3
+minimalFeeAmount = 1000000
+```
+
+For public API nodes, mempool routes can become expensive under load. Put rate limits and request timeouts at the reverse proxy layer if exposing transaction or mempool queries beyond localhost.
 
 ## Blacklisted Transactions
 

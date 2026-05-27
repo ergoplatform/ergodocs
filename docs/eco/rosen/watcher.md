@@ -8,13 +8,30 @@ tags:
   - Troubleshooting
   - Cross-chain
   - Oracle
+owner: docs
+last_reviewed: 2026-05-27
+source_repos:
+  - repo: rosen-bridge/operation
+    branch: dev
+    paths:
+      - docs/watcher/deploy-docker.md
+  - repo: rosen-bridge/utils
+    branch: dev
+    paths:
+      - packages/cli
+source_of_truth:
+  - https://github.com/rosen-bridge/operation/tree/dev/docs/watcher/deploy-docker.md
+  - https://github.com/rosen-bridge/utils/tree/dev/packages/cli
 ---
 
 # Ergo Rosen Bridge Watcher Setup
 
 Watchers are integral to Rosen Bridge, serving as cross-chain oracles. They observe and report deposit events on their network to Ergo, contributing to the network's security and expansion.
 
+The current Docker deployment source supports watcher configurations for `ergo`, `cardano`, `bitcoin`, `ethereum`, `binance`, `doge`, and `bitcoin-runes`. Every watcher still needs Ergo configuration because permit, reporting, and reward logic is Ergo-based.
+
 See also:
+
 - [Concepts & Assumptions](concepts-assumptions.md)
 - [Token Transfer Flows](token-transfer-flows.md)
 - [Rosen Guards](rosen-guard.md)
@@ -63,6 +80,73 @@ mgpai walks through a Watcher instance in [Linux and Cloud](https://www.youtube.
 
 Below you'll find some frequently asked questions as well as common issues and troubleshooting tips.
 ////
+
+## Docker Deployment Shape
+
+The source deployment flow is:
+
+```shell
+git clone https://github.com/rosen-bridge/operation.git
+cd operation/watcher/
+cp env.template .env
+touch config/local.yaml
+sudo chown -R 3000:3000 logs
+docker compose pull
+docker compose up -d
+```
+
+Set PostgreSQL values in `.env`:
+
+```shell
+POSTGRES_PASSWORD=
+POSTGRES_USER=
+POSTGRES_DB=
+POSTGRES_PORT=5432
+```
+
+On macOS, source docs also call out `sudo chmod -R 707 logs`.
+
+## `local.yaml` Essentials
+
+Minimum shared fields:
+
+```yaml
+network: ergo
+api:
+  apiKeyHash: <your api key hash>
+ergo:
+  type: node
+  initialHeight: <latest ergo height>
+  mnemonic: <your watcher mnemonic>
+  node:
+    url: https://example.node.com
+  explorer:
+    url: https://api.ergoplatform.com
+```
+
+Use `npx @rosen-bridge/cli blake2b-hash YOUR_API_KEY` to compute `api.apiKeyHash`. Prefer `.env` variables such as `API_KEY_HASH`, `MNEMONIC`, RPC credentials, and API tokens instead of placing secrets directly in `local.yaml`.
+
+For all watcher types, choose a recent `initialHeight`. Once a watcher has scanned from an initial block, changing this value does not rewind existing data. Remove volumes only when you intentionally want a fresh scan.
+
+## Source and Confirmation Matrix
+
+| Watched network | Source options | Recommended confirmations in source docs |
+| --- | --- | --- |
+| Ergo | `node` or `explorer` | `9` |
+| Cardano | `koios` or `ogmios` | `25` |
+| Bitcoin | `rpc` or `esplora` | `1` |
+| Ethereum | `rpc` | `20` |
+| Binance | `rpc` | `300` |
+| Doge | `rpc` list | chain-specific |
+
+If using an Ergo node as a source, enable `ergo.node.extraIndex = true`. The watcher can still run without it, but watcher health fields such as WID and asset health can fail to update correctly.
+
+For Cardano Ogmios, source docs require encoded transaction data in `cbor` form for raw observation storage. Run Ogmios with `--include-cbor` or `--include-transaction-cbor`, or disable raw-data storage:
+
+```yaml
+observation:
+  storeRawData: false
+```
 
 ## Watcher FAQs
 

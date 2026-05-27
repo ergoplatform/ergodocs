@@ -53,18 +53,18 @@ title: Randomness from ErgoRaffle
 
 ## References
 
-- ErgoRaffle overview: [ergoraffle.md](ergoraffle.md)
-- ErgoHack references: [ergohack.md](ergohack.md)
-- Raffle docs and examples: [js.md](js.md), [front-end.md](front-end.md)
-- Off-chain flows (auctions/raffles): [off-chain-overview.md](off-chain-overview.md)
+- [ErgoRaffle overview](ergoraffle.md)
+- [ErgoHack references](ergohack.md)
+- Raffle docs and examples: [JavaScript](js.md), [front end](front-end.md)
+- [Off-chain flows (auctions/raffles)](off-chain-overview.md)
 - Talks/ErgoHack: Add materials when available.
-- Related patterns: [pattern-bulletproof-range-proof.md](pattern-bulletproof-range-proof.md), [pattern-stealth-address.md](pattern-stealth-address.md)
+- Related patterns: [Bulletproof range proof](pattern-bulletproof-range-proof.md), [Stealth address](pattern-stealth-address.md)
 
 ## See also
 
-- Category: [contracts-randomness.md](contracts-randomness.md)
-- [Library index](contracts-library.md)
-- [Additional contracts index](contracts.md)
+- [Category: Randomness Contracts](contracts-randomness.md)
+- [Contracts Library](contracts-library.md)
+- [Additional Contracts Index](contracts.md)
 
 ## Contributor Checklist
 

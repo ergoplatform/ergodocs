@@ -3,10 +3,11 @@
 This page explains the event lifecycle as shown in the Rosen app (Events page) and how to interpret each status. It complements the flow diagrams and troubleshooting guidance.
 
 See also:
-- Flows: [token-transfer-flows.md](token-transfer-flows.md)
-- Troubleshooting: [rosen-troubleshooting.md](rosen-troubleshooting.md)
-- Security posture: [security-model.md](security-model.md)
-- Glossary: [rosen-glossary.md](rosen-glossary.md)
+
+- [Flows](token-transfer-flows.md)
+- [Troubleshooting](rosen-troubleshooting.md)
+- [Security posture](security-model.md)
+- [Glossary](rosen-glossary.md)
 
 ## Event Lifecycle
 
@@ -93,4 +94,5 @@ stateDiagram-v2
 ```
 
 For detailed flow charts by direction, see:
-- ChainX ➜ Ergo and Ergo ➜ ChainX: [token-transfer-flows.md](token-transfer-flows.md)
+
+- [ChainX ➜ Ergo and Ergo ➜ ChainX](token-transfer-flows.md)

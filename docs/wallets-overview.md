@@ -1,51 +1,44 @@
-# Wallets
+# Get a Wallet
 
-## Overview
+Use this page to choose a wallet and learn basic wallet safety.
 
-This page routes you to everything you need for wallets on Ergo. Pick a wallet, set it up safely, and learn how to use payment flows and standards.
+## Pick a Wallet
 
-Start here:
+| Need | Wallet / guide |
+| --- | --- |
+| Browser dApps | [Nautilus](dev/wallet/nautilus.md) |
+| Desktop wallet | [Minotaur](dev/wallet/minotaur.md) |
+| Desktop wallet with optional full node | [Satergo](dev/wallet/satergo.md) |
+| Mobile wallet | [Ergo Mobile Wallet](https://ergoplatform.org/en/ergo-wallet-app/) |
+| Hardware wallet | [Ledger](dev/wallet/payments/ledger.md) |
+| Offline storage | [Cold Wallet Guide](tutorials/cold-wallet.md), [Paper Wallet](dev/wallet/paper-wallet.md) |
+| Node wallet | [Node Wallet Overview](node/wallet.md), [Node Wallet Setup](node/wallet-setup.md) |
+| Android browser extensions | [Nautilus or Safew on Android](tutorials/Ergo-Browser-Wallets-on-Android.md) |
 
-- Wallet choices and concepts: [Wallets Overview](dev/wallets.md)
+For broader comparison, see [Wallets Overview](dev/wallets.md).
 
-Popular wallets:
+## Safety First
 
-- Browser: [Nautilus](dev/wallet/nautilus.md)
-- Desktop: [Minotaur](dev/wallet/minotaur.md)
-- Desktop (full node optional): [Satergo](dev/wallet/satergo.md)
-- Mobile (Android or iOS): [Ergo Mobile Wallet (Terminus on iOS)](https://ergoplatform.org/en/ergo-wallet-app/)
-- Public testing: [Degen Wallet](https://swap.degens.world/download)
-- Hardware: [Ledger](dev/wallet/payments/ledger.md)
-- Paper: [Paper Wallet](dev/wallet/paper-wallet.md)
+- Write down seed phrases offline.
+- Never share seed phrases or private keys.
+- Verify addresses before sending.
+- Try small transactions before large transfers.
+- Keep wallet software updated.
+- Use [Access Issues](tutorials/access-issues.md) if a wallet does not load or connect.
 
-Setup and operations:
+## Payments and dApps
 
-- Create/restore and basics: [Node Wallet Setup](node/wallet-setup.md)
-- Keys and seed safety: [Keys](dev/wallet/keys.md)
-- Addresses and formats: [Address](dev/wallet/address.md) • [Address Types](dev/wallet/address/address_types.md) • [Address Validation](dev/wallet/address/address_validation.md)
-- Troubleshooting access: [Access Issues](tutorials/access-issues.md)
-- Cold storage: [Cold Wallet Guide](tutorials/cold-wallet.md)
-- Message signing: [Message Signing](tutorials/message-signing.md)
-- Vaulting: [Satergo Vault](dev/wallet/satergo-vault.md)
-- Browser wallets on mobile: [Nautilus or Safew on Android](tutorials/Ergo-Browser-Wallets-on-Android.md)
+- [dApp Connector](dev/wallet/payments/dApp.md): browser dApp connection.
+- [ErgoPay](dev/wallet/payments/ergopay/ergo-pay.md): link and QR payment flow.
+- [ErgoAuth](dev/wallet/payments/ergoauth.md): authentication with wallet signatures.
+- [Message Signing](tutorials/message-signing.md): verify actions and ownership.
+- [Proxy Payments](dev/wallet/payments/proxy.md): payment proxy contracts.
 
-## Recent updates
+## Standards and Internals
 
-- [Degen Wallet](https://swap.degens.world/download) entered public APK testing with low-fee quick swap, webview/dApp support, USE mint merged with swap, and iOS TestFlight preparation.
-- The official Ergo Wallet Android prerelease [v2.4.2308](https://github.com/ergoplatform/ergo-wallet-app/releases/tag/v2.4.2308) was shared while Google Play organization account changes were pending.
-- Nautilus v1.3.2 added USE, CLB USE, and DORT support.
-- The Nautilus-on-Android guide noted that release `0.9.4` was the last release where the mobile dApp connector worked fully before connector issues.
-- Keystone hardware-wallet work carried a supply-chain caveat because the integration added more than 160 transient dependencies.
-
-Payments and dApp interactions:
-
-- dApp Connector: [dApp Connector](dev/wallet/payments/dApp.md)
-- ErgoAuth (secure logins): [ErgoAuth](dev/wallet/payments/ergoauth.md)
-- ErgoPay (link/QR payments): [ErgoPay](dev/wallet/payments/ergopay/ergo-pay.md) • [ErgoPay Tutorial](dev/wallet/payments/ergopay/ep-tutorial.md)
-- Proxy contracts: [Proxy Payments](dev/wallet/payments/proxy.md)
-
-Standards:
-
-- Overview: [EIP Standards](dev/wallet/eip-standards.md)
-- Keys/Derivation: [EIP-1](dev/wallet/standards/eip1.md), Wallets: [EIP-3](dev/wallet/standards/eip3.md), Cold Wallet Metadata: [EIP-5](dev/wallet/standards/eip5.md)
-- Payments/Connector/Auth: [EIP-17](dev/wallet/payments/standards/eip17.md), [EIP-19](dev/wallet/standards/eip19.md), [EIP-20](dev/wallet/payments/standards/eip20.md), [EIP-25](dev/wallet/payments/standards/eip25.md)
+- [Wallet Standards](dev/wallet/eip-standards.md)
+- [Keys](dev/wallet/keys.md)
+- [Addresses](dev/wallet/address.md)
+- [Address Types](dev/wallet/address/address_types.md)
+- [Address Validation](dev/wallet/address/address_validation.md)
+- [EIP-3 HD Wallets](dev/wallet/standards/eip3.md)

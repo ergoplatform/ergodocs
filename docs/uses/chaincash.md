@@ -100,7 +100,6 @@ These transactions mark the beginning of ChainCash's operational phase, and now 
 To start experimenting:
 
 1. **Set Up the ChainCash Server**:
-
    - Clone the ChainCash server repository from GitHub:
 
       ```bash
@@ -121,23 +120,18 @@ To start experimenting:
       ```
 
 2. **Configure the Acceptance Predicate**:
-
       - The server allows you to define acceptance rules through a TOML-based configuration. This includes setting up whitelists, blacklists, and collateralization levels that determine which notes your server will accept. For more information, refer to the [ChainCash Server Documentation](https://github.com/ChainCashLabs/chaincash/blob/master/docs/server.md).
 
 3. **Interact with the API**:
-
       - Use the API to create reserves, issue notes, and execute transactions. The API provides functions for accepting or rejecting payments, querying account states, and more. Explore the API endpoints by reviewing the [server implementation](https://github.com/ChainCashLabs/chaincash-rs).
 
 4. **Prototype Development**:
-
       - Some prototype code for on-chain data tracking and transaction building is available in the [offchain](https://github.com/kushti/chaincash/tree/master/src/main/scala/chaincash/offchain) folder. This code can help you understand how ChainCash processes transactions.
 
 5. **Contribute to the Codebase**:
-
       - If you have ideas for improving ChainCash, consider contributing to the open-source codebase on GitHub. Your contributions can help shape the future of decentralized finance.
 
 6. **Engage with the Community**:
-
       - [Join discussions](https://t.me/chaincashtalks) with other developers and innovators in the ChainCash community. Share your experiences, collaborate on projects, and help drive the system forward.
 
 ///
@@ -267,45 +261,36 @@ At a major international tech and cultural festival, organizers want to introduc
 **How It Works:**
 
 1. **Issuing Festival Tokens:**
-
       - **Exclusive Festival Currency:** Attendees who sign up for the ChainCash experience receive limited-edition festival tokens via airdrop. These tokens are minted on the Ergo blockchain and are only available to festival-goers who register in advance or win them through pre-festival contests.
       - **Digital Collectibles:** Each token is tied to an exclusive NFT, representing limited festival experiences, such as front-row seats to concerts, backstage access, or meet-and-greets with artists and influencers.
 
 2. **Unlocking Exclusive Experiences:**
-
       - **Pop-Up Events:** Throughout the festival, secret pop-up events are announced exclusively to token holders. These could be anything from private performances by big-name artists to intimate tech talks by industry leaders, accessible only by presenting a ChainCash token.
       - **NFT-Based Perks:** Holders of certain NFTs linked to their festival tokens can unlock unique perks, such as priority entry to events, exclusive merchandise, or even virtual reality experiences that are only available during the festival.
 
 3. **Trading and Networking:**
-
       - **Social Currency:** The festival tokens quickly become a social currency within the event. Attendees trade tokens and NFTs to gain access to different experiences, creating a buzz around what each token unlocks.
       - **Marketplace:** A digital marketplace is set up for attendees to trade or auction their tokens and NFTs, allowing for dynamic exchanges and fostering connections between festival-goers who share interests.
 
 4. **Post-Festival Engagement:**
-
       - **Token Redemption:** After the festival, tokens can be redeemed for exclusive digital content, such as unreleased music tracks, behind-the-scenes footage, or commemorative NFTs that serve as a lasting memory of the event.
       - **Future Perks:** Attendees who hold onto their tokens might receive early access or discounts for next year's festival or other partnered events, keeping them engaged with the brand long after the event ends.
 
 **Why It's Exciting:**
 
 1. **Blending Physical and Digital Worlds:**
-
       - This use of ChainCash merges the physical festival experience with the digital realm, creating a hybrid event where the value of participation extends beyond the festival itself. It's a pioneering move that bridges the gap between real-world events and the emerging digital economy.
 
 2. **Exclusivity and Buzz:**
-
       - The limited nature of the tokens and the exclusivity of the experiences they unlock create a sense of urgency and desirability. This drives engagement and adds a layer of excitement as attendees seek out the most valuable or intriguing experiences.
 
 3. **Interactive and Engaging:**
-
       - The ability to trade tokens and NFTs on-site fosters an interactive community within the festival. It turns attendees into active participants in the event's economy, encouraging networking and collaboration in a fun, gamified way.
 
 4. **Lasting Impact:**
-
       - The post-festival utility of the tokens ensures that the ChainCash experience doesn't end when the event does. Whether through redeeming for digital content or gaining access to future events, the tokens have lasting value, keeping participants engaged long-term.
 
 5. **Showcasing Crypto's Potential:**
-
       - This setup provides a real-world use case for blockchain technology that is both accessible and innovative. It introduces attendees to crypto in a way that is fun, tangible, and directly tied to an unforgettable experience.
 
 ///
@@ -329,19 +314,16 @@ At a major international tech and cultural festival, organizers want to introduc
 ### Core Components
 
 1. **Agents**
-
       - **Definition**: Participants in the ChainCash network, including individuals, businesses, or organizations.
       - **Role**: Agents issue, accept, and redeem notes. They provide reserves and establish trust within the network.
       - **Code Reference**: For a detailed understanding of how agents interact within the system, see the [ChainCash server implementation](https://github.com/ChainCashLabs/chaincash-rs).
 
 2. **Reserves**
-
       - **Definition**: Assets locked in smart contracts to back the notes issued by agents.
       - **Purpose**: Reserves ensure that each note has tangible backing, providing stability and trust.
       - **Code Reference**: The reserve contract is detailed in the [ChainCash Reserve Contract](https://github.com/ChainCashLabs/chaincash/blob/master/contracts/onchain/reserve.es).
 
 3. **Notes**
-
       - **Definition**: Digital representations of value within ChainCash.
       - **Characteristics**:
          - Backed by reserves and the trust of all agents who have held or transacted with it.
@@ -349,14 +331,12 @@ At a major international tech and cultural festival, organizers want to introduc
       - **Code Reference**: The note contract is explained in the [ChainCash Note Contract](https://github.com/ChainCashLabs/chaincash/blob/master/contracts/onchain/note.es) section of the repository.
 
 4. **Smart Contracts**
-
       - **Definition**: Contracts written in code that automatically execute transactions based on predefined conditions.
       - **Functions**:
          - Manage reserves, validate transactions, and handle redemptions.
       - **Code Reference**: Details on smart contracts are available in the [ChainCash Smart Contracts Repository](https://github.com/ChainCashLabs/chaincash/tree/master/contracts).
 
 5. **Trust Mechanisms**
-
       - **Definition**: Protocols that allow agents to establish and evaluate trust within the network.
       - **Implementation**:
          - Reputation scores, whitelists, blacklists, and collective evaluations.

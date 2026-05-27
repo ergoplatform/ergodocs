@@ -3,26 +3,30 @@
 This page lists the minimum/recommended requirements and pre-setup steps before deploying a Rosen Watcher. It complements the chain-specific guides and troubleshooting.
 
 See also:
-- Watcher setup and FAQ: [watcher.md](watcher.md)
-- Bitcoin-specific notes: [bitcoin-watcher.md](bitcoin-watcher.md)
-- Troubleshooting: [rosen-troubleshooting.md](rosen-troubleshooting.md)
-- Security model: [security-model.md](security-model.md)
+
+- [Watcher setup and FAQ](watcher.md)
+- [Bitcoin-specific notes](bitcoin-watcher.md)
+- [Troubleshooting](rosen-troubleshooting.md)
+- [Security model](security-model.md)
 
 ## Hardware and System Requirements
 
 Minimum (single-network watcher):
+
 - CPU: 2 cores
 - RAM: 2 GB
 - Storage: 20 GB+ (varies by logs, sqlite/postgres, and local node footprints if co-located)
 - Network: Stable broadband; public Internet egress
 
 Recommended (better headroom and multiple networks):
+
 - CPU: 4 cores
 - RAM: 4–8 GB
 - Storage: 100 GB+ (or separate volumes per service)
 - Network: Stable broadband with low packet loss
 
 OS:
+
 - Linux (x86_64) preferred for servers
 - Windows 10/11 with WSL2 (Docker Desktop) or native Docker
 - macOS (x86_64/ARM). Note: certain ARM environments have compatibility caveats; see [operation issue](https://github.com/rosen-bridge/operation/issues/6)
@@ -161,8 +165,9 @@ docker compose up -d
 ```
 
 Then consult:
-- Windows: video + guide linked in [watcher.md](watcher.md)
-- macOS/Linux: tutorials and known-issues in [watcher.md](watcher.md)
+
+- Windows: video and guide linked in [watcher setup and FAQ](watcher.md)
+- macOS/Linux: tutorials and known issues in [watcher setup and FAQ](watcher.md)
 
 ## Security Best Practices
 

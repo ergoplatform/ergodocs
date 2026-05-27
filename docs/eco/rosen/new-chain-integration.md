@@ -69,6 +69,7 @@ See also: [Watcher](watcher.md), [Rosen Guards](rosen-guard.md), background: [Mu
   - Start with lower-value caps, increase after observing production stability.
 
 For background on roles and assumptions, see:
+
 - [Concepts & Assumptions](concepts-assumptions.md)
 - [Rosen Guards](rosen-guard.md)
 - [Watcher](watcher.md)

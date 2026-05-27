@@ -72,6 +72,7 @@ See [this answer](https://youtu.be/5p-xmILkS2c?t=1455) from Armeanio in the Week
 - This preserves the integrity of the Watcher layer and the fairness of fee/emission distribution.
 
 For background on roles and assumptions, review:
+
 - [Concepts & Assumptions](concepts-assumptions.md)
 - [Watcher](watcher.md)
 - [Rosen Guards](rosen-guard.md)

@@ -30,6 +30,7 @@ For more information, please see the [Team](rosen-team.md) section.
 ### How long do transfers take?
 
 Typical transfers complete in about 1–2 hours. Timing depends on:
+
 - Source chain confirmation requirements (e.g., Bitcoin can take longer).
 - Watcher consensus on Ergo and Guard validation/signatures.
 - Network congestion and large-value cold ➜ hot wallet movements.
@@ -39,6 +40,7 @@ If your event appears delayed beyond expectations, see “My event looks stuck �
 ### How many confirmations are required?
 
 Confirmation thresholds are chain-specific and conservatively chosen to avoid reorgs:
+
 - Watchers wait for a minimum number of confirmations on the source chain before proposing an event.
 - Guards independently validate and may require additional confirmations for finality.
 Thresholds are parameterized and may evolve; the Rosen UI tracks and enforces current requirements.
@@ -92,7 +94,7 @@ Thresholds are parameterized and may evolve; the Rosen UI tracks and enforces cu
 
 ### Where can I learn the security and operational details?
 
-- Design and assumptions: [concepts-assumptions.md](concepts-assumptions.md)
-- Security posture and threats: [security-model.md](security-model.md)
-- End-to-end flows: [token-transfer-flows.md](token-transfer-flows.md)
-- Operational dust handling: [fees-and-dust.md](fees-and-dust.md)
+- [Design and assumptions](concepts-assumptions.md)
+- [Security posture and threats](security-model.md)
+- [End-to-end flows](token-transfer-flows.md)
+- [Operational dust handling](fees-and-dust.md)

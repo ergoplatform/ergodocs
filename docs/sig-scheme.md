@@ -134,13 +134,11 @@ The Scala interpreter verifies each node and enforces the script. See [`ErgoLike
 Both repositories cover the same cryptographic ideas with language-specific APIs.
 
 - **sigmastate-interpreter**:
-
   - Core verification logic: [`ErgoLikeInterpreter.scala`](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/org/ergoplatform/ErgoLikeInterpreter.scala)
   - Discrete log protocol: [`DLogProtocol.scala`](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/sigmastate/crypto/DLogProtocol.scala)
   - Proof serialization: [`SigSerializer.scala`](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/sigmastate/SigSerializer.scala)
 
 - **sigma-rust**:
-
   - Signing helpers: [`signing.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-lib/src/wallet/signing.rs)
   - Secret key management: [`secret_key.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-lib/src/wallet/secret_key.rs)
   - Proofs in transactions: [`prover_result.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-lib/src/chain/transaction/input/prover_result.rs)

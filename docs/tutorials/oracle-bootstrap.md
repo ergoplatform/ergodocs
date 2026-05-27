@@ -8,7 +8,7 @@ tags:
   - oracle-core
   - Testnet
 owner: docs
-last_reviewed: 2026-05-26
+last_reviewed: 2026-05-27
 source_repos:
   - repo: ergoplatform/oracle-core
     branch: develop
@@ -38,8 +38,10 @@ oracle-core generate-oracle-config
 
 and set the required parameters:
 
-- `oracle_address` to my node's wallet address (make sure you have coins).
-- `node_url`, `node_api_key` - node connection parameters;
+- `oracle_address` to the node wallet address that will operate the oracle. Make sure it has coins.
+- `node_url` to the Ergo node API.
+- `node_api_key` to the plain API key for protected wallet routes.
+- `ORACLE_WALLET_MNEMONIC` in the environment, not inline in shell history. A `.secrets` file sourced locally is safer than typing the mnemonic into a command.
 
 Run
 

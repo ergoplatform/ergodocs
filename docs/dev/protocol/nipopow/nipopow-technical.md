@@ -42,7 +42,6 @@ A typical **NiPoPoW proof** size is:
 
 * **Header-only:** \~5–30 KB for a multi-year chain snapshot.
 * **Combined with UTXO snapshot:** \~200–600 MB for the snapshot file, plus the proof.
-
   * Snapshots are compressed Merkleized state digests.
 
 Thus, a new light client can bootstrap in minutes instead of days.
@@ -54,19 +53,16 @@ Thus, a new light client can bootstrap in minutes instead of days.
 **Example: NiPoPoW-based bootstrap for a light wallet**
 
 1. The wallet requests:
-
       * Latest block headers.
       * NiPoPoW proof covering the chain up to a chosen block.
       * UTXO snapshot hash and file.
 
 2. The node responds with:
-
       * `PoPoWProof` file (5–30 KB).
       * Signed UTXO snapshot (\~200–600 MB).
       * Relevant metadata: height, root hash, signatures.
 
 3. The wallet:
-
       * Verifies the NiPoPoW proof by checking that sampled superblocks link correctly and cumulative PoW is valid.
       * Validates the snapshot’s Merkle root matches the expected state root.
       * Begins operations with trusted state.

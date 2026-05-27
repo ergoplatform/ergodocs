@@ -218,6 +218,7 @@ The following methods can be called on all instances of $\lst{SigmaProp}$ type.
 
 - *Description*: Returns the serialized bytes of this sigma proposition represented as ErgoTree.
 - *Parameters*:
+
 - *Result*: `Coll[Byte]`
 - *Serialized as:* SigmaPropBytes
 
@@ -225,6 +226,7 @@ The following methods can be called on all instances of $\lst{SigmaProp}$ type.
 
 - *Description*: Verifies that the sigma proposition is proven. (FRONTEND ONLY)
 - *Parameters*:
+
 - *Result*: `Boolean`
 
 For a full list of primitive operations on  $\lst{SigmaProp}$ type, see [Appendix B](https://raw.githubusercontent.com/ScorexFoundation/sigmastate-interpreter/fada073b82a16a928c457693b888da4c0310aca6/docs/spec/spec.pdf#appendix.B)
@@ -235,6 +237,7 @@ For a full list of primitive operations on  $\lst{SigmaProp}$ type, see [Appendi
 
 - *Description*: Monetary value in nanoErgs.
 - *Parameters*:
+
 - *Result*: $\lst{Long}$
 - *Serialized as:* ExtractAmount
 
@@ -242,6 +245,7 @@ For a full list of primitive operations on  $\lst{SigmaProp}$ type, see [Appendi
 
 - *Description*: Serialized bytes of the guarding script. This script must evaluate to true to spend the box.
 - *Parameters*:
+
 - *Result*: $\lst{Coll[Byte]}$
 - *Serialized as:* ExtractScriptBytes
 
@@ -249,6 +253,7 @@ For a full list of primitive operations on  $\lst{SigmaProp}$ type, see [Appendi
 
 - *Description*: Returns the serialized bytes of this box's content, including proposition bytes.
 - *Parameters*:
+
 - *Result*: $\lst{Coll[Byte]}$
 - *Serialized as:* ExtractBytes
 
@@ -256,6 +261,7 @@ For a full list of primitive operations on  $\lst{SigmaProp}$ type, see [Appendi
 
 - *Description*: Returns the serialized bytes of this box's content, excluding the transactionId and output index.
 - *Parameters*:
+
 - *Result*: $\lst{Coll[Byte]}$
 - *Serialized as:* ExtractBytesWithNoRef
 
@@ -263,6 +269,7 @@ For a full list of primitive operations on  $\lst{SigmaProp}$ type, see [Appendi
 
 - *Description*: Returns the Blake2b256 hash of this box's content (`blake2b256(bytes)`).
 - *Parameters*:
+
 - *Result*: $\lst{Coll[Byte]}$
 - *Serialized as:* ExtractId
 
@@ -270,6 +277,7 @@ For a full list of primitive operations on  $\lst{SigmaProp}$ type, see [Appendi
 
 - *Description*: Returns the height and transaction/output index where the box was created. `creationInfo._1` is the block height, and `creationInfo._2` is the transaction identifier concatenated with the box index.
 - *Parameters*:
+
 - *Result*: $\lst{(Int,Coll[Byte])}$
 - *Serialized as:* ExtractCreationInfo
 
@@ -284,6 +292,7 @@ For a full list of primitive operations on  $\lst{SigmaProp}$ type, see [Appendi
 
 - *Description*: Returns the collection of secondary tokens held in the box.
 - *Parameters*:
+
 - *Result*: $\lst{Coll[(Coll[Byte],Long)]}$
 - *Serialized as:* PropertyCall
 
@@ -291,6 +300,7 @@ For a full list of primitive operations on  $\lst{SigmaProp}$ type, see [Appendi
 
 - *Description*: Register R0: Monetary value in nanoErgs. Use `ExtractAmount` (value property).
 - *Parameters*:
+
 - *Result*: $\lst{Option[T]}$
 - *Serialized as:* ExtractRegisterAs
 
@@ -298,6 +308,7 @@ For a full list of primitive operations on  $\lst{SigmaProp}$ type, see [Appendi
 
 - *Description*: Register R1: Guarding script bytes. Use `ExtractScriptBytes` (propositionBytes property).
 - *Parameters*:
+
 - *Result*: $\lst{Option[T]}$
 - *Serialized as:* ExtractRegisterAs
 
@@ -305,6 +316,7 @@ For a full list of primitive operations on  $\lst{SigmaProp}$ type, see [Appendi
 
 - *Description*: Register R2: Secondary tokens [(TokenId, Amount)]. Use `ExtractTokens` (tokens property).
 - *Parameters*:
+
 - *Result*: $\lst{Option[T]}$
 - *Serialized as:* ExtractRegisterAs
 
@@ -312,6 +324,7 @@ For a full list of primitive operations on  $\lst{SigmaProp}$ type, see [Appendi
 
 - *Description*: Register R3: Box creation information (height, txId, index). Use `ExtractCreationInfo` (creationInfo property).
 - *Parameters*:
+
 - *Result*: $\lst{Option[T]}$
 - *Serialized as:* ExtractRegisterAs
 
@@ -319,6 +332,7 @@ For a full list of primitive operations on  $\lst{SigmaProp}$ type, see [Appendi
 
 - *Description*: Optional register R4 for arbitrary data storage. Use `ExtractRegisterAs`.
 - *Parameters*:
+
 - *Result*: $\lst{Option[T]}$
 - *Serialized as:* ExtractRegisterAs
 
@@ -326,6 +340,7 @@ For a full list of primitive operations on  $\lst{SigmaProp}$ type, see [Appendi
 
 - *Description*: Optional register R5 for arbitrary data storage. Use `ExtractRegisterAs`.
 - *Parameters*:
+
 - *Result*: $\lst{Option[T]}$
 - *Serialized as:* ExtractRegisterAs
 
@@ -333,6 +348,7 @@ For a full list of primitive operations on  $\lst{SigmaProp}$ type, see [Appendi
 
 - *Description*: Optional register R6 for arbitrary data storage. Use `ExtractRegisterAs`.
 - *Parameters*:
+
 - *Result*: $\lst{Option[T]}$
 - *Serialized as:* ExtractRegisterAs
 
@@ -340,6 +356,7 @@ For a full list of primitive operations on  $\lst{SigmaProp}$ type, see [Appendi
 
 - *Description*: Optional register R7 for arbitrary data storage. Use `ExtractRegisterAs`.
 - *Parameters*:
+
 - *Result*: $\lst{Option[T]}$
 - *Serialized as:* ExtractRegisterAs
 
@@ -347,6 +364,7 @@ For a full list of primitive operations on  $\lst{SigmaProp}$ type, see [Appendi
 
 - *Description*: Optional register R8 for arbitrary data storage. Use `ExtractRegisterAs`.
 - *Parameters*:
+
 - *Result*: $\lst{Option[T]}$
 - *Serialized as:* ExtractRegisterAs
 
@@ -354,6 +372,7 @@ For a full list of primitive operations on  $\lst{SigmaProp}$ type, see [Appendi
 
 - *Description*: Optional register R9 for arbitrary data storage. Use `ExtractRegisterAs`.
 - *Parameters*:
+
 - *Result*: $\lst{Option[T]}$
 - *Serialized as:* ExtractRegisterAs
 
@@ -363,6 +382,7 @@ For a full list of primitive operations on  $\lst{SigmaProp}$ type, see [Appendi
 
 - *Description*: Returns the digest of the state represented by this tree (root hash bytes ++ tree height).
 - *Parameters*:
+
 - *Result*: $\lst{Coll[Byte]}$
 - *Serialized as:* PropertyCall
 
@@ -370,6 +390,7 @@ For a full list of primitive operations on  $\lst{SigmaProp}$ type, see [Appendi
 
 - *Description*: Returns the flags of enabled operations packed into a single byte.
 - *Parameters*:
+
 - *Result*: $\lst{Byte}$
 - *Serialized as:* PropertyCall
 
@@ -382,91 +403,117 @@ isRemoveAllowed == (enabledOperations & 0x04) != 0
 #### AvlTree.keyLength (100.3)
 
 - *Description*:
+
 - *Parameters*:
+
 - *Result*: $\lst{Int}$
 - *Serialized as:* PropertyCall
 
 #### AvlTree.valueLengthOpt (100.4)
 
 - *Description*:
+
 - *Parameters*:
+
 - *Result*: $\lst{Coll[Byte]}$
 - *Serialized as:* PropertyCall
 
 #### AvlTree.isInsertAllowed (100.5)
 
 - *Description*:
+
 - *Parameters*:
+
 - *Result*: $\lst{Coll[Byte]}$
 - *Serialized as:* PropertyCall
 
 #### AvlTree.isUpdateAllowed (100.6)
 
 - *Description*:
+
 - *Parameters*:
+
 - *Result*: $\lst{Boolean}$
 - *Serialized as:* PropertyCall
 
 #### AvlTree.isRemovedAllowed (100.7)
 
 - *Description*:
+
 - *Parameters*:
+
 - *Result*: $\lst{Boolean}$
 - *Serialized as:* PropertyCall
 
 #### AvlTree.updateOperations (100.8)
 
 - *Description*:
+
 - *Parameters*:
+
 - *Result*: $\lst{AvlTree}$
 - *Serialized as:* MethodCall
 
 #### AvlTree.contains (100.9)
 
 - *Description*:
+
 - *Parameters*:
+
 - *Result*: $\lst{Boolean}$
 - *Serialized as:* MethodCall
 
 #### AvlTree.get (100.10)
 
 - *Description*:
+
 - *Parameters*:
+
 - *Result*: $\lst{Option[Coll[Byte]]}$
 - *Serialized as:* MethodCall
 
 #### AvlTree.getMeny (100.11)
 
 - *Description*:
+
 - *Parameters*:
+
 - *Result*: $\lst{Coll[Option[Coll[Byte]]]}$
 - *Serialized as:* MethodCall
 
 #### AvlTree.insert (100.12)
 
 - *Description*:
+
 - *Parameters*:
+
 - *Result*: $\lst{Option[AvlTree]}$
 - *Serialized as:* MethodCall
 
 #### AvlTree.update (100.13)
 
 - *Description*:
+
 - *Parameters*:
+
 - *Result*: $\lst{Option[AvlTree]}$
 - *Serialized as:* MethodCall
 
 #### AvlTree.remove (100.14)
 
 - *Description*:
+
 - *Parameters*:
+
 - *Result*: $\lst{Option[AvlTree]}$
 - *Serialized as:* MethodCall
 
 #### AvlTree.updateDigest (100.15)
 
 - *Description*:
+
 - *Parameters*:
+
 - *Result*: $\lst{AvlTree}$
 - *Serialized as:* MethodCall
 

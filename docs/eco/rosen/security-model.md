@@ -44,7 +44,7 @@ This pipeline prioritizes security and avoids reorgs, double spends, and race co
   - Mitigations:
     - Watcher consensus: a single watcher cannot advance state.
     - Guard re‑validation: Guards independently verify each approved event.
-    - Economic penalties: Slashing of permits/collateral discourages fraud (see [rosen-tokenomics.md](rosen-tokenomics.md)).
+    - Economic penalties: Slashing of permits/collateral discourages fraud (see [Rosen tokenomics](rosen-tokenomics.md)).
 
 - Guard Collusion or Compromise
   - Threat: A subset of Guards attempts to exfiltrate funds or sign invalid transactions.
@@ -92,7 +92,7 @@ This pipeline prioritizes security and avoids reorgs, double spends, and race co
 - Fees fund operations and align incentives for liveness.
 - Event‑based emissions (bootstrap phase) reward honest participation.
 - Slashing (loss of RosenEvent/permits/collateral) penalizes dishonest or low‑quality behavior.
-- See: [rosen-tokenomics.md](rosen-tokenomics.md), [fees-and-dust.md](fees-and-dust.md)
+- See [Rosen tokenomics](rosen-tokenomics.md) and [fees and dust](fees-and-dust.md).
 
 ## Operational Guidance (High‑Level)
 
@@ -108,5 +108,6 @@ This pipeline prioritizes security and avoids reorgs, double spends, and race co
 - Federated Model: Rosen is not trustless like a light‑client‑verified 2‑way peg; it is a federated bridge with strong auditability and incentives.
 
 For practical flows and user guidance, start with:
+
 - [token-transfer-flows.md](token-transfer-flows.md)
 - [fees-and-dust.md](fees-and-dust.md)

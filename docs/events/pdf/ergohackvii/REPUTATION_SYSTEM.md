@@ -174,6 +174,7 @@ There are certain things that we are not able to solve these two days, they are:
 - The transaction builder with Fleet SDK:
   - Actually, we are taking the inputs from all the user’s unspended boxes but, on the UI, he selects a specific
       reputation proof (a specific box). So, we need to do that:
+
     - Solving the usage of the explorer api from off-chain code.
     - Doing that with Fleet from the browser.
 - On the on-chain side:

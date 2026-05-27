@@ -23,7 +23,6 @@ Welcome to the node configuration files documentation. This section provides a c
 Included in this section is the main configuration file, [application.conf](https://github.com/ergoplatform/ergo/blob/master/src/main/resources/application.conf), along with several others that each serve specific purposes in the node's overall functioning.
 
 - [application.conf](https://github.com/ergoplatform/ergo/blob/master/src/main/resources/application.conf): The principal configuration file containing the primary settings for the Ergo protocol.
-
   - [node](conf-node.md): Configures node-specific parameters.
   - [cache](conf-cache.md): Handles cache-related settings.
   - [chain](conf-chain.md): Manages blockchain-related settings.
@@ -67,6 +66,7 @@ The `knownPeers` parameter stores a list of bootstrap node addresses that your n
 **About Time Settings**
 
 All time span parameters are specified in milliseconds by default. However, you can use duration units for convenience. Supported units include:
+
 - s, second, seconds
 - m, minute, minutes
 - h, hour, hours

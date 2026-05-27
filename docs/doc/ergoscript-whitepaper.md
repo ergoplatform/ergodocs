@@ -624,7 +624,6 @@ The pseudocode below details the verifier's steps.
 1. Read the root challenge from in the proof.
 
 2. In a top-down traversal of the tree, obtain the challenges for the children of every non-leaf node by reading them from the proof or computing them, as follows. Let $e_0$ be the challenge in the node.
-
     - If the node is $\andnode$, then all of its children get $e_0$ as the challenge.
     - If the node is $\ornode$, then each of its children except the rightmost reads its challenge from the proof. The rightmost child gets a challenge computed as an XOR of the challenges of all the other children and $e_0$.
     - If the node is $\tnode(k)$, let the number of its children be $n$. Assume the children are numbered from $1$ to $n$. Let $q_0 = e_0$ and read the values $q_1, \dots, q_{n-k}$ from the proof. Viewing $1, 2, \dots, n$ and $q_0, \dots, q_{n-k}$ as elements of $\GF(2^t)$, evaluate the polynomial $Q(x) = \sum q_i x^i$ over $\GF(2^t)$ at points $1, 2, \dots, n$ to get challenges for child $1, 2, \dots, n$, respectively.

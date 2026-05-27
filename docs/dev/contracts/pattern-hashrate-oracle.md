@@ -61,13 +61,13 @@ title: Trustless Hashrate Oracle (Hashrate Coin)
 - [Oracle Core (operators)](oracle.md)
 - [Oracle Pools v2 (EIP-23)](oracles-v2.md)
 - Talks/ErgoHack: Add references when collected.
-- Related patterns: [pattern-bulletproof-range-proof.md](pattern-bulletproof-range-proof.md)
+- [Related patterns](pattern-bulletproof-range-proof.md)
 
 ## See also
 
-- Category: [contracts-oracles.md](contracts-oracles.md)  
-- [Library index](contracts-library.md)
-- [Additional contracts index](contracts.md)
+- [Category: Oracle Contracts](contracts-oracles.md)
+- [Contracts Library](contracts-library.md)
+- [Additional Contracts Index](contracts.md)
 
 ## Contributor Checklist
 

@@ -56,18 +56,18 @@ title: Bulletproof Range Proof Verification
 
 ## References
 
-- Zero-knowledge proofs (overview): [zkp.md](zkp.md)
-- Non-interactive ZK (NIZK): [nizk.md](nizk.md)
-- Sigma protocols (foundation): [sigma.md](sigma.md)
-- Discrete logarithms (prereq): [dlog.md](dlog.md)
+- [Zero-knowledge proofs (overview)](zkp.md)
+- [Non-interactive ZK (NIZK)](nizk.md)
+- [Sigma protocols (foundation)](sigma.md)
+- [Discrete logarithms (prereq)](dlog.md)
 - Talks/ErgoHack: Add references when available.
-- Related patterns: [pattern-stealth-address.md](pattern-stealth-address.md), [pattern-whitelist-token.md](pattern-whitelist-token.md)
+- Related patterns: [Stealth address](pattern-stealth-address.md), [Whitelist-only token](pattern-whitelist-token.md)
 
 ## See also
 
-- Category: [contracts-proofs.md](contracts-proofs.md)  
-- [Library index](contracts-library.md)
-- [Additional contracts index](contracts.md)
+- [Category: Contract Proofs](contracts-proofs.md)
+- [Contracts Library](contracts-library.md)
+- [Additional Contracts Index](contracts.md)
 
 ## Contributor Checklist
 

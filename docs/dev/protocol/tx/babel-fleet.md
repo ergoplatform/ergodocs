@@ -29,21 +29,17 @@ Babel Fees offer key benefits:
 ## Key Features
 
 - **Transaction Extension**
-
   - Provides a BabelSwapPlugin that seamlessly integrates with Fleet SDK's TransactionBuilder
   - Modifies transaction inputs and outputs to incorporate Babel Fee logic
 
 - **Babel Box Validation**
-
   - Offers utilities to validate the structure and parameters of Babel Boxes
   - Ensures compliance with the EIP-31 contract template and box rules
 
 - **Contract Script Generation**
-
   - Includes functions for building and verifying Babel Fee contract scripts (ErgoTree)
 
 - **Developer-Friendly**
-
   - Supports ESM and CommonJS modules
   - Tree-shakeable design for smaller bundle sizes
 
@@ -108,7 +104,6 @@ This example showcases how to use Babel Fees with the plugin without any direct 
 **Plugins**
 
 1. **`BabelSwapPlugin(babelBox: Box<Amount>, token: { tokenId: string, amount: string }): TransactionExtension`**
-
     - **Description**: Extends the transaction to incorporate Babel Fees by converting the provided token into ERG needed for fees.
     - **Parameters**:
         - `babelBox`: A valid Babel Box containing tokens and ERG for conversion.
@@ -127,7 +122,6 @@ This example showcases how to use Babel Fees with the plugin without any direct 
 ## **Utility Functions**
 
 1. **`getTokenPrice(babelBox: Box<Amount>): bigint`**
-
     - **Description**: Calculates and returns the price of a single token unit in nanoERG based on a specific Babel Box.
     - **Example**:
 
@@ -137,7 +131,6 @@ This example showcases how to use Babel Fees with the plugin without any direct 
         ```
 
 2. **`buildBabelContract(tokenId: string): string`**
-
     - **Description**: Generates the ErgoTree (contract script) for a Babel Box using a specified token ID.
     - **Usage**:
 
@@ -146,7 +139,6 @@ This example showcases how to use Babel Fees with the plugin without any direct 
          ```
 
 3. **`isValidBabelBox(box: Box<Amount>): boolean`**
-
     - **Description**: Determines if a given box is a valid Babel Box.
     - **Usage**:
 
@@ -158,7 +150,6 @@ This example showcases how to use Babel Fees with the plugin without any direct 
         ```
 
 4. **`extractTokenIdFromBabelContract(ergoTree: string): string`**
-
     - **Description**: Extracts the token ID from a Babel Fee contract script (ErgoTree).
     - **Usage**:
 
@@ -167,7 +158,6 @@ This example showcases how to use Babel Fees with the plugin without any direct 
         ```
 
 5. **`isBabelContractForTokenId(ergoTree: string, tokenId: string): boolean`**
-
     - **Description**: Validates if an ErgoTree matches the Babel Fee contract for a specific token ID.
     - **Usage**:
 
@@ -221,24 +211,20 @@ For a detailed guide on how to mint a token, set up a Babel Box, and utilize the
 ### Key Updates from `CHANGELOG.md`
 
 - **Validation Enhancements**:
-
   - Introduced type validation for Babel Box fields (`R4`, `R5`) in version `0.1.16`. This ensures that boxes meet strict requirements.
 
 - **Module Export Fixes**:
-
   - Adjusted the ESM and CommonJS exports in version `0.1.10` to prevent issues with package imports.
 
 ### Package Metadata
 
 - **Version**: `0.1.18`
 - **Dependencies**:
-
   - `@fleet-sdk/core`  
   - `@fleet-sdk/common`  
   - `@fleet-sdk/serializer`  
 
 - **Environment**:
-
   - Requires Node.js 18 or newer.
 
 ---

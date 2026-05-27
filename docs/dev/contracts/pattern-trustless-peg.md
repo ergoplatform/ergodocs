@@ -58,13 +58,13 @@ title: Trustless Peg (Cross-Chain)
 - [Sidechains overview](sidechains.md)
 - [Sigma Chains](sigma-chains.md)
 - Talks/ErgoHack: Add materials when available.
-- Related patterns: [pattern-bitcoin-relay.md](pattern-bitcoin-relay.md), [pattern-import-offchain-bank.md](pattern-import-offchain-bank.md)
+- Related patterns: [Bitcoin relay](pattern-bitcoin-relay.md), [Import off-chain bank](pattern-import-offchain-bank.md)
 
 ## See also
 
-- Category: [contracts-interoperability.md](contracts-interoperability.md)  
-- [Library index](contracts-library.md)
-- [Additional contracts index](contracts.md)
+- [Category: Contract Interoperability](contracts-interoperability.md)
+- [Contracts Library](contracts-library.md)
+- [Additional Contracts Index](contracts.md)
 
 ## Contributor Checklist
 

@@ -23,7 +23,6 @@ Complex expressions, such as $dlog(x_1) \lor (dlog(x2) /\ dlog(x3))$, where $dlo
 4. **Bottom-up:** For every simulated leaf, a response and a commitment (i.e., second and first prover message) are simulated according to the Schnorr simulator. For every real leaf, the commitment (i.e., first prover message) is computed according to the Schnorr protocol. For every $\lor$/$\land$ node, the commitment is the union (as a set) of commitments below it.
     - The Schnorr challenge is computed as the hash of the commitment of the root (plus other inputs -- probably the tree being proven and the message).
 6. **Top-down:** The challenge for every real child of every real $\lor$ and $\land$ is computed as follows. If $\lor$, then the challenge for the one real child of $\lor$ is equal to the XOR of the challenge of $\lor$ and the challenges for all the simulated children of $\lor$. If $\land$, then the challenge for every real child of $\land$ is equal to the challenge of the $\land$.
-
     - **Note:** Simulated $\land$ and $\lor$ only have simulated descendants, so there is no need to recurse down from them.
 
 Finally, to obtain a flat binary string containing $(e, z)$ pairs (challenge and prover's response for a leaf sub-protocol) from the tree, follow these steps: (TODO)

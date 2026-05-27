@@ -14,14 +14,16 @@ tags:
   - RocksDB
   - PostgreSQL
 owner: docs
-last_reviewed: 2026-05-26
+last_reviewed: 2026-05-27
 source_repos:
   - repo: ergoplatform/explorer-backend
     branch: master
     paths:
       - modules/chain-grabber
+      - modules/chain-grabber/src/main/resources/application.conf
 source_of_truth:
   - https://github.com/ergoplatform/explorer-backend/tree/master/modules/chain-grabber
+  - https://github.com/ergoplatform/explorer-backend/tree/master/modules/chain-grabber/src/main/resources/application.conf
 ---
 
 # Indexing Strategy: Building a Custom Indexer
@@ -68,6 +70,33 @@ Building an indexer from scratch involves solving several complex problems (like
 * **Forking Existing Indexers:** Explore open-source indexers like [ErgoWatch](#ergowatch) or [Pragmaxim's Chain Indexer](#pragmaxims-chain-indexer) (see below). Forking and modifying them to suit your specific data needs can be a viable strategy.
 
 **Key Takeaway:** Don't reinvent the wheel for core functionalities like block fetching and reorg handling if existing, well-maintained tools can provide a foundation.
+
+### Explorer Chain-Grabber Configuration Shape
+
+The Explorer backend chain-grabber config shows the operational pieces a production indexer needs:
+
+```conf
+chain-poll-interval = 15s
+epoch-poll-interval = 60s
+write-orphans = true
+
+network {
+  master-nodes = ["http://213.239.193.208:9053"]
+}
+
+indexes {
+  box-registers = true
+  script-constants = true
+  block-extensions = true
+  ad-proofs = true
+  block-stats = true
+}
+
+db.url = "jdbc:postgresql://localhost:5432/explorer"
+redis-cache.url = "redis://localhost:6380"
+```
+
+This is a useful checklist even if you do not run Explorer backend directly: define polling cadence, node sources, orphan/reorg behavior, selected indexes, durable PostgreSQL storage, and cache layer separately.
 
 ## Tools & SDKs for Custom Logic
 

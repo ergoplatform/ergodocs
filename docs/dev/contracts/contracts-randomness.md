@@ -20,5 +20,5 @@ Randomness patterns provide unbiased or economically-secure randomness for on-ch
 
 ## See also
 
-- [Library index](contracts-library.md)
-- [Additional contracts index](contracts.md)
+- [Contracts Library](contracts-library.md)
+- [Additional Contracts Index](contracts.md)

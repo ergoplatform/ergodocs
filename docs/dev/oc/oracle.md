@@ -4,7 +4,7 @@ tags:
   - Oracles
   - Off-chain
 owner: docs
-last_reviewed: 2026-05-26
+last_reviewed: 2026-05-27
 source_repos:
   - repo: ergoplatform/oracle-core
     branch: develop
@@ -24,8 +24,31 @@ The current Oracle Core is built to run the protocol specified in the [EIP-0023 
 
 For those interested in setting up an ERG/XAU oracle pool in a testnet environment, we have created a comprehensive guide to walk you through the process. The guide provides detailed instructions, making it easy even for those relatively new to the field. Follow the link to access our [Bootstrap an ERG/XAU pool on testnet guide](https://github.com/ergoplatform/oracle-core/blob/develop/docs/how_to_bootstrap.md).
 
+## Operator Model
+
+Oracle Core needs:
+
+- an Ergo node wallet address with funds for bootstrap and posting transactions
+- node URL and API key access
+- operator mnemonic loaded from environment, for example `ORACLE_WALLET_MNEMONIC`
+- one Oracle Core instance per oracle pool
+- separate API ports if one operator runs multiple pools from the same host
+
+Bootstrap generates pool state on-chain and produces `pool_config.yaml` for operators. After pool tokens are minted, each operator receives oracle, reward, and ballot tokens plus the pool config before running `oracle-core run`.
+
+## Bootstrap Flow
+
+```console
+oracle-core generate-oracle-config
+oracle-core bootstrap --generate-config-template bootstrap.yaml
+oracle-core bootstrap bootstrap.yaml
+oracle-core run
+```
+
+Plan quorum before minting. For example, a 9-oracle pool with `min_data_points: 5` and `min_votes: 5` keeps consensus above half and leaves vacant operator slots.
+
 ## See also
 
-- Pattern: [pattern-hashrate-oracle.md](pattern-hashrate-oracle.md)
-- Category: [contracts-oracles.md](contracts-oracles.md)
-- Library: [contracts-library.md](contracts-library.md)
+- [Pattern: Trustless Hashrate Oracle](pattern-hashrate-oracle.md)
+- [Category: Oracle Contracts](contracts-oracles.md)
+- [Contracts Library](contracts-library.md)

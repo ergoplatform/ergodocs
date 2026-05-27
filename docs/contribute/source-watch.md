@@ -13,6 +13,8 @@ last_reviewed: 2026-05-26
 
 Source Watch connects docs pages to product repositories. It helps maintainers find pages that may need review after source code, API, configuration, or release changes.
 
+For repeatable maintainer/agent workflow, see the [Source Watch playbook](source-watch-playbook.md).
+
 ## Page Metadata
 
 Add metadata to pages that depend on source repositories:

@@ -54,9 +54,7 @@ The buyback-contract update matters for integrations: UIs should not hard-code o
 - **Reserve model (1:1):** adopt a conservative, transparent reserve approach that follows Dexy-style operational assumptions to reduce systemic risk.
 
 - **Cost efficiency:** select mechanisms that minimize fees and friction across composable flows. Dexy’s low-fee properties and Rosen Bridge integration can drive competitive costs.
-
   - **Recommended fee targets:**
-
     - **Rosen and cross-chain bridges:** enable custom fees as low as ~0.1% to remain competitive.
     - **Dedicated v3 AMM instance (e.g., BSC):** target 0.05% fees with a tighter price band (0.9–1.1) for stable-stable liquidity.
 
@@ -99,7 +97,6 @@ We aim for a stable peg and robust security under realistic adversarial conditio
 - **Initial nominal supply:** choose a number that avoids awkward UX. Community leaning: **250,000,000**. A larger nominal supply also works when paired with 6 decimals.
 
 - **Fee structure:**
-  
   - Protocol/bridge configurable fee floor at **0.1%**, with operator flexibility for competitive rates.
   - Target **0.05%** for dedicated stable-stable AMM pools.
   - UI fee waiver after a defined cumulative-fees threshold for USE (threshold set by the UI operator).

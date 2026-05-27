@@ -36,5 +36,6 @@ See also: [Concepts & Assumptions](concepts-assumptions.md), [Token Transfer Flo
 - DoS resistance: Many Watchers can participate independently, increasing liveness and network resilience.
 
 For next steps and implementation details, see:
+
 - [New Chain Integration](new-chain-integration.md)
 - [Fees & Dust](fees-and-dust.md)

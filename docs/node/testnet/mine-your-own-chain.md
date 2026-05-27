@@ -38,11 +38,9 @@ scorex {
 ### Steps to Run the Node
 
 1. **Set Up the Configuration:**
-
     - Make sure your `testnet.conf` file is configured as shown above. This will help prevent address clashes with the mainnet and public testnet by using a custom `addressPrefix` and `magicBytes`.
 
 2. **Compile the Node:**
-
     - Use the following command to compile the Ergo node:
 
       ```shell
@@ -52,7 +50,6 @@ scorex {
     - This will generate an `ergo.jar` file at `/target/scala*/ergo-*.jar`.
 
 3. **Run the Node:**
-
     - Start the node using the command:
 
       ```bash
@@ -60,7 +57,6 @@ scorex {
       ```
 
 4. **Initialize and Unlock the Wallet:**
-
     - Access the panel at `127.0.0.1:9052/panel` to initialize and unlock your wallet. This is necessary as the first blocks will be generated using Autolykos v1.
 
 ### Additional Support

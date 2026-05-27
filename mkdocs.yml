@@ -138,6 +138,7 @@ markdown_extensions:
 nav:
   - Start Here:
       - Welcome: index.md
+      - Maintainer Start Here: start_here.md
       - Getting Started: getting-started-with-ergo.md
       - Get a Wallet: wallets-overview.md
       - Using Ergo: using-ergo-intermediate.md
@@ -485,6 +486,7 @@ nav:
           - Documentation Lifecycle: contribute/docs-lifecycle.md
           - Information Architecture: contribute/information-architecture.md
           - Source Watch: contribute/source-watch.md
+          - Source Watch Playbook: contribute/source-watch-playbook.md
       - DAOs:
           - Ergo Foundation:
               - About: ef/ergo-foundation.md
@@ -790,6 +792,15 @@ nav:
       - Cryptography & Data Structures: dev/cryptography-and-data-structures-hub.md
   - Deploy:
       - Overview: dev/interact.md
+      - Deployment Runbook: node/deploy-runbook.md
+      - Operations:
+          - Hardening: node/operations/hardening.md
+          - Monitoring: node/operations/monitoring.md
+          - Upgrades & Rollback: node/operations/upgrades.md
+          - Backups: node/operations/backups.md
+          - Reverse Proxy: node/operations/reverse-proxy.md
+          - Incident Runbooks: node/operations/incidents.md
+          - Testnet & Devnet Ops: node/operations/testnet-devnet.md
       - The Ergo Node:
           - Install Overview: node/install.md
           - Architecture: node/architecture.md
@@ -869,19 +880,24 @@ nav:
               - OpenAPI Spec: node/swagger/openapi.md
               - Try it out!: node/swagger/swagger_api.md
               - Indexed Node API: node/indexed-node.md
+              - Scanner Operations: node/scanner-ops.md
       - Watchers (Rosen):
           - Overview: eco/rosen/watcher.md
           - Prerequisites: eco/rosen/rosen-preq.md
           - Ergo Watcher: eco/rosen/ergo-watcher.md
           - Bitcoin Watcher: eco/rosen/bitcoin-watcher.md
+      - Guards (Rosen):
+          - Guard Operations: eco/rosen/guard.md
       - Oracles:
           - Oracle Core: dev/oc/oracle.md
           - Bootstrap an Oracle Pool: tutorials/oracle-bootstrap.md
       - Blockchain Indexing:
           - Overview: dev/tutorials/blockchain-indexing.md
+          - Explorer Stack: node/explorer-stack.md
           - Explorer API: dev/tutorials/blockchain-indexing/explorer-apis.md
           - Node API (Direct): dev/tutorials/blockchain-indexing/node-api-direct.md
           - Custom Indexer: dev/tutorials/blockchain-indexing/custom-indexer.md
+      - Mining Pool Operations: mining/pool-ops.md
   - Mine:
       - Getting Started:
           - mining/mining-overview.md

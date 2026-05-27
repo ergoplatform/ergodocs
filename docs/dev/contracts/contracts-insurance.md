@@ -20,5 +20,5 @@ Insurance patterns encode protection against specified risks with on-chain crite
 
 ## See also
 
-- [Library index](contracts-library.md)
-- [Additional contracts index](contracts.md)
+- [Contracts Library](contracts-library.md)
+- [Additional Contracts Index](contracts.md)

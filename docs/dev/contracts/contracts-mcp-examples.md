@@ -81,8 +81,8 @@ This page sketches how contract patterns can be exposed and composed via ErgoScr
 
 ## See also
 
-- [Library index](contracts-library.md)
-- Off-chain & UI References: [contracts-offchain-references.md](contracts-offchain-references.md)
+- [Contracts Library](contracts-library.md)
+- [Off-chain & UI References](contracts-offchain-references.md)
 
 ## Contributing MCP Examples
 

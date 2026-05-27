@@ -16,9 +16,9 @@ Standardize how new contract patterns are added so developers can rely on consis
 
 ## Before you start
 
-- Check existing categories in the library: [contracts-library.md](contracts-library.md).
-- Pick the right category page (e.g., [contracts-tokens.md](contracts-tokens.md), [contracts-access-control.md](contracts-access-control.md)).
-- Use the template: [pattern-template.md](pattern-template.md).
+- Check existing categories in the [contracts library](contracts-library.md).
+- Pick the right category page (e.g., [token contracts](contracts-tokens.md), [access-control contracts](contracts-access-control.md)).
+- Use the [pattern template](pattern-template.md).
 - Filenames must be globally unique (project rule). Use the prefix `pattern-` for pattern pages.
 
 ## How to add a new pattern
@@ -103,7 +103,7 @@ Standardize how new contract patterns are added so developers can rely on consis
 
 ## See also
 
-- [Library index](contracts-library.md)
-- Off-chain references: [contracts-offchain-references.md](contracts-offchain-references.md)
-- MCP examples: [contracts-mcp-examples.md](contracts-mcp-examples.md)
-- Legacy index of contracts/examples: [contracts.md](contracts.md)
+- [Contracts Library](contracts-library.md)
+- [Off-chain references](contracts-offchain-references.md)
+- [MCP examples](contracts-mcp-examples.md)
+- [Legacy index of contracts/examples](contracts.md)

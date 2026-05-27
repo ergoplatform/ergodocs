@@ -1,49 +1,71 @@
-# Welcome to Ergo
+# Welcome to ErgoDocs
 
-New to cryptocurrency or looking to understand what makes Ergo special? You're in the right place! Ergo is a secure and powerful platform designed to be a fair financial system for everyone. Think of it as a next-generation digital money system built with privacy and everyday people in mind.
+ErgoDocs helps you understand, use, build on, and operate Ergo.
 
-This guide helps you find what you need, whether you want to learn the basics, use Ergo for transactions, build applications, or help secure the network.
+Ergo is a proof-of-work smart-contract platform built around eUTXO, ErgoScript, Sigma protocols, and long-term economic sustainability. If those words are new, start with [Getting Started](getting-started-with-ergo.md).
+
+## Choose Your Path
+
+| I want to... | Start here | Then go deeper |
+| --- | --- | --- |
+| Understand Ergo in plain language | [Getting Started](getting-started-with-ergo.md) | [Learn](learn.md), [FAQ](faq.md), [Glossary](glossary.md) |
+| Get a wallet and hold ERG safely | [Get a Wallet](wallets-overview.md) | [Access Issues](tutorials/access-issues.md), [Cold Wallet Guide](tutorials/cold-wallet.md) |
+| Use apps, DEXs, NFTs, stablecoins, or bridges | [Using Ergo](using-ergo-intermediate.md) | [Use Overview](uses/use-cases-overview.md), [Rosen Bridge](eco/rosen.md) |
+| Build a dApp, wallet integration, or contract | [Building on Ergo](building-on-ergo-developers.md) | [Develop Overview](dev/get-started.md), [ErgoScript](dev/scs/ergoscript.md) |
+| Run infrastructure | [Deployment Runbook](node/deploy-runbook.md) | [Node Install](node/install.md), [Operations](node/operations/hardening.md) |
+| Mine ERG or run pool infrastructure | [Securing the Network](securing-the-network-miners.md) | [Mining Overview](mining/mining-overview.md), [Pool Operations](mining/pool-ops.md) |
+| Join the community or contribute | [Community](engage-with-the-ergo-community.md) | [Participate](contribute.md), [Docs Contributions](contribute/docs.md) |
+
+## Main Sections
 
 ::cards::
 
 [
   {
-    "title": "🔬 Learn",
-    "content": "Get a high-level overview of how Ergo works. ",
+    "title": "Start Here",
+    "content": "Simple orientation, first steps, wallets, user paths, and reference pages.",
     "image": "./assets/img/grid/01.png",
+    "url": "getting-started-with-ergo.md"
+  },
+  {
+    "title": "Use",
+    "content": "Wallets, ecosystem apps, DEXs, NFTs, stablecoins, bridges, privacy, and tutorials.",
+    "image": "./assets/img/grid/05.png",
+    "url": "uses/use-cases-overview.md"
+  },
+  {
+    "title": "Learn",
+    "content": "Protocol concepts, research, cryptography, eUTXO, storage rent, scaling, and roadmap.",
+    "image": "./assets/img/grid/03.png",
     "url": "learn.md"
   },
   {
-    "title": "🛠 Start Developing",
-    "content": "Get started on your development journey.",
+    "title": "Develop",
+    "content": "ErgoScript, SDKs, wallet integrations, APIs, contract patterns, and examples.",
     "image": "./assets/img/grid/02.png",
-    "url": "dev/start.md"
-
+    "url": "dev/get-started.md"
   },
   {
-    "title": "⛏ Start Mining",
-    "content": "Start mining ERG today or explore unique mining features available on Ergo.",
+    "title": "Deploy",
+    "content": "Nodes, API access, monitoring, backups, indexers, Rosen watchers, guards, and oracles.",
+    "image": "./assets/img/grid/04.png",
+    "url": "node/deploy-runbook.md"
+  },
+  {
+    "title": "Mine",
+    "content": "Mining setup, pools, solo mining, governance, rewards, and pool operations.",
     "image": "./assets/img/grid/06.png",
     "url": "mining/mining-overview.md"
-  },
-  {
-    "title": "🤝 Contribute",
-    "content": "'Lets create grassroots finance'",
-    "image": "./assets/img/grid/04.png",
-    "url": "contribute.md"
-  },
-  {
-    "title": "💳 Wallets",
-    "content": "Storing your ERG safely & securely.",
-    "image": "./assets/img/grid/05.png",
-    "url": "wallets-overview.md"
-  },
-  {
-    "title": "❓ FAQ",
-    "content": "View some of the most frequently asked questions.",
-    "image": "./assets/img/grid/03.png",
-    "url": "faq.md"
-  },
+  }
 ]
 
 ::/cards::
+
+## Quick Reference
+
+- [FAQ](faq.md)
+- [Glossary](glossary.md)
+- [Common Misconceptions](fud-faq.md)
+- [Roadmap](roadmap.md)
+- [Research Library](documents.md)
+- [Community Channels](engage-with-the-ergo-community.md)

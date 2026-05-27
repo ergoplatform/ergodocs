@@ -96,4 +96,4 @@ With the availability of [Sigma.js](sigmajs.md), [Fleet](fleet.md) can play the 
 
 See also
 
-- Contracts & Patterns Library: contracts-library.md
+- [Contracts & Patterns Library](contracts-library.md)

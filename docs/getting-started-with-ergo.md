@@ -1,95 +1,69 @@
-# Start with Ergo
+# Getting Started with Ergo
 
-This page gives a short path for new users. Begin with the basics, set up a wallet, keep funds safe, then explore simple ways to use Ergo.
+Use this page as a short map. It explains what Ergo is, what to do first, and where each docs section begins.
 
-# Essentials
+## What Ergo Is
 
-| Topic | Purpose |
-| --- | --- |
-| [Why Ergo](why-ergo.md) | Vision and goals |
-| [Protocol Overview](protocol-overview.md) | Core components |
-| [The Ergo Manifesto](social_contract.md) | Guiding principles |
+Ergo is a programmable money platform. It combines:
 
-# First steps
+- **Proof of Work** for open, miner-secured consensus.
+- **eUTXO** for predictable, parallel-friendly transaction design.
+- **ErgoScript** for smart contracts.
+- **Sigma protocols** for efficient cryptographic proofs and privacy patterns.
+- **Storage rent** so old unused state can keep paying for network resources.
 
-| Topic | Purpose |
-| --- | --- |
-| [Wallets Overview](wallets-overview.md) | All wallet choices and guides |
-| [Nautilus](nautilus.md) | Browser wallet for dApps |
-| [Satergo](satergo.md) | Desktop wallet (optional full node) |
-| [SAFEW](safew.md) | Mobile wallet (Android) |
-| [Cold Wallet Guide](cold-wallet.md) | Offline safety and backups |
-| [Paper Wallet](paper-wallet.md) | Print and store seed offline |
-| [Ledger](ledger.md) | Hardware wallet support |
-| [Access Issues](access-issues.md) | Fix common problems |
+Read next:
 
-# Safety and funds
+- [Why Ergo](dev/protocol/why.md)
+- [Protocol Overview](dev/protocol/protocol-overview.md)
+- [FAQ](faq.md)
+- [Glossary](glossary.md)
+- [Common Misconceptions](fud-faq.md)
 
-| Topic | Purpose |
-| --- | --- |
-| [Security Guide](https://ergonaut.space/en/Guides/yield/getting-started) | Acquire ERG with safety tips |
-| [Minimum Fee](min-fee.md) | Network fee rules |
-| [Babel Fees](babel-fees.md) | Pay fees with tokens |
-| [Message Signing](message-signing.md) | Verify dApp actions |
-| [Common Misconceptions](fud-faq.md) | Clear up frequent claims |
+## First Steps
 
-# Use Ergo
+1. Read [Why Ergo](dev/protocol/why.md) for the short explanation.
+2. Choose a wallet in [Get a Wallet](wallets-overview.md).
+3. Learn basic safety from the [Cold Wallet Guide](tutorials/cold-wallet.md) and [Access Issues](tutorials/access-issues.md).
+4. Explore the ecosystem from [Using Ergo](using-ergo-intermediate.md).
+5. If you want technical depth, move to [Learn](learn.md), [Develop](dev/get-started.md), or [Deploy](node/deploy-runbook.md).
 
-| Topic | Purpose |
-| --- | --- |
-| [Using Ergo](using-ergo-intermediate.md) | What you can do next |
-| [Ecosystem Overview](use-cases-overview.md) | App categories at a glance |
-| [DEX Overview](dex.md) | Swap tokens |
-| [Stablecoins Overview](stablecoins.md) | Models and links |
-| [NFTs](nft.md) | Create and trade |
-| [Airdrops and Token Sales](airdrops.md) | Join token events |
-| [Gaming Tutorial](gaming-tutorial.md) | Try a game on Ergo |
+## If You Are...
 
-# Common tasks
-
-| Task | Start here | Extra |
+| You are... | Start with | Why |
 | --- | --- | --- |
-| Swap tokens | [DEX Overview](dex.md) | [single-tx-swap.com](https://www.single-tx-swap.com/) |
-| Mint an NFT | [NFTs](nft.md) | — |
-| Use a stablecoin | [SigmaUSD](sigmausd.md) | — |
-| P2P trade | [DEX Overview](dex.md) | [single-tx-swap.com](https://www.single-tx-swap.com/) |
-| Explore apps | [Ecosystem Overview](use-cases-overview.md) | [Sigmaverse](https://sigmaverse.io) |
-| Earn yield | [Using Ergo](using-ergo-intermediate.md) | Liquidity, staking, risks |
-| Options and derivatives | [Using Ergo](using-ergo-intermediate.md) | [Derivatives Overview](deriv.md) |
-| Arbitrage | [Using Ergo](using-ergo-intermediate.md) | [Arbitrage Tutorial](arbit.md) |
+| New to Ergo | [Why Ergo](dev/protocol/why.md) | Plain-language goals and design choices. |
+| Holding ERG | [Get a Wallet](wallets-overview.md) | Wallet choices, setup, safety, and troubleshooting. |
+| Trying apps | [Using Ergo](using-ergo-intermediate.md) | DEXs, NFTs, bridges, stablecoins, and tutorials. |
+| Learning protocol basics | [Learn](learn.md) | eUTXO, Sigma protocols, mining, storage rent, scaling. |
+| Building software | [Building on Ergo](building-on-ergo-developers.md) | Developer pathways, SDKs, APIs, contracts. |
+| Running infrastructure | [Deployment Runbook](node/deploy-runbook.md) | Nodes, hardening, monitoring, indexers, Rosen, oracles. |
+| Mining | [Securing the Network](securing-the-network-miners.md) | Mining setup, pools, solo mining, pool ops. |
+| Contributing | [Community](engage-with-the-ergo-community.md) | Community channels, docs, bounties, grants. |
 
-# Secure the network
+## Main Docs Areas
 
-| Topic | Purpose |
+- Start Here: orientation, first decisions, FAQ, glossary.
+- [Use](uses/use-cases-overview.md): user tasks and ecosystem apps.
+- [Learn](learn.md): concepts, protocol design, research, roadmap.
+- [Participate](contribute.md): community, governance, grants, docs, events.
+- [Develop](dev/get-started.md): ErgoScript, SDKs, APIs, contracts, tutorials.
+- [Deploy](node/deploy-runbook.md): node and service operations.
+- [Mine](mining/mining-overview.md): mining and pool operations.
+
+## Common Tasks
+
+| Task | Start here |
 | --- | --- |
-| [Securing the Network](securing-the-network-miners.md) | Paths for miners and validators |
-| [Mining Overview](mining-overview.md) | Basics and next steps |
-| [Node Install Guides](install.md) | Run a node or validator |
-
-# Learn more
-
-| Topic | Purpose |
-| --- | --- |
-| [Learn](learn.md) | Map of core learning and hubs |
-| [Protocol Overview](protocol-overview.md) | High level design |
-| [Roadmap](roadmap.md) | Plans and milestones |
-| [Research Library](documents.md) | Papers and references |
-
-# Optional next steps
-
-| Topic | Purpose |
-| --- | --- |
-| [Light SPV Node](light-spv-node.md) | Low resource option |
-| [Testnet](testnet.md) | Practice without risk |
-| [Off Chain Overview](off-chain-overview.md) | Services and bots |
-| [Contribute](contribute.md) | Good first tasks |
-
-# Help and community
-
-| Topic | Purpose |
-| --- | --- |
-| [FAQ](faq.md) | Quick answers |
-| [Glossary](glossary.md) | Key terms |
-| [Community Channels](https://direct.me/ergo) | Chat and news |
-| [How Ergo Works](how-ergo-works.md) | Roles and structure |
-| [Community](engage-with-the-ergo-community.md) | Find the right place |
+| Pick a wallet | [Get a Wallet](wallets-overview.md) |
+| Fix wallet access | [Access Issues](tutorials/access-issues.md) |
+| Swap tokens | [DEX Overview](uses/dex.md) |
+| Use Rosen Bridge | [Rosen Bridge](eco/rosen.md) |
+| Use SigmaUSD | [SigmaUSD](uses/sigmausd.md) |
+| Mint an NFT | [Mint an NFT](dev/tokens/nfts/create.md) |
+| Run a node | [Node Install](node/install.md) |
+| Use the node API | [Swagger Overview](node/swagger.md) |
+| Build a dApp | [Developer Overview](dev/get-started.md) |
+| Write smart contracts | [ErgoScript](dev/scs/ergoscript.md) |
+| Mine ERG | [Mining Overview](mining/mining-overview.md) |
+| Ask for help | [Community](engage-with-the-ergo-community.md) |

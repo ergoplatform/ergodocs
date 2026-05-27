@@ -15,6 +15,7 @@ RosenBridge uses a two-layer, Ergo-centric architecture that enables secure cros
   - A predefined set of entities serve as Guards and can change over time.
 
 See also:
+
 - [Watcher](watcher.md)
 - [Rosen Guards](rosen-guard.md)
 
@@ -101,6 +102,7 @@ flowchart LR
 ```
 
 For an introductory walkthrough, see the overview and user-facing pages:
-- Landing: [rosen.md](rosen.md)
+
+- [Landing](rosen.md)
 - Operations: [Token Transfer Flows](token-transfer-flows.md)
 - Fees and housekeeping: [Fees & Dust](fees-and-dust.md)

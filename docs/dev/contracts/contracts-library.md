@@ -52,10 +52,10 @@ Many contract ideas and implementations are scattered across forums, hackathon r
 
 ## Contributor Guide
 
-- How to add/edit patterns: contracts-contributing.md
-- Pattern template: pattern-template.md
-- Off-chain/UI reference collection: contracts-offchain-references.md
-- MCP usage examples: contracts-mcp-examples.md
+- [How to add/edit patterns](contracts-contributing.md)
+- [Pattern template](pattern-template.md)
+- [Off-chain/UI reference collection](contracts-offchain-references.md)
+- [MCP usage examples](contracts-mcp-examples.md)
 
 
 

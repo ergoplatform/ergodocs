@@ -170,3 +170,6 @@ docs_env/*
 .clinerules
 memory-bank/*
 /node_modules
+.tmp_*/
+.cache/
+.metals/

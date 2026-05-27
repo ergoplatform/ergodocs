@@ -56,21 +56,21 @@ title: Schnorr Signature Verification
 
 ## References
 
-- Schnorr overview (Sigma): [schnorr.md](schnorr.md)
-- Verifying Schnorr in ErgoScript (how-to): [verifying.md](verifying.md)
-- Discrete logarithms (foundation): [dlog.md](dlog.md)
-- Sigma protocols and ZK overview: [sigma.md](sigma.md), [zkp.md](zkp.md)
-- Signature scheme overview: [sig-scheme.md](sig-scheme.md)
+- [Schnorr overview (Sigma)](schnorr.md)
+- [Verifying Schnorr in ErgoScript (how-to)](verifying.md)
+- [Discrete logarithms (foundation)](dlog.md)
+- Background: [Sigma protocols](sigma.md), [zero-knowledge proofs](zkp.md)
+- [Signature scheme overview](sig-scheme.md)
 - Forum discussion: [Verifying Schnorr Signatures in ErgoScript](https://www.ergoforum.org/t/verifying-schnorr-signatures-in-ergoscript/3407)
-- Improved signatures and hinting: [improved-signatures.md](improved-signatures.md), [sigs.md](sigs.md)
+- Related internals: [Improved signatures](improved-signatures.md), [distributed signatures](sigs.md)
 - Talks/ErgoHack: Add references once available.
-- Related patterns: [pattern-bulletproof-range-proof.md](pattern-bulletproof-range-proof.md)
+- [Related patterns](pattern-bulletproof-range-proof.md)
 
 ## See also
 
-- Category: [contracts-proofs.md](contracts-proofs.md)  
-- [Library index](contracts-library.md)
-- [Additional contracts index](contracts.md)
+- [Category: Contract Proofs](contracts-proofs.md)
+- [Contracts Library](contracts-library.md)
+- [Additional Contracts Index](contracts.md)
 
 ## Contributor Checklist
 

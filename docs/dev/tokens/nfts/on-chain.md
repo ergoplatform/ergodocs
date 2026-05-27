@@ -47,6 +47,7 @@ If the data is textual, you can embed the text (using the appropriate entities o
 - [Tokenart Cat #2](https://ergotokens.org/#/?token=14435234f5fdf1bfc0f98c2186512db292266bf4ac8d0c74f6ad056dcfaf36d1)  
 - [Tokenart Shark #2](https://ergotokens.org/#/?token=723f7eb846895bd0294619300488eb1974e6827e27d1624289019b42ec7252a3)
 - The SVG contains pure text:
+
 - ![svgASCII](https://github.com/ergoplatform/ergodocs/assets/99899807/02b1142b-a25d-4cc4-8092-c6026baa046c)
 
 ## A Brief History

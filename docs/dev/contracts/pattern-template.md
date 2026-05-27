@@ -46,14 +46,16 @@ Use this template when adding a new contract pattern.
 ## References
 
 - Forum threads:
+
 - Talks/ErgoHack:
-- Related patterns: Link other pattern filenames directly, e.g., [pattern-whitelist-token.md](pattern-whitelist-token.md)
+
+- Related patterns: link other pattern pages directly, e.g., [Whitelist-only token](pattern-whitelist-token.md)
 
 ## See also
 
-- Category page: link the relevant category, e.g., [contracts-tokens.md](contracts-tokens.md)
-- [Library index](contracts-library.md)
-- [Additional contracts index](contracts.md)
+- Category page: link the relevant category, e.g., [token contracts](contracts-tokens.md)
+- [Contracts Library](contracts-library.md)
+- [Additional Contracts Index](contracts.md)
 
 ## Contributor Checklist
 

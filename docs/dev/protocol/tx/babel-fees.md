@@ -23,20 +23,17 @@ EIP-31 defines the protocol-level contract template and expected box shape used 
 Here's how Babel fees work:
 
 1. **EIP-31 Supporters Provide Liquidity:**
-
       - Users (referred to as "EIP-31 supporters") create Unspent Transaction Outputs (UTXOs) containing ERG locked in a smart contract
       - These UTXOs have a price attribute specifying the amount of ERG the supporter is willing to pay for one unit of a specific "babel token"
       - Smart contracts secure these UTXOs
 
 2. **Users Select a Babel Fee Box:**
-
       - Users locate UTXOs for their desired token
       - Verify sufficient ERG for transaction fees
       - Evaluate exchange rates
       - Choose the most favorable rate
 
 3. **Babel Fee Box is Spent and Recreated:**
-
       - User spends the selected UTXO
       - Recreates UTXO with identical parameters (creator's public key and price)
       - Deposits required token amount

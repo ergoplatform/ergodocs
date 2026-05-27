@@ -1,6 +1,7 @@
 # Rosen Bridge: Connecting Cardano, Ergo, Bitcoin, Ethereum, Dogecoin, and Binance Smart Chain
 
 Rosen Bridge enables seamless movement of value across Cardano, Ergo, Bitcoin, Ethereum, Dogecoin, and Binance Smart Chain (BSC). Rather than swapping native tokens directly, Rosen locks the native asset on its origin chain and mints a representation (rsToken) on the destination chain. Examples:
+
 - ADA to rsADA on Ergo
 - ERG to rsERG on Cardano
 - BTC to rsBTC on Ergo or Cardano
@@ -34,8 +35,9 @@ When Rosen adds a new network, typical opportunities open up immediately for LPs
 | NFT Trading/Marketplace (where available) | [Auction House](ergo-auctions.md) | Cardano marketplaces | EVM marketplaces | EVM marketplaces | [ergo-auctions.md](ergo-auctions.md) |
 
 Notes:
+
 - “When listed/where available” means the opportunity exists once the asset is supported on that venue. Listings and pools are created permissionlessly on many DEXs, but lending markets and some venues are curated.
-- For LP creation on Uniswap with rsERG, follow the detailed tutorial: [rsERGLP.md](rsERGLP.md).
+- For LP creation on Uniswap with rsERG, follow the detailed [rsERG-LP tutorial](rsERGLP.md).
 
 ## Quick How-To: Bridging with Rosen
 
@@ -46,15 +48,17 @@ Notes:
 - Review displayed bridge fees and confirm
 
 Tips:
+
 - If you see “insufficient ERG” but have funds, consolidate in Nautilus (Wallet Optimization).
 - Typical transfers take around ~2 hours; delays are possible.
 - Track status via Rosen Events: https://app.rosen.tech/events
-- Understand status stages: [events-and-status.md](events-and-status.md)
-- Troubleshoot common issues: [rosen-troubleshooting.md](rosen-troubleshooting.md)
+- [Understand status stages](events-and-status.md)
+- [Troubleshoot common issues](rosen-troubleshooting.md)
 
 ## Supported Tokens and Live Status
 
 View the live list of locked assets and metadata here:
+
 - https://app.rosen.tech/assets
 
 Below are examples by network (not exhaustive — always verify using the assets page).

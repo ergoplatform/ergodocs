@@ -180,6 +180,7 @@ print(f"Broadcasted hashes: {result.get('tx_hash_list', [])}")
 ```
 
 Guardrails:
+
 - Sync multisig info before building: export_multisig_info/import_multisig_info.
 - Use do_not_relay on drafts until enough signatures are collected.
 - Production services should orchestrate signer order, retries, and fee policy.

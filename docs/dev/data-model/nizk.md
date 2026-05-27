@@ -19,17 +19,14 @@ NIZKs in Ergo are primarily implemented through **Sigma Protocols** (Σ-protocol
 ### Key Characteristics
 
 - **Non-Interactive**: Proofs can be verified without direct communication
-
   - Unlike traditional interactive zero-knowledge proofs, NIZKs can be verified asynchronously
   - Reduces computational overhead and network complexity
 
 - **Zero-Knowledge**: No information about the secret is revealed
-
   - Cryptographically guarantees that only the validity of a statement is proven
   - Protects sensitive information while maintaining verifiability
 
 - **Composable**: Can be combined using logical operators like AND, OR, and THRESHOLD
-
   - Enables creation of complex cryptographic conditions
   - Supports advanced smart contract logic and privacy-preserving protocols
 
@@ -38,13 +35,11 @@ NIZKs in Ergo are primarily implemented through **Sigma Protocols** (Σ-protocol
 Ergo supports several fundamental zero-knowledge proof types:
 
 1. **Discrete Logarithm Proofs**
-
      - Prove knowledge of a secret key without revealing it
      - Fundamental to [Schnorr signature verification](schnorr.md)
      - Implemented using `proveDlog()` predicate in [ErgoScript](ergoscript.md)
 
 2. **Diffie-Hellman Tuple Proofs**
-
      - Prove equality of discrete logarithms across different generators
      - Enables privacy-preserving key exchange and contract designs
      - Critical for advanced cryptographic protocols
@@ -86,19 +81,16 @@ val thresholdProof = prove {
 ### Privacy-Preserving Techniques
 
 1. **Ring Signatures**
-
      - Prove one of multiple possible signers without revealing the exact signer
      - Enables anonymous transactions
      - Detailed in [Ring Signatures](ring.md) documentation
 
 2. **Threshold Signatures**
-
      - Require k-out-of-n participants to sign
      - Supports multi-party computational scenarios
      - Explored in [Threshold Signatures](threshold.md) documentation
 
 3. **Stealth Addresses**
-
      - Generate one-time addresses for enhanced transaction privacy
      - Prevent linking of transactions to a specific public address
      - Crucial for maintaining financial privacy
@@ -148,7 +140,6 @@ NIZKs in Ergo are designed with performance in mind:
 - [Cryptographic Foundations](crypto.md)
 - [Zero-Knowledge Proofs in Ergo](zkp.md)
 - Academic Papers:
-
   - [Sigma Protocols: A Survey](https://eprint.iacr.org/2021/1022)
   - [Non-Interactive Zero-Knowledge Proofs](https://eprint.iacr.org/2016/263)
 

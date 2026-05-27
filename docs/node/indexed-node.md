@@ -5,6 +5,17 @@ tags:
   - API
   - Blockchain
   - Explorer
+owner: docs
+last_reviewed: 2026-05-27
+source_repos:
+  - repo: ergoplatform/ergo
+    branch: master
+    paths:
+      - src/main/resources/api/openapi.yaml
+      - src/main/resources/application.conf
+source_of_truth:
+  - https://github.com/ergoplatform/ergo/tree/master/src/main/resources/api/openapi.yaml
+  - https://github.com/ergoplatform/ergo/tree/master/src/main/resources/application.conf
 ---
 
 # Indexed Node API
@@ -16,6 +27,42 @@ A public instance of an indexed node's API explorer (Swagger UI) is available [h
 /// admonition | Disclaimer
 Please note that this is a public instance intended for exploration and testing. For production use or heavy querying, you should host your own instance of an [Ergo node](install.md) and enable indexing by setting `ergo.node.extraIndex = true` in the node's configuration file.
 ///
+
+## Enable the Index
+
+In `application.conf`:
+
+```conf
+ergo {
+  node {
+    extraIndex = true
+  }
+}
+```
+
+The extra index stores transactions, boxes, addresses, tokens, and contract-template indexes for `/blockchain/...` routes. It increases storage and indexing work, so enable it intentionally for API-serving nodes, watchers, explorers, and dApps that need historical lookup.
+
+Track index progress with:
+
+```http
+GET /blockchain/indexedHeight
+```
+
+Do not treat node sync height and indexed height as the same signal. During startup or catch-up, the node can know the chain tip while indexed history is still behind.
+
+## Indexed Route Map
+
+| Need | Route family |
+| --- | --- |
+| Indexed height | `GET /blockchain/indexedHeight` |
+| Blocks | `GET /blockchain/block/byHeaderId/{headerId}`, `POST /blockchain/block/byHeaderIds` |
+| Transactions | `GET /blockchain/transaction/byId/{txId}`, `GET /blockchain/transaction/byIndex/{txIndex}`, `POST /blockchain/transaction/byAddress`, `GET /blockchain/transaction/range` |
+| Boxes | `GET /blockchain/box/byId/{boxId}`, `GET /blockchain/box/byIndex/{boxIndex}`, `GET /blockchain/box/byTokenId/{tokenId}`, `POST /blockchain/box/byAddress` |
+| Unspent boxes | `GET /blockchain/box/unspent/byTokenId/{tokenId}`, `POST /blockchain/box/unspent/byAddress`, `GET /blockchain/box/unspent/byTemplateHash/{hash}`, `POST /blockchain/box/unspent/byErgoTree` |
+| Contract templates | `GET /blockchain/box/byTemplateHash/{hash}`, `GET /blockchain/box/unspent/byTemplateHash/{hash}` |
+| Tokens and balances | `GET /blockchain/token/byId/{tokenId}`, `GET /blockchain/tokens`, `POST /blockchain/balance` |
+
+Most list routes use pagination. For wallet- or dApp-facing reads, check whether the route supports `includeUnconfirmed` and `excludeMempoolSpent` so the response reflects pending mempool activity.
 
 ## Methods
 

@@ -40,6 +40,6 @@ The Raffle is managed by smart contracts built on Ergo Platform. This means that
 
 ## See also
 
-- Pattern: [pattern-randomness-from-raffle.md](pattern-randomness-from-raffle.md)
-- Category: [contracts-randomness.md](contracts-randomness.md)
-- Library: [contracts-library.md](contracts-library.md)
+- [Pattern: Randomness from ErgoRaffle](pattern-randomness-from-raffle.md)
+- [Category: Randomness Contracts](contracts-randomness.md)
+- [Contracts Library](contracts-library.md)

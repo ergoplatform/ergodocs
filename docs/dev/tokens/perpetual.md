@@ -44,6 +44,6 @@ While the "vanilla" perpetual token is intriguing, the "max-once-per-block-use" 
 
 ## See also
 
-- Pattern: [pattern-perpetual-token.md](pattern-perpetual-token.md)
-- Library: [contracts-library.md](contracts-library.md)
-- Category: [contracts-tokens.md](contracts-tokens.md)
+- [Pattern: Perpetual Token](pattern-perpetual-token.md)
+- [Contracts Library](contracts-library.md)
+- [Category: Token Contracts](contracts-tokens.md)

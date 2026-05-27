@@ -252,7 +252,6 @@ For optimal watcher performance and decentralization, running your own fully syn
 1. Install Bitcoin Core following the [official instructions](https://bitcoin.org/en/download) for your OS.
 
 2. Configure Bitcoin Core:
-
    - Locate the `bitcoin.conf` file in the Bitcoin data directory:
      - Linux: `~/.bitcoin/`
      - macOS: `~/Library/Application Support/Bitcoin/`
@@ -260,13 +259,11 @@ For optimal watcher performance and decentralization, running your own fully syn
    - Open `bitcoin.conf` with a text editor or create it if it doesn't exist.
 
 3. Generate an RPC username and password:
-
    - Visit [this RPC auth generator](https://jlopp.github.io/bitcoin-core-rpc-auth-generator)
    - Enter a username and click "Generate"
    - Copy the generated line starting with `rpcauth=`
 
 4. Edit `bitcoin.conf` to enable the RPC server and allow the watcher to connect:
-
    - Paste the `rpcauth` line you copied
    - Add the following lines to enable the RPC server:
 

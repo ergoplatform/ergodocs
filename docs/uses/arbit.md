@@ -18,7 +18,6 @@ Arbit streamlines the process of arbitrage trading by providing a clean and simp
 - **Supported Tokens:** ERG, ADA, and RSN.
 - **Supported Exchanges:** Ergo Dex and Splash.
 - **Core Features:**
-
   - Predefined arbitrage strategies (called "Arbits").
   - Focus on simplicity and usability.
   - Execution of swaps with just a few clicks.
@@ -44,7 +43,6 @@ An Arbit is a series of swaps that generate profit. For example:
 ### Fixed Arbitrage Strategies
 
 - Supports predefined arbitrage paths, such as:
-
   - ERG ↔ ADA
   - RSN ↔ ADA
 
@@ -55,17 +53,14 @@ An Arbit is a series of swaps that generate profit. For example:
 ## How It Works
 
 1. **Arbitrage Strategy Execution:**
-
     - Predefined paths calculate profitability based on current market conditions.
     - Fixed token values ($50 and $100) are used for calculations to avoid complexity.
 
 2. **Supported Providers:**
-
     - **Ergo Dex:** Facilitates ERG and ADA swaps.
     - **Splash:** Enables swapping of RSN and ADA tokens.
 
 3. **Profit Calculation:**
-
     - Example for a $50 swap:
         - Sell $50 worth of rsADA on Ergo Dex for ERG.
         - Swap ERG for ADA on Splash.
@@ -136,12 +131,10 @@ The core logic for arbitrage is implemented in `src/arbitrategy.ts`. It defines 
 ### Provider Integrations
 
 - **Ergo Dex (`src/providers/ergodex.ts`):**
-
   - Interacts with the Ergo Dex SDK for swapping tokens.
   - Supports `x2y` and `y2x` operations.
 
 - **Splash (`src/providers/splash.ts`):**
-
   - Uses the Splash API to fetch order book data.
   - Supports bid/ask matching for liquidity and price calculations.
 
@@ -150,16 +143,13 @@ The core logic for arbitrage is implemented in `src/arbitrategy.ts`. It defines 
 ## Usage Guide
 
 1. **Prepare Tokens:**
-
     - Ensure you have supported tokens (ERG, ADA, RSN) on Ergo and Cardano chains.
     - Use [Rosen Bridge](https://app.rosen.tech) to bridge assets if necessary.
 
 2. **Visit the App:**
-
     - Open the application and review the displayed arbitrage opportunities.
 
 3. **Execute a Swap:**
-
     - If a profitable Arbit is available, execute the swap by following the on-screen instructions.
 
 ---

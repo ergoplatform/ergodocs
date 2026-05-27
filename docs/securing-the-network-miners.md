@@ -1,46 +1,38 @@
 # Securing the Network
 
-Ergo is secured by Proof-of-Work. If you want to help secure the network or mine ERG, start with the Mining section. This page gives you an overview and direct links.
-
-- [Start here](mining-overview.md)
-- [Join a Pool](join.md)
-- [Mining Software](software.md)
-- [Rig Setup](rig.md)
-- [Mining OS Options](os.md)
-- [Overclocking Guide](overclocking.md)
-- [Pools](pools.md)
-- Solo Mining:
-  - [Solo Overview](solo.md)
-  - [Solo Node Configuration](solo-node.md)
-  - [Solo Mining FAQ](solo-faq.md)
-- Rewards & Economics:
-  - [Emission Schedule](emission.md)
-  - [ASIC Resistance](asic.md)
-  - [Revenue Estimation](revenue.md)
-- Governance & Rights:
-  - [Mining Governance](governance.md)
-  - [Miners' Rights](miners-rights.md)
+Ergo is secured by Proof of Work. You can help by mining, running nodes, operating pool infrastructure, or contributing to protocol discussions.
 
 ## Choose Your Path
 
-- [CPU Mining (Testnet)](cpu-mining.md)
-- [Join a Pool](join.md)
-- [Solo Overview](solo.md) • [Solo Node Configuration](solo-node.md)
-- [RPi Node Setup](pi.md)
-- [Android Node](node-android.md)
+| I want to... | Start with | Then see |
+| --- | --- | --- |
+| Mine with a pool | [Join a Pool](mining/setup/join.md) | [Mining Software](mining/software.md), [Rig Setup](mining/setup/rig.md) |
+| Solo mine | [Solo Mining](mining/setup/solo.md) | [Solo Node Configuration](mining/setup/solo-node.md), [Solo FAQ](mining/setup/solo-faq.md) |
+| Host a pool | [Mining Pool Operations](mining/pool-ops.md) | [MiningCore](mining/setup/miningcore.md), [Stratum](mining/setup/stratum.md) |
+| Run a node | [Node Install](node/install.md) | [Deployment Runbook](node/deploy-runbook.md), [Hardening](node/operations/hardening.md) |
+| Learn mining economics | [Emission](mining/emission.md) | [Revenue](mining/revenue.md), [Storage Rent](mining/rent.md) |
+| Follow miner governance | [Mining Governance](mining/governance.md) | [Hard Forks](mining/gov/hard-fork.md), [On-chain Voting](mining/gov/voting.md) |
 
-## FAQ
+## Mining Basics
 
-- How much VRAM do I need to mine?  
-  Most modern Autolykos miners require at least 6 GB VRAM per GPU. See [mining software](software.md) and vendor notes.
+- [Mining Overview](mining/mining-overview.md)
+- [Mining Software](mining/software.md)
+- [Operating Systems](mining/os.md)
+- [Overclocking](mining/overclocking.md)
+- [Pools](mining/pools.md)
+- [Withdrawals](mining/withdraw.md)
 
-- Can I mine with my CPU?  
-  Yes on Testnet for experimentation: [CPU Mining](cpu-mining.md). Mainnet GPU mining is recommended.
+## Network Concepts
 
-- Should I mine solo or join a pool?  
-  Pools provide more consistent payouts. Solo mining is viable only with significant hashrate.
+- [Autolykos](mining/autolykos.md)
+- [Difficulty Adjustment](mining/difficulty.md)
+- [ASIC Resistance](mining/asic.md)
+- [Storage Rent](mining/rent.md)
+- [Miners' Rights](eco/miners-rights.md)
 
-Related:
+## Test and Experiment
 
-- [Autolykos](autolykos.md)
-- [Node Install Guides](install.md)
+- [CPU Mining on Testnet](node/testnet/cpu-mining.md)
+- [Fork Your Own Chain](node/testnet/mine-your-own-chain.md)
+- [Raspberry Pi Node](node/install/pi.md)
+- [Android Node](node/install/node-android.md)
