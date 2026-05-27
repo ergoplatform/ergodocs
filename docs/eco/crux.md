@@ -12,8 +12,13 @@ source_repos:
     branch: main
     paths:
       - README.md
+  - repo: cruxfinance/ergo-address-labels
+    branch: main
+    paths:
+      - README.md
 source_of_truth:
   - https://github.com/cruxfinance/crux-frontend
+  - https://github.com/cruxfinance/ergo-address-labels
   - https://cruxfinance.io/
   - http://cruxfinance.io/use-analytics
 ---
@@ -23,6 +28,8 @@ source_of_truth:
 ## Overview
 
 [cruxfinance.io](https://cruxfinance.io/) will offer an all-in-one platform for portfolio management and charting within the Ergo ecosystem.
+
+Crux also maintains [ergo-address-labels](https://github.com/cruxfinance/ergo-address-labels), a public registry for protocol address metadata. The repository is designed so projects can submit labels for contract addresses or ErgoTrees through pull requests, and the data can be reused by wallets, explorers, and analytics tools.
 
 ## Recent updates
 

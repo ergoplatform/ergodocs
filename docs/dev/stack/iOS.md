@@ -18,7 +18,7 @@ You want to develop with Java/Kotlin/Scala and run on iOS.
     "title": "Mosaik",
     "content": "UI system for dApps",
     "image": "../../assets/img/dev-grid/mosaik.png",
-    "url": "mosaik/intro.md"
+    "url": "intro.md"
   },
   {
     "title": "sigma-rust",

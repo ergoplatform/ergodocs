@@ -113,4 +113,4 @@ Braid is early research:
 - Ergo merged-mining note: [docs/ergo-mergedmining.md](https://github.com/BetterMoneyLabs/braid/blob/master/docs/ergo-mergedmining.md)
 - No public release is published in the repository.
 
-For current Ergo sidechain context, also see [Sidechains on Ergo](../sidechains.md), [Sigma Chains](sigma-chains.md), and [Weak Blocks](weak-blocks.md).
+For current Ergo sidechain context, also see [Sidechains on Ergo](sidechains.md), [Sigma Chains](sigma-chains.md), and [Weak Blocks](weak-blocks.md).

@@ -6,6 +6,7 @@
 
 - **Privacy Enhanced:** Nautilus prioritizes user privacy, employing advanced security measures to protect your digital assets.
 - **Ledger Integration:** For those seeking an extra layer of security, Nautilus supports Ledger hardware wallets, currently available in developer mode for advanced users and developers.
+- **Developer References:** For the current Ledger app and JS binding stack, see [Ledger](ledger.md) and [Hardware Wallet Integration with sigma-rust](hardware-wallet-integration.md).
 
 ## Recent updates
 

@@ -1,6 +1,6 @@
 # Pattern: Explorer Co-Pilot & On-chain Model Context Registry
 
-**Project for [ErgoHack 10: AI on the Ergo Blockchain](../events/ergohack.md)**
+**Project for [ErgoHack 10: AI on the Ergo Blockchain](ergohack.md)**
 
 ### 1\. Introduction
 

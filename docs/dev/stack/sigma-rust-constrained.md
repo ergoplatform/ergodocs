@@ -18,7 +18,7 @@ The standard [`sigma-rust`](sigma-rust.md) library provides comprehensive tools 
 
 This guide outlines strategies and considerations for adapting `sigma-rust` for such resource-constrained environments.
 
-For wallet-specific integration flow, see [Hardware Wallet Integration with sigma-rust](../tutorials/hardware-wallet-integration.md).
+For wallet-specific integration flow, see [Hardware Wallet Integration with sigma-rust](hardware-wallet-integration.md).
 
 ## Challenges
 

@@ -24,7 +24,7 @@ We have live crowdfunding on the Ergo blockchain via [ergoraffle.com](https://er
 
 More information and the source code is available on [GitHub](https://github.com/ErgoRaffle).
 
-For the broader funding surface, see [Crowdfunding](../uses/crowdfunding.md) and [Funding Ergo Projects](../contribute/funding.md).
+For the broader funding surface, see [Crowdfunding](crowdfunding.md) and [Funding Ergo Projects](funding.md).
 
 ## Recent updates
 

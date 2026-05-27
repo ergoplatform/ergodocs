@@ -29,11 +29,16 @@ source_repos:
     branch: master
     paths:
       - README.md
+  - repo: mgpai22/ergo-streaming
+    branch: main
+    paths:
+      - README.md
 source_of_truth:
   - https://github.com/ergoplatform/explorer-backend/tree/master/modules/chain-grabber
   - https://github.com/ergoplatform/explorer-backend/tree/master/modules/chain-grabber/src/main/resources/application.conf
   - https://github.com/4EYESConsulting/sigmalok-indexer
   - https://github.com/arobsn/hergmes
+  - https://github.com/mgpai22/ergo-streaming
 ---
 
 # Indexing Strategy: Building a Custom Indexer
@@ -46,7 +51,7 @@ A custom indexer is a dedicated service that connects to an Ergo node API, proce
 
 **Core Tasks:**
 
-1. **Connect:** Establish a connection to a trusted Ergo node API ([your own](./node-api-direct.md) or a reliable public one).
+1. **Connect:** Establish a connection to a trusted Ergo node API ([your own](node-api-direct.md) or a reliable public one).
 2. **Fetch:** Retrieve new blocks as they appear on the chain.
 3. **Parse:** Decode block, transaction, and box data.
 4. **Extract:** Identify and pull out data relevant to your application (e.g., boxes matching specific scripts, token transfers, register values).
@@ -168,6 +173,7 @@ Choose the database that best matches your indexer's data structure and query pa
 
 * [sigmalok-indexer](https://github.com/4EYESConsulting/sigmalok-indexer) is a Go indexer for SigmaLok-style mempool and rollback handling.
 * [hergmes](https://github.com/arobsn/hergmes) is a Rust real-time Ergo blockchain data relay and node messaging layer.
+* [Ergo Streaming](https://github.com/mgpai22/ergo-streaming) is a Rust/Kafka service for streaming block, transaction, and mempool events from an Ergo node. Its README is a useful reference for event-topic design, rollback sequencing, RocksDB-backed chain and mempool caches, and operational knobs such as batch size and mempool polling interval.
 
 ## Alternative: Node API Scanning
 

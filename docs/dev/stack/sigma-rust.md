@@ -15,8 +15,12 @@ tags:
   - Ruby
   - Python
 owner: docs
-last_reviewed: 2026-05-26
+last_reviewed: 2026-05-27
 source_repos:
+  - repo: ergoplatform/bounded-vec
+    branch: develop
+    paths:
+      - README.md
   - repo: ergonames/sdk
     branch: master
     paths:
@@ -45,6 +49,7 @@ source_repos:
     paths:
       - README.md
 source_of_truth:
+  - https://github.com/ergoplatform/bounded-vec
   - https://github.com/ergonames/sdk/tree/master/rust
   - https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-c
   - https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-ios
@@ -94,6 +99,7 @@ Compatibility notes:
 
 Library and binding notes:
 
+- [`bounded-vec`](https://github.com/ergoplatform/bounded-vec) is an Ergo Platform Rust utility crate for vectors with type-level lower and upper bound guarantees. It is low-level infrastructure rather than an application SDK, but useful context when following Rust dependency work around Sigma libraries.
 - `UnsignedBigInt` support has been added to C/Swift bindings.
 - Python bindings track newer `pyo3` for Python 3.14 support.
 - WASM serializes `SigmaBoolean` values as base-16 strings.

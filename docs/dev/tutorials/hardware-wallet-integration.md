@@ -13,12 +13,33 @@ tags:
 owner: docs
 last_reviewed: 2026-05-27
 source_repos:
+  - repo: arobsn/ledger-ergo-js
+    branch: master
+    paths:
+      - README.md
+  - repo: ergoplatform/ledger-app-ergo
+    branch: main
+    paths:
+      - README.md
+      - doc
   - repo: arobsn/keystone-ergo-js
     branch: master
     paths:
       - README.md
+  - repo: KeystoneHQ/keystone-sdk-base
+    branch: master
+    paths:
+      - packages/ur-registry-ergo/README.md
+      - packages/ur-registry-ergo
 source_of_truth:
+  - https://github.com/arobsn/ledger-ergo-js
+  - https://github.com/arobsn/ledger-ergo-js/releases/tag/v0.2.0
+  - https://github.com/arobsn/ledger-ergo-js/releases/tag/v0.2.1
+  - https://github.com/ergoplatform/ledger-app-ergo
   - https://github.com/arobsn/keystone-ergo-js
+  - https://github.com/KeystoneHQ/keystone-sdk-base/tree/master/packages/ur-registry-ergo
+  - https://github.com/KeystoneHQ/keystone-sdk-rust/pull/105
+  - https://github.com/KeystoneHQ/keystone3-firmware/pull/1427
 ---
 
 # Hardware Wallet Integration with sigma-rust
@@ -78,9 +99,21 @@ The essential functions needed for basic hardware wallet support typically inclu
 * **Transaction Signing:** Signing the transaction digest using the derived private key. This is the most critical part and must use the hardware wallet's secure key storage and signing mechanism.
 * **ErgoTree Serialization/Hashing:** Potentially needed for constructing parts of the transaction message to be signed.
 
+## Ledger Reference Stack
+
+For Ledger-specific Ergo integration, the active JavaScript binding layer is [ledger-ergo-js](https://github.com/arobsn/ledger-ergo-js). Its February 2025 `v0.2.x` releases added OS-level device helpers such as `openApp()`, `closeApp()`, and `getCurrentAppInfo()`, which are useful when orchestrating app-selection and signing flows from desktop or browser-adjacent tools.
+
+The hardware app itself lives in [ergoplatform/ledger-app-ergo](https://github.com/ergoplatform/ledger-app-ergo). Upstream documentation describes the current build flow, API docs, and automated test setup, including Ragger-based functional tests for Nano S+, Nano X, Stax, and Flex.
+
+For the narrower wallet-facing notes page, see [Ledger](ledger.md).
+
 ## Keystone Serialization Work
 
 [keystone-ergo-js](https://github.com/arobsn/keystone-ergo-js) is an experimental JavaScript reference for Ergo transaction serialization in Keystone-style hardware-wallet flows. Treat it as integration reference material, not a complete wallet standard.
+
+Keystone's upstream SDK also includes [`@keystonehq/bc-ur-registry-ergo`](https://github.com/KeystoneHQ/keystone-sdk-base/tree/master/packages/ur-registry-ergo), an Ergo extension for `bc-ur-registry` used by Keystone-style UR signing flows. Use it when comparing Ergo sign-request encoding against Keystone's registry packages.
+
+The broader Keystone integration spans multiple upstream components. The Rust SDK [Ergo support PR](https://github.com/KeystoneHQ/keystone-sdk-rust/pull/105) was closed unmerged after review, while the Keystone3 firmware [Ergo support PR](https://github.com/KeystoneHQ/keystone3-firmware/pull/1427) remains the reference firmware integration work and links back to the Rust and JavaScript SDK PRs. Treat these PRs as implementation context until support is merged and released by Keystone.
 
 ## Conclusion
 

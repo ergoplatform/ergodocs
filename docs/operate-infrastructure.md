@@ -17,22 +17,29 @@ Use this page if you run Ergo services rather than only using wallets or dApps.
 
 | I need to... | Start here | Then go deeper |
 | --- | --- | --- |
-| Run an Ergo node | [Node Install](node/install.md) | [Manual Install](node/install/manual.md), [Configuration](node/conf.md) |
-| Harden an operator setup | [Deployment Runbook](node/deploy-runbook.md) | [Hardening](node/operations/hardening.md), [Backups](node/operations/backups.md) |
-| Expose or use node APIs | [Swagger Overview](node/swagger.md) | [OpenAPI Reference](node/swagger/openapi.md), [Reverse Proxy](node/operations/reverse-proxy.md) |
-| Monitor services | [Monitoring](node/operations/monitoring.md) | [Incidents](node/operations/incidents.md), [Troubleshooting](node/install/troubleshooting.md) |
-| Operate indexers or explorers | [Explorer Stack](node/explorer-stack.md) | [Scanner Operations](node/scanner-ops.md) |
-| Run Rosen infrastructure | [Rosen Guard](eco/rosen/guard.md) | [Watcher Setup](eco/rosen/watcher.md), [Security Model](eco/rosen/security-model.md) |
-| Run or bootstrap oracles | [Oracle Bootstrap](tutorials/oracle-bootstrap.md) | [Oracles](uses/oracles.md), [Oracle Pools V2](eco/oracles-v2.md) |
-| Mine or operate a pool | [Securing the Network](securing-the-network-miners.md) | [Pool Operations](mining/pool-ops.md) |
+| Run an Ergo node | [Node Install](install.md) | [Manual Install](manual.md), [Configuration](conf.md) |
+| Harden an operator setup | [Deployment Runbook](deploy-runbook.md) | [Hardening](hardening.md), [Backups](backups.md) |
+| Expose or use node APIs | [Swagger Overview](swagger.md) | [OpenAPI Reference](openapi.md), [Reverse Proxy](reverse-proxy.md) |
+| Monitor services | [Monitoring](monitoring.md) | [Incidents](incidents.md), [Troubleshooting](troubleshooting.md) |
+| Operate indexers or explorers | [Explorer Stack](explorer-stack.md) | [Scanner Operations](scanner-ops.md) |
+| Run Rosen infrastructure | [Rosen Guard](guard.md) | [Watcher Setup](watcher.md), [Security Model](security-model.md) |
+| Run or bootstrap oracles | [Oracle Bootstrap](oracle-bootstrap.md) | [Oracles](oracles.md), [Oracle Pools V2](oracles-v2.md) |
+| Mine or operate a pool | [Securing the Network](securing-the-network-miners.md) | [Pool Operations](pool-ops.md) |
 
 ## Operator Entry Points
 
-- First install path: [Node Install](node/install.md).
-- Production checklist: [Deployment Runbook](node/deploy-runbook.md).
-- Ongoing operations: [Hardening](node/operations/hardening.md), [Monitoring](node/operations/monitoring.md), [Upgrades](node/operations/upgrades.md), [Backups](node/operations/backups.md).
-- Data access: [Swagger Overview](node/swagger.md), [Indexed Node API](node/indexed-node.md), [Blockchain Indexing](dev/tutorials/blockchain-indexing.md).
-- Lightweight relay tooling: [Ergo Proxy](node/ergo-proxy.md), [Ergo Relay](node/ergo-relay.md).
+- First install path: [Node Install](install.md).
+- Production checklist: [Deployment Runbook](deploy-runbook.md).
+- Ongoing operations: [Hardening](hardening.md), [Monitoring](monitoring.md), [Upgrades](upgrades.md), [Backups](backups.md).
+- Data access: [Swagger Overview](swagger.md), [Indexed Node API](indexed-node.md), [Blockchain Indexing](blockchain-indexing.md).
+- Lightweight relay tooling: [Ergo Proxy](ergo-proxy.md), [Ergo Relay](ergo-relay.md).
+
+## Related Operator References
+
+- Node modes: [Full Node](full-node.md), [Pruned Full Node](pruned-full-node.md), [Light Full Node](light-full-node.md), [Light SPV](light-spv-node.md).
+- Configuration: [Configuration Overview](conf.md), [Node Settings](conf-node.md), [Wallet Settings](conf-wallet.md), [API Settings](conf-api.md).
+- Network behavior: [Peer Management](peer-management.md), [Synchronisation](synchronisation.md), [Modifiers](modifiers.md).
+- Test networks: [Testnet](testnet.md), [CPU Mining on Testnet](cpu-mining.md), [Fork Your Own Chain](mine-your-own-chain.md).
 
 ## Standard Operator Checks
 

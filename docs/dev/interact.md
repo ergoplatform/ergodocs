@@ -32,20 +32,20 @@ source_of_truth:
 
 Deploy pages are for operators running infrastructure: nodes, APIs, wallets, indexers, Rosen watchers, oracle pools, and blockchain-indexing services.
 
-Start with the [Deployment Runbook](../node/deploy-runbook.md) if you are choosing a topology or hardening an existing host.
+Start with the [Deployment Runbook](deploy-runbook.md) if you are choosing a topology or hardening an existing host.
 
 ## Operator Paths
 
 | Need | Start here | Why |
 | --- | --- | --- |
-| Run a validating node | [Node install overview](../node/install.md) | Choose manual, Docker, Raspberry Pi, Android, or source build. |
-| Choose archival, pruned, digest, or light mode | [Modes of operation](../node/modes.md) | Pick storage and validation trade-offs before syncing. |
-| Harden config and API access | [Node configuration](../node/conf.md) | Set data directory, REST API, P2P, wallet, and network config. |
-| Serve indexed API queries | [Indexed Node API](../node/indexed-node.md) | Requires `ergo.node.extraIndex = true`. |
-| Use Swagger / OpenAPI | [Swagger overview](../node/swagger.md) | Explore REST endpoints and protected wallet routes. |
-| Run Rosen watchers | [Rosen watcher deployment](../eco/rosen/watcher.md) | Docker deployment, `local.yaml`, chain sources, and health checks. |
-| Operate oracle pools | [Oracle Core](../dev/oc/oracle.md) and [Oracle bootstrap](../tutorials/oracle-bootstrap.md) | Bootstrap pools, distribute tokens/config, run oracle operators. |
-| Build a custom indexer | [Blockchain indexing](../dev/tutorials/blockchain-indexing.md) | Compare explorer API, node API, and custom chain-grabber setups. |
+| Run a validating node | [Node install overview](install.md) | Choose manual, Docker, Raspberry Pi, Android, or source build. |
+| Choose archival, pruned, digest, or light mode | [Modes of operation](modes.md) | Pick storage and validation trade-offs before syncing. |
+| Harden config and API access | [Node configuration](conf.md) | Set data directory, REST API, P2P, wallet, and network config. |
+| Serve indexed API queries | [Indexed Node API](indexed-node.md) | Requires `ergo.node.extraIndex = true`. |
+| Use Swagger / OpenAPI | [Swagger overview](swagger.md) | Explore REST endpoints and protected wallet routes. |
+| Run Rosen watchers | [Rosen watcher deployment](watcher.md) | Docker deployment, `local.yaml`, chain sources, and health checks. |
+| Operate oracle pools | [Oracle Core](oracle.md) and [Oracle bootstrap](oracle-bootstrap.md) | Bootstrap pools, distribute tokens/config, run oracle operators. |
+| Build a custom indexer | [Blockchain indexing](blockchain-indexing.md) | Compare explorer API, node API, and custom chain-grabber setups. |
 
 ## Public Services vs Owned Infrastructure
 

@@ -19,7 +19,7 @@ source_of_truth:
 
 # The Ergo Reference Client (Node)
 
-The Ergo Node is the core software that connects to the Ergo [P2P network](p2p-protocol-overview.md), validates [transactions](transactions.md) and [blocks](block.md), and maintains a copy of the entire [blockchain](protocol.md). Running a node is crucial for the network's decentralization and security. This page outlines the installation options and resources for the Ergo reference client.
+The Ergo Node is the core software that connects to the Ergo [P2P network](p2p-protocol-overview.md), validates [transactions](transactions.md) and [blocks](block.md), and maintains a copy of the blockchain. Running a node is crucial for the network's decentralization and security. This page outlines the installation options and resources for the Ergo reference client.
 
 /// details | Alternatives
     {type: info, open: true}
@@ -54,7 +54,7 @@ This mode stores the entire blockchain history. To install from scratch, refer t
 ///
 /// details | Pruned Full Node
     {type: tip, open: false}
-Bootstrap a [pruned full node](pruned-full-node.md) using a verified [UTXO set snapshot](eutxo.md) and [NiPoPoWs](nipopows.md). This feature allows you to achieve full node security on standard hardware within minutes, eliminating the need to download and validate most of the historical blockchain data.
+Bootstrap a [pruned full node](pruned-full-node.md) using a verified UTXO set snapshot and [NiPoPoWs](nipopows.md). This feature allows you to achieve full node security on standard hardware within minutes, eliminating the need to download and validate most of the historical blockchain data.
 
 Recent node fixes also cover wallet cache handling and versioned tree-template handling during node-view processing. If you are upgrading from an older 5.x node, prefer the latest 6.0.x reference release and let the node shut down cleanly before replacing the jar.
 ///
@@ -95,7 +95,7 @@ For more convenience, Docker provides a streamlined way to install and run the E
 /// details | Toolkits
     {type: notes, open: false}
 
-- [Explorer & Node Bundles](explorer.md#toolkits): Access pre-packaged bundles that include an Ergo Node and an [explorer](explorer.md) for easy setup.
+- [Explorer & Node Bundles](explorer-stack.md): Access pre-packaged bundles that include an Ergo Node and explorer-related services for easy setup.
 - [Ergosphere](https://ergosphere.cloud/): Ergosphere is an Umbrel-like solution that simplifies the setup of self-hosted Ergo services. Please note that it is currently in the BETA stage.
 - [Ergode](https://github.com/ross-weir/ergode) (ergo-node) is an Ergo node implementation in TypeScript, targeting web and native runtimes.
 - [Ergo Rust Node](rust-node.md) is an experimental Rust implementation that reached mainnet validation to tip during 2026 testing.
@@ -106,7 +106,7 @@ For more convenience, Docker provides a streamlined way to install and run the E
 - To get an overview of live nodes on the Ergo network, you can visit [ergonodes.net](http://ergonodes.net).
 - [Node Frequently Asked Questions](node-faq.md): Find answers to common questions about the Ergo Node.
 - [Modes of Operation](modes.md): Learn about the different modes of operation available for the Ergo Node.
-- [Node APIs](api.md): Explore the APIs provided by the Ergo Node for interacting with the blockchain.
+- [Node APIs](swagger.md): Explore the APIs provided by the Ergo Node for interacting with the blockchain.
 - [Node Configuration](conf.md): Details on configuring the node via the `application.conf` file.
 - [Node Protocol Details](protocol.md): Information on the underlying network protocol.
 ///

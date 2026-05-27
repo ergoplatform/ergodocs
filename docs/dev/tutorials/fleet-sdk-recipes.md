@@ -50,13 +50,13 @@ This page contains useful code snippets, patterns, and troubleshooting tips for 
 
 ## Validating Box Ownership (SigmaProp from Register)
 
-A common requirement when building off-chain logic is to validate conditions that mirror on-chain checks. One such check is verifying that an input box belongs to a specific owner whose public key (as a [SigmaProp](../scs/sigma.md)) is stored in another box's [register](../scs/boxes-and-registers.md). This is often needed for refund scenarios or proving ownership before allowing an action.
+A common requirement when building off-chain logic is to validate conditions that mirror on-chain checks. One such check is verifying that an input box belongs to a specific owner whose public key (as a [SigmaProp](sigma.md)) is stored in another box's [register](boxes-and-registers.md). This is often needed for refund scenarios or proving ownership before allowing an action.
 
 The core task involves:
 
 1. Extracting the owner's SigmaProp bytes from a register (e.g., R4).
 2. Deserializing these bytes correctly.
-3. Converting the public key bytes into the owner's P2PK [ErgoTree](../scs/ergotree.md).
+3. Converting the public key bytes into the owner's P2PK [ErgoTree](ergotree.md).
 4. Comparing this derived ErgoTree with the ErgoTree of the box being validated.
 
 **Important:** Directly constructing `ErgoAddress` from `SSigmaProp` is not the correct approach in Fleet SDK. You need to extract the public key bytes first.
@@ -477,7 +477,7 @@ if (integerArray) {
 
 ## Compiling ErgoScript to ErgoTree
 
-The Fleet SDK includes a compiler module to convert [ErgoScript](../scs/ergoscript.md) source code into its corresponding ErgoTree hex string, which is needed when creating contract boxes.
+The Fleet SDK includes a compiler module to convert [ErgoScript](ergoscript.md) source code into its corresponding ErgoTree hex string, which is needed when creating contract boxes.
 
 ```typescript
 import { compile } from "@fleet-sdk/compiler";
@@ -636,9 +636,9 @@ graph TD
 
 ## Related Documentation
 
-- [ErgoScript Sigma Propositions](../scs/sigma.md)
-- [Box Registers Specification](../scs/boxes-and-registers.md)
-- [ErgoTree Specification](../scs/ergotree.md)
+- [ErgoScript Sigma Propositions](sigma.md)
+- [Box Registers Specification](boxes-and-registers.md)
+- [ErgoTree Specification](ergotree.md)
 - [Fleet SDK GitHub Examples](https://github.com/fleet-sdk/fleet-by-example)
 - [Fleet SDK Compiler](https://fleet-sdk.github.io/docs/compiler)
 - [Fleet SDK Serializer](https://fleet-sdk.github.io/docs/serializer-overview)

@@ -2,8 +2,12 @@
 tags:
   - P2P
 owner: docs
-last_reviewed: 2026-05-26
+last_reviewed: 2026-05-27
 source_repos:
+  - repo: mwaddip/ergo-proxy
+    branch: master
+    paths:
+      - docs/protocol/ergo-p2p-wire-format.md
   - repo: Satergo/Ergonnection
     branch: master
     paths:
@@ -16,13 +20,19 @@ source_repos:
       - ergo-wallet/src/test/java/org/ergoplatform/wallet/AddressGenerationDemo.java
       - ergo-wallet/src/test/java/org/ergoplatform/wallet/CreateTransactionDemo.java
       - src/main/scala/org/ergoplatform/network/ErgoNodeViewSynchronizer.scala
+  - repo: ergoplatform/ergo
+    branch: testnet60
+    paths:
+      - src/main/resources/testnet.conf
 source_of_truth:
+  - https://github.com/mwaddip/ergo-proxy/tree/master/docs/protocol/ergo-p2p-wire-format.md
   - https://github.com/Satergo/Ergonnection/tree/master/src/main/java/com/satergo/ergonnection/messages/GetPeers.java
   - https://github.com/ergoplatform/ergo/tree/master/ergo-core/src/main/scala/org/ergoplatform/network/message/InvSpec.scala
   - https://github.com/ergoplatform/ergo/tree/master/avldb/src/main/scala/org/ergoplatform/serialization/ErgoSerializer.scala
   - https://github.com/ergoplatform/ergo/tree/master/ergo-wallet/src/test/java/org/ergoplatform/wallet/AddressGenerationDemo.java
   - https://github.com/ergoplatform/ergo/tree/master/ergo-wallet/src/test/java/org/ergoplatform/wallet/CreateTransactionDemo.java
   - https://github.com/ergoplatform/ergo/tree/master/src/main/scala/org/ergoplatform/network/ErgoNodeViewSynchronizer.scala
+  - https://github.com/ergoplatform/ergo/tree/testnet60/src/main/resources/testnet.conf
 ---
 
 # Network Messages in Ergo's P2P Protocol
@@ -35,13 +45,15 @@ Every message in the P2P protocol has the following format:
 
 | Data type         | Field name              | Details                                                                                                                      |  
 |:------------------|:------------------------|:-----------------------------------------------------------------------------------------------------------------------------|
-| byte\[4\]         | Magic bytes             | For the mainnet, the magic bytes are `{1, 0, 2, 4}`. For testnet, `{2, 0, 0, 1}`.                                            |
+| byte\[4\]         | Magic bytes             | For the mainnet, the magic bytes are `{1, 0, 2, 4}`. Current public testnet uses `{2, 3, 2, 3}`.                             |
 | unsigned byte     | Message code            | One byte describing message type                                                                                             |
 | int               | Message body length     | No `VLQ` or `ZigZag` encoding is used for the message length (for historical reasons); bytes are coming in big-endian order. |
 | byte\[4\]         | Handshake body checksum | First four bytes of blake2b256(message body)                                                                                 |
 | byte\[bodyLength] | Message body            | Message body                                                                                                                 |
 
 For more detailed implementation, you can check out the [Ergo Node View Synchronizer](https://github.com/ergoplatform/ergo/blob/master/src/main/scala/org/ergoplatform/network/ErgoNodeViewSynchronizer.scala) in the Ergo repository.
+
+Message framing is the main fixed-width exception. Inside handshakes, peer records, feature records, and message bodies, Scorex integer helpers such as `putUShort`, `putUInt`, and `putULong` use VLQ unsigned encoding, while `putInt` and `putLong` use ZigZag plus VLQ. The method names do not mean fixed-width two-, four-, or eight-byte fields.
 
 ## Records
 
@@ -92,6 +104,8 @@ For a deeper understanding of how records are serialized, check out the [Ergo Se
 
 Messages are the primary means of communication between nodes in the P2P network. They include Get Peers, Peers, Sync Info, Inv, Request Modifier, and Modifier messages.
 
+The wire formats below include legacy variants where they are still useful for interoperating with old peers or understanding existing libraries. New code should prefer the current format unless it intentionally supports pre-`4.0.16` nodes.
+
 ### Get Peers
 
 **Code = 1**
@@ -106,7 +120,7 @@ Sent in response to Get Peers. Contains all the peers that are currently connect
 
 | Data type         | Field name     |
 |:------------------|:---------------|
-| VLQ ZZ int        | Count of peers |
+| VLQ unsigned int  | Count of peers |
 | [Peer](#peer)\[\] | Peers          |
 
 For the Java implementation of the `GetPeers` message, refer to [Ergonnection](https://github.com/Satergo/Ergonnection/blob/master/src/main/java/com/satergo/ergonnection/messages/GetPeers.java).
@@ -115,7 +129,7 @@ For the Java implementation of the `GetPeers` message, refer to [Ergonnection](h
 
 **Code = 65**
 
-**New (Added in 4.0.16)**
+**Current format (added in 4.0.16)**
 
 It is sent only to nodes that report a version of 4.0.16 or higher. For older nodes, the [Sync Info (old)](#sync-info-old) is sent.
 
@@ -132,7 +146,7 @@ Requests an [Inv](#inv) message that provides modifier IDs required by the sende
 
 **Code = 65**
 
-The old (before 4.0.16) version of the Sync Info message.
+The old (before 4.0.16) version of the Sync Info message. Keep it only if your implementation needs to communicate with pre-`4.0.16` peers or decode historical captures.
 
 | Data type                       | Field name                       |
 |:--------------------------------|:---------------------------------|

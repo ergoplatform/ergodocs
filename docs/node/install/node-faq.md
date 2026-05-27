@@ -68,7 +68,7 @@ kill -9 $(lsof -t -i:9053)
 kill -9 $(lsof -t -i:9030)
 ```
 
-Please refer to the section on [swagger](../swagger.md) for more information.
+Please refer to the section on [swagger](swagger.md) for more information.
 
 ### Security
 

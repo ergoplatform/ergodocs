@@ -377,7 +377,7 @@
 - [Single Transaction Swap](https://www.single-tx-swap.com/) – UI for single TX atomic swaps *(Live)*. [GitHub](https://github.com/danieloravec/ergo-token-swap) *(Active)*
 - [Arbit](https://github.com/ConnecMent/arbit) – simple arbitrage platform. [`JS`] *(Active?)*
 - [Analog Ergo](https://github.com/dzyphr/ScalaSigmaParticle) – P2P atomic swap protocol. [Contract](https://github.com/dzyphr/ScalaSigmaParticle/blob/main/ScalarLock/src/main/scala/ScalarLock.scala) | [UI PoC](https://github.com/dzyphr/AtomicAnalogSwapWebsite)
-- [Mew Finance](https://mewfinance.com/) – DEX, NFT marketplace, and DeFi suite *(Live)*. [Docs](eco/mew-finance.md) | [Telegram](https://t.me/MewFinance) *(Active)*
+- [Mew Finance](https://mewfinance.com/) – DEX, NFT marketplace, and DeFi suite *(Live)*. [Docs](mew-finance.md) | [Telegram](https://t.me/MewFinance) *(Active)*
 
 ### 🏦 Stablecoins & Lending <a id="stablecoins--lending"></a>
 
@@ -489,7 +489,7 @@
 - [Autolykos2 CPU Miner](https://github.com/mhssamadani/Autolykos2-CPUMiner) – open-source CPU miner.
 - [Autolykos GPU Miner (v1)](https://github.com/ergoplatform/Autolykos-GPU-miner) – original open-source GPU miner (Autolykos v1).
 - [Ergo AMD Miner (v1)](https://github.com/mhssamadani/ergoAMDminer) – open-source AMD miner (Autolykos v1).
-- *Note: Several closed-source miners exist (lolMiner, Nanominer, SRBMiner, NBMiner, TeamRedMiner, T-Rex), see [Mining Software Comparison](mining/software.md) for links and fee info.*
+- *Note: Several closed-source miners exist (lolMiner, Nanominer, SRBMiner, NBMiner, TeamRedMiner, T-Rex), see [Mining Software Comparison](software.md) for links and fee info.*
 
 ### 🔧 Utilities & Tooling <a id="utilities--tooling"></a>
 
@@ -515,8 +515,8 @@
 ### 🔐 Hardware Wallet Support <a id="hardware-wallet-support"></a>
 
 - 🥇 **[Ledger App for Ergo (Official)](https://github.com/LedgerHQ/app-ergo)** *(Live)* [`C`] *(Active)*
-- [Ledger App for Ergo (Tesseract Fork)](https://github.com/tesseract-one/ledger-app-ergo) – community-maintained fork. [`C`] *(Active)*
-  - [LedgerJS Bindings](https://github.com/anon-br/ledgerjs-hw-app-ergo) [`JS`]
+- [Ledger App for Ergo (ergoplatform)](https://github.com/ergoplatform/ledger-app-ergo) – active Ergo-maintained app repository with Nano S+/X/Stax/Flex support and CI-backed tests. [`C`] *(Active)*
+  - [LedgerJS Bindings](https://github.com/arobsn/ledger-ergo-js) [`JS`]
   - [Ledger4j Bindings](https://github.com/aionnetwork/ledger4j) [`Java`]
   - [Ledger Core Lib](https://github.com/LedgerHQ/lib-ledger-core) [`C++`]
 

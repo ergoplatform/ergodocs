@@ -41,14 +41,14 @@ Use this page to choose the right operational setup before following a specific 
 
 | Goal | Profile | Key settings | Follow-up |
 | --- | --- | --- | --- |
-| Validate the chain with minimum operator work | Pruned full node | `stateType = "utxo"`, UTXO bootstrap or pruning flow | [Pruned full node](modes/pruned-full-node.md) |
-| Keep full block history | Archival node | `blocksToKeep = -1` | [Archival node](modes/archival-node.md) |
+| Validate the chain with minimum operator work | Pruned full node | `stateType = "utxo"`, UTXO bootstrap or pruning flow | [Pruned full node](pruned-full-node.md) |
+| Keep full block history | Archival node | `blocksToKeep = -1` | [Archival node](archival-node.md) |
 | Serve dApp/indexer queries from node API | Indexed node | `ergo.node.extraIndex = true` | [Indexed Node API](indexed-node.md) |
-| Run Rosen watchers | Watcher host plus Ergo data source | indexed Ergo node recommended for health checks | [Rosen watcher](../eco/rosen/watcher.md) |
-| Run Rosen guards | Guard host plus keygen output | guard API, DB, signing toggles, secrets | [Rosen guard](../eco/rosen/guard.md) |
-| Bootstrap oracle pools | Oracle operator node | funded wallet, API access, `oracle-core` config | [Oracle bootstrap](../tutorials/oracle-bootstrap.md) |
-| Build a custom explorer/indexer | Explorer backend stack | node API, PostgreSQL, Redis, chain-grabber | [Blockchain indexing](../dev/tutorials/blockchain-indexing.md) |
-| Host a mining pool | Pool stack plus node | stratum/miningcore, payout ops, pool DB | [Mining pool operations](../mining/pool-ops.md) |
+| Run Rosen watchers | Watcher host plus Ergo data source | indexed Ergo node recommended for health checks | [Rosen watcher](watcher.md) |
+| Run Rosen guards | Guard host plus keygen output | guard API, DB, signing toggles, secrets | [Rosen guard](guard.md) |
+| Bootstrap oracle pools | Oracle operator node | funded wallet, API access, `oracle-core` config | [Oracle bootstrap](oracle-bootstrap.md) |
+| Build a custom explorer/indexer | Explorer backend stack | node API, PostgreSQL, Redis, chain-grabber | [Blockchain indexing](blockchain-indexing.md) |
+| Host a mining pool | Pool stack plus node | stratum/miningcore, payout ops, pool DB | [Mining pool operations](pool-ops.md) |
 
 ## Ports and Exposure
 

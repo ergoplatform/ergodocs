@@ -2,8 +2,16 @@
 tags:
   - P2P
 owner: docs
-last_reviewed: 2026-05-26
+last_reviewed: 2026-05-27
 source_repos:
+  - repo: mwaddip/ergo-proxy
+    branch: master
+    paths:
+      - docs/protocol/ergo-p2p-wire-format.md
+  - repo: ergoplatform/ergo
+    branch: testnet60
+    paths:
+      - src/main/resources/testnet.conf
   - repo: Satergo/Ergonnection
     branch: master
     paths:
@@ -12,6 +20,8 @@ source_repos:
       - src/main/java/com/satergo/ergonnection/records/Feature.java
       - src/main/java/com/satergo/ergonnection/records/Peer.java
 source_of_truth:
+  - https://github.com/mwaddip/ergo-proxy/tree/master/docs/protocol/ergo-p2p-wire-format.md
+  - https://github.com/ergoplatform/ergo/tree/testnet60/src/main/resources/testnet.conf
   - https://github.com/Satergo/Ergonnection/tree/master/src/main/java/com/satergo/ergonnection/ErgoSocket.java
   - https://github.com/Satergo/Ergonnection/tree/master/src/main/java/com/satergo/ergonnection/protocol/Protocol.java
   - https://github.com/Satergo/Ergonnection/tree/master/src/main/java/com/satergo/ergonnection/records/Feature.java
@@ -72,15 +82,15 @@ The table below outlines the format of a handshake message:
 | 1      | Feature id                                  | For session feature = 3                                           |
 | 1-2    | Feature body length                         | Length of feature description (VLQ-encoded, up to 2 bytes)        |
 | 4      | Network magic                               | Network magic bytes, see notes                                    |
-| 8      | Session id                                  | 64 bits long random session ID                                    |
+| 1-10   | Session id                                  | 64-bit random session ID, encoded as ZigZag plus VLQ              |
 
 ### Notes
 
-1. For the testnet, magic bytes are `[2, 0, 0, 1]` (in decimal). For mainnet, `[1, 0, 2, 4]` (in decimal).
-   Implementations should check these bytes before accepting a message from the socket; Ergonnection's socket handling was updated to reject incorrect magic bytes and to use the corrected testnet magic.
+1. For mainnet, magic bytes are `[1, 0, 2, 4]` (in decimal). Current public testnet uses `[2, 3, 2, 3]` in `testnet60`.
+   Implementations should check these bytes before accepting a message from the socket.
 2. For IPv4 or IPv6 address bytes, "The result is in network byte order: the highest order byte of the address is in `getAddress()[0]`." Please check `Inet4Address.getAddress()` or `Inet6Address.getAddress()` in Java's JDK for details.
 3. For the reference client, the session ID is currently used only to avoid connections to self.
-4. Variable-length integers in P2P records use VLQ encoding. When implementing a client, read and write these values consistently for peer records, feature lengths, and protocol messages.
+4. Variable-length integers in P2P records use Scorex VLQ encoding. Unsigned helpers such as `putUShort`, `putUInt`, and `putULong` are VLQ-encoded, while signed helpers such as `putInt` and `putLong` use ZigZag plus VLQ.
 
 **Example Implementation**:  
 

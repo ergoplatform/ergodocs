@@ -19,7 +19,7 @@ source_of_truth:
 This library equips developers with tools to:
 
 * Build and structure [Ergo transactions](transactions.md).
-* Generate cryptographic keys and [wallet addresses](../wallet/address.md).
+* Generate cryptographic keys and [wallet addresses](address.md).
 * Sign transactions securely.
 * Utilize various Ergo-specific data types and chain structures.
 

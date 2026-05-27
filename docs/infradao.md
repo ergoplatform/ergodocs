@@ -19,7 +19,7 @@ How it works:
 
 Related:
 
-- [Ergo Foundation](ef/ergo-foundation.md)
+- [Ergo Foundation](ergo-foundation.md)
 - [DevDAO](devdao.md)
 
 Get involved:

@@ -40,6 +40,6 @@ Instead of relying on a third-party explorer, your application communicates dire
 * Applications that primarily need access to the latest chain state or specific recent blocks/transactions.
 * Simpler queries that don't require scanning large portions of the blockchain history.
 * When running a node is already necessary for other functions (like transaction submission).
-* Often used as the *data source* for a [custom indexer](./custom-indexer.md), rather than the primary query interface for the dApp frontend.
+* Often used as the *data source* for a [custom indexer](custom-indexer.md), rather than the primary query interface for the dApp frontend.
 
-Querying the node API directly offers more control than public explorers but often lacks the performance and query flexibility needed for complex dApps, leading many to build [custom indexers](./custom-indexer.md).
+Querying the node API directly offers more control than public explorers but often lacks the performance and query flexibility needed for complex dApps, leading many to build [custom indexers](custom-indexer.md).

@@ -59,7 +59,7 @@ The `sigmastate-interpreter` codebase now separates more core Sigma data and AST
 - **Primitive Secrets**: **Schnorr signatures** and **Diffie-Hellman tuples** are primitive secrets used in creating proofs of knowledge.
 - **Non-Interactive Proofs**: Ergo makes cryptographic proofs **non-interactive** using the **Fiat-Shamir transformation**, making them suitable for blockchain environments.
 
-For more details on cryptographic functions in ErgoScript, see [ErgoScript Cryptographic Functions](dev/scs/global-functions.md#cryptographic-functions).
+For more details on cryptographic functions in ErgoScript, see [ErgoScript Cryptographic Functions](global-functions.md#cryptographic-functions).
 
 ---
 
@@ -179,7 +179,7 @@ Ergo uses **AVL+ trees** as part of its **Authenticated Dynamic Dictionary (ADD)
 
 **Merkle trees** are used in Ergo to ensure the integrity of large datasets, such as blocks of transactions, without requiring the entire dataset to be transmitted or verified. By storing only the root hash of a Merkle tree, nodes can quickly verify that individual transactions are part of the block, reducing the overhead of verification.
 
-Learn more about Merkle trees [here](dev/data-model/structures/merkle/merkle-tree-structures.md).
+Learn more about Merkle trees [here](merkle-tree-structures.md).
 
 ---
 
@@ -207,7 +207,7 @@ Ergo has generic support for variety of cryptographic protocols (via composable 
 - **Non-Interactive**: The proof of sigma-statements are made non-interactive with the **Fiat-Shamir** transformation.
 - [EIP-0003: Deterministic Wallet Standard](eip3.md)
 
-See [this page](dev/scs/global-functions.md#cryptographic-functions) for a description of the global Cryptographic functions available in ErgoScript.
+See [this page](global-functions.md#cryptographic-functions) for a description of the global Cryptographic functions available in ErgoScript.
 
 ## Before Ergo
 

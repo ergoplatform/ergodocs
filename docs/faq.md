@@ -74,14 +74,14 @@ The name "Ergo" encapsulates both a philosophical approach and a practical appli
 <details>
 <summary>How does it differ from Bitcoin?</summary>
 
-Ergo is a cryptocurrency that builds upon the same [eUTXO model](dev/protocol/eutxo.md) as Bitcoin but extends its functionality with additional features. Ergo allows for more complex programmability by providing access to the entire spending transaction and the block solution in the execution context. This enables the creation of Turing-complete contracts and the implementation of contractual money, where digital coins can be explicitly bound to a contract in the form of executable code.
+Ergo is a cryptocurrency that builds upon the same [eUTXO model](eutxo.md) as Bitcoin but extends its functionality with additional features. Ergo allows for more complex programmability by providing access to the entire spending transaction and the block solution in the execution context. This enables the creation of Turing-complete contracts and the implementation of contractual money, where digital coins can be explicitly bound to a contract in the form of executable code.
 
 </details>
 
 <details>
 <summary>What is contractual money?</summary>
 
-Contractual money is digital money that is bound to a contract in the form of executable code, which enforces specific rules and conditions for its usage. This is in contrast to traditional money, where contracts are external to the money itself and may be in the form of laws, corporate terms, or informal agreements. Contractual money allows for more precise control over how the money is spent and can be used to implement various use cases, such as [microcredit systems](dev/scs/microcredit.md) or local exchange trading systems.
+Contractual money is digital money that is bound to a contract in the form of executable code, which enforces specific rules and conditions for its usage. This is in contrast to traditional money, where contracts are external to the money itself and may be in the form of laws, corporate terms, or informal agreements. Contractual money allows for more precise control over how the money is spent and can be used to implement various use cases, such as [microcredit systems](microcredit.md) or local exchange trading systems.
 
 </details>
 
@@ -155,7 +155,7 @@ The code for the emission schedule can be found [here](https://github.com/ergopl
 <details>
 <summary>What is the *Ergo Foundation*?</summary>
 
-The [Ergo Foundation](ef/ergo-foundation.md) is a community-driven entity focused on:
+The [Ergo Foundation](ergo-foundation.md) is a community-driven entity focused on:
 
 - Promoting non-breaking development of Ergo Platform protocol;
 - Promoting the widespread adoption and use of Ergo Platform and its native token (ERG);
@@ -169,7 +169,7 @@ To fund development, promotion, events, and any other activities which may advan
 </details>
 
 <details>
-<summary>What is the [Emission Schedule](mining/emission.md)?</summary>
+<summary>What is the [Emission Schedule](emission.md)?</summary>
 
 Ergo has a maximum supply of **97,739,925** Ergs, to be completed by 2045. The block reward lowers to 3ERG in 2026. You can see this emission schedule on [ergo.watch](https://ergo.watch/emission)
 
@@ -185,7 +185,7 @@ Position Ergo as a basis for unstoppable, grassroots economies, serving as a dec
 
 Continue to solve pain points in development. UX is a big one which will be helped hugely by sub-blocks. We have two hardware wallets just about ready (Ledger, Keystone), more courses, tutorials, guides, resources, etc appearing daily making it easier to onboard developers.
 
-[Developer Getting Started Guide](dev/get-started.md)
+[Developer Getting Started Guide](get-started.md)
 
 Bulk of our issue is lack of T1 exchanges and professional marketing. Rosen is helping here by connecting extensive liquidity to our DeFi stack (for example, DOGE could launch HodlDOGE on-chain, rsBTC can go in the mixer, etc)
 
@@ -198,7 +198,7 @@ You can mint new tokens, nfts, and transact them for next to nothing. Everything
 
 DAOs are now live and the community can help to grow the ecosystem in a more structured and decentralised way.
 
-[Sigmanauts Program](contribute/sigmanauts.md)
+[Sigmanauts Program](sigmanauts.md)
 
 We have dozens of volunteers who drive ergo forward already. We're not reliant on a centralised entity or group pushing things forward. This kind of growth is a slow-burn but cummulative. I've been applying Start up Growth Engineering to Ergo, optimising for agency, pushing decision ownership to the front line, appropriate alignment, removing barriers to necessary, creating linear resources so that we're best positioned to drive compounding growth via network effects.
 
@@ -228,11 +228,11 @@ And there is an AI bot trained on all our docs, whitepapers and chats, available
 
 Privacy is a core principle for Ergo, considered a fundamental human right, and is implemented through opt-in protocols and robust cryptographic methods within its eUTXO model, ensuring strong protection while maintaining necessary transparency. To sidestep legal challenges, Ergo operates as a fully open-source platform with clear documentation and transparent development practices.
 
-Innovations like ErgoMixer—the first non-custodial, programmable, non-interactive mixer offering features such as token mixing, covert addresses, [stealth addresses](uses/stealth-address.md), SigmaUSD minting, and Tor support—demonstrate this commitment. More advanced ideas like [SigmaJoin](eco/sigmajoin.md#key-advantages) and [Mixicles](uses/mixicles.md) are also proposed.
+Innovations like ErgoMixer—the first non-custodial, programmable, non-interactive mixer offering features such as token mixing, covert addresses, [stealth addresses](stealth-address.md), SigmaUSD minting, and Tor support—demonstrate this commitment. More advanced ideas like [SigmaJoin](sigmajoin.md#key-advantages) and [Mixicles](mixicles.md) are also proposed.
 
 Contracts can't be shut down. We avoid legal challenges by pushing for completely unstoppable designs, educating the community on Knowing Their Assumptions and best practices.
 
-[Know Your Assumptions (KYA)](contribute/standards/kya.md)
+[Know Your Assumptions (KYA)](kya.md)
 
 </details>
 
@@ -249,19 +249,19 @@ There are very few smart contract platforms that align with the original vision 
 Ergo differentiates itself in a competitive landscape by using a UTXO-based model rather than the account-based systems common in platforms like Ethereum. This simplifies contract development and reduces complexity compared to coding in Solidity. This approach resonates with Bitcoin enthusiasts who favor smart contracts aligned with Bitcoin’s principles.
 
 This page covers key aspects of the Ergo contract model which makes it different:
-[ErgoScript Paradigm](dev/scs/ergoscript.md#paradigm)
+[ErgoScript Paradigm](ergoscript.md#paradigm)
 
 Design patterns will continue to mature, and we'll keep developing innovative protocols and designs that re-capture the cypherpunk spirit:
 
-- [ChainCash: A Practical Approach to Elastic Money Creation](uses/chaincash.md)
-- [Dexy: A Seigniorage-Based Stablecoin](eco/dexy.md)
+- [ChainCash: A Practical Approach to Elastic Money Creation](chaincash.md)
+- [Dexy: A Seigniorage-Based Stablecoin](dexy.md)
 - [Blockchain-based trustless derivatives: HashrateCoin and RandomCoin - Ergo Forum](https://www.ergoforum.org/t/blockchain-based-trustless-derivatives-hashratecoin-and-randomcoin/4999)
 
 While the bulk of the market may not prioritize these aspects, builders do, and their dApps attract a wider audience.
 
 For the everyday user, the Pure Degenerate Finance (DegFi) dApps on Ergo enable high-risk, high-reward opportunities through transparent game-theoretic interactions.
 
-[Degenerate Finance (DegFi)](uses/degfi.md)
+[Degenerate Finance (DegFi)](degfi.md)
 
 These are launching at an accelerated rate as the base layer maturity now allows it, and could bring in a huge amount of people with the right design, incentives and hype.
 
@@ -290,14 +290,14 @@ Scala has several features that set it apart from other JVM languages.
 
 TPS (Transactions Per Second) is not a useful metric. On Ergo Reference Node v.5, TPS is estimated to be a minimum of 47.5 tx/s. However, transactions can happen in three scaling layers or levels:
 
-- L0: Ergo Reference Nodes, which can be bootstrapped using [NiPoPoWs proofs](dev/protocol/nipopows.md) and UTXO set snapshots.
+- L0: Ergo Reference Nodes, which can be bootstrapped using [NiPoPoWs proofs](nipopows.md) and UTXO set snapshots.
 - L1: Ergo has extensions that allow for a wide variety of scaling solutions such as Sharding, Hydra, or BitcoinNG-style macroblocks.
 - L2 (off-chain): Ergo should be compatible with the Lightning Network, Rainbow Network, and many more. The implementation here will depend on the needs of the applications being built on Ergo.
 
 The general idea is that many transactions can happen in L1 or L2 and these transactions can be bundled and settled on the L0 layer of the Ergo blockchain using a single transaction. Thanks to the high flexibility of ErgoScript programming model, many different protocols are possible, each one solving scalability problem in a specific domain (like simple payment transactions).
 Ergo blockchain can be thought as common settlement layer for many L1/L2 protocols and applications.
 
-See the [scaling](dev/protocol/scaling.md) page for more information.
+See the [scaling](scaling.md) page for more information.
 
 </details>
 
@@ -341,11 +341,11 @@ Other coins like Ethereum classic are a bad comparisons, as they shared the same
 
 After the scheduled emissions conclude in 2045, miners on Ergo will continue to be incentivized through alternative methods. One such approach involves transaction fees and Miner Extracted Value (MEV). Transactions on Ergo generate fees (paid in Ergs), with a portion of these fees awarded to miners. MEV represents the total value miners can extract from a block using tactics like reordering, front-running, and other advanced techniques. Miners can increase their MEV earnings by efficiently executing transactions in high MEV blocks, which encourages them to contribute their hash power to the network.
 
-Another incentive for miners on Ergo is through [**Storage Rent**](dev/protocol/storage-rent.md). This mechanism requires users to pay for the storage their data occupies on the network. Consequently, miners receive a consistent income stream, as they earn Ergs from fees users pay for content storage. [This post](https://www.reddit.com/r/ergonauts/comments/xeke0b/discover_ergos_storage_rent_potential/) provides insight into future mining rewards from storage rent.
+Another incentive for miners on Ergo is through [**Storage Rent**](storage-rent.md). This mechanism requires users to pay for the storage their data occupies on the network. Consequently, miners receive a consistent income stream, as they earn Ergs from fees users pay for content storage. [This post](https://www.reddit.com/r/ergonauts/comments/xeke0b/discover_ergos_storage_rent_potential/) provides insight into future mining rewards from storage rent.
 
 Miners can also benefit from custom emission contracts as part of a Fair Initial Mining Offering (FIMO) process. These contracts reward miners with non-native tokens, ensuring new projects have equal opportunities to distribute tokens to the community while incentivizing miners to participate in mining.
 
-Moreover, miners can operate [off-chain execution bots](dev/oc/dex_bots.md) on the same machine to earn additional ERG rewards. [Machina Finance](eco/machina-finance.md) is also developing an *extensible* off-chain bot framework.
+Moreover, miners can operate [off-chain execution bots](dex_bots.md) on the same machine to earn additional ERG rewards. [Machina Finance](machina-finance.md) is also developing an *extensible* off-chain bot framework.
 
 In summary, miners on Ergo are incentivized through transaction fees (including MEV), storage rent, custom emission contracts that reward non-native tokens as part of the FIMO (Fair Initial Mining Offering), and more.
 
@@ -354,7 +354,7 @@ In summary, miners on Ergo are incentivized through transaction fees (including 
 <details>
 <summary>Is Proof of Useful Work being considered?</summary>
 
-While [Proof of Useful Work (PoUW)](uses/pouw.md) is an interesting concept, it is still in the research phase. Ergo, being open to implementing new ideas, is willing to explore PoUW. However, a radical change to Ergo's consensus mechanism that requires a [hard fork](mining/gov/hard-fork.md) would likely be beyond the scope and resources of Ergo's small core development team and limited budget.
+While [Proof of Useful Work (PoUW)](pouw.md) is an interesting concept, it is still in the research phase. Ergo, being open to implementing new ideas, is willing to explore PoUW. However, a radical change to Ergo's consensus mechanism that requires a [hard fork](hard-fork.md) would likely be beyond the scope and resources of Ergo's small core development team and limited budget.
 
 Currently, Ergo is considering conducting preliminary research and establishing specifications for PoUW, but its actual usefulness is still uncertain. It is difficult to make a definitive judgment at this time.
 
@@ -364,20 +364,20 @@ From an economic standpoint, PoUW introduces various interesting and possibly un
 
 Therefore, during the bootstrapping phase, it seems necessary to have rewards determined by the protocol.
 
-The most realistic option, it seems, would be to launch a PoUW [sidechain](uses/sidechains.md). However, what other possibilities could be explored? Furthermore, what options could benefit the Ergo main chain and its ecosystem?
+The most realistic option, it seems, would be to launch a PoUW [sidechain](sidechains.md). However, what other possibilities could be explored? Furthermore, what options could benefit the Ergo main chain and its ecosystem?
 
 </details>
 
 <details>
 <summary>How can I stake my Erg?</summary>
 
-Ergo is a [PoW (**Proof of Work**)](mining/autolykos.md) coin, not a PoS (**Proof of Stake**), which means that blocks are validated by miners, not by stakes; therefore, you can't stake Erg directly.
+Ergo is a [PoW (**Proof of Work**)](autolykos.md) coin, not a PoS (**Proof of Stake**), which means that blocks are validated by miners, not by stakes; therefore, you can't stake Erg directly.
 
 However, it is possible to earn some yield from your ERG in combination with Ergo in liquidity pools, tokenisation of dApps, trading bots, lending platforms, and other mechanisms.
 
 You can 'stake' native tokens on Ergo in some form (on ergopad.io *live*, Night Owl Casino *soon*, ErgoMixer *soon*,+ more)  
 
-For more info on earning off your Erg, look at the [Yield guide](tutorials/yield.md).
+For more info on earning off your Erg, look at the [Yield guide](yield.md).
 
 </details>
 
@@ -496,14 +496,14 @@ A: Ergo excels in several areas, leveraging the benefits of the Extended UTXO mo
 <details>
 <summary>How does Ergo address environmental concerns related to Proof-of-Work (PoW)?</summary>
 
-A: Ergo acknowledges that PoW is energy-intensive compared to Proof-of-Stake (PoS). However, Ergo's design is conservative, focusing on well-known and tested [Sigma protocols](dev/scs/sigma.md) for privacy. The network is designed to be upgradeable, allowing for the adoption of newer, resilient cryptographic frameworks in the future. Ergo values research and employs methods and cryptography that have been rigorously tested to ensure security and store of value properties.
+A: Ergo acknowledges that PoW is energy-intensive compared to Proof-of-Stake (PoS). However, Ergo's design is conservative, focusing on well-known and tested [Sigma protocols](sigma.md) for privacy. The network is designed to be upgradeable, allowing for the adoption of newer, resilient cryptographic frameworks in the future. Ergo values research and employs methods and cryptography that have been rigorously tested to ensure security and store of value properties.
 
 </details>
 
 <details>
 <summary>How is Ergo onboarding developers and cultivating its developer community?</summary>
 
-A: Ergo recognizes the importance of documentation, developer tools, and educational resources in onboarding developers. The network is actively working on creating these resources to streamline the process of converting non-web3 developers to Ergo. Ergo offers [bounties](contribute/bounties.md), [hackathons](events/ergohack.md), and prizes to incentivize developers to learn, improve, and contribute to the Ergo ecosystem.
+A: Ergo recognizes the importance of documentation, developer tools, and educational resources in onboarding developers. The network is actively working on creating these resources to streamline the process of converting non-web3 developers to Ergo. Ergo offers [bounties](bounties.md), [hackathons](ergohack.md), and prizes to incentivize developers to learn, improve, and contribute to the Ergo ecosystem.
 
 </details>
 
@@ -568,6 +568,6 @@ A: Ergo advocates for transparency and open-source development, considering the 
 <details>
 <summary>Are there signs of collaboration and synergy within the Ergo ecosystem?</summary>
 
-A: Ergo was built to support smart financial contracts, and as the [eUTXO model](dev/protocol/eutxo.md) and [ErgoScript](dev/scs/ergoscript.md) develop, new innovative frameworks are expected to emerge. The [ecosystem](uses/use-cases-overview.md) benefits from the collaboration and specialization of developers and projects built on top of Ergo, fostering synergy within specific niches and industries.
+A: Ergo was built to support smart financial contracts, and as the [eUTXO model](eutxo.md) and [ErgoScript](ergoscript.md) develop, new innovative frameworks are expected to emerge. The [ecosystem](use-cases-overview.md) benefits from the collaboration and specialization of developers and projects built on top of Ergo, fostering synergy within specific niches and industries.
 
 </details>

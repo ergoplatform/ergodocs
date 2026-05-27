@@ -18,7 +18,7 @@ This guide outlines current best practices, available tools, and potential futur
 
 Given the limitations of on-chain debugging, a strong emphasis is placed on **off-chain testing and careful design**:
 
-1. **Thorough Unit Testing:** This is the most crucial aspect of ensuring contract correctness. Use testing frameworks provided by SDKs like [Appkit (Scala)](../lang/scala.md), [Fleet SDK (JS/TS)](fleet-sdk-recipes.md), or [Sigma-Rust](../lang/rust.md) to simulate transaction scenarios.
+1. **Thorough Unit Testing:** This is the most crucial aspect of ensuring contract correctness. Use testing frameworks provided by SDKs like [Appkit (Scala)](scala.md), [Fleet SDK (JS/TS)](fleet-sdk-recipes.md), or [Sigma-Rust](rust.md) to simulate transaction scenarios.
     * Create test cases covering expected behavior (happy paths).
     * Create test cases for edge cases and potential failure conditions (e.g., incorrect inputs, invalid context, insufficient funds, incorrect spending proofs).
     * Verify expected outputs, register values, and created boxes.

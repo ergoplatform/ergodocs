@@ -136,7 +136,7 @@
 * **Mempool (Memory Pool)**: it is a data structure that holds pending transactions in a blockchain network before they are confirmed.
 * **[Miner-Adjustable Parameters](governance.md)**: Parameters that miners can modify to influence the network's scalability, including block size and transaction size, affecting throughput and computational load.
 * **Minor Changes**: Refers to small edits or updates that can be made directly through the GitHub interface, typically for minor corrections or improvements.
-* **[Mining](mining/mining-overview.md)**: The process of obtaining ERG tokens by solving computational problems using hardware and electricity.
+* **[Mining](mining-overview.md)**: The process of obtaining ERG tokens by solving computational problems using hardware and electricity.
 * **[Mining Pool](pools.md)**: A collective group of miners who combine their computational resources to increase the chances of earning cryptocurrency rewards.
 * **Miners**: Individuals or entities who validate transactions and add new blocks to the Ergo blockchain.
 * **Miner Extracted Value (MEV)**: The total value miners can extract from a block using tactics like reordering and front-running.

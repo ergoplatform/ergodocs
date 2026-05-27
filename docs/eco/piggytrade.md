@@ -29,5 +29,5 @@ PiggyTrade fits with Ergo's DEX and trading-tool surface rather than as a base p
 ## Links
 
 - [PiggyTrade repository](https://github.com/FlyingPig5/piggy-trade)
-- [DEX overview](../uses/dex.md)
+- [DEX overview](dex.md)
 - [P2P trading](p2p-trading.md)

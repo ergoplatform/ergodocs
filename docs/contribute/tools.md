@@ -149,7 +149,7 @@ MkDocs imports this through `mkdocs.yml`:
 on_page_markdown: "tools.hooks:fix_lists"
 ```
 
-The hook normalizes over-indented nested list markers before Markdown rendering. It exists because some legacy pages use 4-space or 6-space nested bullets, while `mdx_truly_sane_lists` expects 2-space nesting.
+The hook normalizes over-indented nested list markers before Markdown rendering. It also resolves card `url` values that use basename-only links such as `wallets.md`, matching the rest of the docs link style while still giving MkDocs valid relative paths at build time.
 
 Do not run it directly. Validate hook changes with:
 

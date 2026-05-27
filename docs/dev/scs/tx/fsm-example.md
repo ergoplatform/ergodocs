@@ -24,14 +24,14 @@ source_of_truth:
 ---
 # Tutorial: Finite State Machines (FSM) in Ergo
 
-Finite State Machines (FSMs) are a computational model used to design systems that can be in one of a finite number of states at any given time. The machine transitions from one state to another based on specific inputs or conditions. This model is particularly valuable for implementing [multi-stage protocols](../multi.md) or contracts on the blockchain, where the allowed actions depend on the current state of the contract.
+Finite State Machines (FSMs) are a computational model used to design systems that can be in one of a finite number of states at any given time. The machine transitions from one state to another based on specific inputs or conditions. This model is particularly valuable for implementing [multi-stage protocols](multi.md) or contracts on the blockchain, where the allowed actions depend on the current state of the contract.
 
 ## Concept
 
 In the context of Ergo's [eUTXO model](eutxo.md), an FSM contract is implemented as a sequence of transactions, where each transaction consumes a box representing the *current state* and creates a new box representing the *next state*.
 
-* **State Representation:** The current state of the FSM is encoded within an Ergo box, typically using its [registers](../boxes-and-registers.md) (e.g., R4 might hold a state identifier like an `Int` or `Byte`). Other registers hold data associated with that state.
-* **Transitions:** The [ErgoScript](../ergoscript.md) guarding the state box defines the valid transitions. It checks:
+* **State Representation:** The current state of the FSM is encoded within an Ergo box, typically using its [registers](boxes-and-registers.md) (e.g., R4 might hold a state identifier like an `Int` or `Byte`). Other registers hold data associated with that state.
+* **Transitions:** The [ErgoScript](ergoscript.md) guarding the state box defines the valid transitions. It checks:
   * The conditions required to move from the current state (e.g., specific inputs provided, signatures, blockchain height).
   * That the output box correctly represents the *next* valid state (e.g., the state identifier in R4 is updated correctly, other registers are preserved or updated according to protocol rules).
 * **Immutability:** Each transaction creates a *new* box for the next state, preserving the immutable nature of the blockchain. The previous state box is consumed (spent).
@@ -120,9 +120,9 @@ Let's model a simple vending machine:
 * **Real-World Examples:**
   * **ChainCash:** Contracts like [`note.es`](https://github.com/ChainCashLabs/chaincash/blob/master/contracts/onchain/note.es) implement FSM patterns for managing promissory notes and reserves.
 * **Related Concepts:**
-  * [Multi-Stage Contracts](../multi.md)
+  * [Multi-Stage Contracts](multi.md)
   * [eUTXO Model](eutxo.md)
-  * [Box Registers](../boxes-and-registers.md)
+  * [Box Registers](boxes-and-registers.md)
 
 ## Advanced Concepts
 

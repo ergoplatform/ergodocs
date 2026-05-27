@@ -513,7 +513,7 @@ nav:
           - Bounties: contribute/bounties.md
           - Grants: contribute/grants.md
       - Standards & Best Practices:
-          - contribute/standards.md
+          - contribute/ecosystem-standards.md
           - Chat Bridge: contribute/standards/chat-bridge.md
           - ErgoTipperBot: contribute/standards/tipbot.md
           - KYA: contribute/standards/kya.md

@@ -288,7 +288,7 @@ Public APIs are shared resources. To ensure reliable operation and avoid being b
 
 * **Be Specific:** Request only the data you need. Use API parameters (`limit`, `offset`, specific endpoints) to narrow down results instead of fetching large datasets and filtering client-side.
 * **Identify Your Client:** Use a descriptive `User-Agent` header in your requests so API providers can identify your application's traffic if issues arise.
-* **Consider Alternatives:** If your application requires high volume, low latency, or complex queries, relying solely on public APIs might not be sustainable. Explore [querying your own node](./node-api-direct.md) or building a [custom indexer](./custom-indexer.md).
+* **Consider Alternatives:** If your application requires high volume, low latency, or complex queries, relying solely on public APIs might not be sustainable. Explore [querying your own node](node-api-direct.md) or building a [custom indexer](custom-indexer.md).
 
 ## Pros & Cons Summary
 

@@ -24,7 +24,7 @@ Here's a comparison of the main operational modes:
 
 ## Mode Comparison
 
-| Feature / Mode        | [Archival Full Node](modes/archival-node.md) | [Pruned Full Node](modes/pruned-full-node.md) | [Digest (Stateless) Node](modes/light-full-node.md)¹ | [Light SPV Client](modes/light-spv-node.md) |
+| Feature / Mode        | [Archival Full Node](archival-node.md) | [Pruned Full Node](pruned-full-node.md) | [Digest (Stateless) Node](light-full-node.md)¹ | [Light SPV Client](light-spv-node.md) |
 | :-------------------- | :------------------------------------------- | :-------------------------------------------- | :-------------------------------------------------- | :------------------------------------------ |
 | **Primary Goal**      | Max Security, Full History                   | Full Security, Reduced Storage                | Full Security, Minimal Storage                      | Tx Verification, Minimal Resources          |
 | **Key Config**        | `stateType="utxo"`<br>`blocksToKeep=-1`      | `stateType="utxo"`<br>`blocksToKeep > 0`      | `stateType="digest"`<br>`blocksToKeep > 0`         | N/A (Client Software)                       |
@@ -36,7 +36,7 @@ Here's a comparison of the main operational modes:
 | **Full Tx Validation**| Yes                | Yes (for kept blocks) | Yes (for kept blocks, via ADProofs) | No (Header validation only) |
 | **API Support**       | Full               | Full (for available data) | Limited (May lack endpoints requiring full UTXO set) | N/A (Relies on Full Node API) |
 | **Wallet Compatibility**| Full (incl. restore) | New Wallets OK; **No Restore** | New Wallets OK; **No Restore**; Potential issues with standard P2P tx submission reported² | Verification only; Relies on Full Node for tx submission/balance |
-| **Use Cases**         | Mining, Archiving, Max Trust Backend | dApp Backend, Personal Wallet Backend (New Wallet) | Mobile Node Backend ([Android Guide](install/node-android.md)), dApp Backend (Specific Needs), Personal Wallet Backend (New Wallet, check compatibility) | Light Wallets, Quick Verification Tools |
+| **Use Cases**         | Mining, Archiving, Max Trust Backend | dApp Backend, Personal Wallet Backend (New Wallet) | Mobile Node Backend ([Android Guide](node-android.md)), dApp Backend (Specific Needs), Personal Wallet Backend (New Wallet, check compatibility) | Light Wallets, Quick Verification Tools |
 
 **Detailed Explanations & Notes:**
 

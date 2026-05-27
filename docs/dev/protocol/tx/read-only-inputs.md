@@ -2,7 +2,7 @@
 tags:
   - Data Inputs
 owner: docs
-last_reviewed: 2026-05-26
+last_reviewed: 2026-05-27
 source_repos:
   - repo: Emurgo/Emurgo-Research
     branch: master
@@ -29,11 +29,11 @@ Traditional UTXO-based blockchains involve the consumption and subsequent destru
 
 The integration of data inputs into ErgoScript offers several notable benefits:
 
-1. **Reduced Transaction Fees:** Since data inputs do not necessitate script execution or the generation of new outputs, they contribute to lower transaction fees, making them an economical choice for intricate transactions.
+1. **Reduced Transaction Contention:** Data inputs let a transaction read a box without spending it, so many transactions can depend on the same oracle, configuration, or state box without competing to consume that box. This can avoid extra state-copying transactions and reduce failure/retry overhead in complex protocols. Data inputs still add bytes to the transaction, and the transaction still pays for its normal inputs, outputs, and validation cost.
   
 2. **Enhanced DeFi Applications:** Data inputs prove invaluable for decentralized finance (DeFi) applications, such as decentralized exchanges (DEXs) or order-book systems. They enable contracts to reference external data, like oracle data or order book states, without the need to consume the data boxes, facilitating concurrent interactions with the same state by multiple parties.
 
-3. **Improved Scalability and Efficiency:** Data inputs contribute to network scalability and efficiency by allowing several transactions to concurrently read from the same data input, reducing the necessity for extra outputs and lessening the likelihood of transaction conflicts.
+3. **Improved Scalability and Efficiency:** Data inputs contribute to network scalability and efficiency by allowing several transactions to concurrently read from the same data input, reducing the need to duplicate state into extra boxes and lessening the likelihood of transaction conflicts.
 
 ## Working with Data Inputs
 

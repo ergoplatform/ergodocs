@@ -16,8 +16,8 @@ Autolykos, in its first version, was designed with inherent pool-resistance thro
 
 In addition to EIP-0009, several other proposals have been implemented which impact the autolykos algorithm in regards to the emission and difficulty adjustment:
 
-- [**EIP27: Emission Retargeting Soft-Fork**](standards/eip27.md) was a significant milestone, passed with overwhelming community support, that extended emission by 4,566,336 blocks (~17.38 years). This change was activated on block `777217`. For more information see the [emission](emission.md) section.
-- [**EIP37: Tweaking Difficulty Adjustment Algorithm**](standards/eip37.md) made the difficulty adjustment mechanism more responsive by considering a shorter and more recent history of blocks. EIP37 didn't replace Autolykos but refined it, making it more resilient against sudden hash rate changes and adversarial disruptions. For more information see the [difficulty adjustment](difficulty.md) section.
+- [**EIP27: Emission Retargeting Soft-Fork**](eip27.md) was a significant milestone, passed with overwhelming community support, that extended emission by 4,566,336 blocks (~17.38 years). This change was activated on block `777217`. For more information see the [emission](emission.md) section.
+- [**EIP37: Tweaking Difficulty Adjustment Algorithm**](eip37.md) made the difficulty adjustment mechanism more responsive by considering a shorter and more recent history of blocks. EIP37 didn't replace Autolykos but refined it, making it more resilient against sudden hash rate changes and adversarial disruptions. For more information see the [difficulty adjustment](difficulty.md) section.
 
 ### Pool Resistance (Autolykos v1)
 
@@ -59,7 +59,7 @@ The table size (**N** value) evolves over time as follows:
 [
   {
     "title": "Start Mining",
-    "url": "setup/join.md",
+    "url": "join.md",
     "content": "Getting setup with a mining pool."
   },
   {

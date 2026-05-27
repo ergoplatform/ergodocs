@@ -32,6 +32,6 @@ At present, we are actively rewarding contributions to Developer Tutorials and G
 
 The Development Reward Program is our way of acknowledging and appreciating significant contributions to the Ergo repositories. If your contributions have significantly enhanced the development and improvement of the Ergo ecosystem, you could be eligible for a reward. You can find the details and guidelines for this program [here](https://github.com/ErgoDevs/Ergo-Bounties).
 
-Contribution-reward experiments also include [GitCircles](../gitcircles.md), which tracks merged work and maps open-source contributions to on-chain rewards.
+Contribution-reward experiments also include [GitCircles](gitcircles.md), which tracks merged work and maps open-source contributions to on-chain rewards.
 
 We deeply appreciate the time, dedication, and expertise you invest in enhancing our ecosystem. By participating in our mission to improve educational materials and drive development within the Ergo community, you are playing a crucial role in the collective growth and success of the platform. 

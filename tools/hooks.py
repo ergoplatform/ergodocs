@@ -1,12 +1,59 @@
+import logging
+import os
+import pathlib
 import re
+from collections import defaultdict
+from urllib.parse import quote
+
+LOG = logging.getLogger(__name__)
 
 _FENCE = re.compile(r"^[ \t]*(```|~~~)")
 _LIST_ITEM = re.compile(r"^([ \t]*)([*+-]|\d+\.)[ \t]+")
+_CARD_URL_JSON = re.compile(r'("url"\s*:\s*")([^"/:#][^"#]*\.md)(#[^"]*)?(")')
+_CARD_URL_YAML = re.compile(r"(\burl:\s*)([^/\s:#][^\s#]*\.md)(#[^\s]*)?")
 
 
 def _indent_width(prefix: str) -> int:
     # tabs inside Markdown list indentation are ambiguous; normalize to spaces.
     return len(prefix.expandtabs(2))
+
+
+def _filename_index(files):
+    index = defaultdict(list)
+    for file_ in files:
+        if getattr(file_, "abs_src_path", None):
+            index[os.path.basename(file_.abs_src_path)].append(file_.abs_src_path)
+    return index
+
+
+def _relative_doc_link(target: str, anchor: str, page, files) -> str:
+    index = _filename_index(files)
+    if target not in index:
+        return target + (anchor or "")
+
+    matches = index[target]
+    if len(matches) > 1:
+        LOG.warning("Card URL '%s' matches multiple docs: %s", target, matches)
+
+    page_dir = os.path.dirname(page.file.abs_src_path)
+    rel = pathlib.PurePath(os.path.relpath(matches[0], page_dir)).as_posix()
+    return quote(rel) + (anchor or "")
+
+
+def _fix_card_urls(markdown: str, page=None, files=None, **kwargs) -> str:
+    if page is None or files is None:
+        return markdown
+
+    def json_repl(match):
+        target = _relative_doc_link(match.group(2), match.group(3), page, files)
+        return f"{match.group(1)}{target}{match.group(4)}"
+
+    def yaml_repl(match):
+        target = _relative_doc_link(match.group(2), match.group(3), page, files)
+        return f"{match.group(1)}{target}"
+
+    markdown = _CARD_URL_JSON.sub(json_repl, markdown)
+    return _CARD_URL_YAML.sub(yaml_repl, markdown)
 
 
 def fix_lists(markdown: str, **kwargs) -> str:
@@ -75,4 +122,4 @@ def fix_lists(markdown: str, **kwargs) -> str:
 
         out.append(line)
 
-    return "\n".join(out)
+    return _fix_card_urls("\n".join(out), **kwargs)

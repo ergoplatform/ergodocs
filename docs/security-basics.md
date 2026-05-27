@@ -43,8 +43,8 @@ Use this checklist before holding funds, connecting to dApps, signing messages, 
 
 | Problem | Start here |
 | --- | --- |
-| Wallet will not load or connect | [Access Issues](tutorials/access-issues.md) |
-| Need offline storage | [Cold Wallet Guide](tutorials/cold-wallet.md) |
-| Need hardware-wallet flow | [Ledger](dev/wallet/payments/ledger.md) |
-| Need to verify a signed message | [Message Signing](tutorials/message-signing.md) |
-| Need bridge help | [Rosen Troubleshooting](eco/rosen/rosen-troubleshooting.md) |
+| Wallet will not load or connect | [Access Issues](access-issues.md) |
+| Need offline storage | [Cold Wallet Guide](cold-wallet.md) |
+| Need hardware-wallet flow | [Ledger](ledger.md) |
+| Need to verify a signed message | [Message Signing](message-signing.md) |
+| Need bridge help | [Rosen Troubleshooting](rosen-troubleshooting.md) |

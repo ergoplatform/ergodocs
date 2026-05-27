@@ -43,7 +43,7 @@ The UI for the front-end is available at [anon-real/sigma-usd](https://github.co
 
 Dexy uses seigniorage
 
-- [Dexy overview](../eco/dexy.md)
+- [Dexy overview](dexy.md)
 - [USE stablecoin](use_stablecoin.md)
 - [DexySpec](https://github.com/ergoplatform/ergo-jde/blob/main/kiosk/src/test/scala/kiosk/dexy/DexySpec.scala)
 - [Dexy Stablecoin Design](https://github.com/ergoplatform/ergo-jde/blob/main/kiosk/src/test/scala/kiosk/dexy/Dexy.md)
@@ -54,4 +54,4 @@ Dexy uses seigniorage
 
 ## Gluon
 
-[Gluon](../eco/gluon.md) is a stablecoin protocol on Ergo using fission, fusion, and beta-decay operations. Its current Ergo UI is tracked separately from SigmaUSD and Dexy.
+[Gluon](gluon.md) is a stablecoin protocol on Ergo using fission, fusion, and beta-decay operations. Its current Ergo UI is tracked separately from SigmaUSD and Dexy.

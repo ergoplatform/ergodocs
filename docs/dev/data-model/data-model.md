@@ -134,7 +134,7 @@ Ergo uses an [address](address.md) system that ensures security, privacy, and fl
 
 ## 7. Payment Standards and Protocols
 
-Ergo defines protocols to streamline user interactions with [wallets](../wallets.md) and applications.
+Ergo defines protocols to streamline user interactions with [wallets](wallets.md) and applications.
 
 * [ErgoPay Protocol (EIP-20)](eip20.md): Interaction protocol for mobile wallets and dApps.
 * [Payment Request URI (EIP-25)](eip25.md): Standard format for payment requests.
@@ -181,16 +181,16 @@ Ergo employs a robust, stateless transaction validation approach:
 ## 10. Data Structures and Performance
 
 * [General Data Structures](data-structures.md)
-* [Proof of Proof-of-Work (PoPow)](structures/popow.md): Consensus mechanism enhancement for light clients, related to [NIPoPoWs](nipopows.md).
+* [Proof of Proof-of-Work (PoPow)](popow.md): Consensus mechanism enhancement for light clients, related to [NIPoPoWs](nipopows.md).
 
 ### 10.1 Authenticated Data Structures
 
 * [Merkle Trees](merkle-tree-structures.md) for efficient state commitment.
-  * [Merkle Batch Proof](structures/merkle/merkle-batch-proof.md)
-  * [Merkle Extension](structures/merkle/merkle-extension.md)
-  * [Merkle Light Proof](structures/merkle/merkle-light-proof.md)
+  * [Merkle Batch Proof](merkle-batch-proof.md)
+  * [Merkle Extension](merkle-extension.md)
+  * [Merkle Light Proof](merkle-light-proof.md)
 * [AVL+ Trees](avl.md) for authenticated key-value storage.
-* [Interlink Vectors](structures/interlink-vectors.md): Lightweight blockchain verification.
+* [Interlink Vectors](interlink-vectors.md): Lightweight blockchain verification.
 * [AD Proofs](block-adproofs.md): Supporting stateless clients.
 
 ### 10.2 Scalability and Efficiency

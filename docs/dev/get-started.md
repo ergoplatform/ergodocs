@@ -130,7 +130,7 @@ The Account model of Ethereum is imperative, meaning that sending coins from Ali
 
 - **[Scastie](scastie.md)**: An online compiler tailored for Scala, perfect for developers eager to experiment, share, or learn Scala.
 
-- **[Kiosk](stack/kiosk.md)**: A web-based UI to explore ErgoScript. *(Corrected path)*
+- **[Kiosk](kiosk.md)**: A web-based UI to explore ErgoScript. *(Corrected path)*
 
 - **[Ergo-Puppet](puppet.md)**: An advanced tool built on the Ergo Playground, designed for off-chain experimentation and unit testing of Ergo contracts.
 
@@ -224,7 +224,7 @@ Sigma Protocols (Σ-Protocols) are the foundation of Ergo’s smart contracts. T
 - **Additional Cryptographic Standards**:
   - **[EIP-0003: Deterministic Wallet Standard](eip3.md)**: A standard defining the structure and operation of deterministic wallets in the Ergo platform.
 
-See [this page](scs/global-functions.md#cryptographic-functions) for a description of the global cryptographic functions available in ErgoScript. *(Corrected path and anchor)*
+See [this page](global-functions.md#cryptographic-functions) for a description of the global cryptographic functions available in ErgoScript. *(Corrected path and anchor)*
 
 ### Tutorials
 
@@ -425,13 +425,13 @@ If you encounter any issues or have questions, feel free to connect with us on a
     "title": "ERGOHACK",
     "content": "We host regular hackathons which are a great opportunity to get involved.",
     "image": "../assets/img/grid/05.png",
-    "url": "../events/ergohack.md"
+    "url": "ergohack.md"
   },
   {
     "title": "Contribute",
     "content": "See the Contributing Guidelines for information on bounties and grants.",
     "image": "../assets/img/grid/05.png",
-    "url": "../contribute/standards/guidelines.md"
+    "url": "guidelines.md"
   }
 ]
 
@@ -464,4 +464,4 @@ To further explore and understand Ergo's concepts, you can interact with the fol
 
 - **[ErgCube](https://ergcube.com/)**: Another platform to discover and interact with Ergo dApps.
 
-- The [**Ecosystem**](../uses/use-cases-overview.md) section on this site acts as a directory for projects building on Ergo and potential future ideas.
+- The [**Ecosystem**](use-cases-overview.md) section on this site acts as a directory for projects building on Ergo and potential future ideas.

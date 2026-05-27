@@ -33,7 +33,7 @@ Node scans are useful for lightweight event tracking when you do not need a full
 - analytics workloads
 - high-volume public queries
 
-Use [Indexed Node API](indexed-node.md), [Explorer Stack](explorer-stack.md), or [Custom Indexer](../dev/tutorials/blockchain-indexing/custom-indexer.md) for those cases.
+Use [Indexed Node API](indexed-node.md), [Explorer Stack](explorer-stack.md), or [Custom Indexer](custom-indexer.md) for those cases.
 
 ## Core Routes
 

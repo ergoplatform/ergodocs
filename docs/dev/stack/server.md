@@ -11,32 +11,32 @@ Developers can use tools to read data from the blockchain, compute using that da
     "title": "JVM",
     "content": "",
     "image": "../../assets/img/dev-grid/jvm.png",
-    "url": "../lang/jvm.md"
+    "url": "jvm.md"
   },
   {
     "title": "Rust",
     "content": "",
     "image": "../../assets/img/dev-grid/rust.png",
-    "url": "../lang/rust.md"
+    "url": "rust.md"
 
   },
   {
     "title": "Node.js",
     "content": "",
     "image": "../../assets/img/dev-grid/js.png",
-    "url": "../lang/js.md"
+    "url": "js.md"
   },
   {
     "title": "Python",
     "content": "",
     "image": "../../assets/img/dev-grid/python.png",
-    "url": "../lang/python.md"
+    "url": "python.md"
   },
   {
     "title": "Mosaik",
     "content": "UI system for dApps",
     "image": "../../assets/img/dev-grid/mosaik.png",
-    "url": "mosaik/intro.md"
+    "url": "intro.md"
   }
 
 ]

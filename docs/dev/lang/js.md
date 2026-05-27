@@ -31,22 +31,22 @@ With the availability of [Sigma.js](sigmajs.md), [Fleet](fleet.md) can play the 
   {
     "title": "Fleet",
     "content": "Lets you easily create [Ergo transactions](transactions.md) with a pure JS library.",
-    "url": "../stack/fleet.md"
+    "url": "fleet.md"
   },
   {
     "title": "Sigma.JS",
     "content": "JavaScript port of the sigmastate-interpreter",
-    "url": "../lib/sigmajs.md"
+    "url": "sigmajs.md"
   },
   {
     "title": "AppKit",
     "content": "can be configured to run JavaScript under GraalVM",
-    "url": "../stack/appkit.md"
+    "url": "appkit.md"
   },
   {
     "title": "sigma-rust (via WASM)",
     "content": "Core Rust library with JS/TS bindings available via WebAssembly.",
-    "url": "../stack/sigma-rust.md#bindings"
+    "url": "sigma-rust.md#bindings"
   }
 ]
 

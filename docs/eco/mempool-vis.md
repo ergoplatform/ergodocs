@@ -1,3 +1,26 @@
+---
+tags:
+  - Mempool
+  - Visualization
+  - Indexing
+  - ErgoHack
+owner: docs
+last_reviewed: 2026-05-27
+source_repos:
+  - repo: 2ndtlmining/Ergomempool
+    branch: main
+    paths:
+      - README.md
+  - repo: SavonarolaLabs/memepool
+    branch: main
+    paths:
+      - package.json
+      - src/routes
+source_of_truth:
+  - https://github.com/2ndtlmining/Ergomempool
+  - https://github.com/SavonarolaLabs/memepool
+---
+
 # Ergomempool Visualizer
 
 **Project for [ErgoHack 10: AI on the Ergo Blockchain](https://www.google.com/search?q=ergohack.md)**
@@ -57,6 +80,10 @@ The Ergomempool Visualizer has reached its Minimum Viable Product (MVP) stage an
 * **GitHub Repository:** [https://github.com/2ndtlmining/Ergomempool](https://github.com/2ndtlmining/Ergomempool)
 * **ErgoHack Presentation:** [https://ergomempool.com/static/ergohack10-presentation.html](https://ergomempool.com/static/ergohack10-presentation.html)
 * **Video Overview:** [https://youtu.be/4wfHir5Steo](https://youtu.be/4wfHir5Steo)
+
+### 6.1 Other Mempool Experiments
+
+[SavonarolaLabs/memepool](https://github.com/SavonarolaLabs/memepool) is a small TypeScript mempool visualization experiment. It is separate from Ergomempool, but useful as another public reference for live mempool UI work on Ergo.
 
 ### 7\. Contribution
 

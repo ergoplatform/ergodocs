@@ -9,6 +9,15 @@ tags:
   - grants
   - sigmanauts
   - getting started
+owner: docs
+last_reviewed: 2026-05-27
+source_repos:
+  - repo: ergoplatform/ergoweb
+    branch: master
+    paths:
+      - README.md
+source_of_truth:
+  - https://github.com/ergoplatform/ergoweb
 ---
 
 
@@ -52,6 +61,7 @@ This page serves as a central hub for finding contribution opportunities.
 
 * **Spread the Word:** Help raise awareness about Ergo through social media, content creation (articles, videos), community engagement, and organizing local meetups.
   * **Guide:** [Marketing Contributions](marketing.md)
+  * **Website:** The official Ergo website frontend lives in [ergoplatform/ergoweb](https://github.com/ergoplatform/ergoweb), a Next.js/React codebase backed by Strapi content and react-intl localization.
 
 ### Community Support & Engagement
 

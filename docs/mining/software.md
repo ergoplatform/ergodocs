@@ -6,6 +6,15 @@ tags:
   - AMD
   - Nvidia
   - Intel
+owner: docs
+last_reviewed: 2026-05-27
+source_repos:
+  - repo: Emryk-LLC/rigel-mining-toolbox
+    branch: main
+    paths:
+      - README.md
+source_of_truth:
+  - https://github.com/Emryk-LLC/rigel-mining-toolbox
 ---
 
 # Software
@@ -21,6 +30,7 @@ tags:
 | ERG+KAS | BzMiner | ✓ |  |  |  |
 | ERG+KAS | Gminer | ✓ |  |  |  |
 | ERG+KAS | [SRB Miner](https://github.com/doktor83/SRBMiner-Multi/releases) |  | ✓ |  | 2 % |
+| ERG | [Rigel](https://github.com/rigelminer/rigel) | ✓ |  |  | Check upstream |
 
 ### Source Code Miners
 
@@ -31,3 +41,7 @@ tags:
 
 - [CUDA-based GPU miner for Ergo](https://github.com/ergoplatform/Autolykos-GPU-miner) for NVidia cards
 - [OpenCL miner for ERGO](https://github.com/mhssamadani/ergoAMDminer) for AMD cards
+
+### Toolboxes and Setup Helpers
+
+- [Rigel Mining Toolbox](https://github.com/Emryk-LLC/rigel-mining-toolbox): Fedora Toolbox environment for mining ERG with Rigel on Aurora-DX Linux and Nvidia GPUs. Review the repository before use because it packages a miner binary and host-specific setup assumptions.

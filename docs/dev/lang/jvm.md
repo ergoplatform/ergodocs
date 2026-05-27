@@ -17,7 +17,7 @@ Whether you want to develop using [Java](java.md), [Scala](scala.md), or [Kotlin
   {
     "title": "AppKit",
     "content": "A library for polyglot development of [Ergo Applications](use-cases-overview.md)",
-    "url": "../stack/appkit.md"
+    "url": "appkit.md"
   }
 
 ]

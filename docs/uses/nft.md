@@ -27,4 +27,9 @@ Access Mew Finance at [https://mewfinance.com/](https://mewfinance.com/).
 ///
 ////
 
-For instructions on how to mint your own NFTs, refer to the [developer section](create.md).
+For instructions on how to mint your own NFTs, refer to the [developer minting guide](create.md).
+
+## Related Pages
+
+- NFT standards and internals: [NFT Overview](nfts-overview.md), [EIP-24](eip24.md), [Royalties](royalties.md)
+- Games and NFT experiments: [Gaming](gaming.md), [NFT Races](nft-races.md), [Cyberverse](cyberverse.md)

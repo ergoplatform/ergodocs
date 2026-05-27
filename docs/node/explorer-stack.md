@@ -60,12 +60,12 @@ redis-cache.url = "redis://localhost:6380"
 - Plan DB backups before image or schema changes.
 - Keep public Explorer API separate from wallet-holding node API.
 - For smaller services, consider [Indexed Node API](indexed-node.md) before full explorer stack.
-- For custom app-specific indexes, use [Custom Indexer](../dev/tutorials/blockchain-indexing/custom-indexer.md).
+- For custom app-specific indexes, use [Custom Indexer](custom-indexer.md).
 
 ## Existing Docs
 
-- [Explorer overview](../dev/stack/explorer.md)
-- [Local explorer setup](../dev/stack/explorer/explorer_local.md)
-- [GraphQL](../dev/stack/explorer/graphql.md)
-- [Blockchain indexing](../dev/tutorials/blockchain-indexing.md)
+- [Explorer overview](explorer.md)
+- [Local explorer setup](explorer_local.md)
+- [GraphQL](graphql.md)
+- [Blockchain indexing](blockchain-indexing.md)
 

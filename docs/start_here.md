@@ -15,13 +15,13 @@ This page is the quick map for people or agents maintaining ErgoDocs.
 
 ## Main Docs Workflows
 
-- [Source Watch](contribute/source-watch.md): connect pages to upstream repositories, scan for source changes, and mark pages reviewed only after checking the source.
-- [Source Watch Playbook](contribute/source-watch-playbook.md): repeatable command list for future source-backed review sessions.
-- [Documentation Tools](contribute/tools.md): maintainer guide to scripts, prompts, hooks, and local tool state.
-- [Information Architecture](contribute/information-architecture.md): how sections should be structured and how pages should link together.
-- [Documentation Lifecycle](contribute/docs-lifecycle.md): page ownership, review expectations, and freshness rules.
-- [Content Standards](contribute/content-standards.md): writing style, structure, and review standards.
-- [Contribute to the Docs](contribute/docs.md): general contribution path for docs changes.
+- [Source Watch](source-watch.md): connect pages to upstream repositories, scan for source changes, and mark pages reviewed only after checking the source.
+- [Source Watch Playbook](source-watch-playbook.md): repeatable command list for future source-backed review sessions.
+- [Documentation Tools](tools.md): maintainer guide to scripts, prompts, hooks, and local tool state.
+- [Information Architecture](information-architecture.md): how sections should be structured and how pages should link together.
+- [Documentation Lifecycle](docs-lifecycle.md): page ownership, review expectations, and freshness rules.
+- [Content Standards](content-standards.md): writing style, structure, and review standards.
+- [Contribute to the Docs](docs.md): general contribution path for docs changes.
 
 ## Core Files
 
@@ -98,7 +98,7 @@ Issue and PR templates:
 
 ## Agent Context
 
-Read `AGENTS.md` first. Use this page for repository map, then use [Source Watch Playbook](contribute/source-watch-playbook.md) for source-backed review sessions.
+Read `AGENTS.md` first. Use this page for repository map, then use [Source Watch Playbook](source-watch-playbook.md) for source-backed review sessions.
 
 Do not add a large manual memory bank by default. Put durable shared rules in `AGENTS.md`, published maintainer workflow in `docs/`, and local/generated scan state in `tools/state/`.
 

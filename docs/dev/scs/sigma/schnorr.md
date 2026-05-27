@@ -12,13 +12,13 @@ Ergo’s Schnorr signatures are implemented using the **SecP256K1 elliptic curve
 
 - **Elliptic Curve**: Ergo uses **SecP256K1**, ensuring compatibility with Bitcoin-based systems.
 - **Generalized Proofs**: In Ergo, Schnorr signatures can be generalized into complex Sigma protocol proofs that allow for privacy-preserving multi-party computations and other advanced cryptographic applications.
-- **Standards Compliance**: Ergo’s implementation closely follows established cryptographic standards (RFCs), allowing for interoperability with protocols like **MuSig**.
+- **Script Constraints**: On-chain Schnorr verification must account for ErgoScript data types and `BigInt` limits, so examples should follow Ergo-specific verification patterns rather than copying a generic Schnorr layout directly.
 
 ---
 
 ## How Schnorr Signatures Work
 
-The Schnorr signature process consists of **key generation**, **signing**, and **verification**.
+At a high level, the Schnorr signature process consists of **key generation**, **signing**, and **verification**. The notation below is a generic sketch. For ErgoScript code, use the [on-chain verification pattern](verifying.md), which binds the commitment, message, and public key and handles `BigInt` limits.
 
 ### Key Generation
 
@@ -40,7 +40,7 @@ To sign a message \( m \), the following steps are performed:
 
 ### Verification
 
-To verify a signature \( (s, e) \), the verifier computes:
+In the generic form, to verify a signature \( (s, e) \), the verifier computes:
 \[
 R' = sG - eP
 \]
@@ -99,6 +99,7 @@ Schnorr signatures are a foundational part of Ergo’s **Sigma protocol** framew
 To dive deeper into Schnorr signatures and how they are implemented in Ergo, refer to the following resources:
 
 - **Schnorr-based signing function**: [Sign function based on Schnorr protocol](https://github.com/ErgoGravity/gateway-proxy/blob/9cbf72b934b08e258457367e366050a1734f1050/app/gateway/Adaptor.scala#L391).
+- **On-chain verification pattern**: [Verifying Schnorr signatures in ErgoScript](verifying.md).
 - **Generalized Schnorr proofs**: Learn how **SigmaBoolean** is used to create advanced cryptographic conditions on the Ergo blockchain in the [SigmaBoolean Documentation](sigmaboolean.md).
 
 ---

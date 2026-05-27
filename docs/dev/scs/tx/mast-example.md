@@ -36,7 +36,7 @@ Traditionally, the entire script containing all these conditions would be stored
 With MAST:
 
 1. Each condition (A, B, C) is treated as a separate script fragment.
-2. These fragments are serialized to their [ErgoTree](../ergotree.md) byte representation (`Coll[Byte]`).
+2. These fragments are serialized to their [ErgoTree](ergotree.md) byte representation (`Coll[Byte]`).
 3. Each byte representation is hashed (e.g., using `blake2b256`).
 4. These hashes are arranged as leaves in a [Merkle Tree](merkle-tree-structures.md).
 5. The **Merkle root** of this tree is calculated and stored in the main locking script of the box (often as a constant).
@@ -296,6 +296,6 @@ The MAST concept can be combined with [Finite State Machines (FSMs)](fsm-example
   * [Context Extension (`getVar`, `executeFromVar`)](lang-spec.md#PredefinedFunctions)
   * [Register Execution (`executeFromSelfReg`)](lang-spec.md#box-type)
 * **Conceptual Docs:**
-  * [Merkle Trees](../../data-model/structures/merkle/merkle-tree-structures.md)
+  * [Merkle Trees](merkle-tree-structures.md)
 
 Implementing MAST securely requires careful design of both the on-chain verification script and the off-chain preparation steps (tree generation, proof creation).

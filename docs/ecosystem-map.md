@@ -18,24 +18,25 @@ Use this page to find the right part of the Ergo ecosystem.
 | Area | Start here | Examples |
 | --- | --- | --- |
 | Wallets | [Get a Wallet](wallets-overview.md) | Nautilus, Satergo, Minotaur, Ledger |
-| DEXs and swaps | [DEX Overview](uses/dex.md) | Spectrum, Crystal Pool, P2P trading |
-| Stablecoins | [Stablecoins](uses/stablecoins.md) | SigmaUSD |
-| Bridges | [Rosen Bridge](eco/rosen.md) | Cross-chain transfers, watchers, guards |
-| NFTs | [NFT Overview](uses/nft.md) | Minting, royalties, on-chain NFTs |
-| Privacy | [Privacy Guide](doc/privacy-guide.md) | Mixers, private interaction patterns |
-| Oracles | [Oracles](uses/oracles.md) | Oracle pools, bootstrap flow |
-| Games and metaverse | [Gaming](uses/gaming.md) | Game assets, marketplaces, tutorials |
-| Emerging projects | [Emerging Ecosystem Projects](eco/emerging-projects.md) | Recent project leads without dedicated pages |
+| DEXs and swaps | [DEX Overview](dex.md) | [Spectrum](spectrum.md), [Mew Finance](mew-finance.md), [Crystal Pool](crystal-pool.md), [P2P Trading](p2p-trading.md), [PiggyTrade](piggytrade.md) |
+| Stablecoins | [Stablecoins](stablecoins.md) | [SigmaUSD](sigmausd.md), [Dexy](dexy.md), [Gluon](gluon.md), [USE](use_stablecoin.md) |
+| Bridges | [Rosen Bridge](rosen.md) | [Transfer Flows](token-transfer-flows.md), [Security Model](security-model.md), [Watcher](watcher.md), [Guard](guard.md) |
+| NFTs | [NFT Overview](nft.md) | [ErgoAuctions](ergo-auctions.md), [SkyHarbor](skyharbor.md), [Lilium](lilium.md), [Minting](create.md) |
+| Privacy | [Privacy Guide](privacy-guide.md) | [ErgoMixer](ergomixer.md), [SigmaJoin](sigmajoin.md), [Stealth Addresses](stealth-address.md), [SCypher](scypher.md) |
+| Oracles | [Oracles](oracles.md) | Oracle pools, bootstrap flow |
+| Games and metaverse | [Gaming](gaming.md) | [BlitzTCG](blitz.md), [Cyberverse](cyberverse.md), [NFT Races](nft-races.md), [SigmaQuest](sigmaquest.md) |
+| Crowdfunding and DAOs | [Crowdfunding](crowdfunding.md) | [ErgoRaffle](ergoraffle.md), [Paideia](paideia.md), [ErgoWell](ergowell.md), [GitCircles](gitcircles.md) |
+| Emerging projects | [Emerging Ecosystem Projects](emerging-projects.md) | [BoTTube](bottube.md), [Ergo Agent SDK](ergo-agent-sdk.md), [ergots](ergots.md), [Braid](braid.md) |
 
 ## Builder and Operator Areas
 
 | Area | Start here | Go deeper |
 | --- | --- | --- |
-| Smart contracts | [ErgoScript](dev/scs/ergoscript.md) | [Contract Patterns](dev/scs/contracts.md) |
-| Wallet integrations | [Wallet Integration](dev/wallets.md) | [dApp Connector](dev/wallet/payments/dApp.md), [ErgoPay](dev/wallet/payments/ergopay/ergo-pay.md) |
-| Tokens | [Token Overview](dev/data-model/box/tokens.md) | [EIP-4](dev/tokens/standards/eip4.md), [NFTs](dev/tokens/nfts/nfts-overview.md) |
-| Nodes and APIs | [Operate Infrastructure](operate-infrastructure.md) | [Swagger](node/swagger.md), [Operations](node/operations/hardening.md) |
-| Mining | [Securing the Network](securing-the-network-miners.md) | [Mining Overview](mining/mining-overview.md) |
+| Smart contracts | [ErgoScript](ergoscript.md) | [Contract Patterns](contracts-library.md), [Kiosk](kiosk.md), [ErgoScript Compiler](compiler.md) |
+| Wallet integrations | [Wallet Integration](wallets.md) | [dApp Connector](dApp.md), [ErgoPay](ergo-pay.md), [Hardware Wallets](hardware-wallet-integration.md) |
+| Tokens | [Token Overview](tokens.md) | [EIP-4](eip4.md), [NFTs](nfts-overview.md), [Royalties](royalties.md) |
+| Nodes and APIs | [Operate Infrastructure](operate-infrastructure.md) | [Node Install](install.md), [Swagger](swagger.md), [Indexed Node](indexed-node.md), [Operations](hardening.md) |
+| Mining | [Securing the Network](securing-the-network-miners.md) | [Mining Overview](mining-overview.md), [Software](software.md), [Pools](pools.md), [Pool Ops](pool-ops.md) |
 
 ## External Discovery
 

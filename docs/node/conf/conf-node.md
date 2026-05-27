@@ -39,7 +39,7 @@ Contract-template indexing hashes `ErgoTree.template` under the current version 
 
 Enable this for nodes serving dApps, explorers, Rosen watcher health checks, and any workload that needs `/blockchain/...` indexed routes. Leave it disabled for a simple validating node where lower disk and indexing overhead matter more than query features.
 
-After enabling it, monitor [indexed height](../indexed-node.md) separately from node sync height.
+After enabling it, monitor [indexed height](indexed-node.md) separately from node sync height.
 
 ## Verify Transactions
 

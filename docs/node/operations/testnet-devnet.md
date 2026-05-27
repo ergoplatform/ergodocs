@@ -23,11 +23,11 @@ Use testnet for public compatibility testing. Use devnet/private fork when you n
 
 | Need | Use |
 | --- | --- |
-| Test wallet or API integration against public non-mainnet chain | [Testnet](../testnet.md) |
-| Sync full testnet history | [Testnet full sync](../testnet/testnet-full.md) |
-| Mine blocks for local tests | [CPU mining](../testnet/cpu-mining.md) |
-| Run isolated custom chain | [Fork your own chain](../testnet/mine-your-own-chain.md) |
-| Check config shape | [testnet.conf](../testnet/testnetconf.md), [devnet.conf](../testnet/devnetconf.md) |
+| Test wallet or API integration against public non-mainnet chain | [Testnet](testnet.md) |
+| Sync full testnet history | [Testnet full sync](testnet-full.md) |
+| Mine blocks for local tests | [CPU mining](cpu-mining.md) |
+| Run isolated custom chain | [Fork your own chain](mine-your-own-chain.md) |
+| Check config shape | [testnet.conf](testnetconf.md), [devnet.conf](devnetconf.md) |
 
 ## Operator Notes
 

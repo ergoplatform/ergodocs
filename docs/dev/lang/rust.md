@@ -29,17 +29,17 @@ Understanding the [UTXO transactional model](eutxo.md) is crucial when developin
   {
     "title": "sigma-rust",
     "content": "Rust port of the sigmastate-interpreter",
-    "url": "../stack/sigma-rust.md"
+    "url": "sigma-rust.md"
   },
   {
     "title": "HDF",
     "content": "Headless dApp Framework",
-    "url": "../stack/headless.md"
+    "url": "headless.md"
   },
   {
     "title": "RustKit",
     "content": "(WIP), A SDK for building applications on the Ergo blockchain",
-    "url": "../stack/rustkit.md"
+    "url": "rustkit.md"
   }
 
 ]

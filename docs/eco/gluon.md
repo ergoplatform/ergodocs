@@ -30,7 +30,7 @@ During the [Ergoversary Summit 2023](https://www.youtube.com/watch?v=tnvm1we6xts
 Now live at [gluon.gold](https://gluon.gold/)
 ///
 
-For nearby monetary-system pages, see [Stablecoins](../uses/stablecoins.md), [SigmaUSD](../uses/sigmausd.md), and [Dexy](dexy.md).
+For nearby monetary-system pages, see [Stablecoins](stablecoins.md), [SigmaUSD](sigmausd.md), and [Dexy](dexy.md).
 
 ## Performance and Issues
 

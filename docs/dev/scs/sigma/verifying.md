@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: 2026-05-26
+last_reviewed: 2026-05-27
 source_repos:
   - repo: ScorexFoundation/sigmastate-interpreter
     branch: develop
@@ -15,6 +15,7 @@ source_repos:
     paths:
       - src/test/scala/chaincash/ChainCashSpec.scala
 source_of_truth:
+  - https://www.ergoforum.org/t/verifying-schnorr-signatures-in-ergoscript/3407
   - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/docs/sigma-dsl.md
   - https://github.com/ergoplatform/ergo-jde/tree/main/kiosk/src/test/scala/kiosk/schnorr/SchnorrSpec.scala
   - https://github.com/kushti/chaincash/tree/master/src/test/scala/chaincash/ChainCashSpec.scala
@@ -22,7 +23,7 @@ source_of_truth:
 
 # Schnorr Signatures
 
-The **Schnorr signature** scheme is a key cryptographic primitive in Ergo, allowing for efficient, simple, and secure signatures. Whether verifying a transaction or proving the ownership of a private key on-chain, Schnorr signatures play a central role. This page explains how to verify a Schnorr signature in **ErgoScript**, starting from basic signing and verification steps to advanced on-chain validation.
+The **Schnorr signature** scheme is a key cryptographic primitive in Ergo, allowing efficient proofs of knowledge over the secp256k1 group. This page explains how to verify a Schnorr signature in **ErgoScript** using the maintained forum pattern and linked tests.
 
 ## Overview
 
@@ -35,43 +36,32 @@ Ergo uses the **Secp256k1** elliptic curve (the same curve used in Bitcoin), den
 
 ## Schnorr Signing Process
 
-To sign a message **M** (the hash of the message), follow these steps:
+To sign message bytes **M** for on-chain verification, use the strong Fiat-Shamir layout from the forum reference:
 
-1. Generate a random integer **r** and compute **U = g^r**.
-2. Compute the challenge **c = Hash(U || M)**.
-3. Compute the response **s = r - cx**.
+1. Generate random integer **r** and compute commitment **a = g^r**.
+2. Compute challenge bytes **e = blake2b256(aBytes || M || YBytes)**.
+3. Interpret **e** as a `BigInt`.
+4. Compute response **z = (r + x * e) mod q**.
+5. Retry with a new nonce if **z** does not fit ErgoScript's 255-bit `BigInt` limit.
 
-The signature is the pair **(c, s)**, which is sent to the verifier.
+The on-chain-friendly signature is the pair **(a, z)**, where `a` is a `GroupElement` and `z` is encoded as bytes for conversion with `byteArrayToBigInt`.
 
 ## Schnorr Signature Verification
 
-### Schnorr Identification
-
-Before diving into signature verification, it's helpful to understand the Schnorr identification process, a variant of Schnorr signatures:
-
-- Instead of sending **(c, s)**, the prover sends **(U, s)** (a group element and an integer).
-- The verifier computes **c = Hash(U || M)** and checks if:
+The verifier recomputes the challenge:
   \[
-  g^s = U / Y^c
+  e = H(a || M || Y)
   \]
-  This works because:
+Then accepts when:
   \[
-  g^s = g^{r - cx} = g^r / (g^x)^c = U / Y^c
+  g^z = a \cdot Y^e
   \]
-  
-### Schnorr Signature Verification
-
-For Schnorr signatures, the signature **(c, s)** is verified differently. The verifier computes **U = g^s \cdot Y^c** and checks if:
-  \[
-  c = Hash(U || M)
-  \]
-This process ensures that the signature is valid and was produced by the holder of the secret key corresponding to the public key **Y**.
 
 ---
 
 ## On-Chain Verification in ErgoScript
 
-In ErgoScript, verifying a Schnorr signature involves reconstructing **U** on-chain and checking the challenge.
+In ErgoScript, verifying a Schnorr signature involves recomputing the challenge on-chain and checking the group equation.
 
 ### ErgoScript Example
 
@@ -83,21 +73,22 @@ In ErgoScript, verifying a Schnorr signature involves reconstructing **U** on-ch
   // Getting the public key Y from R4
   val Y = SELF.R4[GroupElement].get
 
-  // Getting the message M from R5
-  val M = SELF.R5[Coll[Byte]].get
+  // Getting the message bytes from R5
+  val message = SELF.R5[Coll[Byte]].get
 
-  // Retrieving the c value (challenge) from context variable 0
-  val cBytes = getVar .get
-  val c = byteArrayToBigInt(cBytes)
+  // Retrieving the commitment a from context variable 1
+  val a = getVar[GroupElement](1).get
 
-  // Retrieving the s value (response) from context variable 1
-  val s = getVar .get
+  // Retrieving response z from context variable 2
+  val zBytes = getVar[Coll[Byte]](2).get
+  val z = byteArrayToBigInt(zBytes)
   
-  // Calculating U = g^s * Y^c
-  val U = g.exp(s).multiply(Y.exp(c)).getEncoded // as a byte array
+  // Strong Fiat-Shamir challenge binds commitment, message, and public key
+  val eBytes = blake2b256(a.getEncoded ++ message ++ Y.getEncoded)
+  val e = byteArrayToBigInt(eBytes)
   
-  // Checking if the Schnorr signature is valid
-  sigmaProp(cBytes == sha256(U ++ M))
+  // Signature valid if g^z = a * Y^e
+  sigmaProp(g.exp(z) == a.multiply(Y.exp(e)))
 }
 ```
 
@@ -105,10 +96,10 @@ In ErgoScript, verifying a Schnorr signature involves reconstructing **U** on-ch
 
 - The generator of the elliptic curve group (`g`) is retrieved using the global value `groupGenerator`.
 - The public key (`Y`) is retrieved from register R4 of the box being spent (`SELF`).
-- The message hash (`M`) is retrieved from register R5 of the box being spent.
-- The signature components, challenge (`cBytes`) and response (`s`), are provided as context variables by the prover during transaction creation.
-- The script reconstructs the commitment `U` using the formula `g^s * Y^c`.
-- Finally, it verifies the signature by hashing the reconstructed `U` concatenated with the message `M` (`sha256(U ++ M)`) and comparing the result with the original challenge `cBytes`. If they match, the signature is valid, and the `sigmaProp` evaluates to true.
+- The message bytes (`message`) are retrieved from register R5 of the box being spent.
+- The signature components, commitment (`a`) and response (`z`), are provided as context variables by the prover during transaction creation.
+- The script recomputes the challenge with `blake2b256(a.getEncoded ++ message ++ Y.getEncoded)`.
+- It verifies `g.exp(z) == a.multiply(Y.exp(e))`. If this equality holds, the signature is valid and `sigmaProp` evaluates to true.
 
 ### Reference Test
 
@@ -118,26 +109,26 @@ The complete off-chain and on-chain interaction, including signature generation 
 
 ## Advanced Schnorr Validation Off-Chain
 
-### Alternative On-Chain Verification (Using Identification Scheme Logic)
+### On-Chain Verification With Explicit Commitment
 
-While the above method directly verifies the Schnorr signature `(c, s)`, an alternative approach based on the Schnorr *identification* scheme logic can sometimes be simpler, though it requires providing `U` (or `a` in the code below) instead of `c` as part of the proof.
+This pattern verifies a Schnorr proof by passing the commitment `a` and response `z` into the script. The script recomputes the challenge from `a`, the message, and the holder public key, then checks the group equation.
 
-*Note: The primary challenge with on-chain verification is that ErgoScript's `BigInt` is limited to 256 bits. Off-chain signature generation must ensure the response `s` (or `z` below) fits within this limit.*
+*Note: The primary challenge with on-chain verification is ErgoScript's `BigInt` size limit. Off-chain signature generation must ensure the response `z` fits within this limit.*
 
 ```scala
 {
     val message = ...
-    // Compute challenge
-    val e: Coll[Byte] = blake2b256(message)
-    val eInt = byteArrayToBigInt(e) // Challenge as big integer
-          
+
     // Retrieve a of signature (a, z)
-    val a = getVar .get
-    val aBytes = a.getEncoded
+    val a = getVar[GroupElement](1).get
 
     // Retrieve z of signature (a, z)
-    val zBytes = getVar .get
+    val zBytes = getVar[Coll[Byte]](2).get
     val z = byteArrayToBigInt(zBytes)
+
+    // Compute challenge
+    val e = blake2b256(a.getEncoded ++ message ++ holder.getEncoded)
+    val eInt = byteArrayToBigInt(e)
 
     // Verify signature by checking if g^z = a * Y^e
     val properSignature = g.exp(z) == a.multiply(holder.exp(eInt))
@@ -162,10 +153,11 @@ To ensure the response **z** fits within 255 bits (required for ErgoScript's `Bi
   def sign(msg: Array[Byte], secretKey: BigInt): (GroupElement, BigInt) = {
     val r = randBigInt // Generate random nonce
     val g: GroupElement = CryptoConstants.dlogGroup.generator
-    val a: GroupElement = g.exp(r.bigInteger) // Calculate U = g^r
-    // Calculate challenge e = H(a || msg) - using Blake2b256 here
-    val e = BigInt(scorex.crypto.hash.Blake2b256(a.getEncoded ++ msg)) 
-    // Calculate response z = r + x*e (mod q) - Note: Schnorr formula is typically r - x*e or r + x*e depending on convention
+    val holder = g.exp(secretKey.bigInteger)
+    val a: GroupElement = g.exp(r.bigInteger)
+    // Calculate challenge e = H(a || msg || holder)
+    val e = BigInt(scorex.crypto.hash.Blake2b256(a.getEncoded ++ msg ++ holder.getEncoded))
+    // Calculate response z = r + x*e (mod q), matching g^z = a * holder^e
     val z = (r + secretKey * e) % CryptoConstants.groupOrder 
 
     // Check if z fits within 255 bits for ErgoScript compatibility
@@ -183,7 +175,8 @@ For further examples of constructing off-chain transactions and verifying them o
 
 ## Considerations and Limitations
 
-- **Weak Fiat-Shamir Transformation**: The standard Schnorr signature verification shown (`c = H(U || M)`) uses a basic form of the Fiat-Shamir transformation. This is generally secure when the public key `Y` is fixed and known. However, be aware of potential security implications in more complex protocols where public keys might be dynamic or interact in unexpected ways. Stronger transformations might be needed in such advanced scenarios.
+- **Challenge binding**: The on-chain challenge should bind the commitment, message, and public key, such as `blake2b256(aBytes ++ message ++ holderBytes)`.
+- **BigInt limit**: Off-chain signing must retry with a new nonce until `z` fits within ErgoScript's `BigInt` size limit.
   
 ---
 

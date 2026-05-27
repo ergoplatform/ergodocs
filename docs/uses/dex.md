@@ -8,32 +8,38 @@ Their benefits are for people who don’t want to give up the custody of their f
 
 /// details | Mew Finance (Live)
 {type: success, open: true}
-[Mew Finance](../eco/mew-finance.md) is a sophisticated decentralized finance platform on the Ergo Blockchain, developed by HQ3rr and Aco Šmrkas, designed to deliver a secure, user-friendly, and innovative DeFi experience.
+[Mew Finance](mew-finance.md) is a sophisticated decentralized finance platform on the Ergo Blockchain, developed by HQ3rr and Aco Šmrkas, designed to deliver a secure, user-friendly, and innovative DeFi experience.
 ///
 
 /// details | Spectrum Finance (Live)
      {type: success, open: true}
-[Spectrum Finance](../eco/spectrum.md) is a pioneering open-source, cross-chain decentralized exchange (DEX) platform, currently offering liquidity provision (LP), yield farming, and babel fees on the Cardano (ADA) and Ergo (ERG) networks.
+[Spectrum Finance](spectrum.md) is a pioneering open-source, cross-chain decentralized exchange (DEX) platform, currently offering liquidity provision (LP), yield farming, and babel fees on the Cardano (ADA) and Ergo (ERG) networks.
 ///
 
 /// details | GuapSwap (V2 in Development)
      {type: success, open: true}
-[GuapSwap](../eco/guapswap.md) is a fully decentralized smart contract profit swapping service on the Ergo Blockchain.
+[GuapSwap](guapswap.md) is a fully decentralized smart contract profit swapping service on the Ergo Blockchain.
 
 ///
 /// details | Palmyra ComDEX (MVP Live)
      {type: success, open: true}
-[Palmyra ComDEX](../eco/palmyra.md), the flagship product of [zenGate](../eco/zengate.md), is an innovative ecosystem that enables the tokenization and listing of certified commodities for spot and futures trading on a global scale.
+[Palmyra ComDEX](palmyra.md), the flagship product of [zenGate](zengate.md), is an innovative ecosystem that enables the tokenization and listing of certified commodities for spot and futures trading on a global scale.
 ///
 
 /// details | Machina Finance (In Development)
      {type: note, open: true}
-The primary objective of [Machina Finance](../eco/machina-finance.md) is to promote decentralization and facilitate P2P trade by leveraging the power of grid contracts.
+The primary objective of [Machina Finance](machina-finance.md) is to promote decentralization and facilitate P2P trade by leveraging the power of grid contracts.
 ///
 
 /// details | PiggyTrade (In Development)
      {type: note, open: true}
-[PiggyTrade](../eco/piggytrade.md) is a trading app for Ergo moving toward a Kotlin implementation with sigma-rust JNI bindings and on-chain DEX pool data.
+[PiggyTrade](piggytrade.md) is a trading app for Ergo moving toward a Kotlin implementation with sigma-rust JNI bindings and on-chain DEX pool data.
 ///
 
 ////
+
+## Related Finance Pages
+
+- Stable assets: [Stablecoins](stablecoins.md), [SigmaUSD](sigmausd.md), [Dexy](dexy.md), [Gluon](gluon.md)
+- Lending and yield: [Lending](lending.md), [duckpools](duckpools.md), [SigmaFi](sigmafi.md), [Yield Farming](yield.md)
+- Trading strategies: [Arbitrage](arb.md), [Grid Trading](grid_trading.md), [Options Trading](trading-options.md)

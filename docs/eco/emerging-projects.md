@@ -40,6 +40,22 @@ source_repos:
     branch: main
     paths:
       - README.md
+  - repo: GitCircles/GitCircles-Github
+    branch: main
+    paths:
+      - README.md
+  - repo: GitCircles/GitCircles-Roadmap
+    branch: main
+    paths:
+      - README.md
+  - repo: LEEKOHCHING/TabbyPOS-Introduction
+    branch: main
+    paths:
+      - README.md
+  - repo: moon-miner/SCypher-web
+    branch: main
+    paths:
+      - README.md
 source_of_truth:
   - https://github.com/Scottcjn/bottube
   - https://www.bottube.ai
@@ -51,6 +67,10 @@ source_of_truth:
   - https://github.com/cannonQ/nft-races
   - https://nft-races.vercel.app/
   - https://github.com/FlyingPig5/piggy-trade
+  - https://github.com/GitCircles/GitCircles-Github
+  - https://github.com/GitCircles/GitCircles-Roadmap
+  - https://github.com/LEEKOHCHING/TabbyPOS-Introduction
+  - https://github.com/moon-miner/SCypher-web
 ---
 
 # Emerging Ecosystem Projects
@@ -60,24 +80,28 @@ These projects are recent ecosystem additions verified against public repositori
 | Dedicated page | What it is | Related surface |
 | --- | --- | --- |
 | [BoTTube](bottube.md) | AI-native video platform with an Ergo bridge blueprint for deposit verification and P2PK address handling. | Applications and utilities. |
-| [ergots](../dev/lib/ergots.md) | Browser-compatible TypeScript tooling for Ergo, including NiPoPoW, AVL+, and ErgoScript work. | Developer libraries. |
-| [Ergo Agent SDK](../dev/stack/ergo-agent-sdk.md) | Python SDK for giving autonomous agents controlled access to Ergo and its DeFi ecosystem. | Developer frameworks. |
-| [Ergo Proxy](../node/ergo-proxy.md) | Lightweight Ergo P2P relay proxy for forwarding peer messages without holding blockchain state. | Node operations and P2P tooling. |
-| [Ergo Relay](../node/ergo-relay.md) | Minimal transaction signing and P2P relay service. | Node operations and transaction broadcast tooling. |
+| [ergots](ergots.md) | Browser-compatible TypeScript tooling for Ergo, including NiPoPoW, AVL+, and ErgoScript work. | Developer libraries. |
+| [Ergo Agent SDK](ergo-agent-sdk.md) | Python SDK for giving autonomous agents controlled access to Ergo and its DeFi ecosystem. | Developer frameworks. |
+| [Ergo Proxy](ergo-proxy.md) | Lightweight Ergo P2P relay proxy for forwarding peer messages without holding blockchain state. | Node operations and P2P tooling. |
+| [Ergo Relay](ergo-relay.md) | Minimal transaction signing and P2P relay service. | Node operations and transaction broadcast tooling. |
 | [NFT Races](nft-races.md) | CyberPets Racing, an Ergo NFT racing game. | NFTs and gaming. |
 | [PiggyTrade](piggytrade.md) | Trading app for Ergo. | Finance and trading tools. |
+| [GitCircles](gitcircles.md) | Contribution-reward framework for open-source communities. | Funding and contribution tooling. |
+| [TabbyPOS](tabbypos.md) | Web3 point-of-sale project for merchant crypto payments. | Payments and merchant tooling. |
+| [SCypher](scypher.md) | BIP39 seed-cypher tooling with ErgoHack context. | Wallet-adjacent security tooling. |
 
 ## Covered Elsewhere
 
 These related projects already have a page or a suitable umbrella page:
 
-- [Ergo Rust Node](../node/rust-node.md)
+- [Ergo Rust Node](rust-node.md)
 - [Ergo Knowledge Base and Transcripts](ergo-knowledge-base.md)
 - [Degens.World](degens-world.md), including Ergo MCP, Ergo Node CLI, and Ergo block timestamps
 - [Lithos](lithos.md), including current Lithos client work
 - [Rosen Bridge](rosen.md), including guard, watcher, scanner, and health-check tooling
-- [Dexy](dexy.md) and [Stablecoins](../uses/stablecoins.md)
-- [Braid](../uses/sidechains/braid.md), a Bitcoin and Ergo double merged-mined sidechain research project
+- [Dexy](dexy.md) and [Stablecoins](stablecoins.md)
+- [Braid](braid.md), a Bitcoin and Ergo double merged-mined sidechain research project
+- [CodeUtxo](codeutxo.md), Aletheia Protocol, FintelligenceAI, and the AI Project Starter Kit are covered in the [AI](ai.md) and [ErgoHack](ergohack.md) pages
 
 ## Not Added
 

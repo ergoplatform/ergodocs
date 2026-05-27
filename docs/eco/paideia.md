@@ -6,6 +6,17 @@ tags:
   - Governance
   - dApp
   - dApp-Live
+owner: docs
+last_reviewed: 2026-05-27
+source_repos:
+  - repo: paideiadao/paideia-sdk
+    branch: dev
+    paths:
+      - README.md
+      - src/main/resources/ergoscript
+      - docs
+source_of_truth:
+  - https://github.com/paideiadao/paideia-sdk
 ---
 
 /// details | DeepWiki Documentation
@@ -69,6 +80,8 @@ The Paideia team continues to work hard on improving the platform. Recent update
 - Adjusting the staking reward system to allow DAOs to change emission rates
 - Implementing generic refund and configuration logic in contracts
 - Planning a move to EIP-5 standard for contracts
+
+The [paideia-sdk](https://github.com/paideiadao/paideia-sdk) repository contains the DAO contracts and immediate off-chain code. Its README documents contract configuration serialization, including the use of AVL-tree-backed DAO configuration values, and points reviewers to `src/main/resources/ergoscript` for the versioned contracts.
 
 ## Support and Issue Reporting
 

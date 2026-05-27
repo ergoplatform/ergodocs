@@ -43,33 +43,33 @@ Here are popular and well-regarded wallets used by the Ergo community:
   * **Description:** Experimental Ergo mobile wallet fork in public testing during 2026, with direct LP swap, dApp integration, webview support, USE mint/swap support, and an active dApps view.
   * **Best For:** Testing Degens.World wallet features. Review the codebase and release notes before using meaningful funds.
 
-* **[Minotaur Wallet](wallet/minotaur.md)**
+* **[Minotaur Wallet](minotaur.md)**
   * **Description:** Offers advanced features like [multi-signature](multi.md) capabilities (requiring multiple approvals for transactions).
   * **Best For:** Users needing shared fund control or enhanced security via multi-sig. May be more complex for beginners. *(Note: Check development status for latest features/stability).*
 
 ### Browser Extension Wallets
 
-* **[Nautilus Wallet](wallet/nautilus.md)**
+* **[Nautilus Wallet](nautilus.md)**
   * **Description:** A very popular browser extension wallet (similar to MetaMask). Enables seamless connection to Ergo dApps. Manages ERG, tokens, and NFTs. Includes privacy features and transaction optimization.
   * **Best For:** Users frequently interacting with DeFi, NFT marketplaces, and other web-based Ergo applications.
 
 ### Desktop Wallets
 
-* **[Satergo Wallet](wallet/satergo.md)**
-  * **Description:** A desktop wallet specifically designed to run alongside a full [Ergo Node](../node/install.md). Provides a user-friendly interface for managing funds while contributing to network decentralization.
+* **[Satergo Wallet](satergo.md)**
+  * **Description:** A desktop wallet specifically designed to run alongside a full [Ergo Node](install.md). Provides a user-friendly interface for managing funds while contributing to network decentralization.
   * **Best For:** Users who want to run their own full node for maximum trust and verification, without needing complex command-line interaction.
 
 * **Node Wallet (Core)**
   * **Description:** The basic wallet functionality built into the core Ergo reference node software. Accessed via command line or API.
-  * **Best For:** Developers or advanced users comfortable with command-line interfaces who are already running a core node. [Satergo](wallet/satergo.md) offers a graphical alternative for node users.
+  * **Best For:** Developers or advanced users comfortable with command-line interfaces who are already running a core node. [Satergo](satergo.md) offers a graphical alternative for node users.
 
 ### Other Wallet Types
 
-* **[SAFEW Wallet](wallet/safew.md)**
+* **[SAFEW Wallet](safew.md)**
   * **Description:** A web-based wallet (accessed via a website, requires careful URL verification). Offers advanced features like ErgoMixer integration (for enhanced privacy) and developer tools.
   * **Best For:** Experienced users needing specific features like mixing or advanced transaction control.
 
-* **[Ergo Paper Wallet](wallet/paper-wallet.md)**
+* **[Ergo Paper Wallet](paper-wallet.md)**
   * **Description:** A method to generate wallet keys offline and print them on paper (or save securely offline). Provides maximum security from online threats.
   * **Best For:** Long-term "cold storage" of significant amounts, gifting ERG. Less convenient for frequent use.
 

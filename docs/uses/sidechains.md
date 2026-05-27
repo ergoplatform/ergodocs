@@ -23,7 +23,7 @@ Ergo's robust architectural design supports the innovative development of sidech
 Explore recent advancements in sidechain technology through the [ErgoHack VII project](https://github.com/ross-weir/ergohack-sidechain/tree/main), which focuses on implementing sidechains in Ergo.
 ///
 
-Adjacent research also includes [Braid](sidechains/braid.md), a double merged-mined Bitcoin and Ergo sidechain design. Treat it as research material rather than a deployed Ergo sidechain.
+Adjacent research also includes [Braid](braid.md), a double merged-mined Bitcoin and Ergo sidechain design. Treat it as research material rather than a deployed Ergo sidechain.
 
 ## What is a Sidechain?
 

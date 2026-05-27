@@ -22,12 +22,12 @@ Mining pool pages live under `Mine`, but pool hosting is operational infrastruct
 
 | Layer | Docs |
 | --- | --- |
-| Node for block candidates | [Solo node configuration](setup/solo-node.md) |
-| Pool overview | [Host a pool](setup/pool.md) |
-| Stratum server | [Stratum](setup/stratum.md) |
-| Miningcore | [MiningCore](setup/miningcore.md) |
-| Windows MiningCore | [MiningCore Windows](setup/pool_win.md) |
-| Storage rent mining behavior | [Storage rent spending](rent/rent-spending.md) |
+| Node for block candidates | [Solo node configuration](solo-node.md) |
+| Pool overview | [Host a pool](pool.md) |
+| Stratum server | [Stratum](stratum.md) |
+| Miningcore | [MiningCore](miningcore.md) |
+| Windows MiningCore | [MiningCore Windows](pool_win.md) |
+| Storage rent mining behavior | [Storage rent spending](rent-spending.md) |
 
 ## Operator Checklist
 

@@ -9,7 +9,7 @@ Be sure to check out [ErgoGames.io](https://ergogames.io), a platform dedicated 
 
 ## Recent updates
 
-- [NFT Races](../eco/nft-races.md) reached Alpha Phase 1 feature-complete after 150+ on-chain test transactions, with fatigue, training, treatment, delegation, and race lifecycle mechanics expanded. Source code is available in the [nft-races repository](https://github.com/cannonQ/nft-races/tree/main).
+- [NFT Races](nft-races.md) reached Alpha Phase 1 feature-complete after 150+ on-chain test transactions, with fatigue, training, treatment, delegation, and race lifecycle mechanics expanded. Source code is available in the [nft-races repository](https://github.com/cannonQ/nft-races/tree/main).
 - [GladiatERG](https://gladiaterg.duckdns.org/) added Royal Rumble mode, a weekly 8 to 32 fighter winner-take-all battle. Gameplay documentation is available at [gladiaterg.duckdns.org/how-to-play](https://gladiaterg.duckdns.org/how-to-play).
 - [Game of Prompts](game-of-prompts.md) finalized its on-chain/off-chain contracts and UI, with mock competitions available in dev mode.
 - [Orbis](degens-world.md) opened for testing under the Degens.World umbrella.

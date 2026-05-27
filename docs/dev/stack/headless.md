@@ -78,7 +78,7 @@ The HDF provides Rust structs, traits, and utilities to define these stages, act
 1. **Prerequisites:**
     * Install the [Rust toolchain](https://www.rust-lang.org/tools/install).
     * Basic understanding of Rust programming.
-    * Familiarity with Ergo's [eUTXO model](eutxo.md) and [ErgoScript](../scs/ergoscript.md) concepts.
+    * Familiarity with Ergo's [eUTXO model](eutxo.md) and [ErgoScript](ergoscript.md) concepts.
 2. **Clone the Repository:**
 
     ```bash

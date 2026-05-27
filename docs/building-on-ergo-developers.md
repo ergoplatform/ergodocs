@@ -4,42 +4,53 @@ Use this page to choose a developer path.
 
 ## Start Here
 
-- [Developer Overview](dev/get-started.md)
-- [Development Pathways](dev/start.md)
-- [Tutorials and Recipes](dev/tutorials.md)
-- [Contracts and Patterns Library](dev/contracts/contracts-library.md)
+- [Developer Overview](get-started.md)
+- [Development Pathways](start.md)
+- [Tutorials and Recipes](tutorials.md)
+- [Contracts and Patterns Library](contracts-library.md)
 
 ## Choose a Path
 
 | I want to build... | Start with | Then see |
 | --- | --- | --- |
-| Browser dApp | [Browser pathway](dev/stack/browser.md) | [dApp Connector](dev/wallet/payments/dApp.md), [Fleet SDK](dev/stack/fleet.md) |
-| Backend service | [Server pathway](dev/stack/server.md) | [Off-Chain Services](dev/oc/off-chain-overview.md), [Blockchain Indexing](dev/tutorials/blockchain-indexing.md) |
-| Smart contract | [ErgoScript](dev/scs/ergoscript.md) | [ErgoScript Concepts](dev/scs/ergoscript/ergoscript-key-concepts.md), [Patterns](dev/contracts/contracts-library.md) |
-| Wallet/payment integration | [Wallet Standards](dev/wallet/eip-standards.md) | [ErgoPay](dev/wallet/payments/ergopay/ergo-pay.md), [ErgoAuth](dev/wallet/payments/ergoauth.md) |
-| Mobile app | [Mobile pathway](dev/stack/mobile.md) | [Mobile Build Constraints](dev/stack/mobile-build-constraints.md) |
-| Indexer or analytics service | [Blockchain Indexing](dev/tutorials/blockchain-indexing.md) | [Indexed Node API](node/indexed-node.md), [Custom Indexer](dev/tutorials/blockchain-indexing/custom-indexer.md) |
+| Browser dApp | [Browser pathway](browser.md) | [dApp Connector](dApp.md), [Fleet SDK](fleet.md) |
+| Backend service | [Server pathway](server.md) | [Off-Chain Services](off-chain-overview.md), [Blockchain Indexing](blockchain-indexing.md) |
+| Smart contract | [ErgoScript](ergoscript.md) | [ErgoScript Concepts](ergoscript-key-concepts.md), [Patterns](contracts-library.md) |
+| Wallet/payment integration | [Wallet Standards](eip-standards.md) | [ErgoPay](ergo-pay.md), [ErgoAuth](ergoauth.md) |
+| Mobile app | [Mobile pathway](mobile.md) | [Mobile Build Constraints](mobile-build-constraints.md) |
+| Indexer or analytics service | [Blockchain Indexing](blockchain-indexing.md) | [Indexed Node API](indexed-node.md), [Custom Indexer](custom-indexer.md) |
 
 ## SDKs and Languages
 
-- JVM: [Scala](dev/lang/scala.md), [Java](dev/lang/java.md), [Kotlin](dev/lang/kotlin.md), [AppKit](dev/stack/appkit.md)
-- JavaScript/TypeScript: [JavaScript](dev/lang/js.md), [Fleet SDK](dev/stack/fleet.md), [SigmaJS](dev/lib/sigmajs.md)
-- Rust: [Rust](dev/lang/rust.md), [SigmaRust](dev/stack/sigma-rust.md)
-- Python: [Python](dev/lang/python.md), [ergo-lib-python](dev/stack/ergo-lib-python.md)
-- Other: [C#](dev/lang/csharp.md), [Go](dev/lang/go.md)
+- JVM: [Scala](scala.md), [Java](java.md), [Kotlin](kotlin.md), [AppKit](appkit.md)
+- JavaScript/TypeScript: [JavaScript](js.md), [Fleet SDK](fleet.md), [SigmaJS](sigmajs.md), [EIP-12 Types](eip12-types.md), [ergots](ergots.md)
+- Rust: [Rust](rust.md), [SigmaRust](sigma-rust.md), [sigma-rust constrained builds](sigma-rust-constrained.md)
+- Python: [Python](python.md), [ergo-lib-python](ergo-lib-python.md)
+- Other: [C#](csharp.md), [Go](go.md)
+
+## Tooling and Frameworks
+
+| Need | Start here | Related |
+| --- | --- | --- |
+| Choose an app surface | [Development Pathways](start.md) | [Browser](browser.md), [Server](server.md), [Mobile](mobile.md), [Desktop](desktop.md) |
+| Build with JVM tooling | [AppKit](appkit.md) | [AppKit Node](appkit-node.md), [Gradle](gradle.md), [Kiosk](kiosk.md) |
+| Build with JS/TS | [Fleet SDK](fleet.md) | [Fleet Recipes](fleet-sdk-recipes.md), [SigmaJS](sigmajs.md), [ergots](ergots.md) |
+| Use Rust bindings | [Sigma Rust](sigma-rust.md) | [ergo-lib-python](ergo-lib-python.md), [Hardware Wallets](hardware-wallet-integration.md) |
+| Work with APIs | [Node API](swagger.md) | [API Overview](api.md), [API How-To](api-howto.md), [OpenAPI](openapi.md) |
+| Build AI/agent tooling | [Ergo Agent SDK](ergo-agent-sdk.md) | [AI](ai.md), [Degens.World](degens-world.md), [BoTTube](bottube.md) |
 
 ## Core Concepts for Builders
 
-- [eUTXO](dev/protocol/eutxo.md)
-- [Boxes and Registers](dev/scs/boxes-and-registers.md)
-- [Transactions](dev/protocol/transactions.md)
-- [Data Inputs](dev/protocol/tx/read-only-inputs.md)
-- [ErgoTree](dev/scs/ergotree.md)
-- [Sigma Protocols](dev/scs/sigma.md)
+- [eUTXO](eutxo.md)
+- [Boxes and Registers](boxes-and-registers.md)
+- [Transactions](transactions.md)
+- [Data Inputs](read-only-inputs.md)
+- [ErgoTree](ergotree.md)
+- [Sigma Protocols](sigma.md)
 
 ## Testing and Operations
 
-- [Testnet](node/testnet.md)
-- [Node API](node/swagger.md)
-- [Deployment Runbook](node/deploy-runbook.md)
-- [Scanner Operations](node/scanner-ops.md)
+- [Testnet](testnet.md)
+- [Node API](swagger.md)
+- [Deployment Runbook](deploy-runbook.md)
+- [Scanner Operations](scanner-ops.md)

@@ -30,8 +30,8 @@ Off-chain services bridge the gap between the user and the blockchain, enabling 
 * **Complex Transaction Construction:** Assembling inputs, outputs, data inputs, and context according to protocol rules.
 * **State Management:** Tracking application-specific state (order books, user data).
 * **Event Monitoring & Reaction:** Watching for specific on-chain events (box creation, token transfers) and triggering actions.
-* **Data Indexing:** Efficiently querying blockchain data (See [Indexing Guide](../tutorials/blockchain-indexing.md)).
-* **Wallet Interaction:** Connecting to user wallets for address fetching and transaction signing ([EIP-0012](../wallet/eip-standards.md), [ErgoPay](../wallet/payments/ergopay/ergo-pay.md)).
+* **Data Indexing:** Efficiently querying blockchain data (See [Indexing Guide](blockchain-indexing.md)).
+* **Wallet Interaction:** Connecting to user wallets for address fetching and transaction signing ([EIP-0012](eip-standards.md), [ErgoPay](ergo-pay.md)).
 * **Automation:** Running bots for tasks like liquidations or arbitrage.
 * **External Integrations:** Connecting to off-chain data sources or APIs.
 
@@ -100,7 +100,7 @@ watchForBoxes(); // Start the watcher loop (initial height might need setting)
 
 *(Note: Production watchers need robust error handling, reorg detection (frameworks like `ergoplatform/scanner` help here), and often use an indexer for efficiency).*
 
-**Real-world example (Cross-Chain):** [Rosen Bridge Watchers](../../eco/rosen/watcher.md) monitor deposit events on connected blockchains (like Cardano or Bitcoin) and relay them securely to Ergo, enabling cross-chain asset transfers. Becoming a watcher involves technical setup, providing collateral (ERG and RSN), monitoring transactions, and earning rewards.
+**Real-world example (Cross-Chain):** [Rosen Bridge Watchers](watcher.md) monitor deposit events on connected blockchains (like Cardano or Bitcoin) and relay them securely to Ergo, enabling cross-chain asset transfers. Becoming a watcher involves technical setup, providing collateral (ERG and RSN), monitoring transactions, and earning rewards.
 
 ### 2. Bots / Agents
 
@@ -183,7 +183,7 @@ updateOraclePrice(); // Start the bot
 
 *(Note: Real bots need sophisticated error handling, state management, fee calculation, input selection, and extremely secure key management).*
 
-**Real-world example (Oracle Providers):** Oracle providers integrate dependable external data sources (e.g., price feeds) with the Ergo blockchain. They deploy oracle contracts and maintain reliability to earn compensation, often through transaction fees or subscriptions. See [Oracle Pools V2](../../eco/oracles-v2.md) for details.
+**Real-world example (Oracle Providers):** Oracle providers integrate dependable external data sources (e.g., price feeds) with the Ergo blockchain. They deploy oracle contracts and maintain reliability to earn compensation, often through transaction fees or subscriptions. See [Oracle Pools V2](oracles-v2.md) for details.
 
 ### 3. Backend APIs for dApps
 
@@ -318,8 +318,8 @@ async fn get_node_height() {
 
 Interacting with user wallets securely is paramount.
 
-* **[EIP-0012 (dApp Connector)](../wallet/eip-standards.md):** The standard for browser extension and mobile wallets to expose functionality (getting addresses, signing) to dApps via a JavaScript interface (`ergoConnector` / `ergo`). This is the primary method for dApps where the user initiates actions directly in their browser. See the [EIP Standards page](../wallet/eip-standards.md) for details and connection flow.
-* **[ErgoPay (EIP-0020)](../wallet/payments/ergopay/ergo-pay.md):** A protocol using QR codes or deeplinks, allowing backends or other services to request transaction signing from compatible mobile wallets without a direct browser connection. Ideal for payment flows, minting initiated from external systems, or when the backend prepares the full transaction. See the [ErgoPay Tutorial](../wallet/payments/ergopay/ep-tutorial.md).
+* **[EIP-0012 (dApp Connector)](eip-standards.md):** The standard for browser extension and mobile wallets to expose functionality (getting addresses, signing) to dApps via a JavaScript interface (`ergoConnector` / `ergo`). This is the primary method for dApps where the user initiates actions directly in their browser. See the [EIP Standards page](eip-standards.md) for details and connection flow.
+* **[ErgoPay (EIP-0020)](ergo-pay.md):** A protocol using QR codes or deeplinks, allowing backends or other services to request transaction signing from compatible mobile wallets without a direct browser connection. Ideal for payment flows, minting initiated from external systems, or when the backend prepares the full transaction. See the [ErgoPay Tutorial](ep-tutorial.md).
 
 ## Development Workflow
 
@@ -365,7 +365,7 @@ Study open-source Ergo projects to see how they handle off-chain logic:
 * **Oracle Core:** ([github.com/ergoplatform/oracle-core](https://github.com/ergoplatform/oracle-core)) - The reference implementation for oracle pool operation, including off-chain bots for posting data.
 * **Auction House / Raffle Contracts:** Often require off-chain monitoring to detect bids/entries and trigger finalization transactions. (Search GitHub for `Ergo Auction` or `ErgoRaffle`).
 * **Ergo Explorer Backend:** ([github.com/ergoplatform/explorer-backend](https://github.com/ergoplatform/explorer-backend)) - A complex example of a full-chain indexer.
-* **DEX Bots (Grid Trading):** Projects like [Off the Grid](https://github.com/Telefragged/off-the-grid/) and [Machina Finance](../../eco/machina-finance.md) use off-chain bots to match grid trading orders with other liquidity sources.
+* **DEX Bots (Grid Trading):** Projects like [Off the Grid](https://github.com/Telefragged/off-the-grid/) and [Machina Finance](machina-finance.md) use off-chain bots to match grid trading orders with other liquidity sources.
 * **Transaction Bots:** Systems like the [Exle Tx Bot](https://exlebot.com/docs) automate transaction composition and processing for specific dApp workflows.
 * **External Trading Bots:** Tools like [HummingBot](https://hummingbot.org/) or [KuPyBot](https://github.com/FlyingPig69/KuPyBot) can potentially be adapted to interact with Ergo DEXs via their APIs (if available).
 
@@ -379,8 +379,8 @@ Study open-source Ergo projects to see how they handle off-chain logic:
 ## Resources
 
 * **SDKs:** [Fleet SDK](fleet.md), [Sigma-Rust](sigma-rust.md), [Appkit](appkit.md)
-* **EIPs:** [EIP-0012 (dApp Connector)](../wallet/eip-standards.md), [EIP-0020 (ErgoPay)](../wallet/payments/ergopay/ergo-pay.md), [Official EIP Repo](https://github.com/ergoplatform/eips)
-* **Indexing:** [Indexing Guide](../tutorials/blockchain-indexing.md), [Ergo Scanner](https://github.com/ergoplatform/scanner)
+* **EIPs:** [EIP-0012 (dApp Connector)](eip-standards.md), [EIP-0020 (ErgoPay)](ergo-pay.md), [Official EIP Repo](https://github.com/ergoplatform/eips)
+* **Indexing:** [Indexing Guide](blockchain-indexing.md), [Ergo Scanner](https://github.com/ergoplatform/scanner)
 * **Node API:** [Swagger UI](swagger.md)
 * **Community:** [Ergo Discord](https://discord.gg/ergo-platform-668903786361651200) (`#development`, `#sigmastate`, `#appkit`, `#fleet` channels), [Ergo Forum](https://www.ergoforum.org/)
 

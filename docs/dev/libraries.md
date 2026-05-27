@@ -55,7 +55,7 @@ Sigma-Rust provides bindings for various languages, allowing developers to lever
 
 ## TypeScript Verification Tooling
 
-- [ergots](lib/ergots.md): browser-compatible TypeScript tooling for Ergo verification, NiPoPoWs, AVL+ proofs, and ErgoScript research.
+- [ergots](ergots.md): browser-compatible TypeScript tooling for Ergo verification, NiPoPoWs, AVL+ proofs, and ErgoScript research.
 
 ## Specific Library Documentation
 
@@ -66,23 +66,23 @@ The following pages provide more detailed documentation on specific libraries wi
 [
   {
     "title": "GetBlok Plasma",
-    "url": "lib/plasma.md"
+    "url": "plasma.md"
   },
   {
     "title": "Scrypto",
-    "url": "lib/scrypto.md"
+    "url": "scrypto.md"
   },
   {
     "title": "EIP12-Types",
-    "url": "lib/eip12-types.md"
+    "url": "eip12-types.md"
   },
   {
     "title": "SigmaJS",
-    "url": "lib/sigmajs.md"
+    "url": "sigmajs.md"
   },
   {
     "title": "ergots",
-    "url": "lib/ergots.md"
+    "url": "ergots.md"
   }
 
 ]

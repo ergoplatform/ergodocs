@@ -15,24 +15,24 @@ Use this page to find help, follow updates, and contribute.
 
 - [Start Here: Participate](participate.md)
 - [Participate Overview](contribute.md)
-- [Docs Contributions](contribute/docs.md)
-- [Technical Guidelines](contribute/technical-guidelines.md)
-- [Bounties](contribute/bounties.md)
-- [Grants](contribute/grants.md)
-- [Sigmanauts](contribute/sigmanauts.md)
+- [Docs Contributions](docs.md)
+- [Technical Guidelines](technical-guidelines.md)
+- [Bounties](bounties.md)
+- [Grants](grants.md)
+- [Sigmanauts](sigmanauts.md)
 
 ## Follow the Ecosystem
 
 - [Events](events-overview.md)
 - [Partners](partners.md)
-- [Marketing Resources](contribute/marketing.md)
-- [How Ergo Works](contribute/how-ergo-works.md)
+- [Marketing Resources](marketing.md)
+- [How Ergo Works](how-ergo-works.md)
 - [Sigmaverse](https://sigmaverse.io)
 
 ## Report or Improve Docs
 
 - [Open an ErgoDocs issue](https://github.com/ergoplatform/ergodocs/issues)
-- [Contribute to docs](contribute/docs.md)
-- [Content Standards](contribute/content-standards.md)
-- [Documentation Lifecycle](contribute/docs-lifecycle.md)
-- [Information Architecture](contribute/information-architecture.md)
+- [Contribute to docs](docs.md)
+- [Content Standards](content-standards.md)
+- [Documentation Lifecycle](docs-lifecycle.md)
+- [Information Architecture](information-architecture.md)

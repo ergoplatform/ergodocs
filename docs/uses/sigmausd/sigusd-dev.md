@@ -1,15 +1,20 @@
 ---
 owner: docs
-last_reviewed: 2026-05-26
+last_reviewed: 2026-05-27
 source_repos:
   - repo: MrStahlfelge/mosaik-ageusddemo
     branch: master
     paths:
       - src/main/kotlin/org/ergoplatform/mosaik/example/ageusd/AgeUsdController.kt
       - src/main/kotlin/org/ergoplatform/mosaik/example/ageusd/AgeUsdService.kt
+  - repo: mgpai22/sigusd-ballot
+    branch: main
+    paths:
+      - README.md
 source_of_truth:
   - https://github.com/MrStahlfelge/mosaik-ageusddemo/tree/master/src/main/kotlin/org/ergoplatform/mosaik/example/ageusd/AgeUsdController.kt
   - https://github.com/MrStahlfelge/mosaik-ageusddemo/tree/master/src/main/kotlin/org/ergoplatform/mosaik/example/ageusd/AgeUsdService.kt
+  - https://github.com/mgpai22/sigusd-ballot
 ---
 
 ### Accessing SigmaUSD as a Developer
@@ -140,6 +145,8 @@ ErgoMix demonstrates a robust mechanism for integrating SigmaUSD into backend se
 ### Conclusion
 
 Developers have several robust tools at their disposal for integrating SigmaUSD into new or existing dApps. Mosaik provides a lightweight and user-friendly approach, while AppKit offers comprehensive access to the Ergo blockchain's capabilities. ErgoMix demonstrates how SigmaUSD can be embedded within a service-oriented architecture, making it an excellent guide for new developments.
+
+Community examples also include [sigusd-ballot](https://github.com/mgpai22/sigusd-ballot), a small TypeScript/Bun tool for signing and submitting SigmaUSD-related transactions with Fleet-style tooling. Its README notes that an indexed node is required, so use it as a reference for indexed-node-backed workflows rather than a general wallet flow.
 
 By understanding these frameworks and their implementations, developers can choose the best method for their needs, ensuring seamless and efficient interaction with SigmaUSD on the Ergo blockchain.
 

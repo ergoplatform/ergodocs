@@ -30,11 +30,11 @@ Ergo's [block structure](block.md) goes beyond the traditional header and transa
 
 ## Applications of NIPoPoWs
 
-### [Light Clients](nipopow/nipopow_nodes.md)
+### [Light Clients](nipopow_nodes.md)
 
 NIPoPoWs facilitate the creation of efficient [light clients](light-spv-node.md), enhancing the accessibility and [scalability](scaling.md) of blockchain networks. Light clients address the challenges of running a full node, which requires substantial resources. With NIPoPoWs, light clients can operate without maintaining the entire blockchain, as they can verify the occurrence of events using succinct proofs.
 
-### [Light Miners](nipopow/logspace.md)
+### [Light Miners](logspace.md)
 
 NIPoPoWs enable [logarithmic space mining](log_space.md), allowing "light miners" to start with block headers, similar to light clients, without downloading the entire blockchain. By retaining only a select few important blocks, light miners can validate the entire blockchain, eliminating the need for full storage. This approach can be integrated through [velvet (soft) forks](velvet-fork.md), avoiding [hard fork](hard-fork.md) complexities.
 

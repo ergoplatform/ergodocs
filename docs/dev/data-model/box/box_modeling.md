@@ -6,7 +6,7 @@ tags:
 ---
 # Ergo Box Design: A Comprehensive Guide
 
-*(Back to: [Box Overview](../box.md) | [Registers](registers.md))*
+*(Back to: [Box Overview](box.md) | [Registers](registers.md))*
 
 The [UTXO (Unspent Transaction Output)](eutxo.md) system is the backbone of many blockchain networks, and at its core are [**boxes**](box.md). These boxes are not just containers for the value of a currency within a blockchain; they are also equipped with [**registers**](registers.md) that are protected by a [contract](ergoscript.md), enhancing their functionality on the Ergo blockchain.
 

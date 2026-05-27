@@ -60,15 +60,15 @@ This guide provides an overview and comparison of different strategies for index
 
 There are three primary approaches to accessing indexed blockchain data:
 
-1. **[Using Public Explorer APIs](blockchain-indexing/explorer-apis.md):** Leverage the APIs provided by public blockchain explorers. Easiest to start, but relies on third parties and has limitations.
-2. **[Querying Your Own Node's API Directly](blockchain-indexing/node-api-direct.md):** Run your own node and query its REST API. Offers control but node APIs aren't optimized for complex queries.
-3. **[Building a Custom Indexer with SDKs](blockchain-indexing/custom-indexer.md):** Develop a dedicated service to process blocks from your node and store relevant data in an optimized database. Most flexible and performant, but requires significant development effort.
+1. **[Using Public Explorer APIs](explorer-apis.md):** Leverage the APIs provided by public blockchain explorers. Easiest to start, but relies on third parties and has limitations.
+2. **[Querying Your Own Node's API Directly](node-api-direct.md):** Run your own node and query its REST API. Offers control but node APIs aren't optimized for complex queries.
+3. **[Building a Custom Indexer with SDKs](custom-indexer.md):** Develop a dedicated service to process blocks from your node and store relevant data in an optimized database. Most flexible and performant, but requires significant development effort.
 
 ## Choosing the Right Strategy
 
 The best approach depends on your application's specific requirements:
 
-| Need                        | [Explorer API](blockchain-indexing/explorer-apis.md) | [Node API Direct](blockchain-indexing/node-api-direct.md) | [Custom Indexer](blockchain-indexing/custom-indexer.md) |
+| Need                        | [Explorer API](explorer-apis.md) | [Node API Direct](node-api-direct.md) | [Custom Indexer](custom-indexer.md) |
 | :-------------------------- | :----------------------------------------------------: | :---------------------------------------------------------: | :-------------------------------------------------------: |
 | Simple Balance/Tx Lookup    |                           ✅                           |                             ⚠️¹                            |                            ✅                             |
 | High Query Volume           |                           ❌                           |                             ✅                            |                            ✅                             |

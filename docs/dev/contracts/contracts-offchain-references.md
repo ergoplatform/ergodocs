@@ -75,14 +75,14 @@ Collect links to working off-chain code, SDK snippets, and UI implementations th
 
 ## General SDK References
 
-- [Fleet SDK](../stack/fleet.md) — JS/TS-based transaction building and utilities.
-- [AppKit](../stack/appkit.md) — JVM tooling for building and signing transactions.
-- [Sigma-Rust](../stack/sigma-rust.md) — Rust bindings and constrained environments.
+- [Fleet SDK](fleet.md) — JS/TS-based transaction building and utilities.
+- [AppKit](appkit.md) — JVM tooling for building and signing transactions.
+- [Sigma-Rust](sigma-rust.md) — Rust bindings and constrained environments.
 
 ## Indexers & APIs
 
-- [Explorer API](../stack/explorer.md) — Query chain data and indexes.
-- [Blockchain Indexing tutorials](../tutorials/blockchain-indexing.md) — Patterns for custom data pipelines.
+- [Explorer API](explorer.md) — Query chain data and indexes.
+- [Blockchain Indexing tutorials](blockchain-indexing.md) — Patterns for custom data pipelines.
 
 ## See also
 

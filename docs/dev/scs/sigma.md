@@ -89,7 +89,7 @@ This contract is an example of a **3-out-of-5** threshold signature scheme. It c
 
 ### 3. **Threshold Signatures**
 
-[Threshold signatures](threshold.md) are critical for decentralized control. For example, a corporate [wallet](../wallets.md) could be protected by a 3-out-of-5 signature scheme, ensuring that no single party can unilaterally control the funds.
+[Threshold signatures](threshold.md) are critical for decentralized control. For example, a corporate [wallet](wallets.md) could be protected by a 3-out-of-5 signature scheme, ensuring that no single party can unilaterally control the funds.
 
 ### 4. **Time-Locked Conditions**
 

@@ -19,7 +19,7 @@ This guide provides an overview of debugging strategies, linking to more detaile
 
 Given the limitations of on-chain debugging, a strong emphasis must be placed on **off-chain testing and careful design**:
 
-1. **Thorough Unit & Integration Testing:** This is the most crucial aspect. Use testing frameworks provided by SDKs like [Appkit (Scala)](../lang/scala.md), [Fleet SDK (JS/TS)](fleet-sdk-recipes.md), or [Sigma-Rust](../lang/rust.md) to simulate transaction scenarios off-chain.
+1. **Thorough Unit & Integration Testing:** This is the most crucial aspect. Use testing frameworks provided by SDKs like [Appkit (Scala)](scala.md), [Fleet SDK (JS/TS)](fleet-sdk-recipes.md), or [Sigma-Rust](rust.md) to simulate transaction scenarios off-chain.
     * Cover expected behavior (happy paths).
     * Test edge cases and potential failure conditions.
     * Verify expected outputs, register values, and created boxes.

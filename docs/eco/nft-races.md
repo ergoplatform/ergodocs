@@ -39,4 +39,4 @@ The current stack uses:
 
 - [NFT Races app](https://nft-races.vercel.app/)
 - [NFT Races repository](https://github.com/cannonQ/nft-races)
-- [Gaming overview](../uses/gaming.md)
+- [Gaming overview](gaming.md)

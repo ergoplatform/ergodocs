@@ -37,6 +37,15 @@ source_repos:
     branch: dev
     paths:
       - README.md
+  - repo: rosen-bridge/network-client
+    branch: dev
+    paths:
+      - README.md
+  - repo: SavonarolaLabs/rosen-ui
+    branch: main
+    paths:
+      - src/routes
+      - src/lib
 source_of_truth:
   - https://github.com/rosen-bridge/watcher/releases/tag/6.2.1
   - https://github.com/rosen-bridge/guard-service/releases/tag/9.1.1
@@ -46,6 +55,8 @@ source_of_truth:
   - https://github.com/rosen-bridge/sign-protocols
   - https://github.com/rosen-bridge/rosen-chains
   - https://github.com/rosen-bridge/cleanup-service
+  - https://github.com/rosen-bridge/network-client
+  - https://github.com/SavonarolaLabs/rosen-ui
 ---
 # Rosen Bridge: The Future of Cross-Chain Asset Transfers
 
@@ -71,7 +82,9 @@ Please see [this video](https://www.youtube.com/watch?v=Xsiy-yPJQ6w) for a visua
 - Guard service releases have moved through [9.1.1](https://github.com/rosen-bridge/guard-service/releases/tag/9.1.1), with dependency updates for Bitcoin Runes RPC support.
 - Rosen UI/service releases have moved through `rosen-service-4.3.5` in the [Rosen UI repository](https://github.com/rosen-bridge/ui/releases/tag/rosen-service-4.3.5).
 - Rosen shared packages also moved through [rosen-sdk](https://github.com/rosen-bridge/rosen-sdk), [rosenet](https://github.com/rosen-bridge/rosenet), and [sign-protocols](https://github.com/rosen-bridge/sign-protocols) updates. The older [rosen-chains](https://github.com/rosen-bridge/rosen-chains) package repository is archived; chain packages moved into guard-service.
+- [network-client](https://github.com/rosen-bridge/network-client) is the Rosen client-library monorepo used by `@rosen-clients/*` packages.
 - [cleanup-service](https://github.com/rosen-bridge/cleanup-service) is Rosen infrastructure for cleanup flows such as fraud and slash transactions.
+- [SavonarolaLabs/rosen-ui](https://github.com/SavonarolaLabs/rosen-ui) is a small Svelte-based Rosen UI/widget prototype. Treat it as community interface reference, separate from the maintained Rosen UI/service repository.
 - `Apr 22`: Rosen stats work added TVL, volume, locked-assets, and user-count metrics, while the app also picked up React 19, Sentry, and live-data improvements.
 - The new rosen-service also added Bitcoin Runes support.
 

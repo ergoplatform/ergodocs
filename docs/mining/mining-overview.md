@@ -18,12 +18,12 @@ Ergo mining is based on [**Autolykos**](autolykos.md), an [ASIC-resistant](asic.
   {
     "title": "Join a pool",
     "content": "Join a mining pool and start mining today.",
-    "url": "setup/join.md"
+    "url": "join.md"
   },
   {
     "title": "Solo Mining",
     "content": "Only recommended if you have 1%+ of the network hash rate.",
-    "url": "setup/solo.md"
+    "url": "solo.md"
   }
 
 ]
@@ -38,7 +38,7 @@ Ergo mining is based on [**Autolykos**](autolykos.md), an [ASIC-resistant](asic.
   {
     "title": "Wallets",
     "content": "Get your wallet setup.",
-    "url": "../dev/wallets.md"
+    "url": "wallets.md"
   },
   {
     "title": "Autolykos",
@@ -108,3 +108,11 @@ Ergo mining is based on [**Autolykos**](autolykos.md), an [ASIC-resistant](asic.
 ]
 
 ::/cards::
+
+## Related Mining Pages
+
+- Setup: [Mining Software](software.md), [Operating Systems](os.md), [Rig Setup](rig.md), [Overclocking](overclocking.md), [Withdrawals](withdraw.md)
+- Pool mining: [Pools](pools.md), [Join a Pool](join.md), [Pool Operations](pool-ops.md), [SmartPools](smartpools.md), [Subpooling](subpool.md)
+- Solo and test mining: [Solo Mining](solo.md), [Solo Node Configuration](solo-node.md), [CPU Mining on Testnet](cpu-mining.md)
+- Protocol economics: [Emission](emission.md), [Difficulty](difficulty.md), [Storage Rent](rent.md), [Revenue](revenue.md), [Miner Governance](governance.md)
+- Theory: [Autolykos](autolykos.md), [ASIC Resistance](asic.md), [Mining Theory Hub](pow-and-mining-theory-hub.md)

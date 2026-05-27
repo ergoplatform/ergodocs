@@ -12,9 +12,14 @@ source_repos:
     branch: main
     paths:
       - README.md
+  - repo: paulmillr/noble-ciphers
+    branch: main
+    paths:
+      - README.md
 source_of_truth:
   - https://github.com/fleet-sdk/fleet
   - https://github.com/dungvn3000/ergo-fleet-sdk-example
+  - https://github.com/paulmillr/noble-ciphers
 ---
 
 # Fleet
@@ -28,6 +33,8 @@ source_of_truth:
 - 🌲 Tree-shakeable
 
 For common usage patterns and examples, see the [Fleet SDK Recipes](fleet-sdk-recipes.md).
+
+Fleet handles Ergo wallet keys and transaction construction. If your JavaScript application also needs message encryption or symmetric ciphers around those keys, use a dedicated audited crypto library such as [noble-ciphers](https://github.com/paulmillr/noble-ciphers) rather than expecting Fleet to provide general-purpose encryption APIs.
 
 ## Examples
 
