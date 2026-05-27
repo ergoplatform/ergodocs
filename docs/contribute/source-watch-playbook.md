@@ -95,7 +95,7 @@ Update baseline after a scan you have triaged:
 Default baseline:
 
 ```text
-memory-bank/source-watch-baseline.json
+tools/state/source-watch-baseline.json
 ```
 
 ## Review Workflow

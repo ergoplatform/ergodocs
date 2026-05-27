@@ -30,7 +30,7 @@ except ModuleNotFoundError:
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS_DIR = ROOT / "docs"
-DEFAULT_BASELINE = ROOT / "memory-bank" / "source-watch-baseline.json"
+DEFAULT_BASELINE = ROOT / "tools" / "state" / "source-watch-baseline.json"
 GITHUB_URL_RE = re.compile(
     r"https://github\.com/([^/\s\)\]\"'<>]+)/([^/\s\)\]\"'<>]+)/(blob|tree)/([^/\s\)\]\"'<>]+)/([^\s\)\]\"'<>]+)"
 )

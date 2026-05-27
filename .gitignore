@@ -160,16 +160,22 @@ cython_debug/
 docs/assets/img/.DS_Store
 docs/assets/.DS_Store
 *.csv
-zip_files.py
+/zip_files.py
 md_files.zip
 .DS_Store
-prompt.md
+/prompt.md
 docs_env/*
 
 .codegpt
 .clinerules
-memory-bank/*
+memory-bank/
+tools/state/
 /node_modules
 .tmp_*/
 .cache/
 .metals/
+links.txt
+GitHub.txt
+source-watch.json
+source-watch.md
+md_files.zip

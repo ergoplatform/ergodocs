@@ -46,7 +46,7 @@ Fields:
 Run metadata validation and print watched pages:
 
 ```bash
-python tools/source_watch.py --strict
+python tools/source_watch.py scan --strict
 ```
 
 Equivalent subcommand form:
@@ -60,7 +60,7 @@ python tools/source_watch.py scan --strict
 Run commit scan for watched source paths:
 
 ```bash
-GITHUB_TOKEN=... python tools/source_watch.py --github
+GITHUB_TOKEN=... python tools/source_watch.py scan --github
 ```
 
 The script returns a non-zero exit code when source changes are found. Use that behavior for scheduled maintenance jobs or manual review, not normal docs builds.
@@ -68,11 +68,11 @@ The script returns a non-zero exit code when source changes are found. Use that 
 Useful scan controls:
 
 ```bash
-python tools/source_watch.py --github --since 2026-01-01 --repo ergoplatform/sigma-rust --max-queries 50
-python tools/source_watch.py --github --page docs/dev/stack/sigma-rust.md --max-queries 20
-python tools/source_watch.py --github --format json --output source-watch.json
-python tools/source_watch.py --github --new-only --update-baseline
-python tools/source_watch.py --github --validate-paths
+python tools/source_watch.py scan --github --since 2026-01-01 --repo ergoplatform/sigma-rust --max-queries 50
+python tools/source_watch.py scan --github --page docs/dev/stack/sigma-rust.md --max-queries 20
+python tools/source_watch.py scan --github --format json --output source-watch.json
+python tools/source_watch.py scan --github --new-only --update-baseline
+python tools/source_watch.py scan --github --validate-paths
 ```
 
 Use `GITHUB_TOKEN` for larger scans. Unauthenticated GitHub API requests hit rate limits quickly.
@@ -110,7 +110,7 @@ Severity is a triage hint, not an accuracy guarantee.
 Use a baseline to show only new source changes since the last scan:
 
 ```bash
-python tools/source_watch.py --github --new-only --update-baseline
+python tools/source_watch.py scan --github --new-only --update-baseline
 ```
 
 Default baseline path:
@@ -140,13 +140,13 @@ This updates `last_reviewed` to today's date. Use `--date YYYY-MM-DD` to set an 
 Write a PR-comment body:
 
 ```bash
-python tools/source_watch.py --github --pr-comment-file /tmp/source-watch-pr.md
+python tools/source_watch.py scan --github --pr-comment-file /tmp/source-watch-pr.md
 ```
 
 Create or update GitHub issues for changed pages:
 
 ```bash
-GITHUB_REPOSITORY=owner/repo python tools/source_watch.py --github --create-issues
+GITHUB_REPOSITORY=owner/repo python tools/source_watch.py scan --github --create-issues
 ```
 
 Use `--dry-run` to preview intended issue actions.
@@ -155,7 +155,7 @@ Use `--no-fail-on-changes` for scheduled workflows where changed source should c
 ## Review Workflow
 
 1. Add Source Watch metadata to pages tied to product behavior.
-2. Run `python tools/source_watch.py --github`.
+2. Run `python tools/source_watch.py scan --github`.
 3. For pages with source changes, inspect linked commits.
 4. Use the [AI Docs Review Prompt](https://github.com/glasgowm148/ergodocs/blob/main/tools/ai_docs_review_prompt.md) for a first-pass review.
 5. Update docs, then set `last_reviewed` to the review date.

@@ -13,6 +13,7 @@ Use this page to find help, follow updates, and contribute.
 
 ## Participate
 
+- [Start Here: Participate](participate.md)
 - [Participate Overview](contribute.md)
 - [Docs Contributions](contribute/docs.md)
 - [Technical Guidelines](contribute/technical-guidelines.md)

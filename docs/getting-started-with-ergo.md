@@ -14,6 +14,7 @@ Ergo is a programmable money platform. It combines:
 
 Read next:
 
+- [What Is Ergo?](what-is-ergo.md)
 - [Why Ergo](dev/protocol/why.md)
 - [Protocol Overview](dev/protocol/protocol-overview.md)
 - [FAQ](faq.md)
@@ -36,8 +37,8 @@ Read next:
 | Holding ERG | [Get a Wallet](wallets-overview.md) | Wallet choices, setup, safety, and troubleshooting. |
 | Trying apps | [Using Ergo](using-ergo-intermediate.md) | DEXs, NFTs, bridges, stablecoins, and tutorials. |
 | Learning protocol basics | [Learn](learn.md) | eUTXO, Sigma protocols, mining, storage rent, scaling. |
-| Building software | [Building on Ergo](building-on-ergo-developers.md) | Developer pathways, SDKs, APIs, contracts. |
-| Running infrastructure | [Deployment Runbook](node/deploy-runbook.md) | Nodes, hardening, monitoring, indexers, Rosen, oracles. |
+| Building software | [Develop](building-on-ergo-developers.md) | Developer pathways, SDKs, APIs, contracts. |
+| Running infrastructure | [Operate Infrastructure](operate-infrastructure.md) | Nodes, hardening, monitoring, indexers, Rosen, oracles. |
 | Mining | [Securing the Network](securing-the-network-miners.md) | Mining setup, pools, solo mining, pool ops. |
 | Contributing | [Community](engage-with-the-ergo-community.md) | Community channels, docs, bounties, grants. |
 
@@ -45,6 +46,7 @@ Read next:
 
 - Start Here: orientation, first decisions, FAQ, glossary.
 - [Use](uses/use-cases-overview.md): user tasks and ecosystem apps.
+- [Ecosystem Map](ecosystem-map.md): apps, finance, bridges, NFTs, and builder areas.
 - [Learn](learn.md): concepts, protocol design, research, roadmap.
 - [Participate](contribute.md): community, governance, grants, docs, events.
 - [Develop](dev/get-started.md): ErgoScript, SDKs, APIs, contracts, tutorials.
@@ -66,4 +68,6 @@ Read next:
 | Build a dApp | [Developer Overview](dev/get-started.md) |
 | Write smart contracts | [ErgoScript](dev/scs/ergoscript.md) |
 | Mine ERG | [Mining Overview](mining/mining-overview.md) |
+| Learn safety basics | [Security Basics](security-basics.md) |
 | Ask for help | [Community](engage-with-the-ergo-community.md) |
+| Contribute | [Participate](participate.md) |

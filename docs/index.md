@@ -2,19 +2,20 @@
 
 ErgoDocs helps you understand, use, build on, and operate Ergo.
 
-Ergo is a proof-of-work smart-contract platform built around eUTXO, ErgoScript, Sigma protocols, and long-term economic sustainability. If those words are new, start with [Getting Started](getting-started-with-ergo.md).
+Ergo is a proof-of-work smart-contract platform built around eUTXO, ErgoScript, Sigma protocols, and long-term economic sustainability. If those words are new, start with [What Is Ergo?](what-is-ergo.md).
 
 ## Choose Your Path
 
 | I want to... | Start here | Then go deeper |
 | --- | --- | --- |
-| Understand Ergo in plain language | [Getting Started](getting-started-with-ergo.md) | [Learn](learn.md), [FAQ](faq.md), [Glossary](glossary.md) |
-| Get a wallet and hold ERG safely | [Get a Wallet](wallets-overview.md) | [Access Issues](tutorials/access-issues.md), [Cold Wallet Guide](tutorials/cold-wallet.md) |
-| Use apps, DEXs, NFTs, stablecoins, or bridges | [Using Ergo](using-ergo-intermediate.md) | [Use Overview](uses/use-cases-overview.md), [Rosen Bridge](eco/rosen.md) |
-| Build a dApp, wallet integration, or contract | [Building on Ergo](building-on-ergo-developers.md) | [Develop Overview](dev/get-started.md), [ErgoScript](dev/scs/ergoscript.md) |
-| Run infrastructure | [Deployment Runbook](node/deploy-runbook.md) | [Node Install](node/install.md), [Operations](node/operations/hardening.md) |
+| Understand Ergo in plain language | [What Is Ergo?](what-is-ergo.md) | [Getting Started](getting-started-with-ergo.md), [FAQ](faq.md), [Glossary by Path](glossary-by-path.md) |
+| Get a wallet and hold ERG safely | [Get a Wallet](wallets-overview.md) | [Security Basics](security-basics.md), [Cold Wallet Guide](tutorials/cold-wallet.md) |
+| Use apps, DEXs, NFTs, stablecoins, or bridges | [Ecosystem Map](ecosystem-map.md) | [Using Ergo](using-ergo-intermediate.md), [Rosen Bridge](eco/rosen.md) |
+| Build a dApp, wallet integration, or contract | [Develop](building-on-ergo-developers.md) | [Develop Overview](dev/get-started.md), [ErgoScript](dev/scs/ergoscript.md) |
+| Run infrastructure | [Operate Infrastructure](operate-infrastructure.md) | [Deployment Runbook](node/deploy-runbook.md), [Operations](node/operations/hardening.md) |
 | Mine ERG or run pool infrastructure | [Securing the Network](securing-the-network-miners.md) | [Mining Overview](mining/mining-overview.md), [Pool Operations](mining/pool-ops.md) |
-| Join the community or contribute | [Community](engage-with-the-ergo-community.md) | [Participate](contribute.md), [Docs Contributions](contribute/docs.md) |
+| Find help or follow updates | [Community](engage-with-the-ergo-community.md) | [FAQ](faq.md), [Forum](https://www.ergoforum.org), [Discord](https://discord.gg/Q86PNMwRsu) |
+| Contribute to Ergo | [Participate](participate.md) | [Developer Contributions](contribute/devs.md), [Docs Contributions](contribute/docs.md) |
 
 ## Main Sections
 
@@ -65,7 +66,11 @@ Ergo is a proof-of-work smart-contract platform built around eUTXO, ErgoScript, 
 
 - [FAQ](faq.md)
 - [Glossary](glossary.md)
+- [Glossary by Path](glossary-by-path.md)
+- [Security Basics](security-basics.md)
+- [Ecosystem Map](ecosystem-map.md)
 - [Common Misconceptions](fud-faq.md)
 - [Roadmap](roadmap.md)
 - [Research Library](documents.md)
 - [Community Channels](engage-with-the-ergo-community.md)
+- [Participate](participate.md)

@@ -10,6 +10,8 @@ If you're interested in contributing to Ergo as a developer, here's how you can 
 
 3. **Submit Your Work:** Once you've completed a task or project, you can submit your work for review. 
 
+Docs contributions are part of developer contribution too. Start with [Contribute to the Docs](docs.md), then use the [Documentation Tools](tools.md) guide for local checks and maintenance scripts.
+
 ### Submitting Payment Requests
 
 If you've completed a bounty, you can submit a payment request. Here's how:

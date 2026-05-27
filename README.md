@@ -47,13 +47,13 @@ cat tools/ai_docs_review_prompt.md
 Validate source-linked docs metadata:
 
 ```bash
-python tools/source_watch.py --strict
+python tools/source_watch.py scan --strict
 ```
 
 Scan selected source repos for possible stale docs:
 
 ```bash
-GITHUB_TOKEN=... python tools/source_watch.py --github --since 2026-01-01 --repo ergoplatform/sigma-rust --max-queries 50
+GITHUB_TOKEN=... python tools/source_watch.py scan --github --since 2026-01-01 --repo ergoplatform/sigma-rust --max-queries 50
 ```
 
 JSON report:

@@ -87,7 +87,7 @@ plugins:
   #- pagenav-generator
   - mkdocs-simple-hooks:
       hooks:
-        on_page_markdown: "hooks:fix_lists"
+        on_page_markdown: "tools.hooks:fix_lists"
 
 markdown_extensions:
   - footnotes
@@ -138,16 +138,21 @@ markdown_extensions:
 nav:
   - Start Here:
       - Welcome: index.md
-      - Maintainer Start Here: start_here.md
+      - What Is Ergo?: what-is-ergo.md
       - Getting Started: getting-started-with-ergo.md
       - Get a Wallet: wallets-overview.md
+      - Security Basics: security-basics.md
       - Using Ergo: using-ergo-intermediate.md
-      - Building on Ergo: building-on-ergo-developers.md
+      - Ecosystem Map: ecosystem-map.md
+      - Develop: building-on-ergo-developers.md
+      - Operate Infrastructure: operate-infrastructure.md
       - Securing the Network: securing-the-network-miners.md
       - Learn: learn.md
       - Community: engage-with-the-ergo-community.md
+      - Participate: participate.md
       - Reference:
           - Glossary: glossary.md
+          - Glossary by Path: glossary-by-path.md
           # - Sitemap: site-map.md
           # - Tags: tags.md
           - FAQ: faq.md
@@ -481,7 +486,10 @@ nav:
           - contribute/devs.md
           - Technical Guidelines: contribute/technical-guidelines.md
           - Roles: contribute/roles.md
+      - Documentation:
+          - Maintainer Start Here: start_here.md
           - Contribute to the Docs!: contribute/docs.md
+          - Documentation Tools: contribute/tools.md
           - Content Standards: contribute/content-standards.md
           - Documentation Lifecycle: contribute/docs-lifecycle.md
           - Information Architecture: contribute/information-architecture.md

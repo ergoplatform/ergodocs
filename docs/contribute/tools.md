@@ -1,0 +1,214 @@
+---
+title: Documentation Tools
+description: Maintainer guide to ErgoDocs tooling in the tools directory.
+tags:
+  - documentation
+  - maintainer
+  - tooling
+owner: docs
+last_reviewed: 2026-05-27
+---
+
+# Documentation Tools
+
+This page explains the scripts and prompt files in `tools/`.
+
+Run Python tools from the repository root, preferably through the local virtualenv:
+
+```bash
+.venv/bin/python tools/source_watch.py scan --strict
+```
+
+## Core Checks
+
+### `tools/source_watch.py`
+
+Tracks docs pages against upstream GitHub repositories using `source_repos` metadata.
+
+Use it to:
+
+- validate Source Watch frontmatter
+- scan watched GitHub paths for changes
+- suggest `source_repos` metadata from GitHub links
+- mark pages reviewed after source verification
+- write/update the baseline at `tools/state/source-watch-baseline.json`
+
+Common commands:
+
+```bash
+.venv/bin/python tools/source_watch.py scan --strict
+.venv/bin/python tools/source_watch.py scan --github --new-only --repo ergoplatform/ergo --max-queries 120 --no-fail-on-changes --format markdown --output /tmp/source-watch-ergo.md
+.venv/bin/python tools/source_watch.py suggest docs/dev/stack/headless.md
+.venv/bin/python tools/source_watch.py mark-reviewed docs/dev/stack/headless.md
+```
+
+Use a `GITHUB_TOKEN` in `.env` for GitHub scans.
+
+### `tools/nav_audit.py`
+
+Checks MkDocs navigation health.
+
+It reports:
+
+- missing nav targets
+- duplicate nav targets
+- active docs not reachable from nav
+
+Run after nav edits:
+
+```bash
+.venv/bin/python tools/nav_audit.py --strict
+```
+
+### `tools/structure_audit.py`
+
+Checks information architecture health across the docs set.
+
+It reports:
+
+- active docs count
+- nav coverage
+- duplicates and cross-surface duplicates
+- orphan pages
+- source-watched coverage by area
+- max nav depth
+
+Run after section moves or large docs reshuffles:
+
+```bash
+.venv/bin/python tools/structure_audit.py --strict
+```
+
+Use Markdown output for review notes:
+
+```bash
+.venv/bin/python tools/structure_audit.py --markdown
+```
+
+### `tools/discord_dev_digest.py`
+
+Exports the Ergo Discord development channel with DiscordChatExporter and turns the chat log into docs-review leads.
+
+Use it to:
+
+- export recent development chat from Discord
+- parse topics, URLs, and high-signal messages
+- map discussion topics to likely docs pages
+- write a Codex-ready review prompt
+
+Default channel is Ergo's development channel. The tool reads `DISCORD_TOKEN` from `.env`, but never writes the token to reports.
+
+Run a past-month scan:
+
+```bash
+.venv/bin/python tools/discord_dev_digest.py scan --days 31
+```
+
+Analyze an existing PlainText export:
+
+```bash
+.venv/bin/python tools/discord_dev_digest.py analyze --input /path/to/export.txt
+```
+
+Dry-run exporter path/date setup without calling Discord:
+
+```bash
+.venv/bin/python tools/discord_dev_digest.py scan --days 31 --dry-run
+```
+
+Reports are written under `tools/state/discord-dev-digest/`.
+
+Treat Discord output as leads only. Verify claims against source repositories, issues, releases, EIPs, or maintainer confirmation before changing docs.
+
+## Build Hooks
+
+### `tools/hooks.py`
+
+MkDocs imports this through `mkdocs.yml`:
+
+```yaml
+on_page_markdown: "tools.hooks:fix_lists"
+```
+
+The hook normalizes over-indented nested list markers before Markdown rendering. It exists because some legacy pages use 4-space or 6-space nested bullets, while `mdx_truly_sane_lists` expects 2-space nesting.
+
+Do not run it directly. Validate hook changes with:
+
+```bash
+.venv/bin/mkdocs build --site-dir /tmp/ergodocs-hooks-check
+```
+
+## Prompt Files
+
+### `tools/ai_docs_review_prompt.md`
+
+Prompt template for source-backed docs review.
+
+Use it when reviewing a PR, source diff, release note, EIP, or upstream code change. It asks the reviewer to check reader goal, technical accuracy, verification, safety, IA, style, and freshness risk.
+
+### `tools/markdown_prompt.md`
+
+Compact Markdown formatting prompt for docs cleanup.
+
+Use it when asking an AI assistant to normalize headings, details blocks, bullets, code blocks, and links for MkDocs.
+
+## Utility Scripts
+
+### `tools/links.sh`
+
+Extracts HTTP links from the repository into `links.txt`, then writes GitHub links into `GitHub.txt`.
+
+Run:
+
+```bash
+bash tools/links.sh
+```
+
+Generated files are ignored by Git unless deliberately added.
+
+### `tools/zip_files.py`
+
+Creates `md_files.zip` containing Markdown files from the current working tree.
+
+Run:
+
+```bash
+.venv/bin/python tools/zip_files.py
+```
+
+Generated `md_files.zip` is ignored by Git.
+
+### `tools/deploy.sh`
+
+Legacy manual deploy helper that SSHes into the old server and rebuilds the site there.
+
+Normal publishing should use GitHub Actions instead:
+
+- `.github/workflows/docs-quality.yml` for PR checks
+- `.github/workflows/source-watch.yml` for scheduled source scans
+- `.github/workflows/ci.yml` for main-branch deploy
+
+Only run `tools/deploy.sh` when explicitly asked and when server access is intended.
+
+## Local State
+
+`tools/state/` stores ignored local/generated tool state.
+
+Current uses:
+
+- `tools/state/source-watch-baseline.json`: Source Watch baseline when `--update-baseline` is used.
+- `tools/state/memory-bank/`: legacy local notes moved out of the repository root.
+
+Do not put durable project rules in `tools/state/`. Use `AGENTS.md` and maintainer docs instead.
+
+## Standard Verification Set
+
+For most docs/tooling changes, run:
+
+```bash
+.venv/bin/python tools/source_watch.py scan --strict
+.venv/bin/python tools/nav_audit.py --strict
+.venv/bin/python tools/structure_audit.py --strict
+git diff --check
+.venv/bin/mkdocs build --site-dir /tmp/ergodocs-site-check
+```

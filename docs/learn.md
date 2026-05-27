@@ -4,10 +4,12 @@ Use this page for concepts and background. If you want to do a practical task, u
 
 ## Plain-Language Start
 
+- [What Is Ergo?](what-is-ergo.md)
 - [Why Ergo](dev/protocol/why.md)
 - [Protocol Overview](dev/protocol/protocol-overview.md)
 - [FAQ](faq.md)
 - [Glossary](glossary.md)
+- [Glossary by Path](glossary-by-path.md)
 - [Common Misconceptions](fud-faq.md)
 
 ## Core Protocol Concepts
