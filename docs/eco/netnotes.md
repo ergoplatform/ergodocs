@@ -9,13 +9,6 @@ tags:
   - Cross-Platform
 owner: docs
 last_reviewed: never
-source_repos:
-  - repo: networkspore/netnotes-engine
-    branch: main
-    paths:
-      - src/main/resources/contracts/dex
-source_of_truth:
-  - https://github.com/networkspore/netnotes-engine/tree/main/src/main/resources/contracts/dex
 ---
 
 # Netnotes  
@@ -33,10 +26,7 @@ Unlike traditional wallets, Netnotes is built around a **messaging-driven archit
 - Major refactoring is in progress to enable **P2P networking capabilities** and support **distributed applications** across networked devices.  
 - Communication paths are being cleaned up and migrated to **asynchronous processing** for improved scalability and modular architecture.  
 - Security audits and UI component updates are underway to enforce best practices and make features easier to propagate across apps.  
-- Experimental **atomic exchange contracts** are being developed for decentralized trading directly through Netnotes.  
-- Final steps are being taken to integrate working **ErgoDex smart contracts** for decentralized swaps.  
-
-> [Explore the Draft Atomic Exchange Contracts →](https://github.com/networkspore/netnotes-engine/tree/main/src/main/resources/contracts/dex)  
+- Experimental **atomic exchange contracts** and decentralized trading work have been explored, but the older `netnotes-engine` DEX contract path is no longer present upstream.
 
 ---
 

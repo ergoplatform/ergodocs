@@ -6,7 +6,7 @@ tags:
   - dApp
   - dApp-MVP
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ThierryM1212/SigmaO
     branch: main
@@ -36,6 +36,8 @@ SigmaO is an innovative platform that brings the complex world of options tradin
 ## How Does SigmaO Work?
 
 SigmaO plans to make options trading accessible by providing a platform where users can easily create and trade options. The platform utilizes Ergo's smart contracts to ensure transactions are secure and efficient. Pricing mechanisms for these options are derived from Spectrum Liquidity Pools, providing transparent and fair valuation.
+
+The v2 contract and utility updates added clearer contract comments, token/option links in the UI, a divide-by-zero guard, and Spectrum AMM LP-box based pricing helpers.
 
 /// details | Video Tutorial
     {type: info, open: true}

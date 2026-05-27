@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: MrStahlfelge/mosaik
     branch: develop
@@ -16,7 +16,7 @@ source_of_truth:
 
 ## Example apps
 
-The following Mosaik apps are open-sourced can be used to take inspiration from how to build own Mosaik apps.
+The following Mosaik apps are open source and can be used as references for building Mosaik apps. The backend demos also show cross-origin setup for browser-based executors and the current split between Java and Kotlin backend examples.
 
 ### Spring and Kotlin DSL
 

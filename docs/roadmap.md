@@ -2,7 +2,7 @@
 tags:
   - Roadmap
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ergoplatform/eips
     branch: master
@@ -13,6 +13,8 @@ source_of_truth:
 ---
 
 # Ergo Development Roadmap & History
+
+EIP-44 is the current numbering for the roadmap-related proposal formerly referenced under an older name.
 
 Ergo is a blockchain platform designed to provide a secure, efficient, and user-friendly environment for the development of decentralized applications and financial tools. This roadmap outlines the key milestones and objectives for the development and growth of the Ergo ecosystem.
 

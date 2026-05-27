@@ -1,19 +1,19 @@
 ---
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
     paths:
       - ergo-core/src/main/scala/org/ergoplatform/modifiers/history/header/Header.scala
-      - ergo-core/src/main/scala/org/ergoplatform/nodeView/history/ErgoHistory.scala
+      - src/main/scala/org/ergoplatform/nodeView/history/ErgoHistory.scala
   - repo: ergoplatform/sigma-rust
     branch: develop
     paths:
       - ergo-merkle-tree/src/batchmerkleproof.rs
 source_of_truth:
   - https://github.com/ergoplatform/ergo/tree/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/history/header/Header.scala
-  - https://github.com/ergoplatform/ergo/tree/master/ergo-core/src/main/scala/org/ergoplatform/nodeView/history/ErgoHistory.scala
+  - https://github.com/ergoplatform/ergo/tree/master/src/main/scala/org/ergoplatform/nodeView/history/ErgoHistory.scala
   - https://github.com/ergoplatform/sigma-rust/tree/develop/ergo-merkle-tree/src/batchmerkleproof.rs
 ---
 
@@ -67,7 +67,7 @@ When a new block is mined:
 - The number of leading zeros in the hash determines the block's level in the interlink vector.
 - The block header is added to the vector at the corresponding level.
 
-**Code Reference**: The logic for creating and managing interlink vectors is implemented within the [Scorex repository](https://github.com/ScorexFoundation/scrypto) used by the Ergo blockchain. Specifically, you can find the relevant code in the [BlockHeader.scala](https://github.com/ergoplatform/ergo/blob/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/history/header/Header.scala) file.
+**Code Reference**: Header-level PoPoW data is represented in the node's [Header.scala](https://github.com/ergoplatform/ergo/blob/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/history/header/Header.scala) implementation.
 
 ### 2. **Updating the Interlink Vector**
 
@@ -85,7 +85,7 @@ To verify the blockchain:
 - A client checks the blocks referenced in the interlink vector.
 - By verifying that each block in the vector adheres to the required difficulty level, the client confirms that the chain follows the longest chain rule.
 
-**Code Reference**: Chain verification using interlink vectors is integrated into the block validation logic in the [Ergo codebase](https://github.com/ergoplatform/ergo/blob/master/ergo-core/src/main/scala/org/ergoplatform/nodeView/history/ErgoHistory.scala), particularly within the [ErgoHistory.scala](https://github.com/ergoplatform/ergo/blob/master/ergo-core/src/main/scala/org/ergoplatform/nodeView/history/ErgoHistory.scala) file.
+**Code Reference**: Chain verification using interlink vectors is integrated into the block validation logic in the [Ergo codebase](https://github.com/ergoplatform/ergo/blob/master/src/main/scala/org/ergoplatform/nodeView/history/ErgoHistory.scala), particularly within the [ErgoHistory.scala](https://github.com/ergoplatform/ergo/blob/master/src/main/scala/org/ergoplatform/nodeView/history/ErgoHistory.scala) file.
 
 ### 4. **Batch Merkle Proofs and Interlink Vectors**
 

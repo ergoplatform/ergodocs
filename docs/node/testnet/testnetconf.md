@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -47,6 +47,8 @@ This section includes parameters related to the blockchain.
 - `voting` contains parameters related to the voting mechanism, such as the length of a voting epoch, the number of epochs for soft-fork voting, and activation epochs for a soft-fork after acceptance.
 - `reemission` includes parameters related to the emission process.
 - `genesisStateDigestHex` is the Base16 representation of the genesis state roothash.
+
+For 6.0-era networks, protocol version 4 corresponds to the 6.0 interpreter feature set. Testnet settings are intended for non-breaking feature testing and may diverge from mainnet activation heights. Current `testnet.conf` sets the 6.0 voting `activationHeight` to `100000001`, keeping that activation effectively out of normal testnet operation unless the configuration is changed.
 
 ### Voting Configuration
 

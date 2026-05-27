@@ -2,14 +2,13 @@
 tags:
   - Compiler
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ScorexFoundation/sigmastate-interpreter
     branch: develop
     paths:
       - docs/ergoscript-compiler.md
       - interpreter/shared/src/main/scala/org/ergoplatform/SigmaPropProver.scala
-      - parsers/shared/src/main/scala/sigmastate/lang/Lexer.scala
       - parsers/shared/src/main/scala/sigmastate/lang/SigmaParser.scala
       - sc/shared/src/main/scala/sigma/compiler/ir/ProgramGraphs.scala
       - sc/shared/src/main/scala/sigma/compiler/ir/TypeDescs.scala

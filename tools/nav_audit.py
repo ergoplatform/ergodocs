@@ -41,6 +41,7 @@ ORPHAN_EXCLUDE_FILES = {
     "todo.md",
     "tags.md",
 }
+UNLISTED_STATUSES = {"legacy", "alias", "draft"}
 
 
 class Loader(yaml.SafeLoader):
@@ -85,6 +86,19 @@ def should_exclude_orphan(path: str) -> bool:
     return any(path.startswith(prefix) for prefix in ORPHAN_EXCLUDE_PREFIXES)
 
 
+def frontmatter(path: Path) -> dict:
+    text = path.read_text(encoding="utf-8", errors="ignore")
+    if not text.startswith("---"):
+        return {}
+    parts = text.split("---", 2)
+    if len(parts) < 3:
+        return {}
+    try:
+        return yaml.safe_load(parts[1]) or {}
+    except yaml.YAMLError:
+        return {}
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Audit mkdocs nav and docs coverage.")
     parser.add_argument(
@@ -118,7 +132,13 @@ def main() -> int:
 
     all_docs = sorted(p.relative_to(DOCS_DIR).as_posix() for p in DOCS_DIR.rglob("*.md"))
     nav_set = set(paths)
-    orphans = [p for p in all_docs if p not in nav_set and not should_exclude_orphan(p)]
+    orphans = [
+        p
+        for p in all_docs
+        if p not in nav_set
+        and not should_exclude_orphan(p)
+        and frontmatter(DOCS_DIR / p).get("ia_status") not in UNLISTED_STATUSES
+    ]
 
     print(f"Nav entries: {len(entries)}")
     print(f"Unique nav targets: {len(nav_set)}")

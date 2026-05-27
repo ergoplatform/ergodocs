@@ -2,14 +2,14 @@
 tags:
   - Merkle
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ergoplatform/sigma-rust
     branch: develop
     paths:
       - ergo-merkle-tree/src/batchmerkleproof.rs
       - ergo-merkle-tree/src/merkletree.rs
-      - sigma-ser/src/scorex_serializable.rs
+      - sigma-ser/src/scorex_serialize.rs
   - repo: input-output-hk/scrypto
     branch: master
     paths:
@@ -19,7 +19,7 @@ source_repos:
 source_of_truth:
   - https://github.com/ergoplatform/sigma-rust/tree/develop/ergo-merkle-tree/src/batchmerkleproof.rs
   - https://github.com/ergoplatform/sigma-rust/tree/develop/ergo-merkle-tree/src/merkletree.rs
-  - https://github.com/ergoplatform/sigma-rust/tree/develop/sigma-ser/src/scorex_serializable.rs
+  - https://github.com/ergoplatform/sigma-rust/tree/develop/sigma-ser/src/scorex_serialize.rs
   - https://github.com/input-output-hk/scrypto/tree/master/shared/src/main/scala/scorex/crypto/authds/merkle/BatchMerkleProof.scala
   - https://github.com/input-output-hk/scrypto/tree/master/shared/src/main/scala/scorex/crypto/authds/merkle/MerkleTree.scala
   - https://github.com/input-output-hk/scrypto/tree/master/shared/src/main/scala/scorex/crypto/authds/merkle/serialization/BatchMerkleProofSerializer.scala

@@ -8,7 +8,7 @@ tags:
   - dApp
   - dApp-Live
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: spectrum-finance/ergo-dex
     branch: master
@@ -26,6 +26,7 @@ source_of_truth:
 
 - **Liquidity Provision & Yield Farming**: Users can engage in liquidity provision and yield farming.
 - **Babel Fees**: Babel fees allow transaction fees to be paid with various tokens.
+- **Ergo DEX contracts**: Contract updates in the Ergo DEX repository include staking-bundle template/hash support, rounding fixes, refund fixes, and reward-compounding adjustments.
 
 ## Recent updates
 

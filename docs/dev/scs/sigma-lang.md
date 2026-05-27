@@ -2,21 +2,23 @@
 tags:
   - Sigma Language
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ScorexFoundation/sigmastate-interpreter
     branch: develop
     paths:
-      - interpreter/shared/src/main/scala/sigmastate/Values.scala
-      - sc/src/main/scala/sigmastate/lang/SigmaCompiler.scala
+      - data/shared/src/main/scala/sigma/ast/values.scala
+      - sc/shared/src/main/scala/sigma/compiler/SigmaCompiler.scala
 source_of_truth:
-  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/interpreter/shared/src/main/scala/sigmastate/Values.scala
-  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/sc/src/main/scala/sigmastate/lang/SigmaCompiler.scala
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/data/shared/src/main/scala/sigma/ast/values.scala
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/sc/shared/src/main/scala/sigma/compiler/SigmaCompiler.scala
 ---
 
 # The ***'Sigma Language'***
 
 The [sigmastate-interpreter](https://github.com/ScorexFoundation/sigmastate-interpreter#sigma-language-background.md) repository contains implementations of ErgoScript compiler and ErgoTree Interpreter for a family of Sigma-protocol based authentication languages (or simply ***Sigma language***).
+
+The interpreter codebase has split core AST/data structures from compiler modules. Current Sigma AST values live under `data/shared/src/main/scala/sigma/ast`, while the shared compiler entry points live under `sc/shared/src/main/scala/sigma/compiler`.
 
 ## Sigma Language Background
 

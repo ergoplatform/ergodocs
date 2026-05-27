@@ -53,6 +53,8 @@ POSTGRES_DB=your_random_db_name
 POSTGRES_PORT=5432
 ```
 
+Watchers can also collect eRSN rewards into RSN when a configured threshold is reached. If you set `rewardCollecting.threshold`, remember RSN uses 3 decimal places; for example, a threshold of 200 RSN should be represented with that token precision in mind.
+
 Set the required permissions and create the `local.yaml` file in the `config` directory:
 
 ```shell
@@ -194,10 +196,19 @@ To start your watcher, configure the `local.yaml` file.
 
 ### Specify the Target Network
 
-Set the target network you're watching. Currently supported networks are `ergo`, `cardano`, and `bitcoin`:
+Set the target network you're watching. Current watcher configs support `ergo`, `cardano`, `bitcoin`, `ethereum`, `binance`, `doge`, and `bitcoin-runes`:
 
 ```yaml
 network: bitcoin
+```
+
+## Observation Raw Data
+
+Watchers store observation raw data by default so advanced users can inspect source-chain request data in the watcher UI. This does not change watcher behavior. To disable raw-data storage, add:
+
+```yaml
+observation:
+  storeRawData: false
 ```
 
 ### API Configuration
@@ -365,11 +376,11 @@ initial:
   height: LATEST_BITCOIN_HEIGHT
 ```
 
-Customize observation confirmation:
+Customize observation confirmation. For Bitcoin watchers, current Rosen operation docs recommend:
 
 ```yaml
 observation:
-  confirmation: 2
+  confirmation: 1
 ```
 
 ### Ergo Configuration
@@ -430,7 +441,7 @@ bitcoin:
   initial:
     height: LATEST_BITCOIN_HEIGHT
 observation:
-  confirmation: 2
+  confirmation: 1
 ```
 
 ## Get Your Watcher Permit

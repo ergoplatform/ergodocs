@@ -4,7 +4,7 @@ tags:
   - Getting Started
   - Overview
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ergoplatform/sigma-rust
     branch: develop
@@ -92,6 +92,8 @@ Ergo also supports advanced [data structures](data-structures.md) like [AVL+ Tre
 - **[Create & Send a Transaction](https://www.youtube.com/watch?v=Md5s-XV6-Hs)**: A video tutorial on creating and sending a transaction using AppKit.
 
 - **[Sign a Transaction](sign-tx.md)**: Learn how to sign a transaction with Sigma Rust.
+
+- **sigma-rust WASM examples**: The upstream `ergo-lib-wasm` examples include address-generation and create-transaction demos. Use them as practical references for browser or Node.js flows that need address handling and transaction construction.
 
 - **[Sending a Chained Transaction](chained-tx.md)**: A guide on sending a chained transaction using Ergpy.
 

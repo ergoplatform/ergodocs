@@ -3,7 +3,7 @@ tags:
   - Block Header
   - Data Model
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -29,7 +29,7 @@ The **block header** in Ergo serves as a concise summary of a [block's](block.md
 
 The `Header` class in [Header.scala](https://github.com/ergoplatform/ergo/blob/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/history/header/Header.scala) defines the structure of the block header. Here's an overview of the key fields:
 
-* **version:** Indicates the protocol version used to create the block. This allows for future upgrades and changes to the blockchain while maintaining backward compatibility.
+* **version:** Indicates the protocol version used to create the block. Header versions map to consensus features: version 1 is the launch format, version 2 is the hardening fork with Autolykos v2 and witness commitments in the transaction Merkle tree, version 3 is the 5.0 interpreter, and version 4 is the 6.0 interpreter.
 * **parentId:** The ID of the previous block in the blockchain. This links blocks together, forming a chain.
 * **ADProofsRoot:** A cryptographic digest of the [ADProofs](block-adproofs.md) that validate changes to the [UTXO set](eutxo.md).
 * **stateRoot:** A digest representing the root of the [Merkle tree](merkle-tree-structures.md) that captures the state of the UTXO set after this block is applied.
@@ -42,6 +42,8 @@ The `Header` class in [Header.scala](https://github.com/ergoplatform/ergo/blob/m
 * **votes:** Votes cast by miners to signal preferences for changes to [consensus parameters](governance.md).
 * **unparsedBytes:** A field to accommodate future protocol upgrades, allowing for the inclusion of data not yet parsed by current versions.
 * **sizeOpt:** An optional field storing the size of the header to optimize performance.
+
+The node derives script and ErgoTree versions from the block version with `VersionContext(blockVersion - 1, blockVersion - 1)`. This version context is used by version-aware transaction and script serialization.
 
 ## Key Concepts
 

@@ -24,7 +24,7 @@ Here's a list of the main data structures used within the Ergo ecosystem:
 
 - **Purpose**: Merkle Trees are a fundamental data structure in the Ergo blockchain, ensuring the integrity and authenticity of data. They play a crucial role in various blockchain operations, from verifying transactions within blocks to securing additional metadata in the Extension Block.
 - **Usage**:
-  - In the construction of the [Transaction Merkle Tree](tx-merkle.md), combining all transactions and their corresponding spending proofs into a single Merkle Tree.
+  - In the construction of the [Transaction Merkle Tree](tx-merkle.md), committing to transaction IDs and, for non-initial block versions, witness IDs for spending proofs.
   - In the [Extension Block Merkle Tree](merkle-extension.md), securing key-value data like miner votes and protocol parameters.
   - In creating [Merkle Batch Proofs](merkle-batch-proof.md), allowing efficient validation of the integrity and authenticity of data transactions. It supports the serialization and deserialization of Merkle proofs in batches, significantly improving the speed and efficiency of data verification processes.
   - In generating compact proofs of state transitions, enabling lightweight clients to securely participate in the network. An example of how a lite client can check a Merkle-tree-based membership proof is detailed in the [Lite Client Checking Merkle Proof](merkle-light-proof.md) documentation.

@@ -6,7 +6,7 @@ tags:
   - Tutorial
   - Guide
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ThierryM1212/SigmaO
     branch: main
@@ -54,6 +54,8 @@ SigmaO is an innovative platform that brings the complex world of options tradin
 ## How Does SigmaO Work?
 
 SigmaO plans to make options trading accessible by providing a platform where users can easily create and trade options. The platform utilizes Ergo's smart contracts to ensure transactions are secure and efficient. Pricing mechanisms for these options are derived from Spectrum Liquidity Pools, providing transparent and fair valuation.
+
+The v2 SigmaO contract and utility updates added Spectrum AMM LP-box based pricing helpers, a divide-by-zero guard, and more explicit option/token links in the UI.
 
 > Join qx() as he takes you through a [one shot no edits no nonsense take on how to do options trading on Ergo!](https://youtube.com/watch?v=XoJT7aR7o4w) This is only for buying call options, more videos to come with how to execute the call, and create calls and puts.
 {.is-success}

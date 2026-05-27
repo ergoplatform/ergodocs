@@ -2,7 +2,7 @@
 tags:
 - P2P
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -27,6 +27,8 @@ In Ergo's P2P protocol, blocks and transactions are referred to as "modifiers". 
 Modifiers are fundamental elements in the Ergo network that represent either blocks or transactions. They are crucial for maintaining the state of the blockchain and are exchanged between nodes during the network synchronization process.
 
 In the Ergo source code, modifiers are represented in a hierarchical structure that differentiates between various types of data exchanged in the network. These include block sections, transactions, and other consensus-critical data.
+
+Modifier serialization can be version-aware. For example, `BlockTransactions` writes a block-version marker for block versions greater than 1 and uses versioned transaction serializers from protocol version 6.0 onward. Peers exchange the serialized modifier bytes, so compatibility depends on both the modifier type ID and the versioned serializer for that modifier.
 
 For specific implementation details, refer to the following:
 

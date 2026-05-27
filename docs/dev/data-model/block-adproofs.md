@@ -5,7 +5,7 @@ tags:
   - Block
   - Data Model
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -30,6 +30,8 @@ source_of_truth:
 **Structure:**
 
 The `ADProofs` class in [ADProofs.scala](https://github.com/ergoplatform/ergo/blob/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/history/ADProofs.scala) defines the structure of ADProofs. It contains the following key elements:
+
+The class now lives in `ergo-core` with other consensus block-section types, after the node moved core modifier classes out of older Scorex package boundaries.
 
 * **headerId:** The ID of the [block header](block-header.md) to which these proofs correspond.
 * **proofBytes:** The serialized cryptographic proof that allows for verification of the state changes.

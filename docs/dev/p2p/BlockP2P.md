@@ -1,25 +1,25 @@
 ---
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
     paths:
       - ergo-core/src/main/scala/org/ergoplatform/modifiers/mempool/ErgoTransaction.scala
-      - ergo-core/src/main/scala/org/ergoplatform/network/ErgoNetwork.scala
-      - ergo-core/src/main/scala/org/ergoplatform/network/ErgoSync.scala
+      - src/main/scala/org/ergoplatform/network/ErgoNodeViewSynchronizer.scala
+      - src/main/scala/org/ergoplatform/network/ErgoSyncTracker.scala
       - ergo-core/src/main/scala/org/ergoplatform/network/message/InvSpec.scala
-      - ergo-core/src/main/scala/org/ergoplatform/network/message/SyncInfoSpec.scala
-      - ergo-core/src/main/scala/org/ergoplatform/network/message/TxSpec.scala
-      - ergo-core/src/main/scala/org/ergoplatform/nodeView/ErgoNodeViewHolder.scala
+      - ergo-core/src/main/scala/org/ergoplatform/network/message/SyncInfoMessageSpec.scala
+      - src/main/scala/org/ergoplatform/network/message/BasicMessagesRepo.scala
+      - src/main/scala/org/ergoplatform/nodeView/ErgoNodeViewHolder.scala
 source_of_truth:
   - https://github.com/ergoplatform/ergo/tree/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/mempool/ErgoTransaction.scala
-  - https://github.com/ergoplatform/ergo/tree/master/ergo-core/src/main/scala/org/ergoplatform/network/ErgoNetwork.scala
-  - https://github.com/ergoplatform/ergo/tree/master/ergo-core/src/main/scala/org/ergoplatform/network/ErgoSync.scala
+  - https://github.com/ergoplatform/ergo/tree/master/src/main/scala/org/ergoplatform/network/ErgoNodeViewSynchronizer.scala
+  - https://github.com/ergoplatform/ergo/tree/master/src/main/scala/org/ergoplatform/network/ErgoSyncTracker.scala
   - https://github.com/ergoplatform/ergo/tree/master/ergo-core/src/main/scala/org/ergoplatform/network/message/InvSpec.scala
-  - https://github.com/ergoplatform/ergo/tree/master/ergo-core/src/main/scala/org/ergoplatform/network/message/SyncInfoSpec.scala
-  - https://github.com/ergoplatform/ergo/tree/master/ergo-core/src/main/scala/org/ergoplatform/network/message/TxSpec.scala
-  - https://github.com/ergoplatform/ergo/tree/master/ergo-core/src/main/scala/org/ergoplatform/nodeView/ErgoNodeViewHolder.scala
+  - https://github.com/ergoplatform/ergo/tree/master/ergo-core/src/main/scala/org/ergoplatform/network/message/SyncInfoMessageSpec.scala
+  - https://github.com/ergoplatform/ergo/tree/master/src/main/scala/org/ergoplatform/network/message/BasicMessagesRepo.scala
+  - https://github.com/ergoplatform/ergo/tree/master/src/main/scala/org/ergoplatform/nodeView/ErgoNodeViewHolder.scala
 ---
 
 # BlockP2P: The Backbone of Ergo's Decentralized Communication
@@ -33,16 +33,16 @@ BlockP2P is a peer-to-peer communication protocol specifically designed for the 
 ### Core Functions of BlockP2P
 
 1. **Block Propagation**: BlockP2P is responsible for the efficient propagation of blocks across the network. When a new block is mined, it is broadcast to all nodes using the BlockP2P protocol. This ensures that every node has the most recent state of the blockchain, which is crucial for maintaining consensus across the network.
-   - Block propagation is managed by classes such as [`ErgoNodeViewHolder`](https://github.com/ergoplatform/ergo/blob/master/ergo-core/src/main/scala/org/ergoplatform/nodeView/ErgoNodeViewHolder.scala) which handles the reception and processing of new blocks.
+   - Block propagation is managed by classes such as [`ErgoNodeViewHolder`](https://github.com/ergoplatform/ergo/blob/master/src/main/scala/org/ergoplatform/nodeView/ErgoNodeViewHolder.scala), which handles the reception and processing of new blocks.
 
 2. **Transaction Propagation**: Just as with blocks, transactions are also propagated across the network using BlockP2P. When a node receives a new transaction, it broadcasts this transaction to its peers, ensuring that it can be included in future blocks.
    - Transaction broadcasting is managed by the [`ErgoTransaction`](https://github.com/ergoplatform/ergo/blob/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/mempool/ErgoTransaction.scala) class, which represents transactions within the network.
 
 3. **Network Synchronization**: BlockP2P plays a critical role in network synchronization. Nodes must remain in sync with the latest state of the blockchain to participate in consensus and validate transactions. BlockP2P ensures that nodes can catch up with the latest blocks and transactions, even if they have been offline for a period.
-   - The [`ErgoSync`](https://github.com/ergoplatform/ergo/blob/master/ergo-core/src/main/scala/org/ergoplatform/network/ErgoSync.scala) class is responsible for ensuring that nodes remain synchronized with the blockchain.
+   - Synchronization is coordinated by [`ErgoNodeViewSynchronizer`](https://github.com/ergoplatform/ergo/blob/master/src/main/scala/org/ergoplatform/network/ErgoNodeViewSynchronizer.scala) and tracked by [`ErgoSyncTracker`](https://github.com/ergoplatform/ergo/blob/master/src/main/scala/org/ergoplatform/network/ErgoSyncTracker.scala).
 
 4. **Decentralization and Resilience**: By enabling direct communication between nodes, BlockP2P helps maintain the decentralized nature of the Ergo network. This peer-to-peer structure makes the network more resilient to attacks, as there is no single point of failure.
-   - Decentralization is a key aspect of Ergo's architecture, with components like the [`ErgoNetwork`](https://github.com/ergoplatform/ergo/blob/master/ergo-core/src/main/scala/org/ergoplatform/network/ErgoNetwork.scala) ensuring robust P2P connections.
+   - Decentralization is a key aspect of Ergo's architecture, with components like [`PeerManager`](https://github.com/ergoplatform/ergo/blob/master/src/main/scala/org/ergoplatform/network/peer/PeerManager.scala) supporting robust P2P connections.
 
 ### How BlockP2P Works
 
@@ -52,10 +52,10 @@ The BlockP2P protocol operates through a series of messages exchanged between no
    - The class [`InvSpec`](https://github.com/ergoplatform/ergo/blob/master/ergo-core/src/main/scala/org/ergoplatform/network/message/InvSpec.scala) handles the inventory messages for block announcements.
 
 2. **Transaction Broadcasts**: When a node receives a transaction, it broadcasts a transaction message to its peers. This message contains the raw transaction data, including inputs, outputs, and signatures. Nodes that receive this message can verify the transaction and include it in the mempool for potential inclusion in a future block.
-   - The [`TxSpec`](https://github.com/ergoplatform/ergo/blob/master/ergo-core/src/main/scala/org/ergoplatform/network/message/TxSpec.scala) class defines the message format for broadcasting transactions across the network.
+   - Transaction message registration lives with the node's message repository, including [`BasicMessagesRepo`](https://github.com/ergoplatform/ergo/blob/master/src/main/scala/org/ergoplatform/network/message/BasicMessagesRepo.scala).
 
 3. **Synchronization Requests**: Nodes that are out of sync with the network can send synchronization requests to their peers. These requests ask for the latest blocks or transactions that the node is missing. In response, the peer node sends the required data to help the requesting node catch up with the network.
-   - Synchronization is facilitated by the [`SyncInfoSpec`](https://github.com/ergoplatform/ergo/blob/master/ergo-core/src/main/scala/org/ergoplatform/network/message/SyncInfoSpec.scala) class, which handles synchronization messages between peers.
+   - Synchronization is facilitated by [`SyncInfoMessageSpec`](https://github.com/ergoplatform/ergo/blob/master/ergo-core/src/main/scala/org/ergoplatform/network/message/SyncInfoMessageSpec.scala), which handles synchronization messages between peers.
 
 ### Security Considerations
 

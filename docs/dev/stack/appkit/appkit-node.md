@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: aslesarenko/ergo-appkit-examples
     branch: master
@@ -18,6 +18,10 @@ source_of_truth:
 # Interacting with a local node
 
 Among other things, the Appkit library allows us to communicate with Ergo nodes via the [REST API](https://github.com/ergoplatform/ergo/blob/master/src/main/resources/api/openapi.yaml).
+
+For dApps that read UTXO state directly from a node, recent node API versions add mempool-aware options to unspent box endpoints. The `/blockchain/box/unspent/...` routes support `includeUnconfirmed=true` to include boxes created by mempool transactions and `excludeMempoolSpent=true` to filter out boxes that are already spent by pending mempool transactions. This is useful when building transaction flows that should avoid selecting boxes likely to be invalidated before confirmation.
+
+Nodes with `extraIndex = true` also expose indexed block lookups at `/blockchain/block/byHeaderId/{headerId}` and `/blockchain/block/byHeaderIds`. These endpoints return headers together with resolved indexed transaction bodies, which is useful for applications that need block-level history without reconstructing every transaction from lower-level routes.
 
 Let's see how we can write ErgoTool - a simple Java console application (similar to [ergo-tool](https://github.com/ergoplatform/ergo-tool) utility) which uses Appkit library.
 

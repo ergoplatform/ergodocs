@@ -2,7 +2,7 @@
 tags:
   - Merkle
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -31,6 +31,8 @@ The Extension Block in Ergo is essentially a key-value storage system. Each bloc
 - **Non-Interactive Proofs**: Cryptographic proofs that can be validated without requiring interaction with other blockchain participants.
 
 Each key-value pair in the Extension Block is encoded as a leaf node in the Merkle Tree. This encoding ensures that even small changes to any key or value will result in a different Merkle Root, making any tampering immediately detectable.
+
+Extension keys are exactly 2 bytes, values are at most 64 bytes, and an extension candidate may contain up to 32,768 bytes of key-value data.
 
 ### 2. Construction of the Merkle Tree
 

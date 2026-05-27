@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ergoplatform/eips
     branch: master
@@ -36,7 +36,7 @@ Babel Fees offer key benefits:
 - **Babel Box Validation**
 
   - Offers utilities to validate the structure and parameters of Babel Boxes
-  - Ensures compliance with the Babel Fees protocol
+  - Ensures compliance with the EIP-31 contract template and box rules
 
 - **Contract Script Generation**
 

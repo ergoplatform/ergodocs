@@ -12,15 +12,20 @@ tags:
   - BIP39
   - BIP32
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
     paths:
-      - src/main/scala/org/ergoplatform/wallet/
-      - src/main/scala/org/ergoplatform/http/api/
+      - ergo-wallet/src/main/scala/org/ergoplatform/wallet/
+      - src/main/scala/org/ergoplatform/nodeView/wallet/
+      - src/main/scala/org/ergoplatform/http/api/WalletApiRoute.scala
+      - src/main/scala/org/ergoplatform/http/api/WalletApiOperations.scala
 source_of_truth:
-  - https://github.com/ergoplatform/ergo
+  - https://github.com/ergoplatform/ergo/tree/master/ergo-wallet/src/main/scala/org/ergoplatform/wallet
+  - https://github.com/ergoplatform/ergo/tree/master/src/main/scala/org/ergoplatform/nodeView/wallet
+  - https://github.com/ergoplatform/ergo/tree/master/src/main/scala/org/ergoplatform/http/api/WalletApiRoute.scala
+  - https://github.com/ergoplatform/ergo/tree/master/src/main/scala/org/ergoplatform/http/api/WalletApiOperations.scala
 ---
 
 ## Initialize Wallet
@@ -60,16 +65,22 @@ After successfully restoring the wallet from the mnemonic sentence, you will see
 
 To verify the wallet is initialized or restored correctly, you can retrieve its addresses. Using the Swagger UI panel, navigate to the `Wallet` section and execute the `/wallet/addresses` endpoint. The response should list at least one derived address if the wallet setup was successful.
 
+Recent node versions also refresh the wallet's tracked public-key cache during initialization and restore. After either flow, `/wallet/deriveNextKey` can derive additional EIP-3 or legacy keys without losing the already tracked keys. Wallet restore remains disabled on pruned nodes.
+
 ![Get addresses](https://user-images.githubusercontent.com/23208922/69978955-5b82f780-1553-11ea-85b6-413c63a46334.png)
 
 ### Check Wallet Balance
 
 Once the node is fully synchronized with the blockchain, you can check your wallet balance using the `/wallet/balances` endpoint in the Swagger UI.
 
+Use `/wallet/balances/withUnconfirmed` when you need a balance that also accounts for unconfirmed transactions in the mempool.
+
 ![check balance](https://user-images.githubusercontent.com/23208922/71127598-66a37c00-2211-11ea-9d53-f6d7738d1726.png)
 
 ### Sending Funds
 
 If your wallet has a non-zero balance, you can initiate transactions (e.g., sending ERG) using endpoints like `/wallet/payment/send` via the Swagger UI or other API clients.
+
+Wallet box queries such as `/wallet/boxes` and `/wallet/boxes/unspent` support `minConfirmations=-1` when you want mempool boxes considered. For confirmed-only views, use a non-negative confirmation count.
 
 ![send ergs](https://user-images.githubusercontent.com/23208922/71129066-a28c1080-2214-11ea-9806-7d768059980a.png)

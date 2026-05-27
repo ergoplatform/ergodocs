@@ -2,7 +2,7 @@
 tags:
   - Merkle
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -29,7 +29,9 @@ The validation process involves computing a series of hashes based on the provid
 
 ### 1. Compute the Leaf Node Hash
 
-Begin by computing the hash of the leaf node, which represents the transaction or data element you want to prove is included in the block. This is done by prepending a **1-byte zero prefix** to the leaf data and then hashing the result using the `Blake2b256` hash function.
+Begin by computing the hash of the leaf node, which represents the transaction or data element you want to prove is included in the block. In transaction roots, the leaf data is a 32-byte transaction ID for initial block versions. For later block versions, transaction IDs and witness IDs are both included as separate leaves. A witness ID commits to the serialized spending proofs.
+
+The Merkle implementation hashes the leaf data with a **1-byte zero prefix** and the leaf position, using the `Blake2b256` hash function.
 
 **Code Implementation**: The leaf node hash computation is implemented within the Ergo codebase, primarily found in the `scorex.crypto.authds.merkle` package of the [Scrypto](https://github.com/input-output-hk/scrypto) library, which is used by Ergo.
 
@@ -37,6 +39,8 @@ Begin by computing the hash of the leaf node, which represents the transaction o
 val leafData = Base16.decode(txId).get
 val leafHash = Blake2b256(0.toByte +: leafData)
 ```
+
+For node-side transaction roots, use the same block version as the block being verified. From protocol version 6.0 onward, transaction parsing and serialization are performed inside the matching `VersionContext`; proofs built against differently serialized transaction bytes will not validate against the block header root.
 
 ### 2. Iterate Through the Proof
 

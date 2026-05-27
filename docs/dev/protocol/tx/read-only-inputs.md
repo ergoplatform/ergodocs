@@ -2,12 +2,12 @@
 tags:
   - Data Inputs
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: Emurgo/Emurgo-Research
     branch: master
     paths:
-      - smart-contracts/Unlocking%20The%20Potential%20Of%20The%20UTXO%20Model.md
+      - smart-contracts/Unlocking The Potential Of The UTXO Model.md
 source_of_truth:
   - https://github.com/Emurgo/Emurgo-Research/tree/master/smart-contracts/Unlocking%20The%20Potential%20Of%20The%20UTXO%20Model.md
 ---

@@ -2,7 +2,7 @@
 tags:
   - EIP
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -155,6 +155,8 @@ Specification: List Of Implemented Endpoints
 * GET: `/scan/boxesUnspent/{scanId}` - 3.3.0
 
 Objects and endpoints description can be found in [openapi.yaml file in Ergo protocol reference client repository](https://github.com/ergoplatform/ergo/blob/master/src/main/resources/api/openapi.yaml).
+
+Current node API versions also expose scan-oriented routes as `/scan/unspentBoxes/{scanId}` and `/scan/spentBoxes/{scanId}`. For non-scan UTXO lookups, the `/blockchain/box/unspent/...` endpoints support mempool-aware query flags: `includeUnconfirmed=true` includes boxes from unconfirmed transactions, and `excludeMempoolSpent=true` filters boxes already spent by mempool transactions.
 
 Specification: Predefined Scans
 ----------------------------------------

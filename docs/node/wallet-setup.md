@@ -8,14 +8,21 @@ tags:
   - BIP32
   - BIP39
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ergoplatform/ergo-wallet
     branch: master
     paths:
       - src/main/resources/wordlist
+  - repo: ergoplatform/ergo
+    branch: master
+    paths:
+      - src/main/scala/org/ergoplatform/nodeView/wallet/ErgoWalletService.scala
+      - src/main/scala/org/ergoplatform/http/api/WalletApiRoute.scala
 source_of_truth:
   - https://github.com/ergoplatform/ergo-wallet/tree/master/src/main/resources/wordlist
+  - https://github.com/ergoplatform/ergo/tree/master/src/main/scala/org/ergoplatform/nodeView/wallet/ErgoWalletService.scala
+  - https://github.com/ergoplatform/ergo/tree/master/src/main/scala/org/ergoplatform/http/api/WalletApiRoute.scala
 ---
 
 # Ergo Wallet Setup and Security
@@ -69,5 +76,7 @@ The wallet typically locks automatically after a period of inactivity or upon no
 The wallet implements BIP-32, enabling the creation of hierarchical deterministic wallets. During initialization, the master key is derived from the seed. To derive additional keys (and their corresponding addresses) based on specific derivation paths (e.g., following EIP-3 standard paths like `m/44'/429'/0'/0/0`), use the `POST /wallet/deriveKey` endpoint with the desired path in the request body: `{"derivationPath": "m/44'/429'/0'/0/0"}`.
 
 Alternatively, you can derive the *next* available key in the sequence according to the wallet's internal counter using the `GET /wallet/deriveNextKey` endpoint.
+
+Recent node versions rebuild wallet cache state during `/wallet/init` and `/wallet/restore`, so deriving additional keys after initialization or restore keeps the tracked public-key cache in sync. Wallet restore is still unavailable when pruning is enabled.
 
 Note: All these wallet operations are performed via the Ergo node's REST API, typically accessed through the Swagger UI or programmatically.

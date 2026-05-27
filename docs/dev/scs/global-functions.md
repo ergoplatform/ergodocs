@@ -3,7 +3,7 @@ tags:
   - Global Functions
   - ErgoScript
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ScorexFoundation/sigmastate-interpreter
     branch: develop
@@ -75,7 +75,13 @@ Compile-time functions are not evaluated during the spending of the script; inst
 
 ### FromBase
 
-Two functions, `fromBase64` and `fromBase58`, take strings in their respective base and convert them into a `Coll[Byte]` at compile time.
+Three functions, `fromBase16`, `fromBase64`, and `fromBase58`, take strings in their respective base and convert them into a `Coll[Byte]` at compile time.
+
+### Serialization Helpers
+
+`serialize[T](value)` converts a typed ErgoScript value into bytes. `deserializeTo[T](bytes)` converts bytes back into a typed value. Deserialization has versioned costing in current interpreter documentation, so contracts that rely on serialized data should be tested against the target protocol version.
+
+`fromBigEndianBytes[T](bytes)` constructs numeric values from big-endian bytes where the target type supports it.
 
 ### PK
 

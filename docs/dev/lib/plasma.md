@@ -6,7 +6,7 @@ tags:
   - Library
   - GetBlok
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: GetBlok-io/GetBlok-Plasma
     branch: master
@@ -47,7 +47,7 @@ import sigmastate.{AvlTreeFlags, Values}
 val plasmaMap = new PlasmaMap[ErgoId, Values.ErgoTree](AvlTreeFlags.AllOperationsAllowed, PlasmaParameters.default)
 ```
 
-All Plasma Maps use 32 byte digests and Blake2b256 hashing. Any class may be inserted into a Plasma Map
+All Plasma Maps use 32 byte digests and Blake2b256 hashing. The AVL digest also commits to the tree height, which is part of what ErgoScript verifies on-chain. Any class may be inserted into a Plasma Map
 so long as there is a corresponding implicit `ByteConversion` for that class.
 
 ```scala

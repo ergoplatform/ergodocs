@@ -4,7 +4,7 @@ tags:
   - Block
   - Data Model
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -24,12 +24,12 @@ source_of_truth:
 
 *(Back to: [Block Overview](block.md))*
 
-Unlike many blockchains that only store [transaction](transactions.md) data, Ergo includes a specialized **Extension section** in each [block](block.md). This versatile key-value storage system provides a flexible mechanism to include critical data beyond standard transactions, enabling features like efficient [light client]](modes.md) support and future-proofing the blockchain for upgrades.
+Unlike many blockchains that only store [transaction](transactions.md) data, Ergo includes a specialized **Extension section** in each [block](block.md). This versatile key-value storage system provides a flexible mechanism to include critical data beyond standard transactions, enabling features like efficient [light client](modes.md) support and future-proofing the blockchain for upgrades.
 
 ## Why is the Extension Section Important?
 
 * **Flexibility:** Allows incorporating data that doesn't fit into the core block structure, supporting future [protocol upgrades](governance.md) and application-specific needs.
-* **Efficiency:** Enables [nodes]](install.md) and clients to download only necessary block sections, optimizing storage, bandwidth, and processing resources.
+* **Efficiency:** Enables [nodes](install.md) and clients to download only necessary block sections, optimizing storage, bandwidth, and processing resources.
 * **Light Client Support:** Stores essential information like system parameters and [NiPoPoWs](nipopows.md) links, allowing light clients to efficiently validate the blockchain without downloading its full history.
 
 ## How Does It Work?
@@ -38,7 +38,7 @@ The Extension section is structured as a sequence of key-value pairs with the fo
 
 * **Key:** 2 bytes in length.
 * **Value:** Up to 64 bytes in length.
-* **Maximum Size:** The entire Extension section cannot exceed 16,384 bytes.
+* **Maximum Size:** The entire Extension section cannot exceed 32,768 bytes.
 
 Specific key prefixes define the purpose of the data:
 

@@ -6,7 +6,7 @@ tags:
   - dApp
   - dApp-InDev
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ergoplatform/ergo-jde
     branch: main
@@ -31,6 +31,7 @@ Read the [draft whitepaper](../assets/pdf/dexy.pdf) for more details.
 ## Recent updates
 
 - `Jan 7`: StableMiner launched for locally minting Dexy / USE from an Ergo node wallet.
+- `Jan 2023`: Dexy contract tests split LP actions, simplified swap/redeem/mint checks, and made intervention checks lazy in the Kiosk test suite.
 - `Jan 10` and `Apr 5`: the USE buyback contract was updated, the buyback box moved to a new contract address, and the self-output proposition check was fixed.
 - `Jan 14` to `Apr 15`: USE and DexyGold analytics, DefiLlama work, and LP/offchain updates continued.
 - [Citadel](https://github.com/arkadianet/citadel/releases) shipped `v0.2.0-alpha` and `v0.2.2-alpha`; the latter added LP deposit and redeem support to the Dexy protocol.

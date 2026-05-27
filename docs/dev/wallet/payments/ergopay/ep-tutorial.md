@@ -3,7 +3,7 @@ tags:
   - Tutorial
   - dApp Development
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: MrStahlfelge/ergopay-server-example
     branch: master
@@ -96,7 +96,7 @@ The spice of ErgoPay is building a transaction on the dApp side and let the user
 ```java
 dependencies {
    implementation 'org.springframework.boot:spring-boot-starter-web'
-*  implementation 'org.ergoplatform:ergo-appkit_2.11:4.0.6'
+*  implementation 'org.ergoplatform:ergo-appkit_2.11:4.0.11'
 
    testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
@@ -141,7 +141,7 @@ When this is done, you can add the following helper method that builds a transac
 
 Of course, you should change the node address to your own node you run for your dApp.
 
-If you take a look at the source of `BoxOperations.java` included in appkit, you’ll see how the called [putToContractTxUnsigned](https://github.com/ergoplatform/ergo-appkit/blob/eef262b48cd14ba3d3f8a71201aabbbe28680302/lib-api/src/main/java/org/ergoplatform/appkit/BoxOperations.java#L176) method works: it fetches and selects the available unspent boxes for the given sender address and constructs the unsigned transaction by adding the input boxes and defining three output boxes: The box storing amountToSend for the recipient, a box for the transaction fee, and a change box returning the contents of the input boxes that shouldn’t be sent to the recipient. You are free to come up with completely own code here. This tutorial focuses on communicating with the wallet app and we’ll only use this send transaction, but you can take a look at the [appkit Getting started guide](https://github.com/ergoplatform/ergo-appkit/wiki/Tutorial-starting-with-Appkit-on-Gradle-projects#what-to-start-with) to get more ideas.
+If you take a look at the source of `BoxOperations.java` included in appkit, you’ll see how the called [putToContractTxUnsigned](https://github.com/ergoplatform/ergo-appkit/blob/eef262b48cd14ba3d3f8a71201aabbbe28680302/lib-api/src/main/java/org/ergoplatform/appkit/BoxOperations.java#L176) method works: it fetches and selects the available unspent boxes for the given sender address and constructs the unsigned transaction by adding the input boxes and defining three output boxes: The box storing amountToSend for the recipient, a box for the transaction fee, and a change box returning the contents of the input boxes that shouldn’t be sent to the recipient. You are free to write your own code here. This tutorial focuses on communicating with the wallet app and we’ll only use this send transaction, but you can take a look at the [appkit Getting started guide](https://github.com/ergoplatform/ergo-appkit/wiki/Tutorial-starting-with-Appkit-on-Gradle-projects#what-to-start-with) to get more ideas.
 
 Now, all we have to do is add a method that wraps this helper method into a GET request REST API endpoint returning an ErgoPayResponse. We can do it like this:
 
@@ -175,7 +175,7 @@ Now, all we have to do is add a method that wraps this helper method into a GET 
     }
 ```
 
-Our endpoint only expects a single parameter: an address. We use this address to construct a transaction to sent 1 ERG (= 10⁹ nanoERG) to and from (lines 9 to 13). This transaction gets serialized and Base64 Url-encoded and is added to the response in line 15, along with an informative message for the user (lines 17/18).
+Our endpoint only expects a single parameter: an address. We use this address to construct a transaction to send 1 ERG (= 10⁹ nanoERG) to and from (lines 9 to 13). This transaction gets serialized and Base64 Url-encoded and is added to the response in line 15, along with an informative message for the user (lines 17/18).
 It is important to catch all exceptions that could be thrown and use the error messages in the response back to the user. For example, an exception will be thrown for every address that does not have enough balance to send 1 ERG. When you catch the exception like this, the user will get the error message presented — not a very beautiful one, there is lots of space left to polish this for a professional dApp. But if you don’t catch the error here, Spring will respond to the requesting wallet app with a server error, and you can place all bets that this will be more ugly for end users and won’t make your dApp look professional.
 When you now try this endpoint manually, you’ll need to add a testnet or mainnet address:
 
@@ -183,7 +183,7 @@ When you now try this endpoint manually, you’ll need to add a testnet or mainn
 http://localhost:8080/roundTrip/<address>
 ```
 
-When trying the endpoint with your wallet app, you don’t need to do this — ErgoPay defines a placeholder that wallet applications fill with the address a user-selected. Wrap an address like this into a QR code to try:
+When trying the endpoint with your wallet app, you don’t need to do this — ErgoPay defines a placeholder that wallet applications fill with the address selected by the user. Wallets that support multiple addresses can use this placeholder to pass the chosen address into the `roundTrip` and `setAddress` flows. Wrap an address like this into a QR code to try:
 
 ```bash
 ergopay://<yourIP>:8080/roundTrip/#P2PK_ADDRESS#

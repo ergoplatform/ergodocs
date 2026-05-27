@@ -7,7 +7,7 @@ tags:
   - UI
   - RPC Endpoints
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -64,6 +64,23 @@ Here are some of the main methods you can use:
 - `/wallet/deriveNextKey`: Derive the next key/address according to the EIP-3 derivation path.
 - `/wallet/balances`: Get the wallet's overall ERG and token balances across all tracked addresses.
 - `/wallet/transactions`: Get a list of transactions relevant to the wallet's addresses.
+
+### Blockchain Box Queries
+
+Current node API versions expose unspent-box lookup routes under `/blockchain/box/unspent/...` for token ID, address, template hash, and ErgoTree queries. These routes support pagination and sorting through `offset`, `limit`, and `sortDirection`.
+
+When `includeUnconfirmed=true`, results can include boxes created by transactions in the mempool. When `excludeMempoolSpent=true`, boxes already spent by mempool transactions are filtered out of the result. Use both flags when you need a wallet- or dApp-facing view that reflects pending mempool spends as well as confirmed UTXO state.
+
+The unconfirmed transaction routes now also expose richer box data for mempool transactions. In particular, unconfirmed input lookup can use both state and pool data to return full input boxes with proof data where available.
+
+### Indexed Block Queries
+
+When `extraIndex = true`, recent node API versions also expose indexed block lookups:
+
+- `GET /blockchain/block/byHeaderId/{headerId}`
+- `POST /blockchain/block/byHeaderIds`
+
+These return indexed block data with the header, resolved indexed transactions, height, and block-transaction section size. If the node cannot resolve all indexed transaction bodies for a requested block, that block is omitted from the multi-block response rather than returned partially.
 
 ### Example: Deriving Addresses
 

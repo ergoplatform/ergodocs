@@ -1,13 +1,6 @@
 ---
 owner: docs
-last_reviewed: never
-source_repos:
-  - repo: electric-capital/crypto-ecosystems
-    branch: master
-    paths:
-      - data/ecosystems/e/ergo.toml
-source_of_truth:
-  - https://github.com/electric-capital/crypto-ecosystems/tree/master/data/ecosystems/e/ergo.toml
+last_reviewed: 2026-05-26
 ---
 
 
@@ -23,7 +16,7 @@ If you wish to be included on [defillama.com/chain/Ergo](https://defillama.com/c
 
 ### Developer Contributions
 
-To have your contributions recognized in the yearly report by [developerreport.com](https://www.developerreport.com/ecosystems/ergo/) and the weekly-updated [Artemis](https://app.artemis.xyz/developer-activity?ecosystemValue=Ergo) dashboard, please add your GitHub organization or repositories to [this repository](https://github.com/electric-capital/crypto-ecosystems/blob/master/data/ecosystems/e/ergo.toml).
+To have your contributions recognized in ecosystem developer reports and Artemis-style dashboards, make sure public Ergo repositories are discoverable through project organization links and package metadata. Previous Electric Capital ecosystem registry paths for Ergo are no longer present in the upstream repository.
 
 ### Developer Statistics
 

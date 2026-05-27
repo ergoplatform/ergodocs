@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ergoplatform/ergo-jde
     branch: main
@@ -9,14 +9,14 @@ source_repos:
   - repo: kushti/chaincash
     branch: master
     paths:
-      - paper/chaincash.pdf
+      - docs/whitepaper/chaincash.pdf
   - repo: kushti/kya
     branch: master
     paths:
       - kya.pdf
 source_of_truth:
   - https://github.com/ergoplatform/ergo-jde/tree/main/kiosk/src/test/scala/kiosk/mixer/doc/main.pdf
-  - https://github.com/kushti/chaincash/tree/master/paper/chaincash.pdf
+  - https://github.com/kushti/chaincash/tree/master/docs/whitepaper/chaincash.pdf
   - https://github.com/kushti/kya/tree/master/kya.pdf
 ---
 

@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ergoplatform/sigma-rust
     branch: develop
@@ -8,21 +8,15 @@ source_repos:
       - bindings/ergo-lib-wasm
 source_of_truth:
   - https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-wasm
----
-
-
----
 tags:
-
-- Message Signing
-- Authentication
-- Nautilus
-- sigma-rust
-- Wallets
-- Security
-- Tutorial
-- Guide
-
+  - Message Signing
+  - Authentication
+  - Nautilus
+  - sigma-rust
+  - Wallets
+  - Security
+  - Tutorial
+  - Guide
 ---
 
 # Message signing and user authentication with Nautilus wallet and sigma-rust
@@ -43,6 +37,8 @@ import * as ergoWasm from 'ergo-lib-wasm-nodejs'
 const isValid = ergoWasm.verify_signature(addr, message, signature);
 if (isValid) { // authenticated!!! }
 ```
+
+Current `ergo-lib-wasm` serializes `SigmaBoolean` values as base-16 strings. If your backend stores or exchanges signed propositions alongside signatures, keep the same encoding on both the browser and Node.js sides.
 
 This is called wallet authentication - the way to verify that the user/client is the owner of the address he is claiming to be.
 

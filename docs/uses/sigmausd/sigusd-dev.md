@@ -1,20 +1,15 @@
 ---
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: MrStahlfelge/mosaik-ageusddemo
     branch: master
     paths:
       - src/main/kotlin/org/ergoplatform/mosaik/example/ageusd/AgeUsdController.kt
       - src/main/kotlin/org/ergoplatform/mosaik/example/ageusd/AgeUsdService.kt
-  - repo: ergoMixer/ergoMixBack
-    branch: master
-    paths:
-      - app/services/ErgoMixService.scala
 source_of_truth:
   - https://github.com/MrStahlfelge/mosaik-ageusddemo/tree/master/src/main/kotlin/org/ergoplatform/mosaik/example/ageusd/AgeUsdController.kt
   - https://github.com/MrStahlfelge/mosaik-ageusddemo/tree/master/src/main/kotlin/org/ergoplatform/mosaik/example/ageusd/AgeUsdService.kt
-  - https://github.com/ergoMixer/ergoMixBack/tree/master/app/services/ErgoMixService.scala
 ---
 
 ### Accessing SigmaUSD as a Developer

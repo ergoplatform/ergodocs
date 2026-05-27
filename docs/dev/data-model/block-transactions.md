@@ -4,7 +4,7 @@ tags:
   - Transactions
   - Data Model
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -40,6 +40,11 @@ Here's a breakdown of its main components:
 * **inputs:** A list of `Input` objects, each referencing an existing [box](box.md) that the transaction will spend. Each input includes a `spendingProof` (see [Transaction Signing](signing.md)) to prove the spender has the right to consume the box.
 * **[dataInputs](read-only-inputs.md):** A list of `DataInput` objects referencing boxes that the transaction needs to access for its scripts but won't spend. These provide data to the scripts without requiring ownership.
 * **outputCandidates:** A list of `ErgoBoxCandidate` objects representing the new boxes that the transaction will create. These candidates define the values, assets, and scripts of the new boxes.
+
+`ErgoTransaction` has two important identifiers:
+
+* **id / serializedId:** A digest of the transaction body without spending proofs. This is the transaction ID used to reference the transaction.
+* **witnessSerializedId:** A digest of the serialized spending proofs. For non-initial block versions, witness IDs are committed alongside transaction IDs in the block transaction root.
 
 ## Validation
 

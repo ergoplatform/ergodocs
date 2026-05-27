@@ -152,8 +152,6 @@ nav:
           - FAQ: faq.md
           - Common Misconceptions: fud-faq.md
       #- Why Ergo: dev/protocol/why.md
-      - Contribute: contribute.md
-      - Roadmap: roadmap.md
   - Use:
       - Overview: uses/use-cases-overview.md
       - Get a Wallet:
@@ -161,8 +159,8 @@ nav:
           - General Guides:
               - Access Issues: tutorials/access-issues.md
               - Cold Wallet Guide: tutorials/cold-wallet.md
+              - Browser Wallets on Android: tutorials/Ergo-Browser-Wallets-on-Android.md
           - Wallet Guides:
-              - Node Wallet Setup: node/wallet-setup.md
               - Satergo: dev/wallet/satergo.md
               - Nautilus: dev/wallet/nautilus.md
               - Minotaur: dev/wallet/minotaur.md
@@ -172,9 +170,7 @@ nav:
               - Paper Wallet: dev/wallet/paper-wallet.md
               - Satergo Vault: dev/wallet/satergo-vault.md
       - How-To Guides:
-          - Mint an NFT: dev/tokens/nfts/create.md
           - Yield Farming: tutorials/yield.md
-          - Lending Pools: tutorials/lending-pools.md
           - Arbitrage: tutorials/arb.md
           - Airdrops Tutorial: tutorials/airdrops.md
           - One Stop Shop Tutorial: tutorials/one-stop-shop.md
@@ -193,11 +189,6 @@ nav:
                   - Metadata Schema: eco/rosen/metadata-schema.md
                   - Troubleshooting: eco/rosen/rosen-troubleshooting.md
                   - Glossary: eco/rosen/rosen-glossary.md
-                  - Watchers:
-                      - eco/rosen/watcher.md
-                      - Prerequisites: eco/rosen/rosen-preq.md
-                      - Ergo Watcher: eco/rosen/ergo-watcher.md
-                      - Bitcoin Watcher: eco/rosen/bitcoin-watcher.md
                   - Guards: eco/rosen/rosen-guard.md
                   - Tokenomics: eco/rosen/rosen-tokenomics.md
                   - Bringing Monero: eco/rosen/bringing-monero.md
@@ -214,7 +205,6 @@ nav:
                   - Mixicles: uses/mixicles.md
               - Sidechains:
                   - uses/sidechains.md
-                  - Sub-Blocks: uses/sidechains/subblocks.md
                   - Sigma Chains: uses/sidechains/sigma-chains.md
                   - PoUW: uses/pouw.md
                   - Weak Blocks: uses/sidechains/weak-blocks.md
@@ -222,7 +212,6 @@ nav:
               - Decentralized Exchanges:
                   - uses/dex.md
                   - ErgoDex: eco/spectrum.md
-                  - Trade House: eco/ergo-auctions.md
                   - Palmyra: eco/palmyra.md
                   - Crystal Pool: eco/crystal-pool.md
                   - Machina Finance: eco/machina-finance.md
@@ -271,6 +260,7 @@ nav:
                       - OptionCoin: eco/optioncoin.md
                       - OptionPools: eco/optionPools.md
                       - SigmaO: eco/sigmao.md
+                      - Tensile: eco/tensile.md
                       - Bonding Curve: uses/bonding.md
                   - Crowdfunding:
                       - uses/crowdfunding.md
@@ -287,7 +277,6 @@ nav:
                   - ICOs: uses/ergo-ico.md
                   - Index Coins: uses/index_coins.md
                   - PoW Tokens: uses/PoW_tokens.md
-                  - Perpetual Tokens: dev/tokens/perpetual.md
                   - Buy Back Guarantees: uses/dex-buyback.md
           - NFTs & Gaming:
               - NFTs Overview: uses/nft.md
@@ -298,8 +287,10 @@ nav:
                   - uses/gaming.md
                   - BlitzTCG: eco/blitz.md
                   - Cyberverse: eco/cyberverse.md
+                  - SigmaQuest: eco/sigmaquest.md
                   - Gaming Tutorial: tutorials/gaming-tutorial.md
                   - Metaverse: uses/metaverse.md
+                  - SigmaValley: eco/sigmavalley.md
           - Applications & Utilities:
               - Crux Finance: eco/crux.md
               - Degens.World: eco/degens-world.md
@@ -351,6 +342,8 @@ nav:
                   - Rust Chain: eco/rust-chain.md
                   - Scypher: eco/scypher.md
                   - SigmaStamp: eco/sigma-stamp.md
+                  - THz.FM: eco/thz-fm.md
+                  - Swamp Audio: eco/swamp-audio.md
           - Privacy Solutions:
               - ErgoMixer:
                   - eco/ergomixer.md
@@ -368,15 +361,12 @@ nav:
           - DAO & Governance Apps:
               - uses/dao.md
               - Paideia: eco/paideia.md
-              - The Field DAO: eco/the-field.md
           - Mining Ecosystem:
               - eco/miner-tooling.md
-              - Lithos: eco/lithos.md
-              - GuapSwap: eco/guapswap.md
-              - CYTI: eco/cyti.md
               - Collateral Mining: uses/collateral-mining.md
           - Further Ideas & Research:
               - Artificial Intelligence: ai.md
+              - Pattern: eco/pattern.md
               - Context Claims: uses/context-claims.md
               - Sentient Chain: uses/sentientchain.md
   - Learn:
@@ -406,7 +396,6 @@ nav:
           - Whitepaper: doc/whitepaper.md
           - ErgoScript Whitepaper: doc/ergoscript-whitepaper.md
           - On Contractual Money: doc/on-contractual-money.md
-          - CBDC: uses/cbdc.md
       - Roadmap & Scaling:
           - Roadmap Overview: roadmap.md
           - Scaling Overview: dev/protocol/scaling.md
@@ -448,14 +437,12 @@ nav:
                   - Validation: dev/data-model/structures/merkle/merkle-validation.md
                   - Considerations: dev/data-model/structures/merkle/merkle-considerations.md
                   - Extension Block Merkle: dev/data-model/structures/merkle/merkle-extension.md
-                  - Transaction Merkle Trees: dev/protocol/tx/tx-merkle.md
                   - Merkle Batch Proofs: dev/data-model/structures/merkle/merkle-batch-proof.md
                   - Batch Implementation: dev/data-model/structures/merkle/merkle-batch-impl.md
                   - Batch Testing: dev/data-model/structures/merkle/merkle-batch-testing.md
                   - Lightweight Client Proofs: dev/data-model/structures/merkle/merkle-light-proof.md
                   - Merkle Tree Structures: dev/data-model/structures/merkle/merkle-tree-structures.md
               - AVL Trees: dev/protocol/avl.md
-              - Plasma Library: dev/lib/plasma.md
           - Proof-of-Proof-of-Work: dev/data-model/structures/popow.md
           - Interlink Vectors: dev/data-model/structures/interlink-vectors.md
       - Proof-of-Work & Mining Theory:
@@ -496,6 +483,7 @@ nav:
           - Contribute to the Docs!: contribute/docs.md
           - Content Standards: contribute/content-standards.md
           - Documentation Lifecycle: contribute/docs-lifecycle.md
+          - Information Architecture: contribute/information-architecture.md
           - Source Watch: contribute/source-watch.md
       - DAOs:
           - Ergo Foundation:
@@ -525,13 +513,16 @@ nav:
           - The Howey Test: security.md
   - Develop:
       - Start Here:
-          #- students/index.md
           - Overview: dev/get-started.md
+          - Students: students/index.md
+          - Resources: dev/start/resources.md
       - Tooling & Frameworks:
           - Development Pathways:
               - dev/start.md
               - Introduction: dev/stack/introduction.md
               - Starter Tutorial: dev/stack/basics.md
+              - Backend Stack: dev/resources/stack/back-end.md
+              - Frontend Stack: dev/resources/stack/front-end.md
               - Server: dev/stack/server.md
               - Browser: dev/stack/browser.md
               - Desktop: dev/stack/desktop.md
@@ -585,7 +576,6 @@ nav:
               - Interpreters & Compilers: dev/stack/interpreters.md
               - Compiler Phases: dev/scs/ergoscript/compiler-phases.md
               - sigmastate-interpreter: dev/scs/sigmastate-interpreter.md
-              - sigma-rust: dev/stack/sigma-rust.md
               - ErgoScala: dev/stack/ergoscala.md
               - CLI Compiler: dev/stack/compiler.md
               - Ergo Assembler: dev/stack/assembler.md
@@ -698,6 +688,7 @@ nav:
               - Propositions: dev/scs/sigma/sigma-prop.md
           - ErgoTree:
               - dev/scs/ergotree.md
+              - Templates: dev/scs/ergotree/ergotree-templates.md
               - Intro: dev/scs/ergotree/ergotree-intro.md
               - Language: dev/scs/ergotree/ergotree-lang.md
               - Types: dev/scs/ergotree/types.md
@@ -780,28 +771,17 @@ nav:
               - API How-To: dev/stack/api-howto.md
           - Off-Chain Services:
               - dev/oc/off-chain-overview.md
-              - Oracle Core: dev/oc/oracle.md
               - Off-Chain Bots: dev/oc/dex_bots.md
               - Rust Utilities: dev/oc/ergo_utilities.md
-              - Plasma Overview: dev/lib/plasma.md
 
       - Tutorials & Recipes:
           - dev/tutorials.md
           - Fleet SDK Recipes: dev/tutorials/fleet-sdk-recipes.md
           - Chained Transactions: tutorials/chained-tx.md
-          - DeCo: dev/deco.md
-          - Blockchain Indexing:
-              - dev/tutorials/blockchain-indexing.md
-              - Explorer API: dev/tutorials/blockchain-indexing/explorer-apis.md
-              - Node API (Direct): dev/tutorials/blockchain-indexing/node-api-direct.md
-              - Custom Indexer: dev/tutorials/blockchain-indexing/custom-indexer.md
           - Hardware Wallets: dev/tutorials/hardware-wallet-integration.md
           - Sign Transactions:
               - tutorials/sign-tx.md
               - Signature Guide: tutorials/sig.md
-          - Oracle Pool Bootstrap: tutorials/oracle-bootstrap.md
-          - Token Integration Guides: tutorials/token_integration.md
-          - rsERG-LP Tutorial: tutorials/rsERGLP.md
           - Exchange Integration:
               - Guide: dev/integration/guide.md
               - Dust Collection: dev/integration/dust-collection.md
@@ -894,11 +874,7 @@ nav:
           - Prerequisites: eco/rosen/rosen-preq.md
           - Ergo Watcher: eco/rosen/ergo-watcher.md
           - Bitcoin Watcher: eco/rosen/bitcoin-watcher.md
-      - Off-Chain Bots:
-          - Overview: dev/oc/off-chain-overview.md
-          - DEX Bots: dev/oc/dex_bots.md
       - Oracles:
-          - Overview: uses/oracles.md
           - Oracle Core: dev/oc/oracle.md
           - Bootstrap an Oracle Pool: tutorials/oracle-bootstrap.md
       - Blockchain Indexing:

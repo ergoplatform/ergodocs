@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ergoplatform/eips
     branch: master
@@ -17,8 +17,8 @@ Before an ErgoScript contract can be stored in a blockchain, it must be compiled
 
 The obstacle to this optimization is the constants embedded in contracts. A
 
- simple solution to this problem is to avoid embedding constants. Each constant in the body of ErgoTree can be replaced with an indexed placeholder node. Each placeholder has an index of the constant in the constants collection of ErgoTree.
+ simple solution to this problem is to avoid embedding constants. Each constant in the body of ErgoTree can be replaced with an indexed `ConstantIndex` node. Each `ConstantIndex` has an index of the constant in the constants collection of ErgoTree.
 
-The format of serialized ErgoTree thus contains the bytes of a collection with segregated constants and the bytes of script expression with placeholders.
+The format of serialized ErgoTree thus contains the bytes of a collection with segregated constants and the bytes of script expression with constant indexes.
 
 [EIP5 is based on this ErgoTree feature](https://github.com/ergoplatform/eips/blob/master/eip-0005.md)

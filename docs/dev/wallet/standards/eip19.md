@@ -2,7 +2,7 @@
 tags:
   - EIP
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ergoplatform/eips
     branch: master
@@ -41,6 +41,8 @@ source_of_truth:
 
 This EIP defines a standard for cross-device interaction between "Hot" (online)
 and "Cold" (offline) wallets for signing Ergo transactions.
+
+The standard is edited alongside reduced-transaction work in related EIPs, because cold signing depends on sending enough reduced context to the offline device without exposing private keys.
 
 ## Background And Motivation
 

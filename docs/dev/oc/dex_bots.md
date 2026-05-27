@@ -58,7 +58,7 @@ cd ergo-dex-backend
 cp ./config-example.env ./config.env
 ```
 
-The 2 values that need to be changed in the config.env file are the address you want to recieve fees on and the URI to your node (localhost/127.0.0.1 might not be accessible from within a docker container, it is best to use the local lan ip if the node is running on the same host).
+The 2 values that need to be changed in the config.env file are the address you want to receive fees on and the URI to your node (localhost/127.0.0.1 might not be accessible from within a docker container, it is best to use the local lan ip if the node is running on the same host).
 Finally the Docker images need to be build before running them:
 
 ```bash

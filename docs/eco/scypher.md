@@ -1,13 +1,6 @@
 ---
 owner: docs
 last_reviewed: never
-source_repos:
-  - repo: moon-miner/SCypher-web
-    branch: main
-    paths:
-      - technical-documents/Donation%20Implementation%20with%20Nautilus%20Wallet%20on%20Ergo.md
-source_of_truth:
-  - https://github.com/moon-miner/SCypher-web/tree/main/technical-documents/Donation%20Implementation%20with%20Nautilus%20Wallet%20on%20Ergo.md
 ---
 
 # SCypher: Blockchain-Hosted BIP39 Seed Cipher

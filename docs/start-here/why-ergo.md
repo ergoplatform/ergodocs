@@ -2,6 +2,8 @@
 tags:
   - Why Ergo
   - Overview
+ia_status: legacy
+replaced_by: dev/protocol/why.md
 ---
 
 # Why Ergo?

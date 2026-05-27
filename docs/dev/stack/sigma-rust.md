@@ -15,7 +15,7 @@ tags:
   - Ruby
   - Python
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ergonames/sdk
     branch: master
@@ -80,6 +80,13 @@ Compatibility notes:
 - Some historical mainnet trees use pre-v3 or pre-JIT behavior. The log records fixes for cases where the JVM interpreter is more permissive than sigma-rust.
 - The Rust node sync process was used as a differential test source for sigma-rust by comparing behavior against the Scala reference implementation.
 - Tooling using sigma-rust should still treat the Scala node as consensus authority unless a release explicitly states parity for the relevant path.
+
+Library and binding notes:
+
+- `UnsignedBigInt` support has been added to C/Swift bindings.
+- Python bindings track newer `pyo3` for Python 3.14 support.
+- WASM serializes `SigmaBoolean` values as base-16 strings.
+- `ergo-lib` and WASM bindings have moved through newer Rust toolchains and dependency updates; downstream projects should pin compatible package versions rather than assuming every binding release supports the same host toolchain.
 
 ## Crates
 

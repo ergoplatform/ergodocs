@@ -7,13 +7,6 @@ tags:
   - docs-as-code
 owner: docs
 last_reviewed: 2026-05-26
-source_repos:
-  - repo: glasgowm148/ergodocs
-    branch: main
-    paths:
-      - tools/ai_docs_review_prompt.md
-source_of_truth:
-  - https://github.com/glasgowm148/ergodocs/tree/main/tools/ai_docs_review_prompt.md
 ---
 
 # Source Watch

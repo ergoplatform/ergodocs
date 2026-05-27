@@ -3,7 +3,7 @@ tags:
   - ErgoTree
   - Reference Manual
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ross-weir/ergo-script-re
     branch: main
@@ -54,4 +54,4 @@ By evaluating these predicates, ErgoTree authenticates [transactions](transactio
 - [Constant-less lambdas](https://github.com/ScorexFoundation/sigmastate-interpreter/issues/264).
 - [ErgoTree as an Authentication Language](https://www.ergoforum.org/t/ergotree-as-an-authentication-language/).
 - [Human representation for ergo tree #812](https://github.com/ScorexFoundation/sigmastate-interpreter/pull/812).
-- [ErgoTree pseudo-code](https://github.com/ross-weir/ergo-script-re/tree/main/ergotree-pseudo-code): Generates pseudo code for compiled ErgoTrees on a best effort basis.
+- [ErgoTree pseudo-code](https://github.com/ross-weir/ergo-script-re/tree/main/ergotree-pseudo-code): Generates readable pseudo-code for compiled ErgoTrees on a best-effort basis, useful when inspecting deployed scripts.

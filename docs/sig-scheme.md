@@ -2,7 +2,7 @@
 tags:
   - Signature Schemes
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ScorexFoundation/sigmastate-interpreter
     branch: develop
@@ -84,8 +84,8 @@ Schnorr signatures form a core tool in Ergo. The scheme is simple, efficient, an
   val Y: GroupElement = SELF.R4[GroupElement].get
   val message: Coll[Byte] = SELF.R5[Coll[Byte]].get
 
-  val a: GroupElement = getVar.get
-  val zBytes: Coll.get
+  val a: GroupElement = getVar[GroupElement](1).get
+  val zBytes: Coll[Byte] = getVar[Coll[Byte]](2).get
   val z: BigInt = byteArrayToBigInt(zBytes)
 
   val eBytes: Coll[Byte] = blake2b256(a.getEncoded ++ message ++ Y.getEncoded)
@@ -101,6 +101,7 @@ Schnorr signatures form a core tool in Ergo. The scheme is simple, efficient, an
 - Use `blake2b256` for `e` during signing and verification.
 - Keep `z` within 255 bits to satisfy the on-chain `BigInt` limit.
 - Keep byte layouts identical off-chain and on-chain.
+- Rust wallet code precomputes DLog public images in current `sigma-rust`, reducing repeated generator multiplication in signing paths. This is an implementation optimization; it does not change proof format.
 
 For background on the discrete log protocol and Schnorr logic in Scala, see [`DLogProtocol.scala`](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/sigmastate/crypto/DLogProtocol.scala). Rust-side helpers for wallets appear in [`signing.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-lib/src/wallet/signing.rs) and key management appears in [`secret_key.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-lib/src/wallet/secret_key.rs).
 
@@ -170,7 +171,7 @@ import org.ergoplatform.sdk.wallet.secp256k1.{CryptoConstants => CC}
 import special.sigma.GroupElement
 
 def randScalar(): BigInt = {
-  val bytes = new Array
+  val bytes = new Array[Byte](32)
   new SecureRandom().nextBytes(bytes)
   (BigInt(1, bytes) % CC.groupOrder)
 }

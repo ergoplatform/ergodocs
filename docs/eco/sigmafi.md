@@ -8,7 +8,7 @@ tags:
   - dApp
   - dApp-Live
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: capt-nemo429/sigmafi-ui
     branch: main
@@ -25,6 +25,8 @@ source_of_truth:
 SigmaFi enables any Ergo wallet holder to request a loan, specifying the loan amount, term, and interest. The loans are guaranteed by collateral, which the lender can claim if the loan is not repaid by the end of the term. Due to the volatility of cryptocurrencies, loans need to be over-collateralized to get funded. For instance, a loan of 100 SigUSD might require ERG worth 150 SigUSD as collateral.
 
 Each new loan request generates a smart contract that outlines the loan terms. This contract holds the collateral and offers the loan on the SigmaFi website. If a user agrees to the loan terms, they can lend the money via the website. The requester then receives the loan, and the lender is either repaid with interest or claims the collateral.
+
+Current off-chain plugin updates include repayment flow fixes, support for non-SigUSD token lending, open-order UI fees, and HodlERG support.
 
 SigmaFi exemplifies decentralized finance (DeFi), facilitating the creation and funding of loan requests directly between individuals, without the need for banks or other intermediaries.
 

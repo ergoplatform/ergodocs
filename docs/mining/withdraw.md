@@ -35,7 +35,9 @@ As long as you have entered the `pubkeyHex` from your miner into your node, you 
 
 ### Viewing Your Balance and Withdrawing Funds
 
-After initializing your wallet, you may not see the mined coins if the initialization occurred after the corresponding blocks were mined. It's important to note that the node does not scan blocks retrospectively; it only scans new blocks after initialization. To find mined coins in this situation, you need to perform a full blockchain rescan (or launch another node on a different machine or with different ports configured in the `scorex.restApi.bindAddress` and `scorex.network.bindAddress` fields of the config). We recommend using version 3.0.1 for easier configuration.
+After initializing your wallet, you may not see the mined coins if the initialization occurred after the corresponding blocks were mined. The node wallet tracks boxes from the point at which the wallet is initialized or restored; it does not automatically discover older mined rewards without a rescan. To find mined coins in this situation, perform a wallet rescan from a node state that still has the needed block history, or launch another node on a different machine or with different ports configured in `scorex.restApi.bindAddress` and `scorex.network.bindAddress`.
+
+Use the latest reference-node release for rescans and recovery work. Old node versions may have outdated wallet, API, or consensus behavior.
 
 To spend your mining rewards, follow the steps below:
 

@@ -6,7 +6,7 @@ tags:
   - Setup
   - Guide
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -42,6 +42,8 @@ sdk install java 11.0.13.8.1-amzn
 **Hardware**
 
 The minimum hardware requirements are approximately ~20GB of storage for the blockchain and ~8GB of RAM for handling the initial sync. Due to potentially intensive disk I/O during sync, we recommend having at least 4-6GB of RAM available for the node process and using a fast SSD. Running with the `-Xmx4G` flag on the JVM is advised.
+
+Current reference-node configuration advertises the 6.0.x app version. Mainnet protocol settings use protocol version 4 for the 6.0 interpreter feature set.
 ////
 //// details | Modes of operation
     {type: notes, open: true}
@@ -53,6 +55,8 @@ This mode stores the entire blockchain history. To install from scratch, refer t
 /// details | Pruned Full Node
     {type: tip, open: false}
 Bootstrap a [pruned full node](pruned-full-node.md) using a verified [UTXO set snapshot](eutxo.md) and [NiPoPoWs](nipopows.md). This feature allows you to achieve full node security on standard hardware within minutes, eliminating the need to download and validate most of the historical blockchain data.
+
+Recent node fixes also cover wallet cache handling and versioned tree-template handling during node-view processing. If you are upgrading from an older 5.x node, prefer the latest 6.0.x reference release and let the node shut down cleanly before replacing the jar.
 ///
 /// details | Light Full Node
     {type: tip, open: false}

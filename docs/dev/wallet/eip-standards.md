@@ -12,7 +12,7 @@ tags:
   - Security
   - Testing
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ergoplatform/eips
     branch: master
@@ -158,7 +158,7 @@ async function connectWallet() {
 ## Other Relevant EIPs
 
 * **[EIP-0001: Ergo Address Allocation and Encoding](https://github.com/ergoplatform/eips/blob/master/eip-0001.md):** Defines the standard address formats (P2PK, P2S).
-* **[EIP-0003: Deterministic Wallet Standard (BIP32/BIP44)](https://github.com/ergoplatform/eips/blob/master/eip-0003.md):** Defines derivation paths for hierarchical deterministic (HD) wallets.
+* **[EIP-0003: Deterministic Wallet Standard (BIP32/BIP44)](https://github.com/ergoplatform/eips/blob/master/eip-0003.md):** Defines derivation paths for hierarchical deterministic (HD) wallets, including public-key export/import conventions for wallet interoperability.
 * *(Others like EIP-0004 (Assets), EIP-0020 (ErgoPay), EIP-0027 (Asset Linking) may also be relevant depending on dApp functionality).*
 
 ## Example Implementations

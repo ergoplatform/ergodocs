@@ -9,7 +9,7 @@ tags:
   - Off-chain Logic
   - EIP-6
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ergoplatform/eips
     branch: master
@@ -34,8 +34,8 @@ source_of_truth:
 
 The [Ergo Headless dApp Framework (HDF)](https://github.com/ergoplatform/ergo-headless-dapp-framework) is a powerful **Rust framework** designed for developing portable and reusable off-chain logic for Ergo dApps, often referred to as "Headless dApps". It provides developers with the first portable [UTXO](eutxo.md)-based headless dApp development framework on any blockchain.
 
-!!! warning "Testnet Address Limitation"
-    Please be aware that the current version of the Headless dApp Framework [does not support testnet addresses](https://github.com/ergoplatform/ergo-headless-dapp-framework/blob/main/src/encoding.rs#L104). Development and testing should target mainnet address formats.
+!!! note "Address Encoding"
+    The HDF address encoder supports both mainnet and testnet Ergo addresses. Choose the network explicitly when formatting or parsing addresses for development and testing.
 
 ## What Are Headless dApps?
 

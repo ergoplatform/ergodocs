@@ -1,13 +1,13 @@
 ---
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ScorexFoundation/sigmastate-interpreter
     branch: develop
     paths:
-      - interpreter/shared/src/main/scala/sigmastate/Values.scala
+      - core/shared/src/main/scala/sigma/data/SigmaBoolean.scala
 source_of_truth:
-  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/interpreter/shared/src/main/scala/sigmastate/Values.scala
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/core/shared/src/main/scala/sigma/data/SigmaBoolean.scala
 ---
 
 # SigmaBoolean
@@ -36,7 +36,7 @@ In Ergo, a node class represents a specific type or category of nodes within the
 
 By strategically combining and arranging these node classes, developers can construct intricate proposition trees that define the conditions and requirements for validating Ergo transactions. To determine the `size` of the proposition tree, developers can use the size method, which counts the number of nodes in the tree. This count provides an estimate of the tree's complexity or magnitude.
 
-For the complete code, refer to [Values.scala](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/sigmastate/Values.scala#L745).
+For the current code, refer to [SigmaBoolean.scala](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/core/shared/src/main/scala/sigma/data/SigmaBoolean.scala).
 
 ## Serializing SigmaBoolean from a P2PK Address
 

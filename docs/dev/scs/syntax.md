@@ -3,7 +3,7 @@ tags:
   - Syntax
   - ErgoScript
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: DeCo-Education/ErgoScript-Developer-Course
     branch: main
@@ -50,6 +50,7 @@ ErgoScript’s syntax is derived from Scala, but you don’t need to be a Scala 
 - **Functional Programming**: ErgoScript supports functional programming constructs such as `foreach`, `exists`, and `fold`, making it easier to work with collections. More details on these can be found in the [ErgoScript Compiler Documentation](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/ergoscript-compiler.md).
 - **Boolean Predicates**: ErgoScript programs, like ErgoTree, consist of sequences of boolean predicates connected using `&&` (AND) and `||` (OR).
 - **Cryptographic Operations**: ErgoScript supports cryptographic operations with `BigInt` and `GroupElement` types, allowing for addition, multiplication, and exponentiation. Note that `BigInt` operations in ErgoScript are performed modulo `2^256`, so overflow management is crucial.
+- **6.0 Features**: Methods added for the 6.0 interpreter and the `UnsignedBigInt` type are only valid in ErgoTrees with version 3 or later. For older trees, keep to the pre-6.0 method set.
 
 ### Example: Basic ErgoScript Syntax
 
@@ -137,6 +138,8 @@ In this example:
 - **`map` Function**: Applies a transformation to each element in the collection using a lambda expression, converting each `Int` to a `Long`.
 
 For more details on collections and functional programming in ErgoScript, refer to the [Colls.scala](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/core/shared/src/main/scala/sigma/Colls.scala) file.
+
+Current collection methods include `map`, `zip`, `exists`, `forall`, `filter`, `fold`, `indices`, `flatMap`, `patch`, `updated`, `updateMany`, `slice`, `append`, `startsWith`, and `endsWith`. The runtime also exposes set-like helpers such as `unionSet`, `diff`, `intersect`, and `distinct` in the collection implementation.
 
 ## Additional Resources
 

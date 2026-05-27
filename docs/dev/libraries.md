@@ -5,7 +5,7 @@ tags:
   - SDKs
   - Bindings
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ergoplatform/sigma-rust
     branch: develop
@@ -50,7 +50,8 @@ Sigma-Rust provides bindings for various languages, allowing developers to lever
 - 🥇 **[ergo-lib-wasm](https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-wasm)**: WASM bindings for JavaScript/TypeScript (Browser & Node.js). [NPM (Browser)](https://www.npmjs.com/package/ergo-lib-wasm-browser) | [NPM (NodeJS)](https://www.npmjs.com/package/ergo-lib-wasm-nodejs) [`JS/TS`, `Rust`]
 - [ergo-lib-jni](https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-jni): JNI bindings for JVM languages (Java, Scala, Kotlin). [Docs](https://docs.rs/ergo-lib-jni/) [`Java`, `Rust`]
 - 🥇 **[ergo-lib-python](https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-python)**: Python bindings. [PyPI](https://pypi.org/project/ergo-lib/) [`Python`, `Rust`]
-- *Note: Bindings for C and Go also exist.*
+- [ergo-lib-c](https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-c): C bindings, also used for Swift/iOS integration work. Recent binding updates include `UnsignedBigInt` support. [`C`, `Swift`, `Rust`]
+- *Note: Go bindings also exist.*
 
 ## Specific Library Documentation
 

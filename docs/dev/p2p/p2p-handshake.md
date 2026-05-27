@@ -2,7 +2,7 @@
 tags:
   - P2P
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: Satergo/Ergonnection
     branch: master
@@ -77,8 +77,10 @@ The table below outlines the format of a handshake message:
 ### Notes
 
 1. For the testnet, magic bytes are `[2, 0, 0, 1]` (in decimal). For mainnet, `[1, 0, 2, 4]` (in decimal).
+   Implementations should check these bytes before accepting a message from the socket; Ergonnection's socket handling was updated to reject incorrect magic bytes and to use the corrected testnet magic.
 2. For IPv4 or IPv6 address bytes, "The result is in network byte order: the highest order byte of the address is in `getAddress()[0]`." Please check `Inet4Address.getAddress()` or `Inet6Address.getAddress()` in Java's JDK for details.
 3. For the reference client, the session ID is currently used only to avoid connections to self.
+4. Variable-length integers in P2P records use VLQ encoding. When implementing a client, read and write these values consistently for peer records, feature lengths, and protocol messages.
 
 **Example Implementation**:  
 

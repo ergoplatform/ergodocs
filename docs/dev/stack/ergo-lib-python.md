@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ergoplatform/sigma-rust
     branch: develop
@@ -22,6 +22,12 @@ This library equips developers with tools to:
 * Generate cryptographic keys and [wallet addresses](../wallet/address.md).
 * Sign transactions securely.
 * Utilize various Ergo-specific data types and chain structures.
+
+Recent binding updates track current `sigma-rust` internals:
+
+* Python 3.14 support is enabled through newer `pyo3`.
+* Header `nBits` uses an unsigned 32-bit representation.
+* Dlog public images are precomputed in wallet key paths, reducing repeated elliptic-curve work when signing or deriving public images.
 
 ## Installation
 

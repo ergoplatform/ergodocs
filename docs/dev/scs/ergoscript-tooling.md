@@ -3,12 +3,12 @@ tags:
   - ErgoScript
   - Tooling
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: Emurgo/Emurgo-Research
     branch: master
     paths:
-      - smart-contracts/High%20Level%20Design%20Patterns%20In%20Extended%20UTXO%20Systems.md
+      - smart-contracts/High Level Design Patterns In Extended UTXO Systems.md
   - repo: ScorexFoundation/sigmastate-interpreter
     branch: develop
     paths:

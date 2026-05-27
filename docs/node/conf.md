@@ -6,7 +6,7 @@ tags:
   - application.conf
   - testnet.conf
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -119,6 +119,10 @@ Use the `mining` parameter (previously `enable`) to enable or disable block gene
 A node with `offlineGeneration = false` (default) will only attempt mining once it is fully synchronized and connected to the network. Setting `offlineGeneration = true` allows the node to mine blocks even when offline or not fully synced (useful for testing or private networks).
 
 You can adjust your node's mining delay after discovering a new block using the `miningDelay` parameter (in milliseconds).
+
+The default `blockCandidateGenerationInterval` is `60s`, so mining nodes regenerate block candidates about once per minute unless configured otherwise.
+
+The default reference client configuration currently advertises network `appVersion = 6.0.2`. Mainnet chain settings use `protocolVersion = 4`, which corresponds to the 6.0 interpreter feature set.
 
 ### REST API Settings
 

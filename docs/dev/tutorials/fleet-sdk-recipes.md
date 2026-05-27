@@ -16,14 +16,14 @@ tags:
   - compiler
   - troubleshooting
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ScorexFoundation/sigmastate-interpreter
     branch: develop
     paths:
-      - sigmastate/src/main/scala/sigmastate/serialization/TypeSerializer.scala
+      - core/shared/src/main/scala/sigma/serialization/TypeSerializer.scala
 source_of_truth:
-  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/sigmastate/src/main/scala/sigmastate/serialization/TypeSerializer.scala
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/core/shared/src/main/scala/sigma/serialization/TypeSerializer.scala
 ---
 
 # Fleet SDK Recipes

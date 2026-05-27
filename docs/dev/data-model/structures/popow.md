@@ -1,16 +1,16 @@
 ---
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
     paths:
       - ergo-core/src/main/scala/org/ergoplatform/modifiers/history/extension/Extension.scala
-      - ergo-core/src/main/scala/org/ergoplatform/modifiers/history/popow/InterlinkVector.scala
+      - ergo-core/src/main/scala/org/ergoplatform/modifiers/history/popow/NipopowAlgos.scala
       - ergo-core/src/main/scala/org/ergoplatform/modifiers/history/popow/NipopowProof.scala
 source_of_truth:
   - https://github.com/ergoplatform/ergo/tree/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/history/extension/Extension.scala
-  - https://github.com/ergoplatform/ergo/tree/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/history/popow/InterlinkVector.scala
+  - https://github.com/ergoplatform/ergo/tree/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/history/popow/NipopowAlgos.scala
   - https://github.com/ergoplatform/ergo/tree/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/history/popow/NipopowProof.scala
 ---
 
@@ -26,11 +26,13 @@ The PoPow protocol is built on top of several key data structures that facilitat
 
 The PoPow protocol relies on a combination of interlink vectors, NiPoPoW proofs, and Merkle trees to achieve its goals. Each of these data structures plays a specific role in enabling efficient verification of the blockchain's integrity.
 
+Current node code keeps PoPoW proof types and algorithms inside `ergo-core`, including `NipopowProof.scala` and `NipopowAlgos.scala`. This keeps proof construction and verification close to the core block-section and extension-section types used by the node.
+
 1. [**Interlink Vectors**](interlink-vectors.md):
       - **Purpose**: Interlink vectors store references to previous block headers at different difficulty levels. They allow lightweight clients to verify the blockchain's integrity by checking only a subset of blocks, rather than the entire chain.
       - **Structure**: An interlink vector is an array where each element points to a previous block header. The level of each element is determined by the number of leading zeros in the block's hash, corresponding to the difficulty level of that block.
       - **Usage**: Interlink vectors are updated as new blocks are added to the blockchain, ensuring that the latest blocks are always accessible for verification. They are particularly useful in scenarios where quick and efficient chain validation is needed.
-      - **Code Reference**: [InterlinkVector.scala](https://github.com/ergoplatform/ergo/blob/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/history/popow/InterlinkVector.scala)
+      - **Code Reference**: [NipopowAlgos.scala](https://github.com/ergoplatform/ergo/blob/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/history/popow/NipopowAlgos.scala)
 
 2. [**NiPoPoW (Non-Interactive Proof of Proof-of-Work) Proofs**](nipopows.md):
       - **Purpose**: NiPoPoW proofs allow a lightweight client to verify that a given chain is the correct one (i.e., the chain with the most cumulative work) without interacting with the blockchain network.

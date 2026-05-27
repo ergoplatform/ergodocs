@@ -6,13 +6,13 @@ tags:
   - dApp
   - dApp-Inactive
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: DeCo-Education/DeCo-Homeworks
     branch: main
     paths:
-      - ErgoScript-Developer-Course/batch-0/team-tensile/future%20contract/future-contract-v2.ergo
-      - ErgoScript-Developer-Course/batch-0/team-tensile/future%20contract/hw3-future-contract-code-v1.md
+      - ErgoScript-Developer-Course/batch-0/team-tensile/future contract/future-contract-v2.ergo
+      - ErgoScript-Developer-Course/batch-0/team-tensile/future contract/hw3-future-contract-code-v1.md
 source_of_truth:
   - https://github.com/DeCo-Education/DeCo-Homeworks/tree/main/ErgoScript-Developer-Course/batch-0/team-tensile/future%20contract/future-contract-v2.ergo
   - https://github.com/DeCo-Education/DeCo-Homeworks/tree/main/ErgoScript-Developer-Course/batch-0/team-tensile/future%20contract/hw3-future-contract-code-v1.md

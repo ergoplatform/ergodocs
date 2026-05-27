@@ -3,19 +3,14 @@ tags:
   - JavaScript
   - dApp Development
 owner: docs
-last_reviewed: never
-source_repos:
-  - repo: Emurgo/yoroi-frontend
-    branch: develop
-    paths:
-      - packages/yoroi-connector/example-ergo
-source_of_truth:
-  - https://github.com/Emurgo/yoroi-frontend/tree/develop/packages/yoroi-connector/example-ergo
+last_reviewed: 2026-05-26
 ---
 
 # dApp Connector
 
 [Fleet](fleet.md) lets you easily create Ergo transactions with a pure JS library. There is also [NightOwl dApp Connector](https://github.com/nightowlcasino/dApp-connector-react-package) React package and accompanying [video tutorial](https://twitter.com/NightOwlCasino/status/1529452399475179520).
+
+Yoroi removed its Ergo dApp connector example from the active frontend tree, so treat older Yoroi example links as historical reference. For current dApp work, prefer maintained connector implementations used by active Ergo wallets.
 
 <!--Specifically with Nautilus, to avoid conflicts, you can call `ergoConnector.nautilus.connect()` in place of `window.ergo_request_read_access()` and `ergoConnector.nautilus.isConnected()` in place of `window.ergo_check_read_access()`-->
 

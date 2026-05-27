@@ -1,15 +1,15 @@
 ---
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ScorexFoundation/sigmastate-interpreter
     branch: develop
     paths:
-      - sc/src/test/scala/sigmastate/utxo/examples
-      - sc/src/test/scala/sigmastate/utxo/examples/CoopExampleSpecification.scala
+      - sc/shared/src/test/scala/sigmastate/utxo/examples
+      - sc/shared/src/test/scala/sigmastate/utxo/examples/CoopExampleSpecification.scala
 source_of_truth:
-  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/sc/src/test/scala/sigmastate/utxo/examples
-  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/sc/src/test/scala/sigmastate/utxo/examples/CoopExampleSpecification.scala
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/sc/shared/src/test/scala/sigmastate/utxo/examples
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/sc/shared/src/test/scala/sigmastate/utxo/examples/CoopExampleSpecification.scala
 ---
 
 

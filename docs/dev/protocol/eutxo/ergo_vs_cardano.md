@@ -1,13 +1,13 @@
 ---
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ScorexFoundation/sigmastate-interpreter
     branch: develop
     paths:
-      - sdk/shared/src/main/scala/org/ergoplatform/sdk/wallet/protocol/context/ErgoLikeStateContext.scala
+      - sdk/shared/src/main/scala/org/ergoplatform/sdk/wallet/protocol/context/BlockchainStateContext.scala
 source_of_truth:
-  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/sdk/shared/src/main/scala/org/ergoplatform/sdk/wallet/protocol/context/ErgoLikeStateContext.scala
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/sdk/shared/src/main/scala/org/ergoplatform/sdk/wallet/protocol/context/BlockchainStateContext.scala
 ---
 
 

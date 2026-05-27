@@ -34,6 +34,12 @@ source_of_truth:
 
 [ChainCash](https://github.com/ChainCashLabs) is a decentralized monetary system that enables flexible money creation by combining trust and blockchain-backed assets. It operates on the Ergo blockchain, allowing users to create and manage digital currency securely, adaptably, and transparently.
 
+/// admonition | Implementation status
+    type: warning
+
+ChainCash is active research and prototype software, not a finished wallet-native payment rail. Contracts, Basis logic, refund handling, and server APIs have changed frequently in 2026. Treat this page as architectural context, verify all details against the linked repositories, and avoid assuming normal wallet support for paths that still require raw Schnorr signatures.
+///
+
 Traditional financial systems often suffer from centralization, high costs, and limited access, while cryptocurrencies like Bitcoin face price volatility and inelastic supply. ChainCash addresses these issues by introducing an elastic money supply system that adjusts to economic conditions through a combination of trust and blockchain reserves, ensuring a stable, decentralized, and efficient financial ecosystem.
 
 This article explains ChainCash's functionality, explores practical applications, and provides links to technical documentation for deeper insights. For more detailed information, refer to the [ChainCash whitepaper](https://github.com/ChainCashLabs/chaincash/blob/master/docs/whitepaper/chaincash.pdf) or the [ChainCash server documentation](https://github.com/ChainCashLabs/chaincash/blob/master/docs/server.md).

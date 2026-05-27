@@ -1,3 +1,19 @@
+---
+owner: docs
+last_reviewed: 2026-05-26
+source_repos:
+  - repo: ergoplatform/ergo
+    branch: master
+    paths:
+      - src/main/scala/org/ergoplatform/nodeView/history/extra/ExtraIndexer.scala
+      - src/main/scala/org/ergoplatform/nodeView/history/extra/IndexedContractTemplate.scala
+      - src/main/resources/application.conf
+source_of_truth:
+  - https://github.com/ergoplatform/ergo/tree/master/src/main/scala/org/ergoplatform/nodeView/history/extra/ExtraIndexer.scala
+  - https://github.com/ergoplatform/ergo/tree/master/src/main/scala/org/ergoplatform/nodeView/history/extra/IndexedContractTemplate.scala
+  - https://github.com/ergoplatform/ergo/tree/master/src/main/resources/application.conf
+---
+
 # Node Configuration
 
 The `node{}` configuration section specifies general settings for the node view holder regime. It includes parameters for state type, extra index, block and transaction verification, mining configuration, memory pool management, and more.
@@ -17,7 +33,9 @@ extraIndex = false
 extraCacheSize = 500
 ```
 
-The `extraIndex` setting, if set to true, allows the node to store all transactions, boxes, and addresses in an index. `extraCacheSize` sets the number of recently used extra indexes kept in memory.
+The `extraIndex` setting, if set to true, allows the node to store all transactions, boxes, addresses, and contract-template indexes used by indexed API routes. `extraCacheSize` sets the number of recently used extra indexes kept in memory.
+
+Contract-template indexing hashes `ErgoTree.template` under the current version context. If an older or unversioned tree cannot expose a template, the node logs the failure and falls back to hashing the full ErgoTree bytes so indexing can continue instead of failing the extra indexer.
 
 ## Verify Transactions
 

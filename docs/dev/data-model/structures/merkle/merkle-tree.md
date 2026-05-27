@@ -4,7 +4,7 @@ tags:
   - Data Structures
   - Cryptography
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -22,7 +22,7 @@ source_of_truth:
 
 ## Overview
 
-**Merkle Trees** are a fundamental [data structure](data-structures.md) in the Ergo blockchain, ensuring the integrity and authenticity of data. They play a crucial role in various blockchain operations, from verifying [transactions](transactions.md) within [blocks](block.md) to securing additional metadata in the [Extension Block](extension-section.md). While similar to the Merkle Tree implementation in Bitcoin—where trees are constructed for block transactions and transaction witnesses (introduced with [SegWit](https://en.bitcoin.it/wiki/Segregated_Witness))—Ergo extends this concept by combining transactions and their corresponding [spending proofs](signing.md) into a single Merkle Tree.
+**Merkle Trees** are a fundamental [data structure](data-structures.md) in the Ergo blockchain, ensuring the integrity and authenticity of data. They play a crucial role in various blockchain operations, from verifying [transactions](transactions.md) within [blocks](block.md) to securing additional metadata in the [Extension Block](extension-section.md). For current non-initial block versions, Ergo commits to both transaction IDs and witness IDs in the transaction Merkle tree, so the block header root covers transaction bodies and their [spending proofs](signing.md).
 
 The Merkle Tree format in Ergo follows a specific structure and encoding scheme that is essential for developers working with Merkle proofs and validating data inclusion. For detailed information on the Merkle Tree format, leaf nodes, internal nodes, and the process of validating Merkle proofs, refer to the [Merkle Tree Format](merkle-format.md) and [Merkle Tree Validation](merkle-validation.md) sections.
 
@@ -37,7 +37,7 @@ The Merkle Tree format in Ergo follows a specific structure and encoding scheme 
 
 ### Transaction Merkle Tree
 
-The [Transaction Merkle Tree](tx-merkle.md) is a core component of Ergo, combining all transactions and their corresponding spending proofs into a single Merkle Tree. This structure provides a cryptographic guarantee that the transaction data has not been tampered with, playing a critical role in the [Proof-of-Work (PoW)](autolykos.md) mechanism. The Merkle Root, derived from this tree, is included in the [block header](block-header.md), ensuring that any change to a transaction within the block results in a different Merkle Root.
+The [Transaction Merkle Tree](tx-merkle.md) is a core component of Ergo. In the initial block version, it is built from transaction IDs. In later versions, it is built from transaction IDs followed by witness IDs, where witness IDs commit to serialized spending proofs. This provides a cryptographic guarantee that transaction data and authorization proofs have not been tampered with. The Merkle Root is included in the [block header](block-header.md), ensuring that any change to a committed transaction or proof changes the root.
 
 **Code Reference**: The implementation can be found in the [BlockTransactions.scala](https://github.com/ergoplatform/ergo/blob/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/history/BlockTransactions.scala) file.
 

@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: fleet-sdk/fleet
     branch: master
@@ -13,6 +13,8 @@ source_of_truth:
 # Address validation
 
 [ergo-simple-addresses](https://github.com/kushti/ergo-simple-addresses) contains few zero-dependencies Java-friendly utils for working with addresses. The [Integration Guide for Exchanges](guide.md) may also be relevant. There is also a simple method in [Fleet](https://github.com/fleet-sdk/fleet/blob/master/packages/core/src/models/ergoAddress.ts#L164).
+
+Fleet's address model is still the practical TypeScript reference for validating network prefix, address type, checksum, and encoded payload. Use network-aware validation when accepting deposits so a valid testnet address is not accepted for mainnet withdrawals.
 
 - **P2S** has no limit since it is the serialized script.
 - **P2SH** is 192 bits since it is the "first 192 bits of the Blake2b256 hash of serialized script bytes."

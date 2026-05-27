@@ -6,14 +6,14 @@ tags:
   - NIZK
   - Sigma Protocols
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ScorexFoundation/sigmastate-interpreter
-    branch: master
+    branch: develop
     paths:
-      - src/test/scala/sigmastate/utxo/examples/Rule110Specification.scala
+      - sc/shared/src/test/scala/sigmastate/utxo/examples/Rule110Specification.scala
 source_of_truth:
-  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/master/src/test/scala/sigmastate/utxo/examples/Rule110Specification.scala
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/sc/shared/src/test/scala/sigmastate/utxo/examples/Rule110Specification.scala
 ---
 
 $$

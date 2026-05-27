@@ -2,7 +2,7 @@
 tags:
   - Sigma Protocols
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ScorexFoundation/sigmastate-interpreter
     branch: develop
@@ -48,6 +48,8 @@ This document provides an in-depth look at the cryptographic schemes, protocols,
 ## Overview
 
 Ergo’s cryptographic toolkit is built around **composable Sigma protocols**, which allow for flexible, secure, and efficient proofs of knowledge and cryptographic operations within its smart contract framework. These Sigma protocols are the foundation of Ergo’s cryptographic security, and they enable privacy-preserving applications like multi-signature wallets, ring signatures, and threshold signatures.
+
+The `sigmastate-interpreter` codebase now separates more core Sigma data and AST code into shared modules under the `sigma` package. This is an internal organization change; the on-chain semantics of Sigma propositions remain defined by ErgoTree serialization and interpreter versioning.
 
 ### Cryptographic Toolkit
 

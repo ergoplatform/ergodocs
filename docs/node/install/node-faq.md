@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -46,6 +46,8 @@ sdk install java 11.0.13.8.1-amzn
 The only hardware requirements are ~20GB of storage for the blockchain and ~8GB of RAM for handling the sync. The node utilizes Java, so it should work across all operating systems. You can even run it on a [Raspberry Pi](pi.md).
 
 > Note: Due to the intensive disk I/O, we recommend having 4-6GB of RAM with a fast SSD, running with the `-Xmx4G` flag on JVM9/11.
+
+For current 6.0.x reference-node releases, mainnet protocol settings use protocol version 4. Use the latest release jar when syncing or upgrading, especially if your node relies on wallet cache or pruned-node features.
 
 ## Running the Node
 

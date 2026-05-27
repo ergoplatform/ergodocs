@@ -3,7 +3,7 @@ tags:
   - Forking
   - Fork
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -36,7 +36,7 @@ The implementation of a hard fork in Ergo follows these general steps:
 1. **Development and Testing:**
     - New protocol rules are developed and rigorously tested in a controlled environment, typically a testnet or developer network. This is crucial to ensure that all changes work as intended and do not introduce new issues.
 
-    - The [`ForkResolutionSpec`](https://github.com/ergoplatform/ergo/blob/master/src/it/scala/org/ergoplatform/it/ForkResolutionSpec.scala) file, found in the [Ergo GitHub repository](https://github.com/ergoplatform/ergo), is an example of how forks are tested. This file contains integration tests designed to validate the behavior of the network during and after the fork, ensuring that the nodes correctly resolve different chain forks and eventually converge on a single valid chain.
+    - The [`ForkResolutionSpec`](https://github.com/ergoplatform/ergo/blob/master/src/it/scala/org/ergoplatform/it/ForkResolutionSpec.scala) file, found in the [Ergo GitHub repository](https://github.com/ergoplatform/ergo), is an example of how forks are tested. This file contains integration tests designed to validate the behavior of the network during and after divergent mining, ensuring that nodes correctly resolve competing chains and eventually converge on a single valid chain.
 
    ```scala
    it should "Fork resolution after isolated mining" in {
@@ -47,7 +47,7 @@ The implementation of a hard fork in Ergo follows these general steps:
 2. **Coordination with the Network:**
    - Developers coordinate with miners, node operators, and the broader community to schedule the fork. Communication is crucial, as all participants need to update their software to the new version by a certain block height or date.
 
-   - The node configuration files, such as `nodes.conf`, play a significant role in setting up the environment for the fork. This file specifies the settings for different nodes in the network and ensures that they are all synchronized and ready for the protocol change.
+   - Node configuration files used by integration tests play a significant role in setting up the environment for fork-resolution scenarios. They specify settings for different nodes in the network and ensure that the nodes can be isolated, mined independently, and reconnected for convergence testing.
 
    ```hocon
    nodes = [

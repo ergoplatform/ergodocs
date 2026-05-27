@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ScorexFoundation/sigmastate-interpreter
     branch: develop
@@ -13,11 +13,11 @@ source_repos:
   - repo: kushti/chaincash
     branch: master
     paths:
-      - src/test/scala/kiosk/ChainCashSpec.scala
+      - src/test/scala/chaincash/ChainCashSpec.scala
 source_of_truth:
   - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/docs/sigma-dsl.md
   - https://github.com/ergoplatform/ergo-jde/tree/main/kiosk/src/test/scala/kiosk/schnorr/SchnorrSpec.scala
-  - https://github.com/kushti/chaincash/tree/master/src/test/scala/kiosk/ChainCashSpec.scala
+  - https://github.com/kushti/chaincash/tree/master/src/test/scala/chaincash/ChainCashSpec.scala
 ---
 
 # Schnorr Signatures

@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ergoplatform/eips
     branch: master
@@ -17,6 +17,8 @@ Babel fees (introduced via [EIP-0031](https://github.com/ergoplatform/eips/blob/
 /// details | How Babel Fees Work on Ergo
     {type: info, open: false}
 On Ergo, Babel fee payments are facilitated through pre-defined Babel Fee pools, offering a predictable and transparent fee payment process. This system differs from Cardano's approach, where users broadcast incomplete transactions and wait for a third party to pay fees in ADA in exchange for the offered tokens.
+
+EIP-31 defines the protocol-level contract template and expected box shape used by these pools, so implementations can validate Babel Fee boxes before using them in a transaction.
 
 Here's how Babel fees work:
 

@@ -10,14 +10,14 @@ tags:
   - executeFromVar
   - Merkle Proof
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ergoplatform/sigmastate-interpreter
     branch: develop
     paths:
-      - sigmastate/src/test/scala/sigmastate/utxo/examples/MASTExampleSpecification.scala
+      - sc/shared/src/test/scala/sigmastate/utxo/examples/MASTExampleSpecification.scala
 source_of_truth:
-  - https://github.com/ergoplatform/sigmastate-interpreter/tree/develop/sigmastate/src/test/scala/sigmastate/utxo/examples/MASTExampleSpecification.scala
+  - https://github.com/ergoplatform/sigmastate-interpreter/tree/develop/sc/shared/src/test/scala/sigmastate/utxo/examples/MASTExampleSpecification.scala
 ---
 # Tutorial: Merkleized Abstract Syntax Trees (MAST) in Ergo
 

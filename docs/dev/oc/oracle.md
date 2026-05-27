@@ -4,7 +4,7 @@ tags:
   - Oracles
   - Off-chain
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ergoplatform/oracle-core
     branch: develop

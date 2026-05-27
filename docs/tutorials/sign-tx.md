@@ -8,7 +8,7 @@ tags:
   - Tutorial
   - Guide
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ergoplatform/sigma-rust
     branch: develop
@@ -51,6 +51,8 @@ const signedTx = wallet.sign(unsignedTx);
 // The signed transaction can now be submitted to the mempool.
 
 ```
+
+Current `ergo-lib-wasm` versions keep `SigmaBoolean` JSON serialization as base-16 strings and track newer Rust dependency/toolchain updates. Pin the same package version in backend signing services and browser clients when serialized ErgoTree or SigmaBoolean values cross that boundary.
 
 ### Off-Chain Bot
 

@@ -1,17 +1,17 @@
 ---
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ScorexFoundation/sigmastate-interpreter
     branch: develop
     paths:
       - docs/LangSpec.md
-      - interpreter/shared/src/main/scala/sigmastate/Values.scala
+      - data/shared/src/main/scala/sigma/ast/values.scala
       - interpreter/shared/src/main/scala/sigmastate/interpreter/Interpreter.scala
       - interpreter/shared/src/main/scala/sigmastate/interpreter/ProverInterpreter.scala
 source_of_truth:
   - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/docs/LangSpec.md
-  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/interpreter/shared/src/main/scala/sigmastate/Values.scala
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/data/shared/src/main/scala/sigma/ast/values.scala
   - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/interpreter/shared/src/main/scala/sigmastate/interpreter/Interpreter.scala
   - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/interpreter/shared/src/main/scala/sigmastate/interpreter/ProverInterpreter.scala
 ---

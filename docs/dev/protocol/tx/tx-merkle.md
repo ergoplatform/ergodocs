@@ -2,7 +2,7 @@
 tags:
   - Merkle
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -30,18 +30,20 @@ The Merkle Tree format in Ergo follows a specific structure and encoding scheme 
 
 ### **Leaf Node Structure**
 
-In the Transaction Merkle Tree, each leaf node represents a transaction and its associated spending proofs. This combined approach ensures that both the transaction data and the corresponding authorization proofs are securely hashed into the tree.
+In current Ergo node code, the transaction root is version-dependent:
 
-- **Data Block**: Each leaf can either be empty or contain a data block of 64 bytes. This data block consists of:
-  - **Transaction Identifier (txId)**: A 256-bit hash (32 bytes) of the transaction's contents, excluding spending proofs.
-  - **Spending Proofs Digest**: A 256-bit hash (32 bytes) representing the combined spending proofs for the transaction.
-- **Leaf Construction**: The leaf for the `i`-th transaction in the block is constructed as:
+- For the initial block version, the tree is built from transaction IDs only.
+- For later block versions, the tree is built from transaction IDs followed by witness IDs, where each witness ID commits to the serialized spending proofs.
+
+This means newer blocks commit to both transaction bodies and authorization proofs in the same transaction root, but the implementation stores them as separate 32-byte leaves rather than one paired 64-byte leaf per transaction.
+
+Each leaf is constructed as:
 
   ```
   hash(0 || pos || data)
   ```
 
-  where `pos` is the position of the transaction in the block, and `data` is the 64-byte data block. A prefix of `0` is used for domain separation.
+  where `pos` is the position of the leaf in the tree and `data` is a 32-byte transaction ID or witness ID. A prefix of `0` is used for domain separation.
 
 ### **Internal Node Structure**
 
@@ -64,6 +66,8 @@ The Merkle Root is derived by recursively hashing the tree from the leaf nodes u
 The core implementation of the Transaction Merkle Tree can be found in the Ergo codebase:
 
 - **[BlockTransactions.scala](https://github.com/ergoplatform/ergo/blob/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/history/BlockTransactions.scala)**: This file contains the logic for constructing the Transaction Merkle Tree, including the methods to calculate the Merkle Root and verify transactions within a block.
+
+`BlockTransactions` serialization is also version-aware. For block versions greater than 1, the serializer writes a version marker as `10,000,000 + blockVersion` before the transaction count, so older records without that marker can still be read without a database rescan. From protocol version 6.0 onward, transaction parsing and serialization run inside the matching `VersionContext`.
 
 ## Inclusion in Block Header
 

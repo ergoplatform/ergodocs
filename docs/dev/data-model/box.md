@@ -5,18 +5,18 @@ tags:
   - UTXO
   - eUTXO
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ScorexFoundation/sigmastate-interpreter
     branch: develop
     paths:
       - docs/LangSpec.md
-      - interpreter/shared/src/main/scala/org/ergoplatform/ErgoBox.scala
-      - interpreter/shared/src/main/scala/org/ergoplatform/ErgoBoxCandidate.scala
+      - data/shared/src/main/scala/org/ergoplatform/ErgoBox.scala
+      - data/shared/src/main/scala/org/ergoplatform/ErgoBoxCandidate.scala
 source_of_truth:
   - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/docs/LangSpec.md
-  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/interpreter/shared/src/main/scala/org/ergoplatform/ErgoBox.scala
-  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/interpreter/shared/src/main/scala/org/ergoplatform/ErgoBoxCandidate.scala
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/data/shared/src/main/scala/org/ergoplatform/ErgoBox.scala
+  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/data/shared/src/main/scala/org/ergoplatform/ErgoBoxCandidate.scala
 ---
 
 # The Ergo 'Box' model
@@ -40,6 +40,8 @@ The term 'box' in Ergo's context captures the idea that these entities are like 
 - Boxes are integral to the Ergo [protocol](protocol-overview.md). The active box set (UTXO set) is authenticated through a [hash-based data structure](merkle-tree-structures.md), facilitating the development of [lightweight full nodes](light-full-node.md), as detailed in [this paper](https://eprint.iacr.org/2016/994).
 - A box can hold up to six additional [registers](registers.md) (R4-R9) with typed data, accessible by the script.
 - Transactions consist of both *input* and *output* boxes.
+
+In ErgoScript, core box fields are exposed as methods: `id`, `propositionBytes`, `bytes`, `bytesWithoutRef`, `value`, `creationInfo`, and `tokens`. Optional registers are accessed with typed getters such as `SELF.R4[Int]` or `SELF.R5[Coll[Byte]]`; scripts should handle the `Option` result explicitly instead of assuming the register exists.
 
 ## An example box
 

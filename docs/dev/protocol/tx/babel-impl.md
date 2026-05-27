@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ergoplatform/eips
     branch: master
@@ -15,6 +15,8 @@ source_of_truth:
 ## Overview
 
 This guide provides detailed instructions for implementing Babel fees in your Ergo applications. The implementation example demonstrates how to enable users to pay transaction fees using tokens instead of ERG, which is particularly useful for new users who may not have ERG in their wallets.
+
+Use EIP-31 as the canonical reference for the Babel Fee contract template and validation rules. The application code should treat a Babel Box as an on-chain liquidity source only after checking that its script and registers match the expected protocol shape.
 
 ## Prerequisites
 

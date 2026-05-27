@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ergoplatform/eips
     branch: master
@@ -160,15 +160,15 @@ json with the following content:
       - messageSeverity: String (optional) "INFORMATION", "WARNING", "ERROR"
 
 
-      - replyToUrl: String (optional)
+      - replyTo: String (optional)
 
 Model classes like “ErgoPay for ErgoPay are already defined to be used in Spring projects in another dependency that we can pull in by adding it to our build.gradle.kts file:
 
 ```
-    implementation ("com.github.MrStahlfelge:ergoplatform-jackson:4.0.10")
+    implementation ("com.github.MrStahlfelge:ergoplatform-jackson:4.0.11")
 ```
 
-The json should be served on an own http endpoint, so we add the ErgoPay endpoint to our SendFundsAppController class:
+The JSON should be served on its own HTTP endpoint, so we add the ErgoPay endpoint to our SendFundsAppController class:
 
 ```
 @GetMapping("/sendFunds/{sender}/{recipient}/{amount}")

@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: duckpools/off-chain-bot
     branch: optionPools
@@ -10,10 +10,6 @@ source_repos:
 source_of_truth:
   - https://github.com/duckpools/off-chain-bot/tree/optionPools/optionPools
   - https://github.com/duckpools/off-chain-bot/tree/optionPools/optionPools/contracts
----
-
-
----
 tags:
   - OptionPools
   - Options Trading
@@ -52,6 +48,8 @@ The OptionPools submission for the ErgoHack event consists of a comprehensive su
 
 OptionPools includes specific contracts for managing the AMM, options logic, repayments, and proxy interactions. These contracts can be found in the following repository: [https://github.com/duckpools/off-chain-bot/tree/optionPools/optionPools/contracts](https://github.com/duckpools/off-chain-bot/tree/optionPools/optionPools/contracts)
 
+The current contract set includes pool and option-box contracts, repayment logic, a standard-deviation contract, and proxy contracts for adding or withdrawing liquidity. Off-chain actions and bootstrapping scripts cover pool creation, add/withdraw liquidity, buy/sell option flows, option exercise, repayments, proxy payments, and standard-deviation updates.
+
 ### Off-Chain Code
 
 The off-chain code, implemented in Python, handles various aspects of the OptionPools platform. While the current implementation may require improvements before production, it can be found in the following repository: [https://github.com/duckpools/off-chain-bot/tree/optionPools/optionPools](https://github.com/duckpools/off-chain-bot/tree/optionPools/optionPools)
@@ -80,7 +78,7 @@ OptionPools incorporates the ability to adjust option prices based on the real-t
 
 While the OptionPools submission for the ErgoHack event showcases the potential of Ergo for decentralized options trading, there are several limitations and future goals to be addressed:
 
-- **Multiple Strikes**: The current implementation supports only a single strike for calls and puts. Expanding this to allow custom strikes dynamically priced by the pool is a planned enhancement.
+- **Multiple Strikes**: The implementation remains experimental and should be treated as an ErgoHack-era prototype. Review current contracts and bootstrapping scripts before assuming production-ready support for custom strikes or multiple markets.
 
 - **Delta Neutral Strategy**: Future iterations will incorporate delta neutral strategies by aggregating 'd1' values from all options, improving AMM pricing accuracy and risk management. Since the team already calculates d1 in their contracts, this is a relatively simple extension.
 

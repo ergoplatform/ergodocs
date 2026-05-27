@@ -13948,7 +13948,7 @@ ApiKeyAuth ( Scopes: api_key )
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[BoxesRequestHolder](#schemaboxesrequestholder)|true|This API method recieves balance and assets, according to which, it's collecting result|
+|body|body|[BoxesRequestHolder](#schemaboxesrequestholder)|true|This API method receives balance and assets, according to which, it's collecting result|
 
 > Example responses
 

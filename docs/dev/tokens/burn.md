@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ThierryM1212/ergo-token-minter
     branch: main
@@ -21,9 +21,9 @@ There are sometimes occasions when you want to delete a token from your wallet.
 To get rid of those tokens, you have a few options.
 
 - **Mobile Wallet:** [TokenJay](https://www.tokenjay.app/app/#burntoken) (This requires an Ergopay compatible wallet like Ergo Mobile Wallet)
-- **Nautilus:** [Ergo Token Minter / Burner](https://github.com/ThierryM1212/ergo-token-minter)
+- **Nautilus:** [Ergo Token Minter / Burner](https://github.com/ThierryM1212/ergo-token-minter), which supports Nautilus and current sigma-rust wallet bindings.
 - **[SAFEW](https://github.com/ThierryM1212/SAFEW)** supports token burning natively.
-- Send to `4MQyMKvMbnCJG3aJ`, a **[P2S (Pay-to-Script)](p2s.md)** representation of a “false” condition, i.e. the box is unspendable. <!--TODO: What? Hash is written into `R4` register of the box, in the explorer It looks like `0e2047ee2cbd52be01e0876c3e0b989a0d4d5f8955200b1fab0e6eeb2b182555c2fb`, where `0e` is type descriptor (byte array), `20` is bytestring length (0x20 in hex = 32), `47ee2cbd52be01e0876c3e0b989a0d4d5f8955200b1fab0e6eeb2b182555c2fb` is the hash of the file. --->
+- Send to `4MQyMKvMbnCJG3aJ`, a **[P2S (Pay-to-Script)](p2s.md)** representation of a `false` condition, i.e. the box is unspendable.
 
 ## Programmatically
 

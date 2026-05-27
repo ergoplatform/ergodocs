@@ -2,7 +2,7 @@
 tags:
   - Merkle
 owner: docs
-last_reviewed: never
+last_reviewed: 2026-05-26
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -41,12 +41,12 @@ graph TD
 
 ## Leaf Nodes
 
-Each leaf node in the Merkle Tree represents a transaction and its corresponding spending proofs. The leaf node is a **64-byte data block**, consisting of:
+For transaction roots, leaf content depends on the block version:
 
-- A **32-byte transaction identifier** (a 256-bit hash of the transaction)
-- A **32-byte digest** of the transaction's spending proofs
+- In the initial block version, leaves are transaction IDs.
+- In later block versions, leaves are transaction IDs followed by witness IDs. A witness ID is the digest of the transaction's serialized spending proofs.
 
-The leaf node hash is computed by concatenating a **1-byte prefix** (used for domain separation), the **position** of the transaction within the block, and the **64-byte data block** itself. The prefix for a leaf node is `0x00`. This data is then hashed using the `Blake2b256` hash function.
+Each leaf data item is 32 bytes. The leaf node hash is computed by concatenating a **1-byte prefix** (used for domain separation), the **position** of the leaf within the tree, and the 32-byte data item. The prefix for a leaf node is `0x00`. This data is then hashed using the `Blake2b256` hash function.
 
 - **Code Reference**: The implementation of leaf node hashing can be found in the [MerkleTree.scala](https://github.com/input-output-hk/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/merkle/MerkleTree.scala) file in the `scrypto` repository.
 
