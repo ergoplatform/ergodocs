@@ -4,6 +4,15 @@ tags:
   - Mining
   - dApp
   - Infrastructure
+owner: docs
+last_reviewed: 2026-05-27
+source_repos:
+  - repo: arkadianet/erg-vanity-gpu
+    branch: main
+    paths:
+      - README.md
+source_of_truth:
+  - https://github.com/arkadianet/erg-vanity-gpu
 ---
 
 # Miner Tooling
@@ -18,7 +27,7 @@ There are several ecosystem projects focused on building miner tooling. Here are
 
 ### GPU vanity address generator
 
-A GPU-accelerated Ergo vanity address generator was shared in January 2026 using OpenCL. Benchmarks reported roughly `790k/sec` on `7x 3060 Ti`, roughly `1.3M/sec` across all GPUs, and later about `320k addresses/sec` on an RTX 3080 Ti. The build notes also called out nightly Rust requirements for the OpenCL path.
+[erg-vanity-gpu](https://github.com/arkadianet/erg-vanity-gpu) is a GPU-accelerated Ergo vanity address generator using OpenCL. Early benchmarks reported roughly `790k/sec` on `7x 3060 Ti`, roughly `1.3M/sec` across all GPUs, and later about `320k addresses/sec` on an RTX 3080 Ti. The build notes also called out nightly Rust requirements for the OpenCL path.
 
 ### Lithos
 

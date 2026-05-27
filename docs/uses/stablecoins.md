@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: 2026-05-26
+last_reviewed: 2026-05-27
 source_repos:
   - repo: ergoplatform/ergo-jde
     branch: main
@@ -8,10 +8,20 @@ source_repos:
       - kiosk/src/test/scala/kiosk/dexy
       - kiosk/src/test/scala/kiosk/dexy/Dexy.md
       - kiosk/src/test/scala/kiosk/dexy/DexySpec.scala
+  - repo: arkadianet/citadel
+    branch: main
+    paths:
+      - README.md
+  - repo: DefiLlama/peggedassets-server
+    branch: master
+    paths:
+      - README.md
 source_of_truth:
   - https://github.com/ergoplatform/ergo-jde/tree/main/kiosk/src/test/scala/kiosk/dexy
   - https://github.com/ergoplatform/ergo-jde/tree/main/kiosk/src/test/scala/kiosk/dexy/Dexy.md
   - https://github.com/ergoplatform/ergo-jde/tree/main/kiosk/src/test/scala/kiosk/dexy/DexySpec.scala
+  - https://github.com/arkadianet/citadel/releases/tag/v0.2.4-alpha
+  - https://github.com/DefiLlama/peggedassets-server/pull/700
 ---
 
 # Stablecoins
@@ -33,7 +43,15 @@ The UI for the front-end is available at [anon-real/sigma-usd](https://github.co
 
 Dexy uses seigniorage
 
+- [Dexy overview](../eco/dexy.md)
+- [USE stablecoin](use_stablecoin.md)
 - [DexySpec](https://github.com/ergoplatform/ergo-jde/blob/main/kiosk/src/test/scala/kiosk/dexy/DexySpec.scala)
 - [Dexy Stablecoin Design](https://github.com/ergoplatform/ergo-jde/blob/main/kiosk/src/test/scala/kiosk/dexy/Dexy.md)
 - [Dexy: USD Simplest Stablecoin](https://www.ergoforum.org/t/dexy-usd-simplest-stablecoin-design/1430)
 - [Dexy enhancements to counter various attacks in vanilla proposal](https://github.com/ergoplatform/ergo-jde/blob/main/kiosk/src/test/scala/kiosk/dexy)
+- [Citadel v0.2.4-alpha](https://github.com/arkadianet/citadel/releases/tag/v0.2.4-alpha) added SigUSD routing, token-to-token swaps, LP deposit/redeem support, and Dexy LP display fixes.
+- [USE pegged asset on DefiLlama](https://github.com/DefiLlama/peggedassets-server/pull/700) tracks the USE stablecoin alongside its public protocol information.
+
+## Gluon
+
+[Gluon](../eco/gluon.md) is a stablecoin protocol on Ergo using fission, fusion, and beta-decay operations. Its current Ergo UI is tracked separately from SigmaUSD and Dexy.

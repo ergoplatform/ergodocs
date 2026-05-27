@@ -73,12 +73,15 @@ Sigma 6.0 incorporates numerous fixes and features detailed in specific issues a
 | UnsignedBigInt Type                      | [#554](https://github.com/ScorexFoundation/sigmastate-interpreter/issues/554)  | [PR #997](https://github.com/ScorexFoundation/sigmastate-interpreter/pull/997)                                                                                                  |
 | Serialization of SFunc Type              | [#847](https://github.com/ScorexFoundation/sigmastate-interpreter/issues/847)  | [PR #1020](https://github.com/ScorexFoundation/sigmastate-interpreter/pull/1020)                                                                                                 |
 | Fix Semantics of AvlTree.insert          | [#908](https://github.com/ScorexFoundation/sigmastate-interpreter/issues/908)  | [PR #1038](https://github.com/ergoplatform/sigmastate-interpreter/pull/1038)                                                                                                    |
+| Correct type inference for `None`        | [#398](https://github.com/ergoplatform/sigmastate-interpreter/issues/398)      | [PR #1136](https://github.com/ergoplatform/sigmastate-interpreter/pull/1136)                                                                                                    |
 
 This is a selection of the developments. For a comprehensive list of all addressed issues, features, fixes (such as for `BigInt` downcasting, `Option.getOrElse` laziness, `ErgoTree` size serialization, `Box.getReg` implementation, collection equality improvements, etc.), and their corresponding pull requests, please refer to the "Corresponding Issues and Pull Requests" section of the official Sigma 6.0 EIP linked above.
 
 ## Activation
 
 The changes introduced in **Sigma 6.0** are activated via a **soft-fork**. To ensure backward compatibility, some script deserialization validation rules (specifically #1007, #1008, and #1011) are replaced with identical ones under different IDs. These changes, implemented in [PR #1029](https://github.com/ergoplatform/sigmastate-interpreter/pull/1029), allow existing clients to validate scripts with old features while correctly skipping (or handling) those utilizing new Sigma 6.0 features post-activation.
+
+For testing around Ergo Reference Client 6.0.3, a community [testnet node build](https://github.com/a-shannon/ergo-testnet-node-6.0.3/releases/tag/ergo-6.0.3) is available. Production node operators should use official Ergo reference-client releases.
 
 ## Notes on Usage (from EIP)
 

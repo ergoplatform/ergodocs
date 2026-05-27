@@ -1,6 +1,20 @@
 ---
 tags:
   - JavaScript
+owner: docs
+last_reviewed: 2026-05-27
+source_repos:
+  - repo: fleet-sdk/fleet
+    branch: master
+    paths:
+      - README.md
+  - repo: dungvn3000/ergo-fleet-sdk-example
+    branch: main
+    paths:
+      - README.md
+source_of_truth:
+  - https://github.com/fleet-sdk/fleet
+  - https://github.com/dungvn3000/ergo-fleet-sdk-example
 ---
 
 # Fleet
@@ -18,6 +32,7 @@ For common usage patterns and examples, see the [Fleet SDK Recipes](fleet-sdk-re
 ## Examples
 
 - 🥇 **[Fleet Examples](https://github.com/fleet-sdk/fleet-by-example)**: Repository showcasing various Fleet SDK usage patterns. [`TS`]
+- [ergo-fleet-sdk-example](https://github.com/dungvn3000/ergo-fleet-sdk-example): small TypeScript ErgoScript-by-example repository using Fleet SDK patterns.
 
 /// details | DeepWiki Documentation
     {type: info, open: true}

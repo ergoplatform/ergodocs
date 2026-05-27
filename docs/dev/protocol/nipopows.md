@@ -3,6 +3,15 @@ tags:
   - NIPoPoWs
   - Light Clients
   - Sidechains
+owner: docs
+last_reviewed: 2026-05-27
+source_repos:
+  - repo: sdaveas/nipopow-verifier
+    branch: master
+    paths:
+      - README.md
+source_of_truth:
+  - https://github.com/sdaveas/nipopow-verifier
 ---
 
 # Non-interactive Proof-of-Proof-of-Work (NIPoPoWs)
@@ -51,6 +60,8 @@ To adopt NIPoPoWs, the source blockchain needs to support interlink structures, 
 ## Ongoing Research and Development
 
 NIPoPoWs have been a crucial part of the Ergo blockchain since its inception. Ergo is dedicated to continually exploring the potential of NIPoPoWs and expanding this research area in collaboration with partners at IOHK. Increased use of NIPoPoWs is anticipated with ongoing contributions from the active developer community.
+
+For implementation research, [sdaveas/nipopow-verifier](https://github.com/sdaveas/nipopow-verifier) is a compact verifier reference. It is external research code, not an official Ergo client component.
 
 ## Conclusion
 

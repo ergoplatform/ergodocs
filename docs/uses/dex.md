@@ -18,17 +18,22 @@ Their benefits are for people who don’t want to give up the custody of their f
 
 /// details | GuapSwap (V2 in Development)
      {type: success, open: true}
-[GuapSwap](guapswap.md) is a fully decentralized smart contract profit swapping service on the Ergo Blockchain.
+[GuapSwap](../eco/guapswap.md) is a fully decentralized smart contract profit swapping service on the Ergo Blockchain.
 
 ///
 /// details | Palmyra ComDEX (MVP Live)
      {type: success, open: true}
-[Palmyra ComDEX](palmyra.md)  the flagship product of [zenGate](zengate.md), is an innovative ecosystem that enables the tokenization and listing of certified commodities for spot and futures trading on a global scale.
+[Palmyra ComDEX](../eco/palmyra.md), the flagship product of [zenGate](../eco/zengate.md), is an innovative ecosystem that enables the tokenization and listing of certified commodities for spot and futures trading on a global scale.
 ///
 
 /// details | Machina Finance (In Development)
      {type: note, open: true}
-The primary objective of [Machina Finance](machina-finance.md) is to promote decentralization and facilitate P2P trade by leveraging the power of grid contracts.
+The primary objective of [Machina Finance](../eco/machina-finance.md) is to promote decentralization and facilitate P2P trade by leveraging the power of grid contracts.
+///
+
+/// details | PiggyTrade (In Development)
+     {type: note, open: true}
+[PiggyTrade](../eco/piggytrade.md) is a trading app for Ergo moving toward a Kotlin implementation with sigma-rust JNI bindings and on-chain DEX pool data.
 ///
 
 ////

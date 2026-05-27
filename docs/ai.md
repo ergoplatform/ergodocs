@@ -1,3 +1,21 @@
+---
+owner: docs
+last_reviewed: 2026-05-27
+source_repos:
+  - repo: a-shannon/Aletheia-Protocol
+    branch: main
+    paths:
+      - README.md
+      - docs
+  - repo: marctheshark3/FintelligenceAI
+    branch: main
+    paths:
+      - README.md
+source_of_truth:
+  - https://github.com/a-shannon/Aletheia-Protocol
+  - https://github.com/marctheshark3/FintelligenceAI
+---
+
 # Ergo's eUTXO: Architecting the Future of Artificial Economic Intelligence
 
 ## 1. Introduction: The AI-Blockchain Nexus - Challenges and the Dawn of Artificial Economic Intelligence
@@ -13,6 +31,10 @@ Furthermore, **predictability and cost-efficiency** pose substantial problems. A
 Finally, the **complexity of integration and interoperability** cannot be understated. Merging these two sophisticated technologies demands deep expertise in both domains ([3](https://smartdev.com/ai-and-blockchain/)). Ensuring seamless communication and data flow between different blockchain systems, and between AI components and the blockchain itself, adds layers of difficulty ([5](https://www.mdpi.com/2079-9292/14/1/84)).
 
 Amidst these challenges, a particularly ambitious application is emerging: **Artificial Economic Intelligence (AEI)**. Pioneered conceptually within the Ergo ecosystem, AEI enables autonomous software agents to manage funds, perform tasks independently, generate revenue, cover operational expenses, and expand their network—all through smart contracts on a public blockchain ([10](https://forum.cardano.org/t/ergo-proof-of-work-cardano/131478)). These are not merely tools analyzing data but digital entities designed for independent economic activity.
+
+Related public experiments include [Aletheia Protocol](https://github.com/a-shannon/Aletheia-Protocol), an open-source framework and whitepaper for AI persistence on Ergo, and [FintelligenceAI](https://github.com/marctheshark3/FintelligenceAI), a modular RAG and agent framework that starts with Ergo smart-contract script generation and ErgoScript validation tooling.
+
+Developer-facing agent and media projects include [Ergo Agent SDK](dev/stack/ergo-agent-sdk.md), [Degens.World](eco/degens-world.md), and [BoTTube](eco/bottube.md).
 
 While many blockchain platforms discuss theoretical AI integration, the practical realization of complex, multi-agent AEI systems demands a foundational architecture specifically suited to their unique requirements. This report argues that Ergo's Extended Unspent Transaction Output (eUTXO) model provides precisely such a foundation. Its inherent technical advantages offer concrete solutions to the core challenges of scalability, predictability, and data management that plague other models, making sophisticated AEI systems not just a futuristic vision, but a practical possibility ([9](https://iohk.io/en/blog/posts/2021/10/15/utxo-alliance-fostering-innovation-and-collaboration-across-the-blockchain-space/)). Ergo's design principles appear uniquely aligned with the needs of these nascent, economically intelligent digital entities. This alignment stems from a deeper understanding of what AEI truly entails – moving beyond AI as a simple tool to AI as an active participant within a digital economy. This necessitates a blockchain environment that supports complex economic behavior, a requirement met by Ergo's focus on "Contractual Money" ([11](https://docs.ergoplatform.com/faq/)), emphasizing secure and flexible implementation of the financial contracts that form the bedrock of AEI operations.
 

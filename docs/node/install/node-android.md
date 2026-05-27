@@ -41,7 +41,7 @@ There are two primary approaches, depending on your needs and technical comfort 
 ## Recent updates
 
 - [ErgoNodeAndroid](https://github.com/rustinmyeye/ErgoNodeAndroid) defaulted to a NiPoPoW node and could be used by pointing a mobile wallet at the local node.
-- The development log also noted that the README needed updates and latest Android support was broken at that time.
+- Current Android compatibility and setup steps should be checked against the upstream README before relying on the app.
 - An Android version of the Sigmanauts mining dashboard was shared at [sigmanauts-mining-dashboard-android](https://github.com/rustinmyeye/sigmanauts-mining-dashboard-android).
 
 ## Device Requirements

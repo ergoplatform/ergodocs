@@ -1,3 +1,20 @@
+---
+owner: docs
+last_reviewed: 2026-05-27
+source_repos:
+  - repo: GitCircles/GitCircles-Github
+    branch: main
+    paths:
+      - README.md
+  - repo: GitCircles/GitCircles-Roadmap
+    branch: main
+    paths:
+      - README.md
+source_of_truth:
+  - https://github.com/GitCircles/GitCircles-Github
+  - https://github.com/GitCircles/GitCircles-Roadmap
+---
+
 # GitCircles: Turning Open Source Contributions Into Real-World Rewards
 
 Open source powers the digital world. But for too long, the people behind it — the contributors — have worked without clear recognition or reward. Enter **GitCircles**, an innovative platform that automates contributor recognition and converts meaningful contributions into **cryptocurrency rewards**.
@@ -9,6 +26,8 @@ Whether you're a maintainer looking for a fairer system or a developer hoping to
 ## 🔍 What Is GitCircles?
 
 At its core, **GitCircles** is an automated engine that tracks contributions in Git-based projects (like GitHub, GitLab, Gitea, and Bitbucket) and issues **on-chain cryptocurrency tokens** to contributors — based on the actual impact of their work.
+
+Project planning and open discussion live in the [GitCircles Roadmap](https://github.com/GitCircles/GitCircles-Roadmap) repository, while the GitHub adapter implementation lives in [GitCircles-Github](https://github.com/GitCircles/GitCircles-Github).
 
 It bridges the world of Git and decentralized finance (DeFi):
 

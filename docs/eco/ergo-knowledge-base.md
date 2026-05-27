@@ -4,13 +4,24 @@ tags:
   - Transcripts
   - Documentation
   - Community
+owner: docs
+last_reviewed: 2026-05-27
+source_repos:
+  - repo: cannonQ/ergo-transcripts
+    branch: main
+    paths:
+      - README.md
+source_of_truth:
+  - https://github.com/cannonQ/ergo-transcripts
+  - https://ergo-transcripts.vercel.app/
+  - https://ergo-transcripts.vercel.app/mcp
 ---
 
 # Ergo Knowledge Base and Transcripts
 
 ## Overview
 
-The 2026 development log records new work to make Ergo community knowledge searchable and machine-readable.
+Ergo Knowledge Base and Ergo Transcripts make Ergo community knowledge searchable and machine-readable. The public transcripts site indexes long-form ecosystem material such as community calls, AMAs, technical discussions, conference talks, and chat exports.
 
 ## Recent updates
 
@@ -23,17 +34,18 @@ The 2026 development log records new work to make Ergo community knowledge searc
 
 [Ergo Transcripts](https://ergo-transcripts.vercel.app/) indexes calls, Twitter Spaces, AMAs, technical discussions, and conference talks. Source is available at [cannonQ/ergo-transcripts](https://github.com/cannonQ/ergo-transcripts).
 
-The project is intended to turn long-form ecosystem material into searchable text for humans and into structured context for agents. The log describes keyword search, formatting improvements, Telegram export workflows, and an MCP endpoint for tool use.
+The project turns long-form ecosystem material into searchable text for humans and structured context for agents. Current work includes keyword search, formatting improvements, Telegram export workflows, and an MCP endpoint for tool use.
 
 - The transcripts MCP is available at [ergo-transcripts.vercel.app/mcp](https://ergo-transcripts.vercel.app/mcp).
+- The repository describes the archive as transcript coverage for Ergo Platform videos, community chats, and related ecosystem material.
 
 ## Ergo Knowledge Base
 
 [Ergo Knowledge Base](https://ergo-knowledge-base.vercel.app/) is a related public knowledge interface for curated summaries and project context.
 
-The log describes it as a way to transcribe and organize ecosystem videos, community calls, AMAs, technical discussions, Telegram exports, and public ErgoScript contract summaries.
+Ergo Knowledge Base transcribes and organizes ecosystem videos, community calls, AMAs, technical discussions, Telegram exports, and public ErgoScript contract summaries.
 
-Planned work mentioned in the log included:
+Planned work includes:
 
 - Reddit AMA and Twitter Spaces ingestion workflows.
 - KPI/dashboard views for tracking content coverage.
@@ -41,4 +53,4 @@ Planned work mentioned in the log included:
 
 ## Ergo Book
 
-The Ergo Book effort was converted to mdBook in February 2026. The log describes it as an attempt to organize the ideological, philosophical, and technical foundation of the Ergo movement. A Reddit AMA with contributors was also planned around the book structure.
+The Ergo Book effort was converted to mdBook in February 2026. It organizes the ideological, philosophical, and technical foundation of the Ergo movement. A Reddit AMA with contributors was also planned around the book structure.

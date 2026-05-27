@@ -33,7 +33,6 @@ theme:
     #- navigation.tracking
     - navigation.indexes
     - content.tabs.link
-    - toc.follow
     - search.highlight
     - search.suggest
     - search.share
@@ -52,7 +51,6 @@ extra_javascript:
   - assets/extra.js
   #- assets/mathjax.js
   #- https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - https://unpkg.com/mermaid@8.5.1/dist/mermaid.min.js
   # - https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML
@@ -212,6 +210,7 @@ nav:
               - Sidechains:
                   - uses/sidechains.md
                   - Sigma Chains: uses/sidechains/sigma-chains.md
+                  - Braid: uses/sidechains/braid.md
                   - PoUW: uses/pouw.md
                   - Weak Blocks: uses/sidechains/weak-blocks.md
           - Finance & Markets:
@@ -223,6 +222,7 @@ nav:
                   - Machina Finance: eco/machina-finance.md
                   - Mew Finance: eco/mew-finance.md
                   - P2P Trading: eco/p2p-trading.md
+                  - PiggyTrade: eco/piggytrade.md
                   - Token Jay: eco/token-jay.md
                   - Single Tx Swap: eco/single-tx-swap.md
               - Monetary Systems:
@@ -293,6 +293,7 @@ nav:
                   - uses/gaming.md
                   - BlitzTCG: eco/blitz.md
                   - Cyberverse: eco/cyberverse.md
+                  - NFT Races: eco/nft-races.md
                   - SigmaQuest: eco/sigmaquest.md
                   - Gaming Tutorial: tutorials/gaming-tutorial.md
                   - Metaverse: uses/metaverse.md
@@ -300,8 +301,10 @@ nav:
           - Applications & Utilities:
               - Crux Finance: eco/crux.md
               - Degens.World: eco/degens-world.md
+              - BoTTube: eco/bottube.md
               - On-chain Social & Messaging: eco/onchain-social.md
               - Ergo Knowledge Base: eco/ergo-knowledge-base.md
+              - Emerging Projects: eco/emerging-projects.md
               - Sigmaverse: eco/sigmaverse.md
               - ErgoNames: eco/ergonames.md
               - Celaut:
@@ -487,7 +490,7 @@ nav:
           - Technical Guidelines: contribute/technical-guidelines.md
           - Roles: contribute/roles.md
       - Documentation:
-          - Maintainer Start Here: start_here.md
+          - Maintainer Guide: start_here.md
           - Contribute to the Docs!: contribute/docs.md
           - Documentation Tools: contribute/tools.md
           - Content Standards: contribute/content-standards.md
@@ -567,6 +570,7 @@ nav:
               - FleetSharp: dev/stack/fleetsharp.md
               - Ergpy: dev/stack/ergpy.md
               - Ergo-Lib-Python: dev/stack/ergo-lib-python.md
+              - Ergo Agent SDK: dev/stack/ergo-agent-sdk.md
               - RustKit: dev/stack/rustkit.md
               - Mosaik:
                   - dev/stack/mosaik/intro.md
@@ -607,6 +611,7 @@ nav:
               - Plasma: dev/lib/plasma.md
               - Scrypto: dev/lib/scrypto.md
               - EIP12 Types: dev/lib/eip12-types.md
+              - ergots: dev/lib/ergots.md
               - SigmaJS: dev/lib/sigmajs.md
               - DeCo: dev/deco.md
 
@@ -883,6 +888,8 @@ nav:
               - devnet.conf: node/testnet/devnetconf.md
               - Tor Configuration: node/tor.md
           - Rust Node: node/rust-node.md
+          - Ergo Proxy: node/ergo-proxy.md
+          - Ergo Relay: node/ergo-relay.md
           - API Access:
               - Swagger Overview: node/swagger.md
               - OpenAPI Spec: node/swagger/openapi.md

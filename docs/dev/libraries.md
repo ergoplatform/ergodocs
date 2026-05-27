@@ -53,6 +53,10 @@ Sigma-Rust provides bindings for various languages, allowing developers to lever
 - [ergo-lib-c](https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-c): C bindings, also used for Swift/iOS integration work. Recent binding updates include `UnsignedBigInt` support. [`C`, `Swift`, `Rust`]
 - *Note: Go bindings also exist.*
 
+## TypeScript Verification Tooling
+
+- [ergots](lib/ergots.md): browser-compatible TypeScript tooling for Ergo verification, NiPoPoWs, AVL+ proofs, and ErgoScript research.
+
 ## Specific Library Documentation
 
 The following pages provide more detailed documentation on specific libraries within the ecosystem:
@@ -75,6 +79,10 @@ The following pages provide more detailed documentation on specific libraries wi
   {
     "title": "SigmaJS",
     "url": "lib/sigmajs.md"
+  },
+  {
+    "title": "ergots",
+    "url": "lib/ergots.md"
   }
 
 ]

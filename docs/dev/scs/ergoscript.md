@@ -14,9 +14,14 @@ source_repos:
     branch: develop
     paths:
       - docs/perf-style-guide.md
+  - repo: odiseusme/btc-tx-parser-reference
+    branch: main
+    paths:
+      - README.md
 source_of_truth:
   - https://github.com/ergoplatform/sigma-rust/tree/develop/ergoscript-compiler
   - https://github.com/ergoplatform/sigmastate-interpreter/tree/develop/docs/perf-style-guide.md
+  - https://github.com/odiseusme/btc-tx-parser-reference
 ---
 
 # ErgoScript
@@ -128,6 +133,7 @@ ErgoScript's features enable the implementation of complex contract patterns:
 
 * **[Finite State Machines (FSMs)](fsm-example.md):** Learn how to model multi-stage contracts where behavior depends on the current state encoded within a box.
 * **[Merkleized Abstract Syntax Trees (MAST)](mast-example.md):** Explore techniques to improve privacy and efficiency for contracts with many spending conditions by revealing only the executed script branch.
+* **[Bitcoin transaction parser reference](https://github.com/odiseusme/btc-tx-parser-reference):** Community reference code for `ergoplatform/sigmastate-interpreter#1114`, with Python parsing and ErgoScript building blocks for Bitcoin transaction parsing. It is research/reference code, not a core language feature.
 
 ## Common Use Cases
 

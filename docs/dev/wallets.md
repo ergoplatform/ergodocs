@@ -73,6 +73,12 @@ Here are popular and well-regarded wallets used by the Ergo community:
   * **Description:** A method to generate wallet keys offline and print them on paper (or save securely offline). Provides maximum security from online threats.
   * **Best For:** Long-term "cold storage" of significant amounts, gifting ERG. Less convenient for frequent use.
 
+### Adjacent Developer References
+
+* **[Tether WDK](https://github.com/tetherto/wdk)**
+  * **Description:** External modular wallet development kit for multi-chain wallet work. It does not ship Ergo support by default, but its plugin architecture is relevant to future Ergo and bridged-asset wallet integrations.
+  * **Best For:** Developers comparing wallet-plugin architecture or researching future Ergo wallet integrations.
+
 ## Quick Comparison Table
 
 This table provides a simplified overview to help you compare options:

@@ -12,7 +12,7 @@
 - `Mar 7`: [Nautilus v1.3.2](https://github.com/nautls/nautilus-wallet/releases/tag/v1.3.2) shipped with `USE`, `CLB USE`, and `DORT` additions.
 - `Jan 7`: the Android guide noted that Nautilus `0.9.4` is the last release with a working mobile dApp connector; later mobile connector support is broken.
 - `Apr 8`: Javanese translation work was submitted for the wallet app.
-- Keystone hardware-wallet integration was discussed as unfinished work; the log flagged a supply-chain review concern around 160+ transient dependencies before completing that path.
+- Keystone hardware-wallet integration remains unfinished; supply-chain review is important because that path introduced a large transient dependency set.
 
 ## Installation
 

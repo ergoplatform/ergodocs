@@ -5,6 +5,20 @@ tags:
   - DeFi
   - dApp
   - dApp-Live
+owner: docs
+last_reviewed: 2026-05-27
+source_repos:
+  - repo: duckpools/interest-contracts
+    branch: main
+    paths:
+      - README.md
+  - repo: duckpools/logic-contracts
+    branch: main
+    paths:
+      - README.md
+source_of_truth:
+  - https://github.com/duckpools/interest-contracts
+  - https://github.com/duckpools/logic-contracts
 ---
 
 # DuckPools: Ergo Lending Protocol
@@ -22,6 +36,11 @@ DuckPools is a lending platform developed on the Ergo blockchain. It is currentl
 - **Collateralized Loans:** Users can secure funds with their collateral!
 
 DuckPools aims to be a catalyst for an explosive DeFi ecosystem on Ergo. The platform facilitates increased utility of ERG and Ergo native assets and boosts the Total Value Locked (TVL) in Ergo DeFi.
+
+Developer references:
+
+- [interest-contracts](https://github.com/duckpools/interest-contracts): interest-contract specification work.
+- [logic-contracts](https://github.com/duckpools/logic-contracts): logic-contract interfaces and implementations for collateral pricing.
 
 **Community Resources**
 

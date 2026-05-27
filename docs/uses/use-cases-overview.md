@@ -5,11 +5,24 @@
 Check out [sigmaverse.io](https://sigmaverse.io/) - ***your portal to the Ergo Universe*** !
 ///
 
-The Ergo Ecosystem is a thriving hub of decentralized applications, tools, and protocols designed to empower users, developers, and communities in the blockchain space. This section provides an overview of the various components that make up the Ergo Ecosystem, highlighting the innovation and utility that drive our growing network.
+Use this page as the main map for user-facing Ergo applications, protocols, and project pages. If you are not sure where a project belongs, start with [Ecosystem Map](../ecosystem-map.md) or [Using Ergo](../using-ergo-intermediate.md).
 
-## Applications
+## Common Paths
 
-Ergo’s ecosystem is built on a solid foundation of key technologies and applications that cater to diverse use cases:
+| I want to... | Start here | Related pages |
+| --- | --- | --- |
+| Choose a wallet | [Get a Wallet](../wallets-overview.md) | [Wallets Overview](../dev/wallets.md), [Security Basics](../security-basics.md) |
+| Swap or trade | [DEX Overview](dex.md) | [Spectrum](../eco/spectrum.md), [P2P Trading](../eco/p2p-trading.md), [PiggyTrade](../eco/piggytrade.md) |
+| Use stablecoins | [Stablecoins](stablecoins.md) | [SigmaUSD](sigmausd.md), [Dexy](../eco/dexy.md), [Gluon](../eco/gluon.md) |
+| Bridge assets | [Rosen Bridge](../eco/rosen.md) | [Transfer Flows](../eco/rosen/token-transfer-flows.md), [Troubleshooting](../eco/rosen/rosen-troubleshooting.md) |
+| Mint or trade NFTs | [NFT Overview](nft.md) | [ErgoAuctionHouse](../eco/ergo-auctions.md), [SkyHarbor](../eco/skyharbor.md) |
+| Explore games | [Gaming](gaming.md) | [NFT Races](../eco/nft-races.md), [Cyberverse](../eco/cyberverse.md) |
+| Use privacy tools | [Privacy Guide](../doc/privacy-guide.md) | [ErgoMixer](../eco/ergomixer.md), [Stealth Addresses](stealth-address.md) |
+| Find recent experiments | [Emerging Projects](../eco/emerging-projects.md) | [BoTTube](../eco/bottube.md), [Ergo Agent SDK](../dev/stack/ergo-agent-sdk.md) |
+
+## Ecosystem Areas
+
+Ergo’s ecosystem is built on a solid foundation of key technologies and applications that cater to diverse use cases.
 
 ### Infrastructure
 
@@ -33,7 +46,7 @@ Ergo supports a growing number of gaming and metaverse projects, offering develo
 
 ### Tooling and Developer Resources
 
-Get access to a suite of developer tools and resources designed to facilitate the creation and deployment of decentralized applications on the Ergo blockchain. From smart contract scripting to name services, these tools are essential for building on Ergo.
+Get access to a suite of [developer tools](../building-on-ergo-developers.md) and resources designed to create and deploy decentralized applications on Ergo. From smart contract scripting to name services, these tools are essential for building on Ergo.
 
 ### Further Ideas and Innovation
 
@@ -41,7 +54,7 @@ Explore new and experimental ideas within the Ergo ecosystem that push the bound
 
 ## Explore the Ecosystem
 
-Use the navigation on the left to explore each of these sections in detail. Whether you're interested in financial services, privacy solutions, or decentralized governance, the Ergo Ecosystem has something to offer for everyone.
+Use the navigation on the left or the tables above to explore each section. For a shorter cross-site map, use [Ecosystem Map](../ecosystem-map.md).
 
 Join us in building the future of decentralized finance and beyond.
 

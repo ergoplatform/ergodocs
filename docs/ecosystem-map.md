@@ -25,6 +25,7 @@ Use this page to find the right part of the Ergo ecosystem.
 | Privacy | [Privacy Guide](doc/privacy-guide.md) | Mixers, private interaction patterns |
 | Oracles | [Oracles](uses/oracles.md) | Oracle pools, bootstrap flow |
 | Games and metaverse | [Gaming](uses/gaming.md) | Game assets, marketplaces, tutorials |
+| Emerging projects | [Emerging Ecosystem Projects](eco/emerging-projects.md) | Recent project leads without dedicated pages |
 
 ## Builder and Operator Areas
 

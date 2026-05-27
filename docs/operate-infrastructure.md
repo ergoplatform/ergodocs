@@ -26,6 +26,14 @@ Use this page if you run Ergo services rather than only using wallets or dApps.
 | Run or bootstrap oracles | [Oracle Bootstrap](tutorials/oracle-bootstrap.md) | [Oracles](uses/oracles.md), [Oracle Pools V2](eco/oracles-v2.md) |
 | Mine or operate a pool | [Securing the Network](securing-the-network-miners.md) | [Pool Operations](mining/pool-ops.md) |
 
+## Operator Entry Points
+
+- First install path: [Node Install](node/install.md).
+- Production checklist: [Deployment Runbook](node/deploy-runbook.md).
+- Ongoing operations: [Hardening](node/operations/hardening.md), [Monitoring](node/operations/monitoring.md), [Upgrades](node/operations/upgrades.md), [Backups](node/operations/backups.md).
+- Data access: [Swagger Overview](node/swagger.md), [Indexed Node API](node/indexed-node.md), [Blockchain Indexing](dev/tutorials/blockchain-indexing.md).
+- Lightweight relay tooling: [Ergo Proxy](node/ergo-proxy.md), [Ergo Relay](node/ergo-relay.md).
+
 ## Standard Operator Checks
 
 - Keep secrets out of config files committed to Git.

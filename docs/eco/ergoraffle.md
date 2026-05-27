@@ -5,6 +5,15 @@ tags:
   - Raffle
   - dApp
   - dApp-Live
+owner: docs
+last_reviewed: 2026-05-27
+source_repos:
+  - repo: ErgoRaffle/raffle-v2
+    branch: dev
+    paths:
+      - README.md
+source_of_truth:
+  - https://github.com/ErgoRaffle/raffle-v2
 ---
 
 # ErgoRaffle
@@ -14,6 +23,8 @@ tags:
 We have live crowdfunding on the Ergo blockchain via [ergoraffle.com](https://ergoraffle.com); this allows projects to host *'Raffles'* with a percentage of the total allocated to one lucky donor as a prize.
 
 More information and the source code is available on [GitHub](https://github.com/ErgoRaffle).
+
+For the broader funding surface, see [Crowdfunding](../uses/crowdfunding.md) and [Funding Ergo Projects](../contribute/funding.md).
 
 ## Recent updates
 
@@ -37,6 +48,7 @@ The Raffle is managed by smart contracts built on Ergo Platform. This means that
 - Enhance the user interface
 - Integrate dApp connectors and ErgoPay support
 - Introduce a refundable raffle creation fee to prevent scams and DoS attacks
+- Track the current v2 service code in [ErgoRaffle/raffle-v2](https://github.com/ErgoRaffle/raffle-v2), which packages raffle services and describes multiple winners, flexible token funding, dynamic gifts, service-fee handling, and automatic refund paths.
 
 ## See also
 

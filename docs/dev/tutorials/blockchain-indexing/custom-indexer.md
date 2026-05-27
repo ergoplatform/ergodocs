@@ -21,9 +21,19 @@ source_repos:
     paths:
       - modules/chain-grabber
       - modules/chain-grabber/src/main/resources/application.conf
+  - repo: 4EYESConsulting/sigmalok-indexer
+    branch: main
+    paths:
+      - README.md
+  - repo: arobsn/hergmes
+    branch: master
+    paths:
+      - README.md
 source_of_truth:
   - https://github.com/ergoplatform/explorer-backend/tree/master/modules/chain-grabber
   - https://github.com/ergoplatform/explorer-backend/tree/master/modules/chain-grabber/src/main/resources/application.conf
+  - https://github.com/4EYESConsulting/sigmalok-indexer
+  - https://github.com/arobsn/hergmes
 ---
 
 # Indexing Strategy: Building a Custom Indexer
@@ -153,6 +163,11 @@ Choose the database that best matches your indexer's data structure and query pa
 ### SigmaSpace
 
 * The [SigmaSpace.io](https://sigmaspace.io/) explorer project has developed its own indexing services, potentially with optimizations worth investigating if their code is available or described elsewhere.
+
+### dApp-Specific Indexers
+
+* [sigmalok-indexer](https://github.com/4EYESConsulting/sigmalok-indexer) is a Go indexer for SigmaLok-style mempool and rollback handling.
+* [hergmes](https://github.com/arobsn/hergmes) is a Rust real-time Ergo blockchain data relay and node messaging layer.
 
 ## Alternative: Node API Scanning
 

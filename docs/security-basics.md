@@ -21,6 +21,7 @@ Use this checklist before holding funds, connecting to dApps, signing messages, 
 - Verify receiving addresses before sending.
 - Send a small test transaction before moving large amounts.
 - Keep wallet software updated from official sources.
+- Advanced users handling sensitive local input can review external tools such as [NoteDaemon](https://github.com/networkspore/NoteDaemon), which experiments with exclusive input-device access on Linux. This is not Ergo-specific wallet software; verify its threat model before use.
 
 ## dApp and Signing Safety
 

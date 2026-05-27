@@ -9,6 +9,8 @@ tags:
 
 There are many tools, libraries, SDKs, frameworks and utilities developers can use to interact with the blockchain, build their applications, and display them to users.
 
+For current source-backed tooling, see [Libraries & SDKs](libraries.md), [Fleet](stack/fleet.md), [Sigma Rust](stack/sigma-rust.md), [ergots](lib/ergots.md), and [Ergo Agent SDK](stack/ergo-agent-sdk.md).
+
 ## Stack
 
 ::cards::

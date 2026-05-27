@@ -2,6 +2,15 @@
 tags:
   - Go
   - Ergo
+owner: docs
+last_reviewed: 2026-05-27
+source_repos:
+  - repo: mgpai22/ergonnection-go
+    branch: main
+    paths:
+      - README.md
+source_of_truth:
+  - https://github.com/mgpai22/ergonnection-go
 ---
 
 # Ergo Platform and Go
@@ -21,3 +30,7 @@ Please note that if you come across any issues or require more detailed instruct
 ### Ergo-lib-go
 
 [*ergo-lib-go*](https://github.com/sigmaspace-io/ergo-lib-go/tree/main) is a Go wrapper around C bindings for ErgoLib from sigma-rust. This library provides Go developers with the ability to interact with the Ergo blockchain using the robust functionalities of ErgoLib, which is originally written in Rust.
+
+### Ergonnection Go
+
+[*ergonnection-go*](https://github.com/mgpai22/ergonnection-go) is a Go project related to Ergo network connectivity. Check repository status before using it in production.

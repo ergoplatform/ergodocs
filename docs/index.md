@@ -4,6 +4,14 @@ ErgoDocs helps you understand, use, build on, and operate Ergo.
 
 Ergo is a proof-of-work smart-contract platform built around eUTXO, ErgoScript, Sigma protocols, and long-term economic sustainability. If those words are new, start with [What Is Ergo?](what-is-ergo.md).
 
+## Start Here
+
+- New to Ergo: [What Is Ergo?](what-is-ergo.md), then [Getting Started](getting-started-with-ergo.md).
+- Holding or using ERG: [Get a Wallet](wallets-overview.md), [Security Basics](security-basics.md), then [Using Ergo](using-ergo-intermediate.md).
+- Building software: [Building on Ergo](building-on-ergo-developers.md), then [Developer Overview](dev/get-started.md).
+- Running services: [Operate Infrastructure](operate-infrastructure.md), then [Deployment Runbook](node/deploy-runbook.md).
+- Mining: [Securing the Network](securing-the-network-miners.md), then [Mining Overview](mining/mining-overview.md).
+
 ## Choose Your Path
 
 | I want to... | Start here | Then go deeper |
@@ -47,10 +55,10 @@ Ergo is a proof-of-work smart-contract platform built around eUTXO, ErgoScript, 
     "url": "dev/get-started.md"
   },
   {
-    "title": "Deploy",
+    "title": "Operate",
     "content": "Nodes, API access, monitoring, backups, indexers, Rosen watchers, guards, and oracles.",
     "image": "./assets/img/grid/04.png",
-    "url": "node/deploy-runbook.md"
+    "url": "operate-infrastructure.md"
   },
   {
     "title": "Mine",

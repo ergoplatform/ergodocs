@@ -170,6 +170,7 @@ docs_env/*
 .clinerules
 memory-bank/
 tools/state/
+tools/discord_dev_digest/state/
 /node_modules
 .tmp_*/
 .cache/

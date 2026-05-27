@@ -11,7 +11,7 @@ tags:
 
 ## Overview
 
-Several experimental social and messaging apps were shared in the January 2026 development log. They use Ergo tokens and client-side apps instead of centralized accounts.
+Several experimental social and messaging apps use Ergo tokens and client-side apps instead of centralized accounts.
 
 ## Recent updates
 
@@ -29,7 +29,7 @@ Several experimental social and messaging apps were shared in the January 2026 d
 - Metadata is JSON with GPS coordinates, timestamp, tag, and proof-of-work nonce.
 - The browser computes client-side proof of work using location, timestamp, and wallet address; readers re-verify the proof and reject invalid reports.
 - GPS is truncated to neighborhood level and the app runs in-browser with no account system.
-- The source log describes fallback API endpoints and a "bring your own endpoint" model for resilience.
+- The app supports fallback API endpoints and a "bring your own endpoint" model for resilience.
 - The app is a single HTML file with embedded WASM. The host tab documents the token format and verification path so anyone can host a frontend, read reports from chain, or build a separate minter.
 - Expected report cost was described as about `$0.01` in ERG, with a small wallet balance lasting hundreds of reports.
 
@@ -56,7 +56,7 @@ Several experimental social and messaging apps were shared in the January 2026 d
 - v1.0 launched with Nautilus only and a weak "vanity" encryption mode that should not be treated as private.
 - v1.1 added passcode/passphrase encryption; users must share the passcode out of band.
 - The app is a single HTML file using Fleet SDK, Nautilus wallet API, and Ergo node box queries.
-- The v1.0 contract address shared in the log was `4HPn1j7Q26Y5PpqAqTH2gmKKPi8DT2b9JrpYqCgaeyc72hB4Vr4a6nQjkt3jAUZNKDcE32oN`.
+- The v1.0 contract address was `4HPn1j7Q26Y5PpqAqTH2gmKKPi8DT2b9JrpYqCgaeyc72hB4Vr4a6nQjkt3jAUZNKDcE32oN`.
 - If self-hosting the HTML app, the Nautilus connector requires HTTPS; IPFS hosting satisfies that requirement.
 
 ## Ergo Wallet Statement

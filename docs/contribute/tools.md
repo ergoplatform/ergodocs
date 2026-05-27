@@ -85,7 +85,7 @@ Use Markdown output for review notes:
 .venv/bin/python tools/structure_audit.py --markdown
 ```
 
-### `tools/discord_dev_digest.py`
+### `tools/discord_dev_digest/discord_dev_digest.py`
 
 Exports the Ergo Discord development channel with DiscordChatExporter and turns the chat log into docs-review leads.
 
@@ -94,6 +94,7 @@ Use it to:
 - export recent development chat from Discord
 - parse topics, URLs, and high-signal messages
 - map discussion topics to likely docs pages
+- switch analysis profiles for different review tasks
 - write a Codex-ready review prompt
 
 Default channel is Ergo's development channel. The tool reads `DISCORD_TOKEN` from `.env`, but never writes the token to reports.
@@ -101,24 +102,42 @@ Default channel is Ergo's development channel. The tool reads `DISCORD_TOKEN` fr
 Run a past-month scan:
 
 ```bash
-.venv/bin/python tools/discord_dev_digest.py scan --days 31
+.venv/bin/python tools/discord_dev_digest/discord_dev_digest.py scan --days 31
 ```
 
 Analyze an existing PlainText export:
 
 ```bash
-.venv/bin/python tools/discord_dev_digest.py analyze --input /path/to/export.txt
+.venv/bin/python tools/discord_dev_digest/discord_dev_digest.py analyze --input /path/to/export.txt
 ```
 
 Dry-run exporter path/date setup without calling Discord:
 
 ```bash
-.venv/bin/python tools/discord_dev_digest.py scan --days 31 --dry-run
+.venv/bin/python tools/discord_dev_digest/discord_dev_digest.py scan --days 31 --dry-run
 ```
 
-Reports are written under `tools/state/discord-dev-digest/`.
+Find ecosystem project leads from the past few months:
+
+```bash
+.venv/bin/python tools/discord_dev_digest/discord_dev_digest.py scan --days 120 --profile ecosystem
+```
+
+Audit all GitHub repositories linked in a Discord export and compare them with docs text:
+
+```bash
+.venv/bin/python tools/discord_dev_digest/discord_dev_digest.py analyze --profile github-links --input tools/discord_dev_digest/state/669989266478202917-after-2026-01-27.txt
+```
+
+Reports are written under `tools/discord_dev_digest/state/`.
 
 Treat Discord output as leads only. Verify claims against source repositories, issues, releases, EIPs, or maintainer confirmation before changing docs.
+
+External repositories that are useful for maintainer context but do not currently need user-facing Ergo project pages:
+
+- [Backlog.md](https://github.com/MrLesk/Backlog.md), [andrej-karpathy-skills](https://github.com/forrestchang/andrej-karpathy-skills), [claude-dbc](https://github.com/mwaddip/claude-dbc), and [nanoclaw](https://github.com/qwibitai/nanoclaw): external AI-agent and project-workflow tools useful only as maintainer workflow references.
+- [cmttk](https://github.com/mwaddip/cmttk), [otzi](https://github.com/mwaddip/otzi), and [n64llm-legend-of-Elya](https://github.com/sophiaeagent-beep/n64llm-legend-of-Elya): adjacent Cardano, Bitcoin, and AI-demo repositories.
+- [PocketFlow Tutorial Codebase Knowledge](https://github.com/The-Pocket/PocketFlow-Tutorial-Codebase-Knowledge): external codebase-to-tutorial tool that can help maintainers understand unfamiliar repositories before writing docs.
 
 ## Build Hooks
 
@@ -198,6 +217,7 @@ Current uses:
 
 - `tools/state/source-watch-baseline.json`: Source Watch baseline when `--update-baseline` is used.
 - `tools/state/memory-bank/`: legacy local notes moved out of the repository root.
+- `tools/discord_dev_digest/state/`: local Discord exports and generated reports.
 
 Do not put durable project rules in `tools/state/`. Use `AGENTS.md` and maintainer docs instead.
 

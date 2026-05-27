@@ -9,8 +9,9 @@ The Ergo Explorer is a tool that serves as an interface with the Ergo blockchain
 - The explorer backend was updated to Sigma 6.0.x, with versioned serializers, DEX API removal, and a fallback path for unparsable ErgoTrees.
 - If Rust parsing fails, the indexer tries `sigmastate-js` before giving up, which keeps older or irregular trees readable.
 - Frontend i18n work also moved forward in [PR #198](https://github.com/ergoplatform/explorer-frontend/pull/198).
+- Testnet explorer work includes [andrehafner/p2p-explorer-TESTNET](https://github.com/andrehafner/p2p-explorer-TESTNET), a testnet-oriented explorer clone used during the `testnet.ergoplatform.com` infrastructure move.
 
-The backend changes were intended to keep the explorer syncing when it encounters old or unusual ErgoTree templates. In the log, the fallback path hashes raw bytes instead of crashing, and custom indexer support was added for unparsable trees.
+The backend changes keep the explorer syncing when it encounters old or unusual ErgoTree templates. The fallback path hashes raw bytes instead of crashing, and custom indexer support was added for unparsable trees.
 
 The DEX-related API removal reflects a split between general explorer indexing and DEX-specific services. DEX consumers should use current DEX/Sigmaspace APIs rather than relying on removed explorer endpoints.
 

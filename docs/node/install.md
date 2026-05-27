@@ -99,6 +99,7 @@ For more convenience, Docker provides a streamlined way to install and run the E
 - [Ergosphere](https://ergosphere.cloud/): Ergosphere is an Umbrel-like solution that simplifies the setup of self-hosted Ergo services. Please note that it is currently in the BETA stage.
 - [Ergode](https://github.com/ross-weir/ergode) (ergo-node) is an Ergo node implementation in TypeScript, targeting web and native runtimes.
 - [Ergo Rust Node](rust-node.md) is an experimental Rust implementation that reached mainnet validation to tip during 2026 testing.
+- [Ergo Proxy](ergo-proxy.md) and [Ergo Relay](ergo-relay.md) are lightweight P2P/broadcast tools for relay experiments and transaction broadcast; they do not replace a validating full node.
 ///
 /// details | Resources
     {type: notes, open: false}

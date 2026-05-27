@@ -37,21 +37,22 @@ Currently, the two Sigma Protocols in use are [proof of discrete log](schnorr.md
 - Bulletproofs range-proof verification moved from issue/example work into the [sigmastate-interpreter 6.0.4 candidate](https://github.com/ergoplatform/sigmastate-interpreter/pull/1115).
 - [Curve Trees](https://github.com/a-shannon/ergo-research/tree/main/papers/curve-trees) research explored native Curve Trees verification on Ergo L1 using Sigma 6.0 `UnsignedBigInt` modular arithmetic. A [prototype](https://github.com/a-shannon/ergo-curve-trees) was deployed and verified on testnet.
 - The Curve Trees research notes were reorganized in February 2026 and updated for a V6 approach that replaces an anti-griefing bond with deterministic off-chain simulation, with added empirical validation and Pippenger-optimization notes.
-- Curve Trees caveats from the development log: a sigmastate-interpreter PR would need a TypeScript-to-Scala port; the prototype uses a static tree, has depth bounded by JIT cost, and does not yet support batch verification.
+- Curve Trees still has implementation caveats: a sigmastate-interpreter PR would need a TypeScript-to-Scala port; the prototype uses a static tree, has depth bounded by JIT cost, and does not yet support batch verification.
 - PERMAFROST work produced an interface for ML-DSA threshold signing with a relayer, encrypted ceremony blobs, custom manifests, and minimal theming.
 - STARK verification was discussed as a possible future sigmastate-interpreter primitive. The open question is whether full verification fits within the JIT cost budget in one block or needs multi-transaction chunking.
+- [Miden VM](https://github.com/0xMiden/miden-vm) is relevant external STARK VM research for possible ErgoTree-to-VM experiments. There is no production Ergo integration today.
 
-Curve Trees notes from the April log:
+Curve Trees implementation notes:
 
 - The prototype was deployed and verified on testnet before a Scala sigmastate-interpreter implementation existed.
-- Mainnet-like testing depends on testnet cost/size parameters. The log noted testnet still had a lower genesis `maxBlockCost` than mainnet and would need miner voting to align parameters.
+- Mainnet-like testing depends on testnet cost/size parameters. Testnet can have a lower genesis `maxBlockCost` than mainnet and may need miner voting to align parameters.
 - The relevant mainnet block-cost value was confirmed from node data, and block cost includes signature verification as well as script reduction budget.
 
-STARK discussion notes:
+STARK implementation notes:
 
 - A STARK verifier is structurally hash functions plus finite-field arithmetic: Merkle paths, FRI folding consistency, and DEEP-ALI constraint composition.
-- The discussion framed this as potentially implementable using existing hash functions plus `UnsignedBigInt` modular arithmetic, but cheaper if exposed as native verification.
-- No STARK implementation or EIP was completed in the log period.
+- A verifier may be possible with existing hash functions plus `UnsignedBigInt` modular arithmetic, but native verification would likely be cheaper.
+- There is no finalized STARK verifier EIP or production implementation.
 
 These composable proofs, when combined with a blockchain, enable powerful use cases. The logic for proofs can include conditions based on the blockchain state. For example, 'If the deadline block height has been reached, Alice can provide knowledge of a secret key for a refund. OR a ring signature from Alice and Bob is required to spend coins.' Or 'If this account holds a minimum of 100 ERG, Alice OR Bob can remove funds above that amount.'
 

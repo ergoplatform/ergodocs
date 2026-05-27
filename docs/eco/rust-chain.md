@@ -64,6 +64,7 @@ During ErgoHack 10, RustChain achieved significant milestones:
 ### 7. Links
 
 * [Github](https://github.com/Scottcjn/Rustchain)
+* [RustChain bounties](https://github.com/Scottcjn/rustchain-bounties)
 * **GitHub Repository:** [https://github.com/Scottcjn/sophia-rustchain-bridge](https://github.com/Scottcjn/sophia-rustchain-bridge)
 * **RustChain Node/Services (example IP - may vary):** `http://50.28.86.131/`
 * **API (example):** `http://50.28.86.131:8085/`

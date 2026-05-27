@@ -6,6 +6,15 @@ tags:
 - Decentralized
 - dApp
 - Celaut
+owner: docs
+last_reviewed: 2026-05-27
+source_repos:
+  - repo: reputation-systems/forum-application
+    branch: master
+    paths:
+      - README.md
+source_of_truth:
+  - https://github.com/reputation-systems/forum-application
 ---
 
 # Reputation System
@@ -119,6 +128,8 @@ This reputation system directly powers Celaut’s trust layer:
 * **Browser Interface**: [Sigma Reputation Panel](https://reputation-systems.github.io/sigma-reputation-panel/) provides a user-friendly interface to browse, assign, and verify reputation records.
 
 * **Library Integration**: Developers can use the [Sigma Reputation Panel Library](https://github.com/reputation-systems/sigma-reputation-panel) to build bots and services that interact directly with the reputation system. This supports automated evaluation, staking, and advanced analytics.
+
+* **Forum Application**: [reputation-systems/forum-application](https://github.com/reputation-systems/forum-application) provides a forum-style application and library around reputation-system interactions.
 
 ---
 

@@ -34,7 +34,7 @@ This page is the quick map for people or agents maintaining ErgoDocs.
 ## Tools
 
 - `tools/source_watch.py`: validates `source_repos` metadata and scans watched GitHub paths for commits.
-- `tools/discord_dev_digest.py`: exports Discord development chat and prepares source-verification leads for docs updates.
+- `tools/discord_dev_digest/discord_dev_digest.py`: exports Discord development chat and prepares source-verification leads for docs updates.
 - `tools/nav_audit.py`: checks navigation coverage and obvious nav problems.
 - `tools/structure_audit.py`: checks section structure, orphan pages, and duplicate labels.
 - `tools/hooks.py`: MkDocs hook code used during rendering.
@@ -90,7 +90,8 @@ Issue and PR templates:
 
 - `docs/`: published Markdown docs and internal maintainer docs.
 - `tools/`: maintenance scripts and review prompts.
-- `tools/state/`: ignored local/generated tool state. Source Watch uses `tools/state/source-watch-baseline.json` as its default baseline when scans are updated. Legacy local memory-bank files may live under `tools/state/memory-bank/`.
+- `tools/state/`: ignored local/generated shared tool state. Source Watch uses `tools/state/source-watch-baseline.json` as its default baseline when scans are updated. Legacy local memory-bank files may live under `tools/state/memory-bank/`.
+- `tools/discord_dev_digest/state/`: ignored local Discord exports and digest reports.
 - `overrides/`: MkDocs Material theme overrides. Keep this; `mkdocs.yml` uses it through `custom_dir: overrides`.
 - `site/`: generated MkDocs build output. Do not edit by hand.
 - `.venv/`: local Python virtualenv. Do not commit.

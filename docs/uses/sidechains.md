@@ -3,6 +3,15 @@ tags:
   - Sidechains
   - NiPoPoWs
   - Sigma Chains
+owner: docs
+last_reviewed: 2026-05-27
+source_repos:
+  - repo: BetterMoneyLabs/braid
+    branch: master
+    paths:
+      - whitepaper/whitepaper.pdf
+source_of_truth:
+  - https://github.com/BetterMoneyLabs/braid/blob/master/whitepaper/whitepaper.pdf
 ---
 
 # Sidechains on Ergo: Leveraging Sigma Chains and NiPoPoWs
@@ -13,6 +22,8 @@ Ergo's robust architectural design supports the innovative development of sidech
 
 Explore recent advancements in sidechain technology through the [ErgoHack VII project](https://github.com/ross-weir/ergohack-sidechain/tree/main), which focuses on implementing sidechains in Ergo.
 ///
+
+Adjacent research also includes [Braid](sidechains/braid.md), a double merged-mined Bitcoin and Ergo sidechain design. Treat it as research material rather than a deployed Ergo sidechain.
 
 ## What is a Sidechain?
 

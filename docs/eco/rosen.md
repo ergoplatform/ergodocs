@@ -6,6 +6,46 @@ tags:
   - Interoperability
   - dApp
   - dApp-Beta
+owner: docs
+last_reviewed: 2026-05-27
+source_repos:
+  - repo: rosen-bridge/watcher
+    branch: master
+    paths:
+      - README.md
+  - repo: rosen-bridge/guard-service
+    branch: master
+    paths:
+      - README.md
+  - repo: rosen-bridge/ui
+    branch: master
+    paths:
+      - README.md
+  - repo: rosen-bridge/rosen-sdk
+    branch: dev
+    paths:
+      - README.md
+  - repo: rosen-bridge/rosenet
+    branch: dev
+    paths:
+      - README.md
+  - repo: rosen-bridge/sign-protocols
+    branch: dev
+    paths:
+      - README.md
+  - repo: rosen-bridge/cleanup-service
+    branch: dev
+    paths:
+      - README.md
+source_of_truth:
+  - https://github.com/rosen-bridge/watcher/releases/tag/6.2.1
+  - https://github.com/rosen-bridge/guard-service/releases/tag/9.1.1
+  - https://github.com/rosen-bridge/ui/releases/tag/rosen-service-4.3.5
+  - https://github.com/rosen-bridge/rosen-sdk
+  - https://github.com/rosen-bridge/rosenet
+  - https://github.com/rosen-bridge/sign-protocols
+  - https://github.com/rosen-bridge/rosen-chains
+  - https://github.com/rosen-bridge/cleanup-service
 ---
 # Rosen Bridge: The Future of Cross-Chain Asset Transfers
 
@@ -27,7 +67,11 @@ Please see [this video](https://www.youtube.com/watch?v=Xsiy-yPJQ6w) for a visua
 ## Recent updates
 
 - `Feb 11` to `Apr 22`: Firo and Handshake integrations moved through watcher, guard-service, and rosen-service updates.
-- `Apr 15`: [watcher service v6.1.1](https://github.com/rosen-bridge/watcher/releases/tag/6.1.1) and [guard service v9.0.0](https://github.com/rosen-bridge/guard-service/releases/tag/9.0.0) were released.
+- Watcher releases have moved through [6.2.1](https://github.com/rosen-bridge/watcher/releases/tag/6.2.1), including a Bitcoin Runes observation fix for Unisat pagination.
+- Guard service releases have moved through [9.1.1](https://github.com/rosen-bridge/guard-service/releases/tag/9.1.1), with dependency updates for Bitcoin Runes RPC support.
+- Rosen UI/service releases have moved through `rosen-service-4.3.5` in the [Rosen UI repository](https://github.com/rosen-bridge/ui/releases/tag/rosen-service-4.3.5).
+- Rosen shared packages also moved through [rosen-sdk](https://github.com/rosen-bridge/rosen-sdk), [rosenet](https://github.com/rosen-bridge/rosenet), and [sign-protocols](https://github.com/rosen-bridge/sign-protocols) updates. The older [rosen-chains](https://github.com/rosen-bridge/rosen-chains) package repository is archived; chain packages moved into guard-service.
+- [cleanup-service](https://github.com/rosen-bridge/cleanup-service) is Rosen infrastructure for cleanup flows such as fraud and slash transactions.
 - `Apr 22`: Rosen stats work added TVL, volume, locked-assets, and user-count metrics, while the app also picked up React 19, Sentry, and live-data improvements.
 - The new rosen-service also added Bitcoin Runes support.
 

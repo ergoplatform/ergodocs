@@ -10,6 +10,15 @@ tags:
   - cryptography
   - secp256k1
   - k256
+owner: docs
+last_reviewed: 2026-05-27
+source_repos:
+  - repo: arobsn/keystone-ergo-js
+    branch: master
+    paths:
+      - README.md
+source_of_truth:
+  - https://github.com/arobsn/keystone-ergo-js
 ---
 
 # Hardware Wallet Integration with sigma-rust
@@ -68,6 +77,10 @@ The essential functions needed for basic hardware wallet support typically inclu
 * **Transaction Parsing:** Securely parsing transaction details for display and user confirmation.
 * **Transaction Signing:** Signing the transaction digest using the derived private key. This is the most critical part and must use the hardware wallet's secure key storage and signing mechanism.
 * **ErgoTree Serialization/Hashing:** Potentially needed for constructing parts of the transaction message to be signed.
+
+## Keystone Serialization Work
+
+[keystone-ergo-js](https://github.com/arobsn/keystone-ergo-js) is an experimental JavaScript reference for Ergo transaction serialization in Keystone-style hardware-wallet flows. Treat it as integration reference material, not a complete wallet standard.
 
 ## Conclusion
 
