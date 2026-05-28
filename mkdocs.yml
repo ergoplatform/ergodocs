@@ -3,6 +3,35 @@ site_url: https://docs.ergoplatform.com
 repo_url: https://github.com/glasgowm148/ergodocs
 edit_uri: edit/main/docs/
 site_description: Ergo Platform Documentation
+exclude_docs: |
+  README.md
+  archive.md
+  awesome-ergo.md
+  prompt.md
+  tags.md
+  todo.md
+  archive/## What are Ergo's future plans, especia.md
+  archive/dApp-dev.md
+  archive/ergo-foundation-2022.md
+  archive/getting-started.md
+  archive/interoperability.md
+  archive/interview.md
+  archive/node-config.md
+  archive/notes.md
+  archive/off-chain.md
+  archive/prompt.md
+  archive/quick.md
+  archive/todo.md
+  archive/use.md
+  archive/categories/categories-overview.md
+  archive/dev/scs/ergoscript-primer.md
+  archive/dev/scs/powerful_but_safe.md
+  archive/dev/scs/smart-contracts-overview.md
+  archive/ef/transparency-report.md
+  archive/mining/algorithm.md
+  archive/mining/merged.md
+  categories/index.md
+  start-here/why-ergo.md
 
 theme:
   name: material

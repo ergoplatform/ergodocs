@@ -4,7 +4,7 @@ tags:
   - Smart Contracts
   - Sigma Protocols
 owner: docs
-last_reviewed: 2026-05-26
+last_reviewed: 2026-05-28
 source_repos:
   - repo: ergoplatform/sigma-rust
     branch: develop
@@ -18,6 +18,10 @@ source_repos:
     branch: main
     paths:
       - README.md
+      - SPEC.md
+      - THREAT_MODEL.md
+      - LIMITATIONS.md
+      - test-vectors
 source_of_truth:
   - https://github.com/ergoplatform/sigma-rust/tree/develop/ergoscript-compiler
   - https://github.com/ergoplatform/sigmastate-interpreter/tree/develop/docs/perf-style-guide.md
@@ -133,7 +137,7 @@ ErgoScript's features enable the implementation of complex contract patterns:
 
 * **[Finite State Machines (FSMs)](fsm-example.md):** Learn how to model multi-stage contracts where behavior depends on the current state encoded within a box.
 * **[Merkleized Abstract Syntax Trees (MAST)](mast-example.md):** Explore techniques to improve privacy and efficiency for contracts with many spending conditions by revealing only the executed script branch.
-* **[Bitcoin transaction parser reference](https://github.com/odiseusme/btc-tx-parser-reference):** Community reference code for `ergoplatform/sigmastate-interpreter#1114`, with Python parsing and ErgoScript building blocks for Bitcoin transaction parsing. It is research/reference code, not a core language feature.
+* **[Bitcoin transaction parser reference](https://github.com/odiseusme/btc-tx-parser-reference):** Community reference code for `ergoplatform/sigmastate-interpreter#1114`, with Python parsing, public vectors, threat-model notes, an AppKit compilation harness, and ErgoScript building blocks for bounded Bitcoin transaction-object parsing. It is research/reference code, not a Bitcoin bridge, Bitcoin finality verifier, or core language feature.
 
 ## Common Use Cases
 

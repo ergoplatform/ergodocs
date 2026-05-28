@@ -14,7 +14,7 @@ The choice to build upon the UTXO model brings several significant advantages to
 
 - **[Privacy](zkp.md)**: UTXOs being one-time objects allow for formalized privacy measures, enhancing user confidentiality.
 - **[Scalability](scaling.md)**: UTXO's inherent design supports parallel transaction processing, making it simpler to scale the network. Additionally, UTXOs are more compatible with stateless client solutions like [NIPoPoWs](nipopows.md).
-- **[Interoperability](use-cases-overview.md#infrastructure)**: UTXOs are well-suited for [off-chain](off-chain.md) and [sidechain](sidechains.md) protocols, enabling seamless integration with various solutions beyond the main chain.
+- **[Interoperability](use-cases-overview.md#infrastructure)**: UTXOs are well-suited for [off-chain](off-chain-overview.md) and [sidechain](sidechains.md) protocols, enabling seamless integration with various solutions beyond the main chain.
 - **Transaction Cost Predictability**: In Ergo, the on-chain action is primarily focused on validating smart contracts, resulting in significantly lower [transaction costs](min-fee.md). Moreover, the transaction costs are predictable, eliminating the need for gas-like mechanisms found in other platforms.
 
 By leveraging the advantages of UTXO and extending its capabilities with eUTXO, Ergo provides a powerful and efficient platform for building and executing smart contracts.

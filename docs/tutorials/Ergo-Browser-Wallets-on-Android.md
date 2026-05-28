@@ -29,17 +29,16 @@ However, it is important to set realistic expectations:
 The following Android browsers support installing Chrome extensions and can run Ergo wallet extensions:
 
 - **Quetta Browser** 
-  Download: https://www.quetta.net/
+  Download: [quetta.net](https://www.quetta.net/)
 
 - **Mises Browser** 
-  Download: https://www.mises.site/
+  Download: [mises.site](https://www.mises.site/)
 
 - **Lemur Browser** 
-  Download: https://lemurbrowser.com/app/en.html
+  Download: [lemurbrowser.com](https://lemurbrowser.com/app/en.html)
 
 - **Kiwi Browser** *(discontinued — use with caution)* 
-  Source code and builds: 
-  https://github.com/kiwibrowser/src.next
+  Source code and builds: [kiwibrowser/src.next](https://github.com/kiwibrowser/src.next)
 
 ---
 
@@ -52,17 +51,14 @@ The steps below describe how to install and use the **Nautilus** or **Safew** Er
 ### Option 1: Quetta Browser
 
 1. **Install Quetta Browser**
-   - Download Quetta Browser from: 
-     https://www.quetta.net/
+   - Download [Quetta Browser](https://www.quetta.net/).
    - Install the APK and open the browser.
 
 2. **Install the Wallet Extension**
    - After completing the initial setup tour, you will see a **Chrome Web Store shortcut** on the homepage.
    - Use this shortcut, or navigate manually to the Chrome Web Store and search for your preferred wallet:
-     - Nautilus: 
-       https://chromewebstore.google.com/detail/nautilus-wallet/gjlmehlldlphhljhpnlddaodbjjcchai
-     - Safew: 
-       https://chromewebstore.google.com/detail/safew-simple-and-fast-erg/fmpbldieijjehhalgjblbpgjmijencll
+     - [Nautilus on Chrome Web Store](https://chromewebstore.google.com/detail/nautilus-wallet/gjlmehlldlphhljhpnlddaodbjjcchai)
+     - [Safew on Chrome Web Store](https://chromewebstore.google.com/detail/safew-simple-and-fast-erg/fmpbldieijjehhalgjblbpgjmijencll)
    - Tap **Add to Chrome** in the top-right corner and confirm installation.
 
 3. **Verify Installation**
@@ -83,8 +79,7 @@ The steps below describe how to install and use the **Nautilus** or **Safew** Er
 ### Option 2: Mises Browser
 
 1. **Install Mises Browser**
-   - Download Mises Browser from: 
-     https://www.mises.site/
+   - Download [Mises Browser](https://www.mises.site/).
    - Install and launch the browser.
 
 2. **Open the Extension Manager**
@@ -94,10 +89,8 @@ The steps below describe how to install and use the **Nautilus** or **Safew** Er
 
 3. **Install the Wallet Extension**
    - Navigate to the Chrome Web Store:
-     - Nautilus: 
-       https://chromewebstore.google.com/detail/nautilus-wallet/gjlmehlldlphhljhpnlddaodbjjcchai
-     - Safew: 
-       https://chromewebstore.google.com/detail/safew-simple-and-fast-erg/fmpbldieijjehhalgjblbpgjmijencll
+     - [Nautilus on Chrome Web Store](https://chromewebstore.google.com/detail/nautilus-wallet/gjlmehlldlphhljhpnlddaodbjjcchai)
+     - [Safew on Chrome Web Store](https://chromewebstore.google.com/detail/safew-simple-and-fast-erg/fmpbldieijjehhalgjblbpgjmijencll)
    - Tap **Add to Chrome** and approve the requested permissions.
 
 4. **Access the Wallet**
@@ -129,41 +122,48 @@ This slightly more advanced method of using Nautilus or SAFEW wallets on Android
 
 1. **Download Termux**
    - Termux must be downloaded from F-Droid. The play store version is incompatible.
-   - Download Termux from F-Droid:
-     https://f-droid.org/packages/com.termux/
+   - Download [Termux from F-Droid](https://f-droid.org/packages/com.termux/).
 
 2. **Download Termux-X11**
    - Termux-X11 is an X server app that will display the desktop environment.
-   - Download the latest release of Termux-X11 from:
-     https://github.com/termux/termux-x11/releases/tag/nightly
+   - Download the [latest Termux-X11 nightly release](https://github.com/termux/termux-x11/releases/tag/nightly).
    - Select the correct apk for your devices architecture, and when its finished downloading, install the apk.
   
 3. **Open Termux and Update**
    - Open the Termux app for the first time. It will install the bootstrap system, and configure itself.
-   - Optionally, at this time you can install other packages which may be useful in the desktop environment later, such as termux-setup-storage, pulseaudio, etc.
-   - update Termux:
-     ```pkg update -y && pkg upgrade -y```
-   - During the update, you may be prompted to confirm some settings. It is ok to choose the default by simply pressing enter.
+   - Optionally install other useful packages for the desktop environment, such as `termux-setup-storage` or `pulseaudio`.
+   - Update Termux:
+     ```bash
+     pkg update -y && pkg upgrade -y
+     ```
+   - During the update, you may be prompted to confirm some settings. It is ok to choose the default by pressing enter.
 
 4. **Install the Desktop Environment and Browser**
-   - Now it is time to install the desktop environment and browser. For this guide, I will choose XFCE and firefox.
-   - First, add the X-11 repository, and then install the termux-x11 package, which will add X graphics in Termux. Here are the commands:
-   ```pkg i x11-repo -y && pkg i termux-x11-nightly -y```
+   - This guide uses XFCE and Firefox.
+   - First, add the X11 repository and install the `termux-x11` package:
+     ```bash
+     pkg i x11-repo -y && pkg i termux-x11-nightly -y
+     ```
    - Second, install the desktop environment (XFCE) and browser (Firefox) with this command:
-     ```pkg i xfce firefox -y```
+     ```bash
+     pkg i xfce firefox -y
+     ```
 
 5. **Start the Desktop Environment**
    - On most devices the following command will start the desktop environment, and launch the Termux X-11 app. Start command:
-   ```am start --user 0 -n com.termux.x11/com.termux.x11.MainActivity > /dev/null 2>&1 && sleep 1 && termux-x11 :1 -xstartup "dbus-launch --exit-with-session xfce4-session"```
+     ```bash
+     am start --user 0 -n com.termux.x11/com.termux.x11.MainActivity > /dev/null 2>&1 && sleep 1 && termux-x11 :1 -xstartup "dbus-launch --exit-with-session xfce4-session"
+     ```
    - And for older android devices, if above command doesnt work:
-   ```am start --user 0 -n com.termux.x11/com.termux.x11.MainActivity > /dev/null 2>&1 && sleep 1 && env DISPLAY=:0 dbus-launch --exit-with-session xfce4-session```
+     ```bash
+     am start --user 0 -n com.termux.x11/com.termux.x11.MainActivity > /dev/null 2>&1 && sleep 1 && env DISPLAY=:0 dbus-launch --exit-with-session xfce4-session
+     ```
 
 6. **Launch Desktop Browser, Install Nautilus or SAFEW**
    - Familiarize yourself with the inputs of the Termux X-11 desktop environment. The screen acts as a trackpad, which controls the mouse pointer. A tap on the screen for left click, two finger tap for right click, selecting a text box and raising the onscreen keyboard and typing will enter text as expected.
    - Navigate to the applications menu located at the top left of the screen on the panel.
    - Launch Firefox by selecting it in the applications menu. It can be found under **Internet**
-   - Go though Firefox's initial setup, then visit the Firefox addons store and install/enable your desired wallet. Here is the addons page for Nautilus:
-     https://addons.mozilla.org/en-US/firefox/addon/nautilus
+   - Go though Firefox's initial setup, then install [Nautilus from Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/nautilus/).
 
 7. **Initialize and Use the Wallet**
    - The wallet extension can be found at the top right of Firefox, under the puzzle piece icon.

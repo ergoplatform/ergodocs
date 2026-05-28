@@ -117,7 +117,7 @@ The Account model of Ethereum is imperative, meaning that sending coins from Ali
 
 ### Introduction
 
-- [Quick Primer](ergoscript-primer.md)
+- [ErgoScript](ergoscript.md)
 - [Core Concepts of ErgoScript](ergoscript-key-concepts.md)
 - [Sigma Language](sigma-lang.md)
 - [Creating a Simple Pay-to-Script App](p2s.md)

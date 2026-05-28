@@ -50,7 +50,7 @@ Remember, learning is a continuous journey, and the Ergo ecosystem is constantly
 
 ErgoScript is a powerful scripting language that enables the creation of flexible crypto-contracts based on Sigma Protocols, a class of Zero-Knowledge Proofs. Learning ErgoScript is crucial for understanding and developing on the Ergo blockchain. Here are some resources to help you get started:
 
-- **[ErgoScript Primer](ergoscript-primer.md)**: A quick introduction to ErgoScript and its core concepts.
+- **[ErgoScript](ergoscript.md)**: A quick introduction to ErgoScript and its core concepts.
 - **[Sigma Language](sigma-lang.md)**: Learn about the Sigma Language, the foundation of ErgoScript.
 - **[Creating a Simple Pay-to-Script App](p2s.md)**: A hands-on tutorial for creating a simple pay-to-script application.
 - **[Experimenting with ErgoScript](get-started.md#experimenting)**: Explore various tools and platforms for experimenting with ErgoScript, such as escript.online, PlutoMonkey, Scastie, Kiosk, and Ergo-Puppet.

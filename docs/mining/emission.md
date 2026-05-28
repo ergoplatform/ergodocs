@@ -25,7 +25,7 @@ The Treasury's funds were governed by a smart contract that released ERGs gradua
 
 ## Ergo Foundation
 
-The Ergo Foundation is dedicated to protocol development, ecosystem growth, promoting the use of Ergo for social good, supporting decentralized infrastructure, and upholding privacy rights. The Foundation's Treasury, which received 4.43% of the total ERG emission, is utilized to support a wide range of initiatives. For more detailed information, refer to the [transparency report](ergo-foundation-2022.md).
+The Ergo Foundation is dedicated to protocol development, ecosystem growth, promoting the use of Ergo for social good, supporting decentralized infrastructure, and upholding privacy rights. The Foundation's Treasury, which received 4.43% of the total ERG emission, is utilized to support a wide range of initiatives. For more detailed information, refer to the [treasury](ef-treasury.md) page.
 
 ## Mining and Emission Duration
 

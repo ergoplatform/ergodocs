@@ -28,4 +28,4 @@ The Ergo Raffle [documentation](https://github.com/ErgoRaffle/raffle-documentati
 ## Payments
 
 - [ErgoPay](ergo-pay.md)
-- [dApp Connector](dApp-dev.md)
+- [dApp Connector](dApp.md)

@@ -73,7 +73,7 @@ In the context of our project, which was launched with fairness at its core, the
 
 ## Run your own grid bots
 
-There are several tools that let you run grid bots within and outwith Ergo, see [This section in the Off Chain Article](off-chain.md#bots-for-automated-trading-and-order-matching) for more information.
+There are several tools that let you run grid bots within and outwith Ergo. See [Off-Chain Overview](off-chain-overview.md) for more information.
 
 ## Conclusion
 

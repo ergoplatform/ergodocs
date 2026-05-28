@@ -97,7 +97,7 @@ This contract is an example of a **3-out-of-5** threshold signature scheme. It c
 
 ### 5. **Decentralized Mixers**
 
-**[ErgoMixer](ergomixer.md)** is an advanced, non-custodial token [mixer](mixer.md) based on Σ-protocols. It leverages ring signatures and [zero-knowledge proofs](zkp.md) to provide enhanced privacy while ensuring that no third party is needed to manage or approve the mixing process. [SigmaJoin](sigmajoin.md), an [off-chain](off-chain.md) implementation concept related to ErgoMixer, further extends the idea of trustless and decentralized privacy mechanisms.
+**[ErgoMixer](ergomixer.md)** is an advanced, non-custodial token [mixer](mixer.md) based on Σ-protocols. It leverages ring signatures and [zero-knowledge proofs](zkp.md) to provide enhanced privacy while ensuring that no third party is needed to manage or approve the mixing process. [SigmaJoin](sigmajoin.md), an [off-chain](off-chain-overview.md) implementation concept related to ErgoMixer, further extends the idea of trustless and decentralized privacy mechanisms.
 
 ---
 

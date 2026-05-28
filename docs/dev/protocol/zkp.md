@@ -66,6 +66,6 @@ Ergo prioritizes a rich [smart-contract](ergoscript.md) language, and with non-o
 
 There are numerous reasons why someone might want optional privacy. Transparent ledgers are a feature for many use cases, such as charities that want everyone to have full access to the flow of funds.
 
-Optional privacy also has strong arguments for adoption and regulation. [ErgoMixer](ergomixer.md) is non-interactive, so it works with the blockchain alone; no [off-chain](off-chain.md) coordination with others (and a trusted coordinator) is needed.
+Optional privacy also has strong arguments for adoption and regulation. [ErgoMixer](ergomixer.md) is non-interactive, so it works with the blockchain alone; no [off-chain](off-chain-overview.md) coordination with others (and a trusted coordinator) is needed.
 
 In the future, the community could enable privacy by default for every [transaction](transactions.md) in Ergo. Or we'll see integration mix-nets and other novel ideas on the application layer.

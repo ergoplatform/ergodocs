@@ -63,7 +63,7 @@
 * **Empowerment**: The act of enabling and supporting community members to take an active role in the growth and innovation of the Ergo ecosystem.
 * **[Ergo Improvement Proposals (EIPs)](eip.md)**: A set of guidelines and standards used for proposing and implementing continuous improvements to Ergo.
 * **Ergo Forum**: A platform for discussions and communication within the Ergo community.
-* **[Ergo Foundation ('EF')](ergo-foundation-2022.md)**: A non-profit, community-driven entity focused on promoting the development and adoption of Ergo.
+* **[Ergo Foundation ('EF')](ergo-foundation.md)**: A non-profit, community-driven entity focused on promoting the development and adoption of Ergo.
 * **[ErgoScript](ergoscript.md)**: The scripting language used in Ergo's smart contracts.
 * **[Ergo's Social Contract](social_contract.md)**: The set of main principles that should be followed in the Ergo protocol, defining its core values and guiding philosophy.
 * **[Ergo Summit](ergosummit.md)**: An event or conference focused on Ergo blockchain-related topics.
@@ -102,7 +102,7 @@
 * **[Incentives](contribute.md)**: Mechanisms designed to encourage specific behaviors, such as mining or developing on the Ergo network.
 * **Infographic**: A visual representation of information or data designed to make complex concepts more understandable.
 * **Interface**: A user-friendly platform or program that allows users to interact with a system or application.
-* **[Interoperability](interoperability.md)**: UTXOs are well-suited for off-chain and sidechain protocols, enabling seamless integration with various solutions beyond the main blockchain, promoting interoperability.
+* **[Interoperability](rosen.md)**: UTXOs are well-suited for off-chain and sidechain protocols, enabling seamless integration with various solutions beyond the main blockchain, promoting interoperability.
 * **Internal Promotions**: The process of filling roles, such as paid community manager positions, from within the existing Ergo community based on demonstrated skills and contributions.
 
 ## J
@@ -186,7 +186,7 @@
 * **Scripting Language**: A programming language used to specify the rules for spending cryptocurrency. ErgoScript is designed to support various features like ring signatures, atomic swaps, and more.
 * **[Security Audit](audit.md)**: A comprehensive assessment conducted to evaluate the security of certain components or aspects of Ergo. The goal is to identify vulnerabilities, weaknesses, and potential risks in the system.
 * **Seed Phrase**: A set of words used to back up and restore a cryptocurrency wallet; it is crucial for wallet recovery.
-* **[Sharding](tags.md)**: A scaling technique that divides the blockchain into smaller, parallel chains to increase throughput while maintaining security.
+* **Sharding**: A scaling technique that divides the blockchain into smaller, parallel chains to increase throughput while maintaining security.
 * **Shared Figma Graphic Space**: A collaborative platform where community members can work together on visual content and design projects related to Ergo.
 * **[Sidechain](sidechains.md)**: A separate blockchain connected to the main blockchain, allowing for different features and scalability.
 * **[Sigma Protocols](sigma.md)**: A set of cryptographic protocols forming the backbone of Ergo's smart contracts. They enable efficient zero-knowledge proofs, enhancing privacy and trustlessness.
@@ -210,7 +210,7 @@
 * **Tor (The Onion Router)**: A network that enables anonymous communication and web browsing by routing internet traffic through a series of servers and relays.
 * **[Transaction](transactions.md)**: An exchange of data or value between participants on a blockchain network, typically involves the transfer of cryptocurrency.
 * **Transaction Size**: The size limit for transactions in the mempool, which miners can adjust to balance transaction processing capacity and the computational load on nodes.
-* **[Transparency Report](ergo-foundation-2022.md)**: A document that provides a comprehensive overview of financial activities and expenditures, ensuring openness and accountability.
+* **[Transparency Report](ef-treasury.md)**: A document that provides a comprehensive overview of financial activities and expenditures, ensuring openness and accountability.
 * **Treasury**: The funds set aside by the Ergo Foundation to support the growth and development of the Ergo ecosystem.
 * **Turing-Complete**: A property of a computational system that can simulate a Turing machine, indicating that it can perform any computation that a Turing machine can, given enough resources.
 * **TVL (Total Value Locked)**: a measure of the total funds (cryptocurrency) locked in a specific protocol or smart contract in the DeFi ecosystem.

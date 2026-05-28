@@ -84,7 +84,7 @@ Ergo's success is not dependent on venture capital (VC) investment. While VC fun
 
 ### The Foundation is centralized
 
-The Ergo Foundation provides guidance in the early stages of the network, but its influence is transitional. As the network matures, the Foundation's role diminishes, paving the way for a fully community-driven ecosystem. For more information please see the [Ergo Foundation Transparency Report](ergo-foundation-2022.md)
+The Ergo Foundation provides guidance in the early stages of the network, but its influence is transitional. As the network matures, the Foundation's role diminishes, paving the way for a fully community-driven ecosystem. For more information please see the [Ergo Foundation](ergo-foundation.md) and [Treasury](ef-treasury.md) pages.
 
 ### Ergo could not operate without its foundation
 
@@ -106,7 +106,7 @@ Ergo's status under the SEC's regulations is a gray area, as is the case with ma
 
 ### The Foundation's actions are causing price depreciation
 
-The Ergo Foundation's monthly expenses are a minuscule portion of the total trading volume, equivalent to the mining rewards of 1-2 days. Most of these expenses are paid in ERG, meaning there are minimal direct liquidations. The recipients of these payments have the freedom to manage them as they see fit. It's worth noting that our developers often work for compensation below the market rate. For a detailed breakdown of the Foundation's expenditures, refer to the [Ergo Foundation 2022 Transparency Report](ergo-foundation-2022.md).
+The Ergo Foundation's monthly expenses are a minuscule portion of the total trading volume, equivalent to the mining rewards of 1-2 days. Most of these expenses are paid in ERG, meaning there are minimal direct liquidations. The recipients of these payments have the freedom to manage them as they see fit. It's worth noting that our developers often work for compensation below the market rate. For a broader breakdown of the Foundation's resources and role, refer to the [Treasury](ef-treasury.md) and [Foundation](ergo-foundation.md) pages.
 
 ## Ecosystem
 

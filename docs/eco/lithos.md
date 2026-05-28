@@ -7,7 +7,7 @@ tags:
   - dApp
   - dApp-InDev
 owner: docs
-last_reviewed: 2026-05-27
+last_reviewed: 2026-05-28
 source_repos:
   - repo: Lithos-Protocol/Lithos-Client
     branch: master
