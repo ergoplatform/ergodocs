@@ -21,12 +21,12 @@ Ensuring economic freedom for ordinary people through decentralized, private and
   {
     "title": "Contributing",
     "content": "Ergo operates an open model where contributions from all are welcomed. Participate in decentralised finance!",
-    "url": "contribute.md"
+    "url": "../../contribute.md"
   },
   {
     "title": "FAQ",
     "content": "Check out the Frequently Asked Questions",
-    "url": "faq.md"
+    "url": "../../faq.md"
   }
 
 ]
@@ -43,7 +43,7 @@ Ensuring economic freedom for ordinary people through decentralized, private and
   {
     "title": "Autolykos",
     "content": "The underlying Memory-hard ASIC-resistant **Proof of Work** (PoW) algorithm oriented towards GPUs. ",
-    "url": "autolykos.md"
+    "url": "../../mining/autolykos.md"
   },
   {
     "title": "eUTXO",
@@ -73,12 +73,12 @@ Ensuring economic freedom for ordinary people through decentralized, private and
   {
     "title": "ErgoScript",
     "content": "A simple high-level language enabling clear descriptions of contractual logic.",
-    "url": "ergoscript.md"
+    "url": "../scs/ergoscript.md"
   },
   {
     "title": "Uses Cases",
     "content": "From oracles to alternative economic systems.",
-    "url": "use-cases-overview.md"
+    "url": "../../uses/use-cases-overview.md"
   }
 
 ]

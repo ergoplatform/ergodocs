@@ -59,7 +59,7 @@ The table size (**N** value) evolves over time as follows:
 [
   {
     "title": "Start Mining",
-    "url": "join.md",
+    "url": "setup/join.md",
     "content": "Getting setup with a mining pool."
   },
   {

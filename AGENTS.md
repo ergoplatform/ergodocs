@@ -31,10 +31,12 @@
 - `tools/source_watch.py`: source-linked docs scanner.
 - `tools/discord_dev_digest/discord_dev_digest.py`: exports Discord development chat and generates source-verification leads.
 - `tools/discord_dev_digest/state/`: ignored local Discord exports and digest reports.
+- `tools/weekly_docs_prs.py`: opens/updates per-page source-review issues from Source Watch JSON.
 - `tools/nav_audit.py`: navigation coverage check.
 - `tools/structure_audit.py`: section structure check.
 - `.github/workflows/docs-quality.yml`: PR build and docs audit workflow.
 - `.github/workflows/source-watch.yml`: scheduled watched-source scan and issue creation.
+- `.github/workflows/weekly-discord-docs.yml`: Friday Discord lead scan, artifact upload, weekly tracking issue, and per-page source-review issues.
 - `.github/workflows/ci.yml`: main-branch deploy workflow.
 - `overrides/`: MkDocs Material theme overrides; keep because `mkdocs.yml` uses `custom_dir: overrides`.
 - `tools/state/`: ignored local/generated working state, not durable project guidance.
@@ -51,12 +53,22 @@
 - For broad ecosystem sweeps, run Discord Dev Digest with `--profile ecosystem` and `--profile github-links`; compare linked GitHub repos against docs before deciding what belongs.
 - Do not put secrets, credentials, tokens, or private data in docs or project memory.
 
+## Link Style
+
+- For normal Markdown links between docs pages, prefer basename-only links: `[Label](page.md)`.
+- Do not rewrite normal Markdown links to full relative paths such as `../eco/page.md` or `docs/eco/page.md` unless required by non-doc context.
+- Exception: card blocks (`::cards::`) with JSON/YAML `url` fields must use a valid relative path from the current page to the target page. A basename is OK only when the target page is in the same directory.
+- Root `README.md` is GitHub-facing, not a docs page; links from README should use repo-relative paths such as `docs/contribute/tools.md`.
+- Do not re-add hook logic that rewrites card `url` basenames at render time. Card paths should be explicit in source.
+- After broad link edits, scan card URLs and run MkDocs build; card links can fail differently than normal Markdown links.
+
 ## Source Watch
 
 - Use `docs/contribute/source-watch.md` for metadata rules.
 - Use `docs/contribute/source-watch-playbook.md` for repeatable scan workflow.
 - Source Watch baseline defaults to `tools/state/source-watch-baseline.json`.
 - Use GitHub scans only with `GITHUB_TOKEN` available; `.env` may provide it locally.
+- Source Watch JSON now includes `author_login` when GitHub exposes a linked user for a commit.
 
 ## Discord Dev Digest Handoff
 
@@ -65,10 +77,21 @@
 - Resume prompt: `$caveman Read AGENTS.md, docs/contribute/source-watch-playbook.md, and tools/discord_dev_digest/state/669989266478202917-after-2026-04-26-report.md. Treat Discord as leads only. Continue source-backed doc updates from the 2026-05 Discord dev digest, verify against GitHub PRs/repos before editing, skip unverified sidechain-prefix claims, then run source_watch --strict, nav_audit --strict, structure_audit --strict, git diff --check, and mkdocs build.`
 - Verified PR leads already checked: `ergoplatform/ergo#2299`, `#2302`, `#2305`, `#2310` are merged into `v6.0.3`; `ergoplatform/sigmastate-interpreter#1136` is merged into `v6.0.4`; `ergoplatform/ergo#2306`, `#2307`, `#2312`, `ergoplatform/ergo-appkit#253`, and `ergoplatform/sigmastate-interpreter#1138` were open when checked on 2026-05-27.
 
+## Weekly Discord Docs Leads
+
+- `DISCORD_TOKEN` is configured as a GitHub Actions repository secret; do not commit `.env`.
+- `.github/workflows/weekly-discord-docs.yml` runs Fridays at 09:00 UTC and supports manual runs with `days` or `after`.
+- It exports the previous week from general (`668903786902847502`) and development (`669989266478202917`), generates `docs`, `ecosystem`, and `github-links` reports, uploads artifacts, and opens/updates a dated tracking issue.
+- The workflow also runs Source Watch for the same window and calls `tools/weekly_docs_prs.py` to open/update per-page source-review issues.
+- Per-page review issues list source commit authors as plain usernames only; do not add `@` mentions until the automation has proven low-noise.
+- Keep Discord exports/reports as artifacts or ignored local state. Do not commit raw Discord logs or generated reports with chat content.
+- These issues are review leads, not proof that docs changes are required. Verify source before editing public docs.
+
 ## CI and Deployment
 
 - Pull requests touching docs/tooling run `.github/workflows/docs-quality.yml`.
 - Weekly/source-triggered review uses `.github/workflows/source-watch.yml`.
+- Weekly Discord lead review uses `.github/workflows/weekly-discord-docs.yml`.
 - Main branch deploy uses `.github/workflows/ci.yml`.
 - `tools/deploy.sh` is a manual legacy deploy helper; prefer GitHub Actions unless explicitly asked.
 

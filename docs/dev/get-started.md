@@ -425,13 +425,13 @@ If you encounter any issues or have questions, feel free to connect with us on a
     "title": "ERGOHACK",
     "content": "We host regular hackathons which are a great opportunity to get involved.",
     "image": "../assets/img/grid/05.png",
-    "url": "ergohack.md"
+    "url": "../events/ergohack.md"
   },
   {
     "title": "Contribute",
     "content": "See the Contributing Guidelines for information on bounties and grants.",
     "image": "../assets/img/grid/05.png",
-    "url": "guidelines.md"
+    "url": "../contribute/standards/guidelines.md"
   }
 ]
 

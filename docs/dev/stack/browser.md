@@ -11,13 +11,13 @@ There are a couple of options developers can pick from to interact with the user
     "title": "JS/TS",
     "content": "Frontend development with JavaScript, TypeScript",
     "image": "../../assets/img/dev-grid/js.png",
-    "url": "js.md"
+    "url": "../lang/js.md"
   },
   {
     "title": "Rust",
     "content": "Sigma Rust can be used in front-end development",
     "image": "../../assets/img/dev-grid/rust.png",
-    "url": "rust.md"
+    "url": "../lang/rust.md"
 
   }
 ]
@@ -32,12 +32,12 @@ There are a couple of options developers can pick from to interact with the user
   {
     "title": "ErgoPay",
     "content": "Ergo's dApp connector for non-web wallet applications",
-    "url": "ergo-pay.md"
+    "url": "../wallet/payments/ergopay/ergo-pay.md"
   },
   {
     "title": "dApp Connector",
     "content": "For web-based wallets (Nautilus/SAFEW)",
-    "url": "dApp.md"
+    "url": "../wallet/payments/dApp.md"
 
   }
 ]

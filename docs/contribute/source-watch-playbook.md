@@ -112,6 +112,24 @@ tools/state/source-watch-baseline.json
 
 6. Run validation/build commands.
 
+## Weekly Discord Docs Leads
+
+`.github/workflows/weekly-discord-docs.yml` runs every Friday at 09:00 UTC and can also be started manually from GitHub Actions.
+
+The workflow exports the previous week of Discord messages from the general and development channels, generates docs, ecosystem, and GitHub-links reports, scans watched GitHub sources for changes since the start of the window, uploads reports as workflow artifacts, and opens or updates a dated GitHub issue.
+
+It also runs `tools/weekly_docs_prs.py` against the Source Watch JSON report. That script opens or updates one source-review issue per affected docs page and mentions GitHub commit authors where the GitHub API exposes usernames. These are review issues, not proof that a docs update is required.
+
+Use those reports as leads only:
+
+1. Read the workflow artifact reports.
+2. Verify each candidate update against repositories, releases, issues, EIPs, or maintainer sources.
+3. Update docs naturally without mentioning Discord, scans, or internal reports.
+4. Run the normal validation commands.
+5. Open a PR with source links and verification notes.
+
+The workflow requires the `DISCORD_TOKEN` repository secret. It downloads DiscordChatExporter during the run and uses GitHub's built-in `GITHUB_TOKEN` to create the tracking issue.
+
 ## Good Future Prompt
 
 Paste this in a future agent session:

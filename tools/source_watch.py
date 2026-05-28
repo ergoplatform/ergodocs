@@ -220,12 +220,14 @@ def github_commits(ref: SourceRef, path: str, token: str | None) -> list[dict[st
     commits: list[dict[str, str]] = []
     for item in data:
         commit = item.get("commit", {})
+        author = item.get("author") or {}
         commits.append(
             {
                 "sha": str(item.get("sha", ""))[:12],
                 "date": str(commit.get("committer", {}).get("date", "")),
                 "message": str(commit.get("message", "")).splitlines()[0],
                 "url": str(item.get("html_url", "")),
+                "author_login": str(author.get("login", "")),
             }
         )
     return commits

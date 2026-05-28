@@ -149,7 +149,7 @@ MkDocs imports this through `mkdocs.yml`:
 on_page_markdown: "tools.hooks:fix_lists"
 ```
 
-The hook normalizes over-indented nested list markers before Markdown rendering. It also resolves card `url` values that use basename-only links such as `wallets.md`, matching the rest of the docs link style while still giving MkDocs valid relative paths at build time.
+The hook normalizes over-indented nested list markers before Markdown rendering.
 
 Do not run it directly. Validate hook changes with:
 

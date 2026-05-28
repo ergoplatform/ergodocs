@@ -9,32 +9,32 @@
     "title": "JVM",
     "content": "",
     "image": "../../assets/img/dev-grid/jvm.png",
-    "url": "jvm.md"
+    "url": "../lang/jvm.md"
   },
   {
     "title": "JavaFX",
     "content": "",
     "image": "../../assets/img/dev-grid/jvm.png",
-    "url": "jvm.md"
+    "url": "../lang/jvm.md"
   },
   {
     "title": "Rust",
     "content": "",
     "image": "../../assets/img/dev-grid/rust.png",
-    "url": "rust.md"
+    "url": "../lang/rust.md"
 
   },
   {
     "title": "JS/TS + Electron",
     "content": "",
     "image": "../../assets/img/dev-grid/js.png",
-    "url": "js.md"
+    "url": "../lang/js.md"
   },
   {
     "title": "Python",
     "content": "",
     "image": "../../assets/img/dev-grid/python.png",
-    "url": "python.md"
+    "url": "../lang/python.md"
   }
 
 ]

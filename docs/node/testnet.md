@@ -21,7 +21,7 @@ The testnet runs on different ports than the mainnet and can be accessed by chan
   {
     "title": "Synchronising from scratch",
     "content": "Start synchronising with the testnet from genesis",
-    "url": "testnet-full.md"
+    "url": "testnet/testnet-full.md"
   },
   {
     "title": "ergo-synced-node",
@@ -31,18 +31,18 @@ The testnet runs on different ports than the mainnet and can be accessed by chan
   {
     "title": "CPU Mining",
     "content": "You can use your CPU to mine on the testnet",
-    "url": "cpu-mining.md"
+    "url": "testnet/cpu-mining.md"
 
   },
   {
     "title": "Mine your own chain",
     "content": "Start your own alternative version of Ergo with custom parameters.",
-    "url": "mine-your-own-chain.md"
+    "url": "testnet/mine-your-own-chain.md"
   },
   {
     "title": "Resources",
     "content": "Port numbers, bookmarks, and any other testnet resources here!",
-    "url": "testnet-resources.md"
+    "url": "testnet/testnet-resources.md"
   }
 ]
 

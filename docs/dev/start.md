@@ -20,25 +20,25 @@ For current source-backed tooling, see [Libraries & SDKs](libraries.md), [Fleet]
     "title": "Server",
     "content": "Interact with the blockchain locally or via a remote server.",
     "image": "../assets/img/dev-grid/server.png",
-    "url": "server.md"
+    "url": "stack/server.md"
   },
   {
     "title": "Browser",
     "content": "Interact with users in browser",
     "image": "../assets/img/dev-grid/browser.png",
-    "url": "browser.md"
+    "url": "stack/browser.md"
   },
   {
     "title": "Desktop",
     "content": "Create a local application.",
     "image": "../assets/img/dev-grid/desktop.png",
-    "url": "desktop.md"
+    "url": "stack/desktop.md"
   },
   {
     "title": "Mobile Application",
     "content": "Creating a bundled mobile app for Android or iOS.",
     "image": "../assets/img/dev-grid/mobile.png",
-    "url": "mobile.md"
+    "url": "stack/mobile.md"
   }
 
 ]
@@ -54,19 +54,19 @@ For current source-backed tooling, see [Libraries & SDKs](libraries.md), [Fleet]
     "title": "Basics Tutorial",
     "content": "Generate keys and address, send and receive payments.",
     "image": "../assets/img/dev-grid/noob.png",
-    "url": "basics.md"
+    "url": "stack/basics.md"
   },
   {
     "title": "Beginner",
     "content": "Just testing the waters? Not sure where to start?",
     "image": "../assets/img/dev-grid/noob.png",
-    "url": "introduction.md"
+    "url": "stack/introduction.md"
   },
   {
     "title": "Frameworks",
     "content": "Jump straight to an overview of all frameworks",
     "image": "../assets/img/dev-grid/frameworks.jpg",
-    "url": "introduction.md#frameworks"
+    "url": "stack/introduction.md#frameworks"
   }
 
 ]

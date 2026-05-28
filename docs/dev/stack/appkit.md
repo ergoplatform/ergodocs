@@ -34,7 +34,7 @@ Using Appkit, Ergo applications can be written in one of the languages supported
   {
     "title": "General Example",
     "content": "",
-    "url": "tutorial.md"
+    "url": "appkit/tutorial.md"
   },
   {
     "title": "🔗 AppKit By Example",
@@ -43,11 +43,11 @@ Using Appkit, Ergo applications can be written in one of the languages supported
   },
   {
     "title": "ErgoPay Example",
-    "url": "ergo-pay.md"
+    "url": "../wallet/payments/ergopay/ergo-pay.md"
   },
   {
     "title": "Gradle",
-    "url": "gradle.md"
+    "url": "appkit/gradle.md"
   }
   
 ]

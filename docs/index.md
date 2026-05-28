@@ -19,7 +19,7 @@ Ergo is a proof-of-work smart-contract platform built around eUTXO, ErgoScript, 
     "title": "Use",
     "content": "Wallets, ecosystem apps, DEXs, NFTs, stablecoins, bridges, privacy, and tutorials.",
     "image": "./assets/img/grid/05.png",
-    "url": "use-cases-overview.md"
+    "url": "uses/use-cases-overview.md"
   },
   {
     "title": "Learn",
@@ -31,7 +31,7 @@ Ergo is a proof-of-work smart-contract platform built around eUTXO, ErgoScript, 
     "title": "Develop",
     "content": "ErgoScript, SDKs, wallet integrations, APIs, contract patterns, and examples.",
     "image": "./assets/img/grid/02.png",
-    "url": "get-started.md"
+    "url": "dev/get-started.md"
   },
   {
     "title": "Operate",
@@ -43,7 +43,7 @@ Ergo is a proof-of-work smart-contract platform built around eUTXO, ErgoScript, 
     "title": "Mine",
     "content": "Mining setup, pools, solo mining, governance, rewards, and pool operations.",
     "image": "./assets/img/grid/06.png",
-    "url": "mining-overview.md"
+    "url": "mining/mining-overview.md"
   }
 ]
 

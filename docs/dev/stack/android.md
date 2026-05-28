@@ -18,7 +18,7 @@ To develop an android application you can develop with the JVM suite (Java/Kotli
     "title": "Mosaik",
     "content": "UI system for dApps",
     "image": "../../assets/img/dev-grid/mosaik.png",
-    "url": "intro.md"
+    "url": "mosaik/intro.md"
   },
   {
     "title": "sigma-rust",
@@ -40,7 +40,7 @@ To develop an android application you can develop with the JVM suite (Java/Kotli
     "title": "Gradle",
     "content": "Getting started with Gradle to build on Android.",
     "image": "../../assets/img/dev-grid/gradle.png",
-    "url": "gradle.md"
+    "url": "appkit/gradle.md"
   },
   {
     "title": "📕 DeCo Intro Lessons: Build a mobile app on Android or iOS",

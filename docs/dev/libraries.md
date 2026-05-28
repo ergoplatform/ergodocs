@@ -66,23 +66,23 @@ The following pages provide more detailed documentation on specific libraries wi
 [
   {
     "title": "GetBlok Plasma",
-    "url": "plasma.md"
+    "url": "lib/plasma.md"
   },
   {
     "title": "Scrypto",
-    "url": "scrypto.md"
+    "url": "lib/scrypto.md"
   },
   {
     "title": "EIP12-Types",
-    "url": "eip12-types.md"
+    "url": "lib/eip12-types.md"
   },
   {
     "title": "SigmaJS",
-    "url": "sigmajs.md"
+    "url": "lib/sigmajs.md"
   },
   {
     "title": "ergots",
-    "url": "ergots.md"
+    "url": "lib/ergots.md"
   }
 
 ]

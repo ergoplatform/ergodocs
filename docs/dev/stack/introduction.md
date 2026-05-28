@@ -19,13 +19,13 @@ source_of_truth:
     "title": "Key Features",
     "content": "Discover Ergo's key features",
     "image": "../../assets/img/dev-grid/key.png",
-    "url": "protocol.md"
+    "url": "../../node/protocol.md"
   },
   {
     "title": "Anatomy",
     "content": "Dive into boxes, registers and more in the anatomy of Ergo.",
     "image": "../../assets/img/dev-grid/anatomy.png",
-    "url": "box.md"
+    "url": "../data-model/box.md"
 
   },
   {
@@ -44,13 +44,13 @@ source_of_truth:
     "title": "Testnet",
     "content": "An alternative blockchain you can use for experimentation",
     "image": "../../assets/img/dev-grid/testnet.png",
-    "url": "testnet.md"
+    "url": "../../node/testnet.md"
   },
   {
     "title": "Read our FAQ",
     "content": "Frequently asked questions.",
     "image": "../../assets/img/dev-grid/faq.png",
-    "url": "faq.md"
+    "url": "../../faq.md"
   }
 ]
 
@@ -189,7 +189,7 @@ Need help figuring out where to start developing? This [introduction to Mosaik](
     "content": "",
     "image": "../../assets/img/dev-grid/jvm.png",
 
-    "url": "jvm.md"
+    "url": "../lang/jvm.md"
   },
   {
     "title": "Sigma-Rust",
@@ -201,7 +201,7 @@ Need help figuring out where to start developing? This [introduction to Mosaik](
     "title": "Sigma.JS",
     "content": "",
     "image": "../../assets/img/dev-grid/js.png",
-    "url": "sigmajs.md"
+    "url": "../lib/sigmajs.md"
   }
 
 ]
@@ -216,18 +216,18 @@ Need help figuring out where to start developing? This [introduction to Mosaik](
   {
     "title": "GetBlok Plasma",
     "content": "a library on top of Ergo Appkit that provides an abstraction layer to simplify the process of integrating AVL Trees (AKA Plasma) into off-chain code.",
-    "url": "plasma.md"
+    "url": "../lib/plasma.md"
   },
   {
     "title": "Scrypto",
     "content": "cryptographic toolkit designed to make it easier and safer for developers to use cryptography in their applications.",
-    "url": "scrypto.md"
+    "url": "../lib/scrypto.md"
 
   },
   {
     "title": "EIP12-types",
     "content": "static typing library",
-    "url": "eip12-types.md"
+    "url": "../lib/eip12-types.md"
   }
 ]
 
@@ -261,18 +261,18 @@ Need help figuring out where to start developing? This [introduction to Mosaik](
   {
     "title": "Creating a simple *pay-to-script* app",
     "content": "",
-    "url": "p2s.md"
+    "url": "../scs/p2s.md"
   },
   {
     "title": "Creating a signature",
     "content": "",
-    "url": "3-out-of-5.md"
+    "url": "../scs/sigma/3-out-of-5.md"
 
   },
   {
     "title": "Sending a chained transaction",
     "content": "",
-    "url": "chained.md"
+    "url": "../anatomy/transactions/chained.md"
   }
 ]
 

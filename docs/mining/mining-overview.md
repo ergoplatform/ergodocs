@@ -18,12 +18,12 @@ Ergo mining is based on [**Autolykos**](autolykos.md), an [ASIC-resistant](asic.
   {
     "title": "Join a pool",
     "content": "Join a mining pool and start mining today.",
-    "url": "join.md"
+    "url": "setup/join.md"
   },
   {
     "title": "Solo Mining",
     "content": "Only recommended if you have 1%+ of the network hash rate.",
-    "url": "solo.md"
+    "url": "setup/solo.md"
   }
 
 ]
@@ -38,7 +38,7 @@ Ergo mining is based on [**Autolykos**](autolykos.md), an [ASIC-resistant](asic.
   {
     "title": "Wallets",
     "content": "Get your wallet setup.",
-    "url": "wallets.md"
+    "url": "../dev/wallets.md"
   },
   {
     "title": "Autolykos",
