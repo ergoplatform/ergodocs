@@ -118,7 +118,7 @@ tools/state/source-watch-baseline.json
 
 The workflow exports the previous week of Discord messages from the general and development channels, generates docs, ecosystem, and GitHub-links reports, scans watched GitHub sources for changes since the start of the window, uploads reports as workflow artifacts, and opens or updates a dated GitHub issue.
 
-It also runs `tools/weekly_docs_prs.py` against the Source Watch JSON report. That script opens or updates one source-review issue per affected docs page and mentions GitHub commit authors where the GitHub API exposes usernames. These are review issues, not proof that a docs update is required.
+It also runs `tools/weekly_docs_prs.py` against the Source Watch JSON report. That script opens or updates one source-review issue per affected docs page and lists GitHub commit authors as plain usernames where the GitHub API exposes them. It skips pages whose `last_reviewed` date is on or after the latest matching source commit, and it skips pages where every matching source change is low severity. These are review issues, not proof that a docs update is required.
 
 Use those reports as leads only:
 

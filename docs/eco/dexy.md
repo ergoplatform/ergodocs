@@ -23,14 +23,6 @@ source_repos:
     paths:
       - contracts/bank/intervention.es
       - src/test/scala/dexy/bank/InterventionSpec.scala
-  - repo: DefiLlama/peggedassets-server
-    branch: master
-    paths:
-      - README.md
-  - repo: DefiLlama/DefiLlama-Adapters
-    branch: main
-    paths:
-      - projects
 source_of_truth:
   - https://github.com/ergoplatform/ergo-jde/tree/main/kiosk/src/test/scala/kiosk/dexy
   - https://github.com/ergoplatform/ergo-jde/tree/main/kiosk/src/test/scala/kiosk/dexy/Dexy.md

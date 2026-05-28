@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+from datetime import datetime
 import json
 import os
 from pathlib import Path
@@ -56,8 +57,74 @@ def page_changes(page: dict[str, Any]) -> list[dict[str, Any]]:
     return [change for change in page.get("changes", []) if isinstance(change, dict)]
 
 
+def change_date(change: dict[str, Any]) -> datetime | None:
+    raw = str(change.get("date", ""))
+    if not raw:
+        return None
+    try:
+        return datetime.fromisoformat(raw.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+
+
+def reviewed_date(page: dict[str, Any]) -> datetime | None:
+    raw = str(page.get("last_reviewed", ""))
+    if not raw or raw.lower() == "never":
+        return None
+    try:
+        return datetime.fromisoformat(raw)
+    except ValueError:
+        return None
+
+
+def latest_change_date(changes: list[dict[str, Any]]) -> datetime | None:
+    dates = [date for date in (change_date(change) for change in changes) if date is not None]
+    return max(dates) if dates else None
+
+
+def already_reviewed(page: dict[str, Any]) -> bool:
+    reviewed = reviewed_date(page)
+    latest = latest_change_date(page_changes(page))
+    if reviewed is None or latest is None:
+        return False
+    return reviewed.date() >= latest.date()
+
+
+def low_only(changes: list[dict[str, Any]]) -> bool:
+    return bool(changes) and all(str(change.get("severity", "")) == "low" for change in changes)
+
+
+def unique_changes(changes: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    grouped: dict[tuple[str, str], dict[str, Any]] = {}
+    for change in changes:
+        key = (str(change.get("repo", "")), str(change.get("sha", "")))
+        entry = grouped.setdefault(
+            key,
+            {
+                **change,
+                "paths": [],
+            },
+        )
+        path = str(change.get("path", ""))
+        if path and path not in entry["paths"]:
+            entry["paths"].append(path)
+    return sorted(grouped.values(), key=lambda item: (item.get("date", ""), item.get("repo", ""), item.get("sha", "")))
+
+
+def watched_sources(page: dict[str, Any]) -> list[str]:
+    lines: list[str] = []
+    for source in page.get("sources", []):
+        repo = source.get("repo", "")
+        branch = source.get("branch", "")
+        for path in source.get("paths", []):
+            source_path = path.get("path", "")
+            if repo and source_path:
+                lines.append(f"{repo}@{branch}/{source_path}")
+    return lines
+
+
 def body_for_page(page: dict[str, Any], report: dict[str, Any], artifact_url: str) -> str:
-    changes = page_changes(page)
+    changes = unique_changes(page_changes(page))
     authors = sorted({safe_login(str(change.get("author_login", ""))) for change in changes})
     authors = [author for author in authors if author]
 
@@ -70,9 +137,21 @@ def body_for_page(page: dict[str, Any], report: dict[str, Any], artifact_url: st
         "Discord is treated as leads only; docs changes must be verified against source repos, releases, issues, EIPs, or maintainer confirmation.",
         "",
         f"Page: `{page.get('page', '')}`",
+        f"Last reviewed: `{page.get('last_reviewed') or 'missing'}`",
         f"Generated: `{report.get('generated', '')}`",
         "",
+        "Why this issue exists:",
+        "Source Watch found new commits touching paths this page declares in `source_repos`.",
+        "That means the page may need review, not that a docs edit is definitely required.",
+        "",
     ]
+
+    sources = watched_sources(page)
+    if sources:
+        lines.extend(["Watched paths for this page:"])
+        for source in sources:
+            lines.append(f"- `{source}`")
+        lines.append("")
 
     if authors:
         lines.extend(["Possible reviewers from source commits:", ", ".join(authors), ""])
@@ -80,15 +159,17 @@ def body_for_page(page: dict[str, Any], report: dict[str, Any], artifact_url: st
     if artifact_url:
         lines.extend(["Weekly report artifact:", artifact_url, ""])
 
-    lines.extend(["Source changes:", ""])
+    lines.extend(["Unique source commits:", ""])
     for change in changes:
         author = safe_login(str(change.get("author_login", ""))) or str(change.get("author_login", "") or "unknown")
+        paths = ", ".join(f"`{path}`" for path in change.get("paths", [])) or f"`{change.get('path', '')}`"
         lines.append(
-            f"- `{change.get('repo', '')}/{change.get('path', '')}` "
+            f"- `{change.get('repo', '')}` "
             f"{change.get('date', '')} `{change.get('sha', '')}` "
             f"[{change.get('severity', 'unknown')}] {change.get('message', '')} "
             f"({author})"
         )
+        lines.append(f"  Paths: {paths}")
         if change.get("url"):
             lines.append(f"  {change['url']}")
 
@@ -104,6 +185,7 @@ def body_for_page(page: dict[str, Any], report: dict[str, Any], artifact_url: st
             "Before closing:",
             "- Verify source changes against durable upstream sources.",
             "- Update docs naturally if needed.",
+            "- If the page already covers the change, comment briefly and close as already covered.",
             "- Do not mention Discord scans or internal reports in public docs.",
             "- Run `source_watch.py scan --strict`, `nav_audit.py --strict`, `structure_audit.py --strict`, `git diff --check`, and `mkdocs build`.",
         ]
@@ -138,6 +220,8 @@ def main() -> int:
     parser.add_argument("--report", required=True, type=Path, help="Source Watch JSON report.")
     parser.add_argument("--repo", default=os.environ.get("GITHUB_REPOSITORY", ""), help="GitHub repo, owner/name.")
     parser.add_argument("--artifact-url", default="", help="Workflow artifact or run URL to include.")
+    parser.add_argument("--include-reviewed", action="store_true", help="Open issues even when last_reviewed is on/after the latest source commit.")
+    parser.add_argument("--include-low-only", action="store_true", help="Open issues when all matching source changes are low severity.")
     parser.add_argument("--dry-run", action="store_true", help="Print planned issue actions without writing.")
     args = parser.parse_args()
 
@@ -155,7 +239,14 @@ def main() -> int:
     report = json.loads(args.report.read_text(encoding="utf-8"))
     results: list[dict[str, str]] = []
     for page in report.get("pages", []):
-        if not page_changes(page):
+        changes = page_changes(page)
+        if not changes:
+            continue
+        if already_reviewed(page) and not args.include_reviewed:
+            results.append({"title": f"Docs review needed: {page.get('page', '')}", "action": "skipped-reviewed", "url": ""})
+            continue
+        if low_only(changes) and not args.include_low_only:
+            results.append({"title": f"Docs review needed: {page.get('page', '')}", "action": "skipped-low-only", "url": ""})
             continue
         title = f"Docs review needed: {page.get('page', '')}"
         body = body_for_page(page, report, args.artifact_url)

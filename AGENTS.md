@@ -83,6 +83,7 @@
 - `.github/workflows/weekly-discord-docs.yml` runs Fridays at 09:00 UTC and supports manual runs with `days` or `after`.
 - It exports the previous week from general (`668903786902847502`) and development (`669989266478202917`), generates `docs`, `ecosystem`, and `github-links` reports, uploads artifacts, and opens/updates a dated tracking issue.
 - The workflow also runs Source Watch for the same window and calls `tools/weekly_docs_prs.py` to open/update per-page source-review issues.
+- `tools/weekly_docs_prs.py` skips pages whose `last_reviewed` date is on or after the latest matching source commit, and skips low-severity-only pages by default.
 - Per-page review issues list source commit authors as plain usernames only; do not add `@` mentions until the automation has proven low-noise.
 - Keep Discord exports/reports as artifacts or ignored local state. Do not commit raw Discord logs or generated reports with chat content.
 - These issues are review leads, not proof that docs changes are required. Verify source before editing public docs.
