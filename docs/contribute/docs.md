@@ -2,7 +2,7 @@
 
 We appreciate your interest in contributing to our documentation. Your assistance is invaluable, and we aim to make the contribution process as straightforward as possible.
 
-Before you start a larger change, review the [Content Standards](content-standards.md) and [Documentation Lifecycle](docs-lifecycle.md). They define how we structure pages, verify technical accuracy, and keep docs in sync with product and protocol changes.
+Before you start a larger change, review the [Content Standards](content-standards.md), [Documentation Lifecycle](docs-lifecycle.md), and [Documentation Automation](automation.md). They define how we structure pages, verify technical accuracy, and keep docs in sync with product and protocol changes.
 
 ## Prerequisites for Contribution
 
@@ -62,6 +62,16 @@ http://127.0.0.1:8000/
 
 Make your changes locally and submit a pull request when you're done.
 
+For source-backed or larger changes, use the full automation check set:
+
+```bash
+python tools/source_watch.py scan --strict
+python tools/nav_audit.py --strict
+python tools/structure_audit.py --strict
+git diff --check
+mkdocs build
+```
+
 ## Guidelines
 
 ### Writing Style
@@ -95,6 +105,8 @@ After changing nav, run the nav audit to catch missing targets, duplicate entrie
 ```bash
 python tools/nav_audit.py
 ```
+
+For automation details, including source-linked pages, weekly review leads, and remote deploy warnings, see [Documentation Automation](automation.md).
 
 ### Directory Structure
 

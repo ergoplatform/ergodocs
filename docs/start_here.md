@@ -17,6 +17,7 @@ This page is the quick map for people or agents maintaining ErgoDocs.
 
 - [Source Watch](source-watch.md): connect pages to upstream repositories, scan for source changes, and mark pages reviewed only after checking the source.
 - [Source Watch Playbook](source-watch-playbook.md): repeatable command list for future source-backed review sessions.
+- [Documentation Automation](automation.md): public overview of checks, source-linked review, weekly leads, and deploy behavior.
 - [Documentation Tools](tools.md): maintainer guide to scripts, prompts, hooks, and local tool state.
 - [Information Architecture](information-architecture.md): how sections should be structured and how pages should link together.
 - [Documentation Lifecycle](docs-lifecycle.md): page ownership, review expectations, and freshness rules.
@@ -78,7 +79,7 @@ Use `tools/source_watch.py mark-reviewed docs/path/page.md` only after checking 
 
 - `.github/workflows/docs-quality.yml`: PR workflow for docs/tooling changes. It installs dependencies, builds MkDocs, runs nav audit, and validates Source Watch metadata.
 - `.github/workflows/source-watch.yml`: weekly/manual workflow that runs GitHub Source Watch, uploads reports, and can create/update GitHub issues for changed watched source.
-- `.github/workflows/ci.yml`: main-branch deploy workflow. It syncs sources to server, builds there, publishes live site, and runs non-blocking sanity checks.
+- `.github/workflows/ci.yml`: main-branch deploy workflow. It syncs the checked-out repo to the server, builds there on Linux, publishes live site, and runs non-blocking sanity checks. Remote warnings that do not appear locally usually mean a Git-tracked path case mismatch or a locally present file ignored by `.gitignore`.
 - `.github/workflows/ci-debug.yml`: manual/push diagnostic workflow for checking GitHub Actions trigger context.
 
 Issue and PR templates:
@@ -116,6 +117,15 @@ Safe to remove when they appear:
 Do not remove `overrides/` unless `mkdocs.yml` no longer uses a custom theme directory.
 
 Keep generated local state under `tools/state/`; do not put it back in the repo root.
+
+## Remote Build Gotchas
+
+Linux deploys are stricter than local macOS builds:
+
+- Check case-sensitive paths with `git ls-files` when remote MkDocs says a nav target is missing.
+- Check ignored pages with `git check-ignore -v docs/path/file.md` when a page exists locally but not remotely.
+- New docs files must be tracked and committed; the deploy workflow does not see ignored or untracked local files.
+- Broad Python ignore rules such as `lib/` can accidentally hide docs directories named `lib`; use narrow unignore rules for docs paths that must be published.
 
 ## Before Finishing Changes
 

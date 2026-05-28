@@ -46,6 +46,8 @@
 - Keep changes small and focused.
 - Do not introduce new dependencies without asking.
 - Prefer existing docs structure, nav naming, and Markdown style.
+- Linux deploy builds are case-sensitive. If MkDocs warns remotely but not locally, check for case-only path mismatches tracked by Git.
+- `.gitignore` has broad Python ignores such as `lib/`; docs subdirectories named `lib` must be explicitly unignored or new files inside them will exist locally but not deploy.
 - When source behavior changes, update docs naturally; do not add tool-review boilerplate.
 - Do not paste date-stamped changelog bullets into conceptual docs unless the page is already a changelog or release note. Fold verified changes into the relevant explanation, caveat, or workflow section in the page's existing voice.
 - Set `last_reviewed` only after the page was actually checked against source.
@@ -94,6 +96,8 @@
 - Weekly/source-triggered review uses `.github/workflows/source-watch.yml`.
 - Weekly Discord lead review uses `.github/workflows/weekly-discord-docs.yml`.
 - Main branch deploy uses `.github/workflows/ci.yml`.
+- Deploy syncs the checked-out repo to the server, then builds on Linux from `PROJECT_DIR/src`; only committed/tracked files are present remotely.
+- Remote deploy now skips `apt-get update` when `python3-venv`, `python3-pip`, and `rsync` are already installed. If installation is needed and the Caddy apt source is configured, the workflow refreshes the Caddy Cloudsmith key before updating package indexes.
 - `tools/deploy.sh` is a manual legacy deploy helper; prefer GitHub Actions unless explicitly asked.
 
 ## Verification

@@ -13,7 +13,7 @@ last_reviewed: 2026-05-26
 
 Source Watch connects docs pages to product repositories. It helps maintainers find pages that may need review after source code, API, configuration, or release changes.
 
-For repeatable maintainer/agent workflow, see the [Source Watch playbook](source-watch-playbook.md).
+For the broader automation map, see [Documentation Automation](automation.md). For repeatable review commands, see the [Source Watch playbook](source-watch-playbook.md).
 
 ## Page Metadata
 
@@ -46,13 +46,7 @@ Fields:
 Run metadata validation and print watched pages:
 
 ```bash
-python tools/source_watch.py scan --strict
-```
-
-Equivalent subcommand form:
-
-```bash
-python tools/source_watch.py scan --strict
+.venv/bin/python tools/source_watch.py scan --strict
 ```
 
 ## GitHub Change Scan
@@ -60,7 +54,7 @@ python tools/source_watch.py scan --strict
 Run commit scan for watched source paths:
 
 ```bash
-GITHUB_TOKEN=... python tools/source_watch.py scan --github
+GITHUB_TOKEN=... .venv/bin/python tools/source_watch.py scan --github
 ```
 
 The script returns a non-zero exit code when source changes are found. Use that behavior for scheduled maintenance jobs or manual review, not normal docs builds.
@@ -68,11 +62,11 @@ The script returns a non-zero exit code when source changes are found. Use that 
 Useful scan controls:
 
 ```bash
-python tools/source_watch.py scan --github --since 2026-01-01 --repo ergoplatform/sigma-rust --max-queries 50
-python tools/source_watch.py scan --github --page docs/dev/stack/sigma-rust.md --max-queries 20
-python tools/source_watch.py scan --github --format json --output source-watch.json
-python tools/source_watch.py scan --github --new-only --update-baseline
-python tools/source_watch.py scan --github --validate-paths
+.venv/bin/python tools/source_watch.py scan --github --since 2026-01-01 --repo ergoplatform/sigma-rust --max-queries 50
+.venv/bin/python tools/source_watch.py scan --github --page docs/dev/stack/sigma-rust.md --max-queries 20
+.venv/bin/python tools/source_watch.py scan --github --format json --output source-watch.json
+.venv/bin/python tools/source_watch.py scan --github --new-only --update-baseline
+.venv/bin/python tools/source_watch.py scan --github --validate-paths
 ```
 
 Use `GITHUB_TOKEN` for larger scans. Unauthenticated GitHub API requests hit rate limits quickly.
@@ -110,13 +104,13 @@ Severity is a triage hint, not an accuracy guarantee.
 Use a baseline to show only new source changes since the last scan:
 
 ```bash
-python tools/source_watch.py scan --github --new-only --update-baseline
+.venv/bin/python tools/source_watch.py scan --github --new-only --update-baseline
 ```
 
 Default baseline path:
 
 ```text
-memory-bank/source-watch-baseline.json
+tools/state/source-watch-baseline.json
 ```
 
 ## Suggestions And Review Completion
@@ -124,13 +118,13 @@ memory-bank/source-watch-baseline.json
 Suggest metadata from GitHub links in a page:
 
 ```bash
-python tools/source_watch.py suggest docs/dev/stack/headless.md
+.venv/bin/python tools/source_watch.py suggest docs/dev/stack/headless.md
 ```
 
 After a page has been checked against source behavior:
 
 ```bash
-python tools/source_watch.py mark-reviewed docs/dev/stack/headless.md
+.venv/bin/python tools/source_watch.py mark-reviewed docs/dev/stack/headless.md
 ```
 
 This updates `last_reviewed` to today's date. Use `--date YYYY-MM-DD` to set an explicit date.
@@ -140,13 +134,13 @@ This updates `last_reviewed` to today's date. Use `--date YYYY-MM-DD` to set an 
 Write a PR-comment body:
 
 ```bash
-python tools/source_watch.py scan --github --pr-comment-file /tmp/source-watch-pr.md
+.venv/bin/python tools/source_watch.py scan --github --pr-comment-file /tmp/source-watch-pr.md
 ```
 
 Create or update GitHub issues for changed pages:
 
 ```bash
-GITHUB_REPOSITORY=owner/repo python tools/source_watch.py scan --github --create-issues
+GITHUB_REPOSITORY=owner/repo .venv/bin/python tools/source_watch.py scan --github --create-issues
 ```
 
 Use `--dry-run` to preview intended issue actions.
@@ -155,7 +149,18 @@ Use `--no-fail-on-changes` for scheduled workflows where changed source should c
 ## Review Workflow
 
 1. Add Source Watch metadata to pages tied to product behavior.
-2. Run `python tools/source_watch.py scan --github`.
+2. Run `.venv/bin/python tools/source_watch.py scan --github`.
 3. For pages with source changes, inspect linked commits.
 4. Use the [AI Docs Review Prompt](https://github.com/glasgowm148/ergodocs/blob/main/tools/ai_docs_review_prompt.md) for a first-pass review.
 5. Update docs, then set `last_reviewed` to the review date.
+
+## Weekly Automation
+
+The weekly docs workflow combines recent source changes with discussion-derived leads. It can create review issues for pages that may need attention, but those issues are not proof that a public docs change is required.
+
+When reviewing an automated issue:
+
+1. Open the upstream source link.
+2. Check whether the published page is stale or incomplete.
+3. Update the docs only when the source confirms a reader-visible change.
+4. Close the issue with a short note if no docs change is needed.

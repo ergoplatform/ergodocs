@@ -47,8 +47,22 @@ jobs:
 
           echo "🔧 Ensure toolchain"
           export DEBIAN_FRONTEND=noninteractive
-          apt-get update -y
-          apt-get install -y python3-venv python3-pip rsync
+          missing_packages=()
+          for package in python3-venv python3-pip rsync; do
+            if ! dpkg-query -W -f='${Status}' "$package" 2>/dev/null | grep -q "install ok installed"; then
+              missing_packages+=("$package")
+            fi
+          done
+          if [ "${#missing_packages[@]}" -gt 0 ]; then
+            if grep -Rqs "dl.cloudsmith.io/public/caddy/stable" /etc/apt/sources.list /etc/apt/sources.list.d && command -v curl >/dev/null 2>&1 && command -v gpg >/dev/null 2>&1; then
+              curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' \
+                | gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg
+            fi
+            apt-get update -y
+            apt-get install -y "${missing_packages[@]}"
+          else
+            echo "Required packages already installed"
+          fi
 
           echo "🐍 venv"
           python3 -m venv "$PROJECT_DIR/.venv"

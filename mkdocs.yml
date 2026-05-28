@@ -521,12 +521,14 @@ nav:
       - Documentation:
           - Maintainer Guide: start_here.md
           - Contribute to the Docs!: contribute/docs.md
-          - Documentation Tools: contribute/tools.md
           - Content Standards: contribute/content-standards.md
           - Documentation Lifecycle: contribute/docs-lifecycle.md
           - Information Architecture: contribute/information-architecture.md
-          - Source Watch: contribute/source-watch.md
-          - Source Watch Playbook: contribute/source-watch-playbook.md
+          - Automation:
+              - Overview: contribute/automation.md
+              - Documentation Tools: contribute/tools.md
+              - Source Watch: contribute/source-watch.md
+              - Source Watch Playbook: contribute/source-watch-playbook.md
       - DAOs:
           - Ergo Foundation:
               - About: ef/ergo-foundation.md

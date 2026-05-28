@@ -60,6 +60,12 @@ Run after nav edits:
 .venv/bin/python tools/nav_audit.py --strict
 ```
 
+If remote MkDocs warns about a missing nav target that does not fail locally, check Git's tracked paths, not only the local filesystem. Case-only directory differences can be hidden on macOS and fail on Linux:
+
+```bash
+git ls-files docs/dev/Integration/guide.md docs/dev/integration/guide.md
+```
+
 ### `tools/structure_audit.py`
 
 Checks information architecture health across the docs set.
@@ -220,6 +226,19 @@ Current uses:
 - `tools/discord_dev_digest/state/`: local Discord exports and generated reports.
 
 Do not put durable project rules in `tools/state/`. Use `AGENTS.md` and maintainer docs instead.
+
+## Tracked Files And Ignore Rules
+
+Some docs directories can match broad development ignore rules. For example, Python templates often ignore `lib/`, which also matches `docs/dev/lib/`.
+
+Before relying on a new page that builds locally, confirm Git can see it:
+
+```bash
+git status --short --untracked-files=all
+git check-ignore -v docs/dev/lib/ergots.md
+```
+
+If a docs directory is wrongly ignored, add a narrow exception for that docs path rather than weakening the general ignore rule.
 
 ## Standard Verification Set
 

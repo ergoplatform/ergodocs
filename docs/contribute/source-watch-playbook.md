@@ -11,7 +11,7 @@ last_reviewed: 2026-05-27
 
 # Source Watch Playbook
 
-Use this page when continuing source-backed docs review.
+Use this page for repeatable source-backed documentation review. For the public overview of the automation system, start with [Documentation Automation](automation.md).
 
 ## What Source Watch Does
 
@@ -58,6 +58,36 @@ Run these before and after edits:
 .venv/bin/python tools/structure_audit.py --strict
 git diff --check
 .venv/bin/mkdocs build --site-dir /tmp/ergodocs-site-check
+```
+
+## Remote Build Warning Triage
+
+GitHub deploy builds run on Linux from the synced Git checkout, so they can expose problems hidden on macOS:
+
+- Case-only path mismatches: `docs/dev/Integration/guide.md` and `docs/dev/integration/guide.md` are the same path on common macOS volumes but different paths on Linux. If remote MkDocs reports a nav target missing while local builds pass, compare `mkdocs.yml` against `git ls-files`.
+- Ignored docs paths: broad Python ignores such as `lib/` can hide docs files under directories named `lib`. A page can exist locally and build locally but be absent from the remote checkout if Git ignores it. Use `git status --short --untracked-files=all` and `git check-ignore -v docs/path/file.md`.
+- Commit coverage: the deploy workflow rsyncs the checked-out repository, not arbitrary local files. New pages must be tracked and committed before remote builds can see them.
+
+Useful checks:
+
+```bash
+git ls-files docs/dev/Integration/guide.md docs/dev/integration/guide.md docs/dev/lib/ergots.md
+git check-ignore -v docs/dev/lib/ergots.md
+git status --short --untracked-files=all
+```
+
+If a file has the wrong case in Git, use `git mv` so the index records the rename:
+
+```bash
+git mv docs/dev/Integration/guide.md docs/dev/integration/guide.md
+```
+
+If a docs directory is ignored by a broad rule, add a narrow unignore rule instead of removing the broad Python ignore:
+
+```gitignore
+lib/
+!docs/dev/lib/
+!docs/dev/lib/**
 ```
 
 ## Scan For Source Changes
@@ -129,6 +159,19 @@ Use those reports as leads only:
 5. Open a PR with source links and verification notes.
 
 The workflow requires the `DISCORD_TOKEN` repository secret. It downloads DiscordChatExporter during the run and uses GitHub's built-in `GITHUB_TOKEN` to create the tracking issue.
+
+## GitHub Deploy Notes
+
+`.github/workflows/ci.yml` deploys the main branch by syncing the checked-out repository to the server and building MkDocs there. It does not rely on a server-side Git checkout.
+
+The remote build runs on Linux. It sees:
+
+- committed files from the GitHub checkout
+- case-sensitive paths
+- no untracked local files
+- no files hidden by `.gitignore`
+
+The workflow only installs `python3-venv`, `python3-pip`, and `rsync` when they are missing. This avoids unrelated apt repository warnings during normal deploys. If package installation is needed and the server has the Caddy apt source configured, the workflow refreshes the Caddy Cloudsmith signing key before running `apt-get update`.
 
 ## Good Future Prompt
 
