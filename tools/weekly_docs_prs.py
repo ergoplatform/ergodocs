@@ -222,6 +222,7 @@ def main() -> int:
     parser.add_argument("--artifact-url", default="", help="Workflow artifact or run URL to include.")
     parser.add_argument("--include-reviewed", action="store_true", help="Open issues even when last_reviewed is on/after the latest source commit.")
     parser.add_argument("--include-low-only", action="store_true", help="Open issues when all matching source changes are low severity.")
+    parser.add_argument("--output", type=Path, help="Write JSON issue action summary to this path.")
     parser.add_argument("--dry-run", action="store_true", help="Print planned issue actions without writing.")
     args = parser.parse_args()
 
@@ -255,7 +256,10 @@ def main() -> int:
         except HTTPError as exc:
             results.append({"title": title, "action": "error", "url": format_http_error(exc)})
 
-    print(json.dumps({"issues": results}, indent=2))
+    output = json.dumps({"issues": results}, indent=2)
+    if args.output:
+        args.output.write_text(output + "\n", encoding="utf-8")
+    print(output)
     return 1 if any(result["action"] == "error" for result in results) else 0
 
 

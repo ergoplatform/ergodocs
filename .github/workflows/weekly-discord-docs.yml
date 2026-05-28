@@ -100,6 +100,7 @@ jobs:
           } >> "$GITHUB_OUTPUT"
 
       - name: Open or update tracking issue
+        id: tracking_issue
         run: |
           TITLE="Weekly Discord docs leads: ${{ steps.reports.outputs.issue_date }}"
           RUN_URL="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
@@ -130,8 +131,11 @@ jobs:
           if [ -n "$ISSUE_NUMBER" ]; then
             gh issue edit "$ISSUE_NUMBER" --body-file "$REPORT_DIR/issue-body.md"
           else
-            gh issue create --title "$TITLE" --body-file "$REPORT_DIR/issue-body.md"
+            ISSUE_URL="$(gh issue create --title "$TITLE" --body-file "$REPORT_DIR/issue-body.md")"
+            ISSUE_NUMBER="${ISSUE_URL##*/}"
           fi
+
+          echo "issue_number=$ISSUE_NUMBER" >> "$GITHUB_OUTPUT"
 
       - name: Scan watched source changes
         run: |
@@ -149,9 +153,54 @@ jobs:
           path: weekly-discord-docs/
 
       - name: Open per-page source review issues
+        id: per_page_issues
         run: |
           RUN_URL="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           python tools/weekly_docs_prs.py \
             --report "$REPORT_DIR/source-watch.json" \
             --repo "${{ github.repository }}" \
-            --artifact-url "$RUN_URL"
+            --artifact-url "$RUN_URL" \
+            --output "$REPORT_DIR/per-page-issues.json"
+          cat "$REPORT_DIR/per-page-issues.json"
+
+      - name: Close tracking issue when no page review is needed
+        run: |
+          ISSUE_NUMBER="${{ steps.tracking_issue.outputs.issue_number }}"
+          RUN_URL="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          SUMMARY="$(python - <<'PY'
+          import json
+          from pathlib import Path
+
+          data = json.loads(Path("weekly-discord-docs/per-page-issues.json").read_text(encoding="utf-8"))
+          issues = data.get("issues", [])
+          actionable = [item for item in issues if item.get("action") in {"created", "updated", "error"}]
+          skipped = [item for item in issues if str(item.get("action", "")).startswith("skipped-")]
+          print(json.dumps({
+              "actionable": len(actionable),
+              "skipped": len(skipped),
+              "total": len(issues),
+          }))
+          PY
+          )"
+          ACTIONABLE="$(python -c 'import json,sys; print(json.loads(sys.argv[1])["actionable"])' "$SUMMARY")"
+          SKIPPED="$(python -c 'import json,sys; print(json.loads(sys.argv[1])["skipped"])' "$SUMMARY")"
+          TOTAL="$(python -c 'import json,sys; print(json.loads(sys.argv[1])["total"])' "$SUMMARY")"
+
+          if [ "$ACTIONABLE" = "0" ]; then
+            {
+              echo "Automated review completed."
+              echo
+              echo "No per-page documentation review issues were needed."
+              echo
+              echo "Summary:"
+              echo "- Candidates checked: $TOTAL"
+              echo "- Skipped as already reviewed or low-signal: $SKIPPED"
+              echo "- Actionable page issues: $ACTIONABLE"
+              echo
+              echo "Workflow run: $RUN_URL"
+            } > "$REPORT_DIR/no-action-comment.md"
+            gh issue comment "$ISSUE_NUMBER" --body-file "$REPORT_DIR/no-action-comment.md"
+            gh issue close "$ISSUE_NUMBER"
+          else
+            echo "Keeping tracking issue #$ISSUE_NUMBER open because $ACTIONABLE actionable page issue(s) were created, updated, or errored."
+          fi

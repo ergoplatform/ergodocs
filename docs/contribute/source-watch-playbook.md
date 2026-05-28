@@ -146,9 +146,16 @@ tools/state/source-watch-baseline.json
 
 `.github/workflows/weekly-discord-docs.yml` runs every Friday at 09:00 UTC and can also be started manually from GitHub Actions.
 
-The workflow exports the previous week of Discord messages from the general and development channels, generates docs, ecosystem, and GitHub-links reports, scans watched GitHub sources for changes since the start of the window, uploads reports as workflow artifacts, and opens or updates a dated GitHub issue.
+The workflow performs two separate weekly checks:
+
+- It exports the previous week of Discord messages from the general and development channels, then generates docs, ecosystem, and GitHub-links lead reports.
+- It runs Source Watch across every page with `source_repos` metadata for the same date window. This full watched-repo scan is not limited to repositories mentioned on Discord that week.
+
+It uploads both kinds of reports as workflow artifacts and opens or updates a dated GitHub tracking issue.
 
 It also runs `tools/weekly_docs_prs.py` against the Source Watch JSON report. That script opens or updates one source-review issue per affected docs page and lists GitHub commit authors as plain usernames where the GitHub API exposes them. It skips pages whose `last_reviewed` date is on or after the latest matching source commit, and it skips pages where every matching source change is low severity. These are review issues, not proof that a docs update is required.
+
+If all per-page candidates are skipped, the workflow comments on the weekly tracking issue and closes it as up to date. If at least one per-page issue is created, updated, or errors, the tracking issue remains open so maintainers can follow up.
 
 Use those reports as leads only:
 

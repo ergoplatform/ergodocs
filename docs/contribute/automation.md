@@ -61,7 +61,12 @@ Source Watch uses that metadata to show which docs may need review after upstrea
 
 ## Weekly Review Leads
 
-The scheduled review workflow collects recent project discussion and watched-source changes, then opens GitHub issues when a docs page may need attention. These issues are leads, not automatic change requests.
+The scheduled review workflow has two independent inputs:
+
+- Discord discussion leads: it exports the recent general and development chat windows, then generates docs, ecosystem, and GitHub-links reports.
+- Watched source changes: it scans every docs page with `source_repos` metadata for upstream GitHub changes in the same time window, even if those repositories were not mentioned on Discord that week.
+
+The workflow combines those reports into a weekly review package, then opens GitHub issues only when a docs page may need attention. These issues are leads, not automatic change requests.
 
 Maintainers should:
 
@@ -71,6 +76,8 @@ Maintainers should:
 4. Close the issue with a short note if no public docs change is needed.
 
 Discord and chat exports are treated as pointers only. Public documentation should be verified against durable sources before it is changed.
+
+If every candidate page is already reviewed or low-signal, the workflow comments on the weekly tracking issue and closes it automatically. The tracking issue stays open only when there is an actionable page-review issue, a script error, or follow-up that needs maintainer attention.
 
 ## Deployment Checks
 

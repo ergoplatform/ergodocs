@@ -1,14 +1,35 @@
+<div align="center">
+
 # ErgoDocs
 
-[ErgoDocs](https://docs.ergoplatform.com/) is the public documentation site for
-the Ergo Platform. It is built with
-[MkDocs Material](https://squidfunk.github.io/mkdocs-material/) and maintained as
-a docs-as-code project: content, navigation, review tooling, and deployment
-configuration live in one repository so changes can be reviewed and shipped with
-the same discipline as product code.
+**The public documentation site for the Ergo Platform.**
 
-Use this README for local setup and contributor orientation. Maintainers should
-also read [`docs/start_here.md`](docs/start_here.md).
+[![Docs](https://img.shields.io/badge/docs-docs.ergoplatform.com-red?style=for-the-badge)](https://docs.ergoplatform.com/)
+[![Docs quality](https://img.shields.io/github/actions/workflow/status/ergoplatform/ergodocs/docs-quality.yml?branch=main&label=docs%20quality&style=for-the-badge)](https://github.com/ergoplatform/ergodocs/actions/workflows/docs-quality.yml)
+[![Deploy](https://img.shields.io/github/actions/workflow/status/ergoplatform/ergodocs/ci.yml?branch=main&label=deploy&style=for-the-badge)](https://github.com/ergoplatform/ergodocs/actions/workflows/ci.yml)
+[![Source Watch](https://img.shields.io/github/actions/workflow/status/ergoplatform/ergodocs/source-watch.yml?branch=main&label=source%20watch&style=for-the-badge)](https://github.com/ergoplatform/ergodocs/actions/workflows/source-watch.yml)
+
+[Visit the docs](https://docs.ergoplatform.com/) ·
+[Contribute](docs/contribute/docs.md) ·
+[Automation](docs/contribute/automation.md) ·
+[Source Watch](docs/contribute/source-watch.md) ·
+[Maintainer Start Here](docs/start_here.md)
+
+</div>
+
+---
+
+ErgoDocs is built with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) and maintained as a docs-as-code project. Content, navigation, review tooling, source monitoring, and deployment configuration live together so documentation changes can be reviewed and shipped with the same discipline as product code.
+
+## What Lives Here
+
+| Path | Purpose |
+| --- | --- |
+| [`docs/`](docs/) | Public Markdown documentation and maintainer guides. |
+| [`mkdocs.yml`](mkdocs.yml) | Site configuration, navigation, theme settings, plugins, and hooks. |
+| [`tools/`](tools/) | Audits, Source Watch, Discord lead review, prompts, and maintenance helpers. |
+| [`overrides/`](overrides/) | MkDocs Material theme overrides used by the live site. |
+| [`.github/workflows/`](.github/workflows/) | Quality checks, source scans, weekly docs leads, and deployment. |
 
 ## Quick Start
 
@@ -26,56 +47,19 @@ Build once without serving:
 .venv/bin/mkdocs build --site-dir /tmp/ergodocs-site-check
 ```
 
-## What This Repo Contains
-
-- `docs/`: published Markdown documentation and maintainer guides.
-- `mkdocs.yml`: site configuration, navigation, theme options, plugins, and hooks.
-- `tools/`: documentation audits, source-watch tooling, review prompts, and helpers.
-- `overrides/`: MkDocs Material theme overrides used by `mkdocs.yml`.
-- `.github/workflows/`: build, audit, source-watch, and deploy workflows.
-
-## Common Workflows
+## Common Tasks
 
 | Task | Start here |
 | --- | --- |
-| Make a content change | Edit the relevant file under `docs/`, then run the checks below. |
-| Add or move a page | Update `mkdocs.yml`, add cross-links from related pages, then run nav and structure audits. |
-| Update source-backed docs | Check upstream repos first, update the page naturally, then validate `source_repos`. |
-| Review site structure | Use [`docs/contribute/information-architecture.md`](docs/contribute/information-architecture.md). |
-| Maintain tooling | Use [`docs/contribute/tools.md`](docs/contribute/tools.md). |
-| Run a source-watch pass | Use [`docs/contribute/source-watch-playbook.md`](docs/contribute/source-watch-playbook.md). |
+| Make a docs edit | [Contributing to the Documentation](docs/contribute/docs.md) |
+| Understand docs standards | [Content Standards](docs/contribute/content-standards.md) |
+| Add, move, or reorganize pages | [Information Architecture](docs/contribute/information-architecture.md) |
+| Keep source-backed pages current | [Source Watch](docs/contribute/source-watch.md) |
+| Run the weekly review workflow manually | [Source Watch Playbook](docs/contribute/source-watch-playbook.md) |
+| Understand checks and automation | [Documentation Automation](docs/contribute/automation.md) |
+| Maintain repo tooling | [Documentation Tools](docs/contribute/tools.md) |
 
-## Local Development
-
-Use the repository virtualenv. Do not rely on a global MkDocs install.
-
-```bash
-python -m venv .venv
-.venv/bin/python -m pip install -r requirements.txt
-```
-
-Preview the site:
-
-```bash
-./run.sh
-```
-
-Or run MkDocs directly through the repo environment:
-
-```bash
-.venv/bin/mkdocs serve
-```
-
-Build the static site:
-
-```bash
-.venv/bin/mkdocs build --site-dir /tmp/ergodocs-site-check
-```
-
-## Definition of Done
-
-A docs change is not complete until the affected page reads naturally, links to
-nearby relevant pages, and passes the narrowest relevant checks.
+## Quality Checks
 
 For normal docs or tooling changes, run:
 
@@ -87,70 +71,59 @@ git diff --check
 .venv/bin/mkdocs build --site-dir /tmp/ergodocs-site-check
 ```
 
-- `source_watch.py`: validates source-linked page metadata.
-- `nav_audit.py`: catches missing nav targets, duplicate nav entries, and orphan docs.
-- `structure_audit.py`: checks section structure, nav coverage, duplicate surfaces, and source-watch coverage.
-- `git diff --check`: catches whitespace errors before commit.
-- `mkdocs build`: verifies the site renders.
+These checks validate source metadata, navigation coverage, section structure, whitespace, and the final MkDocs build.
 
-If you changed only copy on an unsourced page, a full source-watch run may be
-unnecessary. If you changed navigation, run both nav audits and a build.
+## Source-Linked Docs
+
+Pages that describe active software, APIs, contracts, configs, EIPs, or ecosystem projects can declare upstream sources in frontmatter. Source Watch compares those pages against watched GitHub paths and helps maintainers decide what needs review.
+
+```bash
+GITHUB_TOKEN=... .venv/bin/python tools/source_watch.py scan \
+  --github \
+  --new-only \
+  --repo ergoplatform/ergo \
+  --max-queries 120 \
+  --no-fail-on-changes \
+  --format markdown \
+  --output /tmp/source-watch-ergo.md
+```
+
+Discord and chat exports are leads only. Public docs should be updated from durable sources such as repositories, issues, releases, EIPs, or maintainer-confirmed references.
+
+## Automation
+
+ErgoDocs uses GitHub Actions for:
+
+- pull-request builds and audits
+- weekly Source Watch scans
+- weekly Discord/source lead reports
+- main-branch deployment to the live site
+
+The weekly docs workflow does two separate checks: it exports recent Discord discussion for review leads, and it scans all source-linked docs repositories for watched changes even when those repos were not mentioned in Discord that week. It opens per-page review issues only when a source-linked page may need attention. If everything is already reviewed or low-signal, it comments on the tracking issue and closes it automatically.
+
+Read the full overview in [Documentation Automation](docs/contribute/automation.md).
 
 ## Contributing
 
-Use pull requests for documentation and tooling changes.
+Good documentation changes are:
 
-Good docs changes are:
+- focused: one topic or workflow per change where practical
+- sourced: technical claims point to durable references
+- connected: pages are reachable through navigation and linked from relevant nearby pages
+- readable: written as public documentation, not as internal review notes
+- checked: commands, links, examples, and affected pages were verified
 
-- focused: one topic or workflow per change where possible.
-- sourced: behavior claims point to durable repositories, issues, releases, EIPs, or maintainer-confirmed references.
-- connected: new pages link from relevant existing pages and are reachable through navigation.
-- readable: content is written for users, not as a changelog of how it was discovered.
-- checked: commands, links, and examples changed in the PR were verified.
-
-Useful maintainer pages:
-
-- [Contributing to the documentation](docs/contribute/docs.md)
-- [Content standards](docs/contribute/content-standards.md)
-- [Documentation lifecycle](docs/contribute/docs-lifecycle.md)
-- [Information architecture](docs/contribute/information-architecture.md)
-- [Documentation tools](docs/contribute/tools.md)
-- [Source Watch](docs/contribute/source-watch.md)
-- [Source Watch Playbook](docs/contribute/source-watch-playbook.md)
-
-## Source-Linked Documentation
-
-Some pages include `source_repos` frontmatter so maintainers can compare docs
-against upstream repositories. Use strict validation after changing source
-metadata:
-
-```bash
-.venv/bin/python tools/source_watch.py scan --strict
-```
-
-For GitHub-backed review runs, provide a token and scope the scan:
-
-```bash
-GITHUB_TOKEN=... .venv/bin/python tools/source_watch.py scan --github --new-only --repo ergoplatform/ergo --max-queries 120 --no-fail-on-changes --format markdown --output /tmp/source-watch-ergo.md
-```
-
-Discord or chat exports are review leads only. Public docs should be updated
-from repositories, issues, releases, EIPs, or maintainer-confirmed sources.
-
-Do not add “scan found this” or internal review notes to public pages. Fold
-verified changes into the page in normal documentation prose.
+Use pull requests for documentation and tooling changes. If you are unsure where a change belongs, start with [Contributing to the Documentation](docs/contribute/docs.md).
 
 ## Deployment
 
-Pull requests touching docs or tooling are checked by
-`.github/workflows/docs-quality.yml`. Main-branch deployment is handled by
-`.github/workflows/ci.yml`. The manual `tools/deploy.sh` helper is legacy; prefer
-GitHub Actions unless a maintainer explicitly asks for manual deployment.
+Pull requests touching docs or tooling run the docs quality workflow. Main branch deploys through [Deploy and verify live site](https://github.com/ergoplatform/ergodocs/actions/workflows/ci.yml).
+
+The deploy workflow syncs the checked-out repository to the server and builds on Linux, so only committed files are deployed and path casing matters.
 
 ## Repository Hygiene
 
-Do not commit generated site output, local caches, virtualenv files, secrets, or
-local scan state. In particular, keep these out of commits:
+Do not commit generated output, secrets, local caches, virtualenvs, or scan state:
 
 - `site/`
 - `.venv/`
