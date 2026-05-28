@@ -5,7 +5,7 @@ tags:
   - Events
   - Community
 owner: docs
-last_reviewed: 2026-05-26
+last_reviewed: 2026-05-28
 source_repos:
   - repo: DeCo-Education/DeCo-Homeworks
     branch: main
@@ -31,6 +31,14 @@ source_repos:
     branch: main
     paths:
       - docs/whitepaper/sidechain.pdf
+  - repo: K-Singh/Sigma-Finance
+    branch: master
+    paths:
+      - contracts
+  - repo: ergoplatform/eips
+    branch: master
+    paths:
+      - eip-0031.md
 source_of_truth:
   - https://github.com/DeCo-Education/DeCo-Homeworks/tree/main/ErgoScript-Developer-Course/batch-0/team-tensile/future%20contract/
   - https://github.com/Lithos-Protocol/Lithos/tree/ErgoHack/documents/ErgoHack.MD
@@ -38,6 +46,9 @@ source_of_truth:
   - https://github.com/iandebeer/ergo-castanet/tree/main/docs/Conclusion.md
   - https://github.com/lazypinkpatrick/minotaur-wallet/tree/main/doc/MultiSig.md
   - https://github.com/ross-weir/ergohack-sidechain/tree/main/docs/whitepaper/sidechain.pdf
+  - https://github.com/K-Singh/Sigma-Finance/tree/master/contracts
+  - https://github.com/ergoplatform/eips/blob/master/eip-0031.md
+  - https://raw.githubusercontent.com/ergoplatform/eips/d21280977f2c21dc733632c48c98d0f614bc6123/eip-0041.md
 ---
 
 # ERGOHACK: Building the Ergo Ecosystem
@@ -180,6 +191,26 @@ Explore the history of innovation. Click any event name to jump to its details o
 * 3rd Place: Last Byte Bar
 
 [**Read the Announcement & Results**](https://ergoplatform.org/en/blog/ErgoHack-9-Advancing-Design-and-Mining-Solutions-on-Ergo/)
+
+---
+
+### ERGOHACK 9 Follow-up Ideas
+
+Several ErgoHack IX ideas remain useful prompts for future builders. Treat this list as an open backlog, not as active project commitments.
+
+1. **SigmaFi lender-side UI**: Build a fresh interface around the open SigmaFi contracts, especially lender-side flows that are not broadly exposed in current apps. The historical contract set includes `OpenOffer*` and `OpenOrder*` variants in [Sigma-Finance contracts](https://github.com/K-Singh/Sigma-Finance/tree/master/contracts). Start from the existing [SigmaFi](sigmafi.md) overview and check current contract state before shipping.
+
+2. **Stealth-address voting**: Prototype anonymous DAO voting where voters publish stealth addresses, receive vote tokens plus fee coverage, then send one input box to a published YES or NO address. The design goal is to avoid fee-linkage leaks while keeping vote tallying simple. Relevant background: [Stealth Addresses](stealth-address.md), [Pattern: Stealth Address](pattern-stealth-address.md), and [EIP-0041](https://raw.githubusercontent.com/ergoplatform/eips/d21280977f2c21dc733632c48c98d0f614bc6123/eip-0041.md).
+
+3. **Non-crypto L1/L2 wallet UX**: Explore a wallet that hides chain complexity for normal users. A user would see simple concepts such as long-term holding and instant payments, while the wallet handles L1/L2 movement, ERG fees, and [Babel fees](babel-fees.md) behind the scenes. An early version could stub the L2 path while still improving fee and token UX on L1.
+
+4. **Perpetuals and reusable wrapped-ERG plumbing**: Investigate a perpetual-trading application for Ergo. One proposed angle is reusable wrapped-ERG-style plumbing so new markets do not require entirely new contracts and wallet code for every token pair. This needs contract design, oracle assumptions, liquidation mechanics, and frontend work before it can be treated as more than a research prompt.
+
+5. **MEV-aware swap execution**: For DEX and router builders, focus on Ergo-specific sandwich-risk reduction rather than copying EVM assumptions. Useful starting points include strict `minOut` and deadline checks, route commitments, stale-quote detection, mempool-risk warnings, and later batch, solver, or private-relay mechanisms. Fully private market state can reduce information leakage, but may also hurt trader visibility and liquidity.
+
+6. **Intent-based Ergo wallet layer**: A broader framing combines several ideas above into an intent wallet. Users or agents would express goals such as pay, vote, swap, receive privately, or prove an action. The wallet would select primitives such as stealth addresses, Babel fees, routing, L1/L2 movement, or proofs underneath. This is likely too large for one hackathon project, but individual modules are good hackathon-sized work.
+
+7. **Two-pegged sidechain prototype**: The [ErgoHack VII sidechain report](https://github.com/ross-weir/ergohack-sidechain/tree/main/docs/whitepaper/sidechain.pdf) remains a candidate for modern prototyping with current tooling. A small proof-of-concept could focus on one narrow piece, such as relay verification, peg accounting, or test harnesses, rather than attempting a full sidechain.
 
 ---
 
