@@ -284,7 +284,7 @@ def build_prompt(page: dict[str, Any], page_text: str, context: str) -> str:
         "confidence": "low | medium | high",
         "summary": "short explanation",
         "uncertainty": "what a human should check",
-        "proposed_markdown": "complete updated Markdown page when action is draft-pr-safe, otherwise empty string",
+        "proposed_markdown": "complete updated Markdown page when a plausible update can be drafted, otherwise empty string",
     }
     return (
         f"Page path: {page_path}\n"
@@ -293,8 +293,10 @@ def build_prompt(page: dict[str, Any], page_text: str, context: str) -> str:
         f"Required JSON schema:\n{json.dumps(schema, indent=2)}\n\n"
         "Rules:\n"
         "- Choose draft-pr-safe only when the source evidence clearly supports a small docs update.\n"
+        "- Choose needs-human-review when the source evidence suggests a docs change but a human must verify sensitive wording.\n"
+        "- For needs-human-review, still return the best complete updated Markdown page when possible.\n"
         "- For sensitive pages, draft-pr-safe is allowed, but be conservative and explain uncertainty.\n"
-        "- Return the full updated Markdown page in proposed_markdown when drafting.\n"
+        "- Return the full updated Markdown page in proposed_markdown when any draft is useful for review.\n"
         "- Preserve YAML frontmatter and existing internal links unless they must change.\n"
         "- Do not add changelog bullets unless the page already uses that style.\n"
         "- Do not mention AI, automation, Source Watch, Discord, scans, artifacts, or this prompt in proposed_markdown.\n\n"
@@ -373,6 +375,13 @@ def create_pr(page_path: str, proposed: str, result: dict[str, Any], labels: lis
     pr = run(command).stdout.strip()
     run(["git", "checkout", base_branch])
     return {"page": page_path, "action": "created-pr", "branch": branch, "url": pr}
+
+
+def create_review_pr(page_path: str, page_text: str, result: dict[str, Any], labels: list[str], base_branch: str, dry_run: bool) -> dict[str, str]:
+    proposed = str(result.get("proposed_markdown", ""))
+    if not valid_markdown_update(page_text, proposed):
+        proposed = page_text.rstrip() + "\n\n<!-- docs-review-needed: source evidence may require a documentation update; see draft PR body. -->\n"
+    return create_pr(page_path, proposed, result, labels, base_branch, dry_run)
 
 
 def ensure_labels(labels: list[str], dry_run: bool) -> None:
@@ -468,14 +477,21 @@ def main() -> int:
 
         action = str(ai.get("action", "needs-human-review"))
         proposed = str(ai.get("proposed_markdown", ""))
-        if action != "draft-pr-safe":
+        if action == "no-doc-change":
             results.append({"page": page_path, "action": action, "url": ""})
+            continue
+        pr_labels = labels + (["sensitive"] if is_sensitive(page_path) else [])
+        if action == "needs-human-review":
+            results.append(create_review_pr(page_path, page_text, ai, pr_labels, args.base_branch, args.dry_run))
+            continue
+        if action != "draft-pr-safe":
+            ai["uncertainty"] = f"Unexpected model action: {action}. Human review required."
+            results.append(create_review_pr(page_path, page_text, ai, pr_labels, args.base_branch, args.dry_run))
             continue
         if not valid_markdown_update(page_text, proposed):
             results.append({"page": page_path, "action": "invalid-or-empty-proposal", "url": ""})
             continue
 
-        pr_labels = labels + (["sensitive"] if is_sensitive(page_path) else [])
         results.append(create_pr(page_path, proposed, ai, pr_labels, args.base_branch, args.dry_run))
 
     output = {"provider": args.provider, "model": model, "results": results}
