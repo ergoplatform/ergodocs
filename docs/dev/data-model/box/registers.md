@@ -13,19 +13,19 @@ In Ergo's blockchain model, a [**box**](box.md) is a versatile entity that not o
 
 **Each box contains at least four essential pieces of information:**
 
-1. The value in NanoErgs (1 Erg = 1000000000 NanoErgs).
+1. The value in nanoErgs (1 ERG = 1,000,000,000 nanoErgs).
 2. The protection [script](ergoscript.md) (similar to Bitcoin's `scriptPubKey`) or "[smart contract](ergoscript.md)", which secures the box's expenditure.
 3. Any additional assets or [tokens](eip4.md) contained within the box.
-4. Details about the box's creation, including the `txId` (the ID of the [transaction](transactions.md) that created the box) and an [output index](transactions.md#anatomy). This information also includes a `maxCreation` height parameter set by the box creator (note: this is not the actual creation height; it aids in the creation of "payment channels").
+4. Details about the box's creation, including the declared creation height, the `txId` (the ID of the [transaction](transactions.md) that created the box), and an [output index](transactions.md#anatomy).
 
 These pieces of information are stored in the first four registers (R0-R3) of the box. The remaining registers, from R4 to R9, can be used to store custom data for use in smart contracts. Scripts can access their own registers and the registers of [input](transactions.md#anatomy) and [output](transactions.md#anatomy) boxes of the spending transaction.
 
 | Register | Value                                      | Access via ErgoScript (`Box.` prefix) |
 |----------|--------------------------------------------|---------------------------------------|
-| R0       | Value (in nanoErgs)                        | `value`                               |
+| R0       | Value (in nanoErgs)                         | `value`                               |
 | R1       | Protection script ([ErgoTree](ergotree.md)) | `propositionBytes`                    |
 | R2       | Assets ([Tokens](eip4.md))             | `tokens`                              |
-| R3       | Creation details (`(txId, outputIndex)`) | `creationInfo`                        |
+| R3       | Creation details (`(creationHeight, txId + outputIndex)`) | `creationInfo`                        |
 | R4-R9    | Available for custom use                   | `R4[T]`, `R5[T]`, ... `R9[T]`         |
 
 /// admonition | Keep in mind!
@@ -36,7 +36,7 @@ Registers must be densely packed; you cannot place an empty register between non
 
 ### Register R0
 
-Register R0 holds the monetary value of the box in nanoERGs. Use `Box.value` to access this register, where `Box` could signify [`SELF`](blockchain-context.md#self), or any box in the [`INPUTS`](blockchain-context.md#inputs) or [`OUTPUTS`](blockchain-context.md#outputs) collections.
+Register R0 holds the monetary value of the box in nanoErgs. Use `Box.value` to access this register, where `Box` could signify [`SELF`](blockchain-context.md#self), or any box in the [`INPUTS`](blockchain-context.md#inputs) or [`OUTPUTS`](blockchain-context.md#outputs) collections.
 
 ### Register R1
 
@@ -48,7 +48,7 @@ Register R2 contains a collection of [tokens](eip4.md) stored in the box. Each t
 
 ### Register R3
 
-Register R3 holds information about the box’s creation: `(txId: Coll[Byte], index: Short)`. Use `Box.creationInfo` to access this register. The creation height (the block height when the box was created) is accessible via `Box.creationInfo._2` and is part of Ergo's unique [storage rent](storage-rent.md) feature, where boxes can be spent after four years, allowing [miners](mining-overview.md) to charge a small fee and recycle ERGs back into the blockchain.
+Register R3 holds information about the box's creation. In ErgoScript, use `Box.creationInfo` to access this value as `(Int, Coll[Byte])`: `creationInfo._1` is the box's creation height value, and `creationInfo._2` is a 34-byte collection containing the 32-byte transaction identifier followed by the 2-byte output index. The creation height is declared when the box is created and must not exceed the block height that includes the transaction. It is relevant to Ergo's [storage rent](storage-rent.md) rules, where old boxes can become spendable by miners after the rent period.
 
 ### Optional Registers R4-R9
 

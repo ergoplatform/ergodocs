@@ -96,7 +96,7 @@ AppKit is a comprehensive framework for interacting with Ergo smart contracts an
    UnsignedTransactionBuilder txB = client.getUnsignedTransactionBuilder();
 
    OutBoxBuilder outBoxB = txB.outBoxBuilder()
-       .value(1000000L)  // set value in nanoERGs
+       .value(1000000L)  // set value in nanoErgs
        .contract(SigmaUSDContract);
 
    List<InputBox> inputs = txB.boxesToSpend(inputsList).build();

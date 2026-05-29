@@ -101,7 +101,7 @@ Need help figuring out where to start developing? This [introduction to Mosaik](
 
   },
   {
-    "title": "🔗 DeCo Education: DApp Components - Backend",
+    "title": "🔗 DeCo Education: dApp Components - Backend",
     "url": "https://deco-education.github.io/deco-docs/docs/into-the-woods/trail2-ergo-coding/dapp-components"
   }
 ]

@@ -16,11 +16,11 @@ source_repos:
   - repo: ergo-pad/paideia-contracts
     branch: main
     paths:
-      - paideia_contracts/contracts/plasma_staking/ergoscript/latest/plasmaStaking.es
+      - paideia_contracts/contracts/plasma_staking/ErgoScript/latest/plasmaStaking.es
 source_of_truth:
   - https://github.com/GetBlok-io/GetBlok-Plasma/tree/master/documents/AVL_Trees.MD
   - https://github.com/GetBlok-io/GetBlok-Plasma/tree/master/documents/SmartPool_Plasma.MD
-  - https://github.com/ergo-pad/paideia-contracts/tree/main/paideia_contracts/contracts/plasma_staking/ergoscript/latest/plasmaStaking.es
+  - https://github.com/ergo-pad/paideia-contracts/tree/main/paideia_contracts/contracts/plasma_staking/ErgoScript/latest/plasmaStaking.es
 ---
 
 # Plasma
@@ -239,4 +239,4 @@ proxyMap.dropChanges()
 - [Plasma Example: Off-chain Bank operating at Layer 2](https://www.ergoforum.org/t/offchain-bank-operating-at-layer-2/3367)
 - [GetBlok Plasma](https://github.com/GetBlok-io/GetBlok-Plasma)
 - [GetBlok: SmartPool Plasma](https://github.com/GetBlok-io/GetBlok-Plasma/blob/master/documents/SmartPool_Plasma.MD)
-- [Paideia - Plasma Staking](https://github.com/ergo-pad/paideia-contracts/blob/main/paideia_contracts/contracts/plasma_staking/ergoscript/latest/plasmaStaking.es)
+- [Paideia - Plasma Staking](https://github.com/ergo-pad/paideia-contracts/blob/main/paideia_contracts/contracts/plasma_staking/ErgoScript/latest/plasmaStaking.es)

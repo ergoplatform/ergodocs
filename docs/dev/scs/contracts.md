@@ -254,7 +254,7 @@ The [ergo-contracts](https://github.com/ergoplatform/ergo-contracts) repository 
 - [AgeUSD](https://github.com/ergoplatform/eips/pull/33)
 - [ErgoGravity](https://github.com/mhssamadani/gravity-core/blob/dev/contracts/ergo/gravity.scala) & [ErgoNebula](https://github.com/mhssamadani/gravity-core/blob/dev/contracts/ergo/nebula.scala)
 - [Oracle Pools v0.4a](https://github.com/scalahub/Kiosk/tree/master/src/test/scala/kiosk/oraclepool/v4a)
-- [NightOwl](https://github.com/nightowlcasino/ergoscript-contracts)
+- [NightOwl](https://github.com/nightowlcasino/ErgoScript-contracts)
 - [Hodlcoin (V1?)](https://github.com/lucagdangelo/hodlcoin-contracts)
 
 ### ToDo

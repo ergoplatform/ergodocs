@@ -52,7 +52,7 @@ val ringSignature = prove {
 
 - [Discrete Logarithm Proofs](dlog.md)
 - [Threshold Signatures](threshold.md)
-- [Sigma Protocols Overview](sigma.md)
+- [Sigma protocols Overview](sigma.md)
 
 ## Privacy Mechanisms
 

@@ -24,7 +24,7 @@ Ergo represents a significant advancement in blockchain computational models, ex
 ### 1.2 Fundamental Design Principles
 
 1. **Computational Completeness**: Supporting Turing-complete smart contract execution within strict cryptographic constraints via [multi-stage contracts](multi.md).
-2. **Cryptographic Composability**: Enabling complex cryptographic protocols through [Sigma Protocols](sigma.md).
+2. **Cryptographic Composability**: Enabling complex cryptographic protocols through [Sigma protocols](sigma.md).
 3. **Scalable State Management**: Designing a model that supports parallel transaction processing and efficient state verification.
 
 ---
@@ -54,7 +54,7 @@ A [Box](box.md) is essentially a "smart UTXO" - it serves the same role as a UTX
 * **Immutable State**: Each box represents an atomic, immutable state unit that cannot be modified after creation. *(Lifecycle details might be added later or linked if a dedicated page exists)*.
 
 * **Typed Registers**: Boxes contain 10 [registers](registers.md) (R0-R9) with specific purposes and rich computational potential:
-  * R0: Monetary Value (in nanoERGs)
+  * R0: Monetary Value (in nanoErgs)
   * R1: Protection Script ([Smart Contract](ergoscript.md))
   * R2: Assets/[Tokens](eip4.md)
   * R3: Creation Details
@@ -146,10 +146,10 @@ Ergo defines protocols to streamline user interactions with [wallets](wallets.md
 
 Ergo’s [cryptographic](crypto.md) design ensures robust security, privacy, and flexibility.
 
-### 8.1 Sigma Protocols
+### 8.1 Sigma protocols
 
 * [Non-interactive Zero-Knowledge Proofs](zkp.md): Private transaction verification without revealing sensitive data.
-* [Flexible Signature Schemes](sigma.md): Supporting multiple signature types via Sigma Protocols.
+* [Flexible Signature Schemes](sigma.md): Supporting multiple signature types via Sigma protocols.
 * [Privacy-Preserving Mechanisms](zkp.md): Advanced features to protect user privacy.
 
 ### 8.2 Cryptographic Primitives

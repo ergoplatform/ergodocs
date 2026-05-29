@@ -32,11 +32,11 @@ ErgoScript, the platform's programming language, exemplifies this innovation by 
 
 Engineered with a strong emphasis on security and versatility, Ergo offers a reliable foundation for dApps to operate with predictable costs. Its smart contracts ensure Turing completeness without compromising on predictability or affordability. Ergo adopts a declarative model for programming whereby it's always known in advance how much code will cost to run, avoiding the dangers of unrestricted functionality seen in some other platforms.
 
-The introduction of [Sigma Protocols](sigma.md) and [Multi-stage Contracts](multi.md) enhances this further by supporting non-interactive zero-knowledge proofs and complex transaction conditions, facilitating intricate, secure, and efficient smart contract creation.
+The introduction of [Sigma protocols](sigma.md) and [Multi-stage Contracts](multi.md) enhances this further by supporting non-interactive zero-knowledge proofs and complex transaction conditions, facilitating intricate, secure, and efficient smart contract creation.
 
 ### Intelligent and User-Friendly
 
-Ergo leverages Sigma Protocols [(Σ-Protocols)](sigma.md) to power its smart contracts, enabling the use of efficient zero-knowledge proofs. This allows for the performance of complex, privacy-sensitive tasks without intermediaries, fostering a trustless environment with unparalleled application-level privacy.
+Ergo leverages Sigma protocols [(Σ-protocols)](sigma.md) to power its smart contracts, enabling the use of efficient zero-knowledge proofs. This allows for the performance of complex, privacy-sensitive tasks without intermediaries, fostering a trustless environment with strong application-level privacy.
 
 ### Secure and Accessible to All
 

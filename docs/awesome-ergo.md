@@ -203,8 +203,8 @@
 - 🥇 **[Sigmastate Interpreter](https://github.com/ScorexFoundation/sigmastate-interpreter)** – core interpreter & type system. [`Scala`, `ErgoScript`]
 - 🥇 **[escript.online](https://escript.online/)** – online editor & playground. [GitHub](https://github.com/SavonarolaLabs/escript-online) [`JS/TS`]
 - 🥇 **[Ergo Playgrounds](https://github.com/ergoplatform/ergo-playgrounds)** – Scala-based contract/off-chain testing. [`Scala`]
-- [Ergoscript Compiler (Rust)](https://github.com/ergoplatform/sigma-rust/tree/develop/ergoscript-compiler) – Rust implementation. [`Rust`]
-- [Ergoscript Compiler (Scala)](https://github.com/ergoplatform/ergoscript-compiler) – Scala CLI tool. [`Scala`]
+- [ErgoScript Compiler (Rust)](https://github.com/ergoplatform/sigma-rust/tree/develop/ergoscript-compiler) – Rust implementation. [`Rust`]
+- [ErgoScript Compiler (Scala)](https://github.com/ergoplatform/ergoscript-compiler) – Scala CLI tool. [`Scala`]
 - [ErgoScala Compiler](https://github.com/ergoplatform/ergoscala-compiler) – compile subset of Scala to ErgoScript. [`Scala`] *(Needs link update if available)*
 - [ErgoScript CLI Compiler](https://github.com/ergoplatform/ergoscript-compiler) – CLI tool to compile ErgoScript to address. [`Scala`] *(Duplicate link? Check source)*
 - [VSCode ErgoScript Language Support](https://marketplace.visualstudio.com/items?itemName=ergoscript.ergoscript-language-support) – syntax highlighting. [Source](https://github.com/GuapSwap/vscode-ergoscript-language-support)
@@ -306,7 +306,7 @@
 ### 🧪 Testing & Debugging <a id="testing--debugging"></a>
 
 - 🥇 **[Contract Testing Framework](https://github.com/anon-real/contract-testing)** – off-chain ErgoScript contract testing. [`Scala`]
-- [Ergoscript Simulator](https://github.com/spectrum-finance/ergoscript-simulator) – community tool for simulating ErgoScript. [`Scala`?]
+- [ErgoScript Simulator](https://github.com/spectrum-finance/ergoscript-simulator) – community tool for simulating ErgoScript. [`Scala`?]
 - [Ergo Puppet](https://github.com/dav009/ergo-puppet) – off-chain experimentation/unit testing tool. [`Scala`]
 - [Ergo Test Vectors](https://github.com/ergoplatform/ergo-test-vectors) – standard test vectors for crypto/serialization.
 
@@ -670,7 +670,7 @@
 - [Autolykos PoW Algorithm](https://ergoplatform.org/docs/ErgoPow.pdf) – PoW algorithm paper.
 - [NiPoPoWs Paper](https://eprint.iacr.org/2016/994.pdf) – research paper.
 - [Storage Rent Paper](https://ergoplatform.org/docs/StorageRent.pdf) – storage rent mechanism paper.
-- [Sigma Protocols Paper](https://ergoplatform.org/docs/ergoscript.pdf) – covered in ErgoScript Whitepaper.
+- [Sigma protocols Paper](https://ergoplatform.org/docs/ergoscript.pdf) – covered in ErgoScript Whitepaper.
 - [ErgoTree Specification](https://raw.githubusercontent.com/ScorexFoundation/sigmastate-interpreter/master/docs/spec/ergotree.pdf) – formal spec.
 - [ErgoScript Language Specification](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/LangSpec.md) – syntax & semantics spec.
 - [Sigma Language DSL Documentation](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/sigma-dsl.md) – Sigma protocol language features.

@@ -189,7 +189,7 @@
 * **Sharding**: A scaling technique that divides the blockchain into smaller, parallel chains to increase throughput while maintaining security.
 * **Shared Figma Graphic Space**: A collaborative platform where community members can work together on visual content and design projects related to Ergo.
 * **[Sidechain](sidechains.md)**: A separate blockchain connected to the main blockchain, allowing for different features and scalability.
-* **[Sigma Protocols](sigma.md)**: A set of cryptographic protocols forming the backbone of Ergo's smart contracts. They enable efficient zero-knowledge proofs, enhancing privacy and trustlessness.
+* **[Sigma protocols](sigma.md)**: A set of cryptographic protocols forming the backbone of Ergo's smart contracts. They enable efficient zero-knowledge proofs, enhancing privacy and trustlessness.
 * **SigCAN (Sigmanaut Candidate)**: An individual who has applied to the Sigmanauts Program and is in the initial stage of becoming a Sigmanaut, where they can showcase their skills and contributions.
 * **[Sigma-Protocols](sigma.md)**: Efficient zero-knowledge proofs used in Ergo for advanced privacy options.
 * **[Sigmanaut Programme](sigmanauts.md)**: A program aimed at transitioning responsibilities from the Ergo Foundation to the Ergo community.

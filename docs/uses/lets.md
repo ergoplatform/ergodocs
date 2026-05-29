@@ -30,7 +30,7 @@ Hundreds of LETS could coexist on the same blockchain, each with its unique part
 
 ## Implementing LETS on Ergo
 
-Ergo's blockchain offers unique capabilities to implement a LETS system without the need for centralized control. Thanks to [Sigma Protocols](crypto.md), we can create a **Trustless LETS** on Ergo with no need for a membership record or management committee, allowing the system to operate with complete autonomy.
+Ergo's blockchain offers unique capabilities to implement a LETS system without the need for centralized control. Thanks to [Sigma protocols](crypto.md), we can create a **Trustless LETS** on Ergo with no need for a membership record or management committee, allowing the system to operate with complete autonomy.
 
 ### Explore Further
 

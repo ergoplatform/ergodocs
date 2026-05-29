@@ -28,7 +28,7 @@ Use this page for concepts and background. If you want to do a practical task, u
 ## Cryptography and Data Structures
 
 - [Cryptography Overview](crypto.md)
-- [Sigma Protocols](sigma.md)
+- [Sigma protocols](sigma.md)
 - [Schnorr](schnorr.md)
 - [Diffie-Hellman](diffie.md)
 - [Zero-Knowledge Proofs](zkp.md)

@@ -4,7 +4,7 @@ tags:
   - Whitepaper
   - Scripting Language
   - NIZK
-  - Sigma Protocols
+  - Sigma protocols
 owner: docs
 last_reviewed: 2026-05-26
 source_repos:

@@ -63,7 +63,7 @@ Choose this path when every automatic sweep fails because the node exhausts limi
 | ----- | ------------------------------------------------- | ----------------------------------------------------- |
 |  1    | `GET /wallet/boxes/unspent?limit=100`             | Record every `boxId`.                                 |
 |  2    | `GET /utxo/byIdBinary/{boxId}` for each id        | Record the `bytes` field. Plain even‑length hex only. |
-|  3    | Sum every `value`                                 | Keep at least 1 000 000 nanoERG for the fee.          |
+|  3    | Sum every `value`                                 | Keep at least 1 000 000 nanoErgs for the fee.          |
 |  4    | Assemble JSON                                     | See the example below.                                |
 |  5    | `POST /wallet/transaction/send` (api\_key header) | The node broadcasts the sweep.                        |
 |  6    | Repeat with fresh inputs                          | Stop when UTXO count is small.                        |

@@ -106,6 +106,6 @@ These examples will help you get started and understand the concepts better.
 
 * For sending ERG, check out the [code used in the Android wallet](https://github.com/MrStahlfelge/ergo-wallet-android/blob/0e4e10d5ad18453ca43948514d73255c567fefd1/app/src/main/java/org/ergoplatform/android/ErgoFacade.kt#L86).
 * An example for a very simple smart contract freezing an amount of ERG to not to be spent before some time expired can be found on [Appkit's main readme](https://github.com/ergoplatform/ergo-appkit/blob/develop/README.md#using-from-java).
-* The [ergoscript by example](https://github.com/ergoplatform/ergoscript-by-example) repository contains two additional smart contract examples (not using Appkit).
+* The [ErgoScript by example](https://github.com/ergoplatform/ergoscript-by-example) repository contains two additional smart contract examples (not using Appkit).
 * How you can mint new tokens can be seen in [ergo-dex repo](https://github.com/ergoplatform/ergo-dex/blob/50596a92a465f52904b5d8015e8ae0d62e414176/src/main/scala-2.12/org/ergoplatform/dex/commands/IssueTokenCmd.scala).
 * [ErgoPay Server example](https://github.com/MrStahlfelge/ergopay-server-example/blob/master/src/main/java/org/ergoplatform/ergopay/ErgoPaySampleController.java) builds transactions for minting and burning token and spending a specific box.

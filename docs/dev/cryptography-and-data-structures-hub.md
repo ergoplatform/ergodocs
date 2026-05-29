@@ -5,7 +5,7 @@ Developer-focused hub linking to the canonical Learn content.
 ## Cryptography
 - [Cryptography Overview](crypto.md)
 
-### Sigma Protocols
+### Sigma protocols
 - [Overview](sigma.md)
 - [Schnorr](schnorr.md)
 - [Schnorr Verification](verifying.md)

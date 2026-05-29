@@ -23,7 +23,7 @@ Moreover, the growth of Sigma Chains will accelerate development and increase Er
 
 ## Key Features of Sigma Chains
 
-- **Programmability:** Sigma Chains support complex smart contracts and DApps, enabling a wide range of applications from DeFi to digital identities. They utilize the ErgoScript language, which is flexible, Turing-complete, and prioritizes security.
+- **Programmability:** Sigma Chains support complex smart contracts and dApps, enabling a wide range of applications from DeFi to digital identities. They utilize the ErgoScript language, which is flexible, Turing-complete, and prioritizes security.
 
 - **Cross-Chain Compatibility:** Sigma Chains facilitate seamless interactions between Ergo and other blockchain networks, enhancing liquidity and interoperability within the blockchain ecosystem. They enable trustless value pegging between chains.
 
@@ -35,9 +35,9 @@ Moreover, the growth of Sigma Chains will accelerate development and increase Er
 
 Sigma Chains introduce an innovative approach to revitalizing PoW through merged mining. Being algorithm agnostic, Sigma Chains can serve as an attractive alternative for unprofitable miners across various hardware classes (ASIC, GPU, CPU), empowering them to contribute to the security and growth of the entire Ergo ecosystem. Merged mining on Sigma Chains allows Ergo miners to be paid in various tokens while still requiring ERG for transactions on the Ergo network, creating a sustainable economic model that benefits both miners and the overall ecosystem.
 
-## Empowering Portable Projects and DApps
+## Empowering Portable Projects and dApps
 
-Sigma Chains enable the creation of portable projects and DApps that can seamlessly interact across multiple blockchains. Sigma Chains come with built-in DeFi frameworks and dApps from day one, allowing projects to bootstrap faster and reward existing Ergo holders. Portable projects gain access to other on-chain markets, expanding their reach and potential for growth. Sigma Chains utilize the Sigma protocol suite, which provides a robust and modular framework for building complex financial applications, offering a wide range of DeFi primitives that can be easily integrated and adapted across different chains.
+Sigma Chains enable the creation of portable projects and dApps that can seamlessly interact across multiple blockchains. Sigma Chains come with built-in DeFi frameworks and dApps from day one, allowing projects to bootstrap faster and reward existing Ergo holders. Portable projects gain access to other on-chain markets, expanding their reach and potential for growth. Sigma Chains utilize the Sigma protocol suite, which provides a robust and modular framework for building complex financial applications, offering a wide range of DeFi primitives that can be easily integrated and adapted across different chains.
 
 ## Architecture of Sigma Chains
 

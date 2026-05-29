@@ -117,7 +117,7 @@ Ergo's cryptographic design incorporates [Sigma protocols](sigma.md), providing 
 
 Discrete log-based zero-knowledge proofs refer to a class of zero-knowledge proofs that rely on the hardness of the discrete logarithm problem, a foundational concept in modern cryptography. ErgoScript, the scripting language used in Ergo, provides access to Σ-protocols, a subclass of cryptographic proof systems known as non-interactive Σ-protocols. These Σ-protocols include the Schnorr signature scheme and Diffie-Hellman tuple, which can be used to prove knowledge of discrete logarithms. This efficient and flexible implementation of zero-knowledge proofs can improve privacy-enhancing features and applications on Ergo.
 
-Ergo's Sigma Protocols enable the implementation of sophisticated tasks that would otherwise be impossible, risky, or expensive, allowing for self-sovereign application-level privacy. Trustless scripts can access mixers or other functionality without any third parties required. Using Ergo for such applications, users can achieve enhanced privacy and security compared to other platforms.
+Ergo's Sigma protocols enable the implementation of sophisticated tasks that would otherwise be impossible, risky, or expensive, allowing for self-sovereign application-level privacy. Trustless scripts can access mixers or other functionality without any third parties required. Using Ergo for such applications, users can achieve enhanced privacy and security compared to other platforms.
 
 ## Data Inputs
 

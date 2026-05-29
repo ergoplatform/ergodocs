@@ -10,7 +10,7 @@ tags:
 
 ## Overview
 
-**Bene: Fundraising Platform** is a decentralized application (DApp) that enables projects to receive funding in exchange for participation tokens. This DApp allows projects to request ERGs (the native cryptocurrency of the Ergo blockchain) in exchange for participation tokens.
+**Bene: Fundraising Platform** is a decentralized application (dApp) that enables projects to receive funding in exchange for participation tokens. This dApp allows projects to request ERGs (the native cryptocurrency of the Ergo blockchain) in exchange for participation tokens.
 
 ## How it Works
 

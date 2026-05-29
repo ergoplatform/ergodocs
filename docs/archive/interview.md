@@ -1,77 +1,77 @@
 
-<!-- #### Are their plants to put together a Plutus Pioneer-style program for ErgoScript? 
- 
-The Ergo Foundation can sponsor the money for educational programs, and this is of the core goals of the Ergo Foundation as an organization. 
+<!-- #### Are their plants to put together a Plutus Pioneer-style program for ErgoScript?
 
-#### How do you see the Ergo network funding development over time?  
+The Ergo Foundation can sponsor the money for educational programs, and this is of the core goals of the Ergo Foundation as an organization.
 
-Longer-term, we propose a community development DAO that operates in parallel to the Ergo Foundation. One potential mechanism to fund this would be through projects that tokenize on the Ergo Blockchain. Open source development often comes with a variety of assistance from the community. 
+#### How do you see the Ergo network funding development over time?
 
-If new projects are willing to donate a small allocation of their tokens to either the Ergo Foundation or a community DAO, it opens a long-term funding path.  
+Longer-term, we propose a community development DAO that operates in parallel to the Ergo Foundation. One potential mechanism to fund this would be through projects that tokenize on the Ergo Blockchain. Open source development often comes with a variety of assistance from the community.
 
-We have already started discussions with projects. 
- 
-#### To what extent can there be competition for dApps? 
+If new projects are willing to donate a small allocation of their tokens to either the Ergo Foundation or a community DAO, it opens a long-term funding path.
 
-We actively encourage competing dapps. Competition is a critical part of creating a DEFI environment. It opens the ability for traders to arbitrage across dapps and creates increased activity on the network. Competing marketplaces also increases market efficiency. We encourage competition. It creates market opportunities and incentives to innovate. 
- 
-#### Free software is great, but it does tend to undercut incentives. 
- 
+We have already started discussions with projects.
+
+#### To what extent can there be competition for dApps?
+
+We actively encourage competing dApps. Competition is a critical part of creating a DEFI environment. It opens the ability for traders to arbitrage across dApps and creates increased activity on the network. Competing marketplaces also increases market efficiency. We encourage competition. It creates market opportunities and incentives to innovate.
+
+#### Free software is great, but it does tend to undercut incentives.
+
 Free software is amazing. Bitcoin would not exist without free software. Much of the internet would not exist without Linux. Ergo is a new contract model. Most projects are based on EVM or previous forks.
 
-Much of the infrastructure has to be created from scratch to match Ergo's model. Is that a negative? No, it is a bi-product of leading the Extended UTXO model to market.  
+Much of the infrastructure has to be created from scratch to match Ergo's model. Is that a negative? No, it is a bi-product of leading the Extended UTXO model to market.
 
-So far, we have produced the first extended UTXO dapp, stablecoin, oracle framework, NFT, and dex. Currently, there is ongoing R&D into multiple L2 solutions. Ergo will most likely start with plasma channels first and expand to models with more complexity. We are also in the development process of bridging to other ecosystems. Additionally, a framework for sidechains has come out of our R&D group and will be implemented in 2022. 
- 
+So far, we have produced the first extended UTXO dApp, stablecoin, oracle framework, NFT, and dex. Currently, there is ongoing R&D into multiple L2 solutions. Ergo will most likely start with plasma channels first and expand to models with more complexity. We are also in the development process of bridging to other ecosystems. Additionally, a framework for sidechains has come out of our R&D group and will be implemented in 2022.
+
 #### Who is using Ergo? What are the top countries using the chain? How does the user profile differ from other chains?
- 
-Ergo is still a very young network. At this point, the primary users are either investors or miners. However, as we build tooling, we have a path to capture multiple markets. Ergo is not a native token. It is a base layer blockchain; the focus is to create the basic tooling to support demand on top of the base layer. 
 
-Unique needs arise when analyzing different projects. We are already putting together multiple Ergo Improvement Protocols to support development. 
+Ergo is still a very young network. At this point, the primary users are either investors or miners. However, as we build tooling, we have a path to capture multiple markets. Ergo is not a native token. It is a base layer blockchain; the focus is to create the basic tooling to support demand on top of the base layer.
 
-Market specialization is the focus of developers and projects on top of Ergo. Our goal is to build a variety of tooling and infrastructure to support this growth. 
- 
-#### Where does Ergo excel? What disadvantages relative to other chains? 
- 
-Ergo's advantages are beyond the benefits of Extended UTXO; we have a lot of interesting privacy options with Sigma protocols; Ergo also has a simple path to sidechains and a way to revolutionize SPV client implementation. Ultralite SPV clients via NIPoPoWs with full node security have never been implemented. 
+Unique needs arise when analyzing different projects. We are already putting together multiple Ergo Improvement Protocols to support development.
 
-Ergo is pushing the boundaries of Proof of Work and Extended UTXO simultaneously. We plan to continue the research first approach and push the boundaries of what POW is capable of. 
+Market specialization is the focus of developers and projects on top of Ergo. Our goal is to build a variety of tooling and infrastructure to support this growth.
 
-I would say there are two disadvantages. The first is time. There is considerable mindshare developed around EVM, and the account model in this comparison, Extended UTXO, is behind. 
+#### Where does Ergo excel? What disadvantages relative to other chains?
 
-The second is the current market mindset does care about first principles or crypto or the actual resilience of distributed systems. However, we do believe that both of these will change in time. 
+Ergo's advantages are beyond the benefits of Extended UTXO; we have a lot of interesting privacy options with Sigma protocols; Ergo also has a simple path to sidechains and a way to revolutionize SPV client implementation. Ultralite SPV clients via NIPoPoWs with full node security have never been implemented.
 
-Real decentralization, privacy, and resilience are not attractive when you don't need them. 
+Ergo is pushing the boundaries of Proof of Work and Extended UTXO simultaneously. We plan to continue the research first approach and push the boundaries of what POW is capable of.
 
-This type of network does come with a tradeoff vs systems designed to be more centralized, permissioned, and optimized. The value of resilience only matters in difficult environments.  
- 
+I would say there are two disadvantages. The first is time. There is considerable mindshare developed around EVM, and the account model in this comparison, Extended UTXO, is behind.
+
+The second is the current market mindset does care about first principles or crypto or the actual resilience of distributed systems. However, we do believe that both of these will change in time.
+
+Real decentralization, privacy, and resilience are not attractive when you don't need them.
+
+This type of network does come with a tradeoff vs systems designed to be more centralized, permissioned, and optimized. The value of resilience only matters in difficult environments.
+
 #### I would be interested in some real critique rather than nonsense FUD about PoW not being environmentally friendly.
- 
-POW is energy-intensive relative to POS. However, the security model is known. The design of Ergo is pretty conservative. We chose Sigma protocols because they are well known. They have been studied and tested in-depth for a long time. 
 
-There are newer, fancier cryptographic frameworks. However, they have not been rigorously tested to the point where the assumptions can be considered truly sound. If the assumptions break, the cryptography breaks as well. Ergo is also designed to be amendable, meaning it can be upgraded in time. If newer cryptography demonstrates resilience, we can always add it in the future. 
+POW is energy-intensive relative to POS. However, the security model is known. The design of Ergo is pretty conservative. We chose Sigma protocols because they are well known. They have been studied and tested in-depth for a long time.
 
-PoW is seen as a store of value based on the energy used to back the production of the digital asset. The best way to encourage ERG as a store of value is to use well-researched methods and cryptography. 
+There are newer, fancier cryptographic frameworks. However, they have not been rigorously tested to the point where the assumptions can be considered truly sound. If the assumptions break, the cryptography breaks as well. Ergo is also designed to be amendable, meaning it can be upgraded in time. If newer cryptography demonstrates resilience, we can always add it in the future.
 
-Proof of Stake is not bad; we are happy to work with Proof of Stake chains. 
+PoW is seen as a store of value based on the energy used to back the production of the digital asset. The best way to encourage ERG as a store of value is to use well-researched methods and cryptography.
 
-One of the largest short-term liabilities in POS tokens is that they resemble security much more than a fair launched POW token.  
+Proof of Stake is not bad; we are happy to work with Proof of Stake chains.
+
+One of the largest short-term liabilities in POS tokens is that they resemble security much more than a fair launched POW token.
 
 There are areas in POS where the security models are not known as they have not been fully implemented.
 
-The reality with POS is each particular network has to create security assumptions based on various factors unique to each project. 
- 
-In terms of usability, consensus, etc., there are a lot of unique challenges in Proof of Stake.  
+The reality with POS is each particular network has to create security assumptions based on various factors unique to each project.
 
-If POS projects support stake migration, how will that alter network congestion, TLV in DEFI, and rates of return in DEFI? 
+In terms of usability, consensus, etc., there are a lot of unique challenges in Proof of Stake.
 
-There are a lot of factors that are hard to predict. Ergo is not anti-proof of stake. However, there are many unknowns and complexities in the project. 
+If POS projects support stake migration, how will that alter network congestion, TLV in DEFI, and rates of return in DEFI?
+
+There are a lot of factors that are hard to predict. Ergo is not anti-proof of stake. However, there are many unknowns and complexities in the project.
 
 #### Sufficient provision of production inputs -Human capital How much effort is the chain making to onboard talents & produce its future army of developers?
 
-Onboarding developers is first a matter of documentation and developer tools. This is in motion, and we will continue to increase resources towards this end. We also offer bounties that give developers a pathway to learn, improve and familiarize themselves with the inner workings of Ergo. We also have hosted hackathons that have brought about projects converting into dapps. Moving forward, I would like to increase the frequency of hackathons and increase the offered prizes. Hackathon Ideas Privacy Tokenizing on Top of Ergo Documentation and Developer Tools.
+Onboarding developers is first a matter of documentation and developer tools. This is in motion, and we will continue to increase resources towards this end. We also offer bounties that give developers a pathway to learn, improve and familiarize themselves with the inner workings of Ergo. We also have hosted hackathons that have brought about projects converting into dApps. Moving forward, I would like to increase the frequency of hackathons and increase the offered prizes. Hackathon Ideas Privacy Tokenizing on Top of Ergo Documentation and Developer Tools.
 
-#### How easy is it for non-web3 developers to convert? (e.g. C++ & Java peeps can learn Rust, used by Solana, in a month. For Avalanche, you can code in multiple languages. Few likes Solidity.) 
+#### How easy is it for non-web3 developers to convert? (e.g. C++ & Java peeps can learn Rust, used by Solana, in a month. For Avalanche, you can code in multiple languages. Few likes Solidity.)
 
 This honestly depends on the talent of the actual developers to start with. Not all developers start with an equal skill set. As we create additional resources, documentation, and educational tools, this process will be more streamlined. You can build on top of Ergo in a variety of languages.
 
@@ -109,7 +109,7 @@ Projects with a strong attachment to IP can build on other networks and always b
 
 #### Clusters of supporting sectors Are there signs of synergetic niches/industries emerging within the L1 ecosystem?
 
-Ergo was built for smart financial contracts before DEFI was even a term. Given the strengths of the extended UTXO model, this is a significant growth sector for ERG. As Ergoscript and the Extended UTXO model develop, I believe new innovative frameworks will be discovered.
+Ergo was built for smart financial contracts before DEFI was even a term. Given the strengths of the extended UTXO model, this is a significant growth sector for ERG. As ErgoScript and the Extended UTXO model develop, I believe new innovative frameworks will be discovered.
 
 #### Quality of domestic demand How does the user profile of this L1 compare to other chains?
 

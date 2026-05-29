@@ -19,7 +19,7 @@ If blockchains were fully interoperable, developers could make their infrastruct
 
 This is the future that Ergo would like to see and bring about. Each blockchain platform will have its own strengths, but all will be interoperable, meaning that tokens and dApps will be able to cross the chasm to other chains where desired.
 
-This allows Ergo to focus on its core features, such as Sigma Protocols, rather than seek shortcuts to adoption like yield farming projects.
+This allows Ergo to focus on its core features, such as Sigma protocols, rather than seek shortcuts to adoption like yield farming projects.
 
 The use of the [Gravity Protocol](https://medium.com/wavesprotocol/waves-partners-with-ergo-to-foster-interoperability-solutions-via-gravity-e184bca91d71) will enable interoperability between Ergo and other participating blockchains, while Ergo’s unique features will be available to everyone.
 
@@ -31,7 +31,7 @@ Using [Ergo’s ZK Treasury](https://ergoplatform.org/en/blog/2020-09-04-announc
 
 BTC is then locked in a bridge to the Ergo blockchain so that an equal amount of BTC proxy tokens on Ergo (much like RenBTC on Ethereum) are deposited to the treasury account. The team can disburse funds from this account and either use ErgBTC on the Ergo chain or unlock them on Bitcoin to pay for development and marketing.
 
-This allows the developers to add Ergo’s benefits of Sigma Protocols and custom signatures to Bitcoin.
+This allows the developers to add Ergo’s benefits of Sigma protocols and custom signatures to Bitcoin.
 
 In another version of this use case, an address might be created using multi-party computation using Ergo, such that no private key actually exists at all. A signature can be created using Ergo and then used to push a transaction to a separate blockchain (e.g. Ethereum). This allows Ergo to be used as a layer for highly secure account creation and transaction management on other networks.
 

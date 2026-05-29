@@ -1,6 +1,6 @@
 ---
 tags:
-  - Sigma Protocols
+  - Sigma protocols
   - Cryptography
   - Zero-Knowledge Proofs
 owner: docs
@@ -14,7 +14,7 @@ source_of_truth:
   - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/docs/sigma-dsl.md
 ---
 
-# Sigma Protocols
+# Sigma protocols
 
 *(Back to: [ErgoScript Overview](ergoscript.md))*
 
@@ -26,7 +26,7 @@ In **[ErgoScript](ergoscript.md)**, proving and verifying cryptographic statemen
 
 Conceptually, Σ-proofs are generalizations of [digital signatures](signing.md). The **[Schnorr signature scheme](schnorr.md)** is the canonical example of a Σ-proof: it allows the recipient to prove knowledge of a secret ([discrete logarithm](dlog.md)) without revealing it. Σ-proofs in Ergo extend this concept, allowing the creation of more complex cryptographic protocols like **[multi-signature](threshold.md)**, **[ring signatures](ring.md)**, and **[threshold signatures](threshold.md)**.
 
-### Elementary Σ-Protocols in ErgoScript
+### Elementary Σ-protocols in ErgoScript
 
 ErgoScript offers two elementary Σ-protocols over a group of prime order, such as an elliptic curve group:
 
@@ -39,7 +39,7 @@ For a detailed introduction to Σ-protocols, refer to the paper [On Σ-protocols
 
 ---
 
-## Composability of Σ-Protocols
+## Composability of Σ-protocols
 
 A powerful feature of Σ-protocols in Ergo is their **composability**. You can create logical combinations of cryptographic statements using basic AND/OR logic.
 
@@ -77,7 +77,7 @@ This contract is an example of a **3-out-of-5** threshold signature scheme. It c
 
 ---
 
-## Use Cases of Σ-Protocols
+## Use Cases of Σ-protocols
 
 ### 1. **Multi-Signature Wallets**
 
@@ -140,7 +140,7 @@ In Ergo, Σ-protocols rely on the Fiat-Shamir transformation to generate challen
 
 ### Presentations
 
-- [Sigma Protocols](https://crypto.sjtu.edu.cn/~yandi/2018%20BIU%20winter%20school/Part%203-Techniques%20for%20Efficient%20ZK%20(cont.)/WS-19-11-sigma-protocols-winter-school-2019-1.pdf)
+- [Sigma protocols](https://crypto.sjtu.edu.cn/~yandi/2018%20BIU%20winter%20school/Part%203-Techniques%20for%20Efficient%20ZK%20(cont.)/WS-19-11-sigma-protocols-winter-school-2019-1.pdf)
 - [On Σ-protocols](https://cs.au.dk/~ivan/Sigma.pdf)
 
 ---

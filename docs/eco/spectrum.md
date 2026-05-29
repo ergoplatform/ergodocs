@@ -35,17 +35,17 @@ source_of_truth:
 
 ## Spectrum Bloom: Next-Generation DeFi Framework
 
-Spectrum Bloom is an upcoming eUTxO-native framework for decentralized finance (DeFi), designed to address and improve upon the limitations of early decentralized exchanges (DEXes).
+Spectrum Bloom is an upcoming eUTXO-native framework for decentralized finance (DeFi), designed to address and improve upon the limitations of early decentralized exchanges (DEXes).
 
 ### Highlights from the Spectrum Bloom White Paper
 
 - **Addressing Early DEX Limitations**: Spectrum Bloom aims to overcome issues such as lack of transparency, composability, and poor performance in early DEX implementations.
 - **Decentralization and Openness**: The framework focuses on principles of decentralization, openness, transparency, and sustainability.
-- **eUTxO Model**: Utilizes the eUTxO blockchain model, as seen in Ergo and Cardano, supporting multi-stage contracts and multi-token functionality.
+- **eUTXO Model**: Utilizes the eUTXO blockchain model, as seen in Ergo and Cardano, supporting multi-stage contracts and multi-token functionality.
 - **Innovative DEX Protocol**: Includes a novel protocol for DEX that consists of both on-chain (UTxO and validators) and off-chain (event handlers for state transitions) elements.
 - **Liquidity Pooling and Execution**: Spectrum Bloom proposes unique approaches to liquidity pooling and order execution, aiming to streamline processes and reduce overhead.
 - **Universal Order Composition**: Introduces universally composable orders, which can be fulfilled from any liquidity source, enhancing flexibility and efficiency.
-- **Autonomous Account (AA)**: A key feature where an on-chain entity can validate execution and release user funds for trading, facilitating a dynamic set of applications on eUTxO blockchains.
+- **Autonomous Account (AA)**: A key feature where an on-chain entity can validate execution and release user funds for trading, facilitating a dynamic set of applications on eUTXO blockchains.
 - **Future Extensions and Applications**: The white paper also discusses potential extensions and applications of the Autonomous Account concept beyond DEXes.
 
 ## Resources

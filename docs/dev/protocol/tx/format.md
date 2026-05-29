@@ -14,7 +14,7 @@ A box is composed of **registers**. Each box can have up to 10 registers, denote
 - **$R_0$**: Contains the monetary value of the box, stored as a VLQ-encoded unsigned long.
 - **$R_1$**: Contains a serialized guard script (ErgoScript), which dictates the conditions under which the box can be spent.
 - **$R_2$**: Contains tokens, represented as pairs of token identifiers (32 bytes) and their respective amounts (VLQ-encoded integers).
-- **$R_3$**: Contains metadata including the declared creation height, the unique identifier of the transaction that created the box, and the index of the box in the transaction outputs.
+- **$R_3$**: Contains creation metadata. In ErgoScript this is exposed as `creationInfo: (Int, Coll[Byte])`, where the first element is the box's creation height value and the second element is a 34-byte collection containing the 32-byte transaction identifier followed by the 2-byte output index.
 
 Each register is an expression in the Sigma language, meaning every register contains a value of a specific type. These types are defined in [this document](types.md). The value in a register should be a concrete constant value, not a function of a known output type.
 
@@ -36,9 +36,9 @@ Box bytes are critical for various functions like obtaining the box identifier, 
 
 ## Box Candidate
 
-A **Box Candidate** is a preliminary version of a box used during transaction creation. It holds the same values in all registers as a fully formed box, except for $R_3$. In a Box Candidate, $R_3$ is initialized with a placeholder value $(creation\_height, 0^{34*8})$ where a 34-byte string of zeros replaces the actual transaction ID and output index. This indicates that the box candidate is not yet associated with a specific transaction or output index.
+A **Box Candidate** is a preliminary version of a box used while a transaction is being built. It contains the same box fields except for the transaction reference data: the transaction ID and output index are not known until the full transaction is formed. When a script reads a candidate's $R_3$, it gets the creation height value plus a 34-byte zero placeholder for the transaction ID and output index.
 
-Once the transaction is confirmed on the blockchain, the placeholder in $R_3$ is replaced with the actual transaction ID and output index, finalizing the box.
+After the transaction ID and output position are known, the candidate can be converted into a full box with $R_3$ set to `(creationHeight, transactionId ++ outputIndex)`.
 
 ## Transaction Format
 

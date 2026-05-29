@@ -1,6 +1,6 @@
 ---
 tags:
-  - Sigma Protocols
+  - Sigma protocols
   - Zero-Knowledge Proofs
   - Privacy
 owner: docs
@@ -14,7 +14,7 @@ source_of_truth:
   - https://github.com/a-shannon/ergo-research/tree/main/papers/curve-trees
 ---
 
-# Understanding Zero-Knowledge Proofs and Sigma Protocols
+# Understanding Zero-Knowledge Proofs and Sigma protocols
 
 Ergo provides superior access to ***discrete log-based* zero-knowledge proofs**, but what exactly is a zero-knowledge proof?
 
@@ -24,13 +24,13 @@ In the realm of [cryptography](crypto.md), zero-knowledge proofs are crucial for
 
 > *' This message proves I know the private key associated with this public key – but I'm not revealing the private key itself'.*
 
-## Sigma Protocols: Efficient and Composable Proofs
+## Sigma protocols: Efficient and Composable Proofs
 
-Among the myriad of zero-knowledge protocols, a sub-class known as [**Sigma Protocols**](sigma.md) (Σ-Protocols or *Generalized Schnorr Proofs*) stands out for its efficiency and composability.
+Among the myriad of zero-knowledge protocols, a sub-class known as [**Sigma protocols**](sigma.md) (Σ-protocols or *Generalized Schnorr Proofs*) stands out for its efficiency and composability.
 
 > [**ErgoScript**](ergoscript.md) is the language used to specify the conditions under which currency can be spent. It is flexible enough to allow for [ring signatures](ring.md), [multi-signatures](threshold.md), multiple currencies, [atomic swaps](atomic.md), self-replicating scripts, and long-term computation.
 
-Currently, the two Sigma Protocols in use are [proof of discrete log](schnorr.md) and proof of [Diffie-Hellman tuple](diffie.md).
+Currently, the two Sigma protocols in use are [proof of discrete log](schnorr.md) and proof of [Diffie-Hellman tuple](diffie.md).
 
 ## Recent updates
 

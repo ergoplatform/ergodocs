@@ -82,7 +82,7 @@ The protocol utilizes Ergo's powerful register system for complex state manageme
 1. **Rights Sale Contract Registers:**
 
 ```python
-R4: ErgoValue  # Price per mining right (nanoERG)
+R4: ErgoValue  # Price per mining right (nanoErgs)
 R5: ErgoValue  # Service fee percentage
 R6: ErgoValue  # Protocol wallet address
 R7: ErgoValue  # Rights token ID

@@ -19,32 +19,32 @@ On the other hand, the UTXO model, introduced by Bitcoin, takes a different appr
 
 Dave now owns 205 units previously owned by Charlie, Alice, and Bob. In the UTXO model, these units can be split and merged, but they retain their original identity, unlike bread dough. The transaction history of these units can be traced back to when they were initially created.
 
-## Advantages of the eUTxO Model over Account-Based Blockchains
+## Advantages of the eUTXO Model over Account-Based Blockchains
 
 The UTXO (Unspent Transaction Output) model used in Ergo offers several advantages over account-based blockchains like Ethereum. Let's compare the UTXO model to the account model to highlight these benefits:
 
 1. **Immutability and Security:**
-      - Ergo's eUTxO model: Each UTXO is immutable and cannot be modified during a transaction. This enhances security and simplifies transaction verification.
+      - Ergo's eUTXO model: Each UTXO is immutable and cannot be modified during a transaction. This enhances security and simplifies transaction verification.
       - Account Model: Account balances can be modified during a transaction, which introduces potential vulnerabilities and requires careful state management.
 
 2. **Simplicity and Developer-Friendliness:**
-      - Ergo's eUTxO model: ErgoScript contracts in the UTXO model use a declarative programming paradigm. This simplifies development and reduces the likelihood of mistakes.
+      - Ergo's eUTXO model: ErgoScript contracts in the UTXO model use a declarative programming paradigm. This simplifies development and reduces the likelihood of mistakes.
       - Account Model: The account model uses an imperative programming paradigm, which can be more challenging for developers and increase the risk of errors.
 
 3. **Support for Off-Chain Protocols:**
-      - Ergo's eUTxO model: Ergo's UTXO model provides better support for off-chain protocols like sidechains and the Lightning Network. Off-chain transaction creation reduces on-chain operations, improving scalability and network efficiency.
+      - Ergo's eUTXO model: Ergo's UTXO model provides better support for off-chain protocols like sidechains and the Lightning Network. Off-chain transaction creation reduces on-chain operations, improving scalability and network efficiency.
       - Account Model: Account-based blockchains have limited support for off-chain protocols, making it more challenging to scale and utilize layer-2 solutions effectively.
 
 4. **Scalability and Optimization:**
-      - Ergo's eUTxO model: The UTXO model allows for efficient off-chain transaction creation and verification. On-chain operations primarily focus on validation checks, reducing computational load and enhancing scalability.
+      - Ergo's eUTXO model: The UTXO model allows for efficient off-chain transaction creation and verification. On-chain operations primarily focus on validation checks, reducing computational load and enhancing scalability.
       - Account Model: In account-based blockchains, most operations occur on-chain, leading to increased computational requirements and potentially limiting scalability.
 
 5. **Concurrent and Distributed Nature:**
-      - Ergo's eUTxO model: Ergo's UTXO model aligns well with the concurrent and distributed nature of blockchains. The immutable transaction graph simplifies system design, reduces complexities, and enables light trustless clients.
+      - Ergo's eUTXO model: Ergo's UTXO model aligns well with the concurrent and distributed nature of blockchains. The immutable transaction graph simplifies system design, reduces complexities, and enables light trustless clients.
       - Account Model: Account-based blockchains face challenges in handling concurrency and distributed environments due to mutable balances and more complex state management.
 
 6. **Expressive Power with Turing Completeness:**
-      - Ergo's eUTxO model: Ergo extends the UTXO model to achieve Turing completeness through transaction trees and [multi-stage protocols](multi.md). It provides expressive power while mitigating issues such as blockchain bloat, bugs, and gas costs.
+      - Ergo's eUTXO model: Ergo extends the UTXO model to achieve Turing completeness through transaction trees and [multi-stage protocols](multi.md). It provides expressive power while mitigating issues such as blockchain bloat, bugs, and gas costs.
       - Account Model: Ethereum's Turing-complete execution model faces challenges related to scalability, security, and gas costs due to the complexities of executing a complete language on-chain.
 
 By leveraging the UTXO model, Ergo combines immutability, simplicity, scalability, and expressive power to address some of the limitations and challenges faced by account-based blockchains like Ethereum. It offers enhanced security, developer-friendliness, support for off-chain protocols, and improved scalability, making it a compelling choice for decentralized applications.

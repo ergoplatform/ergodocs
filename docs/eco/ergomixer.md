@@ -3,7 +3,7 @@ tags:
   - ErgoMixer
   - Mixer
   - Privacy
-  - Sigma Protocols
+  - Sigma protocols
   - dApp
   - dApp-Live
 ---

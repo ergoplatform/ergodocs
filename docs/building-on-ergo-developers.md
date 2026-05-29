@@ -46,7 +46,7 @@ Use this page to choose a developer path.
 - [Transactions](transactions.md)
 - [Data Inputs](read-only-inputs.md)
 - [ErgoTree](ergotree.md)
-- [Sigma Protocols](sigma.md)
+- [Sigma protocols](sigma.md)
 
 ## Testing and Operations
 

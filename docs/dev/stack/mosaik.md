@@ -3,7 +3,7 @@ title: Mosaik
 description: Overview of Ergo Mosaik, a JSON-based UI system for Ergo dApps.
 tags:
   - development
-  - dapp
+  - dApp
   - kotlin
   - wallet
 owner: docs

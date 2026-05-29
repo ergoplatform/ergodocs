@@ -12,7 +12,7 @@ source_of_truth:
 
 # Accessing Sigmausd As A Developer
 
-SigmaUSD is the first eUTxO-based stablecoin, implementing the [AgeUSD protocol](https://github.com/Emurgo/age-usd). It was co-designed by IOHK, Ergo, and Emurgo, focusing on conservative collateral reserve settings, thus eliminating the need for liquidations. SigmaUSD supports a fully decentralized stablecoin emission setup, offering a stable, simple, and decentralized stablecoin.
+SigmaUSD is the first eUTXO-based stablecoin, implementing the [AgeUSD protocol](https://github.com/Emurgo/age-usd). It was co-designed by IOHK, Ergo, and Emurgo, focusing on conservative collateral reserve settings, thus eliminating the need for liquidations. SigmaUSD supports a fully decentralized stablecoin emission setup, offering a stable, simple, and decentralized stablecoin.
 
 ## Key Resources
 
@@ -104,7 +104,7 @@ SigmaUSD operates on larger margin requirements than traditional crypto-backed s
 
 /// details | Why might transactions fail?
     {type: question, open: false}
-There is currently significant demand. With Ergo being in the UTXO model and all of the dApp design patterns being quite young, we have throughput limitations. We have many high-level design ideas to address this in the future with asynchronous EUTXO protocols, but this is still being deeply researched.
+There is currently significant demand. With Ergo being in the UTXO model and all of the dApp design patterns being quite young, we have throughput limitations. We have many high-level design ideas to address this in the future with asynchronous eUTXO protocols, but this is still being deeply researched.
 
 We decided that it was better for the community to have something in the near term rather than waiting another year for the research to solidify into an implementation.
 ///

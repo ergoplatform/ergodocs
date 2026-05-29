@@ -122,7 +122,7 @@ This example showcases how to use Babel Fees with the plugin without any direct 
 ## **Utility Functions**
 
 1. **`getTokenPrice(babelBox: Box<Amount>): bigint`**
-    - **Description**: Calculates and returns the price of a single token unit in nanoERG based on a specific Babel Box.
+    - **Description**: Calculates and returns the price of a single token unit in nanoErgs based on a specific Babel Box.
     - **Example**:
 
         ```typescript

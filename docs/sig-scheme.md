@@ -105,7 +105,7 @@ Schnorr signatures form a core tool in Ergo. The scheme is simple, efficient, an
 
 For background on the discrete log protocol and Schnorr logic in Scala, see [`DLogProtocol.scala`](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/sigmastate/crypto/DLogProtocol.scala). Rust-side helpers for wallets appear in [`signing.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-lib/src/wallet/signing.rs) and key management appears in [`secret_key.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-lib/src/wallet/secret_key.rs).
 
-### 2. Sigma Protocols
+### 2. Sigma protocols
 
 Sigma protocols allow a prover to convince a verifier that a statement about a secret holds, without disclosure of the secret. Each proof follows three steps: commitment, challenge, and response. The Fiat–Shamir transform replaces the verifier’s challenge with a hash.
 

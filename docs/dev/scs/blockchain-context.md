@@ -16,7 +16,7 @@ An integer representing the height of the block currently being validated by min
 
 `SELF` represents the current eUTXO input box which holds the ErgoScript contract. The `SELF` box is of type `Box`, containing information relevant to the specified eUTXO, such as:
 
-* The value in nanoERGs
+* The value in nanoErgs
 * The box ID
 * The proposition bytes of the guarding script for this eUTXO
 * The tokens stored in the box

@@ -1,6 +1,6 @@
 ---
 tags:
-  - Sigma Protocols
+  - Sigma protocols
 owner: docs
 last_reviewed: 2026-05-26
 source_repos:
@@ -63,11 +63,11 @@ For more details on cryptographic functions in ErgoScript, see [ErgoScript Crypt
 
 ---
 
-## Sigma Protocols
+## Sigma protocols
 
 **Sigma protocols** (Σ-protocols) are a subclass of cryptographic proof systems that allow a prover to convince a verifier of knowledge of a secret without revealing the secret itself. They are integral to the privacy and security features in Ergo, enabling advanced cryptographic applications such as zero-knowledge proofs, ring signatures, and threshold signatures.
 
-### How Sigma Protocols Work
+### How Sigma protocols Work
 
 At their core, [Sigma protocols](sigma.md) provide a secure way to prove the following properties:
 
@@ -77,7 +77,7 @@ At their core, [Sigma protocols](sigma.md) provide a secure way to prove the fol
 
 These basic Sigma protocols can be combined using logical operators, such as **AND**, **OR**, and **THRESHOLD (k-out-of-n)**, to form complex proofs.
 
-### Composability of Sigma Protocols
+### Composability of Sigma protocols
 
 One of the key advantages of Sigma protocols is their **composability**. They can be combined in flexible ways to create sophisticated cryptographic contracts:
 

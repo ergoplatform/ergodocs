@@ -18,9 +18,9 @@ In blockchain technology, ZK cryptography finds a fertile ground for numerous ap
 
 With zero-knowledge signatures, the identity of signatories remains concealed, only revealing that the necessary number of signatures has been acquired to authorize a transaction.
 
-## Ergo's Sigma Protocols: Crafting Composable ZK Signatures
+## Ergo's Sigma protocols: Crafting Composable ZK Signatures
 
-Ergo’s Sigma Protocols are tailored for generating composable ZK signatures. They enable a cohort of users to create an address with custom conditions for transactions. For instance, a startup could define complex conditions such as requiring signatures from specific key holders to authorize fund release.
+Ergo’s Sigma protocols are tailored for generating composable ZK signatures. They enable a cohort of users to create an address with custom conditions for transactions. For instance, a startup could define complex conditions such as requiring signatures from specific key holders to authorize fund release.
 
 ### Community-Driven Innovations: Anonymity at the Forefront
 

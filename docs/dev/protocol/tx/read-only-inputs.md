@@ -2,13 +2,23 @@
 tags:
   - Data Inputs
 owner: docs
-last_reviewed: 2026-05-27
+last_reviewed: 2026-05-29
 source_repos:
+  - repo: ergoplatform/ergo
+    branch: master
+    paths:
+      - ergo-core/src/main/scala/org/ergoplatform/modifiers/mempool/ErgoTransaction.scala
+  - repo: ScorexFoundation/sigmastate-interpreter
+    branch: develop
+    paths:
+      - docs/LangSpec.md
   - repo: Emurgo/Emurgo-Research
     branch: master
     paths:
       - smart-contracts/Unlocking The Potential Of The UTXO Model.md
 source_of_truth:
+  - https://github.com/ergoplatform/ergo/tree/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/mempool/ErgoTransaction.scala
+  - https://github.com/ergoplatform/sigmastate-interpreter/tree/develop/docs/LangSpec.md
   - https://github.com/Emurgo/Emurgo-Research/tree/master/smart-contracts/Unlocking%20The%20Potential%20Of%20The%20UTXO%20Model.md
 ---
 
@@ -45,15 +55,18 @@ In ErgoScript, data inputs are "read-only" boxes that supply vital information f
 
 ### Example Use Case
 
-Imagine a transaction that references a box with the ID `d2b9b6536287b242f436436ce5a1e4a117d7b4843a13ce3abe3168bff99924a1` as both an input and a data input. This illustrates the versatility of data inputs, enabling a transaction to read and potentially update a box's state in one operation, assuming the box pre-existed the transaction.
+Imagine an oracle box that stores a price in register `R4`. A transaction can include that oracle box as a data input, read the price during validation, and leave the oracle box unspent for other transactions.
 
-In ErgoScript, you can refer to other boxes in the transaction using constructs like:
+In ErgoScript, data inputs are available through `CONTEXT.dataInputs`:
 
 ```scala
-INPUTS(0).value > 10000 && OUTPUTS(1).value > 20000
+val oracleBox = CONTEXT.dataInputs(0)
+val price = oracleBox.R4[Long].get
+
+sigmaProp(price > 0)
 ```
 
-This script enforces conditions based on the values of the first input and the second output boxes, showcasing how data inputs can be used to influence the logic of a transaction without consuming the referenced boxes.
+This script reads the first data input, expects a `Long` in `R4`, and checks that the value is positive. Production contracts should also check that the data input is the expected oracle or configuration box, for example by validating its `id`, token, or guarding script.
 
 ### Comparison with Traditional Models
 

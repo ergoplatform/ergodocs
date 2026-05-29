@@ -74,7 +74,7 @@ The name "Ergo" encapsulates both a philosophical approach and a practical appli
 <details>
 <summary>How does it differ from Bitcoin?</summary>
 
-Ergo is a cryptocurrency that builds upon the same [eUTXO model](eutxo.md) as Bitcoin but extends its functionality with additional features. Ergo allows for more complex programmability by providing access to the entire spending transaction and the block solution in the execution context. This enables the creation of Turing-complete contracts and the implementation of contractual money, where digital coins can be explicitly bound to a contract in the form of executable code.
+Ergo is a cryptocurrency that builds upon Bitcoin's UTXO model and extends it through the [eUTXO model](eutxo.md). Ergo allows more complex programmability by giving scripts access to transaction context, data inputs, registers, and other verified blockchain data. ErgoScript itself is bounded for predictable validation, while multi-stage protocols can express long-running workflows. This enables contractual money, where digital coins can be explicitly bound to executable spending conditions.
 
 </details>
 
@@ -92,9 +92,9 @@ Mainnet July 2019. Before this, there was *Ergo-First-Year-Token*
 
 **What is EFYT?**
 
-Ergo-First-Year-Token was airdropped and distributed on Waves DEX starting with a 100,000 EFYT airdrop in May 2017. EFYT served the dual purposes of helping build an early community of stakeholders and enthusiasts for Ergo and raising a small number of funds for the platform before launch to fund development, promotion etc. EFYT is strictly a Waves token and is not the same as an Erg; the Ergo mainnet native token is mined after Ergo's mainnet launch.
+Ergo-First-Year-Token was airdropped and distributed on Waves DEX starting with a 100,000 EFYT airdrop in May 2017. EFYT served the dual purposes of helping build an early community of stakeholders and enthusiasts for Ergo and raising a small number of funds for the platform before launch to fund development, promotion etc. EFYT is strictly a Waves token and is not the same as ERG; the Ergo mainnet native token is mined after Ergo's mainnet launch.
 
-The max supply of EFYT is 1,970,945.0. This is 10% of the first year of Ergo token emission and the same number of Ergs that the Treasury will receive, meaning that the Treasury will have received 1,970,945.0 Ergs during year 1, sufficient to swap the max supply of EFYT for Erg.
+The max supply of EFYT is 1,970,945.0. This is 10% of the first year of Ergo token emission and the same amount of ERG that the Treasury will receive, meaning that the Treasury will have received 1,970,945.0 ERG during year 1, sufficient to swap the max supply of EFYT for ERG.
 
 </details>
 
@@ -164,14 +164,14 @@ The [Ergo Foundation](ergo-foundation.md) is a community-driven entity focused o
 - Supporting truly decentralised infrastructure and;
 - Supporting privacy as a basic human right.
 
-To fund development, promotion, events, and any other activities which may advance the platform, Ergo has in place a Treasury, which will receive **4.43%** of the Ergs released during emission. During the first two years post‐mainnet launch, the Treasury received 7.5 Ergs per block.
+To fund development, promotion, events, and any other activities which may advance the platform, Ergo has in place a Treasury, which will receive **4.43%** of the ERG released during emission. During the first two years post‐mainnet launch, the Treasury received 7.5 ERG per block.
 
 </details>
 
 <details>
 <summary>What is the [Emission Schedule](emission.md)?</summary>
 
-Ergo has a maximum supply of **97,739,925** Ergs, to be completed by 2045. The block reward lowers to 3ERG in 2026. You can see this emission schedule on [ergo.watch](https://ergo.watch/emission)
+Ergo has a maximum supply of **97,739,925** ERG, to be completed by 2045. The block reward lowers to 3 ERG in 2026. You can see this emission schedule on [ergo.watch](https://ergo.watch/emission)
 
 </details>
 
@@ -339,9 +339,9 @@ Other coins like Ethereum classic are a bad comparisons, as they shared the same
 <details>
 <summary>How will miners be supported after emissions?</summary>
 
-After the scheduled emissions conclude in 2045, miners on Ergo will continue to be incentivized through alternative methods. One such approach involves transaction fees and Miner Extracted Value (MEV). Transactions on Ergo generate fees (paid in Ergs), with a portion of these fees awarded to miners. MEV represents the total value miners can extract from a block using tactics like reordering, front-running, and other advanced techniques. Miners can increase their MEV earnings by efficiently executing transactions in high MEV blocks, which encourages them to contribute their hash power to the network.
+After the scheduled emissions conclude in 2045, miners on Ergo will continue to be incentivized through alternative methods. One such approach involves transaction fees and Miner Extracted Value (MEV). Transactions on Ergo generate fees paid in ERG, with a portion of these fees awarded to miners. MEV represents the total value miners can extract from a block using tactics like reordering, front-running, and other advanced techniques. Miners can increase their MEV earnings by efficiently executing transactions in high MEV blocks, which encourages them to contribute their hash power to the network.
 
-Another incentive for miners on Ergo is through [**Storage Rent**](storage-rent.md). This mechanism requires users to pay for the storage their data occupies on the network. Consequently, miners receive a consistent income stream, as they earn Ergs from fees users pay for content storage. [This post](https://www.reddit.com/r/ergonauts/comments/xeke0b/discover_ergos_storage_rent_potential/) provides insight into future mining rewards from storage rent.
+Another incentive for miners on Ergo is through [**Storage Rent**](storage-rent.md). This mechanism requires users to pay for the storage their data occupies on the network. Consequently, miners receive a consistent income stream, as they earn ERG from fees users pay for content storage. [This post](https://www.reddit.com/r/ergonauts/comments/xeke0b/discover_ergos_storage_rent_potential/) provides insight into future mining rewards from storage rent.
 
 Miners can also benefit from custom emission contracts as part of a Fair Initial Mining Offering (FIMO) process. These contracts reward miners with non-native tokens, ensuring new projects have equal opportunities to distribute tokens to the community while incentivizing miners to participate in mining.
 
@@ -369,15 +369,15 @@ The most realistic option, it seems, would be to launch a PoUW [sidechain](sidec
 </details>
 
 <details>
-<summary>How can I stake my Erg?</summary>
+<summary>How can I stake my ERG?</summary>
 
-Ergo is a [PoW (**Proof of Work**)](autolykos.md) coin, not a PoS (**Proof of Stake**), which means that blocks are validated by miners, not by stakes; therefore, you can't stake Erg directly.
+Ergo is a [PoW (**Proof of Work**)](autolykos.md) coin, not a PoS (**Proof of Stake**), which means that blocks are validated by miners, not by stakes; therefore, you can't stake ERG directly.
 
 However, it is possible to earn some yield from your ERG in combination with Ergo in liquidity pools, tokenisation of dApps, trading bots, lending platforms, and other mechanisms.
 
-You can 'stake' native tokens on Ergo in some form (on ergopad.io *live*, Night Owl Casino *soon*, ErgoMixer *soon*,+ more)  
+Ergo does not use proof-of-stake consensus. Some applications may offer token locking, liquidity, revenue-sharing, or game-specific reward mechanisms, but these are application-level designs rather than protocol staking. Check each application's current documentation and risks before locking funds.
 
-For more info on earning off your Erg, look at the [Yield guide](yield.md).
+For more info on earning off your ERG, look at the [Yield guide](yield.md).
 
 </details>
 
@@ -436,7 +436,7 @@ With the updated emission schedule described in [EIP-0027](https://github.com/er
 <details>
 <summary>EIP-0037</summary>
 
-The original Difficulty Adjustment Algorithm for Ergo worked well in most cases, including huge price drops, 100x initial difficulty misestimation during mainnet launch, and so on. However, the previous simplified and limitless version of the algorithm is bumpy. A big influx of mining hash rate over multiple epochs, especially with super-linear hash rate growth over time, may result in a huge difficulty spike. Similarly, a few slow epochs may cause a huge drop. Also, for dapps and other applications, it would be desirable to make difficulty readjustment more reactive (previously, readjustment takes place every 1024 blocks, and eight epochs, so about two weeks normally, are considered).
+The original Difficulty Adjustment Algorithm for Ergo worked well in most cases, including huge price drops, 100x initial difficulty misestimation during mainnet launch, and so on. However, the previous simplified and limitless version of the algorithm is bumpy. A big influx of mining hash rate over multiple epochs, especially with super-linear hash rate growth over time, may result in a huge difficulty spike. Similarly, a few slow epochs may cause a huge drop. Also, for dApps and other applications, it would be desirable to make difficulty readjustment more reactive (previously, readjustment takes place every 1024 blocks, and eight epochs, so about two weeks normally, are considered).
 
 This was resolved with the [EIP-37](https://github.com/ergoplatform/eips/pull/79).
 

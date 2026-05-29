@@ -102,7 +102,7 @@ Sigma'O implements "Open sale order" and "Open buy order" contracts for trading 
 
 Sigma'O also supports priced sell options for options on an underlying token with an Oracle price or Spectrum liquidity pool. This allows for real-time pricing based on market conditions.
 
-- **Exact Formula:** The exact computation implemented in Ergoscript and JS can be found [here](https://github.com/ThierryM1212/SigmaO/blob/main/front-end/src/utils/utils.js#L98) and [here](https://github.com/ThierryM1212/SigmaO/blob/main/contract/Option_Sell.es#L107).
+- **Exact Formula:** The exact computation implemented in ErgoScript and JS can be found [here](https://github.com/ThierryM1212/SigmaO/blob/main/front-end/src/utils/utils.js#L98) and [here](https://github.com/ThierryM1212/SigmaO/blob/main/contract/Option_Sell.es#L107).
 
 **Future Developments:**
 

@@ -25,7 +25,7 @@ In the eUTXO model, Ergo allows [smart contracts](ergoscript.md) to utilize UTXO
 
 By leveraging eUTXO, Ergo enables parallel computation and facilitates non-custodial [atomic swaps](atomic.md). This makes it easier to perform complex operations securely and efficiently.
 
-Furthermore, Ergo's [Multi-Stage UTXO model](multi.md), as detailed in [this peer-reviewed paper](https://fc18.ifca.ai/bitcoin/papers/bitcoin18-final18.pdf), enables the implementation of *Turing-complete smart contracts.* *(Note: [ErgoScript](ergoscript.md) itself is not Turing-complete by design for security, but the model allows for Turing-complete computations via multi-stage protocols).*
+Furthermore, Ergo's [Multi-Stage UTXO model](multi.md), as detailed in [this peer-reviewed paper](https://fc18.ifca.ai/bitcoin/papers/bitcoin18-final18.pdf), can express long-running or Turing-complete workflows across multiple transactions. [ErgoScript](ergoscript.md) itself is deliberately bounded for predictable on-chain validation.
 
 You can see a comparison between Ergo's eUTXO model and the Account-Based model [here](accountveutxo.md).
 
@@ -45,6 +45,6 @@ You can see a comparison between Ergo's eUTXO model and the Account-Based model 
 ### Video
 
 - [Ergo Blockchain Crash Course Part 1: eUTXO Model Review](https://www.youtube.com/watch?v=gGRAjK-VwJs&list=PL8-KVrs6vXLTVXGwmYXjOBRx3VymB4Vm2&index=1)
-- [DeCo EU Layman Class - Basics of eUTxO](https://www.youtube.com/watch?v=SAWeW6wajEw)
-- [Interesting explanation on the eUTXO model and dapps built in it](https://youtu.be/Yt4Sg6rs80Q)
+- [DeCo EU Layman Class - Basics of eUTXO](https://www.youtube.com/watch?v=SAWeW6wajEw)
+- [Interesting explanation on the eUTXO model and dApps built in it](https://youtu.be/Yt4Sg6rs80Q)
 - [Blockchain Basics & Transactions, UTXO and Script Code](https://www.youtube.com/watch?v=zGDTt9Q3vyM)

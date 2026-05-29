@@ -361,7 +361,7 @@ Source Watch checks watched repositories for commits touching declared paths and
 | [`Emryk-LLC/rigel-mining-toolbox`](https://github.com/Emryk-LLC/rigel-mining-toolbox) | `main` | `README.md` | `docs/mining/software.md` |
 | [`Emurgo/Emurgo-Research`](https://github.com/Emurgo/Emurgo-Research) | `master` | `oracles/Oracle-Pools.md`<br>`smart-contracts/High Level Design Patterns In Extended UTXO Systems.md`<br>`smart-contracts/Unlocking The Potential Of The UTXO Model.md` | `docs/dev/protocol/tx/read-only-inputs.md`<br>`docs/dev/scs/ergoscript-tooling.md`<br>`docs/uses/oracles.md` |
 | [`Ergo-Lend/edge`](https://github.com/Ergo-Lend/edge) | `main` | `src/main/scala/edge/contracts/Contract.scala` | `docs/dev/scs/contracts.md` |
-| [`ergo-pad/paideia-contracts`](https://github.com/ergo-pad/paideia-contracts) | `main` | `paideia_contracts/contracts/plasma_staking/ergoscript/latest/plasmaStaking.es` | `docs/dev/lib/plasma.md` |
+| [`ergo-pad/paideia-contracts`](https://github.com/ergo-pad/paideia-contracts) | `main` | `paideia_contracts/contracts/plasma_staking/ErgoScript/latest/plasmaStaking.es` | `docs/dev/lib/plasma.md` |
 | [`ergoMixer/ergoMixBack`](https://github.com/ergoMixer/ergoMixBack) | `master` | `mixer/app/mixer` | `docs/dev/scs/contracts.md` |
 | [`ergonames/ergonames`](https://github.com/ergonames/ergonames) | `master` | `src/main/scala/` | `docs/dev/scs/contracts.md` |
 | [`ergonames/sdk`](https://github.com/ergonames/sdk) | `master` | `rust` | `docs/dev/stack/sigma-rust.md` |
@@ -441,7 +441,7 @@ Source Watch checks watched repositories for commits touching declared paths and
 | [`odiseusme/btc-tx-parser-reference`](https://github.com/odiseusme/btc-tx-parser-reference) | `main` | `LIMITATIONS.md`<br>`README.md`<br>`SPEC.md`<br>`THREAT_MODEL.md`<br>`test-vectors` | `docs/dev/scs/ergoscript.md` |
 | [`odiseusme/ergo-rust-sync-dashboard`](https://github.com/odiseusme/ergo-rust-sync-dashboard) | `main` | `README.md` | `docs/node/rust-node.md` |
 | [`oliverw/miningcore`](https://github.com/oliverw/miningcore) | `master` | `README.md` | `docs/mining/pool-ops.md`<br>`docs/mining/setup/miningcore.md` |
-| [`paideiadao/paideia-contracts`](https://github.com/paideiadao/paideia-contracts) | `main` | `paideia_contracts/contracts/plasma_staking/ergoscript/latest/plasmaStaking.es` | `docs/dev/scs/ergoscript-tooling.md` |
+| [`paideiadao/paideia-contracts`](https://github.com/paideiadao/paideia-contracts) | `main` | `paideia_contracts/contracts/plasma_staking/ErgoScript/latest/plasmaStaking.es` | `docs/dev/scs/ergoscript-tooling.md` |
 | [`paideiadao/paideia-sdk`](https://github.com/paideiadao/paideia-sdk) | `dev` | `README.md`<br>`docs`<br>`src/main/resources/ergoscript` | `docs/eco/paideia.md` |
 | [`paulmillr/noble-ciphers`](https://github.com/paulmillr/noble-ciphers) | `main` | `README.md` | `docs/dev/stack/fleet.md` |
 | [`reputation-systems/forum-application`](https://github.com/reputation-systems/forum-application) | `master` | `README.md` | `docs/eco/reputation-system.md` |

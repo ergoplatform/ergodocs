@@ -2,7 +2,7 @@
 tags:
   - ErgoScript
   - Smart Contracts
-  - Sigma Protocols
+  - Sigma protocols
 owner: docs
 last_reviewed: 2026-05-28
 source_repos:
@@ -34,12 +34,12 @@ source_of_truth:
 
 **ErgoScript** is a powerful, developer-friendly programming language designed specifically for writing [smart contracts](contracts.md) on the [Ergo blockchain](protocol-overview.md). Think of it as a specialized language that allows you to create complex [financial contracts](contracts.md) and applications with unprecedented flexibility and [security](security.md). Designed as a subset of Scala, it allows developers to define complex conditions for spending funds.
 
-ErgoScript code is translated into a lower-level representation called [**ErgoTree**](ergotree.md) before being stored on the [blockchain](protocol-overview.md). During [transaction validation](validation.md), ErgoTree is interpreted using cryptographic protocols based on [Sigma Protocols](sigma.md). This unique architecture enables Ergo to support advanced cryptographic functionalities like [ring signatures](ring.md) and [threshold signatures](threshold.md) directly within the scripting language, without requiring special core protocol changes.
+ErgoScript code is translated into a lower-level representation called [**ErgoTree**](ergotree.md) before being stored on the [blockchain](protocol-overview.md). During [transaction validation](validation.md), ErgoTree is interpreted using cryptographic protocols based on [Sigma protocols](sigma.md). This unique architecture enables Ergo to support advanced cryptographic functionalities like [ring signatures](ring.md) and [threshold signatures](threshold.md) directly within the scripting language, without requiring special core protocol changes.
 
-/// admonition | Sigma Protocols
+/// admonition | Sigma protocols
     type: tip
 
-Ergo's support for [**Sigma Protocols**](sigma.md) (aka generalized Schnorr proofs) is a key feature, providing efficient and composable building blocks for [zero-knowledge proofs](zkp.md). [Schnorr proofs](schnorr.md) and [proofs of Diffie-Hellman tuples](diffie.md) are supported by default, with the potential for the community to add more through [soft forks](soft-fork.md).
+Ergo's support for [**Sigma protocols**](sigma.md) (aka generalized Schnorr proofs) is a key feature, providing efficient and composable building blocks for [zero-knowledge proofs](zkp.md). [Schnorr proofs](schnorr.md) and [proofs of Diffie-Hellman tuples](diffie.md) are supported by default, with the potential for the community to add more through [soft forks](soft-fork.md).
 ///
 
 ErgoScript builds upon the security principles of Bitcoin while enabling much more complex financial contracts. Unlike Bitcoin Script, ErgoScript supports features necessary for advanced applications, including the ability to reference blockchain state and implement complex logic, effectively enabling Turing-Complete computations through [multi-stage contract interactions](multi.md).
@@ -120,8 +120,8 @@ While ErgoScript aims for simplicity and security, debugging complex contracts c
 
 **Compilers & Language Support:**
 
-* [Ergoscript Compiler (Rust)](https://github.com/ergoplatform/sigma-rust/tree/develop/ergoscript-compiler): Rust implementation.
-* [Ergoscript Compiler (Scala)](https://github.com/ergoplatform/ergoscript-compiler): Scala CLI tool.
+* [ErgoScript Compiler (Rust)](https://github.com/ergoplatform/sigma-rust/tree/develop/ergoscript-compiler): Rust implementation.
+* [ErgoScript Compiler (Scala)](https://github.com/ergoplatform/ergoscript-compiler): Scala CLI tool.
 * [ErgoScala Compiler](https://github.com/ergoplatform/ergoscala-compiler): Compile a subset of Scala to ErgoScript. *(Needs link update if available)*
 * [ErgoScript CLI Compiler](https://github.com/ergoplatform/ergoscript-compiler): CLI tool to compile ErgoScript to address. *(Duplicate link? Check source)*
 * [VSCode ErgoScript Language Support](https://marketplace.visualstudio.com/items?itemName=ergoscript.ergoscript-language-support): Syntax highlighting for VSCode.
@@ -129,7 +129,7 @@ While ErgoScript aims for simplicity and security, debugging complex contracts c
 **Debugging & Simulation:**
 
 * **[Debugging Guide](debugging.md):** Covers current best practices, tools, and techniques.
-* **[Ergoscript Simulator](https://github.com/spectrum-finance/ergoscript-simulator):** A community-developed tool for simulating ErgoScript execution.
+* **[ErgoScript Simulator](https://github.com/spectrum-finance/ergoscript-simulator):** A community-developed tool for simulating ErgoScript execution.
 
 ## Advanced Patterns & Tutorials
 
@@ -174,7 +174,7 @@ ErgoScript's flexibility enables various applications:
     * Experiment with the [P2S Playground](https://wallet.plutomonkey.com/p2s/).
     * Study simple [example contracts](contracts.md).
 2. **Intermediate:**
-    * Learn about [Sigma Protocols](sigma.md).
+    * Learn about [Sigma protocols](sigma.md).
     * Explore [Multi-Stage Contract patterns](multi.md).
     * Work through SDK tutorials ([AppKit](appkit.md), [Fleet](fleet.md), [SigmaRust](sigma-rust.md)).
 3. **Advanced:**
@@ -182,17 +182,17 @@ ErgoScript's flexibility enables various applications:
     * Explore advanced [cryptographic protocols](crypto.md).
     * Contribute to open-source projects or build your own dApp.
 
-Join community discussions on [Discord](https://discord.gg/ergo-platform-668903786361651200) (`#ergoscript`, `#sigma-rust`, `#appkit`, `#fleet`), [Telegram](https://t.me/ergo_dev), or the [Ergo Forum](https://www.ergoforum.org/) to ask questions and collaborate.
+Join community discussions on [Discord](https://discord.gg/ergo-platform-668903786361651200) (`#ErgoScript`, `#sigma-rust`, `#appkit`, `#fleet`), [Telegram](https://t.me/ergo_dev), or the [Ergo Forum](https://www.ergoforum.org/) to ask questions and collaborate.
 
 ## Advanced Cryptography & Structures
 
-ErgoScript's foundation on Sigma Protocols allows for powerful cryptographic primitives. However, some advanced structures have specific considerations:
+ErgoScript's foundation on Sigma protocols allows for powerful cryptographic primitives. However, some advanced structures have specific considerations:
 
 * **Merkle Trees:** While [Merkle Trees](merkle-tree-structures.md) are fundamental to Ergo's data integrity (e.g., for transactions and extension data), direct verification of arbitrary Merkle proofs *within* an ErgoScript contract is not natively supported by a single built-in function. Verification typically happens off-chain or relies on specific protocol designs where roots are checked. The [MAST pattern](mast-example.md) leverages Merkle trees conceptually, often using `executeFromVar` for on-chain execution of proven branches rather than full proof verification within the script. Developers interested in the general concept and off-chain usage should consult the main [Merkle Tree documentation](merkle-tree-structures.md).
 
 ## Related Technical Resources
 * [ErgoTree Documentation](ergotree.md)
-* [Sigma Protocols Overview](sigma.md)
+* [Sigma protocols Overview](sigma.md)
 * [Schnorr Signatures](schnorr.md)
 * [Light Verifying Nodes](nipopow_nodes.md)
 * [eUTXO Model Explanation](eutxo.md)
@@ -205,7 +205,7 @@ ErgoScript's foundation on Sigma Protocols allows for powerful cryptographic pri
 ErgoScript stands out by:
 
 * Enabling complex logic via the [eUTXO model](eutxo.md) without full on-chain Turing-completeness risks.
-* Natively supporting advanced cryptographic protocols ([Sigma Protocols](sigma.md)).
+* Natively supporting advanced cryptographic protocols ([Sigma protocols](sigma.md)).
 * Allowing complex [financial contracts](contracts.md) with predictable [execution costs](min-fee.md).
 * Maintaining a declarative, secure programming model based on [UTXOs](eutxo.md).
 

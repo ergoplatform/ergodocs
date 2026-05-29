@@ -90,6 +90,6 @@ To withdraw a reward from your wallet, create a new payment transaction using th
 }
 ```
 
-In the request, specify the `address` where you want to move your funds and the `value` representing the amount of nanoERGs you wish to transfer.
+In the request, specify the `address` where you want to move your funds and the `value` representing the amount of nanoErgs you wish to transfer.
 
 After sending the request, the node will return the transaction ID in the response. You can use the [explorer](https://explorer.ergoplatform.com) to track the progress of your transaction until it gets added to a block.

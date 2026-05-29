@@ -41,7 +41,7 @@ transaction will transfer a given amount of Erg into a new box protected by the 
 
 ```java
 // Freezer Contract
-{ 
+{
   // Parameters
   // freezeDeadline: Int - some future block number after which the box can be spent
   // ownerPk: SigmaProp - public key of the new box owner
@@ -118,15 +118,15 @@ acquired as described
 Your mnemonic is the secret phrase obtained during [setup of a new
 wallet](https://github.com/ergoplatform/ergo/wiki/Wallet-documentation).
 
-How our app will work is that the user will launch it from the command line and provide one argument. This argument is the amount of value (in NanoErgs) which they wish to freeze/lock under the Freezer contract which we wrote above.
+How our app will work is that the user will launch it from the command line and provide one argument. This argument is the amount of value (in nanoErgs) which they wish to freeze/lock under the Freezer contract which we wrote above.
 
 Our first step for our FreezeCoin app will be to read the configuration JSON file we just created and to accept the command line argument from the user:
 
 ```java
 public static void main(String[] args) {
-    long amountToSend = Long.parseLong(args[0]);  // positive value in NanoErg
+    long amountToSend = Long.parseLong(args[0]);  // positive value in nanoErgs
     ErgoToolConfig conf = ErgoToolConfig.load("freeze_coin_config.json");
-    // the rest of the code discussed below 
+    // the rest of the code discussed below
     ...
 }
 ```
@@ -152,7 +152,7 @@ we can execute any block of code and have access to the current blockchain conte
 ```java
 String txJson = ergoClient.execute((BlockchainContext ctx) -> {
     // use ctx here to create and sign a new transaction
-    // then send it to the node 
+    // then send it to the node
 });
 ```
 
@@ -163,20 +163,20 @@ shall put our application logic.
 First, we start with some auxiliary steps.
 
 ```java
-// access the wallet embedded in the Ergo node 
+// access the wallet embedded in the Ergo node
 // (using the wallet specified via mnemonic we put in freeze_coin_config.json)
 ErgoWallet wallet = ctx.getWallet();
 
-// calculate total amount of NanoErgs we need to send to the new box 
+// calculate total amount of nanoErgs we need to send to the new box
 // including paying for transaction fees
 long totalToSpend = amountToSend + Parameters.MinFee;
 
-// request for unspent boxes that cover the required amount of NanoErgs from the wallet
+// request for unspent boxes that cover the required amount of nanoErgs from the wallet
 Optional<List<InputBox>> boxes = wallet.getUnspentBoxes(totalToSpend);
 if (!boxes.isPresent())
     throw new ErgoClientException(
         "Not enough coins in your specified wallet to pay " + totalToSpend, null);
-    
+
 // create a "prover", which is a special object that will be used for signing the transaction
 // the prover should be configured with your wallet's secrets, which are necessary to generate signatures (aka proofs)
 ErgoProver prover = ctx.newProverBuilder()
@@ -257,7 +257,7 @@ Now with all of the code set in stone, we can run our FreezeCoin application usi
 ```shell
 $ pwd
 the/directory/you/cloned/ergo-appkit-examples
-$ ./gradlew clean shadowJar 
+$ ./gradlew clean shadowJar
 ```
 
 This will assemble the `build/libs/appkit-examples-3.1.0-all.jar` file containing
@@ -268,7 +268,7 @@ Having created our application, we can now use our FreezeCoin app:
 
 ```shell
 $ java -cp build/libs/appkit-examples-3.1.0-all.jar \
-      org.ergoplatform.appkit.examples.FreezeCoin  1000000000 
+      org.ergoplatform.appkit.examples.FreezeCoin  1000000000
 ```
 
 You will get something along the lines of this [output in the console](https://gist.github.com/aslesarenko/cacee372350458ac31bd5c73e957e322).
@@ -473,7 +473,7 @@ public class FreezeCoin {
 
         // put resulting string into the provided buffer
         CTypeConversion.toCString(txJson, resBuffer, bufferSize);
-    }  
+    }
     ...
 }
 ```
@@ -487,10 +487,10 @@ $ native-image --no-server \
   --no-fallback -H:+TraceClassInitialization -H:+ReportExceptionStackTraces\
    -H:+AddAllCharsets -H:+AllowVMInspection -H:-RuntimeAssertions\
    --allow-incomplete-classpath \
-    --enable-url-protocols=http,https 
+    --enable-url-protocols=http,https
     --shared -H:Name=libfreezecoin -H:Path=c-examples
-    
-$ otool -L c-examples/libfreezecoin.dylib 
+
+$ otool -L c-examples/libfreezecoin.dylib
 c-examples/libfreezecoin.dylib:
   .../c-examples/libfreezecoin.dylib (compatibility version 0.0.0, current version 0.0.0)
   /usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1252.50.4)
@@ -513,7 +513,7 @@ and more), and thus we need to create an instance and provide it with our main t
 int main(int argc, char **argv) {
   graal_isolate_t *isolate = NULL;
   graal_isolatethread_t *thread = NULL;
-  
+
   if (graal_create_isolate(NULL, &isolate, &thread) != 0) {
     fprintf(stderr, "graal_create_isolate error\n");
     return 1;

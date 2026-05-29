@@ -167,7 +167,7 @@ To absorb more fundamental changes, Ergo follows the approach of _soft-forkabili
 
 ## Ergo's Native Token
 
-Ergo platform has its native token, which is called $Erg$ and is divisible to up to $10^9$ smallest units, $nanoErg$s (a $nanoErg$ is one billionth of an $Erg$). $Erg$s are important for Ergo platform stability and security for several reasons discussed below.
+Ergo platform has its native token, which is called $Erg$ and is divisible to up to $10^9$ smallest units, nanoErgs (a nanoErg is one billionth of an $Erg$). $Erg$s are important for Ergo platform stability and security for several reasons discussed below.
 
 During the initial phase of Ergo's life, miners will receive the reward in $Erg$s according to a predefined and hard-coded token emission schedule (see [Emission](#emission) for more details). These coins will incentivize miners to participate in the Ergo network, securing it from hashrate-based attacks like the known 51% attack[@reorgAttack].
 

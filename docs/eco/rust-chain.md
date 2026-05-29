@@ -29,7 +29,7 @@ RustChain's unique architecture opens up several compelling use cases:
 Ergo serves as the ideal backbone for RustChain's covenant-bound AI integration due to its fundamental properties:
 
 * **Memory Safety:** Ensures secure and reliable execution.
-* **Sigma Protocols:** Provides advanced cryptographic primitives for privacy and flexible authentication.
+* **Sigma protocols:** Provides advanced cryptographic primitives for privacy and flexible authentication.
 * **Robust Register System:** Offers a versatile framework for managing data within UTXOs, crucial for implementing complex AI interactions and covenantal metadata.
 * **Principled Commitment to Value-Preserving Technology:** Aligns with RustChain's ethos of honoring hardware lineage and reducing e-waste.
 

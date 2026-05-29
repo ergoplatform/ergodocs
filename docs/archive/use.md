@@ -16,7 +16,7 @@ As Eric Hughes wrote in [A Cypherpunk’s Manifesto](https://www.activism.net/cy
 
 But, as Hughes continues, ‘Privacy is the power to selectively reveal oneself to the world.’ There is always a balance to be struck between privacy and compliance, between transparency and anonymity. Large scale adoption of DeFi requires auditability, and the regulatory approval that enables.
 
-Thanks to the latest advances in zero-knowledge proofs, Ergo can offer both privacy and transparency, where required. The platform’s [Sigma Protocols](https://ergoplatform.org/en/blog/2020_03_16_ergo_sigma/) offer robust, customisable cryptography – and, at the same time, the ability to selectively reveal information where necessary.
+Thanks to the latest advances in zero-knowledge proofs, Ergo can offer both privacy and transparency, where required. The platform’s [Sigma protocols](https://ergoplatform.org/en/blog/2020_03_16_ergo_sigma/) offer robust, customisable cryptography – and, at the same time, the ability to selectively reveal information where necessary.
 
 ### Scalability
 

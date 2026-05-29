@@ -29,7 +29,7 @@ The [Ergo Auction House](http://ergoauctions.org/#/auction/active) lets you buy 
 
 - Will be important later for artist verification.
 All your artworks will be identified with that address and you can easily present yourself on socials.
-By design, you can use any wallet you like but currently, it is strongly advised to use Ergo Wallet Android 26 which is easy to use with the QR codes that auction house V2 provides. The next best option is using Yoroi Nightly 18 with the dapp connector 15 – Please note that this is still in testing and you may experience some minor issues.
+By design, you can use any wallet you like but currently, it is strongly advised to use Ergo Wallet Android 26 which is easy to use with the QR codes that auction house V2 provides. The next best option is using Yoroi Nightly 18 with the dApp connector 15 – Please note that this is still in testing and you may experience some minor issues.
 
 - Make sure to configure the right wallet (with only one address in it) in the UI before issuing your artwork.
 

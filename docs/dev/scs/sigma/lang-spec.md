@@ -104,7 +104,7 @@ Type Name        |   Description
 `SigmaProp`      | a type representing a _sigma proposition_ which can be verified by executing a Sigma protocol with zero-knowledge proof of knowledge. Every contract should return a value of this type.
 `AvlTree`        | represents a digest of authenticated dynamic dictionary and can be used to verify proofs of operations performed on the dictionary
 `GroupElement`   | elliptic curve points
-`Box`            | a box containing a monetary value (in NanoErgs), tokens and registers along with a guarding proposition
+`Box`            | a box containing a monetary value (in nanoErgs), tokens and registers along with a guarding proposition
 `Option[T]`      | a container which either have some value of type `T` or none.
 `Coll[T]`        | a collection of arbitrary length with all values of type `T`
 `(T1,T2)`        | a pair of values where T1, T2 can be different types
@@ -345,7 +345,7 @@ Box represents a unit of storage in Ergo blockchain. It contains 10 registers
 ```scala
 /** Representation of Ergo boxes used during execution of ErgoTree operations. */
 class Box {
-  /** Box monetary value in NanoErg */
+  /** Box monetary value in nanoErgs */
   def value: Long 
   
   /** Blake2b256 hash of this box's content, basically equals to

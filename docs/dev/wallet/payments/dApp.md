@@ -16,6 +16,6 @@ Yoroi removed its Ergo dApp connector example from the active frontend tree, so 
 
 ## Resources
 
-- [Message signing and user authentication with Nautilus wallet and sigma-rust](https://www.dappstep.com/docs/tutorial-dapp-connector/message-signing-authentication)
-- [Yoroi's dapp connector example code](https://github.com/Emurgo/yoroi-frontend/tree/develop/packages/yoroi-connector/example-ergo)
+- [Message signing and user authentication with Nautilus wallet and sigma-rust](https://www.dappstep.com/docs/tutorial-dApp-connector/message-signing-authentication)
+- [Yoroi's dApp connector example code](https://github.com/Emurgo/yoroi-frontend/tree/develop/packages/yoroi-connector/example-ergo)
 - Nautilus and SAFEW implements the same API as Yoroi ([EIP-12](https://github.com/ergoplatform/eips/pull/23/files#diff-cb3f835ea389f22c2f074a6acd820d178e44c82df8898e8ff36aea7f762b6710))

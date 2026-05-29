@@ -84,7 +84,7 @@ Ergo uses Schnorr signatures in combination with Sigma protocols to enable **pri
 
 ---
 
-## Sigma Protocols and Schnorr Signatures
+## Sigma protocols and Schnorr Signatures
 
 Schnorr signatures are a foundational part of Ergo’s **Sigma protocol** framework. Sigma protocols generalize Schnorr signatures, allowing them to be composed into complex cryptographic proofs. For example:
 

@@ -34,7 +34,7 @@ Pulse operates on the Ergo blockchain and includes integrations:
 Pulse is designed to support various decentralized communication scenarios:
 
 * P2P messaging
-* DApp community support and ticketing
+* dApp community support and ticketing
 * Project community hubs
 * Content creation and monetization via livestreaming and tipping
 * Media portal for videos and music with integrated on-chain interaction

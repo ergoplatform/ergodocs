@@ -14,7 +14,7 @@ Ergo's transaction fee system is designed to be both flexible and explicit. Whil
 
 Although the protocol does not enforce a specific transaction fee, it employs a spam-prevention strategy that requires each box to contain a minimum amount of ERG. This minimum value is determined by a parameter voted on by miners and the size of the box. Every output box in a transaction must adhere to this rule. This strategy helps prevent the creation of dust in Ergo, thereby mitigating potential spam attacks.
 
-This fee is calculated based on the serialized size of the boxes being created, with a minimum threshold set at **360 nanoerg per byte** and is adjustable via [miner voting](governance.md). As a guideline, it is suggested to allocate **0.001 ERG (1,000,000 NanoErg) for each box** involved in the transaction.
+This fee is calculated based on the serialized size of the boxes being created, with a minimum threshold set at **360 nanoErgs per byte** and is adjustable via [miner voting](governance.md). As a guideline, it is suggested to allocate **0.001 ERG (1,000,000 nanoErgs) for each box** involved in the transaction.
 
 /// details | Dust
     {type: info, open: true}

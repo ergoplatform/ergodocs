@@ -25,10 +25,10 @@ The following example, adapted from [ergpy examples](https://github.com/mgpai22/
 
 ## Establish a Connection to the Blockchain
 
-To begin, you need to establish a connection to the Ergo blockchain. Choose either the MainNet or TestNet node URL and set it as the `node_url`.
+To begin, you need to establish a connection to the Ergo blockchain. Choose either the mainnet or testnet node URL and set it as the `node_url`.
 
 ```python
-# Assign a node_url, either MainNet or TestNet
+# Assign a node_url, either mainnet or testnet
 node_url: str = "http://213.239.193.208:9052/"
 
 ergo = appkit.ErgoAppKit(node_url=node_url)

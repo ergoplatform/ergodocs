@@ -2,7 +2,7 @@
 tags:
   - NIPoPoWs
   - Plasma
-  - Sigma Protocols
+  - Sigma protocols
   - Scaling
 ---
 

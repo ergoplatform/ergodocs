@@ -48,6 +48,20 @@ Most concept pages should use this shape:
 - Avoid unsupported claims such as "fastest", "best", or "secure" without context.
 - Avoid time-sensitive wording such as "currently" unless the page includes a version or date.
 
+## Terminology
+
+- Use `Ergo` for the network and ecosystem in normal prose; use `Ergo Platform` only when the proper name is needed.
+- Use `ERG` for the native coin and ticker. Avoid `Erg`, `Ergs`, and `$ERG` in documentation prose unless quoting external text.
+- Use `nanoErg` for one smallest unit and `nanoErgs` for plural amounts. Write `1 ERG = 1,000,000,000 nanoErgs`.
+- Preserve exact code, API, schema, JSON, CLI, and variable names even when they differ from prose style.
+- Use `ErgoScript` and `ErgoTree` with this capitalization.
+- Use `eUTXO`; on first use in a beginner page, write `extended UTXO (eUTXO)`.
+- Use `data inputs` in prose and `Data Inputs` only in titles or headings.
+- Use `Sigma protocols`; optionally add `Σ-protocols` in parentheses on first use.
+- Use `dApp` and `dApps`.
+- Use `mainnet` and `testnet` in prose; reserve `Mainnet` and `Testnet` for UI labels, headings, or table labels.
+- Do not call ErgoScript itself Turing-complete without explaining that on-chain validation is bounded and predictable. Multi-stage protocols can express long-running or Turing-complete workflows across transactions.
+
 ## Code And Commands
 
 - Mark every code block with a language.

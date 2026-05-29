@@ -58,7 +58,7 @@ val thresholdSignature = prove {
 
 ## Related Cryptographic Concepts
 
-- [Sigma Protocols](sigma.md)
+- [Sigma protocols](sigma.md)
 - [Discrete Logarithm Proofs](dlog.md)
 - [Ring Signatures](ring.md)
 

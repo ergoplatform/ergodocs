@@ -169,7 +169,7 @@ Explore the history of innovation. Click any event name to jump to its details o
     * [**Documentation**](minotaur-multisig.md#signing-server-for-multi-sig-communication-ergohack-ix) | [**Signing Demo**](https://drive.google.com/file/d/17ygkTGbkMyxQgs-jkl-5RZNBBd3jnoji/view?usp=sharing) | [**Registration Demo**](https://drive.google.com/file/d/1lZhlwJIOsnM1bIX5Ts-iSsjhpxRHxLKY/view?usp=sharing)
 
 6. **OneStopShop**
-    * **Overview**: An onboarding guide for newcomers to the Ergo ecosystem, covering essential resources from wallets and DApps to transactions.
+    * **Overview**: An onboarding guide for newcomers to the Ergo ecosystem, covering essential resources from wallets and dApps to transactions.
     * [**Documentation**](one-stop-shop.md)
 
 7. **Cup of Sugar**
@@ -492,7 +492,7 @@ ERGOHACK events have consistently benefited from the insight and expertise of a 
 * **Anon\_real (Darkfund0)**: Anonymous core contributor; developer of ZK Treasury, Ergo Auction House, EIP contributor.
 * **Joseph Armeanio**: Ergo Foundation Business Developer; focus on partnerships, adoption, and counter-economic tools.
 * **Mark Glasgow**: Ergo Foundation Member; Computing Science background, focus on inclusive systems.
-* **Luivatra (ErgoPad)**: Ergoscript Developer at ErgoPad/Paideia; background in CS (AI/Games) & Finance.
+* **Luivatra (ErgoPad)**: ErgoScript Developer at ErgoPad/Paideia; background in CS (AI/Games) & Finance.
 * **Representatives from Partner Projects**: Including Flux, Alephium, and the Djed Alliance during co-hosted events.
 
 *(Note: Judge panels vary for each event. This list highlights some of the key contributors over time.)*

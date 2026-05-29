@@ -44,7 +44,7 @@ This event will featured presentations and discussions by developers and blockch
 - [04:38:00](https://www.youtube.com/watch?v=zG-rxMCDIa0&amp;t=16680s) - Understanding dApp Developer Tooling: An Introduction To Kiosk
 - [05:13:00](https://www.youtube.com/watch?v=zG-rxMCDIa0&amp;t=18780s) - The Upcoming Ergo Hardening Upgrade - How It Will Change The Ecosystem From Top To Bottom
 - [05:26:30](https://www.youtube.com/watch?v=zG-rxMCDIa0&amp;t=19590s) - Oracle Pools Update - How Deviation Checking Consensus Improves Assurance
-- [05:57:00](https://www.youtube.com/watch?v=zG-rxMCDIa0&amp;t=21420s) - Updatable dApps In The EUTXO Model
+- [05:57:00](https://www.youtube.com/watch?v=zG-rxMCDIa0&amp;t=21420s) - Updatable dApps In The eUTXO Model
 - [06:10:00](https://www.youtube.com/watch?v=zG-rxMCDIa0&amp;t=22200s) - Blockchain 2020: A DeFi Odyssey
 - [06:51:00](https://www.youtube.com/watch?v=zG-rxMCDIa0&amp;t=24660s) - The Ergo Vision
 - [07:03:00](https://www.youtube.com/watch?v=zG-rxMCDIa0&amp;t=25380s) - ZK Treasury

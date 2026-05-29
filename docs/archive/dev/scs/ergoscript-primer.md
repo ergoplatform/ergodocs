@@ -31,9 +31,9 @@ if (HEIGHT > 100000) signerPubKey else fail()
 
 This contract says: "Allow spending only if the current [blockchain height](block-header.md) is greater than 100,000, otherwise fail."
 
-### 3. Sigma Protocols
+### 3. Sigma protocols
 
-ErgoScript leverages advanced cryptographic techniques called [Sigma Protocols](sigma.md), enabling:
+ErgoScript leverages advanced cryptographic techniques called [Sigma protocols](sigma.md), enabling:
 
 - Complex signature schemes
 - [Ring signatures](ring.md)
@@ -80,7 +80,7 @@ sigmaProp(pubKey1 && pubKey2 || pubKey1 && pubKey3 || pubKey2 && pubKey3)
 
 ### Intermediate
 
-- [Sigma Protocols](sigma.md)
+- [Sigma protocols](sigma.md)
 - [Advanced Contract Patterns](contracts.md)
 
 ### Advanced

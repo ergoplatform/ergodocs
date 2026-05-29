@@ -12,7 +12,7 @@ This page aims to provide some clarity around some common misconceptions that ha
 
 The emission process of Ergo is controlled by a transparent smart contract, which is accessible for public viewing in Ergo's source code. This contract restricts developers from arbitrarily extracting coins. Any modifications to the emission process, such as the [EIP-27](eip27.md) soft-fork, necessitate a consensus from the miners and are publicly visible on the blockchain. This capability, outlined in one of Ergo's [foundational papers](https://docs.ergoplatform.com/documents/#foundational-papers) [*'Soft Power: Upgrading Chain Macroeconomic Policy Through Soft Forks'*](https://eprint.iacr.org/2021/577.pdf), empowers miners to adjust the exact rate of emission reduction, facilitating a smooth transition to a self-sustaining network.  
 
-### All Erg was pre-mined
+### All ERG was pre-mined
 
 A common misconception is that Ergo coins were pre-mined and stored in a smart contract, potentially giving developers undue influence over the coin supply. However, Ergo's emission process is unique and transparent. Coins were produced at the blockchain's genesis and are systematically awarded to miners for their role in securing the network and processing transactions. This approach offers advantages, such as mitigating potential inflation bugs that have troubled other blockchains when coins are generated with each block.
 
@@ -30,9 +30,9 @@ For more information see [this page](emission.md)
 
 ### Ergo won't be able to support miners after emissions ends
 
-After the scheduled emissions conclude in 2045, miners on Ergo will continue to be incentivized through alternative methods. One such approach involves transaction fees and Miner Extracted Value (MEV). Transactions on Ergo generate fees (paid in Ergs), with a portion of these fees awarded to miners. MEV represents the total value miners can extract from a block using tactics like reordering, front-running, and other advanced techniques. Miners can increase their MEV earnings by efficiently executing transactions in high MEV blocks, which encourages them to contribute their hash power to the network.
+After the scheduled emissions conclude in 2045, miners on Ergo will continue to be incentivized through alternative methods. One such approach involves transaction fees and Miner Extracted Value (MEV). Transactions on Ergo generate fees paid in ERG, with a portion of these fees awarded to miners. MEV represents the total value miners can extract from a block using tactics like reordering, front-running, and other advanced techniques. Miners can increase their MEV earnings by efficiently executing transactions in high MEV blocks, which encourages them to contribute their hash power to the network.
 
-Another form of MEV we have on Ergo is through [**Storage Rent**](rent.md). This mechanism requires users to pay for the storage their data occupies on the network. Consequently, miners receive a consistent income stream, as they earn Ergs from fees users pay for content storage. See [this page](rent-fees.md) for more information on the potential of storage rent.
+Another form of MEV we have on Ergo is through [**Storage Rent**](rent.md). This mechanism requires users to pay for the storage their data occupies on the network. Consequently, miners receive a consistent income stream, as they earn ERG from fees users pay for content storage. See [this page](rent-fees.md) for more information on the potential of storage rent.
 
 In future, Miners could also benefit from custom emission contracts as part of a Fair Initial Mining Offering (FIMO) process. These contracts reward miners with non-native tokens, ensuring new projects have equal opportunities to distribute tokens to the community while incentivizing miners to participate in mining.
 
@@ -168,11 +168,11 @@ For more information, watch [Quantum Computing and Resistance | Ergo Clips](http
 
 Ergo stands out from other blockchain projects due to its unique features and capabilities. One of these is ErgoScript, a powerful and secure scripting language that supports a wide range of features. These include ring signatures, atomic swaps, multiple currencies, and self-replicating scripts, providing developers with the tools they need to create complex and secure applications.
 
-Another distinctive feature of Ergo is its use of Sigma Protocols. These non-interactive zero-knowledge proofs can be composed using basic *AND/OR* logic, offering a robust and flexible framework for creating secure and private transactions.
+Another distinctive feature of Ergo is its use of Sigma protocols. These non-interactive zero-knowledge proofs can be composed using basic *AND/OR* logic, offering a robust and flexible framework for creating secure and private transactions.
 
 Ergo also supports multi-stage contracts, extending the standard threshold `m‐of‐n` signature protection. This allows for the specification of complex recipients of these coins, facilitating the creation of intricate, secure, and efficient smart contracts.
 
-The use of Non-Interactive Proofs of Proof of Work (NIPoPoWs) is another unique aspect of Ergo. NIPoPoWs enable truly decentralized Ergo DApps and off-chain protocols via light clients, enhancing the overall efficiency and scalability of the network.
+The use of Non-Interactive Proofs of Proof of Work (NIPoPoWs) is another unique aspect of Ergo. NIPoPoWs enable truly decentralized Ergo dApps and off-chain protocols via light clients, enhancing the overall efficiency and scalability of the network.
 
 Ergo also implements a feature known as Storage Rent, which helps manage blockchain bloat and turns it into a profitable venture. This ensures the long-term sustainability of the network by incentivizing efficient use of storage space.
 

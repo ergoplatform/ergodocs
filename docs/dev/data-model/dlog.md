@@ -25,7 +25,7 @@ Discrete logarithm proofs are a fundamental cryptographic primitive in Ergo's si
 
 ## Related Cryptographic Concepts
 
-- [Sigma Protocols](sigma.md)
+- [Sigma protocols](sigma.md)
 - [Threshold Signatures](threshold.md)
 - [Ring Signatures](ring.md)
 

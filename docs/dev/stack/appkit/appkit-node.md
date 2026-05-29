@@ -57,14 +57,14 @@ We will need some configuration parameters which can be loaded from `ergotool.js
 
 Here `apiKey` is the secret key required for API authentication which can be obtained as described [here](swagger.md). And mnemonic is the secret phrase obtained during [setup of a new wallet](wallet.md) or if you don't want to set up your node using ergo-tool's [mnemonic](https://github.com/ergoplatform/ergo-tool#supported-commands) command.
 
-Our example app also reads the amount of NanoErg to put into a new box from command line arguments
+Our example app also reads the amount of nanoErgs to put into a new box from command line arguments
 
 ```java
 public static void main(String[] args) {
     long amountToPay = Long.parseLong(args[0]);
     ErgoToolConfig conf = ErgoToolConfig.load("ergotool.json");
     int newBoxSpendingDelay = Integer.parseInt(conf.getParameters().get("newBoxSpendingDelay"));
-    // the rest of the code shown below 
+    // the rest of the code shown below
     ...
 }
 ```
@@ -93,16 +93,16 @@ We start with some auxiliary steps.
 // access wallet embedded in Ergo node
 ErgoWallet wallet = ctx.getWallet();
 
-// calculate total amount of NanoErgs we need to create the new box 
+// calculate total amount of nanoErgs we need to create the new box
 // and pay transaction fees
 long totalToSpend = amountToPay + Parameters.MinFee;
 
-// request wallet for unspent boxes that cover required amount of NanoErgs
+// request wallet for unspent boxes that cover required amount of nanoErgs
 Optional<List<InputBox>> boxes = wallet.getUnspentBoxes(totalToSpend);
 if (!boxes.isPresent())
     throw new ErgoClientException(
         "Not enough coins in the wallet to pay " + totalToSpend, null);
-    
+
 // create a so called prover, a special object which will be used for signing the transaction
 // the prover should be configured with secrets, which are necessary to generate signatures (aka proofs)
 ErgoProver prover = ctx.newProverBuilder()

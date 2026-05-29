@@ -1,6 +1,6 @@
 ---
 tags:
-  - Sigma Protocols
+  - Sigma protocols
 ---
 
 *Everyone is talking about DeFi. Few people are asking what DeFi should look like. Ergo has a vision for what the sector can become.*
@@ -21,7 +21,7 @@ As Eric Hughes wrote in [A Cypherpunk's Manifesto](https://www.activism.net/cyph
 
 But, as Hughes continues, 'Privacy is the power to selectively reveal oneself to the world.' There is always a balance to be struck between privacy and compliance, transparency and anonymity. Large scale adoption of DeFi requires audibility and the regulatory approval that enables it.
 
-Thanks to the latest advances in zero-knowledge proofs, Ergo can offer both privacy and transparency, where required. The platform's [Sigma Protocols](https://ergoplatform.org/en/blog/2020_03_16_ergo_sigma/) offer robust, customisable cryptography – and, at the same time, the ability to selectively reveal information where necessary.
+Thanks to the latest advances in zero-knowledge proofs, Ergo can offer both privacy and transparency, where required. The platform's [Sigma protocols](https://ergoplatform.org/en/blog/2020_03_16_ergo_sigma/) offer robust, customisable cryptography – and, at the same time, the ability to selectively reveal information where necessary.
 
 ## 2. Scalability
 
@@ -59,7 +59,7 @@ It's a far cry from the ideals of Bitcoin and Ergo that aims to build on these. 
 
 ## Composability
 
-As we wrote in a recent blog, composability is a core feature of DeFi. It's what gives applications network effect, instantly adding value by plugging into existing dapps' user bases and functionality.
+As we wrote in a recent blog, composability is a core feature of DeFi. It's what gives applications network effect, instantly adding value by plugging into existing dApps' user bases and functionality.
 
 Programmable money is a huge development. The current system is clunky and complicated to use, at best. It's not possible to attach detailed conditions to transactions, and have them interact seamlessly with software, as can be done with blockchain and smart contracts.
 

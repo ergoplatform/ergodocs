@@ -28,13 +28,13 @@ ErgoScript, the platform's programming language, exemplifies this innovation by 
 
 ### Strength and Security
 
-Engineered with a strong emphasis on security and versatility, Ergo offers a reliable foundation for dApps to operate with predictable costs. Its smart contracts ensure Turing completeness without compromising on predictability or affordability. Ergo adopts a declarative model for programming whereby it's always known in advance how much code will cost to run, avoiding the dangers of unrestricted functionality seen in some other platforms.
+Engineered with a strong emphasis on security and versatility, Ergo offers a reliable foundation for dApps to operate with predictable costs. ErgoScript validation is deliberately bounded, while multi-stage protocols can express complex workflows across transactions without giving up predictable on-chain validation. Ergo adopts a declarative model for programming whereby it's known in advance how much code will cost to run, avoiding the dangers of unrestricted functionality seen in some other platforms.
 
-The introduction of [Sigma Protocols](sigma.md) and [Multi-stage Contracts](multi.md) enhances this further by supporting non-interactive zero-knowledge proofs and complex transaction conditions, facilitating intricate, secure, and efficient smart contract creation.
+The introduction of [Sigma protocols](sigma.md) and [Multi-stage Contracts](multi.md) enhances this further by supporting non-interactive zero-knowledge proofs and complex transaction conditions, facilitating intricate, secure, and efficient smart contract creation.
 
 ### Intelligent and User-Friendly
 
-Ergo leverages Sigma Protocols [(Σ-Protocols)](sigma.md) to power its smart contracts, enabling the use of efficient zero-knowledge proofs. This allows for the performance of complex, privacy-sensitive tasks without intermediaries, fostering a trustless environment with unparalleled application-level privacy.
+Ergo leverages Sigma protocols [(Σ-protocols)](sigma.md) to power its smart contracts, enabling the use of efficient zero-knowledge proofs. This allows for the performance of complex, privacy-sensitive tasks without intermediaries, fostering a trustless environment with strong application-level privacy.
 
 ### Secure and Accessible to All
 
@@ -86,7 +86,7 @@ Ergo addresses several key challenges inherent to Bitcoin, enhancing functionali
 | Unclear network security as block reward subsidy approaches zero and transaction fees remain low and volatile | More revenue from transaction fees due to DeFi and higher usage/scalability, storage rent, mining by subpools    |
 | Lack of economy around state leading to miners receiving no compensation for holding UTXO set                  | Storage Rent provides additional rewards for miners, compensating for long-term UTXO holding                     |
 | Inefficient merkle tree data structure leading to inefficient light clients                                    | AVL trees enabling drastically more efficient light client verification                                          |
-| Weak and cumbersome optional privacy tools                                                                     | Sigma protocols enable true peer-to-peer privacy, ErgoMixer provides better anonymity than Monero                 |
+| Weak and cumbersome optional privacy tools                                                                     | Sigma protocols enable peer-to-peer privacy patterns, mixers, stealth addresses, and other opt-in privacy tools  |
 | Massive scaling challenges                                                                                     | Decentralized on-chain governance, NiPoPoWs enable light clients with full node security, more Layer-2 options   |
 
 ### How Does Ergo Address Ethereum's Challenges?
@@ -102,7 +102,7 @@ Ergo's UTXO-based programming model is **declarative**, specifying conditions fo
 | Censorship: Most blocks are OFAC blocks                                                             | Decentralization and PoW deeply ingrained in Ergo's ethos, resists censorship                                   |
 | Centralization of Monetary Policy with Vitalik and Ethereum Foundation able to change emission      | All ERGs created in genesis block, released per pre-set emission schedule, changes require supermajority        |
 | Poor security and frequent hacks costing billions                                                   | UTXO model and efficient onchain verification with most computation done off-chain                              |
-| Poor privacy tools due to Account ledger model                                                      | Combination of eUTXO model and sigma protocols achieves optional privacy superior to Monero                     |
+| Poor privacy tools due to Account ledger model                                                      | Combination of eUTXO model and Sigma protocols supports flexible opt-in privacy patterns                         |
 
 View [Comparisons](https://ergonaut.space/en/Community/Comparisons) with other projects.
 

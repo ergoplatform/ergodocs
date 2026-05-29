@@ -27,7 +27,7 @@ SCypher introduces several novel approaches to software distribution and securit
 SCypher's architecture is built for security, resilience, and accessibility:
 
 * **Core Logic:** The primary encryption and reconstruction logic is implemented as a robust Bash script with comprehensive security features.
-* **Web Interface:** A user-friendly web interface provides browser-based access, integrating with the Nautilus wallet using the Fleet SDK. This facilitates functionalities like donation transactions directly from the DApp.
+* **Web Interface:** A user-friendly web interface provides browser-based access, integrating with the Nautilus wallet using the Fleet SDK. This facilitates functionalities like donation transactions directly from the dApp.
 * **Storage Optimization:** Data is Base64 encoded and distributed across multiple Ergo tokens, optimizing blockchain storage.
 * **File Decompression:** For web browser compatibility, the reconstruction process now utilizes `.gz` format decompression, ensuring reliable file delivery.
 

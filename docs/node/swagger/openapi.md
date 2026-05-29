@@ -27025,7 +27025,7 @@ Status Code **200**
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
 |» confirmed|[BalanceInfo](#schemabalanceinfo)|false|none|Balance information|
-|»» nanoErgs|integer(int64)|true|none|Balance of nanoERGs|
+|»» nanoErgs|integer(int64)|true|none|Balance of nanoErgs|
 |»» tokens|[object]|true|none|Balance of tokens|
 |»»» tokenId|[ModifierId](#schemamodifierid)(base16)|false|none|Base16-encoded 32 byte modifier id|
 |»»» amount|integer(int64)|false|none|Amount of the token|
@@ -27339,7 +27339,7 @@ Balance information
 
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
-|nanoErgs|integer(int64)|true|none|Balance of nanoERGs|
+|nanoErgs|integer(int64)|true|none|Balance of nanoErgs|
 |tokens|[object]|true|none|Balance of tokens|
 |» tokenId|[ModifierId](#schemamodifierid)|false|none|Identifier of the token|
 |» amount|integer(int64)|false|none|Amount of the token|

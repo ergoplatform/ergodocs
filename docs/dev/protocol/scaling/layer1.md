@@ -10,9 +10,9 @@ Layer 1, the foundational protocol layer of a blockchain system, is responsible 
 
 ## Current Scalability Features
 
-### Extended UTXO Model (EUTXO)
+### Extended UTXO Model (eUTXO)
 
-Ergo utilizes an enhanced version of Bitcoin's UTXO model, known as EUTXO, which enables:
+Ergo utilizes an enhanced version of Bitcoin's UTXO model, known as eUTXO, which enables:
 
 - Turing Complete smart contracts
 - Parallel transaction processing

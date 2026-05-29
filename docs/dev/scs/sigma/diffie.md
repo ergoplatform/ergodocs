@@ -87,7 +87,7 @@ $$ c = H(t_0 \parallel t_1 \parallel m) $$
 
 This allows the prover to generate the challenge on their own, without needing an external verifier. This transformation is implemented in ErgoScript via functions like **proveDHTuple**, which allows developers to create non-interactive proofs for Diffie-Hellman tuples, among other cryptographic statements.
 
-### Integration in Ergo's Sigma Protocols
+### Integration in Ergo's Sigma protocols
 
 In Ergo, Diffie-Hellman tuples are a critical part of the overall **Sigma protocol** framework. By allowing composable cryptographic proofs, Sigma protocols enable developers to create contracts that require privacy-preserving proofs, such as:
 

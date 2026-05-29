@@ -46,14 +46,14 @@ A few years ago, there was not much offered in terms of wallets on Ergo. With re
 2. [Duckpools](https://www.duckpools.io/) - A collateralized borrowing and lending protocol on Ergo.
 3. [SigmaFi](https://sigmafi.app/#/) - A peer-to-peer borrowing and lending protocol on Ergo.
 4. [Cyberverse](https://playcyberverse.com/) - An NFT gaming platform.
-5. [Paideia](https://www.paideia.im/) - A smart contract-based governance DAO dapp.
+5. [Paideia](https://www.paideia.im/) - A smart contract-based governance DAO dApp.
 6. [ErgoDex](https://www.ergodex.io/ergo/swap) - The decentralized exchange on Ergo.
 7. [MewFinance](https://mewfinance.com/) - A decentralized marketplace on Ergo.
 8. [Skyharbor](https://www.skyharbor.io/) and the [Ergo Auction House](https://ergoauctions.org/) - NFT platforms on Ergo.
-9. [ErgoMixer](https://ergoplatform.org/en/blog/2020_03_20_ergo_mixer/) - A privacy-based dapp on Ergo.
+9. [ErgoMixer](https://ergoplatform.org/en/blog/2020_03_20_ergo_mixer/) - A privacy-based dApp on Ergo.
 10. [Ergo tutorials](https://ergotutorials.com/) - A video-centric tutorial website helping newcomers on Ergo to complete different sorts of actions within the ecosystem.
-11. [ErgoRaffle](https://ergoraffle.com/) - A smart contract-based crowdfunding dapp on Ergo.
-12. [CruxFinance](https://cruxfinance.io/) - A trading analytics and portfolio tracker dapp.
+11. [ErgoRaffle](https://ergoraffle.com/) - A smart contract-based crowdfunding dApp on Ergo.
+12. [CruxFinance](https://cruxfinance.io/) - A trading analytics and portfolio tracker dApp.
 
 **There are more Dapps within the Ergo ecosystem and for a more extensive deep dive, consult this** [document](https://docs.google.com/document/d/1Xs_mfpQYigvRfP8pS8V8JKsGusoj1aNdwA_FBy0Bwws/edit).
 

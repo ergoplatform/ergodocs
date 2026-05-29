@@ -110,7 +110,7 @@ in the dependencies section:
     implementation ("org.ergoplatform:ergo-appkit_2.12:4.0.10")
 ```
 
-When we have done that, we can add a helper method that builds a reduced transaction to send a given nanoerg amount from a given sender to a given recipient:
+When we have done that, we can add a helper method that builds a reduced transaction to send a given nanoErgs amount from a given sender to a given recipient:
 
 ```
 private fun getReducedSendTx(
@@ -264,7 +264,7 @@ The tutorial on implementations is now done. The next part will take a look at w
 
 ---
 
-[1] [https://medium.com/@bschulte19e/implement-a-dapp-using-ergopay-d95e17a51410](https://medium.com/@bschulte19e/implement-a-dapp-using-ergopay-d95e17a51410)
+[1] [https://medium.com/@bschulte19e/implement-a-dApp-using-ergopay-d95e17a51410](https://medium.com/@bschulte19e/implement-a-dApp-using-ergopay-d95e17a51410)
 
 [2] [https://api.tokenjay.app/peers/list](https://api.tokenjay.app/peers/list)
 

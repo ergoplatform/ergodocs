@@ -16,7 +16,7 @@ Chained transactions allow for the sequential use of outputs from off-chain tran
 
 ## Establish a Blockchain Connection
 
-Start by defining the URL of the node to connect to the Ergo blockchain. This could be either a MainNet or TestNet node URL. The connection is then established using the `ErgoAppKit`.
+Start by defining the URL of the node to connect to the Ergo blockchain. This could be either a mainnet or testnet node URL. The connection is then established using the `ErgoAppKit`.
 
 ```python
 # Assign the node URL

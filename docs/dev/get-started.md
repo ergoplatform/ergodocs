@@ -44,13 +44,13 @@ Ergo is a next-generation **Proof-of-Work (PoW)** blockchain platform designed f
 
 - **Storage Rent**: Also known as [demurrage](rent.md), this mechanism mitigates blockchain bloat and turns it into a profitable venture by charging for on-chain storage.
 
-- **Turing-Complete Smart Contracts**: Ergo supports [Turing-complete smart contracts](#multi-stage-protocols), enabling complex on-chain computations.
+- **Multi-stage protocols**: ErgoScript validation is bounded and predictable, while [multi-stage protocols](#multi-stage-protocols) can express complex workflows across transactions.
 
 ::cards::
 
 [
   {
-    "title": "📚 DeCo EU Layman Class - Basics of eUTxO",
+    "title": "📚 DeCo EU Layman Class - Basics of eUTXO",
     "content": "A great introductory course aimed at the layman from Decentralised Collaboration.",
     "url": "https://www.youtube.com/watch?v=SAWeW6wajEw"
   },
@@ -111,7 +111,7 @@ Ergo also supports advanced [data structures](data-structures.md) like [AVL+ Tre
 
 ## ErgoScript
 
-ErgoScript is a super-simple subset of Scala, enabling clear descriptions of contractual logic that can be Turing-complete. It is flexible enough to allow for ring signatures, multi-signatures, multiple currencies, atomic swaps, self-replicating scripts, and long-term computation.
+ErgoScript is a deliberately bounded, deterministic subset of Scala for describing contractual spending logic. It is flexible enough to allow for ring signatures, multi-signatures, multiple currencies, atomic swaps, self-replicating patterns, and long-term workflows when combined with multi-stage protocols.
 
 The Account model of Ethereum is imperative, meaning that sending coins from Alice to Bob requires changing balances in storage through a series of operations. In contrast, Ergo's UTXO-based programming model is declarative. ErgoScript contracts specify conditions for a transaction to be accepted by the blockchain, not changes to be made in the storage state as a result of the contract execution.
 
@@ -130,7 +130,7 @@ The Account model of Ethereum is imperative, meaning that sending coins from Ali
 
 - **[Scastie](scastie.md)**: An online compiler tailored for Scala, perfect for developers eager to experiment, share, or learn Scala.
 
-- **[Kiosk](kiosk.md)**: A web-based UI to explore ErgoScript. *(Corrected path)*
+- **[Kiosk](kiosk.md)**: A web-based UI to explore ErgoScript.
 
 - **[Ergo-Puppet](puppet.md)**: An advanced tool built on the Ergo Playground, designed for off-chain experimentation and unit testing of Ergo contracts.
 
@@ -197,9 +197,9 @@ ErgoScript has two compiler and ErgoTree interpreter implementations for the [*S
 
 ## Cryptography
 
-Ergo has generic support for ring and threshold signatures, as well as a variety of cryptographic protocols via composable [sigma-protocols](crypto.md) built into the core.
+Ergo has generic support for ring and threshold signatures, as well as a variety of cryptographic protocols via composable [Sigma protocols](crypto.md) built into the core.
 
-Sigma Protocols (Σ-Protocols) are the foundation of Ergo’s smart contracts. Their advantage is that they are composable using simple AND/OR logic. When combined with a blockchain, these composable proofs enable very powerful use cases, allowing for the implementation of sophisticated tasks that would otherwise be impossible, risky, or expensive on other platforms.
+Sigma protocols (Σ-protocols) are the foundation of Ergo’s smart contracts. Their advantage is that they are composable using simple AND/OR logic. When combined with a blockchain, these composable proofs enable very powerful use cases, allowing for the implementation of sophisticated tasks that would otherwise be impossible, risky, or expensive on other platforms.
 
 ### Crypto Primitives
 
@@ -224,7 +224,7 @@ Sigma Protocols (Σ-Protocols) are the foundation of Ergo’s smart contracts. T
 - **Additional Cryptographic Standards**:
   - **[EIP-0003: Deterministic Wallet Standard](eip3.md)**: A standard defining the structure and operation of deterministic wallets in the Ergo platform.
 
-See [this page](global-functions.md#cryptographic-functions) for a description of the global cryptographic functions available in ErgoScript. *(Corrected path and anchor)*
+See [this page](global-functions.md#cryptographic-functions) for a description of the global cryptographic functions available in ErgoScript.
 
 ### Tutorials
 
@@ -256,7 +256,7 @@ Developers should familiarize themselves with Merkle Trees and their associated 
 
 ### Multi-Stage Protocols
 
-[Multi-Stage Contracts](multi.md) is a technique where, using transaction trees, we can emulate persistent storage in UTXO-based systems by linking several UTXOs containing small pieces of code to form a large multi-stage protocol. This enables *on-chain computations*, making it possible to process parallelized actions on top of smart contracts and construct **Turing-complete** applications.
+[Multi-Stage Contracts](multi.md) is a technique where, using transaction trees, we can emulate persistent storage in UTXO-based systems by linking several UTXOs containing small pieces of code to form a large multi-stage protocol. ErgoScript itself remains bounded for predictable validation; multi-stage protocols can express long-running or Turing-complete workflows across multiple transactions.
 
 ## App Development
 
@@ -327,7 +327,7 @@ Most repositories are also categories on [Grist](https://ergo.getgrist.com/jf9KP
     "content": "Building functional dApps on Ergo requires more than just smart contracts and transactions."
   },
   {
-    "title": "📕 DeCo Education: DApp Components - Backend",
+    "title": "📕 DeCo Education: dApp Components - Backend",
     "url": "https://deco-education.github.io/deco-docs/docs/into-the-woods/trail2-ergo-coding/dapp-components"
   },
   {

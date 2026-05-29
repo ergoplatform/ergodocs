@@ -14,7 +14,7 @@ Non-Interactive Zero-Knowledge Proofs (NIZKs) are advanced cryptographic techniq
 
 ## Theoretical Foundation
 
-NIZKs in Ergo are primarily implemented through **Sigma Protocols** (Σ-protocols), which provide a powerful and flexible approach to zero-knowledge proofs. These protocols are a cornerstone of Ergo's privacy and cryptographic infrastructure.
+NIZKs in Ergo are primarily implemented through **Sigma protocols** (Σ-protocols), which provide a powerful and flexible approach to zero-knowledge proofs. These protocols are a cornerstone of Ergo's privacy and cryptographic infrastructure.
 
 ### Key Characteristics
 
@@ -116,7 +116,7 @@ val thresholdProof = prove {
 - [Discrete Logarithm Proofs](dlog.md)
 - [Ring Signatures](ring.md)
 - [Threshold Signatures](threshold.md)
-- [Sigma Protocols](sigma.md)
+- [Sigma protocols](sigma.md)
 
 ## Future Research Directions
 
@@ -136,13 +136,13 @@ NIZKs in Ergo are designed with performance in mind:
 
 ## References
 
-- [Sigma Protocols Overview](sigma.md)
+- [Sigma protocols Overview](sigma.md)
 - [Cryptographic Foundations](crypto.md)
 - [Zero-Knowledge Proofs in Ergo](zkp.md)
 - Academic Papers:
-  - [Sigma Protocols: A Survey](https://eprint.iacr.org/2021/1022)
+  - [Sigma protocols: A Survey](https://eprint.iacr.org/2021/1022)
   - [Non-Interactive Zero-Knowledge Proofs](https://eprint.iacr.org/2016/263)
 
 ## Conclusion
 
-Ergo's Non-Interactive Zero-Knowledge Proofs represent a sophisticated approach to cryptographic privacy, enabling complex, secure, and flexible smart contract designs while maintaining user confidentiality. By leveraging advanced cryptographic techniques like Sigma Protocols and the Fiat-Shamir transformation, Ergo provides a robust framework for privacy-preserving computational techniques.
+Ergo's Non-Interactive Zero-Knowledge Proofs represent a sophisticated approach to cryptographic privacy, enabling complex, secure, and flexible smart contract designs while maintaining user confidentiality. By leveraging advanced cryptographic techniques like Sigma protocols and the Fiat-Shamir transformation, Ergo provides a robust framework for privacy-preserving computational techniques.

@@ -163,7 +163,11 @@ async function connectWallet() {
 
 ## Example Implementations
 
-* *(Placeholder: Link to well-known open-source dApps or libraries demonstrating good EIP-0012 integration, e.g., Spectrum UI, Nautilus examples, Fleet examples, if available).*
+Use maintained wallet and SDK repositories as implementation references, and verify against the full EIP before copying behavior:
+
+* [Nautilus Wallet](https://github.com/nautls/nautilus-wallet)
+* [Fleet SDK](https://github.com/fleet-sdk/fleet)
+* [EIP-0012 pull request and discussion](https://github.com/ergoplatform/eips/pull/23)
 
 ---
 

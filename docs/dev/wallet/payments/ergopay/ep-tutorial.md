@@ -102,7 +102,7 @@ dependencies {
 }
 ```
 
-When this is done, you can add the following helper method that builds a transaction for sending a certain amount of nanoERG from “sender” to “recipient”:
+When this is done, you can add the following helper method that builds a transaction for sending a certain amount of nanoErgs from “sender” to “recipient”:
 
 ```java
     // This function takes in boolean, long, address of sender and address of recipient
@@ -175,7 +175,7 @@ Now, all we have to do is add a method that wraps this helper method into a GET 
     }
 ```
 
-Our endpoint only expects a single parameter: an address. We use this address to construct a transaction to send 1 ERG (= 10⁹ nanoERG) to and from (lines 9 to 13). This transaction gets serialized and Base64 Url-encoded and is added to the response in line 15, along with an informative message for the user (lines 17/18).
+Our endpoint only expects a single parameter: an address. We use this address to construct a transaction to send 1 ERG (= 10⁹ nanoErgs) to and from (lines 9 to 13). This transaction gets serialized and Base64 Url-encoded and is added to the response in line 15, along with an informative message for the user (lines 17/18).
 It is important to catch all exceptions that could be thrown and use the error messages in the response back to the user. For example, an exception will be thrown for every address that does not have enough balance to send 1 ERG. When you catch the exception like this, the user will get the error message presented — not a very beautiful one, there is lots of space left to polish this for a professional dApp. But if you don’t catch the error here, Spring will respond to the requesting wallet app with a server error, and you can place all bets that this will be more ugly for end users and won’t make your dApp look professional.
 When you now try this endpoint manually, you’ll need to add a testnet or mainnet address:
 

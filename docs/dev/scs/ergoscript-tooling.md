@@ -16,11 +16,11 @@ source_repos:
   - repo: paideiadao/paideia-contracts
     branch: main
     paths:
-      - paideia_contracts/contracts/plasma_staking/ergoscript/latest/plasmaStaking.es
+      - paideia_contracts/contracts/plasma_staking/ErgoScript/latest/plasmaStaking.es
 source_of_truth:
   - https://github.com/Emurgo/Emurgo-Research/tree/master/smart-contracts/High%20Level%20Design%20Patterns%20In%20Extended%20UTXO%20Systems.md
   - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/docs/LangSpec.md
-  - https://github.com/paideiadao/paideia-contracts/tree/main/paideia_contracts/contracts/plasma_staking/ergoscript/latest/plasmaStaking.es
+  - https://github.com/paideiadao/paideia-contracts/tree/main/paideia_contracts/contracts/plasma_staking/ErgoScript/latest/plasmaStaking.es
 ---
 
 # ErgoScript Tooling
@@ -72,7 +72,7 @@ The ErgoScript ecosystem offers a wide range of tools and resources to help deve
 
 ##### Examples
 
-- [ErgoPad Plasma Staking Contracts](https://github.com/paideiadao/paideia-contracts/blob/main/paideia_contracts/contracts/plasma_staking/ergoscript/latest/plasmaStaking.es)
+- [ErgoPad Plasma Staking Contracts](https://github.com/paideiadao/paideia-contracts/blob/main/paideia_contracts/contracts/plasma_staking/ErgoScript/latest/plasmaStaking.es)
 - [GetBlok.io Smart Pools](https://github.com/GetBlok-io/ergo-smartpooling-contracts)
 
 ##### Visual

@@ -1,6 +1,6 @@
 ## ErgoProfitSharingDapp
 
-This service will provide a way for dapps to distribute gains among dapps' token holders.
+This service will provide a way for dApps to distribute gains among dApps' token holders.
 
 The first user of this service will be the ErgoMixer.
 

@@ -147,7 +147,7 @@ Luckily, our SDKs help you by providing high-level methods for this common task.
     //address receiving the tx
     Address recipient = Address.create(recipientAddress);
     //amount to send
-    long amountToSend = 1000L * 1000L * 1000L // 1 ERG in nanoERGs
+    long amountToSend = 1000L * 1000L * 1000L // 1 ERG in nanoErgs
     ergoClient.execute((BlockchainContext ctx) -> {
         ErgoProver prover = ctx.newProverBuilder().withMnemonic(
           SecretString.create(mnemonic),
@@ -189,7 +189,7 @@ Luckily, our SDKs help you by providing high-level methods for this common task.
       .from(inputs)
       .to(
         new OutputBuilder(
-          "1000000", // amount of nanoergs
+          "1000000", // amount of nanoErgs
           "9gNvAv97W71Wm33GoXgSQBFJxinFubKvE6wh2dEhFTSgYEe783j" // recipient address
         )
     );
