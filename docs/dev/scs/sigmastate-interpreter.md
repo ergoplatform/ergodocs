@@ -6,7 +6,7 @@ tags:
   - Compiler
   - Interpreter
 owner: docs
-last_reviewed: 2026-05-26
+last_reviewed: 2026-04-01
 source_repos:
   - repo: ergoplatform/sigmastate-interpreter
     branch: develop
@@ -41,7 +41,6 @@ This library is integral to the operation of the [Ergo Node](https://github.com/
 
 - `Apr 14`: [SigmaState interpreter v6.0.3](https://github.com/ergoplatform/sigmastate-interpreter/releases/tag/v6.0.3) and [sigmastate-js 0.6.1](https://www.npmjs.com/package/sigmastate-js) were released.
 - v6.0.3 included compiler support for `Global.serialize`, contract-template deserialization fixes for v6 methods, and broader language-spec coverage.
-- `May 28`: [Sigma SDK v6.0.4](https://github.com/ergoplatform/sigmastate-interpreter/releases/tag/v6.0.4) was released with Java and JavaScript dependency updates, additional tests, completed Bulletproof range-proof verification tests, and compiler support for `None` expressions such as `val x: Option[Int] = None`.
 
 /// details | DeepWiki Documentation
     {type: info, open: true}
