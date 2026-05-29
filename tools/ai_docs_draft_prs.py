@@ -12,7 +12,7 @@ import re
 import subprocess
 import sys
 from typing import Any
-from urllib.error import HTTPError
+from urllib.error import HTTPError, URLError
 from urllib.parse import quote
 from urllib.request import Request, urlopen
 
@@ -20,13 +20,33 @@ import docs_update_candidates as candidates
 
 
 ROOT = Path(__file__).resolve().parents[1]
-MODELS_ENDPOINT = "https://models.github.ai/inference/chat/completions"
+GITHUB_MODELS_ENDPOINT = "https://models.github.ai/inference/chat/completions"
+OPENROUTER_ENDPOINT = "https://openrouter.ai/api/v1/chat/completions"
 MAX_SOURCE_CHARS = 24000
 MAX_PAGE_CHARS = 50000
+DEFAULT_MODELS = {
+    "github-models": "openai/gpt-4.1",
+    "openrouter": "openrouter/free",
+}
+FORBIDDEN_PUBLIC_MARKERS = (
+    re.compile(r"\bSource Watch\b", re.IGNORECASE),
+    re.compile(r"\bDiscord scan\b", re.IGNORECASE),
+    re.compile(r"\bchat export\b", re.IGNORECASE),
+    re.compile(r"\bautomation found\b", re.IGNORECASE),
+    re.compile(r"\bAI(?:-assisted)?\b", re.IGNORECASE),
+)
 
 
 def run(command: list[str], *, check: bool = True) -> subprocess.CompletedProcess[str]:
     return subprocess.run(command, cwd=ROOT, text=True, capture_output=True, check=check)
+
+
+def docs_path(page_path: str) -> Path:
+    path = (ROOT / page_path).resolve()
+    docs_root = (ROOT / "docs").resolve()
+    if docs_root != path and docs_root not in path.parents:
+        raise ValueError(f"Page path is outside docs/: {page_path}")
+    return path
 
 
 def github_request(url: str, token: str, api_version: str = "2022-11-28") -> Any:
@@ -43,7 +63,29 @@ def github_request(url: str, token: str, api_version: str = "2022-11-28") -> Any
         return json.loads(response.read().decode("utf-8"))
 
 
-def github_models_request(prompt: str, token: str, model: str) -> dict[str, Any]:
+def chat_completion_request(prompt: str, token: str, model: str, provider: str) -> dict[str, Any]:
+    if provider == "github-models":
+        endpoint = GITHUB_MODELS_ENDPOINT
+        headers = {
+            "Accept": "application/vnd.github+json",
+            "Authorization": f"Bearer {token}",
+            "Content-Type": "application/json",
+            "X-GitHub-Api-Version": "2026-03-10",
+            "User-Agent": "ergodocs-ai-docs-draft-prs",
+        }
+    elif provider == "openrouter":
+        endpoint = OPENROUTER_ENDPOINT
+        headers = {
+            "Accept": "application/json",
+            "Authorization": f"Bearer {token}",
+            "Content-Type": "application/json",
+            "HTTP-Referer": "https://github.com/ergoplatform/ergodocs",
+            "X-Title": "ErgoDocs AI Draft PRs",
+            "User-Agent": "ergodocs-ai-docs-draft-prs",
+        }
+    else:
+        raise ValueError(f"Unsupported AI provider: {provider}")
+
     payload = {
         "model": model,
         "messages": [
@@ -62,21 +104,19 @@ def github_models_request(prompt: str, token: str, model: str) -> dict[str, Any]
         "response_format": {"type": "json_object"},
     }
     request = Request(
-        MODELS_ENDPOINT,
+        endpoint,
         data=json.dumps(payload).encode("utf-8"),
-        headers={
-            "Accept": "application/vnd.github+json",
-            "Authorization": f"Bearer {token}",
-            "Content-Type": "application/json",
-            "X-GitHub-Api-Version": "2026-03-10",
-            "User-Agent": "ergodocs-ai-docs-draft-prs",
-        },
+        headers=headers,
         method="POST",
     )
     with urlopen(request, timeout=120) as response:
         data = json.loads(response.read().decode("utf-8"))
     content = data["choices"][0]["message"]["content"]
     return json.loads(strip_json_fence(content))
+
+
+def resolve_model(provider: str, model: str) -> str:
+    return model or os.environ.get("AI_MODEL", "") or DEFAULT_MODELS[provider]
 
 
 def strip_json_fence(content: str) -> str:
@@ -257,8 +297,7 @@ def valid_markdown_update(original: str, proposed: str) -> bool:
         return False
     if original.lstrip().startswith("---") and not proposed.lstrip().startswith("---"):
         return False
-    forbidden = ("Source Watch", "Discord scan", "chat export", "automation found", "AI")
-    return not any(term.lower() in proposed.lower() for term in forbidden)
+    return not any(pattern.search(proposed) for pattern in FORBIDDEN_PUBLIC_MARKERS)
 
 
 def slug_for_page(page_path: str) -> str:
@@ -275,7 +314,7 @@ def create_pr(page_path: str, proposed: str, result: dict[str, Any], labels: lis
     run(["git", "pull", "--ff-only", "origin", base_branch])
     run(["git", "checkout", "-B", branch])
 
-    path = ROOT / page_path
+    path = docs_path(page_path)
     path.write_text(proposed.rstrip() + "\n", encoding="utf-8")
     diff = run(["git", "diff", "--", page_path], check=False).stdout
     if not diff.strip():
@@ -340,7 +379,8 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Create AI-assisted draft docs PRs from Source Watch JSON.")
     parser.add_argument("--report", required=True, type=Path)
     parser.add_argument("--repo", default=os.environ.get("GITHUB_REPOSITORY", ""))
-    parser.add_argument("--model", default=os.environ.get("GITHUB_MODELS_MODEL", "openai/gpt-4o-mini"))
+    parser.add_argument("--provider", choices=("github-models", "openrouter"), default=os.environ.get("AI_PROVIDER", "openrouter"))
+    parser.add_argument("--model", default="")
     parser.add_argument("--base-branch", default="main")
     parser.add_argument("--max-pages", type=int, default=3)
     parser.add_argument("--include-reviewed", action="store_true")
@@ -351,10 +391,16 @@ def main() -> int:
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--output", type=Path, default=Path("ai-docs-draft-prs.json"))
     args = parser.parse_args()
+    model = resolve_model(args.provider, args.model)
 
-    token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
-    if not token and not args.dry_run:
+    github_token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
+    ai_token = (os.environ.get("OPENROUTER_API_KEY") or os.environ.get("OPENROUTER_API")) if args.provider == "openrouter" else github_token
+    if not github_token:
         print("Missing GITHUB_TOKEN or GH_TOKEN", file=sys.stderr)
+        return 2
+    if not ai_token:
+        name = "OPENROUTER_API_KEY" if args.provider == "openrouter" else "GITHUB_TOKEN or GH_TOKEN"
+        print(f"Missing {name}", file=sys.stderr)
         return 2
     if not args.report.exists():
         print(f"Report not found: {args.report}", file=sys.stderr)
@@ -381,17 +427,21 @@ def main() -> int:
             break
         page = candidate.page
         page_path = str(page.get("page", ""))
-        path = ROOT / page_path
+        try:
+            path = docs_path(page_path)
+        except ValueError as exc:
+            results.append({"page": page_path, "action": "invalid-page-path", "url": str(exc)})
+            continue
         if not path.exists():
             results.append({"page": page_path, "action": "missing-page", "url": ""})
             continue
 
         processed += 1
         page_text = path.read_text(encoding="utf-8")
-        context = source_context(candidate.changes, token or "")
+        context = source_context(candidate.changes, github_token)
         try:
-            ai = github_models_request(build_prompt(page, page_text, context), token or "", args.model)
-        except (HTTPError, json.JSONDecodeError, KeyError, TimeoutError) as exc:
+            ai = chat_completion_request(build_prompt(page, page_text, context), ai_token, model, args.provider)
+        except (HTTPError, URLError, json.JSONDecodeError, KeyError, TimeoutError, ValueError) as exc:
             results.append({"page": page_path, "action": "ai-error", "url": str(exc)})
             continue
 
@@ -407,7 +457,7 @@ def main() -> int:
         pr_labels = labels + (["sensitive"] if is_sensitive(page_path) else [])
         results.append(create_pr(page_path, proposed, ai, pr_labels, args.base_branch, args.dry_run))
 
-    output = {"model": args.model, "results": results}
+    output = {"provider": args.provider, "model": model, "results": results}
     args.output.write_text(json.dumps(output, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(output, indent=2))
     return 1 if any(item["action"] == "ai-error" for item in results) else 0

@@ -11,6 +11,9 @@ env:
   DOMAIN: docs.ergoplatform.com
   PROJECT_DIR: /var/www/ergodocs
 
+permissions:
+  contents: read
+
 jobs:
   deploy:
     runs-on: ubuntu-latest

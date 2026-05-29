@@ -6,6 +6,9 @@ on:
       - '**'
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   debug:
     name: Debug event and environment

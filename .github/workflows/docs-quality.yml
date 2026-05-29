@@ -12,6 +12,9 @@ on:
       - ".github/workflows/docs-quality.yml"
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   build:
     name: Build and audit docs

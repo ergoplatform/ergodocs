@@ -11,9 +11,12 @@ on:
         required: false
         default: "7"
       model:
-        description: "GitHub Models model ID"
+        description: "Optional AI model ID; provider default is used when empty"
         required: false
-        default: "openai/gpt-4o-mini"
+      provider:
+        description: "AI provider: openrouter or github-models"
+        required: false
+        default: "openrouter"
       max_pages:
         description: "Maximum page draft PRs to attempt"
         required: false
@@ -56,7 +59,9 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.DOCS_BOT_TOKEN || github.token }}
       GH_TOKEN: ${{ secrets.DOCS_BOT_TOKEN || github.token }}
       REPORT_DIR: ai-docs-draft-prs
-      MODEL: ${{ github.event.inputs.model || 'openai/gpt-4o-mini' }}
+      AI_PROVIDER: ${{ github.event.inputs.provider || 'openrouter' }}
+      MODEL: ${{ github.event.inputs.model || '' }}
+      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
       MAX_PAGES: ${{ github.event.inputs.max_pages || '3' }}
       REPO_FILTER: ${{ github.event.inputs.repo || '' }}
       PAGE_FILTER: ${{ github.event.inputs.page || '' }}
@@ -136,6 +141,7 @@ jobs:
           python tools/ai_docs_draft_prs.py \
             --report "$REPORT_DIR/source-watch.json" \
             --repo "${{ github.repository }}" \
+            --provider "$AI_PROVIDER" \
             --model "$MODEL" \
             --base-branch "${{ github.ref_name }}" \
             --max-pages "$MAX_PAGES" \
@@ -145,11 +151,18 @@ jobs:
       - name: Write run summary
         if: always()
         run: |
+          SUMMARY_MODEL="$MODEL"
+          if [ -z "$SUMMARY_MODEL" ] && [ "$AI_PROVIDER" = "github-models" ]; then
+            SUMMARY_MODEL="openai/gpt-4.1 (provider default)"
+          elif [ -z "$SUMMARY_MODEL" ]; then
+            SUMMARY_MODEL="openrouter/free (provider default)"
+          fi
           {
             echo "## AI Docs Draft PRs"
             echo
             echo "- Since: \`${{ steps.window.outputs.since }}\`"
-            echo "- Model: \`$MODEL\`"
+            echo "- Provider: \`$AI_PROVIDER\`"
+            echo "- Model: \`$SUMMARY_MODEL\`"
             echo "- Max pages: \`$MAX_PAGES\`"
             echo "- Repo filter: \`${REPO_FILTER:-none}\`"
             echo "- Page filter: \`${PAGE_FILTER:-none}\`"

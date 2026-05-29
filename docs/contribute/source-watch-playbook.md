@@ -226,7 +226,8 @@ Inputs:
 
 - `since`: explicit Source Watch start date.
 - `days`: fallback lookback window when `since` is empty.
-- `model`: GitHub Models model ID, defaulting to `openai/gpt-4o-mini`.
+- `provider`: AI provider, defaulting to `openrouter`.
+- `model`: optional AI model ID; defaults to `openrouter/free` for OpenRouter and `openai/gpt-4.1` for GitHub Models.
 - `max_pages`: maximum number of candidate pages to attempt.
 - `repo`: optional `owner/name` watched source filter for focused tests.
 - `page`: optional docs page or path fragment filter for focused tests.
@@ -238,13 +239,15 @@ The workflow:
 
 1. Runs a narrow Source Watch scan for the requested window.
 2. Uses the same `tools/docs_update_candidates.py` candidate layer as the weekly issue workflow.
-3. Sends each actionable candidate page and upstream context to GitHub Models, including commit patches, release notes, and opt-in open pull request bodies/files where available.
+3. Sends each actionable candidate page and upstream context to the configured AI provider, including commit patches, release notes, and opt-in open pull request bodies/files where available.
 4. Expects one of `no-doc-change`, `needs-human-review`, or `draft-pr-safe`.
 5. Creates one draft PR per `draft-pr-safe` page.
 6. Labels draft PRs `docs`, `automated`, and `needs-human-review`; sensitive pages also get `sensitive`.
 7. Uploads the AI decision JSON as an artifact and writes it to the run summary.
 
 Configure `DOCS_BOT_TOKEN` if you want draft PRs to trigger normal pull request workflows. Without that secret, the workflow uses `GITHUB_TOKEN`, which can push branches and open PRs but may not trigger follow-on PR checks.
+
+Configure `OPENROUTER_API_KEY` for the default OpenRouter provider. `openrouter/free` is useful for dry-run testing, but production runs should use a reliable low-cost model if free-model rate limits or availability become a problem. GitHub Models can still be tested with `provider=github-models`, but it depends on repository or organization access to GitHub Models.
 
 Do not auto-merge these PRs. Treat them as AI-authored drafts that require normal maintainer review and CI.
 

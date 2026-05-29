@@ -97,13 +97,15 @@ If every candidate page is already reviewed, low-signal, already covered, or not
 
 ## AI-Assisted Draft PRs
 
-The manual `AI Docs Draft PRs` workflow can turn the same shared candidates into draft pull requests. It uses GitHub Models through GitHub Actions, reads the current docs page plus upstream evidence, and asks the model to choose one of three outcomes:
+The manual `AI Docs Draft PRs` workflow can turn the same shared candidates into draft pull requests. It uses OpenRouter by default, reads the current docs page plus upstream evidence, and asks the model to choose one of three outcomes:
 
 - `no-doc-change`: the existing page already covers the source change.
 - `needs-human-review`: the evidence is unclear, sensitive, or too risky for an automated draft.
 - `draft-pr-safe`: the source supports a small documentation update.
 
 Evidence includes commit patches and release notes by default. Open pull request evidence is opt-in with `include_open_prs`; use it only for explicit latest-work or roadmap tests, not normal documentation update runs. Use `repo`, `page`, and `max_queries` inputs for focused open-PR previews. When a draft is safe enough to propose, the workflow creates a branch and opens a draft pull request. It never merges changes. Every PR is labelled `docs`, `automated`, and `needs-human-review`; protocol, node, contract, ErgoScript, and tutorial pages also receive `sensitive`.
+
+Configure `OPENROUTER_API_KEY` as a repository secret before using the default `openrouter` provider. The default model is `openrouter/free`, which is useful for testing but may have tighter limits and less predictable availability than a low-cost paid model. GitHub Models remains available with `provider=github-models`, but it requires repository or organization access to GitHub Models.
 
 For best results, configure a `DOCS_BOT_TOKEN` repository secret from a bot account or GitHub App with permission to push branches and open pull requests. The workflow falls back to `GITHUB_TOKEN`, but pull requests created with the default Actions token may not trigger follow-on pull request workflows.
 
