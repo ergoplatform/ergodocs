@@ -96,10 +96,13 @@ ErgoDocs uses GitHub Actions for:
 
 - pull-request builds and audits
 - weekly Source Watch scans
-- weekly Discord/source lead reports
+- weekly docs review packages combining Discord leads and a full watched-source scan
+- optional AI-assisted draft PR creation from Source Watch candidates
 - main-branch deployment to the live site
 
-The weekly docs workflow does two separate checks: it exports recent Discord discussion for review leads, and it scans all source-linked docs repositories for watched changes even when those repos were not mentioned in Discord that week. It opens per-page review issues only when a source-linked page may need attention. If everything is already reviewed or low-signal, it comments on the tracking issue and closes it automatically.
+The weekly docs workflow does two separate checks: it exports recent Discord discussion for review leads, and it scans all source-linked docs repositories for watched changes even when those repos were not mentioned in Discord that week. Manual runs can use `full`, `discord-only`, or `source-only` mode. The workflow labels tracking and per-page issues, writes a run summary, closes stale weekly tracking issues, and opens per-page review issues only when a source-linked page may need attention. If everything is already reviewed or low-signal, it comments on the tracking issue and closes it automatically.
+
+The AI draft PR workflow is manual. It uses GitHub Models to propose draft documentation PRs from Source Watch candidates, labels them for human review, and never auto-merges. Configure `DOCS_BOT_TOKEN` if those generated PRs should trigger normal pull request workflows.
 
 Read the full overview in [Documentation Automation](docs/contribute/automation.md).
 

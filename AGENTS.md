@@ -32,11 +32,13 @@
 - `tools/discord_dev_digest/discord_dev_digest.py`: exports Discord development chat and generates source-verification leads.
 - `tools/discord_dev_digest/state/`: ignored local Discord exports and digest reports.
 - `tools/weekly_docs_prs.py`: opens/updates per-page source-review issues from Source Watch JSON.
+- `tools/ai_docs_draft_prs.py`: optional GitHub Models-assisted draft PR creator from Source Watch JSON.
 - `tools/nav_audit.py`: navigation coverage check.
 - `tools/structure_audit.py`: section structure check.
 - `.github/workflows/docs-quality.yml`: PR build and docs audit workflow.
 - `.github/workflows/source-watch.yml`: scheduled watched-source scan and issue creation.
 - `.github/workflows/weekly-discord-docs.yml`: Friday Discord lead scan, artifact upload, weekly tracking issue, and per-page source-review issues.
+- `.github/workflows/ai-docs-draft-prs.yml`: manual AI-assisted draft PR workflow using GitHub Models; never auto-merges.
 - `.github/workflows/ci.yml`: main-branch deploy workflow.
 - `overrides/`: MkDocs Material theme overrides; keep because `mkdocs.yml` uses `custom_dir: overrides`.
 - `tools/state/`: ignored local/generated working state, not durable project guidance.
@@ -79,18 +81,31 @@
 - Resume prompt: `$caveman Read AGENTS.md, docs/contribute/source-watch-playbook.md, and tools/discord_dev_digest/state/669989266478202917-after-2026-04-26-report.md. Treat Discord as leads only. Continue source-backed doc updates from the 2026-05 Discord dev digest, verify against GitHub PRs/repos before editing, skip unverified sidechain-prefix claims, then run source_watch --strict, nav_audit --strict, structure_audit --strict, git diff --check, and mkdocs build.`
 - Verified PR leads already checked: `ergoplatform/ergo#2299`, `#2302`, `#2305`, `#2310` are merged into `v6.0.3`; `ergoplatform/sigmastate-interpreter#1136` is merged into `v6.0.4`; `ergoplatform/ergo#2306`, `#2307`, `#2312`, `ergoplatform/ergo-appkit#253`, and `ergoplatform/sigmastate-interpreter#1138` were open when checked on 2026-05-27.
 
-## Weekly Discord Docs Leads
+## Weekly Docs Review
 
 - `DISCORD_TOKEN` is configured as a GitHub Actions repository secret; do not commit `.env`.
-- `.github/workflows/weekly-discord-docs.yml` runs Fridays at 09:00 UTC and supports manual runs with `days` or `after`.
-- It exports the previous week from general (`668903786902847502`) and development (`669989266478202917`), generates `docs`, `ecosystem`, and `github-links` reports, uploads artifacts, and opens/updates a dated tracking issue.
+- `.github/workflows/weekly-discord-docs.yml` is named `Weekly Docs Review`; it runs Fridays at 09:00 UTC and supports manual runs with `days`, `after`, and `mode`.
+- Manual `mode` values: `full`, `discord-only`, `source-only`.
+- In `full` and `discord-only`, it exports the previous week from general (`668903786902847502`) and development (`669989266478202917`), then generates `docs`, `ecosystem`, and `github-links` reports.
 - The workflow separately runs Source Watch across every page with `source_repos` for the same date window. This scan is not limited to repositories mentioned on Discord that week.
 - It then calls `tools/weekly_docs_prs.py` to open/update per-page source-review issues.
+- `tools/weekly_docs_prs.py` labels per-page issues `docs`, `source-watch`, and `automated`; titles include the review window.
 - `tools/weekly_docs_prs.py` skips pages whose `last_reviewed` date is on or after the latest matching source commit, and skips low-severity-only pages by default.
 - If every per-page candidate is skipped, the weekly workflow comments on the tracking issue and closes it as up to date. Keep the tracking issue open only when actionable page-review issues or errors remain.
+- The workflow closes older open weekly tracking issues as superseded, labels the current tracking issue `docs`, `automated`, and `weekly-review`, writes a GitHub Actions summary, and uploads the per-page issue summary as an artifact.
+- The workflow uses `concurrency.group: weekly-docs-review` and `timeout-minutes: 20`.
 - Per-page review issues list source commit authors as plain usernames only; do not add `@` mentions until the automation has proven low-noise.
 - Keep Discord exports/reports as artifacts or ignored local state. Do not commit raw Discord logs or generated reports with chat content.
 - These issues are review leads, not proof that docs changes are required. Verify source before editing public docs.
+
+## AI Draft PRs
+
+- `.github/workflows/ai-docs-draft-prs.yml` is manual only.
+- It runs Source Watch for the requested window, asks GitHub Models to assess candidate pages, and may open one draft PR per page.
+- Draft PRs are labelled `docs`, `automated`, and `needs-human-review`; sensitive pages also get `sensitive`.
+- It uses optional `DOCS_BOT_TOKEN` for checkout, branch pushes, and PR creation; otherwise falls back to `GITHUB_TOKEN`. Prefer `DOCS_BOT_TOKEN` if generated PRs should trigger normal PR workflows.
+- AI output must remain draft-only. Never auto-merge AI docs PRs.
+- The script should choose `needs-human-review` or `no-doc-change` when source evidence is weak; humans still verify every source claim before merge.
 
 ## CI and Deployment
 

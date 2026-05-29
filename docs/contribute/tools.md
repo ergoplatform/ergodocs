@@ -139,6 +139,29 @@ Reports are written under `tools/discord_dev_digest/state/`.
 
 Treat Discord output as leads only. Verify claims against source repositories, issues, releases, EIPs, or maintainer confirmation before changing docs.
 
+### `tools/ai_docs_draft_prs.py`
+
+Creates AI-assisted draft pull requests from a Source Watch JSON report.
+
+The script uses GitHub Models to compare a candidate docs page with upstream commit context and choose:
+
+- `no-doc-change`
+- `needs-human-review`
+- `draft-pr-safe`
+
+It only opens draft PRs for `draft-pr-safe` results. Draft PRs still require human review and must not be auto-merged.
+
+Common dry run:
+
+```bash
+.venv/bin/python tools/ai_docs_draft_prs.py \
+  --report /tmp/source-watch.json \
+  --repo ergoplatform/ergodocs \
+  --dry-run
+```
+
+The GitHub Actions workflow `.github/workflows/ai-docs-draft-prs.yml` is the normal way to run it with GitHub Models permissions.
+
 External repositories that are useful for maintainer context but do not currently need user-facing Ergo project pages:
 
 - [Backlog.md](https://github.com/MrLesk/Backlog.md), [andrej-karpathy-skills](https://github.com/forrestchang/andrej-karpathy-skills), [claude-dbc](https://github.com/mwaddip/claude-dbc), and [nanoclaw](https://github.com/qwibitai/nanoclaw): external AI-agent and project-workflow tools useful only as maintainer workflow references.

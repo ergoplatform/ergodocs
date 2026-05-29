@@ -123,7 +123,7 @@ def watched_sources(page: dict[str, Any]) -> list[str]:
     return lines
 
 
-def body_for_page(page: dict[str, Any], report: dict[str, Any], artifact_url: str) -> str:
+def body_for_page(page: dict[str, Any], report: dict[str, Any], artifact_url: str, window: str) -> str:
     changes = unique_changes(page_changes(page))
     authors = sorted({safe_login(str(change.get("author_login", ""))) for change in changes})
     authors = [author for author in authors if author]
@@ -137,6 +137,7 @@ def body_for_page(page: dict[str, Any], report: dict[str, Any], artifact_url: st
         "Discord is treated as leads only; docs changes must be verified against source repos, releases, issues, EIPs, or maintainer confirmation.",
         "",
         f"Page: `{page.get('page', '')}`",
+        f"Review window: `{window}`",
         f"Last reviewed: `{page.get('last_reviewed') or 'missing'}`",
         f"Generated: `{report.get('generated', '')}`",
         "",
@@ -202,16 +203,16 @@ def find_issue(repo: str, title: str, token: str) -> dict[str, Any] | None:
     return None
 
 
-def create_or_update_issue(repo: str, title: str, body: str, token: str, dry_run: bool) -> dict[str, str]:
+def create_or_update_issue(repo: str, title: str, body: str, labels: list[str], token: str, dry_run: bool) -> dict[str, str]:
     if dry_run:
         return {"title": title, "action": "dry-run", "url": ""}
 
     existing = find_issue(repo, title, token)
     if existing:
-        issue = github_request("PATCH", existing["url"], token, {"body": body})
+        issue = github_request("PATCH", existing["url"], token, {"body": body, "labels": labels})
         return {"title": title, "action": "updated", "url": issue.get("html_url", "")}
 
-    issue = github_request("POST", f"https://api.github.com/repos/{repo}/issues", token, {"title": title, "body": body})
+    issue = github_request("POST", f"https://api.github.com/repos/{repo}/issues", token, {"title": title, "body": body, "labels": labels})
     return {"title": title, "action": "created", "url": issue.get("html_url", "")}
 
 
@@ -220,9 +221,11 @@ def main() -> int:
     parser.add_argument("--report", required=True, type=Path, help="Source Watch JSON report.")
     parser.add_argument("--repo", default=os.environ.get("GITHUB_REPOSITORY", ""), help="GitHub repo, owner/name.")
     parser.add_argument("--artifact-url", default="", help="Workflow artifact or run URL to include.")
+    parser.add_argument("--window", default="", help="Review window label to include in issue titles and bodies.")
     parser.add_argument("--include-reviewed", action="store_true", help="Open issues even when last_reviewed is on/after the latest source commit.")
     parser.add_argument("--include-low-only", action="store_true", help="Open issues when all matching source changes are low severity.")
     parser.add_argument("--output", type=Path, help="Write JSON issue action summary to this path.")
+    parser.add_argument("--label", action="append", help="Label to apply to created or updated issues. Repeatable.")
     parser.add_argument("--dry-run", action="store_true", help="Print planned issue actions without writing.")
     args = parser.parse_args()
 
@@ -238,21 +241,24 @@ def main() -> int:
         return 2
 
     report = json.loads(args.report.read_text(encoding="utf-8"))
+    labels = args.label or ["docs", "source-watch", "automated"]
+    title_prefix = f"Docs review needed ({args.window})" if args.window else "Docs review needed"
+    window = args.window or "unspecified"
     results: list[dict[str, str]] = []
     for page in report.get("pages", []):
         changes = page_changes(page)
         if not changes:
             continue
         if already_reviewed(page) and not args.include_reviewed:
-            results.append({"title": f"Docs review needed: {page.get('page', '')}", "action": "skipped-reviewed", "url": ""})
+            results.append({"title": f"{title_prefix}: {page.get('page', '')}", "action": "skipped-reviewed", "url": ""})
             continue
         if low_only(changes) and not args.include_low_only:
-            results.append({"title": f"Docs review needed: {page.get('page', '')}", "action": "skipped-low-only", "url": ""})
+            results.append({"title": f"{title_prefix}: {page.get('page', '')}", "action": "skipped-low-only", "url": ""})
             continue
-        title = f"Docs review needed: {page.get('page', '')}"
-        body = body_for_page(page, report, args.artifact_url)
+        title = f"{title_prefix}: {page.get('page', '')}"
+        body = body_for_page(page, report, args.artifact_url, window)
         try:
-            results.append(create_or_update_issue(args.repo, title, body, token or "", args.dry_run))
+            results.append(create_or_update_issue(args.repo, title, body, labels, token or "", args.dry_run))
         except HTTPError as exc:
             results.append({"title": title, "action": "error", "url": format_http_error(exc)})
 

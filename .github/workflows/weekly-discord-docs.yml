@@ -1,4 +1,4 @@
-name: Weekly Discord Docs Leads
+name: Weekly Docs Review
 
 on:
   schedule:
@@ -12,11 +12,20 @@ on:
       after:
         description: "Override start date, YYYY-MM-DD"
         required: false
+      mode:
+        description: "Review mode: full, discord-only, or source-only"
+        required: false
+        default: "full"
+
+concurrency:
+  group: weekly-docs-review
+  cancel-in-progress: false
 
 jobs:
   scan:
-    name: Export chat leads and open issue
+    name: Build weekly docs review package
     runs-on: ubuntu-latest
+    timeout-minutes: 20
 
     permissions:
       contents: read
@@ -31,6 +40,7 @@ jobs:
       REPORT_DIR: "weekly-discord-docs"
       SCAN_DAYS: ${{ github.event.inputs.days || '7' }}
       SCAN_AFTER: ${{ github.event.inputs.after || '' }}
+      REVIEW_MODE: ${{ github.event.inputs.mode || 'full' }}
 
     steps:
       - name: Checkout
@@ -45,23 +55,16 @@ jobs:
       - name: Install Python dependencies
         run: python -m pip install -r requirements.txt
 
-      - name: Install DiscordChatExporter
+      - name: Validate mode and window
+        id: window
         run: |
-          mkdir -p /tmp/discordchatexporter
-          gh release download \
-            --repo Tyrrrz/DiscordChatExporter \
-            --pattern "DiscordChatExporter.Cli.*linux-x64*.zip" \
-            --dir /tmp/discordchatexporter
-          unzip /tmp/discordchatexporter/DiscordChatExporter.Cli.*linux-x64*.zip -d /tmp/discordchatexporter
-          chmod +x /tmp/discordchatexporter/DiscordChatExporter.Cli
-
-      - name: Generate weekly lead reports
-        id: reports
-        run: |
-          if [ -z "$DISCORD_TOKEN" ]; then
-            echo "DISCORD_TOKEN repository secret is required." >&2
-            exit 1
-          fi
+          case "$REVIEW_MODE" in
+            full|discord-only|source-only) ;;
+            *)
+              echo "Invalid mode: $REVIEW_MODE. Use full, discord-only, or source-only." >&2
+              exit 1
+              ;;
+          esac
 
           if [ -n "$SCAN_AFTER" ]; then
             AFTER="$SCAN_AFTER"
@@ -72,20 +75,52 @@ jobs:
           BEFORE="$(date -u +%F)"
           mkdir -p "$REPORT_DIR"
 
+          {
+            echo "after=$AFTER"
+            echo "before=$BEFORE"
+            echo "issue_date=$BEFORE"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Ensure issue labels
+        run: |
+          gh label create docs --color 0e8a16 --description "Documentation work" || true
+          gh label create source-watch --color 1d76db --description "Source Watch review lead" || true
+          gh label create automated --color bfdadc --description "Created or updated by automation" || true
+          gh label create weekly-review --color c5def5 --description "Weekly documentation review" || true
+
+      - name: Install DiscordChatExporter
+        if: env.REVIEW_MODE != 'source-only'
+        run: |
+          mkdir -p /tmp/discordchatexporter
+          gh release download \
+            --repo Tyrrrz/DiscordChatExporter \
+            --pattern "DiscordChatExporter.Cli.*linux-x64*.zip" \
+            --dir /tmp/discordchatexporter
+          unzip /tmp/discordchatexporter/DiscordChatExporter.Cli.*linux-x64*.zip -d /tmp/discordchatexporter
+          chmod +x /tmp/discordchatexporter/DiscordChatExporter.Cli
+
+      - name: Export Discord discussion leads
+        if: env.REVIEW_MODE != 'source-only'
+        run: |
+          if [ -z "$DISCORD_TOKEN" ]; then
+            echo "DISCORD_TOKEN repository secret is required for mode '$REVIEW_MODE'." >&2
+            exit 1
+          fi
+
           for CHANNEL in "general:$GENERAL_CHANNEL" "development:$DEVELOPMENT_CHANNEL"; do
             NAME="${CHANNEL%%:*}"
             ID="${CHANNEL##*:}"
             EXPORT_PATH="$(python tools/discord_dev_digest/discord_dev_digest.py export \
               --channel "$ID" \
-              --after "$AFTER" \
-              --before "$BEFORE" \
+              --after "${{ steps.window.outputs.after }}" \
+              --before "${{ steps.window.outputs.before }}" \
               --exporter /tmp/discordchatexporter/DiscordChatExporter.Cli \
               --output-dir "$REPORT_DIR")"
             for PROFILE in docs ecosystem github-links; do
               python tools/discord_dev_digest/discord_dev_digest.py analyze \
                 --channel "$ID" \
-                --after "$AFTER" \
-                --before "$BEFORE" \
+                --after "${{ steps.window.outputs.after }}" \
+                --before "${{ steps.window.outputs.before }}" \
                 --profile "$PROFILE" \
                 --input "$EXPORT_PATH" \
                 --output-dir "$REPORT_DIR"
@@ -93,32 +128,27 @@ jobs:
             printf "%s %s\n" "$NAME" "$ID" >> "$REPORT_DIR/channels.txt"
           done
 
-          {
-            echo "after=$AFTER"
-            echo "before=$BEFORE"
-            echo "issue_date=$BEFORE"
-          } >> "$GITHUB_OUTPUT"
-
       - name: Open or update tracking issue
         id: tracking_issue
         run: |
-          TITLE="Weekly Discord docs leads: ${{ steps.reports.outputs.issue_date }}"
+          TITLE="Weekly Docs Review: ${{ steps.window.outputs.issue_date }}"
           RUN_URL="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
 
           {
-            echo "Weekly Discord docs lead report."
+            echo "Weekly documentation review package."
             echo
-            echo "Window: ${{ steps.reports.outputs.after }} to ${{ steps.reports.outputs.before }} UTC"
+            echo "Window: ${{ steps.window.outputs.after }} to ${{ steps.window.outputs.before }} UTC"
+            echo "Mode: \`$REVIEW_MODE\`"
             echo
-            echo "Channels:"
-            echo "- general: $GENERAL_CHANNEL"
-            echo "- development: $DEVELOPMENT_CHANNEL"
+            echo "This workflow has two independent inputs:"
+            echo "- Discord discussion leads: exported from general and development channels when mode is \`full\` or \`discord-only\`."
+            echo "- Full watched-source scan: every docs page with \`source_repos\` metadata is scanned when mode is \`full\` or \`source-only\`. This is not limited to repositories mentioned on Discord."
             echo
             echo "Reports are attached to the workflow artifact:"
             echo "$RUN_URL"
             echo
             echo "Maintainer workflow:"
-            echo "1. Read the docs, ecosystem, and GitHub-links reports."
+            echo "1. Read the docs, ecosystem, GitHub-links, and Source Watch reports that exist for this mode."
             echo "2. Treat Discord as leads only."
             echo "3. Verify claims against repositories, releases, issues, EIPs, or maintainer sources."
             echo "4. Update docs naturally. Do not mention the scan or chat export in public docs."
@@ -126,81 +156,141 @@ jobs:
             echo "6. Open a PR with source links and verification notes."
           } > "$REPORT_DIR/issue-body.md"
 
+          gh issue list --state open --limit 100 --json number,title \
+            --jq ".[] | select((.title | startswith(\"Weekly Docs Review:\") or startswith(\"Weekly Discord docs leads:\")) and .title != \"$TITLE\") | .number" \
+            | while read -r OLD_ISSUE; do
+                [ -n "$OLD_ISSUE" ] || continue
+                gh issue close "$OLD_ISSUE" --comment "Closing because a newer weekly docs review run superseded this tracking issue: $RUN_URL"
+              done
+
           ISSUE_NUMBER="$(gh issue list --state open --search "$TITLE in:title" --json number,title --jq ".[] | select(.title == \"$TITLE\") | .number" | head -n 1)"
 
           if [ -n "$ISSUE_NUMBER" ]; then
-            gh issue edit "$ISSUE_NUMBER" --body-file "$REPORT_DIR/issue-body.md"
+            gh issue edit "$ISSUE_NUMBER" --body-file "$REPORT_DIR/issue-body.md" --add-label docs --add-label automated --add-label weekly-review
           else
-            ISSUE_URL="$(gh issue create --title "$TITLE" --body-file "$REPORT_DIR/issue-body.md")"
+            ISSUE_URL="$(gh issue create --title "$TITLE" --body-file "$REPORT_DIR/issue-body.md" --label docs --label automated --label weekly-review)"
             ISSUE_NUMBER="${ISSUE_URL##*/}"
           fi
 
           echo "issue_number=$ISSUE_NUMBER" >> "$GITHUB_OUTPUT"
 
-      - name: Scan watched source changes
+      - name: Scan all watched source repos
+        if: env.REVIEW_MODE != 'discord-only'
         run: |
           python tools/source_watch.py scan \
             --github \
-            --since "${{ steps.reports.outputs.after }}" \
+            --since "${{ steps.window.outputs.after }}" \
             --format json \
             --output "$REPORT_DIR/source-watch.json" \
             --no-fail-on-changes
 
-      - name: Upload reports
-        uses: actions/upload-artifact@v4
-        with:
-          name: weekly-discord-docs-${{ steps.reports.outputs.issue_date }}
-          path: weekly-discord-docs/
+      - name: Prepare empty source summary
+        if: env.REVIEW_MODE == 'discord-only'
+        run: |
+          echo '{"issues":[]}' > "$REPORT_DIR/per-page-issues.json"
 
       - name: Open per-page source review issues
-        id: per_page_issues
+        if: env.REVIEW_MODE != 'discord-only'
         run: |
           RUN_URL="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           python tools/weekly_docs_prs.py \
             --report "$REPORT_DIR/source-watch.json" \
             --repo "${{ github.repository }}" \
             --artifact-url "$RUN_URL" \
+            --window "${{ steps.window.outputs.after }} to ${{ steps.window.outputs.before }}" \
+            --label docs \
+            --label source-watch \
+            --label automated \
             --output "$REPORT_DIR/per-page-issues.json"
           cat "$REPORT_DIR/per-page-issues.json"
 
-      - name: Close tracking issue when no page review is needed
+      - name: Summarize issue actions
+        id: issue_summary
         run: |
-          ISSUE_NUMBER="${{ steps.tracking_issue.outputs.issue_number }}"
-          RUN_URL="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-          SUMMARY="$(python - <<'PY'
+          python - <<'PY' > "$REPORT_DIR/issue-summary.env"
           import json
           from pathlib import Path
 
-          data = json.loads(Path("weekly-discord-docs/per-page-issues.json").read_text(encoding="utf-8"))
+          path = Path("weekly-discord-docs/per-page-issues.json")
+          data = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {"issues": []}
           issues = data.get("issues", [])
-          actionable = [item for item in issues if item.get("action") in {"created", "updated", "error"}]
-          skipped = [item for item in issues if str(item.get("action", "")).startswith("skipped-")]
-          print(json.dumps({
-              "actionable": len(actionable),
-              "skipped": len(skipped),
-              "total": len(issues),
-          }))
+          counts = {
+              "created": 0,
+              "updated": 0,
+              "error": 0,
+              "skipped_reviewed": 0,
+              "skipped_low_only": 0,
+              "dry_run": 0,
+          }
+          for item in issues:
+              action = item.get("action", "")
+              if action == "created":
+                  counts["created"] += 1
+              elif action == "updated":
+                  counts["updated"] += 1
+              elif action == "error":
+                  counts["error"] += 1
+              elif action == "skipped-reviewed":
+                  counts["skipped_reviewed"] += 1
+              elif action == "skipped-low-only":
+                  counts["skipped_low_only"] += 1
+              elif action == "dry-run":
+                  counts["dry_run"] += 1
+          counts["total"] = len(issues)
+          counts["actionable"] = counts["created"] + counts["updated"] + counts["error"]
+          for key, value in counts.items():
+              print(f"{key}={value}")
           PY
-          )"
-          ACTIONABLE="$(python -c 'import json,sys; print(json.loads(sys.argv[1])["actionable"])' "$SUMMARY")"
-          SKIPPED="$(python -c 'import json,sys; print(json.loads(sys.argv[1])["skipped"])' "$SUMMARY")"
-          TOTAL="$(python -c 'import json,sys; print(json.loads(sys.argv[1])["total"])' "$SUMMARY")"
 
-          if [ "$ACTIONABLE" = "0" ]; then
+          cat "$REPORT_DIR/issue-summary.env" >> "$GITHUB_OUTPUT"
+
+      - name: Close tracking issue when no page review is needed
+        if: env.REVIEW_MODE != 'discord-only'
+        run: |
+          ISSUE_NUMBER="${{ steps.tracking_issue.outputs.issue_number }}"
+          RUN_URL="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+
+          if [ "${{ steps.issue_summary.outputs.actionable }}" = "0" ]; then
             {
               echo "Automated review completed."
               echo
               echo "No per-page documentation review issues were needed."
               echo
               echo "Summary:"
-              echo "- Candidates checked: $TOTAL"
-              echo "- Skipped as already reviewed or low-signal: $SKIPPED"
-              echo "- Actionable page issues: $ACTIONABLE"
+              echo "- Candidates checked: ${{ steps.issue_summary.outputs.total }}"
+              echo "- Skipped as already reviewed: ${{ steps.issue_summary.outputs.skipped_reviewed }}"
+              echo "- Skipped as low-signal: ${{ steps.issue_summary.outputs.skipped_low_only }}"
+              echo "- Actionable page issues: ${{ steps.issue_summary.outputs.actionable }}"
               echo
               echo "Workflow run: $RUN_URL"
             } > "$REPORT_DIR/no-action-comment.md"
             gh issue comment "$ISSUE_NUMBER" --body-file "$REPORT_DIR/no-action-comment.md"
             gh issue close "$ISSUE_NUMBER"
           else
-            echo "Keeping tracking issue #$ISSUE_NUMBER open because $ACTIONABLE actionable page issue(s) were created, updated, or errored."
+            echo "Keeping tracking issue #$ISSUE_NUMBER open because ${{ steps.issue_summary.outputs.actionable }} actionable page issue(s) were created, updated, or errored."
           fi
+
+      - name: Write GitHub Actions summary
+        if: always()
+        run: |
+          {
+            echo "## Weekly Docs Review"
+            echo
+            echo "- Mode: \`$REVIEW_MODE\`"
+            echo "- Window: \`${{ steps.window.outputs.after }}\` to \`${{ steps.window.outputs.before }}\` UTC"
+            echo "- Discord leads: $([ "$REVIEW_MODE" = "source-only" ] && echo "skipped" || echo "generated")"
+            echo "- Full watched-source scan: $([ "$REVIEW_MODE" = "discord-only" ] && echo "skipped" || echo "completed")"
+            echo "- Candidate page results: \`${{ steps.issue_summary.outputs.total || '0' }}\`"
+            echo "- Skipped already reviewed: \`${{ steps.issue_summary.outputs.skipped_reviewed || '0' }}\`"
+            echo "- Skipped low-signal: \`${{ steps.issue_summary.outputs.skipped_low_only || '0' }}\`"
+            echo "- Issues created: \`${{ steps.issue_summary.outputs.created || '0' }}\`"
+            echo "- Issues updated: \`${{ steps.issue_summary.outputs.updated || '0' }}\`"
+            echo "- Errors: \`${{ steps.issue_summary.outputs.error || '0' }}\`"
+            echo "- Tracking issue: #${{ steps.tracking_issue.outputs.issue_number || 'not-created' }}"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: weekly-docs-review-${{ steps.window.outputs.issue_date }}
+          path: weekly-discord-docs/

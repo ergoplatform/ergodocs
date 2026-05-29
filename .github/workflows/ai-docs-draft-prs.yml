@@ -1,0 +1,132 @@
+name: AI Docs Draft PRs
+
+on:
+  workflow_dispatch:
+    inputs:
+      since:
+        description: "Source Watch start date, YYYY-MM-DD"
+        required: false
+      days:
+        description: "Days back when since is empty"
+        required: false
+        default: "7"
+      model:
+        description: "GitHub Models model ID"
+        required: false
+        default: "openai/gpt-4o-mini"
+      max_pages:
+        description: "Maximum page draft PRs to attempt"
+        required: false
+        default: "3"
+      dry_run:
+        description: "Generate AI decisions without pushing PRs"
+        required: false
+        default: "false"
+
+concurrency:
+  group: ai-docs-draft-prs
+  cancel-in-progress: false
+
+jobs:
+  draft:
+    name: Create AI-assisted draft docs PRs
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+      models: read
+
+    env:
+      GITHUB_TOKEN: ${{ secrets.DOCS_BOT_TOKEN || github.token }}
+      GH_TOKEN: ${{ secrets.DOCS_BOT_TOKEN || github.token }}
+      REPORT_DIR: ai-docs-draft-prs
+      MODEL: ${{ github.event.inputs.model || 'openai/gpt-4o-mini' }}
+      MAX_PAGES: ${{ github.event.inputs.max_pages || '3' }}
+      DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
+      SCAN_DAYS: ${{ github.event.inputs.days || '7' }}
+      SCAN_SINCE: ${{ github.event.inputs.since || '' }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.DOCS_BOT_TOKEN || github.token }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install Python dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Configure git author
+        run: |
+          git config user.name "ergodocs automation"
+          git config user.email "actions@github.com"
+
+      - name: Resolve scan window
+        id: window
+        run: |
+          if [ -n "$SCAN_SINCE" ]; then
+            SINCE="$SCAN_SINCE"
+          else
+            SINCE="$(date -u -d "$SCAN_DAYS days ago" +%F)"
+          fi
+          mkdir -p "$REPORT_DIR"
+          echo "since=$SINCE" >> "$GITHUB_OUTPUT"
+
+      - name: Scan all watched source repos
+        run: |
+          python tools/source_watch.py scan \
+            --github \
+            --since "${{ steps.window.outputs.since }}" \
+            --format json \
+            --output "$REPORT_DIR/source-watch.json" \
+            --no-fail-on-changes
+
+      - name: Create AI-assisted draft PRs
+        run: |
+          EXTRA_ARGS=()
+          if [ "$DRY_RUN" = "true" ]; then
+            EXTRA_ARGS+=(--dry-run)
+          fi
+          python tools/ai_docs_draft_prs.py \
+            --report "$REPORT_DIR/source-watch.json" \
+            --repo "${{ github.repository }}" \
+            --model "$MODEL" \
+            --base-branch "${{ github.ref_name }}" \
+            --max-pages "$MAX_PAGES" \
+            --output "$REPORT_DIR/ai-docs-draft-prs.json" \
+            "${EXTRA_ARGS[@]}"
+
+      - name: Write run summary
+        if: always()
+        run: |
+          {
+            echo "## AI Docs Draft PRs"
+            echo
+            echo "- Since: \`${{ steps.window.outputs.since }}\`"
+            echo "- Model: \`$MODEL\`"
+            echo "- Max pages: \`$MAX_PAGES\`"
+            echo "- Dry run: \`$DRY_RUN\`"
+            echo
+            if [ -f "$REPORT_DIR/ai-docs-draft-prs.json" ]; then
+              echo "### Results"
+              echo
+              echo '```json'
+              cat "$REPORT_DIR/ai-docs-draft-prs.json"
+              echo '```'
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-docs-draft-prs
+          path: ai-docs-draft-prs/

@@ -59,14 +59,24 @@ source_of_truth:
 
 Source Watch uses that metadata to show which docs may need review after upstream changes. The report is a triage aid: maintainers still verify each claim against repositories, issues, releases, EIPs, or maintainer sources before changing public docs.
 
-## Weekly Review Leads
+## Weekly Docs Review
 
-The scheduled review workflow has two independent inputs:
+The scheduled `Weekly Docs Review` workflow has two independent inputs:
 
 - Discord discussion leads: it exports the recent general and development chat windows, then generates docs, ecosystem, and GitHub-links reports.
 - Watched source changes: it scans every docs page with `source_repos` metadata for upstream GitHub changes in the same time window, even if those repositories were not mentioned on Discord that week.
 
 The workflow combines those reports into a weekly review package, then opens GitHub issues only when a docs page may need attention. These issues are leads, not automatic change requests.
+
+Manual runs support three modes:
+
+- `full`: export Discord leads and scan all watched source repos.
+- `discord-only`: export Discord leads without running Source Watch.
+- `source-only`: scan all watched source repos without exporting Discord.
+
+Each run writes a GitHub Actions summary with candidate counts, skipped pages, created or updated issues, errors, and the tracking issue number. Reports and the per-page issue summary are uploaded as workflow artifacts.
+
+Runs use a single `weekly-docs-review` concurrency group so scheduled and manual reviews do not overlap. The job has a 20-minute timeout to avoid stalled API or export operations running indefinitely.
 
 Maintainers should:
 
@@ -77,7 +87,23 @@ Maintainers should:
 
 Discord and chat exports are treated as pointers only. Public documentation should be verified against durable sources before it is changed.
 
-If every candidate page is already reviewed or low-signal, the workflow comments on the weekly tracking issue and closes it automatically. The tracking issue stays open only when there is an actionable page-review issue, a script error, or follow-up that needs maintainer attention.
+Tracking issues are labelled `docs`, `automated`, and `weekly-review`. Per-page source-review issues are labelled `docs`, `source-watch`, and `automated`, and their titles include the review window.
+
+If every candidate page is already reviewed or low-signal, the workflow comments on the weekly tracking issue and closes it automatically. The tracking issue stays open only when there is an actionable page-review issue, a script error, or follow-up that needs maintainer attention. New weekly runs also close older open weekly tracking issues as superseded.
+
+## AI-Assisted Draft PRs
+
+The manual `AI Docs Draft PRs` workflow can turn Source Watch candidates into draft pull requests. It uses GitHub Models through GitHub Actions, reads the current docs page plus upstream commit context, and asks the model to choose one of three outcomes:
+
+- `no-doc-change`: the existing page already covers the source change.
+- `needs-human-review`: the evidence is unclear, sensitive, or too risky for an automated draft.
+- `draft-pr-safe`: the source supports a small documentation update.
+
+When a draft is safe enough to propose, the workflow creates a branch and opens a draft pull request. It never merges changes. Every PR is labelled `docs`, `automated`, and `needs-human-review`; protocol, node, contract, ErgoScript, and tutorial pages also receive `sensitive`.
+
+For best results, configure a `DOCS_BOT_TOKEN` repository secret from a bot account or GitHub App with permission to push branches and open pull requests. The workflow falls back to `GITHUB_TOKEN`, but pull requests created with the default Actions token may not trigger follow-on pull request workflows.
+
+Use this workflow as a drafting assistant, not as an authority. Reviewers must verify source links, technical claims, examples, parameters, and page tone before merging.
 
 ## Deployment Checks
 

@@ -142,18 +142,28 @@ tools/state/source-watch-baseline.json
 
 6. Run validation/build commands.
 
-## Weekly Discord Docs Leads
+## Weekly Docs Review
 
-`.github/workflows/weekly-discord-docs.yml` runs every Friday at 09:00 UTC and can also be started manually from GitHub Actions.
+`.github/workflows/weekly-discord-docs.yml` is named `Weekly Docs Review` in GitHub Actions. It runs every Friday at 09:00 UTC and can also be started manually.
 
 The workflow performs two separate weekly checks:
 
 - It exports the previous week of Discord messages from the general and development channels, then generates docs, ecosystem, and GitHub-links lead reports.
 - It runs Source Watch across every page with `source_repos` metadata for the same date window. This full watched-repo scan is not limited to repositories mentioned on Discord that week.
 
-It uploads both kinds of reports as workflow artifacts and opens or updates a dated GitHub tracking issue.
+Manual mode options:
 
-It also runs `tools/weekly_docs_prs.py` against the Source Watch JSON report. That script opens or updates one source-review issue per affected docs page and lists GitHub commit authors as plain usernames where the GitHub API exposes them. It skips pages whose `last_reviewed` date is on or after the latest matching source commit, and it skips pages where every matching source change is low severity. These are review issues, not proof that a docs update is required.
+- `full`: export Discord leads and scan all watched source repos.
+- `discord-only`: export Discord leads only.
+- `source-only`: scan all watched source repos only.
+
+The workflow uploads reports, per-page issue results, and summaries as artifacts. It also writes a GitHub Actions run summary with the mode, window, skipped-page counts, created or updated issue counts, errors, and tracking issue number.
+
+It opens or updates a dated GitHub tracking issue labelled `docs`, `automated`, and `weekly-review`. Before opening the current tracking issue, it closes older open weekly tracking issues as superseded.
+
+The workflow uses the `weekly-docs-review` concurrency group and a 20-minute timeout. If a manual run is already active, another manual or scheduled run waits instead of starting a duplicate review.
+
+It also runs `tools/weekly_docs_prs.py` against the Source Watch JSON report. That script opens or updates one source-review issue per affected docs page, labels it `docs`, `source-watch`, and `automated`, includes the review window in the title, and lists GitHub commit authors as plain usernames where the GitHub API exposes them. It skips pages whose `last_reviewed` date is on or after the latest matching source commit, and it skips pages where every matching source change is low severity. These are review issues, not proof that a docs update is required.
 
 If all per-page candidates are skipped, the workflow comments on the weekly tracking issue and closes it as up to date. If at least one per-page issue is created, updated, or errors, the tracking issue remains open so maintainers can follow up.
 
@@ -179,6 +189,31 @@ The remote build runs on Linux. It sees:
 - no files hidden by `.gitignore`
 
 The workflow only installs `python3-venv`, `python3-pip`, and `rsync` when they are missing. This avoids unrelated apt repository warnings during normal deploys. If package installation is needed and the server has the Caddy apt source configured, the workflow refreshes the Caddy Cloudsmith signing key before running `apt-get update`.
+
+## AI Draft PR Workflow
+
+`.github/workflows/ai-docs-draft-prs.yml` is a manual workflow for creating human-reviewed draft PRs from Source Watch results.
+
+Inputs:
+
+- `since`: explicit Source Watch start date.
+- `days`: fallback lookback window when `since` is empty.
+- `model`: GitHub Models model ID, defaulting to `openai/gpt-4o-mini`.
+- `max_pages`: maximum number of candidate pages to attempt.
+- `dry_run`: generate AI decisions without pushing branches or opening PRs.
+
+The workflow:
+
+1. Runs a full Source Watch scan for the requested window.
+2. Sends each actionable candidate page and upstream commit context to GitHub Models.
+3. Expects one of `no-doc-change`, `needs-human-review`, or `draft-pr-safe`.
+4. Creates one draft PR per `draft-pr-safe` page.
+5. Labels draft PRs `docs`, `automated`, and `needs-human-review`; sensitive pages also get `sensitive`.
+6. Uploads the AI decision JSON as an artifact and writes it to the run summary.
+
+Configure `DOCS_BOT_TOKEN` if you want draft PRs to trigger normal pull request workflows. Without that secret, the workflow uses `GITHUB_TOKEN`, which can push branches and open PRs but may not trigger follow-on PR checks.
+
+Do not auto-merge these PRs. Treat them as AI-authored drafts that require normal maintainer review and CI.
 
 ## Good Future Prompt
 

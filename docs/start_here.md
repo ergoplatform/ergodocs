@@ -79,6 +79,8 @@ Use `tools/source_watch.py mark-reviewed docs/path/page.md` only after checking 
 
 - `.github/workflows/docs-quality.yml`: PR workflow for docs/tooling changes. It installs dependencies, builds MkDocs, runs nav audit, and validates Source Watch metadata.
 - `.github/workflows/source-watch.yml`: weekly/manual workflow that runs GitHub Source Watch, uploads reports, and can create/update GitHub issues for changed watched source.
+- `.github/workflows/weekly-discord-docs.yml`: Friday `Weekly Docs Review` workflow. It can run `full`, `discord-only`, or `source-only`; `full` combines Discord lead reports with an independent scan of all source-linked docs repositories.
+- `.github/workflows/ai-docs-draft-prs.yml`: manual GitHub Models workflow that turns Source Watch candidates into draft PRs for human review.
 - `.github/workflows/ci.yml`: main-branch deploy workflow. It syncs the checked-out repo to the server, builds there on Linux, publishes live site, and runs non-blocking sanity checks. Remote warnings that do not appear locally usually mean a Git-tracked path case mismatch or a locally present file ignored by `.gitignore`.
 - `.github/workflows/ci-debug.yml`: manual/push diagnostic workflow for checking GitHub Actions trigger context.
 
