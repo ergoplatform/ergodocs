@@ -22,6 +22,7 @@ Automation does not replace human review. It narrows the review queue, catches s
 | Local quality checks | MkDocs build, nav coverage, source metadata, structure, whitespace | [Documentation Tools](tools.md) |
 | Source tracking | Pages tied to upstream repositories, commits, releases, configs, APIs, contracts, or EIPs | [Source Watch](source-watch.md) |
 | Source inventory | Generated overview of watched repositories, branches, paths, and covered pages | [Watched Repositories](source-watch-inventory.md) |
+| Ecosystem watchlist | Broad backstop coverage for ecosystem repos that do not always have dedicated docs pages | [Ecosystem Repo Watchlist](ecosystem-repo-watchlist.md) |
 | Review workflow | Repeatable commands for source-backed docs review and weekly maintenance | [Source Watch Playbook](source-watch-playbook.md) |
 | Content quality | Page structure, accuracy, verification, and review lifecycle | [Documentation Lifecycle](docs-lifecycle.md) |
 | Information architecture | Navigation, orphan pages, duplicate pages, and section design | [Information Architecture](information-architecture.md) |
@@ -69,7 +70,7 @@ The scheduled `Weekly Docs Review` workflow has two independent inputs:
 - Discord discussion leads: it exports the recent general and development chat windows, then generates docs, ecosystem, and GitHub-links reports.
 - Watched source changes: it scans every docs page with `source_repos` metadata for upstream GitHub commits, releases, and important open pull requests in the same time window, even if those repositories were not mentioned on Discord that week.
 
-The workflow combines those reports into a weekly review package, then opens GitHub issues only when a docs page may need attention. These issues are leads, not automatic change requests.
+The workflow combines those reports into a weekly review package, then opens GitHub issues only when the shared candidate layer finds a page-specific source change that is not already obvious in the page text. These issues are leads, not automatic change requests.
 
 Manual runs support three modes:
 
@@ -90,19 +91,19 @@ Maintainers should:
 
 Discord and chat exports are treated as pointers only. Public documentation should be verified against durable sources before it is changed.
 
-Tracking issues are labelled `docs`, `automated`, and `weekly-review`. Per-page source-review issues are labelled `docs`, `source-watch`, and `automated`, and their titles include the review window.
+Tracking issues are labelled `docs`, `automated`, and `weekly-review`. Per-page source-review issues are labelled `docs`, `source-watch`, and `automated`. They are created only when source changes look documentation-relevant for the page, and their titles describe the likely missing feature, behavior, option, or endpoint rather than simply naming the page.
 
-If every candidate page is already reviewed or low-signal, the workflow comments on the weekly tracking issue and closes it automatically. The tracking issue stays open only when there is an actionable page-review issue, a script error, or follow-up that needs maintainer attention. New weekly runs also close older open weekly tracking issues as superseded.
+If every candidate page is already reviewed, low-signal, already covered, or not documentation-relevant, the workflow comments on the weekly tracking issue and closes it automatically. The tracking issue stays open only when there is an actionable page-review issue, a script error, or follow-up that needs maintainer attention. New weekly runs also close older open weekly tracking issues as superseded, and close stale per-page `source-watch` issues that no longer appear actionable.
 
 ## AI-Assisted Draft PRs
 
-The manual `AI Docs Draft PRs` workflow can turn Source Watch candidates into draft pull requests. It uses GitHub Models through GitHub Actions, reads the current docs page plus upstream commit context, and asks the model to choose one of three outcomes:
+The manual `AI Docs Draft PRs` workflow can turn the same shared candidates into draft pull requests. It uses GitHub Models through GitHub Actions, reads the current docs page plus upstream evidence, and asks the model to choose one of three outcomes:
 
 - `no-doc-change`: the existing page already covers the source change.
 - `needs-human-review`: the evidence is unclear, sensitive, or too risky for an automated draft.
 - `draft-pr-safe`: the source supports a small documentation update.
 
-When a draft is safe enough to propose, the workflow creates a branch and opens a draft pull request. It never merges changes. Every PR is labelled `docs`, `automated`, and `needs-human-review`; protocol, node, contract, ErgoScript, and tutorial pages also receive `sensitive`.
+Evidence includes commit patches, pull request bodies/files, and release notes where available. When a draft is safe enough to propose, the workflow creates a branch and opens a draft pull request. It never merges changes. Every PR is labelled `docs`, `automated`, and `needs-human-review`; protocol, node, contract, ErgoScript, and tutorial pages also receive `sensitive`.
 
 For best results, configure a `DOCS_BOT_TOKEN` repository secret from a bot account or GitHub App with permission to push branches and open pull requests. The workflow falls back to `GITHUB_TOKEN`, but pull requests created with the default Actions token may not trigger follow-on pull request workflows.
 

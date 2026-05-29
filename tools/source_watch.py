@@ -42,6 +42,9 @@ class SourceRef:
     paths: list[str]
     branch: str
     since: str | None
+    watch_mode: str
+    release_watch: bool
+    priority: str | None
 
 
 @dataclass
@@ -58,6 +61,7 @@ class PageWatch:
     last_reviewed: str | None
     source_repos: list[SourceRef]
     source_of_truth: list[str]
+    source_watch_note: str | None
     source_ignore: SourceIgnore
 
 
@@ -82,6 +86,14 @@ def as_list(value: Any) -> list[Any]:
     if isinstance(value, list):
         return value
     return [value]
+
+
+def as_bool(value: Any, default: bool = False) -> bool:
+    if value is None:
+        return default
+    if isinstance(value, bool):
+        return value
+    return str(value).strip().lower() in {"1", "true", "yes", "on"}
 
 
 def parse_frontmatter(path: Path) -> dict[str, Any]:
@@ -143,8 +155,21 @@ def load_watches() -> list[PageWatch]:
             paths = [str(p).strip() for p in as_list(raw.get("paths")) if str(p).strip()]
             branch = str(raw.get("branch", "master")).strip() or "master"
             since = normalize_since(raw.get("since") or meta.get("last_reviewed"))
+            watch_mode = str(raw.get("watch_mode", "narrow")).strip() or "narrow"
+            release_watch = as_bool(raw.get("release_watch"), True)
+            priority = str(raw.get("priority")).strip() if raw.get("priority") else None
             if repo and paths:
-                source_repos.append(SourceRef(repo=repo, paths=paths, branch=branch, since=since))
+                source_repos.append(
+                    SourceRef(
+                        repo=repo,
+                        paths=paths,
+                        branch=branch,
+                        since=since,
+                        watch_mode=watch_mode,
+                        release_watch=release_watch,
+                        priority=priority,
+                    )
+                )
 
         if source_repos:
             watches.append(
@@ -154,6 +179,7 @@ def load_watches() -> list[PageWatch]:
                     last_reviewed=str(meta.get("last_reviewed")) if meta.get("last_reviewed") else None,
                     source_repos=source_repos,
                     source_of_truth=[str(v) for v in as_list(meta.get("source_of_truth"))],
+                    source_watch_note=str(meta.get("source_watch_note")) if meta.get("source_watch_note") else None,
                     source_ignore=load_ignore(meta),
                 )
             )
@@ -173,7 +199,7 @@ def validate(watches: list[PageWatch]) -> list[str]:
                 datetime.fromisoformat(watch.last_reviewed)
             except ValueError:
                 errors.append(f"{rel}: last_reviewed must use YYYY-MM-DD or never")
-        if not watch.source_of_truth:
+        if not watch.source_of_truth and not watch.source_watch_note:
             errors.append(f"{rel}: missing source_of_truth")
     return errors
 
@@ -200,6 +226,21 @@ def github_json(url: str, token: str | None) -> Any:
     return github_request("GET", url, token)
 
 
+def github_paginated(url: str, token: str | None, limit: int = 300) -> list[Any]:
+    results: list[Any] = []
+    separator = "&" if "?" in url else "?"
+    page = 1
+    while len(results) < limit:
+        data = github_json(f"{url}{separator}page={page}", token)
+        if not isinstance(data, list) or not data:
+            break
+        results.extend(data)
+        if len(data) < 100:
+            break
+        page += 1
+    return results[:limit]
+
+
 def format_http_error(exc: HTTPError) -> str:
     try:
         body = json.loads(exc.read().decode("utf-8"))
@@ -213,10 +254,13 @@ def format_http_error(exc: HTTPError) -> str:
 
 def github_commits(ref: SourceRef, path: str, token: str | None) -> list[dict[str, str]]:
     base = f"https://api.github.com/repos/{quote(ref.repo)}/commits"
-    query = f"?sha={quote(ref.branch)}&path={quote(path)}&per_page=5"
+    query_parts = {"path": path, "per_page": 100}
+    if ref.branch.lower() not in {"default", "head"}:
+        query_parts["sha"] = ref.branch
+    query = "?" + urlencode(query_parts)
     if ref.since:
         query += f"&since={quote(ref.since)}T00:00:00Z"
-    data = github_json(base + query, token)
+    data = github_paginated(base + query, token)
     commits: list[dict[str, str]] = []
     for item in data:
         commit = item.get("commit", {})
@@ -234,8 +278,8 @@ def github_commits(ref: SourceRef, path: str, token: str | None) -> list[dict[st
 
 
 def github_open_pull_requests(repo: str, since: str | None, token: str | None) -> list[dict[str, Any]]:
-    query = urlencode({"state": "open", "sort": "updated", "direction": "desc", "per_page": 30})
-    data = github_json(f"https://api.github.com/repos/{quote(repo)}/pulls?{query}", token)
+    query = urlencode({"state": "open", "sort": "updated", "direction": "desc", "per_page": 100})
+    data = github_paginated(f"https://api.github.com/repos/{quote(repo)}/pulls?{query}", token)
     pull_requests: list[dict[str, Any]] = []
     since_dt = datetime.fromisoformat(since).replace(tzinfo=timezone.utc) if since else None
     for item in data:
@@ -263,13 +307,13 @@ def github_open_pull_requests(repo: str, since: str | None, token: str | None) -
 
 def github_pull_request_files(repo: str, number: int, token: str | None) -> list[str]:
     query = urlencode({"per_page": 100})
-    data = github_json(f"https://api.github.com/repos/{quote(repo)}/pulls/{number}/files?{query}", token)
+    data = github_paginated(f"https://api.github.com/repos/{quote(repo)}/pulls/{number}/files?{query}", token)
     return [str(item.get("filename", "")) for item in data if item.get("filename")]
 
 
 def github_releases(repo: str, since: str | None, token: str | None) -> list[dict[str, Any]]:
-    query = urlencode({"per_page": 10})
-    data = github_json(f"https://api.github.com/repos/{quote(repo)}/releases?{query}", token)
+    query = urlencode({"per_page": 100})
+    data = github_paginated(f"https://api.github.com/repos/{quote(repo)}/releases?{query}", token)
     releases: list[dict[str, Any]] = []
     since_dt = datetime.fromisoformat(since).replace(tzinfo=timezone.utc) if since else None
     for item in data:
@@ -311,7 +355,9 @@ def owner_matches(repo: str, owners: list[str]) -> bool:
 
 
 def github_path_exists(ref: SourceRef, path: str, token: str | None) -> tuple[bool, str | None]:
-    url = f"https://api.github.com/repos/{quote(ref.repo)}/contents/{quote(path)}?ref={quote(ref.branch)}"
+    url = f"https://api.github.com/repos/{quote(ref.repo)}/contents/{quote(path)}"
+    if ref.branch.lower() not in {"default", "head"}:
+        url += f"?ref={quote(ref.branch)}"
     try:
         github_json(url, token)
         return True, None
@@ -390,6 +436,7 @@ def filter_watches(watches: list[PageWatch], repos: list[str], pages: list[str])
                         last_reviewed=watch.last_reviewed,
                         source_repos=source_repos,
                         source_of_truth=watch.source_of_truth,
+                        source_watch_note=watch.source_watch_note,
                         source_ignore=watch.source_ignore,
                     )
                 )
@@ -453,13 +500,23 @@ def run_scan(args: argparse.Namespace) -> tuple[dict[str, Any], int]:
             "owner": watch.owner,
             "last_reviewed": watch.last_reviewed,
             "source_of_truth": watch.source_of_truth,
+            "source_watch_note": watch.source_watch_note,
             "sources": [],
             "changes": [],
             "ignored_changes": [],
         }
         for ref in watch.source_repos:
-            source_entry = {"repo": ref.repo, "branch": ref.branch, "since": ref.since, "paths": [], "releases": []}
-            if args.github:
+            source_entry = {
+                "repo": ref.repo,
+                "branch": ref.branch,
+                "since": ref.since,
+                "watch_mode": ref.watch_mode,
+                "release_watch": ref.release_watch,
+                "priority": ref.priority,
+                "paths": [],
+                "releases": [],
+            }
+            if args.github and ref.release_watch:
                 release_key = (ref.repo, ref.since)
                 if release_key not in release_cache:
                     try:
@@ -623,9 +680,12 @@ def print_markdown(report: dict[str, Any]) -> None:
         print()
         print(f"- Owner: {page['owner'] or 'missing'}")
         print(f"- Last reviewed: {page['last_reviewed'] or 'missing'}")
-        print("- Source of truth:")
-        for source in page["source_of_truth"]:
-            print(f"  - {source}")
+        if page["source_of_truth"]:
+            print("- Source of truth:")
+            for source in page["source_of_truth"]:
+                print(f"  - {source}")
+        elif page.get("source_watch_note"):
+            print(f"- Source watch note: {page['source_watch_note']}")
         print("- Watched source:")
         for source in page["sources"]:
             print(f"  - {source['repo']}@{source['branch']} since {source['since'] or 'unset'}")

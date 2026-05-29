@@ -529,6 +529,7 @@ nav:
               - Documentation Tools: contribute/tools.md
               - Source Watch: contribute/source-watch.md
               - Watched Repositories: contribute/source-watch-inventory.md
+              - Ecosystem Repo Watchlist: contribute/ecosystem-repo-watchlist.md
               - Source Watch Playbook: contribute/source-watch-playbook.md
       - DAOs:
           - Ergo Foundation:

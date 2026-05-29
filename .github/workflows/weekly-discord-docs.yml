@@ -201,6 +201,7 @@ jobs:
             --label docs \
             --label source-watch \
             --label automated \
+            --close-stale \
             --output "$REPORT_DIR/per-page-issues.json"
           cat "$REPORT_DIR/per-page-issues.json"
 
@@ -220,6 +221,9 @@ jobs:
               "error": 0,
               "skipped_reviewed": 0,
               "skipped_low_only": 0,
+              "skipped_not_actionable": 0,
+              "skipped_covered": 0,
+              "closed_stale": 0,
               "dry_run": 0,
           }
           for item in issues:
@@ -234,6 +238,12 @@ jobs:
                   counts["skipped_reviewed"] += 1
               elif action == "skipped-low-only":
                   counts["skipped_low_only"] += 1
+              elif action == "skipped-not-actionable":
+                  counts["skipped_not_actionable"] += 1
+              elif action == "skipped-covered":
+                  counts["skipped_covered"] += 1
+              elif action == "closed-stale":
+                  counts["closed_stale"] += 1
               elif action == "dry-run":
                   counts["dry_run"] += 1
           counts["total"] = len(issues)
@@ -260,6 +270,9 @@ jobs:
               echo "- Candidates checked: ${{ steps.issue_summary.outputs.total }}"
               echo "- Skipped as already reviewed: ${{ steps.issue_summary.outputs.skipped_reviewed }}"
               echo "- Skipped as low-signal: ${{ steps.issue_summary.outputs.skipped_low_only }}"
+              echo "- Skipped as not documentation-relevant: ${{ steps.issue_summary.outputs.skipped_not_actionable }}"
+              echo "- Skipped as already covered in page text: ${{ steps.issue_summary.outputs.skipped_covered }}"
+              echo "- Closed stale page issues: ${{ steps.issue_summary.outputs.closed_stale }}"
               echo "- Actionable page issues: ${{ steps.issue_summary.outputs.actionable }}"
               echo
               echo "Workflow run: $RUN_URL"
@@ -283,6 +296,9 @@ jobs:
             echo "- Candidate page results: \`${{ steps.issue_summary.outputs.total || '0' }}\`"
             echo "- Skipped already reviewed: \`${{ steps.issue_summary.outputs.skipped_reviewed || '0' }}\`"
             echo "- Skipped low-signal: \`${{ steps.issue_summary.outputs.skipped_low_only || '0' }}\`"
+            echo "- Skipped not documentation-relevant: \`${{ steps.issue_summary.outputs.skipped_not_actionable || '0' }}\`"
+            echo "- Skipped already covered: \`${{ steps.issue_summary.outputs.skipped_covered || '0' }}\`"
+            echo "- Closed stale page issues: \`${{ steps.issue_summary.outputs.closed_stale || '0' }}\`"
             echo "- Issues created: \`${{ steps.issue_summary.outputs.created || '0' }}\`"
             echo "- Issues updated: \`${{ steps.issue_summary.outputs.updated || '0' }}\`"
             echo "- Errors: \`${{ steps.issue_summary.outputs.error || '0' }}\`"

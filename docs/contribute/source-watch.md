@@ -41,7 +41,12 @@ Fields:
 - `owner`: person or team responsible for review.
 - `last_reviewed`: date when page was last checked against source behavior, or `never` for mappings that have not been reviewed yet.
 - `source_repos`: GitHub repositories and paths that can make page stale.
+- `branch: default`: use the repository default branch instead of guessing `master` or `main`.
+- `watch_mode`: optional hint for triage, usually `narrow` or `broad`.
+- `release_watch`: optional boolean; set `false` when repo releases should not trigger review for that page.
+- `priority`: optional hint for candidate ranking or maintainer triage.
 - `source_of_truth`: links reviewers should use to verify claims.
+- `source_watch_note`: maintainer-only explanation for broad inventory pages where individual watched repos are the sources.
 
 Only add repositories to `source_repos` when ongoing upstream changes should trigger docs review. Stable external standards, one-off reference links, analytics trackers, and aggregator pull requests usually belong in `source_of_truth` only, not active scans.
 

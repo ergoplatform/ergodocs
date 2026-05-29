@@ -16,6 +16,8 @@ from urllib.error import HTTPError
 from urllib.parse import quote
 from urllib.request import Request, urlopen
 
+import docs_update_candidates as candidates
+
 
 ROOT = Path(__file__).resolve().parents[1]
 MODELS_ENDPOINT = "https://models.github.ai/inference/chat/completions"
@@ -131,6 +133,40 @@ def unique_changes(changes: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return result
 
 
+def pull_request_context(repo: str, number: str, token: str) -> str:
+    pull = github_request(f"https://api.github.com/repos/{repo}/pulls/{number}", token)
+    files = github_request(f"https://api.github.com/repos/{repo}/pulls/{number}/files?per_page=100", token)
+    chunks = [
+        f"Pull request: {repo}#{number}",
+        f"Title: {pull.get('title', '')}",
+        f"State: {pull.get('state', '')}",
+        f"URL: {pull.get('html_url', '')}",
+        f"Body:\n{str(pull.get('body') or '')[:6000]}",
+    ]
+    for file_info in files if isinstance(files, list) else []:
+        filename = str(file_info.get("filename", ""))
+        patch = str(file_info.get("patch", ""))
+        chunks.append(f"File: {filename}")
+        chunks.append(f"Status: {file_info.get('status', '')}")
+        if patch:
+            chunks.append("Patch:")
+            chunks.append(patch[:6000])
+    return "\n\n".join(chunks)
+
+
+def release_context(repo: str, tag: str, token: str) -> str:
+    release = github_request(f"https://api.github.com/repos/{repo}/releases/tags/{quote(tag, safe='')}", token)
+    return "\n\n".join(
+        [
+            f"Release: {repo}@{tag}",
+            f"Name: {release.get('name', '')}",
+            f"Published: {release.get('published_at', '')}",
+            f"URL: {release.get('html_url', '')}",
+            f"Body:\n{str(release.get('body') or '')[:10000]}",
+        ]
+    )
+
+
 def source_context(changes: list[dict[str, Any]], token: str) -> str:
     chunks: list[str] = []
     for change in unique_changes(changes)[:8]:
@@ -138,6 +174,18 @@ def source_context(changes: list[dict[str, Any]], token: str) -> str:
         sha = str(change.get("sha", ""))
         watched_path = str(change.get("path", ""))
         if not repo or not sha:
+            continue
+        if sha.startswith("pr-"):
+            try:
+                chunks.append(pull_request_context(repo, sha.removeprefix("pr-"), token))
+            except Exception as exc:
+                chunks.append(f"Pull request {repo}#{sha.removeprefix('pr-')}: failed to fetch details: {exc}")
+            continue
+        if sha.startswith("release-"):
+            try:
+                chunks.append(release_context(repo, sha.removeprefix("release-"), token))
+            except Exception as exc:
+                chunks.append(f"Release {repo}@{sha.removeprefix('release-')}: failed to fetch details: {exc}")
             continue
         url = f"https://api.github.com/repos/{repo}/commits/{quote(sha, safe='')}"
         try:
@@ -297,6 +345,8 @@ def main() -> int:
     parser.add_argument("--max-pages", type=int, default=3)
     parser.add_argument("--include-reviewed", action="store_true")
     parser.add_argument("--include-low-only", action="store_true")
+    parser.add_argument("--include-not-actionable", action="store_true")
+    parser.add_argument("--include-covered", action="store_true")
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--output", type=Path, default=Path("ai-docs-draft-prs.json"))
     args = parser.parse_args()
@@ -313,21 +363,22 @@ def main() -> int:
     ensure_labels(labels + ["sensitive"], args.dry_run)
 
     report = json.loads(args.report.read_text(encoding="utf-8"))
+    built, skipped = candidates.build_candidates(
+        report,
+        include_reviewed=args.include_reviewed,
+        include_low_only=args.include_low_only,
+        include_not_actionable=args.include_not_actionable,
+        skip_covered=not args.include_covered,
+    )
     results: list[dict[str, str]] = []
+    for item in skipped:
+        results.append({"page": item.get("title", ""), "action": item.get("action", ""), "url": ""})
     processed = 0
-    for page in report.get("pages", []):
+    for candidate in built:
         if processed >= args.max_pages:
             break
+        page = candidate.page
         page_path = str(page.get("page", ""))
-        changes = page_changes(page)
-        if not page_path or not changes:
-            continue
-        if already_reviewed(page) and not args.include_reviewed:
-            results.append({"page": page_path, "action": "skipped-reviewed", "url": ""})
-            continue
-        if low_only(changes) and not args.include_low_only:
-            results.append({"page": page_path, "action": "skipped-low-only", "url": ""})
-            continue
         path = ROOT / page_path
         if not path.exists():
             results.append({"page": page_path, "action": "missing-page", "url": ""})
@@ -335,7 +386,7 @@ def main() -> int:
 
         processed += 1
         page_text = path.read_text(encoding="utf-8")
-        context = source_context(changes, token or "")
+        context = source_context(candidate.changes, token or "")
         try:
             ai = github_models_request(build_prompt(page, page_text, context), token or "", args.model)
         except (HTTPError, json.JSONDecodeError, KeyError, TimeoutError) as exc:

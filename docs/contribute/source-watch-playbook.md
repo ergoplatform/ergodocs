@@ -42,6 +42,8 @@ It can:
 
 Keep `source_repos` focused on upstreams whose ongoing changes can make the page stale. Reference-only standards or aggregator links can stay in `source_of_truth` without being scanned.
 
+Use `branch: default` for broad ecosystem watchlist entries where guessing `master` or `main` would create false path errors.
+
 ## Environment
 
 Use repo virtualenv:
@@ -181,7 +183,9 @@ It opens or updates a dated GitHub tracking issue labelled `docs`, `automated`, 
 
 The workflow uses the shared `docs-source-watch` concurrency group and a 20-minute timeout. If a weekly review or AI draft-PR scan is already active, another broad source-watch run waits instead of starting a duplicate review.
 
-It also runs `tools/weekly_docs_prs.py` against the Source Watch JSON report. That script opens or updates one source-review issue per affected docs page, labels it `docs`, `source-watch`, and `automated`, includes the review window in the title, and lists GitHub authors as plain usernames where the GitHub API exposes them. It skips pages whose `last_reviewed` date is on or after the latest matching source change, and it skips pages where every matching source change is low severity. These are review issues, not proof that a docs update is required.
+It also runs `tools/docs_update_candidates.py` through `tools/weekly_docs_prs.py`. The shared candidate layer is page-aware: it filters Source Watch changes against the page path and current page text before opening issues. It skips pages whose `last_reviewed` date is on or after the latest matching source change, skips pages where every matching source change is low severity, skips broad repository activity that does not map clearly to the page, and skips candidates that already appear to be covered in the page text. Issue titles describe the likely missing feature or behavior, for example `Add info on optional minerPk override...`, rather than only naming the page.
+
+The weekly issue step also closes stale open `source-watch` issues when the latest candidate pass no longer marks them actionable.
 
 If all per-page candidates are skipped, the workflow comments on the weekly tracking issue and closes it as up to date. If at least one per-page issue is created, updated, or errors, the tracking issue remains open so maintainers can follow up.
 
@@ -223,11 +227,12 @@ Inputs:
 The workflow:
 
 1. Runs a full Source Watch scan for the requested window.
-2. Sends each actionable candidate page and upstream commit context to GitHub Models.
-3. Expects one of `no-doc-change`, `needs-human-review`, or `draft-pr-safe`.
-4. Creates one draft PR per `draft-pr-safe` page.
-5. Labels draft PRs `docs`, `automated`, and `needs-human-review`; sensitive pages also get `sensitive`.
-6. Uploads the AI decision JSON as an artifact and writes it to the run summary.
+2. Uses the same `tools/docs_update_candidates.py` candidate layer as the weekly issue workflow.
+3. Sends each actionable candidate page and upstream context to GitHub Models, including commit patches, pull request bodies/files, and release notes where available.
+4. Expects one of `no-doc-change`, `needs-human-review`, or `draft-pr-safe`.
+5. Creates one draft PR per `draft-pr-safe` page.
+6. Labels draft PRs `docs`, `automated`, and `needs-human-review`; sensitive pages also get `sensitive`.
+7. Uploads the AI decision JSON as an artifact and writes it to the run summary.
 
 Configure `DOCS_BOT_TOKEN` if you want draft PRs to trigger normal pull request workflows. Without that secret, the workflow uses `GITHUB_TOKEN`, which can push branches and open PRs but may not trigger follow-on PR checks.
 

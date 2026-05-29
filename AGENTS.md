@@ -29,7 +29,9 @@
 - `docs/`: published docs and maintainer docs.
 - `docs/start_here.md`: maintainer map for workflows, tools, and repo hygiene.
 - `tools/source_watch.py`: source-linked docs scanner.
+- `tools/docs_update_candidates.py`: shared page-aware candidate builder used by weekly issues and AI draft PRs.
 - `tools/source_watch_inventory.py`: generates/checks `docs/contribute/source-watch-inventory.md` from page `source_repos`.
+- `docs/contribute/ecosystem-repo-watchlist.md`: broad Source Watch backstop for ecosystem repos without dedicated docs pages.
 - `tools/discord_dev_digest/discord_dev_digest.py`: exports Discord development chat and generates source-verification leads.
 - `tools/discord_dev_digest/state/`: ignored local Discord exports and digest reports.
 - `tools/weekly_docs_prs.py`: opens/updates per-page source-review issues from Source Watch JSON.
@@ -77,6 +79,8 @@
 - Source Watch JSON includes `author_login` when GitHub exposes a linked user for a commit, open pull request, or release.
 - Source Watch scans watched GitHub path commits, GitHub releases from watched repositories, and open pull requests touching watched paths only for important owners. Default open PR owner is `ergoplatform`; add owners with `--open-pr-owner`.
 - Do not add broad external standards, analytics trackers, or one-off aggregator PRs to `source_repos` unless ongoing changes should trigger docs review; keep those as `source_of_truth` links only.
+- Use `branch: default` for broad ecosystem watchlist entries when the repo default branch is unknown.
+- Optional `source_repos` fields: `watch_mode`, `release_watch`, and `priority`.
 
 ## Discord Dev Digest Handoff
 
@@ -92,9 +96,10 @@
 - Manual `mode` values: `full`, `discord-only`, `source-only`.
 - In `full` and `discord-only`, it exports the previous week from general (`668903786902847502`) and development (`669989266478202917`), then generates `docs`, `ecosystem`, and `github-links` reports.
 - The workflow separately runs Source Watch across every page with `source_repos` for the same date window. This scan is not limited to repositories mentioned on Discord that week.
-- It then calls `tools/weekly_docs_prs.py` to open/update per-page source-review issues.
-- `tools/weekly_docs_prs.py` labels per-page issues `docs`, `source-watch`, and `automated`; titles include the review window.
-- `tools/weekly_docs_prs.py` skips pages whose `last_reviewed` date is on or after the latest matching source commit, and skips low-severity-only pages by default.
+- It then calls `tools/weekly_docs_prs.py`, which uses `tools/docs_update_candidates.py`, to open/update per-page source-review issues.
+- `tools/weekly_docs_prs.py` labels per-page issues `docs`, `source-watch`, and `automated`; titles should describe the likely missing feature or behavior.
+- The candidate layer skips pages whose `last_reviewed` date is on or after the latest matching source change, skips low-severity-only pages, skips broad source changes that do not look documentation-relevant for the page, and skips candidates already covered in page text.
+- Weekly review closes stale open `source-watch` issues that no longer appear actionable.
 - If every per-page candidate is skipped, the weekly workflow comments on the tracking issue and closes it as up to date. Keep the tracking issue open only when actionable page-review issues or errors remain.
 - The workflow closes older open weekly tracking issues as superseded, labels the current tracking issue `docs`, `automated`, and `weekly-review`, writes a GitHub Actions summary, and uploads the per-page issue summary as an artifact.
 - Weekly review and AI draft PR workflows share `concurrency.group: docs-source-watch` so broad Source Watch scans do not run concurrently. Weekly review has `timeout-minutes: 20`.
@@ -105,7 +110,7 @@
 ## AI Draft PRs
 
 - `.github/workflows/ai-docs-draft-prs.yml` is manual only.
-- It runs Source Watch for the requested window, asks GitHub Models to assess candidate pages, and may open one draft PR per page.
+- It runs Source Watch for the requested window, reuses the shared candidate layer, asks GitHub Models to assess candidate pages with commit/PR/release evidence, and may open one draft PR per page.
 - Draft PRs are labelled `docs`, `automated`, and `needs-human-review`; sensitive pages also get `sensitive`.
 - It uses optional `DOCS_BOT_TOKEN` for checkout, branch pushes, and PR creation; otherwise falls back to `GITHUB_TOKEN`. Prefer `DOCS_BOT_TOKEN` if generated PRs should trigger normal PR workflows.
 - AI output must remain draft-only. Never auto-merge AI docs PRs.
