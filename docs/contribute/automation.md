@@ -100,10 +100,12 @@ If every candidate page is already reviewed, low-signal, already covered, or not
 The manual `AI Docs Draft PRs` workflow can turn the same shared candidates into draft pull requests. It uses OpenAI by default, reads the current docs page plus upstream evidence, and asks the model to choose one of three outcomes:
 
 - `no-doc-change`: the existing page already covers the source change.
-- `needs-human-review`: the evidence is unclear, sensitive, or too risky for an automated draft.
+- `needs-human-review`: the evidence suggests a change, but a human must verify sensitive wording or source interpretation.
 - `draft-pr-safe`: the source supports a small documentation update.
 
-Evidence includes commit patches and release notes by default. Open pull request evidence is opt-in with `include_open_prs`; use it only for explicit latest-work or roadmap tests, not normal documentation update runs. Use `repo`, `page`, and `max_queries` inputs for focused open-PR previews. When a draft is safe enough to propose, the workflow creates a branch and opens a draft pull request. It never merges changes. Every PR is labelled `docs`, `automated`, and `needs-human-review`; protocol, node, contract, ErgoScript, and tutorial pages also receive `sensitive`.
+Evidence includes commit patches and release notes by default. Open pull request evidence is opt-in with `include_open_prs`; use it only for explicit latest-work or roadmap tests, not normal documentation update runs. Use `repo`, `page`, and `max_queries` inputs for focused open-PR previews.
+
+The workflow creates draft pull requests for both `draft-pr-safe` and `needs-human-review` outcomes. `no-doc-change` is the only model decision that skips a PR. Draft PR bodies include the model, action, confidence, reviewer uncertainty, and source evidence links. Reruns reuse the same per-page branch and refresh the existing PR body instead of creating duplicates. Every PR is labelled `docs`, `automated`, and `needs-human-review`; protocol, node, contract, ErgoScript, and tutorial pages also receive `sensitive`.
 
 Configure `OPENAI_API_KEY` as a repository secret before using the default `openai` provider. The default model is `gpt-5.4-mini`, which supports Chat Completions and is a strong low-cost fit for focused docs drafts. OpenRouter remains available with `provider=openrouter`, and GitHub Models remains available with `provider=github-models` if repository or organization access is enabled.
 

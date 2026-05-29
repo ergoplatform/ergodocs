@@ -51,6 +51,14 @@ def docs_path(page_path: str) -> Path:
     return path
 
 
+def safe_repo_path(repo_path: str) -> Path:
+    path = (ROOT / repo_path).resolve()
+    allowed_roots = [(ROOT / "docs").resolve(), (ROOT / ".github" / "docs-review-notes").resolve()]
+    if not any(root == path or root in path.parents for root in allowed_roots):
+        raise ValueError(f"Path is outside allowed generated areas: {repo_path}")
+    return path
+
+
 def github_request(url: str, token: str, api_version: str = "2022-11-28") -> Any:
     request = Request(
         url,
@@ -186,6 +194,25 @@ def unique_changes(changes: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return result
 
 
+def evidence_links(changes: list[dict[str, Any]], limit: int = 8) -> list[str]:
+    links: list[str] = []
+    for change in unique_changes(changes):
+        repo = str(change.get("repo", ""))
+        sha = str(change.get("sha", ""))
+        url = str(change.get("url", ""))
+        if not url and repo and sha.startswith("release-"):
+            url = f"https://github.com/{repo}/releases/tag/{sha.removeprefix('release-')}"
+        elif not url and repo and sha.startswith("pr-"):
+            url = f"https://github.com/{repo}/pull/{sha.removeprefix('pr-')}"
+        elif not url and repo and sha:
+            url = f"https://github.com/{repo}/commit/{sha}"
+        if url and url not in links:
+            links.append(url)
+        if len(links) >= limit:
+            break
+    return links
+
+
 def pull_request_context(repo: str, number: str, token: str) -> str:
     pull = github_request(f"https://api.github.com/repos/{repo}/pulls/{number}", token)
     files = github_request(f"https://api.github.com/repos/{repo}/pulls/{number}/files?per_page=100", token)
@@ -298,6 +325,7 @@ def build_prompt(page: dict[str, Any], page_text: str, context: str) -> str:
         "- For sensitive pages, draft-pr-safe is allowed, but be conservative and explain uncertainty.\n"
         "- Return the full updated Markdown page in proposed_markdown when any draft is useful for review.\n"
         "- Preserve YAML frontmatter and existing internal links unless they must change.\n"
+        f"- If the page is updated and has last_reviewed frontmatter, set last_reviewed to {datetime.utcnow().date().isoformat()}.\n"
         "- Do not add changelog bullets unless the page already uses that style.\n"
         "- Do not mention AI, automation, Source Watch, Discord, scans, artifacts, or this prompt in proposed_markdown.\n\n"
         f"Current page:\n```markdown\n{page_text[:MAX_PAGE_CHARS]}\n```\n\n"
@@ -320,7 +348,43 @@ def slug_for_page(page_path: str) -> str:
     return slug[:60] or "page"
 
 
-def create_pr(page_path: str, proposed: str, result: dict[str, Any], labels: list[str], base_branch: str, dry_run: bool) -> dict[str, str]:
+def pr_body(page_path: str, result: dict[str, Any]) -> str:
+    links = result.get("_evidence_links", [])
+    evidence = "\n".join(f"- {link}" for link in links) if isinstance(links, list) and links else "- No direct source links captured."
+    return (
+        "Automated documentation addition, please highlight any errors.\n\n"
+        "Human review required before merge.\n\n"
+        f"Page: `{page_path}`\n"
+        f"Model: `{result.get('_model', 'unknown')}`\n"
+        f"Action: `{result.get('action', 'unknown')}`\n"
+        f"Confidence: `{result.get('confidence', 'unknown')}`\n\n"
+        f"Summary:\n{result.get('summary', '')}\n\n"
+        f"Uncertainty / reviewer checks:\n{result.get('uncertainty', '')}\n\n"
+        f"Source evidence:\n{evidence}\n\n"
+        "Checklist:\n"
+        "- [ ] Verify source links and claims.\n"
+        "- [ ] Check examples, parameters, and protocol/API wording carefully.\n"
+        "- [ ] Confirm `last_reviewed` is appropriate.\n"
+        "- [ ] Run docs checks or confirm CI passed.\n"
+    )
+
+
+def edit_existing_pr(pr_url: str, body: str, labels: list[str]) -> None:
+    command = ["gh", "pr", "edit", pr_url, "--body", body]
+    for label in labels:
+        command.extend(["--add-label", label])
+    run(command)
+
+
+def create_pr(
+    page_path: str,
+    proposed: str,
+    result: dict[str, Any],
+    labels: list[str],
+    base_branch: str,
+    dry_run: bool,
+    target_path: str | None = None,
+) -> dict[str, str]:
     branch = f"ai-docs/{slug_for_page(page_path)}"
     if dry_run:
         return {"page": page_path, "action": "dry-run-pr", "branch": branch, "url": ""}
@@ -329,33 +393,26 @@ def create_pr(page_path: str, proposed: str, result: dict[str, Any], labels: lis
     run(["git", "pull", "--ff-only", "origin", base_branch])
     run(["git", "checkout", "-B", branch])
 
-    path = docs_path(page_path)
+    write_path = target_path or page_path
+    path = safe_repo_path(write_path)
+    path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(proposed.rstrip() + "\n", encoding="utf-8")
-    diff = run(["git", "diff", "--", page_path], check=False).stdout
+    diff = run(["git", "diff", "--", write_path], check=False).stdout
     if not diff.strip():
         run(["git", "checkout", base_branch])
         return {"page": page_path, "action": "no-diff", "branch": branch, "url": ""}
 
-    run(["git", "add", page_path])
+    run(["git", "add", write_path])
     run(["git", "commit", "-m", f"docs: update {Path(page_path).name}"])
     run(["git", "push", "--force-with-lease", "origin", branch])
 
+    body = pr_body(page_path, result)
     existing_pr = run(["gh", "pr", "list", "--head", branch, "--json", "url", "--jq", ".[0].url"], check=False).stdout.strip()
     if existing_pr:
+        edit_existing_pr(existing_pr, body, labels)
         run(["git", "checkout", base_branch])
         return {"page": page_path, "action": "updated-pr-branch", "branch": branch, "url": existing_pr}
 
-    body = (
-        "Automated draft documentation update. Human review required before merge.\n\n"
-        f"Page: `{page_path}`\n"
-        f"Confidence: `{result.get('confidence', 'unknown')}`\n\n"
-        f"Summary:\n{result.get('summary', '')}\n\n"
-        f"Uncertainty / reviewer checks:\n{result.get('uncertainty', '')}\n\n"
-        "Checklist:\n"
-        "- [ ] Verify source links and claims.\n"
-        "- [ ] Check examples, parameters, and protocol/API wording carefully.\n"
-        "- [ ] Run docs checks or confirm CI passed.\n"
-    )
     command = [
         "gh",
         "pr",
@@ -380,7 +437,13 @@ def create_pr(page_path: str, proposed: str, result: dict[str, Any], labels: lis
 def create_review_pr(page_path: str, page_text: str, result: dict[str, Any], labels: list[str], base_branch: str, dry_run: bool) -> dict[str, str]:
     proposed = str(result.get("proposed_markdown", ""))
     if not valid_markdown_update(page_text, proposed):
-        proposed = page_text.rstrip() + "\n\n<!-- docs-review-needed: source evidence may require a documentation update; see draft PR body. -->\n"
+        note_path = f".github/docs-review-notes/{slug_for_page(page_path)}.md"
+        proposed = (
+            f"# Docs Review Needed: `{page_path}`\n\n"
+            f"Summary:\n{result.get('summary', '')}\n\n"
+            f"Uncertainty:\n{result.get('uncertainty', '')}\n"
+        )
+        return create_pr(page_path, proposed, result, labels, base_branch, dry_run, target_path=note_path)
     return create_pr(page_path, proposed, result, labels, base_branch, dry_run)
 
 
@@ -474,6 +537,8 @@ def main() -> int:
         except (HTTPError, URLError, json.JSONDecodeError, KeyError, TimeoutError, ValueError) as exc:
             results.append({"page": page_path, "action": "ai-error", "url": str(exc)})
             continue
+        ai["_model"] = model
+        ai["_evidence_links"] = evidence_links(candidate.changes)
 
         action = str(ai.get("action", "needs-human-review"))
         proposed = str(ai.get("proposed_markdown", ""))
