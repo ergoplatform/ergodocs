@@ -347,6 +347,8 @@ def run_scan(args: argparse.Namespace) -> tuple[dict[str, Any], int]:
     baseline = load_baseline(baseline_path) if args.new_only or args.update_baseline else set()
     current_seen = set(baseline)
     queries_used = 0
+    commit_cache: dict[tuple[str, str, str, str], tuple[list[dict[str, str]] | None, str | None]] = {}
+    path_exists_cache: dict[tuple[str, str, str], tuple[bool, str | None]] = {}
     report: dict[str, Any] = {
         "generated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "pages_watched": len(watches),
@@ -372,7 +374,10 @@ def run_scan(args: argparse.Namespace) -> tuple[dict[str, Any], int]:
             for source_path in ref.paths:
                 path_entry: dict[str, Any] = {"path": source_path}
                 if args.validate_paths:
-                    exists, error = github_path_exists(ref, source_path, token)
+                    exists_key = (ref.repo, ref.branch, source_path)
+                    if exists_key not in path_exists_cache:
+                        path_exists_cache[exists_key] = github_path_exists(ref, source_path, token)
+                    exists, error = path_exists_cache[exists_key]
                     path_entry["exists"] = exists
                     if error:
                         path_entry["error"] = error
@@ -381,16 +386,21 @@ def run_scan(args: argparse.Namespace) -> tuple[dict[str, Any], int]:
                     if args.max_queries is not None and queries_used >= args.max_queries:
                         path_entry["skipped"] = "max query limit reached"
                     else:
-                        queries_used += 1
-                        try:
-                            commits = github_commits(ref, source_path, token)
-                        except HTTPError as exc:
-                            path_entry["error"] = format_http_error(exc)
-                        except (URLError, TimeoutError) as exc:
-                            path_entry["error"] = str(exc)
+                        commit_key = (ref.repo, ref.branch, ref.since, source_path)
+                        if commit_key not in commit_cache:
+                            queries_used += 1
+                            try:
+                                commit_cache[commit_key] = (github_commits(ref, source_path, token), None)
+                            except HTTPError as exc:
+                                commit_cache[commit_key] = (None, format_http_error(exc))
+                            except (URLError, TimeoutError) as exc:
+                                commit_cache[commit_key] = (None, str(exc))
+                        commits, error = commit_cache[commit_key]
+                        if error:
+                            path_entry["error"] = error
                         else:
                             path_entry["commits"] = []
-                            for commit in commits:
+                            for commit in commits or []:
                                 key = change_key(page_rel, ref.repo, source_path, commit)
                                 current_seen.add(key)
                                 if args.new_only and key in baseline:

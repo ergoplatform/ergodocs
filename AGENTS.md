@@ -93,7 +93,7 @@
 - `tools/weekly_docs_prs.py` skips pages whose `last_reviewed` date is on or after the latest matching source commit, and skips low-severity-only pages by default.
 - If every per-page candidate is skipped, the weekly workflow comments on the tracking issue and closes it as up to date. Keep the tracking issue open only when actionable page-review issues or errors remain.
 - The workflow closes older open weekly tracking issues as superseded, labels the current tracking issue `docs`, `automated`, and `weekly-review`, writes a GitHub Actions summary, and uploads the per-page issue summary as an artifact.
-- The workflow uses `concurrency.group: weekly-docs-review` and `timeout-minutes: 20`.
+- Weekly review and AI draft PR workflows share `concurrency.group: docs-source-watch` so broad Source Watch scans do not run concurrently. Weekly review has `timeout-minutes: 20`.
 - Per-page review issues list source commit authors as plain usernames only; do not add `@` mentions until the automation has proven low-noise.
 - Keep Discord exports/reports as artifacts or ignored local state. Do not commit raw Discord logs or generated reports with chat content.
 - These issues are review leads, not proof that docs changes are required. Verify source before editing public docs.

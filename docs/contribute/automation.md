@@ -76,7 +76,7 @@ Manual runs support three modes:
 
 Each run writes a GitHub Actions summary with candidate counts, skipped pages, created or updated issues, errors, and the tracking issue number. Reports and the per-page issue summary are uploaded as workflow artifacts.
 
-Runs use a single `weekly-docs-review` concurrency group so scheduled and manual reviews do not overlap. The job has a 20-minute timeout to avoid stalled API or export operations running indefinitely.
+Runs use the shared `docs-source-watch` concurrency group so weekly review and AI draft-PR scans do not run broad Source Watch queries at the same time. The job has a 20-minute timeout to avoid stalled API or export operations running indefinitely.
 
 Maintainers should:
 

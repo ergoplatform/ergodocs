@@ -161,7 +161,7 @@ The workflow uploads reports, per-page issue results, and summaries as artifacts
 
 It opens or updates a dated GitHub tracking issue labelled `docs`, `automated`, and `weekly-review`. Before opening the current tracking issue, it closes older open weekly tracking issues as superseded.
 
-The workflow uses the `weekly-docs-review` concurrency group and a 20-minute timeout. If a manual run is already active, another manual or scheduled run waits instead of starting a duplicate review.
+The workflow uses the shared `docs-source-watch` concurrency group and a 20-minute timeout. If a weekly review or AI draft-PR scan is already active, another broad source-watch run waits instead of starting a duplicate review.
 
 It also runs `tools/weekly_docs_prs.py` against the Source Watch JSON report. That script opens or updates one source-review issue per affected docs page, labels it `docs`, `source-watch`, and `automated`, includes the review window in the title, and lists GitHub commit authors as plain usernames where the GitHub API exposes them. It skips pages whose `last_reviewed` date is on or after the latest matching source commit, and it skips pages where every matching source change is low severity. These are review issues, not proof that a docs update is required.
 

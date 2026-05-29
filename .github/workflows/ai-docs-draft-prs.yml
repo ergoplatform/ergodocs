@@ -24,7 +24,7 @@ on:
         default: "false"
 
 concurrency:
-  group: ai-docs-draft-prs
+  group: docs-source-watch
   cancel-in-progress: false
 
 jobs:

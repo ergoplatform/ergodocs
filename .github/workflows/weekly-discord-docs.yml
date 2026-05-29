@@ -18,7 +18,7 @@ on:
         default: "full"
 
 concurrency:
-  group: weekly-docs-review
+  group: docs-source-watch
   cancel-in-progress: false
 
 jobs:
