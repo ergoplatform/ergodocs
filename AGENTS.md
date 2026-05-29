@@ -31,7 +31,7 @@
 - `tools/source_watch.py`: source-linked docs scanner.
 - `tools/docs_update_candidates.py`: shared page-aware candidate builder used by weekly issues and AI draft PRs.
 - `tools/source_watch_inventory.py`: generates/checks `docs/contribute/source-watch-inventory.md` from page `source_repos`.
-- `docs/contribute/ecosystem-repo-watchlist.md`: broad Source Watch backstop for ecosystem repos without dedicated docs pages.
+- `docs/contribute/ecosystem-repo-watchlist.md`: broad maintainer reference list for ecosystem repos without dedicated docs pages; not active Source Watch metadata.
 - `tools/discord_dev_digest/discord_dev_digest.py`: exports Discord development chat and generates source-verification leads.
 - `tools/discord_dev_digest/state/`: ignored local Discord exports and digest reports.
 - `tools/weekly_docs_prs.py`: opens/updates per-page source-review issues from Source Watch JSON.
@@ -43,7 +43,7 @@
 - `.github/workflows/weekly-discord-docs.yml`: Friday Discord lead scan, artifact upload, weekly tracking issue, and per-page source-review issues.
 - `.github/workflows/ai-docs-draft-prs.yml`: manual AI-assisted draft PR workflow using GitHub Models; never auto-merges.
 - `.github/workflows/ci.yml`: main-branch deploy workflow.
-- `.github/codeql/codeql-config.yml`: CodeQL config; excludes legacy non-executable assets such as `docs/assets/mathjax2.js`.
+- `.github/codeql/codeql-config.yml`: CodeQL config.
 - `overrides/`: MkDocs Material theme overrides; keep because `mkdocs.yml` uses `custom_dir: overrides`.
 - `tools/state/`: ignored local/generated working state, not durable project guidance.
 
@@ -80,9 +80,8 @@
 - Source Watch scans watched GitHub path commits and GitHub releases from watched repositories by default.
 - Open pull request scanning is opt-in with `--open-prs`; use it only for explicit roadmap/latest-work reviews, not normal weekly docs update issues.
 - Do not add broad external standards, analytics trackers, or one-off aggregator PRs to `source_repos` unless ongoing changes should trigger docs review; keep those as `source_of_truth` links only.
-- Use `branch: default` for broad ecosystem watchlist entries when the repo default branch is unknown.
 - Optional `source_repos` fields: `watch_mode`, `release_watch`, and `priority`; page-level defaults are `source_watch_mode`, `source_release_watch`, and `source_priority`.
-- Keep broad ecosystem inventory refs as `source_watch_mode: broad`; weekly automation should scan `--watch-mode narrow` so the broad watchlist does not dominate runtime or create noisy issues.
+- Do not put broad ecosystem inventory repos into `source_repos`; only add active `source_repos` to pages where upstream changes should trigger review.
 - Weekly automation should scope release scans with `--release-owner ergoplatform --release-owner ScorexFoundation`; do not run releases across every ecosystem repo unless explicitly doing a broad inventory pass.
 
 ## Discord Dev Digest Handoff

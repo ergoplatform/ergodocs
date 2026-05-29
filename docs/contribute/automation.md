@@ -22,7 +22,7 @@ Automation does not replace human review. It narrows the review queue, catches s
 | Local quality checks | MkDocs build, nav coverage, source metadata, structure, whitespace | [Documentation Tools](tools.md) |
 | Source tracking | Pages tied to upstream repositories, commits, releases, configs, APIs, contracts, or EIPs | [Source Watch](source-watch.md) |
 | Source inventory | Generated overview of watched repositories, branches, paths, and covered pages | [Watched Repositories](source-watch-inventory.md) |
-| Ecosystem watchlist | Broad backstop coverage for ecosystem repos that do not always have dedicated docs pages | [Ecosystem Repo Watchlist](ecosystem-repo-watchlist.md) |
+| Ecosystem watchlist | Broad maintainer reference list for ecosystem repos that do not always have dedicated docs pages | [Ecosystem Repo Watchlist](ecosystem-repo-watchlist.md) |
 | Review workflow | Repeatable commands for source-backed docs review and weekly maintenance | [Source Watch Playbook](source-watch-playbook.md) |
 | Content quality | Page structure, accuracy, verification, and review lifecycle | [Documentation Lifecycle](docs-lifecycle.md) |
 | Information architecture | Navigation, orphan pages, duplicate pages, and section design | [Information Architecture](information-architecture.md) |
@@ -103,7 +103,7 @@ The manual `AI Docs Draft PRs` workflow can turn the same shared candidates into
 - `needs-human-review`: the evidence is unclear, sensitive, or too risky for an automated draft.
 - `draft-pr-safe`: the source supports a small documentation update.
 
-Evidence includes commit patches and release notes by default. Open pull request evidence is opt-in with `include_open_prs`; use it only for explicit latest-work or roadmap tests, not normal documentation update runs. When a draft is safe enough to propose, the workflow creates a branch and opens a draft pull request. It never merges changes. Every PR is labelled `docs`, `automated`, and `needs-human-review`; protocol, node, contract, ErgoScript, and tutorial pages also receive `sensitive`.
+Evidence includes commit patches and release notes by default. Open pull request evidence is opt-in with `include_open_prs`; use it only for explicit latest-work or roadmap tests, not normal documentation update runs. Use `repo`, `page`, and `max_queries` inputs for focused open-PR previews. When a draft is safe enough to propose, the workflow creates a branch and opens a draft pull request. It never merges changes. Every PR is labelled `docs`, `automated`, and `needs-human-review`; protocol, node, contract, ErgoScript, and tutorial pages also receive `sensitive`.
 
 For best results, configure a `DOCS_BOT_TOKEN` repository secret from a bot account or GitHub App with permission to push branches and open pull requests. The workflow falls back to `GITHUB_TOKEN`, but pull requests created with the default Actions token may not trigger follow-on pull request workflows.
 

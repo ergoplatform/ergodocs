@@ -18,6 +18,15 @@ on:
         description: "Maximum page draft PRs to attempt"
         required: false
         default: "3"
+      repo:
+        description: "Optional watched source repo filter, owner/name"
+        required: false
+      page:
+        description: "Optional docs page/path fragment filter"
+        required: false
+      max_queries:
+        description: "Optional Source Watch path-query cap"
+        required: false
       dry_run:
         description: "Generate AI decisions without pushing PRs"
         required: false
@@ -49,6 +58,9 @@ jobs:
       REPORT_DIR: ai-docs-draft-prs
       MODEL: ${{ github.event.inputs.model || 'openai/gpt-4o-mini' }}
       MAX_PAGES: ${{ github.event.inputs.max_pages || '3' }}
+      REPO_FILTER: ${{ github.event.inputs.repo || '' }}
+      PAGE_FILTER: ${{ github.event.inputs.page || '' }}
+      MAX_QUERIES: ${{ github.event.inputs.max_queries || '' }}
       DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
       INCLUDE_OPEN_PRS: ${{ github.event.inputs.include_open_prs || 'false' }}
       SCAN_DAYS: ${{ github.event.inputs.days || '7' }}
@@ -92,6 +104,15 @@ jobs:
           if [ "$INCLUDE_OPEN_PRS" = "true" ]; then
             EXTRA_SCAN_ARGS=(--open-prs --open-pr-owner ergoplatform --open-pr-owner ScorexFoundation)
           fi
+          if [ -n "$REPO_FILTER" ]; then
+            EXTRA_SCAN_ARGS+=(--repo "$REPO_FILTER")
+          fi
+          if [ -n "$PAGE_FILTER" ]; then
+            EXTRA_SCAN_ARGS+=(--page "$PAGE_FILTER")
+          fi
+          if [ -n "$MAX_QUERIES" ]; then
+            EXTRA_SCAN_ARGS+=(--max-queries "$MAX_QUERIES")
+          fi
           python tools/source_watch.py scan \
             --github \
             --since "${{ steps.window.outputs.since }}" \
@@ -130,6 +151,9 @@ jobs:
             echo "- Since: \`${{ steps.window.outputs.since }}\`"
             echo "- Model: \`$MODEL\`"
             echo "- Max pages: \`$MAX_PAGES\`"
+            echo "- Repo filter: \`${REPO_FILTER:-none}\`"
+            echo "- Page filter: \`${PAGE_FILTER:-none}\`"
+            echo "- Max queries: \`${MAX_QUERIES:-none}\`"
             echo "- Dry run: \`$DRY_RUN\`"
             echo "- Include open PRs: \`$INCLUDE_OPEN_PRS\`"
             echo

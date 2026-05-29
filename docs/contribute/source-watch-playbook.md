@@ -42,7 +42,7 @@ It can:
 
 Keep `source_repos` focused on upstreams whose ongoing changes can make the page stale. Reference-only standards or aggregator links can stay in `source_of_truth` without being scanned.
 
-Use `branch: default` for broad ecosystem watchlist entries where guessing `master` or `main` would create false path errors.
+Use `branch: default` only on active `source_repos` entries where guessing `master` or `main` would create false path errors. Broad ecosystem inventory entries should stay out of active Source Watch metadata.
 
 ## Environment
 
@@ -228,6 +228,9 @@ Inputs:
 - `days`: fallback lookback window when `since` is empty.
 - `model`: GitHub Models model ID, defaulting to `openai/gpt-4o-mini`.
 - `max_pages`: maximum number of candidate pages to attempt.
+- `repo`: optional `owner/name` watched source filter for focused tests.
+- `page`: optional docs page or path fragment filter for focused tests.
+- `max_queries`: optional Source Watch path-query cap.
 - `dry_run`: generate AI decisions without pushing branches or opening PRs.
 - `include_open_prs`: include open pull requests as evidence for explicit latest-work or roadmap tests.
 
