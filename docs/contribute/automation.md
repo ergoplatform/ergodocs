@@ -59,7 +59,7 @@ source_of_truth:
   - https://github.com/ergoplatform/ergo/tree/master/src/main/resources/application.conf
 ```
 
-Source Watch uses that metadata to show which docs may need review after upstream changes. It checks commits touching watched paths, GitHub releases from watched repositories, and open pull requests touching watched paths in important repositories. By default, open PR checks are limited to watched repositories under the `ergoplatform` GitHub owner. The report is a triage aid: maintainers still verify each claim against repositories, issues, releases, EIPs, or maintainer sources before changing public docs.
+Source Watch uses that metadata to show which docs may need review after upstream changes. It checks commits touching watched paths and GitHub releases from watched repositories. Open pull request checks are available only as an explicit opt-in for roadmap/latest-work reviews. The report is a triage aid: maintainers still verify each claim against repositories, issues, releases, EIPs, or maintainer sources before changing public docs.
 
 The generated [Watched Repositories](source-watch-inventory.md) page is built from the same metadata. Run `tools/source_watch_inventory.py --write` after changing `source_repos`; CI checks that the page is current.
 
@@ -68,7 +68,7 @@ The generated [Watched Repositories](source-watch-inventory.md) page is built fr
 The scheduled `Weekly Docs Review` workflow has two independent inputs:
 
 - Discord discussion leads: it exports the recent general and development chat windows, then generates docs, ecosystem, and GitHub-links reports.
-- Watched source changes: it scans every docs page with `source_repos` metadata for upstream GitHub commits, releases, and important open pull requests in the same time window, even if those repositories were not mentioned on Discord that week.
+- Watched source changes: it scans normal `source_repos` refs for upstream GitHub commits and core/protocol releases in the same time window, even if those repositories were not mentioned on Discord that week. Broad inventory-only refs stay visible in the watched-repository inventory but are excluded from the weekly hot path unless the workflow is run explicitly for them.
 
 The workflow combines those reports into a weekly review package, then opens GitHub issues only when the shared candidate layer finds a page-specific source change that is not already obvious in the page text. These issues are leads, not automatic change requests.
 

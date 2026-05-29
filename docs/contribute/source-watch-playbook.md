@@ -33,8 +33,8 @@ It can:
 
 - validate metadata
 - scan GitHub commits for watched paths
-- scan open pull requests that touch watched paths in important watched repositories
 - scan GitHub releases from watched repositories
+- optionally scan open pull requests that touch watched paths for explicit roadmap/latest-work reviews
 - suggest `source_repos` from GitHub links
 - mark pages reviewed
 - maintain a baseline so later scans show only new source changes
@@ -54,7 +54,7 @@ source .venv/bin/activate
 
 The script loads `GITHUB_TOKEN` from `.env` if present. Use a token for GitHub scans; unauthenticated GitHub API limits are low.
 
-Open pull request checks default to watched repositories owned by `ergoplatform`. Add more important owners with repeated `--open-pr-owner <owner>`, or disable open PR checks with `--no-open-prs`.
+Open pull request checks are disabled by default. Add `--open-prs` plus repeated `--open-pr-owner <owner>` only when intentionally reviewing in-flight work, such as a major version candidate tracked on a roadmap page.
 
 ## Fast Local Checks
 
@@ -104,6 +104,12 @@ All watched pages:
 
 ```bash
 .venv/bin/python tools/source_watch.py scan --github --new-only --no-fail-on-changes --format markdown --output /tmp/source-watch.md
+```
+
+Weekly hot-path equivalent, excluding broad inventory-only refs:
+
+```bash
+.venv/bin/python tools/source_watch.py scan --github --watch-mode narrow --release-owner ergoplatform --release-owner ScorexFoundation --new-only --no-fail-on-changes --format markdown --output /tmp/source-watch.md
 ```
 
 Focus one repo:

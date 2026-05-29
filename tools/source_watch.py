@@ -155,9 +155,10 @@ def load_watches() -> list[PageWatch]:
             paths = [str(p).strip() for p in as_list(raw.get("paths")) if str(p).strip()]
             branch = str(raw.get("branch", "master")).strip() or "master"
             since = normalize_since(raw.get("since") or meta.get("last_reviewed"))
-            watch_mode = str(raw.get("watch_mode", "narrow")).strip() or "narrow"
-            release_watch = as_bool(raw.get("release_watch"), True)
-            priority = str(raw.get("priority")).strip() if raw.get("priority") else None
+            watch_mode = str(raw.get("watch_mode", meta.get("source_watch_mode", "narrow"))).strip() or "narrow"
+            release_watch = as_bool(raw.get("release_watch", meta.get("source_release_watch")), True)
+            priority_value = raw.get("priority", meta.get("source_priority"))
+            priority = str(priority_value).strip() if priority_value else None
             if repo and paths:
                 source_repos.append(
                     SourceRef(
@@ -418,16 +419,32 @@ def apply_since_override(watches: list[PageWatch], since: str | None) -> None:
             ref.since = since
 
 
-def filter_watches(watches: list[PageWatch], repos: list[str], pages: list[str]) -> list[PageWatch]:
+def filter_watches(
+    watches: list[PageWatch],
+    repos: list[str],
+    pages: list[str],
+    watch_modes: list[str],
+    priorities: list[str],
+) -> list[PageWatch]:
     filtered = watches
     if pages:
         page_terms = [page.strip() for page in pages if page.strip()]
         filtered = [watch for watch in filtered if any(page in watch.path.relative_to(ROOT).as_posix() for page in page_terms)]
-    if repos:
+    if repos or watch_modes or priorities:
         repo_terms = {repo.strip() for repo in repos if repo.strip()}
+        mode_terms = {mode.strip().lower() for mode in watch_modes if mode.strip()}
+        priority_terms = {priority.strip().lower() for priority in priorities if priority.strip()}
         next_watches: list[PageWatch] = []
         for watch in filtered:
-            source_repos = [ref for ref in watch.source_repos if ref.repo in repo_terms]
+            source_repos = []
+            for ref in watch.source_repos:
+                if repo_terms and ref.repo not in repo_terms:
+                    continue
+                if mode_terms and ref.watch_mode.lower() not in mode_terms:
+                    continue
+                if priority_terms and (ref.priority or "").lower() not in priority_terms:
+                    continue
+                source_repos.append(ref)
             if source_repos:
                 next_watches.append(
                     PageWatch(
@@ -472,7 +489,7 @@ def run_scan(args: argparse.Namespace) -> tuple[dict[str, Any], int]:
     token = os.environ.get("GITHUB_TOKEN")
     watches = load_watches()
     apply_since_override(watches, args.since)
-    watches = filter_watches(watches, args.repo, args.page)
+    watches = filter_watches(watches, args.repo, args.page, args.watch_mode, args.priority)
     errors = validate(watches)
 
     baseline_path = Path(args.baseline)
@@ -516,7 +533,7 @@ def run_scan(args: argparse.Namespace) -> tuple[dict[str, Any], int]:
                 "paths": [],
                 "releases": [],
             }
-            if args.github and ref.release_watch:
+            if args.github and ref.release_watch and (not args.release_owner or owner_matches(ref.repo, args.release_owner)):
                 release_key = (ref.repo, ref.since)
                 if release_key not in release_cache:
                     try:
@@ -820,12 +837,15 @@ def mark_reviewed(page: Path, reviewed_date: str | None) -> int:
 
 def add_scan_args(parser: argparse.ArgumentParser) -> None:
     parser.add_argument("--github", action="store_true", help="Query GitHub commits for watched paths.")
-    parser.add_argument("--open-prs", action=argparse.BooleanOptionalAction, default=True, help="Query open pull requests for important watched repositories.")
-    parser.add_argument("--open-pr-owner", action="append", default=["ergoplatform"], help="GitHub owner whose watched repos should include open PR scans. Repeatable.")
+    parser.add_argument("--open-prs", action=argparse.BooleanOptionalAction, default=False, help="Query open pull requests for explicit roadmap/latest-work reviews.")
+    parser.add_argument("--open-pr-owner", action="append", default=["ergoplatform"], help="GitHub owner whose watched repos should include open PR scans when --open-prs is set. Repeatable.")
+    parser.add_argument("--release-owner", action="append", default=[], help="Only scan releases for repos under this GitHub owner. Repeatable. Defaults to all watched repos.")
     parser.add_argument("--strict", action="store_true", help="Fail when metadata is invalid.")
     parser.add_argument("--since", help="Override source scan start date, YYYY-MM-DD.")
     parser.add_argument("--repo", action="append", default=[], help="Only scan this owner/repo. Repeatable.")
     parser.add_argument("--page", action="append", default=[], help="Only scan pages containing this path fragment. Repeatable.")
+    parser.add_argument("--watch-mode", action="append", default=[], help="Only scan source refs with this watch_mode. Repeatable.")
+    parser.add_argument("--priority", action="append", default=[], help="Only scan source refs with this priority. Repeatable.")
     parser.add_argument("--max-queries", type=int, help="Stop GitHub lookups after this many path queries.")
     parser.add_argument("--format", choices=["markdown", "json"], default="markdown", help="Report format.")
     parser.add_argument("--output", help="Write report to file.")

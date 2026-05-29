@@ -95,6 +95,12 @@ def page_changes(page: dict[str, Any]) -> list[dict[str, Any]]:
     return [change for change in page.get("changes", []) if isinstance(change, dict)]
 
 
+def stable_changes(changes: list[dict[str, Any]], include_open_prs: bool) -> list[dict[str, Any]]:
+    if include_open_prs:
+        return changes
+    return [change for change in changes if str(change.get("kind", "")) != "pull_request"]
+
+
 def change_date(change: dict[str, Any]) -> datetime | None:
     raw = str(change.get("date", ""))
     if not raw:
@@ -120,9 +126,9 @@ def latest_change_date(changes: list[dict[str, Any]]) -> datetime | None:
     return max(dates) if dates else None
 
 
-def already_reviewed(page: dict[str, Any]) -> bool:
+def already_reviewed(page: dict[str, Any], changes: list[dict[str, Any]] | None = None) -> bool:
     reviewed = reviewed_date(page)
-    latest = latest_change_date(page_changes(page))
+    latest = latest_change_date(changes if changes is not None else page_changes(page))
     if reviewed is None or latest is None:
         return False
     return reviewed.date() >= latest.date()
@@ -151,6 +157,27 @@ def page_tokens(page: dict[str, Any]) -> set[str]:
     path = str(page.get("page", ""))
     tokens = meaningful(words(path.replace("/", " ").replace("-", " ").replace("_", " ")))
     return expand_tokens(tokens)
+
+
+def raw_page_tokens(page: dict[str, Any]) -> set[str]:
+    path = str(page.get("page", ""))
+    return meaningful(words(path.replace("/", " ").replace("-", " ").replace("_", " ")))
+
+
+def repo_slug_tokens(repo: str) -> set[str]:
+    slug = repo.rsplit("/", 1)[-1]
+    return meaningful(words(slug.replace("-", " ").replace("_", " ")))
+
+
+def release_relevant_page(page: dict[str, Any], change: dict[str, Any]) -> bool:
+    repo = str(change.get("repo", ""))
+    repo_tokens = repo_slug_tokens(repo)
+    if repo_tokens and repo_tokens & raw_page_tokens(page):
+        return True
+
+    sources = " ".join(str(item).lower() for item in page.get("source_of_truth", []))
+    repo_lower = repo.lower()
+    return bool(repo_lower and repo_lower in sources and "/releases/" in sources)
 
 
 def message_tokens(change: dict[str, Any]) -> set[str]:
@@ -222,7 +249,7 @@ def actionable_change(page: dict[str, Any], change: dict[str, Any]) -> bool:
     if "/test/" in str(change.get("path", "")) and not USER_FACING_RE.search(message):
         return False
     if kind == "release":
-        return bool(msg_overlap) and "release" in words(message)
+        return release_relevant_page(page, change) and "release" in words(message)
     if NOISE_RE.search(message) and not msg_overlap:
         return False
     return bool(msg_overlap)
@@ -245,6 +272,7 @@ def build_candidates(
     include_reviewed: bool = False,
     include_low_only: bool = False,
     include_not_actionable: bool = False,
+    include_open_prs: bool = False,
     skip_covered: bool = True,
 ) -> tuple[list[Candidate], list[dict[str, str]]]:
     candidates: list[Candidate] = []
@@ -255,7 +283,11 @@ def build_candidates(
         if not page_path or not changes:
             continue
         base_title = f"Docs review needed: {page_path}"
-        if already_reviewed(page) and not include_reviewed:
+        changes = stable_changes(changes, include_open_prs)
+        if not changes:
+            skipped.append({"title": base_title, "action": "skipped-open-pr-only", "url": ""})
+            continue
+        if already_reviewed(page, changes) and not include_reviewed:
             skipped.append({"title": base_title, "action": "skipped-reviewed", "url": ""})
             continue
         if low_only(changes) and not include_low_only:

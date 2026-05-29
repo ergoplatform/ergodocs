@@ -347,6 +347,7 @@ def main() -> int:
     parser.add_argument("--include-low-only", action="store_true")
     parser.add_argument("--include-not-actionable", action="store_true")
     parser.add_argument("--include-covered", action="store_true")
+    parser.add_argument("--include-open-prs", action="store_true")
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--output", type=Path, default=Path("ai-docs-draft-prs.json"))
     args = parser.parse_args()
@@ -368,6 +369,7 @@ def main() -> int:
         include_reviewed=args.include_reviewed,
         include_low_only=args.include_low_only,
         include_not_actionable=args.include_not_actionable,
+        include_open_prs=args.include_open_prs,
         skip_covered=not args.include_covered,
     )
     results: list[dict[str, str]] = []

@@ -7,6 +7,8 @@ tags:
   - source-watch
 owner: docs
 last_reviewed: 2026-05-29
+source_watch_mode: broad
+source_priority: low
 source_repos:
   - repo: abchrisxyz/OraclePoolHub
     branch: default

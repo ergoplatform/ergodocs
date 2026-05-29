@@ -180,6 +180,10 @@ jobs:
           python tools/source_watch.py scan \
             --github \
             --since "${{ steps.window.outputs.after }}" \
+            --watch-mode narrow \
+            --release-owner ergoplatform \
+            --release-owner ScorexFoundation \
+            --no-open-prs \
             --format json \
             --output "$REPORT_DIR/source-watch.json" \
             --no-fail-on-changes
@@ -223,6 +227,7 @@ jobs:
               "skipped_low_only": 0,
               "skipped_not_actionable": 0,
               "skipped_covered": 0,
+              "skipped_open_pr_only": 0,
               "closed_stale": 0,
               "dry_run": 0,
           }
@@ -242,6 +247,8 @@ jobs:
                   counts["skipped_not_actionable"] += 1
               elif action == "skipped-covered":
                   counts["skipped_covered"] += 1
+              elif action == "skipped-open-pr-only":
+                  counts["skipped_open_pr_only"] += 1
               elif action == "closed-stale":
                   counts["closed_stale"] += 1
               elif action == "dry-run":
@@ -272,6 +279,7 @@ jobs:
               echo "- Skipped as low-signal: ${{ steps.issue_summary.outputs.skipped_low_only }}"
               echo "- Skipped as not documentation-relevant: ${{ steps.issue_summary.outputs.skipped_not_actionable }}"
               echo "- Skipped as already covered in page text: ${{ steps.issue_summary.outputs.skipped_covered }}"
+              echo "- Skipped as open-PR-only: ${{ steps.issue_summary.outputs.skipped_open_pr_only }}"
               echo "- Closed stale page issues: ${{ steps.issue_summary.outputs.closed_stale }}"
               echo "- Actionable page issues: ${{ steps.issue_summary.outputs.actionable }}"
               echo
@@ -298,6 +306,7 @@ jobs:
             echo "- Skipped low-signal: \`${{ steps.issue_summary.outputs.skipped_low_only || '0' }}\`"
             echo "- Skipped not documentation-relevant: \`${{ steps.issue_summary.outputs.skipped_not_actionable || '0' }}\`"
             echo "- Skipped already covered: \`${{ steps.issue_summary.outputs.skipped_covered || '0' }}\`"
+            echo "- Skipped open-PR-only: \`${{ steps.issue_summary.outputs.skipped_open_pr_only || '0' }}\`"
             echo "- Closed stale page issues: \`${{ steps.issue_summary.outputs.closed_stale || '0' }}\`"
             echo "- Issues created: \`${{ steps.issue_summary.outputs.created || '0' }}\`"
             echo "- Issues updated: \`${{ steps.issue_summary.outputs.updated || '0' }}\`"

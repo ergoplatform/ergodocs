@@ -42,9 +42,10 @@ Fields:
 - `last_reviewed`: date when page was last checked against source behavior, or `never` for mappings that have not been reviewed yet.
 - `source_repos`: GitHub repositories and paths that can make page stale.
 - `branch: default`: use the repository default branch instead of guessing `master` or `main`.
-- `watch_mode`: optional hint for triage, usually `narrow` or `broad`.
+- `watch_mode`: optional hint for triage, usually `narrow` or `broad`. Broad refs are for inventory/backstop coverage and are not part of the weekly hot path unless explicitly requested.
 - `release_watch`: optional boolean; set `false` when repo releases should not trigger review for that page.
 - `priority`: optional hint for candidate ranking or maintainer triage.
+- `source_watch_mode`, `source_release_watch`, `source_priority`: optional page-level defaults for all `source_repos` entries on the page.
 - `source_of_truth`: links reviewers should use to verify claims.
 - `source_watch_note`: maintainer-only explanation for broad inventory pages where individual watched repos are the sources.
 
@@ -60,13 +61,13 @@ Run metadata validation and print watched pages:
 
 ## GitHub Change Scan
 
-Run a GitHub scan for watched source paths, open pull requests, and releases:
+Run a GitHub scan for watched source paths and releases:
 
 ```bash
 GITHUB_TOKEN=... .venv/bin/python tools/source_watch.py scan --github
 ```
 
-The script returns a non-zero exit code when source changes are found. A source change can be a commit touching a watched path, an open pull request touching a watched path in an important watched repository, or a GitHub release from a watched repository. By default, open pull request checks are limited to watched repositories under the `ergoplatform` GitHub owner. Use that behavior for scheduled maintenance jobs or manual review, not normal docs builds.
+The script returns a non-zero exit code when source changes are found. A source change can be a commit touching a watched path or a GitHub release from a watched repository. Open pull request checks are opt-in with `--open-prs`; use them only for explicit roadmap/latest-work reviews, not normal weekly docs update issues.
 
 Useful scan controls:
 
@@ -76,8 +77,9 @@ Useful scan controls:
 .venv/bin/python tools/source_watch.py scan --github --format json --output source-watch.json
 .venv/bin/python tools/source_watch.py scan --github --new-only --update-baseline
 .venv/bin/python tools/source_watch.py scan --github --validate-paths
-.venv/bin/python tools/source_watch.py scan --github --open-pr-owner ergoplatform --open-pr-owner rosen-bridge
-.venv/bin/python tools/source_watch.py scan --github --no-open-prs
+.venv/bin/python tools/source_watch.py scan --github --watch-mode narrow
+.venv/bin/python tools/source_watch.py scan --github --release-owner ergoplatform --release-owner ScorexFoundation
+.venv/bin/python tools/source_watch.py scan --github --open-prs --open-pr-owner ergoplatform --open-pr-owner rosen-bridge
 ```
 
 Use `GITHUB_TOKEN` for larger scans. Unauthenticated GitHub API requests hit rate limits quickly.

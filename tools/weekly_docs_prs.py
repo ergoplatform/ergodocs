@@ -198,6 +198,7 @@ def main() -> int:
     parser.add_argument("--include-low-only", action="store_true", help="Open issues when all matching source changes are low severity.")
     parser.add_argument("--include-not-actionable", action="store_true", help="Open issues even when no doc-relevant signal is found.")
     parser.add_argument("--include-covered", action="store_true", help="Open issues even when the page text already appears to mention the subject.")
+    parser.add_argument("--include-open-prs", action="store_true", help="Treat open pull requests as candidate evidence. Use only for explicit roadmap/latest-work reviews.")
     parser.add_argument("--close-stale", action="store_true", help="Close old source-watch issues not present in the current candidate set.")
     parser.add_argument("--output", type=Path, help="Write JSON issue action summary to this path.")
     parser.add_argument("--label", action="append", help="Label to apply to created or updated issues. Repeatable.")
@@ -223,6 +224,7 @@ def main() -> int:
         include_reviewed=args.include_reviewed,
         include_low_only=args.include_low_only,
         include_not_actionable=args.include_not_actionable,
+        include_open_prs=args.include_open_prs,
         skip_covered=not args.include_covered,
     )
 

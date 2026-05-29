@@ -77,10 +77,13 @@
 - Source Watch baseline defaults to `tools/state/source-watch-baseline.json`.
 - Use GitHub scans only with `GITHUB_TOKEN` available; `.env` may provide it locally.
 - Source Watch JSON includes `author_login` when GitHub exposes a linked user for a commit, open pull request, or release.
-- Source Watch scans watched GitHub path commits, GitHub releases from watched repositories, and open pull requests touching watched paths only for important owners. Default open PR owner is `ergoplatform`; add owners with `--open-pr-owner`.
+- Source Watch scans watched GitHub path commits and GitHub releases from watched repositories by default.
+- Open pull request scanning is opt-in with `--open-prs`; use it only for explicit roadmap/latest-work reviews, not normal weekly docs update issues.
 - Do not add broad external standards, analytics trackers, or one-off aggregator PRs to `source_repos` unless ongoing changes should trigger docs review; keep those as `source_of_truth` links only.
 - Use `branch: default` for broad ecosystem watchlist entries when the repo default branch is unknown.
-- Optional `source_repos` fields: `watch_mode`, `release_watch`, and `priority`.
+- Optional `source_repos` fields: `watch_mode`, `release_watch`, and `priority`; page-level defaults are `source_watch_mode`, `source_release_watch`, and `source_priority`.
+- Keep broad ecosystem inventory refs as `source_watch_mode: broad`; weekly automation should scan `--watch-mode narrow` so the broad watchlist does not dominate runtime or create noisy issues.
+- Weekly automation should scope release scans with `--release-owner ergoplatform --release-owner ScorexFoundation`; do not run releases across every ecosystem repo unless explicitly doing a broad inventory pass.
 
 ## Discord Dev Digest Handoff
 
