@@ -241,12 +241,14 @@ The workflow:
 2. Uses the same `tools/docs_update_candidates.py` candidate layer as the weekly issue workflow.
 3. Sends each actionable candidate page and upstream context to the configured AI provider, including commit patches, release notes, and opt-in open pull request bodies/files where available.
 4. Expects one of `no-doc-change`, `needs-human-review`, or `draft-pr-safe`.
-5. Creates one draft PR per `draft-pr-safe` or `needs-human-review` page.
-6. Skips only `no-doc-change` pages.
-7. Adds model/action/confidence, reviewer uncertainty, and source evidence links to the PR body.
-8. Reuses the same per-page branch and refreshes the existing PR body on reruns.
-9. Labels draft PRs `docs`, `automated`, and `needs-human-review`; sensitive pages also get `sensitive`.
-7. Uploads the AI decision JSON as an artifact and writes it to the run summary.
+5. Creates one draft PR per `draft-pr-safe` page and per `needs-human-review` page when usable Markdown is available.
+6. Opens or updates a review issue when `needs-human-review` has no safe Markdown draft.
+7. Skips only `no-doc-change` pages.
+8. Adds model/action/confidence, reviewer uncertainty, and source evidence links to the PR or issue body.
+9. Reuses the same per-page branch and refreshes the existing PR body on reruns.
+10. Runs whitespace, nav, structure, and MkDocs build checks before pushing generated branches.
+11. Labels draft PRs and review issues `docs`, `automated`, and `needs-human-review`; sensitive pages also get `sensitive`.
+12. Uploads the AI decision JSON as an artifact and writes it to the run summary.
 
 Configure `DOCS_BOT_TOKEN` if you want draft PRs to trigger normal pull request workflows. Without that secret, the workflow uses `GITHUB_TOKEN`, which can push branches and open PRs but may not trigger follow-on PR checks.
 

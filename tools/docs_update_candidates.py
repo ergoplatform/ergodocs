@@ -154,14 +154,45 @@ def expand_tokens(tokens: set[str]) -> set[str]:
 
 
 def page_tokens(page: dict[str, Any]) -> set[str]:
-    path = str(page.get("page", ""))
-    tokens = meaningful(words(path.replace("/", " ").replace("-", " ").replace("_", " ")))
-    return expand_tokens(tokens)
+    return set(weighted_page_tokens(page))
 
 
 def raw_page_tokens(page: dict[str, Any]) -> set[str]:
-    path = str(page.get("page", ""))
-    return meaningful(words(path.replace("/", " ").replace("-", " ").replace("_", " ")))
+    text = page_signal_text(page, include_content=False)
+    return meaningful(words(text.replace("/", " ").replace("-", " ").replace("_", " ")))
+
+
+def page_signal_text(page: dict[str, Any], *, include_content: bool = True) -> str:
+    parts = [
+        str(page.get("page", "")),
+        " ".join(str(tag) for tag in page.get("tags", [])),
+        " ".join(str(item) for item in page.get("source_of_truth", [])),
+        " ".join(str(repo.get("repo", "")) for repo in page.get("source_repos", []) if isinstance(repo, dict)),
+    ]
+    if include_content:
+        text = page_text(str(page.get("page", "")))
+        headings = " ".join(match.group(1) for match in re.finditer(r"^#{1,3}\s+(.+)$", text, re.MULTILINE))
+        parts.append(headings)
+        parts.append(text[:4000])
+    return " ".join(parts)
+
+
+def add_weighted_tokens(result: dict[str, int], text: str, weight: int) -> None:
+    for token in expand_tokens(meaningful(words(text.replace("/", " ").replace("-", " ").replace("_", " ")))):
+        result[token] = max(result.get(token, 0), weight)
+
+
+def weighted_page_tokens(page: dict[str, Any]) -> dict[str, int]:
+    result: dict[str, int] = {}
+    add_weighted_tokens(result, str(page.get("page", "")), 4)
+    add_weighted_tokens(result, " ".join(str(tag) for tag in page.get("tags", [])), 5)
+    add_weighted_tokens(result, " ".join(str(item) for item in page.get("source_of_truth", [])), 5)
+    add_weighted_tokens(result, " ".join(str(repo.get("repo", "")) for repo in page.get("source_repos", []) if isinstance(repo, dict)), 5)
+    text = page_text(str(page.get("page", "")))
+    headings = " ".join(match.group(1) for match in re.finditer(r"^#{1,3}\s+(.+)$", text, re.MULTILINE))
+    add_weighted_tokens(result, headings, 3)
+    add_weighted_tokens(result, text[:4000], 1)
+    return result
 
 
 def repo_slug_tokens(repo: str) -> set[str]:
@@ -230,11 +261,15 @@ def already_covered(page_path: str, subject: str) -> bool:
     return sum(1 for term in important if term in text) >= min(len(important), 4)
 
 
-def actionable_change(page: dict[str, Any], change: dict[str, Any]) -> bool:
+def actionable_change(page: dict[str, Any], change: dict[str, Any], weighted_tokens: dict[str, int] | None = None) -> bool:
     message = str(change.get("message", ""))
     kind = str(change.get("kind", ""))
     severity = str(change.get("severity", ""))
-    msg_overlap = page_tokens(page) & message_tokens(change)
+    if weighted_tokens is None:
+        weighted_tokens = weighted_page_tokens(page)
+    msg_tokens = message_tokens(change)
+    weighted_overlap = sum(weighted_tokens.get(token, 0) for token in msg_tokens)
+    strong_overlap = any(weighted_tokens.get(token, 0) >= 4 for token in msg_tokens)
 
     if severity == "low":
         return False
@@ -250,9 +285,9 @@ def actionable_change(page: dict[str, Any], change: dict[str, Any]) -> bool:
         return False
     if kind == "release":
         return release_relevant_page(page, change) and "release" in words(message)
-    if NOISE_RE.search(message) and not msg_overlap:
+    if NOISE_RE.search(message) and not strong_overlap:
         return False
-    return bool(msg_overlap)
+    return weighted_overlap >= 4 or (USER_FACING_RE.search(message) and weighted_overlap >= 2)
 
 
 def unique_changes(changes: list[dict[str, Any]]) -> list[dict[str, Any]]:
@@ -294,7 +329,8 @@ def build_candidates(
             skipped.append({"title": base_title, "action": "skipped-low-only", "url": ""})
             continue
 
-        filtered = [change for change in changes if actionable_change(page, change)]
+        weighted_tokens = weighted_page_tokens(page)
+        filtered = [change for change in changes if actionable_change(page, change, weighted_tokens)]
         if not filtered and not include_not_actionable:
             skipped.append({"title": base_title, "action": "skipped-not-actionable", "url": ""})
             continue

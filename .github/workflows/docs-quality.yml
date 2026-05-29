@@ -8,12 +8,16 @@ on:
       - "overrides/**"
       - "hooks.py"
       - "tools/**"
+      - "tests/**"
       - "requirements.txt"
       - ".github/workflows/docs-quality.yml"
   workflow_dispatch:
 
 permissions:
   contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
 
 jobs:
   build:
@@ -32,6 +36,9 @@ jobs:
 
       - name: Install dependencies
         run: python -m pip install -r requirements.txt
+
+      - name: Run tooling tests
+        run: python -m unittest discover -s tests
 
       - name: Build site
         run: mkdocs build --site-dir site_ci

@@ -35,8 +35,13 @@ FORBIDDEN_PUBLIC_MARKERS = (
     re.compile(r"\bDiscord scan\b", re.IGNORECASE),
     re.compile(r"\bchat export\b", re.IGNORECASE),
     re.compile(r"\bautomation found\b", re.IGNORECASE),
-    re.compile(r"\bAI(?:-assisted)?\b", re.IGNORECASE),
+    re.compile(r"\bAI[- ]assisted draft\b", re.IGNORECASE),
+    re.compile(r"\bAI[- ]generated\b", re.IGNORECASE),
 )
+AUTOMATION_AUTHOR_EMAILS = {"actions@github.com"}
+AUTOMATION_AUTHOR_NAMES = {"ergodocs automation", "github-actions[bot]"}
+VALID_ACTIONS = {"no-doc-change", "needs-human-review", "draft-pr-safe"}
+VALID_CONFIDENCE = {"low", "medium", "high"}
 
 
 def run(command: list[str], *, check: bool = True) -> subprocess.CompletedProcess[str]:
@@ -53,10 +58,14 @@ def docs_path(page_path: str) -> Path:
 
 def safe_repo_path(repo_path: str) -> Path:
     path = (ROOT / repo_path).resolve()
-    allowed_roots = [(ROOT / "docs").resolve(), (ROOT / ".github" / "docs-review-notes").resolve()]
+    allowed_roots = [(ROOT / "docs").resolve()]
     if not any(root == path or root in path.parents for root in allowed_roots):
         raise ValueError(f"Path is outside allowed generated areas: {repo_path}")
     return path
+
+
+def rel_path(path: Path) -> str:
+    return path.relative_to(ROOT).as_posix()
 
 
 def github_request(url: str, token: str, api_version: str = "2022-11-28") -> Any:
@@ -148,38 +157,65 @@ def strip_json_fence(content: str) -> str:
     return stripped
 
 
-def page_changes(page: dict[str, Any]) -> list[dict[str, Any]]:
-    return [change for change in page.get("changes", []) if isinstance(change, dict)]
+def normalize_model_response(raw: dict[str, Any]) -> dict[str, Any]:
+    if not isinstance(raw, dict):
+        raise ValueError("model response is not an object")
+    action = raw.get("action")
+    confidence = raw.get("confidence")
+    if action not in VALID_ACTIONS:
+        raise ValueError(f"invalid model action: {action!r}")
+    if confidence not in VALID_CONFIDENCE:
+        raise ValueError(f"invalid model confidence: {confidence!r}")
+    normalized = {
+        "action": action,
+        "confidence": confidence,
+        "summary": raw.get("summary", ""),
+        "uncertainty": raw.get("uncertainty", ""),
+        "proposed_markdown": raw.get("proposed_markdown", ""),
+    }
+    for key in ("summary", "uncertainty", "proposed_markdown"):
+        if not isinstance(normalized[key], str):
+            raise ValueError(f"model field {key!r} is not a string")
+    return normalized
 
 
-def change_date(change: dict[str, Any]) -> datetime | None:
-    raw = str(change.get("date", ""))
-    if not raw:
-        return None
-    try:
-        return datetime.fromisoformat(raw.replace("Z", "+00:00"))
-    except ValueError:
-        return None
+def frontmatter(text: str) -> str:
+    if not text.startswith("---\n"):
+        return ""
+    end = text.find("\n---\n", 4)
+    if end == -1:
+        return ""
+    return text[4:end]
 
 
-def reviewed_date(page: dict[str, Any]) -> datetime | None:
-    raw = str(page.get("last_reviewed", ""))
-    if not raw or raw.lower() == "never":
-        return None
-    try:
-        return datetime.fromisoformat(raw)
-    except ValueError:
-        return None
+def frontmatter_has_key(text: str, key: str) -> bool:
+    return bool(re.search(rf"^{re.escape(key)}\s*:", frontmatter(text), re.MULTILINE))
 
 
-def already_reviewed(page: dict[str, Any]) -> bool:
-    reviewed = reviewed_date(page)
-    dates = [date for date in (change_date(change) for change in page_changes(page)) if date is not None]
-    return reviewed is not None and bool(dates) and reviewed.date() >= max(dates).date()
+def frontmatter_value(text: str, key: str) -> str:
+    lines = frontmatter(text).splitlines()
+    result: list[str] = []
+    collecting = False
+    for line in lines:
+        if re.match(rf"^{re.escape(key)}\s*:", line):
+            collecting = True
+            result.append(line.rstrip())
+            continue
+        if collecting:
+            if line.startswith(" ") or not line.strip():
+                result.append(line.rstrip())
+                continue
+            break
+    return "\n".join(result).strip()
 
 
-def low_only(changes: list[dict[str, Any]]) -> bool:
-    return bool(changes) and all(str(change.get("severity", "")) == "low" for change in changes)
+def first_h1(text: str) -> str:
+    match = re.search(r"^#\s+(.+?)\s*$", text, re.MULTILINE)
+    return match.group(1).strip() if match else ""
+
+
+def heading_count(text: str) -> int:
+    return len(re.findall(r"^#{1,6}\s+", text, re.MULTILINE))
 
 
 def unique_changes(changes: list[dict[str, Any]]) -> list[dict[str, Any]]:
@@ -334,11 +370,24 @@ def build_prompt(page: dict[str, Any], page_text: str, context: str) -> str:
 
 
 def valid_markdown_update(original: str, proposed: str) -> bool:
-    if not proposed.strip():
+    original_stripped = original.strip()
+    proposed_stripped = proposed.strip()
+    if not proposed_stripped:
         return False
-    if proposed.strip() == original.strip():
+    if proposed_stripped == original_stripped:
         return False
     if original.lstrip().startswith("---") and not proposed.lstrip().startswith("---"):
+        return False
+    for key in ("source_repos", "source_of_truth"):
+        if frontmatter_has_key(original, key) and frontmatter_value(original, key) != frontmatter_value(proposed, key):
+            return False
+    original_h1 = first_h1(original)
+    if original_h1 and first_h1(proposed) != original_h1:
+        return False
+    if len(proposed_stripped) < int(len(original_stripped) * 0.7):
+        return False
+    original_headings = heading_count(original)
+    if original_headings and heading_count(proposed) < max(1, int(original_headings * 0.75)):
         return False
     return not any(pattern.search(proposed) for pattern in FORBIDDEN_PUBLIC_MARKERS)
 
@@ -369,11 +418,69 @@ def pr_body(page_path: str, result: dict[str, Any]) -> str:
     )
 
 
+def issue_body(page_path: str, result: dict[str, Any]) -> str:
+    return pr_body(page_path, result) + "\nNo safe Markdown draft was produced, so no branch was pushed.\n"
+
+
 def edit_existing_pr(pr_url: str, body: str, labels: list[str]) -> None:
     command = ["gh", "pr", "edit", pr_url, "--body", body]
     for label in labels:
         command.extend(["--add-label", label])
     run(command)
+
+
+def existing_issue_url(title: str) -> str:
+    output = run(["gh", "issue", "list", "--state", "open", "--search", title, "--json", "url,title"], check=False).stdout
+    try:
+        issues = json.loads(output)
+    except json.JSONDecodeError:
+        return ""
+    return next((str(issue.get("url", "")) for issue in issues if issue.get("title") == title), "")
+
+
+def create_or_update_issue(page_path: str, result: dict[str, Any], labels: list[str], dry_run: bool) -> dict[str, str]:
+    title = f"Docs review needed: {Path(page_path).name}"
+    if dry_run:
+        return {"page": page_path, "action": "dry-run-issue", "url": ""}
+    body = issue_body(page_path, result)
+    issue = existing_issue_url(title)
+    if issue:
+        command = ["gh", "issue", "edit", issue, "--body", body]
+        for label in labels:
+            command.extend(["--add-label", label])
+        run(command)
+        return {"page": page_path, "action": "updated-issue", "url": issue}
+    command = ["gh", "issue", "create", "--title", title, "--body", body]
+    for label in labels:
+        command.extend(["--label", label])
+    url = run(command).stdout.strip()
+    return {"page": page_path, "action": "created-issue", "url": url}
+
+
+def existing_pr_url(branch: str) -> str:
+    return run(["gh", "pr", "list", "--head", branch, "--json", "url", "--jq", ".[0].url"], check=False).stdout.strip()
+
+
+def branch_exists(branch: str) -> bool:
+    output = run(["git", "ls-remote", "--heads", "origin", branch], check=False).stdout.strip()
+    return bool(output)
+
+
+def branch_owned_by_automation(branch: str) -> bool:
+    if not branch_exists(branch):
+        return True
+    run(["git", "fetch", "origin", f"{branch}:refs/remotes/origin/{branch}"])
+    email = run(["git", "log", "-1", "--format=%ae", f"origin/{branch}"]).stdout.strip()
+    name = run(["git", "log", "-1", "--format=%an", f"origin/{branch}"]).stdout.strip()
+    return email in AUTOMATION_AUTHOR_EMAILS or name in AUTOMATION_AUTHOR_NAMES
+
+
+def pre_push_checks() -> None:
+    run(["git", "diff", "--check"])
+    run(["git", "diff", "--cached", "--check"])
+    run([sys.executable, "tools/nav_audit.py", "--strict"])
+    run([sys.executable, "tools/structure_audit.py", "--strict"])
+    run([sys.executable, "-m", "mkdocs", "build", "--site-dir", "/tmp/ergodocs-ai-pr-check"])
 
 
 def create_pr(
@@ -388,62 +495,65 @@ def create_pr(
     branch = f"ai-docs/{slug_for_page(page_path)}"
     if dry_run:
         return {"page": page_path, "action": "dry-run-pr", "branch": branch, "url": ""}
+    if not branch_owned_by_automation(branch):
+        pr_url = existing_pr_url(branch)
+        return {"page": page_path, "action": "protected-existing-branch", "branch": branch, "url": pr_url}
 
-    run(["git", "checkout", base_branch])
-    run(["git", "pull", "--ff-only", "origin", base_branch])
-    run(["git", "checkout", "-B", branch])
-
-    write_path = target_path or page_path
-    path = safe_repo_path(write_path)
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(proposed.rstrip() + "\n", encoding="utf-8")
-    diff = run(["git", "diff", "--", write_path], check=False).stdout
-    if not diff.strip():
+    try:
         run(["git", "checkout", base_branch])
-        return {"page": page_path, "action": "no-diff", "branch": branch, "url": ""}
+        run(["git", "pull", "--ff-only", "origin", base_branch])
+        run(["git", "checkout", "-B", branch])
 
-    run(["git", "add", write_path])
-    run(["git", "commit", "-m", f"docs: update {Path(page_path).name}"])
-    run(["git", "push", "--force-with-lease", "origin", branch])
+        write_path = target_path or page_path
+        path = safe_repo_path(write_path)
+        write_path = rel_path(path)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(proposed.rstrip() + "\n", encoding="utf-8")
+        body = pr_body(page_path, result)
+        existing_pr = existing_pr_url(branch)
+        diff = run(["git", "diff", "--", write_path], check=False).stdout
+        if not diff.strip():
+            if existing_pr:
+                edit_existing_pr(existing_pr, body, labels)
+                return {"page": page_path, "action": "updated-pr-body", "branch": branch, "url": existing_pr}
+            return {"page": page_path, "action": "no-diff", "branch": branch, "url": ""}
 
-    body = pr_body(page_path, result)
-    existing_pr = run(["gh", "pr", "list", "--head", branch, "--json", "url", "--jq", ".[0].url"], check=False).stdout.strip()
-    if existing_pr:
-        edit_existing_pr(existing_pr, body, labels)
-        run(["git", "checkout", base_branch])
-        return {"page": page_path, "action": "updated-pr-branch", "branch": branch, "url": existing_pr}
+        run(["git", "add", write_path])
+        pre_push_checks()
+        run(["git", "commit", "-m", f"docs: update {Path(page_path).name}"])
+        run(["git", "push", "--force-with-lease", "origin", branch])
 
-    command = [
-        "gh",
-        "pr",
-        "create",
-        "--draft",
-        "--base",
-        base_branch,
-        "--head",
-        branch,
-        "--title",
-        f"docs: update {Path(page_path).name} from source review",
-        "--body",
-        body,
-    ]
-    for label in labels:
-        command.extend(["--label", label])
-    pr = run(command).stdout.strip()
-    run(["git", "checkout", base_branch])
-    return {"page": page_path, "action": "created-pr", "branch": branch, "url": pr}
+        existing_pr = existing_pr_url(branch)
+        if existing_pr:
+            edit_existing_pr(existing_pr, body, labels)
+            return {"page": page_path, "action": "updated-pr-branch", "branch": branch, "url": existing_pr}
+
+        command = [
+            "gh",
+            "pr",
+            "create",
+            "--draft",
+            "--base",
+            base_branch,
+            "--head",
+            branch,
+            "--title",
+            f"docs: update {Path(page_path).name} from source review",
+            "--body",
+            body,
+        ]
+        for label in labels:
+            command.extend(["--label", label])
+        pr = run(command).stdout.strip()
+        return {"page": page_path, "action": "created-pr", "branch": branch, "url": pr}
+    finally:
+        run(["git", "checkout", base_branch], check=False)
 
 
 def create_review_pr(page_path: str, page_text: str, result: dict[str, Any], labels: list[str], base_branch: str, dry_run: bool) -> dict[str, str]:
     proposed = str(result.get("proposed_markdown", ""))
     if not valid_markdown_update(page_text, proposed):
-        note_path = f".github/docs-review-notes/{slug_for_page(page_path)}.md"
-        proposed = (
-            f"# Docs Review Needed: `{page_path}`\n\n"
-            f"Summary:\n{result.get('summary', '')}\n\n"
-            f"Uncertainty:\n{result.get('uncertainty', '')}\n"
-        )
-        return create_pr(page_path, proposed, result, labels, base_branch, dry_run, target_path=note_path)
+        return create_or_update_issue(page_path, result, labels, dry_run)
     return create_pr(page_path, proposed, result, labels, base_branch, dry_run)
 
 
@@ -533,7 +643,7 @@ def main() -> int:
         page_text = path.read_text(encoding="utf-8")
         context = source_context(candidate.changes, github_token)
         try:
-            ai = chat_completion_request(build_prompt(page, page_text, context), ai_token, model, args.provider)
+            ai = normalize_model_response(chat_completion_request(build_prompt(page, page_text, context), ai_token, model, args.provider))
         except (HTTPError, URLError, json.JSONDecodeError, KeyError, TimeoutError, ValueError) as exc:
             results.append({"page": page_path, "action": "ai-error", "url": str(exc)})
             continue
@@ -554,7 +664,8 @@ def main() -> int:
             results.append(create_review_pr(page_path, page_text, ai, pr_labels, args.base_branch, args.dry_run))
             continue
         if not valid_markdown_update(page_text, proposed):
-            results.append({"page": page_path, "action": "invalid-or-empty-proposal", "url": ""})
+            ai["uncertainty"] = "Model marked draft-pr-safe, but Markdown failed safety validation. Human review required."
+            results.append(create_or_update_issue(page_path, ai, pr_labels, args.dry_run))
             continue
 
         results.append(create_pr(page_path, proposed, ai, pr_labels, args.base_branch, args.dry_run))
