@@ -528,6 +528,7 @@ nav:
               - Overview: contribute/automation.md
               - Documentation Tools: contribute/tools.md
               - Source Watch: contribute/source-watch.md
+              - Watched Repositories: contribute/source-watch-inventory.md
               - Source Watch Playbook: contribute/source-watch-playbook.md
       - DAOs:
           - Ergo Foundation:

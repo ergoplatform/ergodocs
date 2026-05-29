@@ -3,11 +3,6 @@ tags:
   - EIP
 owner: docs
 last_reviewed: 2026-05-26
-source_repos:
-  - repo: bitcoin/bips
-    branch: master
-    paths:
-      - bip-0021.mediawiki
 source_of_truth:
   - https://github.com/bitcoin/bips/tree/master/bip-0021.mediawiki
 ---

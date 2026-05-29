@@ -8,20 +8,24 @@ tags:
 owner: docs
 last_reviewed: 2026-05-26
 source_repos:
-  - repo: ScorexFoundation/sigmastate-interpreter
+  - repo: ergoplatform/sigmastate-interpreter
     branch: develop
     paths:
+      - README.md
       - docs/sigma-dsl.md
       - interpreter/shared/src/main/scala/sigmastate/interpreter/Interpreter.scala
       - sc/shared/src/main/scala/sigma/compiler/SigmaCompiler.scala
+      - sc/shared/src/test/scala/sigmastate/lang
   - repo: ergoplatform/ergo
     branch: master
     paths:
       - ergo-wallet
 source_of_truth:
-  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/docs/sigma-dsl.md
-  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/interpreter/shared/src/main/scala/sigmastate/interpreter/Interpreter.scala
-  - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/sc/shared/src/main/scala/sigma/compiler/SigmaCompiler.scala
+  - https://github.com/ergoplatform/sigmastate-interpreter/tree/develop/README.md
+  - https://github.com/ergoplatform/sigmastate-interpreter/tree/develop/docs/sigma-dsl.md
+  - https://github.com/ergoplatform/sigmastate-interpreter/tree/develop/interpreter/shared/src/main/scala/sigmastate/interpreter/Interpreter.scala
+  - https://github.com/ergoplatform/sigmastate-interpreter/tree/develop/sc/shared/src/main/scala/sigma/compiler/SigmaCompiler.scala
+  - https://github.com/ergoplatform/sigmastate-interpreter/tree/develop/sc/shared/src/test/scala/sigmastate/lang
   - https://github.com/ergoplatform/ergo/tree/master/ergo-wallet
 ---
 
@@ -37,8 +41,7 @@ This library is integral to the operation of the [Ergo Node](https://github.com/
 
 - `Apr 14`: [SigmaState interpreter v6.0.3](https://github.com/ergoplatform/sigmastate-interpreter/releases/tag/v6.0.3) and [sigmastate-js 0.6.1](https://www.npmjs.com/package/sigmastate-js) were released.
 - v6.0.3 included compiler support for `Global.serialize`, contract-template deserialization fixes for v6 methods, and broader language-spec coverage.
-- `Apr 28`: the Bulletproofs range-proof verification work was merged into the [6.0.4 candidate PR](https://github.com/ergoplatform/sigmastate-interpreter/pull/1115).
-- 6.0.4 composition also included JavaScript dependency updates and additional `BasicOpsSpecification` tests for language-spec coverage.
+- `May 28`: [Sigma SDK v6.0.4](https://github.com/ergoplatform/sigmastate-interpreter/releases/tag/v6.0.4) was released with Java and JavaScript dependency updates, additional tests, completed Bulletproof range-proof verification tests, and compiler support for `None` expressions such as `val x: Option[Int] = None`.
 
 /// details | DeepWiki Documentation
     {type: info, open: true}

@@ -142,7 +142,7 @@ def body_for_page(page: dict[str, Any], report: dict[str, Any], artifact_url: st
         f"Generated: `{report.get('generated', '')}`",
         "",
         "Why this issue exists:",
-        "Source Watch found new commits touching paths this page declares in `source_repos`.",
+        "Source Watch found new upstream changes for repositories or paths this page declares in `source_repos`.",
         "That means the page may need review, not that a docs edit is definitely required.",
         "",
     ]
@@ -155,12 +155,12 @@ def body_for_page(page: dict[str, Any], report: dict[str, Any], artifact_url: st
         lines.append("")
 
     if authors:
-        lines.extend(["Possible reviewers from source commits:", ", ".join(authors), ""])
+        lines.extend(["Possible reviewers from source changes:", ", ".join(authors), ""])
 
     if artifact_url:
         lines.extend(["Weekly report artifact:", artifact_url, ""])
 
-    lines.extend(["Unique source commits:", ""])
+    lines.extend(["Unique source changes:", ""])
     for change in changes:
         author = safe_login(str(change.get("author_login", ""))) or str(change.get("author_login", "") or "unknown")
         paths = ", ".join(f"`{path}`" for path in change.get("paths", [])) or f"`{change.get('path', '')}`"

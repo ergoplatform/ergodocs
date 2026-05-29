@@ -21,6 +21,7 @@ Automation does not replace human review. It narrows the review queue, catches s
 | --- | --- | --- |
 | Local quality checks | MkDocs build, nav coverage, source metadata, structure, whitespace | [Documentation Tools](tools.md) |
 | Source tracking | Pages tied to upstream repositories, commits, releases, configs, APIs, contracts, or EIPs | [Source Watch](source-watch.md) |
+| Source inventory | Generated overview of watched repositories, branches, paths, and covered pages | [Watched Repositories](source-watch-inventory.md) |
 | Review workflow | Repeatable commands for source-backed docs review and weekly maintenance | [Source Watch Playbook](source-watch-playbook.md) |
 | Content quality | Page structure, accuracy, verification, and review lifecycle | [Documentation Lifecycle](docs-lifecycle.md) |
 | Information architecture | Navigation, orphan pages, duplicate pages, and section design | [Information Architecture](information-architecture.md) |
@@ -57,14 +58,16 @@ source_of_truth:
   - https://github.com/ergoplatform/ergo/tree/master/src/main/resources/application.conf
 ```
 
-Source Watch uses that metadata to show which docs may need review after upstream changes. The report is a triage aid: maintainers still verify each claim against repositories, issues, releases, EIPs, or maintainer sources before changing public docs.
+Source Watch uses that metadata to show which docs may need review after upstream changes. It checks commits touching watched paths, GitHub releases from watched repositories, and open pull requests touching watched paths in important repositories. By default, open PR checks are limited to watched repositories under the `ergoplatform` GitHub owner. The report is a triage aid: maintainers still verify each claim against repositories, issues, releases, EIPs, or maintainer sources before changing public docs.
+
+The generated [Watched Repositories](source-watch-inventory.md) page is built from the same metadata. Run `tools/source_watch_inventory.py --write` after changing `source_repos`; CI checks that the page is current.
 
 ## Weekly Docs Review
 
 The scheduled `Weekly Docs Review` workflow has two independent inputs:
 
 - Discord discussion leads: it exports the recent general and development chat windows, then generates docs, ecosystem, and GitHub-links reports.
-- Watched source changes: it scans every docs page with `source_repos` metadata for upstream GitHub changes in the same time window, even if those repositories were not mentioned on Discord that week.
+- Watched source changes: it scans every docs page with `source_repos` metadata for upstream GitHub commits, releases, and important open pull requests in the same time window, even if those repositories were not mentioned on Discord that week.
 
 The workflow combines those reports into a weekly review package, then opens GitHub issues only when a docs page may need attention. These issues are leads, not automatic change requests.
 

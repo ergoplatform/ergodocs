@@ -4,11 +4,6 @@ tags:
 owner: docs
 last_reviewed: 2026-05-26
 source_repos:
-  - repo: bitcoin/bips
-    branch: master
-    paths:
-      - bip-0032.mediawiki
-      - bip-0044.mediawiki
   - repo: ergoplatform/eips
     branch: master
     paths:

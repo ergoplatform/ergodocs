@@ -233,6 +233,83 @@ def github_commits(ref: SourceRef, path: str, token: str | None) -> list[dict[st
     return commits
 
 
+def github_open_pull_requests(repo: str, since: str | None, token: str | None) -> list[dict[str, Any]]:
+    query = urlencode({"state": "open", "sort": "updated", "direction": "desc", "per_page": 30})
+    data = github_json(f"https://api.github.com/repos/{quote(repo)}/pulls?{query}", token)
+    pull_requests: list[dict[str, Any]] = []
+    since_dt = datetime.fromisoformat(since).replace(tzinfo=timezone.utc) if since else None
+    for item in data:
+        updated_at = str(item.get("updated_at", ""))
+        if since_dt and updated_at:
+            try:
+                if datetime.fromisoformat(updated_at.replace("Z", "+00:00")) < since_dt:
+                    continue
+            except ValueError:
+                pass
+        user = item.get("user") or {}
+        pull_requests.append(
+            {
+                "number": item.get("number"),
+                "title": str(item.get("title", "")),
+                "date": updated_at,
+                "url": str(item.get("html_url", "")),
+                "author_login": str(user.get("login", "")),
+                "base": str((item.get("base") or {}).get("ref", "")),
+                "head": str((item.get("head") or {}).get("ref", "")),
+            }
+        )
+    return pull_requests
+
+
+def github_pull_request_files(repo: str, number: int, token: str | None) -> list[str]:
+    query = urlencode({"per_page": 100})
+    data = github_json(f"https://api.github.com/repos/{quote(repo)}/pulls/{number}/files?{query}", token)
+    return [str(item.get("filename", "")) for item in data if item.get("filename")]
+
+
+def github_releases(repo: str, since: str | None, token: str | None) -> list[dict[str, Any]]:
+    query = urlencode({"per_page": 10})
+    data = github_json(f"https://api.github.com/repos/{quote(repo)}/releases?{query}", token)
+    releases: list[dict[str, Any]] = []
+    since_dt = datetime.fromisoformat(since).replace(tzinfo=timezone.utc) if since else None
+    for item in data:
+        if item.get("draft"):
+            continue
+        published_at = str(item.get("published_at", ""))
+        if since_dt and published_at:
+            try:
+                if datetime.fromisoformat(published_at.replace("Z", "+00:00")) < since_dt:
+                    continue
+            except ValueError:
+                pass
+        author = item.get("author") or {}
+        tag = str(item.get("tag_name", ""))
+        name = str(item.get("name") or tag)
+        releases.append(
+            {
+                "tag": tag,
+                "title": name,
+                "date": published_at,
+                "url": str(item.get("html_url", "")),
+                "author_login": str(author.get("login", "")),
+                "prerelease": bool(item.get("prerelease")),
+            }
+        )
+    return releases
+
+
+def path_matches(watched_path: str, changed_path: str) -> bool:
+    watched = watched_path.rstrip("/")
+    return changed_path == watched or changed_path.startswith(f"{watched}/")
+
+
+def owner_matches(repo: str, owners: list[str]) -> bool:
+    if not owners:
+        return False
+    owner = repo.split("/", 1)[0].lower()
+    return owner in {item.lower() for item in owners}
+
+
 def github_path_exists(ref: SourceRef, path: str, token: str | None) -> tuple[bool, str | None]:
     url = f"https://api.github.com/repos/{quote(ref.repo)}/contents/{quote(path)}?ref={quote(ref.branch)}"
     try:
@@ -336,6 +413,14 @@ def change_key(page: str, repo: str, path: str, commit: dict[str, str]) -> str:
     return f"{page}|{repo}|{path}|{commit['sha']}"
 
 
+def pull_request_change_key(page: str, repo: str, path: str, pull_request: dict[str, Any]) -> str:
+    return f"{page}|{repo}|{path}|pr-{pull_request['number']}"
+
+
+def release_change_key(page: str, repo: str, release: dict[str, Any]) -> str:
+    return f"{page}|{repo}|release-{release['tag']}"
+
+
 def run_scan(args: argparse.Namespace) -> tuple[dict[str, Any], int]:
     token = os.environ.get("GITHUB_TOKEN")
     watches = load_watches()
@@ -348,6 +433,9 @@ def run_scan(args: argparse.Namespace) -> tuple[dict[str, Any], int]:
     current_seen = set(baseline)
     queries_used = 0
     commit_cache: dict[tuple[str, str, str, str], tuple[list[dict[str, str]] | None, str | None]] = {}
+    pull_request_cache: dict[tuple[str, str | None], tuple[list[dict[str, Any]] | None, str | None]] = {}
+    pull_request_files_cache: dict[tuple[str, int], tuple[list[str] | None, str | None]] = {}
+    release_cache: dict[tuple[str, str | None], tuple[list[dict[str, Any]] | None, str | None]] = {}
     path_exists_cache: dict[tuple[str, str, str], tuple[bool, str | None]] = {}
     report: dict[str, Any] = {
         "generated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
@@ -370,7 +458,42 @@ def run_scan(args: argparse.Namespace) -> tuple[dict[str, Any], int]:
             "ignored_changes": [],
         }
         for ref in watch.source_repos:
-            source_entry = {"repo": ref.repo, "branch": ref.branch, "since": ref.since, "paths": []}
+            source_entry = {"repo": ref.repo, "branch": ref.branch, "since": ref.since, "paths": [], "releases": []}
+            if args.github:
+                release_key = (ref.repo, ref.since)
+                if release_key not in release_cache:
+                    try:
+                        release_cache[release_key] = (github_releases(ref.repo, ref.since, token), None)
+                    except HTTPError as exc:
+                        release_cache[release_key] = (None, format_http_error(exc))
+                    except (URLError, TimeoutError) as exc:
+                        release_cache[release_key] = (None, str(exc))
+                releases, release_error = release_cache[release_key]
+                if release_error:
+                    source_entry["release_error"] = release_error
+                else:
+                    for release in releases or []:
+                        key = release_change_key(page_rel, ref.repo, release)
+                        current_seen.add(key)
+                        if args.new_only and key in baseline:
+                            continue
+                        change = {
+                            "sha": f"release-{release['tag']}",
+                            "date": release["date"],
+                            "message": f"Release {release['tag']}: {release['title']}",
+                            "url": release["url"],
+                            "author_login": release["author_login"],
+                            "page": page_rel,
+                            "repo": ref.repo,
+                            "path": "release",
+                            "severity": "medium",
+                            "kind": "release",
+                        }
+                        if ignored(watch, "release", change, args.ignore_message):
+                            page_entry["ignored_changes"].append(change)
+                        else:
+                            page_entry["changes"].append(change)
+                            source_entry["releases"].append(change)
             for source_path in ref.paths:
                 path_entry: dict[str, Any] = {"path": source_path}
                 if args.validate_paths:
@@ -417,6 +540,62 @@ def run_scan(args: argparse.Namespace) -> tuple[dict[str, Any], int]:
                                 else:
                                     page_entry["changes"].append(change)
                                     path_entry["commits"].append(change)
+                        if args.open_prs and owner_matches(ref.repo, args.open_pr_owner):
+                            pr_key = (ref.repo, ref.since)
+                            if pr_key not in pull_request_cache:
+                                try:
+                                    pull_request_cache[pr_key] = (github_open_pull_requests(ref.repo, ref.since, token), None)
+                                except HTTPError as exc:
+                                    pull_request_cache[pr_key] = (None, format_http_error(exc))
+                                except (URLError, TimeoutError) as exc:
+                                    pull_request_cache[pr_key] = (None, str(exc))
+                            pull_requests, pr_error = pull_request_cache[pr_key]
+                            if pr_error and "error" not in path_entry:
+                                path_entry["error"] = pr_error
+                                pull_requests = []
+                        else:
+                            pull_requests = []
+                        if args.open_prs:
+                            path_entry["pull_requests"] = []
+                        for pull_request in pull_requests or []:
+                            number = pull_request.get("number")
+                            if not isinstance(number, int):
+                                continue
+                            files_key = (ref.repo, number)
+                            if files_key not in pull_request_files_cache:
+                                try:
+                                    pull_request_files_cache[files_key] = (github_pull_request_files(ref.repo, number, token), None)
+                                except HTTPError as exc:
+                                    pull_request_files_cache[files_key] = (None, format_http_error(exc))
+                                except (URLError, TimeoutError) as exc:
+                                    pull_request_files_cache[files_key] = (None, str(exc))
+                            files, files_error = pull_request_files_cache[files_key]
+                            if files_error:
+                                path_entry["error"] = files_error
+                                continue
+                            if not any(path_matches(source_path, changed_path) for changed_path in files or []):
+                                continue
+                            key = pull_request_change_key(page_rel, ref.repo, source_path, pull_request)
+                            current_seen.add(key)
+                            if args.new_only and key in baseline:
+                                continue
+                            change = {
+                                "sha": f"pr-{number}",
+                                "date": pull_request["date"],
+                                "message": f"PR #{number}: {pull_request['title']}",
+                                "url": pull_request["url"],
+                                "author_login": pull_request["author_login"],
+                                "page": page_rel,
+                                "repo": ref.repo,
+                                "path": source_path,
+                                "severity": classify_change(source_path, pull_request["title"]),
+                                "kind": "pull_request",
+                            }
+                            if ignored(watch, source_path, change, args.ignore_message):
+                                page_entry["ignored_changes"].append(change)
+                            else:
+                                page_entry["changes"].append(change)
+                                path_entry["pull_requests"].append(change)
                 source_entry["paths"].append(path_entry)
             page_entry["sources"].append(source_entry)
         report["pages"].append(page_entry)
@@ -450,6 +629,11 @@ def print_markdown(report: dict[str, Any]) -> None:
         print("- Watched source:")
         for source in page["sources"]:
             print(f"  - {source['repo']}@{source['branch']} since {source['since'] or 'unset'}")
+            if source.get("release_error"):
+                print(f"    - GitHub releases query failed: {source['release_error']}")
+            for release in source.get("releases", []):
+                print(f"    - {release['date']} {release['sha']} [{release['severity']}] {release['message']}")
+                print(f"      {release['url']}")
             for path in source["paths"]:
                 print(f"    - `{path['path']}`")
                 if "exists" in path:
@@ -461,6 +645,9 @@ def print_markdown(report: dict[str, Any]) -> None:
                 for commit in path.get("commits", []):
                     print(f"      - {commit['date']} {commit['sha']} [{commit['severity']}] {commit['message']}")
                     print(f"        {commit['url']}")
+                for pull_request in path.get("pull_requests", []):
+                    print(f"      - {pull_request['date']} {pull_request['sha']} [{pull_request['severity']}] {pull_request['message']}")
+                    print(f"        {pull_request['url']}")
         if page["ignored_changes"]:
             print("- Ignored changes:")
             for change in page["ignored_changes"]:
@@ -573,6 +760,8 @@ def mark_reviewed(page: Path, reviewed_date: str | None) -> int:
 
 def add_scan_args(parser: argparse.ArgumentParser) -> None:
     parser.add_argument("--github", action="store_true", help="Query GitHub commits for watched paths.")
+    parser.add_argument("--open-prs", action=argparse.BooleanOptionalAction, default=True, help="Query open pull requests for important watched repositories.")
+    parser.add_argument("--open-pr-owner", action="append", default=["ergoplatform"], help="GitHub owner whose watched repos should include open PR scans. Repeatable.")
     parser.add_argument("--strict", action="store_true", help="Fail when metadata is invalid.")
     parser.add_argument("--since", help="Override source scan start date, YYYY-MM-DD.")
     parser.add_argument("--repo", action="append", default=[], help="Only scan this owner/repo. Repeatable.")

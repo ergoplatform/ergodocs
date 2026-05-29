@@ -33,10 +33,14 @@ It can:
 
 - validate metadata
 - scan GitHub commits for watched paths
+- scan open pull requests that touch watched paths in important watched repositories
+- scan GitHub releases from watched repositories
 - suggest `source_repos` from GitHub links
 - mark pages reviewed
-- maintain a baseline so later scans show only new commits
+- maintain a baseline so later scans show only new source changes
 - validate watched GitHub paths exist
+
+Keep `source_repos` focused on upstreams whose ongoing changes can make the page stale. Reference-only standards or aggregator links can stay in `source_of_truth` without being scanned.
 
 ## Environment
 
@@ -47,6 +51,8 @@ source .venv/bin/activate
 ```
 
 The script loads `GITHUB_TOKEN` from `.env` if present. Use a token for GitHub scans; unauthenticated GitHub API limits are low.
+
+Open pull request checks default to watched repositories owned by `ergoplatform`. Add more important owners with repeated `--open-pr-owner <owner>`, or disable open PR checks with `--no-open-prs`.
 
 ## Fast Local Checks
 
@@ -128,6 +134,18 @@ Default baseline:
 tools/state/source-watch-baseline.json
 ```
 
+Regenerate the watched-repository inventory after changing Source Watch metadata:
+
+```bash
+.venv/bin/python tools/source_watch_inventory.py --write
+```
+
+CI checks the generated page with:
+
+```bash
+.venv/bin/python tools/source_watch_inventory.py --check
+```
+
 ## Review Workflow
 
 1. Run a focused scan.
@@ -163,7 +181,7 @@ It opens or updates a dated GitHub tracking issue labelled `docs`, `automated`, 
 
 The workflow uses the shared `docs-source-watch` concurrency group and a 20-minute timeout. If a weekly review or AI draft-PR scan is already active, another broad source-watch run waits instead of starting a duplicate review.
 
-It also runs `tools/weekly_docs_prs.py` against the Source Watch JSON report. That script opens or updates one source-review issue per affected docs page, labels it `docs`, `source-watch`, and `automated`, includes the review window in the title, and lists GitHub commit authors as plain usernames where the GitHub API exposes them. It skips pages whose `last_reviewed` date is on or after the latest matching source commit, and it skips pages where every matching source change is low severity. These are review issues, not proof that a docs update is required.
+It also runs `tools/weekly_docs_prs.py` against the Source Watch JSON report. That script opens or updates one source-review issue per affected docs page, labels it `docs`, `source-watch`, and `automated`, includes the review window in the title, and lists GitHub authors as plain usernames where the GitHub API exposes them. It skips pages whose `last_reviewed` date is on or after the latest matching source change, and it skips pages where every matching source change is low severity. These are review issues, not proof that a docs update is required.
 
 If all per-page candidates are skipped, the workflow comments on the weekly tracking issue and closes it as up to date. If at least one per-page issue is created, updated, or errors, the tracking issue remains open so maintainers can follow up.
 

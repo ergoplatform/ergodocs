@@ -38,3 +38,6 @@ jobs:
 
       - name: Validate source watch metadata
         run: python tools/source_watch.py --strict
+
+      - name: Check source watch inventory
+        run: python tools/source_watch_inventory.py --check

@@ -1,0 +1,5 @@
+name: ErgoDocs CodeQL config
+
+paths-ignore:
+  # Legacy MathJax v2 snippet kept as an asset, not executable site JS.
+  - docs/assets/mathjax2.js

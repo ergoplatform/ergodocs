@@ -34,7 +34,8 @@ This page is the quick map for people or agents maintaining ErgoDocs.
 
 ## Tools
 
-- `tools/source_watch.py`: validates `source_repos` metadata and scans watched GitHub paths for commits.
+- `tools/source_watch.py`: validates `source_repos` metadata and scans watched GitHub sources for commits, open pull requests, and releases.
+- `tools/source_watch_inventory.py`: generates and checks the published watched-repository inventory from page frontmatter.
 - `tools/discord_dev_digest/discord_dev_digest.py`: exports Discord development chat and prepares source-verification leads for docs updates.
 - `tools/nav_audit.py`: checks navigation coverage and obvious nav problems.
 - `tools/structure_audit.py`: checks section structure, orphan pages, and duplicate labels.

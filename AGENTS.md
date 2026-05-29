@@ -29,6 +29,7 @@
 - `docs/`: published docs and maintainer docs.
 - `docs/start_here.md`: maintainer map for workflows, tools, and repo hygiene.
 - `tools/source_watch.py`: source-linked docs scanner.
+- `tools/source_watch_inventory.py`: generates/checks `docs/contribute/source-watch-inventory.md` from page `source_repos`.
 - `tools/discord_dev_digest/discord_dev_digest.py`: exports Discord development chat and generates source-verification leads.
 - `tools/discord_dev_digest/state/`: ignored local Discord exports and digest reports.
 - `tools/weekly_docs_prs.py`: opens/updates per-page source-review issues from Source Watch JSON.
@@ -40,6 +41,7 @@
 - `.github/workflows/weekly-discord-docs.yml`: Friday Discord lead scan, artifact upload, weekly tracking issue, and per-page source-review issues.
 - `.github/workflows/ai-docs-draft-prs.yml`: manual AI-assisted draft PR workflow using GitHub Models; never auto-merges.
 - `.github/workflows/ci.yml`: main-branch deploy workflow.
+- `.github/codeql/codeql-config.yml`: CodeQL config; excludes legacy non-executable assets such as `docs/assets/mathjax2.js`.
 - `overrides/`: MkDocs Material theme overrides; keep because `mkdocs.yml` uses `custom_dir: overrides`.
 - `tools/state/`: ignored local/generated working state, not durable project guidance.
 
@@ -72,7 +74,9 @@
 - Use `docs/contribute/source-watch-playbook.md` for repeatable scan workflow.
 - Source Watch baseline defaults to `tools/state/source-watch-baseline.json`.
 - Use GitHub scans only with `GITHUB_TOKEN` available; `.env` may provide it locally.
-- Source Watch JSON now includes `author_login` when GitHub exposes a linked user for a commit.
+- Source Watch JSON includes `author_login` when GitHub exposes a linked user for a commit, open pull request, or release.
+- Source Watch scans watched GitHub path commits, GitHub releases from watched repositories, and open pull requests touching watched paths only for important owners. Default open PR owner is `ergoplatform`; add owners with `--open-pr-owner`.
+- Do not add broad external standards, analytics trackers, or one-off aggregator PRs to `source_repos` unless ongoing changes should trigger docs review; keep those as `source_of_truth` links only.
 
 ## Discord Dev Digest Handoff
 
@@ -123,6 +127,7 @@ Before saying work is complete, run the narrowest relevant checks first. For doc
 
 ```bash
 .venv/bin/python tools/source_watch.py scan --strict
+.venv/bin/python tools/source_watch_inventory.py --check
 .venv/bin/python tools/nav_audit.py --strict
 .venv/bin/python tools/structure_audit.py --strict
 git diff --check

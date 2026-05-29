@@ -12,10 +12,6 @@ source_repos:
     branch: main
     paths:
       - README.md
-  - repo: DefiLlama/peggedassets-server
-    branch: master
-    paths:
-      - README.md
 source_of_truth:
   - https://github.com/ergoplatform/ergo-jde/tree/main/kiosk/src/test/scala/kiosk/dexy
   - https://github.com/ergoplatform/ergo-jde/tree/main/kiosk/src/test/scala/kiosk/dexy/Dexy.md

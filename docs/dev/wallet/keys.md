@@ -2,10 +2,6 @@
 owner: docs
 last_reviewed: 2026-05-26
 source_repos:
-  - repo: bitcoin/bips
-    branch: master
-    paths:
-      - bip-0044.mediawiki
   - repo: satoshilabs/slips
     branch: master
     paths:

@@ -55,6 +55,7 @@ Build once without serving:
 | Understand docs standards | [Content Standards](docs/contribute/content-standards.md) |
 | Add, move, or reorganize pages | [Information Architecture](docs/contribute/information-architecture.md) |
 | Keep source-backed pages current | [Source Watch](docs/contribute/source-watch.md) |
+| See watched repository coverage | [Watched Repositories](docs/contribute/source-watch-inventory.md) |
 | Run the weekly review workflow manually | [Source Watch Playbook](docs/contribute/source-watch-playbook.md) |
 | Understand checks and automation | [Documentation Automation](docs/contribute/automation.md) |
 | Maintain repo tooling | [Documentation Tools](docs/contribute/tools.md) |
@@ -75,7 +76,7 @@ These checks validate source metadata, navigation coverage, section structure, w
 
 ## Source-Linked Docs
 
-Pages that describe active software, APIs, contracts, configs, EIPs, or ecosystem projects can declare upstream sources in frontmatter. Source Watch compares those pages against watched GitHub paths and helps maintainers decide what needs review.
+Pages that describe active software, APIs, contracts, configs, EIPs, or ecosystem projects can declare upstream sources in frontmatter. Source Watch compares those pages against watched GitHub commits, releases, and important open pull requests, then helps maintainers decide what needs review.
 
 ```bash
 GITHUB_TOKEN=... .venv/bin/python tools/source_watch.py scan \

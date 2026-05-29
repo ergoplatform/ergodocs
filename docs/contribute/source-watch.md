@@ -15,6 +15,8 @@ Source Watch connects docs pages to product repositories. It helps maintainers f
 
 For the broader automation map, see [Documentation Automation](automation.md). For repeatable review commands, see the [Source Watch playbook](source-watch-playbook.md).
 
+For a generated overview of everything currently watched, see [Watched Repositories](source-watch-inventory.md).
+
 ## Page Metadata
 
 Add metadata to pages that depend on source repositories:
@@ -41,6 +43,8 @@ Fields:
 - `source_repos`: GitHub repositories and paths that can make page stale.
 - `source_of_truth`: links reviewers should use to verify claims.
 
+Only add repositories to `source_repos` when ongoing upstream changes should trigger docs review. Stable external standards, one-off reference links, analytics trackers, and aggregator pull requests usually belong in `source_of_truth` only, not active scans.
+
 ## Local Validation
 
 Run metadata validation and print watched pages:
@@ -51,13 +55,13 @@ Run metadata validation and print watched pages:
 
 ## GitHub Change Scan
 
-Run commit scan for watched source paths:
+Run a GitHub scan for watched source paths, open pull requests, and releases:
 
 ```bash
 GITHUB_TOKEN=... .venv/bin/python tools/source_watch.py scan --github
 ```
 
-The script returns a non-zero exit code when source changes are found. Use that behavior for scheduled maintenance jobs or manual review, not normal docs builds.
+The script returns a non-zero exit code when source changes are found. A source change can be a commit touching a watched path, an open pull request touching a watched path in an important watched repository, or a GitHub release from a watched repository. By default, open pull request checks are limited to watched repositories under the `ergoplatform` GitHub owner. Use that behavior for scheduled maintenance jobs or manual review, not normal docs builds.
 
 Useful scan controls:
 
@@ -67,6 +71,8 @@ Useful scan controls:
 .venv/bin/python tools/source_watch.py scan --github --format json --output source-watch.json
 .venv/bin/python tools/source_watch.py scan --github --new-only --update-baseline
 .venv/bin/python tools/source_watch.py scan --github --validate-paths
+.venv/bin/python tools/source_watch.py scan --github --open-pr-owner ergoplatform --open-pr-owner rosen-bridge
+.venv/bin/python tools/source_watch.py scan --github --no-open-prs
 ```
 
 Use `GITHUB_TOKEN` for larger scans. Unauthenticated GitHub API requests hit rate limits quickly.
@@ -128,6 +134,16 @@ After a page has been checked against source behavior:
 ```
 
 This updates `last_reviewed` to today's date. Use `--date YYYY-MM-DD` to set an explicit date.
+
+## Inventory
+
+Regenerate the watched-repository inventory after changing `source_repos` metadata:
+
+```bash
+.venv/bin/python tools/source_watch_inventory.py --write
+```
+
+CI runs `tools/source_watch_inventory.py --check` so the published inventory stays aligned with page frontmatter.
 
 ## Issues And PR Comments
 
