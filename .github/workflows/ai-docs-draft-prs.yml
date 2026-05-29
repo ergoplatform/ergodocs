@@ -14,9 +14,9 @@ on:
         description: "Optional AI model ID; provider default is used when empty"
         required: false
       provider:
-        description: "AI provider: openrouter or github-models"
+        description: "AI provider: openai, openrouter, or github-models"
         required: false
-        default: "openrouter"
+        default: "openai"
       max_pages:
         description: "Maximum page draft PRs to attempt"
         required: false
@@ -59,8 +59,9 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.DOCS_BOT_TOKEN || github.token }}
       GH_TOKEN: ${{ secrets.DOCS_BOT_TOKEN || github.token }}
       REPORT_DIR: ai-docs-draft-prs
-      AI_PROVIDER: ${{ github.event.inputs.provider || 'openrouter' }}
+      AI_PROVIDER: ${{ github.event.inputs.provider || 'openai' }}
       MODEL: ${{ github.event.inputs.model || '' }}
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
       MAX_PAGES: ${{ github.event.inputs.max_pages || '3' }}
       REPO_FILTER: ${{ github.event.inputs.repo || '' }}
@@ -154,8 +155,10 @@ jobs:
           SUMMARY_MODEL="$MODEL"
           if [ -z "$SUMMARY_MODEL" ] && [ "$AI_PROVIDER" = "github-models" ]; then
             SUMMARY_MODEL="openai/gpt-4.1 (provider default)"
-          elif [ -z "$SUMMARY_MODEL" ]; then
+          elif [ -z "$SUMMARY_MODEL" ] && [ "$AI_PROVIDER" = "openrouter" ]; then
             SUMMARY_MODEL="openrouter/free (provider default)"
+          elif [ -z "$SUMMARY_MODEL" ]; then
+            SUMMARY_MODEL="gpt-5.4-mini (provider default)"
           fi
           {
             echo "## AI Docs Draft PRs"

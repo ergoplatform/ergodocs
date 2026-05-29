@@ -21,11 +21,13 @@ import docs_update_candidates as candidates
 
 ROOT = Path(__file__).resolve().parents[1]
 GITHUB_MODELS_ENDPOINT = "https://models.github.ai/inference/chat/completions"
+OPENAI_ENDPOINT = "https://api.openai.com/v1/chat/completions"
 OPENROUTER_ENDPOINT = "https://openrouter.ai/api/v1/chat/completions"
 MAX_SOURCE_CHARS = 24000
 MAX_PAGE_CHARS = 50000
 DEFAULT_MODELS = {
     "github-models": "openai/gpt-4.1",
+    "openai": "gpt-5.4-mini",
     "openrouter": "openrouter/free",
 }
 FORBIDDEN_PUBLIC_MARKERS = (
@@ -73,6 +75,14 @@ def chat_completion_request(prompt: str, token: str, model: str, provider: str) 
             "X-GitHub-Api-Version": "2026-03-10",
             "User-Agent": "ergodocs-ai-docs-draft-prs",
         }
+    elif provider == "openai":
+        endpoint = OPENAI_ENDPOINT
+        headers = {
+            "Accept": "application/json",
+            "Authorization": f"Bearer {token}",
+            "Content-Type": "application/json",
+            "User-Agent": "ergodocs-ai-docs-draft-prs",
+        }
     elif provider == "openrouter":
         endpoint = OPENROUTER_ENDPOINT
         headers = {
@@ -100,9 +110,12 @@ def chat_completion_request(prompt: str, token: str, model: str, provider: str) 
             {"role": "user", "content": prompt},
         ],
         "temperature": 0.1,
-        "max_tokens": 12000,
         "response_format": {"type": "json_object"},
     }
+    if provider == "openai":
+        payload["max_completion_tokens"] = 12000
+    else:
+        payload["max_tokens"] = 12000
     request = Request(
         endpoint,
         data=json.dumps(payload).encode("utf-8"),
@@ -379,7 +392,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Create AI-assisted draft docs PRs from Source Watch JSON.")
     parser.add_argument("--report", required=True, type=Path)
     parser.add_argument("--repo", default=os.environ.get("GITHUB_REPOSITORY", ""))
-    parser.add_argument("--provider", choices=("github-models", "openrouter"), default=os.environ.get("AI_PROVIDER", "openrouter"))
+    parser.add_argument("--provider", choices=("github-models", "openai", "openrouter"), default=os.environ.get("AI_PROVIDER", "openai"))
     parser.add_argument("--model", default="")
     parser.add_argument("--base-branch", default="main")
     parser.add_argument("--max-pages", type=int, default=3)
@@ -394,12 +407,20 @@ def main() -> int:
     model = resolve_model(args.provider, args.model)
 
     github_token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
-    ai_token = (os.environ.get("OPENROUTER_API_KEY") or os.environ.get("OPENROUTER_API")) if args.provider == "openrouter" else github_token
+    ai_token = {
+        "github-models": github_token,
+        "openai": os.environ.get("OPENAI_API_KEY"),
+        "openrouter": os.environ.get("OPENROUTER_API_KEY") or os.environ.get("OPENROUTER_API"),
+    }[args.provider]
     if not github_token:
         print("Missing GITHUB_TOKEN or GH_TOKEN", file=sys.stderr)
         return 2
     if not ai_token:
-        name = "OPENROUTER_API_KEY" if args.provider == "openrouter" else "GITHUB_TOKEN or GH_TOKEN"
+        name = {
+            "github-models": "GITHUB_TOKEN or GH_TOKEN",
+            "openai": "OPENAI_API_KEY",
+            "openrouter": "OPENROUTER_API_KEY",
+        }[args.provider]
         print(f"Missing {name}", file=sys.stderr)
         return 2
     if not args.report.exists():
@@ -460,6 +481,8 @@ def main() -> int:
     output = {"provider": args.provider, "model": model, "results": results}
     args.output.write_text(json.dumps(output, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(output, indent=2))
+    if args.dry_run:
+        return 0
     return 1 if any(item["action"] == "ai-error" for item in results) else 0
 
 

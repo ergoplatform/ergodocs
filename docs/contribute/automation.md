@@ -97,7 +97,7 @@ If every candidate page is already reviewed, low-signal, already covered, or not
 
 ## AI-Assisted Draft PRs
 
-The manual `AI Docs Draft PRs` workflow can turn the same shared candidates into draft pull requests. It uses OpenRouter by default, reads the current docs page plus upstream evidence, and asks the model to choose one of three outcomes:
+The manual `AI Docs Draft PRs` workflow can turn the same shared candidates into draft pull requests. It uses OpenAI by default, reads the current docs page plus upstream evidence, and asks the model to choose one of three outcomes:
 
 - `no-doc-change`: the existing page already covers the source change.
 - `needs-human-review`: the evidence is unclear, sensitive, or too risky for an automated draft.
@@ -105,7 +105,7 @@ The manual `AI Docs Draft PRs` workflow can turn the same shared candidates into
 
 Evidence includes commit patches and release notes by default. Open pull request evidence is opt-in with `include_open_prs`; use it only for explicit latest-work or roadmap tests, not normal documentation update runs. Use `repo`, `page`, and `max_queries` inputs for focused open-PR previews. When a draft is safe enough to propose, the workflow creates a branch and opens a draft pull request. It never merges changes. Every PR is labelled `docs`, `automated`, and `needs-human-review`; protocol, node, contract, ErgoScript, and tutorial pages also receive `sensitive`.
 
-Configure `OPENROUTER_API_KEY` as a repository secret before using the default `openrouter` provider. The default model is `openrouter/free`, which is useful for testing but may have tighter limits and less predictable availability than a low-cost paid model. GitHub Models remains available with `provider=github-models`, but it requires repository or organization access to GitHub Models.
+Configure `OPENAI_API_KEY` as a repository secret before using the default `openai` provider. The default model is `gpt-5.4-mini`, which supports Chat Completions and is a strong low-cost fit for focused docs drafts. OpenRouter remains available with `provider=openrouter`, and GitHub Models remains available with `provider=github-models` if repository or organization access is enabled.
 
 For best results, configure a `DOCS_BOT_TOKEN` repository secret from a bot account or GitHub App with permission to push branches and open pull requests. The workflow falls back to `GITHUB_TOKEN`, but pull requests created with the default Actions token may not trigger follow-on pull request workflows.
 

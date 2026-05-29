@@ -226,8 +226,8 @@ Inputs:
 
 - `since`: explicit Source Watch start date.
 - `days`: fallback lookback window when `since` is empty.
-- `provider`: AI provider, defaulting to `openrouter`.
-- `model`: optional AI model ID; defaults to `openrouter/free` for OpenRouter and `openai/gpt-4.1` for GitHub Models.
+- `provider`: AI provider, defaulting to `openai`.
+- `model`: optional AI model ID; defaults to `gpt-5.4-mini` for OpenAI, `openrouter/free` for OpenRouter, and `openai/gpt-4.1` for GitHub Models.
 - `max_pages`: maximum number of candidate pages to attempt.
 - `repo`: optional `owner/name` watched source filter for focused tests.
 - `page`: optional docs page or path fragment filter for focused tests.
@@ -247,7 +247,7 @@ The workflow:
 
 Configure `DOCS_BOT_TOKEN` if you want draft PRs to trigger normal pull request workflows. Without that secret, the workflow uses `GITHUB_TOKEN`, which can push branches and open PRs but may not trigger follow-on PR checks.
 
-Configure `OPENROUTER_API_KEY` for the default OpenRouter provider. `openrouter/free` is useful for dry-run testing, but production runs should use a reliable low-cost model if free-model rate limits or availability become a problem. GitHub Models can still be tested with `provider=github-models`, but it depends on repository or organization access to GitHub Models.
+Configure `OPENAI_API_KEY` for the default OpenAI provider. The default model is `gpt-5.4-mini`. OpenRouter can still be tested with `provider=openrouter`, and GitHub Models can still be tested with `provider=github-models`, but GitHub Models depends on repository or organization access.
 
 Do not auto-merge these PRs. Treat them as AI-authored drafts that require normal maintainer review and CI.
 
