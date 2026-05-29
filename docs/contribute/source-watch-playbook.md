@@ -229,12 +229,13 @@ Inputs:
 - `model`: GitHub Models model ID, defaulting to `openai/gpt-4o-mini`.
 - `max_pages`: maximum number of candidate pages to attempt.
 - `dry_run`: generate AI decisions without pushing branches or opening PRs.
+- `include_open_prs`: include open pull requests as evidence for explicit latest-work or roadmap tests.
 
 The workflow:
 
-1. Runs a full Source Watch scan for the requested window.
+1. Runs a narrow Source Watch scan for the requested window.
 2. Uses the same `tools/docs_update_candidates.py` candidate layer as the weekly issue workflow.
-3. Sends each actionable candidate page and upstream context to GitHub Models, including commit patches, pull request bodies/files, and release notes where available.
+3. Sends each actionable candidate page and upstream context to GitHub Models, including commit patches, release notes, and opt-in open pull request bodies/files where available.
 4. Expects one of `no-doc-change`, `needs-human-review`, or `draft-pr-safe`.
 5. Creates one draft PR per `draft-pr-safe` page.
 6. Labels draft PRs `docs`, `automated`, and `needs-human-review`; sensitive pages also get `sensitive`.

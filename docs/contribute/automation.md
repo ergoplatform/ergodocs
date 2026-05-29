@@ -103,7 +103,7 @@ The manual `AI Docs Draft PRs` workflow can turn the same shared candidates into
 - `needs-human-review`: the evidence is unclear, sensitive, or too risky for an automated draft.
 - `draft-pr-safe`: the source supports a small documentation update.
 
-Evidence includes commit patches, pull request bodies/files, and release notes where available. When a draft is safe enough to propose, the workflow creates a branch and opens a draft pull request. It never merges changes. Every PR is labelled `docs`, `automated`, and `needs-human-review`; protocol, node, contract, ErgoScript, and tutorial pages also receive `sensitive`.
+Evidence includes commit patches and release notes by default. Open pull request evidence is opt-in with `include_open_prs`; use it only for explicit latest-work or roadmap tests, not normal documentation update runs. When a draft is safe enough to propose, the workflow creates a branch and opens a draft pull request. It never merges changes. Every PR is labelled `docs`, `automated`, and `needs-human-review`; protocol, node, contract, ErgoScript, and tutorial pages also receive `sensitive`.
 
 For best results, configure a `DOCS_BOT_TOKEN` repository secret from a bot account or GitHub App with permission to push branches and open pull requests. The workflow falls back to `GITHUB_TOKEN`, but pull requests created with the default Actions token may not trigger follow-on pull request workflows.
 
