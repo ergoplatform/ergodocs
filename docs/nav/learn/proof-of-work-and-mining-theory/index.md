@@ -17,10 +17,10 @@ The table links to the next useful page or sub-hub, keeping the sidebar staged i
 
 | Page | What you'll find |
 | --- | --- |
-| [Autolykos Overview](../../../mining/autolykos.md) | Ergo mining is based on Autolykos, a fairly launched efficient ASIC-resistant Proof of Work algorithm. |
-| [Proof of Useful Work](../../../uses/pouw.md) | While Proof of Useful Work (PoUW) is an interesting concept, it is still in the research phase. |
-| [Just-In-Time Costing](../../../node/jitc.md) | Discussions about transaction efficiency, scalability, and costing are common in the cryptocurrency space. |
+| [Autolykos Overview](autolykos.md) | Ergo mining is based on Autolykos, a fairly launched efficient ASIC-resistant Proof of Work algorithm. |
+| [Proof of Useful Work](pouw.md) | While Proof of Useful Work (PoUW) is an interesting concept, it is still in the research phase. |
+| [Just-In-Time Costing](jitc.md) | Discussions about transaction efficiency, scalability, and costing are common in the cryptocurrency space. |
 | [Algorithm Details](algorithm-details/index.md) | Emission, EFYT, difficulty, solution verification, and Autolykos details. |
-| [Storage Rent](../../../mining/rent.md) | Storage rent overview, fees, tokens, spending, and state-growth pages. |
-| [ASIC Resistance](../../../mining/asic.md) | Ergo's Autolykos v2 employs a dynamic strategy to resist Application-Specific Integrated Circuits (ASICs). |
+| [Storage Rent](rent.md) | Storage rent overview, fees, tokens, spending, and state-growth pages. |
+| [ASIC Resistance](asic.md) | Ergo's Autolykos v2 employs a dynamic strategy to resist Application-Specific Integrated Circuits (ASICs). |
 | [EIPs](eips/index.md) | EIP pages for this section. |

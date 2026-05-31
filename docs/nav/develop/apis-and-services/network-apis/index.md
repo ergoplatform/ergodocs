@@ -17,5 +17,5 @@ The table links to the next useful page or sub-hub, keeping the sidebar staged i
 
 | Page | What you'll find |
 | --- | --- |
-| [API Overview](../../../../dev/stack/api.md) | Ergo provides several APIs that offer different functionalities and services for developers and users. |
-| [API How-To](../../../../dev/stack/api-howto.md) | If you are new to using APIs and want to get started with Ergo's APIs, here are some steps to help you get going: |
+| [API Overview](api.md) | Ergo provides several APIs that offer different functionalities and services for developers and users. |
+| [API How-To](api-howto.md) | If you are new to using APIs and want to get started with Ergo's APIs, here are some steps to help you get going: |

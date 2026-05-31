@@ -17,6 +17,6 @@ The table links to the next useful page or sub-hub, keeping the sidebar staged i
 
 | Page | What you'll find |
 | --- | --- |
-| [Get a Wallet](../../../dev/wallets.md) | A wallet is your essential gateway to the Ergo ecosystem. |
-| [Cold Wallet Guide](../../../tutorials/cold-wallet.md) | A cold wallet keeps private keys on a device that is offline. |
-| [Browser Wallets on Android](../../../tutorials/Ergo-Browser-Wallets-on-Android.md) | To use the Nautilus or Safew Ergo wallet browser extensions on Android, you need a mobile browser that supports Chrome extensions. |
+| [Get a Wallet](wallets.md) | A wallet is your essential gateway to the Ergo ecosystem. |
+| [Cold Wallet Guide](cold-wallet.md) | A cold wallet keeps private keys on a device that is offline. |
+| [Browser Wallets on Android](Ergo-Browser-Wallets-on-Android.md) | To use the Nautilus or Safew Ergo wallet browser extensions on Android, you need a mobile browser that supports Chrome extensions. |

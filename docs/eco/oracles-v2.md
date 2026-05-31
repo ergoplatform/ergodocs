@@ -16,6 +16,8 @@ source_repos:
     paths:
       - docs/how_to_bootstrap.md
 source_of_truth:
+  - https://error1100.github.io/oracle-stats/
+  - https://multi-oracle-dashboard.vercel.app/
   - https://github.com/ergoplatform/eips/tree/eip16/eip-0016.md
   - https://github.com/ergoplatform/oracle-core/tree/develop/docs/how_to_bootstrap.md
 ---

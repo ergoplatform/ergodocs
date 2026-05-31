@@ -17,7 +17,7 @@ The table links to the next useful page or sub-hub, keeping the sidebar staged i
 
 | Page | What you'll find |
 | --- | --- |
-| [Transaction Chains](../../../../../dev/scs/tx/tx-chains.md) | In a multi-stage protocol, a transaction chain is a sequence of transactions executed in a specific order to achieve a particular outcome or goal. |
-| [Transaction Graphs](../../../../../dev/scs/tx/tx-graphs.md) | A transaction graph represents a set of related transactions more flexibly and dynamically than a transaction tree. |
-| [Transaction Trees](../../../../../dev/scs/tx/tx-tree.md) | A transaction tree represents a sequence of related transactions hierarchically. |
-| [ErgoScript vs ErgoTree](../../../../../dev/scs/ergoscriptvergotree.md) | ErgoScript is a high-level, developer-friendly language for writing smart contracts that are then compiled to ErgoTree before being written to the blockchain. |
+| [Transaction Chains](tx-chains.md) | In a multi-stage protocol, a transaction chain is a sequence of transactions executed in a specific order to achieve a particular outcome or goal. |
+| [Transaction Graphs](tx-graphs.md) | A transaction graph represents a set of related transactions more flexibly and dynamically than a transaction tree. |
+| [Transaction Trees](tx-tree.md) | A transaction tree represents a sequence of related transactions hierarchically. |
+| [ErgoScript vs ErgoTree](ergoscriptvergotree.md) | ErgoScript is a high-level, developer-friendly language for writing smart contracts that are then compiled to ErgoTree before being written to the blockchain. |

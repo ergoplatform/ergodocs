@@ -211,7 +211,7 @@ markdown_extensions:
 
 nav:
   - Start Here:
-      - nav/start-here/index.md
+      - Start Here Overview: nav/start-here/index.md
       - Welcome: index.md
       - What Is Ergo?: what-is-ergo.md
       - Getting Started: getting-started-with-ergo.md
@@ -228,7 +228,7 @@ nav:
       - Reference: start-here/reference.md
       #- Why Ergo: dev/protocol/why.md
   - Use:
-      - nav/use/index.md
+      - Use Overview: nav/use/index.md
       - Using Ergo: uses/index.md
       - Wallet Setup:
           - nav/use/wallet-setup/index.md
@@ -264,7 +264,7 @@ nav:
           - Mixing: uses/mixer.md
           - DAOs: uses/dao.md
           - Crowdfunding: uses/crowdfunding.md
-      - Use Case Library:
+      - Use Cases:
           - nav/use/use-case-library/index.md
           - DeFi & Markets:
               - nav/use/use-case-library/defi-and-markets/index.md
@@ -274,7 +274,6 @@ nav:
                   - DEX Buybacks: uses/dex-buyback.md
                   - Derivatives: uses/deriv.md
                   - Flash Loans: uses/flash-loans.md
-                  - Grid Trading: uses/grid_trading.md
                   - Prediction Markets: uses/prediction_markets.md
               - Credit & Risk:
                   - nav/use/use-case-library/defi-and-markets/credit-and-risk/index.md
@@ -291,7 +290,6 @@ nav:
               - Comparison: uses/sigmausd/comparison.md
               - Examples: uses/sigmausd/examples.md
               - Mining Incentives: uses/sigmausd/mining-incentives.md
-              - Developer Notes: uses/sigmausd/sigusd-dev.md
               - Why SigmaUSD: uses/sigmausd/why-sigusd.md
               - Using Stablecoins: uses/use_stablecoin.md
           - Tokens & Launches:
@@ -303,12 +301,9 @@ nav:
               - ErgoFund: uses/ergofund.md
           - Social & Coordination:
               - nav/use/use-case-library/social-and-coordination/index.md
-              - Context Claims: uses/context-claims.md
               - LETS: uses/lets.md
-              - Basic LETS Implementation: uses/lets/basic-imp.md
               - Trustless LETS: uses/lets/trustless-lets.md
               - Mutual Credit: uses/mutual_credit.md
-              - Trustless LETS Discussion: uses/trustless-lets_d.md
           - Privacy & Access:
               - nav/use/use-case-library/privacy-and-access/index.md
               - Blocked Web Access: uses/blocked_web.md
@@ -318,26 +313,15 @@ nav:
               - nav/use/use-case-library/real-world-and-experimental/index.md
               - CBDCs: uses/cbdc.md
               - ChainCash: uses/chaincash.md
-              - Collateral Mining: uses/collateral-mining.md
               - Lottery: uses/lottery.md
               - Metaverse: uses/metaverse.md
               - Mixicles: uses/mixicles.md
-              - Off the Grid: uses/off_the_grid.md
-              - Off the Grid Tutorial: uses/off_the_grid_tut.md
-              - Oracles: uses/oracles.md
-              - SentientChain: uses/sentientchain.md
-          - Sidechains:
-              - nav/use/use-case-library/sidechains/index.md
-              - Sidechains: uses/sidechains.md
-              - Braid: uses/sidechains/braid.md
-              - Sigma Chains: uses/sidechains/sigma-chains.md
-              - Weak Blocks: uses/sidechains/weak-blocks.md
       - Help & Troubleshooting:
           - nav/use/help-and-troubleshooting/index.md
           - Access Issues: tutorials/access-issues.md
           - Troubleshooting: support-troubleshooting.md
   - Ecosystem:
-      - nav/ecosystem/index.md
+      - Ecosystem Section Map: nav/ecosystem/index.md
       - Ecosystem Overview: eco/index.md
       - Ecosystem Map: uses/use-cases-overview.md
       - Full Project Directory: eco/project-directory.md
@@ -421,6 +405,11 @@ nav:
           - Cyberverse: eco/cyberverse.md
       - Tools & Data:
           - nav/ecosystem/tools-and-data/index.md
+          - Autonomous Services:
+              - nav/develop/sdks-frameworks-and-tools/tooling-and-debugging/autonomous-services/index.md
+              - Celaut: eco/celaut.md
+              - Reputation System: eco/reputation-system.md
+              - Celaut vs Netnotes: eco/celaut_v_netnotes.md
           - Data & Knowledge:
               - nav/ecosystem/tools-and-data/data-and-knowledge/index.md
               - Crux Finance: eco/crux.md
@@ -436,7 +425,7 @@ nav:
               - RustChain: eco/rust-chain.md
               - BoTTube: eco/bottube.md
   - Learn:
-      - nav/learn/index.md
+      - Learn Overview: nav/learn/index.md
       - Protocol Overview: dev/protocol/protocol-overview.md
       - Why Ergo: dev/protocol/why.md
       - Core Concepts:
@@ -457,6 +446,8 @@ nav:
               - dev/protocol/zkp.md
               - Privacy Guide: doc/privacy-guide.md
           - Storage Rent: dev/protocol/storage-rent.md
+          - Context Claims: uses/context-claims.md
+          - Oracles: uses/oracles.md
           - Autolykos: dev/protocol/autolykos-protocol.md
           - Sigma-6: dev/protocol/sigma-6.md
       - Research Library:
@@ -466,6 +457,7 @@ nav:
           - Whitepaper: doc/whitepaper.md
           - ErgoScript Whitepaper: doc/ergoscript-whitepaper.md
           - On Contractual Money: doc/on-contractual-money.md
+          - SentientChain: uses/sentientchain.md
       - Roadmap & Scaling:
           - nav/learn/roadmap-and-scaling/index.md
           - Roadmap Overview: roadmap.md
@@ -477,6 +469,12 @@ nav:
                   - Sub-Blocks Technical Details: uses/sidechains/input-blocks.md
           - Layer 1: dev/protocol/scaling/layer1.md
           - Layer 2: dev/protocol/scaling/layer2.md
+          - Sidechains:
+              - nav/use/use-case-library/sidechains/index.md
+              - Sidechains: uses/sidechains.md
+              - Braid: uses/sidechains/braid.md
+              - Sigma Chains: uses/sidechains/sigma-chains.md
+              - Weak Blocks: uses/sidechains/weak-blocks.md
           - Discussions:
               - nav/learn/roadmap-and-scaling/discussions/index.md
               - Roadmaps: dev/protocol/scaling/scaling-roadmap.md
@@ -524,6 +522,7 @@ nav:
           - nav/learn/proof-of-work-and-mining-theory/index.md
           - Autolykos Overview: mining/autolykos.md
           - Proof of Useful Work: uses/pouw.md
+          - Collateral Mining: uses/collateral-mining.md
           - Just-In-Time Costing: node/jitc.md
           - Algorithm Details:
               - nav/learn/proof-of-work-and-mining-theory/algorithm-details/index.md
@@ -545,7 +544,7 @@ nav:
               - EIP-27 Emission Retargeting: mining/standards/eip27.md
               - EIP-37 Difficulty Adjustment: mining/standards/eip37.md
   - Develop:
-      - nav/develop/index.md
+      - Develop Overview: nav/develop/index.md
       - Start Here:
           - nav/develop/start-here/index.md
           - Developer Start: dev/get-started.md
@@ -631,11 +630,6 @@ nav:
                   - Scala-Based: dev/scs/debugging/scala-debugging.md
                   - On-Chain Mechanisms: dev/scs/debugging/on-chain-mechanisms.md
                   - External Tools: dev/scs/debugging/external-tools.md
-              - Autonomous Services:
-                  - nav/develop/sdks-frameworks-and-tools/tooling-and-debugging/autonomous-services/index.md
-                  - Celaut: eco/celaut.md
-                  - Reputation System: eco/reputation-system.md
-                  - Celaut vs Netnotes: eco/celaut_v_netnotes.md
               - FlowCards: dev/scs/flowcards.md
           - Libraries:
               - dev/libraries.md
@@ -782,6 +776,8 @@ nav:
                   - Multi-Signature: dev/scs/multi.md
               - Contract Examples:
                   - nav/develop/ergoscript-and-smart-contracts/examples-and-use-cases/contract-examples/index.md
+                  - Basic LETS Implementation: uses/lets/basic-imp.md
+                  - Trustless LETS Discussion: uses/trustless-lets_d.md
                   - Context Enrichment: dev/scs/tx/context-enrichment.md
                   - FSM Example: dev/scs/tx/fsm-example.md
                   - ICO Contract: dev/scs/tx/ico.md
@@ -848,13 +844,13 @@ nav:
               - API How-To: dev/stack/api-howto.md
           - Off-Chain Services:
               - dev/oc/off-chain-overview.md
-              - Off-Chain Bots: dev/oc/dex_bots.md
               - Rust Utilities: dev/oc/ergo_utilities.md
 
-          - Tutorials & Recipes:
-              - nav/develop/tutorials-and-recipes/index.md
-              - dev/tutorials.md
-              - Token Integration: tutorials/token_integration.md
+      - Tutorials & Recipes:
+          - nav/develop/tutorials-and-recipes/index.md
+          - dev/tutorials.md
+          - Token Integration: tutorials/token_integration.md
+          - SigmaUSD Developer Notes: uses/sigmausd/sigusd-dev.md
           - Fleet SDK Recipes: dev/tutorials/fleet-sdk-recipes.md
           - Chained Transactions: tutorials/chained-tx.md
           - Hardware Wallets: dev/tutorials/hardware-wallet-integration.md
@@ -869,22 +865,22 @@ nav:
 
       - Cryptography & Data Structures: dev/cryptography-and-data-structures-hub.md
   - Deploy:
-      - nav/deploy/index.md
+      - Deploy Overview: nav/deploy/index.md
       - Infrastructure Overview: dev/interact.md
       - Deployment Runbook: node/deploy-runbook.md
-      - Operations:
-          - nav/deploy/operations/index.md
-          - Hardening: node/operations/hardening.md
-          - Monitoring: node/operations/monitoring.md
-          - Upgrades & Rollback: node/operations/upgrades.md
-          - Backups: node/operations/backups.md
-          - Reverse Proxy: node/operations/reverse-proxy.md
-          - Incident Runbooks: node/operations/incidents.md
-          - Testnet & Devnet Ops: node/operations/testnet-devnet.md
       - The Ergo Node:
           - nav/deploy/the-ergo-node/index.md
           - Install Overview: node/install.md
           - Architecture: node/architecture.md
+          - Operations:
+              - nav/deploy/operations/index.md
+              - Hardening: node/operations/hardening.md
+              - Monitoring: node/operations/monitoring.md
+              - Upgrades & Rollback: node/operations/upgrades.md
+              - Backups: node/operations/backups.md
+              - Reverse Proxy: node/operations/reverse-proxy.md
+              - Incident Runbooks: node/operations/incidents.md
+              - Testnet & Devnet Ops: node/operations/testnet-devnet.md
           - Setup Guides:
               - nav/deploy/the-ergo-node/setup-guides/index.md
               - Desktop & Server:
@@ -981,19 +977,27 @@ nav:
               - Try it out!: node/swagger/swagger_api.md
               - Indexed Node API: node/indexed-node.md
               - Scanner Operations: node/scanner-ops.md
-      - Watchers (Rosen):
-          - nav/deploy/watchers-rosen/index.md
-          - Watcher Overview: eco/rosen/watcher.md
-          - Prerequisites: eco/rosen/rosen-preq.md
-          - Ergo Watcher: eco/rosen/ergo-watcher.md
-          - Bitcoin Watcher: eco/rosen/bitcoin-watcher.md
-      - Guards (Rosen):
-          - nav/deploy/guards-rosen/index.md
-          - Guard Operations: eco/rosen/guard.md
+      - Rosen Bridge:
+          - nav/deploy/rosen-bridge/index.md
+          - Watchers:
+              - nav/deploy/watchers-rosen/index.md
+              - Watcher Overview: eco/rosen/watcher.md
+              - Prerequisites: eco/rosen/rosen-preq.md
+              - Ergo Watcher: eco/rosen/ergo-watcher.md
+              - Bitcoin Watcher: eco/rosen/bitcoin-watcher.md
+          - Guards:
+              - nav/deploy/guards-rosen/index.md
+              - Guard Operations: eco/rosen/guard.md
       - Oracles:
           - nav/deploy/oracles/index.md
           - Oracle Core: dev/oc/oracle.md
           - Bootstrap an Oracle Pool: tutorials/oracle-bootstrap.md
+      - Off-Chain Bots:
+          - nav/deploy/off-chain-bots/index.md
+          - Off-Chain Bot Overview: dev/oc/dex_bots.md
+          - Off-the-Grid Bot: uses/off_the_grid_tut.md
+          - Off-the-Grid Concept: uses/off_the_grid.md
+          - Grid Trading: uses/grid_trading.md
       - Blockchain Indexing:
           - nav/deploy/blockchain-indexing/index.md
           - Indexing Overview: dev/tutorials/blockchain-indexing.md
@@ -1001,9 +1005,8 @@ nav:
           - Explorer API: dev/tutorials/blockchain-indexing/explorer-apis.md
           - Node API (Direct): dev/tutorials/blockchain-indexing/node-api-direct.md
           - Custom Indexer: dev/tutorials/blockchain-indexing/custom-indexer.md
-      - Mining Pool Operations: mining/pool-ops.md
   - Mine:
-      - nav/mine/index.md
+      - Mine Overview: nav/mine/index.md
       - Getting Started:
           - nav/mine/getting-started/index.md
           - mining/mining-overview.md
@@ -1020,6 +1023,7 @@ nav:
           - Withdraw: mining/withdraw.md
       - Pool Operations:
           - nav/mine/pool-operations/index.md
+          - Mining Pool Operations: mining/pool-ops.md
           - Host a Pool: mining/setup/pool.md
           - Stratum: mining/setup/stratum.md
           - MiningCore: mining/setup/miningcore.md
@@ -1048,7 +1052,7 @@ nav:
           - CPU vs GPU: mining/cpu.md
       - Proof-of-Work & Mining Theory: mining/pow-and-mining-theory-hub.md
   - Participate:
-      - nav/participate/index.md
+      - Participate Overview: nav/participate/index.md
       - Participate in Ergo: contribute.md
       - Get Involved:
           - nav/participate/get-involved/index.md
@@ -1116,7 +1120,7 @@ nav:
           - Audit: dev/protocol/audit.md
           - The Howey Test: security.md
   - Reference:
-      - nav/reference/index.md
+      - Reference Section Map: nav/reference/index.md
       - Reference Overview: reference.md
       - Glossary: glossary.md
       - Glossary by Path: glossary-by-path.md

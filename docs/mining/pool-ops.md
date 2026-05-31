@@ -16,7 +16,7 @@ source_of_truth:
 
 # Mining Pool Operations
 
-Mining pool pages live under `Mine`, but pool hosting is operational infrastructure. Use this page as the Deploy entry point.
+Mining pool pages live under `Mine`. Use this page as the pool-operator entry point; the Deploy hub links here for operators who arrive from the infrastructure path.
 
 ## Pool Stack
 
@@ -36,4 +36,3 @@ Mining pool pages live under `Mine`, but pool hosting is operational infrastruct
 - Monitor miners, stale shares, block candidate freshness, and payout queues.
 - Understand EIP-27 / storage rent behavior if pool constructs payout or rent-related transactions.
 - Keep public stratum ports separate from node API and wallet API.
-

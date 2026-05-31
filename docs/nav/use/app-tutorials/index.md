@@ -17,6 +17,6 @@ The table links to the next useful page or sub-hub, keeping the sidebar staged i
 
 | Page | What you'll find |
 | --- | --- |
-| [Airdrops Tutorial](../../../tutorials/airdrops.md) | Within the dynamic Ergo ecosystem, a wealth of opportunities awaits those who actively engage. |
-| [One Stop Shop Tutorial](../../../tutorials/one-stop-shop.md) | This guide helps new Ergonauts navigate wallets, dApps, protocol basics, mining, and community resources. |
-| [Gaming Tutorial](../../../tutorials/gaming-tutorial.md) | CyberVerse is a pixelated, open-world multiplayer game on the Ergo Blockchain. |
+| [Airdrops Tutorial](airdrops.md) | Within the dynamic Ergo ecosystem, a wealth of opportunities awaits those who actively engage. |
+| [One Stop Shop Tutorial](one-stop-shop.md) | This guide helps new Ergonauts navigate wallets, dApps, protocol basics, mining, and community resources. |
+| [Gaming Tutorial](gaming-tutorial.md) | CyberVerse is a pixelated, open-world multiplayer game on the Ergo Blockchain. |

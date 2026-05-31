@@ -14,6 +14,7 @@ source_repos:
 source_of_truth:
   - https://github.com/cannonQ/ergo-transcripts
   - https://ergo-transcripts.vercel.app/
+  - https://ergo-knowledge-base.vercel.app/
   - https://ergo-transcripts.vercel.app/mcp
 ---
 

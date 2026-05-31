@@ -17,8 +17,8 @@ The table links to the next useful page or sub-hub, keeping the sidebar staged i
 
 | Page | What you'll find |
 | --- | --- |
-| [Blocked Web Access](../../../../uses/blocked_web.md) | Access approaches when websites or services are blocked. |
-| [Stealth Addresses](../../../../uses/stealth-address.md) | Stealth Addresses are crafted to ensure recipient privacy during transactions. |
-| [Zero-Knowledge Treasury](../../../../uses/zkt.md) | Ergo's Zero-Knowledge Treasury emerges as a powerful tool enabling users to craft joint digital signatures with custom conditions for fund allocation, all while maintaini... |
-| [Privacy Tools](../../../../uses/mixer.md) | User-facing overview of mixing, stealth addresses, SigmaJoin, and privacy safety notes. |
+| [Blocked Web Access](blocked_web.md) | Access approaches when websites or services are blocked. |
+| [Stealth Addresses](stealth-address.md) | Stealth Addresses are crafted to ensure recipient privacy during transactions. |
+| [Zero-Knowledge Treasury](zkt.md) | Ergo's Zero-Knowledge Treasury emerges as a powerful tool enabling users to craft joint digital signatures with custom conditions for fund allocation, all while maintaini... |
+| [Privacy Tools](mixer.md) | User-facing overview of mixing, stealth addresses, SigmaJoin, and privacy safety notes. |
 | [Privacy Hub](../../../ecosystem/privacy/index.md) | Broader index of privacy projects, proof-of-concept protocols, technical foundations, and developer patterns. |

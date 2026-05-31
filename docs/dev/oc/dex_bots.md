@@ -4,88 +4,168 @@ tags:
   - Bots
   - Off-chain
   - Spectrum
+owner: docs
+last_reviewed: 2026-05-31
+source_repos:
+  - repo: spectrum-finance/ergo-dex-backend
+    branch: master
+    paths:
+      - README.md
+      - config-example.env
+      - docker-compose.yml
+  - repo: spectrum-finance/spectrum-offchain-ergo
+    branch: master
+    paths:
+      - conf/offchain_lm.yml
+      - docs/streams_lm.md
+source_of_truth:
+  - https://github.com/spectrum-finance/ergo-dex-backend
+  - https://github.com/spectrum-finance/spectrum-offchain-ergo
 ---
 
 # Spectrum.DEX off-chain services
 
-> Taken from [ergo-dex-backend](https://github.com/spectrum-finance/ergo-dex-backend)
+Spectrum/ErgoDEX uses off-chain services to watch Ergo, identify executable DEX orders, build transactions, and submit valid state transitions. The contracts validate those transitions on-chain; the bots provide discovery, ordering, transaction construction, and execution.
 
-## Introduction
+This page is for operators. For general architecture, see [Off-Chain Services](off-chain-overview.md).
 
-A set of off-chain services facilitating Spectrum.DEX functioning.
+## Repositories
 
-AMM DEX services:
+| Repository | Role |
+| --- | --- |
+| [spectrum-finance/ergo-dex-backend](https://github.com/spectrum-finance/ergo-dex-backend) | Docker Compose stack for Ergo AMM/order execution services. |
+| [spectrum-finance/spectrum-offchain-ergo](https://github.com/spectrum-finance/spectrum-offchain-ergo) | Rust off-chain workspace with chain sync, mempool sync, backlog, executor, and liquidity-mining components. |
+| [spectrum-finance/ergo-dex](https://github.com/spectrum-finance/ergo-dex) | DEX contracts and protocol specification. |
 
-- UTXO Tracker - extracts AMM orders and pool state updates from the UTXO feed
-- AMM Executor - executes AMM orders into a transaction chain
-- Pool Resolver - tracks pool updates
+## Classic Docker stack
+
+The public operator guide for Spectrum bots is based on `spectrum-finance/ergo-dex-backend`. It runs several services around Kafka, Redis, and an Ergo node.
+
+| Service | Role |
+| --- | --- |
+| `utxo-tracker` | Extracts DEX orders, pool state, ledger events, and mempool events from Ergo data. |
+| `amm-executor` | Executes AMM orders into submitted transactions. |
+| `poolresolver` | Tracks current pool state for execution. |
+| `events-tracker` | Tracks bot events with local RocksDB-backed state. |
+| `kafka` / `init-kafka` | Internal event bus and topic setup. |
+| `redis` | Cache dependency used by the stack. |
+
+The older README also describes order-book components:
+
+- UTXO Tracker: extracts order-book orders from the UTXO feed.
+- Matcher: order-book matching engine.
+- Orders Executor: executes matched orders.
+- Markets API: aggregates market data and exposes API access.
 
 ![AMM Services](../../assets/img/AMM_Backend.png)
 
-OrderBook DEX services:
+## Prerequisites
 
-- UTXO Tracker - extracts orders from the UTXO feed
-- Matcher - order-book matching engine
-- Orders Executor - executes orders
-- Markets API - aggregates market data and provides a convenient API to access it
+- A synced Ergo node.
+- Private access to the node HTTP API.
+- Git.
+- Docker and Docker Compose.
+- A dedicated bot seed phrase with funds for miner fees and any SPF-fee cases.
+
+Public node usage is not recommended for competitive execution because latency lowers the chance that your transaction wins the race for the same input boxes.
 
 ## Building & Running the off-chain services
 
-### Prerequisites
-
-The services require access to an Ergo node, so if you do not have one yet install as instructed here: [Ergo github](https://github.com/ergoplatform/ergo)
-Besides the node the services depend on tools such as Kafka and Redis to run, to make it easier to manage a docker based solution has been made to allow for easy building and running of the services.
-The only requirements besides the node are that you have the following installed:
-
-- GIT to download the code and help fetch updates. [GIT](https://git-scm.com/)
-- SBT (which requires Java) for building the bots. [SBT](https://www.scala-sbt.org/index.html)
-- Docker and Docker-compose (included in Docker for Windows). [Docker](https://www.docker.com/get-started)
-
-### Building
-
-First, you need to download the code from this repo. The easiest way to keep it updated in the future is by using git:
+### 1. Clone the stack
 
 ```bash
-cd <the folder you want to keep the off-chain services code in>
-git clone https://github.com/ergolabs/ergo-dex-backend.git
+git clone https://github.com/spectrum-finance/ergo-dex-backend.git
+cd ergo-dex-backend
 ```
 
-Instructions for building the services are all combined in the build script and the docker-compose.yml file. The only configuration needed for running the services need to be stored in a file called config.env. An example can be found in config-example.env
-Make a copy of the example file, name it config.env and edit the file to match your values:
+### 2. Create config
 
 ```bash
-cd ergo-dex-backend
 cp ./config-example.env ./config.env
 ```
 
-The 2 values that need to be changed in the config.env file are the address you want to receive fees on and the URI to your node (localhost/127.0.0.1 might not be accessible from within a docker container, it is best to use the local lan ip if the node is running on the same host).
-Finally the Docker images need to be build before running them:
+The current example config contains:
 
-```bash
-./build
+```env
+JAVA_TOOL_OPTIONS="-Dnetwork.node-uri=http://<my node ip>:9053 -Dexchange.mnemonic='<my ergo mnemonic>' "
+URL=http://<my node ip>:9053
 ```
 
-### Running the services
+Set the node URI to a reachable host address. `localhost` inside a container may point to the container, not the host node. Put the bot mnemonic in `exchange.mnemonic`, and fund the address that the bot derives from that seed.
 
-Once the Docker images are built the only thing left to do is to run them:
+### 3. Run
 
 ```bash
-./run
+docker-compose up -d
 ```
 
-#### Verifying the services are running correctly
-
-You can look into the logs of the services to ensure they are running correctly. To look at a combined log for all services use the following command:
-Windows:
+Some systems use the newer plugin form:
 
 ```bash
-cd ergo-dex-backend
+docker compose up -d
+```
+
+### 4. Check logs
+
+```bash
+docker-compose logs -f
+```
+
+or:
+
+```bash
 docker compose logs -f
 ```
 
-Linux:
+Look for repeated node connection failures, missing funds, invalid mnemonic, Kafka startup failures, and rejected transactions.
+
+### 5. Update
+
+After every pull, compare `config-example.env` with your local `config.env`.
 
 ```bash
-cd ergo-dex-backend
-sudo docker-compose logs -f
+git pull
+docker-compose pull
+docker-compose up -d
 ```
+
+## Seed handling
+
+Use a bot-only seed phrase. The Spectrum guide notes that bots derive the first address using the EIP-3 path and can only use funds at the address generated from the configured seed. Keep ERG for miner fees in that address, and do not reuse a normal wallet seed.
+
+## Newer Rust off-chain workspace
+
+`spectrum-finance/spectrum-offchain-ergo` is a Rust workspace. It is not the same Docker operator guide, but it is useful for understanding the newer off-chain architecture:
+
+| Component | Role |
+| --- | --- |
+| `ergo-chain-sync` | Reads blocks from node routes such as `/blocks/at/{height}`, `/blocks/{id}/transactions`, `/blocks/{id}/header`, and `/info`. |
+| `ergo-mempool-sync` | Mempool sync library. |
+| `spectrum-offchain` | Shared off-chain primitives for event sources, event sinks, box resolution, backlog, streaming, and execution. |
+| `spectrum-offchain-lm` | Liquidity-mining off-chain app using chain sync, confirmed pool streams, order backlog, schedules, bundles, funding, and an executor. |
+
+The sample `conf/offchain_lm.yml` shows the operator shape:
+
+- `node_addr`
+- chain sync starting height
+- RocksDB paths for chain cache, backlog, pools, programs, bundles, funding, and schedules
+- `operator_reward_addr`
+- `operator_funding_secret`
+- retry and order timing settings
+
+Do not treat the sample seed or public node value as production configuration.
+
+## Operations checklist
+
+- Run the node and bot host on the same LAN or host network where practical.
+- Keep node wallet/API endpoints firewalled.
+- Keep only operational funds in the bot seed.
+- Monitor node height, bot logs, submitted transaction IDs, wallet balance, Kafka/Redis health, and disk usage for volumes/RocksDB.
+- Expect transaction races. If another executor spends an input first, your transaction can fail without indicating a local bug.
+- Before updating, read upstream config changes and restart cleanly.
+
+## Related pages
+
+- [Off-the-Grid Bot](off_the_grid_tut.md)
+- [Grid Trading](grid_trading.md)
+- [Node API Reference](swagger.md)

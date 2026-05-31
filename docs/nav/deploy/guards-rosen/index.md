@@ -7,9 +7,9 @@ owner: docs
 last_reviewed: '2026-05-31'
 ---
 
-# Guards (Rosen)
+# Guards
 
-Guards (Rosen) groups related pages inside Deploy. Rosen guard operations pages.
+Guards groups Rosen guard operations pages.
 
 The table links to the next useful page or sub-hub, keeping the sidebar staged instead of fully expanded.
 
@@ -17,4 +17,4 @@ The table links to the next useful page or sub-hub, keeping the sidebar staged i
 
 | Page | What you'll find |
 | --- | --- |
-| [Guard Operations](../../../eco/rosen/guard.md) | Guards verify watcher-triggered events and coordinate bridge signing. |
+| [Guard Operations](guard.md) | Guards verify watcher-triggered events and coordinate bridge signing. |

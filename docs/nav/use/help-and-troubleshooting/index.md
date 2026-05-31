@@ -17,5 +17,5 @@ The table links to the next useful page or sub-hub, keeping the sidebar staged i
 
 | Page | What you'll find |
 | --- | --- |
-| [Access Issues](../../../tutorials/access-issues.md) | This page provides solutions to common access issues that users may encounter with their Ergo wallets. |
-| [Troubleshooting](../../../support-troubleshooting.md) | Use this page when something is not working and you need the right diagnostic path. |
+| [Access Issues](access-issues.md) | This page provides solutions to common access issues that users may encounter with their Ergo wallets. |
+| [Troubleshooting](support-troubleshooting.md) | Use this page when something is not working and you need the right diagnostic path. |

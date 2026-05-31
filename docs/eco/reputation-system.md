@@ -13,6 +13,7 @@ source_repos:
     paths:
       - README.md
 source_of_truth:
+  - https://reputation-systems.github.io/sigma-reputation-panel/
   - https://github.com/reputation-systems/forum-application
 ia_status: directory
 ---

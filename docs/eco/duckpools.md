@@ -17,6 +17,7 @@ source_repos:
     paths:
       - README.md
 source_of_truth:
+  - https://duckpools.io/
   - https://github.com/duckpools/interest-contracts
   - https://github.com/duckpools/logic-contracts
 ---

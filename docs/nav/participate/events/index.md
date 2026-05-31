@@ -17,7 +17,7 @@ The table links to the next useful page or sub-hub, keeping the sidebar staged i
 
 | Page | What you'll find |
 | --- | --- |
-| [Events Overview](../../../events/events-overview.md) | Ergo hosts a variety of events to engage with the community, share updates, and foster innovation. |
-| [ERGOHACK](../../../events/ergohack.md) | ERGOHACK events are pillars of innovation within the Ergo community. |
-| [ErgoSummit](../../../events/ergosummit.md) | For our fourth anniversary we hosted a jam-packed summit with two dozen videos. |
-| [ErgoHack VII Reputation System](../../../events/pdf/ergohackvii/REPUTATION_SYSTEM.md) | Our purpose to the Ergohack-VII is reputation system. |
+| [Events Overview](events-overview.md) | Ergo hosts a variety of events to engage with the community, share updates, and foster innovation. |
+| [ERGOHACK](ergohack.md) | ERGOHACK events are pillars of innovation within the Ergo community. |
+| [ErgoSummit](ergosummit.md) | For our fourth anniversary we hosted a jam-packed summit with two dozen videos. |
+| [ErgoHack VII Reputation System](REPUTATION_SYSTEM.md) | Our purpose to the Ergohack-VII is reputation system. |

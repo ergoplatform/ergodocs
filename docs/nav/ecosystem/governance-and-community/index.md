@@ -17,11 +17,11 @@ The table links to the next useful page or sub-hub, keeping the sidebar staged i
 
 | Page | What you'll find |
 | --- | --- |
-| [Paideia](../../../eco/paideia.md) | DAO and governance platform documentation. |
-| [ErgoRaffle](../../../eco/ergoraffle.md) | Raffle and community fundraising application. |
-| [Bene](../../../eco/bene.md) | Community and ecosystem project profile. |
-| [Degens.World](../../../eco/degens-world.md) | Organization and community project profile. |
-| [ZenGate](../../../eco/zengate.md) | Organization profile for ZenGate and Palmyra-related work. |
+| [Paideia](paideia.md) | DAO and governance platform documentation. |
+| [ErgoRaffle](ergoraffle.md) | Raffle and community fundraising application. |
+| [Bene](bene.md) | Community and ecosystem project profile. |
+| [Degens.World](degens-world.md) | Organization and community project profile. |
+| [ZenGate](zengate.md) | Organization profile for ZenGate and Palmyra-related work. |
 
 ## Additional & Historical
 
@@ -29,7 +29,7 @@ These pages are indexed here for discovery but kept out of the sidebar because t
 
 | Page | Status | What you'll find |
 | --- | --- | --- |
-| [ErgoPad](../../../eco/ergopad.md) | Paused | Launchpad, IDO, staking, and DAO platform history. |
-| [ErgoNation](../../../eco/ergonation.md) | Paused | Community identity-verification project profile. |
-| [ErgoNames](../../../eco/ergonames.md) | Paused | Decentralized naming-system project profile. |
-| [ErgoWell](../../../eco/ergowell.md) | Proof of concept | Crowdfunding and venture-investment concept. |
+| [ErgoPad](ergopad.md) | Paused | Launchpad, IDO, staking, and DAO platform history. |
+| [ErgoNation](ergonation.md) | Paused | Community identity-verification project profile. |
+| [ErgoNames](ergonames.md) | Paused | Decentralized naming-system project profile. |
+| [ErgoWell](ergowell.md) | Proof of concept | Crowdfunding and venture-investment concept. |

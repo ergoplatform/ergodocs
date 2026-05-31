@@ -27,11 +27,11 @@ These pages are useful context but are not direct sidebar entries because they a
 
 | Page | Status | What you'll find |
 | --- | --- | --- |
-| [PiggyTrade](../../../eco/piggytrade.md) | Superseded | Earlier P2P trading project now superseded by Truffle. |
-| [Sigma'O](../../../eco/sigmao.md) | Paused | Options trading project context. |
-| [Single Transaction Swap](../../../eco/single-tx-swap.md) | Paused | Single-transaction swap concept. |
-| [Moria Finance](../../../eco/moria-finance.md) | Low activity | Finance project profile retained for historical context. |
-| [Sigma Subscriptions](../../../eco/sigma-subscriptions.md) | Stale | Subscription/payment project profile. |
-| [Tensile](../../../eco/tensile.md) | Stale | Financial application project profile. |
-| [OptionCoin](../../../eco/optioncoin.md) | Idea | Options-related concept page. |
-| [The Field](../../../eco/the-field.md) | Idea | Agriculture/real-world finance concept. |
+| [PiggyTrade](piggytrade.md) | Superseded | Earlier P2P trading project now superseded by Truffle. |
+| [Sigma'O](sigmao.md) | Paused | Options trading project context. |
+| [Single Transaction Swap](single-tx-swap.md) | Paused | Single-transaction swap concept. |
+| [Moria Finance](moria-finance.md) | Low activity | Finance project profile retained for historical context. |
+| [Sigma Subscriptions](sigma-subscriptions.md) | Stale | Subscription/payment project profile. |
+| [Tensile](tensile.md) | Stale | Financial application project profile. |
+| [OptionCoin](optioncoin.md) | Idea | Options-related concept page. |
+| [The Field](the-field.md) | Idea | Agriculture/real-world finance concept. |

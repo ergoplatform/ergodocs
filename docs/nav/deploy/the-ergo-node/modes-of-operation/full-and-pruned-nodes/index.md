@@ -17,8 +17,8 @@ The table links to the next useful page or sub-hub, keeping the sidebar staged i
 
 | Page | What you'll find |
 | --- | --- |
-| [Full Node](../../../../../node/modes/full-node.md) | Full-node mode and operational tradeoffs. |
-| [Archival Full Node](../../../../../node/modes/archival-node.md) | The Archival Node Mode is the complete full node in Ergo. |
-| [Archival Workflow](../../../../../node/modes/archive-node-workflow.md) | This document outlines the technical workflow for the full archival node mode in Ergo. |
-| [Pruned Full Node](../../../../../node/modes/pruned-full-node.md) | The Ergo Protocol Reference Client 5.0.13 introduced a new feature: bootstrapping using a verified UTXO set snapshot and NiPoPoWS. |
-| [Pruned Implementation](../../../../../node/modes/pruned/pruned-impl.md) | The UTXO set authentication uses an AVL+ tree, outlined in this research paper and available in the Scrypto framework on GitHub. |
+| [Full Node](full-node.md) | Full-node mode and operational tradeoffs. |
+| [Archival Full Node](archival-node.md) | The Archival Node Mode is the complete full node in Ergo. |
+| [Archival Workflow](archive-node-workflow.md) | This document outlines the technical workflow for the full archival node mode in Ergo. |
+| [Pruned Full Node](pruned-full-node.md) | The Ergo Protocol Reference Client 5.0.13 introduced a new feature: bootstrapping using a verified UTXO set snapshot and NiPoPoWS. |
+| [Pruned Implementation](pruned-impl.md) | The UTXO set authentication uses an AVL+ tree, outlined in this research paper and available in the Scrypto framework on GitHub. |

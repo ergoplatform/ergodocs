@@ -17,5 +17,5 @@ The table links to the next useful page or sub-hub, keeping the sidebar staged i
 
 | Page | What you'll find |
 | --- | --- |
-| [Guide](../../../../dev/integration/guide.md) | This guide explains every step required to connect software and services to the Ergo blockchain. |
-| [Dust Collection](../../../../dev/integration/dust-collection.md) | Back to the main Integration Guide |
+| [Guide](guide.md) | This guide explains every step required to connect software and services to the Ergo blockchain. |
+| [Dust Collection](dust-collection.md) | Back to the main Integration Guide |

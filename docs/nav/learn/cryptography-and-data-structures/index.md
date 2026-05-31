@@ -17,9 +17,9 @@ The table links to the next useful page or sub-hub, keeping the sidebar staged i
 
 | Page | What you'll find |
 | --- | --- |
-| [Cryptography Overview](../../../crypto.md) | Entry point for Ergo cryptography and data-structure concepts. |
-| [Sigma Protocols](../../../dev/scs/sigma.md) | Sigma protocol concepts and signature material. |
+| [Cryptography Overview](crypto.md) | Entry point for Ergo cryptography and data-structure concepts. |
+| [Sigma Protocols](sigma.md) | Sigma protocol concepts and signature material. |
 | [Zero-Knowledge Proofs](zero-knowledge-proofs/index.md) | Zero-knowledge proof pages and related constructions. |
-| [Data Structures](../../../dev/data-model/data-structures.md) | Authenticated data structure pages. |
-| [Proof-of-Proof-of-Work](../../../dev/data-model/structures/popow.md) | Proof of Proof-of-Work (PoPow) is an advanced protocol that enables lightweight clients to securely and efficiently verify that a blockchain follows the longest chain rul... |
-| [Interlink Vectors](../../../dev/data-model/structures/interlink-vectors.md) | Interlink vectors are a fundamental component of the Proof-of-Proof-of-Work (PoPow) protocol in the Ergo blockchain. |
+| [Data Structures](data-structures.md) | Authenticated data structure pages. |
+| [Proof-of-Proof-of-Work](popow.md) | Proof of Proof-of-Work (PoPow) is an advanced protocol that enables lightweight clients to securely and efficiently verify that a blockchain follows the longest chain rul... |
+| [Interlink Vectors](interlink-vectors.md) | Interlink vectors are a fundamental component of the Proof-of-Proof-of-Work (PoPow) protocol in the Ergo blockchain. |

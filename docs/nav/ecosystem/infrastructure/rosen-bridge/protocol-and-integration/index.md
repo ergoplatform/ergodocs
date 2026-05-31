@@ -17,8 +17,8 @@ The table links to the next useful page or sub-hub, keeping the sidebar staged i
 
 | Page | What you'll find |
 | --- | --- |
-| [Concepts & Assumptions](../../../../../eco/rosen/concepts-assumptions.md) | RosenBridge uses a two-layer, Ergo-centric architecture that enables secure cross-chain transfers without deploying smart contracts on external chains. |
-| [Security Model](../../../../../eco/rosen/security-model.md) | This page summarizes RosenBridge’s security goals, trust assumptions, and mitigations against common attack scenarios. |
-| [Metadata Schema](../../../../../eco/rosen/metadata-schema.md) | This page outlines a canonical, human‑readable schema for intent metadata used by Rosen flows. |
-| [New Chain Integration](../../../../../eco/rosen/new-chain-integration.md) | RosenBridge can extend to any blockchain that supports multisignature or threshold signature schemes. |
-| [Monero PoC Design](../../../../../eco/rosen/bringing-monero.md) | Monero’s privacy features make it a special case for cross-chain bridges. |
+| [Concepts & Assumptions](concepts-assumptions.md) | RosenBridge uses a two-layer, Ergo-centric architecture that enables secure cross-chain transfers without deploying smart contracts on external chains. |
+| [Security Model](security-model.md) | This page summarizes RosenBridge’s security goals, trust assumptions, and mitigations against common attack scenarios. |
+| [Metadata Schema](metadata-schema.md) | This page outlines a canonical, human‑readable schema for intent metadata used by Rosen flows. |
+| [New Chain Integration](new-chain-integration.md) | RosenBridge can extend to any blockchain that supports multisignature or threshold signature schemes. |
+| [Monero PoC Design](bringing-monero.md) | Monero’s privacy features make it a special case for cross-chain bridges. |

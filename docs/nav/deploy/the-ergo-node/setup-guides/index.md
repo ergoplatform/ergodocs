@@ -19,4 +19,4 @@ The table links to the next useful page or sub-hub, keeping the sidebar staged i
 | --- | --- |
 | [Desktop & Server](desktop-and-server/index.md) | Desktop and server node installation paths. |
 | [Advanced & Troubleshooting](advanced-and-troubleshooting/index.md) | Advanced install paths and node setup troubleshooting. |
-| [Android](../../../../node/install/node-android.md) | Android node installation pages. |
+| [Android](node-android.md) | Android node installation pages. |

@@ -21,4 +21,4 @@ The table links to the next useful page or sub-hub, keeping the sidebar staged i
 | [Governance](governance/index.md) | Miner governance and fork/voting pages. |
 | [Miner Tooling](miner-tooling/index.md) | Mining-related ecosystem tooling overview. |
 | [Resources](resources/index.md) | Mining resources, revenue, and practical references. |
-| [Proof-of-Work & Mining Theory](../../mining/pow-and-mining-theory-hub.md) | Mining-focused hub linking to the canonical Learn content. |
+| [Proof-of-Work & Mining Theory](pow-and-mining-theory-hub.md) | Mining-focused hub linking to the canonical Learn content. |

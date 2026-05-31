@@ -15,6 +15,7 @@ source_repos:
     paths:
       - README.md
 source_of_truth:
+  - https://rustchain.org/
   - https://github.com/Scottcjn/Rustchain
   - https://github.com/Scottcjn/rustchain-bounties
   - https://github.com/Scottcjn/sophia-rustchain-bridge

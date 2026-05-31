@@ -22,4 +22,5 @@ The table links to the next useful page or sub-hub, keeping the sidebar staged i
 | [Data Model & Transactions](data-model-and-transactions/index.md) | Boxes, assets, transactions, fees, blocks, proofs, and related formats. |
 | [ErgoScript & Smart Contracts](ergoscript-and-smart-contracts/index.md) | ErgoScript, ErgoTree, smart contract concepts, examples, and patterns. |
 | [APIs & Services](apis-and-services/index.md) | Explorer, indexing, node APIs, off-chain services, and integration material. |
-| [Cryptography & Data Structures](../../dev/cryptography-and-data-structures-hub.md) | Developer-focused hub linking to the canonical cryptography, proof, and data-structure references. |
+| [Tutorials & Recipes](tutorials-and-recipes/index.md) | Developer tutorials, integration guides, and practical recipes. |
+| [Cryptography & Data Structures](cryptography-and-data-structures-hub.md) | Developer-focused hub linking to the canonical cryptography, proof, and data-structure references. |

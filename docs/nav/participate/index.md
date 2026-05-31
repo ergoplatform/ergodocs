@@ -16,7 +16,7 @@ The table links to the next useful page or sub-hub, keeping the sidebar staged i
 
 | Page | What you'll find |
 | --- | --- |
-| [Participate in Ergo](../../contribute.md) | Use this section to find contribution paths for community work, documentation, events, funding, governance, and technical collaboration. |
+| [Participate in Ergo](contribute.md) | Use this section to find contribution paths for community work, documentation, events, funding, governance, and technical collaboration. |
 | [Get Involved](get-involved/index.md) | Community entry points and participation paths. |
 | [Events](events/index.md) | Event participation and hackathon material. |
 | [Developer Contributions](developer-contributions/index.md) | Ways developers can contribute to Ergo projects. |

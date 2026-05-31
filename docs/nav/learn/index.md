@@ -16,8 +16,8 @@ The table links to the next useful page or sub-hub, keeping the sidebar staged i
 
 | Page | What you'll find |
 | --- | --- |
-| [Protocol Overview](../../dev/protocol/protocol-overview.md) | Use this section to learn Ergo protocol concepts, research, cryptography, scaling, and background knowledge. |
-| [Why Ergo](../../dev/protocol/why.md) | Ergo is a next-generation smart contract platform that ensures the economic freedom of ordinary people through secure, accessible, and decentralized financial tools. |
+| [Protocol Overview](protocol-overview.md) | Use this section to learn Ergo protocol concepts, research, cryptography, scaling, and background knowledge. |
+| [Why Ergo](why.md) | Ergo is a next-generation smart contract platform that ensures the economic freedom of ordinary people through secure, accessible, and decentralized financial tools. |
 | [Core Concepts](core-concepts/index.md) | Core concept pages for the current section. |
 | [Research Library](research-library/index.md) | Research Library pages collected in one staged branch. |
 | [Roadmap & Scaling](roadmap-and-scaling/index.md) | Roadmap & Scaling pages collected in one staged branch. |

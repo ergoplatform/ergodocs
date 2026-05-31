@@ -17,9 +17,11 @@ The table links to the next useful page or sub-hub, keeping the sidebar staged i
 
 | Page | What you'll find |
 | --- | --- |
-| [eUTxO](../../../dev/protocol/eutxo.md) | eUTxO overview and related conceptual pages. |
-| [NIPoPoWs](../../../dev/protocol/nipopows.md) | NIPoPoW overview and light-client related pages. |
-| [Privacy](../../../dev/protocol/zkp.md) | Privacy-focused tools and related user documentation. |
-| [Storage Rent](../../../dev/protocol/storage-rent.md) | Ergo's design prioritizes long-term economic sustainability. |
-| [Autolykos](../../../dev/protocol/autolykos-protocol.md) | Ergo mining is based on Autolykos, a fairly launched efficient ASIC-resistant Proof of Work algorithm. |
-| [Sigma-6](../../../dev/protocol/sigma-6.md) | Below is a summary of the key information from the Sigma 6.0 EIP (Ergo Improvement Proposal), which details a significant upgrade to the Ergo protocol. |
+| [eUTxO](eutxo.md) | eUTxO overview and related conceptual pages. |
+| [NIPoPoWs](nipopows.md) | NIPoPoW overview and light-client related pages. |
+| [Privacy](zkp.md) | Privacy-focused tools and related user documentation. |
+| [Storage Rent](storage-rent.md) | Ergo's design prioritizes long-term economic sustainability. |
+| [Context Claims](context-claims.md) | Conceptual overview of data-input-based global context claims. |
+| [Oracles](oracles.md) | Conceptual overview of oracle pools and off-chain data feeds. |
+| [Autolykos](autolykos-protocol.md) | Ergo mining is based on Autolykos, a fairly launched efficient ASIC-resistant Proof of Work algorithm. |
+| [Sigma-6](sigma-6.md) | Below is a summary of the key information from the Sigma 6.0 EIP (Ergo Improvement Proposal), which details a significant upgrade to the Ergo protocol. |

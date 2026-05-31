@@ -16,6 +16,7 @@ source_repos:
     paths:
       - README.md
 source_of_truth:
+  - https://gluon.gold/
   - https://github.com/StabilityNexus/Gluon-Ergo-UI
 ---
 

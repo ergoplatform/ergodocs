@@ -17,9 +17,9 @@ The table links to the next useful page or sub-hub, keeping the sidebar staged i
 
 | Page | What you'll find |
 | --- | --- |
-| [Maintainer Guide](../../../start_here.md) | This page is the quick map for people or agents maintaining ErgoDocs. |
-| [Contribute to the Docs!](../../../contribute/docs.md) | We appreciate your interest in contributing to our documentation. |
-| [Content Standards](../../../contribute/content-standards.md) | Use this guide when creating or reviewing Ergo documentation. |
-| [Documentation Lifecycle](../../../contribute/docs-lifecycle.md) | Documentation should move with product and protocol changes. |
-| [Information Architecture](../../../contribute/information-architecture.md) | ErgoDocs has grown from topic pages, ecosystem notes, tutorials, protocol references, and generated API material. |
+| [Maintainer Guide](start_here.md) | This page is the quick map for people or agents maintaining ErgoDocs. |
+| [Contribute to the Docs!](docs.md) | We appreciate your interest in contributing to our documentation. |
+| [Content Standards](content-standards.md) | Use this guide when creating or reviewing Ergo documentation. |
+| [Documentation Lifecycle](docs-lifecycle.md) | Documentation should move with product and protocol changes. |
+| [Information Architecture](information-architecture.md) | ErgoDocs has grown from topic pages, ecosystem notes, tutorials, protocol references, and generated API material. |
 | [Automation](automation/index.md) | Docs automation and maintenance tooling. |

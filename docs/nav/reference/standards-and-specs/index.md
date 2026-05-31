@@ -17,6 +17,6 @@ The table links to the next useful page or sub-hub, keeping the sidebar staged i
 
 | Page | What you'll find |
 | --- | --- |
-| [EIP Index](../../../dev/protocol/eip.md) | Ergo Improvement Proposals (EIPs) are a set of guidelines and standards designed for the continuous improvement of Ergo. |
+| [EIP Index](eip.md) | Ergo Improvement Proposals (EIPs) are a set of guidelines and standards designed for the continuous improvement of Ergo. |
 | [Token Standards](token-standards/index.md) | Token EIPs and contract standards. |
 | [Wallet & Payment Standards](wallet-and-payment-standards/index.md) | Wallet, payment, dApp connector, and ErgoAuth EIPs. |

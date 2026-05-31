@@ -17,9 +17,9 @@ The table links to the next useful page or sub-hub, keeping the sidebar staged i
 
 | Page | What you'll find |
 | --- | --- |
-| [Templates](../../../../../dev/scs/ergotree/ergotree-templates.md) | One issue with embedding constants directly in contracts is that it prevents effective optimization through caching. |
-| [Intro](../../../../../dev/scs/ergotree/ergotree-intro.md) | This section describes the typed abstract syntax of the ErgoTree language, which is used to define logical propositions protecting boxes in the Ergo blockchain. |
-| [Language](../../../../../dev/scs/ergotree/ergotree-lang.md) | ErgoTree language syntax and expression model. |
-| [Types](../../../../../dev/scs/ergotree/types.md) | ErgoTree type system reference. |
-| [Typing](../../../../../dev/scs/ergotree/typing.md) | Typing rules for ErgoTree expressions. |
-| [Functions](../../../../../dev/scs/ergotree/functions.md) | ErgoTree functions and operation reference. |
+| [Templates](ergotree-templates.md) | One issue with embedding constants directly in contracts is that it prevents effective optimization through caching. |
+| [Intro](ergotree-intro.md) | This section describes the typed abstract syntax of the ErgoTree language, which is used to define logical propositions protecting boxes in the Ergo blockchain. |
+| [Language](ergotree-lang.md) | ErgoTree language syntax and expression model. |
+| [Types](types.md) | ErgoTree type system reference. |
+| [Typing](typing.md) | Typing rules for ErgoTree expressions. |
+| [Functions](functions.md) | ErgoTree functions and operation reference. |

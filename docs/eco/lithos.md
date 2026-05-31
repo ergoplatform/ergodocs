@@ -16,6 +16,7 @@ source_repos:
       - TestnetNode.md
 source_of_truth:
   - https://github.com/Lithos-Protocol/Lithos-Client
+  - https://github.com/Lithos-Protocol/LitePaper
   - https://github.com/Lithos-Protocol/Lithos-Client/releases/tag/v4.2.0-test
   - https://github.com/Lithos-Protocol/Lithos-Client/releases/tag/v4.1.0-test
 ---
@@ -34,6 +35,8 @@ Recently, Lithos has completed collateral contracts, and the ability of miners t
 The [Lithos Client](https://github.com/Lithos-Protocol/Lithos-Client) is the reference client for the Lithos Protocol. Recent testnet releases focus on synchronization, mempool tracking, transaction scheduling, rollup evaluation, and Stratum behavior.
 
 The current README describes Lithos as requiring a fully synced Ergo node and Java 11. Miners connect through the Lithos Stratum server, with Rigel Miner recommended. Lithos evaluates Non-Interactive Share Proofs rather than ordinary pool shares, so the miner address and worker name used by the Stratum client are not payout identifiers in the same way they are for a conventional pool.
+
+Earlier SNISP/NISP research is now treated as Lithos background rather than a separate ecosystem project. See [SNISP](snisp.md) for the legacy concept page.
 
 For testnet use, the client needs node API access and a testnet wallet keystore so it can sign and generate transactions. The upstream testnet guide warns users to create a new testnet-only secret key rather than reusing a mainnet wallet.
 

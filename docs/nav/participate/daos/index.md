@@ -18,5 +18,5 @@ The table links to the next useful page or sub-hub, keeping the sidebar staged i
 | Page | What you'll find |
 | --- | --- |
 | [Ergo Foundation](ergo-foundation/index.md) | Foundation history, governance, treasury, and context pages. |
-| [DevDAO](../../../devdao.md) | The Developer DAO (DevDAO) is a decentralized autonomous organization focused on research, development, and maintenance of the Ergo protocol and its associated infrastruc... |
-| [InfraDAO](../../../infradao.md) | InfraDAO is a community-driven initiative focused on funding, coordinating, and maintaining the critical infrastructure that powers the Ergo ecosystem. |
+| [DevDAO](devdao.md) | The Developer DAO (DevDAO) is a decentralized autonomous organization focused on research, development, and maintenance of the Ergo protocol and its associated infrastruc... |
+| [InfraDAO](infradao.md) | InfraDAO is a community-driven initiative focused on funding, coordinating, and maintaining the critical infrastructure that powers the Ergo ecosystem. |

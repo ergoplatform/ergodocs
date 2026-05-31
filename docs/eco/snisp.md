@@ -9,7 +9,9 @@ owner: docs
 last_reviewed: '2026-05-29'
 source_of_truth:
 - https://www.youtube.com/watch?v=x-9x_PveRog
-source_watch_note: Research/concept page; no verified public GitHub repository found.
+ia_status: legacy
+source_watch_note: Research/concept page; this work continued in Lithos rather than
+ as a standalone ecosystem project.
 ---
 
 # SNISP

@@ -31,6 +31,7 @@ Use this section when you need to look something up rather than follow a learnin
  and [EIP-25](eip25.md).
 - [Node Configuration](conf.md): configuration file overview.
 - [testnet.conf](testnetconf.md) and [devnet.conf](devnetconf.md): network-specific node configuration references.
+- Node API Reference: [Swagger Overview](swagger.md), [OpenAPI Spec](openapi.md), and [Try it out](swagger_api.md).
 - [Configuration Reference](configuration.md): index of node, network, and operator configuration pages.
 - [Technical Lookup](technical-lookup.md): API, transaction format, configuration, data model, and serialization references.
 

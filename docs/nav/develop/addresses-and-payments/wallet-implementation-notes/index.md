@@ -17,6 +17,6 @@ The table links to the next useful page or sub-hub, keeping the sidebar staged i
 
 | Page | What you'll find |
 | --- | --- |
-| [Minotaur](../../../../dev/wallet/minotaur.md) | Minotaur stands as the inaugural multi-platform wallet tailored for the Ergo ecosystem, offering a suite of features designed to enhance user experience. |
-| [Minotaur Multi-Sig](../../../../dev/wallet/minotaur-multisig.md) | Minotaur wallet is a multi-platform wallet developed by minotaur-ergo using TypeScript. |
-| [Ledger Developer Mode](../../../../dev/wallet/payments/ledger.md) | The current Ergo Ledger application lives in ergoplatform/ledger-app-ergo. |
+| [Minotaur](minotaur.md) | Minotaur stands as the inaugural multi-platform wallet tailored for the Ergo ecosystem, offering a suite of features designed to enhance user experience. |
+| [Minotaur Multi-Sig](minotaur-multisig.md) | Minotaur wallet is a multi-platform wallet developed by minotaur-ergo using TypeScript. |
+| [Ledger Developer Mode](ledger.md) | The current Ergo Ledger application lives in ergoplatform/ledger-app-ergo. |

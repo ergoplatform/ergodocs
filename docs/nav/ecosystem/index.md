@@ -17,8 +17,8 @@ The table links to the next useful page or sub-hub, keeping the sidebar staged i
 | Page | What you'll find |
 | --- | --- |
 | [Ecosystem Overview](../../eco/index.md) | High-level entry point for the ecosystem section. |
-| [Ecosystem Map](../../uses/use-cases-overview.md) | Map of Ergo capabilities, application areas, and project categories. |
-| [Full Project Directory](../../eco/project-directory.md) | Complete project table, including current, paused, inactive, and historical entries. |
+| [Ecosystem Map](use-cases-overview.md) | Map of Ergo capabilities, application areas, and project categories. |
+| [Full Project Directory](project-directory.md) | Complete project table, including current, paused, inactive, and historical entries. |
 | [Infrastructure](../../eco/infrastructure/index.md) | Bridge, oracle, and service infrastructure projects. |
 | [DeFi & Markets](defi-and-markets/index.md) | Trading, DeFi, stablecoin, lending, and real-world finance projects. |
 | [Governance & Community](governance-and-community/index.md) | DAO, raffle, organization, and community coordination projects. |

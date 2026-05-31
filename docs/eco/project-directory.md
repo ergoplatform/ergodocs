@@ -8,21 +8,21 @@ For external discovery, also check [Sigmaverse](sigmaverse.md).
 
 ### Infrastructure
 
-| Project | Status | Last Git activity |
-| --- | --- | --- |
-| [Rosen Bridge](rosen.md) | Active | 2026-05-28 |
-| [Lithos](lithos.md) | Active | 2026-05-22 |
-| [Oracle Pools](oracles-v2.md) | Active | 2026-01-10 |
+| Project | Live site | Status | Last Git activity |
+| --- | --- | --- | --- |
+| [Rosen Bridge](rosen.md) | [rosen.tech](https://rosen.tech) | Active | 2026-05-28 |
+| [Lithos](lithos.md) | - | Active | 2026-05-22 |
+| [Oracle Pools](oracles-v2.md) | [Oracle Stats](https://error1100.github.io/oracle-stats/), [multi-oracle dashboard](https://multi-oracle-dashboard.vercel.app/) | Active | 2026-01-10 |
 
 ### DeFi & Markets
 
 | Project | Live site | Status | Last Git activity |
 | --- | --- | --- | --- |
-| [Gluon](gluon.md) | - | Active | 2026-05-28 |
+| [Gluon](gluon.md) | [gluon.gold](https://gluon.gold/) | Active | 2026-05-28 |
 | [OptionPools](optionPools.md) | - | Active | 2026-05-18 |
 | [Dexy](dexy.md) | - | Active | 2026-04-24 |
 | [Truffle](truffle.md) | - | Active | 2026-03-31 |
-| [DuckPools](duckpools.md) | - | Active | 2025-12-07 |
+| [DuckPools](duckpools.md) | [duckpools.io](https://duckpools.io/) | Active | 2025-12-07 |
 | [SigmaFi](sigmafi.md) | [sigmafi.app](https://sigmafi.app/) | Live site, rare updates | 2025-10-20 |
 | [EXLE](exle.md) | [exle.io](https://exle.io/) | Live, usable | 2025-07-12 |
 | [Crystal Pool](crystal-pool.md) | [crystalpool.cc](https://crystalpool.cc/) | Live, usable | 2025-05-18 |
@@ -52,38 +52,38 @@ For external discovery, also check [Sigmaverse](sigmaverse.md).
 
 | Project | Live site | Status | Last Git activity |
 | --- | --- | --- | --- |
-| [Blitz TCG](blitz.md) | - | Active | 2026-05-28 |
-| [Game of Prompts](game-of-prompts.md) | - | Active org | 2026-05-28 |
-| [Etcha](etcha.md) | - | Active | 2026-04-10 |
+| [Blitz TCG](blitz.md) | [blitztcg.com](https://blitztcg.com/home) | Active | 2026-05-28 |
+| [Game of Prompts](game-of-prompts.md) | [dev app](https://game-of-prompts.github.io/app/?env=dev) | Active org | 2026-05-28 |
+| [Etcha](etcha.md) | [app](https://ergo-p2p-options-frontend-web.vercel.app/app/wizard) | Active | 2026-04-10 |
 | [Ergo Auction House](ergo-auctions.md) | [ergoauctions.org](http://ergoauctions.org/#/auction/active) | Live, usable | 2025-05-27 |
-| [Cyberverse](cyberverse.md) | - | Unverified | None verified |
+| [Cyberverse](cyberverse.md) | [playcyberverse.com](https://playcyberverse.com/), [viewer](https://cyberverse-viewer.vercel.app/) | Unverified | None verified |
 
 ### Organizations
 
 | Project | Live site | Status | Last Git activity |
 | --- | --- | --- | --- |
-| [Degens.World](degens-world.md) | - | Active | 2026-05-29 |
-| [Mew Finance](mew-finance.md) | - | Active | 2026-05-25 |
+| [Degens.World](degens-world.md) | [degens.world](https://degens.world/) | Active | 2026-05-29 |
+| [Mew Finance](mew-finance.md) | [mewfinance.com](https://mewfinance.com/) | Active | 2026-05-25 |
 | [ZenGate](zengate.md) | [zengate.global](https://www.zengate.global/) | Live organization | None verified |
 
 ### Tools & Data
 
 | Project | Live site | Status | Last Git activity |
 | --- | --- | --- | --- |
-| [RustChain](rust-chain.md) | - | Active | 2026-05-29 |
-| [BoTTube](bottube.md) | - | Active | 2026-05-27 |
-| [Crux Finance](crux.md) | - | Active | 2026-05-25 |
+| [RustChain](rust-chain.md) | [rustchain.org](https://rustchain.org/) | Active | 2026-05-29 |
+| [BoTTube](bottube.md) | [bottube.ai](https://bottube.ai/) | Active | 2026-05-27 |
+| [Crux Finance](crux.md) | [cruxfinance.io](https://cruxfinance.io/) | Active | 2026-05-25 |
 | [Celaut](celaut.md) | - | Active | 2026-05-21 |
 | [Netnotes](netnotes.md) | - | Active | 2026-05-19 |
 | [Ergo Relay](ergo-relay.md) | - | Active | 2026-04-13 |
-| [Reputation System](reputation-system.md) | - | Active | 2026-04-07 |
+| [Reputation System](reputation-system.md) | [Sigma Reputation Panel](https://reputation-systems.github.io/sigma-reputation-panel/) | Active | 2026-04-07 |
 | [Ergo Proxy](ergo-proxy.md) | - | Active | 2026-03-31 |
-| [Ergo Knowledge Base](ergo-knowledge-base.md) | - | Active | 2026-03-10 |
+| [Ergo Knowledge Base](ergo-knowledge-base.md) | [transcripts](https://ergo-transcripts.vercel.app/), [knowledge base](https://ergo-knowledge-base.vercel.app/) | Active | 2026-03-10 |
 | [Ergo Agent SDK](ergo-agent-sdk.md) | - | Active | 2026-03-01 |
 | [Vanity GPU](vanity-gpu.md) | - | Active | 2026-01-05 |
-| [Ergomempool Visualizer](mempool-vis.md) | - | Active | 2025-12-04 |
+| [Ergomempool Visualizer](mempool-vis.md) | [ergomempool.com](https://ergomempool.com/) | Active | 2025-12-04 |
 | [ErgOne](ergone.md) | [app.ergone.io](https://app.ergone.io/) | Live, usable | 2024-09-02 |
-| [GuapSwap](guapswap.md) | - | Live, usable | 2024-01-20 |
+| [GuapSwap](guapswap.md) | [guapswap.org](https://guapswap.org/) | Live, usable | 2024-01-20 |
 | [CYTI](cyti.md) | - | Live, usable | 2023-05-20 |
 | [Token Jay](token-jay.md) | [tokenjay.app](https://tokenjay.app/) | Live closed-source | None verified |
 
@@ -113,11 +113,10 @@ For external discovery, also check [Sigmaverse](sigmaverse.md).
 | Project | Status | Last Git activity |
 | --- | --- | --- |
 | [SCypher](scypher.md) | Unverified | None verified |
-| [SigmaQuest](sigmaquest.md) | No public repo verified | None verified |
+| [SigmaQuest](sigmaquest.md) | Private until quest completion | None verified |
 | [Cyberaid](cyberaid.md) | No public repo verified | None verified |
 | [Solaris](solaris.md) | No public repo verified | None verified |
 | [On-chain Social](onchain-social.md) | No public repo verified | None verified |
-| [SNISP](snisp.md) | No public repo verified | None verified |
 
 ### Ideas, Closed Source, Aliases, and Non-Code
 
@@ -131,6 +130,7 @@ For external discovery, also check [Sigmaverse](sigmaverse.md).
 | [Grand Gambit](grand-gambit.md) | Closed source | None verified |
 | [The Field](the-field.md) | Idea | None verified |
 | [ONERGO](onergo.md) | Non-code | None verified |
+| [SNISP](snisp.md) | Folded into Lithos | None verified |
 
 ### Historical, Dormant, or Paused
 

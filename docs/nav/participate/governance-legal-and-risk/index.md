@@ -17,6 +17,6 @@ The table links to the next useful page or sub-hub, keeping the sidebar staged i
 
 | Page | What you'll find |
 | --- | --- |
-| [Social Contract](../../../social_contract.md) | The Ergo protocol is very flexible and may be changed in the future by the community. |
-| [Audit](../../../dev/protocol/audit.md) | Ergo has successfully passed a security audit of certain (most critical) parts of the code. |
-| [The Howey Test](../../../security.md) | Legal-risk background for token and securities discussions. |
+| [Social Contract](social_contract.md) | The Ergo protocol is very flexible and may be changed in the future by the community. |
+| [Audit](audit.md) | Ergo has successfully passed a security audit of certain (most critical) parts of the code. |
+| [The Howey Test](security.md) | Legal-risk background for token and securities discussions. |

@@ -17,6 +17,6 @@ The table links to the next useful page or sub-hub, keeping the sidebar staged i
 
 | Page | What you'll find |
 | --- | --- |
-| [Financial Options](../../../../../uses/financial-options.md) | An option is a financial contract that gives the buyer the right, but not the obligation, to buy or sell an underlying asset at a specific price and at a specific time. |
-| [Insurance](../../../../../uses/insurance.md) | The insurance sector is a significant part of the finance industry. |
-| [Lending](../../../../../uses/lending.md) | Use this page to find lending, borrowing, credit, and yield-related material in the Ergo ecosystem. |
+| [Financial Options](financial-options.md) | An option is a financial contract that gives the buyer the right, but not the obligation, to buy or sell an underlying asset at a specific price and at a specific time. |
+| [Insurance](insurance.md) | The insurance sector is a significant part of the finance industry. |
+| [Lending](lending.md) | Use this page to find lending, borrowing, credit, and yield-related material in the Ergo ecosystem. |

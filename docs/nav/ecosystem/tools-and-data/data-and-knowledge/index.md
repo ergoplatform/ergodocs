@@ -17,7 +17,7 @@ The table links to the next useful page or sub-hub, keeping the sidebar staged i
 
 | Page | What you'll find |
 | --- | --- |
-| [Crux Finance](../../../../eco/crux.md) | Portfolio and charting tool for Ergo assets. |
-| [Ergo Knowledge Base](../../../../eco/ergo-knowledge-base.md) | Searchable Ergo knowledge base and transcript tooling. |
-| [Mempool Visualizer](../../../../eco/mempool-vis.md) | Visualization tool for Ergo mempool activity. |
-| [Token Jay](../../../../eco/token-jay.md) | Token utility and management tool for Ergo. |
+| [Crux Finance](crux.md) | Portfolio and charting tool for Ergo assets. |
+| [Ergo Knowledge Base](ergo-knowledge-base.md) | Searchable Ergo knowledge base and transcript tooling. |
+| [Mempool Visualizer](mempool-vis.md) | Visualization tool for Ergo mempool activity. |
+| [Token Jay](token-jay.md) | Token utility and management tool for Ergo. |

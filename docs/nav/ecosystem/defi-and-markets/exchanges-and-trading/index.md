@@ -17,9 +17,9 @@ The table links to the next useful page or sub-hub, keeping the sidebar staged i
 
 | Page | What you'll find |
 | --- | --- |
-| [ErgoDex](../../../../eco/spectrum.md) | Ergo DEX infrastructure and exchange documentation. |
-| [Mew Finance](../../../../eco/mew-finance.md) | DeFi platform and market tooling on Ergo. |
-| [Crystal Pool](../../../../eco/crystal-pool.md) | Order-book style DEX on Ergo. |
-| [Truffle](../../../../eco/truffle.md) | Self-custodial mobile trading app and wallet for Ergo. |
-| [Etcha](../../../../eco/etcha.md) | P2P options interface for oracle-tracked assets. |
-| [P2P Trading](../../../../eco/p2p-trading.md) | Peer-to-peer trading patterns and related Ergo tooling. |
+| [ErgoDex](spectrum.md) | Ergo DEX infrastructure and exchange documentation. |
+| [Mew Finance](mew-finance.md) | DeFi platform and market tooling on Ergo. |
+| [Crystal Pool](crystal-pool.md) | Order-book style DEX on Ergo. |
+| [Truffle](truffle.md) | Self-custodial mobile trading app and wallet for Ergo. |
+| [Etcha](etcha.md) | P2P options interface for oracle-tracked assets. |
+| [P2P Trading](p2p-trading.md) | Peer-to-peer trading patterns and related Ergo tooling. |

@@ -17,8 +17,8 @@ The table links to the next useful page or sub-hub, keeping the sidebar staged i
 
 | Page | What you'll find |
 | --- | --- |
-| [Documents](../../../documents.md) | Ergo is following the fundamental approach and use stable well-tested solutions, even if that leads to slower short-term innovations. |
-| [Artificial Economic Intelligence](../../../ai.md) | This Learn page discusses emerging AI and autonomous-agent ideas that use Ergo concepts. |
-| [Whitepaper](../../../doc/whitepaper.md) | Core Ergo whitepaper. |
-| [ErgoScript Whitepaper](../../../doc/ergoscript-whitepaper.md) | ErgoScript whitepaper and formal smart-contract model. |
-| [On Contractual Money](../../../doc/on-contractual-money.md) | Authors: Alexander Chepurnoy, Amitabh Saxena Institution: Ergo Platform |
+| [Documents](documents.md) | Ergo is following the fundamental approach and use stable well-tested solutions, even if that leads to slower short-term innovations. |
+| [Artificial Economic Intelligence](ai.md) | This Learn page discusses emerging AI and autonomous-agent ideas that use Ergo concepts. |
+| [Whitepaper](whitepaper.md) | Core Ergo whitepaper. |
+| [ErgoScript Whitepaper](ergoscript-whitepaper.md) | ErgoScript whitepaper and formal smart-contract model. |
+| [On Contractual Money](on-contractual-money.md) | Authors: Alexander Chepurnoy, Amitabh Saxena Institution: Ergo Platform |

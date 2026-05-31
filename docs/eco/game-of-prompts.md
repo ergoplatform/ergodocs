@@ -20,6 +20,7 @@ source_repos:
     paths:
       - README.md
 source_of_truth:
+  - https://game-of-prompts.github.io/app/?env=dev
   - https://github.com/game-of-prompts/ergo-hack-x
   - https://github.com/game-of-prompts/app
   - https://github.com/game-of-prompts/snake-game

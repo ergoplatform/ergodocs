@@ -17,9 +17,9 @@ The table links to the next useful page or sub-hub, keeping the sidebar staged i
 
 | Page | What you'll find |
 | --- | --- |
-| [Netnotes](../../../../eco/netnotes.md) | User application for Ergo wallet and utility workflows. |
-| [ErgOne](../../../../eco/ergone.md) | Wallet and utility app documentation. |
-| [GuapSwap](../../../../eco/guapswap.md) | Token and utility tool documentation. |
-| [CYTI](../../../../eco/cyti.md) | Token index and ecosystem utility page. |
-| [RustChain](../../../../eco/rust-chain.md) | Experimental chain and AI-integration project profile. |
-| [BoTTube](../../../../eco/bottube.md) | AI-native video and media platform project profile. |
+| [Netnotes](netnotes.md) | User application for Ergo wallet and utility workflows. |
+| [ErgOne](ergone.md) | Wallet and utility app documentation. |
+| [GuapSwap](guapswap.md) | Token and utility tool documentation. |
+| [CYTI](cyti.md) | Token index and ecosystem utility page. |
+| [RustChain](rust-chain.md) | Experimental chain and AI-integration project profile. |
+| [BoTTube](bottube.md) | AI-native video and media platform project profile. |

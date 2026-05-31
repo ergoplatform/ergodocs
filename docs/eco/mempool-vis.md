@@ -17,6 +17,7 @@ source_repos:
       - package.json
       - src/routes
 source_of_truth:
+  - https://ergomempool.com/
   - https://github.com/2ndtlmining/Ergomempool
   - https://github.com/SavonarolaLabs/memepool
 ---

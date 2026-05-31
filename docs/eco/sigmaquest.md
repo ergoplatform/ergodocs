@@ -3,8 +3,8 @@ owner: docs
 last_reviewed: '2026-05-29'
 source_of_truth:
 - https://drive.google.com/file/d/1mH5Q7T6SHXzQAlpP-tfwWfgkL4rn0wuJ/view?usp=sharing
-source_watch_note: ErgoHack project with docs/demo links; no verified public GitHub
- repository found.
+source_watch_note: ErgoHack project with docs/demo and Discord progress leads; project
+ code is intentionally private until the quest is completed.
 ia_status: directory
 ---
 # SigmaQuest: A Blockchain-Integrated Sci-Fi Puzzle Game
@@ -112,4 +112,4 @@ During ErgoHack 10, the SigmaQuest project has successfully implemented and demo
 
 ### 11. Contribution
 
-The creator intends to open-source the entire project. However, to safeguard the "Honeypot" (the ERG prize pool), the project's code will not be made public until a winner has successfully completed the quest and claimed the prize.
+The creator intends to open-source the entire project. However, to safeguard the "Honeypot" (the ERG prize pool), the project's code will not be made public until a winner has successfully completed the quest and claimed the prize. A June 2025 Discord development update described backend and frontend rework around payment validation, but did not expose a public repository.

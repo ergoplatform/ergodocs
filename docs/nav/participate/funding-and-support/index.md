@@ -17,6 +17,6 @@ The table links to the next useful page or sub-hub, keeping the sidebar staged i
 
 | Page | What you'll find |
 | --- | --- |
-| [Funding](../../../contribute/funding.md) | There are multiple ways to secure funding for work in the Ergo ecosystem. |
-| [Bounties](../../../contribute/bounties.md) | Welcome to the Ergo Bounties page! This is your gateway to contributing to the Ergo community and being rewarded for your valuable efforts. |
-| [Grants](../../../contribute/grants.md) | We suggest that your initial step should be to launch a Raffle. |
+| [Funding](funding.md) | There are multiple ways to secure funding for work in the Ergo ecosystem. |
+| [Bounties](bounties.md) | Welcome to the Ergo Bounties page! This is your gateway to contributing to the Ergo community and being rewarded for your valuable efforts. |
+| [Grants](grants.md) | We suggest that your initial step should be to launch a Raffle. |

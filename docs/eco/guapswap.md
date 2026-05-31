@@ -20,6 +20,7 @@ source_repos:
     paths:
       - README.md
 source_of_truth:
+  - https://guapswap.org/
   - https://github.com/GuapSwap/guapswap
   - https://github.com/GuapSwap/guapswaplib
   - https://github.com/GuapSwap/guapswap-tui

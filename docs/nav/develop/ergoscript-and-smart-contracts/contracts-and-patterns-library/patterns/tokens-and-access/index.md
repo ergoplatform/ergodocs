@@ -17,7 +17,7 @@ The table links to the next useful page or sub-hub, keeping the sidebar staged i
 
 | Page | What you'll find |
 | --- | --- |
-| [Perpetual Token](../../../../../../dev/contracts/pattern-perpetual-token.md) | Contract pattern for perpetual-token behavior. |
-| [Whitelist-only Token](../../../../../../dev/contracts/pattern-whitelist-token.md) | Contract pattern for allowlisted token access. |
-| [Daily Withdrawal Limit](../../../../../../dev/contracts/pattern-daily-withdrawal-limit.md) | Contract pattern for capped daily withdrawals. |
-| [Stealth Address](../../../../../../dev/contracts/pattern-stealth-address.md) | Developer pattern for stealth-address workflows. |
+| [Perpetual Token](pattern-perpetual-token.md) | Contract pattern for perpetual-token behavior. |
+| [Whitelist-only Token](pattern-whitelist-token.md) | Contract pattern for allowlisted token access. |
+| [Daily Withdrawal Limit](pattern-daily-withdrawal-limit.md) | Contract pattern for capped daily withdrawals. |
+| [Stealth Address](pattern-stealth-address.md) | Developer pattern for stealth-address workflows. |

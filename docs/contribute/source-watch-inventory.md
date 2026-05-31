@@ -17,19 +17,19 @@ Source Watch checks watched repositories for commits touching declared paths and
 
 ## Summary
 
-- Source-watched pages: `230`
-- Watched repositories: `213`
-- Watched GitHub owners: `96`
-- Watched repo/branch pairs: `219`
-- Watched paths: `454`
+- Source-watched pages: `232`
+- Watched repositories: `216`
+- Watched GitHub owners: `97`
+- Watched repo/branch pairs: `222`
+- Watched paths: `463`
 
 ## Coverage Groups
 
 | Group | Owners | Repositories | Pages | Paths |
 | --- | ---: | ---: | ---: | ---: |
 | Core / infrastructure | 5 | 30 | 130 | 178 |
-| Ecosystem org | 10 | 33 | 22 | 28 |
-| Developer / project | 77 | 146 | 108 | 81 |
+| Ecosystem org | 10 | 35 | 23 | 32 |
+| Developer / project | 78 | 147 | 109 | 84 |
 | External standard/vendor | 4 | 4 | 11 | 13 |
 
 ## Coverage By Area
@@ -37,7 +37,7 @@ Source Watch checks watched repositories for commits touching declared paths and
 | Area | Source-watched pages |
 | --- | ---: |
 | `contribute` | 2 |
-| `dev` | 96 |
+| `dev` | 97 |
 | `doc` | 1 |
 | `docs` | 9 |
 | `eco` | 73 |
@@ -46,7 +46,7 @@ Source Watch checks watched repositories for commits touching declared paths and
 | `mining` | 7 |
 | `node` | 25 |
 | `tutorials` | 6 |
-| `uses` | 9 |
+| `uses` | 10 |
 
 ## Coverage By GitHub Owner
 
@@ -80,6 +80,7 @@ Source Watch checks watched repositories for commits touching declared paths and
 | [`Lithos-Protocol`](https://github.com/Lithos-Protocol) | Ecosystem org | 2 | 3 | 4 |
 | [`ross-weir`](https://github.com/ross-weir) | Developer / project | 3 | 3 | 3 |
 | [`Scottcjn`](https://github.com/Scottcjn) | Developer / project | 4 | 3 | 2 |
+| [`spectrum-finance`](https://github.com/spectrum-finance) | Ecosystem org | 3 | 3 | 6 |
 | [`4EYESConsulting`](https://github.com/4EYESConsulting) | Developer / project | 1 | 2 | 1 |
 | [`celaut-project`](https://github.com/celaut-project) | Developer / project | 2 | 2 | 1 |
 | [`ergoMixer`](https://github.com/ergoMixer) | Developer / project | 1 | 2 | 2 |
@@ -100,7 +101,6 @@ Source Watch checks watched repositories for commits touching declared paths and
 | [`Satergo`](https://github.com/Satergo) | Developer / project | 1 | 2 | 5 |
 | [`satoshilabs`](https://github.com/satoshilabs) | External standard/vendor | 1 | 2 | 1 |
 | [`scalahub`](https://github.com/scalahub) | Core / infrastructure | 1 | 2 | 5 |
-| [`spectrum-finance`](https://github.com/spectrum-finance) | Ecosystem org | 1 | 2 | 1 |
 | [`StabilityNexus`](https://github.com/StabilityNexus) | Developer / project | 2 | 2 | 1 |
 | [`2ndtlmining`](https://github.com/2ndtlmining) | Developer / project | 1 | 1 | 1 |
 | [`AcoSmrkas`](https://github.com/AcoSmrkas) | Developer / project | 5 | 1 | 1 |
@@ -146,6 +146,7 @@ Source Watch checks watched repositories for commits touching declared paths and
 | [`sdaveas`](https://github.com/sdaveas) | Developer / project | 1 | 1 | 1 |
 | [`sigmastamp`](https://github.com/sigmastamp) | Developer / project | 1 | 1 | 1 |
 | [`skyharbor-market`](https://github.com/skyharbor-market) | Developer / project | 1 | 1 | 2 |
+| [`Telefragged`](https://github.com/Telefragged) | Developer / project | 1 | 1 | 4 |
 | [`The-Last-Byte-Bar`](https://github.com/The-Last-Byte-Bar) | Developer / project | 2 | 1 | 1 |
 | [`WilfordGrimley`](https://github.com/WilfordGrimley) | Developer / project | 1 | 1 | 1 |
 
@@ -358,8 +359,11 @@ Source Watch checks watched repositories for commits touching declared paths and
 | [`sdaveas/nipopow-verifier`](https://github.com/sdaveas/nipopow-verifier) | Developer / project | `master` | 1 | 1 |
 | [`sigmastamp/sigmastamp-frontend`](https://github.com/sigmastamp/sigmastamp-frontend) | Developer / project | `main` | 1 | 1 |
 | [`skyharbor-market/frontend-skyharbor-ts`](https://github.com/skyharbor-market/frontend-skyharbor-ts) | Developer / project | `main` | 1 | 2 |
+| [`spectrum-finance/ergo-dex-backend`](https://github.com/spectrum-finance/ergo-dex-backend) | Ecosystem org | `master` | 1 | 3 |
+| [`spectrum-finance/spectrum-offchain-ergo`](https://github.com/spectrum-finance/spectrum-offchain-ergo) | Ecosystem org | `master` | 1 | 2 |
 | [`StabilityNexus/BenefactionPlatform-Ergo`](https://github.com/StabilityNexus/BenefactionPlatform-Ergo) | Developer / project | `main` | 1 | 1 |
 | [`StabilityNexus/Gluon-Ergo-UI`](https://github.com/StabilityNexus/Gluon-Ergo-UI) | Developer / project | `main` | 1 | 1 |
+| [`Telefragged/off-the-grid`](https://github.com/Telefragged/off-the-grid) | Developer / project | `master` | 1 | 4 |
 | [`The-Last-Byte-Bar/Miner-Rights-Protocol`](https://github.com/The-Last-Byte-Bar/Miner-Rights-Protocol) | Developer / project | `main` | 1 | 1 |
 | [`The-Last-Byte-Bar/Token-Flight-Bot`](https://github.com/The-Last-Byte-Bar/Token-Flight-Bot) | Developer / project | `main` | 1 | 1 |
 | [`ThierryM1212/blobs-topia`](https://github.com/ThierryM1212/blobs-topia) | Developer / project | `main` | 1 | 1 |
@@ -611,8 +615,11 @@ Source Watch checks watched repositories for commits touching declared paths and
 | [`sigmastamp/sigmastamp-frontend`](https://github.com/sigmastamp/sigmastamp-frontend) | `main` | `README.md` | `docs/eco/sigma-stamp.md` |
 | [`skyharbor-market/frontend-skyharbor-ts`](https://github.com/skyharbor-market/frontend-skyharbor-ts) | `main` | `README.md`<br>`src` | `docs/eco/skyharbor.md` |
 | [`spectrum-finance/ergo-dex`](https://github.com/spectrum-finance/ergo-dex) | `master` | `contracts` | `docs/dev/scs/contracts.md`<br>`docs/eco/spectrum.md` |
+| [`spectrum-finance/ergo-dex-backend`](https://github.com/spectrum-finance/ergo-dex-backend) | `master` | `README.md`<br>`config-example.env`<br>`docker-compose.yml` | `docs/dev/oc/dex_bots.md` |
+| [`spectrum-finance/spectrum-offchain-ergo`](https://github.com/spectrum-finance/spectrum-offchain-ergo) | `master` | `conf/offchain_lm.yml`<br>`docs/streams_lm.md` | `docs/dev/oc/dex_bots.md` |
 | [`StabilityNexus/BenefactionPlatform-Ergo`](https://github.com/StabilityNexus/BenefactionPlatform-Ergo) | `main` | `README.md` | `docs/eco/bene.md` |
 | [`StabilityNexus/Gluon-Ergo-UI`](https://github.com/StabilityNexus/Gluon-Ergo-UI) | `main` | `README.md` | `docs/eco/gluon.md` |
+| [`Telefragged/off-the-grid`](https://github.com/Telefragged/off-the-grid) | `master` | `README.md`<br>`cli/src/commands`<br>`matcher_config.json`<br>`node_config.json` | `docs/uses/off_the_grid_tut.md` |
 | [`The-Last-Byte-Bar/Miner-Rights-Protocol`](https://github.com/The-Last-Byte-Bar/Miner-Rights-Protocol) | `main` | `README.md` | `docs/eco/miners-rights.md` |
 | [`The-Last-Byte-Bar/Token-Flight-Bot`](https://github.com/The-Last-Byte-Bar/Token-Flight-Bot) | `main` | `README.md` | `docs/eco/miners-rights.md` |
 | [`ThierryM1212/blobs-topia`](https://github.com/ThierryM1212/blobs-topia) | `main` | `README.md` | `docs/eco/blobstopia.md` |

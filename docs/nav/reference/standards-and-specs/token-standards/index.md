@@ -17,7 +17,7 @@ The table links to the next useful page or sub-hub, keeping the sidebar staged i
 
 | Page | What you'll find |
 | --- | --- |
-| [Asset Standard (EIP-4)](../../../../dev/tokens/standards/eip4.md) | This standard provides a uniform way to issue Ergo tokens. |
-| [Genuine Token Verification (EIP-21)](../../../../dev/tokens/standards/eip21.md) | This EIP lists the common tokens of value with their unique identifier, so users as well as wallet and explorer applications can verify if a token is genuine. |
-| [Auction Contract (EIP-22)](../../../../dev/tokens/standards/eip22.md) | Decentralized auctioning of any kind of tokens (artwork, share tokens, etc.) is an important part of any blockchain. |
-| [Artwork Contract (EIP-24)](../../../../dev/tokens/standards/eip24.md) | With the discovery that we can easily use spent boxes in contracts (see here), some new features are introduced for artworks and can be extended further in the future. |
+| [Asset Standard (EIP-4)](eip4.md) | This standard provides a uniform way to issue Ergo tokens. |
+| [Genuine Token Verification (EIP-21)](eip21.md) | This EIP lists the common tokens of value with their unique identifier, so users as well as wallet and explorer applications can verify if a token is genuine. |
+| [Auction Contract (EIP-22)](eip22.md) | Decentralized auctioning of any kind of tokens (artwork, share tokens, etc.) is an important part of any blockchain. |
+| [Artwork Contract (EIP-24)](eip24.md) | With the discovery that we can easily use spent boxes in contracts (see here), some new features are introduced for artworks and can be extended further in the future. |

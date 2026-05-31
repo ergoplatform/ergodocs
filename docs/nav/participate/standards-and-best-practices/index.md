@@ -17,10 +17,10 @@ The table links to the next useful page or sub-hub, keeping the sidebar staged i
 
 | Page | What you'll find |
 | --- | --- |
-| [Ecosystem Standards](../../../contribute/ecosystem-standards.md) | Community expectations for projects, metadata, and documentation. |
-| [Chat Bridge](../../../contribute/standards/chat-bridge.md) | We welcome all ecosystem projects to establish a channel that is bridged between their server/telegram using matterbridge. |
-| [ErgoTipperBot](../../../contribute/standards/tipbot.md) | This page describes how to set up the ErgoTipperBot on each platform. |
-| [KYA](../../../contribute/standards/kya.md) | The Ergo ecosystem embraces the KYA (Know Your Assumptions) model, promoting transparency and user awareness regarding the assumptions made when interacting with decentra... |
-| [Community Guidelines](../../../contribute/standards/guidelines.md) | Welcome to our community! We believe in maintaining a positive and inclusive environment for all our members. |
-| [Moderation Guide](../../../contribute/standards/moderation.md) | Maintaining a healthy and welcoming community is crucial for fostering productive discussions and collaboration. |
-| [Analytics](../../../contribute/standards/analytics.md) | For on-chain metrics such as P2PK count, you can refer to ergo.watch. |
+| [Ecosystem Standards](ecosystem-standards.md) | Community expectations for projects, metadata, and documentation. |
+| [Chat Bridge](chat-bridge.md) | We welcome all ecosystem projects to establish a channel that is bridged between their server/telegram using matterbridge. |
+| [ErgoTipperBot](tipbot.md) | This page describes how to set up the ErgoTipperBot on each platform. |
+| [KYA](kya.md) | The Ergo ecosystem embraces the KYA (Know Your Assumptions) model, promoting transparency and user awareness regarding the assumptions made when interacting with decentra... |
+| [Community Guidelines](guidelines.md) | Welcome to our community! We believe in maintaining a positive and inclusive environment for all our members. |
+| [Moderation Guide](moderation.md) | Maintaining a healthy and welcoming community is crucial for fostering productive discussions and collaboration. |
+| [Analytics](analytics.md) | For on-chain metrics such as P2PK count, you can refer to ergo.watch. |

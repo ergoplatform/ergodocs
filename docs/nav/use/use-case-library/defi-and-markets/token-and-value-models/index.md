@@ -17,6 +17,6 @@ The table links to the next useful page or sub-hub, keeping the sidebar staged i
 
 | Page | What you'll find |
 | --- | --- |
-| [DegFi](../../../../../uses/degfi.md) | It's important to reiterate the significance of knowing your assumptions when participating in experimental decentralized finance. |
-| [Index Coins](../../../../../uses/index_coins.md) | Not all crypto investors are conscient of different blockchain use cases. |
-| [Profit Sharing](../../../../../uses/profit.md) | This service will provide a way for dApps to distribute gains among dApps' token holders. |
+| [DegFi](degfi.md) | It's important to reiterate the significance of knowing your assumptions when participating in experimental decentralized finance. |
+| [Index Coins](index_coins.md) | Not all crypto investors are conscient of different blockchain use cases. |
+| [Profit Sharing](profit.md) | This service will provide a way for dApps to distribute gains among dApps' token holders. |

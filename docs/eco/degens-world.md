@@ -41,6 +41,7 @@ source_repos:
     paths:
       - README.md
 source_of_truth:
+  - https://degens.world/
   - https://github.com/Degens-World/Ergo-MCP
   - https://github.com/Degens-World/Ergo-MCP/releases/tag/v0.2.0
   - https://github.com/Degens-World/Ergo-Node-CLI

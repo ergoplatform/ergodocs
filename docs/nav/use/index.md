@@ -22,5 +22,5 @@ The table links to the next useful page or sub-hub, keeping the sidebar staged i
 | [App Tutorials](app-tutorials/index.md) | User-facing tutorials for apps and dApps. |
 | [DeFi & Trading](defi-and-trading/index.md) | Tutorials for farming, arbitrage, lending, options, and liquidity positions. |
 | [What You Can Do](what-you-can-do/index.md) | High-level user-facing overviews of common Ergo use cases. |
-| [Use Case Library](use-case-library/index.md) | Deeper user-facing use-case pages kept out of the main Use sidebar. |
+| [Use Cases](use-case-library/index.md) | Deeper user-facing use-case pages kept out of the main Use sidebar. |
 | [Help & Troubleshooting](help-and-troubleshooting/index.md) | User-facing help for access and common problems. |

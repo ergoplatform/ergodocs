@@ -47,6 +47,7 @@ source_repos:
       - src/routes
       - src/lib
 source_of_truth:
+  - https://rosen.tech
   - https://github.com/rosen-bridge/watcher/releases/tag/6.2.1
   - https://github.com/rosen-bridge/guard-service/releases/tag/9.1.1
   - https://github.com/rosen-bridge/ui/releases/tag/rosen-service-4.3.5

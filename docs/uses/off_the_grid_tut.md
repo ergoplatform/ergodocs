@@ -1,12 +1,22 @@
 ---
 owner: docs
-last_reviewed: '2026-05-29'
+last_reviewed: '2026-05-31'
 ia_status: directory
+source_repos:
+  - repo: Telefragged/off-the-grid
+    branch: master
+    paths:
+      - README.md
+      - node_config.json
+      - matcher_config.json
+      - cli/src/commands
+source_of_truth:
+  - https://github.com/Telefragged/off-the-grid
 ---
 
 # Getting Started with Off-the-Grid Ergo Trading Bot
 
-This guide provides a thorough walkthrough for setting up and operating the **[Off-the-Grid Ergo Trading Bot](https://github.com/Telefragged/off-the-grid)** decentralized grid trading bot on the Ergo blockchain.
+This guide covers setup and operation for the **[Off-the-Grid Ergo Trading Bot](https://github.com/Telefragged/off-the-grid)**. Off-the-Grid is a Rust CLI and matcher for decentralized grid trading on Ergo.
 
 /// details | Video Guide
     {type: info, open: true}
@@ -14,6 +24,15 @@ Alternatively, a video walkthrough from MarcTheShark can be found here: [Ergo Gr
 ///
 
 ---
+
+## Operator Model
+
+| Role | What it does | Funds needed |
+| --- | --- | --- |
+| Grid owner | Creates, lists, inspects, and redeems grid orders. | Funds committed to the grid order. |
+| Matcher operator | Watches grid orders and matches them against Spectrum AMM liquidity. | Reward address only; the reward address does not need to be tied to the node wallet. |
+
+The matcher competes with other matchers. If another matcher spends the same grid-order input first, your submitted transaction can fail or never confirm.
 
 ## Prerequisites
 
@@ -26,6 +45,7 @@ Before proceeding, ensure the following:
 2. **Environment Setup:**
     - Installed [Rust](https://rustup.rs/) and Cargo (Rust's package manager).
     - Configured Ergo node and wallet. Follow [Ergo Node Setup](https://docs.ergoplatform.com/node/install/) and [Wallet Guide](https://docs.ergoplatform.com/node/wallet/).
+    - Node wallet initialized even for matcher use; node scans need wallet support.
 
 3. **Nix Installation (Optional):**
     - For easier building and execution, install [Nix](https://nixos.org/).
@@ -44,6 +64,8 @@ Before proceeding, ensure the following:
 
 - Contracts are not audited—exercise caution with significant assets.
 - Profits are not guaranteed, and risks depend on market conditions.
+- The token list is fetched from Spectrum pools through the explorer API by default.
+- Grid orders currently trade ERG/token pairs and accumulate profits as ERG.
 
 ---
 
@@ -95,6 +117,8 @@ Before proceeding, ensure the following:
     }
     ```
 
+    Keep the node API key private. Do not expose a wallet-enabled node API to the public internet.
+
 2. **Set Up Wallet:**
 
     Follow the Ergo wallet setup guide. Ensure the wallet is initialized and synchronized.
@@ -109,6 +133,10 @@ Before proceeding, ensure the following:
 
     To include all existing boxes, add `--rescan` to the command.
 
+    ```bash
+    off-the-grid scans create-config --rescan
+    ```
+
 ---
 
 ### 3. Fetch Token Information (Optional)
@@ -119,7 +147,7 @@ For better usability, update the token list:
 off-the-grid tokens update
 ```
 
-This fetches token details from Spectrum's API and saves them locally.
+This fetches token details from the current set of Spectrum pools and saves them locally. Rerun it as more tokens become available on Spectrum.
 
 ---
 
@@ -205,17 +233,26 @@ This fetches token details from Spectrum's API and saves them locally.
 
     The bot logs successful transactions and errors. Multiple matchers may compete for transactions, so occasional failures are expected.
 
+3. **Tune Polling Interval:**
+
+    `matcher_config.json` also supports an `interval` value. The repository example uses:
+
+    ```json
+    {
+        "reward_address": "",
+        "interval": 10.0
+    }
+    ```
+
+    Shorter intervals may react faster but can increase node/API load.
+
 ---
 
 ### 7. Optimize and Analyze
 
 1. **Performance Monitoring:**
 
-    Check logs to identify issues or opportunities for improvement:
-
-    ```bash
-    off-the-grid logs tail
-    ```
+    Watch terminal output for submitted transaction IDs and errors. A submitted transaction is not guaranteed to confirm.
 
 2. **Experiment with Parameters:**
 
@@ -229,10 +266,10 @@ This fetches token details from Spectrum's API and saves them locally.
 
 ## Best Practices
 
-- **Security:** Safeguard your API keys and wallet credentials.
-
-- **Caution:** Avoid over-investing in untested strategies or assets.
-
-- **Stay Updated:** Keep the bot, tokens, and configs up-to-date with regular updates.
+- **Security:** Safeguard node API keys and wallet credentials.
+- **Caution:** Avoid over-investing in unaudited contracts or untested strategies.
+- **Updates:** Pull repository updates, rebuild, rerun `tokens update`, and review sample config changes.
+- **Node health:** Keep the node synced before creating grids or running the matcher.
+- **Competition:** Treat failed submissions as normal when another matcher spends the same input first.
 
 For additional assistance, consult the repository's documentation or contact the community.
