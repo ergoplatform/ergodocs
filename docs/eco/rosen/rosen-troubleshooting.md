@@ -1,3 +1,8 @@
+---
+owner: docs
+last_reviewed: '2026-05-29'
+ia_status: directory
+---
 # RosenBridge Troubleshooting Guide
 
 This guide helps diagnose and resolve the most common issues users see when bridging with Rosen. It complements the FAQs and Watcher/Guard docs with practical checks and fixes.
@@ -28,7 +33,7 @@ Checks:
 - Confirmations: Verify your source-chain transaction has enough confirmations. Bridge timing depends on chain policy (e.g., BTC takes longer).
 - Events page: Check https://app.rosen.tech/events for updates and error notes.
 - Congestion: EVM gas spikes or network congestion can delay finality.
-- Large transfers: Very large amounts may require cold ➜ hot fund movements by Guards; this can take hours to 1–2 days.
+- Large transfers: Very large amounts may require cold hot fund movements by Guards; this can take hours to 1–2 days.
 
 If it remains delayed far beyond normal windows, contact official support channels (Telegram/Discord) with:
 

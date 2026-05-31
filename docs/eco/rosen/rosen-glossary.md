@@ -1,3 +1,8 @@
+---
+owner: docs
+last_reviewed: '2026-05-29'
+ia_status: directory
+---
 # RosenBridge Glossary
 
 Quick definitions of RosenBridge-specific terms. For deeper context, see: [concepts-assumptions.md](concepts-assumptions.md), [token-transfer-flows.md](token-transfer-flows.md), [security-model.md](security-model.md), [rosen-tokenomics.md](rosen-tokenomics.md)
@@ -21,7 +26,7 @@ Quick definitions of RosenBridge-specific terms. For deeper context, see: [conce
   - [See](token-transfer-flows.md)
 
 - rToken (Representative Token)
-  - A token on Ergo representing locked native assets held on a source chain (e.g., rBTC). Minted on ChainX ➜ Ergo; burned on Ergo ➜ ChainX.
+  - A token on Ergo representing locked native assets held on a source chain (e.g., rBTC). Minted on ChainX Ergo; burned on Ergo ChainX.
 
 - RSN (Rosen Token)
   - [The Rosen ecosystem token used for fees, incentives, staking, and watcher permits. See](rosen-tokenomics.md)
@@ -59,7 +64,7 @@ Quick definitions of RosenBridge-specific terms. For deeper context, see: [conce
   - See [multisig](multisig.md) and [threshold signatures](threshold.md).
 
 - Hot / Cold Wallets
-  - Operational separation for security. Cold storage for bulk funds, hot wallets for day-to-day event settlements. Large transfers can involve cold ➜ hot moves.
+  - Operational separation for security. Cold storage for bulk funds, hot wallets for day-to-day event settlements. Large transfers can involve cold hot moves.
 
 - Spend Proof (Monero PoC)
   - A Monero wallet proof binding a transaction to a message (Rosen metadata). Used to prove lock intent without embedding metadata in tx_extra.

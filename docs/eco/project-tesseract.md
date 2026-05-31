@@ -6,6 +6,13 @@ tags:
   - NFT
   - dApp
   - dApp-InDev
+owner: docs
+last_reviewed: '2026-05-29'
+ia_status: directory
+source_of_truth:
+- https://ergogames.io
+source_watch_note: Historical/planned game page; no verified public GitHub repository
+ found.
 ---
 
 # Project Tesseract: An Inside Look at ErgoGames.io's Upcoming Release

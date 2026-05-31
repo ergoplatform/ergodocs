@@ -4,6 +4,34 @@ tags:
   - DEX
   - Asset Trading
   - dApp
+owner: docs
+last_reviewed: '2026-05-29'
+source_repos:
+  - repo: AcoSmrkas/mew-dex
+    branch: master
+    paths:
+      - README.md
+  - repo: AcoSmrkas/mewfinance-ui
+    branch: master
+    paths:
+      - README.md
+  - repo: AcoSmrkas/mew-smart-contracts
+    branch: main
+    paths:
+      - README.md
+  - repo: AcoSmrkas/mew-prediction
+    branch: main
+    paths:
+      - README.md
+  - repo: AcoSmrkas/mew-lock
+    branch: main
+    paths:
+      - README.md
+source_of_truth:
+  - https://mewfinance.com/
+  - https://github.com/AcoSmrkas/mew-dex
+  - https://github.com/AcoSmrkas/mewfinance-ui
+  - https://github.com/AcoSmrkas/mew-smart-contracts
 ---
 
 # Mew Finance
@@ -13,6 +41,16 @@ tags:
 Mew Finance is a decentralized finance (DeFi) platform operating on the Ergo Blockchain. Launched in October 2024, it aims to provide a suite of innovative, accessible, secure, and user-centric financial applications. The platform is known for its distinctive visual theme and focus on community engagement.
 
 **Visit the official platform:** [https://mewfinance.com/](https://mewfinance.com/)
+
+## Project Profile
+
+| Field | Details |
+| --- | --- |
+| Status | Active ecosystem project. |
+| Category | DEX, marketplace, community DeFi tools. |
+| Links | [Website](https://mewfinance.com/), [Telegram](https://t.me/MewFinance), [X](https://x.com/Mew_finance). |
+| Source | Public project site and community links listed below. |
+| Caveats | Financial figures and tier counts are time-specific; check the live platform for current product availability and terms. |
 
 ## Recent updates
 

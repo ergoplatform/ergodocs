@@ -9,18 +9,22 @@ tags:
   - dApp
   - dApp-Beta
 owner: docs
-last_reviewed: 2026-05-27
+ia_status: directory
+last_reviewed: 2026-05-30
 source_repos:
   - repo: SavonarolaLabs/exle-html
     branch: main
     paths:
-      - README.md
+      - package.json
+      - src/components
+      - src/js
   - repo: SavonarolaLabs/exle-svelte
     branch: main
     paths:
       - src/pages
       - src/components
 source_of_truth:
+  - https://exle.io/
   - https://github.com/SavonarolaLabs/exle-html
   - https://github.com/SavonarolaLabs/exle-svelte
 ---
@@ -42,7 +46,7 @@ For more details, view the [EXLE 2.0 Project Proposal](https://t.me/ErgoLend/778
 
 ## Interface Work
 
-EXLE interface work has public prototype repositories under Savonarola Labs. The earlier [exle-html](https://github.com/SavonarolaLabs/exle-html) repository hosts an HTML prototype, and [exle-svelte](https://github.com/SavonarolaLabs/exle-svelte) is the newer Svelte-based UI work. These repositories are useful for developers who want to inspect the front-end direction, but the public app and project channels remain the better entry points for end users.
+EXLE interface work has public prototype repositories under Savonarola Labs. The earlier [exle-html](https://github.com/SavonarolaLabs/exle-html) repository is a Vite/Tailwind prototype with loan, repayment, landing, navbar, and rendering components. [exle-svelte](https://github.com/SavonarolaLabs/exle-svelte) is the newer Svelte-based UI work. These repositories are useful for developers who want to inspect the front-end direction, but the public app and project channels remain the better entry points for end users.
 
 ## Streamlining Microfinance in Kenya
 

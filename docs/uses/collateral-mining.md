@@ -1,3 +1,8 @@
+---
+owner: docs
+last_reviewed: '2026-05-29'
+ia_status: directory
+---
 # Collateral Mining
 
 We are pleased to introduce Collateral Mining, a unique feature of Ergo Blockchain that provides an innovative approach to mining and incentivizes participation in the network. This documentation will explain the intricacies of Collateral Mining, including its architecture, consensus mechanism, transaction validation, smart contracts, APIs, and various features, catering to both developers and end users.

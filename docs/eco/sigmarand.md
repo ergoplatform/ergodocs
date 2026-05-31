@@ -5,6 +5,16 @@ tags:
   - RNG
   - Commit-Reveal
   - dApp
+owner: docs
+last_reviewed: '2026-05-29'
+source_repos:
+  - repo: noob77777/ergo-randgen
+    branch: main
+    paths:
+      - README.md
+source_of_truth:
+  - https://github.com/noob77777/ergo-randgen
+ia_status: directory
 ---
 
 # SigmaRand: Secure Random Number Generation for Ergo

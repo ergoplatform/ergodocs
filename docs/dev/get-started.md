@@ -24,6 +24,54 @@ Welcome to the comprehensive **Ergo Developer's Guide**! Whether you're a season
 
 ///
 
+Use this page as the developer routing hub. It points to the main paths for building applications, contracts, wallets, integrations, and infrastructure on Ergo.
+
+## Choose Your Developer Path
+
+| Goal | Start here | Then read |
+| --- | --- | --- |
+| Build a first transaction flow | [Starter Tutorial](basics.md) | [Composing Transactions](composing.md), [Fleet SDK](fleet.md), [AppKit](appkit.md) |
+| Choose an SDK | [Development Pathways](start.md) | [JavaScript](js.md), [Rust](rust.md), [JVM](jvm.md), [Python](python.md) |
+| Learn ErgoScript | [ErgoScript](ergoscript.md) | [Key Concepts](ergoscript-key-concepts.md), [Blockchain Context](blockchain-context.md), [Examples](anyone-can-spend.md) |
+| Understand boxes and transactions | [Data Model Overview](data-model.md) | [Boxes](box.md), [Registers](registers.md), [Transaction Format](format.md) |
+| Add wallet or dApp support | [dApp Connector](dApp.md) | [ErgoPay](ergo-pay.md), [Message Signing](message-signing.md), [EIP Standards](eip-standards.md) |
+| Integrate an exchange or service | [Exchange Integration](guide.md) | [Dust Collection](dust-collection.md), [Node API](api.md), [Explorer APIs](explorer-apis.md) |
+| Reuse contract patterns | [Contracts Library](contracts-library.md) | [Pattern Template](pattern-template.md), [Contributing](contracts-contributing.md) |
+
+## Developer Map
+
+::cards::
+
+[{
+ "title": "SDKs & Frameworks",
+ "content": "Choose a language stack and learn the main libraries for transaction building, signing, and dApp flows.",
+ "url": "start.md"
+ },
+ {
+ "title": "Data Model & Transactions",
+ "content": "Understand boxes, registers, tokens, fees, data inputs, and transaction validation.",
+ "url": "data-model/data-model.md"
+ },
+ {
+ "title": "ErgoScript",
+ "content": "Learn Ergo's smart contract language, Sigma propositions, ErgoTree, and contract examples.",
+ "url": "scs/ergoscript.md"
+ },
+ {
+ "title": "APIs & Services",
+ "content": "Use node APIs, explorer APIs, GraphQL, indexers, and off-chain services.",
+ "url": "stack/api.md"
+ }]
+
+::/cards::
+
+## Next Steps
+
+- Need exact API details: use the Reference section.
+- Need a running node or indexer: go to [Deploy Ergo Infrastructure](interact.md).
+- Need contract examples: go to [Contracts & Patterns Library](contracts-library.md).
+- Need help debugging: use [Troubleshooting](support-troubleshooting.md).
+
 ## Ergo Platform Overview
 
 Ergo is a next-generation **Proof-of-Work (PoW)** blockchain platform designed for secure, efficient, and decentralized smart contract execution. It lays the foundation for a new wave of blockchain-based applications, focusing on scalability, security, and privacy. Ergo leverages advanced technologies like the powerful scripting language **ErgoScript**, flexible **Zero-Knowledge Proofs**, and the **eUTXO model**, an evolution of Bitcoin's UTXO model.
@@ -48,22 +96,20 @@ Ergo is a next-generation **Proof-of-Work (PoW)** blockchain platform designed f
 
 ::cards::
 
-[
-  {
-    "title": "📚 DeCo EU Layman Class - Basics of eUTXO",
+[{
+ "title": " DeCo EU Layman Class - Basics of eUTXO",
     "content": "A great introductory course aimed at the layman from Decentralised Collaboration.",
     "url": "https://www.youtube.com/watch?v=SAWeW6wajEw"
   },
   {
-    "title": "🧾 Learning Ergo 101: eUTXO Explained for Human Beings",
+ "title": " Learning Ergo 101: eUTXO Explained for Human Beings",
     "url": "https://dav009.medium.com/learning-ergo-101-blockchain-paradigm-eutxo-c90b0274cf5e"
   },
   {
-    "title": "📹 Learning Blockchains like Cardano and Ergo",
+ "title": " Learning Blockchains like Cardano and Ergo",
     "content": "Discusses the process of learning blockchain concepts, emphasizing the importance of understanding theoretical aspects and practical interaction through playgrounds and nodes.",
     "url": "https://www.youtube.com/watch?v=HDn49bToTMI"
-  }
-]
+ }]
 
 ::/cards::
 
@@ -320,21 +366,19 @@ Most repositories are also categories on [Grist](https://ergo.getgrist.com/jf9KP
 
 ::cards::
 
-[
-  {
-    "title": "📕 Side Tooling for Building dApps on Ergo",
+[{
+ "title": " Side Tooling for Building dApps on Ergo",
     "url": "https://dav009.medium.com/ergo-101-side-tooling-for-building-dapps-on-ergo-c71889d60826",
     "content": "Building functional dApps on Ergo requires more than just smart contracts and transactions."
   },
   {
-    "title": "📕 DeCo Education: dApp Components - Backend",
+ "title": " DeCo Education: dApp Components - Backend",
     "url": "https://deco-education.github.io/deco-docs/docs/into-the-woods/trail2-ergo-coding/dapp-components"
   },
   {
-    "title": "📕 DeCo Intro Lessons: Build a Mobile App on Android or iOS",
+ "title": " DeCo Intro Lessons: Build a Mobile App on Android or iOS",
     "url": "https://www.youtube.com/watch?v=qR0_k7VH6KI&list=PLopsKGshj0B4BpMoSMh5hQk8gVfWk-si6"
-  }
-]
+ }]
 
 ::/cards::
 
@@ -388,23 +432,21 @@ Most repositories are also categories on [Grist](https://ergo.getgrist.com/jf9KP
 
 ::cards::
 
-[
-  {
-    "title": "📚 DeCo Intro Lessons",
+[{
+ "title": " DeCo Intro Lessons",
     "content": "Programming basics for the layman from Decentralised Collaboration (DeCo).",
     "url": "https://www.youtube.com/watch?v=qR0_k7VH6KI&list=PLopsKGshj0B4BpMoSMh5hQk8gVfWk-si6"
   },
   {
-    "title": "📚 DeCo Education Docs",
+ "title": " DeCo Education Docs",
     "content": "DeCo steps you through eUTXO & NFTs, dApp Development, and Multi-Stage Transactions & Smart Contracts.",
     "url": "https://deco-education.github.io/deco-docs/docs/category/into-the-woods"
   },
   {
-    "title": "📹 Ergo Blockchain Crash Course",
+ "title": " Ergo Blockchain Crash Course",
     "content": "Ergo crash course presented by developer Luca (lgd), covering the eUTXO model, anatomy of Ergo, and more.",
     "url": "https://www.youtube.com/playlist?list=PL8-KVrs6vXLTVXGwmYXjOBRx3VymB4Vm2"
-  }
-]
+ }]
 
 ::/cards::
 
@@ -414,8 +456,7 @@ If you encounter any issues or have questions, feel free to connect with us on a
 
 ::cards::
 
-[
-  {
+[{
     "title": "Come Chat!",
     "content": "Join the action on Discord",
     "image": "../assets/img/dev-grid/discord.png",
@@ -432,8 +473,7 @@ If you encounter any issues or have questions, feel free to connect with us on a
     "content": "See the Contributing Guidelines for information on bounties and grants.",
     "image": "../assets/img/grid/05.png",
     "url": "../contribute/standards/guidelines.md"
-  }
-]
+ }]
 
 ::/cards::
 

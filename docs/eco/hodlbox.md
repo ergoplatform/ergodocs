@@ -4,6 +4,15 @@ tags:
   - HODL
   - NFT
   - dApp
+owner: docs
+last_reviewed: '2026-05-29'
+source_repos:
+  - repo: SavonarolaLabs/hodlbox-xyz
+    branch: main
+    paths:
+      - README.md
+source_of_truth:
+  - https://github.com/SavonarolaLabs/hodlbox-xyz
 ---
 
 # Hodlbox: Incentivizing Long-Term Holding in the Ergo Ecosystem

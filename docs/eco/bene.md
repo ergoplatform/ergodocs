@@ -4,19 +4,31 @@ tags:
   - Fundraising
   - Platform
   - dApp
+owner: docs
+last_reviewed: '2026-05-30'
+source_repos:
+  - repo: StabilityNexus/BenefactionPlatform-Ergo
+    branch: main
+    paths:
+      - README.md
+source_of_truth:
+  - https://github.com/StabilityNexus/BenefactionPlatform-Ergo
 ---
 
 # Bene: Fundraising Platform
 
 ## Overview
 
-**Bene: Fundraising Platform** is a decentralized application (dApp) that enables projects to receive funding in exchange for participation tokens. This dApp allows projects to request ERGs (the native cryptocurrency of the Ergo blockchain) in exchange for participation tokens.
+**Bene: Fundraising Platform** is a decentralized application (dApp) for proof-of-funding campaigns on Ergo. It lets projects raise ERG or another base token through a smart contract, while contributors receive temporary receipt tokens that can later be redeemed for project participation tokens or refunds depending on the campaign outcome.
+
+Bene is designed as a fully client-side application. It does not rely on a central backend or private database; users connect the interface to public Ergo infrastructure and the contract holds the campaign state and funds.
 
 ## How it Works
 
-- **Box Creation**: Project owners can create a box that holds an amount of tokens, which may vary, setting a **block limit** as a deadline.
+- **Box Creation**: Project owners create a campaign box with the project token supply, deadline, minimum goal, price, owner address, fee settings, and project metadata.
 - **Minimum Token Sale**: A minimum amount of tokens must be sold before the project can withdraw funds. This ensures that the project receives sufficient backing.
-- **Refund Option**: If the block limit is reached before the minimum amount of tokens are sold, users have the option to exchange their tokens back for the corresponding ERGs, provided the minimum has not been reached.
+- **Refund Option**: If the deadline passes before the minimum has been reached, contributors can return their receipt tokens and receive their original funds back.
+- **Receipt and Participation Tokens**: Contributors receive an auxiliary project token (APT) as a temporary receipt. If the campaign succeeds, APTs can be exchanged for the real proof-funding token (PFT).
 - **Self-Replicating Box**: The main box is self-replicating, meaning that anyone can spend the box as long as they re-create it with the same parameters and add ERGs in exchange for a specified amount of tokens.
 
 ## Parameters of a Box
@@ -24,18 +36,18 @@ tags:
 A box created by a project will have the following parameters:
 
 - **Amount of Tokens**: Represents the number of participation tokens available.
-- **Block Limit (R4)**: The block height limit until which withdrawal or refund is allowed.
+- **Deadline (R4)**: The block-height or timestamp deadline used for refund eligibility.
 - **Minimum Tokens Sold (R5)**: The minimum amount of tokens that must be sold as required by the contract to enable withdrawals.
-- **Token Sold Counter (R6)**: Token sale counter.
-- **ERGs / Token (R7)**: The exchange rate of ERG per token.
-- **Withdrawal Address (R8)**: The address where the funds can be withdrawn if the conditions are met, specified by the SHA-256 hash of the proposition bytes.
+- **Counters (R6)**: Tracks sold tokens, refunded tokens, and exchanged receipt tokens.
+- **Price (R7)**: The exchange rate for the sale.
+- **Immutable Configuration (R8)**: Owner script hash, fee address hash, fee percentage, PFT ID, and optional base token ID.
 - **Project Content (R9)**: JSON content with title, description, and other information.
 
 These parameters ensure that the box remains consistent throughout the funding process and allows for transparency in the exchange process.
 
 In addition, the following constants are added:
 
-- **Developer Fee**: The percentage fee for the developers.
+- **Developer Fee**: The upstream README documents a 5% developer fee.
 - **Developer Address**: The address to which it will be sent, specified by its proposition bytes.
 
 ## Processes
@@ -66,9 +78,7 @@ The Bene: Fundraising Platform supports six main processes:
 6. **Add Tokens**:
    - Project owners may add more tokens to the contract at any time.
 
-The current client implementation only supports the creation of a new project and contributions to a project. The contract implementation is complete, although it may undergo corrections.
-
-In addition to the current functionality, a more advanced implementation could include support for other assets beyond ERG. For example, projects could request GAU or other tokens on Ergo. This would provide even more flexibility in terms of the types of contributions a project can receive and enable a broader range of funding options for projects and participants.
+Bene also integrates an on-chain discussion layer for project comments, using the reputation-systems forum protocol.
 
 ## Repository
 

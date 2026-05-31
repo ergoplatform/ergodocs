@@ -26,7 +26,7 @@ Use this page to find the right part of the Ergo ecosystem.
 | Oracles | [Oracles](oracles.md) | Oracle pools, bootstrap flow |
 | Games and metaverse | [Gaming](gaming.md) | [BlitzTCG](blitz.md), [Cyberverse](cyberverse.md), [NFT Races](nft-races.md), [SigmaQuest](sigmaquest.md) |
 | Crowdfunding and DAOs | [Crowdfunding](crowdfunding.md) | [ErgoRaffle](ergoraffle.md), [Paideia](paideia.md), [ErgoWell](ergowell.md), [GitCircles](gitcircles.md) |
-| Emerging projects | [Emerging Ecosystem Projects](emerging-projects.md) | [BoTTube](bottube.md), [Ergo Agent SDK](ergo-agent-sdk.md), [ergots](ergots.md), [Braid](braid.md) |
+| Project directory | [Project Directory](project-directory.md) | [BoTTube](bottube.md), [RustChain](rust-chain.md), [Degens.World](degens-world.md) |
 
 ## Builder and Operator Areas
 

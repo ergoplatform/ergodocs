@@ -93,4 +93,4 @@ This contract implicitly assumes the box being spent *is* `INPUTS(0)`. For a cle
 
 Are these two pin-lock contracts equivalent? That is, under what spending conditions might one contract evaluate to true while the other evaluates to false? (Hint: Consider what `INPUTS(0)` refers to versus what `SELF` refers to).
 
-> 🔗 From [Deco Education - ErgoScript Developer Course](https://github.com/DeCo-Education/ErgoScript-Developer-Course/blob/main/Class-Documents/Class-1/Materials/Class1.MD)
+> From [Deco Education - ErgoScript Developer Course](https://github.com/DeCo-Education/ErgoScript-Developer-Course/blob/main/Class-Documents/Class-1/Materials/Class1.MD)

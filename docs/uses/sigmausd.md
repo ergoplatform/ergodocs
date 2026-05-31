@@ -8,16 +8,27 @@ source_repos:
       - eip-0015.md
 source_of_truth:
   - https://github.com/ergoplatform/eips/tree/master/eip-0015.md
+ia_status: directory
 ---
 
-# Accessing Sigmausd As A Developer
+# SigmaUSD
 
 SigmaUSD is the first eUTXO-based stablecoin, implementing the [AgeUSD protocol](https://github.com/Emurgo/age-usd). It was co-designed by IOHK, Ergo, and Emurgo, focusing on conservative collateral reserve settings, thus eliminating the need for liquidations. SigmaUSD supports a fully decentralized stablecoin emission setup, offering a stable, simple, and decentralized stablecoin.
 
+## Project Profile
+
+| Field | Details |
+| --- | --- |
+| Status | Active stablecoin protocol. |
+| Category | Stablecoin, reserve asset, DeFi. |
+| Links | [SigmaUSD app](https://sigmausd.io/), [EIP-15](https://github.com/ergoplatform/eips/blob/master/eip-0015.md), [AgeUSD specification](https://github.com/Emurgo/age-usd). |
+| Source | EIP-15, AgeUSD specification, SigmaUSD resources listed below. |
+| Caveats | Minting and redemption depend on reserve-ratio bounds, oracle data, fees, wallet UX, and available liquidity. |
+
 ## Key Resources
 
-- 🥇 **[SigmaUSD Website](https://sigmausd.io/)**: Main interface for minting/redeeming SigUSD and SigRSV.
-- 🥇 **[EIP-15: SigmaUSD Protocol](https://github.com/ergoplatform/eips/blob/master/eip-0015.md)**: The official Ergo Improvement Proposal detailing the protocol.
+- **[SigmaUSD Website](https://sigmausd.io/)**: Main interface for minting/redeeming SigUSD and SigRSV.
+- **[EIP-15: SigmaUSD Protocol](https://github.com/ergoplatform/eips/blob/master/eip-0015.md)**: The official Ergo Improvement Proposal detailing the protocol.
 - **[AgeUSD Specification](https://github.com/Emurgo/age-usd)**: The underlying protocol specification developed by Emurgo, IOHK, and Ergo.
 - **[SigmaUSD Bot](https://github.com/anon-real/sigma-usd)**: Off-chain bot implementation for interacting with the protocol.
 

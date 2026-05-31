@@ -1,6 +1,11 @@
 ---
 owner: docs
 last_reviewed: 2026-05-27
+tags:
+  - learn
+  - research
+  - artificial-intelligence
+  - eUTXO
 source_repos:
   - repo: a-shannon/Aletheia-Protocol
     branch: main
@@ -27,7 +32,7 @@ source_of_truth:
 
 ## 1. Introduction: The AI-Blockchain Nexus - Challenges and the Dawn of Artificial Economic Intelligence
 
-This page discusses emerging AI and autonomous-agent ideas in the Ergo ecosystem. Treat the AEI examples as conceptual patterns and early experiments, not as deployed production guarantees.
+This Learn page discusses emerging AI and autonomous-agent ideas that use Ergo concepts. Treat the AEI examples as conceptual patterns and early experiments, not as deployed production guarantees.
 
 The convergence of Artificial Intelligence (AI) and blockchain technology represents one of the most dynamic frontiers in digital innovation. This synergy promises transformative potential across diverse sectors, envisioning enhancements in security, transparency, automation, and data integrity that could reshape industries from healthcare and supply chain management to finance and energy ([1](https://www.coinmetro.com/learning-lab/ai-blockchain-integration)). Blockchain's immutable ledger offers a foundation of trust for AI systems, ensuring the reliability of data crucial for accurate decision-making and analysis ([1](https://www.coinmetro.com/learning-lab/ai-blockchain-integration)). AI, in turn, can optimize blockchain operations, enhancing efficiency through intelligent consensus mechanisms, pattern recognition, and predictive analytics ([2](https://journal.wiseedu.co.id/index.php/bafrjournal/article/view/179)). Blockchain and artificial intelligence have joined to create a new digital economy where autonomous software agents manage funds and perform tasks independently.
 

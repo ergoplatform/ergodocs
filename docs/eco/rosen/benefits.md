@@ -1,3 +1,8 @@
+---
+owner: docs
+last_reviewed: '2026-05-29'
+ia_status: directory
+---
 # Benefits of RosenBridge
 
 RosenBridge is designed for secure, efficient, and scalable cross-chain transfers centered on Ergo. This page summarizes the core advantages for users, integrators, and ecosystem builders.

@@ -34,6 +34,40 @@ Deploy pages are for operators running infrastructure: nodes, APIs, wallets, ind
 
 Start with the [Deployment Runbook](deploy-runbook.md) if you are choosing a topology or hardening an existing host.
 
+## Deploy Map
+
+::cards::
+
+[{
+ "title": "Run a Node",
+ "content": "Install, configure, sync, monitor, and harden the Ergo reference client.",
+ "url": "../node/install.md"
+ },
+ {
+ "title": "Node Operations",
+ "content": "Operational runbooks for hardening, monitoring, upgrades, backups, reverse proxies, and incidents.",
+ "url": "../node/operations/hardening.md"
+ },
+ {
+ "title": "APIs & Indexing",
+ "content": "Expose node APIs, use indexed routes, deploy explorer-style stacks, or build a custom indexer.",
+ "url": "tutorials/blockchain-indexing.md"
+ },
+ {
+ "title": "Rosen & Oracles",
+ "content": "Operate Rosen watchers/guards or bootstrap oracle infrastructure.",
+ "url": "../eco/rosen/watcher.md"
+ }]
+
+::/cards::
+
+## Next Steps
+
+- New operator: start with the [Deployment Runbook](deploy-runbook.md).
+- Need API details: use [Swagger Overview](swagger.md) or [Technical Lookup](technical-lookup.md).
+- Debugging an outage: use [Troubleshooting](support-troubleshooting.md).
+- Mining pool operator: go to [Mining Pool Operations](pool-ops.md).
+
 ## Operator Paths
 
 | Need | Start here | Why |

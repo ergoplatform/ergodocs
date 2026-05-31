@@ -1,3 +1,9 @@
+---
+owner: docs
+last_reviewed: '2026-05-29'
+ia_status: directory
+---
+
 # ErgoData
 
 ErgoData is a potential sidechain that could be launched on Ergo. The main idea behind Ergo Data is to serve needs of data-intensive applications, such as land registries, certificate directories etc. This would be the same (or very similar) to the existing Ergo Protocol, but with some modified parameters.

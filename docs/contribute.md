@@ -23,7 +23,7 @@ source_of_truth:
 
 # Contributing to Ergo
 
-Read the context in [How Ergo Works](how-ergo-works.md), then pick one path.
+Use this section to find contribution paths for community work, documentation, events, funding, governance, and technical collaboration. Read the context in [How Ergo Works](how-ergo-works.md), then pick one path.
 
 ## Choose your path
 
@@ -32,8 +32,6 @@ Read the context in [How Ergo Works](how-ergo-works.md), then pick one path.
 * **Marketing and community**: plan campaigns and content in [marketing](marketing.md), join structured community work in [sigmanauts](sigmanauts.md).
 
 * **Other partnerships**: if you run an exchange, wallet, service, or community group, find contacts and process in [roles](roles.md), you can also propose work in [grants](grants.md) or [bounties](bounties.md).
-
-# Contributing to Ergo
 
 Ergo is an open-source project driven by its community. Contributions of all kinds are welcome and essential for the ecosystem's growth and success. Whether you're a developer, writer, designer, marketer, researcher, or simply an enthusiastic user, there are many ways to get involved!
 

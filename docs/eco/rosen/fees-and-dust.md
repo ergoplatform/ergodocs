@@ -1,3 +1,8 @@
+---
+owner: docs
+last_reviewed: '2026-05-29'
+ia_status: directory
+---
 # RosenBridge Fees & Dust Collection
 
 RosenBridge applies fees and performs periodic dust cleanup on Ergo to keep the system efficient and sustainable. This page explains how fees are handled and how “dust” (residual balances) is consolidated.

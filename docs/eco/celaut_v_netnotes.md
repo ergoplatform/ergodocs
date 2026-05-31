@@ -1,3 +1,29 @@
+---
+owner: docs
+last_reviewed: '2026-05-29'
+source_repos:
+  - repo: celaut-project/nodo
+    branch: stable
+    paths:
+      - README.md
+  - repo: celaut-project/paradigm
+    branch: master
+    paths:
+      - README.md
+  - repo: networkspore/netnotes-engine
+    branch: main
+    paths:
+      - README.md
+  - repo: networkspore/Netnotes
+    branch: master
+    paths:
+      - README.md
+source_of_truth:
+  - https://github.com/celaut-project
+  - https://github.com/networkspore
+ia_status: directory
+---
+
 
 # Celaut and Netnotes: How Do They Compare?  
 

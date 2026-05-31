@@ -6,6 +6,13 @@ tags:
   - Tokenization
   - dApp
   - dApp-Research
+owner: docs
+last_reviewed: '2026-05-29'
+source_of_truth:
+- https://www.zengate.global/products/solaris-portal
+source_watch_note: ZenGate commercial product; no verified public GitHub repository
+ found.
+ia_status: directory
 ---
 
 # Solaris

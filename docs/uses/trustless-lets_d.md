@@ -1,3 +1,8 @@
+---
+owner: docs
+last_reviewed: '2026-05-29'
+ia_status: directory
+---
 A Local Exchange Trading System (LETS) is aimed at developing the local economy and is usually used by people of a locality in the vicinity of each other. For a brief overview of LETS see this article, which also describes an ErgoScript implementation of a committee managed LETS. We call such a system managed or permissioned, since it depends on a committee of trusted members to enroll new members into the LETS. Here we describe a trustless LETS system, i.e., one where there is no management committee needed for enrolment.
 
 ## Overview

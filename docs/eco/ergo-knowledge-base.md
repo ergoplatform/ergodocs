@@ -5,7 +5,7 @@ tags:
   - Documentation
   - Community
 owner: docs
-last_reviewed: 2026-05-27
+last_reviewed: 2026-05-30
 source_repos:
   - repo: cannonQ/ergo-transcripts
     branch: main
@@ -34,10 +34,11 @@ Ergo Knowledge Base and Ergo Transcripts make Ergo community knowledge searchabl
 
 [Ergo Transcripts](https://ergo-transcripts.vercel.app/) indexes calls, Twitter Spaces, AMAs, technical discussions, and conference talks. Source is available at [cannonQ/ergo-transcripts](https://github.com/cannonQ/ergo-transcripts).
 
-The project turns long-form ecosystem material into searchable text for humans and structured context for agents. Current work includes keyword search, formatting improvements, Telegram export workflows, and an MCP endpoint for tool use.
+The project turns long-form ecosystem material into searchable text for humans and structured context for agents. Current work includes fuzzy search, decision and commitment tracking, speaker/topic browsing, Telegram/forum/blog ingestion, correction workflows, and an MCP endpoint for tool use.
 
 - The transcripts MCP is available at [ergo-transcripts.vercel.app/mcp](https://ergo-transcripts.vercel.app/mcp).
 - The repository describes the archive as transcript coverage for Ergo Platform videos, community chats, and related ecosystem material.
+- The README describes MCP tools for semantic conversation search, full video summaries, Telegram summaries, forum-topic retrieval, cross-source timelines, and content browsing.
 
 ## Ergo Knowledge Base
 

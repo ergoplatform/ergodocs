@@ -1,3 +1,8 @@
+---
+owner: docs
+last_reviewed: '2026-05-29'
+ia_status: directory
+---
 # RosenBridge Security Model
 
 This page summarizes RosenBridge’s security goals, trust assumptions, and mitigations against common attack scenarios. Rosen is Ergo‑centric: consensus, auditability, and final decisions happen on Ergo. External chains only require a Guard‑controlled multisig/threshold wallet.

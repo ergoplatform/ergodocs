@@ -29,7 +29,7 @@ EXCLUDE_FILES = {
     "tags.md",
     "todo.md",
 }
-UNLISTED_STATUSES = {"legacy", "alias", "draft"}
+UNLISTED_STATUSES = {"legacy", "alias", "draft", "directory"}
 
 
 class Loader(yaml.SafeLoader):
@@ -76,6 +76,13 @@ def frontmatter(path: Path) -> dict:
         return {}
 
 
+def configured_unlisted(config: dict) -> set[str]:
+    raw = config.get("not_in_nav") or ""
+    if not isinstance(raw, str):
+        return set()
+    return {line.strip() for line in raw.splitlines() if line.strip()}
+
+
 def top_area(path: str) -> str:
     first = path.split("/", 1)[0]
     if first in {"dev", "node", "mining"}:
@@ -102,6 +109,7 @@ def main() -> int:
     args = parser.parse_args()
 
     config = yaml.load(MKDOCS.read_text(encoding="utf-8"), Loader=Loader)
+    unlisted = configured_unlisted(config)
     entries = [entry for item in config.get("nav", []) for entry in walk_nav(item)]
     paths = [path for _, _, path in entries]
     nav_set = set(paths)
@@ -112,12 +120,17 @@ def main() -> int:
     docs = sorted(p.relative_to(DOCS).as_posix() for p in DOCS.rglob("*.md"))
     doc_meta = {p: frontmatter(DOCS / p) for p in docs}
     intentional_unlisted = [
-        p for p in docs if include_doc(p) and doc_meta[p].get("ia_status") in UNLISTED_STATUSES
+        p
+        for p in docs
+        if include_doc(p)
+        and (p in unlisted or doc_meta[p].get("ia_status") in UNLISTED_STATUSES)
     ]
     active_docs = [
         p
         for p in docs
-        if include_doc(p) and doc_meta[p].get("ia_status") not in UNLISTED_STATUSES
+        if include_doc(p)
+        and p not in unlisted
+        and doc_meta[p].get("ia_status") not in UNLISTED_STATUSES
     ]
     duplicates = {path: locs for path, locs in locations.items() if len(locs) > 1}
     orphans = [p for p in active_docs if p not in nav_set]

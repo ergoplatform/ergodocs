@@ -1,3 +1,8 @@
+---
+owner: docs
+last_reviewed: '2026-05-29'
+ia_status: directory
+---
 # Trustless Prediction Markets
 
 Due to Ergo's use of the UTXO-model + data inputs we can have 100% trustless prediction markets about the state of any dApp on the entire blockchain.

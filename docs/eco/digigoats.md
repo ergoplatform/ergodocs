@@ -5,6 +5,12 @@ tags:
   - NFT
   - dApp
   - dApp-Live
+owner: docs
+last_reviewed: 2026-05-29
+ia_status: directory
+source_of_truth:
+ - http://ergoat.com/digigoats
+source_watch_note: Historical/inactive project; no verified public GitHub repository found.
 ---
 
 # DigiGoats

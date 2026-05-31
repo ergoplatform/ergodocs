@@ -7,7 +7,7 @@ tags:
   - dApp
   - dApp-InDev
 owner: docs
-last_reviewed: 2026-05-28
+last_reviewed: 2026-05-30
 source_repos:
   - repo: Lithos-Protocol/Lithos-Client
     branch: master
@@ -32,6 +32,10 @@ Recently, Lithos has completed collateral contracts, and the ability of miners t
 ## Current Testnet Client
 
 The [Lithos Client](https://github.com/Lithos-Protocol/Lithos-Client) is the reference client for the Lithos Protocol. Recent testnet releases focus on synchronization, mempool tracking, transaction scheduling, rollup evaluation, and Stratum behavior.
+
+The current README describes Lithos as requiring a fully synced Ergo node and Java 11. Miners connect through the Lithos Stratum server, with Rigel Miner recommended. Lithos evaluates Non-Interactive Share Proofs rather than ordinary pool shares, so the miner address and worker name used by the Stratum client are not payout identifiers in the same way they are for a conventional pool.
+
+For testnet use, the client needs node API access and a testnet wallet keystore so it can sign and generate transactions. The upstream testnet guide warns users to create a new testnet-only secret key rather than reusing a mainnet wallet.
 
 [v4.2.0-test](https://github.com/Lithos-Protocol/Lithos-Client/releases/tag/v4.2.0-test) changes mempool synchronization so subscribers are notified when mempool updates occur rather than receiving full mempool contents. It also moves major transaction code into dedicated transaction actors, represents future transactions as transaction stubs, and fixes rollup synchronization around chained payout-contract rollups.
 

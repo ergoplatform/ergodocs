@@ -1,33 +1,30 @@
 ---
 tags:
-  - Miner Tooling
   - Mining
-  - dApp
-  - Infrastructure
+  - Miner Tooling
+  - Tools
 owner: docs
-last_reviewed: 2026-05-27
-source_repos:
-  - repo: arkadianet/erg-vanity-gpu
-    branch: main
-    paths:
-      - README.md
+last_reviewed: 2026-05-30
 source_of_truth:
-  - https://github.com/arkadianet/erg-vanity-gpu
+  - vanity-gpu.md
+  - guapswap.md
+  - cyti.md
+  - lithos.md
 ---
 
 # Miner Tooling
 
-There are several ecosystem projects focused on building miner tooling. Here are some of them:
+This page collects miner-facing tools and adjacent mining ecosystem projects. Individual project pages carry their own source metadata and activity notes.
 
-## Decentralised Apps
+## Related Mining Tools
+
+### Vanity GPU
+
+[Vanity GPU](vanity-gpu.md) is a GPU-accelerated Ergo vanity address generator using OpenCL.
 
 ### GuapSwap
 
 [GuapSwap](guapswap.md) allows miners to swap mined erg for native tokens.
-
-### GPU vanity address generator
-
-[erg-vanity-gpu](https://github.com/arkadianet/erg-vanity-gpu) is a GPU-accelerated Ergo vanity address generator using OpenCL. Early benchmarks reported roughly `790k/sec` on `7x 3060 Ti`, roughly `1.3M/sec` across all GPUs, and later about `320k addresses/sec` on an RTX 3080 Ti. The build notes also called out nightly Rust requirements for the OpenCL path.
 
 ### Lithos
 

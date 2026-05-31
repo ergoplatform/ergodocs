@@ -1,5 +1,18 @@
 # Non-Fungible Tokens
 
+Use this page to find NFT marketplaces, minting guidance, standards, and game-related NFT projects on Ergo.
+
+## Start Here
+
+| Goal | Page |
+| --- | --- |
+| Trade NFTs | [ErgoAuctionHouse](ergo-auctions.md), [SkyHarbor](skyharbor.md) |
+| Understand NFT standards | [NFT developer overview](nfts-overview.md), [Artwork Contract EIP-24](eip24.md), [Royalties](royalties.md) |
+| Mint an NFT | [Minting an NFT](create.md) |
+| Explore NFT games | [Gaming](gaming.md), [NFT Races](nft-races.md), [Cyberverse](cyberverse.md) |
+
+## Background
+
 Blockchains offer more than just cryptocurrencies. They can also host audio or visual artworks through immutable smart contracts. These artworks are represented as [Non-Fungible Tokens](https://en.wikipedia.org/wiki/Non-fungible_token) (NFTs). Moreover, these NFTs can be traded in decentralized auction houses, providing artists with a global platform free from governmental restrictions or the need for centralized licensing firms. This leads to the democratization of art markets through public blockchain.
 
 There are existing examples like [Rarible](https://rarible.com/) and [Opensea](https://opensea.io/), which are auction markets operating on the Ethereum Network. While these platforms allow any artist to create and sell their artwork, the gas prices for minting an NFT can reach up to $100. Ergo's scalable and efficient design significantly reduces these gas costs without compromising on security or speed.

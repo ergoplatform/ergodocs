@@ -1,3 +1,8 @@
+---
+owner: docs
+last_reviewed: '2026-05-29'
+ia_status: directory
+---
 # DegFi: Pure Degenerate Finance on the Blockchain
 
 > It's important to reiterate the significance of [knowing your assumptions](kya.md) when participating in experimental decentralized finance. There are no guarantees, and the reliability of a protocol is best measured over time. Always manage your risks and trade wisely.

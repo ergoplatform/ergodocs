@@ -5,6 +5,11 @@ tags:
   - Mining Pool
   - Proof of Work
   - Decentralized
+owner: docs
+last_reviewed: '2026-05-29'
+source_of_truth:
+- https://www.youtube.com/watch?v=x-9x_PveRog
+source_watch_note: Research/concept page; no verified public GitHub repository found.
 ---
 
 # SNISP

@@ -9,7 +9,7 @@ tags:
   - dApp
   - dApp-Live
 owner: docs
-last_reviewed: 2026-05-27
+last_reviewed: 2026-05-30
 source_repos:
   - repo: StabilityNexus/Gluon-Ergo-UI
     branch: main
@@ -53,6 +53,8 @@ To determine the amounts obtained from fission and fusion, reaction equations an
 The protocol allows for buying and selling stablecoins and reservecoins through compositions of primitive reactions. Bruno explains how these derived operations can be achieved by combining fission and beta decay. The user interfaces can simplify these processes for users, enabling them to focus on their desired transactions.
 
 The current [Gluon Ergo UI](https://github.com/StabilityNexus/Gluon-Ergo-UI) is the source repository for the Gluon Gold implementation on Ergo. It is a Next.js frontend with Gluon Gold SDK integration, wallet/protocol components, automatic testnet/mainnet configuration, and live protocol data such as price feeds, reserve ratios, and volume metrics.
+
+The repository README describes the application stack as Next.js, Tailwind CSS, Shadcn UI, Zustand, Framer Motion, and Bun. The source tree separates wallet/protocol components, layout components, reactor swap logic, constants, providers, and utility functions. The documented test suite covers ERG conversion and formatting, error handling, node-service logic, transaction monitoring, token validation, and reactor swap actions.
 
 ## Duality Concept
 

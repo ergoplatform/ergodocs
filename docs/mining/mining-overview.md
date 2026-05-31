@@ -10,12 +10,24 @@ tags:
 
 Ergo mining is based on [**Autolykos**](autolykos.md), an [ASIC-resistant](asic.md) Proof of Work algorithm written in Scala.
 
-## Start Mining
+Use this section for miner onboarding, mining setup, pool operations, miner governance, and mining resources.
+
+## Choose Your Mining Path
+
+| Goal | Start here | Then read |
+| --- | --- | --- |
+| Start mining with a pool | [Join a Pool](join.md) | [Mining Software](software.md), [Operating Systems](os.md), [Withdrawals](withdraw.md) |
+| Mine solo | [Solo Mining](solo.md) | [Solo Node Configuration](solo-node.md), [Solo FAQ](solo-faq.md) |
+| Host pool infrastructure | [Host a Pool](pool.md) | [Stratum](stratum.md), [MiningCore](miningcore.md), [Pool Operations](pool-ops.md) |
+| Understand miner voting | [Governance](governance.md) | [On-chain Voting](voting.md), [Soft Forks](soft-fork.md), [Hard Forks](hard-fork.md) |
+| Explore miner-facing tools | [Miner Tooling](miner-tooling.md) | [GuapSwap](guapswap.md), [Lithos](lithos.md), [CYTI](cyti.md) |
+| Learn mining theory | [Mining Theory Hub](pow-and-mining-theory-hub.md) | [Autolykos](autolykos.md), [Difficulty](difficulty.md), [Storage Rent](rent.md) |
+
+## Quick Start
 
 ::cards::
 
-[
-  {
+[{
     "title": "Join a pool",
     "content": "Join a mining pool and start mining today.",
     "url": "setup/join.md"
@@ -24,9 +36,7 @@ Ergo mining is based on [**Autolykos**](autolykos.md), an [ASIC-resistant](asic.
     "title": "Solo Mining",
     "content": "Only recommended if you have 1%+ of the network hash rate.",
     "url": "setup/solo.md"
-  }
-
-]
+ }]
 
 ::/cards::
 
@@ -34,8 +44,7 @@ Ergo mining is based on [**Autolykos**](autolykos.md), an [ASIC-resistant](asic.
 
 ::cards::
 
-[
-  {
+[{
     "title": "Wallets",
     "content": "Get your wallet setup.",
     "url": "../dev/wallets.md"
@@ -50,9 +59,7 @@ Ergo mining is based on [**Autolykos**](autolykos.md), an [ASIC-resistant](asic.
     "title": "SmartPools and *Subpooling*",
     "content": "Mine in localised subpools using SmartPools.",
     "url": "smartpools.md"
-  }
-
-]
+ }]
 
 ::/cards::
 
@@ -60,8 +67,7 @@ Ergo mining is based on [**Autolykos**](autolykos.md), an [ASIC-resistant](asic.
 
 ::cards::
 
-[
-  {
+[{
     "title": "Discord",
     "content": "Join us on Discord.",
     "url": "https://discord.gg/Q86PNMwRsu"
@@ -80,8 +86,7 @@ Ergo mining is based on [**Autolykos**](autolykos.md), an [ASIC-resistant](asic.
     "title": "Mining Guide",
     "content": "Join us on Reddit.",
     "url": "https://ergonaut.space/en/Mining"
-  }
-]
+ }]
 
 ::/cards::
 
@@ -89,8 +94,7 @@ Ergo mining is based on [**Autolykos**](autolykos.md), an [ASIC-resistant](asic.
 
 ::cards::
 
-[
-  {
+[{
     "title": "Mining Breakeven Price Calculator",
     "content": "",
     "url": "https://babygrenade.github.io/ergo-profit-calc/"
@@ -104,10 +108,16 @@ Ergo mining is based on [**Autolykos**](autolykos.md), an [ASIC-resistant](asic.
     "title": "Ergo Explorer",
     "content": "",
     "url": "https://explorer.ergoplatform.com"
-  }
-]
+ }]
 
 ::/cards::
+
+## Next Steps
+
+- Need a wallet first: go to [Get a Wallet](wallets-overview.md).
+- Running a node for solo mining or pool infrastructure: go to [Deploy Ergo Infrastructure](interact.md).
+- Looking for miner-facing protocols: see [Miner Tooling](miner-tooling.md).
+- Need help: use [Troubleshooting](support-troubleshooting.md).
 
 ## Related Mining Pages
 

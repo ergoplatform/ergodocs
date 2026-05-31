@@ -1,3 +1,20 @@
+---
+owner: docs
+ia_status: directory
+last_reviewed: '2026-05-29'
+source_repos:
+  - repo: pattern-tech/pattern-core
+    branch: develop
+    paths:
+      - README.md
+  - repo: pattern-tech/pattern-app
+    branch: dev
+    paths:
+      - README.md
+source_of_truth:
+  - https://github.com/pattern-tech/pattern-core
+  - https://github.com/pattern-tech/pattern-app
+---
 # Pattern: Explorer Co-Pilot & On-chain Model Context Registry
 
 **Project for [ErgoHack 10: AI on the Ergo Blockchain](ergohack.md)**

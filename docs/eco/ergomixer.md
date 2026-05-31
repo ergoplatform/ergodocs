@@ -6,17 +6,34 @@ tags:
   - Sigma protocols
   - dApp
   - dApp-Live
+owner: docs
+last_reviewed: '2026-05-29'
+source_repos:
+  - repo: ergoMixer/ergoMixBack
+    branch: master
+    paths:
+      - README.md
+source_of_truth:
+  - https://github.com/ergoMixer/ergoMixBack
 ---
 
 # ErgoMixer
-
-🥇 **[ErgoMixer Website](https://ergomixer.com/)**
 
 ErgoMixer is the **first *non-custodial, programmable, non-interactive* mixer in the space** (and the only **token mixer** to our knowledge).
 
 Download the latest release [here](https://github.com/ergoMixer/ergoMixBack/releases). The main code repositories are hosted under the [ergoMixer GitHub Organization](https://github.com/ergoMixer/).
 
 ErgoMixer utilises Ergo's [**Sigma protocols**](sigma.md) to enable efficient, trustless mixing of funds, enabling a high degree of privacy and security.
+
+## Project Profile
+
+| Field | Details |
+| --- | --- |
+| Status | Active privacy tool with public releases. |
+| Category | Privacy, mixer, token mixing. |
+| Links | [GitHub organization](https://github.com/ergoMixer/), [releases](https://github.com/ergoMixer/ergoMixBack/releases). |
+| Source | ErgoMixer release and organization links, technical paper, forum resources. |
+| Caveats | Privacy depends on correct usage, timing, address hygiene, network behavior, and the size/activity of the anonymity set. |
 
 ## Features
 

@@ -16,6 +16,7 @@ source_repos:
 source_of_truth:
   - https://github.com/ThierryM1212/SigmaO/tree/main/contract/Option_Sell.es
   - https://github.com/ThierryM1212/SigmaO/tree/main/front-end/src/utils/utils.js
+ia_status: directory
 ---
 
 # Sigma'O

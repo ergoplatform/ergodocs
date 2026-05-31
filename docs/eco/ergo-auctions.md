@@ -5,6 +5,21 @@ tags:
   - Marketplace
   - dApp
   - dApp-Live
+owner: docs
+last_reviewed: '2026-05-29'
+source_repos:
+  - repo: anon-real/ErgoAuctionHouse
+    branch: master
+    paths:
+      - README.md
+  - repo: ergoplatform/eips
+    branch: master
+    paths:
+      - eip-0034.md
+source_of_truth:
+  - http://ergoauctions.org/#/auction/active
+  - https://github.com/anon-real/ErgoAuctionHouse
+  - https://github.com/ergoplatform/eips
 ---
 
 # Ergo Auction House

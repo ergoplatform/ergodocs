@@ -27,8 +27,7 @@ With the availability of [Sigma.js](sigmajs.md), [Fleet](fleet.md) can play the 
 
 ::cards::
 
-[
-  {
+[{
     "title": "Fleet",
     "content": "Lets you easily create [Ergo transactions](transactions.md) with a pure JS library.",
     "url": "../stack/fleet.md"
@@ -47,8 +46,7 @@ With the availability of [Sigma.js](sigmajs.md), [Fleet](fleet.md) can play the 
     "title": "sigma-rust (via WASM)",
     "content": "Core Rust library with JS/TS bindings available via WebAssembly.",
     "url": "../stack/sigma-rust.md#bindings"
-  }
-]
+ }]
 
 ::/cards::
 
@@ -56,19 +54,18 @@ With the availability of [Sigma.js](sigmajs.md), [Fleet](fleet.md) can play the 
 
 ::cards::
 
-[
-  {
-    "title": "🔗 dAppStep Docs",
+[{
+ "title": " dAppStep Docs",
     "content": "include many practical examples with Javascript and Nodejs that will help you to understand to implement different aspects of [dApp functionality](get-started.md) on Ergo",
     "url": "https://www.dappstep.com/"
   },
   {
-    "title": "🔗 dApp Development Course",
+ "title": " dApp Development Course",
     "content": "",
     "url": "https://www.youtube.com/watch?v=uC6QO3I4m8o&list=PLzY-irO3z3G8FVDifned2NMFc-PgQqnny"
   },
   {
-    "title": "📹 Video Tutorial",
+ "title": " Video Tutorial",
     "content": "[NightOwl dApp Connector](dApp.md) React Package",
     "url": "https://twitter.com/NightOwlCasino/status/1529452399475179520"
   },
@@ -81,9 +78,7 @@ With the availability of [Sigma.js](sigmajs.md), [Fleet](fleet.md) can play the 
     "title": "Create Transaction Demo",
     "content": "using sigma-rust and TypeScript",
     "url": "https://github.com/ergoplatform/sigma-rust/blob/develop/bindings/ergo-lib-wasm/examples/create-transaction-demo/README.md"
-  }
-
-]
+ }]
 
 ::/cards::
 

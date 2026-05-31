@@ -37,10 +37,10 @@ Lending pools are a fundamental component of DeFi, allowing users to lend out th
 
 1. **Create a Wallet** & **Acquire ERG**:
 2. **Deposit into Duckpools**: Follow the instructions on Duckpools to deposit your ERG into one of the lending pools. Ensure you understand the terms, including the interest rate and any fees.
- - [Step-by-Step Guide: How to Lend on duckpools.io](https://www.youtube.com/watch?v=xnzZEpcdCuA)
- - [Step-by-Step Guide: How to Borrow on duckpools.io](https://www.youtube.com/watch?v=dN4VqQJAyuk)
+   - [Step-by-Step Guide: How to Lend on duckpools.io](https://www.youtube.com/watch?v=xnzZEpcdCuA)
+   - [Step-by-Step Guide: How to Borrow on duckpools.io](https://www.youtube.com/watch?v=dN4VqQJAyuk)
 3. **Earn Interest**: Once your ERG is in the pool, you'll start earning interest. The rate can vary based on demand for loans and the amount of ERG in the pool.
- - Some early analytics pulled up by Luivatra shows a [8% return in ~5 months](https://twitter.com/Luivatra/status/1750497386856665115) on SigUSD deposited in duckpools.
+   - Some early analytics pulled up by Luivatra shows a [8% return in ~5 months](https://twitter.com/Luivatra/status/1750497386856665115) on SigUSD deposited in duckpools.
     - [Interest Arbitrage Calculator](https://docs.google.com/spreadsheets/d/1SLvkZITgrqHnFthN0kBsw_BOvYzjk_xMwgEltcJ0waI/edit#gid=403724413)
     - [Long/Short Calculator](https://docs.google.com/spreadsheets/d/1SLvkZITgrqHnFthN0kBsw_BOvYzjk_xMwgEltcJ0waI/edit#gid=403724413)
 

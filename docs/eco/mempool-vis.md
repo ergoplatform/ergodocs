@@ -5,7 +5,7 @@ tags:
   - Indexing
   - ErgoHack
 owner: docs
-last_reviewed: 2026-05-27
+last_reviewed: 2026-05-30
 source_repos:
   - repo: 2ndtlmining/Ergomempool
     branch: main
@@ -28,6 +28,8 @@ source_of_truth:
 ### 1\. Introduction
 
 The Ergomempool Visualizer is an open-source application designed to provide a real-time, dynamic visualization of the Ergo mempool. Inspired by similar Bitcoin visualizers, this project aims to offer a clear and intuitive understanding of unconfirmed transactions and recent block activity on the Ergo blockchain. It serves as a valuable tool for anyone interested in monitoring network traffic and blockchain dynamics.
+
+The current public README describes the app as a real-time mempool monitor with multiple visualization modes, transaction-origin detection, wallet highlighting, and platform activity tracking across DEXs, bridges, privacy tools, stablecoin apps, mining pools, exchanges, and other Ergo services.
 
 ### 2\. Key Features
 
@@ -55,6 +57,8 @@ The visualizer provides comprehensive insights into the Ergo network:
   * Local Ollama with Qwen2.5-Coder14b and Devstral24b.
   * Free ClaudeAI.
 * **Wallet Integration:** Makes use of the ErgoDappConnector for wallet integration.
+* **Visualization Modes:** The source describes transaction-packing grid, hexagon packing, ball-physics, and grid/table views.
+* **Platform Detection:** The app attempts to identify transactions from known Ergo platforms such as ErgoDEX, Spectrum/ErgoDex infrastructure, Rosen Bridge, ErgoMixer, SigmaFi, DuckPools, mining pools, exchanges, Auction House, and Ergo Raffle.
 
 ### 4\. Current Status & Progress (ErgoHack 10)
 

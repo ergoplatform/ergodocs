@@ -1,3 +1,25 @@
+---
+owner: docs
+last_reviewed: '2026-05-30'
+source_repos:
+  - repo: Scottcjn/Rustchain
+    branch: main
+    paths:
+      - README.md
+  - repo: Scottcjn/rustchain-bounties
+    branch: main
+    paths:
+      - README.md
+  - repo: Scottcjn/sophia-rustchain-bridge
+    branch: main
+    paths:
+      - README.md
+source_of_truth:
+  - https://github.com/Scottcjn/Rustchain
+  - https://github.com/Scottcjn/rustchain-bounties
+  - https://github.com/Scottcjn/sophia-rustchain-bridge
+---
+
 # RustChain: Proof-of-Antiquity Ledger + Agenic Sophia Core
 
 ## Overview
@@ -47,6 +69,7 @@ RustChain utilizes a blend of modern and AI-driven technologies:
 
 - `Apr 3`: a 4-node PoA blockchain went live, with `500+` wallet holders, `40,000+` RTC distributed, and `200+` AI video agents.
 - The project also added a live explorer and a growing agent-economy layer around the PoA network.
+- `May 2026`: the RustChain README describes 5 active nodes, a public explorer at `rustchain.org/explorer`, a miner `v3.1.2` release with a fingerprint fix, and tokenomics aligned to a `2^23` supply cap plus holder-count rate scaling.
 
 ### 6. Current Status & Progress (ErgoHack 10)
 
@@ -55,8 +78,8 @@ During ErgoHack 10, RustChain achieved significant milestones:
 * Successfully demonstrated writing data to the blockchain via LLM execution.
 * Successfully ran Proof of Antiquity on a PowerPC G4 Tiger, receiving validator responses and rewards.
 * Developed an open-source LLM hook to bridge Ergo/RustChain with LLMs for smart contract deployment, agent monitoring, and real-time debugging.
-* Deployed the first Proof of Antiquity node and server (e.g., at `50.28.86.131`).
-* Launched core web services including an API (`http://50.28.86.131:8085/`), a Faucet (`http://50.28.86.131:8086/`), and a Block Explorer (`http://50.28.86.131/explorer`), which displays block and transaction data.
+* Deployed Proof of Antiquity nodes and public web services.
+* Launched public project services including an explorer, machine-preservation tracker, miner installer, whitepaper, and manifesto pages.
 * Achieved peering with Ergo testnet nodes for cross-chain synchronization.
 * Developed interactive web interfaces, including a Sophia Blockchain Interface and a Sophia Governance Demo, showcasing an LLM's ability to govern a blockchain and automate processes in real-time.
 * Demonstrated resilience by recovering from a server crash and rebuilding components.
@@ -66,12 +89,10 @@ During ErgoHack 10, RustChain achieved significant milestones:
 * [Github](https://github.com/Scottcjn/Rustchain)
 * [RustChain bounties](https://github.com/Scottcjn/rustchain-bounties)
 * **GitHub Repository:** [https://github.com/Scottcjn/sophia-rustchain-bridge](https://github.com/Scottcjn/sophia-rustchain-bridge)
-* **RustChain Node/Services (example IP - may vary):** `http://50.28.86.131/`
-* **API (example):** `http://50.28.86.131:8085/`
-* **Faucet (example):** `http://50.28.86.131:8086/`
-* **Block Explorer (example):** `http://50.28.86.131/explorer`
-* **Sophia Blockchain Interface (example):** `http://50.28.86.131/sophia_blockchain_interface_simple.html`
-* **Sophia Governance Demo (example):** `http://50.28.86.131/sophia_governance_demo.html`
+* [RustChain explorer](https://rustchain.org/explorer/)
+* [Machines preserved](https://rustchain.org/preserved.html)
+* [RustChain whitepaper](https://github.com/Scottcjn/Rustchain/blob/main/docs/WHITEPAPER.md)
+* [RustChain miner release](https://github.com/Scottcjn/Rustchain/releases/tag/v3.1.2-miner)
 
 ### 8. Contribution
 

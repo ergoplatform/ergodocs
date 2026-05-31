@@ -1,3 +1,8 @@
+---
+owner: docs
+last_reviewed: '2026-05-29'
+ia_status: directory
+---
 # Rosen Bridge: Connecting Cardano, Ergo, Bitcoin, Ethereum, Dogecoin, and Binance Smart Chain
 
 Rosen Bridge enables seamless movement of value across Cardano, Ergo, Bitcoin, Ethereum, Dogecoin, and Binance Smart Chain (BSC). Rather than swapping native tokens directly, Rosen locks the native asset on its origin chain and mints a representation (rsToken) on the destination chain. Examples:

@@ -2,6 +2,9 @@
 tags:
   - Sigma Chains
   - Sigma Layer
+owner: docs
+last_reviewed: '2026-05-29'
+ia_status: directory
 ---
 # Sigma Chains
 

@@ -1,7 +1,5 @@
-
 ---
 tags:
-
 - Getting Started
 - Newcomer
 - Guide
@@ -9,14 +7,11 @@ tags:
 - Wallets
 - dApps
 - Ecosystem
-
 ---
 
 # Ergo Newcomer Document - One Stop Shop
 
-*Hello New Ergonaut! This document's aim is to help you navigate the Ergo ecosystem with ease. This information will be concise and to the point.*
-
-*Enjoy!*
+This guide helps new Ergonauts navigate wallets, dApps, protocol basics, mining, and community resources.
 
 ## Ergo Wallets
 

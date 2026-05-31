@@ -1,6 +1,13 @@
 ---
 owner: docs
-last_reviewed: never
+last_reviewed: '2026-05-29'
+ia_status: directory
+source_of_truth:
+- https://scypher.vercel.app/
+- https://github.com/moon-miner/SCypher-web
+- https://github.com/moon-miner/bash-BIP39-seed-cypher
+source_watch_note: Linked GitHub repositories were not public/resolvable during the
+ 2026-05-29 sweep, so no source_repos entry is configured.
 ---
 
 # SCypher: Blockchain-Hosted BIP39 Seed Cipher

@@ -27,6 +27,7 @@ source_of_truth:
   - https://github.com/ergoplatform/oracle-core/tree/master/connectors/connector-lib
   - https://github.com/ergoplatform/oracle-core/tree/master/oracle-pool-bootstrap
   - https://github.com/ergoplatform/oracle-core/tree/master/scripts/ada-usd-oracle/oracle-config.yaml
+ia_status: directory
 ---
 
 # Oracles on Ergo

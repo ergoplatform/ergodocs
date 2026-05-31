@@ -8,7 +8,9 @@ tags:
   - Guide
 ---
 
-**CyberVerse is a pixelated, open-world multiplayer game on the Ergo Blockchain. In its beta version, players can explore, play mini-games, and earn CYPX tokens. By owning a CyberCitizen NFT, players get access to Cyberia city to enjoy activities like DJing, car racing, gardening, and more, earning tokens in the process. They can also collect daily rewards, complete quests, level up, and personalize NFT apartments. Features include a global chat, leaderboards, and loot boxes. There is even a recently released multiplayer version!**
+# CyberVerse Gaming Tutorial
+
+CyberVerse is a pixelated, open-world multiplayer game on the Ergo Blockchain. In its beta version, players can explore, play mini-games, and earn CYPX tokens. By owning a CyberCitizen NFT, players get access to Cyberia city to enjoy activities like DJing, car racing, gardening, and more, earning tokens in the process. They can also collect daily rewards, complete quests, level up, and personalize NFT apartments. Features include a global chat, leaderboards, and loot boxes. There is even a recently released multiplayer version.
 
 - [CyberVerse - The Journey (Trailer)](https://www.youtube.com/watch?v=SZh_vjE96ZU)
 - [Game Updates Log](https://cyberverse.fandom.com/wiki/Updates)
@@ -72,13 +74,13 @@ For a comprehensive understanding of $CYPX's role within CyberCity, refer to the
 
 - [Whitepaper V3](https://docs.cyberversegame.io/whitepaper-v3./)
 
-**Video**
+### Video
 
 - [Sigmanauts SigmaGaming streams](https://www.youtube.com/@ergosigmanauts/streams)
 - [xkilver on twitch.tv](https://www.twitch.tv/xkilver/videos)
 - [CYBERVERSE TUTORIAL #3 - MINING RIG (By Kilver)](https://www.youtube.com/watch?v=O3m4GFNpcWo)
 
-**Secondary Markets (SkyHarbor)**
+### Secondary Markets
 
 - [GEN 1 Cybercitizens (NPC)](https://skyharbor.io/collection/ergopixels)
 - [GEN 2](https://skyharbor.io/collection/cybercitizens)

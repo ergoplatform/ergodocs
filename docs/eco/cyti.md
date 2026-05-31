@@ -5,6 +5,15 @@ tags:
   - Mining
   - Smart Contract
   - dApp
+owner: docs
+last_reviewed: '2026-05-29'
+source_repos:
+  - repo: ThierryM1212/cyti
+    branch: main
+    paths:
+      - README.md
+source_of_truth:
+  - https://github.com/ThierryM1212/cyti
 ---
 
 # CYTI

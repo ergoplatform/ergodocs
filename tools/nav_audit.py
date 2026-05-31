@@ -41,7 +41,7 @@ ORPHAN_EXCLUDE_FILES = {
     "todo.md",
     "tags.md",
 }
-UNLISTED_STATUSES = {"legacy", "alias", "draft"}
+UNLISTED_STATUSES = {"legacy", "alias", "draft", "directory"}
 
 
 class Loader(yaml.SafeLoader):
@@ -99,6 +99,13 @@ def frontmatter(path: Path) -> dict:
         return {}
 
 
+def configured_unlisted(config: dict) -> set[str]:
+    raw = config.get("not_in_nav") or ""
+    if not isinstance(raw, str):
+        return set()
+    return {line.strip() for line in raw.splitlines() if line.strip()}
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Audit mkdocs nav and docs coverage.")
     parser.add_argument(
@@ -110,6 +117,7 @@ def main() -> int:
 
     config = yaml.load(MKDOCS_YML.read_text(encoding="utf-8"), Loader=Loader)
     nav = config.get("nav", [])
+    unlisted = configured_unlisted(config)
 
     entries: List[NavEntry] = []
     for item in nav:
@@ -136,6 +144,7 @@ def main() -> int:
         p
         for p in all_docs
         if p not in nav_set
+        and p not in unlisted
         and not should_exclude_orphan(p)
         and frontmatter(DOCS_DIR / p).get("ia_status") not in UNLISTED_STATUSES
     ]

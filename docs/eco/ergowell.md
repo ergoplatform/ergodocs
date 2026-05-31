@@ -4,6 +4,16 @@ tags:
   - Crowdfunding
   - Investing
   - dApp
+owner: docs
+last_reviewed: '2026-05-29'
+source_repos:
+  - repo: mhssamadani/ErgoWell
+    branch: master
+    paths:
+      - README.md
+source_of_truth:
+  - https://github.com/mhssamadani/ErgoWell
+ia_status: directory
 ---
 
 # ErgoWell

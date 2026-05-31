@@ -7,7 +7,7 @@
 - **Created On**: September 23, 2022
 - **Type of Change**: Hard Fork Required
 
-> 📖 [Full Documentation](https://github.com/ergoplatform/eips/blob/ddbca24fef5e91e0c80c6881fc31d8831ae69768/eip-0037.md)
+> [Full Documentation](https://github.com/ergoplatform/eips/blob/ddbca24fef5e91e0c80c6881fc31d8831ae69768/eip-0037.md)
 
 ## Why Is This Important?
 

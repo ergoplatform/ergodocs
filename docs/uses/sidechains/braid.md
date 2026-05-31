@@ -1,6 +1,7 @@
 ---
 title: Braid
-description: Research notes for Braid, a proposed Bitcoin and Ergo double merged-mined sidechain.
+description: Research notes for Braid, a proposed Bitcoin and Ergo double merged-mined
+  sidechain.
 tags:
   - Sidechains
   - Braid
@@ -28,6 +29,7 @@ source_of_truth:
   - https://github.com/BetterMoneyLabs/braid/blob/master/whitepaper/whitepaper.tex
   - https://github.com/BetterMoneyLabs/braid/blob/master/docs/ergo-mergedmining.md
   - https://github.com/BetterMoneyLabs/braid/blob/master/docs/bitcoin-mergedmining.md
+ia_status: directory
 ---
 
 # Braid

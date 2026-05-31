@@ -6,6 +6,10 @@ tags:
   - DeFi
   - Degen Finance
   - dApp
+owner: docs
+last_reviewed: '2026-05-29'
+source_watch_note: Idea/concept page; no verified public GitHub repository found.
+ia_status: directory
 ---
 
 # OptionCoin: Decentralized Options Trading for Token Emission

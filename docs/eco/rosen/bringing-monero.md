@@ -1,3 +1,8 @@
+---
+owner: docs
+last_reviewed: '2026-05-29'
+ia_status: directory
+---
 # Bringing Monero to RosenBridge
 
 Monero’s privacy features make it a special case for cross-chain bridges. Transactions reveal neither sender nor amount, and common wallets avoid arbitrary metadata. Rosen still needs a shared vault that Guards can control and verifiable user intent that Watchers can observe. This proof-of-concept outlines how to achieve both without compromising Monero’s privacy model.

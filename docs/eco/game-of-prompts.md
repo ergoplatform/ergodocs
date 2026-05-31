@@ -1,3 +1,31 @@
+---
+owner: docs
+last_reviewed: '2026-05-30'
+source_repos:
+  - repo: game-of-prompts/ergo-hack-x
+    branch: main
+    paths:
+      - README.md
+  - repo: game-of-prompts/app
+    branch: main
+    paths:
+      - README.md
+      - src
+  - repo: game-of-prompts/snake-game
+    branch: master
+    paths:
+      - README.md
+  - repo: game-of-prompts/contract-verification
+    branch: main
+    paths:
+      - README.md
+source_of_truth:
+  - https://github.com/game-of-prompts/ergo-hack-x
+  - https://github.com/game-of-prompts/app
+  - https://github.com/game-of-prompts/snake-game
+  - https://github.com/game-of-prompts/contract-verification
+---
+
 # Game of Prompts (GoP): AI Problems, Blockchain Solutions
 
 ## Overview
@@ -13,6 +41,7 @@ Game of Prompts (GoP) is a pioneering competitive platform that merges Artificia
 - `Feb 11` to `Apr 4`: the on-chain and off-chain contracts plus the UI were finalized, then polished in dev mode with mock competitions.
 - `Mar 5`: the landing page and `Nodo` packaging/reporting flow were reworked.
 - `Apr 9`: [Celaut](celaut.md) Node and Game of Prompts were being tested together, with the first open competition planned once the remaining issues were closed.
+- `May 13` to `May 28`: the app repository added game details and guide updates, share/effective-score fixes, mobile footer improvements, and a robot developer guide for prompts.
 - A dev app is also live at [game-of-prompts.github.io/app/?env=dev](https://game-of-prompts.github.io/app/?env=dev).
 
 ### 2. Core Concept & Gameplay

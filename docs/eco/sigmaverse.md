@@ -3,6 +3,16 @@ tags:
   - Sigmaverse
   - Ecosystem
   - dApp
+owner: docs
+last_reviewed: '2026-05-29'
+source_repos:
+  - repo: ergoplatform/sigmaverse
+    branch: master
+    paths:
+      - README.md
+source_of_truth:
+  - https://github.com/ergoplatform/sigmaverse
+ia_status: directory
 ---
 
 # Sigmaverse

@@ -4,6 +4,21 @@
 This page serves as a guide for contributing as a project on Ergo. It outlines the standards for identity, development, and community administration. Adhering to these standards ensures a secure and efficient ecosystem.
 ///
 
+## Documentation Profile
+
+Project pages should be easy to scan and should not overstate maturity. When adding or refreshing an ecosystem page, include these fields where the information is public and source-backed:
+
+| Field | Purpose |
+| --- | --- |
+| Status | Active, emerging, experimental, paused, historical, or unknown. |
+| Category | Wallet, DeFi, NFT, mining, infrastructure, privacy, tooling, game, or other fit. |
+| Links | Official site, repository, docs, app, and community channel when available. |
+| Source | Public repository, release, EIP, project docs, or maintainer confirmation. |
+| Summary | One short paragraph explaining what problem the project solves. |
+| Caveats | Beta status, archived repositories, custodial assumptions, external-chain dependencies, or maintainer-review needs. |
+
+Do not create public project pages from chat claims alone. Use chat as a lead, then verify against public sources.
+
 ## V1 Identity
 
 | # | Description | [NIST §](https://pages.nist.gov/800-63-3/sp800-63b.html) |

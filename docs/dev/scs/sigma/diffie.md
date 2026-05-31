@@ -20,8 +20,7 @@ The protocol works as follows:
 ### Interactive Protocol
 
 1. The prover selects a random value **r ←<sup>R</sup> Z<sub>q</sub>** and computes two temporary values **t<sub>0</sub>** and **t<sub>1</sub>**:
-   \[
-   t_0 = g^r, \quad t_1 = h^r
+ \[t_0 = g^r, \quad t_1 = h^r
    \]
    The prover sends **(t<sub>0</sub>, t<sub>1</sub>)** to the verifier.
 
@@ -30,8 +29,7 @@ The protocol works as follows:
 3. The prover computes the response **z = r + cx** and sends it to the verifier.
 
 4. The verifier accepts the proof if:
-   \[
-   g^z = t_0 \cdot u^c \quad \text{and} \quad h^z = t_1 \cdot v^c
+ \[g^z = t_0 \cdot u^c \quad \text{and} \quad h^z = t_1 \cdot v^c
    \]
 This process allows the prover to demonstrate knowledge of **x** without actually revealing **x**.
 

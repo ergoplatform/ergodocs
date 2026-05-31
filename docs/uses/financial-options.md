@@ -1,3 +1,8 @@
+---
+owner: docs
+last_reviewed: '2026-05-29'
+ia_status: directory
+---
 # Options
 
 An option is a financial contract that gives the buyer the right, but not the obligation, to buy or sell an underlying asset at a specific price and at a specific time. There are two types of options: call options and put options.

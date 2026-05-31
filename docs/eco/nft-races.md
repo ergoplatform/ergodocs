@@ -6,7 +6,8 @@ tags:
   - NFTs
   - ecosystem
 owner: docs
-last_reviewed: 2026-05-27
+last_reviewed: 2026-05-29
+ia_status: directory
 source_repos:
   - repo: cannonQ/nft-races
     branch: main
@@ -15,11 +16,13 @@ source_repos:
 source_of_truth:
   - https://github.com/cannonQ/nft-races
   - https://nft-races.vercel.app/
+source_watch_note: CyberPets Racing / NFT Races is tracked as part of the Cyberverse
+ project family rather than a separate top-level ecosystem entry.
 ---
 
 # NFT Races
 
-[NFT Races](https://nft-races.vercel.app/) is the public CyberPets Racing app, a provably fair asynchronous NFT racing game on Ergo.
+[NFT Races](https://nft-races.vercel.app/) is the public CyberPets Racing app, a provably fair asynchronous NFT racing game on Ergo. It is tracked in the ecosystem directory as part of the Cyberverse project family.
 
 Players connect a Nautilus wallet, discover CyberPets in their wallet, train creatures, enter races, and compete for leaderboard points and rewards. Race resolution uses deterministic randomness seeded from Ergo block hashes.
 

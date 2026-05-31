@@ -26,11 +26,11 @@ source_of_truth:
 
 [Fleet](https://fleet-sdk.github.io/docs/) lets you easily create Ergo transactions with a pure JS library.
 
-- 🪄 Easy to use
-- 🪶 Lightweight: [~12kB minified + gziped](https://bundlephobia.com/package/@fleet-sdk/core)
-- 🦾 Powerful: easily create complex transactions with a fluent API
-- 🧪 100% code coverage
-- 🌲 Tree-shakeable
+- Easy to use
+- Lightweight: [~12kB minified + gziped](https://bundlephobia.com/package/@fleet-sdk/core)
+- Powerful: easily create complex transactions with a fluent API
+- 100% code coverage
+- Tree-shakeable
 
 For common usage patterns and examples, see the [Fleet SDK Recipes](fleet-sdk-recipes.md).
 
@@ -38,7 +38,7 @@ Fleet handles Ergo wallet keys and transaction construction. If your JavaScript 
 
 ## Examples
 
-- 🥇 **[Fleet Examples](https://github.com/fleet-sdk/fleet-by-example)**: Repository showcasing various Fleet SDK usage patterns. [`TS`]
+- **[Fleet Examples](https://github.com/fleet-sdk/fleet-by-example)**: Repository showcasing various Fleet SDK usage patterns. [`TS`]
 - [ergo-fleet-sdk-example](https://github.com/dungvn3000/ergo-fleet-sdk-example): small TypeScript ErgoScript-by-example repository using Fleet SDK patterns.
 
 /// details | DeepWiki Documentation

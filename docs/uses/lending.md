@@ -1,13 +1,30 @@
+---
+owner: docs
+last_reviewed: '2026-05-29'
+ia_status: directory
+---
 # Lending & Borrowing
 
-Lending and borrowing are two components that increase liquidity flow in financial systems. For example, you have Bitcoins but want to leverage your holding without selling your BTC. So, you can stake your BTC (you can also use your house as collateral in this sense) as collateral to borrow SigUSD and use it in exchanges or yield farming protocols. On the other side of your interaction, another user can leverage her unused SigUSD by staking in the lending protocol. Traditional banks have very low-interest rates, and they might suck up a lot of revenue from your deposits. With decentral lending protocols such as [Compound](https://compound.finance/), users will be able to use lend/borrow services and move their funds across all crypto ecosystems without any need for centralized platforms such as banks or exchanges. Crypto lending protocols are open to more experimental designs, such as [interest-free loans](https://www.ergoforum.org/t/interest-free-loan-contract/67), innovating even more use cases on blockchains.
+Use this page to find lending, borrowing, credit, and yield-related material in the Ergo ecosystem.
 
-* Loans: we have an [interest-free loan contract example](https://www.ergoforum.org/t/interest-free-loan-contract/67)
-* With SigmaUSD, loans can be attractive to miners and not only.
-* Please also check the targeted microloan contract from ["Smart Contracts for the People" article](https://ergoplatform.org/en/blog/2018_10_19-smart-contracts/)
+## Start Here
 
-## [ErgoLend](exle.md)
+| Goal | Page |
+| --- | --- |
+| Explore active or emerging lending projects | [duckpools](duckpools.md), [SigmaFi](sigmafi.md), [EXLE](exle.md) |
+| Understand micro-credit ideas | [Micro Credit](microcredit.md), [Mutual Credit](mutual_credit.md) |
+| Farm or provide liquidity | [Yield Farming](yield.md), [Lending Pools Tutorial](lending-pools.md) |
+| Explore collateral and miner-related models | [Collateral Mining](collateral-mining.md), [Lithos](lithos.md) |
 
-## [duckpools](duckpools.md)
+## Background
 
-## [SigmaFi](sigmafi.md)
+Lending and borrowing increase liquidity by letting one participant supply idle assets while another borrows against collateral or a contract-defined obligation. On Ergo, these designs can use eUTXO contracts, stable assets, oracle data, and multi-stage transaction flows.
+
+Some pages in this area describe live or emerging projects. Others are contract ideas or examples. Check each project page for its status before assuming it is ready for production use.
+
+## Related Finance Pages
+
+- [Stablecoins](stablecoins.md)
+- [Decentralized Exchanges](dex.md)
+- [Financial Options](financial-options.md)
+- [Profit Sharing](profit.md)

@@ -4,6 +4,22 @@ tags:
   - Degen Finance
   - Gaming
   - dApp
+owner: docs
+last_reviewed: '2026-05-29'
+source_repos:
+  - repo: pulsarz/hodlcoin-frontend
+    branch: master
+    paths:
+      - README.md
+  - repo: ldgaetano/hodlcoin-contracts
+    branch: main
+    paths:
+      - README.md
+source_of_truth:
+  - https://github.com/pulsarz/hodlcoin-frontend
+  - https://github.com/ldgaetano/hodlcoin-contracts
+  - https://app.hodlcoin.co.in/
+  - https://phoenixfi.app/
 ---
 # Hodlcoin: A High-Risk, High-Reward Game
 

@@ -16,6 +16,7 @@ source_repos:
       - src/offchain/plugins.ts
 source_of_truth:
   - https://github.com/capt-nemo429/sigmafi-ui/tree/main/src/offchain/plugins.ts
+source_watch_note: Site remains running and usable; repository updates are rare.
 ---
 
 # SigmaFi

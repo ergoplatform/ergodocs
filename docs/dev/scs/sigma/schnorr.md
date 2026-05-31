@@ -30,23 +30,19 @@ To sign a message \( m \), the following steps are performed:
 
 1. Generate a random nonce \( k \) and compute \( R = kG \).
 2. Hash the values \( R \), \( P \), and the message \( m \) to generate a challenge \( e \):
-   \[
-   e = H(R \parallel P \parallel m)
+ \[e = H(R \parallel P \parallel m)
    \]
 3. Compute the signature \( s \) as:
-   \[
-   s = k + ex
+ \[s = k + ex
    \]
 
 ### Verification
 
 In the generic form, to verify a signature \( (s, e) \), the verifier computes:
-\[
-R' = sG - eP
+\[R' = sG - eP
 \]
 and checks if:
-\[
-e = H(R' \parallel P \parallel m)
+\[e = H(R' \parallel P \parallel m)
 \]
 If the condition holds, the signature is valid, demonstrating that the signer knows the private key corresponding to the public key \( P \).
 

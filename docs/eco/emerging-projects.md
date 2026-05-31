@@ -8,17 +8,13 @@ tags:
   - community
 owner: docs
 last_reviewed: 2026-05-27
+ia_status: directory
 source_repos:
   - repo: Scottcjn/bottube
     branch: main
     paths:
       - README.md
       - ergo_bridge_blueprint.py
-  - repo: mwaddip/ergots
-    branch: master
-    paths:
-      - README.md
-      - packages/ergoscript
   - repo: a-shannon/ergo-agent-sdk
     branch: main
     paths:
@@ -52,14 +48,9 @@ source_repos:
     branch: main
     paths:
       - README.md
-  - repo: moon-miner/SCypher-web
-    branch: main
-    paths:
-      - README.md
 source_of_truth:
   - https://github.com/Scottcjn/bottube
   - https://www.bottube.ai
-  - https://github.com/mwaddip/ergots
   - https://github.com/a-shannon/ergo-agent-sdk
   - https://ergo-agent-sdk.readthedocs.io/
   - https://github.com/mwaddip/ergo-proxy
@@ -77,18 +68,26 @@ source_of_truth:
 
 These projects are recent ecosystem additions verified against public repositories or project sites. Each has a dedicated page; some are early, experimental, or developer-facing, so use the upstream repository or site for current status.
 
-| Dedicated page | What it is | Related surface |
-| --- | --- | --- |
-| [BoTTube](bottube.md) | AI-native video platform with an Ergo bridge blueprint for deposit verification and P2PK address handling. | Applications and utilities. |
-| [ergots](ergots.md) | Browser-compatible TypeScript tooling for Ergo, including NiPoPoW, AVL+, and ErgoScript work. | Developer libraries. |
-| [Ergo Agent SDK](ergo-agent-sdk.md) | Python SDK for giving autonomous agents controlled access to Ergo and its DeFi ecosystem. | Developer frameworks. |
-| [Ergo Proxy](ergo-proxy.md) | Lightweight Ergo P2P relay proxy for forwarding peer messages without holding blockchain state. | Node operations and P2P tooling. |
-| [Ergo Relay](ergo-relay.md) | Minimal transaction signing and P2P relay service. | Node operations and transaction broadcast tooling. |
-| [NFT Races](nft-races.md) | CyberPets Racing, an Ergo NFT racing game. | NFTs and gaming. |
-| [PiggyTrade](piggytrade.md) | Trading app for Ergo. | Finance and trading tools. |
-| [GitCircles](gitcircles.md) | Contribution-reward framework for open-source communities. | Funding and contribution tooling. |
-| [TabbyPOS](tabbypos.md) | Web3 point-of-sale project for merchant crypto payments. | Payments and merchant tooling. |
-| [SCypher](scypher.md) | BIP39 seed-cypher tooling with ErgoHack context. | Wallet-adjacent security tooling. |
+## How to Read This Page
+
+| Status | Meaning |
+| --- | --- |
+| Active | Public project or repository has recent visible activity. |
+| Emerging | Early project with enough public source material to document, but not necessarily mature. |
+| Developer-facing | Useful mainly for builders, operators, or integrators. |
+| Experimental | Research, prototype, or hackathon-stage work; do not assume production readiness. |
+
+| Dedicated page | What it is | Status | Related surface |
+| --- | --- | --- | --- |
+| [BoTTube](bottube.md) | AI-native video platform with an Ergo bridge blueprint for deposit verification and P2PK address handling. | Emerging | Applications and utilities. |
+| [Ergo Agent SDK](ergo-agent-sdk.md) | Python SDK for giving autonomous agents controlled access to Ergo and its DeFi ecosystem. | Developer-facing | Developer frameworks. |
+| [Ergo Proxy](ergo-proxy.md) | Lightweight Ergo P2P relay proxy for forwarding peer messages without holding blockchain state. | Developer-facing | Node operations and P2P tooling. |
+| [Ergo Relay](ergo-relay.md) | Minimal transaction signing and P2P relay service. | Developer-facing | Node operations and transaction broadcast tooling. |
+| [NFT Races](nft-races.md) | CyberPets Racing, an Ergo NFT racing game. | Emerging | NFTs and gaming. |
+| [PiggyTrade](piggytrade.md) | Trading app for Ergo. | Emerging | Finance and trading tools. |
+| [GitCircles](gitcircles.md) | Contribution-reward framework for open-source communities. | Emerging | Funding and contribution tooling. |
+| [TabbyPOS](tabbypos.md) | Web3 point-of-sale project for merchant crypto payments. | Emerging | Payments and merchant tooling. |
+| [SCypher](scypher.md) | BIP39 seed-cypher tooling with ErgoHack context. | Experimental | Wallet-adjacent security tooling. |
 
 ## Covered Elsewhere
 

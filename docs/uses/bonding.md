@@ -1,3 +1,8 @@
+---
+owner: docs
+last_reviewed: '2026-05-29'
+ia_status: directory
+---
 # Bonding Curves
 
 Bonding curves are a useful primitive for continuous token offerings (CTOs), [augmented bonded curves](https://medium.com/giveth/deep-dive-augmented-bonding-curves-3f1f7c1fa751), and perhaps AMM DEXes.

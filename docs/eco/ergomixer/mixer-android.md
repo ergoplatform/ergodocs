@@ -1,3 +1,8 @@
+---
+owner: docs
+last_reviewed: '2026-05-29'
+ia_status: directory
+---
 # How to Set Up the Ergo Mixer on an Android Device
 
 ## Getting Started

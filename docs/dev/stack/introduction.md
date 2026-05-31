@@ -14,8 +14,7 @@ source_of_truth:
 
 ::cards::
 
-[
-  {
+[{
     "title": "Key Features",
     "content": "Discover Ergo's key features",
     "image": "../../assets/img/dev-grid/key.png",
@@ -29,13 +28,13 @@ source_of_truth:
 
   },
   {
-    "title": "🔗 Sigmaverse",
+ "title": " Sigmaverse",
     "content": "Your portal to the Ergo dApp universe.",
     "image": "../../assets/img/dev-grid/sigmaverse.svg",
     "url": "https://sigmaverse.io"
   },
   {
-    "title": "🔗 Come chat!",
+ "title": " Come chat!",
     "content": "Join the action on Discord",
     "image": "../../assets/img/dev-grid/discord.png",
     "url": "https://discord.gg/Q86PNMwRsu"
@@ -51,8 +50,7 @@ source_of_truth:
     "content": "Frequently asked questions.",
     "image": "../../assets/img/dev-grid/faq.png",
     "url": "../../faq.md"
-  }
-]
+ }]
 
 ::/cards::
 
@@ -66,8 +64,7 @@ General materials not specific to ErgoScript or a particular section of developm
 
 ::cards::
 
-[
-  {
+[{
     "title": "Blockchain for Beginners: What is a Blockchain?",
     "url": "https://medium.com/@ergoplatform/blockchain-for-beginners-what-is-a-blockchain-23f3b66f7c62"
   },
@@ -79,8 +76,7 @@ General materials not specific to ErgoScript or a particular section of developm
   {
     "title": "ERGO Deep Dive: The Road to Top 10 Cryptocurrency",
     "url": "https://thecryptodrip.com/ergo-deep-dive/"
-  }
-]
+ }]
 
 ::/cards::
 
@@ -90,21 +86,19 @@ Need help figuring out where to start developing? This [introduction to Mosaik](
 
 ::cards::
 
-[
-  {
-    "title": "🔗 Learning blockchains like Cardano and Ergo",
+[{
+ "title": " Learning blockchains like Cardano and Ergo",
     "url": "https://www.youtube.com/watch?v=HDn49bToTMI"
   },
   {
-    "title": "🔗 Side tooling for building dApps on Ergo",
+ "title": " Side tooling for building dApps on Ergo",
     "url": "https://dav009.medium.com/ergo-101-side-tooling-for-building-dapps-on-ergo-c71889d60826"
 
   },
   {
-    "title": "🔗 DeCo Education: dApp Components - Backend",
+ "title": " DeCo Education: dApp Components - Backend",
     "url": "https://deco-education.github.io/deco-docs/docs/into-the-woods/trail2-ergo-coding/dapp-components"
-  }
-]
+ }]
 
 ::/cards::
 
@@ -112,24 +106,22 @@ Need help figuring out where to start developing? This [introduction to Mosaik](
 
 ::cards::
 
-[
-  {
-    "title": "🔗 DeCo Laymens Course",
+[{
+ "title": " DeCo Laymens Course",
     "content": "Discover Ergo's key features",
     "url": "https://www.youtube.com/watch?v=SAWeW6wajEw&list=PLopsKGshj0B6C1mg6RpDsj0rhYxam3_RZ"
   },
   {
-    "title": "🔗 Ergo Blockchain Crash Course",
+ "title": " Ergo Blockchain Crash Course",
     "content": "",
     "url": "https://www.youtube.com/playlist?list=PL8-KVrs6vXLTVXGwmYXjOBRx3VymB4Vm2"
 
   },
   {
-    "title": "🔗 DeCo Intro Lessons",
+ "title": " DeCo Intro Lessons",
     "content": "Build a mobile app on Android or iOS.",
     "url": "https://www.youtube.com/watch?v=qR0_k7VH6KI&list=PLopsKGshj0B4BpMoSMh5hQk8gVfWk-si6"
-  }
-]
+ }]
 
 ::/cards::
 
@@ -137,8 +129,7 @@ Need help figuring out where to start developing? This [introduction to Mosaik](
 
 ::cards::
 
-[
-  {
+[{
     "title": "AppKit",
     "content": "for JVM languages (used in Scala, Java and Kotlin projects)",
     "image": "../../assets/img/dev-grid/jvm.png",
@@ -174,8 +165,7 @@ Need help figuring out where to start developing? This [introduction to Mosaik](
     "content": "JSON dApp Environment",
     "image": "../../assets/img/dev-grid/json.png",
     "url": "jde.md"
-  }
-]
+ }]
 
 ::/cards::
 
@@ -183,8 +173,7 @@ Need help figuring out where to start developing? This [introduction to Mosaik](
 
 ::cards::
 
-[
-  {
+[{
     "title": "sigmastate-interpreter",
     "content": "",
     "image": "../../assets/img/dev-grid/jvm.png",
@@ -202,9 +191,7 @@ Need help figuring out where to start developing? This [introduction to Mosaik](
     "content": "",
     "image": "../../assets/img/dev-grid/js.png",
     "url": "../lib/sigmajs.md"
-  }
-
-]
+ }]
 
 ::/cards::
 
@@ -212,8 +199,7 @@ Need help figuring out where to start developing? This [introduction to Mosaik](
 
 ::cards::
 
-[
-  {
+[{
     "title": "GetBlok Plasma",
     "content": "a library on top of Ergo Appkit that provides an abstraction layer to simplify the process of integrating AVL Trees (AKA Plasma) into off-chain code.",
     "url": "../lib/plasma.md"
@@ -228,8 +214,7 @@ Need help figuring out where to start developing? This [introduction to Mosaik](
     "title": "EIP12-types",
     "content": "static typing library",
     "url": "../lib/eip12-types.md"
-  }
-]
+ }]
 
 ::/cards::
 
@@ -237,8 +222,7 @@ Need help figuring out where to start developing? This [introduction to Mosaik](
 
 ::cards::
 
-[
-  {
+[{
     "title": "Node & Explorer Tools",
     "content": "",
     "url": "explorer.md"
@@ -248,8 +232,7 @@ Need help figuring out where to start developing? This [introduction to Mosaik](
     "content": "",
     "url": "api.md"
 
-  }
-]
+ }]
 
 ::/cards::
 
@@ -257,8 +240,7 @@ Need help figuring out where to start developing? This [introduction to Mosaik](
 
 ::cards::
 
-[
-  {
+[{
     "title": "Creating a simple *pay-to-script* app",
     "content": "",
     "url": "../scs/p2s.md"
@@ -273,8 +255,7 @@ Need help figuring out where to start developing? This [introduction to Mosaik](
     "title": "Sending a chained transaction",
     "content": "",
     "url": "../anatomy/transactions/chained.md"
-  }
-]
+ }]
 
 ::/cards::
 

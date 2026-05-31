@@ -5,6 +5,20 @@ tags:
   - TCG
   - dApp
   - dApp-Live
+owner: docs
+last_reviewed: '2026-05-29'
+source_repos:
+  - repo: Blitz-TCG/Game-Client
+    branch: main
+    paths:
+      - README.md
+  - repo: Blitz-TCG/Website
+    branch: main
+    paths:
+      - README.md
+source_of_truth:
+  - https://github.com/Blitz-TCG
+  - https://blitztcg.com/home
 ---
 
 # Blitz TCG

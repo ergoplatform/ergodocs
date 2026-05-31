@@ -17,8 +17,7 @@ The testnet runs on different ports than the mainnet and can be accessed by chan
 
 ::cards::
 
-[
-  {
+[{
     "title": "Synchronising from scratch",
     "content": "Start synchronising with the testnet from genesis",
     "url": "testnet/testnet-full.md"
@@ -43,7 +42,6 @@ The testnet runs on different ports than the mainnet and can be accessed by chan
     "title": "Resources",
     "content": "Port numbers, bookmarks, and any other testnet resources here!",
     "url": "testnet/testnet-resources.md"
-  }
-]
+ }]
 
 ::/cards::

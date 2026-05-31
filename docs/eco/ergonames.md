@@ -4,6 +4,26 @@ tags:
   - Naming System
   - ENS
   - dApp
+owner: docs
+last_reviewed: '2026-05-29'
+source_repos:
+  - repo: ergonames/ergonames-contracts
+    branch: main
+    paths:
+      - README.md
+  - repo: ergonames/ergonames-nextjs
+    branch: main
+    paths:
+      - README.md
+  - repo: ergonames/sdk
+    branch: master
+    paths:
+      - README.md
+source_of_truth:
+  - https://github.com/ergonames/ergonames-contracts
+  - https://github.com/ergonames/ergonames-nextjs
+  - https://github.com/ergonames/sdk
+ia_status: directory
 ---
 
 # ErgoNames: Decentralized Naming System for Ergo

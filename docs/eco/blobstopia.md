@@ -4,6 +4,16 @@ tags:
   - Gaming
   - dApp
   - dApp-Live
+ia_status: directory
+owner: docs
+last_reviewed: '2026-05-29'
+source_repos:
+  - repo: ThierryM1212/blobs-topia
+    branch: main
+    paths:
+      - README.md
+source_of_truth:
+  - https://github.com/ThierryM1212/blobs-topia
 ---
 
 # Blobstopia

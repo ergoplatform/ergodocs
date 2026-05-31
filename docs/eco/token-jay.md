@@ -7,6 +7,13 @@ tags:
   - SigmaRSV
   - Token Burner
   - dApp
+owner: docs
+last_reviewed: '2026-05-29'
+source_of_truth:
+- https://tokenjay.app/
+- https://api.ergopad.io/vesting/vestedWithKey/tokenid
+source_watch_note: Closed-source/live site; TokenJay remains active and usable, but
+ no verified public TokenJay source repository was found.
 ---
 
 # Token Jay

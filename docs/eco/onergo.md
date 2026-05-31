@@ -4,6 +4,13 @@ tags:
   - Community
   - Education
   - Platform
+owner: docs
+last_reviewed: '2026-05-29'
+source_of_truth:
+- https://onergo.gitbook.io/onergo-litepaper
+source_watch_note: Community/education concept; not primarily code-based and no verified
+ public GitHub repository found.
+ia_status: directory
 ---
 
 # ONERGO

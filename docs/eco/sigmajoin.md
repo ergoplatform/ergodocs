@@ -7,6 +7,7 @@ tags:
   - dApp
   - dApp-Research
 owner: docs
+ia_status: directory
 last_reviewed: 2026-05-26
 source_repos:
   - repo: ergoplatform/ergo-jde

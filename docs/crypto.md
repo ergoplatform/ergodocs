@@ -127,8 +127,7 @@ The signing process in Schnorr signatures follows these steps:
    - Computes the signature as \(s = k + ex\).
 
 3. **Verification**: The verifier checks the signature by computing \(R' = sG - eP\) and verifying:
-   \[
-   e = H(R' || P || m)
+ \[e = H(R' || P || m)
    \]
 
 Schnorr signatures are widely used in Ergo for multi-signature schemes, privacy-enhancing protocols, and adaptor signatures.
@@ -150,8 +149,7 @@ The **Diffie-Hellman (DH)** protocol is widely used in cryptography for secure k
 
 In a Diffie-Hellman Tuple, a prover proves knowledge of a shared secret \(x\) such that:
 
-\[
-u = g^x \quad \text{and} \quad v = h^x
+\[u = g^x \quad \text{and} \quad v = h^x
 \]
 
 This protocol can be combined with Sigma protocols to create privacy-preserving smart contracts, such as **stealth addresses** and **mixers**. For instance, **ErgoMix** relies on the security of the Diffie-Hellman protocol to ensure transaction fungibility and user privacy.

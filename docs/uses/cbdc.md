@@ -1,3 +1,8 @@
+---
+owner: docs
+last_reviewed: '2026-05-29'
+ia_status: directory
+---
 # Ergo: The Decentralised Bank Digital Currency For Everyone
 
 As the blockchain revolution gains steam, one of its most promising opportunities is Central Bank Digital Currencies (CBDCs). While CBDCs offer transformative potential, they grapple with a fundamental paradox: reconciling control with innovation. This equilibrium could greatly impact privacy, functionality, and widespread adoption. But what if there were a solution that harmonizes these seemingly conflicting elements? Enter Ergo—a blockchain platform that aims to be the CBDC everyone can use, privately and programmably.

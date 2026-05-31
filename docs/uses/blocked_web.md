@@ -1,3 +1,9 @@
+---
+owner: docs
+last_reviewed: '2026-05-29'
+ia_status: directory
+---
+
 # Utilizing (E)mail Client for Restricted or Unavailable Internet Access
 
 This concept is driven by two primary factors.

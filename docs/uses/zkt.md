@@ -1,3 +1,8 @@
+---
+owner: docs
+last_reviewed: '2026-05-29'
+ia_status: directory
+---
 # Zero-Knowledge Treasury
 
 Ergo's Zero-Knowledge Treasury emerges as a powerful tool enabling users to craft joint digital signatures with custom conditions for fund allocation, all while maintaining the anonymity of the signatories involved. This article explores the mechanics and potential applications of this innovative feature.

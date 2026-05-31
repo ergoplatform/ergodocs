@@ -4,6 +4,13 @@ tags:
   - Metaverse
   - dApp
   - dApp-Live
+owner: docs
+last_reviewed: '2026-05-29'
+ia_status: directory
+source_of_truth:
+- https://www.sigmavalley.org/
+source_watch_note: Inactive metaverse project; no verified public GitHub repository
+ found.
 ---
 
 # SigmaValley

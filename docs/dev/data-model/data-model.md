@@ -9,6 +9,23 @@ tags:
 
 This document provides a comprehensive and in-depth exploration of Ergo's unique data model, based on the [UTXO (Unspent Transaction Output)](eutxo.md) model, enhanced with powerful [smart contract](ergoscript.md) capabilities ([eUTXO](eutxo.md)).
 
+## Choose a Topic
+
+| Goal | Start here | Then read |
+| --- | --- | --- |
+| Understand the box model | [Box Overview](box.md) | [Registers](registers.md), [Lifecycle](lifecycle.md), [Box Modelling](box_modeling.md) |
+| Build or inspect transactions | [Transaction Overview](transactions.md) | [Composing Transactions](composing.md), [Transaction Format](format.md), [Signing](signing.md) |
+| Work with tokens or NFTs | [Token Overview](tokens.md) | [EIP-4](eip4.md), [NFT Overview](nfts-overview.md), [Royalties](royalties.md) |
+| Use data inputs | [Data Inputs](read-only-inputs.md) | [Blockchain Context](blockchain-context.md), [Registers](registers.md) |
+| Understand blocks and proofs | [Block Overview](block.md) | [Block Header](block-header.md), [ADProofs](block-adproofs.md), [Extension Section](extension-section.md) |
+| Study authenticated data structures | [Data Structures](data-structures.md) | [Merkle Trees](merkle-tree.md), [AVL Trees](avl.md), [Interlink Vectors](interlink-vectors.md) |
+
+## Next Steps
+
+- Building an app: go to [Developer Start](get-started.md).
+- Learning the concepts first: go to [Protocol Overview](protocol-overview.md).
+- Running infrastructure: go to [Deploy Ergo Infrastructure](interact.md).
+
 ---
 
 ## 1. Theoretical Foundations & Core Concepts

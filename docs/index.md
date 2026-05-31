@@ -8,8 +8,7 @@ Ergo is a proof-of-work smart-contract platform built around eUTXO, ErgoScript, 
 
 ::cards::
 
-[
-  {
+[{
     "title": "Start Here",
     "content": "Simple orientation, first steps, wallets, user paths, and reference pages.",
     "image": "./assets/img/grid/01.png",
@@ -44,8 +43,7 @@ Ergo is a proof-of-work smart-contract platform built around eUTXO, ErgoScript, 
     "content": "Mining setup, pools, solo mining, governance, rewards, and pool operations.",
     "image": "./assets/img/grid/06.png",
     "url": "mining/mining-overview.md"
-  }
-]
+ }]
 
 ::/cards::
 

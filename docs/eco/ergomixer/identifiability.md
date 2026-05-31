@@ -8,6 +8,7 @@ source_repos:
       - src/utils/mixerHop.js
 source_of_truth:
   - https://github.com/anon-real/ErgoUtils/tree/master/src/utils/mixerHop.js
+ia_status: directory
 ---
 
 # Identifiability

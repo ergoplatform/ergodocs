@@ -13,14 +13,11 @@ Whether you want to develop using [Java](java.md), [Scala](scala.md), or [Kotlin
 
 ::cards::
 
-[
-  {
+[{
     "title": "AppKit",
     "content": "A library for polyglot development of [Ergo Applications](use-cases-overview.md)",
     "url": "../stack/appkit.md"
-  }
-
-]
+ }]
 
 ::/cards::
 
@@ -28,18 +25,15 @@ Whether you want to develop using [Java](java.md), [Scala](scala.md), or [Kotlin
 
 ::cards::
 
-[
-  {
-    "title": "🔗 ergo-playgrounds",
+[{
+ "title": " ergo-playgrounds",
     "content": "Run [contracts](ergoscript.md) + [off-chain code](off-chain-overview.md) in the browser.",
     "url": "https://github.com/ergoplatform/ergo-playgrounds"
   },
   {
-    "title": "🔗 Ergo Contracts",
+ "title": " Ergo Contracts",
     "content": "Source code of the Ergo [smart contracts](ergoscript.md) with [compilation](compiler.md), testing, and formal verification tooling.",
     "url": "https://github.com/ergoplatform/ergo-contracts"
-  }
-
-]
+ }]
 
 ::/cards::

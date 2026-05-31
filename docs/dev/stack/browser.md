@@ -6,8 +6,7 @@ There are a couple of options developers can pick from to interact with the user
 
 ::cards::
 
-[
-  {
+[{
     "title": "JS/TS",
     "content": "Frontend development with JavaScript, TypeScript",
     "image": "../../assets/img/dev-grid/js.png",
@@ -19,8 +18,7 @@ There are a couple of options developers can pick from to interact with the user
     "image": "../../assets/img/dev-grid/rust.png",
     "url": "../lang/rust.md"
 
-  }
-]
+ }]
 
 ::/cards::
 
@@ -28,8 +26,7 @@ There are a couple of options developers can pick from to interact with the user
 
 ::cards::
 
-[
-  {
+[{
     "title": "ErgoPay",
     "content": "Ergo's dApp connector for non-web wallet applications",
     "url": "../wallet/payments/ergopay/ergo-pay.md"
@@ -39,7 +36,6 @@ There are a couple of options developers can pick from to interact with the user
     "content": "For web-based wallets (Nautilus/SAFEW)",
     "url": "../wallet/payments/dApp.md"
 
-  }
-]
+ }]
 
 ::/cards::

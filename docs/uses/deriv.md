@@ -1,3 +1,8 @@
+---
+owner: docs
+last_reviewed: '2026-05-29'
+ia_status: directory
+---
 # Derivatives and Decentralized Options Trading on Ergo
 
 Ergo's powerful capabilities enable the creation of innovative decentralized finance (DeFi) primitives, including derivatives and options trading protocols. These protocols offer traders alternative platforms for speculating on asset prices, managing risk, and generating yield in a trustless and decentralized manner.

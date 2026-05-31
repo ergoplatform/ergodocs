@@ -1,3 +1,8 @@
+---
+owner: docs
+last_reviewed: '2026-05-29'
+ia_status: directory
+---
 # Local Exchange Trading Systems (LETS)
 
 Local Exchange Trading Systems (**LETS**) are innovative mutual credit associations that empower communities to create their own local currencies, fostering sustainable economies independent of traditional monetary systems. In a LETS, members can generate common credit money individually, which is then recorded in a shared ledger. This system enhances the velocity of trade, goods, and services within a community, providing a robust mechanism for economic resilience.

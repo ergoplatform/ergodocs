@@ -1,3 +1,8 @@
+---
+owner: docs
+last_reviewed: '2026-05-29'
+ia_status: directory
+---
 # Rosen Team
 
 The Rosen team is comprised of 8 full-time developers and 2-3 part-time developers. Some frontend and UI tasks are outsourced. The team's strength is further enhanced by the support of several advisors.

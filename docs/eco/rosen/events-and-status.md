@@ -1,3 +1,8 @@
+---
+owner: docs
+last_reviewed: '2026-05-29'
+ia_status: directory
+---
 # RosenBridge Events & Status
 
 This page explains the event lifecycle as shown in the Rosen app (Events page) and how to interpret each status. It complements the flow diagrams and troubleshooting guidance.
@@ -15,8 +20,8 @@ Typical stages for a bridge operation (direction-agnostic):
 
 1) Detected
 - The source-chain transaction has been observed and preliminarily meets criteria.
-- For ChainX ➜ Ergo, watchers have seen the deposit to the multisig/threshold wallet.
-- For Ergo ➜ ChainX, watchers have seen the relevant Bank box transaction.
+- For ChainX Ergo, watchers have seen the deposit to the multisig/threshold wallet.
+- For Ergo ChainX, watchers have seen the relevant Bank box transaction.
 
 2) Event Boxes
 - Individual watchers create “event boxes” on Ergo, each attesting to the same observed event.
@@ -37,7 +42,7 @@ Typical stages for a bridge operation (direction-agnostic):
 
 6) Confirmed
 - Sufficient confirmations have been observed on the target chain.
-- The event is considered final; users should see the rTokens (ChainX ➜ Ergo) or receive native tokens (Ergo ➜ ChainX).
+- The event is considered final; users should see the rTokens (ChainX Ergo) or receive native tokens (Ergo ChainX).
 
 ## Status Mapping in the App
 
@@ -54,7 +59,7 @@ Note: Labels may vary slightly over time in the UI. The lifecycle above remains 
 - Normal windows: ~1–2 hours for many routes
 - Longer cases:
   - Bitcoin or high-congestion periods
-  - Very large transfers (may require cold ➜ hot wallet movements and extra checks)
+  - Very large transfers (may require cold hot wallet movements and extra checks)
 - Always consult the Events page for the latest status: https://app.rosen.tech/events
 
 ## What to Do at Each Stage
@@ -67,8 +72,8 @@ Note: Labels may vary slightly over time in the UI. The lifecycle above remains 
 - Signed/Broadcast:
   - For EVMs, high gas volatility can affect inclusion time. Be patient.
 - Confirmed:
-  - For ChainX ➜ Ergo: your rTokens should appear; import tokens if needed (EVM).
-  - For Ergo ➜ ChainX: check target wallet or explorer.
+  - For ChainX Ergo: your rTokens should appear; import tokens if needed (EVM).
+  - For Ergo ChainX: check target wallet or explorer.
 
 ## When to Troubleshoot
 
@@ -95,4 +100,4 @@ stateDiagram-v2
 
 For detailed flow charts by direction, see:
 
-- [ChainX ➜ Ergo and Ergo ➜ ChainX](token-transfer-flows.md)
+- [ChainX Ergo and Ergo ChainX](token-transfer-flows.md)

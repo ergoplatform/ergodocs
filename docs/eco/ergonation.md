@@ -5,6 +5,21 @@ tags:
   - Identity
   - Verification
   - Governance
+owner: docs
+last_reviewed: '2026-05-29'
+source_repos:
+  - repo: nirojan95/ergonation
+    branch: main
+    paths:
+      - README.md
+  - repo: nirojan95/ergonation-docs
+    branch: main
+    paths:
+      - README.md
+source_of_truth:
+  - https://github.com/nirojan95/ergonation
+  - https://github.com/nirojan95/ergonation-docs
+ia_status: directory
 ---
 
 # ErgoNation: A Community-Driven Project for Decentralized Identity Verification

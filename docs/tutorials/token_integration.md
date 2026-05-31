@@ -11,6 +11,9 @@ tags:
   - DEX
   - Analytics
   - Security
+owner: docs
+last_reviewed: '2026-05-29'
+ia_status: directory
 ---
 
 # Cross-Chain Token Integration Guide for Rosen Bridge Tokens

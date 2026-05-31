@@ -1,3 +1,8 @@
+---
+owner: docs
+last_reviewed: '2026-05-29'
+ia_status: directory
+---
 # Buy Back Guarantees
 
 In this example, we will explore a decentralized token sale scenario where the seller provides buyback guarantees.

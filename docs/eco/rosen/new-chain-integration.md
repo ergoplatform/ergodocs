@@ -1,3 +1,8 @@
+---
+owner: docs
+last_reviewed: '2026-05-29'
+ia_status: directory
+---
 # Integrating a New Chain with RosenBridge
 
 RosenBridge can extend to any blockchain that supports multisignature or threshold signature schemes. This page outlines the required components and high-level steps to add a new network.
@@ -43,8 +48,8 @@ See also: [Watcher](watcher.md), [Rosen Guards](rosen-guard.md), background: [Mu
 - Verify mint/burn paths and asset maps for representative tokens (rTokens).
 
 5) Test End-to-End
-- Dry-run: Lock on the new chain ➜ event boxes ➜ Guard verification ➜ mint rTokens on Ergo.
-- Reverse: Burn rTokens on Ergo ➜ event boxes ➜ Guard verification ➜ unlock on the new chain.
+- Dry-run: Lock on the new chain event boxes Guard verification mint rTokens on Ergo.
+- Reverse: Burn rTokens on Ergo event boxes Guard verification unlock on the new chain.
 - Measure latency and ensure confirmation thresholds and fee policies are correct.
 
 6) Operationalize

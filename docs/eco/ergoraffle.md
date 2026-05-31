@@ -6,13 +6,14 @@ tags:
   - dApp
   - dApp-Live
 owner: docs
-last_reviewed: 2026-05-27
+last_reviewed: 2026-05-30
 source_repos:
   - repo: ErgoRaffle/raffle-v2
     branch: dev
     paths:
       - README.md
 source_of_truth:
+  - https://ergoraffle.com
   - https://github.com/ErgoRaffle/raffle-v2
 ---
 
@@ -44,11 +45,14 @@ The Raffle is managed by smart contracts built on Ergo Platform. This means that
 - Enable raising funds in any token (v1: only ERG is possible)
 - Allow multiple winners with different shares (v1: only one winner)
 - Reward winners in any token, including NFTs (v1: Erg only)
+- Allow extra gifts to be attached to a raffle while it is active, with gifts assigned to specific winning positions.
 - Implement community upvoting/downvoting of raffles to indicate potential scams
 - Enhance the user interface
 - Integrate dApp connectors and ErgoPay support
 - Introduce a refundable raffle creation fee to prevent scams and DoS attacks
 - Track the current v2 service code in [ErgoRaffle/raffle-v2](https://github.com/ErgoRaffle/raffle-v2), which packages raffle services and describes multiple winners, flexible token funding, dynamic gifts, service-fee handling, and automatic refund paths.
+
+The v2 lifecycle in the source repository is creation, active participation, successful completion, or failed-raffle refund. During creation, the service issues the needed tokens and prepares the raffle. During the active phase, users can buy tickets and donate extra ERG, tokens, or NFTs as gifts. If the raffle succeeds, winners receive the configured prize shares and any assigned gifts; if it fails, participant donations, gifts, and the creation fee are refunded.
 
 ## See also
 

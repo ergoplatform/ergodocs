@@ -5,6 +5,12 @@ tags:
   - Infrastructure
   - dApp
   - dApp-InDev
+owner: docs
+last_reviewed: '2026-05-29'
+source_of_truth:
+- https://www.zengate.global/products/cyberiad
+source_watch_note: ZenGate product page; no verified public GitHub repository found.
+ia_status: directory
 ---
 
 # Cyberaid

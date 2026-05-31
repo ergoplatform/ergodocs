@@ -12,6 +12,7 @@ source_repos:
       - whitepaper/whitepaper.pdf
 source_of_truth:
   - https://github.com/BetterMoneyLabs/braid/blob/master/whitepaper/whitepaper.pdf
+ia_status: directory
 ---
 
 # Sidechains on Ergo: Leveraging Sigma Chains and NiPoPoWs

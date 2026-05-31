@@ -16,6 +16,7 @@ tags:
   - DeFi
   - AMM
   - dApp
+ia_status: directory
 ---
 
 # OptionPools: Unleashing the Power of Ergo for Decentralized Options Trading

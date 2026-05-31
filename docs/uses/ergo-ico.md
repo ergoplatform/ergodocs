@@ -1,3 +1,8 @@
+---
+owner: docs
+last_reviewed: '2026-05-29'
+ia_status: directory
+---
 # Initial Coin Offerings
 
 This article describes a fully-featured ICO (Initial Coin Offering) implemented in ErgoScript. The example covers several important and novel features of Ergo and shows how it can support complex contracts with a tiny amount of code.

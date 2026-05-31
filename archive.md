@@ -6,11 +6,11 @@ This file contains projects from the Awesome Ergo list that are currently inacti
 
 ## 🚀 Launchpads
 
-- 🥇 **[Ergopad](https://ergopad.io/)** – decentralized launchpad *(Inactive)*. [GitHub Org](https://github.com/ergopad) | [Contracts](https://github.com/ergopad/ergopad-api/tree/dev/app/contracts) | [Telegram](https://t.me/ergopad_chat)
+- **[Ergopad](https://ergopad.io/)** – decentralized launchpad *(Inactive)*. [GitHub Org](https://github.com/ergopad) | [Contracts](https://github.com/ergopad/ergopad-api/tree/dev/app/contracts) | [Telegram](https://t.me/ergopad_chat)
 
 ## 🆔 Identity & DNS
 
-- 🥇 **[Ergonames](https://ergonames.com/)** – decentralized naming service *(Paused)*. [GitHub Org](https://github.com/ergonames) | [Contracts](https://github.com/ergonames/ergonames/tree/master/src/main/scala) | [Rust SDK](https://github.com/ergonames/sdk/tree/master/rust)
+- **[Ergonames](https://ergonames.com/)** – decentralized naming service *(Paused)*. [GitHub Org](https://github.com/ergonames) | [Contracts](https://github.com/ergonames/ergonames/tree/master/src/main/scala) | [Rust SDK](https://github.com/ergonames/sdk/tree/master/rust)
 - [Bitdomains](https://bitdomains.org/) – decentralized domain name system. [Contracts](https://github.com/bitdomains/contracts) *(Paused)*
 
 ## 🎮 Gaming & Metaverse

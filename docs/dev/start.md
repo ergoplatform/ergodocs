@@ -15,8 +15,7 @@ For current source-backed tooling, see [Libraries & SDKs](libraries.md), [Fleet]
 
 ::cards::
 
-[
-  {
+[{
     "title": "Server",
     "content": "Interact with the blockchain locally or via a remote server.",
     "image": "../assets/img/dev-grid/server.png",
@@ -39,9 +38,7 @@ For current source-backed tooling, see [Libraries & SDKs](libraries.md), [Fleet]
     "content": "Creating a bundled mobile app for Android or iOS.",
     "image": "../assets/img/dev-grid/mobile.png",
     "url": "stack/mobile.md"
-  }
-
-]
+ }]
 
 ::/cards::
 
@@ -49,8 +46,7 @@ For current source-backed tooling, see [Libraries & SDKs](libraries.md), [Fleet]
 
 ::cards::
 
-[
-  {
+[{
     "title": "Basics Tutorial",
     "content": "Generate keys and address, send and receive payments.",
     "image": "../assets/img/dev-grid/noob.png",
@@ -67,11 +63,25 @@ For current source-backed tooling, see [Libraries & SDKs](libraries.md), [Fleet]
     "content": "Jump straight to an overview of all frameworks",
     "image": "../assets/img/dev-grid/frameworks.jpg",
     "url": "stack/introduction.md#frameworks"
-  }
-
-]
+ }]
 
 ::/cards::
+
+## Where To Go Next
+
+## Choose a Stack
+
+| Build target | Best fit | Why | Main docs |
+| --- | --- | --- | --- |
+| Browser dApp | Fleet + dApp Connector | Common TypeScript path for browser wallets and transaction building. | [Fleet](fleet.md), [Browser](browser.md), [dApp Connector](dApp.md) |
+| JVM backend or exchange service | AppKit | Mature JVM tooling for node-backed services and transaction workflows. | [AppKit](appkit.md), [JVM](jvm.md), [Exchange Integration](guide.md) |
+| Rust service or constrained environment | sigma-rust | Core Rust libraries and bindings for wallets, WASM, and lower-level tooling. | [Sigma Rust](sigma-rust.md), [Rust](rust.md), [Constrained Environments](sigma-rust-constrained.md) |
+| Python automation or agents | Ergo Agent SDK / ergo-lib-python | Good fit for scripted workflows, agents, and data-heavy automation. | [Ergo Agent SDK](ergo-agent-sdk.md), [Ergo-Lib-Python](ergo-lib-python.md), [Python](python.md) |
+| C# application | FleetSharp | .NET-oriented transaction tooling. | [FleetSharp](fleetsharp.md), [C#](csharp.md) |
+| Mobile app | Native stack + sigma-rust bindings where needed | Mobile builds need wallet UX, signing constraints, and platform-specific packaging. | [Mobile](mobile.md), [Android](android.md), [iOS](iOS.md) |
+| Contract prototype | ErgoScript tools + playgrounds | Best path for learning contract behavior before building full off-chain flows. | [ErgoScript Tooling](ergoscript-tooling.md), [Kiosk](kiosk.md), [Compiler](compiler.md) |
+
+Use [Libraries & SDKs](libraries.md) when you need a fuller inventory.
 
 ## Where To Go Next
 

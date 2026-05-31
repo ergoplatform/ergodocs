@@ -15,6 +15,7 @@ source_repos:
       - README.md
 source_of_truth:
   - https://github.com/ergopad/pratir-backend
+ia_status: directory
 ---
 
 # Ergopad

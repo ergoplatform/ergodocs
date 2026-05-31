@@ -8,6 +8,7 @@ source_repos:
       - eip-0001.md
 source_of_truth:
   - https://github.com/ergoplatform/eips/tree/master/eip-0001.md
+ia_status: directory
 ---
 
 # ErgoFund

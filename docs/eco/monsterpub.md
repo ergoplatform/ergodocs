@@ -4,6 +4,10 @@ tags:
   - Gaming
   - dApp
   - dApp-InDev
+owner: docs
+last_reviewed: 2026-05-29
+ia_status: directory
+source_watch_note: Paused/historical project; no verified public GitHub repository found.
 ---
 
 # Monster Pub Brawl

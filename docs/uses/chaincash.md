@@ -26,6 +26,7 @@ source_of_truth:
   - https://github.com/ChainCashLabs/chaincash/tree/master/docs/server.md
   - https://github.com/ChainCashLabs/chaincash/tree/master/docs/whitepaper/chaincash.pdf
   - https://github.com/kushti/chaincash/tree/master/src/main/scala/chaincash/offchain
+ia_status: directory
 ---
 
 # ChainCash: A Practical Approach to Elastic Money Creation with Trust and Blockchain Assets

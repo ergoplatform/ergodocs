@@ -4,6 +4,16 @@ tags:
   - Gaming
   - Betting
   - dApp
+owner: docs
+last_reviewed: '2026-05-29'
+source_repos:
+  - repo: ObolFlip/obolflip-client
+    branch: main
+    paths:
+      - README.md
+source_of_truth:
+  - https://github.com/ObolFlip/obolflip-client
+ia_status: directory
 ---
 
 # Obolflip

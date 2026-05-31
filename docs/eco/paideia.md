@@ -7,7 +7,7 @@ tags:
   - dApp
   - dApp-Live
 owner: docs
-last_reviewed: 2026-05-27
+last_reviewed: 2026-05-30
 source_repos:
   - repo: paideiadao/paideia-sdk
     branch: dev
@@ -16,6 +16,8 @@ source_repos:
       - src/main/resources/ergoscript
       - docs
 source_of_truth:
+  - https://www.paideia.im
+  - https://app.paideia.im/
   - https://github.com/paideiadao/paideia-sdk
 ---
 
@@ -52,7 +54,7 @@ This section will cover how to use Paideia. Alternatively, you can watch [Paidei
 
 ## Voting on Proposals
 
-DAO members can vote on active proposals. Check the DAO config for the ammount of Paideia required to vote on a proposal. The Sigmanauts DAO does not require any Paideia to vote. Be aware that there may be a delay before votes are reflected in the UI, and a page refresh may be necessary.
+DAO members can vote on active proposals. Check the DAO config for the amount of Paideia required to vote on a proposal. The Sigmanauts DAO does not require any Paideia to vote. Be aware that there may be a delay before votes are reflected in the UI, and a page refresh may be necessary.
 
 ## Staking and Unstaking
 
@@ -81,7 +83,7 @@ The Paideia team continues to work hard on improving the platform. Recent update
 - Implementing generic refund and configuration logic in contracts
 - Planning a move to EIP-5 standard for contracts
 
-The [paideia-sdk](https://github.com/paideiadao/paideia-sdk) repository contains the DAO contracts and immediate off-chain code. Its README documents contract configuration serialization, including the use of AVL-tree-backed DAO configuration values, and points reviewers to `src/main/resources/ergoscript` for the versioned contracts.
+The [paideia-sdk](https://github.com/paideiadao/paideia-sdk) repository contains the DAO contracts and immediate off-chain code. Its README documents the contract bug bounty scope, contract configuration serialization, AVL-tree-backed DAO configuration values, default DAO/staking/proposal configuration keys, and the versioned contracts under `src/main/resources/ergoscript`.
 
 ## Support and Issue Reporting
 

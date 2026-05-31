@@ -13,8 +13,7 @@ Ergo [mining](mining-overview.md) is based on **[Autolykos](autolykos.md)**, a f
 
 ::cards::
 
-[
-  {
+[{
     "title": "Start Mining",
     "url": "../../mining/setup/join.md",
     "content": "Getting setup with a mining pool."
@@ -44,8 +43,6 @@ Ergo [mining](mining-overview.md) is based on **[Autolykos](autolykos.md)**, a f
     "title": "Emission",
     "url": "../../mining/emission.md",
     "content": "The Ergo emission schedule"
-  }
-
-]
+ }]
 
 ::/cards::

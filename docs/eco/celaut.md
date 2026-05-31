@@ -7,6 +7,20 @@ tags:
   - Reactive Framework  
   - Artificial Economic Intelligence  
   - Service Virtualization  
+owner: docs
+last_reviewed: '2026-05-30'
+source_repos:
+  - repo: celaut-project/nodo
+    branch: stable
+    paths:
+      - README.md
+  - repo: celaut-project/paradigm
+    branch: master
+    paths:
+      - README.md
+source_of_truth:
+  - https://github.com/celaut-project/nodo
+  - https://github.com/celaut-project/paradigm
 ---
 
 # Celaut
@@ -22,6 +36,7 @@ Celaut is a decentralized, peer-to-peer runtime for deploying and coordinating *
 - `Feb 11` and `Feb 17`: Celaut Node was back in beta testing on Linux sudo and Windows WSL.
 - `Apr 1`: Docker was replaced with microVMs, install scripts were improved, and a `doctor` command was added.
 - `Apr 9`: Celaut Node was being tested with [Game of Prompts](game-of-prompts.md) before an open competition launch.
+- `May 8`: Nodo `v1` shipped a Windows 11 WSL installer. The README now marks local execution and packaging as beta on Linux and Windows, local networking and trustless networking as alpha, and macOS as unsupported.
 
 ---
 
@@ -71,6 +86,7 @@ This creates a transparent ecosystem where bot performance and trust are the sol
 - Execute services in containerized sandboxes
 - Handle communication, scheduling, and gas metering
 - Publish metadata such as compute cost, architecture support, and uptime
+- Install on Linux with the `stable` branch install script, or use the Windows installer from the `v1` release.
 
 ### Services
 

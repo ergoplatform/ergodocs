@@ -1,3 +1,8 @@
+---
+owner: docs
+last_reviewed: '2026-05-29'
+ia_status: directory
+---
 # Proof-of-Work Backed Tokens
 
 Ergo allows the issuance of one token per transaction, where the token id must match the id of the box of the first input.

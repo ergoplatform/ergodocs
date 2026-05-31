@@ -1,5 +1,6 @@
 ---
 owner: docs
+ia_status: directory
 last_reviewed: 2026-05-27
 source_repos:
   - repo: GitCircles/GitCircles-Github
@@ -23,7 +24,7 @@ Whether you're a maintainer looking for a fairer system or a developer hoping to
 
 ---
 
-## 🔍 What Is GitCircles?
+## What Is GitCircles?
 
 At its core, **GitCircles** is an automated engine that tracks contributions in Git-based projects (like GitHub, GitLab, Gitea, and Bitbucket) and issues **on-chain cryptocurrency tokens** to contributors — based on the actual impact of their work.
 
@@ -32,14 +33,14 @@ Project planning and open discussion live in the [GitCircles Roadmap](https://gi
 It bridges the world of Git and decentralized finance (DeFi):
 
 ```
-Work (PRs/MRs) ➡️ Analysis ➡️ Token Rewards ➡️ Your Crypto Wallet
+Work (PRs/MRs) ️ Analysis ️ Token Rewards ️ Your Crypto Wallet
 ```
 
 In this system, each code contribution becomes a quantifiable, rewarded action.
 
 ---
 
-## 💡 Why Does This Matter?
+## Why Does This Matter?
 
 Here's the current state of open source:
 
@@ -54,7 +55,7 @@ In short, **it makes open source sustainable.**
 
 ---
 
-## 📦 The “Change Request” Concept
+## The “Change Request” Concept
 
 Git platforms have different names for contributions:
 
@@ -64,17 +65,17 @@ Git platforms have different names for contributions:
 * Bitbucket: PR
 
 GitCircles standardizes all of these under one universal term:
-**📦 Change Request** – *any code proposal with discussion, tracked in Git.*
+** Change Request** – *any code proposal with discussion, tracked in Git.*
 
 ---
 
-## 🛠️ How GitCircles Works
+## ️ How GitCircles Works
 
 Here's how your contribution transforms into tokens:
 
 ```mermaid
 sequenceDiagram
-    You->>Repo: 1. Submit 📦 Change Request
+ You->>Repo: 1. Submit Change Request
     Team->>Repo: 2. Review & Discuss
     alt Approved
         Maintainer->>Repo: 3. Merge decision
@@ -85,7 +86,7 @@ sequenceDiagram
     end
 ```
 
-**🕒 Safety Delay**: There's a 2-week holding period where maintainers can cancel bad payouts by inserting:
+** Safety Delay**: There's a 2-week holding period where maintainers can cancel bad payouts by inserting:
 
 ```markdown
 <!-- STOP -->
@@ -94,7 +95,7 @@ Reason: This change breaks compatibility.
 
 ---
 
-## 📊 How Rewards Are Calculated
+## How Rewards Are Calculated
 
 Reward = `Scope × Complexity Factor`
 
@@ -117,7 +118,7 @@ Total tokens:
 
 ---
 
-## 💸 How to Set Up Your Reward Profile
+## How to Set Up Your Reward Profile
 
 To receive tokens:
 
@@ -136,7 +137,7 @@ To receive tokens:
 
 ---
 
-## 🔧 Under the Hood: GitCircles-Github Adapter
+## Under the Hood: GitCircles-Github Adapter
 
 All this automation is powered by adapters — with **[GitCircles-Github](https://github.com/GitCircles/GitCircles-Github)** serving as the GitHub data bridge.
 
@@ -153,18 +154,18 @@ This adapter is modular and can be paired with GitLab, Bitbucket, and other plat
 
 ---
 
-## 🧠 Smart, But Not Perfect
+## Smart, But Not Perfect
 
 | Challenge           | Status              | What’s Next           |
 | ------------------- | ------------------- | --------------------- |
-| 🧾 Squashed commits | Attribution is hard | Improving SHA mapping |
-| 🧵 Non-code input   | Not yet rewarded    | Comment/issue scoring |
-| 🔐 Key security     | Manual address file | Signed commits + 2FA  |
-| 💼 Legal/Taxation   | Not integrated      | On-demand compliance  |
+| Squashed commits | Attribution is hard | Improving SHA mapping |
+| Non-code input | Not yet rewarded | Comment/issue scoring |
+| Key security | Manual address file | Signed commits + 2FA |
+| Legal/Taxation | Not integrated | On-demand compliance |
 
 ---
 
-## 🎯 Why It Matters
+## Why It Matters
 
 GitCircles is more than a tool. It’s a **movement** toward fairness in open source:
 
@@ -178,11 +179,11 @@ No more working “for the love of it” alone. GitCircles makes it possible to 
 
 ---
 
-## 🚀 Join the Future of Open Source
+## Join the Future of Open Source
 
-* 💻 Developers: Start contributing, get rewarded.
-* 🛠️ Maintainers: Adopt GitCircles to attract high-quality contributions.
-* 🤝 Communities: Build transparent, sustainable ecosystems.
+* Developers: Start contributing, get rewarded.
+* ️ Maintainers: Adopt GitCircles to attract high-quality contributions.
+* Communities: Build transparent, sustainable ecosystems.
 
 Check out:
 

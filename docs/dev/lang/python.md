@@ -21,18 +21,16 @@ Python developers can interact with the Ergo blockchain using various [libraries
 
 ::cards::
 
-[
-  {
-    "title": "🔗 ergpy",
+[{
+ "title": " ergpy",
     "content": "A python-jvm wrapper for interacting with the Ergo blockchain.",
     "url": "https://github.com/mgpai22/ergpy"
   },
   {
-    "title": "🔗 AppKit",
+ "title": " AppKit",
     "content": "Using [Appkit](appkit.md) from Python",
     "url": "https://github.com/ergoplatform/ergo-appkit/wiki/Using-Appkit-from-Python"
-  }
-]
+ }]
 
 ::/cards::
 

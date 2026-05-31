@@ -5,6 +5,13 @@ tags:
   - IPFS
   - dApp
   - Experimental
+owner: docs
+last_reviewed: '2026-05-29'
+source_of_truth:
+- https://ergo-wallet-statement.vercel.app/
+source_watch_note: Concept/experiment page using IPFS and app links; no verified public
+ GitHub repository found.
+ia_status: directory
 ---
 
 # On-chain Social and Messaging Apps

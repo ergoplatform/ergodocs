@@ -6,8 +6,7 @@ Developers can use tools to read data from the blockchain, compute using that da
 
 ::cards::
 
-[
-  {
+[{
     "title": "JVM",
     "content": "",
     "image": "../../assets/img/dev-grid/jvm.png",
@@ -37,9 +36,7 @@ Developers can use tools to read data from the blockchain, compute using that da
     "content": "UI system for dApps",
     "image": "../../assets/img/dev-grid/mosaik.png",
     "url": "mosaik/intro.md"
-  }
-
-]
+ }]
 
 ::/cards::
 
@@ -47,14 +44,11 @@ Developers can use tools to read data from the blockchain, compute using that da
 
 ::cards::
 
-[
-  {
+[{
     "title": "JSON dApp Environment",
     "content": "",
     "image": "../../assets/img/dev-grid/json.png",
     "url": "jde.md"
-  }
-
-]
+ }]
 
 ::/cards::

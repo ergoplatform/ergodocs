@@ -16,6 +16,7 @@ source_repos:
 source_of_truth:
   - https://github.com/DeCo-Education/DeCo-Homeworks/tree/main/ErgoScript-Developer-Course/batch-0/team-tensile/future%20contract/future-contract-v2.ergo
   - https://github.com/DeCo-Education/DeCo-Homeworks/tree/main/ErgoScript-Developer-Course/batch-0/team-tensile/future%20contract/hw3-future-contract-code-v1.md
+ia_status: directory
 ---
 
 # Tensile

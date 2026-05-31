@@ -4,6 +4,12 @@ tags:
   - Pledging
   - DAO
   - dApp
+owner: docs
+last_reviewed: '2026-05-29'
+source_of_truth:
+- https://discord.gg/wa38bX57tY
+source_watch_note: Idea/concept page; no verified public GitHub repository found.
+ia_status: directory
 ---
 
 # The Field

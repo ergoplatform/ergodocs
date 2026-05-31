@@ -15,6 +15,7 @@ source_of_truth:
   - https://github.com/MrStahlfelge/mosaik-ageusddemo/tree/master/src/main/kotlin/org/ergoplatform/mosaik/example/ageusd/AgeUsdController.kt
   - https://github.com/MrStahlfelge/mosaik-ageusddemo/tree/master/src/main/kotlin/org/ergoplatform/mosaik/example/ageusd/AgeUsdService.kt
   - https://github.com/mgpai22/sigusd-ballot
+ia_status: directory
 ---
 
 ### Accessing SigmaUSD as a Developer

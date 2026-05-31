@@ -1,3 +1,9 @@
+---
+owner: docs
+last_reviewed: '2026-05-29'
+ia_status: directory
+---
+
 ## Off the Grid
 
 Off the Grid is a decentralized application (dApp) that builds on the grid trading contract proposed by kushti. It includes an execution bot/batcher for automating order matching without user interaction.

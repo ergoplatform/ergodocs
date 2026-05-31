@@ -5,6 +5,13 @@ tags:
   - Analytics
   - dApp
   - dApp-InDev
+owner: docs
+last_reviewed: 2026-05-29
+ia_status: directory
+source_of_truth:
+ - https://github.com/gsblabsio/azorus
+ - https://ergopad.io/projects/azorus
+source_watch_note: Dormant project; linked GitHub repository is no longer public, so no source_repos entry is configured.
 ---
 
 # Azorus

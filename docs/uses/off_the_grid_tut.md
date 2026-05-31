@@ -1,3 +1,9 @@
+---
+owner: docs
+last_reviewed: '2026-05-29'
+ia_status: directory
+---
+
 # Getting Started with Off-the-Grid Ergo Trading Bot
 
 This guide provides a thorough walkthrough for setting up and operating the **[Off-the-Grid Ergo Trading Bot](https://github.com/Telefragged/off-the-grid)** decentralized grid trading bot on the Ergo blockchain.

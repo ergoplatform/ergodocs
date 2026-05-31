@@ -93,7 +93,7 @@ ergo.node.nipopow.nipopowBootstrap = true
 
 ---
 
-## 🔒 Security Considerations
+## Security Considerations
 
 | Aspect                          | Details                                                                                                                             |
 | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
@@ -105,7 +105,7 @@ ergo.node.nipopow.nipopowBootstrap = true
 
 ---
 
-## ⚡ Expected Proof Sizes
+## Expected Proof Sizes
 
 | Chain Age      | Typical Proof Size |
 | -------------- | ------------------ |
@@ -114,11 +114,11 @@ ergo.node.nipopow.nipopowBootstrap = true
 | \~5 year chain | \~30–40 KB         |
 | UTXO snapshot  | \~200–600 MB       |
 
-> 📝 **Note:** These estimates depend on the block interval and superblock level parameters. Ergo uses 2-minute blocks, so the number of superblocks grows slowly.
+> **Note:** These estimates depend on the block interval and superblock level parameters. Ergo uses 2-minute blocks, so the number of superblocks grows slowly.
 
 ---
 
-## 🛠️ Using NiPoPoWs in Practice
+## ️ Using NiPoPoWs in Practice
 
 To enable:
 

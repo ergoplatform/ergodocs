@@ -1,3 +1,8 @@
+---
+owner: docs
+last_reviewed: '2026-05-29'
+ia_status: directory
+---
 # RosenBridge Metadata Schema
 
 This page outlines a canonical, human‑readable schema for intent metadata used by Rosen flows. The Rosen dApp/tooling constructs and validates metadata; this document helps integrators and power users understand typical fields and structure.
@@ -11,15 +16,15 @@ Notes:
 ## Common Concepts
 
 - Direction:
-  - ChainX ➜ Ergo: Lock native asset on source chain, mint rToken on Ergo.
-  - Ergo ➜ ChainX: Burn rToken on Ergo (via Bank), release native asset on target chain.
+  - ChainX Ergo: Lock native asset on source chain, mint rToken on Ergo.
+  - Ergo ChainX: Burn rToken on Ergo (via Bank), release native asset on target chain.
 - Address formats:
   - toAddress uses the target chain’s native format (Ergo P2PK, EVM/Bech32/addr1… per chain, etc.).
 - Fees:
   - bridgeFee is the Rosen fee component.
   - networkFee covers chain‑level fees (e.g., miner/gas fees) where applicable.
 
-## ChainX ➜ Ergo (Lock → Mint)
+## ChainX Ergo (Lock → Mint)
 
 Purpose:
 
@@ -47,7 +52,7 @@ Field notes:
 - bridgeFee/networkFee: values shown in the Rosen UI at submit time.
 - memo/nonce: optional, may be ignored by validators.
 
-## Ergo ➜ ChainX (Burn → Release)
+## Ergo ChainX (Burn → Release)
 
 Purpose:
 
@@ -75,7 +80,7 @@ Field notes:
 
 ## Monero: Metadata Bound to Spend Proof
 
-Monero wallets do not reliably carry arbitrary tx metadata. For ChainX ➜ Ergo with XMR:
+Monero wallets do not reliably carry arbitrary tx metadata. For ChainX Ergo with XMR:
 
 - Users generate a spend proof with the metadata JSON as the message.
 - The proof and the plaintext JSON are published/recorded on Ergo (by the user or Rosen tooling).

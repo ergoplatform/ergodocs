@@ -5,6 +5,20 @@ tags:
   - DeFi
   - Multisig
   - dApp
+owner: docs
+last_reviewed: '2026-05-29'
+source_repos:
+  - repo: Moria-Finance/moria-backend
+    branch: main
+    paths:
+      - README.md
+  - repo: Moria-Finance/multi-sig-test
+    branch: main
+    paths:
+      - README.md
+source_of_truth:
+  - https://github.com/Moria-Finance
+ia_status: directory
 ---
 
 # Moria Finance: Decentralized Fund Management on Ergo

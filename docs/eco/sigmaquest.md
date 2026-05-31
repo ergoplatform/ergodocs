@@ -1,3 +1,12 @@
+---
+owner: docs
+last_reviewed: '2026-05-29'
+source_of_truth:
+- https://drive.google.com/file/d/1mH5Q7T6SHXzQAlpP-tfwWfgkL4rn0wuJ/view?usp=sharing
+source_watch_note: ErgoHack project with docs/demo links; no verified public GitHub
+ repository found.
+ia_status: directory
+---
 # SigmaQuest: A Blockchain-Integrated Sci-Fi Puzzle Game
 
 **Project for [ErgoHack 10: AI on the Ergo Blockchain](ergohack.md)**

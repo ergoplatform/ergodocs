@@ -1,3 +1,8 @@
+---
+owner: docs
+last_reviewed: '2026-05-29'
+ia_status: directory
+---
 ## SigmaRSV (Reservecoin) Simplified
 
 - SigmaRSV is a call option on a % of the ERG held in the reserve portion of the SigmaUSD contract

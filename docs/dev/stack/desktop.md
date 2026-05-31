@@ -4,8 +4,7 @@
 
 ::cards::
 
-[
-  {
+[{
     "title": "JVM",
     "content": "",
     "image": "../../assets/img/dev-grid/jvm.png",
@@ -35,9 +34,7 @@
     "content": "",
     "image": "../../assets/img/dev-grid/python.png",
     "url": "../lang/python.md"
-  }
-
-]
+ }]
 
 ::/cards::
 
@@ -45,23 +42,20 @@
 
 ::cards::
 
-[
-  {
-    "title": "🔗 Ergo Wallet",
+[{
+ "title": " Ergo Wallet",
     "content": "",
     "url": "https://github.com/ergoplatform/ergo-wallet-app"
   },
   {
-    "title": "🔗 ErgoMixer",
+ "title": " ErgoMixer",
     "content": "",
     "url": "https://github.com/ergoMixer"
   },
   {
-    "title": "🔗 Satergo",
+ "title": " Satergo",
     "content": "",
     "url": "https://satergo.com/"
-  }
-
-]
+ }]
 
 ::/cards::

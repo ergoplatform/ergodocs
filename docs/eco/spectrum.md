@@ -15,12 +15,25 @@ source_repos:
     paths:
       - contracts
 source_of_truth:
+  - https://spectrum.fi
   - https://github.com/spectrum-finance/ergo-dex/tree/master/contracts
+source_watch_note: The ErgoDex/Spectrum Finance repository is stale, but the ErgoDex
+ infrastructure has been left running and remains useful ecosystem infrastructure.
 ---
 
 # Spectrum Finance
 
 [Spectrum](https://spectrum.fi) is a pioneering open-source, cross-chain decentralized exchange (DEX) platform, currently offering liquidity provision (LP), yield farming, and babel fees on the Cardano (ADA) and Ergo (ERG) networks.
+
+## Project Profile
+
+| Field | Details |
+| --- | --- |
+| Status | Infrastructure running; Ergo project development appears abandoned. |
+| Category | DEX, liquidity, yield farming, Babel fees. |
+| Links | [Website](https://spectrum.fi), [Ergo DEX contracts](https://github.com/spectrum-finance/ergo-dex/tree/master/contracts). |
+| Source | Public Ergo DEX contract repository and linked Spectrum resources. |
+| Caveats | Some sections describe Spectrum Bloom research/design material; check current app and repositories before assuming feature availability. |
 
 ## Current Features of Spectrum Finance
 
@@ -61,6 +74,6 @@ Spectrum Bloom is an upcoming eUTXO-native framework for decentralized finance (
 
 ### Dev-Resources
 
-- 🥇 **[Contracts Repository](https://github.com/spectrum-finance/ergo-dex/tree/master/contracts)**: ErgoScript contracts for the DEX.
-- 🥇 **[Backend Repository](https://github.com/spectrum-finance/spectrum-offchain-ergo)**: Off-chain services (bots) for matching and execution.
+- **[Contracts Repository](https://github.com/spectrum-finance/ergo-dex/tree/master/contracts)**: ErgoScript contracts for the DEX.
+- **[Backend Repository](https://github.com/spectrum-finance/spectrum-offchain-ergo)**: Off-chain services (bots) for matching and execution.
 - [EIP-0014: Decentralized Exchange Contracts](https://github.com/ergoplatform/eips/pull/27)

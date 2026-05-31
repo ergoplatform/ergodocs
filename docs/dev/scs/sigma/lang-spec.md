@@ -17,7 +17,7 @@ source_of_truth:
 
 # ErgoScript Language Description
 
-> 🔗 From [sigmastate-interpreter](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/LangSpec.md)
+> From [sigmastate-interpreter](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/LangSpec.md)
 
 ### Introduction
 

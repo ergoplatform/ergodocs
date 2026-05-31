@@ -7,6 +7,13 @@ tags:
   - Palmyra
   - Solaris
   - Cyberiad
+owner: docs
+last_reviewed: '2026-05-29'
+source_of_truth:
+- https://www.zengate.global/
+source_watch_note: Company/project profile; no verified public GitHub repository found
+ for the ZenGate product family.
+ia_status: directory
 ---
 
 # Zengate

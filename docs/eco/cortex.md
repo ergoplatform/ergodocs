@@ -1,3 +1,16 @@
+---
+owner: docs
+ia_status: directory
+last_reviewed: '2026-05-29'
+source_repos:
+  - repo: Cortex-Miner/Cortex
+    branch: main
+    paths:
+      - README.md
+source_of_truth:
+  - https://github.com/Cortex-Miner/Cortex
+---
+
 # Cortex: Advanced AI-Optimized GPU Miner for Ergo
 
 **Project for [ErgoHack 10: AI on the Ergo Blockchain](ergohack.md)**

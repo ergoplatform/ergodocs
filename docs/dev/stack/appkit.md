@@ -30,14 +30,13 @@ Using Appkit, Ergo applications can be written in one of the languages supported
 
 ::cards::
 
-[
-  {
+[{
     "title": "General Example",
     "content": "",
     "url": "appkit/tutorial.md"
   },
   {
-    "title": "🔗 AppKit By Example",
+ "title": " AppKit By Example",
     "content": "Follow this example to create and programmaticaly send a transaction.",
     "url": "https://www.youtube.com/watch?v=Md5s-XV6-Hs"
   },
@@ -48,9 +47,7 @@ Using Appkit, Ergo applications can be written in one of the languages supported
   {
     "title": "Gradle",
     "url": "appkit/gradle.md"
-  }
-  
-]
+ }]
 
 ::/cards::
 

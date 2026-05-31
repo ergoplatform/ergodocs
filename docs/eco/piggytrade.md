@@ -6,7 +6,8 @@ tags:
   - DEX
   - ecosystem
 owner: docs
-last_reviewed: 2026-05-27
+last_reviewed: 2026-05-30
+ia_status: alias
 source_repos:
   - repo: FlyingPig5/piggy-trade
     branch: main
@@ -18,16 +19,17 @@ source_of_truth:
 
 # PiggyTrade
 
-[PiggyTrade](https://github.com/FlyingPig5/piggy-trade) is a trading app for the Ergo blockchain.
+PiggyTrade is a historical trading-app entry for Ergo. The watched `FlyingPig5/piggy-trade` repository now describes **TrufflΣ**, a self-custodial mobile trading app and wallet, so the current user-facing project entry is [Truffle](truffle.md).
 
-PiggyTrade is moving from Python toward a Kotlin implementation with sigma-rust JNI bindings, faster loading and caching, and on-chain DEX pool data access. Treat upstream repository state as the source of truth before relying on a specific build, API, or mobile package.
+Treat PiggyTrade as a legacy name unless upstream documentation reintroduces it separately. The repository currently documents Spectrum/ErgoDEX swaps, USE/SigUSD/SigRSV/DexyGold minting and redeeming, wallet sends, portfolio views, price charts, ErgoPay deep links, and beta-wallet safety warnings under the Truffle name.
 
 ## Position In The Ecosystem
 
-PiggyTrade fits with Ergo's DEX and trading-tool surface rather than as a base protocol component. It may be useful to users looking for trading interfaces and to developers tracking app-level use of sigma-rust bindings.
+PiggyTrade fits with Ergo's DEX and trading-tool surface rather than as a base protocol component, but the live/current documentation path should point readers to [Truffle](truffle.md).
 
 ## Links
 
 - [PiggyTrade repository](https://github.com/FlyingPig5/piggy-trade)
+- [Truffle](truffle.md)
 - [DEX overview](dex.md)
 - [P2P trading](p2p-trading.md)

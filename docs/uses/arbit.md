@@ -1,3 +1,9 @@
+---
+owner: docs
+last_reviewed: '2026-05-29'
+ia_status: directory
+---
+
 # Arbit Documentation
 
 [Arbit](https://github.com/ConnecMent/arbit) is a simple and intuitive arbitrage platform designed for decentralized trading on the Ergo and Cardano blockchains. It aims to simplify the arbitrage process, enabling users to identify and execute profitable swaps with minimal setup.

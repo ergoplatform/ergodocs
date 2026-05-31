@@ -65,7 +65,7 @@ def repo_link(repo: str) -> str:
 
 def page_link(page: str) -> str:
     label = page.removeprefix("docs/")
-    return f"[`{escape_cell(label)}`](../{label})"
+    return f"[`{escape_cell(label)}`]({Path(label).name})"
 
 
 def owner_type(owner: str) -> str:

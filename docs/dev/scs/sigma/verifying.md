@@ -49,12 +49,10 @@ The on-chain-friendly signature is the pair **(a, z)**, where `a` is a `GroupEle
 ## Schnorr Signature Verification
 
 The verifier recomputes the challenge:
-  \[
-  e = H(a || M || Y)
+ \[e = H(a || M || Y)
   \]
 Then accepts when:
-  \[
-  g^z = a \cdot Y^e
+ \[g^z = a \cdot Y^e
   \]
 
 ---

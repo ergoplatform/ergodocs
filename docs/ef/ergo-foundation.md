@@ -106,9 +106,7 @@ For more information about the scope of the Foundation's work, please refer to t
 - **Eva Qing**: Chinese Community Management
 - **Marcelo Roncatti (Marcello)** is a Brazilian multifaceted designer and art director working over 20 years in the graphics and visual arts Co-Founder and Partner of the graphic design studio called Estudio Colletivo, a multidisciplinary design office that works on branding projects, graphic design and interface design.
 
-##
-
-The Ergo Foundation is made up of a diverse group of individuals, including salaried employees, volunteers, bounty collectors, and independent project developers within the Ergo ecosystem. It's important to note that there is no designated 'core' development team. The Core Marketing team, for instance, is a mix of dedicated community members and salaried professionals. Similarly, contributors who have made significant additions to core repositories may be invited to participate in Core Development discussions, regardless of their employment status.
+## The Ergo Foundation is made up of a diverse group of individuals, including salaried employees, volunteers, bounty collectors, and independent project developers within the Ergo ecosystem. It's important to note that there is no designated 'core' development team. The Core Marketing team, for instance, is a mix of dedicated community members and salaried professionals. Similarly, contributors who have made significant additions to core repositories may be invited to participate in Core Development discussions, regardless of their employment status.
 
 ### DevDao
 

@@ -1,3 +1,8 @@
+---
+owner: docs
+last_reviewed: '2026-05-29'
+ia_status: directory
+---
 # Background
 
 The concept discussed in this post is inspired by the idea of [Proof-of-Activity as a Smart Contract](https://www.ergoforum.org/t/proof-of-activity-as-a-smart-contract/132).

@@ -5,6 +5,20 @@ tags:
   - NFT
   - Token Distribution
   - dApp
+owner: docs
+last_reviewed: '2026-05-29'
+source_repos:
+  - repo: The-Last-Byte-Bar/Miner-Rights-Protocol
+    branch: main
+    paths:
+      - README.md
+  - repo: The-Last-Byte-Bar/Token-Flight-Bot
+    branch: main
+    paths:
+      - README.md
+source_of_truth:
+  - https://github.com/The-Last-Byte-Bar/Miner-Rights-Protocol
+  - https://github.com/The-Last-Byte-Bar/Token-Flight-Bot
 ---
 
 # Mining Rights Protocol: A Technical Analysis of Blockchain-Based Mining Rights Management

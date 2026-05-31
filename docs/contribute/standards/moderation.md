@@ -90,7 +90,7 @@ Misc Spam
 > \b(working\s+as|full\s*stack\s*web3\s*developer|smart\s*contract|token\s*creation|presale|nft\s*staking|web3\s*game|bot\s*development|inform\s+myself\s+to\s+you)\b
 
 Emojis:
-> 🟠,🟡,🟢,🔵,🟣,🟤,⚫,⚪,⬛️,🪩,💔,💖,💗,💓,💞,💝,💘,💟,🥜,🐵,️⃣,🔺,💵,💶,💷,💴,🐕‍🦺,⚠️,🈶,🫰,📡,🎯,👈,➡️,🪟,🎦,🏛,🌰,🐂,🔰,👋👋,🥇,🥈,🥉,⭐,🌟,💎,⏰,⏱,⏲,⏳,💣,💉,💊,🎁,🔑,🗝,✅,☑️,🤟,🔗,🔄,📈,🔍,🍉,⛽️,⬛️
+> ,,,,,,,,⬛️,,,,,,,,,,,,️⃣,,,,,,‍,Caution,🈶,,,,,️,,,,,,,,,,,⭐,,,⏰,⏱,⏲,⏳,,,,,,,Yes,Yes,,,,,,,️,⬛️
 
 ### Other Moderation Bots
 

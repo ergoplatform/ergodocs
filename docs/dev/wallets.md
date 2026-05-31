@@ -24,10 +24,10 @@ A wallet is your essential gateway to the Ergo ecosystem. It allows you to secur
 
 Consider these common needs:
 
-* **📱 Mobile Use:** If you need access to your funds primarily on your smartphone (iOS or Android), look at **Mobile Wallets**.
-* **💻 Desktop Management:** If you prefer managing funds on your computer (Windows, macOS, Linux), check out **Desktop Wallets**.
-* **🌐 dApp Interaction:** If you plan to frequently interact with Ergo dApps directly through your web browser, a **Browser Extension Wallet** is often the most convenient.
-* **🔒 Maximum Security / Long-Term Storage:** For storing significant amounts of ERG or holding funds offline ("cold storage"), consider a **Paper Wallet** or the offline/cold wallet features available in some mobile/desktop wallets.
+* ** Mobile Use:** If you need access to your funds primarily on your smartphone (iOS or Android), look at **Mobile Wallets**.
+* ** Desktop Management:** If you prefer managing funds on your computer (Windows, macOS, Linux), check out **Desktop Wallets**.
+* ** dApp Interaction:** If you plan to frequently interact with Ergo dApps directly through your web browser, a **Browser Extension Wallet** is often the most convenient.
+* ** Maximum Security / Long-Term Storage:** For storing significant amounts of ERG or holding funds offline ("cold storage"), consider a **Paper Wallet** or the offline/cold wallet features available in some mobile/desktop wallets.
 
 ## Recommended Wallets by Type
 

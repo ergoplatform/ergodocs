@@ -4,6 +4,21 @@ tags:
   - NFT
   - Access Control
   - dApp
+owner: docs
+last_reviewed: '2026-05-29'
+source_repos:
+  - repo: pandavio/PandaV
+    branch: main
+    paths:
+      - README.md
+  - repo: pandavio/pdvserver
+    branch: main
+    paths:
+      - README.md
+source_of_truth:
+  - https://github.com/pandavio
+  - https://www.pandav.io
+ia_status: directory
 ---
 
 # PandaV

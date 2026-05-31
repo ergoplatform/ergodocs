@@ -1,3 +1,8 @@
+---
+owner: docs
+last_reviewed: '2026-05-29'
+ia_status: directory
+---
 # Mutual Credit System on Ergo
 
 A mutual credit system is a type of alternative currency system in which the currency used is not a commodity but an accounting unit. In this system, credit is given by all participants, through a system of IOUs that are issued and managed collectively by the community. This system allows for a flexible, decentralized form of trade, where value is not tied to a physical commodity but to the trust and cooperation of the community.

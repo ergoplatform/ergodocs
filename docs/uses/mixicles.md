@@ -1,3 +1,8 @@
+---
+owner: docs
+last_reviewed: '2026-05-29'
+ia_status: directory
+---
 # Mixicles
 
 [Mixicles](https://research.chain.link/mixicles.pdf) (short for "*mixing oracles and smart contracts*") are a type of smart contract that uses data from an oracle to create a private contract between two or more parties. These contracts are designed to be used in situations where privacy is important, and where the terms of the contract are based on data that is provided by an external source.

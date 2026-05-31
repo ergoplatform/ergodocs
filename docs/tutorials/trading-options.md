@@ -18,16 +18,18 @@ source_of_truth:
   - https://github.com/ThierryM1212/SigmaO/tree/main/front-end/src/utils/utils.js
 ---
 
-**Ergo's decentralized finance (DeFi) landscape is about to expand with the introduction of SigmaO, a pioneering platform designed to facilitate options trading on the Ergo blockchain. SigmaO aims to leverage Ergo's unique capabilities to offer a versatile and secure environment for trading options, enhancing the financial instruments available within the Ergo ecosystem.**
+# Trading Options Tutorial
 
-## **What are Options?**
+SigmaO is a platform designed to facilitate options trading on the Ergo blockchain. It uses Ergo smart contracts to support call and put options across Ergo EIP-4 tokens.
+
+## What Are Options?
 
 Options are like contracts that give you the choice to buy or sell something (like stocks or cryptocurrencies) at a fixed price before a certain date. There are two main types:
 
 - **Call Options:** These let you **buy** something at a set price in the future.
 - **Put Options:** These let you **sell** something at a set price in the future.
 
-**How are Options Used?**
+### How Options Are Used
 
 - **Hedging:** Imagine you own Ergo tokens and are worried their value might drop. You could buy a put option, which gives you the right to sell your Ergo tokens at a fixed price, protecting you from losses if the price falls.
   
@@ -35,7 +37,7 @@ Options are like contracts that give you the choice to buy or sell something (li
   
 - **Generating Income:** Alternatively, you could sell a call option if you don't think Ergo's price will rise significantly. You'll receive money upfront for selling the option, and if the price stays below the agreed price, you keep the money without having to sell any tokens.
 
-**Learning More:**
+### Learning More
 
 - [Beginner's Options Course](https://learn.tastylive.com/courses/beginner-options-course)
 - [The Options Playbook](https://www.optionsplaybook.com/option-strategies/)
@@ -71,13 +73,13 @@ The v2 SigmaO contract and utility updates added Spectrum AMM LP-box based prici
 
 Sigma'O is a decentralized application (dApp) built on the Ergo blockchain. It was initially developed for the Ergohack VI event and is now available for testing at [sigmao.cc](https://www.sigmao.cc/).
 
-**What Sigma'O Does:**
+### What Sigma'O Does
 
 - **Token Creation**: It allows users to create standard EIP-4 tokens, representing the value of an option on another Ergo EIP-4 token.
 - **Trading Platform**: Sigma'O provides contracts for trading Ergo tokens and Sigma'O options in an order book style exchange.
 - **Permissionless Contracts**: All contracts used by Sigma'O are permissionless, meaning developers and UIs interacting with Sigma'O contracts do not have any privileges. There's no updatable configuration by an "app owner."
 
-**Option Contracts:**
+### Option Contracts
 
 - **Type**: Sigma'O options can be either Call (grant to buy an underlying token) or Put (grant to sell an underlying token).
 - **Style**: They can be American (exercisable up to the maturity date) or European (exercisable during 24h after the maturity date).
@@ -85,26 +87,26 @@ Sigma'O is a decentralized application (dApp) built on the Ergo blockchain. It w
 - **Strike Price**: The price of the underlying asset when exercising the option.
 - **Maturity Date**: The end of the grant of the option.
 
-**Minting Option Tokens:**
+### Minting Option Tokens
 
 When Sigma'O options are created, a reserve is ensured to allow for the option's exercise.
 
-**Exercising Options:**
+### Exercising Options
 
 - Exercising an option burns the options used, as the associated reserve is consumed.
 - The exercise period depends on the type of option (American or European) and the exercise type (Call or Put).
 
-**Order Book Trading:**
+### Order Book Trading
 
 Sigma'O implements "Open sale order" and "Open buy order" contracts for trading options and tokens. These contracts are refundable at any time to the issuer and ensure fair trading.
 
-**Priced Sell Contracts:**
+### Priced Sell Contracts
 
 Sigma'O also supports priced sell options for options on an underlying token with an Oracle price or Spectrum liquidity pool. This allows for real-time pricing based on market conditions.
 
 - **Exact Formula:** The exact computation implemented in ErgoScript and JS can be found [here](https://github.com/ThierryM1212/SigmaO/blob/main/front-end/src/utils/utils.js#L98) and [here](https://github.com/ThierryM1212/SigmaO/blob/main/contract/Option_Sell.es#L107).
 
-**Future Developments:**
+### Future Developments
 
 The SigmaO team is dedicated to enhancing the platform with user-friendly interfaces and off-chain bots for efficient transaction processing. This will not only improve the trading experience but also contribute to the overall liquidity and dynamism of Ergo's DeFi ecosystem.
 

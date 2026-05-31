@@ -7,6 +7,14 @@ tags:
   - Marketplace
   - dApp
   - dApp-MVP
+owner: docs
+last_reviewed: '2026-05-29'
+source_of_truth:
+- https://palmyra.app/
+- https://www.youtube.com/watch?v=gssGfEwOEgw
+source_watch_note: ZenGate commercial product; no verified public GitHub repository
+ found.
+ia_status: directory
 ---
 
 # Palmyra ComDEX

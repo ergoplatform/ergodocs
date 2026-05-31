@@ -5,6 +5,14 @@ tags:
   - Metaverse
   - dApp
   - dApp-Live
+owner: docs
+last_reviewed: 2026-05-29
+ia_status: directory
+source_of_truth:
+ - https://playcyberverse.com/
+ - https://docs.cyberversegame.io/cyberverse-whitepaper/
+ - https://cyberverse-viewer.vercel.app/
+source_watch_note: Active project; public repo not verified during the 2026-05-29 sweep.
 ---
 
 # Cyberverse

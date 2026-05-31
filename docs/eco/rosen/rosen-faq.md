@@ -1,3 +1,8 @@
+---
+owner: docs
+last_reviewed: '2026-05-29'
+ia_status: directory
+---
 
 # FAQs: Rosen Bridge Operations and Features
 
@@ -33,7 +38,7 @@ Typical transfers complete in about 1–2 hours. Timing depends on:
 
 - Source chain confirmation requirements (e.g., Bitcoin can take longer).
 - Watcher consensus on Ergo and Guard validation/signatures.
-- Network congestion and large-value cold ➜ hot wallet movements.
+- Network congestion and large-value cold hot wallet movements.
 
 If your event appears delayed beyond expectations, see “My event looks stuck — what should I check?” below.
 

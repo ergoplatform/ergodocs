@@ -1,13 +1,12 @@
 ---
 tags:
-
 - Reputation System
 - Trust
 - Decentralized
 - dApp
 - Celaut
 owner: docs
-last_reviewed: 2026-05-27
+last_reviewed: 2026-05-30
 source_repos:
   - repo: reputation-systems/forum-application
     branch: master
@@ -15,6 +14,7 @@ source_repos:
       - README.md
 source_of_truth:
   - https://github.com/reputation-systems/forum-application
+ia_status: directory
 ---
 
 # Reputation System
@@ -129,7 +129,9 @@ This reputation system directly powers Celaut’s trust layer:
 
 * **Library Integration**: Developers can use the [Sigma Reputation Panel Library](https://github.com/reputation-systems/sigma-reputation-panel) to build bots and services that interact directly with the reputation system. This supports automated evaluation, staking, and advanced analytics.
 
-* **Forum Application**: [reputation-systems/forum-application](https://github.com/reputation-systems/forum-application) provides a forum-style application and library around reputation-system interactions.
+* **Forum Application**: [reputation-systems/forum-application](https://github.com/reputation-systems/forum-application) provides a forum-style application and library around reputation-system interactions. Its README describes Svelte 4 forum components where profiles, topics, replies, spam flags, and profile-level blocks are represented as Ergo boxes with fixed register layouts.
+
+The forum application reconstructs threads off-chain by scanning reputation boxes, grouping them by type, and linking replies to parent `box_id` values. Spam and blocking are also expressed through immutable on-chain boxes, while clients decide how to filter, rank, and display content.
 
 ---
 

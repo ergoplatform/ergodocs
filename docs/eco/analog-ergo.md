@@ -14,6 +14,7 @@ source_repos:
       - ScalarLock/src/main/scala/ScalarLock.scala
 source_of_truth:
   - https://github.com/dzyphr/ScalaSigmaParticle/tree/main/ScalarLock/src/main/scala/ScalarLock.scala
+ia_status: directory
 ---
 
 # Analog Ergo

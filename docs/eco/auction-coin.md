@@ -6,6 +6,25 @@ tags:
   - DeFi
   - Degen Finance
   - dApp
+owner: docs
+last_reviewed: '2026-05-29'
+ia_status: directory
+source_repos:
+  - repo: Auction-Coin/off-chain
+    branch: master
+    paths:
+      - README.md
+  - repo: Auction-Coin/frontend
+    branch: main
+    paths:
+      - README.md
+  - repo: Auction-Coin/contracts
+    branch: main
+    paths:
+      - README.md
+source_of_truth:
+  - https://github.com/orgs/Auction-Coin/repositories
+  - https://auctioncoin.app
 ---
 
 # Auction Coin: A Decentralized Token Issuance Model on Ergo Blockchain

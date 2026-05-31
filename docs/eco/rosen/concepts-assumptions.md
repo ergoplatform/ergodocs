@@ -1,3 +1,8 @@
+---
+owner: docs
+last_reviewed: '2026-05-29'
+ia_status: directory
+---
 # RosenBridge Concepts & Assumptions
 
 RosenBridge uses a two-layer, Ergo-centric architecture that enables secure cross-chain transfers without deploying smart contracts on external chains. Consensus and auditability live on Ergo, while external chains only require a multisig or threshold-signature wallet controlled by Guards.

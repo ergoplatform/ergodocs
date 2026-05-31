@@ -4,13 +4,19 @@ tags:
   - Casino
   - Gaming
   - dApp
+owner: docs
+last_reviewed: 2026-05-29
+source_of_truth:
+- https://grandgambit.io/
+source_watch_note: Closed-source project; no verified public GitHub repository found.
+ia_status: directory
 ---
 
 # Grand Gambit
 
 Grand Gambit, accessible at [grandgambit.io](https://grandgambit.io/), is the pioneering casino on Ergo. It offers a variety of games that can be played using ERG and several other tokens. The platform is compatible with both desktop and mobile devices, although currently only Android is supported.
 
-The code for Grand Gambit is open source and can be reviewed by anyone interested. It has undergone a security review by an Ergo Core Developer to ensure its robustness. However, users are advised to bet with caution.
+Grand Gambit is closed source. It has undergone a security review by an Ergo Core Developer, but users are advised to bet with caution.
 
 Grand Gambit operates with a small fee structure. For games with a 1/2 winning chance, the fee is 1:1.95. For games with a 1/6 winning chance, the fee is 1:5.8. And for games with a 1/10 winning chance, the fee is 1:9.7. These fees are utilized to cover miner fees, hosting services costing $30 per month, and for further development of the platform.
 

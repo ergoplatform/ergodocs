@@ -14,7 +14,7 @@ source_of_truth:
 
 # EIP-0004: Asset Standard
 
-> 🔗 From [EIP-0004:](https://github.com/ergoplatform/eips/blob/master/eip-0004.md)
+> From [EIP-0004:](https://github.com/ergoplatform/eips/blob/master/eip-0004.md)
 
 This standard provides a uniform way to issue Ergo tokens.
 

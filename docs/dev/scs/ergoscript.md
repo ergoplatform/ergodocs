@@ -107,13 +107,13 @@ While ErgoScript aims for simplicity and security, debugging complex contracts c
 
 **Core Interpreters & Playgrounds:**
 
-* 🥇 **[Sigmastate Interpreter](https://github.com/ScorexFoundation/sigmastate-interpreter)**: The reference implementation used by nodes.
-* 🥇 **[Ergo Playgrounds](https://github.com/ergoplatform/ergo-playgrounds)**: Scala-based environment for contract and off-chain code testing.
+* **[Sigmastate Interpreter](https://github.com/ScorexFoundation/sigmastate-interpreter)**: The reference implementation used by nodes.
+* **[Ergo Playgrounds](https://github.com/ergoplatform/ergo-playgrounds)**: Scala-based environment for contract and off-chain code testing.
 * **[Ergo-Puppet](puppet.md):** Advanced tool built on Ergo Playgrounds for off-chain experimentation and unit testing.
 
 **Online Editors & Compilers:**
 
-* 🥇 **[escript.online](https://escript.online/)**: Online editor, compiler, and playground.
+* **[escript.online](https://escript.online/)**: Online editor, compiler, and playground.
 * **[ErgoScript P2S Playground (Plutomonkey)](https://wallet.plutomonkey.com/p2s/)**: Compile ErgoScript to P2S addresses.
 * **[Scastie](scastie.md)**: Online Scala compiler suitable for ErgoScript snippets.
 * **[KioskWeb](https://github.com/scalahub/KioskWeb)**: Web interface for the Kiosk framework (useful for exploring Kiosk-based contracts).

@@ -56,8 +56,7 @@ The table size (**N** value) evolves over time as follows:
 
 ::cards::
 
-[
-  {
+[{
     "title": "Start Mining",
     "url": "setup/join.md",
     "content": "Getting setup with a mining pool."
@@ -87,9 +86,7 @@ The table size (**N** value) evolves over time as follows:
     "title": "Emission",
     "url": "emission.md",
     "content": "The Ergo emission schedule"
-  }
-
-]
+ }]
 
 ::/cards::
 

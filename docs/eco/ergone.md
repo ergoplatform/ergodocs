@@ -5,6 +5,16 @@ tags:
   - Proof of Commitment
   - Community
   - dApp
+owner: docs
+last_reviewed: '2026-05-29'
+source_repos:
+  - repo: scruper/ergone
+    branch: master
+    paths:
+      - README.md
+source_of_truth:
+  - https://app.ergone.io/
+  - https://github.com/scruper/ergone
 ---
 
 # ErgOne

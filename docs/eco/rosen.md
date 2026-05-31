@@ -58,13 +58,34 @@ source_of_truth:
   - https://github.com/rosen-bridge/network-client
   - https://github.com/SavonarolaLabs/rosen-ui
 ---
-# Rosen Bridge: The Future of Cross-Chain Asset Transfers
+# Rosen Bridge
 
-[Rosen Bridge](https://rosen.tech), an open-source protocol, is pioneering the future of cross-chain asset transfers. It's currently in beta, testing its first bridge to Cardano. Rosen Bridge leverages Ergo's capabilities to facilitate secure and efficient coin and token transfers between Ergo and other blockchains.
+[Rosen Bridge](https://rosen.tech) is an open-source cross-chain bridge centered on Ergo. It lets users move supported assets between Ergo and other chains while keeping bridge consensus and auditability on Ergo.
 /// details | Latest Developments
      {type: tip, open: true}
 Bridges live between: ADA, BSC, BTC, ETH, DOGE, join the [Rosen Telegram chat](https://t.me/rosenbridge_erg) to keep up to date.
 ///
+
+## Project Profile
+
+| Field | Details |
+| --- | --- |
+| Status | Active bridge infrastructure. |
+| Category | Cross-chain bridge, infrastructure, interoperability. |
+| Links | [Website](https://rosen.tech), [GitHub organization](https://github.com/rosen-bridge), [Telegram](https://t.me/rosenbridge_erg). |
+| Source | Rosen watcher, guard-service, UI/service, SDK, and supporting package repositories listed in page metadata. |
+| Caveats | Bridge operations depend on watcher/guard infrastructure, chain-specific confirmation rules, fees, and supported-token configuration. |
+
+## Start Here
+
+| Goal | Page |
+| --- | --- |
+| Understand the trust model | [Concepts & Assumptions](concepts-assumptions.md) |
+| Follow a transfer flow | [Token Transfer Flows](token-transfer-flows.md) |
+| Debug a user issue | [Troubleshooting](rosen-troubleshooting.md) |
+| Understand fees | [Fees & Dust](fees-and-dust.md) |
+| Integrate a new chain | [New Chain Integration](new-chain-integration.md) |
+| Run bridge infrastructure | [Watcher operations](watcher.md) and [Guard operations](guard.md) |
 
 ## Welcome to RosenBridge
 

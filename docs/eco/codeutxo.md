@@ -1,3 +1,21 @@
+---
+owner: docs
+last_reviewed: '2026-05-29'
+source_repos:
+  - repo: codeUTXO/ergo-price-mcp
+    branch: main
+    paths:
+      - README.md
+  - repo: marctheshark3/ergo-mcp
+    branch: main
+    paths:
+      - README.md
+source_of_truth:
+  - https://github.com/codeUTXO/ergo-price-mcp
+  - https://github.com/marctheshark3/ergo-mcp
+ia_status: directory
+---
+
 # CodeUtxo's Ergo Integration: Conversational AI for the Blockchain
 
 **Project for [ErgoHack 10: AI on the Ergo Blockchain](ergohack.md)**

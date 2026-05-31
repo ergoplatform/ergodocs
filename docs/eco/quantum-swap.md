@@ -6,9 +6,12 @@ tags:
   - exchange
   - nft
 owner: docs
-last_reviewed: 2026-05-28
+last_reviewed: '2026-05-29'
+ia_status: directory
 source_of_truth:
   - events/pdf/ergohackvi/Quantum-Swap-White-Paper2(2) 2.pdf
+source_watch_note: Historical ErgoHack proposal; no verified public GitHub repository
+ found.
 ---
 
 # Quantum Swap

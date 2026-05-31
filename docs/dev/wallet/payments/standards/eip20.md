@@ -9,7 +9,7 @@ source_of_truth:
 
 # ErgoPay: A Wallet and dApp Interaction Protocol
 
-> 🔗 Refer to [EIP-0020](https://raw.githubusercontent.com/ergoplatform/eips/master/eip-0020.md) for more details.
+> Refer to [EIP-0020](https://raw.githubusercontent.com/ergoplatform/eips/master/eip-0020.md) for more details.
 
 * Author: @aslesarenko, @MrStahlfelge
 * Status: Proposed

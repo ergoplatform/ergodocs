@@ -25,8 +25,7 @@ Understanding the [UTXO transactional model](eutxo.md) is crucial when developin
 
 ::cards::
 
-[
-  {
+[{
     "title": "sigma-rust",
     "content": "Rust port of the sigmastate-interpreter",
     "url": "../stack/sigma-rust.md"
@@ -40,9 +39,7 @@ Understanding the [UTXO transactional model](eutxo.md) is crucial when developin
     "title": "RustKit",
     "content": "(WIP), A SDK for building applications on the Ergo blockchain",
     "url": "../stack/rustkit.md"
-  }
-
-]
+ }]
 
 ::/cards::
 
@@ -50,22 +47,20 @@ Understanding the [UTXO transactional model](eutxo.md) is crucial when developin
 
 ::cards::
 
-[
-  {
-    "title": "🔗 Ergo Utilities",
+[{
+ "title": " Ergo Utilities",
     "content": "simplify writing off-chain code in Rust.",
     "url": "https://github.com/robkorn/ergo-utilities-rust/"
   },
   {
-    "title": "🔗 ergo-monitoring",
+ "title": " ergo-monitoring",
     "content": "Debug service printing out useful for developers and managers information about ergo blockchain state.",
     "url": "https://github.com/SabaunT/ergo-monitoring"
   },
   {
-    "title": "🔗 Rust AVL Tree",
+ "title": " Rust AVL Tree",
     "content": "Rust port of [AVL tree](avl.md) from scrypto package.",
     "url": "https://github.com/knizhnik/scorex_crypto_avltree/blob/main/crypto_avltree.md"
-  }
-]
+ }]
 
 ::/cards::

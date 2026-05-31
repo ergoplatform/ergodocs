@@ -1,3 +1,8 @@
+---
+owner: docs
+last_reviewed: '2026-05-29'
+ia_status: directory
+---
 ## ErgoProfitSharingDapp
 
 This service will provide a way for dApps to distribute gains among dApps' token holders.

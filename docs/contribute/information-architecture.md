@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: 2026-05-27
+last_reviewed: 2026-05-29
 ---
 
 # Information Architecture
@@ -13,12 +13,14 @@ Use one canonical home for each page. Other sections should link to that page th
 
 | Surface | Job | Canonical content |
 | --- | --- | --- |
-| Start Here | orientation and first decisions | short guides, glossary, FAQ |
-| Use | user jobs and ecosystem use cases | wallets, dApps, tutorials, project pages |
+| Start Here | orientation and first decisions | short routing pages that point to canonical hubs |
+| Use | user jobs and practical tasks | wallets, safety, wallet guides, user tutorials |
+| Ecosystem | project discovery and ecosystem categories | dApps, bridges, DeFi, NFTs, privacy tools, project profiles |
 | Learn | concepts and research | protocol concepts, papers, cryptography, scaling |
 | Participate | community and contribution | governance, events, docs process, funding |
 | Develop | builder references | SDKs, ErgoScript, data model, APIs, examples |
 | Deploy | operator runbooks | node, indexers, watchers, pools, infrastructure |
+| Reference | lookup material | glossary, FAQ, API references, standards, configuration references |
 
 ## Current Structural Risks
 
@@ -33,30 +35,34 @@ The audit tracks active docs, nav entries, duplicate targets, cross-surface dupl
 Current repo shape shows three main risks:
 
 - Same page appears in several top-level surfaces, for example Rosen watcher pages under both `Use` and `Deploy`, and some SDK/tooling pages under multiple developer sections.
-- Project pages, conceptual pages, and operational runbooks are mixed in the same folders, especially under `eco/`, `uses/`, and `dev/stack/`.
+- Project pages, conceptual pages, and operational runbooks are mixed in the same folders, especially under `eco/`, `uses/`, and `dev/stack/`; nav placement should be based on audience and content type, not path alone.
 - Some pages exist as navigation bridges rather than canonical references, making source ownership and update responsibility less clear.
 
-After the second navigation cleanup pass, the audit reports:
+After the ecosystem/reference navigation pass, the audit reports:
 
-- `646` active markdown pages.
-- `647` nav entries pointing at `647` unique targets.
-- `0` duplicate nav targets, down from `32`.
-- `0` cross-surface duplicates, down from `27`.
+- `682` active markdown pages.
+- `683` nav entries pointing at `683` unique targets.
+- `0` duplicate nav targets.
+- `0` cross-surface duplicates.
 - `0` active orphan pages outside the nav.
 - `1` intentional unlisted legacy page.
-- `137` source-watched pages.
+- `191` source-watched pages.
 
 ## Rules
 
 - A page should have one canonical nav location.
 - A page can appear in another journey only through a hub page with a short summary and link.
+- Start Here is a routing layer. Keep it shallow and point to hubs, not deep technical pages.
 - `Use` pages should explain user outcomes and risks, not implementation details.
+- `Ecosystem` pages should support discovery of active, emerging, historical, or research-stage projects.
 - `Develop` pages should document APIs, libraries, contracts, and source-backed behavior.
 - `Deploy` pages should be runbooks: prerequisites, config, operations, failure modes, upgrades.
 - `Learn` pages should be stable conceptual references and should not depend on live project status.
+- `Reference` pages should be lookup material, not learning paths or tutorials.
 - Ecosystem project pages should declare status: active, dormant, prototype, historical, or unknown.
 - Source-backed pages should carry `owner`, `last_reviewed`, and `source_repos` frontmatter.
-- Replaced, alias, or draft pages should declare `ia_status: legacy`, `ia_status: alias`, or `ia_status: draft` instead of silently becoming orphan debt.
+- Replaced, alias, draft, or directory-listed pages should declare `ia_status: legacy`, `ia_status: alias`, `ia_status: draft`, or `ia_status: directory` instead of silently becoming orphan debt.
+- Use `ia_status: directory` only when an active page is intentionally discoverable through a directory or hub page instead of the sidebar.
 
 ## Migration Plan
 
@@ -72,9 +78,9 @@ After the second navigation cleanup pass, the audit reports:
 - Rosen watcher docs: canonical home is now `Deploy / Watchers`; `Use / Rosen Bridge` keeps user-facing Rosen concepts and no longer duplicates watcher runbooks.
 - Blockchain indexing docs: canonical home is now `Deploy / Blockchain Indexing`; `Develop` keeps API and explorer references without duplicating indexing runbooks.
 - Mosaik and legacy frameworks: split active SDK guidance from historical examples.
-- Ecosystem directory: continue adding status taxonomy; navigation now separates user/project pages from operator and developer runbooks.
+- Ecosystem directory: continue adding status taxonomy; navigation now separates ecosystem/project pages from user tasks, operator runbooks, and developer references.
 - Node docs: keep generated OpenAPI under `node/swagger/`; keep authored guidance in `node/swagger.md` and `dev/integration/`.
-- Remaining work should focus on page quality inside overlarge buckets, especially `Use / Ecosystem / Applications & Utilities`, `Develop / Tooling & Frameworks`, and node operations.
+- Remaining work should focus on page quality inside overlarge buckets, especially `Ecosystem / Applications & Utilities`, `Develop / Tooling & Frameworks`, and node operations.
 
 ## Review Checklist
 

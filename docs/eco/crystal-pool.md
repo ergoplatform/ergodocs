@@ -4,11 +4,27 @@ tags:
   - DEX
   - Order Book
   - dApp
+owner: docs
+ia_status: directory
+last_reviewed: 2026-05-29
+source_repos:
+  - repo: SavonarolaLabs/crystal-pool
+    branch: main
+    paths:
+      - README.md
+  - repo: SavonarolaLabs/squared
+    branch: main
+    paths:
+      - README.md
+source_of_truth:
+  - https://github.com/SavonarolaLabs/crystal-pool
+  - https://github.com/SavonarolaLabs/squared
+  - https://crystalpool.cc/
 ---
 
 # Crystal Pool
 
-Crystal Pool is a decentralized exchange (DEX) built on the Ergo blockchain, enabling real-time order-based trading directly on Layer 1. It is designed to provide a user experience comparable to centralized exchanges (CEXs) while maintaining the security and self-custody benefits of a DEX.
+[Crystal Pool](https://crystalpool.cc/) is a decentralized exchange (DEX) built on the Ergo blockchain, enabling real-time order-based trading directly on Layer 1. It is designed to provide a user experience comparable to centralized exchanges (CEXs) while maintaining the security and self-custody benefits of a DEX.
 
 ## Key Features
 

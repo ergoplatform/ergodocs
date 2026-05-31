@@ -9,6 +9,8 @@ tags:
   - Tutorial
 ---
 
+# Arbitrage Tutorial
+
 Unlock the potential of arbitrage within the Ergo ecosystem, tapping into both decentralized finance (DeFi) and centralized exchange (CEX) offerings. This beginner's guide reveals how to exploit price discrepancies across various platforms, focusing on Ergo's unique assets and the broader opportunities presented by CEXs. By balancing strategies between decentralised and centralized exchanges, traders can optimize their arbitrage potential for significant gains.
 
 ## Key Arbitrage Strategies on Ergo
@@ -25,7 +27,7 @@ Unlock the potential of arbitrage within the Ergo ecosystem, tapping into both d
 
 Start by researching various cryptocurrency exchanges where Ergo (ERG) is listed. These exchanges can include popular platforms like Bitpanda, Kucoin, Gate.io, and others. Look for price disparities between exchanges, keeping an eye on both large and low-liquidity exchanges where price differences may be more pronounced.
 
-**Look for "wicks" in the charts, indicating areas where buyers are market-buying significantly above the market value. These wicks suggest potential arbitrage opportunities. Consider depositing funds into the order book at various prices to capture these opportunities when prices spike.**
+Look for "wicks" in the charts, indicating areas where buyers are market-buying significantly above the market value. These wicks suggest potential arbitrage opportunities. Consider depositing funds into the order book at various prices to capture these opportunities when prices spike.
 
 > View all exchanges that list Ergo on [the ergo site](https://ergoplatform.org/en/get-erg/#Exchanges) or in the markets section on [CoinGecko](https://www.coingecko.com/en/coins/ergo#markets). You can also use [Crux Finance](https://cruxfinance.io/) and [TapTools.io](https://www.taptools.io/) to explore ecosystem system charts.
 

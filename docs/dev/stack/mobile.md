@@ -2,8 +2,7 @@
 
 ::cards::
 
-[
-  {
+[{
     "title": "Android",
     "content": "",
     "image": "../../assets/img/dev-grid/android.png",
@@ -15,7 +14,6 @@
     "image": "../../assets/img/dev-grid/ios.png",
     "url": "iOS.md"
 
-  }
-]
+ }]
 
 ::/cards::

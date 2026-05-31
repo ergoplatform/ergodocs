@@ -1,3 +1,16 @@
+---
+owner: docs
+last_reviewed: '2026-05-29'
+source_repos:
+  - repo: Hq3r/PULSE
+    branch: main
+    paths:
+      - README.md
+source_of_truth:
+  - https://github.com/Hq3r/PULSE
+ia_status: directory
+---
+
 # Pulse: Decentralized Communication & Livestreaming on the Ergo Blockchain
 
 **Project for [ErgoHack 10: AI on the Ergo Blockchain](ergohack.md)**

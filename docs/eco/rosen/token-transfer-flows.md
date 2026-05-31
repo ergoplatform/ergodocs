@@ -1,3 +1,8 @@
+---
+owner: docs
+last_reviewed: '2026-05-29'
+ia_status: directory
+---
 # RosenBridge Token Transfer Flows
 
 This guide explains the end-to-end flows for moving value through RosenBridge in both directions: from an external chain (ChainX) to Ergo, and from Ergo back to ChainX. It highlights the roles of Watchers and Guards, consensus checkpoints, and finality.
