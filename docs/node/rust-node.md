@@ -5,7 +5,7 @@ tags:
   - Infrastructure
   - Experimental
 owner: docs
-last_reviewed: 2026-05-27
+last_reviewed: 2026-06-08
 source_repos:
   - repo: mwaddip/ergo-node-rust
     branch: master
@@ -21,6 +21,9 @@ source_repos:
       - README.md
 source_of_truth:
   - https://github.com/mwaddip/ergo-node-rust
+  - https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.6.9
+  - https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.6.8
+  - https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.6.7
   - https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.6.6
   - https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.6.4
   - https://github.com/Luivatra/ergo-rust-node
@@ -41,11 +44,14 @@ Related Rust-node references include [Luivatra/ergo-rust-node](https://github.co
 
 Recent release highlights:
 
+- [v0.6.9](https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.6.9) added consensus-behavior fixes from sigma-rust for mixed-width numeric arithmetic and rejection of flat N-ary tuples during deserialization.
+- [v0.6.8](https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.6.8) tightened JIT cost accounting for empty and packed collections and added an indexer health endpoint at `/api/v1/health`.
+- [v0.6.7](https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.6.7) addressed validation-harness gridlock by moving heavy API work to blocking threads, adding single-flight block-transaction fetching in the indexer, and relaxing bogus peer-address handling so normal NAT gossip is filtered without banning the gossiper.
 - [v0.6.6](https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.6.6) aligned several REST responses with the JVM node, including `/peers/connected`, `/mining/rewardAddress`, and error response shapes. It also fixed an indexer reorg-detection blind spot that could surface as duplicate transaction IDs during mid-sync reorgs.
 - [v0.6.4](https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.6.4) added `blocks_to_keep` pruning for non-header block sections, plus validation-oriented endpoints for canonical block fragments and indexed box bytes.
 - Earlier `v0.4.x` work reduced at-tip memory use and exposed peer-request behavior that could trigger bans when malformed or repeated requests were sent.
 
-Current development areas include mining endpoint support, NiPoPoW bootstrapping, RequestModifiers serving, mempool/API work, peer penalties, indexer behavior, and reducing accidental bans from malformed or repeated requests.
+Current development areas include mining endpoint support, NiPoPoW bootstrapping, RequestModifiers serving, mempool/API work, peer penalties, indexer behavior, API parity, and validation against JVM behavior.
 
 ## Implementation notes
 

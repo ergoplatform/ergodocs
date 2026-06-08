@@ -7,7 +7,7 @@ tags:
   - tooling
   - community
 owner: docs
-last_reviewed: 2026-05-27
+last_reviewed: 2026-06-08
 ia_status: directory
 source_repos:
   - repo: Scottcjn/bottube
@@ -79,7 +79,7 @@ These projects are recent ecosystem additions verified against public repositori
 
 | Dedicated page | What it is | Status | Related surface |
 | --- | --- | --- | --- |
-| [BoTTube](bottube.md) | AI-native video platform with an Ergo bridge blueprint for deposit verification and P2PK address handling. | Emerging | Applications and utilities. |
+| [BoTTube](bottube.md) | AI-native video platform with an Ergo bridge blueprint for deposit verification, request validation, and P2PK address handling. | Emerging | Applications and utilities. |
 | [Ergo Agent SDK](ergo-agent-sdk.md) | Python SDK for giving autonomous agents controlled access to Ergo and its DeFi ecosystem. | Developer-facing | Developer frameworks. |
 | [Ergo Proxy](ergo-proxy.md) | Lightweight Ergo P2P relay proxy for forwarding peer messages without holding blockchain state. | Developer-facing | Node operations and P2P tooling. |
 | [Ergo Relay](ergo-relay.md) | Minimal transaction signing and P2P relay service. | Developer-facing | Node operations and transaction broadcast tooling. |

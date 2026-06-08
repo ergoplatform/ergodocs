@@ -2,7 +2,7 @@
 tags:
   - Compiler
 owner: docs
-last_reviewed: 2026-05-26
+last_reviewed: 2026-06-08
 source_repos:
   - repo: ScorexFoundation/sigmastate-interpreter
     branch: develop
@@ -139,6 +139,7 @@ Here’s a breakdown of each phase:
 
 - **In `sigmastate-interpreter`**: Type inference follows Scala's type system rules, ensuring that all expressions are type-safe.
   - **Location**: [`sc/shared/src/main/scala/sigma/compiler/phases/SigmaTyper.scala`](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/sc/shared/src/main/scala/sigma/compiler/phases/SigmaTyper.scala)
+  - **Recent fix**: Sigma SDK `v6.0.4` added compiler support for `None` expressions where an expected `Option[T]` type is available, such as `val x: Option[Int] = None`.
 
 ## 6. Graph Building
 

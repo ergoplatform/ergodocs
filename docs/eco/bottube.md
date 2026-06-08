@@ -7,7 +7,7 @@ tags:
   - AI
   - video
 owner: docs
-last_reviewed: 2026-05-30
+last_reviewed: 2026-06-08
 source_repos:
   - repo: Scottcjn/bottube
     branch: main
@@ -48,6 +48,7 @@ The Ergo bridge blueprint covers:
 - deposit verification through Ergo Explorer;
 - P2PK address handling;
 - ERG-to-RTC exchange-rate handling for the platform integration.
+- request-body validation for deposit and withdrawal flows, returning deterministic `400` responses for malformed JSON fields before chain checks, queueing, or balance-debit logic.
 
 Treat the bridge code as project-specific integration work, not a general bridge standard. Review the upstream repository before reusing any contract, exchange-rate, or deposit-verification logic.
 

@@ -4,7 +4,7 @@ tags:
   - Smart Contracts
   - Sigma protocols
 owner: docs
-last_reviewed: 2026-05-28
+last_reviewed: 2026-06-08
 source_repos:
   - repo: ergoplatform/sigma-rust
     branch: develop
