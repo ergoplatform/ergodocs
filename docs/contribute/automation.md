@@ -91,7 +91,7 @@ Maintainers should:
 
 Discord and chat exports are treated as pointers only. Public documentation should be verified against durable sources before it is changed.
 
-Tracking issues are labelled `docs`, `automated`, and `weekly-review`. Per-page source-review issues are labelled `docs`, `source-watch`, and `automated`. They are created only when source changes look documentation-relevant for the page, and their titles describe the likely missing feature, behavior, option, or endpoint rather than simply naming the page.
+Tracking issues are labelled `docs`, `automated`, and `weekly-review`. Per-page source-review issues are labelled `docs`, `source-watch`, and `automated`. They are created only when source changes look documentation-relevant for the page, and their titles describe the likely missing feature, behavior, option, or endpoint rather than simply naming the page. Release events use a stricter match than path commits so broad SDK or node releases do not fan out across every page that watches the same repository.
 
 If every candidate page is already reviewed, low-signal, already covered, or not documentation-relevant, the workflow comments on the weekly tracking issue and closes it automatically. The tracking issue stays open only when there is an actionable page-review issue, a script error, or follow-up that needs maintainer attention. New weekly runs also close older open weekly tracking issues as superseded, and close stale per-page `source-watch` issues that no longer appear actionable.
 

@@ -162,6 +162,18 @@ def raw_page_tokens(page: dict[str, Any]) -> set[str]:
     return meaningful(words(text.replace("/", " ").replace("-", " ").replace("_", " ")))
 
 
+def page_identity_tokens(page: dict[str, Any]) -> set[str]:
+    """Tokens that identify the page itself, excluding watched-source metadata."""
+    text = page_text(str(page.get("page", "")))
+    headings = " ".join(match.group(1) for match in re.finditer(r"^#{1,3}\s+(.+)$", text, re.MULTILINE))
+    parts = [
+        str(page.get("page", "")),
+        " ".join(str(tag) for tag in page.get("tags", [])),
+        headings,
+    ]
+    return meaningful(words(" ".join(parts).replace("/", " ").replace("-", " ").replace("_", " ")))
+
+
 def page_signal_text(page: dict[str, Any], *, include_content: bool = True) -> str:
     parts = [
         str(page.get("page", "")),
@@ -202,13 +214,16 @@ def repo_slug_tokens(repo: str) -> set[str]:
 
 def release_relevant_page(page: dict[str, Any], change: dict[str, Any]) -> bool:
     repo = str(change.get("repo", ""))
-    repo_tokens = repo_slug_tokens(repo)
-    if repo_tokens and repo_tokens & raw_page_tokens(page):
+    repo_lower = repo.lower()
+    sources = " ".join(str(item).lower() for item in page.get("source_of_truth", []))
+    if repo_lower and repo_lower in sources and "/releases" in sources:
         return True
 
-    sources = " ".join(str(item).lower() for item in page.get("source_of_truth", []))
-    repo_lower = repo.lower()
-    return bool(repo_lower and repo_lower in sources and "/releases/" in sources)
+    repo_tokens = repo_slug_tokens(repo)
+    if repo_tokens and repo_tokens & page_identity_tokens(page):
+        return True
+
+    return False
 
 
 def message_tokens(change: dict[str, Any]) -> set[str]:

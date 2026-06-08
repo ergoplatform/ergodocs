@@ -150,6 +150,38 @@ class CandidateScoringTests(unittest.TestCase):
         change = {"message": "updated unrelated prose", "severity": "medium", "kind": "commit", "path": "README.md"}
         self.assertFalse(candidates.actionable_change(page, change))
 
+    def test_release_scan_targets_identity_not_every_watched_page(self) -> None:
+        release = {
+            "message": "Release v6.0.4: Sigma SDK v6.0.4",
+            "severity": "medium",
+            "kind": "release",
+            "repo": "ScorexFoundation/sigmastate-interpreter",
+            "path": "release",
+        }
+        broad_page = {
+            "page": "docs/dev/scs/syntax.md",
+            "tags": ["Syntax", "ErgoScript"],
+            "source_repos": [{"repo": "ScorexFoundation/sigmastate-interpreter"}],
+            "source_of_truth": ["https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/docs/LangSpec.md"],
+        }
+        repo_page = {
+            "page": "docs/dev/scs/sigmastate-interpreter.md",
+            "tags": ["Sigmastate Interpreter"],
+            "source_repos": [{"repo": "ScorexFoundation/sigmastate-interpreter"}],
+            "source_of_truth": ["https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/README.md"],
+        }
+        release_page = {
+            "page": "docs/node/rust-node.md",
+            "tags": ["Rust", "Node"],
+            "source_repos": [{"repo": "mwaddip/ergo-node-rust"}],
+            "source_of_truth": ["https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.6.9"],
+        }
+        rust_release = {**release, "repo": "mwaddip/ergo-node-rust", "message": "Release v0.6.9: v0.6.9"}
+
+        self.assertFalse(candidates.actionable_change(broad_page, release))
+        self.assertTrue(candidates.actionable_change(repo_page, release))
+        self.assertTrue(candidates.actionable_change(release_page, rust_release))
+
 
 class BranchSafetyTests(unittest.TestCase):
     def test_dry_run_does_not_check_branch_ownership(self) -> None:
