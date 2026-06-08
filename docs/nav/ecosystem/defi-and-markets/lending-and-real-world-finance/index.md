@@ -19,7 +19,7 @@ The table links to the next useful page or sub-hub, keeping the sidebar staged i
 | --- | --- |
 | [EXLE](exle.md) | Lending and invoice finance project documentation. |
 | [Palmyra](palmyra.md) | Real-world finance and commodity trade application documentation. |
-| [Machina Finance](machina-finance.md) | Private-development finance project profile. |
+| [Machina Finance](machina-finance.md) | Grid- and limit-order DEX project with public contracts and SDK. |
 | [Hodlbox](hodlbox.md) | Hodlbox project profile and usage context. |
 | [Hodlcoin](hodlcoin.md) | Live token/project profile and usage context. |
 | [Auction Coin](auction-coin.md) | AuctionCoin project profile and ecosystem context. |

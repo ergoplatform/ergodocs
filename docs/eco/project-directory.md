@@ -29,7 +29,7 @@ For external discovery, also check [Sigmaverse](sigmaverse.md).
 | [Hodlbox](hodlbox.md) | [hodlbox.xyz](https://hodlbox.xyz/) | Live, usable | 2024-10-16 |
 | [Hodlcoin](hodlcoin.md) | [Hodlcoin](https://app.hodlcoin.co.in/), [PhoenixFi](https://phoenixfi.app/) | Live, usable | 2024-03-14 |
 | [Auction Coin](auction-coin.md) | [auctioncoin.app](https://auctioncoin.app) | Live, usable | 2023-11-22 |
-| [Machina Finance](machina-finance.md) | - | Private development | 2023-11-10 |
+| [Machina Finance](machina-finance.md) | [SDK](https://github.com/machinafi/sdk) | Active SDK alpha | 2026-05-09 |
 | [ErgoDex](spectrum.md) | [spectrum.fi](https://spectrum.fi) | Infrastructure running | 2023-09-19 |
 | [Palmyra](palmyra.md) | [palmyra.app](https://palmyra.app/) | Live, usable | None verified |
 | [P2P Trading](p2p-trading.md) | - | Overview | None verified |

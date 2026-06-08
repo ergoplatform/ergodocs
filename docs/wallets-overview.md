@@ -9,6 +9,7 @@ source_repos:
 source_of_truth:
   - https://github.com/arkadianet/ergo-vanitygen-rust
   - https://github.com/ergoplatform/ergo-wallet-app/releases/tag/v2.4.2313
+  - https://github.com/nautls/nautilus-wallet/releases/tag/v1.3.3
   - https://github.com/Satergo/Satergo/releases/tag/v1.9.4
 ---
 
@@ -36,6 +37,7 @@ For broader comparison, see [Wallets Overview](wallets.md).
 ## Recent Wallet Releases
 
 - [Ergo Wallet App `v2.4.2313`](https://github.com/ergoplatform/ergo-wallet-app/releases/tag/v2.4.2313) updates the Android build for Android 15+ and fixes status-bar/camera cutout and gesture-bar UI overlap.
+- [Nautilus `v1.3.3`](https://github.com/nautls/nautilus-wallet/releases/tag/v1.3.3) adds Crux and HOF token metadata, updates token-rate fetching, adds Javanese and Malaysian translations, and bumps dependencies.
 - [Satergo `v1.9.4`](https://github.com/Satergo/Satergo/releases/tag/v1.9.4) fixes node launching and improves send-option address labels.
 
 ## Quick Decision

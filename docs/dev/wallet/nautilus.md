@@ -10,6 +10,7 @@
 
 ## Recent updates
 
+- `May 9`: [Nautilus v1.3.3](https://github.com/nautls/nautilus-wallet/releases/tag/v1.3.3) added Crux and HOF token metadata, switched token-rate fetching to the Sigmaspace DEX API, added Javanese and Malaysian translations, bumped dependencies, and kept package-manager hardening through dependency overrides and explicit built-dependency allowlists.
 - `Mar 7`: [Nautilus v1.3.2](https://github.com/nautls/nautilus-wallet/releases/tag/v1.3.2) shipped with `USE`, `CLB USE`, and `DORT` additions.
 - `Jan 7`: the Android guide noted that Nautilus `0.9.4` is the last release with a working mobile dApp connector; later mobile connector support is broken.
 - `Apr 8`: Javanese translation work was submitted for the wallet app.

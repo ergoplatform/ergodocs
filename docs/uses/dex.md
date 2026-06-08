@@ -41,7 +41,7 @@ Their benefits are for people who don’t want to give up the custody of their f
 
 /// details | Machina Finance (In Development)
      {type: note, open: true}
-The primary objective of [Machina Finance](machina-finance.md) is to promote decentralization and facilitate P2P trade by leveraging the power of grid contracts.
+[Machina Finance](machina-finance.md) is a grid- and limit-order DEX project with open-source contracts and a first public orders SDK for Fleet SDK transaction builders.
 ///
 
 /// details | PiggyTrade (In Development)

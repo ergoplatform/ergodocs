@@ -421,7 +421,7 @@
 ### 🧩 Other dApps & Services <a id="other-dapps--services"></a>
 
 - [CruxFinance](https://github.com/cruxfinance) – cross-chain liquidity solutions *(Live)*. [`Scala`, `Rust`, `JS/TS`] *(Active)*
-- [Machina Finance](https://github.com/nautls/machina-finance) – off-chain execution bot platform (Ergomatic). [`JS/TS`] *(Active)*
+- [Machina Finance](https://github.com/nautls/machina-finance) – grid/limit-order DEX contracts. [SDK](https://github.com/machinafi/sdk) [`JS/TS`] *(Active)*
 - [Hodlbox](https://hodlbox.xyz/) – time-locked token boxes *(Live)*. [GitHub](https://github.com/SavonarolaLabs/hodlbox-xyz) | [Contracts](https://github.com/SavonarolaLabs/hodlbox-xyz/tree/main/src/lib/contract) *(Active)*
 - [SigmaO](https://sigmao.cc/) – options trading platform *(Beta)*. [GitHub](https://github.com/ThierryM1212/sigmao) | [Telegram](https://t.me/SigmaOpts) *(Active)*
 - [Netnotes](https://github.com/networkspore/Netnotes-Linux/releases) – secure P2P messaging/notes *(Beta)*. [`Java`] *(Active)*

@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: '2026-05-29'
+last_reviewed: '2026-06-08'
 ia_status: directory
 ---
 
@@ -18,4 +18,4 @@ Off the Grid is a decentralized application (dApp) that builds on the grid tradi
 
 ## [Machina Finance](machina-finance.md)
 
-Machina Finance is another project on Ergo that is exploring the concept of grid trading. It is developing a decentralized exchange (DEX) that utilizes grid order contracts.
+Machina Finance is an Ergo DEX project built around grid and limit order contracts. Its contracts and first public orders SDK are open source, and the SDK provides Fleet SDK helpers for creating, filling, and closing grid and limit order boxes.
