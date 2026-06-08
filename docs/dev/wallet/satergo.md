@@ -6,6 +6,7 @@ Explore the robust capabilities of [Satergo](https://satergo.com/), a comprehens
 
 ## Recent updates
 
+- `May 23`: Satergo `v1.9.4` shipped with a node-launch fix and improved labels for send-option input address candidates.
 - `Feb 24`: Satergo `v1.9.3` shipped with improved transaction history, many small improvements, and token prices removed.
 
 /// details | Comprehensive Video Guide

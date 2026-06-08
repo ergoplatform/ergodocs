@@ -5,7 +5,7 @@ tags:
   - Off-chain
   - Spectrum
 owner: docs
-last_reviewed: 2026-05-31
+last_reviewed: 2026-06-08
 source_repos:
   - repo: spectrum-finance/ergo-dex-backend
     branch: master
@@ -18,9 +18,15 @@ source_repos:
     paths:
       - conf/offchain_lm.yml
       - docs/streams_lm.md
+  - repo: machinafi/sdk
+    branch: master
+    paths:
+      - README.md
+      - src
 source_of_truth:
   - https://github.com/spectrum-finance/ergo-dex-backend
   - https://github.com/spectrum-finance/spectrum-offchain-ergo
+  - https://github.com/machinafi/sdk/releases/tag/0.1.0-alpha.0
 ---
 
 # Spectrum.DEX off-chain services
@@ -36,6 +42,7 @@ This page is for operators. For general architecture, see [Off-Chain Services](o
 | [spectrum-finance/ergo-dex-backend](https://github.com/spectrum-finance/ergo-dex-backend) | Docker Compose stack for Ergo AMM/order execution services. |
 | [spectrum-finance/spectrum-offchain-ergo](https://github.com/spectrum-finance/spectrum-offchain-ergo) | Rust off-chain workspace with chain sync, mempool sync, backlog, executor, and liquidity-mining components. |
 | [spectrum-finance/ergo-dex](https://github.com/spectrum-finance/ergo-dex) | DEX contracts and protocol specification. |
+| [machinafi/sdk](https://github.com/machinafi/sdk) | Machina Finance orders SDK for grid and limit order construction. |
 
 ## Classic Docker stack
 
@@ -155,6 +162,12 @@ The sample `conf/offchain_lm.yml` shows the operator shape:
 
 Do not treat the sample seed or public node value as production configuration.
 
+## Machina Finance order SDK
+
+[Machina Finance](machina-finance.md) is developing an order-execution stack around grid, limit, and market-style contracts. The public [orders SDK](https://github.com/machinafi/sdk) is early alpha code rather than a turnkey operator service, but it is relevant for bot builders because it exposes protocol actions used to construct supported order flows.
+
+The [`0.1.0-alpha.0`](https://github.com/machinafi/sdk/releases/tag/0.1.0-alpha.0) release added token-to-token grid orders and ERG-to-token limit orders. Treat it as implementation reference until Machina publishes a production operator guide.
+
 ## Operations checklist
 
 - Run the node and bot host on the same LAN or host network where practical.
@@ -168,4 +181,5 @@ Do not treat the sample seed or public node value as production configuration.
 
 - [Off-the-Grid Bot](off_the_grid_tut.md)
 - [Grid Trading](grid_trading.md)
+- [Machina Finance](machina-finance.md)
 - [Node API Reference](swagger.md)

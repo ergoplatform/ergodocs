@@ -6,7 +6,7 @@ tags:
   - dApp
   - dApp-InDev
 owner: docs
-last_reviewed: '2026-05-30'
+last_reviewed: 2026-06-08
 ia_status: directory
 source_repos:
   - repo: nautls/machina-finance
@@ -14,8 +14,15 @@ source_repos:
     paths:
       - packages/contracts/SPEC.md
       - packages/contracts/src
+  - repo: machinafi/sdk
+    branch: master
+    paths:
+      - README.md
+      - src
 source_of_truth:
   - https://github.com/nautls/machina-finance
+  - https://github.com/machinafi/sdk
+  - https://github.com/machinafi/sdk/releases/tag/0.1.0-alpha.0
 ---
 
 # Machina Finance
@@ -26,6 +33,7 @@ Machina Finance is a decentralized exchange (DEX) design under development on Er
 
 ## Recent updates
 
+- `May 9`: the public [Machina Finance orders SDK](https://github.com/machinafi/sdk) released [`0.1.0-alpha.0`](https://github.com/machinafi/sdk/releases/tag/0.1.0-alpha.0), adding token-to-token grid-order and ERG-to-token limit-order support.
 - `Jan 21`: the `GridOrder` SDK / Fleet plugin module was complete with 100% test coverage, while `LimitOrder` work was still progressing.
 - `Jan 28`: a critical input-aggregation bug was fixed and the `E2T` limit contract was finished and ready for review.
 - `Mar 4`: all SDK actions were implemented and the contracts moved into audit.
@@ -54,3 +62,4 @@ The current contract specification defines:
 
 - [Twitter](https://twitter.com/MachinaFinance)
 - [GitHub](https://github.com/nautls/machina-finance)
+- [Orders SDK](https://github.com/machinafi/sdk)

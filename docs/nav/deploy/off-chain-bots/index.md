@@ -4,7 +4,7 @@ tags:
   - off-chain-bots
   - navigation
 owner: docs
-last_reviewed: '2026-05-31'
+last_reviewed: 2026-06-08
 ---
 
 # Off-Chain Bots
@@ -52,7 +52,7 @@ The contracts still validate the state transition on-chain. A bot can propose an
 | Spectrum/ErgoDEX executors | Track AMM/order boxes, resolve pools, execute DEX orders, expose market data. | [spectrum-finance/ergo-dex-backend](https://github.com/spectrum-finance/ergo-dex-backend) |
 | Spectrum off-chain streams | Rust workspace for chain sync, mempool sync, backlog handling, order execution, and liquidity-mining streams. | [spectrum-finance/spectrum-offchain-ergo](https://github.com/spectrum-finance/spectrum-offchain-ergo) |
 | Off-the-Grid matcher | Match grid orders against Spectrum AMM liquidity and collect operator rewards. | [Telefragged/off-the-grid](https://github.com/Telefragged/off-the-grid) |
-| Machina Finance | DEX/grid-order project exploring order execution and extensible bot infrastructure. | [Machina Finance](machina-finance.md) |
+| Machina Finance | DEX/grid-order project exploring order execution and extensible bot infrastructure. | [Machina Finance](machina-finance.md), [machinafi/sdk](https://github.com/machinafi/sdk) |
 
 ## Safety checklist
 
@@ -71,4 +71,4 @@ The contracts still validate the state transition on-chain. A bot can propose an
 | [Off-the-Grid Bot](off_the_grid_tut.md) | Setup and operation guide for the Off-the-Grid trading bot. |
 | [Off-the-Grid Concept](off_the_grid.md) | Grid-order dApp overview and bot/batcher role. |
 | [Grid Trading](grid_trading.md) | Grid trading use-case overview and related implementations. |
-| [Machina Finance](machina-finance.md) | Ecosystem profile for the Machina DEX/grid-order project. |
+| [Machina Finance](machina-finance.md) | Ecosystem profile and SDK links for the Machina DEX/grid-order project. |

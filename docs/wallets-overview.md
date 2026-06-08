@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: 2026-05-27
+last_reviewed: 2026-06-08
 source_repos:
   - repo: arkadianet/ergo-vanitygen-rust
     branch: main
@@ -8,6 +8,8 @@ source_repos:
       - README.md
 source_of_truth:
   - https://github.com/arkadianet/ergo-vanitygen-rust
+  - https://github.com/ergoplatform/ergo-wallet-app/releases/tag/v2.4.2313
+  - https://github.com/Satergo/Satergo/releases/tag/v1.9.4
 ---
 
 # Get a Wallet
@@ -30,6 +32,11 @@ Use this page to choose a wallet and learn basic wallet safety.
 | Android browser extensions | [Nautilus or Safew on Android](Ergo-Browser-Wallets-on-Android.md) | For mobile browser dApp access. |
 
 For broader comparison, see [Wallets Overview](wallets.md).
+
+## Recent Wallet Releases
+
+- [Ergo Wallet App `v2.4.2313`](https://github.com/ergoplatform/ergo-wallet-app/releases/tag/v2.4.2313) updates the Android build for Android 15+ and fixes status-bar/camera cutout and gesture-bar UI overlap.
+- [Satergo `v1.9.4`](https://github.com/Satergo/Satergo/releases/tag/v1.9.4) fixes node launching and improves send-option address labels.
 
 ## Quick Decision
 

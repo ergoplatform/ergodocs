@@ -18,10 +18,10 @@ Source Watch checks watched repositories for commits touching declared paths and
 ## Summary
 
 - Source-watched pages: `232`
-- Watched repositories: `216`
-- Watched GitHub owners: `97`
-- Watched repo/branch pairs: `222`
-- Watched paths: `463`
+- Watched repositories: `217`
+- Watched GitHub owners: `98`
+- Watched repo/branch pairs: `223`
+- Watched paths: `465`
 
 ## Coverage Groups
 
@@ -29,7 +29,7 @@ Source Watch checks watched repositories for commits touching declared paths and
 | --- | ---: | ---: | ---: | ---: |
 | Core / infrastructure | 5 | 30 | 130 | 178 |
 | Ecosystem org | 10 | 35 | 23 | 32 |
-| Developer / project | 78 | 147 | 109 | 84 |
+| Developer / project | 79 | 148 | 110 | 84 |
 | External standard/vendor | 4 | 4 | 11 | 13 |
 
 ## Coverage By Area
@@ -92,6 +92,7 @@ Source Watch checks watched repositories for commits touching declared paths and
 | [`LEEKOHCHING`](https://github.com/LEEKOHCHING) | Developer / project | 1 | 2 | 1 |
 | [`LiliumErgo`](https://github.com/LiliumErgo) | Developer / project | 2 | 2 | 2 |
 | [`Luivatra`](https://github.com/Luivatra) | Developer / project | 3 | 2 | 1 |
+| [`machinafi`](https://github.com/machinafi) | Developer / project | 1 | 2 | 2 |
 | [`marctheshark3`](https://github.com/marctheshark3) | Developer / project | 3 | 2 | 3 |
 | [`mhssamadani`](https://github.com/mhssamadani) | Developer / project | 2 | 2 | 3 |
 | [`networkspore`](https://github.com/networkspore) | Developer / project | 2 | 2 | 1 |
@@ -197,6 +198,7 @@ Source Watch checks watched repositories for commits touching declared paths and
 | [`LEEKOHCHING/TabbyPOS-Introduction`](https://github.com/LEEKOHCHING/TabbyPOS-Introduction) | Developer / project | `main` | 2 | 1 |
 | [`LiliumErgo/scala-api`](https://github.com/LiliumErgo/scala-api) | Developer / project | `main` | 2 | 2 |
 | [`Lithos-Protocol/Lithos`](https://github.com/Lithos-Protocol/Lithos) | Ecosystem org | `ErgoHack`, `master` | 2 | 2 |
+| [`machinafi/sdk`](https://github.com/machinafi/sdk) | Developer / project | `master` | 2 | 2 |
 | [`MrStahlfelge/ergopay-server-example`](https://github.com/MrStahlfelge/ergopay-server-example) | Developer / project | `master` | 2 | 2 |
 | [`MrStahlfelge/mosaik`](https://github.com/MrStahlfelge/mosaik) | Developer / project | `develop` | 2 | 3 |
 | [`mwaddip/ergo-relay`](https://github.com/mwaddip/ergo-relay) | Developer / project | `master` | 2 | 1 |
@@ -390,6 +392,7 @@ Source Watch checks watched repositories for commits touching declared paths and
 | [`node/deploy-runbook.md`](deploy-runbook.md) | 4 | 5 |
 | [`ai.md`](ai.md) | 3 | 6 |
 | [`dev/interact.md`](interact.md) | 3 | 4 |
+| [`dev/oc/dex_bots.md`](dex_bots.md) | 3 | 7 |
 | [`dev/p2p/network.md`](network.md) | 3 | 8 |
 | [`dev/p2p/p2p-handshake.md`](p2p-handshake.md) | 3 | 6 |
 | [`dev/protocol/tx/read-only-inputs.md`](read-only-inputs.md) | 3 | 3 |
@@ -399,7 +402,6 @@ Source Watch checks watched repositories for commits touching declared paths and
 | [`dev/stack/fleet.md`](fleet.md) | 3 | 3 |
 | [`documents.md`](documents.md) | 3 | 3 |
 | [`eco/auction-coin.md`](auction-coin.md) | 3 | 3 |
-| [`eco/dexy.md`](dexy.md) | 3 | 6 |
 
 ## Repo And Path Coverage
 
@@ -541,6 +543,7 @@ Source Watch checks watched repositories for commits touching declared paths and
 | [`Luivatra/ergo-rust-node`](https://github.com/Luivatra/ergo-rust-node) | `main` | `README.md` | `docs/node/rust-node.md` |
 | [`Luivatra/ergoscript-compiler-lsp`](https://github.com/Luivatra/ergoscript-compiler-lsp) | `main` | `README.md` | `docs/dev/stack/sigma-rust.md` |
 | [`Luivatra/ergoscript-zed-extension`](https://github.com/Luivatra/ergoscript-zed-extension) | `main` | `README.md` | `docs/dev/stack/sigma-rust.md` |
+| [`machinafi/sdk`](https://github.com/machinafi/sdk) | `master` | `README.md`<br>`src` | `docs/dev/oc/dex_bots.md`<br>`docs/eco/machina-finance.md` |
 | [`marctheshark3/AI-Project-Starter-Kit`](https://github.com/marctheshark3/AI-Project-Starter-Kit) | `main` | `README.md`<br>`cursor/Ergo-Blockchain-API-Guide-for-Cursormd`<br>`ergo-blockchain-system-prompt.md` | `docs/ai.md` |
 | [`marctheshark3/ergo-mcp`](https://github.com/marctheshark3/ergo-mcp) | `main` | `README.md` | `docs/eco/codeutxo.md` |
 | [`marctheshark3/FintelligenceAI`](https://github.com/marctheshark3/FintelligenceAI) | `main` | `README.md` | `docs/ai.md` |
