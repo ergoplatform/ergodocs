@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: 2026-05-26
+last_reviewed: 2026-06-09
 source_repos:
   - repo: BetterMoneyLabs/chaincash
     branch: master
@@ -52,7 +52,7 @@ This article explains ChainCash's functionality, explores practical applications
 - `Mar 26`: the first offchain-note redemption transaction completed.
 - `Apr 3` and `Apr 22`: [Agent Credit](https://github.com/fitzss/agent-credit) was published on top of ChainCash / Basis and Ergo, and mesh-network trading demos and presentations were prepared.
 - `Apr` to `May`: ChainCash contract work continued around Basis, reserve/emergency logic, and refund handling. Treat examples on this page as a moving implementation reference and verify against the linked contract sources before building on them.
-- Basis presentation slides are available in the ChainCash repository: [basis.pdf](https://github.com/BetterMoneyLabs/chaincash/blob/master/docs/presentation/basis.pdf).
+- Basis presentation slides, including the June 2026 RAMICS deck, are available in the ChainCash repository: [basis.pdf](https://github.com/BetterMoneyLabs/chaincash/blob/master/docs/presentation/basis.pdf).
 - Caveat: some transfer paths still depend on raw Schnorr signatures, so normal wallet support remains constrained.
 
 ## Motivation and Evolution of Money

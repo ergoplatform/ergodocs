@@ -7,7 +7,7 @@ tags:
   - Processing
   - Modifiers
 owner: docs
-last_reviewed: 2026-05-27
+last_reviewed: 2026-06-09
 source_repos:
   - repo: ergoplatform/ergo
     branch: v6.0.3
@@ -36,6 +36,8 @@ The Node Protocol section provides a comprehensive overview of the core operatio
 - **Validation Rules**: This part outlines the consensus-critical [validation rules](modifiers-validation.md). These rules are mandatory for every [node](install.md) in the Ergo network to maintain network integrity and security. They ensure that all [transactions](transactions.md) and [blocks](block.md) adhere to the established network standards. Extension-section validation includes size, interlink encoding, key-length, and empty-extension checks.
 
 - **P2P Protocol**: The [P2P Protocol](p2p-protocol-overview.md) section delves into the [peer-to-peer](p2p-protocol-overview.md) protocol used in the Ergo network. It provides insights into how nodes communicate and share information, facilitating efficient data exchange within the network. Header synchronization handles missing parent headers explicitly, allowing the node to request the missing parent again and try equal or older peers after repeated failed downloads.
+
+- **SyncInfoV2 continuation headers**: when the node receives a full continuation header inside a sync message, the synchronizer can mark it as received directly instead of creating a synthetic requested state. Normal downloaded modifiers still use the request/delivery tracking path.
 
 - **Peer Management**: The [peer management](peer-management.md) section discusses the strategies nodes in the Ergo network employ to manage their peers. It includes information about peer discovery, connection, and disconnection, providing a clear understanding of how nodes maintain network connectivity.
 

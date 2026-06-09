@@ -3,7 +3,7 @@ tags:
   - Java
   - Tutorial
 owner: docs
-last_reviewed: 2026-05-26
+last_reviewed: 2026-06-09
 source_repos:
   - repo: aslesarenko/ergo-appkit
     branch: master
@@ -28,6 +28,7 @@ source_of_truth:
   - https://github.com/aslesarenko/ergo-appkit-examples/tree/master/python-examples/FreezeCoin.py
   - https://github.com/aslesarenko/ergo-appkit-examples/tree/master/ruby-examples/FreezeCoin.rb
   - https://github.com/aslesarenko/ergo-appkit/tree/master/lib-api/src/main/java/org/ergoplatform/appkit/ErgoClient.java
+  - https://github.com/ergoplatform/ergo-appkit/releases/tag/v6.0.0
 ---
 
 ## Features
@@ -75,10 +76,12 @@ To use Appkit in our Java implementation of FreezeCoin, we must add the followin
 
 ```kotlin
 dependencies {
-    implementation("org.ergoplatform", "ergo-appkit_2.12", "3.1.0", "compile")
+    implementation("org.ergoplatform", "ergo-appkit_2.12", "5.0.4", "compile")
     ...
 }
 ```
+
+Check [Maven Central](https://mvnrepository.com/artifact/org.ergoplatform/ergo-appkit) and [AppKit releases](https://github.com/ergoplatform/ergo-appkit/releases) before pinning a dependency version. GitHub has an [AppKit `v6.0.0`](https://github.com/ergoplatform/ergo-appkit/releases/tag/v6.0.0) source release for Sigma SDK 6.0.x, but confirm the artifact version available to your build tool before upgrading examples or production builds.
 
 Furthermore, at runtime, Appkit/our application needs to connect with an Ergo Node via REST API. Often,
 the node will be running locally and made available at `http://localhost:9052/`. This is the standard scenario for anyone who has set up a full-node by following [these

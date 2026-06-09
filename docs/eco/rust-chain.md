@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: '2026-05-30'
+last_reviewed: '2026-06-09'
 source_repos:
   - repo: Scottcjn/Rustchain
     branch: main
@@ -71,6 +71,7 @@ RustChain utilizes a blend of modern and AI-driven technologies:
 - `Apr 3`: a 4-node PoA blockchain went live, with `500+` wallet holders, `40,000+` RTC distributed, and `200+` AI video agents.
 - The project also added a live explorer and a growing agent-economy layer around the PoA network.
 - `May 2026`: the RustChain README describes 5 active nodes, a public explorer at `rustchain.org/explorer`, a miner `v3.1.2` release with a fingerprint fix, and tokenomics aligned to a `2^23` supply cap plus holder-count rate scaling.
+- `Jun 2026`: the README expanded RustChain's DePIN and agent-economy positioning, added a language index, corrected RTC supply/tokenomics details, and linked Proof of Provenance / BCOS material. Treat those figures as project-reported status from the README and verify against RustChain sources before relying on them for integrations.
 
 ### 6. Current Status & Progress (ErgoHack 10)
 

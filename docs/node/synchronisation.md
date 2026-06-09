@@ -8,7 +8,7 @@ tags:
   - Networking
   - Technical
 owner: docs
-last_reviewed: 2026-05-27
+last_reviewed: 2026-06-09
 source_repos:
   - repo: ergoplatform/ergo
     branch: v6.0.3
@@ -35,6 +35,8 @@ The primary goal of the synchronization process is to transition necessary modif
 ## Transition from Unknown to Requested
 
 The transition of a modifier from the Unknown state to the Requested state can occur in different ways, depending on the current node status (bootstrapping/stable) and the type of modifier.
+
+Some header-sync paths can skip the Requested state. Reference Client 6.0.3 handles a valid continuation header received in a sync message as a full object already delivered by the peer, so the delivery tracker can mark that header as **Received** directly. Downloaded modifiers still move through **Requested** first.
 
 ### Inv Protocol
 
@@ -93,6 +95,8 @@ The transition from the Requested state to the Received state involves the follo
     - If header validation finds that the parent header is missing, Reference Client 6.0.3 and later treat that as a recoverable missing-dependency case. The synchronizer can request the missing parent header again and fall back to equal or older peers after repeated failed attempts.
 
 4. **Processing Valid Modifiers:** If the modifier passes initial parsing and validation, the NVS sends it to the NodeViewHolder (NVH) for further processing and transitions the modifier's state to **Received**.
+
+   A valid continuation header carried by `syncInfoV2` is the main exception: because the full header object is already present, the synchronizer records it as received directly rather than scheduling a delivery timeout for a network request that was never sent.
 
 5. **Checking Delivery Timeout:** When the scheduled `CheckDelivery` message is processed:
     - If the modifier is already in the **Received** or **Held** state, no action is needed.

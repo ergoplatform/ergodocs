@@ -2,7 +2,7 @@
 tags:
   - Java
 owner: docs
-last_reviewed: 2026-05-26
+last_reviewed: 2026-06-09
 source_repos:
   - repo: MrStahlfelge/ergopay-server-example
     branch: master
@@ -15,6 +15,7 @@ source_repos:
 source_of_truth:
   - https://github.com/MrStahlfelge/ergopay-server-example/tree/master/src/main/java/org/ergoplatform/ergopay/ErgoPaySampleController.java
   - https://github.com/ergoplatform/ergo-appkit/tree/develop/README.md
+  - https://github.com/ergoplatform/ergo-appkit/releases/tag/v6.0.0
 ---
 
 # Gradle
@@ -31,9 +32,9 @@ The first step is setting up a plain Gradle project. How exactly this is done de
 
 When that is done, you will find one or more `build.gradle` files that define parameters of your project, most important the libraries your project depends on. Search for a `dependencies` block (for Android, it is in `app/build.gradle`, for Spring in the root-level file). You need to add appkit here. Don't get confused with the `dependencies` block inside `buildscripts`, that's not for the project dependencies, but for dependencies Gradle needs to build the project.
 
-For **desktop and server-side applications**, it is just one line to add.
+For **desktop and server-side applications**, it is just one line to add. Check [Maven Central](https://mvnrepository.com/artifact/org.ergoplatform/ergo-appkit) and the [AppKit releases](https://github.com/ergoplatform/ergo-appkit/releases) before pinning a version: the GitHub repository has a `v6.0.0` source release for Sigma SDK 6.0.x, while Maven Central may lag behind the latest GitHub tag.
 
-    implementation ('org.ergoplatform:ergo-appkit_2.11:4.0.6')
+    implementation ('org.ergoplatform:ergo-appkit_2.12:5.0.4')
 
 When you resync your project now, Gradle fetches Appkit and all needed libraries and add them to your classpath.
 
@@ -43,7 +44,7 @@ Make sure core library desugaring is enabled by checking if the app's `build.gra
 
 Additionally, you have to tell gradle to exclude the libraries that are not compatible with Android, but to use compatible versions instead. That is done by changing the line above like this:
 
-    implementation ('org.ergoplatform:ergo-appkit_2.11:4.0.6') {
+    implementation ('org.ergoplatform:ergo-appkit_2.11:5.0.4') {
         exclude group: 'org.bouncycastle', module: 'bcprov-jdk15on'
         exclude group: 'org.bitbucket.inkytonik.kiama', module: 'kiama_2.11'
     }
@@ -53,6 +54,10 @@ Additionally, you have to tell gradle to exclude the libraries that are not comp
     implementation "org.bouncycastle:bcprov-jdk15to18:1.66"
 
 And there you go!
+
+## Recent release note
+
+[AppKit `v6.0.0`](https://github.com/ergoplatform/ergo-appkit/releases/tag/v6.0.0) was released on GitHub on June 7, 2026 on top of Sigma SDK 6.0.x. The release notes mention vulnerability-related dependency removals, CLI removal, SQL date cleanup, module metadata, Scala/sbt/plugin updates, and the Sigma 6.0 / EIP-50 upgrade. Verify the published artifact version you intend to consume before changing a production build.
 
 ## What to start with
 
