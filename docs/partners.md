@@ -51,13 +51,13 @@ The Ergo Foundation can:
 - Facilitate connections with the community for liquidity support
 
 **Important:**  
-Listing fees are usually funded by the community, often coordinated via [Ergo Raffle](https://ergoraffle.com). The Ergo Foundation Treasury is small and operated as a DAO, so any significant funding needs require community coordination.
+Listing fees are usually funded by the community, often coordinated via [Ergo Raffle](https://ergoraffle.com). The [Ergo Foundation Treasury](ef-treasury.md) is small and operated as a DAO, so any significant funding needs require community coordination. Foundation treasury decisions are tracked in [EF Votes](ef-votes.md).
 
 ---
 
 ## OTC / Investment Requests
 
-Ergo launched with no pre-mine. The Ergo Foundation Treasury operates as a DAO with a small allocation, which means there is no capacity for large over-the-counter (OTC) arrangements.  
+Ergo launched with no pre-mine. The [Ergo Foundation Treasury](ef-treasury.md) operates as a DAO with a small allocation, which means there is no capacity for large over-the-counter (OTC) arrangements.
 
 However, we welcome investors who want to contribute beyond capital, such as:
 

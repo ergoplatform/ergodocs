@@ -69,7 +69,7 @@ Launched in 2019 by esteemed developers and cryptocurrency luminaries, including
 
 Ergo was dedicated to ensuring a fair and equitable launch, reflecting Bitcoin's foundational principles to prevent undue influence from large-scale investors. This strategy democratized access and established a sustainable economic model for the network's growth.
 
-The mining protocol allocated a portion of the rewards to a treasury, managed by the non-profit Ergo Foundation, to support ongoing development and adoption. In its first 2.5 years, the Foundation accumulated 4,330,791.5 ERGs (4.43% of the total supply). For more information, visit the [Ergo Foundation](ergo-foundation.md) and [emission](emission.md) sections.
+The mining protocol allocated a portion of the rewards to a treasury, managed by the non-profit Ergo Foundation, to support ongoing development and adoption. In its first 2.5 years, the Foundation accumulated 4,330,791.5 ERGs (4.43% of the total supply). For more information, visit the [Ergo Foundation](ergo-foundation.md), [Treasury](ef-treasury.md), [EF Votes](ef-votes.md), and [emission](emission.md) sections.
 
 - **Fixed Supply:** Ergo has a fixed supply of 97,739,924 coins, combating inflation.
 - **Extended Emission Schedule:** Through EIP-27, Ergo's mining rewards are extended for approximately 17.38 years, enhancing sustainability and making $ERG more scarce and valuable over time.

@@ -111,7 +111,7 @@ These layers work in harmony to enhance Ergo's scalability, making it a flexible
 ////
 //// details | Who develops Ergo?
     {type: info, open: false}
-Ergo is developed a by a combination of the [Ergo Foundation](ergo-foundation.md), community developers and the recently launched [DevDAO](devdao.md)
+Ergo is developed a by a combination of the [Ergo Foundation](ergo-foundation.md), community developers and the recently launched [DevDAO](devdao.md). See the [Ergo Foundation Treasury](ef-treasury.md) and [EF Votes](ef-votes.md) for foundation funding context.
 
 /// admonition | See the [code respositories supported by the Ergo Foundation](ef-scope.md#code-repositories-supported-by-the-ergo-foundation).
     type: info
