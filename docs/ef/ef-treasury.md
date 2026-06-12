@@ -26,6 +26,8 @@ pie title Total Amount, ERG Spent by Team
 ```
 *(Please note that this summary is based on EF Accounting Records and, where available, information discerned from EF Forum discussions and voting records. Prior to the EF’s current accounting records, accounting was managed by kushti, and we do not have a complete transaction-level record for that period. However, most significant transactions should be reflected here.)*
 
+See [More Summary Charts](#more-summary-charts) for additional category and yearly breakdowns.
+
 For more information on Ergo's emission schedule, tokenomics and allocation, visit the [emission](emission.md) section.
 
 ## Current Holdings
@@ -145,3 +147,25 @@ More information on each of these roles can be seen on [this page](ef-scope.md#k
      {type: info, open: true}
 Please see [this page](ef-future.md) for more information on the long-term goals of The Foundation.
 ///
+
+
+## More Summary Charts
+
+The charts below are summary views based on the same accounting records, forum/voting context, and manual categorisation used above. Older periods may not have complete transaction-level records, so these figures should be read as a best-effort historical overview rather than audited financial statements.
+
+![Treasury spending by team and year](stacked_bar.png)
+
+```mermaid
+pie title Sub-Team Allocation (USD)
+    "Salary" : 2416153
+    "Exchange Listing" : 949317
+    "Grant" : 560650
+    "MM" : 296673
+    "ERGOHACK" : 157632
+    "Marketing" : 154363
+    "Infrastructure" : 145045
+    "Bounties" : 110158
+    "Legal" : 78683
+    "Operational" : 73559
+    "Unspecified" : 7000
+```
