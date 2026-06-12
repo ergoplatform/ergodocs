@@ -14,6 +14,16 @@ Before voting on spending treasury funds, we will approach the [Good Whale Fund]
 
 Foundation votes this year are usually related to our internal structures, exchanges, market-makers, banks, and grant requests.
 
+## 2025
+
+| Date        | Description                         | Category          | Status     | Amount                     |
+|-------------|-------------------------------------|-------------------|------------|----------------------------|
+| (May 2025)  | Alison Salary Adjustment Proposal   | Treasury Control  | Passed     |   |
+| (May 2025)  | Banxa x Onramper On/Off-Ramp        | Treasury Control  | Passed     | $43.75k                    |
+| (Feb 2025)  | ERGOHACK X Funding                  | Treasury Control  | Passed     | $9.5k + swag pack          |
+| (Jan 2025)  | LCX EUR Ramp                        | Treasury Control  | Deferred   | $30k + MM requirement      |
+| (Jan 2025)  | Transak Fiat On-Ramp Integration    | Treasury Control  | Discussed  | $60k                       |
+
 ## 2024
 
 | Date        | Description                                                   | Category          | Status     | Amount                                   |

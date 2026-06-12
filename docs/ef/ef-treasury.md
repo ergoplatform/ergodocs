@@ -24,7 +24,7 @@ pie title Total Amount, ERG Spent by Team
     "Marketing & Editorial" : 12.6
     "Development" : 42.7
 ```
-
+*(Please note that this summary is based on EF Accounting Records and, where available, information discerned from EF Forum discussions and voting records. Prior to the EF’s current accounting records, accounting was managed by kushti, and we do not have a complete transaction-level record for that period. However, most significant transactions should be reflected here.)*
 
 For more information on Ergo's emission schedule, tokenomics and allocation, visit the [emission](emission.md) section.
 
@@ -35,19 +35,18 @@ As of November 2025, the complete treasury of the foundation is as follows:
 | Asset | Indicator Amount | Indicative US$ Price | Indicative Total US$ Value |
 |-------|------------------|----------------------|----------------------------|
 | **Liquid Assets in Self-Hosted Wallets** |
-| ERG | 39,225  | 0.639 | 25,065 |
-| BTC | 0.22086 | 103,426 | 22,842 |
-| **Liquid Assets in Centralised Exchange Wallets** |
-| ERG | 93,286 | 0.639 | 59,610 |
-| BTC | 0.21863 | 103,426 | 22,612 |
-| USDT | 34,205 | 1.00 | 34,205 |
-| **Subtotal - Liquid Assets** | | | $164,336 | 164,336
+| ERG | 2,506.4214 | 0.22069 | 553.14 |
+| BTC | 0 | - | 0 |
+| **Subtotal - Liquid Assets** | | | $553.14 |
 | **Illiquid Assets in Self-Hosted Wallets** |
+| SPF | 23,830,000 | 0.00017539 | 4,179.50 |
 | Gluon | 335,000 | 1.00 | 335,000.00 |
 | RSN | 30,000,000 | 0.02431 | 729,300 |
-| **Subtotal - Illiquid Assets** | | | $1,064,300 |
-| **Total Liquid Assets** | | | $164,336 |
-| **Total Assets** | | | $1,228,636 |
+| **Subtotal - Illiquid Assets** | | | $1,068,479.50 |
+| **Total Liquid Assets** | | | $553.14 |
+| **Total Assets** | | | $1,069,032.64 |
+
+The former market-making fund held in centralised exchange wallets has been passed to the Sigmanauts to manage market making.
 
 
 /// details | Liquid vs Illiquid Funds
@@ -79,16 +78,20 @@ This table is a rough guide that uses manual calculations of asset prices at the
 
 ///
 
+### Treasury Funds Withdrawn
+
 | **Spent** | **ERG**      | **SPF**       | **BTC**     | **TOTAL VALUE**   |
 |-----------|--------------|---------------|-------------|-------------------|
-| 2025      |              |               |             | $243,531          |
+| 2026      | 20,958       | 0             | 0.12985400  | $17,144.07        |
+| 2025      | 132,696      | 2,770,000     | 2.10064500  | $243,531          |
 | 2024      | 209,646      | 1,627,500     | 1.95        | $372,217          |
 | 2023      | 424,150      | 1,622,000     | -           | $589,777          |
 | 2022      | 723,000      | -             | -           | $2,247,640        |
 | 2021      | 889,001      | -             | -           | $3,793,485        |
 | 2020      | 1,080,000    | -             | -           | $500,292          |
 | 2019      | 757,051      | -             | -           | $590,239          |
-| **Total** | **4,082,848**| **3,249,500** | **1.95**    | **$8,093,650**    |
+| **Total** | **4,236,502**| **6,019,500** | **4.18049900** | **$8,354,325.07** |
+
 
 <!--
 
