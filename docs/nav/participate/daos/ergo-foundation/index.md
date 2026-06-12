@@ -22,4 +22,3 @@ The table links to the next useful page or sub-hub, keeping the sidebar staged i
 | [Scope](ef-scope.md) | The Ergo Foundation is a non-profit organization dedicated to advancing the adoption and development of the Ergo Platform. |
 | [Treasury](ef-treasury.md) | The Ergo Foundation initially received an allocation of 4,330,776 ERG, which is equivalent to 4.43% of the total supply. |
 | [Votes](ef-votes.md) | The Ergo Foundation members and officers discuss proposals before putting them to a formal vote on the ergoforum, passed with a majority of voting members. |
-| [Timeline](ergo-timeline.md) | Timeline of Ergo Foundation and ecosystem milestones. |
