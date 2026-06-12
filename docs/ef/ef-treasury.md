@@ -15,26 +15,26 @@ Additionally, the Treasury exchanged 1,782,615 ERG for [EFYT](efyt.md), a token 
 
 After subtracting the 1,782,615 ERG exchanged for EFYT, the Ergo Foundation was left with **2,548,161 ERG**, which is approximately **2.6%** of the total supply.
 
-A significant portion of this Treasury has been expended for the benefit of the Ergo protocol and community. Even during periods of low ERG price, the Foundation continued to invest in order to foster and grow the Ergo ecosystem.
+A significant portion of this treasury has been withdrawn to fund protocol development, ecosystem infrastructure, market access, events, marketing, and other community work. The charts and tables below summarise those withdrawals and the Foundation's remaining reported holdings.
 
 ```mermaid
-pie title Total Amount, ERG Spent by Team 
+pie title Treasury Withdrawals by Team (%)
     "EF" : 6.6
     "Exchanges & MM" : 38.1
     "Marketing & Editorial" : 12.6
     "Development" : 42.7
 ```
-*(Please note that this summary is based on EF Accounting Records and, where available, information discerned from EF Forum discussions and voting records. Prior to the EF’s current accounting records, accounting was managed by kushti, and we do not have a complete transaction-level record for that period. However, most significant transactions should be reflected here.)*
+*(Please note that this summary is based on EF accounting records and, where available, information from EF Forum discussions and voting records. Before the current accounting records, accounting was managed by kushti, and a complete transaction-level record is not available. Most significant transactions should be reflected here.)*
 
-See [More Summary Charts](#more-summary-charts) for additional category and yearly breakdowns.
+See [More Summary Data](#more-summary-data) for additional category and yearly breakdowns.
 
 For more information on Ergo's emission schedule, tokenomics and allocation, visit the [emission](emission.md) section.
 
 ## Current Holdings
 
-As of November 2025, the complete treasury of the foundation is as follows:
+The latest reported treasury balances are:
 
-| Asset | Indicator Amount | Indicative US$ Price | Indicative Total US$ Value |
+| Asset | Indicative Amount | Indicative US$ Price | Indicative Total US$ Value |
 |-------|------------------|----------------------|----------------------------|
 | **Liquid Assets in Self-Hosted Wallets** |
 | ERG | 2,506.4214 | 0.22069 | 553.14 |
@@ -53,9 +53,9 @@ The former market-making fund held in centralised exchange wallets has been pass
 
 /// details | Liquid vs Illiquid Funds
      {type: warning, open: true}
-The Ergo Foundation's treasury consists of both liquid and illiquid assets, providing a diverse portfolio to support the growth and development of the Ergo ecosystem. The liquid assets, such as ERG and BTC, can be readily utilized for various purposes, while the illiquid assets, like Gluon, SPF, and RSN tokens, are held strategically to avoid exerting downward pressure on these early-stage projects.
+The Ergo Foundation's remaining treasury consists mostly of illiquid ecosystem assets. Liquid ERG is limited, and the self-hosted BTC balance is currently zero.
 
-As these projects mature and their tokens become more liquid, the Ergo Foundation will have the opportunity to leverage these assets to further augment its expenditure capabilities and support the Ergo ecosystem more effectively.
+Illiquid assets such as Gluon, SPF, and RSN are not treated as immediately spendable treasury. They may become more useful if the relevant markets deepen.
 ///
 
 ## Wallets
@@ -68,7 +68,7 @@ You can find the Ergo Foundation treasury and current balance on-chain at the fo
 
 ## Historic Spending
 
-The Ergo Foundation has spent the majority of the Treasury for the benefit of the protocol and community. Funds were even spent when the ERG price was low, as it was necessary to bootstrap the thriving community Ergo now boasts.
+The Ergo Foundation has withdrawn the majority of its treasury allocation. These withdrawals funded development, listings and market making, marketing, events, grants, infrastructure, legal work, and operations.
 
 
 <!--TODO: Yearly figures don't add up to total difference between total allocation & spending, 90k difference, probably missed a tx -->
@@ -76,13 +76,13 @@ The Ergo Foundation has spent the majority of the Treasury for the benefit of th
 /// admonition | Recalculated
     type: warning
 
-This table is a rough guide that uses manual calculations of asset prices at the time of withdrawal from the treasury; we will consolidate and categorise the accounts to provide clearer summaries here. Work in progress.
+These tables are rough guides using manual calculations of asset prices at the time of withdrawal. Categories are best-effort and may be refined as the records are consolidated.
 
 ///
 
 ### Treasury Funds Withdrawn
 
-| **Spent** | **ERG**      | **SPF**       | **BTC**     | **TOTAL VALUE**   |
+| **Year**  | **ERG**      | **SPF**       | **BTC**     | **Total USD Value** |
 |-----------|--------------|---------------|-------------|-------------------|
 | 2026      | 20,958       | 0             | 0.12985400  | $17,144.07        |
 | 2025      | 132,696      | 2,770,000     | 2.10064500  | $243,531          |
@@ -126,9 +126,9 @@ In addition to the direct ERG spending above in 2023,
 
 ## Salaries
 
-Several receive monthly salaries or rewards for their contributions to the Ergo ecosystem. The vast majority were promoted from within the community after exceptional contributions, demonstrating the Foundation's commitment to recognizing and rewarding talent within the Ergo community.
+Several contributors have received monthly salaries or rewards for work on the Ergo ecosystem. Most were promoted from within the community after sustained contributions.
 
-An average breakdown of how people in Ergo are awarded.
+The chart below shows a 2023 average salary allocation.
 
 ```mermaid
 pie title 2023 Salary Averages
@@ -143,17 +143,32 @@ pie title 2023 Salary Averages
 More information on each of these roles can be seen on [this page](ef-scope.md#key-areas-of-focus).
 ///
 
-/// details | The Ergo Foundations Future
+/// details | The Ergo Foundation's Future
      {type: info, open: true}
-Please see [this page](ef-future.md) for more information on the long-term goals of The Foundation.
+Please see [this page](ef-future.md) for more information on the long-term goals of the Foundation.
 ///
 
 
-## More Summary Charts
+## More Summary Data
 
 The charts below are summary views based on the same accounting records, forum/voting context, and manual categorisation used above. Older periods may not have complete transaction-level records, so these figures should be read as a best-effort historical overview rather than audited financial statements.
 
 ![Treasury spending by team and year](stacked_bar.png)
+
+### USD Withdrawals by Team
+
+| **Year**        | **Development** | **EF**       | **Exchanges & MM** | **Marketing & Editorial** | **Grand Total** |
+|-----------------|-----------------|--------------|--------------------|---------------------------|-----------------|
+| 2019            | 88,133          | 15,702       | 36,966             | 2,665                     | 143,466         |
+| 2020            | 85,638          | 6,002        | 242,904            | 11,048                    | 345,592         |
+| 2021            | 406,079         | 108,501      | 111,895            | 167,870                   | 794,344         |
+| 2022            | 963,218         | 212,628      | 623,634            | 325,577                   | 2,125,056       |
+| 2023            | 484,049         | 50,508       | 20,923             | 129,349                   | 684,828         |
+| 2024            | 226,806         | 52,205       | 248,414            | 84,991                    | 612,416         |
+| 2025            | 136,538         | 32,198       | 33,000             | 41,795                    | 243,531         |
+| **Grand Total** | **2,390,460**   | **477,743**  | **1,317,735**      | **763,294**               | **4,949,233**   |
+
+### USD Withdrawals by Sub-Team
 
 ```mermaid
 pie title Sub-Team Allocation (USD)
