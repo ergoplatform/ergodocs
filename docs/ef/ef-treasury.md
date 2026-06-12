@@ -184,3 +184,39 @@ pie title Sub-Team Allocation (USD)
     "Operational" : 73559
     "Unspecified" : 7000
 ```
+
+### Split by End Product
+| End Product                  | SUM of Amount, USD |
+| ---------------------------- | -----------------: |
+| Sigma Rust                   |            288,412 |
+| Sigma                        |            281,482 |
+| Rosen                        |            277,437 |
+| ERGOHACK                     |            143,695 |
+| sigmaverse.io                |            135,352 |
+| ErgoDex                      |            133,135 |
+| Explorer                     |            133,080 |
+| Terminus                     |            125,852 |
+| Docs                         |            117,049 |
+| Nautilus                     |            117,045 |
+| Uncategorized / Dev Unknown  |             65,101 |
+| Research                     |             59,193 |
+| Operational                  |             48,636 |
+| Yoroi                        |             46,735 |
+| Auction House                |             45,340 |
+| Subscriptions / Server / etc |             43,324 |
+| Node                         |             40,026 |
+| Ledger                       |             21,552 |
+| SigMining                    |             19,969 |
+| Explorer(s)                  |             15,070 |
+| ergonames                    |             12,180 |
+| Cyberverse                   |             10,107 |
+| Blog / ergoplatform.org      |              8,697 |
+| Sigmanauts                   |              9,163 |
+| Gluon                        |              4,469 |
+| Lithos                       |              2,000 |
+| ergo-nix                     |              1,123 |
+| ErgoFund                     |              1,020 |
+| Mining                       |                661 |
+| Rosen Team                   |                533 |
+| Oracles                      |                200 |
+| **Grand Total**              |      **2,207,639** |
