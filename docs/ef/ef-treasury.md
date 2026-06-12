@@ -41,18 +41,20 @@ The latest reported treasury balances are:
 | BTC | 0 | - | 0 |
 | **Subtotal - Liquid Assets** | | | $553.14 |
 | **Illiquid Assets in Self-Hosted Wallets** |
-| SPF | 23,830,000 | 0.00017539 | 4,179.50 |
+| SPF | 23,830,000 | 0.0001752 | 4,175.02 |
 | Gluon | 335,000 | 1.00 | 335,000.00 |
-| RSN | 30,000,000 | 0.02431 | 729,300 |
-| **Subtotal - Illiquid Assets** | | | $1,068,479.50 |
+| RSN | 30,000,000 | 0.006352 | 190,560 |
+| **Subtotal - Illiquid Assets** | | | $529,735.02 |
 | **Total Liquid Assets** | | | $553.14 |
-| **Total Assets** | | | $1,069,032.64 |
+| **Total Assets** | | | $530,288.16 |
+
+The treasury is now mostly illiquid assets; liquid self-hosted funds are limited.
 
 The former market-making fund held in centralised exchange wallets has been passed to the Sigmanauts to manage market making.
 
 
 /// details | Liquid vs Illiquid Funds
-     {type: warning, open: true}
+     {type: warning}
 The Ergo Foundation's remaining treasury consists mostly of illiquid ecosystem assets. Liquid ERG is limited, and the self-hosted BTC balance is currently zero.
 
 Illiquid assets such as Gluon, SPF, and RSN are not treated as immediately spendable treasury. They may become more useful if the relevant markets deepen.
@@ -66,17 +68,17 @@ You can find the Ergo Foundation treasury and current balance on-chain at the fo
   - [Hot Wallet](https://ergexplorer.com/addresses#9g1ReLmsbGevkTjfPGMdRMoFRdrAVskZVmSBpaEdVW2DfG4HDWm) managed by the Treasurer when sending payments.
 - [EF BTC Multi-sig](https://www.blockchain.com/explorer/addresses/BTC/bc1qhps44rcl0rln47te839wr5rx25z624gawsgdye0cs4m0pq2mkhnq8dmkkc)
 
-## Historic Spending
+## Treasury Withdrawals and Spending
 
 The Ergo Foundation has withdrawn the majority of its treasury allocation. These withdrawals funded development, listings and market making, marketing, events, grants, infrastructure, legal work, and operations.
 
 
 <!--TODO: Yearly figures don't add up to total difference between total allocation & spending, 90k difference, probably missed a tx -->
 
-/// admonition | Recalculated
-    type: warning
+/// details | Recalculated
+     {type: warning}
 
-These tables are rough guides using manual calculations of asset prices at the time of withdrawal. Categories are best-effort and may be refined as the records are consolidated.
+These tables are rough guides using manual calculations of asset prices at the time of withdrawal. Categories are best-effort and may be refined as the records are consolidated. There is a large discrepancy between the total USD value of treasury withdrawals and the later category breakdowns because complete accounting records are not available for the full history.
 
 ///
 
@@ -124,34 +126,9 @@ In addition to the direct ERG spending above in 2023,
 - Totaling 1,622,000 SPF 
 -->
 
-## Salaries
-
-Several contributors have received monthly salaries or rewards for work on the Ergo ecosystem. Most were promoted from within the community after sustained contributions.
-
-The chart below shows a 2023 average salary allocation.
-
-```mermaid
-pie title 2023 Salary Averages
-    "EF" : 14.8
-    "Advisory" : 7.5
-    "Marketing" : 14
-    "Development" : 63
-```
-
-/// details | Roles
-     {type: info, open: true}
-More information on each of these roles can be seen on [this page](ef-scope.md#key-areas-of-focus).
-///
-
-/// details | The Ergo Foundation's Future
-     {type: info, open: true}
-Please see [this page](ef-future.md) for more information on the long-term goals of the Foundation.
-///
-
-
 ## More Summary Data
 
-The charts below are summary views based on the same accounting records, forum/voting context, and manual categorisation used above. Older periods may not have complete transaction-level records, so these figures should be read as a best-effort historical overview rather than audited financial statements.
+The charts and category tables below are based on the accounting period where the Ergo Foundation controlled and maintained detailed records. They do not reconcile to the full `Treasury Funds Withdrawn` total because earlier accounting records are incomplete or missing. Treat these breakdowns as best-effort summaries for the documented accounting period, not audited full-history totals.
 
 ![Treasury spending by team and year](stacked_bar.png)
 
@@ -170,53 +147,89 @@ The charts below are summary views based on the same accounting records, forum/v
 
 ### USD Withdrawals by Sub-Team
 
-```mermaid
-pie title Sub-Team Allocation (USD)
-    "Salary" : 2416153
-    "Exchange Listing" : 949317
-    "Grant" : 560650
-    "MM" : 296673
-    "ERGOHACK" : 157632
-    "Marketing" : 154363
-    "Infrastructure" : 145045
-    "Bounties" : 110158
-    "Legal" : 78683
-    "Operational" : 73559
-    "Unspecified" : 7000
-```
+![USD withdrawals by sub-team](sub_team.png)
 
 ### Split by End Product
-| End Product                  | SUM of Amount, USD |
-| ---------------------------- | -----------------: |
-| Sigma Rust                   |            288,412 |
-| Sigma                        |            281,482 |
-| Rosen                        |            277,437 |
-| ERGOHACK                     |            143,695 |
-| sigmaverse.io                |            135,352 |
-| ErgoDex                      |            133,135 |
-| Explorer                     |            133,080 |
-| Terminus                     |            125,852 |
-| Docs                         |            117,049 |
-| Nautilus                     |            117,045 |
-| Uncategorized / Dev Unknown  |             65,101 |
-| Research                     |             59,193 |
-| Operational                  |             48,636 |
-| Yoroi                        |             46,735 |
-| Auction House                |             45,340 |
-| Subscriptions / Server / etc |             43,324 |
-| Node                         |             40,026 |
-| Ledger                       |             21,552 |
-| SigMining                    |             19,969 |
-| Explorer(s)                  |             15,070 |
-| ergonames                    |             12,180 |
-| Cyberverse                   |             10,107 |
-| Blog / ergoplatform.org      |              8,697 |
-| Sigmanauts                   |              9,163 |
-| Gluon                        |              4,469 |
-| Lithos                       |              2,000 |
-| ergo-nix                     |              1,123 |
-| ErgoFund                     |              1,020 |
-| Mining                       |                661 |
-| Rosen Team                   |                533 |
-| Oracles                      |                200 |
-| **Grand Total**              |      **2,207,639** |
+
+This is not an exact science: when someone worked across multiple products or workstreams, their time has been estimated and split between the end products.
+
+
+| End Product | SUM of Amount, USD |
+|---|---:|
+| Sigma Rust | 288,412 |
+| Sigma | 288,357 |
+| Rosen | 287,257 |
+| Early Monthly Salaries (Est.) | 180,000 |
+| ERGOHACK | 164,292 |
+| sigmaverse.io | 135,352 |
+| Explorer | 134,038 |
+| ErgoDex | 133,135 |
+| Terminus | 125,852 |
+| Nautilus | 117,045 |
+| Mining | 77,491 |
+| ergoplatform.org | 77,240 |
+| docs.ergoplatform.org | 75,189 |
+| Research | 66,951 |
+| Node | 64,619 |
+| Subscriptions / Server / etc | 61,947 |
+| Dev Unknown | 60,666 |
+| Yoroi | 46,735 |
+| Auction House | 38,320 |
+| SigMining | 19,969 |
+| Sigmanauts | 18,704 |
+| Ledger | 16,465 |
+| ergonames | 12,180 |
+| Cyberverse | 10,107 |
+| Ergoversary | 7,500 |
+| SigmaUSD | 7,020 |
+| Gluon | 4,469 |
+| Education | 4,340 |
+| Lithos | 2,000 |
+| ergo-nix | 1,123 |
+| ErgoFund | 1,020 |
+| Oracles | 200 |
+| **Subtotal** | **2,527,995** |
+
+## Exchanges & Market Makers
+
+Exchange and market-maker names are anonymised here because many centralised exchanges require non-disclosure agreements and do not want listing or integration prices published. Market makers also generally do not want competitors to know their pricing or commercial terms. The totals are shown for transparency without disclosing counterparties or sensitive contract details.
+
+| Entity          | SUM of Amount, USD |
+| --------------- | -----------------: |
+| Exchange #1     |            431,139 |
+| Exchange #2     |            150,020 |
+| Exchange #3     |            144,940 |
+| Exchange #4     |            100,242 |
+| MM #1           |             86,974 |
+| MM #2           |             79,999 |
+| Exchange #5     |             60,000 |
+| Exchange #6     |             52,884 |
+| Exchange #7     |             49,500 |
+| Exchange #8     |             41,895 |
+| Exchange #9     |             30,254 |
+| Exchange #10    |             30,065 |
+| MM #3           |             22,000 |
+| Exchange #11    |             20,923 |
+| Exchange #12    |             10,000 |
+| Exchange #13    |              6,902 |
+| **Grand Total** |      **1,317,735** |
+
+## Salaries
+
+Several contributors have received monthly salaries or rewards for work on the Ergo ecosystem. Most were promoted from within the community after sustained contributions. The chart below compares total amount paid against years worked.
+
+### Salary Distribution by Contributor
+
+This chart shows the total paid to each person against the years they worked or contributed to Ergo. This is not an exact science: when someone worked across multiple products or workstreams, their time has been estimated and split between the end products.
+
+![Salary distribution by amount paid and years worked](salaries_box_chart.png)
+
+/// details | Roles
+     {type: info, open: true}
+More information on each of these roles can be seen on [this page](ef-scope.md#key-areas-of-focus).
+///
+
+/// details | The Ergo Foundation's Future
+     {type: info, open: true}
+Please see [this page](ef-future.md) for more information on the long-term goals of the Foundation.
+///
