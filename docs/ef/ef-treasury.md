@@ -220,8 +220,7 @@ Several contributors have received monthly salaries or rewards for work on the E
 
 ### Salary Distribution by Contributor
 
-This chart shows the total paid to each person against the years they worked or contributed to Ergo. This is not an exact science: when someone worked across multiple products or workstreams, their time has been estimated and split between the end products.
-
+This chart shows the total paid to each person against the years they worked or contributed to Ergo. 
 ![Salary distribution by amount paid and years worked](salaries_box_chart.png)
 
 /// details | Roles
