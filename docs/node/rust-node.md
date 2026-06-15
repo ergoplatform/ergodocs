@@ -19,6 +19,10 @@ source_repos:
     branch: main
     paths:
       - README.md
+  - repo: mwaddip/santa
+    branch: main
+    paths:
+      - README.md
 source_of_truth:
   - https://github.com/mwaddip/ergo-node-rust
   - https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.6.9
@@ -28,6 +32,7 @@ source_of_truth:
   - https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.6.4
   - https://github.com/Luivatra/ergo-rust-node
   - https://github.com/odiseusme/ergo-rust-sync-dashboard
+  - https://github.com/mwaddip/santa
 ---
 
 # Ergo Rust Node
@@ -41,6 +46,8 @@ source_of_truth:
 The project has moved beyond early header-sync testing into API compatibility, indexer, pruning, and validation-harness work. It remains experimental, but recent releases show active alignment with the JVM node API surface.
 
 Related Rust-node references include [Luivatra/ergo-rust-node](https://github.com/Luivatra/ergo-rust-node), an earlier experimental implementation, and [ergo-rust-sync-dashboard](https://github.com/odiseusme/ergo-rust-sync-dashboard), a small Tkinter sync display for `mwaddip/ergo-node-rust`.
+
+[SANTA](https://github.com/mwaddip/santa) is a related cross-implementation conformance suite for Ergo consensus behavior. It keeps shared test vectors and runner contracts so independent implementations can compare wire, evaluation, transaction, block, and chain behavior against canonical expected outputs.
 
 Recent release highlights:
 

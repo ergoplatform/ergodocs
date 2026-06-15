@@ -3,17 +3,28 @@ tags:
   - Java
   - Scala
   - Kotlin
+owner: docs
+last_reviewed: 2026-06-15
+source_repos:
+  - repo: ergoplatform/ergo-appkit
+    branch: develop
+    paths:
+      - README.md
+      - appkit/src
+source_of_truth:
+  - https://github.com/ergoplatform/ergo-appkit
+  - https://github.com/ergoplatform/ergo-appkit/releases/tag/v6.0.0
 ---
 # Appkit
 
 ## Overview
 
-[Ergo Appkit](https://github.com/aslesarenko/ergo-appkit) is a library for polyglot development of Ergo Applications based on [GraalVM](https://www.graalvm.org/).
+[Ergo Appkit](https://github.com/ergoplatform/ergo-appkit) is a library for polyglot development of Ergo applications based on [GraalVM](https://www.graalvm.org/).
 
 ## Recent updates
 
-- `Apr 15`: AppKit 6.0 / EIP-50 work landed in [PR #253](https://github.com/ergoplatform/ergo-appkit/pull/253), upgrading to Sigma 6.0 and adding prover-evaluated tests.
-- The update keeps AppKit aligned with the 6.0.3 node line so contract tests can exercise the newer Sigma features consistently.
+- `Jun 7`: [AppKit v6.0.0](https://github.com/ergoplatform/ergo-appkit/releases/tag/v6.0.0) was released on top of SigmaSDK 6.0.x.
+- The release includes the [PR #253](https://github.com/ergoplatform/ergo-appkit/pull/253) EIP-50 upgrade work, Sigma 6.0 alignment, and prover-evaluated tests so contract tests can exercise newer Sigma features consistently.
 
 It is a thin wrapper around core components provided by the ErgoScript interpreter and Ergo protocol implementations which are written in Scala. It is published on [maven repository](https://mvnrepository.com/artifact/org.ergoplatform/ergo-appkit) and cross-compiled to both Java 7 and Java 8+ jars.
 

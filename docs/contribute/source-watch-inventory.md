@@ -17,19 +17,19 @@ Source Watch checks watched repositories for commits touching declared paths and
 
 ## Summary
 
-- Source-watched pages: `232`
-- Watched repositories: `217`
+- Source-watched pages: `233`
+- Watched repositories: `219`
 - Watched GitHub owners: `98`
-- Watched repo/branch pairs: `223`
-- Watched paths: `465`
+- Watched repo/branch pairs: `225`
+- Watched paths: `468`
 
 ## Coverage Groups
 
 | Group | Owners | Repositories | Pages | Paths |
 | --- | ---: | ---: | ---: | ---: |
-| Core / infrastructure | 5 | 30 | 130 | 178 |
+| Core / infrastructure | 5 | 30 | 131 | 179 |
 | Ecosystem org | 10 | 35 | 23 | 32 |
-| Developer / project | 79 | 148 | 110 | 84 |
+| Developer / project | 79 | 150 | 110 | 84 |
 | External standard/vendor | 4 | 4 | 11 | 13 |
 
 ## Coverage By Area
@@ -37,7 +37,7 @@ Source Watch checks watched repositories for commits touching declared paths and
 | Area | Source-watched pages |
 | --- | ---: |
 | `contribute` | 2 |
-| `dev` | 97 |
+| `dev` | 98 |
 | `doc` | 1 |
 | `docs` | 9 |
 | `eco` | 73 |
@@ -52,20 +52,20 @@ Source Watch checks watched repositories for commits touching declared paths and
 
 | Owner | Group | Repositories | Pages | Paths |
 | --- | --- | ---: | ---: | ---: |
-| [`ergoplatform`](https://github.com/ergoplatform) | Core / infrastructure | 17 | 105 | 142 |
+| [`ergoplatform`](https://github.com/ergoplatform) | Core / infrastructure | 17 | 106 | 143 |
 | [`ScorexFoundation`](https://github.com/ScorexFoundation) | Core / infrastructure | 1 | 23 | 28 |
 | [`rosen-bridge`](https://github.com/rosen-bridge) | Core / infrastructure | 10 | 9 | 6 |
 | [`mgpai22`](https://github.com/mgpai22) | Developer / project | 5 | 7 | 4 |
-| [`mwaddip`](https://github.com/mwaddip) | Developer / project | 4 | 7 | 3 |
+| [`mwaddip`](https://github.com/mwaddip) | Developer / project | 5 | 7 | 3 |
 | [`kushti`](https://github.com/kushti) | Developer / project | 4 | 6 | 7 |
 | [`SavonarolaLabs`](https://github.com/SavonarolaLabs) | Ecosystem org | 7 | 6 | 8 |
 | [`ThierryM1212`](https://github.com/ThierryM1212) | Developer / project | 4 | 6 | 5 |
+| [`cannonQ`](https://github.com/cannonQ) | Developer / project | 4 | 5 | 3 |
 | [`input-output-hk`](https://github.com/input-output-hk) | External standard/vendor | 1 | 5 | 7 |
 | [`MrStahlfelge`](https://github.com/MrStahlfelge) | Developer / project | 3 | 5 | 7 |
 | [`a-shannon`](https://github.com/a-shannon) | Developer / project | 3 | 4 | 3 |
 | [`arkadianet`](https://github.com/arkadianet) | Developer / project | 3 | 4 | 1 |
 | [`arobsn`](https://github.com/arobsn) | Developer / project | 3 | 4 | 1 |
-| [`cannonQ`](https://github.com/cannonQ) | Developer / project | 3 | 4 | 3 |
 | [`DeCo-Education`](https://github.com/DeCo-Education) | Developer / project | 2 | 4 | 4 |
 | [`FlyingPig5`](https://github.com/FlyingPig5) | Developer / project | 3 | 4 | 2 |
 | [`anon-real`](https://github.com/anon-real) | Developer / project | 3 | 3 | 3 |
@@ -187,6 +187,7 @@ Source Watch checks watched repositories for commits touching declared paths and
 | [`ergoMixer/ergoMixBack`](https://github.com/ergoMixer/ergoMixBack) | Developer / project | `master` | 2 | 2 |
 | [`ergonames/sdk`](https://github.com/ergonames/sdk) | Ecosystem org | `master` | 2 | 2 |
 | [`ergopad/ergopad-api`](https://github.com/ergopad/ergopad-api) | Ecosystem org | `dev` | 2 | 2 |
+| [`ergoplatform/ergo-appkit`](https://github.com/ergoplatform/ergo-appkit) | Core / infrastructure | `develop` | 2 | 2 |
 | [`ergoplatform/ergoscript-by-example`](https://github.com/ergoplatform/ergoscript-by-example) | Core / infrastructure | `main` | 2 | 12 |
 | [`ergoplatform/ledger-app-ergo`](https://github.com/ergoplatform/ledger-app-ergo) | Core / infrastructure | `main` | 2 | 2 |
 | [`fleet-sdk/fleet`](https://github.com/fleet-sdk/fleet) | Core / infrastructure | `master` | 2 | 2 |
@@ -233,6 +234,7 @@ Source Watch checks watched repositories for commits touching declared paths and
 | [`BetterMoneyLabs/chaincash`](https://github.com/BetterMoneyLabs/chaincash) | Ecosystem org | `master` | 1 | 1 |
 | [`Blitz-TCG/Game-Client`](https://github.com/Blitz-TCG/Game-Client) | Developer / project | `main` | 1 | 1 |
 | [`Blitz-TCG/Website`](https://github.com/Blitz-TCG/Website) | Developer / project | `main` | 1 | 1 |
+| [`cannonQ/ergo-mempool-watcher`](https://github.com/cannonQ/ergo-mempool-watcher) | Developer / project | `main` | 1 | 1 |
 | [`cannonQ/ergo-p2p-options-frontend`](https://github.com/cannonQ/ergo-p2p-options-frontend) | Developer / project | `master` | 1 | 3 |
 | [`cannonQ/ergo-transcripts`](https://github.com/cannonQ/ergo-transcripts) | Developer / project | `main` | 1 | 1 |
 | [`capt-nemo429/sigmafi-ui`](https://github.com/capt-nemo429/sigmafi-ui) | Developer / project | `main` | 1 | 1 |
@@ -266,7 +268,6 @@ Source Watch checks watched repositories for commits touching declared paths and
 | [`ergopad/pratir-backend`](https://github.com/ergopad/pratir-backend) | Ecosystem org | `main` | 1 | 1 |
 | [`ergoplatform/awesome-ergo`](https://github.com/ergoplatform/awesome-ergo) | Core / infrastructure | `master` | 1 | 1 |
 | [`ergoplatform/bounded-vec`](https://github.com/ergoplatform/bounded-vec) | Core / infrastructure | `develop` | 1 | 1 |
-| [`ergoplatform/ergo-appkit`](https://github.com/ergoplatform/ergo-appkit) | Core / infrastructure | `develop` | 1 | 1 |
 | [`ergoplatform/ergo-headless-dapp-framework`](https://github.com/ergoplatform/ergo-headless-dapp-framework) | Core / infrastructure | `main` | 1 | 4 |
 | [`ergoplatform/ergo-wallet`](https://github.com/ergoplatform/ergo-wallet) | Core / infrastructure | `master` | 1 | 1 |
 | [`ergoplatform/ergo_avltree_rust`](https://github.com/ergoplatform/ergo_avltree_rust) | Core / infrastructure | `main` | 1 | 1 |
@@ -318,6 +319,7 @@ Source Watch checks watched repositories for commits touching declared paths and
 | [`MrStahlfelge/mosaik-ageusddemo`](https://github.com/MrStahlfelge/mosaik-ageusddemo) | Developer / project | `master` | 1 | 2 |
 | [`mwaddip/ergo-node-rust`](https://github.com/mwaddip/ergo-node-rust) | Developer / project | `master` | 1 | 1 |
 | [`mwaddip/ergots`](https://github.com/mwaddip/ergots) | Developer / project | `master` | 1 | 2 |
+| [`mwaddip/santa`](https://github.com/mwaddip/santa) | Developer / project | `main` | 1 | 1 |
 | [`nautls/machina-finance`](https://github.com/nautls/machina-finance) | Developer / project | `main` | 1 | 2 |
 | [`nightowlcasino/NightOwl-Backend`](https://github.com/nightowlcasino/NightOwl-Backend) | Developer / project | `main` | 1 | 1 |
 | [`nightowlcasino/NightOwl-Frontend`](https://github.com/nightowlcasino/NightOwl-Frontend) | Developer / project | `main` | 1 | 1 |
@@ -390,6 +392,7 @@ Source Watch checks watched repositories for commits touching declared paths and
 | [`eco/celaut_v_netnotes.md`](celaut_v_netnotes.md) | 4 | 4 |
 | [`eco/game-of-prompts.md`](game-of-prompts.md) | 4 | 5 |
 | [`node/deploy-runbook.md`](deploy-runbook.md) | 4 | 5 |
+| [`node/rust-node.md`](rust-node.md) | 4 | 4 |
 | [`ai.md`](ai.md) | 3 | 6 |
 | [`dev/interact.md`](interact.md) | 3 | 4 |
 | [`dev/oc/dex_bots.md`](dex_bots.md) | 3 | 7 |
@@ -401,7 +404,6 @@ Source Watch checks watched repositories for commits touching declared paths and
 | [`dev/scs/sigma/verifying.md`](verifying.md) | 3 | 3 |
 | [`dev/stack/fleet.md`](fleet.md) | 3 | 3 |
 | [`documents.md`](documents.md) | 3 | 3 |
-| [`eco/auction-coin.md`](auction-coin.md) | 3 | 3 |
 
 ## Repo And Path Coverage
 
@@ -436,6 +438,7 @@ Source Watch checks watched repositories for commits touching declared paths and
 | [`BetterMoneyLabs/chaincash`](https://github.com/BetterMoneyLabs/chaincash) | `master` | `docs/presentation/basis.pdf` | `docs/uses/chaincash.md` |
 | [`Blitz-TCG/Game-Client`](https://github.com/Blitz-TCG/Game-Client) | `main` | `README.md` | `docs/eco/blitz.md` |
 | [`Blitz-TCG/Website`](https://github.com/Blitz-TCG/Website) | `main` | `README.md` | `docs/eco/blitz.md` |
+| [`cannonQ/ergo-mempool-watcher`](https://github.com/cannonQ/ergo-mempool-watcher) | `main` | `README.md` | `docs/eco/mempool-vis.md` |
 | [`cannonQ/ergo-p2p-options-frontend`](https://github.com/cannonQ/ergo-p2p-options-frontend) | `master` | `README.md`<br>`packages/core`<br>`packages/web` | `docs/eco/etcha.md` |
 | [`cannonQ/ergo-transcripts`](https://github.com/cannonQ/ergo-transcripts) | `main` | `README.md` | `docs/eco/ergo-knowledge-base.md` |
 | [`cannonQ/nft-races`](https://github.com/cannonQ/nft-races) | `main` | `README.md` | `docs/eco/emerging-projects.md`<br>`docs/eco/nft-races.md` |
@@ -485,7 +488,7 @@ Source Watch checks watched repositories for commits touching declared paths and
 | [`ergoplatform/ergo`](https://github.com/ergoplatform/ergo) | `testnet60` | `src/main/resources/testnet.conf` | `docs/dev/p2p/network.md`<br>`docs/dev/p2p/p2p-handshake.md` |
 | [`ergoplatform/ergo`](https://github.com/ergoplatform/ergo) | `v6.0.3` | `ergo-core/src/main/scala/org/ergoplatform/settings/ValidationRules.scala`<br>`ergo-core/src/main/scala/org/ergoplatform/validation/ModifierError.scala`<br>`src/main/scala/org/ergoplatform/network/ErgoNodeViewSynchronizer.scala`<br>`src/main/scala/org/ergoplatform/nodeView/mempool/ErgoMemPool.scala`<br>`src/main/scala/org/ergoplatform/nodeView/mempool/OrderedTxPool.scala` | `docs/node/protocol.md`<br>`docs/node/synchronisation.md` |
 | [`ergoplatform/ergo`](https://github.com/ergoplatform/ergo) | `weak-blocks` | `papers/inputblocks/main.pdf` | `docs/uses/sidechains/subblocks.md` |
-| [`ergoplatform/ergo-appkit`](https://github.com/ergoplatform/ergo-appkit) | `develop` | `README.md` | `docs/dev/stack/appkit/gradle.md` |
+| [`ergoplatform/ergo-appkit`](https://github.com/ergoplatform/ergo-appkit) | `develop` | `README.md`<br>`appkit/src` | `docs/dev/stack/appkit.md`<br>`docs/dev/stack/appkit/gradle.md` |
 | [`ergoplatform/ergo-headless-dapp-framework`](https://github.com/ergoplatform/ergo-headless-dapp-framework) | `main` | `src/encoding.rs`<br>`tutorials/Math_Bounty/1-math-bounty-dApp-getting-started.md`<br>`tutorials/Math_Bounty/2-math-bounty-dApp-finishing-the-headless-dapp.md`<br>`tutorials/Math_Bounty/3-math-bounty-dApp-writing-a-cli-frontend-that-allows-creating-bounties.md` | `docs/dev/stack/headless.md` |
 | [`ergoplatform/ergo-jde`](https://github.com/ergoplatform/ergo-jde) | `main` | `kiosk/src/test/scala/kiosk/dexy`<br>`kiosk/src/test/scala/kiosk/dexy/Dexy.md`<br>`kiosk/src/test/scala/kiosk/dexy/DexySpec.scala`<br>`kiosk/src/test/scala/kiosk/mixer`<br>`kiosk/src/test/scala/kiosk/mixer/doc/main.pdf`<br>`kiosk/src/test/scala/kiosk/schnorr/SchnorrSpec.scala`<br>`readme.md` | `docs/dev/scs/contracts.md`<br>`docs/dev/scs/sigma/verifying.md`<br>`docs/dev/stack/jde.md`<br>`docs/documents.md`<br>`docs/eco/dexy.md`<br>`docs/eco/sigmajoin.md`<br>+1 more |
 | [`ergoplatform/ergo-wallet`](https://github.com/ergoplatform/ergo-wallet) | `master` | `src/main/resources/wordlist` | `docs/node/wallet-setup.md` |
@@ -563,6 +566,7 @@ Source Watch checks watched repositories for commits touching declared paths and
 | [`mwaddip/ergo-proxy`](https://github.com/mwaddip/ergo-proxy) | `master` | `README.md`<br>`docs/protocol/ergo-p2p-wire-format.md` | `docs/dev/p2p/network.md`<br>`docs/dev/p2p/p2p-handshake.md`<br>`docs/eco/emerging-projects.md`<br>`docs/node/ergo-proxy.md` |
 | [`mwaddip/ergo-relay`](https://github.com/mwaddip/ergo-relay) | `master` | `README.md` | `docs/eco/emerging-projects.md`<br>`docs/node/ergo-relay.md` |
 | [`mwaddip/ergots`](https://github.com/mwaddip/ergots) | `master` | `README.md`<br>`packages/ergoscript` | `docs/dev/lib/ergots.md` |
+| [`mwaddip/santa`](https://github.com/mwaddip/santa) | `main` | `README.md` | `docs/node/rust-node.md` |
 | [`nautls/machina-finance`](https://github.com/nautls/machina-finance) | `main` | `packages/contracts/SPEC.md`<br>`packages/contracts/src` | `docs/eco/machina-finance.md` |
 | [`networkspore/Netnotes`](https://github.com/networkspore/Netnotes) | `master` | `README.md` | `docs/eco/celaut_v_netnotes.md`<br>`docs/eco/netnotes.md` |
 | [`networkspore/netnotes-engine`](https://github.com/networkspore/netnotes-engine) | `main` | `README.md` | `docs/eco/celaut_v_netnotes.md`<br>`docs/eco/netnotes.md` |

@@ -128,6 +128,64 @@ jobs:
             printf "%s %s\n" "$NAME" "$ID" >> "$REPORT_DIR/channels.txt"
           done
 
+      - name: Summarize Discord leads
+        id: discord_summary
+        if: env.REVIEW_MODE != 'source-only'
+        run: |
+          python - <<'PY' > "$REPORT_DIR/discord-summary.env"
+          import re
+          from pathlib import Path
+
+          report_dir = Path("weekly-discord-docs")
+          reports = sorted(report_dir.glob("*-github-links-report.md"))
+          missing = {}
+          for report in reports:
+              channel = report.name.replace("-github-links-report.md", "")
+              in_missing = False
+              for line in report.read_text(encoding="utf-8").splitlines():
+                  if line.startswith("## Not Mentioned In Docs"):
+                      in_missing = True
+                      continue
+                  if in_missing and line.startswith("## "):
+                      in_missing = False
+                  if not in_missing:
+                      continue
+                  match = re.match(r"- \*\*([^*]+)\*\* \(([^)]+)\)", line)
+                  if match:
+                      repo = match.group(1)
+                      missing.setdefault(repo, []).append((channel, match.group(2)))
+
+          summary = report_dir / "discord-leads-summary.md"
+          with summary.open("w", encoding="utf-8") as fh:
+              fh.write("## Discord Leads Needing Triage\n\n")
+              if not reports:
+                  fh.write("Discord lead reports were not generated for this mode.\n")
+              elif not missing:
+                  fh.write("No GitHub repositories from Discord were missing from docs.\n")
+              else:
+                  fh.write("These are leads only. Verify against upstream sources before editing docs.\n\n")
+                  items = sorted(missing.items())
+                  for repo, seen in items[:20]:
+                      reports_text = ", ".join(f"{channel}: {count}" for channel, count in seen)
+                      fh.write(f"- `{repo}` ({reports_text})\n")
+                  if len(missing) > 20:
+                      fh.write(f"- ...and {len(missing) - 20} more. See artifacts.\n")
+
+          print(f"lead_count={len(missing)}")
+          PY
+          cat "$REPORT_DIR/discord-summary.env" >> "$GITHUB_OUTPUT"
+
+      - name: Prepare empty Discord summary
+        id: discord_summary_empty
+        if: env.REVIEW_MODE == 'source-only'
+        run: |
+          echo "lead_count=0" >> "$GITHUB_OUTPUT"
+          {
+            echo "## Discord Leads Needing Triage"
+            echo
+            echo "Discord scan skipped in source-only mode."
+          } > "$REPORT_DIR/discord-leads-summary.md"
+
       - name: Open or update tracking issue
         id: tracking_issue
         run: |
@@ -146,6 +204,8 @@ jobs:
             echo
             echo "Reports are attached to the workflow artifact:"
             echo "$RUN_URL"
+            echo
+            cat "$REPORT_DIR/discord-leads-summary.md"
             echo
             echo "Maintainer workflow:"
             echo "1. Read the docs, ecosystem, GitHub-links, and Source Watch reports that exist for this mode."
@@ -261,13 +321,14 @@ jobs:
 
           cat "$REPORT_DIR/issue-summary.env" >> "$GITHUB_OUTPUT"
 
-      - name: Close tracking issue when no page review is needed
+      - name: Close tracking issue when no review is needed
         if: env.REVIEW_MODE != 'discord-only'
         run: |
           ISSUE_NUMBER="${{ steps.tracking_issue.outputs.issue_number }}"
           RUN_URL="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          DISCORD_LEADS="${{ steps.discord_summary.outputs.lead_count || steps.discord_summary_empty.outputs.lead_count || '0' }}"
 
-          if [ "${{ steps.issue_summary.outputs.actionable }}" = "0" ]; then
+          if [ "${{ steps.issue_summary.outputs.actionable }}" = "0" ] && [ "$DISCORD_LEADS" = "0" ]; then
             {
               echo "Automated review completed."
               echo
@@ -282,11 +343,23 @@ jobs:
               echo "- Skipped as open-PR-only: ${{ steps.issue_summary.outputs.skipped_open_pr_only }}"
               echo "- Closed stale page issues: ${{ steps.issue_summary.outputs.closed_stale }}"
               echo "- Actionable page issues: ${{ steps.issue_summary.outputs.actionable }}"
+              echo "- Discord repositories needing triage: $DISCORD_LEADS"
               echo
               echo "Workflow run: $RUN_URL"
             } > "$REPORT_DIR/no-action-comment.md"
             gh issue comment "$ISSUE_NUMBER" --body-file "$REPORT_DIR/no-action-comment.md"
             gh issue close "$ISSUE_NUMBER"
+          elif [ "${{ steps.issue_summary.outputs.actionable }}" = "0" ]; then
+            {
+              echo "Automated review completed, but Discord produced repository leads that need maintainer triage."
+              echo
+              echo "- Actionable Source Watch page issues: 0"
+              echo "- Discord repositories needing triage: $DISCORD_LEADS"
+              echo
+              echo "Workflow run: $RUN_URL"
+            } > "$REPORT_DIR/discord-action-comment.md"
+            gh issue comment "$ISSUE_NUMBER" --body-file "$REPORT_DIR/discord-action-comment.md"
+            echo "Keeping tracking issue #$ISSUE_NUMBER open because Discord has $DISCORD_LEADS repository lead(s)."
           else
             echo "Keeping tracking issue #$ISSUE_NUMBER open because ${{ steps.issue_summary.outputs.actionable }} actionable page issue(s) were created, updated, or errored."
           fi
@@ -299,7 +372,7 @@ jobs:
             echo
             echo "- Mode: \`$REVIEW_MODE\`"
             echo "- Window: \`${{ steps.window.outputs.after }}\` to \`${{ steps.window.outputs.before }}\` UTC"
-            echo "- Discord leads: $([ "$REVIEW_MODE" = "source-only" ] && echo "skipped" || echo "generated")"
+            echo "- Discord repositories needing triage: \`${{ steps.discord_summary.outputs.lead_count || steps.discord_summary_empty.outputs.lead_count || '0' }}\`"
             echo "- Full watched-source scan: $([ "$REVIEW_MODE" = "discord-only" ] && echo "skipped" || echo "completed")"
             echo "- Candidate page results: \`${{ steps.issue_summary.outputs.total || '0' }}\`"
             echo "- Skipped already reviewed: \`${{ steps.issue_summary.outputs.skipped_reviewed || '0' }}\`"

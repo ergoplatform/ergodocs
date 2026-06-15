@@ -248,6 +248,7 @@
 - [ErgoUtilsUploadService](https://github.com/arobsn/ErgoUtilsUploadService) – backend for ErgoUtils NFT uploads. [`C#`]
 - [Ergo Vanity Address Generator](https://github.com/jellymlg/ergo-vanitygen) – generate custom addresses. [`Scala`]
 - [Ergo Monitoring](https://github.com/SabaunT/ergo-monitoring) – debug service for node/blockchain state. [`Rust`]
+- [Ergo Mempool Watcher](https://github.com/cannonQ/ergo-mempool-watcher) – local-node mempool capture and analysis tool for skipped or delayed transactions. [`TS`]
 - [Ergo Faucet](https://github.com/zargarzadehm/ergo-faucet) – simple faucet implementation. [`Scala`]
 - [Chain Name Service (Experimental)](https://github.com/ross-weir/chain-name-service) – experimental name service. [`Scala`]
 - [Transaction Group Framework](https://github.com/GetBlok-io/Subpooling#frameworks--abstractions) – manage large interrelated TXs (from GetBlok).
@@ -306,6 +307,7 @@
 ### 🧪 Testing & Debugging <a id="testing--debugging"></a>
 
 - **[Contract Testing Framework](https://github.com/anon-real/contract-testing)** – off-chain ErgoScript contract testing. [`Scala`]
+- [SANTA](https://github.com/mwaddip/santa) – cross-implementation Ergo consensus conformance test vectors and runners. [`TS`, `Rust`, `Scala`]
 - [ErgoScript Simulator](https://github.com/spectrum-finance/ergoscript-simulator) – community tool for simulating ErgoScript. [`Scala`?]
 - [Ergo Puppet](https://github.com/dav009/ergo-puppet) – off-chain experimentation/unit testing tool. [`Scala`]
 - [Ergo Test Vectors](https://github.com/ergoplatform/ergo-test-vectors) – standard test vectors for crypto/serialization.
@@ -430,6 +432,7 @@
 - [Moria Finance](https://github.com/Moria-Finance) – ERG derivatives project. *(Development)*
 - [ChainCash](https://github.com/ChainCashLabs) – decentralized monetary system. [Whitepaper](https://github.com/kushti/chaincash/blob/master/paper/chaincash.pdf) | [Server](https://github.com/ChainCashLabs/chaincash-rs) | [Contracts](https://github.com/ChainCashLabs/chaincash/tree/master/contracts) *(Active)*
 - [Sigma Subscriptions](https://github.com/cornbelt-dev/sigma-subscriptions) – subscription service framework. [Manager UI](https://github.com/cornbelt-dev/sigma-subscriptions-manager) *(Paused?)*
+- [Ergo Marketplace Design](https://github.com/decentbob/ergo-marketplace) – early-stage decentralized marketplace design for permissionless trade infrastructure. *(Design/Prototype)*
 - [ErgoWell](https://github.com/mhssamadani/ErgoWell) – crowdfunding/investment platform concept. [`JS/TS`] *(Inactive/Concept)*
 - [Lithos Protocol](https://lithosprotocol.org/) – DeFi protocol for ERG liquidity. [GitHub Org](https://github.com/Lithos-Protocol) | [LitePaper](https://github.com/Lithos-Protocol/LitePaper) *(Active)*
 - [Off The Grid](https://github.com/Telefragged/off-the-grid) – decentralized grid trading bot. [`Rust`]
