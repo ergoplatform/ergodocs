@@ -4,15 +4,19 @@ tags:
   - Votes
   - Governance
   - Transparency
+owner: docs
+last_reviewed: 2026-06-15
 ---
 
-## Votings
+# Ergo Foundation Votes
 
-The Ergo Foundation members and officers discuss proposals before putting them to a formal vote on the ergoforum, passed with a majority of voting members.
+The Ergo Foundation members and officers discuss proposals before putting them to a formal vote on Ergoforum, passed with a majority of voting members.
 
-Before voting on spending treasury funds, we will approach the [Good Whale Fund](https://ergoplatform.org/en/blog/2021-11-02-good-whales-grant-fund/), [DarkFund0](https://www.ergoforum.org/t/darkfund0-zk-fund-for-privacy-applications/398), or suggest creating a [Raffle](https://ergoraffle.com/) if appropriate.
+Before voting on spending treasury funds, the Foundation may approach the [Good Whale Fund](https://ergoplatform.org/en/blog/2021-11-02-good-whales-grant-fund/), [DarkFund0](https://www.ergoforum.org/t/darkfund0-zk-fund-for-privacy-applications/398), or suggest creating a [Raffle](https://ergoraffle.com/) if appropriate.
 
-Foundation votes this year are usually related to our internal structures, exchanges, market-makers, banks, and grant requests.
+Votes usually relate to internal structure, treasury control, exchanges, market makers, banking, grants, and signatory decisions.
+
+Status meanings are plain-language summaries: `Passed` means the proposal received sufficient support, `Failed` means it did not, `Deferred` means no final decision was made at that time, `Discussed` means the topic was recorded but not finalized, and `Withdrawn` means the proposal was pulled back.
 
 ## 2025
 
@@ -220,3 +224,10 @@ Foundation votes this year are usually related to our internal structures, excha
 | (Nov 2019)  | Catena's debt to be paid in Ergs                              | Treasury Control  | Passed     |                                          |
 | (Nov 2019)  | Development Fund debts                                        | Treasury Control  | Passed     |                                          |
 | (Nov 2019)  | Development Fund Board                                        | Treasury Control  | Passed     |                                          |
+
+## Related
+
+- [About](ergo-foundation.md)
+- [Treasury](ef-treasury.md)
+- [Scope](ef-scope.md)
+- [Future](ef-future.md)

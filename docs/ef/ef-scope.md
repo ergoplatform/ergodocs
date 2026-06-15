@@ -5,11 +5,13 @@ tags:
   - Mission
   - Principles
   - Governance
+owner: docs
+last_reviewed: 2026-06-15
 ---
 
 # The Scope of the Ergo Foundation
 
-The Ergo Foundation is a non-profit organization dedicated to advancing the adoption and development of the Ergo Platform. Its primary focus is to support the Ergo Platform in providing an efficient and secure way to implement financial contracts, the most widely used application of blockchain technology.
+The Ergo Foundation is a non-profit organization dedicated to advancing the adoption and development of the Ergo Platform. This page describes the Foundation's historical and current areas of responsibility. Because the liquid treasury is now limited, many activities described here are transitioning to community-led groups, while the Foundation remains useful as a legal and governance wrapper.
 
 ## Mission and Principles
 
@@ -24,27 +26,27 @@ The Ergo Foundation is committed to the following principles:
 4. **Community-Driven**: The Foundation believes that the Treasury should be distributed mainly to the community, including freelancers, hackers, experts, and enthusiasts. This approach recognizes the vital role of the community in driving innovation and growth, and aims to cultivate a thriving and self-sustaining ecosystem.
 
 /// details | The Ergo Foundation's Future
-     {type: info, open: true}
-Please see [this page](ef-future.md) for more information on the long-term goals of The Foundation.
+     {type: info}
+Please see [this page](ef-future.md) for more information on the long-term goals of the Foundation.
 ///
 
 ## Key Areas of Focus
 
-The Ergo Foundation's efforts are focused on several key areas that are essential for the growth and success of the Ergo Platform.
+The Ergo Foundation's efforts have focused on several key areas that are essential for the growth and success of the Ergo Platform.
 
 ### Infrastructure
 
-- Support for protocol research, development of the reference client, alternative clients (if needed), libraries, and developer tooling. The Foundation recognizes the importance of a robust and well-maintained infrastructure to support the Ergo ecosystem.
+- Support for protocol research, development of the reference client, alternative clients where needed, libraries, and developer tooling. The Foundation recognizes the importance of robust and well-maintained infrastructure, though much of this work is now community-led.
 
-- Improving market access by getting Ergo listed on centralized exchanges, hardware wallets, bridges, or other means. Increasing the accessibility and liquidity of Ergo is crucial for its widespread adoption and integration into the broader cryptocurrency ecosystem.
+- Improving market access through centralized exchanges, hardware wallets, bridges, onramps, or other means. Increasing the accessibility and liquidity of Ergo remains important, but future work depends on community funding, partner interest, and the Foundation's legal-signatory role.
 
 ### Education
 
-- Creating materials to educate developers and users directly or funding their creation through third parties from within the community. The Foundation understands the importance of knowledge-sharing and capacity-building to foster a thriving and knowledgeable community of developers and users.
+- Creating materials to educate developers and users directly or funding their creation through third parties from within the community. The Foundation has supported knowledge-sharing and capacity-building to foster a thriving community of developers and users.
 
 ### Promotion and Outreach
 
-The Foundation aims to promote the adoption of Ergo through various outreach and promotional efforts. While its operations in this area are conservative, it does fund a select few roles for areas not currently met by the community, such as:
+The Foundation has promoted the adoption of Ergo through various outreach and promotional efforts. While its operations in this area are conservative, it has funded select roles for areas not previously met by the community, such as:
 
 - Angie Har, Editorial & Events Manager (salaried)
 - Andy Lowe, YouTube Manager (hourly)
@@ -53,10 +55,10 @@ The Foundation aims to promote the adoption of Ergo through various outreach and
 - Marcelo Roncatti, Branding Advisor (hourly)
 - Writers (via paid bounties)
 
-Their efforts ensure ample information is available about ongoing developments on Ergo via blog posts and social media, as well as the promotion and operation of various events, such as Ergo Summit and ErgoHack. These initiatives aim to raise awareness, foster community engagement, and attract new users and developers to the Ergo ecosystem.
+Their efforts helped ensure ample information was available about ongoing developments on Ergo via blog posts and social media, as well as the promotion and operation of various events, such as Ergo Summit and ErgoHack. These initiatives aimed to raise awareness, foster community engagement, and attract new users and developers to the Ergo ecosystem.
 
 /// details | Wen 'Marketing?'
-     {type: warning, open: true}
+     {type: warning}
 The Ergo Foundation takes a principled approach to marketing and promotion, focusing on empowering community-driven initiatives and fostering organic growth. For ethical and legal reasons, the Foundation does not directly control outward marketing efforts. Instead, it aims to support and enable community-driven innovation through initiatives like the [Ecosystem Grant Framework](https://ergoplatform.org/en/blog/Ergo-Foundation-Announces-New-Initiative-to-Accelerate-Ecosystem-Growth/) and donations to community-led projects like the Sigmanauts.
 
 Network effects have been a significant driver of value creation in the tech industry, accounting for approximately 70% of value creation over the past 23 years. For a grassroots, third-generation blockchain like Ergo, this figure is likely even higher. While the Ergo Foundation strives to lay the foundations and help ignite community outreach and compounding growth, the ultimate promotion and adoption of Ergo rests principally on the shoulders of the community. The Foundation's role is to empower and support the community's efforts, fostering a self-sustaining and vibrant ecosystem. [(Get Involved!)](contribute.md)
@@ -77,27 +79,27 @@ Some Ergo Foundation members also hold developer positions, although their devel
 - Mohammad Hasan Samadani (mhs_sam) manages a team of graduates and PhD students who have produced [Ergo Raffle](ergoraffle.md), [ErgoWell](ergowell.md), [Minotaur Wallet](minotaur.md), and [Rosen Bridge](rosen.md). (rewarded until April 2024 - now working on a volunteer basis)
 - [Fleet-sdk](https://github.com/fleet-sdk) is managed by Alison Robson (anon_br). (salaried)
 
-Additionally, outwith the EF members, we fund a few roles in development.  
+Historically, the Foundation also funded a few roles in development.
 
 - Dmitry Usov manages the Ergo website and works on various other projects such as the DexyGold front-end. (salaried)
-- The rest of the funds spent on development go towards bounties on the repositories given below
+- Other development funding went towards bounties on the repositories given below.
 
-The Ergo Foundation also pays for the hosting and bandwidth costs for several pieces of infrastructure such as the website and explorer. This support ensures the availability and reliability of critical resources for the Ergo ecosystem.
+The Ergo Foundation has also paid for hosting and bandwidth costs for several pieces of infrastructure such as the website and explorer. Much of this responsibility is now transitioning to community-led infrastructure groups.
 
-#### Code Repositories Supported by the Ergo Foundation
+#### Code Repositories Historically Supported by the Ergo Foundation
 
 /// admonition | This section is a draft and still open for discussion from the community.
     type: info
 ///
 
-The Ergo Foundation DAO LLC provides funding for the development, evolution, and maintenance of various software repositories. There are two levels of funding:
+The Ergo Foundation DAO LLC has provided funding for the development, evolution, and maintenance of various software repositories. There were two levels of funding:
 
 1. **Development Funding**: Involves funding for research, development, maintenance, and bug fixing.
 2. **Maintenance Funding**: Involves only bug fixing and minor issue resolution to support existing applications. Repositories in this category are considered deprecated. While being part of the core ecosystem, they will receive maintenance support for existing applications. Developers are encouraged to migrate and discouraged from relying on these software.
 
 ##### Development Funding
 
-The repositories in this section are the main focus of funding support by the Ergo Foundation. They are part of the development roadmap for the core ecosystem. Developers are encouraged to rely on these software and join development efforts.
+The repositories in this section were the main focus of funding support by the Ergo Foundation. They are part of the core ecosystem, but ongoing work now increasingly depends on community contributors, DAOs, bounties, and project-specific funding.
 
 - [Ergo reference client](https://github.com/ergoplatform/ergo)
 - [Sigma](https://github.com/ScorexFoundation/sigmastate-interpreter)
@@ -112,7 +114,7 @@ The repositories in this section are the main focus of funding support by the Er
 
 ##### Maintenance Funding
 
-The repositories in this section are still part of the core ecosystem; however, they are no longer part of the Ergo Foundation's development roadmap. This means the Ergo Foundation will only support maintenance and critical fixes in these repositories. Funding is provided on an issue-by-issue basis, and each attached bounty is subject to approval by the Ergo Foundation (morphic, anon-br).
+The repositories in this section are still part of the core ecosystem; however, they are no longer part of the Foundation's active development roadmap. Historically, support here was limited to maintenance and critical fixes, with issue-by-issue bounties subject to Foundation approval.
 
 - [Scrypto](https://github.com/input-output-hk/scrypto)
 - [Scorex-util](https://github.com/ScorexFoundation/scorex-util)
@@ -129,14 +131,14 @@ The repositories in this section are still part of the core ecosystem; however, 
 
 ### Grants and Ecosystem Support
 
-The Ergo Foundation recognizes the importance of fostering a vibrant and diverse ecosystem. To support this goal, the Foundation provides grants to various projects that contribute to the growth and development of the Ergo ecosystem. These grants aim to fund innovative ideas, promote collaboration, and drive progress within the community.
+The Ergo Foundation has historically supported a vibrant and diverse ecosystem through grants and direct funding. With liquid treasury funds now limited, new grants generally require community-led funding or alternative structures.
 
 Some notable grant recipients include:
 
 - **Spectrum Labs**: Received $128,200 to support their work on developing ergodex for the Ergo ecosystem between June 2021 and January 2022.
 - **Rosen Bridge**: Awarded $272,400 for the period between May 2022 and April 2023 to fund the development of the Rosen Bridge, a cross-chain bridge connecting Ergo with other blockchain networks.
 
-The Ergo Foundation remains committed to supporting promising projects and initiatives that align with its mission of fostering innovation, collaboration, and growth within the Ergo ecosystem. By providing financial assistance through grants, the Foundation aims to empower developers, researchers, and community members to explore new ideas and contribute to the overall advancement of the Ergo platform.
+The Foundation remains committed to supporting promising projects and initiatives that align with its mission, but its practical role is now more likely to be coordination, signatory support, or transparency rather than direct funding from a large liquid treasury.
 
 #### Code Audits
 
@@ -146,7 +148,7 @@ This approach reflects the Foundation's commitment to transparency and user educ
 
 ### Exchange Listings
 
-/// admonition | For a detailed overview of current efforts, view the [public grist](https://ergo.getgrist.com/jf9KPR1HUDJH/Project-Management/p/28).
+/// admonition | For a detailed overview of exchange and partner tracking, view the [public grist](https://ergo.getgrist.com/jf9KPR1HUDJH/Project-Management/p/28).
     type: info
 ///
 
@@ -167,15 +169,22 @@ If you're wondering why certain coins are listed and Ergo is not, it could be du
 - They may be older than Ergo and were listed during the last bear market.
 - Even though they are a unique Layer-1, they may only have a wrapped asset (e.g., on BSC) listed.
 
-The Ergo Foundation is committed to expanding Ergo's presence on exchanges. However, certain factors such as low volume or market cap can affect our eligibility for listing on some platforms. This is not due to a lack of effort or resources but rather the nature of the crypto market and the specific requirements of different exchanges.
+The Ergo Foundation has worked to expand Ergo's presence on exchanges. However, certain factors such as low volume or market cap can affect eligibility for listing on some platforms. This is not due to a lack of effort but rather the nature of the crypto market and the specific requirements of different exchanges.
 
-We are also exploring the possibility of listing as wrapped tokens on exchanges, which could reduce barriers for high-quality tier 2/3 exchanges and help build up our access and volume. We are actively pursuing discussions with a global on-ramp to increase access for US users.
+Wrapped-token listings, onramps, and other access improvements may reduce barriers for high-quality tier 2/3 exchanges and help build access and volume. Future efforts will depend on community funding, partner interest, and the Foundation's ability to act as a legal signatory where needed.
 
-While Ergo's fundamentals are strong, the decision to list a coin often comes down to factors such as profitability and ease of integration for the exchange. However, we believe that as Ergo's DeFi ecosystem matures and volume builds up, more exchanges will recognize its value and list it.
+While Ergo's fundamentals are strong, the decision to list a coin often comes down to factors such as profitability and ease of integration for the exchange. As Ergo's DeFi ecosystem matures and volume builds up, more exchanges may recognize its value and list it.
 
-In the meantime, we continue to prioritize development and community engagement over artificially inflating volume or engaging in questionable practices. We believe this approach will lead to sustainable growth and long-term success for Ergo.
+In the meantime, Ergo continues to prioritize development and community engagement over artificially inflating volume or engaging in questionable practices. This approach supports sustainable growth and long-term success.
 
 /// details | The Ergo Foundation's Future
-     {type: info, open: true}
-Please see [this page](ef-future.md) for more information on the long-term goals of The Foundation.
+     {type: info}
+Please see [this page](ef-future.md) for more information on the long-term goals of the Foundation.
 ///
+
+## Related
+
+- [About](ergo-foundation.md)
+- [Treasury](ef-treasury.md)
+- [Votes](ef-votes.md)
+- [Future](ef-future.md)

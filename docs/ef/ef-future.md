@@ -18,7 +18,7 @@ source_of_truth:
 # The Ergo Foundation's Future
 
 /// details | What's been done so far?
-     {type: info, open: true}
+     {type: info}
 
 - For an overview of what has been achieved since launch, please see [this page](roadmap.md)
 - For a comprehensive overview of the scope of the Ergo Foundation see [this page](ef-scope.md)
@@ -35,9 +35,9 @@ The Ergo Foundation's initial role was to bootstrap the Ergo ecosystem in the ea
 - Consistently ranked among the top 100 for development activity on [artemis.xyz](https://app.artemis.xyz/developer-activity?ecosystemValue=Ergo)
 
 
-# The Future
+## The Future
 
-As the Ergo ecosystem matures, the Foundation's role is evolving. The goal has always been to build an ecosystem that can sustain itself without centralised support. That transition is now accelerating. The Foundation's treasury is now nearing depletion, and the organisation no longer has independent funding to operate as it once did. However, this does not mark the end of the Foundation's relevance.
+As the Ergo ecosystem matures, the Foundation's role is evolving. The goal has always been to build an ecosystem that can sustain itself without centralised support. That transition is now accelerating. The Foundation's liquid treasury is now effectively depleted, and the organisation no longer has independent funding to operate as it once did. However, this does not mark the end of the Foundation's relevance.
 
 The Ergo Foundation DAO has been renewed for another year, allowing the Foundation to continue serving a critical function: acting as a legal entity that can sign agreements on behalf of community-driven initiatives. When community members or projects raise funds, the Foundation can formalise partnerships, engage service providers, and interact with centralised entities requiring legal counterparty signatures. This "signatory services" model ensures the ecosystem maintains access to exchanges, onramps, and institutional partnerships that require traditional legal frameworks.
 
@@ -53,13 +53,13 @@ The optimal path forward involves building robust infrastructure that positions 
 
 The Sigmanauts Program is a grassroots initiative designed to empower individuals to take ownership of Ergo's future. Launched to build the structures necessary for community self-governance, it enables contributors to shape development priorities, manage resources, and drive ecosystem growth independently. This program represents the practical implementation of the handover strategy.
 
-# The Transition
+## The Transition
 
 The treasury successfully bootstrapped Ergo's early years. That phase is complete. We are now in active transition, preparing to hand over remaining core functions to community-led entities. **The Foundation's operational runway has effectively concluded**—there are no longer sufficient funds to support grants, development initiatives, or market-making operations from the central treasury.
 
 This transition has been anticipated. Documentation, ownership maps, and named community stewards are in place so that handover can proceed at short notice. The goal is to preserve continuity of critical services—exchange listings, onramp access, and infrastructure maintenance—while shifting responsibility and funding to the community.
 
-Current treasury balances and burn rates remain transparently published. Remaining funds cover active grant commitments and minimal operational overhead. The Foundation's ongoing value lies in its legal personality: the ability to sign agreements when the community raises funds for specific initiatives. This ensures that decentralised projects can still interface with the traditional financial and legal systems when necessary.
+Current treasury balances remain transparently published in the [Treasury](ef-treasury.md) page. Remaining liquid funds are minimal, while illiquid ecosystem assets are not treated as immediately spendable operating treasury. The Foundation's ongoing value lies in its legal personality: the ability to sign agreements when the community raises funds for specific initiatives. This ensures that decentralised projects can still interface with the traditional financial and legal systems when necessary.
 
 ## Key Implications
 
@@ -84,7 +84,7 @@ As the Foundation's funding ceases, the operational services it maintained have 
 
 With its operational treasury depleted and its day-to-day duties fully transferred to the community, the Ergo Foundation will contract to a minimalist state whose purpose will be to persist as a minimal legal entity for as long as is required. The ongoing cost for this (approximately $2,000 per year) is worthwhile, as it provides a crucial function that a decentralized body cannot: **acting as a legal signatory.** This is vital for interactions with centralized entities, such as signing new exchange listing agreements or contracts for community-crowdfunded initiatives.
 
-While the Foundation will no longer have an operational treasury for grants, it does hold a potential long-term, illiquid asset: a future claim on a significant portion of Rosen Bridge's RSN token (approximately 2% of the total supply), which may not be accessible for years.
+While the Foundation will no longer have an operational treasury for grants, it does hold long-term illiquid ecosystem assets, including RSN. These assets should not be treated as immediately available operating funds.
 
 Should this asset gain significant value in the distant future, the Foundation (or a community-appointed successor DAO) would be positioned to manage these funds, distributing them or using them as best determined by the community to further Ergo's decentralized mission.
 
@@ -132,3 +132,10 @@ In parallel, other key ecosystem components are also advancing to improve user a
 * **Ergo Transcripts Archive:** Over 88 hours of developer call transcripts now available at [ergo-transcripts.vercel.app](https://ergo-transcripts.vercel.app/), with workflows being developed for Twitter Spaces and Reddit Community AMAs.
 * **Hardware Wallet Integration:** Keystone Hardware Wallet integration is in progress, with some delays due to the latest signature curve update on Ergo requiring additional testing.
 * **Sigmaverse Updates:** The ecosystem project directory is being updated with new projects and contributors, with plans for an archive section for inactive projects.
+
+## Related
+
+- [About](ergo-foundation.md)
+- [Treasury](ef-treasury.md)
+- [Votes](ef-votes.md)
+- [Scope](ef-scope.md)

@@ -54,7 +54,7 @@ The current network status can be monitored using miningpoolstats. Even if a sin
 
 ### Ergo ignored miners who warned about the difficulty algorithm
 
-It's important to remember, that *Ergo* is a collective community, not a single entity, The centralised component, the Ergo Foundation (EF) is essentially a network of people committed to the platform's success via spending the treasury and does not vote on matters related to development and community consensus.
+Ergo is a collective community, not a single entity. The Ergo Foundation (EF) is a legal and treasury entity that helped bootstrap the ecosystem, but it does not vote on protocol development or community consensus.
 
 The initial concerns from miners were indeed taken into account. However, these early warnings were primarily about potential difficulties during price fluctuations, not the 'death-spiral' scenario that eventually led to the hard fork. After extensive discussions with core developers and leading miners and pools, the consensus was that the current situation, while painful in the short-term, was less painful than implementing a hard fork. The community was hopeful that as Ergo gained more traction, a stable and increasing hashrate would naturally follow, mitigating these concerns.
 
@@ -84,11 +84,11 @@ Ergo's success is not dependent on venture capital (VC) investment. While VC fun
 
 ### The Foundation is centralized
 
-The Ergo Foundation provides guidance in the early stages of the network, but its influence is transitional. As the network matures, the Foundation's role diminishes, paving the way for a fully community-driven ecosystem. For more information please see the [Ergo Foundation](ergo-foundation.md) and [Treasury](ef-treasury.md) pages.
+The Ergo Foundation provided guidance in the early stages of the network, but its influence is transitional. As the network matures, the Foundation's role diminishes, paving the way for a fully community-driven ecosystem. For more information please see the [Ergo Foundation](ergo-foundation.md), [Treasury](ef-treasury.md), and [Future](ef-future.md) pages.
 
 ### Ergo could not operate without its foundation
 
-The Ergo Foundation undoubtedly plays a pivotal role in shaping the trajectory and fostering the development of Ergo. However, as the ERG token ecosystem evolves, it's steadily becoming more decentralized and less dependent on the Foundation or any singular centralized authority. Emblematic of its decentralized ethos, Ergo operates as an open-source, permissionless platform. This ensures that developers, innovators, and enthusiasts can introduce applications or tokens without seeking explicit endorsement or intervention from the Foundation.
+The Ergo Foundation played an important role in bootstrapping Ergo. However, as the ERG ecosystem evolves, it is becoming more decentralized and less dependent on the Foundation or any singular centralized authority. Ergo operates as an open-source, permissionless platform. Developers, innovators, and enthusiasts can introduce applications or tokens without seeking explicit endorsement or intervention from the Foundation.
 
 The development momentum would persist, and mechanisms like storage rent would enable miners to access and utilize the Foundation's funds. Many entities, encompassing mining pools, exchanges, dApps, and even teams like Spectrum Labs and ErgoPad, actively maintain the network nodes and contribute to its vitality.
 
@@ -106,7 +106,7 @@ Ergo's status under the SEC's regulations is a gray area, as is the case with ma
 
 ### The Foundation's actions are causing price depreciation
 
-The Ergo Foundation's monthly expenses are a minuscule portion of the total trading volume, equivalent to the mining rewards of 1-2 days. Most of these expenses are paid in ERG, meaning there are minimal direct liquidations. The recipients of these payments have the freedom to manage them as they see fit. It's worth noting that our developers often work for compensation below the market rate. For a broader breakdown of the Foundation's resources and role, refer to the [Treasury](ef-treasury.md) and [Foundation](ergo-foundation.md) pages.
+Historical Foundation expenses were small relative to trading volume, and many were paid in ERG rather than direct market liquidation. Recipients managed payments independently. For a broader breakdown of the Foundation's resources and role, refer to the [Treasury](ef-treasury.md), [Votes](ef-votes.md), and [Foundation](ergo-foundation.md) pages.
 
 ## Ecosystem
 

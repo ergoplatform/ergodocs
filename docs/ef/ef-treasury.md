@@ -5,6 +5,8 @@ tags:
   - Treasury
   - Funding
   - Transparency
+owner: docs
+last_reviewed: 2026-06-15
 ---
 
 # Ergo Foundation Treasury
@@ -17,6 +19,8 @@ After subtracting the 1,782,615 ERG exchanged for EFYT, the Ergo Foundation was 
 
 A significant portion of this treasury has been withdrawn to fund protocol development, ecosystem infrastructure, market access, events, marketing, and other community work. The charts and tables below summarise those withdrawals and the Foundation's remaining reported holdings.
 
+Quick links: [Current Holdings](#current-holdings) · [Withdrawals](#treasury-withdrawals-and-spending) · [Breakdowns](#documented-accounting-breakdowns) · [Salaries](#salaries)
+
 ```mermaid
 pie title Treasury Withdrawals by Team (%)
     "EF" : 6.6
@@ -24,15 +28,22 @@ pie title Treasury Withdrawals by Team (%)
     "Marketing & Editorial" : 12.6
     "Development" : 42.7
 ```
+Quick view of withdrawals by major category during the documented accounting period.
+
 *(Please note that this summary is based on EF accounting records and, where available, information from EF Forum discussions and voting records. Before the current accounting records, accounting was managed by kushti, and a complete transaction-level record is not available. Most significant transactions should be reflected here.)*
 
-See [More Summary Data](#more-summary-data) for additional category and yearly breakdowns.
+See [Documented Accounting Breakdowns](#documented-accounting-breakdowns) for additional category and yearly breakdowns.
 
 For more information on Ergo's emission schedule, tokenomics and allocation, visit the [emission](emission.md) section.
 
+/// details | How to read this page
+     {type: info}
+`Current Holdings` shows the latest reported balances. `Treasury Funds Withdrawn` tracks assets leaving EF-controlled wallets. `Documented Accounting Breakdowns` categorises the accounting records available for the period where the Foundation maintained detailed records. Figures are indicative and not audited.
+///
+
 ## Current Holdings
 
-The latest reported treasury balances are:
+The latest reported treasury balances are below. Balances and indicative prices last updated: June 2026.
 
 | Asset | Indicative Amount | Indicative US$ Price | Indicative Total US$ Value |
 |-------|------------------|----------------------|----------------------------|
@@ -84,6 +95,8 @@ These tables are rough guides using manual calculations of asset prices at the t
 
 ### Treasury Funds Withdrawn
 
+This table tracks assets leaving EF-controlled wallets. It is not the same as categorized accounting spend.
+
 | **Year**  | **ERG**      | **SPF**       | **BTC**     | **Total USD Value** |
 |-----------|--------------|---------------|-------------|-------------------|
 | 2026      | 20,958       | 0             | 0.12985400  | $17,144.07        |
@@ -126,9 +139,11 @@ In addition to the direct ERG spending above in 2023,
 - Totaling 1,622,000 SPF 
 -->
 
-## More Summary Data
+## Documented Accounting Breakdowns
 
 The charts and category tables below are based on the accounting period where the Ergo Foundation controlled and maintained detailed records. They do not reconcile to the full `Treasury Funds Withdrawn` total because earlier accounting records are incomplete or missing. Treat these breakdowns as best-effort summaries for the documented accounting period, not audited full-history totals.
+
+The next section breaks the documented USD accounting records down by team, sub-team, end product, and salary distribution.
 
 ![Treasury spending by team and year](stacked_bar.png)
 
@@ -149,7 +164,7 @@ The charts and category tables below are based on the accounting period where th
 
 ![USD withdrawals by sub-team](sub_team.png)
 
-### Split by End Product
+### Development and Ecosystem Spend by End Product
 
 This is not an exact science: when someone worked across multiple products or workstreams, their time has been estimated and split between the end products.
 
@@ -220,15 +235,23 @@ Several contributors have received monthly salaries or rewards for work on the E
 
 ### Salary Distribution by Contributor
 
-This chart shows the total paid to each person against the years they worked or contributed to Ergo. 
+This chart shows the total paid to each person against the years they worked or contributed to Ergo.
+
 ![Salary distribution by amount paid and years worked](salaries_box_chart.png)
 
 /// details | Roles
-     {type: info, open: true}
+     {type: info}
 More information on each of these roles can be seen on [this page](ef-scope.md#key-areas-of-focus).
 ///
 
 /// details | The Ergo Foundation's Future
-     {type: info, open: true}
+     {type: info}
 Please see [this page](ef-future.md) for more information on the long-term goals of the Foundation.
 ///
+
+## Related
+
+- [About](ergo-foundation.md)
+- [Votes](ef-votes.md)
+- [Scope](ef-scope.md)
+- [Future](ef-future.md)

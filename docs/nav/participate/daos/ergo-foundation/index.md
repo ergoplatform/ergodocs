@@ -4,21 +4,19 @@ tags:
   - ergo-foundation
   - navigation
 owner: docs
-last_reviewed: '2026-05-31'
+last_reviewed: 2026-06-15
 ---
 
 # Ergo Foundation
 
-Ergo Foundation groups related pages inside Participate. Foundation history, governance, treasury, and context pages.
-
-The table links to the next useful page or sub-hub, keeping the sidebar staged instead of fully expanded.
+Ergo Foundation pages cover the Foundation's role, treasury, spending history, votes, scope, and transition toward community-led structures.
 
 ## Map
 
 | Page | What you'll find |
 | --- | --- |
-| [About](ergo-foundation.md) | This section provides a comprehensive overview of the Ergo Foundation, aiming to maintain transparency. |
-| [Future](ef-future.md) | Ergo Foundation direction, context, and future work. |
-| [Scope](ef-scope.md) | The Ergo Foundation is a non-profit organization dedicated to advancing the adoption and development of the Ergo Platform. |
-| [Treasury](ef-treasury.md) | The Ergo Foundation initially received an allocation of 4,330,776 ERG, which is equivalent to 4.43% of the total supply. |
-| [Votes](ef-votes.md) | The Ergo Foundation members and officers discuss proposals before putting them to a formal vote on the ergoforum, passed with a majority of voting members. |
+| [About](ergo-foundation.md) | Foundation overview, members, officers, advisors, and operating context. |
+| [Treasury](ef-treasury.md) | Current holdings, treasury withdrawals, accounting-period breakdowns, exchange/MM costs, and salary summaries. |
+| [Votes](ef-votes.md) | Historical Foundation votes, including treasury-control decisions and governance proposals. |
+| [Future](ef-future.md) | Current transition, signatory role, community handover, and long-term direction. |
+| [Scope](ef-scope.md) | Historical and current areas of responsibility: infrastructure, education, development, outreach, grants, audits, and exchanges. |
