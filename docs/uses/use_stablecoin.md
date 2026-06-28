@@ -4,8 +4,15 @@ tags:
   - Stablecoin
   - Dexy
 owner: docs
-last_reviewed: '2026-05-29'
+last_reviewed: '2026-06-27'
 ia_status: directory
+source_repos:
+  - repo: cannonQ/ergo-use-x402
+    branch: master
+    paths:
+      - README.md
+source_of_truth:
+  - https://github.com/cannonQ/ergo-use-x402
 ---
 # USE (USD stablecoin)
 
@@ -32,6 +39,7 @@ Centralized USD-pegged stablecoins anchor most on-chain liquidity and activity. 
 - `Jan 7` to `Jan 14`: USE analytics went live at [Crux Finance](crux.md), Binance Chain `USE/USDT` liquidity was deployed, and the USE pegged-asset adapter landed in DefiLlama.
 - `Jan 6`: the node wallet had a USE decimal display bug open as [issue #2289](https://github.com/ergoplatform/ergo/issues/2289).
 - `Apr 5`: the USE buyback box moved to a new contract address and the self-output proposition check was fixed, so UIs need the updated buyback contract or NFT token ID lookup.
+- `Jun 22`: [ergo-use-x402](ergo-use-x402.md) published x402 and Agentic Commerce Protocol payment examples for USE on Ergo. The example flow uses Babel fees, so a payer can spend USE without holding ERG for the miner fee.
 - Caveat: some explorers assume a single mint output and can report the wrong emission amount when minting spans multiple output boxes.
 
 StableMiner is an open-source, locally hosted platform for minting Dexy / USE stablecoins directly from an Ergo node wallet without using an exchange. Auto-swap support is planned after the initial launch.
@@ -39,6 +47,8 @@ StableMiner is an open-source, locally hosted platform for minting Dexy / USE st
 The Binance Chain deployment used a `USE/USDT` concentrated-liquidity pool for cross-chain stablecoin liquidity. The DefiLlama work added USE as a pegged asset, while DexyGold work was being prepared separately.
 
 The buyback-contract update matters for integrations: UIs should not hard-code only the old address. Integrations should update to the new contract address or resolve the buyback box by NFT token ID lookup.
+
+The x402 example is an integration pattern rather than a USE protocol rule. It includes a stateless facilitator, ACP merchant, Nautilus path, ErgoPay path, and confirmed mainnet examples, but integrators should still treat mempool acceptance as non-final and monitor Babel-box liquidity.
 
 ---
 

@@ -12,7 +12,7 @@ tags:
   - BIP39
   - BIP32
 owner: docs
-last_reviewed: 2026-05-26
+last_reviewed: 2026-06-27
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -22,6 +22,7 @@ source_repos:
       - src/main/scala/org/ergoplatform/http/api/WalletApiRoute.scala
       - src/main/scala/org/ergoplatform/http/api/WalletApiOperations.scala
 source_of_truth:
+  - https://github.com/ergoplatform/ergo/commit/d4ed37891cec
   - https://github.com/ergoplatform/ergo/tree/master/ergo-wallet/src/main/scala/org/ergoplatform/wallet
   - https://github.com/ergoplatform/ergo/tree/master/src/main/scala/org/ergoplatform/nodeView/wallet
   - https://github.com/ergoplatform/ergo/tree/master/src/main/scala/org/ergoplatform/http/api/WalletApiRoute.scala
@@ -82,5 +83,7 @@ Use `/wallet/balances/withUnconfirmed` when you need a balance that also account
 If your wallet has a non-zero balance, you can initiate transactions (e.g., sending ERG) using endpoints like `/wallet/payment/send` via the Swagger UI or other API clients.
 
 Wallet box queries such as `/wallet/boxes` and `/wallet/boxes/unspent` support `minConfirmations=-1` when you want mempool boxes considered. For confirmed-only views, use a non-negative confirmation count.
+
+Recent transaction-builder code validates supplied input IDs before constructing unsigned inputs. Input IDs must be valid hex strings of the expected modifier-ID length; malformed or too-short IDs are rejected instead of being silently dropped.
 
 ![send ergs](https://user-images.githubusercontent.com/23208922/71129066-a28c1080-2214-11ea-9806-7d768059980a.png)

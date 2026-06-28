@@ -8,7 +8,7 @@ tags:
   - Networking
   - Technical
 owner: docs
-last_reviewed: 2026-06-09
+last_reviewed: 2026-06-27
 source_repos:
   - repo: ergoplatform/ergo
     branch: v6.0.3
@@ -17,6 +17,7 @@ source_repos:
       - ergo-core/src/main/scala/org/ergoplatform/validation/ModifierError.scala
       - ergo-core/src/main/scala/org/ergoplatform/settings/ValidationRules.scala
 source_of_truth:
+  - https://github.com/ergoplatform/ergo/commit/ffdf9f4de13f
   - https://github.com/ergoplatform/ergo/pull/2305
 ---
 
@@ -92,7 +93,7 @@ The transition from the Requested state to the Received state involves the follo
 3. **Handling Invalid Modifiers:**
     - If the received data fails parsing or initial validation (e.g., incorrect format, size limits exceeded), the NVS penalizes the sending peer and transitions the modifier's state to **Invalid**.
     - If the peer provided syntactically correct but semantically incorrect modifier bytes (which might fail later validation stages), the NVS penalizes the peer, and the modifier might revert to **Unknown** or be marked **Invalid** depending on the failure type.
-    - If header validation finds that the parent header is missing, Reference Client 6.0.3 and later treat that as a recoverable missing-dependency case. The synchronizer can request the missing parent header again and fall back to equal or older peers after repeated failed attempts.
+    - If header validation finds that the parent header is missing, Reference Client 6.0.3 and later treat that as a recoverable missing-dependency case. The synchronizer can request the missing parent header again and fall back to equal or older peers after repeated failed attempts. Current code names this retry cutoff `FallbackToEqualPeerThreshold` and sets it to `5` failed delivery checks.
 
 4. **Processing Valid Modifiers:** If the modifier passes initial parsing and validation, the NVS sends it to the NodeViewHolder (NVH) for further processing and transitions the modifier's state to **Received**.
 

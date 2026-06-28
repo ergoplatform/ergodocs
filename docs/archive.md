@@ -10,7 +10,6 @@ This file contains projects from the Awesome Ergo list that are currently inacti
 
 ## 🆔 Identity & DNS
 
-- **[Ergonames](https://ergonames.com/)** – decentralized naming service *(Paused)*. [GitHub Org](https://github.com/ergonames) | [Contracts](https://github.com/ergonames/ergonames/tree/master/src/main/scala) | [Rust SDK](https://github.com/ergonames/sdk/tree/master/rust)
 - [Bitdomains](https://bitdomains.org/) – decentralized domain name system. [Contracts](https://github.com/bitdomains/contracts) *(Paused)*
 
 ## 🎮 Gaming & Metaverse

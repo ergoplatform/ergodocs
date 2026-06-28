@@ -384,6 +384,7 @@
 ### 🏦 Stablecoins & Lending <a id="stablecoins--lending"></a>
 
 - **[SigmaUSD](https://sigmausd.io/)** – algorithmic stablecoin (AgeUSD) *(Live)*. [EIP-15](https://github.com/ergoplatform/eips/blob/master/eip-0015.md) | [Bot](https://github.com/anon-real/sigma-usd) | [Spec](https://github.com/Emurgo/age-usd) | [Telegram](https://t.me/SigmaUSD) *(Active)*
+- [ergo-use-x402](https://github.com/cannonQ/ergo-use-x402) – x402 and Agentic Commerce Protocol payment examples for USE on Ergo using Babel fees. [Docs](ergo-use-x402.md) *(Experimental)*
 - [Duckpools](https://duckpools.io/) – lending platform *(Live)*. [GitHub Org](https://github.com/duckpools) | [Contracts](https://github.com/duckpools/lend-protocol-contracts/tree/main/contracts) | [Option Pools](https://github.com/duckpools/off-chain-bot/tree/optionPools/optionPools) | [Telegram](https://t.me/duckpools_chat) *(Active)*
 - [EXLE (ErgoLend)](https://ergolend.org/) – lending platform *(Live)*. [Contracts/Edge Lib](https://github.com/Ergo-Lend/edge) | [Telegram](https://t.me/ErgoLend) *(Active)*
 - [SigmaFi](https://sigmafi.org/) – DeFi yield strategies *(Live)*. [UI](https://github.com/capt-nemo429/sigmafi-ui) | [Contracts](https://github.com/K-Singh/Sigma-Finance) | [Telegram](https://t.me/sigmafi) *(Active)*
@@ -397,7 +398,7 @@
 
 ### 🆔 Identity & DNS <a id="identity--dns"></a>
 
-- [ErgoNames](https://ergonames.com/) – decentralized domain name service *(Live)*. [API Repo](https://github.com/ergonames/ErgoNames.Api) *(Active)*
+- [ErgoNames](https://ergonames.io/) – human-readable Ergo wallet names, currently in public beta with Nautilus registration and beta badge NFTs. [GitHub Org](https://github.com/ergonames) *(Active)*
 - [Ergo Reputation System](https://reputation-systems.github.io/) – on-chain reputation system *(Beta)*. [GitHub Org](https://github.com/sigma-rps) | [Library](https://github.com/reputation-systems/reputation-system-lib) | [Forum](https://www.ergoforum.org/t/reputation-system/4782) *(Active)*
 - [ErgoDNS Frontend (ErgoHack)](https://github.com/jaythiya/ergodns-frontend) – Frontend concept for Ergo domain names. [`JS/TS`] *(Inactive/Concept)*
 

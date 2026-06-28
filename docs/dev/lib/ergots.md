@@ -7,7 +7,7 @@ tags:
   - NiPoPoW
   - libraries
 owner: docs
-last_reviewed: 2026-06-08
+last_reviewed: 2026-06-27
 source_repos:
   - repo: mwaddip/ergots
     branch: master
@@ -29,9 +29,13 @@ The repository is organized as a workspace:
 - `@ergots/scorex`: Scorex wire codecs, block header types, digest helpers, and Autolykos v2 proof-of-work verification.
 - `@ergots/nipopow`: NiPoPoW proof parsing, serialization, verification, comparison, and P2P envelope codecs.
 - `@ergots/avltree`: Batch AVL+ authenticated-tree verification.
-- `@ergots/ergoscript`: ErgoTree parsing, serialization, partial evaluation, sigma-protocol verification, AVL+ integration, and method-handler work. Version `0.3.0` keeps the public signatures unchanged and adds v5 `GroupElement.negate`, `Coll.updated`, and `Coll.updateMany` evaluator handlers, plus related evaluator error codes.
+- `@ergots/ergoscript`: ErgoTree parsing, serialization, partial evaluation, sigma-protocol verification, AVL+ integration, and method-handler work.
 
-Recent `@ergots/ergoscript` work also tightened JVM-alignment and input handling: mixed-width numeric operations, flat N-ary tuple rejection, per-item JIT costing, `Apply` lambda binding costs, `SOption.map`, wire-width bounds for `SValue`/`SBox`, and malformed address-size guards. The package export maps now put TypeScript `types` first, run a build guard before publish, and declare `sideEffects: false` for downstream tree shaking.
+The upstream README lists published package versions as `@ergots/scorex` `0.3.0`, `@ergots/nipopow` `0.2.0`, `@ergots/avltree` `0.2.0`, and `@ergots/ergoscript` `0.3.0`; later repository release commits include `@ergots/ergoscript` `0.5.0` and `@ergots/transaction` `0.1.0`. Check npm and the repository before pinning a package version in an application.
+
+Recent work tightened JVM-alignment and input handling: context-extension ordering, typed context-extension keys, `Context.lastBlockUtxoRootHash`, header/pre-header accessors, v6 type gates, option tags, SBox/ErgoTree deserialization, box equality, collection equality costing, `atLeast` children caps, static signatures for selected methods, and `estimateCryptoCost` for JVM-faithful sigma-verification cost estimates. The README reports `7028` tests passing across packages under both `node` and `jsdom`.
+
+Important caveat: upstream still describes `ergots` as not yet a consensus-complete kernel. Use it for browser-side research, differential testing, and verification experiments; combine it with sigma-rust or a JVM node before relying on it for binding consensus decisions.
 
 ## When To Use It
 

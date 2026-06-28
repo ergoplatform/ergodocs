@@ -15,6 +15,7 @@ Use this page when you already have a wallet and want to do something on Ergo.
 | Swap tokens | [DEX Overview](dex.md) | [Spectrum](spectrum.md), [P2P Trading](p2p-trading.md) |
 | Use stablecoins | [Stablecoins Overview](stablecoins.md) | [SigmaUSD](sigmausd.md), [Dexy](dexy.md), [Gluon](gluon.md), [USE](use_stablecoin.md) |
 | Use Rosen Bridge | [Rosen Bridge](rosen.md) | [Transfer Flows](token-transfer-flows.md), [Troubleshooting](rosen-troubleshooting.md) |
+| Register a wallet name | [ErgoNames](ergonames.md) | Public beta with Nautilus registration at [ergonames.io](https://ergonames.io/) |
 | Mint or trade NFTs | [NFTs Overview](nft.md) | [Mint an NFT](create.md), [ErgoAuctionHouse](ergo-auctions.md), [SkyHarbor](skyharbor.md) |
 | Earn yield or lend | [Yield Farming](yield.md) | [Lending Overview](lending.md), [duckpools](duckpools.md), [SigmaFi](sigmafi.md), [Lending Pools](lending-pools.md) |
 | Use privacy tools | [Privacy Guide](privacy-guide.md) | [ErgoMixer](ergomixer.md), [SigmaJoin](sigmajoin.md), [Stealth Addresses](stealth-address.md) |

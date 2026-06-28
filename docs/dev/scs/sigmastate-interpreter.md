@@ -6,7 +6,7 @@ tags:
   - Compiler
   - Interpreter
 owner: docs
-last_reviewed: 2026-05-29
+last_reviewed: 2026-06-27
 source_repos:
   - repo: ergoplatform/sigmastate-interpreter
     branch: develop
@@ -21,6 +21,7 @@ source_repos:
     paths:
       - ergo-wallet
 source_of_truth:
+  - https://github.com/ergoplatform/sigmastate-interpreter/releases/tag/v6.0.5
   - https://github.com/ergoplatform/sigmastate-interpreter/tree/develop/README.md
   - https://github.com/ergoplatform/sigmastate-interpreter/tree/develop/docs/sigma-dsl.md
   - https://github.com/ergoplatform/sigmastate-interpreter/tree/develop/interpreter/shared/src/main/scala/sigmastate/interpreter/Interpreter.scala
@@ -33,12 +34,14 @@ source_of_truth:
 
 ## Overview
 
-The [sigmastate-interpreter](https://github.com/ScorexFoundation/sigmastate-interpreter) repository contains the core implementations of the ErgoScript compiler and ErgoTree Interpreter. These tools are part of a broader framework that supports a family of Sigma-protocol based authentication languages, collectively known as the [*Sigma Language*](sigma-lang.md).
+The [sigmastate-interpreter](https://github.com/ergoplatform/sigmastate-interpreter) repository contains the core implementations of the ErgoScript compiler and ErgoTree Interpreter. These tools are part of a broader framework that supports a family of Sigma-protocol based authentication languages, collectively known as the [*Sigma Language*](sigma-lang.md).
 
 This library is integral to the operation of the [Ergo Node](https://github.com/ergoplatform/ergo) and the [ergo-wallet](https://github.com/ergoplatform/ergo/tree/master/ergo-wallet). It serves as the backbone for processing and validating ErgoScript contracts, ensuring that transactions comply with the defined cryptographic conditions.
 
 ## Recent updates
 
+- `Jun 24`: [Sigma SDK v6.0.5](https://github.com/ergoplatform/sigmastate-interpreter/releases/tag/v6.0.5) was released.
+- v6.0.5 added regression coverage for `ByIndex` upcasts with non-`Int` indexes, serializer benchmarks, cross-platform `Exponentiate` equivalence checks, subproject module names, TaggedVariable wire-format pinning with Scala-type deprecation, and rejection of negative-id variables in the `ContextExtension` deserializer.
 - `May 28`: [Sigma SDK v6.0.4](https://github.com/ergoplatform/sigmastate-interpreter/releases/tag/v6.0.4) was released.
 - v6.0.4 added compiler support for `None` expressions, including cases such as `val x: Option[Int] = None`, and included dependency updates and additional tests.
 - `Apr 14`: [SigmaState interpreter v6.0.3](https://github.com/ergoplatform/sigmastate-interpreter/releases/tag/v6.0.3) and [sigmastate-js 0.6.1](https://www.npmjs.com/package/sigmastate-js) were released.

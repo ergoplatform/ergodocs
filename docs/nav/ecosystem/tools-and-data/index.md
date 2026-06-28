@@ -18,6 +18,7 @@ The table links to the next useful page or sub-hub, keeping the sidebar staged i
 | Page | What you'll find |
 | --- | --- |
 | [Celaut](celaut.md) | Decentralized runtime for autonomous services and AI agents. |
+| [ErgoNames](ergonames.md) | Public beta for human-readable Ergo wallet names. |
 | [Reputation System](reputation-system.md) | On-chain reputation layer used by Celaut-style services. |
 | [Celaut vs Netnotes](celaut_v_netnotes.md) | Comparison of decentralized service execution and personal automation. |
 | [Data & Knowledge](data-and-knowledge/index.md) | Data, discovery, knowledge-base, and analytics tools. |

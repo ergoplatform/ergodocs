@@ -1,12 +1,13 @@
 ---
 owner: docs
-last_reviewed: 2026-06-08
+last_reviewed: 2026-06-27
 source_repos:
   - repo: ScorexFoundation/sigmastate-interpreter
     branch: develop
     paths:
       - interpreter/shared/src/test/scala/sigmastate/crypto/SigningSpecification.scala
 source_of_truth:
+  - https://github.com/ergoplatform/sigmastate-interpreter/releases/tag/v6.0.5
   - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/interpreter/shared/src/test/scala/sigmastate/crypto/SigningSpecification.scala
 ---
 
@@ -196,6 +197,8 @@ Need help figuring out where to start developing? This [introduction to Mosaik](
 ::/cards::
 
 ## Libraries
+
+Current Sigma SDK releases are published from the `ergoplatform/sigmastate-interpreter` repository. The latest checked release, [Sigma SDK v6.0.5](https://github.com/ergoplatform/sigmastate-interpreter/releases/tag/v6.0.5), focuses on interpreter/compiler correctness, serialization benchmarks, TaggedVariable wire-format pinning, and stricter `ContextExtension` deserialization.
 
 ::cards::
 

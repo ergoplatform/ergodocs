@@ -22,6 +22,7 @@ Use this page to find the right part of the Ergo ecosystem.
 | Stablecoins | [Stablecoins](stablecoins.md) | [SigmaUSD](sigmausd.md), [Dexy](dexy.md), [Gluon](gluon.md), [USE](use_stablecoin.md) |
 | Bridges | [Rosen Bridge](rosen.md) | [Transfer Flows](token-transfer-flows.md), [Security Model](security-model.md), [Watcher](watcher.md), [Guard](guard.md) |
 | NFTs | [NFT Overview](nft.md) | [ErgoAuctions](ergo-auctions.md), [SkyHarbor](skyharbor.md), [Lilium](lilium.md), [Minting](create.md) |
+| Names and identity | [ErgoNames](ergonames.md) | Human-readable wallet names, Nautilus beta registration, identity and reputation projects |
 | Privacy | [Privacy Guide](privacy-guide.md) | [ErgoMixer](ergomixer.md), [SigmaJoin](sigmajoin.md), [Stealth Addresses](stealth-address.md), [SCypher](scypher.md) |
 | Oracles | [Oracles](oracles.md) | Oracle pools, bootstrap flow |
 | Games and metaverse | [Gaming](gaming.md) | [BlitzTCG](blitz.md), [Cyberverse](cyberverse.md), [NFT Races](nft-races.md), [SigmaQuest](sigmaquest.md) |

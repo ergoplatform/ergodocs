@@ -2,7 +2,7 @@
 tags:
   - Compiler
 owner: docs
-last_reviewed: 2026-06-08
+last_reviewed: 2026-06-27
 source_repos:
   - repo: ScorexFoundation/sigmastate-interpreter
     branch: develop
@@ -29,6 +29,7 @@ source_repos:
       - ergotree-ir/src/serialization.rs
       - ergotree-ir/src/type_check.rs
 source_of_truth:
+  - https://github.com/ergoplatform/sigmastate-interpreter/releases/tag/v6.0.5
   - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/docs/ergoscript-compiler.md
   - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/interpreter/shared/src/main/scala/org/ergoplatform/SigmaPropProver.scala
   - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/parsers/shared/src/main/scala/sigmastate/lang/Lexer.scala
@@ -140,6 +141,7 @@ Here’s a breakdown of each phase:
 - **In `sigmastate-interpreter`**: Type inference follows Scala's type system rules, ensuring that all expressions are type-safe.
   - **Location**: [`sc/shared/src/main/scala/sigma/compiler/phases/SigmaTyper.scala`](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/sc/shared/src/main/scala/sigma/compiler/phases/SigmaTyper.scala)
   - **Recent fix**: Sigma SDK `v6.0.4` added compiler support for `None` expressions where an expected `Option[T]` type is available, such as `val x: Option[Int] = None`.
+  - **Recent release**: Sigma SDK `v6.0.5` added regression coverage around `ByIndex` upcasts, pinned TaggedVariable wire format behavior, and rejected negative-id variables during `ContextExtension` deserialization.
 
 ## 6. Graph Building
 

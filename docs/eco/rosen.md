@@ -7,7 +7,7 @@ tags:
   - dApp
   - dApp-Beta
 owner: docs
-last_reviewed: 2026-05-27
+last_reviewed: 2026-06-27
 source_repos:
   - repo: rosen-bridge/watcher
     branch: master
@@ -50,6 +50,8 @@ source_of_truth:
   - https://rosen.tech
   - https://github.com/rosen-bridge/watcher/releases/tag/6.2.1
   - https://github.com/rosen-bridge/guard-service/releases/tag/9.1.1
+  - https://github.com/rosen-bridge/ui/releases/tag/guard-app-4.3.0
+  - https://github.com/rosen-bridge/ui/releases/tag/watcher-app-4.3.0
   - https://github.com/rosen-bridge/ui/releases/tag/rosen-service-4.3.5
   - https://github.com/rosen-bridge/rosen-sdk
   - https://github.com/rosen-bridge/rosenet
@@ -102,6 +104,7 @@ Please see [this video](https://www.youtube.com/watch?v=Xsiy-yPJQ6w) for a visua
 - `Feb 11` to `Apr 22`: Firo and Handshake integrations moved through watcher, guard-service, and rosen-service updates.
 - Watcher releases have moved through [6.2.1](https://github.com/rosen-bridge/watcher/releases/tag/6.2.1), including a Bitcoin Runes observation fix for Unisat pagination.
 - Guard service releases have moved through [9.1.1](https://github.com/rosen-bridge/guard-service/releases/tag/9.1.1), with dependency updates for Bitcoin Runes RPC support.
+- Guard and watcher apps have moved through [guard-app-4.3.0](https://github.com/rosen-bridge/ui/releases/tag/guard-app-4.3.0) and [watcher-app-4.3.0](https://github.com/rosen-bridge/ui/releases/tag/watcher-app-4.3.0), aligning app layouts with the newer UI Kit foundation and fixing/refreshing revenue, lock, unlock, and withdraw views.
 - Rosen UI/service releases have moved through `rosen-service-4.3.5` in the [Rosen UI repository](https://github.com/rosen-bridge/ui/releases/tag/rosen-service-4.3.5).
 - Rosen shared packages also moved through [rosen-sdk](https://github.com/rosen-bridge/rosen-sdk), [rosenet](https://github.com/rosen-bridge/rosenet), and [sign-protocols](https://github.com/rosen-bridge/sign-protocols) updates. The older [rosen-chains](https://github.com/rosen-bridge/rosen-chains) package repository is archived; chain packages moved into guard-service.
 - [network-client](https://github.com/rosen-bridge/network-client) is the Rosen client-library monorepo used by `@rosen-clients/*` packages.

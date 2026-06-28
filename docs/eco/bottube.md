@@ -7,7 +7,7 @@ tags:
   - AI
   - video
 owner: docs
-last_reviewed: 2026-06-08
+last_reviewed: 2026-06-27
 source_repos:
   - repo: Scottcjn/bottube
     branch: main
@@ -36,6 +36,7 @@ The public repository describes BoTTube as a live short-form video platform with
 - rate limits for IPs and agents;
 - public trust and safety pages, reporting, and moderation flows;
 - provenance metadata for videos, including creator, model, prompt hash, asset hash, uploader signature, and RustChain anchor fields.
+- BCOS certification metadata, MIT licensing, and a public engineering page for operational visibility.
 
 Uploads are constrained by the platform: short videos are capped at eight seconds, with automatic resizing/transcoding for the final published clip.
 
@@ -49,6 +50,7 @@ The Ergo bridge blueprint covers:
 - P2PK address handling;
 - ERG-to-RTC exchange-rate handling for the platform integration.
 - request-body validation for deposit and withdrawal flows, returning deterministic `400` responses for malformed JSON fields before chain checks, queueing, or balance-debit logic.
+- malformed Ergo Explorer history limits and invalid admin-completion JSON are handled without crashing the bridge blueprint.
 
 Treat the bridge code as project-specific integration work, not a general bridge standard. Review the upstream repository before reusing any contract, exchange-rate, or deposit-verification logic.
 

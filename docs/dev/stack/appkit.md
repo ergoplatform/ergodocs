@@ -25,6 +25,7 @@ source_of_truth:
 
 - `Jun 7`: [AppKit v6.0.0](https://github.com/ergoplatform/ergo-appkit/releases/tag/v6.0.0) was released on top of SigmaSDK 6.0.x.
 - The release includes the [PR #253](https://github.com/ergoplatform/ergo-appkit/pull/253) EIP-50 upgrade work, Sigma 6.0 alignment, and prover-evaluated tests so contract tests can exercise newer Sigma features consistently.
+- AppKit 6 compiles Sigma 6 scripts as ErgoTree v3 when the context has `blockVersion >= 4`, while preserving the legacy v5 path for older contexts. Its Sigma 6 test coverage includes bitwise/shift operations, `serialize`, `deserializeTo`, `fromBigEndianBytes`, `startsWith`, lazy `getOrElse`, `Box.getReg`, `Header.checkPow`, unsigned-bigint operations, and context-extension conversion behavior.
 
 It is a thin wrapper around core components provided by the ErgoScript interpreter and Ergo protocol implementations which are written in Scala. It is published on [maven repository](https://mvnrepository.com/artifact/org.ergoplatform/ergo-appkit) and cross-compiled to both Java 7 and Java 8+ jars.
 

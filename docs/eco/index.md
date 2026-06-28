@@ -20,7 +20,7 @@ For ordinary wallet tasks, start with [Using Ergo](using-ergo-intermediate.md). 
 | Governance & Community | [Paideia](paideia.md) | DAO tooling, raffles, community coordination |
 | Privacy | [ErgoMixer](ergomixer.md) | Mixers and privacy-preserving tools |
 | NFTs & Games | [NFTs](nft.md) | NFT markets, games, prompts, collectibles |
-| Tools & Data | [Ergo Knowledge Base](ergo-knowledge-base.md) | Data tools, utilities, knowledge bases, app tooling |
+| Tools & Data | [Ergo Knowledge Base](ergo-knowledge-base.md) | Data tools, utilities, names/identity, knowledge bases, app tooling |
 
 ## Directory
 

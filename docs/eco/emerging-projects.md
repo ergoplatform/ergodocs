@@ -7,7 +7,7 @@ tags:
   - tooling
   - community
 owner: docs
-last_reviewed: 2026-06-08
+last_reviewed: 2026-06-27
 ia_status: directory
 source_repos:
   - repo: Scottcjn/bottube
@@ -48,6 +48,10 @@ source_repos:
     branch: main
     paths:
       - README.md
+  - repo: cannonQ/ergo-use-x402
+    branch: master
+    paths:
+      - README.md
 source_of_truth:
   - https://github.com/Scottcjn/bottube
   - https://www.bottube.ai
@@ -62,6 +66,7 @@ source_of_truth:
   - https://github.com/GitCircles/GitCircles-Roadmap
   - https://github.com/LEEKOHCHING/TabbyPOS-Introduction
   - https://github.com/moon-miner/SCypher-web
+  - https://github.com/cannonQ/ergo-use-x402
 ---
 
 # Emerging Ecosystem Projects
@@ -79,7 +84,7 @@ These projects are recent ecosystem additions verified against public repositori
 
 | Dedicated page | What it is | Status | Related surface |
 | --- | --- | --- | --- |
-| [BoTTube](bottube.md) | AI-native video platform with an Ergo bridge blueprint for deposit verification, request validation, and P2PK address handling. | Emerging | Applications and utilities. |
+| [BoTTube](bottube.md) | AI-native video platform with an Ergo bridge blueprint for deposit verification, request validation, P2PK address handling, and recent BCOS/error-handling work. | Emerging | Applications and utilities. |
 | [Ergo Agent SDK](ergo-agent-sdk.md) | Python SDK for giving autonomous agents controlled access to Ergo and its DeFi ecosystem. | Developer-facing | Developer frameworks. |
 | [Ergo Proxy](ergo-proxy.md) | Lightweight Ergo P2P relay proxy for forwarding peer messages without holding blockchain state. | Developer-facing | Node operations and P2P tooling. |
 | [Ergo Relay](ergo-relay.md) | Minimal transaction signing and P2P relay service. | Developer-facing | Node operations and transaction broadcast tooling. |
@@ -88,6 +93,7 @@ These projects are recent ecosystem additions verified against public repositori
 | [GitCircles](gitcircles.md) | Contribution-reward framework for open-source communities. | Emerging | Funding and contribution tooling. |
 | [TabbyPOS](tabbypos.md) | Web3 point-of-sale project for merchant crypto payments. | Emerging | Payments and merchant tooling. |
 | [SCypher](scypher.md) | BIP39 seed-cypher tooling with ErgoHack context. | Experimental | Wallet-adjacent security tooling. |
+| [ergo-use-x402](ergo-use-x402.md) | x402 and Agentic Commerce Protocol payment examples for USE on Ergo using Babel fees. | Experimental | Payments and agent commerce. |
 
 ## Covered Elsewhere
 

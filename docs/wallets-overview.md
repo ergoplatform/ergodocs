@@ -67,6 +67,7 @@ Vanity address tools search for addresses matching a chosen pattern. [ergo-vanit
 
 - [dApp Connector](dApp.md): browser dApp connection.
 - [ErgoPay](ergo-pay.md): link and QR payment flow.
+- [ErgoNames](ergonames.md): public beta for human-readable wallet names such as `~yourname`.
 - [ErgoAuth](ergoauth.md): authentication with wallet signatures.
 - [Message Signing](message-signing.md): verify actions and ownership.
 - [Proxy Payments](proxy.md): payment proxy contracts.

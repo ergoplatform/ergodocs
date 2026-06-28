@@ -202,6 +202,8 @@ jobs:
             echo "- Discord discussion leads: exported from general and development channels when mode is \`full\` or \`discord-only\`."
             echo "- Full watched-source scan: every docs page with \`source_repos\` metadata is scanned when mode is \`full\` or \`source-only\`. This is not limited to repositories mentioned on Discord."
             echo
+            echo "New repositories found only in Discord are listed here for manual triage. They do not create per-page Source Watch issues until a docs page is mapped to the repo with \`source_repos\` metadata."
+            echo
             echo "Reports are attached to the workflow artifact:"
             echo "$RUN_URL"
             echo

@@ -20,6 +20,7 @@ Use this page as the main map for Ergo applications, protocols, and project page
 | Bridge assets | [Rosen Bridge](rosen.md) | [Transfer flows](token-transfer-flows.md), [troubleshooting](rosen-troubleshooting.md), [watcher operations](watcher.md) |
 | Swap or trade | [Decentralized Exchanges](dex.md) | [Spectrum](spectrum.md), [Mew Finance](mew-finance.md), [P2P Trading](p2p-trading.md) |
 | Use stable assets | [Stablecoins](stablecoins.md) | [SigmaUSD](sigmausd.md), [Dexy](dexy.md), [Gluon](gluon.md) |
+| Register a wallet name | [ErgoNames](ergonames.md) | Human-readable `~name` wallet names, public beta, Nautilus registration |
 | Explore DeFi | [Lending](lending.md) | [duckpools](duckpools.md), [SigmaFi](sigmafi.md), [Options](financial-options.md) |
 | Mint or trade NFTs | [NFTs](nft.md) | [ErgoAuctionHouse](ergo-auctions.md), [SkyHarbor](skyharbor.md), [Lilium](lilium.md) |
 | Find games | [Gaming](gaming.md) | [BlitzTCG](blitz.md), [Cyberverse](cyberverse.md), [SigmaQuest](sigmaquest.md) |
@@ -43,7 +44,7 @@ Use this area for marketplaces, NFT standards, art projects, games, and metavers
 
 ### Applications & Utilities
 
-Use this area for wallets-adjacent tools, identity, messaging, analytics, commerce, knowledge bases, and early-stage applications. Start with the [Project Directory](project-directory.md) if you are browsing.
+Use this area for wallets-adjacent tools, identity, messaging, analytics, commerce, knowledge bases, and early-stage applications. Start with [ErgoNames](ergonames.md) for human-readable wallet names, or the [Project Directory](project-directory.md) if you are browsing.
 
 ### Privacy Solutions
 

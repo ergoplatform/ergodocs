@@ -6,7 +6,7 @@ tags:
   - Setup
   - Guide
 owner: docs
-last_reviewed: 2026-05-26
+last_reviewed: 2026-06-27
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -15,6 +15,8 @@ source_repos:
       - src/main/scala/org/ergoplatform/nodeView/
 source_of_truth:
   - https://github.com/ergoplatform/ergo
+  - https://github.com/ergoplatform/ergo/releases/tag/v6.0.3
+  - https://github.com/ergoplatform/ergo/releases/tag/v6.1.3
 ---
 
 # The Ergo Reference Client (Node)
@@ -44,6 +46,8 @@ sdk install java 11.0.13.8.1-amzn
 The minimum hardware requirements are approximately ~20GB of storage for the blockchain and ~8GB of RAM for handling the initial sync. Due to potentially intensive disk I/O during sync, we recommend having at least 4-6GB of RAM available for the node process and using a fast SSD. Running with the `-Xmx4G` flag on the JVM is advised.
 
 Current reference-node configuration advertises the 6.0.x app version. Mainnet protocol settings use protocol version 4 for the 6.0 interpreter feature set.
+
+The latest checked reference-client releases are [v6.0.3](https://github.com/ergoplatform/ergo/releases/tag/v6.0.3) and [v6.1.3](https://github.com/ergoplatform/ergo/releases/tag/v6.1.3), published on 2026-06-26. Both include the 6.0.3 maintenance line: public testnet parameter updates, custom public-key mining route support on testnet, extension-section validation coverage, mempool and synchronisation fixes, P2P logic improvements, wallet API documentation updates, custom-key mining candidate cache fixes, and transaction-builder input-ID validation.
 ////
 //// details | Modes of operation
     {type: notes, open: true}

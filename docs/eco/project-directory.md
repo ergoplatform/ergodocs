@@ -30,6 +30,7 @@ For external discovery, also check [Sigmaverse](sigmaverse.md).
 | [Hodlcoin](hodlcoin.md) | [Hodlcoin](https://app.hodlcoin.co.in/), [PhoenixFi](https://phoenixfi.app/) | Live, usable | 2024-03-14 |
 | [Auction Coin](auction-coin.md) | [auctioncoin.app](https://auctioncoin.app) | Live, usable | 2023-11-22 |
 | [Machina Finance](machina-finance.md) | [SDK](https://github.com/machinafi/sdk) | Active SDK alpha | 2026-05-09 |
+| [ergo-use-x402](ergo-use-x402.md) | [GitHub](https://github.com/cannonQ/ergo-use-x402) | Experimental | 2026-06-22 |
 | [ErgoDex](spectrum.md) | [spectrum.fi](https://spectrum.fi) | Infrastructure running | 2023-09-19 |
 | [Palmyra](palmyra.md) | [palmyra.app](https://palmyra.app/) | Live, usable | None verified |
 | [P2P Trading](p2p-trading.md) | - | Overview | None verified |
@@ -82,6 +83,7 @@ For external discovery, also check [Sigmaverse](sigmaverse.md).
 | [Ergo Agent SDK](ergo-agent-sdk.md) | - | Active | 2026-03-01 |
 | [Vanity GPU](vanity-gpu.md) | - | Active | 2026-01-05 |
 | [Ergomempool Visualizer](mempool-vis.md) | [ergomempool.com](https://ergomempool.com/) | Active | 2025-12-04 |
+| [ErgoNames](ergonames.md) | [ergonames.io](https://ergonames.io/) | Public beta | 2026-06-18 |
 | [ErgOne](ergone.md) | [app.ergone.io](https://app.ergone.io/) | Live, usable | 2024-09-02 |
 | [GuapSwap](guapswap.md) | [guapswap.org](https://guapswap.org/) | Live, usable | 2024-01-20 |
 | [CYTI](cyti.md) | - | Live, usable | 2023-05-20 |
@@ -138,7 +140,6 @@ For external discovery, also check [Sigmaverse](sigmaverse.md).
 | --- | --- | --- |
 | [SkyHarbor](skyharbor.md) | Paused | 2026-01-12 |
 | [Sigma'O](sigmao.md) | Paused | 2024-11-30 |
-| [ErgoNames](ergonames.md) | Paused | 2024-09-20 |
 | [Analog Ergo](analog-ergo.md) | Paused | 2024-06-02 |
 | [Ergopad](ergopad.md) | Paused | 2024-05-03 |
 | [Single Transaction Swap](single-tx-swap.md) | Paused | 2024-04-27 |

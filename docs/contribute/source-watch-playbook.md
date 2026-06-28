@@ -177,6 +177,8 @@ The workflow performs two separate weekly checks:
 - It exports the previous week of Discord messages from the general and development channels, then generates docs, ecosystem, and GitHub-links lead reports.
 - It runs Source Watch across every page with `source_repos` metadata for the same date window. This full watched-repo scan is not limited to repositories mentioned on Discord that week.
 
+Discord-only repositories are tracking-issue leads, not per-page issues. A new repo mentioned in chat will not be scanned by Source Watch until a relevant docs page adds that repo to `source_repos`.
+
 Manual mode options:
 
 - `full`: export Discord leads and scan all watched source repos.

@@ -3,12 +3,16 @@ set -euo pipefail
 
 cd "$(dirname "$0")"
 
-if [ ! -d ".venv" ]; then
-  echo "Missing .venv. Create it with: python -m venv .venv && .venv/bin/python -m pip install -r requirements.txt" >&2
-  exit 1
+if [ ! -x ".venv/bin/python" ]; then
+  if command -v python3 >/dev/null 2>&1; then
+    python3 -m venv .venv
+  else
+    python -m venv .venv
+  fi
 fi
 
-source ".venv/bin/activate"
+PIP_CACHE_DIR="${PIP_CACHE_DIR:-$PWD/.venv/pip-cache}" \
+  ".venv/bin/python" -m pip install --quiet --disable-pip-version-check -r requirements.txt
 
 if [ -f ".env" ]; then
   set -a
@@ -16,4 +20,4 @@ if [ -f ".env" ]; then
   set +a
 fi
 
-mkdocs serve
+exec ".venv/bin/python" -m mkdocs serve "$@"

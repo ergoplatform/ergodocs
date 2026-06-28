@@ -5,7 +5,7 @@ tags:
   - Asset Trading
   - dApp
 owner: docs
-last_reviewed: '2026-05-29'
+last_reviewed: '2026-06-27'
 source_repos:
   - repo: AcoSmrkas/mew-dex
     branch: master
@@ -50,10 +50,11 @@ Mew Finance is a decentralized finance (DeFi) platform operating on the Ergo Blo
 | Category | DEX, marketplace, community DeFi tools. |
 | Links | [Website](https://mewfinance.com/), [Telegram](https://t.me/MewFinance), [X](https://x.com/Mew_finance). |
 | Source | Public project site and community links listed below. |
-| Caveats | Financial figures and tier counts are time-specific; check the live platform for current product availability and terms. |
+| Caveats | Financial figures, tier counts, fee addresses, and contract addresses are time-specific; check the live platform and current repository state before interacting with deployed contracts. |
 
 ## Recent updates
 
+- `Jun 24`: Mew Lock documentation rotated service and DEX fee wallets, plus affected marketplace contract references, after a seed-breach response. Historical contract/index values remain useful for explorers and statistics, but integrations should use current upstream addresses.
 - `Jan 10`: Mew Mart's shopping cart went live with Nautilus and ErgoPay support.
 
 ## Products and Services

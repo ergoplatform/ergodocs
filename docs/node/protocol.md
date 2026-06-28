@@ -7,7 +7,7 @@ tags:
   - Processing
   - Modifiers
 owner: docs
-last_reviewed: 2026-06-09
+last_reviewed: 2026-06-27
 source_repos:
   - repo: ergoplatform/ergo
     branch: v6.0.3
@@ -17,6 +17,7 @@ source_repos:
       - src/main/scala/org/ergoplatform/network/ErgoNodeViewSynchronizer.scala
       - ergo-core/src/main/scala/org/ergoplatform/settings/ValidationRules.scala
 source_of_truth:
+  - https://github.com/ergoplatform/ergo/commit/bc7b948c19c7
   - https://github.com/ergoplatform/ergo/pull/2299
   - https://github.com/ergoplatform/ergo/pull/2302
   - https://github.com/ergoplatform/ergo/pull/2305
@@ -31,7 +32,7 @@ source_of_truth:
 
 The Node Protocol section provides a comprehensive overview of the core operational aspects of the Ergo network. It covers the following key areas:
 
-- **Processing Algorithm**: This section explains the algorithm used for processing Ergo [modifiers](modifiers-processing.md). It is applicable across all [security modes](modes.md) within the Ergo network, ensuring consistent data processing. The reference client also applies consistency checks while removing transactions from the mempool, including checks that prevent duplicate IDs in mempool indices and avoid stale state in double-spend detection.
+- **Processing Algorithm**: This section explains the algorithm used for processing Ergo [modifiers](modifiers-processing.md). It is applicable across all [security modes](modes.md) within the Ergo network, ensuring consistent data processing. The reference client also applies consistency checks while removing or invalidating transactions from the mempool, including checks that prevent duplicate IDs, avoid stale state in double-spend detection, and keep invalidated transaction IDs even when a stale registry entry is missing.
 
 - **Validation Rules**: This part outlines the consensus-critical [validation rules](modifiers-validation.md). These rules are mandatory for every [node](install.md) in the Ergo network to maintain network integrity and security. They ensure that all [transactions](transactions.md) and [blocks](block.md) adhere to the established network standards. Extension-section validation includes size, interlink encoding, key-length, and empty-extension checks.
 
