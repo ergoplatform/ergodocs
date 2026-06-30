@@ -40,6 +40,41 @@ source_repos:
     branch: main
     paths:
       - README.md
+  - repo: mwaddip/santa-blitzen
+    branch: master
+    paths:
+      - README.md
+  - repo: mwaddip/santa-vixen
+    branch: master
+    paths:
+      - README.md
+  - repo: mwaddip/santa-donner
+    branch: main
+    paths:
+      - README.md
+  - repo: arkadianet/ergo
+    branch: main
+    paths:
+      - README.md
+  - repo: mwaddip/ergots
+    branch: master
+    paths:
+      - README.md
+      - packages/scorex/package.json
+      - packages/nipopow/package.json
+      - packages/avltree/package.json
+      - packages/ergoscript
+      - packages/transaction/package.json
+  - repo: odiseusme/matrix-pulse
+    branch: master
+    paths:
+      - README.md
+  - repo: decentbob/ergo-marketplace
+    branch: main
+    paths:
+      - README.md
+      - VISION.md
+      - DESIGN.md
   - repo: Lithos-Protocol/Lithos-Client
     branch: master
     paths:
@@ -82,17 +117,27 @@ source_of_truth:
   - https://github.com/ergoplatform/ergo-appkit/releases/tag/v6.0.0
   - https://github.com/mwaddip/ergo-node-rust/releases
   - https://github.com/mwaddip/santa
+  - https://github.com/mwaddip/santa-blitzen
+  - https://github.com/mwaddip/santa-vixen
+  - https://github.com/mwaddip/santa-donner
+  - https://github.com/arkadianet/ergo
+  - https://github.com/mwaddip/ergots
+  - https://github.com/odiseusme/matrix-pulse
+  - https://github.com/decentbob/ergo-marketplace
   - https://github.com/Lithos-Protocol/Lithos-Client/releases/tag/v4.2.0-test
   - https://github.com/rosen-bridge
   - https://github.com/ChainCashLabs/chaincash
   - https://github.com/StabilityNexus/Gluon-Ergo-UI
   - https://github.com/machinafi/sdk/releases/tag/0.1.0-alpha.0
   - https://github.com/cannonQ/ergo-p2p-options-frontend
+  - https://ebiome.cc
+  - https://github.com/cannonQ/ergo-mempool-watcher
+  - https://github.com/ergonames/ergonames-services/blob/master/sdk/INTEGRATION.md
 ---
 
 # Ergo Development Roadmap & History
 
-This page tracks major Ergo development history and active work as of **June 15, 2026**. It is not a promise of delivery dates. Public repositories, release notes, EIPs, and project pages are the source of truth.
+This page tracks major Ergo development history and active work as of **June 30, 2026**. It is not a promise of delivery dates. Public repositories, release notes, EIPs, and project pages are the source of truth.
 
 Ergo's roadmap is research-led: protocol changes move through papers, EIPs, testnets, client releases, and community review before mainnet activation. Ecosystem projects move at different speeds, so items below are grouped as **completed**, **active**, or **experimental** rather than presented as a single linear release plan.
 
@@ -120,9 +165,9 @@ This is the clearest short-form view of what is in the pipeline. Items are group
 | --- | --- | --- |
 | In flight | 6.0.x node maintenance, Sigma SDK 6.0.x, AppKit 6.0, mempool/synchronisation fixes, extension-section validation, wallet and dApp compatibility work | Keep the current production stack stable while downstream tools move onto the 6.x line. |
 | In flight | Rosen Bridge operations and chain/service maintenance | Maintain live bridge paths while watcher, guard, service, SDK, cleanup, and chain-specific components continue evolving. |
-| In flight | Spectrum, SigmaUSD, Dexy, Gluon, SigmaFi, Duckpools, Oracle Pools, Paideia, wallets, explorers, and ecosystem utilities | Keep established application and data infrastructure usable while individual projects continue at different maintenance levels. |
-| Testnet / validation | Matrix DevNet / 6.5.x, [Lithos](lithos.md), [Rust node](rust-node.md), SANTA, `sigma-rust`, [ergots](ergots.md) | Test protocol-breaking changes, mining decentralization, and independent implementation behavior before any production claims. |
-| Alpha / prototype | [ChainCash](chaincash.md) / Basis, [Machina Finance](machina-finance.md), [Etcha](etcha.md), Degens.World tooling, Palmyra, Crystal Pool, Mew Finance, agent-wallet flows | Build application-layer experiments on Ergo while contracts, wallet support, UX, and risk assumptions are still changing. |
+| In flight | Spectrum, SigmaUSD, Dexy, Gluon, SigmaFi, Duckpools, Oracle Pools, Paideia, wallets, explorers, [eBiome](ebiome.md), and ecosystem utilities | Keep established application and data infrastructure usable while individual projects continue at different maintenance levels. |
+| Testnet / validation | Matrix DevNet / 6.5.x, [Lithos](lithos.md), [Rust node](rust-node.md), SANTA, `sigma-rust`, [ergots](ergots.md), [Matrix Pulse](matrix-pulse.md) | Test protocol-breaking changes, mining decentralization, independent implementation behavior, and Matrix observability before any production claims. |
+| Alpha / prototype | [ChainCash](chaincash.md) / Basis, [Machina Finance](machina-finance.md), [Etcha](etcha.md), Degens.World tooling, [Ergo Marketplace](ergo-marketplace.md), Palmyra, Crystal Pool, Mew Finance, agent-wallet flows | Build application-layer experiments on Ergo while contracts, wallet support, UX, and risk assumptions are still changing. |
 | Research / standards | [Sub-blocks](subblocks.md), Sigma Chains / sidechains, NiPoPoW bootstrapping, pruned/light operation, EIP-44, EIP-46, EIP-47, Bulletproof-related work | Keep protocol and standards work moving through papers, EIPs, implementation review, and test environments. |
 | Public beta / ecosystem services | [ErgoNames](ergonames.md), Reputation System, The Field, FIMOs, privacy-preserving voting, SigmaJoin, trustless relays, and advanced wallet/signing flows | Track identity, coordination, privacy, and miner-facing services as they move from beta or research into durable infrastructure. |
 | Governance / operations | EF future handover, treasury/vote reporting, Sigmanauts responsibilities, DevDAO-funded work, docs/source-watch maintenance | Make ecosystem responsibilities and funding trails easier to inspect as work becomes less Foundation-centered. |
@@ -130,11 +175,11 @@ This is the clearest short-form view of what is in the pipeline. Items are group
 | Track | Near-term watch points |
 | --- | --- |
 | Protocol | 6.0.x release notes, Matrix DevNet evidence, activation settings, and concrete mainnet proposals. |
-| SDKs and tooling | AppKit 6 adoption, Sigma SDK releases, `sigma-rust` parity notes, `ergots` evaluator coverage, SANTA vectors. |
+| SDKs and tooling | AppKit 6 adoption, Sigma SDK releases, `sigma-rust` parity notes, `ergots` package stability, SANTA vectors and runners. |
 | Scaling and mining | Lithos mainnet-readiness notes, Stratum/miner docs, sub-block test evidence, light/pruned-node operator guidance. |
 | Interoperability | Rosen chain status, Runes-related work, Firo/Handshake/Monero-related bridge work, Bridge Expansion Kit and SDK releases. |
 | Applications | ChainCash/Basis signing support, Machina and Etcha audit/production status, Palmyra/Crystal/Mew status, wallet-native flows, agent app safety notes. |
-| Ecosystem services | Oracle Pools / Oracles v2 status, Paideia activity, ErgoNames beta/genesis status, Reputation System, The Field, and miner-facing utility updates. |
+| Ecosystem services | Oracle Pools / Oracles v2 status, Paideia activity, ErgoNames beta/genesis and SDK status, Reputation System, Matrix Pulse, eBiome, The Field, and miner-facing utility updates. |
 | Governance | EF treasury updates, EF votes, Sigmanauts handovers, DevDAO deliverables, and docs review issues. |
 
 ## Current Snapshot
@@ -144,11 +189,12 @@ This is the clearest short-form view of what is in the pipeline. Items are group
 | Reference node | **Released / testnet**: mainnet 6.0.x line is active; 6.1.x and 6.5.0 Matrix DevNet builds are used for testing newer work. |
 | Sigma / ErgoScript | **Released**: Sigma SDK 6.0.x has shipped, with 6.0.5 released in June 2026. |
 | AppKit | **Released**: AppKit 6.0.0 was released in June 2026 on top of SigmaSDK 6.0.x. |
-| Rust / TypeScript stack | **Active implementation research**: `sigma-rust`, Rust node, `ergots`, and SANTA are differential-testing surfaces, not replacements for the JVM consensus authority unless upstream marks a path stable. |
+| Rust / TypeScript stack | **Active implementation research**: `sigma-rust`, `mwaddip/ergo-node-rust`, `arkadianet/ergo`, `ergots`, and SANTA runners are differential-testing surfaces, not replacements for the JVM consensus authority unless upstream marks a path stable. |
 | Scaling | **Research / testnet**: sub-blocks, sidechains, NiPoPoW bootstrapping, pruned operation, and devnet testing remain active tracks. |
 | Interoperability | **Live + expanding**: Rosen Bridge is live across Ergo, Cardano, BTC, EVM/BSC, and DOGE, with more chain work and Runes-related support in progress. |
 | Mining decentralization | **Testnet**: Lithos has moved through multiple 2026 testnet releases, reaching `v4.2.0-test`. |
-| DeFi and monetary systems | **Mixed**: Spectrum, SigmaUSD, Dexy, Gluon Gold, SigmaFi, Duckpools, Machina, Etcha, ChainCash/Basis, and related tools cover live, alpha, and prototype stages. |
+| DeFi and monetary systems | **Mixed**: Spectrum, SigmaUSD, Dexy, Gluon Gold, SigmaFi, Duckpools, Machina, Etcha, ChainCash/Basis, Ergo Marketplace, and related tools cover live, alpha, and prototype stages. |
+| Data and observability | **Active tooling**: eBiome, Matrix Pulse, Ergo Mempool Watcher, explorers, and knowledge-base tooling expand monitoring, analytics, forensics, and project-context surfaces. |
 | Governance and funding | **Decentralizing**: the Ergo Foundation has narrowed its role; [Sigmanauts](sigmanauts.md) and independent teams now manage more ecosystem functions. See [Ergo Foundation Treasury](ef-treasury.md), [EF Votes](ef-votes.md), and [EF Future](ef-future.md). |
 
 ## Ecosystem Map
@@ -157,14 +203,14 @@ Ergo's ecosystem includes active applications, research prototypes, legacy proje
 
 | Area | Covered items |
 | --- | --- |
-| DEXs, swaps, and markets | [Spectrum / ErgoDex / ErgoDEX](spectrum.md), [ErgoAuctionHouse](ergo-auctions.md), Trade House, [SkyHarbor](skyharbor.md), [Single Transaction Swap](single-tx-swap.md), [TokenJay](token-jay.md), Crooks Finance, [Palmyra ComDEX](palmyra.md), [Crystal Pool](crystal-pool.md), [Machina Finance](machina-finance.md), [Mew Finance](mew-finance.md), [Hodlcoin](hodlcoin.md) / Phoenix Finance, [Lilium](lilium.md), [Hodlbox](hodlbox.md), and [AuctionCoin](auction-coin.md). |
+| DEXs, swaps, and markets | [Spectrum / ErgoDex / ErgoDEX](spectrum.md), [ErgoAuctionHouse](ergo-auctions.md), Trade House, [SkyHarbor](skyharbor.md), [Single Transaction Swap](single-tx-swap.md), [TokenJay](token-jay.md), Crooks Finance, [Palmyra ComDEX](palmyra.md), [Crystal Pool](crystal-pool.md), [Machina Finance](machina-finance.md), [Mew Finance](mew-finance.md), [Ergo Marketplace](ergo-marketplace.md), [Hodlcoin](hodlcoin.md) / Phoenix Finance, [Lilium](lilium.md), [Hodlbox](hodlbox.md), and [AuctionCoin](auction-coin.md). |
 | Stablecoins and monetary systems | [SigmaUSD](sigmausd.md), SigmaUSD v2 research, [Dexy / DexyGold](dexy.md), [Gluon](gluon.md), [ChainCash](chaincash.md), Basis, [OptionCoin](optioncoin.md), [AuctionCoin](auction-coin.md), [HodlCoin](hodlcoin.md), and [Analog Ergo](analog-ergo.md). |
 | Lending, options, and derivatives | [SigmaFi](sigmafi.md), [Duckpools](duckpools.md), [optionPools](optionPools.md), [EXLE](exle.md), [SigmaO](sigmao.md), [Etcha](etcha.md), [Machina Finance](machina-finance.md), [OptionCoin](optioncoin.md), and [Moria Finance](moria-finance.md). |
 | Games, NFTs, and crowdfunding | [BlitzTCG](blitz.md), [CyberVerse](cyberverse.md), [ErgoRaffle](ergoraffle.md), [Auction House](ergo-auctions.md), [SkyHarbor](skyharbor.md), [Lilium](lilium.md), [Night Owl](nightowl.md), and related historical NFT/game experiments. |
 | Bridges, oracles, and sidechains | [Oracle Pools](oracle.md), [Oracles v2](oracles-v2.md), [Rosen Bridge](rosen.md), ADA Bridge, BTC Bridge, EVM Bridge, DOGE Bridge, BCH Bridge, Runes Integration, R&D for Monero, RosenFast Service, Bridge Expansion Kit, Bridge SDK, Hummingbot Integration / Customisation, [Sigma Chains](sigma-chains.md), Trustless Relays, sidechains, and Flux parallel assets. |
 | Privacy | [ErgoMixer](ergomixer.md), [Stealth addresses](stealth-address.md), [SigmaJoin](sigmajoin.md), Privacy-Preserving Voting, and mix-related wallet integration work. |
 | Governance, mining, and community infra | [Paideia](paideia.md), [Lithos](lithos.md), [The Field](the-field.md), [Sigmanauts](sigmanauts.md) Mining Pool, storage-rent pool integration, Fair Initial Mining Offering research, [GuapSwap](guapswap.md), and [CYTI](cyti.md). |
-| Tools, data, and identity | [Moria Finance](moria-finance.md), Trustless Relays, [Random Number Generator](sigmarand.md), [TabbyPOS](tabbypos.md), [Crux Finance](crux.md), [ErgoNames](ergonames.md) public beta, [Reputation System](reputation-system.md), ergexplorer, sigmaspace, [TokenJay](token-jay.md), and ecosystem dashboards. |
+| Tools, data, and identity | [Moria Finance](moria-finance.md), Trustless Relays, [Random Number Generator](sigmarand.md), [TabbyPOS](tabbypos.md), [Crux Finance](crux.md), [ErgoNames](ergonames.md) public beta and SDK integration work, [Reputation System](reputation-system.md), [Matrix Pulse](matrix-pulse.md), [eBiome](ebiome.md), [Ergomempool Visualizer / Watcher](mempool-vis.md), [Ergo Knowledge Base](ergo-knowledge-base.md), ergexplorer, sigmaspace, [TokenJay](token-jay.md), and ecosystem dashboards. |
 | Wallets and UX | [Nautilus](nautilus.md), [Minotaur](minotaur.md), [Satergo](satergo.md), [SAFEW](safew.md), [Ledger](ledger.md) developer-mode support, Keystone integration, [EIP-12](eip12-types.md) / [EIP-20](eip20.md) connector work, [ErgoPay](ergo-pay.md), Metamask/TrustWallet exploration, and NiPoPoW-based light client work. |
 
 ## Timeline Index
@@ -177,7 +223,7 @@ These timeline items matter for continuity. Treat them as current work only when
 | Protocol history | Autolykos v2, [EIP-27](eip27.md), [EIP-37](eip37.md), [JITC](jitc.md), RocksDB migration, UTXO Set Snapshots, [Pruned Full Node](pruned-full-node.md), [Light SPV Clients](light-spv-node.md), [storage rent](storage-rent.md), [sub-blocks](subblocks.md), [soft-fork rules](soft-fork.md), zero-knowledge treasury experiments, [extension-section](extension-section.md), [Merkle-tree](merkle-tree-overview.md), and Merkle trees documentation. |
 | Sigma and standards | SigmaState, Sigma.js, Sigma 5.0.14, [Sigma 6.0.0](sigma-6.md), `6.0.0-alpha1`, `Global.some`, AVL+ Tree work, EIP-44 arbitrary data signing, EIP-0046 Atomic Chains, EIP-0047 Pooled Transaction Inputs, [Bulletproofs](pattern-bulletproof-range-proof.md), Sigma-Rust-Mini, and ErgoScript compilation / debugging material. |
 | SDKs and tooling | [AppKit](appkit.md), [FleetSDK](fleet.md), [sigma-rust](sigma-rust.md), [Sigma.js](sigmajs.md), [Plasma Library](plasma.md), `ergo-lib-go`, `uExplorer`, [escript.online](ergoscript-tooling.md), Blockly playground work, [Merkle-tree docs](merkle-tree-overview.md), [extension-section docs](extension-section.md), and historical explorer/indexer work. |
-| Events and applications | [Ergo Summit](ergosummit.md), [ErgoHack](ergohack.md), [Off-The-Grid](off_the_grid.md), Rosen Lite, PhoenixFinance, [Celaut](celaut.md), [Bene](bene.md), [Sigmaspace](https://sigmaspace.io/), Storage rent dashboard work, and 2024 NFT / DeFi / UX milestones. |
+| Events and applications | [Ergo Summit](ergosummit.md), [ErgoHack](ergohack.md), [Off-The-Grid](off_the_grid.md), Rosen Lite, PhoenixFinance, [Celaut](celaut.md), [Bene](bene.md), [Sigmaspace](https://sigmaspace.io/), [eBiome](ebiome.md), Storage rent dashboard work, and 2024 NFT / DeFi / UX milestones. |
 | Wallet milestones | Nautilus Manifest v3 and Abyss work, Minotaur 2.0.1, Satergo performance work, [Ledger](ledger.md) developer-mode support, Keystone integration, [EIP-12](eip12-types.md) / [EIP-20](eip20.md) connector work, Metamask exploration, Trustwallet exploration, and light-client wallet research. |
 | Mining and issuance | [Sigmanauts](sigmanauts.md) Mining Pool, storage-rent pool integration, Lithos mining-pool research, Fair Initial Mining Offering (FIMO) research, and miner-facing token tooling. |
 
@@ -195,7 +241,14 @@ These timeline items matter for continuity. Treat them as current work only when
 - [x] [Machina Finance](machina-finance.md) published an alpha orders SDK with grid and limit-order transaction builders.
 - [x] [Etcha](etcha.md) entered alpha for peer-to-peer options with physical-delivery and cash-settled flows.
 - [x] [Degen Wallet](degens-world.md), Degens.World agent tooling, Ergo MCP, Xergon, and related experimental apps expanded the wallet/agent surface.
-- [x] [Rust node](rust-node.md) releases reached the 0.7.x line, including v0.7.4's mining-serve state-root fix, while SANTA added shared conformance vectors/runners for cross-implementation testing.
+- [x] [Rust node](rust-node.md) releases reached the 0.7.x line, including v0.7.4's mining-serve state-root fix, while SANTA added shared conformance vectors/runners for `sigma-rust`, `arkadianet/ergo`, and `mwaddip/ergo-node-rust`.
+- [x] [ergots](ergots.md) published browser-compatible TypeScript packages for Scorex codecs, NiPoPoW, AVL+, ErgoScript, and transaction tooling, with current package metadata tracked in docs.
+- [x] [Matrix Pulse](matrix-pulse.md) was published as lightweight Matrix input-block observability tooling for local Matrix nodes.
+- [x] [eBiome](ebiome.md) launched as a live ecosystem analytics, explorer, and forensics dashboard; its forensics views are heuristic and should not be treated as deterministic attribution.
+- [x] [Ergo Marketplace](ergo-marketplace.md) was published as an early design/prototype for permissionless trade infrastructure.
+- [x] [ErgoNames](ergonames.md) returned to public beta and published SDK integration guidance for wallet and dApp send flows.
+- [x] [ergo-use-x402](ergo-use-x402.md) demonstrated x402 / Agentic Commerce Protocol payment flows for USE on Ergo using Babel fees.
+- [x] [Ergo Mempool Watcher](mempool-vis.md) added a public dashboard for local-node mempool inclusion and dwell-time analysis.
 - [x] Docs automation gained Source Watch, Discord Dev Digest, and weekly review issue tooling. See [Contribute Automation](automation.md).
 
 The emphasis in 2026 is validation and application work on top of the 6.x stack, while newer implementations continue to prove compatibility before any production claims.
@@ -238,8 +291,8 @@ The emphasis in 2026 is validation and application work on top of the 6.x stack,
 | Sigma SDK | 6.0.x released through 6.0.5. | New SDK releases, EIP-50 finalization, and compatibility notes. |
 | AppKit | 6.0.0 released on SigmaSDK 6.0.x. | Downstream library updates and examples that adopt AppKit 6. |
 | [sigma-rust](sigma-rust.md) | Compiler/interpreter parity work and bindings continue. | Consensus-sensitive parity claims, JIT costing, and binding releases. |
-| [ergots](ergots.md) | TypeScript verification and ErgoScript tooling is active. | Package stability, JVM-alignment notes, and evaluator coverage. |
-| [Rust Node](rust-node.md) / SANTA | Rust node reached 0.7.x releases; SANTA supplies conformance vectors/runners. | Cross-implementation divergences, new vector tiers, and production-readiness statements. |
+| [ergots](ergots.md) | TypeScript verification and ErgoScript tooling is active, with published packages for Scorex, NiPoPoW, AVL+, ErgoScript, and transactions. | Package stability, JVM-alignment notes, and evaluator coverage. |
+| [Rust Node](rust-node.md) / SANTA | Rust node reached 0.7.x releases; SANTA supplies conformance vectors/runners for sigma-rust, arkadianet/ergo, and mwaddip/ergo-node-rust. | Cross-implementation divergences, new vector tiers, and production-readiness statements. |
 
 ### Scaling and Mining
 
@@ -249,6 +302,7 @@ The emphasis in 2026 is validation and application work on top of the 6.x stack,
 | NiPoPoWs / light clients | Core design primitive, with bootstrapping and proof-serving work continuing. | Node, Rust, and SDK support for practical light-client flows. |
 | [Lithos](lithos.md) | Testnet client releases reached `v4.2.0-test`. | Mainnet-readiness notes, Stratum/miner docs, collateral flows, and risk disclosures. |
 | Sub-blocks / Layer 2 | Research and development track. | Devnet evidence and clear security assumptions. |
+| Matrix observability | [Matrix Pulse](matrix-pulse.md) provides local Matrix input-block monitoring for arrivals, applies, queues, forks, and status headers. | Maintained releases, operator docs, and whether Matrix tooling becomes part of standard devnet observability. |
 | FIMOs and miner utilities | Fair Initial Mining Offering concepts and miner tooling remain ecosystem-level research / utility work. | Concrete contracts, mining-pool support, and user-facing risk documentation. |
 
 ### Interoperability
@@ -266,9 +320,17 @@ The emphasis in 2026 is validation and application work on top of the 6.x stack,
 | --- | --- |
 | Live / user-facing | [Spectrum](spectrum.md), [SigmaUSD](sigmausd.md), [Dexy](dexy.md), [Gluon](gluon.md), [SigmaFi](sigmafi.md), [Duckpools](duckpools.md), [ErgoRaffle](ergoraffle.md), [Auction House](ergo-auctions.md), [SkyHarbor](skyharbor.md), [Rosen Bridge](rosen.md), Oracle Pools. |
 | Alpha / public testing | [Machina Finance](machina-finance.md), [Etcha](etcha.md), [Degen Wallet and Degens.World apps](degens-world.md), [Mew Finance](mew-finance.md), [Palmyra ComDEX](palmyra.md), [Crystal Pool](crystal-pool.md). |
-| Prototype / research | [ChainCash](chaincash.md), Basis, agent-credit experiments, Sigma Chains, [OptionCoin](optioncoin.md), [Analog Ergo](analog-ergo.md), and other monetary / sidechain designs. |
-| Public beta / watch | [ErgoNames](ergonames.md), [Moria Finance](moria-finance.md), [The Field](the-field.md), [Reputation System](reputation-system.md), [Night Owl](nightowl.md), and other legacy or early-stage ecosystem apps. |
+| Prototype / research | [ChainCash](chaincash.md), Basis, agent-credit experiments, Sigma Chains, [Ergo Marketplace](ergo-marketplace.md), [OptionCoin](optioncoin.md), [Analog Ergo](analog-ergo.md), and other monetary / sidechain designs. |
+| Public beta / watch | [ErgoNames](ergonames.md), [Moria Finance](moria-finance.md), [The Field](the-field.md), [Reputation System](reputation-system.md), [Night Owl](nightowl.md), [ergo-use-x402](ergo-use-x402.md), and other legacy or early-stage ecosystem apps. |
 | Needs careful wording | Options, derivatives, monetary systems, and bridge expansions should be described by current repo status, not assumed future launch dates. |
+
+### Data, Observability, and Knowledge Tools
+
+| Track | Current state | Watch next |
+| --- | --- | --- |
+| [eBiome](ebiome.md) | Live external dashboard for explorer, ecosystem analytics, DeFi/stablecoin/mining/Rosen views, and heuristic forensics. | Public source, data provenance, and clearer caveats around probabilistic entity grouping. |
+| [Ergomempool Visualizer / Watcher](mempool-vis.md) | Live mempool visualization plus a public watcher dashboard for local-node inclusion-rate, dwell-time, stuck-transaction, and pool-selection analysis. | Source updates, methodology notes, and whether outputs become operator runbook material. |
+| [Ergo Knowledge Base](ergo-knowledge-base.md) | Public knowledge and transcript surfaces make ecosystem calls, chats, summaries, and project context searchable. | New ingestion sources, MCP/tooling updates, and source-backed reuse in docs. |
 
 ### Wallets and User Experience
 
@@ -297,6 +359,9 @@ These items are important but should not be marked complete without new upstream
 - Matrix DevNet work graduating into a specific mainnet proposal.
 - Rust node moving from experimental validation into production node claims.
 - SANTA adding broader block/chain/vector coverage and more independent implementation runners.
+- Matrix Pulse and similar Matrix DevNet tooling moving from operator/debug aids into maintained observability surfaces.
+- eBiome forensics and other analytics dashboards publishing source, methodology, and stronger caveats for heuristic address/entity grouping.
+- Mempool watcher data moving from investigative dashboards into repeatable node/operator guidance.
 - Lithos publishing mainnet-ready miner/operator docs and risk assumptions.
 - Rosen chain expansions beyond currently live paths, especially Runes, Firo, Handshake, and Monero-related work.
 - ChainCash/Basis gaining wallet-native signing support, stabilized contracts, and clearer user-facing flows.
@@ -304,6 +369,8 @@ These items are important but should not be marked complete without new upstream
 - Oracle Pools / Oracles v2 operator status and whether active data-provider docs need refresh.
 - Wallet connector, ErgoPay, Keystone, Metamask, and Trustwallet work moving from exploration into supported user flows.
 - ErgoNames beta/genesis status, contract re-review, public source snapshot, and whether beta names are purged before mainnet launch.
+- ErgoNames SDK and wallet integrations moving from beta/testing into wallet-supported send flows.
+- ergo-use-x402 moving from example implementation into accepted x402 ecosystem support or a ratified Ergo payment standard.
 - Reputation System, The Field, Moria, Palmyra, Crystal Pool, and Mew Finance status changes that would move them between prototype, alpha, live, or legacy buckets.
 
 ## Detailed Timeline

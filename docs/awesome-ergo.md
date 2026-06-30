@@ -249,6 +249,7 @@
 - [Ergo Vanity Address Generator](https://github.com/jellymlg/ergo-vanitygen) – generate custom addresses. [`Scala`]
 - [Ergo Monitoring](https://github.com/SabaunT/ergo-monitoring) – debug service for node/blockchain state. [`Rust`]
 - [Ergo Mempool Watcher](https://github.com/cannonQ/ergo-mempool-watcher) – local-node mempool capture and analysis tool for skipped or delayed transactions. [`TS`]
+- [Matrix Pulse](https://github.com/odiseusme/matrix-pulse) – live monitor for Ergo Matrix input-block activity. [`Python`]
 - [Ergo Faucet](https://github.com/zargarzadehm/ergo-faucet) – simple faucet implementation. [`Scala`]
 - [Chain Name Service (Experimental)](https://github.com/ross-weir/chain-name-service) – experimental name service. [`Scala`]
 - [Transaction Group Framework](https://github.com/GetBlok-io/Subpooling#frameworks--abstractions) – manage large interrelated TXs (from GetBlok).
@@ -569,6 +570,7 @@
 
 - **[Ergo Explorer (Official)](https://explorer.ergoplatform.com/)** – canonical chain explorer. [Frontend](https://github.com/ergoplatform/explorer-frontend) | [Backend](https://github.com/ergoplatform/explorer-backend)
 - [Sigmaspace](https://sigmaspace.io/) – alternative explorer with tools & charts. [GitHub](https://github.com/pulsarz/sigmaexplorer)
+- [eBiome](https://ebiome.cc/) – ecosystem analytics, explorer, and forensics dashboard.
 - [erg-explorer](https://github.com/AcoSmrkas/ErgExplorer) – community-built explorer. [`JS/TS`] [Telegram](https://t.me/ErgExplorer)
 - [uexplorer](https://github.com/pragmaxim/ergo-uexplorer) – minimalist UTXO set explorer. [`Scala`]
 - [Indexed Node Explorer](https://github.com/Luivatra/indexed-node-explorer) – simple UI for indexed node. [`JS/TS`]
@@ -578,6 +580,7 @@
 ## 📊 Dashboards & Network Stats <a id="dashboards"></a>
 
 - [ErgoWatch](https://ergo.watch/) – network stats, tokenomics & analytics. [GitHub](https://github.com/abchrisxyz/ergowatch)
+- [eBiome](https://ebiome.cc/) – dashboard for ecosystem analytics, mining, DeFi, stablecoins, and Rosen Bridge data.
 - [Ergo Nodes Dashboard](http://ergonodes.net/) – network map & node stats. [GitHub](https://github.com/Satergo/Ergonnection)
 - [Paizo Mining Vote Simulator](https://deadit.github.io/paizo/) – EIP-27 miner voting simulator. [GitHub](https://github.com/deadit/paizo)
 - [ErgCube](https://ergcube.com/) – community dashboard & info site.

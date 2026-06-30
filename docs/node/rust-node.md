@@ -23,6 +23,22 @@ source_repos:
     branch: main
     paths:
       - README.md
+  - repo: mwaddip/santa-blitzen
+    branch: master
+    paths:
+      - README.md
+  - repo: mwaddip/santa-vixen
+    branch: master
+    paths:
+      - README.md
+  - repo: mwaddip/santa-donner
+    branch: main
+    paths:
+      - README.md
+  - repo: arkadianet/ergo
+    branch: main
+    paths:
+      - README.md
 source_of_truth:
   - https://github.com/mwaddip/ergo-node-rust
   - https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.7.4
@@ -40,6 +56,8 @@ source_of_truth:
   - https://github.com/mwaddip/santa
   - https://github.com/mwaddip/santa-blitzen
   - https://github.com/mwaddip/santa-vixen
+  - https://github.com/mwaddip/santa-donner
+  - https://github.com/arkadianet/ergo
 ---
 
 # Ergo Rust Node
@@ -52,9 +70,9 @@ source_of_truth:
 
 The project has moved beyond early header-sync testing into API compatibility, indexer, pruning, and validation-harness work. It remains experimental, but recent releases show active alignment with the JVM node API surface.
 
-Related Rust-node references include [Luivatra/ergo-rust-node](https://github.com/Luivatra/ergo-rust-node), an earlier experimental implementation, and [ergo-rust-sync-dashboard](https://github.com/odiseusme/ergo-rust-sync-dashboard), a small Tkinter sync display for `mwaddip/ergo-node-rust`.
+Related Rust-node references include [Luivatra/ergo-rust-node](https://github.com/Luivatra/ergo-rust-node), an earlier experimental implementation, [arkadianet/ergo](https://github.com/arkadianet/ergo), an independent Rust full-node implementation targeting strict consensus parity with the Scala reference, and [ergo-rust-sync-dashboard](https://github.com/odiseusme/ergo-rust-sync-dashboard), a small Tkinter sync display for `mwaddip/ergo-node-rust`.
 
-[SANTA](https://github.com/mwaddip/santa) is a related cross-implementation conformance suite for Ergo consensus behavior. It keeps shared test vectors and runner contracts so independent implementations can compare wire, evaluation, transaction, block, and chain behavior against canonical expected outputs. Related runners include [Blitzen](https://github.com/mwaddip/santa-blitzen) for `sigma-rust` and [Vixen](https://github.com/mwaddip/santa-vixen) for the `arkadianet/ergo` Rust node.
+[SANTA](https://github.com/mwaddip/santa) is a related cross-implementation conformance suite for Ergo consensus behavior. It keeps shared test vectors and runner contracts so independent implementations can compare wire, evaluation, transaction, block, and chain behavior against canonical expected outputs. Related runners include [Blitzen](https://github.com/mwaddip/santa-blitzen) for `sigma-rust`, [Vixen](https://github.com/mwaddip/santa-vixen) for the `arkadianet/ergo` Rust node, and [Donner](https://github.com/mwaddip/santa-donner) for block-tier validation in `mwaddip/ergo-node-rust`.
 
 Recent release highlights:
 

@@ -31,6 +31,7 @@ For external discovery, also check [Sigmaverse](sigmaverse.md).
 | [Auction Coin](auction-coin.md) | [auctioncoin.app](https://auctioncoin.app) | Live, usable | 2023-11-22 |
 | [Machina Finance](machina-finance.md) | [SDK](https://github.com/machinafi/sdk) | Active SDK alpha | 2026-05-09 |
 | [ergo-use-x402](ergo-use-x402.md) | [GitHub](https://github.com/cannonQ/ergo-use-x402) | Experimental | 2026-06-22 |
+| [Ergo Marketplace](ergo-marketplace.md) | [GitHub](https://github.com/decentbob/ergo-marketplace) | Design / prototype | 2026-06-07 |
 | [ErgoDex](spectrum.md) | [spectrum.fi](https://spectrum.fi) | Infrastructure running | 2023-09-19 |
 | [Palmyra](palmyra.md) | [palmyra.app](https://palmyra.app/) | Live, usable | None verified |
 | [P2P Trading](p2p-trading.md) | - | Overview | None verified |
@@ -77,12 +78,14 @@ For external discovery, also check [Sigmaverse](sigmaverse.md).
 | [Celaut](celaut.md) | - | Active | 2026-05-21 |
 | [Netnotes](netnotes.md) | - | Active | 2026-05-19 |
 | [Ergo Relay](ergo-relay.md) | - | Active | 2026-04-13 |
+| [Matrix Pulse](matrix-pulse.md) | [GitHub](https://github.com/odiseusme/matrix-pulse) | Active | 2026-06-27 |
 | [Reputation System](reputation-system.md) | [Sigma Reputation Panel](https://reputation-systems.github.io/sigma-reputation-panel/) | Active | 2026-04-07 |
 | [Ergo Proxy](ergo-proxy.md) | - | Active | 2026-03-31 |
 | [Ergo Knowledge Base](ergo-knowledge-base.md) | [transcripts](https://ergo-transcripts.vercel.app/), [knowledge base](https://ergo-knowledge-base.vercel.app/) | Active | 2026-03-10 |
 | [Ergo Agent SDK](ergo-agent-sdk.md) | - | Active | 2026-03-01 |
 | [Vanity GPU](vanity-gpu.md) | - | Active | 2026-01-05 |
 | [Ergomempool Visualizer](mempool-vis.md) | [ergomempool.com](https://ergomempool.com/) | Active | 2025-12-04 |
+| [eBiome](ebiome.md) | [ebiome.cc](https://ebiome.cc/) | Live site | None verified |
 | [ErgoNames](ergonames.md) | [ergonames.io](https://ergonames.io/) | Public beta | 2026-06-18 |
 | [ErgOne](ergone.md) | [app.ergone.io](https://app.ergone.io/) | Live, usable | 2024-09-02 |
 | [GuapSwap](guapswap.md) | [guapswap.org](https://guapswap.org/) | Live, usable | 2024-01-20 |

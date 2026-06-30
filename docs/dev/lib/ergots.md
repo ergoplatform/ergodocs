@@ -13,7 +13,11 @@ source_repos:
     branch: master
     paths:
       - README.md
+      - packages/scorex/package.json
+      - packages/nipopow/package.json
+      - packages/avltree/package.json
       - packages/ergoscript
+      - packages/transaction/package.json
 source_of_truth:
   - https://github.com/mwaddip/ergots
 ---
@@ -30,8 +34,9 @@ The repository is organized as a workspace:
 - `@ergots/nipopow`: NiPoPoW proof parsing, serialization, verification, comparison, and P2P envelope codecs.
 - `@ergots/avltree`: Batch AVL+ authenticated-tree verification.
 - `@ergots/ergoscript`: ErgoTree parsing, serialization, partial evaluation, sigma-protocol verification, AVL+ integration, and method-handler work.
+- `@ergots/transaction`: browser-clean transaction wire codec and validation package.
 
-The upstream README lists published package versions as `@ergots/scorex` `0.3.0`, `@ergots/nipopow` `0.2.0`, `@ergots/avltree` `0.2.0`, and `@ergots/ergoscript` `0.3.0`; later repository release commits include `@ergots/ergoscript` `0.5.0` and `@ergots/transaction` `0.1.0`. Check npm and the repository before pinning a package version in an application.
+Current package metadata lists `@ergots/scorex` `0.3.0`, `@ergots/nipopow` `0.2.1`, `@ergots/avltree` `0.2.0`, `@ergots/ergoscript` `0.5.0`, and `@ergots/transaction` `0.1.0`. Check npm and the repository before pinning a package version in an application.
 
 Recent work tightened JVM-alignment and input handling: context-extension ordering, typed context-extension keys, `Context.lastBlockUtxoRootHash`, header/pre-header accessors, v6 type gates, option tags, SBox/ErgoTree deserialization, box equality, collection equality costing, `atLeast` children caps, static signatures for selected methods, and `estimateCryptoCost` for JVM-faithful sigma-verification cost estimates. The README reports `7028` tests passing across packages under both `node` and `jsdom`.
 

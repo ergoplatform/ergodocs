@@ -25,6 +25,7 @@ source_of_truth:
   - https://github.com/2ndtlmining/Ergomempool
   - https://github.com/SavonarolaLabs/memepool
   - https://github.com/cannonQ/ergo-mempool-watcher
+  - https://cannonq.github.io/ergo-mempool-watcher/
 ---
 
 # Ergomempool Visualizer
@@ -95,7 +96,7 @@ The Ergomempool Visualizer has reached its Minimum Viable Product (MVP) stage an
 
 [SavonarolaLabs/memepool](https://github.com/SavonarolaLabs/memepool) is a small TypeScript mempool visualization experiment. It is separate from Ergomempool, but useful as another public reference for live mempool UI work on Ergo.
 
-[ergo-mempool-watcher](https://github.com/cannonQ/ergo-mempool-watcher) is an investigative TypeScript tool for local-node mempool analysis. It records mempool transactions and mined blocks to Supabase, then analyzes inclusion rate, dwell time, stuck transactions, and pool-selection behavior.
+[ergo-mempool-watcher](https://github.com/cannonQ/ergo-mempool-watcher) is an investigative TypeScript tool for local-node mempool analysis. It records mempool transactions and mined blocks to Supabase, then analyzes inclusion rate, dwell time, stuck transactions, and pool-selection behavior. A public dashboard is available at [cannonq.github.io/ergo-mempool-watcher](https://cannonq.github.io/ergo-mempool-watcher/).
 
 ### 7\. Contribution
 

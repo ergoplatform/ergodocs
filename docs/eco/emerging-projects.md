@@ -52,6 +52,16 @@ source_repos:
     branch: master
     paths:
       - README.md
+  - repo: odiseusme/matrix-pulse
+    branch: master
+    paths:
+      - README.md
+  - repo: decentbob/ergo-marketplace
+    branch: main
+    paths:
+      - README.md
+      - VISION.md
+      - DESIGN.md
 source_of_truth:
   - https://github.com/Scottcjn/bottube
   - https://www.bottube.ai
@@ -67,6 +77,9 @@ source_of_truth:
   - https://github.com/LEEKOHCHING/TabbyPOS-Introduction
   - https://github.com/moon-miner/SCypher-web
   - https://github.com/cannonQ/ergo-use-x402
+  - https://github.com/odiseusme/matrix-pulse
+  - https://github.com/decentbob/ergo-marketplace
+  - https://ebiome.cc
 ---
 
 # Emerging Ecosystem Projects
@@ -94,6 +107,9 @@ These projects are recent ecosystem additions verified against public repositori
 | [TabbyPOS](tabbypos.md) | Web3 point-of-sale project for merchant crypto payments. | Emerging | Payments and merchant tooling. |
 | [SCypher](scypher.md) | BIP39 seed-cypher tooling with ErgoHack context. | Experimental | Wallet-adjacent security tooling. |
 | [ergo-use-x402](ergo-use-x402.md) | x402 and Agentic Commerce Protocol payment examples for USE on Ergo using Babel fees. | Experimental | Payments and agent commerce. |
+| [Matrix Pulse](matrix-pulse.md) | Live Matrix input-block monitor for local Ergo Matrix nodes. | Developer-facing | Node operations and Matrix DevNet tooling. |
+| [Ergo Marketplace](ergo-marketplace.md) | Early-stage decentralized marketplace design for permissionless trade infrastructure. | Experimental | Markets and P2P trade design. |
+| [eBiome](ebiome.md) | Live ecosystem analytics, explorer, and forensics dashboard. | Active | Data, dashboards, and explorer tooling. |
 
 ## Covered Elsewhere
 
