@@ -4,7 +4,7 @@ tags:
   - Devnet
   - Configuration
 owner: docs
-last_reviewed: 2026-05-28
+last_reviewed: 2026-06-30
 source_repos:
   - repo: ergoplatform/ergo
     branch: master

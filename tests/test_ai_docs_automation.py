@@ -182,6 +182,46 @@ class CandidateScoringTests(unittest.TestCase):
         self.assertTrue(candidates.actionable_change(repo_page, release))
         self.assertTrue(candidates.actionable_change(release_page, rust_release))
 
+    def test_specific_release_tag_does_not_match_all_repo_releases(self) -> None:
+        change = {
+            "message": "Release v6.1.3: Ergo protocol reference client 6.1.3",
+            "severity": "medium",
+            "kind": "release",
+            "repo": "ergoplatform/ergo",
+            "path": "release",
+            "sha": "release-v6.1.3",
+        }
+        page = {
+            "page": "docs/node/testnet/devnetconf.md",
+            "tags": ["Node", "Devnet", "Configuration"],
+            "source_repos": [{"repo": "ergoplatform/ergo"}],
+            "source_of_truth": ["https://github.com/ergoplatform/ergo/releases/tag/v6.5.0-RC1"],
+        }
+        generic_page = {
+            **page,
+            "source_of_truth": ["https://github.com/ergoplatform/ergo/releases"],
+        }
+
+        self.assertFalse(candidates.actionable_change(page, change))
+        self.assertTrue(candidates.actionable_change(generic_page, change))
+
+    def test_slip_0044_generic_coin_add_is_not_ergo_wallet_actionable(self) -> None:
+        page = {
+            "page": "docs/dev/wallet/keys.md",
+            "tags": ["wallet"],
+            "source_repos": [{"repo": "satoshilabs/slips"}],
+            "source_of_truth": ["https://github.com/satoshilabs/slips/tree/master/slip-0044.md"],
+        }
+        change = {
+            "message": "slip-0044: add (#2026)",
+            "severity": "medium",
+            "kind": "commit",
+            "repo": "satoshilabs/slips",
+            "path": "slip-0044.md",
+        }
+
+        self.assertFalse(candidates.actionable_change(page, change))
+
 
 class BranchSafetyTests(unittest.TestCase):
     def test_dry_run_does_not_check_branch_ownership(self) -> None:

@@ -216,8 +216,14 @@ def release_relevant_page(page: dict[str, Any], change: dict[str, Any]) -> bool:
     repo = str(change.get("repo", ""))
     repo_lower = repo.lower()
     sources = " ".join(str(item).lower() for item in page.get("source_of_truth", []))
-    if repo_lower and repo_lower in sources and "/releases" in sources:
-        return True
+    if repo_lower and repo_lower in sources:
+        repo_url = f"github.com/{repo_lower}"
+        if f"{repo_url}/releases/latest" in sources or re.search(rf"{re.escape(repo_url)}/releases/?(?:[\s)#]|$)", sources):
+            return True
+        raw_tag = str(change.get("sha", ""))
+        tag = raw_tag.removeprefix("release-").lower()
+        if tag and f"{repo_url}/releases/tag/{tag}" in sources:
+            return True
 
     repo_tokens = repo_slug_tokens(repo)
     if repo_tokens and repo_tokens & page_identity_tokens(page):
@@ -287,6 +293,13 @@ def actionable_change(page: dict[str, Any], change: dict[str, Any], weighted_tok
     strong_overlap = any(weighted_tokens.get(token, 0) >= 4 for token in msg_tokens)
 
     if severity == "low":
+        return False
+    if (
+        str(change.get("repo", "")).lower() == "satoshilabs/slips"
+        and str(change.get("path", "")).lower() == "slip-0044.md"
+        and re.search(r"\bslip-0044:\s*add\b", message, re.IGNORECASE)
+        and "ergo" not in message.lower()
+    ):
         return False
     if re.search(r"\bprimitive wallet messages\b|\bcase-class wrappers\b|\bcase class wrappers\b", message, re.IGNORECASE):
         return False

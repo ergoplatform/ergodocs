@@ -2,7 +2,7 @@
 tags:
   - Roadmap
 owner: docs
-last_reviewed: 2026-06-15
+last_reviewed: 2026-06-30
 source_repos:
   - repo: ergoplatform/eips
     branch: master
@@ -142,7 +142,7 @@ This is the clearest short-form view of what is in the pipeline. Items are group
 | Area | Status |
 | --- | --- |
 | Reference node | **Released / testnet**: mainnet 6.0.x line is active; 6.1.x and 6.5.0 Matrix DevNet builds are used for testing newer work. |
-| Sigma / ErgoScript | **Released**: Sigma SDK 6.0.x has shipped, with 6.0.4 released in May 2026. |
+| Sigma / ErgoScript | **Released**: Sigma SDK 6.0.x has shipped, with 6.0.5 released in June 2026. |
 | AppKit | **Released**: AppKit 6.0.0 was released in June 2026 on top of SigmaSDK 6.0.x. |
 | Rust / TypeScript stack | **Active implementation research**: `sigma-rust`, Rust node, `ergots`, and SANTA are differential-testing surfaces, not replacements for the JVM consensus authority unless upstream marks a path stable. |
 | Scaling | **Research / testnet**: sub-blocks, sidechains, NiPoPoW bootstrapping, pruned operation, and devnet testing remain active tracks. |
@@ -186,7 +186,7 @@ These timeline items matter for continuity. Treat them as current work only when
 ### 2026: Protocol, DevNet, and Application Tooling
 
 - [x] [AppKit v6.0.0](https://github.com/ergoplatform/ergo-appkit/releases/tag/v6.0.0) released on top of SigmaSDK 6.0.x, including EIP-50 / Sigma 6.0 alignment work and prover-evaluated tests.
-- [x] [Sigma SDK v6.0.4](https://github.com/ScorexFoundation/sigmastate-interpreter/releases/tag/v6.0.4) released after the 6.0.0, 6.0.1, 6.0.2, and 6.0.3 releases.
+- [x] [Sigma SDK v6.0.5](https://github.com/ergoplatform/sigmastate-interpreter/releases/tag/v6.0.5) released after the 6.0.0 through 6.0.4 releases, adding regression coverage and serialization/deserialization hardening.
 - [x] Ergo node releases moved through `v6.0.2`, `v6.0.2.1`, `v6.0.2.2`, `v6.0.3RC1`, [v6.0.3](https://github.com/ergoplatform/ergo/releases/tag/v6.0.3), and [v6.1.3](https://github.com/ergoplatform/ergo/releases/tag/v6.1.3); [Ergo Matrix 6.5.0 RC1](https://github.com/ergoplatform/ergo/releases/tag/v6.5.0-RC1) added a special DevNet build for protocol-breaking change testing.
 - [x] Node protocol work improved mempool consistency, extension-section validation, missing-parent header handling, and SyncInfoV2 continuation-header handling. See [Ergo Node Protocol](protocol.md) and [Synchronisation](synchronisation.md).
 - [x] [Lithos](lithos.md) moved through `v3.0.0-test`, `v3.1.0-test`, `v4.0.0-test`, `v4.1.0-test`, and [`v4.2.0-test`](https://github.com/Lithos-Protocol/Lithos-Client/releases/tag/v4.2.0-test), with work on mempool tracking, Stratum behavior, transaction scheduling, and rollup evaluation.
@@ -235,7 +235,7 @@ The emphasis in 2026 is validation and application work on top of the 6.x stack,
 
 | Track | Current state | Watch next |
 | --- | --- | --- |
-| Sigma SDK | 6.0.x released through 6.0.4. | New SDK releases, EIP-50 finalization, and compatibility notes. |
+| Sigma SDK | 6.0.x released through 6.0.5. | New SDK releases, EIP-50 finalization, and compatibility notes. |
 | AppKit | 6.0.0 released on SigmaSDK 6.0.x. | Downstream library updates and examples that adopt AppKit 6. |
 | [sigma-rust](sigma-rust.md) | Compiler/interpreter parity work and bindings continue. | Consensus-sensitive parity claims, JIT costing, and binding releases. |
 | [ergots](ergots.md) | TypeScript verification and ErgoScript tooling is active. | Package stability, JVM-alignment notes, and evaluator coverage. |
@@ -812,7 +812,7 @@ Ergo is developed a by a combination of the [Ergo Foundation](ergo-foundation.md
 
 - **Protocol and releases:**
   - [AppKit v6.0.0](https://github.com/ergoplatform/ergo-appkit/releases/tag/v6.0.0) released on top of SigmaSDK 6.0.x.
-  - [Sigma SDK v6.0.4](https://github.com/ScorexFoundation/sigmastate-interpreter/releases/tag/v6.0.4) followed the 6.0.0, 6.0.1, 6.0.2, and 6.0.3 releases.
+  - [Sigma SDK v6.0.5](https://github.com/ergoplatform/sigmastate-interpreter/releases/tag/v6.0.5) followed the 6.0.0 through 6.0.4 releases.
   - Ergo node releases moved through `v6.0.2`, `v6.0.2.1`, `v6.0.2.2`, `v6.0.3RC1`, `v6.0.3`, and `v6.1.3`.
   - [Ergo Matrix 6.5.0 RC1](https://github.com/ergoplatform/ergo/releases/tag/v6.5.0-RC1) added a DevNet build for protocol-breaking change testing.
   - Node protocol work improved mempool consistency, extension-section validation, missing-parent header handling, and SyncInfoV2 continuation-header handling.
