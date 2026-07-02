@@ -7,7 +7,7 @@ tags:
   - NiPoPoW
   - libraries
 owner: docs
-last_reviewed: 2026-06-27
+last_reviewed: 2026-07-02
 source_repos:
   - repo: mwaddip/ergots
     branch: master
@@ -20,6 +20,11 @@ source_repos:
       - packages/transaction/package.json
 source_of_truth:
   - https://github.com/mwaddip/ergots
+  - https://www.npmjs.com/package/@ergots/scorex
+  - https://www.npmjs.com/package/@ergots/nipopow
+  - https://www.npmjs.com/package/@ergots/avltree
+  - https://www.npmjs.com/package/@ergots/ergoscript
+  - https://www.npmjs.com/package/@ergots/transaction
 ---
 
 # ergots
@@ -37,6 +42,8 @@ The repository is organized as a workspace:
 - `@ergots/transaction`: browser-clean transaction wire codec and validation package.
 
 Current package metadata lists `@ergots/scorex` `0.3.0`, `@ergots/nipopow` `0.2.1`, `@ergots/avltree` `0.2.0`, `@ergots/ergoscript` `0.5.0`, and `@ergots/transaction` `0.1.0`. Check npm and the repository before pinning a package version in an application.
+
+June 2026 team updates marked the first npm publication for the Scorex, AVL tree, NiPoPoW, and ErgoScript packages, followed by Sigma v6 support work. The packages remain useful for differential testing and browser-side verification experiments, not as a standalone consensus authority.
 
 Recent work tightened JVM-alignment and input handling: context-extension ordering, typed context-extension keys, `Context.lastBlockUtxoRootHash`, header/pre-header accessors, v6 type gates, option tags, SBox/ErgoTree deserialization, box equality, collection equality costing, `atLeast` children caps, static signatures for selected methods, and `estimateCryptoCost` for JVM-faithful sigma-verification cost estimates. The README reports `7028` tests passing across packages under both `node` and `jsdom`.
 

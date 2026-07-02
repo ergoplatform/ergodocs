@@ -38,6 +38,8 @@ The Sigmanauts mining pool is a DAO-driven, community-run mining pool dedicated 
 
 To get started with mining Ergo, you need an Ergo wallet and mining software compatible with your GPU. Detailed instructions on wallet setup, mining software and example miner configurations for both Windows and Linux can be found on the [Sigmanauts mining pool page](https://sigmanauts.com/mining).
 
+In July 2025 the pool team shared a new mining calculator at [calc.ergominers.com](https://calc.ergominers.com/) and said operator tooling was being built for pool setup, alerts, UI, and pool-status automation.
+
 ## Sigmanauts achievements
 
 Since its launch, the Sigmanauts Program has made significant strides in building the required structures to pass the baton to the community. Some notable achievements include:

@@ -38,6 +38,8 @@ ia_status: directory
 
 Treat Braid as research and prototype material, not as a deployed Ergo sidechain. The public repository contains the whitepaper, early merged-mining notes, and minimal implementation scaffolding; it has no published releases.
 
+In July and August 2025, the team described the Braid whitepaper as moving from first iteration / pre-public review into an early draft ready for wider review. July dev updates also said specification and issue work was starting for a merged-mined Ergo sidechains framework in Rust. Treat these as research milestones, not as implementation readiness.
+
 ## Design Goals
 
 Braid aims to combine Bitcoin's proof-of-work security, Ergo's contractual model, and fast transaction-carrying blocks.

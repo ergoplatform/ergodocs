@@ -30,6 +30,7 @@ Ergo Knowledge Base and Ergo Transcripts make Ergo community knowledge searchabl
 - `Feb 4`: Ergo Transcripts added 37 more calls and reached 58+ hours of indexed content.
 - `Feb 11`: another 50 calls brought the archive to 88+ hours, with Twitter Spaces and Reddit AMA workflows planned.
 - `Mar 6`: Telegram general/developer channel exports were archived by week/month, producing 153 monthly summaries and 556 weekly segments.
+- `Mar 12`: public MCP endpoints split discussion context from technical/project context: Ergo Transcripts for community/dev discussion search, and Ergo Knowledge Base for curated technical content, project context, and public ErgoScript contract summaries.
 
 ## Ergo Transcripts
 
@@ -46,6 +47,8 @@ The project turns long-form ecosystem material into searchable text for humans a
 [Ergo Knowledge Base](https://ergo-knowledge-base.vercel.app/) is a related public knowledge interface for curated summaries and project context.
 
 Ergo Knowledge Base transcribes and organizes ecosystem videos, community calls, AMAs, technical discussions, Telegram exports, and public ErgoScript contract summaries.
+
+The March 2026 dev update described the technical side as a junior Ergo developer assistant with project analyses, ErgoScript language reference material, concept guides, EIPs, cookbook-style examples, and contract-security review tools for MCP-capable clients.
 
 Planned work includes:
 

@@ -22,10 +22,23 @@ source_repos:
       - THREAT_MODEL.md
       - LIMITATIONS.md
       - test-vectors
+  - repo: Luivatra/ergoscript-compiler-lsp
+    branch: main
+    paths:
+      - README.md
+  - repo: Luivatra/ergoscript-zed-extension
+    branch: main
+    paths:
+      - README.md
 source_of_truth:
   - https://github.com/ergoplatform/sigma-rust/tree/develop/ergoscript-compiler
   - https://github.com/ergoplatform/sigmastate-interpreter/tree/develop/docs/perf-style-guide.md
   - https://github.com/odiseusme/btc-tx-parser-reference
+  - https://github.com/Luivatra/ergoscript-compiler-lsp
+  - https://github.com/Luivatra/ergoscript-zed-extension
+  - https://github.com/Lithos-Protocol/Lithos-Client/blob/master/lithos-lib/src/main/resources/rollups/Evaluation.ergo
+  - https://github.com/Lithos-Protocol/Lithos-Client/blob/02b29f5c4a6753f363c4371c11eaa217dee0f080/lithos-lib/src/main/scala/mutations/Contract.scala
+  - https://github.com/kushti/dexy-stable/blob/master/contracts/bank/bank.es
 ---
 
 # ErgoScript
@@ -125,6 +138,7 @@ While ErgoScript aims for simplicity and security, debugging complex contracts c
 * [ErgoScala Compiler](https://github.com/ergoplatform/ergoscala-compiler): Compile a subset of Scala to ErgoScript. *(Needs link update if available)*
 * [ErgoScript CLI Compiler](https://github.com/ergoplatform/ergoscript-compiler): CLI tool to compile ErgoScript to address. *(Duplicate link? Check source)*
 * [VSCode ErgoScript Language Support](https://marketplace.visualstudio.com/items?itemName=ergoscript.ergoscript-language-support): Syntax highlighting for VSCode.
+* [ErgoScript compiler/LSP](https://github.com/Luivatra/ergoscript-compiler-lsp) and [ErgoScript Zed extension](https://github.com/Luivatra/ergoscript-zed-extension): experimental community editor tooling surfaced in December 2025. Check repository status before depending on diagnostics or compiler output.
 
 **Debugging & Simulation:**
 
@@ -138,6 +152,8 @@ ErgoScript's features enable the implementation of complex contract patterns:
 * **[Finite State Machines (FSMs)](fsm-example.md):** Learn how to model multi-stage contracts where behavior depends on the current state encoded within a box.
 * **[Merkleized Abstract Syntax Trees (MAST)](mast-example.md):** Explore techniques to improve privacy and efficiency for contracts with many spending conditions by revealing only the executed script branch.
 * **[Bitcoin transaction parser reference](https://github.com/odiseusme/btc-tx-parser-reference):** Community reference code for `ergoplatform/sigmastate-interpreter#1114`, with Python parsing, public vectors, threat-model notes, an AppKit compilation harness, and ErgoScript building blocks for bounded Bitcoin transaction-object parsing. The canonical contract proves a txid plus output script hash; an amount-binding variant also checks a minimum satoshi value and has been mainnet spend-tested. It is research/reference code, not a Bitcoin bridge, Bitcoin finality verifier, or core language feature.
+* **`executeFromVar` reference patterns:** Lithos uses a pattern where the main contract verifies a script hash and then executes serialized child script bytes from a context variable. For `executeFromVar[SigmaProp]`, the context value must be `Coll[Byte]` containing the serialized root expression/value bytes, not a full ErgoTree or address envelope. For complex child expressions, the Scala/sigmastate path is still the safest reference: inline constants back into the child expression before serialization and use the intended V6 version context when serializing V6 opcodes.
+* **Action-input contract splitting:** Dexy bank is a practical example of keeping a main contract small by checking that another input is one of its allowed action contracts. This pattern can reduce large monolithic scripts, but the main contract still needs strict checks tying the action input, state transition, and outputs together.
 
 ## Common Use Cases
 

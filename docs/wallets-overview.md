@@ -7,7 +7,9 @@ source_repos:
     paths:
       - README.md
 source_of_truth:
+  - https://github.com/epmw/epmw
   - https://github.com/arkadianet/ergo-vanitygen-rust
+  - https://github.com/ergoplatform/ergo-wallet-app/pull/212
   - https://github.com/ergoplatform/ergo-wallet-app/releases/tag/v2.4.2313
   - https://github.com/nautls/nautilus-wallet/releases/tag/v1.3.3
   - https://github.com/Satergo/Satergo/releases/tag/v1.9.4
@@ -26,6 +28,7 @@ Use this page to choose a wallet and learn basic wallet safety.
 | Desktop wallet with optional full node | [Satergo](satergo.md) | Useful if you want a desktop wallet with node-oriented options. |
 | Mobile wallet | [Ergo Mobile Wallet](https://ergoplatform.org/en/ergo-wallet-app/) | Good fit for mobile holding and payments. |
 | Hardware wallet | [Ledger](ledger.md) | Better for higher-value custody and hardware signing. |
+| Experimental DIY hardware | [EPMW](https://github.com/epmw/epmw) | Developer hardware-wallet project; not a normal end-user wallet path. |
 | Offline storage | [Cold Wallet Guide](cold-wallet.md) | Use for long-term holding and reduced online exposure. |
 | Paper wallet | [Paper Wallet](paper-wallet.md) | Only use if you understand backup and spending risks. |
 | Node wallet | [Node Wallet Overview](wallet.md) | Operator/developer flow, not the simplest user wallet. |
@@ -37,6 +40,7 @@ For broader comparison, see [Wallets Overview](wallets.md).
 ## Recent Wallet Releases
 
 - [Ergo Wallet App `v2.4.2313`](https://github.com/ergoplatform/ergo-wallet-app/releases/tag/v2.4.2313) updates the Android build for Android 15+ and fixes status-bar/camera cutout and gesture-bar UI overlap.
+- A May 2026 dev-wallet update identified chained mobile transactions as a mempool-awareness issue. [Draft PR #212](https://github.com/ergoplatform/ergo-wallet-app/pull/212) explored a local metadata-only pending-transaction WAL for hot wallet, cold wallet, and ErgoPay flows; treat it as development work unless release notes say it shipped.
 - [Nautilus `v1.3.3`](https://github.com/nautls/nautilus-wallet/releases/tag/v1.3.3) adds Crux and HOF token metadata, updates token-rate fetching, adds Javanese and Malaysian translations, and bumps dependencies.
 - [Satergo `v1.9.4`](https://github.com/Satergo/Satergo/releases/tag/v1.9.4) fixes node launching and improves send-option address labels.
 
@@ -62,6 +66,8 @@ For broader comparison, see [Wallets Overview](wallets.md).
 ## Advanced Address Tools
 
 Vanity address tools search for addresses matching a chosen pattern. [ergo-vanitygen-rust](https://github.com/arkadianet/ergo-vanitygen-rust) is a Rust vanity-address generator with GUI and CLI modes, local seed generation, paper-wallet output, and pattern difficulty estimation. Treat vanity generation as advanced custody tooling: build or download only from trusted sources, verify generated addresses, and protect any seed phrase it creates.
+
+[EPMW](https://github.com/epmw/epmw), the Ergo Poor Man's Wallet, is an experimental DIY hardware-wallet project. September 2025 dev updates said committed firmware could import a mnemonic seed and show the corresponding XPUB as a QR code; newer development work was focused on user-verifiable entropy generation before full wallet creation and transaction signing.
 
 ## Payments and dApps
 

@@ -36,6 +36,8 @@ The issuer box is important because it has the same ID as the artwork's token ID
   
 As mentioned, royalty amount will go to the propositiona bytes of the issuer box. In the case of a simple proxy contract (proposition bytes of the issuer box), this means that the artist will receive the royalty share. However, the proxy contract may enforce the royalty to go to any other complex contract - e.g., 20% to the artist, and 80% to some charity.
 
+V1 artwork metadata often stores media or other display data in the issued token box. In practice `R9` can hold any URL or raw data, not only IPFS links. Viewers should treat external URLs as untrusted and avoid leaking user identifiers through automatic requests to third-party hosts.
+
 ## Design V2
 
 Version 2 of this proposal is created to both extend this proposal to include collections and fix some poor design choices that were caused by the AOT costing issues. The following is the v2 standard for the issuer box.

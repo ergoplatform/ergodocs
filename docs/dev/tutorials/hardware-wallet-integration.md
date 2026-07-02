@@ -37,6 +37,7 @@ source_of_truth:
   - https://github.com/arobsn/ledger-ergo-js/releases/tag/v0.2.1
   - https://github.com/ergoplatform/ledger-app-ergo
   - https://github.com/arobsn/keystone-ergo-js
+  - https://github.com/ergoplatform/sigma-rust/pull/834
   - https://github.com/KeystoneHQ/keystone-sdk-base/tree/master/packages/ur-registry-ergo
   - https://github.com/KeystoneHQ/keystone-sdk-rust/pull/105
   - https://github.com/KeystoneHQ/keystone3-firmware/pull/1427
@@ -111,9 +112,13 @@ For the narrower wallet-facing notes page, see [Ledger](ledger.md).
 
 [keystone-ergo-js](https://github.com/arobsn/keystone-ergo-js) is an experimental JavaScript reference for Ergo transaction serialization in Keystone-style hardware-wallet flows. Treat it as integration reference material, not a complete wallet standard.
 
+July 2025 dev updates said `keystone-ergo-js` `v0.1.0` had shipped with a custom serialization schema, later adding reduced-transaction custom serialization. The Keystone/Nautilus path also depended on sigma-rust JSON serialization for reduced transactions, exposed for JS bindings in [sigma-rust#834](https://github.com/ergoplatform/sigma-rust/pull/834).
+
 Keystone's upstream SDK also includes [`@keystonehq/bc-ur-registry-ergo`](https://github.com/KeystoneHQ/keystone-sdk-base/tree/master/packages/ur-registry-ergo), an Ergo extension for `bc-ur-registry` used by Keystone-style UR signing flows. Use it when comparing Ergo sign-request encoding against Keystone's registry packages.
 
 The broader Keystone integration spans multiple upstream components. The Rust SDK [Ergo support PR](https://github.com/KeystoneHQ/keystone-sdk-rust/pull/105) was closed unmerged after review, while the Keystone3 firmware [Ergo support PR](https://github.com/KeystoneHQ/keystone3-firmware/pull/1427) remains the reference firmware integration work and links back to the Rust and JavaScript SDK PRs. Treat these PRs as implementation context until support is merged and released by Keystone.
+
+August 2025 wallet updates described the Nautilus integration as close to review, with one final sigma-rust prerequisite merged and remaining work around Keystone firmware cleanup plus physical-device integration testing. Treat that as development status, not a shipped hardware-wallet path.
 
 ## Conclusion
 

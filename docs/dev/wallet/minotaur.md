@@ -7,6 +7,7 @@ source_repos:
     paths:
       - eip-0004.md
 source_of_truth:
+  - https://github.com/minotaur-ergo/minotaur-wallet/releases/tag/v3.0.0
   - https://github.com/ergoplatform/eips/tree/master/eip-0004.md
 ---
 
@@ -39,6 +40,7 @@ For a visual and detailed guide on how to use Minotaur, watch the comprehensive 
 ## Recent updates
 
 - `Jan 21`: Minotaur `3.4.0` released with node backend support, backend selection between node and explorer, chart fixes, duplicate multisig wallet fix, and dependency updates.
+- `Jul 25` 2025: [Minotaur `v3.0.0`](https://github.com/minotaur-ergo/minotaur-wallet/releases/tag/v3.0.0) updated the multisig communication data format, added an AirDrop dApp, extracted utility packages, added `createChangeBox` support to all dApps, validated addresses before wallet insertion, and fixed wallet restore/delete issues.
 - Wallet restore and read-only sync scan derived addresses so balances and UTXOs can be rebuilt deterministically.
 
 ## Upcoming Features

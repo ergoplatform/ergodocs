@@ -7,7 +7,7 @@ tags:
   - dApp
   - dApp-InDev
 owner: docs
-last_reviewed: 2026-05-30
+last_reviewed: 2026-07-02
 source_repos:
   - repo: Lithos-Protocol/Lithos-Client
     branch: master
@@ -19,6 +19,9 @@ source_of_truth:
   - https://github.com/Lithos-Protocol/LitePaper
   - https://github.com/Lithos-Protocol/Lithos-Client/releases/tag/v4.2.0-test
   - https://github.com/Lithos-Protocol/Lithos-Client/releases/tag/v4.1.0-test
+  - https://github.com/Lithos-Protocol/Lithos-Client/releases/tag/v1.1-test
+  - https://github.com/Lithos-Protocol/Lithos-Client/releases/tag/v1.0-test
+  - https://github.com/Lithos-Protocol/Lithos-Client/issues/8
 ---
 
 # Lithos
@@ -36,11 +39,17 @@ The [Lithos Client](https://github.com/Lithos-Protocol/Lithos-Client) is the ref
 
 The current README describes Lithos as requiring a fully synced Ergo node and Java 11. Miners connect through the Lithos Stratum server, with Rigel Miner recommended. Lithos evaluates Non-Interactive Share Proofs rather than ordinary pool shares, so the miner address and worker name used by the Stratum client are not payout identifiers in the same way they are for a conventional pool.
 
+August 2025 dev updates said the difficulty contract and off-chain work for multiple fraud-proof contracts were finished, Stratum was being adjusted for TRM users and lower resource use, and shares were persisted across Stratum shutdowns. The same update framed this as testnet preparation rather than a production release.
+
 Earlier SNISP/NISP research is now treated as Lithos background rather than a separate ecosystem project. See [SNISP](snisp.md) for the legacy concept page.
+
+The first public testnet releases arrived in November 2025. [`v1.0-test`](https://github.com/Lithos-Protocol/Lithos-Client/releases/tag/v1.0-test) introduced the testnet client package, and [`v1.1-test`](https://github.com/Lithos-Protocol/Lithos-Client/releases/tag/v1.1-test) followed with stability fixes, Stratum error-handling changes, setup simplification, refactoring, and logging changes.
 
 For testnet use, the client needs node API access and a testnet wallet keystore so it can sign and generate transactions. The upstream testnet guide warns users to create a new testnet-only secret key rather than reusing a mainnet wallet.
 
 [v4.2.0-test](https://github.com/Lithos-Protocol/Lithos-Client/releases/tag/v4.2.0-test) changes mempool synchronization so subscribers are notified when mempool updates occur rather than receiving full mempool contents. It also moves major transaction code into dedicated transaction actors, represents future transactions as transaction stubs, and fixes rollup synchronization around chained payout-contract rollups.
+
+Open testnet issue: [`#8`](https://github.com/Lithos-Protocol/Lithos-Client/issues/8) reports that one malformed box at the collateral contract can make `parseCollateralUTXO` throw, abort collateral retrieval, and push jobs back to solo-mining mode. The same report notes that a clean `master` build could not resolve `org.ethereum:leveldbjni-all:1.18.3`, so external contributors may be blocked until the dependency path is fixed.
 
 [v4.1.0-test](https://github.com/Lithos-Protocol/Lithos-Client/releases/tag/v4.1.0-test) added unified block listening, mempool support for rollups, experimental Scala-based Stratum, separate share-processing threads, and auto-collateralization configuration.
 

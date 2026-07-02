@@ -18,6 +18,8 @@ source_of_truth:
   - https://github.com/arobsn/ledger-ergo-js/releases/tag/v0.2.0
   - https://github.com/arobsn/ledger-ergo-js/releases/tag/v0.2.1
   - https://github.com/ergoplatform/ledger-app-ergo
+  - https://github.com/ergoplatform/ledger-app-ergo/pull/40
+  - https://github.com/ergoplatform/ledger-app-ergo/pull/39
 ---
 
 # Ledger
@@ -25,6 +27,8 @@ source_of_truth:
 ## Developer mode
 
 The current Ergo Ledger application lives in [ergoplatform/ledger-app-ergo](https://github.com/ergoplatform/ledger-app-ergo). Its README covers local compilation, sideloading, generated API documentation, and the current automated test setup for Nano S+, Nano X, Stax, and Flex devices.
+
+July 2025 dev updates said a large [Ragger integration-test PR](https://github.com/ergoplatform/ledger-app-ergo/pull/40) had been accepted by the Ledger team. Separate token-limit exploration in [PR #39](https://github.com/ergoplatform/ledger-app-ergo/pull/39) found device memory constraints kept practical max-token-per-transaction increases near the current range.
 
 For broader hardware-wallet implementation context, see [Hardware Wallet Integration with sigma-rust](hardware-wallet-integration.md) and [Nautilus Wallet](nautilus.md).
 

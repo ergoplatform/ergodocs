@@ -43,6 +43,7 @@ Read the [draft whitepaper](../assets/pdf/dexy.pdf) for more details.
 
 ## Recent updates
 
+- `Jul 2` 2025: dev chat said DexyGold was performing well enough to start organizing a USD oracle-pool v1-to-v2 update, with GluonUSD and DexyUSD planned after oracle-pool testnet testing.
 - `Jan 7`: StableMiner launched for locally minting Dexy / USE from an Ergo node wallet.
 - `Jan 2023`: Dexy contract tests split LP actions, simplified swap/redeem/mint checks, and made intervention checks lazy in the Kiosk test suite.
 - `Jan 10` and `Apr 5`: the USE buyback contract was updated, the buyback box moved to a new contract address, and the self-output proposition check was fixed.

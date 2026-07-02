@@ -12,6 +12,7 @@ source_repos:
       - papers/curve-trees
 source_of_truth:
   - https://github.com/a-shannon/ergo-research/tree/main/papers/curve-trees
+  - https://github.com/ergoplatform/eips/pull/103
 ---
 
 # Understanding Zero-Knowledge Proofs and Sigma protocols
@@ -40,6 +41,7 @@ Currently, the two Sigma protocols in use are [proof of discrete log](schnorr.md
 - Curve Trees still has implementation caveats: a sigmastate-interpreter PR would need a TypeScript-to-Scala port; the prototype uses a static tree, has depth bounded by JIT cost, and does not yet support batch verification.
 - PERMAFROST work produced an interface for ML-DSA threshold signing with a relayer, encrypted ceremony blobs, custom manifests, and minimal theming.
 - STARK verification was discussed as a possible future sigmastate-interpreter primitive. The open question is whether full verification fits within the JIT cost budget in one block or needs multi-transaction chunking.
+- Draft EIP-0045 proposed a native `verifyStark` opcode for verifying STARK proofs on Ergo L1, with zkVM targets such as RISC Zero, SP1, and Valida discussed as possible off-chain prover ecosystems. Treat it as proposal-stage research unless an accepted EIP and node release add the opcode.
 - [Miden VM](https://github.com/0xMiden/miden-vm) is relevant external STARK VM research for possible ErgoTree-to-VM experiments. There is no production Ergo integration today.
 
 Curve Trees implementation notes:

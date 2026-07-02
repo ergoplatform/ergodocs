@@ -5,7 +5,7 @@ tags:
   - ENS
   - dApp
 owner: docs
-last_reviewed: '2026-06-27'
+last_reviewed: '2026-07-02'
 source_repos:
   - repo: ergonames/ergonames-contracts
     branch: main
@@ -25,6 +25,8 @@ source_repos:
       - sdk/INTEGRATION.md
 source_of_truth:
   - https://ergonames.io
+  - https://app.ergonames.io
+  - https://www.npmjs.com/package/ergonames
   - https://github.com/ergonames/ergonames-contracts
   - https://github.com/ergonames/ergonames-nextjs
   - https://github.com/ergonames/sdk
@@ -36,7 +38,7 @@ ia_status: directory
 
 ErgoNames is a decentralized naming system for the Ergo blockchain. It lets users register human-readable names such as `~yourname` instead of sharing a 51-character wallet address.
 
-ErgoNames is active again and is currently in public beta at [ergonames.io](https://ergonames.io). The beta site supports searching for a name, connecting Nautilus, and registering test names.
+ErgoNames is active again and is currently in public beta at [app.ergonames.io](https://app.ergonames.io). The beta site supports searching for a name, connecting Nautilus, and registering test names.
 
 /// admonition | Public beta caveats
     type: warning
@@ -65,13 +67,15 @@ The current deployment is a public beta. It is intended for testing, not for nam
 
 The team has stated that the current mainnet beta deployment is a throwaway set of test names and that beta names are planned to be purged at genesis. Contract fixes from recent review findings are expected to land in the same genesis bundle before a funds-at-risk launch or wallet integration.
 
+The July 2026 team update says governance is live in test flow through a 2-of-4 founder multisig built in Minotaur. The governance portal prepares transactions such as price changes, hands them to the multisig through ErgoPay QR, and avoids CLI or hot-key signing. The same update says the hot wallet is used only for gas, revenue sweeps to cold storage, and fee distribution is automated.
+
 Subname functionality is not enabled in the beta. Money-moving resolution should use live on-chain owner lookup.
 
 The live bot and API source are not fully represented in the public repositories yet. The team has said they plan to make the deployment reviewable with source snapshots, deployed constants, genesis transaction IDs, and known-good mint/refund fixtures for end-to-end review.
 
 ## Wallet and dApp Integration
 
-The `ergonames` SDK is intended for wallet and dApp resolution. It supports `resolveAddress("~name")` for name-to-address lookup and `primaryName(address)` for reverse display labels.
+The [`ergonames`](https://www.npmjs.com/package/ergonames) SDK is intended for wallet and dApp resolution. The npm package is at `1.1.1` and supports `resolveAddress("~name")` for name-to-address lookup and `primaryName(address)` for reverse display labels.
 
 There are two integration paths:
 
@@ -81,6 +85,8 @@ There are two integration paths:
 For send flows, failed lookup and failed network verification must be treated differently. The SDK returns `null` when a name does not exist, but throws on network or lookup failure; wallets should not send funds when resolution cannot be verified.
 
 During beta, the SDK API surface is expected to remain stable, but launch will use fresh genesis constants. API users should switch automatically when the service updates; direct-chain users should upgrade the SDK or override the launch constants.
+
+The team also reported that Nautilus has greenlit native ErgoNames resolution, so wallet-supported send flows should be treated as integration work in progress until released wallet builds expose it.
 
 ## Project Overview
 
@@ -92,7 +98,7 @@ The project is actively being developed by the Ergo community, with contribution
 
 ## Get Involved
 
-Test the public beta at [ergonames.io](https://ergonames.io): search for a name, connect Nautilus, and register a beta name. Use the site's issue-reporting flow for bugs and feedback.
+Test the public beta at [app.ergonames.io](https://app.ergonames.io): search for a name, connect Nautilus, and register a beta name. Use the site's issue-reporting flow for bugs and feedback.
 
 - [GitHub Repository](https://github.com/ergonames)
-- [Beta Site](https://ergonames.io)
+- [Beta Site](https://app.ergonames.io)

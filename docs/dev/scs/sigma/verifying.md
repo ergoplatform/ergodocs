@@ -16,6 +16,7 @@ source_repos:
       - src/test/scala/chaincash/ChainCashSpec.scala
 source_of_truth:
   - https://www.ergoforum.org/t/verifying-schnorr-signatures-in-ergoscript/3407
+  - https://github.com/ergoplatform/ergo/pull/2290
   - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/docs/sigma-dsl.md
   - https://github.com/ergoplatform/ergo-jde/tree/main/kiosk/src/test/scala/kiosk/schnorr/SchnorrSpec.scala
   - https://github.com/kushti/chaincash/tree/master/src/test/scala/chaincash/ChainCashSpec.scala
@@ -45,6 +46,8 @@ To sign message bytes **M** for on-chain verification, use the strong Fiat-Shami
 5. Retry with a new nonce if **z** does not fit ErgoScript's 255-bit `BigInt` limit.
 
 The on-chain-friendly signature is the pair **(a, z)**, where `a` is a `GroupElement` and `z` is encoded as bytes for conversion with `byteArrayToBigInt`.
+
+For node-wallet-backed off-chain applications, recent node API work added `/utils/schnorrSign` for signing arbitrary message bytes with the private key for a P2PK address in the node wallet. Use the same challenge layout your contract verifies, and keep the node signing API private.
 
 ## Schnorr Signature Verification
 

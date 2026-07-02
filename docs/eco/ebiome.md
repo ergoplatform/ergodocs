@@ -7,7 +7,7 @@ tags:
   - explorer
   - dashboard
 owner: docs
-last_reviewed: 2026-06-30
+last_reviewed: 2026-07-02
 source_of_truth:
   - https://ebiome.cc
   - https://ebiome.cc/explorer
@@ -30,6 +30,8 @@ The public site includes sections for:
 - mining and Rosen Bridge dashboards.
 
 The forensics section is heuristic analysis, not deterministic attribution. Treat grouped-address results as probability-based investigative signals rather than facts about ownership or control.
+
+A June 2026 project update described Forensics V2 as a daily-updated view over wallets above `0.5 ERG`, with all historical Ergo transactions analysed, address profiles, bot detection, round-trip transfer checks, cryptographically linked-wallet signals, and common deposit/spend/source/sink clustering. These remain heuristic signals, not proof of real-world identity.
 
 ## Status
 

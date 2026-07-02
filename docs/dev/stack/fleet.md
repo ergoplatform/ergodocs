@@ -18,6 +18,7 @@ source_repos:
       - README.md
 source_of_truth:
   - https://github.com/fleet-sdk/fleet
+  - https://github.com/fleet-sdk/fleet/pull/202
   - https://github.com/dungvn3000/ergo-fleet-sdk-example
   - https://github.com/paulmillr/noble-ciphers
 ---
@@ -35,6 +36,10 @@ source_of_truth:
 For common usage patterns and examples, see the [Fleet SDK Recipes](fleet-sdk-recipes.md).
 
 Fleet handles Ergo wallet keys and transaction construction. If your JavaScript application also needs message encryption or symmetric ciphers around those keys, use a dedicated audited crypto library such as [noble-ciphers](https://github.com/paulmillr/noble-ciphers) rather than expecting Fleet to provide general-purpose encryption APIs.
+
+September 2025 dev updates noted a Fleet build-tooling migration from `tsup` to `tsdown`, with IIFE browser bundles exported for direct browser use. For production apps, still prefer the package entrypoints documented by Fleet unless you specifically need a no-build browser integration.
+
+July 2025 dev updates said Fleet `v0.10.0` added `AvlTree` serialization support. Later that month, Fleet added ErgoTree construction from `ergoc` JSON output in [fleet#202](https://github.com/fleet-sdk/fleet/pull/202).
 
 ## Examples
 

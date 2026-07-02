@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: 2026-05-27
+last_reviewed: 2026-07-02
 tags:
   - learn
   - research
@@ -26,6 +26,8 @@ source_of_truth:
   - https://github.com/a-shannon/Aletheia-Protocol
   - https://github.com/marctheshark3/FintelligenceAI
   - https://github.com/marctheshark3/AI-Project-Starter-Kit
+  - https://www.ergoblockchain.org/blog/agent-economy-manifesto
+  - https://www.ergoblockchain.org/blog/agent-economy-live-proof-site-update
 ---
 
 # Ergo's eUTXO and Artificial Economic Intelligence
@@ -49,6 +51,8 @@ Amidst these challenges, a particularly ambitious application is emerging: **Art
 Related public experiments include [Aletheia Protocol](https://github.com/a-shannon/Aletheia-Protocol), an open-source framework and whitepaper for AI persistence on Ergo, and [FintelligenceAI](https://github.com/marctheshark3/FintelligenceAI), a modular RAG and agent framework that starts with Ergo smart-contract script generation and ErgoScript validation tooling.
 
 Developer-facing agent and media projects include [Ergo Agent SDK](ergo-agent-sdk.md), [Degens.World](degens-world.md), and [BoTTube](bottube.md).
+
+The [Agent Economy Manifesto](https://www.ergoblockchain.org/blog/agent-economy-manifesto) frames agentic peer-to-peer economies around user ownership, verifiable settlement, open protocols, and agent interoperability. A later [live proof-site update](https://www.ergoblockchain.org/blog/agent-economy-live-proof-site-update) described the public Agent Economy hub, MCP endpoint, Sage testnet payments, receipt storage, ErgoScript playground, and audit-trace material as early live infrastructure for that direction.
 
 For AI-assisted builders, [AI Project Starter Kit](https://github.com/marctheshark3/AI-Project-Starter-Kit) provides project initialization prompts, GitHub workflow guidance, Cursor-oriented development notes, and optional Ergo integration prompts that reference Fleet SDK and node API patterns.
 

@@ -35,6 +35,7 @@ Machina Finance is a decentralized exchange (DEX) design under development on Er
 
 - `May 9`: the public [Machina Finance orders SDK](https://github.com/machinafi/sdk) released [`0.1.0-alpha.0`](https://github.com/machinafi/sdk/releases/tag/0.1.0-alpha.0), adding token-to-token grid-order and ERG-to-token limit-order support.
 - The SDK README reports 100% test coverage and lists the supported contract wrappers for token-to-token grid orders, ERG-to-token grid orders, and ERG-to-token limit orders.
+- `Jul 2`: dev updates said final grid-contract optimizations had been added and limit-order contracts were in progress.
 - `Jan 21`: the `GridOrder` SDK / Fleet plugin module was complete with 100% test coverage, while `LimitOrder` work was still progressing.
 - `Jan 28`: a critical input-aggregation bug was fixed and the `E2T` limit contract was finished and ready for review.
 - `Mar 4`: all SDK actions were implemented and the contracts moved into audit.

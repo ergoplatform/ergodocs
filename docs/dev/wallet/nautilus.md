@@ -15,6 +15,8 @@
 - `Jan 7`: the Android guide noted that Nautilus `0.9.4` is the last release with a working mobile dApp connector; later mobile connector support is broken.
 - `Apr 8`: Javanese translation work was submitted for the wallet app.
 - Keystone hardware-wallet integration remains unfinished; supply-chain review is important because that path introduced a large transient dependency set.
+- `Aug 13` to `Aug 20` 2025: dev updates said Keystone integration work was nearing Nautilus review, while Nautilus research also covered passwordless transaction signing and a mempool tracker. Treat these as development tracks until Nautilus release notes mark them shipped.
+- `Jul 2` to `Jul 31` 2025: dev updates reported fixes for a non-Ledger dApp Connector rendering bug, a wallet-loading reactivity bug, and unstable virtual-mempool handling. Chained multi-transaction signing remained planned in [nautilus-wallet#213](https://github.com/nautls/nautilus-wallet/issues/213), not shipped.
 
 ## Installation
 

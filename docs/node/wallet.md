@@ -21,8 +21,11 @@ source_repos:
       - src/main/scala/org/ergoplatform/nodeView/wallet/
       - src/main/scala/org/ergoplatform/http/api/WalletApiRoute.scala
       - src/main/scala/org/ergoplatform/http/api/WalletApiOperations.scala
+      - src/main/scala/org/ergoplatform/http/api/UtilsApiRoute.scala
 source_of_truth:
   - https://github.com/ergoplatform/ergo/commit/d4ed37891cec
+  - https://github.com/ergoplatform/ergo/pull/2290
+  - https://github.com/ergoplatform/ergo/pull/2337
   - https://github.com/ergoplatform/ergo/tree/master/ergo-wallet/src/main/scala/org/ergoplatform/wallet
   - https://github.com/ergoplatform/ergo/tree/master/src/main/scala/org/ergoplatform/nodeView/wallet
   - https://github.com/ergoplatform/ergo/tree/master/src/main/scala/org/ergoplatform/http/api/WalletApiRoute.scala
@@ -68,6 +71,8 @@ To verify the wallet is initialized or restored correctly, you can retrieve its 
 
 Recent node versions also refresh the wallet's tracked public-key cache during initialization and restore. After either flow, `/wallet/deriveNextKey` can derive additional EIP-3 or legacy keys without losing the already tracked keys. Wallet restore remains disabled on pruned nodes.
 
+May 2026 wallet-snapshot work proposed scanning the UTXO set after snapshot bootstrap so a wallet can rebuild confirmed boxes and balances, then resume normal scanning after the snapshot height. See [`ergoplatform/ergo#2337`](https://github.com/ergoplatform/ergo/pull/2337) for that implementation thread.
+
 ![Get addresses](https://user-images.githubusercontent.com/23208922/69978955-5b82f780-1553-11ea-85b6-413c63a46334.png)
 
 ### Check Wallet Balance
@@ -87,3 +92,7 @@ Wallet box queries such as `/wallet/boxes` and `/wallet/boxes/unspent` support `
 Recent transaction-builder code validates supplied input IDs before constructing unsigned inputs. Input IDs must be valid hex strings of the expected modifier-ID length; malformed or too-short IDs are rejected instead of being silently dropped.
 
 ![send ergs](https://user-images.githubusercontent.com/23208922/71129066-a28c1080-2214-11ea-9806-7d768059980a.png)
+
+### Signing Arbitrary Messages
+
+Node API work in [`ergoplatform/ergo#2290`](https://github.com/ergoplatform/ergo/pull/2290) added `/utils/schnorrSign` for producing Schnorr signatures over arbitrary messages using the private key for a P2PK address in the node wallet. This is intended for off-chain applications whose contracts verify Schnorr signatures. Keep this behind the same API-key and wallet-unlock controls as other signing endpoints; it signs application data, not only transactions.

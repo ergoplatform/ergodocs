@@ -37,6 +37,7 @@ source_of_truth:
   - https://github.com/ergoplatform/explorer-backend/tree/master/modules/chain-grabber
   - https://github.com/ergoplatform/explorer-backend/tree/master/modules/chain-grabber/src/main/resources/application.conf
   - https://github.com/4EYESConsulting/sigmalok-indexer
+  - https://api-sigmalok.phoenixfi.app/docs
   - https://github.com/arobsn/hergmes
   - https://github.com/mgpai22/ergo-streaming
 ---
@@ -171,8 +172,8 @@ Choose the database that best matches your indexer's data structure and query pa
 
 ### dApp-Specific Indexers
 
-* [sigmalok-indexer](https://github.com/4EYESConsulting/sigmalok-indexer) is a Go indexer for SigmaLok-style mempool and rollback handling.
-* [hergmes](https://github.com/arobsn/hergmes) is a Rust real-time Ergo blockchain data relay and node messaging layer.
+* [sigmalok-indexer](https://github.com/4EYESConsulting/sigmalok-indexer) is a Go indexer for SigmaLok-style mempool and rollback handling. July 2025 dev updates said the SigmaLok contract and contract review were finished, the indexer was complete, and the interface was close to complete. The indexer was described as handling mempool transactions, replacement transactions, non-confirming mempool transactions, and normal rollbacks.
+* [hergmes](https://github.com/arobsn/hergmes) is a Rust real-time Ergo blockchain data relay and node messaging layer. September 2025 dev updates described it as a mempool-aware box streamer built first for Machina Finance but intended to stay generic enough for other dApps and possible Nautilus-style data flows.
 * [Ergo Streaming](https://github.com/mgpai22/ergo-streaming) is a Rust/Kafka service for streaming block, transaction, and mempool events from an Ergo node. Its README is a useful reference for event-topic design, rollback sequencing, RocksDB-backed chain and mempool caches, and operational knobs such as batch size and mempool polling interval.
 
 ## Alternative: Node API Scanning

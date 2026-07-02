@@ -15,6 +15,8 @@ The backend changes keep the explorer syncing when it encounters old or unusual 
 
 The DEX-related API removal reflects a split between general explorer indexing and DEX-specific services. DEX consumers should use current DEX/Sigmaspace APIs rather than relying on removed explorer endpoints.
 
+Operator note: during the November 2025 infrastructure incident, API, GraphQL, and explorer traffic were temporarily redirected toward the p2p explorer pool. Heavy `/boxes/unspent/byErgoTree/...` calls were the fragile path. Public API operators should treat explorer failover as a capacity and query-shape problem, not only a DNS/redirect problem.
+
 There are several public explorer available:
 
 - [explorer.ergoplatform.com](https://explorer.ergoplatform.com/)

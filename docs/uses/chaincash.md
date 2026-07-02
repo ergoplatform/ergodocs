@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: 2026-06-09
+last_reviewed: 2026-07-02
 source_repos:
   - repo: BetterMoneyLabs/chaincash
     branch: master
@@ -20,12 +20,14 @@ source_repos:
       - src/main/scala/chaincash/offchain
 source_of_truth:
   - https://github.com/BetterMoneyLabs/chaincash/tree/master/docs/presentation/basis.pdf
+  - https://github.com/BetterMoneyLabs/chaincash-rs/issues/51
   - https://github.com/ChainCashLabs/chaincash/tree/master/contracts
   - https://github.com/ChainCashLabs/chaincash/tree/master/contracts/onchain/note.es
   - https://github.com/ChainCashLabs/chaincash/tree/master/contracts/onchain/reserve.es
   - https://github.com/ChainCashLabs/chaincash/tree/master/docs/server.md
   - https://github.com/ChainCashLabs/chaincash/tree/master/docs/whitepaper/chaincash.pdf
   - https://github.com/kushti/chaincash/tree/master/src/main/scala/chaincash/offchain
+  - https://www.ergoforum.org/t/call-for-action-building-peer-to-peer-economies-and-free-banking-on-ergo/5221
 ia_status: directory
 ---
 
@@ -47,12 +49,19 @@ This article explains ChainCash's functionality, explores practical applications
 
 ## Recent updates
 
+- `Aug 6` to `Aug 20` 2025: ChainCash / Basis work covered a proposed `/acceptance/checkNote` API, ChainCash app and UI brainstorming, and a Basis reserve-refund path so the reserve owner can withdraw if a tracker goes offline after the configured delay.
+- `Sep 3` to `Sep 5` 2025: the Basis design was reworked toward off-chain micropayments, peer-to-peer network incentivization, and agent-to-agent payments. The design notes centered on minimally trusted trackers for mutual debt state, with Ergo contracts used for redemption and double-redemption prevention rather than requiring every small payment to start on-chain.
+- `Oct 8` to `Oct 15`: the Basis tracker prototype was under test, with some actions working and others still being fixed. A browser wallet in JavaScript started alongside the tracker, and contract fixes continued.
+- `Nov 5`: Basis / ChainCash tracker work added reserve-tracking persistence, improved logging, and CORS fixes so wallet-side testing could continue.
 - `Jan 21` to `Jan 28`: the node Schnorr-sign API was added, tracker signature verification moved into the core crate, and Basis switched to node-assisted signing during redemption.
 - `Feb 25`: the reserve contract rework finished and utilities landed for reserve creation, note creation, and note redemption.
 - `Mar 26`: the first offchain-note redemption transaction completed.
 - `Apr 3` and `Apr 22`: [Agent Credit](https://github.com/fitzss/agent-credit) was published on top of ChainCash / Basis and Ergo, and mesh-network trading demos and presentations were prepared.
 - `Apr` to `May`: ChainCash contract work continued around Basis, reserve/emergency logic, and refund handling. Treat examples on this page as a moving implementation reference and verify against the linked contract sources before building on them.
+- `May 6` to `May 27`: team updates said the RAMICS-26 / Basis paper work, CLI wallet testing, and redemption tests against the Basis tracker were active. The work was still prototype-stage, with small fixes continuing around tracker and redemption flows.
+- `Jun 4`: the Basis whitepaper was sent out for review, a simple CLI wallet tool was being tested, and the team continued prototype work around ChainCash/Basis flows.
 - Basis presentation slides, including the June 2026 RAMICS deck, are available in the ChainCash repository: [basis.pdf](https://github.com/BetterMoneyLabs/chaincash/blob/master/docs/presentation/basis.pdf).
+- `Jul 1`: the team reported testing tracker on-chain state updates and redemption against the Basis tracker, while preparing developer-onboarding material.
 - Caveat: some transfer paths still depend on raw Schnorr signatures, so normal wallet support remains constrained.
 
 ## Motivation and Evolution of Money

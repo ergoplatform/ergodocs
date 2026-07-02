@@ -26,6 +26,8 @@ NIPoPoWs consist of a prover and a verifier. The prover is a [full node](archiva
 
 The security of NIPoPoWs relies on the honest majority assumption. The verifier accepts multiple proofs, and as long as at least one of them is honestly generated, the verifier can extract the correct information about the occurrence of the event.
 
+In normal settings, a client should request proofs from more than one peer and compare them before choosing the best chain. If an isolated application can query only one node, it needs an explicit minimum-work threshold plus enough confirmations after the transaction being proven; that is a constrained trust model, not the usual multi-peer NiPoPoW assumption.
+
 Ergo's [block structure](block.md) goes beyond the traditional header and transaction format, incorporating an ['extension' section](extension-section.md) that houses NIPoPoW links, updated every 1,024 block epochs. This unique structure allows different types of [nodes](modes.md) and clients to selectively download required block sections, optimizing storage, bandwidth, and CPU usage.
 
 ## Applications of NIPoPoWs

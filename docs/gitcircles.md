@@ -13,6 +13,14 @@ source_repos:
       - README.md
 source_of_truth:
   - https://github.com/GitCircles/GitCircles-Github
+  - https://github.com/GitCircles/GitCircles-Github/issues/1
+  - https://github.com/GitCircles/GitCircles-Github/pull/3
+  - https://github.com/GitCircles/GitCircles-Github/pull/5
+  - https://github.com/GitCircles/GitCircles-Github/pull/6
+  - https://github.com/GitCircles/GitCircles-Github/issues/11
+  - https://github.com/GitCircles/GitCircles-Github/pull/10
+  - https://github.com/GitCircles/GitCircles-Github/issues/7
+  - https://github.com/GitCircles/GitCircles-Github/issues/18
   - https://github.com/GitCircles/GitCircles-Roadmap
 ---
 
@@ -29,6 +37,10 @@ Whether you're a maintainer looking for a fairer system or a developer hoping to
 At its core, **GitCircles** is an automated engine that tracks contributions in Git-based projects (like GitHub, GitLab, Gitea, and Bitbucket) and issues **on-chain cryptocurrency tokens** to contributors — based on the actual impact of their work.
 
 Project planning and open discussion live in the [GitCircles Roadmap](https://github.com/GitCircles/GitCircles-Roadmap) repository, while the GitHub adapter implementation lives in [GitCircles-Github](https://github.com/GitCircles/GitCircles-Github).
+
+September 2025 development moved from persistence and manual token-distribution testing into the first merged adapter changes. The team tracked persistence in [`GitCircles-Github#1`](https://github.com/GitCircles/GitCircles-Github/issues/1), merged early Ergo-address work in [`#3`](https://github.com/GitCircles/GitCircles-Github/pull/3), and reported the first testing token plus first contributor payment after [`#5`](https://github.com/GitCircles/GitCircles-Github/pull/5) and [`#6`](https://github.com/GitCircles/GitCircles-Github/pull/6).
+
+October 2025 development work was focused on the GitHub adapter moving toward deployment. The team tracked the token automation process in [`GitCircles-Github#11`](https://github.com/GitCircles/GitCircles-Github/issues/11), wallet-address matching in [`#7`](https://github.com/GitCircles/GitCircles-Github/issues/7), and merged the wallet-address implementation in [`#10`](https://github.com/GitCircles/GitCircles-Github/pull/10). Address validation follow-up work was tracked in [`#18`](https://github.com/GitCircles/GitCircles-Github/issues/18).
 
 It bridges the world of Git and decentralized finance (DeFi):
 

@@ -114,6 +114,8 @@ in a suitable way. It should also show the replyToUrl's hostname so that the use
 the authentication is sent. The replyToUrl's hostname must be the same as the one the request was
 fetched from - a wallet application should verify that.
 
+Implementation note: mobile wallets can reject a request with an error such as `ErgoAuth reply URL not on host` when `replyToUrl` uses a different host than the request URL. Match the host exactly, including common production-vs-staging and subdomain differences, unless the wallet documentation explicitly supports another trust rule.
+
 After signing is performed, the
 wallet must POST the following data to the dApp using **replyToUrl** from the
 request (json format).

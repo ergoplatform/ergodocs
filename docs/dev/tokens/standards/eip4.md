@@ -40,6 +40,7 @@ A transaction can create *out-of-thin-air* tokens in its outputs if the token id
 
 - As the box identifier is cryptographically unique, there is no chance of having the second token with the same identifier while the hash function is collision-resistant.
 - This rule also means that only one new token per transaction can be created.
+- The standard issuance examples usually show one output carrying the minted supply, but the protocol can place the same new token ID in multiple output boxes of the minting transaction. Indexers, explorers, wallets, and auditors should sum all outputs for the token ID instead of assuming a single mint output.
 - Unlike ergs, other tokens can be burnt: the total amount for a token in transaction inputs should be no less than the amount of the outputs.
 
 [Storage rent](rent.md) component allows a miner to collect (or burn) all the tokens inside a box if it is expired, and there are not enough Ergs in the box to pay the storage rent fee.

@@ -98,6 +98,8 @@ The Ergomempool Visualizer has reached its Minimum Viable Product (MVP) stage an
 
 [ergo-mempool-watcher](https://github.com/cannonQ/ergo-mempool-watcher) is an investigative TypeScript tool for local-node mempool analysis. It records mempool transactions and mined blocks to Supabase, then analyzes inclusion rate, dwell time, stuck transactions, and pool-selection behavior. A public dashboard is available at [cannonq.github.io/ergo-mempool-watcher](https://cannonq.github.io/ergo-mempool-watcher/).
 
+In May 2026, dev-chat use of the watcher focused on delayed or skipped mempool transactions and nil-block patterns. One reported snapshot found many zero-transaction blocks from 2Miners while still describing their average transaction-inclusion rate as roughly normal, so use the dashboard for current investigation rather than as a fixed long-term statistic.
+
 ### 7\. Contribution
 
 As an open-source project, the Ergomempool Visualizer welcomes community contributions. Developers interested in Python, blockchain data visualization, and the Ergo ecosystem are encouraged to explore the GitHub repository.

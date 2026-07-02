@@ -15,7 +15,7 @@ tags:
   - Ruby
   - Python
 owner: docs
-last_reviewed: 2026-05-27
+last_reviewed: 2026-07-02
 source_repos:
   - repo: ergoplatform/bounded-vec
     branch: develop
@@ -48,6 +48,10 @@ source_repos:
     branch: main
     paths:
       - README.md
+  - repo: mwaddip/santa
+    branch: main
+    paths:
+      - README.md
 source_of_truth:
   - https://github.com/ergoplatform/bounded-vec
   - https://github.com/ergonames/sdk/tree/master/rust
@@ -65,6 +69,13 @@ source_of_truth:
   - https://github.com/ergoplatform/sigma-rust/tree/develop/sigma-ser
   - https://github.com/Luivatra/ergoscript-compiler-lsp
   - https://github.com/Luivatra/ergoscript-zed-extension
+  - https://github.com/mwaddip/santa
+  - https://github.com/ergoplatform/sigma-rust/pull/876
+  - https://github.com/ergoplatform/sigma-rust/pull/836
+  - https://github.com/ergoplatform/sigma-rust/pull/895
+  - https://github.com/ergoplatform/sigma-rust/pull/897
+  - https://github.com/ergoplatform/sigma-rust/pull/906
+  - https://github.com/ergoplatform/sigma-rust/pull/909
 ---
 
 # Sigma Rust
@@ -75,6 +86,8 @@ Rust implementation of [ErgoScript (sigmastate-interpreter)](sigmastate-interpre
 
 ## Recent updates
 
+- `Jun`: SANTA-backed conformance work exposed a broad sigma-rust/JVM alignment stream. Review and PR work covered JIT costing, v5/v6 evaluation behavior, AVL method semantics, context-extension handling, header-version signedness, serializer details, and other consensus-sensitive edge cases. Treat this as an active review stream unless a downstream release explicitly marks the relevant path stable.
+- `May`: early SANTA runs found synthetic sigma-rust cases accepted by sigma-rust but rejected by Scala. An independent `ergots` harness hit the same under-charging class around mainnet block `1,520,813`, reinforcing that cross-implementation test failures must be treated as consensus-sensitive until fixed upstream.
 - `Apr 20`: the ErgoScript Rust compiler in [sigma-rust PR #862](https://github.com/ergoplatform/sigma-rust/pull/862) reached byte-identical output for 12 of 15 production contracts, with `compile_canonical()` added as a safety fallback that verifies against a Scala node and uses node bytes if local output differs.
 - `Apr 22`: 15 of 15 production contracts and 20+ contracts tested byte-identical, with 185 tests green.
 - `Apr 23`: 31 test contracts matched the Scala node with 196 tests and no canonical fallbacks. Contracts tested included SigmaUSD, Rosen GuardSign, Spectrum DEX, DuckPools, Dexy, Oracle Pool v2, Off-the-grid, Crystal Pool, Phoenix HodlERG, governance, lending, AMM swaps, multisig, vesting, and BigInt arithmetic patterns.
@@ -100,6 +113,7 @@ Compatibility notes:
 Library and binding notes:
 
 - [`bounded-vec`](https://github.com/ergoplatform/bounded-vec) is an Ergo Platform Rust utility crate for vectors with type-level lower and upper bound guarantees. It is low-level infrastructure rather than an application SDK, but useful context when following Rust dependency work around Sigma libraries.
+- August 2025 WASM binding work changed reduced-transaction `SigmaBoolean` JSON serialization to base-16 strings, matching ErgoTree-style encoding.
 - `UnsignedBigInt` support has been added to C/Swift bindings.
 - Python bindings track newer `pyo3` for Python 3.14 support.
 - WASM serializes `SigmaBoolean` values as base-16 strings.

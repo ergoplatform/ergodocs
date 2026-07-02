@@ -17,19 +17,19 @@ Source Watch checks watched repositories for commits touching declared paths and
 
 ## Summary
 
-- Source-watched pages: `237`
-- Watched repositories: `227`
-- Watched GitHub owners: `99`
-- Watched repo/branch pairs: `233`
-- Watched paths: `487`
+- Source-watched pages: `239`
+- Watched repositories: `230`
+- Watched GitHub owners: `100`
+- Watched repo/branch pairs: `236`
+- Watched paths: `492`
 
 ## Coverage Groups
 
 | Group | Owners | Repositories | Pages | Paths |
 | --- | ---: | ---: | ---: | ---: |
-| Core / infrastructure | 5 | 30 | 131 | 184 |
-| Ecosystem org | 10 | 36 | 24 | 33 |
-| Developer / project | 80 | 157 | 115 | 90 |
+| Core / infrastructure | 5 | 30 | 131 | 186 |
+| Ecosystem org | 10 | 37 | 24 | 33 |
+| Developer / project | 81 | 159 | 117 | 90 |
 | External standard/vendor | 4 | 4 | 11 | 13 |
 
 ## Coverage By Area
@@ -37,7 +37,7 @@ Source Watch checks watched repositories for commits touching declared paths and
 | Area | Source-watched pages |
 | --- | ---: |
 | `contribute` | 2 |
-| `dev` | 98 |
+| `dev` | 99 |
 | `doc` | 1 |
 | `docs` | 9 |
 | `eco` | 76 |
@@ -46,17 +46,17 @@ Source Watch checks watched repositories for commits touching declared paths and
 | `mining` | 7 |
 | `node` | 25 |
 | `tutorials` | 6 |
-| `uses` | 11 |
+| `uses` | 12 |
 
 ## Coverage By GitHub Owner
 
 | Owner | Group | Repositories | Pages | Paths |
 | --- | --- | ---: | ---: | ---: |
-| [`ergoplatform`](https://github.com/ergoplatform) | Core / infrastructure | 17 | 106 | 145 |
+| [`ergoplatform`](https://github.com/ergoplatform) | Core / infrastructure | 17 | 106 | 147 |
 | [`ScorexFoundation`](https://github.com/ScorexFoundation) | Core / infrastructure | 1 | 24 | 31 |
 | [`rosen-bridge`](https://github.com/rosen-bridge) | Core / infrastructure | 10 | 10 | 6 |
+| [`mwaddip`](https://github.com/mwaddip) | Developer / project | 8 | 9 | 7 |
 | [`cannonQ`](https://github.com/cannonQ) | Developer / project | 5 | 8 | 3 |
-| [`mwaddip`](https://github.com/mwaddip) | Developer / project | 8 | 8 | 7 |
 | [`mgpai22`](https://github.com/mgpai22) | Developer / project | 5 | 7 | 4 |
 | [`arkadianet`](https://github.com/arkadianet) | Developer / project | 4 | 6 | 1 |
 | [`kushti`](https://github.com/kushti) | Developer / project | 4 | 6 | 7 |
@@ -80,7 +80,9 @@ Source Watch checks watched repositories for commits touching declared paths and
 | [`ergonames`](https://github.com/ergonames) | Ecosystem org | 5 | 3 | 4 |
 | [`ergopad`](https://github.com/ergopad) | Ecosystem org | 2 | 3 | 3 |
 | [`K-Singh`](https://github.com/K-Singh) | Developer / project | 2 | 3 | 2 |
+| [`Luivatra`](https://github.com/Luivatra) | Developer / project | 3 | 3 | 1 |
 | [`machinafi`](https://github.com/machinafi) | Developer / project | 1 | 3 | 2 |
+| [`mhssamadani`](https://github.com/mhssamadani) | Developer / project | 3 | 3 | 3 |
 | [`ross-weir`](https://github.com/ross-weir) | Developer / project | 3 | 3 | 3 |
 | [`Scottcjn`](https://github.com/Scottcjn) | Developer / project | 4 | 3 | 2 |
 | [`spectrum-finance`](https://github.com/spectrum-finance) | Ecosystem org | 3 | 3 | 6 |
@@ -95,9 +97,7 @@ Source Watch checks watched repositories for commits touching declared paths and
 | [`GuapSwap`](https://github.com/GuapSwap) | Developer / project | 4 | 2 | 2 |
 | [`LEEKOHCHING`](https://github.com/LEEKOHCHING) | Developer / project | 1 | 2 | 1 |
 | [`LiliumErgo`](https://github.com/LiliumErgo) | Developer / project | 2 | 2 | 2 |
-| [`Luivatra`](https://github.com/Luivatra) | Developer / project | 3 | 2 | 1 |
 | [`marctheshark3`](https://github.com/marctheshark3) | Developer / project | 3 | 2 | 3 |
-| [`mhssamadani`](https://github.com/mhssamadani) | Developer / project | 2 | 2 | 3 |
 | [`networkspore`](https://github.com/networkspore) | Developer / project | 2 | 2 | 1 |
 | [`oliverw`](https://github.com/oliverw) | Developer / project | 1 | 2 | 1 |
 | [`paideiadao`](https://github.com/paideiadao) | Developer / project | 2 | 2 | 4 |
@@ -116,7 +116,7 @@ Source Watch checks watched repositories for commits touching declared paths and
 | [`Cortex-Miner`](https://github.com/Cortex-Miner) | Developer / project | 1 | 1 | 1 |
 | [`cruxfinance`](https://github.com/cruxfinance) | Developer / project | 2 | 1 | 1 |
 | [`danieloravec`](https://github.com/danieloravec) | Developer / project | 1 | 1 | 1 |
-| [`Degens-World`](https://github.com/Degens-World) | Ecosystem org | 8 | 1 | 1 |
+| [`Degens-World`](https://github.com/Degens-World) | Ecosystem org | 9 | 1 | 1 |
 | [`dungvn3000`](https://github.com/dungvn3000) | Developer / project | 1 | 1 | 1 |
 | [`dzyphr`](https://github.com/dzyphr) | Developer / project | 1 | 1 | 1 |
 | [`Emryk-LLC`](https://github.com/Emryk-LLC) | Developer / project | 1 | 1 | 1 |
@@ -132,6 +132,7 @@ Source Watch checks watched repositories for commits touching declared paths and
 | [`lazypinkpatrick`](https://github.com/lazypinkpatrick) | Developer / project | 1 | 1 | 1 |
 | [`ldgaetano`](https://github.com/ldgaetano) | Developer / project | 1 | 1 | 1 |
 | [`lucagdangelo`](https://github.com/lucagdangelo) | Developer / project | 1 | 1 | 1 |
+| [`moon-miner`](https://github.com/moon-miner) | Developer / project | 1 | 1 | 1 |
 | [`Moria-Finance`](https://github.com/Moria-Finance) | Developer / project | 2 | 1 | 1 |
 | [`nautls`](https://github.com/nautls) | Developer / project | 1 | 1 | 2 |
 | [`nightowlcasino`](https://github.com/nightowlcasino) | Developer / project | 2 | 1 | 1 |
@@ -156,8 +157,8 @@ Source Watch checks watched repositories for commits touching declared paths and
 
 | Repository | Owner group | Branches | Pages | Paths |
 | --- | --- | --- | ---: | ---: |
-| [`ergoplatform/ergo`](https://github.com/ergoplatform/ergo) | Core / infrastructure | `master`, `testnet60`, `v6.0.3`, `weak-blocks` | 49 | 53 |
-| [`ergoplatform/eips`](https://github.com/ergoplatform/eips) | Core / infrastructure | `eip16`, `master` | 25 | 17 |
+| [`ergoplatform/ergo`](https://github.com/ergoplatform/ergo) | Core / infrastructure | `master`, `testnet60`, `v6.0.3`, `weak-blocks` | 49 | 54 |
+| [`ergoplatform/eips`](https://github.com/ergoplatform/eips) | Core / infrastructure | `eip16`, `master` | 25 | 18 |
 | [`ScorexFoundation/sigmastate-interpreter`](https://github.com/ScorexFoundation/sigmastate-interpreter) | Core / infrastructure | `develop` | 24 | 31 |
 | [`ergoplatform/sigma-rust`](https://github.com/ergoplatform/sigma-rust) | Core / infrastructure | `develop` | 14 | 33 |
 | [`rosen-bridge/operation`](https://github.com/rosen-bridge/operation) | Core / infrastructure | `dev` | 8 | 4 |
@@ -176,6 +177,7 @@ Source Watch checks watched repositories for commits touching declared paths and
 | [`kushti/chaincash`](https://github.com/kushti/chaincash) | Developer / project | `master` | 3 | 3 |
 | [`machinafi/sdk`](https://github.com/machinafi/sdk) | Developer / project | `master` | 3 | 2 |
 | [`mgpai22/ergpy`](https://github.com/mgpai22/ergpy) | Developer / project | `main` | 3 | 2 |
+| [`mwaddip/santa`](https://github.com/mwaddip/santa) | Developer / project | `main` | 3 | 1 |
 | [`odiseusme/matrix-pulse`](https://github.com/odiseusme/matrix-pulse) | Developer / project | `master` | 3 | 1 |
 | [`rosen-bridge/utils`](https://github.com/rosen-bridge/utils) | Core / infrastructure | `dev` | 3 | 1 |
 | [`ThierryM1212/SigmaO`](https://github.com/ThierryM1212/SigmaO) | Developer / project | `main` | 3 | 3 |
@@ -207,12 +209,13 @@ Source Watch checks watched repositories for commits touching declared paths and
 | [`LiliumErgo/scala-api`](https://github.com/LiliumErgo/scala-api) | Developer / project | `main` | 2 | 2 |
 | [`Lithos-Protocol/Lithos`](https://github.com/Lithos-Protocol/Lithos) | Ecosystem org | `ErgoHack`, `master` | 2 | 2 |
 | [`Lithos-Protocol/Lithos-Client`](https://github.com/Lithos-Protocol/Lithos-Client) | Ecosystem org | `master` | 2 | 2 |
+| [`Luivatra/ergoscript-compiler-lsp`](https://github.com/Luivatra/ergoscript-compiler-lsp) | Developer / project | `main` | 2 | 1 |
+| [`Luivatra/ergoscript-zed-extension`](https://github.com/Luivatra/ergoscript-zed-extension) | Developer / project | `main` | 2 | 1 |
 | [`MrStahlfelge/ergopay-server-example`](https://github.com/MrStahlfelge/ergopay-server-example) | Developer / project | `master` | 2 | 2 |
 | [`MrStahlfelge/mosaik`](https://github.com/MrStahlfelge/mosaik) | Developer / project | `develop` | 2 | 3 |
 | [`mwaddip/ergo-node-rust`](https://github.com/mwaddip/ergo-node-rust) | Developer / project | `master` | 2 | 1 |
 | [`mwaddip/ergo-relay`](https://github.com/mwaddip/ergo-relay) | Developer / project | `master` | 2 | 1 |
 | [`mwaddip/ergots`](https://github.com/mwaddip/ergots) | Developer / project | `master` | 2 | 6 |
-| [`mwaddip/santa`](https://github.com/mwaddip/santa) | Developer / project | `main` | 2 | 1 |
 | [`mwaddip/santa-blitzen`](https://github.com/mwaddip/santa-blitzen) | Developer / project | `master` | 2 | 1 |
 | [`mwaddip/santa-donner`](https://github.com/mwaddip/santa-donner) | Developer / project | `main` | 2 | 1 |
 | [`mwaddip/santa-vixen`](https://github.com/mwaddip/santa-vixen) | Developer / project | `master` | 2 | 1 |
@@ -261,6 +264,7 @@ Source Watch checks watched repositories for commits touching declared paths and
 | [`cruxfinance/ergo-address-labels`](https://github.com/cruxfinance/ergo-address-labels) | Developer / project | `main` | 1 | 1 |
 | [`danieloravec/ergo-token-swap`](https://github.com/danieloravec/ergo-token-swap) | Developer / project | `main` | 1 | 1 |
 | [`Degens-World/agente`](https://github.com/Degens-World/agente) | Ecosystem org | `master` | 1 | 1 |
+| [`Degens-World/AgentGram`](https://github.com/Degens-World/AgentGram) | Ecosystem org | `main` | 1 | 1 |
 | [`Degens-World/ai-radio-mcp`](https://github.com/Degens-World/ai-radio-mcp) | Ecosystem org | `main` | 1 | 1 |
 | [`Degens-World/ergo-block-timestamps`](https://github.com/Degens-World/ergo-block-timestamps) | Ecosystem org | `main` | 1 | 1 |
 | [`Degens-World/Ergo-Context`](https://github.com/Degens-World/Ergo-Context) | Ecosystem org | `main` | 1 | 1 |
@@ -318,8 +322,6 @@ Source Watch checks watched repositories for commits touching declared paths and
 | [`LiliumErgo/nest-api`](https://github.com/LiliumErgo/nest-api) | Developer / project | `main` | 1 | 1 |
 | [`lucagdangelo/trade-in`](https://github.com/lucagdangelo/trade-in) | Developer / project | `main` | 1 | 1 |
 | [`Luivatra/ergo-rust-node`](https://github.com/Luivatra/ergo-rust-node) | Developer / project | `main` | 1 | 1 |
-| [`Luivatra/ergoscript-compiler-lsp`](https://github.com/Luivatra/ergoscript-compiler-lsp) | Developer / project | `main` | 1 | 1 |
-| [`Luivatra/ergoscript-zed-extension`](https://github.com/Luivatra/ergoscript-zed-extension) | Developer / project | `main` | 1 | 1 |
 | [`marctheshark3/AI-Project-Starter-Kit`](https://github.com/marctheshark3/AI-Project-Starter-Kit) | Developer / project | `main` | 1 | 3 |
 | [`marctheshark3/ergo-mcp`](https://github.com/marctheshark3/ergo-mcp) | Developer / project | `main` | 1 | 1 |
 | [`marctheshark3/FintelligenceAI`](https://github.com/marctheshark3/FintelligenceAI) | Developer / project | `main` | 1 | 1 |
@@ -327,8 +329,10 @@ Source Watch checks watched repositories for commits touching declared paths and
 | [`mgpai22/ergo-streaming`](https://github.com/mgpai22/ergo-streaming) | Developer / project | `main` | 1 | 1 |
 | [`mgpai22/ergonnection-go`](https://github.com/mgpai22/ergonnection-go) | Developer / project | `main` | 1 | 1 |
 | [`mgpai22/sigusd-ballot`](https://github.com/mgpai22/sigusd-ballot) | Developer / project | `main` | 1 | 1 |
+| [`mhssamadani/ErgoProfitSharingDapp`](https://github.com/mhssamadani/ErgoProfitSharingDapp) | Developer / project | `master` | 1 | 1 |
 | [`mhssamadani/ErgoWell`](https://github.com/mhssamadani/ErgoWell) | Developer / project | `master` | 1 | 1 |
 | [`mhssamadani/gravity-core`](https://github.com/mhssamadani/gravity-core) | Developer / project | `dev` | 1 | 2 |
+| [`moon-miner/ergo-paper-wallet`](https://github.com/moon-miner/ergo-paper-wallet) | Developer / project | `main` | 1 | 1 |
 | [`Moria-Finance/moria-backend`](https://github.com/Moria-Finance/moria-backend) | Developer / project | `main` | 1 | 1 |
 | [`Moria-Finance/multi-sig-test`](https://github.com/Moria-Finance/multi-sig-test) | Developer / project | `main` | 1 | 1 |
 | [`MrStahlfelge/mosaik-ageusddemo`](https://github.com/MrStahlfelge/mosaik-ageusddemo) | Developer / project | `master` | 1 | 2 |
@@ -391,11 +395,12 @@ Source Watch checks watched repositories for commits touching declared paths and
 | [`dev/scs/contracts.md`](contracts.md) | 25 | 40 |
 | [`roadmap.md`](roadmap.md) | 21 | 42 |
 | [`eco/emerging-projects.md`](emerging-projects.md) | 12 | 16 |
+| [`eco/degens-world.md`](degens-world.md) | 9 | 9 |
 | [`eco/rosen.md`](rosen.md) | 9 | 10 |
-| [`eco/degens-world.md`](degens-world.md) | 8 | 8 |
 | [`events/ergohack.md`](ergohack.md) | 8 | 8 |
 | [`node/rust-node.md`](rust-node.md) | 8 | 8 |
-| [`dev/stack/sigma-rust.md`](sigma-rust.md) | 5 | 16 |
+| [`dev/stack/sigma-rust.md`](sigma-rust.md) | 6 | 17 |
+| [`dev/scs/ergoscript.md`](ergoscript.md) | 5 | 9 |
 | [`dev/tutorials/blockchain-indexing.md`](blockchain-indexing.md) | 5 | 5 |
 | [`eco/mew-finance.md`](mew-finance.md) | 5 | 5 |
 | [`dev/tutorials/blockchain-indexing/custom-indexer.md`](custom-indexer.md) | 4 | 5 |
@@ -411,7 +416,6 @@ Source Watch checks watched repositories for commits touching declared paths and
 | [`dev/p2p/p2p-handshake.md`](p2p-handshake.md) | 3 | 6 |
 | [`dev/protocol/tx/read-only-inputs.md`](read-only-inputs.md) | 3 | 3 |
 | [`dev/scs/ergoscript-tooling.md`](ergoscript-tooling.md) | 3 | 3 |
-| [`dev/scs/ergoscript.md`](ergoscript.md) | 3 | 7 |
 | [`dev/scs/sigma/verifying.md`](verifying.md) | 3 | 3 |
 
 ## Repo And Path Coverage
@@ -468,6 +472,7 @@ Source Watch checks watched repositories for commits touching declared paths and
 | [`DeCo-Education/DeCo-Homeworks`](https://github.com/DeCo-Education/DeCo-Homeworks) | `main` | `ErgoScript-Developer-Course/batch-0/team-tensile/future contract/`<br>`ErgoScript-Developer-Course/batch-0/team-tensile/future contract/future-contract-v2.ergo`<br>`ErgoScript-Developer-Course/batch-0/team-tensile/future contract/hw3-future-contract-code-v1.md` | `docs/eco/tensile.md`<br>`docs/events/ergohack.md` |
 | [`DeCo-Education/ErgoScript-Developer-Course`](https://github.com/DeCo-Education/ErgoScript-Developer-Course) | `main` | `Class-Documents/Class-1/Materials/Class1.MD` | `docs/dev/scs/sigma/sigma-prop.md`<br>`docs/dev/scs/syntax.md` |
 | [`Degens-World/agente`](https://github.com/Degens-World/agente) | `master` | `README.md` | `docs/eco/degens-world.md` |
+| [`Degens-World/AgentGram`](https://github.com/Degens-World/AgentGram) | `main` | `README.md` | `docs/eco/degens-world.md` |
 | [`Degens-World/ai-radio-mcp`](https://github.com/Degens-World/ai-radio-mcp) | `main` | `README.md` | `docs/eco/degens-world.md` |
 | [`Degens-World/ergo-block-timestamps`](https://github.com/Degens-World/ergo-block-timestamps) | `main` | `README.md` | `docs/eco/degens-world.md` |
 | [`Degens-World/Ergo-Context`](https://github.com/Degens-World/Ergo-Context) | `main` | `README.md` | `docs/eco/degens-world.md` |
@@ -496,8 +501,8 @@ Source Watch checks watched repositories for commits touching declared paths and
 | [`ergoplatform/awesome-ergo`](https://github.com/ergoplatform/awesome-ergo) | `master` | `graphics/Logo` | `docs/contribute/marketing.md` |
 | [`ergoplatform/bounded-vec`](https://github.com/ergoplatform/bounded-vec) | `develop` | `README.md` | `docs/dev/stack/sigma-rust.md` |
 | [`ergoplatform/eips`](https://github.com/ergoplatform/eips) | `eip16` | `eip-0016.md` | `docs/eco/oracles-v2.md`<br>`docs/uses/oracles.md` |
-| [`ergoplatform/eips`](https://github.com/ergoplatform/eips) | `master` | `eip-0001.md`<br>`eip-0003.md`<br>`eip-0004.md`<br>`eip-0005.md`<br>`eip-0006.md`<br>`eip-0015.md`<br>`eip-0017.md`<br>`eip-0019.md`<br>+8 more | `docs/dev/protocol/tx/babel-fees.md`<br>`docs/dev/protocol/tx/babel-fleet.md`<br>`docs/dev/protocol/tx/babel-impl.md`<br>`docs/dev/scs/contracts.md`<br>`docs/dev/scs/ergotree/script-optimisation.md`<br>`docs/dev/stack/headless.md`<br>+17 more |
-| [`ergoplatform/ergo`](https://github.com/ergoplatform/ergo) | `master` | `avldb/src/main/scala/org/ergoplatform/serialization/ErgoSerializer.scala`<br>`ergo-core/src/main/scala/org/ergoplatform/mining/AutolykosPowScheme.scala`<br>`ergo-core/src/main/scala/org/ergoplatform/modifiers`<br>`ergo-core/src/main/scala/org/ergoplatform/modifiers/history/ADProofs.scala`<br>`ergo-core/src/main/scala/org/ergoplatform/modifiers/history/BlockTransactions.scala`<br>`ergo-core/src/main/scala/org/ergoplatform/modifiers/history/extension/Extension.scala`<br>`ergo-core/src/main/scala/org/ergoplatform/modifiers/history/extension/ExtensionCandidate.scala`<br>`ergo-core/src/main/scala/org/ergoplatform/modifiers/history/extension/ExtensionSerializer.scala`<br>+40 more | `docs/dev/data-model/block-adproofs.md`<br>`docs/dev/data-model/block-header.md`<br>`docs/dev/data-model/block-transactions.md`<br>`docs/dev/data-model/extension-section.md`<br>`docs/dev/data-model/merkle-tree-overview.md`<br>`docs/dev/data-model/structures/interlink-vectors.md`<br>+39 more |
+| [`ergoplatform/eips`](https://github.com/ergoplatform/eips) | `master` | `eip-0001.md`<br>`eip-0003.md`<br>`eip-0004.md`<br>`eip-0005.md`<br>`eip-0006.md`<br>`eip-0012.md`<br>`eip-0015.md`<br>`eip-0017.md`<br>+9 more | `docs/dev/protocol/tx/babel-fees.md`<br>`docs/dev/protocol/tx/babel-fleet.md`<br>`docs/dev/protocol/tx/babel-impl.md`<br>`docs/dev/scs/contracts.md`<br>`docs/dev/scs/ergotree/script-optimisation.md`<br>`docs/dev/stack/headless.md`<br>+17 more |
+| [`ergoplatform/ergo`](https://github.com/ergoplatform/ergo) | `master` | `avldb/src/main/scala/org/ergoplatform/serialization/ErgoSerializer.scala`<br>`ergo-core/src/main/scala/org/ergoplatform/mining/AutolykosPowScheme.scala`<br>`ergo-core/src/main/scala/org/ergoplatform/modifiers`<br>`ergo-core/src/main/scala/org/ergoplatform/modifiers/history/ADProofs.scala`<br>`ergo-core/src/main/scala/org/ergoplatform/modifiers/history/BlockTransactions.scala`<br>`ergo-core/src/main/scala/org/ergoplatform/modifiers/history/extension/Extension.scala`<br>`ergo-core/src/main/scala/org/ergoplatform/modifiers/history/extension/ExtensionCandidate.scala`<br>`ergo-core/src/main/scala/org/ergoplatform/modifiers/history/extension/ExtensionSerializer.scala`<br>+41 more | `docs/dev/data-model/block-adproofs.md`<br>`docs/dev/data-model/block-header.md`<br>`docs/dev/data-model/block-transactions.md`<br>`docs/dev/data-model/extension-section.md`<br>`docs/dev/data-model/merkle-tree-overview.md`<br>`docs/dev/data-model/structures/interlink-vectors.md`<br>+39 more |
 | [`ergoplatform/ergo`](https://github.com/ergoplatform/ergo) | `testnet60` | `src/main/resources/testnet.conf` | `docs/dev/p2p/network.md`<br>`docs/dev/p2p/p2p-handshake.md` |
 | [`ergoplatform/ergo`](https://github.com/ergoplatform/ergo) | `v6.0.3` | `ergo-core/src/main/scala/org/ergoplatform/settings/ValidationRules.scala`<br>`ergo-core/src/main/scala/org/ergoplatform/validation/ModifierError.scala`<br>`src/main/scala/org/ergoplatform/network/ErgoNodeViewSynchronizer.scala`<br>`src/main/scala/org/ergoplatform/nodeView/mempool/ErgoMemPool.scala`<br>`src/main/scala/org/ergoplatform/nodeView/mempool/OrderedTxPool.scala` | `docs/node/protocol.md`<br>`docs/node/synchronisation.md` |
 | [`ergoplatform/ergo`](https://github.com/ergoplatform/ergo) | `weak-blocks` | `papers/inputblocks/main.pdf` | `docs/uses/sidechains/subblocks.md` |
@@ -557,8 +562,8 @@ Source Watch checks watched repositories for commits touching declared paths and
 | [`Lithos-Protocol/Lithos-Client`](https://github.com/Lithos-Protocol/Lithos-Client) | `master` | `README.md`<br>`TestnetNode.md` | `docs/eco/lithos.md`<br>`docs/roadmap.md` |
 | [`lucagdangelo/trade-in`](https://github.com/lucagdangelo/trade-in) | `main` | `src/main/scala/contracts` | `docs/dev/scs/contracts.md` |
 | [`Luivatra/ergo-rust-node`](https://github.com/Luivatra/ergo-rust-node) | `main` | `README.md` | `docs/node/rust-node.md` |
-| [`Luivatra/ergoscript-compiler-lsp`](https://github.com/Luivatra/ergoscript-compiler-lsp) | `main` | `README.md` | `docs/dev/stack/sigma-rust.md` |
-| [`Luivatra/ergoscript-zed-extension`](https://github.com/Luivatra/ergoscript-zed-extension) | `main` | `README.md` | `docs/dev/stack/sigma-rust.md` |
+| [`Luivatra/ergoscript-compiler-lsp`](https://github.com/Luivatra/ergoscript-compiler-lsp) | `main` | `README.md` | `docs/dev/scs/ergoscript.md`<br>`docs/dev/stack/sigma-rust.md` |
+| [`Luivatra/ergoscript-zed-extension`](https://github.com/Luivatra/ergoscript-zed-extension) | `main` | `README.md` | `docs/dev/scs/ergoscript.md`<br>`docs/dev/stack/sigma-rust.md` |
 | [`machinafi/sdk`](https://github.com/machinafi/sdk) | `master` | `README.md`<br>`src` | `docs/dev/oc/dex_bots.md`<br>`docs/eco/machina-finance.md`<br>`docs/roadmap.md` |
 | [`marctheshark3/AI-Project-Starter-Kit`](https://github.com/marctheshark3/AI-Project-Starter-Kit) | `main` | `README.md`<br>`cursor/Ergo-Blockchain-API-Guide-for-Cursormd`<br>`ergo-blockchain-system-prompt.md` | `docs/ai.md` |
 | [`marctheshark3/ergo-mcp`](https://github.com/marctheshark3/ergo-mcp) | `main` | `README.md` | `docs/eco/codeutxo.md` |
@@ -568,8 +573,10 @@ Source Watch checks watched repositories for commits touching declared paths and
 | [`mgpai22/ergonnection-go`](https://github.com/mgpai22/ergonnection-go) | `main` | `README.md` | `docs/dev/lang/go.md` |
 | [`mgpai22/ergpy`](https://github.com/mgpai22/ergpy) | `main` | `examples`<br>`examples/example_5_bulk_mint_with_royalty.py` | `docs/dev/anatomy/transactions/chained.md`<br>`docs/dev/tokens/nfts/nft-examples.md`<br>`docs/tutorials/chained-tx.md` |
 | [`mgpai22/sigusd-ballot`](https://github.com/mgpai22/sigusd-ballot) | `main` | `README.md` | `docs/uses/sigmausd/sigusd-dev.md` |
+| [`mhssamadani/ErgoProfitSharingDapp`](https://github.com/mhssamadani/ErgoProfitSharingDapp) | `master` | `README.md` | `docs/uses/profit.md` |
 | [`mhssamadani/ErgoWell`](https://github.com/mhssamadani/ErgoWell) | `master` | `README.md` | `docs/eco/ergowell.md` |
 | [`mhssamadani/gravity-core`](https://github.com/mhssamadani/gravity-core) | `dev` | `contracts/ergo/gravity.scala`<br>`contracts/ergo/nebula.scala` | `docs/dev/scs/contracts.md` |
+| [`moon-miner/ergo-paper-wallet`](https://github.com/moon-miner/ergo-paper-wallet) | `main` | `README.md` | `docs/dev/wallet/paper-wallet.md` |
 | [`Moria-Finance/moria-backend`](https://github.com/Moria-Finance/moria-backend) | `main` | `README.md` | `docs/eco/moria-finance.md` |
 | [`Moria-Finance/multi-sig-test`](https://github.com/Moria-Finance/multi-sig-test) | `main` | `README.md` | `docs/eco/moria-finance.md` |
 | [`MrStahlfelge/ergopay-server-example`](https://github.com/MrStahlfelge/ergopay-server-example) | `master` | `src/main/java/org/ergoplatform/ergopay/ErgoPaySampleController.java`<br>`src/main/java/org/ergoplatform/ergopay/UserSessionService.java` | `docs/dev/stack/appkit/gradle.md`<br>`docs/dev/wallet/payments/ergopay/ep-tutorial.md` |
@@ -579,7 +586,7 @@ Source Watch checks watched repositories for commits touching declared paths and
 | [`mwaddip/ergo-proxy`](https://github.com/mwaddip/ergo-proxy) | `master` | `README.md`<br>`docs/protocol/ergo-p2p-wire-format.md` | `docs/dev/p2p/network.md`<br>`docs/dev/p2p/p2p-handshake.md`<br>`docs/eco/emerging-projects.md`<br>`docs/node/ergo-proxy.md` |
 | [`mwaddip/ergo-relay`](https://github.com/mwaddip/ergo-relay) | `master` | `README.md` | `docs/eco/emerging-projects.md`<br>`docs/node/ergo-relay.md` |
 | [`mwaddip/ergots`](https://github.com/mwaddip/ergots) | `master` | `README.md`<br>`packages/avltree/package.json`<br>`packages/ergoscript`<br>`packages/nipopow/package.json`<br>`packages/scorex/package.json`<br>`packages/transaction/package.json` | `docs/dev/lib/ergots.md`<br>`docs/roadmap.md` |
-| [`mwaddip/santa`](https://github.com/mwaddip/santa) | `main` | `README.md` | `docs/node/rust-node.md`<br>`docs/roadmap.md` |
+| [`mwaddip/santa`](https://github.com/mwaddip/santa) | `main` | `README.md` | `docs/dev/stack/sigma-rust.md`<br>`docs/node/rust-node.md`<br>`docs/roadmap.md` |
 | [`mwaddip/santa-blitzen`](https://github.com/mwaddip/santa-blitzen) | `master` | `README.md` | `docs/node/rust-node.md`<br>`docs/roadmap.md` |
 | [`mwaddip/santa-donner`](https://github.com/mwaddip/santa-donner) | `main` | `README.md` | `docs/node/rust-node.md`<br>`docs/roadmap.md` |
 | [`mwaddip/santa-vixen`](https://github.com/mwaddip/santa-vixen) | `master` | `README.md` | `docs/node/rust-node.md`<br>`docs/roadmap.md` |

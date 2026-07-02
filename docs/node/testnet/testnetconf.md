@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: 2026-05-26
+last_reviewed: 2026-07-02
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -8,6 +8,7 @@ source_repos:
       - src/main/resources/testnet.conf
 source_of_truth:
   - https://github.com/ergoplatform/ergo/tree/master/src/main/resources/testnet.conf
+  - https://github.com/ergoplatform/ergo/pull/2415
 ---
 
 # Testnet Configuration
@@ -49,6 +50,8 @@ This section includes parameters related to the blockchain.
 - `genesisStateDigestHex` is the Base16 representation of the genesis state roothash.
 
 For 6.0-era networks, protocol version 4 corresponds to the 6.0 interpreter feature set. Testnet settings are intended for non-breaking feature testing and may diverge from mainnet activation heights. Current `testnet.conf` sets the 6.0 voting `activationHeight` to `100000001`, keeping that activation effectively out of normal testnet operation unless the configuration is changed.
+
+A June 2026 testnet review found that missing explicit V2 settings could let testnet inherit mainnet V2 activation defaults. [PR #2415](https://github.com/ergoplatform/ergo/pull/2415) adds explicit testnet overrides: `version2ActivationHeight = 2147483647` and `version2ActivationDifficultyHex = "20"`. Until a release includes that change, operators debugging old testnet data directories should compare local config against the PR before assuming peer or miner faults.
 
 ### Voting Configuration
 

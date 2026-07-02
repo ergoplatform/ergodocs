@@ -7,7 +7,7 @@ tags:
   - design
   - prototype
 owner: docs
-last_reviewed: 2026-06-30
+last_reviewed: 2026-07-02
 source_repos:
   - repo: decentbob/ergo-marketplace
     branch: main
@@ -33,6 +33,8 @@ The repository points readers to two main documents:
 ## Status
 
 Treat this as design/prototype material. The README explicitly says it is not a finished product, and that AI was used to consolidate notes and find gaps. Do not describe it as live marketplace infrastructure until public code, contracts, audits, or deployed services support that claim.
+
+A June 2026 maintainer update said the design was adjusted toward Ergo development standards: client-library work, type standards instead of registries, escrow-hash enforcement by listing, a formalized state NFT, seller-side distribution enforcement, restructured verification, a moved trust table, and guard pseudocode in an appendix. These are design/spec improvements, not production deployment claims.
 
 ## Links
 

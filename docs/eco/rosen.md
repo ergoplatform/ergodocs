@@ -7,7 +7,7 @@ tags:
   - dApp
   - dApp-Beta
 owner: docs
-last_reviewed: 2026-06-27
+last_reviewed: 2026-07-02
 source_repos:
   - repo: rosen-bridge/watcher
     branch: master
@@ -57,6 +57,10 @@ source_of_truth:
   - https://github.com/rosen-bridge/rosenet
   - https://github.com/rosen-bridge/sign-protocols
   - https://github.com/rosen-bridge/rosen-chains
+  - https://github.com/rosen-bridge/rosen-chains/tree/153-runes-network
+  - https://github.com/rosen-bridge/ui/tree/runes-network
+  - https://github.com/rosen-bridge/ui/tree/runes-rename
+  - https://github.com/rosen-bridge/ui/tree/runes-wallet
   - https://github.com/rosen-bridge/cleanup-service
   - https://github.com/rosen-bridge/network-client
   - https://github.com/SavonarolaLabs/rosen-ui
@@ -112,6 +116,8 @@ Please see [this video](https://www.youtube.com/watch?v=Xsiy-yPJQ6w) for a visua
 - [SavonarolaLabs/rosen-ui](https://github.com/SavonarolaLabs/rosen-ui) is a small Svelte-based Rosen UI/widget prototype. Treat it as community interface reference, separate from the maintained Rosen UI/service repository.
 - `Apr 22`: Rosen stats work added TVL, volume, locked-assets, and user-count metrics, while the app also picked up React 19, Sentry, and live-data improvements.
 - The new rosen-service also added Bitcoin Runes support.
+- `Jun 3`: a Rosen team update said Firo work was moving from RPC toward ElectrumX across scanner, guard-service, health-check, utilities, and UI PRs. Handshake review was parked behind Firo completion, while Base work was split between scanner RPC observation and guard-service integration. Treat Firo, Handshake, and Base notes as expansion work under review until Rosen release notes mark those paths live.
+- `Aug 27` 2025: Rosen test updates reported guard-service testing over Rosenet, testing of a new Ergo multisig package integrated into guard-service, and ongoing BalanceHandler / watcher-node upgrade work. The same update said Bitcoin Runes UI work was split across network, rename, and wallet branches, with `rosen-chains` support relying on Bitcoin JSON-RPC and Unisat APIs.
 
 ## Why RosenBridge
 

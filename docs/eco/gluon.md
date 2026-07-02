@@ -17,6 +17,7 @@ source_repos:
       - README.md
 source_of_truth:
   - https://gluon.gold/
+  - https://gluon-ergo-ui.vercel.app/
   - https://github.com/StabilityNexus/Gluon-Ergo-UI
 ---
 
@@ -32,6 +33,10 @@ Now live at [gluon.gold](https://gluon.gold/)
 ///
 
 For nearby monetary-system pages, see [Stablecoins](stablecoins.md), [SigmaUSD](sigmausd.md), and [Dexy](dexy.md).
+
+## Recent updates
+
+- `Jul 2` 2025: a new Gluon beta UI was shared at `gluon-ergo-ui.vercel.app` and also deployed to [gluon.gold](https://gluon.gold/).
 
 ## Performance and Issues
 

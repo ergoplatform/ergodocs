@@ -15,6 +15,9 @@ source_repos:
 source_of_truth:
   - https://ergoraffle.com
   - https://github.com/ErgoRaffle/raffle-v2
+  - https://github.com/ErgoRaffle/raffle-v2/commit/821ad0b3e7be417c5fb69a0f5b1cbbb0b022d843
+  - https://github.com/ErgoRaffle/raffle-v2/commit/44e5a9a16c1460ee8d1a1e5aca6d144e43f58196
+  - https://github.com/ErgoRaffle/raffle-v2/commit/bbeb8da560b14368a186ab25394f29eecc1d13c5
 ---
 
 # ErgoRaffle
@@ -31,6 +34,7 @@ For the broader funding surface, see [Crowdfunding](crowdfunding.md) and [Fundin
 
 - `Mar 4` to `Apr 8`: Raffle v2 added direct BTC payments, a BTC watcher package, proxy-box extractors, refactored background jobs, and a BTC donation service.
 - The updated flow supports BTC and Runes alongside the existing Ergo raffle model.
+- `Aug 13` 2025: Raffle v2 added transaction-service packaging, box-lookup service work, service configuration using `@rosen-bridge/configs`, and a health-check service.
 
 ## About Ergo Raffle
 

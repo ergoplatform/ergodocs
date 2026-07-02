@@ -2,6 +2,10 @@
 tags:
   - Snapshots
   - nipopows
+owner: docs
+last_reviewed: 2026-07-02
+source_of_truth:
+  - https://github.com/ergoplatform/ergo/pull/2337
 ---
 
 # Pruned Full-Node Mode
@@ -13,6 +17,8 @@ This mode is akin to the *fast-sync* in Geth or Grothendieck and *warp-mode* in 
 ## Getting Started
 
 > Important: You cannot restore an old wallet with a pruned node. The recommended approach is to create a new wallet and transfer funds to it.
+
+May 2026 wallet-snapshot work proposed a narrower improvement for snapshot-bootstrapped nodes: after UTXO snapshot bootstrap, the wallet scans the UTXO set to rebuild confirmed wallet boxes and balances, then resumes normal block scanning after the snapshot height. Track [`ergoplatform/ergo#2337`](https://github.com/ergoplatform/ergo/pull/2337) for that implementation thread before relying on restored-wallet behavior in pruned / snapshot-based setups.
 
 Add the following `utxo` and `nipopow` sections to your node configuration to enable UTXO Set Snapshots.
 

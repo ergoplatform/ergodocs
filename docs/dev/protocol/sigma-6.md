@@ -82,6 +82,8 @@ This is a selection of the developments. For a comprehensive list of all address
 
 The changes introduced in **Sigma 6.0** are activated via a **soft-fork**. To ensure backward compatibility, some script deserialization validation rules (specifically #1007, #1008, and #1011) are replaced with identical ones under different IDs. These changes, implemented in [PR #1029](https://github.com/ergoplatform/sigmastate-interpreter/pull/1029), allow existing clients to validate scripts with old features while correctly skipping (or handling) those utilizing new Sigma 6.0 features post-activation.
 
+Sigma 6.0 activated on mainnet in October 2025 after miner voting. Development chat reported that 6.0 and 5.0 nodes remained in consensus after activation. From block `1,629,184`, 6.0 nodes also had a value for the voteable "sub-blocks per block" parameter intended for a future sub-blocks protocol if miners later vote it in.
+
 For testing around Ergo Reference Client 6.0.3, a community [testnet node build](https://github.com/a-shannon/ergo-testnet-node-6.0.3/releases/tag/ergo-6.0.3) is available. Production node operators should use official Ergo reference-client releases.
 
 ## Notes on Usage (from EIP)

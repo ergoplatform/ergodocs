@@ -5,6 +5,10 @@ tags:
   - Privacy
   - Anonymity
   - Configuration
+owner: docs
+last_reviewed: 2026-07-02
+source_of_truth:
+  - https://github.com/ergoplatform/ergo/pull/2304
 ---
 
 # Running your Node over Tor
@@ -18,11 +22,13 @@ scorex.network.bindAddress = "127.0.0.1:9030"
 scorex.restApi.bindAddress = "127.0.0.1:9053"
 ```
 
-With Tor installed and running, and the configuration above set, you then launch the Ergo node using specific Java system properties (`-D`) to direct its outgoing network traffic through the Tor SOCKS proxy:
+With Tor installed and running, and the configuration above set, some older guides launch the Ergo node using Java system properties (`-D`) to direct outgoing network traffic through the Tor SOCKS proxy:
 
 ```bash
 java -DsocksProxyHost=localhost -DsocksProxyPort=9050 -Xmx4G -jar ergo-*.jar --mainnet -c ergo.conf 
 ```
+
+Do not treat those JVM SOCKS flags as a complete privacy guarantee. A May 2026 node manual update warned that Akka / JDK NIO P2P paths can bypass `DsocksProxyHost`, so gossip may still leave over the normal network unless the whole process is isolated by OS-level routing, a container/network namespace, or another tested Tor-only setup.
 
 # Example Configuration File
 

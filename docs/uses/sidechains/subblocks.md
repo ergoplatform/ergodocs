@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: 2026-05-26
+last_reviewed: 2026-07-02
 source_repos:
   - repo: ergoplatform/ergo
     branch: weak-blocks
@@ -8,6 +8,9 @@ source_repos:
       - papers/inputblocks/main.pdf
 source_of_truth:
   - https://github.com/ergoplatform/ergo/tree/weak-blocks/papers/inputblocks/main.pdf
+  - https://github.com/ergoplatform/ergo/pull/2372
+  - https://github.com/ergoplatform/ergo/pull/2180
+  - https://github.com/ergoplatform/sigmastate-interpreter/pull/1069
 ---
 
 # Subblocks in Ergo
@@ -49,24 +52,29 @@ For a deep dive into the technical details behind these changes, see the [techni
 
 ## Recent updates
 
-In 2026 the input-block / ordering-block work moved under the Matrix implementation and devnet test stream.
+Late-2025 and 2026 input-block / ordering-block work moved under the Matrix implementation and devnet test stream.
 
+- `Jul 2` 2025: the subblocks devnet seed node was updated with stability fixes and optimizations, and maintainers said a public-testnet roadmap would follow.
+- `Aug 5` to `Aug 21` 2025: maintainers were auditing and refactoring critical subblock code, tracking DoS risks for subblock-supporting nodes, and preparing public-testnet miner support after the node `6.0.1` release. [ergoplatform/ergo#2180](https://github.com/ergoplatform/ergo/pull/2180) was identified as the first small pre-subblocks refactoring PR.
+- `Sep 3` to `Sep 10` 2025: early Matrix / subblock work reworked input-block P2P propagation around `INV` announcements and transaction-body diffs, so peers should not re-download mempool transactions they already hold. The related SigmaSDK work included context changes for soft-fork fields and rejecting transactions through those fields.
 - `Jan 2`: the Matrix whitepaper, [Splitting Ergo Blocks Into Input and Ordering Blocks For Fast Transaction Propagation and Confirmation](https://github.com/ergoplatform/ergo/blob/weak-blocks/papers/inputblocks/main.pdf), was published.
 - `Jan 12` to `Jan 14`: the initial subblock and input-block API methods were described in `openapi.yaml` and deployed on a devnet seed node.
 - `Feb 1` to `Feb 4`: the devnet was relaunched with a `60s` ordering-block delay and 60 input blocks per ordering block, with several mining peers testing.
 - `Mar 4` to `Mar 25`: fixes landed for full-block propagation to out-of-sync peers, wallet and mempool support, public testnet syncing, P2P tasks, DoS prevention, and cache growth.
+- `Mar 11` to `Mar 17`: the Matrix branch made the number of input blocks per ordering block readjustable by miner voting rather than hardcoded. Maintainers also clarified that input blocks share the standard full ordering-block limits and that chained transactions can be included in the same input block.
 - `Apr 22`: Matrix was merged with the 6.0.3 candidate line, the network difficulty check for input blocks was completed, and a new jar was deployed to devnet.
 - `Apr 28`: extra P2P checks were added to reduce DoS exposure and the external miner API was implemented. Stratum proxy tweaks remained before GPU mining tests.
-
+- `Jul 1`: the Matrix branch added verification that delivered input-block transaction bodies match the transaction digest announced in the proven input-block fields, rejecting mismatched bodies before they are cached or processed.
 Testing notes:
 
+- The December 2025 rollout plan was gradual: early Matrix peers would be mining pools and solo miners forming an input-block-aware P2P subnetwork, while non-upgraded peers continued normal block propagation. Early extension-section fields were not assumed to be present for every block during that phase.
 - Early January testing used a couple of peers and showed the implementation was mostly complete but still needed broad testing, public testnet coverage, and PR splitting for review.
 - A 30-second ordering-block setup with 60 input blocks per ordering block produced fork/sync behavior that was hard to analyze. The devnet then moved to `blockInterval = 60s`, which reduced input-block-chain forking.
 - February testing ran with three to four mining peers. Operators were asked to reset databases after incompatible jars or serialization changes.
 - March testing added wallet and mempool checks, non-mining public-testnet peer sync, and public-testnet versioning around the `6.5.0` test line.
 - April testing found a P2P serialization incompatibility and requested latest jars plus database resets before continuing.
 
-Current caveats: the devnet/testnet stream was still finding serialization, sync, and peer-ban edge cases. Production users should treat subblocks as active protocol R&D until release notes state otherwise.
+Current caveats: the devnet/testnet stream was still finding serialization, sync, peer-ban, fork-tree, and log-volume edge cases. A late-June Matrix DevNet run found excessive competing-fork bookkeeping/log churn; maintainers reported a tree-explosion fix and further RC work in progress. Production users should treat subblocks as active protocol R&D until release notes state otherwise.
 
 ### Miner and API work
 

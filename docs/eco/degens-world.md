@@ -32,6 +32,10 @@ source_repos:
     branch: master
     paths:
       - README.md
+  - repo: Degens-World/AgentGram
+    branch: main
+    paths:
+      - README.md
   - repo: Degens-World/Ergo-Context
     branch: main
     paths:
@@ -43,6 +47,7 @@ source_repos:
 source_of_truth:
   - https://degens.world/
   - https://github.com/Degens-World/Ergo-MCP
+  - https://github.com/Degens-World/Ergo-MCP/pull/2
   - https://github.com/Degens-World/Ergo-MCP/releases/tag/v0.2.0
   - https://github.com/Degens-World/Ergo-Node-CLI
   - https://github.com/Degens-World/ergo-block-timestamps
@@ -50,6 +55,7 @@ source_of_truth:
   - https://github.com/Degens-World/ai-radio-mcp
   - https://github.com/Degens-World/rust-expert-mcp
   - https://github.com/Degens-World/agente
+  - https://github.com/Degens-World/AgentGram
   - https://github.com/Degens-World/Ergo-Context
   - https://github.com/Degens-World/Xergon-Network
   - https://github.com/Danny-Degens/degen-wallet-oracle
@@ -65,12 +71,13 @@ source_of_truth:
 ## Recent updates
 
 - [Degen Wallet](https://swap.degens.world/download): public testing opened in March 2026. The wallet added dApp integration, direct LP swap, low-fee quick swap, USE mint merged with swap, an active dApps view, Android testing, and iOS TestFlight preparation.
-- [Ergo MCP](https://github.com/Degens-World/Ergo-MCP): agentic MCP server with explorer functionality. [`v0.2.0`](https://github.com/Degens-World/Ergo-MCP/releases/tag/v0.2.0) was released in March 2026.
+- [Ergo MCP](https://github.com/Degens-World/Ergo-MCP): agentic MCP server with explorer functionality. [`v0.2.0`](https://github.com/Degens-World/Ergo-MCP/releases/tag/v0.2.0) was released in March 2026 with explorer tools, testnet support, and hardening around testnet deployment configuration.
 - [Ergo Skills](https://github.com/Degens-World/Ergo-Skills): skills repository intended to give agents project-specific Ergo context such as AppKit, Fleet, and wallet patterns.
 - [Ergo Node CLI](https://github.com/Degens-World/Ergo-Node-CLI): command-line tooling for launching or maintaining nodes and for agent tool calls.
 - [Agent Army](https://github.com/Degens-World/agent-army): local multi-agent orchestration for splitting tasks, passing memory, and coordinating long-running agent loops.
 - [Agent Heartbeat](https://github.com/Degens-World/agent-heartbeat): experimental agent heartbeat/status tooling.
 - [Agente](https://github.com/Degens-World/agente): autonomous Ergo trading-agent framework using Machina Finance plus Claude or local Ollama. It signs and submits through a local Ergo node wallet, sends Telegram notifications, and can open, close, or adjust grid and limit orders.
+- [AgentGram](https://github.com/Degens-World/AgentGram): Telegram coordination tool for two Claude agents to work from shared context with human approval gates.
 - [Sovereignty](https://sovereignty.degens.world): public testing of an Ergo-centric agent platform where agents create user-owned wallets and can trade ErgoDEX pairs, create LP positions, mint tokens/NFTs, and interact with Degens apps.
 - [Etcha](https://ergo-p2p-options-frontend-web.vercel.app/app/wizard): decentralized P2P options alpha. It supports physical delivery options and cash-settled options using stablecoins such as USE or SigUSD; later contract work focused on cancel-anytime full refunds.
 - [Ergo block timestamps](https://ergo-block-timestamps.vercel.app/): block timestamp app and API with source at [ergo-block-timestamps](https://github.com/Degens-World/ergo-block-timestamps). The public app provides block/range/week/month/year timestamp queries.
@@ -81,6 +88,7 @@ source_of_truth:
 - [AI Blockchain Radio](https://github.com/Degens-World/ai-blockchain-radio), [Ergo Fortune Teller](https://github.com/Degens-World/ergo-fortune-teller), and [Hackathon Judge](https://github.com/Degens-World/hackathon-judge): small experimental agent/media/demo repositories from the same public GitHub organization.
 - [Ergo New Testnet snapshot](https://github.com/Degens-World/Ergo-New-Testnet-ergo-6.0.1-1-91aa8056-SNAPSHOT): archived-style testnet release artifact for a November 2025 `ergo-6.0.1` snapshot; do not treat it as an official current node release.
 - Orbis: [orbis.degens.world](https://orbis.degens.world/) opened for testing, with NFT PlotWars and cross-chain work noted.
+- [ERGatchi](https://ergatchi.degens.world): Degens mini-game / Tamagotchi-style experiment with demo mode and wallet-gated play noted in March 2026 dev updates.
 - Silentium: private AI proxy announced in the April 2026 weekly update.
 - WaddleSwap: line-item swaps were made functional in the April 2026 weekly update.
 - Incubate UI: UI work started in January 2026.
@@ -93,7 +101,7 @@ Some of these projects are experimental or in public testing. Treat project-spec
 
 The Degens.World agent work is aimed at giving LLM/agent tooling direct Ergo context rather than relying on generic blockchain knowledge. The MCP server exposes explorer functionality to agents inside development environments, while Ergo Skills is intended to collect project-specific recipes for AppKit, Fleet, wallet connector flows, and related Ergo patterns.
 
-Related agent tooling includes an Ergo Q/A docs interface, [Ergo Context](https://github.com/Degens-World/Ergo-Context) for LLM/agent ErgoScript context, [AI Radio MCP](https://github.com/Degens-World/ai-radio-mcp), and [Rust Expert MCP](https://github.com/Degens-World/rust-expert-mcp). Rust Expert MCP is external Rust tooling with live access to Rust language references, compiler errors, RFCs, The Book, the Reference, the Nomicon, and crates.io.
+Related agent tooling includes an Ergo Q/A docs interface, [Ergo Context](https://github.com/Degens-World/Ergo-Context) for LLM/agent ErgoScript context, [AgentGram](https://github.com/Degens-World/AgentGram) for two-agent Telegram collaboration, [AI Radio MCP](https://github.com/Degens-World/ai-radio-mcp), and [Rust Expert MCP](https://github.com/Degens-World/rust-expert-mcp). Rust Expert MCP is external Rust tooling with live access to Rust language references, compiler errors, RFCs, The Book, the Reference, the Nomicon, and crates.io.
 
 Agente is the trading-agent component in this surface. Its loop fetches ERG price and wallet state, builds context, asks an LLM for a structured decision, executes through the Machina Finance SDK, signs through the configured Ergo node, and reports decisions through Telegram.
 

@@ -19,9 +19,11 @@ source_repos:
     paths:
       - eip-0001.md
       - eip-0003.md
+      - eip-0012.md
 source_of_truth:
   - https://github.com/ergoplatform/eips/tree/master/eip-0001.md
   - https://github.com/ergoplatform/eips/tree/master/eip-0003.md
+  - https://github.com/ergoplatform/eips/tree/master/eip-0012.md
 ---
 
 # Wallet Interaction Standards (EIPs) for dApp Developers
@@ -115,6 +117,7 @@ async function connectWallet() {
 * **`ergo.sign_tx(unsignedTx)`:**
   * **Purpose:** Sends an *unsigned* transaction (built according to EIP-12 structure) to the wallet for the user to review and sign.
   * **Return:** Returns the *signed* transaction if approved by the user.
+  * **Input selection:** EIP-12 carries the full unsigned transaction object for signing; wallets should not need to query the chain and patch transaction data before signing. If a specific box must be spent, include that input explicitly. Default SDK or wallet input selection does not guarantee any particular wallet box will be chosen.
   * **Error Handling:** Crucial to handle user rejection (often throws a specific error code/message), insufficient funds errors from the wallet's pre-check, or malformed transaction errors.
 * **`ergo.submit_tx(signedTx)`:**
   * **Purpose:** Sends a *signed* transaction to the wallet for submission to the network via the wallet's connected node.

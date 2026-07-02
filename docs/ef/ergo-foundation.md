@@ -21,7 +21,7 @@ Use these pages for the main Foundation records:
 - [Votes](ef-votes.md): historical Foundation votes and treasury-control decisions.
 - [Future](ef-future.md): transition toward community-led funding, Foundation signatory services, and long-term direction.
 - [Scope](ef-scope.md): areas where the Foundation has historically supported the ecosystem.
-- [Timeline](ergo-timeline.md): historical milestones.
+- [Timeline](roadmap.md#ergo-timeline): historical milestones.
 
 ## Mission
 

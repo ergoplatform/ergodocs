@@ -22,6 +22,8 @@ source_repos:
       - ergo-wallet
 source_of_truth:
   - https://github.com/ergoplatform/sigmastate-interpreter/releases/tag/v6.0.5
+  - https://github.com/ergoplatform/sigmastate-interpreter/releases/tag/v6.0.2
+  - https://github.com/ergoplatform/sigmastate-interpreter/pull/1076
   - https://github.com/ergoplatform/sigmastate-interpreter/tree/develop/README.md
   - https://github.com/ergoplatform/sigmastate-interpreter/tree/develop/docs/sigma-dsl.md
   - https://github.com/ergoplatform/sigmastate-interpreter/tree/develop/interpreter/shared/src/main/scala/sigmastate/interpreter/Interpreter.scala
@@ -46,6 +48,7 @@ This library is integral to the operation of the [Ergo Node](https://github.com/
 - v6.0.4 added compiler support for `None` expressions, including cases such as `val x: Option[Int] = None`, and included dependency updates and additional tests.
 - `Apr 14`: [SigmaState interpreter v6.0.3](https://github.com/ergoplatform/sigmastate-interpreter/releases/tag/v6.0.3) and [sigmastate-js 0.6.1](https://www.npmjs.com/package/sigmastate-js) were released.
 - v6.0.3 included compiler support for `Global.serialize`, contract-template deserialization fixes for v6 methods, and broader language-spec coverage.
+- `Aug 7` 2025: [Sigma SDK v6.0.2](https://github.com/ergoplatform/sigmastate-interpreter/releases/tag/v6.0.2) was released for Ergo mainnets `v6.x` and `v5.x`. The same development stream moved release management toward candidate PRs, starting with the `v6.0.3` candidate in [PR #1076](https://github.com/ergoplatform/sigmastate-interpreter/pull/1076).
 
 /// details | DeepWiki Documentation
     {type: info, open: true}
