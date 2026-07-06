@@ -161,6 +161,33 @@ Ergo's roadmap is research-led: protocol changes move through papers, EIPs, test
 | **Alpha / prototype** | Public code or UI exists, but contracts, UX, audits, or wallet support may still change. |
 | **Research** | Design, paper, EIP, or exploratory implementation. Delivery depends on review and testing. |
 
+## Latest Updates
+
+Month buckets summarize roadmap-relevant changes from the latest docs sweep. Use the linked project pages, repositories, and release notes for caveats and source detail.
+
+### 2026
+
+#### July
+
+- [Sub-blocks / Matrix](subblocks.md): Matrix work added input-block body/digest validation so delivered transaction bodies must match the digest committed in proven input-block fields; still DevNet / R&D, not mainnet.
+- [ChainCash / Basis](chaincash.md): tracker on-chain state updates and redemption against the Basis tracker were being tested, with developer-onboarding material in progress.
+- [ErgoNames](ergonames.md): public beta docs now cover SDK send-flow integration, governance / hot-wallet constraints, beta-name reset caveats, and planned source snapshots for launch review.
+- [The Field](the-field.md): prelaunch work covers AVL-oracle settlement, contract-audit fixes, rebate-credit cleanup, and AGPL source-release plans.
+
+#### June
+
+- [Ergo node](protocol.md), [Synchronisation](synchronisation.md), and [Sub-blocks](subblocks.md): the 6.0.x line moved through 6.0.3 review/release work, Matrix DevNet testing continued, and protocol work covered P2P logic, mempool consistency, extension-section checks, and input/ordering-block review.
+- [Sigma SDK](sigmastate-interpreter.md), [Sigma 6](sigma-6.md), and [AppKit](appkit.md): Sigma SDK 6.0.4 / 6.0.5 shipped, while AppKit 6.0.0 landed the Sigma 6 / EIP-50 upgrade path with prover-evaluated tests.
+- [Rust node](rust-node.md), [sigma-rust](sigma-rust.md), and [ergots](ergots.md): Rust node reached the 0.7.x conformance line, SANTA added JVM / sigma-rust / ergots runner work, `ergots` packages were published, and sigma-rust fixes continued around JIT costing, JSON/no-std builds, AVL+, and ErgoScript compiler parity.
+- [Rosen Bridge](rosen.md): Firo work moved from RPC toward ElectrumX-backed scanner / guard / health-check / UI paths, while Handshake and Base work stayed under review rather than live-chain status.
+- [Sidechains](sidechains.md): the Ergo sidechain bridge prototype stayed focused on release-readiness, evidence validation, claim-boundary hardening, AVL anti-replay, and Substrate / Frontier EVM settlement assumptions.
+- [Ergo Marketplace](ergo-marketplace.md): the design/prototype gained client-library work, type standards, escrow-hash enforcement, state-NFT formalization, seller-side distribution enforcement, verification restructuring, and guard pseudocode.
+- [ErgoNames](ergonames.md): SDK integration guidance was published for wallet and dApp send flows, including `resolveAddress` / `primaryName` usage and failure-mode handling.
+- [ergo-use-x402](ergo-use-x402.md): an experimental USE x402 / ACP payment stack demonstrated Nautilus and ErgoPay storefront paths with Babel fees, so a payer can spend USE without holding ERG for miner fees.
+- [eBiome](ebiome.md): Forensics V2 expanded wallet / transaction analysis, bot and round-trip detection, linked-wallet heuristics, and dashboard coverage; treat attribution as heuristic.
+- [Ergo Wallets](wallets-overview.md): mobile wallet translation work, local pending-transaction tracking, Nautilus integration notes, and wallet-facing dApp flow fixes remained active UX work.
+- [Matrix Pulse](matrix-pulse.md), [Ergo Mempool Watcher](mempool-vis.md), and [Ergo Knowledge Base](ergo-knowledge-base.md): observability and knowledge tooling grew around Matrix nodes, mempool inclusion / dwell-time analysis, and searchable ecosystem context.
+
 ## Development Focus
 
 Near-term protocol work is focused on the 6.x reference-node and Sigma stack, with Matrix DevNet used for protocol-breaking changes before any mainnet proposal. Rust and TypeScript implementations now provide useful cross-checks alongside the JVM reference stack.
