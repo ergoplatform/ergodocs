@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: 2026-05-26
+last_reviewed: 2026-07-26
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -8,6 +8,8 @@ source_repos:
       - src/test/scala/org/ergoplatform/tools/FeeSimulator.scala
 source_of_truth:
   - https://github.com/ergoplatform/ergo/tree/master/src/test/scala/org/ergoplatform/tools/FeeSimulator.scala
+  - https://github.com/ergoplatform/eips/pull/105
+  - https://github.com/ergoplatform/ergo/pull/2438
 ---
 
 # Ergo Storage Rent Fees
@@ -44,6 +46,12 @@ For an academic perspective on this topic, consult the research paper ["A System
 ## Storage Rent Fee Collection
 
 Every four years, miners can capitalize on the opportunity to collect a storage rent fee by respending and recreating a box. In doing so, all register states remain intact, barring R0 (which holds the monetary value) and R3 (containing the creation height, transaction ID, and output index where the box originated). Network voting determines the rent fee per byte, with the default set at **1,250,000 nanoErgs/byte**. The adjustable range for this parameter is `[0…2,500,000]`.
+
+/// admonition | Open storage-rent repair proposal
+    type: warning
+
+[EIP-0048](https://github.com/ergoplatform/eips/pull/105) proposes two block-version-5-gated repairs: use 64-bit storage-fee arithmetic and allow expired EIP-27 reward boxes to satisfy the re-emission-token burn rule while being recreated. The [reference implementation](https://github.com/ergoplatform/ergo/pull/2438) is still a draft and changes no network behavior unless a later version vote activates it. Do not assume these proposed rules are active.
+///
 
 ## Further Reading on Storage Rent Potential
 

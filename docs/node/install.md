@@ -6,7 +6,7 @@ tags:
   - Setup
   - Guide
 owner: docs
-last_reviewed: 2026-06-27
+last_reviewed: 2026-07-26
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -16,7 +16,9 @@ source_repos:
 source_of_truth:
   - https://github.com/ergoplatform/ergo
   - https://github.com/ergoplatform/ergo/releases/tag/v6.0.3
+  - https://github.com/ergoplatform/ergo/releases/tag/v6.0.4RC2
   - https://github.com/ergoplatform/ergo/releases/tag/v6.1.3
+  - https://github.com/ergoplatform/ergo/releases/tag/v6.5.0-RC3
 ---
 
 # The Ergo Reference Client (Node)
@@ -47,7 +49,7 @@ The minimum hardware requirements are approximately ~20GB of storage for the blo
 
 Current reference-node configuration advertises the 6.0.x app version. Mainnet protocol settings use protocol version 4 for the 6.0 interpreter feature set.
 
-The latest checked reference-client releases are [v6.0.3](https://github.com/ergoplatform/ergo/releases/tag/v6.0.3) and [v6.1.3](https://github.com/ergoplatform/ergo/releases/tag/v6.1.3), published on 2026-06-26. Both include the 6.0.3 maintenance line: public testnet parameter updates, custom public-key mining route support on testnet, extension-section validation coverage, mempool and synchronisation fixes, P2P logic improvements, wallet API documentation updates, custom-key mining candidate cache fixes, and transaction-builder input-ID validation.
+The latest checked stable reference-client releases are [v6.0.3](https://github.com/ergoplatform/ergo/releases/tag/v6.0.3) and [v6.1.3](https://github.com/ergoplatform/ergo/releases/tag/v6.1.3), published on 2026-06-26. Both include the 6.0.3 maintenance line: public testnet parameter updates, custom public-key mining route support on testnet, extension-section validation coverage, mempool and synchronisation fixes, P2P logic improvements, wallet API documentation updates, custom-key mining candidate cache fixes, and transaction-builder input-ID validation. [v6.0.4RC2](https://github.com/ergoplatform/ergo/releases/tag/v6.0.4RC2) is a newer prerelease. RC1 added stricter REST input validation, corrected testnet V2 activation settings, and duplicate-ID mempool protection; RC2 adds block-candidate generation improvements and an OpenAPI correction. For Matrix DevNet testing, [v6.5.0-RC3](https://github.com/ergoplatform/ergo/releases/tag/v6.5.0-RC3) is the current special prerelease build.
 ////
 //// details | Modes of operation
     {type: notes, open: true}

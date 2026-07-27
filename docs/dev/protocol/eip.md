@@ -1,6 +1,12 @@
 ---
 tags:
   - EIP
+owner: docs
+last_reviewed: 2026-07-26
+source_of_truth:
+  - https://github.com/ergoplatform/eips
+  - https://github.com/ergoplatform/eips/pull/103
+  - https://github.com/ergoplatform/eips/pull/105
 ---
 
 # Ergo Improvement Proposals (EIPs)
@@ -21,8 +27,10 @@ To gain a better understanding of the structure and formatting of EIPs, we encou
 See the [Pull requests](https://github.com/ergoplatform/eips/pulls) section for full details on the open EIPs, some of the most notable are;
 
 - [ ] [Ready to merge/implemented PRs #86](https://github.com/ergoplatform/eips/issues/86)
-- [ ] EIP-0042 Multi-Signature Wallet
+- [ ] [EIP-0042: Multi-Signature Wallet](https://github.com/ergoplatform/eips/pull/88)
 - [ ] [[WIP] EIP-50 - Sigma 6.0](https://github.com/ergoplatform/eips/pull/100)
+- [ ] [EIP-0045: Native STARK Proof Verification Opcode](https://github.com/ergoplatform/eips/pull/103) — open proposal; no network activation.
+- [ ] [EIP-0048: Storage-Rent Repairs](https://github.com/ergoplatform/eips/pull/105) — open, block-version-5-gated proposal; current implementation draft changes nothing before activation.
 
 ## Hardfork Wishlist
 

@@ -6,7 +6,7 @@ tags:
   - dApp
   - dApp-Live
 owner: docs
-last_reviewed: 2026-05-30
+last_reviewed: 2026-07-26
 source_repos:
   - repo: ErgoRaffle/raffle-v2
     branch: dev
@@ -14,6 +14,7 @@ source_repos:
       - README.md
 source_of_truth:
   - https://ergoraffle.com
+  - https://testnet-beta.ergoraffle.com/about
   - https://github.com/ErgoRaffle/raffle-v2
   - https://github.com/ErgoRaffle/raffle-v2/commit/821ad0b3e7be417c5fb69a0f5b1cbbb0b022d843
   - https://github.com/ErgoRaffle/raffle-v2/commit/44e5a9a16c1460ee8d1a1e5aca6d144e43f58196
@@ -32,6 +33,7 @@ For the broader funding surface, see [Crowdfunding](crowdfunding.md) and [Fundin
 
 ## Recent updates
 
+- `Jul 12`: the [ErgoRaffle v2 public testnet beta](https://testnet-beta.ergoraffle.com/about) opened for community testing. It uses test assets; do not treat it as the production raffle service.
 - `Mar 4` to `Apr 8`: Raffle v2 added direct BTC payments, a BTC watcher package, proxy-box extractors, refactored background jobs, and a BTC donation service.
 - The updated flow supports BTC and Runes alongside the existing Ergo raffle model.
 - `Aug 13` 2025: Raffle v2 added transaction-service packaging, box-lookup service work, service configuration using `@rosen-bridge/configs`, and a health-check service.

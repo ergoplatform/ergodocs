@@ -1,13 +1,20 @@
 ---
 owner: docs
-last_reviewed: 2026-05-26
+last_reviewed: 2026-07-26
 source_repos:
+  - repo: minotaur-ergo/minotaur-wallet
+    branch: dev
+    paths:
+      - README.md
+      - apps
+      - packages
   - repo: ergoplatform/eips
     branch: master
     paths:
       - eip-0004.md
 source_of_truth:
-  - https://github.com/minotaur-ergo/minotaur-wallet/releases/tag/v3.0.0
+  - https://github.com/minotaur-ergo/minotaur-wallet
+  - https://github.com/minotaur-ergo/minotaur-wallet/releases/tag/v4.2.0
   - https://github.com/ergoplatform/eips/tree/master/eip-0004.md
 ---
 
@@ -32,13 +39,14 @@ For a visual and detailed guide on how to use Minotaur, watch the comprehensive 
   - Facilitates token transactions.
   - Enables issuing and burning of tokens within dApps.
 - Transaction display within the wallet, including pre-signing transaction previews.
-- Embedded dApp support, with three dApps currently available for token issuance, token burning, and sigma-usd operations.
+- Embedded dApp support for token issuance, token burning, box consolidation, and SigmaUSD operations.
 - Cross-platform support for Android, iOS, Windows, MacOS, and Linux.
 - Wallet encryption via user-defined password.
 - ErgoPay integration for seamless transactions.
 
 ## Recent updates
 
+- `Jul 1`: [Minotaur `v4.2.0`](https://github.com/minotaur-ergo/minotaur-wallet/releases/tag/v4.2.0) added Android HTTP support, moved network requests to the HTTP plugin, hid monetary-value displays for testnet wallets, fixed editing the network backend URL, and improved unavailable token-valuation handling.
 - `Jan 21`: Minotaur `3.4.0` released with node backend support, backend selection between node and explorer, chart fixes, duplicate multisig wallet fix, and dependency updates.
 - `Jul 25` 2025: [Minotaur `v3.0.0`](https://github.com/minotaur-ergo/minotaur-wallet/releases/tag/v3.0.0) updated the multisig communication data format, added an AirDrop dApp, extracted utility packages, added `createChangeBox` support to all dApps, validated addresses before wallet insertion, and fixed wallet restore/delete issues.
 - Wallet restore and read-only sync scan derived addresses so balances and UTXOs can be rebuilt deterministically.

@@ -29,6 +29,7 @@ source_of_truth:
 - Stop services cleanly before replacing binaries, jars, or Docker images.
 - Record current node height, indexed height, app version, and DB image tags.
 - For Docker services, pull images before maintenance window where possible.
+- When comparing `application.conf` defaults with local overrides, check for renamed network flags such as `allowLocal` in current upstream configs; older notes may still refer to `localOnly`.
 
 ## Node Upgrade
 
@@ -63,4 +64,3 @@ docker compose up -d
 ```
 
 Verify restore with `\dt` and confirm expected tables such as `block_entity`, `collateral_entity`, `event_trigger_entity`, and `transaction_entity`.
-

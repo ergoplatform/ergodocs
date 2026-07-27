@@ -4,12 +4,12 @@ tags:
   - Data Structures
   - Ergo
 owner: docs
-last_reviewed: 2026-05-27
+last_reviewed: 2026-07-26
 source_repos:
   - repo: ergoplatform/ergo_avltree_rust
     branch: main
     paths:
-      - README.md
+      - README.MD
   - repo: K-Singh/Plasma-Toolkit
     branch: master
     paths:
@@ -17,6 +17,7 @@ source_repos:
 source_of_truth:
   - https://github.com/ergoplatform/ergo_avltree_rust
   - https://github.com/K-Singh/Plasma-Toolkit
+  - https://github.com/K-Singh/Plasma-Toolkit/releases/tag/v1.1.0
 ---
 
 # AVL Trees in Ergo: An Overview
@@ -31,7 +32,7 @@ Ergo utilizes AVL trees to bolster the security and efficiency of a variety of a
 
 Developers can effortlessly integrate AVL trees into their Ergo applications with the help of the [GetBlok Plasma](plasma.md) library, which is built on the [Ergo Appkit](appkit.md). This library streamlines the integration process by offering an abstraction layer that aids in incorporating AVL trees (also referred to as Plasma) into [off-chain code](off-chain-overview.md). It provides developers with a convenient method to utilize AVL trees as a [Layer-2 scaling solution](layer2.md) in [smart contracts](ergoscript.md), off-chain code, and distributed systems that manage the Plasma infrastructure.
 
-Lower-level and experimental references include [ergo_avltree_rust](https://github.com/ergoplatform/ergo_avltree_rust), the Rust implementation of Ergo's AVL+ tree, and [Plasma Toolkit](https://github.com/K-Singh/Plasma-Toolkit), an Ergo AppKit-based library for interacting with AVL trees as an L2-style data structure.
+Lower-level and experimental references include [ergo_avltree_rust](https://github.com/ergoplatform/ergo_avltree_rust), the Rust implementation of Ergo's AVL+ tree, and [Plasma Toolkit](https://github.com/K-Singh/Plasma-Toolkit), an Ergo AppKit-based library for interacting with AVL trees as an L2-style data structure. [Plasma Toolkit v1.1.0](https://github.com/K-Singh/Plasma-Toolkit/releases/tag/v1.1.0) updates to AppKit 6.0.0 and Scala 2.12.20, adds `InsertOrUpdate` and `PlasmaMap.empty`, and fixes deep-copy proof generation. Its SBT coordinate is `"io.github.k-singh" %% "plasma-toolkit" % "1.1.0"`.
 
 ## Efficiency and Proof Size of AVL Trees
 

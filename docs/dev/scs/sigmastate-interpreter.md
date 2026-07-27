@@ -6,7 +6,7 @@ tags:
   - Compiler
   - Interpreter
 owner: docs
-last_reviewed: 2026-06-27
+last_reviewed: 2026-07-26
 source_repos:
   - repo: ergoplatform/sigmastate-interpreter
     branch: develop
@@ -22,6 +22,7 @@ source_repos:
       - ergo-wallet
 source_of_truth:
   - https://github.com/ergoplatform/sigmastate-interpreter/releases/tag/v6.0.5
+  - https://repo1.maven.org/maven2/org/scorexfoundation/sigma-state_2.12/6.0.5/sigma-state_2.12-6.0.5.pom
   - https://github.com/ergoplatform/sigmastate-interpreter/releases/tag/v6.0.2
   - https://github.com/ergoplatform/sigmastate-interpreter/pull/1076
   - https://github.com/ergoplatform/sigmastate-interpreter/tree/develop/README.md
@@ -89,7 +90,7 @@ While the sigmastate-interpreter library provides the low-level primitives neces
 To start using the sigmastate-interpreter in your Scala project, add the following dependency to your SBT configuration:
 
 ```scala
-libraryDependencies += "org.scorexfoundation" %% "sigma-state" % "5.0.14"
+libraryDependencies += "org.scorexfoundation" %% "sigma-state" % "6.0.5"
 ```
 
 For more advanced usage and direct interaction with the ErgoTree and Sigma protocols, refer to the detailed [Sigma Language documentation](sigma-lang.md).

@@ -4,7 +4,7 @@ tags:
   - Devnet
   - Configuration
 owner: docs
-last_reviewed: 2026-06-30
+last_reviewed: 2026-07-10
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -12,7 +12,7 @@ source_repos:
       - src/main/resources/devnet.conf
 source_of_truth:
   - https://github.com/ergoplatform/ergo/tree/master/src/main/resources/devnet.conf
-  - https://github.com/ergoplatform/ergo/releases/tag/v6.5.0-RC1
+  - https://github.com/ergoplatform/ergo/releases/tag/v6.5.0-RC3
 ---
 
 # Ergo Node Devnet Configuration Documentation
@@ -21,7 +21,7 @@ This document describes the main sections and fields of the [Ergo node configura
 
 ## Matrix DevNet RC
 
-[Ergo Matrix 6.5.0 RC1](https://github.com/ergoplatform/ergo/releases/tag/v6.5.0-RC1) is a prerelease node build for a special testing devnet. It is not a mainnet node release. The release includes an example `devnet` configuration with 60-second blocks, short voting epochs, `offlineGeneration = true`, devnet magic bytes, and a bootstrap peer for protocol-breaking change testing.
+[Ergo Matrix 6.5.0 RC3](https://github.com/ergoplatform/ergo/releases/tag/v6.5.0-RC3) is a prerelease node build for a special testing devnet. It is not a mainnet node release. The release includes an example `devnet` configuration with 60-second blocks, short voting epochs, `offlineGeneration = true`, devnet magic bytes, a bootstrap peer for protocol-breaking change testing, and p2p-layer fixes since RC2.
 
 ## Ergo Configuration Section
 

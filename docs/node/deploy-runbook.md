@@ -68,6 +68,7 @@ The reference node config binds REST to `0.0.0.0:9052` in `application.conf`, bu
 - Use `ergo.node.extraIndex = true` only when you need `/blockchain/...` indexed routes or services that depend on them.
 - Keep `scorex.network.maxConnections` sized for the host; default config uses `30`.
 - If accepting inbound peers, configure `scorex.network.declaredAddress` or UPnP and open the P2P port.
+- Current upstream `application.conf` uses `allowLocal` for site-local, link-local, and loopback P2P access. Older notes may still mention `localOnly`.
 - Treat `ergo.wallet.seed`, watcher mnemonics, PostgreSQL passwords, and API keys as secrets. Prefer env vars where supported.
 - For API users, set `scorex.restApi.apiKeyHash` to a Blake2b256 hash of a new API key; do not leave the example hash.
 

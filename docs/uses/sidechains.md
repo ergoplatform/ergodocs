@@ -10,8 +10,16 @@ source_repos:
     branch: master
     paths:
       - whitepaper/whitepaper.pdf
+  - repo: arkadianet/Aegis-USE
+    branch: main
+    paths:
+      - README.md
+      - ROADMAP.md
+      - dev-docs/sidechain
 source_of_truth:
   - https://github.com/BetterMoneyLabs/braid/blob/master/whitepaper/whitepaper.pdf
+  - https://github.com/arkadianet/Aegis-USE
+  - https://github.com/ergoplatform/eips/pull/103
 ia_status: directory
 ---
 
@@ -25,6 +33,12 @@ Explore recent advancements in sidechain technology through the [ErgoHack VII pr
 ///
 
 Adjacent research also includes [Braid](braid.md), a double merged-mined Bitcoin and Ergo sidechain design. Treat it as research material rather than a deployed Ergo sidechain.
+
+### Aegis-USE research prototype
+
+[Aegis-USE](https://github.com/arkadianet/Aegis-USE) is a public research prototype for private USE payments on an Ergo-merge-mined sidechain. Its design uses private notes and nullifiers, a 1:1 USE peg, and a hash-native STARK stack. The proposed trustless peg-out path depends on the still-open [EIP-0045 `verifyStark` proposal](https://github.com/ergoplatform/eips/pull/103), so it is not available on Ergo mainnet.
+
+The repository marks the software **unaudited, testnet-only, and unsuitable for real value**. External cryptographic review has not started. Treat its reported devnet round trip as prototype evidence, not production or mainnet readiness.
 
 A July 2026 team update said sidechain bridge work is still moving as an open-source reference stack. Current focus areas are relayer hardening, a trustless burn path, evidence/release process, and no-broadcast unsigned transaction flows. The described architecture uses a Substrate/Frontier EVM sidechain with ErgoScript boxes, registers, and AVL settlement state on Ergo. It builds on the ErgoHack VII two-way pegged sidechain design as prior art but adapts the model rather than directly copying the repository. It is not mainnet production-ready yet; remaining work includes verification boundaries, operator evidence, recovery assumptions, governance/key rotation, benchmarks, and security-review readiness.
 

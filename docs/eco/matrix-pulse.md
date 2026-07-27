@@ -7,7 +7,7 @@ tags:
   - monitoring
   - node
 owner: docs
-last_reviewed: 2026-06-30
+last_reviewed: 2026-07-26
 source_repos:
   - repo: odiseusme/matrix-pulse
     branch: master
@@ -25,9 +25,10 @@ source_of_truth:
 
 The repository describes a compact status and activity view for:
 
-- node version, network, name, height, sync state, peers, mempool, and mining status from `/info`;
+- node version, network, name, processed/header heights, processing lag, sync state, peers, mempool, and mining status from `/info`;
 - Matrix sub-blocks per block, current input-block tip, competing forks, best fork depth, and difficulty;
-- sub-block arrivals, applied input-block transactions, disconnected-queue churn, fork switches, rollups, frame counts, and gap/stale detection.
+- sub-block arrivals, applied input-block transactions, disconnected-queue churn, fork switches, cumulative rollups, and a bounded notices log;
+- parser health, sequence-gap detection, and stale-frame state kept separate from the SSE connection state.
 
 ## Operator Notes
 

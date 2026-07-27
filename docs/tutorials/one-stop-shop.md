@@ -42,7 +42,7 @@ A few years ago, there was not much offered in terms of wallets on Ergo. With re
 3. [SigmaFi](https://sigmafi.app/#/) - A peer-to-peer borrowing and lending protocol on Ergo.
 4. [Cyberverse](https://playcyberverse.com/) - An NFT gaming platform.
 5. [Paideia](https://www.paideia.im/) - A smart contract-based governance DAO dApp.
-6. [ErgoDex](https://www.ergodex.io/ergo/swap) - The decentralized exchange on Ergo.
+6. [Spectrum Finance](https://spectrum.fi/) - Decentralized exchange infrastructure on Ergo. The legacy `ergodex.io` domain now redirects to Crux Finance.
 7. [MewFinance](https://mewfinance.com/) - A decentralized marketplace on Ergo.
 8. [Skyharbor](https://www.skyharbor.io/) and the [Ergo Auction House](https://ergoauctions.org/) - NFT platforms on Ergo.
 9. [ErgoMixer](https://ergoplatform.org/en/blog/2020_03_20_ergo_mixer/) - A privacy-based dApp on Ergo.

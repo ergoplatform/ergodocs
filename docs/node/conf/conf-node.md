@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: 2026-05-27
+last_reviewed: 2026-07-10
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -40,6 +40,10 @@ Contract-template indexing hashes `ErgoTree.template` under the current version 
 Enable this for nodes serving dApps, explorers, Rosen watcher health checks, and any workload that needs `/blockchain/...` indexed routes. Leave it disabled for a simple validating node where lower disk and indexing overhead matter more than query features.
 
 After enabling it, monitor [indexed height](indexed-node.md) separately from node sync height.
+
+## P2P Local Access
+
+The current upstream `application.conf` uses `allowLocal` to control whether the node accepts site-local, link-local, and loopback P2P connections. Keep it `false` for normal public nodes; enable it only when you need local-only or private-network connectivity.
 
 ## Verify Transactions
 

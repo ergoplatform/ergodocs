@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: 2026-05-26
+last_reviewed: 2026-07-10
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -98,6 +98,8 @@ scorex {
 ```
 
 There are several configuration options that be tweaked in your `ergo.conf` file. The [resource directory on the main GitHub repository](https://github.com/ergoplatform/ergo/tree/master/src/main/resources) has examples of all available options.
+
+Current upstream configs use `allowLocal` for local, site-local, and loopback P2P access. Older notes may still refer to `localOnly`; treat that as the old name when comparing guides against current `application.conf`.
 
 - `skipV1TransactionsValidation`: Skip validation of transactions before block 417,792
 - `blocksToKeep` denotes the number of blocks to keep with transactions and `ADproofs`.
