@@ -4,7 +4,7 @@ tags:
   - NiPoPoWs
   - Sigma Chains
 owner: docs
-last_reviewed: 2026-07-02
+last_reviewed: 2026-07-27
 source_repos:
   - repo: BetterMoneyLabs/braid
     branch: master
@@ -19,6 +19,7 @@ source_repos:
 source_of_truth:
   - https://github.com/BetterMoneyLabs/braid/blob/master/whitepaper/whitepaper.pdf
   - https://github.com/arkadianet/Aegis-USE
+  - https://github.com/arkadianet/Aegis-USE/blob/main/ROADMAP.md
   - https://github.com/ergoplatform/eips/pull/103
 ia_status: directory
 ---
@@ -36,13 +37,11 @@ Adjacent research also includes [Braid](braid.md), a double merged-mined Bitcoin
 
 ### Aegis-USE research prototype
 
-[Aegis-USE](https://github.com/arkadianet/Aegis-USE) is a public research prototype for private USE payments on an Ergo-merge-mined sidechain. Its design uses private notes and nullifiers, a 1:1 USE peg, and a hash-native STARK stack. The proposed trustless peg-out path depends on the still-open [EIP-0045 `verifyStark` proposal](https://github.com/ergoplatform/eips/pull/103), so it is not available on Ergo mainnet.
+[Aegis-USE](https://github.com/arkadianet/Aegis-USE) is a public research prototype for private USE payments on an Ergo-merge-mined sidechain. Its current design uses encrypted private notes, nullifiers, 64-bit amounts, and a hash-native Plonky3/BabyBear/Poseidon2 STARK stack. The repository reports that the private engine, wallet, node, and a networked merge-mined testnet are implemented.
 
-The repository marks the software **unaudited, testnet-only, and unsuitable for real value**. External cryptographic review has not started. Treat its reported devnet round trip as prototype evidence, not production or mainnet readiness.
+On July 19, 2026, the project reported its first trustless USE lock, mint, private transfer, burn, proof verification, and unlock round trip on an EIP-0045 STARK devnet. Mainnet activation still depends on the open [EIP-0045 `verifyStark` proposal](https://github.com/ergoplatform/eips/pull/103). Remaining work includes end-to-end hardening, performance work, network gossip, candidate-builder commitments, and external review.
 
-A July 2026 team update said sidechain bridge work is still moving as an open-source reference stack. Current focus areas are relayer hardening, a trustless burn path, evidence/release process, and no-broadcast unsigned transaction flows. The described architecture uses a Substrate/Frontier EVM sidechain with ErgoScript boxes, registers, and AVL settlement state on Ergo. It builds on the ErgoHack VII two-way pegged sidechain design as prior art but adapts the model rather than directly copying the repository. It is not mainnet production-ready yet; remaining work includes verification boundaries, operator evidence, recovery assumptions, governance/key rotation, benchmarks, and security-review readiness.
-
-A May 2026 dev update described the testnet prototype in more detail: a Substrate + Frontier EVM sidechain, five ErgoScript contracts on Ergo testnet, an `sERG` ERC-20 representation pegged 1:1 to nanoERG, and a TypeScript relayer using Fleet SDK plus `ethers.js`. The reported full round trip was ERG lock, sidechain mint, sidechain burn, main-chain state update, and ERG unlock. The same update called out the remaining trust boundary: most tracked attack chains had mitigations, but deep sidechain reorg / phantom-burn handling still depended on off-chain burn revalidation and a trusted sidechain-state oracle. Later discussion targeted extension-block commitments and NiPoPoW-based burn proofs as the path away from that oracle bottleneck.
+The repository marks the software **unaudited, testnet-only, and unsuitable for real value**. External cryptographic review has not started. Treat the devnet round trip as prototype evidence, not production or mainnet readiness.
 
 ## What is a Sidechain?
 

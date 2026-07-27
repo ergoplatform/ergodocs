@@ -43,7 +43,7 @@ Fields:
 - `source_repos`: GitHub repositories and paths that can make page stale.
 - `branch: default`: use the repository default branch instead of guessing `master` or `main`.
 - `watch_mode`: optional hint for triage, usually `narrow` or `broad`. Broad refs are for inventory/backstop coverage and are not part of the weekly hot path unless explicitly requested.
-- `release_watch`: optional boolean; set `false` when repo releases should not trigger review for that page.
+- `release_watch`: optional boolean; defaults to `false`. Set `true` only on a repository or product status page where every new release should trigger review. Narrow implementation, conceptual, and tutorial pages should watch their relevant source paths instead.
 - `priority`: optional hint for candidate ranking or maintainer triage.
 - `source_watch_mode`, `source_release_watch`, `source_priority`: optional page-level defaults for all `source_repos` entries on the page.
 - `source_of_truth`: links reviewers should use to verify claims.
@@ -61,13 +61,13 @@ Run metadata validation and print watched pages:
 
 ## GitHub Change Scan
 
-Run a GitHub scan for watched source paths and releases:
+Run a GitHub scan for watched source paths and explicitly opted-in releases:
 
 ```bash
 GITHUB_TOKEN=... .venv/bin/python tools/source_watch.py scan --github
 ```
 
-The script returns a non-zero exit code when source changes are found. A source change can be a commit touching a watched path or a GitHub release from a watched repository. Open pull request checks are opt-in with `--open-prs`; use them only for explicit roadmap/latest-work reviews, not normal weekly docs update issues.
+The script returns a non-zero exit code when source changes are found. A source change can be a commit touching a watched path or, when `release_watch: true` is set, a GitHub release from that repository. Open pull request checks are opt-in with `--open-prs`; use them only for explicit roadmap/latest-work reviews, not normal weekly docs update issues.
 
 Useful scan controls:
 

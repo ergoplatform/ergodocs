@@ -10,6 +10,7 @@ last_reviewed: 2026-07-26
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
+    release_watch: true
     paths:
       - src/main/resources/application.conf
       - src/main/scala/org/ergoplatform/nodeView/

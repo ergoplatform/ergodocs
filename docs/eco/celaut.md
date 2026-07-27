@@ -12,6 +12,7 @@ last_reviewed: 2026-07-26
 source_repos:
   - repo: celaut-project/nodo
     branch: stable
+    release_watch: true
     paths:
       - README.md
   - repo: celaut-project/paradigm

@@ -5,10 +5,11 @@ tags:
   - Infrastructure
   - Experimental
 owner: docs
-last_reviewed: 2026-07-26
+last_reviewed: 2026-07-27
 source_repos:
   - repo: mwaddip/ergo-node-rust
     branch: master
+    release_watch: true
     paths:
       - README.md
   - repo: Luivatra/ergo-rust-node
@@ -37,10 +38,12 @@ source_repos:
       - README.md
   - repo: arkadianet/ergo
     branch: main
+    release_watch: true
     paths:
       - README.md
 source_of_truth:
   - https://github.com/mwaddip/ergo-node-rust
+  - https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.7.6
   - https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.7.5
   - https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.7.4
   - https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.7.3
@@ -84,6 +87,7 @@ Related Rust-node references include [Luivatra/ergo-rust-node](https://github.co
 
 Recent release highlights:
 
+- [v0.7.6](https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.7.6) fixed an AVL-tree persistence bug that could omit rebalanced internal nodes and later cause resolver-miss panics at the chain tip. The release notes require operators upgrading from an earlier version to delete the node's local `state.redb` and resync because existing state may already be incomplete.
 - [v0.7.5](https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.7.5) added the missing proof-digest consensus check after block application, fixed genesis/proof-generation ordering needed for canonical proofs, and decoupled validation sweeps from download progress. The release notes say SANTA isolated a live testnet divergence; this reinforces the node's experimental status.
 - [v0.7.4](https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.7.4) fixed a mining-serve state-root mismatch at tip by building a fresh prover from storage rather than sharing mutable prover tree state.
 - [v0.7.3](https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.7.3) improved mining-serve JVM compatibility, fixed candidate height handling, rebased the sigma-rust pin, and added further JVM-compatibility fixes around type checking, sized-ErgoTree handling, constant type-code rejection, and block-cost units.

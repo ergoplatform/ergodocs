@@ -2,7 +2,7 @@
 tags:
   - Roadmap
 owner: docs
-last_reviewed: 2026-07-26
+last_reviewed: 2026-07-27
 source_repos:
   - repo: ergoplatform/eips
     branch: master
@@ -148,7 +148,7 @@ source_of_truth:
 
 # Ergo Development Roadmap & History
 
-This page tracks major Ergo development history and active work as of **July 26, 2026**. It is not a promise of delivery dates. Public repositories, release notes, EIPs, and project pages are the source of truth.
+This page tracks major Ergo development history and active work as of **July 27, 2026**. It is not a promise of delivery dates. Public repositories, release notes, EIPs, and project pages are the source of truth.
 
 Ergo's roadmap is research-led: protocol changes move through papers, EIPs, testnets, client releases, and community review before mainnet activation. Ecosystem projects move at different speeds, so items below are grouped as **completed**, **active**, or **experimental** rather than presented as a single linear release plan.
 
@@ -283,7 +283,7 @@ These timeline items matter for continuity. Treat them as current work only when
 - [x] [Machina Finance](machina-finance.md) published an alpha orders SDK with grid and limit-order transaction builders.
 - [x] [Etcha](etcha.md) entered alpha for peer-to-peer options with physical-delivery and cash-settled flows.
 - [x] [Degen Wallet](degens-world.md), Degens.World agent tooling, Ergo MCP, Xergon, and related experimental apps expanded the wallet/agent surface.
-- [x] [Rust node](rust-node.md) releases reached the 0.7.x line, including v0.7.4's mining-serve state-root fix, while SANTA added shared conformance vectors/runners for `sigma-rust`, `arkadianet/ergo`, and `mwaddip/ergo-node-rust`.
+- [x] [Rust node](rust-node.md) releases reached v0.7.6, which fixed an AVL persistence bug and requires earlier-version state to be discarded and resynced. SANTA added shared conformance vectors/runners for `sigma-rust`, `arkadianet/ergo`, and `mwaddip/ergo-node-rust`.
 - [x] [ergots](ergots.md) published browser-compatible TypeScript packages for Scorex codecs, NiPoPoW, AVL+, ErgoScript, and transaction tooling, with current package metadata tracked in docs.
 - [x] [Matrix Pulse](matrix-pulse.md) was published as lightweight Matrix input-block observability tooling for local Matrix nodes.
 - [x] [eBiome](ebiome.md) launched as a live ecosystem analytics, explorer, and forensics dashboard; its forensics views are heuristic and should not be treated as deterministic attribution.

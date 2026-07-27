@@ -8,6 +8,7 @@ last_reviewed: 2026-07-26
 source_repos:
   - repo: ergoplatform/ergo-appkit
     branch: develop
+    release_watch: true
     paths:
       - README.md
       - appkit/src
@@ -24,8 +25,9 @@ source_of_truth:
 
 ## Recent updates
 
-- `Jun 7`: [AppKit v6.0.0](https://github.com/ergoplatform/ergo-appkit/releases/tag/v6.0.0) was released on top of SigmaSDK 6.0.x.
+- `Jun 7`: [AppKit v6.0.0](https://github.com/ergoplatform/ergo-appkit/releases/tag/v6.0.0) was released on top of Sigma SDK 6.0.x.
 - The release includes the [PR #253](https://github.com/ergoplatform/ergo-appkit/pull/253) EIP-50 upgrade work, Sigma 6.0 alignment, and prover-evaluated tests so contract tests can exercise newer Sigma features consistently.
+- It removes the CLI capability and `RetrofitUtil.java`, removes two vulnerable libraries and SQL `Date` references, adds `Automatic-Module-Name`, and updates sbt, Scala, and plugins. Review the [full changelog](https://github.com/ergoplatform/ergo-appkit/compare/v5.0.4...v6.0.0) before upgrading an existing integration.
 - AppKit 6 compiles Sigma 6 scripts as ErgoTree v3 when the context has `blockVersion >= 4`, while preserving the legacy v5 path for older contexts. Its Sigma 6 test coverage includes bitwise/shift operations, `serialize`, `deserializeTo`, `fromBigEndianBytes`, `startsWith`, lazy `getOrElse`, `Box.getReg`, `Header.checkPow`, unsigned-bigint operations, and context-extension conversion behavior.
 
 AppKit 6.0.0 is published on Maven Central. For a Scala 2.12 Gradle project:

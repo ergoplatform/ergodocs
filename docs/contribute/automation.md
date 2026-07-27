@@ -59,7 +59,7 @@ source_of_truth:
   - https://github.com/ergoplatform/ergo/tree/master/src/main/resources/application.conf
 ```
 
-Source Watch uses that metadata to show which docs may need review after upstream changes. It checks commits touching watched paths and GitHub releases from watched repositories. Open pull request checks are available only as an explicit opt-in for roadmap/latest-work reviews. The report is a triage aid: maintainers still verify each claim against repositories, issues, releases, EIPs, or maintainer sources before changing public docs.
+Source Watch uses that metadata to show which docs may need review after upstream changes. It checks commits touching watched paths and scans GitHub releases only for repository entries with `release_watch: true`. Open pull request checks are available only as an explicit opt-in for roadmap/latest-work reviews. The report is a triage aid: maintainers still verify each claim against repositories, issues, releases, EIPs, or maintainer sources before changing public docs.
 
 The generated [Watched Repositories](source-watch-inventory.md) page is built from the same metadata. Run `tools/source_watch_inventory.py --write` after changing `source_repos`; CI checks that the page is current.
 

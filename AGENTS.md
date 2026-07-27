@@ -77,7 +77,7 @@
 - Source Watch baseline defaults to `tools/state/source-watch-baseline.json`.
 - Use GitHub scans only with `GITHUB_TOKEN` available; `.env` may provide it locally.
 - Source Watch JSON includes `author_login` when GitHub exposes a linked user for a commit, open pull request, or release.
-- Source Watch scans watched GitHub path commits and GitHub releases from watched repositories by default.
+- Source Watch scans watched GitHub path commits by default. GitHub release scans are opt-in per repository entry with `release_watch: true`; keep them on repository/product status pages, not narrow implementation or conceptual pages.
 - Open pull request scanning is opt-in with `--open-prs`; use it only for explicit roadmap/latest-work reviews, not normal weekly docs update issues.
 - Do not add broad external standards, analytics trackers, or one-off aggregator PRs to `source_repos` unless ongoing changes should trigger docs review; keep those as `source_of_truth` links only.
 - Optional `source_repos` fields: `watch_mode`, `release_watch`, and `priority`; page-level defaults are `source_watch_mode`, `source_release_watch`, and `source_priority`.

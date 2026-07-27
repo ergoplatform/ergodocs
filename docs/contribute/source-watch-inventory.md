@@ -13,7 +13,7 @@ last_reviewed: never
 
 This page is generated from `source_repos` frontmatter across the docs. Do not edit the tables by hand; run `tools/source_watch_inventory.py --write` after changing Source Watch metadata.
 
-Source Watch checks watched repositories for commits touching declared paths and GitHub releases. Open pull request checks are opt-in for explicit latest-work or roadmap reviews.
+Source Watch checks watched repositories for commits touching declared paths. GitHub release checks are explicit per-repository opt-ins; open pull request checks are opt-in for explicit latest-work or roadmap reviews.
 
 ## Summary
 
@@ -22,6 +22,7 @@ Source Watch checks watched repositories for commits touching declared paths and
 - Watched GitHub owners: `101`
 - Watched repo/branch pairs: `240`
 - Watched paths: `505`
+- Release-watched page/repository refs: `13`
 
 ## Coverage Groups
 

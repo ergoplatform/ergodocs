@@ -10,6 +10,7 @@ last_reviewed: 2026-07-26
 source_repos:
   - repo: ergoplatform/sigmastate-interpreter
     branch: develop
+    release_watch: true
     paths:
       - README.md
       - docs/sigma-dsl.md

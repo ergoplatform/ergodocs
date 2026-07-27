@@ -33,7 +33,7 @@ It can:
 
 - validate metadata
 - scan GitHub commits for watched paths
-- scan GitHub releases from watched repositories
+- scan GitHub releases only for repository entries with `release_watch: true`
 - optionally scan open pull requests that touch watched paths for explicit roadmap/latest-work reviews
 - suggest `source_repos` from GitHub links
 - mark pages reviewed

@@ -91,6 +91,7 @@ def format_list(values: list[str], limit: int = 8) -> str:
 
 def build_inventory() -> str:
     watches = source_watch.load_watches()
+    release_watch_count = sum(ref.release_watch for watch in watches for ref in watch.source_repos)
     by_repo: dict[str, RepoCoverage] = {}
     by_repo_branch: dict[tuple[str, str], RepoCoverage] = {}
     by_owner: dict[str, OwnerCoverage] = {}
@@ -145,7 +146,7 @@ def build_inventory() -> str:
         "",
         "This page is generated from `source_repos` frontmatter across the docs. Do not edit the tables by hand; run `tools/source_watch_inventory.py --write` after changing Source Watch metadata.",
         "",
-        "Source Watch checks watched repositories for commits touching declared paths and GitHub releases. Open pull request checks are opt-in for explicit latest-work or roadmap reviews.",
+        "Source Watch checks watched repositories for commits touching declared paths. GitHub release checks are explicit per-repository opt-ins; open pull request checks are opt-in for explicit latest-work or roadmap reviews.",
         "",
         "## Summary",
         "",
@@ -154,6 +155,7 @@ def build_inventory() -> str:
         f"- Watched GitHub owners: `{len(by_owner)}`",
         f"- Watched repo/branch pairs: `{len(by_repo_branch)}`",
         f"- Watched paths: `{sum(len(entry.paths) for entry in by_repo_branch.values())}`",
+        f"- Release-watched page/repository refs: `{release_watch_count}`",
         "",
         "## Coverage Groups",
         "",

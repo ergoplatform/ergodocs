@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: 2026-05-27
+last_reviewed: 2026-07-27
 source_repos:
   - repo: ergoplatform/ergo-jde
     branch: main
@@ -17,6 +17,7 @@ source_of_truth:
   - https://github.com/ergoplatform/ergo-jde/tree/main/kiosk/src/test/scala/kiosk/dexy/Dexy.md
   - https://github.com/ergoplatform/ergo-jde/tree/main/kiosk/src/test/scala/kiosk/dexy/DexySpec.scala
   - https://github.com/arkadianet/citadel/releases/tag/v0.2.4-alpha
+  - https://github.com/arkadianet/citadel
   - https://github.com/DefiLlama/peggedassets-server/pull/700
 ---
 
@@ -46,6 +47,7 @@ Dexy uses seigniorage
 - [Dexy: USD Simplest Stablecoin](https://www.ergoforum.org/t/dexy-usd-simplest-stablecoin-design/1430)
 - [Dexy enhancements to counter various attacks in vanilla proposal](https://github.com/ergoplatform/ergo-jde/blob/main/kiosk/src/test/scala/kiosk/dexy)
 - [Citadel v0.2.4-alpha](https://github.com/arkadianet/citadel/releases/tag/v0.2.4-alpha) added SigUSD routing, token-to-token swaps, LP deposit/redeem support, and Dexy LP display fixes.
+- [Citadel](https://github.com/arkadianet/citadel) is a local-first alpha desktop client for SigmaUSD, Dexy, and other Ergo DeFi protocols. It connects directly to an Ergo node with `extraIndex = true` and delegates signing to Nautilus; its warning notes that it can operate with real ERG.
 - [USE pegged asset on DefiLlama](https://github.com/DefiLlama/peggedassets-server/pull/700) tracks the USE stablecoin alongside its public protocol information.
 
 ## Gluon

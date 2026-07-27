@@ -4,6 +4,7 @@ last_reviewed: 2026-07-26
 source_repos:
   - repo: minotaur-ergo/minotaur-wallet
     branch: dev
+    release_watch: true
     paths:
       - README.md
       - apps

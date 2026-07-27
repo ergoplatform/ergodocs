@@ -6,7 +6,7 @@ tags:
   - dApp
   - dApp-InDev
 owner: docs
-last_reviewed: 2026-05-27
+last_reviewed: 2026-07-27
 source_repos:
   - repo: ergoplatform/ergo-jde
     branch: main
@@ -28,6 +28,7 @@ source_of_truth:
   - https://github.com/ergoplatform/ergo-jde/tree/main/kiosk/src/test/scala/kiosk/dexy/Dexy.md
   - https://github.com/ergoplatform/ergo-jde/tree/main/kiosk/src/test/scala/kiosk/dexy/DexySpec.scala
   - https://github.com/arkadianet/citadel/releases/tag/v0.2.4-alpha
+  - https://github.com/arkadianet/citadel
   - https://github.com/kushti/dexy-stable/pull/7
   - https://github.com/DefiLlama/peggedassets-server/pull/700
   - https://github.com/DefiLlama/DefiLlama-Adapters/pull/17015
@@ -49,6 +50,7 @@ Read the [draft whitepaper](../assets/pdf/dexy.pdf) for more details.
 - `Jan 10` and `Apr 5`: the USE buyback contract was updated, the buyback box moved to a new contract address, and the self-output proposition check was fixed.
 - `Jan 14` to `Apr 15`: USE and DexyGold analytics, DefiLlama adapter work, and LP/offchain updates continued. USE was added to DefiLlama pegged assets in [peggedassets-server#700](https://github.com/DefiLlama/peggedassets-server/pull/700), and RosenBridge DefiLlama token mapping work included DOGE support in [DefiLlama-Adapters#17015](https://github.com/DefiLlama/DefiLlama-Adapters/pull/17015).
 - [Citadel](https://github.com/arkadianet/citadel/releases) shipped several alpha releases. [`v0.2.4-alpha`](https://github.com/arkadianet/citadel/releases/tag/v0.2.4-alpha) added a SigUSD smart router, token-to-token direct swaps, LP deposits and redeems, Dexy LP holdings fixes, and oracle-vs-DEX divergence indicators.
+- Citadel is a local-first desktop client that connects directly to an Ergo node and uses Nautilus for signing. Its current alpha supports Dexy alongside other Ergo DeFi protocols; it requires the node's `extraIndex = true` setting and can submit transactions involving real ERG, so review its warnings and source before use.
 - [kushti/dexy-stable#7](https://github.com/kushti/dexy-stable/pull/7) proposed UIP-001 intervention balancing: calculating interventions from LP reserves, reducing each intervention from 1% to 0.5% of LP reserves, and increasing frequency from 360 to 180 blocks. The PR was closed unmerged when checked, so treat it as a reviewed proposal rather than active protocol behavior.
 - Caveat: explorers that assume one mint output can misreport emission when a mint spans multiple output boxes.
 

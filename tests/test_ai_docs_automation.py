@@ -12,6 +12,19 @@ sys.path.insert(0, str(TOOLS))
 
 import ai_docs_draft_prs as ai_prs  # noqa: E402
 import docs_update_candidates as candidates  # noqa: E402
+import source_watch  # noqa: E402
+
+
+class SourceWatchReleaseTests(unittest.TestCase):
+    def test_release_watch_defaults_off(self) -> None:
+        self.assertFalse(source_watch.release_watch_enabled({}, {}))
+
+    def test_release_watch_can_be_enabled_per_repo_or_page(self) -> None:
+        self.assertTrue(source_watch.release_watch_enabled({"release_watch": True}, {}))
+        self.assertTrue(source_watch.release_watch_enabled({}, {"source_release_watch": True}))
+
+    def test_repo_setting_overrides_page_default(self) -> None:
+        self.assertFalse(source_watch.release_watch_enabled({"release_watch": False}, {"source_release_watch": True}))
 
 
 class MarkdownValidationTests(unittest.TestCase):

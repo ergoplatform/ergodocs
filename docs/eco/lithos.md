@@ -11,6 +11,7 @@ last_reviewed: 2026-07-02
 source_repos:
   - repo: Lithos-Protocol/Lithos-Client
     branch: master
+    release_watch: true
     paths:
       - README.md
       - TestnetNode.md

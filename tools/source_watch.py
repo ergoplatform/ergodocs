@@ -139,6 +139,11 @@ def load_ignore(meta: dict[str, Any]) -> SourceIgnore:
     )
 
 
+def release_watch_enabled(raw: dict[str, Any], meta: dict[str, Any]) -> bool:
+    """Release scans are opt-in because one release can fan out to many path-specific pages."""
+    return as_bool(raw.get("release_watch", meta.get("source_release_watch")), False)
+
+
 def load_watches() -> list[PageWatch]:
     watches: list[PageWatch] = []
     for path in sorted(DOCS_DIR.rglob("*.md")):
@@ -156,7 +161,7 @@ def load_watches() -> list[PageWatch]:
             branch = str(raw.get("branch", "master")).strip() or "master"
             since = normalize_since(raw.get("since") or meta.get("last_reviewed"))
             watch_mode = str(raw.get("watch_mode", meta.get("source_watch_mode", "narrow"))).strip() or "narrow"
-            release_watch = as_bool(raw.get("release_watch", meta.get("source_release_watch")), True)
+            release_watch = release_watch_enabled(raw, meta)
             priority_value = raw.get("priority", meta.get("source_priority"))
             priority = str(priority_value).strip() if priority_value else None
             if repo and paths:

@@ -10,6 +10,7 @@ last_reviewed: 2026-05-30
 source_repos:
   - repo: Degens-World/Ergo-MCP
     branch: main
+    release_watch: true
     paths:
       - README.md
   - repo: Degens-World/Ergo-Node-CLI

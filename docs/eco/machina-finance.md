@@ -16,6 +16,7 @@ source_repos:
       - packages/contracts/src
   - repo: machinafi/sdk
     branch: master
+    release_watch: true
     paths:
       - README.md
       - src

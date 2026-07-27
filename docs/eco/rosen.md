@@ -7,18 +7,21 @@ tags:
   - dApp
   - dApp-Beta
 owner: docs
-last_reviewed: 2026-07-26
+last_reviewed: 2026-07-27
 source_repos:
   - repo: rosen-bridge/watcher
     branch: master
+    release_watch: true
     paths:
       - README.md
   - repo: rosen-bridge/guard-service
     branch: master
+    release_watch: true
     paths:
       - README.md
   - repo: rosen-bridge/ui
     branch: master
+    release_watch: true
     paths:
       - README.md
   - repo: rosen-bridge/rosen-sdk
@@ -51,7 +54,7 @@ source_of_truth:
   - https://github.com/rosen-bridge/watcher/releases/tag/6.2.2
   - https://github.com/rosen-bridge/guard-service/releases/tag/10.0.1
   - https://github.com/rosen-bridge/ui/releases/tag/guard-app-4.4.1
-  - https://github.com/rosen-bridge/ui/releases/tag/watcher-app-4.3.0
+  - https://github.com/rosen-bridge/ui/releases/tag/watcher-app-4.4.1
   - https://github.com/rosen-bridge/ui/releases/tag/rosen-service-4.3.7
   - https://github.com/rosen-bridge/rosen-sdk
   - https://github.com/rosen-bridge/rosenet
@@ -109,7 +112,7 @@ Please see [this video](https://www.youtube.com/watch?v=Xsiy-yPJQ6w) for a visua
 - [Guard service 10.0.0](https://github.com/rosen-bridge/guard-service/releases/tag/10.0.0) integrated Firo, public event-status reporting, rejected-event storage, API rate limits, and scanner/API changes. [10.0.1](https://github.com/rosen-bridge/guard-service/releases/tag/10.0.1) followed with a Firo ElectrumX dependency fix. Released component support does not by itself prove that every Firo route or asset is enabled in the public bridge app.
 - `Feb 11` to `Apr 22`: Firo and Handshake integrations moved through watcher, guard-service, and rosen-service updates.
 - Watcher releases have moved through [6.2.2](https://github.com/rosen-bridge/watcher/releases/tag/6.2.2); prior updates included a Bitcoin Runes observation fix for Unisat pagination.
-- Guard and watcher apps have moved through [guard-app-4.4.1](https://github.com/rosen-bridge/ui/releases/tag/guard-app-4.4.1) and [watcher-app-4.3.0](https://github.com/rosen-bridge/ui/releases/tag/watcher-app-4.3.0). Guard app 4.4.1 fixes value display in manual transaction submission.
+- Guard and watcher apps have moved through [guard-app-4.4.1](https://github.com/rosen-bridge/ui/releases/tag/guard-app-4.4.1) and [watcher-app-4.4.1](https://github.com/rosen-bridge/ui/releases/tag/watcher-app-4.4.1). Guard app 4.4.1 fixes value display in manual transaction submission; watcher app 4.4.1 standardizes confirmation and API-key protection around lock, unlock, and withdrawal actions.
 - Rosen UI/service releases have moved through [rosen-service 4.3.7](https://github.com/rosen-bridge/ui/releases/tag/rosen-service-4.3.7).
 - Rosen shared packages also moved through [rosen-sdk](https://github.com/rosen-bridge/rosen-sdk), [rosenet](https://github.com/rosen-bridge/rosenet), and [sign-protocols](https://github.com/rosen-bridge/sign-protocols) updates. The older [rosen-chains](https://github.com/rosen-bridge/rosen-chains) package repository is archived; chain packages moved into guard-service.
 - [network-client](https://github.com/rosen-bridge/network-client) is the Rosen client-library monorepo used by `@rosen-clients/*` packages.
