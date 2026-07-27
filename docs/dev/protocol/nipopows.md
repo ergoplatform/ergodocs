@@ -6,11 +6,20 @@ tags:
 owner: docs
 last_reviewed: 2026-05-27
 source_repos:
+  - repo: ergoplatform/ergo
+    branch: master
+    paths:
+      - ergo-core/src/main/scala/org/ergoplatform/modifiers/history/popow
+      - src/main/scala/org/ergoplatform/nodeView/history/storage/modifierprocessors/PopowProcessor.scala
   - repo: sdaveas/nipopow-verifier
     branch: master
     paths:
       - README.md
 source_of_truth:
+  - https://github.com/ergoplatform/ergo/pull/2379
+  - https://github.com/ergoplatform/ergo/pull/2396
+  - https://github.com/ergoplatform/ergo/pull/2417
+  - https://github.com/ergoplatform/ergo/pull/2416
   - https://github.com/sdaveas/nipopow-verifier
 ---
 
@@ -29,6 +38,10 @@ The security of NIPoPoWs relies on the honest majority assumption. The verifier 
 In normal settings, a client should request proofs from more than one peer and compare them before choosing the best chain. If an isolated application can query only one node, it needs an explicit minimum-work threshold plus enough confirmations after the transaction being proven; that is a constrained trust model, not the usual multi-peer NiPoPoW assumption.
 
 Ergo's [block structure](block.md) goes beyond the traditional header and transaction format, incorporating an ['extension' section](extension-section.md) that houses NIPoPoW links, updated every 1,024 block epochs. This unique structure allows different types of [nodes](modes.md) and clients to selectively download required block sections, optimizing storage, bandwidth, and CPU usage.
+
+### Node implementation hardening
+
+The open Ergo node 6.0.5 release candidate includes three merged NiPoPoW validation fixes: locally requested proof parameters are checked, each proof header's proof of work is validated before bootstrap insertion, and invalid inbound `m`/`k` parameters are rejected. These fixes are on the `v6.0.5` candidate branch; they are not a released node version yet.
 
 ## Applications of NIPoPoWs
 

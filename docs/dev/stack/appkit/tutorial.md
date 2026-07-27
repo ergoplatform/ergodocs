@@ -29,6 +29,7 @@ source_of_truth:
   - https://github.com/aslesarenko/ergo-appkit-examples/tree/master/ruby-examples/FreezeCoin.rb
   - https://github.com/aslesarenko/ergo-appkit/tree/master/lib-api/src/main/java/org/ergoplatform/appkit/ErgoClient.java
   - https://github.com/ergoplatform/ergo-appkit/releases/tag/v6.0.0
+  - https://repo1.maven.org/maven2/org/ergoplatform/ergo-appkit_2.12/6.0.0/ergo-appkit_2.12-6.0.0.pom
 ---
 
 ## Features
@@ -76,12 +77,12 @@ To use Appkit in our Java implementation of FreezeCoin, we must add the followin
 
 ```kotlin
 dependencies {
-    implementation("org.ergoplatform", "ergo-appkit_2.12", "5.0.4", "compile")
+    implementation("org.ergoplatform", "ergo-appkit_2.12", "6.0.0", "compile")
     ...
 }
 ```
 
-Check [Maven Central](https://mvnrepository.com/artifact/org.ergoplatform/ergo-appkit) and [AppKit releases](https://github.com/ergoplatform/ergo-appkit/releases) before pinning a dependency version. GitHub has an [AppKit `v6.0.0`](https://github.com/ergoplatform/ergo-appkit/releases/tag/v6.0.0) source release for Sigma SDK 6.0.x, but confirm the artifact version available to your build tool before upgrading examples or production builds.
+[AppKit `v6.0.0`](https://github.com/ergoplatform/ergo-appkit/releases/tag/v6.0.0) and its Scala 2.12 artifact are published for Sigma SDK 6.0.x. Keep the artifact suffix aligned with your project's Scala binary version and check [Maven Central](https://mvnrepository.com/artifact/org.ergoplatform/ergo-appkit) before changing a production dependency.
 
 Furthermore, at runtime, Appkit/our application needs to connect with an Ergo Node via REST API. Often,
 the node will be running locally and made available at `http://localhost:9052/`. This is the standard scenario for anyone who has set up a full-node by following [these

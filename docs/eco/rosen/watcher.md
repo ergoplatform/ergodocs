@@ -9,7 +9,7 @@ tags:
   - Cross-chain
   - Oracle
 owner: docs
-last_reviewed: 2026-05-27
+last_reviewed: 2026-07-26
 source_repos:
   - repo: rosen-bridge/operation
     branch: dev
@@ -22,13 +22,14 @@ source_repos:
 source_of_truth:
   - https://github.com/rosen-bridge/operation/tree/dev/docs/watcher/deploy-docker.md
   - https://github.com/rosen-bridge/utils/tree/dev/packages/cli
+  - https://github.com/rosen-bridge/watcher/releases/tag/6.2.2
 ---
 
 # Ergo Rosen Bridge Watcher Setup
 
 Watchers are integral to Rosen Bridge, serving as cross-chain oracles. They observe and report deposit events on their network to Ergo, contributing to the network's security and expansion.
 
-The current Docker deployment source supports watcher configurations for `ergo`, `cardano`, `bitcoin`, `ethereum`, `binance`, `doge`, and `bitcoin-runes`. Every watcher still needs Ergo configuration because permit, reporting, and reward logic is Ergo-based.
+The current Docker deployment source supports watcher configurations for `ergo`, `cardano`, `bitcoin`, `ethereum`, `binance`, `doge`, `bitcoin-runes`, and `firo`. Every watcher still needs Ergo configuration because permit, reporting, and reward logic is Ergo-based.
 
 See also:
 
@@ -138,6 +139,9 @@ For all watcher types, choose a recent `initialHeight`. Once a watcher has scann
 | Ethereum | `rpc` | `20` |
 | Binance | `rpc` | `300` |
 | Doge | `rpc` list | chain-specific |
+| Firo | `electrumx` (recommended) or `rpc` | `8` |
+
+For Firo, current source docs recommend ElectrumX because direct JSON-RPC support may be removed. The default ElectrumX port is `50002`; `reconnectDelay` is optional. RPC credentials can be supplied through `FIRO_RPC_USERNAME` and `FIRO_RPC_PASSWORD`. A Firo watcher uses `network: firo`, a recent `firo.initial.height`, and still includes the shared Ergo node, mnemonic, and initial-height settings.
 
 If using an Ergo node as a source, enable `ergo.node.extraIndex = true`. The watcher can still run without it, but watcher health fields such as WID and asset health can fail to update correctly.
 
@@ -147,6 +151,26 @@ For Cardano Ogmios, source docs require encoded transaction data in `cbor` form 
 observation:
   storeRawData: false
 ```
+
+## July 2026 Cardano scanner update
+
+Watcher operators should upgrade to [watcher-service 6.2.2](https://github.com/rosen-bridge/watcher/releases/tag/6.2.2). Rosen's release notes report that guards rejected 84 invalid Cardano events during an unsuccessful July 21 attack. The release adds final transaction-result checks to the Koios and Ogmios scanners so failed on-chain transactions are ignored, then rescans the affected blocks and redeems related commitments where possible.
+
+```shell
+docker compose pull
+docker compose down
+docker compose up -d
+```
+
+## Monitoring Agents
+
+The watcher Compose override includes optional monitoring agents:
+
+- `COMPOSE_PROFILES=logger` starts Alloy to ship JSON file logs to Loki.
+- `COMPOSE_PROFILES=monitoring` starts Prometheus Agent, Node Exporter, and cAdvisor for host and container metrics.
+- `COMPOSE_PROFILES=logger,monitoring` enables both profiles.
+
+Set `IS_SAME_HOST=true` only when the Grafana, Prometheus, and Loki stack is on the watcher host; deploy that stack first so its external networks exist. For a remote stack, set `IS_SAME_HOST=false` and configure the remote URLs and optional basic-auth values in `.env.logger` and `.env.monitoring`. The logger profile also requires JSON file logging with `createSymlink: true` so Alloy can tail `current.log`.
 
 ## Watcher FAQs
 

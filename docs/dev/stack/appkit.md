@@ -4,7 +4,7 @@ tags:
   - Scala
   - Kotlin
 owner: docs
-last_reviewed: 2026-06-15
+last_reviewed: 2026-07-26
 source_repos:
   - repo: ergoplatform/ergo-appkit
     branch: develop
@@ -14,6 +14,7 @@ source_repos:
 source_of_truth:
   - https://github.com/ergoplatform/ergo-appkit
   - https://github.com/ergoplatform/ergo-appkit/releases/tag/v6.0.0
+  - https://repo1.maven.org/maven2/org/ergoplatform/ergo-appkit_2.12/6.0.0/ergo-appkit_2.12-6.0.0.pom
 ---
 # Appkit
 
@@ -26,6 +27,14 @@ source_of_truth:
 - `Jun 7`: [AppKit v6.0.0](https://github.com/ergoplatform/ergo-appkit/releases/tag/v6.0.0) was released on top of SigmaSDK 6.0.x.
 - The release includes the [PR #253](https://github.com/ergoplatform/ergo-appkit/pull/253) EIP-50 upgrade work, Sigma 6.0 alignment, and prover-evaluated tests so contract tests can exercise newer Sigma features consistently.
 - AppKit 6 compiles Sigma 6 scripts as ErgoTree v3 when the context has `blockVersion >= 4`, while preserving the legacy v5 path for older contexts. Its Sigma 6 test coverage includes bitwise/shift operations, `serialize`, `deserializeTo`, `fromBigEndianBytes`, `startsWith`, lazy `getOrElse`, `Box.getReg`, `Header.checkPow`, unsigned-bigint operations, and context-extension conversion behavior.
+
+AppKit 6.0.0 is published on Maven Central. For a Scala 2.12 Gradle project:
+
+```kotlin
+implementation("org.ergoplatform:ergo-appkit_2.12:6.0.0")
+```
+
+Choose the artifact suffix that matches the project's Scala binary version; the release is published for Scala 2.11, 2.12, and 2.13.
 
 It is a thin wrapper around core components provided by the ErgoScript interpreter and Ergo protocol implementations which are written in Scala. It is published on [maven repository](https://mvnrepository.com/artifact/org.ergoplatform/ergo-appkit) and cross-compiled to both Java 7 and Java 8+ jars.
 

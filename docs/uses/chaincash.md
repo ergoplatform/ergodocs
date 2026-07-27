@@ -1,11 +1,18 @@
 ---
 owner: docs
-last_reviewed: 2026-07-02
+last_reviewed: 2026-07-26
 source_repos:
   - repo: BetterMoneyLabs/chaincash
     branch: master
     paths:
       - docs/presentation/basis.pdf
+  - repo: BetterMoneyLabs/basis-tracker
+    branch: master
+    paths:
+      - README.md
+      - contract
+      - docs
+      - src
   - repo: ChainCashLabs/chaincash
     branch: master
     paths:
@@ -20,6 +27,7 @@ source_repos:
       - src/main/scala/chaincash/offchain
 source_of_truth:
   - https://github.com/BetterMoneyLabs/chaincash/tree/master/docs/presentation/basis.pdf
+  - https://github.com/BetterMoneyLabs/basis-tracker
   - https://github.com/BetterMoneyLabs/chaincash-rs/issues/51
   - https://github.com/ChainCashLabs/chaincash/tree/master/contracts
   - https://github.com/ChainCashLabs/chaincash/tree/master/contracts/onchain/note.es
@@ -62,6 +70,7 @@ This article explains ChainCash's functionality, explores practical applications
 - `Jun 4`: the Basis whitepaper was sent out for review, a simple CLI wallet tool was being tested, and the team continued prototype work around ChainCash/Basis flows.
 - Basis presentation slides, including the June 2026 RAMICS deck, are available in the ChainCash repository: [basis.pdf](https://github.com/BetterMoneyLabs/chaincash/blob/master/docs/presentation/basis.pdf).
 - `Jul 1`: the team reported testing tracker on-chain state updates and redemption against the Basis tracker, while preparing developer-onboarding material.
+- `Jul 19` to `Jul 21`: the public [Basis tracker](https://github.com/BetterMoneyLabs/basis-tracker) added multiple-redemption support, current-height fetching, a terminal helper, and clearer tracker-box setup and protocol documentation. The tracker commits cumulative debt mappings through an AVL-tree digest and remains prototype software.
 - Caveat: some transfer paths still depend on raw Schnorr signatures, so normal wallet support remains constrained.
 
 ## Motivation and Evolution of Money

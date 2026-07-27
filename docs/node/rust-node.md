@@ -5,7 +5,7 @@ tags:
   - Infrastructure
   - Experimental
 owner: docs
-last_reviewed: 2026-06-27
+last_reviewed: 2026-07-26
 source_repos:
   - repo: mwaddip/ergo-node-rust
     branch: master
@@ -41,6 +41,7 @@ source_repos:
       - README.md
 source_of_truth:
   - https://github.com/mwaddip/ergo-node-rust
+  - https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.7.5
   - https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.7.4
   - https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.7.3
   - https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.7.2
@@ -64,6 +65,7 @@ source_of_truth:
   - https://github.com/mwaddip/santa-vixen
   - https://github.com/mwaddip/santa-donner
   - https://github.com/arkadianet/ergo
+  - https://github.com/arkadianet/ergo/releases/tag/v0.5.3
 ---
 
 # Ergo Rust Node
@@ -82,6 +84,7 @@ Related Rust-node references include [Luivatra/ergo-rust-node](https://github.co
 
 Recent release highlights:
 
+- [v0.7.5](https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.7.5) added the missing proof-digest consensus check after block application, fixed genesis/proof-generation ordering needed for canonical proofs, and decoupled validation sweeps from download progress. The release notes say SANTA isolated a live testnet divergence; this reinforces the node's experimental status.
 - [v0.7.4](https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.7.4) fixed a mining-serve state-root mismatch at tip by building a fresh prover from storage rather than sharing mutable prover tree state.
 - [v0.7.3](https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.7.3) improved mining-serve JVM compatibility, fixed candidate height handling, rebased the sigma-rust pin, and added further JVM-compatibility fixes around type checking, sized-ErgoTree handling, constant type-code rejection, and block-cost units.
 - [v0.7.2](https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.7.2) focused on JVM-exactness in chain validation: header vote-field checks, fork-vote gating, soft-fork vote lifecycle behavior, validation-settings parsing/serialization, rollback error handling, and sigma-rust pin updates.
@@ -94,6 +97,8 @@ Recent release highlights:
 - Earlier `v0.6.2` and `v0.4.x` testing focused on at-tip recovery and storage behavior, including `apply_state` retry / missing-UTXO-key recovery after unclean stops, seed-list fixes for Ubuntu package installs, and reduced at-tip memory use.
 - [v0.3.1](https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.3.1) unblocked mainnet sync stalls around a voting-epoch boundary and a sigma-rust v6 parse-time type check. [v0.3.0](https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.3.0) reduced observed peak RSS during mainnet sync from about `14.95 GB` to about `9.5 GB`.
 - [v0.1.0](https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.1.0) was the first public release after early P2P, sync, NiPoPoW, and mining-endpoint work. Treat these early releases as historical implementation milestones, not stable-node recommendations.
+
+The independent [arkadianet/ergo v0.5.3](https://github.com/arkadianet/ergo/releases/tag/v0.5.3) release added configurable mining extension fields and digest-mode ADProofs scheduling, while fixing storage-rent candidate construction, mempool orphan eviction, sync bounds, snapshot authentication, and several consensus-parity issues. It remains pre-1.0 alpha software; verify results against the Scala reference node.
 
 Current development areas include mining endpoint support, NiPoPoW bootstrapping, RequestModifiers serving, mempool/API work, peer penalties, indexer behavior, API parity, and validation against JVM behavior.
 

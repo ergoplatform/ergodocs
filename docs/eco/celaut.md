@@ -8,7 +8,7 @@ tags:
   - Artificial Economic Intelligence  
   - Service Virtualization  
 owner: docs
-last_reviewed: '2026-05-30'
+last_reviewed: 2026-07-26
 source_repos:
   - repo: celaut-project/nodo
     branch: stable
@@ -18,9 +18,16 @@ source_repos:
     branch: master
     paths:
       - README.md
+  - repo: celaut-project/skills
+    branch: main
+    paths:
+      - README.md
 source_of_truth:
   - https://github.com/celaut-project/nodo
+  - https://github.com/celaut-project/nodo/releases/tag/v2
   - https://github.com/celaut-project/paradigm
+  - https://github.com/celaut-project/skills
+  - https://celaut-project.github.io/skills/?env=dev
 ---
 
 # Celaut
@@ -37,6 +44,7 @@ Celaut is a decentralized, peer-to-peer runtime for deploying and coordinating *
 - `Apr 1`: Docker was replaced with microVMs, install scripts were improved, and a `doctor` command was added.
 - `Apr 9`: Celaut Node was being tested with [Game of Prompts](game-of-prompts.md) before an open competition launch.
 - `May 8`: Nodo `v1` shipped a Windows 11 WSL installer. The README now marks local execution and packaging as beta on Linux and Windows, local networking and trustless networking as alpha, and macOS as unsupported.
+- `Jul 17`: Nodo `v2` refreshed the Windows 11 WSL release assets. Follow-up source fixes added `iproute2`, systemd startup, and `nodo.service` to the release root filesystem; confirm the current release assets before reinstalling an older WSL image.
 
 ---
 
@@ -86,9 +94,11 @@ This creates a transparent ecosystem where bot performance and trust are the sol
 - Execute services in containerized sandboxes
 - Handle communication, scheduling, and gas metering
 - Publish metadata such as compute cost, architecture support, and uptime
-- Install on Linux with the `stable` branch install script, or use the Windows installer from the `v1` release.
+- Install on Linux with the `stable` branch install script, or use the Windows installer from the current `v2` release.
 
 ### Services
+
+The experimental [Celaut Skills registry](https://celaut-project.github.io/skills/?env=dev) indexes problems separately from services that claim to solve them. Its public repository describes on-chain skill, benchmark, result, coverage, service-data, and service-metadata records on Ergo, with competing assertions weighted by reputation. Treat registry entries and benchmarks as claims to evaluate, not as automatic service endorsements.
 
 - Stateless and deterministic containers
 - May spawn sub-services, forming dynamic, reactive graphs

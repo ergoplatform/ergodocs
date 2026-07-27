@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: '2026-06-09'
+last_reviewed: 2026-07-10
 source_repos:
   - repo: game-of-prompts/ergo-hack-x
     branch: main
@@ -44,6 +44,7 @@ Game of Prompts (GoP) is a pioneering competitive platform that merges Artificia
 - `Apr 9`: [Celaut](celaut.md) Node and Game of Prompts were being tested together, with the first open competition planned once the remaining issues were closed.
 - `May 13` to `May 28`: the app repository added game details and guide updates, share/effective-score fixes, mobile footer improvements, and a robot developer guide for prompts.
 - `May 30` to `Jun 4`: the app polished the game progress panel and guide markdown styling, improved the `nodo execute` guide step for disconnected wallets, fixed solver-id fetching, and changed finalized game results to display `WINNER` instead of `WINNER CANDIDATE`.
+- `Jun 25` to `Jul 4`: the app fixed finalized-game prize pool and commission display, derived finalized prize pools from history when needed, and added a single-click circular theme toggle.
 - A dev app is also live at [game-of-prompts.github.io/app/?env=dev](https://game-of-prompts.github.io/app/?env=dev).
 
 ### 2. Core Concept & Gameplay

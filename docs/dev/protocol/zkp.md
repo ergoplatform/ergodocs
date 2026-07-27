@@ -40,8 +40,8 @@ Currently, the two Sigma protocols in use are [proof of discrete log](schnorr.md
 - The Curve Trees research notes were reorganized in February 2026 and updated for a V6 approach that replaces an anti-griefing bond with deterministic off-chain simulation, with added empirical validation and Pippenger-optimization notes.
 - Curve Trees still has implementation caveats: a sigmastate-interpreter PR would need a TypeScript-to-Scala port; the prototype uses a static tree, has depth bounded by JIT cost, and does not yet support batch verification.
 - PERMAFROST work produced an interface for ML-DSA threshold signing with a relayer, encrypted ceremony blobs, custom manifests, and minimal theming.
-- STARK verification was discussed as a possible future sigmastate-interpreter primitive. The open question is whether full verification fits within the JIT cost budget in one block or needs multi-transaction chunking.
-- Draft EIP-0045 proposed a native `verifyStark` opcode for verifying STARK proofs on Ergo L1, with zkVM targets such as RISC Zero, SP1, and Valida discussed as possible off-chain prover ecosystems. Treat it as proposal-stage research unless an accepted EIP and node release add the opcode.
+- Open [EIP-0045](https://github.com/ergoplatform/eips/pull/103) specifies a native four-argument `verifyStark` opcode for bounded STARK receipt verification on Ergo L1. The current profile candidate targets RISC Zero receipts and fixes verifier identity and statement binding through content-addressed profiles rather than script-selected cryptographic parameters.
+- The matching [sigmastate-interpreter implementation](https://github.com/ergoplatform/sigmastate-interpreter/pull/1116) is a draft, unavailable-by-default preactivation review surface. Cost calibration, the final proof corpus, independent review and reproduction, node admission controls, activation data, and testnet evidence remain gates. No profile is active on mainnet or testnet.
 - [Miden VM](https://github.com/0xMiden/miden-vm) is relevant external STARK VM research for possible ErgoTree-to-VM experiments. There is no production Ergo integration today.
 
 Curve Trees implementation notes:
@@ -54,7 +54,7 @@ STARK implementation notes:
 
 - A STARK verifier is structurally hash functions plus finite-field arithmetic: Merkle paths, FRI folding consistency, and DEEP-ALI constraint composition.
 - A verifier may be possible with existing hash functions plus `UnsignedBigInt` modular arithmetic, but native verification would likely be cheaper.
-- There is no finalized STARK verifier EIP or production implementation.
+- There is no accepted or activated STARK verifier EIP or production implementation.
 
 These composable proofs, when combined with a blockchain, enable powerful use cases. The logic for proofs can include conditions based on the blockchain state. For example, 'If the deadline block height has been reached, Alice can provide knowledge of a secret key for a refund. OR a ring signature from Alice and Bob is required to spend coins.' Or 'If this account holds a minimum of 100 ERG, Alice OR Bob can remove funds above that amount.'
 

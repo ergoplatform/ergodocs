@@ -2,7 +2,7 @@
 tags:
   - Roadmap
 owner: docs
-last_reviewed: 2026-07-02
+last_reviewed: 2026-07-26
 source_repos:
   - repo: ergoplatform/eips
     branch: master
@@ -112,6 +112,7 @@ source_repos:
 source_of_truth:
   - https://github.com/ergoplatform/eips/tree/master/eip-0044.md
   - https://github.com/ergoplatform/ergo/releases
+  - https://github.com/ergoplatform/ergo/pull/2416
   - https://github.com/ScorexFoundation/sigmastate-interpreter/releases
   - https://github.com/ergoplatform/sigma-rust
   - https://github.com/ergoplatform/ergo-appkit/releases/tag/v6.0.0
@@ -147,7 +148,7 @@ source_of_truth:
 
 # Ergo Development Roadmap & History
 
-This page tracks major Ergo development history and active work as of **July 2, 2026**. It is not a promise of delivery dates. Public repositories, release notes, EIPs, and project pages are the source of truth.
+This page tracks major Ergo development history and active work as of **July 26, 2026**. It is not a promise of delivery dates. Public repositories, release notes, EIPs, and project pages are the source of truth.
 
 Ergo's roadmap is research-led: protocol changes move through papers, EIPs, testnets, client releases, and community review before mainnet activation. Ecosystem projects move at different speeds, so items below are grouped as **completed**, **active**, or **experimental** rather than presented as a single linear release plan.
 
@@ -169,6 +170,10 @@ Month buckets summarize roadmap-relevant changes from the latest docs sweep. Use
 
 #### July
 
+- [Ergo node](protocol.md): `v6.0.4RC2` is the latest published 6.0.x candidate. The open `v6.0.5` candidate aggregates NiPoPoW validation, fee-estimation bounds, bounded peer buffering, blacklist connection cleanup, and an asset-issuance fix; it is not released yet.
+- [Rosen Bridge](rosen.md): watcher 6.2.2 and rosen-service 4.3.7 fixed Cardano failed-transaction handling after guards rejected an unsuccessful invalid-event attack; guard-service 10.0.1 also brought released Firo component support.
+- [ErgoRaffle](ergoraffle.md): the v2 interface opened a public testnet beta for community testing.
+- [Crux Finance](crux.md): the legacy `ergodex.io` domain moved to Crux and redirects to its beta platform; Spectrum remains a separate DEX project.
 - [Sub-blocks / Matrix](subblocks.md): Matrix work added input-block body/digest validation so delivered transaction bodies must match the digest committed in proven input-block fields; still DevNet / R&D, not mainnet.
 - [ChainCash / Basis](chaincash.md): tracker on-chain state updates and redemption against the Basis tracker were being tested, with developer-onboarding material in progress.
 - [ErgoNames](ergonames.md): public beta docs now cover SDK send-flow integration, governance / hot-wallet constraints, beta-name reset caveats, and planned source snapshots for launch review.
@@ -270,7 +275,7 @@ These timeline items matter for continuity. Treat them as current work only when
 
 - [x] [AppKit v6.0.0](https://github.com/ergoplatform/ergo-appkit/releases/tag/v6.0.0) released on top of SigmaSDK 6.0.x, including EIP-50 / Sigma 6.0 alignment work and prover-evaluated tests.
 - [x] [Sigma SDK v6.0.5](https://github.com/ergoplatform/sigmastate-interpreter/releases/tag/v6.0.5) released after the 6.0.0 through 6.0.4 releases, adding regression coverage and serialization/deserialization hardening.
-- [x] Ergo node releases moved through `v6.0.2`, `v6.0.2.1`, `v6.0.2.2`, `v6.0.3RC1`, [v6.0.3](https://github.com/ergoplatform/ergo/releases/tag/v6.0.3), and [v6.1.3](https://github.com/ergoplatform/ergo/releases/tag/v6.1.3); [Ergo Matrix 6.5.0 RC1](https://github.com/ergoplatform/ergo/releases/tag/v6.5.0-RC1) added a special DevNet build for protocol-breaking change testing.
+- [x] Ergo node releases moved through `v6.0.2`, `v6.0.2.1`, `v6.0.2.2`, `v6.0.3RC1`, [v6.0.3](https://github.com/ergoplatform/ergo/releases/tag/v6.0.3), [v6.1.3](https://github.com/ergoplatform/ergo/releases/tag/v6.1.3), and [v6.0.4RC2](https://github.com/ergoplatform/ergo/releases/tag/v6.0.4RC2); [Ergo Matrix 6.5.0 RC3](https://github.com/ergoplatform/ergo/releases/tag/v6.5.0-RC3) is the current special DevNet build for protocol-breaking-change testing and p2p-layer fixes.
 - [x] Node protocol work improved mempool consistency, extension-section validation, missing-parent header handling, SyncInfoV2 continuation-header handling, and Matrix input-block transaction-body digest checks. See [Ergo Node Protocol](protocol.md), [Synchronisation](synchronisation.md), and [Sub-blocks](subblocks.md).
 - [x] [Lithos](lithos.md) moved through `v3.0.0-test`, `v3.1.0-test`, `v4.0.0-test`, `v4.1.0-test`, and [`v4.2.0-test`](https://github.com/Lithos-Protocol/Lithos-Client/releases/tag/v4.2.0-test), with work on mempool tracking, Stratum behavior, transaction scheduling, and rollup evaluation.
 - [x] [ChainCash](chaincash.md) and Basis advanced through reserve-contract rework, tracker persistence, on-chain state-update testing, note redemption, server/API work, and presentation material for 2026 research events.
@@ -934,8 +939,8 @@ Ergo is developed a by a combination of the [Ergo Foundation](ergo-foundation.md
 - **Protocol and releases:**
   - [AppKit v6.0.0](https://github.com/ergoplatform/ergo-appkit/releases/tag/v6.0.0) released on top of SigmaSDK 6.0.x.
   - [Sigma SDK v6.0.5](https://github.com/ergoplatform/sigmastate-interpreter/releases/tag/v6.0.5) followed the 6.0.0 through 6.0.4 releases.
-  - Ergo node releases moved through `v6.0.2`, `v6.0.2.1`, `v6.0.2.2`, `v6.0.3RC1`, `v6.0.3`, and `v6.1.3`.
-  - [Ergo Matrix 6.5.0 RC1](https://github.com/ergoplatform/ergo/releases/tag/v6.5.0-RC1) added a DevNet build for protocol-breaking change testing.
+  - Ergo node releases moved through `v6.0.2`, `v6.0.2.1`, `v6.0.2.2`, `v6.0.3RC1`, `v6.0.3`, `v6.1.3`, and `v6.0.4RC2`.
+  - [Ergo Matrix 6.5.0 RC3](https://github.com/ergoplatform/ergo/releases/tag/v6.5.0-RC3) is the current DevNet build for protocol-breaking change testing.
   - Node protocol work improved mempool consistency, extension-section validation, missing-parent header handling, and SyncInfoV2 continuation-header handling.
   - Matrix DevNet became the main surface for testing protocol-breaking changes before any mainnet proposal.
   - Matrix input-block validation added checks that delivered transaction bodies match the digest committed in proven input-block fields.

@@ -6,7 +6,7 @@ tags:
   - application.conf
   - testnet.conf
 owner: docs
-last_reviewed: 2026-05-26
+last_reviewed: 2026-07-10
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -62,6 +62,8 @@ For the `bindAddress` setting, the port component establishes the network port n
 You can use the `nodeName` parameter to assign a visible name to your node for other participants in the P2P network. This name is transmitted during the initial handshake. In the default configuration, this parameter is commented out, resulting in a randomly generated node name.
 
 The `knownPeers` parameter stores a list of bootstrap node addresses that your node will attempt to connect to upon initialization.
+
+The `allowLocal` parameter controls whether the node accepts connections from site-local, link-local, and loopback addresses. Keep it `false` for normal public nodes; enable it only when you need local-only or private-network connectivity.
 
 **About Time Settings**
 

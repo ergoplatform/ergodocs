@@ -21,7 +21,7 @@ Import the SDK for the build system you are using in your project.
 === "Gradle"
 
      ```bash
-      implementation ("org.ergoplatform:ergo-appkit_2.12:5.0.0")
+      implementation ("org.ergoplatform:ergo-appkit_2.12:6.0.0")
      ```
 
 === "Maven"
@@ -29,13 +29,15 @@ Import the SDK for the build system you are using in your project.
   <dependency>
    <groupId>org.ergoplatform</groupId>
    <artifactId>ergo-appkit_2.12</artifactId>
-   <version>5.0.0</version>
+   <version>6.0.0</version>
   </dependency>
     
 
 === "SBT"
 
-  tbd
+  ```scala
+  libraryDependencies += "org.ergoplatform" %% "ergo-appkit" % "6.0.0"
+  ```
     
 
 === "npm"

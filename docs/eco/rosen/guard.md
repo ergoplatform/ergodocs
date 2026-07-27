@@ -5,7 +5,7 @@ tags:
   - Deploy
   - Operations
 owner: docs
-last_reviewed: 2026-05-27
+last_reviewed: 2026-07-26
 source_repos:
   - repo: rosen-bridge/operation
     branch: dev
@@ -22,11 +22,14 @@ source_of_truth:
   - https://github.com/rosen-bridge/operation/tree/dev/docs/guard/env-references.md
   - https://github.com/rosen-bridge/operation/tree/dev/docs/guard/migrate-database.md
   - https://github.com/rosen-bridge/utils/tree/dev/packages/cli
+  - https://github.com/rosen-bridge/guard-service/releases/tag/10.0.1
 ---
 
 # Rosen Guard Operations
 
 Guards verify watcher-triggered events and coordinate bridge signing. Guard operation is higher risk than watcher operation because guards participate in signing flows and hold more sensitive operational material.
+
+[Guard service 10.0.1](https://github.com/rosen-bridge/guard-service/releases/tag/10.0.1) is the current release as of July 24, 2026. The 10.0.x line adds Firo support, public event-status reporting, separate rejected-event storage, rate limits for sensitive API routes, and updated scanner/extractor packages.
 
 ## Docker Setup Shape
 
@@ -98,6 +101,36 @@ npx @rosen-bridge/cli blake2b-hash YOUR_API_KEY
 
 Use `API_KEY_HASH` in `.env` where possible instead of storing `api.apiKeyHash` in `local.yaml`.
 
+## Public Event Status
+
+To publish guard event and transaction status changes to the Rosen application, add:
+
+```yaml
+publicStatus:
+  baseUrl: https://app.rosen.tech
+```
+
+This sends each status change to the configured Rosen application for display on its event details page.
+
+## Firo
+
+Current guard source supports Firo through ElectrumX. The guard configuration needs the generated ECDSA public key, TSS chain code, and derivation path from the key-generation ceremony:
+
+```yaml
+firo:
+  chainNetwork: electrumx
+  electrumx:
+    host: YOUR_ELECTRUMX_HOST
+    port: 50002
+    reconnectDelay: 5
+  bankPublicKey: GENERATED_PUBLIC_KEY
+  tssChainCode: ''
+  derivationPath:
+    -
+```
+
+`reconnectDelay` is optional. Confirm production key and derivation values with current Rosen ceremony and deployment documentation.
+
 ## Database Backup / Migration
 
 Before DB image migration or destructive maintenance:
@@ -114,4 +147,3 @@ docker compose exec -it db psql -U POSTGRES_USER -d POSTGRES_DB -c "\dt"
 ```
 
 Expected table set includes `block_entity`, `collateral_entity`, `commitment_entity`, `event_trigger_entity`, `permit_entity`, `transaction_entity`, and `migrations`.
-

@@ -7,7 +7,7 @@ tags:
   - dApp
   - dApp-Beta
 owner: docs
-last_reviewed: 2026-07-02
+last_reviewed: 2026-07-26
 source_repos:
   - repo: rosen-bridge/watcher
     branch: master
@@ -48,11 +48,11 @@ source_repos:
       - src/lib
 source_of_truth:
   - https://rosen.tech
-  - https://github.com/rosen-bridge/watcher/releases/tag/6.2.1
-  - https://github.com/rosen-bridge/guard-service/releases/tag/9.1.1
-  - https://github.com/rosen-bridge/ui/releases/tag/guard-app-4.3.0
+  - https://github.com/rosen-bridge/watcher/releases/tag/6.2.2
+  - https://github.com/rosen-bridge/guard-service/releases/tag/10.0.1
+  - https://github.com/rosen-bridge/ui/releases/tag/guard-app-4.4.1
   - https://github.com/rosen-bridge/ui/releases/tag/watcher-app-4.3.0
-  - https://github.com/rosen-bridge/ui/releases/tag/rosen-service-4.3.5
+  - https://github.com/rosen-bridge/ui/releases/tag/rosen-service-4.3.7
   - https://github.com/rosen-bridge/rosen-sdk
   - https://github.com/rosen-bridge/rosenet
   - https://github.com/rosen-bridge/sign-protocols
@@ -105,18 +105,19 @@ Please see [this video](https://www.youtube.com/watch?v=Xsiy-yPJQ6w) for a visua
 
 ## Recent updates
 
+- `Jul 21` to `Jul 24`: Rosen reported that guards rejected 84 invalid Cardano events from an unsuccessful attack. [Watcher 6.2.2](https://github.com/rosen-bridge/watcher/releases/tag/6.2.2) and [rosen-service 4.3.7](https://github.com/rosen-bridge/ui/releases/tag/rosen-service-4.3.7) now verify final Cardano transaction results in Koios and Ogmios data so failed transactions are ignored.
+- [Guard service 10.0.0](https://github.com/rosen-bridge/guard-service/releases/tag/10.0.0) integrated Firo, public event-status reporting, rejected-event storage, API rate limits, and scanner/API changes. [10.0.1](https://github.com/rosen-bridge/guard-service/releases/tag/10.0.1) followed with a Firo ElectrumX dependency fix. Released component support does not by itself prove that every Firo route or asset is enabled in the public bridge app.
 - `Feb 11` to `Apr 22`: Firo and Handshake integrations moved through watcher, guard-service, and rosen-service updates.
-- Watcher releases have moved through [6.2.1](https://github.com/rosen-bridge/watcher/releases/tag/6.2.1), including a Bitcoin Runes observation fix for Unisat pagination.
-- Guard service releases have moved through [9.1.1](https://github.com/rosen-bridge/guard-service/releases/tag/9.1.1), with dependency updates for Bitcoin Runes RPC support.
-- Guard and watcher apps have moved through [guard-app-4.3.0](https://github.com/rosen-bridge/ui/releases/tag/guard-app-4.3.0) and [watcher-app-4.3.0](https://github.com/rosen-bridge/ui/releases/tag/watcher-app-4.3.0), aligning app layouts with the newer UI Kit foundation and fixing/refreshing revenue, lock, unlock, and withdraw views.
-- Rosen UI/service releases have moved through `rosen-service-4.3.5` in the [Rosen UI repository](https://github.com/rosen-bridge/ui/releases/tag/rosen-service-4.3.5).
+- Watcher releases have moved through [6.2.2](https://github.com/rosen-bridge/watcher/releases/tag/6.2.2); prior updates included a Bitcoin Runes observation fix for Unisat pagination.
+- Guard and watcher apps have moved through [guard-app-4.4.1](https://github.com/rosen-bridge/ui/releases/tag/guard-app-4.4.1) and [watcher-app-4.3.0](https://github.com/rosen-bridge/ui/releases/tag/watcher-app-4.3.0). Guard app 4.4.1 fixes value display in manual transaction submission.
+- Rosen UI/service releases have moved through [rosen-service 4.3.7](https://github.com/rosen-bridge/ui/releases/tag/rosen-service-4.3.7).
 - Rosen shared packages also moved through [rosen-sdk](https://github.com/rosen-bridge/rosen-sdk), [rosenet](https://github.com/rosen-bridge/rosenet), and [sign-protocols](https://github.com/rosen-bridge/sign-protocols) updates. The older [rosen-chains](https://github.com/rosen-bridge/rosen-chains) package repository is archived; chain packages moved into guard-service.
 - [network-client](https://github.com/rosen-bridge/network-client) is the Rosen client-library monorepo used by `@rosen-clients/*` packages.
 - [cleanup-service](https://github.com/rosen-bridge/cleanup-service) is Rosen infrastructure for cleanup flows such as fraud and slash transactions.
 - [SavonarolaLabs/rosen-ui](https://github.com/SavonarolaLabs/rosen-ui) is a small Svelte-based Rosen UI/widget prototype. Treat it as community interface reference, separate from the maintained Rosen UI/service repository.
 - `Apr 22`: Rosen stats work added TVL, volume, locked-assets, and user-count metrics, while the app also picked up React 19, Sentry, and live-data improvements.
 - The new rosen-service also added Bitcoin Runes support.
-- `Jun 3`: a Rosen team update said Firo work was moving from RPC toward ElectrumX across scanner, guard-service, health-check, utilities, and UI PRs. Handshake review was parked behind Firo completion, while Base work was split between scanner RPC observation and guard-service integration. Treat Firo, Handshake, and Base notes as expansion work under review until Rosen release notes mark those paths live.
+- `Jun 3`: Firo work was moving from RPC toward ElectrumX across scanner, guard-service, health-check, utilities, and UI PRs. Firo reached released guard-service support in July; public route availability still depends on bridge configuration and the app's asset list. Handshake and Base remain expansion work under review.
 - `Aug 27` 2025: Rosen test updates reported guard-service testing over Rosenet, testing of a new Ergo multisig package integrated into guard-service, and ongoing BalanceHandler / watcher-node upgrade work. The same update said Bitcoin Runes UI work was split across network, rename, and wallet branches, with `rosen-chains` support relying on Bitcoin JSON-RPC and Unisat APIs.
 
 ## Why RosenBridge

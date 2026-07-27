@@ -7,7 +7,7 @@ tags:
   - EIP
   - Test Vectors
 owner: docs
-last_reviewed: 2026-05-26
+last_reviewed: 2026-07-10
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -36,6 +36,8 @@ The [Ergo GitHub repository](https://github.com/ergoplatform/ergo/tree/master/sr
 Recent node versions cache block candidates and regenerate them on a timed interval. The default `blockCandidateGenerationInterval` in the reference configuration is `60s`, and mining code handles expired cached candidates before producing work for miners.
 
 Mainnet 6.0 voting settings were added to `mainnet.conf` with voting starting height `1561601`. The reference client advertises the 6.0.x app version while mainnet chain settings use protocol version 4 for the 6.0 interpreter feature set.
+
+The mining API also exposes a custom-public-key candidate route at `POST /mining/candidateWithTxsAndPk` for operators who need a block candidate with mandatory transactions and a miner-supplied public key. Treat it as an operator-facing mining helper, not a general node API route.
 
 ## Test Vectors
 
