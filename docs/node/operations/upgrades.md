@@ -5,7 +5,7 @@ tags:
   - Upgrades
   - Rollback
 owner: docs
-last_reviewed: 2026-05-27
+last_reviewed: 2026-08-20
 source_repos:
   - repo: ergoplatform/ergo
     branch: master

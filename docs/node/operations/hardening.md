@@ -5,7 +5,7 @@ tags:
   - Security
   - Node
 owner: docs
-last_reviewed: 2026-05-27
+last_reviewed: 2026-08-20
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -46,4 +46,3 @@ Use this checklist for public or semi-public node hosts.
 - Add reverse-proxy rate limits before exposing transaction, mempool, wallet, or indexed query routes.
 - For browser apps, set CORS narrowly when you know the origin. `corsAllowedOrigin = "*"` is convenient but broad.
 - Treat the plain `api_key` header as a secret; TLS or tunnels matter because config stores only the hash.
-

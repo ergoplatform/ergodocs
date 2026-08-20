@@ -8,7 +8,7 @@ tags:
   - Artificial Economic Intelligence  
   - Service Virtualization  
 owner: docs
-last_reviewed: 2026-07-26
+last_reviewed: 2026-08-20
 source_repos:
   - repo: celaut-project/nodo
     branch: stable
@@ -26,6 +26,7 @@ source_repos:
 source_of_truth:
   - https://github.com/celaut-project/nodo
   - https://github.com/celaut-project/nodo/releases/tag/v2
+  - https://github.com/celaut-project/nodo/releases/tag/guest-kernel-v2
   - https://github.com/celaut-project/paradigm
   - https://github.com/celaut-project/skills
   - https://celaut-project.github.io/skills/?env=dev
@@ -46,6 +47,7 @@ Celaut is a decentralized, peer-to-peer runtime for deploying and coordinating *
 - `Apr 9`: Celaut Node was being tested with [Game of Prompts](game-of-prompts.md) before an open competition launch.
 - `May 8`: Nodo `v1` shipped a Windows 11 WSL installer. The README now marks local execution and packaging as beta on Linux and Windows, local networking and trustless networking as alpha, and macOS as unsupported.
 - `Jul 17`: Nodo `v2` refreshed the Windows 11 WSL release assets. Follow-up source fixes added `iproute2`, systemd startup, and `nodo.service` to the release root filesystem; confirm the current release assets before reinstalling an older WSL image.
+- `Aug 14`: Nodo published `guest-kernel-v2`, a pinned guest kernel plus BusyBox userspace for its Cloud Hypervisor microVM path. Install scripts select it through `GUEST_KERNEL_VERSION`; treat this component release separately from the Nodo `v2` application release.
 
 ---
 

@@ -5,7 +5,7 @@ tags:
   - Indexing
   - ErgoHack
 owner: docs
-last_reviewed: 2026-05-30
+last_reviewed: 2026-08-20
 source_repos:
   - repo: 2ndtlmining/Ergomempool
     branch: main

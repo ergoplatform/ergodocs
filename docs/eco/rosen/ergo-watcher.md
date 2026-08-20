@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: 2026-05-26
+last_reviewed: 2026-08-20
 source_repos:
   - repo: rosen-bridge/operation
     branch: dev
@@ -120,6 +120,17 @@ docker compose up -d
 ```
 
 Access the watcher UI by visiting `http://localhost:3030` to monitor network information and health status.
+
+### Optional Monitoring Agents
+
+Upstream Docker configuration can start Alloy/log shipping and host/container metrics through Compose profiles. Deploy the observability stack first when it shares this host, set `COMPOSE_PROFILES=logger,monitoring` in `.env`, and create `.env.logger` and `.env.monitoring` from their templates. Before startup, apply the current permission commands:
+
+```shell
+chmod -R ao+rX ./alloy ./prometheus-agent
+chmod o+x ./prometheus-agent/entrypoint.sh
+```
+
+Use a JSON file logger with a `current.log` symlink when Alloy ships watcher logs. See the upstream deployment guide for same-host and remote-observability settings.
 
 ## Note
 

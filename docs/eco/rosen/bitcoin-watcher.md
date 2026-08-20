@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: 2026-05-26
+last_reviewed: 2026-08-20
 source_repos:
   - repo: rosen-bridge/operation
     branch: dev
@@ -196,11 +196,22 @@ To start your watcher, configure the `local.yaml` file.
 
 ### Specify the Target Network
 
-Set the target network you're watching. Current watcher configs support `ergo`, `cardano`, `bitcoin`, `ethereum`, `binance`, `doge`, and `bitcoin-runes`:
+Set the target network you're watching. Current watcher releases also support `firo`; this page configures `bitcoin`:
 
 ```yaml
 network: bitcoin
 ```
+
+### Optional Monitoring Agents
+
+The upstream Compose setup can enable log shipping and machine/container metrics with `COMPOSE_PROFILES=logger,monitoring`. Copy `env.logger.template` and `env.monitoring.template`, configure same-host or remote observability as documented upstream, then apply:
+
+```shell
+chmod -R ao+rX ./alloy ./prometheus-agent
+chmod o+x ./prometheus-agent/entrypoint.sh
+```
+
+If Alloy ships watcher logs, configure a JSON file logger with a `current.log` symlink.
 
 ## Observation Raw Data
 

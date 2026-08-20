@@ -3,8 +3,12 @@ tags:
   - ErgoScript
   - Contracts
 owner: docs
-last_reviewed: 2026-05-26
+last_reviewed: 2026-08-20
 source_repos:
+  - repo: BetterMoneyLabs/basis-tracker
+    branch: master
+    paths:
+      - contract
   - repo: ChainCashLabs/chaincash
     branch: master
     paths:
@@ -121,6 +125,7 @@ source_repos:
     paths:
       - contracts
 source_of_truth:
+  - https://github.com/BetterMoneyLabs/basis-tracker/tree/master/contract
   - https://github.com/ChainCashLabs/chaincash/tree/master/contracts
   - https://github.com/Ergo-Lend/edge/tree/main/src/main/scala/edge/contracts/Contract.scala
   - https://github.com/ErgoRaffle/raffle-backend/tree/master/app/raffle/RaffleContract.scala
@@ -234,7 +239,7 @@ The [ergo-contracts](https://github.com/ergoplatform/ergo-contracts) repository 
 
 ### In Development
 
-- ChainCash contract sources have active 2026 Basis, reserve/emergency-logic, and refund-handling changes. Verify the current contract files before treating examples as stable integration targets.
+- ChainCash/Basis contract work added reserve-refund handling and AVL `insertOrUpdate` logic in July 2026, then moved the active Basis contract and specifications into [BetterMoneyLabs/basis-tracker](https://github.com/BetterMoneyLabs/basis-tracker/tree/master/contract). Verify that repository before treating examples as stable integration targets.
 - [Dexy](https://github.com/ergoplatform/ergo-jde/blob/main/kiosk/src/test/scala/kiosk/dexy/DexySpec.scala)
 - [Bitdomains](https://github.com/bitdomains/contracts)
 - [ErgoNames](https://github.com/ergonames/ergonames/blob/master/src/main/scala/)

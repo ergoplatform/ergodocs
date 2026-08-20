@@ -7,7 +7,7 @@ tags:
   - NiPoPoW
   - libraries
 owner: docs
-last_reviewed: 2026-07-02
+last_reviewed: 2026-08-20
 source_repos:
   - repo: mwaddip/ergots
     branch: master
@@ -36,16 +36,16 @@ source_of_truth:
 The repository is organized as a workspace:
 
 - `@ergots/scorex`: Scorex wire codecs, block header types, digest helpers, and Autolykos v2 proof-of-work verification.
-- `@ergots/nipopow`: NiPoPoW proof parsing, serialization, verification, comparison, and P2P envelope codecs.
-- `@ergots/avltree`: Batch AVL+ authenticated-tree verification.
+- `@ergots/nipopow`: NiPoPoW proof parsing, serialization, verification, comparison, in-memory and demand-loaded proving, continuous-mode verification, and P2P envelope codecs.
+- `@ergots/avltree`: Batch AVL+ authenticated-tree verification and proving, including versioned persistent storage and rollback support.
 - `@ergots/ergoscript`: ErgoTree parsing, serialization, partial evaluation, sigma-protocol verification, AVL+ integration, and method-handler work.
 - `@ergots/transaction`: browser-clean transaction wire codec and validation package.
 
-Current package metadata lists `@ergots/scorex` `0.3.0`, `@ergots/nipopow` `0.2.1`, `@ergots/avltree` `0.2.0`, `@ergots/ergoscript` `0.5.0`, and `@ergots/transaction` `0.1.0`. Check npm and the repository before pinning a package version in an application.
+Current package metadata lists `@ergots/scorex` `0.3.0`, `@ergots/nipopow` `0.4.0`, `@ergots/avltree` `0.4.0`, `@ergots/ergoscript` `0.5.0`, and `@ergots/transaction` `0.1.0`. Check npm and the repository before pinning a package version in an application.
 
 June 2026 team updates marked the first npm publication for the Scorex, AVL tree, NiPoPoW, and ErgoScript packages, followed by Sigma v6 support work. The packages remain useful for differential testing and browser-side verification experiments, not as a standalone consensus authority.
 
-Recent work tightened JVM-alignment and input handling: context-extension ordering, typed context-extension keys, `Context.lastBlockUtxoRootHash`, header/pre-header accessors, v6 type gates, option tags, SBox/ErgoTree deserialization, box equality, collection equality costing, `atLeast` children caps, static signatures for selected methods, and `estimateCryptoCost` for JVM-faithful sigma-verification cost estimates. The README reports `7028` tests passing across packages under both `node` and `jsdom`.
+Recent work tightened JVM-alignment and input handling: context-extension ordering, typed context-extension keys, `Context.lastBlockUtxoRootHash`, header/pre-header accessors, v6 type gates, option tags, SBox/ErgoTree deserialization, box equality, collection equality costing, `atLeast` children caps, static signatures for selected methods, and `estimateCryptoCost` for JVM-faithful sigma-verification cost estimates. AVL work added `BatchAVLProver.restoreRoot`, exported node/storage helpers, a storage codec, and a versioned persistent prover. NiPoPoW `0.4.0` added prover entry points and continuous-mode proof handling. The README reports `7492` tests passing across packages under both `node` and `jsdom`.
 
 Important caveat: upstream still describes `ergots` as not yet a consensus-complete kernel. Use it for browser-side research, differential testing, and verification experiments; combine it with sigma-rust or a JVM node before relying on it for binding consensus decisions.
 

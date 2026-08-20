@@ -2,7 +2,7 @@
 tags:
   - EIP
 owner: docs
-last_reviewed: 2026-06-30
+last_reviewed: 2026-08-20
 source_repos:
   - repo: ergoplatform/eips
     branch: master

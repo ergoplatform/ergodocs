@@ -15,7 +15,7 @@ tags:
   - Ruby
   - Python
 owner: docs
-last_reviewed: 2026-07-26
+last_reviewed: 2026-08-20
 source_repos:
   - repo: ergoplatform/bounded-vec
     branch: develop
@@ -87,6 +87,7 @@ Rust implementation of [ErgoScript (sigmastate-interpreter)](sigmastate-interpre
 
 ## Recent updates
 
+- `Aug`: SANTA's AuthDS review removed fixtures for three AVL operations that are unreachable from current ErgoScript and node paths. Its reachable verifier corpus then showed JVM and `ergots` agreement on 37 of 37 fixtures. This narrows one reported divergence; it does not establish full sigma-rust or node parity.
 - `Jul`: merged development-branch conformance fixes added checked ERG summation during stateful transaction validation ([#891](https://github.com/ergoplatform/sigma-rust/pull/891)), rejected unsupported tuple arities during evaluation ([#897](https://github.com/ergoplatform/sigma-rust/pull/897)), and rejected self context-extension keys that the JVM cannot construct ([#906](https://github.com/ergoplatform/sigma-rust/pull/906)). These fixes are not a new tagged `ergo-lib` release; downstream users should verify their pinned revision.
 - `Jun`: SANTA-backed conformance work exposed a broad sigma-rust/JVM alignment stream. Review and PR work covered JIT costing, v5/v6 evaluation behavior, AVL method semantics, context-extension handling, header-version signedness, serializer details, and other consensus-sensitive edge cases. Treat this as an active review stream unless a downstream release explicitly marks the relevant path stable.
 - `May`: early SANTA runs found synthetic sigma-rust cases accepted by sigma-rust but rejected by Scala. An independent `ergots` harness hit the same under-charging class around mainnet block `1,520,813`, reinforcing that cross-implementation test failures must be treated as consensus-sensitive until fixed upstream.
