@@ -2,7 +2,7 @@
 tags:
   - Roadmap
 owner: docs
-last_reviewed: 2026-07-27
+last_reviewed: 2026-08-20
 source_repos:
   - repo: ergoplatform/eips
     branch: master
@@ -275,7 +275,7 @@ These timeline items matter for continuity. Treat them as current work only when
 
 - [x] [AppKit v6.0.0](https://github.com/ergoplatform/ergo-appkit/releases/tag/v6.0.0) released on top of SigmaSDK 6.0.x, including EIP-50 / Sigma 6.0 alignment work and prover-evaluated tests.
 - [x] [Sigma SDK v6.0.5](https://github.com/ergoplatform/sigmastate-interpreter/releases/tag/v6.0.5) released after the 6.0.0 through 6.0.4 releases, adding regression coverage and serialization/deserialization hardening.
-- [x] Ergo node releases moved through `v6.0.2`, `v6.0.2.1`, `v6.0.2.2`, `v6.0.3RC1`, [v6.0.3](https://github.com/ergoplatform/ergo/releases/tag/v6.0.3), [v6.1.3](https://github.com/ergoplatform/ergo/releases/tag/v6.1.3), and [v6.0.4RC2](https://github.com/ergoplatform/ergo/releases/tag/v6.0.4RC2); [Ergo Matrix 6.5.0 RC3](https://github.com/ergoplatform/ergo/releases/tag/v6.5.0-RC3) is the current special DevNet build for protocol-breaking-change testing and p2p-layer fixes.
+- [x] Ergo node releases moved through `v6.0.2`, `v6.0.3`, [v6.0.4](https://github.com/ergoplatform/ergo/releases/tag/v6.0.4), and the RocksDB-equivalent [v6.1.4](https://github.com/ergoplatform/ergo/releases/tag/v6.1.4); [Ergo Matrix 6.5.0 RC3](https://github.com/ergoplatform/ergo/releases/tag/v6.5.0-RC3) remains the special DevNet build for protocol-breaking-change testing and p2p-layer fixes.
 - [x] Node protocol work improved mempool consistency, extension-section validation, missing-parent header handling, SyncInfoV2 continuation-header handling, and Matrix input-block transaction-body digest checks. See [Ergo Node Protocol](protocol.md), [Synchronisation](synchronisation.md), and [Sub-blocks](subblocks.md).
 - [x] [Lithos](lithos.md) moved through `v3.0.0-test`, `v3.1.0-test`, `v4.0.0-test`, `v4.1.0-test`, and [`v4.2.0-test`](https://github.com/Lithos-Protocol/Lithos-Client/releases/tag/v4.2.0-test), with work on mempool tracking, Stratum behavior, transaction scheduling, and rollup evaluation.
 - [x] [ChainCash](chaincash.md) and Basis advanced through reserve-contract rework, tracker persistence, on-chain state-update testing, note redemption, server/API work, and presentation material for 2026 research events.
@@ -283,8 +283,8 @@ These timeline items matter for continuity. Treat them as current work only when
 - [x] [Machina Finance](machina-finance.md) published an alpha orders SDK with grid and limit-order transaction builders.
 - [x] [Etcha](etcha.md) entered alpha for peer-to-peer options with physical-delivery and cash-settled flows.
 - [x] [Degen Wallet](degens-world.md), Degens.World agent tooling, Ergo MCP, Xergon, and related experimental apps expanded the wallet/agent surface.
-- [x] [Rust node](rust-node.md) releases reached v0.7.6, which fixed an AVL persistence bug and requires earlier-version state to be discarded and resynced. SANTA added shared conformance vectors/runners for `sigma-rust`, `arkadianet/ergo`, and `mwaddip/ergo-node-rust`.
-- [x] [ergots](ergots.md) published browser-compatible TypeScript packages for Scorex codecs, NiPoPoW, AVL+, ErgoScript, and transaction tooling, with current package metadata tracked in docs.
+- [x] [Rust node](rust-node.md) releases reached v0.8.1, adding memory-budget/configuration work and fixing mining, mempool, reorg, storage-growth, proof-digest, header-context, and missing-parent recovery issues. It remains experimental. SANTA added shared conformance vectors/runners for `sigma-rust`, `arkadianet/ergo`, and `mwaddip/ergo-node-rust`.
+- [x] [ergots](ergots.md) published browser-compatible TypeScript packages for Scorex codecs, NiPoPoW, AVL+, ErgoScript, and transaction tooling; NiPoPoW and AVL+ packages reached `0.4.0` with prover and storage work.
 - [x] [Matrix Pulse](matrix-pulse.md) was published as lightweight Matrix input-block observability tooling for local Matrix nodes.
 - [x] [eBiome](ebiome.md) launched as a live ecosystem analytics, explorer, and forensics dashboard; its forensics views are heuristic and should not be treated as deterministic attribution.
 - [x] [Ergo Marketplace](ergo-marketplace.md) was published as an early design/prototype for permissionless trade infrastructure.
@@ -341,8 +341,8 @@ The emphasis in 2026 is validation and application work on top of the 6.x stack,
 | AppKit | 6.0.0 released on SigmaSDK 6.0.x. | Downstream library updates and examples that adopt AppKit 6. |
 | [FleetSDK](fleet.md) / ergoc | Fleet 2025 work added `AvlTree` serialization, browser bundle changes, and ErgoTree construction from ergoc JSON output. | Release notes, package entrypoints, and examples that depend on newer serialization paths. |
 | [sigma-rust](sigma-rust.md) | Compiler/interpreter parity work and bindings continue. | Consensus-sensitive parity claims, JIT costing, and binding releases. |
-| [ergots](ergots.md) | TypeScript verification and ErgoScript tooling is active, with published packages for Scorex, NiPoPoW, AVL+, ErgoScript, and transactions. | Package stability, JVM-alignment notes, and evaluator coverage. |
-| [Rust Node](rust-node.md) / SANTA | Rust node reached 0.7.x releases; SANTA supplies conformance vectors/runners for sigma-rust, arkadianet/ergo, and mwaddip/ergo-node-rust. | Cross-implementation divergences, new vector tiers, and production-readiness statements. |
+| [ergots](ergots.md) | TypeScript verification and ErgoScript tooling is active, with `0.4.0` NiPoPoW and AVL+ packages adding prover and storage surfaces. | Package stability, JVM-alignment notes, and evaluator coverage. |
+| [Rust Node](rust-node.md) / SANTA | Rust node reached `0.8.1`; SANTA supplies conformance vectors/runners for sigma-rust, arkadianet/ergo, and mwaddip/ergo-node-rust. | Cross-implementation divergences, new vector tiers, and production-readiness statements. |
 
 ### Scaling and Mining
 

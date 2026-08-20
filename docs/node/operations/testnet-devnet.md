@@ -5,7 +5,7 @@ tags:
   - Devnet
   - Operations
 owner: docs
-last_reviewed: 2026-05-27
+last_reviewed: 2026-08-20
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -35,4 +35,4 @@ Use testnet for public compatibility testing. Use devnet/private fork when you n
 - Never reuse production wallet seeds.
 - Pin config files in version control for repeatable devnet tests.
 - For private chains, document genesis/config changes next to deployment scripts.
-
+- Current `testnet.conf` sets `version2ActivationHeight = 2147483647` and `version2ActivationDifficultyHex = "20"`, effectively disabling the historical protocol-v2/client-4.0 hard fork on public testnet. Do not assume public testnet reproduces that mainnet activation boundary; use a controlled devnet when testing activation behavior.

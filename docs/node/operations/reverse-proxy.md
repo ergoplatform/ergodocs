@@ -5,7 +5,7 @@ tags:
   - Reverse Proxy
   - API
 owner: docs
-last_reviewed: 2026-05-27
+last_reviewed: 2026-08-20
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -49,4 +49,3 @@ For local admin, SSH tunnel is often simpler:
 ```shell
 ssh -L 9053:127.0.0.1:9052 user@node-host
 ```
-

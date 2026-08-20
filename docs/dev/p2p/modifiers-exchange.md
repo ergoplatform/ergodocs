@@ -2,7 +2,7 @@
 tags:
 - P2P
 owner: docs
-last_reviewed: 2026-05-26
+last_reviewed: 2026-08-20
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -50,6 +50,8 @@ The Modifier Exchange process involves several steps:
 
 3. **Modifier Delivery (Modifier)**: The node that initially sent the Inv message responds with a Modifier message that delivers the requested modifiers. This message contains the actual data (e.g., block sections, transactions) needed by the requesting node.
         - **Code Reference**: The `ModifiersSpec` class in the [network/message](https://github.com/ergoplatform/ergo/blob/master/ergo-core/src/main/scala/org/ergoplatform/network/message/ModifiersSpec.scala) directory is responsible for managing the delivery of modifiers.
+
+The reference node derives its global P2P frame cap from the modifier limit: `MessageConstants.MaxMessageSize` is twice `ModifiersSpec.maxMsgSizeWithReserve`, while that reserve is four times the base modifier-message limit. Implementations should follow the current constants instead of hard-coding the former 16 MiB value.
 
 This process ensures that all nodes in the network maintain an up-to-date state of the blockchain, crucial for the integrity and performance of the Ergo network.
 

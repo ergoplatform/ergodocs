@@ -5,7 +5,7 @@ tags:
   - Indexing
   - Node API
 owner: docs
-last_reviewed: 2026-05-27
+last_reviewed: 2026-08-20
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -54,4 +54,3 @@ Use [Indexed Node API](indexed-node.md), [Explorer Stack](explorer-stack.md), or
 - Back up node wallet/scanner state if service depends on it.
 - Monitor scan results after node upgrades or rescans.
 - Do not expose scan-management routes publicly.
-

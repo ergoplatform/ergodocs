@@ -5,7 +5,7 @@ tags:
   - Infrastructure
   - Experimental
 owner: docs
-last_reviewed: 2026-07-27
+last_reviewed: 2026-08-20
 source_repos:
   - repo: mwaddip/ergo-node-rust
     branch: master
@@ -43,6 +43,13 @@ source_repos:
       - README.md
 source_of_truth:
   - https://github.com/mwaddip/ergo-node-rust
+  - https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.8.1
+  - https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.8.0
+  - https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.7.11
+  - https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.7.10
+  - https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.7.9
+  - https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.7.8
+  - https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.7.7
   - https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.7.6
   - https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.7.5
   - https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.7.4
@@ -87,6 +94,10 @@ Related Rust-node references include [Luivatra/ergo-rust-node](https://github.co
 
 Recent release highlights:
 
+- [v0.8.1](https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.8.1) aligned `CONTEXT.headers` with the reference node's nine preceding headers and allowed missing-parent requests to resume after the unknown-parent request budget had been exhausted.
+- [v0.8.0](https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.8.0) removed deferred script evaluation, introduced derived memory-budget and split-cache settings, moved Debian configuration into `/etc/ergo-node/conf.d/`, and fixed external-miner candidates, at-tip candidate serving, and mempool admission. UTXO mode now refuses to start below a 3 GiB memory ceiling unless the operator explicitly overrides the floor.
+- [v0.7.11](https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.7.11) fixed a reorg header-index overwrite and fast-sync cold-start gap, and added offline state compaction. Operators whose `v0.7.5`–`v0.7.10` index is already clobbered still need a resync.
+- [v0.7.10](https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.7.10) stopped unbounded `state.redb` growth; it does not reclaim existing unreachable rows. [v0.7.9](https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.7.9), [v0.7.8](https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.7.8), and [v0.7.7](https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.7.7) fixed P2P frame sizing and several restart/at-tip proof-digest failures.
 - [v0.7.6](https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.7.6) fixed an AVL-tree persistence bug that could omit rebalanced internal nodes and later cause resolver-miss panics at the chain tip. The release notes require operators upgrading from an earlier version to delete the node's local `state.redb` and resync because existing state may already be incomplete.
 - [v0.7.5](https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.7.5) added the missing proof-digest consensus check after block application, fixed genesis/proof-generation ordering needed for canonical proofs, and decoupled validation sweeps from download progress. The release notes say SANTA isolated a live testnet divergence; this reinforces the node's experimental status.
 - [v0.7.4](https://github.com/mwaddip/ergo-node-rust/releases/tag/v0.7.4) fixed a mining-serve state-root mismatch at tip by building a fresh prover from storage rather than sharing mutable prover tree state.
@@ -110,6 +121,8 @@ Current development areas include mining endpoint support, NiPoPoW bootstrapping
 
 - Mainnet validation work exposed sigma-rust edge cases around context-extension ordering, v6 opcode parsing, JIT costing, lazy constant resolution, and pre-JIT compatibility paths.
 - SANTA and independent `ergots` validation both exposed a sigma-rust under-charging divergence in May 2026. That kind of cross-runner failure is useful evidence for conformance work, but the Scala node remains the consensus authority.
+- SANTA's August AuthDS review retired three AVL operations that are unreachable from current ErgoScript/node paths. On the remaining reachable corpus, its JVM and `ergots` runners agreed on all 37 verifier fixtures; this is scoped conformance evidence, not a general production-readiness claim.
+- The independent `arkadianet/ergo` node now separates Scala-compatible API documentation at `/swagger` from its native Rust API family at `/swagger/native`.
 - The peer-penalty system was designed to integrate with `fail2ban`, but repeated or malformed request behavior still needed tuning during April testing.
 - Memory work focused on reducing database cache pressure after the node reaches tip. The `v0.4.0` release reopened the runtime AVL state database with a smaller redb cache once chain sync completed.
 - NiPoPoW work included bootstrapping and proof-serving gaps. One noted difference was that the sigma-rust `NipopowProof` structure lacked a `continuous` field present in the JVM node.

@@ -6,7 +6,7 @@ tags:
   - Indexing
   - Watchers
 owner: docs
-last_reviewed: 2026-05-27
+last_reviewed: 2026-08-20
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -111,6 +111,8 @@ Minimum configuration pieces:
 - `observation.confirmation`: tune per watched chain. Source docs recommend `9` for Ergo, `1` for Bitcoin, `20` for Ethereum, `25` for Cardano, and `300` for Binance.
 
 Keep mnemonic and API hash in env vars where possible, not directly in shared config snippets.
+
+Optional watcher observability uses Compose `logger` and `monitoring` profiles. Deploy the observability stack first for same-host mode, copy the logger/monitoring env templates, and use the upstream permission commands `chmod -R ao+rX ./alloy ./prometheus-agent` and `chmod o+x ./prometheus-agent/entrypoint.sh` before startup.
 
 ## Rosen Guard Checklist
 

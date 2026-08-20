@@ -68,13 +68,13 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`odiseusme`](https://github.com/odiseusme) | Developer / project | 3 | 5 | 5 |
 | [`a-shannon`](https://github.com/a-shannon) | Developer / project | 3 | 4 | 3 |
 | [`arobsn`](https://github.com/arobsn) | Developer / project | 3 | 4 | 1 |
+| [`BetterMoneyLabs`](https://github.com/BetterMoneyLabs) | Ecosystem org | 3 | 4 | 10 |
 | [`ChainCashLabs`](https://github.com/ChainCashLabs) | Ecosystem org | 1 | 4 | 5 |
 | [`DeCo-Education`](https://github.com/DeCo-Education) | Developer / project | 2 | 4 | 4 |
 | [`FlyingPig5`](https://github.com/FlyingPig5) | Developer / project | 3 | 4 | 2 |
 | [`Lithos-Protocol`](https://github.com/Lithos-Protocol) | Ecosystem org | 2 | 4 | 4 |
 | [`anon-real`](https://github.com/anon-real) | Developer / project | 3 | 3 | 3 |
 | [`aslesarenko`](https://github.com/aslesarenko) | Developer / project | 2 | 3 | 8 |
-| [`BetterMoneyLabs`](https://github.com/BetterMoneyLabs) | Ecosystem org | 3 | 3 | 10 |
 | [`decentbob`](https://github.com/decentbob) | Developer / project | 1 | 3 | 3 |
 | [`duckpools`](https://github.com/duckpools) | Ecosystem org | 4 | 3 | 4 |
 | [`Emurgo`](https://github.com/Emurgo) | External standard/vendor | 1 | 3 | 3 |
@@ -189,6 +189,7 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`arkadianet/ergo`](https://github.com/arkadianet/ergo) | Developer / project | `main` | 2 | 1 |
 | [`arobsn/hergmes`](https://github.com/arobsn/hergmes) | Developer / project | `master` | 2 | 1 |
 | [`arobsn/ledger-ergo-js`](https://github.com/arobsn/ledger-ergo-js) | Developer / project | `master` | 2 | 1 |
+| [`BetterMoneyLabs/basis-tracker`](https://github.com/BetterMoneyLabs/basis-tracker) | Ecosystem org | `master` | 2 | 4 |
 | [`BetterMoneyLabs/braid`](https://github.com/BetterMoneyLabs/braid) | Ecosystem org | `master` | 2 | 6 |
 | [`cannonQ/ergo-p2p-options-frontend`](https://github.com/cannonQ/ergo-p2p-options-frontend) | Developer / project | `master` | 2 | 3 |
 | [`cannonQ/nft-races`](https://github.com/cannonQ/nft-races) | Developer / project | `main` | 2 | 1 |
@@ -253,7 +254,6 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`Auction-Coin/contracts`](https://github.com/Auction-Coin/contracts) | Developer / project | `main` | 1 | 1 |
 | [`Auction-Coin/frontend`](https://github.com/Auction-Coin/frontend) | Developer / project | `main` | 1 | 1 |
 | [`Auction-Coin/off-chain`](https://github.com/Auction-Coin/off-chain) | Developer / project | `master` | 1 | 1 |
-| [`BetterMoneyLabs/basis-tracker`](https://github.com/BetterMoneyLabs/basis-tracker) | Ecosystem org | `master` | 1 | 4 |
 | [`BetterMoneyLabs/chaincash`](https://github.com/BetterMoneyLabs/chaincash) | Ecosystem org | `master` | 1 | 1 |
 | [`Blitz-TCG/Game-Client`](https://github.com/Blitz-TCG/Game-Client) | Developer / project | `main` | 1 | 1 |
 | [`Blitz-TCG/Website`](https://github.com/Blitz-TCG/Website) | Developer / project | `main` | 1 | 1 |
@@ -398,7 +398,7 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 
 | Page | Repositories | Paths |
 | --- | ---: | ---: |
-| [`dev/scs/contracts.md`](contracts.md) | 25 | 40 |
+| [`dev/scs/contracts.md`](contracts.md) | 26 | 41 |
 | [`roadmap.md`](roadmap.md) | 21 | 42 |
 | [`eco/emerging-projects.md`](emerging-projects.md) | 12 | 16 |
 | [`eco/degens-world.md`](degens-world.md) | 9 | 9 |
@@ -455,7 +455,7 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`Auction-Coin/contracts`](https://github.com/Auction-Coin/contracts) | `main` | `README.md` | `docs/eco/auction-coin.md` |
 | [`Auction-Coin/frontend`](https://github.com/Auction-Coin/frontend) | `main` | `README.md` | `docs/eco/auction-coin.md` |
 | [`Auction-Coin/off-chain`](https://github.com/Auction-Coin/off-chain) | `master` | `README.md` | `docs/eco/auction-coin.md` |
-| [`BetterMoneyLabs/basis-tracker`](https://github.com/BetterMoneyLabs/basis-tracker) | `master` | `README.md`<br>`contract`<br>`docs`<br>`src` | `docs/uses/chaincash.md` |
+| [`BetterMoneyLabs/basis-tracker`](https://github.com/BetterMoneyLabs/basis-tracker) | `master` | `README.md`<br>`contract`<br>`docs`<br>`src` | `docs/dev/scs/contracts.md`<br>`docs/uses/chaincash.md` |
 | [`BetterMoneyLabs/braid`](https://github.com/BetterMoneyLabs/braid) | `master` | `README.md`<br>`docs/bitcoin-mergedmining.md`<br>`docs/braid.md`<br>`docs/ergo-mergedmining.md`<br>`whitepaper/whitepaper.pdf`<br>`whitepaper/whitepaper.tex` | `docs/uses/sidechains.md`<br>`docs/uses/sidechains/braid.md` |
 | [`BetterMoneyLabs/chaincash`](https://github.com/BetterMoneyLabs/chaincash) | `master` | `docs/presentation/basis.pdf` | `docs/uses/chaincash.md` |
 | [`Blitz-TCG/Game-Client`](https://github.com/Blitz-TCG/Game-Client) | `main` | `README.md` | `docs/eco/blitz.md` |
