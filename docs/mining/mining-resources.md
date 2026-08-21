@@ -7,7 +7,7 @@ tags:
   - EIP
   - Test Vectors
 owner: docs
-last_reviewed: 2026-07-10
+last_reviewed: 2026-08-21
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -34,6 +34,8 @@ This page provides a collection of resources related to Ergo mining. It includes
 The [Ergo GitHub repository](https://github.com/ergoplatform/ergo/tree/master/src/main/scala/org/ergoplatform/mining) contains the Scala files related to Ergo's mining algorithm. This is a great resource if you're interested in understanding the technical details of Ergo mining.
 
 Recent node versions cache block candidates and regenerate them on a timed interval. The default `blockCandidateGenerationInterval` in the reference configuration is `60s`, and mining code handles expired cached candidates before producing work for miners.
+
+Reference client v6.0.4 also recovers when a locally mined block fails syntactic or semantic validation. The candidate generator clears the rejected solved block and cached candidates, while the node removes an identifiable failing transaction from the mempool; a subsequent mining request then generates fresh work instead of repeatedly returning `Block already solved`.
 
 Mainnet 6.0 voting settings were added to `mainnet.conf` with voting starting height `1561601`. The reference client advertises the 6.0.x app version while mainnet chain settings use protocol version 4 for the 6.0 interpreter feature set.
 

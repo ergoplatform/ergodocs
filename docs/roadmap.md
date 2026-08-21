@@ -139,6 +139,9 @@ source_of_truth:
   - https://sigmanauts.com/mining
   - https://calc.ergominers.com
   - https://github.com/BetterMoneyLabs/braid
+  - https://github.com/a-shannon/ergo-sidechain-bridge
+  - https://github.com/accord-protocol/accord-protocol
+  - https://github.com/from-ufa/lumen
   - https://github.com/fleet-sdk/fleet
   - https://github.com/ergoplatform/ledger-app-ergo
   - https://github.com/arobsn/keystone-ergo-js
@@ -148,7 +151,7 @@ source_of_truth:
 
 # Ergo Development Roadmap & History
 
-This page tracks major Ergo development history and active work as of **July 27, 2026**. It is not a promise of delivery dates. Public repositories, release notes, EIPs, and project pages are the source of truth.
+This page tracks major Ergo development history and active work as of **August 21, 2026**. It is not a promise of delivery dates. Public repositories, release notes, EIPs, and project pages are the source of truth.
 
 Ergo's roadmap is research-led: protocol changes move through papers, EIPs, testnets, client releases, and community review before mainnet activation. Ecosystem projects move at different speeds, so items below are grouped as **completed**, **active**, or **experimental** rather than presented as a single linear release plan.
 
@@ -167,6 +170,12 @@ Ergo's roadmap is research-led: protocol changes move through papers, EIPs, test
 Month buckets summarize roadmap-relevant changes from the latest docs sweep. Use the linked project pages, repositories, and release notes for caveats and source detail.
 
 ### 2026
+
+#### August
+
+- [Ergo node](protocol.md): [v6.0.4](https://github.com/ergoplatform/ergo/releases/tag/v6.0.4) is the latest checked stable release. It includes stricter REST input validation, public-testnet activation corrections, duplicate-mempool protection, block-candidate and extra-index fixes, and recovery when a locally mined block fails validation. [v6.1.4](https://github.com/ergoplatform/ergo/releases/tag/v6.1.4) carries the same changes with RocksDB and is marked as a prerelease.
+- [Sidechains](sidechains.md): a public Ergo-Substrate bridge research alpha now documents deterministic peg construction, lifecycle containment, and audit evidence. It remains blocked on an activated Ergo-verifiable sidechain-finality profile, target-node acceptance, recovery evidence, and independent review.
+- [Lumen](https://github.com/from-ufa/lumen): a live node and oracle dashboard added an optional outbound, allowlisted read-only bridge for viewing a private operator node without exposing its REST port.
 
 #### July
 
@@ -939,9 +948,9 @@ Ergo is developed a by a combination of the [Ergo Foundation](ergo-foundation.md
 - **Protocol and releases:**
   - [AppKit v6.0.0](https://github.com/ergoplatform/ergo-appkit/releases/tag/v6.0.0) released on top of SigmaSDK 6.0.x.
   - [Sigma SDK v6.0.5](https://github.com/ergoplatform/sigmastate-interpreter/releases/tag/v6.0.5) followed the 6.0.0 through 6.0.4 releases.
-  - Ergo node releases moved through `v6.0.2`, `v6.0.2.1`, `v6.0.2.2`, `v6.0.3RC1`, `v6.0.3`, `v6.1.3`, and `v6.0.4RC2`.
+  - Ergo node releases moved through `v6.0.2`, `v6.0.3`, [v6.0.4](https://github.com/ergoplatform/ergo/releases/tag/v6.0.4), and the RocksDB-equivalent [v6.1.4](https://github.com/ergoplatform/ergo/releases/tag/v6.1.4).
   - [Ergo Matrix 6.5.0 RC3](https://github.com/ergoplatform/ergo/releases/tag/v6.5.0-RC3) is the current DevNet build for protocol-breaking change testing.
-  - Node protocol work improved mempool consistency, extension-section validation, missing-parent header handling, and SyncInfoV2 continuation-header handling.
+  - Node protocol work improved mempool consistency, extension-section validation, missing-parent header handling, SyncInfoV2 continuation-header handling, and recovery when a locally mined block fails validation.
   - Matrix DevNet became the main surface for testing protocol-breaking changes before any mainnet proposal.
   - Matrix input-block validation added checks that delivered transaction bodies match the digest committed in proven input-block fields.
 - **Scaling, mining, and validation:**

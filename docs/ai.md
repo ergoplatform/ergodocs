@@ -1,17 +1,12 @@
 ---
 owner: docs
-last_reviewed: 2026-07-02
+last_reviewed: 2026-08-21
 tags:
   - learn
   - research
   - artificial-intelligence
   - eUTXO
 source_repos:
-  - repo: a-shannon/Aletheia-Protocol
-    branch: main
-    paths:
-      - README.md
-      - docs
   - repo: marctheshark3/FintelligenceAI
     branch: main
     paths:
@@ -22,10 +17,16 @@ source_repos:
       - README.md
       - ergo-blockchain-system-prompt.md
       - cursor/Ergo-Blockchain-API-Guide-for-Cursormd
+  - repo: accord-protocol/accord-protocol
+    branch: main
+    paths:
+      - README.md
+      - docs/status.md
+      - specs
 source_of_truth:
-  - https://github.com/a-shannon/Aletheia-Protocol
   - https://github.com/marctheshark3/FintelligenceAI
   - https://github.com/marctheshark3/AI-Project-Starter-Kit
+  - https://github.com/accord-protocol/accord-protocol
   - https://www.ergoblockchain.org/blog/agent-economy-manifesto
   - https://www.ergoblockchain.org/blog/agent-economy-live-proof-site-update
 ---
@@ -48,7 +49,9 @@ Finally, the **complexity of integration and interoperability** cannot be unders
 
 Amidst these challenges, a particularly ambitious application is emerging: **Artificial Economic Intelligence (AEI)**. Pioneered conceptually within the Ergo ecosystem, AEI enables autonomous software agents to manage funds, perform tasks independently, generate revenue, cover operational expenses, and expand their network—all through smart contracts on a public blockchain ([10](https://forum.cardano.org/t/ergo-proof-of-work-cardano/131478)). These are not merely tools analyzing data but digital entities designed for independent economic activity.
 
-Related public experiments include [Aletheia Protocol](https://github.com/a-shannon/Aletheia-Protocol), an open-source framework and whitepaper for AI persistence on Ergo, and [FintelligenceAI](https://github.com/marctheshark3/FintelligenceAI), a modular RAG and agent framework that starts with Ergo smart-contract script generation and ErgoScript validation tooling.
+Related public experiments include [FintelligenceAI](https://github.com/marctheshark3/FintelligenceAI), a modular RAG and agent framework that starts with Ergo smart-contract script generation and ErgoScript validation tooling.
+
+[Accord Protocol](https://github.com/accord-protocol/accord-protocol) is a draft open standard for agent work agreements, verification receipts, and settlement receipts. Ergo is its first reference programmable-settlement rail, alongside rail adapters for Rosen, Base/EVM, and x402-compatible flows. The project labels its v0 implementation alpha and testnet-first; Ergo scripts and manifests are not certified for mainnet use.
 
 Developer-facing agent and media projects include [Ergo Agent SDK](ergo-agent-sdk.md), [Degens.World](degens-world.md), and [BoTTube](bottube.md).
 

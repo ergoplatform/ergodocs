@@ -4,7 +4,7 @@ tags:
   - NiPoPoWs
   - Sigma Chains
 owner: docs
-last_reviewed: 2026-07-27
+last_reviewed: 2026-08-21
 source_repos:
   - repo: BetterMoneyLabs/braid
     branch: master
@@ -16,10 +16,17 @@ source_repos:
       - README.md
       - ROADMAP.md
       - dev-docs/sidechain
+  - repo: a-shannon/ergo-sidechain-bridge
+    branch: main
+    paths:
+      - README.md
+      - docs/public-audit-alpha.md
+      - docs/public-audit-alpha-manifest.json
 source_of_truth:
   - https://github.com/BetterMoneyLabs/braid/blob/master/whitepaper/whitepaper.pdf
   - https://github.com/arkadianet/Aegis-USE
   - https://github.com/arkadianet/Aegis-USE/blob/main/ROADMAP.md
+  - https://github.com/a-shannon/ergo-sidechain-bridge
   - https://github.com/ergoplatform/eips/pull/103
 ia_status: directory
 ---
@@ -34,6 +41,12 @@ Explore recent advancements in sidechain technology through the [ErgoHack VII pr
 ///
 
 Adjacent research also includes [Braid](braid.md), a double merged-mined Bitcoin and Ergo sidechain design. Treat it as research material rather than a deployed Ergo sidechain.
+
+### Ergo-Substrate bridge research alpha
+
+The public [Ergo-Substrate Sidechain Bridge](https://github.com/a-shannon/ergo-sidechain-bridge) is a reference implementation for settling an EVM-compatible Substrate/Frontier sidechain on Ergo. It includes deterministic peg transaction construction, restart and reorganisation handling, explicit transport authorization, AVL-based replay protection, and an audit-first evidence manifest.
+
+This repository is a local research candidate, not a deployed or trustless bridge. Its authenticated path still relies on federated sidechain-finality authority, and its release gate remains blocked on an activated Ergo-verifiable finality profile, exact target-node acceptance, recovery evidence, and independent security review. Do not treat public source or passing local audit checks as mainnet readiness.
 
 ### Aegis-USE research prototype
 

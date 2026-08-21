@@ -18,10 +18,10 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 ## Summary
 
 - Source-watched pages: `239`
-- Watched repositories: `234`
-- Watched GitHub owners: `101`
-- Watched repo/branch pairs: `240`
-- Watched paths: `505`
+- Watched repositories: `235`
+- Watched GitHub owners: `102`
+- Watched repo/branch pairs: `241`
+- Watched paths: `509`
 - Release-watched page/repository refs: `13`
 
 ## Coverage Groups
@@ -30,7 +30,7 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | --- | ---: | ---: | ---: | ---: |
 | Core / infrastructure | 5 | 30 | 132 | 189 |
 | Ecosystem org | 10 | 38 | 24 | 36 |
-| Developer / project | 82 | 162 | 119 | 94 |
+| Developer / project | 83 | 163 | 119 | 98 |
 | External standard/vendor | 4 | 4 | 11 | 13 |
 
 ## Coverage By Area
@@ -66,7 +66,7 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`input-output-hk`](https://github.com/input-output-hk) | External standard/vendor | 1 | 5 | 7 |
 | [`MrStahlfelge`](https://github.com/MrStahlfelge) | Developer / project | 3 | 5 | 7 |
 | [`odiseusme`](https://github.com/odiseusme) | Developer / project | 3 | 5 | 5 |
-| [`a-shannon`](https://github.com/a-shannon) | Developer / project | 3 | 4 | 3 |
+| [`a-shannon`](https://github.com/a-shannon) | Developer / project | 3 | 4 | 4 |
 | [`arobsn`](https://github.com/arobsn) | Developer / project | 3 | 4 | 1 |
 | [`BetterMoneyLabs`](https://github.com/BetterMoneyLabs) | Ecosystem org | 3 | 4 | 10 |
 | [`ChainCashLabs`](https://github.com/ChainCashLabs) | Ecosystem org | 1 | 4 | 5 |
@@ -106,6 +106,7 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`satoshilabs`](https://github.com/satoshilabs) | External standard/vendor | 1 | 2 | 1 |
 | [`scalahub`](https://github.com/scalahub) | Core / infrastructure | 1 | 2 | 5 |
 | [`2ndtlmining`](https://github.com/2ndtlmining) | Developer / project | 1 | 1 | 1 |
+| [`accord-protocol`](https://github.com/accord-protocol) | Developer / project | 1 | 1 | 3 |
 | [`AcoSmrkas`](https://github.com/AcoSmrkas) | Developer / project | 5 | 1 | 1 |
 | [`andrehafner`](https://github.com/andrehafner) | Developer / project | 1 | 1 | 1 |
 | [`Auction-Coin`](https://github.com/Auction-Coin) | Developer / project | 3 | 1 | 1 |
@@ -235,8 +236,9 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`spectrum-finance/ergo-dex`](https://github.com/spectrum-finance/ergo-dex) | Ecosystem org | `master` | 2 | 1 |
 | [`StabilityNexus/Gluon-Ergo-UI`](https://github.com/StabilityNexus/Gluon-Ergo-UI) | Developer / project | `main` | 2 | 1 |
 | [`2ndtlmining/Ergomempool`](https://github.com/2ndtlmining/Ergomempool) | Developer / project | `main` | 1 | 1 |
-| [`a-shannon/Aletheia-Protocol`](https://github.com/a-shannon/Aletheia-Protocol) | Developer / project | `main` | 1 | 2 |
 | [`a-shannon/ergo-research`](https://github.com/a-shannon/ergo-research) | Developer / project | `main` | 1 | 1 |
+| [`a-shannon/ergo-sidechain-bridge`](https://github.com/a-shannon/ergo-sidechain-bridge) | Developer / project | `main` | 1 | 3 |
+| [`accord-protocol/accord-protocol`](https://github.com/accord-protocol/accord-protocol) | Developer / project | `main` | 1 | 3 |
 | [`AcoSmrkas/mew-dex`](https://github.com/AcoSmrkas/mew-dex) | Developer / project | `master` | 1 | 1 |
 | [`AcoSmrkas/mew-lock`](https://github.com/AcoSmrkas/mew-lock) | Developer / project | `main` | 1 | 1 |
 | [`AcoSmrkas/mew-prediction`](https://github.com/AcoSmrkas/mew-prediction) | Developer / project | `main` | 1 | 1 |
@@ -416,7 +418,7 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`eco/game-of-prompts.md`](game-of-prompts.md) | 4 | 5 |
 | [`node/deploy-runbook.md`](deploy-runbook.md) | 4 | 5 |
 | [`uses/chaincash.md`](chaincash.md) | 4 | 11 |
-| [`ai.md`](ai.md) | 3 | 6 |
+| [`ai.md`](ai.md) | 3 | 7 |
 | [`dev/interact.md`](interact.md) | 3 | 4 |
 | [`dev/oc/dex_bots.md`](dex_bots.md) | 3 | 7 |
 | [`dev/p2p/network.md`](network.md) | 3 | 8 |
@@ -430,9 +432,10 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | --- | --- | --- | --- |
 | [`2ndtlmining/Ergomempool`](https://github.com/2ndtlmining/Ergomempool) | `main` | `README.md` | `docs/eco/mempool-vis.md` |
 | [`4EYESConsulting/sigmalok-indexer`](https://github.com/4EYESConsulting/sigmalok-indexer) | `main` | `README.md` | `docs/dev/tutorials/blockchain-indexing.md`<br>`docs/dev/tutorials/blockchain-indexing/custom-indexer.md` |
-| [`a-shannon/Aletheia-Protocol`](https://github.com/a-shannon/Aletheia-Protocol) | `main` | `README.md`<br>`docs` | `docs/ai.md` |
 | [`a-shannon/ergo-agent-sdk`](https://github.com/a-shannon/ergo-agent-sdk) | `main` | `README.md` | `docs/dev/stack/ergo-agent-sdk.md`<br>`docs/eco/emerging-projects.md` |
 | [`a-shannon/ergo-research`](https://github.com/a-shannon/ergo-research) | `main` | `papers/curve-trees` | `docs/dev/protocol/zkp.md` |
+| [`a-shannon/ergo-sidechain-bridge`](https://github.com/a-shannon/ergo-sidechain-bridge) | `main` | `README.md`<br>`docs/public-audit-alpha-manifest.json`<br>`docs/public-audit-alpha.md` | `docs/uses/sidechains.md` |
+| [`accord-protocol/accord-protocol`](https://github.com/accord-protocol/accord-protocol) | `main` | `README.md`<br>`docs/status.md`<br>`specs` | `docs/ai.md` |
 | [`AcoSmrkas/mew-dex`](https://github.com/AcoSmrkas/mew-dex) | `master` | `README.md` | `docs/eco/mew-finance.md` |
 | [`AcoSmrkas/mew-lock`](https://github.com/AcoSmrkas/mew-lock) | `main` | `README.md` | `docs/eco/mew-finance.md` |
 | [`AcoSmrkas/mew-prediction`](https://github.com/AcoSmrkas/mew-prediction) | `main` | `README.md` | `docs/eco/mew-finance.md` |
