@@ -83,6 +83,7 @@ For external discovery, also check [Sigmaverse](sigmaverse.md).
 | [Netnotes](netnotes.md) | - | Active | 2026-05-19 |
 | [Ergo Relay](ergo-relay.md) | - | Active | 2026-04-13 |
 | [Matrix Pulse](matrix-pulse.md) | [GitHub](https://github.com/odiseusme/matrix-pulse) | Active Matrix tooling | 2026-07-01 |
+| [Lumen](https://github.com/from-ufa/lumen) | [ergolumen.net](https://ergolumen.net/) | Live node/oracle dashboard | 2026-08-15 |
 | [Reputation System](reputation-system.md) | [Sigma Reputation Panel](https://reputation-systems.github.io/sigma-reputation-panel/) | Active | 2026-04-07 |
 | [Ergo Proxy](ergo-proxy.md) | - | Active | 2026-03-31 |
 | [Ergo Knowledge Base](ergo-knowledge-base.md) | [transcripts](https://ergo-transcripts.vercel.app/), [knowledge base](https://ergo-knowledge-base.vercel.app/) | Active | 2026-03-10 |

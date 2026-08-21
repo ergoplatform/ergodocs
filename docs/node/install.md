@@ -6,7 +6,7 @@ tags:
   - Setup
   - Guide
 owner: docs
-last_reviewed: 2026-07-26
+last_reviewed: 2026-08-21
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -16,9 +16,8 @@ source_repos:
       - src/main/scala/org/ergoplatform/nodeView/
 source_of_truth:
   - https://github.com/ergoplatform/ergo
-  - https://github.com/ergoplatform/ergo/releases/tag/v6.0.3
-  - https://github.com/ergoplatform/ergo/releases/tag/v6.0.4RC2
-  - https://github.com/ergoplatform/ergo/releases/tag/v6.1.3
+  - https://github.com/ergoplatform/ergo/releases/tag/v6.0.4
+  - https://github.com/ergoplatform/ergo/releases/tag/v6.1.4
   - https://github.com/ergoplatform/ergo/releases/tag/v6.5.0-RC3
 ---
 
@@ -50,7 +49,9 @@ The minimum hardware requirements are approximately ~20GB of storage for the blo
 
 Current reference-node configuration advertises the 6.0.x app version. Mainnet protocol settings use protocol version 4 for the 6.0 interpreter feature set.
 
-The latest checked stable reference-client releases are [v6.0.3](https://github.com/ergoplatform/ergo/releases/tag/v6.0.3) and [v6.1.3](https://github.com/ergoplatform/ergo/releases/tag/v6.1.3), published on 2026-06-26. Both include the 6.0.3 maintenance line: public testnet parameter updates, custom public-key mining route support on testnet, extension-section validation coverage, mempool and synchronisation fixes, P2P logic improvements, wallet API documentation updates, custom-key mining candidate cache fixes, and transaction-builder input-ID validation. [v6.0.4RC2](https://github.com/ergoplatform/ergo/releases/tag/v6.0.4RC2) is a newer prerelease. RC1 added stricter REST input validation, corrected testnet V2 activation settings, and duplicate-ID mempool protection; RC2 adds block-candidate generation improvements and an OpenAPI correction. For Matrix DevNet testing, [v6.5.0-RC3](https://github.com/ergoplatform/ergo/releases/tag/v6.5.0-RC3) is the current special prerelease build.
+The latest checked stable reference-client release is [v6.0.4](https://github.com/ergoplatform/ergo/releases/tag/v6.0.4), published on 2026-08-18. It adds stricter REST input validation, corrected public-testnet V2 activation settings, duplicate-ID mempool protection, block-candidate and extra-index consistency fixes, and mining recovery when a locally produced block fails validation. [v6.1.4](https://github.com/ergoplatform/ergo/releases/tag/v6.1.4) contains the same changes with RocksDB and remains marked as a prerelease. For Matrix DevNet testing, [v6.5.0-RC3](https://github.com/ergoplatform/ergo/releases/tag/v6.5.0-RC3) remains the special prerelease build.
+
+If node-view validation rejects a locally mined block, v6.0.4 clears the solved-block and candidate caches so the next mining request can build fresh work. When the validation error identifies a failing transaction, the node also removes that transaction from the mempool. Operators should still inspect the warning and underlying transaction failure; the recovery prevents the miner from remaining stuck on the rejected candidate.
 ////
 //// details | Modes of operation
     {type: notes, open: true}
@@ -104,6 +105,7 @@ For more convenience, Docker provides a streamlined way to install and run the E
 
 - [Explorer & Node Bundles](explorer-stack.md): Access pre-packaged bundles that include an Ergo Node and explorer-related services for easy setup.
 - [Ergosphere](https://ergosphere.cloud/): Ergosphere is an Umbrel-like solution that simplifies the setup of self-hosted Ergo services. Please note that it is currently in the BETA stage.
+- [Lumen](https://github.com/from-ufa/lumen) is a live Ergo node and oracle dashboard. Its optional outbound WebSocket bridge exposes allowlisted read-only node data without opening the node REST port; protect the bridge token like a password and verify the operator documentation before deployment.
 - [Ergode](https://github.com/ross-weir/ergode) (ergo-node) is an Ergo node implementation in TypeScript, targeting web and native runtimes.
 - [Ergo Rust Node](rust-node.md) is an experimental Rust implementation that reached mainnet validation to tip during 2026 testing.
 - [Ergo Proxy](ergo-proxy.md) and [Ergo Relay](ergo-relay.md) are lightweight P2P/broadcast tools for relay experiments and transaction broadcast; they do not replace a validating full node.
