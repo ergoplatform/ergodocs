@@ -5,7 +5,7 @@ tags:
   - Monitoring
   - Alerts
 owner: docs
-last_reviewed: 2026-07-26
+last_reviewed: 2026-08-25
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -59,5 +59,14 @@ Monitor sync, index lag, API health, and host resources separately.
 Current Rosen watcher deployment supports separate `logger` and `monitoring` Compose profiles. The logger path uses Alloy and Loki; the metrics path uses Prometheus Agent, Node Exporter, and cAdvisor, with Grafana and Alertmanager in the observability stack.
 
 Use `COMPOSE_PROFILES=logger`, `monitoring`, or `logger,monitoring`. Set `IS_SAME_HOST=true` only when the observability stack shares the watcher host and its external networks already exist. For a remote stack, use `IS_SAME_HOST=false` and set remote-write URLs and basic-auth credentials in the monitoring environment files. Keep those credentials out of source control.
+
+Before starting the optional agents, make the configuration trees readable/traversable and the Prometheus Agent entrypoint executable:
+
+```shell
+chmod -R ao+rX ./alloy ./prometheus-agent
+chmod o+x ./prometheus-agent/entrypoint.sh
+```
+
+Use these symbolic modes rather than fixed numeric permissions; they remain effective under restrictive umasks such as `007`.
 
 cAdvisor filesystem and disk-I/O panels may show no data on cgroup v2 hosts; Rosen's source guide calls out full `container_fs_*` coverage as a cgroup v1 limitation.

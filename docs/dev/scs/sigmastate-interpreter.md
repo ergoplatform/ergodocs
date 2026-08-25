@@ -6,7 +6,7 @@ tags:
   - Compiler
   - Interpreter
 owner: docs
-last_reviewed: 2026-07-26
+last_reviewed: 2026-08-25
 source_repos:
   - repo: ergoplatform/sigmastate-interpreter
     branch: develop
@@ -22,8 +22,8 @@ source_repos:
     paths:
       - ergo-wallet
 source_of_truth:
-  - https://github.com/ergoplatform/sigmastate-interpreter/releases/tag/v6.0.5
-  - https://repo1.maven.org/maven2/org/scorexfoundation/sigma-state_2.12/6.0.5/sigma-state_2.12-6.0.5.pom
+  - https://github.com/ergoplatform/sigmastate-interpreter/releases/tag/v6.0.6
+  - https://repo1.maven.org/maven2/org/scorexfoundation/sigma-state_2.12/6.0.6/sigma-state_2.12-6.0.6.pom
   - https://github.com/ergoplatform/sigmastate-interpreter/releases/tag/v6.0.2
   - https://github.com/ergoplatform/sigmastate-interpreter/pull/1076
   - https://github.com/ergoplatform/sigmastate-interpreter/tree/develop/README.md
@@ -44,6 +44,8 @@ This library is integral to the operation of the [Ergo Node](https://github.com/
 
 ## Recent updates
 
+- `Aug 21`: [Sigma SDK v6.0.6](https://github.com/ergoplatform/sigmastate-interpreter/releases/tag/v6.0.6) was released and published to Maven Central.
+- v6.0.6 adds drift-check golden tests for specification generators, Bitcoin transaction-parsing examples including amount-bound outputs, checked compiler handling for non-OOM `VirtualMachineError` failures during typechecking, and better selector errors and source positions.
 - `Jun 24`: [Sigma SDK v6.0.5](https://github.com/ergoplatform/sigmastate-interpreter/releases/tag/v6.0.5) was released.
 - v6.0.5 added regression coverage for `ByIndex` upcasts with non-`Int` indexes, serializer benchmarks, cross-platform `Exponentiate` equivalence checks, subproject module names, TaggedVariable wire-format pinning with Scala-type deprecation, and rejection of negative-id variables in the `ContextExtension` deserializer.
 - `May 28`: [Sigma SDK v6.0.4](https://github.com/ergoplatform/sigmastate-interpreter/releases/tag/v6.0.4) was released.
@@ -91,7 +93,7 @@ While the sigmastate-interpreter library provides the low-level primitives neces
 To start using the sigmastate-interpreter in your Scala project, add the following dependency to your SBT configuration:
 
 ```scala
-libraryDependencies += "org.scorexfoundation" %% "sigma-state" % "6.0.5"
+libraryDependencies += "org.scorexfoundation" %% "sigma-state" % "6.0.6"
 ```
 
 For more advanced usage and direct interaction with the ErgoTree and Sigma protocols, refer to the detailed [Sigma Language documentation](sigma-lang.md).

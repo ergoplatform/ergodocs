@@ -7,7 +7,7 @@ tags:
   - tooling
   - community
 owner: docs
-last_reviewed: 2026-08-20
+last_reviewed: 2026-08-25
 ia_status: directory
 source_repos:
   - repo: Scottcjn/bottube
@@ -97,7 +97,7 @@ These projects are recent ecosystem additions verified against public repositori
 
 | Dedicated page | What it is | Status | Related surface |
 | --- | --- | --- | --- |
-| [BoTTube](bottube.md) | AI-native video platform with an Ergo bridge blueprint for deposit verification, request validation, P2PK address handling, and recent BCOS/error-handling work. | Emerging | Applications and utilities. |
+| [BoTTube](bottube.md) | AI-native video platform with an Ergo bridge blueprint for deposit verification, atomic deposit credits, balance-guarded withdrawals, request validation, and P2PK address handling. | Emerging | Applications and utilities. |
 | [Ergo Agent SDK](ergo-agent-sdk.md) | Python SDK for giving autonomous agents controlled access to Ergo and its DeFi ecosystem. | Developer-facing | Developer frameworks. |
 | [Ergo Proxy](ergo-proxy.md) | Lightweight Ergo P2P relay proxy for forwarding peer messages without holding blockchain state. | Developer-facing | Node operations and P2P tooling. |
 | [Ergo Relay](ergo-relay.md) | Minimal transaction signing and P2P relay service. | Developer-facing | Node operations and transaction broadcast tooling. |
@@ -122,7 +122,7 @@ These related projects already have a page or a suitable umbrella page:
 - [Rosen Bridge](rosen.md), including guard, watcher, scanner, and health-check tooling
 - [Dexy](dexy.md) and [Stablecoins](stablecoins.md)
 - [Braid](braid.md), a Bitcoin and Ergo double merged-mined sidechain research project
-- [CodeUtxo](codeutxo.md), Aletheia Protocol, FintelligenceAI, and the AI Project Starter Kit are covered in the [AI](ai.md) and [ErgoHack](ergohack.md) pages
+- [CodeUtxo](codeutxo.md), FintelligenceAI, and the AI Project Starter Kit are covered in the [AI](ai.md) and [ErgoHack](ergohack.md) pages
 
 ## Not Added
 

@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: 2026-08-20
+last_reviewed: 2026-08-25
 source_repos:
   - repo: Scottcjn/Rustchain
     branch: main

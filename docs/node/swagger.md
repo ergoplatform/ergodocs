@@ -7,7 +7,7 @@ tags:
   - UI
   - RPC Endpoints
 owner: docs
-last_reviewed: 2026-07-26
+last_reviewed: 2026-08-25
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -16,7 +16,8 @@ source_repos:
 source_of_truth:
   - https://github.com/ergoplatform/ergo/tree/master/src/main/resources/api/openapi.yaml
   - https://github.com/ergoplatform/ergo/releases/tag/v6.0.1
-  - https://github.com/ergoplatform/ergo/releases/tag/v6.0.4RC2
+  - https://github.com/ergoplatform/ergo/releases/tag/v6.0.4
+  - https://github.com/ergoplatform/ergo/pull/2459
   - https://github.com/ergoplatform/ergo/pull/2235
   - https://github.com/ergoplatform/ergo/pull/2222
 ---
@@ -86,7 +87,9 @@ Current OpenAPI groups are useful for different operator jobs:
 
 Indexed history routes require `ergo.node.extraIndex = true`. Wallet and node-control routes require the plain API key in the `api_key` header; the config stores only the Blake2b hash.
 
-Recent 6.0.4 prerelease handling rejects invalid API inputs earlier: out-of-range `/blocks/chainSlice` requests, invalid scan IDs, wrong-length modifier, box, or token IDs, and malformed secret-proof-hint hex return errors instead of reaching deeper node logic. Public mining and script routes remain public even if older generated OpenAPI material showed incorrect security annotations. RC2 also fixes the `CommitmentWithSecret` schema indentation in `openapi.yaml`.
+Node v6.0.4 rejects invalid API inputs earlier: out-of-range `/blocks/chainSlice` requests, invalid scan IDs, wrong-length modifier, box, or token IDs, and malformed secret-proof-hint hex return errors instead of reaching deeper node logic. Public mining and script routes remain public even if older generated OpenAPI material showed incorrect security annotations. The release also fixes the `CommitmentWithSecret` schema indentation in `openapi.yaml`.
+
+The `PopowHeader` schema now matches the node encoder and decoder: `header`, `interlinks`, and `interlinksProof` are required. `interlinksProof` is a `BatchMerkleProof` containing indexed leaf digests and proof nodes with their side. Clients generated from an older OpenAPI file may omit this required proof field and should refresh against the v6.0.4 schema.
 
 ### Blockchain Box Queries
 

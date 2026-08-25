@@ -8,7 +8,7 @@ tags:
   - BIP32
   - BIP39
 owner: docs
-last_reviewed: 2026-05-26
+last_reviewed: 2026-08-25
 source_repos:
   - repo: ergoplatform/ergo-wallet
     branch: master

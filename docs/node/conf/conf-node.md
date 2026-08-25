@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: 2026-07-10
+last_reviewed: 2026-08-25
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -10,6 +10,8 @@ source_repos:
       - src/main/resources/application.conf
 source_of_truth:
   - https://github.com/ergoplatform/ergo/tree/master/src/main/scala/org/ergoplatform/nodeView/history/extra/ExtraIndexer.scala
+  - https://github.com/ergoplatform/ergo/pull/2442
+  - https://github.com/ergoplatform/ergo/commit/cdf3061d25f9343fd45bd7a6c2be124158ff314a
   - https://github.com/ergoplatform/ergo/tree/master/src/main/scala/org/ergoplatform/nodeView/history/extra/IndexedContractTemplate.scala
   - https://github.com/ergoplatform/ergo/tree/master/src/main/resources/application.conf
 ---
@@ -40,6 +42,8 @@ Contract-template indexing hashes `ErgoTree.template` under the current version 
 Enable this for nodes serving dApps, explorers, Rosen watcher health checks, and any workload that needs `/blockchain/...` indexed routes. Leave it disabled for a simple validating node where lower disk and indexing overhead matter more than query features.
 
 After enabling it, monitor [indexed height](indexed-node.md) separately from node sync height.
+
+Current extra-index state tracks the indexed header ID as well as height. During a reorganisation, the indexer checks parent continuity, defers blocks that do not extend its recorded tip, rolls indexed data back to the branch point, and then resumes catch-up. A later full-block event also restarts catch-up if it was deferred, preventing the indexed height from remaining stalled after a temporary fork. Continue monitoring indexed height after reorgs; API availability alone does not prove the index has caught up.
 
 ## P2P Local Access
 

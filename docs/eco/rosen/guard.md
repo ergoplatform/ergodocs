@@ -5,7 +5,7 @@ tags:
   - Deploy
   - Operations
 owner: docs
-last_reviewed: 2026-07-26
+last_reviewed: 2026-08-25
 source_repos:
   - repo: rosen-bridge/operation
     branch: dev
@@ -45,6 +45,15 @@ docker compose create
 ```
 
 Before running guard service, participate in Rosen key generation ceremony using the keygen service docs from Rosen.
+
+If you enable the optional Alloy or Prometheus Agent containers, make their configuration trees and entrypoint executable before startup:
+
+```shell
+chmod -R ao+rX ./alloy ./prometheus-agent
+chmod o+x ./prometheus-agent/entrypoint.sh
+```
+
+Current Rosen deployment docs use symbolic permissions so these commands still work under restrictive operator umasks such as `007`.
 
 ## Required Environment
 
