@@ -116,7 +116,7 @@ The repositories in this section were the main focus of funding support by the E
 
 The repositories in this section are still part of the core ecosystem; however, they are no longer part of the Foundation's active development roadmap. Historically, support here was limited to maintenance and critical fixes, with issue-by-issue bounties subject to Foundation approval.
 
-- [Scrypto](https://github.com/input-output-hk/scrypto)
+- [Scrypto](https://github.com/ergoplatform/scrypto)
 - [Scorex-util](https://github.com/ScorexFoundation/scorex-util)
 - [Debox](https://github.com/ScorexFoundation/debox)
 - [Ergo Wallet App](https://github.com/ergoplatform/ergo-wallet-app)

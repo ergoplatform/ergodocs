@@ -17,10 +17,15 @@ source_repos:
     branch: main
     paths:
       - paideia_contracts/contracts/plasma_staking/ErgoScript/latest/plasmaStaking.es
+  - repo: Lithos-Protocol/ErgoScript-IntelliJ
+    branch: main
+    paths:
+      - README.md
 source_of_truth:
   - https://github.com/Emurgo/Emurgo-Research/tree/master/smart-contracts/High%20Level%20Design%20Patterns%20In%20Extended%20UTXO%20Systems.md
   - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/docs/LangSpec.md
   - https://github.com/paideiadao/paideia-contracts/tree/main/paideia_contracts/contracts/plasma_staking/ErgoScript/latest/plasmaStaking.es
+  - https://github.com/Lithos-Protocol/ErgoScript-IntelliJ
 ---
 
 # ErgoScript Tooling
@@ -40,6 +45,11 @@ The ErgoScript ecosystem offers a wide range of tools and resources to help deve
 - There is also [Scastie](https://scastie.scala-lang.org/greenhat/T2jSEv11QcWpXX1XrcHUdw/31)
 - [Kiosk](kiosk.md) lets anyone play with ErgoScript using a basic web-based UI
 - [ergoscript-compiler](https://github.com/ergoplatform/ergoscript-compiler)
+
+### Editor Support
+
+- [ErgoScript Language Server and IntelliJ plugin](https://github.com/Lithos-Protocol/ErgoScript-IntelliJ) provides diagnostics, completion, hover documentation, navigation, rename, inferred-type hints, semantic highlighting, and quick fixes. The standalone server requires Node.js 16 or later and communicates over standard input/output, so editors other than IntelliJ can use it through an LSP client.
+- The IntelliJ plugin targets IntelliJ IDEA 2026.2 or later. Syntax highlighting works without IntelliJ's LSP module; language-server features require that optional module. This is experimental community tooling and does not invoke the reference compiler, so it cannot detect ErgoTree serialization or execution-cost failures.
 
 ##### Courses
 

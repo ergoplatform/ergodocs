@@ -8,15 +8,15 @@ source_repos:
     branch: master
     paths:
       - ergo-core/src/main/scala/org/ergoplatform/modifiers/history/BlockTransactions.scala
-  - repo: input-output-hk/scrypto
+  - repo: ergoplatform/scrypto
     branch: master
     paths:
       - shared/src/main/scala/scorex/crypto/authds/merkle/BatchMerkleProof.scala
       - shared/src/main/scala/scorex/crypto/authds/merkle/MerkleTree.scala
 source_of_truth:
   - https://github.com/ergoplatform/ergo/tree/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/history/BlockTransactions.scala
-  - https://github.com/input-output-hk/scrypto/tree/master/shared/src/main/scala/scorex/crypto/authds/merkle/BatchMerkleProof.scala
-  - https://github.com/input-output-hk/scrypto/tree/master/shared/src/main/scala/scorex/crypto/authds/merkle/MerkleTree.scala
+  - https://github.com/ergoplatform/scrypto/tree/master/shared/src/main/scala/scorex/crypto/authds/merkle/BatchMerkleProof.scala
+  - https://github.com/ergoplatform/scrypto/tree/master/shared/src/main/scala/scorex/crypto/authds/merkle/MerkleTree.scala
 ---
 
 
@@ -48,7 +48,7 @@ For transaction roots, leaf content depends on the block version:
 
 Each leaf data item is 32 bytes. The leaf node hash is computed by concatenating a **1-byte prefix** (used for domain separation), the **position** of the leaf within the tree, and the 32-byte data item. The prefix for a leaf node is `0x00`. This data is then hashed using the `Blake2b256` hash function.
 
-- **Code Reference**: The implementation of leaf node hashing can be found in the [MerkleTree.scala](https://github.com/input-output-hk/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/merkle/MerkleTree.scala) file in the `scrypto` repository.
+- **Code Reference**: The implementation of leaf node hashing can be found in the [MerkleTree.scala](https://github.com/ergoplatform/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/merkle/MerkleTree.scala) file in the `scrypto` repository.
 
 ## Internal Nodes
 
@@ -59,7 +59,7 @@ To construct an internal node, the following steps are taken:
 1. **Concatenate**: Combine the **1-byte prefix** for internal nodes (`0x01`) with the hashes of the left and right child nodes.
 2. **Hash**: Apply the `Blake2b256` function to the concatenated result to produce the hash for the internal node.
 
-**Code Reference**:  The code for internal node construction is also part of the [MerkleTree.scala](https://github.com/input-output-hk/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/merkle/MerkleTree.scala) file in the `scrypto` repository.
+**Code Reference**:  The code for internal node construction is also part of the [MerkleTree.scala](https://github.com/ergoplatform/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/merkle/MerkleTree.scala) file in the `scrypto` repository.
 
 ## Merkle Root
 
@@ -80,7 +80,7 @@ The encoding consists of the following elements:
 
 When verifying a proof, the verifier reconstructs the path from the leaf node to the Merkle Root using the provided sibling hashes and the original leaf hash. If the computed root matches the expected Merkle Root, the proof is valid.
 
-- **Code Reference**: The `BatchMerkleProof` class, handling Merkle proof generation and verification, is implemented in the [BatchMerkleProof.scala](https://github.com/input-output-hk/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/merkle/BatchMerkleProof.scala) file.
+- **Code Reference**: The `BatchMerkleProof` class, handling Merkle proof generation and verification, is implemented in the [BatchMerkleProof.scala](https://github.com/ergoplatform/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/merkle/BatchMerkleProof.scala) file.
 
 ## Validation
 

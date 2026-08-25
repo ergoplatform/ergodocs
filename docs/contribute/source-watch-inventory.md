@@ -17,28 +17,28 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 
 ## Summary
 
-- Source-watched pages: `239`
-- Watched repositories: `235`
-- Watched GitHub owners: `102`
-- Watched repo/branch pairs: `241`
-- Watched paths: `508`
-- Release-watched page/repository refs: `13`
+- Source-watched pages: `240`
+- Watched repositories: `236`
+- Watched GitHub owners: `101`
+- Watched repo/branch pairs: `242`
+- Watched paths: `510`
+- Release-watched page/repository refs: `14`
 
 ## Coverage Groups
 
 | Group | Owners | Repositories | Pages | Paths |
 | --- | ---: | ---: | ---: | ---: |
-| Core / infrastructure | 5 | 30 | 132 | 188 |
-| Ecosystem org | 10 | 38 | 24 | 36 |
+| Core / infrastructure | 5 | 31 | 133 | 195 |
+| Ecosystem org | 10 | 39 | 25 | 36 |
 | Developer / project | 83 | 163 | 119 | 98 |
-| External standard/vendor | 4 | 4 | 11 | 13 |
+| External standard/vendor | 3 | 3 | 6 | 6 |
 
 ## Coverage By Area
 
 | Area | Source-watched pages |
 | --- | ---: |
 | `contribute` | 2 |
-| `dev` | 99 |
+| `dev` | 100 |
 | `doc` | 1 |
 | `docs` | 9 |
 | `eco` | 76 |
@@ -53,7 +53,7 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 
 | Owner | Group | Repositories | Pages | Paths |
 | --- | --- | ---: | ---: | ---: |
-| [`ergoplatform`](https://github.com/ergoplatform) | Core / infrastructure | 17 | 107 | 149 |
+| [`ergoplatform`](https://github.com/ergoplatform) | Core / infrastructure | 18 | 109 | 156 |
 | [`ScorexFoundation`](https://github.com/ScorexFoundation) | Core / infrastructure | 1 | 24 | 31 |
 | [`rosen-bridge`](https://github.com/rosen-bridge) | Core / infrastructure | 10 | 10 | 6 |
 | [`mwaddip`](https://github.com/mwaddip) | Developer / project | 8 | 9 | 7 |
@@ -63,7 +63,7 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`kushti`](https://github.com/kushti) | Developer / project | 4 | 6 | 7 |
 | [`SavonarolaLabs`](https://github.com/SavonarolaLabs) | Ecosystem org | 7 | 6 | 8 |
 | [`ThierryM1212`](https://github.com/ThierryM1212) | Developer / project | 4 | 6 | 5 |
-| [`input-output-hk`](https://github.com/input-output-hk) | External standard/vendor | 1 | 5 | 7 |
+| [`Lithos-Protocol`](https://github.com/Lithos-Protocol) | Ecosystem org | 3 | 5 | 4 |
 | [`MrStahlfelge`](https://github.com/MrStahlfelge) | Developer / project | 3 | 5 | 7 |
 | [`odiseusme`](https://github.com/odiseusme) | Developer / project | 3 | 5 | 5 |
 | [`a-shannon`](https://github.com/a-shannon) | Developer / project | 3 | 4 | 4 |
@@ -72,7 +72,6 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`ChainCashLabs`](https://github.com/ChainCashLabs) | Ecosystem org | 1 | 4 | 5 |
 | [`DeCo-Education`](https://github.com/DeCo-Education) | Developer / project | 2 | 4 | 4 |
 | [`FlyingPig5`](https://github.com/FlyingPig5) | Developer / project | 3 | 4 | 2 |
-| [`Lithos-Protocol`](https://github.com/Lithos-Protocol) | Ecosystem org | 2 | 4 | 4 |
 | [`anon-real`](https://github.com/anon-real) | Developer / project | 3 | 3 | 3 |
 | [`aslesarenko`](https://github.com/aslesarenko) | Developer / project | 2 | 3 | 8 |
 | [`decentbob`](https://github.com/decentbob) | Developer / project | 1 | 3 | 3 |
@@ -167,7 +166,7 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`rosen-bridge/operation`](https://github.com/rosen-bridge/operation) | Core / infrastructure | `dev` | 8 | 4 |
 | [`ergoplatform/ergo-jde`](https://github.com/ergoplatform/ergo-jde) | Core / infrastructure | `main` | 7 | 7 |
 | [`ergoplatform/oracle-core`](https://github.com/ergoplatform/oracle-core) | Core / infrastructure | `develop`, `master` | 6 | 5 |
-| [`input-output-hk/scrypto`](https://github.com/input-output-hk/scrypto) | External standard/vendor | `master` | 5 | 7 |
+| [`ergoplatform/scrypto`](https://github.com/ergoplatform/scrypto) | Core / infrastructure | `master` | 6 | 8 |
 | [`ChainCashLabs/chaincash`](https://github.com/ChainCashLabs/chaincash) | Ecosystem org | `master` | 4 | 5 |
 | [`ergoplatform/sigmastate-interpreter`](https://github.com/ergoplatform/sigmastate-interpreter) | Core / infrastructure | `develop` | 4 | 8 |
 | [`mwaddip/ergo-proxy`](https://github.com/mwaddip/ergo-proxy) | Developer / project | `master` | 4 | 2 |
@@ -327,6 +326,7 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`lazypinkpatrick/minotaur-wallet`](https://github.com/lazypinkpatrick/minotaur-wallet) | Developer / project | `main` | 1 | 1 |
 | [`ldgaetano/hodlcoin-contracts`](https://github.com/ldgaetano/hodlcoin-contracts) | Developer / project | `main` | 1 | 1 |
 | [`LiliumErgo/nest-api`](https://github.com/LiliumErgo/nest-api) | Developer / project | `main` | 1 | 1 |
+| [`Lithos-Protocol/ErgoScript-IntelliJ`](https://github.com/Lithos-Protocol/ErgoScript-IntelliJ) | Ecosystem org | `main` | 1 | 1 |
 | [`lucagdangelo/trade-in`](https://github.com/lucagdangelo/trade-in) | Developer / project | `main` | 1 | 1 |
 | [`Luivatra/ergo-rust-node`](https://github.com/Luivatra/ergo-rust-node) | Developer / project | `main` | 1 | 1 |
 | [`marctheshark3/AI-Project-Starter-Kit`](https://github.com/marctheshark3/AI-Project-Starter-Kit) | Developer / project | `main` | 1 | 3 |
@@ -411,6 +411,7 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`dev/scs/ergoscript.md`](ergoscript.md) | 5 | 9 |
 | [`dev/tutorials/blockchain-indexing.md`](blockchain-indexing.md) | 5 | 5 |
 | [`eco/mew-finance.md`](mew-finance.md) | 5 | 5 |
+| [`dev/scs/ergoscript-tooling.md`](ergoscript-tooling.md) | 4 | 4 |
 | [`dev/tutorials/blockchain-indexing/custom-indexer.md`](custom-indexer.md) | 4 | 5 |
 | [`dev/tutorials/hardware-wallet-integration.md`](hardware-wallet-integration.md) | 4 | 6 |
 | [`eco/celaut_v_netnotes.md`](celaut_v_netnotes.md) | 4 | 4 |
@@ -424,7 +425,6 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`dev/p2p/network.md`](network.md) | 3 | 8 |
 | [`dev/p2p/p2p-handshake.md`](p2p-handshake.md) | 3 | 6 |
 | [`dev/protocol/tx/read-only-inputs.md`](read-only-inputs.md) | 3 | 3 |
-| [`dev/scs/ergoscript-tooling.md`](ergoscript-tooling.md) | 3 | 3 |
 
 ## Repo And Path Coverage
 
@@ -529,6 +529,7 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`ergoplatform/ledger-app-ergo`](https://github.com/ergoplatform/ledger-app-ergo) | `main` | `README.md`<br>`doc` | `docs/dev/tutorials/hardware-wallet-integration.md`<br>`docs/dev/wallet/payments/ledger.md` |
 | [`ergoplatform/oracle-core`](https://github.com/ergoplatform/oracle-core) | `develop` | `docs/how_to_bootstrap.md`<br>`scripts/send_new_oracle.sh` | `docs/dev/interact.md`<br>`docs/dev/oc/oracle.md`<br>`docs/eco/oracles-v2.md`<br>`docs/node/deploy-runbook.md`<br>`docs/tutorials/oracle-bootstrap.md`<br>`docs/uses/oracles.md` |
 | [`ergoplatform/oracle-core`](https://github.com/ergoplatform/oracle-core) | `master` | `connectors/connector-lib`<br>`oracle-pool-bootstrap`<br>`scripts/ada-usd-oracle/oracle-config.yaml` | `docs/uses/oracles.md` |
+| [`ergoplatform/scrypto`](https://github.com/ergoplatform/scrypto) | `master` | `README.md`<br>`shared/src/main/scala/scorex/crypto/authds/avltree/batch/BatchAVLProver.scala`<br>`shared/src/main/scala/scorex/crypto/authds/avltree/batch/BatchAVLVerifier.scala`<br>`shared/src/main/scala/scorex/crypto/authds/merkle/BatchMerkleProof.scala`<br>`shared/src/main/scala/scorex/crypto/authds/merkle/MerkleTree.scala`<br>`shared/src/main/scala/scorex/crypto/authds/merkle/serialization/BatchMerkleProofSerializer.scala`<br>`shared/src/main/scala/scorex/crypto/hash/Blake2b.scala`<br>`shared/src/main/scala/scorex/crypto/hash/Sha256.scala` | `docs/crypto.md`<br>`docs/dev/data-model/structures/merkle/merkle-batch-impl.md`<br>`docs/dev/data-model/structures/merkle/merkle-batch-testing.md`<br>`docs/dev/data-model/structures/merkle/merkle-format.md`<br>`docs/dev/data-model/structures/merkle/merkle-validation.md`<br>`docs/dev/lib/scrypto.md` |
 | [`ergoplatform/sigma-rust`](https://github.com/ergoplatform/sigma-rust) | `develop` | `bindings`<br>`bindings/ergo-lib-c`<br>`bindings/ergo-lib-ios`<br>`bindings/ergo-lib-jni`<br>`bindings/ergo-lib-python`<br>`bindings/ergo-lib-wasm`<br>`bindings/ergo-lib-wasm/examples/address-generation-demo`<br>`bindings/ergo-lib-wasm/examples/address-generation-demo/README.md`<br>+25 more | `docs/dev/data-model/structures/interlink-vectors.md`<br>`docs/dev/data-model/structures/merkle/merkle-batch-impl.md`<br>`docs/dev/data-model/structures/merkle/merkle-batch-testing.md`<br>`docs/dev/get-started.md`<br>`docs/dev/lang/js.md`<br>`docs/dev/libraries.md`<br>+8 more |
 | [`ergoplatform/sigmastate-interpreter`](https://github.com/ergoplatform/sigmastate-interpreter) | `develop` | `README.md`<br>`docs/perf-style-guide.md`<br>`docs/sigma-dsl.md`<br>`interpreter/shared/src/main/scala/sigmastate/interpreter/Interpreter.scala`<br>`sc/shared/src/main/scala/sigma/compiler/SigmaCompiler.scala`<br>`sc/shared/src/test/scala/sigmastate/lang`<br>`sc/shared/src/test/scala/sigmastate/utxo/examples/FsmExampleSpecification.scala`<br>`sc/shared/src/test/scala/sigmastate/utxo/examples/MASTExampleSpecification.scala` | `docs/dev/scs/ergoscript.md`<br>`docs/dev/scs/sigmastate-interpreter.md`<br>`docs/dev/scs/tx/fsm-example.md`<br>`docs/dev/scs/tx/mast-example.md` |
 | [`ergoplatform/sigmaverse`](https://github.com/ergoplatform/sigmaverse) | `master` | `README.md` | `docs/eco/sigmaverse.md` |
@@ -554,7 +555,6 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`GuapSwap/guapswaplib`](https://github.com/GuapSwap/guapswaplib) | `main` | `README.md` | `docs/eco/guapswap.md` |
 | [`Hq3r/PULSE`](https://github.com/Hq3r/PULSE) | `main` | `README.md` | `docs/eco/pulse.md` |
 | [`iandebeer/ergo-castanet`](https://github.com/iandebeer/ergo-castanet) | `main` | `docs/Conclusion.md` | `docs/events/ergohack.md` |
-| [`input-output-hk/scrypto`](https://github.com/input-output-hk/scrypto) | `master` | `shared/src/main/scala/scorex/crypto/authds/avltree/batch/BatchAVLProver.scala`<br>`shared/src/main/scala/scorex/crypto/authds/avltree/batch/BatchAVLVerifier.scala`<br>`shared/src/main/scala/scorex/crypto/authds/merkle/BatchMerkleProof.scala`<br>`shared/src/main/scala/scorex/crypto/authds/merkle/MerkleTree.scala`<br>`shared/src/main/scala/scorex/crypto/authds/merkle/serialization/BatchMerkleProofSerializer.scala`<br>`shared/src/main/scala/scorex/crypto/hash/Blake2b.scala`<br>`shared/src/main/scala/scorex/crypto/hash/Sha256.scala` | `docs/crypto.md`<br>`docs/dev/data-model/structures/merkle/merkle-batch-impl.md`<br>`docs/dev/data-model/structures/merkle/merkle-batch-testing.md`<br>`docs/dev/data-model/structures/merkle/merkle-format.md`<br>`docs/dev/data-model/structures/merkle/merkle-validation.md` |
 | [`jellymlg/nodeview.xyz`](https://github.com/jellymlg/nodeview.xyz) | `master` | `README.md` | `docs/dev/tutorials/blockchain-indexing.md` |
 | [`K-Singh/Plasma-Toolkit`](https://github.com/K-Singh/Plasma-Toolkit) | `master` | `README.md` | `docs/dev/protocol/avl.md` |
 | [`K-Singh/Sigma-Finance`](https://github.com/K-Singh/Sigma-Finance) | `master` | `contracts` | `docs/dev/scs/contracts.md`<br>`docs/events/ergohack.md` |
@@ -569,6 +569,7 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`LEEKOHCHING/TabbyPOS-Introduction`](https://github.com/LEEKOHCHING/TabbyPOS-Introduction) | `main` | `README.md` | `docs/eco/emerging-projects.md`<br>`docs/eco/tabbypos.md` |
 | [`LiliumErgo/nest-api`](https://github.com/LiliumErgo/nest-api) | `main` | `README.md` | `docs/eco/lilium.md` |
 | [`LiliumErgo/scala-api`](https://github.com/LiliumErgo/scala-api) | `main` | `README.md`<br>`app/contracts/LiliumContracts.scala` | `docs/dev/scs/contracts.md`<br>`docs/eco/lilium.md` |
+| [`Lithos-Protocol/ErgoScript-IntelliJ`](https://github.com/Lithos-Protocol/ErgoScript-IntelliJ) | `main` | `README.md` | `docs/dev/scs/ergoscript-tooling.md` |
 | [`Lithos-Protocol/Lithos`](https://github.com/Lithos-Protocol/Lithos) | `ErgoHack` | `documents/ErgoHack.MD` | `docs/events/ergohack.md` |
 | [`Lithos-Protocol/Lithos`](https://github.com/Lithos-Protocol/Lithos) | `master` | `src/main/scala` | `docs/dev/scs/contracts.md` |
 | [`Lithos-Protocol/Lithos-Client`](https://github.com/Lithos-Protocol/Lithos-Client) | `master` | `README.md`<br>`TestnetNode.md` | `docs/eco/lithos.md`<br>`docs/roadmap.md` |

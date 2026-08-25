@@ -4,16 +4,49 @@ tags:
   - Cryptography
   - Toolkit
   - Library
+owner: docs
+last_reviewed: 2026-08-25
+source_repos:
+  - repo: ergoplatform/scrypto
+    branch: master
+    release_watch: true
+    paths:
+      - README.md
+source_of_truth:
+  - https://github.com/ergoplatform/scrypto
+  - https://github.com/ergoplatform/scrypto/releases/tag/v3.1.1
 ---
 
-# Scrypto: A Comprehensive Cryptographic Toolkit
+# Scrypto
 
-[Scrypto](https://github.com/input-output-hk/scrypto) is a comprehensive open-source cryptographic toolkit, designed to streamline and bolster the integration of cryptography into your applications. It offers a plethora of features to aid in secure data management and verification.
+[Scrypto](https://github.com/ergoplatform/scrypto) is a public-domain cryptographic toolkit for Scala. Ergo's SigmaState stack uses it for cryptographic primitives and authenticated data structures.
 
-## Highlighted Features of Scrypto
+## Install
 
-- **AVL+ Trees**: AVL+ Trees are a specialized type of self-balancing binary search tree. They ensure efficient and secure access to your data, guaranteeing optimal performance and data integrity.
+Scrypto 3.1.1 is published on Maven Central for Scala 2.11, 2.12, 2.13, and 3. Scala.js artifacts are available for Scala 2.13 and 3.
 
-- **Batch Merkle Proof Serialization and Deserialization**: This functionality enables efficient validation of the integrity and authenticity of your data transactions. It supports the serialization and deserialization of Merkle proofs in batches, significantly improving the speed and efficiency of data verification processes.
+For the JVM:
 
-Scrypto is built on the robust foundation of [Scorex](https://github.com/scorexfoundation/scorex), a modular open-source platform renowned for its sturdy blockchain and cryptocurrency frameworks. By utilizing Scrypto, developers can leverage powerful and reliable cryptographic functionalities, thereby reducing the risks associated with such implementations and significantly enhancing the security of their applications.
+```scala
+libraryDependencies += "org.scorexfoundation" %% "scrypto" % "3.1.1"
+```
+
+For Scala.js:
+
+```scala
+libraryDependencies += "org.scorexfoundation" %%% "scrypto" % "3.1.1"
+```
+
+## Current Release
+
+[v3.1.1](https://github.com/ergoplatform/scrypto/releases/tag/v3.1.1) updates Bouncy Castle and other dependencies, hardens serialization, fixes slicing, and fixes Merkle proofs when a tree contains duplicate leaf values.
+
+## Main Features
+
+- Authenticated AVL+ trees with batched operations, compressed proofs, and verifier work bounds.
+- Blake2b, Keccak, SHA, Whirlpool, Skein, and Stribog hash functions.
+- Base16, Base58, and Base64 encoding.
+- Curve25519 and Ed25519 signing support through the upstream Curve25519 Java implementation.
+- JVM and Scala.js builds.
+
+Scrypto was extracted from [Scorex](https://github.com/ScorexProject/Scorex-Lagonaki). For APIs, examples, build instructions, and security notes, use the [upstream README](https://github.com/ergoplatform/scrypto#readme).

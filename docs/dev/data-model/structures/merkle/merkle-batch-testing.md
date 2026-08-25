@@ -10,7 +10,7 @@ source_repos:
       - ergo-merkle-tree/src/batchmerkleproof.rs
       - ergo-merkle-tree/src/merkletree.rs
       - sigma-ser/src/scorex_serialize.rs
-  - repo: input-output-hk/scrypto
+  - repo: ergoplatform/scrypto
     branch: master
     paths:
       - shared/src/main/scala/scorex/crypto/authds/merkle/BatchMerkleProof.scala
@@ -20,9 +20,9 @@ source_of_truth:
   - https://github.com/ergoplatform/sigma-rust/tree/develop/ergo-merkle-tree/src/batchmerkleproof.rs
   - https://github.com/ergoplatform/sigma-rust/tree/develop/ergo-merkle-tree/src/merkletree.rs
   - https://github.com/ergoplatform/sigma-rust/tree/develop/sigma-ser/src/scorex_serialize.rs
-  - https://github.com/input-output-hk/scrypto/tree/master/shared/src/main/scala/scorex/crypto/authds/merkle/BatchMerkleProof.scala
-  - https://github.com/input-output-hk/scrypto/tree/master/shared/src/main/scala/scorex/crypto/authds/merkle/MerkleTree.scala
-  - https://github.com/input-output-hk/scrypto/tree/master/shared/src/main/scala/scorex/crypto/authds/merkle/serialization/BatchMerkleProofSerializer.scala
+  - https://github.com/ergoplatform/scrypto/tree/master/shared/src/main/scala/scorex/crypto/authds/merkle/BatchMerkleProof.scala
+  - https://github.com/ergoplatform/scrypto/tree/master/shared/src/main/scala/scorex/crypto/authds/merkle/MerkleTree.scala
+  - https://github.com/ergoplatform/scrypto/tree/master/shared/src/main/scala/scorex/crypto/authds/merkle/serialization/BatchMerkleProofSerializer.scala
 ---
 
 # Testing Merkle Batch Proofs
@@ -170,9 +170,9 @@ class MerkleBatchProofSpec extends AnyFlatSpec with Matchers {
 
 #### Code References
 
-- **MerkleTree**: [`MerkleTree.scala`](https://github.com/input-output-hk/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/merkle/MerkleTree.scala)
-- **BatchMerkleProof**: [`BatchMerkleProof.scala`](https://github.com/input-output-hk/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/merkle/BatchMerkleProof.scala)
-- **BatchMerkleProofSerializer**: [`BatchMerkleProofSerializer.scala`](https://github.com/input-output-hk/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/merkle/serialization/BatchMerkleProofSerializer.scala)
+- **MerkleTree**: [`MerkleTree.scala`](https://github.com/ergoplatform/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/merkle/MerkleTree.scala)
+- **BatchMerkleProof**: [`BatchMerkleProof.scala`](https://github.com/ergoplatform/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/merkle/BatchMerkleProof.scala)
+- **BatchMerkleProofSerializer**: [`BatchMerkleProofSerializer.scala`](https://github.com/ergoplatform/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/merkle/serialization/BatchMerkleProofSerializer.scala)
 
 ### Explanation  
 

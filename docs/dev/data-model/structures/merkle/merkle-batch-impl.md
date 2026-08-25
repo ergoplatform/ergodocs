@@ -7,7 +7,7 @@ source_repos:
     paths:
       - ergo-merkle-tree/src/batchmerkleproof.rs
       - ergo-merkle-tree/src/merkletree.rs
-  - repo: input-output-hk/scrypto
+  - repo: ergoplatform/scrypto
     branch: master
     paths:
       - shared/src/main/scala/scorex/crypto/authds/merkle/BatchMerkleProof.scala
@@ -16,9 +16,9 @@ source_repos:
 source_of_truth:
   - https://github.com/ergoplatform/sigma-rust/tree/develop/ergo-merkle-tree/src/batchmerkleproof.rs
   - https://github.com/ergoplatform/sigma-rust/tree/develop/ergo-merkle-tree/src/merkletree.rs
-  - https://github.com/input-output-hk/scrypto/tree/master/shared/src/main/scala/scorex/crypto/authds/merkle/BatchMerkleProof.scala
-  - https://github.com/input-output-hk/scrypto/tree/master/shared/src/main/scala/scorex/crypto/authds/merkle/MerkleTree.scala
-  - https://github.com/input-output-hk/scrypto/tree/master/shared/src/main/scala/scorex/crypto/authds/merkle/serialization/BatchMerkleProofSerializer.scala
+  - https://github.com/ergoplatform/scrypto/tree/master/shared/src/main/scala/scorex/crypto/authds/merkle/BatchMerkleProof.scala
+  - https://github.com/ergoplatform/scrypto/tree/master/shared/src/main/scala/scorex/crypto/authds/merkle/MerkleTree.scala
+  - https://github.com/ergoplatform/scrypto/tree/master/shared/src/main/scala/scorex/crypto/authds/merkle/serialization/BatchMerkleProofSerializer.scala
 ---
 
 # Using Merkle Batch Proofs on Ergo
@@ -134,7 +134,7 @@ To work with `scrypto`, follow these steps:
 1. **Clone the Scrypto Repository**:
 
    ```bash
-   git clone https://github.com/input-output-hk/scrypto.git
+   git clone https://github.com/ergoplatform/scrypto.git
    cd scrypto
    ```
 
@@ -163,7 +163,7 @@ val tree = MerkleTree(leafData)
 println(s"Merkle Root: ${hf.encode(tree.rootHash)}")
 ```
 
-**Code Reference**: The `MerkleTree` class is implemented in the [`MerkleTree.scala`](https://github.com/input-output-hk/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/merkle/MerkleTree.scala) file.
+**Code Reference**: The `MerkleTree` class is implemented in the [`MerkleTree.scala`](https://github.com/ergoplatform/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/merkle/MerkleTree.scala) file.
 
 #### Step 3: Generating a Batch Merkle Proof
 
@@ -176,7 +176,7 @@ val batchProof = tree.proofByIndices(Seq(0, 2)).get
 println(s"Batch Merkle Proof: $batchProof")
 ```
 
-**Code Reference**: The `BatchMerkleProof` class and its methods are implemented in the [`BatchMerkleProof.scala`](https://github.com/input-output-hk/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/merkle/BatchMerkleProof.scala) file.
+**Code Reference**: The `BatchMerkleProof` class and its methods are implemented in the [`BatchMerkleProof.scala`](https://github.com/ergoplatform/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/merkle/BatchMerkleProof.scala) file.
 
 #### Step 4: Verifying the Batch Merkle Proof
 
@@ -202,7 +202,7 @@ assert(batchProof == deserializedProof)
 println("Serialization and deserialization successful.")
 ```
 
-**Code Reference**: The `BatchMerkleProofSerializer` class is implemented in the [`BatchMerkleProofSerializer.scala`](https://github.com/input-output-hk/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/merkle/serialization/BatchMerkleProofSerializer.scala) file.
+**Code Reference**: The `BatchMerkleProofSerializer` class is implemented in the [`BatchMerkleProofSerializer.scala`](https://github.com/ergoplatform/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/merkle/serialization/BatchMerkleProofSerializer.scala) file.
 
 ### Example: End-to-End Workflow in Scrypto
 

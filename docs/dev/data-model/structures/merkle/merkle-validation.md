@@ -8,13 +8,13 @@ source_repos:
     branch: master
     paths:
       - ergo-core/src/main/scala/org/ergoplatform/modifiers/history/BlockTransactions.scala
-  - repo: input-output-hk/scrypto
+  - repo: ergoplatform/scrypto
     branch: master
     paths:
       - shared/src/main/scala/scorex/crypto/authds/merkle/BatchMerkleProof.scala
 source_of_truth:
   - https://github.com/ergoplatform/ergo/tree/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/history/BlockTransactions.scala
-  - https://github.com/input-output-hk/scrypto/tree/master/shared/src/main/scala/scorex/crypto/authds/merkle/BatchMerkleProof.scala
+  - https://github.com/ergoplatform/scrypto/tree/master/shared/src/main/scala/scorex/crypto/authds/merkle/BatchMerkleProof.scala
 ---
 
 # Validation of Merkle Proofs in Ergo
@@ -33,7 +33,7 @@ Begin by computing the hash of the leaf node, which represents the transaction o
 
 The Merkle implementation hashes the leaf data with a **1-byte zero prefix** and the leaf position, using the `Blake2b256` hash function.
 
-**Code Implementation**: The leaf node hash computation is implemented within the Ergo codebase, primarily found in the `scorex.crypto.authds.merkle` package of the [Scrypto](https://github.com/input-output-hk/scrypto) library, which is used by Ergo.
+**Code Implementation**: The leaf node hash computation is implemented within the Ergo codebase, primarily found in the `scorex.crypto.authds.merkle` package of the [Scrypto](https://github.com/ergoplatform/scrypto) library, which is used by Ergo.
 
 ```scala
 val leafData = Base16.decode(txId).get
@@ -53,7 +53,7 @@ The proof consists of multiple levels, each providing information about the posi
 - **Compute the Hash for the Next Level**:
   - Depending on the prefix, concatenate the computed hash from the previous step with the sibling hash and the prefix. Then, hash the concatenated result using `Blake2b256`.
 
-**Code Implementation**: The iteration process and validation logic are crucial for verifying the correctness of the Merkle proof. This is implemented in the [BatchMerkleProof.scala](https://github.com/input-output-hk/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/merkle/BatchMerkleProof.scala) file in the `scrypto` repository.
+**Code Implementation**: The iteration process and validation logic are crucial for verifying the correctness of the Merkle proof. This is implemented in the [BatchMerkleProof.scala](https://github.com/ergoplatform/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/merkle/BatchMerkleProof.scala) file in the `scrypto` repository.
 
 ```scala
 val levels = Seq("0139b79af823a92aa72ced2c6d9e7f7f4687de5b5af7fab0ad205d3e54bda3f3ae")
@@ -102,7 +102,7 @@ graph TD
 
 Here is a concrete example of how to validate a Merkle proof for a transaction included in an Ergo block header:
 
-**Code Implementation**: This example demonstrates how to validate a transaction's inclusion in a block using a Merkle proof. The code is based on the structures and functions provided in the [Scrypto](https://github.com/input-output-hk/scrypto) library and the Ergo codebase.
+**Code Implementation**: This example demonstrates how to validate a transaction's inclusion in a block using a Merkle proof. The code is based on the structures and functions provided in the [Scrypto](https://github.com/ergoplatform/scrypto) library and the Ergo codebase.
 
 ```scala
 import scorex.crypto.authds.merkle.MerkleProof
@@ -136,5 +136,5 @@ Validating Merkle proofs is a crucial process that ensures data integrity and en
 
 ### Source References
 
-- **[Scrypto: Merkle Proofs Implementation](https://github.com/input-output-hk/scrypto)**: This repository contains the core cryptographic components used in Ergo, including the implementation of Merkle proofs.
+- **[Scrypto: Merkle Proofs Implementation](https://github.com/ergoplatform/scrypto)**: This repository contains the core cryptographic components used in Ergo, including the implementation of Merkle proofs.
 - **[Ergo: BlockTransactions.scala](https://github.com/ergoplatform/ergo/blob/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/history/BlockTransactions.scala)**: Provides the logic for handling transactions within a block, including Merkle Tree construction and proof validation.

@@ -151,7 +151,7 @@
 ### 🔒 Core Libraries & Cryptography <a id="core-libraries--cryptography"></a>
 
 - **[Sigmastate Interpreter](https://github.com/ScorexFoundation/sigmastate-interpreter)** – ErgoScript core interpreter & type system. [`Scala`, `ErgoScript`] *(Active)*
-- [Scrypto](https://github.com/input-output-hk/scrypto/) – crypto primitives library. [`Scala`]
+- [Scrypto](https://github.com/ergoplatform/scrypto/) – crypto primitives library. [`Scala`]
 - [Scorex Util](https://github.com/ScorexFoundation/scorex-util) – utility classes for Scorex projects. [`Scala`]
 - [Debox](https://github.com/ScorexFoundation/debox) – efficient primitive type Boxes. [`Scala`]
 - [BouncyCastle JS](https://github.com/aslesarenko/bouncycastle-js) – BouncyCastle compiled for JS. [`JS`]

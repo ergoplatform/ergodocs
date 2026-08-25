@@ -38,7 +38,7 @@ These are the main SDKs recommended for most dApp development use cases:
 These libraries form the foundation of Ergo's core logic and cryptography:
 
 - **[Sigmastate Interpreter](https://github.com/ScorexFoundation/sigmastate-interpreter)**: The reference implementation of the ErgoTree interpreter and ErgoScript language. [`Scala`, `ErgoScript`]
-- [Scrypto](https://github.com/input-output-hk/scrypto/): Cryptographic primitives library used by the Sigmastate Interpreter. [`Scala`]
+- [Scrypto](scrypto.md): Cryptographic primitives and authenticated-data-structure library used by the Sigmastate Interpreter. [`Scala`]
 - [Scorex Util](https://github.com/ScorexFoundation/scorex-util): Utility classes for Scorex projects. [`Scala`]
 - [Debox](https://github.com/ScorexFoundation/debox): Efficient primitive type Boxes for Scala. [`Scala`]
 

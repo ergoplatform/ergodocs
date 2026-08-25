@@ -85,7 +85,7 @@ These repositories are retained as a broad maintainer reference list. They are n
 | [`GuapSwap/sigma-builders`](https://github.com/GuapSwap/sigma-builders) | `default` | `README.md` |
 | [`GuapSwap/vscode-ergoscript-language-support`](https://github.com/GuapSwap/vscode-ergoscript-language-support) | `default` | `README.md` |
 | [`iandebeer/ergo-castanet`](https://github.com/iandebeer/ergo-castanet) | `default` | `README.md` |
-| [`input-output-hk/scrypto`](https://github.com/input-output-hk/scrypto) | `default` | `README.md` |
+| [`ergoplatform/scrypto`](https://github.com/ergoplatform/scrypto) | `default` | `README.md` |
 | [`Itaggergaard/Ergo-node-TUI-installer`](https://github.com/Itaggergaard/Ergo-node-TUI-installer) | `default` | `README.md` |
 | [`jaysee260/ergo-playground`](https://github.com/jaysee260/ergo-playground) | `default` | `README.md` |
 | [`jellymlg/ErgoSphere`](https://github.com/jellymlg/ErgoSphere) | `default` | `README.md` |

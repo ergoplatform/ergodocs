@@ -8,7 +8,7 @@ source_repos:
     branch: develop
     paths:
       - interpreter/shared/src/test/scala/sigmastate/crypto/SigningSpecification.scala
-  - repo: input-output-hk/scrypto
+  - repo: ergoplatform/scrypto
     branch: master
     paths:
       - shared/src/main/scala/scorex/crypto/authds/avltree/batch/BatchAVLProver.scala
@@ -17,10 +17,10 @@ source_repos:
       - shared/src/main/scala/scorex/crypto/hash/Sha256.scala
 source_of_truth:
   - https://github.com/ScorexFoundation/sigmastate-interpreter/tree/develop/interpreter/shared/src/test/scala/sigmastate/crypto/SigningSpecification.scala
-  - https://github.com/input-output-hk/scrypto/tree/master/shared/src/main/scala/scorex/crypto/authds/avltree/batch/BatchAVLProver.scala
-  - https://github.com/input-output-hk/scrypto/tree/master/shared/src/main/scala/scorex/crypto/authds/avltree/batch/BatchAVLVerifier.scala
-  - https://github.com/input-output-hk/scrypto/tree/master/shared/src/main/scala/scorex/crypto/hash/Blake2b.scala
-  - https://github.com/input-output-hk/scrypto/tree/master/shared/src/main/scala/scorex/crypto/hash/Sha256.scala
+  - https://github.com/ergoplatform/scrypto/tree/master/shared/src/main/scala/scorex/crypto/authds/avltree/batch/BatchAVLProver.scala
+  - https://github.com/ergoplatform/scrypto/tree/master/shared/src/main/scala/scorex/crypto/authds/avltree/batch/BatchAVLVerifier.scala
+  - https://github.com/ergoplatform/scrypto/tree/master/shared/src/main/scala/scorex/crypto/hash/Blake2b.scala
+  - https://github.com/ergoplatform/scrypto/tree/master/shared/src/main/scala/scorex/crypto/hash/Sha256.scala
 ---
 
 $$
@@ -43,7 +43,7 @@ $$
 
 # Cryptographic
 
-This document provides an in-depth look at the cryptographic schemes, protocols, and data structures used in the Ergo blockchain. Ergo’s security model relies heavily on advanced cryptographic protocols that ensure the integrity of transactions, protect user privacy, and enforce complex spending conditions within smart contracts. This document outlines the internal workings of these cryptographic schemes, focusing on their implementation within Ergo, particularly through the [`sigmastate-interpreter`](https://github.com/ScorexFoundation/sigmastate-interpreter), [`sigma-rust`](https://github.com/ergoplatform/sigma-rust), and [`Scrypto`](https://github.com/input-output-hk/scrypto) repositories.
+This document provides an in-depth look at the cryptographic schemes, protocols, and data structures used in the Ergo blockchain. Ergo’s security model relies heavily on advanced cryptographic protocols that ensure the integrity of transactions, protect user privacy, and enforce complex spending conditions within smart contracts. This document outlines the internal workings of these cryptographic schemes, focusing on their implementation within Ergo, particularly through the [`sigmastate-interpreter`](https://github.com/ScorexFoundation/sigmastate-interpreter), [`sigma-rust`](https://github.com/ergoplatform/sigma-rust), and [`Scrypto`](https://github.com/ergoplatform/scrypto) repositories.
 
 ## Overview
 
@@ -53,7 +53,7 @@ The `sigmastate-interpreter` codebase now separates more core Sigma data and AST
 
 ### Cryptographic Toolkit
 
-- **Hash Functions**: [SHA-256](https://github.com/input-output-hk/scrypto/blob/master/shared/src/main/scala/scorex/crypto/hash/Sha256.scala) & [Blake2b](https://github.com/input-output-hk/scrypto/blob/master/shared/src/main/scala/scorex/crypto/hash/Blake2b.scala) are used for generating secure cryptographic digests and ensuring data integrity.
+- **Hash Functions**: [SHA-256](https://github.com/ergoplatform/scrypto/blob/master/shared/src/main/scala/scorex/crypto/hash/Sha256.scala) & [Blake2b](https://github.com/ergoplatform/scrypto/blob/master/shared/src/main/scala/scorex/crypto/hash/Blake2b.scala) are used for generating secure cryptographic digests and ensuring data integrity.
 - **Encoding**: Base58 encoding is used to represent binary data, such as public keys or hashes, in a more human-readable format.
 - **Signing Algorithms**: Ergo supports both **ECDSA** (`secp256k1`) and **Schnorr** signatures for secure transaction signing.
 - **Primitive Secrets**: **Schnorr signatures** and **Diffie-Hellman tuples** are primitive secrets used in creating proofs of knowledge.
@@ -171,7 +171,7 @@ Ergo employs specialized cryptographic data structures to ensure secure and effi
 
 Ergo uses **AVL+ trees** as part of its **Authenticated Dynamic Dictionary (ADD)** to track UTXO state changes. These trees provide cryptographic proofs of state changes while maintaining logarithmic complexity for inserts, lookups, and deletions. AVL+ trees are essential for the UTXO model’s scalability and efficiency, enabling fast and secure updates across the network.
 
-- **Implementation**: Learn more about AVL+ trees in [BatchAVLProver.scala](https://github.com/input-output-hk/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/avltree/batch/BatchAVLProver.scala) and [BatchAVLVerifier.scala](https://github.com/input-output-hk/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/avltree/batch/BatchAVLVerifier.scala).
+- **Implementation**: Learn more about AVL+ trees in [BatchAVLProver.scala](https://github.com/ergoplatform/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/avltree/batch/BatchAVLProver.scala) and [BatchAVLVerifier.scala](https://github.com/ergoplatform/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/avltree/batch/BatchAVLVerifier.scala).
 
 ### Merkle Trees
 
@@ -191,7 +191,7 @@ The cryptographic schemes in Ergo rely on the **hardness of the discrete logarit
 
 Ergo’s cryptographic framework, built on Sigma protocols, Schnorr signatures, and Diffie-Hellman key exchanges, provides robust tools for secure and privacy-preserving decentralized applications. Its composable cryptographic proofs enable developers to create complex spending conditions, privacy-enhancing features, and flexible multi-signature schemes, all while maintaining a high standard of security.
 
-For more information, visit the [sigmastate-interpreter repository](https://github.com/ScorexFoundation/sigmastate-interpreter), [sigma-rust repository](https://github.com/ergoplatform/sigma-rust), and [Scrypto repository](https://github.com/input-output-hk/scrypto).
+For more information, visit the [sigmastate-interpreter repository](https://github.com/ScorexFoundation/sigmastate-interpreter), [sigma-rust repository](https://github.com/ergoplatform/sigma-rust), and [Scrypto repository](https://github.com/ergoplatform/scrypto).
 
 <!--
 Ergo has generic support for variety of cryptographic protocols (via composable sigma-protocols built into core).
