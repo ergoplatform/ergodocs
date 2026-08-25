@@ -9,7 +9,7 @@ tags:
   - Cross-chain
   - Oracle
 owner: docs
-last_reviewed: 2026-07-26
+last_reviewed: 2026-08-25
 source_repos:
   - repo: rosen-bridge/operation
     branch: dev
@@ -171,6 +171,15 @@ The watcher Compose override includes optional monitoring agents:
 - `COMPOSE_PROFILES=logger,monitoring` enables both profiles.
 
 Set `IS_SAME_HOST=true` only when the Grafana, Prometheus, and Loki stack is on the watcher host; deploy that stack first so its external networks exist. For a remote stack, set `IS_SAME_HOST=false` and configure the remote URLs and optional basic-auth values in `.env.logger` and `.env.monitoring`. The logger profile also requires JSON file logging with `createSymlink: true` so Alloy can tail `current.log`.
+
+Before starting either monitoring profile, apply the current upstream permissions:
+
+```shell
+chmod -R ao+rX ./alloy ./prometheus-agent
+chmod o+x ./prometheus-agent/entrypoint.sh
+```
+
+The symbolic modes remain effective when the host uses a restrictive umask such as `007`.
 
 ## Watcher FAQs
 

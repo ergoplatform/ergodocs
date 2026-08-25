@@ -1,13 +1,13 @@
 ---
 owner: docs
-last_reviewed: 2026-07-10
+last_reviewed: 2026-08-25
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
     paths:
-      - src/main/resources
+      - src/main/resources/application.conf
 source_of_truth:
-  - https://github.com/ergoplatform/ergo/tree/master/src/main/resources
+  - https://github.com/ergoplatform/ergo/tree/master/src/main/resources/application.conf
 ---
 
 # ErgoPi
@@ -97,7 +97,7 @@ scorex {
 }
 ```
 
-There are several configuration options that be tweaked in your `ergo.conf` file. The [resource directory on the main GitHub repository](https://github.com/ergoplatform/ergo/tree/master/src/main/resources) has examples of all available options.
+There are several configuration options that can be tweaked in your `ergo.conf` file. The upstream [`application.conf`](https://github.com/ergoplatform/ergo/blob/master/src/main/resources/application.conf) documents the available defaults.
 
 Current upstream configs use `allowLocal` for local, site-local, and loopback P2P access. Older notes may still refer to `localOnly`; treat that as the old name when comparing guides against current `application.conf`.
 

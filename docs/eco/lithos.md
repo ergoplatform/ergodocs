@@ -7,7 +7,7 @@ tags:
   - dApp
   - dApp-InDev
 owner: docs
-last_reviewed: 2026-07-02
+last_reviewed: 2026-08-25
 source_repos:
   - repo: Lithos-Protocol/Lithos-Client
     branch: master
@@ -18,6 +18,7 @@ source_repos:
 source_of_truth:
   - https://github.com/Lithos-Protocol/Lithos-Client
   - https://github.com/Lithos-Protocol/LitePaper
+  - https://github.com/Lithos-Protocol/Lithos-Client/releases/tag/v5.0.0-test
   - https://github.com/Lithos-Protocol/Lithos-Client/releases/tag/v4.2.0-test
   - https://github.com/Lithos-Protocol/Lithos-Client/releases/tag/v4.1.0-test
   - https://github.com/Lithos-Protocol/Lithos-Client/releases/tag/v1.1-test
@@ -47,6 +48,8 @@ Earlier SNISP/NISP research is now treated as Lithos background rather than a se
 The first public testnet releases arrived in November 2025. [`v1.0-test`](https://github.com/Lithos-Protocol/Lithos-Client/releases/tag/v1.0-test) introduced the testnet client package, and [`v1.1-test`](https://github.com/Lithos-Protocol/Lithos-Client/releases/tag/v1.1-test) followed with stability fixes, Stratum error-handling changes, setup simplification, refactoring, and logging changes.
 
 For testnet use, the client needs node API access and a testnet wallet keystore so it can sign and generate transactions. The upstream testnet guide warns users to create a new testnet-only secret key rather than reusing a mainnet wallet.
+
+[v5.0.0-test](https://github.com/Lithos-Protocol/Lithos-Client/releases/tag/v5.0.0-test) is the current testnet client. It requires an indexed Ergo node running v6.0.4 or later and introduces substantial configuration changes. The release adds the new emissions and collateral flow, stronger wallet UTXO tracking and reservations, MinerDictionary synchronization fixes, LithosDex APIs and local web UI, block-package and fraud-proof-stub transaction support, candidate-builder options, and Stratum concurrency improvements. Existing testnet operators should rebuild their overrides against the current README and `application.conf` rather than reusing an older configuration unchanged.
 
 [v4.2.0-test](https://github.com/Lithos-Protocol/Lithos-Client/releases/tag/v4.2.0-test) changes mempool synchronization so subscribers are notified when mempool updates occur rather than receiving full mempool contents. It also moves major transaction code into dedicated transaction actors, represents future transactions as transaction stubs, and fixes rollup synchronization around chained payout-contract rollups.
 

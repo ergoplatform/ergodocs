@@ -21,14 +21,14 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 - Watched repositories: `235`
 - Watched GitHub owners: `102`
 - Watched repo/branch pairs: `241`
-- Watched paths: `509`
+- Watched paths: `508`
 - Release-watched page/repository refs: `13`
 
 ## Coverage Groups
 
 | Group | Owners | Repositories | Pages | Paths |
 | --- | ---: | ---: | ---: | ---: |
-| Core / infrastructure | 5 | 30 | 132 | 189 |
+| Core / infrastructure | 5 | 30 | 132 | 188 |
 | Ecosystem org | 10 | 38 | 24 | 36 |
 | Developer / project | 83 | 163 | 119 | 98 |
 | External standard/vendor | 4 | 4 | 11 | 13 |
@@ -53,7 +53,7 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 
 | Owner | Group | Repositories | Pages | Paths |
 | --- | --- | ---: | ---: | ---: |
-| [`ergoplatform`](https://github.com/ergoplatform) | Core / infrastructure | 17 | 107 | 150 |
+| [`ergoplatform`](https://github.com/ergoplatform) | Core / infrastructure | 17 | 107 | 149 |
 | [`ScorexFoundation`](https://github.com/ScorexFoundation) | Core / infrastructure | 1 | 24 | 31 |
 | [`rosen-bridge`](https://github.com/rosen-bridge) | Core / infrastructure | 10 | 10 | 6 |
 | [`mwaddip`](https://github.com/mwaddip) | Developer / project | 8 | 9 | 7 |
@@ -160,7 +160,7 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 
 | Repository | Owner group | Branches | Pages | Paths |
 | --- | --- | --- | ---: | ---: |
-| [`ergoplatform/ergo`](https://github.com/ergoplatform/ergo) | Core / infrastructure | `master`, `testnet60`, `v6.0.3`, `weak-blocks` | 50 | 56 |
+| [`ergoplatform/ergo`](https://github.com/ergoplatform/ergo) | Core / infrastructure | `master`, `testnet60`, `v6.0.3`, `weak-blocks` | 50 | 55 |
 | [`ergoplatform/eips`](https://github.com/ergoplatform/eips) | Core / infrastructure | `eip16`, `master` | 25 | 18 |
 | [`ScorexFoundation/sigmastate-interpreter`](https://github.com/ScorexFoundation/sigmastate-interpreter) | Core / infrastructure | `develop` | 24 | 31 |
 | [`ergoplatform/sigma-rust`](https://github.com/ergoplatform/sigma-rust) | Core / infrastructure | `develop` | 14 | 33 |
@@ -514,7 +514,7 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`ergoplatform/bounded-vec`](https://github.com/ergoplatform/bounded-vec) | `develop` | `README.md` | `docs/dev/stack/sigma-rust.md` |
 | [`ergoplatform/eips`](https://github.com/ergoplatform/eips) | `eip16` | `eip-0016.md` | `docs/eco/oracles-v2.md`<br>`docs/uses/oracles.md` |
 | [`ergoplatform/eips`](https://github.com/ergoplatform/eips) | `master` | `eip-0001.md`<br>`eip-0003.md`<br>`eip-0004.md`<br>`eip-0005.md`<br>`eip-0006.md`<br>`eip-0012.md`<br>`eip-0015.md`<br>`eip-0017.md`<br>+9 more | `docs/dev/protocol/tx/babel-fees.md`<br>`docs/dev/protocol/tx/babel-fleet.md`<br>`docs/dev/protocol/tx/babel-impl.md`<br>`docs/dev/scs/contracts.md`<br>`docs/dev/scs/ergotree/script-optimisation.md`<br>`docs/dev/stack/headless.md`<br>+17 more |
-| [`ergoplatform/ergo`](https://github.com/ergoplatform/ergo) | `master` | `avldb/src/main/scala/org/ergoplatform/serialization/ErgoSerializer.scala`<br>`ergo-core/src/main/scala/org/ergoplatform/mining/AutolykosPowScheme.scala`<br>`ergo-core/src/main/scala/org/ergoplatform/modifiers`<br>`ergo-core/src/main/scala/org/ergoplatform/modifiers/history/ADProofs.scala`<br>`ergo-core/src/main/scala/org/ergoplatform/modifiers/history/BlockTransactions.scala`<br>`ergo-core/src/main/scala/org/ergoplatform/modifiers/history/extension/Extension.scala`<br>`ergo-core/src/main/scala/org/ergoplatform/modifiers/history/extension/ExtensionCandidate.scala`<br>`ergo-core/src/main/scala/org/ergoplatform/modifiers/history/extension/ExtensionSerializer.scala`<br>+43 more | `docs/dev/data-model/block-adproofs.md`<br>`docs/dev/data-model/block-header.md`<br>`docs/dev/data-model/block-transactions.md`<br>`docs/dev/data-model/extension-section.md`<br>`docs/dev/data-model/merkle-tree-overview.md`<br>`docs/dev/data-model/structures/interlink-vectors.md`<br>+40 more |
+| [`ergoplatform/ergo`](https://github.com/ergoplatform/ergo) | `master` | `avldb/src/main/scala/org/ergoplatform/serialization/ErgoSerializer.scala`<br>`ergo-core/src/main/scala/org/ergoplatform/mining/AutolykosPowScheme.scala`<br>`ergo-core/src/main/scala/org/ergoplatform/modifiers`<br>`ergo-core/src/main/scala/org/ergoplatform/modifiers/history/ADProofs.scala`<br>`ergo-core/src/main/scala/org/ergoplatform/modifiers/history/BlockTransactions.scala`<br>`ergo-core/src/main/scala/org/ergoplatform/modifiers/history/extension/Extension.scala`<br>`ergo-core/src/main/scala/org/ergoplatform/modifiers/history/extension/ExtensionCandidate.scala`<br>`ergo-core/src/main/scala/org/ergoplatform/modifiers/history/extension/ExtensionSerializer.scala`<br>+42 more | `docs/dev/data-model/block-adproofs.md`<br>`docs/dev/data-model/block-header.md`<br>`docs/dev/data-model/block-transactions.md`<br>`docs/dev/data-model/extension-section.md`<br>`docs/dev/data-model/merkle-tree-overview.md`<br>`docs/dev/data-model/structures/interlink-vectors.md`<br>+40 more |
 | [`ergoplatform/ergo`](https://github.com/ergoplatform/ergo) | `testnet60` | `src/main/resources/testnet.conf` | `docs/dev/p2p/network.md`<br>`docs/dev/p2p/p2p-handshake.md` |
 | [`ergoplatform/ergo`](https://github.com/ergoplatform/ergo) | `v6.0.3` | `ergo-core/src/main/scala/org/ergoplatform/settings/ValidationRules.scala`<br>`ergo-core/src/main/scala/org/ergoplatform/validation/ModifierError.scala`<br>`src/main/scala/org/ergoplatform/network/ErgoNodeViewSynchronizer.scala`<br>`src/main/scala/org/ergoplatform/nodeView/mempool/ErgoMemPool.scala`<br>`src/main/scala/org/ergoplatform/nodeView/mempool/OrderedTxPool.scala` | `docs/node/protocol.md`<br>`docs/node/synchronisation.md` |
 | [`ergoplatform/ergo`](https://github.com/ergoplatform/ergo) | `weak-blocks` | `papers/inputblocks/main.pdf` | `docs/uses/sidechains/subblocks.md` |
