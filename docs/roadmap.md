@@ -115,7 +115,7 @@ source_of_truth:
   - https://github.com/ergoplatform/ergo/pull/2416
   - https://github.com/ScorexFoundation/sigmastate-interpreter/releases
   - https://github.com/ergoplatform/sigma-rust
-  - https://github.com/ergoplatform/ergo-appkit/releases/tag/v6.0.0
+  - https://github.com/ergoplatform/ergo-appkit/releases/tag/v6.0.1
   - https://github.com/mwaddip/ergo-node-rust/releases
   - https://github.com/mwaddip/santa
   - https://github.com/mwaddip/santa-blitzen
@@ -175,6 +175,7 @@ Month buckets summarize roadmap-relevant changes from the latest docs sweep. Use
 
 - [Ergo node](protocol.md): [v6.0.4](https://github.com/ergoplatform/ergo/releases/tag/v6.0.4) is the latest checked stable release. It includes stricter REST input validation, public-testnet activation corrections, duplicate-mempool protection, block-candidate and extra-index fixes, and recovery when a locally mined block fails validation. [v6.1.4](https://github.com/ergoplatform/ergo/releases/tag/v6.1.4) carries the same changes with RocksDB and is marked as a prerelease.
 - [Sigma SDK](sigmastate-interpreter.md): [v6.0.6](https://github.com/ergoplatform/sigmastate-interpreter/releases/tag/v6.0.6) adds specification-generator drift checks, Bitcoin transaction-parsing examples, checked handling for non-OOM VM errors during typechecking, and better selector diagnostics.
+- [AppKit](appkit.md): [v6.0.1](https://github.com/ergoplatform/ergo-appkit/releases/tag/v6.0.1) updates its Sigma SDK dependency to 6.0.6 and expands Sigma 6 compiler and prover test coverage.
 - [Lithos](lithos.md): [v5.0.0-test](https://github.com/Lithos-Protocol/Lithos-Client/releases/tag/v5.0.0-test) requires an indexed Ergo node v6.0.4 or later and updates emissions, collateral, wallet reservations, MinerDictionary synchronization, LithosDex, transaction packaging, Stratum, and the local web UI. It remains a testnet release.
 - [Sidechains](sidechains.md): a public Ergo-Substrate bridge research alpha now documents deterministic peg construction, lifecycle containment, and audit evidence. It remains blocked on an activated Ergo-verifiable sidechain-finality profile, target-node acceptance, recovery evidence, and independent review.
 - [Lumen](https://github.com/from-ufa/lumen): a live node and oracle dashboard added an optional outbound, allowlisted read-only bridge for viewing a private operator node without exposing its REST port.
@@ -241,7 +242,7 @@ This is the clearest short-form view of what is in the pipeline. Items are group
 | --- | --- |
 | Reference node | **Released / testnet**: mainnet 6.0.x line is active; 6.1.x and 6.5.0 Matrix DevNet builds are used for testing newer work. |
 | Sigma / ErgoScript | **Released**: Sigma SDK 6.0.x has shipped, with 6.0.5 released in June 2026. |
-| AppKit | **Released**: AppKit 6.0.0 was released in June 2026 on top of SigmaSDK 6.0.x. |
+| AppKit | **Released**: AppKit 6.0.1 was released in August 2026 on Sigma SDK 6.0.6. |
 | Rust / TypeScript stack | **Active implementation research**: `sigma-rust`, `mwaddip/ergo-node-rust`, `arkadianet/ergo`, `ergots`, and SANTA runners are differential-testing surfaces, not replacements for the JVM consensus authority unless upstream marks a path stable. |
 | Scaling | **Research / testnet**: sub-blocks, Braid / merged-mined sidechain design, NiPoPoW bootstrapping, pruned operation, and devnet testing remain active tracks. |
 | Interoperability | **Live + expanding**: Rosen Bridge is live across Ergo, Cardano, BTC, EVM/BSC, and DOGE, with more chain work and Runes-related support in progress. |
@@ -284,7 +285,7 @@ These timeline items matter for continuity. Treat them as current work only when
 
 ### 2026: Protocol, DevNet, and Application Tooling
 
-- [x] [AppKit v6.0.0](https://github.com/ergoplatform/ergo-appkit/releases/tag/v6.0.0) released on top of SigmaSDK 6.0.x, including EIP-50 / Sigma 6.0 alignment work and prover-evaluated tests.
+- [x] [AppKit v6.0.1](https://github.com/ergoplatform/ergo-appkit/releases/tag/v6.0.1) updated AppKit 6 to Sigma SDK 6.0.6 and expanded Sigma 6 compiler and prover test coverage.
 - [x] [Sigma SDK v6.0.6](https://github.com/ergoplatform/sigmastate-interpreter/releases/tag/v6.0.6) released after the 6.0.0 through 6.0.5 releases, adding generator drift checks, Bitcoin parsing examples, compiler error handling, and selector diagnostics.
 - [x] Ergo node releases moved through `v6.0.2`, `v6.0.3`, [v6.0.4](https://github.com/ergoplatform/ergo/releases/tag/v6.0.4), and the RocksDB-equivalent [v6.1.4](https://github.com/ergoplatform/ergo/releases/tag/v6.1.4); [Ergo Matrix 6.5.0 RC3](https://github.com/ergoplatform/ergo/releases/tag/v6.5.0-RC3) remains the special DevNet build for protocol-breaking-change testing and p2p-layer fixes.
 - [x] Node protocol work improved mempool consistency, extension-section validation, missing-parent header handling, SyncInfoV2 continuation-header handling, and Matrix input-block transaction-body digest checks. See [Ergo Node Protocol](protocol.md), [Synchronisation](synchronisation.md), and [Sub-blocks](subblocks.md).
@@ -349,7 +350,7 @@ The emphasis in 2026 is validation and application work on top of the 6.x stack,
 | Track | Current state | Watch next |
 | --- | --- | --- |
 | Sigma SDK | 6.0.x released through 6.0.5. | New SDK releases, EIP-50 finalization, and compatibility notes. |
-| AppKit | 6.0.0 released on SigmaSDK 6.0.x. | Downstream library updates and examples that adopt AppKit 6. |
+| AppKit | 6.0.1 released on Sigma SDK 6.0.6. | Downstream library updates and examples that adopt AppKit 6. |
 | [FleetSDK](fleet.md) / ergoc | Fleet 2025 work added `AvlTree` serialization, browser bundle changes, and ErgoTree construction from ergoc JSON output. | Release notes, package entrypoints, and examples that depend on newer serialization paths. |
 | [sigma-rust](sigma-rust.md) | Compiler/interpreter parity work and bindings continue. | Consensus-sensitive parity claims, JIT costing, and binding releases. |
 | [ergots](ergots.md) | TypeScript verification and ErgoScript tooling is active, with `0.4.0` NiPoPoW and AVL+ packages adding prover and storage surfaces. | Package stability, JVM-alignment notes, and evaluator coverage. |
@@ -948,7 +949,7 @@ Ergo is developed a by a combination of the [Ergo Foundation](ergo-foundation.md
     {open: false}
 
 - **Protocol and releases:**
-  - [AppKit v6.0.0](https://github.com/ergoplatform/ergo-appkit/releases/tag/v6.0.0) released on top of SigmaSDK 6.0.x.
+  - [AppKit v6.0.1](https://github.com/ergoplatform/ergo-appkit/releases/tag/v6.0.1) updated AppKit 6 to Sigma SDK 6.0.6.
   - [Sigma SDK v6.0.6](https://github.com/ergoplatform/sigmastate-interpreter/releases/tag/v6.0.6) followed the 6.0.0 through 6.0.5 releases.
   - Ergo node releases moved through `v6.0.2`, `v6.0.3`, [v6.0.4](https://github.com/ergoplatform/ergo/releases/tag/v6.0.4), and the RocksDB-equivalent [v6.1.4](https://github.com/ergoplatform/ergo/releases/tag/v6.1.4).
   - [Ergo Matrix 6.5.0 RC3](https://github.com/ergoplatform/ergo/releases/tag/v6.5.0-RC3) is the current DevNet build for protocol-breaking change testing.
