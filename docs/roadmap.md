@@ -650,7 +650,7 @@ Ergo is developed a by a combination of the [Ergo Foundation](ergo-foundation.md
   - UTXO Set Snapshots
   - bootstrapping with NiPoPoWs
   - SigmaState advancements
-  - Kushti's 'A Scalability Plan for Ergo' and [sub-block confirmation protocol](https://ergoplatform.org/en/blog/Ergo's-Newest-Advancement-Sub-Blocks) work
+  - Kushti's 'A Scalability Plan for Ergo' and [sub-block confirmation protocol](subblocks.md) work
 - **Development:**
   - [Pruned Full Node](pruned-full-node.md)
   - Plasma Library on top of AVL Trees, drastically improving light client verification efficiency compared to traditional merkle tree data structures
@@ -680,7 +680,7 @@ Ergo is developed a by a combination of the [Ergo Foundation](ergo-foundation.md
     - Spectrum Finance yield farming
     - [Hodlbox](https://hodlbox.xyz/)
     - [Lilium](https://www.liliumergo.io/)
-    - [single-tx-swap](https://www.single-tx-swap.com/)
+    - [single-tx-swap](single-tx-swap.md)
     - [EXLE MVP](https://ergoplatform.org/en/blog/Empowering-Communities-Interest-Free-Loans-Drive-Economic-Growth-for-Kenyan-Cooperative)
     - [TabbyPOS](https://www.tabbylab.io/)
     - [Crux Finance MVP](https://cruxfinance.io/)
@@ -997,9 +997,9 @@ Every new addition to our growing DeFi ecosystem contributes to the expansion of
   - [x] [Trade House](https://ergoauctions.org/trade?pair=ERG-SigUSD) (orderbook-based P2P DEX)
 - [x] [SkyHarbor](skyharbor.md) (NFT Market)
   - [x] [SkyHarbor Raffle for new UI](https://skyharbor.medium.com/enhancing-the-nft-experience-skyharbors-new-initiative-9679e94e3cd8)
-- [x] [single-tx-swap](https://www.single-tx-swap.com/) (trustless p2p swaps)
+- [x] [single-tx-swap](single-tx-swap.md) (trustless p2p swaps)
 - [x] [TokenJay](https://tokenjay.app/app/#purchases) (p2p escrow)
-- [x] [Crooks Finance](https://crooks-fi.com/) (buying, trading, and staking meme cryptocurrency tokens)
+- [x] Crooks Finance (buying, trading, and staking meme cryptocurrency tokens)
 - [ ] [PalmyraComDex](palmyra.md) (commodities DEX) ([Alpha live](https://palmyra.app/)!)
 - [ ] [Crystal Pool](crystal-pool.md) (instant L1 order-based trading)
 - [ ] [Machina Finance](machina-finance.md) (grid DEX)

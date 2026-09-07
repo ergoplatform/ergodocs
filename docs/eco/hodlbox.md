@@ -44,6 +44,5 @@ Tim Ur, one of the project's contributors, encourages active community engagemen
 For more information about Hodlbox and to stay updated on the latest developments, check out the following resources:
 
 - [Hodlbox Website](https://hodlbox.xyz/)
-- [Project Demo](https://twitter.com/c8e4d2/status/1713597673763217766)
 - [Interview on YouTube](https://www.youtube.com/watch?v=U5-zIxg4M6k)
 - [GitHub Repository](https://github.com/SavonarolaLabs/hodlbox-xyz)

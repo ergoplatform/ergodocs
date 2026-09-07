@@ -36,4 +36,3 @@ Instead of accessing all of the blocks, superblocks (or light-clients) are enoug
 ##### Videos
 
 - [Ergoversary 20201 - Logarithmic Mining Update from Dionysis](https://www.youtube.com/watch?v=s05ypkSC7gk)
-- [NIPoPoWs & Log-Space Mining – Ergo Cast Episode #5](https://ergocast.io/episode/NIPoPoWs-ergo-cast-episode-5/)

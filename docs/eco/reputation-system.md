@@ -8,12 +8,19 @@ tags:
 owner: docs
 last_reviewed: 2026-05-30
 source_repos:
+  - repo: reputation-systems/reputation-system
+    branch: master
+    paths:
+      - README.md
+      - LIBRARY.md
+      - src/lib
   - repo: reputation-systems/forum-application
     branch: master
     paths:
       - README.md
 source_of_truth:
-  - https://reputation-systems.github.io/sigma-reputation-panel/
+  - https://reputation-systems.github.io/reputation-system/
+  - https://github.com/reputation-systems/reputation-system
   - https://github.com/reputation-systems/forum-application
 ia_status: directory
 ---
@@ -126,9 +133,9 @@ This reputation system directly powers Celaut’s trust layer:
 
 ## User Interaction
 
-* **Browser Interface**: [Sigma Reputation Panel](https://reputation-systems.github.io/sigma-reputation-panel/) provides a user-friendly interface to browse, assign, and verify reputation records.
+* **Browser Interface**: [Sigma Reputation System](https://reputation-systems.github.io/reputation-system/) provides a user-friendly interface to browse, assign, and verify reputation records.
 
-* **Library Integration**: Developers can use the [Sigma Reputation Panel Library](https://github.com/reputation-systems/sigma-reputation-panel) to build bots and services that interact directly with the reputation system. This supports automated evaluation, staking, and advanced analytics.
+* **Library Integration**: Developers can use the [Reputation System library](https://github.com/reputation-systems/reputation-system) to build bots and services that interact directly with the reputation system. This supports automated evaluation, staking, and advanced analytics.
 
 * **Forum Application**: [reputation-systems/forum-application](https://github.com/reputation-systems/forum-application) provides a forum-style application and library around reputation-system interactions. Its README describes Svelte 4 forum components where profiles, topics, replies, spam flags, and profile-level blocks are represented as Ergo boxes with fixed register layouts.
 

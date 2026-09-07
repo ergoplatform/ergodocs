@@ -24,7 +24,7 @@ This JDE is designed with the following goals in mind:
 
 1. Enable tech-savvy users and developers to interact with existing (and future) Ergo dApps such as Sigma USD by programming the off-chain logic user-friendly.
 
-2. Provide a "sandbox" mode, where users can send arbitrary scripts for execution such that the server does not have to worry about malicious programs. This enables the JDE service to be hosted remotely. An example is [Kiosk-Web](https://kioskweb.org/session/#kiosk.Wallet.txBuilder), where you can post arbitrary scripts (such as [this](https://raw.githubusercontent.com/ergoplatform/ergo-jde/main/sample-scripts/getReserveCoinInfo.json), which gets the reserve coin rate) in "Tx Builder" and obtain results.
+2. Provide a "sandbox" mode, where users can send arbitrary scripts for execution such that the server does not have to worry about malicious programs. This enables the JDE service to be hosted remotely. The former Kiosk-Web interface demonstrated this by accepting arbitrary scripts (such as [this example](https://raw.githubusercontent.com/ergoplatform/ergo-jde/main/sample-scripts/getReserveCoinInfo.json), which gets the reserve coin rate) in its transaction builder.
 
 Goal #2 rules out many programming languages such as Java/Scala and Rust. This rules out all the so-called "Turing-complete" languages.
 

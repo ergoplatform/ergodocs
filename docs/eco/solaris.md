@@ -9,12 +9,12 @@ tags:
 owner: docs
 last_reviewed: '2026-05-29'
 source_of_truth:
-- https://www.zengate.global/products/solaris-portal
-source_watch_note: ZenGate commercial product; no verified public GitHub repository
- found.
+- https://www.zengate.global/
+source_watch_note: The former ZenGate product page is no longer published; no verified
+ public GitHub repository was found.
 ia_status: directory
 ---
 
 # Solaris
 
-[Solaris](https://www.zengate.global/products/solaris-portal) is a software-as-a-service designed for micro, small and medium sized businesses to create their own no-code blockchain based solutions. For example, individual product creators and businesses making customer through Solaris can tokenize, futurize and list unique pieces on a global marketplace, whilst embedding traceability and the creation process.
+Solaris was described by [Zengate Global](zengate.md) as software-as-a-service for micro, small, and medium-sized businesses to create no-code blockchain solutions. The product concept covered tokenization, future sales, marketplace listings, and supply-chain traceability.

@@ -1,3 +1,7 @@
+---
+owner: docs
+---
+
 # Project Directory
 
 Browse ecosystem project pages. Sidebar keeps active/current projects; this table keeps the long tail discoverable. `Active` means verified repository, release, issue, live-site, or maintainer activity in the last six months, using 2026-01-02 as the cutoff for this 2026-07-02 sweep. Some live infrastructure or closed-source sites are marked separately.
@@ -76,15 +80,15 @@ For external discovery, also check [Sigmaverse](sigmaverse.md).
 
 | Project | Live site | Status | Last verified activity |
 | --- | --- | --- | --- |
-| [RustChain](rust-chain.md) | [rustchain.org](https://rustchain.org/) | Active | 2026-06-27 |
-| [BoTTube](bottube.md) | [bottube.ai](https://bottube.ai/) | Active | 2026-06-27 |
+| [RustChain](rust-chain.md) | [GitHub](https://github.com/Scottcjn/Rustchain) | Active | 2026-06-27 |
+| [BoTTube](bottube.md) | [GitHub](https://github.com/Scottcjn/bottube) | Active | 2026-06-27 |
 | [Crux Finance](crux.md) | [cruxfinance.io](https://cruxfinance.io/) | Active | 2026-05-25 |
 | [Celaut](celaut.md) | - | Active | 2026-05-30 |
 | [Netnotes](netnotes.md) | - | Active | 2026-05-19 |
 | [Ergo Relay](ergo-relay.md) | - | Active | 2026-04-13 |
 | [Matrix Pulse](matrix-pulse.md) | [GitHub](https://github.com/odiseusme/matrix-pulse) | Active Matrix tooling | 2026-07-01 |
 | [Lumen](https://github.com/from-ufa/lumen) | [ergolumen.net](https://ergolumen.net/) | Live node/oracle dashboard | 2026-08-15 |
-| [Reputation System](reputation-system.md) | [Sigma Reputation Panel](https://reputation-systems.github.io/sigma-reputation-panel/) | Active | 2026-04-07 |
+| [Reputation System](reputation-system.md) | [Sigma Reputation System](https://reputation-systems.github.io/reputation-system/) | Active | 2026-04-07 |
 | [Ergo Proxy](ergo-proxy.md) | - | Active | 2026-03-31 |
 | [Ergo Knowledge Base](ergo-knowledge-base.md) | [transcripts](https://ergo-transcripts.vercel.app/), [knowledge base](https://ergo-knowledge-base.vercel.app/) | Active | 2026-03-10 |
 | [Ergo Agent SDK](ergo-agent-sdk.md) | - | Active | 2026-03-01 |
@@ -92,7 +96,7 @@ For external discovery, also check [Sigmaverse](sigmaverse.md).
 | [Ergomempool Visualizer](mempool-vis.md) | [ergomempool.com](https://ergomempool.com/) | Active | 2025-12-04 |
 | [eBiome](ebiome.md) | [ebiome.cc](https://ebiome.cc/) | Live dashboard | 2026-06-11 |
 | [ErgoNames](ergonames.md) | [app.ergonames.io](https://app.ergonames.io/) | Public beta / mainnet hardening | 2026-07-02 |
-| [ErgOne](ergone.md) | [app.ergone.io](https://app.ergone.io/) | Live, usable | 2024-09-02 |
+| [ErgOne](ergone.md) | [GitHub](https://github.com/scruper/ergone) | Source available; hosted app unavailable | 2024-09-02 |
 | [GuapSwap](guapswap.md) | [guapswap.org](https://guapswap.org/) | Live, usable | 2024-01-20 |
 | [CYTI](cyti.md) | - | Live, usable | 2023-05-20 |
 | [Token Jay](token-jay.md) | [tokenjay.app](https://tokenjay.app/) | Live closed-source | None verified |

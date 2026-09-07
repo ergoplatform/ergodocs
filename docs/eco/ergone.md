@@ -13,7 +13,6 @@ source_repos:
     paths:
       - README.md
 source_of_truth:
-  - https://app.ergone.io/
   - https://github.com/scruper/ergone
 ---
 
@@ -32,11 +31,6 @@ The PoCoP protocol rewards active participation in the Ergo ecosystem through:
 
 Your contributions are measured by a Virality Score that ensures fair distribution of $Erg0ne token rewards.
 
-## Getting Started
-
-1. Visit [ErgOne Platform](https://app.ergone.io/)
-2. Register your Ergo wallet address in the Dashboard
-3. Start submitting content and voting on community contributions
-4. Earn $Erg0ne tokens based on your engagement
+The public source code remains available in the [ErgOne repository](https://github.com/scruper/ergone). The former hosted application was unavailable during the September 2026 link audit.
 
 Join the ErgOne community in shaping the future of blockchain engagement, where commitment and creativity drive ecosystem growth.

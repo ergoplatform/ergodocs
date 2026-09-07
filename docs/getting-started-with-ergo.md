@@ -1,3 +1,7 @@
+---
+owner: docs
+---
+
 # Getting Started with Ergo
 
 Use this page as a short map. It explains what Ergo is, what to do first, and where each docs section begins.

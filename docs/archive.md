@@ -18,6 +18,6 @@ This file contains projects from the Awesome Ergo list that are currently inacti
 
 ## 🧩 Other dApps & Services
 
-- [thz.fm](https://thz.fm/) – decentralized media/music platform *(Inactive/Disappeared?)*. [Contracts](https://github.com/TremendouslyHighFrequency/SmartContracts) | [Telegram](https://t.me/swampoflife)
+- THz.FM – decentralized media/music platform *(Inactive)*. [Telegram](https://t.me/swampoflife)
 - [Azorus](https://azorus.io/) – toolkit/platform for Ergo interaction. [GitHub](https://github.com/gsblabsio/azorus) | [Telegram](https://t.me/azorus_xyz) *(Paused)*
-- [SigmaStamp](https://www.sigmastamp.ml/) – notary/timestamping service. [GitHub](https://github.com/sigmastamp) [`JS/TS`] *(Paused)*
+- [SigmaStamp](https://github.com/sigmastamp) – notary/timestamping service. [`JS/TS`] *(Paused)*

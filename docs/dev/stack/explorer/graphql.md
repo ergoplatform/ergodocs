@@ -9,7 +9,7 @@ Public community/partner-maintained explorer instances with GraphQL support:
 - [gql.ergoplatform.com](https://gql.ergoplatform.com)
 - [explore.sigmaspace.io/api/graphql](https://explore.sigmaspace.io/api/graphql)
 - [graphql.erg.zelcore.io/](https://graphql.erg.zelcore.io/)
-- [sigmaexplorer.org/](https://sigmaexplorer.org/)
+- [Official Explorer API](https://api.ergoplatform.com/api/v1/docs/)
 
 ## Testnet Instances
 

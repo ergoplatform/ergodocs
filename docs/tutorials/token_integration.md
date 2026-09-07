@@ -1100,7 +1100,7 @@ News and analytics platform focusing on Cardano ecosystem projects.
 
 #### Core Integrations
 
-- Decentralised exchange: [ErgoDEX](https://dex.ergo.io/) and [MewMart](https://mart.mewfinance.com/)
+- Decentralised exchange: [Spectrum Finance](https://spectrum.fi/) and [MewMart](https://mart.mewfinance.com/)
 - ErgoTipperBot: Social tipping service, helps with community engagement. Tip your rsToken in Telegram, Discord, bsky, Reddit, and more.
   - To add a token to the list, [simply create a PR that adds your token to the list](https://github.com/Luivatra/ergotipper-tokens#supported-tokens-in-the-ergotipper-bot).
 - SigmaFi PR: Decentralised bonds

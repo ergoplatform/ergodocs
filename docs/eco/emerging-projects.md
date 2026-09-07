@@ -64,7 +64,6 @@ source_repos:
       - DESIGN.md
 source_of_truth:
   - https://github.com/Scottcjn/bottube
-  - https://www.bottube.ai
   - https://github.com/a-shannon/ergo-agent-sdk
   - https://ergo-agent-sdk.readthedocs.io/
   - https://github.com/mwaddip/ergo-proxy

@@ -6,11 +6,9 @@ This page provides resources for interacting with the Ergo Testnet.
 
 Synchronizing a testnet node requires connecting to active testnet peers. Finding reliable peers can sometimes be challenging.
 
-### Peer Lists
+### Peer Discovery
 
-* **Public Peer Lists:**
-  * For mainnet peers: `https://api.tokenjay.app/peers/list?unreachable=false&closedApi=false&limit=50`
-  * For testnet peers: Use the same list but swap the port numbers (mainnet uses 9053, testnet uses 9052)
+The node discovers peers through its P2P network. Use `knownPeers` only as bootstrap entries and review [Peer Management](peer-management.md) before relying on a third-party peer list.
 
 ### Node Configuration
 

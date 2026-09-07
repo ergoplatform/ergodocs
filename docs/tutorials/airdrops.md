@@ -15,7 +15,7 @@ Within the dynamic Ergo ecosystem, a wealth of opportunities awaits those who ac
 Token sales, also commonly referred to as IDOs, allow investors to acquire tokens in the early stages of a project's development, often before they are available on traditional exchanges. These offerings provide investors with the opportunity to access promising ventures before they reach mainstream attention, potentially offering substantial returns on investment.
 
 - **Staying Informed:**
-  Staying informed about upcoming token sales and IDOs is crucial for investors looking to capitalize on early-stage opportunities within the Ergo ecosystem. Platforms like [ErgoPad](https://ergopad.io/) serve as gateways to these offerings, providing investors with access to projects in their nascent stages. Regularly monitoring developer chats, community discussions, and platforms like [Crux Finance](https://cruxfinance.io/) can provide invaluable insights into upcoming projects and token sales events.
+  Staying informed about upcoming token sales and IDOs is crucial for investors looking to research early-stage opportunities within the Ergo ecosystem. Regularly monitor developer chats, community discussions, and maintained project sources rather than relying on an old launchpad listing.
 
 - **Conducting Thorough Research:**
   Conducting thorough research before participating in token sales and IDOs is essential for making informed investment decisions. Investors should evaluate the fundamentals of each project, including its team, vision, and underlying technology. Additionally, monitoring the progress of projects and staying abreast of any developments or updates can help investors gauge the potential for success.
@@ -41,6 +41,6 @@ Airdrops represent a common practice in this space, presenting investors with th
 
 ## Staying Vigilant and Involved
 
-Staying informed about the Ergo ecosystem is paramount for navigating its intricacies effectively. [ErgCube](https://ergcube.com/) offers a comprehensive ecosystem overview, while [Sigmaverse](https://sigmaverse.io/) showcases the diverse array of dApps and projects building on Ergo. Active involvement in [community chats](#), developer discussions, and participation in [weekly dev chats](#) further enhance your understanding and ability to capitalize on emerging trends.
+Staying informed about the Ergo ecosystem is paramount for navigating its intricacies effectively. [Sigmaverse](https://sigmaverse.io/) showcases dApps and projects building on Ergo; this site's [Ecosystem Map](ecosystem-map.md) provides another maintained starting point.
 
 The Ergo ecosystem offers myriad avenues for investors to participate in its dynamic growth and innovation. By embracing proactive engagement, conducting thorough research, and fostering a culture of collaboration, individuals can unlock the full potential of these opportunities.

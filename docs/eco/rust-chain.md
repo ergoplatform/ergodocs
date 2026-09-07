@@ -15,7 +15,6 @@ source_repos:
     paths:
       - README.md
 source_of_truth:
-  - https://rustchain.org/
   - https://github.com/Scottcjn/Rustchain
   - https://github.com/Scottcjn/Rustchain/commit/bc2b308cc861349a8859a30240f8ae8d38ff49b6
   - https://github.com/Scottcjn/Rustchain/commit/4f1a50296d52bb7809ee5b20975357ff438cda64
@@ -98,8 +97,6 @@ During ErgoHack 10, RustChain achieved significant milestones:
 * [Github](https://github.com/Scottcjn/Rustchain)
 * [RustChain bounties](https://github.com/Scottcjn/rustchain-bounties)
 * **GitHub Repository:** [https://github.com/Scottcjn/sophia-rustchain-bridge](https://github.com/Scottcjn/sophia-rustchain-bridge)
-* [RustChain explorer](https://rustchain.org/explorer/)
-* [Machines preserved](https://rustchain.org/preserved.html)
 * [RustChain whitepaper](https://github.com/Scottcjn/Rustchain/blob/main/docs/WHITEPAPER.md)
 * [RustChain miner release](https://github.com/Scottcjn/Rustchain/releases/tag/v3.1.2-miner)
 

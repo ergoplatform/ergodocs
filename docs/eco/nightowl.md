@@ -24,12 +24,11 @@ source_of_truth:
 
 # NightOwl
 
-[Night Owl](https://www.nightowlcasino.io/) is the world's first fully decentralized casino
+[Night Owl](https://github.com/nightowlcasino) is a source-available decentralized-casino project for Ergo.
 
 - ️ Stablecoin-pegged bets
 - Profit-sharing ️ Full transparency
 - Open-source
 
-- [Website](https://nightowlcasino.io/)
 - [GitHub](https://github.com/nightowlcasino)
 - [Slides](../events/pdf/Night_Owl_-_Ergo_Hack_lll_Presentation_Final.pdf)

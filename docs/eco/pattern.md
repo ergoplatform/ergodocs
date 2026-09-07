@@ -42,20 +42,11 @@ Pattern's architecture is divided into core logic and a frontend application:
 
 During ErgoHack 10, an alpha version of Pattern was made available for public testing. Users can try the system without needing to connect a wallet or log in, as a new login flow is under development.
 
-### 5\. Getting Started
+### 5\. Links
 
-You can check out and try the alpha version of Pattern directly:
-
-* **Pattern MVP:** [https://mvp.pattern.global/](https://mvp.pattern.global/)
-
-Feedback on queries and any encountered issues is encouraged.
-
-### 6\. Links
-
-* **Pattern MVP:** [https://mvp.pattern.global/](https://mvp.pattern.global/)
 * **GitHub (Core Logic):** [https://github.com/pattern-tech/pattern-core](https://github.com/pattern-tech/pattern-core)
 * **GitHub (Frontend App):** [https://github.com/pattern-tech/pattern-app](https://github.com/pattern-tech/pattern-app)
 
-### 7\. Contribution
+### 6\. Contribution
 
 Pattern is an open-source project. Developers interested in contributing to on-chain data transformation and AI-powered blockchain exploration can refer to the GitHub repositories.

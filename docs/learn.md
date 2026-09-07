@@ -1,3 +1,7 @@
+---
+owner: docs
+---
+
 # Learn Ergo
 
 Use this page for concepts and background. If you want to do a practical task, use [Using Ergo](using-ergo-intermediate.md), [Building on Ergo](building-on-ergo-developers.md), or [Deployment Runbook](deploy-runbook.md).

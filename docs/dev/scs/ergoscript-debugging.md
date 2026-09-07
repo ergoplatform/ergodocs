@@ -56,8 +56,8 @@ Off-chain simulators provide a more controlled environment for testing and debug
     * **Repository:** [github.com/spectrum-finance/ergoscript-simulator](https://github.com/spectrum-finance/ergoscript-simulator)
     * **Features:** Allows simulating ErgoScript execution off-chain, potentially offering more insight into evaluation steps than simple unit tests. *(Refer to the simulator's documentation for specific capabilities).*
 
-2. **Fleet SDK Playground / REPL:**
-    * The [Fleet SDK](https://fleet-sdk.github.io/docs/overview) might offer playground or REPL (Read-Eval-Print Loop) environments where you can experiment with script snippets and context building.
+2. **Fleet SDK compiler:**
+    * The [`@fleet-sdk/compiler` package](https://github.com/fleet-sdk/fleet/tree/master/packages/compiler) provides compiler documentation and examples for applications that compile ErgoScript off-chain.
 
 3. **escript.online:**
     * This online tool ([escript.online](https://escript.online/)) allows writing and compiling ErgoScript, potentially aiding in catching syntax errors and understanding compilation outputs.

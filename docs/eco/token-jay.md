@@ -11,7 +11,6 @@ owner: docs
 last_reviewed: '2026-05-29'
 source_of_truth:
 - https://tokenjay.app/
-- https://api.ergopad.io/vesting/vestedWithKey/tokenid
 source_watch_note: Closed-source/live site; TokenJay remains active and usable, but
  no verified public TokenJay source repository was found.
 ---
@@ -42,11 +41,7 @@ The open P2P Escrow service is a smart contract that facilitates trustless, priv
 8. Click 'Sell Token'
 9. Sign the transaction
 
-Once the transaction is confirmed, the buyer can make the purchase via TokenJay. The offer will appear under 'P2P Escrow offers'. The buyer should verify the token and minting transaction to ensure its authenticity. If it's an Ergopad vesting key, they can verify the tokenid in the verifier API:
-
-[https://api.ergopad.io/vesting/vestedWithKey/tokenid](https://api.ergopad.io/vesting/vestedWithKey/tokenid)
-
-This will return whether it is a real key, the token type, and the number of tokens. If everything checks out, they can click 'Buy' and sign the transaction.
+Once the transaction is confirmed, the buyer can make the purchase via TokenJay. The offer will appear under 'P2P Escrow offers'. The buyer should verify the token ID and minting transaction in a trusted explorer before clicking 'Buy' and signing the transaction.
 
 Once the transaction is processed, the Erg is sent to the seller, the key is sent to the buyer, and the contract takes a small fee.
 

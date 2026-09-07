@@ -64,7 +64,7 @@ Do not create public project pages from chat claims alone. Use chat as a lead, t
 | **3.3** | Consider [bridging your chats](chat-bridge.md) with the Ergo Discord |
 | **3.3** | Get your Telegram added to [@ErgoChats](https://t.me/Ergo_Chats) on Telegram |
 | **3.3** | Create a PR to add yourself to [this documentation](https://github.com/glasgowm148/ergodocs) |
-| **3.3** | Get added on [ergcube](https://ergcube.com/index.php?do=static&page=socials) and [sigmaverse](https://github.com/ergoplatform/sigmaverse) |
+| **3.3** | Get added to [Sigmaverse](https://github.com/ergoplatform/sigmaverse) and the [ErgoDocs project directory](project-directory.md) |
 | **3.4** | Participate in the weekly developer and marketing updates |
 | **3.4** | Participate in [ergoforum.org/c/marketing](https://www.ergoforum.org/c/marketing/13) |
 | **3.5** | Teach good principles like [KYA](kya.md) |

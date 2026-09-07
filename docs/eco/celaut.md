@@ -199,4 +199,4 @@ Celaut is an orchestration layer that runs **on top of** blockchains like Ergo. 
   - [Celaut Docs](https://github.com/celaut-project/docs)
 - [Celaut vs / + Netnotes](celaut_v_netnotes.md)
 - [Reputation System](reputation-system.md): Architecture, smart contracts, and usage
-- [Sigma Reputation Panel UI](https://reputation-systems.github.io/sigma-reputation-panel/)
+- [Sigma Reputation System UI](https://reputation-systems.github.io/reputation-system/)

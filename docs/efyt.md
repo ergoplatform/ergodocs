@@ -24,7 +24,7 @@ EFYT, which was issued on the Waves Platform, is a separate entity from ERG, the
 
 The maximum supply of EFYT is capped at 1,970,945.0, mirroring 10% of Ergo's first-year token emission which corresponds to the amount of ERGs the [Ergo Foundation](ergo-foundation.md) received in this same period.
 
-- [EFYT token distribution on Pywaves](http://pywaves.org/assets/725Yv9oceWsB4GsYwyy4A52kEwyVrL5avubkeChSnL46).
+- EFYT token ID on Waves: `725Yv9oceWsB4GsYwyy4A52kEwyVrL5avubkeChSnL46`.
 - [EFYT market and price tracking on livecoinwatch](https://www.livecoinwatch.com/price/ErgoFirstYearToken-EFYT).
 
 ### Redemption Process

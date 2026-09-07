@@ -58,10 +58,8 @@ During ErgoHack 10, the SCypher project achieved significant milestones:
 * [GitHub Repository (Core Tool)](https://github.com/moon-miner/bash-BIP39-seed-cypher)
 * [GitHub Website](https://github.com/moon-miner/SCypher-web)
 * [Nautilus Donation Guide](https://github.com/moon-miner/SCypher-web/blob/main/technical-documents/Donation%20Implementation%20with%20Nautilus%20Wallet%20on%20Ergo.md)
-* [Presentation](https://drive.google.com/file/d/1mtDnXGLasJECc9DPBtHhXCKgIjvYXTSL/view?usp=drive_link)
 * [Presentation Video](https://www.youtube.com/watch?v=IUrFdGjVT44)
 * [My Adventure Slides](https://scypher.vercel.app/my_adventure.html)
-* [Usage Slides](https://scypher.vercel.app/scypher_presentation.html)
 * [Enterprise Use Slides](https://scypher.vercel.app/enterprise-use.html)
 
 ### How to Use the Files above

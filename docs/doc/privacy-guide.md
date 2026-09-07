@@ -18,7 +18,7 @@ While the alphanumeric wallet addresses do not give away any private information
 
 When one uses a centralized exchange to buy or sell crypto for fiat, they'll have to go through a KYC (Know Your Customer) process, which will reveal their identity. In some aspects, Bitcoin and other public blockchains are not suitable for money laundering and other malicious activities. Criminals will still need to go through regulated corporations to cash out any ill-gotten funds or spend them on any real-world items.
 
-In short, Bitcoin is actually a much better alternative when it comes to anti-money laundry enforcement when compared to private banking or cold hard cash. So much so, former CIA Acting Director Mitchell Morell revealed that [cryptocurrencies between made up to less than 1%](https://cryptoforinnovation.org/resources/Analysis_of_Bitcoin_in_Illicit_Finance.pdf) of all illicit financial activities between 2017 and 2020. In this report, he mentions that illicit activities with fiat money count for an astonishing 2 to 4% of the USA's GDP.
+Public blockchains record transactions on a traceable ledger. Moving funds through regulated exchanges can also connect blockchain activity to identities through Know Your Customer controls, so public-chain activity should not be assumed to be anonymous.
 
 ## Privacy and User Security
 

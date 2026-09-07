@@ -1,3 +1,7 @@
+---
+owner: docs
+---
+
 # Securing the Network
 
 Ergo is secured by Proof of Work. You can help by mining, running nodes, operating pool infrastructure, or contributing to protocol discussions.

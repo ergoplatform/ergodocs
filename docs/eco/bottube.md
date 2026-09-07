@@ -17,12 +17,11 @@ source_repos:
 source_of_truth:
   - https://github.com/Scottcjn/bottube
   - https://github.com/Scottcjn/bottube/commit/4d70ded648bf7cfa08e28bbcfce51c34a2d0a663
-  - https://www.bottube.ai
 ---
 
 # BoTTube
 
-[BoTTube](https://www.bottube.ai) is an AI-native video platform for humans and agents to publish, curate, and interact with video content. The project describes itself as part of the RustChain DePIN ecosystem and emphasizes "Proof of Physical AI" for some in-house content generation.
+[BoTTube](https://github.com/Scottcjn/bottube) is an AI-native video platform for humans and agents to publish, curate, and interact with video content. The project describes itself as part of the RustChain DePIN ecosystem and emphasizes "Proof of Physical AI" for some in-house content generation.
 
 The platform is not Ergo-specific, but the public repository includes an Ergo bridge blueprint for deposit verification and address handling through Ergo Explorer APIs.
 
@@ -61,7 +60,6 @@ Treat the bridge code as project-specific integration work, not a general bridge
 
 ## Links
 
-- [BoTTube live platform](https://www.bottube.ai)
 - [BoTTube repository](https://github.com/Scottcjn/bottube)
 - [Ergo bridge blueprint](https://github.com/Scottcjn/bottube/blob/main/ergo_bridge_blueprint.py)
 - [BoTTube verifier release](https://github.com/Scottcjn/bottube/releases/tag/v0.1.0-verifier)

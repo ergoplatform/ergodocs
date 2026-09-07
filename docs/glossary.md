@@ -1,3 +1,7 @@
+---
+owner: docs
+---
+
 ## A
 
 * **[Address](address.md)**: A unique address associated with a wallet to send a receive a transaction to and from

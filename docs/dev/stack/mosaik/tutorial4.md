@@ -141,11 +141,11 @@ private fun getDefaultNodeUrl(networkType: NetworkType): String =
    if (networkType == NetworkType.MAINNET) nodeMainnet else nodeTestnet
 ```
 
-You can change the node used here to your own, or find another one on [2].
+Change the node used here to one you operate or trust.
 
 #### Wrapping the reduced transaction
 
-Now we have to wrap this transaction into the ErgoPay protocol. ErgoPay protocol is defined in [3]: according to it, we need to wrap the transaction into a
+Now we have to wrap this transaction into the ErgoPay protocol. ErgoPay protocol is defined in [2]: according to it, we need to wrap the transaction into a
 json with the following content:
 
       - transaction: ReducedTransaction (optional*)
@@ -248,12 +248,12 @@ are more meant for convenience for the user, but you should not rely on them. Di
 
 Finally, we have 3): The ergoPay url is build with the use of request.requestUrl, with request being a HttpServletRequest object automatically provided by Spring when
 declared on an endpoint method. This is used here to automatically use the hostname the client wallet used to connect to our endpoint to; the hostname can be completely different,
-for example, while testing, you might connect to [http://localhost:8080](http://localhost:8080) or from within your network to [http://192.178.0.10:8080](http://192.178.0.10:8080).
+for example, while testing, you might connect to [http://localhost:8080](http://localhost:8080) or from within your network to [http://192.168.0.10:8080](http://192.168.0.10:8080).
 By using the HttpServletRequest, you can make sure to build the ergoPay Url in a way the client can reach it.
 
 When you run this Mosaik app in the desktop debugger, it gives the expected behavior. Far more fun is it to run the app in the Android wallet app, which will really make a
 transaction on the ergo network. The only task left is a minor issue: When the ErgoPay transaction was performed, we are sent back to the Mosaik app which is still showing the
-former inputs. It is better to empty them by simply reloading the app. You will find this implemented in the GitHub repository for this example [4].
+former inputs. It is better to empty them by simply reloading the app. You will find this implemented in the GitHub repository for this example [3].
 
 #### Conclusion
 
@@ -266,8 +266,6 @@ The tutorial on implementations is now done. The next part will take a look at w
 
 [1] [https://medium.com/@bschulte19e/implement-a-dApp-using-ergopay-d95e17a51410](https://medium.com/@bschulte19e/implement-a-dApp-using-ergopay-d95e17a51410)
 
-[2] [https://api.tokenjay.app/peers/list](https://api.tokenjay.app/peers/list)
+[2] [https://github.com/ergoplatform/eips/blob/master/eip-0020.md](https://github.com/ergoplatform/eips/blob/master/eip-0020.md)
 
-[3] [https://github.com/ergoplatform/eips/blob/master/eip-0020.md](https://github.com/ergoplatform/eips/blob/master/eip-0020.md)
-
-[4] [https://github.com/MrStahlfelge/mosaik-tutorial-series/blob/af520069f88163aa833d330a060cde136d7a070e/src/main/kotlin/com/example/ergomosaik/mosaikapp/SendFundsAppController.kt](https://github.com/MrStahlfelge/mosaik-tutorial-series/blob/af520069f88163aa833d330a060cde136d7a070e/src/main/kotlin/com/example/ergomosaik/mosaikapp/SendFundsAppController.kt)
+[3] [https://github.com/MrStahlfelge/mosaik-tutorial-series/blob/af520069f88163aa833d330a060cde136d7a070e/src/main/kotlin/com/example/ergomosaik/mosaikapp/SendFundsAppController.kt](https://github.com/MrStahlfelge/mosaik-tutorial-series/blob/af520069f88163aa833d330a060cde136d7a070e/src/main/kotlin/com/example/ergomosaik/mosaikapp/SendFundsAppController.kt)

@@ -55,7 +55,7 @@ source_of_truth:
 
 ::/cards::
 
-Join our [Discord server](https://discord.gg/7kWWQeMCwe) dev-support (and regular [Hackathons](ergohack.md)). Alternatively you can search the chats without logging in via [linen.../d/ergo](https://www.linen.../d/ergo).
+Join our [Discord server](https://discord.gg/7kWWQeMCwe) for developer support and regular [Hackathons](ergohack.md).
 
 ## Introductory
 

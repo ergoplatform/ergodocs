@@ -18,7 +18,7 @@ Next, you need to choose your pool software. Ergo supports two options: [Miningc
 
 ## Step 3: Configure Your Miner
 
-Finally, you need to configure your miner to point to your pool software. Depending on your hardware, you can use either the [NV](https://https://github.com/mhssamadani/Autolykos2_NV_Miner) or [AMD](https://github.com/mhssamadani/Autolykos2_AMD_Miner) miner.
+Finally, you need to configure your miner to point to your pool software. Depending on your hardware, you can use either the [NV](https://github.com/mhssamadani/Autolykos2_NV_Miner) or [AMD](https://github.com/mhssamadani/Autolykos2_AMD_Miner) miner.
 
 > Community support available on [Discord](https://discord.gg/kxbrHVwnm5).
 

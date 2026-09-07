@@ -73,7 +73,7 @@ So it is up to your plans what you will use! That's why here is just a brief sta
 
 ### Ergo Explorer API
 
-All data available on the [Ergo Explorer](https://explorer.ergoplatform.com/en/) is available through an API as well. Appkit ships with classes defining this API to use with [Retrofit](https://square.github.io/retrofit/). Get started with the following Kotlin code:
+All data available on the [Ergo Explorer](https://explorer.ergoplatform.com/en/) is available through an API as well. Appkit ships with classes defining this API to use with [Retrofit](https://lysine.dev/retrofit/). Get started with the following Kotlin code:
 
     val retrofit = Retrofit.Builder()
                 .baseUrl(RestApiErgoClient.defaultMainnetExplorerUrl)

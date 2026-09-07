@@ -23,7 +23,7 @@ To set up a bridge, follow these steps:
 
 2. The [Telegram API does not report deleted messages](https://github.com/42wim/matterbridge/wiki/FAQ#matterbridge-is-not-deleting-messages-from-telegram-to-other-bridges).
       1. This means any spam deleted on Telegram will remain visible on Discord.  
-      2. **Workaround**: Restrict new Telegram users from speaking until they verify their identity. [OrgRobot](http://orgrobot.io/) is a useful tool for this, with a set of custom entry questions. This should stop most bots. (However, some spammers are real people and cannot be prevented.)
+      2. **Workaround**: Restrict new Telegram users from speaking until they verify their identity, using custom entry questions where supported. This should stop most bots. (However, some spammers are real people and cannot be prevented.)
 
 Despite these limitations, the bridge works quite well.
 

@@ -202,7 +202,7 @@ This snippet uses the Ergo API to locate and return a Babel Box. Developers supp
 
 ## Step-by-Step
 
-For a detailed guide on how to mint a token, set up a Babel Box, and utilize the plugin within a web application, refer to [this guide](http://147.182.244.219/ergobabelfees.html).
+The steps below show how to mint a token, set up a Babel Box, and use the plugin within a web application.
 
 ---
 
@@ -231,13 +231,12 @@ For a detailed guide on how to mint a token, set up a Babel Box, and utilize the
 
 ## Reference Implementations
 
-- [Implementing Ergo Babel Fees with Fleet-SDK - May 17, 2024](http://147.182.244.219/ergobabelfees.html)
 - [Nautilus Wallet implementation](https://github.com/capt-nemo429/nautilus-wallet/pull/82)
 - [AppKit implementation](https://github.com/ergoplatform/ergo-appkit/pull/204)
-- [Fleet SDK Babel fees plugin](https://fleet-sdk.github.io/docs/plugins/babel-fees)
+- [Fleet SDK Babel fees plugin](https://github.com/fleet-sdk/fleet/tree/master/plugins/babel-fees)
 
 ## Additional Resources
 
-- **Fleet SDK Documentation**: [Fleet SDK Babel Fees Plugin](https://fleet-sdk.github.io/docs/plugins/babel-fees)
+- **Fleet SDK Documentation**: [Fleet SDK Babel Fees Plugin](https://github.com/fleet-sdk/fleet/tree/master/plugins/babel-fees)
 - **Ergo Platform API**: [Ergo API Documentation](https://api.ergoplatform.com/api/v1/docs/)
 - **EIP-0031 Specification**: [Ergo Babel Fees EIP](https://github.com/ergoplatform/eips/blob/master/eip-0031.md)

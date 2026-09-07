@@ -165,7 +165,7 @@ This section lists available language bindings for `sigma-rust`, allowing develo
 * **C:**
   * Repo: [`ergo-lib-c`](https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-c) [![Latest Version](https://img.shields.io/crates/v/ergo-lib-c.svg)](https://crates.io/crates/ergo-lib-c) [![Documentation](https://docs.rs/ergo-lib-c/badge.svg)](https://docs.rs/crate/ergo-lib-c)
 * **Go:**
-  * Repo: [`ergo-lib-go`](https://github.com/ergoplatform/ergo-lib-go) [![Go Reference](https://pkg.go.dev/badge/github.com/ergoplatform/ergo-lib-go.svg)](https://pkg.go.dev/github.com/ergoplatform/ergo-lib-go) *(Note: Community maintained)*
+  * Repo: [`ergo-lib-go`](https://github.com/sigmaspace-io/ergo-lib-go) [![Go Reference](https://pkg.go.dev/badge/github.com/sigmaspace-io/ergo-lib-go.svg)](https://pkg.go.dev/github.com/sigmaspace-io/ergo-lib-go) *(Note: Community maintained)*
 * **Ruby:**
   * Repo: [`sigma_rb`](https://github.com/thedlop/sigma_rb) [![Gem Version](https://badge.fury.io/rb/sigma_rb.svg)](https://badge.fury.io/rb/sigma_rb) *(Note: Community maintained)*
 * **Python:**

@@ -117,5 +117,5 @@ sigmaProp(pubKey1 && pubKey2 || pubKey1 && pubKey3 || pubKey2 && pubKey3)
 
 ## Recommended Reading
 
-- [Ergo Whitepaper](https://ergoplatform.org/en/whitepaper/)
+- [Ergo Whitepaper](whitepaper.md)
 - [ErgoScript Technical Documentation](ergoscript.md)

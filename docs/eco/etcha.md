@@ -16,7 +16,7 @@ source_repos:
 source_of_truth:
   - https://github.com/cannonQ/ergo-p2p-options-frontend
   - https://ergo-p2p-options-frontend-web.vercel.app/app/wizard
-  - https://ergoforum.aap.cornell.edu/t/decentralized-p2p-options-contracts-on-ergo/3763
+  - https://www.ergoforum.org/t/decentralized-p2p-options-contracts-on-ergo/3763
 ---
 
 # Etcha
@@ -31,4 +31,4 @@ The public app is experimental. Verify contract details, settlement terms, and w
 
 - [Etcha repository](https://github.com/cannonQ/ergo-p2p-options-frontend)
 - [Etcha app](https://ergo-p2p-options-frontend-web.vercel.app/app/wizard)
-- [P2P options discussion](https://ergoforum.aap.cornell.edu/t/decentralized-p2p-options-contracts-on-ergo/3763)
+- [P2P options discussion](https://www.ergoforum.org/t/decentralized-p2p-options-contracts-on-ergo/3763)

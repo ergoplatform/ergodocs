@@ -21,7 +21,6 @@ Public explorers like [explorer.ergoplatform.com](https://explorer.ergoplatform.
 
 1. **Identify Explorer & API Docs:** Choose an explorer whose API provides the endpoints you need. Review their API documentation carefully to understand available queries, request/response formats, authentication (if any), and usage limitations (especially rate limits).
     * Ergo Explorer API Docs: [api.ergoplatform.com/api/v1/docs/](https://api.ergoplatform.com/api/v1/docs/)
-    * ErgExplorer API Docs: [ergexplorer.com/api/v1/docs/](https://ergexplorer.com/api/v1/docs/)
 2. **Make API Requests:** Your application makes standard HTTP requests (GET, POST, etc.) to the explorer's API endpoints using libraries like `axios` (JS/TS), `requests` (Python), or built-in fetch functions.
 3. **Process Response:** Your application parses the JSON (or other format) response from the API and uses the data. Implement robust error handling for network issues, API errors (like 404 Not Found or 429 Too Many Requests), and unexpected response formats.
 

@@ -137,7 +137,7 @@ While ErgoScript aims for simplicity and security, debugging complex contracts c
 * [ErgoScript Compiler (Scala)](https://github.com/ergoplatform/ergoscript-compiler): Scala CLI tool.
 * [ErgoScala Compiler](https://github.com/ergoplatform/ergoscala-compiler): Compile a subset of Scala to ErgoScript. *(Needs link update if available)*
 * [ErgoScript CLI Compiler](https://github.com/ergoplatform/ergoscript-compiler): CLI tool to compile ErgoScript to address. *(Duplicate link? Check source)*
-* [VSCode ErgoScript Language Support](https://marketplace.visualstudio.com/items?itemName=ergoscript.ergoscript-language-support): Syntax highlighting for VSCode.
+* [VSCode ErgoScript Language Support](https://github.com/GuapSwap/vscode-ergoscript-language-support): Syntax highlighting extension source for VS Code.
 * [ErgoScript compiler/LSP](https://github.com/Luivatra/ergoscript-compiler-lsp) and [ErgoScript Zed extension](https://github.com/Luivatra/ergoscript-zed-extension): experimental community editor tooling surfaced in December 2025. Check repository status before depending on diagnostics or compiler output.
 
 **Debugging & Simulation:**
@@ -212,7 +212,7 @@ ErgoScript's foundation on Sigma protocols allows for powerful cryptographic pri
 * [Schnorr Signatures](schnorr.md)
 * [Light Verifying Nodes](nipopow_nodes.md)
 * [eUTXO Model Explanation](eutxo.md)
-* [Ergo Whitepaper](https://ergoplatform.org/en/whitepaper/)
+* [Ergo Whitepaper](whitepaper.md)
 * [ErgoScript Language Specification](lang-spec.md) (Detailed reference)
 * [Advanced ErgoScript Tutorial](https://ergoplatform.org/docs/AdvancedErgoScriptTutorial.pdf)
 

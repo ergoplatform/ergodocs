@@ -31,7 +31,6 @@ ia_status: directory
 - **[Twitter](https://twitter.com/PandaV_io)**
 - **[Telegram](https://t.me/pandav_io)**
 - **[Medium](https://medium.com/@www.pandav.io)**
-- **[White Paper](https://www.pandav.io/download/PDVWhitepaper.pdf)**
 
 PANDAV aims to integrate NFTs with access control systems, enabling secure and transparent management of access rights and ownership. By leveraging the immutable and decentralized nature of blockchain technology, PANDAV offers a trustless and tamper-proof solution for access control.
 

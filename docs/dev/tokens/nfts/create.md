@@ -24,4 +24,3 @@ The standard for artwork issuance on Ergo is [EIP-0024: Artwork Contract](eip24.
 
 - [ergpy](https://github.com/mgpai22/ergpy) has bulk-minting (with royalties!)
 - [ergo-nft-bulk-minter](https://github.com/mgpai22/ergo-nft-bulk-minter)
-- [ergonfts.org](https://ergonfts.org/)

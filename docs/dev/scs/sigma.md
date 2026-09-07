@@ -140,7 +140,6 @@ In Ergo, Σ-protocols rely on the Fiat-Shamir transformation to generate challen
 
 ### Presentations
 
-- [Sigma protocols](https://crypto.sjtu.edu.cn/~yandi/2018%20BIU%20winter%20school/Part%203-Techniques%20for%20Efficient%20ZK%20(cont.)/WS-19-11-sigma-protocols-winter-school-2019-1.pdf)
 - [On Σ-protocols](https://cs.au.dk/~ivan/Sigma.pdf)
 
 ---

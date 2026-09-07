@@ -54,7 +54,7 @@ By design, you can use any wallet you like but currently, it is strongly advised
 
 ## Auction House
 
-**Source**: [Ergo Pad](https://www.ergopad.io/projects/auctionhouse)
+**Source**: [ErgoAuctionHouse](https://github.com/anon-real/ErgoAuctionHouse)
 
 Auction House, the first open-source NFT marketplace on the Ergo blockchain, featuring innovative solutions for efficient smart contracts, various auction types, on-chain collections and a flexible royalty system
 
@@ -90,8 +90,6 @@ Auction House will launch its own token, the Auction House Token (AHT), at the u
 Thanks to this facet of tokenomics, AHT will be distributed as bonuses to both buyers and sellers. For instance, if the final price of the auction is 100 ERGs, the AHT refund could be 5 AHT. Additionally in exchange for staking your AHT on ErgoPad, you will share in the success of Auction House. In financial terms, the auction house receives through fees when artworks are sold. The average percentage they will charge is 2%.
 
 30% of the Auction House’s profit will be distributed among stakers periodically.. The distribution period and specifics have yet to be determined. The distribution of this 30% will be made in an automatic but centralized manner because there is no working solution on Ergo blockchain as of yet. Later, when ErgoPad releases Paideia, the Auction house will use it to decentralize this process.
-
-**In addition to above,  AHT token IDO Roadmap, AHT Tokenomics and Distribution, and other info can also be found on [the ergpad.io Auction House page](https://www.ergopad.io/projects/auctionhouse)**
 
 - [Source code](https://github.com/anon-real/ErgoAuctionHouse)
 - [v2 contracts](https://github.com/ergoplatform/eips/pull/39/files)

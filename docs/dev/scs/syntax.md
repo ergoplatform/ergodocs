@@ -148,4 +148,4 @@ For further learning and a deeper dive into ErgoScript, explore the following re
 - [Deco Education - ErgoScript Developer Course](https://github.com/DeCo-Education/ErgoScript-Developer-Course/blob/main/Class-Documents/Class-1/Materials/Class1.MD)
 - [ErgoScript Specification](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/sigma-dsl.md): Detailed reference for Sigma protocols and ErgoScript.
 - [LangSpec.md](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/LangSpec.md): Comprehensive language specification for ErgoScript.
-- [ErgoScript Reference Guide](https://ergoplatform.org/en/blog/2021_07_26_ergo_script_guide/): A detailed guide on writing ErgoScript.
+- [ErgoScript Documentation](ergoscript.md): A detailed guide to writing ErgoScript.

@@ -1,3 +1,7 @@
+---
+owner: docs
+---
+
 # Building on Ergo
 
 Use this page to choose a developer path.

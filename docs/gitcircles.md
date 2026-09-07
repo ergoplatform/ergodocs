@@ -200,6 +200,5 @@ No more working “for the love of it” alone. GitCircles makes it possible to 
 Check out:
 
 * [GitCircles-Github adapter](https://github.com/GitCircles/GitCircles-Github)
-* [Main platform](https://gitcircles.org) *(if/when available)*
 
 Let’s build the future of open source — together, and fairly.

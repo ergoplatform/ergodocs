@@ -138,8 +138,6 @@ TerraUSD (UST) is a stablecoin built on the Terra blockchain. Following a succes
 
 ### Gold-Backed
 
-<https://www.stablecoinswar.com/gold-stable-coins.php>
-
 #### Digital Gold (GOLD)
 
 #### Tether Gold (XAUT)

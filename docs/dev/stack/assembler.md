@@ -270,4 +270,4 @@ As an example, the [following Json](https://github.com/scalahub/Kiosk/blob/maste
 
 ### Using with KioskWallet
 
-The above script was used to automatically generate [this transaction](https://explorer.ergoplatform.com/en/transactions/da441606b7933de8e87bbd439b4fbe1888c1403f58682c5bcddcbc488ee99773) using [KioskWallet](https://kioskweb.org/session/#kiosk.Wallet).
+The above script was used to automatically generate [this transaction](https://explorer.ergoplatform.com/en/transactions/da441606b7933de8e87bbd439b4fbe1888c1403f58682c5bcddcbc488ee99773) using KioskWallet.

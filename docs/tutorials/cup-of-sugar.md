@@ -10,8 +10,6 @@ tags:
 
 ## Welcome to Cup of Sugar
 
-[Visit the website](https://cupofsugar.io)
-
 Cup of Sugar is a community-focused, sustainable micro grocer and cafe that emphasizes local sourcing and agriculture. The business aims to offer farm-fresh, traceable products while promoting and supporting local farmers and producers.
 
 ## Innovation Hub

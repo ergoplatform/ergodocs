@@ -57,6 +57,5 @@ As research and development in this area continue, we can expect to see exciting
 
 ## Resources
 
-- [NIPoPoWs & Log-Space Mining – Ergo Cast Episode #5](https://ergocast.io/episode/NIPoPoWs-ergo-cast-episode-5/): A comprehensive overview of Non-Interactive Proofs of Proof-of-Work and Log-Space Mining by Dionysis Zindros.
 - [Non-Interactive Proofs of Proof-of-Work](https://eprint.iacr.org/2021/623.pdf): A research article published by IOHK on NIPoPoWs.
 - [Video Explanation of NIPoPoWs](https://www.youtube.com/watch?v=s05ypkSC7gk): A video providing a visual explanation of Non-Interactive Proofs of Proof-of-Work.

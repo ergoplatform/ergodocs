@@ -1,6 +1,6 @@
 site_name: ErgoDocs
 site_url: https://docs.ergoplatform.com
-repo_url: https://github.com/glasgowm148/ergodocs
+repo_url: https://github.com/ergoplatform/ergodocs
 edit_uri: edit/main/docs/
 site_description: Ergo Platform Documentation
 exclude_docs: |

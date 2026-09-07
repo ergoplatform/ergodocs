@@ -192,7 +192,6 @@ While running your own node provides the most control and trust, many users rely
   - [explorer.ergoplatform.com](https://explorer.ergoplatform.com/en/) (Official)
   - [ergexplorer.com](https://ergexplorer.com/)
   - [sigmaspace.io](https://sigmaspace.io/)
-  - [ergobackup.aap.cornell.edu](https://ergobackup.aap.cornell.edu/) (May primarily be a backup service, check API availability)
 - *(Note: This list is not exhaustive and uptime/reliability are not guaranteed. Always verify the trustworthiness and status of a public service before relying on it for critical operations.)*
 
 **Troubleshooting Public Infrastructure Issues:**

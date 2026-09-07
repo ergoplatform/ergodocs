@@ -366,7 +366,7 @@ Study open-source Ergo projects to see how they handle off-chain logic:
 * **Auction House / Raffle Contracts:** Often require off-chain monitoring to detect bids/entries and trigger finalization transactions. (Search GitHub for `Ergo Auction` or `ErgoRaffle`).
 * **Ergo Explorer Backend:** ([github.com/ergoplatform/explorer-backend](https://github.com/ergoplatform/explorer-backend)) - A complex example of a full-chain indexer.
 * **DEX Bots (Grid Trading):** Projects like [Off the Grid](https://github.com/Telefragged/off-the-grid/) and [Machina Finance](machina-finance.md) use off-chain bots to match grid trading orders with other liquidity sources.
-* **Transaction Bots:** Systems like the [Exle Tx Bot](https://exlebot.com/docs) automate transaction composition and processing for specific dApp workflows.
+* **Transaction Bots:** Off-chain services can automate transaction composition and processing for specific dApp workflows.
 * **External Trading Bots:** Tools like [HummingBot](https://hummingbot.org/) or [KuPyBot](https://github.com/FlyingPig69/KuPyBot) can potentially be adapted to interact with Ergo DEXs via their APIs (if available).
 
 ## Best Practices for Off-Chain Operations

@@ -72,8 +72,8 @@ you'll need to sign up for and push to to deploy on Flux.
 You can deploy your jar or docker image on any hosting provider. We emphasize Flux here because it
 is decentralized, can be paid with the Flux cryptocurrency and is very inexpensive for a Mosaik app.
 
-Flux provides a [step by step guide](https://jetpack2.app.runonflux.io/#/launch/details) how to deploy an example
-app on their service. Besides the Docker image from the step before, you'll need a Zel ID and
+See the current [Flux documentation](https://docs.runonflux.io/) for its application deployment flow.
+Besides the Docker image from the step before, you'll need a Zel ID and
 around 1 USD in Flux.
 
 Follow the Flux guide to register your app, but take care on the following steps:

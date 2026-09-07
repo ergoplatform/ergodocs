@@ -22,5 +22,6 @@ A February 2026 community fork added optional BIP39 passphrase support and was c
 Discover how to utilize the Ergo Paper Wallet effectively by viewing the detailed video tutorial available [here](https://www.youtube.com/watch?v=0qTasq-nSNw).
 ///
 
-- [GitHub Repository](https://anon-br.github.io/ergo-paper-wallet/)
+- [Paper Wallet Generator](https://ergopaperwallet.org/)
+- [GitHub Repository](https://github.com/arobsn/ergo-paper-wallet)
 - [BIP39 passphrase fork](https://github.com/moon-miner/ergo-paper-wallet)

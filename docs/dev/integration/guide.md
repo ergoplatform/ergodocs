@@ -31,7 +31,6 @@ This guide explains every step required to connect software and services to the 
 Running an independent node maximises security and performance.
 
 * **Installation** — follow the [node install guide](install.md).
-* **Public alternative** — `http://213.239.193.208:9053` (dynamic list at [api.tokenjay.app/peers/list](https://api.tokenjay.app/peers/list)).
 * **Disk space** — secure at least **100 GB**.
 * **Web panel** — open `127.0.0.1:9053/panel` on main‑net or `127.0.0.1:9052/panel` on [test‑net](testnet.md).
 * **Pruned mode** — accelerate sync with a [pruned node snapshot plus NiPoPoWs](pruned-full-node.md).

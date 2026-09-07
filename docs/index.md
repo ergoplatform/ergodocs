@@ -1,3 +1,7 @@
+---
+owner: docs
+---
+
 # Welcome to ErgoDocs
 
 ErgoDocs helps you understand, use, build on, and operate Ergo.

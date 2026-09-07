@@ -1,3 +1,7 @@
+---
+owner: docs
+---
+
 # Using Ergo
 
 Use this page when you already have a wallet and want to do something on Ergo.

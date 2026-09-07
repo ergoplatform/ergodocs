@@ -55,7 +55,7 @@ Several mining pools offer a solo port for those who prefer this method. A compr
 - [2Miners](https://2miners.com/erg-mining-pool)
   - [How to start mining Ergo](https://erg.2miners.com/help)
 - [F2pool](https://www.f2pool.com/?_ga=2.253802568.1957310317.1634436769-1506845288.1634436769)
-  - [How to mine Ergo (ERG) on f2pool](https://f2pool.io/mining/guides/how-to-mine-ergo/)
+  - [f2pool mining support](https://f2pool.io/mining/support/)
 - [HeroMiners](https://ergo.herominers.com/)
   - [Hero Miners: How to Mine Ergo (ERG)? Complete Beginner’s Guide](https://herominers.medium.com/how-to-mine-ergo-erg-complete-beginners-guide-608a87e89ed6)
   - [HeroMiners: How to mine Erg](https://ergo.herominers.com/#how-to-mine-ergo-erg)

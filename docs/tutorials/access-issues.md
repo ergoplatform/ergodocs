@@ -24,7 +24,7 @@ A wallet is simply an *interface* for the blockchain, if you have your seed phra
   - **Was the wallet created before October 18th, 2022?**
     - **Yes**: There was a [BIP32 key derivation bug](https://github.com/ergoplatform/ergo-appkit/pull/139) impacting certain wallets. Verify if your wallet was affected using [satergo.com](https://satergo.com/) which [checks this for you](https://t.me/Satergo/9509) when you restore.
 - **How did you record your seed phrase?**
-  - **Written down**: Are any characters hard to read or ambiguous? Refer to the [BIP-39 wordlist](https://www.blockplate.com/pages/bip-39-wordlist) for clarification.
+  - **Written down**: Are any characters hard to read or ambiguous? Refer to the canonical [BIP-39 English wordlist](https://raw.githubusercontent.com/bitcoin/bips/master/bip-0039/english.txt) for clarification.
   - **Screenshot**: Are you sure this mnemonic represents the wallet you are trying to recover?
 
 ## I do not have my seed phrase

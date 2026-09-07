@@ -52,8 +52,6 @@ The project has achieved significant milestones in establishing a robust technic
 
 ### 5. Links
 
-* **Live Dashboard:** [https://app.codeutxo.com/](https://app.codeutxo.com/)
-* **AI Dashboard:** [https://webui.codeutxo.com/](https://webui.codeutxo.com/)
 * **GitHub (ergo-price-mcp):** [https://github.com/codeUTXO/ergo-price-mcp](https://github.com/codeUTXO/ergo-price-mcp)
 * **GitHub (ergo-mcp):** [https://github.com/marctheshark3/ergo-mcp](https://github.com/marctheshark3/ergo-mcp)
 

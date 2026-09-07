@@ -13,7 +13,7 @@ P2P trading, or peer-to-peer trading, is a method of exchanging cryptocurrencies
 There are a couple of options for P2P trading on Ergo.
 
 - [Token Jay](https://tokenjay.app) lets you trade tokens person to person, trustless and decentralised with TokenJay's open P2P Escrow service.
-- [single-tx-swap.com](https://www.single-tx-swap.com/) is a multi-sig trustless escrow service compatible with [Nautilus](nautilus.md)
+- [Single Transaction Swap](single-tx-swap.md) is a source-available multisig escrow design compatible with [Nautilus](nautilus.md); its former hosted app is unavailable.
 - [Analog Ergo](analog-ergo.md) is a cross-chain peer-to-peer marketplace in development.
 - [Etcha](etcha.md) entered alpha testing in 2026 for P2P options, with physical delivery and cash-settled option flows.
 - [PiggyTrade](https://github.com/FlyingPig5/piggy-trade) was ported from Python to Kotlin in 2026, adding sigma-rust JNI bindings, loading/cache optimizations, and on-chain DEX pool data.

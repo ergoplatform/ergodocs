@@ -21,7 +21,7 @@ In contrast, off-chain elements refer to the components of a dApp that operate o
 
 ### Case Study: Transaction Bot
 
-A transaction bot exemplifies an off-chain system designed to streamline the composition and processing of transactions. The Exle Tx Bot is an exemplary model of such a system. Detailed information about the Exle Tx Bot and its architecture can be found in their documentation: [Exle Tx Bot](https://exlebot.com/docs).
+A transaction bot exemplifies an off-chain system designed to streamline the composition and processing of transactions.
 
 A thorough grasp of the distinctions between on-chain and off-chain components, along with their respective roles, empowers developers to create more sophisticated and efficient dApps within the Ergo Blockchain ecosystem.
 

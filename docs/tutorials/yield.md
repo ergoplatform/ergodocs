@@ -68,7 +68,7 @@ In the context of our project, which was launched with fairness at its core, the
 | CoinEx AMM Pool      | Exchange, LP       | CoinEx                                                                                                         | Live                  | Liquidity providing in AMM pool          |
 | Gate.io Lending      | Exchange, Lending  | Gate.io                                                                                                        | Live                  | Lending assets for interest              |
 | Huobi Trading Bots   | Trading Bot        | Huobi                                                                                                          | Live                  | Various trading bots for automation      |
-| Custom Bots          | Trading Bot        | [shrimpy.io](https://www.shrimpy.io/), [3commas](https://3commas.io/)                                          | Live                  | Custom trading bot solutions             |
+| Custom Bots          | Trading Bot        | [3Commas](https://3commas.io/)                                                                                  | Live                  | Custom trading bot solutions             |
 | Low-Liquidity Exchanges           | Long-term Offer   | SevenSeas, TradeOgre, etc                                    | Live                  | Profit off exchanges with low liquidity by acting as a Market Maker (See [Arbitrage](arb.md))             |
 
 ## Run your own grid bots

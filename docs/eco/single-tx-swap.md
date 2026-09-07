@@ -14,12 +14,11 @@ source_repos:
       - README.md
 source_of_truth:
   - https://github.com/danieloravec/ergo-token-swap
-  - https://www.single-tx-swap.com/
 ia_status: directory
 ---
 
 # Single Transaction Swap
 
-[Single Transaction Swap](https://www.single-tx-swap.com/) is a multisig trustless escrow service operating on the Ergo blockchain. It provides a secure platform for users to swap NFTs and tokens with others. If you've found a trading partner, for instance, on Discord, you can initiate a trading session on Single Transaction Swap and share a link to your private trading room with them.
+[Single Transaction Swap](https://github.com/danieloravec/ergo-token-swap) is the source for a multisig trustless escrow service on Ergo. It was designed to let trading partners swap NFTs and tokens through a private trading session.
 
-The platform has recently incorporated features such as asset verification and transaction summary. Future enhancements are in the pipeline to improve user experience and functionality.
+The former hosted application is unavailable. Review the source and deploy it yourself before relying on the workflow.

@@ -640,5 +640,5 @@ graph TD
 - [Box Registers Specification](boxes-and-registers.md)
 - [ErgoTree Specification](ergotree.md)
 - [Fleet SDK GitHub Examples](https://github.com/fleet-sdk/fleet-by-example)
-- [Fleet SDK Compiler](https://fleet-sdk.github.io/docs/compiler)
-- [Fleet SDK Serializer](https://fleet-sdk.github.io/docs/serializer-overview)
+- [Fleet SDK Compiler](https://github.com/fleet-sdk/fleet/tree/master/packages/compiler)
+- [Fleet SDK Serializer](https://github.com/fleet-sdk/fleet/tree/master/packages/serializer)

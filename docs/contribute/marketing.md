@@ -33,7 +33,7 @@ Ergo has a lively and diverse community made up of various sub-ecosystems. Hereâ
 
 ### Engage in community outreach
 
-- **Participate in the ErgOne initiative**: [ErgOne](https://app.ergone.io/voting-login) is a Proof-of-Commitment Protocol (PoCoP), a unique approach to blockchain engagement. PoCoP rewards active participation in promoting and supporting the Ergo ecosystem. By creating and sharing content, engaging with the community and contributing creatively, you earn $Erg0ne tokens. Your involvement is measured by a virality score, ensuring fair distribution of rewards. Simply tag your tweets with #PoCoP and submit them to the [ErgOne dashboard](https://app.ergone.io/voting-login)
+- **Review the ErgOne initiative**: [ErgOne](ergone.md) is a Proof-of-Commitment Protocol (PoCoP) designed to reward participation in promoting and supporting the Ergo ecosystem. Its former hosted dashboard is no longer available; consult the project page and source before relying on it.
 - **Local meet-ups and events**: Organize or participate in local meet-ups and events to promote Ergo. These can be informal gatherings, presentations at local blockchain events, or even booths at conferences.
 - **Webinars and live streams**: Host webinars or live streams to discuss Ergoâ€™s latest developments, answer questions and engage with the community in real-time.
 

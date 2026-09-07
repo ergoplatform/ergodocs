@@ -34,7 +34,7 @@ When Rosen adds a new network, typical opportunities open up immediately for LPs
 |---|---|---|---|---|---|
 | Provide LP for bridged rsTokens (e.g., rsERG/ETH, rsBTC/XY) | [Spectrum DEX](spectrum.md) | Minswap (https://app.minswap.org/) / Spectrum | Uniswap (https://app.uniswap.org/) | PancakeSwap (https://pancakeswap.finance/) | Uniswap rsERG LP guide: [rsERGLP.md](rsERGLP.md) • DEX overview: [dex.md](dex.md) • Minswap Docs: https://docs.minswap.org • PancakeSwap Docs: https://docs.pancakeswap.finance |
 | Swap/Trade bridged rsTokens | [Spectrum DEX](spectrum.md) | Minswap / Spectrum | Uniswap | PancakeSwap | DEX overview: [dex.md](dex.md) • Uniswap Help: https://support.uniswap.org |
-| Lend/Borrow (when listed by protocol) | [DuckPools](duckpools.md) | Liqwid (https://v2.liqwid.finance/) / Lenfi (https://app.lenfi.io/) | Varies by listings | Varies by listings | DuckPools Docs: https://docs.duckpools.io • Liqwid Docs: https://docs.liqwid.finance • Lenfi Docs: https://docs.lenfi.io |
+| Lend/Borrow (when listed by protocol) | [DuckPools](duckpools.md) | Liqwid (https://v2.liqwid.finance/) | Varies by listings | Varies by listings | [DuckPools](duckpools.md) • Liqwid Docs: https://docs.liqwid.finance |
 | Options/Derivatives (where available) | [SigmaO](sigmao.md) | — | — | — | [sigmao.md](sigmao.md) |
 | Privacy (where available) | [ErgoMixer](ergomixer.md) | — | — | — | [ergomixer.md](ergomixer.md) |
 | NFT Trading/Marketplace (where available) | [Auction House](ergo-auctions.md) | Cardano marketplaces | EVM marketplaces | EVM marketplaces | [ergo-auctions.md](ergo-auctions.md) |
@@ -150,9 +150,6 @@ Tip: Short on ERG for fees? Use [babel-fees](babel-fees.md) to pay Ergo transact
    - Gain exposure to Ergo, Bitcoin, Ethereum, and BSC bridged tokens on Cardano DEXs like Spectrum, Minswap, and SundaeSwap.
 - Liqwid Finance
    - DeFi markets for bridged assets (e.g., rsERG, rsBTC, rsETH, rsBNB): https://v2.liqwid.finance/market/ERG
-- Lenfi
-   - Explore lending and borrowing with bridged assets: https://app.lenfi.io/
-
 ### Ethereum
 
 - Trade and LP on Uniswap

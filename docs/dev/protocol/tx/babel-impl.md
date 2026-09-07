@@ -279,12 +279,12 @@ To test your implementation:
 ## Reference Implementations
 - [Nautilus Wallet implementation](https://github.com/capt-nemo429/nautilus-wallet/pull/82)
 - [AppKit implementation](https://github.com/ergoplatform/ergo-appkit/pull/204)
-- [Fleet SDK Babel fees plugin](https://fleet-sdk.github.io/docs/plugins/babel-fees)
+- [Fleet SDK Babel fees plugin](https://github.com/fleet-sdk/fleet/tree/master/plugins/babel-fees)
 
 ## Additional Resources
 
 - [EIP-0031 Specification](https://github.com/ergoplatform/eips/blob/master/eip-0031.md)
-- [Fleet SDK Documentation](https://fleet-sdk.github.io/docs/plugins/babel-fees)
+- [Fleet SDK Babel fees plugin](https://github.com/fleet-sdk/fleet/tree/master/plugins/babel-fees)
 - [Ergo Platform API Documentation](https://api.ergoplatform.com/api/v1/docs/)
 
 ## Wallet Implementation Considerations

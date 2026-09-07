@@ -9,6 +9,7 @@ tags:
   - Cold Storage
   - Security
   - Getting Started
+owner: docs
 ---
 
 # Choosing an Ergo Wallet

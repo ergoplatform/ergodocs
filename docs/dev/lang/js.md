@@ -57,7 +57,7 @@ With the availability of [Sigma.js](sigmajs.md), [Fleet](fleet.md) can play the 
 [{
  "title": " dAppStep Docs",
     "content": "include many practical examples with Javascript and Nodejs that will help you to understand to implement different aspects of [dApp functionality](get-started.md) on Ergo",
-    "url": "https://www.dappstep.com/"
+    "url": "https://github.com/nirvanush/dappstep-play"
   },
   {
  "title": " dApp Development Course",

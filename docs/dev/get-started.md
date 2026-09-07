@@ -502,6 +502,4 @@ To further explore and understand Ergo's concepts, you can interact with the fol
 
 - **[Sigmaverse.io](https://sigmaverse.io/)**: Explore a diverse range of dApps built on Ergo.
 
-- **[ErgCube](https://ergcube.com/)**: Another platform to discover and interact with Ergo dApps.
-
 - The [**Ecosystem**](use-cases-overview.md) section on this site acts as a directory for projects building on Ergo and potential future ideas.

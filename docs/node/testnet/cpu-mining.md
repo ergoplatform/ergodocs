@@ -69,4 +69,4 @@ Please note that blocks take 720 confirmations on Ergo.
 
 ## Resources
 
-[testnet.sigmaexplorer.org](https://testnet.sigmaexplorer.org/) is a handy alternative version of the ergo explorer that shows miner distribution, hashrate and difficulty.
+Use the [testnet explorer](https://testnet.ergoplatform.com/) to inspect blocks and transactions while mining.

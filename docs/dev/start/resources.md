@@ -54,7 +54,6 @@ This page outlines the resources available on Ergo. Also check out the [dev-tool
   - [Node API](https://git.io/fjqwb)
   - [Explorer API](https://git.io/fjqwN)
   - [Ergo.Watch API](https://api.ergo.watch/docs)
-- [TokenJay API](https://api.tokenjay.app/swagger-ui/index.html;jsessionid=59429AD4DF081E2E3450C2834095D427?attribute=redirectWithRedirectView)
 
 ### Test vectors
 
@@ -87,6 +86,5 @@ This page outlines the resources available on Ergo. Also check out the [dev-tool
 
 - [awesome-ergo](https://github.com/ergoplatform/awesome-ergo)
 - [ergonaut.space](https://ergonaut.space/)
-- [ergosites.github](https://ergosites.github.io/)
 - [ErgoWiki](https://github.com/ergoplatform/ergo/wiki) | The official ergoplatform GitHub wiki
 - [ergotutorials.com](https://ergotutorials.com/)

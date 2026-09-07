@@ -177,7 +177,7 @@ Additionally, the contract does not include logic for self-destruction or final 
 
 ## Comet Refundable ICO
 
-Comet has a refundable ICO live at [thecomettoken.com/ICO](https://thecomettoken.com/ICO)
+Comet published a refundable ICO implementation.
 
 The contract used is [provided](https://github.com/CometCommunity/CometCommunity/blob/main/RefundableIcoContract):
 

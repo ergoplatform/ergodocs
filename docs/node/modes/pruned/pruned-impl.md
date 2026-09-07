@@ -80,4 +80,4 @@ A pruned client downloads all headers, validates proofs-of-work, and links struc
 9. **On `BlockTransactions` Reception**: same as Fullnode.7.
 10. Operate as Fullnode.
 
-This revised workflow streamlines the operation of a pruned full node, emphasizing efficiency and security, positioning Ergo and similar blockchains for broader adoption within the constraints of typical hardware. For a deeper dive into nipopows, you can explore [this paper](http://fc16.ifca.ai/bitcoin/papers/KLS16.pdf).
+This revised workflow streamlines the operation of a pruned full node, emphasizing efficiency and security, positioning Ergo and similar blockchains for broader adoption within the constraints of typical hardware. For a deeper dive into NIPoPoWs, see [Proofs of Proofs of Work with Sublinear Complexity](https://doi.org/10.1007/978-3-662-53357-4_5).

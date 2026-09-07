@@ -40,7 +40,7 @@ Here are some tutorials, guides, and explanations to help you get started with S
 - [ErgoScript](ergoscript.md): Learn about ErgoScript, Ergo's scripting language.
 - [AppKit](appkit.md): Discover how to use Ergo's AppKit to develop [applications](use-cases-overview.md).
 - [Ergo Tutorials by Zackbalbin](https://github.com/zackbalbin/ErgoTutorials): A collection of tutorials for Ergo development.
-- [Learning Ergo 101: Development Workflow](https://blog.cryptostars.is/learning-ergo-101-development-workflow-aa17dd63ef6): A guide to the [development workflow](get-started.md) for Ergo.
+- [Development Workflow](get-started.md): Start with the maintained developer guide for Ergo.
 
 ## Development Resources
 

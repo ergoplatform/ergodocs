@@ -18,10 +18,10 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 ## Summary
 
 - Source-watched pages: `240`
-- Watched repositories: `238`
+- Watched repositories: `239`
 - Watched GitHub owners: `101`
-- Watched repo/branch pairs: `244`
-- Watched paths: `517`
+- Watched repo/branch pairs: `245`
+- Watched paths: `520`
 - Release-watched page/repository refs: `15`
 
 ## Coverage Groups
@@ -30,7 +30,7 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | --- | ---: | ---: | ---: | ---: |
 | Core / infrastructure | 5 | 31 | 133 | 196 |
 | Ecosystem org | 10 | 39 | 25 | 36 |
-| Developer / project | 83 | 165 | 119 | 102 |
+| Developer / project | 83 | 166 | 119 | 104 |
 | External standard/vendor | 3 | 3 | 6 | 6 |
 
 ## Coverage By Area
@@ -146,7 +146,7 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`pattern-tech`](https://github.com/pattern-tech) | Developer / project | 2 | 1 | 1 |
 | [`paulmillr`](https://github.com/paulmillr) | Developer / project | 1 | 1 | 1 |
 | [`pulsarz`](https://github.com/pulsarz) | Developer / project | 1 | 1 | 1 |
-| [`reputation-systems`](https://github.com/reputation-systems) | Developer / project | 1 | 1 | 1 |
+| [`reputation-systems`](https://github.com/reputation-systems) | Developer / project | 2 | 1 | 3 |
 | [`scruper`](https://github.com/scruper) | Developer / project | 1 | 1 | 1 |
 | [`sdaveas`](https://github.com/sdaveas) | Developer / project | 1 | 1 | 1 |
 | [`sigmastamp`](https://github.com/sigmastamp) | Developer / project | 1 | 1 | 1 |
@@ -365,6 +365,7 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`paulmillr/noble-ciphers`](https://github.com/paulmillr/noble-ciphers) | Developer / project | `main` | 1 | 1 |
 | [`pulsarz/hodlcoin-frontend`](https://github.com/pulsarz/hodlcoin-frontend) | Developer / project | `master` | 1 | 1 |
 | [`reputation-systems/forum-application`](https://github.com/reputation-systems/forum-application) | Developer / project | `master` | 1 | 1 |
+| [`reputation-systems/reputation-system`](https://github.com/reputation-systems/reputation-system) | Developer / project | `master` | 1 | 3 |
 | [`rosen-bridge/cleanup-service`](https://github.com/rosen-bridge/cleanup-service) | Core / infrastructure | `dev` | 1 | 1 |
 | [`rosen-bridge/network-client`](https://github.com/rosen-bridge/network-client) | Core / infrastructure | `dev` | 1 | 1 |
 | [`rosen-bridge/rosen-sdk`](https://github.com/rosen-bridge/rosen-sdk) | Core / infrastructure | `dev` | 1 | 1 |
@@ -631,6 +632,7 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`paulmillr/noble-ciphers`](https://github.com/paulmillr/noble-ciphers) | `main` | `README.md` | `docs/dev/stack/fleet.md` |
 | [`pulsarz/hodlcoin-frontend`](https://github.com/pulsarz/hodlcoin-frontend) | `master` | `README.md` | `docs/eco/hodlcoin.md` |
 | [`reputation-systems/forum-application`](https://github.com/reputation-systems/forum-application) | `master` | `README.md` | `docs/eco/reputation-system.md` |
+| [`reputation-systems/reputation-system`](https://github.com/reputation-systems/reputation-system) | `master` | `LIBRARY.md`<br>`README.md`<br>`src/lib` | `docs/eco/reputation-system.md` |
 | [`rosen-bridge/cleanup-service`](https://github.com/rosen-bridge/cleanup-service) | `dev` | `README.md` | `docs/eco/rosen.md` |
 | [`rosen-bridge/guard-service`](https://github.com/rosen-bridge/guard-service) | `master` | `README.md` | `docs/eco/rosen.md`<br>`docs/roadmap.md` |
 | [`rosen-bridge/network-client`](https://github.com/rosen-bridge/network-client) | `dev` | `README.md` | `docs/eco/rosen.md` |

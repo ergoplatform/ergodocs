@@ -78,5 +78,4 @@ For an easy docker setup see [easy-ergo-oracle](https://github.com/reqlez/ergo-e
 
 The Delphi Project aimed to facilitate exploration, operation, and launching of decentralized oracles on the Ergo blockchain.
 
-- [Website](https://delphiproject.org/#)
 - [Final Report](https://hackmd.io/@abchris/S1dHZcwyc)

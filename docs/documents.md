@@ -75,6 +75,5 @@ This page contains links to documents with a general overview of Ergo platform, 
 - [Ergo Platform Presentation, Seoul](https://www.youtube.com/watch?v=R4ieaI6pn7M) - September 2019.
 - [Ergo Platform Presentation, Hong Kong (at Genesis Block)](https://www.youtube.com/watch?v=nK2ZBsLCGIU&t) - September 2019.
 - [Ergo Platform Presentation, Ho Chi Minh](https://www.youtube.com/watch?v=1SrzybpblMM&t) - September 2019.
-- [Ergo Platform Presentation, Shanghai](https://www.yizhibo.com/l/gvz0R4fXK6aOgMOy.html) - September 2019.
 - [Ergo Platform Presentation, Hong Kong (at Genesis Block)](https://www.youtube.com/watch?v=nrF-r_sylsU&t) - January 2019.
 - [Ergo Platform Presentation, Sanya, Hainan](https://www.youtube.com/watch?v=Ae8VDOo1YfM) - January 2019. 2019年区块链技术大会 / 2019 International Blockchain Technology Conference (IBTC2019).

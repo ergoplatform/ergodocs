@@ -94,7 +94,7 @@ Useful public entry points:
 
 - Ergo Explorer: [explorer.ergoplatform.com](https://explorer.ergoplatform.com/)
 - Ergo Explorer alternatives: [ergexplorer.com](https://ergexplorer.com/), [sigmaspace.io](https://sigmaspace.io/)
-- Public peer list: [api.tokenjay.app/peers/list](http://api.tokenjay.app/peers/list)
+- Peer discovery and connection management: [Peer Management](peer-management.md)
 
 ## Baseline Hardening
 
