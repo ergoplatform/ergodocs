@@ -64,6 +64,6 @@ This section includes parameters related to the network settings.
 ### REST API Configuration
 
 `scorex.restApi.apiKeyHash`
-This parameter represents the hash of your API key. In the devnet configuration, it is set to `null`. The API key protects the invocation of critical API methods.
+This parameter represents the hash of your API key. In `devnet.conf` it is set to the Blake2b256 hash of `hello` (`324dcf02…`), the same placeholder as the other shipped configs; change it before exposing the API. The API key protects the invocation of critical API methods.
 
-**Note:** Even though it is set to `null` for development, you must ensure to secure the transmission of the API key in a real-world scenario, as it is transmitted as plain text in the HTTP header and can be intercepted during network transit!
+**Note:** Even with a placeholder key for development, you must ensure to secure the transmission of the API key in a real-world scenario, as it is transmitted as plain text in the HTTP header and can be intercepted during network transit!
