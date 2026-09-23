@@ -27,6 +27,7 @@ Use testnet for public compatibility testing. Use devnet/private fork when you n
 | Sync full testnet history | [Testnet full sync](testnet-full.md) |
 | Mine blocks for local tests | [CPU mining](cpu-mining.md) |
 | Run isolated custom chain | [Fork your own chain](mine-your-own-chain.md) |
+| Run several nodes on one private chain (Scala and Rust) | [Fixed-difficulty devnet](devnet60.md) |
 | Check config shape | [testnet.conf](testnetconf.md), [devnet.conf](devnetconf.md) |
 
 ## Operator Notes

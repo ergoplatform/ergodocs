@@ -944,6 +944,7 @@ nav:
               - Full Sync: node/testnet/testnet-full.md
               - CPU Mining: node/testnet/cpu-mining.md
               - Fork Your Own Chain: node/testnet/mine-your-own-chain.md
+              - Fixed-Difficulty Devnet: node/testnet/devnet60.md
               - Testnet Resources: node/testnet/testnet-resources.md
               - 6tx Testing: node/6tx-testing.md
           - Configuration & Wallets:
