@@ -60,6 +60,8 @@ Several mining pools offer a solo port for those who prefer this method. A compr
   - [Hero Miners: How to Mine Ergo (ERG)? Complete Beginner’s Guide](https://herominers.medium.com/how-to-mine-ergo-erg-complete-beginners-guide-608a87e89ed6)
   - [HeroMiners: How to mine Erg](https://ergo.herominers.com/#how-to-mine-ergo-erg)
   - [How to Mine Ergo? Step by Step (Youtube)](https://www.youtube.com/watch?v=4SnpCF67kyc)
+- [VEIN Pool](https://veinpool.fr/coin/erg?lang=en) (EU, PPLNS, own full node)
+  - [How to start mining Ergo on VEIN](https://veinpool.fr/coin/erg?lang=en#connect)
 
 ### SmartPools
 
