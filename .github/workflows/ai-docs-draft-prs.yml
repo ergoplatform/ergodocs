@@ -24,6 +24,21 @@ on:
         description: "Maximum page draft PRs to attempt"
         required: false
         default: "3"
+      max_requests:
+        description: "Total model request cap, including retries"
+        required: false
+        default: "9"
+      max_output_tokens:
+        description: "Output token cap per model request"
+        required: false
+        default: "12000"
+      run_timeout:
+        description: "Automation execution budget in seconds"
+        required: false
+        default: "600"
+      resume_run_id:
+        description: "Optional prior Actions run ID whose checkpoint artifact should be revalidated"
+        required: false
       repo:
         description: "Optional watched source repo filter, owner/name"
         required: false
@@ -36,7 +51,11 @@ on:
       dry_run:
         description: "Generate AI decisions without pushing PRs"
         required: false
-        default: "false"
+        default: "true"
+        type: choice
+        options:
+          - "true"
+          - "false"
       include_open_prs:
         description: "Include open pull requests as evidence for explicit latest-work/roadmap testing"
         required: false
@@ -53,6 +72,7 @@ jobs:
     timeout-minutes: 25
 
     permissions:
+      actions: read
       contents: write
       pull-requests: write
       issues: write
@@ -64,16 +84,19 @@ jobs:
       REPORT_DIR: ai-docs-draft-prs
       AI_PROVIDER: ${{ github.event.inputs.provider || 'openai' }}
       MODEL: ${{ github.event.inputs.model || '' }}
-      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
       MAX_PAGES: ${{ github.event.inputs.max_pages || '3' }}
+      MAX_REQUESTS: ${{ github.event.inputs.max_requests || '9' }}
+      MAX_OUTPUT_TOKENS: ${{ github.event.inputs.max_output_tokens || '12000' }}
+      RUN_TIMEOUT: ${{ github.event.inputs.run_timeout || '600' }}
+      RESUME_RUN_ID: ${{ github.event.inputs.resume_run_id || '' }}
       REPO_FILTER: ${{ github.event.inputs.repo || '' }}
       PAGE_FILTER: ${{ github.event.inputs.page || '' }}
       MAX_QUERIES: ${{ github.event.inputs.max_queries || '' }}
-      DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
+      DRY_RUN: ${{ github.event.inputs.dry_run || 'true' }}
       INCLUDE_OPEN_PRS: ${{ github.event.inputs.include_open_prs || 'false' }}
       SCAN_DAYS: ${{ github.event.inputs.days || '7' }}
       SCAN_SINCE: ${{ github.event.inputs.since || '' }}
+      BASE_BRANCH: ${{ github.ref_name }}
 
     steps:
       - name: Checkout
@@ -108,6 +131,8 @@ jobs:
           echo "since=$SINCE" >> "$GITHUB_OUTPUT"
 
       - name: Scan all watched source repos
+        env:
+          SOURCE_SINCE: ${{ steps.window.outputs.since }}
         run: |
           EXTRA_SCAN_ARGS=(--no-open-prs)
           if [ "$INCLUDE_OPEN_PRS" = "true" ]; then
@@ -124,7 +149,7 @@ jobs:
           fi
           python tools/source_watch.py scan \
             --github \
-            --since "${{ steps.window.outputs.since }}" \
+            --since "$SOURCE_SINCE" \
             --watch-mode narrow \
             --release-owner ergoplatform \
             --release-owner ScorexFoundation \
@@ -133,9 +158,30 @@ jobs:
             --no-fail-on-changes \
             "${EXTRA_SCAN_ARGS[@]}"
 
+      - name: Restore prior checkpoint
+        if: github.event.inputs.resume_run_id != ''
+        run: |
+          if [[ ! "$RESUME_RUN_ID" =~ ^[0-9]+$ ]]; then
+            echo "resume_run_id must be a numeric Actions run ID" >&2
+            exit 2
+          fi
+          gh run download "$RESUME_RUN_ID" \
+            --repo "$GITHUB_REPOSITORY" \
+            --name ai-docs-draft-prs \
+            --dir "$REPORT_DIR/resume"
+          cp "$REPORT_DIR/resume/ai-docs-draft-prs.json" "$REPORT_DIR/ai-docs-draft-prs.json.restoring"
+          mv "$REPORT_DIR/ai-docs-draft-prs.json.restoring" "$REPORT_DIR/ai-docs-draft-prs.json"
+          rm -rf "$REPORT_DIR/resume"
+
       - name: Create AI-assisted draft PRs
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: |
           EXTRA_ARGS=()
+          if [ -n "$RESUME_RUN_ID" ]; then
+            EXTRA_ARGS+=(--resume)
+          fi
           if [ "$DRY_RUN" = "true" ]; then
             EXTRA_ARGS+=(--dry-run)
           fi
@@ -144,16 +190,21 @@ jobs:
           fi
           python tools/ai_docs_draft_prs.py \
             --report "$REPORT_DIR/source-watch.json" \
-            --repo "${{ github.repository }}" \
+            --repo "$GITHUB_REPOSITORY" \
             --provider "$AI_PROVIDER" \
             --model "$MODEL" \
-            --base-branch "${{ github.ref_name }}" \
+            --base-branch "$BASE_BRANCH" \
             --max-pages "$MAX_PAGES" \
+            --max-requests "$MAX_REQUESTS" \
+            --max-output-tokens "$MAX_OUTPUT_TOKENS" \
+            --run-timeout "$RUN_TIMEOUT" \
             --output "$REPORT_DIR/ai-docs-draft-prs.json" \
             "${EXTRA_ARGS[@]}"
 
       - name: Write run summary
         if: always()
+        env:
+          SOURCE_SINCE: ${{ steps.window.outputs.since }}
         run: |
           SUMMARY_MODEL="$MODEL"
           if [ -z "$SUMMARY_MODEL" ] && [ "$AI_PROVIDER" = "github-models" ]; then
@@ -166,10 +217,14 @@ jobs:
           {
             echo "## AI Docs Draft PRs"
             echo
-            echo "- Since: \`${{ steps.window.outputs.since }}\`"
+            echo "- Since: \`$SOURCE_SINCE\`"
             echo "- Provider: \`$AI_PROVIDER\`"
             echo "- Model: \`$SUMMARY_MODEL\`"
             echo "- Max pages: \`$MAX_PAGES\`"
+            echo "- Max model requests: \`$MAX_REQUESTS\`"
+            echo "- Max output tokens per request: \`$MAX_OUTPUT_TOKENS\`"
+            echo "- Execution budget seconds: \`$RUN_TIMEOUT\`"
+            echo "- Resume run: \`${RESUME_RUN_ID:-none}\`"
             echo "- Repo filter: \`${REPO_FILTER:-none}\`"
             echo "- Page filter: \`${PAGE_FILTER:-none}\`"
             echo "- Max queries: \`${MAX_QUERIES:-none}\`"

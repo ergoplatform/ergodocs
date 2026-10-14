@@ -160,13 +160,13 @@ Treat Discord output as leads only. Verify claims against source repositories, i
 
 Creates AI-assisted draft pull requests from a Source Watch JSON report.
 
-The script uses GitHub Models to compare a candidate docs page with upstream commit context and choose:
+The script supports OpenAI, OpenRouter, and GitHub Models to compare candidate docs pages with fetched upstream evidence and choose:
 
 - `no-doc-change`
 - `needs-human-review`
 - `draft-pr-safe`
 
-It only opens draft PRs for `draft-pr-safe` results. Draft PRs still require human review and must not be auto-merged.
+It opens human-reviewed draft PRs only when evidence references and Markdown protections pass, including usable `needs-human-review` drafts. Missing evidence blocks generation; unsafe drafts become review-required outcomes. Draft PRs must not be auto-merged.
 
 Common dry run:
 
@@ -177,7 +177,17 @@ Common dry run:
   --dry-run
 ```
 
-The GitHub Actions workflow `.github/workflows/ai-docs-draft-prs.yml` is the normal way to run it with GitHub Models permissions.
+The manual GitHub Actions workflow `.github/workflows/ai-docs-draft-prs.yml` defaults to a dry run. Results are incremental atomic checkpoints; `--resume` re-fetches and fingerprints inputs before reusing decisions. Execution has explicit request, token-output, attempt, and time caps. See the [Source Watch Playbook](source-watch-playbook.md) for outcomes, resume rules, limits, and publishing permissions.
+
+### `tools/evaluate_ai_docs.py`
+
+Runs recorded policy regression cases without network calls. `--live` permits explicit named-model comparisons only with request, output-token, and time budgets; it never publishes.
+
+```bash
+.venv/bin/python tools/evaluate_ai_docs.py
+```
+
+Evaluation shares the automation's response, evidence, Markdown, and bounded generation helpers. Scores measure policy/outcome agreement; factual faithfulness still needs human review.
 
 External repositories that are useful for maintainer context but do not currently need user-facing Ergo project pages:
 

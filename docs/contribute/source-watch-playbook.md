@@ -231,26 +231,67 @@ Inputs:
 - `provider`: AI provider, defaulting to `openai`.
 - `model`: optional AI model ID; defaults to `gpt-5.4-mini` for OpenAI, `openrouter/free` for OpenRouter, and `openai/gpt-4.1` for GitHub Models.
 - `max_pages`: maximum number of candidate pages to attempt.
+- `max_requests`: total model call cap, including retries; defaults to 9.
+- `max_output_tokens`: output cap per model request; defaults to 12000.
+- `run_timeout`: execution budget in seconds; defaults to 600.
+- `resume_run_id`: optional prior Actions run ID; restores its checkpoint artifact and revalidates against a fresh scan.
 - `repo`: optional `owner/name` watched source filter for focused tests.
 - `page`: optional docs page or path fragment filter for focused tests.
 - `max_queries`: optional Source Watch path-query cap.
-- `dry_run`: generate AI decisions without pushing branches or opening PRs.
+- `dry_run`: generate AI decisions without external writes; defaults to `true`. Set `false` explicitly to publish review issues and draft PRs.
 - `include_open_prs`: include open pull requests as evidence for explicit latest-work or roadmap tests.
 
-The workflow:
+The workflow uses the shared candidate layer and a narrow Source Watch scan. Each candidate's commit patches, release notes, or opt-in PR files are fetched as structured outcomes with source IDs, retrieval status, resolved snapshots, and SHA-256 content identities. Every required source must be available and fit the evidence limits before generation. Missing patches, failed fetches, changing PR snapshots, incomplete file lists, and omitted or oversized evidence produce `unavailable-evidence` and a review-required outcome; no automatic Markdown draft is generated. This conservative gate can require manual review even when some useful evidence exists.
 
-1. Runs a narrow Source Watch scan for the requested window.
-2. Uses the same `tools/docs_update_candidates.py` candidate layer as the weekly issue workflow.
-3. Sends each actionable candidate page and upstream context to the configured AI provider, including commit patches, release notes, and opt-in open pull request bodies/files where available.
-4. Expects one of `no-doc-change`, `needs-human-review`, or `draft-pr-safe`.
-5. Creates one draft PR per `draft-pr-safe` page and per `needs-human-review` page when usable Markdown is available.
-6. Opens or updates a review issue when `needs-human-review` has no safe Markdown draft.
-7. Skips only `no-doc-change` pages.
-8. Adds model/action/confidence, reviewer uncertainty, and source evidence links to the PR or issue body.
-9. Reuses the same per-page branch and refreshes the existing PR body on reruns.
-10. Runs whitespace, nav, structure, and MkDocs build checks before pushing generated branches.
-11. Labels draft PRs and review issues `docs`, `automated`, and `needs-human-review`; sensitive pages also get `sensitive`.
-12. Uploads the AI decision JSON as an artifact and writes it to the run summary.
+The model still chooses `no-doc-change`, `needs-human-review`, or `draft-pr-safe`. Drafts must cite supplied `source_id` and `content_sha256` pairs in `evidence_refs`. Unknown IDs, wrong hashes, malformed responses, changed frontmatter, destructive edits, and public automation boilerplate are refused. Valid references establish provenance, not factual faithfulness: maintainers must verify each claim, example, and interpretation. The model cannot advance `last_reviewed`; human factual review owns that date.
+
+Validated Markdown can produce a human-reviewed draft PR for either draft action. Review decisions without usable Markdown, unavailable evidence, and rejected drafts can produce review issues. No-change decisions produce no external writes. The script retains existing branch ownership and duplicate checks, refuses to overwrite PRs that are no longer drafts, and checks whitespace, navigation, structure, and the MkDocs build before pushing. Publishing requires a clean checkout and a `--repo` matching GitHub `origin`. A failed repository operation stops the run; generated staged edits may remain for inspection rather than being discarded automatically.
+
+### Checkpoints and resume
+
+The output JSON is also the checkpoint. It is saved atomically after each page transition and model attempt, including the validated decision before publishing. A writer lock prevents concurrent updates. Completed pages remain available when a later page fails or the process is interrupted. Existing output requires `--resume` or a new output path.
+
+In Actions, set `resume_run_id` to a prior run from the same repository and retain the desired provider/model and limits. The workflow downloads only that run's checkpoint, scans sources again, and passes `--resume`. Switching a dry-run checkpoint to explicit publishing reuses matching validated decisions without a new model call. A hard cancellation or runner loss can prevent artifact upload; recovery needs a retained checkpoint.
+
+For example, resume a downloaded artifact locally in the same repository and execution configuration:
+
+```bash
+.venv/bin/python tools/ai_docs_draft_prs.py \
+  --report /tmp/source-watch.json \
+  --repo ergoplatform/ergodocs \
+  --output tools/state/ai-docs-draft-prs.json \
+  --dry-run --resume
+```
+
+Resume re-fetches sources and compares page text, source snapshots/content, candidate metadata, provider/model, limits, target repository/base branch, and implementation fingerprints. Changed inputs invalidate generation reuse. Matching decisions are revalidated through the current evidence and Markdown checks. Matching completed publications are retained; pending or failed publication retries use the existing branch/PR/issue checks without regenerating. In-flight model requests count toward the page attempt cap, even when their response or billing is unknown. An interrupted successful response is saved before normalization so it can be revalidated on resume. Permanent generation failures require changed configuration or a new output path to retry.
+
+`provider`, `model`, `results`, and each result's `page`, `action`, and `url` remain available. Additional fields include `stage`, `outcome`, `decision_outcome`, `sources`, `fingerprints`, `decision`, and `generation`. Outcomes distinguish `unavailable-evidence`, `generation-failure`, `validation-refusal`, `review-required`, `no-change`, `draft-ready`, and `publishing-failure`. Historical rows retained from earlier reports have `current: false`. Exit status is nonzero for current generation, validation, publishing, or execution-limit failures, including dry runs; evidence gates record review-required results without failing the run.
+
+### Execution limits and evaluation
+
+CLI limits default to 3 attempts per page, 9 model requests per invocation, 12000 output tokens per request, 85000 prompt characters, 60 seconds per model request, 180 seconds per page, and 600 seconds per invocation. Use `--max-attempts` (at most 5), `--max-requests`, `--max-output-tokens`, `--max-prompt-chars`, `--request-timeout`, `--page-timeout`, and `--run-timeout` to lower them. Page attempt counts survive resume; request/time budgets restart for each explicit invocation.
+
+Only transient transport failures receive bounded backoff retries. Authentication errors, malformed or truncated output, provider refusals, and validation failures receive no automatic generation retry. Publishing is a separate step and is never included in model retries. Provider/model, returned model identity, reported token usage, unreported usage attempts, elapsed generation time, attempt status, and classified errors are retained. Unknown usage is not reported as zero. These are request/output/time caps, not a dollar spending guarantee; provider billing for timed-out requests may be unavailable. HTTP requests also have wall-clock deadlines, including slow response reads. The CLI uses Unix locks and main-thread timers on macOS/Linux. Publication checks and subprocesses have their own bounded timeouts and can finish beyond the scheduling budget.
+
+Run repeatable policy regression cases without credentials or model calls:
+
+```bash
+.venv/bin/python tools/evaluate_ai_docs.py
+.venv/bin/python -m unittest discover -s tests
+```
+
+Live model comparisons are opt-in and never publish. Name each model explicitly and set a shared request, output-token, and time budget:
+
+```bash
+.venv/bin/python tools/evaluate_ai_docs.py --live \
+  --provider openai --model MODEL_A --model MODEL_B \
+  --max-cases 3 --max-requests 4 --max-output-tokens 1500 \
+  --run-timeout 120 --output tools/state/ai-docs-live-evaluation.json
+```
+
+The fixture suite measures policy/outcome agreement, evidence/reference gates, and edit protections. Live runs use the same policy and generation helpers, compare named models on synthetic task cases, and record per-model pass counts, calls, and reported usage. They do not measure real-world factual accuracy or replace human review. Recovery, retry, and publishing safety regressions live in `tests/test_ai_docs_execution.py`; evaluation cases live in `tests/fixtures/ai_docs_evaluation.json`.
+
+The manual workflow uploads incremental results even after failure. Dry runs make no issue, label, branch, or PR writes. The publishing job retains the write permissions needed for explicit publishing; source-only local dry runs can use a read-scoped GitHub token and a separate provider key. AI keys are exposed only to the generation step, and the model receives page/source text without credentials or repository tools.
 
 Configure `DOCS_BOT_TOKEN` if you want draft PRs to trigger normal pull request workflows. Without that secret, the workflow uses `GITHUB_TOKEN`, which can push branches and open PRs but may not trigger follow-on PR checks.
 

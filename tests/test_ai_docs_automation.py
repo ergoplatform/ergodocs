@@ -302,6 +302,8 @@ class BranchSafetyTests(unittest.TestCase):
                 return _completed("")
             if command[:3] == ["gh", "pr", "list"]:
                 return _completed("https://github.com/ergoplatform/ergodocs/pull/1\n")
+            if command[:3] == ["gh", "pr", "view"]:
+                return _completed('{"isDraft": true}')
             if command[:3] == ["git", "diff", "--"]:
                 return _completed("")
             return _completed("")

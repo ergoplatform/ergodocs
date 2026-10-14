@@ -1,0 +1,259 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "name": "supported-small-update",
+      "page": "docs/example.md",
+      "original": "---\nlast_reviewed: never\nsource_repos:\n  - repo: example/project\n---\n\n# Example\n\n## Usage\n\nRun tool.\n",
+      "source_content": "+ supports --retry",
+      "source_status": "available",
+      "response": {
+        "action": "draft-pr-safe",
+        "confidence": "high",
+        "summary": "Update retry usage",
+        "uncertainty": "Human factual review required",
+        "proposed_markdown": "---\nlast_reviewed: never\nsource_repos:\n  - repo: example/project\n---\n\n# Example\n\n## Usage\n\nRun tool.\n\nThe tool supports --retry.\n",
+        "evidence_refs": [
+          {
+            "source_id": "$SOURCE_ID",
+            "content_sha256": "$CONTENT_SHA256"
+          }
+        ]
+      },
+      "expected": "draft-ready",
+      "live": true
+    },
+    {
+      "name": "already-covered",
+      "page": "docs/example.md",
+      "original": "---\nlast_reviewed: never\nsource_repos:\n  - repo: example/project\n---\n\n# Example\n\n## Usage\n\nRun tool.\n",
+      "source_content": "No behavior change. The tool is run using the documented command.",
+      "source_status": "available",
+      "response": {
+        "action": "no-doc-change",
+        "confidence": "high",
+        "summary": "Update retry usage",
+        "uncertainty": "Human factual review required",
+        "proposed_markdown": "",
+        "evidence_refs": [
+          {
+            "source_id": "$SOURCE_ID",
+            "content_sha256": "$CONTENT_SHA256"
+          }
+        ]
+      },
+      "expected": "no-change",
+      "live": true
+    },
+    {
+      "name": "unavailable-required-evidence",
+      "page": "docs/example.md",
+      "original": "---\nlast_reviewed: never\nsource_repos:\n  - repo: example/project\n---\n\n# Example\n\n## Usage\n\nRun tool.\n",
+      "source_content": "+ supports --retry",
+      "source_status": "unavailable",
+      "response": {
+        "action": "draft-pr-safe",
+        "confidence": "high",
+        "summary": "Update retry usage",
+        "uncertainty": "Human factual review required",
+        "proposed_markdown": "---\nlast_reviewed: never\nsource_repos:\n  - repo: example/project\n---\n\n# Example\n\n## Usage\n\nRun tool.\n\nThe tool supports --retry.\n",
+        "evidence_refs": [
+          {
+            "source_id": "$SOURCE_ID",
+            "content_sha256": "$CONTENT_SHA256"
+          }
+        ]
+      },
+      "expected": "unavailable-evidence",
+      "live": true
+    },
+    {
+      "name": "partial-required-evidence",
+      "page": "docs/example.md",
+      "original": "---\nlast_reviewed: never\nsource_repos:\n  - repo: example/project\n---\n\n# Example\n\n## Usage\n\nRun tool.\n",
+      "source_content": "+ supports --retry",
+      "source_status": "incomplete",
+      "response": {
+        "action": "draft-pr-safe",
+        "confidence": "high",
+        "summary": "Update retry usage",
+        "uncertainty": "Human factual review required",
+        "proposed_markdown": "---\nlast_reviewed: never\nsource_repos:\n  - repo: example/project\n---\n\n# Example\n\n## Usage\n\nRun tool.\n\nThe tool supports --retry.\n",
+        "evidence_refs": [
+          {
+            "source_id": "$SOURCE_ID",
+            "content_sha256": "$CONTENT_SHA256"
+          }
+        ]
+      },
+      "expected": "unavailable-evidence",
+      "live": false
+    },
+    {
+      "name": "forged-source-reference",
+      "page": "docs/example.md",
+      "original": "---\nlast_reviewed: never\nsource_repos:\n  - repo: example/project\n---\n\n# Example\n\n## Usage\n\nRun tool.\n",
+      "source_content": "+ supports --retry",
+      "source_status": "available",
+      "response": {
+        "action": "draft-pr-safe",
+        "confidence": "high",
+        "summary": "Update retry usage",
+        "uncertainty": "Human factual review required",
+        "proposed_markdown": "---\nlast_reviewed: never\nsource_repos:\n  - repo: example/project\n---\n\n# Example\n\n## Usage\n\nRun tool.\n\nThe tool supports --retry.\n",
+        "evidence_refs": [
+          {
+            "source_id": "invented",
+            "content_sha256": "$CONTENT_SHA256"
+          }
+        ]
+      },
+      "expected": "validation-refusal",
+      "live": false
+    },
+    {
+      "name": "missing-source-reference",
+      "page": "docs/example.md",
+      "original": "---\nlast_reviewed: never\nsource_repos:\n  - repo: example/project\n---\n\n# Example\n\n## Usage\n\nRun tool.\n",
+      "source_content": "+ supports --retry",
+      "source_status": "available",
+      "response": {
+        "action": "draft-pr-safe",
+        "confidence": "high",
+        "summary": "Update retry usage",
+        "uncertainty": "Human factual review required",
+        "proposed_markdown": "---\nlast_reviewed: never\nsource_repos:\n  - repo: example/project\n---\n\n# Example\n\n## Usage\n\nRun tool.\n\nThe tool supports --retry.\n",
+        "evidence_refs": []
+      },
+      "expected": "validation-refusal",
+      "live": false
+    },
+    {
+      "name": "changed-review-date",
+      "page": "docs/example.md",
+      "original": "---\nlast_reviewed: never\nsource_repos:\n  - repo: example/project\n---\n\n# Example\n\n## Usage\n\nRun tool.\n",
+      "source_content": "+ supports --retry",
+      "source_status": "available",
+      "response": {
+        "action": "draft-pr-safe",
+        "confidence": "high",
+        "summary": "Update retry usage",
+        "uncertainty": "Human factual review required",
+        "proposed_markdown": "---\nlast_reviewed: 2026-10-14\nsource_repos:\n  - repo: example/project\n---\n\n# Example\n\n## Usage\n\nRun tool.\n\nThe tool supports --retry.\n",
+        "evidence_refs": [
+          {
+            "source_id": "$SOURCE_ID",
+            "content_sha256": "$CONTENT_SHA256"
+          }
+        ]
+      },
+      "expected": "validation-refusal",
+      "live": false
+    },
+    {
+      "name": "changed-source-metadata",
+      "page": "docs/example.md",
+      "original": "---\nlast_reviewed: never\nsource_repos:\n  - repo: example/project\n---\n\n# Example\n\n## Usage\n\nRun tool.\n",
+      "source_content": "+ supports --retry",
+      "source_status": "available",
+      "response": {
+        "action": "draft-pr-safe",
+        "confidence": "high",
+        "summary": "Update retry usage",
+        "uncertainty": "Human factual review required",
+        "proposed_markdown": "---\nlast_reviewed: never\nsource_repos:\n  - repo: example/other\n---\n\n# Example\n\n## Usage\n\nRun tool.\n\nThe tool supports --retry.\n",
+        "evidence_refs": [
+          {
+            "source_id": "$SOURCE_ID",
+            "content_sha256": "$CONTENT_SHA256"
+          }
+        ]
+      },
+      "expected": "validation-refusal",
+      "live": false
+    },
+    {
+      "name": "destructive-rewrite",
+      "page": "docs/example.md",
+      "original": "---\nlast_reviewed: never\nsource_repos:\n  - repo: example/project\n---\n\n# Example\n\n## Usage\n\nRun tool.\n",
+      "source_content": "+ supports --retry",
+      "source_status": "available",
+      "response": {
+        "action": "draft-pr-safe",
+        "confidence": "high",
+        "summary": "Update retry usage",
+        "uncertainty": "Human factual review required",
+        "proposed_markdown": "# Example\n\nTiny.",
+        "evidence_refs": [
+          {
+            "source_id": "$SOURCE_ID",
+            "content_sha256": "$CONTENT_SHA256"
+          }
+        ]
+      },
+      "expected": "validation-refusal",
+      "live": false
+    },
+    {
+      "name": "public-automation-boilerplate",
+      "page": "docs/example.md",
+      "original": "---\nlast_reviewed: never\nsource_repos:\n  - repo: example/project\n---\n\n# Example\n\n## Usage\n\nRun tool.\n",
+      "source_content": "+ supports --retry",
+      "source_status": "available",
+      "response": {
+        "action": "draft-pr-safe",
+        "confidence": "high",
+        "summary": "Update retry usage",
+        "uncertainty": "Human factual review required",
+        "proposed_markdown": "---\nlast_reviewed: never\nsource_repos:\n  - repo: example/project\n---\n\n# Example\n\n## Usage\n\nRun tool.\n\nThe tool supports --retry.\n\nSource Watch found this change.",
+        "evidence_refs": [
+          {
+            "source_id": "$SOURCE_ID",
+            "content_sha256": "$CONTENT_SHA256"
+          }
+        ]
+      },
+      "expected": "validation-refusal",
+      "live": false
+    },
+    {
+      "name": "review-without-draft",
+      "page": "docs/example.md",
+      "original": "---\nlast_reviewed: never\nsource_repos:\n  - repo: example/project\n---\n\n# Example\n\n## Usage\n\nRun tool.\n",
+      "source_content": "+ supports --retry",
+      "source_status": "available",
+      "response": {
+        "action": "needs-human-review",
+        "confidence": "high",
+        "summary": "Update retry usage",
+        "uncertainty": "Human factual review required",
+        "proposed_markdown": "",
+        "evidence_refs": []
+      },
+      "expected": "review-required",
+      "live": false
+    },
+    {
+      "name": "contradictory-no-change",
+      "page": "docs/example.md",
+      "original": "---\nlast_reviewed: never\nsource_repos:\n  - repo: example/project\n---\n\n# Example\n\n## Usage\n\nRun tool.\n",
+      "source_content": "+ supports --retry",
+      "source_status": "available",
+      "response": {
+        "action": "no-doc-change",
+        "confidence": "high",
+        "summary": "Update retry usage",
+        "uncertainty": "Human factual review required",
+        "proposed_markdown": "---\nlast_reviewed: never\nsource_repos:\n  - repo: example/project\n---\n\n# Example\n\n## Usage\n\nRun tool.\n\nThe tool supports --retry.\n",
+        "evidence_refs": [
+          {
+            "source_id": "$SOURCE_ID",
+            "content_sha256": "$CONTENT_SHA256"
+          }
+        ]
+      },
+      "expected": "validation-refusal",
+      "live": false
+    }
+  ]
+}
