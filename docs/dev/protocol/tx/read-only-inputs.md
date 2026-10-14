@@ -2,7 +2,7 @@
 tags:
   - Data Inputs
 owner: docs
-last_reviewed: 2026-05-29
+last_reviewed: 2026-10-14
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -34,6 +34,10 @@ Traditional UTXO-based blockchains involve the consumption and subsequent destru
 
 - **Non-Destructive Access:** Data inputs grant transactions the ability to tap into UTXO contents without the need to spend or consume them, preserving the UTXOs for future transactions.
 - **Concurrent Data Access:** Data inputs allow for the simultaneous referencing and reading of a UTXO's data by multiple transactions within a single block, without any of them spending the UTXO. This feature facilitates parallel processing and alleviates transaction execution bottlenecks.
+
+## Duplicate Data Input Limits
+
+The reference transaction validator limits repeated data inputs from height `1,885,000`. A transaction may have all distinct data-input IDs or one extra occurrence forming a single repeated pair; two repeated pairs or three occurrences of one ID are rejected. Build new transactions with unique data-input IDs rather than depending on the historical exception. This restricts repetition within one transaction, while different transactions can still read the same box without consuming it.
 
 ## Benefits of Data Inputs
 

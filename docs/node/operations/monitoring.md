@@ -5,7 +5,7 @@ tags:
   - Monitoring
   - Alerts
 owner: docs
-last_reviewed: 2026-09-22
+last_reviewed: 2026-10-14
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -68,3 +68,7 @@ chmod o+x ./prometheus-agent/entrypoint.sh
 ```
 
 Use these symbolic modes rather than fixed numeric permissions; they remain effective under restrictive umasks such as `007`.
+
+## Indexed Readiness
+
+For index-serving nodes, monitor `/blockchain/indexedHeight` alongside `/info`. In v6.0.8, affected indexed reads can return `503` with `Retry-After` during checkpoint/rollback recovery. Treat this as temporary unavailability, preserve the error in application health reporting, and retry after the advertised delay. Do not convert it into an empty wallet history or balance.

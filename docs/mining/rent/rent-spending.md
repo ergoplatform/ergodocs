@@ -11,7 +11,7 @@ Spending an expired Ergo box involves satisfying specific conditions that differ
 
 1. **Storage Fee Duration**: The box must have been retained for at least the designated storage fee period. This is validated by calculating the difference between the height of the upcoming block, as indicated in the preheader, and the creation height of the box. This difference should be greater than or equal to the storage fee period.
 2. **Spending Proof**: For an expired box, the spending proof must be left empty, eliminating the need for cryptographic authorization for the box's spending.
-3. **Storage Rent Awareness**: If the expired box is affected by storage rent, it must be processed through the appropriate storage rent mechanism. The storage rent endpoint must be queried to ensure compliance with Ergo’s storage rent rules.
+3. **Storage Rent Awareness**: If the expired box is affected by storage rent, it must be processed through the appropriate storage rent mechanism. The node validates the rent conditions; an external storage-rent endpoint is not a consensus requirement.
 
 ### Code Snippet for Verifying Storage Fee Duration
 
@@ -48,10 +48,18 @@ If both the above conditions are met, the expired box can be spent by anyone. To
    * The actual service must be custom-built to return valid `WorkMessage` objects with expired box logic included.
 
 4. **Spending an Expired Box Affected by Storage Rent**
-   * If an expired box lacks sufficient ERG to cover the required storage rent fee, the transaction must reference an additional input box.
-   * This box must provide enough value to pay the rent or satisfy pool policy for transaction acceptance.
+   * If an expired box cannot cover its calculated rent, the native validation path can consume it fully while naming an existing output index.
+   * Additional inputs may be needed for the rest of the transaction, but are not a blanket rent top-up requirement.
    * This mechanism ensures that outdated UTXOs do not remain in the state indefinitely and that rent is either paid or reclaimed.
 
 ### Summary
 
-With these changes, expired Ergo boxes can be properly mined and spent under storage rent conditions. While the Ergo node enforces storage rent rules during validation, external tooling (like custom candidate services) must be developed to support their inclusion in mining workflows.
+With these changes, expired Ergo boxes can be properly mined and spent under storage rent conditions. While the Ergo node enforces storage rent rules during validation, v6.0.8 provides native mining-time collection, while external custom-candidate services remain an alternative integration.
+
+## Native Node Collection and Validation
+
+[Reference-client v6.0.8](https://github.com/ergoplatform/ergo/releases/tag/v6.0.8) provides a native collection path: enable `ergo.node.mining`, `ergo.node.extraIndex`, and `ergo.node.storageRentCollection`, then wait for the index to catch up. An external custom-candidate service is an optional integration path rather than a requirement for native collection. Mainnet normally filters empty-proof rent claims from the mempool, so native claims go directly into candidate blocks.
+
+From height `1,885,000`, transaction validation requires distinct values for context-extension variable `127` across inputs that carry it. Separate expired boxes must not share one recreation output index. The rent interpreter also checks the recreation's creation height against the spending height; preserving the old creation height is not enough.
+
+If a box cannot cover its calculated rent, the native rent path can consume it fully while naming an existing output index. There is no general requirement to add another input solely to top up that box's rent. Ordinary transaction conservation, output, and mining-policy rules still apply.

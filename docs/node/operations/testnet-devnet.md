@@ -5,7 +5,7 @@ tags:
   - Devnet
   - Operations
 owner: docs
-last_reviewed: 2026-08-20
+last_reviewed: 2026-10-14
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -37,3 +37,7 @@ Use testnet for public compatibility testing. Use devnet/private fork when you n
 - Pin config files in version control for repeatable devnet tests.
 - For private chains, document genesis/config changes next to deployment scripts.
 - Current `testnet.conf` sets `version2ActivationHeight = 2147483647` and `version2ActivationDifficultyHex = "20"`, effectively disabling the historical protocol-v2/client-4.0 hard fork on public testnet. Do not assume public testnet reproduces that mainnet activation boundary; use a controlled devnet when testing activation behavior.
+
+## Mempool Policy Differences
+
+Current mainnet defaults reject empty-proof storage-rent claims from the mempool (`ergo.node.rejectStorageRentTxs = true`), while public testnet defaults to `false`. Both can still validate rent claims inside blocks. Set this flag explicitly when reproducing admission or relay behavior on a controlled network; network consensus parameters alone do not reproduce mainnet mempool policy.

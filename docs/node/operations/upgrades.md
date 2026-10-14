@@ -5,7 +5,7 @@ tags:
   - Upgrades
   - Rollback
 owner: docs
-last_reviewed: 2026-08-20
+last_reviewed: 2026-10-14
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -64,3 +64,9 @@ docker compose up -d
 ```
 
 Verify restore with `\dt` and confirm expected tables such as `block_entity`, `collateral_entity`, `event_trigger_entity`, and `transaction_entity`.
+
+## Reference Client 6.0.8
+
+[v6.0.8](https://github.com/ergoplatform/ergo/releases/tag/v6.0.8) includes durable extra-index recovery and optional mining-time storage-rent collection. After upgrade, watch indexed height and any temporary `503` responses from indexed reads; do not delete the index merely because recovery is pending. Collection stays off unless `ergo.node.storageRentCollection = true`, and also needs `mining = true` and `extraIndex = true`.
+
+Mainnet's `rejectStorageRentTxs = true` is a mempool policy; it does not ban rent claims from blocks. Check inherited network defaults before copying overrides between mainnet and testnet. Keep LevelDB 6.0.x data separate from the RocksDB 6.1.x line; the published v6.1.7 prerelease belongs to the earlier 6.0.7 implementation line.

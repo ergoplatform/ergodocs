@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: 2026-09-22
+last_reviewed: 2026-10-14
 source_repos:
   - repo: arkadianet/ergo-vanitygen-rust
     branch: main
@@ -36,7 +36,7 @@ Use this page to choose a wallet and learn basic wallet safety.
 | Desktop wallet | [Minotaur](minotaur.md) | Desktop-focused wallet option. |
 | Desktop wallet with optional full node | [Satergo](satergo.md) | Useful if you want a desktop wallet with node-oriented options. |
 | Mobile wallet | [Ergo Mobile Wallet](https://ergoplatform.org/en/ergo-wallet-app/) | Good fit for mobile holding and payments. |
-| Experimental Android wallet | [Argus](https://github.com/arkadianet/Argus/releases) | Debug-signed, unaudited alpha for testing only; do not use production funds. |
+| Experimental Android wallet | [Argus](https://github.com/arkadianet/Argus/releases) | Experimental beta for testing; verify release signatures and do not use production funds. |
 | Hardware wallet | [Ledger](ledger.md) | Better for higher-value custody and hardware signing. |
 | Experimental DIY hardware | [EPMW](https://github.com/epmw/epmw) | Developer hardware-wallet project; not a normal end-user wallet path. |
 | Offline storage | [Cold Wallet Guide](cold-wallet.md) | Use for long-term holding and reduced online exposure. |
@@ -53,8 +53,8 @@ For broader comparison, see [Wallets Overview](wallets.md).
 - A May 2026 dev-wallet update identified chained mobile transactions as a mempool-awareness issue. [Draft PR #212](https://github.com/ergoplatform/ergo-wallet-app/pull/212) explored a local metadata-only pending-transaction WAL for hot wallet, cold wallet, and ErgoPay flows; treat it as development work unless release notes say it shipped.
 - [Nautilus `v1.3.3`](https://github.com/nautls/nautilus-wallet/releases/tag/v1.3.3) adds Crux and HOF token metadata, updates token-rate fetching, adds Javanese and Malaysian translations, and bumps dependencies.
 - [Satergo `v1.9.4`](https://github.com/Satergo/Satergo/releases/tag/v1.9.4) fixes node launching and improves send-option address labels.
-- [Argus `v1.0.0-alpha.59`](https://github.com/arkadianet/Argus/releases/tag/v1.0.0-alpha.59) is the current experimental Android build. It resolves token names, decimals, and descriptions during ordinary wallet sync and caches them per wallet; automatic resolution requires an `extraIndex` node, never falls back to the explorer, and does not automatically resolve stealth-only holdings. Issuer metadata remains untrusted. Earlier alpha releases stopped automatic NFT artwork requests; remote previews require an IPFS gateway you choose and ordinary web URLs are not fetched automatically.
-- Recent alpha releases also make token-heavy transactions safer to construct: token change is split by the serialized box-size limit and funded at the required per-byte minimum, mixed-token boxes can be spent, and token change returns to the wallet for Dexy actions. Watch-only accounts and the initial EIP-19 offline-signing flow are available, but the upstream notes still describe the device and camera path as untested. The build remains debug-signed, unaudited, and unsuitable for production funds.
+- [Argus `v1.0.0-beta.6`](https://github.com/arkadianet/Argus/releases/tag/v1.0.0-beta.6) is the current checked experimental Android build. It validates recovery-phrase words and checksums before PIN setup, cleans pasted phrases, accepts the ten official BIP-39 languages, and supports legacy pre-1627 Ergo derivation with history-based selection and an explicit advanced override. The beta releases use the same release signing key. The earlier alpha.59 build resolves token names, decimals, and descriptions during ordinary wallet sync and caches them per wallet; automatic resolution requires an `extraIndex` node, never falls back to the explorer, and does not automatically resolve stealth-only holdings. Issuer metadata remains untrusted. Earlier alpha releases stopped automatic NFT artwork requests; remote previews require an IPFS gateway you choose and ordinary web URLs are not fetched automatically.
+- Recent alpha releases also make token-heavy transactions safer to construct: token change is split by the serialized box-size limit and funded at the required per-byte minimum, mixed-token boxes can be spent, and token change returns to the wallet for Dexy actions. Watch-only accounts and the initial EIP-19 offline-signing flow are available, but the upstream notes still describe the device and camera path as untested. The wallet remains experimental and unsuitable for production funds; a release signature identifies the publisher and does not constitute a security audit.
 
 ## Quick Decision
 

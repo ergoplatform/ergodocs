@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: 2026-08-20
+last_reviewed: 2026-10-14
 source_repos:
   - repo: BetterMoneyLabs/chaincash
     branch: master
@@ -73,6 +73,10 @@ This article explains ChainCash's functionality, explores practical applications
 - `Jul 19` to `Jul 21`: the public [Basis tracker](https://github.com/BetterMoneyLabs/basis-tracker) added multiple-redemption support, current-height fetching, a terminal helper, and clearer tracker-box setup and protocol documentation. The tracker commits cumulative debt mappings through an AVL-tree digest and remains prototype software.
 - `Aug 3` to `Aug 18`: the Basis tracker added a terminal wallet and MCP server, account and acceptance-policy workflows, on-chain reserve submission, stronger redemption checks, and consistent OpenAPI tests. Active Basis contract and specification files moved into the tracker repository. The server now supports optional TLS plus `none`, shared API-key, and per-request Schnorr-signature authentication modes with read/write/admin roles; production operators should not send credentials over plaintext.
 - Caveat: some transfer paths still depend on raw Schnorr signatures, so normal wallet support remains constrained.
+
+## Clearing Design
+
+The upstream [credit-clearing design note](https://github.com/BetterMoneyLabs/basis-tracker/blob/master/docs/cofi_clearing_schemes.md) maps obligation netting onto Basis through approved debt transfers and tracker state committed as an AVL-tree digest. It outlines an additional clearing service around the tracker API; this is design material, not evidence of a deployed automatic clearing network. The tracker operator sees the obligation graph, and acceptance policies do not replace credit assessment.
 
 ## Motivation and Evolution of Money
 

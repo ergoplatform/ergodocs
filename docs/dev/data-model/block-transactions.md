@@ -4,7 +4,7 @@ tags:
   - Transactions
   - Data Model
 owner: docs
-last_reviewed: 2026-05-26
+last_reviewed: 2026-10-14
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -65,3 +65,7 @@ Ergo transactions undergo rigorous [validation](validation.md) to ensure they ar
 * **[Scripts](ergoscript.md):** Programs written in [ErgoScript](ergoscript.md) (a powerful scripting language) that define the conditions for spending boxes.
 * **Spending Proofs:** Cryptographic proofs that demonstrate the spender has the right to use the funds in a box, often involving [signatures](signing.md) or more complex [cryptographic protocols](sigma.md).
 * **Context Extension:** A key-value map attached to a spending proof, providing additional data that can be used by scripts during validation. See [Blockchain Context](blockchain-context.md).
+
+## Stateful Validation Boundaries
+
+Transaction wire structure and stateful validity are separate checks. From height `1,885,000`, the reference validator allows at most one repeated pair of data-input IDs and requires distinct context-extension variable `127` values across inputs that carry storage-rent recreation indices. See [Data inputs](read-only-inputs.md) and [Storage rent spending](rent-spending.md). A transaction that serializes correctly must still pass these stateful rules.

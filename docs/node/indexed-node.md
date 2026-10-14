@@ -6,7 +6,7 @@ tags:
   - Blockchain
   - Explorer
 owner: docs
-last_reviewed: 2026-09-22
+last_reviewed: 2026-10-14
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -49,6 +49,10 @@ GET /blockchain/indexedHeight
 ```
 
 Do not treat node sync height and indexed height as the same signal. During startup or catch-up, the node can know the chain tip while indexed history is still behind.
+
+## Recovery and Temporary Unavailability
+
+In v6.0.8, affected indexed reads return HTTP `503` with a `Retry-After` header while an extra-index checkpoint is off the selected full chain or a rollback remains pending. This protects readers from inconsistent indexed data. Keep polling `/blockchain/indexedHeight`, compare `indexedHeight` with `fullHeight`, and inspect node logs. Honor the retry delay rather than treating the response as an empty history or deleting the index. Ordinary catch-up and checkpoint recovery are different conditions; a height lag alone is not the definition of this error.
 
 ## Indexed Route Map
 
@@ -400,7 +404,6 @@ Content-Type: application/json
       "ergoTree": "your_ergo_tree",
       "address": "your_address"
     }
-
 
   ]
 }

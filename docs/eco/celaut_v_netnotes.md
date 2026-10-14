@@ -39,9 +39,11 @@ ia_status: directory
 
 ---
 
+Nodo remains an alpha implementation. Its CLI has non-interactive commands and JSON output, but service compatibility, payment policies, and actual connector code still need to be verified for any integration.
+
 ## Can Celaut and Netnotes Be Used Together?  
 
-Yes, they complement each other perfectly.
+Their architectures can complement each other, but the current sources do not establish a shipped Netnotes-to-Celaut connector. Treat the following as an integration design, not an available product workflow.
 
 - **Netnotes** gives individuals full control over their personal financial strategies and automation agents.  
 - **Celaut** provides access to powerful decentralized services that can be called directly from Netnotes agents.  

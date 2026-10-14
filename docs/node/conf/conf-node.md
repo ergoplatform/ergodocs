@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: 2026-08-25
+last_reviewed: 2026-10-14
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -180,3 +180,19 @@ nipopowSuffix = 10
 ```
 
 The `nipopowBootstrap` setting, if set to true, allows the node to download the Proof of Proof of Work (NiPoPoW) on node bootstrap. `p2pNipopows` sets the number of different proofs we are downloading from other peers and comparing with each other, before choosing the best one. `nipopowSuffix` sets the minimal suffix size for NiPoPoW proof.
+
+## Storage Rent Policy
+
+`ergo.node.rejectStorageRentTxs` controls admission of storage-rent claim transactions to the mempool. It recognizes an empty spending proof together with context-extension variable `127`. The effective mainnet default is `true`; testnet and the base configuration default to `false`. This is relay/admission policy, not a change to whether a claim is valid in a block.
+
+Reference-client [v6.0.8](https://github.com/ergoplatform/ergo/releases/tag/v6.0.8) can build rent claims directly into mining candidates:
+
+```conf
+ergo.node.extraIndex = true
+ergo.node.mining = true
+ergo.node.storageRentCollection = true
+```
+
+Wait for the extra index to catch up, using `/blockchain/indexedHeight`. Collection is disabled by default and needs both mining and the extra index. A rent claim is placed before mempool transactions; a conflicting transaction that spends an eligible box can be invalidated from this node's mempool when a candidate is rebuilt, even if this miner never finds a block. Other nodes' mempools are unaffected.
+
+`ergo.node.storageRentTokenWhitelist` preserves listed tokens when a claim fully consumes a box: they are carried to the miner's proceeds instead of burned. Use lowercase hexadecimal token IDs; uppercase IDs do not match the canonical comparison. See [Storage rent spending](rent-spending.md) for the validation rules.

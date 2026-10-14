@@ -10,7 +10,6 @@ last_reviewed: 2026-05-29
 ia_status: directory
 source_of_truth:
  - https://playcyberverse.com/
- - https://docs.cyberversegame.io/cyberverse-whitepaper/
  - https://cyberverse-viewer.vercel.app/
 source_watch_note: Active project; public repo not verified during the 2026-05-29 sweep.
 ---
@@ -19,7 +18,7 @@ source_watch_note: Active project; public repo not verified during the 2026-05-2
 
 ## Overview
 
-[CyberVerse](https://docs.cyberversegame.io/cyberverse-whitepaper/) is an open-world, pixel-based game filled with various opportunities to socialize with others and earn while doing so. Their vision is to have an open world pixel game, fit with blockchain integration to allow for unique player experiences using Ergo Blockchain(by having NFT integrations, custom tokens, in-game marketplace integrated with Ergo blockchain, etc).
+[CyberVerse](https://playcyberverse.com/) is an open-world, pixel-based game filled with various opportunities to socialize with others and earn while doing so. Their vision is to have an open world pixel game, fit with blockchain integration to allow for unique player experiences using Ergo Blockchain(by having NFT integrations, custom tokens, in-game marketplace integrated with Ergo blockchain, etc).
 
 ## Recent updates
 

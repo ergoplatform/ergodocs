@@ -21,12 +21,17 @@ Dedicated docs pages should use their own `source_repos` entries with narrow wat
 - Records repository-level project links without making them active scan targets.
 - Keeps org-only and non-GitHub project links separate from active `source_repos`; Source Watch should use concrete `owner/repo` targets only on pages that need ongoing review.
 
+## Research Leads
+
+[Skunkyard](https://github.com/cafebedouin/skunkyard) is an Ergo research and measurement repository covering a Winternitz-signature verifier pilot and stealth-payment specification work. These are research artifacts, not activated mainnet features. The [Rosen Solana proposal](https://github.com/a-shannon/rosen-solana-proposal) publishes design and scoped implementation candidates for SOL and allowlisted original SPL tokens. Protocol decisions, upstream integration, independent review, and a complete operational bridge round trip remain open; it is not a supported live Rosen route.
+
 ## Reference Repositories
 
 These repositories are retained as a broad maintainer reference list. They are not active Source Watch inputs unless another docs page declares them in `source_repos`.
 
 | Repository | Branch | Reference paths |
 | --- | --- | --- |
+| [`a-shannon/rosen-solana-proposal`](https://github.com/a-shannon/rosen-solana-proposal) | `default` | `README.md`, `docs/integration` |
 | [`abchrisxyz/OraclePoolHub`](https://github.com/abchrisxyz/OraclePoolHub) | `default` | `README.md` |
 | [`ach2swift/ErgoStats`](https://github.com/ach2swift/ErgoStats) | `default` | `README.md` |
 | [`AcoSmrkas/ErgExplorer`](https://github.com/AcoSmrkas/ErgExplorer) | `default` | `README.md` |
@@ -47,6 +52,7 @@ These repositories are retained as a broad maintainer reference list. They are n
 | [`aslesarenko/sigma-rust-mini`](https://github.com/aslesarenko/sigma-rust-mini) | `default` | `README.md` |
 | [`babygrenade/ergo-tokenautics`](https://github.com/babygrenade/ergo-tokenautics) | `default` | `README.md` |
 | [`bitdomains/plasma`](https://github.com/bitdomains/plasma) | `default` | `README.md` |
+| [`cafebedouin/skunkyard`](https://github.com/cafebedouin/skunkyard) | `main` | `README.md` |
 | [`celaut-project/ergo-reputation-system`](https://github.com/celaut-project/ergo-reputation-system) | `default` | `README.md` |
 | [`chriswill/ergonode-spyder`](https://github.com/chriswill/ergonode-spyder) | `default` | `README.md` |
 | [`cornbelt-dev/sigma-subscriptions-manager`](https://github.com/cornbelt-dev/sigma-subscriptions-manager) | `default` | `README.md` |

@@ -5,7 +5,7 @@ tags:
   - Asset Trading
   - dApp
 owner: docs
-last_reviewed: '2026-06-27'
+last_reviewed: 2026-10-14
 source_repos:
   - repo: AcoSmrkas/mewfinance-ui
     branch: master
@@ -62,6 +62,13 @@ Mew Finance launched with six core products in Q4 2024:
 * **Mew Fund:** A platform facilitating community-driven investments.
 * **Mew Tools:** A collection of utilities to assist users with blockchain transactions.
 * **Mew Fun:** A lottery service developed in collaboration with ErgOne, aimed at improving liquidity for both projects.
+
+
+## Published Contract Sources
+
+The [smart-contract repository](https://github.com/AcoSmrkas/mew-smart-contracts) publishes individual ErgoScript sources, deployed addresses and compiler settings in `deployed.json`, and verification commands for recompiling each source and comparing its bytes with the published deployment. It distinguishes current Mart/Lend versions from legacy contracts and includes MEOW staking and Lithos Lock campaign/position contracts.
+
+Existing boxes remain governed by the contract version at their address. Read the matching current or legacy source before relying on fees, cancellation, lending, tier staking, or lock terms. Recompilation and byte matching establish source-to-address correspondence; they do not establish an independent security audit or guarantee returns.
 
 ## MEW Tier System
 

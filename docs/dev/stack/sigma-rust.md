@@ -15,7 +15,7 @@ tags:
   - Ruby
   - Python
 owner: docs
-last_reviewed: 2026-09-22
+last_reviewed: 2026-10-14
 source_repos:
   - repo: ergoplatform/bounded-vec
     branch: develop
@@ -200,3 +200,13 @@ Examples:
 * [Address generation demo](https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-wasm/examples/address-generation-demo) (TS)
 
 Also take a look at tests where various usage scenarios were implemented.
+
+## Recovery Phrase Compatibility
+
+The development branch [removes an invisible byte-order mark from the first French BIP39 word](https://github.com/ergoplatform/sigma-rust/commit/e48177bba4a2701216133a20e443ee4752b1991a). Previously generated French phrases containing that word could derive a different seed from the canonical phrase in other wallets. This is a development-branch fix, not a new `ergo-lib` release. Preserve the original recovery material for an existing wallet; changing its text can change the derived wallet.
+
+## Cross-Implementation Conformance
+
+SANTA compares raw wire bytes, evaluation values and costs, transaction validity, and block/chain behavior against scoped canonical oracles. Recent authored cases cover sized-tree parsing and reader-level leakage, context-extension values, node-construction failures, Deserialize substitution, storage-rent recreation, and accumulated validation cost. A passing runner corpus covers its declared slices and pinned implementation revision; it does not establish production readiness or full consensus completeness.
+
+The suite distinguishes upstream `sigma-rust` development from the cost-enabled `mwaddip` fork. Its maintained fork runner is `blitzen-mwaddip`; older `blitzen-eni` results are historical. Keep the resolved implementation SHA with any reported conformance result.

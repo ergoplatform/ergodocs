@@ -412,7 +412,7 @@ Several ErgoHack IX ideas remain useful prompts for future builders. Treat this 
 * **Wallets**
   * **Nautilus**: Added Ledger hardware wallet support using `ledgerjs-hw-app-ergo`, assisted other teams. ([Implementation](https://github.com/capt-nemo429/nautilus-wallet/pull/6), [Video](https://twitter.com/NautilusWallet/status/1493064272028393473))
   * **SAFEW**: Implemented Ledger support and initial ErgoMixer integration. ([Report](pdf/SAFEW_ergohack3_report.pdf))
-  * **Satergo**: Implemented Ledger support (HID, Speculos emulator, Ergo Ledger app protocol in Java, signing utils). ([Drive Folder](https://drive.google.com/drive/folders/1ERas6ZyJpkY_7W1az5q0X88OfYu5OipC?usp=sharing))
+  * **Satergo**: Implemented Ledger support (HID, Speculos emulator, Ergo Ledger app protocol in Java, signing utils). ([Satergo source](https://github.com/Satergo/Satergo))
 
 **Winners:**
 

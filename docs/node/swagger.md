@@ -7,7 +7,7 @@ tags:
   - UI
   - RPC Endpoints
 owner: docs
-last_reviewed: 2026-09-22
+last_reviewed: 2026-10-14
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -119,3 +119,7 @@ To derive a specific address, navigate to the `/wallet/deriveKey` endpoint, clic
 ```bash
 "derivationPath": "m/44'/429'/0'/0/0" 
 ```
+
+## Indexed API Recovery
+
+The v6.0.8 OpenAPI specification defines `ExtraIndexRecovering`: affected `/blockchain/...` reads return HTTP `503` and `Retry-After` while the extra-index checkpoint is off the selected full chain or a rollback remains pending. Retry after the advertised delay and check `/blockchain/indexedHeight` and node logs. This response describes temporary index readiness, not a missing box, an empty balance, or an API-key failure. See [Indexed Node API](indexed-node.md).

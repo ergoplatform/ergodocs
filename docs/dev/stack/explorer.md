@@ -22,7 +22,7 @@ There are several public explorer available:
 - [explorer.ergoplatform.com](https://explorer.ergoplatform.com/)
 - [ergexplorer.com](https://ergexplorer.com/)
 - [sigmaspace.io](https://sigmaspace.io/)
-- [ErgoScan](https://ergoscan.me/) — beta explorer covering blocks, transactions, addresses, tokens, mempool, and DeFi activity, with a [public API](https://ergoscan.me/docs).
+- [ErgoScan](https://ergoscan.me/) — beta explorer covering blocks, transactions, addresses, tokens, mempool, and DeFi activity, with a [public API](https://api.ergoscan.me/docs).
 
 ## Toolkits
 

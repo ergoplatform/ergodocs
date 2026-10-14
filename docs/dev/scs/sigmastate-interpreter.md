@@ -6,7 +6,7 @@ tags:
   - Compiler
   - Interpreter
 owner: docs
-last_reviewed: 2026-08-25
+last_reviewed: 2026-10-14
 source_repos:
   - repo: ergoplatform/sigmastate-interpreter
     branch: develop
@@ -41,6 +41,8 @@ source_of_truth:
 The [sigmastate-interpreter](https://github.com/ergoplatform/sigmastate-interpreter) repository contains the core implementations of the ErgoScript compiler and ErgoTree Interpreter. These tools are part of a broader framework that supports a family of Sigma-protocol based authentication languages, collectively known as the [*Sigma Language*](sigma-lang.md).
 
 This library is integral to the operation of the [Ergo Node](https://github.com/ergoplatform/ergo) and the [ergo-wallet](https://github.com/ergoplatform/ergo/tree/master/ergo-wallet). It serves as the backbone for processing and validating ErgoScript contracts, ensuring that transactions comply with the defined cryptographic conditions.
+
+[Sigma SDK v6.0.7](https://github.com/ergoplatform/sigmastate-interpreter/releases/tag/v6.0.7) drops Scala 2.11 cross-compilation and removes dead graph IR code and test-only DSL material from production sources. Check the Scala binary version of downstream dependencies when upgrading; these build changes do not add a new ErgoScript language feature.
 
 ## Recent updates
 
@@ -93,7 +95,7 @@ While the sigmastate-interpreter library provides the low-level primitives neces
 To start using the sigmastate-interpreter in your Scala project, add the following dependency to your SBT configuration:
 
 ```scala
-libraryDependencies += "org.scorexfoundation" %% "sigma-state" % "6.0.6"
+libraryDependencies += "org.scorexfoundation" %% "sigma-state" % "6.0.7"
 ```
 
 For more advanced usage and direct interaction with the ErgoTree and Sigma protocols, refer to the detailed [Sigma Language documentation](sigma-lang.md).

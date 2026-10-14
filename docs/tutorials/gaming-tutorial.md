@@ -10,24 +10,26 @@ tags:
 
 # CyberVerse Gaming Tutorial
 
+This page describes earlier gameplay. Verify current access, minting fees, token rules, and staking terms through the [official game site](https://playcyberverse.com/) before funding a game wallet.
+
 CyberVerse is a pixelated, open-world multiplayer game on the Ergo Blockchain. In its beta version, players can explore, play mini-games, and earn CYPX tokens. By owning a CyberCitizen NFT, players get access to Cyberia city to enjoy activities like DJing, car racing, gardening, and more, earning tokens in the process. They can also collect daily rewards, complete quests, level up, and personalize NFT apartments. Features include a global chat, leaderboards, and loot boxes. There is even a recently released multiplayer version.
 
 - [CyberVerse - The Journey (Trailer)](https://www.youtube.com/watch?v=SZh_vjE96ZU)
 - [Game Updates Log](https://cyberverse.fandom.com/wiki/Updates)
-- [Roadmap](https://docs.cyberversegame.io/whitepaper-v3./learn/roadmap)
+- [Official game site](https://playcyberverse.com/)
 
 ## How to Start Your Cyberverse Journey
 
 - **Acquire $CYPX**: The journey begins with purchasing a small amount of $CYPX, the in-game currency and project token. This initial step is crucial for logging in and participating in the game. For more details on $CYPX and its utility, refer to the Cyberpixel Token Litepaper.
 
 - **Obtain a Playable Character**: Citizens are playable NFTs with multiple utilities such as upcoming staking inside the game.  Players have two options to get started with their character in Cyberia:
-   1. **Minting**: Log into [playcyberverse.com](http://playcyberverse.com) with your $CYPX, navigate to "In-game balance," and transfer 15 $ERG to your in-game wallet to mint your own Cybercitizen.
+   1. **Minting**: Log into [playcyberverse.com](http://playcyberverse.com) with your $CYPX, navigate to "In-game balance," and check the current minting quote before funding the in-game wallet to mint a Cybercitizen.
      - [GEN3 Minting Tutorial](https://www.youtube.com/watch?v=GkWRoBSjFt0)
    2. **Secondary Market Purchase**: Alternatively, players can purchase a Cybercitizen NFT from secondary markets like [skyharbor.io](http://skyharbor.io) and use it to log into the game. (Given in the Resources section below)
 
 Once you've secured your character, you're ready to explore Cyberia, participate in private sessions, and engage with the community.
 
-- The [Official documentation and litepaper of CyberVerse game](https://docs.cyberversegame.io/cyberverse-litepaper/) has indepth documentation on the gameplay.
+- The [official CyberVerse site](https://playcyberverse.com/) is the starting point for current game access and published information.
 - You can also navigate to `Menu -> Help` to see a Help Book which goes over various parts of the game.
 - Guide: How to get started: <https://cyberverse.fandom.com/wiki/How_to_get_started>
 
@@ -45,7 +47,7 @@ In the CyberVerse, your NFTs are not just digital collectibles; they're assets t
 
 The bank feature within CyberCity serves as your hub for collecting the fruits of your staking endeavors. Here, you can manage your NFT assets efficiently and reap the rewards of your strategic investments.
 
-To dive deeper into the mechanics of staking and maximize your earnings, explore the [Staking Guide](https://docs.cyberversegame.io/cyberverse-whitepaper/cyberverse-guide/bank), your roadmap to successful staking within the CyberVerse.
+To dive deeper into the mechanics of staking and maximize your earnings, explore the [current game information](https://playcyberverse.com/), your roadmap to successful staking within the CyberVerse.
 
 ## MiniGames
 
@@ -68,11 +70,11 @@ $CYPX stands at the core of CyberCity's vibrant economy, empowering players to e
 - **Participate in Exclusive Events**: Use $CYPX to engage in forthcoming events, including the consumption of serums, hatching cyber eggs, or upgrading your citizens with specialized parts.
 - **Unlock VIP Experiences**: Gain access to exclusive areas within CyberCity by purchasing tickets with $CYPX. Optionally, estate owners can set entry fees for access to their properties, with proceeds going directly to them.
 
-For a comprehensive understanding of $CYPX's role within CyberCity, refer to the detailed [Tokenomics](https://docs.cyberversegame.io/cyberverse-whitepaper/cyberverse-guide/cyberverses-tokens/cypx-token).
+For a comprehensive understanding of $CYPX's role within CyberCity, refer to the detailed [official game information](https://playcyberverse.com/).
 
 ## Resources
 
-- [Whitepaper V3](https://docs.cyberversegame.io/whitepaper-v3./)
+- [Official game site](https://playcyberverse.com/)
 
 ### Video
 

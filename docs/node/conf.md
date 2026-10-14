@@ -6,7 +6,7 @@ tags:
   - application.conf
   - testnet.conf
 owner: docs
-last_reviewed: 2026-09-22
+last_reviewed: 2026-10-14
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -124,7 +124,11 @@ You can adjust your node's mining delay after discovering a new block using the 
 
 The default `blockCandidateGenerationInterval` is `60s`, so mining nodes regenerate block candidates about once per minute unless configured otherwise.
 
-The default testnet configuration currently advertises network `appVersion = 6.0.6`. Mainnet and testnet chain settings use `protocolVersion = 4`, which corresponds to the 6.0 interpreter feature set.
+The default testnet configuration currently advertises network `appVersion = 6.0.8`. Mainnet and testnet chain settings use `protocolVersion = 4`, which corresponds to the 6.0 interpreter feature set.
+
+### Storage Rent Admission and Collection
+
+Mainnet defaults to `ergo.node.rejectStorageRentTxs = true`, which keeps empty-proof storage-rent claims out of the mempool without making them invalid in blocks. Testnet defaults to `false`. Mining nodes running v6.0.8 can enable `storageRentCollection` with `mining` and `extraIndex`; see [Node Configuration](conf-node.md) before enabling it.
 
 ### REST API Settings
 

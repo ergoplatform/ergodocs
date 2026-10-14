@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: 2026-07-26
+last_reviewed: 2026-10-14
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -84,3 +84,7 @@ This section allows the setting of the node's REST API parameters.
 - `apiKeyHash` is the hash of your API key. The API key protects the invocation of critical API methods.
 
 **Note:** Ensure to secure the transmission of the API key as it is transmitted as plain text in the HTTP header and can be intercepted during network transit!
+
+## Storage Rent Mempool Policy
+
+`ergo.node.rejectStorageRentTxs = false` allows storage-rent claims to enter the testnet mempool. Mainnet defaults to `true`. The flag affects mempool admission and relay, while valid storage-rent claims remain valid in blocks. See [Node Configuration](conf-node.md).

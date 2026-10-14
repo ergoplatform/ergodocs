@@ -7,7 +7,7 @@ tags:
   - dApp
   - dApp-InDev
 owner: docs
-last_reviewed: 2026-09-22
+last_reviewed: 2026-10-14
 source_repos:
   - repo: Lithos-Protocol/Lithos-Client
     branch: master
@@ -41,7 +41,7 @@ Recently, Lithos has completed collateral contracts, and the ability of miners t
 
 ## Current Client Status
 
-The [Lithos Client](https://github.com/Lithos-Protocol/Lithos-Client) is the reference client for the Lithos Protocol. The upstream project currently publishes both a mainnet pre-release and an active testnet line. The mainnet [`v1.0.0-prerelease`](https://github.com/Lithos-Protocol/Lithos-Client/releases/tag/v1.0.0-prerelease) enables the initial LithosDex pool and vault plus order batching; emissions, rollup, mining, and other non-batching services remain disabled. It requires a fully synced, indexed Ergo node, Java 11, roughly 6–8 GB RAM, and about 30 GB for the node.
+The [Lithos Client](https://github.com/Lithos-Protocol/Lithos-Client) is the reference client for the Lithos Protocol. The mainnet client is [v1.0.3](https://github.com/Lithos-Protocol/Lithos-Client/releases/tag/v1.0.3). Follow the current README and mainnet configuration rather than the older batching-only mainnet prerelease. It requires a fully synced, indexed Ergo node v6.0.7/v6.1.7 or newer and Java 11. The current client supports mining and on-chain difficulty commitments; the earlier prerelease restrictions are historical.
 
 The current README describes Lithos as requiring a fully synced Ergo node and Java 11. Miners connect through the Lithos Stratum server, with Rigel Miner recommended. Lithos evaluates Non-Interactive Share Proofs rather than ordinary pool shares, so the miner address and worker name used by the Stratum client are not payout identifiers in the same way they are for a conventional pool.
 
@@ -66,3 +66,11 @@ Open testnet issue: [`#8`](https://github.com/Lithos-Protocol/Lithos-Client/issu
 - [Telegram](https://t.me/LITHOS_Protocol)
 - [GitHub](https://github.com/Lithos-Protocol)
 - [Litepaper](https://github.com/Lithos-Protocol/LitePaper)
+
+## Miner Setup and Commitments
+
+The web panel's difficulty calculator targets 17 super shares per window. Submit an on-chain difficulty commitment through the commitment page or `POST /mining/commitment` with the client API key. Upstream advises waiting 65 blocks before starting to mine and notes that payments for blocks begin 125 blocks after the commitment; later difficulty changes can take up to 28 hours to take effect. A change to `stratum.diff` alone is not an immediate on-chain commitment change.
+
+`stratum.bindAddress` defaults to `0.0.0.0`; set an explicit address when rigs should reach only a selected interface. The current node guide sets `offlineGeneration = true`. Inspect the client web panel and commitments state before treating a running Stratum listener as a ready, committed miner.
+
+[Lithos Launcher](https://github.com/Lithos-Protocol/Lithos-Launcher) is a Windows/Linux desktop setup and monitoring tool for Java, the Ergo node, and the client. It handles sync/index/wallet readiness and exposes commitment setup. Its test-mining mode disables transaction-generating services while testing difficulty; normal mining still needs the upstream funding, commitment, and node-readiness steps.

@@ -8,7 +8,7 @@ tags:
   - Artificial Economic Intelligence  
   - Service Virtualization  
 owner: docs
-last_reviewed: 2026-09-07
+last_reviewed: 2026-10-14
 source_repos:
   - repo: celaut-project/nodo
     branch: stable
@@ -59,6 +59,16 @@ Celaut is a decentralized, peer-to-peer runtime for deploying and coordinating *
 - `Aug 17`: operator views gained separate peer/client pages, payment and reputation-event histories, counterparties for recorded transactions, and a switch for automatic peer-deposit refills.
 
 ---
+
+## Current Operator Interface
+
+The current Nodo README marks its execution/networking surfaces as alpha. The CLI supports non-interactive workflows and structured `--json` results. `nodo execute --no-input` refuses missing required service environment variables; inspect declared variables with `nodo service_envs`. Packaging can run detached and be listed or cancelled, while managed tunnels have explicit lifecycle commands.
+
+`nodo protocol --json` exposes the node's announced protobuf schema and RPCs. Peers are compared through protobuf compatibility rules, rather than requiring identical serialized descriptors. The TUI groups settings under **Policies** and **All**.
+
+`nodo publish` exports a `.celaut.bee` artifact into a GitHub Release of the configured repository. Large artifacts use parts plus a manifest; repeated publication of the same service reuses its release. `nodo download` imports the artifact and recomputes its content-derived service ID. This is artifact distribution, not publication of an executable as source commits.
+
+Resource prices, free-tier budgets, delegation, donations, and reputation remain operator policies. Read the advertised payment method and MU conversion rate; do not infer a fixed settlement value or an unlimited free service from a quote.
 
 ## Background
 
