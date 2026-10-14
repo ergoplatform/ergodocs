@@ -31,6 +31,13 @@ These repositories are retained as a broad maintainer reference list. They are n
 
 | Repository | Branch | Reference paths |
 | --- | --- | --- |
+| [`4EYESConsulting/psyworkshop-contracts`](https://github.com/4EYESConsulting/psyworkshop-contracts) | `default` | `README.md` |
+| [`arcadiancomp/lithos_dashboard`](https://github.com/arcadiancomp/lithos_dashboard) | `default` | `README.md` |
+| [`arkadianet/kadia-explorer`](https://github.com/arkadianet/kadia-explorer) | `default` | `README.md` |
+| [`cafebedouin/peeryard`](https://github.com/cafebedouin/peeryard) | `default` | `README.md` |
+| [`cruxfinance/ergotree-lean`](https://github.com/cruxfinance/ergotree-lean) | `default` | `README.md` |
+| [`kii-dot/rosen-port`](https://github.com/kii-dot/rosen-port) | `default` | `README.md` |
+| [`Lithos-Protocol/Eidos`](https://github.com/Lithos-Protocol/Eidos) | `default` | `README.md` |
 | [`a-shannon/rosen-solana-proposal`](https://github.com/a-shannon/rosen-solana-proposal) | `default` | `README.md`, `docs/integration` |
 | [`abchrisxyz/OraclePoolHub`](https://github.com/abchrisxyz/OraclePoolHub) | `default` | `README.md` |
 | [`ach2swift/ErgoStats`](https://github.com/ach2swift/ErgoStats) | `default` | `README.md` |

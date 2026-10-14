@@ -31,7 +31,7 @@ Look for "wicks" in the charts, indicating areas where buyers are market-buying 
 
 > View all exchanges that list Ergo on [the ergo site](https://ergoplatform.org/en/get-erg/#Exchanges) or in the markets section on [CoinGecko](https://www.coingecko.com/en/coins/ergo#markets). You can also use [Crux Finance](https://cruxfinance.io/) and [TapTools.io](https://www.taptools.io/) to explore ecosystem system charts.
 
-When visiting the Erg markets section on LiveCoinWatch, sorting by liquidity allows you to identify where trading opportunities lie based on the available volume with minimal price impact, typically within a 2% range. For instance, CoinEx displays a trading volume of approximately $3k, yet only $147 worth of Ergo is readily available within this liquidity threshold. Further examination of the market-depth graph reveals a mere $42 listed on the sell side.
+When viewing ERG markets, compare current executable order-book depth with reported trading volume. A historical volume figure does not establish the liquidity available for your order. CoinEx examples are obsolete following its [wind-down announcement](https://t.me/s/CoinEx_Announcement/10064); verify current trading and withdrawal support at each venue.
 
 <!--![Market Depth Screenshot](/screenshot_2024-02-12_at_23.13.51.png) -->
 

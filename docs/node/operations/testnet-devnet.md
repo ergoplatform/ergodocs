@@ -41,3 +41,7 @@ Use testnet for public compatibility testing. Use devnet/private fork when you n
 ## Mempool Policy Differences
 
 Current mainnet defaults reject empty-proof storage-rent claims from the mempool (`ergo.node.rejectStorageRentTxs = true`), while public testnet defaults to `false`. Both can still validate rent claims inside blocks. Set this flag explicitly when reproducing admission or relay behavior on a controlled network; network consensus parameters alone do not reproduce mainnet mempool policy.
+
+## Network Regression Testing
+
+[Peeryard](https://github.com/cafebedouin/peeryard) is an experimental Linux network test bench for several real Ergo nodes in separate namespaces. It can inject delay, loss, partitions and crashes, then compare behavior across pinned versions or implementations. Its paired-run measurements cover declared scenarios rather than proving protocol correctness. Keep the topology, seeds, exact node revisions and executed-case evidence with a result. Host namespace setup needs elevated permissions; normal test runs use the prepared unprivileged environment.

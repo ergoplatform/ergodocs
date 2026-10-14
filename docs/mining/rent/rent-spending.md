@@ -63,3 +63,7 @@ With these changes, expired Ergo boxes can be properly mined and spent under sto
 From height `1,885,000`, transaction validation requires distinct values for context-extension variable `127` across inputs that carry it. Separate expired boxes must not share one recreation output index. The rent interpreter also checks the recreation's creation height against the spending height; preserving the old creation height is not enough.
 
 If a box cannot cover its calculated rent, the native rent path can consume it fully while naming an existing output index. There is no general requirement to add another input solely to top up that box's rent. Ordinary transaction conservation, output, and mining-policy rules still apply.
+
+## Proposed Rent Rule Changes
+
+[EIP-53](https://github.com/ergoplatform/eips/pull/110) proposes a grace period for underfunded token/register boxes. [EIP-51](https://github.com/ergoplatform/eips/pull/108) proposes rent-paying refresh within that window, while [EIP-52](https://github.com/ergoplatform/eips/pull/109) includes miner-attested claims. These remain proposals, including open reference implementations; they do not establish an activated grace period or attestation rule. The shipped mempool policy and native collection settings above are separate from those proposed consensus changes.

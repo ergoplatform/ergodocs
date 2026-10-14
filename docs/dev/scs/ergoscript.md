@@ -4,7 +4,7 @@ tags:
   - Smart Contracts
   - Sigma protocols
 owner: docs
-last_reviewed: 2026-09-07
+last_reviewed: 2026-10-14
 source_repos:
   - repo: ergoplatform/sigma-rust
     branch: develop
@@ -144,6 +144,12 @@ While ErgoScript aims for simplicity and security, debugging complex contracts c
 
 * **[Debugging Guide](debugging.md):** Covers current best practices, tools, and techniques.
 * **[ErgoScript Simulator](https://github.com/spectrum-finance/ergoscript-simulator):** A community-developed tool for simulating ErgoScript execution.
+
+### Formal Models and Proof Scope
+
+[ergotree-lean](https://github.com/cruxfinance/ergotree-lean) models ErgoTree evaluation in Lean 4 and compares it against a pinned `sigma-rust` evaluator. Its reference is not the Scala consensus interpreter; unsupported operations and implementation divergences limit what a theorem establishes about mainnet.
+
+[Eidos](https://github.com/Lithos-Protocol/Eidos) proves a reserve-accounting property over a manually encoded expression fragment and includes a counterexample when the reserve check is removed. It does not yet parse ErgoScript, decode ErgoTrees, or verify deployed contracts. In both projects, review the model, assumptions, implementation revision and correspondence to the actual compiled contract alongside the proof.
 
 ## Advanced Patterns & Tutorials
 

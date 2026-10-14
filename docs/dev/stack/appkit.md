@@ -4,7 +4,7 @@ tags:
   - Scala
   - Kotlin
 owner: docs
-last_reviewed: 2026-08-31
+last_reviewed: 2026-10-14
 source_repos:
   - repo: ergoplatform/ergo-appkit
     branch: develop
@@ -50,6 +50,10 @@ It is a thin wrapper around core components provided by the ErgoScript interpret
 - Helper methods to handle cryptographic like calculating PK addresses from secrets
 
 Using Appkit, Ergo applications can be written in one of the languages supported by GraalVM (i.e. Java, JavaScript, C/C++, Python, Ruby, R) and using this library, applications can communicate with Ergo nodes via unified API and programming model provided by Appkit. In addition, Appkit based Ergo applications can be compiled into native code using native-image ahead of time compiler and then executed without Java VM with very fast startup time and lower runtime memory overhead compared to a Java VM. This is an attractive option for high-performance, low-latency microservices.
+
+## Development-Branch API Handling
+
+Recent merged development work allows an [empty token list in `OutBoxBuilder.tokens`](https://github.com/ergoplatform/ergo-appkit/pull/258) and makes [EIP-29 attachment parsing reject non-byte collections with `IllegalArgumentException`](https://github.com/ergoplatform/ergo-appkit/pull/271), rather than leaking a `ClassCastException`. R9 values remain untrusted input. These changes are development-branch behavior; do not infer that the published `6.0.1` artifact contains them.
 
 ## Tutorials
 

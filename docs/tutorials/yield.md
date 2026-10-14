@@ -54,18 +54,20 @@ These strategies offer a spectrum of risk and reward scenarios in the Ergo ecosy
 
 - **Trading Bots:** Automate your arbitrage strategies using grid bots available on KuCoin and Huobi. These bots can buy low and sell high within predefined price ranges, perfect for capturing short-term price movements.
 
-- **AMM Pools:** Participate in automated market maker pools available on CoinEx and nonkyc to earn transaction fees while waiting for arbitrage opportunities. These pools can offer passive income and serve as a hedge against market volatility.
+- **AMM Pools:** Check whether an exchange still offers an ERG pool before relying on an older yield example. Fees, liquidity and custody terms can change, and providing liquidity can lose value.
 
 - **Gate.io Lending** Utilize lending services to earn interest on your holdings.
 
 ## Centralized Exchange Offerings
+
+CoinEx's [official wind-down announcement](https://t.me/s/CoinEx_Announcement/10064) ends spot trading on September 29, 2026. Earlier CoinEx pool examples are historical; consult the announcement for remaining withdrawal arrangements.
 
 In the context of our project, which was launched with fairness at its core, there isn't a single entity or individual that holds a significant portion of the total supply. This means that we don't have the option to rely on a single market-maker to ensure liquidity in the market. However, this doesn't pose a barrier to achieving a truly liquid market. In fact, it opens up the opportunity for a more decentralized and robust liquidity provision. By encouraging a large number of participants to contribute smaller amounts, we can collectively create a market that is not only liquid but also more resilient and less susceptible to manipulation. This approach aligns with our commitment to decentralization and community participation.
 
 | Opportunity          | Type               | Platform / Project                                                                                             | Status                | Description                               |
 |----------------------|--------------------|----------------------------------------------------------------------------------------------------------------|-----------------------|-------------------------------------------|
 | KuCoin Grid Bots     | Trading Bot        | KuCoin                                                                                                         | Live                  | Grid trading bot for buying and selling  |
-| CoinEx AMM Pool      | Exchange, LP       | CoinEx                                                                                                         | Live                  | Liquidity providing in AMM pool          |
+| CoinEx AMM Pool      | Exchange, LP       | CoinEx                                                                                                         | Historical / wind-down | No longer a current yield opportunity   |
 | Gate.io Lending      | Exchange, Lending  | Gate.io                                                                                                        | Live                  | Lending assets for interest              |
 | Huobi Trading Bots   | Trading Bot        | Huobi                                                                                                          | Live                  | Various trading bots for automation      |
 | Custom Bots          | Trading Bot        | [3Commas](https://3commas.io/)                                                                                  | Live                  | Custom trading bot solutions             |

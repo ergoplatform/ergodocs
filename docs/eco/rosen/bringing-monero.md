@@ -1,22 +1,22 @@
 ---
 owner: docs
-last_reviewed: '2026-05-29'
+last_reviewed: 2026-10-14
 ia_status: directory
 ---
 # Bringing Monero to RosenBridge
 
-Monero’s privacy features make it a special case for cross-chain bridges. Transactions reveal neither sender nor amount, and common wallets avoid arbitrary metadata. Rosen still needs a shared vault that Guards can control and verifiable user intent that Watchers can observe. This proof-of-concept outlines how to achieve both without compromising Monero’s privacy model.
+Monero is a proposed Rosen integration. The current [RCS and signing review](https://github.com/rosen-bridge/docs/pull/1) requires output-specific deposit agreement and an inspectable custody path. A [pinned local integration experiment](https://github.com/a-shannon/docs/tree/5e81893330c743a8ce716d3b9d9fedf005384002/r-and-d/monero-integration/roundtrip) reports a complete Monero → Ergo → Monero adapter round trip, including fee/reward handling and restart/lost-reply recovery within its stated scope. Production qualification, published dependencies, ordinary installation/startup, and upstream acceptance remain open.
 
-Status: Proof of Concept. Operational guidance below is for engineering evaluation; harden before production.
+The wallet-RPC examples below describe an earlier multisig proof of concept for engineering experiments. They are not a current production integration or a sufficient launch checklist.
 
 See also: [Concepts & Assumptions](concepts-assumptions.md), [Token Transfer Flows](token-transfer-flows.md), [Rosen Guards](rosen-guard.md), [Watcher](watcher.md)
 
-## TL;DR
+## Earlier Multisig Proof of Concept
 
 - Guards manage a shared Monero vault via multisig and wallet RPC.
 - Users prove lock intent by attaching Rosen metadata to a Monero spend proof and publishing the proof on Ergo (directly or via Rosen tooling).
 - Watchers and Guards verify the proof automatically; no custom wallet builds required.
-- To go live, invest in reliable full nodes, wrap scripts into services, and streamline the user proof flow.
+- Moving beyond this prototype requires the current RCS, output-agreement, signing, dependency, recovery, and independent-review gates, as well as reliable infrastructure.
 
 ## Why Monero Is Tricky to Bridge
 

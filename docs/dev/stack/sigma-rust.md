@@ -205,6 +205,10 @@ Also take a look at tests where various usage scenarios were implemented.
 
 The development branch [removes an invisible byte-order mark from the first French BIP39 word](https://github.com/ergoplatform/sigma-rust/commit/e48177bba4a2701216133a20e443ee4752b1991a). Previously generated French phrases containing that word could derive a different seed from the canonical phrase in other wallets. This is a development-branch fix, not a new `ergo-lib` release. Preserve the original recovery material for an existing wallet; changing its text can change the derived wallet.
 
+## NiPoPoW Comparison Inputs
+
+A merged development-branch [NiPoPoW fix](https://github.com/ergoplatform/sigma-rust/pull/951) rejects `m = 0`, which could previously make proof comparison loop indefinitely. Validate untrusted proof parameters and check the resolved library revision. The fix is not evidence that an older tagged dependency contains it, and successful proof comparison remains limited by the verifier's declared consensus scope.
+
 ## Cross-Implementation Conformance
 
 SANTA compares raw wire bytes, evaluation values and costs, transaction validity, and block/chain behavior against scoped canonical oracles. Recent authored cases cover sized-tree parsing and reader-level leakage, context-extension values, node-construction failures, Deserialize substitution, storage-rent recreation, and accumulated validation cost. A passing runner corpus covers its declared slices and pinned implementation revision; it does not establish production readiness or full consensus completeness.

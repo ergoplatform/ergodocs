@@ -6,7 +6,7 @@ tags:
   - dApp
   - dApp-InDev
 owner: docs
-last_reviewed: 2026-09-07
+last_reviewed: 2026-10-14
 source_repos:
   - repo: ergoplatform/ergo-jde
     branch: main
@@ -68,6 +68,10 @@ The first implementation of Dexy will be **DexyGold**, which aims to maintain a 
 - [Testnet Nautilus (required):](https://github.com/nautls/nautilus-wallet/releases/tag/v0.9.2)
 - Testnet ERG is available via [the faucet](https://testnet.ergofaucet.org/)
 ///
+
+## Contract Revisions and Recovery
+
+The published [September 2026 LP incident postmortem](https://github.com/kushti/dexy-stable/blob/bd6e038313be268e4373a6195ebef1fe21f27a97/spec/postmortem-lp-hack.md) describes missing pool-input identity and position checks in the USE/DexyGold contract templates. [Corrective contract and recovery work](https://github.com/kushti/dexy-stable/pull/12) remains an open proposal. It adds explicit LP NFT/position checks and tighter update, intervention, and payout conditions. Verify the exact deployed ErgoTree and token identities before assuming those protections are active; source changes do not replace existing boxes automatically.
 
 ## Design Overview
 

@@ -24,6 +24,10 @@ There are several public explorer available:
 - [sigmaspace.io](https://sigmaspace.io/)
 - [ErgoScan](https://ergoscan.me/) — beta explorer covering blocks, transactions, addresses, tokens, mempool, and DeFi activity, with a [public API](https://api.ergoscan.me/docs).
 
+## Kadia Explorer
+
+[Kadia Explorer](https://github.com/arkadianet/kadia-explorer) is a standalone Rust indexer/JSON API with a SvelteKit interface and its own embedded redb database. It synchronizes through an Ergo node's REST API without requiring the Rust node's extra index. Its source covers boxes, transactions, addresses, tokens, script templates and storage rent, plus mempool/application investigation tools. Explorer interpretation is a separate layer from consensus validation; verify raw box/transaction data when checking a contract or transfer.
+
 ## Toolkits
 
 - [Ergo Nix Toolkit](https://github.com/ergoplatform/ergo-nix) provides Nix derivations for packages and services on Ergo.

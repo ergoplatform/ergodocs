@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: 2026-09-22
+last_reviewed: 2026-10-14
 source_repos:
   - repo: ergoplatform/ergo
     branch: weak-blocks
@@ -82,3 +82,7 @@ Current caveats: the devnet/testnet stream was still finding serialization, sync
 ### Miner and API work
 
 The April 2026 development stream added API support needed by external miners. GPU mining tests were not ready immediately because Stratum proxy changes were still required. This matters for rollout because Matrix changes affect miner-facing block-candidate flow, not just wallet-facing transaction feedback.
+
+### Cross-Implementation Review
+
+Current [Matrix review work](https://github.com/arkadianet/ergo-scala/pull/17) covers issues found by a second implementation, while upstream candidates address input/ordering-block relay, transaction classification and wallet rollback. These are branch-specific research changes, not behavior activated by installing the stable 6.0.x node. Pin the exact branch/commit and use a controlled devnet when reproducing a result.

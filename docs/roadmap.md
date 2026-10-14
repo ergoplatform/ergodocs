@@ -180,6 +180,11 @@ Month buckets summarize roadmap-relevant changes from the latest docs sweep. Use
 - [Wallets](wallets-overview.md): [Argus](https://github.com/arkadianet/Argus/releases) is in the release-signed beta line, with recovery-language and legacy-derivation handling improvements. It remains experimental and unaudited.
 - [Celaut](celaut.md): the current node is alpha on Linux and Windows, with protocol compatibility inspection, noninteractive input validation, and service artifacts published through GitHub Releases.
 
+- [Contract tooling](ergoscript.md): Lean models in `ergotree-lean` and Eidos provide scoped proof and differential-test evidence; neither establishes deployed-contract safety by itself.
+- [Rosen](rosen.md): BCH, Zcash, Monero, Solana and Avalanche work remains in design/local-validation/upstream-review stages. Local demonstrations do not expand supported live routes.
+- [ChainCash/Basis](chaincash.md) and [Dexy](dexy.md): published security review and incident/recovery sources require pinned-contract and deployment checks; proposed fixes remain under review.
+- [Storage rent](rent-spending.md): EIPs 51–53 propose refresh/grace/attestation rules; current node admission policy and collection support do not activate those proposals. [v6.0.9](https://github.com/ergoplatform/ergo/pull/2719) is a release candidate under review.
+
 #### September
 
 - [Ergo node](protocol.md): [v6.0.6](https://github.com/ergoplatform/ergo/releases/tag/v6.0.6) improves NiPoPoW and UTXO-snapshot bootstrap recovery, retries cached block sections after headers arrive, retries mining candidate assembly after proof-generation failure, checks wallet change-address ownership, and exposes mempool transaction validation cost. [v6.1.6](https://github.com/ergoplatform/ergo/releases/tag/v6.1.6) carries the same release changes on RocksDB and remains a prerelease.

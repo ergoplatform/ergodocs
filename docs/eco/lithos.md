@@ -74,3 +74,7 @@ The web panel's difficulty calculator targets 17 super shares per window. Submit
 `stratum.bindAddress` defaults to `0.0.0.0`; set an explicit address when rigs should reach only a selected interface. The current node guide sets `offlineGeneration = true`. Inspect the client web panel and commitments state before treating a running Stratum listener as a ready, committed miner.
 
 [Lithos Launcher](https://github.com/Lithos-Protocol/Lithos-Launcher) is a Windows/Linux desktop setup and monitoring tool for Java, the Ergo node, and the client. It handles sync/index/wallet readiness and exposes commitment setup. Its test-mining mode disables transaction-generating services while testing difficulty; normal mining still needs the upstream funding, commitment, and node-readiness steps.
+
+## Community Monitoring
+
+[Lithos Dashboard](https://github.com/arcadiancomp/lithos_dashboard) provides numeric and optional browser views of mining, NISP health, collateral and reward activity. Its browser listener defaults to localhost on port `8787` and has no authentication; keep it local or within a trusted network. Read-only sale quotes do not execute transactions, and projected earnings are estimates.

@@ -7,7 +7,7 @@ tags:
   - dApp
   - dApp-Beta
 owner: docs
-last_reviewed: 2026-09-22
+last_reviewed: 2026-10-14
 source_repos:
   - repo: rosen-bridge/watcher
     branch: master
@@ -139,6 +139,20 @@ Please see [this video](https://www.youtube.com/watch?v=Xsiy-yPJQ6w) for a visua
 - The new rosen-service also added Bitcoin Runes support.
 - `Jun 3`: Firo work was moving from RPC toward ElectrumX across scanner, guard-service, health-check, utilities, and UI PRs. Firo reached released guard-service support in July; public route availability still depends on bridge configuration and the app's asset list. Handshake and Base remain expansion work under review.
 - `Aug 27` 2025: Rosen test updates reported guard-service testing over Rosenet, testing of a new Ergo multisig package integrated into guard-service, and ongoing BalanceHandler / watcher-node upgrade work. The same update said Bitcoin Runes UI work was split across network, rename, and wallet branches, with `rosen-chains` support relying on Bitcoin JSON-RPC and Unisat APIs.
+
+## Integration Proposals
+
+A design, local round trip, or open implementation PR does not establish a supported live bridge route. Current research includes:
+
+| Chain | Published scope and remaining gates |
+| --- | --- |
+| [Bitcoin Cash](https://github.com/rosen-bridge/guard-service/pull/29) | Native BCH Guard processing and coordinated scanner/watcher/UI candidates; accepted producer releases, ordinary consumer installation/startup and deployment remain to be established. |
+| [Zcash](https://github.com/rosen-bridge/guard-service/pull/22) | Transparent settlement proposal; experimental Orchard code in submitted sources is outside that release scope. Design acceptance and source corrections remain pending. |
+| [Monero](https://github.com/rosen-bridge/docs/pull/1) | Output-specific agreement and signing review, with scoped local round-trip evidence; production qualification and upstream acceptance remain open. See [Monero research](bringing-monero.md). |
+| [Solana](https://github.com/a-shannon/rosen-solana-proposal) | SOL and allowlisted original SPL-token design and fork candidates; protocol/configuration decisions, released dependencies and a complete operational round trip remain open. |
+| [Avalanche C-Chain](https://github.com/a-shannon/operation/blob/a-shannon/avalanche-rcs-20261006/docs/avalanche-rcs-integration.md) | AVAX and mapped ERC20 candidates with scoped local tests. Deployment is disabled; private dependency overlays and synthetic transport do not qualify a deployed bridge. |
+
+Use the configured bridge application's supported asset list for transfers. These proposals do not expand it.
 
 ## Why RosenBridge
 

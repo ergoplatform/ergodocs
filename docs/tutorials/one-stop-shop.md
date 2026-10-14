@@ -66,7 +66,9 @@ A few years ago, there was not much offered in terms of wallets on Ergo. With re
 - **Pre-mine and ICO**: None
 - **Emissions**: Ergo's block reward decreases by 3 ERG per block every quarter until 2026 and stabilizes at 3 ERG per block thereafter.
 - **Allocation**: 95.57% public allocation, Fair launch
-- **Market Access**: MEXC, Htx, Kucoin, CoinEx, TradeOgre, Simpleswap, Gate.io, Nonkyc
+- **Market Access**: MEXC, Htx, Kucoin, TradeOgre, Simpleswap, Gate.io, Nonkyc
 - **Additional Market Access**: $rsERG is available on most Cardano DEXes which is a wrapped version of native $ERG. $rsERG is also available on Uniswap.
+
+CoinEx is omitted from current market access following its [exchange wind-down announcement](https://t.me/s/CoinEx_Announcement/10064). Check each venue's current trading/deposit support before using an older exchange list.
 
 **To do a deep dive into the Ergo protocol, consult this** [document](https://docs.google.com/document/d/1rSNGAg8qEjoVCGfxeQGs98CemACGQO-8myVCNLuGdAI/edit) as well as the Ergo protocol in-depth section as seen above.

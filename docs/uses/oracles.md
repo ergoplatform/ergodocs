@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: 2026-05-26
+last_reviewed: 2026-10-14
 source_repos:
   - repo: Emurgo/Emurgo-Research
     branch: master
@@ -18,6 +18,7 @@ source_repos:
     branch: master
     paths:
       - connectors/connector-lib
+      - connectors/erg-usd-connector
       - oracle-pool-bootstrap
       - scripts/ada-usd-oracle/oracle-config.yaml
 source_of_truth:
@@ -78,3 +79,9 @@ For an easy docker setup see [easy-ergo-oracle](https://github.com/reqlez/ergo-e
 The Delphi Project aimed to facilitate exploration, operation, and launching of decentralized oracles on the Ergo blockchain.
 
 - [Final Report](https://hackmd.io/@abchris/S1dHZcwyc)
+
+## Legacy ERG/USD Connector Availability
+
+The merged [v1 ERG/USD connector change](https://github.com/ergoplatform/oracle-core/pull/345) fetches several price feeds in parallel with per-request timeouts and takes the median of successful positive prices. LiveCoinWatch is optional through `LCW_API_KEY`; if every feed fails, the error lists individual source failures. Its on-chain unit remains nanoERGs per USD.
+
+Exchange ERG/USDT quotes are treated as USD prices, and the implementation can proceed with a single successful source; multiple configured endpoints do not guarantee an independent quorum or protection from a depeg. This change concerns the legacy connector, not the separate v2 data-source proposal. The ADA/USD connector remains dependent on CoinGecko.
