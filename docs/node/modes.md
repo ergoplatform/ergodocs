@@ -18,7 +18,7 @@ tags:
 
 The [Ergo node](install.md) offers several modes of operation, allowing users to balance resource requirements (disk space, memory, bandwidth) with security assumptions and desired functionality. Choosing the right mode depends on your specific use case, such as running a backend for a dApp, securing personal funds, or simply verifying transactions.
 
-The primary modes are configured using settings in your `ergo.conf` file, mainly `node.stateType` and `node.blocksToKeep`. Bootstrapping options like `node.utxoBootstrap` and `node.nipopowBootstrap` can significantly speed up the initial synchronization for certain modes but do not define the mode itself.
+The primary modes are configured using settings in your `ergo.conf` file, mainly `ergo.node.stateType` and `ergo.node.blocksToKeep`. Bootstrapping options like `ergo.node.utxo.utxoBootstrap` and `ergo.node.nipopow.nipopowBootstrap` can significantly speed up the initial synchronization for compatible modes but do not define the mode itself.
 
 Here's a comparison of the main operational modes:
 
@@ -28,7 +28,7 @@ Here's a comparison of the main operational modes:
 | :-------------------- | :------------------------------------------- | :-------------------------------------------- | :-------------------------------------------------- | :------------------------------------------ |
 | **Primary Goal**      | Max Security, Full History                   | Full Security, Reduced Storage                | Full Security, Minimal Storage                      | Tx Verification, Minimal Resources          |
 | **Key Config**        | `stateType="utxo"`<br>`blocksToKeep=-1`      | `stateType="utxo"`<br>`blocksToKeep > 0`      | `stateType="digest"`<br>`blocksToKeep > 0`         | N/A (Client Software)                       |
-| **Bootstrapping**     | Full Sync from Genesis | Full Sync / UTXO Snapshot (`utxoBootstrap=true`) / NiPoPoW (`nipopowBootstrap=true`) | Full Sync / NiPoPoW (`nipopowBootstrap=true`) / UTXO Snapshot¹ | NiPoPoW Sync |
+| **Bootstrapping**     | Full Sync from Genesis | Full Sync / UTXO Snapshot (`utxoBootstrap=true`) / NiPoPoW (`nipopowBootstrap=true`) | Full Sync / NiPoPoW (`nipopowBootstrap=true`)¹ | NiPoPoW Sync |
 | **Storage (Initial)** | Very High (100s GB+) | Medium (Snapshot: ~1-2GB + Recent Blocks) | Low (Headers + State: ~1-3GB + Recent Blocks) | Very Low (MBs) |
 | **Storage (Ongoing)** | High (Grows with chain) | Medium (Grows slowly with `blocksToKeep`) | Low (Grows slowly with `blocksToKeep`) | Very Low |
 | **Resource Needs**    | High (CPU/RAM/Disk IO) | Moderate | Moderate-Low | Very Low |
@@ -41,11 +41,10 @@ Here's a comparison of the main operational modes:
 **Detailed Explanations & Notes:**
 
 1. **Bootstrapping (`utxoBootstrap`, `nipopowBootstrap`):**
-    * These settings significantly speed up the initial sync for Pruned and Digest nodes by downloading a compressed UTXO set snapshot (`utxoBootstrap`) or using NiPoPoW proofs (`nipopowBootstrap`) instead of processing the entire chain history from genesis.
-    * Using `utxoBootstrap=true` is common for Pruned nodes.
-    * Using `nipopowBootstrap=true` is common for Digest nodes.
-    * It's often beneficial to enable *both* `utxoBootstrap=true` and `nipopowBootstrap=true` for the fastest initial sync, especially on resource-constrained devices like mobile phones. The node will attempt the fastest method available from peers.
-    * Note ¹: While `utxoBootstrap` can technically be used with `stateType="digest"`, it's less common as NiPoPoW bootstrap is generally preferred for this mode.
+    * UTXO snapshot bootstrap downloads the UTXO set at a checkpoint and then applies later blocks. It requires `stateType="utxo"`.
+    * NiPoPoW bootstrap obtains the header chain through a proof and can be used with either UTXO or Digest state. It requires UTXO snapshot bootstrap or a nonnegative `blocksToKeep` value.
+    * For a UTXO node, `ergo.node.utxo.utxoBootstrap=true` can be combined with `ergo.node.nipopow.nipopowBootstrap=true` to bootstrap both the state and the headers.
+    * Note ¹: For a Digest node, keep `ergo.node.utxo.utxoBootstrap=false`. The Digest + UTXO snapshot combination is unsupported; enabling it does not provide a working snapshot sync. To bootstrap a pruned Digest node, use `stateType="digest"`, a positive `blocksToKeep` value, and `ergo.node.nipopow.nipopowBootstrap=true`.
     * **Progress Indication:** Be aware that the initial download phase when using bootstrapping (especially `utxoBootstrap`) can take a significant amount of time depending on network speed and peer availability. The node logs may not show detailed progress during large snapshot downloads. It's often helpful to monitor your system's network activity or the increasing size of the node's data directory (`.ergo/snapshots` or similar) to gauge progress during this phase.
 
 2. **Digest Mode (`stateType="digest"`) Limitations:**
