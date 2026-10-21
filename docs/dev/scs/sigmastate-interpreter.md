@@ -6,7 +6,7 @@ tags:
   - Compiler
   - Interpreter
 owner: docs
-last_reviewed: 2026-10-14
+last_reviewed: 2026-10-21
 source_repos:
   - repo: ergoplatform/sigmastate-interpreter
     branch: develop
@@ -99,3 +99,7 @@ libraryDependencies += "org.scorexfoundation" %% "sigma-state" % "6.0.7"
 ```
 
 For more advanced usage and direct interaction with the ErgoTree and Sigma protocols, refer to the detailed [Sigma Language documentation](sigma-lang.md).
+
+## Candidate JSON Compatibility
+
+[Development work for the 6.0.8 candidate](https://github.com/ergoplatform/sigmastate-interpreter/pull/1119) encodes SDK `Long` values as decimal JSON strings to preserve integers beyond JavaScript's exact numeric range. Decoders accept strings and legacy numeric values. Preserve large values as strings or arbitrary-precision integers when crossing a JavaScript boundary. This is candidate-branch behavior, not a claim about every published 6.0.7 client.

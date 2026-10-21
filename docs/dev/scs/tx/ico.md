@@ -18,7 +18,7 @@ Generally, an ICO comprises 3 stages:
 - [**Issuance**](#issuance): A new asset token is created and issued to investors.
 - [**Withdrawal**](#withdrawal): Investors can withdraw their newly issued tokens.
 
-This example ICO contract is quite complex compared to previous examples as it involves multiple stages and parties. The number of investors might run into the thousands. A naive solution, similar to some approaches on account-based models like the [ERC-20 standard](https://theethereum.wiki/w/index.php/ERC20_Token_Standard) on Ethereum, might attempt to store all investor data directly within the contract state.
+This example ICO contract is quite complex compared to previous examples as it involves multiple stages and parties. The number of investors might run into the thousands. A naive solution, similar to some approaches on account-based models like the [ERC-20 standard](https://eips.ethereum.org/EIPS/eip-20) on Ethereum, might attempt to store all investor data directly within the contract state.
 
 Unlike Ethereum, Ergo contracts cannot store arbitrarily large datasets directly. Instead, Ergo utilizes authenticated data structures like AVL trees. We store only a compact digest (e.g., ~33 bytes for an AvlTree) representing the root hash and state of a potentially vast (key, value) dictionary. To access or modify elements in the dictionary, a spending transaction must provide cryptographic proofs (lookup or modification proofs). This allows a contract to authenticate large datasets using very little on-chain storage.
 

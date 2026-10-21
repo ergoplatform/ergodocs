@@ -5,7 +5,7 @@ tags:
   - Reverse Proxy
   - API
 owner: docs
-last_reviewed: 2026-08-20
+last_reviewed: 2026-10-21
 source_repos:
   - repo: ergoplatform/ergo
     branch: master

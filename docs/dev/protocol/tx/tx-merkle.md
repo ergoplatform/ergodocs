@@ -2,7 +2,7 @@
 tags:
   - Merkle
 owner: docs
-last_reviewed: 2026-05-26
+last_reviewed: 2026-10-21
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -116,3 +116,7 @@ The Transaction Merkle Tree in Ergo is designed with efficiency in mind, allowin
 To address these performance considerations, the Ergo codebase employs various optimization techniques and data structures. Here's a practical example of constructing a Transaction Merkle Tree using the Ergo codebase:
 
 - **Example Code Reference**: Detailed examples of constructing and verifying Transaction Merkle Trees can be found in the Ergo codebase within the [`BlockTransactions.scala`](https://github.com/ergoplatform/ergo/blob/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/history/BlockTransactions.scala) file.
+
+## Section Version and Admission
+
+A matching transaction root/section ID does not by itself establish that the section was decoded for the correct block version. The reference header correspondence check also requires the transaction section's `blockVersion` to equal the header version. This additional check leaves the Merkle commitment format unchanged; see [Block Header](block-header.md).

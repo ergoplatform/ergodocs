@@ -121,7 +121,7 @@ Explore the history of innovation. Click any event name to jump to its details o
 
 8. [**RustChain**](rust-chain.md)
       * **Overview**: A Proof-of-Antiquity blockchain integrating a "conscience-bound" AI, aiming to reward legacy hardware.
-      * [**GitHub**](https://github.com/Scottcjn/Rustchain)
+      * **GitHub** (historical repository unavailable; see [project record](rust-chain.md))
 
 9. [**Pattern**](pattern.md)
       * **Overview**: An on-chain Model Context Registry (MCR) acting as an "explorer co-pilot" by transforming raw blockchain data into structured, real-time knowledge.

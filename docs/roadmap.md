@@ -2,7 +2,7 @@
 tags:
   - Roadmap
 owner: docs
-last_reviewed: 2026-10-14
+last_reviewed: 2026-10-21
 source_repos:
   - repo: ergoplatform/eips
     branch: master
@@ -184,6 +184,10 @@ Month buckets summarize roadmap-relevant changes from the latest docs sweep. Use
 - [Rosen](rosen.md): BCH, Zcash, Monero, Solana and Avalanche work remains in design/local-validation/upstream-review stages. Local demonstrations do not expand supported live routes.
 - [ChainCash/Basis](chaincash.md) and [Dexy](dexy.md): published security review and incident/recovery sources require pinned-contract and deployment checks; proposed fixes remain under review.
 - [Storage rent](rent-spending.md): EIPs 51–53 propose refresh/grace/attestation rules; current node admission policy and collection support do not activate those proposals. [v6.0.9](https://github.com/ergoplatform/ergo/pull/2719) is a release candidate under review.
+- [Lithos](lithos.md): mainnet 1.0.5 adds difficulty forwards, reward sweeps and wallet/candidate recovery; mainnet requires a personal API key and the statistics migration needs resynchronization.
+- [Nautilus](nautilus.md): 1.3.4 adds connection wallet search and recovery-word interaction improvements; browser-store availability is checked separately from the source release.
+- [Machina](machina-finance.md): current SDK source uses owner-side bid/ask prices, explicit supported pair checks and stricter fill/owner-box rules.
+- [Monero research](bringing-monero.md): the RCS-003 proposal distinguishes the last complete native replay from later focused fixes and still-open custody, recovery and finality work.
 
 #### September
 
@@ -835,8 +839,8 @@ Ergo is developed a by a combination of the [Ergo Foundation](ergo-foundation.md
 **Libraries & Tooling**
 
 - [x] [ergo-lib-go](https://github.com/sigmaspace-io/ergo-lib-go)
-- [x] [escript.online](https://escript.online)
-  - [x] [Blockly Playground Integration](https://escript.online/blockly)
+- [x] [escript.online](https://github.com/SavonarolaLabs/escript-online)
+  - [x] [Blockly Playground Integration](https://github.com/SavonarolaLabs/escript-online)
 - [x] Token metadata standards discussion
 - [x] Lithos light-client integration progress
 

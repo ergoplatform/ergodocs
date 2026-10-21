@@ -5,7 +5,7 @@ tags:
   - Off-chain
   - Spectrum
 owner: docs
-last_reviewed: 2026-06-08
+last_reviewed: 2026-10-21
 source_repos:
   - repo: spectrum-finance/ergo-dex-backend
     branch: master
@@ -183,3 +183,7 @@ The [`0.1.0-alpha.0`](https://github.com/machinafi/sdk/releases/tag/0.1.0-alpha.
 - [Grid Trading](grid_trading.md)
 - [Machina Finance](machina-finance.md)
 - [Node API Reference](swagger.md)
+
+## Machina SDK Compatibility
+
+Current Machina grid construction uses owner-side `prices: { bid, ask }`, with taker-side `[ask, bid]` stored in the contract. Both prices must be positive and `bid <= ask`. ERG/token limit orders are supported; token/token limit creation throws. Pin the SDK and inspect supported fill/owner-box rules before composing bot transactions. See [Machina Finance](machina-finance.md).

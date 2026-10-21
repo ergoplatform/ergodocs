@@ -201,7 +201,7 @@
 ### 📜 Smart Contracts & ErgoScript <a id="smart-contracts--ergoscript"></a>
 
 - **[Sigmastate Interpreter](https://github.com/ScorexFoundation/sigmastate-interpreter)** – core interpreter & type system. [`Scala`, `ErgoScript`]
-- **[escript.online](https://escript.online/)** – online editor & playground. [GitHub](https://github.com/SavonarolaLabs/escript-online) [`JS/TS`]
+- **[escript.online source](https://github.com/SavonarolaLabs/escript-online)** – historical editor and playground; former hosted site unavailable. [`JS/TS`]
 - **[Ergo Playgrounds](https://github.com/ergoplatform/ergo-playgrounds)** – Scala-based contract/off-chain testing. [`Scala`]
 - [ErgoScript Compiler (Rust)](https://github.com/ergoplatform/sigma-rust/tree/develop/ergoscript-compiler) – Rust implementation. [`Rust`]
 - [ErgoScript Compiler (Scala)](https://github.com/ergoplatform/ergoscript-compiler) – Scala CLI tool. [`Scala`]

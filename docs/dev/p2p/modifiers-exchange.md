@@ -2,7 +2,7 @@
 tags:
 - P2P
 owner: docs
-last_reviewed: 2026-09-07
+last_reviewed: 2026-10-21
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -65,3 +65,7 @@ For a deeper understanding of how modifiers are implemented and managed in the E
 - **[ModifiersSpec.scala](https://github.com/ergoplatform/ergo/blob/master/ergo-core/src/main/scala/org/ergoplatform/network/message/ModifiersSpec.scala)**: Oversees the structure and delivery of modifier messages.
 
 By exploring these files, you can gain a comprehensive understanding of how modifiers are exchanged and synchronized across nodes in the Ergo network.
+
+## Retryable Transaction Section Mismatches
+
+The reference node checks a transaction section's version against its header before accepting it. Wrong-version bytes can arrive under the correct section ID, so rejection must leave that ID downloadable rather than permanently invalidating the block's required data. A section received before its header is available also remains retryable. Peer penalties and retry state are separate; see [Block Header](block-header.md) for the correspondence rule.

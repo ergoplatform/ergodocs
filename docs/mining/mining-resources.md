@@ -7,7 +7,7 @@ tags:
   - EIP
   - Test Vectors
 owner: docs
-last_reviewed: 2026-09-22
+last_reviewed: 2026-10-21
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -51,3 +51,7 @@ The mining API also exposes a custom-public-key candidate route at `POST /mining
 
 - [EIP27](eip27.md)
 - [EIP37](eip37.md)
+
+## Native Storage Rent Collection
+
+The reference node can collect storage rent directly into mining candidates when mining, the extra index and `ergo.node.storageRentCollection` are enabled. Wait for index readiness and preserve distinct recreation indices for eligible inputs. This differs from mainnet mempool admission policy; see [Node Configuration](conf-node.md#storage-rent-policy) and [Storage Rent Spending](rent-spending.md).

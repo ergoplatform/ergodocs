@@ -10,11 +10,6 @@ owner: docs
 last_reviewed: 2026-09-22
 ia_status: directory
 source_repos:
-  - repo: Scottcjn/bottube
-    branch: main
-    paths:
-      - README.md
-      - ergo_bridge_blueprint.py
   - repo: a-shannon/ergo-agent-sdk
     branch: main
     paths:
@@ -63,7 +58,7 @@ source_repos:
       - VISION.md
       - DESIGN.md
 source_of_truth:
-  - https://github.com/Scottcjn/bottube
+  - https://bottube.ai/
   - https://github.com/a-shannon/ergo-agent-sdk
   - https://ergo-agent-sdk.readthedocs.io/
   - https://github.com/mwaddip/ergo-proxy
@@ -96,7 +91,7 @@ These projects are recent ecosystem additions verified against public repositori
 
 | Dedicated page | What it is | Status | Related surface |
 | --- | --- | --- | --- |
-| [BoTTube](bottube.md) | AI-native video platform with an Ergo bridge blueprint for sender-bound, canonicalized deposits and atomic RTC crediting; its ERG off-ramp and Solana/Base wRTC routes are currently disabled. | Emerging | Applications and utilities. |
+| [BoTTube](bottube.md) | Historical AI-video/Ergo bridge prototype; implementation source is currently unavailable. | Source unavailable | Applications and utilities. |
 | [Ergo Agent SDK](ergo-agent-sdk.md) | Python SDK for giving autonomous agents controlled access to Ergo and its DeFi ecosystem. | Developer-facing | Developer frameworks. |
 | [Ergo Proxy](ergo-proxy.md) | Lightweight Ergo P2P relay proxy for forwarding peer messages without holding blockchain state. | Developer-facing | Node operations and P2P tooling. |
 | [Ergo Relay](ergo-relay.md) | Minimal transaction signing and P2P relay service. | Developer-facing | Node operations and transaction broadcast tooling. |

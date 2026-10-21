@@ -126,7 +126,7 @@ While ErgoScript aims for simplicity and security, debugging complex contracts c
 
 **Online Editors & Compilers:**
 
-* **[escript.online](https://escript.online/)**: Online editor, compiler, and playground.
+* **[escript.online](https://github.com/SavonarolaLabs/escript-online)**: Historical editor/compiler source; the former hosted endpoint is unavailable.
 * **[ErgoScript P2S Playground (Plutomonkey)](https://wallet.plutomonkey.com/p2s/)**: Compile ErgoScript to P2S addresses.
 * **[Scastie](scastie.md)**: Online Scala compiler suitable for ErgoScript snippets.
 * **[KioskWeb](https://github.com/scalahub/KioskWeb)**: Web interface for the Kiosk framework (useful for exploring Kiosk-based contracts).

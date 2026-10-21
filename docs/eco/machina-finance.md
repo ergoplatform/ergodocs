@@ -6,7 +6,7 @@ tags:
   - dApp
   - dApp-InDev
 owner: docs
-last_reviewed: 2026-06-08
+last_reviewed: 2026-10-21
 ia_status: directory
 source_repos:
   - repo: nautls/machina-finance
@@ -50,6 +50,12 @@ The primary objective of Machina Finance is to promote decentralization and faci
 - [Contracts](https://github.com/nautls/machina-finance) are public in the original Machina Finance repository.
 - [Orders SDK](https://github.com/machinafi/sdk) provides `GridOrder` and `LimitOrder` helpers for Fleet SDK transaction builders.
 - SDK actions cover order creation, fills, and closing order boxes.
+
+## SDK Price and Fill Semantics
+
+Current [SDK source](https://github.com/machinafi/sdk/blob/master/src/grid-order.ts) uses `prices: { bid, ask }` from the owner's perspective: the owner buys at the bid and sells at the ask. Contract R5 stores the taker's buy/sell prices as `[ask, bid]`. Both prices must be positive and `bid <= ask`; do not carry older buy/sell argument conventions into this API without checking the pinned version.
+
+Grid orders reject equal base/quote IDs, negative amounts and ERG as the quote asset. Token-to-token grids require base liquidity so the token positions remain valid. Limit orders currently support ERG/token pairs; token-to-token creation throws. Fill construction validates the remaining owner-box minimum and distinguishes a continuing partial fill from a final payout. The source manifest is `0.1.0-alpha.1`; confirm the package actually installed rather than assuming an older alpha artifact has these changes.
 
 ## Features
 

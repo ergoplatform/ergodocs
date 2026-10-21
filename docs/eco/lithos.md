@@ -7,7 +7,7 @@ tags:
   - dApp
   - dApp-InDev
 owner: docs
-last_reviewed: 2026-10-14
+last_reviewed: 2026-10-21
 source_repos:
   - repo: Lithos-Protocol/Lithos-Client
     branch: master
@@ -41,7 +41,7 @@ Recently, Lithos has completed collateral contracts, and the ability of miners t
 
 ## Current Client Status
 
-The [Lithos Client](https://github.com/Lithos-Protocol/Lithos-Client) is the reference client for the Lithos Protocol. The mainnet client is [v1.0.3](https://github.com/Lithos-Protocol/Lithos-Client/releases/tag/v1.0.3). Follow the current README and mainnet configuration rather than the older batching-only mainnet prerelease. It requires a fully synced, indexed Ergo node v6.0.7/v6.1.7 or newer and Java 11. The current client supports mining and on-chain difficulty commitments; the earlier prerelease restrictions are historical.
+The [Lithos Client](https://github.com/Lithos-Protocol/Lithos-Client) is the reference client for the Lithos Protocol. The current checked mainnet client is [v1.0.5](https://github.com/Lithos-Protocol/Lithos-Client/releases/tag/v1.0.5). Follow the current README and mainnet configuration rather than the older batching-only mainnet prerelease. It requires a fully synced, indexed Ergo node v6.0.7/v6.1.7 or newer and Java 11. The current client supports mining and on-chain difficulty commitments; the earlier prerelease restrictions are historical.
 
 The current README describes Lithos as requiring a fully synced Ergo node and Java 11. Miners connect through the Lithos Stratum server, with Rigel Miner recommended. Lithos evaluates Non-Interactive Share Proofs rather than ordinary pool shares, so the miner address and worker name used by the Stratum client are not payout identifiers in the same way they are for a conventional pool.
 
@@ -78,3 +78,13 @@ The web panel's difficulty calculator targets 17 super shares per window. Submit
 ## Community Monitoring
 
 [Lithos Dashboard](https://github.com/arcadiancomp/lithos_dashboard) provides numeric and optional browser views of mining, NISP health, collateral and reward activity. Its browser listener defaults to localhost on port `8787` and has no authentication; keep it local or within a trusted network. Read-only sale quotes do not execute transactions, and projected earnings are estimates.
+
+## Upgrading to 1.0.5
+
+[v1.0.4](https://github.com/Lithos-Protocol/Lithos-Client/releases/tag/v1.0.4) temporarily disabled rollup candidate sources after a UTXO-reservation bug. [v1.0.5](https://github.com/Lithos-Protocol/Lithos-Client/releases/tag/v1.0.5) fixes that reservation path, re-enables rollups, bounds candidate builds and recovers input reservations after node refusal.
+
+Mainnet startup rejects the shipped `lithos.apiKeyHash` for `hello`; configure a personal key hash. The client unlocks the node wallet through `node.pass` and sweeps mining rewards to the primary address every 30 minutes by default. Keep those credentials private. Browser storage of the API key is optional and off by default.
+
+The first start migrates statistics to schema 8 and removes older schema stores. Statistics must resynchronize, limiting some statistics/API views while mining and normal submissions continue. Downgrading to 1.0.4 afterwards starts with empty statistics history; retain a backup if that history matters.
+
+Difficulty forwards add on-chain, LIT-settled positions on average network difficulty and a webpanel Extensions section. Read/check routes are open; positions, history, collateral earnings and transactions require an API key. This release's default `stratum.diff` is `4.0M`; explicit operator settings remain in force.

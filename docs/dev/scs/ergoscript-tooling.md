@@ -45,7 +45,7 @@ The ErgoScript ecosystem offers a wide range of tools and resources to help deve
 
 ### Playgrounds
 
-- [escript.online](https://escript.online/)
+- [escript.online source (historical)](https://github.com/SavonarolaLabs/escript-online)
 - Compile ErgoScript directly in your browser with [ErgoScript Playground](https://wallet.plutomonkey.com/p2s/)
 - There is also [Scastie](https://scastie.scala-lang.org/greenhat/T2jSEv11QcWpXX1XrcHUdw/31)
 - [Kiosk](kiosk.md) lets anyone play with ErgoScript using a basic web-based UI

@@ -18,6 +18,10 @@
 - `Aug 13` to `Aug 20` 2025: dev updates said Keystone integration work was nearing Nautilus review, while Nautilus research also covered passwordless transaction signing and a mempool tracker. Treat these as development tracks until Nautilus release notes mark them shipped.
 - `Jul 2` to `Jul 31` 2025: dev updates reported fixes for a non-Ledger dApp Connector rendering bug, a wallet-loading reactivity bug, and unstable virtual-mempool handling. Chained multi-transaction signing remained planned in [nautilus-wallet#213](https://github.com/nautls/nautilus-wallet/issues/213), not shipped.
 
+## Current Release
+
+[Nautilus v1.3.4](https://github.com/nautls/nautilus-wallet/releases/tag/v1.3.4) adds wallet search during dApp connection, Tab selection for mnemonic words, MEOW metadata and a LIT icon, plus form-validation, bundle and dependency changes. A published source release and browser-store rollout are separate; check the version actually installed before relying on a new interaction.
+
 ## Installation
 
 Nautilus can be easily installed as a browser extension. Select the version compatible with your browser:

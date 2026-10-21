@@ -4,7 +4,7 @@ tags:
   - Scala
   - Kotlin
 owner: docs
-last_reviewed: 2026-10-14
+last_reviewed: 2026-10-21
 source_repos:
   - repo: ergoplatform/ergo-appkit
     branch: develop

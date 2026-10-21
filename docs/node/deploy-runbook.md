@@ -6,7 +6,7 @@ tags:
   - Indexing
   - Watchers
 owner: docs
-last_reviewed: 2026-09-22
+last_reviewed: 2026-10-21
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -153,3 +153,7 @@ Explorer backend `chain-grabber` expects:
 - optional indexes for box registers, script constants, block extensions, ADProofs, and block stats
 
 Run this as an indexer workload, not as a replacement for the node's own validation.
+
+## Index Recovery Readiness
+
+In 6.0.8, affected indexed reads return `503` with `Retry-After` during checkpoint/rollback recovery. Keep the error distinct from an empty balance/history and monitor `/blockchain/indexedHeight` beside full-block progress. An upgrade can require an index rebuild; deleting node data restarts work rather than resolving temporary readiness. See [Indexed Node API](indexed-node.md).

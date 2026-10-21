@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: 2026-09-22
+last_reviewed: 2026-10-21
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -81,3 +81,7 @@ In the Ergo blockchain, BlockP2P is implemented in the core node software, enabl
 ### Enhancements and Optimizations
 
 Ergo's BlockP2P protocol is continuously improved to enhance its performance and security. Recent updates include optimizations for faster block propagation and improved peer discovery mechanisms. These updates are crucial for maintaining the scalability of the Ergo network as it grows.
+
+## Retryable Transaction Section Mismatches
+
+The reference node checks a transaction section's version against its header before accepting it. Wrong-version bytes can arrive under the correct section ID, so rejection must leave that ID downloadable rather than permanently invalidating the block's required data. A section received before its header is available also remains retryable. Peer penalties and retry state are separate; see [Block Header](block-header.md) for the correspondence rule.

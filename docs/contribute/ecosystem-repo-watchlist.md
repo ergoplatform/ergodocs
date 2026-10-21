@@ -31,7 +31,7 @@ These repositories are retained as a broad maintainer reference list. They are n
 
 | Repository | Branch | Reference paths |
 | --- | --- | --- |
-| [`4EYESConsulting/psyworkshop-contracts`](https://github.com/4EYESConsulting/psyworkshop-contracts) | `default` | `README.md` |
+| [`4EYESLabs/psyworkshop-contracts`](https://github.com/4EYESLabs/psyworkshop-contracts) | `default` | `README.md` |
 | [`arcadiancomp/lithos_dashboard`](https://github.com/arcadiancomp/lithos_dashboard) | `default` | `README.md` |
 | [`arkadianet/kadia-explorer`](https://github.com/arkadianet/kadia-explorer) | `default` | `README.md` |
 | [`cafebedouin/peeryard`](https://github.com/cafebedouin/peeryard) | `default` | `README.md` |
@@ -216,3 +216,7 @@ Some source-list rows pointed at GitHub organizations rather than repositories. 
 ## Maintenance
 
 Keep this page broad and conservative. If a repo becomes important enough for specific documentation, move it to a dedicated docs page with narrow `source_repos` paths.
+
+## Additional Prototype Reference
+
+[CyberPets Racing](https://github.com/cannonQ/nft-races) currently describes a server-side alpha with on-chain NFT ownership checks. Its Babel-box implementation and planned on-chain game logic are development references, not evidence of a fully on-chain deployed game. Keep implementation branches and deployment status separate when using its examples.

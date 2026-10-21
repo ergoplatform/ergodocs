@@ -8,7 +8,7 @@ tags:
   - Artificial Economic Intelligence  
   - Service Virtualization  
 owner: docs
-last_reviewed: 2026-10-14
+last_reviewed: 2026-10-21
 source_repos:
   - repo: celaut-project/nodo
     branch: stable
@@ -210,3 +210,7 @@ Celaut is an orchestration layer that runs **on top of** blockchains like Ergo. 
 - [Celaut vs / + Netnotes](celaut_v_netnotes.md)
 - [Reputation System](reputation-system.md): Architecture, smart contracts, and usage
 - [Sigma Reputation System UI](https://reputation-systems.github.io/reputation-system/)
+
+## Linux Installation Permissions
+
+The [current installer guide](https://github.com/celaut-project/nodo#installation) distinguishes root, service-user and current-user installations. Without `sudo`, files live under `~/.local/share/nodo` and the daemon runs as the current user with `CAP_NET_ADMIN`; necessary system steps are shown for approval. Declining those steps leaves work to perform explicitly before rerunning the installer. This is not a promise that host package, subordinate-ID, network or device setup requires no elevated access. The service-user variant keeps the daemon under the selected system user instead of root.

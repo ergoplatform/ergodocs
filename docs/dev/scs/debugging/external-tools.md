@@ -35,8 +35,8 @@ Some Software Development Kits (SDKs) offer interactive environments for experim
 Web-based tools can help with writing scripts and catching syntax errors.
 
 * **escript.online:**
-  * **Website:** [escript.online](https://escript.online/)
-  * **Description:** An online editor and compiler for ErgoScript. Useful for writing scripts, checking syntax, and seeing the compiled ErgoTree output.
+  * **Source:** [escript.online](https://github.com/SavonarolaLabs/escript-online)
+  * **Description:** Historical editor/compiler project. Use its source as a reference; the former hosted endpoint is unavailable. For active compiler integration, see [Fleet SDK](fleet.md).
 
 ## Future Directions
 

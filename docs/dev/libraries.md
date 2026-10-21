@@ -5,7 +5,7 @@ tags:
   - SDKs
   - Bindings
 owner: docs
-last_reviewed: 2026-09-22
+last_reviewed: 2026-10-21
 source_repos:
   - repo: ergoplatform/sigma-rust
     branch: develop
@@ -32,6 +32,10 @@ These are the main SDKs recommended for most dApp development use cases:
 - **[AppKit](https://github.com/ergoplatform/ergo-appkit)**: Java/Scala SDK for building Ergo apps, suitable for JVM environments and Android development. [`Java`, `Scala`]
 - **[Fleet SDK](https://fleet-sdk.github.io/docs/)**: A pure JS/TS library designed for effortless Ergo transaction creation in web-based dApps and Node.js environments. [GitHub Org](https://github.com/fleet-sdk) [`JS/TS`]
 - **[Sigma-Rust](https://github.com/ergoplatform/sigma-rust/)**: Rust implementation of ErgoTree types, core primitives, and serialization, forming the basis for many other libraries and bindings. [`Rust`]
+
+## Recovery Phrase Compatibility
+
+The sigma-rust development branch removes an invisible byte-order mark from its first French BIP39 word. This can affect interoperability for previously generated phrases containing that word. Preserve original recovery material and check the exact dependency revision; the latest tagged `ergo-lib` release remains `0.28.0`. See [sigma-rust compatibility notes](sigma-rust.md#recovery-phrase-compatibility).
 
 ## Core Libraries
 

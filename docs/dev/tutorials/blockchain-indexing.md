@@ -27,10 +27,11 @@ source_repos:
     branch: main
     paths:
       - README.md
-  - repo: 4EYESConsulting/sigmalok-indexer
+  - repo: 4EYESLabs/sigmalok-indexer
     branch: main
     paths:
-      - README.md
+      - docs/swagger.yaml
+      - config.example.yaml
   - repo: arobsn/hergmes
     branch: master
     paths:
@@ -39,7 +40,7 @@ source_of_truth:
   - https://github.com/FlyingPig5/Ergo-node-explorer
   - https://github.com/jellymlg/nodeview.xyz
   - https://github.com/andrehafner/indexed_node_explorer_replacement
-  - https://github.com/4EYESConsulting/sigmalok-indexer
+  - https://github.com/4EYESLabs/sigmalok-indexer
   - https://github.com/arobsn/hergmes
 ---
 
@@ -89,4 +90,4 @@ The best approach depends on your application's specific requirements:
 
 For many non-trivial applications, building a **[Custom Indexer](custom-indexer.md)** provides the best balance of performance, flexibility, and control, despite the higher initial development effort. Explore the linked pages for more details on each strategy.
 
-Recent community prototypes worth reviewing before starting a new explorer/indexer include [Ergo-node-explorer](https://github.com/FlyingPig5/Ergo-node-explorer), [nodeview.xyz](https://github.com/jellymlg/nodeview.xyz), an [indexed node explorer replacement](https://github.com/andrehafner/indexed_node_explorer_replacement), [sigmalok-indexer](https://github.com/4EYESConsulting/sigmalok-indexer), and [hergmes](https://github.com/arobsn/hergmes). These are independent projects, so check each repository's current status before depending on it.
+Recent community prototypes worth reviewing before starting a new explorer/indexer include [Ergo-node-explorer](https://github.com/FlyingPig5/Ergo-node-explorer), [nodeview.xyz](https://github.com/jellymlg/nodeview.xyz), an [indexed node explorer replacement](https://github.com/andrehafner/indexed_node_explorer_replacement), [sigmalok-indexer](https://github.com/4EYESLabs/sigmalok-indexer), and [hergmes](https://github.com/arobsn/hergmes). These are independent projects, so check each repository's current status before depending on it.

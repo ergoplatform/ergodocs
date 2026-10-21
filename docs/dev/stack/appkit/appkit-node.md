@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: 2026-09-22
+last_reviewed: 2026-10-21
 source_repos:
   - repo: aslesarenko/ergo-appkit-examples
     branch: master

@@ -3,7 +3,7 @@ tags:
   - Security
   - Audit
 owner: docs
-last_reviewed: 2026-08-20
+last_reviewed: 2026-10-21
 source_repos:
   - repo: ScorexFoundation/sigmastate-interpreter
     branch: develop

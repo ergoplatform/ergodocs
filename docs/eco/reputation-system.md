@@ -6,7 +6,7 @@ tags:
 - dApp
 - Celaut
 owner: docs
-last_reviewed: 2026-09-22
+last_reviewed: 2026-10-21
 source_repos:
   - repo: reputation-systems/reputation-system
     branch: master

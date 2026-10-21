@@ -90,3 +90,7 @@ Compilers like ErgoScript and ErgoScala can easily incorporate this EIP by gener
 ---
 
 For complete technical details and field specifications, refer to the original EIP-0005 document.
+
+## Compiler Binding Checks
+
+An [open SigmaTemplateCompiler report](https://github.com/ergoplatform/sigmastate-interpreter/issues/1205) identifies incorrect parameter-to-constant binding with five or more parameters. Same-typed values can still produce a valid tree with unintended owners or thresholds. Check parameter names, constant indices and the instantiated ErgoTree against the intended contract; successful parsing and typechecking alone do not establish correct binding.

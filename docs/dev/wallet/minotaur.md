@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: 2026-07-26
+last_reviewed: 2026-10-21
 source_repos:
   - repo: minotaur-ergo/minotaur-wallet
     branch: dev

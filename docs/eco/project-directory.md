@@ -80,8 +80,8 @@ For external discovery, also check [Sigmaverse](sigmaverse.md).
 
 | Project | Live site | Status | Last verified activity |
 | --- | --- | --- | --- |
-| [RustChain](rust-chain.md) | [GitHub](https://github.com/Scottcjn/Rustchain) | Active | 2026-06-27 |
-| [BoTTube](bottube.md) | [GitHub](https://github.com/Scottcjn/bottube) | Active | 2026-06-27 |
+| [RustChain](rust-chain.md) | [Project site](https://rustchain.org/) | Historical; source unavailable | 2026-10-21 |
+| [BoTTube](bottube.md) | [Project site](https://bottube.ai/) | Historical; source unavailable | 2026-10-21 |
 | [Crux Finance](crux.md) | [cruxfinance.io](https://cruxfinance.io/) | Active | 2026-05-25 |
 | [Celaut](celaut.md) | - | Active | 2026-05-30 |
 | [Netnotes](netnotes.md) | - | Active | 2026-05-19 |

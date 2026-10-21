@@ -2,7 +2,7 @@
 tags:
   - P2P
 owner: docs
-last_reviewed: 2026-09-22
+last_reviewed: 2026-10-21
 source_repos:
   - repo: mwaddip/ergo-proxy
     branch: master
@@ -222,3 +222,7 @@ These demos provide examples of how to generate addresses and print transactions
 
 - A simple implementation of VLQ and ZigZag encoding can be found [here](https://gist.github.com/satsen/5e7bcc38565ad193cf7d906a856f804e).
 - A complete implementation of the P2P protocol written in Java can be found in [Ergonnection](https://github.com/Satergo/Ergonnection).
+
+## Retryable Transaction Section Mismatches
+
+The reference node checks a transaction section's version against its header before accepting it. Wrong-version bytes can arrive under the correct section ID, so rejection must leave that ID downloadable rather than permanently invalidating the block's required data. A section received before its header is available also remains retryable. Peer penalties and retry state are separate; see [Block Header](block-header.md) for the correspondence rule.

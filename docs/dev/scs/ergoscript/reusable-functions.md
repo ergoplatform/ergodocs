@@ -148,4 +148,4 @@ new OutputBuilder(SAFE_MIN_BOX_VALUE, /* Some Address */)
 ## Additional Resources
 
 - ErgoScript Language Specification: <https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/LangSpec.md>
-- Ergo Playground/eScript IDE: <https://escript.online/>
+- Historical eScript IDE source: <https://github.com/SavonarolaLabs/escript-online>

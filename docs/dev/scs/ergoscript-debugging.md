@@ -60,7 +60,7 @@ Off-chain simulators provide a more controlled environment for testing and debug
     * The [`@fleet-sdk/compiler` package](https://github.com/fleet-sdk/fleet/tree/master/packages/compiler) provides compiler documentation and examples for applications that compile ErgoScript off-chain.
 
 3. **escript.online:**
-    * This online tool ([escript.online](https://escript.online/)) allows writing and compiling ErgoScript, potentially aiding in catching syntax errors and understanding compilation outputs.
+    * The [historical editor source](https://github.com/SavonarolaLabs/escript-online) remains a reference, while its former hosted endpoint is unavailable. Use a maintained compiler or simulator for current testing.
 
 ## Future Directions & Desired Tooling
 

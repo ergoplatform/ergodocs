@@ -17,11 +17,11 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 
 ## Summary
 
-- Source-watched pages: `241`
-- Watched repositories: `236`
-- Watched GitHub owners: `99`
-- Watched repo/branch pairs: `242`
-- Watched paths: `521`
+- Source-watched pages: `239`
+- Watched repositories: `232`
+- Watched GitHub owners: `98`
+- Watched repo/branch pairs: `238`
+- Watched paths: `517`
 - Release-watched page/repository refs: `15`
 
 ## Coverage Groups
@@ -30,7 +30,7 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | --- | ---: | ---: | ---: | ---: |
 | Core / infrastructure | 5 | 31 | 134 | 198 |
 | Ecosystem org | 9 | 38 | 25 | 36 |
-| Developer / project | 82 | 164 | 120 | 105 |
+| Developer / project | 81 | 160 | 118 | 106 |
 | External standard/vendor | 3 | 3 | 6 | 6 |
 
 ## Coverage By Area
@@ -41,7 +41,7 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | `dev` | 100 |
 | `doc` | 1 |
 | `docs` | 9 |
-| `eco` | 76 |
+| `eco` | 74 |
 | `ef` | 1 |
 | `events` | 1 |
 | `mining` | 7 |
@@ -83,10 +83,9 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`machinafi`](https://github.com/machinafi) | Developer / project | 1 | 3 | 2 |
 | [`mhssamadani`](https://github.com/mhssamadani) | Developer / project | 3 | 3 | 3 |
 | [`ross-weir`](https://github.com/ross-weir) | Developer / project | 3 | 3 | 3 |
-| [`Scottcjn`](https://github.com/Scottcjn) | Developer / project | 4 | 3 | 2 |
 | [`spectrum-finance`](https://github.com/spectrum-finance) | Ecosystem org | 3 | 3 | 6 |
 | [`StabilityNexus`](https://github.com/StabilityNexus) | Developer / project | 2 | 3 | 1 |
-| [`4EYESConsulting`](https://github.com/4EYESConsulting) | Developer / project | 1 | 2 | 1 |
+| [`4EYESLabs`](https://github.com/4EYESLabs) | Developer / project | 1 | 2 | 2 |
 | [`celaut-project`](https://github.com/celaut-project) | Developer / project | 3 | 2 | 3 |
 | [`ergoMixer`](https://github.com/ergoMixer) | Developer / project | 1 | 2 | 2 |
 | [`ErgoRaffle`](https://github.com/ErgoRaffle) | Developer / project | 2 | 2 | 2 |
@@ -182,7 +181,7 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`odiseusme/matrix-pulse`](https://github.com/odiseusme/matrix-pulse) | Developer / project | `master` | 3 | 1 |
 | [`rosen-bridge/utils`](https://github.com/rosen-bridge/utils) | Core / infrastructure | `dev` | 3 | 1 |
 | [`ThierryM1212/SigmaO`](https://github.com/ThierryM1212/SigmaO) | Developer / project | `main` | 3 | 3 |
-| [`4EYESConsulting/sigmalok-indexer`](https://github.com/4EYESConsulting/sigmalok-indexer) | Developer / project | `main` | 2 | 1 |
+| [`4EYESLabs/sigmalok-indexer`](https://github.com/4EYESLabs/sigmalok-indexer) | Developer / project | `main` | 2 | 2 |
 | [`a-shannon/ergo-agent-sdk`](https://github.com/a-shannon/ergo-agent-sdk) | Developer / project | `main` | 2 | 1 |
 | [`arkadianet/citadel`](https://github.com/arkadianet/citadel) | Developer / project | `main` | 2 | 1 |
 | [`arobsn/hergmes`](https://github.com/arobsn/hergmes) | Developer / project | `master` | 2 | 1 |
@@ -229,7 +228,6 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`satoshilabs/slips`](https://github.com/satoshilabs/slips) | External standard/vendor | `master` | 2 | 1 |
 | [`SavonarolaLabs/hodlbox-xyz`](https://github.com/SavonarolaLabs/hodlbox-xyz) | Ecosystem org | `main` | 2 | 2 |
 | [`scalahub/Kiosk`](https://github.com/scalahub/Kiosk) | Core / infrastructure | `master` | 2 | 5 |
-| [`Scottcjn/bottube`](https://github.com/Scottcjn/bottube) | Developer / project | `main` | 2 | 2 |
 | [`spectrum-finance/ergo-dex`](https://github.com/spectrum-finance/ergo-dex) | Ecosystem org | `master` | 2 | 1 |
 | [`StabilityNexus/Gluon-Ergo-UI`](https://github.com/StabilityNexus/Gluon-Ergo-UI) | Developer / project | `main` | 2 | 1 |
 | [`2ndtlmining/Ergomempool`](https://github.com/2ndtlmining/Ergomempool) | Developer / project | `main` | 1 | 1 |
@@ -376,9 +374,6 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`SavonarolaLabs/memepool`](https://github.com/SavonarolaLabs/memepool) | Ecosystem org | `main` | 1 | 2 |
 | [`SavonarolaLabs/rosen-ui`](https://github.com/SavonarolaLabs/rosen-ui) | Ecosystem org | `main` | 1 | 2 |
 | [`SavonarolaLabs/squared`](https://github.com/SavonarolaLabs/squared) | Ecosystem org | `main` | 1 | 1 |
-| [`Scottcjn/Rustchain`](https://github.com/Scottcjn/Rustchain) | Developer / project | `main` | 1 | 1 |
-| [`Scottcjn/rustchain-bounties`](https://github.com/Scottcjn/rustchain-bounties) | Developer / project | `main` | 1 | 1 |
-| [`Scottcjn/sophia-rustchain-bridge`](https://github.com/Scottcjn/sophia-rustchain-bridge) | Developer / project | `main` | 1 | 1 |
 | [`scruper/ergone`](https://github.com/scruper/ergone) | Developer / project | `master` | 1 | 1 |
 | [`sdaveas/nipopow-verifier`](https://github.com/sdaveas/nipopow-verifier) | Developer / project | `master` | 1 | 1 |
 | [`sigmastamp/sigmastamp-frontend`](https://github.com/sigmastamp/sigmastamp-frontend) | Developer / project | `main` | 1 | 1 |
@@ -400,7 +395,7 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | --- | ---: | ---: |
 | [`dev/scs/contracts.md`](contracts.md) | 26 | 41 |
 | [`roadmap.md`](roadmap.md) | 21 | 42 |
-| [`eco/emerging-projects.md`](emerging-projects.md) | 12 | 16 |
+| [`eco/emerging-projects.md`](emerging-projects.md) | 11 | 14 |
 | [`eco/degens-world.md`](degens-world.md) | 9 | 9 |
 | [`eco/rosen.md`](rosen.md) | 9 | 10 |
 | [`events/ergohack.md`](ergohack.md) | 8 | 8 |
@@ -408,8 +403,8 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`dev/stack/sigma-rust.md`](sigma-rust.md) | 6 | 17 |
 | [`dev/scs/ergoscript-tooling.md`](ergoscript-tooling.md) | 5 | 5 |
 | [`dev/scs/ergoscript.md`](ergoscript.md) | 5 | 9 |
-| [`dev/tutorials/blockchain-indexing.md`](blockchain-indexing.md) | 5 | 5 |
-| [`dev/tutorials/blockchain-indexing/custom-indexer.md`](custom-indexer.md) | 4 | 5 |
+| [`dev/tutorials/blockchain-indexing.md`](blockchain-indexing.md) | 5 | 6 |
+| [`dev/tutorials/blockchain-indexing/custom-indexer.md`](custom-indexer.md) | 4 | 6 |
 | [`dev/tutorials/hardware-wallet-integration.md`](hardware-wallet-integration.md) | 4 | 6 |
 | [`eco/celaut_v_netnotes.md`](celaut_v_netnotes.md) | 4 | 4 |
 | [`eco/ergonames.md`](ergonames.md) | 4 | 4 |
@@ -429,7 +424,7 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | Repository | Branch | Watched paths | Pages |
 | --- | --- | --- | --- |
 | [`2ndtlmining/Ergomempool`](https://github.com/2ndtlmining/Ergomempool) | `main` | `README.md` | `docs/eco/mempool-vis.md` |
-| [`4EYESConsulting/sigmalok-indexer`](https://github.com/4EYESConsulting/sigmalok-indexer) | `main` | `README.md` | `docs/dev/tutorials/blockchain-indexing.md`<br>`docs/dev/tutorials/blockchain-indexing/custom-indexer.md` |
+| [`4EYESLabs/sigmalok-indexer`](https://github.com/4EYESLabs/sigmalok-indexer) | `main` | `config.example.yaml`<br>`docs/swagger.yaml` | `docs/dev/tutorials/blockchain-indexing.md`<br>`docs/dev/tutorials/blockchain-indexing/custom-indexer.md` |
 | [`a-shannon/ergo-agent-sdk`](https://github.com/a-shannon/ergo-agent-sdk) | `main` | `README.md` | `docs/dev/stack/ergo-agent-sdk.md`<br>`docs/eco/emerging-projects.md` |
 | [`a-shannon/ergo-research`](https://github.com/a-shannon/ergo-research) | `main` | `papers/curve-trees` | `docs/dev/protocol/zkp.md` |
 | [`a-shannon/ergo-sidechain-bridge`](https://github.com/a-shannon/ergo-sidechain-bridge) | `main` | `README.md`<br>`docs/public-audit-alpha-manifest.json`<br>`docs/public-audit-alpha.md` | `docs/uses/sidechains.md` |
@@ -649,10 +644,6 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`SavonarolaLabs/squared`](https://github.com/SavonarolaLabs/squared) | `main` | `README.md` | `docs/eco/crystal-pool.md` |
 | [`scalahub/Kiosk`](https://github.com/scalahub/Kiosk) | `master` | `src/main/scala/kiosk/offchain`<br>`src/main/scala/kiosk/offchain/readme.md`<br>`src/test/scala/kiosk/offchain`<br>`src/test/scala/kiosk/offchain/timestamp.json`<br>`src/test/scala/kiosk/oraclepool/v4a` | `docs/dev/scs/contracts.md`<br>`docs/dev/stack/assembler.md` |
 | [`ScorexFoundation/sigmastate-interpreter`](https://github.com/ScorexFoundation/sigmastate-interpreter) | `develop` | `core/shared/src/main/scala/sigma/Colls.scala`<br>`core/shared/src/main/scala/sigma/data/SigmaBoolean.scala`<br>`core/shared/src/main/scala/sigma/serialization/TypeSerializer.scala`<br>`data`<br>`data/shared/src/main/scala/org/ergoplatform/ErgoBox.scala`<br>`data/shared/src/main/scala/org/ergoplatform/ErgoBoxCandidate.scala`<br>`data/shared/src/main/scala/sigma/ast/values.scala`<br>`docs`<br>+23 more | `docs/crypto.md`<br>`docs/dev/data-model/box.md`<br>`docs/dev/protocol/audit.md`<br>`docs/dev/protocol/eutxo/ergo_vs_cardano.md`<br>`docs/dev/protocol/tx/read-only-inputs.md`<br>`docs/dev/scs/debugging/scala-debugging.md`<br>+18 more |
-| [`Scottcjn/bottube`](https://github.com/Scottcjn/bottube) | `main` | `README.md`<br>`ergo_bridge_blueprint.py` | `docs/eco/bottube.md`<br>`docs/eco/emerging-projects.md` |
-| [`Scottcjn/Rustchain`](https://github.com/Scottcjn/Rustchain) | `main` | `README.md` | `docs/eco/rust-chain.md` |
-| [`Scottcjn/rustchain-bounties`](https://github.com/Scottcjn/rustchain-bounties) | `main` | `README.md` | `docs/eco/rust-chain.md` |
-| [`Scottcjn/sophia-rustchain-bridge`](https://github.com/Scottcjn/sophia-rustchain-bridge) | `main` | `README.md` | `docs/eco/rust-chain.md` |
 | [`scruper/ergone`](https://github.com/scruper/ergone) | `master` | `README.md` | `docs/eco/ergone.md` |
 | [`sdaveas/nipopow-verifier`](https://github.com/sdaveas/nipopow-verifier) | `master` | `README.md` | `docs/dev/protocol/nipopows.md` |
 | [`sigmastamp/sigmastamp-frontend`](https://github.com/sigmastamp/sigmastamp-frontend) | `main` | `README.md` | `docs/eco/sigma-stamp.md` |

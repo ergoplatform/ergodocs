@@ -1,6 +1,6 @@
 ---
 title: BoTTube
-description: AI-native video platform with Ergo bridge integration work.
+description: Historical reference for an AI video platform and Ergo bridge prototype.
 tags:
   - ecosystem
   - applications
@@ -8,28 +8,18 @@ tags:
   - video
 owner: docs
 last_reviewed: 2026-09-22
-source_repos:
-  - repo: Scottcjn/bottube
-    branch: main
-    paths:
-      - README.md
-      - ergo_bridge_blueprint.py
 source_of_truth:
-  - https://github.com/Scottcjn/bottube
-  - https://github.com/Scottcjn/bottube/commit/4d70ded648bf7cfa08e28bbcfce51c34a2d0a663
-  - https://github.com/Scottcjn/bottube/pull/2221
-  - https://github.com/Scottcjn/bottube/pull/2222
+  - https://bottube.ai/
+source_watch_note: Historical reference; previously watched repositories are unavailable. Reintroduce source watches only when implementation evidence is publicly retrievable.
 ---
 
 # BoTTube
 
-[BoTTube](https://github.com/Scottcjn/bottube) is an AI-native video platform for humans and agents to publish, curate, and interact with video content. The project describes itself as part of the RustChain DePIN ecosystem and emphasizes "Proof of Physical AI" for some in-house content generation.
+[BoTTube](https://bottube.ai/) is an AI-video project previously documented here with an Ergo bridge prototype. Its previously linked source repository is unavailable. The sections below preserve earlier implementation descriptions; they do not establish current API behavior, authentication, pricing, deposit acceptance or withdrawal availability.
 
-The platform is not Ergo-specific, but the public repository includes an Ergo bridge blueprint for deposit verification and address handling through Ergo Explorer APIs.
+## Previously Published Platform Description
 
-## Platform Features
-
-The public repository describes BoTTube as a live short-form video platform with:
+Earlier repository material described:
 
 - agent API registration, uploads, comments, and voting;
 - authenticated agent profile reads and updates through `/api/agents/me` and `/api/agents/me/profile`, plus avatar upload or generation through `/api/agents/me/avatar`;
@@ -41,13 +31,13 @@ The public repository describes BoTTube as a live short-form video platform with
 - provenance metadata for videos, including creator, model, prompt hash, asset hash, uploader signature, and RustChain anchor fields.
 - BCOS certification metadata, MIT licensing, and a public engineering page for operational visibility.
 
-Uploads are constrained by the platform: short videos are capped at eight seconds, with automatic resizing/transcoding for the final published clip.
+The earlier description constrained uploads: short videos are capped at eight seconds, with automatic resizing/transcoding for the final published clip.
 
-The project also publishes `bottube-verify`, an open-source provenance verifier released as `v0.1.0-verifier`.
+Earlier notes also referenced `bottube-verify`, an open-source provenance verifier released as `v0.1.0-verifier`.
 
 ## Ergo Integration
 
-The Ergo bridge blueprint covers:
+The previously reviewed Ergo bridge blueprint covered:
 
 - deposit verification through Ergo Explorer;
 - P2PK address handling;
@@ -57,13 +47,14 @@ The Ergo bridge blueprint covers:
 - ERG deposits write the deposit record, RTC balance credit, and `earnings.reason` record in one database transaction. If crediting fails, the deposit record rolls back so the transaction ID remains retryable instead of becoming permanently claimed.
 - ERG deposits are bound to the authenticated account's sender address. The blueprint rejects deposits without a sender address, change originating from the platform wallet, and deposits from banned agents.
 - ERG deposit transaction IDs are canonicalized and restricted to 64 lowercase hexadecimal characters before lookup and deduplication, preventing aliases from being credited more than once.
-- The current ERG off-ramp is disabled: the withdrawal and processing routes return `410` with `OFFRAMP_DISABLED`, so deposited balances are for on-platform use only.
-- The separate Solana and Base wRTC bridge blueprints are also disabled behind a shared flag and return `410 WRTC_BRIDGE_DISABLED`; their historical route and ledger code remains in the repository.
+- At the last source review, the ERG off-ramp was disabled: the withdrawal and processing routes return `410` with `OFFRAMP_DISABLED`, so deposited balances are for on-platform use only.
+- The separate Solana and Base wRTC bridge blueprints were also disabled behind a shared flag and return `410 WRTC_BRIDGE_DISABLED`; their historical route and ledger code remains in the repository.
 
 Treat the bridge code as project-specific integration work, not a general bridge standard. Review the upstream repository before reusing any contract, exchange-rate, or deposit-verification logic.
 
-## Links
+## Project Reference
 
-- [BoTTube repository](https://github.com/Scottcjn/bottube)
-- [Ergo bridge blueprint](https://github.com/Scottcjn/bottube/blob/main/ergo_bridge_blueprint.py)
-- [BoTTube verifier release](https://github.com/Scottcjn/bottube/releases/tag/v0.1.0-verifier)
+- [BoTTube project website](https://bottube.ai/)
+- Historical repository: `Scottcjn/bottube`.
+
+Use accessible current source and published operating terms before integrating or depositing funds; the historical blueprint is not a supported general-purpose Ergo bridge.

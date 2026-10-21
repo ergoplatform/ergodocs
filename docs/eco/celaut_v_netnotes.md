@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: '2026-08-20'
+last_reviewed: 2026-10-21
 source_repos:
   - repo: celaut-project/nodo
     branch: stable
@@ -61,3 +61,7 @@ If you are looking for personal financial management tools, visit [Netnotes](net
 If you want to build or use decentralized services and marketplaces for AI agents, automation, and trading strategies, [Celaut](celaut.md) provides the infrastructure to make that possible.
 
 ---
+
+## Operator Permissions
+
+Nodo now documents a current-user Linux installation with local files and explicit prompts for necessary privileged setup. Root and service-user installation variants remain separate choices. Select the intended daemon identity and required host permissions before integrating an agent; alpha CLI availability does not establish a shipped Netnotes connector. See [Celaut installation permissions](celaut.md#linux-installation-permissions).

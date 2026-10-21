@@ -3,7 +3,7 @@ tags:
   - Block Header
   - Data Model
 owner: docs
-last_reviewed: 2026-05-26
+last_reviewed: 2026-10-21
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -50,3 +50,7 @@ The node derives script and ErgoTree versions from the block version with `Versi
 * **[Merkle Tree](merkle-tree-structures.md):** A data structure used extensively in blockchains to efficiently verify data integrity. It allows for quick verification that a particular piece of data is included in a larger set.
 * **[UTXO (Unspent Transaction Output) Set](eutxo.md):** The record of all unspent transaction outputs on the blockchain, representing the current distribution of the cryptocurrency.
 * **[Proof-of-Work (PoW)](autolykos.md):** A consensus mechanism that requires miners to solve a computationally intensive puzzle to add blocks to the blockchain. This ensures the security and immutability of the chain.
+
+## Transaction Section Version Binding
+
+`Header.isCorrespondingModifier` checks the transaction section's `blockVersion` against the header's `version`, as well as its section ID. The ID alone does not bind that version. This is an admission check alongside the committed Merkle root, not a new header field or Merkle encoding.

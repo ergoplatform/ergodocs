@@ -1,11 +1,13 @@
 ---
 owner: docs
-last_reviewed: 2026-10-14
+last_reviewed: 2026-10-21
 ia_status: directory
 ---
 # Bringing Monero to RosenBridge
 
-Monero is a proposed Rosen integration. The current [RCS and signing review](https://github.com/rosen-bridge/docs/pull/1) requires output-specific deposit agreement and an inspectable custody path. A [pinned local integration experiment](https://github.com/a-shannon/docs/tree/5e81893330c743a8ce716d3b9d9fedf005384002/r-and-d/monero-integration/roundtrip) reports a complete Monero → Ergo → Monero adapter round trip, including fee/reward handling and restart/lost-reply recovery within its stated scope. Production qualification, published dependencies, ordinary installation/startup, and upstream acceptance remain open.
+Monero remains a proposed Rosen integration. The current [RCS-003 design review](https://github.com/rosen-bridge/docs/pull/1) now follows the `chain-designs/monero/design.md` structure. The last complete native CLSAG Monero–Ergo–Monero replay is pinned at `9466cf2fadd266f20e927da938e074b8ef60dacf`; later V2 changes have focused tests, not a new complete native replay.
+
+Production gaps include disposition of unclaimed deposits, restart before signing and partial settlement, permanent Guard absence and real 3-of-4 custody, and payout reorg/finality policy after rewards. A laboratory two-confirmation terminal state is not a production finality policy. The separate FCMP++/CARROT experiment has no Ergo settlement leg or qualified new-address journey. Design acceptance, ordinary dependency installation and production qualification remain open.
 
 The wallet-RPC examples below describe an earlier multisig proof of concept for engineering experiments. They are not a current production integration or a sufficient launch checklist.
 
