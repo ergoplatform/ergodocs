@@ -56,9 +56,9 @@ This guide details the recommended method for running an Ergo node on Android us
             blocksToKeep = 1440 // Keep ~1 day of full blocks (~500MB-1GB), adjust if needed
             mining = false
 
-            # Enable faster bootstrapping (both recommended for flexibility)
+            # Bootstrap headers with NiPoPoW; UTXO snapshots require UTXO state
             nipopow.nipopowBootstrap = true
-            utxoBootstrap = true
+            utxo.utxoBootstrap = false
 
             # Optional: Adjust NiPoPoW parameters if using nipopowBootstrap
             # nipopow.p2pNipopows = 2
@@ -80,7 +80,8 @@ This guide details the recommended method for running an Ergo node on Android us
     *   **Explanation:**
         *   `stateType = "digest"`: Enables the lightweight digest mode.
         *   `blocksToKeep = 1440`: Keeps roughly the last day's worth of full blocks. Adjust based on storage/needs. Lower values save space but limit historical data access via API.
-        *   `nipopow.nipopowBootstrap = true` & `utxoBootstrap = true`: Enable fast synchronization methods. The node will use the best available option from peers.
+        *   `nipopow.nipopowBootstrap = true`: Bootstraps the header chain with a NiPoPoW proof.
+        *   `utxo.utxoBootstrap = false`: Keeps UTXO snapshot bootstrap disabled for Digest state.
     *   Save the file: Press `CTRL + O`, then `Enter`.
     *   Exit nano: Press `CTRL + X`.
 5.  **Launch the Node:**
@@ -91,6 +92,6 @@ This guide details the recommended method for running an Ergo node on Android us
     *   *(Adjust `-Xmx1536M` (1.5GB) based on your device. If it crashes, try `-Xmx1G` or increase if you have more RAM available, e.g., `-Xmx2G`).*
 6.  **Monitor Synchronization:**
     *   Open a web browser on your Android device and go to `http://127.0.0.1:9053/panel`.
-    *   Initial sync (especially the UTXO snapshot download if `utxoBootstrap` is used) can take time and may not show detailed progress in logs. Monitor network activity or storage usage. Once synced, the panel will update.
+    *   Initial header and block synchronization can take time and may not show detailed progress in logs. Monitor network activity or storage usage. Once synced, the panel will update.
 
 Refer back to the [main Android guide](node-android.md#direct-termux-setup-digest-mode) for general tips, disk space clarification, and troubleshooting.

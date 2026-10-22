@@ -18,10 +18,10 @@ To run the node in light mode, you need to adjust specific settings in your `erg
 
 **Bootstrapping Options:**
 
-Bootstrapping is the initial synchronization process. Light nodes have options to speed this up and reduce initial storage requirements:
+Bootstrapping is the initial synchronization process. A pruned Digest node can use NiPoPoW to obtain the header chain before syncing blocks:
 
 * **`ergo.node.nipopow.nipopowBootstrap = true`**: Instructs the node to download a NiPoPoW proof during startup. This significantly reduces the data needed for initial sync compared to downloading all headers from genesis.
-* **`ergo.node.utxoBootstrap = true`**: (Alternative to NiPoPoW bootstrap) Instructs the node to download a UTXO set snapshot to initialize its state. This can be faster but might require more initial bandwidth. *Note: These two bootstrap options might be mutually exclusive depending on the node version; check current node documentation or configuration comments.*
+* **`ergo.node.utxo.utxoBootstrap = false`**: Keep UTXO snapshot bootstrap disabled for Digest state. UTXO snapshot bootstrap requires UTXO state; it is not an alternative for a Digest node.
 
 **Example Configuration:**
 
@@ -32,9 +32,9 @@ ergo {
     blocksToKeep = 1440 // Keep ~1 day of full blocks
     mining = false      // Usually false for light nodes
 
-    # Choose one bootstrapping method (check compatibility):
-    nipopow.nipopowBootstrap = true 
-    # utxoBootstrap = true 
+    # Bootstrap headers with NiPoPoW; keep UTXO snapshots disabled:
+    nipopow.nipopowBootstrap = true
+    utxo.utxoBootstrap = false
 
     # Optional: Adjust NiPoPoW parameters if using nipopowBootstrap
     nipopow.p2pNipopows = 2 
@@ -60,7 +60,7 @@ In this example configuration:
 ## Resource Considerations
 
 * **Memory (RAM):** While lighter than archive mode, digest nodes still require sufficient RAM, especially during bootstrapping. Users have reported needing to increase the JVM heap space using the `-Xmx` flag (e.g., `java -Xmx1G -jar ...` or higher) particularly when bootstrapping on resource-constrained devices like mobile phones. Monitor your node's memory usage.
-* **Disk Space:** Significantly lower than archive mode. With `nipopowBootstrap` and a reasonable `blocksToKeep` value (like 1440), the storage footprint after sync can be relatively small (potentially under 1GB, but this can vary). Using `utxoBootstrap` might require more temporary space during the snapshot download.
+* **Disk Space:** Significantly lower than archive mode. With `nipopowBootstrap` and a reasonable `blocksToKeep` value (like 1440), the storage footprint after sync can be relatively small (potentially under 1GB, but this can vary).
 * **CPU:** Validation still requires CPU power, but generally less than an archive node maintaining the full UTXO set database.
 
 ## Wallet Compatibility
