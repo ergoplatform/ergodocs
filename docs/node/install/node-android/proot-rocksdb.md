@@ -87,7 +87,7 @@ This guide details the more advanced method for running an Ergo node on Android 
 
             # Enable faster bootstrapping (both recommended)
             nipopow.nipopowBootstrap = true
-            utxoBootstrap = true
+            utxo.utxoBootstrap = true
           }
         }
 
