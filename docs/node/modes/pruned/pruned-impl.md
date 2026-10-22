@@ -24,7 +24,7 @@ The UTXO set authentication uses an AVL+ tree, outlined in [this research paper]
 
 #### Node Configuration
 
-Bootstrapping with a UTXO set snapshot is enabled by setting *ergo.node.utxoBootstrap = true* in the [configuration](conf-node.md).
+Bootstrapping with a UTXO set snapshot is enabled by setting *ergo.node.utxo.utxoBootstrap = true* in the [configuration](conf-node.md).
 
 #### Sync Info V3
 
