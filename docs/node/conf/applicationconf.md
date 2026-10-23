@@ -205,10 +205,10 @@ checkpoint = {
 }
 ```
    
-- Before the height given (including it) validation of scripts is missed.
-- This improving perfomance and memory usage during initial bootstrapping.
-- The node still applying transactions to UTXO set and so checks UTXO set digests for each block.
-- Block at checkpoint height is to be checked against expected one.
+- Through the checkpoint height (inclusive), full-block processing skips each transaction's stateless and stateful validation, including scripts.
+- The node still applies UTXO state changes and checks the resulting root, or verifies ADProofs against the declared root in digest mode.
+- The header at the checkpoint height must match `blockId`.
+- Set `checkpoint = null` to validate transactions from genesis.
     
 
 #### adProofsSuffixLength
