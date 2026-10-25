@@ -185,7 +185,7 @@ Month buckets summarize roadmap-relevant changes from the latest docs sweep. Use
 - [ChainCash/Basis](chaincash.md) and [Dexy](dexy.md): published security review and incident/recovery sources require pinned-contract and deployment checks; proposed fixes remain under review.
 - [Storage rent](rent-spending.md): EIPs 51–53 propose refresh/grace/attestation rules; current node admission policy and collection support do not activate those proposals. [v6.0.9](https://github.com/ergoplatform/ergo/pull/2719) is a release candidate under review.
 - [Lithos](lithos.md): mainnet 1.0.5 adds difficulty forwards, reward sweeps and wallet/candidate recovery; mainnet requires a personal API key and the statistics migration needs resynchronization.
-- [Nautilus](nautilus.md): 1.3.4 adds connection wallet search and recovery-word interaction improvements; browser-store availability is checked separately from the source release.
+- [Nautilus](nautilus.md): 1.3.6 fixes connector request handling, connects `sign_tx_input`, and checks transaction well-formedness in `submit_tx`, following 1.3.4's wallet search and recovery-word interaction improvements. Browser-store availability is checked separately from source releases.
 - [Machina](machina-finance.md): current SDK source uses owner-side bid/ask prices, explicit supported pair checks and stricter fill/owner-box rules.
 - [Monero research](bringing-monero.md): the RCS-003 proposal distinguishes the last complete native replay from later focused fixes and still-open custody, recovery and finality work.
 

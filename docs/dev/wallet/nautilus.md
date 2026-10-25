@@ -1,3 +1,17 @@
+---
+owner: docs
+last_reviewed: 2026-10-25
+source_repos:
+  - repo: nautls/nautilus-wallet
+    branch: master
+    release_watch: true
+    paths:
+      - package.json
+source_of_truth:
+  - https://github.com/nautls/nautilus-wallet
+  - https://github.com/nautls/nautilus-wallet/releases/tag/v1.3.6
+---
+
 # Nautilus Wallet
 
 [Nautilus Wallet](https://twitter.com/NautilusWallet) is a privacy-focused, web-based wallet designed for the secure management of digital assets within the Ergo ecosystem. It offers an intuitive user interface that caters to both novice and experienced users.
@@ -20,7 +34,9 @@
 
 ## Current Release
 
-[Nautilus v1.3.4](https://github.com/nautls/nautilus-wallet/releases/tag/v1.3.4) adds wallet search during dApp connection, Tab selection for mnemonic words, MEOW metadata and a LIT icon, plus form-validation, bundle and dependency changes. A published source release and browser-store rollout are separate; check the version actually installed before relying on a new interaction.
+[Nautilus v1.3.6](https://github.com/nautls/nautilus-wallet/releases/tag/v1.3.6) queues and deduplicates dApp Connector window-opening requests, keeps the service worker alive while requests are pending, connects `sign_tx_input`, and checks transaction well-formedness in `submit_tx`. It also improves QR rendering, updates Indonesian, Malay, and Javanese translations, and fixes a Ledger Buffer-polyfill override.
+
+Earlier [v1.3.4](https://github.com/nautls/nautilus-wallet/releases/tag/v1.3.4) added wallet search during dApp connection, Tab selection for mnemonic words, MEOW metadata and a LIT icon, plus form-validation, bundle and dependency changes. [v1.3.5](https://github.com/nautls/nautilus-wallet/releases/tag/v1.3.5) fixed Windows build-output filename sanitization. A published source release and browser-store rollout are separate; check the version actually installed before relying on a new interaction.
 
 ## Installation
 

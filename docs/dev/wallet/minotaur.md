@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: 2026-10-21
+last_reviewed: 2026-10-25
 source_repos:
   - repo: minotaur-ergo/minotaur-wallet
     branch: dev
@@ -51,6 +51,10 @@ For a visual and detailed guide on how to use Minotaur, watch the comprehensive 
 - `Jan 21`: Minotaur `3.4.0` released with node backend support, backend selection between node and explorer, chart fixes, duplicate multisig wallet fix, and dependency updates.
 - `Jul 25` 2025: [Minotaur `v3.0.0`](https://github.com/minotaur-ergo/minotaur-wallet/releases/tag/v3.0.0) updated the multisig communication data format, added an AirDrop dApp, extracted utility packages, added `createChangeBox` support to all dApps, validated addresses before wallet insertion, and fixed wallet restore/delete issues.
 - Wallet restore and read-only sync scan derived addresses so balances and UTXOs can be rebuilt deterministically.
+
+## Development Branch
+
+The [`dev` branch fixes dApp change-box handling and QR rescans](https://github.com/minotaur-ergo/minotaur-wallet/commit/3eba93efa73026d6fe9b488aeca890ea9aeefbc6). dApps send change to the wallet's default address instead of its first address. Closing the QR scanner clears the previous scan's state for ErgoPay, cold signing requests, signed transactions, and wallet imports. Check release notes before assuming these fixes are included in an installed build.
 
 ## Upcoming Features
 

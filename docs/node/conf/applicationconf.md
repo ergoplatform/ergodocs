@@ -207,7 +207,7 @@ checkpoint = {
    
 - Through the checkpoint height (inclusive), full-block processing skips each transaction's stateless and stateful validation, including scripts.
 - In UTXO mode, the node still applies state changes and checks the resulting root.
-- In Digest mode, ADProofs must still be present and their digest must match the header; this does not guarantee full proof validation below the checkpoint.
+- In Digest mode, ADProofs must still be present and their digest must match the header; this does not guarantee full proof validation through the checkpoint height.
 - The header at the checkpoint height must match `blockId`.
 - Set `checkpoint = null` to validate transactions from genesis.
     

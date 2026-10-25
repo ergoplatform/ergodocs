@@ -17,12 +17,12 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 
 ## Summary
 
-- Source-watched pages: `239`
-- Watched repositories: `232`
+- Source-watched pages: `240`
+- Watched repositories: `233`
 - Watched GitHub owners: `98`
-- Watched repo/branch pairs: `238`
-- Watched paths: `519`
-- Release-watched page/repository refs: `15`
+- Watched repo/branch pairs: `239`
+- Watched paths: `520`
+- Release-watched page/repository refs: `16`
 
 ## Coverage Groups
 
@@ -30,7 +30,7 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | --- | ---: | ---: | ---: | ---: |
 | Core / infrastructure | 5 | 31 | 134 | 200 |
 | Ecosystem org | 9 | 38 | 25 | 36 |
-| Developer / project | 81 | 160 | 118 | 106 |
+| Developer / project | 81 | 161 | 119 | 107 |
 | External standard/vendor | 3 | 3 | 6 | 6 |
 
 ## Coverage By Area
@@ -38,7 +38,7 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | Area | Source-watched pages |
 | --- | ---: |
 | `contribute` | 2 |
-| `dev` | 100 |
+| `dev` | 101 |
 | `doc` | 1 |
 | `docs` | 9 |
 | `eco` | 74 |
@@ -96,6 +96,7 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`LEEKOHCHING`](https://github.com/LEEKOHCHING) | Developer / project | 1 | 2 | 1 |
 | [`LiliumErgo`](https://github.com/LiliumErgo) | Developer / project | 2 | 2 | 2 |
 | [`marctheshark3`](https://github.com/marctheshark3) | Developer / project | 3 | 2 | 3 |
+| [`nautls`](https://github.com/nautls) | Developer / project | 2 | 2 | 3 |
 | [`networkspore`](https://github.com/networkspore) | Developer / project | 2 | 2 | 1 |
 | [`oliverw`](https://github.com/oliverw) | Developer / project | 1 | 2 | 1 |
 | [`paideiadao`](https://github.com/paideiadao) | Developer / project | 2 | 2 | 4 |
@@ -132,7 +133,6 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`lucagdangelo`](https://github.com/lucagdangelo) | Developer / project | 1 | 1 | 1 |
 | [`minotaur-ergo`](https://github.com/minotaur-ergo) | Developer / project | 1 | 1 | 3 |
 | [`Moria-Finance`](https://github.com/Moria-Finance) | Developer / project | 2 | 1 | 1 |
-| [`nautls`](https://github.com/nautls) | Developer / project | 1 | 1 | 2 |
 | [`nightowlcasino`](https://github.com/nightowlcasino) | Developer / project | 2 | 1 | 1 |
 | [`nirojan95`](https://github.com/nirojan95) | Developer / project | 2 | 1 | 1 |
 | [`nirvanush`](https://github.com/nirvanush) | Developer / project | 1 | 1 | 1 |
@@ -340,6 +340,7 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`Moria-Finance/multi-sig-test`](https://github.com/Moria-Finance/multi-sig-test) | Developer / project | `main` | 1 | 1 |
 | [`MrStahlfelge/mosaik-ageusddemo`](https://github.com/MrStahlfelge/mosaik-ageusddemo) | Developer / project | `master` | 1 | 2 |
 | [`nautls/machina-finance`](https://github.com/nautls/machina-finance) | Developer / project | `main` | 1 | 2 |
+| [`nautls/nautilus-wallet`](https://github.com/nautls/nautilus-wallet) | Developer / project | `master` | 1 | 1 |
 | [`nightowlcasino/NightOwl-Backend`](https://github.com/nightowlcasino/NightOwl-Backend) | Developer / project | `main` | 1 | 1 |
 | [`nightowlcasino/NightOwl-Frontend`](https://github.com/nightowlcasino/NightOwl-Frontend) | Developer / project | `main` | 1 | 1 |
 | [`nirojan95/ergonation`](https://github.com/nirojan95/ergonation) | Developer / project | `main` | 1 | 1 |
@@ -597,6 +598,7 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`mwaddip/santa-donner`](https://github.com/mwaddip/santa-donner) | `main` | `README.md` | `docs/node/rust-node.md`<br>`docs/roadmap.md` |
 | [`mwaddip/santa-vixen`](https://github.com/mwaddip/santa-vixen) | `master` | `README.md` | `docs/node/rust-node.md`<br>`docs/roadmap.md` |
 | [`nautls/machina-finance`](https://github.com/nautls/machina-finance) | `main` | `packages/contracts/SPEC.md`<br>`packages/contracts/src` | `docs/eco/machina-finance.md` |
+| [`nautls/nautilus-wallet`](https://github.com/nautls/nautilus-wallet) | `master` | `package.json` | `docs/dev/wallet/nautilus.md` |
 | [`networkspore/Netnotes`](https://github.com/networkspore/Netnotes) | `master` | `README.md` | `docs/eco/celaut_v_netnotes.md`<br>`docs/eco/netnotes.md` |
 | [`networkspore/netnotes-engine`](https://github.com/networkspore/netnotes-engine) | `main` | `README.md` | `docs/eco/celaut_v_netnotes.md`<br>`docs/eco/netnotes.md` |
 | [`nightowlcasino/NightOwl-Backend`](https://github.com/nightowlcasino/NightOwl-Backend) | `main` | `README.md` | `docs/eco/nightowl.md` |
