@@ -133,8 +133,13 @@ def collect_urls(site: Path) -> tuple[dict[str, list[str]], list[dict[str, Any]]
                 if not raw:
                     continue
                 url = html.unescape(str(raw).strip())
-                if not url.startswith(("http://", "https://")):
+                # The published site uses HTTPS, including scheme-relative URLs.
+                if url.startswith("//"):
+                    url = "https:" + url
+                if not url.lower().startswith(("http://", "https://")):
                     continue
+                scheme, rest = url.split(":", 1)
+                url = scheme.lower() + ":" + rest
                 try:
                     url = urldefrag(url)[0]
                 except ValueError:

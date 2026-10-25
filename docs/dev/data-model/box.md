@@ -87,8 +87,8 @@ Besides the [registers](registers.md), each box features a unique identification
   // If the current box is not the same as the first input box, check if the output goes to a specified address
   val outputGoesToCheese = {
    // Create a public key that corresponds to a specific address
-   PK("9etXmP7D3ZkWssDopWcWkCPpjn22RVuEyXoFSbVPWAvvzDbcDXE").propBytes
-    == OUTPUTS(0).propositionBytes // propositionBytes holds the script (ErgoTree)
+   PK("9etXmP7D3ZkWssDopWcWkCPpjn22RVuEyXoFSbVPWAvvzDbcDXE").propBytes ==
+    OUTPUTS(0).propositionBytes // propositionBytes holds the script (ErgoTree)
   }
   // Return a Sigma proposition that is true only if outputGoesToCheese is true
   sigmaProp(outputGoesToCheese)

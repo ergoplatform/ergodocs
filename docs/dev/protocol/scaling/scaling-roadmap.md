@@ -1,5 +1,7 @@
 # Ergo Scaling Roadmap
 
+> **Historical planning notes:** For current implementation status, see the [Ergo roadmap snapshot](roadmap.md#current-snapshot).
+
 Join our discussions on scaling on [Telegram](https://t.me/ErgoLayer2) or [#layer2 on discord](https://discord.gg/nr4JRnhAyV). We welcome all insights and contributions.
 
 ## Current Focus

@@ -26,6 +26,8 @@ source_of_truth:
 
 The Ergo node provides a REST API accessible via HTTP for interaction and control. The full API specification, following the OpenAPI standard, is available [here](https://github.com/ergoplatform/ergo/blob/master/src/main/resources/api/openapi.yaml). When the node is running, a user-friendly Swagger UI interface for exploring and interacting with the API is typically available at `127.0.0.1:9053/swagger` (assuming default port settings).
 
+Browse the [Node API Reference](openapi.md) or [Interactive Schema](swagger_api.md) for routes and request formats. Match the specification version to the node you use.
+
 > Note: `127.0.0.1` refers to your local machine (localhost).
 
 The Swagger UI allows you to perform advanced operations that might not be available through graphical wallet interfaces, such as:
@@ -53,7 +55,7 @@ To access protected API routes (like wallet operations), you must provide your A
 
 Your browser session is now authorized to access protected endpoints.
 
-For example, navigate to the `wallet/walletAddresses` endpoint, click `"Try it out"`, and then `"Execute"`. If authorized correctly, you should see the list of addresses managed by your node's wallet.
+For example, navigate to the `GET /wallet/addresses` endpoint, click `"Try it out"`, and then `"Execute"`. If authorized correctly, you should see the list of addresses managed by your node's wallet.
 
 > Note: The Swagger UI authorization mechanism might appear to accept any input in the `Value` field. However, API calls to protected endpoints will fail if the provided API key does not match the `apiKeyHash` configured in your node. If you encounter authorization errors despite entering the correct key, potential causes include typos, incorrect hashing of the key in the config file, or, rarely, node database issues (try restarting the node first; a resync might be needed in severe cases).
 

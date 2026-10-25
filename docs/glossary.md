@@ -93,7 +93,7 @@ owner: docs
 
 ## H
 
-* **[Hall of Fame](#)**: A section featuring notable contributors to Ergo's development.
+* **[Hall of Fame](https://old.ergoplatform.com/en/hall_of_fame/)**: A historical list of contributors to Ergo's development.
 * **[Hard-Fork](faq.md#what-is-ergos-approach-to-forking)**: An upgrade that requires all nodes to update and can be disruptive.
 * **Hardware Wallet**: A physical device used to store cryptocurrency offline securely.
 * **Hash**: A mathematical function that takes an input and produces a fixed-size string of characters, used to ensure data integrity and secure transactions.
@@ -195,7 +195,6 @@ owner: docs
 * **[Sidechain](sidechains.md)**: A separate blockchain connected to the main blockchain, allowing for different features and scalability.
 * **[Sigma protocols](sigma.md)**: A set of cryptographic protocols forming the backbone of Ergo's smart contracts. They enable efficient zero-knowledge proofs, enhancing privacy and trustlessness.
 * **SigCAN (Sigmanaut Candidate)**: An individual who has applied to the Sigmanauts Program and is in the initial stage of becoming a Sigmanaut, where they can showcase their skills and contributions.
-* **[Sigma-Protocols](sigma.md)**: Efficient zero-knowledge proofs used in Ergo for advanced privacy options.
 * **[Sigmanaut Programme](sigmanauts.md)**: A program aimed at transitioning responsibilities from the Ergo Foundation to the Ergo community.
 * **[Sigmanauts](sigmanauts.md)**: Members of the Ergo community who actively participate and contribute to the platform's growth and development.
 * **[Smart Contracts](ergoscript.md)**: Self-executing contracts with the terms of the agreement directly written into code. Ergo's eUTXO model allows for the creation and execution of smart contracts, enabling complex operations securely and efficiently.

@@ -49,6 +49,21 @@ class ExternalLinkCollectionTests(unittest.TestCase):
         self.assertIn(("https://example.com/{address}", "placeholder URL"), reasons)
         self.assertIn(("https://fonts.gstatic.com", "font preconnect"), reasons)
 
+    def test_collects_scheme_relative_urls_and_keeps_exclusions(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            site = Path(directory)
+            (site / "index.html").write_text(
+                '<a href="//example.com/page#section">External</a>'
+                '<a href="HTTPS://example.com/upper">Uppercase</a>'
+                '<a href="//localhost/example">Local</a>'
+                '<a href="/relative">Relative</a>', encoding="utf-8"
+            )
+            sources, excluded, _ = audit.collect_urls(site)
+        self.assertEqual(set(sources), {
+            "https://example.com/page", "https://example.com/upper"
+        })
+        self.assertEqual(excluded[0]["reason"], "local example host")
+
     def test_requires_rendered_html(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             with self.assertRaisesRegex(ValueError, "No HTML files"):

@@ -2,7 +2,7 @@ site_name: ErgoDocs
 site_url: https://docs.ergoplatform.com
 repo_url: https://github.com/ergoplatform/ergodocs
 edit_uri: edit/main/docs/
-site_description: Ergo Platform Documentation
+site_description: Ergo guides for developers, users, and node operators. Build transactions and smart contracts, integrate wallets, and explore protocol references.
 exclude_docs: |
   README.md
   archive.md
@@ -551,15 +551,15 @@ nav:
       - Develop Overview: nav/develop/index.md
       - Start Here:
           - nav/develop/start-here/index.md
-          - Developer Start: dev/get-started.md
+          - Developer Guide: dev/get-started.md
+          - Starter Tutorial: dev/stack/basics.md
+          - Learning Resources: dev/stack/introduction.md
           - Students: students/index.md
-          - Resources: dev/start/resources.md
+          - Developer Resources: dev/start/resources.md
       - SDKs, Frameworks & Tools:
           - nav/develop/sdks-frameworks-and-tools/index.md
           - Choose a Stack:
               - dev/start.md
-              - Introduction: dev/stack/introduction.md
-              - Starter Tutorial: dev/stack/basics.md
               - Backend Stack: dev/resources/stack/back-end.md
               - Frontend Stack: dev/resources/stack/front-end.md
               - Server: dev/stack/server.md
@@ -978,8 +978,8 @@ nav:
           - API Access:
               - nav/deploy/the-ergo-node/api-access/index.md
               - Swagger Overview: node/swagger.md
-              - OpenAPI Spec: node/swagger/openapi.md
-              - Try it out!: node/swagger/swagger_api.md
+              - API Reference: node/swagger/openapi.md
+              - Interactive Schema: node/swagger/swagger_api.md
               - Indexed Node API: node/indexed-node.md
               - Scanner Operations: node/scanner-ops.md
       - Rosen Bridge:

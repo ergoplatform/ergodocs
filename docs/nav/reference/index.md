@@ -12,6 +12,8 @@ Reference is for lookup material. Glossaries, FAQs, standards, specs, configurat
 
 The table links to the next useful page or sub-hub, keeping the sidebar staged instead of fully expanded.
 
+Use [Technical Lookup](technical-lookup.md) to find formats, APIs, and specifications by topic. For developer onboarding, start with the [Developer’s Guide](get-started.md).
+
 ## Map
 
 | Page | What you'll find |

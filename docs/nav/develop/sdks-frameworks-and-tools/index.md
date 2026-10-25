@@ -13,6 +13,8 @@ SDKs, Frameworks & Tools groups related pages inside Develop. Developer stack ch
 
 The table links to the next useful page or sub-hub, keeping the sidebar staged instead of fully expanded.
 
+Use [Development Pathways](start.md) to choose a language and platform. The [Starter Tutorial](basics.md) introduces SDK and transaction examples.
+
 ## Map
 
 | Page | What you'll find |

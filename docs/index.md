@@ -1,5 +1,7 @@
 ---
 owner: docs
+title: Ergo Documentation
+description: Ergo guides for developers, users, and node operators, with SDKs, tutorials, APIs, and protocol references.
 ---
 
 # Welcome to ErgoDocs
@@ -7,6 +9,8 @@ owner: docs
 ErgoDocs helps you understand, use, build on, and operate Ergo.
 
 Ergo is a proof-of-work smart-contract platform built around eUTXO, ErgoScript, Sigma protocols, and long-term economic sustainability. If those words are new, start with [What Is Ergo?](what-is-ergo.md).
+
+**Here to build?** Start with the [Developer’s Guide](get-started.md) or [Starter Tutorial](basics.md). For exact formats and APIs, use [Technical Lookup](technical-lookup.md).
 
 ## Main Sections
 

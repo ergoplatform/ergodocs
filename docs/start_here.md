@@ -143,5 +143,10 @@ Run:
 .venv/bin/python tools/nav_audit.py --strict
 .venv/bin/python tools/structure_audit.py --strict
 git diff --check
-.venv/bin/mkdocs build --site-dir /tmp/ergodocs-site-check
+.venv/bin/python -m mkdocs build --site-dir /tmp/ergodocs-site-check
+.venv/bin/python tools/internal_link_audit.py --site-dir /tmp/ergodocs-site-check --strict
 ```
+
+## Rendered Link Checks
+
+`tools/internal_link_audit.py --site-dir <build-directory> --strict` checks rendered local links, images, and heading anchors with exact filename casing. Run it after MkDocs so basename links and card URLs are resolved as readers see them. This check runs in Docs quality CI.

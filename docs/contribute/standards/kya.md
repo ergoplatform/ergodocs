@@ -94,6 +94,6 @@ Formerly Spectrum, **ErgoDEX** facilitates trustless peer-to-peer trading on Erg
 
 1. [Original KYA Post](https://www.ergoforum.org/t/know-your-assumptions/4198)
 2. [The Importance of KYA](https://ergoplatform.org/en/blog/The-Importance-of-Know-Your-Assumptions/)
-3. [KYA Research Paper](https://docs.ergoplatform.com/contribute/standards/kya/#research-paper)
+3. [KYA Research Paper](#research-paper-kya-a-treatise-on-assumptions-in-cryptocurrencies-and-defi)
 4. [Kushti’s KYA Paper](https://github.com/kushti/kya/blob/master/kya.pdf)
 5. [SigmaFi dApp](https://sigmafi.app/#/)

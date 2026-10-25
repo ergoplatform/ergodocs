@@ -154,7 +154,7 @@ A verifier:
 ## Learn More
 
 * [NiPoPoW White Paper](https://eprint.iacr.org/2017/963.pdf)
-* [UTXO Bootstrapping](https://docs.ergoplatform.com/node/utxo-bootstrapping/)
+* [UTXO Bootstrapping](pruned-full-node.md)
 * [Ergo Protocol White Paper](https://ergoplatform.org/docs/whitepaper.pdf)
 
 ---

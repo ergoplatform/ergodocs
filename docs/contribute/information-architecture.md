@@ -17,6 +17,7 @@ Use one canonical home for each page. Other sections should link to that page th
 | Use | user jobs and practical tasks | wallets, safety, wallet guides, user tutorials |
 | Ecosystem | project discovery and ecosystem categories | dApps, bridges, DeFi, NFTs, privacy tools, project profiles |
 | Learn | concepts and research | protocol concepts, papers, cryptography, scaling |
+| Mine | network security and mining tasks | miner setup, pools, rewards, and mining governance |
 | Participate | community and contribution | governance, events, docs process, funding |
 | Develop | builder references | SDKs, ErgoScript, data model, APIs, examples |
 | Deploy | operator runbooks | node, indexers, watchers, pools, infrastructure |
@@ -24,29 +25,23 @@ Use one canonical home for each page. Other sections should link to that page th
 
 ## Current Structural Risks
 
-Run:
+Run these commands for current counts and structural findings:
 
 ```bash
+.venv/bin/python tools/nav_audit.py --strict
+.venv/bin/python tools/structure_audit.py --strict
 .venv/bin/python tools/structure_audit.py --markdown
 ```
 
 The audit tracks active docs, nav entries, duplicate targets, cross-surface duplicates, orphans, maximum nav depth, and source-watch coverage by content area.
 
-Current repo shape shows three main risks:
+Check for these structural risks as documentation is added:
 
-- Same page appears in several top-level surfaces, for example Rosen watcher pages under both `Use` and `Deploy`, and some SDK/tooling pages under multiple developer sections.
+- A page may acquire several top-level nav locations. Keep one canonical location, and link from other hubs.
 - Project pages, conceptual pages, and operational runbooks are mixed in the same folders, especially under `eco/`, `uses/`, and `dev/stack/`; nav placement should be based on audience and content type, not path alone.
 - Some pages exist as navigation bridges rather than canonical references, making source ownership and update responsibility less clear.
 
-After the ecosystem/reference navigation pass, the audit reports:
-
-- `682` active markdown pages.
-- `683` nav entries pointing at `683` unique targets.
-- `0` duplicate nav targets.
-- `0` cross-surface duplicates.
-- `0` active orphan pages outside the nav.
-- `1` intentional unlisted legacy page.
-- `191` source-watched pages.
+The [Starter Tutorial](basics.md) and [Learning Resources](introduction.md) belong under **Develop → Start Here**. Keep language-specific choices under **SDKs, Frameworks & Tools**, and use [Technical Lookup](technical-lookup.md) for reference discovery.
 
 ## Rules
 
@@ -66,21 +61,23 @@ After the ecosystem/reference navigation pass, the audit reports:
 
 ## Migration Plan
 
-1. Pick canonical homes for cross-surface duplicates.
+1. Pick canonical homes for cross-surface duplicates. Inventory existing explanations, examples, diagrams, and references first; navigation maintenance must preserve them.
 2. Replace duplicate nav entries with hub links.
 3. Split mixed pages when they combine concept, runbook, and project status.
-4. Move dormant or historical ecosystem pages into a clearly labelled archive path only after redirects exist.
+4. Move dormant or historical ecosystem pages into a clearly labelled archive path only after redirects exist. Preserve heading anchors when changing page structure.
 5. Add source-watch metadata to pages that describe changing APIs, contracts, configs, or active repositories.
 6. Keep generated API docs separate from authored API guidance.
 
 ## High-Value Restructure Candidates
 
-- Rosen watcher docs: canonical home is now `Deploy / Watchers`; `Use / Rosen Bridge` keeps user-facing Rosen concepts and no longer duplicates watcher runbooks.
+- Rosen watcher docs: canonical home is now `Deploy / Rosen Bridge`; `Use / Rosen Bridge` keeps user-facing Rosen concepts and no longer duplicates watcher runbooks.
 - Blockchain indexing docs: canonical home is now `Deploy / Blockchain Indexing`; `Develop` keeps API and explorer references without duplicating indexing runbooks.
 - Mosaik and legacy frameworks: split active SDK guidance from historical examples.
 - Ecosystem directory: continue adding status taxonomy; navigation now separates ecosystem/project pages from user tasks, operator runbooks, and developer references.
 - Node docs: keep generated OpenAPI under `node/swagger/`; keep authored guidance in `node/swagger.md` and `dev/integration/`.
 - Remaining work should focus on page quality inside overlarge buckets, especially `Ecosystem / Applications & Utilities`, `Develop / Tooling & Frameworks`, and node operations.
+
+After navigation or link changes, build the site and run `tools/internal_link_audit.py --site-dir <build-directory> --strict` to check rendered links, cards, images, and fragments. Structural checks do not validate technical explanations or code examples.
 
 ## Review Checklist
 

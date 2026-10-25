@@ -66,7 +66,11 @@ Most concept pages should use this shape:
 
 - Mark every code block with a language.
 - Show commands as copyable blocks.
-- Show expected output when it helps verification.
+- State whether a snippet is a complete program, a function for an existing project, or pseudocode. Define inputs and include necessary imports.
+- Show expected output and an observable success condition for tutorials.
+- Identify the network and distinguish an unsigned transaction, submission, and confirmation.
+- Label fabricated fixtures and demonstration addresses; do not present them as spendable funds.
+- Keep code examples tied to a verified SDK version or source reference. Do not guess APIs or serialization prefixes.
 - Never publish private keys, real seeds, production secrets, or privileged tokens.
 - Test commands locally before publishing when practical.
 
@@ -76,10 +80,14 @@ Most concept pages should use this shape:
 - Use descriptive titles that match search intent.
 - Add tags when a page belongs to an existing topic cluster.
 - Link from overview pages to deeper guides.
-- Run `python tools/nav_audit.py` after changing navigation.
+- Preserve useful public URLs and heading anchors when consolidating pages.
+- Run `python tools/nav_audit.py --strict` after changing navigation. After building, run `python tools/internal_link_audit.py --site-dir <build-directory> --strict` to check resolved links, card URLs, images, and anchors.
 
 ## Review Checklist
 
+- Keep navigation and link maintenance separate from substantive technical revisions. A technical correction needs a specific demonstrated defect, primary-source evidence, and an executable check where applicable; preserve the original explanation and examples around it.
+
+- Compare removed material with the original page. Preserve useful explanations, examples, diagrams, and references, or provide a direct link to their new home. An unverified resource needs review; being unverified alone is not a reason to delete it.
 - Page has clear audience and purpose.
 - Commands, links, and code examples were checked.
 - Prerequisites and verification steps are present for tutorials.

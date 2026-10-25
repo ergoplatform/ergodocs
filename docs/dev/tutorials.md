@@ -8,6 +8,8 @@ tags:
 
 Use this page when you want practical examples rather than protocol reference material. For the broader builder path, start with [Developer Overview](get-started.md) or [Building on Ergo](building-on-ergo-developers.md).
 
+For SDK setup and transaction examples, see the [Starter Tutorial](basics.md).
+
 ## Common Builder Tasks
 
 | Task | Start here | Related |

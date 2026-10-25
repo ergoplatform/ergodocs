@@ -21,14 +21,14 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 - Watched repositories: `232`
 - Watched GitHub owners: `98`
 - Watched repo/branch pairs: `238`
-- Watched paths: `517`
+- Watched paths: `519`
 - Release-watched page/repository refs: `15`
 
 ## Coverage Groups
 
 | Group | Owners | Repositories | Pages | Paths |
 | --- | ---: | ---: | ---: | ---: |
-| Core / infrastructure | 5 | 31 | 134 | 198 |
+| Core / infrastructure | 5 | 31 | 134 | 200 |
 | Ecosystem org | 9 | 38 | 25 | 36 |
 | Developer / project | 81 | 160 | 118 | 106 |
 | External standard/vendor | 3 | 3 | 6 | 6 |
@@ -53,7 +53,7 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 
 | Owner | Group | Repositories | Pages | Paths |
 | --- | --- | ---: | ---: | ---: |
-| [`ergoplatform`](https://github.com/ergoplatform) | Core / infrastructure | 18 | 110 | 159 |
+| [`ergoplatform`](https://github.com/ergoplatform) | Core / infrastructure | 18 | 110 | 161 |
 | [`ScorexFoundation`](https://github.com/ScorexFoundation) | Core / infrastructure | 1 | 24 | 31 |
 | [`rosen-bridge`](https://github.com/rosen-bridge) | Core / infrastructure | 10 | 10 | 6 |
 | [`arkadianet`](https://github.com/arkadianet) | Developer / project | 7 | 9 | 5 |
@@ -163,7 +163,7 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`rosen-bridge/operation`](https://github.com/rosen-bridge/operation) | Core / infrastructure | `dev` | 8 | 4 |
 | [`ergoplatform/ergo-jde`](https://github.com/ergoplatform/ergo-jde) | Core / infrastructure | `main` | 7 | 7 |
 | [`ergoplatform/oracle-core`](https://github.com/ergoplatform/oracle-core) | Core / infrastructure | `develop`, `master` | 6 | 6 |
-| [`ergoplatform/scrypto`](https://github.com/ergoplatform/scrypto) | Core / infrastructure | `master` | 6 | 8 |
+| [`ergoplatform/scrypto`](https://github.com/ergoplatform/scrypto) | Core / infrastructure | `master` | 6 | 10 |
 | [`BetterMoneyLabs/chaincash`](https://github.com/BetterMoneyLabs/chaincash) | Ecosystem org | `master` | 4 | 6 |
 | [`ergoplatform/sigmastate-interpreter`](https://github.com/ergoplatform/sigmastate-interpreter) | Core / infrastructure | `develop` | 4 | 8 |
 | [`mwaddip/ergo-proxy`](https://github.com/mwaddip/ergo-proxy) | Developer / project | `master` | 4 | 2 |
@@ -523,7 +523,7 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`ergoplatform/ledger-app-ergo`](https://github.com/ergoplatform/ledger-app-ergo) | `main` | `README.md`<br>`doc` | `docs/dev/tutorials/hardware-wallet-integration.md`<br>`docs/dev/wallet/payments/ledger.md` |
 | [`ergoplatform/oracle-core`](https://github.com/ergoplatform/oracle-core) | `develop` | `docs/how_to_bootstrap.md`<br>`scripts/send_new_oracle.sh` | `docs/dev/interact.md`<br>`docs/dev/oc/oracle.md`<br>`docs/eco/oracles-v2.md`<br>`docs/node/deploy-runbook.md`<br>`docs/tutorials/oracle-bootstrap.md`<br>`docs/uses/oracles.md` |
 | [`ergoplatform/oracle-core`](https://github.com/ergoplatform/oracle-core) | `master` | `connectors/connector-lib`<br>`connectors/erg-usd-connector`<br>`oracle-pool-bootstrap`<br>`scripts/ada-usd-oracle/oracle-config.yaml` | `docs/uses/oracles.md` |
-| [`ergoplatform/scrypto`](https://github.com/ergoplatform/scrypto) | `master` | `README.md`<br>`shared/src/main/scala/scorex/crypto/authds/avltree/batch/BatchAVLProver.scala`<br>`shared/src/main/scala/scorex/crypto/authds/avltree/batch/BatchAVLVerifier.scala`<br>`shared/src/main/scala/scorex/crypto/authds/merkle/BatchMerkleProof.scala`<br>`shared/src/main/scala/scorex/crypto/authds/merkle/MerkleTree.scala`<br>`shared/src/main/scala/scorex/crypto/authds/merkle/serialization/BatchMerkleProofSerializer.scala`<br>`shared/src/main/scala/scorex/crypto/hash/Blake2b.scala`<br>`shared/src/main/scala/scorex/crypto/hash/Sha256.scala` | `docs/crypto.md`<br>`docs/dev/data-model/structures/merkle/merkle-batch-impl.md`<br>`docs/dev/data-model/structures/merkle/merkle-batch-testing.md`<br>`docs/dev/data-model/structures/merkle/merkle-format.md`<br>`docs/dev/data-model/structures/merkle/merkle-validation.md`<br>`docs/dev/lib/scrypto.md` |
+| [`ergoplatform/scrypto`](https://github.com/ergoplatform/scrypto) | `master` | `README.md`<br>`shared/src/main/scala/scorex/crypto/authds/avltree/batch/BatchAVLProver.scala`<br>`shared/src/main/scala/scorex/crypto/authds/avltree/batch/BatchAVLVerifier.scala`<br>`shared/src/main/scala/scorex/crypto/authds/merkle/BatchMerkleProof.scala`<br>`shared/src/main/scala/scorex/crypto/authds/merkle/MerkleProof.scala`<br>`shared/src/main/scala/scorex/crypto/authds/merkle/MerkleTree.scala`<br>`shared/src/main/scala/scorex/crypto/authds/merkle/Node.scala`<br>`shared/src/main/scala/scorex/crypto/authds/merkle/serialization/BatchMerkleProofSerializer.scala`<br>+2 more | `docs/crypto.md`<br>`docs/dev/data-model/structures/merkle/merkle-batch-impl.md`<br>`docs/dev/data-model/structures/merkle/merkle-batch-testing.md`<br>`docs/dev/data-model/structures/merkle/merkle-format.md`<br>`docs/dev/data-model/structures/merkle/merkle-validation.md`<br>`docs/dev/lib/scrypto.md` |
 | [`ergoplatform/sigma-rust`](https://github.com/ergoplatform/sigma-rust) | `develop` | `bindings`<br>`bindings/ergo-lib-c`<br>`bindings/ergo-lib-ios`<br>`bindings/ergo-lib-jni`<br>`bindings/ergo-lib-python`<br>`bindings/ergo-lib-wasm`<br>`bindings/ergo-lib-wasm/examples/address-generation-demo`<br>`bindings/ergo-lib-wasm/examples/address-generation-demo/README.md`<br>+25 more | `docs/dev/data-model/structures/interlink-vectors.md`<br>`docs/dev/data-model/structures/merkle/merkle-batch-impl.md`<br>`docs/dev/data-model/structures/merkle/merkle-batch-testing.md`<br>`docs/dev/get-started.md`<br>`docs/dev/lang/js.md`<br>`docs/dev/libraries.md`<br>+8 more |
 | [`ergoplatform/sigmastate-interpreter`](https://github.com/ergoplatform/sigmastate-interpreter) | `develop` | `README.md`<br>`docs/perf-style-guide.md`<br>`docs/sigma-dsl.md`<br>`interpreter/shared/src/main/scala/sigmastate/interpreter/Interpreter.scala`<br>`sc/shared/src/main/scala/sigma/compiler/SigmaCompiler.scala`<br>`sc/shared/src/test/scala/sigmastate/lang`<br>`sc/shared/src/test/scala/sigmastate/utxo/examples/FsmExampleSpecification.scala`<br>`sc/shared/src/test/scala/sigmastate/utxo/examples/MASTExampleSpecification.scala` | `docs/dev/scs/ergoscript.md`<br>`docs/dev/scs/sigmastate-interpreter.md`<br>`docs/dev/scs/tx/fsm-example.md`<br>`docs/dev/scs/tx/mast-example.md` |
 | [`ergoplatform/sigmaverse`](https://github.com/ergoplatform/sigmaverse) | `master` | `README.md` | `docs/eco/sigmaverse.md` |

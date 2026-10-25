@@ -12,6 +12,8 @@ Develop is for building software on Ergo. SDKs, smart contracts, wallet integrat
 
 The table links to the next useful page or sub-hub, keeping the sidebar staged instead of fully expanded.
 
+**New to Ergo?** Start with the [Developer’s Guide](get-started.md) and [Starter Tutorial](basics.md). For formats, APIs, and specifications, use [Technical Lookup](technical-lookup.md).
+
 ## Map
 
 | Page | What you'll find |

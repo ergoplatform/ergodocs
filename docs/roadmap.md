@@ -714,7 +714,7 @@ Ergo is developed a by a combination of the [Ergo Foundation](ergo-foundation.md
 
 #### Milestones
 
-- [x] [ErgoHack VIII - Ergo as a Smart Layer](http://docs.ergoplatform.org/events/ergohack/#ergohackviii)
+- [x] [ErgoHack VIII - Ergo as a Smart Layer](ergohack.md#ergohack-viii-ergo-as-a-smart-layer)
 - [x] [DAO for Ergo core](devdao.md)
 - [x] Ergo achieved [#1 in TVL% of market cap for a PoW chain](https://x.com/cannon_qq/status/1772254513920876671?t=8KODg1I33kaPSNQw_wn2Bg)
 - [x] Ergo listed on MEXC exchange

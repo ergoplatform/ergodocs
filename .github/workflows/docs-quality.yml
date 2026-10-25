@@ -43,8 +43,14 @@ jobs:
       - name: Build site
         run: mkdocs build --site-dir site_ci
 
+      - name: Audit rendered internal links
+        run: python tools/internal_link_audit.py --site-dir site_ci --strict
+
       - name: Audit navigation
-        run: python tools/nav_audit.py
+        run: python tools/nav_audit.py --strict
+
+      - name: Audit documentation structure
+        run: python tools/structure_audit.py --strict
 
       - name: Validate source watch metadata
         run: python tools/source_watch.py --strict
