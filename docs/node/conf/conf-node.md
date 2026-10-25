@@ -149,7 +149,7 @@ The `headerChainDiff` setting defines the number of blocks the node considers to
 checkpoint = null
 ```
 
-The `checkpoint` setting allows you to specify an optional individual checkpoint to skip script validation for performance and memory usage improvements during initial bootstrapping.
+The optional `checkpoint` pairs a height with a trusted block header ID. While processing full blocks through that height (inclusive), the node skips each transaction's stateless and stateful validation, including script execution. In UTXO mode, it still applies state changes and checks the resulting root. In Digest mode, ADProofs must still be present and their digest must match the header; this does not guarantee full proof validation below the checkpoint. The header at the checkpoint height must match the configured `blockId`. Leave `checkpoint = null` to validate transactions from genesis.
 
 ## ADProofs
 
