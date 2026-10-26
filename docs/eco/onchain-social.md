@@ -9,8 +9,12 @@ owner: docs
 last_reviewed: '2026-05-29'
 source_of_truth:
 - https://ergo-wallet-statement.vercel.app/
-source_watch_note: Concept/experiment page using IPFS and app links; no verified public
- GitHub repository found.
+- https://github.com/cannonQ/ergo-wallet-statement
+source_repos:
+- repo: cannonQ/ergo-wallet-statement
+  branch: main
+  paths:
+  - README.md
 ia_status: directory
 ---
 
@@ -69,6 +73,8 @@ Several experimental social and messaging apps use Ergo tokens and client-side a
 ## Ergo Wallet Statement
 
 [Ergo Wallet Statement](https://ergo-wallet-statement.vercel.app/) is a wallet reporting tool.
+
+Its [public source](https://github.com/cannonQ/ergo-wallet-statement) provides a React/TypeScript dashboard that reads public wallet data through the Ergo Explorer API. It covers balances, token and NFT views, transaction history, charts, and storage-rent monitoring. Reading an address does not require its recovery phrase or signing keys.
 
 - Shows month-end ERG-equivalent statements back to January 2021.
 - Includes wallet distribution, storage rent status, monthly token/NFT/LP breakdowns, transaction activity, and top holdings.

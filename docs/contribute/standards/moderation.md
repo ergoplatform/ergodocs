@@ -2,6 +2,10 @@
 
 Maintaining a healthy and welcoming community is crucial for fostering productive discussions and collaboration. This guide outlines the moderation practices and tools employed across various platforms to ensure a positive environment for all participants.
 
+## Community Framework Reference
+
+The community-authored [Ergo Socials Framework](https://github.com/andrehafner/ergo_socials_framework) collects moderation rules, an administrator charter, application criteria, and dispute-resolution procedures. It is a reference for discussing community processes; the repository alone does not establish that a rule has been adopted by every Ergo community space. Confirm the rules and escalation process with that space's administrators.
+
 ## Telegram
 
 ### OrgRobot

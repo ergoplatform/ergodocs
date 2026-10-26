@@ -12,6 +12,10 @@ owner: docs
 ia_status: directory
 last_reviewed: 2026-05-30
 source_repos:
+  - repo: Ergo-Lend/exle-fullstack
+    branch: main
+    paths:
+      - README.md
   - repo: SavonarolaLabs/exle-html
     branch: main
     paths:
@@ -24,6 +28,7 @@ source_repos:
       - src/pages
       - src/components
 source_of_truth:
+  - https://github.com/Ergo-Lend/exle-fullstack
   - https://exle.io/
   - https://github.com/SavonarolaLabs/exle-html
   - https://github.com/SavonarolaLabs/exle-svelte
@@ -47,6 +52,8 @@ For more details, view the [EXLE 2.0 Project Proposal](https://t.me/ErgoLend/778
 ## Interface Work
 
 EXLE interface work has public prototype repositories under Savonarola Labs. The earlier [exle-html](https://github.com/SavonarolaLabs/exle-html) repository is a Vite/Tailwind prototype with loan, repayment, landing, navbar, and rendering components. [exle-svelte](https://github.com/SavonarolaLabs/exle-svelte) is the newer Svelte-based UI work. These repositories are useful for developers who want to inspect the front-end direction, but the public app and project channels remain the better entry points for end users.
+
+The separate [exle-fullstack](https://github.com/Ergo-Lend/exle-fullstack) prototype combines a Next.js interface with Fleet SDK transaction building and Nautilus signing. Its README describes solo-funded and crowdfunded loans, blockchain-backed loan data, and account/API components. Public prototype code does not establish a production deployment or an audit of the lending contracts.
 
 ## Streamlining Microfinance in Kenya
 

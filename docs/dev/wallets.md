@@ -46,7 +46,7 @@ Here are popular and well-regarded wallets used by the Ergo community:
 
 * **[Argus](https://github.com/arkadianet/Argus/releases)**
   * **Description:** Experimental Android wallet with ErgoPay, an EIP-12 dApp browser, UTXO tools, swaps, DeFi integrations, Rosen transfers, stealth addresses, and ZeroJoin mixing.
-  * **Best For:** Testing fast-moving wallet and dApp integrations. Current builds are debug-signed, unaudited alpha releases and must not be used with production funds.
+  * **Best For:** Testing fast-moving wallet and dApp integrations. [Beta 6](https://github.com/arkadianet/Argus/releases/tag/v1.0.0-beta.6) uses the same release-signing key as earlier betas and improves recovery-phrase validation and legacy seed restoration. Release signing does not establish an independent security audit; keep the experimental wallet separate from production funds.
 
 * **[Minotaur Wallet](minotaur.md)**
   * **Description:** Offers advanced features like [multi-signature](multi.md) capabilities (requiring multiple approvals for transactions).

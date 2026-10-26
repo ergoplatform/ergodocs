@@ -16,6 +16,7 @@ source_repos:
       - README.md
       - TestnetNode.md
 source_of_truth:
+  - https://github.com/Lithos-Protocol/Lithos-Client/releases/tag/v1.0.6
   - https://github.com/Lithos-Protocol/Lithos-Client
   - https://github.com/Lithos-Protocol/Lithos-Client/releases/tag/v1.0.0-prerelease
   - https://github.com/Lithos-Protocol/Lithos-Client/releases/tag/v5.4.0-test
@@ -41,7 +42,7 @@ Recently, Lithos has completed collateral contracts, and the ability of miners t
 
 ## Current Client Status
 
-The [Lithos Client](https://github.com/Lithos-Protocol/Lithos-Client) is the reference client for the Lithos Protocol. The current checked mainnet client is [v1.0.5](https://github.com/Lithos-Protocol/Lithos-Client/releases/tag/v1.0.5). Follow the current README and mainnet configuration rather than the older batching-only mainnet prerelease. It requires a fully synced, indexed Ergo node v6.0.7/v6.1.7 or newer and Java 11. The current client supports mining and on-chain difficulty commitments; the earlier prerelease restrictions are historical.
+The [Lithos Client](https://github.com/Lithos-Protocol/Lithos-Client) is the reference client for the Lithos Protocol. The current checked mainnet client is [v1.0.6](https://github.com/Lithos-Protocol/Lithos-Client/releases/tag/v1.0.6). Follow the current README and mainnet configuration rather than the older batching-only mainnet prerelease. It requires a fully synced, indexed Ergo node v6.0.7/v6.1.7 or newer and Java 11. The current client supports mining and on-chain difficulty commitments; the earlier prerelease restrictions are historical.
 
 The current README describes Lithos as requiring a fully synced Ergo node and Java 11. Miners connect through the Lithos Stratum server, with Rigel Miner recommended. Lithos evaluates Non-Interactive Share Proofs rather than ordinary pool shares, so the miner address and worker name used by the Stratum client are not payout identifiers in the same way they are for a conventional pool.
 
@@ -78,6 +79,12 @@ The web panel's difficulty calculator targets 17 super shares per window. Submit
 ## Community Monitoring
 
 [Lithos Dashboard](https://github.com/arcadiancomp/lithos_dashboard) provides numeric and optional browser views of mining, NISP health, collateral and reward activity. Its browser listener defaults to localhost on port `8787` and has no authentication; keep it local or within a trusted network. Read-only sale quotes do not execute transactions, and projected earnings are estimates.
+
+## Upgrading to 1.0.6
+
+[v1.0.6](https://github.com/Lithos-Protocol/Lithos-Client/releases/tag/v1.0.6) refreshes the node's served candidate every `stratum.candidate.cacheRefreshMs` (default `30000`); keep it below the node's `blockCandidateGenerationInterval`. Storage-rent scanning replaces the unused `stratum.candidate.sources.rent.startHeight` with `startBehindBlocks` (default `720`) and adds `lookaheadBlocks` (default `100`). Rebuild overrides against the current configuration.
+
+After a new miner's first registration confirms, wallet seeding can split a plain box into up to 32 boxes. Disable it with `wallet.seed.on-initial-commitment = false` if needed. If consolidation is enabled, `wallet.consolidation.target-utxos` must exceed `wallet.seed.target-utxos` or startup fails. Reservations now have a configurable hold ceiling, defaulting to six hours, with improved chained-transaction reconciliation. These changes do not promise a particular hashrate or return.
 
 ## Upgrading to 1.0.5
 

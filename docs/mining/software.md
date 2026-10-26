@@ -9,11 +9,16 @@ tags:
 owner: docs
 last_reviewed: 2026-05-27
 source_repos:
+  - repo: cyberia-to/erga
+    branch: main
+    paths:
+      - README.md
   - repo: Emryk-LLC/rigel-mining-toolbox
     branch: main
     paths:
       - README.md
 source_of_truth:
+  - https://github.com/cyberia-to/erga
   - https://github.com/Emryk-LLC/rigel-mining-toolbox
 ---
 
@@ -39,6 +44,7 @@ source_of_truth:
 
 ### Other Miners
 
+- [erga](https://github.com/cyberia-to/erga): community Autolykos v2 pool miner for Apple Silicon, with a desktop app and command-line interface. Upstream specifies macOS 14+ and at least 16 GB of unified memory, and notes that builds are not notarized. Back up the recovery phrase if using its generated wallet. Hardware support and accepted pool shares do not guarantee profitability; check the current memory requirement as the mining table grows.
 - [CUDA-based GPU miner for Ergo](https://github.com/ergoplatform/Autolykos-GPU-miner) for NVidia cards
 - [OpenCL miner for ERGO](https://github.com/mhssamadani/ergoAMDminer) for AMD cards
 

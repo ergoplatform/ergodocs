@@ -1,5 +1,7 @@
 # Satergo Offline Vault
 
+The [Android source repository](https://github.com/Satergo/Satergo-Offline-Vault-android) describes a companion to Satergo that keeps an encrypted recovery phrase on a phone and returns signatures after the user reviews a transaction. The description below records the original implementation; check current desktop integration and release availability before following it as a setup guide.
+
 ## About
 
 An Android application that starts a Bluetooth Low Energy (BLE) service which accepts connections from other devices. The application stores your encrypted seed phrase and when the device connected to it (for example, a desktop computer with Satergo) requests things the user needs to accept them on the mobile device. This is more secure compared to keeping the wallet file on the computer where it is decrypted on that same computer when the password is entered, so malware could steal the seed phrase/private key and take all the funds if the computer is infected.

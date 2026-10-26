@@ -91,9 +91,11 @@ Should this asset gain significant value in the distant future, the Foundation (
 The future sustainability, resilience, and growth of Ergo are now, by design, fully in the hands of the community, the DAOs, and the robust, decentralized infrastructure built over the past several years.
 
 
-### Innovation in the Community Era: Current Ecosystem Momentum
+<span id="innovation-in-the-community-era-current-ecosystem-momentum"></span>
 
-The transition to a fully community-led ecosystem has not slowed development. Instead, active work continues on new applications and protocol refinements. As of early 2026, a primary focus of this new development is the creation of "bottom-up" financial tools and new models for monetary issuance.
+### Innovation in the Community Era: Early-2026 Snapshot
+
+The transition to a fully community-led ecosystem has not slowed development. This section records an early-2026 snapshot of new applications and protocol refinements, including "bottom-up" financial tools and monetary issuance. For current releases and project status, see the [Roadmap](roadmap.md) and the linked project pages.
 
 Several key projects are advancing, demonstrating the continued activity from decentralized contributors.
 
@@ -104,7 +106,7 @@ Work continues on the foundational layer of the protocol to improve security, sc
 * **SigmaV6 Live:** The SigmaV6 update is live, hardening the network's foundational cryptographic security and efficiency.
 * **Node Releases 6.0.3 & 6.0.4:** Preparing PRs for upcoming node releases. The plan is to release 6.0.3 and 6.0.4 in the coming weeks, then extract sub-blocks related PRs for review one-by-one. See the [release plan on GitHub](https://github.com/ergoplatform/ergo/pull/2291).
 * **Sub-blocks in Devnet:** The sub-blocks scaling solution has progressed significantly in devnet testing. The devnet is now running with 3-4 mining peers, using 60s average ordering block delay with 60 input blocks per ordering. Occasional issues with candidate block generation and ordering block syncing are being addressed. A monitoring script for devnet stress testing has been created, tracking input block production rate, ordering block commits, TX inclusion rates, input chain reorganizations, and time since last ordering block.
-* **Lithos Testnet:** The **Lithos** project is approaching its testnet launch. It aims to provide a **blockchain-agnostic, decentralized mining pool infrastructure** to address centralization risks in Proof-of-Work mining.
+* **Lithos Testnet Preparation:** At the time of this snapshot, Lithos was preparing its testnet launch to address mining-pool centralization. For the later mainnet launch and current operator guidance, see [Lithos](lithos.md).
 * **Ergo Book:** A new effort to conceptualize the ideological and philosophical foundation of the Ergo movement alongside technical documentation. Now built as an mdbook for simplified publishing and self-hosting. Contributors are welcome—see the [current structure draft](https://github.com/kushti/ergo-book/blob/master/src/SUMMARY.md).
 
 #### 2. New Monetary and Financial Primitives

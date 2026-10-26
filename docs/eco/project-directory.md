@@ -15,8 +15,11 @@ For external discovery, also check [Sigmaverse](sigmaverse.md).
 | Project | Live site | Status | Last verified activity |
 | --- | --- | --- | --- |
 | [Rosen Bridge](rosen.md) | [rosen.tech](https://rosen.tech) | Active bridge infrastructure | 2026-06-03 |
-| [Lithos](lithos.md) | [Operator docs](https://github.com/Lithos-Protocol/Lithos-WebDocs) | Testnet mining; limited mainnet pre-release | 2026-09-22 |
+| [Lithos](lithos.md) | [Operator docs](https://github.com/Lithos-Protocol/Lithos-WebDocs) | Mainnet client v1.0.6; separate testnet line | 2026-10-23 |
+| [BlockHost](https://github.com/mwaddip/blockhost) | [Operator docs](https://docs.blockhost.io/) | Experimental VM hosting; Ergo testnet, mainnet unverified | 2026-04-29 |
 | [Oracle Pools](oracles-v2.md) | [Oracle Stats](https://error1100.github.io/oracle-stats/), [multi-oracle dashboard](https://multi-oracle-dashboard.vercel.app/) | Active | 2026-01-10 |
+
+BlockHost provisions VMs from on-chain subscriptions and uses NFTs for access credentials. Its installer ISO automatically repartitions and formats disks; review the upstream warning and use dedicated test hardware or a disposable VM.
 
 ### DeFi & Markets
 
@@ -86,6 +89,7 @@ For external discovery, also check [Sigmaverse](sigmaverse.md).
 | [Celaut](celaut.md) | - | Active | 2026-05-30 |
 | [Netnotes](netnotes.md) | - | Active | 2026-05-19 |
 | [Ergo Relay](ergo-relay.md) | - | Active | 2026-04-13 |
+| [BoxWallet](https://github.com/richardltc/boxwallet) | [Ergo backend](https://github.com/richardltc/boxwallet/blob/main/src/coins/ergo.zig) | Community multi-coin node manager; Ergo backend exposes node status | 2026-10-20 |
 | [Matrix Pulse](matrix-pulse.md) | [GitHub](https://github.com/odiseusme/matrix-pulse) | Active Matrix tooling | 2026-07-01 |
 | [Lumen](https://github.com/from-ufa/lumen) | [ergolumen.net](https://ergolumen.net/) | Live node/oracle dashboard | 2026-08-15 |
 | [Reputation System](reputation-system.md) | [Sigma Reputation System](https://reputation-systems.github.io/reputation-system/) | Active | 2026-04-07 |
