@@ -7,6 +7,8 @@ source_repos:
     release_watch: true
     paths:
       - package.json
+      - src/extension/content-scripts/injected.ts
+      - docs/dapp-connector/wallet-interaction.md
 source_of_truth:
   - https://github.com/nautls/nautilus-wallet
   - https://github.com/nautls/nautilus-wallet/releases/tag/v1.3.6
@@ -34,7 +36,7 @@ source_of_truth:
 
 ## Current Release
 
-[Nautilus v1.3.6](https://github.com/nautls/nautilus-wallet/releases/tag/v1.3.6) queues and deduplicates dApp Connector window-opening requests, keeps the service worker alive while requests are pending, connects `sign_tx_input`, and checks transaction well-formedness in `submit_tx`. It also improves QR rendering, updates Indonesian, Malay, and Javanese translations, and fixes a Ledger Buffer-polyfill override.
+[Nautilus v1.3.6](https://github.com/nautls/nautilus-wallet/releases/tag/v1.3.6) queues and deduplicates dApp Connector window-opening requests, keeps the service worker alive while requests are pending, and checks transaction well-formedness in `submit_tx`. Its [connector implementation](https://github.com/nautls/nautilus-wallet/blob/v1.3.6/src/extension/content-scripts/injected.ts) exposes partial signing as `sign_tx_inputs(unsignedTransaction, indexes)`, returning signed inputs in the requested order. It also improves QR rendering, updates Indonesian, Malay, and Javanese translations, and fixes a Ledger Buffer-polyfill override.
 
 Earlier [v1.3.4](https://github.com/nautls/nautilus-wallet/releases/tag/v1.3.4) added wallet search during dApp connection, Tab selection for mnemonic words, MEOW metadata and a LIT icon, plus form-validation, bundle and dependency changes. [v1.3.5](https://github.com/nautls/nautilus-wallet/releases/tag/v1.3.5) fixed Windows build-output filename sanitization. A published source release and browser-store rollout are separate; check the version actually installed before relying on a new interaction.
 

@@ -13,6 +13,11 @@ tags:
 owner: docs
 last_reviewed: 2026-05-27
 source_repos:
+  - repo: ergoplatform/sigma-rust
+    branch: develop
+    paths:
+      - ergo-lib/Cargo.toml
+      - ergo-lib/src/lib.rs
   - repo: arobsn/ledger-ergo-js
     branch: master
     paths:
@@ -32,6 +37,8 @@ source_repos:
       - packages/ur-registry-ergo/README.md
       - packages/ur-registry-ergo
 source_of_truth:
+  - https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-lib/Cargo.toml
+  - https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-lib/src/lib.rs
   - https://github.com/arobsn/ledger-ergo-js
   - https://github.com/arobsn/ledger-ergo-js/releases/tag/v0.2.0
   - https://github.com/arobsn/ledger-ergo-js/releases/tag/v0.2.1
@@ -47,7 +54,7 @@ source_of_truth:
 
 ## Introduction
 
-Integrating Ergo support into hardware wallets (like Ledger, Trezor, Keystone, etc.) presents unique challenges due to the resource-constrained nature of these devices (limited memory, processing power, and no standard library/OS). The standard [`sigma-rust`](sigma-rust.md) library, while comprehensive, relies on Rust's standard library (`std`) and certain dependencies that might be too heavy or unsuitable for embedded environments.
+Integrating Ergo support into hardware wallets (like Ledger, Trezor, Keystone, etc.) presents unique challenges due to the resource-constrained nature of these devices (limited memory, processing power, and no standard library/OS). The default `ergo-lib` configuration in [`sigma-rust`](sigma-rust.md) enables Rust's standard library (`std`), but upstream also has a `no_std` configuration. Device integration still requires checking dependencies, allocation, and the target's signing interface.
 
 This guide provides developers with pointers and strategies for adapting `sigma-rust` functionality for hardware wallet integration, based on community discussions and efforts.
 
@@ -62,25 +69,15 @@ This guide provides developers with pointers and strategies for adapting `sigma-
 
 ### 1. Using `sigma-rust-mini` and `no_std`
 
-A community fork/effort, often referred to as `sigma-rust-mini`, aims to provide a `no_std`-compatible subset of `sigma-rust`.
+Upstream `ergo-lib` uses `#![cfg_attr(not(feature = "std"), no_std)]`. Disable its default features with `default-features = false`; there is no upstream feature named `no_std` to enable. The defaults enable `std`, `json`, `nipopow`, and `merkle`. Select compatible features for the version and target you use: the current library has an explicit compile-time guard rejecting `nipopow` or `merkle` without `std`.
 
-* **Repository (Example Fork):** [github.com/Alesfatalis/sigma-rust-mini/tree/no_std](https://github.com/Alesfatalis/sigma-rust-mini/tree/no_std) (Note: Check for the latest official or community-maintained versions).
-* **`no_std` Feature Flag:** When using such forks or potentially future versions of `sigma-rust`, look for a `no_std` feature flag in `Cargo.toml` to enable compatibility. This typically excludes parts of the library relying on `std`.
+The historical [sigma-rust-mini fork](https://github.com/Alesfatalis/sigma-rust-mini/tree/no_std) is additional integration context. A successful `no_std` build alone does not establish that an application fits a device's memory limits or uses its secure key storage correctly.
 
 ### 2. Replacing Cryptographic Backends (k256 vs. secp256k1)
 
-`sigma-rust` often uses the [`k256`](https://crates.io/crates/k256) crate for secp256k1 operations. Hardware wallets usually have their own optimized `secp256k1` implementations (often using the [`secp256k1`](https://crates.io/crates/secp256k1) crate or a C library). To avoid duplicate code and leverage hardware optimizations, you'll likely need to:
+Upstream `sigma-rust` depends on [`k256`](https://crates.io/crates/k256). A device may expose its own cryptographic primitives through an SDK, but replacing a Rust dependency does not by itself integrate secure-element keys or Ergo's Sigma-protocol signing flow. An adapter must preserve key derivation, scalar/group encodings, nonce handling, and the protocol's signing semantics.
 
-* **Fork `sigma-rust` (or `sigma-rust-mini`):** Modify the necessary parts of the library to use the hardware wallet's preferred `secp256k1` backend instead of `k256`.
-* **Focus Areas:** Pay close attention to areas involving key generation, signing, verification, and Diffie-Hellman operations.
-* **Key Types:** When working with the `secp256k1` crate, you'll typically use types like:
-  * `secp256k1::SecretKey`
-  * `secp256k1::PublicKey`
-  * `secp256k1::ecdsa::Signature`
-* **Relevant Methods (Hints from Dev Chat):** Community members have pointed towards needing methods like:
-  * `PublicKey::mul_tweak`: For operations related to key derivation or tweaking.
-  * `PublicKey::combine`: For combining public keys (e.g., in multi-sig or aggregated signatures).
-  * Consult the [`secp256k1` crate documentation](https://docs.rs/secp256k1/latest/secp256k1/) for details on using its API.
+The [Ledger Ergo app](https://github.com/ergoplatform/ledger-app-ergo) is a C application built with the Ledger SDK. Treat its device-side implementation and the host-side JavaScript bindings as separate parts of the signing boundary. Generic ECDSA APIs or `secp256k1` crate methods are not a substitute for that Ergo-specific protocol.
 
 ### 3. Minimizing Dependencies
 

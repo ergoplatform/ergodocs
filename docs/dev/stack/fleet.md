@@ -8,6 +8,7 @@ source_repos:
     branch: master
     paths:
       - README.md
+      - packages/core/src/builder/transactionBuilder.ts
   - repo: dungvn3000/ergo-fleet-sdk-example
     branch: main
     paths:
@@ -17,6 +18,7 @@ source_repos:
     paths:
       - README.md
 source_of_truth:
+  - https://github.com/fleet-sdk/fleet/blob/master/packages/core/src/builder/transactionBuilder.ts
   - https://github.com/fleet-sdk/fleet
   - https://github.com/fleet-sdk/fleet/pull/202
   - https://github.com/dungvn3000/ergo-fleet-sdk-example
@@ -40,6 +42,20 @@ Fleet handles Ergo wallet keys and transaction construction. If your JavaScript 
 September 2025 dev updates noted a Fleet build-tooling migration from `tsup` to `tsdown`, with IIFE browser bundles exported for direct browser use. For production apps, still prefer the package entrypoints documented by Fleet unless you specifically need a no-build browser integration.
 
 July 2025 dev updates said Fleet `v0.10.0` added `AvlTree` serialization support. Later that month, Fleet added ErgoTree construction from `ergoc` JSON output in [fleet#202](https://github.com/fleet-sdk/fleet/pull/202).
+
+## Requiring a Specific Input
+
+`TransactionBuilder.from()` supplies candidate boxes to input selection. Its `ensureInclusion` option defaults to `false`, so a supplied contract box may be left out if other boxes satisfy the transaction's asset target. When spending a particular box is part of the contract action, mark it explicitly.
+
+This fragment assumes an existing `TransactionBuilder` named `builder`, a fetched `contractBox`, and additional funding `walletBoxes`:
+
+```typescript
+builder
+  .from(contractBox, { ensureInclusion: true })
+  .from(walletBoxes);
+```
+
+Inspect the built transaction's inputs before requesting a signature. Inclusion alone does not satisfy a contract's spending conditions.
 
 ## Examples
 

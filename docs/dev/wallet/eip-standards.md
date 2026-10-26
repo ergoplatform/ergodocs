@@ -12,18 +12,25 @@ tags:
   - Security
   - Testing
 owner: docs
-last_reviewed: 2026-05-26
+last_reviewed: 2026-10-26
 source_repos:
   - repo: ergoplatform/eips
     branch: master
     paths:
       - eip-0001.md
       - eip-0003.md
-      - eip-0012.md
+  - repo: nautls/nautilus-wallet
+    branch: master
+    paths:
+      - docs/dapp-connector
+      - src/extension/content-scripts/injected.ts
+      - src/extension/background/ergoHandlers.ts
 source_of_truth:
   - https://github.com/ergoplatform/eips/tree/master/eip-0001.md
   - https://github.com/ergoplatform/eips/tree/master/eip-0003.md
-  - https://github.com/ergoplatform/eips/tree/master/eip-0012.md
+  - https://github.com/ergoplatform/eips/pull/23
+  - https://github.com/nautls/nautilus-wallet/blob/v1.3.6/docs/dapp-connector/wallet-connection.md
+  - https://github.com/nautls/nautilus-wallet/blob/v1.3.6/docs/dapp-connector/wallet-interaction.md
 ---
 
 # Wallet Interaction Standards (EIPs) for dApp Developers
@@ -34,51 +41,34 @@ Ergo Improvement Proposals (EIPs) define standards for interaction between dApps
 
 ## Supported Wallets (EIP-0012)
 
-Currently, the primary wallets implementing the EIP-0012 dApp Connector standard are:
+The examples below target the [Nautilus browser extension](nautilus.md), checked against `v1.3.6`. Other wallets may implement different subsets or extensions. The original [EIP-0012 proposal](https://github.com/ergoplatform/eips/pull/23) remains open, so check the chosen wallet's implementation as well as the proposal.
 
-* **[Nautilus Wallet](nautilus.md)** (Browser Extension)
-* **Ergo Mobile Wallet (Android/iOS)**
-
-**Note:** Yoroi Wallet's Ergo support is deprecated. Developers and users should utilize Nautilus or the official Ergo Mobile Wallet for dApp interactions. See the main [Wallets page](wallets-overview.md) for more options.
+The native Ergo Mobile Wallet advertises ErgoPay and ErgoAuth support. Those signing/authentication flows do not imply that the wallet injects a browser `ergoConnector` API. See the main [Wallets page](wallets-overview.md) for platform-specific options.
 
 ## EIP-0012: dApp Connector Overview
 
-EIP-0012 defines a standard JavaScript interface injected into the dApp's web context by the wallet (usually as `window.ergoConnector.ergo` or just `window.ergo` after connection). It separates functions into two main categories:
+EIP-0012 describes a JavaScript bridge between a dApp and a wallet. Nautilus exposes its connection API at `window.ergoConnector.nautilus`; after connection, obtain its context with `getContext()`. A global `window.ergo` is optional. The implementation separates functions into two categories:
 
-* **Connection API:** Functions for establishing and managing the connection between the dApp and the wallet (e.g., `connect`, `disconnect`, `check`, `isConnected`). These are typically accessed via `ergoConnector`.
+* **Connection API:** Wallet-specific functions such as `connect`, `disconnect`, `isAuthorized`, `isConnected`, and `getContext`, accessed through `ergoConnector.nautilus` in this example.
 * **Context API:** Functions available *after* a connection is established, allowing the dApp to interact with the wallet's context (e.g., get addresses, balances, request signing). These are accessed via the `ergo` object obtained after successful connection.
 
 ### Typical Connection Flow (Conceptual JS)
 
 ```javascript
 async function connectWallet() {
-  // Check if the connector object exists (wallet extension installed)
-  if (typeof ergoConnector === 'undefined' || !ergoConnector.ergo) {
-    console.error("Ergo Wallet Connector not found. Please install Nautilus or use a compatible wallet.");
-    // Optionally prompt user to install
+  // Browser example: call from an explicit Connect button action.
+  const connector = window.ergoConnector?.nautilus;
+  if (!connector) {
+    console.error("Nautilus Wallet Connector not found.");
     return null;
   }
 
   try {
-    // Check if already connected
-    const isConnected = await ergoConnector.ergo.isConnected();
-    if (isConnected) {
-      console.log("Wallet already connected.");
-      return ergo; // Return the existing context API object
+    if (!(await connector.isConnected())) {
+      const granted = await connector.connect({ createErgoObject: false });
+      if (!granted) return null;
     }
-
-    // Request read access (prompts user in wallet)
-    const granted = await ergoConnector.ergo.connect(); 
-    
-    if (!granted) {
-      console.log("Wallet connection request denied by user.");
-      return null;
-    } else {
-      console.log("Wallet connected successfully!");
-      // 'ergo' object (Context API) is now available globally or via ergoConnector.ergo
-      // You might want to store this 'ergo' object reference in your dApp's state
-      return ergo; 
-    }
+    return await connector.getContext();
   } catch (error) {
     console.error("Error connecting to wallet:", error);
     // Handle specific errors (e.g., user cancellation, timeouts)
@@ -95,30 +85,36 @@ async function connectWallet() {
 
 ### Connection API Functions (Examples)
 
-* **`ergoConnector.ergo.connect()`:** Initiates the connection request. Returns `true` if access granted, `false` otherwise.
-* **`ergoConnector.ergo.disconnect()`:** Disconnects the dApp (if supported by the wallet).
-* **`ergoConnector.ergo.isConnected()`:** Checks if the dApp currently has read access without prompting the user.
+* **`ergoConnector.nautilus.connect()`:** Connects the current page. Returns `true` if access is granted, `false` otherwise.
+* **`ergoConnector.nautilus.disconnect()`:** Disconnects and revokes the site's authorization.
+* **`ergoConnector.nautilus.isConnected()`:** Checks whether the current page has a context.
+* **`ergoConnector.nautilus.isAuthorized()`:** Checks the site's saved authorization. After a page reload, authorization may persist while connection does not; call `connect()` again to restore the context.
+* **`ergoConnector.nautilus.getContext()`:** Returns the connected context without relying on a global `ergo` variable.
 
 ### Context API Functions (`ergo.*`) & Expected Behavior
 
 *(Available only after `connect()` returns `true`)*
 
-* **`ergo.get_used_addresses(paging?)`:**
+* **`ergo.get_used_addresses()`:**
   * **Purpose:** Returns addresses involved in past transactions. Crucial for discovering user funds.
   * **Return (Empty Wallet):** **MUST return `[]` (empty array)** if no addresses have been used. Do not rely on error codes for this case, although older wallets might have thrown errors.
-  * **Pagination:** Supports `{ page: number, limit: number }` argument. Handle paginated results if expecting many addresses.
+  * **Pagination:** The proposal describes pagination, but Nautilus `v1.3.6` rejects pagination arguments with `InvalidRequest`. Call without arguments; verify other wallets' capabilities separately.
   * **Error Handling:** Catch potential errors (e.g., user session expired, wallet internal error).
 * **`ergo.get_unused_addresses()`:**
   * **Purpose:** Returns addresses generated but not yet seen on-chain. Useful for providing fresh deposit addresses.
   * **Error Handling:** Catch potential errors.
 * **`ergo.get_balance(token_id?)`:**
-  * **Purpose:** Returns confirmed and unconfirmed balance for ERG (if `token_id` omitted) or a specific token.
+  * **Purpose:** Returns the wallet's available ERG balance in nanoERG, or a token balance in its smallest unit. Nautilus returns a string; use integer-safe handling such as `BigInt`, not floating-point conversion. Its zero-confirmation setting determines whether mempool changes are included; this is not a separate confirmed/unconfirmed balance pair.
   * **Error Handling:** Catch potential errors.
 * **`ergo.sign_tx(unsignedTx)`:**
   * **Purpose:** Sends an *unsigned* transaction (built according to EIP-12 structure) to the wallet for the user to review and sign.
   * **Return:** Returns the *signed* transaction if approved by the user.
+  * **Shape:** Nautilus requires full box objects in both `inputs` and `dataInputs`, rather than just box IDs. Fleet's `.build().toEIP12Object()` produces this signing representation; a node's unsigned-transaction JSON is not interchangeable with it.
   * **Input selection:** EIP-12 carries the full unsigned transaction object for signing; wallets should not need to query the chain and patch transaction data before signing. If a specific box must be spent, include that input explicitly. Default SDK or wallet input selection does not guarantee any particular wallet box will be chosen.
   * **Error Handling:** Crucial to handle user rejection (often throws a specific error code/message), insufficient funds errors from the wallet's pre-check, or malformed transaction errors.
+* **`ergo.sign_tx_inputs(unsignedTx, indexes)` (Nautilus):**
+  * **Purpose:** Requests signatures for selected input indexes in a multi-party transaction.
+  * **Return:** An array of signed inputs in the requested order, not a complete signed transaction. Combine the required parties' proofs before submission. Verify method support for each wallet; the original proposal uses the singular name `sign_tx_input`.
 * **`ergo.submit_tx(signedTx)`:**
   * **Purpose:** Sends a *signed* transaction to the wallet for submission to the network via the wallet's connected node.
   * **Return:** Returns the transaction ID upon successful submission.
@@ -142,7 +138,7 @@ async function connectWallet() {
 
 ## Testing Recommendations
 
-* **Multiple Wallets:** Test your dApp integration with all supported wallets (Nautilus, Ergo Mobile Wallet) on different platforms (desktop, mobile).
+* **Multiple Wallets:** Test each connector implementation and platform you support. Test native ErgoPay/ErgoAuth integrations separately from injected browser connectors.
 * **Testnet:** Thoroughly test all connection flows, data fetching, and transaction signing/submission scenarios on the Ergo Testnet before deploying to Mainnet.
 * **Edge Cases:** Test user cancellation flows (rejecting connection, rejecting signing), network errors, insufficient funds, and handling of empty/new wallets.
 * **Wallet State Changes:** Test how your dApp handles the user switching accounts or disconnecting the wallet while the dApp is active.
@@ -156,13 +152,13 @@ async function connectWallet() {
   * Insufficient funds: Wallet might pre-check and reject. Ensure input selection logic is correct.
   * Malformed transaction: Double-check the structure of the `unsignedTx` object against EIP-12 specs.
 * **`submit_tx` Errors:** Network issues, node errors (transaction invalid), or wallet unable to connect to its node. Provide feedback to the user; they might need to check their wallet's network connection.
-* **Incorrect Data (`get_used_addresses`, `get_balance`):** Ensure the wallet is fully synced. Check for pagination issues with `get_used_addresses`.
+* **Incorrect Data (`get_used_addresses`, `get_balance`):** Check wallet/backend synchronization, zero-confirmation settings, and units. Do not pass pagination arguments to Nautilus `v1.3.6`.
 
 ## Other Relevant EIPs
 
-* **[EIP-0001: Ergo Address Allocation and Encoding](https://github.com/ergoplatform/eips/blob/master/eip-0001.md):** Defines the standard address formats (P2PK, P2S).
+* **[EIP-0001: UTXO-Set Scanning Wallet API](https://github.com/ergoplatform/eips/blob/master/eip-0001.md):** Describes registering scans with the reference node wallet to track application-specific boxes.
 * **[EIP-0003: Deterministic Wallet Standard (BIP32/BIP44)](https://github.com/ergoplatform/eips/blob/master/eip-0003.md):** Defines derivation paths for hierarchical deterministic (HD) wallets, including public-key export/import conventions for wallet interoperability.
-* *(Others like EIP-0004 (Assets), EIP-0020 (ErgoPay), EIP-0027 (Asset Linking) may also be relevant depending on dApp functionality).*
+* [EIP-0004 (Assets)](https://github.com/ergoplatform/eips/blob/master/eip-0004.md), [EIP-0020 (ErgoPay)](https://github.com/ergoplatform/eips/blob/master/eip-0020.md), and [EIP-0021 (Genuine Token Verification)](https://github.com/ergoplatform/eips/blob/master/eip-0021.md) cover related integration concerns.
 
 ## Example Implementations
 

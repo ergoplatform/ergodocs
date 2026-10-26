@@ -531,7 +531,7 @@
 ## 📜 Standards (EIPs) <a id="standards-eips"></a>
 
 - **[EIP Repository](https://github.com/ergoplatform/eips)** – official Ergo Improvement Proposals.
-- [EIP-1: Ergo Address Types](https://github.com/ergoplatform/eips/blob/master/eip-0001.md)
+- [EIP-1: UTXO-Set Scanning Wallet API](https://github.com/ergoplatform/eips/blob/master/eip-0001.md)
 - [EIP-3: HD Wallet Derivation Paths](https://github.com/ergoplatform/eips/blob/master/eip-0003.md)
 - [EIP-4: Asset Standard (Tokens & NFTs)](https://github.com/ergoplatform/eips/blob/master/eip-0004.md)
 - [EIP-5: ErgoScript Templates (Deprecated)](https://github.com/ergoplatform/eips/blob/master/eip-0005.md)
