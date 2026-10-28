@@ -239,7 +239,7 @@ The [ergo-contracts](https://github.com/ergoplatform/ergo-contracts) repository 
 
 ### In Development
 
-- ChainCash/Basis contract work added reserve-refund handling and AVL `insertOrUpdate` logic in July 2026, then moved the active Basis contract and specifications into [BetterMoneyLabs/basis-tracker](https://github.com/BetterMoneyLabs/basis-tracker/tree/master/contract). Verify that repository before treating examples as stable integration targets.
+- ChainCash/Basis active contracts live in [BetterMoneyLabs/basis-tracker](https://github.com/BetterMoneyLabs/basis-tracker/tree/master/contract). [PR #16](https://github.com/BetterMoneyLabs/basis-tracker/pull/16) merged replay/merge protections, tracker-bound signatures, and regenerated artifacts; old deployed scripts require separate refund or migration. The later [multi-collateral change](https://github.com/BetterMoneyLabs/basis-tracker/commit/8638a29f014cff6b39819a1c78ba7506d2c10127) separates token-denominated debt keys and changes the token reserve address. Pin contracts and clients together; see [ChainCash deployment and collateral notes](chaincash.md).
 - [Dexy](https://github.com/ergoplatform/ergo-jde/blob/main/kiosk/src/test/scala/kiosk/dexy/DexySpec.scala)
 - [Bitdomains](https://github.com/bitdomains/contracts)
 - [ErgoNames](https://github.com/ergonames/ergonames/blob/master/src/main/scala/)

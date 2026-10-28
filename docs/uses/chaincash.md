@@ -12,7 +12,11 @@ source_repos:
       - README.md
       - contract
       - docs
-      - src
+      - crates/basis_core/src
+      - crates/basis_server/src
+      - crates/basis_store/src
+      - specs/ergo/multi_collateral_reserves.md
+      - specs/pr16_triage.md
   - repo: BetterMoneyLabs/chaincash
     branch: master
     paths:
@@ -76,7 +80,15 @@ This article explains ChainCash's functionality, explores practical applications
 
 ## Deployment Review
 
-The upstream [deployment security review](https://github.com/BetterMoneyLabs/basis-tracker/issues/15) reports contract and tracker-server findings, with reproduction tests and [proposed fixes](https://github.com/BetterMoneyLabs/basis-tracker/pull/16) still under review. Treat the architectural protections described here as design goals requiring verification against a pinned implementation and deployed contract. A proposed patch or local test does not establish that an existing deployment has been repaired.
+The upstream [deployment security review](https://github.com/BetterMoneyLabs/basis-tracker/issues/15) led to [PR #16](https://github.com/BetterMoneyLabs/basis-tracker/pull/16), merged as [`6f0672bc`](https://github.com/BetterMoneyLabs/basis-tracker/commit/6f0672bc5f862f2286f7ab99c0ae52240acaadd6). Its [remediation notes](https://github.com/BetterMoneyLabs/basis-tracker/blob/6f0672bc5f862f2286f7ab99c0ae52240acaadd6/specs/pr16_triage.md) describe contract replay/merge protections, signed-message tracker binding, regenerated contract artifacts, and server authorization changes. `/reserves/submit` was removed: the tracker builds reserve-creation payloads, while owners submit them to their own node. `/redeem/complete` requires the Admin role.
+
+Existing boxes remain governed by their original scripts. Upstream identifies pre-fix contract artifacts as requiring refund or migration; merging fixes does not repair those deployments. Signed notes bind cumulative debt, timestamp and tracker NFT, but not a specific redemption amount. Acceptance-policy and FIFO checks therefore remain advisory around the signing flow, and reserve selection must reject ambiguous reserves. Verify the pinned implementation and deployed contract before relying on these protections.
+
+## Collateral Denominations
+
+The [multi-collateral implementation](https://github.com/BetterMoneyLabs/basis-tracker/commit/8638a29f014cff6b39819a1c78ba7506d2c10127) lets one tracker maintain ERG and multiple token-denominated reserves. Its [specification](https://github.com/BetterMoneyLabs/basis-tracker/blob/8638a29f014cff6b39819a1c78ba7506d2c10127/specs/ergo/multi_collateral_reserves.md) separates token debts with `blake2b256(issuerKey || receiverKey || tokenId)`; ERG debt keys remain `blake2b256(issuerKey || receiverKey)`. The token reserve's redemption-history key stays unsuffixed so its cumulative-redemption counters retain their meaning.
+
+This changes the token reserve contract address and deliberately breaks compatibility with earlier token notes and local stores. Use matching contracts, signing clients, and denomination-aware tracker configuration; do not reuse pre-change token reserves or reset redemption-history trees. Collateralization ratios are acceptance-policy checks rather than contract-enforced guarantees.
 
 ## Clearing Design
 

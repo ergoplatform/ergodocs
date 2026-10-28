@@ -182,11 +182,12 @@ Month buckets summarize roadmap-relevant changes from the latest docs sweep. Use
 
 - [Contract tooling](ergoscript.md): Lean models in `ergotree-lean` and Eidos provide scoped proof and differential-test evidence; neither establishes deployed-contract safety by itself.
 - [Rosen](rosen.md): BCH, Zcash, Monero, Solana and Avalanche work remains in design/local-validation/upstream-review stages. Local demonstrations do not expand supported live routes.
-- [ChainCash/Basis](chaincash.md) and [Dexy](dexy.md): published security review and incident/recovery sources require pinned-contract and deployment checks; proposed fixes remain under review.
+- [ChainCash/Basis](chaincash.md): [PR #16](https://github.com/BetterMoneyLabs/basis-tracker/pull/16) merged contract and server remediation; later multi-collateral work separates token-denominated debts under one tracker and changes token-contract compatibility. Existing deployments need separate migration checks. [Dexy](dexy.md) incident/recovery work remains subject to its own source and deployment checks.
 - [Storage rent](rent-spending.md): EIPs 51–53 propose refresh/grace/attestation rules; current node admission policy and collection support do not activate those proposals. [v6.0.9](https://github.com/ergoplatform/ergo/pull/2719) is a release candidate under review.
 - [Lithos](lithos.md): mainnet 1.0.6 adds candidate keepalive, updated storage-rent scan settings, wallet seeding and reservation recovery. The earlier 1.0.5 upgrade adds difficulty forwards, reward sweeps and a statistics migration; follow the current configuration and operator notes.
 - [Nautilus](nautilus.md): 1.3.6 fixes connector request handling, exposes partial signing through `sign_tx_inputs`, and checks transaction well-formedness in `submit_tx`, following 1.3.4's wallet search and recovery-word interaction improvements. Browser-store availability is checked separately from source releases.
-- [Machina](machina-finance.md): current SDK source uses owner-side bid/ask prices, explicit supported pair checks and stricter fill/owner-box rules.
+- [Machina](machina-finance.md): [SDK v0.1.0](https://github.com/machinafi/sdk/releases/tag/v0.1.0) uses owner-side bid/ask creation prices, adds grid metrics and custom contracts, and recompiles bundled contracts to ErgoTree v1. Addresses change and default wrappers reject older v2 boxes; SDK publication does not establish production DEX availability.
+- [Minotaur](minotaur.md): `v4.2.1` and its Android/desktop `rc5` builds remain prereleases, covering default-address change handling, QR rescans, sync and signing improvements. The latest checked stable release remains `v4.2.0`.
 - [Monero research](bringing-monero.md): the RCS-003 proposal distinguishes the last complete native replay from later focused fixes and still-open custody, recovery and finality work.
 
 #### September

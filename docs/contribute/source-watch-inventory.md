@@ -21,7 +21,7 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 - Watched repositories: `236`
 - Watched GitHub owners: `99`
 - Watched repo/branch pairs: `242`
-- Watched paths: `531`
+- Watched paths: `535`
 - Release-watched page/repository refs: `16`
 
 ## Coverage Groups
@@ -29,7 +29,7 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | Group | Owners | Repositories | Pages | Paths |
 | --- | ---: | ---: | ---: | ---: |
 | Core / infrastructure | 5 | 31 | 134 | 204 |
-| Ecosystem org | 9 | 38 | 25 | 36 |
+| Ecosystem org | 9 | 38 | 25 | 40 |
 | Developer / project | 82 | 164 | 122 | 111 |
 | External standard/vendor | 3 | 3 | 6 | 6 |
 
@@ -60,7 +60,7 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`cannonQ`](https://github.com/cannonQ) | Developer / project | 6 | 9 | 3 |
 | [`mwaddip`](https://github.com/mwaddip) | Developer / project | 8 | 9 | 7 |
 | [`mgpai22`](https://github.com/mgpai22) | Developer / project | 5 | 7 | 4 |
-| [`BetterMoneyLabs`](https://github.com/BetterMoneyLabs) | Ecosystem org | 3 | 6 | 15 |
+| [`BetterMoneyLabs`](https://github.com/BetterMoneyLabs) | Ecosystem org | 3 | 6 | 19 |
 | [`kushti`](https://github.com/kushti) | Developer / project | 4 | 6 | 8 |
 | [`SavonarolaLabs`](https://github.com/SavonarolaLabs) | Ecosystem org | 7 | 6 | 8 |
 | [`ThierryM1212`](https://github.com/ThierryM1212) | Developer / project | 4 | 6 | 5 |
@@ -188,7 +188,7 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`arkadianet/citadel`](https://github.com/arkadianet/citadel) | Developer / project | `main` | 2 | 1 |
 | [`arobsn/hergmes`](https://github.com/arobsn/hergmes) | Developer / project | `master` | 2 | 1 |
 | [`arobsn/ledger-ergo-js`](https://github.com/arobsn/ledger-ergo-js) | Developer / project | `master` | 2 | 1 |
-| [`BetterMoneyLabs/basis-tracker`](https://github.com/BetterMoneyLabs/basis-tracker) | Ecosystem org | `master` | 2 | 4 |
+| [`BetterMoneyLabs/basis-tracker`](https://github.com/BetterMoneyLabs/basis-tracker) | Ecosystem org | `master` | 2 | 8 |
 | [`BetterMoneyLabs/braid`](https://github.com/BetterMoneyLabs/braid) | Ecosystem org | `master` | 2 | 6 |
 | [`cannonQ/ergo-p2p-options-frontend`](https://github.com/cannonQ/ergo-p2p-options-frontend) | Developer / project | `master` | 2 | 3 |
 | [`cannonQ/nft-races`](https://github.com/cannonQ/nft-races) | Developer / project | `main` | 2 | 1 |
@@ -458,7 +458,7 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`Auction-Coin/contracts`](https://github.com/Auction-Coin/contracts) | `main` | `README.md` | `docs/eco/auction-coin.md` |
 | [`Auction-Coin/frontend`](https://github.com/Auction-Coin/frontend) | `main` | `README.md` | `docs/eco/auction-coin.md` |
 | [`Auction-Coin/off-chain`](https://github.com/Auction-Coin/off-chain) | `master` | `README.md` | `docs/eco/auction-coin.md` |
-| [`BetterMoneyLabs/basis-tracker`](https://github.com/BetterMoneyLabs/basis-tracker) | `master` | `README.md`<br>`contract`<br>`docs`<br>`src` | `docs/dev/scs/contracts.md`<br>`docs/uses/chaincash.md` |
+| [`BetterMoneyLabs/basis-tracker`](https://github.com/BetterMoneyLabs/basis-tracker) | `master` | `README.md`<br>`contract`<br>`crates/basis_core/src`<br>`crates/basis_server/src`<br>`crates/basis_store/src`<br>`docs`<br>`specs/ergo/multi_collateral_reserves.md`<br>`specs/pr16_triage.md` | `docs/dev/scs/contracts.md`<br>`docs/uses/chaincash.md` |
 | [`BetterMoneyLabs/braid`](https://github.com/BetterMoneyLabs/braid) | `master` | `README.md`<br>`docs/bitcoin-mergedmining.md`<br>`docs/braid.md`<br>`docs/ergo-mergedmining.md`<br>`whitepaper/whitepaper.pdf`<br>`whitepaper/whitepaper.tex` | `docs/uses/sidechains.md`<br>`docs/uses/sidechains/braid.md` |
 | [`BetterMoneyLabs/chaincash`](https://github.com/BetterMoneyLabs/chaincash) | `master` | `contracts`<br>`contracts/onchain/note.es`<br>`contracts/onchain/reserve.es`<br>`docs/presentation/basis.pdf`<br>`docs/server.md`<br>`docs/whitepaper/chaincash.pdf` | `docs/dev/scs/contracts.md`<br>`docs/dev/scs/tx/fsm-example.md`<br>`docs/roadmap.md`<br>`docs/uses/chaincash.md` |
 | [`Blitz-TCG/Game-Client`](https://github.com/Blitz-TCG/Game-Client) | `main` | `README.md` | `docs/eco/blitz.md` |

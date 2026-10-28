@@ -26,7 +26,7 @@ source_repos:
 source_of_truth:
   - https://github.com/spectrum-finance/ergo-dex-backend
   - https://github.com/spectrum-finance/spectrum-offchain-ergo
-  - https://github.com/machinafi/sdk/releases/tag/0.1.0-alpha.0
+  - https://github.com/machinafi/sdk/releases/tag/v0.1.0
 ---
 
 # Spectrum.DEX off-chain services
@@ -164,9 +164,9 @@ Do not treat the sample seed or public node value as production configuration.
 
 ## Machina Finance order SDK
 
-[Machina Finance](machina-finance.md) is developing an order-execution stack around grid, limit, and market-style contracts. The public [orders SDK](https://github.com/machinafi/sdk) is early alpha code rather than a turnkey operator service, but it is relevant for bot builders because it exposes protocol actions used to construct supported order flows.
+[Machina Finance](machina-finance.md) is developing an order-execution stack around grid, limit, and market-style contracts. The public [orders SDK](https://github.com/machinafi/sdk) exposes protocol actions used to construct supported order flows. Its SDK release does not provide a turnkey operator service.
 
-The [`0.1.0-alpha.0`](https://github.com/machinafi/sdk/releases/tag/0.1.0-alpha.0) release added token-to-token grid orders and ERG-to-token limit orders. Treat it as implementation reference until Machina publishes a production operator guide.
+The [`v0.1.0`](https://github.com/machinafi/sdk/releases/tag/v0.1.0) release supports token-to-token grid orders and ERG-to-token limit orders, adds grid performance getters, and recompiles all bundled contracts to ErgoTree v1. Every bundled contract address changes; default wrappers reject older v2 order boxes. Retain the matching contract/version when servicing existing orders.
 
 ## Operations checklist
 
@@ -186,4 +186,4 @@ The [`0.1.0-alpha.0`](https://github.com/machinafi/sdk/releases/tag/0.1.0-alpha.
 
 ## Machina SDK Compatibility
 
-Current Machina grid construction uses owner-side `prices: { bid, ask }`, with taker-side `[ask, bid]` stored in the contract. Both prices must be positive and `bid <= ask`. ERG/token limit orders are supported; token/token limit creation throws. Pin the SDK and inspect supported fill/owner-box rules before composing bot transactions. See [Machina Finance](machina-finance.md).
+Machina `v0.1.0` grid construction uses owner-side `prices: { bid, ask }`; `order.price`, `buy()` and `sell()` retain taker-side semantics. Both prices must be positive and `bid <= ask`. New R5 values are `[ask, bid, initialBase, initialQuote]`; the initial amounts are creator-declared, so derived volume/profit getters do not prove historical performance. ERG/token limit orders are supported; token/token limit creation throws. Pin the SDK and inspect supported fill/owner-box rules before composing bot transactions. See [Machina Finance](machina-finance.md).

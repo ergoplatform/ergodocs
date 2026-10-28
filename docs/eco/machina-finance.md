@@ -6,7 +6,7 @@ tags:
   - dApp
   - dApp-InDev
 owner: docs
-last_reviewed: 2026-10-21
+last_reviewed: 2026-10-28
 ia_status: directory
 source_repos:
   - repo: nautls/machina-finance
@@ -23,7 +23,7 @@ source_repos:
 source_of_truth:
   - https://github.com/nautls/machina-finance
   - https://github.com/machinafi/sdk
-  - https://github.com/machinafi/sdk/releases/tag/0.1.0-alpha.0
+  - https://github.com/machinafi/sdk/releases/tag/v0.1.0
 ---
 
 # Machina Finance
@@ -34,6 +34,7 @@ Machina Finance is a decentralized exchange (DEX) design under development on Er
 
 ## Recent updates
 
+- [SDK `v0.1.0`](https://github.com/machinafi/sdk/releases/tag/v0.1.0) replaces the alpha creation API with owner-side bid/ask prices, recompiles the bundled contracts to ErgoTree v1, and adds grid-order performance getters and custom-contract support. An SDK release does not establish that a production DEX or operator service is live.
 - `May 9`: the public [Machina Finance orders SDK](https://github.com/machinafi/sdk) released [`0.1.0-alpha.0`](https://github.com/machinafi/sdk/releases/tag/0.1.0-alpha.0), adding token-to-token grid-order and ERG-to-token limit-order support.
 - The SDK README reports 100% test coverage and lists the supported contract wrappers for token-to-token grid orders, ERG-to-token grid orders, and ERG-to-token limit orders.
 - `Jul 2`: dev updates said final grid-contract optimizations had been added and limit-order contracts were in progress.
@@ -53,9 +54,17 @@ The primary objective of Machina Finance is to promote decentralization and faci
 
 ## SDK Price and Fill Semantics
 
-Current [SDK source](https://github.com/machinafi/sdk/blob/master/src/grid-order.ts) uses `prices: { bid, ask }` from the owner's perspective: the owner buys at the bid and sells at the ask. Contract R5 stores the taker's buy/sell prices as `[ask, bid]`. Both prices must be positive and `bid <= ask`; do not carry older buy/sell argument conventions into this API without checking the pinned version.
+The [`v0.1.0` SDK](https://github.com/machinafi/sdk/blob/v0.1.0/src/grid-order.ts) uses `prices: { bid, ask }` from the owner's perspective: the owner buys at the bid and sells at the ask. `order.price`, `buy()` and `sell()` retain taker-side semantics: an order created with `{ bid: 5n, ask: 10n }` exposes `{ buy: 10n, sell: 5n }`. Both prices must be positive and `bid <= ask`; replace the older creation arguments rather than copying their field names.
 
-Grid orders reject equal base/quote IDs, negative amounts and ERG as the quote asset. Token-to-token grids require base liquidity so the token positions remain valid. Limit orders currently support ERG/token pairs; token-to-token creation throws. Fill construction validates the remaining owner-box minimum and distinguishes a continuing partial fill from a final payout. The source manifest is `0.1.0-alpha.1`; confirm the package actually installed rather than assuming an older alpha artifact has these changes.
+Grid orders reject equal base/quote IDs, negative amounts and ERG as the quote asset. Token-to-token grids require base liquidity so the token positions remain valid. Limit orders currently support ERG/token pairs; token-to-token creation throws. Fill construction validates the remaining owner-box minimum and distinguishes a continuing partial fill from a final payout. Pin the installed package version when building integrations.
+
+## SDK Compatibility and Metrics
+
+In `v0.1.0`, all bundled contracts were recompiled from ErgoTree v2 to v1. Their header changes from `1a` to `19`, changing every contract address. The default `GridOrder` and `LimitOrder` wrappers reject boxes using the old v2 trees; upgrading the SDK does not move existing orders. Keep the matching contract/version available when handling older boxes.
+
+New grid orders store `[ask, bid, initialBase, initialQuote]` in R5. The contract preserves this collection when recreating the order but does not validate the declared initial balances. The SDK exposes `initialAmounts`, `delta` (current minus initial), taker-side `volume`, and `realizedProfit` in base units. These are derived from creator-declared data, not independently verified trading history. All four getters return `undefined` when initial balances are absent. With equal bid and ask, `volume` is `undefined` and `realizedProfit` is `0n` when initial balances are present.
+
+`new GridOrder(box, contract?)` and `GridOrder.create(params, contract?)` accept a custom `OrderContract`. The constructor checks that the box matches the supplied contract; creation checks that its E2T/T2T type matches the base asset.
 
 ## Features
 
