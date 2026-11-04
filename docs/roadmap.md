@@ -136,7 +136,6 @@ source_of_truth:
   - https://github.com/ergonames/ergonames-services/blob/master/sdk/INTEGRATION.md
   - https://github.com/GitCircles/GitCircles-Github
   - https://github.com/GitCircles/GitCircles-Roadmap
-  - https://sigmanauts.com/mining
   - https://calc.ergominers.com
   - https://github.com/BetterMoneyLabs/braid
   - https://github.com/a-shannon/ergo-sidechain-bridge
@@ -654,7 +653,7 @@ Ergo is developed a by a combination of the [Ergo Foundation](ergo-foundation.md
   - [Significant donations to EF Treasury from ecosystem projects](https://ergoplatform.org/en/news/news/The-Ergo-Foundation-Path-to-a-Robust-Digital-Ecosystem)
   - Storage rent activation
   - Sigmanauts
-    - **01/23**: [sigmanauts.com](https://sigmanauts.com/) launches.
+    - **01/23**: `sigmanauts.com` launches.
     - **03/23**: Sigmanauts [voting rework](https://docs.google.com/document/d/1kuf_l9tZOdg7vMgVSKuV0FIUlpHmxWiWjMi89z-XTdE/edit#heading=h.e1tnpe3qjzte).
     - **03/23**: [Mission Statement](https://docs.google.com/document/d/1J6PdyyxoEEqI0nEr64ZZBGU4Lkr8Cr37GqNSs4qHo7Q/edit) published.
     - **00/23**: The Sigmanauts attend their first event @ RareEVO.

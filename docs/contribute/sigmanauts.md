@@ -18,7 +18,7 @@ The Sigmanauts Program offers three categories of participation:
 
 ## Becoming a Sigmanaut
 
-To become a Sigmanaut, interested individuals must go through a [formal application process](https://sigmanauts.com/application/). Once accepted into the Sigmanauts Program as a SigCAN (Sigmanaut candidate), participants will have the opportunity to work with a team of like-minded individuals, showcase their skills and make a significant impact on the Ergo ecosystem.
+The Sigmanauts application website is currently unavailable. For current participation options, consult the [Ergo community channels](engage-with-the-ergo-community.md). Participants accepted into the Sigmanauts Program as SigCANs (Sigmanaut candidates) can work with other community members and contribute to the Ergo ecosystem.
 
 ## Progression and responsibility
 
@@ -36,7 +36,7 @@ As a Sigmanaut, individuals will have the chance to interact with others who sha
 
 The Sigmanauts mining pool is a DAO-driven, community-run mining pool dedicated to supporting the Ergo ecosystem. Joining the pool contributes to the Ergo community (fees go to the Sigmanauts treasury) and offers hourly bonus token payments. The pool boasts a minimal 0.9% fee, a payout threshold of 0.5 ERG and operates on the PPLNS payment method (Pay Per Last N Shares, with N set to 0.5).
 
-To get started with mining Ergo, you need an Ergo wallet and mining software compatible with your GPU. Detailed instructions on wallet setup, mining software and example miner configurations for both Windows and Linux can be found on the [Sigmanauts mining pool page](https://sigmanauts.com/mining).
+The Sigmanauts mining pool website is currently unavailable. Check its current operational status through community channels before mining. For other pool options and general guidance, see [Mining pools](pools.md).
 
 In July 2025 the pool team shared a mining calculator under the `calc.ergominers.com` name and said operator tooling was being built for pool setup, alerts, UI, and pool-status automation.
 
@@ -45,7 +45,7 @@ In July 2025 the pool team shared a mining calculator under the `calc.ergominers
 Since its launch, the Sigmanauts Program has made significant strides in building the required structures to pass the baton to the community. Some notable achievements include:
 
 - **01/22**: The [Sigmanauts Program](sigmanauts.md) is launched.
-- **01/23**: [sigmanauts.com](https://sigmanauts.com/) launches.
+- **01/23**: `sigmanauts.com` launches.
 - **03/23**: Sigmanauts [voting rework](https://docs.google.com/document/d/1kuf_l9tZOdg7vMgVSKuV0FIUlpHmxWiWjMi89z-XTdE/edit#heading=h.e1tnpe3qjzte).
 - **03/23**: [Mission statement](https://docs.google.com/document/d/1J6PdyyxoEEqI0nEr64ZZBGU4Lkr8Cr37GqNSs4qHo7Q/edit) published.
 - **00/23**: The Sigmanauts attend their first event @ RareEVO.

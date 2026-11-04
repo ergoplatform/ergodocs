@@ -52,7 +52,7 @@ BlockHost provisions VMs from on-chain subscriptions and uses NFTs for access cr
 | [Bene](bene.md) | - | Active | 2026-05-30 |
 | [ErgoRaffle](ergoraffle.md) | [ergoraffle.com](https://ergoraffle.com) | Active | 2026-05-27 |
 | [Paideia](paideia.md) | [paideia.im](https://www.paideia.im), [app](https://app.paideia.im/) | Live, usable | 2024-12-23 |
-| [Sigmanauts](sigmanauts.md) | [sigmanauts.com](https://sigmanauts.com/) | Community program / mining pool | 2025-07-16 |
+| [Sigmanauts](sigmanauts.md) | Site unavailable | Community program / mining pool | 2025-07-16 |
 
 ### Privacy
 
