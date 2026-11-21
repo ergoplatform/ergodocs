@@ -856,6 +856,7 @@ nav:
           - Token Integration: tutorials/token_integration.md
           - SigmaUSD Developer Notes: uses/sigmausd/sigusd-dev.md
           - Fleet SDK Recipes: dev/tutorials/fleet-sdk-recipes.md
+          - Testing Contracts with MockChain: dev/tutorials/mockchain-contract-testing.md
           - Chained Transactions: tutorials/chained-tx.md
           - Hardware Wallets: dev/tutorials/hardware-wallet-integration.md
           - Sign Transactions:

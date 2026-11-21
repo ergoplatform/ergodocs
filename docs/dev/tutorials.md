@@ -17,6 +17,7 @@ For SDK setup and transaction examples, see the [Starter Tutorial](basics.md).
 | Build transactions | [Fleet SDK Recipes](fleet-sdk-recipes.md) | [Chained Transactions](chained-tx.md), [Sign Transactions](sign-tx.md) |
 | Integrate wallets | [Wallet Integration](wallets.md) | [dApp Connector](dApp.md), [ErgoPay](ergo-pay.md), [Hardware Wallets](hardware-wallet-integration.md) |
 | Write contracts | [ErgoScript](ergoscript.md) | [Contracts & Patterns Library](contracts-library.md), [ErgoScript Concepts](ergoscript-key-concepts.md) |
+| Test smart contracts | [Testing Contracts with MockChain](mockchain-contract-testing.md) | [Fleet SDK Recipes](fleet-sdk-recipes.md), [ErgoScript](ergoscript.md) |
 | Index chain data | [Blockchain Indexing](blockchain-indexing.md) | [Explorer API](explorer-apis.md), [Custom Indexer](custom-indexer.md) |
 | Integrate exchanges | [Exchange Integration](guide.md) | [Dust Collection](dust-collection.md), [Token Integration](token_integration.md) |
 | Work with oracles | [Oracle Bootstrap](oracle-bootstrap.md) | [Oracle Contracts](contracts-oracles.md), [Oracle Core](oracle.md) |

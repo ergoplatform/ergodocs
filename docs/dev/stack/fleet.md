@@ -35,7 +35,7 @@ source_of_truth:
 - 100% code coverage
 - Tree-shakeable
 
-For common usage patterns and examples, see the [Fleet SDK Recipes](fleet-sdk-recipes.md).
+For common usage patterns and examples, see [Fleet SDK Recipes](fleet-sdk-recipes.md) and [Testing Contracts with MockChain](mockchain-contract-testing.md).
 
 Fleet handles Ergo wallet keys and transaction construction. If your JavaScript application also needs message encryption or symmetric ciphers around those keys, use a dedicated audited crypto library such as [noble-ciphers](https://github.com/paulmillr/noble-ciphers) rather than expecting Fleet to provide general-purpose encryption APIs.
 
