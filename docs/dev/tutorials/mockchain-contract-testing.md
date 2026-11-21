@@ -18,9 +18,9 @@ last_reviewed: 2026-11-21
 
 By the end of this tutorial, you will set up a repeatable [Vitest](https://vitest.dev/) test suite that validates:
 
-1. Multi-party signature and block-height conditions (`HEIGHT > refundDeadline`).
+1. Multi-party signature and block-height conditions (`HEIGHT > refundDeadline`) with recipient and fee-cap enforcement.
 2. Stateful self-replicating eUTXO covenants that conserve tokens and storage-rent reserves across partial purchases.
-3. Adversarial security checks (`{ throw: false }`), including defense against eUTXO double-satisfaction attacks.
+3. Adversarial security checks (`{ throw: false }`), including defense against eUTXO double-satisfaction attacks and safe handling of tokenless dust boxes.
 
 ## Prerequisites
 
@@ -56,10 +56,11 @@ Create a minimal `tsconfig.json`:
 
 Create `tests/escrowDepositContract.spec.ts`. In Ergo, multi-party spending paths compose naturally with Sigma propositions (`&&` and `||`), while `mockChain.jumpTo(height)` lets you test block-height transitions deterministically.
 
-Notice two practices in the contract below:
+Notice three practices in the contract below:
 
 - Named constants (`buyerPK`, `sellerPK`, `arbiterPK`, `refundDeadline`, `maxMinerFee`) are injected safely at compile time through `compile(..., { map })` rather than string interpolation.
-- In dispute branches (`sellerAward` and `buyerAward`), the script verifies `OUTPUTS(0).propositionBytes == sellerPK.propBytes` so a co-signing arbiter cannot divert funds to an unintended address.
+- Both dispute branches (`sellerAward` and `buyerAward`) enforce `OUTPUTS(0).propositionBytes` and `SELF.value - maxMinerFee` so a co-signing arbiter cannot divert funds or siphon value via excessive fees.
+- The post-deadline `timeoutRefund` branch likewise enforces `OUTPUTS(0).propositionBytes == buyerPK.propBytes` and `OUTPUTS(0).value >= SELF.value - maxMinerFee`, ensuring automated refund transactions preserve the buyer's destination address and refund floor.
 
 ```typescript
 import { MockChain } from "@fleet-sdk/mock-chain";
@@ -76,6 +77,7 @@ import { afterEach, describe, expect, it } from "vitest";
 
 const ESCROW_DEPOSIT = 5_000_000_000n; // 5 ERG
 const MAX_MINER_FEE = 1_100_000n; // 0.0011 ERG
+const DIVERTED_AMOUNT = 1_000_000n; // 0.001 ERG
 
 const ESCROW_DEPOSIT_SCRIPT = `{
   val cooperativeRelease = buyerPK && sellerPK
@@ -98,7 +100,14 @@ const ESCROW_DEPOSIT_SCRIPT = `{
       OUTPUTS(0).value >= SELF.value - maxMinerFee
     )
 
-  val timeoutRefund = buyerPK && sigmaProp(HEIGHT > refundDeadline)
+  val timeoutRefund =
+    buyerPK &&
+    sigmaProp(
+      HEIGHT > refundDeadline &&
+      OUTPUTS.size >= 1 &&
+      OUTPUTS(0).propositionBytes == buyerPK.propBytes &&
+      OUTPUTS(0).value >= SELF.value - maxMinerFee
+    )
 
   cooperativeRelease || sellerAward || buyerAward || timeoutRefund
 }`;
@@ -141,6 +150,20 @@ describe("Arbiter escrow deposit contract", () => {
     expect(seller.balance).to.be.deep.equal({ nanoergs: payout, tokens: [] });
   });
 
+  it("Should allow Arbiter and Seller to resolve a dispute in favor of Seller", () => {
+    escrowContract.addBalance({ nanoergs: ESCROW_DEPOSIT });
+
+    const payout = ESCROW_DEPOSIT - MAX_MINER_FEE;
+    const transaction = new TransactionBuilder(mockChain.height)
+      .from(escrowContract.utxos)
+      .to(new OutputBuilder(payout, seller.address))
+      .payMinFee()
+      .build();
+
+    expect(mockChain.execute(transaction, { signers: [arbiter, seller] })).to.be.true;
+    expect(seller.balance).to.be.deep.equal({ nanoergs: payout, tokens: [] });
+  });
+
   it("Should reject an Arbiter and Seller spend that diverts funds to Arbiter", () => {
     escrowContract.addBalance({ nanoergs: ESCROW_DEPOSIT });
 
@@ -153,6 +176,49 @@ describe("Arbiter escrow deposit contract", () => {
 
     expect(
       mockChain.execute(transaction, { signers: [arbiter, seller], throw: false })
+    ).to.be.false;
+    expect(escrowContract.balance).to.be.deep.equal({ nanoergs: ESCROW_DEPOSIT, tokens: [] });
+  });
+
+  it("Should allow Arbiter and Buyer to resolve a dispute in favor of Buyer", () => {
+    escrowContract.addBalance({ nanoergs: ESCROW_DEPOSIT });
+
+    const payout = ESCROW_DEPOSIT - MAX_MINER_FEE;
+    const transaction = new TransactionBuilder(mockChain.height)
+      .from(escrowContract.utxos)
+      .to(new OutputBuilder(payout, buyer.address))
+      .payMinFee()
+      .build();
+
+    expect(mockChain.execute(transaction, { signers: [arbiter, buyer] })).to.be.true;
+    expect(buyer.balance).to.be.deep.equal({ nanoergs: payout, tokens: [] });
+  });
+
+  it("Should reject an Arbiter and Buyer spend that diverts funds or underpays Buyer", () => {
+    escrowContract.addBalance({ nanoergs: ESCROW_DEPOSIT });
+
+    const payout = ESCROW_DEPOSIT - MAX_MINER_FEE;
+    const wrongRecipientTx = new TransactionBuilder(mockChain.height)
+      .from(escrowContract.utxos)
+      .to(new OutputBuilder(payout, arbiter.address))
+      .payMinFee()
+      .build();
+
+    expect(
+      mockChain.execute(wrongRecipientTx, { signers: [arbiter, buyer], throw: false })
+    ).to.be.false;
+
+    const underpaidBuyerTx = new TransactionBuilder(mockChain.height)
+      .from(escrowContract.utxos)
+      .to([
+        new OutputBuilder(payout - DIVERTED_AMOUNT, buyer.address),
+        new OutputBuilder(DIVERTED_AMOUNT, arbiter.address)
+      ])
+      .payMinFee()
+      .build();
+
+    expect(
+      mockChain.execute(underpaidBuyerTx, { signers: [arbiter, buyer], throw: false })
     ).to.be.false;
     expect(escrowContract.balance).to.be.deep.equal({ nanoergs: ESCROW_DEPOSIT, tokens: [] });
   });
@@ -171,7 +237,7 @@ describe("Arbiter escrow deposit contract", () => {
     expect(escrowContract.balance).to.be.deep.equal({ nanoergs: ESCROW_DEPOSIT, tokens: [] });
   });
 
-  it("Should allow Buyer to reclaim funds unilaterally after the deadline expires", () => {
+  it("Should allow Buyer to reclaim funds to Buyer address within fee cap after deadline", () => {
     escrowContract.addBalance({ nanoergs: ESCROW_DEPOSIT });
     mockChain.jumpTo(refundDeadline + 1);
 
@@ -185,6 +251,41 @@ describe("Arbiter escrow deposit contract", () => {
     expect(mockChain.execute(transaction, { signers: [buyer] })).to.be.true;
     expect(buyer.balance).to.be.deep.equal({ nanoergs: payout, tokens: [] });
   });
+
+  it("Should reject a post-deadline Buyer spend directed to another party", () => {
+    escrowContract.addBalance({ nanoergs: ESCROW_DEPOSIT });
+    mockChain.jumpTo(refundDeadline + 1);
+
+    const payout = ESCROW_DEPOSIT - MAX_MINER_FEE;
+    const thirdPartyTx = new TransactionBuilder(mockChain.height)
+      .from(escrowContract.utxos)
+      .to(new OutputBuilder(payout, seller.address))
+      .payMinFee()
+      .build();
+
+    expect(mockChain.execute(thirdPartyTx, { signers: [buyer], throw: false })).to.be.false;
+    expect(escrowContract.balance).to.be.deep.equal({ nanoergs: ESCROW_DEPOSIT, tokens: [] });
+  });
+
+  it("Should reject a post-deadline Buyer refund that deducts more than maxMinerFee", () => {
+    escrowContract.addBalance({ nanoergs: ESCROW_DEPOSIT });
+    mockChain.jumpTo(refundDeadline + 1);
+
+    const payout = ESCROW_DEPOSIT - MAX_MINER_FEE;
+    const excessiveDeductionTx = new TransactionBuilder(mockChain.height)
+      .from(escrowContract.utxos)
+      .to([
+        new OutputBuilder(payout - DIVERTED_AMOUNT, buyer.address),
+        new OutputBuilder(DIVERTED_AMOUNT, arbiter.address)
+      ])
+      .payMinFee()
+      .build();
+
+    expect(
+      mockChain.execute(excessiveDeductionTx, { signers: [buyer], throw: false })
+    ).to.be.false;
+    expect(escrowContract.balance).to.be.deep.equal({ nanoergs: ESCROW_DEPOSIT, tokens: [] });
+  });
 });
 ```
 
@@ -192,7 +293,10 @@ describe("Arbiter escrow deposit contract", () => {
 
 Many Ergo protocols use **self-replicating boxes** that allow anyone to purchase a slice of tokens as long as a continuation box preserves the remaining token supply and minimum nanoERG reserve.
 
-When writing and testing open-order or pool contracts in the eUTXO model, always test against **double-satisfaction**: if two contract boxes are spent in the same transaction and both merely check that `OUTPUTS(0)` pays `sellerPK`, an attacker can spend two boxes while paying the seller only once. Binding `OUTPUTS(0).R4[Coll[Byte]].getOrElse(Coll[Byte]()) == SELF.id` ties the seller payout box to a single unique input box ID.
+When writing and testing open-order or pool contracts in the eUTXO model, always verify two adversarial edge cases:
+
+1. **Double-satisfaction**: If two contract boxes are spent in the same transaction and both merely check that `OUTPUTS(0)` pays `sellerPK`, an attacker can spend two boxes while paying the seller only once. Binding `OUTPUTS(0).R4[Coll[Byte]].getOrElse(Coll[Byte]()) == SELF.id` ties the seller payout box to a single unique input box ID.
+2. **Tokenless dust inputs**: Because `val` bindings in ErgoScript evaluate eagerly before `sellerPK || ...`, indexing `SELF.tokens(0)` without checking `SELF.tokens.size >= 1` would throw an out-of-bounds error and block `sellerPK` from recovering accidental tokenless ERG boxes sent to the contract address.
 
 Create `tests/selfReplicatingTokenSaleContract.spec.ts`:
 
@@ -221,7 +325,7 @@ function hexToBytes(hexString: string): Uint8Array {
 }
 
 const SELF_REPLICATING_TOKEN_SALE_SCRIPT = `{
-  val saleCycleValid = if (OUTPUTS.size >= 1) {
+  val saleCycleValid = if (SELF.tokens.size >= 1 && OUTPUTS.size >= 1) {
     val selfTokenId = SELF.tokens(0)._1
     val selfTokenAmount = SELF.tokens(0)._2
 
@@ -342,6 +446,27 @@ describe("Self-replicating token sale contract", () => {
 
     expect(mockChain.execute(transaction, { signers: [attacker], throw: false })).to.be.false;
   });
+
+  it("Should allow seller to sweep a tokenless ERG box without failing", () => {
+    saleContract.addBalance({ nanoergs: 5_000_000n, tokens: [] });
+
+    const attackerSweep = new TransactionBuilder(mockChain.height)
+      .from(saleContract.utxos)
+      .to(new OutputBuilder(3_900_000n, attacker.address))
+      .payMinFee()
+      .build();
+
+    expect(mockChain.execute(attackerSweep, { signers: [attacker], throw: false })).to.be.false;
+
+    const sellerRecovery = new TransactionBuilder(mockChain.height)
+      .from(saleContract.utxos)
+      .to(new OutputBuilder(3_900_000n, seller.address))
+      .payMinFee()
+      .build();
+
+    expect(mockChain.execute(sellerRecovery, { signers: [seller] })).to.be.true;
+    expect(saleContract.balance).to.be.deep.equal({ nanoergs: 0n, tokens: [] });
+  });
 });
 ```
 
@@ -360,6 +485,7 @@ All happy-path and adversarial cases run in memory through the Sigma interpreter
 | Symptom | Root Cause | Fix |
 | --- | --- | --- |
 | `Option.get` evaluation failure on missing register | Calling `OUTPUTS(0).R4[Coll[Byte]].get` when `R4` is empty or holds another type | Use `.getOrElse(Coll[Byte]())` with a safe sentinel value instead of `.get` |
+| `IndexOutOfBounds` blocks admin/seller fallback on tokenless box | `val` bindings evaluate eagerly before `sellerPK || ...`, so `SELF.tokens(0)` fails if a dust box has no tokens | Guard collection indexing with `SELF.tokens.size >= 1` inside the `if` condition |
 | Boundary height off-by-one during `mockChain.execute()` | `mockBlockchainStateContext()` sets `sigmaPreHeader` one block ahead of `sigmaLastHeaders`, and `mockChain.reset()` clears UTxOs without rewinding `mockChain.height` | Explicitly call `mockChain.jumpTo(targetHeight)` in height-sensitive tests and account for candidate block height |
 | `SColl(SByte, ...)` rejects a hex string or undefined helper | `SColl(SByte, data)` expects a `Uint8Array` (or byte array) | Convert 32-byte hex IDs (such as `boxId` or `tokenId`) to `Uint8Array` before passing to `SColl(SByte, ...)` |
 | Contract input omitted from built transaction | `TransactionBuilder.from()` skips inputs not needed to cover output asset totals | Pass `.from(contractBox, { ensureInclusion: true })` when the contract box carries no unique required asset |
