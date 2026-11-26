@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: 2026-09-07
+last_reviewed: 2026-11-26
 source_repos:
   - repo: satoshilabs/slips
     branch: master
@@ -9,6 +9,9 @@ source_repos:
 source_of_truth:
   - https://github.com/bitcoin/bips/tree/master/bip-0044.mediawiki
   - https://github.com/satoshilabs/slips/tree/master/slip-0044.md
+  - https://github.com/satoshilabs/slips/commit/cb1f56dd8cd1f8488f7e18357b06922d4fa90259
+  - https://github.com/satoshilabs/slips/commit/b7fb1b681c4ebf074bd285454c04e5eb73e44963
+  - https://github.com/satoshilabs/slips/commit/c93705964102594e0f153c901acbb7f4faeaab40
 ---
 
 # Hierarchical keys
@@ -28,6 +31,8 @@ m / 44' / coin_type' / account' / change / address_index
 ## Coin Type
 
 Registered **coin_type**s can be found in [SLIP-0044](https://github.com/satoshilabs/slips/blob/master/slip-0044.md)
+
+SLIP-0044 is a live registry, not a fixed table: entries and tickers continue to be added and corrected. For example, the current registry lists `OAG` (Orange) at coin type `1033` and `QTC` (Quantus Network) at `189189`; the Quantus ticker was updated from `QUAN` to `QTC`. Check the linked registry for the current entry before relying on an older snapshot. Ergo remains `429` in EIP-0003.
 
 We will be using the word **ergo** summed based on the numerical values of the ASCII characters for the **coin_type**. As shown below, this means that our **coin_type** is `429`.
 
