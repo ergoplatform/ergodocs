@@ -9,7 +9,7 @@ tags:
   - Cross-chain
   - Oracle
 owner: docs
-last_reviewed: 2026-09-07
+last_reviewed: 2026-11-26
 source_repos:
   - repo: rosen-bridge/operation
     branch: dev
@@ -30,6 +30,35 @@ source_of_truth:
 Watchers are integral to Rosen Bridge, serving as cross-chain oracles. They observe and report deposit events on their network to Ergo, contributing to the network's security and expansion.
 
 The current Docker deployment source supports watcher configurations for `ergo`, `cardano`, `bitcoin`, `ethereum`, `binance`, `doge`, `bitcoin-runes`, and `firo`. Every watcher still needs Ergo configuration because permit, reporting, and reward logic is Ergo-based.
+
+### Handshake watchers
+
+The upstream Docker deployment also documents `network: handshake` watchers. Handshake watchers use an RPC connection only: set `handshake.rpc.url` and, if the endpoint requires it, `timeout`, `username` and `password`; under Docker you can supply `HANDSHAKE_RPC_USERNAME` and `HANDSHAKE_RPC_PASSWORD` instead of putting credentials in `local.yaml`. Set `handshake.initial.height` to the latest Handshake block and `observation.confirmation: 2`. The initial height applies only on first start; changing it later requires removing volumes and updating both the Ergo and Handshake initial heights.
+
+```yaml
+network: handshake
+api:
+  apiKeyHash: <your api key hash>
+ergo:
+  type: node
+  initialHeight: <latest ergo height>
+  mnemonic: <your wallet mnemonic>
+  node:
+    url: https://example.node.com
+handshake:
+  type: rpc
+  rpc:
+    url: <your rpc url>
+    timeout: 10
+    username: <your rpc username>
+    password: <your rpc password>
+  initial:
+    height: <latest handshake height>
+observation:
+  confirmation: 2
+```
+
+See the upstream [Handshake configuration](https://github.com/rosen-bridge/operation/blob/dev/docs/watcher/deploy-docker.md#handshake-config-just-for-handshake-watchers).
 
 See also:
 
