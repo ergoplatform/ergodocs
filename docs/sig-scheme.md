@@ -2,7 +2,7 @@
 tags:
   - Signature Schemes
 owner: docs
-last_reviewed: 2026-09-22
+last_reviewed: 2026-11-26
 source_repos:
   - repo: ScorexFoundation/sigmastate-interpreter
     branch: develop
@@ -27,6 +27,7 @@ source_of_truth:
   - https://github.com/ergoplatform/sigma-rust/tree/develop/ergo-lib/src/chain/transaction/input/prover_result.rs
   - https://github.com/ergoplatform/sigma-rust/tree/develop/ergo-lib/src/wallet/secret_key.rs
   - https://github.com/ergoplatform/sigma-rust/tree/develop/ergo-lib/src/wallet/signing.rs
+  - https://github.com/ergoplatform/sigma-rust/commit/e8689340518030c023ab8ba0bfd831ab6682512e
 ---
 
 # Signature Scheme Internals on Ergo
@@ -103,6 +104,7 @@ Schnorr signatures form a core tool in Ergo. The scheme is simple, efficient, an
 - Keep byte layouts identical off-chain and on-chain.
 - Rust wallet code precomputes DLog public images in current `sigma-rust`, reducing repeated generator multiplication in signing paths. This is an implementation optimization; it does not change proof format.
 - For each input, the `sigma-rust` development branch restricts deterministic transaction signing to a single `ProveDlog` with its matching secret or a trivial-true reduction. Compound propositions, DH tuples, missing secrets, and false reductions return errors. Reduced transactions must also preserve input counts and serialized context extensions from the unsigned transaction. These are [library checks](https://github.com/ergoplatform/sigma-rust/commit/85e8fd797a51b543d1c94789b745445ce9bdb166), not changes to Ergo's signature schemes; verify your pinned library revision.
+- Current `sigma-rust` `TransactionContext::new` rejects a transaction that spends the same box id twice with `TransactionContextError::DuplicateInput`, enforcing the `txInputsUnique` consensus rule, and `TransactionContext::validate` runs stateless validation before ERG/token preservation checks. Without this check, duplicated inputs could inflate the input sum and pass local preservation checks. It is a library validation rule, not a change to the signature scheme. See [commit e868934](https://github.com/ergoplatform/sigma-rust/commit/e8689340518030c023ab8ba0bfd831ab6682512e).
 
 For background on the discrete log protocol and Schnorr logic in Scala, see [`DLogProtocol.scala`](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/sigmastate/crypto/DLogProtocol.scala). Rust-side helpers for wallets appear in [`signing.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-lib/src/wallet/signing.rs) and key management appears in [`secret_key.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-lib/src/wallet/secret_key.rs).
 
