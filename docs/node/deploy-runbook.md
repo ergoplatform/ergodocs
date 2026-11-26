@@ -6,7 +6,7 @@ tags:
   - Indexing
   - Watchers
 owner: docs
-last_reviewed: 2026-10-21
+last_reviewed: 2026-11-26
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -29,6 +29,7 @@ source_of_truth:
   - https://github.com/ergoplatform/ergo/tree/master/src/main/resources/application.conf
   - https://github.com/ergoplatform/ergo/tree/master/src/main/resources/api/openapi.yaml
   - https://github.com/rosen-bridge/operation/tree/dev/docs/watcher/deploy-docker.md
+  - https://github.com/rosen-bridge/operation/blob/dev/docs/watcher/deploy-docker.md#handshake-config-just-for-handshake-watchers
   - https://github.com/ergoplatform/oracle-core/tree/develop/docs/how_to_bootstrap.md
   - https://github.com/ergoplatform/explorer-backend/tree/master/modules/chain-grabber/src/main/resources/application.conf
 ---
@@ -109,6 +110,8 @@ Minimum configuration pieces:
 - `ergo.type`: `node` or `explorer`; if using a node, enable `extraIndex` for reliable watcher health fields.
 - `initialHeight`: choose a recent height. Changing it after startup does not rewind an existing watcher database; remove volumes if you need a rescan.
 - `observation.confirmation`: tune per watched chain. Source docs recommend `9` for Ergo, `1` for Bitcoin, `20` for Ethereum, `25` for Cardano, and `300` for Binance.
+
+For a Handshake watcher, add a `handshake` section to `local.yaml`. Upstream currently supports RPC endpoints only: set `type: rpc`, `rpc.url`, an optional `rpc.timeout`, and `initial.height` near the latest Handshake block. `HANDSHAKE_RPC_USERNAME` and `HANDSHAKE_RPC_PASSWORD` can supply authentication instead of putting credentials in the config. Source docs recommend `observation.confirmation: 2` for Handshake. After startup, changing the Handshake initial height does not rewind an existing watcher; remove volumes and update both the Ergo and Handshake initial heights if a rescan is needed. See the [upstream Handshake configuration](https://github.com/rosen-bridge/operation/blob/dev/docs/watcher/deploy-docker.md#handshake-config-just-for-handshake-watchers).
 
 Keep mnemonic and API hash in env vars where possible, not directly in shared config snippets.
 
