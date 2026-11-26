@@ -64,14 +64,15 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`kushti`](https://github.com/kushti) | Developer / project | 4 | 6 | 8 |
 | [`SavonarolaLabs`](https://github.com/SavonarolaLabs) | Ecosystem org | 7 | 6 | 8 |
 | [`ThierryM1212`](https://github.com/ThierryM1212) | Developer / project | 4 | 6 | 5 |
-| [`arobsn`](https://github.com/arobsn) | Developer / project | 4 | 5 | 1 |
 | [`Lithos-Protocol`](https://github.com/Lithos-Protocol) | Ecosystem org | 3 | 5 | 4 |
 | [`MrStahlfelge`](https://github.com/MrStahlfelge) | Developer / project | 3 | 5 | 7 |
+| [`nautls`](https://github.com/nautls) | Developer / project | 3 | 5 | 8 |
 | [`odiseusme`](https://github.com/odiseusme) | Developer / project | 3 | 5 | 5 |
 | [`a-shannon`](https://github.com/a-shannon) | Developer / project | 3 | 4 | 4 |
 | [`DeCo-Education`](https://github.com/DeCo-Education) | Developer / project | 2 | 4 | 4 |
 | [`FlyingPig5`](https://github.com/FlyingPig5) | Developer / project | 3 | 4 | 2 |
 | [`anon-real`](https://github.com/anon-real) | Developer / project | 3 | 3 | 3 |
+| [`arobsn`](https://github.com/arobsn) | Developer / project | 3 | 3 | 1 |
 | [`aslesarenko`](https://github.com/aslesarenko) | Developer / project | 2 | 3 | 8 |
 | [`decentbob`](https://github.com/decentbob) | Developer / project | 1 | 3 | 3 |
 | [`duckpools`](https://github.com/duckpools) | Ecosystem org | 4 | 3 | 4 |
@@ -83,7 +84,6 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`Luivatra`](https://github.com/Luivatra) | Developer / project | 3 | 3 | 1 |
 | [`machinafi`](https://github.com/machinafi) | Developer / project | 1 | 3 | 2 |
 | [`mhssamadani`](https://github.com/mhssamadani) | Developer / project | 3 | 3 | 3 |
-| [`nautls`](https://github.com/nautls) | Developer / project | 2 | 3 | 7 |
 | [`ross-weir`](https://github.com/ross-weir) | Developer / project | 3 | 3 | 3 |
 | [`spectrum-finance`](https://github.com/spectrum-finance) | Ecosystem org | 3 | 3 | 6 |
 | [`StabilityNexus`](https://github.com/StabilityNexus) | Developer / project | 2 | 3 | 1 |
@@ -186,7 +186,6 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`4EYESLabs/sigmalok-indexer`](https://github.com/4EYESLabs/sigmalok-indexer) | Developer / project | `main` | 2 | 2 |
 | [`a-shannon/ergo-agent-sdk`](https://github.com/a-shannon/ergo-agent-sdk) | Developer / project | `main` | 2 | 1 |
 | [`arkadianet/citadel`](https://github.com/arkadianet/citadel) | Developer / project | `main` | 2 | 1 |
-| [`arobsn/hergmes`](https://github.com/arobsn/hergmes) | Developer / project | `master` | 2 | 1 |
 | [`arobsn/ledger-ergo-js`](https://github.com/arobsn/ledger-ergo-js) | Developer / project | `master` | 2 | 1 |
 | [`BetterMoneyLabs/basis-tracker`](https://github.com/BetterMoneyLabs/basis-tracker) | Ecosystem org | `master` | 2 | 8 |
 | [`BetterMoneyLabs/braid`](https://github.com/BetterMoneyLabs/braid) | Ecosystem org | `master` | 2 | 6 |
@@ -220,6 +219,7 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`mwaddip/santa-blitzen`](https://github.com/mwaddip/santa-blitzen) | Developer / project | `master` | 2 | 1 |
 | [`mwaddip/santa-donner`](https://github.com/mwaddip/santa-donner) | Developer / project | `main` | 2 | 1 |
 | [`mwaddip/santa-vixen`](https://github.com/mwaddip/santa-vixen) | Developer / project | `master` | 2 | 1 |
+| [`nautls/hergmes`](https://github.com/nautls/hergmes) | Developer / project | `master` | 2 | 1 |
 | [`nautls/nautilus-wallet`](https://github.com/nautls/nautilus-wallet) | Developer / project | `master` | 2 | 5 |
 | [`networkspore/Netnotes`](https://github.com/networkspore/Netnotes) | Developer / project | `master` | 2 | 1 |
 | [`networkspore/netnotes-engine`](https://github.com/networkspore/netnotes-engine) | Developer / project | `main` | 2 | 1 |
@@ -450,7 +450,6 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`arkadianet/ergo-forge`](https://github.com/arkadianet/ergo-forge) | `main` | `README.md` | `docs/dev/scs/ergoscript-tooling.md` |
 | [`arkadianet/ergo-vanitygen-rust`](https://github.com/arkadianet/ergo-vanitygen-rust) | `main` | `README.md` | `docs/wallets-overview.md` |
 | [`arobsn/ergo-paper-wallet`](https://github.com/arobsn/ergo-paper-wallet) | `master` | `README.md` | `docs/dev/wallet/paper-wallet.md` |
-| [`arobsn/hergmes`](https://github.com/arobsn/hergmes) | `master` | `README.md` | `docs/dev/tutorials/blockchain-indexing.md`<br>`docs/dev/tutorials/blockchain-indexing/custom-indexer.md` |
 | [`arobsn/keystone-ergo-js`](https://github.com/arobsn/keystone-ergo-js) | `master` | `README.md` | `docs/dev/tutorials/hardware-wallet-integration.md` |
 | [`arobsn/ledger-ergo-js`](https://github.com/arobsn/ledger-ergo-js) | `master` | `README.md` | `docs/dev/tutorials/hardware-wallet-integration.md`<br>`docs/dev/wallet/payments/ledger.md` |
 | [`aslesarenko/ergo-appkit`](https://github.com/aslesarenko/ergo-appkit) | `master` | `lib-api/src/main/java/org/ergoplatform/appkit/ErgoClient.java` | `docs/dev/stack/appkit/tutorial.md` |
@@ -604,6 +603,7 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`mwaddip/santa-blitzen`](https://github.com/mwaddip/santa-blitzen) | `master` | `README.md` | `docs/node/rust-node.md`<br>`docs/roadmap.md` |
 | [`mwaddip/santa-donner`](https://github.com/mwaddip/santa-donner) | `main` | `README.md` | `docs/node/rust-node.md`<br>`docs/roadmap.md` |
 | [`mwaddip/santa-vixen`](https://github.com/mwaddip/santa-vixen) | `master` | `README.md` | `docs/node/rust-node.md`<br>`docs/roadmap.md` |
+| [`nautls/hergmes`](https://github.com/nautls/hergmes) | `master` | `README.md` | `docs/dev/tutorials/blockchain-indexing.md`<br>`docs/dev/tutorials/blockchain-indexing/custom-indexer.md` |
 | [`nautls/machina-finance`](https://github.com/nautls/machina-finance) | `main` | `packages/contracts/SPEC.md`<br>`packages/contracts/src` | `docs/eco/machina-finance.md` |
 | [`nautls/nautilus-wallet`](https://github.com/nautls/nautilus-wallet) | `master` | `docs/dapp-connector`<br>`docs/dapp-connector/wallet-interaction.md`<br>`package.json`<br>`src/extension/background/ergoHandlers.ts`<br>`src/extension/content-scripts/injected.ts` | `docs/dev/wallet/eip-standards.md`<br>`docs/dev/wallet/nautilus.md` |
 | [`networkspore/Netnotes`](https://github.com/networkspore/Netnotes) | `master` | `README.md` | `docs/eco/celaut_v_netnotes.md`<br>`docs/eco/netnotes.md` |

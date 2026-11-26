@@ -14,7 +14,7 @@ tags:
   - RocksDB
   - PostgreSQL
 owner: docs
-last_reviewed: 2026-05-27
+last_reviewed: 2026-11-26
 source_repos:
   - repo: ergoplatform/explorer-backend
     branch: master
@@ -26,7 +26,7 @@ source_repos:
     paths:
       - docs/swagger.yaml
       - config.example.yaml
-  - repo: arobsn/hergmes
+  - repo: nautls/hergmes
     branch: master
     paths:
       - README.md
@@ -39,7 +39,7 @@ source_of_truth:
   - https://github.com/ergoplatform/explorer-backend/tree/master/modules/chain-grabber/src/main/resources/application.conf
   - https://github.com/4EYESLabs/sigmalok-indexer
   - https://api-sigmalok.phoenixfi.app/docs
-  - https://github.com/arobsn/hergmes
+  - https://github.com/nautls/hergmes
   - https://github.com/mgpai22/ergo-streaming
 ---
 
@@ -174,7 +174,7 @@ Choose the database that best matches your indexer's data structure and query pa
 ### dApp-Specific Indexers
 
 * [sigmalok-indexer](https://github.com/4EYESLabs/sigmalok-indexer) is a Go indexer for SigmaLok-style mempool and rollback handling. July 2025 dev updates said the SigmaLok contract and contract review were finished, the indexer was complete, and the interface was close to complete. The indexer was described as handling mempool transactions, replacement transactions, non-confirming mempool transactions, and normal rollbacks.
-* [hergmes](https://github.com/arobsn/hergmes) is a Rust real-time Ergo blockchain data relay and node messaging layer. September 2025 dev updates described it as a mempool-aware box streamer built first for Machina Finance but intended to stay generic enough for other dApps and possible Nautilus-style data flows.
+* [hergmes](https://github.com/nautls/hergmes) is a Rust real-time Ergo blockchain data relay that sits in front of an indexed node. It tracks addresses, small-supply tokens and contract templates, serves confirmed boxes through REST (`/v1/addresses/{address}/boxes` and similar routes), and streams new boxes, spends, mempool activity, balance changes and reorgs over WebSocket. It needs a node with `extraIndex = true` and UTXO state (not digest mode), is configured with `hergmes.toml` or the `ERGO_NODE_URL`, `HERGMES_LISTEN_ADDR` and `HERGMES_METRICS_ADDR` environment variables, and can expose Prometheus metrics. It is an independent project, so check its current release before depending on it.
 * [Ergo Streaming](https://github.com/mgpai22/ergo-streaming) is a Rust/Kafka service for streaming block, transaction, and mempool events from an Ergo node. Its README is a useful reference for event-topic design, rollback sequencing, RocksDB-backed chain and mempool caches, and operational knobs such as batch size and mempool polling interval.
 
 ## Alternative: Node API Scanning

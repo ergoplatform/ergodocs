@@ -13,7 +13,7 @@ tags:
   - Off-Chain
   - Ergowatch
 owner: docs
-last_reviewed: 2026-05-27
+last_reviewed: 2026-11-26
 source_repos:
   - repo: FlyingPig5/Ergo-node-explorer
     branch: main
@@ -32,7 +32,7 @@ source_repos:
     paths:
       - docs/swagger.yaml
       - config.example.yaml
-  - repo: arobsn/hergmes
+  - repo: nautls/hergmes
     branch: master
     paths:
       - README.md
@@ -41,7 +41,7 @@ source_of_truth:
   - https://github.com/jellymlg/nodeview.xyz
   - https://github.com/andrehafner/indexed_node_explorer_replacement
   - https://github.com/4EYESLabs/sigmalok-indexer
-  - https://github.com/arobsn/hergmes
+  - https://github.com/nautls/hergmes
 ---
 
 # Indexing Ergo Blockchain Data
@@ -90,4 +90,4 @@ The best approach depends on your application's specific requirements:
 
 For many non-trivial applications, building a **[Custom Indexer](custom-indexer.md)** provides the best balance of performance, flexibility, and control, despite the higher initial development effort. Explore the linked pages for more details on each strategy.
 
-Recent community prototypes worth reviewing before starting a new explorer/indexer include [Ergo-node-explorer](https://github.com/FlyingPig5/Ergo-node-explorer), [nodeview.xyz](https://github.com/jellymlg/nodeview.xyz), an [indexed node explorer replacement](https://github.com/andrehafner/indexed_node_explorer_replacement), [sigmalok-indexer](https://github.com/4EYESLabs/sigmalok-indexer), and [hergmes](https://github.com/arobsn/hergmes). These are independent projects, so check each repository's current status before depending on it.
+Recent community prototypes worth reviewing before starting a new explorer/indexer include [Ergo-node-explorer](https://github.com/FlyingPig5/Ergo-node-explorer), [nodeview.xyz](https://github.com/jellymlg/nodeview.xyz), an [indexed node explorer replacement](https://github.com/andrehafner/indexed_node_explorer_replacement), [sigmalok-indexer](https://github.com/4EYESLabs/sigmalok-indexer), and [hergmes](https://github.com/nautls/hergmes), a real-time relay with REST box reads and WebSocket updates for addresses, small-supply tokens and contract templates. These are independent projects, so check each repository's current status before depending on it.
