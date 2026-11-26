@@ -12,7 +12,7 @@ tags:
   - Security
   - Testing
 owner: docs
-last_reviewed: 2026-10-26
+last_reviewed: 2026-11-26
 source_repos:
   - repo: ergoplatform/eips
     branch: master
@@ -31,6 +31,7 @@ source_of_truth:
   - https://github.com/ergoplatform/eips/pull/23
   - https://github.com/nautls/nautilus-wallet/blob/v1.3.6/docs/dapp-connector/wallet-connection.md
   - https://github.com/nautls/nautilus-wallet/blob/v1.3.6/docs/dapp-connector/wallet-interaction.md
+  - https://github.com/nautls/nautilus-wallet/blob/master/docs/dapp-connector/wallet-interaction.md
 ---
 
 # Wallet Interaction Standards (EIPs) for dApp Developers
@@ -112,6 +113,7 @@ async function connectWallet() {
   * **Shape:** Nautilus requires full box objects in both `inputs` and `dataInputs`, rather than just box IDs. Fleet's `.build().toEIP12Object()` produces this signing representation; a node's unsigned-transaction JSON is not interchangeable with it.
   * **Input selection:** EIP-12 carries the full unsigned transaction object for signing; wallets should not need to query the chain and patch transaction data before signing. If a specific box must be spent, include that input explicitly. Default SDK or wallet input selection does not guarantee any particular wallet box will be chosen.
   * **Error Handling:** Crucial to handle user rejection (often throws a specific error code/message), insufficient funds errors from the wallet's pre-check, or malformed transaction errors.
+  * **Signers option (Nautilus):** Nautilus accepts an optional second argument to choose the key for each input: `ergo.sign_tx(unsignedTx, { signers: { 1: "9f…", 2: null } })`. Indexes are zero-based and must be within `unsignedTx.inputs`; each address must belong to the connected wallet, and `null` marks an input whose script needs no signature. Inputs not listed keep the default behaviour. This option matters for Ledger wallets and ErgoTree v3 transactions, where Nautilus cannot evaluate scripts to choose a key: Ledger devices sign every input with the key they are given (and cannot sign ErgoTree v3 transactions), while v3 scripts are signed only when the whole script is a single `proveDlog` of a wallet key. Invalid signers throw `InvalidRequest` before the user is prompted.
 * **`ergo.sign_tx_inputs(unsignedTx, indexes)` (Nautilus):**
   * **Purpose:** Requests signatures for selected input indexes in a multi-party transaction.
   * **Return:** An array of signed inputs in the requested order, not a complete signed transaction. Combine the required parties' proofs before submission. Verify method support for each wallet; the original proposal uses the singular name `sign_tx_input`.
@@ -151,6 +153,7 @@ async function connectWallet() {
   * User rejected the signature: Catch the specific error thrown by the wallet.
   * Insufficient funds: Wallet might pre-check and reject. Ensure input selection logic is correct.
   * Malformed transaction: Double-check the structure of the `unsignedTx` object against EIP-12 specs.
+  * Invalid `signers` option: Nautilus throws `InvalidRequest` without opening the signing prompt when an index is out of bounds or an address is not in the connected wallet.
 * **`submit_tx` Errors:** Network issues, node errors (transaction invalid), or wallet unable to connect to its node. Provide feedback to the user; they might need to check their wallet's network connection.
 * **Incorrect Data (`get_used_addresses`, `get_balance`):** Check wallet/backend synchronization, zero-confirmation settings, and units. Do not pass pagination arguments to Nautilus `v1.3.6`.
 
