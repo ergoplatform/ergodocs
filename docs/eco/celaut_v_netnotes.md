@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: 2026-10-21
+last_reviewed: 2026-11-26
 source_repos:
   - repo: celaut-project/nodo
     branch: stable
@@ -21,6 +21,7 @@ source_repos:
 source_of_truth:
   - https://github.com/celaut-project
   - https://github.com/networkspore
+  - https://github.com/celaut-project/nodo/blob/stable/docs/CANONICAL_ENCODING.md
 ia_status: directory
 ---
 
@@ -39,7 +40,7 @@ ia_status: directory
 
 ---
 
-Nodo remains an alpha implementation. Its CLI has non-interactive commands and JSON output, but service compatibility, payment policies, and actual connector code still need to be verified for any integration.
+Nodo remains an alpha implementation. Its CLI has non-interactive commands and JSON output, but service compatibility, payment policies, and actual connector code still need to be verified for any integration. The `stable` branch now documents [canonical service encoding](https://github.com/celaut-project/nodo/blob/stable/docs/CANONICAL_ENCODING.md) as the basis for a stable service id: verify the canonical bytes and the id of what is received before treating an advertised service as the one being paid for. This is a Nodo-level check and does not establish a shipped Netnotes-to-Celaut connector.
 
 ## Can Celaut and Netnotes Be Used Together?  
 
