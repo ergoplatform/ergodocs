@@ -8,13 +8,14 @@ tags:
   - dApp
   - dApp-Live
 owner: docs
-last_reviewed: 2026-05-26
+last_reviewed: 2026-11-26
 source_repos:
   - repo: capt-nemo429/sigmafi-ui
     branch: main
     paths:
       - src/offchain/plugins.ts
 source_of_truth:
+  - https://github.com/Lithos-Protocol/Sigma-Finance-V2/blob/master/README.MD
   - https://github.com/capt-nemo429/sigmafi-ui/tree/main/src/offchain/plugins.ts
 source_watch_note: Site remains running and usable; repository updates are rare.
 ---
@@ -40,3 +41,7 @@ The platform utilizes the extended unspent transaction output (eUTXO) model to c
 - [Contracts](https://github.com/K-Singh/Sigma-Finance)
 - [User Interface](https://github.com/capt-nemo429/sigmafi-ui)
 - [Off-chain Plugins](https://github.com/capt-nemo429/sigmafi-ui/blob/main/src/offchain/plugins.ts)
+
+## Sigma Finance V2 Research
+
+The separate [Sigma Finance V2 repository](https://github.com/Lithos-Protocol/Sigma-Finance-V2/blob/master/README.MD) develops SigmaBonds, a zero-coupon bond standard with tradeable bond assets, pluggable collateral/liquidation policies, fractional shares and paid refreshes. Its current README explicitly says the new ZC Standard is **not deployed**. First-generation contracts remain under `contracts/old/`, with separate CLI commands for existing boxes. Lithos release integration and the live SigmaFi application do not establish deployment of every new standard contract. Match pinned contract trees and addresses before interpreting an existing bond; see [Lithos client release notes](lithos.md).

@@ -10,7 +10,7 @@ tags:
 
 Layer 2 solutions are secondary frameworks or protocols constructed on top of a [Layer 1](layer1.md) blockchain protocol. Their purpose is to enhance the efficiency, scalability, and capabilities of the underlying blockchain by facilitating *off-chain* transactions or computations.
 
-Ergo is compatible with a broad range of Layer 2 solutions derived from other UTXO blockchains. The platform can implement various off-chain solutions like [Hydra](https://iohk.io/en/research/library/papers/hydrafast-isomorphic-state-channels/) and sidechains, which help alleviate blockchain congestion and offer benefits akin to ZK-rollups.
+Ergo is compatible with a broad range of Layer 2 solutions derived from other UTXO blockchains. The platform can implement various off-chain solutions like [Hydra](https://www.iog.io/papers/hydra-fast-isomorphic-state-channels) and sidechains, which help alleviate blockchain congestion and offer benefits akin to ZK-rollups.
 
 > Join the Layer 2 discussion on [Telegram](https://t.me/ErgoLayer2) or [Discord]().
 

@@ -16,7 +16,7 @@ In essence, miners are tasked with finding **k (=32)** elements from a set of **
 
 ## Autolykos Block Mining Pseudocode
 
-![Screenshot 2022-06-01 at 23.41.49.png](https://storage.googleapis.com/ergo-cms-media/Screenshot_2022_06_01_at_23_41_49_b2cdf73a2a/Screenshot_2022_06_01_at_23_41_49_b2cdf73a2a.png)
+For the executable reference, read [`AutolykosPowScheme`](https://github.com/ergoplatform/ergo/blob/master/ergo-core/src/main/scala/org/ergoplatform/mining/AutolykosPowScheme.scala), including the version-specific mining and index-generation paths. The explanation below is educational; use the node implementation when matching consensus behavior.
 
 ## Pre-Requisites: The Cyclic Group
 
@@ -30,7 +30,7 @@ Before diving into the block mining procedure, it's important to understand that
 This prime group returns integers in **Z/qZ** during the *Blake2b256*-based hashing function.
 
 *Example cyclic group with generator z, identity element 1, order 6*
-![unnamed (1).png](https://storage.googleapis.com/ergo-cms-media/unnamed_1_44d138eaaf/unnamed_1_44d138eaaf.png)
+Multiplication by the generator cycles through `1 → z → z² → z³ → z⁴ → z⁵ → 1`; in this illustrative group, `z⁶ = 1`. The six-element example is not the cryptographic group used by Ergo.
 
 However, we won't dwell on the cyclic group as it plays a minor role in the overall PoW scheme.
 
@@ -92,9 +92,7 @@ Element index **J** is created using Algorithm 6 with inputs **e**, **m**,_ and 
 
 **genIndexes function**
 
-![unnamed (6).png](https://storage.googleapis.com/ergo-cms-media/unnamed_6_987fcaba80/unnamed_6_987fcaba80.png)
-
-A couple of extra steps are not shown in the pseudocode, such as a byteswap. The creation and application of genIndexes can be explained via the following example:
+The following worked example expands the byte shifts and concatenation involved in index generation; compare it with the reference implementation when implementing a miner:
 
 **GenIndexes(*e||m||nonce*)...**
 

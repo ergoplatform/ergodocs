@@ -7,7 +7,7 @@ tags:
   - dApp
   - dApp-InDev
 owner: docs
-last_reviewed: 2026-10-21
+last_reviewed: 2026-11-26
 source_repos:
   - repo: Lithos-Protocol/Lithos-Client
     branch: master
@@ -16,6 +16,9 @@ source_repos:
       - README.md
       - TestnetNode.md
 source_of_truth:
+  - https://github.com/Lithos-Protocol/Lithos-Client/releases/tag/v1.0.7
+  - https://github.com/Lithos-Protocol/Lithos-Client/releases/tag/v1.0.8
+  - https://github.com/Lithos-Protocol/Lithos-Client/releases/tag/v1.0.9-optional-beta
   - https://github.com/Lithos-Protocol/Lithos-Client/releases/tag/v1.0.6
   - https://github.com/Lithos-Protocol/Lithos-Client
   - https://github.com/Lithos-Protocol/Lithos-Client/releases/tag/v1.0.0-prerelease
@@ -42,7 +45,13 @@ Recently, Lithos has completed collateral contracts, and the ability of miners t
 
 ## Current Client Status
 
-The [Lithos Client](https://github.com/Lithos-Protocol/Lithos-Client) is the reference client for the Lithos Protocol. The current checked mainnet client is [v1.0.6](https://github.com/Lithos-Protocol/Lithos-Client/releases/tag/v1.0.6). Follow the current README and mainnet configuration rather than the older batching-only mainnet prerelease. It requires a fully synced, indexed Ergo node v6.0.7/v6.1.7 or newer and Java 11. The current client supports mining and on-chain difficulty commitments; the earlier prerelease restrictions are historical.
+The [Lithos Client](https://github.com/Lithos-Protocol/Lithos-Client) is the reference client for the Lithos Protocol. Stable mainnet releases now include [v1.0.7](https://github.com/Lithos-Protocol/Lithos-Client/releases/tag/v1.0.7) and [v1.0.8](https://github.com/Lithos-Protocol/Lithos-Client/releases/tag/v1.0.8). The optional [v1.0.9-beta](https://github.com/Lithos-Protocol/Lithos-Client/releases/tag/v1.0.9-optional-beta) is a prerelease, not the stable baseline. Follow release-specific configuration and migration notes; the client requires a fully synced, indexed Ergo node and Java 11.
+
+v1.0.7 added LithosDex pool creation/verification, token/token pools, additional order sources, NiceHash stratum mode, and wallet API route changes. Migrate callers from `/collateral/rewards` to `/wallet/rewards`, `/collateral/rewards/claim` to `/wallet/rewards/claim`, and the removed `collateral` balance field to `/collateral/wallet`.
+
+v1.0.8 enabled candidate arbitrage when the wallet has at least 20 ERG, transferring 10 ERG to the operator's configured arbitrage address, and added SigmaFi V2 zero-coupon bond workflows. Review release notes and wallet state before enabling these services.
+
+v1.0.9-optional-beta adds SigmaFi ZC routes and batching/liquidation flows for ERG and SigUSD. It moves first-generation routes under `/sigmafi/old/*` without aliases and disables ZC fill history until the full 1.0.9 release. Treat it as optional testing software.
 
 The current README describes Lithos as requiring a fully synced Ergo node and Java 11. Miners connect through the Lithos Stratum server, with Rigel Miner recommended. Lithos evaluates Non-Interactive Share Proofs rather than ordinary pool shares, so the miner address and worker name used by the Stratum client are not payout identifiers in the same way they are for a conventional pool.
 

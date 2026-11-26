@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: 2026-09-07
+last_reviewed: 2026-11-26
 source_repos:
   - repo: ergoplatform/sigma-rust
     branch: develop
@@ -124,6 +124,10 @@ fn serialize_and_deserialize_proof(proof: &BatchMerkleProof) {
     println!("Serialization and deserialization successful.");
 }
 ```
+
+### Wire-input limits (sigma-rust `develop`)
+
+Treat serialized proofs as untrusted wire input. The current development implementation reads the declared index/proof counts through checked parsing, does not pre-allocate vectors from attacker-controlled counts, and returns a parse error for truncated or malformed elements. This is parser/library hardening for the pinned sigma-rust revision; it does not change Merkle semantics or activate a new Ergo consensus rule. Do not assume the behavior is present in every tagged `ergo-lib` release. See [`batchmerkleproof.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-merkle-tree/src/batchmerkleproof.rs) and [`scorex_serialize.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/sigma-ser/src/scorex_serialize.rs).
 
 ## Using Scrypto for JVM-based Applications
 

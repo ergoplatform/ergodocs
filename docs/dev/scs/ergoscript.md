@@ -220,7 +220,7 @@ ErgoScript's foundation on Sigma protocols allows for powerful cryptographic pri
 * [eUTXO Model Explanation](eutxo.md)
 * [Ergo Whitepaper](whitepaper.md)
 * [ErgoScript Language Specification](lang-spec.md) (Detailed reference)
-* [Advanced ErgoScript Tutorial](https://ergoplatform.org/docs/AdvancedErgoScriptTutorial.pdf)
+* [Advanced ErgoScript Tutorial](https://old.ergoplatform.com/docs/AdvancedErgoScriptTutorial.pdf)
 
 ## Comparative Analysis
 

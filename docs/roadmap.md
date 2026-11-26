@@ -150,7 +150,7 @@ source_of_truth:
 
 # Ergo Development Roadmap & History
 
-This page tracks major Ergo development history and active work as of **October 14, 2026**. It is not a promise of delivery dates. Public repositories, release notes, EIPs, and project pages are the source of truth.
+This page tracks major Ergo development history and active work as of **November 26, 2026**. It is not a promise of delivery dates. Public repositories, release notes, EIPs, and project pages are the source of truth.
 
 Ergo's roadmap is research-led: protocol changes move through papers, EIPs, testnets, client releases, and community review before mainnet activation. Ecosystem projects move at different speeds, so items below are grouped as **completed**, **active**, or **experimental** rather than presented as a single linear release plan.
 
@@ -169,6 +169,16 @@ Ergo's roadmap is research-led: protocol changes move through papers, EIPs, test
 Month buckets summarize roadmap-relevant changes from the latest docs sweep. Use the linked project pages, repositories, and release notes for caveats and source detail.
 
 ### 2026
+
+#### November
+
+- [Rosen](rosen.md): watcher 6.4.0 and guard 12.0.0 integrate Handshake; deployment guidance now includes RPC configuration. Component support does not establish a live public bridge route. Guard 11.0.2 fixes a multisig nonce-reuse risk, and the service/app upgrades require configuration review.
+- [Lithos](lithos.md): stable v1.0.8 adds arbitrage and first-generation SigmaFi V2 workflows; v1.0.9-optional-beta remains a prerelease. The separate [SigmaBonds ZC Standard](sigmafi.md#sigma-finance-v2-research) is described upstream as not deployed.
+- [Wallets](wallets-overview.md): Minotaur v4.3.0 is stable and Argus beta.8 remains experimental. Nautilus v1.4.0 is the checked stable source release; optional per-input `signers` and GraphQL-checked v3 signing are in 2.0 beta.3, with Ledger/partial-signing limits. Verify the installed channel.
+- [sigma-rust](sigma-rust.md): development-branch parsing bounds and duplicate-input checks improve library validation without changing protocol activation. [ergots](ergots.md) adds tuple/runtime-class and version-gated evaluator alignment; it remains consensus-incomplete.
+- [ChainCash/Basis](chaincash.md): certified reserve handling and two-phase cross-denomination exchange progress alongside authorization and atomic-update fixes; deployed revisions and contract compatibility still require verification.
+- [Game of Prompts](game-of-prompts.md) adds contract versioning and tighter participation, judge and deadline checks. [erga](software.md) adds CLI and mining-mode improvements; source publication and tests do not establish profitability or deployed-contract safety.
+- [Tachys](https://github.com/cafebedouin/tachys) is an experimental Ergo light-wallet project for agents and intermittent connectivity. It defaults to mainnet, lacks independent review, and explicitly warns against meaningful funds.
 
 #### October
 

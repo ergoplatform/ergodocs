@@ -81,4 +81,4 @@ ZeroJoin is a powerful privacy tool on the Ergo blockchain, leveraging advanced 
 
 When paired with **Stealth Addresses** and **Covert Addresses**, ZeroJoin becomes a comprehensive solution for achieving transactional privacy on the Ergo blockchain. It ensures that both senders and receivers remain anonymous, offering enhanced privacy guarantees compared to traditional cryptocurrency mixing mechanisms.
 
-For more technical details and implementations, please refer to the [ZeroJoin technical presentation](https://ergoplatform.org/docs/CBT_2020_ZeroJoin_Combining_Zerocoin_and_CoinJoin_v3.pdf) and the [ErgoMixer GitHub repository](https://github.com/ergoMixer/ergoMixBack).
+For more technical details and implementations, please refer to the [ZeroJoin technical presentation](https://old.ergoplatform.com/docs/CBT_2020_ZeroJoin_Combining_Zerocoin_and_CoinJoin_v3.pdf) and the [ErgoMixer GitHub repository](https://github.com/ergoMixer/ergoMixBack).

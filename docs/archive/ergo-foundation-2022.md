@@ -8,7 +8,7 @@ This is the 2022 Transparency report, for the latest version please see the [Erg
 
 The Ergo Foundation (EF) is a non-profit foundation dedicated to advancing the adoption of Ergo. The Foundation's Treasury is sourced from a small portion of mined blocks during the first 2.5 years from Ergo's mainnet launch. This allocation amounted to 4,330,791.5 ERGs or 4.43% of the total supply.
 
-Read more about the [emission schedule](emission.md) or check out the [whitepaper](https://ergoplatform.org/docs/whitepaper.pdf).
+Read more about the [emission schedule](emission.md) or check out the [whitepaper](https://old.ergoplatform.com/docs/whitepaper.pdf).
 
 ## Mission
 

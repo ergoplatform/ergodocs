@@ -2,7 +2,7 @@
 tags:
   - Merkle
 owner: docs
-last_reviewed: 2026-09-07
+last_reviewed: 2026-11-26
 source_repos:
   - repo: ergoplatform/sigma-rust
     branch: develop
@@ -32,6 +32,8 @@ source_of_truth:
 Testing Merkle Batch Proofs is crucial to ensure the correctness of their implementation in the Ergo blockchain. This section provides examples of how to write tests for Merkle Batch Proofs using both Rust (`sigma-rust`) and Scala (`scrypto`). These tests cover the creation, verification, serialization, and deserialization of batch Merkle proofs.
 
 Include adversarial cases alongside round trips: duplicate leaf hashes at different indices, trailing bytes, negative indices, invalid side markers, and malformed collection lengths. For duplicate leaves, assert index-based proofs for each occurrence; hash-based lookup intentionally resolves the first match.
+
+For sigma-rust, also include oversized or truncated wire-count cases. A parser must reject malformed input without treating the wire-declared index/proof counts as a reason to allocate an unbounded buffer. These are serialization/parser tests, not consensus-activation tests; record the exact sigma-rust revision under test.
 
 ### Rust (`sigma-rust`) Testing
 
@@ -109,6 +111,13 @@ mod tests {
         let deserialized_proof = BatchMerkleProof::scorex_parse_bytes(&serialized_proof).unwrap();
 
         assert_eq!(proof, deserialized_proof, "Deserialized proof should match the original");
+    }
+
+    #[test]
+    fn test_malformed_wire_counts_return_errors() {
+        // Truncated count/header bytes must fail parsing rather than panic.
+        let malformed = [0xffu8; 2];
+        assert!(BatchMerkleProof::scorex_parse_bytes(&malformed).is_err());
     }
 }
 ```

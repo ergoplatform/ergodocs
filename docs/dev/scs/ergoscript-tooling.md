@@ -77,19 +77,19 @@ Interpret results according to their evidence: static findings, sampled spending
 
 ##### Advanced Tutorials
 
-- [Advanced ErgoScript Tutorial](https://ergoplatform.org/docs/AdvancedErgoScriptTutorial.pdf)
-- [ErgoScript tutorial](https://ergoplatform.org/docs/ErgoScript.pdf)
+- [Advanced ErgoScript Tutorial](https://old.ergoplatform.com/docs/AdvancedErgoScriptTutorial.pdf)
+- [ErgoScript tutorial](https://old.ergoplatform.com/docs/ErgoScript.pdf)
 
 ##### Explanations
 
 - [ErgoScript Design patterns](https://www.ergoforum.org/t/ergoscript-design-patterns/222)
-- [SigmaState Protocols](https://storage.googleapis.com/ergo-cms-media/docs/sigmastate_protocols.pdf)
+- [SigmaState Protocols](https://old.ergoplatform.com/docs/sigmastate_protocols.pdf)
 
 ##### References
 
 - [ErgoScript Language Spec](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/LangSpec.md)
-- [ErgoScript](https://ergoplatform.org/docs/ErgoScript.pdf)
-- [ErgoTree](https://ergoplatform.org/docs/ErgoTree.pdf)
+- [ErgoScript](https://old.ergoplatform.com/docs/ErgoScript.pdf)
+- [ErgoTree](https://old.ergoplatform.com/docs/ErgoTree.pdf)
 - [High-Level Design Patterns In Extended UTXO Systems](https://github.com/Emurgo/Emurgo-Research/blob/master/smart-contracts/High%20Level%20Design%20Patterns%20In%20Extended%20UTXO%20Systems.md)
 
 ##### Examples

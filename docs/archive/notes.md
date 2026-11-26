@@ -34,7 +34,7 @@ For Ergo, there are several design principles and choices that have been taken t
 
 - [Storage rent](https://ergoplatform.org/en/blog/2020_04_21_ergo_positioning/) is akin to ‘on-chain garbage collection’, reducing blockchain bloat and lowering the long-term costs of mining, improving economic sustainability.
 - NIPoPoWs (non-interactive proof-of-proof-of-works) enable [mobile SPV clients](https://ergoplatform.org/en/blog/2020_05_1_spv_security/) and [even lite full nodes](https://ergoplatform.org/en/blog/2020_05_08_lite_full_nodes/), again reducing the barriers to maintaining the network and improving decentralisation.
-- A [smart contract language](https://ergoplatform.org/docs/ErgoScript.pdf) that is finite and clear, without the messiness and possible chain bloat of Turing-complete languages and their unintended consequences.
+- A [smart contract language](https://old.ergoplatform.com/docs/ErgoScript.pdf) that is finite and clear, without the messiness and possible chain bloat of Turing-complete languages and their unintended consequences.
 - [Sigma protocols](https://ergoplatform.org/en/blog/2020_03_16_ergo_sigma/), which allow for powerful cryptographic use cases, implemented elegantly and efficiently.
 
 As DeFi emerges as a major use case for blockchain, the stakes could not be higher. Blockchains that are fit for purpose will thrive; those that do not allow the functionality to sustain the required transaction load simply cannot establish a foothold. At the same time moving too fast and implementing untested technology is equally dangerous.

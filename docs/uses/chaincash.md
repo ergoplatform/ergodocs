@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: 2026-10-14
+last_reviewed: 2026-11-26
 source_repos:
   - repo: BetterMoneyLabs/chaincash
     branch: master
@@ -76,6 +76,7 @@ This article explains ChainCash's functionality, explores practical applications
 - `Jul 1`: the team reported testing tracker on-chain state updates and redemption against the Basis tracker, while preparing developer-onboarding material.
 - `Jul 19` to `Jul 21`: the public [Basis tracker](https://github.com/BetterMoneyLabs/basis-tracker) added multiple-redemption support, current-height fetching, a terminal helper, and clearer tracker-box setup and protocol documentation. The tracker commits cumulative debt mappings through an AVL-tree digest and remains prototype software.
 - `Aug 3` to `Aug 18`: the Basis tracker added a terminal wallet and MCP server, account and acceptance-policy workflows, on-chain reserve submission, stronger redemption checks, and consistent OpenAPI tests. Active Basis contract and specification files moved into the tracker repository. The server now supports optional TLS plus `none`, shared API-key, and per-request Schnorr-signature authentication modes with read/write/admin roles; production operators should not send credentials over plaintext.
+- `Oct` to `Nov 2026`: multi-collateral tracker work added certified reserve-deployment and duplicate-reserve handling, two-phase cross-denomination exchange, and atomic state-update fixes. Verify the deployed revision before treating these as guarantees; reserve creation and redemption endpoints remain role-protected write/admin operations, not public wallet actions.
 - Caveat: some transfer paths still depend on raw Schnorr signatures, so normal wallet support remains constrained.
 
 ## Deployment Review
@@ -83,6 +84,8 @@ This article explains ChainCash's functionality, explores practical applications
 The upstream [deployment security review](https://github.com/BetterMoneyLabs/basis-tracker/issues/15) led to [PR #16](https://github.com/BetterMoneyLabs/basis-tracker/pull/16), merged as [`6f0672bc`](https://github.com/BetterMoneyLabs/basis-tracker/commit/6f0672bc5f862f2286f7ab99c0ae52240acaadd6). Its [remediation notes](https://github.com/BetterMoneyLabs/basis-tracker/blob/6f0672bc5f862f2286f7ab99c0ae52240acaadd6/specs/pr16_triage.md) describe contract replay/merge protections, signed-message tracker binding, regenerated contract artifacts, and server authorization changes. `/reserves/submit` was removed: the tracker builds reserve-creation payloads, while owners submit them to their own node. `/redeem/complete` requires the Admin role.
 
 Existing boxes remain governed by their original scripts. Upstream identifies pre-fix contract artifacts as requiring refund or migration; merging fixes does not repair those deployments. Signed notes bind cumulative debt, timestamp and tracker NFT, but not a specific redemption amount. Acceptance-policy and FIFO checks therefore remain advisory around the signing flow, and reserve selection must reject ambiguous reserves. Verify the pinned implementation and deployed contract before relying on these protections.
+
+Current [authorization code](https://github.com/BetterMoneyLabs/basis-tracker/blob/master/crates/basis_server/src/authorization.rs) makes `/reserves/create` and recipient-signed `/acceptance/policy` uploads ordinary Write routes; `/redeem/complete` remains Admin-only. Reserve creation returns an owner-funded payload, not permission to spend the tracker wallet. Keep the Admin key separate from client credentials.
 
 ## Collateral Denominations
 

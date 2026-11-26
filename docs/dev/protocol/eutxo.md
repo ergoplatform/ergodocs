@@ -39,7 +39,7 @@ You can see a comparison between Ergo's eUTXO model and the Account-Based model 
 
 ### Documentation
 
-- [The Extended UTXO Model - IOHK Research](https://iohk.io/en/research/library/papers/the-extended-utxo-model/)
+- [The Extended UTXO Model - IOHK Research](https://www.iog.io/papers/the-extended-utxo-model)
 - [Understanding the Extended UTXO model - docs.cardano](https://docs.cardano.org/learn/eutxo-explainer)
 
 ### Video

@@ -77,4 +77,4 @@ The security of a merged-mined sidechain relies on the "honest majority assumpti
 
 * **[Sigma Chains](sigma-chains.md):** Provides the broader context for merged mining and sidechain constructions on Ergo.
 * **[ErgoHack Sidechain Report:](https://github.com/ross-weir/ergohack-sidechain/blob/main/docs/whitepaper/sidechain.pdf)**  (See Sections 2 and 2.1 for early technical details).
-* **[ErgoScript Paper:](https://storage.googleapis.com/ergo-cms-media/docs/ErgoScript.pdf)** (See Page 10 for Emission Contract Example).
+* **[ErgoScript Paper:](https://old.ergoplatform.com/docs/ErgoScript.pdf)** (See Page 10 for Emission Contract Example).

@@ -5,7 +5,7 @@ tags:
   - SDKs
   - Bindings
 owner: docs
-last_reviewed: 2026-10-21
+last_reviewed: 2026-11-26
 source_repos:
   - repo: ergoplatform/sigma-rust
     branch: develop
@@ -32,6 +32,8 @@ These are the main SDKs recommended for most dApp development use cases:
 - **[AppKit](https://github.com/ergoplatform/ergo-appkit)**: Java/Scala SDK for building Ergo apps, suitable for JVM environments and Android development. [`Java`, `Scala`]
 - **[Fleet SDK](https://fleet-sdk.github.io/docs/)**: A pure JS/TS library designed for effortless Ergo transaction creation in web-based dApps and Node.js environments. [GitHub Org](https://github.com/fleet-sdk) [`JS/TS`]
 - **[Sigma-Rust](https://github.com/ergoplatform/sigma-rust/)**: Rust implementation of ErgoTree types, core primitives, and serialization, forming the basis for many other libraries and bindings. [`Rust`]
+
+The sigma-rust `develop` branch also contains unreleased `0.29.0` parser/validation hardening: wire-declared collection and Merkle-proof sizes are bounded before allocation, malformed `Cthreshold` values are rejected at parse time, and `TransactionContext::new` rejects duplicate input box IDs before preservation checks. These are library behaviors for the pinned revision, not a newly activated Ergo protocol rule; the latest tagged `ergo-lib` release remains `0.28.0`. See the [upstream changelog](https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-lib/CHANGELOG.md) and [duplicate-input fix](https://github.com/ergoplatform/sigma-rust/commit/e8689340518030c023ab8ba0bfd831ab6682512e).
 
 ## Recovery Phrase Compatibility
 

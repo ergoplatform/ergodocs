@@ -64,7 +64,7 @@ These proofs are statements described as a tree of AND, OR, and threshold condit
 
 The proof of the sigma-statement is then made non-interactive thanks to the Fiat-Shamir transform.
 
-This logic is specified in the [ErgoScript paper](https://ergoplatform.org/docs/ErgoScript.pdf), and the specific
+This logic is specified in the [ErgoScript paper](https://old.ergoplatform.com/docs/ErgoScript.pdf), and the specific
 proving and verification routines described in Appendix A.
 
 ​Implementation challenges are then to:
@@ -73,7 +73,7 @@ proving and verification routines described in Appendix A.
 
 * Implement the proving and verification functionalities correctly, in compliance with the specification, and most importantly, no invalid statement can successfully pass verification.
 
-We reviewed these two aspects, based on the code in the repository [sigmastate-interpreter](https://github.com/ScorexFoundation/sigmastate-interpreter), and the [ErgoScript paper](https://ergoplatform.org/docs/ErgoScript.pdf), carefully comparing the intended behaviour (in Appendix A) with the actual behaviour as implemented.
+We reviewed these two aspects, based on the code in the repository [sigmastate-interpreter](https://github.com/ScorexFoundation/sigmastate-interpreter), and the [ErgoScript paper](https://old.ergoplatform.com/docs/ErgoScript.pdf), carefully comparing the intended behaviour (in Appendix A) with the actual behaviour as implemented.
 
 ​We notably reviewed code from the [SigSerializer](https://github.com/ergoplatform/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/sigmastate/SigSerializer.scala), [Interpreter](https://github.com/ergoplatform/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/sigmastate/interpreter/Interpreter.scala), and [ProverInterpreter](https://github.com/ergoplatform/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/sigmastate/interpreter/ProverInterpreter.scala) traits and objects.
 
@@ -127,7 +127,7 @@ Another process or user sharing the same memory address space could potentially 
 
 ​After previously reviewing the security of the Autolykos PoW, we performed another round of review focusing on its latest verification logic, and notably, the changes in the commit [eb0f85a](https://github.com/ergoplatform/ergo/commit/eb0f85ac48b0ee8194c12369faf4cc5f16954af9).
 
-​The main relevant file is [AutolykosPowScheme](https://github.com/ergoplatform/ergo/blob/master/src/main/scala/org/ergoplatform/mining/AutolykosPowScheme.scala), and other important operations are for example implemented in
+​The main relevant file is [AutolykosPowScheme](https://github.com/ergoplatform/ergo/blob/master/ergo-core/src/main/scala/org/ergoplatform/mining/AutolykosPowScheme.scala), and other important operations are for example implemented in
 [HeadersProcessor](https://github.com/ergoplatform/ergo/blob/master/src/main/scala/org/ergoplatform/nodeView/history/storage/modifierprocessors/HeadersProcessor.scala) and [ModifierValidator](https://github.com/ScorexFoundation/Scorex/blob/master/src/main/scala/scorex/core/validation/ModifierValidator.scala).
 
 ​We checked that the implemented verification logic is consistent with that specified in the Autolykos specifications and that it is appropriately integrated into the block header validation logic.

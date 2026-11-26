@@ -5,7 +5,7 @@ tags:
   - Deploy
   - Operations
 owner: docs
-last_reviewed: 2026-09-07
+last_reviewed: 2026-11-26
 source_repos:
   - repo: rosen-bridge/operation
     branch: dev
@@ -22,14 +22,15 @@ source_of_truth:
   - https://github.com/rosen-bridge/operation/tree/dev/docs/guard/env-references.md
   - https://github.com/rosen-bridge/operation/tree/dev/docs/guard/migrate-database.md
   - https://github.com/rosen-bridge/utils/tree/dev/packages/cli
-  - https://github.com/rosen-bridge/guard-service/releases/tag/10.0.1
+  - https://github.com/rosen-bridge/guard-service/releases/tag/12.0.0
+  - https://github.com/rosen-bridge/guard-service/releases/tag/11.0.2
 ---
 
 # Rosen Guard Operations
 
 Guards verify watcher-triggered events and coordinate bridge signing. Guard operation is higher risk than watcher operation because guards participate in signing flows and hold more sensitive operational material.
 
-[Guard service 10.0.1](https://github.com/rosen-bridge/guard-service/releases/tag/10.0.1) is the current release as of July 24, 2026. The 10.0.x line adds Firo support, public event-status reporting, separate rejected-event storage, rate limits for sensitive API routes, and updated scanner/extractor packages.
+[Guard service 12.0.0](https://github.com/rosen-bridge/guard-service/releases/tag/12.0.0) integrates Handshake, adds commitment initial synchronization and block-cleanup controls, and hardens event synchronization and cross-network response checks. [11.0.2](https://github.com/rosen-bridge/guard-service/releases/tag/11.0.2) fixes nonce reuse in the Ergo multisig package and removes `maxPriorityFeePerGas` verification from EVM transaction-fee validation. These releases establish component support; they do not by themselves prove that a Handshake route is enabled in the public bridge application.
 
 ## Docker Setup Shape
 
@@ -76,6 +77,7 @@ Useful optional environment variables include:
 - `DOGE_RPC_USERNAME`, `DOGE_RPC_PASSWORD`, `DOGE_RPC_API_KEY`
 - `BITCOIN_RUNES_RPC_USERNAME`, `BITCOIN_RUNES_RPC_PASSWORD`, `BITCOIN_RUNES_RPC_API_KEY`, `BITCOIN_RUNES_UNISAT_API_KEY`
 - `DISCORD_WEBHOOK_URL`
+- `HANDSHAKE_RPC_USERNAME`, `HANDSHAKE_RPC_PASSWORD`, `HANDSHAKE_RPC_API_KEY`
 - `GUARD_PORT`
 
 Do not add spaces after `=` in `.env`.
@@ -139,6 +141,26 @@ firo:
 ```
 
 `reconnectDelay` is optional. Confirm production key and derivation values with current Rosen ceremony and deployment documentation.
+
+## Handshake
+
+Current guard source supports Handshake through JSON-RPC. Configure the node URL and, when required by the endpoint, username, password, or API key. The corresponding environment variables are `HANDSHAKE_RPC_USERNAME`, `HANDSHAKE_RPC_PASSWORD`, and `HANDSHAKE_RPC_API_KEY`.
+
+```yaml
+handshake:
+  chainNetwork: rpc
+  rpc:
+    url: YOUR_HANDSHAKE_NODE_URL
+    username: YOUR_RPC_USERNAME
+    password: YOUR_RPC_PASSWORD
+    apiKey: YOUR_API_KEY
+  bankPublicKey: GENERATED_PUBLIC_KEY
+  tssChainCode: ''
+  derivationPath:
+    -
+```
+
+See the upstream [Guard setup](https://github.com/rosen-bridge/operation/blob/dev/docs/guard/setup.md#handshake) and [environment references](https://github.com/rosen-bridge/operation/blob/dev/docs/guard/env-references.md).
 
 ## Database Backup / Migration
 

@@ -30,13 +30,13 @@ Scaling solutions often involve partitioning the blockchain platform into smalle
 
 ### The eUTXO Model and ErgoScript
 
-Ergo's [eUTXO](https://ergoplatform.org/docs/utxo/) model, in conjunction with the ErgoScript smart contract language, allows for the atomic execution of complex, [multi-stage transactions](multi.md) within a single transaction. This ensures that all components of a transaction are executed in full or not at all, a fundamental aspect of atomic composability.
+Ergo's [eUTXO](eutxo.md) model, in conjunction with the ErgoScript smart contract language, allows for the atomic execution of complex, [multi-stage transactions](multi.md) within a single transaction. This ensures that all components of a transaction are executed in full or not at all, a fundamental aspect of atomic composability.
 
 ErgoScript enables the creation and execution of complex smart contracts with predictable outcomes, while leveraging the benefits of the UTXO (Unspent Transaction Output) model, such as statelessness, improved parallelism, and reliable data handling.
 
 ### Layer 2 Solutions: Hydra State Channels
 
-Layer 2 solutions, such as [Hydra state channels](https://ergoplatform.org/docs/hydra/), contribute to atomic composability by facilitating communication across different heads (participants). This allows for the atomic execution of complex operations involving multiple state channel participants.
+Layer 2 solutions, such as [Hydra state channels](https://www.iog.io/papers/hydra-fast-isomorphic-state-channels), contribute to atomic composability by facilitating communication across different heads (participants). This allows for the atomic execution of complex operations involving multiple state channel participants.
 
 ### ACE: Enhancing the Execution of Complex Smart Contracts
 

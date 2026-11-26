@@ -23,13 +23,14 @@ source_of_truth:
   - https://github.com/rosen-bridge/operation/tree/dev/docs/watcher/deploy-docker.md
   - https://github.com/rosen-bridge/utils/tree/dev/packages/cli
   - https://github.com/rosen-bridge/watcher/releases/tag/6.2.2
+  - https://github.com/rosen-bridge/watcher/releases/tag/6.4.0
 ---
 
 # Ergo Rosen Bridge Watcher Setup
 
 Watchers are integral to Rosen Bridge, serving as cross-chain oracles. They observe and report deposit events on their network to Ergo, contributing to the network's security and expansion.
 
-The current Docker deployment source supports watcher configurations for `ergo`, `cardano`, `bitcoin`, `ethereum`, `binance`, `doge`, `bitcoin-runes`, and `firo`. Every watcher still needs Ergo configuration because permit, reporting, and reward logic is Ergo-based.
+The current Docker deployment source supports watcher configurations for `ergo`, `cardano`, `bitcoin`, `ethereum`, `binance`, `doge`, `bitcoin-runes`, `firo`, and `handshake`. Every watcher still needs Ergo configuration because permit, reporting, and reward logic is Ergo-based.
 
 ### Handshake watchers
 

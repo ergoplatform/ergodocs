@@ -15,7 +15,7 @@ For external discovery, also check [Sigmaverse](sigmaverse.md).
 | Project | Live site | Status | Last verified activity |
 | --- | --- | --- | --- |
 | [Rosen Bridge](rosen.md) | [rosen.tech](https://rosen.tech) | Active bridge infrastructure | 2026-06-03 |
-| [Lithos](lithos.md) | [Operator docs](https://github.com/Lithos-Protocol/Lithos-WebDocs) | Mainnet client v1.0.6; separate testnet line | 2026-10-23 |
+| [Lithos](lithos.md) | [Operator docs](https://github.com/Lithos-Protocol/Lithos-WebDocs) | Mainnet client v1.0.8; optional v1.0.9 beta | 2026-11-26 |
 | [BlockHost](https://github.com/mwaddip/blockhost) | [Operator docs](https://docs.blockhost.io/) | Experimental VM hosting; Ergo testnet, mainnet unverified | 2026-04-29 |
 | [Oracle Pools](oracles-v2.md) | [Oracle Stats](https://error1100.github.io/oracle-stats/), [multi-oracle dashboard](https://multi-oracle-dashboard.vercel.app/) | Active | 2026-01-10 |
 
@@ -31,12 +31,12 @@ BlockHost provisions VMs from on-chain subscriptions and uses NFTs for access cr
 | [Truffle](truffle.md) | - | Active | 2026-03-31 |
 | [DuckPools](duckpools.md) | [duckpools.io](https://duckpools.io/) | Live, usable | 2025-12-07 |
 | [SigmaFi](sigmafi.md) | [sigmafi.app](https://sigmafi.app/) | Live site, rare updates | 2025-10-20 |
-| [EXLE](exle.md) | [exle.io](https://exle.io/) | Live, usable | 2025-07-12 |
+| [EXLE](exle.md) | [Source](https://github.com/Ergo-Lend) | Former site unavailable; public lending prototypes | 2026-11-26 |
 | [Crystal Pool](crystal-pool.md) | [crystalpool.cc](https://crystalpool.cc/) | Live, usable | 2025-05-18 |
 | [Hodlbox](hodlbox.md) | [hodlbox.xyz](https://hodlbox.xyz/) | Live, usable | 2024-10-16 |
 | [Hodlcoin](hodlcoin.md) | [Hodlcoin](https://app.hodlcoin.co.in/), [PhoenixFi](https://phoenixfi.app/) | Live, usable | 2024-03-14 |
 | [Auction Coin](auction-coin.md) | [auctioncoin.app](https://auctioncoin.app) | Live, usable | 2023-11-22 |
-| [Machina Finance](machina-finance.md) | [SDK](https://github.com/machinafi/sdk) | Active SDK alpha | 2026-05-09 |
+| [Machina Finance](machina-finance.md) | [SDK](https://github.com/machinafi/sdk) | SDK v0.1.0; DEX deployment checked separately | 2026-10-21 |
 | [ergo-use-x402](ergo-use-x402.md) | [GitHub](https://github.com/cannonQ/ergo-use-x402) | Experimental | 2026-06-22 |
 | [Ergo Marketplace](ergo-marketplace.md) | [GitHub](https://github.com/decentbob/ergo-marketplace) | Design / prototype | 2026-06-08 |
 | [The Field](the-field.md) | [Oracle dashboard](http://multi-oracle-dashboard.vercel.app) | Pre-launch / audit fixes | 2026-07-01 |
@@ -89,6 +89,7 @@ BlockHost provisions VMs from on-chain subscriptions and uses NFTs for access cr
 | [Celaut](celaut.md) | - | Active | 2026-05-30 |
 | [Netnotes](netnotes.md) | - | Active | 2026-05-19 |
 | [Ergo Relay](ergo-relay.md) | - | Active | 2026-04-13 |
+| [Tachys](https://github.com/cafebedouin/tachys) | [Source](https://github.com/cafebedouin/tachys) | Experimental Ergo light wallet for agents/offline use; unaudited, checkpointed SPV; defaults to mainnet and unsuitable for meaningful funds | 2026-11-26 |
 | [BoxWallet](https://github.com/richardltc/boxwallet) | [Ergo backend](https://github.com/richardltc/boxwallet/blob/main/src/coins/ergo.zig) | Community multi-coin node manager; Ergo backend exposes node status | 2026-10-20 |
 | [Matrix Pulse](matrix-pulse.md) | [GitHub](https://github.com/odiseusme/matrix-pulse) | Active Matrix tooling | 2026-07-01 |
 | [Lumen](https://github.com/from-ufa/lumen) | [ergolumen.net](https://ergolumen.net/) | Live node/oracle dashboard | 2026-08-15 |

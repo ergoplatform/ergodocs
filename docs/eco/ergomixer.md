@@ -58,7 +58,7 @@ ErgoMixer utilises Ergo's [**Sigma protocols**](sigma.md) to enable efficient, t
 **Documentation**
 
 - [Technical Paper](https://eprint.iacr.org/2020/560.pdf)
-- [Presentation](https://ergoplatform.org/docs/CBT_2020_ZeroJoin_Combining_Zerocoin_and_CoinJoin_v3.pdf)
+- [Presentation](https://old.ergoplatform.com/docs/CBT_2020_ZeroJoin_Combining_Zerocoin_and_CoinJoin_v3.pdf)
 - [GitHub](https://github.com/ergoMixer/)
 
 ## Enhanced Privacy: Covert and Stealth Addresses

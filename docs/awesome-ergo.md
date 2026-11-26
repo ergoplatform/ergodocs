@@ -481,7 +481,7 @@
 
 ### 🏊 Pools <a id="pools"></a>
 
-- **[Sigmanauts Mining Pool](https://sigmanauts.com/mining/)** – community mining pool.
+- **[Sigmanauts Mining Pool](sigmanauts.md)** – community pool reference; website unavailable, so verify current operation through community channels.
 - [MiningCore](https://github.com/oliverw/miningcore) – open-source pool software. [Config Wiki](https://github.com/oliverw/miningcore/wiki/Configuration)
 - [NOMP (ergo-nomp)](https://github.com/btclinux/ergo-nomp) – Node Open Mining Portal adapted for Ergo.
 - [Node Stratum Pool](https://github.com/vorujack/node-stratum-pool) – Node.js stratum pool server. [`JS`]
@@ -658,7 +658,7 @@
 - [Learn ErgoScript By Example Via The Ergo Playground (Video)](https://www.youtube.com/watch?v=8l2v1asHgyA) – video tutorial.
 - [Multi-Stage Contracts in the UTXO Model (Video)](https://www.youtube.com/watch?v=g3FlM_WOwBU) – presentation.
 - [ErgoScript Design patterns (Forum)](https://www.ergoforum.org/t/ergoscript-design-patterns/222) – forum discussion.
-- [Advanced ErgoScript Tutorial (PDF)](https://ergoplatform.org/docs/AdvancedErgoScriptTutorial.pdf) – in-depth PDF tutorial.
+- [Advanced ErgoScript Tutorial (PDF)](https://old.ergoplatform.com/docs/AdvancedErgoScriptTutorial.pdf) – in-depth PDF tutorial.
 - [Ergo with C# 101 (Video Playlist)](https://www.youtube.com/watch?v=aUuki-fAxwc&list=PLUWruihtE-HtL-JZk8Vb4Yn_H18aE3rb6) – YouTube playlist.
 - [A Quick Primer on ErgoScript (Wiki)](https://github.com/ergoplatform/ergo/wiki/ErgoScript-Overview) – wiki overview.
 - [Building Ergo: ErgoScript (Blog)](https://ergoplatform.org/en/blog/2021-06-09-building-ergo-ergoscript/) – blog post.
@@ -673,7 +673,7 @@
 ### 📄 Papers & Specifications <a id="papers--specifications"></a>
 
 - **[Ergo Whitepaper](https://ergoplatform.org/en/documents/)** – foundational design document.
-- [ErgoScript Whitepaper](https://ergoplatform.org/docs/ErgoScript.pdf) – detailed language paper.
+- [ErgoScript Whitepaper](https://old.ergoplatform.com/docs/ErgoScript.pdf) – detailed language paper.
 - [Autolykos PoW Algorithm](https://ergoplatform.org/docs/ErgoPow.pdf) – PoW algorithm paper.
 - [NiPoPoWs Paper](https://eprint.iacr.org/2016/994.pdf) – research paper.
 - [Storage Rent Paper](https://ergoplatform.org/docs/StorageRent.pdf) – storage rent mechanism paper.

@@ -9,7 +9,7 @@ Unspent Transaction Outputs (UTXOs) are known for their scalability and reduced 
 
 This method offers functionality akin to Ethereum's accounts but without the associated overhead.
 
-For additional insights, refer to the *Multi-Stage Contracts in the UTXO Model* [(Paper)](https://storage.googleapis.com/ergo-cms-media/docs/paper_26.pdf) and [(Video Presentation)](https://www.youtube.com/watch?v=g3FlM_WOwBU).
+For additional insights, refer to the *Multi-Stage Contracts in the UTXO Model* [(Paper)](https://old.ergoplatform.com/docs/paper_26.pdf) and [(Video Presentation)](https://www.youtube.com/watch?v=g3FlM_WOwBU).
 
 ## Examples
 

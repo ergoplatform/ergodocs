@@ -29,14 +29,16 @@ source_repos:
       - src/components
 source_of_truth:
   - https://github.com/Ergo-Lend/exle-fullstack
-  - https://exle.io/
+  - https://github.com/Ergo-Lend
   - https://github.com/SavonarolaLabs/exle-html
   - https://github.com/SavonarolaLabs/exle-svelte
 ---
 
-# EXLE (Ergo-Lend)
+# EXLE
 
-[EXLE](https://exle.io/) is enhancing financial access globally through its decentralized finance (DeFi) initiatives on the Ergo Blockchain. By targeting those typically excluded by traditional banking institutions, EXLE employs blockchain technology to create a global lending platform, governed transparently by a decentralized autonomous organization (DAO). Stay connected with EXLE through [Telegram](https://t.me/ErgoLend) and [Twitter](https://twitter.com/ErgoLend) for updates and community engagement.
+The former `exle.io` website is unavailable; use the public Ergo-Lend repositories for prototype status. (Ergo-Lend)
+
+[EXLE](https://github.com/Ergo-Lend) aims to enhance financial access globally through its decentralized finance (DeFi) initiatives on the Ergo Blockchain. By targeting those typically excluded by traditional banking institutions, EXLE employs blockchain technology to create a global lending platform, governed transparently by a decentralized autonomous organization (DAO). Stay connected with EXLE through [Telegram](https://t.me/ErgoLend) and [Twitter](https://twitter.com/ErgoLend) for updates and community engagement.
 
 /// details | Beta
     {type: info, open: true}

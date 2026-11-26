@@ -8,7 +8,7 @@ tags:
 
 [ErgoScript](ergoscript.md) is a high-level, developer-friendly language for writing smart contracts that are then compiled to ErgoTree before being written to the blockchain.
 
-The [Ergo node](install.md) does not understand ErgoScript. Instead, it uses a low-level language called [**ErgoTree**](https://ergoplatform.org/docs/ErgoTree.pdf), which is a "tree-based" language (somewhat like XML).
+The [Ergo node](install.md) does not understand ErgoScript. Instead, it uses a low-level language called [**ErgoTree**](https://old.ergoplatform.com/docs/ErgoTree.pdf), which is a "tree-based" language (somewhat like XML).
 
 However, writing code in ErgoTree is *difficult*.
 

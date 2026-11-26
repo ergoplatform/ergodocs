@@ -229,9 +229,9 @@ If you're interested in deepening your understanding of ErgoScript and the Ergo 
 
 ### Advanced Tutorials
 
-- [ErgoScript Tutorial](https://ergoplatform.org/docs/ErgoScript.pdf)
+- [ErgoScript Tutorial](https://old.ergoplatform.com/docs/ErgoScript.pdf)
 
-- [Advanced ErgoScript Tutorial](https://ergoplatform.org/docs/AdvancedErgoScriptTutorial.pdf)
+- [Advanced ErgoScript Tutorial](https://old.ergoplatform.com/docs/AdvancedErgoScriptTutorial.pdf)
 
 ### Interpreters
 

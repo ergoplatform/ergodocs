@@ -108,7 +108,7 @@ For more information, refer to these foundational papers:
 
 - [Improving authenticated dynamic dictionaries, with applications to cryptocurrencies](https://eprint.iacr.org/2016/994.pdf)
 - [Self-reproducing Coins as Universal Turing Machine](https://arxiv.org/pdf/1806.10116)
-- [Multi-stage Contracts in the UTXO Model](https://ergoplatform.org/docs/paper_26.pdf)
+- [Multi-stage Contracts in the UTXO Model](https://old.ergoplatform.com/docs/paper_26.pdf)
 - [EDRAX: A Cryptocurrency with Stateless Transaction Validation](https://eprint.iacr.org/2018/968.pdf)
 
 ## Privacy Features

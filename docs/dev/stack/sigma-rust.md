@@ -15,7 +15,7 @@ tags:
   - Ruby
   - Python
 owner: docs
-last_reviewed: 2026-10-14
+last_reviewed: 2026-11-26
 source_repos:
   - repo: ergoplatform/bounded-vec
     branch: develop
@@ -91,6 +91,7 @@ Rust implementation of [ErgoScript (sigmastate-interpreter)](sigmastate-interpre
 ## Recent updates
 
 - `Sep`: the development branch prepared `0.29.0` package versions and changelog entries, but the latest tagged GitHub release remains [`ergo-lib-v0.28.0`](https://github.com/ergoplatform/sigma-rust/releases/tag/ergo-lib-v0.28.0). Do not treat the version-preparation commit as a published release.
+- Current `develop`/unreleased `0.29.0` work hardens wire parsing: declared collection and Merkle-proof counts are checked against the remaining input before allocation, malformed `Cthreshold` propositions (`k > n` or `k > 255`) are rejected during parsing, and an unsized ErgoTree that cannot be parsed is retained as `Unparsed`. These are parser/library behaviors; they do not activate new Ergo protocol rules. Pin and verify the exact revision before relying on them. See [`ergo-lib` changelog](https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-lib/CHANGELOG.md), [`sigma-ser`](https://github.com/ergoplatform/sigma-rust/blob/develop/sigma-ser/src/scorex_serialize.rs), and [`batchmerkleproof.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-merkle-tree/src/batchmerkleproof.rs).
 - `Aug`: SANTA's AuthDS review removed fixtures for three AVL operations that are unreachable from current ErgoScript and node paths. Its reachable verifier corpus then showed JVM and `ergots` agreement on 37 of 37 fixtures. This narrows one reported divergence; it does not establish full sigma-rust or node parity.
 - `Jul`: merged development-branch conformance fixes added checked ERG summation during stateful transaction validation ([#891](https://github.com/ergoplatform/sigma-rust/pull/891)), rejected unsupported tuple arities during evaluation ([#897](https://github.com/ergoplatform/sigma-rust/pull/897)), and rejected self context-extension keys that the JVM cannot construct ([#906](https://github.com/ergoplatform/sigma-rust/pull/906)). These fixes are not a new tagged `ergo-lib` release; downstream users should verify their pinned revision.
 - `Jun`: SANTA-backed conformance work exposed a broad sigma-rust/JVM alignment stream. Review and PR work covered JIT costing, v5/v6 evaluation behavior, AVL method semantics, context-extension handling, header-version signedness, serializer details, and other consensus-sensitive edge cases. Treat this as an active review stream unless a downstream release explicitly marks the relevant path stable.
@@ -113,6 +114,7 @@ Additional compiler details:
 
 Compatibility notes:
 
+- The same development parser work bounds wire-declared lengths/counts before allocating and distinguishes hard wire errors from the size-flagged ErgoTree position-limit degradation path. Do not describe this as a consensus change or assume it is present in tagged `ergo-lib-v0.28.0`.
 - Development-branch reduced transactions require matching unsigned/reduced input counts and byte-identical context extensions. Signing and serialization reject inconsistent pairs. For each input, deterministic signing accepts a single `ProveDlog` with its matching secret or a trivial-true reduction; compound propositions and DH tuples return errors ([implementation](https://github.com/ergoplatform/sigma-rust/commit/85e8fd797a51b543d1c94789b745445ce9bdb166)). These changes are not included in the latest tagged `ergo-lib-v0.28.0` release.
 - Context extensions with five or more entries now serialize in Scala 2.12 hash-map iteration order on the development branch; smaller extensions retain insertion order. This aligns signing bytes and transaction IDs with the reference node ([#843](https://github.com/ergoplatform/sigma-rust/pull/843)). Tree reduction also takes the evaluated ErgoTree's version into account, so version-gated operations such as V3 `BigInt` downcasts do not inherit a default V0 context ([#875](https://github.com/ergoplatform/sigma-rust/pull/875)).
 - Some historical mainnet trees use pre-v3 or pre-JIT behavior. Compatibility work covers cases where the JVM interpreter is more permissive than sigma-rust.

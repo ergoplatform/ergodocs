@@ -177,7 +177,7 @@ Below example scenarios for dApp use cases are presented.
 
 * *Crowdfunding*
 
-The simplest crowdfunding script is provided in Section 2.3 of [ErgoScript Whitepaper](https://ergoplatform.org/docs/ErgoScript.pdf).
+The simplest crowdfunding script is provided in Section 2.3 of [ErgoScript Whitepaper](https://old.ergoplatform.com/docs/ErgoScript.pdf).
 
 There are two roles in the script, a user and a project. For a user, scanning pledge boxes of self would be
 just `EQUALS(script)`, where `script` are the bytes of a script from the Whitepaper that embeds both the backer and
@@ -191,7 +191,7 @@ contains *projectPubKey* but does not contain *backerPubKey* could be used withi
 * *Mixing*
 
 For mixing scripts, see Section 3.3.1 of
-[Advanced ErgoScript Tutorial](https://ergoplatform.org/docs/AdvancedErgoScriptTutorial.pdf). To find her half-mix coin
+[Advanced ErgoScript Tutorial](https://old.ergoplatform.com/docs/AdvancedErgoScriptTutorial.pdf). To find her half-mix coin
 in the mixing application, Alice can simply watch for her public key. Then she is watching for this box, and once the
 box is spent, she figures out the outputs of the spending transaction and adds her output manually to the wallet. Bob can
 on his side can track a large enough part of the half-mix script not including Alice's pubkey u.

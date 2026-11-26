@@ -7,7 +7,7 @@ tags:
   - Nvidia
   - Intel
 owner: docs
-last_reviewed: 2026-05-27
+last_reviewed: 2026-11-26
 source_repos:
   - repo: cyberia-to/erga
     branch: main
@@ -44,7 +44,7 @@ source_of_truth:
 
 ### Other Miners
 
-- [erga](https://github.com/cyberia-to/erga): community Autolykos v2 pool miner for Apple Silicon, with a desktop app and command-line interface. Upstream specifies macOS 14+ and at least 16 GB of unified memory, and notes that builds are not notarized. Back up the recovery phrase if using its generated wallet. Hardware support and accepted pool shares do not guarantee profitability; check the current memory requirement as the mining table grows.
+- [erga](https://github.com/cyberia-to/erga): community Autolykos v2 pool miner for Apple Silicon, with a desktop app and CLI. The installed binary supports `erg mine`, `erg mine <host> <port> <address>`, `erg mine --intensity max|eco|min`, `erg status`, `erg link`, `erg difftest`, and `erg buildbench`; the GUI runs mining in a separate process. Upstream requires macOS 14+ and at least 16 GB of unified memory, and says releases are not notarized. Autolykos rebuilds a growing table every block: at the documented ~1.86M height it uses about 6.8 GiB for the table and roughly 7.1 GB steady / 8.5 GB peak; `max`/`eco` double-buffering needs about 3/8 GB spare and `min` disables prefetch. Back up the generated 15-word wallet seed. Hardware support and accepted pool shares do not guarantee profitability; check upstream memory and pool notes before use.
 - [CUDA-based GPU miner for Ergo](https://github.com/ergoplatform/Autolykos-GPU-miner) for NVidia cards
 - [OpenCL miner for ERGO](https://github.com/mhssamadani/ergoAMDminer) for AMD cards
 

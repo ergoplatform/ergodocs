@@ -30,15 +30,13 @@ Before using Babel fees, someone (or many people) must provide liquidity on the 
 14. Optional: Go back to Step 6 if the rates were not as expected.
 15. Sign transaction in your ErgoPay compatible wallet.
 
-![babel-liquidity (1).png](https://storage.googleapis.com/ergo-cms-media/babel_liquidity_1_adbeccffe1/babel_liquidity_1_adbeccffe1.png)
 
 This provides a Babel Fee bank box, which anyone can use to trade the digital asset for $ERG to pay for transactions. Building the transaction is handled within a wallet that supports Babel Fees.
 
 ## Using Babel Fee Bank Boxes
 
-Using Babel Fee Boxes is simple. Nautilus, for example, allows you to pick a token to pay a fee based on what is in your wallet, and it selects the best rate from the Babel Fee bank boxes available on the blockchain. In the case below, the token SigUSD is being used to swap for the necessary amount of $ERG to pay for the transaction. The process of choosing to pay with Babel fees is as simple as selecting the native asset from a pull-down list.
+Using Babel Fee Boxes is simple. Nautilus, for example, allows you to pick a token to pay a fee based on what is in your wallet, and it selects the best rate from the Babel Fee bank boxes available on the blockchain. For example, SigUSD can be used to swap for the necessary amount of $ERG to pay for the transaction. The process of choosing to pay with Babel fees is as simple as selecting the native asset from a pull-down list.
 
-![babel-nautilius (1).png](https://storage.googleapis.com/ergo-cms-media/babel_nautilius_1_0203d2c22a/babel_nautilius_1_0203d2c22a.png)
 
 #### Conclusion
 

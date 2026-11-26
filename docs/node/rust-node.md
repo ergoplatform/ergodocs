@@ -5,7 +5,7 @@ tags:
   - Infrastructure
   - Experimental
 owner: docs
-last_reviewed: 2026-10-14
+last_reviewed: 2026-11-26
 source_repos:
   - repo: mwaddip/ergo-node-rust
     branch: main
@@ -95,6 +95,8 @@ The project has moved beyond early header-sync testing into API compatibility, i
 Related Rust-node references include [Luivatra/ergo-rust-node](https://github.com/Luivatra/ergo-rust-node), an earlier experimental implementation, [arkadianet/ergo](https://github.com/arkadianet/ergo), an independent Rust full-node implementation targeting strict consensus parity with the Scala reference, and [ergo-rust-sync-dashboard](https://github.com/odiseusme/ergo-rust-sync-dashboard), a small Tkinter sync display for `mwaddip/ergo-node-rust`.
 
 [SANTA](https://github.com/mwaddip/santa) is a related cross-implementation conformance suite for Ergo consensus behavior. It keeps shared test vectors and runner contracts so independent implementations can compare wire, evaluation, transaction, block, and chain behavior against canonical expected outputs. Related runners include [Blitzen](https://github.com/mwaddip/santa-blitzen) for `sigma-rust`, [Vixen](https://github.com/mwaddip/santa-vixen) for the `arkadianet/ergo` Rust node, and [Donner](https://github.com/mwaddip/santa-donner) for block-tier validation in `mwaddip/ergo-node-rust`.
+
+SANTA's [`santa-pr`](https://github.com/mwaddip/santa/tree/main/santa-pr) workflow can grade an implementation's base and head (or working tree) using a runner owned by that implementation, as long as it satisfies the self-contained runner contract. Tier results are checked against the machine-readable actuals schema, and runner children can report peak resource measurements. These improve reproducibility and review evidence; they are still scoped vector/tier checks, not a proof of full-node consensus correctness or production readiness.
 
 Recent release highlights:
 

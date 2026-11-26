@@ -12,7 +12,7 @@ See also, [flowcardLib: Ergo FlowCard library for diagrams.net](https://github.c
 
 ## Introduction
 
-[ErgoScript](https://ergoplatform.org/docs/ErgoScript.pdf) is the smart contract language used by the Ergo blockchain. While it has concise syntax adopted from Scala/Kotlin, it may still seem confusing at first because conceptually, ErgoScript is quite different from conventional languages. This is because Ergo is a UTXO-based blockchain, whereas smart contracts are traditionally associated with account-based systems like Ethereum. However, Ergo's transaction model has many advantages over the account-based model, and with the right approach, developing Ergo contracts can even be significantly easier than writing and debugging Solidity code.
+[ErgoScript](https://old.ergoplatform.com/docs/ErgoScript.pdf) is the smart contract language used by the Ergo blockchain. While it has concise syntax adopted from Scala/Kotlin, it may still seem confusing at first because conceptually, ErgoScript is quite different from conventional languages. This is because Ergo is a UTXO-based blockchain, whereas smart contracts are traditionally associated with account-based systems like Ethereum. However, Ergo's transaction model has many advantages over the account-based model, and with the right approach, developing Ergo contracts can even be significantly easier than writing and debugging Solidity code.
 
 Below, we cover the key aspects of the Ergo contract model that make it different:
 
@@ -209,7 +209,7 @@ If you look at the conditions of the output boxes, you will see that they exactl
 
 ## From Diagrams To ErgoScript Contracts
 
-What is interesting about FlowCard specifications is that we can use them to automatically generate the necessary [ErgoTree](https://ergoplatform.org/docs/ErgoTree.pdf) scripts. With appropriate tooling support, this can be done automatically, but lacking that, it can be done manually. Thus, the FlowCard allows us to capture and visually represent all design choices and semantic details of an Ergo dApp.
+What is interesting about FlowCard specifications is that we can use them to automatically generate the necessary [ErgoTree](https://old.ergoplatform.com/docs/ErgoTree.pdf) scripts. With appropriate tooling support, this can be done automatically, but lacking that, it can be done manually. Thus, the FlowCard allows us to capture and visually represent all design choices and semantic details of an Ergo dApp.
 
 What we are going to do next is mechanically create the `buyOrder` contract from the information given in the `DEX` flow card. Recall that each script is a proposition (boolean-valued expression) that must evaluate to `true` to allow spending of the box. When we have many conditions to be met simultaneously, we can combine them in a logical formula using the AND binary operation, and if we have alternatives (not necessarily exclusive), we can put them into the OR operation. The `buyOrder` box has the alternative spending paths `!cancel` and `!swap`.
 
@@ -312,7 +312,7 @@ Here are the possible next steps for future work:
 - [Ergo Appkit](https://github.com/ergoplatform/ergo-appkit)
 - [Introduction to Appkit](https://ergoplatform.org/en/blog/2019_12_03_top5/)
 - [Appkit Examples](https://github.com/aslesarenko/ergo-appkit-examples)
-- [ErgoTree Specification](https://ergoplatform.org/docs/ErgoTree.pdf)
+- [ErgoTree Specification](https://old.ergoplatform.com/docs/ErgoTree.pdf)
 - [flowcardLib: Ergo FlowCard library for diagrams.net](https://github.com/lucagdangelo/flowcardLib)
 
 > With thanks to [Robert Kornacki](https://github.com/robkorn) for polishing the draft.

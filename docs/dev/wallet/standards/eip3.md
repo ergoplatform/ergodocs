@@ -8,18 +8,11 @@ source_repos:
     branch: master
     paths:
       - eip-0003.md
-  - repo: satoshilabs/slips
-    branch: master
-    paths:
-      - slip-0044.md
 source_of_truth:
   - https://github.com/bitcoin/bips/tree/master/bip-0032.mediawiki
   - https://github.com/bitcoin/bips/tree/master/bip-0044.mediawiki
   - https://github.com/ergoplatform/eips/tree/master/eip-0003.md
   - https://github.com/satoshilabs/slips/tree/master/slip-0044.md
-  - https://github.com/satoshilabs/slips/commit/cb1f56dd8cd1f8488f7e18357b06922d4fa90259
-  - https://github.com/satoshilabs/slips/commit/b7fb1b681c4ebf074bd285454c04e5eb73e44963
-  - https://github.com/satoshilabs/slips/commit/c93705964102594e0f153c901acbb7f4faeaab40
 ---
 
 # EIP-0003: Deterministic Wallet Standard
@@ -49,7 +42,7 @@ Coin Type
 
 Registered **coin_type**s can be found in [SLIP-0044](https://github.com/satoshilabs/slips/blob/master/slip-0044.md)
 
-SLIP-0044 is a live registry, not a fixed table: entries and tickers continue to be added and corrected. For example, the current registry lists `OAG` (Orange) at coin type `1033` and `QTC` (Quantus Network) at `189189`; the Quantus ticker was updated from `QUAN` to `QTC`. Check the linked registry for the current entry before relying on an older snapshot. This does not change Ergo's registered coin type `429`.
+SLIP-0044 is a live registry. Check the current entry when integrating another chain; additions or ticker corrections for other assets do not change Ergo's registered coin type `429`.
 
 We will be using the word **ergo** summed based on the numerical values of the ASCII characters for the **coin_type**. As shown below, this means that our **coin_type** is `429`.
 

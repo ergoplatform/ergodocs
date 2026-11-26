@@ -1037,4 +1037,4 @@ def substConstants[T](scriptBytes: Coll[Byte], positions: Coll[Int], newValues: 
 
 ## Examples
 
-See [white paper for examples](https://ergoplatform.org/docs/ErgoScript.pdf)
+See [white paper for examples](https://old.ergoplatform.com/docs/ErgoScript.pdf)

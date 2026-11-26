@@ -21,11 +21,17 @@ source_repos:
     branch: develop
     paths:
       - docs/how_to_bootstrap.md
+  - repo: celaut-project/nodo
+    branch: stable
+    paths:
+      - README.md
+      - docs/CANONICAL_ENCODING.md
 source_of_truth:
   - https://github.com/ergoplatform/ergo/tree/master/src/main/resources/application.conf
   - https://github.com/ergoplatform/ergo/tree/master/src/main/resources/api/openapi.yaml
   - https://github.com/rosen-bridge/operation/tree/dev/docs/watcher/deploy-docker.md
   - https://github.com/ergoplatform/oracle-core/tree/develop/docs/how_to_bootstrap.md
+  - https://github.com/celaut-project/nodo/tree/stable/docs/CANONICAL_ENCODING.md
 ---
 
 # Deploy Ergo Infrastructure
@@ -80,6 +86,7 @@ Start with the [Deployment Runbook](deploy-runbook.md) if you are choosing a top
 | Run Rosen watchers | [Rosen watcher deployment](watcher.md) | Docker deployment, `local.yaml`, chain sources, and health checks. |
 | Operate oracle pools | [Oracle Core](oracle.md) and [Oracle bootstrap](oracle-bootstrap.md) | Bootstrap pools, distribute tokens/config, run oracle operators. |
 | Build a custom indexer | [Blockchain indexing](blockchain-indexing.md) | Compare explorer API, node API, and custom chain-grabber setups. |
+| Run Celaut service infrastructure | [Celaut](celaut.md) | Use Nodo for service execution, peer delegation, resource pricing, and Ergo-settled payments; execution and networking remain alpha. |
 
 ## Public Services vs Owned Infrastructure
 

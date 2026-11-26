@@ -11,7 +11,7 @@ Blockchain technology is remarkable for its capabilities of ensuring security, t
 3. **Resource Drain**: Larger states require more computational power, leading to increased operational costs.
 4. **Deflationary Pressures**: Lost or dormant coins risk deflating the currency’s value, undermining its utility.
 
-![A 3-Dimensional Scale for Fees](https://ergoplatform.org/img/uploads/3d.png)
+![A 3-Dimensional Scale for Fees](https://old.ergoplatform.com/img/uploads/3d.png)
 
 The image above introduces a 3-dimensional scale to assess cryptocurrency fees based on three crucial factors: space (storage load), duration (time), and computational load. This visualization aids in understanding how a multi-faceted fee system could mitigate the inherent challenges tied to blockchain storage and resource utilization.
 

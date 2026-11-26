@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: 2026-10-28
+last_reviewed: 2026-11-26
 source_repos:
   - repo: minotaur-ergo/minotaur-wallet
     branch: dev
@@ -17,6 +17,7 @@ source_of_truth:
   - https://github.com/minotaur-ergo/minotaur-wallet
   - https://github.com/minotaur-ergo/minotaur-wallet/releases/tag/v4.2.0
   - https://github.com/minotaur-ergo/minotaur-wallet/releases/tag/v4.2.1
+  - https://github.com/minotaur-ergo/minotaur-wallet/releases/tag/v4.3.0
   - https://github.com/minotaur-ergo/minotaur-wallet/releases/tag/android-v4.2.1-rc5
   - https://github.com/minotaur-ergo/minotaur-wallet/releases/tag/desktop-v4.2.1-rc5
   - https://github.com/ergoplatform/eips/tree/master/eip-0004.md
@@ -50,7 +51,8 @@ For a visual and detailed guide on how to use Minotaur, watch the comprehensive 
 
 ## Recent updates
 
-- The [`v4.2.1` prerelease](https://github.com/minotaur-ergo/minotaur-wallet/releases/tag/v4.2.1) sends dApp change to the default address, prevents parallel wallet-sync runs, resets QR-rescan state, improves large-transaction display, and improves ErgoPay error and multisig-signing feedback. GitHub marks this tag as a prerelease despite its version name. Android and desktop build candidates have reached [`android-v4.2.1-rc5`](https://github.com/minotaur-ergo/minotaur-wallet/releases/tag/android-v4.2.1-rc5) and [`desktop-v4.2.1-rc5`](https://github.com/minotaur-ergo/minotaur-wallet/releases/tag/desktop-v4.2.1-rc5); their minimal release notes do not establish additional feature changes. `v4.2.0` remains the latest checked stable release.
+- [Minotaur `v4.3.0`](https://github.com/minotaur-ergo/minotaur-wallet/releases/tag/v4.3.0) is the latest stable release. It adds desktop/web QR-camera switching and error handling, an optional transaction-details display setting, Android QR-file saving, offline-sync retry suppression, faster large multisig imports, and fixes for default-address dApp change, parallel wallet sync, QR-rescan state, multisig progress, and large-transaction rendering.
+- The [`v4.2.1` prerelease](https://github.com/minotaur-ergo/minotaur-wallet/releases/tag/v4.2.1) introduced the dApp change, sync, QR-rescan, and multisig fixes later included in the stable line. GitHub marks this tag as a prerelease despite its version name. Android and desktop build candidates reached [`android-v4.2.1-rc5`](https://github.com/minotaur-ergo/minotaur-wallet/releases/tag/android-v4.2.1-rc5) and [`desktop-v4.2.1-rc5`](https://github.com/minotaur-ergo/minotaur-wallet/releases/tag/desktop-v4.2.1-rc5).
 - `Jul 1`: [Minotaur `v4.2.0`](https://github.com/minotaur-ergo/minotaur-wallet/releases/tag/v4.2.0) added Android HTTP support, moved network requests to the HTTP plugin, hid monetary-value displays for testnet wallets, fixed editing the network backend URL, and improved unavailable token-valuation handling.
 - `Jan 21`: Minotaur `3.4.0` released with node backend support, backend selection between node and explorer, chart fixes, duplicate multisig wallet fix, and dependency updates.
 - `Jul 25` 2025: [Minotaur `v3.0.0`](https://github.com/minotaur-ergo/minotaur-wallet/releases/tag/v3.0.0) updated the multisig communication data format, added an AirDrop dApp, extracted utility packages, added `createChangeBox` support to all dApps, validated addresses before wallet insertion, and fixed wallet restore/delete issues.

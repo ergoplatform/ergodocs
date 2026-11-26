@@ -9,7 +9,7 @@ tags:
   - vitest
   - tutorial
 owner: docs
-last_reviewed: 2026-11-21
+last_reviewed: 2026-11-26
 ---
 
 # Testing Smart Contracts with MockChain
@@ -35,10 +35,10 @@ Create a fresh TypeScript project and install the Fleet SDK packages alongside `
 mkdir ergo-mockchain-tests && cd ergo-mockchain-tests
 npm init -y
 npm pkg set type="module" scripts.test="vitest run"
-npm install -D typescript vitest @fleet-sdk/core @fleet-sdk/compiler @fleet-sdk/mock-chain
+npm install --ignore-scripts -D typescript@5.9.3 vitest@3.2.4 @fleet-sdk/core@0.12.0 @fleet-sdk/compiler@0.12.0 @fleet-sdk/mock-chain@0.12.0
 ```
 
-Create a minimal `tsconfig.json`:
+These examples use the pinned versions above and generated test keys. They are learning fixtures; review any adapted contract before deploying it with funds. Create a minimal `tsconfig.json`:
 
 ```json
 {
@@ -61,6 +61,7 @@ Notice three practices in the contract below:
 - Named constants (`buyerPK`, `sellerPK`, `arbiterPK`, `refundDeadline`, `maxMinerFee`) are injected safely at compile time through `compile(..., { map })` rather than string interpolation.
 - Both dispute branches (`sellerAward` and `buyerAward`) enforce `OUTPUTS(0).propositionBytes` and `SELF.value - maxMinerFee` so a co-signing arbiter cannot divert funds or siphon value via excessive fees.
 - The post-deadline `timeoutRefund` branch likewise enforces `OUTPUTS(0).propositionBytes == buyerPK.propBytes` and `OUTPUTS(0).value >= SELF.value - maxMinerFee`, ensuring automated refund transactions preserve the buyer's destination address and refund floor.
+- Only one input using this escrow script may be spent per transaction. This prevents two identical escrows from sharing one payout check; batching needs a separate design that binds each input to its own payout.
 
 ```typescript
 import { MockChain } from "@fleet-sdk/mock-chain";
@@ -73,13 +74,16 @@ import {
   SSigmaProp,
   TransactionBuilder
 } from "@fleet-sdk/core";
-import { afterEach, describe, expect, it } from "vitest";
+import { afterEach, beforeEach, describe, expect, it } from "vitest";
 
 const ESCROW_DEPOSIT = 5_000_000_000n; // 5 ERG
 const MAX_MINER_FEE = 1_100_000n; // 0.0011 ERG
 const DIVERTED_AMOUNT = 1_000_000n; // 0.001 ERG
 
 const ESCROW_DEPOSIT_SCRIPT = `{
+  val uniqueEscrowInput = INPUTS.filter { (box: Box) =>
+    box.propositionBytes == SELF.propositionBytes
+  }.size == 1
   val cooperativeRelease = buyerPK && sellerPK
 
   val sellerAward =
@@ -109,7 +113,8 @@ const ESCROW_DEPOSIT_SCRIPT = `{
       OUTPUTS(0).value >= SELF.value - maxMinerFee
     )
 
-  cooperativeRelease || sellerAward || buyerAward || timeoutRefund
+  sigmaProp(uniqueEscrowInput) &&
+    (cooperativeRelease || sellerAward || buyerAward || timeoutRefund)
 }`;
 
 describe("Arbiter escrow deposit contract", () => {
@@ -131,6 +136,10 @@ describe("Arbiter escrow deposit contract", () => {
   });
 
   const escrowContract = mockChain.addParty(ergoTree.toHex(), "Escrow Deposit Contract");
+
+  beforeEach(() => {
+    mockChain.jumpTo(1_052_944);
+  });
 
   afterEach(() => {
     mockChain.reset();
@@ -235,6 +244,23 @@ describe("Arbiter escrow deposit contract", () => {
 
     expect(mockChain.execute(transaction, { signers: [buyer], throw: false })).to.be.false;
     expect(escrowContract.balance).to.be.deep.equal({ nanoergs: ESCROW_DEPOSIT, tokens: [] });
+  });
+
+  it("Should reject two escrow inputs sharing a single award", () => {
+    escrowContract.addBalance({ nanoergs: ESCROW_DEPOSIT });
+    escrowContract.addBalance({ nanoergs: ESCROW_DEPOSIT });
+
+    const transaction = new TransactionBuilder(mockChain.height)
+      .from(escrowContract.utxos, { ensureInclusion: true })
+      .to(new OutputBuilder(ESCROW_DEPOSIT - MAX_MINER_FEE, seller.address))
+      .sendChangeTo(arbiter.address)
+      .payMinFee()
+      .build();
+
+    expect(
+      mockChain.execute(transaction, { signers: [arbiter, seller], throw: false })
+    ).to.be.false;
+    expect(escrowContract.balance.nanoergs).to.equal(2n * ESCROW_DEPOSIT);
   });
 
   it("Should allow Buyer to reclaim funds to Buyer address within fee cap after deadline", () => {
@@ -346,7 +372,7 @@ const SELF_REPLICATING_TOKEN_SALE_SCRIPT = `{
     val payoutValid =
       soldTokens > 0L &&
       OUTPUTS(0).propositionBytes == sellerPK.propBytes &&
-      OUTPUTS(0).value >= soldTokens * pricePerToken &&
+      (if (pricePerToken > 0L) OUTPUTS(0).value / pricePerToken >= soldTokens else false) &&
       OUTPUTS(0).R4[Coll[Byte]].getOrElse(Coll[Byte]()) == SELF.id
 
     continuationSafe && payoutValid
@@ -467,6 +493,33 @@ describe("Self-replicating token sale contract", () => {
     expect(mockChain.execute(sellerRecovery, { signers: [seller] })).to.be.true;
     expect(saleContract.balance).to.be.deep.equal({ nanoergs: 0n, tokens: [] });
   });
+
+  it("Should reject a purchase whose required payment exceeds a Long", () => {
+    const enormousSupply = 1_000_000_000_000n;
+    saleContract.addBalance({
+      nanoergs: MIN_BOX_VALUE,
+      tokens: [{ tokenId: SALE_TOKEN_ID, amount: enormousSupply }]
+    });
+    attacker.addBalance({ nanoergs: 10_000_000n });
+    const saleBox = saleContract.utxos.toArray()[0];
+
+    const transaction = new TransactionBuilder(mockChain.height)
+      .from([saleBox, ...attacker.utxos.toArray()], { ensureInclusion: true })
+      .to([
+        new OutputBuilder(MIN_BOX_VALUE, seller.address).setAdditionalRegisters({
+          R4: SColl(SByte, hexToBytes(saleBox.boxId)).toHex()
+        }),
+        new OutputBuilder(MIN_BOX_VALUE, attacker.address).addTokens({
+          tokenId: SALE_TOKEN_ID, amount: enormousSupply
+        })
+      ])
+      .sendChangeTo(attacker.address)
+      .payMinFee()
+      .build();
+
+    expect(mockChain.execute(transaction, { signers: [attacker], throw: false })).to.be.false;
+    expect(saleContract.balance.tokens[0].amount).to.equal(enormousSupply);
+  });
 });
 ```
 
@@ -478,7 +531,7 @@ Execute Vitest from the project root:
 npm test
 ```
 
-All happy-path and adversarial cases run in memory through the Sigma interpreter embedded in `@fleet-sdk/mock-chain` without external network calls.
+The tests run in memory through the Sigma interpreter embedded in `@fleet-sdk/mock-chain`; package installation requires network access. The sale predicate divides the nonnegative payout by a positive price instead of multiplying token quantity by price, avoiding signed-`Long` payment overflow.
 
 ## Troubleshooting Common Pitfalls
 

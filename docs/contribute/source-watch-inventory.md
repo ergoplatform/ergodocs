@@ -17,10 +17,10 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 
 ## Summary
 
-- Source-watched pages: `241`
-- Watched repositories: `236`
-- Watched GitHub owners: `99`
-- Watched repo/branch pairs: `242`
+- Source-watched pages: `240`
+- Watched repositories: `235`
+- Watched GitHub owners: `98`
+- Watched repo/branch pairs: `241`
 - Watched paths: `535`
 - Release-watched page/repository refs: `16`
 
@@ -30,15 +30,15 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | --- | ---: | ---: | ---: | ---: |
 | Core / infrastructure | 5 | 31 | 134 | 204 |
 | Ecosystem org | 9 | 38 | 25 | 40 |
-| Developer / project | 82 | 164 | 122 | 111 |
-| External standard/vendor | 3 | 3 | 6 | 6 |
+| Developer / project | 82 | 164 | 123 | 112 |
+| External standard/vendor | 2 | 2 | 4 | 5 |
 
 ## Coverage By Area
 
 | Area | Source-watched pages |
 | --- | ---: |
 | `contribute` | 2 |
-| `dev` | 101 |
+| `dev` | 100 |
 | `doc` | 1 |
 | `docs` | 9 |
 | `eco` | 75 |
@@ -74,6 +74,7 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`anon-real`](https://github.com/anon-real) | Developer / project | 3 | 3 | 3 |
 | [`arobsn`](https://github.com/arobsn) | Developer / project | 3 | 3 | 1 |
 | [`aslesarenko`](https://github.com/aslesarenko) | Developer / project | 2 | 3 | 8 |
+| [`celaut-project`](https://github.com/celaut-project) | Developer / project | 3 | 3 | 4 |
 | [`decentbob`](https://github.com/decentbob) | Developer / project | 1 | 3 | 3 |
 | [`duckpools`](https://github.com/duckpools) | Ecosystem org | 4 | 3 | 4 |
 | [`Emurgo`](https://github.com/Emurgo) | External standard/vendor | 1 | 3 | 3 |
@@ -88,7 +89,6 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`spectrum-finance`](https://github.com/spectrum-finance) | Ecosystem org | 3 | 3 | 6 |
 | [`StabilityNexus`](https://github.com/StabilityNexus) | Developer / project | 2 | 3 | 1 |
 | [`4EYESLabs`](https://github.com/4EYESLabs) | Developer / project | 1 | 2 | 2 |
-| [`celaut-project`](https://github.com/celaut-project) | Developer / project | 3 | 2 | 3 |
 | [`Ergo-Lend`](https://github.com/Ergo-Lend) | Developer / project | 2 | 2 | 2 |
 | [`ergoMixer`](https://github.com/ergoMixer) | Developer / project | 1 | 2 | 2 |
 | [`ErgoRaffle`](https://github.com/ErgoRaffle) | Developer / project | 2 | 2 | 2 |
@@ -102,7 +102,6 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`oliverw`](https://github.com/oliverw) | Developer / project | 1 | 2 | 1 |
 | [`paideiadao`](https://github.com/paideiadao) | Developer / project | 2 | 2 | 4 |
 | [`Satergo`](https://github.com/Satergo) | Developer / project | 1 | 2 | 5 |
-| [`satoshilabs`](https://github.com/satoshilabs) | External standard/vendor | 1 | 2 | 1 |
 | [`scalahub`](https://github.com/scalahub) | Core / infrastructure | 1 | 2 | 5 |
 | [`2ndtlmining`](https://github.com/2ndtlmining) | Developer / project | 1 | 1 | 1 |
 | [`accord-protocol`](https://github.com/accord-protocol) | Developer / project | 1 | 1 | 3 |
@@ -171,6 +170,7 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`arkadianet/ergo`](https://github.com/arkadianet/ergo) | Developer / project | `main` | 3 | 2 |
 | [`aslesarenko/ergo-appkit-examples`](https://github.com/aslesarenko/ergo-appkit-examples) | Developer / project | `master` | 3 | 7 |
 | [`cannonQ/ergo-use-x402`](https://github.com/cannonQ/ergo-use-x402) | Developer / project | `master` | 3 | 1 |
+| [`celaut-project/nodo`](https://github.com/celaut-project/nodo) | Developer / project | `stable` | 3 | 4 |
 | [`decentbob/ergo-marketplace`](https://github.com/decentbob/ergo-marketplace) | Developer / project | `main` | 3 | 3 |
 | [`Emurgo/Emurgo-Research`](https://github.com/Emurgo/Emurgo-Research) | External standard/vendor | `master` | 3 | 3 |
 | [`ergoplatform/ergo-appkit`](https://github.com/ergoplatform/ergo-appkit) | Core / infrastructure | `develop` | 3 | 2 |
@@ -191,7 +191,6 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`BetterMoneyLabs/braid`](https://github.com/BetterMoneyLabs/braid) | Ecosystem org | `master` | 2 | 6 |
 | [`cannonQ/ergo-p2p-options-frontend`](https://github.com/cannonQ/ergo-p2p-options-frontend) | Developer / project | `master` | 2 | 3 |
 | [`cannonQ/nft-races`](https://github.com/cannonQ/nft-races) | Developer / project | `main` | 2 | 1 |
-| [`celaut-project/nodo`](https://github.com/celaut-project/nodo) | Developer / project | `stable` | 2 | 3 |
 | [`celaut-project/paradigm`](https://github.com/celaut-project/paradigm) | Developer / project | `master` | 2 | 1 |
 | [`DeCo-Education/DeCo-Homeworks`](https://github.com/DeCo-Education/DeCo-Homeworks) | Developer / project | `main` | 2 | 3 |
 | [`DeCo-Education/ErgoScript-Developer-Course`](https://github.com/DeCo-Education/ErgoScript-Developer-Course) | Developer / project | `main` | 2 | 1 |
@@ -227,7 +226,6 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`rosen-bridge/guard-service`](https://github.com/rosen-bridge/guard-service) | Core / infrastructure | `master` | 2 | 1 |
 | [`rosen-bridge/watcher`](https://github.com/rosen-bridge/watcher) | Core / infrastructure | `master` | 2 | 1 |
 | [`Satergo/Ergonnection`](https://github.com/Satergo/Ergonnection) | Developer / project | `master` | 2 | 5 |
-| [`satoshilabs/slips`](https://github.com/satoshilabs/slips) | External standard/vendor | `master` | 2 | 1 |
 | [`SavonarolaLabs/hodlbox-xyz`](https://github.com/SavonarolaLabs/hodlbox-xyz) | Ecosystem org | `main` | 2 | 2 |
 | [`scalahub/Kiosk`](https://github.com/scalahub/Kiosk) | Core / infrastructure | `master` | 2 | 5 |
 | [`spectrum-finance/ergo-dex`](https://github.com/spectrum-finance/ergo-dex) | Ecosystem org | `master` | 2 | 1 |
@@ -410,6 +408,7 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`dev/scs/ergoscript.md`](ergoscript.md) | 5 | 9 |
 | [`dev/tutorials/blockchain-indexing.md`](blockchain-indexing.md) | 5 | 6 |
 | [`dev/tutorials/hardware-wallet-integration.md`](hardware-wallet-integration.md) | 5 | 8 |
+| [`dev/interact.md`](interact.md) | 4 | 6 |
 | [`dev/tutorials/blockchain-indexing/custom-indexer.md`](custom-indexer.md) | 4 | 6 |
 | [`eco/celaut_v_netnotes.md`](celaut_v_netnotes.md) | 4 | 4 |
 | [`eco/ergonames.md`](ergonames.md) | 4 | 4 |
@@ -417,7 +416,6 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`eco/mew-finance.md`](mew-finance.md) | 4 | 4 |
 | [`node/deploy-runbook.md`](deploy-runbook.md) | 4 | 5 |
 | [`ai.md`](ai.md) | 3 | 7 |
-| [`dev/interact.md`](interact.md) | 3 | 4 |
 | [`dev/oc/dex_bots.md`](dex_bots.md) | 3 | 7 |
 | [`dev/p2p/network.md`](network.md) | 3 | 8 |
 | [`dev/p2p/p2p-handshake.md`](p2p-handshake.md) | 3 | 6 |
@@ -469,7 +467,7 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`cannonQ/ergo-wallet-statement`](https://github.com/cannonQ/ergo-wallet-statement) | `main` | `README.md` | `docs/eco/onchain-social.md` |
 | [`cannonQ/nft-races`](https://github.com/cannonQ/nft-races) | `main` | `README.md` | `docs/eco/emerging-projects.md`<br>`docs/eco/nft-races.md` |
 | [`capt-nemo429/sigmafi-ui`](https://github.com/capt-nemo429/sigmafi-ui) | `main` | `src/offchain/plugins.ts` | `docs/eco/sigmafi.md` |
-| [`celaut-project/nodo`](https://github.com/celaut-project/nodo) | `stable` | `README.md`<br>`docs/PRICING.md`<br>`docs/USAGE.md` | `docs/eco/celaut.md`<br>`docs/eco/celaut_v_netnotes.md` |
+| [`celaut-project/nodo`](https://github.com/celaut-project/nodo) | `stable` | `README.md`<br>`docs/CANONICAL_ENCODING.md`<br>`docs/PRICING.md`<br>`docs/USAGE.md` | `docs/dev/interact.md`<br>`docs/eco/celaut.md`<br>`docs/eco/celaut_v_netnotes.md` |
 | [`celaut-project/paradigm`](https://github.com/celaut-project/paradigm) | `master` | `README.md` | `docs/eco/celaut.md`<br>`docs/eco/celaut_v_netnotes.md` |
 | [`celaut-project/skills`](https://github.com/celaut-project/skills) | `main` | `README.md` | `docs/eco/celaut.md` |
 | [`codeUTXO/ergo-price-mcp`](https://github.com/codeUTXO/ergo-price-mcp) | `main` | `README.md` | `docs/eco/codeutxo.md` |
@@ -643,7 +641,6 @@ Source Watch checks watched repositories for commits touching declared paths. Gi
 | [`ross-weir/ergo-script-re`](https://github.com/ross-weir/ergo-script-re) | `main` | `ergotree-pseudo-code` | `docs/dev/scs/ergotree.md` |
 | [`ross-weir/ergohack-sidechain`](https://github.com/ross-weir/ergohack-sidechain) | `main` | `docs/whitepaper/sidechain.pdf` | `docs/events/ergohack.md` |
 | [`Satergo/Ergonnection`](https://github.com/Satergo/Ergonnection) | `master` | `src/main/java/com/satergo/ergonnection/ErgoSocket.java`<br>`src/main/java/com/satergo/ergonnection/messages/GetPeers.java`<br>`src/main/java/com/satergo/ergonnection/protocol/Protocol.java`<br>`src/main/java/com/satergo/ergonnection/records/Feature.java`<br>`src/main/java/com/satergo/ergonnection/records/Peer.java` | `docs/dev/p2p/network.md`<br>`docs/dev/p2p/p2p-handshake.md` |
-| [`satoshilabs/slips`](https://github.com/satoshilabs/slips) | `master` | `slip-0044.md` | `docs/dev/wallet/keys.md`<br>`docs/dev/wallet/standards/eip3.md` |
 | [`SavonarolaLabs/crystal-pool`](https://github.com/SavonarolaLabs/crystal-pool) | `main` | `README.md` | `docs/eco/crystal-pool.md` |
 | [`SavonarolaLabs/exle-html`](https://github.com/SavonarolaLabs/exle-html) | `main` | `package.json`<br>`src/components`<br>`src/js` | `docs/eco/exle.md` |
 | [`SavonarolaLabs/exle-svelte`](https://github.com/SavonarolaLabs/exle-svelte) | `main` | `src/components`<br>`src/pages` | `docs/eco/exle.md` |

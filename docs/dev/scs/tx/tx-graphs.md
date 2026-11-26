@@ -12,4 +12,4 @@ Ergo's eUTXO model inherently supports the formation of transaction graphs. Furt
 
 ![](../../../assets/img/scs/tx-graph.png)
 
-Please see the [Advanced ErgoScript Tutorial](https://storage.googleapis.com/ergo-cms-media/docs/AdvancedErgoScriptTutorial.pdf) Section 3.3.3.
+Please see the [Advanced ErgoScript Tutorial](https://old.ergoplatform.com/docs/AdvancedErgoScriptTutorial.pdf) Section 3.3.3.

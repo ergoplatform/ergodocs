@@ -28,10 +28,10 @@ This page contains links to documents with a general overview of Ergo platform, 
 
 ## Overviews
 
-- [Whitepaper I: Ergo: The Resilient Platform For Contractual Money](https://ergoplatform.org/docs/whitepaper.pdf)
-- [Whitepaper II: ErgoScript, a Cryptocurrency Scripting Language Supporting Noninteractive Zero-Knowledge Proofs](https://ergoplatform.org/docs/ErgoScript.pdf)
-- [Teaser: The Ergo Platform Project Overview](https://ergoplatform.org/docs/teaser.pdf)
-- [Whitepaper III: Advanced ErgoScript Tutorial](https://ergoplatform.org/docs/AdvancedErgoScriptTutorial.pdf)
+- [Whitepaper I: Ergo: The Resilient Platform For Contractual Money](https://old.ergoplatform.com/docs/whitepaper.pdf)
+- [Whitepaper II: ErgoScript, a Cryptocurrency Scripting Language Supporting Noninteractive Zero-Knowledge Proofs](https://old.ergoplatform.com/docs/ErgoScript.pdf)
+- [Teaser: The Ergo Platform Project Overview](https://old.ergoplatform.com/docs/teaser.pdf)
+- [Whitepaper III: Advanced ErgoScript Tutorial](https://old.ergoplatform.com/docs/AdvancedErgoScriptTutorial.pdf)
 
 ## Foundational papers
 
@@ -39,7 +39,7 @@ This page contains links to documents with a general overview of Ergo platform, 
 - [Improving authenticated dynamic dictionaries, with applications to cryptocurrencies](https://eprint.iacr.org/2016/994.pdf)
 - [Self-reproducing Coins as Universal Turing Machine](https://arxiv.org/pdf/1806.10116)
 - [Multi-mode Cryptocurrency Systems](https://eprint.iacr.org/2018/129.pdf)
-- [Multi-stage Contracts in the UTXO Model](https://ergoplatform.org/docs/paper_26.pdf)
+- [Multi-stage Contracts in the UTXO Model](https://old.ergoplatform.com/docs/paper_26.pdf)
 - [EDRAX: A Cryptocurrency with Stateless Transaction Validation](https://eprint.iacr.org/2018/968.pdf)
 - [Revisiting Difficulty Control for Blockchain Systems](https://eprint.iacr.org/2017/731.pdf)
 - [Storage Rent](rent.md): [A Systematic Approach To Cryptocurrency Fees](https://fc18.ifca.ai/bitcoin/papers/bitcoin18-final18.pdf)

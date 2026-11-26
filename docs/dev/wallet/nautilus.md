@@ -1,6 +1,6 @@
 ---
 owner: docs
-last_reviewed: 2026-10-25
+last_reviewed: 2026-11-26
 source_repos:
   - repo: nautls/nautilus-wallet
     branch: master
@@ -10,8 +10,11 @@ source_repos:
       - src/extension/content-scripts/injected.ts
       - docs/dapp-connector/wallet-interaction.md
 source_of_truth:
+  - https://github.com/nautls/nautilus-wallet/releases/tag/v1.4.0
+  - https://github.com/nautls/nautilus-wallet/releases/tag/v2.0.0-beta.3
   - https://github.com/nautls/nautilus-wallet
   - https://github.com/nautls/nautilus-wallet/releases/tag/v1.3.6
+  - https://github.com/nautls/nautilus-wallet/blob/master/docs/dapp-connector/wallet-interaction.md
 ---
 
 # Nautilus Wallet
@@ -36,9 +39,15 @@ source_of_truth:
 
 ## Current Release
 
-[Nautilus v1.3.6](https://github.com/nautls/nautilus-wallet/releases/tag/v1.3.6) queues and deduplicates dApp Connector window-opening requests, keeps the service worker alive while requests are pending, and checks transaction well-formedness in `submit_tx`. Its [connector implementation](https://github.com/nautls/nautilus-wallet/blob/v1.3.6/src/extension/content-scripts/injected.ts) exposes partial signing as `sign_tx_inputs(unsignedTransaction, indexes)`, returning signed inputs in the requested order. It also improves QR rendering, updates Indonesian, Malay, and Javanese translations, and fixes a Ledger Buffer-polyfill override.
+The latest checked stable source release is [v1.4.0](https://github.com/nautls/nautilus-wallet/releases/tag/v1.4.0). It migrates wallet data from IndexedDB to extension-local storage, adds password-change and secret-backup screens, permits deferring wallet backup, and requires typing the wallet name before removal. Preserve recovery material before upgrading and check the browser-store version actually installed.
+
+[v2.0.0-beta.3](https://github.com/nautls/nautilus-wallet/releases/tag/v2.0.0-beta.3) is a separate prerelease line. The 2.0 alphas introduce optional master passwords, configurable signing-session timeouts, upgraded secret encryption on unlock, multi-recipient transactions, token mint/burn tools, stronger connector-origin handling and approval delays. Beta.3 adds ErgoTree v3 signing with validation by the configured GraphQL server, and per-input `signers` selection. Ledger and partial signing do not support v3 transactions in this prerelease. These changes do not establish browser-store availability.
+
+The earlier [v1.3.6](https://github.com/nautls/nautilus-wallet/releases/tag/v1.3.6) queues and deduplicates dApp Connector window-opening requests, keeps the service worker alive while requests are pending, and checks transaction well-formedness in `submit_tx`. Its [connector implementation](https://github.com/nautls/nautilus-wallet/blob/v1.3.6/src/extension/content-scripts/injected.ts) exposes partial signing as `sign_tx_inputs(unsignedTransaction, indexes)`, returning signed inputs in the requested order. It also improves QR rendering, updates Indonesian, Malay, and Javanese translations, and fixes a Ledger Buffer-polyfill override.
 
 Earlier [v1.3.4](https://github.com/nautls/nautilus-wallet/releases/tag/v1.3.4) added wallet search during dApp connection, Tab selection for mnemonic words, MEOW metadata and a LIT icon, plus form-validation, bundle and dependency changes. [v1.3.5](https://github.com/nautls/nautilus-wallet/releases/tag/v1.3.5) fixed Windows build-output filename sanitization. A published source release and browser-store rollout are separate; check the version actually installed before relying on a new interaction.
+
+The current [`master` connector guide](https://github.com/nautls/nautilus-wallet/blob/master/docs/dapp-connector/wallet-interaction.md) documents an optional `signers` map for `sign_tx`, allowing zero-based input indexes to be assigned wallet-owned addresses or `null`. It also documents Ledger and ErgoTree-v3 signing caveats and `InvalidRequest` validation. The option is described in the `v2.0.0-beta.3` prerelease notes; it is not a `v1.3.6` capability. Check the installed version and channel before using it.
 
 ## Installation
 

@@ -8,13 +8,14 @@ tags:
   - Artificial Economic Intelligence  
   - Service Virtualization  
 owner: docs
-last_reviewed: 2026-10-21
+last_reviewed: 2026-11-26
 source_repos:
   - repo: celaut-project/nodo
     branch: stable
     release_watch: true
     paths:
       - README.md
+      - docs/CANONICAL_ENCODING.md
       - docs/PRICING.md
       - docs/USAGE.md
   - repo: celaut-project/paradigm
@@ -35,7 +36,6 @@ source_of_truth:
   - https://github.com/celaut-project/nodo/pull/266
   - https://github.com/celaut-project/paradigm
   - https://github.com/celaut-project/skills
-  - https://celaut-project.github.io/skills/?env=dev
 ---
 
 # Celaut
@@ -57,6 +57,7 @@ Celaut is a decentralized, peer-to-peer runtime for deploying and coordinating *
 - `Aug 8` to `Aug 14`: Nodo exposed peer payment contracts in its CLI/TUI, replaced UUID-style peer identities with signed public-key identities, and then switched those signatures to Ergo-compatible Schnorr proofs over Blake2b256. These changes break compatibility with older peers and remain pre-production.
 - `Aug 11` to `Aug 18`: the old gas model was replaced by per-resource CPU, memory, disk, and network prices. Nodo accounts internally in integer monetary units (MU), while each payment contract declares the MU conversion rate; Ergo is currently the only implemented settlement system. Follow-up fixes aligned quotes with allocated resources and converted balances correctly between peers with different rates.
 - `Aug 17`: operator views gained separate peer/client pages, payment and reputation-event histories, counterparties for recorded transactions, and a switch for automatic peer-deposit refills.
+- `Nov 26`: the stable Nodo README documents root, service-user, and rootless Linux installation variants, Windows 11 WSL packaging, and alpha status for local/trustless execution and networking; macOS remains unsupported. Its canonical-encoding specification defines deterministic protobuf bytes for service IDs and filesystem messages, with validation at packing, import, service start, and peer retrieval.
 
 ---
 
@@ -69,6 +70,20 @@ The current Nodo README marks its execution/networking surfaces as alpha. The CL
 `nodo publish` exports a `.celaut.bee` artifact into a GitHub Release of the configured repository. Large artifacts use parts plus a manifest; repeated publication of the same service reuses its release. `nodo download` imports the artifact and recomputes its content-derived service ID. This is artifact distribution, not publication of an executable as source commits.
 
 Resource prices, free-tier budgets, delegation, donations, and reputation remain operator policies. Read the advertised payment method and MU conversion rate; do not infer a fixed settlement value or an unlimited free service from a quote.
+
+### Execution, pricing, and receipts
+
+Nodo's current CLI verifies signed peer offers before using them: quotes are checked against their validity window, price bound, and funding sum. `estimate` reports feasibility, startup cost (including declared initial children), maintenance cost, and the next activity-window close; `execute --for` funds the rounded maintenance periods at the quoted bound, while a quote remains a budget rather than a lifetime guarantee. Delegated execution is accepted only when the local node's advertised charges cover the peer quote after conversion.
+
+The node exposes hash-linked ledger statements for clients, instances, and delegated descendants. Statements identify whether each movement was caused by an operator, client, instance, or node rule; receipt verification checks signatures, counters, closes, and contradictory receipts without needing the daemon database. A close settles the statement and receipt chain; a failed or incomplete chain must not be treated as proof of payment. Descendant funding and estimates include initial child workloads, but peer charges remain measured and reconciled against verified statements.
+
+Resource policy can hibernate an instance when CPU or memory availability reaches the configured condition; hibernation pauses runtime charging while the node records the state, and a funded top-up can resume it. Operators should treat hibernate/stop/refuse as scheduled policy outcomes, not uptime promises. Compatibility updates are gated and migrations are designed to be non-destructive; invite/connect flows can use QR payloads, but peer identity and service/payment validity still require cryptographic verification.
+
+### Canonical service identity
+
+Nodo hashes the canonical bytes of a service specification and its filesystem to derive the service ID. The stable specification uses a restricted protobuf wire encoding: fields are ascending and non-duplicated, varints are shortest-form and unsigned, defaults are omitted unless a field has presence, repeated numeric fields are packed, strings are valid UTF-8, and unsupported protobuf classes/types are refused. This encoding covers identity, not storage indexes, block pointers, compression, or transport. Unknown fields may be forwarded without re-encoding so older nodes do not change an established ID.
+
+The packer, `StartService`, peer `GetService`, and `nodo import` validate the specification; the filesystem content is covered by its content hash, while the block representation is a separate layer. Treat this as current alpha implementation behavior, not a finalized cross-version compatibility guarantee.
 
 ## Background
 
@@ -120,7 +135,7 @@ This creates a transparent ecosystem where bot performance and trust are the sol
 
 ### Services
 
-The experimental [Celaut Skills registry](https://celaut-project.github.io/skills/?env=dev) indexes problems separately from services that claim to solve them. Its public repository describes on-chain skill, benchmark, result, coverage, service-data, and service-metadata records on Ergo, with competing assertions weighted by reputation. Treat registry entries and benchmarks as claims to evaluate, not as automatic service endorsements.
+The experimental [Celaut Skills registry](https://github.com/celaut-project/skills) indexes problems separately from services that claim to solve them. Its public repository describes on-chain skill, benchmark, result, coverage, service-data, and service-metadata records on Ergo, with competing assertions weighted by reputation. Treat registry entries and benchmarks as claims to evaluate, not as automatic service endorsements.
 
 - Stateless and deterministic containers
 - May spawn sub-services, forming dynamic, reactive graphs

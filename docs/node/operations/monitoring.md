@@ -5,7 +5,7 @@ tags:
   - Monitoring
   - Alerts
 owner: docs
-last_reviewed: 2026-10-14
+last_reviewed: 2026-11-26
 source_repos:
   - repo: ergoplatform/ergo
     branch: master
@@ -16,10 +16,12 @@ source_repos:
     paths:
       - docs/watcher/deploy-docker.md
       - docs/guard/setup.md
+      - docs/guard/env-references.md
 source_of_truth:
   - https://github.com/ergoplatform/ergo/tree/master/src/main/resources/api/openapi.yaml
   - https://github.com/rosen-bridge/operation/tree/dev/docs/watcher/deploy-docker.md
   - https://github.com/rosen-bridge/operation/tree/dev/docs/guard/setup.md
+  - https://github.com/rosen-bridge/operation/tree/dev/docs/guard/env-references.md
 ---
 
 # Monitoring
@@ -47,7 +49,7 @@ Monitor sync, index lag, API health, and host resources separately.
 
 ## Rosen Checks
 
-- watcher UI/API reachable, usually through SSH tunnel or private network
+- watcher and guard UI/API reachable, usually through SSH tunnel or private network
 - watcher/guard containers healthy
 - PostgreSQL container healthy
 - watcher initial heights correct for Ergo and target chain
@@ -56,7 +58,7 @@ Monitor sync, index lag, API health, and host resources separately.
 
 ### Rosen Monitoring Stack
 
-Current Rosen watcher deployment supports separate `logger` and `monitoring` Compose profiles. The logger path uses Alloy and Loki; the metrics path uses Prometheus Agent, Node Exporter, and cAdvisor, with Grafana and Alertmanager in the observability stack.
+Current Rosen watcher and guard deployments support separate `logger` and `monitoring` Compose profiles. The logger path uses Alloy and Loki; the metrics path uses Prometheus Agent, Node Exporter, and cAdvisor, with Grafana and Alertmanager in the observability stack. For guards, also monitor signing/event synchronization health and keep manual/arbitrary-order request toggles disabled except during explicit operations.
 
 Use `COMPOSE_PROFILES=logger`, `monitoring`, or `logger,monitoring`. Set `IS_SAME_HOST=true` only when the observability stack shares the watcher host and its external networks already exist. For a remote stack, use `IS_SAME_HOST=false` and set remote-write URLs and basic-auth credentials in the monitoring environment files. Keep those credentials out of source control.
 

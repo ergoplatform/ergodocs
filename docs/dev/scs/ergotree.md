@@ -44,13 +44,13 @@ By evaluating these predicates, ErgoTree authenticates [transactions](transactio
 ## Key ErgoTree Concepts
 
 - ErgoTree is written into [UTXO boxes](box.md) and is subsequently evaluated by the [transaction verifier](validation.md).
-- The propositions are stored in the [blockchain](protocol-overview.md) in the [ErgoTree serialization format](https://ergoplatform.org/docs/ErgoTree.pdf). This format optimizes for compact storage, swift [script execution](sigmastate-interpreter.md), and efficient [transaction validation](validation.md).
+- The propositions are stored in the [blockchain](protocol-overview.md) in the [ErgoTree serialization format](https://old.ergoplatform.com/docs/ErgoTree.pdf). This format optimizes for compact storage, swift [script execution](sigmastate-interpreter.md), and efficient [transaction validation](validation.md).
 - The reference implementation of ErgoTree is in Scala, but alternative implementations can utilize other languages.
 - ErgoTree's binary format intentionally omits metadata, which might be necessary for various Ergo applications.
 
 ## Additional Resources
 
-- ErgoTree serialization section [available here](https://ergoplatform.org/docs/ErgoTree.pdf).
+- ErgoTree serialization section [available here](https://old.ergoplatform.com/docs/ErgoTree.pdf).
 - [Constant-less lambdas](https://github.com/ScorexFoundation/sigmastate-interpreter/issues/264).
 - [ErgoTree as an Authentication Language](https://www.ergoforum.org/t/ergotree-as-an-authentication-language/).
 - [Human representation for ergo tree #812](https://github.com/ScorexFoundation/sigmastate-interpreter/pull/812).

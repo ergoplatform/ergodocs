@@ -39,7 +39,7 @@ source_of_truth:
 ### Example Scenario
 
 We will create a simple console application (called [FreezeCoin](https://github.com/aslesarenko/ergo-appkit-examples/blob/master/java-examples/src/main/java/org/ergoplatform/appkit/examples/FreezeCoin.java)) in Java which uses the Appkit library. By using Appkit, we will be able to easily send a new transaction to an Ergo node programmatically. The
-transaction will transfer a given amount of Erg into a new box protected by the following Ergo contract written in ErgoScript (see this [introduction](https://ergoplatform.org/docs/ErgoScript.pdf) and more [advanced examples](https://ergoplatform.org/docs/AdvancedErgoScriptTutorial.pdf) to learn more about ErgoScript).
+transaction will transfer a given amount of Erg into a new box protected by the following Ergo contract written in ErgoScript (see this [introduction](https://old.ergoplatform.com/docs/ErgoScript.pdf) and more [advanced examples](https://old.ergoplatform.com/docs/AdvancedErgoScriptTutorial.pdf) to learn more about ErgoScript).
 
 ```java
 // Freezer Contract

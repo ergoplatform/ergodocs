@@ -32,7 +32,7 @@ EIP-0005 outlines a standard for serializing contract templates and including me
 
 ## Background And Motivation
 
-Ergo employs a robust language, known as [ErgoTree](https://ergoplatform.org/docs/ErgoTree.pdf), to create guarding propositions that protect UTXO boxes. While ErgoTree's serialization is efficient for storage and transaction validation, it lacks the metadata necessary for broader application use. This EIP aims to extend ErgoTree's capabilities by adding serialization formats for contract templates, including metadata for more versatile applications.
+Ergo employs a robust language, known as [ErgoTree](https://old.ergoplatform.com/docs/ErgoTree.pdf), to create guarding propositions that protect UTXO boxes. While ErgoTree's serialization is efficient for storage and transaction validation, it lacks the metadata necessary for broader application use. This EIP aims to extend ErgoTree's capabilities by adding serialization formats for contract templates, including metadata for more versatile applications.
 
 ## Example Use Cases
 
